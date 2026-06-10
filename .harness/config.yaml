@@ -1,61 +1,82 @@
-# OpsX Full Cycle v1.0 — 项目级 Harness 配置
+# OpsX Full Cycle v1.1 — 项目级 Harness 配置
 # 位置: <project>/.harness/config.yaml
 
-version: "1.0"
+version: "1.1"
 
-# 执行模式: local | delegated | orchestrated
+# 活跃 Policy（从 .harness/policies/ 加载）
+policy: default                   # default | security | gfis-carbon | production-change
+
+# 执行模式
 execution:
-  mode: local
+  mode: local                     # local | delegated | orchestrated
 
-# 硬门禁（缺一 → STOP）
+# 硬门禁
 hard_gates:
   - git
   - openspec_cli
   - harness_manifest
   - adapter_config
 
-# 软门禁（缺一 → degraded 继续）
+# 软门禁
 soft_gates:
   - superpowers
   - gstack
   - shellcheck
 
-# TDD 配置
+# 版本兼容要求
+dependencies:
+  openspec:
+    required: ">=1.4.0"
+  superpowers:
+    required: "*"
+  gstack:
+    required: "*"
+
+# Git 策略
+git:
+  require_clean_worktree: true
+  branch_strategy: create_or_reuse  # create_new | create_or_reuse | manual
+  branch_prefix: opsx/
+  commit_strategy: manual_by_default
+  allow_agent_commit: false
+  allow_agent_push: false
+
+# TDD
 tdd:
   enabled: true
   red_green_required: true
 
-# gstack 审查配置
+# gstack
 gstack:
   enabled: true
   auto_review: true
   auto_qa: false
 
-# Evidence 收集
+# Evidence
 evidence:
   collect_test_output: true
   collect_lint_output: true
   collect_env_snapshot: true
   output_dir: .harness/evidence/
 
-# Acceptance 绑定
+# Acceptance
 acceptance:
   auto_bind_tasks: true
   require_human_signoff: true
 
-# Archive 行为（v1.0: Agent 不自动执行 archive）
+# Archive
 archive:
-  auto_archive: false           # Agent 永不自动 archive
-  require_acceptance_first: true # 必须先 /opsx:accept
-  require_confirmation: true     # 必须用户确认
+  auto_archive: false
+  require_acceptance_first: true
+  require_confirmation: true
 
-# 状态标签系统（Harness 标准）
+# 状态标签
 status_labels:
   - not_started
   - in_progress
   - partial
   - blocked
   - pass_with_runtime_blockers
-  - ready_for_human_acceptance   # ← 最高自动状态
-  - accepted                     # ← 需 /opsx:accept
-  - complete                     # ← 需 /opsx:archive
+  - ready_for_human_acceptance
+  - accepted
+  - complete
