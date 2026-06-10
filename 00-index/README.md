@@ -349,3 +349,40 @@
 65. [GlobalCloud绿色供应链体系首批组件接入实施计划.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系首批组件接入实施计划.md)
 66. [GlobalCloud绿色供应链体系界面实施排期表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系界面实施排期表.md)
 67. [GlobalCloud绿色供应链体系界面实施责任分配表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系界面实施责任分配表.md)
+
+## 0.10 项目群治理状态（2026-06-10 交叉分析）
+
+基于对 GlobalCloud V0.0.1 下 11 个项目的全量扫描与交叉分析，当前治理状态如下。详细分析见 [GlobalCloud项目群交叉分析报告](01-architecture/GlobalCloud%E9%A1%B9%E7%9B%AE%E7%BE%A4%E4%BA%A4%E5%8F%89%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md)。
+
+### 项目群状态一览
+
+| 项目 | 定位 | Harness评分 | 治理状态 | 关键问题 |
+|------|------|------------|---------|---------|
+| GFIS | 工厂执行系统 | 96/100 | ready_for_human_acceptance | 最成熟，4分外部证据缺口 |
+| XiaoC | 提示词工程服务 | 78/100 | partial | UI测试阻塞 + Wrangler未安装 |
+| GPC | 供应链公共服务平台 | - | not_started | docs/含GFIS品牌文档，CHANGELOG标题仍为GFIS |
+| PVAOS | 运营与门户底座 | - | not_started | Manifest为模板占位 |
+| WAES | 治理/证据/AI越权控制 | - | not_started | Manifest为模板占位，remote仍为本地 |
+| Brain | 知识主存/LLM Wiki | - | 基础Manifest | 与WIKI并存违反唯一真源原则 |
+| WIKI | 知识库(Wiki空间) | - | not_started | 与Brain几乎完全相同，需收口 |
+| GPCF | 体系文档工作区 | - | not_started | 本工作区，Manifest为模板占位 |
+| 开发控制台 | Harness Engineering控制台 | - | 无Manifest | 自身即模板来源 |
+| XGD | 数字意识框架(AI Agent) | - | 无Manifest | 未纳入治理体系 |
+| XiaoG | 本地语音助手 | - | 无Manifest | 未纳入治理体系 |
+
+### 优先行动
+
+1. **P0**：Brain/WIKI 收口——WIKI 标注为 Brain 镜像，消除知识主存歧义
+2. **P0**：GPC 文档分类——将 docs/ 下 GFIS 品牌文档标注为 "historical reference"
+3. **P0**：GPC CHANGELOG 标题修正——从 "GFIS" 修正为 "GPC"
+4. **P1**：XGD、XiaoG 补充 PROJECT_HARNESS_MANIFEST.md
+5. **P1**：GPCF Manifest 从占位升级为详细配置
+6. **P2**：PVAOS/WAES/WIKI Manifest 补齐详细 CLI/反馈/上下文配置
+
+### 覆盖结论
+
+- 11/11 项目已全部纳入 GitHub Jiumilu 组织，remote 统一
+- 9/11 有 openspec 配置，XiaoG 待补齐
+- 8/11 同步 opsx-full-cycle v1.1，XiaoG/开发控制台/WIKI 独立演进
+- 仅 2/11 有量化 Harness 评分(GFIS 96, XiaoC 78)，其余需推进
+- 1 项严重冗余(Brain↔WIKI)，1 项文档混用(GPC↔GFIS docs)，2 项治理缺口(XGD,XiaoG 无 Manifest)
