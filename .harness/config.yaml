@@ -1,0 +1,59 @@
+# OpsX Full Cycle — 项目级 Harness 配置
+# 此文件在 .harness/config.yaml 中，可按项目覆写
+
+version: "1.0"
+
+# 执行模式: local | delegated | orchestrated
+execution:
+  mode: local
+
+# 硬门禁要求（缺一不可）
+hard_gates:
+  - git
+  - openspec_cli
+  - harness_manifest
+
+# 软门禁（缺失时 degraded 继续）
+soft_gates:
+  - superpowers
+  - gstack
+  - shellcheck
+
+# TDD 配置
+tdd:
+  enabled: true
+  red_green_required: true
+
+# gstack 审查配置
+gstack:
+  enabled: true
+  auto_review: true
+  auto_qa: false
+
+# Evidence 收集配置
+evidence:
+  collect_test_output: true
+  collect_lint_output: true
+  collect_env_snapshot: true
+  output_dir: .harness/evidence/
+
+# Acceptance 绑定
+acceptance:
+  auto_bind_tasks: true
+  require_human_signoff: true
+
+# Archive 行为
+archive:
+  auto_archive: false
+  require_confirmation: true
+
+# 状态标签系统
+status_labels:
+  - not_started
+  - in_progress
+  - partial
+  - blocked
+  - pass_with_runtime_blockers
+  - ready_for_human_acceptance
+  - accepted
+  - complete
