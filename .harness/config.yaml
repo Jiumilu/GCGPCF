@@ -1,5 +1,5 @@
-# OpsX Full Cycle — 项目级 Harness 配置
-# 此文件在 .harness/config.yaml 中，可按项目覆写
+# OpsX Full Cycle v1.0 — 项目级 Harness 配置
+# 位置: <project>/.harness/config.yaml
 
 version: "1.0"
 
@@ -7,13 +7,14 @@ version: "1.0"
 execution:
   mode: local
 
-# 硬门禁要求（缺一不可）
+# 硬门禁（缺一 → STOP）
 hard_gates:
   - git
   - openspec_cli
   - harness_manifest
+  - adapter_config
 
-# 软门禁（缺失时 degraded 继续）
+# 软门禁（缺一 → degraded 继续）
 soft_gates:
   - superpowers
   - gstack
@@ -30,7 +31,7 @@ gstack:
   auto_review: true
   auto_qa: false
 
-# Evidence 收集配置
+# Evidence 收集
 evidence:
   collect_test_output: true
   collect_lint_output: true
@@ -42,18 +43,19 @@ acceptance:
   auto_bind_tasks: true
   require_human_signoff: true
 
-# Archive 行为
+# Archive 行为（v1.0: Agent 不自动执行 archive）
 archive:
-  auto_archive: false
-  require_confirmation: true
+  auto_archive: false           # Agent 永不自动 archive
+  require_acceptance_first: true # 必须先 /opsx:accept
+  require_confirmation: true     # 必须用户确认
 
-# 状态标签系统
+# 状态标签系统（Harness 标准）
 status_labels:
   - not_started
   - in_progress
   - partial
   - blocked
   - pass_with_runtime_blockers
-  - ready_for_human_acceptance
-  - accepted
-  - complete
+  - ready_for_human_acceptance   # ← 最高自动状态
+  - accepted                     # ← 需 /opsx:accept
+  - complete                     # ← 需 /opsx:archive
