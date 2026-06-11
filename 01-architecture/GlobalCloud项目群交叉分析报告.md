@@ -18,7 +18,7 @@
 | 8 | GlobalCloud XGD | 数字意识框架(AI Agent) | [GCXGD](https://github.com/Jiumilu/GCXGD) | 无 Manifest | - |
 | 9 | GlobalCloud XiaoC | 提示词工程服务 | [GCXiaoC](https://github.com/Jiumilu/GCXiaoC) | partial | 78/100 |
 | 10 | GlobalCloud XiaoG | 本地语音助手 | [GCXiaoG](https://github.com/Jiumilu/GCXiaoG) | 无 Manifest | - |
-| 11 | GlobalCloud开发控制台 | Harness Engineering 控制台 | [GCPCT](https://github.com/Jiumilu/GCPCT) | 无 Manifest(模板来源) | - |
+| 11 | GlobalCloud MMC | 管理配置中心 | [GCMMC](https://github.com/Jiumilu/GCMMC) | 无 Manifest(模板来源) | - |
 | 12 | GlobalCoud GPCF | 体系文档工作区 | [GCGPCF](https://github.com/Jiumilu/GCGPCF) | not_started | - |
 
 ## 二、关键发现
@@ -53,7 +53,7 @@
 | partial (78分) | 1 | XiaoC |
 | not_started | 4 | PVAOS、WAES、GPC、GPCF |
 | 基础 Manifest | 2 | Brain、KDS |
-| 无完整 Manifest | 4 | XGD、XiaoG、PKC、开发控制台 |
+| 无完整 Manifest | 4 | XGD、XiaoG、PKC、MMC |
 
 ### 2.5 技术栈分布
 
@@ -64,7 +64,7 @@
 | Node.js (Electron) | XGD |
 | ESP32 + Python (WebSocket) | XiaoG |
 | Next.js (pnpm monorepo) | XiaoC |
-| 纯文档 Markdown | KDS、GPCF、开发控制台 |
+| 纯文档 Markdown | KDS、GPCF、MMC |
 | Python (GBrain Platform) | KDS(gbrain-platform/server) |
 
 Brain、PKC、PVAOS、WAES 同为 Vite+React+TS，可共享组件库。
@@ -120,7 +120,7 @@ PKC(个人工作台) ─── 个人仪表盘 ──────────┤
 
 | 领域 | 项目 |
 |------|------|
-| 治理层 | GCPCT（控制台）、GCPCF（文档工作区） |
+| 治理层 | GCMMC（管理配置中心）、GCPCF（文档工作区） |
 | 知识层 | GCBrain（智能平台）、GCKDS（知识中心）、GCPKC（个人工作台） |
 | 供应链层 | GCGFIS（工厂信息化）、GCGPC（绿色公链）、GCPVAOS（价值联盟） |
 | AI 能力层 | GCXGD（数字意识）、GCXiaoC（提示词工程）、GCXiaoG（语音助手） |
