@@ -1,0 +1,71 @@
+---
+doc_id: GPCF-DOC-DOCUMENT-HEALTH
+title: GlobalCloud 文档健康报告
+project: GPCF
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+domain: status
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/09-status/globalcloud-document-health-report.md
+source_path: 09-status/globalcloud-document-health-report.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-12
+supersedes: []
+superseded_by: []
+---
+
+# GlobalCloud 文档健康报告
+
+生成时间：2026-06-12T12:16:52.669653+00:00
+
+Loop 文档门禁：`blocked`
+
+## 总览
+
+- 仓库 Markdown：314
+- KDS 镜像 Markdown：327
+- KDS 同步流水：314
+- 元数据缺失：0
+- README 缺失目录：0
+
+## 状态分布
+
+- archive: 78
+- controlled: 212
+- draft: 13
+- operational_controlled: 9
+
+## 项目分布
+
+- GFIS: 1
+- GPC: 27
+- GPCF: 79
+- KDS: 39
+- WAES: 108
+- XiaoC: 58
+
+## 命令结果
+
+### document_pollution
+
+```text
+document_pollution=pass
+```
+
+### kds_token
+
+```text
+kds_token=blocked
+- missing KDS_DEVELOPMENT_SPACE_TOKEN
+- KDS_TOKEN_OWNER must be lujunxiang
+- KDS_SPACE_NAME must be 开发
+- KDS_TOKEN_SCOPE must include read,write,edit
+```
+
+### kds_conflict_guard
+
+```text
+kds_conflict_guard=pass
+```

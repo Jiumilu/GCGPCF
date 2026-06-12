@@ -1,0 +1,46 @@
+---
+doc_id: GPCF-DOC-48D043BA78
+title: 模板库
+project: GPCF
+related_projects: [GPC, WAES, KDS, GPCF]
+domain: templates
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/templates/README.md
+source_path: templates/README.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-12
+supersedes: []
+superseded_by: []
+---
+
+# 模板库
+
+目录：`templates`
+
+用途：保存循环审计、证据索引、loop-state 和执行记录模板。
+
+KDS 空间：`开发`
+
+KDS 路径前缀：`开发/12-GPCF/templates/`
+
+关联项目：GPCF
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须纳入 `09-status/globalcloud-document-control-register.md`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档必须登记到 `09-status/document-deprecation-register.md`，不得静默删除。
+- KDS 双向同步以 `09-status/kds-development-space-sync-register.md` 为准。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-48D043BA78 | 模板库 | templates/README.md | GPCF | controlled |
+| GPCF-DOC-33F4C1195D | Evidence Index — {项目名} | templates/evidence-index-template.md | GPCF | controlled |
+| GPCF-DOC-8C2AA8996B | Status Audit — {YYYY-MM-DD} | templates/loop-audit-template.md | GPCF | controlled |
+| GPCF-DOC-1D2FA3DB71 | Loop Round {N} | templates/loop-round-template.md | GPCF | controlled |
+| GPCF-DOC-DDBD7C90C2 | {项目名} Loop State | templates/loop-state-template.md | GPCF | controlled |

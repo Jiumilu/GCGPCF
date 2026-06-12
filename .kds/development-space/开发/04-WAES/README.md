@@ -1,0 +1,16 @@
+# WAES 开发文档空间
+
+生成日期：2026-06-12
+
+用途：KDS `开发` 空间中 `WAES` 项目的受控文档入口。
+
+| doc_id | title | source_path | status |
+| --- | --- | --- | --- |
+| GPCF-DOC-E37161A1FB | A23 模型使用计量与统计回指样本 | 08-evidence-samples/A23 模型使用计量与统计回指样本.md | controlled |
+| GPCF-DOC-9DAA6C3FEC | 证据样本 | 08-evidence-samples/README.md | controlled |
+| GPCF-DOC-32B2E77806 | 宪衡专项审批阻断与证据写入链样本 | 08-evidence-samples/宪衡专项审批阻断与证据写入链样本.md | controlled |
+| GPCF-DOC-DDC8DCF7FC | 宪衡专项证据与审批持久化样本结构 | 08-evidence-samples/宪衡专项证据与审批持久化样本结构.md | controlled |
+| GPCF-DOC-C434D4038A | 宪衡专项运行前样本收集记录 | 08-evidence-samples/宪衡专项运行前样本收集记录.md | controlled |
+| GPCF-DOC-DB81495EC4 | 宪衡专项连接器阻断与状态链样本 | 08-evidence-samples/宪衡专项连接器阻断与状态链样本.md | controlled |
+| GPCF-DOC-7ACBAC23C6 | 数枢专项运行前样本收集记录 | 08-evidence-samples/数枢专项运行前样本收集记录.md | controlled |
+| GPCF-DOC-B2E453D9F1 | 知源专项运行前样本收集记录 | 08-evidence-samples/知源专项运行前样本收集记录.md | controlled |

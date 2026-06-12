@@ -1,0 +1,371 @@
+---
+doc_id: GPCF-DOC-5EF9F8EE5D
+title: GlobalCloud 文档控制总台账
+project: GPCF
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+domain: status
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
+source_path: 09-status/globalcloud-document-control-register.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-12
+supersedes: []
+superseded_by: []
+---
+
+# GlobalCloud 文档控制总台账
+
+日期：2026-06-12
+
+用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
+
+## 12 项目文档总量统计
+
+说明：`project 字段文档数` 表示当前 GPCF 文档体系中直接归属到该项目的文档数；`KDS 项目空间文档数` 表示镜像落在 KDS `开发/{项目空间}` 下的文档数。跨项目架构、治理验收、证据归档等公共文档会进入公共空间，不一定落在单项目空间。
+
+| project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
+| --- | --- | --- | --- | --- |
+| GFIS | 01-GFIS | 1 | 1 | 已建空间 |
+| GPC | 02-GPC | 27 | 22 | 已建空间 |
+| PVAOS | 03-PVAOS | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| WAES | 04-WAES | 108 | 8 | 已建空间 |
+| KDS | 05-KDS | 39 | 39 | 已建空间 |
+| Brain | 06-Brain | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| PKC | 07-PKC | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| XiaoC | 08-XiaoC | 58 | 58 | 已建空间 |
+| XGD | 09-XGD | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| XiaoG | 10-XiaoG | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| MMC | 11-MMC | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| GPCF | 12-GPCF | 81 | 41 | 已建空间 |
+
+## KDS 公共空间文档统计
+
+| kds_public_folder | meaning | document_count |
+| --- | --- | --- |
+| 00-项目群总控 | 项目群总入口与根 README | 1 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 31 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 35 |
+| 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 78 |
+| 99-过期文档 | deprecated / superseded 文档 | 0 |
+
+## 全量文档清单
+
+| doc_id | title | source_path | project | related_projects | domain | status | kds_path |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| GPCF-DOC-56E7A7A3B5 | Codex 本地配置 | .codex/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/README.md |
+| GPCF-DOC-424C591653 | Codex 本地技能 | .codex/skills/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/README.md |
+| GPCF-DOC-B053B83539 | globalcloud-document-governance | .codex/skills/globalcloud-document-governance/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/README.md |
+| GPCF-DOC-346B3F6F08 | GlobalCloud Document Governance | .codex/skills/globalcloud-document-governance/SKILL.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/SKILL.md |
+| GPCF-DOC-6261F5EFD4 | references | .codex/skills/globalcloud-document-governance/references/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/README.md |
+| GPCF-DOC-D02AC375B5 | Anti-Pollution Rules | .codex/skills/globalcloud-document-governance/references/anti-pollution-rules.md | GPCF | GPCF, GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/anti-pollution-rules.md |
+| GPCF-DOC-03FB1D644C | Document Control Policy | .codex/skills/globalcloud-document-governance/references/document-control-policy.md | GPCF | WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/document-control-policy.md |
+| GPCF-DOC-AAE22480F8 | KDS Security Policy | .codex/skills/globalcloud-document-governance/references/kds-security-policy.md | GPCF | GPCF, KDS | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/kds-security-policy.md |
+| GPCF-DOC-DB96D52951 | Loop Integration Policy | .codex/skills/globalcloud-document-governance/references/loop-integration-policy.md | GPCF | GPCF, WAES, KDS | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/loop-integration-policy.md |
+| GPCF-DOC-268058F0F6 | UI/UX 技能 | .codex/skills/ui-ux-pro-max/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/README.md |
+| GPCF-DOC-8025BD5C10 | ui-ux-pro-max | .codex/skills/ui-ux-pro-max/SKILL.md | GPCF | GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md |
+| GPCF-DOC-D1E79591EA | Harness 运行证据 | .harness/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/README.md |
+| GPCF-DOC-32ED2727B9 | Harness 运行记录 | .harness/runs/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/README.md |
+| GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md |
+| GPCF-DOC-9AF8C291EB | Acceptance Matrix: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md |
+| GPCF-DOC-4609775857 | Harness Governance Status Audit: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | WAES | PVAOS, WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md |
+| GPCF-DOC-6A1A3247B5 | gbrain-admin-console-v2-20260610-205407 | .harness/runs/gbrain-admin-console-v2-20260610-205407/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/README.md |
+| GPCF-DOC-44D60534C4 | Harness Governance: gbrain-admin-console-v2 → accepted | .harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md |
+| GPCF-DOC-2C07E0A2D0 | gbrain-multitenant-deploy-v1-20260610-202348 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md |
+| GPCF-DOC-210BFA30D4 | Acceptance Matrix: gbrain-multitenant-deploy-v1 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/acceptance-matrix.md | WAES | PVAOS, WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/acceptance-matrix.md |
+| GPCF-DOC-8352F39CCF | Harness Governance Status Audit: gbrain-multitenant-deploy-v1 | .harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/status-audit.md | WAES | PVAOS, WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/status-audit.md |
+| GPCF-DOC-83A23A2605 | gbrain-portal-v1-20260610-200455 | .harness/runs/gbrain-portal-v1-20260610-200455/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/README.md |
+| GPCF-DOC-DBC5316C7C | Acceptance Matrix: gbrain-portal-v1 | .harness/runs/gbrain-portal-v1-20260610-200455/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/acceptance-matrix.md |
+| GPCF-DOC-EA8925961C | Proposal: gbrain-portal-v1 | .harness/runs/gbrain-portal-v1-20260610-200455/proposal.md | WAES | WAES, PVAOS, Brain, XGD | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/proposal.md |
+| GPCF-DOC-AD7D575AD9 | Harness Governance Status Audit: gbrain-portal-v1 | .harness/runs/gbrain-portal-v1-20260610-200455/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/status-audit.md |
+| GPCF-DOC-4B629FE0E5 | gbrain-portal-v2-frontend-20260610-204915 | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md |
+| GPCF-DOC-8898209B8E | Harness Governance: gbrain-portal-v2-frontend | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md | WAES | WAES, KDS, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md |
+| GPCF-DOC-530B2BF79A | gbrain-v2-sprint1-20260610-212531 | .harness/runs/gbrain-v2-sprint1-20260610-212531/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2-sprint1-20260610-212531/README.md |
+| GPCF-DOC-0AC4F38B1A | gbrain-v2.1-sprint1-20260610-214441 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md |
+| GPCF-DOC-54C43FAC33 | Harness Governance: gbrain-v2.1-sprint1 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | WAES | PVAOS, WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md |
+| GPCF-DOC-BFEB10D711 | gbrain-v2.1-sprint2-20260610-214842 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md |
+| GPCF-DOC-D03E6BE997 | Harness Governance: gbrain-v2.1-sprint2 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md |
+| GPCF-DOC-520E6A10FE | gbrain-v2.1-sprint3-20260610-215034 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md |
+| GPCF-DOC-2AEC389E51 | Harness Governance: gbrain-v2.1-sprint3 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md |
+| GPCF-DOC-B0E20E2E16 | gbrain-v2.1-sprint4-20260610-215232 | .harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md |
+| GPCF-DOC-F78110A3B6 | gbrain-v2.2-20260610-215935 | .harness/runs/gbrain-v2.2-20260610-215935/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/README.md |
+| GPCF-DOC-DF73213193 | Harness Governance: gbrain-v2.2 — Agent-Assisted Governance ✅ | .harness/runs/gbrain-v2.2-20260610-215935/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/status-audit.md |
+| GPCF-DOC-4879E0F6B6 | gbrain-v2.3-20260610-220227 | .harness/runs/gbrain-v2.3-20260610-220227/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.3-20260610-220227/README.md |
+| GPCF-DOC-5786630B8F | gbrain-v3.0-20260610-220702 | .harness/runs/gbrain-v3.0-20260610-220702/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.0-20260610-220702/README.md |
+| GPCF-DOC-F6876D638F | gbrain-v3.1-hardening-20260610-222505 | .harness/runs/gbrain-v3.1-hardening-20260610-222505/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/README.md |
+| GPCF-DOC-B96A928F89 | patches | .harness/runs/gbrain-v3.1-hardening-20260610-222505/patches/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/patches/README.md |
+| GPCF-DOC-ED2B81A98D | workspaces | .harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md |
+| GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md |
+| GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md |
+| GPCF-DOC-5C8B07F574 | Design Review: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md |
+| GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md |
+| GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md |
+| GPCF-DOC-F7F2EF5A5D | OpsX Proposal: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md |
+| GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | WAES | GPC, WAES, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md |
+| GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | WAES | PVAOS, WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md |
+| GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md |
+| GPCF-DOC-60D38E1B72 | gbrain-v3.2-design-20260611-003001 | .harness/runs/gbrain-v3.2-design-20260611-003001/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/README.md |
+| GPCF-DOC-253B627E40 | GCBrain v3.2 — 智能知识平台 设计方案 | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | WAES | PVAOS, WAES, KDS, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md |
+| GPCF-DOC-AAE51A57F5 | gbrain-v3.2-e2e-test-20260611-010548 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md |
+| GPCF-DOC-CAC95B5694 | acceptance-matrix | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md |
+| GPCF-DOC-CDEF748B2E | evidence | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md |
+| GPCF-DOC-A31BE9423A | Harness Status Audit — 全功能实测 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/status-audit.md |
+| GPCF-DOC-FD9FD5FE29 | 全功能实测矩阵 | .harness/runs/gbrain-v3.2-e2e-test-20260611-010548/test-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/test-matrix.md |
+| GPCF-DOC-5E9504BBF3 | gbrain-v3.2-fix-tabs-20260611-010336 | .harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/README.md |
+| GPCF-DOC-D750F507B6 | acceptance-matrix | .harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/acceptance-matrix.md |
+| GPCF-DOC-449C9F0E56 | evidence | .harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md |
+| GPCF-DOC-CAB96FCBB3 | Harness Status Audit — Tab Fix | .harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/status-audit.md |
+| GPCF-DOC-369A9AB18D | gbrain-v3.2-graph-ux-20260611-010847 | .harness/runs/gbrain-v3.2-graph-ux-20260611-010847/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-graph-ux-20260611-010847/README.md |
+| GPCF-DOC-9DCD03E299 | evidence | .harness/runs/gbrain-v3.2-graph-ux-20260611-010847/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-graph-ux-20260611-010847/evidence/README.md |
+| GPCF-DOC-11D2ABC390 | gbrain-v3.2-sprint1-20260611-003247 | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md |
+| GPCF-DOC-AF04B46319 | evidence | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/evidence/README.md |
+| GPCF-DOC-4086BF725A | patches | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/patches/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/patches/README.md |
+| GPCF-DOC-1912183C8E | workspaces | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/workspaces/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/workspaces/README.md |
+| GPCF-DOC-CFE38BC1C5 | gbrain-v3.2-sprint2-20260611-004233 | .harness/runs/gbrain-v3.2-sprint2-20260611-004233/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint2-20260611-004233/README.md |
+| GPCF-DOC-310C96221E | evidence | .harness/runs/gbrain-v3.2-sprint2-20260611-004233/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint2-20260611-004233/evidence/README.md |
+| GPCF-DOC-78696D07CE | gbrain-v3.2-sprint3-20260611-005031 | .harness/runs/gbrain-v3.2-sprint3-20260611-005031/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint3-20260611-005031/README.md |
+| GPCF-DOC-9F40EBBE0A | evidence | .harness/runs/gbrain-v3.2-sprint3-20260611-005031/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint3-20260611-005031/evidence/README.md |
+| GPCF-DOC-631FAA49D7 | gbrain-v3.2-sprint4-20260611-005427 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md |
+| GPCF-DOC-D928C393A1 | acceptance-matrix | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/acceptance-matrix.md |
+| GPCF-DOC-05F302F1E3 | evidence | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/evidence/README.md |
+| GPCF-DOC-46C72A325B | Proposal: Sprint 4 — 知识协作 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/proposal.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/proposal.md |
+| GPCF-DOC-FC4108C8F1 | Harness Status Audit — Sprint 4 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/status-audit.md |
+| GPCF-DOC-3C4E0A2FB6 | Tasks: Sprint 4 — 知识协作 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/tasks.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/tasks.md |
+| GPCF-DOC-BE82E88CD0 | gbrain-v3.2-zh-final-20260611-012235 | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/README.md |
+| GPCF-DOC-0323BC65B4 | acceptance-matrix | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/acceptance-matrix.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/acceptance-matrix.md |
+| GPCF-DOC-5A27A20A77 | evidence | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/evidence/README.md | WAES | GPC, WAES, KDS, Brain, GPCF | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/evidence/README.md |
+| GPCF-DOC-6CED60E9F1 | Harness Status Audit — 中文环境最终验收 | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md | WAES | WAES, Brain | harness-evidence | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md |
+| GPCF-DOC-D1608C81FA | 索引与入口 | 00-index/README.md | GPCF | GPC, WAES, KDS, GPCF | index | controlled | 开发/12-GPCF/00-index/README.md |
+| GPCF-DOC-09655E45C0 | ADR：GPC 从 Odoo 二开调整为原生公共服务平台 | 01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md | GPCF | GFIS, GPC, PVAOS, WAES, XiaoC, XGD, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md |
+| GPCF-DOC-7FAF5AD2FB | AI 驱动 GFIS 三阶段演进构想 | 01-architecture/AI驱动GFIS三阶段演进构想.md | GPCF | GPCF, GFIS, WAES, KDS, Brain, PKC, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/AI驱动GFIS三阶段演进构想.md |
+| GPCF-DOC-16D9DC63AA | AI 驱动 GFIS 与 GlobalCloud 绿色供应链体系结合分析 | 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC | architecture | controlled | 开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md |
+| GPCF-DOC-3F9E7988C6 | AI 驱动工厂信息化系统完整方案 V3.1 | 01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | GPCF | GPCF, GFIS, GPC, WAES | architecture | controlled | 开发/90-跨项目架构/01-architecture/AI驱动工厂信息化系统完整方案V3.1.md |
+| GPCF-DOC-D54AF3DD5D | GlobalCloud 绿色供应链体系 — 全面分析报告 | 01-architecture/GPC方向全面分析报告.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GPC方向全面分析报告.md |
+| GPCF-DOC-0C519C97BD | GlobalCloud 体系最小闭环与三阶段激活深度总表 | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md |
+| GPCF-DOC-3DBC8DC5C3 | GlobalCloud 智慧工厂专项架构图集 | 01-architecture/GlobalCloud智慧工厂专项架构图集.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂专项架构图集.md |
+| GPCF-DOC-1DCB795545 | GlobalCloud 绿色供应链体系进一步梳理与提示词库 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md |
+| GPCF-DOC-B2A5E41836 | GlobalCloud 绿色供应链体系项目群控制表 | 01-architecture/GlobalCloud智慧工厂项目群控制表.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群控制表.md |
+| GPCF-DOC-475051A08A | GlobalCloud 绿色供应链体系项目群架构图 | 01-architecture/GlobalCloud智慧工厂项目群架构图.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群架构图.md |
+| GPCF-DOC-18B774FB34 | GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析 | 01-architecture/GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析.md |
+| GPCF-DOC-0CCC5F2950 | GlobalCloud 绿色供应链体系 WAES 控制塔与治理门禁图 | 01-architecture/GlobalCloud绿色供应链体系WAES控制塔与治理门禁图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔与治理门禁图.md |
+| GPCF-DOC-31CB143A7C | GlobalCloud 绿色供应链体系 WAES 控制塔治理架构图 | 01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md |
+| GPCF-DOC-2425FD0964 | GlobalCloud 绿色供应链体系全链路事件与证据闭环图 | 01-architecture/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md |
+| GPCF-DOC-069589E530 | GlobalCloud 绿色供应链体系四流综合架构分析与优化方案 | 01-architecture/GlobalCloud绿色供应链体系四流综合架构分析与优化方案.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系四流综合架构分析与优化方案.md |
+| GPCF-DOC-B7351DDCF8 | GlobalCloud 绿色供应链体系多厂协同模型 | 01-architecture/GlobalCloud绿色供应链体系多厂协同模型.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, Brain | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系多厂协同模型.md |
+| GPCF-DOC-F6C8634052 | GlobalCloud 绿色供应链体系多智能体实施团队与协同方案 | 01-architecture/GlobalCloud绿色供应链体系多智能体实施团队与协同方案.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系多智能体实施团队与协同方案.md |
+| GPCF-DOC-424D73E236 | GlobalCloud 绿色供应链体系层次化结构与优化提示词 | 01-architecture/GlobalCloud绿色供应链体系层次化结构与优化提示词.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系层次化结构与优化提示词.md |
+| GPCF-DOC-2656290CFC | GlobalCloud 绿色供应链体系总体实施路线与交付保障方案 | 01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md |
+| GPCF-DOC-6ADEF5F42F | GlobalCloud 绿色供应链体系总架构 | 01-architecture/GlobalCloud绿色供应链体系总架构.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md |
+| GPCF-DOC-6B386000D3 | GlobalCloud 绿色供应链体系整体评估模型与100分优化方案 | 01-architecture/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md |
+| GPCF-DOC-4DF13CF33D | GlobalCloud 绿色供应链体系最新架构图 | 01-architecture/GlobalCloud绿色供应链体系最新架构图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系最新架构图.md |
+| GPCF-DOC-5BF9469733 | GlobalCloud 绿色供应链体系真实层次架构图 | 01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md |
+| GPCF-DOC-3DB47E5509 | GlobalCloud 绿色供应链平台业务流架构图 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台业务流架构图.md |
+| GPCF-DOC-AA2468EDC8 | GlobalCloud 绿色供应链平台主架构与宪法约束融合建议 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md |
+| GPCF-DOC-535BF5C0CA | GlobalCloud V0.0.1 项目群交叉分析报告 | 01-architecture/GlobalCloud项目群交叉分析报告.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md |
+| GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/README.md |
+| GPCF-DOC-1D47877518 | 基于 GlobalCloud 项目群的 GlobalCloud 绿色供应链体系架构设计方案 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | GPCF | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md |
+| GPCF-DOC-78AE1A47AE | GlobalCloud智能体团队Codex工具与技能使用治理规范 | 02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md | WAES | WAES, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md |
+| GPCF-DOC-39A8CE7FE1 | GlobalCloud智能体团队工作区与项目仓库操作规范 | 02-governance/GlobalCloud智能体团队工作区与项目仓库操作规范.md | WAES | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队工作区与项目仓库操作规范.md |
+| GPCF-DOC-7F63F2D675 | GlobalCloud 智能体团队总体运行机制 | 02-governance/GlobalCloud智能体团队总体运行机制.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队总体运行机制.md |
+| GPCF-DOC-A437BDA6F5 | GlobalCloud 智能体团队模型使用治理与成本控制机制 | 02-governance/GlobalCloud智能体团队模型使用治理与成本控制机制.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队模型使用治理与成本控制机制.md |
+| GPCF-DOC-2469340C52 | GlobalCloud智能体团队软件全过程实施与交付控制规范 | 02-governance/GlobalCloud智能体团队软件全过程实施与交付控制规范.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队软件全过程实施与交付控制规范.md |
+| GPCF-DOC-39CC074588 | GlobalCloud智能体团队运行与实施环境总体规范 | 02-governance/GlobalCloud智能体团队运行与实施环境总体规范.md | WAES | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队运行与实施环境总体规范.md |
+| GPCF-DOC-16A6E29BA0 | GlobalCloud 绿色供应链体系交付物完成判定规范 | 02-governance/GlobalCloud绿色供应链体系交付物完成判定规范.md | WAES | GPC, WAES, XiaoC | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系交付物完成判定规范.md |
+| GPCF-DOC-12F3EAB4C6 | GlobalCloud 绿色供应链体系动运转达标标准与质量门禁 | 02-governance/GlobalCloud绿色供应链体系动运转达标标准与质量门禁.md | WAES | GFIS, GPC, PVAOS, WAES, Brain | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系动运转达标标准与质量门禁.md |
+| GPCF-DOC-1139BD0025 | GlobalCloud 绿色供应链体系实施过程控制规范清单 | 02-governance/GlobalCloud绿色供应链体系实施过程控制规范清单.md | WAES | GFIS, GPC, WAES, KDS, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系实施过程控制规范清单.md |
+| GPCF-DOC-22B59B08B7 | GlobalCloud 绿色供应链体系实施项目控制与量化机制 | 02-governance/GlobalCloud绿色供应链体系实施项目控制与量化机制.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系实施项目控制与量化机制.md |
+| GPCF-DOC-4300D04C44 | GlobalCloud 绿色供应链体系模块实施分级判定表 | 02-governance/GlobalCloud绿色供应链体系模块实施分级判定表.md | WAES | GFIS, GPC, PVAOS, WAES, Brain, XGD | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系模块实施分级判定表.md |
+| GPCF-DOC-670FDF1C79 | GlobalCloud 绿色供应链体系测试与验证规范 | 02-governance/GlobalCloud绿色供应链体系测试与验证规范.md | WAES | GPC, WAES | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系测试与验证规范.md |
+| GPCF-DOC-5D55FFB7D9 | GlobalCloud 绿色供应链体系状态升级与验收放行规范 | 02-governance/GlobalCloud绿色供应链体系状态升级与验收放行规范.md | WAES | GPC, WAES, XiaoC | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系状态升级与验收放行规范.md |
+| GPCF-DOC-FD6BA2EC78 | GlobalCloud 绿色供应链体系设计-实现追踪矩阵规范 | 02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | WAES | GPC, WAES, XiaoC | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md |
+| GPCF-DOC-94AA31880F | GlobalCloud 绿色供应链体系项目仓库实施准入规范 | 02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | WAES | GFIS, GPC, WAES, XiaoC | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md |
+| GPCF-DOC-AC66DE8415 | GlobalCloud 项目群 KDS 开发空间安全规范 | 02-governance/GlobalCloud项目群KDS开发空间安全规范.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md |
+| GPCF-DOC-D2373AEE37 | GlobalCloud 项目群在 Codex 中的模型分工与成本控制方案 | 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md |
+| GPCF-DOC-B8ADFA9E30 | GlobalCloud 项目群文档综合治理规范 | 02-governance/GlobalCloud项目群文档综合治理规范.md | WAES | WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md |
+| GPCF-DOC-87DD7D79CD | GlobalCloud 项目群文档防污染规则 | 02-governance/GlobalCloud项目群文档防污染规则.md | WAES | GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md |
+| GPCF-DOC-F949595C37 | 治理规范 | 02-governance/README.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/README.md |
+| GPCF-DOC-F3EADEE56A | GPCF Agent 架构六要素 — 顶层设计总纲 | 02-governance/gpcf-agent-architecture-six-elements.md | WAES | GPC, WAES, KDS, Brain, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-agent-architecture-six-elements.md |
+| GPCF-DOC-F113DF5034 | GPCF Loop Engineering 证据分类体系 | 02-governance/gpcf-evidence-taxonomy.md | WAES | GPC, WAES, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-evidence-taxonomy.md |
+| GPCF-DOC-20CE547AAF | GPCF Loop Engineering v1.0 — 项目群工程闭环运行协议 | 02-governance/gpcf-loop-engineering-spec-v1.md | WAES | GPC, WAES, KDS, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-loop-engineering-spec-v1.md |
+| GPCF-DOC-D67341FE2B | GPCF Loop Engineering 角色边界定义 | 02-governance/gpcf-role-boundary.md | WAES | GPC, WAES, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-role-boundary.md |
+| GPCF-DOC-A33E51C815 | GPCF Loop Engineering 状态机定义 | 02-governance/gpcf-status-machine.md | WAES | GPC, WAES, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-status-machine.md |
+| GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md |
+| GPCF-DOC-1F12054E1C | GlobalCloud 企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | KDS | GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md |
+| GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | KDS | GPC, PVAOS, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md |
+| GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | KDS | KDS, WAES | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md |
+| GPCF-DOC-0A5E8FD5E6 | GlobalCloud智能体团队-企业级知识系统实施任务书 | 03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md | KDS | GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md |
+| GPCF-DOC-1212817FF5 | GlobalCloud 模型授权审计计量与分期结算规划 | 03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md | GPCF | GPCF, PVAOS, WAES | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md |
+| GPCF-DOC-69CFFD4C82 | GlobalCloud 统一模型配置体系方案 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | KDS | KDS, GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md |
+| GPCF-DOC-05774FB8AD | GlobalCloud 绿色供应链体系 AI 服务模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md |
+| GPCF-DOC-CA83191660 | GlobalCloud 绿色供应链体系 Edge 接入与安全模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md | GPCF | GPCF, GFIS, GPC, WAES | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md |
+| GPCF-DOC-52B18BDBE9 | GlobalCloud 绿色供应链体系 LLM Wiki 与 Brain 测试评估矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md | KDS | GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md |
+| GPCF-DOC-664403C419 | GlobalCloud 绿色供应链体系 SOP 模板库 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md |
+| GPCF-DOC-9B55FCEA8F | GlobalCloud 绿色供应链体系事件合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md |
+| GPCF-DOC-BA68A130D5 | GlobalCloud 绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md | KDS | GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md |
+| GPCF-DOC-D48C6EB801 | GlobalCloud 绿色供应链体系企业级知识库方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md |
+| GPCF-DOC-1362AFC964 | GlobalCloud 绿色供应链体系全局初始化 SOP 方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md |
+| GPCF-DOC-1A3581D521 | GlobalCloud 绿色供应链体系对象目录 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md |
+| GPCF-DOC-0962BEDB78 | GlobalCloud 绿色供应链体系数据治理模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md |
+| GPCF-DOC-04D6680E14 | GlobalCloud 绿色供应链体系知识与Agent授权治理总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md |
+| GPCF-DOC-FCCA958E2C | GlobalCloud 绿色供应链体系知识主存层与知识引擎层分层方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md |
+| GPCF-DOC-062D4DA687 | GlobalCloud 绿色供应链体系系统-数据库边界总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md |
+| GPCF-DOC-E2FDF91E39 | GlobalCloud 绿色供应链体系资源仓库-业务对象映射总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md |
+| GPCF-DOC-E4DDF33CF8 | GlobalCloud 绿色供应链体系连接器合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md | KDS | KDS, GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md |
+| GPCF-DOC-09065C5D7F | GlobalCloud 项目模型引用与用户模型偏好方案 | 03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md | GPCF | GPCF, WAES | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md |
+| GPCF-DOC-A7C38B4EA7 | 数据、AI 与知识 | 03-data-ai-knowledge/README.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/README.md |
+| GPCF-DOC-56BC03A70C | GlobalCloud 绿色供应链体系 P0 最小闭环界面实施清单 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md |
+| GPCF-DOC-BD1C1FE02E | GlobalCloud 绿色供应链体系 P0 最小闭环界面验收矩阵 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面验收矩阵.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面验收矩阵.md |
+| GPCF-DOC-5D5E27312C | GlobalCloud 绿色供应链体系对话模式与操作模式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md | GPC | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md |
+| GPCF-DOC-E12B78B67D | GlobalCloud 绿色供应链体系平台订单-签收-异常界面收口专项方案 | 04-ui-delivery/GlobalCloud绿色供应链体系平台订单-签收-异常界面收口专项方案.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系平台订单-签收-异常界面收口专项方案.md |
+| GPCF-DOC-16087A96BC | GlobalCloud 绿色供应链体系最终交付界面规范与样式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系最终交付界面规范与样式规范.md | GPC | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系最终交付界面规范与样式规范.md |
+| GPCF-DOC-C884E15D19 | GlobalCloud 绿色供应链体系样板页实施计划 | 04-ui-delivery/GlobalCloud绿色供应链体系样板页实施计划.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系样板页实施计划.md |
+| GPCF-DOC-D068AE0B5B | GlobalCloud 绿色供应链体系界面分阶段治理规则 | 04-ui-delivery/GlobalCloud绿色供应链体系界面分阶段治理规则.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系界面分阶段治理规则.md |
+| GPCF-DOC-2BC3BD8BEA | GlobalCloud 绿色供应链体系界面实施差距清单 | 04-ui-delivery/GlobalCloud绿色供应链体系界面实施差距清单.md | GPC | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系界面实施差距清单.md |
+| GPCF-DOC-6CA9039C10 | GlobalCloud 绿色供应链体系界面实施排期表 | 04-ui-delivery/GlobalCloud绿色供应链体系界面实施排期表.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系界面实施排期表.md |
+| GPCF-DOC-42C17163FA | GlobalCloud 绿色供应链体系界面实施责任分配表 | 04-ui-delivery/GlobalCloud绿色供应链体系界面实施责任分配表.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系界面实施责任分配表.md |
+| GPCF-DOC-2D7F908C5F | GlobalCloud 绿色供应链体系统一体验骨架规范 | 04-ui-delivery/GlobalCloud绿色供应链体系统一体验骨架规范.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系统一体验骨架规范.md |
+| GPCF-DOC-BA482BB4F5 | GlobalCloud 绿色供应链体系统一组件与设计令牌规范 | 04-ui-delivery/GlobalCloud绿色供应链体系统一组件与设计令牌规范.md | GPC | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系统一组件与设计令牌规范.md |
+| GPCF-DOC-0384F73471 | GlobalCloud 绿色供应链体系统一组件库建设计划 | 04-ui-delivery/GlobalCloud绿色供应链体系统一组件库建设计划.md | GPC | GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系统一组件库建设计划.md |
+| GPCF-DOC-8F1279E706 | GlobalCloud 绿色供应链体系首批组件接入实施计划 | 04-ui-delivery/GlobalCloud绿色供应链体系首批组件接入实施计划.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系首批组件接入实施计划.md |
+| GPCF-DOC-5371CCBDCB | GlobalCloud 绿色供应链体系首批统一组件接入样板清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件接入样板清单.md | GPC | GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件接入样板清单.md |
+| GPCF-DOC-0C4A339FD2 | GlobalCloud 绿色供应链体系首批统一组件清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件清单.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件清单.md |
+| GPCF-DOC-DFFAFE5D69 | GlobalCloud 绿色供应链体系首批统一组件验收标准 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件验收标准.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件验收标准.md |
+| GPCF-DOC-3D439D777F | GlobalCloud 绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md |
+| GPCF-DOC-6008375BA7 | GlobalCloud 绿色供应链体系高风险模块界面收口任务分解表 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md |
+| GPCF-DOC-505DFF5C49 | GlobalCloud 绿色供应链体系高风险模块界面收口计划 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md |
+| GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | GPC | GPC, WAES, KDS, GPCF | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/README.md |
+| GPCF-DOC-AEEFA55699 | GlobalCloud 智能体团队12个交付包责任分解表 | 05-agent-team/GlobalCloud智能体团队12个交付包责任分解表.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队12个交付包责任分解表.md |
+| GPCF-DOC-B66EC338E9 | GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵 | 05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵.md |
+| GPCF-DOC-E164F62976 | GlobalCloud智能体团队6个专项首轮实施前验证执行台账 | 05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md |
+| GPCF-DOC-D06020C9DC | GlobalCloud 智能体团队 Loop Engineering 全面改进方案 | 05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md |
+| GPCF-DOC-3874DD0406 | GlobalCloud 智能体团队PMBOK项目管理台账 | 05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md | XiaoC | GPC, WAES, XiaoC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md |
+| GPCF-DOC-8CDB82A404 | GlobalCloud 智能体团队下一步执行清单 | 05-agent-team/GlobalCloud智能体团队下一步执行清单.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队下一步执行清单.md |
+| GPCF-DOC-6C1B946AA5 | GlobalCloud 智能体团队专项回报汇总台账 | 05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md |
+| GPCF-DOC-7249EEECFE | GlobalCloud 智能体团队专项执行版包模板 | 05-agent-team/GlobalCloud智能体团队专项执行版包模板.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队专项执行版包模板.md |
+| GPCF-DOC-582A23D485 | GlobalCloud 智能体团队侧边聊天10条主线-团队责任分配总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md |
+| GPCF-DOC-5D6CD718DA | GlobalCloud 智能体团队侧边聊天10条主线-当前实施准备完成度总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md |
+| GPCF-DOC-61BD531C70 | GlobalCloud 智能体团队侧边聊天完整归纳总览 | 05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md |
+| GPCF-DOC-2F22FF007C | GlobalCloud 智能体团队实施前准备完成结论 | 05-agent-team/GlobalCloud智能体团队实施前准备完成结论.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前准备完成结论.md |
+| GPCF-DOC-62063BBDE9 | GlobalCloud 智能体团队实施前准备差距清单 | 05-agent-team/GlobalCloud智能体团队实施前准备差距清单.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前准备差距清单.md |
+| GPCF-DOC-3D6A5A4056 | GlobalCloud 智能体团队实施前准备目标模式要求 | 05-agent-team/GlobalCloud智能体团队实施前准备目标模式要求.md | XiaoC | GFIS, GPC, WAES, KDS, XiaoC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前准备目标模式要求.md |
+| GPCF-DOC-D899DB2508 | GlobalCloud 智能体团队实施前证据与阻塞总表 | 05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md |
+| GPCF-DOC-8A91086A7D | GlobalCloud 智能体团队当前总目标 | 05-agent-team/GlobalCloud智能体团队当前总目标.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队当前总目标.md |
+| GPCF-DOC-FE641179EC | GlobalCloud 智能体团队总体规划与行动计划 | 05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md |
+| GPCF-DOC-B2499B523C | GlobalCloud 智能体团队控制塔与周报机制 | 05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md | XiaoC | GPC, WAES, XiaoC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md |
+| GPCF-DOC-FF53116C54 | GlobalCloud智能体团队文档全量盘点与分类总表 | 05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md |
+| GPCF-DOC-A080E39115 | GlobalCloud智能体团队文档清理与补充完善建议 | 05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md | XiaoC | GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md |
+| GPCF-DOC-A45C28115C | GlobalCloud智能体团队文档理解与纳入审计 | 05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md | XiaoC | GFIS, GPC, WAES, KDS, Brain, XiaoC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md |
+| GPCF-DOC-6F5B2A27CF | GlobalCloud 智能体团队显性智能体名录与可见机制 | 05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md |
+| GPCF-DOC-C892CAB85A | GlobalCloud 智能体团队本阶段首轮实施前验证目标 | 05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md |
+| GPCF-DOC-92F9FE9764 | GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词 | 05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md | XiaoC | GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md |
+| GPCF-DOC-C0F82AE843 | GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵 | 05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md | GPCF | WAES, GPCF | agent-team | controlled | 开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md |
+| GPCF-DOC-338F660061 | GlobalCloud智能体团队正式实施开发前缺口关闭清单 | 05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md |
+| GPCF-DOC-D83CE73173 | GlobalCloud 智能体团队真实项目仓库映射与只读预检计划 | 05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md |
+| GPCF-DOC-7C5F2C8F94 | GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵 | 05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md |
+| GPCF-DOC-A8F6B69EE5 | GlobalCloud 智能体团队阶段行动计划 | 05-agent-team/GlobalCloud智能体团队阶段行动计划.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队阶段行动计划.md |
+| GPCF-DOC-114BC60C1B | GlobalCloud 智能体团队首版周报 | 05-agent-team/GlobalCloud智能体团队首版周报.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队首版周报.md |
+| GPCF-DOC-AF862B0D78 | GlobalCloud 智能体团队首轮实施前验证入口判断 | 05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md | XiaoC | GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md |
+| GPCF-DOC-2EF7BA3A76 | GlobalCloud 智能体团队首轮实施前验证包总表 | 05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md |
+| GPCF-DOC-0D3224DFB9 | GlobalCloud 智能体实施团队准备度评估 | 05-agent-team/GlobalCloud智能体实施团队准备度评估.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/GlobalCloud智能体实施团队准备度评估.md |
+| GPCF-DOC-E50AD58A99 | 智能体团队 | 05-agent-team/README.md | XiaoC | GPC, WAES, KDS, XiaoC, GPCF | agent-team | controlled | 开发/08-XiaoC/05-agent-team/README.md |
+| GPCF-DOC-43EEEC8238 | 专项工作流 | 06-workstreams/README.md | XiaoC | GFIS, GPC, WAES, KDS, XiaoC, XGD, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/README.md |
+| GPCF-DOC-9F1BE7A287 | 仓图专项会话状态报告 | 06-workstreams/仓图专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, KDS, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/仓图专项会话状态报告.md |
+| GPCF-DOC-93BFB00E2A | 厂行专项会话状态报告 | 06-workstreams/厂行专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/厂行专项会话状态报告.md |
+| GPCF-DOC-8DA7A7CF1B | 厂行专项会话状态报告模板 | 06-workstreams/厂行专项会话状态报告模板.md | XiaoC | GFIS, GPC, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/厂行专项会话状态报告模板.md |
+| GPCF-DOC-6C34A5454F | 厂行专项正式只读预检结论 | 06-workstreams/厂行专项正式只读预检结论.md | GPCF | GFIS, GPC, WAES, GPCF | workstreams | controlled | 开发/12-GPCF/06-workstreams/厂行专项正式只读预检结论.md |
+| GPCF-DOC-C3F58B5314 | 厂行专项首轮实施前验证包 | 06-workstreams/厂行专项首轮实施前验证包.md | GPCF | GFIS, GPC, WAES, GPCF | workstreams | controlled | 开发/12-GPCF/06-workstreams/厂行专项首轮实施前验证包.md |
+| GPCF-DOC-9A0B1FF39A | 厂行专项首轮实施前验证执行记录 | 06-workstreams/厂行专项首轮实施前验证执行记录.md | GPCF | GPCF, GFIS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/厂行专项首轮实施前验证执行记录.md |
+| GPCF-DOC-D30AC30535 | 宪衡专项会话状态报告 | 06-workstreams/宪衡专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/宪衡专项会话状态报告.md |
+| GPCF-DOC-6FE56B8FED | 宪衡专项可执行验证入口清单 | 06-workstreams/宪衡专项可执行验证入口清单.md | GPCF | GPCF, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/宪衡专项可执行验证入口清单.md |
+| GPCF-DOC-CE9D5E1820 | 宪衡专项执行版包（侧线程草案） | 06-workstreams/宪衡专项执行版包-侧线程草案.md | XiaoC | GFIS, GPC, PVAOS, WAES, XiaoC | workstreams | controlled | 开发/08-XiaoC/06-workstreams/宪衡专项执行版包-侧线程草案.md |
+| GPCF-DOC-0FD20721A6 | 宪衡专项正式只读预检结论 | 06-workstreams/宪衡专项正式只读预检结论.md | GPCF | GPCF, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/宪衡专项正式只读预检结论.md |
+| GPCF-DOC-24A095DD7D | 宪衡专项首轮实施前验证包 | 06-workstreams/宪衡专项首轮实施前验证包.md | GPCF | GPCF, GFIS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/宪衡专项首轮实施前验证包.md |
+| GPCF-DOC-FFC2BDFA8A | 宪衡专项首轮实施前验证执行记录 | 06-workstreams/宪衡专项首轮实施前验证执行记录.md | GPCF | GPCF, GFIS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/宪衡专项首轮实施前验证执行记录.md |
+| GPCF-DOC-1272F28543 | 接稳专项会话状态报告 | 06-workstreams/接稳专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/接稳专项会话状态报告.md |
+| GPCF-DOC-02C8CD9284 | 数枢专项会话状态报告 | 06-workstreams/数枢专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/数枢专项会话状态报告.md |
+| GPCF-DOC-510FE064B3 | 数枢专项正式只读预检结论 | 06-workstreams/数枢专项正式只读预检结论.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/数枢专项正式只读预检结论.md |
+| GPCF-DOC-BBAA73EE39 | 数枢专项首轮实施前验证包 | 06-workstreams/数枢专项首轮实施前验证包.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/数枢专项首轮实施前验证包.md |
+| GPCF-DOC-656600984E | 数枢专项首轮实施前验证执行记录 | 06-workstreams/数枢专项首轮实施前验证执行记录.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/数枢专项首轮实施前验证执行记录.md |
+| GPCF-DOC-7C2F7BF7AC | 灵策与评证专项会话状态报告（历史归档） | 06-workstreams/灵策与评证专项会话状态报告.md | XiaoC | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策与评证专项会话状态报告.md |
+| GPCF-DOC-C70B35BC1B | 灵策与评证专项正式只读预检结论 | 06-workstreams/灵策与评证专项正式只读预检结论.md | XiaoC | WAES, XiaoC, XGD, XiaoG | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策与评证专项正式只读预检结论.md |
+| GPCF-DOC-5BEBE02506 | 灵策与评证专项首轮实施前验证包 | 06-workstreams/灵策与评证专项首轮实施前验证包.md | XiaoC | GFIS, WAES, KDS, XiaoC, XGD, XiaoG | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策与评证专项首轮实施前验证包.md |
+| GPCF-DOC-452FC27F7F | 灵策与评证专项首轮实施前验证执行记录 | 06-workstreams/灵策与评证专项首轮实施前验证执行记录.md | XiaoC | GFIS, WAES, XiaoC, XGD, XiaoG | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策与评证专项首轮实施前验证执行记录.md |
+| GPCF-DOC-440EE5CBC1 | 灵策专项会话状态报告 | 06-workstreams/灵策专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, KDS, XiaoC, XGD, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策专项会话状态报告.md |
+| GPCF-DOC-20B2BF28FB | 灵策专项首轮实施前执行记录 | 06-workstreams/灵策专项首轮实施前执行记录.md | XiaoC | GFIS, GPC, WAES, XiaoC, XGD | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策专项首轮实施前执行记录.md |
+| GPCF-DOC-12DC8FDEE2 | 灵策专项首轮实施前验证包 | 06-workstreams/灵策专项首轮实施前验证包.md | XiaoC | GFIS, GPC, WAES, KDS, XiaoC, XGD, XiaoG | workstreams | controlled | 开发/08-XiaoC/06-workstreams/灵策专项首轮实施前验证包.md |
+| GPCF-DOC-A6A151135B | 知源专项会话状态报告 | 06-workstreams/知源专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, KDS, Brain, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/知源专项会话状态报告.md |
+| GPCF-DOC-FC88DC4E48 | 知源专项会话状态报告模板 | 06-workstreams/知源专项会话状态报告模板.md | XiaoC | GFIS, GPC, WAES, KDS, Brain, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/知源专项会话状态报告模板.md |
+| GPCF-DOC-4822B637C3 | 知源专项正式只读预检结论 | 06-workstreams/知源专项正式只读预检结论.md | GPCF | GPCF, WAES, KDS, Brain | workstreams | controlled | 开发/12-GPCF/06-workstreams/知源专项正式只读预检结论.md |
+| GPCF-DOC-29B08242D5 | 知源专项首轮实施前验证包 | 06-workstreams/知源专项首轮实施前验证包.md | GPCF | GPCF, GFIS, WAES, KDS, Brain | workstreams | controlled | 开发/12-GPCF/06-workstreams/知源专项首轮实施前验证包.md |
+| GPCF-DOC-2661964453 | 知源专项首轮实施前验证执行记录 | 06-workstreams/知源专项首轮实施前验证执行记录.md | GPCF | GPCF, GFIS, WAES, KDS, Brain | workstreams | controlled | 开发/12-GPCF/06-workstreams/知源专项首轮实施前验证执行记录.md |
+| GPCF-DOC-E526B6F91A | 证验专项会话状态报告 | 06-workstreams/证验专项会话状态报告.md | XiaoC | GFIS, GPC, WAES, KDS, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/证验专项会话状态报告.md |
+| GPCF-DOC-16A50D01FF | 证验专项首轮实施前执行记录 | 06-workstreams/证验专项首轮实施前执行记录.md | XiaoC | WAES, XiaoC | workstreams | controlled | 开发/08-XiaoC/06-workstreams/证验专项首轮实施前执行记录.md |
+| GPCF-DOC-0298890196 | 证验专项首轮实施前验证包 | 06-workstreams/证验专项首轮实施前验证包.md | XiaoC | WAES, XiaoC | workstreams | controlled | 开发/08-XiaoC/06-workstreams/证验专项首轮实施前验证包.md |
+| GPCF-DOC-AE0D14D96A | 评衡专项会话状态报告 | 06-workstreams/评衡专项会话状态报告.md | XiaoC | GFIS, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/评衡专项会话状态报告.md |
+| GPCF-DOC-7EC6E52722 | 评衡专项首轮实施前执行记录 | 06-workstreams/评衡专项首轮实施前执行记录.md | XiaoC | WAES, XiaoC, XGD | workstreams | controlled | 开发/08-XiaoC/06-workstreams/评衡专项首轮实施前执行记录.md |
+| GPCF-DOC-C54314A529 | 评衡专项首轮实施前验证包 | 06-workstreams/评衡专项首轮实施前验证包.md | GPCF | GPCF, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/评衡专项首轮实施前验证包.md |
+| GPCF-DOC-6C0659CB2B | 链同专项会话状态报告 | 06-workstreams/链同专项会话状态报告.md | XiaoC | GFIS, GPC, PVAOS, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/链同专项会话状态报告.md |
+| GPCF-DOC-5E93C8BFBC | 链同专项会话状态报告模板 | 06-workstreams/链同专项会话状态报告模板.md | XiaoC | GFIS, GPC, PVAOS, WAES, XiaoC, GPCF | workstreams | controlled | 开发/08-XiaoC/06-workstreams/链同专项会话状态报告模板.md |
+| GPCF-DOC-E4854CDAC8 | 链同专项执行版包（侧线程草案） | 06-workstreams/链同专项执行版包-侧线程草案.md | XiaoC | GFIS, GPC, PVAOS, WAES, XiaoC | workstreams | controlled | 开发/08-XiaoC/06-workstreams/链同专项执行版包-侧线程草案.md |
+| GPCF-DOC-9757FCD093 | 链同专项正式只读预检结论 | 06-workstreams/链同专项正式只读预检结论.md | GPCF | GPCF, GPC, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/链同专项正式只读预检结论.md |
+| GPCF-DOC-56B87AF669 | 链同专项首轮实施前验证包 | 06-workstreams/链同专项首轮实施前验证包.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/链同专项首轮实施前验证包.md |
+| GPCF-DOC-F204B84F5B | 链同专项首轮实施前验证执行记录 | 06-workstreams/链同专项首轮实施前验证执行记录.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES | workstreams | controlled | 开发/12-GPCF/06-workstreams/链同专项首轮实施前验证执行记录.md |
+| GPCF-DOC-EB678B0E98 | GlobalCloud 绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | acceptance | controlled | 开发/91-治理与验收/07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md |
+| GPCF-DOC-652F1E79A2 | 验收矩阵 | 07-acceptance/README.md | WAES | GPC, WAES, KDS, GPCF | acceptance | controlled | 开发/91-治理与验收/07-acceptance/README.md |
+| GPCF-DOC-E37161A1FB | A23 模型使用计量与统计回指样本 | 08-evidence-samples/A23 模型使用计量与统计回指样本.md | WAES | WAES | evidence | controlled | 开发/04-WAES/08-evidence-samples/A23 模型使用计量与统计回指样本.md |
+| GPCF-DOC-9DAA6C3FEC | 证据样本 | 08-evidence-samples/README.md | WAES | GPC, WAES, KDS, GPCF | evidence | controlled | 开发/04-WAES/08-evidence-samples/README.md |
+| GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | WAES | GPC, WAES, KDS, GPCF | evidence | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md |
+| GPCF-DOC-6ACBFCD6E4 | 会话归档：019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | evidence | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md |
+| GPCF-DOC-32B2E77806 | 宪衡专项审批阻断与证据写入链样本 | 08-evidence-samples/宪衡专项审批阻断与证据写入链样本.md | WAES | WAES | evidence | controlled | 开发/04-WAES/08-evidence-samples/宪衡专项审批阻断与证据写入链样本.md |
+| GPCF-DOC-DDC8DCF7FC | 宪衡专项证据与审批持久化样本结构 | 08-evidence-samples/宪衡专项证据与审批持久化样本结构.md | WAES | WAES | evidence | controlled | 开发/04-WAES/08-evidence-samples/宪衡专项证据与审批持久化样本结构.md |
+| GPCF-DOC-C434D4038A | 宪衡专项运行前样本收集记录 | 08-evidence-samples/宪衡专项运行前样本收集记录.md | WAES | WAES | evidence | controlled | 开发/04-WAES/08-evidence-samples/宪衡专项运行前样本收集记录.md |
+| GPCF-DOC-DB81495EC4 | 宪衡专项连接器阻断与状态链样本 | 08-evidence-samples/宪衡专项连接器阻断与状态链样本.md | WAES | WAES | evidence | controlled | 开发/04-WAES/08-evidence-samples/宪衡专项连接器阻断与状态链样本.md |
+| GPCF-DOC-7ACBAC23C6 | 数枢专项运行前样本收集记录 | 08-evidence-samples/数枢专项运行前样本收集记录.md | WAES | GFIS, PVAOS, WAES | evidence | controlled | 开发/04-WAES/08-evidence-samples/数枢专项运行前样本收集记录.md |
+| GPCF-DOC-B2E453D9F1 | 知源专项运行前样本收集记录 | 08-evidence-samples/知源专项运行前样本收集记录.md | WAES | WAES, KDS, Brain | evidence | controlled | 开发/04-WAES/08-evidence-samples/知源专项运行前样本收集记录.md |
+| GPCF-DOC-D77EFFB8F7 | 状态与控制台账 | 09-status/README.md | GPCF | GPC, WAES, KDS, GPCF | status | controlled | 开发/91-治理与验收/09-status/README.md |
+| GPCF-DOC-0295C05F40 | 文档过期与归档台账 | 09-status/document-deprecation-register.md | GPCF | GPC, WAES, KDS, Brain, GPCF | status | controlled | 开发/91-治理与验收/09-status/document-deprecation-register.md |
+| GPCF-DOC-5EF9F8EE5D | GlobalCloud 文档控制总台账 | 09-status/globalcloud-document-control-register.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-document-control-register.md |
+| GPCF-DOC-71779DF3C3 | GlobalCloud 文档治理 Loop 门禁 | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | WAES, KDS, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-document-governance-loop-gate.md |
+| GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | GFIS, GPC, WAES, KDS, XiaoC, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-document-health-report.md |
+| GPCF-DOC-6CE17269E9 | GlobalCloud 项目群项目主线对齐矩阵 | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md |
+| GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/gpcf-project-status-matrix.md |
+| GPCF-DOC-BA63F9BF32 | KDS 开发空间同步台账 | 09-status/kds-development-space-sync-register.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-development-space-sync-register.md |
+| GPCF-DOC-A55E6422C8 | 过期与历史归档 | 10-archive/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/README.md |
+| GPCF-DOC-5112E5A758 | 过期文档归档 | 10-archive/deprecated/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/deprecated/README.md |
+| GPCF-DOC-2F9D256EEE | 历史会话归档 | 10-archive/historical-sessions/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/historical-sessions/README.md |
+| GPCF-DOC-73C77D0200 | 旧来源导入归档 | 10-archive/imported-legacy/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/imported-legacy/README.md |
+| GPCF-DOC-36F8C5657B | 被替代文档归档 | 10-archive/superseded/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/superseded/README.md |
+| GPCF-DOC-37DD68363F | AGENTS.md | AGENTS.md | GPC | GPC, WAES, GPCF | general | controlled | 开发/02-GPC/AGENTS.md |
+| GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | GFIS | GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF | general | controlled | 开发/01-GFIS/PROJECT_HARNESS_MANIFEST.md |
+| GPCF-DOC-8EC9A00BFD | GlobalCoud GPCF | README.md | GPCF | GPC, WAES, KDS, GPCF | general | controlled | 开发/00-项目群总控/README.md |
+| GPCF-DOC-A2F5EC5E20 | GCBrain 专业版 v3.0 全量开发文档 | docs/GCBrain-Development-Manual.md | KDS | PVAOS, WAES, KDS, Brain | docs | controlled | 开发/05-KDS/docs/GCBrain-Development-Manual.md |
+| GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | KDS | GPC, PVAOS, WAES, KDS, Brain, GPCF | docs | controlled | 开发/05-KDS/docs/README.md |
+| GPCF-DOC-F99E5285C9 | Harness 工程说明 | docs/harness/README.md | KDS | GPC, PVAOS, WAES, KDS, Brain, GPCF | docs | controlled | 开发/05-KDS/docs/harness/README.md |
+| GPCF-DOC-975562EE9E | Harness 项目验收清单 — GPCF | docs/harness/acceptance.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/acceptance.md |
+| GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/README.md |
+| GPCF-DOC-27101F3BEB | Brain 多租户知识库权限体系 — v3.1.1 Implementation Patch | docs/harness/multi-tenant-permission-design.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC | docs | controlled | 开发/05-KDS/docs/harness/multi-tenant-permission-design.md |
+| GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md |
+| GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/README.md |
+| GPCF-DOC-855B715B04 | OpenSpec 变更集 | openspec/changes/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/README.md |
+| GPCF-DOC-D84C374BDC | archive | openspec/changes/archive/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/archive/README.md |
+| GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/README.md |
+| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | KDS | KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/design.md |
+| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | KDS | KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/proposal.md |
+| GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/README.md |
+| GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md |
+| GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md |
+| GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/session-auth/README.md |
+| GPCF-DOC-18A2F48E80 | Session Authentication | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | GPCF | GPCF | openspec | draft | 开发/12-GPCF/openspec/changes/kds-production-hardening/specs/session-auth/spec.md |
+| GPCF-DOC-D0174E85D8 | unified-permission-middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md |
+| GPCF-DOC-D067D700F1 | Unified Permission Middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | KDS | KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md |
+| GPCF-DOC-B1187FF6E1 | Tasks — KDS v3.1 Production Hardening | openspec/changes/kds-production-hardening/tasks.md | KDS | KDS | openspec | draft | 开发/05-KDS/openspec/changes/kds-production-hardening/tasks.md |
+| GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/specs/README.md |
+| GPCF-DOC-48D043BA78 | 模板库 | templates/README.md | GPCF | GPC, WAES, KDS, GPCF | templates | controlled | 开发/12-GPCF/templates/README.md |
+| GPCF-DOC-33F4C1195D | Evidence Index — {项目名} | templates/evidence-index-template.md | GPCF | GPC, WAES, GPCF | templates | controlled | 开发/12-GPCF/templates/evidence-index-template.md |
+| GPCF-DOC-8C2AA8996B | Status Audit — {YYYY-MM-DD} | templates/loop-audit-template.md | GPCF | GPC, WAES, XiaoC, GPCF | templates | controlled | 开发/12-GPCF/templates/loop-audit-template.md |
+| GPCF-DOC-1D2FA3DB71 | Loop Round {N} | templates/loop-round-template.md | GPCF | GPC, WAES, GPCF | templates | controlled | 开发/12-GPCF/templates/loop-round-template.md |
+| GPCF-DOC-DDBD7C90C2 | {项目名} Loop State | templates/loop-state-template.md | GPCF | GPC, WAES, GPCF | templates | controlled | 开发/12-GPCF/templates/loop-state-template.md |
+| GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | GPCF | GPC, WAES, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/README.md |
+| GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | GPCF | GPC, KDS, GPCF | tools | controlled | 开发/12-GPCF/tools/kds-sync/README.md |
