@@ -1,0 +1,94 @@
+change_id: gbrain-admin-console-v1
+run_id: gbrain-admin-console-v1-20260610-201442
+timestamp: "2026-06-10T20:19:00+08:00"
+
+evidence:
+  - id: E1_dashboard
+    description: "/admin/dashboard 返回完整仪表盘数据"
+    type: api_test
+    result: pass
+    output: "pages=7844 embedded=4.3% links=1369"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E2_tenants
+    description: "/admin/tenants 返回 4 个租户 + 活跃 Key 计数"
+    type: api_test
+    result: pass
+    output: "tenants=4 keys>=8"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E3_keys_generate
+    description: "POST /admin/keys/generate 生成 Key 并返回 raw_key（仅一次）"
+    type: api_test
+    result: pass
+    output: "key_id returned, raw_key present"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E4_keys_revoke
+    description: "DELETE /admin/keys/:id 吊销 Key"
+    type: api_test
+    result: pass
+    output: "status=revoked"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E5_keys_rotate
+    description: "POST /admin/keys/:id/rotate 轮换 Key，旧→rotating，新→active"
+    type: api_test
+    result: pass
+    output: "old rotated, new raw_key returned"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E6_audit
+    description: "/admin/audit 返回审计日志（当前为 0 条）"
+    type: api_test
+    result: pass
+    output: "count=0, no errors"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E7_embed_trigger
+    description: "POST /admin/embed/trigger 启动后台嵌入任务"
+    type: api_test
+    result: pass
+    output: "task_id returned, background thread started"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E8_governance_dq
+    description: "/admin/governance/dq 返回 59 行 DQ 交叉统计"
+    type: api_test
+    result: pass
+    output: "59 rows, Decimal serialization fixed"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E9_basic_auth
+    description: "无 Basic Auth 访问 /admin/* 返回 401"
+    type: security_test
+    result: pass
+    output: "HTTP 401"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E10_frontend
+    description: "/admin 前端加载 17KB"
+    type: http_test
+    result: pass
+    output: "17282 bytes"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E11_key_no_log
+    description: "raw_key 不出现在服务日志中"
+    type: security_test
+    result: pass
+    output: "grep -a raw_key /tmp/gbrain-portal.log returned 0 matches"
+    freshness: current
+    trust_level: machine_generated
+
+status_claim: ready_for_human_acceptance

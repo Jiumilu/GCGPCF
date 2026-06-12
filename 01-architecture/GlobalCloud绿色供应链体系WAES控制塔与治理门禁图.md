@@ -20,7 +20,7 @@ flowchart TB
     KMS["知识主存层
 文档 / 版本 / 发布 / 权限"]
     KE["知识引擎层
-LLM Wiki / GBrain / Brain"]
+KDS（主存）→ Brain（UI平台）"]
     AI["XiaoC / Hermes / XGD
 Prompt / Agent / 运行结果"]
   end

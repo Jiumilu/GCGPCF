@@ -1,0 +1,13 @@
+{
+  "run_id": "gbrain-v3.1-hardening-20260611-002252",
+  "change_id": "gbrain-v3.1-hardening",
+  "started_at": "2026-06-10T16:29:03Z",
+  "accepted_at": "2026-06-10T16:29:03Z",
+  "branch": "main",
+  "commit": "bc3dc25b43d4b846430503917a496736ba9d4261",
+  "status": "accepted",
+  "accepted_by": "human",
+  "opsx_version": "2.1",
+  "harness_version": "2.2",
+  "policy": "default"
+}

@@ -1,0 +1,4 @@
+=== Env Snapshot ===
+Python: Python 3.9.6
+Date: Wed Jun 10 16:25:18 UTC 2026
+CWD: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/gbrain-portal

@@ -1,4 +1,4 @@
-# GBrain 多租户知识库权限体系 — v3.1.1 Implementation Patch
+# Brain 多租户知识库权限体系 — v3.1.1 Implementation Patch
 
 > 版本: v3.1.1
 > 日期: 2026-06-10
@@ -6,6 +6,8 @@
 > 变更: 修正 exception 敏感级判断、S1 语义澄清、effective_tenant_ids、补 15 条测试用例
 
 ---
+
+> **⚠️ 归属说明：** 本文档原为 GlobalCloud Brain（Brain）的设计，现已归属 **KDS（Knowledge Data Source，唯一数据源）**。权限模型、租户体系与敏感级判定由 KDS 执行，Brain 作为全局知识中心复用此模型进行检索过滤，MMC 作为控制面在 Gateway 代理层校验 token 权限并转发。
 
 ## 一、需求全景
 

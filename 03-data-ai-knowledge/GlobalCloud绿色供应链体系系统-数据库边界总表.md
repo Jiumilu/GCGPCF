@@ -33,9 +33,9 @@
 | 资源仓库结构化库 | WAES / Data Platform | 资源池索引、聚合关系、主数据映射、资源标签、资源状态投影 | 资源仓库服务 | WAES、读模型服务、知识引擎 | 业务系统把资源仓库当主账直接录入业务事实 | 事件投影、受控管理 API |
 | 指标时序库 | WAES / Data Platform | MetricSnapshot、时序信号、趋势、风险、告警聚合 | 指标计算服务、时序采集服务 | WAES、读模型服务、知识引擎 | 业务系统手工修改指标结果 | 事件流、批处理、流处理 |
 | 证据与追踪库 | WAES / Data Platform | EvidenceRecord、TraceContext、LineageRecord、回执索引、日志索引 | WAES、证据采集服务 | WAES、知识引擎、读模型服务 | 业务系统把证据库当业务主账 | 事件、日志采集、引用索引 |
-| 知识元数据库 | 知识主存服务 | KnowledgeDocument 元数据、KnowledgeVersion、KnowledgeRelease、KnowledgeAccessPolicy、KnowledgeCitation | 知识主存服务 | WAES、知识引擎、读模型服务 | LLM Wiki、GBrain、AI 直接改正式版本元数据 | 发布链、ingest 任务 |
+| 知识元数据库 | 知识主存服务 | KnowledgeDocument 元数据、KnowledgeVersion、KnowledgeRelease、KnowledgeAccessPolicy、KnowledgeCitation | 知识主存服务 | WAES、知识引擎、读模型服务 | LLM Wiki、Brain、AI 直接改正式版本元数据 | 发布链、ingest 任务 |
 | 正式知识正文存储 | 知识主存服务 | 制度、宪法、SOP、方案、纪要、合同、验收、复盘正文与附件 | 知识主存服务 | 知识主存服务、知识引擎 ingest | AI、知识引擎直接改正式正文 | 发布链、对象存储、文档服务 |
-| 知识引擎索引库 | LLM Wiki / GBrain / Brain | 切片、索引、向量、图谱、回指索引、查询缓存 | 知识引擎服务 | WAES、XiaoC、Hermes/XGD、读模型服务 | 被当作企业级知识真源 | ingest、检索 API |
+| 知识引擎索引库 | LLM Wiki / Brain | 切片、索引、向量、图谱、回指索引、查询缓存 | 知识引擎服务 | WAES、XiaoC、Hermes/XGD、读模型服务 | 被当作企业级知识真源 | ingest、检索 API |
 | AI 运行状态库 | XiaoC / Hermes / XGD | PromptEvaluation、ModelEvaluation、AgentRun、AgentRunStep、AISuggestion、运行日志 | XiaoC、Hermes/XGD | WAES、读模型服务 | AI 运行结果回写业务主账或正式知识正文 | API、事件、审计流 |
 | 查询读模型库 | Query Service / Data Platform | 控制塔视图、跨系统报表、聚合投影、轻量查询表 | 投影服务、ETL/流处理服务 | WAES、GPC-Native、GFIS、PVAOS、知识引擎 | 当作真实主账回写来源系统 | 事件投影、定时同步 |
 
@@ -46,7 +46,7 @@
 1. `GPC-Native` 直写 `GFIS` 业务主账表。
 2. `GFIS` 直写 `GPC-Native` 业务主账表。
 3. `WAES` 直写任何业务主账表。
-4. `LLM Wiki`、`GBrain`、`Brain` 直写正式知识版本元数据或正文。
+4. `LLM Wiki`、`Brain` 直写正式知识版本元数据或正文。
 5. `XiaoC`、`Hermes`、`XGD` 直写业务主账表或正式知识正文。
 
 ### 4.2 允许但受控

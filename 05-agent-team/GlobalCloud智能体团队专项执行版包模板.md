@@ -32,6 +32,10 @@
 ```md
 # <专项名称>专项执行版包
 
+> **Loop Round ID**：<GPCF-{项目代号}-LR-{序号}>
+> **证据存放**：`docs/harness/loops/loop-round-{ID}.md`
+> **对应规范**：[gpcf-loop-engineering-spec-v1.md](../02-governance/gpcf-loop-engineering-spec-v1.md)
+
 日期：YYYY-MM-DD
 专项：<专项名称>
 范围：<范围描述>
@@ -124,6 +128,21 @@
 - 证验意见：
 - 小即结论：
 ```
+
+
+### 2.7b Loop Evidence 类型映射
+
+本轮必须产出的 evidence 按 [gpcf-evidence-taxonomy.md](../02-governance/gpcf-evidence-taxonomy.md) 分类：
+
+| evidence 类型 | 文件命名 | 必/可选 | 本轮状态 |
+|---|---|---|---|
+| loop record | `loop-round-{ID}.md` | 必 | 待产出 |
+| diff evidence | `diff-{ID}.patch` | 必 | 待产出 |
+| command log | `command-log-{ID}.txt` | 必 | 待产出 |
+| test result | `test-result-{ID}.md` | 可选 | - |
+| metrics JSON | `metrics-{ID}.json` | 建议 | - |
+| screenshot | `screenshot-{scene}-{N}.png` | 按需 | - |
+
 
 ### 2.8 当前禁止事项
 

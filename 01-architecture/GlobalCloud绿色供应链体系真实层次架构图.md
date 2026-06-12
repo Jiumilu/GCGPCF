@@ -41,7 +41,7 @@ PLC / SCADA / DCS / AGV / 仪表 / 工位终端"]
 资源仓库库 / 知识元数据库 / 查询读模型库"]
     KMS["企业级知识主存域"]
     KE["知识引擎域
-LLM Wiki / GBrain / Brain"]
+KDS（主存）→ Brain（UI平台）"]
     AI["AI 服务域
 XiaoC / Hermes / XGD"]
     DATA["事件 / 证据 / 指标 / 追踪底座"]

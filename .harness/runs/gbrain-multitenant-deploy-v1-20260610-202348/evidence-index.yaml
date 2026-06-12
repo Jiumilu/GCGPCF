@@ -1,0 +1,70 @@
+change_id: gbrain-multitenant-deploy-v1
+run_id: gbrain-multitenant-deploy-v1-20260610-202348
+timestamp: "2026-06-10T20:28:00+08:00"
+
+evidence:
+  - id: E1_login_reject
+    description: "无效 API Key 返回 401 Invalid API Key"
+    type: api_test
+    result: pass
+    output: "Invalid API Key"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E2_login_success
+    description: "有效 Key 返回 JWT token + tenant_id + role"
+    type: api_test
+    result: pass
+    output: "tenant_id=gehua role=viewer"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E3_xtenant_search
+    description: "X-Tenant header 搜索正常"
+    type: api_test
+    result: pass
+    output: "count=2 filtered=0"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E4_anonymous_search
+    description: "无认证搜索仍可用（公开内容）"
+    type: api_test
+    result: pass
+    output: "count=2"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E5_mask_render
+    description: "页面渲染返回 sensitivity 字段"
+    type: api_test
+    result: pass
+    output: "sensitivity=S0"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E6_caddy_config
+    description: "ECS Caddy 配置已生成"
+    type: config_artifact
+    result: pass
+    output: "Caddyfile with brain.gehua.cn + admin.gehua.cn"
+    freshness: current
+    trust_level: agent_generated
+
+  - id: E7_launchd
+    description: "Portal launchd 已加载，重启自启"
+    type: process_check
+    result: pass
+    output: "com.globalcloud.gbrain-portal loaded"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E8_ecs_tunnel
+    description: "ECS 隧道 19828 运行中"
+    type: process_check
+    result: pass
+    output: "PID running, Mac mini → ECS :19828"
+    freshness: current
+    trust_level: machine_generated
+
+status_claim: ready_for_human_acceptance

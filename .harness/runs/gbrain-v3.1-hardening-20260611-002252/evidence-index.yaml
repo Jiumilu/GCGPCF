@@ -1,0 +1,41 @@
+evidence:
+  - id: test-results
+    path: evidence/test-results.txt
+    description: "Unit test results — 22/22 passed"
+    freshness: current
+    trust_level: machine_generated
+  - id: file-inventory
+    path: evidence/file-inventory.txt
+    description: "Complete file inventory of gbrain-portal/"
+    freshness: current
+    trust_level: machine_generated
+  - id: env-snapshot
+    path: evidence/env-snapshot.txt
+    description: "Environment snapshot"
+    freshness: current
+    trust_level: machine_generated
+  - id: route-files
+    path: "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/gbrain-portal/server/routes/"
+    description: "10 route files with OpenAPI definitions"
+    freshness: current
+    trust_level: machine_generated
+  - id: migration-sql
+    path: "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/gbrain-portal/migrations/001_v3.1_schema.sql"
+    description: "Full v3.1 schema migration"
+    freshness: current
+    trust_level: machine_generated
+  - id: frontend-modules
+    path: "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/gbrain-portal/admin/"
+    description: "Modular admin panel (7 modules + 4 components)"
+    freshness: current
+    trust_level: machine_generated
+  - id: application-code
+    path: "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/gbrain-portal/server/"
+    description: "Server code (6 layers, 30+ modules)"
+    freshness: current
+    trust_level: machine_generated
+  - id: running-server
+    path: "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/gbrain-portal/"
+    description: "Live server on 127.0.0.1:19831"
+    freshness: current
+    trust_level: machine_generated

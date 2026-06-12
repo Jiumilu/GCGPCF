@@ -92,7 +92,7 @@
 
 | 风险 | 影响 | 处理方式 | 状态 |
 | --- | --- | --- | --- |
-| Brain/WIKI 冗余 | 知识主存歧义 | WIKI 已标注为镜像 | resolved |
+| Brain/WIKI 冗余 | KDS 已为知识主存 | WIKI 已标注为镜像 | resolved |
 | GPC docs 含 GFIS 文档 | 文档归属混淆 | GPC README 已标注 | resolved |
 | XGD/XiaoG 无 Manifest | 治理缺口 | 已补充基础 Manifest | resolved |
 | 项目群治理成熟度低 | 不可追踪交付进度 | 持续推进 | open |

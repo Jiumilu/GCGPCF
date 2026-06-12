@@ -1,0 +1,19 @@
+{
+  "change_id": "gbrain-portal-v1",
+  "run_id": "gbrain-portal-v1-20260610-200455",
+  "timestamp": "2026-06-10T20:04:55+08:00",
+  "gates": {
+    "git_clean": true,
+    "macmini_reachable": true,
+    "gbrain_postgres_up": true,
+    "ollama_up": true,
+    "disk_free_gb": 43,
+    "embedding_complete": false
+  },
+  "environment": {
+    "target_host": "192.168.31.60",
+    "target_port": 19828,
+    "working_dir": "/Users/lujunxiang/gbrain-portal",
+    "database_url": "postgresql://gbrain:gbrain@localhost:5432/gbrain"
+  }
+}

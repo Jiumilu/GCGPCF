@@ -14,7 +14,7 @@
 3. **GFIS** 是工厂执行系统 / 工厂事实主账。当前仓库中的 gcfis_custom、ERPNext 相关代码只能称为 GFIS 历史实现资产、适配器资产或 legacy reference，不作为 GFIS 主线定义来源。
 4. **WAES** 是治理、证据确证、状态门控、合规、风险、审计和 AI 越权控制系统，不是平台订单主账，也不是工厂执行主账。
 5. **Edge** 是现场采集与边缘缓冲层，优先服务 GFIS 的工厂执行事实确认，不得绕过 GFIS 先进入 GPC 数据池。
-6. **Brain / LLM Wiki** 是企业知识主存 / 知识编制与引擎候选。
+6. **KDS** 是企业知识主存（唯一数据源）；**Brain / LLM Wiki** 是知识编制与引擎候选。
 7. **XiaoC / Hermes / XGD** 是 AI 与 Agent 编排层，不能直接写业务事实。
 8. GPC-Native 的内部流程引擎统一命名为"平台服务流程编排引擎 / 绿色供应链协同流程运行时 / 供应链公共服务流程引擎"，不再称为"虚拟工厂运行时"。
 9. 任何系统不得越权写入其他系统的主账事实；跨系统只能通过对象主责、事件合同、连接器合同和证据链路协同。
@@ -225,9 +225,9 @@
 | 知识访问策略 | KnowledgeAccessPolicy | `KAP-*` | WAES / 知识主存服务 | draft / active / retired | 项目、角色、密级和 AI 可见范围策略 |
 | 知识审计日志 | KnowledgeAuditLog | `KAL-*` | 知识主存服务 | captured / archived | 知识查看、引用、导出、发布审计 |
 | 知识编制视图 | KnowledgeCompileView | `KCV-*` | LLM Wiki | draft / active / archived | 面向人工编制、章节组织和规范表达的知识视图；不是真源，不反写主存层 |
-| 知识引擎索引 | KnowledgeEngineIndex | `KEI-*` | GBrain | building / active / stale / retired | 主知识引擎索引、RAG、图谱和引用回指承载对象；不是真源 |
+| 知识引擎索引 | KnowledgeEngineIndex | `KEI-*` | Brain | building / active / stale / retired | 主知识引擎索引、RAG、图谱和引用回指承载对象；不是真源 |
 | 知识服务目录 | KnowledgeServiceCatalog | `KSC-*` | Brain | draft / active / retired | Brain 对外提供的 SOP、案例、复盘、问答等知识服务目录；不直接发布正式知识版本 |
-| 知识入库任务 | KnowledgeIngestJob | `KIJ-*` | 知识主存服务 / GBrain | queued / running / completed / failed / cancelled | 从知识主存发布到 LLM Wiki 编制视图和 GBrain 主知识引擎的 ingest 任务，Brain 只消费引擎结果 |
+| 知识入库任务 | KnowledgeIngestJob | `KIJ-*` | 知识主存服务 / Brain | queued / running / completed / failed / cancelled | 从知识主存发布到 LLM Wiki 编制视图和 Brain 主知识引擎的 ingest 任务，Brain 只消费引擎结果 |
 | 数据库域定义 | DatabaseDomain | `DBD-*` | WAES / Data Platform | draft / active / retired | 结构化数据库域边界定义 |
 | 数据库访问策略 | DatabaseAccessPolicy | `DAP-*` | WAES / Data Platform | draft / active / suspended / retired | 数据库读写、审计和跨域访问规则 |
 | 读模型投影 | ReadModelProjection | `RMP-*` | Data Platform | building / active / stale / retired | 控制塔与跨系统查询使用的读模型 |

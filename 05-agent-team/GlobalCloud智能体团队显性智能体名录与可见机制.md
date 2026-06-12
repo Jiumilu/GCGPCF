@@ -1,7 +1,7 @@
 # GlobalCloud 智能体团队显性智能体名录与可见机制
 
-日期：2026-06-09  
-状态：显性化执行补充版 v1  
+日期：2026-06-12  
+状态：显性化执行补充版 v2  
 适用范围：GlobalCloud 绿色供应链体系小即智能体团队全部角色。
 
 ## 1. 显性化定义
@@ -16,19 +16,19 @@
 
 ## 2. 全量显性智能体名录
 
-| 智能体 | 中文名字 | 会话可见性 | 绑定交付包 | 当前会话状态 | 固定回报入口 |
+| 智能体 | 中文名字 | Loop角色 | 会话可见性 | 绑定交付包 | 当前Round ID | 当前会话状态 | evidence完整率 | 固定回报入口 |
 |---|---|---|---|---|---|
-| 总负责人 | 小即 | 已建固定主控会话 | 团队总控 | `in_progress` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
-| 治理架构 | 宪衡 | 已建专项会话 | WAES 治理与控制塔包 | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
-| 协同业务 | 链同 | 已建专项会话 | PVAOS 生态入口包、GPC-Native 运营协同包 | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
-| 工厂执行 | 厂行 | 已建专项会话 | GFIS 工厂执行包、Edge 边缘接入包 | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
-| 数据平台 | 数枢 | 已建专项会话 | AI 与数据底座包 | `in_progress` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
-| 资源仓库 | 仓图 | 已建专项会话（待启动） | 资源仓库域、11 池映射、扩池能力 | `not_started` | [仓图专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/仓图专项会话状态报告.md) |
-| 知识体系 | 知源 | 已建专项会话 | 企业级知识主存与知识引擎包 | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
-| AI 服务 | 灵策 | 已建专项会话 | XiaoC + Hermes + XGD AI 服务包 | `in_progress` | [灵策专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/灵策专项会话状态报告.md) |
-| 连接器可靠性 | 接稳 | 已建专项会话（待启动） | 连接器与可靠性（横向） | `not_started` | [接稳专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/接稳专项会话状态报告.md) |
-| 评估审计 | 评衡 | 已建专项会话（待启动） | 全局审计与评分 | `not_started` | [评衡专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/评衡专项会话状态报告.md) |
-| 证据验收 | 证验 | 已建专项会话（待启动） | 全局证据与验收 | `not_started` | [证验专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/证验专项会话状态报告.md) |
+| 总负责人 | 小即 | 集成层 | 已建固定主控会话 | 团队总控 | - | - | `in_progress` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
+| 治理架构 | 宪衡 | 执行层 | 已建专项会话 | WAES 治理与控制塔包、MMC 管理配置中心包 | - | - | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
+| 协同业务 | 链同 | 执行层 | 已建专项会话 | PVAOS 生态入口包、GPC-Native 运营协同包、PKC 个人知识工作台包 | - | - | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
+| 工厂执行 | 厂行 | 执行层 | 已建专项会话 | GFIS 工厂执行包、Edge 边缘接入包 | - | - | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
+| 数据平台 | 数枢 | 执行层 | 已建专项会话 | AI 与数据底座包 | - | - | `in_progress` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
+| 资源仓库 | 仓图 | 执行层 | 已建专项会话（待启动） | 资源仓库域、11 池映射、扩池能力 | - | - | `not_started` | [仓图专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/仓图专项会话状态报告.md) |
+| 知识体系 | 知源 | 执行层 | 已建专项会话 | 企业级知识主存与知识引擎包 | - | - | `partial` | [GlobalCloud智能体团队专项回报汇总台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队专项回报汇总台账.md) |
+| AI 服务 | 灵策 | 执行层 | 已建专项会话 | XiaoC + Hermes + XGD AI 服务包、Brain 智能知识平台包 | - | - | `in_progress` | [灵策专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/灵策专项会话状态报告.md) |
+| 连接器可靠性 | 接稳 | 执行层 | 已建专项会话（待启动） | XiaoG 本地语音助手包、连接器与可靠性（横向） | - | - | `not_started` | [接稳专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/接稳专项会话状态报告.md) |
+| 评估审计 | 评衡 | 审计层 | 已建专项会话（待启动） | 全局审计与评分 | - | - | `not_started` | [评衡专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/评衡专项会话状态报告.md) |
+| 证据验收 | 证验 | 审计层 | 已建专项会话（待启动） | 全局证据与验收 | - | - | `not_started` | [证验专项会话状态报告.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/证验专项会话状态报告.md) |
 
 > 已建会话不代表可见合格。只有在状态更新、困难、阻塞和下一步均同步到台账后才视为显性成立。
 
@@ -64,8 +64,13 @@
 | 会话 ID 是否可追溯 | 是 |
 | 每轮阻塞项可追溯 | 是 |
 | 是否有状态停留理由 | 是 |
+| Loop 角色是否明确 | 是 |
+| 当前 Round ID 是否可追溯 | 是 |
+| evidence 完整率是否可查 | 是 |
 
 ## 6. 下一步建议
+
+以下建议已按 Loop Engineering 全面改进方案（`05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md`）更新：
 
 1. 完成“仓图/接稳/评衡/证验/数枢/宪衡/灵策”的独立会话状态报表首轮同步，并逐步推进固定字段补齐。
 2. 每个新会话形成首次状态提交，补齐到 `GlobalCloud智能体团队专项回报汇总台账.md`。

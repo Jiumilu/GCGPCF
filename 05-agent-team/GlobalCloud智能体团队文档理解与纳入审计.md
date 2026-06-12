@@ -66,7 +66,7 @@
 理由：
 
 1. 体系架构与治理基线已建立
-2. 8 个交付包责任已建立
+2. 12 个交付包责任已建立
 3. 实施过程控制、仓库准入、测试验证、状态升级规范已建立
 4. 6 个专项正式只读预检已完成
 5. 首轮实施前验证包已建立
@@ -86,7 +86,7 @@
 
 原因：
 
-1. 知源仍有 `Brain remote / gbrain import / rag export` 缺口
+1. 灵策（知源协同）仍有 `Brain remote / brain import / rag export` 缺口
 2. 链同、厂行、灵策、评衡、证验的运行前样本深度不足
 3. 数枢缺数据库拒绝、DLQ/Replay、Trace/Evidence 联合 live 返回样本
 4. 模型治理与界面治理两条侧线未完全进入执行责任和开发前门禁
@@ -115,7 +115,7 @@
 ### 4.2 运行前证据风险
 
 1. `Brain remote` 证据缺口
-2. `gbrain import` live 样本缺口
+2. `brain import` live 样本缺口
 3. `validate_rag_export.py` 失败未正式收口
 4. 数枢 live 返回样本不足
 5. 链同 / 厂行 / 灵策 / 评衡 / 证验 运行前样本深度不足

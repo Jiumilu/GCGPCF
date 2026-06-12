@@ -25,7 +25,7 @@
 
 ### 2.1 已解决：Brain / WIKI 冗余
 
-**2026-06-10 状态**：Brain 与 WIKI 内容完全相同，存在企业知识主存不唯一的严重冲突。
+**2026-06-10 状态**：KDS（原 GCBrain 代码项目）与 WIKI 内容完全相同，存在企业知识主存不唯一的严重冲突。已收口：KDS 为企业知识主存唯一真源。
 
 **2026-06-11 结论**：WIKI 已移出项目群。知识职能拆分为：
 - `GlobalCloud KDS`（知识中心）：承接 LLM Wiki canonical source，四空间体系长期记忆
@@ -65,7 +65,7 @@
 | ESP32 + Python (WebSocket) | XiaoG |
 | Next.js (pnpm monorepo) | XiaoC |
 | 纯文档 Markdown | KDS、GPCF、MMC |
-| Python (GBrain Platform) | KDS(gbrain-platform/server) |
+| Python (Brain Platform) | KDS(gbrain-platform/server) |
 
 Brain、PKC、PVAOS、WAES 同为 Vite+React+TS，可共享组件库。
 

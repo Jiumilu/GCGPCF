@@ -123,7 +123,7 @@
 | GPC-Native / GPC | `GPT-5.2-Codex` | `GPT-5 mini` | 供应链协同主线，不适合低质量裁决 |
 | GFIS | `GPT-5.2-Codex` | `GPT-5 mini` | 工厂事实主账、执行主链要求高 |
 | Edge | `GPT-5.2-Codex` | `GPT-5 mini` | 接入、安全、补传、回执边界敏感 |
-| Brain / 知识主存 / 知识引擎 | `GPT-5.2-Codex` | `GPT-5 mini` | 知识边界、引用、失效治理要求高 |
+| KDS / Brain / 知识引擎 | `GPT-5.2-Codex` | `GPT-5 mini` | 知识边界、引用、失效治理要求高 |
 | XiaoC / Hermes / XGD | `GPT-5.2-Codex` | `GPT-5 mini` | AI 授权、Agent 权限、越权拦截需要高质量判断 |
 | 小即总控 / PMBOK / 控制塔 | `GPT-5.2-Codex` | `GPT-5 mini` | 总控与治理结论应以高质量为主 |
 | Linear 周报 / 台账同步 | `GPT-5 mini` | `GPT-5 nano` | 结构明确，适合低成本处理 |

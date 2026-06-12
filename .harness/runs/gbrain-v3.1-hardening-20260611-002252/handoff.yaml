@@ -1,0 +1,20 @@
+handoff:
+  change_id: "gbrain-v3.1-hardening"
+  run_id: "gbrain-v3.1-hardening-20260611-002252"
+  evidence_index: ".harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence-index.yaml"
+  acceptance_matrix: ".harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md"
+  patches_dir: ".harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/"
+  status_claim: "ready_for_human_acceptance"
+  summary:
+    total_tasks: 44
+    tasks_done: 44
+    tests_passed: 22
+    tests_total: 22
+    backend_lines: 4767
+    frontend_lines: 868
+    test_lines: 715
+  server:
+    host: "127.0.0.1"
+    port: 19831
+    status: "running"
+    screen_session: "gbrain-v31"

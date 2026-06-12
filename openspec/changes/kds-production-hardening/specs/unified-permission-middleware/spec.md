@@ -1,0 +1,18 @@
+# Unified Permission Middleware
+
+## Overview
+All API routes (frontend and admin) pass through unified request identification and permission context building.
+
+## Requirements
+- Every request gets a UUID request_id
+- User identified from session cookie or X-KDS-API-Key header
+- Permission context built with tenant_id, role, scopes
+- Tenant and sensitivity SQL filters applied at query layer
+- Permission decisions return structured explanation (allowed, reason, matched_rule, tenant, role, sensitivity)
+- Admin routes require authentication; frontend routes are permission-aware (filter, not block)
+
+## Acceptance
+- [ ] All requests have X-Request-ID header
+- [ ] Cross-tenant data leak prevented at SQL layer
+- [ ] Permission denial returns 403 with structured reason
+- [ ] Frontend search returns only tenant-appropriate results

@@ -31,7 +31,7 @@ flowchart LR
 
   subgraph KNOW["知识与AI链"]
     KMS["知识主存层"]
-    KE["LLM Wiki / GBrain / Brain"]
+    KE["KDS（主存）→ Brain（UI平台）"]
     AI["XiaoC / Hermes / XGD"]
     SUGG["AISuggestion"]
   end

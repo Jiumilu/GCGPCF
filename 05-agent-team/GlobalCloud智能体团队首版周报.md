@@ -25,7 +25,7 @@
 4. 动运转达标标准与质量门禁
 5. 总体实施路线与交付保障方案
 6. 控制塔与周报机制
-7. 8 个交付包责任分解
+7. 12 个交付包责任分解
 8. PMBOK 项目管理台账
 9. 阶段行动计划
 10. Linear 项目台账与首批事项初始化
@@ -172,7 +172,7 @@
 1. 当前工作区是设计文档集合，不是运行仓库，无法直接验证 XiaoC、Hermes、XGD 的真实工具权限和模型调用行为
 2. 缺少真实 AgentRun、AISuggestion、PromptEvaluation、ModelEvaluation 和 `ai.overreach.blocked` 样本
 3. 缺少 GFIS/GPC-Native/WAES 真实主账查询结果，无法证明 AI 建议被驳回后业务主账无变化
-4. 缺少知识主存、LLM Wiki、GBrain 的真实发布、ingest、失效拦截和引用回指测试结果
+4. 缺少知识主存、LLM Wiki、Brain 的真实发布、ingest、失效拦截和引用回指测试结果
 5. 缺少运行态偏差数据，当前评估审计只能做到设计复评和试运行前置条件定义
 
 ## 5.4 链同专项最新回报
@@ -229,7 +229,7 @@
 
 已确认事项：
 
-1. 企业级知识真源位于知识主存域，LLM Wiki / GBrain 仅为知识引擎候选。
+1. 企业级知识真源位于知识主存域（KDS），Brain 为知识 UI 平台，LLM Wiki 为知识编制工具。
 2. 知识对象、事件、A19 验收主线已形成。
 3. Brain 仓库路径、分支和 dirty state 已纳入。
 

@@ -12,7 +12,7 @@
 4. **GFIS** 是工厂执行系统 / 工厂事实主账。主责：工厂订单、工单、生产报工、质量检验、质量放行、库存事务、批次、设备维护、发货出库、工厂执行证据。当前仓库中的 gcfis_custom、ERPNext 相关代码只能称为 GFIS 历史实现资产、适配器资产或 legacy reference，不作为 GFIS 主线定义来源。
 5. **WAES** 是治理、证据确证、状态门控、合规、风险、审计和 AI 越权控制系统，不是平台订单主账，也不是工厂执行主账。主责：治理规则、证据确证、状态门控、合规校验、风险控制、审计追踪、模型授权、AI 越权拦截、异常升级、验收证据管理。
 6. **Edge** 是现场采集与边缘缓冲层，优先服务 GFIS 的工厂执行事实确认，不得绕过 GFIS 先进入 GPC 公共服务数据池。
-7. **Brain / LLM Wiki** 是企业知识主存 / 知识编制与引擎候选；**XiaoC / Hermes / XGD** 是 AI 与 Agent 编排层，二者均不能直接写业务事实。
+7. **KDS** 是企业知识主存（唯一数据源）；**Brain / LLM Wiki** 是知识编制与引擎候选；**XiaoC / Hermes / XGD** 是 AI 与 Agent 编排层，三者均不能直接写业务事实。
 8. 任何系统不得越权写入其他系统的主账事实；跨系统只能通过对象主责、事件合同、连接器合同和证据链路协同。
 
 ## 0.1 体系只承认的 5 个根连接器
@@ -59,11 +59,11 @@
 | [GlobalCloud绿色供应链体系数据治理模型.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系数据治理模型.md) | Schema、数据质量、死信、重放、血缘、证据、保留和租户隔离模型 |
 | [GlobalCloud绿色供应链体系企业级知识库方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系企业级知识库方案.md) | 面向企业级知识真源、知识引擎层和 WAES 治理的知识底座主方案 |
 | [GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md) | 定义知识主存层、知识引擎层、AI 消费层和 WAES 治理层的分层边界 |
-| [GlobalCloud企业级知识系统冲突点与收口方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud企业级知识系统冲突点与收口方案.md) | 对企业级知识主存、LLM Wiki、GBrain、Brain、WAES 当前冲突点进行收口并形成最终唯一口径 |
+| [GlobalCloud企业级知识系统冲突点与收口方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud企业级知识系统冲突点与收口方案.md) | 对企业级知识主存、LLM Wiki、Brain、WAES 当前冲突点进行收口并形成最终唯一口径 |
 | [GlobalCloud智能体团队-企业级知识系统实施任务书.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队-企业级知识系统实施任务书.md) | 面向小即团队的企业级知识系统实施任务书，统一主存、编制、引擎、服务和 WAES 治理实施口径 |
 | [GlobalCloud企业级知识系统总目标与执行分解表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud企业级知识系统总目标与执行分解表.md) | 将企业级知识系统整体工作拆成总目标、阶段、交付物、完成标准、当前进度和下一步动作的总控分解表 |
-| [GlobalCloud绿色供应链体系LLM Wiki与GBrain测试评估矩阵.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系LLM Wiki与GBrain测试评估矩阵.md) | 用于并行测试结束后的唯一性选择和升级判定 |
-| [GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-GBrain升级图.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-GBrain升级图.md) | 企业级知识主存层与 LLM Wiki/GBrain 升级关系图 |
+| [GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md) | 用于并行测试结束后的唯一性选择和升级判定 |
+| [GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md) | 企业级知识主存层与 LLM Wiki/Brain 升级关系图 |
 | [GlobalCloud绿色供应链体系全链路事件与证据闭环图.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md) | 业务事实、事件、证据、知识引用、AI 建议和治理状态的全链路闭环图 |
 | [GlobalCloud绿色供应链体系系统-数据库边界总表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系系统-数据库边界总表.md) | 各系统数据库主责、可写边界、禁止事项和跨域协同方式总表 |
 | [GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md) | 资源仓库各池与业务对象、主责系统、AI 写入边界的映射总表 |
@@ -75,7 +75,7 @@
 | [GlobalCloud绿色供应链体系动运转达标标准与质量门禁.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系动运转达标标准与质量门禁.md) | 定义体系何时算能动运转，以及进入下一阶段前必须通过的质量门禁 |
 | [GlobalCloud智能体团队总体规划与行动计划.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队总体规划与行动计划.md) | 以小即为总负责人的 GlobalCloud 智能体团队组织、控制塔、汇报机制和行动计划总方案 |
 | [GlobalCloud智能体团队控制塔与周报机制.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队控制塔与周报机制.md) | 小即团队的总体控制塔模块、总览字段、下钻字段和周报机制 |
-| [GlobalCloud智能体团队8个交付包责任分解表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队8个交付包责任分解表.md) | 8 个交付包的牵头成员、协同成员、审计成员和交付范围分解 |
+| [GlobalCloud智能体团队12个交付包责任分解表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队12个交付包责任分解表.md) | 12 个交付包的牵头成员、协同成员、审计成员和交付范围分解 |
 | [GlobalCloud智能体团队PMBOK项目管理台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队PMBOK项目管理台账.md) | 小即团队的 PMBOK 管理域、范围/进度/成本/质量/风险/相关方台账模板 |
 | [GlobalCloud智能体团队阶段行动计划.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队阶段行动计划.md) | 从基线冻结到试运行准备的阶段目标、成员动作和完成判定 |
 | [GlobalCloud项目群在Codex中的模型分工与成本控制方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md) | 项目群在 Codex 中的主质量模型、副模型和成本控制策略建议 |
@@ -117,7 +117,7 @@
 | [链同专项正式只读预检结论.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/链同专项正式只读预检结论.md) | PVAOS + GPC 原型协同域的真实项目仓库正式只读预检结论 |
 | [厂行专项正式只读预检结论.md](06-workstreams/%E5%8E%82%E8%A1%8C%E4%B8%93%E9%A1%B9%E6%AD%A3%E5%BC%8F%E5%8F%AA%E8%AF%BB%E9%A2%84%E6%A3%80%E7%BB%93%E8%AE%BA.md) | GFIS + Edge 执行域的真实项目仓库正式只读预检结论（v2 口径修正稿） |
 | [数枢专项正式只读预检结论.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/数枢专项正式只读预检结论.md) | AI 与数据底座跨仓库正式只读预检结论 |
-| [知源专项正式只读预检结论.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/知源专项正式只读预检结论.md) | Brain 知识主存与知识引擎域的真实项目仓库正式只读预检结论 |
+| [知源专项正式只读预检结论.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/知源专项正式只读预检结论.md) | KDS 知识主存与知识引擎域的真实项目仓库正式只读预检结论 |
 | [灵策与评证专项正式只读预检结论.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/灵策与评证专项正式只读预检结论.md) | XiaoC + Hermes + XGD AI 服务与审计验证域的真实项目仓库正式只读预检结论 |
 | [GlobalCloud智能体团队首轮实施前验证入口判断.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队首轮实施前验证入口判断.md) | 小即对 6 个专项正式只读预检完成后是否允许进入首轮实施前验证准备的正式判断 |
 | [GlobalCloud绿色供应链体系模块实施分级判定表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系模块实施分级判定表.md) | P0 最小闭环下 12 个核心模块在 WAES/PVAOS/GPC/GFIS 四条主线中的实施分级前置判定表 |
@@ -157,8 +157,8 @@
 | [厂行专项首轮实施前验证执行记录.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/厂行专项首轮实施前验证执行记录.md) | GFIS 工厂执行与 Edge 联合域首轮实施前验证从预检与验证包推进到执行记录的首份落账 |
 | [数枢专项首轮实施前验证包.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/数枢专项首轮实施前验证包.md) | AI 与数据底座跨仓库域的首轮实施前验证包 |
 | [数枢专项首轮实施前验证执行记录.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/数枢专项首轮实施前验证执行记录.md) | AI 与数据底座跨仓库域首轮实施前验证从预检与验证包推进到执行记录的首份落账 |
-| [知源专项首轮实施前验证包.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/知源专项首轮实施前验证包.md) | Brain 知识主存与知识引擎域的首轮实施前验证包 |
-| [知源专项首轮实施前验证执行记录.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/知源专项首轮实施前验证执行记录.md) | Brain 知识主存与知识引擎域首轮实施前验证从预检与验证包推进到执行记录的首份落账 |
+| [知源专项首轮实施前验证包.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/知源专项首轮实施前验证包.md) | KDS 知识主存与知识引擎域的首轮实施前验证包 |
+| [知源专项首轮实施前验证执行记录.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/知源专项首轮实施前验证执行记录.md) | KDS 知识主存与知识引擎域首轮实施前验证从预检与验证包推进到执行记录的首份落账 |
 | [灵策与评证专项首轮实施前验证包.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/灵策与评证专项首轮实施前验证包.md) | XiaoC + Hermes + XGD AI 服务与审计验证域的首轮实施前验证包 |
 | [灵策与评证专项首轮实施前验证执行记录.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/灵策与评证专项首轮实施前验证执行记录.md) | XiaoC + Hermes + XGD AI 服务与审计验证联合域首轮实施前验证从预检与验证包推进到执行记录的首份落账 |
 | [GlobalCloud智能体团队本阶段首轮实施前验证目标.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队本阶段首轮实施前验证目标.md) | 固定当前阶段唯一主目标、专项目标、量化目标和完成判定的阶段目标文档 |
@@ -194,16 +194,16 @@
 14. 当前全部文档的架构更新主线为：以 `GPC-Native` 为绿色供应链平台主线，以 `WAES` 为治理平面，以 `GFIS` 为工厂事实平面，以宪法内容作为证据、状态、授权和连接器治理约束。
 15. 当前体系主结构采用：治理与监控层、运营与协同层、生产与执行层，以及横向 `AI 与数据层`。
 16. `AI 与数据层` 内部包含：资源仓库域、结构化数据库域、企业级知识主存域、知识引擎域、AI 服务域、事件证据指标追踪域；资源仓库当前已定义十一池，后续可继续扩展其它池。
-17. `LLM Wiki` 与 `GBrain` 当前处于并行测试期，只作为知识引擎层候选，不直接等同于企业级知识真源。
-18. 本阶段新增重点工作为企业级知识库方案、知识主存层/知识引擎层分层方案，以及 `LLM Wiki` 与 `GBrain` 的升级与唯一性评估。
-19. 当前已新增《GlobalCloud企业级知识系统冲突点与收口方案》，用于统一知识主存、LLM Wiki、GBrain、Brain、WAES 的最终唯一口径。
+17. KDS 为企业级知识主存（canonical source），Brain 为知识 UI 平台；LLM Wiki 为知识编制工具，不直接等同于企业级知识真源。
+18. 本阶段新增重点工作为企业级知识库方案、知识主存层/知识引擎层分层方案，以及 `LLM Wiki` 与 `Brain` 的升级与唯一性评估。
+19. 当前已新增《GlobalCloud企业级知识系统冲突点与收口方案》，用于统一 KDS（知识主存）、LLM Wiki、Brain、WAES 的最终唯一口径。
 20. 当前已新增《GlobalCloud智能体团队-企业级知识系统实施任务书》，用于按小即团队实施方式推进企业级知识系统落地。
 21. 当前已新增统一模型配置主线，明确：全局模型配置只有一个真源，项目只引用，用户只在统一治理边界内选择，自定义模型和本地模型统一接入、统一审计、统一授权、统一降级。
 22. 当前统一模型配置采用分期落地：V1 统一治理与统一配置，V2 统一计量与统计，V3 充值与结算。
 21. 当前实施组织按多智能体团队推进：总控、专业实施、评估审计和证据验收分层协同，统一受 Harness Engineering 状态和证据纪律约束。
 22. 当前 100 分只代表设计基线完备度达到 100/100，不代表真实联调、试运行或规模化运行已经完成。
 23. 当前智能体团队总负责人名称确定为 **小即**，并已形成中文团队命名、统一汇报机制和总体控制塔规划。
-24. 当前已补齐小即团队的控制塔、8个交付包责任分解、PMBOK 项目管理台账和阶段行动计划配套文档。
+24. 当前已补齐小即团队的控制塔、12个交付包责任分解、PMBOK 项目管理台账和阶段行动计划配套文档。
 25. 当前已形成小即团队首版周报，并已同步到 Linear 项目台账与总控事项。
 26. 当前已建立专项回报汇总台账，并已完成 6/6 专项首轮正式回报接入：宪衡、链同、厂行、数枢、知源、灵策与评证。
 27. 当前已形成小即总控的下一步执行清单，下一阶段主线已切换为 6 个专项正式只读预检结论和首轮实施前验证准备。
@@ -256,7 +256,7 @@
 
 ## 当前设计基线
 
-1. 体系身份与主账边界以 [GlobalCloud绿色供应链体系总架构.md](01-architecture/GlobalCloud%E7%BB%BF%E8%89%B2%E4%BE%9B%E5%BA%94%E9%93%BE%E4%BD%93%E7%B3%BB%E6%80%BB%E6%9E%B6%E6%9E%84.md) 为基线，GPC-Native = 公共服务平台本体，PVAOS = 运营与门户底座，GFIS = 工厂执行系统 / 工厂事实主账，WAES = 治理 / 证据 / 状态门控 / AI 越权控制，Edge = 现场采集与边缘缓冲，Brain = 知识主存，XiaoC / Hermes / XGD = AI 与 Agent 编排。
+1. 体系身份与主账边界以 [GlobalCloud绿色供应链体系总架构.md](01-architecture/GlobalCloud%E7%BB%BF%E8%89%B2%E4%BE%9B%E5%BA%94%E9%93%BE%E4%BD%93%E7%B3%BB%E6%80%BB%E6%9E%B6%E6%9E%84.md) 为基线，GPC-Native = 公共服务平台本体，PVAOS = 运营与门户底座，GFIS = 工厂执行系统 / 工厂事实主账，WAES = 治理 / 证据 / 状态门控 / AI 越权控制，Edge = 现场采集与边缘缓冲，KDS = 知识主存（canonical source），Brain = 知识 UI 平台，XiaoC / Hermes / XGD = AI 与 Agent 编排。
 2. 三层主架构用于业务表达：治理与监控层、运营与协同层、生产与执行层。
 3. 体系只承认 5 个根连接器：`CON-GPC-GFIS-001` / `CON-GPC-WAES-001` / `CON-GFIS-WAES-001`（不废弃） / `CON-EDGE-GFIS-001` / `CON-EDGE-WAES-001`（可选）。
 4. GPC-Native 内部流程引擎统一命名为"平台服务流程编排引擎 / 绿色供应链协同流程运行时 / 供应链公共服务流程引擎"，不得再称为"虚拟工厂运行时"。
@@ -269,7 +269,7 @@
 11. 四流综合架构用于检查治理、业务、数据和 AI 服务之间的边界冲突、遗漏对象、事件缺口、连接器合同、SOP 模板和验收矩阵扩展。
 12. 连接器合同、SOP 模板库、AI 服务模型、数据治理模型、多厂协同模型和 Edge 接入安全模型作为四流优化后的专项设计基线。
 13. 在完成真实运行态联调前，系统状态最多可判定为 `ready_for_human_acceptance`，不得标记为 `complete`。
-14. 在 `LLM Wiki` 与 `GBrain` 并行测试结束前，两者都只作为知识编制层或知识引擎层候选，不作为企业级知识库唯一真源。
+14. KDS 已确定为企业级知识主存（canonical source），Brain 为知识 UI 平台；LLM Wiki 为知识编制工具，不作为企业级知识库唯一真源。
 15. 实施阶段必须同时遵循：交付包控制、量化评分、五层质量门禁和动运转达标标准。
 
 ## 当前建议阅读顺序
@@ -286,7 +286,7 @@
 8. [GlobalCloud绿色供应链体系企业级知识库方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系企业级知识库方案.md)
 9. [GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md)
 10. [GlobalCloud企业级知识系统冲突点与收口方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud企业级知识系统冲突点与收口方案.md)
-11. [GlobalCloud绿色供应链体系LLM Wiki与GBrain测试评估矩阵.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系LLM Wiki与GBrain测试评估矩阵.md)
+11. [GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md)
 12. [GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md)
 13. [GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md)
 14. [GlobalCloud绿色供应链体系多智能体实施团队与协同方案.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系多智能体实施团队与协同方案.md)
@@ -294,7 +294,7 @@
 16. [GlobalCloud绿色供应链体系动运转达标标准与质量门禁.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系动运转达标标准与质量门禁.md)
 17. [GlobalCloud智能体团队总体规划与行动计划.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队总体规划与行动计划.md)
 18. [GlobalCloud智能体团队控制塔与周报机制.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队控制塔与周报机制.md)
-19. [GlobalCloud智能体团队8个交付包责任分解表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队8个交付包责任分解表.md)
+19. [GlobalCloud智能体团队12个交付包责任分解表.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队12个交付包责任分解表.md)
 20. [GlobalCloud智能体团队PMBOK项目管理台账.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队PMBOK项目管理台账.md)
 21. [GlobalCloud智能体团队阶段行动计划.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队阶段行动计划.md)
 22. [GlobalCloud智能体团队首版周报.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud智能体团队首版周报.md)
@@ -363,7 +363,7 @@
 | GPC | 供应链公共服务平台 | - | not_started | docs/含GFIS品牌文档，CHANGELOG标题仍为GFIS |
 | PVAOS | 运营与门户底座 | - | not_started | Manifest为模板占位 |
 | WAES | 治理/证据/AI越权控制 | - | not_started | Manifest为模板占位，remote仍为本地 |
-| Brain | 知识主存/LLM Wiki | - | 基础Manifest | 与WIKI并存违反唯一真源原则 |
+| Brain | 知识 UI 平台 | - | 基础Manifest | 与WIKI并存违反唯一真源原则 |
 | WIKI | 知识库(Wiki空间) | - | not_started | 与Brain几乎完全相同，需收口 |
 | GPCF | 体系文档工作区 | - | not_started | 本工作区，Manifest为模板占位 |
 | 开发控制台 | Harness Engineering控制台 | - | 无Manifest | 自身即模板来源 |
@@ -372,7 +372,7 @@
 
 ### 优先行动
 
-1. **P0**：Brain/WIKI 收口——WIKI 标注为 Brain 镜像，消除知识主存歧义
+1. **P0**：KDS/WIKI 收口——WIKI 标注为 KDS 镜像，消除知识主存歧义
 2. **P0**：GPC 文档分类——将 docs/ 下 GFIS 品牌文档标注为 "historical reference"
 3. **P0**：GPC CHANGELOG 标题修正——从 "GFIS" 修正为 "GPC"
 4. **P1**：XGD、XiaoG 补充 PROJECT_HARNESS_MANIFEST.md

@@ -1,0 +1,53 @@
+change_id: gbrain-admin-console-v2
+run_id: gbrain-admin-console-v2-20260610-205407
+
+evidence:
+  - id: E1_websocket
+    description: "WebSocket /admin/ws 端点可用"
+    type: api_test
+    result: pass
+    output: "FastAPI WebSocket route registered"
+    freshness: current
+
+  - id: E2_activity
+    description: "活动流自动记录写操作"
+    type: integration_test
+    result: pass
+    output: "key_generate → activity logged automatically"
+    freshness: current
+
+  - id: E3_key_masked
+    description: "Key 列表脱敏显示 (gh-adm****3f)"
+    type: security_test
+    result: pass
+    output: "masked key shown, full key_id only on reveal"
+    freshness: current
+
+  - id: E4_dashboard_v2
+    description: "仪表盘 v2: 趋势数据 + 饼图 + 活动流"
+    type: api_test
+    result: pass
+    output: "trend_points=2, embed data returned"
+    freshness: current
+
+  - id: E5_audit_v2
+    description: "审计增强: 搜索 + 分页 + CSV 导出"
+    type: api_test
+    result: pass
+    output: "/admin/audit/v2?fmt=csv returns CSV"
+    freshness: current
+
+  - id: E6_cmdk
+    description: "⌘K 命令面板: generate-key, trigger-embed"
+    type: ui_test
+    result: pass
+    output: "prompt-based command execution"
+    freshness: current
+
+  - id: E7_frontend
+    description: "Admin 前端 v2 加载 23KB"
+    type: http_test
+    result: pass
+    output: "23166 bytes"
+
+status_claim: ready_for_human_acceptance

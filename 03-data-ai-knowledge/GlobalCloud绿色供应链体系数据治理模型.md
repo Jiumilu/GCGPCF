@@ -2,7 +2,7 @@
 
 日期：2026-06-07  
 状态：四流优化专项模型 v1  
-适用范围：API Gateway、Connector Registry、Outbox/Inbox、Event Bus、Evidence Ledger、Metric、Trace、Data Platform、Edge、知识主存层、LLM Wiki、GBrain、Brain。
+适用范围：API Gateway、Connector Registry、Outbox/Inbox、Event Bus、Evidence Ledger、Metric、Trace、Data Platform、Edge、知识主存层、LLM Wiki、Brain。
 
 ## 1. 模型定位
 
@@ -27,7 +27,7 @@
 5. AI 建议只能引用数据，不能把推断写成事实。
 6. 任何重放必须幂等，不得制造重复业务事实。
 7. 宪法内容在数据治理中的落点是：`source_refs`、证据等级、状态纪律、连接器注册和默认 canonical-only 的可信数据准入。
-8. `LLM Wiki` 与 `GBrain` 当前只作为知识引擎层候选，不作为企业级知识真源。
+8. `LLM Wiki` 与 `Brain` 当前只作为知识引擎层候选，不作为企业级知识真源。
 
 ## 3. 数据层分层结构
 
@@ -39,7 +39,7 @@
 | 资源仓库域 | 以资源仓库组织业务资源，当前已定义十一池，后续可继续新增其它池 | 订单池、运力池、产能池、资金池、政策池、装备池、数据池、能源池、原料池、人才池、场景池 |
 | 结构化数据库域 | 承载结构化运行数据和治理数据 | 业务主账库、治理审计库、指标时序库、知识元数据库、读模型库 |
 | 知识主存域 | 承载企业级原文档、版本、审批、归档 | 企业级知识库 |
-| 知识引擎域 | 切片、索引、图谱、RAG、回指 | LLM Wiki / GBrain / Brain |
+| 知识引擎域 | 切片、索引、图谱、RAG、回指 | LLM Wiki / Brain |
 | AI 服务域 | Prompt、模型、Agent、交互与后台任务 | XiaoC / Hermes / XGD |
 | 技术运行底座 | API、事件、证据、指标、追踪、重放 | API Gateway / Connector Registry / Event Bus / Evidence Ledger / Metric / Trace |
 
@@ -62,7 +62,7 @@ Source System
 Knowledge Source
 -> Knowledge Release
 -> Knowledge Ingest Job
--> LLM Wiki / GBrain / Brain
+-> LLM Wiki / Brain
 -> AI / WAES / Report
 ```
 

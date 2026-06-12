@@ -34,7 +34,7 @@
 | 链同 / PVAOS + GPC | 收敛协同主链运行前样本，明确 PVAOS 入口事实与 GPC 原型边界 | 已有 PVAOS/GPC 正式只读预检结论；已确认 PVAOS 入口实现面与 GPC Odoo 原型存在 | 1. 复核组织/项目/伙伴入口落点 2. 抽取订单/ASN/预约/运输/POD 样本入口 3. 输出 GPC-Native 与 Odoo 原型差距项 | `PVAOS` 仓库入口模块；`GPC` 原型仓库相关业务模块 | 协同主链样本要求、入口对象落点清单、GPC-Native 缺口清单 | GPC 当前仅原型；缺 GPC-Native 独立实现证据 | 链同 | `partial` |
 | 厂行 / GFIS + Edge | 收敛工厂主链回执、LES/EAM 样本和 Edge 事实转换样本 | 已有 GFIS 正式只读预检结论；已识别 Edge 为联合证据域而非独立主账 | 1. 复核工单/质量/库存/发货回执落点 2. 抽取 LES/EAM 样本入口 3. 形成 Edge 转换与回执样本要求 | `GFIS` 仓库主链模块；Edge 相关对接与转换位置 | 工厂主链样本要求、LES/EAM 样本要求、Edge 转换样本要求 | Edge 缺独立仓库级实证；联合证据需后续补样本 | 厂行 | `partial` |
 | 数枢 / AI 与数据底座 | 收敛数据库权限、读模型只读、DLQ/Replay、Trace/Evidence 样本 | 已有数枢正式只读预检结论；已明确无共享主账、无跨系统直写 | 1. 抽取数据库权限策略落点 2. 抽取读模型发布与只读入口 3. 形成 DLQ/Replay、Trace/Evidence 样本要求 | 跨仓库数据治理实现面、事件与读模型相关模块 | 权限样本要求、读模型样本要求、DLQ/Replay 样本要求、Trace/Evidence 样本要求 | 缺真实 Event Bus / DLQ / Replay 运行样本 | 数枢 | `partial` |
-| 知源 / Brain | 关闭 Brain remote 缺口，收敛 ingest / 引用回指 / 失效拦截样本 | 已有 Brain 正式只读预检结论；已确认知识域治理边界已成文 | 1. 复核 remote 与知识入口 2. 抽取 ingest 与引用回指落点 3. 形成失效拦截样本要求 | `Brain` 仓库知识入口、引用治理相关模块 | remote 证据、ingest 样本要求、回指样本要求、失效拦截样本要求 | remote 证据仍需进一步稳定；缺运行态失效拦截样本 | 知源 | `partial` |
+| 灵策 / Brain（知源协同） | 关闭 Brain remote 缺口，收敛 ingest / 引用回指 / 失效拦截样本 | 已有 Brain 正式只读预检结论；已确认知识域治理边界已成文 | 1. 复核 remote 与知识入口 2. 抽取 ingest 与引用回指落点 3. 形成失效拦截样本要求 | `Brain` 仓库知识入口、引用治理相关模块 | remote 证据、ingest 样本要求、回指样本要求、失效拦截样本要求 | remote 证据仍需进一步稳定；缺运行态失效拦截样本 | 灵策（知源协同） | `partial` |
 | 灵策 / XiaoC + Hermes + XGD | 收敛 Agent 权限、AISuggestion、越权拦截和主账无写入样本 | 已有 XiaoC/Hermes/XGD 正式只读预检结论；已确认 AI 建议不写主账边界 | 1. 抽取 Agent 权限与建议回执入口 2. 设计越权拦截反向验证样本 3. 形成主账无写入验证要求 | `XiaoC`、`Hermes`、`XGD` 仓库相关入口；必要时本地运行入口 | Agent 权限样本要求、AISuggestion 样本要求、越权拦截样本要求、主账无写入样本要求 | 缺真实运行态拦截样本；Browser/Computer Use 验证成本较高 | 灵策 | `partial` |
 
 ## 4. 执行顺序
@@ -45,7 +45,7 @@
 2. 链同 / PVAOS + GPC
 3. 厂行 / GFIS + Edge
 4. 数枢 / AI 与数据底座
-5. 知源 / Brain
+5. 灵策 / Brain（知源协同）
 6. 灵策 / XiaoC + Hermes + XGD
 
 原因：

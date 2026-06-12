@@ -1,0 +1,21 @@
+evidence:
+  - id: test-results
+    path: evidence/test-results.txt
+    freshness: current
+    trust_level: machine_generated
+  - id: comments-service
+    path: gbrain-portal/server/collaboration/comments.py
+    freshness: current
+    trust_level: machine_generated
+  - id: proposals-service
+    path: gbrain-portal/server/collaboration/proposals.py
+    freshness: current
+    trust_level: machine_generated
+  - id: subscriptions-service
+    path: gbrain-portal/server/operations/subscriptions.py
+    freshness: current
+    trust_level: machine_generated
+  - id: collab-routes
+    path: gbrain-portal/server/routes/collaboration.py
+    freshness: current
+    trust_level: machine_generated

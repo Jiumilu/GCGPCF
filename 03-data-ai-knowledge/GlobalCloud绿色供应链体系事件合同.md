@@ -12,7 +12,7 @@
 3. **WAES** 是治理、证据、状态门控、AI 越权控制系统，事件中以 `waes.` 域名承载治理事实；WAES 不发布平台业务事实事件，也不发布工厂执行事实事件。
 4. **PVAOS** 是平台运营、租户、组织、伙伴、用户、门户底座，事件中以 `pvaos.` 域名承载生态入口事实。
 5. **Edge** 是现场采集与边缘缓冲层，事件中以 `edge.` 域名承载现场信号；Edge 不得在自身落业务主账，事件先进入 GFIS，由 GFIS 规则确证后才形成业务事实事件。
-6. **Brain / LLM Wiki** 是企业知识主存与编制/引擎候选，事件中以 `brain.` / `knowledge.` 域名承载。
+6. **KDS** 是企业知识主存（唯一数据源），**Brain / LLM Wiki** 是知识编制与引擎候选，事件中以 `brain.` / `knowledge.` 域名承载。
 7. **XiaoC / Hermes / XGD** 是 AI 与 Agent 编排层，事件中以 `ai.` / `agent.` / `xiaoc.` 域名承载；AI 不得发布业务完成事实。
 8. 任何事件不得被解释为绕开主责系统主账的写入授权；事件是事实通知，不是远程命令。
 
@@ -338,16 +338,16 @@ brain.knowledge_entry.proposed
 
 | 事件 | 来源对象 | 风险等级 | 生产者 | 消费者 | 承载连接器 | AI 可发布 | 说明 |
 |---|---|---|---|---|---|---|---|
-| `knowledge.document.created` | KnowledgeDocument | L2 | 知识主存服务 | WAES / LLM Wiki / GBrain | CON-GPC-WAES-001 | 否 | 正式知识文档创建 |
-| `knowledge.version.approved` | KnowledgeVersion | L3 | 知识主存服务 / WAES | LLM Wiki / GBrain / Report | CON-GPC-WAES-001 | 否 | 知识版本审批通过 |
-| `knowledge.release.effective` | KnowledgeRelease | L4 | 知识主存服务 / WAES | LLM Wiki / GBrain / WAES | CON-GPC-WAES-001 | 否 | 知识发布正式生效，先进入编制视图和主知识引擎，不直接把 Brain 当正式发布消费者 |
-| `knowledge.release.rolled_back` | KnowledgeRelease | L4 | 知识主存服务 / WAES | LLM Wiki / GBrain / WAES | CON-GPC-WAES-001 | 否 | 知识发布回滚，要求编制视图和引擎同步回滚 |
-| `knowledge.access_policy.changed` | KnowledgeAccessPolicy | L4 | WAES / 知识主存服务 | LLM Wiki / GBrain / Brain / Agent | CON-GPC-WAES-001 | 否 | 知识访问与 AI 可见范围变更 |
-| `knowledge.compile_view.published` | KnowledgeCompileView | L2 | LLM Wiki | GBrain / Brain / WAES | CON-GPC-WAES-001 | 否 | 知识编制视图发布或更新；用于人工可维护视图，不代表正式真源变更 |
-| `knowledge.engine_index.refreshed` | KnowledgeEngineIndex | L2 | GBrain | Brain / WAES / Report | CON-GPC-WAES-001 | 否 | 主知识引擎索引刷新完成，供 Brain 消费和 WAES 审计 |
+| `knowledge.document.created` | KnowledgeDocument | L2 | 知识主存服务 | WAES / LLM Wiki / Brain | CON-GPC-WAES-001 | 否 | 正式知识文档创建 |
+| `knowledge.version.approved` | KnowledgeVersion | L3 | 知识主存服务 / WAES | LLM Wiki / Brain / Report | CON-GPC-WAES-001 | 否 | 知识版本审批通过 |
+| `knowledge.release.effective` | KnowledgeRelease | L4 | 知识主存服务 / WAES | LLM Wiki / Brain / WAES | CON-GPC-WAES-001 | 否 | 知识发布正式生效，先进入编制视图和主知识引擎，不直接把 Brain 当正式发布消费者 |
+| `knowledge.release.rolled_back` | KnowledgeRelease | L4 | 知识主存服务 / WAES | LLM Wiki / Brain / WAES | CON-GPC-WAES-001 | 否 | 知识发布回滚，要求编制视图和引擎同步回滚 |
+| `knowledge.access_policy.changed` | KnowledgeAccessPolicy | L4 | WAES / 知识主存服务 | LLM Wiki / Brain / Agent | CON-GPC-WAES-001 | 否 | 知识访问与 AI 可见范围变更 |
+| `knowledge.compile_view.published` | KnowledgeCompileView | L2 | LLM Wiki | Brain / WAES | CON-GPC-WAES-001 | 否 | 知识编制视图发布或更新；用于人工可维护视图，不代表正式真源变更 |
+| `knowledge.engine_index.refreshed` | KnowledgeEngineIndex | L2 | Brain | Brain / WAES / Report | CON-GPC-WAES-001 | 否 | 主知识引擎索引刷新完成，供 Brain 消费和 WAES 审计 |
 | `knowledge.service.catalog.published` | KnowledgeServiceCatalog | L2 | Brain | XiaoC / Hermes / XGD / WAES | CON-GPC-WAES-001 | 否 | Brain 知识服务目录发布，面向 AI 与业务消费，不代表正式知识发布 |
-| `knowledge.ingest.completed` | KnowledgeIngestJob | L2 | GBrain | WAES / Brain / Report | CON-GPC-WAES-001 | 否 | 知识 ingest 完成，Brain 只能消费引擎结果 |
-| `knowledge.ingest.failed` | KnowledgeIngestJob | L2 | GBrain | WAES / Brain / Agent | CON-GPC-WAES-001 | 否 | 知识 ingest 失败 |
+| `knowledge.ingest.completed` | KnowledgeIngestJob | L2 | Brain | WAES / Brain / Report | CON-GPC-WAES-001 | 否 | 知识 ingest 完成，Brain 只能消费引擎结果 |
+| `knowledge.ingest.failed` | KnowledgeIngestJob | L2 | Brain | WAES / Brain / Agent | CON-GPC-WAES-001 | 否 | 知识 ingest 失败 |
 | `knowledge.audit_recorded` | KnowledgeAuditLog | L1 | 知识主存服务 | WAES | CON-GPC-WAES-001 | 否 | 知识查看、引用、导出审计记录 |
 | `data.database_access_policy.changed` | DatabaseAccessPolicy | L3 | WAES / Data Platform | Query Service / SourceSystem | CON-GPC-WAES-001 / CON-GFIS-WAES-001 | 否 | 数据库访问策略变化 |
 | `data.read_model_projection.published` | ReadModelProjection | L2 | Data Platform | WAES / 知识引擎 | CON-GPC-WAES-001 / CON-GFIS-WAES-001 | 否 | 读模型投影发布 |

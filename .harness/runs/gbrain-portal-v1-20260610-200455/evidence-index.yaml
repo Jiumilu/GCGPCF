@@ -1,0 +1,54 @@
+change_id: gbrain-portal-v1
+run_id: gbrain-portal-v1-20260610-200455
+timestamp: "2026-06-10T20:12:00+08:00"
+
+evidence:
+  - id: E1_stats_api
+    description: "/api/stats 返回正确统计"
+    type: api_test
+    result: pass
+    output: "pages=7844 chunks=36525 embedded_pct=3.6 spaces=21"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E2_search_api
+    description: "/api/search?q=工业绿链 返回 >0 条结果"
+    type: api_test
+    result: pass
+    output: "count=5"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E3_render_api
+    description: "/api/render 返回页面 HTML"
+    type: api_test
+    result: pass
+    output: "title=GlobalCloud Brain... html_len=2928"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E4_tree_api
+    description: "/api/tree 返回 10 个空间"
+    type: api_test
+    result: pass
+    output: "spaces=10"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E5_frontend
+    description: "前端首页加载"
+    type: http_test
+    result: pass
+    output: "size=13746 bytes"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E6_server_process
+    description: "服务进程运行中"
+    type: process_check
+    result: pass
+    output: "PID 80616 running"
+    freshness: current
+    trust_level: machine_generated
+
+status_claim: ready_for_human_acceptance

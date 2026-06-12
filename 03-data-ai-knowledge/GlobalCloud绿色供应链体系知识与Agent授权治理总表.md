@@ -2,7 +2,7 @@
 
 日期：2026-06-07  
 状态：实施硬约束表 v1  
-适用范围：知识主存域、知识引擎域、WAES、XiaoC、Hermes、XGD、Brain、LLM Wiki、GBrain。
+适用范围：KDS（知识主存域）、知识引擎域、WAES、XiaoC、Hermes、XGD、Brain、LLM Wiki。
 
 ## 1. 目的
 
@@ -16,11 +16,11 @@
 
 | 知识域 | 真源位置 | 发布主责 | 索引主责 | 消费方 | AI 可做 | AI 禁止 |
 |---|---|---|---|---|---|---|
-| 宪法 / 制度 | 企业级知识主存域 | 知识主存服务 + WAES 确认 | LLM Wiki / GBrain | WAES、知识引擎、AI 服务 | 摘要、引用、差异分析 | 直接改正文、直接生效新版本 |
-| SOP 标准 | 企业级知识主存域 | 知识主存服务 + WAES | LLM Wiki / GBrain / Brain | WAES、GPC-Native、GFIS、AI 服务 | 草案、复盘建议、引用 | 直接替换生效版 SOP |
-| 项目方案 / 决策 | 企业级知识主存域 | 知识主存服务 + 人工确认 | LLM Wiki / GBrain | WAES、知识引擎、AI 服务 | 摘要、对比、引用 | 直接形成正式决策 |
-| 纪要 / 合同 / 验收 | 企业级知识主存域 | 知识主存服务 | LLM Wiki / GBrain | WAES、知识引擎、AI 服务 | 提取要点、候选引用 | 篡改正式文本、生成伪回执 |
-| 案例 / 复盘 / 提示词 | 知识主存域 / Brain | Brain / XiaoC / WAES 审核 | Brain / GBrain | AI 服务、WAES | 生成候选、评估、回归 | 未审直接进关键生产流 |
+| 宪法 / 制度 | 企业级知识主存域 | 知识主存服务 + WAES 确认 | LLM Wiki / Brain | WAES、知识引擎、AI 服务 | 摘要、引用、差异分析 | 直接改正文、直接生效新版本 |
+| SOP 标准 | 企业级知识主存域 | 知识主存服务 + WAES | LLM Wiki / Brain | WAES、GPC-Native、GFIS、AI 服务 | 草案、复盘建议、引用 | 直接替换生效版 SOP |
+| 项目方案 / 决策 | 企业级知识主存域 | 知识主存服务 + 人工确认 | LLM Wiki / Brain | WAES、知识引擎、AI 服务 | 摘要、对比、引用 | 直接形成正式决策 |
+| 纪要 / 合同 / 验收 | 企业级知识主存域 | 知识主存服务 | LLM Wiki / Brain | WAES、知识引擎、AI 服务 | 提取要点、候选引用 | 篡改正式文本、生成伪回执 |
+| 案例 / 复盘 / 提示词 | 知识主存域 / Brain | Brain / XiaoC / WAES 审核 | Brain | AI 服务、WAES | 生成候选、评估、回归 | 未审直接进关键生产流 |
 
 ## 3. Agent 分层与权限矩阵
 

@@ -197,7 +197,7 @@
 | A16 | 一次 Edge 断网缓存补传 | Edge / GFIS / WAES | 缓存、去重、补传、回执和 trace 连贯 | P1 |
 | A17 | 一次指标口径变更和重算 | WAES / Data Platform / GFIS / GPC-Native | 口径版本、重算范围、血缘、旧口径冻结和证据完整 | P1 |
 | A18 | 一次多租户或多链数据隔离验证 | PVAOS / WAES / GPC-Native / GFIS / Agent | 越权查询被阻断，AI 无跨租户证据泄露 | P2 |
-| A19 | 一次知识发布、ingest 与失效拦截 | 知识主存 / LLM Wiki / GBrain / Brain / WAES | 知识版本生效、索引完成、失效版本被拦截 | P2 |
+| A19 | 一次知识发布、ingest 与失效拦截 | 知识主存 / LLM Wiki / Brain / WAES | 知识版本生效、索引完成、失效版本被拦截 | P2 |
 | A20 | 一次数据库边界与读模型隔离验证 | PVAOS / GPC-Native / GFIS / WAES / Data Platform | 无跨系统直写主账，读模型可查询且不反写主账 | P2 |
 | A21 | 一次模型授权变更与生效验证 | WAES / XiaoC / Hermes | `ModelAuthorizationGrant` 变更后新调用按授权生效，旧越界调用被阻断 | P2 |
 | A22 | 一次模型路由、降级与回退验证 | XiaoC / WAES / Hermes | `ModelRouteDecision`、回退原因、证据和影响范围完整 | P2 |
@@ -253,7 +253,7 @@
 | 项 | 内容 |
 |---|---|
 | 目标 | 验证知识主存域、知识引擎域和 WAES 知识治理闭环 |
-| 参与系统 | 知识主存服务、LLM Wiki、GBrain、Brain、WAES |
+| 参与系统 | 知识主存服务、LLM Wiki、Brain、WAES |
 | 前置条件 | `KnowledgeDocument`、`KnowledgeVersion`、`KnowledgeRelease`、`KnowledgeAccessPolicy` 已定义 |
 | 操作步骤 | 1. 创建知识版本；2. 审批并生效；3. 触发 ingest；4. 校验知识引擎可检索；5. 废止旧版本；6. 验证失效版本默认不被 AI 作为首选引用 |
 | 确认点 | 知识生效、回滚和失效拦截由知识主存服务与 WAES 治理确认；AI 只消费结果 |

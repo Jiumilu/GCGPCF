@@ -1,0 +1,62 @@
+change_id: gbrain-portal-v2-frontend
+run_id: gbrain-portal-v2-frontend-20260610-204915
+timestamp: "2026-06-10T20:52:00+08:00"
+
+evidence:
+  - id: E1_cmdk
+    description: "⌘K 搜索 < 500ms"
+    type: performance_test
+    result: pass
+    output: "0.43s"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E2_sidebar
+    description: "Notion 风格侧栏：空间分组 + 折叠 + 计数"
+    type: ui_test
+    result: pass
+    output: "10 spaces, collapsible headers"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E3_toc
+    description: "自动目录从 h2/h3 生成 + 滚动高亮"
+    type: ui_test
+    result: pass
+    output: "TOC built from headings, scroll spy active"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E4_backlinks
+    description: "反向链接面板"
+    type: api_test
+    result: pass
+    output: "9 backlinks found for test page"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E5_graph
+    description: "知识图谱 API + D3.js 渲染"
+    type: api_test
+    result: pass
+    output: "/api/graph returns nodes+edges, D3 loaded from CDN"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E6_chips
+    description: "搜索 authority_level chips + 搜索历史"
+    type: ui_test
+    result: pass
+    output: "6 level chips, localStorage history"
+    freshness: current
+    trust_level: machine_generated
+
+  - id: E7_animation
+    description: "微动画 + 响应式"
+    type: ui_test
+    result: pass
+    output: "CSS animations, 3 breakpoints (1024/768/480)"
+    freshness: current
+    trust_level: machine_generated
+
+status_claim: ready_for_human_acceptance

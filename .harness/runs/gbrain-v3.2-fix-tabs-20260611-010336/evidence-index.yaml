@@ -1,0 +1,11 @@
+evidence:
+  - id: switchtab-fix
+    path: gbrain-portal/server/templates/index.html
+    description: "switchTab function rewritten — removed duplicate code"
+    freshness: current
+    trust_level: machine_generated
+  - id: tab-sections
+    path: gbrain-portal/server/templates/index.html
+    description: "5 tab sections all present in DOM"
+    freshness: current
+    trust_level: machine_generated

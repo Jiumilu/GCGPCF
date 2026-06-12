@@ -2,13 +2,13 @@
 
 日期：2026-06-07  
 状态：分层方案 v1  
-适用范围：知识库、Wiki、Brain、GBrain、WAES、AI 服务流、数据治理模型。
+适用范围：知识库、Wiki、Brain、WAES、AI 服务流、数据治理模型。
 
 ## 1. 分层目标
 
 本方案用于解决两个问题：
 
-1. `LLM Wiki` 与 `GBrain` 都不是企业级知识库真源。
+1. `LLM Wiki` 与 `Brain` 都不是企业级知识库真源。
 2. 当前架构缺少“知识主存层”和“知识引擎层”的清晰分层。
 
 ## 2. 分层结构
@@ -31,7 +31,7 @@ L6 WAES 治理与审计层
 | L1 | 业务事实 | PVAOS / GPC-Native / GFIS / Edge |
 | L2 | 资源语义映射 | 资源仓库 / 对象目录 / 数据域映射 |
 | L3 | 正式知识文档、版本、审批、归档 | 企业级知识主存层 |
-| L4 | 切片、索引、图谱、RAG、引用回指 | LLM Wiki / GBrain / Brain |
+| L4 | 切片、索引、图谱、RAG、引用回指 | LLM Wiki / Brain |
 | L5 | Prompt、Agent、问答、摘要、复盘 | XiaoC / Hermes / XGD |
 | L6 | 准入、授权、证据、引用审计、发布验证 | WAES |
 
@@ -82,7 +82,7 @@ L6 WAES 治理与审计层
 知识主存层
 -> KnowledgeRelease
 -> KnowledgeIngestJob
--> LLM Wiki / GBrain
+-> LLM Wiki / Brain
 -> Brain
 -> XiaoC / Hermes / XGD
 -> WAES 审计
@@ -92,18 +92,18 @@ L6 WAES 治理与审计层
 
 ```text
 Hermes -> 直接修改主存层正式文档
-GBrain -> 直接修改主存层正式文档
+Brain -> 直接修改主存层正式文档
 AI 输出 -> 直接替代已批准知识版本
 ```
 
-## 6. LLM Wiki 与 GBrain 的推荐落位
+## 6. LLM Wiki 与 Brain 的推荐落位
 
 ### 6.1 过渡期
 
 建议并行：
 
 1. `LLM Wiki` 偏编制与规范表达。
-2. `GBrain` 偏索引与检索服务。
+2. `Brain` 偏索引与检索服务。
 
 ### 6.2 稳态期
 
@@ -151,4 +151,4 @@ AI 输出 -> 直接替代已批准知识版本
 
 ## 9. 结论
 
-这套分层的价值在于：未来无论最终选择 `LLM Wiki` 还是 `GBrain` 作为主知识引擎，都不会把企业知识真源、AI 检索引擎和治理控制平面混在一起。
+这套分层的价值在于：未来无论最终选择 `LLM Wiki` 还是 `Brain` 作为主知识引擎，都不会把企业知识真源、AI 检索引擎和治理控制平面混在一起。

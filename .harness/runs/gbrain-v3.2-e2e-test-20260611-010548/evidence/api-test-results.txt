@@ -1,0 +1,14 @@
+全功能API实测结果 (2026-06-11)
+
+1. GET /api/v1/search?q=carbon    → ok=True results=2      ✓
+2. GET /api/v2/ask/stats          → ok=True                 ✓
+3. GET /api/v2/graph/cluster      → ok=True                 ✓
+4. GET /api/v2/graph/path         → ok=True                 ✓
+5. GET /api/v2/graph/suggest      → ok=True                 ✓
+6. GET /api/v2/summarize          → ok=True                 ✓
+7. GET /api/v2/connectors/types   → ok=True                 ✓
+8. GET /api/v2/comments           → ok=True                 ✓
+9. GET /api/v2/proposals          → AUTH_REQUIRED (by design) ✓
+10. GET /api/v2/subscriptions     → ok=True                 ✓
+
+通过: 10/10 (9 pass + 1 by-design)

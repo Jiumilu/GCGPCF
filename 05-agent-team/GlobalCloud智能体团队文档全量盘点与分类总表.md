@@ -114,8 +114,8 @@
 1. `GlobalCloud智能体团队-企业级知识系统实施任务书.md`
 2. `GlobalCloud企业级知识系统冲突点与收口方案.md`
 3. `GlobalCloud企业级知识系统总目标与执行分解表.md`
-4. `GlobalCloud绿色供应链体系LLM Wiki与GBrain测试评估矩阵.md`
-5. `GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-GBrain升级图.md`
+4. `GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md`
+5. `GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md`
 6. `GlobalCloud绿色供应链体系企业级知识库方案.md`
 7. `GlobalCloud绿色供应链体系知识与Agent授权治理总表.md`
 8. `GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md`
@@ -123,7 +123,7 @@
 ### 3.6 团队治理与项目控制（11）
 
 1. `GlobalCloud智慧工厂项目群控制表.md`
-2. `GlobalCloud智能体团队8个交付包责任分解表.md`
+2. `GlobalCloud智能体团队12个交付包责任分解表.md`
 3. `GlobalCloud智能体团队PMBOK项目管理台账.md`
 4. `GlobalCloud智能体团队专项回报汇总台账.md`
 5. `GlobalCloud智能体团队专项执行版包模板.md`
