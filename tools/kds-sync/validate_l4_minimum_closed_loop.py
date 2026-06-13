@@ -34,6 +34,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-002.md",
     "docs/harness/loops/loop-round-GPCF-L4-003.md",
     "docs/harness/loops/loop-round-GPCF-L4-004.md",
+    "docs/harness/loops/loop-round-GPCF-L4-005.md",
 ]
 
 CORE_OBJECTS = [
@@ -78,6 +79,7 @@ def main() -> int:
     round_record_l4_002 = texts["docs/harness/loops/loop-round-GPCF-L4-002.md"]
     round_record_l4_003 = texts["docs/harness/loops/loop-round-GPCF-L4-003.md"]
     round_record_l4_004 = texts["docs/harness/loops/loop-round-GPCF-L4-004.md"]
+    round_record_l4_005 = texts["docs/harness/loops/loop-round-GPCF-L4-005.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -217,8 +219,39 @@ def main() -> int:
     ]:
         require(phrase in brain_retrieval + "\n" + brain_source + "\n" + brain_fixture + "\n" + brain_round, f"Brain L4-004 evidence missing phrase: {phrase}")
 
+    pkc_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC")
+    pkc_retrieval = read_external(str(pkc_root / "docs/harness/evidence/kds-retrieval-PKC-L4-005.json"))
+    pkc_service = read_external(str(pkc_root / "src/app/services/l4BrainIntakeService.ts"))
+    pkc_fixture = read_external(str(pkc_root / "src/app/data/l4BrainRetrievalIntake.fixture.json"))
+    pkc_round = read_external(str(pkc_root / "docs/harness/loops/loop-round-PKC-L4-005.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-005",
+        "PKC-L4-005",
+        "PersonalTask",
+        "Notification",
+        "TodoState",
+        "BrainRetrievalResult",
+        "96/100",
+        "项目群阶段累计评分 | 46/100",
+        "PVAOS-L4-006",
+    ]:
+        require(phrase in round_record_l4_005 + "\n" + evidence, f"L4-005 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"PKC-L4-005\"",
+        "l4BrainRetrievalIntake",
+        "buildPkcIntakeFromBrainResults",
+        "PersonalNotification",
+        "TodoState",
+        "boundary=PKC工作台不写业务事实",
+        "tasks=3 notifications=3 todo_states=3",
+    ]:
+        require(phrase in pkc_retrieval + "\n" + pkc_service + "\n" + pkc_fixture + "\n" + pkc_round, f"PKC L4-005 evidence missing phrase: {phrase}")
+
     assessment = {
-        "round_id": "GPCF-L4-004",
+        "round_id": "GPCF-L4-005",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -230,16 +263,17 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 22,
+        "generated_items": 28,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-005",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004"],
-        "project_group_score": 37,
+        "next_round": "L4-006",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005"],
+        "project_group_score": 46,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
+            "GPCF-L4-005": 96,
         },
         "project_rounds": {
             "MMC": {
@@ -264,12 +298,20 @@ def main() -> int:
                 "score": 92,
                 "accepted_integrated": False,
             },
+            "PKC": {
+                "round_id": "PKC-L4-005",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "task_notification_status_mock": "pass",
+                "score": 96,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-004 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=37 next=L4-005")
+    print("round=GPCF-L4-005 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=46 next=L4-006")
     return 0
 
 

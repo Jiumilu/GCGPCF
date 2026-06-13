@@ -25,12 +25,12 @@ superseded_by: []
 | project | GlobalCoud GPCF |
 | project_code | CF |
 | loop.round | 67 |
-| loop.current_step | l4_brain_sop_case_retrieval_evidence_intake |
-| loop.last_entry | `GPCF-L4-004` / `Brain-L4-004`：Brain SOP/案例检索最小路径 |
-| loop.last_exit | Brain 真实仓完成 KDS local_mirror 检索、SOP/案例/样品资料 fixture、typed 检索模块、SearchPanel UI 接入、项目级 validator、lint/build 与 GPCF 项目群 evidence 回写 |
+| loop.current_step | l4_pkc_task_notification_status_evidence_intake |
+| loop.last_entry | `GPCF-L4-005` / `PKC-L4-005`：PKC 任务/通知/状态接收路径 |
+| loop.last_exit | PKC 真实仓完成 KDS local_mirror 检索、Brain 结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator、typecheck/build 与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；Brain 未执行 live KDS API read 或语义索引刷新；PKC 任务/通知接收仍待 L4-005；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
-| loop.next_target | `PKC-L4-005`：基于 Brain 检索结果建立任务、通知和状态接收 mock；每轮先执行 KDS 关联数据检索 |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；PKC 未调用 live Brain/KDS/XiaoG/WAES API；PVAOS 组织/伙伴/权限输入基线仍待 L4-006；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
+| loop.next_target | `PVAOS-L4-006`：建立组织/伙伴/权限输入基线，验证 Tenant、Organization、Partner、ProjectSpace、PermissionBoundary 的 mock/dry-run |
 
 ## 循环历史
 
@@ -105,6 +105,7 @@ superseded_by: []
 | 66 | GPCF-CF-LR-066 | 2026-06-13 | 全项目提交推送后总控矩阵仍保留 XGD/XiaoG/MMC Conditional 与 dirty 旧事实 | GPCF 控制板、loop-state、项目状态矩阵、L3 准入矩阵和 evidence index 校准为 post-push 事实 | ready_for_review | 98% | 本轮为总控证据校准，不冒充业务项目整改轮；11 个业务项目机器评分均为 L3 Ready；GPCF 保持 governance_hub；未执行生产写入、真实外部 API、权限变更、部署或 accepted/integrated 升级 |
 | 67 | GPCF-L4-003 | 2026-06-13 | KDS 真实仓 L4 样品知识索引、签样资料、SOP 和 evidence 回指 evidence 接收 | GPCF L4-003 round record、evidence-index、validator 扩展 | ready_for_review | 92% | KDS-L4-003 计为 L4 实质轮；96/100；未执行 live KDS API/index refresh、未升级 accepted/integrated |
 | 68 | GPCF-L4-004 | 2026-06-13 | Brain 真实仓 SOP/案例检索最小路径 evidence 接收 | GPCF L4-004 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 92% | Brain-L4-004 计为 L4 实质轮；92/100；`pnpm lint` 0 errors/16 warnings，`pnpm build` pass；未真实外部 API、未部署、未升级 accepted/integrated |
+| 69 | GPCF-L4-005 | 2026-06-13 | PKC 真实仓任务/通知/状态接收路径 evidence 接收 | GPCF L4-005 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | PKC-L4-005 计为 L4 实质轮；96/100；`pnpm test` 3 files / 24 tests，`pnpm lint` pass，`pnpm build` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
 
 ## 状态约束
 

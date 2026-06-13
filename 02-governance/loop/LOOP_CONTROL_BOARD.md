@@ -24,10 +24,10 @@ superseded_by: []
 |---|---|
 | 当前 Loop 模式 | L4 项目群最小闭环实施 |
 | 可升级模式 | L4 active；L5 可执行但必须强授权启动 |
-| 当前主线项目 | Brain / KDS / GPCF |
-| 当前轮次 | `GPCF-L4-004` / `Brain-L4-004`：Brain SOP/案例检索最小路径 |
+| 当前主线项目 | PKC / Brain / KDS / GPCF |
+| 当前轮次 | `GPCF-L4-005` / `PKC-L4-005`：PKC 任务/通知/状态接收路径 |
 | 当前阶段 | L4 最小闭环项目级实质轮次执行与总控 evidence 回写 |
-| 当前目标 | Brain 真实仓完成 KDS 检索、SOP/案例/样品资料本地 fixture、typed 检索模块、SearchPanel UI 接入、validator、lint/build 与项目群 evidence 回写 |
+| 当前目标 | PKC 真实仓完成 KDS 检索、Brain 检索结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator 与项目群 evidence 回写 |
 | 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
 | 当前状态判定 | `ready_for_review`，但不得自动升级 accepted/integrated |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
@@ -40,12 +40,12 @@ superseded_by: []
 | L3 stop_evidence | 全项目提交推送后重新运行 `python3 tools/kds-sync/assess_l3_admission.py`，11 个业务项目均为 L3 Ready；GPCF 保持 governance_hub；所有仓库 `git status --short --branch` clean/up-to-date；本轮只做总控证据校准，不执行生产写入、权限变更、部署、真实外部 API、Docker 部署、设备 OTA 或 accepted/integrated 升级 |
 | L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
 | 连续运行真实性门禁 | pass |
-| continuous declared_rounds | 4/30 |
-| continuous substantive_rounds | 4/30 |
-| continuous generated_items | 22 |
+| continuous declared_rounds | 5/30 |
+| continuous substantive_rounds | 5/30 |
+| continuous generated_items | 28 |
 | continuous batch_generated | false |
 | continuous substance_gate | pass |
-| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002` 完成真实 MMC 策略/测试/validator；`KDS-L4-003` 完成真实 KDS 样品知识索引与 EvidenceBacklink validator；`Brain-L4-004` 完成真实 Brain SOP/案例检索 fixture、typed 检索模块、SearchPanel 接入、validator、lint/build；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移或 accepted/integrated 升级 |
+| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002` 完成真实 MMC 策略/测试/validator；`KDS-L4-003` 完成真实 KDS 样品知识索引与 EvidenceBacklink validator；`Brain-L4-004` 完成真实 Brain SOP/案例检索 fixture、typed 检索模块、SearchPanel 接入、validator、lint/build；`PKC-L4-005` 完成真实 PKC Brain 结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator、typecheck/build；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移或 accepted/integrated 升级 |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |

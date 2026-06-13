@@ -18,15 +18,15 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-13T11:06:07.447215+00:00
+生成时间：2026-06-13T11:06:34.377123+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
 - 仓库 Markdown：505
-- KDS 镜像 Markdown：516
-- KDS 同步流水：503
+- KDS 镜像 Markdown：518
+- KDS 同步流水：505
 - 元数据缺失：0
 - README 缺失目录：0
 

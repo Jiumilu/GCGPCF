@@ -74,3 +74,4 @@ KDS 空间：`开发`
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | controlled |
 | GPCF-DOC-B305BF004A | GPCF-L4-003 KDS Knowledge Index Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | controlled |
 | GPCF-DOC-716F05C368 | GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-004.md | GPCF | controlled |
+| GPCF-DOC-C7559F7570 | GPCF-L4-005 PKC Task Notification Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-005.md | GPCF | controlled |
