@@ -81,3 +81,4 @@ KDS 空间：`开发`
 | GPCF-DOC-6E36E44372 | GPCF-L4-009 XiaoC Agent Orchestration Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-009.md | GPCF | controlled |
 | GPCF-DOC-0A0AAD3643 | GPCF-L4-010 XGD Risk Analysis Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-010.md | GPCF | controlled |
 | GPCF-DOC-968C435FFF | GPCF-L4-011 XiaoG Execution Terminal Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-011.md | GPCF | controlled |
+| GPCF-DOC-ECA1059D68 | GPCF-L4-012 Minimum Closed Loop Closure | docs/harness/loops/loop-round-GPCF-L4-012.md | GPCF | controlled |

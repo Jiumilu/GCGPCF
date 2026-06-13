@@ -58,6 +58,9 @@ superseded_by: []
 | GPCF-L4-011 | XiaoG KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/evidence/kds-retrieval-XiaoG-L4-011.json` | pass |
 | GPCF-L4-011 | XiaoG readonly/audit/notification mock fixture | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/l4_execution/xiaog_l4_readonly_audit_notification_mock.fixture.json` | pass |
 | GPCF-L4-011 | XiaoG L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/validate_xiaog_l4_readonly_audit_mock.py` | pass |
+| GPCF-L4-012 | L4 closure score matrix | `docs/harness/minimum-closed-loop/l4-closure-score-matrix.md` | pass |
+| GPCF-L4-012 | GPCF L4 closure round record | `docs/harness/loops/loop-round-GPCF-L4-012.md` | pass |
+| GPCF-L4-012 | updated machine-readable assessment | `docs/harness/evidence/l4_minimum_loop_assessment.json` | pass |
 
 ## Project-Level Evidence Entrypoints
 
@@ -74,12 +77,12 @@ superseded_by: []
 | XiaoC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/docs/harness` | L4-009 ready_for_review |
 | XGD | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/docs/harness` | L4-010 ready_for_review |
 | XiaoG | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness` | L4-011 ready_for_review |
-| GPCF | `docs/harness/minimum-closed-loop` | L4-012 pending |
+| GPCF | `docs/harness/minimum-closed-loop` | L4-012 ready_for_review |
 
 ## Current Gaps
 
 - L4-001 establishes the project group control plane only.
-- Project-level L4 dry-run, mock or runtime checks remain pending for L4-012 final GPCF closure only.
+- First-batch L4 project-level dry-run, mock, validator and GPCF closure evidence are complete for L4 scope.
 - MMC L4-002 is ready_for_review with KDS retrieval, production resource policy, runtime tests and validators; it is not accepted or integrated.
 - KDS L4-003 is ready_for_review with local knowledge index, evidence backlinks and validator; it is not accepted or integrated.
 - Brain L4-004 is ready_for_review with local fixture retrieval, UI search connection, build/lint and validator; it is not accepted or integrated.
@@ -90,5 +93,6 @@ superseded_by: []
 - XiaoC L4-009 is ready_for_review with local TaskBreakdown, ModelRoute, AgentDispatchPlan and AgentResultAggregation dry-run fixture, KDS retrieval, validator and `pnpm test:repo`; it is not accepted or integrated.
 - XGD L4-010 is ready_for_review with local RiskAnalysis, BottleneckProjection, ReliabilityAssessment and RecommendationPacket dry-run fixture, KDS retrieval, validator, harness validation and unit tests; it is not accepted or integrated.
 - XiaoG L4-011 is ready_for_review with local ReadOnlyQueryResult, PkcNotificationCandidate, WaesAuditWriteMock and ExecutionTrace mock fixture, KDS retrieval, validator, legacy L3 smoke/test compatibility checks and local commit; it is not accepted or integrated.
+- GPCF L4-012 is ready_for_review with project-group closure score matrix, validator, assessment JSON, KDS mirror update and document gates; it is not accepted or integrated.
 - No project is accepted or integrated.
 - No production write, deployment, permission change, device OTA or real external API write has been executed.

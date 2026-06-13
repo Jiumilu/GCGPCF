@@ -1,5 +1,5 @@
 {
-  "round_id": "GPCF-L4-011",
+  "round_id": "GPCF-L4-012",
   "gate": "pass",
   "projects": [
     "GFIS",
@@ -36,11 +36,11 @@
       "WAES.gate == 'confirmed'"
     ]
   },
-  "generated_items": 64,
+  "generated_items": 68,
   "batch_generated": false,
   "substance_gate": "pass",
-  "status": "partial",
-  "next_round": "L4-012",
+  "status": "l4_closed",
+  "next_round": "L5-preparation",
   "completed_rounds": [
     "GPCF-L4-001",
     "GPCF-L4-002",
@@ -52,9 +52,20 @@
     "GPCF-L4-008",
     "GPCF-L4-009",
     "GPCF-L4-010",
-    "GPCF-L4-011"
+    "GPCF-L4-011",
+    "GPCF-L4-012"
   ],
-  "project_group_score": 94,
+  "project_group_score": 100,
+  "l4_closure": {
+    "score": 100,
+    "status": "L4 closed",
+    "accepted_integrated": false,
+    "l5_activated": false,
+    "production_write": false,
+    "real_external_api_write": false,
+    "device_ota": false,
+    "deployment": false
+  },
   "l4_round_scores": {
     "GPCF-L4-003": 96,
     "GPCF-L4-004": 92,
@@ -64,7 +75,8 @@
     "GPCF-L4-008": 96,
     "GPCF-L4-009": 95,
     "GPCF-L4-010": 95,
-    "GPCF-L4-011": 95
+    "GPCF-L4-011": 95,
+    "GPCF-L4-012": 100
   },
   "project_rounds": {
     "MMC": {
@@ -143,6 +155,13 @@
       "kds_retrieval": "completed",
       "readonly_audit_notification_mock": "pass",
       "score": 95,
+      "accepted_integrated": false
+    },
+    "GPCF": {
+      "round_id": "GPCF-L4-012",
+      "status": "ready_for_review",
+      "closure_score_matrix": "pass",
+      "score": 100,
       "accepted_integrated": false
     }
   }

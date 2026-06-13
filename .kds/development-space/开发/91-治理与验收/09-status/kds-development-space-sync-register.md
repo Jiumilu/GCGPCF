@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 34 | 29 | 已建空间 |
 | PVAOS | 03-PVAOS | 7 | 7 | 已建空间 |
 | WAES | 04-WAES | 131 | 15 | 已建空间 |
-| KDS | 05-KDS | 80 | 80 | 已建空间 |
+| KDS | 05-KDS | 81 | 81 | 已建空间 |
 | Brain | 06-Brain | 6 | 6 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 64 | 64 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 149 | 102 | 已建空间 |
+| GPCF | 12-GPCF | 150 | 103 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -539,9 +539,11 @@ superseded_by: []
 | GPCF-DOC-6E36E44372 | docs/harness/loops/loop-round-GPCF-L4-009.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-009.md | bidirectional | pending_api |
 | GPCF-DOC-0A0AAD3643 | docs/harness/loops/loop-round-GPCF-L4-010.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-010.md | bidirectional | pending_api |
 | GPCF-DOC-968C435FFF | docs/harness/loops/loop-round-GPCF-L4-011.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-011.md | bidirectional | pending_api |
+| GPCF-DOC-ECA1059D68 | docs/harness/loops/loop-round-GPCF-L4-012.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-012.md | bidirectional | pending_api |
 | GPCF-DOC-DF19BA9F40 | docs/harness/minimum-closed-loop/README.md | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md | bidirectional | pending_api |
 | GPCF-DOC-9886BDB110 | docs/harness/minimum-closed-loop/control-plane.md | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md | bidirectional | pending_api |
 | GPCF-DOC-4C33B5D2B6 | docs/harness/minimum-closed-loop/evidence-index.md | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md | bidirectional | pending_api |
+| GPCF-DOC-6913FD52DB | docs/harness/minimum-closed-loop/l4-closure-score-matrix.md | 开发/05-KDS/docs/harness/minimum-closed-loop/l4-closure-score-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-3F160ABA27 | docs/harness/minimum-closed-loop/object-contracts.md | 开发/05-KDS/docs/harness/minimum-closed-loop/object-contracts.md | bidirectional | pending_api |
 | GPCF-DOC-9096ABA44D | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-27101F3BEB | docs/harness/multi-tenant-permission-design.md | 开发/05-KDS/docs/harness/multi-tenant-permission-design.md | bidirectional | pending_api |

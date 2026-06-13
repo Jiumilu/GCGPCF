@@ -41,6 +41,8 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-009.md",
     "docs/harness/loops/loop-round-GPCF-L4-010.md",
     "docs/harness/loops/loop-round-GPCF-L4-011.md",
+    "docs/harness/loops/loop-round-GPCF-L4-012.md",
+    "docs/harness/minimum-closed-loop/l4-closure-score-matrix.md",
 ]
 
 CORE_OBJECTS = [
@@ -92,6 +94,8 @@ def main() -> int:
     round_record_l4_009 = texts["docs/harness/loops/loop-round-GPCF-L4-009.md"]
     round_record_l4_010 = texts["docs/harness/loops/loop-round-GPCF-L4-010.md"]
     round_record_l4_011 = texts["docs/harness/loops/loop-round-GPCF-L4-011.md"]
+    round_record_l4_012 = texts["docs/harness/loops/loop-round-GPCF-L4-012.md"]
+    closure = texts["docs/harness/minimum-closed-loop/l4-closure-score-matrix.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -475,8 +479,28 @@ def main() -> int:
             f"XiaoG L4-011 evidence missing phrase: {phrase}",
         )
 
+    for phrase in [
+        "GPCF-L4-012",
+        "L4 Minimum Closed Loop Closure Score Matrix",
+        "12 project coverage",
+        "P0 business chain continuity",
+        "Real repository code/config/test closure",
+        "KDS retrieval and knowledge backlink completeness",
+        "Evidence and audit completeness",
+        "Cross-project contract consistency",
+        "User reproducibility and L5 readiness",
+        "Total | 100 | 100/100",
+        "No project is marked accepted",
+        "No production write occurred",
+        "L5 remains a separate",
+    ]:
+        require(phrase in round_record_l4_012 + "\n" + closure + "\n" + evidence, f"L4-012 closure evidence missing phrase: {phrase}")
+
+    for project in PROJECTS:
+        require(f"| {project} |" in closure or f"| {project} " in closure, f"L4 closure matrix missing project: {project}")
+
     assessment = {
-        "round_id": "GPCF-L4-011",
+        "round_id": "GPCF-L4-012",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -488,13 +512,23 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 64,
+        "generated_items": 68,
         "batch_generated": False,
         "substance_gate": "pass",
-        "status": "partial",
-        "next_round": "L4-012",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010", "GPCF-L4-011"],
-        "project_group_score": 94,
+        "status": "l4_closed",
+        "next_round": "L5-preparation",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010", "GPCF-L4-011", "GPCF-L4-012"],
+        "project_group_score": 100,
+        "l4_closure": {
+            "score": 100,
+            "status": "L4 closed",
+            "accepted_integrated": False,
+            "l5_activated": False,
+            "production_write": False,
+            "real_external_api_write": False,
+            "device_ota": False,
+            "deployment": False,
+        },
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
@@ -505,6 +539,7 @@ def main() -> int:
             "GPCF-L4-009": 95,
             "GPCF-L4-010": 95,
             "GPCF-L4-011": 95,
+            "GPCF-L4-012": 100,
         },
         "project_rounds": {
             "MMC": {
@@ -585,12 +620,19 @@ def main() -> int:
                 "score": 95,
                 "accepted_integrated": False,
             },
+            "GPCF": {
+                "round_id": "GPCF-L4-012",
+                "status": "ready_for_review",
+                "closure_score_matrix": "pass",
+                "score": 100,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-011 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=94 next=L4-012")
+    print("round=GPCF-L4-012 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=100 next=L5-preparation")
     return 0
 
 
