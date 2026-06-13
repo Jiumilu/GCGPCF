@@ -40,6 +40,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | KDS | controlled |
+| GPCF-DOC-E3822328DF | GlobalCloud Loop 开发 KDS 关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | KDS | controlled |
 | GPCF-DOC-1F12054E1C | GlobalCloud 企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | KDS | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | KDS | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | KDS | controlled |

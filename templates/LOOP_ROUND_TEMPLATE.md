@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C3B9DFCB0C
 title: Loop Round Template
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
 domain: templates
 status: controlled
 version: v1.0
@@ -71,6 +71,8 @@ L3、L3.5、L4、L5 必填。每轮至少满足 4/5，才可计为 `substantive_
 | batch_id |  |
 | similarity_with_previous | low / medium / high |
 | substance_score | 0-5 |
+| l4_score | 0-100 / not_applicable |
+| counted_as_l4_substantive_round | true / false / not_applicable |
 | correction_required | yes / no |
 | corrected_stop_type | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty / authorization_boundary / production_safety |
 
@@ -85,6 +87,90 @@ L3、L3.5、L4、L5 必填。每轮至少满足 4/5，才可计为 `substantive_
 | 文档 | 路径 | 用途 |
 |---|---|---|
 |  |  |  |
+
+## 3.1 KDS 关联数据检索
+
+涉及真实开发、契约、mock、dry-run 或 evidence 时必填。KDS 只提供受控语义、字段口径、SOP、案例和 evidence 回指，不替代 GPC/GFIS/WAES/PVAOS 的当前业务事实。
+
+| 字段 | 值 |
+|---|---|
+| required | true / false |
+| status | planned / completed / skipped_with_reason / blocked |
+| retrieval_mode | local_mirror / kds_api_readonly / kds_api_dry_run |
+| business_node |  |
+| target_projects |  |
+
+| query_terms | 说明 |
+|---|---|
+|  |  |
+
+| source_document | doc_id | source_path / kds_path | status | relevance |
+|---|---|---|---|---|
+|  |  |  | controlled/draft/archive |  |
+
+| retrieved_object | owner_project | fields | source |
+|---|---|---|---|
+|  |  |  |  |
+
+| retrieved_status | allowed_transitions | blocked_transitions | source |
+|---|---|---|---|
+|  |  |  |  |
+
+| retrieved_sop | summary | source |
+|---|---|---|
+|  |  |  |
+
+| retrieved_evidence_rule | required_fields | source |
+|---|---|---|
+|  |  |  |
+
+| development_data_need | producer_project | consumer_project | verification_method |
+|---|---|---|---|
+|  |  |  |  |
+
+| mock_data_need | fields | boundary_cases |
+|---|---|---|
+|  |  |  |
+
+| unresolved_question | owner | stop_required |
+|---|---|---|
+|  |  | true/false |
+
+| kds_followup_update | target_doc | reason |
+|---|---|---|
+|  |  |  |
+
+## 3.2 L4 100 分评分
+
+Loop 模式为 L4 时必填。评分标准来源：`01-architecture/GlobalCloud项目群最小闭环L4实施方案.md` 的 `L4 100 分评分模型`。
+
+| 指标 | 分值 | 得分 | 扣分原因 |
+|---|---:|---:|---|
+| 职责边界准确性 | 15 |  |  |
+| KDS 关联数据检索质量 | 10 |  |  |
+| 真实仓实质变更 | 15 |  |  |
+| 测试与验证 | 15 |  |  |
+| Evidence 完整性 | 15 |  |  |
+| 最小闭环贡献度 | 10 |  |  |
+| Git 与工作区可审计性 | 10 |  |  |
+| 下一轮可执行性 | 10 |  |  |
+| 合计 | 100 |  |  |
+
+| 字段 | 值 |
+|---|---|
+| l4_status | L4 Ready / L4 Conditional / L3 Repair / Blocked / Invalid / not_applicable |
+| counted_as_l4_substantive_round | true / false / not_applicable |
+| project_group_cumulative_score | 0-100 / not_calculated |
+| next_round_score_target |  |
+| score_gate_result | pass / conditional / downgrade_to_l3 / blocked / invalid / not_applicable |
+
+评分门禁：
+
+- 90-100：`L4 Ready`，可计为高质量 L4 实质轮。
+- 80-89：`L4 Conditional`，可计为 L4 实质轮，但必须登记改进项。
+- 70-79：`L3 Repair`，不得计为 L4 实质轮，必须降级补齐。
+- 60-69：`Blocked`，本轮停止，修复关键缺口后再继续。
+- 0-59：`Invalid`，本轮无效，不得进入下一轮 L4。
 
 ## 4. 影响范围
 

@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 34 | 29 | 已建空间 |
 | PVAOS | 03-PVAOS | 7 | 7 | 已建空间 |
 | WAES | 04-WAES | 131 | 15 | 已建空间 |
-| KDS | 05-KDS | 74 | 74 | 已建空间 |
+| KDS | 05-KDS | 80 | 80 | 已建空间 |
 | Brain | 06-Brain | 6 | 6 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 64 | 64 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 138 | 91 | 已建空间 |
+| GPCF | 12-GPCF | 140 | 93 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -212,7 +212,7 @@ superseded_by: []
 | GPCF-DOC-A33E51C815 | GPCF Loop Engineering 状态机定义 | 02-governance/gpcf-status-machine.md | WAES | GPC, WAES, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-status-machine.md |
 | GPCF-DOC-29E5B0AC17 | Loop Autonomy Policy | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | WAES, KDS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_AUTONOMY_POLICY.md |
 | GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md |
-| GPCF-DOC-04BF76145B | Loop Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | WAES, KDS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
+| GPCF-DOC-04BF76145B | Loop Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
 | GPCF-DOC-1B5550FF05 | Loop L3.5 Real API Verification Policy | 02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md |
 | GPCF-DOC-5E646AC9A6 | Loop L4 Autonomous Operations Policy | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md |
 | GPCF-DOC-7FB1181082 | Loop L5 Full Production Autonomy Policy | 02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md |
@@ -220,6 +220,7 @@ superseded_by: []
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/README.md |
 | GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md |
+| GPCF-DOC-E3822328DF | GlobalCloud Loop 开发 KDS 关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md |
 | GPCF-DOC-1F12054E1C | GlobalCloud 企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | KDS | GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | KDS | GPC, PVAOS, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | KDS | KDS, WAES | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md |
@@ -489,7 +490,7 @@ superseded_by: []
 | GPCF-DOC-8A81B62CEF | XiaoC loop-state 补齐包 | docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md | KDS | GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md |
 | GPCF-DOC-0E90353E48 | XiaoG 项目启动包 | docs/harness/gpcf-xiaog-project-startup-pack-lr021.md | KDS | GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/gpcf-xiaog-project-startup-pack-lr021.md |
 | GPCF-DOC-7183C7D7D1 | GPCF Loop State | docs/harness/loop-state.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loop-state.md |
-| GPCF-DOC-59D8079155 | loops | docs/harness/loops/README.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/README.md |
+| GPCF-DOC-59D8079155 | loops | docs/harness/loops/README.md | GPCF | GPC, WAES, KDS, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/README.md |
 | GPCF-DOC-7CD4D9DE05 | Loop Round GPCF-CF-LR-001 | docs/harness/loops/loop-round-GPCF-CF-LR-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-001.md |
 | GPCF-DOC-263315555E | Loop Round GPCF-CF-LR-002 | docs/harness/loops/loop-round-GPCF-CF-LR-002.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-002.md |
 | GPCF-DOC-CA61033026 | Loop Round GPCF-CF-LR-003 | docs/harness/loops/loop-round-GPCF-CF-LR-003.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-003.md |
@@ -523,6 +524,13 @@ superseded_by: []
 | GPCF-DOC-02E635F425 | Loop Round GPCF-CF-LR-031 | docs/harness/loops/loop-round-GPCF-CF-LR-031.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-031.md |
 | GPCF-DOC-BB52623034 | Loop Round GPCF-CF-LR-032 | docs/harness/loops/loop-round-GPCF-CF-LR-032.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-032.md |
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | GPCF | GPC, KDS, XGD, XiaoG, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md |
+| GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-001.md |
+| GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | GFIS, GPC, WAES, KDS, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-002.md |
+| GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
+| GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |
+| GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |
+| GPCF-DOC-3F160ABA27 | L4 Minimum Closed Loop Object Contracts | docs/harness/minimum-closed-loop/object-contracts.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/object-contracts.md |
+| GPCF-DOC-9096ABA44D | L4 Project Role Verification Matrix | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md |
 | GPCF-DOC-27101F3BEB | Brain 多租户知识库权限体系 — v3.1.1 Implementation Patch | docs/harness/multi-tenant-permission-design.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC | docs | controlled | 开发/05-KDS/docs/harness/multi-tenant-permission-design.md |
 | GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md |
 | GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/README.md |
@@ -542,7 +550,7 @@ superseded_by: []
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/specs/README.md |
 | GPCF-DOC-342D4B85A7 | Loop Evidence Template | templates/LOOP_EVIDENCE_TEMPLATE.md | GPCF | GPCF, KDS | templates | controlled | 开发/12-GPCF/templates/LOOP_EVIDENCE_TEMPLATE.md |
 | GPCF-DOC-D72226E1D3 | Loop Handoff Template | templates/LOOP_HANDOFF_TEMPLATE.md | GPCF | GPCF, WAES | templates | controlled | 开发/12-GPCF/templates/LOOP_HANDOFF_TEMPLATE.md |
-| GPCF-DOC-C3B9DFCB0C | Loop Round Template | templates/LOOP_ROUND_TEMPLATE.md | GPCF | GPCF, WAES, KDS | templates | controlled | 开发/12-GPCF/templates/LOOP_ROUND_TEMPLATE.md |
+| GPCF-DOC-C3B9DFCB0C | Loop Round Template | templates/LOOP_ROUND_TEMPLATE.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, GPCF | templates | controlled | 开发/12-GPCF/templates/LOOP_ROUND_TEMPLATE.md |
 | GPCF-DOC-48D043BA78 | 模板库 | templates/README.md | GPCF | GPC, WAES, KDS, GPCF | templates | controlled | 开发/12-GPCF/templates/README.md |
 | GPCF-DOC-33F4C1195D | Evidence Index — {项目名} | templates/evidence-index-template.md | GPCF | GPC, WAES, GPCF | templates | controlled | 开发/12-GPCF/templates/evidence-index-template.md |
 | GPCF-DOC-8C2AA8996B | Status Audit — {YYYY-MM-DD} | templates/loop-audit-template.md | GPCF | GPC, WAES, XiaoC, GPCF | templates | controlled | 开发/12-GPCF/templates/loop-audit-template.md |

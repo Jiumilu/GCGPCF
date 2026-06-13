@@ -172,5 +172,12 @@ KDS 空间：`开发`
 | GPCF-DOC-02E635F425 | Loop Round GPCF-CF-LR-031 | docs/harness/loops/loop-round-GPCF-CF-LR-031.md | GPCF | controlled |
 | GPCF-DOC-BB52623034 | Loop Round GPCF-CF-LR-032 | docs/harness/loops/loop-round-GPCF-CF-LR-032.md | GPCF | controlled |
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | GPCF | controlled |
+| GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | controlled |
+| GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | controlled |
+| GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | controlled |
+| GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | controlled |
+| GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | controlled |
+| GPCF-DOC-3F160ABA27 | L4 Minimum Closed Loop Object Contracts | docs/harness/minimum-closed-loop/object-contracts.md | KDS | controlled |
+| GPCF-DOC-9096ABA44D | L4 Project Role Verification Matrix | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | controlled |
 | GPCF-DOC-27101F3BEB | Brain 多租户知识库权限体系 — v3.1.1 Implementation Patch | docs/harness/multi-tenant-permission-design.md | KDS | controlled |
 | GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | GPCF | controlled |

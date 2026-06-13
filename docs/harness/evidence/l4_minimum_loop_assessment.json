@@ -36,9 +36,22 @@
       "WAES.gate == 'confirmed'"
     ]
   },
-  "generated_items": 6,
+  "generated_items": 7,
   "batch_generated": false,
   "substance_gate": "pass",
   "status": "partial",
-  "next_round": "L4-002"
+  "next_round": "L4-002",
+  "completed_rounds": [
+    "GPCF-L4-001",
+    "GPCF-L4-002"
+  ],
+  "project_rounds": {
+    "MMC": {
+      "round_id": "MMC-L4-002",
+      "status": "ready_for_review",
+      "kds_retrieval": "completed",
+      "sample_gate": "blocked_without_required_evidence",
+      "resource_gate": "blocked_without_required_evidence"
+    }
+  }
 }

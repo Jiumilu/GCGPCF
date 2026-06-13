@@ -31,6 +31,7 @@ REQUIRED_FILES = [
     "docs/harness/minimum-closed-loop/object-contracts.md",
     "docs/harness/minimum-closed-loop/evidence-index.md",
     "docs/harness/loops/loop-round-GPCF-L4-001.md",
+    "docs/harness/loops/loop-round-GPCF-L4-002.md",
 ]
 
 CORE_OBJECTS = [
@@ -59,6 +60,12 @@ def read(relative_path: str) -> str:
     return path.read_text(encoding="utf-8", errors="ignore")
 
 
+def read_external(path_text: str) -> str:
+    path = Path(path_text)
+    require(path.exists(), f"missing external file: {path_text}")
+    return path.read_text(encoding="utf-8", errors="ignore")
+
+
 def main() -> int:
     texts = {relative_path: read(relative_path) for relative_path in REQUIRED_FILES}
     control = texts["docs/harness/minimum-closed-loop/control-plane.md"]
@@ -66,6 +73,7 @@ def main() -> int:
     contracts = texts["docs/harness/minimum-closed-loop/object-contracts.md"]
     evidence = texts["docs/harness/minimum-closed-loop/evidence-index.md"]
     round_record = texts["docs/harness/loops/loop-round-GPCF-L4-001.md"]
+    round_record_l4_002 = texts["docs/harness/loops/loop-round-GPCF-L4-002.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -110,6 +118,43 @@ def main() -> int:
     ]:
         require(phrase in round_record, f"round record missing phrase: {phrase}")
 
+    mmc_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC")
+    mmc_policy = read_external(str(mmc_root / "runtime/policies/minimum_closed_loop_policy.json"))
+    mmc_retrieval = read_external(str(mmc_root / "docs/harness/evidence/kds-retrieval-MMC-L4-002.json"))
+    mmc_round = read_external(str(mmc_root / "docs/harness/loops/loop-round-MMC-L4-002.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-002",
+        "MMC-L4-002",
+        "KDS retrieval",
+        "ResourceCapabilityCheck",
+        "equipment_id",
+        "line_id",
+        "process_capability_code",
+        "capacity_snapshot_id",
+        "36 passed",
+        "ready_for_review",
+    ]:
+        require(phrase in round_record_l4_002 + "\n" + evidence, f"L4-002 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"status\": \"completed\"",
+        "\"retrieval_mode\": \"local_mirror\"",
+        "GPCF-DOC-E2FDF91E39",
+        "ResourceCapabilityCheck",
+        "unresolved_questions",
+    ]:
+        require(phrase in mmc_retrieval, f"MMC KDS retrieval missing phrase: {phrase}")
+
+    for phrase in [
+        "resource_capability_before_factory_order",
+        "ResourceCapabilityCheck.resource_gate_status == 'pass'",
+        "factory_id, line_id, equipment_id and process_capability_code are present",
+        "capacity_snapshot_id is present",
+        "GFIS owns equipment, line, work order and production execution facts",
+    ]:
+        require(phrase in mmc_policy + "\n" + mmc_round, f"MMC resource policy missing phrase: {phrase}")
+
     assessment = {
         "round_id": "GPCF-L4-001",
         "gate": "pass",
@@ -128,14 +173,23 @@ def main() -> int:
         "substance_gate": "pass",
         "status": "partial",
         "next_round": "L4-002",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002"],
+        "project_rounds": {
+            "MMC": {
+                "round_id": "MMC-L4-002",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "sample_gate": "blocked_without_required_evidence",
+                "resource_gate": "blocked_without_required_evidence",
+            }
+        },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-001 projects=12 core_objects=11 sample_gate=blocked next=L4-002")
+    print("round=GPCF-L4-002 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked next=L4-003")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

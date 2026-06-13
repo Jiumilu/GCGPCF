@@ -22,12 +22,12 @@ superseded_by: []
 
 | 字段 | 当前值 |
 |---|---|
-| 当前 Loop 模式 | L3 托管冲刺模式 |
-| 可升级模式 | L3 托管冲刺模式；L3.5/L4/L5 可执行但必须显式或强授权启动 |
-| 当前主线项目 | GPCF |
-| 当前轮次 | `GPCF-CF-LR-066`：post-push L3 准入矩阵校准 |
-| 当前阶段 | 总控证据校准与提交后状态复核 |
-| 当前目标 | 将全项目提交推送后的真实 Git clean、评分 JSON 和 evidence 结果回写到 GPCF 总控 |
+| 当前 Loop 模式 | L4 项目群最小闭环实施 |
+| 可升级模式 | L4 active；L5 可执行但必须强授权启动 |
+| 当前主线项目 | MMC / GPCF |
+| 当前轮次 | `GPCF-L4-002` / `MMC-L4-002`：MMC 生产资源能力与样品门禁策略闭环 |
+| 当前阶段 | L4 最小闭环项目级实质轮次执行与总控 evidence 回写 |
+| 当前目标 | MMC 真实仓完成 KDS 检索、设备/产线/工序能力/生产资源策略、样品门禁、runtime tests、validator 与项目群 evidence 闭环 |
 | 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
 | 当前状态判定 | `ready_for_review`，但不得自动升级 accepted/integrated |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
@@ -40,12 +40,12 @@ superseded_by: []
 | L3 stop_evidence | 全项目提交推送后重新运行 `python3 tools/kds-sync/assess_l3_admission.py`，11 个业务项目均为 L3 Ready；GPCF 保持 governance_hub；所有仓库 `git status --short --branch` clean/up-to-date；本轮只做总控证据校准，不执行生产写入、权限变更、部署、真实外部 API、Docker 部署、设备 OTA 或 accepted/integrated 升级 |
 | L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
 | 连续运行真实性门禁 | pass |
-| continuous declared_rounds | 1/15 |
-| continuous substantive_rounds | 1/15 |
-| continuous generated_items | 7 |
+| continuous declared_rounds | 2/30 |
+| continuous substantive_rounds | 2/30 |
+| continuous generated_items | 12 |
 | continuous batch_generated | false |
 | continuous substance_gate | pass |
-| continuous substance_evidence | 本轮依据提交推送后的真实 Git 状态、`docs/harness/evidence/l3_admission_assessment.json` 和项目级 validator 结果做 GPCF 总控校准；XGD 提交 `840b70f0` 已推送，XiaoG 提交 `a6494b33` 已推送，GPCF 提交 `3c578ec` 已推送；当前 11 个业务项目机器评分均达到 L3 Ready |
+| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002` 在真实 MMC 仓完成 KDS local_mirror 检索、ResourceCapabilityCheck、样品门禁、资源能力门禁、36 个 runtime tests、contract test 和项目 validator；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移或 accepted/integrated 升级 |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |

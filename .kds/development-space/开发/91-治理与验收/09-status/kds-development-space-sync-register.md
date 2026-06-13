@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 34 | 29 | 已建空间 |
 | PVAOS | 03-PVAOS | 7 | 7 | 已建空间 |
 | WAES | 04-WAES | 131 | 15 | 已建空间 |
-| KDS | 05-KDS | 74 | 74 | 已建空间 |
+| KDS | 05-KDS | 80 | 80 | 已建空间 |
 | Brain | 06-Brain | 6 | 6 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 64 | 64 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 138 | 91 | 已建空间 |
+| GPCF | 12-GPCF | 140 | 93 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -224,6 +224,7 @@ superseded_by: []
 | GPCF-DOC-8D5147AC17 | 02-governance/loop/LOOP_RISK_GATE.md | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md | bidirectional | pending_api |
 | GPCF-DOC-0AD0A529B5 | 02-governance/loop/README.md | 开发/91-治理与验收/02-governance/loop/README.md | bidirectional | pending_api |
 | GPCF-DOC-E4579BFF7E | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | 开发/05-KDS/03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | bidirectional | pending_api |
+| GPCF-DOC-E3822328DF | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | bidirectional | pending_api |
 | GPCF-DOC-1F12054E1C | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | bidirectional | pending_api |
 | GPCF-DOC-F5B3269058 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | bidirectional | pending_api |
 | GPCF-DOC-A3B30485E9 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | bidirectional | pending_api |
@@ -527,6 +528,13 @@ superseded_by: []
 | GPCF-DOC-02E635F425 | docs/harness/loops/loop-round-GPCF-CF-LR-031.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-031.md | bidirectional | pending_api |
 | GPCF-DOC-BB52623034 | docs/harness/loops/loop-round-GPCF-CF-LR-032.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-032.md | bidirectional | pending_api |
 | GPCF-DOC-1496E69CD8 | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md | bidirectional | pending_api |
+| GPCF-DOC-352145BD54 | docs/harness/loops/loop-round-GPCF-L4-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-001.md | bidirectional | pending_api |
+| GPCF-DOC-DE330E086C | docs/harness/loops/loop-round-GPCF-L4-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-002.md | bidirectional | pending_api |
+| GPCF-DOC-DF19BA9F40 | docs/harness/minimum-closed-loop/README.md | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md | bidirectional | pending_api |
+| GPCF-DOC-9886BDB110 | docs/harness/minimum-closed-loop/control-plane.md | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md | bidirectional | pending_api |
+| GPCF-DOC-4C33B5D2B6 | docs/harness/minimum-closed-loop/evidence-index.md | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md | bidirectional | pending_api |
+| GPCF-DOC-3F160ABA27 | docs/harness/minimum-closed-loop/object-contracts.md | 开发/05-KDS/docs/harness/minimum-closed-loop/object-contracts.md | bidirectional | pending_api |
+| GPCF-DOC-9096ABA44D | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-27101F3BEB | docs/harness/multi-tenant-permission-design.md | 开发/05-KDS/docs/harness/multi-tenant-permission-design.md | bidirectional | pending_api |
 | GPCF-DOC-40F0A4CB83 | docs/harness/status-audit-2026-06-10.md | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md | bidirectional | pending_api |
 | GPCF-DOC-4F39AFF310 | openspec/README.md | 开发/05-KDS/openspec/README.md | bidirectional | pending_api |

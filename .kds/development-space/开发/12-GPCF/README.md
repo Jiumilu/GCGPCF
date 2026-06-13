@@ -84,6 +84,8 @@
 | GPCF-DOC-02E635F425 | Loop Round GPCF-CF-LR-031 | docs/harness/loops/loop-round-GPCF-CF-LR-031.md | controlled |
 | GPCF-DOC-BB52623034 | Loop Round GPCF-CF-LR-032 | docs/harness/loops/loop-round-GPCF-CF-LR-032.md | controlled |
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | controlled |
+| GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | controlled |
+| GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | controlled |
 | GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | controlled |
 | GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | draft |
 | GPCF-DOC-18A2F48E80 | Session Authentication | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |

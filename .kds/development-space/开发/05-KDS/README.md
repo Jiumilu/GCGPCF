@@ -7,6 +7,7 @@
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
 | GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | controlled |
+| GPCF-DOC-E3822328DF | GlobalCloud Loop 开发 KDS 关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | controlled |
 | GPCF-DOC-1F12054E1C | GlobalCloud 企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | controlled |
@@ -66,6 +67,11 @@
 | GPCF-DOC-5839431FBC | XGD 项目启动包 | docs/harness/gpcf-xgd-project-startup-pack-lr020.md | controlled |
 | GPCF-DOC-8A81B62CEF | XiaoC loop-state 补齐包 | docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md | controlled |
 | GPCF-DOC-0E90353E48 | XiaoG 项目启动包 | docs/harness/gpcf-xiaog-project-startup-pack-lr021.md | controlled |
+| GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | controlled |
+| GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | controlled |
+| GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | controlled |
+| GPCF-DOC-3F160ABA27 | L4 Minimum Closed Loop Object Contracts | docs/harness/minimum-closed-loop/object-contracts.md | controlled |
+| GPCF-DOC-9096ABA44D | L4 Project Role Verification Matrix | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | controlled |
 | GPCF-DOC-27101F3BEB | Brain 多租户知识库权限体系 — v3.1.1 Implementation Patch | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | controlled |
 | GPCF-DOC-855B715B04 | OpenSpec 变更集 | openspec/changes/README.md | draft |

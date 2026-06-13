@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 66 |
-| loop.current_step | post_push_l3_admission_reconciled |
-| loop.last_entry | `GPCF-CF-LR-066`：全项目提交推送后的 L3 准入矩阵校准 |
-| loop.last_exit | XGD `840b70f0`、XiaoG `a6494b33`、GPCF `3c578ec` 已推送；全项目 `git status --short --branch` clean/up-to-date；`assess_l3_admission.py` 显示 11 个业务项目均为 L3 Ready，GPCF 为 governance_hub |
+| loop.round | 67 |
+| loop.current_step | l4_mmc_resource_policy_evidence_intake |
+| loop.last_entry | `GPCF-L4-002` / `MMC-L4-002`：MMC 生产资源能力与样品门禁策略闭环 |
+| loop.last_exit | MMC 真实仓完成 KDS local_mirror 检索、`ResourceCapabilityCheck` 策略、样品门禁、资源能力门禁、runtime policy、36 个 runtime tests、contract test、项目级 validator 与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入，不阻断 L3 自动开发准入 |
-| loop.next_target | 若继续推进，优先从 GPC/GFIS adapter dry-run、Brain format/test script 专项、XGD bounded TICK loop dry-run 或 XiaoG 真实设备/浏览器验证中选择一个真实项目仓最小闭环 |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；GPCF L4 方案中的 MMC 旧口径仍需后续文档对齐；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
+| loop.next_target | `KDS-L4-003`：在 KDS 真实仓建立样品规格、签样资料、SOP 与 evidence 回指索引；每轮先执行 KDS 关联数据检索 |
 
 ## 循环历史
 
