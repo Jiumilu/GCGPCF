@@ -18,9 +18,9 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-13T04:13:09.324099+00:00
+生成时间：2026-06-13T04:13:56.430556+00:00
 
-Loop 文档门禁：`rework_required`
+Loop 文档门禁：`blocked`
 
 ## 总览
 
@@ -67,6 +67,5 @@ kds_token=blocked
 ### kds_conflict_guard
 
 ```text
-kds_conflict_guard=blocked
-09-status/globalcloud-document-health-report.md != 开发/91-治理与验收/09-status/globalcloud-document-health-report.md
+kds_conflict_guard=pass
 ```
