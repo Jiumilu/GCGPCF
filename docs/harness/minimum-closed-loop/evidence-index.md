@@ -40,6 +40,9 @@ superseded_by: []
 | GPCF-L4-005 | PKC KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC/docs/harness/evidence/kds-retrieval-PKC-L4-005.json` | pass |
 | GPCF-L4-005 | PKC Brain intake service | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC/src/app/services/l4BrainIntakeService.ts` | pass |
 | GPCF-L4-005 | PKC L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC/scripts/validate_pkc_l4_brain_intake.py` | pass |
+| GPCF-L4-006 | PVAOS KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/evidence/kds-retrieval-PVAOS-L4-006.json` | pass |
+| GPCF-L4-006 | PVAOS organization partner baseline service | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/src/app/services/l4OrganizationPartnerBaselineService.ts` | pass |
+| GPCF-L4-006 | PVAOS L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/scripts/validate_pvaos_l4_org_partner_baseline.py` | pass |
 
 ## Project-Level Evidence Entrypoints
 
@@ -47,7 +50,7 @@ superseded_by: []
 |---|---|---|
 | GFIS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness` | L4-008 pending |
 | GPC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness` | L4-007 pending |
-| PVAOS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness` | L4-006 pending |
+| PVAOS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness` | L4-006 ready_for_review |
 | WAES | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness` | L4-009 pending |
 | KDS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/docs/harness` | L4-003 ready_for_review |
 | Brain | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/docs/harness` | L4-004 ready_for_review |
@@ -61,10 +64,11 @@ superseded_by: []
 ## Current Gaps
 
 - L4-001 establishes the project group control plane only.
-- Project-level L4 dry-run, mock or runtime checks remain pending for L4-006 through L4-012.
+- Project-level L4 dry-run, mock or runtime checks remain pending for L4-007 through L4-012.
 - MMC L4-002 is ready_for_review with KDS retrieval, production resource policy, runtime tests and validators; it is not accepted or integrated.
 - KDS L4-003 is ready_for_review with local knowledge index, evidence backlinks and validator; it is not accepted or integrated.
 - Brain L4-004 is ready_for_review with local fixture retrieval, UI search connection, build/lint and validator; it is not accepted or integrated.
 - PKC L4-005 is ready_for_review with local Brain result intake fixture, PersonalTask/Notification/TodoState service, Vitest, typecheck/build and validator; it is not accepted or integrated.
+- PVAOS L4-006 is ready_for_review with local organization/partner/permission fixture, dry-run service, Vitest, module validation, typecheck and validator; it is not accepted or integrated.
 - No project is accepted or integrated.
 - No production write, deployment, permission change, device OTA or real external API write has been executed.

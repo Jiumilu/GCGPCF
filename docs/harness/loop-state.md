@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 67 |
-| loop.current_step | l4_pkc_task_notification_status_evidence_intake |
-| loop.last_entry | `GPCF-L4-005` / `PKC-L4-005`：PKC 任务/通知/状态接收路径 |
-| loop.last_exit | PKC 真实仓完成 KDS local_mirror 检索、Brain 结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator、typecheck/build 与 GPCF 项目群 evidence 回写 |
+| loop.round | 68 |
+| loop.current_step | l4_pvaos_organization_partner_permission_intake |
+| loop.last_entry | `GPCF-L4-006` / `PVAOS-L4-006`：组织/伙伴/权限输入基线 |
+| loop.last_exit | PVAOS 真实仓完成 KDS local_mirror 检索、Tenant/Organization/Partner/ProjectSpace/PermissionBoundary fixture、dry-run service、Vitest、validator、module validation、typecheck 与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；PKC 未调用 live Brain/KDS/XiaoG/WAES API；PVAOS 组织/伙伴/权限输入基线仍待 L4-006；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
-| loop.next_target | `PVAOS-L4-006`：建立组织/伙伴/权限输入基线，验证 Tenant、Organization、Partner、ProjectSpace、PermissionBoundary 的 mock/dry-run |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；PVAOS 未调用 live PVAOS/GPC/WAES API，未取得真实客户组织/伙伴接入样本；GPC 平台订单/样品/签收契约仍待 L4-007；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
+| loop.next_target | `GPC-L4-007`：消费 PVAOS Tenant、Organization、Partner、ProjectSpace、PermissionBoundary 输入，建立平台订单、样品申请、客户签样、转量产和 POD 契约 mock/dry-run |
 
 ## 循环历史
 
@@ -106,6 +106,7 @@ superseded_by: []
 | 67 | GPCF-L4-003 | 2026-06-13 | KDS 真实仓 L4 样品知识索引、签样资料、SOP 和 evidence 回指 evidence 接收 | GPCF L4-003 round record、evidence-index、validator 扩展 | ready_for_review | 92% | KDS-L4-003 计为 L4 实质轮；96/100；未执行 live KDS API/index refresh、未升级 accepted/integrated |
 | 68 | GPCF-L4-004 | 2026-06-13 | Brain 真实仓 SOP/案例检索最小路径 evidence 接收 | GPCF L4-004 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 92% | Brain-L4-004 计为 L4 实质轮；92/100；`pnpm lint` 0 errors/16 warnings，`pnpm build` pass；未真实外部 API、未部署、未升级 accepted/integrated |
 | 69 | GPCF-L4-005 | 2026-06-13 | PKC 真实仓任务/通知/状态接收路径 evidence 接收 | GPCF L4-005 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | PKC-L4-005 计为 L4 实质轮；96/100；`pnpm test` 3 files / 24 tests，`pnpm lint` pass，`pnpm build` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
+| 70 | GPCF-L4-006 | 2026-06-13 | PVAOS 真实仓组织/伙伴/权限输入基线 evidence 接收 | GPCF L4-006 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | PVAOS-L4-006 计为 L4 实质轮；96/100；`npm test -- src/app/tests/tenant/l4OrganizationPartnerBaseline.test.ts` 1 file / 4 tests，`npm run validate:modules` pass，`npm run typecheck` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
 
 ## 状态约束
 

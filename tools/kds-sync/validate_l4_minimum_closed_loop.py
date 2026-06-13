@@ -35,6 +35,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-003.md",
     "docs/harness/loops/loop-round-GPCF-L4-004.md",
     "docs/harness/loops/loop-round-GPCF-L4-005.md",
+    "docs/harness/loops/loop-round-GPCF-L4-006.md",
 ]
 
 CORE_OBJECTS = [
@@ -80,6 +81,7 @@ def main() -> int:
     round_record_l4_003 = texts["docs/harness/loops/loop-round-GPCF-L4-003.md"]
     round_record_l4_004 = texts["docs/harness/loops/loop-round-GPCF-L4-004.md"]
     round_record_l4_005 = texts["docs/harness/loops/loop-round-GPCF-L4-005.md"]
+    round_record_l4_006 = texts["docs/harness/loops/loop-round-GPCF-L4-006.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -250,8 +252,43 @@ def main() -> int:
     ]:
         require(phrase in pkc_retrieval + "\n" + pkc_service + "\n" + pkc_fixture + "\n" + pkc_round, f"PKC L4-005 evidence missing phrase: {phrase}")
 
+    pvaos_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS")
+    pvaos_retrieval = read_external(str(pvaos_root / "docs/harness/evidence/kds-retrieval-PVAOS-L4-006.json"))
+    pvaos_service = read_external(str(pvaos_root / "src/app/services/l4OrganizationPartnerBaselineService.ts"))
+    pvaos_fixture = read_external(str(pvaos_root / "src/app/data/l4OrganizationPartnerBaseline.fixture.json"))
+    pvaos_round = read_external(str(pvaos_root / "docs/harness/loops/loop-round-PVAOS-L4-006.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-006",
+        "PVAOS-L4-006",
+        "Tenant",
+        "Organization",
+        "Partner",
+        "ProjectSpace",
+        "PermissionBoundary",
+        "96/100",
+        "项目群阶段累计评分 | 55/100",
+        "GPC-L4-007",
+    ]:
+        require(phrase in round_record_l4_006 + "\n" + evidence, f"L4-006 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"PVAOS-L4-006\"",
+        "l4OrganizationPartnerBaseline",
+        "buildOrganizationPartnerBaselineDryRun",
+        "GPC.organization_partner_input",
+        "WAES.permission_boundary_audit",
+        "PVAOS只提供租户/组织/伙伴/项目空间/权限边界输入",
+        "tenants=1 organizations=2 partners=1 project_spaces=1 permission_boundaries=1",
+    ]:
+        require(
+            phrase in pvaos_retrieval + "\n" + pvaos_service + "\n" + pvaos_fixture + "\n" + pvaos_round,
+            f"PVAOS L4-006 evidence missing phrase: {phrase}",
+        )
+
     assessment = {
-        "round_id": "GPCF-L4-005",
+        "round_id": "GPCF-L4-006",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -263,17 +300,18 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 28,
+        "generated_items": 34,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-006",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005"],
-        "project_group_score": 46,
+        "next_round": "L4-007",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006"],
+        "project_group_score": 55,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
             "GPCF-L4-005": 96,
+            "GPCF-L4-006": 96,
         },
         "project_rounds": {
             "MMC": {
@@ -306,12 +344,20 @@ def main() -> int:
                 "score": 96,
                 "accepted_integrated": False,
             },
+            "PVAOS": {
+                "round_id": "PVAOS-L4-006",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "organization_partner_permission_baseline": "pass",
+                "score": 96,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-005 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=46 next=L4-006")
+    print("round=GPCF-L4-006 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=55 next=L4-007")
     return 0
 
 
