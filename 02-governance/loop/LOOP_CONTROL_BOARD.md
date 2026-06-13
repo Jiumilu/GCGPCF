@@ -22,14 +22,14 @@ superseded_by: []
 
 | 字段 | 当前值 |
 |---|---|
-| 当前 Loop 模式 | L4 项目群最小闭环实施 |
-| 可升级模式 | L4 active；L5 可执行但必须强授权启动 |
+| 当前 Loop 模式 | L4 自我纠错与 GFIS 运行层修复 |
+| 可升级模式 | L4 repair active；L5 暂停，必须等 GFIS 运行层证据与 SOP E2E 修复后再评估 |
 | 当前主线项目 | GPCF / WAES / 全项目 |
-| 当前轮次 | `GPCF-L4-012`：项目群最小闭环收口、评分矩阵与 L5 建议 |
-| 当前阶段 | L4 最小闭环项目级实质轮次执行与总控 evidence 回写 |
-| 当前目标 | GPCF 真实仓完成 L4 closure score matrix、GPCF-L4-012 round record、validator 扩展、assessment JSON、KDS 镜像、文档门禁与 L5 preparation 输入 |
+| 当前轮次 | `GPCF-L4-CORR-001`：GFIS 主体错位与 SOP E2E failed 自我纠错 |
+| 当前阶段 | L4 repair；纠正此前 100/100 假阳性，建立自我发现和自我纠偏门禁 |
+| 当前目标 | 在 GPCF 总控仓记录 GFIS Demo 错误主体、SOP E2E failed、L4 降级结论和 GFIS-runtime-repair 下一轮输入 |
 | 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
-| 当前状态判定 | `ready_for_review`，但不得自动升级 accepted/integrated |
+| 当前状态判定 | `repair_required`；此前 `GPCF-L4-012` 的 `100/100` 与 `L4 closed` 结论已失效 |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |
 | L3 session | stopped |
@@ -45,7 +45,7 @@ superseded_by: []
 | continuous generated_items | 68 |
 | continuous batch_generated | false |
 | continuous substance_gate | pass |
-| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002` 完成真实 MMC 策略/测试/validator；`KDS-L4-003` 完成真实 KDS 样品知识索引与 EvidenceBacklink validator；`Brain-L4-004` 完成真实 Brain SOP/案例检索 fixture、typed 检索模块、SearchPanel 接入、validator、lint/build；`PKC-L4-005` 完成真实 PKC Brain 结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator、typecheck/build；`PVAOS-L4-006` 完成真实 PVAOS 组织/伙伴/项目空间/权限边界 fixture、dry-run service、Vitest、validator、module validation、typecheck；`GPC-L4-007` 完成真实 GPC 平台订单/样品申请/客户签样/转量产/POD 契约 fixture、validator、L3 harness validation、JS check；`GFIS-L4-008` 完成真实 GFIS 工厂样品/工厂订单/工单/质量库存批次/设备/发货只读 fixture、validator、quality:repo；`XiaoC-L4-009` 完成真实 XiaoC 任务拆解/模型路由/Agent 编排 dry-run fixture、validator、`pnpm test:repo`；`XGD-L4-010` 完成真实 XGD 风险分析/全局推演/可靠性评估/建议包 dry-run fixture、validator、harness validation、unit tests；`XiaoG-L4-011` 完成真实 XiaoG 只读查询/PKC 通知候选/WAES 审计写入 mock fixture、validator、legacy L3 smoke/test；`GPCF-L4-012` 完成项目群 L4 closure score matrix、assessment JSON、validator、KDS 镜像和文档门禁；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移、设备 OTA 或 accepted/integrated 升级 |
+| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002`、`KDS-L4-003`、`Brain-L4-004`、`PKC-L4-005`、`PVAOS-L4-006`、`GPC-L4-007`、`XiaoC-L4-009`、`XGD-L4-010`、`XiaoG-L4-011` 保持各自 L4 dry-run/mock/read-only evidence；`GFIS-L4-008` 被纠偏为 repair_required，因为其核心 fixture 来自 `gcfis_demo` 且 SOP E2E failed；`GPCF-L4-012` 原 100/100 被 `GPCF-L4-CORR-001` 降级为 78/100 L4 repair；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移、设备 OTA 或 accepted/integrated 升级 |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |
@@ -89,11 +89,11 @@ superseded_by: []
 | 文档污染检查 | pass | `check_document_pollution.py` 最近通过 |
 | KDS 镜像冲突 | pass | `kds_conflict_guard.py` 最近通过 |
 | Loop 运行门禁 | pass | `loop_operational_gates.py` 最近通过 |
-| GFIS 质量门禁 | pass | `npm run quality:repo` 已纳入 LR-060 second-session validator 并通过；GPCF governance/project-readiness validators 已通过 |
+| GFIS 质量门禁 | blocked | GFIS `test-results/.last-run.json` 为 `status=failed`；SOP E2E 未通过前不得以 Demo 或局部 validator 代替运行层验收 |
 | XiaoC L4 门禁 | pass | `node scripts/validate_xiaoc_l4_agent_orchestration.mjs`、`node scripts/validate_xiaoc_loop_harness.mjs`、`pnpm test:repo`、`git diff --check -- .` 均通过 |
 | XGD L4 门禁 | pass | `node scripts/validate_xgd_l4_risk_analysis.mjs`、`npm run harness:validate`、`npm test`、`git diff --check -- .` 均通过 |
 | XiaoG L4 门禁 | pass | `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py`、legacy L3 validators/smoke/test、`git diff --check -- .` 均通过 |
-| GPCF L4 收口门禁 | pass | `validate_l4_minimum_closed_loop.py`、document gates、KDS conflict/token、continuous substance、`git diff --check -- .` 均通过 |
+| GPCF L4 收口门禁 | repair_required | `validate_loop_self_correction_gate.py` 与 `validate_l4_minimum_closed_loop.py` 必须输出 78/100 repair，直到 GFIS 运行层证据和 SOP E2E 修复 |
 | KDS TOKEN 检查 | pass | `kds_token=pass fingerprint=bfd9553d`；私有 env 不入库 |
 
 ## 当前待确认项
@@ -142,7 +142,7 @@ superseded_by: []
 | XiaoC L4 任务拆解与模型路由 dry-run | 已完成 | `XiaoC-L4-009` 在真实 XiaoC 项目仓落地 TaskBreakdown、ModelRoute、AgentDispatchPlan、AgentResultAggregation fixture、KDS retrieval、validator、loop record；计为第 9 个 L4 实质轮次；95/100；未真实模型调用、未 XiaoG runtime、未 WAES API 写入、未升级 accepted/integrated |
 | XGD L4 重分析与风险建议 dry-run | 已完成 | `XGD-L4-010` 在真实 XGD 项目仓落地 RiskAnalysis、BottleneckProjection、ReliabilityAssessment、RecommendationPacket fixture、KDS retrieval、validator、loop record；计为第 10 个 L4 实质轮次；95/100；未 live LLM、未桌面运行态、未 WAES API、未升级 accepted/integrated |
 | XiaoG L4 只读查询与审计 mock | 已完成 | `XiaoG-L4-011` 在真实 XiaoG 项目仓落地 ReadOnlyQueryResult、PkcNotificationCandidate、WaesAuditWriteMock、ExecutionTrace fixture、KDS retrieval、validator、loop record；计为第 11 个 L4 实质轮次；95/100；未 live API、未设备 OTA、未 Docker、未生产写入、未升级 accepted/integrated |
-| GPCF L4 项目群收口 | 已完成 | `GPCF-L4-012` 在真实 GPCF 仓落地 closure score matrix、round record、assessment JSON、validator、KDS 镜像和文档门禁；计为第 12 个 L4 实质轮次；100/100；L4 closed；未生产写入、未真实外部 API、未设备 OTA、未部署、未升级 accepted/integrated |
+| GPCF L4 项目群收口 | 已纠偏为修复态 | `GPCF-L4-012` 原 100/100 与 L4 closed 结论失效；`GPCF-L4-CORR-001` 记录 GFIS Demo 主体错位、SOP E2E failed 和 78/100 repair；未生产写入、未真实外部 API、未设备 OTA、未部署、未升级 accepted/integrated |
 
 ## 下一轮候选任务队列
 
@@ -153,6 +153,7 @@ superseded_by: []
 | P1 | 后续授权 | 各项目真实项目仓、运行态验证、GPC 一期蓝图、WAES 门禁语义、accepted/integrated 升级 | 需要人工确认或更高授权，L3 不自动改主结论 |
 | P1 | WAES-LR-001 | 先解决 WAES 分支绑定，再落地真实 WAES harness、validator 和 evidence | 不生产写入、不部署、不越权裁决 |
 | P1 | L5-preparation | 起草 L5 强授权包：客户/UAT 样本、live read API、WAES runtime endpoint、监控、回滚和验收指标 | 只起草授权包；不生产写入、不真实外部 API、不升级 accepted/integrated |
+| P0 | GFIS-runtime-repair | 以 GFIS 运行层替换 Demo 主体证据，修复 SOP E2E，补齐运行态 DocType/工作流/API/evidence validator | 保护 GFIS dirty 工作区；不生产写入、不 bench migrate、不部署、不升级 accepted/integrated |
 
 ## 最近 evidence 链接
 

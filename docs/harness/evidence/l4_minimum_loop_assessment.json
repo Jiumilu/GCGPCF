@@ -1,6 +1,6 @@
 {
   "round_id": "GPCF-L4-012",
-  "gate": "pass",
+  "gate": "blocked",
   "projects": [
     "GFIS",
     "GPC",
@@ -39,8 +39,8 @@
   "generated_items": 68,
   "batch_generated": false,
   "substance_gate": "pass",
-  "status": "l4_closed",
-  "next_round": "L5-preparation",
+  "status": "l4_repair",
+  "next_round": "GFIS-runtime-repair",
   "completed_rounds": [
     "GPCF-L4-001",
     "GPCF-L4-002",
@@ -55,10 +55,27 @@
     "GPCF-L4-011",
     "GPCF-L4-012"
   ],
-  "project_group_score": 100,
+  "project_group_score": 78,
+  "self_correction": {
+    "round_id": "GPCF-L4-CORR-001",
+    "previous_l4_score_invalidated": true,
+    "gfis_runtime_subject": "blocked",
+    "gfis_demo_counted_as_runtime_evidence": true,
+    "gfis_sop_e2e_status": "failed",
+    "gfis_sop_e2e_failed_tests": [
+      "6cbc8669dd6a13236675-7545f12396439abbb250",
+      "6cbc8669dd6a13236675-f75b69fbef3bb5ee3dcc",
+      "6cbc8669dd6a13236675-25263866b8913132f574",
+      "99dc9f1091847a144f12-cacee9cdea96cb1a45e5",
+      "6cbc8669dd6a13236675-843973d3c5d6aa1d8ca3",
+      "6cbc8669dd6a13236675-185f98a70e4b987dbadb",
+      "6cbc8669dd6a13236675-965b0b1031e9c9fb7077",
+      "99dc9f1091847a144f12-cb76eb6d4093122f2eda"
+    ]
+  },
   "l4_closure": {
-    "score": 100,
-    "status": "L4 closed",
+    "score": 78,
+    "status": "L4 repair required",
     "accepted_integrated": false,
     "l5_activated": false,
     "production_write": false,
@@ -127,10 +144,11 @@
     },
     "GFIS": {
       "round_id": "GFIS-L4-008",
-      "status": "ready_for_review",
+      "status": "repair_required",
       "kds_retrieval": "completed",
-      "factory_sample_order_readonly": "pass",
-      "score": 96,
+      "factory_sample_order_readonly": "invalid_as_runtime_subject",
+      "sop_e2e": "failed",
+      "score": 62,
       "accepted_integrated": false
     },
     "XiaoC": {
@@ -159,9 +177,9 @@
     },
     "GPCF": {
       "round_id": "GPCF-L4-012",
-      "status": "ready_for_review",
-      "closure_score_matrix": "pass",
-      "score": 100,
+      "status": "repair_required",
+      "closure_score_matrix": "invalidated_by_self_correction",
+      "score": 78,
       "accepted_integrated": false
     }
   }

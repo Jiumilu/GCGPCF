@@ -77,6 +77,12 @@ def read_external(path_text: str) -> str:
     return path.read_text(encoding="utf-8", errors="ignore")
 
 
+def load_json_if_exists(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def main() -> int:
     texts = {relative_path: read(relative_path) for relative_path in REQUIRED_FILES}
     control = texts["docs/harness/minimum-closed-loop/control-plane.md"]
@@ -343,6 +349,14 @@ def main() -> int:
     gfis_fixture = read_external(str(gfis_root / "gcfis_demo/field_samples/gfis_l4_factory_sample_order_readonly.json"))
     gfis_validator = read_external(str(gfis_root / "scripts/validate_gfis_l4_factory_sample_order_readonly.py"))
     gfis_round = read_external(str(gfis_root / "docs/harness/loops/loop-round-GFIS-L4-008.md"))
+    gfis_last_run = load_json_if_exists(gfis_root / "test-results/.last-run.json")
+    gfis_demo_counted_as_runtime = (
+        "gcfis_demo/field_samples/gfis_l4_factory_sample_order_readonly.json"
+        in "\n".join([evidence, gfis_retrieval, gfis_round])
+    )
+    gfis_sop_e2e_status = gfis_last_run.get("status", "unknown")
+    gfis_sop_e2e_failed = gfis_sop_e2e_status == "failed"
+    self_correction_blocked = gfis_demo_counted_as_runtime or gfis_sop_e2e_failed
 
     for phrase in [
         "Round ID | GPCF-L4-008",
@@ -489,7 +503,8 @@ def main() -> int:
         "Evidence and audit completeness",
         "Cross-project contract consistency",
         "User reproducibility and L5 readiness",
-        "Total | 100 | 100/100",
+        "Total | 100 | 78/100",
+        "GFIS runtime repair required",
         "No project is marked accepted",
         "No production write occurred",
         "L5 remains a separate",
@@ -501,7 +516,7 @@ def main() -> int:
 
     assessment = {
         "round_id": "GPCF-L4-012",
-        "gate": "pass",
+        "gate": "blocked" if self_correction_blocked else "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
         "sample_gate": {
@@ -515,13 +530,21 @@ def main() -> int:
         "generated_items": 68,
         "batch_generated": False,
         "substance_gate": "pass",
-        "status": "l4_closed",
-        "next_round": "L5-preparation",
+        "status": "l4_repair" if self_correction_blocked else "l4_closed",
+        "next_round": "GFIS-runtime-repair" if self_correction_blocked else "L5-preparation",
         "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010", "GPCF-L4-011", "GPCF-L4-012"],
-        "project_group_score": 100,
+        "project_group_score": 78 if self_correction_blocked else 100,
+        "self_correction": {
+            "round_id": "GPCF-L4-CORR-001",
+            "previous_l4_score_invalidated": self_correction_blocked,
+            "gfis_runtime_subject": "blocked" if gfis_demo_counted_as_runtime else "pass",
+            "gfis_demo_counted_as_runtime_evidence": gfis_demo_counted_as_runtime,
+            "gfis_sop_e2e_status": gfis_sop_e2e_status,
+            "gfis_sop_e2e_failed_tests": gfis_last_run.get("failedTests", []),
+        },
         "l4_closure": {
-            "score": 100,
-            "status": "L4 closed",
+            "score": 78 if self_correction_blocked else 100,
+            "status": "L4 repair required" if self_correction_blocked else "L4 closed",
             "accepted_integrated": False,
             "l5_activated": False,
             "production_write": False,
@@ -590,10 +613,11 @@ def main() -> int:
             },
             "GFIS": {
                 "round_id": "GFIS-L4-008",
-                "status": "ready_for_review",
+                "status": "repair_required" if self_correction_blocked else "ready_for_review",
                 "kds_retrieval": "completed",
-                "factory_sample_order_readonly": "pass",
-                "score": 96,
+                "factory_sample_order_readonly": "invalid_as_runtime_subject" if gfis_demo_counted_as_runtime else "pass",
+                "sop_e2e": gfis_sop_e2e_status,
+                "score": 62 if self_correction_blocked else 96,
                 "accepted_integrated": False,
             },
             "XiaoC": {
@@ -622,17 +646,24 @@ def main() -> int:
             },
             "GPCF": {
                 "round_id": "GPCF-L4-012",
-                "status": "ready_for_review",
-                "closure_score_matrix": "pass",
-                "score": 100,
+                "status": "repair_required" if self_correction_blocked else "ready_for_review",
+                "closure_score_matrix": "invalidated_by_self_correction" if self_correction_blocked else "pass",
+                "score": 78 if self_correction_blocked else 100,
                 "accepted_integrated": False,
             },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-012 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=100 next=L5-preparation")
+    print(f"l4_minimum_closed_loop={'repair' if self_correction_blocked else 'pass'}")
+    print(
+        "round=GPCF-L4-012 projects=12 core_objects=11 sample_gate=blocked "
+        "resource_gate=blocked "
+        f"gfis_runtime_subject={'blocked' if gfis_demo_counted_as_runtime else 'pass'} "
+        f"sop_e2e={gfis_sop_e2e_status} "
+        f"project_group_score={78 if self_correction_blocked else 100} "
+        f"next={'GFIS-runtime-repair' if self_correction_blocked else 'L5-preparation'}"
+    )
     return 0
 
 

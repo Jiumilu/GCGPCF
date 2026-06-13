@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 76 |
-| loop.current_step | l4_project_group_minimum_closed_loop_closure |
-| loop.last_entry | `GPCF-L4-012`：项目群最小闭环收口、评分矩阵与 L5 建议 |
-| loop.last_exit | GPCF 真实仓完成 L4 closure score matrix、GPCF-L4-012 round record、validator 扩展、assessment JSON、KDS 镜像和文档门禁收口 |
-| loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Docker 部署、L5 客户/UAT/运行态验证仍需单独授权 |
-| loop.next_target | L5 preparation authorization package, only after explicit user authorization |
+| loop.round | 77 |
+| loop.current_step | l4_self_correction_gfis_runtime_subject_sop_e2e_blocker |
+| loop.last_entry | `GPCF-L4-CORR-001`：GFIS 主体错位与 SOP E2E failed 自我纠错 |
+| loop.last_exit | 新增 self-correction gate，降级 GPCF-L4-012 100/100 结论，明确 GFIS-L4-008 需运行层修复 |
+| loop.gate_result | repair_required |
+| loop.blockers | GFIS Demo 被错误计为运行层证据；GFIS SOP E2E last-run failed；GFIS 仓当前 dirty，需保护用户已有工作 |
+| loop.next_target | GFIS-runtime-repair：以 GFIS 运行层 DocType、工作流、权限、报表、附件、运行态 API 和 SOP E2E pass 重建证据 |
 
 ## 循环历史
 
@@ -112,7 +112,8 @@ superseded_by: []
 | 73 | GPCF-L4-009 | 2026-06-13 | XiaoC 真实仓任务拆解、模型路由与 Agent 编排 dry-run evidence 接收 | GPCF L4-009 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XiaoC-L4-009 计为 L4 实质轮；95/100；`node scripts/validate_xiaoc_l4_agent_orchestration.mjs` pass，`pnpm test:repo` pass；未真实模型调用、未 XiaoG runtime、未 WAES API 写入、未升级 accepted/integrated |
 | 74 | GPCF-L4-010 | 2026-06-13 | XGD 真实仓重分析、全局推演与风险建议 dry-run evidence 接收 | GPCF L4-010 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XGD-L4-010 计为 L4 实质轮；95/100；`node scripts/validate_xgd_l4_risk_analysis.mjs` pass，`npm run harness:validate` pass，`npm test` pass；未 live LLM、未桌面运行态、未 WAES API、未升级 accepted/integrated |
 | 75 | GPCF-L4-011 | 2026-06-13 | XiaoG 真实仓只读查询、PKC 通知候选和 WAES 审计写入 mock evidence 接收 | GPCF L4-011 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XiaoG-L4-011 计为 L4 实质轮；95/100；`python3 scripts/validate_xiaog_l4_readonly_audit_mock.py` pass，legacy L3 validators/smoke/test pass；未 live API、未设备 OTA、未 Docker、未生产写入、未升级 accepted/integrated |
-| 76 | GPCF-L4-012 | 2026-06-13 | 项目群最小闭环收口、评分矩阵与 L5 建议 | GPCF closure score matrix、round record、validator、assessment JSON、KDS 镜像和文档门禁 | ready_for_review | 100% | GPCF-L4-012 计为 L4 实质轮；100/100；L4 closed；未生产写入、未真实外部 API、未设备 OTA、未部署、未升级 accepted/integrated |
+| 76 | GPCF-L4-012 | 2026-06-13 | 项目群最小闭环收口、评分矩阵与 L5 建议 | GPCF closure score matrix、round record、validator、assessment JSON、KDS 镜像和文档门禁 | invalidated_by_self_correction | 78% | 原 100/100 与 L4 closed 结论被 GPCF-L4-CORR-001 纠偏；GFIS 运行层主体和 SOP E2E 未通过前不得恢复完成态 |
+| 77 | GPCF-L4-CORR-001 | 2026-06-14 | 用户指出 GFIS Demo 主体错位与 SOP E2E failed | self-correction round、validator、assessment JSON、evidence index 与 closure matrix 降级 | repair_required | 78% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=3；batch_generated=false；substance_gate=pass；stop_type=hard_stop |
 
 ## 状态约束
 
@@ -121,3 +122,5 @@ superseded_by: []
 - 提交推送后全项目 Git 门禁为 `pass`；本轮总控校准变更需再次验证后提交。
 - 后续项目状态升级必须引用 `09-status/globalcloud-l3-admission-matrix.md` 与 `docs/harness/evidence/l3_admission_assessment.json` 的量化结论。
 - 连续运行轮次数必须以 `substantive_rounds` 为准，批量生成文件不得折算为多轮。
+- GFIS 运行层必须作为 SOP、E2E、UAT 与业务验收主体；GFIS Demo 只能用于展示、培训、追溯说明和前端回归。
+- 出现主体错位、E2E failed 或 evidence 与真实系统冲突时，Loop 必须自动降级到 `repair_required`，不得继续维持 `L4 closed` 或 `100/100`。

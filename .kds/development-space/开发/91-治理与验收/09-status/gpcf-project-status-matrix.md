@@ -18,15 +18,15 @@ superseded_by: []
 
 # GPCF Project Status Matrix
 
-日期：2026-06-13
-状态：v1.69 — 全项目提交推送后 L3 准入矩阵已校准
+日期：2026-06-14
+状态：v1.70 — GFIS 运行层主体与 SOP E2E 自我纠错，L4 从 closed 降级为 repair
 用途：GPCF 总控（小即）跨项目收口的唯一入口。每次中循环审计后更新。
 
 ## 项目群状态总表
 
 | # | 项目 | 代号 | 主线定位 | 牵头智能体 | Manifest | loop-state | 微循环轮次 | evidence完整率 | 当前状态 | 阻塞项 | Harness判定 | 下一步 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | GlobalCloud GFIS | GF | 工厂执行系统 / 工厂事实主账 | 厂行 | 是 | 是 | 60 | 99% | partial | 现场真实样本尚未提交；业务 UAT 尚未由工厂/生产/质量/仓储/GPC/WAES 角色签收；生产环境确认和外部联调仍缺；`127.0.0.1:8080` 被本机 Python/uvicorn 占用；迁移窗口未授权；所有 received/signed/confirmed 均为 false；第二轮 L3 本次 15/15 已用尽 | partial | 需要真实样本、UAT 签收、WAES/GPC/Finance 确认或用户授权新 L3/L4；仍不执行 `bench migrate`、schema sync、写 API 或外部联调 |
+| 1 | GlobalCloud GFIS | GF | 工厂执行系统 / 工厂事实主账 | 厂行 | 是 | 是 | 60 | 78% | repair_required | GFIS Demo 曾被错误计为运行层证据；正确主体必须是 GFIS 运行层；SOP E2E last-run 为 failed；现场真实样本、业务 UAT、生产环境确认、外部联调和迁移窗口仍未授权；GFIS 仓当前 dirty，需保护用户已有工作 | repair_required | 下一步优先做 GFIS-runtime-repair：以 DocType、工作流、权限、报表、附件、运行态 API 和 SOP E2E pass 重建证据；仍不执行 `bench migrate`、schema sync、生产写 API 或外部联调 |
 | 2 | GlobalCloud GPC | GP | 绿色供应链公共服务平台本体 | 链同 | 是 | 是 | 3 | 70% | ready_for_review | 真实 GPC main 分支已落地最小 L3 harness、Manifest 命名纠偏、validator 和 JS check evidence；提交 `454cc42` 已推送；当前机器评分 97/L3 Ready；自我进化、GPC/GFIS adapter dry-run、可用性/客户满意仍可深化 | L3 Ready | 下一步可补 GPC 自我进化 checklist 或 GPC/GFIS adapter dry-run |
 | 3 | GlobalCloud PVAOS | PV | 平台运营与门户底座 | 链同 | 是 | 是 | 3 | 70% | ready_for_review | 真实 PVAOS D4 分支已落地最小 L3 harness、Manifest、validator 和 module validation evidence；提交 `54fcc76` 已推送；当前机器评分 100/L3 Ready | L3 Ready | 下一步可补 PVAOS usability/customer evidence 或 WAES/GPC dependency dry-run |
 | 4 | GlobalCloud WAES | WA | 治理 / 证据 / 状态门控 / AI 越权控制 | 宪衡 | 是 | 是 | 3 | 70% | ready_for_review | 真实 WAES integration-release 分支已落地最小 L3 harness、Manifest、validator、evidence 和 Vitest localStorage 测试环境；提交 `01ac4ab` 已推送；`npm test` 33 files / 135 tests 通过；当前机器评分 100/L3 Ready | L3 Ready | 下一步可补 WAES governance decision dry-run 或 usability/customer evidence |
@@ -37,7 +37,7 @@ superseded_by: []
 | 9 | GlobalCloud XGD | XD | 大象：长程 Agent、重分析、多端交互和复杂任务承载 | 灵策 | 基础 | 是 | 3 | 85% | ready_for_review | 真实 XGD 项目仓已确认；最小 Loop 文档体系、结构化 L3 任务队列、自我进化 checklist、`harness:validate` 和 validator 覆盖已落地；提交 `840b70f0` 已推送；当前机器评分 100/L3 Ready；TICK loop dry-run、Brain UI/ACUI、voice/social mock 可继续深化 | L3 Ready | 下一步可推进 XGD bounded TICK loop dry-run 或 Brain UI/ACUI smoke |
 | 10 | GlobalCloud XiaoG | XG | 轻量执行入口 / 蚂蚁 | 接稳 | 基础 | 是 | 6 | 90% | ready_for_review | 真实 XiaoG 项目仓已确认；bootstrap、风险回滚、结构化 L3 队列、自我进化、GFIS/WAES trigger dry-run 和 dashboard/voice usability smoke 已落地；提交 `a6494b33` 已推送；当前机器评分 97/L3 Ready；Docker 部署、设备 OTA、真实设备验证和外部 API 均未授权 | L3 Ready | 下一步可推进真实浏览器/设备只读验证，需专项授权 |
 | 11 | GlobalCloud MMC | MM | 管理配置中心 / 治理模板基线 | 宪衡 | 是 | 是 | 6 | 95% | ready_for_review | MMC 已新增 L3 admission validator、dependency dry-run、self-evolution checklist、next L3 queue 和 commit-readiness validator；30 项 runtime tests、OpenAPI contract、全部本地 validator 通过；当前机器评分 100/L3 Ready | L3 Ready | 下一步可推进治理模板复用 smoke 或下游项目 contract dry-run |
-| 12 | GlobalCoud GPCF | CF | 体系文档工作区 / 总控治理仓 | 小即 | 是 | 是 | 66 | 98% | ready_for_review | GPCF 作为治理中枢单独判定；提交 `3c578ec` 已推送；post-push 评分复核显示 11 个业务项目均为 L3 Ready，GPCF 为 79/governance_hub；生产写入、真实外部 API、数据库迁移、权限变更、部署和 accepted/integrated 均未授权 | governance_hub | 下一步按真实项目仓选择单一最小闭环继续深化，或提交本轮总控校准 |
+| 12 | GlobalCoud GPCF | CF | 体系文档工作区 / 总控治理仓 | 小即 | 是 | 是 | 67 | 78% | repair_required | GPCF 作为治理中枢触发自我纠错；`GPCF-L4-012` 100/100 与 L4 closed 结论失效；新增 self-correction gate 后项目群评分为 78/100；生产写入、真实外部 API、数据库迁移、权限变更、部署和 accepted/integrated 均未授权 | repair_required | 下一步以 GFIS 运行层修复为主线，待 SOP E2E pass 后再复核 L4 |
 
 ## 状态分布统计
 
@@ -51,8 +51,9 @@ superseded_by: []
 | harness_review | 0 | - |
 | accepted | 0 | - |
 | integrated | 0 | - |
-| ready_for_review | 11 | GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
-| partial | 1 | GFIS |
+| ready_for_review | 10 | GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC |
+| partial | 0 | - |
+| repair_required | 2 | GFIS、GPCF |
 | blocked | 0 | - |
 
 ## 试点项目专项跟踪
@@ -141,3 +142,4 @@ superseded_by: []
 | 2026-06-13 | v1.67：完成 `XiaoG-LR-002`，在真实 XiaoG 项目仓新增结构化 L3 任务队列、风险回滚 runbook、自我进化 checklist、LR-002 round record、`.gitignore` 精确白名单和 operational-control validator；operational controls validator、bootstrap validator、bootstrap smoke、diff check 通过；XiaoG 评分从 85 提升到 94/L3 Conditional，未 Docker 部署、未设备 OTA、未真实外部 API、未提交/推送、未升级 accepted/integrated |
 | 2026-06-13 | v1.68：完成 `XiaoG-LR-003`，在真实 XiaoG 项目仓新增 `dry_run_xiaog_gfis_waes_triggers.py`，用本地 fixture 验证 GFIS suggestion payload 与 WAES ready_for_review gate request；dry-run validator、operational controls validator、bootstrap validator、bootstrap smoke、diff check 通过；XiaoG 维持 94/L3 Conditional，未 Docker 部署、未设备 OTA、未真实外部 API、未提交/推送、未升级 accepted/integrated |
 | 2026-06-13 | v1.69：完成全项目提交推送后 L3 准入矩阵校准；XGD `840b70f0`、XiaoG `a6494b33`、GPCF `3c578ec` 已推送；重新评分显示 GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC 均为 L3 Ready，GPCF 保持 governance_hub；未升级 accepted/integrated |
+| 2026-06-14 | v1.70：用户指出 GFIS Demo 主体错位与 SOP E2E failed 后，GPCF 触发自我纠错；`GFIS-L4-008` 降为 repair_required，`GPCF-L4-012` 100/100/L4 closed 结论失效，项目群评分降为 78/100；新增 `validate_loop_self_correction_gate.py` 防止同类假阳性 |

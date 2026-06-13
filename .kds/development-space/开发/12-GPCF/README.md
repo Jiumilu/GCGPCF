@@ -96,6 +96,7 @@
 | GPCF-DOC-0A0AAD3643 | GPCF-L4-010 XGD Risk Analysis Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-010.md | controlled |
 | GPCF-DOC-968C435FFF | GPCF-L4-011 XiaoG Execution Terminal Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-011.md | controlled |
 | GPCF-DOC-ECA1059D68 | GPCF-L4-012 Minimum Closed Loop Closure | docs/harness/loops/loop-round-GPCF-L4-012.md | controlled |
+| GPCF-DOC-F03D128E75 | GPCF-L4-CORR-001 Loop Self Correction | docs/harness/loops/loop-round-GPCF-L4-CORR-001.md | controlled |
 | GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | controlled |
 | GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | draft |
 | GPCF-DOC-18A2F48E80 | Session Authentication | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |

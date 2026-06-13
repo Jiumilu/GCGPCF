@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 150 | 103 | 已建空间 |
+| GPCF | 12-GPCF | 151 | 104 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -536,9 +536,10 @@ superseded_by: []
 | GPCF-DOC-0A0AAD3643 | GPCF-L4-010 XGD Risk Analysis Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-010.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-010.md |
 | GPCF-DOC-968C435FFF | GPCF-L4-011 XiaoG Execution Terminal Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-011.md | GPCF | GFIS, GPC, WAES, KDS, PKC, XiaoC, XGD, XiaoG, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-011.md |
 | GPCF-DOC-ECA1059D68 | GPCF-L4-012 Minimum Closed Loop Closure | docs/harness/loops/loop-round-GPCF-L4-012.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-012.md |
+| GPCF-DOC-F03D128E75 | GPCF-L4-CORR-001 Loop Self Correction | docs/harness/loops/loop-round-GPCF-L4-CORR-001.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-CORR-001.md |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
 | GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |
-| GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, KDS, Brain, PKC, XiaoC, XGD, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |
+| GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, KDS, Brain, PKC, XiaoC, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |
 | GPCF-DOC-6913FD52DB | L4 Minimum Closed Loop Closure Score Matrix | docs/harness/minimum-closed-loop/l4-closure-score-matrix.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/l4-closure-score-matrix.md |
 | GPCF-DOC-3F160ABA27 | L4 Minimum Closed Loop Object Contracts | docs/harness/minimum-closed-loop/object-contracts.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/object-contracts.md |
 | GPCF-DOC-9096ABA44D | L4 Project Role Verification Matrix | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md |

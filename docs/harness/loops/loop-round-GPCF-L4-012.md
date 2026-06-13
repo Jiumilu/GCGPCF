@@ -18,6 +18,10 @@ superseded_by: []
 
 # GPCF-L4-012 Minimum Closed Loop Closure
 
+## Correction Notice
+
+2026-06-14 自我纠错：本轮原 `100/100`、`L4 closed` 与 `next=L5-preparation` 结论失效。GFIS 证据错误使用 `gcfis_demo` 作为工厂运行事实主体；正确主体应为 GFIS 运行层。GFIS SOP E2E last-run 当前为 `failed`。后续以 `GPCF-L4-CORR-001`、`docs/harness/evidence/loop_self_correction_assessment.json` 和修订后的 `validate_l4_minimum_closed_loop.py` 为准。
+
 ## Round Output
 
 | 字段 | 值 |
