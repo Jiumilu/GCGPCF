@@ -1,5 +1,5 @@
 {
-  "round_id": "GPCF-L4-009",
+  "round_id": "GPCF-L4-010",
   "gate": "pass",
   "projects": [
     "GFIS",
@@ -36,11 +36,11 @@
       "WAES.gate == 'confirmed'"
     ]
   },
-  "generated_items": 52,
+  "generated_items": 58,
   "batch_generated": false,
   "substance_gate": "pass",
   "status": "partial",
-  "next_round": "L4-010",
+  "next_round": "L4-011",
   "completed_rounds": [
     "GPCF-L4-001",
     "GPCF-L4-002",
@@ -50,9 +50,10 @@
     "GPCF-L4-006",
     "GPCF-L4-007",
     "GPCF-L4-008",
-    "GPCF-L4-009"
+    "GPCF-L4-009",
+    "GPCF-L4-010"
   ],
-  "project_group_score": 81,
+  "project_group_score": 88,
   "l4_round_scores": {
     "GPCF-L4-003": 96,
     "GPCF-L4-004": 92,
@@ -60,7 +61,8 @@
     "GPCF-L4-006": 96,
     "GPCF-L4-007": 96,
     "GPCF-L4-008": 96,
-    "GPCF-L4-009": 95
+    "GPCF-L4-009": 95,
+    "GPCF-L4-010": 95
   },
   "project_rounds": {
     "MMC": {
@@ -122,6 +124,14 @@
       "status": "ready_for_review",
       "kds_retrieval": "completed",
       "agent_orchestration_dry_run": "pass",
+      "score": 95,
+      "accepted_integrated": false
+    },
+    "XGD": {
+      "round_id": "XGD-L4-010",
+      "status": "ready_for_review",
+      "kds_retrieval": "completed",
+      "risk_analysis_dry_run": "pass",
       "score": 95,
       "accepted_integrated": false
     }

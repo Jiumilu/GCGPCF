@@ -25,9 +25,9 @@ superseded_by: []
 | 当前 Loop 模式 | L4 项目群最小闭环实施 |
 | 可升级模式 | L4 active；L5 可执行但必须强授权启动 |
 | 当前主线项目 | XiaoC / XGD / XiaoG / WAES / GPCF |
-| 当前轮次 | `GPCF-L4-009` / `XiaoC-L4-009`：任务拆解、模型路由与 Agent 编排 dry-run |
+| 当前轮次 | `GPCF-L4-010` / `XGD-L4-010`：重分析、全局推演与风险建议 dry-run |
 | 当前阶段 | L4 最小闭环项目级实质轮次执行与总控 evidence 回写 |
-| 当前目标 | XiaoC 真实仓完成 KDS 检索、TaskBreakdown/ModelRoute/AgentDispatchPlan/AgentResultAggregation dry-run fixture、validator、`pnpm test:repo` 与项目群 evidence 回写 |
+| 当前目标 | XGD 真实仓完成 KDS 检索、RiskAnalysis/BottleneckProjection/ReliabilityAssessment/RecommendationPacket dry-run fixture、validator、harness validation、unit tests 与项目群 evidence 回写 |
 | 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
 | 当前状态判定 | `ready_for_review`，但不得自动升级 accepted/integrated |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
@@ -40,12 +40,12 @@ superseded_by: []
 | L3 stop_evidence | 全项目提交推送后重新运行 `python3 tools/kds-sync/assess_l3_admission.py`，11 个业务项目均为 L3 Ready；GPCF 保持 governance_hub；所有仓库 `git status --short --branch` clean/up-to-date；本轮只做总控证据校准，不执行生产写入、权限变更、部署、真实外部 API、Docker 部署、设备 OTA 或 accepted/integrated 升级 |
 | L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
 | 连续运行真实性门禁 | pass |
-| continuous declared_rounds | 9/30 |
-| continuous substantive_rounds | 9/30 |
-| continuous generated_items | 52 |
+| continuous declared_rounds | 10/30 |
+| continuous substantive_rounds | 10/30 |
+| continuous generated_items | 58 |
 | continuous batch_generated | false |
 | continuous substance_gate | pass |
-| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002` 完成真实 MMC 策略/测试/validator；`KDS-L4-003` 完成真实 KDS 样品知识索引与 EvidenceBacklink validator；`Brain-L4-004` 完成真实 Brain SOP/案例检索 fixture、typed 检索模块、SearchPanel 接入、validator、lint/build；`PKC-L4-005` 完成真实 PKC Brain 结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator、typecheck/build；`PVAOS-L4-006` 完成真实 PVAOS 组织/伙伴/项目空间/权限边界 fixture、dry-run service、Vitest、validator、module validation、typecheck；`GPC-L4-007` 完成真实 GPC 平台订单/样品申请/客户签样/转量产/POD 契约 fixture、validator、L3 harness validation、JS check；`GFIS-L4-008` 完成真实 GFIS 工厂样品/工厂订单/工单/质量库存批次/设备/发货只读 fixture、validator、quality:repo；`XiaoC-L4-009` 完成真实 XiaoC 任务拆解/模型路由/Agent 编排 dry-run fixture、validator、`pnpm test:repo`；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移或 accepted/integrated 升级 |
+| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002` 完成真实 MMC 策略/测试/validator；`KDS-L4-003` 完成真实 KDS 样品知识索引与 EvidenceBacklink validator；`Brain-L4-004` 完成真实 Brain SOP/案例检索 fixture、typed 检索模块、SearchPanel 接入、validator、lint/build；`PKC-L4-005` 完成真实 PKC Brain 结果接收 fixture、PersonalTask/Notification/TodoState service、Vitest、validator、typecheck/build；`PVAOS-L4-006` 完成真实 PVAOS 组织/伙伴/项目空间/权限边界 fixture、dry-run service、Vitest、validator、module validation、typecheck；`GPC-L4-007` 完成真实 GPC 平台订单/样品申请/客户签样/转量产/POD 契约 fixture、validator、L3 harness validation、JS check；`GFIS-L4-008` 完成真实 GFIS 工厂样品/工厂订单/工单/质量库存批次/设备/发货只读 fixture、validator、quality:repo；`XiaoC-L4-009` 完成真实 XiaoC 任务拆解/模型路由/Agent 编排 dry-run fixture、validator、`pnpm test:repo`；`XGD-L4-010` 完成真实 XGD 风险分析/全局推演/可靠性评估/建议包 dry-run fixture、validator、harness validation、unit tests；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移或 accepted/integrated 升级 |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |
@@ -91,6 +91,7 @@ superseded_by: []
 | Loop 运行门禁 | pass | `loop_operational_gates.py` 最近通过 |
 | GFIS 质量门禁 | pass | `npm run quality:repo` 已纳入 LR-060 second-session validator 并通过；GPCF governance/project-readiness validators 已通过 |
 | XiaoC L4 门禁 | pass | `node scripts/validate_xiaoc_l4_agent_orchestration.mjs`、`node scripts/validate_xiaoc_loop_harness.mjs`、`pnpm test:repo`、`git diff --check -- .` 均通过 |
+| XGD L4 门禁 | pass | `node scripts/validate_xgd_l4_risk_analysis.mjs`、`npm run harness:validate`、`npm test`、`git diff --check -- .` 均通过 |
 | KDS TOKEN 检查 | pass | `kds_token=pass fingerprint=bfd9553d`；私有 env 不入库 |
 
 ## 当前待确认项
@@ -137,6 +138,7 @@ superseded_by: []
 | WAES integration-release L3 harness bootstrap | 已完成 | `WAES-LR-001` 在真实 WAES integration-release 分支补齐 Manifest、docs/harness、loop-state、evidence-index、round record、任务元数据、validator 和 Vitest localStorage 测试环境；已提交推送，当前评分 100/L3 Ready |
 | GPC main L3 harness bootstrap | 已完成 | `GPC-LR-001` 在真实 GPC main 分支补齐 Manifest 命名纠偏、docs/harness、loop-state、evidence-index、round record、任务元数据和 validator；已提交推送，当前评分 97/L3 Ready |
 | XiaoC L4 任务拆解与模型路由 dry-run | 已完成 | `XiaoC-L4-009` 在真实 XiaoC 项目仓落地 TaskBreakdown、ModelRoute、AgentDispatchPlan、AgentResultAggregation fixture、KDS retrieval、validator、loop record；计为第 9 个 L4 实质轮次；95/100；未真实模型调用、未 XiaoG runtime、未 WAES API 写入、未升级 accepted/integrated |
+| XGD L4 重分析与风险建议 dry-run | 已完成 | `XGD-L4-010` 在真实 XGD 项目仓落地 RiskAnalysis、BottleneckProjection、ReliabilityAssessment、RecommendationPacket fixture、KDS retrieval、validator、loop record；计为第 10 个 L4 实质轮次；95/100；未 live LLM、未桌面运行态、未 WAES API、未升级 accepted/integrated |
 
 ## 下一轮候选任务队列
 
@@ -146,7 +148,7 @@ superseded_by: []
 | P1 | 后续授权 | 新 L3/L4 继续 GFIS、转真实样本/UAT/WAES/GPC/Finance 收集，或转 GPCF 自身治理轮次 | 需要用户重新授权 |
 | P1 | 后续授权 | 各项目真实项目仓、运行态验证、GPC 一期蓝图、WAES 门禁语义、accepted/integrated 升级 | 需要人工确认或更高授权，L3 不自动改主结论 |
 | P1 | WAES-LR-001 | 先解决 WAES 分支绑定，再落地真实 WAES harness、validator 和 evidence | 不生产写入、不部署、不越权裁决 |
-| P1 | XGD-L4-010 | 消费 XiaoC dispatch plan，建立重分析、全局推演与风险建议样例 | 本地 dry-run；不做业务最终审批、不生产写入、不真实外部 API、不升级 accepted/integrated |
+| P1 | XiaoG-L4-011 | 消费 XGD recommendation packet，建立只读查询、PKC 通知候选和 WAES 审计写入 mock | 本地 dry-run/mock；不设备 OTA、不生产写入、不真实外部 API、不升级 accepted/integrated |
 
 ## 最近 evidence 链接
 

@@ -39,6 +39,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-007.md",
     "docs/harness/loops/loop-round-GPCF-L4-008.md",
     "docs/harness/loops/loop-round-GPCF-L4-009.md",
+    "docs/harness/loops/loop-round-GPCF-L4-010.md",
 ]
 
 CORE_OBJECTS = [
@@ -88,6 +89,7 @@ def main() -> int:
     round_record_l4_007 = texts["docs/harness/loops/loop-round-GPCF-L4-007.md"]
     round_record_l4_008 = texts["docs/harness/loops/loop-round-GPCF-L4-008.md"]
     round_record_l4_009 = texts["docs/harness/loops/loop-round-GPCF-L4-009.md"]
+    round_record_l4_010 = texts["docs/harness/loops/loop-round-GPCF-L4-010.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -400,8 +402,44 @@ def main() -> int:
             f"XiaoC L4-009 evidence missing phrase: {phrase}",
         )
 
+    xgd_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD")
+    xgd_retrieval = read_external(str(xgd_root / "docs/harness/evidence/kds-retrieval-XGD-L4-010.json"))
+    xgd_fixture = read_external(str(xgd_root / "l4_analysis/xgd_l4_risk_analysis_dry_run.fixture.json"))
+    xgd_validator = read_external(str(xgd_root / "scripts/validate_xgd_l4_risk_analysis.mjs"))
+    xgd_round = read_external(str(xgd_root / "docs/harness/loops/loop-round-XGD-L4-010.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-010",
+        "XGD-L4-010",
+        "RiskAnalysis",
+        "BottleneckProjection",
+        "RootCauseHypothesis",
+        "ReliabilityAssessment",
+        "RecommendationPacket",
+        "95/100",
+        "项目群阶段累计评分 | 88/100",
+        "XiaoG-L4-011",
+    ]:
+        require(phrase in round_record_l4_010 + "\n" + evidence, f"L4-010 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"XGD-L4-010\"",
+        "RiskAnalysis",
+        "BottleneckProjection",
+        "ReliabilityAssessment",
+        "RecommendationPacket",
+        "XGD outputs analysis, recommendations and projections only",
+        "XGD does not approve business decisions",
+        "risk_analysis=3 global_projection=2 reliability_assessments=1 recommendation_packets=1",
+    ]:
+        require(
+            phrase in xgd_retrieval + "\n" + xgd_fixture + "\n" + xgd_validator + "\n" + xgd_round,
+            f"XGD L4-010 evidence missing phrase: {phrase}",
+        )
+
     assessment = {
-        "round_id": "GPCF-L4-009",
+        "round_id": "GPCF-L4-010",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -413,13 +451,13 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 52,
+        "generated_items": 58,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-010",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009"],
-        "project_group_score": 81,
+        "next_round": "L4-011",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010"],
+        "project_group_score": 88,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
@@ -428,6 +466,7 @@ def main() -> int:
             "GPCF-L4-007": 96,
             "GPCF-L4-008": 96,
             "GPCF-L4-009": 95,
+            "GPCF-L4-010": 95,
         },
         "project_rounds": {
             "MMC": {
@@ -492,12 +531,20 @@ def main() -> int:
                 "score": 95,
                 "accepted_integrated": False,
             },
+            "XGD": {
+                "round_id": "XGD-L4-010",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "risk_analysis_dry_run": "pass",
+                "score": 95,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-009 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=81 next=L4-010")
+    print("round=GPCF-L4-010 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=88 next=L4-011")
     return 0
 
 

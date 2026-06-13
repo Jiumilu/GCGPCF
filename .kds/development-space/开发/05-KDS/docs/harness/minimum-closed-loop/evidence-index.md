@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4C33B5D2B6
 title: L4 Minimum Closed Loop Evidence Index
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, KDS, Brain, PKC, XiaoC, XGD, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,6 +52,9 @@ superseded_by: []
 | GPCF-L4-009 | XiaoC KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/docs/harness/evidence/kds-retrieval-XiaoC-L4-009.json` | pass |
 | GPCF-L4-009 | XiaoC agent orchestration dry-run fixture | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/l4_orchestration/xiaoc_l4_agent_orchestration_dry_run.fixture.json` | pass |
 | GPCF-L4-009 | XiaoC L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/scripts/validate_xiaoc_l4_agent_orchestration.mjs` | pass |
+| GPCF-L4-010 | XGD KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/docs/harness/evidence/kds-retrieval-XGD-L4-010.json` | pass |
+| GPCF-L4-010 | XGD risk analysis dry-run fixture | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/l4_analysis/xgd_l4_risk_analysis_dry_run.fixture.json` | pass |
+| GPCF-L4-010 | XGD L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/scripts/validate_xgd_l4_risk_analysis.mjs` | pass |
 
 ## Project-Level Evidence Entrypoints
 
@@ -66,14 +69,14 @@ superseded_by: []
 | PKC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC/docs/harness` | L4-005 ready_for_review |
 | MMC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness` | L4-002 ready_for_review |
 | XiaoC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/docs/harness` | L4-009 ready_for_review |
-| XGD | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/docs/harness` | L4-010 pending |
+| XGD | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/docs/harness` | L4-010 ready_for_review |
 | XiaoG | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness` | L4-011 pending |
 | GPCF | `docs/harness/minimum-closed-loop` | L4-001 running |
 
 ## Current Gaps
 
 - L4-001 establishes the project group control plane only.
-- Project-level L4 dry-run, mock or runtime checks remain pending for L4-010 through L4-012.
+- Project-level L4 dry-run, mock or runtime checks remain pending for L4-011 through L4-012.
 - MMC L4-002 is ready_for_review with KDS retrieval, production resource policy, runtime tests and validators; it is not accepted or integrated.
 - KDS L4-003 is ready_for_review with local knowledge index, evidence backlinks and validator; it is not accepted or integrated.
 - Brain L4-004 is ready_for_review with local fixture retrieval, UI search connection, build/lint and validator; it is not accepted or integrated.
@@ -82,5 +85,6 @@ superseded_by: []
 - GPC L4-007 is ready_for_review with local PlatformOrder, QuoteReviewContract, SampleRequest, SampleApproval, ProductionRelease, ProofOfDelivery fixture, KDS retrieval, validator, L3 harness validation and JS check; it is not accepted or integrated.
 - GFIS L4-008 is ready_for_review with local FormulaResearch, SampleWorkOrder, SampleInspection, FactoryOrder, WorkOrder, QualityInventoryBatch, EquipmentSnapshot and Shipment read-only fixture, KDS retrieval, validator and quality:repo; it is not accepted or integrated.
 - XiaoC L4-009 is ready_for_review with local TaskBreakdown, ModelRoute, AgentDispatchPlan and AgentResultAggregation dry-run fixture, KDS retrieval, validator and `pnpm test:repo`; it is not accepted or integrated.
+- XGD L4-010 is ready_for_review with local RiskAnalysis, BottleneckProjection, ReliabilityAssessment and RecommendationPacket dry-run fixture, KDS retrieval, validator, harness validation and unit tests; it is not accepted or integrated.
 - No project is accepted or integrated.
 - No production write, deployment, permission change, device OTA or real external API write has been executed.
