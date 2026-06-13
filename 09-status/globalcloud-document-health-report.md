@@ -1,8 +1,8 @@
 ---
-doc_id: GPCF-DOC-C436DDB0F6
+doc_id: GPCF-DOC-DOCUMENT-HEALTH
 title: GlobalCloud 文档健康报告
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -18,9 +18,9 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-13T04:09:35.796808+00:00
+生成时间：2026-06-13T04:13:09.324099+00:00
 
-Loop 文档门禁：`blocked`
+Loop 文档门禁：`rework_required`
 
 ## 总览
 
@@ -67,5 +67,6 @@ kds_token=blocked
 ### kds_conflict_guard
 
 ```text
-kds_conflict_guard=pass
+kds_conflict_guard=blocked
+09-status/globalcloud-document-health-report.md != 开发/91-治理与验收/09-status/globalcloud-document-health-report.md
 ```

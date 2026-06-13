@@ -31,17 +31,18 @@ superseded_by: []
 | 开始时间 |  |
 | 完成时间 |  |
 
-## 1.1 L3 连续推进计数器
+## 1.1 连续运行计数器
 
 | 字段 | 值 |
 |---|---|
-| L3 session | active / stopped / not_applicable |
-| 已完成轮次 | n/15 |
-| 剩余轮次 | 15-n |
-| 已用时间 | x/120 分钟 |
-| 停止类型 | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty |
+| continuous session | active / stopped / not_applicable |
+| continuous mode | L3 / L3.5 / L4 / L5 / not_applicable |
+| 已完成轮次 | n/上限 |
+| 剩余轮次 | 上限-n |
+| 已用时间 | x/时间上限 |
+| 停止类型 | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty / authorization_boundary / production_safety |
 | 停止证据 |  |
-| 是否符合 L3 停止规则 | yes / no / not_applicable |
+| 是否符合停止规则 | yes / no / not_applicable |
 | 未停止时下一轮 |  |
 
 ## 2. 本轮目标
@@ -129,7 +130,7 @@ superseded_by: []
 | 门禁结果 | pass / partial / fail |
 | 是否需要人工确认 | yes / no |
 | 是否可进入下一轮 | yes / no |
-| L3 是否必须继续 | yes / no / not_applicable |
+| 连续运行是否必须继续 | yes / no / not_applicable |
 
 ## 12. 下一轮建议
 

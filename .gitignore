@@ -1,0 +1,5 @@
+.globalcloud/
+*.local
+.env
+.env.*
+!.env.example

@@ -41,9 +41,15 @@ def main() -> int:
     if space != "开发":
         failures.append("KDS_SPACE_NAME must be 开发")
     required_scopes = {"read", "write", "edit"}
+    forbidden_scopes = {"delete", "admin", "member_manage", "permission_manage"}
     actual_scopes = {item.strip() for item in scope.split(",") if item.strip()}
     if not required_scopes.issubset(actual_scopes):
         failures.append("KDS_TOKEN_SCOPE must include read,write,edit")
+    forbidden_present = sorted(forbidden_scopes.intersection(actual_scopes))
+    if forbidden_present:
+        failures.append(
+            "KDS_TOKEN_SCOPE must not include " + ",".join(forbidden_present)
+        )
     leaks = contains_token(token)
     if leaks:
         failures.append("token plaintext leaked: " + ", ".join(leaks[:20]))
@@ -59,4 +65,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

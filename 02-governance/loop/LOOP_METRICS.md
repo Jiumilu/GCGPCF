@@ -38,6 +38,8 @@ Loop 指标用于衡量“推进速度是否真实、质量是否受控、证据
 | satisfaction_record_rate | 有满意度/豁免记录轮次 / 总轮次 | 趋势提升 |
 | l3_unjustified_stop_count | L3 未触发停止条件却停止的次数 | 0 |
 | l3_budget_progress | L3 已完成轮次和已用时间 | 每轮记录 |
+| continuous_unjustified_stop_count | L3/L3.5/L4/L5 未触发停止条件却停止的次数 | 0 |
+| continuous_budget_progress | 连续运行模式已完成轮次和已用时间 | 每轮记录 |
 
 ## 每轮记录字段
 
@@ -53,8 +55,9 @@ Loop 指标用于衡量“推进速度是否真实、质量是否受控、证据
 | evidence_files | evidence 文件 |
 | risk_level | 本轮最高风险 |
 | next_round | 下一轮建议 |
-| l3_session | active / stopped / not_applicable |
-| l3_stop_type | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty |
+| continuous_session | active / stopped / not_applicable |
+| continuous_mode | L3/L3.5/L4/L5/not_applicable |
+| continuous_stop_type | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty / authorization_boundary / production_safety |
 
 ## 状态解释
 
