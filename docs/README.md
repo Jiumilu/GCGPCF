@@ -185,6 +185,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-18774733CF | GPCF-L4-006 PVAOS Organization Partner Permission Intake | docs/harness/loops/loop-round-GPCF-L4-006.md | GPCF | controlled |
 | GPCF-DOC-0B63C5F323 | GPCF-L4-007 GPC Platform Order Sample Release POD Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-007.md | GPCF | controlled |
 | GPCF-DOC-C81CDC4FDC | GPCF-L4-008 GFIS Factory Sample Order Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-008.md | GPCF | controlled |
+| GPCF-DOC-6E36E44372 | GPCF-L4-009 XiaoC Agent Orchestration Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-009.md | GPCF | controlled |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | controlled |
 | GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | controlled |
 | GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | controlled |

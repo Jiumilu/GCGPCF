@@ -38,6 +38,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-006.md",
     "docs/harness/loops/loop-round-GPCF-L4-007.md",
     "docs/harness/loops/loop-round-GPCF-L4-008.md",
+    "docs/harness/loops/loop-round-GPCF-L4-009.md",
 ]
 
 CORE_OBJECTS = [
@@ -86,6 +87,7 @@ def main() -> int:
     round_record_l4_006 = texts["docs/harness/loops/loop-round-GPCF-L4-006.md"]
     round_record_l4_007 = texts["docs/harness/loops/loop-round-GPCF-L4-007.md"]
     round_record_l4_008 = texts["docs/harness/loops/loop-round-GPCF-L4-008.md"]
+    round_record_l4_009 = texts["docs/harness/loops/loop-round-GPCF-L4-009.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -363,8 +365,43 @@ def main() -> int:
             f"GFIS L4-008 evidence missing phrase: {phrase}",
         )
 
+    xiaoc_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC")
+    xiaoc_retrieval = read_external(str(xiaoc_root / "docs/harness/evidence/kds-retrieval-XiaoC-L4-009.json"))
+    xiaoc_fixture = read_external(str(xiaoc_root / "l4_orchestration/xiaoc_l4_agent_orchestration_dry_run.fixture.json"))
+    xiaoc_validator = read_external(str(xiaoc_root / "scripts/validate_xiaoc_l4_agent_orchestration.mjs"))
+    xiaoc_round = read_external(str(xiaoc_root / "docs/harness/loops/loop-round-XiaoC-L4-009.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-009",
+        "XiaoC-L4-009",
+        "TaskBreakdown",
+        "ModelRoute",
+        "AgentDispatchPlan",
+        "AgentResultAggregation",
+        "95/100",
+        "项目群阶段累计评分 | 81/100",
+        "XGD-L4-010",
+    ]:
+        require(phrase in round_record_l4_009 + "\n" + evidence, f"L4-009 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"XiaoC-L4-009\"",
+        "TaskBreakdown",
+        "ModelRoute",
+        "AgentDispatchPlan",
+        "AgentResultAggregation",
+        "XiaoC does not write business facts",
+        "bypass_waes",
+        "task_breakdowns=5 model_routes=5 agent_dispatches=5 audit_candidates=1",
+    ]:
+        require(
+            phrase in xiaoc_retrieval + "\n" + xiaoc_fixture + "\n" + xiaoc_validator + "\n" + xiaoc_round,
+            f"XiaoC L4-009 evidence missing phrase: {phrase}",
+        )
+
     assessment = {
-        "round_id": "GPCF-L4-008",
+        "round_id": "GPCF-L4-009",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -376,13 +413,13 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 46,
+        "generated_items": 52,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-009",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008"],
-        "project_group_score": 73,
+        "next_round": "L4-010",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009"],
+        "project_group_score": 81,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
@@ -390,6 +427,7 @@ def main() -> int:
             "GPCF-L4-006": 96,
             "GPCF-L4-007": 96,
             "GPCF-L4-008": 96,
+            "GPCF-L4-009": 95,
         },
         "project_rounds": {
             "MMC": {
@@ -446,12 +484,20 @@ def main() -> int:
                 "score": 96,
                 "accepted_integrated": False,
             },
+            "XiaoC": {
+                "round_id": "XiaoC-L4-009",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "agent_orchestration_dry_run": "pass",
+                "score": 95,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-008 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=73 next=L4-009")
+    print("round=GPCF-L4-009 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=81 next=L4-010")
     return 0
 
 

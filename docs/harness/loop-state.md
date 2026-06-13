@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 70 |
-| loop.current_step | l4_gfis_factory_sample_order_readonly |
-| loop.last_entry | `GPCF-L4-008` / `GFIS-L4-008`：工厂样品/工厂订单/工单/质量库存批次/设备/发货只读样本 |
-| loop.last_exit | GFIS 真实仓完成 KDS local_mirror 检索、FormulaResearch/SampleWorkOrder/SampleInspection/FactoryOrder/WorkOrder/QualityInventoryBatch/EquipmentSnapshot/Shipment read-only fixture、validator、quality:repo 与 GPCF 项目群 evidence 回写 |
+| loop.round | 73 |
+| loop.current_step | l4_xiaoc_agent_orchestration_dry_run |
+| loop.last_entry | `GPCF-L4-009` / `XiaoC-L4-009`：任务拆解、模型路由与 Agent 编排 dry-run |
+| loop.last_exit | XiaoC 真实仓完成 KDS local_mirror 检索、TaskBreakdown/ModelRoute/AgentDispatchPlan/AgentResultAggregation dry-run fixture、validator、`pnpm test:repo` 与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；GFIS 未调用 live GFIS/Frappe API，未执行 bench migrate，未取得真实现场样品/库存/发货证据；XiaoC 任务拆解/模型路由 dry-run 仍待 L4-009 |
-| loop.next_target | `XiaoC-L4-009`：消费 GPC/GFIS/Brain/KDS/PKC L4 evidence，建立任务拆解、模型路由和 Agent 编排 dry-run |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；XiaoC 未执行 live model call、XiaoG runtime call、WAES audit API write、PKC notification send 或 XGD long-running analysis；XiaoC 旧 Manifest 仍含旧路径/分支/11 项目文档债务 |
+| loop.next_target | `XGD-L4-010`：消费 XiaoC dispatch plan，建立重分析、全局推演与风险建议样例 |
 
 ## 循环历史
 
@@ -109,6 +109,7 @@ superseded_by: []
 | 70 | GPCF-L4-006 | 2026-06-13 | PVAOS 真实仓组织/伙伴/权限输入基线 evidence 接收 | GPCF L4-006 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | PVAOS-L4-006 计为 L4 实质轮；96/100；`npm test -- src/app/tests/tenant/l4OrganizationPartnerBaseline.test.ts` 1 file / 4 tests，`npm run validate:modules` pass，`npm run typecheck` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
 | 71 | GPCF-L4-007 | 2026-06-13 | GPC 真实仓平台订单/样品申请/客户签样/转量产/POD 契约 evidence 接收 | GPCF L4-007 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | GPC-L4-007 计为 L4 实质轮；96/100；`python3 scripts/validate_gpc_l4_platform_contract.py` pass，`python3 scripts/validate_gpc_l3_harness.py` pass，`npm run check:js` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
 | 72 | GPCF-L4-008 | 2026-06-13 | GFIS 真实仓工厂样品/工厂订单/工单/质量库存批次/设备/发货只读样本 evidence 接收 | GPCF L4-008 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | GFIS-L4-008 计为 L4 实质轮；96/100；`python3 scripts/validate_gfis_l4_factory_sample_order_readonly.py` pass，`npm run quality:repo` pass；未 bench migrate、未真实外部 API、未生产写入、未升级 accepted/integrated |
+| 73 | GPCF-L4-009 | 2026-06-13 | XiaoC 真实仓任务拆解、模型路由与 Agent 编排 dry-run evidence 接收 | GPCF L4-009 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XiaoC-L4-009 计为 L4 实质轮；95/100；`node scripts/validate_xiaoc_l4_agent_orchestration.mjs` pass，`pnpm test:repo` pass；未真实模型调用、未 XiaoG runtime、未 WAES API 写入、未升级 accepted/integrated |
 
 ## 状态约束
 

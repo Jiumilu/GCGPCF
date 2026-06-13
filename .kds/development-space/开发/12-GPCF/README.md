@@ -92,6 +92,7 @@
 | GPCF-DOC-18774733CF | GPCF-L4-006 PVAOS Organization Partner Permission Intake | docs/harness/loops/loop-round-GPCF-L4-006.md | controlled |
 | GPCF-DOC-0B63C5F323 | GPCF-L4-007 GPC Platform Order Sample Release POD Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-007.md | controlled |
 | GPCF-DOC-C81CDC4FDC | GPCF-L4-008 GFIS Factory Sample Order Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-008.md | controlled |
+| GPCF-DOC-6E36E44372 | GPCF-L4-009 XiaoC Agent Orchestration Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-009.md | controlled |
 | GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | controlled |
 | GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | draft |
 | GPCF-DOC-18A2F48E80 | Session Authentication | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |

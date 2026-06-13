@@ -78,3 +78,4 @@ KDS 空间：`开发`
 | GPCF-DOC-18774733CF | GPCF-L4-006 PVAOS Organization Partner Permission Intake | docs/harness/loops/loop-round-GPCF-L4-006.md | GPCF | controlled |
 | GPCF-DOC-0B63C5F323 | GPCF-L4-007 GPC Platform Order Sample Release POD Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-007.md | GPCF | controlled |
 | GPCF-DOC-C81CDC4FDC | GPCF-L4-008 GFIS Factory Sample Order Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-008.md | GPCF | controlled |
+| GPCF-DOC-6E36E44372 | GPCF-L4-009 XiaoC Agent Orchestration Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-009.md | GPCF | controlled |
