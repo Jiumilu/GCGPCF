@@ -75,8 +75,8 @@ flowchart TB
 
   subgraph Business["业务流 Business Flow"]
     P["PVAOS<br/>组织 / 项目 / 伙伴 / 门户"]
-    C["GPC<br/>订单 / ASN / 预约 / 运输 / POD / 外部异常"]
-    F["GFIS<br/>工厂订单 / 工单 / 质量 / 库存 / 批次 / LES / EAM / 发货"]
+    C["GPC<br/>订单 / 样品确认 / 转量产 / ASN / 预约 / 运输 / POD / 外部异常"]
+    F["GFIS<br/>配方研发 / 样品打样 / 工厂订单 / 工单 / 质量 / 库存 / 批次 / LES / EAM / 发货"]
     E["Edge<br/>采集 / 协议转换 / 缓存 / 回执"]
   end
 
@@ -237,8 +237,8 @@ PVAOS 组织和伙伴接入
 | 事实 | 主责系统 | WAES 处理方式 |
 |---|---|---|
 | 租户、组织、伙伴、门户账号 | PVAOS | 读取状态和证据 |
-| 平台订单、ASN、预约、车辆、运输、POD、外部异常 | GPC | 读取事件、证据和业务确认引用 |
-| 工厂订单、工单、齐套、质量、库存、批次、LES、EAM、发货出库 | GFIS | 读取事件、证据和业务确认引用 |
+| 平台订单、样品申请、客户签样、转量产、ASN、预约、车辆、运输、POD、外部异常 | GPC | 读取事件、证据和业务确认引用 |
+| 配方研发、样品打样、样品检测、工厂订单、工单、齐套、质量、库存、批次、LES、EAM、发货出库 | GFIS | 读取事件、证据和业务确认引用 |
 | 现场设备信号、边缘缓存和回放 | Edge / GFIS | 读取信号和回执，不作为业务主账 |
 | 治理规则、指标口径、证据确证、状态升级、AI 授权 | WAES / Harness | 产生治理事实 |
 | 知识条目、Prompt 模板、Agent 任务 | Brain / XiaoC / Hermes / XGD（大象） | 受 WAES 授权约束 |
@@ -382,7 +382,7 @@ traceId, correlationId, idempotencyKey, payload, evidenceRefs
 | 样品打样完成 | `gfis.sample_work_order.completed`、SampleWorkOrder |
 | 客户签样确认 | `gpc.sample.approved`、SampleApproval |
 | 转量产放行 | `gpc.production_release.approved`、ProductionRelease |
-| 订单分发到工厂 | `gpc.platform_order.dispatched_to_factory`、OrderMapping |
+| 已转量产订单分发到工厂 | `gpc.production_release.dispatched_to_factory`、OrderMapping |
 | 工厂订单确认 | `gfis.factory_order.accepted`、FactoryOrder |
 | 齐套检查 | `gfis.kitting_check.completed`、KittingCheck |
 | 质量检验 | `gfis.quality_inspection.accepted/rejected`、QualityInspection |
@@ -794,8 +794,8 @@ sequenceDiagram
   WAES->>Bus: 发布项目配置和订阅事件
   WAES->>Harness: 提交发布验证证据
 
-  GPC->>Bus: 发布平台订单和订单分发事件
-  GFIS->>Bus: 发布工厂订单、工单、质量、库存、发货事件
+  GPC->>Bus: 发布平台订单、样品确认、转量产和订单分发事件
+  GFIS->>Bus: 发布配方研发、样品打样、工厂订单、工单、质量、库存、发货事件
   Edge->>GFIS: 上传设备信号和边缘回执
   Bus->>Evidence: 归集事件、trace、sourceRecordId、evidenceRefs
   Evidence->>WAES: 返回证据链和指标快照

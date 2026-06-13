@@ -9,7 +9,7 @@
 | GPCF-DOC-56BC03A70C | GlobalCloud 绿色供应链体系 P0 最小闭环界面实施清单 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | controlled |
 | GPCF-DOC-BD1C1FE02E | GlobalCloud 绿色供应链体系 P0 最小闭环界面验收矩阵 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面验收矩阵.md | controlled |
 | GPCF-DOC-5D5E27312C | GlobalCloud 绿色供应链体系对话模式与操作模式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md | controlled |
-| GPCF-DOC-E12B78B67D | GlobalCloud 绿色供应链体系平台订单-签收-异常界面收口专项方案 | 04-ui-delivery/GlobalCloud绿色供应链体系平台订单-签收-异常界面收口专项方案.md | controlled |
+| GPCF-DOC-E12B78B67D | GlobalCloud 绿色供应链体系平台订单-样品确认-签收-异常界面收口专项方案 | 04-ui-delivery/GlobalCloud绿色供应链体系平台订单-签收-异常界面收口专项方案.md | controlled |
 | GPCF-DOC-16087A96BC | GlobalCloud 绿色供应链体系最终交付界面规范与样式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系最终交付界面规范与样式规范.md | controlled |
 | GPCF-DOC-C884E15D19 | GlobalCloud 绿色供应链体系样板页实施计划 | 04-ui-delivery/GlobalCloud绿色供应链体系样板页实施计划.md | controlled |
 | GPCF-DOC-D068AE0B5B | GlobalCloud 绿色供应链体系界面分阶段治理规则 | 04-ui-delivery/GlobalCloud绿色供应链体系界面分阶段治理规则.md | controlled |

@@ -1,5 +1,5 @@
 ---
-doc_id: GPCF-DOC-C436DDB0F6
+doc_id: GPCF-DOC-DOCUMENT-HEALTH
 title: GlobalCloud 文档健康报告
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
@@ -18,7 +18,7 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-13T10:09:43.971999+00:00
+生成时间：2026-06-13T10:14:37.015614+00:00
 
 Loop 文档门禁：`pass`
 
