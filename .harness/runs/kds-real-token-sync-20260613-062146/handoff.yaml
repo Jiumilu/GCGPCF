@@ -1,0 +1,8 @@
+handoff:
+  change_id: "kds-real-token-sync"
+  run_id: "kds-real-token-sync-20260613-062146"
+  evidence_index: ".harness/runs/kds-real-token-sync-20260613-062146/evidence-index.yaml"
+  acceptance_matrix: ".harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md"
+  patches_dir: ".harness/runs/kds-real-token-sync-20260613-062146/patches/"
+  agent_results: ".harness/runs/kds-real-token-sync-20260613-062146/workspaces/*/agent-result.yaml"
+  status_claim: "blocked"

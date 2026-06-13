@@ -1,0 +1,40 @@
+Validation snapshot:
+
+1. python3 -m py_compile tools/kds-sync/validate_kds_token.py tools/kds-sync/kds_runtime.py tools/kds-sync/kds_readonly_probe.py tools/kds-sync/kds_sync_plan.py tools/kds-sync/kds_sync_apply.py
+Result: pass
+
+2. python3 tools/kds-sync/validate_kds_token.py
+Result: blocked because KDS_DEVELOPMENT_SPACE_TOKEN, KDS_TOKEN_OWNER, KDS_SPACE_NAME, and KDS_TOKEN_SCOPE are not configured in the current shell.
+
+3. python3 tools/kds-sync/kds_readonly_probe.py
+Result: blocked by Token gate; no remote write attempted.
+
+4. python3 tools/kds-sync/kds_sync_plan.py --allow-unconfigured-remote
+Result: blocked plan generated at .kds/sync-plan.json; no remote write attempted.
+
+5. KDS_DEVELOPMENT_SPACE_TOKEN=<redacted-dummy-token> KDS_TOKEN_OWNER=lujunxiang KDS_SPACE_NAME=开发 KDS_TOKEN_SCOPE=read,write,edit,admin python3 tools/kds-sync/validate_kds_token.py
+Result: blocked because admin scope is forbidden.
+
+6. KDS_DEVELOPMENT_SPACE_TOKEN=<redacted-dummy-token> KDS_TOKEN_OWNER=lujunxiang KDS_SPACE_NAME=开发 KDS_TOKEN_SCOPE=read,write,edit KDS_API_BASE_URL=http://127.0.0.1:9 python3 tools/kds-sync/kds_sync_apply.py --confirm-development-space --max-writes 1
+Result: blocked because KDS API endpoint is unavailable; dummy Token was not printed.
+
+7. python3 tools/kds-sync/check_document_pollution.py
+Result: pass
+
+8. python3 tools/kds-sync/validate_kds_token.py
+Result: pass; fingerprint only: bfd9553d.
+
+9. curl -sS http://127.0.0.1:18080/api/v1/health
+Result: pass; KDS API returned healthy.
+
+10. Authorized GET /spaces/开发/documents
+Result: pass; HTTP 200, 323 development-space documents visible to the configured Token.
+
+11. Authorized GET /spaces/ops/documents with the development-space Token
+Result: pass; HTTP 403, proving the Token is constrained to the configured KDS space.
+
+12. python3 tools/kds-sync/kds_sync_apply.py --confirm-development-space --max-writes 5
+Result: pass; final governance-report updates applied to KDS development space. Token plaintext was not printed.
+
+13. python3 tools/kds-sync/kds_conflict_guard.py
+Result: pass.

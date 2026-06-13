@@ -1,0 +1,18 @@
+Implemented files:
+- tools/kds-sync/kds_runtime.py
+- tools/kds-sync/kds_readonly_probe.py
+- tools/kds-sync/kds_sync_plan.py
+- tools/kds-sync/kds_sync_apply.py
+- /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/api_server.py
+
+Modified files:
+- tools/kds-sync/validate_kds_token.py
+- tools/kds-sync/loop_document_gate.py
+- tools/kds-sync/README.md
+
+Generated governance/evidence files:
+- .harness/runs/kds-real-token-sync-20260613-062146/
+- .kds/sync-plan.json
+- /Users/lujunxiang/.globalcloud/kds.env (private, not tracked)
+- /Users/lujunxiang/.globalcloud/run-kds-api-18080.sh (private, not tracked)
+- /Users/lujunxiang/Library/LaunchAgents/com.globalcloud.kds-api-18080.plist (private, not tracked)

@@ -1,0 +1,7 @@
+Command: git status --short --branch
+Result: current worktree was dirty before KDS Token sync implementation.
+
+Boundary:
+- Do not revert existing dirty files.
+- Do not write real Token.
+- Do not claim real KDS API synchronization without Token and endpoint evidence.

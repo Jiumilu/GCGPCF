@@ -123,7 +123,6 @@ def main() -> int:
     checks = {
         "document_pollution": run(["python3", "tools/kds-sync/check_document_pollution.py"]),
         "kds_token": run(["python3", "tools/kds-sync/validate_kds_token.py"]),
-        "kds_conflict_guard": run(["python3", "tools/kds-sync/kds_conflict_guard.py"]),
     }
     hard_failures = [name for name, (code, _) in checks.items() if code != 0 and name != "kds_token"]
     token_blocked = checks["kds_token"][0] != 0

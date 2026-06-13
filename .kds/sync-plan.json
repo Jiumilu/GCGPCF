@@ -1,0 +1,532 @@
+{
+  "generated_at": "2026-06-13T06:52:41.767195+00:00",
+  "status": "ready",
+  "kds_space": "开发",
+  "token_fingerprint": "bfd9553d",
+  "remote_documents": 323,
+  "create": [],
+  "update": [
+    {
+      "doc_id": "GPCF-DOC-C436DDB0F6",
+      "source_path": "09-status/globalcloud-document-health-report.md",
+      "kds_path": "开发/91-治理与验收/09-status/globalcloud-document-health-report.md",
+      "hash_before": "c6f92ceb16d17a1bef37a91fd807f480169eb9d876094016ecfc0bb9bfe0b969",
+      "hash_after": "6cef948ee0c3d8058f2723b51590d8e2e2094648dc707b00520893cb4e7e9dac",
+      "remote_version": "1781333401",
+      "remote_etag": "c6f92ceb16d17a1b"
+    },
+    {
+      "doc_id": "GPCF-DOC-53A28225F1",
+      "source_path": "09-status/kds-development-space-sync-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-development-space-sync-plan.md",
+      "hash_before": "c48a25bae54509a368893b6c4953cc3650472b524a8e51ccc2b38b63c83238a5",
+      "hash_after": "dd9461e407d6e07f3d2761e34391880706d7a8cd660cc99e3b42d59fa00efe4a",
+      "remote_version": "1781333401",
+      "remote_etag": "c48a25bae54509a3"
+    }
+  ],
+  "skip": [
+    {
+      "source_path": ".codex/skills/globalcloud-document-governance/SKILL.md",
+      "kds_path": "开发/12-GPCF/.codex/skills/globalcloud-document-governance/SKILL.md",
+      "status": "missing"
+    },
+    {
+      "source_path": ".codex/skills/globalcloud-loop-orchestrator/SKILL.md",
+      "kds_path": "开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/SKILL.md",
+      "status": "missing"
+    },
+    {
+      "source_path": ".codex/skills/ui-ux-pro-max/SKILL.md",
+      "kds_path": "开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md",
+      "status": "missing"
+    },
+    {
+      "source_path": ".harness/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-admin-console-v1-20260610-201442/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-admin-console-v2-20260610-205407/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-multitenant-deploy-v1-20260610-202348/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-portal-v1-20260610-200455/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-portal-v1-20260610-200455/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-portal-v1-20260610-200455/proposal.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/proposal.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-portal-v1-20260610-200455/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2-sprint1-20260610-212531/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2-sprint1-20260610-212531/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.2-20260610-215935/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.2-20260610-215935/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.2-20260610-215935/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v2.3-20260610-220227/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v2.3-20260610-220227/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.0-20260610-220702/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.0-20260610-220702/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260610-222505/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260610-222505/patches/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/patches/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-design-20260611-003001/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-e2e-test-20260611-010548/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-e2e-test-20260611-010548/test-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-e2e-test-20260611-010548/test-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-graph-ux-20260611-010847/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-graph-ux-20260611-010847/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-graph-ux-20260611-010847/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-graph-ux-20260611-010847/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint1-20260611-003247/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint1-20260611-003247/patches/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/patches/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint1-20260611-003247/workspaces/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/workspaces/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint2-20260611-004233/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint2-20260611-004233/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint2-20260611-004233/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint2-20260611-004233/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint3-20260611-005031/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint3-20260611-005031/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint3-20260611-005031/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint3-20260611-005031/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint4-20260611-005427/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint4-20260611-005427/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint4-20260611-005427/proposal.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/proposal.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint4-20260611-005427/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-sprint4-20260611-005427/tasks.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/tasks.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-zh-final-20260611-012235/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-zh-final-20260611-012235/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-zh-final-20260611-012235/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/kds-real-token-sync-20260613-062146/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/kds-real-token-sync-20260613-062146/patches/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/kds-real-token-sync-20260613-062146/status-audit.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md",
+      "status": "archive"
+    },
+    {
+      "source_path": ".harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md",
+      "kds_path": "开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "08-evidence-samples/session-archives/README.md",
+      "kds_path": "开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md",
+      "kds_path": "开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "10-archive/README.md",
+      "kds_path": "开发/92-证据与会话归档/10-archive/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "10-archive/deprecated/README.md",
+      "kds_path": "开发/92-证据与会话归档/10-archive/deprecated/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "10-archive/historical-sessions/README.md",
+      "kds_path": "开发/92-证据与会话归档/10-archive/historical-sessions/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "10-archive/imported-legacy/README.md",
+      "kds_path": "开发/92-证据与会话归档/10-archive/imported-legacy/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "10-archive/superseded/README.md",
+      "kds_path": "开发/92-证据与会话归档/10-archive/superseded/README.md",
+      "status": "archive"
+    },
+    {
+      "source_path": "openspec/changes/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/archive/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/archive/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/design.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/design.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/proposal.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/proposal.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/specs/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md",
+      "kds_path": "开发/12-GPCF/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/session-auth/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/specs/session-auth/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/session-auth/spec.md",
+      "kds_path": "开发/12-GPCF/openspec/changes/kds-production-hardening/specs/session-auth/spec.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md",
+      "status": "draft"
+    },
+    {
+      "source_path": "openspec/changes/kds-production-hardening/tasks.md",
+      "kds_path": "开发/05-KDS/openspec/changes/kds-production-hardening/tasks.md",
+      "status": "draft"
+    }
+  ],
+  "conflicts": [],
+  "missing_local": []
+}

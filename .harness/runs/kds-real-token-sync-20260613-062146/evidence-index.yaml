@@ -1,0 +1,22 @@
+evidence:
+  - id: preflight
+    path: evidence/preflight.txt
+    description: "Dirty worktree and project boundary captured before implementation"
+    freshness: current
+    trust_level: machine_generated
+  - id: validation-results
+    path: evidence/validation-results.txt
+    description: "Local validation commands for Token gate, blocked behavior, and pollution gate"
+    freshness: current
+    trust_level: machine_generated
+  - id: implementation-files
+    path: evidence/implementation-files.txt
+    description: "Implemented KDS real sync toolchain files"
+    freshness: current
+    trust_level: machine_generated
+  - id: sync-plan
+    path: "../../../.kds/sync-plan.json"
+    description: "Blocked dry-run plan generated without real Token"
+    freshness: current
+    trust_level: machine_generated
+status_claim: blocked

@@ -1,0 +1,35 @@
+diff --git a/tools/kds-sync/validate_kds_token.py b/tools/kds-sync/validate_kds_token.py
+index f9c6a06..b04a966 100755
+--- a/tools/kds-sync/validate_kds_token.py
++++ b/tools/kds-sync/validate_kds_token.py
+@@ -5,9 +5,11 @@ from __future__ import annotations
+
+ import hashlib
+ import os
++import stat
+ from pathlib import Path
+
+ ROOT = Path(__file__).resolve().parents[2]
++DEFAULT_ENV_FILE = Path("/Users/lujunxiang/.globalcloud/kds.env")
+
+
+ def contains_token(token: str) -> list[str]:
+@@ -33,6 +35,7 @@ def main() -> int:
+     owner = os.environ.get("KDS_TOKEN_OWNER", "")
+     space = os.environ.get("KDS_SPACE_NAME", "")
+     scope = os.environ.get("KDS_TOKEN_SCOPE", "")
++    env_file = Path(os.environ.get("KDS_ENV_FILE", str(DEFAULT_ENV_FILE)))
+     failures = []
+     if not token:
+         failures.append("missing KDS_DEVELOPMENT_SPACE_TOKEN")
+@@ -50,6 +53,10 @@ def main() -> int:
+         failures.append(
+             "KDS_TOKEN_SCOPE must not include " + ",".join(forbidden_present)
+         )
++    if env_file.exists():
++        mode = stat.S_IMODE(env_file.stat().st_mode)
++        if mode != 0o600:
++            failures.append(f"KDS_ENV_FILE permissions must be 600, got {oct(mode)}")
+     leaks = contains_token(token)
+     if leaks:
+         failures.append("token plaintext leaked: " + ", ".join(leaks[:20]))
