@@ -54,6 +54,24 @@ superseded_by: []
 | 59 | XiaoG-LR-001 | XiaoG evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/evidence/evidence-index.md` | yes | pass |
 | 59 | XiaoG-LR-001 | XiaoG round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-001.md` | yes | pass |
 | 59 | XiaoG-LR-001 | L3 nested project scoring | `tools/kds-sync/assess_l3_admission.py` | yes | XiaoG 82 / L3 Conditional |
+| 60 | PVAOS-LR-001 | PVAOS harness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/scripts/validate_pvaos_l3_harness.py` | yes | pass |
+| 60 | PVAOS-LR-001 | PVAOS module validator | `npm run validate:modules` in PVAOS repo | yes | pass; 50 menu ids, 50 configured modules |
+| 60 | PVAOS-LR-001 | PVAOS loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loop-state.md` | yes | pass |
+| 60 | PVAOS-LR-001 | PVAOS evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 60 | PVAOS-LR-001 | PVAOS round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loops/loop-round-PVAOS-LR-001.md` | yes | pass |
+| 60 | PVAOS-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | PVAOS 97 / L3 Conditional |
+| 61 | WAES-LR-001 | WAES harness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/scripts/validate_waes_l3_harness.py` | yes | pass |
+| 61 | WAES-LR-001 | WAES Vitest suite | `npm test` in WAES repo | yes | pass; 33 files / 135 tests |
+| 61 | WAES-LR-001 | WAES loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loop-state.md` | yes | pass |
+| 61 | WAES-LR-001 | WAES evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 61 | WAES-LR-001 | WAES round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loops/loop-round-WAES-LR-001.md` | yes | pass |
+| 61 | WAES-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | WAES 97 / L3 Conditional |
+| 62 | GPC-LR-001 | GPC harness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/scripts/validate_gpc_l3_harness.py` | yes | pass |
+| 62 | GPC-LR-001 | GPC JavaScript check | `npm run check:js` in GPC repo | yes | pass |
+| 62 | GPC-LR-001 | GPC loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loop-state.md` | yes | pass |
+| 62 | GPC-LR-001 | GPC evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 62 | GPC-LR-001 | GPC round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loops/loop-round-GPC-LR-001.md` | yes | pass |
+| 62 | GPC-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | GPC 94 / L3 Conditional |
 
 ## 完整率统计
 
@@ -67,7 +85,7 @@ superseded_by: []
 
 - 本轮 command log 未独立落盘。
 - Git 工作区存在未提交治理变更，尚不能作为 clean evidence。
-- MMC 已闭合本地 dependency dry-run、self-evolution 和 commit-readiness evidence；评分为 97，但本轮改动尚未提交/推送，按 Git 门禁保持 L3 Conditional，不能升级为 accepted/integrated。
+- GPC 已闭合 main 分支本地 harness、validator、JS 检查和命名纠偏 evidence；评分为 94，但本轮改动尚未提交/推送，按 Git 门禁保持 L3 Conditional，不能升级为 accepted/integrated。
 - XiaoG 已补齐真实仓最小 L3 bootstrap；评分为 82，但本轮改动尚未提交/推送，且风险/回滚、可用性和自我进化仍需后续轮次。
 
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance docs | `docs/harness/gpcf-*-lr002..lr016.md` | yes | controlled |

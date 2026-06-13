@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0DF6AA8647
 title: Loop Control Board
 project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
@@ -24,11 +24,11 @@ superseded_by: []
 |---|---|
 | 当前 Loop 模式 | L3 托管冲刺模式 |
 | 可升级模式 | L3 托管冲刺模式；L3.5/L4/L5 可执行但必须显式或强授权启动 |
-| 当前主线项目 | Brain |
-| 当前轮次 | `Brain-LR-002` 已完成；本次新真实性会话完成 1 个实质轮次 |
+| 当前主线项目 | GPC |
+| 当前轮次 | `GPC-LR-001` 已完成；本次新真实性会话完成 1 个实质轮次 |
 | 当前阶段 | 本地受控开发与文档治理 |
-| 当前目标 | 真实 Brain 项目仓 ESLint 9 flat config 补齐 |
-| 当前涉及项目 | Brain、GPCF |
+| 当前目标 | 真实 GPC main 分支最小 L3 harness、validator、evidence 与命名纠偏 |
+| 当前涉及项目 | GPC、GPCF |
 | 当前状态判定 | `partial` |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |
@@ -37,15 +37,15 @@ superseded_by: []
 | L3 剩余轮次 | 14 |
 | L3 已用时间 | 未做统一分钟级计时；仍未达到 2 小时上限 |
 | L3 stop_type | authorization_boundary |
-| L3 stop_evidence | 本轮只做 1 个真实实质轮次；`Brain-LR-002` 已完成真实 Brain 项目仓 ESLint 9 flat config 补齐，validator、`pnpm lint`、`pnpm build` 和 diff check 通过；`pnpm lint` 当前为 0 errors / 16 warnings；`pnpm format:check` 仍因 68 个既有源码文件格式未对齐失败；继续 format/test script/lint warning、Git push、生产部署、真实模型/API 调用或更高自治模式需另行授权 |
+| L3 stop_evidence | 本轮只做 1 个真实实质轮次；`GPC-LR-001` 已完成真实 GPC main 分支 Manifest 命名纠偏、docs/harness、loop-state、evidence-index、round record、任务元数据和项目级 validator 补齐；`python3 scripts/validate_gpc_l3_harness.py`、`npm run check:js`、`git diff --check -- .` 通过；继续提交/推送、生产写入、权限变更、部署、真实外部 API、一期蓝图主结论变更或 accepted/integrated 升级需另行授权 |
 | L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
 | 连续运行真实性门禁 | pass |
 | continuous declared_rounds | 1/15 |
 | continuous substantive_rounds | 1/15 |
 | continuous generated_items | 6 |
 | continuous batch_generated | false |
-| continuous substance_gate | partial |
-| continuous substance_evidence | 本轮读取真实 Brain 项目仓 package.json、tsconfig、src 入口、上一轮 loop-state 和 validator，独立判断 ESLint 9 配置缺口，新增 `eslint.config.js` 并更新项目级 validator；validator、`pnpm lint`、`pnpm build`、diff check 通过，`pnpm format:check` 保留既有格式缺口 |
+| continuous substance_gate | pass |
+| continuous substance_evidence | 本轮读取真实 GPC 项目仓 AGENTS、README、package.json、Manifest、SOP engine JSON 和现有 harness，独立判断 GPC 缺 loop-state/evidence/validator 且 Manifest 存在历史命名污染；新增 docs/harness、任务元数据、validator，并完成 GPC 命名纠偏；`python3 scripts/validate_gpc_l3_harness.py`、`npm run check:js`、diff check 通过 |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |
@@ -127,6 +127,9 @@ superseded_by: []
 | XiaoC 真实项目仓最小 Loop harness | 已完成 | `XiaoC-LR-001` 在真实 XiaoC 项目仓落地 docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false |
 | Brain 真实项目仓敏感文件门禁与最小 Loop harness | 部分完成 | `Brain-LR-001` 在真实 Brain 项目仓补齐 `.env` gitignore 门禁、docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=7、batch_generated=false、substance_gate=partial |
 | Brain ESLint 9 flat config | 部分完成 | `Brain-LR-002` 在真实 Brain 项目仓补齐 `eslint.config.js`，使 `pnpm lint` 从配置缺失恢复为 0 errors / 16 warnings；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=partial |
+| PVAOS D4 L3 harness bootstrap | 部分完成 | `PVAOS-LR-001` 在真实 PVAOS D4 分支补齐 Manifest、docs/harness、loop-state、evidence-index、round record、任务元数据和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=8、batch_generated=false、substance_gate=pass |
+| WAES integration-release L3 harness bootstrap | 部分完成 | `WAES-LR-001` 在真实 WAES integration-release 分支补齐 Manifest、docs/harness、loop-state、evidence-index、round record、任务元数据、validator 和 Vitest localStorage 测试环境；declared_rounds=1/15、substantive_rounds=1/15、generated_items=11、batch_generated=false、substance_gate=pass |
+| GPC main L3 harness bootstrap | 部分完成 | `GPC-LR-001` 在真实 GPC main 分支补齐 Manifest 命名纠偏、docs/harness、loop-state、evidence-index、round record、任务元数据和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=pass |
 
 ## 下一轮候选任务队列
 
@@ -135,6 +138,8 @@ superseded_by: []
 | P1 | 后续授权 | 收集真实现场样本、UAT 签收、WAES/GPC/Finance 确认 | 需要人工输入或显式授权 |
 | P1 | 后续授权 | 新 L3/L4 继续 GFIS、转真实样本/UAT/WAES/GPC/Finance 收集，或转 GPCF 自身治理轮次 | 需要用户重新授权 |
 | P1 | 后续授权 | 各项目真实项目仓、运行态验证、GPC 一期蓝图、WAES 门禁语义、accepted/integrated 升级 | 需要人工确认或更高授权，L3 不自动改主结论 |
+| P1 | WAES-LR-001 | 先解决 WAES 分支绑定，再落地真实 WAES harness、validator 和 evidence | 不生产写入、不部署、不越权裁决 |
+| P1 | GPC-LR-001 | 补齐真实 GPC loop-state、evidence-index、round record 和 validator 基线 | 不改一期蓝图主结论 |
 
 ## 最近 evidence 链接
 

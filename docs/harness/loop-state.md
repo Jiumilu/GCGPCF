@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 59 |
-| loop.current_step | xiaog_l3_bootstrap_landed |
-| loop.last_entry | `XiaoG-LR-001`：按 L3 准入评估整改最低分项目 XiaoG |
-| loop.last_exit | 本轮只计 1 个实质轮次；XiaoG 真实项目仓新增最小 L3 bootstrap harness、validator 和 smoke test，评分从 29/L1-L0 提升到 82/L3 Conditional |
+| loop.round | 62 |
+| loop.current_step | gpc_l3_harness_landed |
+| loop.last_entry | `GPC-LR-001`：按 L3 准入评估整改剩余 L2.5 项目 GPC |
+| loop.last_exit | 本轮只计 1 个实质轮次；GPC main 真实项目分支新增最小 L3 harness、validator、evidence，并完成 GPC 命名纠偏，评分从 79/L2.5 提升到 94/L3 Conditional |
 | loop.gate_result | partial |
-| loop.blockers | 当前 Git 工作区 dirty；MMC/XiaoG 仍未提交/推送；GPC/PVAOS/WAES 仍低于 L3；Brain `pnpm format:check` 仍保留既有源码格式缺口；生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA 和 accepted/integrated 均未授权 |
-| loop.next_target | 继续 XiaoG 风险/回滚 runbook 或 GFIS/WAES trigger dry-run；或转入 GPC/PVAOS/WAES 的真实项目仓缺口整改 |
+| loop.blockers | 当前 Git 工作区 dirty；GPC/PVAOS/WAES 本轮未提交/推送；Brain `pnpm format:check` 仍保留既有源码格式缺口；XGD/XiaoG 仍为 L3 Conditional；生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA 和 accepted/integrated 均未授权 |
+| loop.next_target | 为 GPC/PVAOS/WAES 补 commit-readiness evidence，或推进 XGD/XiaoG 自我进化/风险回滚缺口 |
 
 ## 循环历史
 
@@ -96,6 +96,9 @@ superseded_by: []
 | 57 | GPCF-MM-LR-004 | 2026-06-13 | MMC 缺少 self-evolution checklist 和结构化 next L3 queue | MMC `self-evolution-checklist.json`、`validate_mmc_self_evolution.py`、LR-004 轮次、GPCF 准入矩阵与机器评分 JSON | partial | 85% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=2；batch_generated=false；substance_gate=pass；stop_type=none；MMC 评分 97 但 Git dirty 限制为 L3 Conditional；未提交、未推送、未生产写入、未真实外部 API、未升级 accepted/integrated |
 | 58 | GPCF-MM-LR-005 | 2026-06-13 | MMC 缺少提交前 Git 门禁证据 | MMC `validate_mmc_commit_readiness.py`、LR-005 轮次、GPCF 准入矩阵与机器评分 JSON | partial | 90% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=2；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；stage=false、commit=false、push=false、sensitive_paths=0、unexpected_paths=0；未提交、未推送、未升级 accepted/integrated |
 | 59 | XiaoG-LR-001 | 2026-06-13 | XiaoG 评分 29/L1-L0，真实仓有代码/配置但缺 harness、validator、测试命令和 evidence | XiaoG `docs/harness/**`、`validate_xiaog_l3_bootstrap.py`、`test_xiaog_l3_bootstrap.py`、GPCF 评分规则扩展 | partial | 45% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；XiaoG 评分 82/L3 Conditional；未部署、未 OTA、未真实外部 API、未提交、未推送、未升级 accepted/integrated |
+| 60 | PVAOS-LR-001 | 2026-06-13 | PVAOS 评分 76/L2.5，真实 D4 分支有代码/验证命令但缺项目级 harness、loop-state、evidence 和 validator | PVAOS `PROJECT_HARNESS_MANIFEST.md`、`.codex/tasks/task-l3-pvaos-harness-bootstrap.json`、`docs/harness/**`、`validate_pvaos_l3_harness.py` | partial | 55% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=8；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；PVAOS 评分 97/L3 Conditional；未生产数据库写入、未外部 API、未部署、未提交、未推送、未升级 accepted/integrated |
+| 61 | WAES-LR-001 | 2026-06-13 | WAES 评分 73/L2.5，真实 integration-release 分支有代码/测试但缺项目级 loop-state、evidence 和 validator，且 `npm test` 因 localStorage 测试环境失败 | WAES `PROJECT_HARNESS_MANIFEST.md`、`.codex/tasks/task-l3-waes-harness-bootstrap.json`、`docs/harness/**`、`validate_waes_l3_harness.py`、`vitest.config.ts`、`tests/setup.ts` | partial | 60% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=11；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`npm test` 33 files / 135 tests pass；WAES 评分 97/L3 Conditional；未生产写入、未外部 API、未权限变更、未部署、未提交、未推送、未升级 accepted/integrated |
+| 62 | GPC-LR-001 | 2026-06-13 | GPC 评分 79/L2.5，真实 main 分支有 SOP/JS 验证但缺项目级 loop-state、evidence 和 validator，且 Manifest 有旧命名残留 | GPC `PROJECT_HARNESS_MANIFEST.md`、`.codex/tasks/task-l3-gpc-harness-bootstrap.json`、`docs/harness/**`、`validate_gpc_l3_harness.py` | partial | 60% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`npm run check:js` pass；GPC 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未部署、未提交、未推送、未改一期蓝图主结论、未升级 accepted/integrated |
 
 ## 状态约束
 

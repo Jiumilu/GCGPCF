@@ -43,16 +43,16 @@ superseded_by: []
 | 项目 | 代号 | 分数 | 准入状态 | 主要缺口 |
 |---|---|---:|---|---|
 | GFIS | GF | 97 | L3 Ready | 自我进化机制仍可深化 |
-| GPC | GP | 79 | L2.5 | 缺 loop-state；evidence 不完整；L3 队列不足；自我进化不足 |
-| PVAOS | PV | 76 | L2.5 | 缺 loop-state；evidence 不完整；可用性/客户满意不足 |
-| WAES | WA | 73 | L2.5 | 缺 loop-state；evidence 不完整；可用性/客户满意不足 |
+| GPC | GP | 94 | L3 Conditional | 真实 main 分支已补齐 Manifest 命名纠偏、loop-state、evidence、round record 和 validator；因工作区尚未提交，Git 门禁限制为 L3 Conditional |
+| PVAOS | PV | 97 | L3 Conditional | 真实 D4 分支已补齐 Manifest、loop-state、evidence、round record 和 validator；因工作区尚未提交，Git 门禁限制为 L3 Conditional |
+| WAES | WA | 97 | L3 Conditional | 真实 integration-release 分支已补齐 Manifest、loop-state、evidence、round record、validator 和 Vitest localStorage 测试环境；因工作区尚未提交，Git 门禁限制为 L3 Conditional |
 | KDS | KD | 94 | L3 Ready | 自我进化机制仍可深化 |
 | Brain | BR | 97 | L3 Ready | 自我进化机制仍可深化 |
 | PKC | PK | 92 | L3 Ready | 自我进化机制仍可深化 |
 | XiaoC | XC | 97 | L3 Ready | 自我进化机制仍可深化 |
 | XGD | XD | 85 | L3 Conditional | L3 队列不足；自我进化不足 |
-| XiaoG | XG | 82 | L3 Conditional | 真实代码/配置、validator、smoke test、loop-state、evidence 已补齐；Git dirty、风险/回滚、可用性和自我进化仍需补齐 |
-| MMC | MM | 97 | L3 Conditional | L3 队列、自我进化、依赖 dry-run、运行态测试均已闭合；因工作区尚未提交，Git 门禁限制为 L3 Conditional |
+| XiaoG | XG | 85 | L3 Conditional | 真实代码/配置、validator、smoke test、loop-state、evidence 已补齐；风险/回滚、可用性和自我进化仍需深化 |
+| MMC | MM | 100 | L3 Ready | L3 队列、自我进化、依赖 dry-run、运行态测试和 Git 门禁均已闭合 |
 | GPCF | CF | 76 | governance_hub | 总控仓以治理中枢单独判定，不作为业务 L3 Ready |
 
 ## MMC 实质整改记录
@@ -181,3 +181,125 @@ XiaoG 本轮真实落地点：
 约束：
 
 - 本轮未执行 Docker 部署、设备 OTA、真实外部 API、Token 读取、提交、推送或 accepted/integrated 升级。
+
+## PVAOS 实质整改记录
+
+| 字段 | 结果 |
+|---|---|
+| Round ID | `PVAOS-LR-001` |
+| declared_rounds | 1/15 |
+| substantive_rounds | 1/15 |
+| generated_items | 8 |
+| batch_generated | false |
+| substance_gate | pass |
+| stop_type | authorization_boundary |
+| 本轮闭合缺口 | D4 分支 Manifest；项目级 docs/harness；loop-state；evidence-index；round record；任务元数据；L3 harness validator |
+| 更新后剩余缺口 | Git 工作区未提交；WAES/GPC 依赖 dry-run、可用性/客户满意和提交推送仍需后续轮次 |
+| 分数变化 | 76 -> 97 |
+| 状态变化 | L2.5 -> L3 Conditional |
+
+PVAOS 本轮真实落地点：
+
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/PROJECT_HARNESS_MANIFEST.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/.codex/tasks/task-l3-pvaos-harness-bootstrap.json`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/README.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loop-state.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/evidence/evidence-index.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loops/README.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loops/loop-round-PVAOS-LR-001.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/scripts/validate_pvaos_l3_harness.py`
+
+验证结果：
+
+| 命令 | 结果 |
+|---|---|
+| `python3 scripts/validate_pvaos_l3_harness.py` | pass |
+| `npm run validate:modules` | pass; 50 menu ids, 50 configured modules |
+| `git diff --check -- .` | pass |
+| `python3 tools/kds-sync/assess_l3_admission.py` | pass; PVAOS 97 / L3 Conditional |
+
+约束：
+
+- 本轮未执行生产数据库写入、外部 API 写入、部署、提交、推送、PR 合并或 accepted/integrated 升级。
+
+## WAES 实质整改记录
+
+| 字段 | 结果 |
+|---|---|
+| Round ID | `WAES-LR-001` |
+| declared_rounds | 1/15 |
+| substantive_rounds | 1/15 |
+| generated_items | 11 |
+| batch_generated | false |
+| substance_gate | pass |
+| stop_type | authorization_boundary |
+| 本轮闭合缺口 | integration-release 分支 Manifest 纠偏；项目级 docs/harness；loop-state；evidence-index；round record；任务元数据；L3 harness validator；Vitest localStorage 测试环境 |
+| 更新后剩余缺口 | Git 工作区未提交；治理裁决 dry-run、可用性/客户满意和提交推送仍需后续轮次 |
+| 分数变化 | 73 -> 97 |
+| 状态变化 | L2.5 -> L3 Conditional |
+
+WAES 本轮真实落地点：
+
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/PROJECT_HARNESS_MANIFEST.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/.codex/tasks/task-l3-waes-harness-bootstrap.json`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/acceptance.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/evidence/README.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/evidence/evidence-index.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loop-state.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loops/README.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loops/loop-round-WAES-LR-001.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/scripts/validate_waes_l3_harness.py`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/vitest.config.ts`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/tests/setup.ts`
+
+验证结果：
+
+| 命令 | 结果 |
+|---|---|
+| `python3 scripts/validate_waes_l3_harness.py` | pass |
+| `npm test` | pass; 33 files / 135 tests |
+| `git diff --check -- .` | pass |
+| `python3 tools/kds-sync/assess_l3_admission.py` | pass; WAES 97 / L3 Conditional |
+
+约束：
+
+- 本轮未执行生产写入、真实外部 API 写入、权限变更、部署、提交、推送、PR 合并或 accepted/integrated 升级。
+
+## GPC 实质整改记录
+
+| 字段 | 结果 |
+|---|---|
+| Round ID | `GPC-LR-001` |
+| declared_rounds | 1/15 |
+| substantive_rounds | 1/15 |
+| generated_items | 6 |
+| batch_generated | false |
+| substance_gate | pass |
+| stop_type | authorization_boundary |
+| 本轮闭合缺口 | GPC 命名纠偏；项目级 docs/harness；loop-state；evidence-index；round record；任务元数据；L3 harness validator |
+| 更新后剩余缺口 | Git 工作区未提交；自我进化机制仍需深化；GPC/GFIS adapter dry-run 和可用性/客户满意仍需后续轮次 |
+| 分数变化 | 79 -> 94 |
+| 状态变化 | L2.5 -> L3 Conditional |
+
+GPC 本轮真实落地点：
+
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/PROJECT_HARNESS_MANIFEST.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/.codex/tasks/task-l3-gpc-harness-bootstrap.json`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/evidence/evidence-index.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loop-state.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loops/README.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loops/loop-round-GPC-LR-001.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/scripts/validate_gpc_l3_harness.py`
+
+验证结果：
+
+| 命令 | 结果 |
+|---|---|
+| `python3 scripts/validate_gpc_l3_harness.py` | pass |
+| `npm run check:js` | pass |
+| `git diff --check -- .` | pass |
+| `python3 tools/kds-sync/assess_l3_admission.py` | pass; GPC 94 / L3 Conditional |
+
+约束：
+
+- 本轮未执行生产写入、真实外部 API 写入、权限变更、部署、提交、推送、PR 合并、一期蓝图主结论变更或 accepted/integrated 升级。
