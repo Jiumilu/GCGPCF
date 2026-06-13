@@ -170,7 +170,15 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
             hits.append(project)
     if not hits:
         hits = ["GPCF"]
-    if source_path == "README.md" or source_path.startswith(("00-index/", "tools/", "templates/", ".codex/")):
+    evidence_project = None
+    if source_path.startswith("08-evidence-samples/"):
+        parts = source_path.split("/")
+        if len(parts) > 1 and parts[1] in PROJECTS:
+            evidence_project = parts[1]
+
+    if evidence_project:
+        primary = evidence_project
+    elif source_path == "README.md" or source_path.startswith(("00-index/", "tools/", "templates/", ".codex/")):
         primary = "GPCF"
     elif source_path.startswith("01-architecture/") or source_path.startswith("09-status/"):
         primary = "GPCF"
@@ -184,6 +192,8 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
         primary = "XiaoC" if "XiaoC" in hits or "小即" in haystack else "GPCF"
     elif source_path.startswith("07-acceptance/") or source_path.startswith("08-evidence-samples/") or source_path.startswith(".harness/"):
         primary = "WAES"
+    elif source_path.startswith(("docs/harness/loop-state.md", "docs/harness/loops/", "docs/harness/evidence/evidence-index.md")):
+        primary = "GPCF"
     elif source_path.startswith("docs/") or source_path.startswith("openspec/"):
         primary = "KDS" if ("KDS" in hits or "Brain" in hits) else "GPCF"
     else:

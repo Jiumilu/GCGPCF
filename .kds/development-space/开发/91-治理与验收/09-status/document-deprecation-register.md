@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0295C05F40
 title: 文档过期与归档台账
 project: GPCF
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -33,6 +33,17 @@ superseded_by: []
 | GPCF-DOC-03FB1D644C | Document Control Policy | .codex/skills/globalcloud-document-governance/references/document-control-policy.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/document-control-policy.md |
 | GPCF-DOC-AAE22480F8 | KDS Security Policy | .codex/skills/globalcloud-document-governance/references/kds-security-policy.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/kds-security-policy.md |
 | GPCF-DOC-DB96D52951 | Loop Integration Policy | .codex/skills/globalcloud-document-governance/references/loop-integration-policy.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-document-governance/references/loop-integration-policy.md |
+| GPCF-DOC-CC31E912C9 | globalcloud-loop-orchestrator | .codex/skills/globalcloud-loop-orchestrator/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/README.md |
+| GPCF-DOC-2D8E4755AF | GlobalCloud Loop Orchestrator | .codex/skills/globalcloud-loop-orchestrator/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/SKILL.md |
+| GPCF-DOC-5F66526BB2 | references | .codex/skills/globalcloud-loop-orchestrator/references/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/README.md |
+| GPCF-DOC-879AE787BD | GlobalCloud Loop Customer Satisfaction Gates | .codex/skills/globalcloud-loop-orchestrator/references/customer-satisfaction-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/customer-satisfaction-gates.md |
+| GPCF-DOC-7D1942C7DD | GlobalCloud Loop Dependency Gates | .codex/skills/globalcloud-loop-orchestrator/references/dependency-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/dependency-gates.md |
+| GPCF-DOC-5FD0A7402A | GlobalCloud Loop Evolution Gates | .codex/skills/globalcloud-loop-orchestrator/references/evolution-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/evolution-gates.md |
+| GPCF-DOC-31F21E6BD5 | GlobalCloud Loop Git Version Gates | .codex/skills/globalcloud-loop-orchestrator/references/git-version-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/git-version-gates.md |
+| GPCF-DOC-E2C4007859 | GlobalCloud Loop Quality Gates | .codex/skills/globalcloud-loop-orchestrator/references/quality-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/quality-gates.md |
+| GPCF-DOC-1213F2E70E | GlobalCloud Loop Risk and Rollback Gates | .codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md |
+| GPCF-DOC-CE28DA4C36 | GlobalCloud Loop Orchestrator Stage Gates | .codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md |
+| GPCF-DOC-221282A70B | GlobalCloud Loop Usability Gates | .codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md |
 | GPCF-DOC-268058F0F6 | UI/UX 技能 | .codex/skills/ui-ux-pro-max/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/README.md |
 | GPCF-DOC-8025BD5C10 | ui-ux-pro-max | .codex/skills/ui-ux-pro-max/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md |
 | GPCF-DOC-D1E79591EA | Harness 运行证据 | .harness/README.md | archive | 开发/92-证据与会话归档/.harness/README.md |
@@ -53,7 +64,7 @@ superseded_by: []
 | GPCF-DOC-8898209B8E | Harness Governance: gbrain-portal-v2-frontend | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md |
 | GPCF-DOC-530B2BF79A | gbrain-v2-sprint1-20260610-212531 | .harness/runs/gbrain-v2-sprint1-20260610-212531/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2-sprint1-20260610-212531/README.md |
 | GPCF-DOC-0AC4F38B1A | gbrain-v2.1-sprint1-20260610-214441 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md |
-| GPCF-DOC-54C43FAC33 | Harness Governance: gbrain-v2.1-sprint1 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md |
+| GPCF-DOC-54C43FAC33 | status-audit | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md |
 | GPCF-DOC-BFEB10D711 | gbrain-v2.1-sprint2-20260610-214842 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md |
 | GPCF-DOC-D03E6BE997 | Harness Governance: gbrain-v2.1-sprint2 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md |
 | GPCF-DOC-520E6A10FE | gbrain-v2.1-sprint3-20260610-215034 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md |

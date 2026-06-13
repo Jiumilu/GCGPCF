@@ -39,5 +39,5 @@ KDS 路径前缀：`开发/12-GPCF/07-acceptance/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-EB678B0E98 | GlobalCloud 绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAES | controlled |
+| GPCF-DOC-EB678B0E98 | GlobalCloud绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAES | controlled |
 | GPCF-DOC-652F1E79A2 | 验收矩阵 | 07-acceptance/README.md | WAES | controlled |

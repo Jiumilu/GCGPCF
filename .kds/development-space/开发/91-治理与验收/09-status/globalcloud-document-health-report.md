@@ -18,32 +18,32 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-12T12:12:54.844546+00:00
+生成时间：2026-06-13T04:09:35.796808+00:00
 
 Loop 文档门禁：`blocked`
 
 ## 总览
 
-- 仓库 Markdown：314
-- KDS 镜像 Markdown：327
-- KDS 同步流水：314
+- 仓库 Markdown：355
+- KDS 镜像 Markdown：368
+- KDS 同步流水：355
 - 元数据缺失：0
 - README 缺失目录：0
 
 ## 状态分布
 
 - archive: 78
-- controlled: 212
+- controlled: 242
 - draft: 13
-- operational_controlled: 9
+- operational_controlled: 19
 
 ## 项目分布
 
-- GFIS: 1
+- GFIS: 14
 - GPC: 27
-- GPCF: 79
-- KDS: 39
-- WAES: 108
+- GPCF: 99
+- KDS: 37
+- WAES: 117
 - XiaoC: 58
 
 ## 命令结果

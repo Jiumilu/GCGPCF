@@ -64,3 +64,12 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-20CE547AAF | GPCF Loop Engineering v1.0 — 项目群工程闭环运行协议 | 02-governance/gpcf-loop-engineering-spec-v1.md | WAES | controlled |
 | GPCF-DOC-D67341FE2B | GPCF Loop Engineering 角色边界定义 | 02-governance/gpcf-role-boundary.md | WAES | controlled |
 | GPCF-DOC-A33E51C815 | GPCF Loop Engineering 状态机定义 | 02-governance/gpcf-status-machine.md | WAES | controlled |
+| GPCF-DOC-29E5B0AC17 | Loop Autonomy Policy | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |
+| GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
+| GPCF-DOC-04BF76145B | Loop Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
+| GPCF-DOC-1B5550FF05 | Loop L3.5 Real API Verification Policy | 02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md | WAES | controlled |
+| GPCF-DOC-5E646AC9A6 | Loop L4 Autonomous Operations Policy | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | WAES | controlled |
+| GPCF-DOC-7FB1181082 | Loop L5 Full Production Autonomy Policy | 02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | WAES | controlled |
+| GPCF-DOC-D5550386C6 | Loop Metrics | 02-governance/loop/LOOP_METRICS.md | WAES | controlled |
+| GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | controlled |
+| GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | controlled |

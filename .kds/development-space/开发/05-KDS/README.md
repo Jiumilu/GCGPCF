@@ -15,12 +15,10 @@
 | GPCF-DOC-05774FB8AD | GlobalCloud 绿色供应链体系 AI 服务模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | controlled |
 | GPCF-DOC-52B18BDBE9 | GlobalCloud 绿色供应链体系 LLM Wiki 与 Brain 测试评估矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md | controlled |
 | GPCF-DOC-664403C419 | GlobalCloud 绿色供应链体系 SOP 模板库 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md | controlled |
-| GPCF-DOC-9B55FCEA8F | GlobalCloud 绿色供应链体系事件合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系事件合同.md | controlled |
 | GPCF-DOC-BA68A130D5 | GlobalCloud 绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md | controlled |
 | GPCF-DOC-D48C6EB801 | GlobalCloud 绿色供应链体系企业级知识库方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md | controlled |
 | GPCF-DOC-1362AFC964 | GlobalCloud 绿色供应链体系全局初始化 SOP 方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md | controlled |
 | GPCF-DOC-1A3581D521 | GlobalCloud 绿色供应链体系对象目录 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md | controlled |
-| GPCF-DOC-0962BEDB78 | GlobalCloud 绿色供应链体系数据治理模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系数据治理模型.md | controlled |
 | GPCF-DOC-04D6680E14 | GlobalCloud 绿色供应链体系知识与Agent授权治理总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md | controlled |
 | GPCF-DOC-FCCA958E2C | GlobalCloud 绿色供应链体系知识主存层与知识引擎层分层方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md | controlled |
 | GPCF-DOC-062D4DA687 | GlobalCloud 绿色供应链体系系统-数据库边界总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md | controlled |

@@ -45,5 +45,16 @@ KDS 空间：`开发`
 | GPCF-DOC-03FB1D644C | Document Control Policy | .codex/skills/globalcloud-document-governance/references/document-control-policy.md | GPCF | operational_controlled |
 | GPCF-DOC-AAE22480F8 | KDS Security Policy | .codex/skills/globalcloud-document-governance/references/kds-security-policy.md | GPCF | operational_controlled |
 | GPCF-DOC-DB96D52951 | Loop Integration Policy | .codex/skills/globalcloud-document-governance/references/loop-integration-policy.md | GPCF | operational_controlled |
+| GPCF-DOC-CC31E912C9 | globalcloud-loop-orchestrator | .codex/skills/globalcloud-loop-orchestrator/README.md | GPCF | operational_controlled |
+| GPCF-DOC-2D8E4755AF | GlobalCloud Loop Orchestrator | .codex/skills/globalcloud-loop-orchestrator/SKILL.md | GPCF | operational_controlled |
+| GPCF-DOC-5F66526BB2 | references | .codex/skills/globalcloud-loop-orchestrator/references/README.md | GPCF | operational_controlled |
+| GPCF-DOC-879AE787BD | GlobalCloud Loop Customer Satisfaction Gates | .codex/skills/globalcloud-loop-orchestrator/references/customer-satisfaction-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-7D1942C7DD | GlobalCloud Loop Dependency Gates | .codex/skills/globalcloud-loop-orchestrator/references/dependency-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-5FD0A7402A | GlobalCloud Loop Evolution Gates | .codex/skills/globalcloud-loop-orchestrator/references/evolution-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-31F21E6BD5 | GlobalCloud Loop Git Version Gates | .codex/skills/globalcloud-loop-orchestrator/references/git-version-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-E2C4007859 | GlobalCloud Loop Quality Gates | .codex/skills/globalcloud-loop-orchestrator/references/quality-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-1213F2E70E | GlobalCloud Loop Risk and Rollback Gates | .codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-CE28DA4C36 | GlobalCloud Loop Orchestrator Stage Gates | .codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md | GPCF | operational_controlled |
+| GPCF-DOC-221282A70B | GlobalCloud Loop Usability Gates | .codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md | GPCF | operational_controlled |
 | GPCF-DOC-268058F0F6 | UI/UX 技能 | .codex/skills/ui-ux-pro-max/README.md | GPCF | operational_controlled |
 | GPCF-DOC-8025BD5C10 | ui-ux-pro-max | .codex/skills/ui-ux-pro-max/SKILL.md | GPCF | operational_controlled |

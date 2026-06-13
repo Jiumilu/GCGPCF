@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：KDS
+关联项目：KDS, GPCF
 
 受控规则：
 
@@ -37,3 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | KDS | controlled |
+| GPCF-DOC-5D0159ED7D | Evidence Index — GPCF | docs/harness/evidence/evidence-index.md | GPCF | controlled |

@@ -39,6 +39,9 @@ KDS 路径前缀：`开发/12-GPCF/templates/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-342D4B85A7 | Loop Evidence Template | templates/LOOP_EVIDENCE_TEMPLATE.md | GPCF | controlled |
+| GPCF-DOC-D72226E1D3 | Loop Handoff Template | templates/LOOP_HANDOFF_TEMPLATE.md | GPCF | controlled |
+| GPCF-DOC-C3B9DFCB0C | Loop Round Template | templates/LOOP_ROUND_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-48D043BA78 | 模板库 | templates/README.md | GPCF | controlled |
 | GPCF-DOC-33F4C1195D | Evidence Index — {项目名} | templates/evidence-index-template.md | GPCF | controlled |
 | GPCF-DOC-8C2AA8996B | Status Audit — {YYYY-MM-DD} | templates/loop-audit-template.md | GPCF | controlled |
