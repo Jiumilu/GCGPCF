@@ -175,9 +175,16 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
         parts = source_path.split("/")
         if len(parts) > 1 and parts[1] in PROJECTS:
             evidence_project = parts[1]
+    harness_project = None
+    if source_path.startswith("docs/harness/"):
+        parts = source_path.split("/")
+        if len(parts) > 2 and parts[2] in PROJECTS:
+            harness_project = parts[2]
 
     if evidence_project:
         primary = evidence_project
+    elif harness_project:
+        primary = harness_project
     elif source_path == "README.md" or source_path.startswith(("00-index/", "tools/", "templates/", ".codex/")):
         primary = "GPCF"
     elif source_path.startswith("01-architecture/") or source_path.startswith("09-status/"):
@@ -389,7 +396,7 @@ def write_registers(records: list[dict[str, object]]) -> None:
         ])
     sync = "# KDS 开发空间同步台账\n\n"
     sync += f"日期：{TODAY}\n\n"
-    sync += "用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现为仓库内 `.kds/development-space/开发` 本地镜像，后续可替换为真实 KDS API。\n\n"
+    sync += "用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。\n\n"
     sync += "## 范围说明\n\n"
     sync += "当前台账覆盖的是 **GPCF 仓库中已经纳入 KDS `开发` 空间的文档镜像**。其它项目的真实项目仓库文档，只有在后续从对应项目仓导入或同步到本仓/KDS 后，才会出现在本台账中。\n\n"
     sync += "其它项目当前在 KDS 中的位置如下：`开发/01-GFIS`、`开发/02-GPC`、`开发/03-PVAOS`、`开发/04-WAES`、`开发/05-KDS`、`开发/06-Brain`、`开发/07-PKC`、`开发/08-XiaoC`、`开发/09-XGD`、`开发/10-XiaoG`、`开发/11-MMC`、`开发/12-GPCF`。跨项目文档主要在 `开发/90-跨项目架构`、`开发/91-治理与验收`、`开发/92-证据与会话归档`。\n\n"
@@ -545,7 +552,7 @@ def write_kds_readme(records: list[dict[str, object]]) -> None:
         (base / folder).mkdir(parents=True, exist_ok=True)
     content = "# KDS 开发空间本地镜像\n\n"
     content += f"生成日期：{TODAY}\n\n"
-    content += "用途：作为 KDS `开发` 空间的本地可审计镜像。真实 KDS API 接入前，以本目录作为双向同步的离线落点。\n\n"
+    content += "用途：作为 KDS `开发` 空间的本地可审计镜像，并与真实 KDS API 同步工具链共同构成开发空间双向同步基础。\n\n"
     content += markdown_table(["project", "folder", "document_count"], rows)
     content += "\n"
     write_text(base / "README.md", content)

@@ -64,3 +64,9 @@
 | GPCF-DOC-6C0659CB2B | 链同专项会话状态报告 | 06-workstreams/链同专项会话状态报告.md | controlled |
 | GPCF-DOC-5E93C8BFBC | 链同专项会话状态报告模板 | 06-workstreams/链同专项会话状态报告模板.md | controlled |
 | GPCF-DOC-E4854CDAC8 | 链同专项执行版包（侧线程草案） | 06-workstreams/链同专项执行版包-侧线程草案.md | controlled |
+| GPCF-DOC-86DB4AB0BA | XiaoC | docs/harness/XiaoC/README.md | controlled |
+| GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | controlled |
+| GPCF-DOC-63536E3201 | Evidence Index — XiaoC | docs/harness/XiaoC/evidence/evidence-index.md | controlled |
+| GPCF-DOC-9CACBDF863 | GlobalCloud XiaoC Loop State | docs/harness/XiaoC/loop-state.md | controlled |
+| GPCF-DOC-857DCECF45 | loops | docs/harness/XiaoC/loops/README.md | controlled |
+| GPCF-DOC-328F61B887 | Loop Round GPCF-XC-LR-001 | docs/harness/XiaoC/loops/loop-round-GPCF-XC-LR-001.md | controlled |

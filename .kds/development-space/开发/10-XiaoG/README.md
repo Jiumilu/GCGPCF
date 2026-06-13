@@ -4,4 +4,12 @@
 
 用途：KDS `开发` 空间中 `XiaoG` 项目的受控文档入口。
 
-当前没有直接归属到本项目空间的源文档；相关内容可能位于 `90-跨项目架构` 或 `91-治理与验收`。
+| doc_id | title | source_path | status |
+| --- | --- | --- | --- |
+| GPCF-DOC-39B91D662F | XiaoG | docs/harness/XiaoG/README.md | controlled |
+| GPCF-DOC-F8A19C3159 | evidence | docs/harness/XiaoG/evidence/README.md | controlled |
+| GPCF-DOC-C1614FDCEB | Evidence Index — XiaoG | docs/harness/XiaoG/evidence/evidence-index.md | controlled |
+| GPCF-DOC-BE87700244 | GlobalCloud XiaoG Loop State | docs/harness/XiaoG/loop-state.md | controlled |
+| GPCF-DOC-CC7297EBCF | loops | docs/harness/XiaoG/loops/README.md | controlled |
+| GPCF-DOC-871E18BD6E | Loop Round GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | controlled |
+| GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | controlled |

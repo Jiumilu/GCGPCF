@@ -1,0 +1,143 @@
+{
+  "status": "gpcf_l3_governance_rules_only",
+  "rounds": [
+    {
+      "round_id": "GPCF-CF-LR-002",
+      "title": "Loop 三件套纳入 GPCF 自身 loop record",
+      "doc": "docs/harness/gpcf-loop-three-piece-control-integration-lr002.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-003"
+    },
+    {
+      "round_id": "GPCF-CF-LR-003",
+      "title": "L3 session 重启与计数器台账",
+      "doc": "docs/harness/gpcf-l3-session-reset-counter-register-lr003.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-004"
+    },
+    {
+      "round_id": "GPCF-CF-LR-004",
+      "title": "GFIS evidence 镜像接收登记",
+      "doc": "docs/harness/gpcf-gfis-evidence-mirror-register-lr004.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-005"
+    },
+    {
+      "round_id": "GPCF-CF-LR-005",
+      "title": "项目级文档成熟度缺口 backlog",
+      "doc": "docs/harness/gpcf-project-document-maturity-gap-backlog-lr005.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-006"
+    },
+    {
+      "round_id": "GPCF-CF-LR-006",
+      "title": "KDS 本地镜像 dry-run 同步包",
+      "doc": "docs/harness/gpcf-kds-local-mirror-dryrun-package-lr006.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-007"
+    },
+    {
+      "round_id": "GPCF-CF-LR-007",
+      "title": "Git 版本门禁 evidence 包",
+      "doc": "docs/harness/gpcf-git-version-gate-evidence-lr007.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-008"
+    },
+    {
+      "round_id": "GPCF-CF-LR-008",
+      "title": "文档防污染哨兵扩展规则",
+      "doc": "docs/harness/gpcf-document-pollution-sentinel-expansion-lr008.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-009"
+    },
+    {
+      "round_id": "GPCF-CF-LR-009",
+      "title": "Loop 指标校准包",
+      "doc": "docs/harness/gpcf-loop-metrics-calibration-lr009.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-010"
+    },
+    {
+      "round_id": "GPCF-CF-LR-010",
+      "title": "客户满意度证据台账",
+      "doc": "docs/harness/gpcf-customer-satisfaction-evidence-ledger-lr010.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-011"
+    },
+    {
+      "round_id": "GPCF-CF-LR-011",
+      "title": "依赖风险回滚登记",
+      "doc": "docs/harness/gpcf-dependency-risk-rollback-register-lr011.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-012"
+    },
+    {
+      "round_id": "GPCF-CF-LR-012",
+      "title": "Loop 自我进化 backlog",
+      "doc": "docs/harness/gpcf-loop-self-evolution-backlog-lr012.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-013"
+    },
+    {
+      "round_id": "GPCF-CF-LR-013",
+      "title": "12 项目文档控制队列",
+      "doc": "docs/harness/gpcf-12-project-document-control-queue-lr013.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-014"
+    },
+    {
+      "round_id": "GPCF-CF-LR-014",
+      "title": "L3 交接准备包",
+      "doc": "docs/harness/gpcf-l3-handoff-readiness-package-lr014.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-015"
+    },
+    {
+      "round_id": "GPCF-CF-LR-015",
+      "title": "下一授权动作决策矩阵",
+      "doc": "docs/harness/gpcf-next-authorized-action-decision-matrix-lr015.md",
+      "status": "governance_rules_only",
+      "next_round": "GPCF-CF-LR-016"
+    },
+    {
+      "round_id": "GPCF-CF-LR-016",
+      "title": "GPCF L3 第三轮最终检查点",
+      "doc": "docs/harness/gpcf-l3-third-session-final-checkpoint-lr016.md",
+      "status": "governance_rules_only",
+      "next_round": null
+    }
+  ],
+  "kds_token_configured": false,
+  "kds_api_sync_completed": false,
+  "git_push_authorized": false,
+  "production_write_allowed": false,
+  "runtime_write_api_authorized": false,
+  "bench_migrate_authorized": false,
+  "accepted_or_integrated_allowed": false,
+  "strategic_position_change_allowed": false,
+  "ready_to_execute_external_write": false,
+  "l3_session": {
+    "mode": "L3",
+    "completed_rounds": 15,
+    "round_limit": 15,
+    "remaining_rounds": 0,
+    "stop_type": "budget_exhausted",
+    "stop_evidence": "GPCF third L3 session reached 15/15 rounds",
+    "next_backlog": [
+      "collect real field samples and UAT signoffs",
+      "configure KDS token only when user approves",
+      "authorize L3.5/L4 before real API or push",
+      "expand project-level manifests for remaining projects"
+    ]
+  },
+  "forbidden_actions": [
+    "Git push",
+    "真实 KDS TOKEN 写入",
+    "真实 KDS API 双向同步",
+    "bench migrate",
+    "schema sync",
+    "运行态写 API",
+    "accepted/integrated 状态升级",
+    "生产配置修改或部署"
+  ]
+}

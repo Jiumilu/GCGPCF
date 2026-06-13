@@ -37,13 +37,42 @@ superseded_by: []
 |---|---|
 | continuous session | active / stopped / not_applicable |
 | continuous mode | L3 / L3.5 / L4 / L5 / not_applicable |
-| 已完成轮次 | n/上限 |
+| declared_rounds | n/上限 |
+| substantive_rounds | n/上限 |
+| generated_items |  |
+| batch_generated | true / false |
+| substance_gate | pass / partial / fail / not_applicable |
+| substance_evidence |  |
 | 剩余轮次 | 上限-n |
 | 已用时间 | x/时间上限 |
 | 停止类型 | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty / authorization_boundary / production_safety |
 | 停止证据 |  |
 | 是否符合停止规则 | yes / no / not_applicable |
 | 未停止时下一轮 |  |
+
+## 1.2 轮次真实性检查
+
+L3、L3.5、L4、L5 必填。每轮至少满足 4/5，才可计为 `substantive_round=1`。同一脚本、同一时间窗口、同一模板批量生成多个文档时，整批默认最多计 1 个实质轮次。
+
+| 项 | 判定 | 证据 |
+|---|---|---|
+| 独立输入 | yes / no |  |
+| 独立判断 | yes / no |  |
+| 独立输出 | yes / no |  |
+| 独立验证 | yes / no |  |
+| 独立反馈 | yes / no |  |
+
+| 字段 | 值 |
+|---|---|
+| generated_item | true / false |
+| substantive_round | true / false |
+| counted_as_continuous_round | true / false |
+| batch_generated | true / false |
+| batch_id |  |
+| similarity_with_previous | low / medium / high |
+| substance_score | 0-5 |
+| correction_required | yes / no |
+| corrected_stop_type | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty / authorization_boundary / production_safety |
 
 ## 2. 本轮目标
 

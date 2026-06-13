@@ -1,0 +1,265 @@
+{
+  "status": "gpcf_l3_project_readiness_rules_only",
+  "rounds": [
+    {
+      "round_id": "GPCF-CF-LR-017",
+      "title": "12 项目 Loop 准备度基线重算",
+      "doc": "docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-018"
+    },
+    {
+      "round_id": "GPCF-CF-LR-018",
+      "title": "PVAOS 项目启动包",
+      "doc": "docs/harness/gpcf-pvaos-project-startup-pack-lr018.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-019"
+    },
+    {
+      "round_id": "GPCF-CF-LR-019",
+      "title": "PKC 项目启动包",
+      "doc": "docs/harness/gpcf-pkc-project-startup-pack-lr019.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-020"
+    },
+    {
+      "round_id": "GPCF-CF-LR-020",
+      "title": "XGD 项目启动包",
+      "doc": "docs/harness/gpcf-xgd-project-startup-pack-lr020.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-021"
+    },
+    {
+      "round_id": "GPCF-CF-LR-021",
+      "title": "XiaoG 项目启动包",
+      "doc": "docs/harness/gpcf-xiaog-project-startup-pack-lr021.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-022"
+    },
+    {
+      "round_id": "GPCF-CF-LR-022",
+      "title": "MMC 项目启动包",
+      "doc": "docs/harness/gpcf-mmc-project-startup-pack-lr022.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-023"
+    },
+    {
+      "round_id": "GPCF-CF-LR-023",
+      "title": "KDS loop-state 补齐包",
+      "doc": "docs/harness/gpcf-kds-loop-state-completion-pack-lr023.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-024"
+    },
+    {
+      "round_id": "GPCF-CF-LR-024",
+      "title": "Brain loop-state 补齐包",
+      "doc": "docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-025"
+    },
+    {
+      "round_id": "GPCF-CF-LR-025",
+      "title": "WAES Manifest 与 loop-state 补齐包",
+      "doc": "docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-026"
+    },
+    {
+      "round_id": "GPCF-CF-LR-026",
+      "title": "GPC Manifest 与 loop-state 补齐包",
+      "doc": "docs/harness/gpcf-gpc-manifest-loopstate-pack-lr026.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-027"
+    },
+    {
+      "round_id": "GPCF-CF-LR-027",
+      "title": "XiaoC loop-state 补齐包",
+      "doc": "docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-028"
+    },
+    {
+      "round_id": "GPCF-CF-LR-028",
+      "title": "跨项目 readiness scorecard",
+      "doc": "docs/harness/gpcf-cross-project-readiness-scorecard-lr028.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-029"
+    },
+    {
+      "round_id": "GPCF-CF-LR-029",
+      "title": "项目启动模板固化包",
+      "doc": "docs/harness/gpcf-project-startup-template-hardening-lr029.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-030"
+    },
+    {
+      "round_id": "GPCF-CF-LR-030",
+      "title": "下一批项目初始化执行队列",
+      "doc": "docs/harness/gpcf-next-project-initialization-execution-queue-lr030.md",
+      "status": "project_readiness_rules_only",
+      "next_round": "GPCF-CF-LR-031"
+    },
+    {
+      "round_id": "GPCF-CF-LR-031",
+      "title": "GPCF L3 第四轮最终检查点",
+      "doc": "docs/harness/gpcf-l3-fourth-session-final-checkpoint-lr031.md",
+      "status": "project_readiness_rules_only",
+      "next_round": null
+    }
+  ],
+  "project_queue": [
+    {
+      "project": "PVAOS",
+      "code": "PV",
+      "priority": "P1",
+      "missing": [
+        "Manifest",
+        "loop-state",
+        "项目主线/架构边界",
+        "evidence",
+        "验收审计"
+      ],
+      "state_cap": "not_started_or_partial"
+    },
+    {
+      "project": "PKC",
+      "code": "PK",
+      "priority": "P1",
+      "missing": [
+        "Manifest",
+        "loop-state",
+        "项目主线/架构边界",
+        "evidence",
+        "验收审计"
+      ],
+      "state_cap": "not_started_or_partial"
+    },
+    {
+      "project": "XGD",
+      "code": "XD",
+      "priority": "P1",
+      "missing": [
+        "Manifest",
+        "loop-state",
+        "项目主线/架构边界",
+        "evidence",
+        "验收审计"
+      ],
+      "state_cap": "not_started_or_partial"
+    },
+    {
+      "project": "XiaoG",
+      "code": "XG",
+      "priority": "P1",
+      "missing": [
+        "Manifest",
+        "loop-state",
+        "项目主线/架构边界",
+        "evidence",
+        "验收审计"
+      ],
+      "state_cap": "not_started_or_partial"
+    },
+    {
+      "project": "MMC",
+      "code": "MM",
+      "priority": "P1",
+      "missing": [
+        "Manifest",
+        "loop-state",
+        "项目主线/架构边界",
+        "evidence",
+        "验收审计"
+      ],
+      "state_cap": "not_started_or_partial"
+    },
+    {
+      "project": "KDS",
+      "code": "KD",
+      "priority": "P1",
+      "missing": [
+        "loop-state",
+        "验收审计",
+        "KDS TOKEN 上线同步证据"
+      ],
+      "state_cap": "partial"
+    },
+    {
+      "project": "Brain",
+      "code": "BR",
+      "priority": "P1",
+      "missing": [
+        "loop-state",
+        "项目主线/架构边界",
+        "evidence",
+        "验收审计"
+      ],
+      "state_cap": "partial"
+    },
+    {
+      "project": "WAES",
+      "code": "WA",
+      "priority": "P2",
+      "missing": [
+        "Manifest",
+        "loop-state"
+      ],
+      "state_cap": "partial"
+    },
+    {
+      "project": "GPC",
+      "code": "GP",
+      "priority": "P2",
+      "missing": [
+        "Manifest",
+        "loop-state",
+        "一期蓝图验收证据"
+      ],
+      "state_cap": "partial"
+    },
+    {
+      "project": "XiaoC",
+      "code": "XC",
+      "priority": "P2",
+      "missing": [
+        "loop-state",
+        "UI 测试证据",
+        "Wrangler/模型路由证据"
+      ],
+      "state_cap": "partial"
+    }
+  ],
+  "kds_token_configured": false,
+  "kds_api_sync_completed": false,
+  "git_push_authorized": false,
+  "production_write_allowed": false,
+  "external_api_write_authorized": false,
+  "accepted_or_integrated_allowed": false,
+  "strategic_position_change_allowed": false,
+  "other_project_repo_write_allowed": false,
+  "ready_to_execute_external_write": false,
+  "l3_session": {
+    "mode": "L3",
+    "completed_rounds": 15,
+    "round_limit": 15,
+    "remaining_rounds": 0,
+    "stop_type": "budget_exhausted",
+    "stop_evidence": "GPCF fourth L3 session reached 15/15 rounds",
+    "next_backlog": [
+      "initialize PVAOS/PKC/XGD/XiaoG/MMC project docs under explicit project-write boundary",
+      "complete KDS/Brain/WAES/GPC/XiaoC loop-state packages",
+      "collect real field samples and UAT signoffs",
+      "configure KDS token only when user approves"
+    ]
+  },
+  "forbidden_actions": [
+    "真实 KDS TOKEN 写入",
+    "真实 KDS API 双向同步",
+    "Git push",
+    "删除或迁移项目文件",
+    "生产配置修改或部署",
+    "真实外部 API 写入",
+    "accepted/integrated 状态升级",
+    "改变项目战略定位或架构主结论"
+  ]
+}

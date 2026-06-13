@@ -4,4 +4,11 @@
 
 用途：KDS `开发` 空间中 `Brain` 项目的受控文档入口。
 
-当前没有直接归属到本项目空间的源文档；相关内容可能位于 `90-跨项目架构` 或 `91-治理与验收`。
+| doc_id | title | source_path | status |
+| --- | --- | --- | --- |
+| GPCF-DOC-0857798863 | Brain | docs/harness/Brain/README.md | controlled |
+| GPCF-DOC-4A654203DE | evidence | docs/harness/Brain/evidence/README.md | controlled |
+| GPCF-DOC-33E55CB86C | Evidence Index — Brain | docs/harness/Brain/evidence/evidence-index.md | controlled |
+| GPCF-DOC-B0F22D2E45 | GlobalCloud Brain Loop State | docs/harness/Brain/loop-state.md | controlled |
+| GPCF-DOC-0209DFB721 | loops | docs/harness/Brain/loops/README.md | controlled |
+| GPCF-DOC-F61B890C31 | Loop Round GPCF-BR-LR-001 | docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | controlled |

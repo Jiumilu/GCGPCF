@@ -28,3 +28,10 @@
 | GPCF-DOC-505DFF5C49 | GlobalCloud 绿色供应链体系高风险模块界面收口计划 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md | controlled |
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | controlled |
 | GPCF-DOC-37DD68363F | AGENTS.md | AGENTS.md | controlled |
+| GPCF-DOC-B637BE22F8 | GPC | docs/harness/GPC/README.md | controlled |
+| GPCF-DOC-61C2D40981 | evidence | docs/harness/GPC/evidence/README.md | controlled |
+| GPCF-DOC-6AA1BB56F0 | Evidence Index — GPC | docs/harness/GPC/evidence/evidence-index.md | controlled |
+| GPCF-DOC-556B3EE58F | GlobalCloud GPC Loop State | docs/harness/GPC/loop-state.md | controlled |
+| GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | controlled |
+| GPCF-DOC-C02896A291 | Loop Round GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | controlled |
+| GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | controlled |

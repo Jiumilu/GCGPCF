@@ -133,6 +133,18 @@ L4 active 后，完成一个项目、一个任务批次、一个本地 commit、
 7. 用户明确暂停、停止或降级。
 8. 任务队列为空，并已生成候选任务等待用户确认。
 
+## 真实性计数门禁
+
+L4 的 30 轮预算只能按 `substantive_rounds` 计数。本地 commit 数、文件数量、报告数量、批量脚本产物、KDS dry-run 输出或一次任务批次拆成多个模板文档，都不能自动计为多个实质轮次。
+
+每个 L4 实质轮次必须至少满足 4/5：独立任务输入、独立运营判断、独立代码/文档/配置输出、独立测试或 dry-run 证据、独立反馈/风险/回滚结论。
+
+若 `declared_rounds` 达到 30/30 但 `substantive_rounds` 未达到 30/30，不得使用 `budget_exhausted` 收口，必须更正为 `authorization_boundary`，并运行：
+
+```bash
+python3 tools/kds-sync/validate_continuous_round_substance.py
+```
+
 ## 输出要求
 
 每轮必须产出：

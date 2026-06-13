@@ -16,6 +16,7 @@ OPERATIONAL_GATES = ROOT / ".codex/skills/globalcloud-loop-orchestrator/scripts/
 LOOP_STATE = ROOT / "docs/harness/loop-state.md"
 LOOP_CONTROL_BOARD = ROOT / "02-governance/loop/LOOP_CONTROL_BOARD.md"
 LOOP_AUTONOMY_POLICY = ROOT / "02-governance/loop/LOOP_AUTONOMY_POLICY.md"
+KDS_TOKEN_VALIDATOR = ROOT / "tools/kds-sync/validate_kds_token.py"
 
 
 def read(path: Path) -> str:
@@ -61,7 +62,27 @@ def parse_projects(matrix: str) -> list[dict[str, str]]:
     return rows
 
 
+def kds_token_status() -> dict[str, object]:
+    if not KDS_TOKEN_VALIDATOR.exists():
+        return {"gate": "unknown", "reason": "validate_kds_token.py missing"}
+    proc = subprocess.run(
+        ["python3", str(KDS_TOKEN_VALIDATOR)],
+        cwd=ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    output = (proc.stdout + proc.stderr).strip()
+    return {
+        "gate": "pass" if proc.returncode == 0 else "blocked",
+        "output": output,
+    }
+
+
 def kds_token_deferred_for_local_dev() -> bool:
+    status = kds_token_status()
+    if status.get("gate") == "pass":
+        return False
     text = read(LOOP_STATE)
     return "KDS TOKEN" in text and "暂缓" in text
 
@@ -387,6 +408,7 @@ def main() -> int:
     result = {
         "document_gate": gate,
         "loop_governance_docs": loop_governance_docs_status(),
+        "kds_token_status": kds_token_status(),
         "kds_token_deferred_for_local_dev": kds_token_deferred_for_local_dev(),
         "git_gate": git_gate(),
         "operational_gates": operational_gates(),

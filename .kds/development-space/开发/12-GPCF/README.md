@@ -52,6 +52,37 @@
 | GPCF-DOC-7183C7D7D1 | GPCF Loop State | docs/harness/loop-state.md | controlled |
 | GPCF-DOC-59D8079155 | loops | docs/harness/loops/README.md | controlled |
 | GPCF-DOC-7CD4D9DE05 | Loop Round GPCF-CF-LR-001 | docs/harness/loops/loop-round-GPCF-CF-LR-001.md | controlled |
+| GPCF-DOC-263315555E | Loop Round GPCF-CF-LR-002 | docs/harness/loops/loop-round-GPCF-CF-LR-002.md | controlled |
+| GPCF-DOC-CA61033026 | Loop Round GPCF-CF-LR-003 | docs/harness/loops/loop-round-GPCF-CF-LR-003.md | controlled |
+| GPCF-DOC-F1483E9187 | Loop Round GPCF-CF-LR-004 | docs/harness/loops/loop-round-GPCF-CF-LR-004.md | controlled |
+| GPCF-DOC-DF902B42F7 | Loop Round GPCF-CF-LR-005 | docs/harness/loops/loop-round-GPCF-CF-LR-005.md | controlled |
+| GPCF-DOC-64EF5A101D | Loop Round GPCF-CF-LR-006 | docs/harness/loops/loop-round-GPCF-CF-LR-006.md | controlled |
+| GPCF-DOC-E4D9971B44 | Loop Round GPCF-CF-LR-007 | docs/harness/loops/loop-round-GPCF-CF-LR-007.md | controlled |
+| GPCF-DOC-7588D42910 | Loop Round GPCF-CF-LR-008 | docs/harness/loops/loop-round-GPCF-CF-LR-008.md | controlled |
+| GPCF-DOC-3CE0CC9E98 | Loop Round GPCF-CF-LR-009 | docs/harness/loops/loop-round-GPCF-CF-LR-009.md | controlled |
+| GPCF-DOC-8B858A24EA | Loop Round GPCF-CF-LR-010 | docs/harness/loops/loop-round-GPCF-CF-LR-010.md | controlled |
+| GPCF-DOC-0E9D05E120 | Loop Round GPCF-CF-LR-011 | docs/harness/loops/loop-round-GPCF-CF-LR-011.md | controlled |
+| GPCF-DOC-0EFEDDBBBB | Loop Round GPCF-CF-LR-012 | docs/harness/loops/loop-round-GPCF-CF-LR-012.md | controlled |
+| GPCF-DOC-AA869E057E | Loop Round GPCF-CF-LR-013 | docs/harness/loops/loop-round-GPCF-CF-LR-013.md | controlled |
+| GPCF-DOC-333E7712A6 | Loop Round GPCF-CF-LR-014 | docs/harness/loops/loop-round-GPCF-CF-LR-014.md | controlled |
+| GPCF-DOC-7B65DF5048 | Loop Round GPCF-CF-LR-015 | docs/harness/loops/loop-round-GPCF-CF-LR-015.md | controlled |
+| GPCF-DOC-E8280D1FF3 | Loop Round GPCF-CF-LR-016 | docs/harness/loops/loop-round-GPCF-CF-LR-016.md | controlled |
+| GPCF-DOC-8A6E9E74FB | Loop Round GPCF-CF-LR-017 | docs/harness/loops/loop-round-GPCF-CF-LR-017.md | controlled |
+| GPCF-DOC-7F4E90EE08 | Loop Round GPCF-CF-LR-018 | docs/harness/loops/loop-round-GPCF-CF-LR-018.md | controlled |
+| GPCF-DOC-C0C00CA3A7 | Loop Round GPCF-CF-LR-019 | docs/harness/loops/loop-round-GPCF-CF-LR-019.md | controlled |
+| GPCF-DOC-66360EF440 | Loop Round GPCF-CF-LR-020 | docs/harness/loops/loop-round-GPCF-CF-LR-020.md | controlled |
+| GPCF-DOC-1516796DE1 | Loop Round GPCF-CF-LR-021 | docs/harness/loops/loop-round-GPCF-CF-LR-021.md | controlled |
+| GPCF-DOC-15D3037B0E | Loop Round GPCF-CF-LR-022 | docs/harness/loops/loop-round-GPCF-CF-LR-022.md | controlled |
+| GPCF-DOC-C20DCA6411 | Loop Round GPCF-CF-LR-023 | docs/harness/loops/loop-round-GPCF-CF-LR-023.md | controlled |
+| GPCF-DOC-8D465D68FD | Loop Round GPCF-CF-LR-024 | docs/harness/loops/loop-round-GPCF-CF-LR-024.md | controlled |
+| GPCF-DOC-EF2314F792 | Loop Round GPCF-CF-LR-025 | docs/harness/loops/loop-round-GPCF-CF-LR-025.md | controlled |
+| GPCF-DOC-919933AFD0 | Loop Round GPCF-CF-LR-026 | docs/harness/loops/loop-round-GPCF-CF-LR-026.md | controlled |
+| GPCF-DOC-929D19353E | Loop Round GPCF-CF-LR-027 | docs/harness/loops/loop-round-GPCF-CF-LR-027.md | controlled |
+| GPCF-DOC-F3CAF2BD90 | Loop Round GPCF-CF-LR-028 | docs/harness/loops/loop-round-GPCF-CF-LR-028.md | controlled |
+| GPCF-DOC-24C3201BB2 | Loop Round GPCF-CF-LR-029 | docs/harness/loops/loop-round-GPCF-CF-LR-029.md | controlled |
+| GPCF-DOC-9398FB212F | Loop Round GPCF-CF-LR-030 | docs/harness/loops/loop-round-GPCF-CF-LR-030.md | controlled |
+| GPCF-DOC-02E635F425 | Loop Round GPCF-CF-LR-031 | docs/harness/loops/loop-round-GPCF-CF-LR-031.md | controlled |
+| GPCF-DOC-BB52623034 | Loop Round GPCF-CF-LR-032 | docs/harness/loops/loop-round-GPCF-CF-LR-032.md | controlled |
 | GPCF-DOC-40F0A4CB83 | Status Audit — GPCF 首轮纳入 | docs/harness/status-audit-2026-06-10.md | controlled |
 | GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | draft |
 | GPCF-DOC-18A2F48E80 | Session Authentication | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |

@@ -26,24 +26,24 @@ superseded_by: []
 
 | # | 项目 | 代号 | 主线定位 | 牵头智能体 | Manifest | loop-state | 微循环轮次 | evidence完整率 | 当前状态 | 阻塞项 | Harness判定 | 下一步 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | GlobalCloud GFIS | GF | 工厂执行系统 / 工厂事实主账 | 厂行 | 是 | 是 | 30 | 99% | partial | 现场真实样本尚未提交；业务 UAT 尚未由工厂/生产/质量/仓储/GPC/WAES 角色签收；生产环境确认和外部联调仍缺；`127.0.0.1:8080` 被本机 Python/uvicorn 占用；迁移窗口未授权；所有 received/signed/confirmed 均为 false | partial | 建立签收证据接收后的审计准备规则；仍不执行 `bench migrate`、schema sync、写 API 或外部联调 |
-| 2 | GlobalCloud GPC | GP | 绿色供应链公共服务平台本体 | 链同 | 否 | 否 | 0 | 0% | not_started | 目标平台骨架尚未形成可验收实现 | - | 补齐 Manifest 与一期蓝图 |
-| 3 | GlobalCloud PVAOS | PV | 平台运营与门户底座 | 链同 | 否 | 否 | 0 | 0% | not_started | - | - | 补齐 Manifest（P2） |
-| 4 | GlobalCloud WAES | WA | 治理 / 证据 / 状态门控 / AI 越权控制 | 宪衡 | 否 | 否 | 0 | 0% | not_started | - | - | 补齐 Manifest（P2） |
-| 5 | GlobalCloud KDS | KD | 企业知识主存 | 数枢 | 基础 | 否 | 0 | 0% | not_started | - | - | 试点项目，P1 初始化 |
-| 6 | GlobalCloud Brain | BR | 知识编制与引擎 / 知识 UI 平台 | 灵策 | 基础 | 否 | 0 | 0% | not_started | - | - | 试点项目，P1 初始化 |
-| 7 | GlobalCloud PKC | PK | 个人知识工作台 | 链同 | 否 | 否 | 0 | 0% | not_started | - | - | 试点项目，P1 初始化 |
-| 8 | GlobalCloud XiaoC | XC | 蚁后：AI 能力生产与编排路由 | 灵策 | partial | 否 | 0 | 0% | partial | UI 测试 / Wrangler / loop-state 缺口 | - | 补齐 loop-state.md |
-| 9 | GlobalCloud XGD | XD | 大象：长程 Agent、重分析、多端交互和复杂任务承载 | 灵策 | 否 | 否 | 0 | 0% | not_started | Manifest 缺口 | - | 补齐 Manifest（P1） |
-| 10 | GlobalCloud XiaoG | XG | 轻量执行入口 / 蚂蚁 | 接稳 | 否 | 否 | 0 | 0% | not_started | Manifest 缺口 | - | 补齐 Manifest（P1） |
-| 11 | GlobalCloud MMC | MM | 管理配置中心 / 治理模板基线 | 宪衡 | 否 | 否 | 0 | 0% | not_started | Manifest 缺口 | - | 试点项目，P1 初始化 |
-| 12 | GlobalCoud GPCF | CF | 体系文档工作区 / 总控治理仓 | 小即 | 是 | 是 | 2 | 70% | partial | KDS TOKEN 暂缓为上线同步门禁；Git dirty；多项目文档体系待补齐 | partial | 监督 GFIS 数据字典与接口契约生成，并补 GPCF command log / Git clean evidence |
+| 1 | GlobalCloud GFIS | GF | 工厂执行系统 / 工厂事实主账 | 厂行 | 是 | 是 | 60 | 99% | partial | 现场真实样本尚未提交；业务 UAT 尚未由工厂/生产/质量/仓储/GPC/WAES 角色签收；生产环境确认和外部联调仍缺；`127.0.0.1:8080` 被本机 Python/uvicorn 占用；迁移窗口未授权；所有 received/signed/confirmed 均为 false；第二轮 L3 本次 15/15 已用尽 | partial | 需要真实样本、UAT 签收、WAES/GPC/Finance 确认或用户授权新 L3/L4；仍不执行 `bench migrate`、schema sync、写 API 或外部联调 |
+| 2 | GlobalCloud GPC | GP | 绿色供应链公共服务平台本体 | 链同 | 待人工蓝图确认 | 是 | 2 | 45% | partial | 目标平台骨架尚未形成可验收实现；一期蓝图与架构主结论需人工确认；Git push/PR merge 未执行；`GPCF-GP-LR-002` 已完成授权边界核对但未写蓝图 | partial | 需用户授权后补齐 Manifest、一期蓝图和真实项目仓验证 |
+| 3 | GlobalCloud PVAOS | PV | 平台运营与门户底座 | 链同 | 基础 | 是 | 2 | 45% | partial | 真实 PVAOS 项目仓未确认；门户底座、平台运营对象、租户/伙伴/组织能力未运行态验证；`GPCF-PV-LR-002` 已完成验证清单 | partial | 授权后进入真实 PVAOS 项目仓或运行态验证 |
+| 4 | GlobalCloud WAES | WA | 治理 / 证据 / 状态门控 / AI 越权控制 | 宪衡 | 基础 | 是 | 2 | 45% | partial | WAES 真实项目仓未确认；门禁语义、验收审计、AI 越权控制和跨项目状态裁决仍需专项确认；`GPCF-WA-LR-002` 已完成验证清单 | partial | 授权后进入 WAES 门禁语义和真实裁决链路验证 |
+| 5 | GlobalCloud KDS | KD | 企业知识主存 | 数枢 | 基础 | 是 | 2 | 50% | partial | 真实 KDS 项目仓已确认并已落地最小 Loop 文档体系；知识对象映射、运行态索引健康、KDS API contract、Brain/PKC 依赖验证仍未完成；Git push/PR merge 未执行 | partial | 授权后推进 KDS runtime index read-only check、API contract dry-run 或 Git 提交推送 |
+| 6 | GlobalCloud Brain | BR | 知识编制与引擎 / 知识 UI 平台 | 灵策 | 基础 | 是 | 3 | 55% | partial | 真实 Brain 项目仓已确认，`.env` 敏感文件门禁、最小 Loop harness 和 ESLint 9 flat config 已落地；`pnpm lint` 通过但有 16 个 warning，`pnpm format:check` 因 68 个既有源码文件格式未对齐失败；缺 test script；知识编制、知识 UI、模型路由和 KDS 映射未完成；Git push/PR merge 未执行 | partial | 授权后推进 Brain format/test script/lint warning 专项，或建立知识编制对象、知识 UI 边界、模型路由与 KDS 依赖映射清单 |
+| 7 | GlobalCloud PKC | PK | 个人知识工作台 | 链同 | 基础 | 是 | 2 | 50% | partial | 真实 PKC 项目仓已确认并已落地最小 Loop 文档体系；个人知识对象、端到端用户闭环、KDS/Brain 依赖和体验验证仍未完成；Git push/PR merge 未执行 | partial | 授权后推进 PKC workflow dry-run、KDS/Brain 依赖验证或 Git 提交推送 |
+| 8 | GlobalCloud XiaoC | XC | 蚁后：AI 能力生产与编排路由 | 灵策 | partial | 是 | 2 | 60% | partial | 真实 XiaoC 项目仓已确认并已落地最小 Loop 文档体系；UI 测试、Wrangler、模型路由和真实部署证据未完成；Git push/PR merge 未执行 | partial | 授权后推进 XiaoC 模型路由、AI 能力生产、编排链路、UI 超时测试或 Wrangler/部署验证 |
+| 9 | GlobalCloud XGD | XD | 大象：长程 Agent、重分析、多端交互和复杂任务承载 | 灵策 | 基础 | 是 | 2 | 50% | partial | 真实 XGD 项目仓已确认并已落地最小 Loop 文档体系；长程 Agent、重分析、多端交互、复杂任务承载、Brain UI/ACUI 和外部渠道验证仍未完成；Git push/PR merge 未执行 | partial | 授权后推进 XGD TICK loop dry-run、Brain UI/ACUI smoke 或 Git 提交推送 |
+| 10 | GlobalCloud XiaoG | XG | 轻量执行入口 / 蚂蚁 | 接稳 | 基础 | 是 | 2 | 45% | partial | 真实 XiaoG 项目仓未确认；设备/语音接入、GFIS/WAES 触发链路和真实设备验证未完成；`GPCF-XG-LR-002` 已完成验证清单 | partial | 授权后进入真实设备/语音触发链路验证 |
+| 11 | GlobalCloud MMC | MM | 管理配置中心 / 治理模板基线 | 宪衡 | 是 | 是 | 2 | 55% | partial | 真实 MMC 项目仓已确认并已写入最小 Loop 文档体系；治理模板字段字典与复用验证清单仍需深化；Git push/PR merge 未执行；生产部署、数据库迁移、Registry 退役仍需人工确认 | partial | `GPCF-MM-LR-002` 继续建立治理模板字段字典与模板复用验证清单 |
+| 12 | GlobalCoud GPCF | CF | 体系文档工作区 / 总控治理仓 | 小即 | 是 | 是 | 54 | 89% | partial | Git dirty；本轮仅完成 1 个真实实质轮次：Brain ESLint 9 flat config 补齐；Brain format/test script/lint warning 仍有质量缺口；GPC 一期蓝图、WAES 门禁语义、accepted/integrated、Git push/PR merge、生产部署、真实模型/API 调用和外部 API 均未授权；KDS Token 已 pass | partial | 下一步需用户授权继续 Brain format/test script/lint warning 专项、XiaoC 模型路由/UI/Wrangler 专项、Git commit/push 或更高自治模式 |
 
 ## 状态分布统计
 
 | 状态 | 项目数 | 项目 |
 |---|---|---|
-| not_started | 9 | GPC、PVAOS、WAES、KDS、Brain、PKC、XGD、XiaoG、MMC |
+| not_started | 0 | - |
 | loop_ready | 0 | - |
 | loop_running | 0 | - |
 | evidence_ready | 0 | - |
@@ -51,18 +51,18 @@ superseded_by: []
 | harness_review | 0 | - |
 | accepted | 0 | - |
 | integrated | 0 | - |
-| partial | 3 | GFIS、XiaoC、GPCF |
+| partial | 12 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
 | blocked | 0 | - |
 
 ## 试点项目专项跟踪
 
 | 项目 | 代号 | 首轮重点 | 目标轮次 | 当前轮次 |
 |---|---|---|---|---|
-| MMC | MM | 治理模板基线、配置标准化 | 3 | 0 |
-| KDS | KD | 数据资产、指标、证据结构化 | 3 | 0 |
-| Brain | BR | 知识 UI 层联邦闭环 | 3 | 0 |
-| PKC | PK | 端到端用户闭环 | 3 | 0 |
-| GFIS | GF | 工厂主链试点、工单/质量/库存闭环 | 31 | 30 |
+| MMC | MM | 治理模板基线、配置标准化 | 3 | 2 |
+| KDS | KD | 数据资产、指标、证据结构化 | 3 | 2 |
+| Brain | BR | 知识 UI 层联邦闭环 | 3 | 1 |
+| PKC | PK | 端到端用户闭环 | 3 | 2 |
+| GFIS | GF | 工厂主链试点、工单/质量/库存闭环 | 60 | 60 |
 
 ## 更新记录
 
@@ -101,3 +101,33 @@ superseded_by: []
 | 2026-06-13 | v1.30：完成 GFIS `GPCF-GF-LR-028` 样本回收跟踪台账和 UAT 问题分级模板，所有 received/signed/confirmed 保持 false |
 | 2026-06-13 | v1.31：完成 GFIS `GPCF-GF-LR-029` 样本提交包验收规则和脱敏复核清单，所有 received/signed/confirmed 保持 false |
 | 2026-06-13 | v1.32：完成 GFIS `GPCF-GF-LR-030` UAT 问题处置闭环和豁免复核规则，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.33：完成 GFIS `GPCF-GF-LR-031` 签收证据接收后的审计准备规则，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.34：完成 GFIS `GPCF-GF-LR-032` 现场样本进入 evidence 前的审计队列，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.35：完成 GFIS `GPCF-GF-LR-033` Harness 审计输入包生成规则，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.36：完成 GFIS `GPCF-GF-LR-034` UAT/Harness 审计问题回流规则，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.37：完成 GFIS `GPCF-GF-LR-035` 审计阻塞项优先级与责任人分派规则，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.38：完成 GFIS `GPCF-GF-LR-036` 审计回流后的重验证批次规则，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.39：完成 GFIS `GPCF-GF-LR-037` 至 `GPCF-GF-LR-045` L3 延续治理批次，L3 本次达到 15/15，stop_type 为 budget_exhausted，所有 received/signed/confirmed 保持 false |
+| 2026-06-13 | v1.40：完成 GFIS `GPCF-GF-LR-046` 至 `GPCF-GF-LR-060` 第二轮 L3 治理批次，第二轮 L3 本次达到 15/15，stop_type 为 budget_exhausted，所有 received/signed/confirmed 保持 false |
+
+| 2026-06-13 | v1.41：完成 GPCF `GPCF-CF-LR-002` 至 `GPCF-CF-LR-016` 总控治理 L3 批次，本次达到 15/15，stop_type 为 budget_exhausted，KDS TOKEN、Git push、生产写入和 accepted/integrated 均未授权 |
+| 2026-06-13 | v1.42：完成 GPCF `GPCF-CF-LR-017` 至 `GPCF-CF-LR-031` 12 项目准备度 L3 批次，本次达到 15/15，stop_type 为 budget_exhausted，其他项目仓写入、KDS TOKEN、Git push、生产写入和 accepted/integrated 均未授权 |
+| 2026-06-13 | v1.43：完成 `GPCF-CF-LR-032` KDS Token 事实纠偏，确认本机私有 Token pass fingerprint=bfd9553d，真实 `开发` 空间 API 同步已跑通；Git push/PR merge 仍未做 |
+| 2026-06-13 | v1.44：按新 L3 真实性规则完成 `GPCF-MM-LR-001` MMC 初始化，计为 1 个实质轮次，stop_type=authorization_boundary，未升级 accepted/integrated |
+| 2026-06-13 | v1.45：按新 L3 真实性规则完成 `GPCF-KD-LR-001` KDS 初始化，累计 2 个实质轮次，未写真实 KDS 项目仓、未泄露 Token、未升级 accepted/integrated |
+| 2026-06-13 | v1.46：按新 L3 真实性规则完成 `GPCF-BR-LR-001` Brain 初始化，累计 3 个实质轮次，未写真实 Brain 项目仓、未升级 accepted/integrated |
+| 2026-06-13 | v1.47：按新 L3 真实性规则完成 `GPCF-PK-LR-001` PKC 初始化，累计 4 个实质轮次，未写真实 PKC 项目仓、未升级 accepted/integrated |
+| 2026-06-13 | v1.48：按新 L3 真实性规则完成 `GPCF-XC-LR-001` XiaoC 初始化，累计 5 个实质轮次，保留 UI/Wrangler/模型路由缺口，未升级 accepted/integrated |
+| 2026-06-13 | v1.49：按新 L3 真实性规则完成 `GPCF-XD-LR-001` XGD 初始化，累计 6 个实质轮次，保留大象定位和长程任务验证缺口，未升级 accepted/integrated |
+| 2026-06-13 | v1.50：按新 L3 真实性规则完成 `GPCF-GP-LR-001` GPC 初始化，累计 7 个实质轮次，未改一期蓝图、未升级 accepted/integrated |
+| 2026-06-13 | v1.51：按新 L3 真实性规则完成 `GPCF-XG-LR-001` XiaoG 初始化，累计 8 个实质轮次，未写真实 XiaoG 项目仓、未升级 accepted/integrated |
+| 2026-06-13 | v1.52：按新 L3 真实性规则完成 `GPCF-PV-LR-001` PVAOS 初始化，累计 9 个实质轮次，未写真实 PVAOS 项目仓、未升级 accepted/integrated |
+| 2026-06-13 | v1.53：按新 L3 真实性规则完成 `GPCF-WA-LR-001` WAES 初始化，累计 10 个实质轮次，12 项目均已具备项目级 loop-state/evidence 初始化入口 |
+| 2026-06-13 | v1.54：严格按新 L3 规则完成 `GPCF-WA-LR-002`、`GPCF-GP-LR-002`、`GPCF-PV-LR-002`、`GPCF-XG-LR-002`、`GPCF-MM-LR-002` 二轮治理验证清单，累计 15/15 个实质轮次，stop_type=budget_exhausted，未写真实项目仓、未推送、未升级 accepted/integrated |
+| 2026-06-13 | v1.55：按 Loop 新真实性规则完成 1 个真实实质轮次 `PKC-LR-001`，在真实 PKC 项目仓落地最小 Loop harness、项目级 validator，并修复本地测试/typecheck 暴露的局部问题；declared_rounds=1/15、substantive_rounds=1/15、generated_items=9、batch_generated=false、substance_gate=pass，未推送、未生产写入、未真实外部 API 写入、未升级 accepted/integrated |
+| 2026-06-13 | v1.56：按 Loop 新真实性规则完成 1 个真实实质轮次 `KDS-LR-001`，在真实 KDS 项目仓落地最小 Loop harness 和项目级 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=pass，未推送、未生产写入、未真实外部 API 写入、未数据库/index 刷新、未升级 accepted/integrated/complete |
+| 2026-06-13 | v1.57：按 Loop 新真实性规则完成 1 个真实实质轮次 `XGD-LR-001`，在真实 XGD 项目仓落地最小 Loop harness 和项目级 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=pass，`npm test` 通过，未推送、未生产写入、未真实外部 API 写入、未 Electron 启动/打包、未升级 accepted/integrated/complete |
+| 2026-06-13 | v1.58：按 Loop 新真实性规则完成 1 个真实实质轮次 `XiaoC-LR-001`，在真实 XiaoC 项目仓落地最小 Loop harness 和项目级 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=pass，`pnpm test:repo` 通过，未推送、未生产写入、未真实外部 API 写入、未 Cloudflare deploy、未升级 accepted/integrated/complete |
+| 2026-06-13 | v1.59：按 Loop 新真实性规则完成 1 个真实实质轮次 `Brain-LR-001`，在真实 Brain 项目仓闭合 `.env` 敏感文件 Git ignore 门禁并落地最小 Loop harness 和项目级 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=7、batch_generated=false、substance_gate=partial，`pnpm build` 通过，`pnpm lint`/`pnpm format:check` 暴露既有缺口，未读取 `.env` 内容，未推送、未生产写入、未真实外部 API 调用、未升级 accepted/integrated/complete |
+| 2026-06-13 | v1.60：按 Loop 新真实性规则完成 1 个真实实质轮次 `Brain-LR-002`，在真实 Brain 项目仓补齐 ESLint 9 flat config；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=partial，`pnpm lint` 通过且为 0 errors / 16 warnings，`pnpm build` 通过，`pnpm format:check` 仍因 68 个既有源码文件格式未对齐失败，未推送、未生产写入、未真实外部 API 调用、未升级 accepted/integrated/complete |
+| 2026-06-13 | v1.55：落实 L3 改进建议到真实 MMC 项目仓，新增 MMC `docs/harness/loop-state.md`、evidence index、loop record 与 `validate_mmc_loop_harness.py`，并通过 MMC 30 项 runtime tests；状态仍为 partial |

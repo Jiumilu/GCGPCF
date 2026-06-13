@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C436DDB0F6
 title: GlobalCloud 文档健康报告
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -18,33 +18,39 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-13T06:53:31.062031+00:00
+生成时间：2026-06-13T08:31:47.596498+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：424
-- KDS 镜像 Markdown：437
-- KDS 同步流水：424
+- 仓库 Markdown：492
+- KDS 镜像 Markdown：505
+- KDS 同步流水：492
 - 元数据缺失：0
 - README 缺失目录：0
 
 ## 状态分布
 
 - archive: 85
-- controlled: 304
+- controlled: 372
 - draft: 13
 - operational_controlled: 19
 
 ## 项目分布
 
+- Brain: 6
 - GFIS: 14
-- GPC: 27
-- GPCF: 131
-- KDS: 67
-- WAES: 124
-- XiaoC: 58
+- GPC: 34
+- GPCF: 132
+- KDS: 74
+- MMC: 8
+- PKC: 6
+- PVAOS: 7
+- WAES: 131
+- XGD: 6
+- XiaoC: 64
+- XiaoG: 7
 
 ## 命令结果
 

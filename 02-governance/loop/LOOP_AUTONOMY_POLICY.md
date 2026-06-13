@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-29E5B0AC17
 title: Loop Autonomy Policy
 project: WAES
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAES, KDS]
 domain: governance
 status: controlled
 version: v1.0
@@ -41,11 +41,59 @@ L3、L3.5、L4、L5 均属于连续运行模式。连续运行模式一旦通过
 | L4 | 30 轮 | 4 小时 | 明确启动 L4 | 未触发停止条件且任务队列不为空必须继续 |
 | L5 | 10 轮 | 2 小时 | L5 强授权口令完整 | 每轮重新验证生产监控、回滚和授权边界；未触发停止条件必须继续 |
 
+### 连续运行真实性计数规则
+
+L3、L3.5、L4、L5 的轮次预算只能按 `substantive_rounds` 计数，不能按生成文件数量、模板数量、脚本输出数量或声明轮次数计数。
+
+| 字段 | 定义 | 能否用于耗尽连续运行预算 |
+|---|---|---|
+| `declared_rounds` | 文档或记录中声明完成的轮次数 | 否，必须经真实性门禁校正 |
+| `generated_items` | 生成的文档、模板、清单、记录、fixture 或脚本数量 | 否 |
+| `batch_artifacts` | 同一脚本、同一时间窗口、同一模板批量生成的产物 | 否，整批默认最多计 1 轮 |
+| `substantive_rounds` | 具备独立输入、判断、输出、验证和反馈的实质轮次 | 是 |
+| `substance_gate` | pass / partial / fail | 只有 pass 可作为预算耗尽依据 |
+
+每个连续运行轮次必须通过真实性检查。以下 5 项中至少满足 4 项，才可计为 `substantive_round=1`：
+
+| 真实性维度 | 最低要求 |
+|---|---|
+| 独立输入 | 本轮输入、上下文、对象或问题与上一轮有实质差异 |
+| 独立判断 | 本轮有新的分析、取舍、风险判断、状态判定或授权判断 |
+| 独立输出 | 本轮输出不是简单模板复制，且与上一轮存在可说明的实质差异 |
+| 独立验证 | 本轮至少有一次校验、测试、命令、对照、审计或人工确认记录 |
+| 独立反馈 | 本轮明确产生下一步、阻塞、回滚、经验、规则或技能改进 |
+
+批量生成限制：
+
+```text
+同一脚本、同一时间窗口、同一模板批量生成多个 Round 文档或 Loop record 时，默认只能计为 1 个 substantive_round。
+```
+
+若连续运行模式的 `declared_rounds` 已达上限，但 `substantive_rounds` 未达上限，不得使用 `budget_exhausted` 作为停止类型。应使用：
+
+```text
+stop_type=authorization_boundary
+```
+
+停止证据必须说明：
+
+```text
+生成批次已完成，但实质轮次未满；继续推进需要重新选择真实任务队列、补充独立输入，或取得更高授权。
+```
+
+适用范围：
+
+- L3：文档治理、mock、dry-run、validator 和本地小范围开发均适用。
+- L3.5：真实接口读、鉴权、validate-only、sandbox/staging 或单条测试写入均适用。
+- L4：自动运营、commit、白名单 push、KDS dry-run 或白名单同步均适用。
+- L5：生产自治、发布、监控、回滚和复盘均适用。
+
 ### 通用非停止条件
 
 以下情况不得作为 L3/L3.5/L4/L5 的停止理由：
 
 - 完成 1 轮或 2 轮。
+- 完成 3 轮、5 轮或 10 轮。
 - 完成一个小任务或一个局部验证。
 - 做了阶段性收口汇报。
 - 生成了日报、周报、risk report 或下一轮建议。
@@ -69,6 +117,38 @@ L3、L3.5、L4、L5 均属于连续运行模式。连续运行模式一旦通过
 | 停止类型 | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty / authorization_boundary / production_safety |
 | 停止证据 | 未停止时写 `无` |
 | 下一轮 | 未停止时必须给出下一轮 Round ID 或任务 |
+| declared_rounds | 声明轮次数 |
+| substantive_rounds | 通过真实性门禁的实质轮次数 |
+| generated_items | 生成产物数量 |
+| batch_generated | true / false |
+| substance_gate | pass / partial / fail |
+| substance_evidence | 真实性证据摘要 |
+
+### L3 final answer guard
+
+当 `L3 session = active`、`已完成轮次 < 15`、`停止类型 = none` 且存在下一轮时，Loop 不得发送最终收口回答。此时只能发送阶段性进度更新，并必须继续下一轮。
+
+允许发送最终收口回答的停止类型只有：
+
+- `hard_stop`
+- `user_stop`
+- `budget_exhausted`
+- `time_exhausted`
+- `task_queue_empty`
+- `authorization_boundary`
+
+以下写法属于 L3 停止反模式，必须由门禁拦截：
+
+| 反模式 | 原因 |
+|---|---|
+| `3/15` 后 final 收口 | 3 轮不是停止条件 |
+| `5/15` 后 final 收口 | 5 轮不是停止条件 |
+| `10/15` 后 final 收口 | 10 轮不是停止条件 |
+| 阶段性汇报后停止 | 阶段性汇报只能是 progress update |
+| 生成下一轮建议后停止 | 下一轮建议是继续执行输入，不是停止证据 |
+| `stop_type=none` 但 `session=stopped` | 自相矛盾，必须修正 |
+| 批量生成 15 个文档后写 `budget_exhausted` | 生成产物不等于 15 个实质轮次 |
+| `declared_rounds=15` 但 `substantive_rounds<15` | 预算未真实耗尽，必须改为 `authorization_boundary` |
 
 ## L3 托管冲刺规则
 
@@ -112,6 +192,11 @@ L3 只能在满足以下任一条件时停止：
 | 停止类型 | none / hard_stop / user_stop / budget_exhausted / time_exhausted / task_queue_empty |
 | 停止证据 | 未停止时写 `无` |
 | 下一轮 | 未停止时必须给出下一轮 Round ID 或任务 |
+| declared_rounds | 声明完成轮次 |
+| substantive_rounds | 实质完成轮次 |
+| generated_items | 生成产物数量 |
+| batch_generated | true / false |
+| substance_gate | pass / partial / fail |
 
 ## L3.5 受控真实接口验证规则
 
@@ -233,8 +318,9 @@ L5 是最高等级生产自治能力，状态为 `executable / not activated`。
 
 ## KDS TOKEN 策略
 
-- 本开发机阶段 KDS TOKEN 可暂缓。
-- TOKEN 缺失时允许本地 KDS 镜像与台账治理，但不得声明真实 KDS API 双向同步完成。
+- 本机私有 KDS TOKEN 已配置在 `/Users/lujunxiang/.globalcloud/kds.env`，当前校验结果为 `kds_token=pass fingerprint=bfd9553d`。
+- TOKEN 缺失时只允许本地 KDS 镜像与台账治理；TOKEN pass 时允许通过受控工具链访问 KDS `开发` 空间 read/write/edit，并必须保留审计流水。
+- 非 `开发` 空间访问必须被拒绝，当前验证结果为 `403`。
 - 不得把 TOKEN 写入 Git、`.kds/`、日志、文档或 evidence。
 
 ## 外部 API 边界

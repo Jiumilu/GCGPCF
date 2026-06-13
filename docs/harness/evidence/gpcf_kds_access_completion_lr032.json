@@ -1,0 +1,28 @@
+{
+  "round_id": "GPCF-CF-LR-032",
+  "status": "kds_token_completed_local_dev",
+  "token_private_file": "/Users/lujunxiang/.globalcloud/kds.env",
+  "token_fingerprint": "bfd9553d",
+  "token_plaintext_in_git": false,
+  "token_plaintext_in_docs": false,
+  "token_plaintext_in_evidence": false,
+  "token_plaintext_in_logs": false,
+  "kds_space": "开发",
+  "kds_api_scope": [
+    "read",
+    "write",
+    "edit"
+  ],
+  "non_development_space_access": "denied_403",
+  "real_kds_sync_ran": true,
+  "audit_ledger": ".kds/sync-ledger.jsonl",
+  "commits": {
+    "kds_source_of_record": "3e42579",
+    "gpcf_toolchain": "51f9d0d",
+    "kds_api": "52db3e4"
+  },
+  "git_push_done": false,
+  "pr_merge_done": false,
+  "accepted_or_integrated_allowed": false,
+  "business_evidence_completed": false
+}

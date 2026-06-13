@@ -4,4 +4,12 @@
 
 用途：KDS `开发` 空间中 `PVAOS` 项目的受控文档入口。
 
-当前没有直接归属到本项目空间的源文档；相关内容可能位于 `90-跨项目架构` 或 `91-治理与验收`。
+| doc_id | title | source_path | status |
+| --- | --- | --- | --- |
+| GPCF-DOC-C16FB51046 | PVAOS | docs/harness/PVAOS/README.md | controlled |
+| GPCF-DOC-A7F2AE6ACC | evidence | docs/harness/PVAOS/evidence/README.md | controlled |
+| GPCF-DOC-5266DDB981 | Evidence Index — PVAOS | docs/harness/PVAOS/evidence/evidence-index.md | controlled |
+| GPCF-DOC-3A5C57AC3E | GlobalCloud PVAOS Loop State | docs/harness/PVAOS/loop-state.md | controlled |
+| GPCF-DOC-70CE112465 | loops | docs/harness/PVAOS/loops/README.md | controlled |
+| GPCF-DOC-8DDE495C90 | Loop Round GPCF-PV-LR-001 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-001.md | controlled |
+| GPCF-DOC-3F65E8E8EC | Loop Round GPCF-PV-LR-002 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md | controlled |

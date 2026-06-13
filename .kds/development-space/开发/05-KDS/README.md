@@ -27,8 +27,45 @@
 | GPCF-DOC-A7C38B4EA7 | 数据、AI 与知识 | 03-data-ai-knowledge/README.md | controlled |
 | GPCF-DOC-A2F5EC5E20 | GCBrain 专业版 v3.0 全量开发文档 | docs/GCBrain-Development-Manual.md | controlled |
 | GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | controlled |
+| GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | controlled |
+| GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | controlled |
+| GPCF-DOC-0749030BBD | Evidence Index — KDS | docs/harness/KDS/evidence/evidence-index.md | controlled |
+| GPCF-DOC-19C33DD1F8 | GlobalCloud KDS Loop State | docs/harness/KDS/loop-state.md | controlled |
+| GPCF-DOC-F54729C154 | loops | docs/harness/KDS/loops/README.md | controlled |
+| GPCF-DOC-8DA5979C40 | Loop Round GPCF-KD-LR-001 | docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | controlled |
 | GPCF-DOC-F99E5285C9 | Harness 工程说明 | docs/harness/README.md | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | controlled |
+| GPCF-DOC-E60D35F595 | 12 项目文档控制队列 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | controlled |
+| GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | controlled |
+| GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | controlled |
+| GPCF-DOC-2A9E353FAE | 跨项目 readiness scorecard | docs/harness/gpcf-cross-project-readiness-scorecard-lr028.md | controlled |
+| GPCF-DOC-C4C88D4F75 | 客户满意度证据台账 | docs/harness/gpcf-customer-satisfaction-evidence-ledger-lr010.md | controlled |
+| GPCF-DOC-97A01B2970 | 依赖风险回滚登记 | docs/harness/gpcf-dependency-risk-rollback-register-lr011.md | controlled |
+| GPCF-DOC-ED9FF3FA80 | 文档防污染哨兵扩展规则 | docs/harness/gpcf-document-pollution-sentinel-expansion-lr008.md | controlled |
+| GPCF-DOC-BFB5658141 | GFIS evidence 镜像接收登记 | docs/harness/gpcf-gfis-evidence-mirror-register-lr004.md | controlled |
+| GPCF-DOC-C7FBCBC166 | Git 版本门禁 evidence 包 | docs/harness/gpcf-git-version-gate-evidence-lr007.md | controlled |
+| GPCF-DOC-19294CD190 | GPC Manifest 与 loop-state 补齐包 | docs/harness/gpcf-gpc-manifest-loopstate-pack-lr026.md | controlled |
+| GPCF-DOC-E0A0095FEA | GPCF KDS Access Completion Evidence | docs/harness/gpcf-kds-access-completion-lr032.md | controlled |
+| GPCF-DOC-1A44A3E539 | KDS 本地镜像 dry-run 同步包 | docs/harness/gpcf-kds-local-mirror-dryrun-package-lr006.md | controlled |
+| GPCF-DOC-A1BC2692A8 | KDS loop-state 补齐包 | docs/harness/gpcf-kds-loop-state-completion-pack-lr023.md | controlled |
+| GPCF-DOC-FDC01A68DB | GPCF L3 第四轮最终检查点 | docs/harness/gpcf-l3-fourth-session-final-checkpoint-lr031.md | controlled |
+| GPCF-DOC-AD3BBED837 | L3 交接准备包 | docs/harness/gpcf-l3-handoff-readiness-package-lr014.md | controlled |
+| GPCF-DOC-B096D9C533 | L3 session 重启与计数器台账 | docs/harness/gpcf-l3-session-reset-counter-register-lr003.md | controlled |
+| GPCF-DOC-D660B405EE | GPCF L3 第三轮最终检查点 | docs/harness/gpcf-l3-third-session-final-checkpoint-lr016.md | controlled |
+| GPCF-DOC-9705D1627A | Loop 指标校准包 | docs/harness/gpcf-loop-metrics-calibration-lr009.md | controlled |
+| GPCF-DOC-0CF4B6EB25 | Loop 自我进化 backlog | docs/harness/gpcf-loop-self-evolution-backlog-lr012.md | controlled |
+| GPCF-DOC-67AC7A5BC4 | Loop 三件套纳入 GPCF 自身 loop record | docs/harness/gpcf-loop-three-piece-control-integration-lr002.md | controlled |
+| GPCF-DOC-12055CB824 | MMC 项目启动包 | docs/harness/gpcf-mmc-project-startup-pack-lr022.md | controlled |
+| GPCF-DOC-6D919DF28E | 下一授权动作决策矩阵 | docs/harness/gpcf-next-authorized-action-decision-matrix-lr015.md | controlled |
+| GPCF-DOC-2478CA2104 | 下一批项目初始化执行队列 | docs/harness/gpcf-next-project-initialization-execution-queue-lr030.md | controlled |
+| GPCF-DOC-283BE79805 | PKC 项目启动包 | docs/harness/gpcf-pkc-project-startup-pack-lr019.md | controlled |
+| GPCF-DOC-9C749DC30E | 项目级文档成熟度缺口 backlog | docs/harness/gpcf-project-document-maturity-gap-backlog-lr005.md | controlled |
+| GPCF-DOC-A9D9A54A31 | 项目启动模板固化包 | docs/harness/gpcf-project-startup-template-hardening-lr029.md | controlled |
+| GPCF-DOC-9BDA4F0BC3 | PVAOS 项目启动包 | docs/harness/gpcf-pvaos-project-startup-pack-lr018.md | controlled |
+| GPCF-DOC-CC30FEEA9C | WAES Manifest 与 loop-state 补齐包 | docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md | controlled |
+| GPCF-DOC-5839431FBC | XGD 项目启动包 | docs/harness/gpcf-xgd-project-startup-pack-lr020.md | controlled |
+| GPCF-DOC-8A81B62CEF | XiaoC loop-state 补齐包 | docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md | controlled |
+| GPCF-DOC-0E90353E48 | XiaoG 项目启动包 | docs/harness/gpcf-xiaog-project-startup-pack-lr021.md | controlled |
 | GPCF-DOC-27101F3BEB | Brain 多租户知识库权限体系 — v3.1.1 Implementation Patch | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | controlled |
 | GPCF-DOC-855B715B04 | OpenSpec 变更集 | openspec/changes/README.md | draft |

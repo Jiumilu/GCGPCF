@@ -110,3 +110,10 @@ KDS 路径前缀：`开发/92-证据与会话归档/.harness/`
 | GPCF-DOC-0323BC65B4 | acceptance-matrix | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/acceptance-matrix.md | WAES | archive |
 | GPCF-DOC-5A27A20A77 | evidence | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/evidence/README.md | WAES | archive |
 | GPCF-DOC-6CED60E9F1 | Harness Status Audit — 中文环境最终验收 | .harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md | WAES | archive |
+| GPCF-DOC-66C878138B | kds-real-token-sync-20260613-062146 | .harness/runs/kds-real-token-sync-20260613-062146/README.md | WAES | archive |
+| GPCF-DOC-C93F8F0441 | Acceptance Matrix: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md | WAES | archive |
+| GPCF-DOC-71D00E7EBE | evidence | .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md | WAES | archive |
+| GPCF-DOC-B89D14C3C8 | KDS Real Token Sync Git Change Groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | WAES | archive |
+| GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | WAES | archive |
+| GPCF-DOC-0498FF3BEF | Harness Status Audit: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | WAES | archive |
+| GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | WAES | archive |

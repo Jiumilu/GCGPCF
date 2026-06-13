@@ -69,6 +69,13 @@ def main() -> int:
     policy = texts[ROOT / "02-governance/loop/LOOP_AUTONOMY_POLICY.md"]
     for phrase in [
         "最多 15 轮或 2 小时",
+        "L3 final answer guard",
+        "3/15",
+        "stop_type=none",
+        "substantive_rounds",
+        "generated_items",
+        "batch_generated",
+        "substance_gate",
         "Git push",
         "真实 API 写入",
         "真实 KDS TOKEN 写入",
@@ -92,12 +99,20 @@ def main() -> int:
         require(phrase in execution, f"LOOP_EXECUTION_RULES.md missing phrase: {phrase}")
 
     round_template = texts[ROOT / "templates/LOOP_ROUND_TEMPLATE.md"]
-    for phrase in ["Round ID", "授权边界", "验证命令", "Evidence 清单", "状态判定"]:
+    for phrase in ["Round ID", "授权边界", "验证命令", "Evidence 清单", "状态判定", "轮次真实性检查", "substantive_round"]:
         require(phrase in round_template, f"LOOP_ROUND_TEMPLATE.md missing phrase: {phrase}")
 
     skill = read(ROOT / ".codex/skills/globalcloud-loop-orchestrator/SKILL.md")
-    for phrase in ["LOOP_CONTROL_BOARD.md", "LOOP_AUTONOMY_POLICY.md", "L3 托管冲刺模式"]:
+    for phrase in ["LOOP_CONTROL_BOARD.md", "LOOP_AUTONOMY_POLICY.md", "L3 托管冲刺模式", "validate_l3_continuation_guard.py", "validate_continuous_round_substance.py", "substantive_rounds"]:
         require(phrase in skill, f"loop orchestrator skill missing phrase: {phrase}")
+
+    l3_guard = read(ROOT / "tools/kds-sync/validate_l3_continuation_guard.py")
+    for phrase in ["L3 continuation guard", "stop_type", "3/15", "不得 final 收口"]:
+        require(phrase in l3_guard, f"validate_l3_continuation_guard.py missing phrase: {phrase}")
+
+    substance_guard = read(ROOT / "tools/kds-sync/validate_continuous_round_substance.py")
+    for phrase in ["continuous Loop modes L3/L3.5/L4/L5", "substantive_rounds", "generated_items", "batch_generated", "authorization_boundary"]:
+        require(phrase in substance_guard, f"validate_continuous_round_substance.py missing phrase: {phrase}")
 
     print("loop governance docs validation passed")
     print(f"docs={len(REQUIRED_DOCS)}")

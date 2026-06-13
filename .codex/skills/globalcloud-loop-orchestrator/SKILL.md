@@ -114,17 +114,59 @@ L3 规则：
 - 禁止自动执行删除文件或大规模迁移、生产配置修改、真实 API 写入、真实 KDS TOKEN 写入、权限变更、部署、推送、合并主分支、`accepted` / `integrated` 状态升级、项目战略定位或架构主结论变更。
 - 触发 P0 风险、测试无法局部修复、Git 冲突、密钥/TOKEN、生产写入、删除/迁移、业务判断或文档事实严重冲突时必须自动暂停。
 
+### L3 final answer guard
+
+当 `L3 session` 为 `active` 且已完成轮次小于 15 时，最终收口回答只能在以下停止类型之一成立时发送：
+
+- `hard_stop`
+- `user_stop`
+- `budget_exhausted`
+- `time_exhausted`
+- `task_queue_empty`
+- `authorization_boundary`
+
+若停止类型为 `none`，且下一轮存在，则不得把阶段性汇报、3 轮小结、5 轮小结、10 轮小结、单轮完成、局部任务完成或“下一轮建议”当成停止。此时只能发送进度更新，并必须继续下一轮。
+
+L3 每轮结束前必须运行或等价检查：
+
+```bash
+python3 tools/kds-sync/validate_l3_continuation_guard.py
+```
+
 ## 连续运行默认继续原则
 
 L3、L3.5、L4、L5 均属于连续运行模式。连续运行模式 active 后，阶段性汇报、完成单轮、完成两轮、完成一个局部任务、生成报告或生成下一轮建议，都不是停止条件。
 
 连续运行模式未触发对应硬停止条件、未耗尽轮次/时间预算、任务队列或授权范围仍未闭合、且用户未明确暂停/停止时，必须继续下一轮。
 
+## 连续运行真实性门禁
+
+L3、L3.5、L4、L5 的轮次预算只能按 `substantive_rounds` 计数，不能按文件数量、模板数量、脚本生成数量或声明轮次数计数。
+
+每轮必须检查：
+
+- 独立输入。
+- 独立判断。
+- 独立输出。
+- 独立验证。
+- 独立反馈。
+
+至少满足 4/5 才能计为 `substantive_round=1`。同一脚本、同一时间窗口、同一模板批量生成多个 Round 文档时，整批默认最多计 1 个实质轮次。
+
+若 `declared_rounds` 达到上限但 `substantive_rounds` 未达到上限，不得使用 `budget_exhausted` 收口；必须更正为 `authorization_boundary`，并说明继续推进需要真实任务队列、独立输入或更高授权。
+
+连续运行 final answer 前必须运行或等价检查：
+
+```bash
+python3 tools/kds-sync/validate_continuous_round_substance.py
+```
+
 每轮结束必须报告：
 
 - `continuous session`：active / stopped。
 - `continuous mode`：L3 / L3.5 / L4 / L5。
-- 已完成轮次、剩余轮次、已用时间。
+- declared_rounds、substantive_rounds、generated_items、batch_generated、substance_gate。
+- 剩余实质轮次、已用时间。
 - 停止类型和停止证据。
 - 是否符合停止规则。
 - 未停止时的下一轮 Round ID 或任务。

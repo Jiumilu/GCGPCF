@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0DF6AA8647
 title: Loop Control Board
 project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, MMC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
@@ -24,14 +24,29 @@ superseded_by: []
 |---|---|
 | 当前 Loop 模式 | L3 托管冲刺模式 |
 | 可升级模式 | L3 托管冲刺模式；L3.5/L4/L5 可执行但必须显式或强授权启动 |
-| 当前主线项目 | GFIS |
-| 当前轮次 | `GPCF-GF-LR-030` 已完成；下一轮候选 `GPCF-GF-LR-031` |
+| 当前主线项目 | Brain |
+| 当前轮次 | `Brain-LR-002` 已完成；本次新真实性会话完成 1 个实质轮次 |
 | 当前阶段 | 本地受控开发与文档治理 |
-| 当前目标 | 建立签收证据接收后的审计准备规则 |
-| 当前涉及项目 | GFIS、GPC、Finance、WAES、KDS、GPCF |
+| 当前目标 | 真实 Brain 项目仓 ESLint 9 flat config 补齐 |
+| 当前涉及项目 | Brain、GPCF |
 | 当前状态判定 | `partial` |
-| KDS TOKEN | 本开发机阶段暂缓；不得声明真实 KDS API 双向同步完成 |
+| KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |
+| L3 session | stopped |
+| L3 已完成轮次 | 1/15 |
+| L3 剩余轮次 | 14 |
+| L3 已用时间 | 未做统一分钟级计时；仍未达到 2 小时上限 |
+| L3 stop_type | authorization_boundary |
+| L3 stop_evidence | 本轮只做 1 个真实实质轮次；`Brain-LR-002` 已完成真实 Brain 项目仓 ESLint 9 flat config 补齐，validator、`pnpm lint`、`pnpm build` 和 diff check 通过；`pnpm lint` 当前为 0 errors / 16 warnings；`pnpm format:check` 仍因 68 个既有源码文件格式未对齐失败；继续 format/test script/lint warning、Git push、生产部署、真实模型/API 调用或更高自治模式需另行授权 |
+| L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
+| 连续运行真实性门禁 | pass |
+| continuous declared_rounds | 1/15 |
+| continuous substantive_rounds | 1/15 |
+| continuous generated_items | 6 |
+| continuous batch_generated | false |
+| continuous substance_gate | partial |
+| continuous substance_evidence | 本轮读取真实 Brain 项目仓 package.json、tsconfig、src 入口、上一轮 loop-state 和 validator，独立判断 ESLint 9 配置缺口，新增 `eslint.config.js` 并更新项目级 validator；validator、`pnpm lint`、`pnpm build`、diff check 通过，`pnpm format:check` 保留既有格式缺口 |
+| corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |
 | 连续运行停止记录要求 | 必须记录模式、停止类型、停止证据、已完成轮次、剩余轮次、已用时间和下一步 |
@@ -60,7 +75,7 @@ superseded_by: []
 | Git push / 合并主分支 | 需要用户明确授权 |
 | 删除文件或大规模迁移 | 需要用户明确授权和回滚方案 |
 | 写入真实 KDS TOKEN | 安全边界未授权 |
-| 真实 KDS API 双向同步 | KDS TOKEN 暂缓 |
+| 真实 KDS API 双向同步 | `开发` 空间 read/write/edit 已跑通；非 `开发` 空间访问 403；仍需按工具链留审计流水 |
 | 未授权真实外部 API 写入 | 必须人工确认；L3.5/L4/L5 只按专项政策与显式授权执行 |
 | 生产配置修改或部署 | 必须人工确认 |
 | `bench migrate` / schema sync / 运行态写 API | GFIS 当前仍未取得迁移授权 |
@@ -74,8 +89,8 @@ superseded_by: []
 | 文档污染检查 | pass | `check_document_pollution.py` 最近通过 |
 | KDS 镜像冲突 | pass | `kds_conflict_guard.py` 最近通过 |
 | Loop 运行门禁 | pass | `loop_operational_gates.py` 最近通过 |
-| GFIS 质量门禁 | pass | `npm run quality:repo` 已纳入 LR-030 validator 并通过 |
-| KDS TOKEN 检查 | blocked/deferred | 本开发机阶段暂缓 |
+| GFIS 质量门禁 | pass | `npm run quality:repo` 已纳入 LR-060 second-session validator 并通过；GPCF governance/project-readiness validators 已通过 |
+| KDS TOKEN 检查 | pass | `kds_token=pass fingerprint=bfd9553d`；私有 env 不入库 |
 
 ## 当前待确认项
 
@@ -85,18 +100,41 @@ superseded_by: []
 | UAT 签收 | 未收到 | 建立问题分级与签收跟踪模板 |
 | GPC/Finance 边界确认 | 未收到 | 保持金融事实 L4 阻断 |
 | WAES 门禁语义确认 | 未收到 | 保持 fixture/contract 层 |
-| KDS TOKEN | 暂缓 | 不进入真实 API 同步 |
+| KDS TOKEN | 已完成 | 本机私有 env 已配置，真实 `开发` 空间 API 同步已跑通；继续禁止泄露 Token |
 | L3.5/L4/L5 启动 | 未启动 | 已形成可执行方案，但除非出现明确启动口令或强授权口令，否则不得进入 |
 | 连续运行偏差 | 已修正规则 | 阶段性收口汇报不得导致 L3/L3.5/L4/L5 停止；未触发停止条件时继续下一轮 |
+| L3 三轮误停止 | 已建立防复发门禁 | `validate_l3_continuation_guard.py` 拦截 `3/15` 阶段性 final 收口 |
+| 第二轮 L3 15/15 收口 | 已完成 | `GPCF-GF-LR-046` 至 `GPCF-GF-LR-060` 已跑满第二轮 L3 15/15，stop_type 为 budget_exhausted |
+| GPCF 本轮 L3 15/15 收口 | 已完成 | `GPCF-CF-LR-002` 至 `GPCF-CF-LR-016` 已跑满 GPCF 主线 L3 15/15，stop_type 为 budget_exhausted |
+| GPCF 项目准备度 L3 15/15 收口 | 已完成 | `GPCF-CF-LR-017` 至 `GPCF-CF-LR-031` 已跑满 12 项目准备度 L3 15/15，stop_type 为 budget_exhausted |
+| KDS Token 完成登记 | 已完成 | `GPCF-CF-LR-032` 登记本机私有 Token、fingerprint=`bfd9553d`、真实 `开发` 空间 API 同步与审计流水 |
+| 连续运行真实性规则 | 已建立 | L3/L3.5/L4/L5 均必须区分 `declared_rounds`、`generated_items` 与 `substantive_rounds`；批量生成默认最多计 1 个实质轮次 |
+| 批量生成纠偏 | 已登记 | `GPCF-CF-LR-017` 至 `GPCF-CF-LR-031` 更正为 declared_rounds=15、substantive_rounds=1、substance_gate=partial、corrected stop_type=authorization_boundary |
+| MMC 初始化 | 已完成 | `GPCF-MM-LR-001` 完成 MMC Manifest、loop-state、evidence-index、loop record 和 validator；本次计为 1 个实质轮次 |
+| KDS 初始化 | 已完成 | `GPCF-KD-LR-001` 完成 KDS loop-state、evidence-index、loop record 和 validator；本次累计 2 个实质轮次 |
+| Brain 初始化 | 已完成 | `GPCF-BR-LR-001` 完成 Brain loop-state、evidence-index、loop record 和 validator；本次累计 3 个实质轮次 |
+| PKC 初始化 | 已完成 | `GPCF-PK-LR-001` 完成 PKC loop-state、evidence-index、loop record 和 validator；本次累计 4 个实质轮次 |
+| XiaoC 初始化 | 已完成 | `GPCF-XC-LR-001` 完成 XiaoC loop-state、evidence-index、loop record 和 validator；本次累计 5 个实质轮次 |
+| XGD 初始化 | 已完成 | `GPCF-XD-LR-001` 完成 XGD loop-state、evidence-index、loop record 和 validator；本次累计 6 个实质轮次 |
+| GPC 初始化 | 已完成 | `GPCF-GP-LR-001` 完成 GPC loop-state、evidence-index、loop record 和 validator；不改一期蓝图，本次累计 7 个实质轮次 |
+| XiaoG 初始化 | 已完成 | `GPCF-XG-LR-001` 完成 XiaoG loop-state、evidence-index、loop record 和 validator；本次累计 8 个实质轮次 |
+| PVAOS 初始化 | 已完成 | `GPCF-PV-LR-001` 完成 PVAOS loop-state、evidence-index、loop record 和 validator；本次累计 9 个实质轮次 |
+| WAES 初始化 | 已完成 | `GPCF-WA-LR-001` 完成 WAES loop-state、evidence-index、loop record 和 validator；本次累计 10 个实质轮次 |
+| L3 二轮验证清单 | 已完成 | `GPCF-WA-LR-002` 至 `GPCF-MM-LR-002` 完成 5 个二轮专项验证清单；本次累计 15 个实质轮次 |
+| PKC 真实项目仓最小 Loop harness | 已完成 | `PKC-LR-001` 在真实 PKC 项目仓落地 docs/harness、loop-state、evidence-index、round record 和 validator，并修复测试/typecheck 缺口；declared_rounds=1/15、substantive_rounds=1/15、generated_items=9、batch_generated=false |
+| KDS 真实项目仓最小 Loop harness | 已完成 | `KDS-LR-001` 在真实 KDS 项目仓落地 docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false |
+| XGD 真实项目仓最小 Loop harness | 已完成 | `XGD-LR-001` 在真实 XGD 项目仓落地 docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false |
+| XiaoC 真实项目仓最小 Loop harness | 已完成 | `XiaoC-LR-001` 在真实 XiaoC 项目仓落地 docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false |
+| Brain 真实项目仓敏感文件门禁与最小 Loop harness | 部分完成 | `Brain-LR-001` 在真实 Brain 项目仓补齐 `.env` gitignore 门禁、docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=7、batch_generated=false、substance_gate=partial |
+| Brain ESLint 9 flat config | 部分完成 | `Brain-LR-002` 在真实 Brain 项目仓补齐 `eslint.config.js`，使 `pnpm lint` 从配置缺失恢复为 0 errors / 16 warnings；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=partial |
 
 ## 下一轮候选任务队列
 
 | 优先级 | Round | 任务 | 自动化边界 |
 |---|---|---|---|
-| P1 | `GPCF-GF-LR-031` | 建立签收证据接收后的审计准备规则 | 可自动执行，不替代人工签收 |
-| P1 | `GPCF-GF-LR-032` | 建立现场样本进入 evidence 前的审计队列 | 可自动执行，不接收伪造样本 |
-| P2 | `GPCF-CF-LR-002` | 将 Loop 三件套纳入 GPCF 自身 loop record | 可自动执行，本地文档范围 |
-| P2 | 后续 | 试点补齐 MMC/KDS/Brain/PKC 的 Manifest/loop-state/evidence-index | 可自动执行，项目仓写入前需确认边界 |
+| P1 | 后续授权 | 收集真实现场样本、UAT 签收、WAES/GPC/Finance 确认 | 需要人工输入或显式授权 |
+| P1 | 后续授权 | 新 L3/L4 继续 GFIS、转真实样本/UAT/WAES/GPC/Finance 收集，或转 GPCF 自身治理轮次 | 需要用户重新授权 |
+| P1 | 后续授权 | 各项目真实项目仓、运行态验证、GPC 一期蓝图、WAES 门禁语义、accepted/integrated 升级 | 需要人工确认或更高授权，L3 不自动改主结论 |
 
 ## 最近 evidence 链接
 
