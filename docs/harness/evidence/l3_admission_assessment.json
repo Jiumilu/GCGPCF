@@ -492,8 +492,8 @@
       "project": "GPCF",
       "code": "CF",
       "governance_hub": true,
-      "score": 76,
-      "raw_score": 76,
+      "score": 79,
+      "raw_score": 79,
       "status": "governance_hub",
       "scores": {
         "repo": 10,
@@ -502,7 +502,7 @@
         "test_validation": 9,
         "evidence": 10,
         "loop_state": 8,
-        "git_gate": 5,
+        "git_gate": 8,
         "risk_rollback": 8,
         "dependencies": 6,
         "usability_customer": 5,
@@ -510,21 +510,19 @@
       },
       "caps": [],
       "gaps": [
-        "Git 工作区存在未提交变更",
         "缺代码/配置闭环",
         "测试/验证命令覆盖不足"
       ],
       "l3_tasks": [
         "补齐最小代码/配置闭环入口，并添加对应 validator",
-        "补齐项目级 test/lint/build/validate 命令并纳入 evidence",
-        "清理 Git 工作区或登记敏感文件 ignore 门禁"
+        "补齐项目级 test/lint/build/validate 命令并纳入 evidence"
       ],
       "facts": {
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
         "repo_exists": true,
         "git_exists": true,
-        "git_status": "## codex/kds-token-sync-gpcf...origin/codex/kds-token-sync-gpcf\n M \"01-architecture/GlobalCloud\\347\\273\\277\\350\\211\\262\\344\\276\\233\\345\\272\\224\\351\\223\\276\\344\\275\\223\\347\\263\\273\\347\\234\\237\\345\\256\\236\\345\\261\\202\\346\\254\\241\\346\\236\\266\\346\\236\\204\\345\\233\\276.md\"\n M \"02-governance/GlobalCloud\\347\\273\\277\\350\\211\\262\\344\\276\\233\\345\\272\\224\\351\\223\\276\\344\\275\\223\\347\\263\\273\\345\\212\\250\\350\\277\\220\\350\\275\\254\\350\\276\\276\\346\\240\\207\\346\\240\\207\\345\\207\\206\\344\\270\\216\\350\\264\\250\\351\\207\\217\\351\\227\\250\\347\\246\\201.md\"",
-        "dirty_count": 2,
+        "git_status": "## codex/kds-token-sync-gpcf...origin/codex/kds-token-sync-gpcf",
+        "dirty_count": 0,
         "sensitive_dirty_count": 0,
         "has_code": false,
         "has_config": false,
