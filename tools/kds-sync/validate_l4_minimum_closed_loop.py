@@ -40,6 +40,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-008.md",
     "docs/harness/loops/loop-round-GPCF-L4-009.md",
     "docs/harness/loops/loop-round-GPCF-L4-010.md",
+    "docs/harness/loops/loop-round-GPCF-L4-011.md",
 ]
 
 CORE_OBJECTS = [
@@ -90,6 +91,7 @@ def main() -> int:
     round_record_l4_008 = texts["docs/harness/loops/loop-round-GPCF-L4-008.md"]
     round_record_l4_009 = texts["docs/harness/loops/loop-round-GPCF-L4-009.md"]
     round_record_l4_010 = texts["docs/harness/loops/loop-round-GPCF-L4-010.md"]
+    round_record_l4_011 = texts["docs/harness/loops/loop-round-GPCF-L4-011.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -438,8 +440,43 @@ def main() -> int:
             f"XGD L4-010 evidence missing phrase: {phrase}",
         )
 
+    xiaog_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG")
+    xiaog_retrieval = read_external(str(xiaog_root / "docs/harness/evidence/kds-retrieval-XiaoG-L4-011.json"))
+    xiaog_fixture = read_external(str(xiaog_root / "l4_execution/xiaog_l4_readonly_audit_notification_mock.fixture.json"))
+    xiaog_validator = read_external(str(xiaog_root / "scripts/validate_xiaog_l4_readonly_audit_mock.py"))
+    xiaog_round = read_external(str(xiaog_root / "docs/harness/loops/loop-round-XiaoG-L4-011.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-011",
+        "XiaoG-L4-011",
+        "ReadOnlyQueryResult",
+        "PkcNotificationCandidate",
+        "WaesAuditWriteMock",
+        "ExecutionTrace",
+        "95/100",
+        "项目群阶段累计评分 | 94/100",
+        "GPCF-L4-012",
+    ]:
+        require(phrase in round_record_l4_011 + "\n" + evidence, f"L4-011 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"XiaoG-L4-011\"",
+        "ReadOnlyQueryResult",
+        "PkcNotificationCandidate",
+        "WaesAuditWriteMock",
+        "ExecutionTrace",
+        "XiaoG does not own business facts",
+        "send_real_message",
+        "round=XiaoG-L4-011 readonly_queries=3 pkc_notifications=1 waes_audit_mocks=2 execution_traces=1",
+    ]:
+        require(
+            phrase in xiaog_retrieval + "\n" + xiaog_fixture + "\n" + xiaog_validator + "\n" + xiaog_round,
+            f"XiaoG L4-011 evidence missing phrase: {phrase}",
+        )
+
     assessment = {
-        "round_id": "GPCF-L4-010",
+        "round_id": "GPCF-L4-011",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -451,13 +488,13 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 58,
+        "generated_items": 64,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-011",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010"],
-        "project_group_score": 88,
+        "next_round": "L4-012",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010", "GPCF-L4-011"],
+        "project_group_score": 94,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
@@ -467,6 +504,7 @@ def main() -> int:
             "GPCF-L4-008": 96,
             "GPCF-L4-009": 95,
             "GPCF-L4-010": 95,
+            "GPCF-L4-011": 95,
         },
         "project_rounds": {
             "MMC": {
@@ -539,12 +577,20 @@ def main() -> int:
                 "score": 95,
                 "accepted_integrated": False,
             },
+            "XiaoG": {
+                "round_id": "XiaoG-L4-011",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "readonly_audit_notification_mock": "pass",
+                "score": 95,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-010 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=88 next=L4-011")
+    print("round=GPCF-L4-011 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=94 next=L4-012")
     return 0
 
 

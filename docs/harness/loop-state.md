@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 74 |
-| loop.current_step | l4_xgd_risk_analysis_dry_run |
-| loop.last_entry | `GPCF-L4-010` / `XGD-L4-010`：重分析、全局推演与风险建议 dry-run |
-| loop.last_exit | XGD 真实仓完成 KDS local_mirror 检索、RiskAnalysis/BottleneckProjection/ReliabilityAssessment/RecommendationPacket dry-run fixture、validator、harness validation、unit tests 与 GPCF 项目群 evidence 回写 |
+| loop.round | 75 |
+| loop.current_step | l4_xiaog_readonly_audit_notification_mock |
+| loop.last_entry | `GPCF-L4-011` / `XiaoG-L4-011`：只读查询、PKC 通知候选和 WAES 审计写入 mock |
+| loop.last_exit | XiaoG 真实仓完成 KDS local_mirror 检索、ReadOnlyQueryResult/PkcNotificationCandidate/WaesAuditWriteMock/ExecutionTrace mock fixture、validator、既有 L3 smoke/test 兼容验证与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；XGD 未执行 live LLM call、desktop runtime、voice/social interaction、WAES API 或生产系统调用；XGD 旧 Manifest 仍含 11 项目和 XiaoG 数字意识描述文档债务 |
-| loop.next_target | `XiaoG-L4-011`：消费 XGD recommendation packet，建立只读查询、PKC 通知候选和 WAES 审计写入 mock |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Docker 部署仍未授权；XiaoG 未执行 live GFIS/GPC/WAES/PKC API、设备 runtime 或真实 PKC 通知；XiaoG Manifest 仍有旧 11 项目口径文档债务 |
+| loop.next_target | `GPCF-L4-012`：项目群最小闭环收口、评分矩阵、L5 建议与最终 validator |
 
 ## 循环历史
 
@@ -111,6 +111,7 @@ superseded_by: []
 | 72 | GPCF-L4-008 | 2026-06-13 | GFIS 真实仓工厂样品/工厂订单/工单/质量库存批次/设备/发货只读样本 evidence 接收 | GPCF L4-008 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | GFIS-L4-008 计为 L4 实质轮；96/100；`python3 scripts/validate_gfis_l4_factory_sample_order_readonly.py` pass，`npm run quality:repo` pass；未 bench migrate、未真实外部 API、未生产写入、未升级 accepted/integrated |
 | 73 | GPCF-L4-009 | 2026-06-13 | XiaoC 真实仓任务拆解、模型路由与 Agent 编排 dry-run evidence 接收 | GPCF L4-009 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XiaoC-L4-009 计为 L4 实质轮；95/100；`node scripts/validate_xiaoc_l4_agent_orchestration.mjs` pass，`pnpm test:repo` pass；未真实模型调用、未 XiaoG runtime、未 WAES API 写入、未升级 accepted/integrated |
 | 74 | GPCF-L4-010 | 2026-06-13 | XGD 真实仓重分析、全局推演与风险建议 dry-run evidence 接收 | GPCF L4-010 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XGD-L4-010 计为 L4 实质轮；95/100；`node scripts/validate_xgd_l4_risk_analysis.mjs` pass，`npm run harness:validate` pass，`npm test` pass；未 live LLM、未桌面运行态、未 WAES API、未升级 accepted/integrated |
+| 75 | GPCF-L4-011 | 2026-06-13 | XiaoG 真实仓只读查询、PKC 通知候选和 WAES 审计写入 mock evidence 接收 | GPCF L4-011 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 95% | XiaoG-L4-011 计为 L4 实质轮；95/100；`python3 scripts/validate_xiaog_l4_readonly_audit_mock.py` pass，legacy L3 validators/smoke/test pass；未 live API、未设备 OTA、未 Docker、未生产写入、未升级 accepted/integrated |
 
 ## 状态约束
 

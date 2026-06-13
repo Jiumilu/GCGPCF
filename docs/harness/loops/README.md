@@ -80,3 +80,4 @@ KDS 空间：`开发`
 | GPCF-DOC-C81CDC4FDC | GPCF-L4-008 GFIS Factory Sample Order Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-008.md | GPCF | controlled |
 | GPCF-DOC-6E36E44372 | GPCF-L4-009 XiaoC Agent Orchestration Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-009.md | GPCF | controlled |
 | GPCF-DOC-0A0AAD3643 | GPCF-L4-010 XGD Risk Analysis Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-010.md | GPCF | controlled |
+| GPCF-DOC-968C435FFF | GPCF-L4-011 XiaoG Execution Terminal Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-011.md | GPCF | controlled |

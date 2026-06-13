@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 148 | 101 | 已建空间 |
+| GPCF | 12-GPCF | 149 | 102 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -534,6 +534,7 @@ superseded_by: []
 | GPCF-DOC-C81CDC4FDC | GPCF-L4-008 GFIS Factory Sample Order Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-008.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-008.md |
 | GPCF-DOC-6E36E44372 | GPCF-L4-009 XiaoC Agent Orchestration Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-009.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-009.md |
 | GPCF-DOC-0A0AAD3643 | GPCF-L4-010 XGD Risk Analysis Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-010.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-010.md |
+| GPCF-DOC-968C435FFF | GPCF-L4-011 XiaoG Execution Terminal Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-011.md | GPCF | GFIS, GPC, WAES, KDS, PKC, XiaoC, XGD, XiaoG, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-011.md |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
 | GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |
 | GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, KDS, Brain, PKC, XiaoC, XGD, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |
