@@ -492,8 +492,8 @@
       "project": "GPCF",
       "code": "CF",
       "governance_hub": true,
-      "score": 76,
-      "raw_score": 76,
+      "score": 79,
+      "raw_score": 79,
       "status": "governance_hub",
       "scores": {
         "repo": 10,
@@ -502,7 +502,7 @@
         "test_validation": 9,
         "evidence": 10,
         "loop_state": 8,
-        "git_gate": 5,
+        "git_gate": 8,
         "risk_rollback": 8,
         "dependencies": 6,
         "usability_customer": 5,
@@ -510,21 +510,19 @@
       },
       "caps": [],
       "gaps": [
-        "Git 工作区存在未提交变更",
         "缺代码/配置闭环",
         "测试/验证命令覆盖不足"
       ],
       "l3_tasks": [
         "补齐最小代码/配置闭环入口，并添加对应 validator",
-        "补齐项目级 test/lint/build/validate 命令并纳入 evidence",
-        "清理 Git 工作区或登记敏感文件 ignore 门禁"
+        "补齐项目级 test/lint/build/validate 命令并纳入 evidence"
       ],
       "facts": {
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
         "repo_exists": true,
         "git_exists": true,
-        "git_status": "## codex/kds-token-sync-gpcf...origin/codex/kds-token-sync-gpcf\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/harness/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/evidence/evidence-index.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loop-state.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loops/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_CONTROL_BOARD.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-health-report.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-l3-admission-matrix.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/gpcf-project-status-matrix.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/README.md\"\n M .kds/sync-ledger.jsonl\n M 02-governance/loop/LOOP_CONTROL_BOARD.md\n M 09-status/globalcloud-document-control-register.md\n M 09-status/globalcloud-document-health-report.md\n M 09-status/globalcloud-l3-admission-matrix.md\n M 09-status/gpcf-project-status-matrix.md\n M 09-status/kds-development-space-sync-register.md\n M docs/README.md\n M docs/harness/README.md\n M docs/harness/evidence/evidence-index.md\n M docs/harness/evidence/l3_admission_assessment.json\n M docs/harness/loop-state.md\n M docs/harness/loops/README.md\n?? \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md\"\n?? docs/harness/loops/loop-round-GPCF-CF-LR-066.md",
-        "dirty_count": 28,
+        "git_status": "## codex/kds-token-sync-gpcf...origin/codex/kds-token-sync-gpcf",
+        "dirty_count": 0,
         "sensitive_dirty_count": 0,
         "has_code": false,
         "has_config": false,
