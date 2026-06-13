@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0DF6AA8647
 title: Loop Control Board
 project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, Brain, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
@@ -24,12 +24,12 @@ superseded_by: []
 |---|---|
 | 当前 Loop 模式 | L3 托管冲刺模式 |
 | 可升级模式 | L3 托管冲刺模式；L3.5/L4/L5 可执行但必须显式或强授权启动 |
-| 当前主线项目 | XiaoG |
-| 当前轮次 | `XiaoG-LR-003` 已完成；本次新真实性会话完成 1 个实质轮次 |
-| 当前阶段 | 本地受控开发与文档治理 |
-| 当前目标 | 真实 XiaoG 项目仓 GFIS/WAES trigger dry-run fixture validator |
-| 当前涉及项目 | XiaoG、GPCF |
-| 当前状态判定 | `partial` |
+| 当前主线项目 | GPCF |
+| 当前轮次 | `GPCF-CF-LR-066`：post-push L3 准入矩阵校准 |
+| 当前阶段 | 总控证据校准与提交后状态复核 |
+| 当前目标 | 将全项目提交推送后的真实 Git clean、评分 JSON 和 evidence 结果回写到 GPCF 总控 |
+| 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
+| 当前状态判定 | `ready_for_review`，但不得自动升级 accepted/integrated |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |
 | L3 session | stopped |
@@ -37,15 +37,15 @@ superseded_by: []
 | L3 剩余轮次 | 14 |
 | L3 已用时间 | 未做统一分钟级计时；仍未达到 2 小时上限 |
 | L3 stop_type | authorization_boundary |
-| L3 stop_evidence | 本轮只做 1 个真实实质轮次；`XiaoG-LR-003` 已完成真实 XiaoG 项目仓 GFIS/WAES trigger dry-run fixture validator，验证 suggestion-shaped GFIS payload 与 WAES ready_for_review gate request；`python3 scripts/dry_run_xiaog_gfis_waes_triggers.py`、`python3 scripts/validate_xiaog_l3_operational_controls.py`、`python3 scripts/validate_xiaog_l3_bootstrap.py`、`python3 scripts/test_xiaog_l3_bootstrap.py`、`git diff --check -- .` 通过；继续提交/推送、生产写入、权限变更、部署、真实外部 API、Docker 部署、设备 OTA 或 accepted/integrated 升级需另行授权 |
+| L3 stop_evidence | 全项目提交推送后重新运行 `python3 tools/kds-sync/assess_l3_admission.py`，11 个业务项目均为 L3 Ready；GPCF 保持 governance_hub；所有仓库 `git status --short --branch` clean/up-to-date；本轮只做总控证据校准，不执行生产写入、权限变更、部署、真实外部 API、Docker 部署、设备 OTA 或 accepted/integrated 升级 |
 | L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
 | 连续运行真实性门禁 | pass |
 | continuous declared_rounds | 1/15 |
 | continuous substantive_rounds | 1/15 |
-| continuous generated_items | 6 |
+| continuous generated_items | 7 |
 | continuous batch_generated | false |
 | continuous substance_gate | pass |
-| continuous substance_evidence | 本轮读取真实 XiaoG 项目仓 README、docs/harness、LR-002 队列、风险 runbook 与 validator，独立判断 live GFIS/WAES 写入未授权但本地 trigger payload dry-run 可闭合依赖证据；新增 `scripts/dry_run_xiaog_gfis_waes_triggers.py` 和 LR-003 轮次记录，并更新任务队列/evidence；dry-run validator、operational controls validator、bootstrap validator、bootstrap smoke 与 diff check 通过 |
+| continuous substance_evidence | 本轮依据提交推送后的真实 Git 状态、`docs/harness/evidence/l3_admission_assessment.json` 和项目级 validator 结果做 GPCF 总控校准；XGD 提交 `840b70f0` 已推送，XiaoG 提交 `a6494b33` 已推送，GPCF 提交 `3c578ec` 已推送；当前 11 个业务项目机器评分均达到 L3 Ready |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |
@@ -85,7 +85,7 @@ superseded_by: []
 
 | 门禁 | 最近结果 | 说明 |
 |---|---|---|
-| Git 门禁 | partial | 工作区 dirty；`git diff --check` 最近通过 |
+| Git 门禁 | pass | 提交推送后全项目状态 clean/up-to-date；本轮校准变更需再次通过 diff check 后提交 |
 | 文档污染检查 | pass | `check_document_pollution.py` 最近通过 |
 | KDS 镜像冲突 | pass | `kds_conflict_guard.py` 最近通过 |
 | Loop 运行门禁 | pass | `loop_operational_gates.py` 最近通过 |
@@ -127,6 +127,8 @@ superseded_by: []
 | XGD L3 任务队列与自我进化门禁 | 已完成 | `XGD-LR-002` 在真实 XGD 项目仓落地 `.codex/tasks` 结构化队列、自我进化 checklist、LR-002 轮次记录、`harness:validate` 和 validator 覆盖；declared_rounds=1/15、substantive_rounds=1/15、generated_items=4、batch_generated=false |
 | XiaoG L3 风险回滚与自我进化门禁 | 已完成 | `XiaoG-LR-002` 在真实 XiaoG 项目仓落地 `.codex/tasks` 结构化队列、risk rollback runbook、自我进化 checklist、LR-002 轮次记录和 operational-control validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=5、batch_generated=false |
 | XiaoG GFIS/WAES trigger dry-run | 已完成 | `XiaoG-LR-003` 在真实 XiaoG 项目仓落地 `dry_run_xiaog_gfis_waes_triggers.py`，用本地 fixture 验证 GFIS suggestion payload 与 WAES ready_for_review gate request；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false |
+| XiaoG dashboard/voice usability smoke | 已完成 | `XiaoG-LR-004` 在真实 XiaoG 项目仓落地 `smoke_xiaog_dashboard_voice_usability.py`，验证 Web dashboard 路由、voice feature switches、mobile pages 与 README/Deployment_all 可用性线索；declared_rounds=1/15、substantive_rounds=1/15、generated_items=7、batch_generated=false |
+| 全项目提交推送 | 已完成 | XGD `840b70f0`、XiaoG `a6494b33`、GPCF `3c578ec` 已推送；最终全项目 `git status --short --branch` clean/up-to-date |
 | XiaoC 真实项目仓最小 Loop harness | 已完成 | `XiaoC-LR-001` 在真实 XiaoC 项目仓落地 docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false |
 | Brain 真实项目仓敏感文件门禁与最小 Loop harness | 部分完成 | `Brain-LR-001` 在真实 Brain 项目仓补齐 `.env` gitignore 门禁、docs/harness、loop-state、evidence-index、round record 和 validator；declared_rounds=1/15、substantive_rounds=1/15、generated_items=7、batch_generated=false、substance_gate=partial |
 | Brain ESLint 9 flat config | 部分完成 | `Brain-LR-002` 在真实 Brain 项目仓补齐 `eslint.config.js`，使 `pnpm lint` 从配置缺失恢复为 0 errors / 16 warnings；declared_rounds=1/15、substantive_rounds=1/15、generated_items=6、batch_generated=false、substance_gate=partial |
@@ -142,7 +144,7 @@ superseded_by: []
 | P1 | 后续授权 | 新 L3/L4 继续 GFIS、转真实样本/UAT/WAES/GPC/Finance 收集，或转 GPCF 自身治理轮次 | 需要用户重新授权 |
 | P1 | 后续授权 | 各项目真实项目仓、运行态验证、GPC 一期蓝图、WAES 门禁语义、accepted/integrated 升级 | 需要人工确认或更高授权，L3 不自动改主结论 |
 | P1 | WAES-LR-001 | 先解决 WAES 分支绑定，再落地真实 WAES harness、validator 和 evidence | 不生产写入、不部署、不越权裁决 |
-| P1 | XiaoG-LR-004 | 执行 XiaoG dashboard/voice usability smoke evidence | 不部署 Docker、不 OTA、不调用真实外部 API、不触碰设备 |
+| P1 | GPCF-CF-LR-066 | 提交后 L3 准入矩阵与 KDS 本地镜像校准 | 只做总控证据校准、文档门禁与 Git 提交；不升级 accepted/integrated |
 
 ## 最近 evidence 链接
 

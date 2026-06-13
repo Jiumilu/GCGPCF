@@ -368,9 +368,9 @@
       "project": "XGD",
       "code": "XD",
       "governance_hub": false,
-      "score": 97,
-      "raw_score": 97,
-      "status": "L3 Conditional",
+      "score": 100,
+      "raw_score": 100,
+      "status": "L3 Ready",
       "scores": {
         "repo": 10,
         "queue": 10,
@@ -378,25 +378,21 @@
         "test_validation": 15,
         "evidence": 10,
         "loop_state": 8,
-        "git_gate": 5,
+        "git_gate": 8,
         "risk_rollback": 8,
         "dependencies": 6,
         "usability_customer": 5,
         "evolution": 5
       },
       "caps": [],
-      "gaps": [
-        "Git 工作区存在未提交变更"
-      ],
-      "l3_tasks": [
-        "清理 Git 工作区或登记敏感文件 ignore 门禁"
-      ],
+      "gaps": [],
+      "l3_tasks": [],
       "facts": {
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD",
         "repo_exists": true,
         "git_exists": true,
-        "git_status": "## main...origin/main\n M docs/harness/evidence/evidence-index.md\n M docs/harness/loop-state.md\n M package.json\n M scripts/validate_xgd_loop_harness.mjs\n?? .codex/tasks/\n?? docs/harness/evolution/\n?? docs/harness/loops/loop-round-XGD-LR-002.md",
-        "dirty_count": 7,
+        "git_status": "## main...origin/main",
+        "dirty_count": 0,
         "sensitive_dirty_count": 0,
         "has_code": true,
         "has_config": true,
@@ -412,9 +408,9 @@
       "project": "XiaoG",
       "code": "XG",
       "governance_hub": false,
-      "score": 94,
-      "raw_score": 94,
-      "status": "L3 Conditional",
+      "score": 97,
+      "raw_score": 97,
+      "status": "L3 Ready",
       "scores": {
         "repo": 10,
         "queue": 10,
@@ -422,7 +418,7 @@
         "test_validation": 15,
         "evidence": 10,
         "loop_state": 8,
-        "git_gate": 5,
+        "git_gate": 8,
         "risk_rollback": 8,
         "dependencies": 6,
         "usability_customer": 2,
@@ -430,19 +426,17 @@
       },
       "caps": [],
       "gaps": [
-        "Git 工作区存在未提交变更",
         "可用性/客户满意指标不足"
       ],
       "l3_tasks": [
-        "清理 Git 工作区或登记敏感文件 ignore 门禁",
         "补齐可用性/客户满意 smoke evidence"
       ],
       "facts": {
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG",
         "repo_exists": true,
         "git_exists": true,
-        "git_status": "## main...origin/main\n M .gitignore\n M docs/harness/evidence/evidence-index.md\n M docs/harness/loop-state.md\n M docs/harness/loops/README.md\n M scripts/validate_xiaog_l3_bootstrap.py\n?? .codex/\n?? docs/harness/evolution/\n?? docs/harness/loops/loop-round-XiaoG-LR-002.md\n?? docs/harness/loops/loop-round-XiaoG-LR-003.md\n?? docs/harness/loops/loop-round-XiaoG-LR-004.md\n?? docs/harness/runbooks/\n?? scripts/dry_run_xiaog_gfis_waes_triggers.py\n?? scripts/smoke_xiaog_dashboard_voice_usability.py\n?? scripts/validate_xiaog_l3_operational_controls.py",
-        "dirty_count": 14,
+        "git_status": "## main...origin/main",
+        "dirty_count": 0,
         "sensitive_dirty_count": 0,
         "has_code": true,
         "has_config": true,
@@ -529,8 +523,8 @@
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
         "repo_exists": true,
         "git_exists": true,
-        "git_status": "## codex/kds-token-sync-gpcf...origin/codex/kds-token-sync-gpcf\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/evidence/evidence-index.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loop-state.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/90-\\350\\267\\250\\351\\241\\271\\347\\233\\256\\346\\236\\266\\346\\236\\204/01-architecture/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_CONTROL_BOARD.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-health-report.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/gpcf-project-status-matrix.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"\n M .kds/sync-ledger.jsonl\n M 01-architecture/README.md\n M 02-governance/loop/LOOP_CONTROL_BOARD.md\n M 09-status/README.md\n M 09-status/globalcloud-document-control-register.md\n M 09-status/globalcloud-document-health-report.md\n M 09-status/globalcloud-l3-admission-matrix.md\n M 09-status/gpcf-project-status-matrix.md\n M 09-status/kds-development-space-sync-register.md\n M docs/harness/evidence/evidence-index.md\n M docs/harness/evidence/l3_admission_assessment.json\n M docs/harness/loop-state.md\n M tools/kds-sync/assess_l3_admission.py\n?? \".kds/development-space/\\345\\274\\200\\345\\217\\221/90-\\350\\267\\250\\351\\241\\271\\347\\233\\256\\346\\236\\266\\346\\236\\204/01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\234\\200\\345\\260\\217\\351\\227\\255\\347\\216\\257L4\\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"\n?? \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-l3-admission-matrix.md\"\n?? \"01-architecture/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\234\\200\\345\\260\\217\\351\\227\\255\\347\\216\\257L4\\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "dirty_count": 25,
+        "git_status": "## codex/kds-token-sync-gpcf...origin/codex/kds-token-sync-gpcf\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/harness/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/evidence/evidence-index.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loop-state.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loops/README.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_CONTROL_BOARD.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-health-report.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-l3-admission-matrix.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/gpcf-project-status-matrix.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"\n M \".kds/development-space/\\345\\274\\200\\345\\217\\221/README.md\"\n M .kds/sync-ledger.jsonl\n M 02-governance/loop/LOOP_CONTROL_BOARD.md\n M 09-status/globalcloud-document-control-register.md\n M 09-status/globalcloud-document-health-report.md\n M 09-status/globalcloud-l3-admission-matrix.md\n M 09-status/gpcf-project-status-matrix.md\n M 09-status/kds-development-space-sync-register.md\n M docs/README.md\n M docs/harness/README.md\n M docs/harness/evidence/evidence-index.md\n M docs/harness/evidence/l3_admission_assessment.json\n M docs/harness/loop-state.md\n M docs/harness/loops/README.md\n?? \".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md\"\n?? docs/harness/loops/loop-round-GPCF-CF-LR-066.md",
+        "dirty_count": 28,
         "sensitive_dirty_count": 0,
         "has_code": false,
         "has_config": false,

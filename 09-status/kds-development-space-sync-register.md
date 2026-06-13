@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 137 | 90 | 已建空间 |
+| GPCF | 12-GPCF | 138 | 91 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -526,6 +526,7 @@ superseded_by: []
 | GPCF-DOC-9398FB212F | docs/harness/loops/loop-round-GPCF-CF-LR-030.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-030.md | bidirectional | pending_api |
 | GPCF-DOC-02E635F425 | docs/harness/loops/loop-round-GPCF-CF-LR-031.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-031.md | bidirectional | pending_api |
 | GPCF-DOC-BB52623034 | docs/harness/loops/loop-round-GPCF-CF-LR-032.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-032.md | bidirectional | pending_api |
+| GPCF-DOC-1496E69CD8 | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md | bidirectional | pending_api |
 | GPCF-DOC-27101F3BEB | docs/harness/multi-tenant-permission-design.md | 开发/05-KDS/docs/harness/multi-tenant-permission-design.md | bidirectional | pending_api |
 | GPCF-DOC-40F0A4CB83 | docs/harness/status-audit-2026-06-10.md | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md | bidirectional | pending_api |
 | GPCF-DOC-4F39AFF310 | openspec/README.md | 开发/05-KDS/openspec/README.md | bidirectional | pending_api |

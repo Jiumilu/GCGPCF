@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 65 |
-| loop.current_step | xiaog_trigger_dry_run_landed |
-| loop.last_entry | `XiaoG-LR-003`：按 L3 准入评估补齐 XiaoG GFIS/WAES trigger dry-run evidence |
-| loop.last_exit | 本轮只计 1 个实质轮次；XiaoG main 真实项目仓新增 GFIS/WAES trigger dry-run fixture validator，依赖 dry-run 缺口已闭合；评分保持 94/L3 Conditional，剩余 Git 未提交和 dashboard/voice 可用性 smoke evidence |
-| loop.gate_result | partial |
-| loop.blockers | 当前 Git 工作区 dirty；XGD 与 XiaoG 本轮未提交/推送；Brain `pnpm format:check` 仍保留既有源码格式缺口；XiaoG dashboard/voice 可用性 smoke evidence 仍待执行；生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布和 accepted/integrated 均未授权 |
-| loop.next_target | 推进 XiaoG dashboard/voice usability smoke evidence；或授权后提交 XGD/XiaoG/GPCF 受控变更 |
+| loop.round | 66 |
+| loop.current_step | post_push_l3_admission_reconciled |
+| loop.last_entry | `GPCF-CF-LR-066`：全项目提交推送后的 L3 准入矩阵校准 |
+| loop.last_exit | XGD `840b70f0`、XiaoG `a6494b33`、GPCF `3c578ec` 已推送；全项目 `git status --short --branch` clean/up-to-date；`assess_l3_admission.py` 显示 11 个业务项目均为 L3 Ready，GPCF 为 governance_hub |
+| loop.gate_result | ready_for_review |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入，不阻断 L3 自动开发准入 |
+| loop.next_target | 若继续推进，优先从 GPC/GFIS adapter dry-run、Brain format/test script 专项、XGD bounded TICK loop dry-run 或 XiaoG 真实设备/浏览器验证中选择一个真实项目仓最小闭环 |
 
 ## 循环历史
 
@@ -102,11 +102,12 @@ superseded_by: []
 | 63 | XGD-LR-002 | 2026-06-13 | XGD 评分 85/L3 Conditional，真实 main 分支已有最小 harness 但缺结构化 L3 任务队列与自我进化门禁 | XGD `.codex/tasks/task-l3-xgd-evolution-queue.json`、`self-evolution-checklist.json`、`loop-round-XGD-LR-002.md`、`package.json`、`validate_xgd_loop_harness.mjs`、GPCF 评分规则扩展 | partial | 70% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=4；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`npm run harness:validate` pass；`npm test` pass；XGD 评分 97/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Electron 打包/发布、未提交、未推送、未升级 accepted/integrated/complete |
 | 64 | XiaoG-LR-002 | 2026-06-13 | XiaoG 评分 85/L3 Conditional，真实 main 分支已有 bootstrap 但缺 L3 队列、风险回滚、可用性 smoke 队列和自我进化门禁 | XiaoG `.codex/tasks/task-l3-xiaog-operational-controls.json`、`risk-rollback.md`、`self-evolution-checklist.json`、`loop-round-XiaoG-LR-002.md`、`.gitignore` 精确白名单、`validate_xiaog_l3_operational_controls.py` | partial | 70% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=5；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；operational controls validator、bootstrap validator、bootstrap smoke 和 diff check pass；XiaoG 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Docker 部署、未设备 OTA、未提交、未推送、未升级 accepted/integrated |
 | 65 | XiaoG-LR-003 | 2026-06-13 | XiaoG 缺 GFIS/WAES trigger dependency dry-run evidence，真实写入/设备/API 未授权 | XiaoG `dry_run_xiaog_gfis_waes_triggers.py`、`loop-round-XiaoG-LR-003.md`、任务队列和 evidence 更新 | partial | 80% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；trigger dry-run validator、operational controls validator、bootstrap validator、bootstrap smoke 和 diff check pass；XiaoG 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Docker 部署、未设备 OTA、未提交、未推送、未升级 accepted/integrated |
+| 66 | GPCF-CF-LR-066 | 2026-06-13 | 全项目提交推送后总控矩阵仍保留 XGD/XiaoG/MMC Conditional 与 dirty 旧事实 | GPCF 控制板、loop-state、项目状态矩阵、L3 准入矩阵和 evidence index 校准为 post-push 事实 | ready_for_review | 98% | 本轮为总控证据校准，不冒充业务项目整改轮；11 个业务项目机器评分均为 L3 Ready；GPCF 保持 governance_hub；未执行生产写入、真实外部 API、权限变更、部署或 accepted/integrated 升级 |
 
 ## 状态约束
 
 - 本文件只表示 GPCF 总控仓已进入 Loop 管理，不表示 12 个项目均已完成。
 - KDS TOKEN 当前为 pass，但不得因此自动进入 `accepted` 或 `integrated`。
-- 当前工作区存在未提交治理变更，Git 门禁为 `partial`。
-- 后续项目状态升级必须引用 `09-status/globalcloud-project-document-loop-maturity-matrix.md` 的量化结论。
+- 提交推送后全项目 Git 门禁为 `pass`；本轮总控校准变更需再次验证后提交。
+- 后续项目状态升级必须引用 `09-status/globalcloud-l3-admission-matrix.md` 与 `docs/harness/evidence/l3_admission_assessment.json` 的量化结论。
 - 连续运行轮次数必须以 `substantive_rounds` 为准，批量生成文件不得折算为多轮。

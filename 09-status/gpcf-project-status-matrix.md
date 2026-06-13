@@ -19,7 +19,7 @@ superseded_by: []
 # GPCF Project Status Matrix
 
 日期：2026-06-13
-状态：v1.68 — XiaoG GFIS/WAES trigger dry-run 已落地
+状态：v1.69 — 全项目提交推送后 L3 准入矩阵已校准
 用途：GPCF 总控（小即）跨项目收口的唯一入口。每次中循环审计后更新。
 
 ## 项目群状态总表
@@ -30,14 +30,14 @@ superseded_by: []
 | 2 | GlobalCloud GPC | GP | 绿色供应链公共服务平台本体 | 链同 | 是 | 是 | 3 | 70% | ready_for_review | 真实 GPC main 分支已落地最小 L3 harness、Manifest 命名纠偏、validator 和 JS check evidence；提交 `454cc42` 已推送；当前机器评分 97/L3 Ready；自我进化、GPC/GFIS adapter dry-run、可用性/客户满意仍可深化 | L3 Ready | 下一步可补 GPC 自我进化 checklist 或 GPC/GFIS adapter dry-run |
 | 3 | GlobalCloud PVAOS | PV | 平台运营与门户底座 | 链同 | 是 | 是 | 3 | 70% | ready_for_review | 真实 PVAOS D4 分支已落地最小 L3 harness、Manifest、validator 和 module validation evidence；提交 `54fcc76` 已推送；当前机器评分 100/L3 Ready | L3 Ready | 下一步可补 PVAOS usability/customer evidence 或 WAES/GPC dependency dry-run |
 | 4 | GlobalCloud WAES | WA | 治理 / 证据 / 状态门控 / AI 越权控制 | 宪衡 | 是 | 是 | 3 | 70% | ready_for_review | 真实 WAES integration-release 分支已落地最小 L3 harness、Manifest、validator、evidence 和 Vitest localStorage 测试环境；提交 `01ac4ab` 已推送；`npm test` 33 files / 135 tests 通过；当前机器评分 100/L3 Ready | L3 Ready | 下一步可补 WAES governance decision dry-run 或 usability/customer evidence |
-| 5 | GlobalCloud KDS | KD | 企业知识主存 | 数枢 | 基础 | 是 | 2 | 50% | partial | 真实 KDS 项目仓已确认并已落地最小 Loop 文档体系；知识对象映射、运行态索引健康、KDS API contract、Brain/PKC 依赖验证仍未完成；Git push/PR merge 未执行 | partial | 授权后推进 KDS runtime index read-only check、API contract dry-run 或 Git 提交推送 |
-| 6 | GlobalCloud Brain | BR | 知识编制与引擎 / 知识 UI 平台 | 灵策 | 基础 | 是 | 3 | 55% | partial | 真实 Brain 项目仓已确认，`.env` 敏感文件门禁、最小 Loop harness 和 ESLint 9 flat config 已落地；`pnpm lint` 通过但有 16 个 warning，`pnpm format:check` 因 68 个既有源码文件格式未对齐失败；缺 test script；知识编制、知识 UI、模型路由和 KDS 映射未完成；Git push/PR merge 未执行 | partial | 授权后推进 Brain format/test script/lint warning 专项，或建立知识编制对象、知识 UI 边界、模型路由与 KDS 依赖映射清单 |
-| 7 | GlobalCloud PKC | PK | 个人知识工作台 | 链同 | 基础 | 是 | 2 | 50% | partial | 真实 PKC 项目仓已确认并已落地最小 Loop 文档体系；个人知识对象、端到端用户闭环、KDS/Brain 依赖和体验验证仍未完成；Git push/PR merge 未执行 | partial | 授权后推进 PKC workflow dry-run、KDS/Brain 依赖验证或 Git 提交推送 |
-| 8 | GlobalCloud XiaoC | XC | 蚁后：AI 能力生产与编排路由 | 灵策 | partial | 是 | 2 | 60% | partial | 真实 XiaoC 项目仓已确认并已落地最小 Loop 文档体系；UI 测试、Wrangler、模型路由和真实部署证据未完成；Git push/PR merge 未执行 | partial | 授权后推进 XiaoC 模型路由、AI 能力生产、编排链路、UI 超时测试或 Wrangler/部署验证 |
-| 9 | GlobalCloud XGD | XD | 大象：长程 Agent、重分析、多端交互和复杂任务承载 | 灵策 | 基础 | 是 | 3 | 70% | partial | 真实 XGD 项目仓已确认；已落地最小 Loop 文档体系、结构化 L3 任务队列、自我进化 checklist、`harness:validate` 和 validator 覆盖；`npm run harness:validate`、`npm test` 通过；评分从 85 提升到 97，但 Git 未提交，按门禁保持 L3 Conditional；TICK loop dry-run、Brain UI/ACUI、voice/social mock 和外部渠道验证仍待执行 | L3 Conditional | 下一步推进 XGD bounded TICK loop dry-run、Brain UI/ACUI smoke，或授权后提交推送 |
-| 10 | GlobalCloud XiaoG | XG | 轻量执行入口 / 蚂蚁 | 接稳 | 基础 | 是 | 5 | 80% | partial | 真实 XiaoG 项目仓已确认；已落地最小 L3 bootstrap、风险回滚 runbook、结构化 L3 队列、自我进化 checklist、operational-control validator 和 GFIS/WAES trigger dry-run fixture validator；dry-run 验证 GFIS suggestion payload 与 WAES ready_for_review gate request；评分 94，因 Git 未提交和 dashboard/voice 可用性 smoke 未执行保持 L3 Conditional；Docker 部署、设备 OTA、真实设备验证和外部 API 均未授权 | L3 Conditional | 下一步补齐 XiaoG dashboard/voice usability smoke evidence；授权后可提交推送 |
-| 11 | GlobalCloud MMC | MM | 管理配置中心 / 治理模板基线 | 宪衡 | 是 | 是 | 6 | 90% | partial | MMC 已新增 L3 admission validator、dependency dry-run、self-evolution checklist、next L3 queue 和 commit-readiness validator；30 项 runtime tests、OpenAPI contract、全部本地 validator 通过；评分 97，但因工作区尚未提交，按 Git 门禁保持 L3 Conditional | L3 Conditional | 明确授权后可执行提交/推送；未授权则转下一个低分真实项目仓 |
-| 12 | GlobalCoud GPCF | CF | 体系文档工作区 / 总控治理仓 | 小即 | 是 | 是 | 65 | 97% | partial | Git dirty；本轮完成 1 个真实实质轮次：XiaoG GFIS/WAES trigger dry-run；XiaoG 仍为 94/L3 Conditional，剩余 Git 未提交和 dashboard/voice 可用性 smoke；XGD 仍因未提交保持 L3 Conditional；生产写入、真实外部 API、数据库迁移和权限变更未授权；KDS Token 已 pass | governance_hub | 下一步推进 XiaoG usability smoke，或授权后提交 XGD/XiaoG/GPCF |
+| 5 | GlobalCloud KDS | KD | 企业知识主存 | 数枢 | 基础 | 是 | 2 | 70% | ready_for_review | 真实 KDS 项目仓已确认并落地最小 Loop 文档体系；当前机器评分 94/L3 Ready；KDS Token 仍只允许本机私有文件使用，知识对象映射、运行态索引健康和 Brain/PKC 依赖验证可继续深化 | L3 Ready | 下一步可推进 KDS runtime index read-only check 或 API contract dry-run |
+| 6 | GlobalCloud Brain | BR | 知识编制与引擎 / 知识 UI 平台 | 灵策 | 基础 | 是 | 3 | 70% | ready_for_review | 真实 Brain 项目仓已确认，敏感文件门禁、最小 Loop harness 和 ESLint 9 flat config 已落地；当前机器评分 97/L3 Ready；`pnpm lint` 仍有 warning、format/test script 可继续专项治理，但不阻断 L3 自动开发准入 | L3 Ready | 下一步可推进 Brain format/test script/lint warning 专项或 KDS 依赖映射 |
+| 7 | GlobalCloud PKC | PK | 个人知识工作台 | 链同 | 基础 | 是 | 2 | 70% | ready_for_review | 真实 PKC 项目仓已确认并落地最小 Loop 文档体系；当前机器评分 92/L3 Ready；个人知识对象、端到端用户闭环、KDS/Brain 依赖和体验验证可继续深化 | L3 Ready | 下一步可推进 PKC workflow dry-run 或 KDS/Brain 依赖验证 |
+| 8 | GlobalCloud XiaoC | XC | 蚁后：AI 能力生产与编排路由 | 灵策 | partial | 是 | 2 | 75% | ready_for_review | 真实 XiaoC 项目仓已确认并落地最小 Loop 文档体系；当前机器评分 97/L3 Ready；UI 测试、Wrangler、模型路由和真实部署证据仍需后续专项授权 | L3 Ready | 下一步可推进 XiaoC 模型路由、AI 能力生产或 UI/Wrangler dry-run |
+| 9 | GlobalCloud XGD | XD | 大象：长程 Agent、重分析、多端交互和复杂任务承载 | 灵策 | 基础 | 是 | 3 | 85% | ready_for_review | 真实 XGD 项目仓已确认；最小 Loop 文档体系、结构化 L3 任务队列、自我进化 checklist、`harness:validate` 和 validator 覆盖已落地；提交 `840b70f0` 已推送；当前机器评分 100/L3 Ready；TICK loop dry-run、Brain UI/ACUI、voice/social mock 可继续深化 | L3 Ready | 下一步可推进 XGD bounded TICK loop dry-run 或 Brain UI/ACUI smoke |
+| 10 | GlobalCloud XiaoG | XG | 轻量执行入口 / 蚂蚁 | 接稳 | 基础 | 是 | 6 | 90% | ready_for_review | 真实 XiaoG 项目仓已确认；bootstrap、风险回滚、结构化 L3 队列、自我进化、GFIS/WAES trigger dry-run 和 dashboard/voice usability smoke 已落地；提交 `a6494b33` 已推送；当前机器评分 97/L3 Ready；Docker 部署、设备 OTA、真实设备验证和外部 API 均未授权 | L3 Ready | 下一步可推进真实浏览器/设备只读验证，需专项授权 |
+| 11 | GlobalCloud MMC | MM | 管理配置中心 / 治理模板基线 | 宪衡 | 是 | 是 | 6 | 95% | ready_for_review | MMC 已新增 L3 admission validator、dependency dry-run、self-evolution checklist、next L3 queue 和 commit-readiness validator；30 项 runtime tests、OpenAPI contract、全部本地 validator 通过；当前机器评分 100/L3 Ready | L3 Ready | 下一步可推进治理模板复用 smoke 或下游项目 contract dry-run |
+| 12 | GlobalCoud GPCF | CF | 体系文档工作区 / 总控治理仓 | 小即 | 是 | 是 | 66 | 98% | ready_for_review | GPCF 作为治理中枢单独判定；提交 `3c578ec` 已推送；post-push 评分复核显示 11 个业务项目均为 L3 Ready，GPCF 为 79/governance_hub；生产写入、真实外部 API、数据库迁移、权限变更、部署和 accepted/integrated 均未授权 | governance_hub | 下一步按真实项目仓选择单一最小闭环继续深化，或提交本轮总控校准 |
 
 ## 状态分布统计
 
@@ -51,7 +51,8 @@ superseded_by: []
 | harness_review | 0 | - |
 | accepted | 0 | - |
 | integrated | 0 | - |
-| partial | 12 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
+| ready_for_review | 11 | GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
+| partial | 1 | GFIS |
 | blocked | 0 | - |
 
 ## 试点项目专项跟踪
@@ -139,3 +140,4 @@ superseded_by: []
 | 2026-06-13 | v1.66：完成 `XGD-LR-002`，在真实 XGD 项目仓新增结构化 L3 任务队列、自我进化 checklist、LR-002 round record、`harness:validate` 和 validator 覆盖；`npm run harness:validate`、`npm test`、diff check 通过；XGD 评分从 85 提升到 97/L3 Conditional，未生产写入、未真实外部 API、未 Electron 打包/发布、未提交/推送、未升级 accepted/integrated/complete |
 | 2026-06-13 | v1.67：完成 `XiaoG-LR-002`，在真实 XiaoG 项目仓新增结构化 L3 任务队列、风险回滚 runbook、自我进化 checklist、LR-002 round record、`.gitignore` 精确白名单和 operational-control validator；operational controls validator、bootstrap validator、bootstrap smoke、diff check 通过；XiaoG 评分从 85 提升到 94/L3 Conditional，未 Docker 部署、未设备 OTA、未真实外部 API、未提交/推送、未升级 accepted/integrated |
 | 2026-06-13 | v1.68：完成 `XiaoG-LR-003`，在真实 XiaoG 项目仓新增 `dry_run_xiaog_gfis_waes_triggers.py`，用本地 fixture 验证 GFIS suggestion payload 与 WAES ready_for_review gate request；dry-run validator、operational controls validator、bootstrap validator、bootstrap smoke、diff check 通过；XiaoG 维持 94/L3 Conditional，未 Docker 部署、未设备 OTA、未真实外部 API、未提交/推送、未升级 accepted/integrated |
+| 2026-06-13 | v1.69：完成全项目提交推送后 L3 准入矩阵校准；XGD `840b70f0`、XiaoG `a6494b33`、GPCF `3c578ec` 已推送；重新评分显示 GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC 均为 L3 Ready，GPCF 保持 governance_hub；未升级 accepted/integrated |

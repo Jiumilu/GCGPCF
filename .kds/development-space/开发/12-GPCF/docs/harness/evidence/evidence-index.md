@@ -72,6 +72,9 @@ superseded_by: []
 | 62 | GPC-LR-001 | GPC evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/evidence/evidence-index.md` | yes | pass |
 | 62 | GPC-LR-001 | GPC round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loops/loop-round-GPC-LR-001.md` | yes | pass |
 | 62 | GPC-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | round-time GPC 94 / L3 Conditional；after commit `454cc42`: 97 / L3 Ready |
+| 66 | GPCF-CF-LR-066 | post-push L3 admission scoring | `python3 tools/kds-sync/assess_l3_admission.py` | yes | 11 business projects L3 Ready; GPCF governance_hub |
+| 66 | GPCF-CF-LR-066 | post-push Git evidence | `git status --short --branch` across all project repos | yes | all clean/up-to-date |
+| 66 | GPCF-CF-LR-066 | pushed commits | XGD `840b70f0`; XiaoG `a6494b33`; GPCF `3c578ec` | yes | pushed |
 
 ## 完整率统计
 
@@ -84,9 +87,9 @@ superseded_by: []
 ## 缺口
 
 - 本轮 command log 未独立落盘。
-- 当前 XGD/GPCF 工作区存在未提交治理变更，尚不能作为 clean evidence。
+- post-push 校准前 XGD/XiaoG/GPCF 曾存在未提交治理变更；当前提交推送后已 clean/up-to-date。
 - GPC 已闭合 main 分支 harness、validator、JS 检查和命名纠偏 evidence；后续提交 `454cc42` 已推送，当前机器评分为 97/L3 Ready，但仍不能升级为 accepted/integrated。
-- XiaoG 已补齐真实仓最小 L3 bootstrap、风险回滚 runbook、结构化 L3 队列、自我进化门禁和 GFIS/WAES trigger dry-run；当前评分为 94/L3 Conditional，剩余 Git 未提交和 dashboard/voice 可用性 smoke evidence。
+- XiaoG 已补齐真实仓最小 L3 bootstrap、风险回滚 runbook、结构化 L3 队列、自我进化门禁、GFIS/WAES trigger dry-run 和 dashboard/voice usability smoke；提交 `a6494b33` 推送后当前评分为 97/L3 Ready。
 
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance docs | `docs/harness/gpcf-*-lr002..lr016.md` | yes | controlled |
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance machine-readable batch | `docs/harness/evidence/gpcf_l3_governance_rounds_lr002_lr016.json` | yes | validated |
@@ -299,6 +302,29 @@ superseded_by: []
 | 65 | XiaoG bootstrap smoke | `python3 scripts/test_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
 | 65 | XiaoG diff check | `git diff --check -- .` in real XiaoG repo | pass | pass |
 | 65 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | XiaoG 94 / L3 Conditional | pass |
+
+## XiaoG-LR-004 真实项目仓实质轮次
+
+| 轮次 | 证据 | 路径 | 结果 | 状态 |
+|---|---|---|---|---|
+| 66 | XiaoG dashboard/voice usability smoke | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/smoke_xiaog_dashboard_voice_usability.py` | web_routes=7 mobile_pages=6 mobile_tabs=3 | pass |
+| 66 | XiaoG loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-004.md` | yes | partial |
+| 66 | XiaoG operational controls validator | `python3 scripts/validate_xiaog_l3_operational_controls.py` in real XiaoG repo | pass | pass |
+| 66 | XiaoG bootstrap validator | `python3 scripts/validate_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
+| 66 | XiaoG bootstrap smoke | `python3 scripts/test_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
+| 66 | XiaoG diff check | `git diff --check -- .` in real XiaoG repo before commit | pass | pass |
+| 66 | XiaoG pushed commit | `a6494b33` | pushed to `main` | pass |
+| 66 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | XiaoG 97 / L3 Ready | pass |
+
+## Post-push L3 准入校准
+
+| 轮次 | 证据 | 路径 | 结果 | 状态 |
+|---|---|---|---|---|
+| 66 | XGD pushed commit | `840b70f0` | pushed to `main` | pass |
+| 66 | XiaoG pushed commit | `a6494b33` | pushed to `main` | pass |
+| 66 | GPCF pushed commit | `3c578ec` | pushed to `codex/kds-token-sync-gpcf` | pass |
+| 66 | all project git status | `git status --short --branch` across 12 repos | clean/up-to-date | pass |
+| 66 | L3 admission assessment | `docs/harness/evidence/l3_admission_assessment.json` | GFIS/GPC/PVAOS/WAES/KDS/Brain/PKC/XiaoC/XGD/XiaoG/MMC L3 Ready; GPCF governance_hub | pass |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
 - 本轮未执行 Docker 部署、设备 OTA、真实外部 API 写入、数据库迁移、权限变更、生产写入、Token 读取、Git push 或 accepted/integrated 状态升级。

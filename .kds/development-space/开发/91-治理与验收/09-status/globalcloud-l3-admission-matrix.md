@@ -50,10 +50,10 @@ superseded_by: []
 | Brain | BR | 97 | L3 Ready | 自我进化机制仍可深化 |
 | PKC | PK | 92 | L3 Ready | 自我进化机制仍可深化 |
 | XiaoC | XC | 97 | L3 Ready | 自我进化机制仍可深化 |
-| XGD | XD | 97 | L3 Conditional | L3 任务队列与自我进化门禁已补齐；因工作区尚未提交，Git 门禁限制为 L3 Conditional；runtime smoke evidence 仍需后续执行 |
-| XiaoG | XG | 94 | L3 Conditional | 真实代码/配置、validator、smoke test、loop-state、evidence、风险/回滚、L3 队列、自我进化和 GFIS/WAES trigger dry-run 已补齐；因工作区尚未提交且 dashboard/voice 可用性 smoke evidence 仍不足，保持 L3 Conditional |
+| XGD | XD | 100 | L3 Ready | L3 任务队列、自我进化门禁、`harness:validate`、项目测试和 Git 门禁已补齐；提交 `840b70f0` 已推送；runtime smoke evidence 可继续深化但不阻断 L3 准入 |
+| XiaoG | XG | 97 | L3 Ready | 真实代码/配置、validator、smoke test、loop-state、evidence、风险/回滚、L3 队列、自我进化、GFIS/WAES trigger dry-run 和 dashboard/voice usability smoke 已补齐；提交 `a6494b33` 已推送；真实设备/外部 API 仍需专项授权 |
 | MMC | MM | 100 | L3 Ready | L3 队列、自我进化、依赖 dry-run、运行态测试和 Git 门禁均已闭合 |
-| GPCF | CF | 76 | governance_hub | 总控仓以治理中枢单独判定，不作为业务 L3 Ready |
+| GPCF | CF | 79 | governance_hub | 总控仓以治理中枢单独判定，不作为业务 L3 Ready；负责准入评分、证据一致性和 KDS/文档门禁 |
 
 ## MMC 实质整改记录
 
@@ -141,8 +141,8 @@ superseded_by: []
 
 - 该矩阵是 L3 准入评估，不是业务验收结论。
 - 任何项目不得因分数达到 L3 Ready 自动升级为 `accepted` 或 `integrated`。
-- MMC 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、Registry 退役或部署。
-- 下一实质轮次可在明确授权后执行 MMC commit/push；若未授权，则应转入下一个低分真实项目仓。
+- 全项目提交推送后，Git 门禁已从 Conditional 转为 pass；仍未执行生产写入、真实外部 API 写入、数据库迁移、权限变更、Registry 退役或部署。
+- 下一实质轮次应选择一个真实项目仓继续深化运行态、依赖或可用性闭环；不得把总控文档校准冒充业务项目整改轮。
 
 ## XiaoG 实质整改记录
 
@@ -259,6 +259,58 @@ XiaoG 本轮真实落地点：
 约束：
 
 - 本轮未执行 Docker 部署、设备 OTA、真实外部 API、Token 读取、生产写入、权限变更、数据库迁移、提交、推送或 accepted/integrated 升级。
+
+## XiaoG 四轮实质整改记录
+
+| 字段 | 结果 |
+|---|---|
+| Round ID | `XiaoG-LR-004` |
+| declared_rounds | 1/15 |
+| substantive_rounds | 1/15 |
+| generated_items | 7 |
+| batch_generated | false |
+| substance_gate | pass |
+| stop_type | authorization_boundary |
+| 本轮闭合缺口 | dashboard/voice usability smoke evidence |
+| 更新后剩余缺口 | 真实设备验证、Docker 部署、设备 OTA 与真实外部 API 仍需专项授权 |
+| 分数变化 | 94 -> 97 |
+| 状态变化 | L3 Conditional -> L3 Ready after commit/push |
+
+XiaoG 本轮真实落地点：
+
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/smoke_xiaog_dashboard_voice_usability.py`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-004.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/.codex/tasks/task-l3-xiaog-operational-controls.json`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loop-state.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/evidence/evidence-index.md`
+
+验证结果：
+
+| 命令 | 结果 |
+|---|---|
+| `python3 scripts/smoke_xiaog_dashboard_voice_usability.py` | pass; web_routes=7 mobile_pages=6 mobile_tabs=3 |
+| `python3 scripts/dry_run_xiaog_gfis_waes_triggers.py` | pass |
+| `python3 scripts/validate_xiaog_l3_operational_controls.py` | pass |
+| `python3 scripts/validate_xiaog_l3_bootstrap.py` | pass |
+| `python3 scripts/test_xiaog_l3_bootstrap.py` | pass |
+| `git diff --check -- .` | pass |
+| `git commit && git push` | `a6494b33` pushed to `main` |
+| `python3 tools/kds-sync/assess_l3_admission.py` | post-push pass; XiaoG 97 / L3 Ready |
+
+约束：
+
+- 本轮未执行 Docker 部署、设备 OTA、真实外部 API、Token 读取、生产写入、权限变更、数据库迁移或 accepted/integrated 升级。
+
+## Post-push 总控校准记录
+
+| 字段 | 结果 |
+|---|---|
+| Round ID | `GPCF-CF-LR-066` |
+| 轮次性质 | governance reconciliation，不计为业务项目 substantive_round |
+| 触发原因 | XGD、XiaoG、GPCF 已提交推送，但总控文档仍保留 Conditional/dirty 旧事实 |
+| Git 证据 | XGD `840b70f0`、XiaoG `a6494b33`、GPCF `3c578ec` 已推送；全项目 `git status --short --branch` clean/up-to-date |
+| 评分证据 | `python3 tools/kds-sync/assess_l3_admission.py` pass；11 个业务项目均为 L3 Ready；GPCF 为 governance_hub |
+| 状态边界 | 不升级 accepted/integrated；不执行生产写入、真实外部 API、权限变更、部署或设备 OTA |
 
 ## PVAOS 实质整改记录
 
