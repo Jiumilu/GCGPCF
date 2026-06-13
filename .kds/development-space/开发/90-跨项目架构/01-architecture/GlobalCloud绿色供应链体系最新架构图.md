@@ -36,12 +36,12 @@ flowchart TB
 
   subgraph OPS["运营与协同层"]
     PVAOS["PVAOS<br/>租户 / 组织 / 伙伴 / 项目 / 门户入口"]
-    GPC["GPC<br/>平台订单 / ASN / 预约 / 运输 / POD / 外部异常 / 多厂协同"]
+    GPC["GPC<br/>平台订单 / 样品申请 / 客户签样 / 转量产 / ASN / 预约 / 运输 / POD / 外部异常 / 多厂协同"]
     Odoo["Odoo GPC 原型<br/>历史样本 / 可选 back-office connector"]
   end
 
   subgraph EXEC["生产与执行层"]
-    GFIS["GFIS<br/>工厂订单 / 工单 / 质量 / 库存 / 批次 / LES / EAM / 发货出库"]
+    GFIS["GFIS<br/>配方研发 / 样品打样 / 工厂订单 / 工单 / 质量 / 库存 / 批次 / LES / EAM / 发货出库"]
     Edge["Edge<br/>采集 / 协议转换 / 缓存 / 补传 / 去重 / 回执"]
     OT["PLC / SCADA / DCS / AGV / 仪表 / 工位终端"]
   end
