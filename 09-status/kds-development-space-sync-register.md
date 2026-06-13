@@ -43,15 +43,15 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 135 | 90 | 已建空间 |
+| GPCF | 12-GPCF | 137 | 90 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 33 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 47 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 34 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 48 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -186,6 +186,7 @@ superseded_by: []
 | GPCF-DOC-3DB47E5509 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | bidirectional | pending_api |
 | GPCF-DOC-AA2468EDC8 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | bidirectional | pending_api |
 | GPCF-DOC-535BF5C0CA | 01-architecture/GlobalCloud项目群交叉分析报告.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md | bidirectional | pending_api |
+| GPCF-DOC-7B5E3B05D7 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | bidirectional | pending_api |
 | GPCF-DOC-75A25DFFB1 | 01-architecture/README.md | 开发/90-跨项目架构/01-architecture/README.md | bidirectional | pending_api |
 | GPCF-DOC-1D47877518 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | 开发/90-跨项目架构/01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | bidirectional | pending_api |
 | GPCF-DOC-78AE1A47AE | 02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md | bidirectional | pending_api |
@@ -373,6 +374,7 @@ superseded_by: []
 | GPCF-DOC-5EF9F8EE5D | 09-status/globalcloud-document-control-register.md | 开发/91-治理与验收/09-status/globalcloud-document-control-register.md | bidirectional | pending_api |
 | GPCF-DOC-71779DF3C3 | 09-status/globalcloud-document-governance-loop-gate.md | 开发/91-治理与验收/09-status/globalcloud-document-governance-loop-gate.md | bidirectional | pending_api |
 | GPCF-DOC-C436DDB0F6 | 09-status/globalcloud-document-health-report.md | 开发/91-治理与验收/09-status/globalcloud-document-health-report.md | bidirectional | pending_api |
+| GPCF-DOC-C582EFCACE | 09-status/globalcloud-l3-admission-matrix.md | 开发/91-治理与验收/09-status/globalcloud-l3-admission-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-C10C271958 | 09-status/globalcloud-project-document-loop-maturity-matrix.md | 开发/91-治理与验收/09-status/globalcloud-project-document-loop-maturity-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-6CE17269E9 | 09-status/globalcloud-project-mainline-alignment-matrix.md | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-C586488E67 | 09-status/gpcf-project-status-matrix.md | 开发/91-治理与验收/09-status/gpcf-project-status-matrix.md | bidirectional | pending_api |

@@ -235,9 +235,24 @@ def score_project(project: Project) -> dict:
         read(p)
         for p in list(harness.glob("**/*.md"))[:80]
         + list(harness.glob("**/*.json"))[:40]
+        + list((path / ".codex" / "tasks").glob("*.json"))[:40]
         + [path / "PROJECT_HARNESS_MANIFEST.md", path / "README.md", path / "AGENTS.md"]
     )
-    queue_hits = sum(token in joined_docs for token in ["下一轮", "任务", "backlog", "P1", "Round", "next_task_queue", "required_action"])
+    queue_hits = sum(
+        token in joined_docs
+        for token in [
+            "下一轮",
+            "任务",
+            "backlog",
+            "P1",
+            "Round",
+            "next_task_queue",
+            "required_action",
+            "l3_tasks",
+            "queued",
+            "task_id",
+        ]
+    )
     if queue_hits >= 3:
         scores["queue"] = WEIGHTS["queue"]
     elif queue_hits:
@@ -264,7 +279,10 @@ def score_project(project: Project) -> dict:
     else:
         gaps.append("缺跨项目依赖验证")
 
-    usability_hits = sum(token in joined_docs for token in ["可用", "用户", "客户", "UAT", "preview", "浏览器", "满意"])
+    usability_hits = sum(
+        token in joined_docs
+        for token in ["可用", "用户", "客户", "UAT", "preview", "浏览器", "满意", "Brain UI", "ACUI", "smoke"]
+    )
     if usability_hits >= 3:
         scores["usability_customer"] = WEIGHTS["usability_customer"]
     elif usability_hits:
@@ -273,7 +291,22 @@ def score_project(project: Project) -> dict:
     else:
         gaps.append("缺可用性/客户满意指标")
 
-    evolution_hits = sum(token in joined_docs for token in ["自我进化", "下一轮", "反馈", "复盘", "经验", "self-evolution", "feedback_to_rules", "rule_update"])
+    evolution_hits = sum(
+        token in joined_docs
+        for token in [
+            "自我进化",
+            "下一轮",
+            "反馈",
+            "复盘",
+            "经验",
+            "self-evolution",
+            "self_evolution",
+            "Self-Evolution",
+            "next_improvement_rule",
+            "feedback_to_rules",
+            "rule_update",
+        ]
+    )
     if evolution_hits >= 3:
         scores["evolution"] = WEIGHTS["evolution"]
     elif evolution_hits:

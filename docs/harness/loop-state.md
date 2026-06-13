@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7183C7D7D1
 title: GPCF Loop State
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loop-state.md
 source_path: docs/harness/loop-state.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-13
+last_reviewed: 2026-06-12
 supersedes: []
 superseded_by: []
 ---
@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 62 |
-| loop.current_step | gpc_l3_harness_landed |
-| loop.last_entry | `GPC-LR-001`：按 L3 准入评估整改剩余 L2.5 项目 GPC |
-| loop.last_exit | 本轮只计 1 个实质轮次；GPC main 真实项目分支新增最小 L3 harness、validator、evidence，并完成 GPC 命名纠偏，评分从 79/L2.5 提升到 94/L3 Conditional |
+| loop.round | 65 |
+| loop.current_step | xiaog_trigger_dry_run_landed |
+| loop.last_entry | `XiaoG-LR-003`：按 L3 准入评估补齐 XiaoG GFIS/WAES trigger dry-run evidence |
+| loop.last_exit | 本轮只计 1 个实质轮次；XiaoG main 真实项目仓新增 GFIS/WAES trigger dry-run fixture validator，依赖 dry-run 缺口已闭合；评分保持 94/L3 Conditional，剩余 Git 未提交和 dashboard/voice 可用性 smoke evidence |
 | loop.gate_result | partial |
-| loop.blockers | 当前 Git 工作区 dirty；GPC/PVAOS/WAES 本轮未提交/推送；Brain `pnpm format:check` 仍保留既有源码格式缺口；XGD/XiaoG 仍为 L3 Conditional；生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA 和 accepted/integrated 均未授权 |
-| loop.next_target | 为 GPC/PVAOS/WAES 补 commit-readiness evidence，或推进 XGD/XiaoG 自我进化/风险回滚缺口 |
+| loop.blockers | 当前 Git 工作区 dirty；XGD 与 XiaoG 本轮未提交/推送；Brain `pnpm format:check` 仍保留既有源码格式缺口；XiaoG dashboard/voice 可用性 smoke evidence 仍待执行；生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布和 accepted/integrated 均未授权 |
+| loop.next_target | 推进 XiaoG dashboard/voice usability smoke evidence；或授权后提交 XGD/XiaoG/GPCF 受控变更 |
 
 ## 循环历史
 
@@ -99,6 +99,9 @@ superseded_by: []
 | 60 | PVAOS-LR-001 | 2026-06-13 | PVAOS 评分 76/L2.5，真实 D4 分支有代码/验证命令但缺项目级 harness、loop-state、evidence 和 validator | PVAOS `PROJECT_HARNESS_MANIFEST.md`、`.codex/tasks/task-l3-pvaos-harness-bootstrap.json`、`docs/harness/**`、`validate_pvaos_l3_harness.py` | partial | 55% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=8；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；PVAOS 评分 97/L3 Conditional；未生产数据库写入、未外部 API、未部署、未提交、未推送、未升级 accepted/integrated |
 | 61 | WAES-LR-001 | 2026-06-13 | WAES 评分 73/L2.5，真实 integration-release 分支有代码/测试但缺项目级 loop-state、evidence 和 validator，且 `npm test` 因 localStorage 测试环境失败 | WAES `PROJECT_HARNESS_MANIFEST.md`、`.codex/tasks/task-l3-waes-harness-bootstrap.json`、`docs/harness/**`、`validate_waes_l3_harness.py`、`vitest.config.ts`、`tests/setup.ts` | partial | 60% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=11；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`npm test` 33 files / 135 tests pass；WAES 评分 97/L3 Conditional；未生产写入、未外部 API、未权限变更、未部署、未提交、未推送、未升级 accepted/integrated |
 | 62 | GPC-LR-001 | 2026-06-13 | GPC 评分 79/L2.5，真实 main 分支有 SOP/JS 验证但缺项目级 loop-state、evidence 和 validator，且 Manifest 有旧命名残留 | GPC `PROJECT_HARNESS_MANIFEST.md`、`.codex/tasks/task-l3-gpc-harness-bootstrap.json`、`docs/harness/**`、`validate_gpc_l3_harness.py` | partial | 60% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`npm run check:js` pass；GPC 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未部署、未提交、未推送、未改一期蓝图主结论、未升级 accepted/integrated |
+| 63 | XGD-LR-002 | 2026-06-13 | XGD 评分 85/L3 Conditional，真实 main 分支已有最小 harness 但缺结构化 L3 任务队列与自我进化门禁 | XGD `.codex/tasks/task-l3-xgd-evolution-queue.json`、`self-evolution-checklist.json`、`loop-round-XGD-LR-002.md`、`package.json`、`validate_xgd_loop_harness.mjs`、GPCF 评分规则扩展 | partial | 70% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=4；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`npm run harness:validate` pass；`npm test` pass；XGD 评分 97/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Electron 打包/发布、未提交、未推送、未升级 accepted/integrated/complete |
+| 64 | XiaoG-LR-002 | 2026-06-13 | XiaoG 评分 85/L3 Conditional，真实 main 分支已有 bootstrap 但缺 L3 队列、风险回滚、可用性 smoke 队列和自我进化门禁 | XiaoG `.codex/tasks/task-l3-xiaog-operational-controls.json`、`risk-rollback.md`、`self-evolution-checklist.json`、`loop-round-XiaoG-LR-002.md`、`.gitignore` 精确白名单、`validate_xiaog_l3_operational_controls.py` | partial | 70% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=5；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；operational controls validator、bootstrap validator、bootstrap smoke 和 diff check pass；XiaoG 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Docker 部署、未设备 OTA、未提交、未推送、未升级 accepted/integrated |
+| 65 | XiaoG-LR-003 | 2026-06-13 | XiaoG 缺 GFIS/WAES trigger dependency dry-run evidence，真实写入/设备/API 未授权 | XiaoG `dry_run_xiaog_gfis_waes_triggers.py`、`loop-round-XiaoG-LR-003.md`、任务队列和 evidence 更新 | partial | 80% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；trigger dry-run validator、operational controls validator、bootstrap validator、bootstrap smoke 和 diff check pass；XiaoG 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Docker 部署、未设备 OTA、未提交、未推送、未升级 accepted/integrated |
 
 ## 状态约束
 

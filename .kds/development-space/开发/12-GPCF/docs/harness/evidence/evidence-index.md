@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5D0159ED7D
 title: Evidence Index — GPCF
 project: GPCF
-related_projects: [GPC, WAES, KDS, Brain, MMC, GPCF]
+related_projects: [GPC, PVAOS, WAES, KDS, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,6 +30,48 @@ superseded_by: []
 | 1 | GPCF-CF-LR-001 | Git evidence | `git status --short --branch` | partial | 工作区 dirty |
 | 32 | GPCF-CF-LR-032 | KDS token evidence | `python3 tools/kds-sync/validate_kds_token.py` | yes | pass fingerprint=bfd9553d |
 | - | - | audit report | `docs/harness/status-audit-2026-06-10.md` | yes | 历史首轮纳入 |
+| 55 | GPCF-MM-LR-002 | L3 admission matrix | `09-status/globalcloud-l3-admission-matrix.md` | yes | MMC L3 Conditional |
+| 55 | GPCF-MM-LR-002 | L3 admission machine-readable evidence | `docs/harness/evidence/l3_admission_assessment.json` | yes | pass |
+| 55 | GPCF-MM-LR-002 | L3 admission scorer | `tools/kds-sync/assess_l3_admission.py` | yes | pass |
+| 55 | GPCF-MM-LR-002 | MMC project validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_l3_admission.py` | yes | pass |
+| 55 | GPCF-MM-LR-002 | MMC runtime tests | `MMC_TEST_MODE=true python3 -m pytest runtime/tests -q` in MMC repo | yes | 30 passed |
+| 55 | GPCF-MM-LR-002 | MMC contract test | `bash runtime/scripts/contract_test.sh` in MMC repo | yes | pass |
+| 56 | GPCF-MM-LR-003 | MMC dependency dry-run | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/dry_run_mmc_dependencies.py` | yes | pass |
+| 56 | GPCF-MM-LR-003 | MMC dependency round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/loops/loop-round-GPCF-MM-LR-003.md` | yes | pass |
+| 56 | GPCF-MM-LR-003 | MMC dependency safety | `production_write=false real_external_api=false token_read=false` | yes | pass |
+| 56 | GPCF-MM-LR-003 | L3 task generation cleanup | `tools/kds-sync/assess_l3_admission.py` | yes | pass |
+| 57 | GPCF-MM-LR-004 | MMC self-evolution checklist | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/self-evolution-checklist.json` | yes | pass |
+| 57 | GPCF-MM-LR-004 | MMC self-evolution validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_self_evolution.py` | yes | pass |
+| 57 | GPCF-MM-LR-004 | MMC self-evolution round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/loops/loop-round-GPCF-MM-LR-004.md` | yes | pass |
+| 57 | GPCF-MM-LR-004 | L3 JSON evidence scoring | `tools/kds-sync/assess_l3_admission.py` | yes | MMC 97 / L3 Conditional due Git dirty |
+| 58 | GPCF-MM-LR-005 | MMC commit-readiness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_commit_readiness.py` | yes | pass |
+| 58 | GPCF-MM-LR-005 | MMC commit-readiness round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/loops/loop-round-GPCF-MM-LR-005.md` | yes | pass |
+| 58 | GPCF-MM-LR-005 | MMC commit safety flags | `stage=false commit=false push=false sensitive_paths=0 unexpected_paths=0` | yes | pass |
+| 58 | GPCF-MM-LR-005 | MMC full validation batch | commit-readiness, self-evolution, dependency dry-run, loop harness, L3 admission, 30 tests, contract, diff check | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG bootstrap validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/validate_xiaog_l3_bootstrap.py` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG bootstrap smoke test | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/test_xiaog_l3_bootstrap.py` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loop-state.md` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-001.md` | yes | pass |
+| 59 | XiaoG-LR-001 | L3 nested project scoring | `tools/kds-sync/assess_l3_admission.py` | yes | XiaoG 82 / L3 Conditional |
+| 60 | PVAOS-LR-001 | PVAOS harness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/scripts/validate_pvaos_l3_harness.py` | yes | pass |
+| 60 | PVAOS-LR-001 | PVAOS module validator | `npm run validate:modules` in PVAOS repo | yes | pass; 50 menu ids, 50 configured modules |
+| 60 | PVAOS-LR-001 | PVAOS loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loop-state.md` | yes | pass |
+| 60 | PVAOS-LR-001 | PVAOS evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 60 | PVAOS-LR-001 | PVAOS round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness/loops/loop-round-PVAOS-LR-001.md` | yes | pass |
+| 60 | PVAOS-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | PVAOS 97 / L3 Conditional |
+| 61 | WAES-LR-001 | WAES harness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/scripts/validate_waes_l3_harness.py` | yes | pass |
+| 61 | WAES-LR-001 | WAES Vitest suite | `npm test` in WAES repo | yes | pass; 33 files / 135 tests |
+| 61 | WAES-LR-001 | WAES loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loop-state.md` | yes | pass |
+| 61 | WAES-LR-001 | WAES evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 61 | WAES-LR-001 | WAES round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness/loops/loop-round-WAES-LR-001.md` | yes | pass |
+| 61 | WAES-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | round-time WAES 97 / L3 Conditional；after commit `01ac4ab`: 100 / L3 Ready |
+| 62 | GPC-LR-001 | GPC harness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/scripts/validate_gpc_l3_harness.py` | yes | pass |
+| 62 | GPC-LR-001 | GPC JavaScript check | `npm run check:js` in GPC repo | yes | pass |
+| 62 | GPC-LR-001 | GPC loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loop-state.md` | yes | pass |
+| 62 | GPC-LR-001 | GPC evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 62 | GPC-LR-001 | GPC round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/loops/loop-round-GPC-LR-001.md` | yes | pass |
+| 62 | GPC-LR-001 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | yes | round-time GPC 94 / L3 Conditional；after commit `454cc42`: 97 / L3 Ready |
 
 ## 完整率统计
 
@@ -42,7 +84,9 @@ superseded_by: []
 ## 缺口
 
 - 本轮 command log 未独立落盘。
-- Git 工作区存在未提交治理变更，尚不能作为 clean evidence。
+- 当前 XGD/GPCF 工作区存在未提交治理变更，尚不能作为 clean evidence。
+- GPC 已闭合 main 分支 harness、validator、JS 检查和命名纠偏 evidence；后续提交 `454cc42` 已推送，当前机器评分为 97/L3 Ready，但仍不能升级为 accepted/integrated。
+- XiaoG 已补齐真实仓最小 L3 bootstrap、风险回滚 runbook、结构化 L3 队列、自我进化门禁和 GFIS/WAES trigger dry-run；当前评分为 94/L3 Conditional，剩余 Git 未提交和 dashboard/voice 可用性 smoke evidence。
 
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance docs | `docs/harness/gpcf-*-lr002..lr016.md` | yes | controlled |
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance machine-readable batch | `docs/harness/evidence/gpcf_l3_governance_rounds_lr002_lr016.json` | yes | validated |
@@ -209,6 +253,55 @@ superseded_by: []
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
 - 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、Electron 启动/打包、发布或 accepted/integrated/complete 状态升级。
+
+## XGD-LR-002 真实项目仓实质轮次
+
+| 轮次 | 证据 | 路径 | 结果 | 状态 |
+|---|---|---|---|---|
+| 63 | XGD L3 task queue | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/.codex/tasks/task-l3-xgd-evolution-queue.json` | yes | controlled |
+| 63 | XGD self-evolution checklist | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/docs/harness/evolution/self-evolution-checklist.json` | yes | controlled |
+| 63 | XGD loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/docs/harness/loops/loop-round-XGD-LR-002.md` | yes | partial |
+| 63 | XGD package harness command | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD/package.json` | `harness:validate` | controlled |
+| 63 | XGD validator | `npm run harness:validate` in real XGD repo | pass | pass |
+| 63 | XGD project tests | `npm test` in real XGD repo | 5 unit suites passed | pass |
+| 63 | XGD diff check | `git diff --check -- .` in real XGD repo | pass | pass |
+| 63 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | XGD 97 / L3 Conditional | pass |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=4`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、Electron 启动/打包、发布或 accepted/integrated/complete 状态升级。
+
+## XiaoG-LR-002 真实项目仓实质轮次
+
+| 轮次 | 证据 | 路径 | 结果 | 状态 |
+|---|---|---|---|---|
+| 64 | XiaoG L3 task queue | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/.codex/tasks/task-l3-xiaog-operational-controls.json` | yes | controlled |
+| 64 | XiaoG risk rollback runbook | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/runbooks/risk-rollback.md` | yes | controlled |
+| 64 | XiaoG self-evolution checklist | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/evolution/self-evolution-checklist.json` | yes | controlled |
+| 64 | XiaoG loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-002.md` | yes | partial |
+| 64 | XiaoG operational-control validator | `python3 scripts/validate_xiaog_l3_operational_controls.py` in real XiaoG repo | pass | pass |
+| 64 | XiaoG bootstrap validator | `python3 scripts/validate_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
+| 64 | XiaoG bootstrap smoke | `python3 scripts/test_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
+| 64 | XiaoG diff check | `git diff --check -- .` in real XiaoG repo | pass | pass |
+| 64 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | XiaoG 94 / L3 Conditional | pass |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=5`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮未执行 Docker 部署、设备 OTA、真实外部 API 写入、数据库迁移、权限变更、生产写入、Token 读取、Git push 或 accepted/integrated 状态升级。
+
+## XiaoG-LR-003 真实项目仓实质轮次
+
+| 轮次 | 证据 | 路径 | 结果 | 状态 |
+|---|---|---|---|---|
+| 65 | XiaoG GFIS/WAES trigger dry-run | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/dry_run_xiaog_gfis_waes_triggers.py` | pass | pass |
+| 65 | XiaoG loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-003.md` | yes | partial |
+| 65 | XiaoG task queue update | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/.codex/tasks/task-l3-xiaog-operational-controls.json` | yes | ready_for_review |
+| 65 | XiaoG operational-control validator | `python3 scripts/validate_xiaog_l3_operational_controls.py` in real XiaoG repo | pass | pass |
+| 65 | XiaoG bootstrap validator | `python3 scripts/validate_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
+| 65 | XiaoG bootstrap smoke | `python3 scripts/test_xiaog_l3_bootstrap.py` in real XiaoG repo | pass | pass |
+| 65 | XiaoG diff check | `git diff --check -- .` in real XiaoG repo | pass | pass |
+| 65 | L3 admission scoring | `tools/kds-sync/assess_l3_admission.py` | XiaoG 94 / L3 Conditional | pass |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮未执行 Docker 部署、设备 OTA、真实外部 API 写入、数据库迁移、权限变更、生产写入、Token 读取、Git push 或 accepted/integrated 状态升级。
 
 ## XiaoC-LR-001 真实项目仓实质轮次
 
