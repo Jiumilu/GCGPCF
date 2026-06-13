@@ -27,8 +27,8 @@ superseded_by: []
 ```mermaid
 flowchart LR
   PVAOS["PVAOS<br/>租户 / 组织 / 伙伴 / 项目 / 门户入口"]
-  GPC["GPC<br/>平台订单 / ASN / 预约 / 车辆 / 运输 / POD / 外部异常"]
-  GFIS["GFIS<br/>工厂订单 / 工单 / 质量 / 库存 / 批次 / LES / 发货出库"]
+  GPC["GPC<br/>平台订单 / 样品申请 / 客户签样 / 转量产 / ASN / 预约 / 车辆 / 运输 / POD / 外部异常"]
+  GFIS["GFIS<br/>配方研发 / 样品打样 / 工厂订单 / 工单 / 质量 / 库存 / 批次 / LES / 发货出库"]
   Edge["Edge<br/>现场采集 / 缓存 / 回执"]
   Customer["客户"]
   Supplier["供应商"]
@@ -39,7 +39,7 @@ flowchart LR
   Customer --> GPC
   Carrier --> GPC
 
-  GPC -->|"平台订单 / ASN / 预约"| GFIS
+  GPC -->|"平台订单 / 样品申请 / 转量产 / ASN / 预约"| GFIS
   Edge --> GFIS
   GFIS -->|"发货出库事实"| GPC
   GPC -->|"运输 / 在途 / POD"| Customer
@@ -50,8 +50,8 @@ flowchart LR
 ## 2. 业务链路拆解
 
 1. `PVAOS` 提供租户、组织、伙伴、项目和门户入口。
-2. `GPC` 负责平台订单、ASN、预约、车辆、运输、POD 和外部异常。
-3. `GFIS` 负责工厂订单确认、工单、质量、库存、批次、LES 和发货出库事实。
+2. `GPC` 负责平台订单、样品申请、客户签样、转量产、ASN、预约、车辆、运输、POD 和外部异常。
+3. `GFIS` 负责配方研发、样品打样、样品检测、工厂订单确认、工单、质量、库存、批次、LES 和发货出库事实。
 4. `Edge` 只负责现场接入，先进入 `GFIS`，不直接进入平台主账。
 
 ## 3. 边界重点

@@ -191,8 +191,8 @@ flowchart TB
 |---|---|---|
 | 生态入口 | PVAOS | 组织、项目、伙伴、客户、供应商、承运商、门户入口 |
 | 项目初始化 | WAES | 新建供应链项目、选择模板、配置拓扑、连接器、AI 能力、发布验证 |
-| 外部协同 | GPC | 平台订单、ASN、预约、车辆、运输、POD、外部异常 |
-| 工厂执行 | GFIS | 工厂订单、工单、齐套、质量、库存、批次、LES、EAM、发货出库 |
+| 外部协同 | GPC | 平台订单、样品申请、客户签样、转量产、ASN、预约、车辆、运输、POD、外部异常 |
+| 工厂执行 | GFIS | 配方研发、样品打样、样品检测、工厂订单、工单、齐套、质量、库存、批次、LES、EAM、发货出库 |
 | 现场接入 | Edge | 现场信号采集、协议转换、缓存、回执，不是业务主账 |
 | AI 交互 | Brain/XiaoC（蚁后）/Hermes/XGD（大象） | 知识、Prompt、Agent、交互，受 WAES 治理授权约束 |
 
@@ -202,6 +202,7 @@ flowchart TB
 PVAOS 组织和伙伴接入
 -> WAES 供应链项目初始化和发布验证
 -> GPC 平台订单和外部协同
+-> GPC / GFIS 样品确认、打样签样和转量产
 -> GFIS 工厂订单确认和生产执行
 -> GFIS 质量、库存、批次、LES、EAM、发货出库
 -> GPC 运输、POD、外部异常
@@ -377,6 +378,10 @@ traceId, correlationId, idempotencyKey, payload, evidenceRefs
 | 业务动作 | 产生的数据 |
 |---|---|
 | 平台订单接收 | `gpc.platform_order.received`、PlatformOrder |
+| 样品申请 | `gpc.sample_request.created`、SampleRequest |
+| 样品打样完成 | `gfis.sample_work_order.completed`、SampleWorkOrder |
+| 客户签样确认 | `gpc.sample.approved`、SampleApproval |
+| 转量产放行 | `gpc.production_release.approved`、ProductionRelease |
 | 订单分发到工厂 | `gpc.platform_order.dispatched_to_factory`、OrderMapping |
 | 工厂订单确认 | `gfis.factory_order.accepted`、FactoryOrder |
 | 齐套检查 | `gfis.kitting_check.completed`、KittingCheck |
