@@ -31,6 +31,12 @@ superseded_by: []
 | GPCF-L4-002 | MMC KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/evidence/kds-retrieval-MMC-L4-002.json` | pass |
 | GPCF-L4-002 | MMC production resource policy | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/runtime/policies/minimum_closed_loop_policy.json` | pass |
 | GPCF-L4-002 | MMC L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_l4_sample_policy.py` | pass |
+| GPCF-L4-003 | KDS sample knowledge retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/docs/harness/evidence/kds-retrieval-KDS-L4-003.json` | pass |
+| GPCF-L4-003 | KDS sample knowledge index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/docs/harness/minimum-closed-loop/sample-knowledge-index.json` | pass |
+| GPCF-L4-003 | KDS L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/scripts/validate_kds_l4_sample_knowledge_index.py` | pass |
+| GPCF-L4-004 | Brain KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/docs/harness/evidence/kds-retrieval-Brain-L4-004.json` | pass |
+| GPCF-L4-004 | Brain retrieval module | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/src/app/data/l4MinimumClosedLoopKnowledge.ts` | pass |
+| GPCF-L4-004 | Brain L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/scripts/validate_brain_l4_retrieval.mjs` | pass |
 
 ## Project-Level Evidence Entrypoints
 
@@ -40,8 +46,8 @@ superseded_by: []
 | GPC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness` | L4-007 pending |
 | PVAOS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness` | L4-006 pending |
 | WAES | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness` | L4-009 pending |
-| KDS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/docs/harness` | L4-003 pending |
-| Brain | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/docs/harness` | L4-004 pending |
+| KDS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/docs/harness` | L4-003 ready_for_review |
+| Brain | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/docs/harness` | L4-004 ready_for_review |
 | PKC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC/docs/harness` | L4-005 pending |
 | MMC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness` | L4-002 ready_for_review |
 | XiaoC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC/docs/harness` | L4-010 pending |
@@ -52,7 +58,9 @@ superseded_by: []
 ## Current Gaps
 
 - L4-001 establishes the project group control plane only.
-- Project-level L4 dry-run, mock or runtime checks remain pending for L4-003 through L4-012.
+- Project-level L4 dry-run, mock or runtime checks remain pending for L4-005 through L4-012.
 - MMC L4-002 is ready_for_review with KDS retrieval, production resource policy, runtime tests and validators; it is not accepted or integrated.
+- KDS L4-003 is ready_for_review with local knowledge index, evidence backlinks and validator; it is not accepted or integrated.
+- Brain L4-004 is ready_for_review with local fixture retrieval, UI search connection, build/lint and validator; it is not accepted or integrated.
 - No project is accepted or integrated.
 - No production write, deployment, permission change, device OTA or real external API write has been executed.

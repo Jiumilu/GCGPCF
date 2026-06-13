@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 140 | 93 | 已建空间 |
+| GPCF | 12-GPCF | 142 | 95 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -490,7 +490,7 @@ superseded_by: []
 | GPCF-DOC-8A81B62CEF | XiaoC loop-state 补齐包 | docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md | KDS | GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md |
 | GPCF-DOC-0E90353E48 | XiaoG 项目启动包 | docs/harness/gpcf-xiaog-project-startup-pack-lr021.md | KDS | GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/gpcf-xiaog-project-startup-pack-lr021.md |
 | GPCF-DOC-7183C7D7D1 | GPCF Loop State | docs/harness/loop-state.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loop-state.md |
-| GPCF-DOC-59D8079155 | loops | docs/harness/loops/README.md | GPCF | GPC, WAES, KDS, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/README.md |
+| GPCF-DOC-59D8079155 | loops | docs/harness/loops/README.md | GPCF | GPC, WAES, KDS, Brain, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/README.md |
 | GPCF-DOC-7CD4D9DE05 | Loop Round GPCF-CF-LR-001 | docs/harness/loops/loop-round-GPCF-CF-LR-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-001.md |
 | GPCF-DOC-263315555E | Loop Round GPCF-CF-LR-002 | docs/harness/loops/loop-round-GPCF-CF-LR-002.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-002.md |
 | GPCF-DOC-CA61033026 | Loop Round GPCF-CF-LR-003 | docs/harness/loops/loop-round-GPCF-CF-LR-003.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-003.md |
@@ -526,6 +526,8 @@ superseded_by: []
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | GPCF | GPC, KDS, XGD, XiaoG, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-001.md |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | GFIS, GPC, WAES, KDS, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-002.md |
+| GPCF-DOC-B305BF004A | GPCF-L4-003 KDS Knowledge Index Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | GFIS, GPC, WAES, KDS, Brain, PKC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-003.md |
+| GPCF-DOC-716F05C368 | GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-004.md | GPCF | GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-004.md |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
 | GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |
 | GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |

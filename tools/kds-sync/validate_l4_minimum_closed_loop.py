@@ -32,6 +32,8 @@ REQUIRED_FILES = [
     "docs/harness/minimum-closed-loop/evidence-index.md",
     "docs/harness/loops/loop-round-GPCF-L4-001.md",
     "docs/harness/loops/loop-round-GPCF-L4-002.md",
+    "docs/harness/loops/loop-round-GPCF-L4-003.md",
+    "docs/harness/loops/loop-round-GPCF-L4-004.md",
 ]
 
 CORE_OBJECTS = [
@@ -74,6 +76,8 @@ def main() -> int:
     evidence = texts["docs/harness/minimum-closed-loop/evidence-index.md"]
     round_record = texts["docs/harness/loops/loop-round-GPCF-L4-001.md"]
     round_record_l4_002 = texts["docs/harness/loops/loop-round-GPCF-L4-002.md"]
+    round_record_l4_003 = texts["docs/harness/loops/loop-round-GPCF-L4-003.md"]
+    round_record_l4_004 = texts["docs/harness/loops/loop-round-GPCF-L4-004.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -155,8 +159,66 @@ def main() -> int:
     ]:
         require(phrase in mmc_policy + "\n" + mmc_round, f"MMC resource policy missing phrase: {phrase}")
 
+    kds_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS")
+    kds_retrieval = read_external(str(kds_root / "docs/harness/evidence/kds-retrieval-KDS-L4-003.json"))
+    kds_index = read_external(str(kds_root / "docs/harness/minimum-closed-loop/sample-knowledge-index.json"))
+    kds_round = read_external(str(kds_root / "docs/harness/loops/loop-round-KDS-L4-003.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-003",
+        "KDS-L4-003",
+        "SampleSpecificationKnowledge",
+        "CustomerSignoffKnowledge",
+        "SOPKnowledgeEntry",
+        "EvidenceBacklink",
+        "96/100",
+        "ready_for_review",
+    ]:
+        require(phrase in round_record_l4_003 + "\n" + evidence, f"L4-003 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"KDS-L4-003\"",
+        "SampleSpecificationKnowledge",
+        "CustomerSignoffKnowledge",
+        "SOPKnowledgeEntry",
+        "EvidenceBacklink",
+        "accepted",
+        "integrated",
+    ]:
+        require(phrase in kds_retrieval + "\n" + kds_index + "\n" + kds_round, f"KDS L4-003 evidence missing phrase: {phrase}")
+
+    brain_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain")
+    brain_retrieval = read_external(str(brain_root / "docs/harness/evidence/kds-retrieval-Brain-L4-004.json"))
+    brain_source = read_external(str(brain_root / "src/app/data/l4MinimumClosedLoopKnowledge.ts"))
+    brain_fixture = read_external(str(brain_root / "src/app/data/l4MinimumClosedLoopKnowledge.fixture.json"))
+    brain_round = read_external(str(brain_root / "docs/harness/loops/loop-round-Brain-L4-004.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-004",
+        "Brain-L4-004",
+        "SOPKnowledgeEntry",
+        "RetrospectiveCaseRecord",
+        "BrainRetrievalResult",
+        "92/100",
+        "项目群阶段累计评分 | 37/100",
+        "PKC-L4-005",
+    ]:
+        require(phrase in round_record_l4_004 + "\n" + evidence, f"L4-004 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"Brain-L4-004\"",
+        "brain-l4-sop-production-release",
+        "brain-l4-exception-case",
+        "minimumClosedLoopWikiPages",
+        "searchMinimumClosedLoopKnowledge",
+        "Brain 只负责知识 UI 与检索呈现",
+    ]:
+        require(phrase in brain_retrieval + "\n" + brain_source + "\n" + brain_fixture + "\n" + brain_round, f"Brain L4-004 evidence missing phrase: {phrase}")
+
     assessment = {
-        "round_id": "GPCF-L4-001",
+        "round_id": "GPCF-L4-004",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -168,12 +230,17 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": len(REQUIRED_FILES),
+        "generated_items": 22,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-002",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002"],
+        "next_round": "L4-005",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004"],
+        "project_group_score": 37,
+        "l4_round_scores": {
+            "GPCF-L4-003": 96,
+            "GPCF-L4-004": 92,
+        },
         "project_rounds": {
             "MMC": {
                 "round_id": "MMC-L4-002",
@@ -181,13 +248,28 @@ def main() -> int:
                 "kds_retrieval": "completed",
                 "sample_gate": "blocked_without_required_evidence",
                 "resource_gate": "blocked_without_required_evidence",
-            }
+            },
+            "KDS": {
+                "round_id": "KDS-L4-003",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "knowledge_index": "ready_for_review",
+                "accepted_integrated": False,
+            },
+            "Brain": {
+                "round_id": "Brain-L4-004",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "retrieval_smoke": "pass",
+                "score": 92,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-002 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked next=L4-003")
+    print("round=GPCF-L4-004 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=37 next=L4-005")
     return 0
 
 

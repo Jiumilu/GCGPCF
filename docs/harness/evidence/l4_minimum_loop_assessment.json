@@ -1,5 +1,5 @@
 {
-  "round_id": "GPCF-L4-001",
+  "round_id": "GPCF-L4-004",
   "gate": "pass",
   "projects": [
     "GFIS",
@@ -36,15 +36,22 @@
       "WAES.gate == 'confirmed'"
     ]
   },
-  "generated_items": 7,
+  "generated_items": 22,
   "batch_generated": false,
   "substance_gate": "pass",
   "status": "partial",
-  "next_round": "L4-002",
+  "next_round": "L4-005",
   "completed_rounds": [
     "GPCF-L4-001",
-    "GPCF-L4-002"
+    "GPCF-L4-002",
+    "GPCF-L4-003",
+    "GPCF-L4-004"
   ],
+  "project_group_score": 37,
+  "l4_round_scores": {
+    "GPCF-L4-003": 96,
+    "GPCF-L4-004": 92
+  },
   "project_rounds": {
     "MMC": {
       "round_id": "MMC-L4-002",
@@ -52,6 +59,21 @@
       "kds_retrieval": "completed",
       "sample_gate": "blocked_without_required_evidence",
       "resource_gate": "blocked_without_required_evidence"
+    },
+    "KDS": {
+      "round_id": "KDS-L4-003",
+      "status": "ready_for_review",
+      "kds_retrieval": "completed",
+      "knowledge_index": "ready_for_review",
+      "accepted_integrated": false
+    },
+    "Brain": {
+      "round_id": "Brain-L4-004",
+      "status": "ready_for_review",
+      "kds_retrieval": "completed",
+      "retrieval_smoke": "pass",
+      "score": 92,
+      "accepted_integrated": false
     }
   }
 }

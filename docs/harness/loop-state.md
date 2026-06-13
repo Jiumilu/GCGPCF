@@ -25,12 +25,12 @@ superseded_by: []
 | project | GlobalCoud GPCF |
 | project_code | CF |
 | loop.round | 67 |
-| loop.current_step | l4_mmc_resource_policy_evidence_intake |
-| loop.last_entry | `GPCF-L4-002` / `MMC-L4-002`：MMC 生产资源能力与样品门禁策略闭环 |
-| loop.last_exit | MMC 真实仓完成 KDS local_mirror 检索、`ResourceCapabilityCheck` 策略、样品门禁、资源能力门禁、runtime policy、36 个 runtime tests、contract test、项目级 validator 与 GPCF 项目群 evidence 回写 |
+| loop.current_step | l4_brain_sop_case_retrieval_evidence_intake |
+| loop.last_entry | `GPCF-L4-004` / `Brain-L4-004`：Brain SOP/案例检索最小路径 |
+| loop.last_exit | Brain 真实仓完成 KDS local_mirror 检索、SOP/案例/样品资料 fixture、typed 检索模块、SearchPanel UI 接入、项目级 validator、lint/build 与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；GPCF L4 方案中的 MMC 旧口径仍需后续文档对齐；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
-| loop.next_target | `KDS-L4-003`：在 KDS 真实仓建立样品规格、签样资料、SOP 与 evidence 回指索引；每轮先执行 KDS 关联数据检索 |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；Brain 未执行 live KDS API read 或语义索引刷新；PKC 任务/通知接收仍待 L4-005；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
+| loop.next_target | `PKC-L4-005`：基于 Brain 检索结果建立任务、通知和状态接收 mock；每轮先执行 KDS 关联数据检索 |
 
 ## 循环历史
 
@@ -103,6 +103,8 @@ superseded_by: []
 | 64 | XiaoG-LR-002 | 2026-06-13 | XiaoG 评分 85/L3 Conditional，真实 main 分支已有 bootstrap 但缺 L3 队列、风险回滚、可用性 smoke 队列和自我进化门禁 | XiaoG `.codex/tasks/task-l3-xiaog-operational-controls.json`、`risk-rollback.md`、`self-evolution-checklist.json`、`loop-round-XiaoG-LR-002.md`、`.gitignore` 精确白名单、`validate_xiaog_l3_operational_controls.py` | partial | 70% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=5；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；operational controls validator、bootstrap validator、bootstrap smoke 和 diff check pass；XiaoG 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Docker 部署、未设备 OTA、未提交、未推送、未升级 accepted/integrated |
 | 65 | XiaoG-LR-003 | 2026-06-13 | XiaoG 缺 GFIS/WAES trigger dependency dry-run evidence，真实写入/设备/API 未授权 | XiaoG `dry_run_xiaog_gfis_waes_triggers.py`、`loop-round-XiaoG-LR-003.md`、任务队列和 evidence 更新 | partial | 80% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；trigger dry-run validator、operational controls validator、bootstrap validator、bootstrap smoke 和 diff check pass；XiaoG 评分 94/L3 Conditional；未生产写入、未外部 API、未权限变更、未 Docker 部署、未设备 OTA、未提交、未推送、未升级 accepted/integrated |
 | 66 | GPCF-CF-LR-066 | 2026-06-13 | 全项目提交推送后总控矩阵仍保留 XGD/XiaoG/MMC Conditional 与 dirty 旧事实 | GPCF 控制板、loop-state、项目状态矩阵、L3 准入矩阵和 evidence index 校准为 post-push 事实 | ready_for_review | 98% | 本轮为总控证据校准，不冒充业务项目整改轮；11 个业务项目机器评分均为 L3 Ready；GPCF 保持 governance_hub；未执行生产写入、真实外部 API、权限变更、部署或 accepted/integrated 升级 |
+| 67 | GPCF-L4-003 | 2026-06-13 | KDS 真实仓 L4 样品知识索引、签样资料、SOP 和 evidence 回指 evidence 接收 | GPCF L4-003 round record、evidence-index、validator 扩展 | ready_for_review | 92% | KDS-L4-003 计为 L4 实质轮；96/100；未执行 live KDS API/index refresh、未升级 accepted/integrated |
+| 68 | GPCF-L4-004 | 2026-06-13 | Brain 真实仓 SOP/案例检索最小路径 evidence 接收 | GPCF L4-004 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 92% | Brain-L4-004 计为 L4 实质轮；92/100；`pnpm lint` 0 errors/16 warnings，`pnpm build` pass；未真实外部 API、未部署、未升级 accepted/integrated |
 
 ## 状态约束
 

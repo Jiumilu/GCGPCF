@@ -17,4 +17,4 @@
 | XGD | 09-XGD | 6 |
 | XiaoG | 10-XiaoG | 7 |
 | MMC | 11-MMC | 8 |
-| GPCF | 12-GPCF | 93 |
+| GPCF | 12-GPCF | 95 |

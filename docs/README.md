@@ -179,6 +179,8 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | GPCF | controlled |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | controlled |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | controlled |
+| GPCF-DOC-B305BF004A | GPCF-L4-003 KDS Knowledge Index Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | controlled |
+| GPCF-DOC-716F05C368 | GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-004.md | GPCF | controlled |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | controlled |
 | GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | controlled |
 | GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | controlled |

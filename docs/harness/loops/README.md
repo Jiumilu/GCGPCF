@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-59D8079155
 title: loops
 project: GPCF
-related_projects: [GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GPC, WAES, KDS, Brain, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -72,3 +72,5 @@ KDS 空间：`开发`
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | GPCF | controlled |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | controlled |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | controlled |
+| GPCF-DOC-B305BF004A | GPCF-L4-003 KDS Knowledge Index Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | controlled |
+| GPCF-DOC-716F05C368 | GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-004.md | GPCF | controlled |
