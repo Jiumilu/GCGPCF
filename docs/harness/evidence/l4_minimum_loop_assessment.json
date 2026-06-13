@@ -1,0 +1,44 @@
+{
+  "round_id": "GPCF-L4-001",
+  "gate": "pass",
+  "projects": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "MMC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "GPCF"
+  ],
+  "core_objects": [
+    "PlatformOrder",
+    "SampleRequest",
+    "SampleWorkOrder",
+    "SampleApproval",
+    "ProductionRelease",
+    "OrderMapping",
+    "FactoryOrder",
+    "ProofOfDelivery",
+    "ExternalException",
+    "EvidenceRecord",
+    "KnowledgeBacklink"
+  ],
+  "sample_gate": {
+    "platform_order_direct_to_factory_order": "blocked",
+    "required_conditions": [
+      "SampleApproval.status in ['approved', 'waived']",
+      "ProductionRelease.status == 'approved'",
+      "WAES.gate == 'confirmed'"
+    ]
+  },
+  "generated_items": 6,
+  "batch_generated": false,
+  "substance_gate": "pass",
+  "status": "partial",
+  "next_round": "L4-002"
+}
