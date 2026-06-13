@@ -18,22 +18,22 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-13T11:40:19.730207+00:00
+生成时间：2026-06-13T11:48:28.509684+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：508
-- KDS 镜像 Markdown：520
-- KDS 同步流水：507
+- 仓库 Markdown：509
+- KDS 镜像 Markdown：521
+- KDS 同步流水：508
 - 元数据缺失：0
 - README 缺失目录：0
 
 ## 状态分布
 
 - archive: 85
-- controlled: 388
+- controlled: 389
 - draft: 13
 - operational_controlled: 19
 
@@ -42,7 +42,7 @@ Loop 文档门禁：`pass`
 - Brain: 6
 - GFIS: 14
 - GPC: 34
-- GPCF: 142
+- GPCF: 143
 - KDS: 80
 - MMC: 8
 - PKC: 6

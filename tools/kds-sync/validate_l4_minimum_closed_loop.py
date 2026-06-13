@@ -37,6 +37,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-005.md",
     "docs/harness/loops/loop-round-GPCF-L4-006.md",
     "docs/harness/loops/loop-round-GPCF-L4-007.md",
+    "docs/harness/loops/loop-round-GPCF-L4-008.md",
 ]
 
 CORE_OBJECTS = [
@@ -84,6 +85,7 @@ def main() -> int:
     round_record_l4_005 = texts["docs/harness/loops/loop-round-GPCF-L4-005.md"]
     round_record_l4_006 = texts["docs/harness/loops/loop-round-GPCF-L4-006.md"]
     round_record_l4_007 = texts["docs/harness/loops/loop-round-GPCF-L4-007.md"]
+    round_record_l4_008 = texts["docs/harness/loops/loop-round-GPCF-L4-008.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -326,8 +328,43 @@ def main() -> int:
             f"GPC L4-007 evidence missing phrase: {phrase}",
         )
 
+    gfis_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS")
+    gfis_retrieval = read_external(str(gfis_root / "docs/harness/evidence/kds-retrieval-GFIS-L4-008.json"))
+    gfis_fixture = read_external(str(gfis_root / "gcfis_demo/field_samples/gfis_l4_factory_sample_order_readonly.json"))
+    gfis_validator = read_external(str(gfis_root / "scripts/validate_gfis_l4_factory_sample_order_readonly.py"))
+    gfis_round = read_external(str(gfis_root / "docs/harness/loops/loop-round-GFIS-L4-008.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-008",
+        "GFIS-L4-008",
+        "FormulaResearch",
+        "SampleWorkOrder",
+        "FactoryOrder",
+        "WorkOrder",
+        "QualityInventoryBatch",
+        "Shipment",
+        "96/100",
+        "项目群阶段累计评分 | 73/100",
+        "XiaoC-L4-009",
+    ]:
+        require(phrase in round_record_l4_008 + "\n" + evidence, f"L4-008 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"GFIS-L4-008\"",
+        "GFIS owns formula research",
+        "GFIS does not own customer SampleApproval or ProofOfDelivery",
+        "approved SampleApproval, approved ProductionRelease and WAES gate confirmed",
+        "must not run bench migrate",
+        "formula_research=1 sample_work_orders=1 factory_orders=1 work_orders=1 quality_inventory_batches=1 shipments=1",
+    ]:
+        require(
+            phrase in gfis_retrieval + "\n" + gfis_fixture + "\n" + gfis_validator + "\n" + gfis_round,
+            f"GFIS L4-008 evidence missing phrase: {phrase}",
+        )
+
     assessment = {
-        "round_id": "GPCF-L4-007",
+        "round_id": "GPCF-L4-008",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -339,19 +376,20 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 40,
+        "generated_items": 46,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-008",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007"],
-        "project_group_score": 64,
+        "next_round": "L4-009",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008"],
+        "project_group_score": 73,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
             "GPCF-L4-005": 96,
             "GPCF-L4-006": 96,
             "GPCF-L4-007": 96,
+            "GPCF-L4-008": 96,
         },
         "project_rounds": {
             "MMC": {
@@ -400,12 +438,20 @@ def main() -> int:
                 "score": 96,
                 "accepted_integrated": False,
             },
+            "GFIS": {
+                "round_id": "GFIS-L4-008",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "factory_sample_order_readonly": "pass",
+                "score": 96,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-007 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=64 next=L4-008")
+    print("round=GPCF-L4-008 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=73 next=L4-009")
     return 0
 
 

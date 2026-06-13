@@ -1,5 +1,5 @@
 {
-  "round_id": "GPCF-L4-007",
+  "round_id": "GPCF-L4-008",
   "gate": "pass",
   "projects": [
     "GFIS",
@@ -36,11 +36,11 @@
       "WAES.gate == 'confirmed'"
     ]
   },
-  "generated_items": 40,
+  "generated_items": 46,
   "batch_generated": false,
   "substance_gate": "pass",
   "status": "partial",
-  "next_round": "L4-008",
+  "next_round": "L4-009",
   "completed_rounds": [
     "GPCF-L4-001",
     "GPCF-L4-002",
@@ -48,15 +48,17 @@
     "GPCF-L4-004",
     "GPCF-L4-005",
     "GPCF-L4-006",
-    "GPCF-L4-007"
+    "GPCF-L4-007",
+    "GPCF-L4-008"
   ],
-  "project_group_score": 64,
+  "project_group_score": 73,
   "l4_round_scores": {
     "GPCF-L4-003": 96,
     "GPCF-L4-004": 92,
     "GPCF-L4-005": 96,
     "GPCF-L4-006": 96,
-    "GPCF-L4-007": 96
+    "GPCF-L4-007": 96,
+    "GPCF-L4-008": 96
   },
   "project_rounds": {
     "MMC": {
@@ -102,6 +104,14 @@
       "status": "ready_for_review",
       "kds_retrieval": "completed",
       "platform_order_contract": "pass",
+      "score": 96,
+      "accepted_integrated": false
+    },
+    "GFIS": {
+      "round_id": "GFIS-L4-008",
+      "status": "ready_for_review",
+      "kds_retrieval": "completed",
+      "factory_sample_order_readonly": "pass",
       "score": 96,
       "accepted_integrated": false
     }

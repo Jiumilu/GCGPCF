@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4C33B5D2B6
 title: L4 Minimum Closed Loop Evidence Index
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,12 +46,15 @@ superseded_by: []
 | GPCF-L4-007 | GPC KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness/evidence/kds-retrieval-GPC-L4-007.json` | pass |
 | GPCF-L4-007 | GPC platform order contract fixture | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/l4_contracts/gpc_l4_platform_order_contract.fixture.json` | pass |
 | GPCF-L4-007 | GPC L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/scripts/validate_gpc_l4_platform_contract.py` | pass |
+| GPCF-L4-008 | GFIS KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/evidence/kds-retrieval-GFIS-L4-008.json` | pass |
+| GPCF-L4-008 | GFIS factory-side read-only fixture | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_demo/field_samples/gfis_l4_factory_sample_order_readonly.json` | pass |
+| GPCF-L4-008 | GFIS L4 validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_l4_factory_sample_order_readonly.py` | pass |
 
 ## Project-Level Evidence Entrypoints
 
 | 项目 | 项目级 evidence | 当前 L4 参与状态 |
 |---|---|---|
-| GFIS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness` | L4-008 pending |
+| GFIS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness` | L4-008 ready_for_review |
 | GPC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/docs/harness` | L4-007 ready_for_review |
 | PVAOS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/docs/harness` | L4-006 ready_for_review |
 | WAES | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/harness` | L4-009 pending |
@@ -67,12 +70,13 @@ superseded_by: []
 ## Current Gaps
 
 - L4-001 establishes the project group control plane only.
-- Project-level L4 dry-run, mock or runtime checks remain pending for L4-008 through L4-012.
+- Project-level L4 dry-run, mock or runtime checks remain pending for L4-009 through L4-012.
 - MMC L4-002 is ready_for_review with KDS retrieval, production resource policy, runtime tests and validators; it is not accepted or integrated.
 - KDS L4-003 is ready_for_review with local knowledge index, evidence backlinks and validator; it is not accepted or integrated.
 - Brain L4-004 is ready_for_review with local fixture retrieval, UI search connection, build/lint and validator; it is not accepted or integrated.
 - PKC L4-005 is ready_for_review with local Brain result intake fixture, PersonalTask/Notification/TodoState service, Vitest, typecheck/build and validator; it is not accepted or integrated.
 - PVAOS L4-006 is ready_for_review with local organization/partner/permission fixture, dry-run service, Vitest, module validation, typecheck and validator; it is not accepted or integrated.
 - GPC L4-007 is ready_for_review with local PlatformOrder, QuoteReviewContract, SampleRequest, SampleApproval, ProductionRelease, ProofOfDelivery fixture, KDS retrieval, validator, L3 harness validation and JS check; it is not accepted or integrated.
+- GFIS L4-008 is ready_for_review with local FormulaResearch, SampleWorkOrder, SampleInspection, FactoryOrder, WorkOrder, QualityInventoryBatch, EquipmentSnapshot and Shipment read-only fixture, KDS retrieval, validator and quality:repo; it is not accepted or integrated.
 - No project is accepted or integrated.
 - No production write, deployment, permission change, device OTA or real external API write has been executed.
