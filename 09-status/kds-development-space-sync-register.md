@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 144 | 97 | 已建空间 |
+| GPCF | 12-GPCF | 145 | 98 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -534,6 +534,7 @@ superseded_by: []
 | GPCF-DOC-716F05C368 | docs/harness/loops/loop-round-GPCF-L4-004.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-004.md | bidirectional | pending_api |
 | GPCF-DOC-C7559F7570 | docs/harness/loops/loop-round-GPCF-L4-005.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-005.md | bidirectional | pending_api |
 | GPCF-DOC-18774733CF | docs/harness/loops/loop-round-GPCF-L4-006.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-006.md | bidirectional | pending_api |
+| GPCF-DOC-0B63C5F323 | docs/harness/loops/loop-round-GPCF-L4-007.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-007.md | bidirectional | pending_api |
 | GPCF-DOC-DF19BA9F40 | docs/harness/minimum-closed-loop/README.md | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md | bidirectional | pending_api |
 | GPCF-DOC-9886BDB110 | docs/harness/minimum-closed-loop/control-plane.md | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md | bidirectional | pending_api |
 | GPCF-DOC-4C33B5D2B6 | docs/harness/minimum-closed-loop/evidence-index.md | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md | bidirectional | pending_api |

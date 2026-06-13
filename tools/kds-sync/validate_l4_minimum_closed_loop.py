@@ -36,6 +36,7 @@ REQUIRED_FILES = [
     "docs/harness/loops/loop-round-GPCF-L4-004.md",
     "docs/harness/loops/loop-round-GPCF-L4-005.md",
     "docs/harness/loops/loop-round-GPCF-L4-006.md",
+    "docs/harness/loops/loop-round-GPCF-L4-007.md",
 ]
 
 CORE_OBJECTS = [
@@ -82,6 +83,7 @@ def main() -> int:
     round_record_l4_004 = texts["docs/harness/loops/loop-round-GPCF-L4-004.md"]
     round_record_l4_005 = texts["docs/harness/loops/loop-round-GPCF-L4-005.md"]
     round_record_l4_006 = texts["docs/harness/loops/loop-round-GPCF-L4-006.md"]
+    round_record_l4_007 = texts["docs/harness/loops/loop-round-GPCF-L4-007.md"]
 
     for phrase in [
         "项目初始化 -> 组织/伙伴接入 -> 平台订单",
@@ -287,8 +289,45 @@ def main() -> int:
             f"PVAOS L4-006 evidence missing phrase: {phrase}",
         )
 
+    gpc_root = Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC")
+    gpc_retrieval = read_external(str(gpc_root / "docs/harness/evidence/kds-retrieval-GPC-L4-007.json"))
+    gpc_fixture = read_external(str(gpc_root / "l4_contracts/gpc_l4_platform_order_contract.fixture.json"))
+    gpc_validator = read_external(str(gpc_root / "scripts/validate_gpc_l4_platform_contract.py"))
+    gpc_round = read_external(str(gpc_root / "docs/harness/loops/loop-round-GPC-L4-007.md"))
+
+    for phrase in [
+        "Round ID | GPCF-L4-007",
+        "GPC-L4-007",
+        "PlatformOrder",
+        "QuoteReviewContract",
+        "SampleRequest",
+        "SampleApproval",
+        "ProductionRelease",
+        "ProofOfDelivery",
+        "96/100",
+        "项目群阶段累计评分 | 64/100",
+        "GFIS-L4-008",
+    ]:
+        require(phrase in round_record_l4_007 + "\n" + evidence, f"L4-007 GPCF evidence missing phrase: {phrase}")
+
+    for phrase in [
+        "\"retrieval_mode\": \"local_mirror\"",
+        "\"round_id\": \"GPC-L4-007\"",
+        "PlatformOrder cannot create FactoryOrder directly",
+        "ProofOfDelivery cannot be marked delivered without receiver evidence",
+        "GPC must not write GFIS factory execution facts",
+        "GFIS.factory_order_input_after_release",
+        "WAES.sample_release_gate",
+        "KDS.knowledge_backlink_candidate",
+        "orders=1 sample_requests=1 sample_approvals=1 production_releases=1 pod_records=1",
+    ]:
+        require(
+            phrase in gpc_retrieval + "\n" + gpc_fixture + "\n" + gpc_validator + "\n" + gpc_round,
+            f"GPC L4-007 evidence missing phrase: {phrase}",
+        )
+
     assessment = {
-        "round_id": "GPCF-L4-006",
+        "round_id": "GPCF-L4-007",
         "gate": "pass",
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -300,18 +339,19 @@ def main() -> int:
                 "WAES.gate == 'confirmed'",
             ],
         },
-        "generated_items": 34,
+        "generated_items": 40,
         "batch_generated": False,
         "substance_gate": "pass",
         "status": "partial",
-        "next_round": "L4-007",
-        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006"],
-        "project_group_score": 55,
+        "next_round": "L4-008",
+        "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007"],
+        "project_group_score": 64,
         "l4_round_scores": {
             "GPCF-L4-003": 96,
             "GPCF-L4-004": 92,
             "GPCF-L4-005": 96,
             "GPCF-L4-006": 96,
+            "GPCF-L4-007": 96,
         },
         "project_rounds": {
             "MMC": {
@@ -352,12 +392,20 @@ def main() -> int:
                 "score": 96,
                 "accepted_integrated": False,
             },
+            "GPC": {
+                "round_id": "GPC-L4-007",
+                "status": "ready_for_review",
+                "kds_retrieval": "completed",
+                "platform_order_contract": "pass",
+                "score": 96,
+                "accepted_integrated": False,
+            },
         },
     }
     out = ROOT / "docs/harness/evidence/l4_minimum_loop_assessment.json"
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("l4_minimum_closed_loop=pass")
-    print("round=GPCF-L4-006 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=55 next=L4-007")
+    print("round=GPCF-L4-007 projects=12 core_objects=11 sample_gate=blocked resource_gate=blocked project_group_score=64 next=L4-008")
     return 0
 
 

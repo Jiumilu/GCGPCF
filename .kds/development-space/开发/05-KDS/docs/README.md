@@ -183,6 +183,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-716F05C368 | GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-004.md | GPCF | controlled |
 | GPCF-DOC-C7559F7570 | GPCF-L4-005 PKC Task Notification Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-005.md | GPCF | controlled |
 | GPCF-DOC-18774733CF | GPCF-L4-006 PVAOS Organization Partner Permission Intake | docs/harness/loops/loop-round-GPCF-L4-006.md | GPCF | controlled |
+| GPCF-DOC-0B63C5F323 | GPCF-L4-007 GPC Platform Order Sample Release POD Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-007.md | GPCF | controlled |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | controlled |
 | GPCF-DOC-9886BDB110 | L4 Minimum Closed Loop Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | controlled |
 | GPCF-DOC-4C33B5D2B6 | L4 Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | controlled |

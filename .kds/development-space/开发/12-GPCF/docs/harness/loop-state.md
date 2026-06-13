@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 68 |
-| loop.current_step | l4_pvaos_organization_partner_permission_intake |
-| loop.last_entry | `GPCF-L4-006` / `PVAOS-L4-006`：组织/伙伴/权限输入基线 |
-| loop.last_exit | PVAOS 真实仓完成 KDS local_mirror 检索、Tenant/Organization/Partner/ProjectSpace/PermissionBoundary fixture、dry-run service、Vitest、validator、module validation、typecheck 与 GPCF 项目群 evidence 回写 |
+| loop.round | 69 |
+| loop.current_step | l4_gpc_platform_order_sample_release_pod_contract |
+| loop.last_entry | `GPCF-L4-007` / `GPC-L4-007`：平台订单/样品申请/客户签样/转量产/POD 契约 |
+| loop.last_exit | GPC 真实仓完成 KDS local_mirror 检索、PlatformOrder/QuoteReviewContract/SampleRequest/SampleApproval/ProductionRelease/ProofOfDelivery fixture、validator、L3 harness validation、JS check 与 GPCF 项目群 evidence 回写 |
 | loop.gate_result | ready_for_review |
-| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；PVAOS 未调用 live PVAOS/GPC/WAES API，未取得真实客户组织/伙伴接入样本；GPC 平台订单/样品/签收契约仍待 L4-007；GFIS 真实样本/UAT/跨角色签收仍是业务验收输入 |
-| loop.next_target | `GPC-L4-007`：消费 PVAOS Tenant、Organization、Partner、ProjectSpace、PermissionBoundary 输入，建立平台订单、样品申请、客户签样、转量产和 POD 契约 mock/dry-run |
+| loop.blockers | accepted/integrated 状态升级、生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA、Electron 打包/发布仍未授权；GPC 未调用 live GPC/GFIS/WAES API，未取得真实客户订单、签样和 POD 证据；GFIS 配方研发/样品打样/工厂订单/工单/库存/质量/批次/设备只读样本仍待 L4-008 |
+| loop.next_target | `GFIS-L4-008`：消费 GPC ProductionRelease 和 GFIS handoff candidate，建立配方研发、样品打样、工厂订单、工单、库存、质量、批次、设备只读样本与发货事实验证 |
 
 ## 循环历史
 
@@ -107,6 +107,7 @@ superseded_by: []
 | 68 | GPCF-L4-004 | 2026-06-13 | Brain 真实仓 SOP/案例检索最小路径 evidence 接收 | GPCF L4-004 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 92% | Brain-L4-004 计为 L4 实质轮；92/100；`pnpm lint` 0 errors/16 warnings，`pnpm build` pass；未真实外部 API、未部署、未升级 accepted/integrated |
 | 69 | GPCF-L4-005 | 2026-06-13 | PKC 真实仓任务/通知/状态接收路径 evidence 接收 | GPCF L4-005 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | PKC-L4-005 计为 L4 实质轮；96/100；`pnpm test` 3 files / 24 tests，`pnpm lint` pass，`pnpm build` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
 | 70 | GPCF-L4-006 | 2026-06-13 | PVAOS 真实仓组织/伙伴/权限输入基线 evidence 接收 | GPCF L4-006 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | PVAOS-L4-006 计为 L4 实质轮；96/100；`npm test -- src/app/tests/tenant/l4OrganizationPartnerBaseline.test.ts` 1 file / 4 tests，`npm run validate:modules` pass，`npm run typecheck` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
+| 71 | GPCF-L4-007 | 2026-06-13 | GPC 真实仓平台订单/样品申请/客户签样/转量产/POD 契约 evidence 接收 | GPCF L4-007 round record、evidence-index、control board、loop-state、validator 扩展 | ready_for_review | 94% | GPC-L4-007 计为 L4 实质轮；96/100；`python3 scripts/validate_gpc_l4_platform_contract.py` pass，`python3 scripts/validate_gpc_l3_harness.py` pass，`npm run check:js` pass；未真实外部 API、未生产写入、未升级 accepted/integrated |
 
 ## 状态约束
 
