@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loop-state.md
 source_path: docs/harness/loop-state.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-13
 supersedes: []
 superseded_by: []
 ---
@@ -24,13 +24,13 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 54 |
-| loop.current_step | brain_eslint9_flat_config_landed |
-| loop.last_entry | `Brain-LR-002`：按 Loop 新真实性规则完成 1 个真实项目仓实质轮次 |
-| loop.last_exit | 本轮只计 1 个实质轮次；未将模板或文件数量折算为多轮；Brain 真实项目仓已补齐 ESLint 9 flat config，validator、`pnpm lint`、`pnpm build` 和 diff check 通过；`pnpm format:check` 仍保留 68 个既有源码格式缺口 |
+| loop.round | 59 |
+| loop.current_step | xiaog_l3_bootstrap_landed |
+| loop.last_entry | `XiaoG-LR-001`：按 L3 准入评估整改最低分项目 XiaoG |
+| loop.last_exit | 本轮只计 1 个实质轮次；XiaoG 真实项目仓新增最小 L3 bootstrap harness、validator 和 smoke test，评分从 29/L1-L0 提升到 82/L3 Conditional |
 | loop.gate_result | partial |
-| loop.blockers | 当前 Git 工作区 dirty；Brain 真实项目仓 `pnpm format:check` 有 68 个既有源码格式缺口，`pnpm lint` 仍有 16 个 warning，缺 test script、知识对象映射、KDS 依赖和运行态验证；KDS runtime index health、KDS API contract、Brain/PKC 依赖验证仍未完成；PKC 端到端体验验证仍未完成；XiaoC UI/Wrangler/模型路由验证、XGD 长程任务与重分析运行态验证尚未完成；真实样本、UAT、WAES/GPC/Finance 确认仍需人工或显式授权输入；Git push/PR merge 未执行 |
-| loop.next_target | 若继续按新真实性规则，可进入 Brain format/test script/lint warning 专项，或转 XiaoC 模型路由/UI/Wrangler 专项 |
+| loop.blockers | 当前 Git 工作区 dirty；MMC/XiaoG 仍未提交/推送；GPC/PVAOS/WAES 仍低于 L3；Brain `pnpm format:check` 仍保留既有源码格式缺口；生产写入、真实外部 API、数据库迁移、权限变更、部署、设备 OTA 和 accepted/integrated 均未授权 |
+| loop.next_target | 继续 XiaoG 风险/回滚 runbook 或 GFIS/WAES trigger dry-run；或转入 GPC/PVAOS/WAES 的真实项目仓缺口整改 |
 
 ## 循环历史
 
@@ -91,6 +91,11 @@ superseded_by: []
 | 52 | XiaoC-LR-001 | 2026-06-13 | 按新真实性规则落地真实 XiaoC 项目仓最小 Loop harness | XiaoC docs/harness、loop-state、evidence-index、round record、validator | partial | 60% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；`pnpm test:repo` pass；未提交、未推送、未生产写入、未真实外部 API 写入、未 Cloudflare deploy、未升级 accepted/integrated/complete |
 | 53 | Brain-LR-001 | 2026-06-13 | 按新真实性规则落地真实 Brain 项目仓敏感文件门禁与最小 Loop harness | Brain `.gitignore`、docs/harness、loop-state、evidence-index、round record、validator | partial | 45% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=7；batch_generated=false；substance_gate=partial；stop_type=authorization_boundary；`pnpm build` pass；`pnpm lint`/`pnpm format:check` 暴露既有缺口；未读取 `.env` 内容、未提交、未推送、未生产写入、未真实外部 API 调用、未升级 accepted/integrated/complete |
 | 54 | Brain-LR-002 | 2026-06-13 | 按新真实性规则补齐真实 Brain 项目仓 ESLint 9 flat config | `eslint.config.js`、Brain loop-state、evidence-index、round record、validator | partial | 55% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=partial；stop_type=authorization_boundary；`pnpm lint` pass 但有 16 warnings；`pnpm build` pass；`pnpm format:check` 保留 68 文件格式缺口；未提交、未推送、未生产写入、未真实外部 API 调用、未升级 accepted/integrated/complete |
+| 55 | GPCF-MM-LR-002 | 2026-06-13 | L3 准入评分基线显示 MMC 为 71/L2.5，真实仓存在运行态但缺项目级准入门禁 | MMC `validate_mmc_l3_admission.py`、LR-002 轮次、GPCF L3 admission matrix、机器评分 JSON | partial | 65% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=2；batch_generated=false；substance_gate=pass；stop_type=none；MMC 30 runtime tests、contract test、双 validator、diff check pass；未提交、未推送、未生产写入、未真实外部 API 写入、未升级 accepted/integrated |
+| 56 | GPCF-MM-LR-003 | 2026-06-13 | MMC 缺少 KDS/Brain/PKC dependency dry-run evidence | MMC `dry_run_mmc_dependencies.py`、LR-003 轮次、GPCF 准入矩阵与机器评分 JSON | partial | 75% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=2；batch_generated=false；substance_gate=pass；stop_type=none；dependency dry-run pass；MMC tests/contract/validators/diff pass；未提交、未推送、未生产写入、未真实外部 API、未 Token 读取、未升级 accepted/integrated |
+| 57 | GPCF-MM-LR-004 | 2026-06-13 | MMC 缺少 self-evolution checklist 和结构化 next L3 queue | MMC `self-evolution-checklist.json`、`validate_mmc_self_evolution.py`、LR-004 轮次、GPCF 准入矩阵与机器评分 JSON | partial | 85% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=2；batch_generated=false；substance_gate=pass；stop_type=none；MMC 评分 97 但 Git dirty 限制为 L3 Conditional；未提交、未推送、未生产写入、未真实外部 API、未升级 accepted/integrated |
+| 58 | GPCF-MM-LR-005 | 2026-06-13 | MMC 缺少提交前 Git 门禁证据 | MMC `validate_mmc_commit_readiness.py`、LR-005 轮次、GPCF 准入矩阵与机器评分 JSON | partial | 90% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=2；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；stage=false、commit=false、push=false、sensitive_paths=0、unexpected_paths=0；未提交、未推送、未升级 accepted/integrated |
+| 59 | XiaoG-LR-001 | 2026-06-13 | XiaoG 评分 29/L1-L0，真实仓有代码/配置但缺 harness、validator、测试命令和 evidence | XiaoG `docs/harness/**`、`validate_xiaog_l3_bootstrap.py`、`test_xiaog_l3_bootstrap.py`、GPCF 评分规则扩展 | partial | 45% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=authorization_boundary；XiaoG 评分 82/L3 Conditional；未部署、未 OTA、未真实外部 API、未提交、未推送、未升级 accepted/integrated |
 
 ## 状态约束
 

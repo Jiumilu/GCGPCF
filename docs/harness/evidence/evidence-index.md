@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/evidence-index.md
 source_path: docs/harness/evidence/evidence-index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-13
 supersedes: []
 superseded_by: []
 ---
@@ -30,6 +30,30 @@ superseded_by: []
 | 1 | GPCF-CF-LR-001 | Git evidence | `git status --short --branch` | partial | 工作区 dirty |
 | 32 | GPCF-CF-LR-032 | KDS token evidence | `python3 tools/kds-sync/validate_kds_token.py` | yes | pass fingerprint=bfd9553d |
 | - | - | audit report | `docs/harness/status-audit-2026-06-10.md` | yes | 历史首轮纳入 |
+| 55 | GPCF-MM-LR-002 | L3 admission matrix | `09-status/globalcloud-l3-admission-matrix.md` | yes | MMC L3 Conditional |
+| 55 | GPCF-MM-LR-002 | L3 admission machine-readable evidence | `docs/harness/evidence/l3_admission_assessment.json` | yes | pass |
+| 55 | GPCF-MM-LR-002 | L3 admission scorer | `tools/kds-sync/assess_l3_admission.py` | yes | pass |
+| 55 | GPCF-MM-LR-002 | MMC project validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_l3_admission.py` | yes | pass |
+| 55 | GPCF-MM-LR-002 | MMC runtime tests | `MMC_TEST_MODE=true python3 -m pytest runtime/tests -q` in MMC repo | yes | 30 passed |
+| 55 | GPCF-MM-LR-002 | MMC contract test | `bash runtime/scripts/contract_test.sh` in MMC repo | yes | pass |
+| 56 | GPCF-MM-LR-003 | MMC dependency dry-run | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/dry_run_mmc_dependencies.py` | yes | pass |
+| 56 | GPCF-MM-LR-003 | MMC dependency round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/loops/loop-round-GPCF-MM-LR-003.md` | yes | pass |
+| 56 | GPCF-MM-LR-003 | MMC dependency safety | `production_write=false real_external_api=false token_read=false` | yes | pass |
+| 56 | GPCF-MM-LR-003 | L3 task generation cleanup | `tools/kds-sync/assess_l3_admission.py` | yes | pass |
+| 57 | GPCF-MM-LR-004 | MMC self-evolution checklist | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/self-evolution-checklist.json` | yes | pass |
+| 57 | GPCF-MM-LR-004 | MMC self-evolution validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_self_evolution.py` | yes | pass |
+| 57 | GPCF-MM-LR-004 | MMC self-evolution round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/loops/loop-round-GPCF-MM-LR-004.md` | yes | pass |
+| 57 | GPCF-MM-LR-004 | L3 JSON evidence scoring | `tools/kds-sync/assess_l3_admission.py` | yes | MMC 97 / L3 Conditional due Git dirty |
+| 58 | GPCF-MM-LR-005 | MMC commit-readiness validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/scripts/validate_mmc_commit_readiness.py` | yes | pass |
+| 58 | GPCF-MM-LR-005 | MMC commit-readiness round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC/docs/harness/loops/loop-round-GPCF-MM-LR-005.md` | yes | pass |
+| 58 | GPCF-MM-LR-005 | MMC commit safety flags | `stage=false commit=false push=false sensitive_paths=0 unexpected_paths=0` | yes | pass |
+| 58 | GPCF-MM-LR-005 | MMC full validation batch | commit-readiness, self-evolution, dependency dry-run, loop harness, L3 admission, 30 tests, contract, diff check | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG bootstrap validator | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/validate_xiaog_l3_bootstrap.py` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG bootstrap smoke test | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/scripts/test_xiaog_l3_bootstrap.py` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG loop state | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loop-state.md` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG evidence index | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/evidence/evidence-index.md` | yes | pass |
+| 59 | XiaoG-LR-001 | XiaoG round record | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG/docs/harness/loops/loop-round-XiaoG-LR-001.md` | yes | pass |
+| 59 | XiaoG-LR-001 | L3 nested project scoring | `tools/kds-sync/assess_l3_admission.py` | yes | XiaoG 82 / L3 Conditional |
 
 ## 完整率统计
 
@@ -43,6 +67,8 @@ superseded_by: []
 
 - 本轮 command log 未独立落盘。
 - Git 工作区存在未提交治理变更，尚不能作为 clean evidence。
+- MMC 已闭合本地 dependency dry-run、self-evolution 和 commit-readiness evidence；评分为 97，但本轮改动尚未提交/推送，按 Git 门禁保持 L3 Conditional，不能升级为 accepted/integrated。
+- XiaoG 已补齐真实仓最小 L3 bootstrap；评分为 82，但本轮改动尚未提交/推送，且风险/回滚、可用性和自我进化仍需后续轮次。
 
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance docs | `docs/harness/gpcf-*-lr002..lr016.md` | yes | controlled |
 | 2-16 | GPCF-CF-LR-002..016 | GPCF L3 governance machine-readable batch | `docs/harness/evidence/gpcf_l3_governance_rounds_lr002_lr016.json` | yes | validated |
