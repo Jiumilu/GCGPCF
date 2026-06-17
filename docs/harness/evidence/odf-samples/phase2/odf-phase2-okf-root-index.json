@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-005",
+  "category": "okf-navigation",
+  "title": "ODF Phase 2 - OKF Root Index",
+  "source_uri": "git://.okf/index.md",
+  "source_path": ".okf/index.md",
+  "source_hash": "c2dace42e1cd8ce5e9693d800d71f8b64cf74d3eaeb42040a1c24a1a1d6f7103",
+  "markdown_path": ".okf/index.md",
+  "markdown_hash": "c2dace42e1cd8ce5e9693d800d71f8b64cf74d3eaeb42040a1c24a1a1d6f7103",
+  "kds_path": "开发/12-GPCF/.okf/index.md",
+  "owner": "GPCF",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_navigation_only_no_body_copy",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original OKF index unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

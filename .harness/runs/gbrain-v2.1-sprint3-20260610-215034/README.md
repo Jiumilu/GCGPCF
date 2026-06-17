@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-520E6A10FE | gbrain-v2.1-sprint3-20260610-215034 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md | WAES | archive |
-| GPCF-DOC-2AEC389E51 | Harness Governance: gbrain-v2.1-sprint3 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md | WAES | archive |
+| GPCF-DOC-2AEC389E51 | status-audit | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md | WAES | archive |

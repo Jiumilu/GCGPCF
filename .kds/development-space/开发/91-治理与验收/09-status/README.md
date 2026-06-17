@@ -44,10 +44,14 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-5EF9F8EE5D | GlobalCloud 文档控制总台账 | 09-status/globalcloud-document-control-register.md | GPCF | controlled |
 | GPCF-DOC-71779DF3C3 | GlobalCloud 文档治理 Loop 门禁 | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | controlled |
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | controlled |
-| GPCF-DOC-C582EFCACE | GlobalCloud L3 Admission Matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
-| GPCF-DOC-C10C271958 | GlobalCloud 项目文档完整度与 Loop 成熟度量化矩阵 | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
+| GPCF-DOC-C582EFCACE | globalcloud-l3-admission-matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
+| GPCF-DOC-C10C271958 | globalcloud-project-document-loop-maturity-matrix | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
 | GPCF-DOC-6CE17269E9 | globalcloud-project-mainline-alignment-matrix | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | controlled |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | controlled |
+| GPCF-DOC-B1085FD000 | KDS API 同步流水覆盖事件记录 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
 | GPCF-DOC-53A28225F1 | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |
 | GPCF-DOC-BA63F9BF32 | KDS 开发空间同步台账 | 09-status/kds-development-space-sync-register.md | GPCF | controlled |
+| GPCF-DOC-B15126F708 | KDS Markdown 化与 OKF 兼容层全面实施闭环方案 | 09-status/kds-md-okf-implementation-closure-plan.md | GPCF | controlled |
 | GPCF-DOC-BEB2C3647E | KDS Readonly Probe Report | 09-status/kds-readonly-probe-report.md | GPCF | controlled |
+| GPCF-DOC-76D6EBBEAB | ODF 受控引入与治理试点方案 | 09-status/odf-introduction-governance-plan.md | GPCF | controlled |
+| GPCF-DOC-808690228D | ODF Phase 2 扩大样本验证计划 | 09-status/odf-phase2-expansion-plan.md | GPCF | controlled |

@@ -16,8 +16,8 @@
 | GPCF-DOC-B2E453D9F1 | 知源专项运行前样本收集记录 | 08-evidence-samples/知源专项运行前样本收集记录.md | controlled |
 | GPCF-DOC-04C744A2DC | WAES | docs/harness/WAES/README.md | controlled |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | controlled |
-| GPCF-DOC-460215ED8F | Evidence Index — WAES | docs/harness/WAES/evidence/evidence-index.md | controlled |
-| GPCF-DOC-FFA52ED4FF | GlobalCloud WAES Loop State | docs/harness/WAES/loop-state.md | controlled |
+| GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | controlled |
+| GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAES/loop-state.md | controlled |
 | GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAES/loops/README.md | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | controlled |
 | GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | controlled |

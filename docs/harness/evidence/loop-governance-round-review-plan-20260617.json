@@ -1,0 +1,85 @@
+{
+  "evidence_id": "LOOP-GOV-ROUND-REVIEW-PLAN-20260617",
+  "evidence_type": "loop_governance_round_review_plan",
+  "created_at": "2026-06-17",
+  "project": "GPCF",
+  "status": "review_required",
+  "source_locator": "LOOP-GOV-EFF-DEBT-LOCATOR-20260617",
+  "source_signal": {
+    "loop_round_efficiency_audit": "pass",
+    "total_rounds": 294,
+    "audit_checked": 30,
+    "hard_checked": 5,
+    "audit_missing_truth_fields": 2,
+    "audit_missing_five_segment": 18,
+    "hard_missing_truth_fields": 0,
+    "hard_missing_five_segment": 0,
+    "duplicate_fingerprint_groups": 1,
+    "high_similarity_adjacent_pairs": 3,
+    "max_consecutive_sequence": 184,
+    "risk": "review_required"
+  },
+  "controls": {
+    "no_bulk_rewrite": true,
+    "business_status_impact": "none",
+    "annotation_scope": "targeted annotation or index-level exception only",
+    "hard_window_guard": "hard_missing_truth_fields=0 and hard_missing_five_segment=0",
+    "accepted_integrated_allowed": false
+  },
+  "work_packages": [
+    {
+      "package_id": "LEDB-001-RP-001",
+      "backlog_item": "LEDB-001",
+      "debt_type": "missing_truth_fields",
+      "count": 2,
+      "status": "review_required",
+      "allowed_outcomes": ["targeted_annotation_ready", "index_level_exception", "validator_rule_update"],
+      "rounds": [
+        "loop-round-GPCF-L4-GFIS-REPAIR-202.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-203.md"
+      ]
+    },
+    {
+      "package_id": "LEDB-002-RP-001",
+      "backlog_item": "LEDB-002",
+      "debt_type": "missing_five_segment_markers",
+      "count": 18,
+      "status": "review_required",
+      "allowed_outcomes": ["targeted_annotation_ready", "index_level_exception", "validator_rule_update"],
+      "rounds": [
+        "loop-round-GPCF-L4-GFIS-REPAIR-195.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-196.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-197.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-198.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-199.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-200.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-201.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-202.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-203.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-204.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-205.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-206.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-207.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-208.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-209.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-210.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-211.md",
+        "loop-round-GPCF-L4-GFIS-REPAIR-212.md"
+      ]
+    },
+    {
+      "package_id": "LEDB-003-RP-001",
+      "backlog_item": "LEDB-003",
+      "debt_type": "long_consecutive_sequence_risk",
+      "count": 184,
+      "status": "cadence_required",
+      "cadence": "checkpoint every 10 substantive GFIS repair rounds or every material source-record gate change, whichever happens first",
+      "allowed_outcomes": ["validator_rule_update", "index_level_exception", "defer_to_implementation_main_process"]
+    }
+  ],
+  "non_claims": [
+    "This plan does not rewrite historical round records in bulk.",
+    "This plan does not prove GFIS runtime SOP E2E passed.",
+    "This plan does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status."
+  ]
+}

@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-4B629FE0E5 | gbrain-portal-v2-frontend-20260610-204915 | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/README.md | WAES | archive |
-| GPCF-DOC-8898209B8E | Harness Governance: gbrain-portal-v2-frontend | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md | WAES | archive |
+| GPCF-DOC-8898209B8E | status-audit | .harness/runs/gbrain-portal-v2-frontend-20260610-204915/status-audit.md | WAES | archive |

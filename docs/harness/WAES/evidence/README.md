@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | WAES | controlled |
-| GPCF-DOC-460215ED8F | Evidence Index — WAES | docs/harness/WAES/evidence/evidence-index.md | WAES | controlled |
+| GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | WAES | controlled |

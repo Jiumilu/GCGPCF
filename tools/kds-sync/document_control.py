@@ -137,6 +137,8 @@ def top_dir(source_path: str) -> str:
 
 
 def domain_for(source_path: str) -> str:
+    if source_path.startswith(".okf/"):
+        return "governance"
     return DOMAIN_BY_TOP.get(top_dir(source_path), "general")
 
 
@@ -155,6 +157,8 @@ def status_for(source_path: str) -> str:
 
 
 def frontmatter_managed_for(source_path: str) -> bool:
+    if source_path.startswith((".codex/", ".agents/")):
+        return False
     if source_path in NO_FRONTMATTER_FILES:
         return False
     if source_path.startswith(".codex/skills/") and source_path.endswith("/SKILL.md"):
@@ -163,6 +167,8 @@ def frontmatter_managed_for(source_path: str) -> bool:
 
 
 def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]]:
+    if source_path.startswith(".okf/"):
+        return "GPCF", ["GPCF", "GPC", "WAES", "KDS"]
     haystack = f"{source_path}\n{title}\n{text[:5000]}"
     hits: list[str] = []
     for project, (_, keys) in PROJECTS.items():
@@ -212,6 +218,10 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
 
 
 def kds_path_for(source_path: str, project: str, status: str, domain: str) -> str:
+    if source_path.startswith(".okf/"):
+        return f"开发/12-GPCF/{source_path}"
+    if source_path.startswith("08-evidence-samples/GFIS/docs/"):
+        return "开发/01-GFIS/docs/" + source_path.rsplit("/", 1)[-1]
     if source_path == "README.md":
         return "开发/00-项目群总控/README.md"
     if status in {"deprecated", "superseded", "archive"}:
@@ -435,6 +445,8 @@ def readme_records_for(prefix: str, records: list[dict[str, object]]) -> list[di
 
 def write_directory_readmes(records: list[dict[str, object]]) -> None:
     for dirname, (label, purpose) in README_META.items():
+        if dirname.startswith((".codex", ".agents")):
+            continue
         dir_path = ROOT / dirname
         if not dir_path.exists():
             continue
@@ -470,6 +482,8 @@ def should_have_readme(dir_path: Path) -> bool:
     if parts & EXCLUDE_DIRS:
         return False
     if rel_dir in README_META:
+        return False
+    if rel_dir.startswith((".codex", ".agents")):
         return False
     if rel_dir in GENERIC_DIR_PURPOSE:
         return True
@@ -509,8 +523,22 @@ def write_generic_readmes(records: list[dict[str, object]]) -> None:
 def mirror_to_kds(records: list[dict[str, object]]) -> None:
     kds_root = ROOT / ".kds/development-space"
     if kds_root.exists():
-        shutil.rmtree(kds_root)
-    ledger_path = ROOT / ".kds/sync-ledger.jsonl"
+        try:
+            shutil.rmtree(kds_root, ignore_errors=True)
+        except OSError:
+            for child in sorted(kds_root.rglob("*"), key=lambda p: len(p.parts), reverse=True):
+                try:
+                    if child.is_dir():
+                        child.rmdir()
+                    else:
+                        child.unlink()
+                except FileNotFoundError:
+                    continue
+            try:
+                kds_root.rmdir()
+            except FileNotFoundError:
+                pass
+    ledger_path = ROOT / ".kds/local-mirror-ledger.jsonl"
     ledger_path.parent.mkdir(parents=True, exist_ok=True)
     entries = []
     for r in records:
@@ -567,6 +595,7 @@ def write_tool_readme() -> None:
     content += "- `09-status/kds-development-space-sync-register.md`\n"
     content += "- `09-status/document-deprecation-register.md`\n"
     content += "- `.kds/development-space/开发/`\n"
+    content += "- `.kds/local-mirror-ledger.jsonl`\n"
     content += "- `.kds/sync-ledger.jsonl`\n"
     write_text(ROOT / "tools/kds-sync/README.md", content)
 

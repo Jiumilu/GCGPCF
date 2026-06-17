@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -66,7 +67,7 @@ def kds_token_status() -> dict[str, object]:
     if not KDS_TOKEN_VALIDATOR.exists():
         return {"gate": "unknown", "reason": "validate_kds_token.py missing"}
     proc = subprocess.run(
-        ["python3", str(KDS_TOKEN_VALIDATOR)],
+        [sys.executable, str(KDS_TOKEN_VALIDATOR)],
         cwd=ROOT,
         text=True,
         stdout=subprocess.PIPE,
@@ -368,7 +369,7 @@ def git_gate() -> dict[str, object]:
     if not GIT_GATE.exists():
         return {"gate": "unknown", "reason": "loop_git_gate.py missing"}
     proc = subprocess.run(
-        ["python3", str(GIT_GATE), str(ROOT)],
+        [sys.executable, str(GIT_GATE), str(ROOT)],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -386,7 +387,7 @@ def operational_gates() -> dict[str, object]:
     if not OPERATIONAL_GATES.exists():
         return {"gate": "unknown", "reason": "loop_operational_gates.py missing"}
     proc = subprocess.run(
-        ["python3", str(OPERATIONAL_GATES), str(ROOT)],
+        [sys.executable, str(OPERATIONAL_GATES), str(ROOT)],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,

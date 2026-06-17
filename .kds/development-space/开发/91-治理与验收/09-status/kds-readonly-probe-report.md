@@ -18,13 +18,13 @@ superseded_by: []
 
 # KDS Readonly Probe Report
 
-generated_at: 2026-06-13T06:41:09.868167+00:00
+generated_at: 2026-06-17T04:09:40.825349+00:00
 kds_space: 开发
 token_fingerprint: bfd9553d
-register_records: 423
-remote_documents: 323
-matching_remote: 323
-missing_remote: 100
+register_records: 815
+remote_documents: 717
+matching_remote: 705
+missing_remote: 110
 
 ## Missing Remote Documents
 
@@ -105,9 +105,14 @@ missing_remote: 100
 - `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/README.md`
 - `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md`
 - `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md`
+- `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md`
 - `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md`
 - `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md`
 - `开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md`
+- `开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md`
+- `开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md`
+- `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包.md`
+- `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md`
 - `开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md`
 - `开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md`
 - `开发/92-证据与会话归档/10-archive/README.md`
@@ -115,6 +120,11 @@ missing_remote: 100
 - `开发/92-证据与会话归档/10-archive/historical-sessions/README.md`
 - `开发/92-证据与会话归档/10-archive/imported-legacy/README.md`
 - `开发/92-证据与会话归档/10-archive/superseded/README.md`
+- `开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md`
+- `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-020.md`
+- `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-021.md`
+- `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-022.md`
+- `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md`
 - `开发/05-KDS/openspec/changes/README.md`
 - `开发/05-KDS/openspec/changes/archive/README.md`
 - `开发/05-KDS/openspec/changes/kds-production-hardening/README.md`

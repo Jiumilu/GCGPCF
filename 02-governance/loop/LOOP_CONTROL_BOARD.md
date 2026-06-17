@@ -23,13 +23,15 @@ superseded_by: []
 | 字段 | 当前值 |
 |---|---|
 | 当前 Loop 模式 | L4 自我纠错与 GFIS 运行层修复 |
-| 可升级模式 | L4 repair active；L5 暂停，必须等 GFIS 运行层证据与 SOP E2E 修复后再评估 |
-| 当前主线项目 | GPCF / WAES / 全项目 |
-| 当前轮次 | `GPCF-L4-CORR-001`：GFIS 主体错位与 SOP E2E failed 自我纠错 |
-| 当前阶段 | L4 repair；纠正此前 100/100 假阳性，建立自我发现和自我纠偏门禁 |
-| 当前目标 | 在 GPCF 总控仓记录 GFIS Demo 错误主体、SOP E2E failed、L4 降级结论和 GFIS-runtime-repair 下一轮输入 |
+| 本轮最新校准 | `GPCF-L4-GFIS-REPAIR-226` 已回写：已将 `CustomerRequirementOrPlatformOrder` pending business verification quarantine schema/precheck 落入 GFIS 真项目仓运行层 API 与主 validator，输出 `schema_files=1 required_fields=12 allowed_pending_source_kinds=5 accepted_final_source_kinds=2 rejection_rules=6 pending_submission_files_found=0 pending_business_verification_submissions=0 pending_business_verification_quarantine_items=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required`。本轮只证明未来真实待核验文件隔离 schema/precheck 已就绪；不得升级 accepted/integrated |
+| 可升级模式 | L4 repair active；L5 暂停，必须等 GFIS 运行层证据与完整 SOP E2E 修复后再评估 |
+| 当前主线项目 | GFIS / GPCF |
+| 当前轮次 | `GPCF-L4-GFIS-REPAIR-226`：GFIS pending business verification quarantine schema/precheck |
+| 当前阶段 | L4 repair；GFIS 运行层仍是唯一 SOP 主体。已确认 GFIS 是现代精工 OEM 代加工生产期间和葛化自建工厂投产后共同使用的运行时系统，GFIS Demo 只能作为展示/培训/前端回归。本轮完成 pending_business_verification quarantine schema/precheck，同步确认 `pending_submission_files_found=0`、`pending_business_verification_quarantine_items=0`、`source_record_files_found=0`、`valid_source_records=0`；本轮未执行删除、reset、checkout、提交、推送或生产配置变更 |
+| 当前目标 | 以 GFIS 运行层为唯一 SOP 主体，把辽宁远航报价来源、合同链、现代精工 OEM 当前运行层定位、未来葛化自建工厂运行层定位、签章完成件接收门禁、真实回执接收目录、KDS backlink receipt、KDS 候选发现、客户商业补证、authorization envelope、review/runtime/WAES 阻断全部纳入完整 runtime SOP E2E 主门禁；本轮不证明真实 KDS 写入回执、签章完成、客户确认函、采购订单/合同、客户规格/封样、PP/改性料规格、上机窗口、首批 1 吨闭环验收、出厂全检、客户验收/POD、生产写入、物流 API、资金事实、人工验收或 accepted/integrated 完成 |
 | 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
-| 当前状态判定 | `repair_required`；此前 `GPCF-L4-012` 的 `100/100` 与 `L4 closed` 结论已失效 |
+| 当前状态判定 | `partial_repair`；GFIS Demo 主体错位已被纠偏并进入 Loop Engineering 完整性门禁。GFIS 运行层 SOP E2E 仍为 `repair_required`。本轮只证明 `CustomerRequirementOrPlatformOrder` pending_business_verification quarantine schema/precheck 已就绪，仍无真实提交文件、quarantine item、有效 source-of-record、有效派发确认、运行层主键、review queue、runtime intake、WAES review 或 verified artifact；不得升级 accepted/integrated |
+| 本轮新增事实 | GFIS 真项目仓新增 pending business verification quarantine schema、schema precheck JSON/Markdown evidence、builder、validator、只读 API，并在 `scripts/validate_gfis_runtime_sop_e2e.py` 接入主门禁。输出 `schema_files=1 required_fields=12 allowed_pending_source_kinds=5 accepted_final_source_kinds=2 rejection_rules=6 pending_submission_files_found=0 pending_business_verification_quarantine_items=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required`。GFIS demo/frontend E2E 使用 bundled Python 跑通 `26 passed`，只能作为展示层回归。本轮只证明隔离 schema/precheck 就绪，不创建业务凭证、外部通知发送事实或运行层主键 |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |
 | L3 session | stopped |
@@ -40,12 +42,12 @@ superseded_by: []
 | L3 stop_evidence | 全项目提交推送后重新运行 `python3 tools/kds-sync/assess_l3_admission.py`，11 个业务项目均为 L3 Ready；GPCF 保持 governance_hub；所有仓库 `git status --short --branch` clean/up-to-date；本轮只做总控证据校准，不执行生产写入、权限变更、部署、真实外部 API、Docker 部署、设备 OTA 或 accepted/integrated 升级 |
 | L3 final answer guard | stopped；`stop_type=authorization_boundary` 是允许 final 收口条件 |
 | 连续运行真实性门禁 | pass |
-| continuous declared_rounds | 12/30 |
-| continuous substantive_rounds | 12/30 |
-| continuous generated_items | 68 |
+| continuous declared_rounds | 14/30 |
+| continuous substantive_rounds | 14/30 |
+| continuous generated_items | 80 |
 | continuous batch_generated | false |
 | continuous substance_gate | pass |
-| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002`、`KDS-L4-003`、`Brain-L4-004`、`PKC-L4-005`、`PVAOS-L4-006`、`GPC-L4-007`、`XiaoC-L4-009`、`XGD-L4-010`、`XiaoG-L4-011` 保持各自 L4 dry-run/mock/read-only evidence；`GFIS-L4-008` 被纠偏为 repair_required，因为其核心 fixture 来自 `gcfis_demo` 且 SOP E2E failed；`GPCF-L4-012` 原 100/100 被 `GPCF-L4-CORR-001` 降级为 78/100 L4 repair；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移、设备 OTA 或 accepted/integrated 升级 |
+| continuous substance_evidence | `GPCF-L4-001` 建立项目群控制面；`MMC-L4-002`、`KDS-L4-003`、`Brain-L4-004`、`PKC-L4-005`、`PVAOS-L4-006`、`GPC-L4-007`、`XiaoC-L4-009`、`XGD-L4-010`、`XiaoG-L4-011` 保持各自 L4 dry-run/mock/read-only evidence；`GFIS-L4-008` 被纠偏为 repair_required，因为其核心 fixture 来自 `gcfis_demo`；`GFIS-RUNTIME-SOP-E2E-001/002` 证明 Demo E2E pass 不等于运行层 SOP pass，KDS source path 缺口已从 4 降至 0，当前仍缺 5 项 KDS 葛化真实业务输入；`GPCF-L4-012` 原 100/100 被 `GPCF-L4-CORR-001` 降级，当前随 KDS source path 修复校准为 79/100 L4 repair；当前不执行生产写入、真实外部 API、权限变更、部署、数据库迁移、设备 OTA 或 accepted/integrated 升级 |
 | corrected stop_type | authorization_boundary |
 | 连续运行默认继续规则 | L3/L3.5/L4/L5 active 时未触发硬停止、用户停止、预算耗尽、时间耗尽、授权边界或任务队列为空，必须继续下一轮 |
 | 连续运行阶段性汇报 | 不是停止条件；只能作为 evidence 或进度说明 |
@@ -78,6 +80,7 @@ superseded_by: []
 | 真实 KDS API 双向同步 | `开发` 空间 read/write/edit 已跑通；非 `开发` 空间访问 403；仍需按工具链留审计流水 |
 | 未授权真实外部 API 写入 | 必须人工确认；L3.5/L4/L5 只按专项政策与显式授权执行 |
 | 生产配置修改或部署 | 必须人工确认 |
+| ECS / 阿里云 / Caddy / 隧道 / Docker 运行配置修改 | Hermes 永远只读；Loop 不得自动执行；仅 Codex 当前会话在明确授权、回滚和审计条件满足时可作为变更入口；控制规则见 `02-governance/ops/ecs-access-control-and-network-boundary.md` |
 | `bench migrate` / schema sync / 运行态写 API | GFIS 当前仍未取得迁移授权 |
 | 标记 `accepted` / `integrated` | 必须用户人工确认且满足状态门禁 |
 
@@ -85,15 +88,15 @@ superseded_by: []
 
 | 门禁 | 最近结果 | 说明 |
 |---|---|---|
-| Git 门禁 | pass | 提交推送后全项目状态 clean/up-to-date；本轮校准变更需再次通过 diff check 后提交 |
+| Git 门禁 | partial | GPCF/GFIS dirty 状态已分类：GPCF high_risk=2、GFIS high_risk=3；无 deleted/missing。高风险项需人工复核后才可进入提交候选；本轮不提交不推送 |
 | 文档污染检查 | pass | `check_document_pollution.py` 最近通过 |
 | KDS 镜像冲突 | pass | `kds_conflict_guard.py` 最近通过 |
 | Loop 运行门禁 | pass | `loop_operational_gates.py` 最近通过 |
-| GFIS 质量门禁 | blocked | GFIS `test-results/.last-run.json` 为 `status=failed`；SOP E2E 未通过前不得以 Demo 或局部 validator 代替运行层验收 |
+| GFIS 质量门禁 | partial | GFIS Demo E2E 只允许作为 `pass_demo_only` 展示层回归；本轮使用 bundled Python 跑通 `npm run test:e2e`，26 passed。GFIS 运行层 SOP E2E validator expected exit 2 并输出 `repair_required`。本轮新增并接入 GFIS 真项目仓 pending business verification quarantine schema/precheck；当前 `schema_files=1`、`required_fields=12`、`allowed_pending_source_kinds=5`、`accepted_final_source_kinds=2`、`rejection_rules=6`、`pending_submission_files_found=0`、`pending_business_verification_submissions=0`、`pending_business_verification_quarantine_items=0`、`source_record_files_found=0`、`valid_source_records=0`、`manual_business_verification_passed=0`、`dispatch_confirmation_pre_block=1`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`。完整 SOP E2E 未通过前不得升级验收 |
 | XiaoC L4 门禁 | pass | `node scripts/validate_xiaoc_l4_agent_orchestration.mjs`、`node scripts/validate_xiaoc_loop_harness.mjs`、`pnpm test:repo`、`git diff --check -- .` 均通过 |
 | XGD L4 门禁 | pass | `node scripts/validate_xgd_l4_risk_analysis.mjs`、`npm run harness:validate`、`npm test`、`git diff --check -- .` 均通过 |
 | XiaoG L4 门禁 | pass | `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py`、legacy L3 validators/smoke/test、`git diff --check -- .` 均通过 |
-| GPCF L4 收口门禁 | repair_required | `validate_loop_self_correction_gate.py` 与 `validate_l4_minimum_closed_loop.py` 必须输出 78/100 repair，直到 GFIS 运行层证据和 SOP E2E 修复 |
+| GPCF L4 收口门禁 | repair_required | `validate_loop_self_correction_gate.py` 与 `validate_l4_minimum_closed_loop.py` 已纳入 GFIS 运行层 SOP validator；当前必须输出 79/100 repair，直到 GFIS 运行层证据和 SOP E2E 修复 |
 | KDS TOKEN 检查 | pass | `kds_token=pass fingerprint=bfd9553d`；私有 env 不入库 |
 
 ## 当前待确认项
@@ -153,7 +156,14 @@ superseded_by: []
 | P1 | 后续授权 | 各项目真实项目仓、运行态验证、GPC 一期蓝图、WAES 门禁语义、accepted/integrated 升级 | 需要人工确认或更高授权，L3 不自动改主结论 |
 | P1 | WAES-LR-001 | 先解决 WAES 分支绑定，再落地真实 WAES harness、validator 和 evidence | 不生产写入、不部署、不越权裁决 |
 | P1 | L5-preparation | 起草 L5 强授权包：客户/UAT 样本、live read API、WAES runtime endpoint、监控、回滚和验收指标 | 只起草授权包；不生产写入、不真实外部 API、不升级 accepted/integrated |
-| P0 | GFIS-runtime-repair | 以 GFIS 运行层替换 Demo 主体证据，修复 SOP E2E，补齐运行态 DocType/工作流/API/evidence validator | 保护 GFIS dirty 工作区；不生产写入、不 bench migrate、不部署、不升级 accepted/integrated |
+| P0 | GFIS-real-receipt-empty-directory-hold-register | 在 5 个正式真实回执接收目录仍无文件时，建立空状态 hold register / 责任方补证提醒门禁；不得伪造真实回执、责任方响应、签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAES confirmation | 不生产写入、不真实外部 API、不 bench migrate、不 schema sync、不真实 KDS/WAES 写入、不升级 accepted/integrated；KDS context 和用户事实只能作为候选和采集方向 |
+| P0 | GFIS-original-proof-collection-checklist | 将 `LiaoningYuanhangProofCollectionPackage` 的 4 项开放请求持续转成业务方可执行的原始凭证采集清单：样箱测试签收/反馈、江西委托生产单或完工记录、客户确认函、现代精工转量产批准或 WAES evidence ref | 需要真实业务输入或明确授权；未授权前不 bench migrate、不 schema sync、不生产写入、不真实外部 API、不部署、不升级 accepted/integrated |
+| P0 | GFIS-runtime-real-pod-receipts | 补齐真实 POD 签收、WAES evidence confirmation 与 KDS backlink receipt，复测 `get_runtime_pod_gate` 是否从 blocked 收敛 | 需要真实业务输入或明确授权；未授权前不 bench migrate、不 schema sync、不生产写入、不真实外部 API、不部署、不升级 accepted/integrated |
+| P0 | GFIS-runtime-gap-resolution-plan | 按 `get_runtime_sop_gap_resolution_plan` 输出的 `gfis_runtime_actionable_count=7` 优先选择 GFIS 可行动缺口，继续补最小运行层能力并复测 | 不生产写入、不真实外部 API、不 bench migrate、不 schema sync、不升级 accepted/integrated |
+| P0 | GFIS-runtime-real-production-execution | 补齐真实作业卡、投料、开始/完工、过程记录和 WAES execution evidence，复测 `get_runtime_production_execution_gate` 是否从 blocked 收敛 | 需要真实业务输入或明确授权；未授权前不 bench migrate、不 schema sync、不生产写入、不真实外部 API、不部署、不升级 accepted/integrated |
+| P0 | GFIS-runtime-schema-and-real-input-repair | 在明确授权后执行候选 DocType schema sync / migrate，并补齐 KDS 葛化真实业务输入；继续复测 sample candidate、runtime evidence candidate 与 runtime handoff candidate API，补齐样品、ProductionExecution、QualityInspection、InventoryBatch、DeliveryNote、POD、WAES/KDS 回执的本机受控运行层 runner 或真实 UAT evidence | 保护 GFIS dirty 工作区；未授权前不 bench migrate、不 schema sync、不生产写入、不真实外部 API、不部署、不升级 accepted/integrated |
+| P0 | GFIS-customer-requirement-platform-order-source-record-submission | 从 `GPC_or_Liaoning_Yuanhang_order_owner` 取得真实客户订单原件或平台订单回执 JSON，并提交到 GFIS 指定 source-of-record 接收目录；不得把请求包、报价单、合同审阅稿、KDS 候选、用户口述、Loop 文档、GFIS Demo 或未核验 accepted/integrated 声明转成运行层主键、review queue 或有效 source-of-record | 不生产写入、不真实外部 API、不 bench migrate、不 schema sync、不真实 KDS/WAES 写入、不升级 accepted/integrated；真实源记录提交前只允许请求包和校验门禁 |
+| P0 | GFIS-pending-business-verification-quarantine-file-scan | 扫描未来真实 pending_business_verification 文件并按 216 schema 做隔离预检；若目录仍为空，输出 0 计数并继续保持 repair_required | 不生产写入、不真实外部 API、不 bench migrate、不 schema sync、不真实 KDS/WAES 写入、不升级 accepted/integrated；不得把 schema、模板或 rejected examples 计为真实提交 |
 
 ## 最近 evidence 链接
 
@@ -167,3 +177,8 @@ superseded_by: []
 | L3.5 真实接口验证政策 | `02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md` |
 | L4 全自动运营政策 | `02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md` |
 | L5 完全生产自治政策 | `02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md` |
+| GFIS runtime SOP E2E precheck | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/README.md` |
+| GFIS runtime SOP E2E runner evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dry-run-result.json` |
+| GFIS runtime KDS Gehua input register | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/kds-gehu-data-input-register.md` |
+| GFIS runtime SOP E2E failure analysis | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/e2e-failure-analysis.md` |
+| Loop Engineering self-correction | `02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md` |

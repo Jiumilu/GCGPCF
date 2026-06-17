@@ -1,0 +1,61 @@
+{
+  "evidence_id": "LOOP-GOV-EFF-DEBT-LOCATOR-20260617",
+  "evidence_type": "loop_governance_efficiency_debt_locator",
+  "created_at": "2026-06-17",
+  "project": "GPCF",
+  "status": "review_required",
+  "source_command": "python3 tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py",
+  "source_signal": {
+    "loop_round_efficiency_audit": "pass",
+    "total_rounds": 294,
+    "audit_checked": 30,
+    "hard_checked": 5,
+    "audit_missing_truth_fields": 2,
+    "audit_missing_five_segment": 18,
+    "hard_missing_truth_fields": 0,
+    "hard_missing_five_segment": 0,
+    "duplicate_fingerprint_groups": 1,
+    "high_similarity_adjacent_pairs": 3,
+    "max_consecutive_sequence": 184,
+    "risk": "review_required"
+  },
+  "scope": {
+    "audit_window": 30,
+    "hard_window": 5,
+    "target_backlog_items": [
+      "LEDB-001",
+      "LEDB-002"
+    ],
+    "no_bulk_rewrite": true,
+    "business_status_impact": "none"
+  },
+  "affected_truth_field_records": [
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-202.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-202.md", "missing_fields": ["declared_rounds", "substantive_rounds", "generated_items", "batch_generated", "substance_gate", "stop_type"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-203.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-203.md", "missing_fields": ["declared_rounds", "substantive_rounds", "generated_items", "batch_generated", "substance_gate", "stop_type"]}
+  ],
+  "affected_five_segment_records": [
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-195.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-195.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-196.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-196.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-197.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-197.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-198.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-198.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-199.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-199.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-200.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-200.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-201.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-201.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-202.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-202.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-203.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-203.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-204.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-204.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-205.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-205.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-206.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-206.md", "missing_segments": ["action"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-207.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-207.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-208.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-208.md", "missing_segments": ["action", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-209.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-209.md", "missing_segments": ["action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-210.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-210.md", "missing_segments": ["input", "action", "output", "check", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-211.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-211.md", "missing_segments": ["input", "action", "feedback"]},
+    {"round": "loop-round-GPCF-L4-GFIS-REPAIR-212.md", "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-212.md", "missing_segments": ["action", "check"]}
+  ],
+  "non_claims": [
+    "This locator does not rewrite historical round records.",
+    "This locator does not prove GFIS runtime SOP E2E passed.",
+    "This locator does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status."
+  ]
+}

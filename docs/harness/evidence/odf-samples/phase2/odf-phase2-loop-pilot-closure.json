@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-010",
+  "category": "loop-harness-evidence",
+  "title": "ODF Phase 2 - ODF Pilot Closure Report",
+  "source_uri": "git://docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+  "source_path": "docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+  "source_hash": "354d059e2d8a9d74d29e28494346a032ae23b6a75a85963c6c655feb4245926a",
+  "markdown_path": "docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+  "markdown_hash": "354d059e2d8a9d74d29e28494346a032ae23b6a75a85963c6c655feb4245926a",
+  "kds_path": "开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_closure_reference_only",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

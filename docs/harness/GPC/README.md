@@ -39,7 +39,7 @@ KDS 空间：`开发`
 | GPCF-DOC-B637BE22F8 | GPC | docs/harness/GPC/README.md | GPC | controlled |
 | GPCF-DOC-61C2D40981 | evidence | docs/harness/GPC/evidence/README.md | GPC | controlled |
 | GPCF-DOC-6AA1BB56F0 | Evidence Index — GPC | docs/harness/GPC/evidence/evidence-index.md | GPC | controlled |
-| GPCF-DOC-556B3EE58F | GlobalCloud GPC Loop State | docs/harness/GPC/loop-state.md | GPC | controlled |
+| GPCF-DOC-556B3EE58F | loop-state | docs/harness/GPC/loop-state.md | GPC | controlled |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | GPC | controlled |
 | GPCF-DOC-C02896A291 | Loop Round GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | GPC | controlled |
 | GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | GPC | controlled |

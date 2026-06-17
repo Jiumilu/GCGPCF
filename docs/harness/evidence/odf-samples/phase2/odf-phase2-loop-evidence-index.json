@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-009",
+  "category": "loop-harness-evidence",
+  "title": "ODF Phase 2 - Harness Evidence Index",
+  "source_uri": "git://docs/harness/evidence/evidence-index.md",
+  "source_path": "docs/harness/evidence/evidence-index.md",
+  "source_hash": "af2bc5f8f732e75e031c5e8b3a50ca5686706d63b549eaee6bf63e024d281202",
+  "markdown_path": "docs/harness/evidence/evidence-index.md",
+  "markdown_hash": "af2bc5f8f732e75e031c5e8b3a50ca5686706d63b549eaee6bf63e024d281202",
+  "kds_path": "开发/12-GPCF/docs/harness/evidence/evidence-index.md",
+  "owner": "GPCF",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_evidence_index_reference_only",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

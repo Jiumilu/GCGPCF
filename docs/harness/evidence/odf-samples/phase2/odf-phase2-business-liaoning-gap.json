@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-008",
+  "category": "business-import",
+  "title": "ODF Phase 2 - Liaoning Yuanhang Evidence Gap",
+  "source_uri": "git://03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md",
+  "source_path": "03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md",
+  "source_hash": "ba2ee389d179882383707ffebe57a580859a14cf94eb76b129c9a96d2764bdc7",
+  "markdown_path": "03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md",
+  "markdown_hash": "ba2ee389d179882383707ffebe57a580859a14cf94eb76b129c9a96d2764bdc7",
+  "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_business_doc_reference_only",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

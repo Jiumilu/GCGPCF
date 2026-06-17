@@ -1,0 +1,291 @@
+{
+  "ledger_id": "GPCF-GFIS-OWNER-RECEIPT-TASK-LEDGER-20260617",
+  "round_id": "GPCF-L4-GFIS-REPAIR-213",
+  "generated_at": "2026-06-17T00:52:36.207968+00:00",
+  "subject": "GFIS runtime owner receipt tasks from KDS candidates",
+  "policy": "extract_tasks_only_no_business_completion_no_production_write",
+  "current_runtime_site": "modern_jinggong_oem_current",
+  "future_runtime_site": "gehu_owned_factory_after_commissioning",
+  "task_count": 5,
+  "open_task_count": 4,
+  "blocked_task_count": 1,
+  "completed_task_count": 0,
+  "review_queue": 0,
+  "runtime_intake": 0,
+  "waes_review": 0,
+  "verified": 0,
+  "runtime_sop_e2e": "repair_required",
+  "tasks": [
+    {
+      "task_id": "GFIS-OWNER-RECEIPT-TASK-001",
+      "task_key": "customer_requirement_platform_order_source_of_record",
+      "priority": 1,
+      "object_family": "CustomerRequirementOrPlatformOrder",
+      "owner": "GPC_or_Liaoning_Yuanhang_order_owner",
+      "required_receipt": "structure_valid_customer_order_original_or_platform_order_receipt",
+      "expected_submission_path": "docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/*.customer-requirement-platform-order.source-record.json",
+      "required_fields": [
+        "object_family",
+        "sop_stage",
+        "source_kind",
+        "customer_order_original_or_platform_order_receipt",
+        "customer_confirmed_product_spec",
+        "delivery_requirement",
+        "source_of_record_backlink",
+        "source_record_hash",
+        "issuing_party",
+        "owner_confirmation",
+        "received_at",
+        "runtime_site_context"
+      ],
+      "kds_candidate": {
+        "proof_key": "liaoning_yuanhang_project_quotation",
+        "candidate_count": 6,
+        "top_kds_path": "canonical-kds-readonly/PVA价值联盟/项目文件/辽宁远航国际物流/报价/宝马循环周转箱_正式报价书_IGL-BMW-QT-20260520-001.pdf",
+        "top_source_record_uri": "canonical-kds-readonly/PVA价值联盟/项目文件/辽宁远航国际物流/报价/宝马循环周转箱_正式报价书_IGL-BMW-QT-20260520-001.pdf",
+        "top_source_record_hash": "ef4c237deb6f314d7b70b9ff2837c66ee091c7d149d5c0dd7661c51343307f49",
+        "artifact_status": "targeted_candidate_not_verified",
+        "rejection_reason": "missing_original_business_anchors"
+      },
+      "source_evidence": [
+        "GFIS:docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-scan.json",
+        "GFIS:docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-structure-readiness.json"
+      ],
+      "current_counts": {
+        "expected_source_records": 1,
+        "submitted_files_found": 0,
+        "valid_source_records": 0,
+        "invalid_source_records": 0,
+        "missing_source_records": 1,
+        "required_source_of_record_fields": 4,
+        "present_source_of_record_fields": 0,
+        "missing_source_of_record_fields": 4,
+        "runtime_primary_key_ready": 0,
+        "runtime_primary_key_missing": 1,
+        "review_queue": 0,
+        "runtime_intake": 0,
+        "waes_review": 0,
+        "verified": 0
+      },
+      "state": "open_missing_real_source_of_record",
+      "blocks": [
+        "runtime_primary_key",
+        "review_queue",
+        "runtime_intake",
+        "waes_review",
+        "verified_artifact"
+      ]
+    },
+    {
+      "task_id": "GFIS-OWNER-RECEIPT-TASK-002",
+      "task_key": "customer_requirement_platform_order_dispatch_confirmation",
+      "priority": 2,
+      "object_family": "CustomerRequirementOrPlatformOrder",
+      "owner": "GFIS_GPC_manual_dispatch_owner_and_receiving_owner",
+      "required_receipt": "real_dispatch_confirmation_file",
+      "expected_submission_path": "docs/harness/sop-e2e/intake-submissions/review-authorization-envelopes/customer-requirement-or-platform-order/dispatch-confirmations/customer-requirement-platform-order.review-authorization-envelope.dispatch-confirmation.json",
+      "required_fields": [
+        "subject",
+        "object_family",
+        "sop_stage",
+        "runtime_site_current",
+        "runtime_site_future",
+        "request_id",
+        "source_dispatch_confirmation_request_round_id",
+        "dispatch_authorization_id",
+        "authorized_by",
+        "recipient_role",
+        "recipient_identity_confirmed",
+        "manual_channel",
+        "manual_channel_confirmed",
+        "dispatch_sent_at",
+        "confirmed_at",
+        "source_record_uri",
+        "source_record_hash",
+        "kds_backlink_path",
+        "waes_evidence_candidate"
+      ],
+      "kds_candidate": {
+        "candidate_status": "not_a_substitute_for_dispatch_confirmation",
+        "reason": "KDS candidates can guide owner lookup but cannot confirm manual dispatch."
+      },
+      "source_evidence": [
+        "GFIS:docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-owner-manual-request-dispatch-confirmation-receiving-file-scan.json"
+      ],
+      "current_counts": {
+        "request_package_items": 1,
+        "prepared_requests": 1,
+        "dispatch_preflight_items": 1,
+        "dispatch_preflight_blocked": 1,
+        "dispatch_authorizations": 0,
+        "recipients_confirmed": 0,
+        "manual_channels_confirmed": 0,
+        "external_api_writes_required": 0,
+        "dispatch_allowed": 0,
+        "dispatched_requests": 0,
+        "confirmation_slots": 1,
+        "receiving_directory_exists": 1,
+        "receiving_readme_exists": 1,
+        "expected_confirmation_files": 1,
+        "confirmation_files_found": 0,
+        "structure_valid_confirmations": 0,
+        "valid_confirmations": 0,
+        "invalid_confirmations": 0,
+        "missing_confirmations": 1,
+        "unexpected_files": 0,
+        "acknowledgement_allowed": 0,
+        "acknowledged_requests": 0,
+        "owner_manual_responses": 0,
+        "owner_response_allowed": 0,
+        "submitted_envelopes": 0,
+        "valid_envelopes": 0,
+        "submission_package_allowed": 0,
+        "complete_submission_ready": 0,
+        "release_allowed": 0,
+        "collection_open": 0,
+        "quarantine_allowed": 0,
+        "review_queue_ready": 0,
+        "review_queue": 0,
+        "manual_review": 0,
+        "waes_review": 0,
+        "runtime_intake": 0,
+        "verified": 0,
+        "runtime_primary_key_ready": 0,
+        "runtime_primary_key_missing": 1
+      },
+      "state": "open_missing_real_dispatch_confirmation",
+      "blocks": [
+        "acknowledgement",
+        "owner_response",
+        "submission_package",
+        "review_queue",
+        "runtime_intake"
+      ]
+    },
+    {
+      "task_id": "GFIS-OWNER-RECEIPT-TASK-003",
+      "task_key": "waes_confirmation",
+      "priority": 3,
+      "object_family": "CustomerRequirementOrPlatformOrder",
+      "owner": "WAES_owner",
+      "required_receipt": "waes_evidence_confirmation",
+      "expected_submission_path": "docs/harness/sop-e2e/intake-submissions/contract-chain/waes-confirmation/",
+      "required_fields": [
+        "waes_decision_id",
+        "evidence_ref",
+        "confirmed_categories",
+        "confirmed_at",
+        "decision_owner",
+        "decision_state"
+      ],
+      "kds_candidate": {
+        "candidate_status": "controlled_reference_only",
+        "reason": "WAES confirmation must come from WAES decision/evidence owner, not from KDS mirror text."
+      },
+      "source_evidence": [
+        "GFIS:docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-receiving-directory-structure.json"
+      ],
+      "current_counts": {
+        "submitted_file_count": 0,
+        "owner_response_count": 0,
+        "structure_valid": 0
+      },
+      "state": "open_missing_waes_confirmation",
+      "blocks": [
+        "waes_review",
+        "verified_artifact",
+        "runtime_intake"
+      ]
+    },
+    {
+      "task_id": "GFIS-OWNER-RECEIPT-TASK-004",
+      "task_key": "kds_write_receipt",
+      "priority": 4,
+      "object_family": "CustomerRequirementOrPlatformOrder",
+      "owner": "KDS_owner",
+      "required_receipt": "kds_development_space_write_receipt",
+      "expected_submission_path": "docs/harness/sop-e2e/intake-submissions/contract-chain/kds-write-receipt/",
+      "required_fields": [
+        "kds_space",
+        "kds_path",
+        "source_path",
+        "write_receipt_id",
+        "ledger_line_id",
+        "content_hash"
+      ],
+      "kds_candidate": {
+        "candidate_status": "local_mirror_or_candidate_not_receipt",
+        "reason": "A KDS candidate path is not a write receipt; ledger/write receipt id and content hash are required."
+      },
+      "source_evidence": [
+        "GFIS:docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-receiving-directory-structure.json"
+      ],
+      "current_counts": {
+        "submitted_file_count": 0,
+        "owner_response_count": 0,
+        "structure_valid": 0
+      },
+      "state": "open_missing_kds_write_receipt",
+      "blocks": [
+        "kds_backlink",
+        "runtime_primary_key",
+        "verified_artifact"
+      ]
+    },
+    {
+      "task_id": "GFIS-OWNER-RECEIPT-TASK-005",
+      "task_key": "runtime_primary_key",
+      "priority": 5,
+      "object_family": "CustomerRequirementOrPlatformOrder",
+      "owner": "GFIS_runtime_owner_after_source_dispatch_waes_kds_receipts",
+      "required_receipt": "GFIS customer requirement / platform order id",
+      "expected_submission_path": "GFIS runtime read-only primary key evidence after authorized intake",
+      "required_fields": [
+        "object_family",
+        "sop_stage",
+        "runtime_primary_key_value",
+        "source_of_record_task_id",
+        "dispatch_confirmation_task_id",
+        "waes_confirmation_task_id",
+        "kds_write_receipt_task_id"
+      ],
+      "kds_candidate": {
+        "candidate_status": "blocked_until_upstream_receipts_valid",
+        "reason": "Primary key evidence cannot exist until source-of-record, dispatch, WAES and KDS receipts pass."
+      },
+      "source_evidence": [
+        "GFIS:docs/harness/sop-e2e/evidence/gfis-kds-to-runtime-primary-key-readiness-gate.json"
+      ],
+      "current_counts": {
+        "runtime_primary_key_present": 0,
+        "runtime_primary_key_ready": 0,
+        "review_queue": 0,
+        "runtime_intake": 0,
+        "waes_review": 0,
+        "verified": 0
+      },
+      "state": "blocked_missing_upstream_receipts",
+      "blocks": [
+        "runtime_sop_e2e_acceptance"
+      ]
+    }
+  ],
+  "non_claims": {
+    "kds_candidate_is_live_proof": false,
+    "task_ledger_is_owner_receipt": false,
+    "source_of_record_received": false,
+    "dispatch_confirmation_received": false,
+    "waes_confirmation_received": false,
+    "kds_write_receipt_received": false,
+    "runtime_primary_key_created": false,
+    "production_write": false,
+    "real_external_api_write": false,
+    "real_kds_write": false,
+    "real_waes_write": false,
+    "bench_migrate": false,
+    "schema_sync": false,
+    "permission_change": false,
+    "accepted_integrated": false
+  },
+  "next": "collect_task_001_source_of_record_then_task_002_dispatch_confirmation"
+}

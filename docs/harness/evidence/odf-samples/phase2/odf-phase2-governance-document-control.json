@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-001",
+  "category": "governance",
+  "title": "ODF Phase 2 - Document Governance Policy",
+  "source_uri": "git://02-governance/GlobalCloud项目群文档综合治理规范.md",
+  "source_path": "02-governance/GlobalCloud项目群文档综合治理规范.md",
+  "source_hash": "5e4bdc5e1ae218b455f931e90f5961f6ebc8230ff680034b028891cd8ae3e005",
+  "markdown_path": "02-governance/GlobalCloud项目群文档综合治理规范.md",
+  "markdown_hash": "5e4bdc5e1ae218b455f931e90f5961f6ebc8230ff680034b028891cd8ae3e005",
+  "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md",
+  "owner": "WAES",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-003",
+  "category": "kds-knowledge",
+  "title": "ODF Phase 2 - KDS Retrieval Mechanism",
+  "source_uri": "git://03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+  "source_path": "03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+  "source_hash": "fe7935ab1c0dd4233b177cd8cb5960e7b97896c41c85e35a0f932a324c12c16d",
+  "markdown_path": "03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+  "markdown_hash": "fe7935ab1c0dd4233b177cd8cb5960e7b97896c41c85e35a0f932a324c12c16d",
+  "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

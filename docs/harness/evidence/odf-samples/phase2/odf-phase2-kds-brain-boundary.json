@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-004",
+  "category": "kds-knowledge",
+  "title": "ODF Phase 2 - Brain KDS Boundary",
+  "source_uri": "git://03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+  "source_path": "03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+  "source_hash": "efa666df065261594a5e21c9b54911b95b2ed8038fde31c9965ec6a90503f4d3",
+  "markdown_path": "03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+  "markdown_hash": "efa666df065261594a5e21c9b54911b95b2ed8038fde31c9965ec6a90503f4d3",
+  "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

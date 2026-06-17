@@ -32,4 +32,5 @@ python3 tools/kds-sync/document_control.py
 - `09-status/kds-development-space-sync-register.md`
 - `09-status/document-deprecation-register.md`
 - `.kds/development-space/开发/`
+- `.kds/local-mirror-ledger.jsonl`
 - `.kds/sync-ledger.jsonl`

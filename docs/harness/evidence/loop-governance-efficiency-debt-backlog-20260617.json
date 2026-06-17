@@ -1,0 +1,145 @@
+{
+  "evidence_id": "LOOP-GOV-EFF-DEBT-20260617",
+  "evidence_type": "loop_governance_efficiency_debt_backlog",
+  "created_at": "2026-06-17",
+  "project": "GPCF",
+  "status": "review_required",
+  "source_command": "python3 tools/kds-sync/validate_loop_round_efficiency_audit.py",
+  "source_signal": {
+    "loop_round_efficiency_audit": "pass",
+    "total_rounds": 294,
+    "audit_checked": 30,
+    "hard_checked": 5,
+    "audit_missing_truth_fields": 2,
+    "audit_missing_five_segment": 18,
+    "audit_batch_generated_counted": 0,
+    "hard_missing_truth_fields": 0,
+    "hard_missing_five_segment": 0,
+    "hard_batch_generated_counted": 0,
+    "duplicate_fingerprint_groups": 1,
+    "high_similarity_adjacent_pairs": 3,
+    "max_consecutive_sequence": 184,
+    "risk": "review_required"
+  },
+  "items": [
+    {
+      "id": "LEDB-001",
+      "priority": "P1",
+      "debt_type": "missing_truth_fields",
+      "scope": "audit_window_round_records",
+      "current_count": 2,
+      "status": "open",
+      "handling_rule": "Add review annotations or controlled index-level exceptions; do not silently count as clean history."
+    },
+    {
+      "id": "LEDB-002",
+      "priority": "P1",
+      "debt_type": "missing_five_segment_markers",
+      "scope": "audit_window_round_records",
+      "current_count": 18,
+      "status": "open",
+      "handling_rule": "Add review annotations or controlled index-level exceptions; do not bulk rewrite historical facts."
+    },
+    {
+      "id": "LEDB-003",
+      "priority": "P1",
+      "debt_type": "long_consecutive_sequence_risk",
+      "scope": "GPCF-L4-GFIS-REPAIR-*",
+      "current_count": 184,
+      "status": "open",
+      "handling_rule": "Require periodic checkpoint review and keep long-sequence risk visible until reviewed."
+    },
+    {
+      "id": "LEDB-004",
+      "priority": "P2",
+      "debt_type": "dashboard_validator_drift_risk",
+      "scope": "governance_docs_and_evidence_ids",
+      "current_count": 1,
+      "status": "monitoring",
+      "handling_rule": "Validators must bind by title and source path, not only generated doc_id."
+    }
+  ],
+  "disposition_template": {
+    "required_fields": [
+      "disposition_id",
+      "backlog_item",
+      "reviewer",
+      "decision",
+      "evidence_ref",
+      "no_bulk_rewrite",
+      "business_status_impact",
+      "next_action"
+    ],
+    "allowed_decisions": [
+      "historical_debt",
+      "targeted_annotation_required",
+      "validator_rule_update",
+      "accepted_exception",
+      "superseded"
+    ],
+    "business_status_impact_required": "none"
+  },
+  "review_dispositions": [
+    {
+      "disposition_id": "LEDB-001-RD-001",
+      "backlog_item": "LEDB-001",
+      "reviewer": "GPCF governance",
+      "decision": "targeted_annotation_required",
+      "evidence_ref": "tools/kds-sync/validate_loop_round_efficiency_audit.py",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Identify affected audit-window round records before any annotation."
+    },
+    {
+      "disposition_id": "LEDB-002-RD-001",
+      "backlog_item": "LEDB-002",
+      "reviewer": "GPCF governance",
+      "decision": "targeted_annotation_required",
+      "evidence_ref": "tools/kds-sync/validate_loop_round_efficiency_audit.py",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Identify affected audit-window round records before any annotation."
+    },
+    {
+      "disposition_id": "LEDB-003-RD-001",
+      "backlog_item": "LEDB-003",
+      "reviewer": "GPCF governance",
+      "decision": "historical_debt",
+      "evidence_ref": "docs/harness/loops/ sequence scan",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Keep visible until periodic checkpoint cadence is defined."
+    },
+    {
+      "disposition_id": "LEDB-004-RD-001",
+      "backlog_item": "LEDB-004",
+      "reviewer": "GPCF governance",
+      "decision": "validator_rule_update",
+      "evidence_ref": "tools/kds-sync/validate_loop_governance_efficiency_backlog.py",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Keep validators path/title-bound and evidence-bound."
+    },
+    {
+      "disposition_id": "LEDB-001-RD-002",
+      "backlog_item": "LEDB-001",
+      "reviewer": "GPCF governance",
+      "decision": "validator_rule_update",
+      "evidence_ref": "tools/kds-sync/validate_loop_round_efficiency_audit.py and tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 2 without rewriting historical rounds."
+    }
+  ],
+  "closing_conditions": [
+    "Controlled review note or evidence entry exists for each item.",
+    "Review states whether the old record remains historical debt or receives targeted annotation.",
+    "Latest hard window remains clean.",
+    "No business completion status is upgraded by cleanup."
+  ],
+  "non_claims": [
+    "This backlog does not rewrite historical round records in bulk.",
+    "This backlog does not prove GFIS runtime SOP E2E passed.",
+    "This backlog does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status."
+  ]
+}

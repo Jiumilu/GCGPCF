@@ -38,7 +38,7 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | KDS | controlled |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | KDS | controlled |
-| GPCF-DOC-0749030BBD | Evidence Index — KDS | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
+| GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
 | GPCF-DOC-19C33DD1F8 | GlobalCloud KDS Loop State | docs/harness/KDS/loop-state.md | KDS | controlled |
 | GPCF-DOC-F54729C154 | loops | docs/harness/KDS/loops/README.md | KDS | controlled |
 | GPCF-DOC-8DA5979C40 | Loop Round GPCF-KD-LR-001 | docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | KDS | controlled |

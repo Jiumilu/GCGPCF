@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-006",
+  "category": "business-import",
+  "title": "ODF Phase 2 - Hubei Phosphorus Template",
+  "source_uri": "git://03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md",
+  "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md",
+  "source_hash": "81a745215b150b22ffb9ef57affc52b90214813e51c75d36ecd712b8ad7be648",
+  "markdown_path": "03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md",
+  "markdown_hash": "81a745215b150b22ffb9ef57affc52b90214813e51c75d36ecd712b8ad7be648",
+  "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_business_doc_reference_only",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

@@ -46,9 +46,9 @@ KDS 路径前缀：`开发/12-GPCF/06-workstreams/`
 | GPCF-DOC-6C34A5454F | 厂行专项正式只读预检结论 | 06-workstreams/厂行专项正式只读预检结论.md | GPCF | controlled |
 | GPCF-DOC-C3F58B5314 | 厂行专项首轮实施前验证包 | 06-workstreams/厂行专项首轮实施前验证包.md | GPCF | controlled |
 | GPCF-DOC-9A0B1FF39A | 厂行专项首轮实施前验证执行记录 | 06-workstreams/厂行专项首轮实施前验证执行记录.md | GPCF | controlled |
-| GPCF-DOC-D30AC30535 | 宪衡专项会话状态报告 | 06-workstreams/宪衡专项会话状态报告.md | XiaoC | controlled |
+| GPCF-DOC-D30AC30535 | 宪衡专项会话状态报告 | 06-workstreams/宪衡专项会话状态报告.md | GPCF | controlled |
 | GPCF-DOC-6FE56B8FED | 宪衡专项可执行验证入口清单 | 06-workstreams/宪衡专项可执行验证入口清单.md | GPCF | controlled |
-| GPCF-DOC-CE9D5E1820 | 宪衡专项执行版包（侧线程草案） | 06-workstreams/宪衡专项执行版包-侧线程草案.md | XiaoC | controlled |
+| GPCF-DOC-CE9D5E1820 | 宪衡专项执行版包-侧线程草案 | 06-workstreams/宪衡专项执行版包-侧线程草案.md | GPCF | controlled |
 | GPCF-DOC-0FD20721A6 | 宪衡专项正式只读预检结论 | 06-workstreams/宪衡专项正式只读预检结论.md | GPCF | controlled |
 | GPCF-DOC-24A095DD7D | 宪衡专项首轮实施前验证包 | 06-workstreams/宪衡专项首轮实施前验证包.md | GPCF | controlled |
 | GPCF-DOC-FFC2BDFA8A | 宪衡专项首轮实施前验证执行记录 | 06-workstreams/宪衡专项首轮实施前验证执行记录.md | GPCF | controlled |

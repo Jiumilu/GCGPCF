@@ -38,4 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | WAES | archive |
 | GPCF-DOC-9AF8C291EB | Acceptance Matrix: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-4609775857 | Harness Governance Status Audit: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | WAES | archive |
+| GPCF-DOC-4609775857 | status-audit | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | WAES | archive |

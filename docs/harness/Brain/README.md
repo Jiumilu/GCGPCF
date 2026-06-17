@@ -39,6 +39,6 @@ KDS 空间：`开发`
 | GPCF-DOC-0857798863 | Brain | docs/harness/Brain/README.md | Brain | controlled |
 | GPCF-DOC-4A654203DE | evidence | docs/harness/Brain/evidence/README.md | Brain | controlled |
 | GPCF-DOC-33E55CB86C | Evidence Index — Brain | docs/harness/Brain/evidence/evidence-index.md | Brain | controlled |
-| GPCF-DOC-B0F22D2E45 | GlobalCloud Brain Loop State | docs/harness/Brain/loop-state.md | Brain | controlled |
+| GPCF-DOC-B0F22D2E45 | loop-state | docs/harness/Brain/loop-state.md | Brain | controlled |
 | GPCF-DOC-0209DFB721 | loops | docs/harness/Brain/loops/README.md | Brain | controlled |
 | GPCF-DOC-F61B890C31 | Loop Round GPCF-BR-LR-001 | docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | Brain | controlled |

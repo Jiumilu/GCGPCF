@@ -1,0 +1,64 @@
+{
+  "ledger_id": "ODF-PILOT-SAMPLE-LEDGER-20260617",
+  "title": "ODF Pilot Sample Ledger",
+  "generated_at": "2026-06-17",
+  "status": "pilot_closed",
+  "policy": {
+    "full_import_allowed": false,
+    "replace_git_allowed": false,
+    "replace_kds_allowed": false,
+    "replace_okf_allowed": false,
+    "replace_loop_evidence_allowed": false,
+    "auto_accept_or_integrate_allowed": false
+  },
+  "samples": [
+    {
+      "sample_id": "ODF-PILOT-20260617-001",
+      "source_uri": "git://02-governance/GlobalCloud项目群文档防污染规则.md",
+      "source_hash": "76add94d9481fbdb993707f0874d8bde8b0f2e13043643027b80711de7c84317",
+      "odf_path": "docs/harness/evidence/odf-samples/odf-pilot-anti-pollution-rule.json",
+      "odf_hash": "2405c97d8a34dca0df812602c90eab26a7869060efbae89fcb67c187c442a72e",
+      "markdown_hash": "76add94d9481fbdb993707f0874d8bde8b0f2e13043643027b80711de7c84317",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "WAES",
+      "source_path": "02-governance/GlobalCloud项目群文档防污染规则.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "sensitivity_check": "pass_no_secret_material_copied",
+      "status": "pilot_sample",
+      "rollback_hint": "remove this ODF pilot envelope; keep the original Markdown document unchanged"
+    },
+    {
+      "sample_id": "ODF-PILOT-20260617-002",
+      "source_uri": "git://02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "source_hash": "31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c",
+      "odf_path": "docs/harness/evidence/odf-samples/odf-pilot-kds-security-rule.json",
+      "odf_hash": "898d7ade933455868c91e23834e3eb4ecc54ae35cef61f0b71725c0ff9753a3d",
+      "markdown_hash": "31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "WAES",
+      "source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "sensitivity_check": "pass_no_token_or_secret_copied",
+      "status": "pilot_sample",
+      "rollback_hint": "remove this ODF pilot envelope; keep the original Markdown document unchanged"
+    },
+    {
+      "sample_id": "ODF-PILOT-20260617-003",
+      "source_uri": "git://.okf/index.md",
+      "source_hash": "c2dace42e1cd8ce5e9693d800d71f8b64cf74d3eaeb42040a1c24a1a1d6f7103",
+      "odf_path": "docs/harness/evidence/odf-samples/odf-pilot-okf-index.json",
+      "odf_hash": "63425cb11337dcf3f35e3dfca6a9417e1a2acbf4242dd552603a1941f5583cbd",
+      "markdown_hash": "c2dace42e1cd8ce5e9693d800d71f8b64cf74d3eaeb42040a1c24a1a1d6f7103",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "GPCF",
+      "source_path": ".okf/index.md",
+      "kds_path": "开发/12-GPCF/.okf/index.md",
+      "sensitivity_check": "pass_navigation_only_no_body_copy",
+      "status": "pilot_sample",
+      "rollback_hint": "remove this ODF pilot envelope; keep the original OKF index unchanged"
+    }
+  ]
+}

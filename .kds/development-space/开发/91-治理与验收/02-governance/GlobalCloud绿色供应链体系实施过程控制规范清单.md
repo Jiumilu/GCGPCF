@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-1139BD0025
-title: GlobalCloud 绿色供应链体系实施过程控制规范清单
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, XiaoC, GPCF]
+title: GlobalCloud绿色供应链体系实施过程控制规范清单
+project: GPCF
+related_projects: [GPCF, GPC]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: GPCF
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系实施过程控制规范清单.md
 source_path: 02-governance/GlobalCloud绿色供应链体系实施过程控制规范清单.md
@@ -16,92 +16,4 @@ supersedes: []
 superseded_by: []
 ---
 
-# GlobalCloud 绿色供应链体系实施过程控制规范清单
 
-日期：2026-06-08
-状态：实施过程控制规范清单 v1
-用途：把当前体系从“设计总控”推进到“可执行实施控制”，作为小即团队和各专项进入真实仓库实施前后的统一硬约束清单。
-
-## 1. 目标
-
-本清单只解决一个问题：
-
-**如何确保后续实施过程真实、可控、可回溯，并最终产出满足设计的交付物。**
-
-当前已有：
-
-1. 架构设计基线
-2. 对象目录、事件合同、验收矩阵
-3. 小即团队、控制塔、PMBOK 台账
-4. 实施前准备与正式只读预检结论
-
-当前缺的，是把这些基线转成**全过程工程控制规范**。
-
-## 2. 当前必须执行的规范集合
-
-自本版起，下列 5 份规范作为团队执行层强制规范：
-
-1. [GlobalCloud绿色供应链体系交付物完成判定规范.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系交付物完成判定规范.md:1)
-2. [GlobalCloud绿色供应链体系项目仓库实施准入规范.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系项目仓库实施准入规范.md:1)
-3. [GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md:1)
-4. [GlobalCloud绿色供应链体系测试与验证规范.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系测试与验证规范.md:1)
-5. [GlobalCloud绿色供应链体系状态升级与验收放行规范.md](/Users/lujunxiang/Documents/GlobalCloud智慧工厂/GlobalCloud绿色供应链体系状态升级与验收放行规范.md:1)
-
-## 3. 规范作用分工
-
-| 规范 | 解决的问题 | 主责人 | 使用阶段 |
-|---|---|---|---|
-| 交付物完成判定规范 | 防止“有文档/有页面/有代码片段”就被当作完成 | 小即 / 评衡 / 证验 | 全阶段 |
-| 项目仓库实施准入规范 | 防止专项直接进仓库失控或覆盖既有改动 | 小即 / 宪衡 / 链同 / 厂行 / 数枢 / 知源 / 灵策 | 仓库预检前后 |
-| 设计-实现追踪矩阵规范 | 防止实现偏离设计或无法回溯 | 小即 / 各专项负责人 | 进入仓库实施后 |
-| 测试与验证规范 | 防止只有设计审计，没有工程验证 | 小即 / 接稳 / 评衡 / 证验 | 开发、联调、试运行前 |
-| 状态升级与验收放行规范 | 防止状态漂移和虚假完成 | 小即 / 评衡 / 证验 | 全阶段 |
-
-## 4. 执行要求
-
-自本清单生效后：
-
-1. 不允许只凭设计文档判断交付完成。
-2. 不允许只凭仓库存在或页面存在判断能力完成。
-3. 不允许无设计-实现追踪链直接合并或验收。
-4. 不允许无测试与验证证据升级到更高状态。
-5. 不允许无证据把 `in_progress`、`partial`、`pass_with_runtime_blockers` 写成 `ready_for_human_acceptance` 或 `complete`。
-
-## 5. 小即团队执行落点
-
-### 5.1 小即
-
-必须负责：
-
-1. 把 5 份规范挂入控制塔和周报检查项
-2. 把每个交付包的完成判断改为“交付物 + 证据 + 验收”的复合判定
-3. 把仓库实施前准入作为开工门
-4. 把状态升级与验收放行规范作为总控升级门
-
-### 5.2 各专项负责人
-
-必须负责：
-
-1. 在进入真实仓库前完成实施准入检查
-2. 在开始实现前建立设计-实现追踪项
-3. 在提交阶段成果前补齐交付物完成证据
-4. 在申请状态升级前补齐验证证据
-
-### 5.3 评衡与证验
-
-必须负责：
-
-1. 检查是否满足完成判定规范
-2. 检查是否满足测试与验证规范
-3. 检查是否满足状态升级与验收放行规范
-4. 不满足时退回 `partial` 或 `blocked`
-
-## 6. 当前阶段适用结论
-
-当前阶段仍然是：
-
-- 已完成实施前准备收口
-- 已完成 6 个专项正式只读预检
-- 可进入首轮实施前验证准备
-
-自进入真实仓库实施起，必须按本清单与其下挂的 5 份强约束规范执行。

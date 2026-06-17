@@ -38,8 +38,8 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-04C744A2DC | WAES | docs/harness/WAES/README.md | WAES | controlled |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | WAES | controlled |
-| GPCF-DOC-460215ED8F | Evidence Index — WAES | docs/harness/WAES/evidence/evidence-index.md | WAES | controlled |
-| GPCF-DOC-FFA52ED4FF | GlobalCloud WAES Loop State | docs/harness/WAES/loop-state.md | WAES | controlled |
+| GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | WAES | controlled |
+| GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAES/loop-state.md | WAES | controlled |
 | GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAES/loops/README.md | WAES | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | WAES | controlled |
 | GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | WAES | controlled |

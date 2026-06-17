@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-6A1A3247B5 | gbrain-admin-console-v2-20260610-205407 | .harness/runs/gbrain-admin-console-v2-20260610-205407/README.md | WAES | archive |
-| GPCF-DOC-44D60534C4 | Harness Governance: gbrain-admin-console-v2 → accepted | .harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md | WAES | archive |
+| GPCF-DOC-44D60534C4 | status-audit | .harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md | WAES | archive |

@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | KDS | controlled |
-| GPCF-DOC-0749030BBD | Evidence Index — KDS | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
+| GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |

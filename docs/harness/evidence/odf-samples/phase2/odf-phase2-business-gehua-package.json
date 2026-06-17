@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.2-phase2",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE2-20260617-007",
+  "category": "business-import",
+  "title": "ODF Phase 2 - Gehua Package Acceptance",
+  "source_uri": "git://03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md",
+  "source_path": "03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md",
+  "source_hash": "a3f5e69c1a4667efd4834650e821c31adc8888fe2807a4235bf38a1bd703ab26",
+  "markdown_path": "03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md",
+  "markdown_hash": "a3f5e69c1a4667efd4834650e821c31adc8888fe2807a4235bf38a1bd703ab26",
+  "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_business_doc_reference_only",
+  "status": "phase2_sample",
+  "rollback_hint": "remove this ODF phase2 envelope; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

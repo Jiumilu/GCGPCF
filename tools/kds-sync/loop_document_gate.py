@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -74,7 +75,8 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         "",
         f"- 仓库 Markdown：{summary['repo_md']}",
         f"- KDS 镜像 Markdown：{summary['kds_md']}",
-        f"- KDS 同步流水：{summary['ledger_lines']}",
+        f"- KDS 本地镜像流水：{summary['local_mirror_ledger_lines']}",
+        f"- KDS API 同步流水：{summary['api_sync_ledger_lines']}",
         f"- 元数据缺失：{summary['missing_metadata']}",
         f"- README 缺失目录：{summary['missing_readme_dirs']}",
         "",
@@ -118,11 +120,13 @@ def main() -> int:
         if not (directory / "README.md").exists():
             missing_readme_dirs += 1
     kds_md = len(list((ROOT / ".kds/development-space/开发").rglob("*.md"))) if (ROOT / ".kds/development-space/开发").exists() else 0
-    ledger = ROOT / ".kds/sync-ledger.jsonl"
-    ledger_lines = len(ledger.read_text(encoding="utf-8").splitlines()) if ledger.exists() else 0
+    local_mirror_ledger = ROOT / ".kds/local-mirror-ledger.jsonl"
+    local_mirror_ledger_lines = len(local_mirror_ledger.read_text(encoding="utf-8").splitlines()) if local_mirror_ledger.exists() else 0
+    api_sync_ledger = ROOT / ".kds/sync-ledger.jsonl"
+    api_sync_ledger_lines = len(api_sync_ledger.read_text(encoding="utf-8").splitlines()) if api_sync_ledger.exists() else 0
     checks = {
-        "document_pollution": run(["python3", "tools/kds-sync/check_document_pollution.py"]),
-        "kds_token": run(["python3", "tools/kds-sync/validate_kds_token.py"]),
+        "document_pollution": run([sys.executable, "tools/kds-sync/check_document_pollution.py"]),
+        "kds_token": run([sys.executable, "tools/kds-sync/validate_kds_token.py"]),
     }
     hard_failures = [name for name, (code, _) in checks.items() if code != 0 and name != "kds_token"]
     token_blocked = checks["kds_token"][0] != 0
@@ -130,7 +134,7 @@ def main() -> int:
         gate = "rework_required"
     elif token_blocked:
         gate = "blocked"
-    elif kds_md < ledger_lines:
+    elif kds_md < local_mirror_ledger_lines:
         gate = "partial"
     else:
         gate = "pass"
@@ -138,7 +142,8 @@ def main() -> int:
         "gate": gate,
         "repo_md": len(docs),
         "kds_md": kds_md,
-        "ledger_lines": ledger_lines,
+        "local_mirror_ledger_lines": local_mirror_ledger_lines,
+        "api_sync_ledger_lines": api_sync_ledger_lines,
         "missing_metadata": missing_metadata,
         "missing_readme_dirs": missing_readme_dirs,
         "status_counts": dict(status_counts),

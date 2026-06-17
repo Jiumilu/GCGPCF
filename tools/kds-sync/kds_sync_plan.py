@@ -24,9 +24,17 @@ from kds_runtime import (
 
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "09-status/kds-development-space-sync-plan.md"
+SELF_REFRESH_SOURCE_PATHS = {
+    "09-status/kds-development-space-sync-plan.md",
+    "09-status/kds-readonly-probe-report.md",
+}
 
 
 def build_plan(require_remote: bool) -> tuple[int, dict]:
+    control_code, control_output = run_local(["python3", "tools/kds-sync/document_control.py"])
+    if control_code != 0:
+        return 1, {"status": "blocked", "reason": control_output}
+
     token_code, token_output = run_local(["python3", "tools/kds-sync/validate_kds_token.py"])
     if token_code != 0:
         return 1, {"status": "blocked", "reason": token_output}
@@ -47,12 +55,20 @@ def build_plan(require_remote: bool) -> tuple[int, dict]:
     create: list[dict] = []
     update: list[dict] = []
     skip: list[dict] = []
+    self_refresh: list[dict] = []
     conflicts: list[dict] = []
     missing_local: list[dict] = []
 
     for record in parse_sync_register():
         if not record.source.exists():
             missing_local.append({"source_path": record.source_path, "kds_path": record.kds_path})
+            continue
+        if record.source_path in SELF_REFRESH_SOURCE_PATHS:
+            self_refresh.append({
+                "source_path": record.source_path,
+                "kds_path": record.kds_path,
+                "status": "self_refresh",
+            })
             continue
         status = record.status
         if status in SKIPPED_SYNC_STATUSES or status not in ALLOWED_SYNC_STATUSES:
@@ -96,6 +112,7 @@ def build_plan(require_remote: bool) -> tuple[int, dict]:
         "create": create,
         "update": update,
         "skip": skip,
+        "self_refresh": self_refresh,
         "conflicts": conflicts,
         "missing_local": missing_local,
     }
@@ -131,7 +148,7 @@ def write_report(plan: dict, path: Path) -> None:
         f"remote_documents: {plan.get('remote_documents', 0)}",
         "",
     ]
-    for key in ("create", "update", "conflicts", "missing_local", "skip"):
+    for key in ("create", "update", "conflicts", "missing_local", "self_refresh", "skip"):
         rows = plan.get(key, [])
         lines.extend([f"## {key}", "", f"count: {len(rows)}", ""])
         for item in rows[:200]:
@@ -139,6 +156,16 @@ def write_report(plan: dict, path: Path) -> None:
         lines.append("")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def mirror_report_if_registered(path: Path) -> None:
+    report = path.resolve()
+    for record in parse_sync_register():
+        if record.source.resolve() == report:
+            mirror = record.local_mirror
+            mirror.parent.mkdir(parents=True, exist_ok=True)
+            mirror.write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+            return
 
 
 def main() -> int:
@@ -151,8 +178,10 @@ def main() -> int:
 
     code, plan = build_plan(require_remote=not args.allow_unconfigured_remote)
     output = Path(args.output)
+    report = Path(args.report)
     write_json(output, plan)
-    write_report(plan, Path(args.report))
+    write_report(plan, report)
+    mirror_report_if_registered(report)
     if args.require_clean_plan and plan.get("status") != "ready":
         print("kds_sync_plan=blocked")
         print(plan.get("reason") or f"conflicts={len(plan.get('conflicts', []))}")

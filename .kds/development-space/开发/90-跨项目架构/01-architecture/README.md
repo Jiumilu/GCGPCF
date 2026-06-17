@@ -41,24 +41,24 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-09655E45C0 | ADR：GPC 从 Odoo 二开调整为原生公共服务平台 | 01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md | GPCF | controlled |
 | GPCF-DOC-7FAF5AD2FB | AI驱动GFIS三阶段演进构想 | 01-architecture/AI驱动GFIS三阶段演进构想.md | GPCF | controlled |
-| GPCF-DOC-16D9DC63AA | AI 驱动 GFIS 与 GlobalCloud 绿色供应链体系结合分析 | 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | controlled |
+| GPCF-DOC-16D9DC63AA | AI驱动GFIS与GlobalCloud体系结合分析 | 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | controlled |
 | GPCF-DOC-3F9E7988C6 | AI驱动工厂信息化系统完整方案V3.1 | 01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | GPCF | controlled |
-| GPCF-DOC-D54AF3DD5D | GlobalCloud 绿色供应链体系 — 全面分析报告 | 01-architecture/GPC方向全面分析报告.md | GPCF | controlled |
-| GPCF-DOC-0C519C97BD | GlobalCloud 体系最小闭环与三阶段激活深度总表 | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | controlled |
+| GPCF-DOC-D54AF3DD5D | GPC方向全面分析报告 | 01-architecture/GPC方向全面分析报告.md | GPCF | controlled |
+| GPCF-DOC-0C519C97BD | GlobalCloud体系最小闭环与三阶段激活深度总表 | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | controlled |
 | GPCF-DOC-3DBC8DC5C3 | GlobalCloud智慧工厂专项架构图集 | 01-architecture/GlobalCloud智慧工厂专项架构图集.md | GPCF | controlled |
-| GPCF-DOC-1DCB795545 | GlobalCloud 绿色供应链体系进一步梳理与提示词库 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | GPCF | controlled |
-| GPCF-DOC-B2A5E41836 | GlobalCloud 绿色供应链体系项目群控制表 | 01-architecture/GlobalCloud智慧工厂项目群控制表.md | GPCF | controlled |
+| GPCF-DOC-1DCB795545 | GlobalCloud智慧工厂进一步梳理与提示词库 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | GPCF | controlled |
+| GPCF-DOC-B2A5E41836 | GlobalCloud智慧工厂项目群控制表 | 01-architecture/GlobalCloud智慧工厂项目群控制表.md | GPCF | controlled |
 | GPCF-DOC-475051A08A | GlobalCloud 绿色供应链体系项目群架构图 | 01-architecture/GlobalCloud智慧工厂项目群架构图.md | GPCF | controlled |
 | GPCF-DOC-18B774FB34 | GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析 | 01-architecture/GlobalCloud绿色供应链体系-WIKI宪法体系与葛化项目映射分析.md | GPCF | controlled |
 | GPCF-DOC-0CCC5F2950 | GlobalCloud绿色供应链体系WAES控制塔与治理门禁图 | 01-architecture/GlobalCloud绿色供应链体系WAES控制塔与治理门禁图.md | GPCF | controlled |
 | GPCF-DOC-31CB143A7C | GlobalCloud绿色供应链体系WAES控制塔治理架构图 | 01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md | GPCF | controlled |
 | GPCF-DOC-2425FD0964 | GlobalCloud 绿色供应链体系全链路事件与证据闭环图 | 01-architecture/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md | GPCF | controlled |
-| GPCF-DOC-069589E530 | GlobalCloud 绿色供应链体系四流综合架构分析与优化方案 | 01-architecture/GlobalCloud绿色供应链体系四流综合架构分析与优化方案.md | GPCF | controlled |
+| GPCF-DOC-069589E530 | GlobalCloud绿色供应链体系四流综合架构分析与优化方案 | 01-architecture/GlobalCloud绿色供应链体系四流综合架构分析与优化方案.md | GPCF | controlled |
 | GPCF-DOC-B7351DDCF8 | GlobalCloud 绿色供应链体系多厂协同模型 | 01-architecture/GlobalCloud绿色供应链体系多厂协同模型.md | GPCF | controlled |
 | GPCF-DOC-F6C8634052 | GlobalCloud 绿色供应链体系多智能体实施团队与协同方案 | 01-architecture/GlobalCloud绿色供应链体系多智能体实施团队与协同方案.md | GPCF | controlled |
 | GPCF-DOC-424D73E236 | GlobalCloud绿色供应链体系层次化结构与优化提示词 | 01-architecture/GlobalCloud绿色供应链体系层次化结构与优化提示词.md | GPCF | controlled |
 | GPCF-DOC-2656290CFC | GlobalCloud 绿色供应链体系总体实施路线与交付保障方案 | 01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md | GPCF | controlled |
-| GPCF-DOC-6ADEF5F42F | GlobalCloud 绿色供应链体系总架构 | 01-architecture/GlobalCloud绿色供应链体系总架构.md | GPCF | controlled |
+| GPCF-DOC-6ADEF5F42F | GlobalCloud绿色供应链体系总架构 | 01-architecture/GlobalCloud绿色供应链体系总架构.md | GPCF | controlled |
 | GPCF-DOC-6B386000D3 | GlobalCloud 绿色供应链体系整体评估模型与100分优化方案 | 01-architecture/GlobalCloud绿色供应链体系整体评估模型与100分优化方案.md | GPCF | controlled |
 | GPCF-DOC-4DF13CF33D | GlobalCloud 绿色供应链体系最新架构图 | 01-architecture/GlobalCloud绿色供应链体系最新架构图.md | GPCF | controlled |
 | GPCF-DOC-5BF9469733 | GlobalCloud 绿色供应链体系真实层次架构图 | 01-architecture/GlobalCloud绿色供应链体系真实层次架构图.md | GPCF | controlled |

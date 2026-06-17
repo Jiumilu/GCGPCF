@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-60D38E1B72 | gbrain-v3.2-design-20260611-003001 | .harness/runs/gbrain-v3.2-design-20260611-003001/README.md | WAES | archive |
-| GPCF-DOC-253B627E40 | GCBrain v3.2 — 智能知识平台 设计方案 | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | WAES | archive |
+| GPCF-DOC-253B627E40 | proposal | .harness/runs/gbrain-v3.2-design-20260611-003001/proposal.md | WAES | archive |
