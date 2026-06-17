@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-53A28225F1
 title: KDS Development Space Sync Plan
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAES, KDS, Brain, MMC, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -18,20 +18,34 @@ superseded_by: []
 
 # KDS Development Space Sync Plan
 
-generated_at: 2026-06-17T04:50:31.391020+00:00
+generated_at: 2026-06-17T13:21:12.641188+00:00
 status: ready
 kds_space: 开发
 token_fingerprint: bfd9553d
-remote_documents: 721
+remote_documents: 729
 
 ## create
 
-count: 39
+count: 74
 
 - `02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md` -> `开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md`
+- `03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md`
+- `03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md`
+- `03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md`
 - `03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md`
 - `03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md`
 - `03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md`
+- `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md`
 - `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md` -> `开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md`
 - `03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md` -> `开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md`
@@ -47,7 +61,11 @@ count: 39
 - `05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md`
 - `06-workstreams/宪衡专项会话状态报告.md` -> `开发/12-GPCF/06-workstreams/宪衡专项会话状态报告.md`
 - `06-workstreams/宪衡专项执行版包-侧线程草案.md` -> `开发/12-GPCF/06-workstreams/宪衡专项执行版包-侧线程草案.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md`
+- `08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md`
+- `docs/harness/evidence/loop-governance-five-segment-review-20260617.md` -> `开发/05-KDS/docs/harness/evidence/loop-governance-five-segment-review-20260617.md`
 - `docs/harness/evidence/loop-governance-round-review-plan-20260617.md` -> `开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md`
+- `docs/harness/evidence/loop-governance-truth-field-review-20260617.md` -> `开发/05-KDS/docs/harness/evidence/loop-governance-truth-field-review-20260617.md`
 - `docs/harness/gpcf-dependency-risk-rollback-register-lr011.md` -> `开发/12-GPCF/docs/harness/gpcf-dependency-risk-rollback-register-lr011.md`
 - `docs/harness/gpcf-git-version-gate-evidence-lr007.md` -> `开发/12-GPCF/docs/harness/gpcf-git-version-gate-evidence-lr007.md`
 - `docs/harness/gpcf-l3-handoff-readiness-package-lr014.md` -> `开发/12-GPCF/docs/harness/gpcf-l3-handoff-readiness-package-lr014.md`
@@ -63,14 +81,31 @@ count: 39
 - `docs/harness/loops/loop-round-GPCF-KDS-DKS-026.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-026.md`
 - `docs/harness/loops/loop-round-GPCF-KDS-DKS-027.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-027.md`
 - `docs/harness/loops/loop-round-GPCF-KDS-DKS-028.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-028.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md`
+- `docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md`
 - `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md`
 - `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-224.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-224.md`
 - `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md`
+- `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md`
+- `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md`
+- `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md`
 - `docs/harness/multi-tenant-permission-design.md` -> `开发/12-GPCF/docs/harness/multi-tenant-permission-design.md`
 
 ## update
 
-count: 65
+count: 71
 
 - `01-architecture/GPC方向全面分析报告.md` -> `开发/90-跨项目架构/01-architecture/GPC方向全面分析报告.md`
 - `01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md` -> `开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md`
@@ -96,6 +131,11 @@ count: 65
 - `05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md` -> `开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md`
 - `05-agent-team/README.md` -> `开发/08-XiaoC/05-agent-team/README.md`
 - `06-workstreams/README.md` -> `开发/08-XiaoC/06-workstreams/README.md`
+- `08-evidence-samples/GFIS/README.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/README.md`
+- `08-evidence-samples/GFIS/evidence-index.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/evidence-index.md`
+- `08-evidence-samples/GFIS/loop-state.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loop-state.md`
+- `08-evidence-samples/GFIS/loops/README.md` -> `开发/01-GFIS/08-evidence-samples/GFIS/loops/README.md`
+- `08-evidence-samples/README.md` -> `开发/04-WAES/08-evidence-samples/README.md`
 - `09-status/README.md` -> `开发/91-治理与验收/09-status/README.md`
 - `09-status/document-deprecation-register.md` -> `开发/91-治理与验收/09-status/document-deprecation-register.md`
 - `09-status/globalcloud-document-control-register.md` -> `开发/91-治理与验收/09-status/globalcloud-document-control-register.md`
@@ -116,6 +156,7 @@ count: 65
 - `docs/harness/evidence/loop-governance-dashboard-20260617.md` -> `开发/05-KDS/docs/harness/evidence/loop-governance-dashboard-20260617.md`
 - `docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md` -> `开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md`
 - `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md` -> `开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md`
+- `docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` -> `开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md`
 - `docs/harness/loop-state.md` -> `开发/12-GPCF/docs/harness/loop-state.md`
 - `docs/harness/loops/README.md` -> `开发/12-GPCF/docs/harness/loops/README.md`
 - `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-002.md` -> `开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-002.md`

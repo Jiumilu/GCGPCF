@@ -25,15 +25,15 @@ This evidence records the first review backlog for LOOP governance efficiency de
 ## Source Signal
 
 ```text
-loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=2 audit_missing_five_segment=18 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=1 high_similarity_adjacent_pairs=3 max_consecutive_sequence=184 risk=review_required
+loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=5 audit_missing_truth_fields=0 audit_missing_five_segment=0 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
 ## Backlog Summary
 
 | ID | Priority | Debt Type | Count | Status |
 |---|---|---|---:|---|
-| LEDB-001 | P1 | missing_truth_fields | 2 | open |
-| LEDB-002 | P1 | missing_five_segment_markers | 18 | open |
+| LEDB-001 | P1 | missing_truth_fields | 0 | monitoring |
+| LEDB-002 | P1 | missing_five_segment_markers | 0 | monitoring |
 | LEDB-003 | P1 | long_consecutive_sequence_risk | 184 | open |
 | LEDB-004 | P2 | dashboard_validator_drift_risk | 1 | monitoring |
 
@@ -62,12 +62,12 @@ The backlog keeps historical efficiency debt visible while protecting the latest
 | LEDB-002-RD-001 | LEDB-002 | GPCF governance | targeted_annotation_required | `tools/kds-sync/validate_loop_round_efficiency_audit.py` | true | none | Identify affected audit-window round records before any annotation. |
 | LEDB-003-RD-001 | LEDB-003 | GPCF governance | historical_debt | `docs/harness/loops/` sequence scan | true | none | Keep visible until periodic checkpoint cadence is defined. |
 | LEDB-004-RD-001 | LEDB-004 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_governance_efficiency_backlog.py` | true | none | Keep validators path/title-bound and evidence-bound. |
-| LEDB-001-RD-002 | LEDB-001 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_round_efficiency_audit.py` and `tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | true | none | Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 2 without rewriting historical rounds. |
+| LEDB-001-RD-002 | LEDB-001 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_round_efficiency_audit.py` and `tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | true | none | Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 1 without rewriting historical rounds. |
 
 ## Locator Evidence
 
-`LOOP-GOV-EFF-DEBT-LOCATOR-20260617` locates 2 `LEDB-001` affected round
-records and 18 `LEDB-002` affected round records. The locator does not rewrite
+`LOOP-GOV-EFF-DEBT-LOCATOR-20260617` locates 0 `LEDB-001` affected rounds
+and 0 `LEDB-002` affected rounds after targeted annotation of `loop-round-GPCF-L4-GFIS-REPAIR-218.md`. The locator does not rewrite
 historical records and has `business_status_impact=none`.
 
 ## Non-Claims

@@ -28,7 +28,7 @@ not change GFIS or project business status.
 ## Source Baseline
 
 ```text
-loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=2 audit_missing_five_segment=18 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=1 high_similarity_adjacent_pairs=3 max_consecutive_sequence=184 risk=review_required
+loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=1 audit_missing_five_segment=1 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
 ## Review Controls

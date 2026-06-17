@@ -38,7 +38,7 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-29E5B0AC17 | Loop Autonomy Policy | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |
 | GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
-| GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | GPCF | controlled |
+| GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | controlled |
 | GPCF-DOC-04BF76145B | Loop Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | controlled |
 | GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | GPCF | controlled |

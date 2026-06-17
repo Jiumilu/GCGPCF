@@ -47,6 +47,8 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-1F12054E1C | GlobalCloud企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | KDS | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | KDS | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | KDS | controlled |
+| GPCF-DOC-038B869EBF | GlobalCloud 底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | KDS | controlled |
+| GPCF-DOC-F72C6A953D | GlobalCloud 底座可用知识闭环率评分脚本 dry-run 规格 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md | KDS | controlled |
 | GPCF-DOC-0A5E8FD5E6 | GlobalCloud智能体团队-企业级知识系统实施任务书 | 03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md | KDS | controlled |
 | GPCF-DOC-1212817FF5 | GlobalCloud 模型授权审计计量与分期结算规划 | 03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md | GPCF | controlled |
 | GPCF-DOC-59CCD41F2D | GlobalCloud 湖北磷材 Brain 知识页候选结构与发布门禁 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md | KDS | controlled |
@@ -57,6 +59,8 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-7B1983E735 | GlobalCloud 湖北磷材拓厂评估与知识源评测集 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md | KDS | controlled |
 | GPCF-DOC-602F413178 | GlobalCloud 湖北磷材拓厂与新工厂复制试点任务书 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md | KDS | controlled |
 | GPCF-DOC-1A584CFD8F | GlobalCloud 湖北磷材真实资料接收任务包与人工评测演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md | KDS | controlled |
+| GPCF-DOC-77DB51C32D | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md | KDS | controlled |
+| GPCF-DOC-8454CB5BDD | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md | KDS | controlled |
 | GPCF-DOC-C8062E9E2A | GlobalCloud 湖北磷材评测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md | KDS | controlled |
 | GPCF-DOC-BA9F35E2AA | GlobalCloud 湖北磷材首批知识对象运行空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | KDS | controlled |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | KDS | controlled |

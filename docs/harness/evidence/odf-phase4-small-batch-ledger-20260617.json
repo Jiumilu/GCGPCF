@@ -1,0 +1,60 @@
+{
+  "ledger_id": "ODF-PHASE4-SMALL-BATCH-20260617",
+  "title": "ODF Phase 4 small-batch admission ledger",
+  "generated_at": "2026-06-17",
+  "status": "phase4_small_batch_closed",
+  "policy": "metadata-envelope-only; no body copy; no full rollout; no accepted/integrated upgrade",
+  "samples": [
+    {
+      "sample_id": "ODF-PHASE4-20260617-001",
+      "category": "status-governance",
+      "source_uri": "git://09-status/gpcf-project-status-matrix.md",
+      "source_hash": "73a0f17bc5ea90aba2d118f744b48c4f8b8d2735df4ac0a9d59db6e5bd6edcd1",
+      "odf_path": "docs/harness/evidence/odf-samples/phase4/odf-phase4-status-matrix.json",
+      "odf_hash": "4cdf02c9c0e69c93dbf30bdaa3764ef0af3909865af49a86e21ea691a1b0ce51",
+      "markdown_hash": "73a0f17bc5ea90aba2d118f744b48c4f8b8d2735df4ac0a9d59db6e5bd6edcd1",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "GPCF",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "kds_path": "开发/91-治理与验收/09-status/gpcf-project-status-matrix.md",
+      "sensitivity_check": "pass_no_body_copy_status_reference_only",
+      "status": "phase4_sample",
+      "rollback_hint": "remove this ODF phase4 envelope and ledger entry; keep the original Markdown document unchanged"
+    },
+    {
+      "sample_id": "ODF-PHASE4-20260617-002",
+      "category": "loop-harness-evidence",
+      "source_uri": "git://docs/harness/evidence/loop-governance-dashboard-20260617.md",
+      "source_hash": "0e0fb6532999f2b8e3683ea38c4881c875b77f540156269685963d85ebaa7594",
+      "odf_path": "docs/harness/evidence/odf-samples/phase4/odf-phase4-loop-dashboard-evidence.json",
+      "odf_hash": "7fc00b86f8a700c242c010755569ac95cf29e787babb48444604ce638e58a0e9",
+      "markdown_hash": "0e0fb6532999f2b8e3683ea38c4881c875b77f540156269685963d85ebaa7594",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "KDS",
+      "source_path": "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/loop-governance-dashboard-20260617.md",
+      "sensitivity_check": "pass_no_body_copy_evidence_reference_only",
+      "status": "phase4_sample",
+      "rollback_hint": "remove this ODF phase4 envelope and ledger entry; keep the original Markdown document unchanged"
+    },
+    {
+      "sample_id": "ODF-PHASE4-20260617-003",
+      "category": "kds-knowledge",
+      "source_uri": "git://03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+      "source_hash": "9eabd2a3ffdabc7ffbd5ba5acabdbe9932461f470990454740d35c192ce8e47e",
+      "odf_path": "docs/harness/evidence/odf-samples/phase4/odf-phase4-distributed-kds-map.json",
+      "odf_hash": "7eb617f6abc68600cd4e0fa8bbb11000a0297848edee4e63c7a52f332304fc6a",
+      "markdown_hash": "9eabd2a3ffdabc7ffbd5ba5acabdbe9932461f470990454740d35c192ce8e47e",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "KDS",
+      "source_path": "03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+      "sensitivity_check": "pass_no_body_copy_knowledge_reference_only",
+      "status": "phase4_sample",
+      "rollback_hint": "remove this ODF phase4 envelope and ledger entry; keep the original Markdown document unchanged"
+    }
+  ]
+}

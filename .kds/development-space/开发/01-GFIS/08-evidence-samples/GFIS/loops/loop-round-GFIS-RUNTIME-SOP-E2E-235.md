@@ -1,0 +1,75 @@
+---
+doc_id: GPCF-DOC-C927D25E90
+title: GFIS-RUNTIME-SOP-E2E-235
+project: GFIS
+related_projects: [GFIS, WAES]
+domain: evidence
+status: controlled
+version: v1.0
+owner: GFIS
+kds_space: 开发
+kds_path: 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md
+source_path: 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-12
+supersedes: []
+superseded_by: []
+---
+
+# GFIS-RUNTIME-SOP-E2E-235
+
+## 输入
+
+- 真实项目仓：`GlobalCloud GFIS`
+- 上游证据：`GFIS-RUNTIME-SOP-E2E-234`
+- 上游状态：release override approval request 已形成派发授权预检，但缺人工派发授权、收件方确认、派发通道确认、请求回执与责任方响应。
+
+## 执行动作
+
+- 新增 dispatch confirmation gap scan builder。
+- 新增项目级 validator。
+- 新增只读 GFIS API 判定函数。
+- 接入 `scripts/validate_gfis_runtime_sop_e2e.py` 主门禁。
+- 生成 JSON/Markdown evidence。
+
+## 输出摘要
+
+- `confirmation_slots=1`
+- `confirmation_files_found=0`
+- `valid_confirmations=0`
+- `missing_confirmations=1`
+- `acknowledgements_found=0`
+- `owner_responses=0`
+- `submission_packages_found=0`
+- `valid_submission_packages=0`
+- `dispatch_allowed=0`
+- `request_items_dispatched=0`
+- `release_override_allowed=0`
+- `hold_release_allowed=0`
+- `runtime_primary_key_ready=0`
+- `review_queue=0`
+- `runtime_intake=0`
+- `waes_review=0`
+- `verified=0`
+- `runtime_sop_e2e=repair_required`
+
+## 验证
+
+- `python3 -m py_compile`：pass。
+- `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_gap_scan.py`：pass。
+- `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_authorization_preflight.py`：pass。
+- `scripts/validate_gfis_runtime_sop_e2e.py`：expected exit 2，`gfis_runtime_sop_e2e=repair_required`。
+
+## 下一步
+
+- `GFIS-RUNTIME-SOP-E2E-236`：建立 release override approval request dispatch confirmation negative fixture guard。
+- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAES 或升级 accepted/integrated。
+
+## 真实性计数
+
+- `declared_rounds=1/15`
+- `substantive_rounds=1/15`
+- `generated_items=8`
+- `batch_generated=false`
+- `substance_gate=pass`
+- `stop_type=authorization_boundary`

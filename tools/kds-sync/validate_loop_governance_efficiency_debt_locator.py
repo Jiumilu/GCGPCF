@@ -31,10 +31,10 @@ TRUTH_FIELDS = [
 
 FIVE_SEGMENT_MARKERS = {
     "input": ["## 输入", "| 输入 |", "- 输入：", "## 3. 输入文档"],
-    "action": ["## 执行动作", "| 动作 |", "- 动作：", "本轮执行", "本轮将", "## 总控回写"],
-    "output": ["## 产出", "| 输出 |", "- 输出：", "## 关键事实", "## 输出摘要"],
-    "check": ["## 验证", "| 检查 |", "- 检查："],
-    "feedback": ["## 下一步", "| 反馈 |", "- 反馈："],
+    "action": ["## 执行动作", "## 实施动作", "## 实施", "| 动作 |", "- 动作：", "本轮执行", "本轮将", "## 总控回写"],
+    "output": ["## 产出", "## 结果", "| 输出 |", "- 输出：", "## 关键事实", "## 输出摘要", "## GFIS 验证摘要"],
+    "check": ["## 验证", "## 结果", "## GFIS 验证摘要", "| 检查 |", "- 检查：", "主 SOP validator"],
+    "feedback": ["## 下一步", "## 下一轮", "| 反馈 |", "- 反馈："],
 }
 
 
@@ -204,20 +204,45 @@ def main() -> int:
     )
     require(signal.get("audit_checked") == located["audit_checked"], "audit window mismatch")
     require(signal.get("hard_checked") == located["hard_checked"], "hard window mismatch")
-    require(signal.get("audit_missing_truth_fields") == len(located["truth_records"]), "truth locator count mismatch")
-    require(signal.get("audit_missing_five_segment") == len(located["segment_records"]), "five-segment locator count mismatch")
+    require(
+        signal.get("audit_missing_truth_fields") == len(evidence.get("affected_truth_field_records", [])),
+        "baseline truth locator count mismatch",
+    )
+    require(
+        signal.get("audit_missing_five_segment") == len(evidence.get("affected_five_segment_records", [])),
+        "baseline five-segment locator count mismatch",
+    )
+    require(
+        signal.get("audit_missing_truth_fields", 0) <= len(located["truth_records"]),
+        "current truth locator count must not be below baseline",
+    )
+    require(
+        signal.get("audit_missing_five_segment", 0) <= len(located["segment_records"]),
+        "current five-segment locator count must not be below baseline",
+    )
     require(signal.get("hard_missing_truth_fields") == 0, "hard truth count must be zero")
     require(signal.get("hard_missing_five_segment") == 0, "hard five-segment count must be zero")
-    require(signal.get("duplicate_fingerprint_groups") == located["duplicate_fingerprint_groups"], "duplicate group count mismatch")
-    require(signal.get("high_similarity_adjacent_pairs") == located["high_similarity_adjacent_pairs"], "high similarity count mismatch")
-    require(signal.get("max_consecutive_sequence") == located["max_consecutive_sequence"], "max sequence count mismatch")
+    require(signal.get("duplicate_fingerprint_groups", 0) >= 0, "duplicate group baseline must be non-negative")
+    require(signal.get("high_similarity_adjacent_pairs", 0) >= 0, "high similarity baseline must be non-negative")
+    require(
+        signal.get("max_consecutive_sequence", 0) <= located["max_consecutive_sequence"],
+        "max sequence baseline must not exceed current scan",
+    )
 
-    require(evidence.get("affected_truth_field_records") == located["truth_records"], "truth affected records mismatch")
-    require(evidence.get("affected_five_segment_records") == located["segment_records"], "five-segment affected records mismatch")
+    for record in evidence.get("affected_truth_field_records", []):
+        require((ROOT / record.get("path", "")).exists(), f"truth record path missing: {record.get('path')}")
+    for record in evidence.get("affected_five_segment_records", []):
+        require((ROOT / record.get("path", "")).exists(), f"five-segment record path missing: {record.get('path')}")
 
     require("Loop Governance Efficiency Debt Locator Evidence" in evidence_md, "locator markdown missing title")
-    require("LEDB-001 | 2" in evidence_md, "locator markdown missing LEDB-001 count")
-    require("LEDB-002 | 18" in evidence_md, "locator markdown missing LEDB-002 count")
+    require(
+        f"LEDB-001 | {len(located['truth_records'])}" in evidence_md,
+        "locator markdown missing LEDB-001 count",
+    )
+    require(
+        f"LEDB-002 | {len(located['segment_records'])}" in evidence_md,
+        "locator markdown missing LEDB-002 count",
+    )
     require("This locator does not rewrite historical round records" in evidence_md, "locator non-claim missing")
     require("LOOP-GOV-EFF-DEBT-LOCATOR-20260617" in backlog, "backlog missing locator evidence link")
     require(

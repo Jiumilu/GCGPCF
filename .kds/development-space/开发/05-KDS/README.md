@@ -13,6 +13,8 @@
 | GPCF-DOC-1F12054E1C | GlobalCloud企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | controlled |
+| GPCF-DOC-038B869EBF | GlobalCloud 底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | controlled |
+| GPCF-DOC-F72C6A953D | GlobalCloud 底座可用知识闭环率评分脚本 dry-run 规格 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md | controlled |
 | GPCF-DOC-0A5E8FD5E6 | GlobalCloud智能体团队-企业级知识系统实施任务书 | 03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md | controlled |
 | GPCF-DOC-59CCD41F2D | GlobalCloud 湖北磷材 Brain 知识页候选结构与发布门禁 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md | controlled |
 | GPCF-DOC-3501E53D2C | GlobalCloud 湖北磷材 Brain 知识页候选评审实例包与人工填报示例 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md | controlled |
@@ -22,6 +24,8 @@
 | GPCF-DOC-7B1983E735 | GlobalCloud 湖北磷材拓厂评估与知识源评测集 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md | controlled |
 | GPCF-DOC-602F413178 | GlobalCloud 湖北磷材拓厂与新工厂复制试点任务书 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md | controlled |
 | GPCF-DOC-1A584CFD8F | GlobalCloud 湖北磷材真实资料接收任务包与人工评测演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md | controlled |
+| GPCF-DOC-77DB51C32D | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md | controlled |
+| GPCF-DOC-8454CB5BDD | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md | controlled |
 | GPCF-DOC-C8062E9E2A | GlobalCloud 湖北磷材评测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md | controlled |
 | GPCF-DOC-BA9F35E2AA | GlobalCloud 湖北磷材首批知识对象运行空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | controlled |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | controlled |
@@ -66,9 +70,16 @@
 | GPCF-DOC-DE35E75C5A | GFIS owner receipt task ledger | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | controlled |
 | GPCF-DOC-89DF4CBBFA | Git 风险分类报告 | docs/harness/evidence/git-risk-classification-20260617.md | controlled |
 | GPCF-DOC-21CF5F6F10 | Loop Governance Dashboard Evidence | docs/harness/evidence/loop-governance-dashboard-20260617.md | controlled |
+| GPCF-DOC-2EEC93C354 | Loop Governance Five Segment Review Evidence | docs/harness/evidence/loop-governance-five-segment-review-20260617.md | controlled |
 | GPCF-DOC-28A638C09E | Loop Governance Phase Goal Evidence | docs/harness/evidence/loop-governance-phase-goal-20260617.md | controlled |
+| GPCF-DOC-F8461F5919 | Loop Governance Truth Field Review Evidence | docs/harness/evidence/loop-governance-truth-field-review-20260617.md | controlled |
 | GPCF-DOC-6FD038491B | ODF Phase 2 扩大样本验证闭环报告 | docs/harness/evidence/odf-phase2-closure-report-20260617.md | controlled |
 | GPCF-DOC-86BB2ABBFD | ODF Phase 2 样本准入台账 | docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | controlled |
+| GPCF-DOC-146EB71EF5 | ODF Phase 3 Schema Gate Evidence | docs/harness/evidence/odf-phase3-schema-gate-20260617.md | controlled |
+| GPCF-DOC-15D17CA64A | ODF Phase 4 小批量准入试运行闭环报告 | docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | controlled |
+| GPCF-DOC-4432542213 | ODF Phase 4 小批量准入试运行台账 | docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | controlled |
+| GPCF-DOC-81B958F838 | ODF Phase 5 准入变更申请机制闭环报告 | docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | controlled |
+| GPCF-DOC-3FBC093145 | ODF Phase 5 准入变更申请台账 | docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | controlled |
 | GPCF-DOC-195F37DB52 | ODF 受控引入试点闭环报告 | docs/harness/evidence/odf-pilot-closure-report-20260617.md | controlled |
 | GPCF-DOC-0F24C05984 | ODF 试点样本准入台账 | docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | controlled |
 | GPCF-DOC-E60D35F595 | 12 项目文档控制队列 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | controlled |

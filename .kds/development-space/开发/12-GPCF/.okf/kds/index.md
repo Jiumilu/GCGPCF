@@ -35,6 +35,14 @@ superseded_by: []
 | ODF Phase 2 扩大样本验证计划 | `09-status/odf-phase2-expansion-plan.md` | `开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md` |
 | ODF Phase 2 样本准入台账 | `docs/harness/evidence/odf-phase2-sample-ledger-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md` |
 | ODF Phase 2 闭环报告 | `docs/harness/evidence/odf-phase2-closure-report-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md` |
+| ODF Phase 3 受控模板化与准入门禁计划 | `09-status/odf-phase3-schema-gate-plan.md` | `开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md` |
+| ODF Phase 3 Schema Gate Evidence | `docs/harness/evidence/odf-phase3-schema-gate-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md` |
+| ODF Phase 4 小批量准入试运行方案 | `09-status/odf-phase4-small-batch-admission-plan.md` | `开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md` |
+| ODF Phase 4 小批量准入台账 | `docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md` |
+| ODF Phase 4 闭环报告 | `docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md` |
+| ODF Phase 5 准入变更申请治理方案 | `09-status/odf-phase5-change-request-governance-plan.md` | `开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md` |
+| ODF Phase 5 准入变更申请台账 | `docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md` |
+| ODF Phase 5 闭环报告 | `docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` |
 
 ## Ledger And Gates
 
@@ -45,6 +53,9 @@ superseded_by: []
 | Readonly probe JSON | `.kds/readonly-probe.json` |
 | ODF pilot sample ledger | `docs/harness/evidence/odf-pilot-sample-ledger-20260617.json` |
 | ODF Phase 2 sample ledger | `docs/harness/evidence/odf-phase2-sample-ledger-20260617.json` |
+| ODF Phase 3 schema gate evidence | `docs/harness/evidence/odf-phase3-schema-gate-20260617.json` |
+| ODF Phase 4 small-batch ledger | `docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.json` |
+| ODF Phase 5 change request ledger | `docs/harness/evidence/odf-phase5-change-request-ledger-20260617.json` |
 
 ## Safety Rule
 

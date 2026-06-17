@@ -25,16 +25,16 @@ without rewriting historical Loop round records in bulk.
 ## Source Signal
 
 ```text
-loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=2 audit_missing_five_segment=18 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=1 high_similarity_adjacent_pairs=3 max_consecutive_sequence=184 risk=review_required
+loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=5 audit_missing_truth_fields=0 audit_missing_five_segment=0 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
 ## Backlog Items
 
 | ID | Priority | Debt Type | Scope | Count | Status | Handling Rule |
 |---|---|---|---|---:|---|---|
-| LEDB-001 | P1 | missing_truth_fields | audit_window_round_records | 2 | open | Add review annotations or controlled index-level exceptions; do not silently count as clean history. |
-| LEDB-002 | P1 | missing_five_segment_markers | audit_window_round_records | 18 | open | Add review annotations or controlled index-level exceptions; do not bulk rewrite historical facts. |
-| LEDB-003 | P1 | long_consecutive_sequence_risk | GPCF-L4-GFIS-REPAIR-* | 184 | open | Require periodic checkpoint review and keep long-sequence risk visible until reviewed. |
+| LEDB-001 | P1 | missing_truth_fields | audit_window_round_records | 1 | open | Add review annotations or controlled index-level exceptions; do not silently count as clean history. |
+| LEDB-002 | P1 | missing_five_segment_markers | audit_window_round_records | 1 | open | Add review annotations or controlled index-level exceptions; do not bulk rewrite historical facts. |
+| LEDB-003 | P1 | long_consecutive_sequence_risk | GPCF-L4-GFIS-REPAIR-* | 186 | open | Require periodic checkpoint review and keep long-sequence risk visible until reviewed. |
 | LEDB-004 | P2 | dashboard_validator_drift_risk | governance_docs_and_evidence_ids | 1 | monitoring | Validators must bind by title and source path, not only generated doc_id. |
 
 ## Review Disposition Template
@@ -60,7 +60,9 @@ Each backlog item must be closed or reclassified through a small review record:
 | LEDB-002-RD-001 | LEDB-002 | GPCF governance | targeted_annotation_required | `tools/kds-sync/validate_loop_round_efficiency_audit.py` | true | none | Identify affected audit-window round records before any annotation. |
 | LEDB-003-RD-001 | LEDB-003 | GPCF governance | historical_debt | `docs/harness/loops/` sequence scan | true | none | Keep visible until periodic checkpoint cadence is defined. |
 | LEDB-004-RD-001 | LEDB-004 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_governance_efficiency_backlog.py` | true | none | Keep validators path/title-bound and evidence-bound. |
-| LEDB-001-RD-002 | LEDB-001 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_round_efficiency_audit.py` and `tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | true | none | Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 2 without rewriting historical rounds. |
+| LEDB-001-RD-002 | LEDB-001 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_round_efficiency_audit.py` and `tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | true | none | Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 1 without rewriting historical rounds. |
+| LEDB-002-RD-002 | LEDB-002 | GPCF governance | targeted_annotation_required | `docs/harness/evidence/loop-governance-five-segment-review-20260617.json` | true | none | `212`, `209`, and `208` are targeted annotation candidates; `211` and `210` remain index-level exceptions unless a separate migration plan is authorized. |
+| LEDB-001-RD-003 | LEDB-001 | GPCF governance | accepted_exception | `docs/harness/evidence/loop-governance-truth-field-review-20260617.json` | true | none | Six current truth-field debt records are front matter shells and remain index-level exceptions unless a separate historical migration plan is authorized. |
 
 ## Locator Evidence
 
@@ -70,8 +72,8 @@ not a rewrite plan.
 
 | Backlog Item | Located Count | Evidence |
 |---|---:|---|
-| LEDB-001 | 2 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
-| LEDB-002 | 18 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
+| LEDB-001 | 0 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
+| LEDB-002 | 0 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
 
 ## Round Review Plan
 
@@ -82,9 +84,23 @@ annotation or index-level exceptions, and keeps `no_bulk_rewrite=true` and
 
 | Review Package | Backlog Item | Count | Rule |
 |---|---|---:|---|
-| LEDB-001-RP-001 | LEDB-001 | 2 | Review missing truth fields against existing evidence before any annotation. |
-| LEDB-002-RP-001 | LEDB-002 | 18 | Review missing five-part markers against existing evidence before any annotation. |
-| LEDB-003-RP-001 | LEDB-003 | 184 | Define checkpoint cadence for the long consecutive GFIS repair sequence. |
+| LEDB-001-RP-001 | LEDB-001 | 0 | Targeted annotation completed for the previously affected round; keep monitoring without bulk rewrite. |
+| LEDB-002-RP-001 | LEDB-002 | 1 | Review missing five-part markers against existing evidence before any annotation. |
+| LEDB-003-RP-001 | LEDB-003 | 186 | Define checkpoint cadence for the long consecutive GFIS repair sequence. |
+
+## Five-Segment Review Evidence
+
+`LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617` records `LEDB-002-RD-002` for
+`GPCF-L4-GFIS-REPAIR-212` through `GPCF-L4-GFIS-REPAIR-208`. It identifies
+three targeted annotation candidates and two index-level exceptions without
+rewriting historical round records.
+
+## Truth-Field Review Evidence
+
+`LOOP-GOV-TRUTH-FIELD-REVIEW-20260617` records `LEDB-001-RD-003` for six
+current truth-field debt records. They are front matter shell records and remain
+index-level exceptions unless a separate historical migration plan is
+authorized.
 
 ## Closing Conditions
 

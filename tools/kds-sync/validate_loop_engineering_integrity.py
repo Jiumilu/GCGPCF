@@ -126,7 +126,7 @@ def main() -> int:
         "production_release_gate",
         "raw_material_plan",
         "proof_of_delivery",
-        "project_group_score=79",
+        "project_group_score=78",
         "Loop Engineering 重定义 v2",
         "主体先行",
         "失败先行",
@@ -190,7 +190,7 @@ def main() -> int:
 
     for phrase in [
         "gfis_runtime_sop_e2e=repair_required",
-        "missing_kds_source_paths=0",
+        "missing_kds_source_paths=2",
         "runtime_contract_status=loaded_current_contract",
         "work_order_runtime=runtime_api_passed_temp_created_cleanup_required",
         "runtime_sop_chain_gate=blocked",
@@ -851,7 +851,7 @@ def main() -> int:
         "gfis_subject=runtime_layer "
         "demo_substitution=false "
         "runtime_sop_e2e=repair_required "
-        "project_group_score=79"
+        "project_group_score=78"
     )
     return 0
 

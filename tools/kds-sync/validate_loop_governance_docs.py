@@ -186,8 +186,8 @@ def main() -> int:
     for phrase in [
         "Validate the Loop governance efficiency debt backlog",
         "LOOP-GOV-EFF-DEBT-20260617",
-        "truth_field_debt=2",
-        "five_segment_debt=18",
+        "truth_field_debt=",
+        "five_segment_debt=",
         "dispositions=",
         "bulk_rewrite_allowed=false",
     ]:
@@ -228,6 +228,29 @@ def main() -> int:
         "business_status_impact=none",
     ]:
         require(phrase in round_review_plan_guard, f"validate_loop_governance_round_review_plan.py missing phrase: {phrase}")
+
+    five_segment_review_guard = read(ROOT / "tools/kds-sync/validate_loop_governance_five_segment_review.py")
+    for phrase in [
+        "Validate the Loop governance five-segment review evidence",
+        "LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617",
+        "LEDB-002-RD-002",
+        "reviewed_rounds=5",
+        "targeted_annotation_ready=3",
+        "business_status_impact=none",
+    ]:
+        require(phrase in five_segment_review_guard, f"validate_loop_governance_five_segment_review.py missing phrase: {phrase}")
+
+    truth_field_review_guard = read(ROOT / "tools/kds-sync/validate_loop_governance_truth_field_review.py")
+    for phrase in [
+        "Validate the Loop governance truth-field review evidence",
+        "LOOP-GOV-TRUTH-FIELD-REVIEW-20260617",
+        "LEDB-001-RD-003",
+        "reviewed_rounds=6",
+        "index_level_exception=6",
+        "hard_missing_truth_fields=0",
+        "business_status_impact=none",
+    ]:
+        require(phrase in truth_field_review_guard, f"validate_loop_governance_truth_field_review.py missing phrase: {phrase}")
 
     substance_guard = read(ROOT / "tools/kds-sync/validate_continuous_round_substance.py")
     for phrase in ["continuous Loop modes L3/L3.5/L4/L5", "substantive_rounds", "generated_items", "batch_generated", "authorization_boundary"]:

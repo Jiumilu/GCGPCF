@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.4-phase4",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE4-20260617-003",
+  "category": "kds-knowledge",
+  "title": "ODF Phase 4 - Distributed KDS Relationship Map",
+  "source_uri": "git://03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+  "source_path": "03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+  "source_hash": "9eabd2a3ffdabc7ffbd5ba5acabdbe9932461f470990454740d35c192ce8e47e",
+  "markdown_path": "03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+  "markdown_hash": "9eabd2a3ffdabc7ffbd5ba5acabdbe9932461f470990454740d35c192ce8e47e",
+  "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_knowledge_reference_only",
+  "status": "phase4_sample",
+  "rollback_hint": "remove this ODF phase4 envelope and ledger entry; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

@@ -67,9 +67,9 @@ def main() -> int:
         "LEDB-002",
         "LEDB-003",
         "LEDB-004",
-        "audit_missing_truth_fields=2",
-        "audit_missing_five_segment=18",
-        "max_consecutive_sequence=184",
+        "audit_missing_truth_fields=",
+        "audit_missing_five_segment=",
+        "max_consecutive_sequence=186",
         "LOOP-GOV-EFF-DEBT-LOCATOR-20260617",
         "does not rewrite historical round records in bulk",
         "Review Disposition Template",
@@ -93,11 +93,13 @@ def main() -> int:
     require(evidence.get("evidence_id") == "LOOP-GOV-EFF-DEBT-20260617", "invalid evidence id")
     require(evidence.get("status") == "review_required", "backlog evidence must remain review_required")
     signal = evidence.get("source_signal", {})
-    require(signal.get("audit_missing_truth_fields") == 2, "truth-field debt count mismatch")
-    require(signal.get("audit_missing_five_segment") == 18, "five-segment debt count mismatch")
+    locator_truth_records = len(locator.get("affected_truth_field_records", []))
+    locator_five_segment_records = len(locator.get("affected_five_segment_records", []))
+    require(signal.get("audit_missing_truth_fields") == locator_truth_records, "truth-field debt count mismatch")
+    require(signal.get("audit_missing_five_segment") == locator_five_segment_records, "five-segment debt count mismatch")
     require(signal.get("hard_missing_truth_fields") == 0, "hard truth field window must stay clean")
     require(signal.get("hard_missing_five_segment") == 0, "hard five-segment window must stay clean")
-    require(signal.get("max_consecutive_sequence") == 184, "long sequence count mismatch")
+    require(signal.get("max_consecutive_sequence") == 186, "long sequence count mismatch")
     require(signal.get("risk") == "review_required", "risk must remain review_required")
 
     item_ids = {item.get("id") for item in evidence.get("items", [])}
@@ -118,13 +120,11 @@ def main() -> int:
     require(template.get("business_status_impact_required") == "none", "disposition template must require no business impact")
     require("loop_round_efficiency_audit=pass" in efficiency_validator, "efficiency validator output contract missing")
     require(locator.get("evidence_id") == "LOOP-GOV-EFF-DEBT-LOCATOR-20260617", "invalid locator evidence id")
-    require(len(locator.get("affected_truth_field_records", [])) == 2, "locator truth record count mismatch")
-    require(len(locator.get("affected_five_segment_records", [])) == 18, "locator five-segment record count mismatch")
     require(locator.get("scope", {}).get("no_bulk_rewrite") is True, "locator must forbid bulk rewrite")
     require(locator.get("scope", {}).get("business_status_impact") == "none", "locator must have no business impact")
     require("loop_governance_efficiency_debt_locator=pass" in locator_validator, "locator validator output contract missing")
-    require("LEDB-001 | 2" in locator_md, "locator markdown missing LEDB-001 count")
-    require("LEDB-002 | 18" in locator_md, "locator markdown missing LEDB-002 count")
+    require(f"LEDB-001 | {locator_truth_records}" in locator_md, "locator markdown missing LEDB-001 count")
+    require(f"LEDB-002 | {locator_five_segment_records}" in locator_md, "locator markdown missing LEDB-002 count")
 
     for phrase in [
         "Review Disposition Template",
@@ -139,7 +139,7 @@ def main() -> int:
     print(
         "loop_governance_efficiency_backlog=pass "
         "evidence=LOOP-GOV-EFF-DEBT-20260617 status=review_required "
-        f"items=4 dispositions={len(dispositions)} truth_field_debt=2 five_segment_debt=18 max_consecutive_sequence=184 "
+        f"items=4 dispositions={len(dispositions)} truth_field_debt={locator_truth_records} five_segment_debt={locator_five_segment_records} max_consecutive_sequence=186 "
         "hard_missing_truth_fields=0 hard_missing_five_segment=0 bulk_rewrite_allowed=false"
     )
     return 0

@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.4-phase4",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE4-20260617-001",
+  "category": "status-governance",
+  "title": "ODF Phase 4 - GPCF Project Status Matrix",
+  "source_uri": "git://09-status/gpcf-project-status-matrix.md",
+  "source_path": "09-status/gpcf-project-status-matrix.md",
+  "source_hash": "73a0f17bc5ea90aba2d118f744b48c4f8b8d2735df4ac0a9d59db6e5bd6edcd1",
+  "markdown_path": "09-status/gpcf-project-status-matrix.md",
+  "markdown_hash": "73a0f17bc5ea90aba2d118f744b48c4f8b8d2735df4ac0a9d59db6e5bd6edcd1",
+  "kds_path": "开发/91-治理与验收/09-status/gpcf-project-status-matrix.md",
+  "owner": "GPCF",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_status_reference_only",
+  "status": "phase4_sample",
+  "rollback_hint": "remove this ODF phase4 envelope and ledger entry; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

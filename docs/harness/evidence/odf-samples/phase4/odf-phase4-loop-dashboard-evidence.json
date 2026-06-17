@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.4-phase4",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE4-20260617-002",
+  "category": "loop-harness-evidence",
+  "title": "ODF Phase 4 - Loop Governance Dashboard Evidence",
+  "source_uri": "git://docs/harness/evidence/loop-governance-dashboard-20260617.md",
+  "source_path": "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+  "source_hash": "0e0fb6532999f2b8e3683ea38c4881c875b77f540156269685963d85ebaa7594",
+  "markdown_path": "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+  "markdown_hash": "0e0fb6532999f2b8e3683ea38c4881c875b77f540156269685963d85ebaa7594",
+  "kds_path": "开发/05-KDS/docs/harness/evidence/loop-governance-dashboard-20260617.md",
+  "owner": "KDS",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_evidence_reference_only",
+  "status": "phase4_sample",
+  "rollback_hint": "remove this ODF phase4 envelope and ledger entry; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

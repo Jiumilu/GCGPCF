@@ -55,3 +55,6 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-BEB2C3647E | KDS Readonly Probe Report | 09-status/kds-readonly-probe-report.md | GPCF | controlled |
 | GPCF-DOC-76D6EBBEAB | ODF 受控引入与治理试点方案 | 09-status/odf-introduction-governance-plan.md | GPCF | controlled |
 | GPCF-DOC-808690228D | ODF Phase 2 扩大样本验证计划 | 09-status/odf-phase2-expansion-plan.md | GPCF | controlled |
+| GPCF-DOC-E360D5C8BC | ODF Phase 3 受控模板化与准入门禁计划 | 09-status/odf-phase3-schema-gate-plan.md | GPCF | controlled |
+| GPCF-DOC-429E306B5F | ODF Phase 4 小批量准入试运行方案 | 09-status/odf-phase4-small-batch-admission-plan.md | GPCF | controlled |
+| GPCF-DOC-1DC15FD42D | ODF Phase 5 准入变更申请治理方案 | 09-status/odf-phase5-change-request-governance-plan.md | GPCF | controlled |

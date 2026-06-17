@@ -1,0 +1,60 @@
+{
+  "evidence_id": "ODF-PHASE3-SCHEMA-GATE-20260617",
+  "title": "ODF Phase 3 schema gate evidence",
+  "generated_at": "2026-06-17",
+  "status": "phase3_schema_gate_ready",
+  "validator": "tools/kds-sync/validate_odf_schema_gate.py",
+  "input_ledgers": [
+    "docs/harness/evidence/odf-pilot-sample-ledger-20260617.json",
+    "docs/harness/evidence/odf-phase2-sample-ledger-20260617.json"
+  ],
+  "expected_result": {
+    "odf_schema_gate": "pass",
+    "ledgers": 2,
+    "samples": 13,
+    "source_hash": "pass",
+    "markdown_hash": "pass",
+    "odf_hash": "pass",
+    "source_overlaps": 2,
+    "duplicate_sample_ids": 0,
+    "duplicate_odf_paths": 0,
+    "forbidden_rollout": 0
+  },
+  "final_audit": {
+    "odf_schema_gate": "pass",
+    "ledgers": 2,
+    "samples": 13,
+    "ledger_statuses": [
+      "pilot_closed",
+      "phase2_closed"
+    ],
+    "categories": [
+      "business-import",
+      "governance",
+      "kds-knowledge",
+      "loop-harness-evidence",
+      "okf-navigation",
+      "pilot"
+    ],
+    "source_overlaps": 2,
+    "duplicate_sample_ids": 0,
+    "duplicate_odf_paths": 0,
+    "forbidden_rollout": 0,
+    "kds_sync_plan": "pass",
+    "remote_documents": 723,
+    "conflicts": 0,
+    "missing_local": 0,
+    "phase3_related_pending_writes": 0
+  },
+  "boundary": {
+    "full_rollout": false,
+    "accepted": false,
+    "integrated": false,
+    "business_completion_claim": false,
+    "replaces_git": false,
+    "replaces_kds": false,
+    "replaces_okf": false,
+    "replaces_loop_evidence": false
+  },
+  "next_phase_allowed": "yes_with_gate"
+}

@@ -26,16 +26,16 @@ by `LOOP-GOV-EFF-DEBT-LOCATOR-20260617`.
 ## Source Signal
 
 ```text
-loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=2 audit_missing_five_segment=18 hard_missing_truth_fields=0 hard_missing_five_segment=0 duplicate_fingerprint_groups=1 high_similarity_adjacent_pairs=3 max_consecutive_sequence=184 risk=review_required
+loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=1 audit_missing_five_segment=1 hard_missing_truth_fields=0 hard_missing_five_segment=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
 ## Review Package Summary
 
 | Package | Backlog Item | Count | Status |
 |---|---|---:|---|
-| LEDB-001-RP-001 | LEDB-001 | 2 | review_required |
-| LEDB-002-RP-001 | LEDB-002 | 18 | review_required |
-| LEDB-003-RP-001 | LEDB-003 | 184 | cadence_required |
+| LEDB-001-RP-001 | LEDB-001 | 1 | review_required |
+| LEDB-002-RP-001 | LEDB-002 | 1 | review_required |
+| LEDB-003-RP-001 | LEDB-003 | 186 | cadence_required |
 
 ## Controls
 

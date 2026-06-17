@@ -28,18 +28,18 @@ superseded_by: []
 
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
-| GFIS | 01-GFIS | 21 | 21 | 已建空间 |
+| GFIS | 01-GFIS | 44 | 44 | 已建空间 |
 | GPC | 02-GPC | 34 | 29 | 已建空间 |
 | PVAOS | 03-PVAOS | 7 | 7 | 已建空间 |
-| WAES | 04-WAES | 128 | 15 | 已建空间 |
-| KDS | 05-KDS | 106 | 106 | 已建空间 |
+| WAES | 04-WAES | 129 | 15 | 已建空间 |
+| KDS | 05-KDS | 117 | 117 | 已建空间 |
 | Brain | 06-Brain | 6 | 6 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 52 | 52 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 472 | 401 | 已建空间 |
+| GPCF | 12-GPCF | 501 | 428 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -47,7 +47,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 43 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 60 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 63 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -220,7 +220,7 @@ superseded_by: []
 | GPCF-DOC-A33E51C815 | GPCF Loop Engineering 状态机定义 | 02-governance/gpcf-status-machine.md | WAES | GPC, WAES, XiaoC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/gpcf-status-machine.md |
 | GPCF-DOC-29E5B0AC17 | Loop Autonomy Policy | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | WAES, KDS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_AUTONOMY_POLICY.md |
 | GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md |
-| GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | GPCF | GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md |
+| GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md |
 | GPCF-DOC-04BF76145B | Loop Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | GPC, WAES, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md |
 | GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | GPCF | GFIS, GPC, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md |
@@ -243,6 +243,8 @@ superseded_by: []
 | GPCF-DOC-1F12054E1C | GlobalCloud企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | KDS | KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | KDS | GPC, PVAOS, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | KDS | KDS, WAES | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md |
+| GPCF-DOC-038B869EBF | GlobalCloud 底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | KDS | GFIS, GPC, PVAOS, WAES, KDS | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md |
+| GPCF-DOC-F72C6A953D | GlobalCloud 底座可用知识闭环率评分脚本 dry-run 规格 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md | KDS | GFIS, GPC, PVAOS, WAES, KDS | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md |
 | GPCF-DOC-0A5E8FD5E6 | GlobalCloud智能体团队-企业级知识系统实施任务书 | 03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md | KDS | GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md |
 | GPCF-DOC-1212817FF5 | GlobalCloud 模型授权审计计量与分期结算规划 | 03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md | GPCF | GPCF, PVAOS, WAES | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud模型授权审计计量与分期结算规划.md |
 | GPCF-DOC-59CCD41F2D | GlobalCloud 湖北磷材 Brain 知识页候选结构与发布门禁 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md | KDS | GFIS, GPC, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md |
@@ -253,6 +255,8 @@ superseded_by: []
 | GPCF-DOC-7B1983E735 | GlobalCloud 湖北磷材拓厂评估与知识源评测集 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md | KDS | GFIS, WAES, KDS | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md |
 | GPCF-DOC-602F413178 | GlobalCloud 湖北磷材拓厂与新工厂复制试点任务书 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md | KDS | GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂项目知识库与新工厂复制模板.md |
 | GPCF-DOC-1A584CFD8F | GlobalCloud 湖北磷材真实资料接收任务包与人工评测演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md |
+| GPCF-DOC-77DB51C32D | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md |
+| GPCF-DOC-8454CB5BDD | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md |
 | GPCF-DOC-C8062E9E2A | GlobalCloud 湖北磷材评测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md |
 | GPCF-DOC-BA9F35E2AA | GlobalCloud 湖北磷材首批知识对象运行空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | KDS | GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md |
@@ -403,7 +407,7 @@ superseded_by: []
 | GPCF-DOC-A68BB0BF02 | GlobalCloud GFIS 核心流程闭环与集成边界矩阵 | 08-evidence-samples/GFIS/docs/20-gcfis-core-flow-closure-matrix.md | GFIS | GFIS, GPC, PVAOS, WAES | evidence | controlled | 开发/01-GFIS/docs/20-gcfis-core-flow-closure-matrix.md |
 | GPCF-DOC-C9856A190A | 21-gcfis-risk-ledger-and-uat-plan | 08-evidence-samples/GFIS/docs/21-gcfis-risk-ledger-and-uat-plan.md | GFIS | GFIS | evidence | controlled | 开发/01-GFIS/docs/21-gcfis-risk-ledger-and-uat-plan.md |
 | GPCF-DOC-81792467A7 | docs | 08-evidence-samples/GFIS/docs/README.md | GFIS | GFIS, GPC, WAES, KDS, GPCF | evidence | controlled | 开发/01-GFIS/docs/README.md |
-| GPCF-DOC-3C99FD28DA | Evidence Index — GFIS | 08-evidence-samples/GFIS/evidence-index.md | GFIS | GFIS, GPC, WAES, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/evidence-index.md |
+| GPCF-DOC-3C99FD28DA | Evidence Index — GFIS | 08-evidence-samples/GFIS/evidence-index.md | GFIS | GFIS, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/evidence-index.md |
 | GPCF-DOC-587CC64DA1 | GFIS 业务对象候选清单 | 08-evidence-samples/GFIS/gfis-business-object-candidates.md | GFIS | GFIS, GPC, WAES, KDS, Brain, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/gfis-business-object-candidates.md |
 | GPCF-DOC-192890AD56 | GFIS 单据与记录候选清单 | 08-evidence-samples/GFIS/gfis-document-record-candidates.md | GFIS | GFIS, GPC, WAES, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/gfis-document-record-candidates.md |
 | GPCF-DOC-FA793A6D9D | GFIS 现场调研数据采集表 | 08-evidence-samples/GFIS/gfis-field-study-data-capture.md | GFIS | GFIS, GPC, WAES, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/gfis-field-study-data-capture.md |
@@ -412,8 +416,31 @@ superseded_by: []
 | GPCF-DOC-2AD93D9881 | GFIS 岗位到能力映射表 | 08-evidence-samples/GFIS/gfis-role-map.md | GFIS | GFIS, GPC, WAES, KDS, Brain, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/gfis-role-map.md |
 | GPCF-DOC-6397631D86 | 辽宁远航正式报价书审批版元数据 | 08-evidence-samples/GFIS/liaoning-yuanhang/IGL-LY-QT-20260525-001_Rev.01_formal-quotation-approved.metadata.md | GFIS | GFIS, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/liaoning-yuanhang/IGL-LY-QT-20260525-001_Rev.01_formal-quotation-approved.metadata.md |
 | GPCF-DOC-F8290EDC89 | liaoning-yuanhang | 08-evidence-samples/GFIS/liaoning-yuanhang/README.md | GFIS | GFIS, GPC, WAES, KDS, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/liaoning-yuanhang/README.md |
-| GPCF-DOC-8FA34C737E | GFIS Loop State — GPCF Managed | 08-evidence-samples/GFIS/loop-state.md | GFIS | GFIS, GPC, WAES, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loop-state.md |
+| GPCF-DOC-8FA34C737E | GlobalCloud GFIS Loop State | 08-evidence-samples/GFIS/loop-state.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loop-state.md |
 | GPCF-DOC-A3ED7AB63E | loops | 08-evidence-samples/GFIS/loops/README.md | GFIS | GFIS, GPC, WAES, KDS, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/README.md |
+| GPCF-DOC-BA5565D6F8 | Loop Round — GFIS-RUNTIME-SOP-E2E-219 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md |
+| GPCF-DOC-BEF1C8B38D | Loop Round — GFIS-RUNTIME-SOP-E2E-220 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md |
+| GPCF-DOC-C821EDD617 | Loop Round — GFIS-RUNTIME-SOP-E2E-221 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md |
+| GPCF-DOC-D345E7C1ED | Loop Round — GFIS-RUNTIME-SOP-E2E-222 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md |
+| GPCF-DOC-82AC5DFB29 | GFIS-RUNTIME-SOP-E2E-223 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-223.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-223.md |
+| GPCF-DOC-8782B6913D | GFIS-RUNTIME-SOP-E2E-224 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-224.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-224.md |
+| GPCF-DOC-635D19B8DC | GFIS-RUNTIME-SOP-E2E-225 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-225.md | GFIS | GFIS, GPC, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-225.md |
+| GPCF-DOC-B3820AE5D0 | GFIS-RUNTIME-SOP-E2E-226 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-226.md | GFIS | GFIS, GPC, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-226.md |
+| GPCF-DOC-2E594C3FB5 | GFIS-RUNTIME-SOP-E2E-227 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md |
+| GPCF-DOC-28B099A397 | GFIS-RUNTIME-SOP-E2E-228 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-228.md | GFIS | GFIS, GPC, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-228.md |
+| GPCF-DOC-0052427870 | GFIS-RUNTIME-SOP-E2E-229 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-229.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-229.md |
+| GPCF-DOC-EE36B84ABC | GFIS-RUNTIME-SOP-E2E-230 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-230.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-230.md |
+| GPCF-DOC-146381CCBF | GFIS-RUNTIME-SOP-E2E-231 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-231.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-231.md |
+| GPCF-DOC-EA7D7BBCD3 | GFIS-RUNTIME-SOP-E2E-232 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-232.md | GFIS | GFIS, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-232.md |
+| GPCF-DOC-83CAB72305 | GFIS-RUNTIME-SOP-E2E-233 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-233.md | GFIS | GFIS, GPC, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-233.md |
+| GPCF-DOC-B1AA215813 | GFIS-RUNTIME-SOP-E2E-234 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-234.md | GFIS | GFIS, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-234.md |
+| GPCF-DOC-C927D25E90 | GFIS-RUNTIME-SOP-E2E-235 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md | GFIS | GFIS, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md |
+| GPCF-DOC-00E030CE3C | GFIS-RUNTIME-SOP-E2E-236 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-236.md | GFIS | GFIS, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-236.md |
+| GPCF-DOC-B5B7B7F12B | GFIS-RUNTIME-SOP-E2E-237 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-237.md | GFIS | GFIS, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-237.md |
+| GPCF-DOC-1351F85A23 | GFIS-RUNTIME-SOP-E2E-238 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-238.md | GFIS | GFIS, WAES | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-238.md |
+| GPCF-DOC-CA8423BACC | GFIS-RUNTIME-SOP-E2E-239 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-239.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-239.md |
+| GPCF-DOC-611E16E9CD | GFIS-RUNTIME-SOP-E2E-240 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-240.md | GFIS | GFIS, GPC, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-240.md |
+| GPCF-DOC-2ED858DAC6 | GFIS-RUNTIME-SOP-E2E-241 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-241.md | GFIS | GFIS, WAES, KDS | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-241.md |
 | GPCF-DOC-E574C9CB52 | Loop Round GPCF-GF-LR-001 | 08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md | GFIS | GFIS, GPC, WAES, KDS, Brain, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md |
 | GPCF-DOC-94C5F5E540 | 现代精工工厂岗位培训资料结构化分析 | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | GFIS | GFIS, GPC, WAES, KDS, Brain, GPCF | evidence | controlled | 开发/01-GFIS/08-evidence-samples/GFIS/modern-jinggong-training-analysis.md |
 | GPCF-DOC-9DAA6C3FEC | 证据样本 | 08-evidence-samples/README.md | WAES | GFIS, GPC, WAES, KDS, GPCF | evidence | controlled | 开发/04-WAES/08-evidence-samples/README.md |
@@ -435,12 +462,15 @@ superseded_by: []
 | GPCF-DOC-6CE17269E9 | globalcloud-project-mainline-alignment-matrix | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, GPCF | status | controlled | 开发/91-治理与验收/09-status/gpcf-project-status-matrix.md |
 | GPCF-DOC-B1085FD000 | KDS API 同步流水覆盖事件记录 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | GPCF, WAES, KDS | status | controlled | 开发/91-治理与验收/09-status/kds-api-sync-ledger-incident-20260617.md |
-| GPCF-DOC-53A28225F1 | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | GFIS, GPC, WAES, KDS, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-development-space-sync-plan.md |
+| GPCF-DOC-53A28225F1 | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | GFIS, GPC, WAES, KDS, Brain, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-development-space-sync-plan.md |
 | GPCF-DOC-BA63F9BF32 | KDS 开发空间同步台账 | 09-status/kds-development-space-sync-register.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-development-space-sync-register.md |
 | GPCF-DOC-B15126F708 | KDS Markdown 化与 OKF 兼容层全面实施闭环方案 | 09-status/kds-md-okf-implementation-closure-plan.md | GPCF | GPC, WAES, KDS, Brain, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md |
 | GPCF-DOC-BEB2C3647E | KDS Readonly Probe Report | 09-status/kds-readonly-probe-report.md | GPCF | GPC, WAES, KDS, Brain, GPCF | status | controlled | 开发/91-治理与验收/09-status/kds-readonly-probe-report.md |
 | GPCF-DOC-76D6EBBEAB | ODF 受控引入与治理试点方案 | 09-status/odf-introduction-governance-plan.md | GPCF | WAES, KDS, GPCF | status | controlled | 开发/91-治理与验收/09-status/odf-introduction-governance-plan.md |
 | GPCF-DOC-808690228D | ODF Phase 2 扩大样本验证计划 | 09-status/odf-phase2-expansion-plan.md | GPCF | GPCF, WAES, KDS | status | controlled | 开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md |
+| GPCF-DOC-E360D5C8BC | ODF Phase 3 受控模板化与准入门禁计划 | 09-status/odf-phase3-schema-gate-plan.md | GPCF | GPCF, WAES, KDS | status | controlled | 开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md |
+| GPCF-DOC-429E306B5F | ODF Phase 4 小批量准入试运行方案 | 09-status/odf-phase4-small-batch-admission-plan.md | GPCF | WAES, KDS, GPCF | status | controlled | 开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md |
+| GPCF-DOC-1DC15FD42D | ODF Phase 5 准入变更申请治理方案 | 09-status/odf-phase5-change-request-governance-plan.md | GPCF | GPCF, WAES, KDS | status | controlled | 开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md |
 | GPCF-DOC-A55E6422C8 | 过期与历史归档 | 10-archive/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/README.md |
 | GPCF-DOC-5112E5A758 | 过期文档归档 | 10-archive/deprecated/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/deprecated/README.md |
 | GPCF-DOC-2F9D256EEE | 历史会话归档 | 10-archive/historical-sessions/README.md | GPC | GPC, WAES, KDS, GPCF | archive | archive | 开发/92-证据与会话归档/10-archive/historical-sessions/README.md |
@@ -526,11 +556,18 @@ superseded_by: []
 | GPCF-DOC-89DF4CBBFA | Git 风险分类报告 | docs/harness/evidence/git-risk-classification-20260617.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/git-risk-classification-20260617.md |
 | GPCF-DOC-21CF5F6F10 | Loop Governance Dashboard Evidence | docs/harness/evidence/loop-governance-dashboard-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/loop-governance-dashboard-20260617.md |
 | GPCF-DOC-FF3BC7037F | Loop Governance Efficiency Debt Backlog Evidence | docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md |
-| GPCF-DOC-7FB5D5F117 | Loop Governance Efficiency Debt Locator Evidence | docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md |
+| GPCF-DOC-7FB5D5F117 | Loop Governance Efficiency Debt Locator Evidence | docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md | GPCF | GPCF, GFIS, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md |
+| GPCF-DOC-2EEC93C354 | Loop Governance Five Segment Review Evidence | docs/harness/evidence/loop-governance-five-segment-review-20260617.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/loop-governance-five-segment-review-20260617.md |
 | GPCF-DOC-28A638C09E | Loop Governance Phase Goal Evidence | docs/harness/evidence/loop-governance-phase-goal-20260617.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/loop-governance-phase-goal-20260617.md |
 | GPCF-DOC-E768727850 | Loop Governance Round Review Plan Evidence | docs/harness/evidence/loop-governance-round-review-plan-20260617.md | GPCF | GPCF, GFIS, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md |
+| GPCF-DOC-F8461F5919 | Loop Governance Truth Field Review Evidence | docs/harness/evidence/loop-governance-truth-field-review-20260617.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/loop-governance-truth-field-review-20260617.md |
 | GPCF-DOC-6FD038491B | ODF Phase 2 扩大样本验证闭环报告 | docs/harness/evidence/odf-phase2-closure-report-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md |
 | GPCF-DOC-86BB2ABBFD | ODF Phase 2 样本准入台账 | docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md |
+| GPCF-DOC-146EB71EF5 | ODF Phase 3 Schema Gate Evidence | docs/harness/evidence/odf-phase3-schema-gate-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md |
+| GPCF-DOC-15D17CA64A | ODF Phase 4 小批量准入试运行闭环报告 | docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md |
+| GPCF-DOC-4432542213 | ODF Phase 4 小批量准入试运行台账 | docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md |
+| GPCF-DOC-81B958F838 | ODF Phase 5 准入变更申请机制闭环报告 | docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md |
+| GPCF-DOC-3FBC093145 | ODF Phase 5 准入变更申请台账 | docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md |
 | GPCF-DOC-195F37DB52 | ODF 受控引入试点闭环报告 | docs/harness/evidence/odf-pilot-closure-report-20260617.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md |
 | GPCF-DOC-0F24C05984 | ODF 试点样本准入台账 | docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md |
 | GPCF-DOC-E60D35F595 | 12 项目文档控制队列 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/gpcf-12-project-document-control-queue-lr013.md |
@@ -637,6 +674,10 @@ superseded_by: []
 | GPCF-DOC-3B3929E14A | LOOP Round GPCF-KDS-DKS-036 - 湖北磷材 Brain 知识页候选评审实例包与人工填报示例 | docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md | GPCF | GFIS, GPC, WAES, KDS, Brain, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md |
 | GPCF-DOC-2E5C5639B8 | LOOP Round GPCF-KDS-DKS-037 - 湖北磷材 Brain 知识页评审样例到 SOP 候选写回规则 | docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md | GPCF | GFIS, GPC, WAES, KDS, Brain, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md |
 | GPCF-DOC-C739C4D9D1 | LOOP Round GPCF-KDS-DKS-038 - 湖北磷材 SOP 候选写回规则到缺口悬赏与人工确认任务包 | docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md |
+| GPCF-DOC-3AB198703F | LOOP Round GPCF-KDS-DKS-039 - 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账 | docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md |
+| GPCF-DOC-C0F0BD428C | LOOP Round GPCF-KDS-DKS-040 - 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练 | docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md |
+| GPCF-DOC-4424900CA7 | LOOP Round GPCF-KDS-DKS-041 - 底座可用知识闭环率计算样表与字段字典 | docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md |
+| GPCF-DOC-6EAE781FDF | LOOP Round GPCF-KDS-DKS-042 - 底座可用知识闭环率评分脚本 dry-run 规格 | docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-001.md |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | GFIS, GPC, WAES, KDS, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-002.md |
 | GPCF-DOC-B305BF004A | GPCF-L4-003 KDS Knowledge Index Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | GFIS, GPC, WAES, KDS, Brain, PKC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-003.md |
@@ -866,15 +907,38 @@ superseded_by: []
 | GPCF-DOC-76D91749BE | loop-round-GPCF-L4-GFIS-REPAIR-215 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-215.md | GPCF | GFIS, GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-215.md |
 | GPCF-DOC-33F9233169 | Loop Round — GPCF-L4-GFIS-REPAIR-216 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-216.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-216.md |
 | GPCF-DOC-FF3D79B4EA | Loop Round — GPCF-L4-GFIS-REPAIR-217 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-217.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-217.md |
-| GPCF-DOC-97B5604219 | loop-round-GPCF-L4-GFIS-REPAIR-218 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md | GPCF | GFIS, GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md |
+| GPCF-DOC-97B5604219 | GPCF-L4-GFIS-REPAIR-218 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md |
 | GPCF-DOC-42F47D6010 | Loop Round — GPCF-L4-GFIS-REPAIR-219 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-219.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-219.md |
 | GPCF-DOC-D93CE7B7E6 | Loop Round — GPCF-L4-GFIS-REPAIR-220 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-220.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-220.md |
 | GPCF-DOC-5BCAC21599 | Loop Round — GPCF-L4-GFIS-REPAIR-221 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-221.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-221.md |
 | GPCF-DOC-773AFA7F28 | Loop Round — GPCF-L4-GFIS-REPAIR-222 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-222.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-222.md |
 | GPCF-DOC-E7875ABE5E | Loop Round — GPCF-L4-GFIS-REPAIR-223 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md |
 | GPCF-DOC-27C860DD14 | Loop Round — GPCF-L4-GFIS-REPAIR-224 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-224.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-224.md |
-| GPCF-DOC-F3CC03DA11 | loop-round-GPCF-L4-GFIS-REPAIR-225 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md | GPCF | GFIS, GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md |
+| GPCF-DOC-F3CC03DA11 | Loop Round — GPCF-L4-GFIS-REPAIR-225 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md |
 | GPCF-DOC-D34897E9C1 | Loop Round — GPCF-L4-GFIS-REPAIR-226 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md |
+| GPCF-DOC-06249F6A3C | GPCF-L4-GFIS-REPAIR-229 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md |
+| GPCF-DOC-37D36F220B | GPCF-L4-GFIS-REPAIR-230 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md |
+| GPCF-DOC-7A0378665D | Loop Round — GPCF-L4-GFIS-REPAIR-231 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-231.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-231.md |
+| GPCF-DOC-FFA422347D | Loop Round — GPCF-L4-GFIS-REPAIR-232 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-232.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-232.md |
+| GPCF-DOC-BEA6755E09 | GPCF-L4-GFIS-REPAIR-233 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-233.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-233.md |
+| GPCF-DOC-F894AD3BCF | GPCF-L4-GFIS-REPAIR-234 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-234.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-234.md |
+| GPCF-DOC-A98AD47641 | GPCF-L4-GFIS-REPAIR-235 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-235.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-235.md |
+| GPCF-DOC-DA8F385352 | GPCF-L4-GFIS-REPAIR-236 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-236.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-236.md |
+| GPCF-DOC-CFCBB982EE | GPCF-L4-GFIS-REPAIR-237 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-237.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-237.md |
+| GPCF-DOC-65B993E81D | GPCF-L4-GFIS-REPAIR-238 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-238.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-238.md |
+| GPCF-DOC-3E93FEEFBB | GPCF-L4-GFIS-REPAIR-239 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-239.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-239.md |
+| GPCF-DOC-DA9906BD2E | GPCF-L4-GFIS-REPAIR-240 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-240.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-240.md |
+| GPCF-DOC-8909D5E04A | GPCF-L4-GFIS-REPAIR-241 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-241.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-241.md |
+| GPCF-DOC-D4FE78D770 | GPCF-L4-GFIS-REPAIR-242 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md |
+| GPCF-DOC-2D0F51B8F0 | GPCF-L4-GFIS-REPAIR-243 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-243.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-243.md |
+| GPCF-DOC-C1AD5D75E7 | GPCF-L4-GFIS-REPAIR-244 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-244.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-244.md |
+| GPCF-DOC-B379CD806B | GPCF-L4-GFIS-REPAIR-245 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-245.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-245.md |
+| GPCF-DOC-F1871CDA11 | GPCF-L4-GFIS-REPAIR-246 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-246.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-246.md |
+| GPCF-DOC-A4A81A584E | GPCF-L4-GFIS-REPAIR-247 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-247.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-247.md |
+| GPCF-DOC-AD3AE05919 | GPCF-L4-GFIS-REPAIR-248 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md |
+| GPCF-DOC-5CC1AFF87D | GPCF-L4-GFIS-REPAIR-249 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-249.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-249.md |
+| GPCF-DOC-CF153908BD | GPCF-L4-GFIS-REPAIR-250 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-250.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-250.md |
+| GPCF-DOC-C633FC3ABA | GPCF-L4-GFIS-REPAIR-251 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-251.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-251.md |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
 | GPCF-DOC-9886BDB110 | L4 Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |
 | GPCF-DOC-4C33B5D2B6 | Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |

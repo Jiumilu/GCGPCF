@@ -1,0 +1,52 @@
+{
+  "evidence_id": "LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617",
+  "evidence_type": "loop_governance_five_segment_review",
+  "created_at": "2026-06-17",
+  "project": "GPCF",
+  "status": "review_required",
+  "disposition_id": "LEDB-002-RD-002",
+  "backlog_item": "LEDB-002",
+  "scope": {
+    "reviewed_rounds": 5,
+    "no_bulk_rewrite": true,
+    "business_status_impact": "none",
+    "accepted_integrated_allowed": false
+  },
+  "round_dispositions": [
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-212",
+      "decision": "targeted_annotation_ready",
+      "missing_marker_signal": ["action", "check"],
+      "evidence_basis": ["git risk classifier", "classification evidence", "classification result table", "next-step queue"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-211",
+      "decision": "index_level_exception",
+      "missing_marker_signal": ["input", "action", "feedback"],
+      "evidence_basis": ["GPCF/GFIS sync review", "validation inputs", "mixed section names"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-210",
+      "decision": "index_level_exception",
+      "missing_marker_signal": ["input", "action", "output", "check", "feedback"],
+      "evidence_basis": ["negative fixture guard evidence", "compact round body", "historical structure debt"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-209",
+      "decision": "targeted_annotation_ready",
+      "missing_marker_signal": ["action", "output", "check", "feedback"],
+      "evidence_basis": ["input list", "GFIS evidence block", "GPCF write-back list", "truth count", "next-round recommendation"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-208",
+      "decision": "targeted_annotation_ready",
+      "missing_marker_signal": ["action", "feedback"],
+      "evidence_basis": ["input list", "goal", "outputs", "key conclusion", "validation records", "truth count", "next-round recommendation"]
+    }
+  ],
+  "non_claims": [
+    "This evidence does not rewrite historical round records.",
+    "This evidence does not prove GFIS runtime SOP E2E passed.",
+    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status."
+  ]
+}

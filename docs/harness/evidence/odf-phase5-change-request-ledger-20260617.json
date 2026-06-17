@@ -1,0 +1,56 @@
+{
+  "ledger_id": "ODF-PHASE5-CHANGE-REQUEST-LEDGER-20260617",
+  "title": "ODF Phase 5 change request ledger",
+  "generated_at": "2026-06-17",
+  "status": "phase5_change_request_closed",
+  "max_small_batch_samples": 5,
+  "policy": "Any future ODF sample expansion must have a bounded request, manual confirmation, rollback hints, and directed KDS sync paths before admission.",
+  "requests": [
+    {
+      "request_id": "ODF-CR-20260617-001",
+      "request_type": "odf_small_batch_admission",
+      "status": "closed_after_audit",
+      "requested_by": "codex",
+      "manual_confirmation": true,
+      "sample_scope": {
+        "phase": "phase4",
+        "sample_count": 3,
+        "categories": [
+          "status-governance",
+          "loop-harness-evidence",
+          "kds-knowledge"
+        ]
+      },
+      "source_paths": [
+        "09-status/gpcf-project-status-matrix.md",
+        "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+        "03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md"
+      ],
+      "odf_paths": [
+        "docs/harness/evidence/odf-samples/phase4/odf-phase4-status-matrix.json",
+        "docs/harness/evidence/odf-samples/phase4/odf-phase4-loop-dashboard-evidence.json",
+        "docs/harness/evidence/odf-samples/phase4/odf-phase4-distributed-kds-map.json"
+      ],
+      "kds_sync_paths": [
+        "09-status/odf-phase4-small-batch-admission-plan.md",
+        "docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+        "docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+        ".okf/governance/index.md",
+        ".okf/kds/index.md"
+      ],
+      "rollback_hints": [
+        "remove phase4 status matrix envelope and ledger entry; keep source Markdown unchanged",
+        "remove phase4 loop dashboard envelope and ledger entry; keep source Markdown unchanged",
+        "remove phase4 distributed KDS map envelope and ledger entry; keep source Markdown unchanged"
+      ],
+      "boundary": {
+        "full_rollout": false,
+        "accepted": false,
+        "integrated": false,
+        "business_completion_claim": false,
+        "production_write": false,
+        "external_api_write": false
+      }
+    }
+  ]
+}

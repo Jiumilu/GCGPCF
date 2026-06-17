@@ -7,18 +7,18 @@
   "source_command": "python3 tools/kds-sync/validate_loop_round_efficiency_audit.py",
   "source_signal": {
     "loop_round_efficiency_audit": "pass",
-    "total_rounds": 294,
+    "total_rounds": 335,
     "audit_checked": 30,
     "hard_checked": 5,
-    "audit_missing_truth_fields": 2,
-    "audit_missing_five_segment": 18,
+    "audit_missing_truth_fields": 0,
+    "audit_missing_five_segment": 0,
     "audit_batch_generated_counted": 0,
     "hard_missing_truth_fields": 0,
     "hard_missing_five_segment": 0,
     "hard_batch_generated_counted": 0,
-    "duplicate_fingerprint_groups": 1,
-    "high_similarity_adjacent_pairs": 3,
-    "max_consecutive_sequence": 184,
+    "duplicate_fingerprint_groups": 0,
+    "high_similarity_adjacent_pairs": 0,
+    "max_consecutive_sequence": 186,
     "risk": "review_required"
   },
   "items": [
@@ -27,8 +27,8 @@
       "priority": "P1",
       "debt_type": "missing_truth_fields",
       "scope": "audit_window_round_records",
-      "current_count": 2,
-      "status": "open",
+      "current_count": 0,
+      "status": "monitoring",
       "handling_rule": "Add review annotations or controlled index-level exceptions; do not silently count as clean history."
     },
     {
@@ -36,8 +36,8 @@
       "priority": "P1",
       "debt_type": "missing_five_segment_markers",
       "scope": "audit_window_round_records",
-      "current_count": 18,
-      "status": "open",
+      "current_count": 0,
+      "status": "monitoring",
       "handling_rule": "Add review annotations or controlled index-level exceptions; do not bulk rewrite historical facts."
     },
     {
@@ -45,7 +45,7 @@
       "priority": "P1",
       "debt_type": "long_consecutive_sequence_risk",
       "scope": "GPCF-L4-GFIS-REPAIR-*",
-      "current_count": 184,
+      "current_count": 14,
       "status": "open",
       "handling_rule": "Require periodic checkpoint review and keep long-sequence risk visible until reviewed."
     },
@@ -128,7 +128,7 @@
       "evidence_ref": "tools/kds-sync/validate_loop_round_efficiency_audit.py and tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py",
       "no_bulk_rewrite": true,
       "business_status_impact": "none",
-      "next_action": "Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 2 without rewriting historical rounds."
+      "next_action": "Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 1 without rewriting historical rounds."
     }
   ],
   "closing_conditions": [

@@ -18,6 +18,142 @@ superseded_by: []
 
 # Evidence Index — GPCF
 
+## GPCF-L4-GFIS-REPAIR-251 GFIS pending business verification manual completion release-ready package release override approval request dispatch confirmation hold release negative fixture guard sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 326 | GFIS dispatch confirmation hold release negative fixture guard validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard=pass source_hold_release_precheck_items=1 source_blocked=1 source_blocked_reasons=6 source_release_allowed_items=0 weak_release_attempt_count=6 rejected_release_attempt_count=6 accepted_release_attempt_count=0 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 owner_response_allowed=0 submission_package_allowed=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 release_allowed_items=0 hold_items=1 open_holds=1 hold_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 326 | GFIS hold release precheck regression | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck.py` in GFIS | precheck remains blocked and `runtime_sop_e2e=repair_required` | pass |
+| 326 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixtures_rejected`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 326 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 326 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.json` | machine-readable negative fixture guard counts | pass |
+| 326 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-241.md` | records weak release claim rejection without releasing hold or claiming business completion | partial |
+| 326 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-251.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只同步 hold release negative fixture guard；没有真实 source-of-record、pending submission、人工核验完成、有效 release-ready package、有效 dispatch confirmation、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-242`：建立 dispatch confirmation release attempt hard-stop audit。
+
+## GPCF-L4-GFIS-REPAIR-250 GFIS pending business verification manual completion release-ready package release override approval request dispatch confirmation hold release precheck sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 325 | GFIS dispatch confirmation hold release precheck validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck=pass source_post_scan_hold_gate_items=1 source_open_holds=1 source_hold_release_allowed=0 precheck_items=1 blocked=1 blocked_reasons=6 release_candidates=1 release_allowed_items=0 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 owner_response_allowed=0 submission_package_allowed=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_items=1 open_holds=1 hold_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 325 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck_blocked`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 325 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 325 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.json` | machine-readable hold release precheck counts | pass |
+| 325 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-240.md` | records hold release precheck without claiming dispatch confirmation or business completion | partial |
+| 325 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-250.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只同步 hold release precheck；没有真实 source-of-record、pending submission、人工核验完成、有效 release-ready package、有效 dispatch confirmation、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-241`：建立 release override approval request dispatch confirmation hold release negative fixture guard。
+
+## GPCF-L4-GFIS-REPAIR-249 GFIS pending business verification manual completion release-ready package release override approval request dispatch confirmation post-scan hold gate sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 324 | GFIS dispatch confirmation post-scan hold gate validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate=pass source_receiving_file_scan_items=1 source_confirmation_files_found=0 source_valid_confirmations=0 source_missing_confirmations=1 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 hold_items=1 post_scan_hold_items=1 open_holds=1 hold_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 324 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_open`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 324 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 324 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-post-scan-hold-gate.json` | machine-readable post-scan hold counts | pass |
+| 324 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-239.md` | records post-scan hold without claiming dispatch confirmation or business completion | partial |
+| 324 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-249.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只把真实 dispatch confirmation 接收目录扫描后无有效确认文件的事实转换为 open hold；没有真实 source-of-record、pending submission、人工核验完成、有效 release-ready package、有效 dispatch confirmation、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-240`：建立 release override approval request dispatch confirmation hold release precheck。
+
+## GPCF-L4-GFIS-REPAIR-247 GFIS pending business verification manual completion release-ready package release override approval request dispatch confirmation receiving schema precheck sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 322 | GFIS dispatch confirmation receiving schema precheck validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck=pass source_negative_fixture_guard_items=1 source_negative_fixture_count=6 source_rejected_fixture_count=6 source_accepted_fixture_count=0 confirmation_slots=1 receiving_directory_exists=1 receiving_readme_exists=1 confirmation_schema_files=1 expected_confirmation_files=1 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 owner_response_allowed=0 submission_package_allowed=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 322 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck_ready_no_real_confirmations`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 322 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 322 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-receiving-schema-precheck.json` | machine-readable receiving schema precheck counts | pass |
+| 322 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-237.md` | records receiving schema readiness without claiming real dispatch confirmation | partial |
+| 322 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-247.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=9`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明未来真实 dispatch confirmation 接收目录、README 和 schema 已建立；没有真实 source-of-record、pending submission、人工核验完成、有效 release-ready package、有效 dispatch confirmation、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-238`：扫描 release override approval request dispatch confirmation 接收目录。
+
+## GPCF-L4-GFIS-REPAIR-242 GFIS pending business verification manual completion release-ready package release override approval intake empty scan sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 317 | GFIS release override approval intake empty scan validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan=pass source_release_override_negative_fixture_guard_items=1 source_open_holds=1 release_override_approval_intake_scan_items=1 receiving_directory_exists=1 receiving_readme_exists=1 override_approval_files_found=0 valid_override_approvals=0 missing_override_approvals=1 release_override_allowed=0 release_override_review_allowed=0 release_allowed_items=0 hold_release_allowed=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 317 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan=manual_business_verification_release_ready_package_release_override_approval_intake_empty_no_valid_approvals`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 317 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 317 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-intake-empty-scan.json` | machine-readable approval intake empty scan counts | pass |
+| 317 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-232.md` | records approval intake empty scan without claiming business completion | partial |
+| 317 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=11`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明 release override approval 接收目录存在且当前为空；没有真实 source-of-record、pending submission、人工核验完成、有效 release-ready package、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-233`：建立 release override approval request package。
+
+## GPCF-L4-GFIS-REPAIR-241 GFIS pending business verification manual completion release-ready package release override negative fixture guard sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 316 | GFIS release override negative fixture guard validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard=pass source_release_attempt_hard_stop_audit_items=1 source_open_holds=1 release_override_negative_fixture_guard_items=1 negative_override_fixtures=6 rejected_override_fixtures=6 accepted_override_fixtures=0 release_override_allowed=0 release_allowed_items=0 hold_release_allowed=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 316 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_negative_fixtures_rejected`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 316 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 316 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-negative-fixture-guard.json` | machine-readable override rejection counts | pass |
+| 316 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-231.md` | records override rejection without claiming business completion | partial |
+| 316 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-241.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=10`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明 6 类 release override 声明不能绕过 hard-stop；没有真实 source-of-record、pending submission、人工核验完成、有效 release-ready package、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-232`：建立 release override approval intake empty scan。
+
+## GPCF-L4-GFIS-REPAIR-234 GFIS pending business verification manual completion hold release negative fixture guard sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 309 | GFIS manual completion hold release negative fixture guard validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard=pass weak_release_attempt_count=6 rejected_release_attempt_count=6 accepted_release_attempt_count=0 release_allowed_items=0 hold_release_allowed=0 manual_completion_release_allowed=0 manual_business_verification_completed=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 309 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard=manual_business_verification_completion_hold_release_negative_fixtures_rejected`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 309 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 309 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-negative-fixture-guard.json` | machine-readable negative fixture no-release counts | pass |
+| 309 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-224.md` | records weak release attempt rejection without claiming business completion | partial |
+| 309 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-234.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明 6 类弱 release attempt 不能释放 open hold；没有真实 source-of-record、pending submission、人工核验完成、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-225`：建立人工核验完成 release-ready schema。
+
+## GPCF-L4-GFIS-REPAIR-233 GFIS pending business verification manual completion hold release precheck sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 308 | GFIS manual completion hold release precheck validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck=pass source_hold_gate_items=1 source_open_holds=1 release_precheck_items=1 blocked=1 release_allowed_items=0 release_requirements=8 unsatisfied_release_requirements=8 manual_business_verification_completion_files_found=0 schema_valid_manual_completion_files=0 manual_business_verification_completed=0 valid_source_records=0 hold_items=1 open_holds=1 hold_release_allowed=0 manual_completion_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 308 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck=manual_business_verification_completion_hold_release_precheck_blocked`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 308 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 308 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-precheck.json` | machine-readable hold release precheck and no-release counts | pass |
+| 308 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-223.md` | records hold release precheck without claiming business completion | partial |
+| 308 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-233.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明 222 轮 open hold 未满足真实释放条件；没有真实 source-of-record、pending submission、人工核验完成、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-224`：建立人工核验完成 hold release negative fixture guard；防止弱 release attempt 绕过 open hold。
+
+## GPCF-L4-GFIS-REPAIR-232 GFIS pending business verification manual completion receiving hold gate sync
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 307 | GFIS manual completion receiving hold gate validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate=pass receiving_directories_scanned=1 receiving_directory_exists=1 manual_business_verification_completion_files_found=0 schema_valid_manual_completion_files=0 manual_business_verification_completed=0 valid_source_records=0 hold_items=1 open_holds=1 hold_release_allowed=0 manual_completion_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 307 | GFIS runtime SOP validator | bundled Python `scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate=manual_business_verification_completion_receiving_hold_open`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 307 | GFIS frontend demo E2E | `PATH=<bundled-python>/bin:$PATH npm run test:e2e` in GFIS | `26 passed`；仅作为 demo/frontend 回归，不作为 SOP 真实业务凭证 | pass_demo_only |
+| 307 | GFIS evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.json` | machine-readable receiving scan and open hold counts | pass |
+| 307 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md` | records receiving hold gate without claiming business completion | partial |
+| 307 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-232.md` | records control-plane sync and no-release boundary | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明真实人工业务核验完成文件接收目录暂无合规文件并形成 open hold；没有真实 source-of-record、pending submission、人工核验完成、运行层主键、review/runtime/WAES 或 verified artifact。
+- 下一步进入 `GFIS-RUNTIME-SOP-E2E-223`：建立人工核验完成 hold release precheck；open hold 未满足真实 release 条件前继续阻断 review/runtime/WAES。
+
 ## GPCF-L4-GFIS-REPAIR-226 GFIS pending business verification quarantine schema/precheck sync
 
 | 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
@@ -124,8 +260,12 @@ superseded_by: []
 | governance | Efficiency debt locator evidence | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md` | 定位 LEDB-001 的 2 个受影响轮次和 LEDB-002 的 18 个受影响轮次；不批量改写历史轮次 | review_required |
 | governance | Round review plan | `02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md` | 将 locator 转成受控复核队列；只允许 targeted annotation 或 index-level exception | review_required |
 | governance | Round review plan evidence | `docs/harness/evidence/loop-governance-round-review-plan-20260617.md` | 机器/人工证据配套；保持 no_bulk_rewrite=true、business_status_impact=none | review_required |
+| governance | Five-segment review evidence | `docs/harness/evidence/loop-governance-five-segment-review-20260617.md` | 记录 LEDB-002-RD-002：212/209/208 可进入 targeted annotation，211/210 保持 index-level exception | review_required |
+| governance | Truth-field review evidence | `docs/harness/evidence/loop-governance-truth-field-review-20260617.md` | 记录 LEDB-001-RD-003：6 个 truth-field shell 轮次保持 index-level exception，不批量重写历史 | review_required |
 | governance | Efficiency debt locator validator | `python3 tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | 复扫 audit window 并校验 locator JSON/Markdown/README/index 与 hard window 清洁状态 | pass |
 | governance | Round review plan validator | `python3 tools/kds-sync/validate_loop_governance_round_review_plan.py` | 校验 plan 与 locator 同步、hard window 清洁、禁止批量改写和业务状态升级 | pass |
+| governance | Five-segment review validator | `python3 tools/kds-sync/validate_loop_governance_five_segment_review.py` | 校验 LEDB-002-RD-002、5 个受审轮次、禁止批量改写和业务状态升级 | pass |
+| governance | Truth-field review validator | `python3 tools/kds-sync/validate_loop_governance_truth_field_review.py` | 校验 LEDB-001-RD-003、6 个 shell 轮次、hard window truth 清洁和业务状态不升级 | pass |
 | governance | Efficiency debt validator | `python3 tools/kds-sync/validate_loop_governance_efficiency_backlog.py` | 验证 backlog、evidence、README 登记和 hard window 清洁状态 | pass |
 
 - 本 backlog 只登记治理效率债务；不重写历史事实，不替代 GFIS 实施主进程，不升级 accepted/integrated。
@@ -139,6 +279,16 @@ superseded_by: []
 
 - Round review plan evidence is registered in the `LOOP-GOV-EFF-DEBT-20260617` table above.
 - It converts the locator into `LEDB-001-RP-001`, `LEDB-002-RP-001`, and `LEDB-003-RP-001`; it does not rewrite historical records in bulk or change business status.
+
+## LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617 Loop governance five-segment review
+
+- Five-segment review evidence is registered in the `LOOP-GOV-EFF-DEBT-20260617` table above.
+- It records `LEDB-002-RD-002` for `GPCF-L4-GFIS-REPAIR-212` through `GPCF-L4-GFIS-REPAIR-208`; it does not rewrite historical records in bulk or change business status.
+
+## LOOP-GOV-TRUTH-FIELD-REVIEW-20260617 Loop governance truth-field review
+
+- Truth-field review evidence is registered in the `LOOP-GOV-EFF-DEBT-20260617` table above.
+- It records `LEDB-001-RD-003` for six current shell round records; it does not reconstruct truth fields, rewrite historical records in bulk, or change business status.
 
 ## LOOP-GOV-DASHBOARD-20260617 Loop governance dashboard
 
@@ -3054,8 +3204,8 @@ superseded_by: []
 | 83 | Loop Engineering self-correction | `02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md` | records GFIS Demo subject drift and SOP E2E failure as self-correction baseline | controlled |
 | 83 | Loop Engineering integrity validator | `PYTHONDONTWRITEBYTECODE=1 python3 tools/kds-sync/validate_loop_engineering_integrity.py` | requires GFIS runtime subject, Demo rejection, runtime validator output and no false completion claims | controlled |
 | 83 | GFIS runtime SOP validator | `PYTHONDONTWRITEBYTECODE=1 python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | `gfis_runtime_sop_e2e=repair_required`; `missing_inputs=5`; `missing_kds_source_paths=0`; `work_order_runtime=runtime_api_stale_code_or_reload_required` | repair_required |
-| 83 | GPCF self-correction gate | `PYTHONDONTWRITEBYTECODE=1 python3 tools/kds-sync/validate_loop_self_correction_gate.py` | `loop_self_correction_gate=blocked`; `project_group_score=79` | repair_required |
-| 83 | GPCF L4 minimum loop gate | `PYTHONDONTWRITEBYTECODE=1 python3 tools/kds-sync/validate_l4_minimum_closed_loop.py` | `l4_minimum_closed_loop=repair`; `project_group_score=79` | repair_required |
+| 83 | GPCF self-correction gate | `PYTHONDONTWRITEBYTECODE=1 python3 tools/kds-sync/validate_loop_self_correction_gate.py` | `loop_self_correction_gate=blocked`; `project_group_score=78` | repair_required |
+| 83 | GPCF L4 minimum loop gate | `PYTHONDONTWRITEBYTECODE=1 python3 tools/kds-sync/validate_l4_minimum_closed_loop.py` | `l4_minimum_closed_loop=repair`; `project_group_score=78` | repair_required |
 | 83 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-006.md` | records declared_rounds=1/15 and substantive_rounds=1/15 | partial |
 | 83 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-003.md` | records runtime runner evidence and WorkOrder stale-code blocker | partial |
 
@@ -3883,7 +4033,98 @@ superseded_by: []
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=5`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
 - 本轮只把 KDS discovery context 转为原始凭证采集请求；未接收真实凭证，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
+
+## GPCF-L4-GFIS-REPAIR-235 GFIS manual completion release-ready schema
+
+| # | Evidence | Command / Path | Result | Gate |
+|---:|---|---|---|---|
+| 310 | GFIS release-ready schema validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_schema.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_schema=pass ... release_ready_files_found=0 ... release_ready_packages=0 ... runtime_sop_e2e=repair_required` | pass |
+| 310 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_schema=manual_business_verification_release_ready_schema_ready_no_release`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 310 | GFIS demo/frontend E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 310 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 310 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-225.md` | records release-ready schema without claiming release fact | partial |
+| 310 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-235.md` | records control-plane update and schema-not-release policy | partial |
+
+- 本轮只定义未来真实 release-ready package 字段；`release_ready_files_found=0`、`release_ready_packages=0`、`hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`，仍为 `repair_required`。
+- 本轮未接收真实客户订单/平台订单回执、合规人工核验完成文件或 release-ready 文件，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
 - 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-236 GFIS release-ready package empty scan
+
+| # | Evidence | Command / Path | Result | Gate |
+|---:|---|---|---|---|
+| 312 | GFIS release-ready package negative fixture guard validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_negative_fixture_guard.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_negative_fixture_guard=pass ... negative_release_ready_package_count=6 ... rejected_release_ready_package_count=6 ... release_ready_packages=0 ... runtime_sop_e2e=repair_required` | pass |
+| 312 | GFIS release-ready package empty scan validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_empty_scan.py` in GFIS | `release_ready_files_found=0` after rejected examples were generated; rejected examples remain excluded from real release-ready package scans | pass |
+| 312 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_negative_fixture_guard=manual_business_verification_release_ready_package_negative_fixtures_rejected`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 312 | GFIS demo/frontend E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 312 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 312 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md` | records release-ready package negative fixture guard without claiming release fact | partial |
+| 312 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-237.md` | records control-plane update and weak-release-ready-package-not-proof policy | partial |
+| 311 | GFIS release-ready package empty scan validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_empty_scan.py` in GFIS | `gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_empty_scan=pass ... release_ready_files_found=0 ... release_ready_packages=0 ... runtime_sop_e2e=repair_required` | pass |
+| 311 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_empty_scan=manual_business_verification_release_ready_packages_empty_open_hold`；`gfis_runtime_sop_e2e=repair_required` | repair_required |
+| 311 | GFIS demo/frontend E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 311 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 311 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-226.md` | records release-ready package empty scan without claiming release fact | partial |
+| 311 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-236.md` | records control-plane update and empty-scan-not-release policy | partial |
+
+- 本轮只扫描未来真实 release-ready package 接收目录为空；`release_ready_files_found=0`、`release_ready_packages=0`、`hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`，仍为 `repair_required`。
+- 本轮未接收真实客户订单/平台订单回执、合规人工核验完成文件或 release-ready package，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
+
+- 本轮 312 只证明 6 类弱 release-ready package 会被拒收；`release_ready_packages=0`、`hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`，仍为 `repair_required`。
+- 本轮 312 未接收真实客户订单/平台订单回执、合规人工核验完成文件或有效 release-ready package，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
+- 本轮 312 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-238 GFIS release-ready package receiving hold gate
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 313 | GFIS release-ready package receiving hold gate builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_receiving_hold_gate.py` | 从 227 轮 negative fixture guard 生成真实接收目录 hold evidence | controlled |
+| 313 | GFIS release-ready package receiving hold gate validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_receiving_hold_gate.py` in GFIS | `source_negative_guard_items=1 receiving_directories_scanned=1 receiving_directory_exists=1 release_ready_files_found=0 schema_valid_release_ready_files=0 release_ready_packages=0 open_holds=1 hold_action_required=1 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 313 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_receiving_hold_gate=manual_business_verification_release_ready_package_receiving_hold_open_no_valid_package` | repair_required |
+| 313 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-receiving-hold-gate.json` | 真实接收目录扫描，排除 `rejected-examples/` 后有效 release-ready package 为 0 | partial |
+| 313 | GFIS demo/frontend E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 313 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 313 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-228.md` | records receiving hold gate without claiming release fact | partial |
+| 313 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-238.md` | records control-plane update and receiving-hold-not-release policy | partial |
+
+- 本轮 313 只证明真实 release-ready package 接收目录当前没有有效包；`release_ready_files_found=0`、`release_ready_packages=0`、`open_holds=1`、`hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`，仍为 `repair_required`。
+- 本轮 313 未接收真实客户订单/平台订单回执、合规人工核验完成文件或有效 release-ready package，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
+- 本轮 313 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-239 GFIS release-ready package hold release precheck
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 314 | GFIS release-ready package hold release precheck builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_hold_release_precheck.py` | 从 228 轮 receiving hold gate 生成 hold release precheck evidence | controlled |
+| 314 | GFIS release-ready package hold release precheck validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_hold_release_precheck.py` in GFIS | `source_receiving_hold_gate_items=1 release_precheck_items=1 blocked=1 release_requirements=8 unsatisfied_release_requirements=8 release_ready_files_found=0 schema_valid_release_ready_files=0 release_ready_packages=0 open_holds=1 hold_action_required=1 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 314 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_hold_release_precheck=manual_business_verification_release_ready_package_hold_release_blocked_no_valid_package` | repair_required |
+| 314 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-hold-release-precheck.json` | release-ready package hold release precheck；8 项 release requirements 均未满足 | partial |
+| 314 | GFIS demo/frontend E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 314 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 314 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-229.md` | records hold release precheck without claiming release fact | partial |
+| 314 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-239.md` | records control-plane update and hold-release-not-allowed policy | partial |
+
+- 本轮 314 只证明 release-ready package hold release 条件未满足；`release_ready_files_found=0`、`release_ready_packages=0`、`open_holds=1`、`hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`，仍为 `repair_required`。
+- 本轮 314 未接收真实客户订单/平台订单回执、合规人工核验完成文件或有效 release-ready package，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
+- 本轮 314 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-240 GFIS release-ready package release attempt hard-stop audit
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 315 | GFIS release-ready package release attempt hard-stop audit builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_attempt_hard_stop_audit.py` | 从 229 轮 hold release precheck 生成 release attempt hard-stop audit evidence | controlled |
+| 315 | GFIS release-ready package release attempt hard-stop audit validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_attempt_hard_stop_audit.py` in GFIS | `source_hold_release_precheck_items=1 release_attempt_audit_items=1 attempted_release=1 hard_stops=1 hard_stop_reasons=8 release_ready_files_found=0 schema_valid_release_ready_files=0 release_ready_packages=0 open_holds=1 hold_action_required=1 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` | pass |
+| 315 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_attempt_hard_stop_audit=manual_business_verification_release_ready_package_release_attempt_hard_stopped_no_valid_package` | repair_required |
+| 315 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-attempt-hard-stop-audit.json` | release attempt 被 8 个 hard-stop reason 阻断；有效 release-ready package 为 0 | partial |
+| 315 | GFIS demo/frontend E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 315 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 315 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-230.md` | records release attempt hard-stop audit without claiming release fact | partial |
+| 315 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-240.md` | records control-plane update and release-attempt-hard-stop policy | partial |
+
+- 本轮 315 只记录一次受控 release attempt 并 hard-stop；`release_ready_files_found=0`、`release_ready_packages=0`、`open_holds=1`、`hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`，仍为 `repair_required`。
+- 本轮 315 未接收真实客户订单/平台订单回执、合规人工核验完成文件或有效 release-ready package，未声明 GFIS SOP E2E 完成，未恢复 100/100，未升级 accepted/integrated。
+- 本轮 315 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
 
 ## GPCF-L4-GFIS-REPAIR-079 GFIS 辽宁远航客户确认 submission 运行层隔离
 
@@ -3914,6 +4155,99 @@ superseded_by: []
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
 - 本轮只证明 KDS 受控引用覆盖 SOP 12 阶段并能作为采集输入；不证明客户订单、签样、原料批次、生产记录、POD、WAES confirmation 或 KDS write receipt 已取得。
 - 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-243 GFIS release override approval request package
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 318 | GFIS release override approval request package builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_package.py` | 从 232 轮 approval intake empty scan 生成待人工审批请求包 | controlled |
+| 318 | GFIS release override approval request package validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_package.py` in GFIS | `request_items_prepared=1 request_items_authorized=0 request_items_dispatched=0 request_acknowledgements_found=0 request_owner_responses=0 valid_override_approvals=0 release_override_allowed=0 hold_release_allowed=0 runtime_sop_e2e=repair_required` | pass |
+| 318 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-package.json` | 请求包已准备；未授权、未派发、未回执、未批准 | partial |
+| 318 | GFIS runtime API | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_custom/gcfis_custom/api.py` | 新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_package` | controlled |
+| 318 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_package=manual_business_verification_release_ready_package_release_override_approval_requests_prepared_not_dispatched` | repair_required |
+| 318 | GFIS Demo E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 318 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 318 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-233.md` | records request package without claiming dispatch, approval, hold release, runtime intake, WAES, or verified state | partial |
+| 318 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-243.md` | records control-plane update and request-package-not-approval policy | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明待人工审批请求包已准备；`request_items_authorized=0`、`request_items_dispatched=0`、`request_acknowledgements_found=0`、`request_owner_responses=0`、`valid_override_approvals=0`、`release_override_allowed=0`、`hold_release_allowed=0`，仍为 `repair_required`。
+- GFIS 是现代精工 OEM 代加工生产期间和葛化自建工厂投产后共同使用的运行时系统；GFIS Demo 仅作为展示、培训和前端回归，不作为 SOP 主体。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-244 GFIS release override approval request dispatch authorization preflight
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 319 | GFIS release override approval request dispatch authorization preflight builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_authorization_preflight.py` | 从 233 轮 request package 生成派发授权预检 | controlled |
+| 319 | GFIS release override approval request dispatch authorization preflight validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_authorization_preflight.py` in GFIS | `dispatch_preflight_items=1 dispatch_preflight_blocked=1 dispatch_authorizations_found=0 dispatch_recipients_confirmed=0 dispatch_channels_confirmed=0 dispatch_allowed=0 request_items_dispatched=0 valid_override_approvals=0 release_override_allowed=0 hold_release_allowed=0 runtime_sop_e2e=repair_required` | pass |
+| 319 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-authorization-preflight.json` | 派发授权预检已建立；缺人工授权、收件方确认和派发通道确认，因此不得派发 | partial |
+| 319 | GFIS runtime API | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_custom/gcfis_custom/api.py` | 新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_authorization_preflight` | controlled |
+| 319 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_authorization_preflight=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_authorization_preflight_blocked` | repair_required |
+| 319 | GFIS Demo E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 319 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 319 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-234.md` | records dispatch authorization preflight without claiming dispatch, approval, hold release, runtime intake, WAES, or verified state | partial |
+| 319 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-244.md` | records control-plane update and dispatch-preflight-not-dispatch policy | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明派发授权预检已建立且被阻断；`dispatch_authorizations_found=0`、`dispatch_recipients_confirmed=0`、`dispatch_channels_confirmed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`request_acknowledgements_found=0`、`request_owner_responses=0`、`valid_override_approvals=0`、`release_override_allowed=0`、`hold_release_allowed=0`，仍为 `repair_required`。
+
+## GPCF-L4-GFIS-REPAIR-245 GFIS release override approval request dispatch confirmation gap scan
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 320 | GFIS release override approval request dispatch confirmation gap scan builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_gap_scan.py` | 从 234 轮 dispatch authorization preflight 生成派发确认缺口扫描 | controlled |
+| 320 | GFIS release override approval request dispatch confirmation gap scan validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_gap_scan.py` in GFIS | `confirmation_slots=1 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 acknowledgements_found=0 owner_responses=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_release_allowed=0 runtime_sop_e2e=repair_required` | pass |
+| 320 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-gap-scan.json` | 派发确认缺口已扫描；缺人工派发授权确认、收件方确认、派发通道确认、请求回执和责任方响应 | partial |
+| 320 | GFIS runtime API | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_custom/gcfis_custom/api.py` | 新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_gap_scan` | controlled |
+| 320 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_gap_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_gap_scan_open_no_confirmations` | repair_required |
+| 320 | GFIS Demo E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 320 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 320 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md` | records dispatch confirmation gap scan without claiming dispatch, approval, hold release, runtime intake, WAES, or verified state | partial |
+| 320 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-245.md` | records control-plane update and dispatch-confirmation-gap-not-dispatch policy | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明派发确认缺口已扫描且无真实确认文件；`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_release_allowed=0`，仍为 `repair_required`。
+- GFIS 是现代精工 OEM 代加工生产期间和葛化自建工厂投产后共同使用的运行时系统；GFIS Demo 仅作为展示、培训和前端回归，不作为 SOP 主体。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-246 GFIS release override approval request dispatch confirmation negative fixture guard
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 321 | GFIS release override approval request dispatch confirmation negative fixture guard builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_negative_fixture_guard.py` | 从 235 轮 dispatch confirmation gap scan 生成派发确认负例拒收门禁 | controlled |
+| 321 | GFIS release override approval request dispatch confirmation negative fixture guard validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_negative_fixture_guard.py` in GFIS | `negative_fixture_count=6 rejected_fixture_count=6 accepted_fixture_count=0 owner_response_allowed=0 submission_package_allowed=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_release_allowed=0 runtime_sop_e2e=repair_required` | pass |
+| 321 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.json` | 6 类弱派发确认负例全部拒收；真实派发确认仍为 0 | partial |
+| 321 | GFIS runtime API | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_custom/gcfis_custom/api.py` | 新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_negative_fixture_guard` | controlled |
+| 321 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_negative_fixtures_rejected` | repair_required |
+| 321 | GFIS Demo E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 321 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 321 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-236.md` | records negative fixture guard without claiming dispatch, approval, owner response, submission package, hold release, runtime intake, WAES, or verified state | partial |
+| 321 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-246.md` | records control-plane update and weak-dispatch-confirmation-not-proof policy | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明弱派发确认负例已拒收；`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`owner_response_allowed=0`、`submission_package_allowed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_release_allowed=0`，仍为 `repair_required`。
+- GFIS 是现代精工 OEM 代加工生产期间和葛化自建工厂投产后共同使用的运行时系统；GFIS Demo 仅作为展示、培训和前端回归，不作为 SOP 主体。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
+
+## GPCF-L4-GFIS-REPAIR-248 GFIS release override approval request dispatch confirmation receiving file scan
+
+| 轮次 | 证据 | 路径/命令 | 结果 | 状态 |
+|---|---|---|---|---|
+| 323 | GFIS release override approval request dispatch confirmation receiving file scan builder | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_file_scan.py` | 从 237 轮 receiving schema precheck 扫描真实派发确认接收目录 | controlled |
+| 323 | GFIS release override approval request dispatch confirmation receiving file scan validator | `python3 scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_file_scan.py` in GFIS | `confirmation_files_found=0 structure_valid_confirmations=0 valid_confirmations=0 invalid_confirmations=0 missing_confirmations=1 unexpected_files=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_items=1 open_holds=1 hold_action_required=1 hold_release_allowed=0 runtime_sop_e2e=repair_required` | pass |
+| 323 | GFIS JSON evidence | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-receiving-file-scan.json` | 真实接收目录已扫描；无 `.dispatch-confirmation.json`，open hold 继续有效 | partial |
+| 323 | GFIS runtime API | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_custom/gcfis_custom/api.py` | 新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_file_scan` | controlled |
+| 323 | GFIS runtime SOP validator | `python3 scripts/validate_gfis_runtime_sop_e2e.py` in GFIS | expected exit 2；新增 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_file_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_file_scan_no_real_confirmations` | repair_required |
+| 323 | GFIS Demo E2E regression | `npm run test:e2e` in GFIS | 26 passed；pass_demo_only, not runtime SOP acceptance | pass_demo_only |
+| 323 | GFIS diff hygiene | `git diff --check -- .` in GFIS | pass | pass |
+| 323 | GFIS loop round | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-238.md` | records receiving file scan without claiming dispatch confirmation, approval, owner response, submission package, hold release, runtime intake, WAES, or verified state | partial |
+| 323 | GPCF loop round | `docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md` | records control-plane update and receiving-file-scan-not-confirmation policy | partial |
+
+- 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
+- 本轮只证明真实派发确认接收目录当前无 `.dispatch-confirmation.json`；`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`owner_response_allowed=0`、`submission_package_allowed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_items=1`、`open_holds=1`、`hold_release_allowed=0`，仍为 `repair_required`。
+- GFIS 是现代精工 OEM 代加工生产期间和葛化自建工厂投产后共同使用的运行时系统；GFIS Demo 仅作为展示、培训和前端回归，不作为 SOP 主体。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
 
 ## GPCF-L4-GFIS-REPAIR-164 GFIS 运行层单据真实凭证责任方响应 schema
 

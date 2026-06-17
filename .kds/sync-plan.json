@@ -1,15 +1,93 @@
 {
-  "generated_at": "2026-06-17T04:50:31.391020+00:00",
+  "generated_at": "2026-06-17T13:21:12.641188+00:00",
   "status": "ready",
   "kds_space": "开发",
   "token_fingerprint": "bfd9553d",
-  "remote_documents": 721,
+  "remote_documents": 729,
   "create": [
     {
       "doc_id": "GPCF-DOC-8A21A00749",
       "source_path": "02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md",
       "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md",
       "hash_after": "16fe0bc43690c5f692017616b1ed23bbc1d2baddb403f12db37a49d5999050de"
+    },
+    {
+      "doc_id": "GPCF-DOC-038B869EBF",
+      "source_path": "03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md",
+      "hash_after": "257f97e79dcaa27d38f084214c84693f36ddb2c3af0e500a62802839e336a7db"
+    },
+    {
+      "doc_id": "GPCF-DOC-F72C6A953D",
+      "source_path": "03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md",
+      "hash_after": "fe545f7355425b9a3045bd63ca7bb0694eba58a8869b413e52656f58b67858f2"
+    },
+    {
+      "doc_id": "GPCF-DOC-59CCD41F2D",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md",
+      "hash_after": "2b0023bca8fb55f3bd6eb0ac734551b0d5cc4921d447d2fb6cc5359c1f6a3523"
+    },
+    {
+      "doc_id": "GPCF-DOC-3501E53D2C",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md",
+      "hash_after": "a1a6a9eaee82de478a8bd4faaa238873c2247bf2f206def19086acc80dcbf0b2"
+    },
+    {
+      "doc_id": "GPCF-DOC-95631D1C11",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md",
+      "hash_after": "6264d4310956541be9a216eaabfaa7ce7b70a40b8f3cf4defa9135491b4571e3"
+    },
+    {
+      "doc_id": "GPCF-DOC-312B5F9215",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md",
+      "hash_after": "ca71808d99842eb75fa68a647f9ac04d5f1c38fd77de94e96009c01727eb6961"
+    },
+    {
+      "doc_id": "GPCF-DOC-F8556A98E5",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md",
+      "hash_after": "35eca8dd58cf03b71616c1f300b8feb1694fcac23651bd7ecfcde2faf3204d68"
+    },
+    {
+      "doc_id": "GPCF-DOC-7B1983E735",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md",
+      "hash_after": "c7d85ddf4d854b0c364533bf8972e4ce2d4b0a142a385291e3571209676b78d4"
+    },
+    {
+      "doc_id": "GPCF-DOC-1A584CFD8F",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md",
+      "hash_after": "b81c6d50c7408f8b6c2d76f5b33548eca5113214e1e3cc23d2b946d69712ff23"
+    },
+    {
+      "doc_id": "GPCF-DOC-77DB51C32D",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md",
+      "hash_after": "4592b7f4148a4285290ff8b0741b7ee53978dc0adbc11101a7e290ffacc83e67"
+    },
+    {
+      "doc_id": "GPCF-DOC-8454CB5BDD",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md",
+      "hash_after": "56ff2e8b00d0a05774acaabc393fb7f50b48a23573f900a92afaf7e8953f2931"
+    },
+    {
+      "doc_id": "GPCF-DOC-C8062E9E2A",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md",
+      "hash_after": "c2c5965cd6d58752fc81025a6ddde036624602771d14d6130ff1f90ba0b44e23"
+    },
+    {
+      "doc_id": "GPCF-DOC-BA9F35E2AA",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md",
+      "hash_after": "039201624f5b7f4ff2d9c779cba657f079dacb09375f9d8db3065ceeaccdf934"
     },
     {
       "doc_id": "GPCF-DOC-C60ECF8A71",
@@ -28,6 +106,12 @@
       "source_path": "03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md",
       "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md",
       "hash_after": "616bbe0b1f2efba324f00e9e5548e1eb579c84be99145c9fc467fe4785379d0b"
+    },
+    {
+      "doc_id": "GPCF-DOC-BA893D6FF7",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md",
+      "hash_after": "4bc24d8b3158dd77e84e1ac717512dfa3ac01b24a150526c4d33eb443a5495b2"
     },
     {
       "doc_id": "GPCF-DOC-1CF8B46A53",
@@ -120,10 +204,34 @@
       "hash_after": "6402d37c16bce18992b87895d057f58c914595990e6f498eb27adad19e29e5f3"
     },
     {
+      "doc_id": "GPCF-DOC-BA5565D6F8",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md",
+      "hash_after": "91a5b52d68ae766e0ff81b54aca4d53b13818434b55102aab10a38af0d7d051c"
+    },
+    {
+      "doc_id": "GPCF-DOC-BEF1C8B38D",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md",
+      "hash_after": "a61bd2a97784f79ba40a6a11770e26cddc3475bd39712915c0920944609752e6"
+    },
+    {
+      "doc_id": "GPCF-DOC-2EEC93C354",
+      "source_path": "docs/harness/evidence/loop-governance-five-segment-review-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/loop-governance-five-segment-review-20260617.md",
+      "hash_after": "e3fe22d29a557b8342de31ed42a4540bdeedaa46713326b31368120336592c8f"
+    },
+    {
       "doc_id": "GPCF-DOC-E768727850",
       "source_path": "docs/harness/evidence/loop-governance-round-review-plan-20260617.md",
       "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md",
       "hash_after": "29f26b99f93c8d9576f0187d191a77bbb2f8e1317d8ab3bba911731baef3ca9e"
+    },
+    {
+      "doc_id": "GPCF-DOC-F8461F5919",
+      "source_path": "docs/harness/evidence/loop-governance-truth-field-review-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/loop-governance-truth-field-review-20260617.md",
+      "hash_after": "2435238edaf2dfa8748138a0efb23c400c0b1e95f2f626753a527b0726e73870"
     },
     {
       "doc_id": "GPCF-DOC-97A01B2970",
@@ -213,7 +321,91 @@
       "doc_id": "GPCF-DOC-0B2F2742DA",
       "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-028.md",
       "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-028.md",
-      "hash_after": "522547e5306be67481456d57103f3dd323ed26cfc6513061b7cced583de35cab"
+      "hash_after": "717128e43bdb773e006f842180aeae851bd5d06835a4586f0047284a43bac111"
+    },
+    {
+      "doc_id": "GPCF-DOC-5EDE1944EC",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md",
+      "hash_after": "018876605689301f0387be3f78e5dad3eddae995236cd8032cbebf5ee23724a2"
+    },
+    {
+      "doc_id": "GPCF-DOC-84A7C6F6E2",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md",
+      "hash_after": "a6e91926f62ec3145e5c208fce09329875ac13c306ea9eb8bba26810c950eaf5"
+    },
+    {
+      "doc_id": "GPCF-DOC-8A341D2005",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md",
+      "hash_after": "9ee03f93117e88f43b75c4161534bb1103149194275a3d084cd663110d62587d"
+    },
+    {
+      "doc_id": "GPCF-DOC-7ABB6F0F12",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md",
+      "hash_after": "cc637106a48b9f8ca098278bb3ec64ac4f2178c4820d79759d61a52ffb097035"
+    },
+    {
+      "doc_id": "GPCF-DOC-D079E70BA9",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md",
+      "hash_after": "bca640617e5e124a64d6f5b1a2fc7cd78eb7d9c8467e9b5146e90e9f4286de95"
+    },
+    {
+      "doc_id": "GPCF-DOC-856A557C07",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md",
+      "hash_after": "dd082b3612eba84be697c7665df90da1cec319671fa893ef3c885ce7c740bc67"
+    },
+    {
+      "doc_id": "GPCF-DOC-3B0051E50E",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md",
+      "hash_after": "f0a4c817d0b5675b256ec95c1fb1919c67ee9ce58d0826cd460cadb76ba4d522"
+    },
+    {
+      "doc_id": "GPCF-DOC-3B3929E14A",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md",
+      "hash_after": "b2fe81bab8e9ffa08ce1d89f1d1d404ed4872fe5ba36cd01bc43549864c1b68a"
+    },
+    {
+      "doc_id": "GPCF-DOC-2E5C5639B8",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md",
+      "hash_after": "5851103340ead70bdda7ea1d748322a724d88c3ebeddac7ef4041a09c3140311"
+    },
+    {
+      "doc_id": "GPCF-DOC-C739C4D9D1",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md",
+      "hash_after": "87fb14920b6093f2cccc41bc796cdfb0f0faad2e618ca55d4097403d2ad310e4"
+    },
+    {
+      "doc_id": "GPCF-DOC-3AB198703F",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md",
+      "hash_after": "54d2655898290bc6fa45228226922483170db8c52af95279ae127d081cd71831"
+    },
+    {
+      "doc_id": "GPCF-DOC-C0F0BD428C",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md",
+      "hash_after": "eb8ead35ca2d908e23735c6adab6193187b6b6a69d1333512859bdd50c022556"
+    },
+    {
+      "doc_id": "GPCF-DOC-4424900CA7",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md",
+      "hash_after": "c3b824371a9e94443e03b05cff2f5123e8c0e80956f64525d3eabaf49b082655"
+    },
+    {
+      "doc_id": "GPCF-DOC-6EAE781FDF",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md",
+      "hash_after": "4657872715e1ebc9b3f79da746cb6aa301492d8cf06565f31ccc989a651a40ec"
     },
     {
       "doc_id": "GPCF-DOC-E7875ABE5E",
@@ -231,7 +423,25 @@
       "doc_id": "GPCF-DOC-F3CC03DA11",
       "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md",
       "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md",
-      "hash_after": "9a9fd647b427a8024cc1a0dfe24cd258f5585a54a1aef92ad6009e78d2fef76c"
+      "hash_after": "65ba5643fcbfef0517dfe3a80aa96479303ea8ca470559129b8e25d69c4fbeed"
+    },
+    {
+      "doc_id": "GPCF-DOC-D34897E9C1",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md",
+      "hash_after": "9207d1355c81a9ccb23e9b493123fd8f8a04fadfe654b042c8a23dcaaed05124"
+    },
+    {
+      "doc_id": "GPCF-DOC-06249F6A3C",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md",
+      "hash_after": "d7c81170a65b4ab9c2865070700a41a9365b012b95baafdf95dc271d0b8d632f"
+    },
+    {
+      "doc_id": "GPCF-DOC-37D36F220B",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md",
+      "hash_after": "de3f23a91ef33c8139b8ea25fa923d271c8c4e34d8488a4ec107fd58cedc41a0"
     },
     {
       "doc_id": "GPCF-DOC-27101F3BEB",
@@ -336,7 +546,7 @@
       "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
       "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md",
       "hash_before": "8df04ed9e4372300672aacf5ec09615f6b1317ce80469cb5f29ae595ebaacffd",
-      "hash_after": "a65afee9914766184fadeff1f74391797f1f250248dc2bd1472ef304c259eccc",
+      "hash_after": "54b84b446ea307d6ad081a7a55a1bc59ed5a13a2cc0f35b0b851f1a7d56c7dac",
       "remote_version": "1781667545",
       "remote_etag": "8df04ed9e4372300"
     },
@@ -354,7 +564,7 @@
       "source_path": "02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md",
       "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md",
       "hash_before": "cc9585e64ed9b0ea6f4434bf3361810dd4cfcc7a1654ab76c67443f85ac08574",
-      "hash_after": "5a7b1aa106d56660aa2c58a88989066877e0cb35352f9a3aa478f6c1442df372",
+      "hash_after": "47b38607e5e587c7d541eeed5ea0e3c5798696cfed356d5a0652e5a07dfbb850",
       "remote_version": "1781668283",
       "remote_etag": "cc9585e64ed9b0ea"
     },
@@ -408,7 +618,7 @@
       "source_path": "03-data-ai-knowledge/README.md",
       "kds_path": "开发/05-KDS/03-data-ai-knowledge/README.md",
       "hash_before": "41c01184d335700c430d7b17a565e851a016a30f4da0d8b26033368fb4e97bed",
-      "hash_after": "087e97474b8a33be27f13f59b3a1a1d72c13a64c7fc1c78f4ed9becd8f604d0a",
+      "hash_after": "102a242e57e143ecd0f1065e45bc8e6157db7f5e0d2772eb4698a821851a162a",
       "remote_version": "1781668391",
       "remote_etag": "41c01184d335700c"
     },
@@ -458,11 +668,56 @@
       "remote_etag": "5a1b34c4f06d739a"
     },
     {
+      "doc_id": "GPCF-DOC-C8373F0E81",
+      "source_path": "08-evidence-samples/GFIS/README.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/README.md",
+      "hash_before": "e457ea2398cf6430b5821f34b54e28b4b6bf97e5896928718895287e9dedcd81",
+      "hash_after": "de7dcd45e1ff58eabe062f07179a948c7ffe5a1b6a419bbdaf5851856a04b019",
+      "remote_version": "1781667545",
+      "remote_etag": "e457ea2398cf6430"
+    },
+    {
+      "doc_id": "GPCF-DOC-3C99FD28DA",
+      "source_path": "08-evidence-samples/GFIS/evidence-index.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/evidence-index.md",
+      "hash_before": "5e29846d3a41010b6a0e22e1f7dc4f7f6f6a0fafd8f0347413893ea2c7953db4",
+      "hash_after": "a7b08d83ee737cb7d488bb43eb71d97923f391b564182500d069c22179812e62",
+      "remote_version": "1781333896",
+      "remote_etag": "5e29846d3a41010b"
+    },
+    {
+      "doc_id": "GPCF-DOC-8FA34C737E",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loop-state.md",
+      "hash_before": "cec7cdf1ab1aa2c99e7ae198df2701c43a3ba954df11bea8ab65bab032690c31",
+      "hash_after": "ab1b5530ec166d0936bfa9d441f83f4df34e3fc03299e1392296d6165704824e",
+      "remote_version": "1781333896",
+      "remote_etag": "cec7cdf1ab1aa2c9"
+    },
+    {
+      "doc_id": "GPCF-DOC-A3ED7AB63E",
+      "source_path": "08-evidence-samples/GFIS/loops/README.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/README.md",
+      "hash_before": "0bde08eebb02e5b52faea3d030413b80beb945636669121696668da3d76b04ca",
+      "hash_after": "b0afe233dd9a19f378d844ae276eabf53a8645a58e04ed4c62cc3e22efeff19f",
+      "remote_version": "1781333896",
+      "remote_etag": "0bde08eebb02e5b5"
+    },
+    {
+      "doc_id": "GPCF-DOC-9DAA6C3FEC",
+      "source_path": "08-evidence-samples/README.md",
+      "kds_path": "开发/04-WAES/08-evidence-samples/README.md",
+      "hash_before": "73a01111b86aa5f2d93d646ac74dfd8146ce7373ff952eb9990d60d1f7c9326b",
+      "hash_after": "e7fc4a2206a868e9579c376d8066e511c1825446191daa5513f67a04bfdf65eb",
+      "remote_version": "1781667545",
+      "remote_etag": "73a01111b86aa5f2"
+    },
+    {
       "doc_id": "GPCF-DOC-D77EFFB8F7",
       "source_path": "09-status/README.md",
       "kds_path": "开发/91-治理与验收/09-status/README.md",
       "hash_before": "7d753dd056aee38539b9c2b84396c70e7a7d82c10f4e5a2528c5830bef97d9e4",
-      "hash_after": "51ed93839962bb4650e5ae219faa6764d19c0554a690d56bf687fe0a1ae6e586",
+      "hash_after": "3ab8e2ab95bbf5df13da1b569e6a44c1a39001057f211d8be2a208c7e90fa53e",
       "remote_version": "1781668391",
       "remote_etag": "7d753dd056aee385"
     },
@@ -480,7 +735,7 @@
       "source_path": "09-status/globalcloud-document-control-register.md",
       "kds_path": "开发/91-治理与验收/09-status/globalcloud-document-control-register.md",
       "hash_before": "5cfca982241892ef0d49f0ad3485434770fe5335512527d4da4369415b7939ac",
-      "hash_after": "da2c3153bc515fb8906a2aae8925f35386d275ed1e4a986f818480e2c9d58d2c",
+      "hash_after": "701d3d71893e1655fa921dd312583ae4c6f1da945d31555a8fec00f1b2ea7ed7",
       "remote_version": "1781668427",
       "remote_etag": "5cfca982241892ef"
     },
@@ -489,7 +744,7 @@
       "source_path": "09-status/globalcloud-document-health-report.md",
       "kds_path": "开发/91-治理与验收/09-status/globalcloud-document-health-report.md",
       "hash_before": "884186f70a192da1736da37680dc183fb8eac271ff9957b51e52cc87c9c81c97",
-      "hash_after": "1744fceda589390cae688db22972241e38438b51deebbe54854a82ad4569ca9b",
+      "hash_after": "981c2478ed592708973bf614ce57cc62b2ea5090ebb96f5df5b867f22bc3156f",
       "remote_version": "1781668427",
       "remote_etag": "884186f70a192da1"
     },
@@ -498,7 +753,7 @@
       "source_path": "09-status/gpcf-project-status-matrix.md",
       "kds_path": "开发/91-治理与验收/09-status/gpcf-project-status-matrix.md",
       "hash_before": "f3dcc45890250e8e7e65ad1c9eeeda0490431bf9ef2e42bcbdfbb01501af4697",
-      "hash_after": "f965f61a81411b7a1a5f0ed3239978c7d36d6cb0fdb934aa1c3692a090f81807",
+      "hash_after": "73a0f17bc5ea90aba2d118f744b48c4f8b8d2735df4ac0a9d59db6e5bd6edcd1",
       "remote_version": "1781667545",
       "remote_etag": "f3dcc45890250e8e"
     },
@@ -507,7 +762,7 @@
       "source_path": "09-status/kds-development-space-sync-register.md",
       "kds_path": "开发/91-治理与验收/09-status/kds-development-space-sync-register.md",
       "hash_before": "76d2ee4081afd73856898a0fe6d11d2af967b416ad875a7b3bf6f4dab52fc396",
-      "hash_after": "bdd8ffcfa0cc37cc89f3abd81d580381559ad72c2fa96e45321e3381e3a0b6ef",
+      "hash_after": "b8fc1b67a082064e735726e4193824e3a038ae6779d5691a99d64c9701eeb7d5",
       "remote_version": "1781668391",
       "remote_etag": "76d2ee4081afd738"
     },
@@ -516,7 +771,7 @@
       "source_path": "docs/README.md",
       "kds_path": "开发/05-KDS/docs/README.md",
       "hash_before": "8358a75d0543bcc3a20d6771a967e352e892ad304ac5e0dc91e07a89d634f432",
-      "hash_after": "66878604db9ef1cfa004ef96a1179bf68f4a576f3eb3fb75795d93b836227bc0",
+      "hash_after": "364ebe4100e4b04555f7e72d17bddc456e972d85a74c19fedd4e3f94061aea84",
       "remote_version": "1781668391",
       "remote_etag": "8358a75d0543bcc3"
     },
@@ -588,7 +843,7 @@
       "source_path": "docs/harness/README.md",
       "kds_path": "开发/05-KDS/docs/harness/README.md",
       "hash_before": "16c85a5ab821cd499fecaff65aef68f9ad7470eebbb9995185ff158d1c8b69be",
-      "hash_after": "5732754ad9c941471b6d68985cb93870e56a04f9b85e0d35557c8a4a57f18725",
+      "hash_after": "77c066032051470acb0785170325545a8dfbc4a5cb12a9301725149b17f6a42e",
       "remote_version": "1781668391",
       "remote_etag": "16c85a5ab821cd49"
     },
@@ -597,7 +852,7 @@
       "source_path": "docs/harness/evidence/README.md",
       "kds_path": "开发/05-KDS/docs/harness/evidence/README.md",
       "hash_before": "fa3b9661c4c3a61779a8c27d5d47152f9a6cdea387991f8c6fa6667778071d2f",
-      "hash_after": "cfaaaa7c688fcbc4ae56aa41c50e92013f03aca3510f4a38ad5cbc8234c2b470",
+      "hash_after": "98eddfb221b4d1c2ed88c062226c3317b2c5cc451112b717c615374a527eb42e",
       "remote_version": "1781668458",
       "remote_etag": "fa3b9661c4c3a617"
     },
@@ -606,7 +861,7 @@
       "source_path": "docs/harness/evidence/evidence-index.md",
       "kds_path": "开发/12-GPCF/docs/harness/evidence/evidence-index.md",
       "hash_before": "62780d353192625adc854752ea3a9ef2714795e3ba3c6016db49f1d86d5f8ce8",
-      "hash_after": "af2bc5f8f732e75e031c5e8b3a50ca5686706d63b549eaee6bf63e024d281202",
+      "hash_after": "8ed78d21fce6ab63b27fbe8eab849a4a354467d8f78b0ccddd665af54d51e63c",
       "remote_version": "1781668458",
       "remote_etag": "62780d353192625a"
     },
@@ -633,16 +888,25 @@
       "source_path": "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md",
       "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md",
       "hash_before": "1a3099b4401b9e5b8d2aa80cd0cb5410101e26833d8e3ee87b8dabd662ebbb6c",
-      "hash_after": "dd3796c93359a51ddb6b27df798326636f3850518e3919fbe7baeb65cdc86f39",
+      "hash_after": "c08d9fe066b17f9bbf15166d0512db086e5a78f4c783ee3ce2cb894d086548e4",
       "remote_version": "1781668391",
       "remote_etag": "1a3099b4401b9e5b"
+    },
+    {
+      "doc_id": "GPCF-DOC-81B958F838",
+      "source_path": "docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "hash_before": "bb20a7254c86363b568e632e2e2c3517f4743917ef4e57b48d7ef72659d5af40",
+      "hash_after": "b695106343b887393d564a750e44aa8391b2bd9fcfc3ea8cd4b65625c76722b0",
+      "remote_version": "1781702332",
+      "remote_etag": "bb20a7254c86363b"
     },
     {
       "doc_id": "GPCF-DOC-7183C7D7D1",
       "source_path": "docs/harness/loop-state.md",
       "kds_path": "开发/12-GPCF/docs/harness/loop-state.md",
       "hash_before": "6452926fccc0f8728abf0e29cdace96f5c86f75271cc42bd3b8197ad95885b41",
-      "hash_after": "7f1ce8a261426983a2927a196e96e6f91ae33e5ec5e84739c5e9b00fff9325e9",
+      "hash_after": "03ae7ce570390946b2f54592dcd8c52086161a59700df3a3455b8bb2eb180339",
       "remote_version": "1781668458",
       "remote_etag": "6452926fccc0f872"
     },
@@ -651,7 +915,7 @@
       "source_path": "docs/harness/loops/README.md",
       "kds_path": "开发/12-GPCF/docs/harness/loops/README.md",
       "hash_before": "e722b8a59a8b794ad11b19f4e196305fce73551ce961c331e7b4ece2a272a94f",
-      "hash_after": "423cdf75f4d0c2ce6292bc93f13612b5edc867eebc173185f130a475ab867d71",
+      "hash_after": "b3428dbbe20488253f8ebae0154e654f76e7da08ece7ffbd37a930f1a8a5d291",
       "remote_version": "1781668458",
       "remote_etag": "e722b8a59a8b794a"
     },
