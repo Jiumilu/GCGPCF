@@ -50,12 +50,14 @@ loop_round_efficiency_audit=pass total_rounds=314 audit_checked=30 hard_checked=
 | `GPCF-L4-GFIS-REPAIR-211` | declared_rounds, substantive_rounds, generated_items, batch_generated, substance_gate, stop_type | index_level_exception | Front matter shell only; no historical body supports safe truth-field reconstruction |
 | `GPCF-L4-GFIS-REPAIR-213` | declared_rounds, substantive_rounds, generated_items, batch_generated, substance_gate, stop_type | index_level_exception | Front matter shell only; no historical body supports safe truth-field reconstruction |
 | `GPCF-L4-GFIS-REPAIR-215` | declared_rounds, substantive_rounds, generated_items, batch_generated, substance_gate, stop_type | index_level_exception | Front matter shell only; no historical body supports safe truth-field reconstruction |
-| `GPCF-L4-GFIS-REPAIR-218` | declared_rounds, substantive_rounds, generated_items, batch_generated, substance_gate, stop_type | index_level_exception | Front matter shell only; no historical body supports safe truth-field reconstruction |
+| `GPCF-L4-GFIS-REPAIR-218` | none | historical_annotation_present | Round body now contains input, action, output, validation, feedback, and truth-count fields |
 
 ## Governance Outcome
 
-- The six reviewed records remain index-level exceptions until a separate,
+- Five reviewed shell records remain index-level exceptions until a separate,
   explicit historical migration plan is authorized.
+- `GPCF-L4-GFIS-REPAIR-218` now has a historical annotation body and truth-count
+  fields, so it no longer requires shell exception treatment.
 - The latest hard window remains clean for truth fields.
 - No reviewed item changes GFIS runtime status, source-of-record status,
   runtime primary key readiness, review queue, runtime intake, WAES review,

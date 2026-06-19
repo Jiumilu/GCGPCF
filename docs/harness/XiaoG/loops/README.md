@@ -37,5 +37,5 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-CC7297EBCF | loops | docs/harness/XiaoG/loops/README.md | XiaoG | controlled |
-| GPCF-DOC-871E18BD6E | Loop Round GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | XiaoG | controlled |
+| GPCF-DOC-871E18BD6E | loop-round-GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | XiaoG | controlled |
 | GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | XiaoG | controlled |

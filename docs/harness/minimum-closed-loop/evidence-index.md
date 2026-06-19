@@ -20,7 +20,7 @@ superseded_by: []
 
 | Project | Evidence Anchor | Status |
 |---|---|---|
-| GFIS | `GPCF-L4-GFIS-REPAIR-225` / `GFIS-RUNTIME-SOP-E2E-215` | repair_required |
+| GFIS | `GPCF-L4-GFIS-DEV-READY-SYNC-001` / `GFIS-RUNTIME-SOP-E2E-DEV-READY-001` / development_ready pass; real business lane repair_required | repair_required |
 | GPC | `GPCF-L4-007` | ready_for_review |
 | PVAOS | `GPCF-L4-006` | ready_for_review |
 | WAES | `GPCF-L4-001` / WAES governance gates | ready_for_review |
@@ -31,10 +31,10 @@ superseded_by: []
 | XiaoC | `XiaoC-L4-009` | ready_for_review |
 | XGD | `XGD-L4-010` | ready_for_review |
 | XiaoG | `XiaoG-L4-011` | ready_for_review |
-| GPCF | `GPCF-L4-GFIS-REPAIR-225` / control-plane repair evidence | repair_required |
+| GPCF | `GPCF-L4-GFIS-DEV-READY-SYNC-001` / control-plane development_ready audit plus repair evidence | repair_required |
 
 Round ID | GPCF-L4-002
 Round ID | GPCF-L4-003
 Round ID | GPCF-L4-004
 
-本索引只汇总最小闭环 evidence anchor；GFIS 仍因真实 source-of-record、dispatch confirmation、WAES confirmation、KDS write receipt 和 runtime primary key 缺失保持 `repair_required`。
+本索引只汇总最小闭环 evidence anchor；GFIS 当前已达到 `development_ready=pass`，但仍因真实 source-of-record、dispatch confirmation、WAES confirmation、KDS write receipt、runtime primary key、review queue item、runtime intake item、WAES review result 和 verified artifact 缺失保持 `repair_required`。`GFIS-RUNTIME-SOP-E2E-DEV-READY-001` 只证明开发态完整闭环可机检，不证明业务闭环完成。

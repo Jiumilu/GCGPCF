@@ -6,15 +6,15 @@
 
 | project | folder | document_count |
 | --- | --- | --- |
-| GFIS | 01-GFIS | 44 |
+| GFIS | 01-GFIS | 75 |
 | GPC | 02-GPC | 29 |
 | PVAOS | 03-PVAOS | 7 |
 | WAES | 04-WAES | 15 |
-| KDS | 05-KDS | 117 |
+| KDS | 05-KDS | 135 |
 | Brain | 06-Brain | 6 |
 | PKC | 07-PKC | 6 |
-| XiaoC | 08-XiaoC | 52 |
+| XiaoC | 08-XiaoC | 45 |
 | XGD | 09-XGD | 6 |
 | XiaoG | 10-XiaoG | 7 |
 | MMC | 11-MMC | 8 |
-| GPCF | 12-GPCF | 428 |
+| GPCF | 12-GPCF | 547 |

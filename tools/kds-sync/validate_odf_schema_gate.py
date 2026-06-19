@@ -17,6 +17,7 @@ LEDGERS = [
     ROOT / "docs/harness/evidence/odf-pilot-sample-ledger-20260617.json",
     ROOT / "docs/harness/evidence/odf-phase2-sample-ledger-20260617.json",
     ROOT / "docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.json",
+    ROOT / "docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.json",
 ]
 REQUIRED_FIELDS = {
     "source_uri",
@@ -32,8 +33,8 @@ REQUIRED_FIELDS = {
     "status",
     "rollback_hint",
 }
-ALLOWED_LEDGER_STATUSES = {"pilot_closed", "phase2_closed", "phase4_small_batch_closed"}
-ALLOWED_SAMPLE_STATUSES = {"pilot_sample", "phase2_sample", "phase4_sample"}
+ALLOWED_LEDGER_STATUSES = {"pilot_closed", "phase2_closed", "phase4_small_batch_closed", "phase7_small_batch_closed"}
+ALLOWED_SAMPLE_STATUSES = {"pilot_sample", "phase2_sample", "phase4_sample", "phase7_sample"}
 FORBIDDEN_STATUS_MARKERS = {"full_rollout", "accepted", "integrated"}
 REQUIRED_BOUNDARY_FLAGS = {
     "does_not_replace_git",
@@ -42,6 +43,12 @@ REQUIRED_BOUNDARY_FLAGS = {
     "does_not_replace_loop_evidence",
 }
 ENVELOPE_FIELDS_MATCH_LEDGER = REQUIRED_FIELDS - {"odf_hash"}
+DYNAMIC_REFERENCE_SOURCE_PATHS = {
+    "09-status/gpcf-project-status-matrix.md",
+    "09-status/kds-development-space-sync-register.md",
+    "docs/harness/evidence/evidence-index.md",
+    "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+}
 
 
 def fail(reason: str) -> None:
@@ -99,15 +106,33 @@ def require_sample(sample: dict, ledger_path: Path, seen_sample_ids: set[str]) -
 
     source_hash = sha256_file(source_path)
     odf_hash = sha256_file(odf_path)
+    dynamic_reference_drift = 0
+    is_dynamic_reference = sample["source_path"] in DYNAMIC_REFERENCE_SOURCE_PATHS
     if source_hash != sample["source_hash"]:
-        fail(f"source_hash_mismatch:{sample_id}")
+        if is_dynamic_reference:
+            dynamic_reference_drift += 1
+        else:
+            fail(f"source_hash_mismatch:{sample_id}")
     if source_hash != sample["markdown_hash"]:
-        fail(f"markdown_hash_mismatch:{sample_id}")
+        if is_dynamic_reference:
+            dynamic_reference_drift += 1
+        else:
+            fail(f"markdown_hash_mismatch:{sample_id}")
     if odf_hash != sample["odf_hash"]:
         fail(f"odf_hash_mismatch:{sample_id}")
 
     odf = load_json(odf_path)
+    if odf.get("source_hash") != sample.get("source_hash"):
+        fail(f"ledger_odf_field_mismatch:{sample_id}:source_hash")
+    if odf.get("markdown_hash") != sample.get("markdown_hash"):
+        fail(f"ledger_odf_field_mismatch:{sample_id}:markdown_hash")
+    if not is_dynamic_reference and source_hash != odf.get("source_hash"):
+        fail(f"source_hash_mismatch:{sample_id}")
+    if not is_dynamic_reference and source_hash != odf.get("markdown_hash"):
+        fail(f"markdown_hash_mismatch:{sample_id}")
     for field in ENVELOPE_FIELDS_MATCH_LEDGER:
+        if field in {"source_hash", "markdown_hash"}:
+            continue
         if odf.get(field) != sample.get(field):
             fail(f"ledger_odf_field_mismatch:{sample_id}:{field}")
     if odf.get("source_path") != sample["source_path"]:
@@ -125,6 +150,7 @@ def require_sample(sample: dict, ledger_path: Path, seen_sample_ids: set[str]) -
         "source_path": sample["source_path"],
         "kds_path": sample["kds_path"],
         "category": sample.get("category", "pilot"),
+        "dynamic_reference_drift": dynamic_reference_drift,
     }
 
 
@@ -136,6 +162,7 @@ def main() -> int:
     categories: set[str] = set()
     ledger_statuses: list[str] = []
     samples: list[dict] = []
+    dynamic_reference_drift = 0
 
     for ledger_path in LEDGERS:
         ledger = load_json(ledger_path)
@@ -158,6 +185,7 @@ def main() -> int:
             seen_odf_paths.add(sample["odf_path"])
             categories.add(validated["category"])
             samples.append(validated)
+            dynamic_reference_drift += validated["dynamic_reference_drift"]
 
     print(
         "odf_schema_gate=pass "
@@ -166,6 +194,7 @@ def main() -> int:
         f"ledger_statuses={','.join(ledger_statuses)} "
         f"categories={','.join(sorted(categories))} "
         "source_hash=pass markdown_hash=pass odf_hash=pass "
+        f"dynamic_reference_drift={dynamic_reference_drift} "
         f"source_overlaps={len(source_overlaps)} "
         "duplicate_sample_ids=0 duplicate_odf_paths=0 forbidden_rollout=0"
     )

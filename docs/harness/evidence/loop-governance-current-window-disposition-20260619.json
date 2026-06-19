@@ -1,0 +1,120 @@
+{
+  "evidence_id": "LOOP-GOV-CURRENT-WINDOW-DISPOSITION-20260619",
+  "evidence_type": "loop_governance_current_window_disposition",
+  "created_at": "2026-06-19",
+  "project": "GPCF",
+  "status": "review_required",
+  "source_evidence": "docs/harness/evidence/loop-governance-current-window-review-20260619.json",
+  "source_command": "python3 tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py",
+  "scope": {
+    "truth_records_reviewed": 2,
+    "five_segment_records_reviewed": 7,
+    "hard_missing_truth_fields": 0,
+    "hard_missing_five_segment": 0,
+    "no_bulk_rewrite": true,
+    "business_status_impact": "none",
+    "accepted_integrated_allowed": false,
+    "history_rewrite_allowed": false
+  },
+  "truth_field_dispositions": [
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-252",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-252.md",
+      "decision": "index_level_shell_exception",
+      "missing_fields": [
+        "declared_rounds",
+        "substantive_rounds",
+        "generated_items",
+        "batch_generated",
+        "substance_gate",
+        "stop_type"
+      ],
+      "next_action": "Keep visible as historical front matter shell debt unless a separate migration plan is authorized."
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-254",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-254.md",
+      "decision": "index_level_shell_exception",
+      "missing_fields": [
+        "declared_rounds",
+        "substantive_rounds",
+        "generated_items",
+        "batch_generated",
+        "substance_gate",
+        "stop_type"
+      ],
+      "next_action": "Keep visible as historical front matter shell debt unless a separate migration plan is authorized."
+    }
+  ],
+  "five_segment_dispositions": [
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-252",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-252.md",
+      "decision": "index_level_shell_exception",
+      "missing_segments": ["input", "action", "output", "check", "feedback"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-254",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-254.md",
+      "decision": "index_level_shell_exception",
+      "missing_segments": ["input", "action", "output", "check", "feedback"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-269",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-269.md",
+      "decision": "targeted_annotation_ready",
+      "missing_segments": ["feedback"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-270",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-270.md",
+      "decision": "targeted_annotation_ready",
+      "missing_segments": ["action"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-271",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-271.md",
+      "decision": "targeted_annotation_ready",
+      "missing_segments": ["input", "action", "output", "feedback"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-272",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-272.md",
+      "decision": "targeted_annotation_ready",
+      "missing_segments": ["input", "action", "output", "feedback"]
+    },
+    {
+      "round_id": "GPCF-L4-GFIS-REPAIR-273",
+      "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-273.md",
+      "decision": "targeted_annotation_ready",
+      "missing_segments": ["input", "action", "output", "feedback"]
+    }
+  ],
+  "review_dispositions": [
+    {
+      "disposition_id": "LEDB-001-RD-005",
+      "backlog_item": "LEDB-001",
+      "decision": "current_window_disposition_recorded",
+      "evidence_ref": "docs/harness/evidence/loop-governance-current-window-disposition-20260619.json",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Keep 252 and 254 visible as shell exceptions; do not rewrite historical rounds without a separate plan."
+    },
+    {
+      "disposition_id": "LEDB-002-RD-004",
+      "backlog_item": "LEDB-002",
+      "decision": "current_window_disposition_recorded",
+      "evidence_ref": "docs/harness/evidence/loop-governance-current-window-disposition-20260619.json",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Five targeted annotation candidates are identified; no bulk rewrite is authorized."
+    }
+  ],
+  "non_claims": [
+    "This evidence does not rewrite historical round records.",
+    "This evidence does not prove GFIS runtime SOP E2E passed.",
+    "This evidence does not close LEDB-001, LEDB-002, or LEDB-003 globally.",
+    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status.",
+    "This evidence does not authorize production write, external API write, schema sync, bench migrate, deployment, commit, or push."
+  ]
+}

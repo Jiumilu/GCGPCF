@@ -1,0 +1,3143 @@
+{
+  "generated_at": "2026-06-19T03:24:36.532001+00:00",
+  "plan_path": ".kds/sync-plan.json",
+  "plan_snapshot": {
+    "status": "ready",
+    "remote_documents": 742,
+    "create": 225,
+    "update": 160,
+    "skip": 98,
+    "self_refresh": 2,
+    "conflicts": 0,
+    "missing_local": 0
+  },
+  "summary": {
+    "by_action": {
+      "create": 225,
+      "update": 160,
+      "self_refresh": 2
+    },
+    "by_bucket": {
+      "other_backlog": 39,
+      "kds_knowledge_backlog": 39,
+      "agent_team_backlog": 14,
+      "loop_evidence_backlog": 228,
+      "status_register_backlog": 9,
+      "harness_evidence_backlog": 20,
+      "closure_related_governance": 4,
+      "architecture_backlog": 7,
+      "generated_readme_surface": 22,
+      "evidence_sample_backlog": 2,
+      "self_refresh_control_surface": 3
+    },
+    "by_disposition": {
+      "requires_manual_triage": 39,
+      "requires_human_review": 39,
+      "requires_owner_review": 14,
+      "requires_batch_review": 228,
+      "directed_sync_candidate": 13,
+      "requires_evidence_batch_review": 22,
+      "requires_architecture_batch_review": 7,
+      "hold_until_self_refresh_stable": 22,
+      "hold_self_refresh": 3
+    }
+  },
+  "items": [
+    {
+      "action": "create",
+      "source_path": ".codex/skills/globalcloud-document-governance/SKILL.md",
+      "kds_path": "开发/12-GPCF/.codex/skills/globalcloud-document-governance/SKILL.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": ".codex/skills/globalcloud-loop-orchestrator/SKILL.md",
+      "kds_path": "开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/SKILL.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": ".codex/skills/ui-ux-pro-max/SKILL.md",
+      "kds_path": "开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材真实资料接收任务包与人工评测演练.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批空白执行台账.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md",
+      "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队首版周报.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首版周报.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首轮实施前验证入口判断.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队首轮实施前验证包总表.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "create",
+      "source_path": "06-workstreams/宪衡专项会话状态报告.md",
+      "kds_path": "开发/12-GPCF/06-workstreams/宪衡专项会话状态报告.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "06-workstreams/宪衡专项执行版包-侧线程草案.md",
+      "kds_path": "开发/12-GPCF/06-workstreams/宪衡专项执行版包-侧线程草案.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-223.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-223.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-224.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-224.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-225.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-225.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-226.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-226.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-228.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-228.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-229.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-229.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-230.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-230.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-231.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-231.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-232.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-232.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-233.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-233.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-234.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-234.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-235.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-236.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-236.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-237.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-237.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-238.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-238.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-239.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-239.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-240.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-240.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-241.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-241.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-242.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-242.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-243.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-243.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-244.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-244.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-245.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-245.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-246.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-246.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-247.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-247.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-248.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-248.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-249.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-249.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-250.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-250.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-251.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-251.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-252.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-252.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-253.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-253.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-254.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-254.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-255.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-255.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-256.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-256.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-257.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-257.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-258.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-258.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-259.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-259.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-260.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-260.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-261.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-261.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-262.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-262.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-263.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-263.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-264.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-264.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-265.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-265.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-266.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-266.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-267.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-267.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-268.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-268.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-269.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-269.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-002.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-002.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "09-status/kds-phase10-governance-sustainment-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-committee-review-queue-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-queue-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-committee-review-schema-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-schema-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-committee-review-template-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-template-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-human-confirmation-queue-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-queue-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/git-risk-classification-20260617.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/git-risk-classification-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/loop-governance-current-window-review-20260619.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-current-window-review-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-dashboard-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/loop-governance-five-segment-review-20260617.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-five-segment-review-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/loop-governance-round-review-plan-20260617.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/evidence/loop-governance-truth-field-review-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/loop-governance-truth-field-review-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-12-project-document-control-queue-lr013.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-12-project-document-control-queue-lr013.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-dependency-risk-rollback-register-lr011.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-dependency-risk-rollback-register-lr011.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-gfis-evidence-mirror-register-lr004.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-gfis-evidence-mirror-register-lr004.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-git-version-gate-evidence-lr007.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-git-version-gate-evidence-lr007.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-gpc-manifest-loopstate-pack-lr026.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-gpc-manifest-loopstate-pack-lr026.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-kds-local-mirror-dryrun-package-lr006.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-kds-local-mirror-dryrun-package-lr006.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-l3-handoff-readiness-package-lr014.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-l3-handoff-readiness-package-lr014.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-loop-three-piece-control-integration-lr002.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-loop-three-piece-control-integration-lr002.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-project-startup-template-hardening-lr029.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-project-startup-template-hardening-lr029.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/gpcf-pvaos-project-startup-pack-lr018.md",
+      "kds_path": "开发/12-GPCF/docs/harness/gpcf-pvaos-project-startup-pack-lr018.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-020.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-020.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-021.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-021.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-022.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-022.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-023.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-023.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-024.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-024.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-025.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-025.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-026.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-026.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-027.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-027.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-028.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-028.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-036.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-037.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-038.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-039.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-040.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-041.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-042.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-043.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-043.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-044.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-044.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-045.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-045.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-046.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-046.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-047.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-047.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-048.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-048.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-049.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-049.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-050.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-050.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-051.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-051.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-052.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-052.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-053.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-053.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-DEV-SYNC-001.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-DEV-SYNC-001.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REAL-SYNC-001.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REAL-SYNC-001.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REAL-SYNC-002.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REAL-SYNC-002.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-223.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-224.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-224.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-226.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-229.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-230.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-231.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-231.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-232.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-232.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-233.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-233.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-234.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-234.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-235.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-235.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-236.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-236.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-237.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-237.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-238.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-238.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-239.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-239.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-240.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-240.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-241.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-241.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-243.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-243.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-244.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-244.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-245.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-245.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-246.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-246.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-247.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-247.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-249.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-249.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-250.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-250.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-251.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-251.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-252.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-252.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-253.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-253.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-254.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-254.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-255.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-255.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-256.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-256.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-257.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-257.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-258.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-258.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-259.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-259.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-260.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-260.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-261.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-261.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-262.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-262.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-263.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-263.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-264.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-264.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-265.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-265.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-266.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-266.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-267.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-267.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-268.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-268.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-269.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-269.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-270.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-270.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-271.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-271.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-272.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-272.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-273.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-273.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-274.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-274.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-275.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-275.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-276.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-276.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-277.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-277.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-278.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-278.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "create",
+      "source_path": "docs/harness/multi-tenant-permission-design.md",
+      "kds_path": "开发/12-GPCF/docs/harness/multi-tenant-permission-design.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": ".okf/governance/index.md",
+      "kds_path": "开发/12-GPCF/.okf/governance/index.md",
+      "bucket": "closure_related_governance",
+      "disposition": "directed_sync_candidate",
+      "reason": "Phase 6-10 governance and OKF/ODF closure surface"
+    },
+    {
+      "action": "update",
+      "source_path": ".okf/kds/index.md",
+      "kds_path": "开发/12-GPCF/.okf/kds/index.md",
+      "bucket": "closure_related_governance",
+      "disposition": "directed_sync_candidate",
+      "reason": "Phase 6-10 governance and OKF/ODF closure surface"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GPC方向全面分析报告.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GPC方向全面分析报告.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GlobalCloud智慧工厂项目群控制表.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群控制表.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系全链路事件与证据闭环图.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GlobalCloud绿色供应链体系四流综合架构分析与优化方案.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系四流综合架构分析与优化方案.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "bucket": "architecture_backlog",
+      "disposition": "requires_architecture_batch_review",
+      "reason": "cross-project architecture"
+    },
+    {
+      "action": "update",
+      "source_path": "01-architecture/README.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/GlobalCloud智能体团队软件全过程实施与交付控制规范.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud智能体团队软件全过程实施与交付控制规范.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/GlobalCloud绿色供应链体系交付物完成判定规范.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系交付物完成判定规范.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/GlobalCloud绿色供应链体系实施项目控制与量化机制.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系实施项目控制与量化机制.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/README.md",
+      "kds_path": "开发/91-治理与验收/02-governance/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/loop/README.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/ops/README.md",
+      "kds_path": "开发/91-治理与验收/02-governance/ops/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "02-governance/ops/ecs-access-control-and-network-boundary.md",
+      "kds_path": "开发/91-治理与验收/02-governance/ops/ecs-access-control-and-network-boundary.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md",
+      "bucket": "kds_knowledge_backlog",
+      "disposition": "requires_human_review",
+      "reason": "knowledge or candidate source; no blind write"
+    },
+    {
+      "action": "update",
+      "source_path": "03-data-ai-knowledge/README.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "04-ui-delivery/GlobalCloud绿色供应链体系界面实施排期表.md",
+      "kds_path": "开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系界面实施排期表.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md",
+      "kds_path": "开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "04-ui-delivery/README.md",
+      "kds_path": "开发/02-GPC/04-ui-delivery/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "05-agent-team/GlobalCloud智能体团队专项执行版包模板.md",
+      "kds_path": "开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队专项执行版包模板.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "update",
+      "source_path": "05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md",
+      "kds_path": "开发/12-GPCF/05-agent-team/GlobalCloud智能体团队正式实施开发前准备评分文档纳入覆盖矩阵.md",
+      "bucket": "agent_team_backlog",
+      "disposition": "requires_owner_review",
+      "reason": "agent-team planning surface"
+    },
+    {
+      "action": "update",
+      "source_path": "05-agent-team/README.md",
+      "kds_path": "开发/08-XiaoC/05-agent-team/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "06-workstreams/README.md",
+      "kds_path": "开发/08-XiaoC/06-workstreams/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "08-evidence-samples/GFIS/README.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "08-evidence-samples/GFIS/evidence-index.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/evidence-index.md",
+      "bucket": "evidence_sample_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "project evidence sample"
+    },
+    {
+      "action": "update",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loop-state.md",
+      "bucket": "evidence_sample_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "project evidence sample"
+    },
+    {
+      "action": "update",
+      "source_path": "08-evidence-samples/GFIS/loops/README.md",
+      "kds_path": "开发/01-GFIS/08-evidence-samples/GFIS/loops/README.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "08-evidence-samples/README.md",
+      "kds_path": "开发/04-WAES/08-evidence-samples/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/README.md",
+      "kds_path": "开发/91-治理与验收/09-status/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/document-deprecation-register.md",
+      "kds_path": "开发/91-治理与验收/09-status/document-deprecation-register.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/globalcloud-document-control-register.md",
+      "kds_path": "开发/91-治理与验收/09-status/globalcloud-document-control-register.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/globalcloud-document-governance-loop-gate.md",
+      "kds_path": "开发/91-治理与验收/09-status/globalcloud-document-governance-loop-gate.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/globalcloud-document-health-report.md",
+      "kds_path": "开发/91-治理与验收/09-status/globalcloud-document-health-report.md",
+      "bucket": "self_refresh_control_surface",
+      "disposition": "hold_self_refresh",
+      "reason": "dynamic generated governance report"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "kds_path": "开发/91-治理与验收/09-status/gpcf-project-status-matrix.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/kds-api-sync-ledger-incident-20260617.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-api-sync-ledger-incident-20260617.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/kds-development-space-sync-register.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-development-space-sync-register.md",
+      "bucket": "status_register_backlog",
+      "disposition": "directed_sync_candidate",
+      "reason": "governance register or status document"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/odf-phase2-expansion-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md",
+      "bucket": "closure_related_governance",
+      "disposition": "directed_sync_candidate",
+      "reason": "Phase 6-10 governance and OKF/ODF closure surface"
+    },
+    {
+      "action": "update",
+      "source_path": "09-status/odf-phase5-change-request-governance-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md",
+      "bucket": "closure_related_governance",
+      "disposition": "directed_sync_candidate",
+      "reason": "Phase 6-10 governance and OKF/ODF closure surface"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/GCBrain-Development-Manual.md",
+      "kds_path": "开发/05-KDS/docs/GCBrain-Development-Manual.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/README.md",
+      "kds_path": "开发/05-KDS/docs/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/Brain/README.md",
+      "kds_path": "开发/06-Brain/docs/harness/Brain/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/Brain/evidence/README.md",
+      "kds_path": "开发/06-Brain/docs/harness/Brain/evidence/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/Brain/evidence/evidence-index.md",
+      "kds_path": "开发/06-Brain/docs/harness/Brain/evidence/evidence-index.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/Brain/loop-state.md",
+      "kds_path": "开发/06-Brain/docs/harness/Brain/loop-state.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/GPC/README.md",
+      "kds_path": "开发/02-GPC/docs/harness/GPC/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/GPC/loop-state.md",
+      "kds_path": "开发/02-GPC/docs/harness/GPC/loop-state.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/GPC/loops/README.md",
+      "kds_path": "开发/02-GPC/docs/harness/GPC/loops/README.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md",
+      "kds_path": "开发/02-GPC/docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/KDS/README.md",
+      "kds_path": "开发/05-KDS/docs/harness/KDS/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/KDS/evidence/README.md",
+      "kds_path": "开发/05-KDS/docs/harness/KDS/evidence/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/KDS/evidence/evidence-index.md",
+      "kds_path": "开发/05-KDS/docs/harness/KDS/evidence/evidence-index.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/README.md",
+      "kds_path": "开发/05-KDS/docs/harness/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/XiaoG/README.md",
+      "kds_path": "开发/10-XiaoG/docs/harness/XiaoG/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/XiaoG/loops/README.md",
+      "kds_path": "开发/10-XiaoG/docs/harness/XiaoG/loops/README.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md",
+      "kds_path": "开发/10-XiaoG/docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/evidence/README.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/evidence/evidence-index.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/evidence-index.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md",
+      "bucket": "harness_evidence_backlog",
+      "disposition": "requires_evidence_batch_review",
+      "reason": "harness evidence"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loop-state.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loop-state.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/README.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/README.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-006.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-006.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-008.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-008.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-009.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-009.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-010.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-010.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-011.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-011.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-012.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-012.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-013.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-013.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-014.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-014.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-015.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-015.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-017.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-017.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-018.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-018.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-019.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-019.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-020.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-020.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-021.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-021.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-023.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-023.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-028.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-028.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-029.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-029.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-CF-LR-030.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-030.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-011.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-011.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-017.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-017.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-018.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-018.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-KDS-DKS-019.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-019.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-006.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-006.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-002.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-002.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-004.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-004.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-005.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-005.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-007.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-007.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-015.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-015.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-033.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-033.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-058.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-058.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-070.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-070.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-071.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-071.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-072.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-072.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-083.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-083.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-084.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-084.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-091.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-091.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-092.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-092.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-094.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-094.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-098.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-098.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-100.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-100.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-101.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-101.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-102.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-102.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-103.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-103.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-104.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-104.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-105.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-105.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-108.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-108.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-110.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-110.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-112.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-112.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-113.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-113.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-114.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-114.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-153.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-153.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-154.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-154.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-161.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-161.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-162.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-162.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-163.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-163.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-164.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-164.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-165.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-165.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-166.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-166.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-167.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-167.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-175.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-175.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-176.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-176.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-177.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-177.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-179.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-179.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-181.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-181.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-182.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-182.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-185.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-185.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-186.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-186.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-187.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-187.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-188.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-188.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-189.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-189.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-190.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-190.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-191.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-191.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-211.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-211.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-213.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-213.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-215.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-215.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-219.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-219.md",
+      "bucket": "loop_evidence_backlog",
+      "disposition": "requires_batch_review",
+      "reason": "high churn Loop evidence; batch by loop range"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/minimum-closed-loop/README.md",
+      "kds_path": "开发/05-KDS/docs/harness/minimum-closed-loop/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/minimum-closed-loop/control-plane.md",
+      "kds_path": "开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/minimum-closed-loop/evidence-index.md",
+      "kds_path": "开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/minimum-closed-loop/l4-closure-score-matrix.md",
+      "kds_path": "开发/05-KDS/docs/harness/minimum-closed-loop/l4-closure-score-matrix.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/minimum-closed-loop/object-contracts.md",
+      "kds_path": "开发/05-KDS/docs/harness/minimum-closed-loop/object-contracts.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/minimum-closed-loop/project-role-verification-matrix.md",
+      "kds_path": "开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "docs/harness/status-audit-2026-06-10.md",
+      "kds_path": "开发/12-GPCF/docs/harness/status-audit-2026-06-10.md",
+      "bucket": "other_backlog",
+      "disposition": "requires_manual_triage",
+      "reason": "unclassified path"
+    },
+    {
+      "action": "update",
+      "source_path": "openspec/README.md",
+      "kds_path": "开发/05-KDS/openspec/README.md",
+      "bucket": "generated_readme_surface",
+      "disposition": "hold_until_self_refresh_stable",
+      "reason": "generated directory index"
+    },
+    {
+      "action": "self_refresh",
+      "source_path": "09-status/kds-development-space-sync-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-development-space-sync-plan.md",
+      "bucket": "self_refresh_control_surface",
+      "disposition": "hold_self_refresh",
+      "reason": "self-refresh item excluded from normal create/update chasing"
+    },
+    {
+      "action": "self_refresh",
+      "source_path": "09-status/kds-readonly-probe-report.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-readonly-probe-report.md",
+      "bucket": "self_refresh_control_surface",
+      "disposition": "hold_self_refresh",
+      "reason": "self-refresh item excluded from normal create/update chasing"
+    }
+  ]
+}

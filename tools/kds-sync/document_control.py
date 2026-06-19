@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import shutil
 from datetime import date, datetime, timezone
@@ -96,6 +97,8 @@ GENERATED_REGISTERS = {
     "09-status/document-deprecation-register.md",
 }
 
+SCOPE_ENV = "DOCUMENT_CONTROL_SCOPE"
+
 
 def rel(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
@@ -157,6 +160,8 @@ def status_for(source_path: str) -> str:
 
 
 def frontmatter_managed_for(source_path: str) -> bool:
+    if source_path.startswith(".okf/bundles/"):
+        return False
     if source_path.startswith((".codex/", ".agents/")):
         return False
     if source_path in NO_FRONTMATTER_FILES:
@@ -485,6 +490,8 @@ def should_have_readme(dir_path: Path) -> bool:
         return False
     if rel_dir.startswith((".codex", ".agents")):
         return False
+    if rel_dir.startswith(".okf/bundles"):
+        return False
     if rel_dir in GENERIC_DIR_PURPOSE:
         return True
     if any(p.suffix == ".md" for p in dir_path.iterdir() if p.is_file()):
@@ -557,6 +564,46 @@ def mirror_to_kds(records: list[dict[str, object]]) -> None:
     write_text(ledger_path, "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in entries))
 
 
+def parse_scope_paths() -> set[str]:
+    raw = os.environ.get(SCOPE_ENV, "").strip()
+    if not raw:
+        return set()
+    return {item.strip() for item in raw.split(",") if item.strip()}
+
+
+def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
+    kds_root = ROOT / ".kds/development-space"
+    ledger_path = ROOT / ".kds/local-mirror-ledger.jsonl"
+    ledger_path.parent.mkdir(parents=True, exist_ok=True)
+    scoped_sources = {str(r["source_path"]) for r in records}
+    existing_entries: list[dict[str, object]] = []
+    if ledger_path.exists():
+        for line in ledger_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                entry = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if str(entry.get("source_path", "")) not in scoped_sources:
+                existing_entries.append(entry)
+    entries = []
+    for r in records:
+        source = ROOT / str(r["source_path"])
+        target = kds_root / str(r["kds_path"])
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, target)
+        entries.append({
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "action": "git_to_kds_local_mirror_scoped",
+            "doc_id": r["doc_id"],
+            "source_path": r["source_path"],
+            "kds_path": r["kds_path"],
+            "status": "mirrored",
+        })
+    write_text(ledger_path, "".join(json.dumps(e, ensure_ascii=False) + "\n" for e in existing_entries + entries))
+
+
 def write_kds_readme(records: list[dict[str, object]]) -> None:
     base = ROOT / ".kds/development-space/开发"
     rows = []
@@ -601,6 +648,29 @@ def write_tool_readme() -> None:
 
 
 def main() -> None:
+    scope_paths = parse_scope_paths()
+    if scope_paths:
+        paths = iter_markdown()
+        records = build_records(paths)
+        scoped_records = [r for r in records if str(r["source_path"]) in scope_paths]
+        missing = sorted(scope_paths - {str(r["source_path"]) for r in scoped_records})
+        if missing:
+            raise SystemExit(f"{SCOPE_ENV} contains unknown source paths: {', '.join(missing)}")
+        apply_frontmatter(scoped_records)
+        paths = iter_markdown()
+        records = build_records(paths)
+        write_registers(records)
+        paths = iter_markdown()
+        records = build_records(paths)
+        register_records = [r for r in records if str(r["source_path"]) in GENERATED_REGISTERS]
+        apply_frontmatter(register_records)
+        paths = iter_markdown()
+        records = build_records(paths)
+        scoped_records = [r for r in records if str(r["source_path"]) in scope_paths]
+        register_records = [r for r in records if str(r["source_path"]) in GENERATED_REGISTERS]
+        mirror_scope_to_kds(scoped_records + register_records)
+        return
+
     paths = iter_markdown()
     records = build_records(paths)
     apply_frontmatter(records)

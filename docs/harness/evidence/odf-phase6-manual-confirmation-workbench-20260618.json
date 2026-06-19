@@ -1,0 +1,98 @@
+{
+  "workbench_id": "ODF-PHASE6-MANUAL-WORKBENCH-20260618",
+  "status": "phase6_manual_workbench_confirmed",
+  "phase": "ODF Phase 6",
+  "date": "2026-06-18",
+  "max_small_batch_samples": 5,
+  "release_allowed": true,
+  "queue_items": [
+    {
+      "queue_id": "ODF-PHASE6-QUEUE-20260618-001",
+      "request_id": "ODF-PHASE6-REQUEST-20260618-001",
+      "source_phase": "phase5_change_request_closed",
+      "queue_status": "confirmed_ready_for_future_batch",
+      "owner": "KDS",
+      "requested_by": "GPCF",
+      "requested_action": "prepare_next_odf_small_batch",
+      "sample_scope": {
+        "sample_count": 3,
+        "scope_name": "next_controlled_odf_small_batch",
+        "selection_rule": "Only select controlled Markdown documents that have stable frontmatter, no document debt, and clear KDS target paths."
+      },
+      "source_paths": [
+        "09-status/kds-md-okf-implementation-closure-plan.md",
+        "09-status/kds-development-space-sync-register.md",
+        "02-governance/GlobalCloud项目群KDS开发空间安全规范.md"
+      ],
+      "odf_paths": [
+        "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-md-okf-closure-plan.json",
+        "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-sync-register.json",
+        "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-security-policy.json"
+      ],
+      "kds_sync_paths": [
+        "09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+        "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+        "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+        "09-status/odf-phase7-small-batch-execution-plan.md",
+        "docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+        "docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+        ".okf/governance/index.md",
+        ".okf/kds/index.md"
+      ],
+      "rollback_hints": [
+        "Remove the phase6 ODF envelope for kds-md-okf-closure-plan and restore the previous queue item status.",
+        "Remove the phase6 ODF envelope for kds-sync-register and restore the previous queue item status.",
+        "Remove the phase6 ODF envelope for kds-security-policy and restore the previous queue item status."
+      ],
+      "human_confirmation": {
+        "confirmed": true,
+        "confirmed_by": "lujunxiang",
+        "confirmed_at": "2026-06-19",
+        "confirmation_text": "Approved for Phase 7 controlled small-batch metadata envelope creation only.",
+        "approved_source_paths": [
+          "09-status/kds-md-okf-implementation-closure-plan.md",
+          "09-status/kds-development-space-sync-register.md",
+          "02-governance/GlobalCloud项目群KDS开发空间安全规范.md"
+        ],
+        "approved_odf_paths": [
+          "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-md-okf-closure-plan.json",
+          "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-sync-register.json",
+          "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-security-policy.json"
+        ],
+        "required_fields": [
+          "confirmed_by",
+          "confirmed_at",
+          "confirmation_text",
+          "approved_source_paths",
+          "approved_odf_paths"
+        ]
+      },
+      "release_allowed": true,
+      "review_gates": {
+        "odf_schema_gate": "required_before_release",
+        "odf_change_request_gate": "required_before_release",
+        "odf_manual_confirmation_workbench": "required_before_release",
+        "document_pollution": "required_before_release",
+        "kds_token": "required_before_kds_write",
+        "kds_conflict_guard": "required_before_kds_write",
+        "kds_directed_sync": "required_after_document_update"
+      },
+      "boundary": {
+        "full_rollout": false,
+        "accepted": false,
+        "integrated": false,
+        "business_completion_claim": false,
+        "production_write": false,
+        "external_api_write": false
+      }
+    }
+  ],
+  "guardrails": {
+    "full_rollout": false,
+    "accepted": false,
+    "integrated": false,
+    "business_completion_claim": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

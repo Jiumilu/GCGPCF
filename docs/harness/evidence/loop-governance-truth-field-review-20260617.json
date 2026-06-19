@@ -60,9 +60,9 @@
     {
       "round_id": "GPCF-L4-GFIS-REPAIR-218",
       "path": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-218.md",
-      "decision": "index_level_exception",
-      "missing_fields": ["declared_rounds", "substantive_rounds", "generated_items", "batch_generated", "substance_gate", "stop_type"],
-      "evidence_basis": ["front matter shell only", "no historical body to support safe truth-field reconstruction"]
+      "decision": "historical_annotation_present",
+      "missing_fields": [],
+      "evidence_basis": ["round body now contains input, action, output, validation, feedback, and truth-count fields"]
     }
   ],
   "non_claims": [

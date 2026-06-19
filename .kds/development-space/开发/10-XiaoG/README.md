@@ -11,5 +11,5 @@
 | GPCF-DOC-C1614FDCEB | Evidence Index — XiaoG | docs/harness/XiaoG/evidence/evidence-index.md | controlled |
 | GPCF-DOC-BE87700244 | GlobalCloud XiaoG Loop State | docs/harness/XiaoG/loop-state.md | controlled |
 | GPCF-DOC-CC7297EBCF | loops | docs/harness/XiaoG/loops/README.md | controlled |
-| GPCF-DOC-871E18BD6E | Loop Round GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | controlled |
+| GPCF-DOC-871E18BD6E | loop-round-GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | controlled |
 | GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | controlled |

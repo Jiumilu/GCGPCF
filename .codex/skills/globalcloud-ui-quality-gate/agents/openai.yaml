@@ -1,0 +1,4 @@
+interface:
+  display_name: "GlobalCloud UI Quality Gate"
+  short_description: "Gate UI quality for GlobalCloud project-group product surfaces."
+  default_prompt: "Use globalcloud-ui-quality-gate to audit and harden a GlobalCloud product UI surface against project-group design, accessibility, evidence, and verification gates."

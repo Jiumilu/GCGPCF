@@ -62,7 +62,12 @@ Each backlog item must be closed or reclassified through a small review record:
 | LEDB-004-RD-001 | LEDB-004 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_governance_efficiency_backlog.py` | true | none | Keep validators path/title-bound and evidence-bound. |
 | LEDB-001-RD-002 | LEDB-001 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_round_efficiency_audit.py` and `tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | true | none | Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 1 without rewriting historical rounds. |
 | LEDB-002-RD-002 | LEDB-002 | GPCF governance | targeted_annotation_required | `docs/harness/evidence/loop-governance-five-segment-review-20260617.json` | true | none | `212`, `209`, and `208` are targeted annotation candidates; `211` and `210` remain index-level exceptions unless a separate migration plan is authorized. |
-| LEDB-001-RD-003 | LEDB-001 | GPCF governance | accepted_exception | `docs/harness/evidence/loop-governance-truth-field-review-20260617.json` | true | none | Six current truth-field debt records are front matter shells and remain index-level exceptions unless a separate historical migration plan is authorized. |
+| LEDB-001-RD-003 | LEDB-001 | GPCF governance | accepted_exception | `docs/harness/evidence/loop-governance-truth-field-review-20260617.json` | true | none | Five current truth-field debt records remain front matter shell exceptions; `218` now has a historical annotation body and truth-count fields. |
+| LEDB-003-RD-002 | LEDB-003 | GPCF governance | historical_debt | `docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.json` | true | none | Checkpoint cadence defined: review every 25 `GPCF-L4-GFIS-REPAIR-*` rounds, next required checkpoint at sequence length 200 or when hard-window debt reappears. |
+| LEDB-001-RD-004 | LEDB-001 | GPCF governance | current_window_review_required | `docs/harness/evidence/loop-governance-current-window-review-20260619.json` | true | none | Current live audit window has 2 truth-field review targets; review without rewriting historical rounds. |
+| LEDB-002-RD-003 | LEDB-002 | GPCF governance | current_window_review_required | `docs/harness/evidence/loop-governance-current-window-review-20260619.json` | true | none | Current live audit window has 7 five-segment review targets; review without rewriting historical rounds. |
+| LEDB-001-RD-005 | LEDB-001 | GPCF governance | current_window_disposition_recorded | `docs/harness/evidence/loop-governance-current-window-disposition-20260619.json` | true | none | Keep `252` and `254` visible as shell exceptions; no historical rewrite is authorized. |
+| LEDB-002-RD-004 | LEDB-002 | GPCF governance | current_window_disposition_recorded | `docs/harness/evidence/loop-governance-current-window-disposition-20260619.json` | true | none | `252` and `254` remain shell exceptions; `269` through `273` are targeted annotation candidates. |
 
 ## Locator Evidence
 
@@ -74,6 +79,19 @@ not a rewrite plan.
 |---|---:|---|
 | LEDB-001 | 0 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
 | LEDB-002 | 0 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
+
+## Current Window Review Evidence
+
+`LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619` records the current live audit-window
+review targets without changing the historical locator baseline. It records
+`LEDB-001-RD-004` for 2 truth-field targets and `LEDB-002-RD-003` for 7
+five-segment targets. It keeps duplicate/similarity signals visible for review
+and keeps `business_status_impact=none`.
+
+`LOOP-GOV-CURRENT-WINDOW-DISPOSITION-20260619` records `LEDB-001-RD-005` and
+`LEDB-002-RD-004`. It classifies `252` and `254` as index-level shell
+exceptions, and classifies `269` through `273` as targeted annotation
+candidates. It does not authorize bulk rewriting historical round records.
 
 ## Round Review Plan
 
@@ -98,9 +116,15 @@ rewriting historical round records.
 ## Truth-Field Review Evidence
 
 `LOOP-GOV-TRUTH-FIELD-REVIEW-20260617` records `LEDB-001-RD-003` for six
-current truth-field debt records. They are front matter shell records and remain
-index-level exceptions unless a separate historical migration plan is
-authorized.
+reviewed truth-field debt records. Five remain front matter shell exceptions;
+`218` now has a historical annotation body and truth-count fields.
+
+## Sequence Checkpoint Evidence
+
+`LOOP-GOV-SEQUENCE-CHECKPOINT-20260619` records `LEDB-003-RD-002`. It defines
+a 25-round checkpoint cadence for the long `GPCF-L4-GFIS-REPAIR-*` sequence,
+with the next required checkpoint at sequence length 200 or when hard-window
+debt reappears.
 
 ## Closing Conditions
 

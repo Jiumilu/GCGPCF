@@ -6,19 +6,19 @@
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
-| GPCF-DOC-E3822328DF | GlobalCloud Loop 开发 KDS 关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | controlled |
+| GPCF-DOC-E3822328DF | GlobalCloud Loop开发KDS关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | controlled |
 | GPCF-DOC-54C6C8B58B | GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单 | 03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | controlled |
 | GPCF-DOC-C8FDA82F75 | GlobalCloudKDS11池与增强治理账本项目群级映射 | 03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md | controlled |
 | GPCF-DOC-11BCEF96A6 | GlobalCloud PKC-KDS 个人知识与贡献入口清单 | 03-data-ai-knowledge/GlobalCloudPKC-KDS个人知识与贡献入口清单.md | controlled |
 | GPCF-DOC-1F12054E1C | GlobalCloud企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | controlled |
-| GPCF-DOC-038B869EBF | GlobalCloud 底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | controlled |
+| GPCF-DOC-038B869EBF | GlobalCloud底座可用知识闭环率计算样表与字段字典 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率计算样表与字段字典.md | controlled |
 | GPCF-DOC-F72C6A953D | GlobalCloud 底座可用知识闭环率评分脚本 dry-run 规格 | 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md | controlled |
 | GPCF-DOC-0A5E8FD5E6 | GlobalCloud智能体团队-企业级知识系统实施任务书 | 03-data-ai-knowledge/GlobalCloud智能体团队-企业级知识系统实施任务书.md | controlled |
 | GPCF-DOC-59CCD41F2D | GlobalCloud 湖北磷材 Brain 知识页候选结构与发布门禁 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选结构与发布门禁.md | controlled |
 | GPCF-DOC-3501E53D2C | GlobalCloud 湖北磷材 Brain 知识页候选评审实例包与人工填报示例 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选评审实例包与人工填报示例.md | controlled |
-| GPCF-DOC-95631D1C11 | GlobalCloud 湖北磷材 Brain 知识页候选运行评审空白台账与发布前问题清单 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md | controlled |
+| GPCF-DOC-95631D1C11 | GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页候选运行评审空白台账与发布前问题清单.md | controlled |
 | GPCF-DOC-312B5F9215 | GlobalCloud 湖北磷材 Brain 知识页评审样例到 SOP 候选写回规则 | 03-data-ai-knowledge/GlobalCloud湖北磷材Brain知识页评审样例到SOP候选写回规则.md | controlled |
 | GPCF-DOC-F8556A98E5 | GlobalCloud 湖北磷材 SOP 候选写回规则到缺口悬赏与人工确认任务包 | 03-data-ai-knowledge/GlobalCloud湖北磷材SOP候选写回规则到缺口悬赏与人工确认任务包.md | controlled |
 | GPCF-DOC-7B1983E735 | GlobalCloud 湖北磷材拓厂评估与知识源评测集 | 03-data-ai-knowledge/GlobalCloud湖北磷材拓厂评估与知识源评测集.md | controlled |
@@ -36,28 +36,35 @@
 | GPCF-DOC-664403C419 | GlobalCloud 绿色供应链体系 SOP 模板库 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md | controlled |
 | GPCF-DOC-BA68A130D5 | GlobalCloud 绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md | controlled |
 | GPCF-DOC-D48C6EB801 | GlobalCloud绿色供应链体系企业级知识库方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库方案.md | controlled |
-| GPCF-DOC-1362AFC964 | GlobalCloud 绿色供应链体系全局初始化 SOP 方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系全局初始化SOP方案.md | controlled |
-| GPCF-DOC-1A3581D521 | GlobalCloud 绿色供应链体系对象目录 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系对象目录.md | controlled |
 | GPCF-DOC-04D6680E14 | GlobalCloud绿色供应链体系知识与Agent授权治理总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识与Agent授权治理总表.md | controlled |
 | GPCF-DOC-FCCA958E2C | GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系知识主存层与知识引擎层分层方案.md | controlled |
 | GPCF-DOC-21BF6751A0 | GlobalCloud 绿色供应链分布式知识系统完整实施提示词 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md | controlled |
 | GPCF-DOC-85BD23AD58 | GlobalCloud绿色供应链分布式知识系统实施治理方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md | controlled |
-| GPCF-DOC-52D30A36F6 | GlobalCloud 绿色供应链分布式知识系统对象字段与11池映射清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md | controlled |
+| GPCF-DOC-52D30A36F6 | GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md | controlled |
+| GPCF-DOC-766DBAA9E3 | GlobalCloud 绿色供应链分布式知识系统当前实施分析与下一阶段推进 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md | controlled |
 | GPCF-DOC-89872D1387 | GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | controlled |
 | GPCF-DOC-2A520469C6 | GlobalCloud绿色供应链分布式知识系统权限与密级矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | controlled |
 | GPCF-DOC-1C57589247 | GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | controlled |
+| GPCF-DOC-62E56B6121 | GlobalCloud 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | controlled |
+| GPCF-DOC-A22E7CBF43 | GlobalCloud 葛化 DKS-053 dry-run 结果可填写执行包与责任方说明 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | controlled |
+| GPCF-DOC-D241F6E17C | GlobalCloud 葛化 DKS-054 执行包派发授权信封与负例拒收门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | controlled |
+| GPCF-DOC-AACA2824CD | GlobalCloud 葛化 DKS-055 派发授权信封接收目录空状态 hold 队列与补证提醒门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md | controlled |
+| GPCF-DOC-49F4A296F5 | GlobalCloud 葛化 DKS-056 补证提醒发送授权包与回执字段模板 | 03-data-ai-knowledge/GlobalCloud葛化DKS056补证提醒发送授权包与回执字段模板.md | controlled |
+| GPCF-DOC-93BE3CC3E0 | GlobalCloud 葛化 DKS-057 发送授权包人工确认接收扫描空状态与授权缺口台账 | 03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md | controlled |
+| GPCF-DOC-19ED27EAD7 | GlobalCloud 葛化 GFIS AI 助手三件套首批 dry-run 评测运行记录 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md | controlled |
 | GPCF-DOC-EFF75D9725 | GlobalCloud 葛化 GFIS AI 助手内测运行记录模板 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录模板.md | controlled |
 | GPCF-DOC-BA893D6FF7 | GlobalCloud 葛化 GFIS AI 助手内测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md | controlled |
 | GPCF-DOC-1CF8B46A53 | GlobalCloud 葛化 GFIS AI 助手内测问答与资料回收包联动规则 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测问答与资料回收包联动规则.md | controlled |
 | GPCF-DOC-BCDC67FF8C | GlobalCloud 葛化 GFIS AI 助手首批问答与文档验收评测集 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手首批问答与文档验收评测集.md | controlled |
-| GPCF-DOC-FEE06CC888 | GlobalCloud 葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md | controlled |
-| GPCF-DOC-6298DD1B0D | GlobalCloud 葛化湖北磷材首批填报实例包与提交门禁 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md | controlled |
 | GPCF-DOC-54564B95F6 | GlobalCloud 葛化第一阶段 GFIS AI 助手三件套实施清单 | 03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md | controlled |
+| GPCF-DOC-486DF4F549 | GlobalCloud 葛化订单运行母版字段与单据映射专项清单 | 03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md | controlled |
+| GPCF-DOC-EE793CBD55 | GlobalCloud 葛化辽宁远航与金融凭证缺口专项台账 | 03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md | controlled |
+| GPCF-DOC-E361BE8080 | GlobalCloud 葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包 | 03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md | controlled |
 | GPCF-DOC-A948E73BB3 | GlobalCloud 辽宁远航链路证据缺口请求包与知识悬赏草案 | 03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md | controlled |
 | GPCF-DOC-5A7F6D81F0 | GlobalCloud 项目群与分布式 KDS 关系总图 | 03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md | controlled |
 | GPCF-DOC-B49150CE25 | GlobalCloud 首批资料回收包字段验收与候选 SOP 写回建议 | 03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md | controlled |
 | GPCF-DOC-A7C38B4EA7 | 数据、AI 与知识 | 03-data-ai-knowledge/README.md | controlled |
-| GPCF-DOC-A2F5EC5E20 | GCBrain 专业版 v3.0 全量开发文档 | docs/GCBrain-Development-Manual.md | controlled |
+| GPCF-DOC-A2F5EC5E20 | GCBrain-Development-Manual | docs/GCBrain-Development-Manual.md | controlled |
 | GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | controlled |
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | controlled |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | controlled |
@@ -67,11 +74,21 @@
 | GPCF-DOC-8DA5979C40 | Loop Round GPCF-KD-LR-001 | docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | controlled |
 | GPCF-DOC-F99E5285C9 | Harness 工程说明 | docs/harness/README.md | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | controlled |
+| GPCF-DOC-CF3A246F25 | Base Knowledge Closure Score Dry-run Summary | docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md | controlled |
+| GPCF-DOC-B30625918B | Base Knowledge Committee Review Queue | docs/harness/evidence/base-knowledge-committee-review-queue-20260619.md | controlled |
+| GPCF-DOC-F861799E08 | Base Knowledge Committee Review Schema | docs/harness/evidence/base-knowledge-committee-review-schema-20260619.md | controlled |
+| GPCF-DOC-8066745911 | Base Knowledge Committee Review Template | docs/harness/evidence/base-knowledge-committee-review-template-20260619.md | controlled |
+| GPCF-DOC-87A94990FE | Base Knowledge Human Confirmation Queue | docs/harness/evidence/base-knowledge-human-confirmation-queue-20260619.md | controlled |
+| GPCF-DOC-9C22552EEE | Base Knowledge Human Confirmation Schema | docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | controlled |
+| GPCF-DOC-7797BB4F55 | Base Knowledge Human Confirmation Template | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | controlled |
+| GPCF-DOC-C13F879695 | Base Knowledge Writeback Candidate Ledger | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS owner receipt task ledger | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | controlled |
-| GPCF-DOC-89DF4CBBFA | Git 风险分类报告 | docs/harness/evidence/git-risk-classification-20260617.md | controlled |
-| GPCF-DOC-21CF5F6F10 | Loop Governance Dashboard Evidence | docs/harness/evidence/loop-governance-dashboard-20260617.md | controlled |
-| GPCF-DOC-2EEC93C354 | Loop Governance Five Segment Review Evidence | docs/harness/evidence/loop-governance-five-segment-review-20260617.md | controlled |
+| GPCF-DOC-0F583D13A7 | KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告 | docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | controlled |
+| GPCF-DOC-431C7A5400 | KDS OKF v0.1 Phase 1-2 Derived Bundle Report | docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md | controlled |
+| GPCF-DOC-A584BC19A5 | KDS Phase 10 Backlog Triage Report | docs/harness/evidence/kds-phase10-backlog-triage-20260619.md | controlled |
+| GPCF-DOC-C4980D88C1 | KDS Phase 10 Self-refresh Stabilization Workpack | docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md | controlled |
 | GPCF-DOC-28A638C09E | Loop Governance Phase Goal Evidence | docs/harness/evidence/loop-governance-phase-goal-20260617.md | controlled |
+| GPCF-DOC-1750E1606B | Loop Governance Sequence Checkpoint Evidence | docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md | controlled |
 | GPCF-DOC-F8461F5919 | Loop Governance Truth Field Review Evidence | docs/harness/evidence/loop-governance-truth-field-review-20260617.md | controlled |
 | GPCF-DOC-6FD038491B | ODF Phase 2 扩大样本验证闭环报告 | docs/harness/evidence/odf-phase2-closure-report-20260617.md | controlled |
 | GPCF-DOC-86BB2ABBFD | ODF Phase 2 样本准入台账 | docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | controlled |
@@ -80,18 +97,21 @@
 | GPCF-DOC-4432542213 | ODF Phase 4 小批量准入试运行台账 | docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md | controlled |
 | GPCF-DOC-81B958F838 | ODF Phase 5 准入变更申请机制闭环报告 | docs/harness/evidence/odf-phase5-change-request-closure-20260617.md | controlled |
 | GPCF-DOC-3FBC093145 | ODF Phase 5 准入变更申请台账 | docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md | controlled |
+| GPCF-DOC-36A3D26724 | ODF Phase 6 人工确认工作台 | docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md | controlled |
+| GPCF-DOC-E312B4E9B7 | ODF Phase 6 人工确认工作台闭环报告 | docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md | controlled |
+| GPCF-DOC-6E11376EB9 | ODF Phase 7 小批量样本闭环报告 | docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md | controlled |
+| GPCF-DOC-901AAC00A7 | ODF Phase 7 小批量样本台账 | docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md | controlled |
+| GPCF-DOC-703D746E65 | ODF Phase 8 小批量回归与漂移监控闭环报告 | docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md | controlled |
+| GPCF-DOC-F79CA37779 | ODF Phase 8 漂移监控报告 | docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md | controlled |
+| GPCF-DOC-7E93C0F2EE | ODF Phase 9 动态源稳定化闭环报告 | docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md | controlled |
 | GPCF-DOC-195F37DB52 | ODF 受控引入试点闭环报告 | docs/harness/evidence/odf-pilot-closure-report-20260617.md | controlled |
 | GPCF-DOC-0F24C05984 | ODF 试点样本准入台账 | docs/harness/evidence/odf-pilot-sample-ledger-20260617.md | controlled |
-| GPCF-DOC-E60D35F595 | 12 项目文档控制队列 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | controlled |
 | GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | controlled |
 | GPCF-DOC-2A9E353FAE | 跨项目 readiness scorecard | docs/harness/gpcf-cross-project-readiness-scorecard-lr028.md | controlled |
 | GPCF-DOC-C4C88D4F75 | 客户满意度证据台账 | docs/harness/gpcf-customer-satisfaction-evidence-ledger-lr010.md | controlled |
 | GPCF-DOC-ED9FF3FA80 | 文档防污染哨兵扩展规则 | docs/harness/gpcf-document-pollution-sentinel-expansion-lr008.md | controlled |
-| GPCF-DOC-BFB5658141 | GFIS evidence 镜像接收登记 | docs/harness/gpcf-gfis-evidence-mirror-register-lr004.md | controlled |
-| GPCF-DOC-19294CD190 | GPC Manifest 与 loop-state 补齐包 | docs/harness/gpcf-gpc-manifest-loopstate-pack-lr026.md | controlled |
 | GPCF-DOC-E0A0095FEA | GPCF KDS Access Completion Evidence | docs/harness/gpcf-kds-access-completion-lr032.md | controlled |
-| GPCF-DOC-1A44A3E539 | KDS 本地镜像 dry-run 同步包 | docs/harness/gpcf-kds-local-mirror-dryrun-package-lr006.md | controlled |
 | GPCF-DOC-A1BC2692A8 | KDS loop-state 补齐包 | docs/harness/gpcf-kds-loop-state-completion-pack-lr023.md | controlled |
 | GPCF-DOC-FDC01A68DB | GPCF L3 第四轮最终检查点 | docs/harness/gpcf-l3-fourth-session-final-checkpoint-lr031.md | controlled |
 | GPCF-DOC-B096D9C533 | L3 session 重启与计数器台账 | docs/harness/gpcf-l3-session-reset-counter-register-lr003.md | controlled |
@@ -114,8 +134,6 @@
 | GPCF-DOC-855B715B04 | OpenSpec 变更集 | openspec/changes/README.md | draft |
 | GPCF-DOC-D84C374BDC | archive | openspec/changes/archive/README.md | draft |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | draft |
-| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | draft |
-| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | draft |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | draft |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | draft |
 | GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | draft |

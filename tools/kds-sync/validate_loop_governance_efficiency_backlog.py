@@ -112,8 +112,7 @@ def main() -> int:
         require(disposition.get("no_bulk_rewrite") is True, "review disposition must keep no_bulk_rewrite=true")
         require(disposition.get("business_status_impact") == "none", "review disposition must not change business status")
         require(
-            disposition.get("disposition_id", "").endswith("-RD-001")
-            or disposition.get("disposition_id") == "LEDB-001-RD-002",
+            bool(__import__("re").fullmatch(r"LEDB-00[1-4]-RD-\d{3}", disposition.get("disposition_id", ""))),
             "disposition id must use an approved review disposition id",
         )
     template = evidence.get("disposition_template", {})

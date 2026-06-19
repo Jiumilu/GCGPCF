@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FF3BC7037F
 title: Loop Governance Efficiency Debt Backlog Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -34,7 +34,7 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 |---|---|---|---:|---|
 | LEDB-001 | P1 | missing_truth_fields | 0 | monitoring |
 | LEDB-002 | P1 | missing_five_segment_markers | 0 | monitoring |
-| LEDB-003 | P1 | long_consecutive_sequence_risk | 184 | open |
+| LEDB-003 | P1 | long_consecutive_sequence_risk | 186 | open |
 | LEDB-004 | P2 | dashboard_validator_drift_risk | 1 | monitoring |
 
 ## Governance Meaning
@@ -63,12 +63,41 @@ The backlog keeps historical efficiency debt visible while protecting the latest
 | LEDB-003-RD-001 | LEDB-003 | GPCF governance | historical_debt | `docs/harness/loops/` sequence scan | true | none | Keep visible until periodic checkpoint cadence is defined. |
 | LEDB-004-RD-001 | LEDB-004 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_governance_efficiency_backlog.py` | true | none | Keep validators path/title-bound and evidence-bound. |
 | LEDB-001-RD-002 | LEDB-001 | GPCF governance | validator_rule_update | `tools/kds-sync/validate_loop_round_efficiency_audit.py` and `tools/kds-sync/validate_loop_governance_efficiency_debt_locator.py` | true | none | Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 1 without rewriting historical rounds. |
+| LEDB-002-RD-002 | LEDB-002 | GPCF governance | targeted_annotation_required | `docs/harness/evidence/loop-governance-five-segment-review-20260617.json` | true | none | `212`, `209`, and `208` are targeted annotation candidates; `211` and `210` remain index-level exceptions unless a separate migration plan is authorized. |
+| LEDB-001-RD-003 | LEDB-001 | GPCF governance | accepted_exception | `docs/harness/evidence/loop-governance-truth-field-review-20260617.json` | true | none | Five current truth-field debt records remain front matter shell exceptions; `218` now has a historical annotation body and truth-count fields. |
+| LEDB-003-RD-002 | LEDB-003 | GPCF governance | historical_debt | `docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.json` | true | none | Checkpoint cadence defined: review every 25 `GPCF-L4-GFIS-REPAIR-*` rounds, next required checkpoint at sequence length 200 or when hard-window debt reappears. |
+| LEDB-001-RD-004 | LEDB-001 | GPCF governance | current_window_review_required | `docs/harness/evidence/loop-governance-current-window-review-20260619.json` | true | none | Current live audit window has 2 truth-field review targets; review without rewriting historical rounds. |
+| LEDB-002-RD-003 | LEDB-002 | GPCF governance | current_window_review_required | `docs/harness/evidence/loop-governance-current-window-review-20260619.json` | true | none | Current live audit window has 7 five-segment review targets; review without rewriting historical rounds. |
 
 ## Locator Evidence
 
 `LOOP-GOV-EFF-DEBT-LOCATOR-20260617` locates 0 `LEDB-001` affected rounds
 and 0 `LEDB-002` affected rounds after targeted annotation of `loop-round-GPCF-L4-GFIS-REPAIR-218.md`. The locator does not rewrite
 historical records and has `business_status_impact=none`.
+
+## Current Window Review Evidence
+
+`LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619` records current live audit-window
+review targets: 2 `LEDB-001` truth-field targets and 7 `LEDB-002` five-segment
+targets. It does not change the historical locator baseline, rewrite historical
+rounds, or change GFIS/GPCF business status.
+
+## Five-Segment Review Evidence
+
+`LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617` records `LEDB-002-RD-002` for
+five reviewed records. It separates targeted annotation candidates from
+index-level exceptions and keeps `no_bulk_rewrite=true`.
+
+## Truth-Field Review Evidence
+
+`LOOP-GOV-TRUTH-FIELD-REVIEW-20260617` records `LEDB-001-RD-003`. Shell
+records remain controlled exceptions unless a separate historical migration
+plan is authorized.
+
+## Sequence Checkpoint Evidence
+
+`LOOP-GOV-SEQUENCE-CHECKPOINT-20260619` records `LEDB-003-RD-002`; the next
+required checkpoint remains sequence length 200 or hard-window debt recurrence.
 
 ## Non-Claims
 

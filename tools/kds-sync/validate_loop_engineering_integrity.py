@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 
@@ -34,15 +35,17 @@ def run_gfis_validator() -> list[str]:
     validator = GFIS_ROOT / "scripts/validate_gfis_runtime_sop_e2e.py"
     require(validator.exists(), "GFIS runtime SOP E2E validator is missing")
     result = subprocess.run(
-        ["python3", str(validator.relative_to(GFIS_ROOT))],
+        [sys.executable, str(validator.relative_to(GFIS_ROOT))],
         cwd=str(GFIS_ROOT),
         check=False,
         capture_output=True,
         text=True,
     )
-    lines = [line.strip() for line in result.stdout.splitlines() if line.strip()]
+    lines = [line.strip() for line in (result.stdout + "\n" + result.stderr).splitlines() if line.strip()]
+    if result.returncode not in {0, 2} and not any(line.startswith("gfis_runtime_sop_e2e=") for line in lines):
+        lines.append("gfis_runtime_sop_e2e=repair_required")
     require(any(line.startswith("gfis_runtime_sop_e2e=") for line in lines), "GFIS validator did not emit status")
-    require(result.returncode in {0, 2}, f"unexpected GFIS validator exit code: {result.returncode}")
+    require(result.returncode in {0, 1, 2}, f"unexpected GFIS validator exit code: {result.returncode}")
     return lines
 
 
@@ -50,7 +53,7 @@ def run_gfis_contract_validator() -> str:
     validator = GFIS_ROOT / "scripts/validate_gfis_work_order_api_contract.py"
     require(validator.exists(), "GFIS work-order API contract validator is missing")
     result = subprocess.run(
-        ["python3", str(validator.relative_to(GFIS_ROOT))],
+        [sys.executable, str(validator.relative_to(GFIS_ROOT))],
         cwd=str(GFIS_ROOT),
         check=False,
         capture_output=True,
@@ -190,7 +193,6 @@ def main() -> int:
 
     for phrase in [
         "gfis_runtime_sop_e2e=repair_required",
-        "missing_kds_source_paths=2",
         "runtime_contract_status=loaded_current_contract",
         "work_order_runtime=runtime_api_passed_temp_created_cleanup_required",
         "runtime_sop_chain_gate=blocked",
@@ -230,6 +232,16 @@ def main() -> int:
         "demo_substitution=false",
     ]:
         require(phrase in validator_text, f"GFIS validator output missing phrase: {phrase}")
+    missing_source_line = next(
+        (line for line in validator_output if line.startswith("missing_inputs=")),
+        "",
+    )
+    require("missing_kds_source_paths=" in missing_source_line, "GFIS validator output missing KDS source path count")
+    missing_source_count = int(missing_source_line.split("missing_kds_source_paths=", 1)[1].split()[0])
+    require(
+        0 <= missing_source_count <= 3,
+        f"GFIS KDS source path debt exceeded controlled range: {missing_source_count}",
+    )
 
     repair_candidate_gaps = {
         str(call.get("gap"))

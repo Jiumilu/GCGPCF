@@ -1,0 +1,147 @@
+{
+  "schemaId": "BKC-COMMITTEE-REVIEW-SCHEMA-20260619",
+  "sourceQueueEvidenceId": "BKC-COMMITTEE-REVIEW-QUEUE-20260619",
+  "sourceQueueType": "committee_review",
+  "sourceQueueItemCount": 10,
+  "currentRound": "GPCF-KDS-DKS-046",
+  "schemaType": "committee_review_schema",
+  "fieldCount": 15,
+  "requiredFieldCount": 14,
+  "fields": [
+    {
+      "name": "queueItemId",
+      "type": "string",
+      "required": true,
+      "description": "复核记录绑定的候选队列项 ID。"
+    },
+    {
+      "name": "sourceCandidateId",
+      "type": "string",
+      "required": true,
+      "description": "来自 DKS-044 的写回候选 ID。"
+    },
+    {
+      "name": "baseKnowledgeId",
+      "type": "string",
+      "required": true,
+      "description": "底座知识对象 ID。"
+    },
+    {
+      "name": "committeeSessionId",
+      "type": "string",
+      "required": true,
+      "description": "委员会复核会议或批次 ID。"
+    },
+    {
+      "name": "committeeMembers",
+      "type": "array",
+      "required": true,
+      "description": "参与复核成员清单。"
+    },
+    {
+      "name": "conflictOfInterestDeclared",
+      "type": "boolean",
+      "required": true,
+      "description": "是否完成利益冲突申明。"
+    },
+    {
+      "name": "severity",
+      "type": "string",
+      "required": true,
+      "description": "复核严重度。",
+      "enum": [
+        "general",
+        "major"
+      ]
+    },
+    {
+      "name": "decisionMethod",
+      "type": "string",
+      "required": true,
+      "description": "裁决方式。",
+      "enum": [
+        "majority_vote",
+        "chair_recorded_majority"
+      ]
+    },
+    {
+      "name": "decision",
+      "type": "string",
+      "required": true,
+      "description": "委员会裁决候选结果。",
+      "enum": [
+        "reject",
+        "request_more_evidence",
+        "approve_repair_candidate",
+        "approve_penalty_candidate"
+      ]
+    },
+    {
+      "name": "scoreImpactCandidate",
+      "type": "string",
+      "required": true,
+      "description": "积分影响候选。",
+      "enum": [
+        "none",
+        "knowledge_only_adjustment",
+        "potential_value_adjustment",
+        "formal_value_adjustment",
+        "deduct_partial",
+        "deduct_full"
+      ]
+    },
+    {
+      "name": "revenuePoolImpactCandidate",
+      "type": "string",
+      "required": true,
+      "description": "收益池影响候选。",
+      "enum": [
+        "none",
+        "record_potential_only",
+        "formal_income_after_receipt",
+        "exclude_self_purchased_quota"
+      ]
+    },
+    {
+      "name": "writebackOpinion",
+      "type": "string",
+      "required": true,
+      "description": "写回意见。",
+      "enum": [
+        "do_not_write",
+        "candidate_after_human_confirmation",
+        "candidate_after_evidence_repair"
+      ]
+    },
+    {
+      "name": "appealAllowed",
+      "type": "boolean",
+      "required": true,
+      "description": "是否允许申诉。"
+    },
+    {
+      "name": "filingRequired",
+      "type": "boolean",
+      "required": true,
+      "description": "是否需要备案。"
+    },
+    {
+      "name": "reviewNotes",
+      "type": "string",
+      "required": false,
+      "description": "委员会复核说明。"
+    }
+  ],
+  "controls": {
+    "candidateOnly": true,
+    "createsConfirmationFact": false,
+    "createsCommitteeDecision": false,
+    "realKdsApiWrite": false,
+    "waesWrite": false,
+    "businessLedgerWrite": false,
+    "settlementWrite": false,
+    "ragAdmission": false,
+    "acceptedOrIntegratedUpgrade": false
+  },
+  "status": "schema_dry_run_only"
+}

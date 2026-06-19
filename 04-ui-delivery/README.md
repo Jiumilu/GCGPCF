@@ -57,6 +57,6 @@ KDS 路径前缀：`开发/12-GPCF/04-ui-delivery/`
 | GPCF-DOC-0C4A339FD2 | GlobalCloud 绿色供应链体系首批统一组件清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件清单.md | GPC | controlled |
 | GPCF-DOC-DFFAFE5D69 | GlobalCloud绿色供应链体系首批统一组件验收标准 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件验收标准.md | GPC | controlled |
 | GPCF-DOC-3D439D777F | GlobalCloud 绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | GPC | controlled |
-| GPCF-DOC-6008375BA7 | GlobalCloud 绿色供应链体系高风险模块界面收口任务分解表 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md | GPC | controlled |
+| GPCF-DOC-6008375BA7 | GlobalCloud绿色供应链体系高风险模块界面收口任务分解表 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md | GPC | controlled |
 | GPCF-DOC-505DFF5C49 | GlobalCloud 绿色供应链体系高风险模块界面收口计划 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md | GPC | controlled |
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | GPC | controlled |

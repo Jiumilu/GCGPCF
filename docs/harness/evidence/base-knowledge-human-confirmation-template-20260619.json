@@ -1,0 +1,118 @@
+{
+  "templateId": "BKC-HUMAN-CONFIRMATION-TEMPLATE-20260619",
+  "sourceSchemaId": "BKC-HUMAN-CONFIRMATION-SCHEMA-20260619",
+  "sourceQueueEvidenceId": "BKC-HUMAN-CONFIRMATION-QUEUE-20260619",
+  "currentRound": "GPCF-KDS-DKS-047",
+  "templateType": "human_confirmation_template",
+  "recordCount": 4,
+  "records": [
+    {
+      "templateRecordId": "T-DKS-044-001",
+      "sourceQueueItemId": "Q-DKS-044-001",
+      "sourceCandidateId": "WBC-DKS-044-001",
+      "templateStatus": "blank_template_only",
+      "record": {
+        "queueItemId": "Q-DKS-044-001",
+        "sourceCandidateId": "WBC-DKS-044-001",
+        "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+        "confirmingUnit": "",
+        "confirmerRole": "",
+        "sourceRefsReviewed": [],
+        "factStatus": "",
+        "gapClosureOpinion": "",
+        "evidenceLevelAfterReview": "",
+        "sensitiveDataCheck": "",
+        "ragAdmissionOpinion": "",
+        "nextAction": "",
+        "reviewNotes": ""
+      },
+      "createsConfirmationFact": false,
+      "createsCommitteeDecision": false,
+      "downstreamAllowed": false
+    },
+    {
+      "templateRecordId": "T-DKS-044-002",
+      "sourceQueueItemId": "Q-DKS-044-002",
+      "sourceCandidateId": "WBC-DKS-044-002",
+      "templateStatus": "blank_template_only",
+      "record": {
+        "queueItemId": "Q-DKS-044-002",
+        "sourceCandidateId": "WBC-DKS-044-002",
+        "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+        "confirmingUnit": "",
+        "confirmerRole": "",
+        "sourceRefsReviewed": [],
+        "factStatus": "",
+        "gapClosureOpinion": "",
+        "evidenceLevelAfterReview": "",
+        "sensitiveDataCheck": "",
+        "ragAdmissionOpinion": "",
+        "nextAction": "",
+        "reviewNotes": ""
+      },
+      "createsConfirmationFact": false,
+      "createsCommitteeDecision": false,
+      "downstreamAllowed": false
+    },
+    {
+      "templateRecordId": "T-DKS-044-003",
+      "sourceQueueItemId": "Q-DKS-044-003",
+      "sourceCandidateId": "WBC-DKS-044-003",
+      "templateStatus": "blank_template_only",
+      "record": {
+        "queueItemId": "Q-DKS-044-003",
+        "sourceCandidateId": "WBC-DKS-044-003",
+        "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+        "confirmingUnit": "",
+        "confirmerRole": "",
+        "sourceRefsReviewed": [],
+        "factStatus": "",
+        "gapClosureOpinion": "",
+        "evidenceLevelAfterReview": "",
+        "sensitiveDataCheck": "",
+        "ragAdmissionOpinion": "",
+        "nextAction": "",
+        "reviewNotes": ""
+      },
+      "createsConfirmationFact": false,
+      "createsCommitteeDecision": false,
+      "downstreamAllowed": false
+    },
+    {
+      "templateRecordId": "T-DKS-044-004",
+      "sourceQueueItemId": "Q-DKS-044-004",
+      "sourceCandidateId": "WBC-DKS-044-004",
+      "templateStatus": "blank_template_only",
+      "record": {
+        "queueItemId": "Q-DKS-044-004",
+        "sourceCandidateId": "WBC-DKS-044-004",
+        "baseKnowledgeId": "BKC-HBLC-IND-202606-0001",
+        "confirmingUnit": "",
+        "confirmerRole": "",
+        "sourceRefsReviewed": [],
+        "factStatus": "",
+        "gapClosureOpinion": "",
+        "evidenceLevelAfterReview": "",
+        "sensitiveDataCheck": "",
+        "ragAdmissionOpinion": "",
+        "nextAction": "",
+        "reviewNotes": ""
+      },
+      "createsConfirmationFact": false,
+      "createsCommitteeDecision": false,
+      "downstreamAllowed": false
+    }
+  ],
+  "controls": {
+    "blankTemplateOnly": true,
+    "createsConfirmationFact": false,
+    "createsCommitteeDecision": false,
+    "realKdsApiWrite": false,
+    "waesWrite": false,
+    "businessLedgerWrite": false,
+    "settlementWrite": false,
+    "ragAdmission": false,
+    "acceptedOrIntegratedUpgrade": false
+  },
+  "status": "blank_template_only"
+}

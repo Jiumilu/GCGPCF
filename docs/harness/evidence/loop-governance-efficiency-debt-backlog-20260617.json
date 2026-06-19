@@ -45,7 +45,7 @@
       "priority": "P1",
       "debt_type": "long_consecutive_sequence_risk",
       "scope": "GPCF-L4-GFIS-REPAIR-*",
-      "current_count": 14,
+      "current_count": 186,
       "status": "open",
       "handling_rule": "Require periodic checkpoint review and keep long-sequence risk visible until reviewed."
     },
@@ -129,6 +129,36 @@
       "no_bulk_rewrite": true,
       "business_status_impact": "none",
       "next_action": "Truth-field parser now recognizes table rows, bullet colon rows, and backtick key=value rows; debt reduced to 1 without rewriting historical rounds."
+    },
+    {
+      "disposition_id": "LEDB-002-RD-002",
+      "backlog_item": "LEDB-002",
+      "reviewer": "GPCF governance",
+      "decision": "targeted_annotation_required",
+      "evidence_ref": "docs/harness/evidence/loop-governance-five-segment-review-20260617.json",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "212, 209, and 208 are targeted annotation candidates; 211 and 210 remain index-level exceptions unless a separate migration plan is authorized."
+    },
+    {
+      "disposition_id": "LEDB-001-RD-003",
+      "backlog_item": "LEDB-001",
+      "reviewer": "GPCF governance",
+      "decision": "accepted_exception",
+      "evidence_ref": "docs/harness/evidence/loop-governance-truth-field-review-20260617.json",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Five current truth-field debt records remain front matter shell exceptions; 218 now has a historical annotation body and truth-count fields."
+    },
+    {
+      "disposition_id": "LEDB-003-RD-002",
+      "backlog_item": "LEDB-003",
+      "reviewer": "GPCF governance",
+      "decision": "historical_debt",
+      "evidence_ref": "docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.json",
+      "no_bulk_rewrite": true,
+      "business_status_impact": "none",
+      "next_action": "Checkpoint cadence defined: review every 25 GPCF-L4-GFIS-REPAIR-* rounds, next required checkpoint at sequence length 200 or when hard-window debt reappears."
     }
   ],
   "closing_conditions": [

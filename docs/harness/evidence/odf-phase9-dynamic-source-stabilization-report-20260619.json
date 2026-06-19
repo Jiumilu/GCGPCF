@@ -1,0 +1,26 @@
+{
+  "report_id": "ODF-PHASE9-DYNAMIC-SOURCE-STABILIZATION-20260619",
+  "status": "phase9_dynamic_source_stabilized",
+  "date": "2026-06-19",
+  "strategy": "reference-only dynamic sources with strict static source and envelope gates",
+  "dynamic_sources": [
+    "docs/harness/evidence/evidence-index.md",
+    "09-status/gpcf-project-status-matrix.md",
+    "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+    "09-status/kds-development-space-sync-register.md"
+  ],
+  "latest_gate": {
+    "odf_hash_drift": "pass",
+    "strict_drift": 0,
+    "dynamic_reference_drift": 6,
+    "odf_schema_gate": "pass"
+  },
+  "boundary": {
+    "creates_new_samples": false,
+    "copies_markdown_body": false,
+    "broad_rollout": false,
+    "business_status_upgrade": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

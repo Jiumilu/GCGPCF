@@ -115,5 +115,5 @@ KDS 路径前缀：`开发/92-证据与会话归档/.harness/`
 | GPCF-DOC-71D00E7EBE | evidence | .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md | WAES | archive |
 | GPCF-DOC-B89D14C3C8 | KDS Real Token Sync Git Change Groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | WAES | archive |
 | GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | WAES | archive |
-| GPCF-DOC-0498FF3BEF | Harness Status Audit: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | WAES | archive |
+| GPCF-DOC-0498FF3BEF | status-audit | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | WAES | archive |
 | GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | WAES | archive |

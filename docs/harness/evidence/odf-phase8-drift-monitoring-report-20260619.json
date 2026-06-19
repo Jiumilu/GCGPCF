@@ -1,0 +1,18 @@
+{
+  "report_id": "ODF-PHASE8-DRIFT-MONITOR-20260619",
+  "status": "phase8_drift_monitor_ready",
+  "date": "2026-06-19",
+  "tool": "tools/kds-sync/scan_odf_hash_drift.py",
+  "ledgers": 4,
+  "samples": 19,
+  "dynamic_sources": 4,
+  "drift_count": 0,
+  "boundary": {
+    "creates_new_samples": false,
+    "copies_markdown_body": false,
+    "broad_rollout": false,
+    "business_status_upgrade": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

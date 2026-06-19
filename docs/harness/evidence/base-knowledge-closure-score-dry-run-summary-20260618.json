@@ -1,0 +1,192 @@
+{
+  "evidenceId": "BKC-DRY-RUN-SUMMARY-20260618",
+  "sourceRound": "GPCF-KDS-DKS-044",
+  "sourceFixture": "docs/harness/evidence/base-knowledge-closure-score-fixtures.json",
+  "scorer": "tools/kds-sync/validate_base_knowledge_closure_score_dry_run.py",
+  "fixtureCount": 6,
+  "expectedHardStops": 4,
+  "decisionBandCounts": {
+    "blocked_or_invalid": 4,
+    "limited_report_candidate": 1,
+    "repair_candidate": 1
+  },
+  "writebackCandidateCount": 14,
+  "writebackCandidates": [
+    {
+      "candidateId": "WBC-DKS-044-001",
+      "fixtureId": "FIX-BKC-REPAIR-001",
+      "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+      "target": "evidencePassRate",
+      "reason": "evidence_level_below_reuse_threshold",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "repair_candidate",
+      "hardStop": false,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-002",
+      "fixtureId": "FIX-BKC-REPAIR-001",
+      "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+      "target": "automationEffectivenessRate",
+      "reason": "automation_not_effective_yet",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "repair_candidate",
+      "hardStop": false,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-003",
+      "fixtureId": "FIX-BKC-REPAIR-001",
+      "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+      "target": "writebackClosureRate",
+      "reason": "gap_writeback_not_closed",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "repair_candidate",
+      "hardStop": false,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-004",
+      "fixtureId": "FIX-BKC-LIMITED-001",
+      "baseKnowledgeId": "BKC-HBLC-IND-202606-0001",
+      "target": "writebackClosureRate",
+      "reason": "gap_writeback_not_closed",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "limited_report_candidate",
+      "hardStop": false,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-005",
+      "fixtureId": "FIX-BKC-BLOCK-001",
+      "baseKnowledgeId": "BKC-HBLC-ORD-202606-0001",
+      "target": "sourceRefs",
+      "reason": "source_refs_missing",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-006",
+      "fixtureId": "FIX-BKC-BLOCK-001",
+      "baseKnowledgeId": "BKC-HBLC-ORD-202606-0001",
+      "target": "evidencePassRate",
+      "reason": "evidence_level_below_reuse_threshold",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-007",
+      "fixtureId": "FIX-BKC-BLOCK-001",
+      "baseKnowledgeId": "BKC-HBLC-ORD-202606-0001",
+      "target": "writebackClosureRate",
+      "reason": "gap_writeback_not_closed",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-008",
+      "fixtureId": "FIX-BKC-REVENUE-VETO-001",
+      "baseKnowledgeId": "BKC-HBLC-ORD-202606-0002",
+      "target": "evidencePassRate",
+      "reason": "evidence_level_below_reuse_threshold",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-009",
+      "fixtureId": "FIX-BKC-REVENUE-VETO-001",
+      "baseKnowledgeId": "BKC-HBLC-ORD-202606-0002",
+      "target": "writebackClosureRate",
+      "reason": "gap_writeback_not_closed",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-010",
+      "fixtureId": "FIX-BKC-RAG-MISMATCH-001",
+      "baseKnowledgeId": "BKC-HBLC-FEA-202606-0002",
+      "target": "evidencePassRate",
+      "reason": "evidence_level_below_reuse_threshold",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-011",
+      "fixtureId": "FIX-BKC-RAG-MISMATCH-001",
+      "baseKnowledgeId": "BKC-HBLC-FEA-202606-0002",
+      "target": "automationEffectivenessRate",
+      "reason": "automation_not_effective_yet",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-012",
+      "fixtureId": "FIX-BKC-RAG-MISMATCH-001",
+      "baseKnowledgeId": "BKC-HBLC-FEA-202606-0002",
+      "target": "writebackClosureRate",
+      "reason": "gap_writeback_not_closed",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-013",
+      "fixtureId": "FIX-BKC-LEDGER-ORPHAN-001",
+      "baseKnowledgeId": "BKC-HBLC-LEDGER-202606-0001",
+      "target": "evidencePassRate",
+      "reason": "evidence_level_below_reuse_threshold",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    },
+    {
+      "candidateId": "WBC-DKS-044-014",
+      "fixtureId": "FIX-BKC-LEDGER-ORPHAN-001",
+      "baseKnowledgeId": "BKC-HBLC-LEDGER-202606-0001",
+      "target": "writebackClosureRate",
+      "reason": "gap_writeback_not_closed",
+      "candidateStatus": "candidate_only",
+      "decisionBand": "blocked_or_invalid",
+      "hardStop": true,
+      "requiredConfirmation": "manual_or_committee_required",
+      "writeAuthority": "none_dry_run_only"
+    }
+  ],
+  "boundary": {
+    "realKdsApiWrite": false,
+    "waesWrite": false,
+    "businessLedgerWrite": false,
+    "settlementWrite": false,
+    "ragAdmission": false
+  },
+  "status": "dry_run_evidence_only"
+}

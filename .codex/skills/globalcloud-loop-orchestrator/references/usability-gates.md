@@ -29,6 +29,19 @@ superseded_by: []
 - 截图、录屏、日志或人工试用记录。
 - 失败场景和恢复方式。
 
+## UI Quality Gate 接入
+
+当 Loop 轮次涉及产品界面、控制塔、工作台、证据页、异常页、AI 对话页、配置页、移动端或桌面端 UI 时，必须调用 `globalcloud-ui-quality-gate`。
+
+最低要求：
+
+- 读取 `.codex/skills/globalcloud-ui-quality-gate/SKILL.md`。
+- 按 `references/quality-checklist.md` 对 G1-G9 逐项给出 `pass`、`partial`、`fail` 或 `not_applicable`。
+- 按 `references/evidence-output.md` 输出 UI gate status、工具、验证、状态上限和缺口。
+- 若使用 Impeccable、accessibility、Playwright/browser 或 Figma，必须记录命令、入口、截图、失败和未验证项。
+
+UI 门禁输出的最高状态是 `ui_evidence_candidate`。`ui_ready` 只表示 UI 维度具备 evidence candidate，不表示业务完成、验收完成、accepted 或 integrated。
+
 ## 状态上限
 
 | 情况 | 状态上限 |
@@ -36,4 +49,8 @@ superseded_by: []
 | 无可用性 evidence | `partial` |
 | 关键路径不可复现 | `blocked` |
 | 只完成文档但无使用路径 | `partial` |
+| 涉及 UI 但未执行 UI Quality Gate | `partial` |
+| UI Quality Gate 为 `ui_blocked` | `blocked` |
+| UI Quality Gate 为 `ui_rework_required` | `rework_required` |
+| UI Quality Gate 为 `ui_partial` | `partial` |
 | 可用性验证通过 | 可进入客户满意门禁 |

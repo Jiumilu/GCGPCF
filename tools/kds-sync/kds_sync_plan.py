@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 from kds_runtime import (
@@ -31,15 +32,16 @@ SELF_REFRESH_SOURCE_PATHS = {
 
 
 def build_plan(require_remote: bool) -> tuple[int, dict]:
-    control_code, control_output = run_local(["python3", "tools/kds-sync/document_control.py"])
+    python = sys.executable or "python3"
+    control_code, control_output = run_local([python, "tools/kds-sync/document_control.py"])
     if control_code != 0:
         return 1, {"status": "blocked", "reason": control_output}
 
-    token_code, token_output = run_local(["python3", "tools/kds-sync/validate_kds_token.py"])
+    token_code, token_output = run_local([python, "tools/kds-sync/validate_kds_token.py"])
     if token_code != 0:
         return 1, {"status": "blocked", "reason": token_output}
 
-    conflict_code, conflict_output = run_local(["python3", "tools/kds-sync/kds_conflict_guard.py"])
+    conflict_code, conflict_output = run_local([python, "tools/kds-sync/kds_conflict_guard.py"])
     if conflict_code != 0:
         return 1, {"status": "blocked", "reason": conflict_output}
 
@@ -141,10 +143,10 @@ def write_report(plan: dict, path: Path) -> None:
         "",
         "# KDS Development Space Sync Plan",
         "",
-        f"generated_at: {plan.get('generated_at', '')}",
-        f"status: {plan.get('status', '')}",
-        f"kds_space: {plan.get('kds_space', '')}",
-        f"token_fingerprint: {plan.get('token_fingerprint', '')}",
+        f"generated_at:{(' ' + str(plan['generated_at'])) if plan.get('generated_at') else ''}",
+        f"status:{(' ' + str(plan['status'])) if plan.get('status') else ''}",
+        f"kds_space:{(' ' + str(plan['kds_space'])) if plan.get('kds_space') else ''}",
+        f"token_fingerprint:{(' ' + str(plan['token_fingerprint'])) if plan.get('token_fingerprint') else ''}",
         f"remote_documents: {plan.get('remote_documents', 0)}",
         "",
     ]
@@ -155,7 +157,7 @@ def write_report(plan: dict, path: Path) -> None:
             lines.append(f"- `{item.get('source_path', item.get('kds_path', ''))}` -> `{item.get('kds_path', '')}`")
         lines.append("")
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines), encoding="utf-8")
+    path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
 def mirror_report_if_registered(path: Path) -> None:

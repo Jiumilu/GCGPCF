@@ -37,5 +37,5 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | GPC | controlled |
-| GPCF-DOC-C02896A291 | Loop Round GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | GPC | controlled |
+| GPCF-DOC-C02896A291 | loop-round-GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | GPC | controlled |
 | GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | GPC | controlled |

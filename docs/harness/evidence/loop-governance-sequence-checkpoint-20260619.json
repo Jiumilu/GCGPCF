@@ -1,0 +1,51 @@
+{
+  "evidence_id": "LOOP-GOV-SEQUENCE-CHECKPOINT-20260619",
+  "evidence_type": "loop_governance_sequence_checkpoint",
+  "created_at": "2026-06-19",
+  "project": "GPCF",
+  "status": "watch",
+  "disposition_id": "LEDB-003-RD-002",
+  "backlog_item": "LEDB-003",
+  "source_signal": {
+    "loop_round_efficiency_audit": "pass",
+    "total_rounds": 355,
+    "audit_checked": 30,
+    "hard_checked": 5,
+    "audit_missing_truth_fields": 2,
+    "audit_missing_five_segment": 2,
+    "hard_missing_truth_fields": 0,
+    "hard_missing_five_segment": 0,
+    "max_consecutive_sequence": 186,
+    "risk": "review_required"
+  },
+  "checkpoint_policy": {
+    "sequence_prefix": "GPCF-L4-GFIS-REPAIR",
+    "checkpoint_interval_rounds": 25,
+    "latest_sequence_length": 186,
+    "last_required_checkpoint_floor": 175,
+    "next_required_checkpoint_at": 200,
+    "required_review_dimensions": [
+      "hard_window_truth_fields_clean",
+      "hard_window_five_segment_clean",
+      "gfis_runtime_status_not_upgraded_without_evidence",
+      "no_production_write_or_schema_sync",
+      "next_sequence_checkpoint_due"
+    ]
+  },
+  "scope": {
+    "no_bulk_rewrite": true,
+    "business_status_impact": "none",
+    "accepted_integrated_allowed": false
+  },
+  "decision": {
+    "type": "checkpoint_cadence_defined",
+    "current_action": "keep_watch_until_next_checkpoint",
+    "next_action": "create next sequence checkpoint when max_consecutive_sequence reaches 200 or when hard-window debt reappears"
+  },
+  "non_claims": [
+    "This evidence does not prove GFIS runtime SOP E2E passed.",
+    "This evidence does not close LEDB-003.",
+    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status.",
+    "This evidence does not authorize production write, external API write, schema sync, bench migrate, deployment, permission change, commit, or push."
+  ]
+}

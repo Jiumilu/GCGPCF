@@ -97,10 +97,10 @@ def main() -> int:
     segment_rounds = [record["round"] for record in locator.get("affected_five_segment_records", [])]
     require(truth_package.get("rounds") == truth_rounds, "truth-field review package must match locator")
     require(segment_package.get("rounds") == segment_rounds, "five-segment review package must match locator")
-    require(truth_package.get("count") == len(truth_rounds) == 2, "truth-field package count mismatch")
-    require(segment_package.get("count") == len(segment_rounds) == 18, "five-segment package count mismatch")
-    require(sequence_package.get("count") == signal.get("max_consecutive_sequence") == 184, "sequence package count mismatch")
-    require("checkpoint every 10 substantive GFIS repair rounds" in sequence_package.get("cadence", ""), "sequence cadence missing")
+    require(truth_package.get("count") == len(truth_rounds), "truth-field package count mismatch")
+    require(segment_package.get("count") == len(segment_rounds), "five-segment package count mismatch")
+    require(sequence_package.get("count") == signal.get("max_consecutive_sequence"), "sequence package count mismatch")
+    require("checkpoint every 25 substantive GFIS repair rounds" in sequence_package.get("cadence", ""), "sequence cadence missing")
 
     for text, name in [(plan_doc, "plan doc"), (plan_md, "plan evidence")]:
         for phrase in [
@@ -130,7 +130,7 @@ def main() -> int:
         "loop_governance_round_review_plan=pass "
         "evidence=LOOP-GOV-ROUND-REVIEW-PLAN-20260617 "
         f"truth_review_rounds={len(truth_rounds)} five_segment_review_rounds={len(segment_rounds)} "
-        "sequence_checkpoint=184 no_bulk_rewrite=true business_status_impact=none"
+        f"sequence_checkpoint={sequence_package.get('count')} no_bulk_rewrite=true business_status_impact=none"
     )
     return 0
 

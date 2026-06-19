@@ -26,15 +26,15 @@ by `LOOP-GOV-EFF-DEBT-LOCATOR-20260617`.
 ## Source Signal
 
 ```text
-loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=1 audit_missing_five_segment=1 hard_missing_truth_fields=0 hard_missing_five_segment=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
+loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=5 audit_missing_truth_fields=0 audit_missing_five_segment=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
 ## Review Package Summary
 
 | Package | Backlog Item | Count | Status |
 |---|---|---:|---|
-| LEDB-001-RP-001 | LEDB-001 | 1 | review_required |
-| LEDB-002-RP-001 | LEDB-002 | 1 | review_required |
+| LEDB-001-RP-001 | LEDB-001 | 0 | monitoring_only |
+| LEDB-002-RP-001 | LEDB-002 | 0 | monitoring_only |
 | LEDB-003-RP-001 | LEDB-003 | 186 | cadence_required |
 
 ## Controls
@@ -49,7 +49,8 @@ loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=
 
 ## Execution Notes
 
-- Start with recent affected rounds `212` through `208`, then move backward.
+- The locator baseline has no current affected truth-field or five-segment
+  records; keep these lanes visible for future audit-window drift.
 - Use targeted annotations only when existing evidence supports the annotation.
 - Use index-level exceptions when evidence is insufficient.
 - Keep long-sequence risk visible through checkpoint cadence instead of hiding it

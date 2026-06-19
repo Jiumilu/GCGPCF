@@ -123,6 +123,8 @@ class SyncRecord:
     def status(self) -> str:
         if not self.source.exists():
             return "missing"
+        if self.source_path.startswith(".codex/skills/") and self.source_path.endswith("/SKILL.md"):
+            return "operational_controlled"
         return parse_frontmatter(self.source.read_text(encoding="utf-8")).get(
             "status", "missing"
         )

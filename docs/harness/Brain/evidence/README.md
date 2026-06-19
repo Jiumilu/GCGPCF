@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-4A654203DE | evidence | docs/harness/Brain/evidence/README.md | Brain | controlled |
-| GPCF-DOC-33E55CB86C | Evidence Index — Brain | docs/harness/Brain/evidence/evidence-index.md | Brain | controlled |
+| GPCF-DOC-33E55CB86C | evidence-index | docs/harness/Brain/evidence/evidence-index.md | Brain | controlled |

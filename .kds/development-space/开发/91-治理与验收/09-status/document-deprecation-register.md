@@ -122,7 +122,7 @@ superseded_by: []
 | GPCF-DOC-71D00E7EBE | evidence | .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md |
 | GPCF-DOC-B89D14C3C8 | KDS Real Token Sync Git Change Groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md |
 | GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md |
-| GPCF-DOC-0498FF3BEF | Harness Status Audit: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md |
+| GPCF-DOC-0498FF3BEF | status-audit | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md |
 | GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md |
 | GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md |
 | GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | archive | 开发/92-证据与会话归档/08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md |

@@ -39,10 +39,10 @@ KDS 空间：`开发`
 | GPCF-DOC-29E5B0AC17 | Loop Autonomy Policy | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |
 | GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | controlled |
-| GPCF-DOC-04BF76145B | Loop Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
+| GPCF-DOC-04BF76145B | LOOP_EXECUTION_RULES | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | controlled |
 | GPCF-DOC-07906C7E54 | Loop Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | GPCF | controlled |
-| GPCF-DOC-D63AEEB17D | LOOP_GOVERNANCE_OPERATING_BOUNDARY | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | GPCF | controlled |
+| GPCF-DOC-D63AEEB17D | Loop Governance Operating Boundary | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAES | controlled |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAES | controlled |
 | GPCF-DOC-8A21A00749 | Loop Governance Round Review Plan | 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md | WAES | controlled |
 | GPCF-DOC-1B5550FF05 | Loop L3.5 Real API Verification Policy | 02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md | WAES | controlled |

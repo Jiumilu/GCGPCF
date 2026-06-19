@@ -37,8 +37,8 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | KDS | draft |
-| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | KDS | draft |
-| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | KDS | draft |
+| GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | GPCF | draft |
+| GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | GPCF | draft |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | KDS | draft |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | KDS | draft |
 | GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | draft |

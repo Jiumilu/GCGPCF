@@ -50,12 +50,38 @@ def run_gfis_runtime_sop_validator() -> dict:
         capture_output=True,
         text=True,
     )
-    output = [line.strip() for line in result.stdout.splitlines() if line.strip()]
+    output = [line.strip() for line in (result.stdout + "\n" + result.stderr).splitlines() if line.strip()]
     status = "unknown"
     for line in output:
         if line.startswith("gfis_runtime_sop_e2e="):
             status = line.split("=", 1)[1].split()[0]
             break
+    if status == "unknown" and result.returncode != 0:
+        status = "repair_required"
+    return {
+        "status": status,
+        "exit_code": result.returncode,
+        "output": output,
+    }
+
+
+def run_gfis_named_validator(script_name: str) -> dict:
+    validator = GFIS_ROOT / "scripts" / script_name
+    if not validator.exists():
+        return {
+            "status": "missing_validator",
+            "exit_code": None,
+            "output": [],
+        }
+    result = subprocess.run(
+        ["python3", str(validator.relative_to(GFIS_ROOT))],
+        cwd=str(GFIS_ROOT),
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    output = [line.strip() for line in (result.stdout + "\n" + result.stderr).splitlines() if line.strip()]
+    status = "pass" if result.returncode == 0 else "failed"
     return {
         "status": status,
         "exit_code": result.returncode,
@@ -111,6 +137,21 @@ def main() -> int:
     gfis_retrieval = read(GFIS_ROOT / "docs/harness/evidence/kds-retrieval-GFIS-L4-008.json")
     gfis_last_run = load_json(GFIS_ROOT / "test-results/.last-run.json")
     runtime_sop = run_gfis_runtime_sop_validator()
+    synthetic_dev_lane = run_gfis_named_validator("validate_gfis_runtime_sop_e2e_dev.py")
+    real_business_lane = run_gfis_named_validator("validate_gfis_runtime_sop_e2e_real.py")
+    real_source_record_intake_gate = run_gfis_named_validator("validate_gfis_real_source_record_intake_gate.py")
+    pending_business_verification = run_gfis_named_validator("validate_gfis_pending_business_verification.py")
+    runtime_primary_key_gate = run_gfis_named_validator("validate_gfis_runtime_primary_key_gate.py")
+    review_queue_admission_gate = run_gfis_named_validator("validate_gfis_review_queue_admission_gate.py")
+    runtime_intake_gate = run_gfis_named_validator("validate_gfis_runtime_intake_gate.py")
+    waes_review_gate = run_gfis_named_validator("validate_gfis_waes_review_gate.py")
+    verified_artifact_gate = run_gfis_named_validator("validate_gfis_verified_artifact_gate.py")
+    development_ready_goal = run_gfis_named_validator("validate_gfis_development_ready_goal.py")
+    test_source_record_submission_gate = run_gfis_named_validator("validate_gfis_customer_requirement_test_source_record_submission.py")
+    test_data_minimum_sop_e2e = run_gfis_named_validator("validate_gfis_test_data_minimum_sop_e2e.py")
+    test_data_12_stage_sop_e2e = run_gfis_named_validator("validate_gfis_test_data_12_stage_sop_e2e.py")
+    test_data_12_stage_transition_gate = run_gfis_named_validator("validate_gfis_test_data_12_stage_transition_gate.py")
+    test_data_12_stage_negative_transition_guard = run_gfis_named_validator("validate_gfis_test_data_12_stage_negative_transition_guard.py")
     loop_efficiency = run_loop_round_efficiency_audit()
 
     combined_gpcf = "\n".join([evidence_index, closure_matrix, gpcf_round])
@@ -144,6 +185,38 @@ def main() -> int:
         blockers.append("gfis_sop_e2e_failed")
     if runtime_sop_repair_required:
         blockers.append("gfis_runtime_sop_e2e_repair_required")
+    if synthetic_dev_lane["exit_code"] != 0:
+        blockers.append("gfis_synthetic_dev_lane_not_closed")
+    if real_business_lane["exit_code"] != 0:
+        blockers.append("gfis_real_business_lane_guard_failed")
+    if real_source_record_intake_gate["exit_code"] != 0:
+        blockers.append("gfis_real_source_record_intake_gate_failed")
+    if pending_business_verification["exit_code"] != 0:
+        blockers.append("gfis_pending_business_verification_gate_failed")
+    if runtime_primary_key_gate["exit_code"] != 0:
+        blockers.append("gfis_runtime_primary_key_gate_failed")
+    if review_queue_admission_gate["exit_code"] != 0:
+        blockers.append("gfis_review_queue_admission_gate_failed")
+    if runtime_intake_gate["exit_code"] != 0:
+        blockers.append("gfis_runtime_intake_gate_failed")
+    if waes_review_gate["exit_code"] != 0:
+        blockers.append("gfis_waes_review_gate_failed")
+    if verified_artifact_gate["exit_code"] != 0:
+        blockers.append("gfis_verified_artifact_gate_failed")
+    if development_ready_goal["exit_code"] != 0:
+        blockers.append("gfis_development_ready_goal_failed")
+    if test_source_record_submission_gate["exit_code"] != 0:
+        blockers.append("gfis_test_source_record_submission_gate_failed")
+    if test_data_minimum_sop_e2e["exit_code"] != 0:
+        blockers.append("gfis_test_data_minimum_sop_e2e_failed")
+    if test_data_12_stage_sop_e2e["exit_code"] != 0:
+        blockers.append("gfis_test_data_12_stage_sop_e2e_failed")
+    if test_data_12_stage_transition_gate["exit_code"] != 0:
+        blockers.append("gfis_test_data_12_stage_transition_gate_failed")
+    if test_data_12_stage_negative_transition_guard["exit_code"] != 0:
+        blockers.append("gfis_test_data_12_stage_negative_transition_guard_failed")
+    if any("KDS coverage must not have missing controlled sources" in line for line in runtime_sop.get("output", [])):
+        blockers.append("gfis_kds_controlled_sources_missing")
     if not runtime_boundary_declared:
         blockers.append("gfis_runtime_boundary_missing")
     if gfis_dirty:
@@ -157,9 +230,17 @@ def main() -> int:
     gate = "blocked" if blockers else "pass"
     score = 79 if blockers and runtime_kds_source_paths_closed(runtime_sop) else 78 if blockers else 100
     assessment = {
-        "round_id": "GPCF-L4-CORR-001",
+        "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
         "gate": gate,
         "project_group_score": score,
+        "development_ready": "pass" if development_ready_goal["exit_code"] == 0 else "failed",
+        "test_data_minimum_sop_e2e": "pass" if test_data_minimum_sop_e2e["exit_code"] == 0 else "failed",
+        "test_data_12_stage_sop_e2e": "pass" if test_data_12_stage_sop_e2e["exit_code"] == 0 else "failed",
+        "test_data_12_stage_transition_gate": "pass" if test_data_12_stage_transition_gate["exit_code"] == 0 else "failed",
+        "test_data_12_stage_negative_transition_guard": "pass" if test_data_12_stage_negative_transition_guard["exit_code"] == 0 else "failed",
+        "synthetic_dev_lane": "dev_closed" if synthetic_dev_lane["exit_code"] == 0 else "failed",
+        "real_business_lane": "repair_required",
+        "business_verification_pending": True,
         "previous_l4_score_invalidated": gate == "blocked",
         "invalidated_rounds": ["GFIS-L4-008", "GPCF-L4-012"] if gate == "blocked" else [],
         "gfis": {
@@ -174,6 +255,51 @@ def main() -> int:
             "runtime_sop_e2e_status": runtime_sop_status,
             "runtime_sop_e2e_exit_code": runtime_sop["exit_code"],
             "runtime_sop_e2e_output": runtime_sop["output"],
+            "synthetic_dev_lane_status": synthetic_dev_lane["status"],
+            "synthetic_dev_lane_exit_code": synthetic_dev_lane["exit_code"],
+            "synthetic_dev_lane_output": synthetic_dev_lane["output"],
+            "real_business_lane_status": "repair_required",
+            "real_business_lane_exit_code": real_business_lane["exit_code"],
+            "real_business_lane_output": real_business_lane["output"],
+            "real_source_record_intake_gate_status": real_source_record_intake_gate["status"],
+            "real_source_record_intake_gate_exit_code": real_source_record_intake_gate["exit_code"],
+            "real_source_record_intake_gate_output": real_source_record_intake_gate["output"],
+            "pending_business_verification_gate_status": pending_business_verification["status"],
+            "pending_business_verification_gate_exit_code": pending_business_verification["exit_code"],
+            "pending_business_verification_gate_output": pending_business_verification["output"],
+            "runtime_primary_key_gate_status": runtime_primary_key_gate["status"],
+            "runtime_primary_key_gate_exit_code": runtime_primary_key_gate["exit_code"],
+            "runtime_primary_key_gate_output": runtime_primary_key_gate["output"],
+            "review_queue_admission_gate_status": review_queue_admission_gate["status"],
+            "review_queue_admission_gate_exit_code": review_queue_admission_gate["exit_code"],
+            "review_queue_admission_gate_output": review_queue_admission_gate["output"],
+            "runtime_intake_gate_status": runtime_intake_gate["status"],
+            "runtime_intake_gate_exit_code": runtime_intake_gate["exit_code"],
+            "runtime_intake_gate_output": runtime_intake_gate["output"],
+            "waes_review_gate_status": waes_review_gate["status"],
+            "waes_review_gate_exit_code": waes_review_gate["exit_code"],
+            "waes_review_gate_output": waes_review_gate["output"],
+            "verified_artifact_gate_status": verified_artifact_gate["status"],
+            "verified_artifact_gate_exit_code": verified_artifact_gate["exit_code"],
+            "verified_artifact_gate_output": verified_artifact_gate["output"],
+            "development_ready_goal_status": development_ready_goal["status"],
+            "development_ready_goal_exit_code": development_ready_goal["exit_code"],
+            "development_ready_goal_output": development_ready_goal["output"],
+            "test_source_record_submission_gate_status": test_source_record_submission_gate["status"],
+            "test_source_record_submission_gate_exit_code": test_source_record_submission_gate["exit_code"],
+            "test_source_record_submission_gate_output": test_source_record_submission_gate["output"],
+            "test_data_minimum_sop_e2e_status": test_data_minimum_sop_e2e["status"],
+            "test_data_minimum_sop_e2e_exit_code": test_data_minimum_sop_e2e["exit_code"],
+            "test_data_minimum_sop_e2e_output": test_data_minimum_sop_e2e["output"],
+            "test_data_12_stage_sop_e2e_status": test_data_12_stage_sop_e2e["status"],
+            "test_data_12_stage_sop_e2e_exit_code": test_data_12_stage_sop_e2e["exit_code"],
+            "test_data_12_stage_sop_e2e_output": test_data_12_stage_sop_e2e["output"],
+            "test_data_12_stage_transition_gate_status": test_data_12_stage_transition_gate["status"],
+            "test_data_12_stage_transition_gate_exit_code": test_data_12_stage_transition_gate["exit_code"],
+            "test_data_12_stage_transition_gate_output": test_data_12_stage_transition_gate["output"],
+            "test_data_12_stage_negative_transition_guard_status": test_data_12_stage_negative_transition_guard["status"],
+            "test_data_12_stage_negative_transition_guard_exit_code": test_data_12_stage_negative_transition_guard["exit_code"],
+            "test_data_12_stage_negative_transition_guard_output": test_data_12_stage_negative_transition_guard["output"],
             "git_dirty": gfis_dirty,
         },
         "loop_efficiency": {
@@ -191,17 +317,30 @@ def main() -> int:
         "blockers": blockers,
         "required_repairs": [
             "Replace GFIS-L4-008 demo fixture evidence with GFIS runtime-layer DocType/workflow/API evidence.",
-            "Run and pass the SOP E2E master path against the GFIS runtime layer.",
+            "Run and pass the SOP E2E master path against the GFIS runtime layer after KDS missing controlled sources and valid source record inputs are resolved.",
             "Collect KDS Gehua controlled missing_input and runtime-layer evidence before any score restoration.",
             "Keep GFIS Demo limited to display, training, traceability explanation and frontend regression.",
             "Do not mark L4 closed or 100/100 while runtime subject or E2E gates are blocked.",
+            "Keep CustomerRequirementOrPlatformOrder real source-of-record intake blocked until owner-confirmed customer order, platform order receipt, purchase order, customer confirmation, or equivalent formal confirmation arrives.",
+            "Keep pending_business_verification quarantined until manual business verification passes; do not create runtime primary key from quotation-only, Loop document-only, Demo, mock, or fixture evidence.",
+            "Keep runtime primary key creation blocked until valid_source_record and manual business verification both pass.",
+            "Keep review queue admission blocked until a verified runtime primary key exists.",
+            "Keep runtime intake blocked until a verified review queue item exists.",
+            "Keep WAES review blocked until a verified runtime intake item exists.",
+            "Keep verified artifact blocked until a real WAES review result exists.",
+            "Keep development_ready separate from production_ready and accepted/integrated; development_ready only means synthetic dev lane and local E2E/display regression are auditable.",
+            "Keep test_data_lane separate from real_business_lane; TEST-GFIS records must not unlock runtime primary key, review queue, runtime intake, WAES review, verified artifact, or production_ready.",
+            "Keep test_data_minimum_sop_e2e separate from real SOP acceptance; it proves test-chain shape and pollution guard only.",
+            "Keep test_data_12_stage_sop_e2e separate from real SOP acceptance; it proves 12-stage test-data shape and pollution guard only.",
+            "Keep test_data_12_stage_transition_gate separate from real SOP acceptance; it proves test-stage transition boundaries, POD/finance manual gates, and pollution guard only.",
+            "Keep test_data_12_stage_negative_transition_guard separate from real SOP acceptance; it proves invalid test transitions, bypass attempts, demo substitution, write claims, and status-upgrade claims are rejected only.",
             "Review Loop round efficiency debt before counting long continuous sequences as high-confidence progress.",
         ],
-        "stop_type": "hard_stop" if blockers else "none",
+        "stop_type": "blocked_real_business_lane_after_development_ready" if blockers else "none",
         "substance_gate": "pass",
         "declared_rounds": "1/15",
         "substantive_rounds": "1/15",
-        "generated_items": 3,
+        "generated_items": 5,
         "batch_generated": False,
     }
 
@@ -214,7 +353,28 @@ def main() -> int:
         f"historical_demo_evidence={'invalidated' if demo_counted_as_runtime else 'none'} "
         f"demo_e2e={sop_e2e_status} runtime_sop_e2e={runtime_sop_status} "
         f"loop_efficiency_risk={loop_efficiency_metrics.get('risk', 'unknown')} "
-        f"project_group_score={score} next=GFIS-runtime-repair"
+        f"project_group_score={score} synthetic_dev_lane="
+        f"{'dev_closed' if synthetic_dev_lane['exit_code'] == 0 else 'failed'} "
+        f"development_ready={'pass' if development_ready_goal['exit_code'] == 0 else 'failed'} "
+        f"test_data_minimum_sop_e2e={'pass' if test_data_minimum_sop_e2e['exit_code'] == 0 else 'failed'} "
+        f"test_data_12_stage_sop_e2e={'pass' if test_data_12_stage_sop_e2e['exit_code'] == 0 else 'failed'} "
+        f"test_data_12_stage_transition_gate={'pass' if test_data_12_stage_transition_gate['exit_code'] == 0 else 'failed'} "
+        f"test_data_12_stage_negative_transition_guard={'pass' if test_data_12_stage_negative_transition_guard['exit_code'] == 0 else 'failed'} "
+        f"real_business_lane=repair_required business_verification_pending=true "
+        f"real_source_record_intake_gate={real_source_record_intake_gate['status']} "
+        f"pending_business_verification_gate={pending_business_verification['status']} "
+        f"runtime_primary_key_gate={runtime_primary_key_gate['status']} "
+        f"review_queue_gate={review_queue_admission_gate['status']} "
+        f"runtime_intake_gate={runtime_intake_gate['status']} "
+        f"waes_review_gate={waes_review_gate['status']} "
+        f"verified_artifact_gate={verified_artifact_gate['status']} "
+        f"development_ready_goal={development_ready_goal['status']} "
+        f"test_source_record_submission_gate={test_source_record_submission_gate['status']} "
+        f"test_data_minimum_sop_e2e={test_data_minimum_sop_e2e['status']} "
+        f"test_data_12_stage_sop_e2e={test_data_12_stage_sop_e2e['status']} "
+        f"test_data_12_stage_transition_gate={test_data_12_stage_transition_gate['status']} "
+        f"test_data_12_stage_negative_transition_guard={test_data_12_stage_negative_transition_guard['status']} "
+        f"next=real-source-record-or-business-input-remediation"
     )
     return 0
 

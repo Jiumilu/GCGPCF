@@ -34,6 +34,7 @@ superseded_by: []
 | governance-bundle | `.okf/governance/index.md` | 文档治理、Loop、Harness、状态机、门禁 |
 | architecture-bundle | `.okf/architecture/index.md` | 项目群架构、主线对齐、跨项目架构 |
 | kds-bundle | `.okf/kds/index.md` | KDS 同步、安全、镜像、导入规则 |
+| kds-okf-v0.1-derived-bundle | `.okf/bundles/kds-v0.1/index.md` | KDS 受控文档的 OKF v0.1 metadata-only 派生层 |
 
 ## Agent 读取顺序
 

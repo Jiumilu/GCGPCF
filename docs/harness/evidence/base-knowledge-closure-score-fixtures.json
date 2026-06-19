@@ -1,0 +1,173 @@
+{
+  "fixtureSetId": "BKC-DRY-RUN-FIXTURE-SET-20260618",
+  "mode": "dry_run_only",
+  "source": "GPCF-KDS-DKS-043",
+  "fixtures": [
+    {
+      "fixtureId": "FIX-BKC-REPAIR-001",
+      "input": {
+        "baseKnowledgeId": "BKC-HBLC-FEA-202606-0001",
+        "sourceProject": "湖北磷材",
+        "kdsPoolRefs": ["装备池", "产能池", "政策池", "数据池", "场景池"],
+        "enhancedLedgerRefs": ["贡献账本", "SOP账本", "悬赏池"],
+        "statusCoverageRate": 100,
+        "dqScore": 65,
+        "evidencePassRate": 60,
+        "consistencyRate": 80,
+        "automationEffectivenessRate": 0,
+        "writebackClosureRate": 30,
+        "oneVoteVetoFlags": [],
+        "sourceRefs": ["virtual://hblc/fea/source-summary"],
+        "evidenceLevel": "E2_candidate",
+        "humanReviewStatus": "pending",
+        "waesRecordStatus": "planned",
+        "settlementStatus": "prohibited_before_acceptance",
+        "ragInclude": false
+      },
+      "expected": {
+        "calculatedClosureRate": 63.25,
+        "decisionBand": "repair_candidate",
+        "hardStop": false
+      }
+    },
+    {
+      "fixtureId": "FIX-BKC-LIMITED-001",
+      "input": {
+        "baseKnowledgeId": "BKC-HBLC-IND-202606-0001",
+        "sourceProject": "湖北磷材",
+        "kdsPoolRefs": ["政策池", "数据池", "原料池", "场景池"],
+        "enhancedLedgerRefs": ["贡献账本"],
+        "statusCoverageRate": 100,
+        "dqScore": 78,
+        "evidencePassRate": 75,
+        "consistencyRate": 85,
+        "automationEffectivenessRate": 45,
+        "writebackClosureRate": 35,
+        "oneVoteVetoFlags": [],
+        "sourceRefs": ["virtual://hblc/industry/source-summary"],
+        "evidenceLevel": "E3_limited",
+        "humanReviewStatus": "pending",
+        "waesRecordStatus": "planned",
+        "settlementStatus": "prohibited_before_acceptance",
+        "ragInclude": false
+      },
+      "expected": {
+        "calculatedClosureRate": 75.25,
+        "decisionBand": "limited_report_candidate",
+        "hardStop": false
+      }
+    },
+    {
+      "fixtureId": "FIX-BKC-BLOCK-001",
+      "input": {
+        "baseKnowledgeId": "BKC-HBLC-ORD-202606-0001",
+        "sourceProject": "湖北磷材",
+        "kdsPoolRefs": ["订单池", "数据池", "场景池"],
+        "enhancedLedgerRefs": ["贡献账本"],
+        "statusCoverageRate": 90,
+        "dqScore": 45,
+        "evidencePassRate": 50,
+        "consistencyRate": 60,
+        "automationEffectivenessRate": 10,
+        "writebackClosureRate": 20,
+        "oneVoteVetoFlags": [],
+        "sourceRefs": [],
+        "evidenceLevel": "E1_candidate",
+        "humanReviewStatus": "pending",
+        "waesRecordStatus": "planned",
+        "settlementStatus": "prohibited_before_acceptance",
+        "ragInclude": false
+      },
+      "expected": {
+        "calculatedClosureRate": 51.25,
+        "decisionBand": "blocked_or_invalid",
+        "hardStop": true,
+        "hardStopReasons": ["VETO-NO-SOURCE"]
+      }
+    },
+    {
+      "fixtureId": "FIX-BKC-REVENUE-VETO-001",
+      "input": {
+        "baseKnowledgeId": "BKC-HBLC-ORD-202606-0002",
+        "sourceProject": "湖北磷材",
+        "kdsPoolRefs": ["订单池", "资金池", "数据池"],
+        "enhancedLedgerRefs": ["收益池", "贡献账本"],
+        "statusCoverageRate": 50,
+        "dqScore": 38,
+        "evidencePassRate": 20,
+        "consistencyRate": 40,
+        "automationEffectivenessRate": 20,
+        "writebackClosureRate": 30,
+        "oneVoteVetoFlags": ["VETO-REVENUE-MISCLAIM"],
+        "sourceRefs": ["virtual://hblc/order/unbooked-revenue-candidate"],
+        "evidenceLevel": "E1_candidate",
+        "humanReviewStatus": "pending",
+        "waesRecordStatus": "planned",
+        "settlementStatus": "prohibited_before_acceptance",
+        "ragInclude": false
+      },
+      "expected": {
+        "calculatedClosureRate": 34.5,
+        "decisionBand": "blocked_or_invalid",
+        "hardStop": true,
+        "hardStopReasons": ["VETO-REVENUE-MISCLAIM"]
+      }
+    },
+    {
+      "fixtureId": "FIX-BKC-RAG-MISMATCH-001",
+      "input": {
+        "baseKnowledgeId": "BKC-HBLC-FEA-202606-0002",
+        "sourceProject": "湖北磷材",
+        "kdsPoolRefs": ["装备池", "产能池", "数据池"],
+        "enhancedLedgerRefs": ["贡献账本", "悬赏池"],
+        "statusCoverageRate": 100,
+        "dqScore": 65,
+        "evidencePassRate": 60,
+        "consistencyRate": 80,
+        "automationEffectivenessRate": 0,
+        "writebackClosureRate": 30,
+        "oneVoteVetoFlags": [],
+        "sourceRefs": ["virtual://hblc/fea/source-summary"],
+        "evidenceLevel": "E2_candidate",
+        "humanReviewStatus": "pending",
+        "waesRecordStatus": "planned",
+        "settlementStatus": "prohibited_before_acceptance",
+        "ragInclude": true
+      },
+      "expected": {
+        "calculatedClosureRate": 63.25,
+        "decisionBand": "blocked_or_invalid",
+        "hardStop": true,
+        "hardStopReasons": ["HS-RAG-MISMATCH"]
+      }
+    },
+    {
+      "fixtureId": "FIX-BKC-LEDGER-ORPHAN-001",
+      "input": {
+        "baseKnowledgeId": "BKC-HBLC-LEDGER-202606-0001",
+        "sourceProject": "湖北磷材",
+        "kdsPoolRefs": [],
+        "enhancedLedgerRefs": ["贡献账本", "收益池"],
+        "statusCoverageRate": 70,
+        "dqScore": 60,
+        "evidencePassRate": 40,
+        "consistencyRate": 70,
+        "automationEffectivenessRate": 20,
+        "writebackClosureRate": 20,
+        "oneVoteVetoFlags": [],
+        "sourceRefs": ["virtual://hblc/orphan-ledger/source-summary"],
+        "evidenceLevel": "E1_candidate",
+        "humanReviewStatus": "pending",
+        "waesRecordStatus": "planned",
+        "settlementStatus": "prohibited_before_acceptance",
+        "ragInclude": false
+      },
+      "expected": {
+        "calculatedClosureRate": 51.5,
+        "decisionBand": "blocked_or_invalid",
+        "hardStop": true,
+        "hardStopReasons": ["HS-NO-KDS-POOL", "VETO-LEDGER-ORPHAN"]
+      }
+    }
+  ]
+}

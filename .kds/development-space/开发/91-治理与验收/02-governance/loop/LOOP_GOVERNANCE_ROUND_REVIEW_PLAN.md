@@ -28,7 +28,7 @@ not change GFIS or project business status.
 ## Source Baseline
 
 ```text
-loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=5 audit_missing_truth_fields=1 audit_missing_five_segment=1 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
+loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=5 audit_missing_truth_fields=0 audit_missing_five_segment=0 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
 ## Review Controls
@@ -46,9 +46,9 @@ loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=
 
 | Package | Backlog Item | Scope | Count | Review Decision |
 |---|---|---|---:|---|
-| LEDB-001-RP-001 | LEDB-001 | missing truth fields in audit-window rounds | 2 | targeted review required |
-| LEDB-002-RP-001 | LEDB-002 | missing five-part markers in audit-window rounds | 18 | targeted review required |
-| LEDB-003-RP-001 | LEDB-003 | long consecutive `GPCF-L4-GFIS-REPAIR-*` sequence | 184 | checkpoint cadence required |
+| LEDB-001-RP-001 | LEDB-001 | missing truth fields in locator baseline audit window | 0 | monitoring only |
+| LEDB-002-RP-001 | LEDB-002 | missing five-part markers in locator baseline audit window | 0 | monitoring only |
+| LEDB-003-RP-001 | LEDB-003 | long consecutive `GPCF-L4-GFIS-REPAIR-*` sequence | 186 | checkpoint cadence required |
 
 ## Review Rules
 
@@ -69,11 +69,9 @@ loop_round_efficiency_audit=pass total_rounds=294 audit_checked=30 hard_checked=
 
 | Order | Package | Rounds |
 |---:|---|---|
-| 1 | LEDB-002-RP-001 | `loop-round-GPCF-L4-GFIS-REPAIR-212.md`, `loop-round-GPCF-L4-GFIS-REPAIR-211.md`, `loop-round-GPCF-L4-GFIS-REPAIR-210.md` |
-| 2 | LEDB-001-RP-001 | `loop-round-GPCF-L4-GFIS-REPAIR-203.md`, `loop-round-GPCF-L4-GFIS-REPAIR-202.md` |
-| 3 | LEDB-002-RP-001 | `loop-round-GPCF-L4-GFIS-REPAIR-209.md`, `loop-round-GPCF-L4-GFIS-REPAIR-208.md`, `loop-round-GPCF-L4-GFIS-REPAIR-207.md`, `loop-round-GPCF-L4-GFIS-REPAIR-206.md`, `loop-round-GPCF-L4-GFIS-REPAIR-205.md`, `loop-round-GPCF-L4-GFIS-REPAIR-204.md` |
-| 4 | LEDB-001-RP-001 | No remaining `195-201` truth-field action after validator rule update; keep monitoring only. |
-| 5 | LEDB-003-RP-001 | Define checkpoint cadence for every 10 substantive GFIS repair rounds or every material source-record gate change, whichever happens first. |
+| 1 | LEDB-001-RP-001 | No current locator-baseline truth-field rounds; keep monitoring only. |
+| 2 | LEDB-002-RP-001 | No current locator-baseline five-segment rounds; keep monitoring only. |
+| 3 | LEDB-003-RP-001 | Define checkpoint cadence for every 25 substantive GFIS repair rounds or every material source-record gate change, whichever happens first. |
 
 ## Allowed Outcomes
 

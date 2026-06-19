@@ -1,0 +1,65 @@
+{
+  "ledger_id": "ODF-PHASE7-SMALL-BATCH-20260619",
+  "title": "ODF Phase 7 confirmed small-batch ledger",
+  "generated_at": "2026-06-19",
+  "status": "phase7_small_batch_closed",
+  "policy": "metadata-envelope-only; no body copy; no broad rollout; no business status upgrade",
+  "confirmation": {
+    "confirmed_by": "lujunxiang",
+    "confirmed_at": "2026-06-19",
+    "source_queue_id": "ODF-PHASE6-QUEUE-20260618-001"
+  },
+  "samples": [
+    {
+      "sample_id": "ODF-PHASE7-20260619-001",
+      "category": "kds-governance",
+      "source_uri": "git://09-status/kds-md-okf-implementation-closure-plan.md",
+      "source_hash": "0ac0e3eb806e608f5b118f3d04fdb058f6375f4ef1b720ebb268742df1a3a0d8",
+      "odf_path": "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-md-okf-closure-plan.json",
+      "odf_hash": "c69a9c0a577358b2829cf9280e56f5b9b7361a896895a6afdac0278d1d939f90",
+      "markdown_hash": "0ac0e3eb806e608f5b118f3d04fdb058f6375f4ef1b720ebb268742df1a3a0d8",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "GPCF",
+      "source_path": "09-status/kds-md-okf-implementation-closure-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md",
+      "sensitivity_check": "pass_no_body_copy_governance_reference_only",
+      "status": "phase7_sample",
+      "rollback_hint": "remove this ODF phase7 envelope and ledger entry; keep the original Markdown document unchanged"
+    },
+    {
+      "sample_id": "ODF-PHASE7-20260619-002",
+      "category": "kds-governance",
+      "source_uri": "git://09-status/kds-development-space-sync-register.md",
+      "source_hash": "ee2ce9c9864ce5152e4f9eff3e5f1cac4f853bec0ad7372e29bb4b8ee82902c6",
+      "odf_path": "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-sync-register.json",
+      "odf_hash": "7c19729cd29c345ccbfd715e7dea8074d2810cf3a4dfdd9ef2c38d5eea5bf7f7",
+      "markdown_hash": "ee2ce9c9864ce5152e4f9eff3e5f1cac4f853bec0ad7372e29bb4b8ee82902c6",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "GPCF",
+      "source_path": "09-status/kds-development-space-sync-register.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-development-space-sync-register.md",
+      "sensitivity_check": "pass_no_body_copy_sync_register_reference_only",
+      "status": "phase7_sample",
+      "rollback_hint": "remove this ODF phase7 envelope and ledger entry; keep the original Markdown document unchanged"
+    },
+    {
+      "sample_id": "ODF-PHASE7-20260619-003",
+      "category": "kds-governance",
+      "source_uri": "git://02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "source_hash": "31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c",
+      "odf_path": "docs/harness/evidence/odf-samples/phase6/odf-phase6-kds-security-policy.json",
+      "odf_hash": "019bc32dc0c2f954c7cc17d4964c558983a5867f6cdf6d32876e4d40a47e23d4",
+      "markdown_hash": "31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c",
+      "conversion_method": "metadata-envelope-only",
+      "conversion_actor": "codex",
+      "owner": "WAES",
+      "source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "sensitivity_check": "pass_no_body_copy_security_policy_reference_only",
+      "status": "phase7_sample",
+      "rollback_hint": "remove this ODF phase7 envelope and ledger entry; keep the original Markdown document unchanged"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "odf_version": "v0.7-phase7",
+  "odf_type": "object_document_frame",
+  "pilot_id": "ODF-PHASE7-20260619-002",
+  "category": "kds-governance",
+  "title": "ODF Phase 7 - KDS Development Space Sync Register",
+  "source_uri": "git://09-status/kds-development-space-sync-register.md",
+  "source_path": "09-status/kds-development-space-sync-register.md",
+  "source_hash": "ee2ce9c9864ce5152e4f9eff3e5f1cac4f853bec0ad7372e29bb4b8ee82902c6",
+  "markdown_path": "09-status/kds-development-space-sync-register.md",
+  "markdown_hash": "ee2ce9c9864ce5152e4f9eff3e5f1cac4f853bec0ad7372e29bb4b8ee82902c6",
+  "kds_path": "开发/91-治理与验收/09-status/kds-development-space-sync-register.md",
+  "owner": "GPCF",
+  "conversion_method": "metadata-envelope-only",
+  "conversion_actor": "codex",
+  "sensitivity_check": "pass_no_body_copy_sync_register_reference_only",
+  "status": "phase7_sample",
+  "rollback_hint": "remove this ODF phase7 envelope and ledger entry; keep the original Markdown document unchanged",
+  "boundary": {
+    "does_not_replace_git": true,
+    "does_not_replace_kds": true,
+    "does_not_replace_okf": true,
+    "does_not_replace_loop_evidence": true
+  }
+}

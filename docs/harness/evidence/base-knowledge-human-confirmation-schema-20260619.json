@@ -1,0 +1,144 @@
+{
+  "schemaId": "BKC-HUMAN-CONFIRMATION-SCHEMA-20260619",
+  "sourceQueueEvidenceId": "BKC-HUMAN-CONFIRMATION-QUEUE-20260619",
+  "sourceQueueType": "human_confirmation",
+  "sourceQueueItemCount": 4,
+  "currentRound": "GPCF-KDS-DKS-046",
+  "schemaType": "human_confirmation_schema",
+  "fieldCount": 13,
+  "requiredFieldCount": 12,
+  "fields": [
+    {
+      "name": "queueItemId",
+      "type": "string",
+      "required": true,
+      "description": "确认记录绑定的候选队列项 ID。"
+    },
+    {
+      "name": "sourceCandidateId",
+      "type": "string",
+      "required": true,
+      "description": "来自 DKS-044 的写回候选 ID。"
+    },
+    {
+      "name": "baseKnowledgeId",
+      "type": "string",
+      "required": true,
+      "description": "底座知识对象 ID。"
+    },
+    {
+      "name": "confirmingUnit",
+      "type": "string",
+      "required": true,
+      "description": "执行确认的人员或单位。"
+    },
+    {
+      "name": "confirmerRole",
+      "type": "string",
+      "required": true,
+      "description": "确认人角色。",
+      "enum": [
+        "source_owner",
+        "project_owner",
+        "kds_operator",
+        "waes_reviewer",
+        "other_authorized"
+      ]
+    },
+    {
+      "name": "sourceRefsReviewed",
+      "type": "array",
+      "required": true,
+      "description": "已核验的来源、证据或台账引用。"
+    },
+    {
+      "name": "factStatus",
+      "type": "string",
+      "required": true,
+      "description": "候选事实状态。",
+      "enum": [
+        "confirmed",
+        "partially_confirmed",
+        "rejected",
+        "more_evidence_required"
+      ]
+    },
+    {
+      "name": "gapClosureOpinion",
+      "type": "string",
+      "required": true,
+      "description": "缺口处理意见。",
+      "enum": [
+        "keep_open",
+        "ready_for_committee",
+        "ready_for_writeback_candidate",
+        "reject_candidate"
+      ]
+    },
+    {
+      "name": "evidenceLevelAfterReview",
+      "type": "string",
+      "required": true,
+      "description": "复核后的证据等级。",
+      "enum": [
+        "L0_unknown",
+        "L1_claim",
+        "L2_documented",
+        "L3_verified",
+        "L4_authoritative"
+      ]
+    },
+    {
+      "name": "sensitiveDataCheck",
+      "type": "string",
+      "required": true,
+      "description": "敏感数据处理结果。",
+      "enum": [
+        "clear",
+        "masked",
+        "contains_sensitive_needs_redaction"
+      ]
+    },
+    {
+      "name": "ragAdmissionOpinion",
+      "type": "string",
+      "required": true,
+      "description": "RAG 准入意见。",
+      "enum": [
+        "not_allowed",
+        "limited_report_only",
+        "candidate_after_more_evidence"
+      ]
+    },
+    {
+      "name": "nextAction",
+      "type": "string",
+      "required": true,
+      "description": "下一步动作。",
+      "enum": [
+        "request_more_evidence",
+        "submit_to_committee",
+        "prepare_writeback_candidate",
+        "close_as_rejected"
+      ]
+    },
+    {
+      "name": "reviewNotes",
+      "type": "string",
+      "required": false,
+      "description": "人工确认说明。"
+    }
+  ],
+  "controls": {
+    "candidateOnly": true,
+    "createsConfirmationFact": false,
+    "createsCommitteeDecision": false,
+    "realKdsApiWrite": false,
+    "waesWrite": false,
+    "businessLedgerWrite": false,
+    "settlementWrite": false,
+    "ragAdmission": false,
+    "acceptedOrIntegratedUpgrade": false
+  },
+  "status": "schema_dry_run_only"
+}

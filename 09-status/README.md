@@ -42,19 +42,25 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-D77EFFB8F7 | 状态与控制台账 | 09-status/README.md | GPCF | controlled |
 | GPCF-DOC-0295C05F40 | 文档过期与归档台账 | 09-status/document-deprecation-register.md | GPCF | controlled |
 | GPCF-DOC-5EF9F8EE5D | GlobalCloud 文档控制总台账 | 09-status/globalcloud-document-control-register.md | GPCF | controlled |
-| GPCF-DOC-71779DF3C3 | GlobalCloud 文档治理 Loop 门禁 | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | controlled |
+| GPCF-DOC-71779DF3C3 | globalcloud-document-governance-loop-gate | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | controlled |
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | controlled |
 | GPCF-DOC-C582EFCACE | globalcloud-l3-admission-matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
 | GPCF-DOC-C10C271958 | globalcloud-project-document-loop-maturity-matrix | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
 | GPCF-DOC-6CE17269E9 | globalcloud-project-mainline-alignment-matrix | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | controlled |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | controlled |
-| GPCF-DOC-B1085FD000 | KDS API 同步流水覆盖事件记录 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
+| GPCF-DOC-B1085FD000 | kds-api-sync-ledger-incident-20260617 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
 | GPCF-DOC-53A28225F1 | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |
 | GPCF-DOC-BA63F9BF32 | KDS 开发空间同步台账 | 09-status/kds-development-space-sync-register.md | GPCF | controlled |
 | GPCF-DOC-B15126F708 | KDS Markdown 化与 OKF 兼容层全面实施闭环方案 | 09-status/kds-md-okf-implementation-closure-plan.md | GPCF | controlled |
+| GPCF-DOC-78DAA04814 | KDS OKF v0.1 全量派生层实施方案 | 09-status/kds-okf-v01-full-implementation-plan.md | GPCF | controlled |
+| GPCF-DOC-2FC4D9D04B | KDS Phase 10 Governance Sustainment Plan | 09-status/kds-phase10-governance-sustainment-plan.md | GPCF | controlled |
 | GPCF-DOC-BEB2C3647E | KDS Readonly Probe Report | 09-status/kds-readonly-probe-report.md | GPCF | controlled |
 | GPCF-DOC-76D6EBBEAB | ODF 受控引入与治理试点方案 | 09-status/odf-introduction-governance-plan.md | GPCF | controlled |
-| GPCF-DOC-808690228D | ODF Phase 2 扩大样本验证计划 | 09-status/odf-phase2-expansion-plan.md | GPCF | controlled |
+| GPCF-DOC-808690228D | odf-phase2-expansion-plan | 09-status/odf-phase2-expansion-plan.md | GPCF | controlled |
 | GPCF-DOC-E360D5C8BC | ODF Phase 3 受控模板化与准入门禁计划 | 09-status/odf-phase3-schema-gate-plan.md | GPCF | controlled |
 | GPCF-DOC-429E306B5F | ODF Phase 4 小批量准入试运行方案 | 09-status/odf-phase4-small-batch-admission-plan.md | GPCF | controlled |
-| GPCF-DOC-1DC15FD42D | ODF Phase 5 准入变更申请治理方案 | 09-status/odf-phase5-change-request-governance-plan.md | GPCF | controlled |
+| GPCF-DOC-1DC15FD42D | odf-phase5-change-request-governance-plan | 09-status/odf-phase5-change-request-governance-plan.md | GPCF | controlled |
+| GPCF-DOC-0AC069B9EF | odf-phase6-manual-confirmation-workbench-plan | 09-status/odf-phase6-manual-confirmation-workbench-plan.md | GPCF | controlled |
+| GPCF-DOC-89108DD154 | ODF Phase 7 小批量样本执行方案 | 09-status/odf-phase7-small-batch-execution-plan.md | GPCF | controlled |
+| GPCF-DOC-4B4A93C3B9 | ODF Phase 8 小批量回归与漂移监控方案 | 09-status/odf-phase8-drift-monitoring-plan.md | GPCF | controlled |
+| GPCF-DOC-26BEA382B1 | ODF Phase 9 动态源稳定化策略方案 | 09-status/odf-phase9-dynamic-source-stabilization-plan.md | GPCF | controlled |

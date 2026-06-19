@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-6828F2860A
-title: Loop Round GPCF-L4-GFIS-REPAIR-094
+title: loop-round-GPCF-L4-GFIS-REPAIR-094
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
@@ -16,7 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF-L4-GFIS-REPAIR-094
+ Loop Round GPCF-L4-GFIS-REPAIR-094
 
 ## 轮次元数据
 

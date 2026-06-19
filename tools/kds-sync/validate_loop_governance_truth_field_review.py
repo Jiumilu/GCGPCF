@@ -50,6 +50,20 @@ def locate_current_debt() -> dict:
     return module.locate_debt()
 
 
+def has_truth_fields(text: str) -> bool:
+    return all(
+        field in text
+        for field in [
+            "declared_rounds",
+            "substantive_rounds",
+            "generated_items",
+            "batch_generated",
+            "substance_gate",
+            "stop_type",
+        ]
+    )
+
+
 def main() -> int:
     evidence = load_json(EVIDENCE_JSON)
     evidence_md = read(EVIDENCE_MD)
@@ -71,19 +85,26 @@ def main() -> int:
 
     dispositions = evidence.get("round_dispositions", [])
     require(len(dispositions) == 6, "must review six rounds")
-    require({item.get("decision") for item in dispositions} == {"index_level_exception"}, "truth shell records must remain index-level exceptions")
+    decisions = [item.get("decision") for item in dispositions]
+    require(decisions.count("index_level_exception") == 5, "five truth shell records must remain index-level exceptions")
+    require(decisions.count("historical_annotation_present") == 1, "one reviewed record must have historical annotation present")
     for item in dispositions:
         path = ROOT / item.get("path", "")
         text = read(path)
         require(text.startswith("---\n"), f"{item.get('path')} missing front matter")
         body = text.split("\n---\n", 2)[-1].strip()
-        require(not body, f"{item.get('path')} is no longer a shell record")
+        if item.get("decision") == "index_level_exception":
+            require(not body, f"{item.get('path')} is no longer a shell record")
+        else:
+            require(body, f"{item.get('path')} missing historical annotation body")
+            require(has_truth_fields(text), f"{item.get('path')} missing truth fields after annotation")
 
     for phrase in [
         "LOOP-GOV-TRUTH-FIELD-REVIEW-20260617",
         "LEDB-001-RD-003",
         "reviewed_rounds | 6",
         "index_level_exception",
+        "historical_annotation_present",
         "no_bulk_rewrite",
         "business_status_impact",
         "does not rewrite historical round records",
@@ -100,7 +121,7 @@ def main() -> int:
     print(
         "loop_governance_truth_field_review=pass "
         "evidence=LOOP-GOV-TRUTH-FIELD-REVIEW-20260617 disposition=LEDB-001-RD-003 "
-        "reviewed_rounds=6 index_level_exception=6 "
+        "reviewed_rounds=6 index_level_exception=5 historical_annotation_present=1 "
         "hard_missing_truth_fields=0 no_bulk_rewrite=true business_status_impact=none"
     )
     return 0

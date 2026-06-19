@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAES, GPCF
 
 受控规则：
 
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-81FE104C6D | ops | 02-governance/ops/README.md | WAES | controlled |
-| GPCF-DOC-8DCFDAD068 | 阿里云 ECS 当前访问机制与配置变更控制 | 02-governance/ops/ecs-access-control-and-network-boundary.md | WAES | controlled |
+| GPCF-DOC-8DCFDAD068 | ecs-access-control-and-network-boundary | 02-governance/ops/ecs-access-control-and-network-boundary.md | GPCF | controlled |

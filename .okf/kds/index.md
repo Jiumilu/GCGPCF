@@ -43,6 +43,25 @@ superseded_by: []
 | ODF Phase 5 准入变更申请治理方案 | `09-status/odf-phase5-change-request-governance-plan.md` | `开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md` |
 | ODF Phase 5 准入变更申请台账 | `docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md` |
 | ODF Phase 5 闭环报告 | `docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` | `开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md` |
+| ODF Phase 6 人工确认工作台方案 | `09-status/odf-phase6-manual-confirmation-workbench-plan.md` | `开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md` |
+| ODF Phase 6 人工确认工作台 | `docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md` | `开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md` |
+| ODF Phase 6 闭环报告 | `docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md` | `开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md` |
+| ODF Phase 7 小批量样本执行方案 | `09-status/odf-phase7-small-batch-execution-plan.md` | `开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md` |
+| ODF Phase 7 小批量样本台账 | `docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md` | `开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md` |
+| ODF Phase 7 小批量样本闭环报告 | `docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md` | `开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md` |
+| ODF Phase 8 漂移监控方案 | `09-status/odf-phase8-drift-monitoring-plan.md` | `开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md` |
+| ODF Phase 8 漂移监控报告 | `docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md` | `开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md` |
+| ODF Phase 8 漂移监控闭环报告 | `docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md` | `开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md` |
+| ODF Phase 9 动态源稳定化方案 | `09-status/odf-phase9-dynamic-source-stabilization-plan.md` | `开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md` |
+| ODF Phase 9 动态源稳定化报告 | `docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md` | `开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md` |
+| ODF Phase 9 动态源稳定化闭环报告 | `docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md` | `开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md` |
+| KDS/OKF/ODF 全量治理闭环报告 | `docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md` | `开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md` |
+| KDS Phase 10 治理持续运行方案 | `09-status/kds-phase10-governance-sustainment-plan.md` | `开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md` |
+| KDS Phase 10 Backlog 分诊报告 | `docs/harness/evidence/kds-phase10-backlog-triage-20260619.md` | `开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md` |
+| KDS Phase 10 Self-refresh 稳定化工作包 | `docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` | `开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` |
+| KDS OKF v0.1 全量派生层实施方案 | `09-status/kds-okf-v01-full-implementation-plan.md` | `开发/91-治理与验收/09-status/kds-okf-v01-full-implementation-plan.md` |
+| KDS OKF v0.1 Phase 1 派生 Bundle 报告 | `docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md` | `开发/05-KDS/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md` |
+| KDS OKF v0.1 派生 Bundle 根索引 | `.okf/bundles/kds-v0.1/index.md` | `开发/12-GPCF/.okf/bundles/kds-v0.1/index.md` |
 
 ## Ledger And Gates
 
@@ -56,6 +75,11 @@ superseded_by: []
 | ODF Phase 3 schema gate evidence | `docs/harness/evidence/odf-phase3-schema-gate-20260617.json` |
 | ODF Phase 4 small-batch ledger | `docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.json` |
 | ODF Phase 5 change request ledger | `docs/harness/evidence/odf-phase5-change-request-ledger-20260617.json` |
+| ODF Phase 6 manual confirmation workbench | `docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.json` |
+| ODF Phase 7 small-batch ledger | `docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.json` |
+| ODF Phase 8 drift monitoring report | `docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.json` |
+| ODF Phase 9 dynamic source stabilization report | `docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.json` |
+| KDS Phase 10 backlog triage JSON | `docs/harness/evidence/kds-phase10-backlog-triage-20260619.json` |
 
 ## Safety Rule
 

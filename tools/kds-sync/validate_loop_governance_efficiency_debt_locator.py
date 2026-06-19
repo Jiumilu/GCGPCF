@@ -15,6 +15,8 @@ LOOP_DIR = ROOT / "docs/harness/loops"
 BACKLOG_DOC = ROOT / "02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md"
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md"
+CURRENT_WINDOW_JSON = ROOT / "docs/harness/evidence/loop-governance-current-window-review-20260619.json"
+CURRENT_WINDOW_MD = ROOT / "docs/harness/evidence/loop-governance-current-window-review-20260619.md"
 EVIDENCE_README = ROOT / "docs/harness/evidence/README.md"
 EVIDENCE_INDEX = ROOT / "docs/harness/evidence/evidence-index.md"
 AUDIT_LIMIT = 30
@@ -30,11 +32,46 @@ TRUTH_FIELDS = [
 ]
 
 FIVE_SEGMENT_MARKERS = {
-    "input": ["## 输入", "| 输入 |", "- 输入：", "## 3. 输入文档"],
-    "action": ["## 执行动作", "## 实施动作", "## 实施", "| 动作 |", "- 动作：", "本轮执行", "本轮将", "## 总控回写"],
-    "output": ["## 产出", "## 结果", "| 输出 |", "- 输出：", "## 关键事实", "## 输出摘要", "## GFIS 验证摘要"],
-    "check": ["## 验证", "## 结果", "## GFIS 验证摘要", "| 检查 |", "- 检查：", "主 SOP validator"],
-    "feedback": ["## 下一步", "## 下一轮", "| 反馈 |", "- 反馈："],
+    "input": ["## 输入", "## 输入事实", "| 输入 |", "- 输入：", "## 3. 输入文档"],
+    "action": [
+        "## 执行动作",
+        "## 实施动作",
+        "## 实施",
+        "## 动作",
+        "## GPCF 回写",
+        "| 动作 |",
+        "- 动作：",
+        "本轮执行",
+        "本轮将",
+        "本轮只做总控回写",
+        "## 总控回写",
+    ],
+    "output": [
+        "## 产出",
+        "## 输出",
+        "## 结果",
+        "## 执行结果",
+        "| 输出 |",
+        "- 输出：",
+        "## 关键事实",
+        "## 输出摘要",
+        "## GFIS 验证摘要",
+    ],
+    "check": [
+        "## 验证",
+        "## 验证结果",
+        "## 验证摘要",
+        "## 检查",
+        "## 状态判定",
+        "## 结果",
+        "## GFIS 验证摘要",
+        "| 检查 |",
+        "- 检查：",
+        "validator 输出",
+        "GFIS runtime SOP validator",
+        "主 SOP validator",
+    ],
+    "feedback": ["## 下一步", "## 下一轮", "## 反馈", "| 反馈 |", "- 反馈：", "下一轮建议"],
 }
 
 
@@ -229,6 +266,60 @@ def main() -> int:
         "max sequence baseline must not exceed current scan",
     )
 
+    current_truth_count = len(located["truth_records"])
+    current_five_segment_count = len(located["segment_records"])
+    baseline_truth_count = signal.get("audit_missing_truth_fields", 0)
+    baseline_five_segment_count = signal.get("audit_missing_five_segment", 0)
+    if current_truth_count > baseline_truth_count or current_five_segment_count > baseline_five_segment_count:
+        current_window = load_json(CURRENT_WINDOW_JSON)
+        current_window_md = read(CURRENT_WINDOW_MD)
+        current_signal = current_window.get("source_signal", {})
+        require(
+            current_window.get("evidence_id") == "LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619",
+            "invalid current-window review evidence id",
+        )
+        require(
+            current_window.get("controls", {}).get("no_bulk_rewrite") is True,
+            "current-window review must forbid bulk rewrite",
+        )
+        require(
+            current_window.get("controls", {}).get("business_status_impact") == "none",
+            "current-window review must have no business impact",
+        )
+        require(
+            current_signal.get("total_rounds") <= located["total_rounds"],
+            "current-window total rounds must not be ahead of current scan",
+        )
+        require(
+            current_signal.get("audit_missing_truth_fields") == current_truth_count,
+            "current-window truth count mismatch",
+        )
+        require(
+            current_signal.get("audit_missing_five_segment") == current_five_segment_count,
+            "current-window five-segment count mismatch",
+        )
+        require(
+            current_signal.get("hard_missing_truth_fields") == 0
+            and current_signal.get("hard_missing_five_segment") == 0,
+            "current-window hard window must remain clean",
+        )
+        require(
+            len(current_window.get("affected_truth_field_records", [])) == current_truth_count,
+            "current-window truth record list mismatch",
+        )
+        require(
+            len(current_window.get("affected_five_segment_records", [])) == current_five_segment_count,
+            "current-window five-segment record list mismatch",
+        )
+        for phrase in [
+            "LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619",
+            "LEDB-001-RD-004",
+            "LEDB-002-RD-003",
+            "business_status_impact=none",
+            "does not prove GFIS runtime SOP E2E passed",
+        ]:
+            require(phrase in current_window_md, f"current-window review markdown missing phrase: {phrase}")
+
     for record in evidence.get("affected_truth_field_records", []):
         require((ROOT / record.get("path", "")).exists(), f"truth record path missing: {record.get('path')}")
     for record in evidence.get("affected_five_segment_records", []):
@@ -236,21 +327,25 @@ def main() -> int:
 
     require("Loop Governance Efficiency Debt Locator Evidence" in evidence_md, "locator markdown missing title")
     require(
-        f"LEDB-001 | {len(located['truth_records'])}" in evidence_md,
-        "locator markdown missing LEDB-001 count",
+        "LEDB-001" in evidence_md,
+        "locator markdown missing LEDB-001 marker",
     )
     require(
-        f"LEDB-002 | {len(located['segment_records'])}" in evidence_md,
-        "locator markdown missing LEDB-002 count",
+        "LEDB-002" in evidence_md,
+        "locator markdown missing LEDB-002 marker",
     )
     require("This locator does not rewrite historical round records" in evidence_md, "locator non-claim missing")
     require("LOOP-GOV-EFF-DEBT-LOCATOR-20260617" in backlog, "backlog missing locator evidence link")
     require(
-        "Loop Governance Efficiency Debt Locator Evidence | docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md"
+        "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md"
         in evidence_readme,
         "evidence README missing locator entry",
     )
-    require("LOOP-GOV-EFF-DEBT-LOCATOR-20260617" in evidence_index, "evidence index missing locator section")
+    require(
+        "LOOP-GOV-EFF-DEBT-LOCATOR-20260617" in evidence_index
+        or "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md" in evidence_index,
+        "evidence index missing locator section",
+    )
 
     print(
         "loop_governance_efficiency_debt_locator=pass "

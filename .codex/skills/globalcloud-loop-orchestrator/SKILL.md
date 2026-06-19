@@ -64,6 +64,7 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 | 验收、状态裁决 | `globalcloud-harness-governance` |
 | 多智能体并行开发 | `globalcloud-collaborative-dev` |
 | 项目健康评估 | `software-project-assessment` |
+| UI 质量、产品界面、控制塔、工作台、证据页、异常页、AI 对话页、移动端/桌面端界面门禁 | `globalcloud-ui-quality-gate` |
 | PDF/培训资料分析 | `pdf` |
 | OpenSpec 变更 | `openspec-*` |
 
@@ -85,6 +86,15 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 - `references/dependency-gates.md`
 - `references/risk-rollback-gates.md`
 - `references/evolution-gates.md`
+
+若本轮涉及 UI、界面交互、控制塔、工作台、证据页、异常页、AI 对话页、移动端或桌面端展示，必须同时读取并执行：
+
+- `.codex/skills/globalcloud-ui-quality-gate/SKILL.md`
+- `.codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md`
+- `.codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md`
+- `.codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md`
+
+UI Quality Gate 的输出只作为 `ui_evidence_candidate`，不得替代 Harness/WAES/GPCF 状态判定。
 
 ## 托管运行边界
 

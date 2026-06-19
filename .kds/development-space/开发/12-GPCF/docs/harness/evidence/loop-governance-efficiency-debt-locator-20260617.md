@@ -20,37 +20,23 @@ superseded_by: []
 
 Evidence ID: `LOOP-GOV-EFF-DEBT-LOCATOR-20260617`
 
-This evidence locates the concrete audit-window round records behind `LEDB-001`
-and `LEDB-002`.
+This locator records current review targets for `LEDB-001` and `LEDB-002` in
+the recent Loop audit window. It is a locator and checkpoint aid; it does not
+rewrite historical round records or change business status.
 
-`total_rounds` is an observed baseline. Forward drift is allowed only when the
-affected record lists still match the current audit window and the hard window
-remains clean.
+## Current Locator Summary
 
-## Source Signal
+| Backlog Item | Meaning | Current Handling |
+|---|---|---|
+| LEDB-001 | missing truth fields | Track current affected records through the live audit validator; hard window must remain clean. |
+| LEDB-002 | missing five-segment markers | Track current affected records through the live audit validator; hard window must remain clean. |
 
-```text
-loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=5 audit_missing_truth_fields=0 audit_missing_five_segment=0 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
-```
+## Baseline Located Counts
 
-## Locator Summary
-
-| Backlog Item | Located Count | Rule |
+| Backlog Item | Located Count | Evidence |
 |---|---:|---|
-| LEDB-001 | 0 | Missing one or more truth fields |
-| LEDB-002 | 0 | Missing one or more five-part round markers |
-
-## LEDB-001 Affected Rounds
-
-| Round | Missing Fields |
-|---|---|
-| - | - |
-
-## LEDB-002 Affected Rounds
-
-| Round | Missing Segments |
-|---|---|
-| - | - |
+| LEDB-001 | 0 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
+| LEDB-002 | 0 | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.json` |
 
 ## Non-Claims
 
@@ -59,5 +45,3 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 - This locator does not create source-of-record, runtime primary key, review
   queue, runtime intake, WAES review, verified artifact, accepted, or
   integrated status.
-- This locator does not authorize production write, external API write, schema
-  sync, bench migrate, deployment, permission change, commit, or push.

@@ -9,23 +9,16 @@
 | GPCF-DOC-AEEFA55699 | GlobalCloud 智能体团队12个交付包责任分解表 | 05-agent-team/GlobalCloud智能体团队12个交付包责任分解表.md | controlled |
 | GPCF-DOC-B66EC338E9 | GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵 | 05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证包执行矩阵.md | controlled |
 | GPCF-DOC-E164F62976 | GlobalCloud智能体团队6个专项首轮实施前验证执行台账 | 05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md | controlled |
-| GPCF-DOC-D06020C9DC | GlobalCloud 智能体团队 Loop Engineering 全面改进方案 | 05-agent-team/GlobalCloud智能体团队Loop Engineering全面改进方案.md | controlled |
 | GPCF-DOC-3874DD0406 | GlobalCloud 智能体团队PMBOK项目管理台账 | 05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md | controlled |
 | GPCF-DOC-8CDB82A404 | GlobalCloud 智能体团队下一步执行清单 | 05-agent-team/GlobalCloud智能体团队下一步执行清单.md | controlled |
 | GPCF-DOC-7249EEECFE | GlobalCloud 智能体团队专项执行版包模板 | 05-agent-team/GlobalCloud智能体团队专项执行版包模板.md | controlled |
-| GPCF-DOC-582A23D485 | GlobalCloud 智能体团队侧边聊天10条主线-团队责任分配总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md | controlled |
 | GPCF-DOC-5D6CD718DA | GlobalCloud 智能体团队侧边聊天10条主线-当前实施准备完成度总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md | controlled |
 | GPCF-DOC-62063BBDE9 | GlobalCloud 智能体团队实施前准备差距清单 | 05-agent-team/GlobalCloud智能体团队实施前准备差距清单.md | controlled |
 | GPCF-DOC-3D6A5A4056 | GlobalCloud 智能体团队实施前准备目标模式要求 | 05-agent-team/GlobalCloud智能体团队实施前准备目标模式要求.md | controlled |
 | GPCF-DOC-D899DB2508 | GlobalCloud 智能体团队实施前证据与阻塞总表 | 05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md | controlled |
-| GPCF-DOC-FE641179EC | GlobalCloud 智能体团队总体规划与行动计划 | 05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md | controlled |
 | GPCF-DOC-FF53116C54 | GlobalCloud智能体团队文档全量盘点与分类总表 | 05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md | controlled |
 | GPCF-DOC-A080E39115 | GlobalCloud智能体团队文档清理与补充完善建议 | 05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md | controlled |
 | GPCF-DOC-C892CAB85A | GlobalCloud 智能体团队本阶段首轮实施前验证目标 | 05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md | controlled |
-| GPCF-DOC-92F9FE9764 | GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词 | 05-agent-team/GlobalCloud智能体团队正式实施开发前准备100分量化评分提示词.md | controlled |
-| GPCF-DOC-338F660061 | GlobalCloud智能体团队正式实施开发前缺口关闭清单 | 05-agent-team/GlobalCloud智能体团队正式实施开发前缺口关闭清单.md | controlled |
-| GPCF-DOC-D83CE73173 | GlobalCloud 智能体团队真实项目仓库映射与只读预检计划 | 05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md | controlled |
-| GPCF-DOC-7C5F2C8F94 | GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵 | 05-agent-team/GlobalCloud智能体团队阶段-工作-工具-技能-方法-效率-成本执行矩阵.md | controlled |
 | GPCF-DOC-A8F6B69EE5 | GlobalCloud 智能体团队阶段行动计划 | 05-agent-team/GlobalCloud智能体团队阶段行动计划.md | controlled |
 | GPCF-DOC-0D3224DFB9 | GlobalCloud 智能体实施团队准备度评估 | 05-agent-team/GlobalCloud智能体实施团队准备度评估.md | controlled |
 | GPCF-DOC-E50AD58A99 | 智能体团队 | 05-agent-team/README.md | controlled |
