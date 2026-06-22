@@ -1,0 +1,60 @@
+---
+doc_id: GPCF-DOC-CODEGRAPH-KDS-MAPPING-V1
+title: KDS OKF CodeGraph Candidate Mapping
+project: GPCF
+related_projects: [KDS, WAS, GPCF, WAES]
+domain: codegraph-governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/governance/codegraph/kds-codegraph-mapping.yaml
+source_path: governance/codegraph/kds-codegraph-mapping.yaml
+sync_direction: bidirectional
+last_reviewed: 2026-06-21
+supersedes: []
+superseded_by: []
+---
+
+mapping:
+  source: codegraph
+  destination: KDS_OKF_candidate_layer
+  default_status: candidate
+  accepted_direct_write_allowed: false
+  production_evidence_allowed: false
+  promotion_requires:
+    - harness_evidence
+    - waes_gate
+    - human_review
+    - lineage_backlink
+
+candidate_types:
+  code_fact_candidate:
+    required_fields: [id, repo, symbol, file, relation, source, evidence_ref, trust_level, promotion_status]
+    trust_level: L2_candidate
+  api_fact_candidate:
+    required_fields: [id, repo, api, route, handler, impacted_services, evidence_ref, promotion_status]
+    trust_level: L2_candidate
+  dependency_fact_candidate:
+    required_fields: [id, repo, source_symbol, target_symbol, dependency_type, evidence_ref, promotion_status]
+    trust_level: L2_candidate
+  architecture_fact_candidate:
+    required_fields: [id, repo, module, bounded_context, relation, evidence_ref, promotion_status]
+    trust_level: L2_candidate
+  test_mapping_candidate:
+    required_fields: [id, repo, symbol_id, source_file, test_files, coverage_status, evidence_ref, confidence]
+    trust_level: L2_candidate
+
+state_machine:
+  allowed: [candidate, reviewed, accepted, deprecated, archived]
+  initial: candidate
+  codegraph_may_create: [candidate]
+  codegraph_may_promote_to_accepted: false
+  accepted_requires: [kds_curator, waes_gate, harness_evidence]
+
+rejection_rules:
+  - demo_not_runtime_evidence
+  - mock_not_production_evidence
+  - generated_doc_not_accepted_fact
+  - codegraph_relation_not_governance_rule
+  - ai_agent_not_final_approver

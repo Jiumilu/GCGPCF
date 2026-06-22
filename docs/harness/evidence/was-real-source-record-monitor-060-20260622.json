@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-060-20260622",
+  "status": "was_real_source_record_monitor_060_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-060",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-059",
+  "purpose": "Sixtieth independent monitor pass for green supply chain renewable energy procurement and energy attribute, renewable energy contract, energy consumption meter record, green power certificate, renewable energy certificate retirement, onsite generation meter record, energy mix allocation record, and grid emission factor source.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "renewable_energy_contract_gaps": 0,
+    "energy_consumption_meter_record_gaps": 0,
+    "green_power_certificate_gaps": 0,
+    "renewable_energy_certificate_retirement_gaps": 0,
+    "onsite_generation_meter_record_gaps": 0,
+    "energy_mix_allocation_record_gaps": 0,
+    "grid_emission_factor_source_gaps": 0,
+    "accepted_for_renewable_energy_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "renewable_energy_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "renewable_energy_contract_gap",
+      "energy_consumption_meter_record_gap",
+      "green_power_certificate_gap",
+      "renewable_energy_certificate_retirement_gap",
+      "onsite_generation_meter_record_gap",
+      "energy_mix_allocation_record_gap",
+      "grid_emission_factor_source_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "renewable_energy_requirements": [
+    "renewable_energy_contract",
+    "energy_consumption_meter_record",
+    "green_power_certificate",
+    "renewable_energy_certificate_retirement",
+    "onsite_generation_meter_record",
+    "energy_mix_allocation_record",
+    "grid_emission_factor_source"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-061",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer renewable energy contract, energy consumption meter record, green power certificate, renewable energy certificate retirement, onsite generation meter record, energy mix allocation record, or grid emission factor source",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

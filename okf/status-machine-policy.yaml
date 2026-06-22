@@ -1,0 +1,139 @@
+policy_id: okf.status_machine_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+lifecycle_states:
+  - code: draft
+    terminal: false
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: candidate
+    terminal: false
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: reviewing
+    terminal: false
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: repair_required
+    terminal: false
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: evidence_ready
+    terminal: false
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: verified
+    terminal: false
+    rag_strong_reference: true
+    writeback_candidate: true
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: accepted
+    terminal: false
+    rag_strong_reference: true
+    writeback_candidate: true
+    formal_writeback: true
+    revenue_confirmation: true
+  - code: published
+    terminal: false
+    rag_strong_reference: true
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: frozen
+    terminal: false
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: superseded
+    terminal: true
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+  - code: archived
+    terminal: true
+    rag_strong_reference: false
+    writeback_candidate: false
+    formal_writeback: false
+    revenue_confirmation: false
+promotion_rules:
+  draft_to_candidate:
+    from: draft
+    to: candidate
+    allowed_actors: [owner, kwe, system]
+    requires: [source_registration, pool_binding]
+  candidate_to_reviewing:
+    from: candidate
+    to: reviewing
+    allowed_actors: [kwe]
+    requires: [source_refs, owner_boundary, work_item]
+  reviewing_to_repair_required:
+    from: reviewing
+    to: repair_required
+    allowed_actors: [waes, kwe]
+    requires: [reason_codes, required_actions]
+  repair_required_to_evidence_ready:
+    from: repair_required
+    to: evidence_ready
+    allowed_actors: [kwe, human_reviewer]
+    requires: [evidence_refs, required_actions_completed]
+  evidence_ready_to_verified:
+    from: evidence_ready
+    to: verified
+    allowed_actors: [waes, human_reviewer, committee]
+    requires: [waes_gate_passed, harness_evidence]
+  verified_to_accepted:
+    from: verified
+    to: accepted
+    allowed_actors: [human_reviewer, committee]
+    requires: [confirmation_record, harness_evidence]
+  accepted_to_published:
+    from: accepted
+    to: published
+    allowed_actors: [publication_owner, committee]
+    requires: [redaction_gate, external_share_gate, publication_approval]
+  any_to_frozen:
+    from: any
+    to: frozen
+    allowed_actors: [waes, committee, governance_owner]
+    requires: [freeze_reason]
+  accepted_to_superseded:
+    from: accepted
+    to: superseded
+    allowed_actors: [kds, committee]
+    requires: [replacement_object_ref, decision_record]
+  any_to_archived:
+    from: any
+    to: archived
+    allowed_actors: [kds]
+    requires: [archive_reason]
+hard_boundaries:
+  ai_allowed_target_states: [draft, candidate, repair_required]
+  loop_allowed_target_states: [draft, candidate, reviewing, repair_required, evidence_ready]
+  ai_cannot_promote_to: [verified, accepted, published]
+  loop_cannot_promote_to: [verified, accepted, published]
+  terminal_states: [superseded, archived]
+  frozen_requires_committee_or_governance_release: true
+  accepted_requires_human_or_committee_confirmation: true
+  formal_writeback_requires_accepted: true
+  revenue_confirmation_requires_accepted: true
+  template_is_not_fact: true
+no_write_assertions:
+  writes_kds_fact: 0
+  writes_business_system: 0
+  writes_revenue_distribution: 0
+  writes_external_api: 0

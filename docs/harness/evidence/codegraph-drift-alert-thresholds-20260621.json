@@ -1,0 +1,117 @@
+{
+  "evidence_id": "CODEGRAPH-DRIFT-ALERT-THRESHOLDS-20260621",
+  "status": "drift_alert_thresholds_ready",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008",
+  "objective": "Define and execute CodeGraph drift alert thresholds for the project group without business development, commit, push, or deploy.",
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-impact-regression-watch-20260621.json",
+    "docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.json"
+  ],
+  "thresholds": {
+    "normal_repo": {
+      "green": "pending_total == 0",
+      "watch": "1 <= pending_total <= 5",
+      "action_required": "pending_total >= 6",
+      "critical": "codegraph_git_status_entries > 0 or removed > 0"
+    },
+    "gfis_policy_exception": {
+      "green": "pending_total == 0",
+      "watch": "pending_total == 1 and added == 1 and modified == 0 and removed == 0",
+      "action_required": "pending_total >= 2 or modified > 0 or removed > 0",
+      "critical": "codegraph_git_status_entries > 0"
+    },
+    "brain_or_studio_sync_only": {
+      "watch": "1 <= pending_total <= 5",
+      "action_required": "pending_total >= 6",
+      "required_authorization": "explicit sync-only authorization before running codegraph sync in Brain or Studio"
+    }
+  },
+  "project_group_sample": {
+    "repo_count": 14,
+    "initialized_repo_count": 14,
+    "git_protected_repo_count": 14,
+    "codegraph_git_status_entries_total": 0,
+    "alerts": [
+      {
+        "repo": "GlobalCloud GFIS",
+        "pending": {
+          "added": 1,
+          "modified": 0,
+          "removed": 0
+        },
+        "pending_total": 1,
+        "threshold_result": "watch",
+        "reason": "GFIS controlled policy exception remains within the added=1 watch threshold."
+      },
+      {
+        "repo": "GlobalCloud Brain",
+        "pending": {
+          "added": 3,
+          "modified": 3,
+          "removed": 0
+        },
+        "pending_total": 6,
+        "threshold_result": "action_required",
+        "reason": "Brain active drift reached pending_total >= 6 and requires sync-only authorization or continued watch."
+      },
+      {
+        "repo": "GlobalCloud Studio",
+        "pending": {
+          "added": 0,
+          "modified": 6,
+          "removed": 0
+        },
+        "pending_total": 6,
+        "threshold_result": "action_required",
+        "reason": "Studio active drift reached pending_total >= 6 and requires sync-only authorization or continued watch."
+      }
+    ]
+  },
+  "impact_gate_sample": {
+    "target": "tools/kds-sync/validate_codegraph_impact_regression_watch.py",
+    "query": {
+      "command": "codegraph query codegraph_impact_regression_watch --json",
+      "result_count": 4,
+      "top_result": "tools/kds-sync/validate_codegraph_impact_regression_watch.py"
+    },
+    "node": {
+      "command": "codegraph node tools/kds-sync/validate_codegraph_impact_regression_watch.py",
+      "line_count": 155,
+      "symbols": 11,
+      "indexed_dependents": 0
+    },
+    "affected": {
+      "command": "codegraph affected tools/kds-sync/validate_codegraph_impact_regression_watch.py --json",
+      "affected_tests": [],
+      "total_dependents_traversed": 0
+    },
+    "noise_control": {
+      "command": "codegraph impact main --depth 2",
+      "affected_symbols": 101,
+      "usable_for_gate": false
+    },
+    "text_scan": {
+      "matched_files": 13,
+      "matched_lines": 30
+    }
+  },
+  "decisions": [
+    "Keep CodeGraph project-group state at review_required.",
+    "Brain and Studio are action_required but not auto-synced in this round.",
+    "GFIS remains a policy-exception watch item, not a failure.",
+    "Any Brain or Studio sync-only closure must be explicitly authorized and must not include business code edits.",
+    "A .codegraph Git status entry or removed pending file is critical and blocks status upgrades."
+  ],
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false,
+    "brain_or_studio_sync_only": false
+  },
+  "next_round": "GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009"
+}

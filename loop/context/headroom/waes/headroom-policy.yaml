@@ -1,0 +1,24 @@
+policy_id: WAES-LCX-HEADROOM-POLICY-v1
+status: controlled
+production_admission_gate: false
+rules:
+  - id: LCX-001
+    name: Sensitive passthrough
+    action: block_or_passthrough
+    description: High-sensitive content is blocked or passed through without compression unless an explicit authorization exists.
+  - id: LCX-002
+    name: CCR retrieve evidence required
+    action: require_evidence
+    description: Every original retrieval requires task_id, caller, reason, content type, and Harness evidence.
+  - id: LCX-003
+    name: No official facts from Headroom memory
+    action: block_fact_promotion
+    description: Headroom memory cannot become a KDS official fact source.
+  - id: LCX-004
+    name: Learn apply requires approval
+    action: require_human_approval
+    description: headroom learn can only produce candidate learning unless approved by the owner.
+  - id: LCX-005
+    name: Output shaping forbidden in acceptance
+    action: disable_output_shaper
+    description: Official acceptance, compliance, contract, and finance tasks must not reduce output depth.

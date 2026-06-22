@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "renewable_energy_purchase_contract_gaps": 0,
+  "green_electricity_certificate_gaps": 0,
+  "power_purchase_agreement_gaps": 0,
+  "electricity_emission_factor_record_gaps": 1,
+  "energy_attribute_certificate_retirement_gaps": 0,
+  "carbon_offset_project_certificate_gaps": 0,
+  "supplier_renewable_energy_commitment_gaps": 0,
+  "accepted_for_renewable_energy_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "renewable_energy_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

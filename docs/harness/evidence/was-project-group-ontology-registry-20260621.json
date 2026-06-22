@@ -1,0 +1,156 @@
+{
+  "evidence_id": "WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-20260621",
+  "status": "was_project_group_ontology_registry_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-001",
+  "purpose": "Register project-group WAS-Ontology objects, relationships, events, evidence, states, and interfaces as a shared semantic contract for GlobalCloud digital twin governance.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "source_gate_pack": "docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.json",
+  "source_scenario_matrix": "docs/harness/evidence/was-scenario-profile-matrix-20260621.json",
+  "registry_categories": [
+    {
+      "category": "object",
+      "entries": [
+        "CustomerRequirementOrPlatformOrder",
+        "SupplierQualification",
+        "ProcurementOrder",
+        "ProductionWorkOrder",
+        "QualityInspectionRecord",
+        "LogisticsDeliveryRecord",
+        "EnergyConsumptionRecord",
+        "CarbonFootprintRecord",
+        "SettlementAndProfitRecord",
+        "RecyclingCircularRecord"
+      ]
+    },
+    {
+      "category": "relationship",
+      "entries": [
+        "source_record_to_runtime_object",
+        "runtime_object_to_evidence",
+        "kds_fact_to_ontology_contract",
+        "waes_decision_to_promotion",
+        "rag_reference_to_kds_fact",
+        "pool_link_to_business_action"
+      ]
+    },
+    {
+      "category": "event",
+      "entries": [
+        "candidate_submitted",
+        "precheck_rejected",
+        "waes_gate_input_prepared",
+        "kds_binding_requested",
+        "rag_reference_admitted",
+        "writeback_precheck_requested",
+        "pool_link_checked"
+      ]
+    },
+    {
+      "category": "evidence",
+      "entries": [
+        "source_record_original",
+        "owner_confirmation",
+        "kds_backlink",
+        "waes_gate_input",
+        "loop_round",
+        "validator_output",
+        "negative_fixture_rejection"
+      ]
+    },
+    {
+      "category": "state",
+      "entries": [
+        "candidate_only",
+        "hold_required",
+        "pending_business_verification",
+        "waes_review_pending",
+        "accepted_blocked",
+        "integrated_blocked",
+        "production_ready_blocked"
+      ]
+    },
+    {
+      "category": "interface",
+      "entries": [
+        "gfis_source_record_intake",
+        "kds_source_backlink",
+        "waes_gate_input",
+        "rag_controlled_reference",
+        "gfis_kwe_writeback_precheck",
+        "eleven_pools_link"
+      ]
+    }
+  ],
+  "category_contracts": {
+    "object": "WAS object contract",
+    "relationship": "WAS relationship contract",
+    "event": "WAS event contract",
+    "evidence": "Loop/KDS evidence contract",
+    "state": "GPCF/WAES state contract",
+    "interface": "GFIS/KWE/RAG/Pool interface contract"
+  },
+  "promotion_policy": {
+    "kds_source_of_record": "required",
+    "waes_decision": "required_before_promotion",
+    "loop_evidence": "required",
+    "llm_candidate": "never_official_fact",
+    "runtime_writeback": "blocked_without_waes_kds_owner_confirmation"
+  },
+  "future_project_policy": {
+    "admission_required": true,
+    "must_bind_project_group_scope": true,
+    "must_map_to_registry_categories": ["object", "relationship", "event", "evidence", "state", "interface"],
+    "must_not_bypass_kds_waes_loop": true
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 3,
+    "expected_positive_acceptance": 1,
+    "expected_negative_rejection": 3,
+    "negative_cases": [
+      "missing_project_group_member",
+      "missing_required_registry_category",
+      "illegal_promotion_or_runtime_write"
+    ]
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "runtime_write": false,
+    "kds_api_write": false
+  },
+  "validator": "python3 tools/kds-sync/validate_was_project_group_ontology_registry.py",
+  "next_round": "GPCF-ONTOLOGY-WAS-LOOP-CONTEXT-COVERAGE-REFRESH-001",
+  "non_claims": [
+    "registry is a semantic contract index, not a knowledge base",
+    "does not replace KDS source-of-record",
+    "does not create WAES review",
+    "does not write GFIS or KWE runtime",
+    "does not promote RAG output to official fact",
+    "does not mark accepted, integrated, or production ready"
+  ]
+}

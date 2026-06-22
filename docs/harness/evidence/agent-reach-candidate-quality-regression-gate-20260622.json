@@ -1,0 +1,135 @@
+{
+  "evidence_id": "AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-20260622",
+  "date": "2026-06-22",
+  "status": "candidate_quality_regression_gate_ready",
+  "scope": "GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-001",
+  "objective": "Define replayable regression gates for Agent-Reach candidate search quality, candidate ingestion safety, and limited-admission boundaries.",
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-candidate-quality-trend-baseline-20260622.json"
+  ],
+  "execution_mode": "read_only_regression_gate_definition",
+  "external_search_invoked": false,
+  "agent_reach_runtime_invoked": false,
+  "regression_gates": [
+    {
+      "gate_id": "search_success_rate_gate",
+      "metric": "search_success_rate",
+      "operator": ">=",
+      "threshold": 0.8,
+      "baseline_value": 1.0,
+      "failure_action": "block_candidate_use_and_require_replay_investigation"
+    },
+    {
+      "gate_id": "source_provenance_rate_gate",
+      "metric": "source_provenance_rate",
+      "operator": "==",
+      "threshold": 1.0,
+      "baseline_value": 1.0,
+      "failure_action": "block_candidate_admission"
+    },
+    {
+      "gate_id": "duplicate_rate_gate",
+      "metric": "duplicate_rate",
+      "operator": "<=",
+      "threshold": 0.2,
+      "baseline_value": 0.0,
+      "failure_action": "require_deduplication_before_review"
+    },
+    {
+      "gate_id": "latency_p50_gate",
+      "metric": "latency_p50_seconds",
+      "operator": "<=",
+      "threshold": 10,
+      "baseline_value": 3.889,
+      "failure_action": "mark_efficiency_regression_and_require_benchmark_replay"
+    },
+    {
+      "gate_id": "latency_p95_gate",
+      "metric": "latency_p95_seconds",
+      "operator": "<=",
+      "threshold": 30,
+      "baseline_value": 4.633,
+      "failure_action": "mark_tail_latency_regression_and_require_benchmark_replay"
+    },
+    {
+      "gate_id": "canonical_write_gate",
+      "metric": "canonical_write_count",
+      "operator": "==",
+      "threshold": 0,
+      "baseline_value": 0,
+      "failure_action": "block_run_and_require_explicit_canonical_write_authorization"
+    },
+    {
+      "gate_id": "production_write_gate",
+      "metric": "production_write_count",
+      "operator": "==",
+      "threshold": 0,
+      "baseline_value": 0,
+      "failure_action": "block_run_and_require_explicit_production_authorization"
+    },
+    {
+      "gate_id": "limited_admission_gate",
+      "metric": "kds_admission",
+      "operator": "==",
+      "threshold": "limited_candidate_only",
+      "baseline_value": "limited_candidate_only",
+      "failure_action": "block_status_upgrade"
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "fixture_id": "missing_source_provenance",
+      "mutated_metric": "source_provenance_rate",
+      "mutated_value": 0.8,
+      "expected_gate": "source_provenance_rate_gate",
+      "expected_result": "fail"
+    },
+    {
+      "fixture_id": "duplicate_rate_regression",
+      "mutated_metric": "duplicate_rate",
+      "mutated_value": 0.4,
+      "expected_gate": "duplicate_rate_gate",
+      "expected_result": "fail"
+    },
+    {
+      "fixture_id": "canonical_write_attempt",
+      "mutated_metric": "canonical_write_count",
+      "mutated_value": 1,
+      "expected_gate": "canonical_write_gate",
+      "expected_result": "fail"
+    },
+    {
+      "fixture_id": "production_write_attempt",
+      "mutated_metric": "production_write_count",
+      "mutated_value": 1,
+      "expected_gate": "production_write_gate",
+      "expected_result": "fail"
+    },
+    {
+      "fixture_id": "unauthorized_status_upgrade",
+      "mutated_metric": "kds_admission",
+      "mutated_value": "canonical_candidate",
+      "expected_gate": "limited_admission_gate",
+      "expected_result": "fail"
+    }
+  ],
+  "positive_baseline_expected_result": "pass",
+  "quality_status": {
+    "regression_gate_count": 8,
+    "negative_fixture_count": 5,
+    "baseline_pass_required": true,
+    "all_negative_fixtures_must_fail": true,
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false
+  },
+  "next_round": "GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-FIXTURE-REPLAY-001",
+  "non_claims": [
+    "does not invoke live external search",
+    "does not invoke Agent-Reach runtime",
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not install or configure Agent-Reach in production",
+    "does not upgrade accepted, integrated, or production_ready status"
+  ]
+}

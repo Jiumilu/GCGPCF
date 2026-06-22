@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "land_use_permit_gaps": 0,
+  "environmental_impact_assessment_gaps": 0,
+  "biodiversity_baseline_gaps": 0,
+  "protected_area_screening_gaps": 0,
+  "soil_groundwater_assessment_gaps": 0,
+  "restoration_mitigation_plan_gaps": 0,
+  "accepted_for_land_ecology_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "land_ecology_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

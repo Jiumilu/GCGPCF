@@ -1,0 +1,78 @@
+{
+  "evidence_id": "HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001",
+  "date": "2026-06-22",
+  "status": "marker_retrieval_miss_comparison_gate_pass_no_measurement",
+  "scope": "sanitized_metadata_comparison_only",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "source_replay": "docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.json",
+  "allowed_compare_fields": [
+    "marker_gate",
+    "sensitive_redaction_gate",
+    "ccr_retrieval_miss_count",
+    "answer_equivalence"
+  ],
+  "entry_count": 1,
+  "comparison_count": 1,
+  "comparisons": [
+    {
+      "record_index": 0,
+      "task_id_candidate": "HEADROOM-LCX-PRECHECK-ONLY-001",
+      "project_id": "GPCF",
+      "compared_fields": {
+        "marker_gate": "not_measured",
+        "sensitive_redaction_gate": "pass",
+        "ccr_retrieval_miss_count": 0,
+        "answer_equivalence": "not_measured"
+      },
+      "marker_gate_preserved": true,
+      "answer_equivalence_preserved": true,
+      "sensitive_redaction_gate_pass": true,
+      "ccr_retrieval_miss_count_zero": true,
+      "raw_text_compared": false,
+      "production_tokens_compared": false
+    }
+  ],
+  "comparison_failures": [],
+  "calculation": {
+    "saving_rate": "not_calculated",
+    "tokens_saved": "not_calculated",
+    "reason": "marker_retrieval_miss_metadata_comparison_only"
+  },
+  "gates": {
+    "marker_retrieval_miss_comparison_gate": true,
+    "metadata_only": true,
+    "raw_text_compared": false,
+    "production_tokens_compared": false,
+    "check_only": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

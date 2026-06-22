@@ -1,0 +1,34 @@
+{
+  "id": "kds-v2-endpoint-no-write-smoke",
+  "expectedEndpoints": [
+    {"method": "GET", "path": "/api/v2/domains", "mutationMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/pools", "mutationMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/projects", "mutationMode": "read_only"},
+    {"method": "POST", "path": "/api/v2/search", "mutationMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/objects/{uri}", "mutationMode": "read_only"},
+    {"method": "POST", "path": "/api/v2/sources/import", "mutationMode": "candidate_only"},
+    {"method": "POST", "path": "/api/v2/fact-candidates", "mutationMode": "candidate_only"},
+    {"method": "POST", "path": "/api/v2/sop-candidates", "mutationMode": "candidate_only"},
+    {"method": "POST", "path": "/api/v2/writeback-candidates", "mutationMode": "candidate_only"},
+    {"method": "GET", "path": "/api/v2/graph", "mutationMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/governance/evidence", "mutationMode": "read_only"}
+  ],
+  "candidateOnlyPaths": [
+    "/api/v2/sources/import",
+    "/api/v2/fact-candidates",
+    "/api/v2/sop-candidates",
+    "/api/v2/writeback-candidates"
+  ],
+  "expected": {
+    "endpointCount": 11,
+    "candidateOnlyCount": 4,
+    "readOnlyCount": 7,
+    "waesGatedCandidateRoutes": 4,
+    "kweFlowCandidateRoutes": 4,
+    "directBusinessWrites": 0,
+    "acceptedLifecycleWrites": 0,
+    "externalApiWrites": 0,
+    "realKdsWrites": 0,
+    "noWrite": true
+  }
+}

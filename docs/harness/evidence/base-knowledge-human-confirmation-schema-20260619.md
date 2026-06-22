@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-9C22552EEE
-title: Base Knowledge Human Confirmation Schema
+title: 底座知识人工确认 Schema
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
 domain: docs
@@ -11,20 +11,20 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md
 source_path: docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Base Knowledge Human Confirmation Schema
+# 底座知识人工确认 Schema
 
 日期：2026-06-19
 
 状态：`schema_dry_run_only`
 
-This schema defines the fields required for future manual confirmation of non-hard-stop base knowledge candidates.
+本 schema 定义未来人工确认非硬停止底座知识候选所需字段。
 
-## Summary
+## 摘要
 
 - schema_id：`BKC-HUMAN-CONFIRMATION-SCHEMA-20260619`
 - source_queue_evidence_id：`BKC-HUMAN-CONFIRMATION-QUEUE-20260619`
@@ -33,7 +33,7 @@ This schema defines the fields required for future manual confirmation of non-ha
 - field_count：`13`
 - required_field_count：`12`
 
-## Fields
+## 字段
 
 | field | type | required | enum | description |
 | --- | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ This schema defines the fields required for future manual confirmation of non-ha
 | nextAction | string | true | request_more_evidence, submit_to_committee, prepare_writeback_candidate, close_as_rejected | 下一步动作。 |
 | reviewNotes | string | false | - | 人工确认说明。 |
 
-## Controls
+## 控制边界
 
 | control | value |
 | --- | --- |
@@ -65,9 +65,9 @@ This schema defines the fields required for future manual confirmation of non-ha
 | ragAdmission | false |
 | acceptedOrIntegratedUpgrade | false |
 
-## Boundary
+## 边界
 
-- This file defines schema only and does not create human confirmation facts.
-- This file defines schema only and does not create committee decisions.
-- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
-- Any future use of this schema still requires explicit human or committee action and a separate controlled evidence record.
+- 本文件仅定义 schema，不创建人工确认事实。
+- 本文件仅定义 schema，不创建委员会决议。
+- 本轮不执行真实 KDS API、WAES、GFIS、GPC、PVAOS、财务、结算、RAG 准入或生产写入。
+- 未来使用本 schema 仍需明确的人工或委员会动作，并形成单独受控证据记录。

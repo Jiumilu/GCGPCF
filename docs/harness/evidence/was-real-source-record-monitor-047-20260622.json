@@ -1,0 +1,71 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-047-20260622",
+  "status": "was_real_source_record_monitor_047_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-047",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-046",
+  "purpose": "Forty-seventh independent monitor pass for green supply chain intellectual property, certification, standards, regulatory filing, documentation release, and change approval evidence.",
+  "project_group_scope": ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "product_certification_gaps": 0,
+    "test_lab_accreditation_gaps": 0,
+    "standard_conformity_gaps": 0,
+    "regulatory_filing_gaps": 0,
+    "ip_license_gaps": 0,
+    "documentation_release_gaps": 0,
+    "change_approval_gaps": 0,
+    "accepted_for_certification_standards_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "certification_standards_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "product_certification_gap",
+      "test_lab_accreditation_gap",
+      "standard_conformity_gap",
+      "regulatory_filing_gap",
+      "ip_license_gap",
+      "documentation_release_gap",
+      "change_approval_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "certification_standards_requirements": [
+    "product_certification",
+    "test_lab_accreditation",
+    "standard_conformity",
+    "regulatory_filing",
+    "ip_license",
+    "documentation_release",
+    "change_approval"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-048",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer product certification, test lab accreditation, standard conformity, regulatory filing, IP license, documentation release, or change approval evidence",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

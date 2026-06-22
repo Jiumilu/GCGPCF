@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/minimum-closed-loop/l4-closure-score-matrix.md
 source_path: docs/harness/minimum-closed-loop/l4-closure-score-matrix.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -25,10 +25,10 @@ superseded_by: []
 | 12 project coverage | 15 | 15 |
 | P0 business chain continuity | 15 | 11 |
 | Real repository code/config/test closure | 15 | 13 |
-| KDS retrieval and knowledge backlink completeness | 15 | 10 |
+| KDS retrieval and knowledge backlink completeness | 15 | 12 |
 | Evidence and audit completeness | 15 | 11 |
-| Cross-project contract consistency | 15 | 11 |
-| User reproducibility and L5 readiness | 10 | 7 |
+| Cross-project contract consistency | 15 | 10 |
+| User reproducibility and L5 readiness | 10 | 6 |
 | Total | 100 | 78/100 |
 
 ## Project Coverage
@@ -46,7 +46,7 @@ superseded_by: []
 | XiaoC | AI capability production and routing | ready_for_review |
 | XGD | Long-horizon agent and re-analysis carrier | ready_for_review |
 | XiaoG | Lightweight execution entry | ready_for_review |
-| GPCF | Project group control plane | repair_required |
+| GPCF | Project group control plane | ready_for_review |
 
 ## Closure Boundary
 

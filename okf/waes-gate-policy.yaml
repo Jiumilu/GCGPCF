@@ -1,0 +1,42 @@
+policy_id: okf.waes_gate_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+gate_results:
+  - passed
+  - blocked
+  - repair_required
+  - human_required
+  - committee_required
+  - redaction_required
+  - freeze_required
+  - metadata_only
+gates:
+  source_gate:
+    checks: [source_level, source_scope, source_timestamp]
+  evidence_gate:
+    checks: [evidence_refs, evidence_hash, controlled_original_pointer]
+  dsr_gate:
+    checks: [tenant_isolation, acl, domain_scope, supply_chain_partition]
+  rag_gate:
+    checks: [trust_level, evidence, sensitivity, confirmation_status]
+  writeback_gate:
+    checks: [target_system, proposed_fields, evidence_refs, owner_confirmation]
+  revenue_gate:
+    checks: [revenue_type, basis, amount, evidence_refs]
+  contribution_gate:
+    checks: [contributor, related_objects, duplicate_claim, confirmation_status]
+  bounty_gate:
+    checks: [gap_ref, submission, acceptance_result, dispute_window]
+  committee_gate:
+    checks: [dispute, major_risk, revenue_distribution, cross_unit_conflict]
+  freeze_gate:
+    checks: [major_violation, malicious_pollution, unauthorized_access]
+  external_share_gate:
+    checks: [visibility, acl, redaction, publication_approval]
+  sensitive_data_gate:
+    checks: [data_class, raw_content_exposure, metadata_only_required]
+writeback_boundary:
+  ai_or_agent_can_create: writeback_candidate
+  ai_or_agent_cannot_create: formal_business_writeback

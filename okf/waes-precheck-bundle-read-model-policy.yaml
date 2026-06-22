@@ -1,0 +1,77 @@
+policy_id: okf.waes_precheck_bundle_read_model_policy
+version: v1.0
+owner: WAES
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run read models that bundle WAES action gate precheck
+  candidates for Brain, KWE, and GFIS Assistant. Bundles are read-only and do
+  not persist WAES gate results, create KWE work items, mutate KDS lifecycle,
+  write business systems, complete approvals, confirm revenue or scores, or
+  call external APIs.
+
+required_fields:
+  - bundle_id
+  - surface
+  - tenant_id
+  - project_id
+  - scope
+  - precheck_refs
+  - route_refs
+  - gate_summary
+  - reason_code_summary
+  - required_actions
+  - reviewer_requirements
+  - blocked_actions
+  - can_create_waes_gate_result
+  - can_create_kwe_work_item
+  - can_promote_lifecycle
+  - no_write
+
+surfaces:
+  - brain
+  - kwe
+  - gfis_assistant
+
+scopes:
+  - governance_review
+  - validation_queue
+  - gfis_writeback_guidance
+
+allowed_read_actions:
+  - view_precheck_summary
+  - view_required_actions
+  - view_reason_codes
+  - view_reviewer_requirement
+  - view_harness_evidence_hint
+
+blocked_write_actions:
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - promote_lifecycle
+  - write_business_system
+  - complete_committee_decision
+  - confirm_revenue_or_score
+
+hard_boundaries:
+  read_model_only: true
+  can_create_waes_gate_result_must_be_false: true
+  can_create_kwe_work_item_must_be_false: true
+  can_promote_lifecycle_must_be_false: true
+  bundle_is_not_gate_result: true
+  bundle_is_not_work_item: true
+  bundle_is_not_business_writeback: true
+
+no_write_guards:
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_business_system: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

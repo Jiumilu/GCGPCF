@@ -1,0 +1,102 @@
+{
+  "evidence_id": "SESSION-MAINLINE-HANDOFF-REQUEST-GATE-20260622",
+  "scope": "GPCF-SESSION-MAINLINE-HANDOFF-REQUEST-GATE-004",
+  "status": "handoff_request_gate_configured",
+  "current_session_mainline": "LOOP治理主线: session-mainline-control rollout",
+  "derived_from": "SESSION-MAINLINE-DRIFT-WATCH-20260622",
+  "gate_mode": "explicit_user_confirmation_required",
+  "live_codex_threads_covered": false,
+  "auto_takeover_allowed": false,
+  "request_handling_rules": [
+    {
+      "rule_id": "same_mainline_next_step",
+      "trigger": ["下一步", "继续"],
+      "decision": "continue_current_mainline_only",
+      "requires_handoff_proposal": false,
+      "requires_user_confirmation": false
+    },
+    {
+      "rule_id": "other_session_or_project_family",
+      "trigger": ["GFIS", "KDS", "CodeGraph", "Agent-Reach", "Headroom", "Ontology-WAS", "OKF", "LCX", "其它所有会话"],
+      "decision": "answer_with_handoff_proposal_only",
+      "requires_handoff_proposal": true,
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "live_codex_thread_operation",
+      "trigger": ["真实其它线程", "接管会话", "关闭会话", "归档会话", "创建线程", "发送到其它线程"],
+      "decision": "answer_with_handoff_proposal_only",
+      "requires_handoff_proposal": true,
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "cross_repo_or_external_execution",
+      "trigger": ["跨仓执行", "外部 API", "真实 KDS API", "schema sync", "bench migrate"],
+      "decision": "answer_with_handoff_proposal_only",
+      "requires_handoff_proposal": true,
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "release_or_status_promotion",
+      "trigger": ["commit", "push", "deploy", "accepted", "integrated", "production_ready"],
+      "decision": "answer_with_handoff_proposal_only",
+      "requires_handoff_proposal": true,
+      "requires_user_confirmation": true
+    }
+  ],
+  "handoff_proposal_required_fields": [
+    "requested_action",
+    "target_session_or_project",
+    "scope",
+    "expected_effect",
+    "risk",
+    "validation_plan",
+    "stop_condition",
+    "confirmation_required_before_execution"
+  ],
+  "allowed_without_confirmation": [
+    "current_mainline_local_validator",
+    "current_mainline_local_evidence_doc",
+    "current_mainline_local_kds_mirror",
+    "current_mainline_recommendation_answer"
+  ],
+  "forbidden_without_confirmation": [
+    "take_over_other_live_codex_threads",
+    "execute_other_session_work",
+    "write_other_project_repos",
+    "call_external_write_api",
+    "call_real_kds_api_write",
+    "commit",
+    "push",
+    "deploy",
+    "promote_status_to_accepted_integrated_or_production_ready"
+  ],
+  "fixtures": [
+    {
+      "request": "下一步",
+      "expected_decision": "continue_current_mainline_only",
+      "expected_confirmation_required": false
+    },
+    {
+      "request": "其它所有会话呢",
+      "expected_decision": "answer_with_handoff_proposal_only",
+      "expected_confirmation_required": true
+    },
+    {
+      "request": "接管 GFIS 会话并继续执行",
+      "expected_decision": "answer_with_handoff_proposal_only",
+      "expected_confirmation_required": true
+    },
+    {
+      "request": "提交并推送这些改动",
+      "expected_decision": "answer_with_handoff_proposal_only",
+      "expected_confirmation_required": true
+    }
+  ],
+  "next_round": "GPCF-SESSION-MAINLINE-CROSS-THREAD-LEDGER-005",
+  "validators": [
+    "python3 tools/kds-sync/validate_session_mainline_handoff_request_gate.py",
+    "python3 tools/kds-sync/validate_session_mainline_drift_watch.py",
+    "python3 tools/kds-sync/validate_loop_session_registry.py"
+  ]
+}

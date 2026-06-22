@@ -1,0 +1,67 @@
+template_id: WAS-REAL-SOURCE-RECORD-CANDIDATE-TEMPLATE-001
+template_only: true
+object_family: CustomerRequirementOrPlatformOrder
+project_group_scope:
+  - GFIS
+  - GPC
+  - PVAOS
+  - WAES
+  - KDS
+  - Brain
+  - PKC
+  - XiaoC
+  - XGD
+  - XiaoG
+  - MMC
+  - GPCF
+  - Studio
+  - WAS
+required_source_kinds:
+  - customer_order_original
+  - platform_order_receipt
+submitter_role: GPC_or_Liaoning_Yuanhang_order_owner
+required_original_artifacts:
+  - real_customer_order_original_or_platform_order_receipt
+  - customer_confirmed_product_spec
+  - delivery_requirement
+  - issuing_party_and_owner_confirmation
+  - kds_source_backlink
+  - runtime_site_context
+gfis_native_fields:
+  object_family: CustomerRequirementOrPlatformOrder
+  sop_stage: S01-customer-requirement-or-platform-order
+  source_kind: <customer_order_original|platform_order_receipt>
+  customer_order_original_or_platform_order_receipt: <controlled-source-ref>
+  customer_confirmed_product_spec: <controlled-source-ref>
+  delivery_requirement: <controlled-source-ref>
+  source_of_record_backlink: <开发/01-GFIS/...>
+  source_record_hash: <sha256-hex-64>
+  issuing_party: <issuing-party>
+  owner_confirmation: <owner-confirmation-ref>
+  received_at: <iso-8601>
+  runtime_site_context: <runtime-site-context>
+was_fields:
+  objectFamily: CustomerRequirementOrPlatformOrder
+  sourceRecordId: <source-record-id>
+  assetDimension: data_asset
+  flowType: commerce_flow
+  lifecycle: pending_business_verification
+  trustLevel: T4
+  sourceRefs:
+    - was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order
+  evidenceRefs:
+    - evidence://gfis/REAL-001-source-record-intake-gate
+  waesGateRefs:
+    - waes://gate/customer-order-source-record-review
+  promotionBlockers:
+    - valid_source_record_missing
+    - customer_confirmation_missing
+  nextAction: collect_customer_order_or_platform_receipt
+  kdsBacklink: <must-equal-source_of_record_backlink>
+no_write_declaration:
+  gfis_runtime_write: false
+  runtime_primary_key_ready: false
+  waes_review_created: false
+  accepted: false
+  integrated: false
+  production_ready: false

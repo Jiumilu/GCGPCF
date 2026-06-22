@@ -1,0 +1,14 @@
+{
+  "fixture_id": "WAS-SCENARIO-PROFILE-MATRIX-NEGATIVE-PROMOTION-001",
+  "expected_result": "rejected",
+  "project_group_scope": ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"],
+  "required_green_supply_chain_links": ["customer_order", "supplier_procurement", "production_work_order", "quality_inspection", "logistics_delivery", "energy_consumption", "carbon_footprint", "settlement_profit", "knowledge_reference", "recycling_circular"],
+  "profiles": [],
+  "boundary": {
+    "real_source_records": 0,
+    "accepted": true,
+    "integrated": false,
+    "production_ready": true
+  }
+}
+

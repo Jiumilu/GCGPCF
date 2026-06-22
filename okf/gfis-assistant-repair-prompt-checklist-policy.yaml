@@ -1,0 +1,98 @@
+policy_id: okf.gfis_assistant_repair_prompt_checklist_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run GFIS Assistant repair prompt checklists derived from
+  WAES guidance packets. Checklists display repair requirements only. They do
+  not submit evidence, create gaps or bounties, create KWE work items, persist
+  WAES gate results, mutate KDS lifecycle, write business systems, complete
+  approvals, confirm revenue or scores, or call external APIs.
+
+required_fields:
+  - checklist_id
+  - guidance_packet_ref
+  - tenant_id
+  - project_id
+  - assistant_surface
+  - checklist_status
+  - items
+  - blocked_actions
+  - allowed_display_actions
+  - submits_evidence
+  - creates_gap_record
+  - creates_bounty_record
+  - creates_kwe_work_item
+  - creates_waes_gate_result
+  - approves_business_write
+  - promotes_lifecycle
+  - no_write
+
+item_types:
+  - source_repair
+  - evidence_repair
+  - owner_confirmation
+  - metadata_only_review
+  - committee_material
+  - freeze_risk_material
+
+item_statuses:
+  - open
+  - ready_for_submission
+  - repair_required
+  - blocked
+
+checklist_statuses:
+  - open
+  - repair_required
+  - blocked
+
+allowed_display_actions:
+  - show_repair_item
+  - show_required_evidence
+  - show_metadata_boundary
+  - show_owner_confirmation
+  - show_committee_material
+  - show_freeze_risk_material
+
+blocked_actions:
+  - submit_evidence
+  - create_gap_record
+  - create_bounty_record
+  - create_kwe_work_item
+  - create_waes_gate_result
+  - approve_business_write
+  - promote_lifecycle
+
+hard_boundaries:
+  checklist_only: true
+  submits_evidence_must_be_false: true
+  creates_gap_record_must_be_false: true
+  creates_bounty_record_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  checklist_is_not_submission: true
+  checklist_is_not_acceptance: true
+  checklist_is_not_business_writeback: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

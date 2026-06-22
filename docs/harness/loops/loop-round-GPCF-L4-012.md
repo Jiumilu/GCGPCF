@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-ECA1059D68
-title: GPCF-L4-012 Minimum Closed Loop Closure
+title: GPCF-L4-012 最小闭环收口
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-012.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-012.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-012 Minimum Closed Loop Closure
+# GPCF-L4-012 最小闭环收口
 
 ## Correction Notice
 
@@ -67,7 +67,7 @@ superseded_by: []
 
 | Command | Result |
 | --- | --- |
-| `python3 tools/kds-sync/validate_l4_minimum_closed_loop.py` | pass; project_group_score=100 next=L5-preparation |
+| `python3 tools/kds-sync/validate_l4_minimum_closed_loop.py` | repair; project_group_score=78 next=real-source-record-or-business-input-remediation |
 | `python3 tools/kds-sync/check_document_pollution.py` | pass |
 | `python3 tools/kds-sync/loop_document_gate.py` | pass |
 | `python3 tools/kds-sync/validate_continuous_round_substance.py` | pass; declared=12/30 substantive=12/30 |
@@ -86,10 +86,10 @@ superseded_by: []
 | Evidence 完整性 | 15 | 15 | 总控 evidence index、assessment JSON、closure matrix 和 KDS 镜像均完成 |
 | 最小闭环贡献度 | 10 | 10 | 完成从项目初始化到 GPCF 收口的 L4 项目群闭环证明 |
 | Git 与工作区可审计性 | 10 | 10 | 本地提交可审计，无敏感 Token 明文；不自动推送 |
-| 下一轮可执行性 | 10 | 10 | 下一阶段为 L5 preparation，需要单独强授权和真实客户/UAT/运行态证据 |
-| 总分 | 100 | 100/100 | L4 closed |
+| 下一轮可执行性 | 10 | 6 | 下一阶段不是 L5 preparation；必须先补真实 source-of-record、运行层 evidence 和 GFIS runtime SOP E2E |
+| 总分 | 100 | 78/100 | L4 repair required |
 
-结论：`counted_as_l4_substantive_round=true`。L4 项目群最小闭环达到 100/100；仍不得自动升级 accepted/integrated。
+结论：`counted_as_l4_substantive_round=true`。本轮只能作为 L4 项目群收口的受控证据记录；当前结论为 `repair_required`，不得恢复 100/100，不得自动升级 accepted/integrated。
 
 ## Project Group Cumulative Score
 
@@ -101,9 +101,9 @@ superseded_by: []
 | KDS 检索与知识回指完整度 | 10/10 | 项目级和总控级回指完整 |
 | Evidence 与审计完整度 | 15/15 | L4 evidence 完整；WAES 运行态保留为 L5 授权项 |
 | 跨项目契约一致性 | 10/10 | 无主账冲突，无越权写入 |
-| 用户可复现与 L5 准备度 | 10/10 | 本地命令可复现，L5 输入清楚 |
-| 项目群阶段累计评分 | 100/100 | L4 closed；L5 not activated |
+| 用户可复现与 L5 准备度 | 6/10 | 本地命令可复现，但 GFIS 真实业务线与运行层 SOP E2E 仍未闭合 |
+| 项目群阶段累计评分 | 78/100 | L4 repair required；L5 not activated |
 
 ## Next Input
 
-L5 preparation requires explicit authorization for customer/UAT samples, live read APIs, WAES runtime endpoint verification, monitoring, rollback and acceptance criteria. Until then, the next safe task is L5 authorization package drafting only.
+下一步安全输入：继续推进 GFIS 真实 source-of-record 或 business-input remediation。L5 准备仍被阻塞，直到 customer/UAT 样本、live read API、WAES runtime endpoint verification、monitoring、rollback 与 acceptance criteria 分别获得授权并形成证据。

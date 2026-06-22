@@ -1,0 +1,25 @@
+{
+  "id": "gc-knowledge-fabric-dks-087-committee-decision-policy-smoke",
+  "description": "Static no-write smoke for Committee DecisionRecord IO and dispute freeze policy.",
+  "expected": {
+    "decisionTriggerCount": 10,
+    "minimumInputFieldCount": 11,
+    "minimumOutputFieldCount": 12,
+    "freezeScopeCount": 7,
+    "reasonCodeCount": 8,
+    "votingMethodCount": 3,
+    "decisionDomain": "governance",
+    "committeeDoesNotReplaceWaesGate": true,
+    "committeeCannotWriteBusinessSystem": true,
+    "committeeCannotDirectlyDistributeRevenue": true,
+    "committeeCannotDirectlyConfirmScore": true,
+    "harnessEvidenceRequired": true,
+    "externalAccountAuthorizedViewOnly": true,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesScoreConfirmation": 0,
+    "writesQuotaTransfer": 0,
+    "writesBountySettlement": 0,
+    "writesExternalApi": 0
+  }
+}

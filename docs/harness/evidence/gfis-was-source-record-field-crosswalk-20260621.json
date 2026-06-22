@@ -1,0 +1,144 @@
+{
+  "evidence_id": "GFIS-WAS-SOURCE-RECORD-FIELD-CROSSWALK-20260621",
+  "status": "gfis_was_source_record_field_crosswalk_pass",
+  "date": "2026-06-21",
+  "scope": {
+    "gpcf_role": "field_crosswalk_governance",
+    "gfis_role": "native_source_record_schema",
+    "was_role": "ontology_submission_schema",
+    "crosswalk_type": "future_real_submission_instruction_no_business_fact"
+  },
+  "sources": {
+    "submission_precheck": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/gfis-was-source-record-submission-precheck-20260621.json",
+    "negative_fixtures": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/gfis-was-source-record-negative-fixtures-20260621.json",
+    "was_profile": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系/okf/examples/gfis-runtime-sop-e2e-was-profile.yaml",
+    "gfis_source_record_template": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.source-record.template.json",
+    "gfis_receiving_directory": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order"
+  },
+  "coverage": {
+    "gfis_native_required_fields": 12,
+    "was_required_fields": 12,
+    "crosswalk_entries": 12,
+    "direct_equalities": 2,
+    "fixed_was_values": 5,
+    "explicit_submission_fields": 5,
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "accepted_integrated": 0,
+    "production_ready": 0
+  },
+  "gfis_native_required_fields": [
+    "object_family",
+    "sop_stage",
+    "source_kind",
+    "customer_order_original_or_platform_order_receipt",
+    "customer_confirmed_product_spec",
+    "delivery_requirement",
+    "source_of_record_backlink",
+    "source_record_hash",
+    "issuing_party",
+    "owner_confirmation",
+    "received_at",
+    "runtime_site_context"
+  ],
+  "was_required_fields": [
+    "objectFamily",
+    "sourceRecordId",
+    "assetDimension",
+    "flowType",
+    "lifecycle",
+    "trustLevel",
+    "sourceRefs",
+    "evidenceRefs",
+    "waesGateRefs",
+    "promotionBlockers",
+    "nextAction",
+    "kdsBacklink"
+  ],
+  "crosswalk": [
+    {
+      "was_field": "objectFamily",
+      "rule": "must_equal_gfis_object_family",
+      "gfis_source": "object_family",
+      "required_value": "CustomerRequirementOrPlatformOrder"
+    },
+    {
+      "was_field": "sourceRecordId",
+      "rule": "explicit_submission_field",
+      "gfis_source": "source_record_hash",
+      "instruction": "Use a stable source record identifier that binds to source_record_hash; do not derive it from a Loop round or user statement."
+    },
+    {
+      "was_field": "assetDimension",
+      "rule": "fixed_was_stage_value",
+      "gfis_source": "WAS S01",
+      "required_value": "data_asset"
+    },
+    {
+      "was_field": "flowType",
+      "rule": "fixed_was_stage_value",
+      "gfis_source": "WAS S01",
+      "required_value": "commerce_flow"
+    },
+    {
+      "was_field": "lifecycle",
+      "rule": "fixed_was_stage_value_until_manual_verification",
+      "gfis_source": "WAS S01",
+      "required_value": "pending_business_verification"
+    },
+    {
+      "was_field": "trustLevel",
+      "rule": "fixed_was_stage_value_until_waes_review",
+      "gfis_source": "WAS S01",
+      "required_value": "T4"
+    },
+    {
+      "was_field": "sourceRefs",
+      "rule": "must_include_was_stage_source_ref",
+      "gfis_source": "source_of_record_backlink",
+      "required_value": ["kds://开发/01-GFIS/source-records/customer-requirement-or-platform-order"]
+    },
+    {
+      "was_field": "evidenceRefs",
+      "rule": "must_include_was_stage_evidence_ref",
+      "gfis_source": "GFIS REAL-001 source record intake gate",
+      "required_value": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"]
+    },
+    {
+      "was_field": "waesGateRefs",
+      "rule": "must_include_was_stage_waes_gate_ref",
+      "gfis_source": "WAES source record review gate",
+      "required_value": ["waes://gate/customer-order-source-record-review"]
+    },
+    {
+      "was_field": "promotionBlockers",
+      "rule": "must_preserve_was_stage_blockers_before_manual_verification",
+      "gfis_source": "WAS S01",
+      "required_value": ["valid_source_record_missing", "customer_confirmation_missing"]
+    },
+    {
+      "was_field": "nextAction",
+      "rule": "fixed_was_stage_next_action",
+      "gfis_source": "WAS S01",
+      "required_value": "collect_customer_order_or_platform_receipt"
+    },
+    {
+      "was_field": "kdsBacklink",
+      "rule": "must_equal_gfis_source_of_record_backlink",
+      "gfis_source": "source_of_record_backlink",
+      "required_prefix": "开发/"
+    }
+  ],
+  "non_claims": [
+    "does not write into GFIS receiving directory",
+    "does not create real source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not create verified artifact",
+    "does not mark accepted or integrated",
+    "does not mark production ready"
+  ]
+}

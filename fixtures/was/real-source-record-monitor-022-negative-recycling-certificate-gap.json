@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "takeback_program_evidence_gaps": 0,
+  "reuse_remanufacture_record_gaps": 0,
+  "recycling_certificate_gaps": 1,
+  "waste_disposal_manifest_gaps": 0,
+  "hazardous_waste_handling_gaps": 0,
+  "resource_recovery_accounting_gaps": 0,
+  "accepted_for_circular_economy_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "circular_economy_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

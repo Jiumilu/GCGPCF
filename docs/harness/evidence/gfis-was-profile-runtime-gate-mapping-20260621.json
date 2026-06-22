@@ -1,0 +1,153 @@
+{
+  "evidence_id": "GFIS-WAS-PROFILE-RUNTIME-GATE-MAPPING-20260621",
+  "status": "gfis_was_profile_runtime_gate_mapping_pass",
+  "date": "2026-06-21",
+  "scope": {
+    "gpcf_role": "project_group_governance_mapping",
+    "gfis_role": "runtime_sop_subject",
+    "was_role": "semantic_foundation_project",
+    "mapping_type": "read_only_semantic_gate_mapping"
+  },
+  "sources": {
+    "was_profile": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系/okf/examples/gfis-runtime-sop-e2e-was-profile.yaml",
+    "was_validator": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系/okf/validators/validate_all.py",
+    "gfis_test_12_stage_evidence": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-test-12-stage.json",
+    "gfis_scenario_coverage_evidence": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-test-scenario-coverage-evidence.json",
+    "gfis_replay_input": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/replay/gfis-runtime-sop-e2e.test-replay-input.json",
+    "gfis_runtime_object_contract": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/replay/gfis-runtime-sop-e2e.test-runtime-object-contract.json"
+  },
+  "coverage": {
+    "was_stage_count": 12,
+    "gfis_replay_stage_count": 12,
+    "gfis_runtime_object_count": 15,
+    "required_dimension_count": 8,
+    "required_flow_count": 8,
+    "all_was_dimensions_covered": true,
+    "all_was_flows_covered": true,
+    "test_data_lane": "pass",
+    "real_business_lane": "repair_required",
+    "runtime_sop_e2e": "repair_required"
+  },
+  "mapping": [
+    {
+      "was_stage_id": "S01-customer-requirement-or-platform-order",
+      "gfis_stage_id": "TEST-GFIS-STAGE-01-CPO",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-CPO-001",
+      "gfis_runtime_object_type": "CustomerRequirementOrPlatformOrder",
+      "asset_dimension": "data_asset",
+      "flow_type": "commerce_flow"
+    },
+    {
+      "was_stage_id": "S02-pending-business-verification",
+      "gfis_stage_id": "TEST-GFIS-STAGE-02-SAMPLE",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-SAMPLE-001",
+      "gfis_runtime_object_type": "SampleRequest",
+      "asset_dimension": "rule_asset",
+      "flow_type": "rule_flow"
+    },
+    {
+      "was_stage_id": "S03-runtime-primary-key",
+      "gfis_stage_id": "TEST-GFIS-STAGE-03-MPR",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-MPR-001",
+      "gfis_runtime_object_type": "MassProductionGate",
+      "asset_dimension": "data_asset",
+      "flow_type": "information_flow"
+    },
+    {
+      "was_stage_id": "S04-review-queue",
+      "gfis_stage_id": "TEST-GFIS-STAGE-04-FO",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-FO-001",
+      "gfis_runtime_object_type": "FactoryOrder",
+      "asset_dimension": "organization_asset",
+      "flow_type": "rule_flow"
+    },
+    {
+      "was_stage_id": "S05-runtime-intake",
+      "gfis_stage_id": "TEST-GFIS-STAGE-05-MAT",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-MAT-001",
+      "gfis_runtime_object_type": "MaterialInventoryReadiness",
+      "asset_dimension": "physical_asset",
+      "flow_type": "material_flow"
+    },
+    {
+      "was_stage_id": "S06-waes-review",
+      "gfis_stage_id": "TEST-GFIS-STAGE-06-WO",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-WO-001",
+      "gfis_runtime_object_type": "WorkOrder",
+      "asset_dimension": "rule_asset",
+      "flow_type": "rule_flow"
+    },
+    {
+      "was_stage_id": "S07-verified-artifact",
+      "gfis_stage_id": "TEST-GFIS-STAGE-07-QC",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-QC-001",
+      "gfis_runtime_object_type": "QualityInspection",
+      "asset_dimension": "data_asset",
+      "flow_type": "information_flow"
+    },
+    {
+      "was_stage_id": "S08-production-execution",
+      "gfis_stage_id": "TEST-GFIS-STAGE-08-FGI",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-FGI-001",
+      "gfis_runtime_object_type": "FinishedGoodsInventory",
+      "asset_dimension": "physical_asset",
+      "flow_type": "material_flow"
+    },
+    {
+      "was_stage_id": "S09-quality-inspection",
+      "gfis_stage_id": "TEST-GFIS-STAGE-09-DN",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-DN-001",
+      "gfis_runtime_object_type": "DeliveryNote",
+      "asset_dimension": "intelligence_asset",
+      "flow_type": "knowledge_flow"
+    },
+    {
+      "was_stage_id": "S10-inventory-and-energy",
+      "gfis_stage_id": "TEST-GFIS-STAGE-10-POD",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-POD-001",
+      "gfis_runtime_object_type": "PODReference",
+      "asset_dimension": "energy_asset",
+      "flow_type": "energy_flow"
+    },
+    {
+      "was_stage_id": "S11-delivery-and-pod",
+      "gfis_stage_id": "TEST-GFIS-STAGE-11-FIN",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-FIN-001",
+      "gfis_runtime_object_type": "OperatingLedgerFinanceBoundary",
+      "asset_dimension": "spacetime_asset",
+      "flow_type": "spacetime_flow"
+    },
+    {
+      "was_stage_id": "S12-settlement-and-carbon",
+      "gfis_stage_id": "TEST-GFIS-STAGE-12-EKB",
+      "gfis_runtime_object_id": "TEST-GFIS-RO-EKB-001",
+      "gfis_runtime_object_type": "EvidenceKnowledgeBacklink",
+      "asset_dimension": "economic_asset",
+      "flow_type": "capital_flow"
+    }
+  ],
+  "blocked_real_business_counts": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted_integrated": 0,
+    "production_ready": 0,
+    "production_writes": 0,
+    "real_external_api_writes": 0
+  },
+  "non_claims": [
+    "does not modify GFIS runtime code",
+    "does not create source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not create verified artifact",
+    "does not mark accepted or integrated",
+    "does not mark production ready"
+  ]
+}

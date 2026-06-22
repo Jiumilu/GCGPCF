@@ -1,0 +1,36 @@
+policy_id: okf.redaction_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+sensitive_classes:
+  - contract_sensitive_terms
+  - finance_voucher
+  - pod_original
+  - quality_dispute
+  - customer_supplier_identity
+  - credential_or_token
+  - unpublished_policy_interpretation
+  - commercial_quote_or_commission
+storage_modes:
+  metadata_only:
+    raw_content_allowed: false
+  redacted_copy:
+    raw_content_allowed: false
+    rag_allowed: limited
+  controlled_original:
+    raw_content_allowed: controlled_space_only
+  blocked:
+    raw_content_allowed: false
+    rag_allowed: false
+minimum_metadata:
+  - object_id
+  - source_ref
+  - evidence_ref
+  - hash_or_original_pointer
+  - acl
+  - citation_scope
+  - sensitive_data_gate_result
+rules:
+  default_rag_admission_for_sensitive: sensitive_metadata_only
+  secret_values_must_not_be_written_to_docs_or_evidence: true

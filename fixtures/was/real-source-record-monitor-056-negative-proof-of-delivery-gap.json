@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "delivery_appointment_gaps": 0,
+  "consignee_receiving_record_gaps": 0,
+  "proof_of_delivery_gaps": 1,
+  "unloading_inspection_record_gaps": 0,
+  "damage_or_discrepancy_report_gaps": 0,
+  "temperature_or_condition_log_gaps": 0,
+  "final_delivery_confirmation_gaps": 0,
+  "accepted_for_destination_receiving_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "destination_receiving_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

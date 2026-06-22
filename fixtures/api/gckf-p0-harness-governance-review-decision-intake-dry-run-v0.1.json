@@ -1,0 +1,87 @@
+{
+  "contractId": "GCKF-P0-HARNESS-GOVERNANCE-REVIEW-DECISION-INTAKE-DRY-RUN-V0.1",
+  "description": "P0-D30 Harness Governance review decision intake dry-run derived from D29 candidate packet. It defines intake decisions without writing formal evidence.",
+  "intakeStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceCandidatePacket": "fixtures/api/gckf-p0-formal-evidence-candidate-packet-assembly-dry-run-v0.1.json",
+  "intake": {
+    "id": "GCKF-P0-HARNESS-GOVERNANCE-REVIEW-INTAKE-001",
+    "intakeType": "harness_governance_review_decision_intake",
+    "sourcePacketId": "GCKF-P0-FORMAL-EVIDENCE-CANDIDATE-PACKET-001",
+    "intakeStatus": "candidate",
+    "reviewStatus": "pending",
+    "requiredReviewerType": "human_or_harness_governance",
+    "allowedDecisionOutcomes": [
+      "accept_for_review",
+      "return_for_packet_repair",
+      "reject_candidate_packet",
+      "approve_for_future_formal_write"
+    ],
+    "requiredDecisionFields": [
+      "reviewerId",
+      "reviewedAt",
+      "sourcePacketRef",
+      "decisionOutcome",
+      "decisionRationale",
+      "evidenceRefs",
+      "authorityRef"
+    ],
+    "decisionGuards": [
+      "source_packet_status_is_candidate",
+      "source_packet_review_status_is_pending",
+      "reviewer_authority_present",
+      "decision_outcome_is_allowed",
+      "formal_evidence_not_written",
+      "harness_evidence_not_written",
+      "approval_does_not_write_evidence",
+      "repair_and_rejection_require_reason",
+      "future_formal_write_requires_separate_execution"
+    ],
+    "forbiddenActions": [
+      "write_formal_evidence",
+      "write_harness_evidence",
+      "write_kds",
+      "promote_lifecycle",
+      "enable_business_writeback",
+      "mark_p0_accepted",
+      "treat_approval_as_written_evidence"
+    ]
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-formal-evidence-candidate-packet-assembly-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_formal_evidence_candidate_packet_assembly_dry_run.py",
+    "docs/gc-knowledge-fabric/formal-evidence-candidate-packet-assembly-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D29-001.md"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "intakeStatus": "candidate",
+    "intakeType": "harness_governance_review_decision_intake",
+    "reviewStatus": "pending",
+    "sourcePacketStatus": "candidate",
+    "sourcePacketReviewStatus": "pending",
+    "allowedDecisionOutcomeCount": 4,
+    "requiredDecisionFieldCount": 7,
+    "decisionGuardCount": 9,
+    "forbiddenActionCount": 7,
+    "requiredSourceRefCount": 4,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/README.md
 source_path: openspec/changes/kds-production-hardening/specs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -38,8 +38,8 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | KDS | draft |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | KDS | draft |
-| GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | draft |
+| GPCF-DOC-8ECD9BA263 | 智能体安全矩阵 | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | draft |
 | GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | KDS | draft |
-| GPCF-DOC-18A2F48E80 | Session Authentication | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | GPCF | draft |
+| GPCF-DOC-18A2F48E80 | 会话认证 | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | GPCF | draft |
 | GPCF-DOC-D0174E85D8 | unified-permission-middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md | KDS | draft |
-| GPCF-DOC-D067D700F1 | Unified Permission Middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | KDS | draft |
+| GPCF-DOC-D067D700F1 | 统一权限中间件 | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | KDS | draft |

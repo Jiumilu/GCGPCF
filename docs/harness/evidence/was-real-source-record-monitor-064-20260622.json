@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-064-20260622",
+  "status": "was_real_source_record_monitor_064_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-064",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-063",
+  "purpose": "Sixty-fourth independent monitor pass for green supply chain post-disposition circularity accounting, material recovery accounting, component harvest record, remanufacturing route decision, secondary market transfer record, disposal deviation report, regulatory recycling report, and circularity KPI assurance statement.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "material_recovery_accounting_gaps": 0,
+    "component_harvest_record_gaps": 0,
+    "remanufacturing_route_decision_gaps": 0,
+    "secondary_market_transfer_record_gaps": 0,
+    "disposal_deviation_report_gaps": 0,
+    "regulatory_recycling_report_gaps": 0,
+    "circularity_kpi_assurance_statement_gaps": 0,
+    "accepted_for_post_disposition_circularity_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "post_disposition_circularity_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "material_recovery_accounting_gap",
+      "component_harvest_record_gap",
+      "remanufacturing_route_decision_gap",
+      "secondary_market_transfer_record_gap",
+      "disposal_deviation_report_gap",
+      "regulatory_recycling_report_gap",
+      "circularity_kpi_assurance_statement_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "post_disposition_circularity_requirements": [
+    "material_recovery_accounting",
+    "component_harvest_record",
+    "remanufacturing_route_decision",
+    "secondary_market_transfer_record",
+    "disposal_deviation_report",
+    "regulatory_recycling_report",
+    "circularity_kpi_assurance_statement"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-065",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer material recovery accounting, component harvest record, remanufacturing route decision, secondary market transfer record, disposal deviation report, regulatory recycling report, or circularity KPI assurance statement",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

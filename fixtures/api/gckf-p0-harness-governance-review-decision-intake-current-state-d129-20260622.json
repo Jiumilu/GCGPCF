@@ -1,0 +1,111 @@
+{
+  "contractId": "GCKF-P0-HARNESS-GOVERNANCE-REVIEW-DECISION-INTAKE-CURRENT-STATE-D129-20260622",
+  "description": "Current-state Harness Governance review decision intake derived from the D128 current-state repair path workpack and D127 current-state decision template context. It keeps intake decisions as candidate_with_hold only and does not write formal evidence.",
+  "intakeStatus": "candidate_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "notFinalAcceptance": true,
+  "sourceDecisionTemplate": "fixtures/api/gckf-p0-harness-decision-template-current-state-d127-20260622.json",
+  "sourceRepairWorkpack": "fixtures/api/gckf-p0-repair-path-workpack-current-state-d128-20260622.json",
+  "intake": {
+    "id": "GCKF-P0-HARNESS-GOVERNANCE-REVIEW-INTAKE-CURRENT-STATE-D129-001",
+    "intakeType": "harness_governance_review_decision_intake",
+    "sourcePacketId": "GCKF-P0-FORMAL-EVIDENCE-CANDIDATE-PACKET-001",
+    "intakeStatus": "candidate_with_hold",
+    "reviewStatus": "pending_with_hold",
+    "requiredReviewerType": "human_or_harness_governance",
+    "allowedDecisionOutcomes": [
+      "accept_for_review",
+      "return_for_packet_repair",
+      "reject_candidate_packet",
+      "approve_for_future_formal_write"
+    ],
+    "requiredDecisionFields": [
+      "reviewerId",
+      "reviewedAt",
+      "sourcePacketRef",
+      "decisionOutcome",
+      "decisionRationale",
+      "evidenceRefs",
+      "authorityRef",
+      "holdContextRefs"
+    ],
+    "decisionGuards": [
+      "source_packet_status_is_candidate",
+      "source_packet_review_status_is_pending",
+      "reviewer_authority_present",
+      "decision_outcome_is_allowed",
+      "formal_evidence_not_written",
+      "harness_evidence_not_written",
+      "approval_does_not_write_evidence",
+      "repair_and_rejection_require_reason",
+      "future_formal_write_requires_separate_execution",
+      "hold_context_present",
+      "p1_admission_not_granted",
+      "v1_upgrade_not_approved"
+    ],
+    "forbiddenActions": [
+      "write_formal_evidence",
+      "write_harness_evidence",
+      "write_kds",
+      "promote_lifecycle",
+      "enable_business_writeback",
+      "mark_p0_accepted",
+      "treat_approval_as_written_evidence",
+      "grant_p1_admission",
+      "approve_v1_upgrade"
+    ]
+  },
+  "holdContextRefs": ["B1", "B2", "B3", "B4", "B5", "B6"],
+  "currentGateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-decision-template-current-state-d127-20260622.json",
+    "docs/harness/evidence/gckf-p0-harness-decision-template-current-state-d127-20260622.json",
+    "docs/harness/evidence/gckf-p0-harness-decision-template-current-state-d127-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D127-001.md",
+    "tools/kds-sync/validate_gckf_p0_harness_decision_template_current_state_d127.py",
+    "fixtures/api/gckf-p0-repair-path-workpack-current-state-d128-20260622.json",
+    "docs/harness/evidence/gckf-p0-repair-path-workpack-current-state-d128-20260622.json",
+    "docs/harness/evidence/gckf-p0-repair-path-workpack-current-state-d128-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D128-001.md",
+    "tools/kds-sync/validate_gckf_p0_repair_path_workpack_current_state_d128.py"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled",
+    "p1_admission_granted",
+    "v1_upgrade_approved"
+  ],
+  "expectedSummary": {
+    "intakeStatus": "candidate_with_hold",
+    "maximumState": "review_ready_with_hold",
+    "intakeType": "harness_governance_review_decision_intake",
+    "reviewStatus": "pending_with_hold",
+    "allowedDecisionOutcomeCount": 4,
+    "requiredDecisionFieldCount": 8,
+    "decisionGuardCount": 12,
+    "forbiddenActionCount": 9,
+    "holdContextRefCount": 6,
+    "requiredSourceRefCount": 10,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

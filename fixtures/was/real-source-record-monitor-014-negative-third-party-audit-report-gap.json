@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "esg_rating_substitution_attempts": 0,
+  "carbon_accounting_method_gaps": 0,
+  "third_party_audit_report_gaps": 1,
+  "verifier_qualification_gaps": 0,
+  "audit_period_mismatch": 0,
+  "audit_statement_without_kds_backlink": 0,
+  "accepted_for_esg_carbon_audit_profile": 1,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "esg_carbon_audit_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 1,
+    "verified": 0,
+    "accepted": true,
+    "integrated": false,
+    "production_ready": false
+  }
+}

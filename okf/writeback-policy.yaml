@@ -1,0 +1,41 @@
+policy_id: okf.writeback_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+target_systems:
+  - GFIS
+  - GPC
+  - ERP
+  - MES
+  - KDS
+  - WAES
+target_entity_types:
+  - order
+  - factory
+  - supplier
+  - customer
+  - quality_record
+  - delivery_record
+  - pod_record
+  - finance_record
+  - sop
+  - risk
+  - status
+writeback_statuses:
+  - candidate
+  - approved
+  - written_back
+  - rejected
+  - rolled_back
+rules:
+  ai_or_agent_max_status: candidate
+  approved_requires: [waes_writeback_gate_passed, business_owner_confirmation, evidence_refs]
+  written_back_requires: [approved, target_system_receipt, harness_evidence]
+  rollback_requires: [rollback_reason, target_system_receipt_or_manual_record]
+blocked_without:
+  - target_system
+  - proposed_fields
+  - based_on_object_refs
+  - evidence_refs
+  - pool_refs

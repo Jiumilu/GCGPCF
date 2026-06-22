@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md
 source_path: openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-D0174E85D8 | unified-permission-middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md | KDS | draft |
-| GPCF-DOC-D067D700F1 | Unified Permission Middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | KDS | draft |
+| GPCF-DOC-D067D700F1 | 统一权限中间件 | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | KDS | draft |

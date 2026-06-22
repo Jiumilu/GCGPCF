@@ -1,0 +1,137 @@
+{
+  "evidence_id": "AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-20260621",
+  "date": "2026-06-21",
+  "status": "pass",
+  "mode": "waes_kds_candidate_review_queue",
+  "execution_mode": "read_only_queue_from_replay_ledger",
+  "external_search_invoked": false,
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-candidate-search-replay-ledger-20260621.json"
+  ],
+  "queue_id": "GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001",
+  "queue_status": "ready_for_human_review",
+  "review_policy": {
+    "allowed_decisions": [
+      "accept_limited",
+      "reject",
+      "defer"
+    ],
+    "default_decision": "pending",
+    "auto_accept_allowed": false,
+    "strong_rag_upgrade_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "queue_summary": {
+    "item_count": 5,
+    "pending_count": 5,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "deferred_count": 0,
+    "source_provenance_rate": 1.0,
+    "rag_admission": "limited",
+    "kds_admission": "limited_candidate_only"
+  },
+  "items": [
+    {
+      "id": "knowledge_provenance_rag",
+      "query": "RAG source provenance citation governance knowledge management best practices",
+      "first_url": "https://gautierdorval.com/en/frameworks/rag-governance-retrieval-and-inference-control/",
+      "channel": "exa_search",
+      "rag_admission": "limited",
+      "review_decision": "pending",
+      "required_review_checks": [
+        "verify_authority_and_publication_context",
+        "confirm_claim_scope",
+        "cross_check_with_primary_or_official_sources",
+        "record_accept_reject_or_defer_reason"
+      ],
+      "risk_flags": [
+        "third_party_interpretation",
+        "not_canonical_source"
+      ]
+    },
+    {
+      "id": "green_supply_chain_policy",
+      "query": "green supply chain public service platform policy standards traceability",
+      "first_url": "https://www.chinesestandard.net/PDF/English.aspx/GBT39256-2020",
+      "channel": "exa_search",
+      "rag_admission": "limited",
+      "review_decision": "pending",
+      "required_review_checks": [
+        "verify_standard_identifier",
+        "confirm_version_and_effective_scope",
+        "prefer_official_or_authoritative_standard_source",
+        "record_accept_reject_or_defer_reason"
+      ],
+      "risk_flags": [
+        "standard_page_may_be_commercial_mirror",
+        "requires_authoritative_source_check"
+      ]
+    },
+    {
+      "id": "factory_execution_traceability",
+      "query": "manufacturing execution system source of record quality traceability evidence",
+      "first_url": "https://sgsystemsglobal.com/glossary/mes-manufacturing-execution-system/",
+      "channel": "exa_search",
+      "rag_admission": "limited",
+      "review_decision": "pending",
+      "required_review_checks": [
+        "verify_vendor_context",
+        "separate_general_mes_claims_from_gfis_source_of_record",
+        "cross_check_with_internal_gfis_evidence",
+        "record_accept_reject_or_defer_reason"
+      ],
+      "risk_flags": [
+        "vendor_content",
+        "must_not_define_gfis_source_of_record"
+      ]
+    },
+    {
+      "id": "ai_agent_evidence_gate",
+      "query": "AI agent evidence governance risk gate audit trail MCP tools",
+      "first_url": "https://github.com/undercurrentai/aegis-mcp",
+      "channel": "exa_search",
+      "rag_admission": "limited",
+      "review_decision": "pending",
+      "required_review_checks": [
+        "verify_repository_status_and_license",
+        "confirm_security_relevance",
+        "check_maintenance_and_commit_context",
+        "record_accept_reject_or_defer_reason"
+      ],
+      "risk_flags": [
+        "open_source_candidate",
+        "not_waes_policy_source"
+      ]
+    },
+    {
+      "id": "agent_reach_capability",
+      "query": "Agent-Reach GitHub AI agent web search GitHub RSS Exa MCP",
+      "first_url": "https://github.com/Panniantong/Agent-Reach",
+      "channel": "exa_search",
+      "rag_admission": "limited",
+      "review_decision": "pending",
+      "required_review_checks": [
+        "verify_repository_and_license",
+        "confirm_version_against_local_poc",
+        "keep_candidate_search_boundary",
+        "record_accept_reject_or_defer_reason"
+      ],
+      "risk_flags": [
+        "capability_source",
+        "must_not_claim_production_integration"
+      ]
+    }
+  ],
+  "admission_decision": {
+    "waes_review_status": "ready_for_human_review",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false,
+    "kds_canonical_write_count": 0
+  },
+  "next_gate": "human_review_decisions_accept_reject_defer"
+}

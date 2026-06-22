@@ -1,0 +1,26 @@
+id: LCX-HEADROOM
+name: Headroom Context Optimization Layer
+source_repo: chopratejas/headroom
+license: Apache-2.0
+version_policy: pinned_or_locked
+usage_modes:
+  - proxy
+  - sdk
+  - mcp
+  - agent_wrap
+  - ccr
+  - working_memory
+  - learn_preview
+  - output_shaper
+trust_level: L2_ENGINEERING_TOOL
+fact_authority: false
+evidence_authority: false
+source_of_record_policy: Headroom memory must not become KDS source of record
+memory_status: working_memory_candidate_only
+policy_controlled_by: WAES
+evidence_recorded_by: Harness
+kds_status: candidate_component
+production_admission_gate: false
+accepted: false
+integrated: false
+production_ready: false

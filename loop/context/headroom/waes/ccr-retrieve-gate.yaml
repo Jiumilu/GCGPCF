@@ -1,0 +1,20 @@
+gate_id: WAES-LCX-CCR-RETRIEVE-GATE-v1
+default_action: require_evidence
+required_fields:
+  - task_id
+  - loop_round_id
+  - caller
+  - project_id
+  - content_type
+  - retrieve_reason
+  - sensitive_check
+  - evidence_ref
+allow_if:
+  - retrieve_reason_present
+  - sensitive_check_pass
+  - harness_evidence_ref_present
+deny_if:
+  - high_sensitive_original_without_owner
+  - missing_reason
+  - missing_evidence
+  - production_secret

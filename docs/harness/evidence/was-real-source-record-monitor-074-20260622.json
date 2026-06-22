@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-074-20260622",
+  "status": "was_real_source_record_monitor_074_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-074",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-073",
+  "purpose": "Seventy-fourth independent monitor pass for green logistics, sustainable packaging, recycled content, route emissions, carrier environmental compliance, warehouse condition logs, and delivery damage or loss claim evidence.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "sustainable_packaging_specification_gaps": 0,
+    "packaging_recycled_content_certificate_gaps": 0,
+    "packaging_recyclability_assessment_gaps": 0,
+    "transport_route_emission_record_gaps": 0,
+    "carrier_environmental_compliance_certificate_gaps": 0,
+    "warehouse_storage_condition_log_gaps": 0,
+    "delivery_damage_loss_claim_record_gaps": 0,
+    "accepted_for_green_logistics_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "green_logistics_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "sustainable_packaging_specification_gap",
+      "packaging_recycled_content_certificate_gap",
+      "packaging_recyclability_assessment_gap",
+      "transport_route_emission_record_gap",
+      "carrier_environmental_compliance_certificate_gap",
+      "warehouse_storage_condition_log_gap",
+      "delivery_damage_loss_claim_record_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "green_logistics_requirements": [
+    "sustainable_packaging_specification",
+    "packaging_recycled_content_certificate",
+    "packaging_recyclability_assessment",
+    "transport_route_emission_record",
+    "carrier_environmental_compliance_certificate",
+    "warehouse_storage_condition_log",
+    "delivery_damage_loss_claim_record"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-075",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer sustainable packaging specification, packaging recycled content certificate, packaging recyclability assessment, transport route emission record, carrier environmental compliance certificate, warehouse storage condition log, or delivery damage loss claim record",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

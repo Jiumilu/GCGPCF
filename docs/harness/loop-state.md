@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7183C7D7D1
 title: GPCF Loop State
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAES, KDS, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loop-state.md
 source_path: docs/harness/loop-state.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -24,10 +24,10 @@ superseded_by: []
 |---|---|
 | project | GlobalCoud GPCF |
 | project_code | CF |
-| loop.round | 368 |
-| loop.current_step | gfis_test_data_12_stage_negative_transition_guard_sync |
-| loop.last_entry | `GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001`：GFIS 12 阶段测试数据负例阻断门禁总控同步 |
-| loop.last_exit | 已在 GFIS 真项目仓完成 `GFIS-RUNTIME-SOP-E2E-TEST-12STAGE-NEGATIVE-001` 并回写 GPCF 总控。当前双状态为 `test_data_12_stage_negative_transition_guard=pass`、`real_business_lane=repair_required`、`business_verification_pending=true`。GFIS 测试数据 validator 输出 `gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`。GFIS runtime 总 validator 仍因真实 KDS/source-of-record 缺口保持 blocked；本轮未使用真实业务数据，未创建真实 source record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review、真实 KDS/WAES 写入或真实 verified artifact |
+| loop.round | 370 |
+| loop.current_step | gfis_test_data_scenario_coverage_sync |
+| loop.last_entry | `GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001`：GFIS 12 阶段测试数据场景覆盖与变异防污染门禁总控同步 |
+| loop.last_exit | 已在 GFIS 真项目仓完成 `GFIS-RUNTIME-SOP-E2E-TEST-SCENARIO-001` 并回写 GPCF 总控。当前双状态为 `test_data_scenario_coverage=pass`、`test_data_mutation_guard=pass`、`real_business_lane=repair_required`、`business_verification_pending=true`。GFIS 测试数据 scenario validator 输出 `gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 waes_evidence_candidate_count=15 kds_backlink_candidate_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass test_data_lane=pass real_business_lane=repair_required runtime_sop_e2e=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`。GFIS runtime 总 validator 仍因真实 KDS/source-of-record 缺口保持 blocked；GPCF self-correction gate 输出 blocked 且 test-data 门禁均为 pass；GPCF L4 aggregate gate 当前因 XiaoG retrieval evidence 文件缺失失败。本轮只使用测试数据，未创建真实 source record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review、真实 KDS/WAES 写入或真实 verified artifact |
 | loop.gate_result | partial |
 | loop.blockers | GFIS 开发态目标已达到 `development_ready=pass`，但完整真实 SOP E2E 仍未通过；当前仍无责任方确认的客户订单、平台订单回执、采购订单、客户确认、客户签样或等效正式确认，也无真实运行层主键、真实 review queue item、真实 runtime intake item 和真实 WAES review result，因此 `valid_source_records=0`、`runtime_primary_key_created=0`、`runtime_primary_key_ready=0`、`review_queue_created=0`、`review_queue=0`、`runtime_intake_created=0`、`runtime_intake=0`、`waes_review_created=0`、`waes_review=0`、`verified_artifact_created=0`、`verified=0`。KDS 候选、报价、合同链、用户口述、GFIS Demo、mock、fixture、synthetic/dev-only 均不得替代真实运行层证据。ECS 运行边界已文档化，本轮未执行任何 ECS/阿里云/Caddy/隧道/Docker 变更；生产写入、外部联调、数据库迁移、权限变更、部署和 accepted/integrated/production_ready 均未授权 |
 | loop.next_target | 回到真实 source-of-record / 等效正式确认补证入口；只有真实 source-of-record 或等效正式确认文件到达、通过人工业务核验、REAL-003 真实生成运行层主键、REAL-004 创建真实 review queue item、REAL-005 创建真实 runtime intake item、REAL-006 取得真实 WAES review result 且 REAL-007 形成 verified artifact 后，才可评估跨项目真实最小闭环。 |
@@ -36,6 +36,8 @@ superseded_by: []
 
 | 轮次 | Round ID | 日期 | 输入摘要 | 输出摘要 | 门禁 | 证据完整率 | 备注 |
 |---|---|---|---|---|---|---|---|
+| 370 | GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001 | 2026-06-19 | GFIS 已建立 TEST-SCENARIO-001 12 阶段测试数据场景覆盖与变异防污染门禁；需要同步 GPCF 总控与 validators | GPCF 控制板、loop-state、evidence-index、状态矩阵和 validators 回写 `test_data_scenario_coverage=pass`、`test_data_mutation_guard=pass`、`positive_scenario_count=12`、`boundary_scenario_count=6`、`mutation_attempt_count=8`、`rejected_mutation_count=8`、`accepted_mutation_count=0`，真实业务计数全部保持 0；XiaoG L4 外部 evidence 缺口已在当前真实 XiaoG 仓修复并通过项目 validator；GPCF self-correction gate 仍为 blocked；项目群评分仍为 78/100 repair | partial | 99% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=completed_with_gfis_real_lane_blocked；不使用真实业务数据，不恢复 100/100，不升级 accepted/integrated/production_ready |
+| 369 | GPCF-L4-GFIS-TEST-REPLAY-SYNC-001 | 2026-06-19 | GFIS 已建立 TEST-REPLAY-001 12 阶段测试数据 runtime replay harness 与 runtime object contract；需要同步 GPCF 总控与 validators | GPCF 控制板、loop-state、evidence-index、状态矩阵和 validators 回写 `test_data_12_stage_replay_harness=pass`、`test_data_runtime_object_contract=pass`、`replay_stage_count=12`、`runtime_object_count=15`、`replay_transition_count=11`，真实业务计数全部保持 0；项目群评分仍为 repair | partial | 99% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=completed；不使用真实业务数据，不恢复 100/100，不升级 accepted/integrated/production_ready |
 | 368 | GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001 | 2026-06-19 | GFIS 已建立 TEST-12STAGE-NEGATIVE-001 12 阶段测试数据负例阻断门禁；需要同步 GPCF 总控与 validators | GPCF 控制板、loop-state、evidence-index、状态矩阵和 validators 回写 `test_data_12_stage_negative_transition_guard=pass`、`negative_attempt_count=10`、`rejected_attempt_count=10`、`accepted_attempt_count=0`，真实业务计数全部保持 0；项目群评分仍为 repair | partial | 99% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=completed；不使用真实业务数据，不恢复 100/100，不升级 accepted/integrated/production_ready |
 | 367 | GPCF-L4-GFIS-TEST-12STAGE-TRANSITION-SYNC-001 | 2026-06-19 | GFIS 已建立 TEST-12STAGE-TRANSITION-001 12 阶段测试数据流转门禁；需要同步 GPCF 总控与 validators | GPCF 控制板、loop-state、evidence-index、状态矩阵和 validators 回写 `test_data_12_stage_transition_gate=pass`、`test_stage_count=12`、`transition_count=11`、`boundary_count=12`、`manual_gate_count=2`，真实业务计数全部保持 0；项目群评分仍为 repair | partial | 99% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=completed；不使用真实业务数据，不恢复 100/100，不升级 accepted/integrated/production_ready |
 | 366 | GPCF-L4-GFIS-TEST-12STAGE-SYNC-001 | 2026-06-19 | GFIS 已建立 TEST-12STAGE-001 12 阶段测试数据 SOP E2E 链路；需要同步 GPCF 总控与 validators | GPCF 控制板、loop-state、evidence-index、状态矩阵和 validators 回写 `test_data_12_stage_sop_e2e=pass`、12 阶段测试链路均为 12，真实业务计数全部保持 0；项目群评分仍为 repair | partial | 99% | declared_rounds=1/15；substantive_rounds=1/15；generated_items=6；batch_generated=false；substance_gate=pass；stop_type=completed；不使用真实业务数据，不恢复 100/100，不升级 accepted/integrated/production_ready |

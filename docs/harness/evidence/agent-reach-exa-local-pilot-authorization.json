@@ -1,0 +1,19 @@
+{
+  "authorized_mode": "agent-reach-exa-local-pilot",
+  "authorized_scope": "local_tmp_or_user_tooling",
+  "authorized_projects": ["GPCF", "KDS", "Brain", "PKC", "XiaoC", "XGD", "WAES"],
+  "allow_network_download": true,
+  "allow_npm_package_install": true,
+  "allow_global_npm_install": false,
+  "allow_project_dependency_change": false,
+  "allow_mcp_configuration_change": true,
+  "allow_exa_mcp_registration": true,
+  "allow_cookie_or_login_state": false,
+  "allow_production_write": false,
+  "allow_kds_canonical_write": false,
+  "rollback_required": true,
+  "rollback_deadline_minutes": 30,
+  "acceptance_required": true,
+  "authorization_owner": "lujunxiang",
+  "authorization_note": "User explicitly authorized these fields in chat: 按上述字段授权继续."
+}

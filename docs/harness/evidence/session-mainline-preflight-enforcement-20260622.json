@@ -1,0 +1,55 @@
+{
+  "evidence_id": "SESSION-MAINLINE-PREFLIGHT-ENFORCEMENT-20260622",
+  "scope": "GPCF-SESSION-MAINLINE-PREFLIGHT-ENFORCEMENT-002",
+  "status": "preflight_enforced",
+  "input_request": "下一步",
+  "matched_session_mainline": "LOOP治理主线: session-mainline-control rollout",
+  "registry": "02-governance/loop/LOOP_SESSION_REGISTRY.md",
+  "current_declaration": "docs/harness/evidence/current-session-mainline-declaration-20260622.json",
+  "preflight_decision": "continue_current_mainline_only",
+  "checks": {
+    "registry_present": true,
+    "current_declaration_present": true,
+    "request_matches_current_mainline": true,
+    "other_session_takeover_requested": false,
+    "cross_repo_execution_requested": false,
+    "external_api_requested": false,
+    "real_kds_api_write_requested": false,
+    "commit_requested": false,
+    "push_requested": false,
+    "deploy_requested": false,
+    "status_promotion_requested": false,
+    "handoff_required": false,
+    "mainline_drift_detected": false,
+    "authorization_required": false
+  },
+  "allowed_action": "repo_recorded_session_registry_preflight_only",
+  "forbidden_actions": [
+    "take over live Codex threads",
+    "execute another session task",
+    "cross repo execution",
+    "external API write",
+    "real KDS API write",
+    "schema sync",
+    "bench migrate",
+    "commit",
+    "push",
+    "deploy",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ],
+  "session_family_gate": {
+    "repo_recorded_loop_rounds": 884,
+    "orphan_session_family": 0,
+    "live_codex_threads_covered": false,
+    "auto_takeover_allowed": false,
+    "write_without_handoff_allowed": false
+  },
+  "next_round": "GPCF-SESSION-MAINLINE-DRIFT-WATCH-003",
+  "validators": [
+    "python3 tools/kds-sync/validate_session_mainline_preflight_enforcement.py",
+    "python3 tools/kds-sync/validate_loop_session_registry.py",
+    "python3 tools/kds-sync/validate_loop_session_mainline_control.py"
+  ]
+}

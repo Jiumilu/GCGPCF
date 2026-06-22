@@ -1,0 +1,160 @@
+policy_id: okf.gfis_assistant_approval_route_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: '2026-06-20'
+purpose: Define local no-write digest delivery acknowledgement escalation SLA breach
+  review previews derived from DKS-172 SLA previews. These previews show candidate
+  breach severity, reviewers, evidence gaps, blocked review count, boundary references,
+  and next-step suggestions only. They do not create breach records, disputes, committee
+  cases, freeze requests, reminders, approval requests, approval decisions, governance
+  records, lifecycle changes, business writes, settlements, or external API calls.
+required_fields:
+- breach_review_preview_id
+- sla_preview_refs
+- escalation_preview_refs
+- delivery_acknowledgement_preview_refs
+- delivery_preview_refs
+- digest_preview_refs
+- tenant_id
+- project_id
+- surface
+- breach_review_type
+- breach_review_status
+- breach_review_decision
+- breach_review_scope
+- breach_severity
+- overdue_minutes
+- candidate_reviewer_refs
+- evidence_gap_refs
+- breach_reason_refs
+- blocked_review_count
+- boundary_refs
+- source_sla_preview_refs
+- breach_summary_ref
+- lineage_hint_refs
+- reason_refs
+- breach_note_refs
+- next_step_candidate_refs
+- blocked_actions
+- creates_breach_record
+- creates_dispute
+- creates_committee_case
+- creates_freeze_request
+- creates_reminder
+- creates_approval_request
+- creates_approval_decision
+- creates_harness_evidence
+- creates_waes_gate_result
+- creates_kwe_work_item
+- persists_evidence
+- approves_business_write
+- promotes_lifecycle
+- completes_committee_decision
+- no_write
+breach_review_types:
+- team_digest_delivery_ack_escalation_sla_breach_review_preview
+- project_digest_delivery_ack_escalation_sla_breach_review_preview
+- governance_digest_delivery_ack_escalation_sla_breach_review_preview
+- external_blocked_digest_delivery_ack_escalation_sla_breach_review_preview
+- committee_digest_delivery_ack_escalation_sla_breach_review_preview
+- freeze_digest_delivery_ack_escalation_sla_breach_review_preview
+breach_review_statuses:
+- breach_review_preview_only
+- breach_review_evidence_gap
+- breach_review_metadata_boundary
+- breach_review_external_blocked
+- breach_review_committee_required
+- breach_review_freeze_required
+breach_review_decisions:
+- show_team_digest_delivery_ack_escalation_sla_breach_review_preview
+- show_project_digest_delivery_ack_escalation_sla_breach_review_preview
+- show_governance_digest_delivery_ack_escalation_sla_breach_review_preview
+- show_external_blocked_digest_delivery_ack_escalation_sla_breach_review_preview
+- show_committee_digest_delivery_ack_escalation_sla_breach_review_preview
+- show_freeze_digest_delivery_ack_escalation_sla_breach_review_preview
+breach_review_scopes:
+- team_internal
+- project_internal
+- governance_review
+- external_blocked
+- committee_review
+- freeze_review
+breach_severities:
+- low_candidate
+- medium_candidate
+- high_candidate
+- metadata_only_candidate
+- external_blocked_candidate
+- committee_required_candidate
+- freeze_required_candidate
+breach_reasons:
+- overdue_ack_candidate
+- missing_delivery_ack_candidate
+- missing_evidence_candidate
+- metadata_boundary_candidate
+- external_share_blocked_candidate
+- committee_review_candidate
+- freeze_review_candidate
+blocked_actions:
+- create_breach_record
+- create_dispute
+- create_committee_case
+- create_freeze_request
+- create_reminder
+- create_approval_request
+- create_approval_decision
+- create_harness_evidence
+- create_waes_gate_result
+- create_kwe_work_item
+- persist_evidence
+- approve_business_write
+- promote_lifecycle
+- complete_committee_decision
+hard_boundaries:
+  breach_review_preview_only: true
+  breach_review_is_not_breach_record: true
+  breach_review_is_not_dispute: true
+  breach_review_is_not_committee_case: true
+  breach_review_is_not_freeze_request: true
+  breach_review_is_not_reminder: true
+  breach_review_is_not_approval_request: true
+  breach_review_is_not_approval_decision: true
+  breach_review_is_not_harness_evidence: true
+  breach_review_is_not_waes_result: true
+  breach_review_is_not_kwe_work_item: true
+  breach_review_is_not_lifecycle_change: true
+  breach_review_is_not_business_writeback: true
+  creates_breach_record_must_be_false: true
+  creates_dispute_must_be_false: true
+  creates_committee_case_must_be_false: true
+  creates_freeze_request_must_be_false: true
+  creates_reminder_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_breach_record: 0
+  writes_dispute: 0
+  writes_committee_case: 0
+  writes_freeze_request: 0
+  writes_reminder: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

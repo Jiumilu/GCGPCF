@@ -1,0 +1,171 @@
+package: globalcloud-loop-headroom-adapter
+status: controlled
+version: v1.0
+owner: GPCF
+date: 2026-06-21
+telemetry_default: off
+production_admission_gate: false
+measured_production_tokens: false
+accepted: false
+integrated: false
+production_ready: false
+global_allowed_modes:
+  - proxy_dry_run
+  - sdk_dry_run
+  - mcp_compress
+  - mcp_stats
+  - agent_wrap_dry_run
+global_blocked_modes:
+  - production_proxy
+  - production_sdk
+  - mcp_retrieve_without_waes_gate
+  - cross_project_memory_as_fact
+  - learn_apply_auto
+  - output_shaper_acceptance
+  - production_external_write
+route_required_fields:
+  - project_id
+  - source_path
+  - allowed_modes
+  - blocked_modes
+  - requires_authorization
+  - cost_fields
+  - sensitive_boundaries
+  - owner
+  - current_gate
+project_routes:
+  - project_id: GPCF
+    source_path: 02-governance/loop/LOOP_CONTROL_BOARD.md
+    owner: GPCF
+    allowed_modes: [proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [loop_gate_tokens_before, loop_gate_tokens_after, governance_log_tokens_before, governance_log_tokens_after]
+    sensitive_boundaries: [kds_token, authorization_header, governance_source_of_record]
+    current_gate: dry_run_only
+  - project_id: KDS
+    source_path: docs/harness/KDS/loop-state.md
+    owner: KDS
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [rag_chunk_tokens_before, rag_chunk_tokens_after, metadata_tokens_before, metadata_tokens_after]
+    sensitive_boundaries: [kds_token, controlled_original, private_space_content]
+    current_gate: dry_run_only
+  - project_id: Brain
+    source_path: 09-status/gpcf-project-status-matrix.md
+    owner: Brain
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [retrieval_context_tokens_before, retrieval_context_tokens_after, citation_context_tokens_before, citation_context_tokens_after]
+    sensitive_boundaries: [citation_marker, source_path, doc_id, private_knowledge_chunk]
+    current_gate: dry_run_only
+  - project_id: WAES
+    source_path: 09-status/gpcf-project-status-matrix.md
+    owner: WAES
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [audit_context_tokens_before, audit_context_tokens_after, gate_trace_tokens_before, gate_trace_tokens_after]
+    sensitive_boundaries: [waes_decision, policy_rule, risk_verdict]
+    current_gate: dry_run_only
+  - project_id: GFIS
+    source_path: 08-evidence-samples/GFIS/loop-state.md
+    owner: GFIS
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [runtime_log_tokens_before, runtime_log_tokens_after, sop_gate_tokens_before, sop_gate_tokens_after]
+    sensitive_boundaries: [customer_order_original, contract, pod, factory_source_record, production_credential]
+    current_gate: dry_run_only
+  - project_id: GPC
+    source_path: 09-status/gpcf-project-status-matrix.md
+    owner: GPC
+    allowed_modes: [proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [workflow_trace_tokens_before, workflow_trace_tokens_after, public_service_trace_tokens_before, public_service_trace_tokens_after]
+    sensitive_boundaries: [order_fact, partner_private_data, approval_record]
+    current_gate: dry_run_only
+  - project_id: PVAOS
+    source_path: docs/harness/PVAOS/loop-state.md
+    owner: PVAOS
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [config_review_tokens_before, config_review_tokens_after, partner_config_tokens_before, partner_config_tokens_after]
+    sensitive_boundaries: [tenant_config, permission_config, partner_identity]
+    current_gate: dry_run_only
+  - project_id: Edge
+    source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md
+    owner: Edge
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [edge_log_tokens_before, edge_log_tokens_after, replay_trace_tokens_before, replay_trace_tokens_after]
+    sensitive_boundaries: [device_credential, production_receipt, edge_secret]
+    current_gate: dry_run_only
+  - project_id: PKC
+    source_path: docs/harness/PKC/loop-state.md
+    owner: PKC
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [personal_rag_tokens_before, personal_rag_tokens_after, workflow_output_tokens_before, workflow_output_tokens_after]
+    sensitive_boundaries: [personal_private_content, user_identity, cross_user_memory]
+    current_gate: dry_run_only
+  - project_id: XiaoC
+    source_path: docs/harness/XiaoC/loop-state.md
+    owner: XiaoC
+    allowed_modes: [proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [agent_tool_tokens_before, agent_tool_tokens_after, model_route_tokens_before, model_route_tokens_after]
+    sensitive_boundaries: [tool_permission, model_route_secret, agent_authorization]
+    current_gate: dry_run_only
+  - project_id: XGD
+    source_path: docs/harness/XGD/loop-state.md
+    owner: XGD
+    allowed_modes: [proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [risk_analysis_tokens_before, risk_analysis_tokens_after, long_task_trace_tokens_before, long_task_trace_tokens_after]
+    sensitive_boundaries: [risk_verdict, validation_result, multi_step_private_trace]
+    current_gate: dry_run_only
+  - project_id: XiaoG
+    source_path: docs/harness/XiaoG/loop-state.md
+    owner: XiaoG
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [readonly_query_tokens_before, readonly_query_tokens_after, audit_mock_tokens_before, audit_mock_tokens_after]
+    sensitive_boundaries: [device_ota, external_write, runtime_command]
+    current_gate: dry_run_only
+  - project_id: MMC
+    source_path: docs/harness/MMC/loop-state.md
+    owner: MMC
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [template_diff_tokens_before, template_diff_tokens_after, config_list_tokens_before, config_list_tokens_after]
+    sensitive_boundaries: [template_baseline, governance_template, config_secret]
+    current_gate: dry_run_only
+  - project_id: Studio
+    source_path: 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md
+    owner: Studio
+    allowed_modes: [proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [workflow_log_tokens_before, workflow_log_tokens_after, build_log_tokens_before, build_log_tokens_after]
+    sensitive_boundaries: [release_write_workflow, deployment_secret, build_token]
+    current_gate: dry_run_only
+  - project_id: WAS
+    source_path: docs/harness/evidence/was-project-group-admission-20260621.md
+    owner: WAS
+    allowed_modes: [sdk_dry_run, mcp_compress, mcp_stats]
+    blocked_modes: [production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write]
+    requires_authorization: true
+    cost_fields: [ontology_gate_tokens_before, ontology_gate_tokens_after, okf_validator_tokens_before, okf_validator_tokens_after]
+    sensitive_boundaries: [semantic_contract_source, okf_original, source_record_candidate]
+    current_gate: dry_run_only

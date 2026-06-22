@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-F3CC03DA11
-title: Loop Round — GPCF-L4-GFIS-REPAIR-225
+title: Loop Round — GPCF-L4-GFIS-REPAIR-225 负例 fixture 门禁
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round — GPCF-L4-GFIS-REPAIR-225
+# Loop Round — GPCF-L4-GFIS-REPAIR-225 负例 fixture 门禁
 
 ## 基本信息
 
@@ -72,8 +72,8 @@ review 或 verified artifact。
 
 ## 验证
 
-- GFIS pending business verification negative fixture guard builder：pass。
-- GFIS pending business verification negative fixture guard validator：pass。
+- GFIS pending business verification 负例 fixture guard builder：pass。
+- GFIS pending business verification 负例 fixture guard validator：pass。
 - GFIS runtime SOP E2E validator：expected exit 2；`runtime_sop_e2e=repair_required`。
 - GPCF control-plane status ceiling remains `partial_repair` with `accepted/integrated` forbidden.
 

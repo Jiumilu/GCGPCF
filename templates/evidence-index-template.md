@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-33F4C1195D
-title: Evidence Index — {项目名}
+title: 证据索引模板 — {项目名}
 project: GPCF
 related_projects: [GPC, WAES, GPCF]
 domain: templates
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/evidence-index-template.md
 source_path: templates/evidence-index-template.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Evidence Index — {项目名}
+# 证据索引模板 — {项目名}
 
 > 证据索引表。存放位置：项目仓 `docs/harness/evidence/evidence-index.md`。
 

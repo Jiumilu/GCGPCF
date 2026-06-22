@@ -1,0 +1,132 @@
+{
+  "evidence_id": "HEADROOM-CONTROLLED-METRIC-PILOT-20260621",
+  "date": "2026-06-21",
+  "status": "controlled_metric_output_pilot_applied",
+  "policy_source": "docs/harness/evidence/headroom-marker-preservation-policy-20260621.json",
+  "cost_measurement_output": "docs/harness/evidence/headroom-cost-measurement-output-20260621.json",
+  "marker_preserving_adapter_pilot": "docs/harness/evidence/headroom-marker-preserving-adapter-pilot-20260621.json",
+  "scenario_matrix": "docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.json",
+  "pilot_scope": "structured_metric_and_marker_preserving_adapter_outputs",
+  "project_count": 15,
+  "projects_covered": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "allowed_application_count": 2,
+  "rejected_application_count": 3,
+  "aggregate": {
+    "tokens_before": 2496,
+    "tokens_after": 907,
+    "tokens_saved": 1589,
+    "saving_rate": 0.636619,
+    "all_allowed_applications_applied": true,
+    "all_rejected_applications_blocked": true,
+    "all_marker_gates_pass": true
+  },
+  "applications": [
+    {
+      "application_id": "HEADROOM-PILOT-STRUCTURED-METRIC-OUTPUT-001",
+      "scenario_id": "headroom_cost_measurement_output",
+      "content_type": "structured_metric_tool_output",
+      "source_evidence": "docs/harness/evidence/headroom-cost-measurement-output-20260621.json",
+      "policy_decision": "allow",
+      "applied": true,
+      "saving_rate": 0.625378,
+      "tokens_before": 662,
+      "tokens_after": 248,
+      "tokens_saved": 414,
+      "marker_gate": true,
+      "output_gate": true,
+      "runtime_scope": "dry_run_controlled_pilot",
+      "raw_text_stored": false
+    },
+    {
+      "application_id": "HEADROOM-PILOT-MARKER-PRESERVING-ADAPTER-001",
+      "scenario_id": "marker_preserving_log_search_adapter_output",
+      "content_type": "marker_preserving_adapter_output",
+      "source_evidence": "docs/harness/evidence/headroom-marker-preserving-adapter-pilot-20260621.json",
+      "policy_decision": "allow",
+      "applied": true,
+      "saving_rate": 0.640676,
+      "tokens_before": 1834,
+      "tokens_after": 659,
+      "tokens_saved": 1175,
+      "marker_gate": true,
+      "output_gate": true,
+      "runtime_scope": "dry_run_controlled_pilot",
+      "raw_text_stored": false
+    }
+  ],
+  "rejections": [
+    {
+      "scenario_id": "loop_validation_log",
+      "content_type": "loop_log_output",
+      "policy_decision": "reject",
+      "applied": false,
+      "saving_rate": 0.870801,
+      "marker_gate": false,
+      "reason_codes": [
+        "marker_loss"
+      ],
+      "raw_text_stored": false
+    },
+    {
+      "scenario_id": "project_group_evidence_json",
+      "content_type": "json_tool_output",
+      "policy_decision": "reject",
+      "applied": false,
+      "saving_rate": 0.0,
+      "marker_gate": true,
+      "reason_codes": [
+        "below_saving_threshold",
+        "rejected_not_smaller"
+      ],
+      "raw_text_stored": false
+    },
+    {
+      "scenario_id": "rg_marker_search_output",
+      "content_type": "search_output",
+      "policy_decision": "reject",
+      "applied": false,
+      "saving_rate": 0.538702,
+      "marker_gate": false,
+      "reason_codes": [
+        "marker_loss"
+      ],
+      "raw_text_stored": false
+    }
+  ],
+  "decision": {
+    "controlled_metric_pilot_gate": true,
+    "next_allowed_action": "repeat_on_next_loop_cost_measurement_output",
+    "blocked_actions": [
+      "loop_validation_log",
+      "project_group_evidence_json",
+      "rg_marker_search_output"
+    ],
+    "production_admission_gate": false
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

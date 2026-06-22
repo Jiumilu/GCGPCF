@@ -1,0 +1,95 @@
+{
+  "contractId": "GCKF-P0-HARNESS-REVIEW-INPUT-PACKET-DRY-RUN-V0.1",
+  "description": "P0-D22 Harness review input packet dry-run assembled from D19 ledger, D20 readiness, and D21 human review checklist. This is an input packet only.",
+  "packetStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceChecklist": "fixtures/api/gckf-p0-human-review-checklist-dry-run-v0.1.json",
+  "sourceReadiness": "fixtures/api/gckf-p0-closure-readiness-dry-run-v0.1.json",
+  "sourceLedger": "fixtures/api/gckf-p0-acceptance-packet-ledger-dry-run-v0.1.json",
+  "reviewScope": {
+    "candidateEvidenceRoundCount": 11,
+    "reviewItemCount": 4,
+    "riskRefCount": 3,
+    "ledgerEntryCount": 10
+  },
+  "harnessInputs": [
+    {
+      "id": "GCKF-P0-HI-001",
+      "fromReviewItem": "GCKF-P0-HR-001",
+      "reviewQuestion": "D9-D19 candidate evidence sufficiency",
+      "requiredHarnessDecision": "approve_for_formal_evidence_review_or_request_repair",
+      "allowedOutcomes": ["approved_for_harness_review", "repair_required", "rejected"],
+      "defaultOutcome": "pending"
+    },
+    {
+      "id": "GCKF-P0-HI-002",
+      "fromReviewItem": "GCKF-P0-HR-002",
+      "reviewQuestion": "formal Harness evidence write or reject",
+      "requiredHarnessDecision": "write_or_reject_formal_harness_evidence",
+      "allowedOutcomes": ["harness_evidence_written", "harness_rejected", "repair_required"],
+      "defaultOutcome": "pending"
+    },
+    {
+      "id": "GCKF-P0-HI-003",
+      "fromReviewItem": "GCKF-P0-HR-003",
+      "reviewQuestion": "no accepted or integrated lifecycle promotion",
+      "requiredHarnessDecision": "confirm_no_lifecycle_promotion",
+      "allowedOutcomes": ["no_promotion_confirmed", "violation_found"],
+      "defaultOutcome": "pending"
+    },
+    {
+      "id": "GCKF-P0-HI-004",
+      "fromReviewItem": "GCKF-P0-HR-004",
+      "reviewQuestion": "production runtime and business writeback out of scope",
+      "requiredHarnessDecision": "confirm_runtime_and_writeback_out_of_scope",
+      "allowedOutcomes": ["out_of_scope_confirmed", "scope_violation_found"],
+      "defaultOutcome": "pending"
+    }
+  ],
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-human-review-checklist-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_human_review_checklist_dry_run.py",
+    "docs/gc-knowledge-fabric/human-review-checklist-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md",
+    "fixtures/api/gckf-p0-closure-readiness-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_closure_readiness_dry_run.py",
+    "docs/gc-knowledge-fabric/closure-readiness-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md",
+    "fixtures/api/gckf-p0-acceptance-packet-ledger-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_acceptance_packet_ledger_dry_run.py",
+    "docs/gc-knowledge-fabric/acceptance-packet-ledger-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md"
+  ],
+  "riskRefs": [
+    "GCKF-P0-RISK-HARNESS-NOT-WRITTEN",
+    "GCKF-P0-RISK-HUMAN-REVIEW-PENDING",
+    "GCKF-P0-RISK-RUNTIME-NOT-LIVE"
+  ],
+  "forbiddenOutputs": [
+    "accepted",
+    "integrated",
+    "production_ready",
+    "harness_evidence_written_without_review",
+    "business_write_enabled"
+  ],
+  "expectedSummary": {
+    "packetStatus": "candidate",
+    "harnessInputCount": 4,
+    "requiredSourceRefCount": 12,
+    "reviewItemCount": 4,
+    "riskRefCount": 3,
+    "ledgerEntryCount": 10,
+    "notFinalAcceptance": true,
+    "sourceChecklistStatus": "candidate",
+    "sourceReadinessStatus": "review_ready_candidate",
+    "sourceLedgerStatus": "candidate",
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

@@ -1,0 +1,54 @@
+policy_id: okf.sensitive_metadata_storage_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+sensitive_classes:
+  - contract_sensitive_terms
+  - finance_voucher
+  - pod_original
+  - quality_dispute
+  - customer_supplier_identity
+  - credential_or_token
+  - unpublished_policy_interpretation
+  - commercial_quote_or_commission
+storage_modes:
+  - metadata_only
+  - redacted_copy
+  - controlled_original
+  - blocked
+minimum_metadata_fields:
+  - object_id
+  - tenant_id
+  - sensitive_class
+  - storage_mode
+  - source_ref
+  - evidence_ref
+  - hash_or_original_pointer
+  - controlled_original_ref
+  - acl_ref
+  - citation_scope
+  - rag_admission
+  - sensitive_data_gate_result
+  - summary
+  - raw_content_stored
+controlled_original_pointer_rules:
+  no_secret_values: true
+  authorized_controlled_space_only: true
+  hash_or_irreversible_digest_required: true
+  acl_required: true
+  citation_scope_required: true
+  evidence_ref_required: true
+  gate_result_required: true
+hard_boundaries:
+  metadata_only_raw_content_allowed: false
+  controlled_original_raw_content_allowed_in_kds: false
+  credential_or_token_default_blocked_or_metadata_only: true
+  default_rag_admission_for_sensitive: sensitive_metadata_only
+  external_share_requires_redaction_acl_and_gate: true
+  raw_original_stays_in_controlled_space: true
+no_write_assertions:
+  writes_raw_content_to_kds: 0
+  writes_secret_to_docs: 0
+  writes_secret_to_evidence: 0
+  writes_external_api: 0

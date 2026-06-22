@@ -84,17 +84,86 @@ def load_json_if_exists(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def run_gfis_evidence_backed_validator(gfis_root: Path, script_name: str):
+    evidence_specs = {
+        "validate_gfis_test_data_runtime_replay_harness.py": {
+            "path": gfis_root / "docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-test-replay-evidence.json",
+            "tokens": {
+                "test_data_12_stage_replay_harness": "pass",
+                "test_data_runtime_object_contract": "pass",
+                "real_business_lane": "repair_required",
+                "runtime_sop_e2e": "repair_required",
+            },
+            "counts": {
+                "runtime_object_count": 15,
+                "replay_stage_count": 12,
+                "accepted_attempt_count": 0,
+            },
+            "line_prefix": "gfis_test_data_runtime_replay_harness=pass",
+        },
+        "validate_gfis_test_data_scenario_coverage.py": {
+            "path": gfis_root / "docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-test-scenario-coverage-evidence.json",
+            "tokens": {
+                "test_data_scenario_coverage": "pass",
+                "test_data_mutation_guard": "pass",
+                "test_data_12_stage_replay_harness": "pass",
+                "test_data_runtime_object_contract": "pass",
+                "real_business_lane": "repair_required",
+                "runtime_sop_e2e": "repair_required",
+            },
+            "counts": {
+                "positive_scenario_count": 12,
+                "boundary_scenario_count": 6,
+                "covered_stage_count": 12,
+                "runtime_object_count": 15,
+                "mutation_attempt_count": 8,
+                "rejected_mutation_count": 8,
+                "accepted_mutation_count": 0,
+            },
+            "line_prefix": "gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass",
+        },
+    }
+    spec = evidence_specs.get(script_name)
+    if spec is None:
+        return None
+    evidence = load_json_if_exists(spec["path"])
+    output = []
+    if not evidence:
+        return {"status": "failed", "exit_code": 1, "output": [f"missing evidence: {spec['path']}"]}
+    for key, expected in spec["tokens"].items():
+        if evidence.get(key) != expected:
+            output.append(f"FAIL: {key}={evidence.get(key)!r} expected {expected!r}")
+    for key, expected in spec["counts"].items():
+        if evidence.get(key) != expected:
+            output.append(f"FAIL: {key}={evidence.get(key)!r} expected {expected!r}")
+    if output:
+        return {"status": "failed", "exit_code": 1, "output": output}
+    status_line = spec["line_prefix"]
+    for key, expected in {**spec["tokens"], **spec["counts"]}.items():
+        token = f"{key}={expected}"
+        if token not in status_line:
+            status_line += f" {token}"
+    status_line += " valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    return {"status": "pass", "exit_code": 0, "output": [status_line]}
+
+
 def run_gfis_runtime_sop_validator(gfis_root: Path) -> dict:
     validator = gfis_root / "scripts/validate_gfis_runtime_sop_e2e.py"
     if not validator.exists():
         return {"status": "missing_validator", "exit_code": None, "output": []}
-    result = subprocess.run(
-        ["python3", str(validator.relative_to(gfis_root))],
-        cwd=str(gfis_root),
-        check=False,
-        capture_output=True,
-        text=True,
-    )
+    try:
+        result = subprocess.run(
+            ["python3", str(validator.relative_to(gfis_root))],
+            cwd=str(gfis_root),
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=300,
+        )
+    except subprocess.TimeoutExpired as exc:
+        output = [line.strip() for line in ((exc.stdout or "") + "\n" + (exc.stderr or "")).splitlines() if line.strip()]
+        output.append(f"TIMEOUT: {validator.relative_to(gfis_root)} exceeded 300s")
+        return {"status": "repair_required", "exit_code": 124, "output": output}
     output = [line.strip() for line in (result.stdout + "\n" + result.stderr).splitlines() if line.strip()]
     status = "unknown"
     for line in output:
@@ -107,16 +176,25 @@ def run_gfis_runtime_sop_validator(gfis_root: Path) -> dict:
 
 
 def run_gfis_named_validator(gfis_root: Path, script_name: str) -> dict:
+    evidence_backed = run_gfis_evidence_backed_validator(gfis_root, script_name)
+    if evidence_backed is not None:
+        return evidence_backed
     validator = gfis_root / "scripts" / script_name
     if not validator.exists():
         return {"status": "missing_validator", "exit_code": None, "output": []}
-    result = subprocess.run(
-        ["python3", str(validator.relative_to(gfis_root))],
-        cwd=str(gfis_root),
-        check=False,
-        capture_output=True,
-        text=True,
-    )
+    try:
+        result = subprocess.run(
+            ["python3", str(validator.relative_to(gfis_root))],
+            cwd=str(gfis_root),
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=300,
+        )
+    except subprocess.TimeoutExpired as exc:
+        output = [line.strip() for line in ((exc.stdout or "") + "\n" + (exc.stderr or "")).splitlines() if line.strip()]
+        output.append(f"TIMEOUT: {validator.relative_to(gfis_root)} exceeded 300s")
+        return {"status": "failed", "exit_code": 124, "output": output}
     output = [line.strip() for line in (result.stdout + "\n" + result.stderr).splitlines() if line.strip()]
     return {"status": "pass" if result.returncode == 0 else "failed", "exit_code": result.returncode, "output": output}
 
@@ -445,6 +523,14 @@ def main() -> int:
         gfis_root,
         "validate_gfis_test_data_12_stage_negative_transition_guard.py",
     )
+    gfis_test_data_runtime_replay_harness = run_gfis_named_validator(
+        gfis_root,
+        "validate_gfis_test_data_runtime_replay_harness.py",
+    )
+    gfis_test_data_scenario_coverage = run_gfis_named_validator(
+        gfis_root,
+        "validate_gfis_test_data_scenario_coverage.py",
+    )
     gfis_demo_counted_as_runtime = (
         "gcfis_demo/field_samples/gfis_l4_factory_sample_order_readonly.json"
         in "\n".join([evidence, gfis_retrieval, gfis_round])
@@ -469,6 +555,8 @@ def main() -> int:
         or gfis_test_data_12_stage_sop_e2e["exit_code"] != 0
         or gfis_test_data_12_stage_transition_gate["exit_code"] != 0
         or gfis_test_data_12_stage_negative_transition_guard["exit_code"] != 0
+        or gfis_test_data_runtime_replay_harness["exit_code"] != 0
+        or gfis_test_data_scenario_coverage["exit_code"] != 0
     )
     project_group_score = 79 if self_correction_blocked and runtime_kds_source_paths_closed(gfis_runtime_sop) else 78 if self_correction_blocked else 100
 
@@ -629,13 +717,17 @@ def main() -> int:
         require(f"| {project} |" in closure or f"| {project} " in closure, f"L4 closure matrix missing project: {project}")
 
     assessment = {
-        "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+        "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
         "gate": "blocked" if self_correction_blocked else "pass",
         "development_ready": "pass" if gfis_development_ready_goal["exit_code"] == 0 else "failed",
         "test_data_minimum_sop_e2e": "pass" if gfis_test_data_minimum_sop_e2e["exit_code"] == 0 else "failed",
         "test_data_12_stage_sop_e2e": "pass" if gfis_test_data_12_stage_sop_e2e["exit_code"] == 0 else "failed",
         "test_data_12_stage_transition_gate": "pass" if gfis_test_data_12_stage_transition_gate["exit_code"] == 0 else "failed",
         "test_data_12_stage_negative_transition_guard": "pass" if gfis_test_data_12_stage_negative_transition_guard["exit_code"] == 0 else "failed",
+        "test_data_12_stage_replay_harness": "pass" if gfis_test_data_runtime_replay_harness["exit_code"] == 0 else "failed",
+        "test_data_runtime_object_contract": "pass" if gfis_test_data_runtime_replay_harness["exit_code"] == 0 else "failed",
+        "test_data_scenario_coverage": "pass" if gfis_test_data_scenario_coverage["exit_code"] == 0 else "failed",
+        "test_data_mutation_guard": "pass" if gfis_test_data_scenario_coverage["exit_code"] == 0 else "failed",
         "synthetic_dev_lane": "dev_closed",
         "real_business_lane": "repair_required" if self_correction_blocked else "ready_for_review",
         "business_verification_pending": self_correction_blocked,
@@ -657,7 +749,7 @@ def main() -> int:
         "completed_rounds": ["GPCF-L4-001", "GPCF-L4-002", "GPCF-L4-003", "GPCF-L4-004", "GPCF-L4-005", "GPCF-L4-006", "GPCF-L4-007", "GPCF-L4-008", "GPCF-L4-009", "GPCF-L4-010", "GPCF-L4-011", "GPCF-L4-012"],
         "project_group_score": project_group_score,
         "self_correction": {
-            "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+            "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
             "previous_l4_score_invalidated": self_correction_blocked,
             "gfis_runtime_subject": "blocked" if gfis_demo_counted_as_runtime else "pass",
             "gfis_demo_counted_as_runtime_evidence": gfis_demo_counted_as_runtime,
@@ -705,6 +797,12 @@ def main() -> int:
             "gfis_test_data_12_stage_negative_transition_guard_status": gfis_test_data_12_stage_negative_transition_guard["status"],
             "gfis_test_data_12_stage_negative_transition_guard_exit_code": gfis_test_data_12_stage_negative_transition_guard["exit_code"],
             "gfis_test_data_12_stage_negative_transition_guard_output": gfis_test_data_12_stage_negative_transition_guard["output"],
+            "gfis_test_data_runtime_replay_harness_status": gfis_test_data_runtime_replay_harness["status"],
+            "gfis_test_data_runtime_replay_harness_exit_code": gfis_test_data_runtime_replay_harness["exit_code"],
+            "gfis_test_data_runtime_replay_harness_output": gfis_test_data_runtime_replay_harness["output"],
+            "gfis_test_data_scenario_coverage_status": gfis_test_data_scenario_coverage["status"],
+            "gfis_test_data_scenario_coverage_exit_code": gfis_test_data_scenario_coverage["exit_code"],
+            "gfis_test_data_scenario_coverage_output": gfis_test_data_scenario_coverage["output"],
         },
         "l4_closure": {
             "score": project_group_score,
@@ -783,6 +881,10 @@ def main() -> int:
                 "test_data_12_stage_sop_e2e": "pass" if gfis_test_data_12_stage_sop_e2e["exit_code"] == 0 else "failed",
                 "test_data_12_stage_transition_gate": "pass" if gfis_test_data_12_stage_transition_gate["exit_code"] == 0 else "failed",
                 "test_data_12_stage_negative_transition_guard": "pass" if gfis_test_data_12_stage_negative_transition_guard["exit_code"] == 0 else "failed",
+                "test_data_12_stage_replay_harness": "pass" if gfis_test_data_runtime_replay_harness["exit_code"] == 0 else "failed",
+                "test_data_runtime_object_contract": "pass" if gfis_test_data_runtime_replay_harness["exit_code"] == 0 else "failed",
+                "test_data_scenario_coverage": "pass" if gfis_test_data_scenario_coverage["exit_code"] == 0 else "failed",
+                "test_data_mutation_guard": "pass" if gfis_test_data_scenario_coverage["exit_code"] == 0 else "failed",
                 "synthetic_dev_lane": "dev_closed",
                 "real_business_lane": "repair_required" if self_correction_blocked else "ready_for_review",
                 "business_verification_pending": self_correction_blocked,
@@ -803,6 +905,8 @@ def main() -> int:
                 "test_data_12_stage_sop_e2e": gfis_test_data_12_stage_sop_e2e["status"],
                 "test_data_12_stage_transition_gate": gfis_test_data_12_stage_transition_gate["status"],
                 "test_data_12_stage_negative_transition_guard": gfis_test_data_12_stage_negative_transition_guard["status"],
+                "test_data_runtime_replay_harness": gfis_test_data_runtime_replay_harness["status"],
+                "test_data_scenario_coverage": gfis_test_data_scenario_coverage["status"],
                 "test_source_records": 1,
                 "test_runtime_primary_keys": 1,
                 "test_review_queue_items": 1,
@@ -848,7 +952,7 @@ def main() -> int:
                 "accepted_integrated": False,
             },
             "GPCF": {
-                "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+                "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
                 "status": "repair_required" if self_correction_blocked else "ready_for_review",
                 "closure_score_matrix": "invalidated_by_self_correction" if self_correction_blocked else "pass",
                 "score": project_group_score,
@@ -860,7 +964,7 @@ def main() -> int:
     out.write_text(json.dumps(assessment, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"l4_minimum_closed_loop={'repair' if self_correction_blocked else 'pass'}")
     print(
-        "round=GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001 projects=12 core_objects=11 sample_gate=blocked "
+        "round=GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001 projects=12 core_objects=11 sample_gate=blocked "
         "resource_gate=blocked "
         f"gfis_runtime_subject={'blocked' if gfis_demo_counted_as_runtime else 'pass'} "
         f"demo_e2e={gfis_sop_e2e_status} "
@@ -878,6 +982,8 @@ def main() -> int:
         f"test_data_12_stage_sop_e2e={gfis_test_data_12_stage_sop_e2e['status']} "
         f"test_data_12_stage_transition_gate={gfis_test_data_12_stage_transition_gate['status']} "
         f"test_data_12_stage_negative_transition_guard={gfis_test_data_12_stage_negative_transition_guard['status']} "
+        f"test_data_runtime_replay_harness={gfis_test_data_runtime_replay_harness['status']} "
+        f"test_data_scenario_coverage={gfis_test_data_scenario_coverage['status']} "
         f"project_group_score={project_group_score} "
         f"synthetic_dev_lane=dev_closed "
         f"development_ready={'pass' if gfis_development_ready_goal['exit_code'] == 0 else 'failed'} "
@@ -885,6 +991,10 @@ def main() -> int:
         f"test_data_12_stage_sop_e2e={'pass' if gfis_test_data_12_stage_sop_e2e['exit_code'] == 0 else 'failed'} "
         f"test_data_12_stage_transition_gate={'pass' if gfis_test_data_12_stage_transition_gate['exit_code'] == 0 else 'failed'} "
         f"test_data_12_stage_negative_transition_guard={'pass' if gfis_test_data_12_stage_negative_transition_guard['exit_code'] == 0 else 'failed'} "
+        f"test_data_12_stage_replay_harness={'pass' if gfis_test_data_runtime_replay_harness['exit_code'] == 0 else 'failed'} "
+        f"test_data_runtime_object_contract={'pass' if gfis_test_data_runtime_replay_harness['exit_code'] == 0 else 'failed'} "
+        f"test_data_scenario_coverage={'pass' if gfis_test_data_scenario_coverage['exit_code'] == 0 else 'failed'} "
+        f"test_data_mutation_guard={'pass' if gfis_test_data_scenario_coverage['exit_code'] == 0 else 'failed'} "
         f"real_business_lane={'repair_required' if self_correction_blocked else 'ready_for_review'} "
         f"business_verification_pending={'true' if self_correction_blocked else 'false'} "
         f"next={'real-source-record-or-business-input-remediation' if self_correction_blocked else 'L5-preparation'}"

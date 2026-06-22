@@ -1,0 +1,40 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-TASKS-REPAIR-D118-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "openspec/changes/kds-production-hardening/tasks.md",
+  "action": "repair_tasks_localization_debt",
+  "before": {
+    "all_repo_findings": 14,
+    "target_file_findings": 3
+  },
+  "after": {
+    "all_repo_findings": 11,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -3,
+    "target_file_findings": -3
+  },
+  "changed_files": [
+    "openspec/changes/kds-production-hardening/tasks.md"
+  ],
+  "changed_line_items": 100,
+  "remaining_target_findings": [],
+  "scope_note": "本轮对单个 OpenSpec 任务清单做整页中文化，以清除 doc_english_heavy 与前两条显性英文行命中；保留文件路径、测试文件名和技术标识。",
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_tasks_repair_d118.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

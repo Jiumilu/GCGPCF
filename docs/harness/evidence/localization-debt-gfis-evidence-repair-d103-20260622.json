@@ -1,0 +1,46 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GFIS-EVIDENCE-REPAIR-D103-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/evidence/gfis-*-20260617.md plus document-control exposed loop boundary lines",
+  "action": "repair_gfis_evidence_and_exposed_boundary_localization_debt",
+  "before": {
+    "all_repo_findings": 165,
+    "target_file_findings": 2,
+    "document_control_exposed_findings": 3
+  },
+  "after": {
+    "all_repo_findings": 164,
+    "target_file_findings": 0,
+    "document_control_exposed_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -1,
+    "target_file_findings": -2,
+    "document_control_exposed_findings": -3
+  },
+  "changed_files": [
+    "docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md",
+    "docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md",
+    "02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md",
+    "docs/harness/evidence/loop-governance-current-window-disposition-20260619.md",
+    "docs/harness/evidence/loop-governance-current-window-review-20260619.md"
+  ],
+  "changed_line_items": 36,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_gfis_evidence_repair_d103.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "deliveryPreviews": [
+    {
+      "deliveryPreviewId": "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-delivery-team-brain-001",
+      "digestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-team-brain-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-team-brain-001"
+      ],
+      "acknowledgementPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-team-brain-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-team-brain-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-queue-team-brain-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-approval-packet-team-brain-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-resolution-option-team-brain-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-team-brain-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "deliveryType": "team_escalation_digest_delivery_preview",
+      "deliveryStatus": "delivery_preview_only",
+      "deliveryDecision": "show_team_escalation_digest_delivery_preview",
+      "deliveryScope": "team_internal",
+      "candidateRecipientRefs": [
+        "digest-delivery-recipient-brain-operator-candidate"
+      ],
+      "candidateChannelRefs": [
+        "brain_digest_delivery_candidate"
+      ],
+      "blockedDeliveryCount": 0,
+      "boundaryRefs": [
+        "digest-delivery-boundary-digest_preview_only"
+      ],
+      "sourceDigestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-team-brain-001"
+      ],
+      "deliverySummaryRef": "summary-delivery-routing-notification-ack-escalation-digest-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-team-brain-001",
+      "lineageHintRefs": [
+        "lineage-dks-169-brain",
+        "lineage-dks-168-team-brain-001",
+        "lineage-dks-167-team-brain-001",
+        "lineage-dks-166-team-brain-001",
+        "lineage-dks-165-team-brain-001",
+        "lineage-dks-164-team-brain-001",
+        "lineage-dks-163-team-brain-001",
+        "lineage-dks-162-team-brain-001",
+        "lineage-dks-161-team-brain-001",
+        "lineage-dks-160-team-brain",
+        "lineage-dks-159-team-brain",
+        "lineage-dks-158-team-brain",
+        "lineage-dks-157-team-brain",
+        "lineage-dks-156-team-brain",
+        "lineage-dks-155-team-brain",
+        "lineage-dks-154-team-brain",
+        "lineage-dks-153-team-brain"
+      ],
+      "reasonRefs": [
+        "reason-team-routing-notification-ack-escalation-digest-ack-escalation-digest-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-digest-delivery-preview"
+      ],
+      "deliveryNoteRefs": [
+        "note-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery-preview-only"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-team-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery"
+      ],
+      "blockedActions": [
+        "create_digest_delivery",
+        "create_delivery",
+        "create_digest",
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsDigestDelivery": false,
+      "createsDelivery": false,
+      "createsDigest": false,
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesDigest": 0,
+        "writesDigestDelivery": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0,
+        "writesDelivery": 0
+      }
+    },
+    {
+      "deliveryPreviewId": "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-delivery-project-pkc-001",
+      "digestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-project-pkc-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-project-pkc-001"
+      ],
+      "acknowledgementPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-project-pkc-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-project-pkc-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-queue-project-pkc-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-approval-packet-project-pkc-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-resolution-option-project-pkc-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-project-pkc-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "pkc",
+      "deliveryType": "project_escalation_digest_delivery_preview",
+      "deliveryStatus": "delivery_evidence_required",
+      "deliveryDecision": "show_project_escalation_digest_delivery_preview",
+      "deliveryScope": "project_internal",
+      "candidateRecipientRefs": [
+        "digest-delivery-recipient-project-owner-candidate"
+      ],
+      "candidateChannelRefs": [
+        "pkc_digest_delivery_candidate"
+      ],
+      "blockedDeliveryCount": 0,
+      "boundaryRefs": [
+        "digest-delivery-boundary-digest_evidence_required"
+      ],
+      "sourceDigestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-project-pkc-001"
+      ],
+      "deliverySummaryRef": "summary-delivery-routing-notification-ack-escalation-digest-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-project-pkc-001",
+      "lineageHintRefs": [
+        "lineage-dks-169-pkc",
+        "lineage-dks-168-project-pkc-001",
+        "lineage-dks-167-project-pkc-001",
+        "lineage-dks-166-project-pkc-001",
+        "lineage-dks-165-project-pkc-001",
+        "lineage-dks-164-project-pkc-001",
+        "lineage-dks-163-project-pkc-001",
+        "lineage-dks-162-project-pkc-001",
+        "lineage-dks-161-project-pkc-001",
+        "lineage-dks-160-project-pkc",
+        "lineage-dks-159-project-pkc",
+        "lineage-dks-158-project-pkc",
+        "lineage-dks-157-project-pkc",
+        "lineage-dks-156-project-pkc",
+        "lineage-dks-155-project-pkc",
+        "lineage-dks-154-project-pkc",
+        "lineage-dks-153-project-pkc"
+      ],
+      "reasonRefs": [
+        "reason-project-routing-notification-ack-escalation-digest-ack-escalation-digest-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-digest-delivery-gap"
+      ],
+      "deliveryNoteRefs": [
+        "note-project-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-project-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery"
+      ],
+      "blockedActions": [
+        "create_digest_delivery",
+        "create_delivery",
+        "create_digest",
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsDigestDelivery": false,
+      "createsDelivery": false,
+      "createsDigest": false,
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesDigest": 0,
+        "writesDigestDelivery": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0,
+        "writesDelivery": 0
+      }
+    },
+    {
+      "deliveryPreviewId": "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-delivery-governance-gfis-001",
+      "digestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-governance-gfis-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-governance-gfis-001"
+      ],
+      "acknowledgementPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-governance-gfis-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-governance-gfis-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-queue-governance-gfis-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-approval-packet-governance-gfis-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-resolution-option-governance-gfis-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-governance-gfis-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "deliveryType": "governance_escalation_digest_delivery_preview",
+      "deliveryStatus": "delivery_metadata_boundary",
+      "deliveryDecision": "show_governance_escalation_digest_delivery_preview",
+      "deliveryScope": "governance_review",
+      "candidateRecipientRefs": [
+        "digest-delivery-recipient-gfis-governance-candidate"
+      ],
+      "candidateChannelRefs": [
+        "gfis_assistant_digest_delivery_candidate"
+      ],
+      "blockedDeliveryCount": 0,
+      "boundaryRefs": [
+        "digest-delivery-boundary-digest_metadata_boundary"
+      ],
+      "sourceDigestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-governance-gfis-001"
+      ],
+      "deliverySummaryRef": "summary-delivery-routing-notification-ack-escalation-digest-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-governance-gfis-001",
+      "lineageHintRefs": [
+        "lineage-dks-169-gfis",
+        "lineage-dks-168-governance-gfis-001",
+        "lineage-dks-167-governance-gfis-001",
+        "lineage-dks-166-governance-gfis-001",
+        "lineage-dks-165-governance-gfis-001",
+        "lineage-dks-164-governance-gfis-001",
+        "lineage-dks-163-governance-gfis-001",
+        "lineage-dks-162-governance-gfis-001",
+        "lineage-dks-161-governance-gfis-001",
+        "lineage-dks-160-governance-gfis",
+        "lineage-dks-159-governance-gfis",
+        "lineage-dks-158-governance-gfis",
+        "lineage-dks-157-governance-gfis",
+        "lineage-dks-156-governance-gfis",
+        "lineage-dks-155-governance-gfis",
+        "lineage-dks-154-governance-gfis",
+        "lineage-dks-153-governance-gfis"
+      ],
+      "reasonRefs": [
+        "reason-governance-routing-notification-ack-escalation-digest-ack-escalation-digest-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-digest-boundary"
+      ],
+      "deliveryNoteRefs": [
+        "note-governance-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery-no-evidence"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-governance-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery"
+      ],
+      "blockedActions": [
+        "create_digest_delivery",
+        "create_delivery",
+        "create_digest",
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsDigestDelivery": false,
+      "createsDelivery": false,
+      "createsDigest": false,
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesDigest": 0,
+        "writesDigestDelivery": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0,
+        "writesDelivery": 0
+      }
+    },
+    {
+      "deliveryPreviewId": "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-delivery-external-gfis-001",
+      "digestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-external-gfis-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-external-gfis-001"
+      ],
+      "acknowledgementPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-external-gfis-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-external-gfis-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-queue-external-gfis-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-approval-packet-external-gfis-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-resolution-option-external-gfis-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-external-gfis-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "deliveryType": "external_blocked_escalation_digest_delivery_preview",
+      "deliveryStatus": "delivery_external_blocked",
+      "deliveryDecision": "show_external_blocked_escalation_digest_delivery_preview",
+      "deliveryScope": "external_blocked",
+      "candidateRecipientRefs": [
+        "digest-delivery-recipient-gfis-governance-candidate"
+      ],
+      "candidateChannelRefs": [
+        "external_blocked_digest_delivery_candidate"
+      ],
+      "blockedDeliveryCount": 1,
+      "boundaryRefs": [
+        "digest-delivery-boundary-digest_external_blocked"
+      ],
+      "sourceDigestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-external-gfis-001"
+      ],
+      "deliverySummaryRef": "summary-delivery-routing-notification-ack-escalation-digest-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-external-gfis-001",
+      "lineageHintRefs": [
+        "lineage-dks-169-gfis",
+        "lineage-dks-168-external-gfis-001",
+        "lineage-dks-167-external-gfis-001",
+        "lineage-dks-166-external-gfis-001",
+        "lineage-dks-165-external-gfis-001",
+        "lineage-dks-164-external-gfis-001",
+        "lineage-dks-163-external-gfis-001",
+        "lineage-dks-162-external-gfis-001",
+        "lineage-dks-161-external-gfis-001",
+        "lineage-dks-160-external-gfis",
+        "lineage-dks-159-external-gfis",
+        "lineage-dks-158-external-gfis",
+        "lineage-dks-157-external-gfis",
+        "lineage-dks-156-external-gfis",
+        "lineage-dks-155-external-gfis",
+        "lineage-dks-154-external-gfis",
+        "lineage-dks-153-external-gfis"
+      ],
+      "reasonRefs": [
+        "reason-external-routing-notification-ack-escalation-digest-ack-escalation-digest-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-digest-blocked"
+      ],
+      "deliveryNoteRefs": [
+        "note-external-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery-blocked"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-external-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery"
+      ],
+      "blockedActions": [
+        "create_digest_delivery",
+        "create_delivery",
+        "create_digest",
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsDigestDelivery": false,
+      "createsDelivery": false,
+      "createsDigest": false,
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesDigest": 0,
+        "writesDigestDelivery": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0,
+        "writesDelivery": 0
+      }
+    },
+    {
+      "deliveryPreviewId": "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-delivery-committee-brain-001",
+      "digestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-committee-brain-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-committee-brain-001"
+      ],
+      "acknowledgementPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-committee-brain-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-committee-brain-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-queue-committee-brain-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-approval-packet-committee-brain-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-resolution-option-committee-brain-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-committee-brain-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "deliveryType": "committee_escalation_digest_delivery_preview",
+      "deliveryStatus": "delivery_committee_required",
+      "deliveryDecision": "show_committee_escalation_digest_delivery_preview",
+      "deliveryScope": "committee_review",
+      "candidateRecipientRefs": [
+        "digest-delivery-recipient-brain-operator-candidate"
+      ],
+      "candidateChannelRefs": [
+        "committee_digest_delivery_candidate"
+      ],
+      "blockedDeliveryCount": 1,
+      "boundaryRefs": [
+        "digest-delivery-boundary-digest_committee_required"
+      ],
+      "sourceDigestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-committee-brain-001"
+      ],
+      "deliverySummaryRef": "summary-delivery-routing-notification-ack-escalation-digest-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-committee-brain-001",
+      "lineageHintRefs": [
+        "lineage-dks-169-brain",
+        "lineage-dks-168-committee-brain-001",
+        "lineage-dks-167-committee-brain-001",
+        "lineage-dks-166-committee-brain-001",
+        "lineage-dks-165-committee-brain-001",
+        "lineage-dks-164-committee-brain-001",
+        "lineage-dks-163-committee-brain-001",
+        "lineage-dks-162-committee-brain-001",
+        "lineage-dks-161-committee-brain-001",
+        "lineage-dks-160-committee-brain",
+        "lineage-dks-159-committee-brain",
+        "lineage-dks-158-committee-brain",
+        "lineage-dks-157-committee-brain",
+        "lineage-dks-156-committee-brain",
+        "lineage-dks-155-committee-brain",
+        "lineage-dks-154-committee-brain",
+        "lineage-dks-153-committee-brain"
+      ],
+      "reasonRefs": [
+        "reason-committee-routing-notification-ack-escalation-digest-ack-escalation-digest-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-digest"
+      ],
+      "deliveryNoteRefs": [
+        "note-committee-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery-no-decision"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-committee-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery"
+      ],
+      "blockedActions": [
+        "create_digest_delivery",
+        "create_delivery",
+        "create_digest",
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsDigestDelivery": false,
+      "createsDelivery": false,
+      "createsDigest": false,
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesDigest": 0,
+        "writesDigestDelivery": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0,
+        "writesDelivery": 0
+      }
+    },
+    {
+      "deliveryPreviewId": "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-delivery-freeze-gfis-001",
+      "digestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-freeze-gfis-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-freeze-gfis-001"
+      ],
+      "acknowledgementPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-freeze-gfis-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-freeze-gfis-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-queue-freeze-gfis-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-approval-packet-freeze-gfis-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-resolution-option-freeze-gfis-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-freeze-gfis-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "deliveryType": "freeze_escalation_digest_delivery_preview",
+      "deliveryStatus": "delivery_freeze_required",
+      "deliveryDecision": "show_freeze_escalation_digest_delivery_preview",
+      "deliveryScope": "freeze_review",
+      "candidateRecipientRefs": [
+        "digest-delivery-recipient-gfis-governance-candidate"
+      ],
+      "candidateChannelRefs": [
+        "freeze_digest_delivery_candidate"
+      ],
+      "blockedDeliveryCount": 1,
+      "boundaryRefs": [
+        "digest-delivery-boundary-digest_freeze_required"
+      ],
+      "sourceDigestPreviewRefs": [
+        "gfis-approval-route-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-routing-notification-ack-escalation-digest-freeze-gfis-001"
+      ],
+      "deliverySummaryRef": "summary-delivery-routing-notification-ack-escalation-digest-routing-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-freeze-gfis-001",
+      "lineageHintRefs": [
+        "lineage-dks-169-gfis",
+        "lineage-dks-168-freeze-gfis-001",
+        "lineage-dks-167-freeze-gfis-001",
+        "lineage-dks-166-freeze-gfis-001",
+        "lineage-dks-165-freeze-gfis-001",
+        "lineage-dks-164-freeze-gfis-001",
+        "lineage-dks-163-freeze-gfis-001",
+        "lineage-dks-162-freeze-gfis-001",
+        "lineage-dks-161-freeze-gfis-001",
+        "lineage-dks-160-freeze-gfis",
+        "lineage-dks-159-freeze-gfis",
+        "lineage-dks-158-freeze-gfis",
+        "lineage-dks-157-freeze-gfis",
+        "lineage-dks-156-freeze-gfis",
+        "lineage-dks-155-freeze-gfis",
+        "lineage-dks-154-freeze-gfis",
+        "lineage-dks-153-freeze-gfis"
+      ],
+      "reasonRefs": [
+        "reason-freeze-routing-notification-ack-escalation-digest-ack-escalation-digest-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-digest"
+      ],
+      "deliveryNoteRefs": [
+        "note-freeze-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery-no-freeze"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-freeze-routing-notification-ack-escalation-digest-delivery-ack-escalation-digest-delivery-delivery-acknowledgement-escalation-sla-routing-notification-ack-escalation-digest-delivery"
+      ],
+      "blockedActions": [
+        "create_digest_delivery",
+        "create_delivery",
+        "create_digest",
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsDigestDelivery": false,
+      "createsDelivery": false,
+      "createsDigest": false,
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesDigest": 0,
+        "writesDigestDelivery": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0,
+        "writesDelivery": 0
+      }
+    }
+  ],
+  "expected": {
+    "brainSurface": 2,
+    "pkcSurface": 1,
+    "gfisAssistantSurface": 3,
+    "createsDigests": 0,
+    "createsDigestDeliveries": 0,
+    "createsEscalations": 0,
+    "createsTimeoutEvents": 0,
+    "createsKweWorkItems": 0,
+    "createsNotifications": 0,
+    "createsAcknowledgements": 0,
+    "createsReceipts": 0,
+    "createsReadReceipts": 0,
+    "updatesDeliveryStatuses": 0,
+    "sendsExternalNotifications": 0,
+    "createsApprovalAssignments": 0,
+    "locksApprovers": 0,
+    "createsApprovalPackets": 0,
+    "createsApprovalRequests": 0,
+    "createsApprovalDecisions": 0,
+    "createsCommitteeDecisions": 0,
+    "createsFreezeActions": 0,
+    "createsHarnessEvidence": 0,
+    "createsWaesGateResults": 0,
+    "persistsEvidence": 0,
+    "approvesBusinessWrite": 0,
+    "promotesLifecycle": 0,
+    "completesCommitteeDecision": 0,
+    "writesGfis": 0,
+    "writesGpc": 0,
+    "writesErp": 0,
+    "writesMes": 0,
+    "writesDigest": 0,
+    "writesDigestDelivery": 0,
+    "writesEscalation": 0,
+    "writesTimeoutEvent": 0,
+    "writesKweWorkItem": 0,
+    "writesNotification": 0,
+    "writesAcknowledgement": 0,
+    "writesReceipt": 0,
+    "writesReadReceipt": 0,
+    "writesDeliveryStatus": 0,
+    "writesApprovalAssignment": 0,
+    "writesApprovalLock": 0,
+    "writesApprovalPacket": 0,
+    "writesApprovalRequest": 0,
+    "writesApprovalDecision": 0,
+    "writesCommitteeDecision": 0,
+    "writesFreezeAction": 0,
+    "writesWaesGateResult": 0,
+    "writesHarnessEvidence": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesExternalApi": 0,
+    "deliveryPreviewCount": 6,
+    "totalRecipientCount": 6,
+    "totalChannelCount": 6,
+    "totalBlockedDeliveryCount": 3,
+    "createsDeliveries": 0,
+    "writesDelivery": 0
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-06-21T00:41:44.601523+00:00",
+  "status": "pass",
+  "concepts": 81,
+  "queries": [
+    {
+      "query": "KDS 开发空间安全规范",
+      "bundle": "kds",
+      "expected_source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "top_source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "top_okf_path": ".okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "top_title": "GlobalCloud 项目群 KDS 开发空间安全规范",
+      "score": 2,
+      "status": "pass"
+    },
+    {
+      "query": "KDS Markdown 化 OKF 兼容层闭环方案",
+      "bundle": "kds",
+      "expected_source_path": "09-status/kds-md-okf-implementation-closure-plan.md",
+      "top_source_path": "09-status/kds-md-okf-implementation-closure-plan.md",
+      "top_okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "top_title": "KDS Markdown 化与 OKF 兼容层全面实施闭环方案",
+      "score": 4,
+      "status": "pass"
+    },
+    {
+      "query": "Loop 控制板",
+      "bundle": "governance",
+      "expected_source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "top_source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "top_okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "top_title": "Loop Control Board",
+      "score": 2,
+      "status": "pass"
+    },
+    {
+      "query": "ODF Phase 7 小批量样本执行方案",
+      "bundle": "governance",
+      "expected_source_path": "09-status/odf-phase7-small-batch-execution-plan.md",
+      "top_source_path": "09-status/odf-phase7-small-batch-execution-plan.md",
+      "top_okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "top_title": "ODF Phase 7 小批量样本执行方案",
+      "score": 4,
+      "status": "pass"
+    },
+    {
+      "query": "体系总架构",
+      "bundle": "architecture",
+      "expected_source_path": "01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "top_source_path": "01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "top_okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "top_title": "GlobalCloud绿色供应链体系总架构",
+      "score": 1,
+      "status": "pass"
+    },
+    {
+      "query": "三阶段激活深度",
+      "bundle": "architecture",
+      "expected_source_path": "01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "top_source_path": "01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "top_okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "top_title": "GlobalCloud体系最小闭环与三阶段激活深度总表",
+      "score": 1,
+      "status": "pass"
+    }
+  ],
+  "passed_queries": 6,
+  "total_queries": 6,
+  "boundary": {
+    "source_of_record": "KDS / Git controlled documents",
+    "derivation_policy": "metadata_only_no_body_copy",
+    "benchmark_scope": "deterministic keyword lookup over OKF metadata",
+    "does_not_replace_semantic_search": true
+  }
+}

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-3F65E8E8EC
-title: Loop Round GPCF-PV-LR-002
+title: Loop Round GPCF-PV-LR-002：PVAOS 门户运营对象验证清单
 project: PVAOS
 related_projects: [GPC, PVAOS, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/03-PVAOS/docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md
 source_path: docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF-PV-LR-002
+# Loop Round GPCF-PV-LR-002：PVAOS 门户运营对象验证清单
 
 | 字段 | 值 |
 |---|---|
@@ -43,4 +43,4 @@ superseded_by: []
 | 租户/伙伴/组织 | not-validated | 组织模型、角色模型、跨租户隔离 |
 | GPC 依赖 | pending | GPC 平台边界确认 |
 
-Current state remains `partial`; this round does not deploy PVAOS, write a real project repository, or mark accepted/integrated.
+当前状态保持 `partial`；本轮不部署 PVAOS，不写真实项目仓，也不标记 accepted/integrated。

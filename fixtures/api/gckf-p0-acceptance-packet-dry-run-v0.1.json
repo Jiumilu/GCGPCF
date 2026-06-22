@@ -1,0 +1,85 @@
+{
+  "contractId": "GCKF-P0-ACCEPTANCE-PACKET-DRY-RUN-V0.1",
+  "description": "P0-D18 acceptance packet dry-run contract that aggregates route adapter outputs and evidence refs without writing Harness evidence.",
+  "acceptancePacketPath": "packages/api/src/acceptance-packet.ts",
+  "routeAdapterPath": "packages/api/src/route-adapter.ts",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "tempOutDir": "/tmp/gckf-api-acceptance-packet",
+  "compiledAcceptancePacketPath": "/tmp/gckf-api-acceptance-packet/api/src/acceptance-packet.js",
+  "packetCases": [
+    {
+      "id": "acceptance-ready-for-review",
+      "packetId": "GCKF-P0-D18-READY",
+      "title": "P0 D18 ready-for-review packet",
+      "expectedStatus": "ready_for_review",
+      "expectedOk": true,
+      "routeRequests": [
+        {
+          "method": "GET",
+          "path": "/api/v2/domains"
+        },
+        {
+          "method": "POST",
+          "path": "/api/v2/fact-candidates"
+        },
+        {
+          "method": "POST",
+          "path": "/api/v2/waes/rag-admission/check"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-repair-required",
+      "packetId": "GCKF-P0-D18-REPAIR",
+      "title": "P0 D18 repair-required packet",
+      "expectedStatus": "repair_required",
+      "expectedOk": false,
+      "routeRequests": [
+        {
+          "method": "GET",
+          "path": "/api/v2/domains"
+        },
+        {
+          "method": "GET",
+          "path": "/api/v2/not-found"
+        }
+      ]
+    }
+  ],
+  "evidenceRefs": [
+    {
+      "kind": "fixture",
+      "ref": "fixtures/api/gckf-p0-route-adapter-dry-run-contract-v0.1.json"
+    },
+    {
+      "kind": "validator",
+      "ref": "scripts/api/validate_gckf_p0_route_adapter_dry_run_contract.py"
+    },
+    {
+      "kind": "contract_doc",
+      "ref": "docs/gc-knowledge-fabric/route-adapter-dry-run-contract-v0.1.md"
+    },
+    {
+      "kind": "loop_evidence",
+      "ref": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D17-001.md"
+    }
+  ],
+  "expectedSummary": {
+    "packetCount": 2,
+    "readyForReviewCount": 1,
+    "repairRequiredCount": 1,
+    "evidenceRefCount": 4,
+    "typescriptAcceptanceCompile": true,
+    "createAcceptancePacketDryRun": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "writesHarnessEvidence": false,
+    "requiresHumanReview": true,
+    "requiresHarnessEvidence": true,
+    "noWrite": true
+  }
+}

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0DF6AA8647
 title: Loop Control Board
 project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: governance
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md
 source_path: 02-governance/loop/LOOP_CONTROL_BOARD.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -22,16 +22,16 @@ superseded_by: []
 
 | 字段 | 当前值 |
 |---|---|
-| 当前 Loop 模式 | L4 自我纠错与 GFIS 运行层修复 |
-| 本轮最新校准 | `GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001` 已回写：GFIS `GFIS-RUNTIME-SOP-E2E-TEST-12STAGE-NEGATIVE-001` 已建立 12 阶段测试数据负例阻断门禁。验证输出 `gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`。本轮只使用测试数据；负例阻断门禁只用于开发验证和防污染校验，不能释放真实运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated/production_ready |
+| 当前 Loop 模式 | L4 自我纠错与 GFIS 运行层修复；CodeGraph 项目群覆盖登记已开启 |
+| 本轮最新校准 | `GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001` 已回写：GFIS `GFIS-RUNTIME-SOP-E2E-TEST-SCENARIO-001` 已建立 12 阶段测试数据场景覆盖与变异防污染门禁。验证输出 `gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 waes_evidence_candidate_count=15 kds_backlink_candidate_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass test_data_lane=pass real_business_lane=repair_required runtime_sop_e2e=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`。本轮只使用测试数据；scenario coverage 只用于开发验证和防污染校验，不能释放真实运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated/production_ready |
 | 可升级模式 | L4 repair active；L5 暂停，必须等 GFIS 运行层证据与完整 SOP E2E 修复后再评估 |
 | 当前主线项目 | GFIS / GPCF |
-| 当前轮次 | `GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001`：GFIS test data 12-stage negative transition guard sync |
-| 当前阶段 | L4 repair；GFIS 运行层仍是唯一 SOP 主体。本轮只建立并同步 12 阶段测试数据负例阻断门禁，目标状态为 `test_data_12_stage_negative_transition_guard=pass`。真实业务仍保持 `valid_source_records=0`、`runtime_primary_key_created=0`、`runtime_primary_key_ready=0`、`review_queue_created=0`、`review_queue=0`、`runtime_intake_created=0`、`runtime_intake=0`、`waes_review_created=0`、`waes_review=0`、`verified_artifact_created=0`、`verified=0`。GFIS runtime 总 validator 仍失败并保持 `repair_required`；本轮未执行删除、reset、checkout、提交、推送或生产配置变更 |
+| 当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-083`：WAS-Ontology restricted substance, RoHS, REACH SVHC, MSDS, chemical inventory, substance testing, and supplier chemical compliance evidence boundary monitor |
+| 当前阶段 | WAS-Ontology Registry 与 loop_was_context coverage refresh 已回写到 GPCF 状态矩阵和 Loop 控制板，Monitor 083 已建立绿色供应链限制物质声明、RoHS 合规证书、REACH SVHC 声明、材料安全数据表、化学品清单记录、物质检测报告和供应商化学合规承诺证据边界。最新验证输出 `was_project_group_ontology_registry=pass project_group_scope=14/14 registry_categories=6/6 entries=43`、`was_loop_context_coverage_refresh=pass loop_round_count=112 project_scope_count=14 context_shapes=flat_v1,nested_v2`、`was_real_source_record_monitor_083=pass submitted_real_candidate_files=0 restricted_substance_declaration_gaps=0 rohs_compliance_certificate_gaps=0 reach_svhc_statement_gaps=0 material_safety_data_sheet_gaps=0 chemical_inventory_record_gaps=0 substance_test_report_gaps=0 supplier_chemical_compliance_commitment_gaps=0 accepted_for_chemical_compliance_profile=0 accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084`。当前 `docs/harness/intake` 仍只有模板，真实业务仍保持 GFIS `real_business_lane=repair_required`；本轮不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted/integrated/production_ready |
 | 当前目标 | 以 GFIS 运行层为唯一 SOP 主体，把辽宁远航报价来源、合同链、现代精工 OEM 当前运行层定位、未来葛化自建工厂运行层定位、签章完成件接收门禁、真实回执接收目录、KDS backlink receipt、KDS 候选发现、客户商业补证、authorization envelope、review/runtime/WAES 阻断全部纳入完整 runtime SOP E2E 主门禁；本轮不证明真实 KDS 写入回执、签章完成、客户确认函、采购订单/合同、客户规格/封样、PP/改性料规格、上机窗口、首批 1 吨闭环验收、出厂全检、客户验收/POD、生产写入、物流 API、资金事实、人工验收或 accepted/integrated 完成 |
-| 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF |
+| 当前涉及项目 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS |
 | 当前状态判定 | `partial_repair`；`development_ready=pass`、`synthetic_dev_lane=dev_closed`，但 `real_business_lane=repair_required`，`business_verification_pending=true`。DEV-READY-001 只证明开发态完整闭环可审计，不证明真实业务闭环完成；真实链路仍无真实客户订单/平台订单、样品、工单、质检、库存、发货、POD、WAES confirmation、KDS write receipt、运行层主键、review queue、runtime intake、WAES review 或 verified artifact；不得升级 accepted/integrated/production_ready |
-| 本轮新增事实 | GFIS 真项目仓新增 12 阶段测试数据 negative transition matrix、机器 evidence、人类可读说明、`scripts/validate_gfis_test_data_12_stage_negative_transition_guard.py` 和 `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-TEST-12STAGE-NEGATIVE-001.md`，并将 12 阶段负例阻断门禁接入 GPCF L4 validators。本轮 validator pass 表示错误跳转、绕过门禁、Demo 替代、真实写入声明和状态升级声明会被拒绝，不表示真实业务完成；测试数据、KDS 候选、报价、合同链、用户口述、Demo、mock、fixture、synthetic 均不能计入真实业务 |
+| 本轮新增事实 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-083` 已完成并补齐受控索引。当前已完成 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001`、`GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001`、`GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001`、`GPCF-ONTOLOGY-WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-001`、`GPCF-ONTOLOGY-WAS-LOOP-CONTEXT-COVERAGE-REFRESH-001`、source-record monitor 025-083 和 candidate precheck execution 001-008；新增/校准证据 `docs/harness/evidence/was-real-source-record-monitor-083-20260622.{json,md}`、Loop round `docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-083.md`、validator `tools/kds-sync/validate_was_real_source_record_monitor_083.py` 和 fixtures `fixtures/was/real-source-record-monitor-083-*.json`。本轮不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted/integrated/production_ready。下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084`。 |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |
 | L3 session | stopped |
@@ -92,12 +92,14 @@ superseded_by: []
 | 文档污染检查 | pass | `check_document_pollution.py` 最近通过 |
 | KDS 镜像冲突 | pass | `kds_conflict_guard.py` 最近通过 |
 | Loop 运行门禁 | pass | `loop_operational_gates.py` 最近通过 |
-| GFIS 质量门禁 | partial | GFIS `validate_gfis_test_data_12_stage_negative_transition_guard.py` pass，证明 12 阶段测试数据负例阻断门禁可审计：`negative_attempt_count=10`、`rejected_attempt_count=10`、`accepted_attempt_count=0`，且真实业务计数仍为 0；GFIS `validate_gfis_test_data_12_stage_transition_gate.py`、`validate_gfis_test_data_12_stage_sop_e2e.py`、`validate_gfis_test_data_minimum_sop_e2e.py` 和 `validate_gfis_development_ready_goal.py` pass；GFIS REAL-001 至 REAL-007 门禁均 pass_as_blocking_guard，继续阻断真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact。GFIS 运行层总 SOP E2E validator 仍因真实 KDS/source-of-record 缺口失败，状态仍为 `repair_required`。完整真实 SOP E2E 未通过前不得升级验收 |
+| GFIS 质量门禁 | partial | GFIS `validate_gfis_test_data_scenario_coverage.py` pass，证明 12 阶段测试数据场景覆盖与变异防污染门禁可审计：`positive_scenario_count=12`、`boundary_scenario_count=6`、`mutation_attempt_count=8`、`rejected_mutation_count=8`、`accepted_mutation_count=0`，且真实业务计数仍为 0；GFIS `validate_gfis_test_data_runtime_replay_harness.py`、`validate_gfis_test_data_12_stage_negative_transition_guard.py`、`validate_gfis_test_data_12_stage_transition_gate.py`、`validate_gfis_test_data_12_stage_sop_e2e.py`、`validate_gfis_test_data_minimum_sop_e2e.py` 和 `validate_gfis_development_ready_goal.py` pass；GFIS REAL-001 至 REAL-007 门禁均 pass_as_blocking_guard，继续阻断真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact。GFIS 运行层总 SOP E2E validator 仍因真实 KDS/source-of-record 缺口失败，状态仍为 `repair_required`。完整真实 SOP E2E 未通过前不得升级验收 |
 | XiaoC L4 门禁 | pass | `node scripts/validate_xiaoc_l4_agent_orchestration.mjs`、`node scripts/validate_xiaoc_loop_harness.mjs`、`pnpm test:repo`、`git diff --check -- .` 均通过 |
 | XGD L4 门禁 | pass | `node scripts/validate_xgd_l4_risk_analysis.mjs`、`npm run harness:validate`、`npm test`、`git diff --check -- .` 均通过 |
-| XiaoG L4 门禁 | pass | `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py`、legacy L3 validators/smoke/test、`git diff --check -- .` 均通过 |
-| GPCF L4 收口门禁 | repair_required | `validate_loop_self_correction_gate.py` 与 `validate_l4_minimum_closed_loop.py` 已纳入 GFIS test-data minimum SOP E2E、development-ready 目标审计、GFIS 运行层 SOP validator、REAL-001 intake gate、REAL-002 pending_business_verification gate、REAL-003 runtime primary key gate、REAL-004 review queue admission gate、REAL-005 runtime intake gate、REAL-006 WAES review gate 和 REAL-007 verified artifact gate；当前必须输出 78/100 repair，直到 GFIS 真实业务 source-of-record、运行层 evidence 和 SOP E2E 修复 |
+| XiaoG L4 门禁 | pass | 已在当前真实 XiaoG 仓 `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG` 重跑 `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py`，输出 `xiaog_l4_readonly_audit_mock=pass`、`readonly_queries=3`、`pkc_notifications=1`、`waes_audit_mocks=2`、`execution_traces=1`；本轮未使用废弃 iCloud XiaoG 目录，未生产写入、未真实外部 API、未设备 OTA、未升级 accepted/integrated |
+| GPCF L4 收口门禁 | repair_required | `validate_loop_self_correction_gate.py` 已输出 blocked 且 GFIS test-data scenario coverage、GFIS test-data runtime replay harness、GFIS test-data minimum SOP E2E、development-ready 目标审计、GFIS 运行层 SOP validator、REAL-001 intake gate、REAL-002 pending_business_verification gate、REAL-003 runtime primary key gate、REAL-004 review queue admission gate、REAL-005 runtime intake gate、REAL-006 WAES review gate 和 REAL-007 verified artifact gate 已纳入；XiaoG 外部 evidence 缺口已修复，当前聚合门禁继续保持 78/100 repair，阻塞点回到 GFIS 真实业务 source-of-record、运行层 evidence 与 SOP E2E |
 | KDS TOKEN 检查 | pass | `kds_token=pass fingerprint=bfd9553d`；私有 env 不入库 |
+| CodeGraph 项目群覆盖 | pass_with_note | 14 个本机 Git 仓均已有 `.codegraph/` 本地索引且 `.codegraph` 未进入 Git 状态；WAS 已作为第 14 项纳入，统计为 `files=30 nodes=70 edges=209 db_size=0.27 MB`。GFIS `sync` 后仍有 `Pending Changes: Added 1 files` 内部待同步提示，但该同步输出为 `Added: 1 - 0 nodes`，不作为业务代码图谱失败 |
+| Headroom 项目群接入 | partial | Headroom 已建立项目群准入、成本模型、三价格 profile 成本敏感性模型、真实 runtime probe、受控 metric+adapter pilot、同口径三窗口 LOOP 成本观测、独立 production-token-free LOOP replay、production token intake blocking gate、脱敏生产 token 台账模板、生产 token 台账负向 fixtures、pending 授权采集包、pending 授权行动队列、dry-run-only 项目群应用路由、15 项目 dry-run 应用覆盖矩阵、log/search marker-preserving adapter pilot、`02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md` 全量实施蓝图、`loop/context/headroom/` LCX 受控能力包、P0 runtime replay、P1 proxy dry-run smoke、P2 MCP/SDK dry-run smoke、P3 learn preview / working memory gate、P4 output shaper profile gate、P5 production admission request package、authorization boundary review、authorized measurement precheck、authorized measurement authorization template、authorization negative fixtures、authorization schema approval package、approval instance precheck、session declaration boundary、measurement admission request、WAES/Harness admission decision checklist、sanitized measurement dry-run skeleton、metadata replay check 和 marker/retrieval miss comparison gate；最新 comparison 输出 `headroom_lcx_marker_retrieval_miss_comparison_gate=pass_check_only project_count=15 entry_count=1 comparison_count=1 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`。WAES/Harness 已批准进入脱敏测量 dry-run 预备阶段，但本轮只完成 check-only metadata comparison，仍不得升级 accepted/integrated/production_ready，不得采集未脱敏生产 token、不得计算真实生产节省、不得启动生产代理、不得写入真实 KDS API |
 
 ## 当前待确认项
 
@@ -108,6 +110,8 @@ superseded_by: []
 | GPC/Finance 边界确认 | 未收到 | 保持金融事实 L4 阻断 |
 | WAES 门禁语义确认 | 未收到 | 保持 fixture/contract 层 |
 | KDS TOKEN | 已完成 | 本机私有 env 已配置，真实 `开发` 空间 API 同步已跑通；继续禁止泄露 Token |
+| GlobalCloud Studio 纳入 | workflow_release_boundary_reviewed / not_accepted | Studio 已作为第 13 项纳入项目群、CodeGraph 与 Loop 控制板；`npm run test`、`npm run build` 和 `npm run harness:check` 均已有通过证据。新增 workflow 已完成 release boundary 审计，但 release-write workflows 尚未声明显式 `permissions:`，提交前仍为 `review_required_before_commit`；不等于发布执行、人工验收、accepted、integrated 或 production_ready |
+| WAS 世界资产体系纳入 | remote_governance_baseline_pushed / not_accepted | WAS 已作为第 14 项治理候选边界纳入项目群，远端为 private `Jiumilu/GCWAS`，角色为 `semantic_foundation_project`；WAS validator 和 CodeGraph 均通过。本轮只登记语义契约源，不等于 KDS 事实主存、GFIS 运行层、WAES 裁决、accepted、integrated 或 production_ready |
 | L3.5/L4/L5 启动 | 未启动 | 已形成可执行方案，但除非出现明确启动口令或强授权口令，否则不得进入 |
 | 连续运行偏差 | 已修正规则 | 阶段性收口汇报不得导致 L3/L3.5/L4/L5 停止；未触发停止条件时继续下一轮 |
 | L3 三轮误停止 | 已建立防复发门禁 | `validate_l3_continuation_guard.py` 拦截 `3/15` 阶段性 final 收口 |
@@ -172,6 +176,67 @@ superseded_by: []
 | GFIS loop-state | `08-evidence-samples/GFIS/loop-state.md` |
 | GFIS evidence-index | `08-evidence-samples/GFIS/evidence-index.md` |
 | GPCF 状态矩阵 | `09-status/gpcf-project-status-matrix.md` |
+| CodeGraph 项目群覆盖 | `02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md` |
+| CodeGraph 项目群 evidence | `docs/harness/evidence/loop-codegraph-project-group-coverage-20260620.md` |
+| Headroom 项目群准入 evidence | `docs/harness/evidence/headroom-project-group-admission-20260621.md` |
+| Headroom 项目群 L2 dry-run evidence | `docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.md` |
+| Headroom 项目群 L2 dry-run JSON | `docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json` |
+| Headroom runtime probe evidence | `docs/harness/evidence/headroom-runtime-probe-20260621.md` |
+| Headroom runtime probe JSON | `docs/harness/evidence/headroom-runtime-probe-20260621.json` |
+| Headroom runtime adapter dry-run evidence | `docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md` |
+| Headroom runtime adapter dry-run JSON | `docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.json` |
+| Headroom runtime scenario matrix evidence | `docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md` |
+| Headroom runtime scenario matrix JSON | `docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.json` |
+| HeadroomCostMeasurement output evidence | `docs/harness/evidence/headroom-cost-measurement-output-20260621.md` |
+| Headroom marker preservation policy evidence | `docs/harness/evidence/headroom-marker-preservation-policy-20260621.md` |
+| Headroom controlled metric pilot evidence | `docs/harness/evidence/headroom-controlled-metric-pilot-20260621.md` |
+| Headroom LOOP cost observation evidence | `docs/harness/evidence/headroom-loop-cost-observation-20260621.md` |
+| Headroom LOOP cost observation series evidence | `docs/harness/evidence/headroom-loop-cost-observation-series-20260621.md` |
+| Headroom independent LOOP round replay evidence | `docs/harness/evidence/headroom-independent-loop-round-replay-20260621.md` |
+| Headroom production token intake gate evidence | `docs/harness/evidence/headroom-production-token-intake-gate-20260621.md` |
+| Headroom production token ledger template | `fixtures/headroom/headroom-production-token-ledger-template.json` |
+| Headroom production token ledger negative fixtures | `fixtures/headroom/headroom-production-token-ledger-negative-fixtures.json` |
+| Headroom production token authorization package | `docs/harness/evidence/headroom-production-token-authorization-package-20260621.md` |
+| Headroom production token authorization action queue | `docs/harness/evidence/headroom-production-token-authorization-action-queue-20260621.md` |
+| Headroom project-group application router | `docs/harness/evidence/headroom-project-group-application-router-20260621.md` |
+| Headroom project application coverage matrix | `docs/harness/evidence/headroom-project-application-coverage-matrix-20260621.md` |
+| Headroom cost sensitivity model | `docs/harness/evidence/headroom-cost-sensitivity-model-20260621.md` |
+| Headroom LCX 全量实施方案 | `02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md` |
+| Headroom LCX 全量实施 Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md` |
+| Headroom LCX 受控能力包 evidence | `docs/harness/evidence/headroom-lcx-controlled-package-20260621.md` |
+| Headroom LCX 受控能力包 Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md` |
+| Headroom LCX P0 runtime replay evidence | `docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.md` |
+| Headroom LCX P0 runtime replay Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001.md` |
+| Headroom LCX P1 proxy dry-run smoke evidence | `docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.md` |
+| Headroom LCX P1 proxy dry-run smoke Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001.md` |
+| Headroom LCX P2 MCP/SDK dry-run smoke evidence | `docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.md` |
+| Headroom LCX P2 MCP/SDK dry-run smoke Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001.md` |
+| Headroom LCX P3 learn preview working memory gate evidence | `docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md` |
+| Headroom LCX P3 learn preview working memory gate Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md` |
+| Headroom LCX P4 output shaper profile gate evidence | `docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.md` |
+| Headroom LCX P4 output shaper profile gate Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md` |
+| Headroom LCX P5 production admission package evidence | `docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.md` |
+| Headroom LCX P5 production admission package Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md` |
+| Headroom LCX authorization boundary review evidence | `docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260621.md` |
+| Headroom LCX authorization boundary review Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001.md` |
+| Headroom LCX measurement admission request evidence | `docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md` |
+| Headroom LCX measurement admission request Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md` |
+| Headroom LCX WAES/Harness admission decision checklist evidence | `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.md` |
+| Headroom LCX WAES/Harness admission decision checklist Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md` |
+| Headroom LCX WAES/Harness admitted decision evidence | `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md` |
+| Headroom LCX sanitized measurement dry-run evidence | `docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md` |
+| Headroom LCX sanitized measurement dry-run Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md` |
+| Headroom LCX metadata replay check evidence | `docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.md` |
+| Headroom LCX metadata replay check Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md` |
+| Headroom LCX marker/retrieval miss comparison gate evidence | `docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md` |
+| Headroom LCX marker/retrieval miss comparison gate Loop round | `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md` |
+| WAS 项目群准入 evidence | `docs/harness/evidence/was-project-group-admission-20260621.md` |
+| GFIS-WAS profile mapping evidence | `docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md` |
+| GFIS-WAS source-record admission gate evidence | `docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.md` |
+| GFIS-WAS source-record submission precheck evidence | `docs/harness/evidence/gfis-was-source-record-submission-precheck-20260621.md` |
+| GFIS-WAS source-record negative fixtures evidence | `docs/harness/evidence/gfis-was-source-record-negative-fixtures-20260621.md` |
+| GFIS-WAS source-record field crosswalk evidence | `docs/harness/evidence/gfis-was-source-record-field-crosswalk-20260621.md` |
+| Ontology/WAS 3h implementation goals evidence | `docs/harness/evidence/ontology-was-3h-implementation-goals-20260621.md` |
 | GPCF Loop 编排器 | `.codex/skills/globalcloud-loop-orchestrator/scripts/loop_orchestrator.py` |
 | 本控制板 | `02-governance/loop/LOOP_CONTROL_BOARD.md` |
 | L3.5 真实接口验证政策 | `02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md` |

@@ -1,0 +1,54 @@
+{
+  "task_id": "",
+  "project": "",
+  "status": "draft",
+  "codegraph_required": true,
+  "pre_change_analysis": {
+    "query": "",
+    "query_results": [],
+    "target_nodes": [],
+    "node_inspection": [],
+    "affected": {}
+  },
+  "implementation_constraints": {
+    "target_nodes": [],
+    "affected_scope": [],
+    "files_allowed_to_change": [],
+    "files_not_to_touch": [],
+    "expected_tests": []
+  },
+  "test_selection": {
+    "affected_tests": [],
+    "fallback_tests": [],
+    "fallback_reason": ""
+  },
+  "codegraph_evidence": {
+    "query": "",
+    "target_nodes": [],
+    "affected": {},
+    "changed_files": [],
+    "test_selection_reason": "",
+    "post_change_status": ""
+  },
+  "efficiency_metrics": {
+    "manual_scan_files": 0,
+    "codegraph_candidate_files": 0,
+    "actual_changed_files": 0,
+    "affected_tests": [],
+    "missed_impact_count": 0,
+    "time_to_first_target": ""
+  },
+  "codegraph_unavailable_exception": {
+    "reason": "",
+    "fallback_scan": [],
+    "reviewer": "",
+    "expires_at": ""
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

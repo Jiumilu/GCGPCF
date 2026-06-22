@@ -1,0 +1,93 @@
+{
+  "template_id": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-20260621",
+  "purpose": "collect_complete_human_authorization_before_any_sanitized_production_token_measurement",
+  "scope": {
+    "project_count": 15,
+    "projects": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "allowed_next_action_after_completion": "rerun_authorized_measurement_precheck_only",
+    "not_allowed_by_this_template": [
+      "production_proxy_start",
+      "production_sdk_enablement",
+      "real_kds_api_write",
+      "external_api_write",
+      "sensitive_raw_material_processing",
+      "accepted_or_integrated_or_production_ready_upgrade"
+    ]
+  },
+  "authorization_fields": {
+    "authorized_window_id": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "stable_window_identifier",
+      "example": "LCX-MEASURE-YYYYMMDD-001"
+    },
+    "authorized_by": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "human_approver_or_governance_role",
+      "example": "GPCF/WAES named approver"
+    },
+    "authorized_at": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "ISO-8601 timestamp with timezone",
+      "example": "2026-06-21T00:00:00+08:00"
+    },
+    "sanitized_production_token_ledger": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "path_to_sanitized_ledger_or_evidence_id",
+      "must_not_include": [
+        "raw prompt",
+        "raw completion",
+        "secret",
+        "credential",
+        "customer contract text"
+      ]
+    },
+    "rollback_plan_id": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "controlled_rollback_plan_or_runbook_id",
+      "minimum_contents": [
+        "disable proxy",
+        "disable SDK",
+        "delete temporary cache",
+        "retain evidence"
+      ]
+    },
+    "waes_harness_admission_decision": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "WAES/Harness decision evidence id",
+      "allowed_values": [
+        "admitted_for_sanitized_measurement_precheck",
+        "blocked"
+      ]
+    }
+  },
+  "required_false_until_completed": {
+    "authorization_complete": false,
+    "production_token_measurement_allowed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

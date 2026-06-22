@@ -1,0 +1,29 @@
+{
+  "evidence_id": "LOOP-UI-GOV-BASELINE-20260622",
+  "phase": "LOOP-UI-GOV-BASELINE-20260622",
+  "artifacts": {
+    "ui_master_doc": "04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md",
+    "loop_round_template": "templates/LOOP_ROUND_TEMPLATE.md",
+    "validator": "tools/kds-sync/validate_loop_ui_quality_baseline.py",
+    "markdown_evidence": "docs/harness/evidence/loop-ui-governance-baseline-20260622.md",
+    "json_evidence": "docs/harness/evidence/loop-ui-governance-baseline-20260622.json"
+  },
+  "controls": {
+    "template_ui_scope_required": true,
+    "template_ui_gate_required_when_ui_scope_true": true,
+    "ui_gate_status_values": [
+      "ui_ready",
+      "ui_partial",
+      "ui_blocked",
+      "ui_rework_required"
+    ],
+    "ui_gate_max_status": "ui_evidence_candidate",
+    "broader_project_status_upgrade_requires_harness": true
+  },
+  "non_claims": [
+    "does not prove any specific product UI is completed",
+    "does not prove real user acceptance for any UI surface",
+    "does not grant accepted, integrated, or production_ready status",
+    "does not replace screenshots, browser verification, Playwright evidence, or Figma comparison"
+  ]
+}

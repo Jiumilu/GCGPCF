@@ -1,0 +1,57 @@
+{
+  "evidence_id": "CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-20260622",
+  "status": "steady_state_recheck_pass_with_watch",
+  "date": "2026-06-22",
+  "scope": "GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-004",
+  "objective": "Recheck 14-repository CodeGraph live state after the session declaration boundary, without syncing non-GPCF repositories or changing business code.",
+  "summary": {
+    "repo_count": 14,
+    "initialized_repo_count": 14,
+    "codegraph_version": "1.0.1",
+    "codegraph_git_status_entries_total": 0,
+    "brain_current_pending": 4,
+    "studio_current_pending": 0,
+    "kds_current_pending": 1,
+    "gfis_policy_exception_pending": 1,
+    "gpcf_pending_before_self_sync": 5,
+    "gpcf_pending_after_self_sync": 0,
+    "status_ceiling": "watch_required"
+  },
+  "repo_status": [
+    {"repo_id": "gfis", "repo": "GlobalCloud GFIS", "pending": {"added": 1, "modified": 0, "removed": 0}, "pending_total": 1, "fileCount": 1022, "nodeCount": 13152, "edgeCount": 38142, "classification": "policy_exception_watch"},
+    {"repo_id": "gpc", "repo": "GlobalCloud GPC", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 70, "nodeCount": 705, "edgeCount": 1995, "classification": "steady"},
+    {"repo_id": "pvaos", "repo": "GlobalCloud PVAOS", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 604, "nodeCount": 8899, "edgeCount": 28838, "classification": "steady"},
+    {"repo_id": "waes", "repo": "GlobalCloud WAES", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 281, "nodeCount": 3511, "edgeCount": 11298, "classification": "steady"},
+    {"repo_id": "kds", "repo": "GlobalCloud KDS", "pending": {"added": 0, "modified": 1, "removed": 0}, "pending_total": 1, "fileCount": 518, "nodeCount": 3499, "edgeCount": 7115, "classification": "active_drift_watch"},
+    {"repo_id": "brain", "repo": "GlobalCloud Brain", "pending": {"added": 0, "modified": 4, "removed": 0}, "pending_total": 4, "fileCount": 156, "nodeCount": 2861, "edgeCount": 6381, "classification": "active_drift_watch"},
+    {"repo_id": "pkc", "repo": "GlobalCloud PKC", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 110, "nodeCount": 1034, "edgeCount": 2685, "classification": "steady"},
+    {"repo_id": "xiaoc", "repo": "GlobalCloud XiaoC", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 1176, "nodeCount": 15520, "edgeCount": 64515, "classification": "steady"},
+    {"repo_id": "xgd", "repo": "GlobalCloud XGD", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 181, "nodeCount": 3645, "edgeCount": 9914, "classification": "steady"},
+    {"repo_id": "xiaog", "repo": "GlobalCloud XiaoG", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 752, "nodeCount": 13943, "edgeCount": 45987, "classification": "steady"},
+    {"repo_id": "mmc", "repo": "GlobalCloud MMC", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 84, "nodeCount": 522, "edgeCount": 1083, "classification": "steady"},
+    {"repo_id": "gpcf", "repo": "GlobalCoud GPCF", "pending": {"added": 2, "modified": 3, "removed": 0}, "pending_total": 5, "fileCount": 1079, "nodeCount": 12547, "edgeCount": 30552, "classification": "self_sync_required_after_evidence"},
+    {"repo_id": "studio", "repo": "GlobalCloud Studio", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 801, "nodeCount": 14603, "edgeCount": 47399, "classification": "steady_after_previous_sync"},
+    {"repo_id": "was", "repo": "WAS世界资产体系", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 30, "nodeCount": 70, "edgeCount": 209, "classification": "steady"}
+  ],
+  "watch_items": [
+    {"repo": "GlobalCloud Brain", "pending": {"added": 0, "modified": 4, "removed": 0}, "classification": "active_drift_watch", "action": "monitor_or_prepare_new_authorization_if_threshold_crosses"},
+    {"repo": "GlobalCloud KDS", "pending": {"added": 0, "modified": 1, "removed": 0}, "classification": "active_drift_watch", "action": "monitor_without_sync_in_this_round"},
+    {"repo": "GlobalCloud GFIS", "pending": {"added": 1, "modified": 0, "removed": 0}, "classification": "policy_exception_watch", "action": "preserve_policy_exception_watch"}
+  ],
+  "status_boundaries": {
+    "non_gpcf_codegraph_sync": false,
+    "business_code_edits": false,
+    "project_internal_development": false,
+    "production_write": false,
+    "external_api_write": false,
+    "kds_canonical_write": false,
+    "git_add": false,
+    "git_commit": false,
+    "git_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005"
+}

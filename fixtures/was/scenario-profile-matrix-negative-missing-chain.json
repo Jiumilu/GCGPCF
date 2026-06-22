@@ -1,0 +1,14 @@
+{
+  "fixture_id": "WAS-SCENARIO-PROFILE-MATRIX-NEGATIVE-MISSING-CHAIN-001",
+  "expected_result": "rejected",
+  "project_group_scope": ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"],
+  "required_green_supply_chain_links": ["customer_order", "production_work_order"],
+  "profiles": [],
+  "boundary": {
+    "real_source_records": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}
+

@@ -4,10 +4,10 @@ title: ODF Phase 3 Schema Gate Evidence
 description: ODF Phase 3 Schema Gate Evidence
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase3-schema-gate-20260617.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md
 source_path: docs/harness/evidence/odf-phase3-schema-gate-20260617.md
-source_hash: dcad9996b60c9d98c7a75c917f246159a5bd7ea79140902c30e863144ccb2367
+source_hash: bd12cc8708eba3a9c68834846708d5ef36ca3c36169da22cc3030e2646641b1e
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 3 Schema Gate Evidence
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase3-schema-gate-20260617.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md` |
-| source_hash | `dcad9996b60c9d98c7a75c917f246159a5bd7ea79140902c30e863144ccb2367` |
+| source_hash | `bd12cc8708eba3a9c68834846708d5ef36ca3c36169da22cc3030e2646641b1e` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

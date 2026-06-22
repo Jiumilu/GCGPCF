@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-475051A08A
 title: GlobalCloud 绿色供应链体系项目群架构图
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂项目群架构图.md
 source_path: 01-architecture/GlobalCloud智慧工厂项目群架构图.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

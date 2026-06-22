@@ -4,10 +4,10 @@ title: ODF Phase 2 样本准入台账
 description: ODF Phase 2 样本准入台账
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md
 source_path: docs/harness/evidence/odf-phase2-sample-ledger-20260617.md
-source_hash: 60fb57b79f9a5d265bf01de091ba87c0b1bda191e385f62493a015a3d5341d72
+source_hash: fb6f055c0f43528147fff057af5b39ccd4b448634d553cb50f7ca94c262e9f60
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 2 样本准入台账
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase2-sample-ledger-20260617.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md` |
-| source_hash | `60fb57b79f9a5d265bf01de091ba87c0b1bda191e385f62493a015a3d5341d72` |
+| source_hash | `fb6f055c0f43528147fff057af5b39ccd4b448634d553cb50f7ca94c262e9f60` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

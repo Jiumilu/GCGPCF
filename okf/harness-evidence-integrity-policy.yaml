@@ -1,0 +1,76 @@
+policy_id: harness-evidence-integrity-policy
+version: v0.1
+description: Harness evidence reference integrity contract for GC-Knowledge Fabric.
+minimum_evidence_fields:
+  - evidence_id
+  - tenant_id
+  - evidence_kind
+  - title
+  - object_refs
+  - source_refs
+  - gate_refs
+  - loop_refs
+  - decision_refs
+  - content_hash
+  - controlled_original_ref
+  - summary
+  - created_by
+  - created_at
+  - metadata
+reference_groups:
+  - object_refs
+  - source_refs
+  - gate_refs
+  - loop_refs
+  - decision_refs
+evidence_kinds:
+  - file_hash
+  - controlled_original
+  - acceptance_record
+  - audit_record
+  - committee_record
+  - permission_change
+  - agent_used_knowledge
+  - publication_approval
+  - target_system_receipt
+integrity_statuses:
+  - passed
+  - blocked
+  - repair_required
+integrity_rules:
+  - id: tenant_consistency
+    required: true
+    description: Evidence and referenced objects must share tenant boundary or explicit authorized cross-scope proof.
+  - id: object_refs_resolvable
+    required: true
+    description: Every object ref must resolve to KDS object, candidate, gap, decision, ledger record, or LOOP record.
+  - id: source_or_hash_required
+    required: true
+    description: Evidence must carry source refs, content hash, or controlled original ref.
+  - id: gate_or_loop_required_for_governance
+    required: true
+    description: Governance evidence must link to gate refs, loop refs, or decision refs.
+  - id: sensitive_raw_content_forbidden
+    required: true
+    description: Sensitive metadata-only evidence cannot include raw content.
+hard_boundaries:
+  evidence_can_create_formal_fact: false
+  evidence_can_write_business_system: false
+  evidence_can_distribute_revenue: false
+  evidence_can_confirm_score: false
+  evidence_can_transfer_quota: false
+  evidence_can_settle_bounty: false
+  evidence_can_complete_committee_decision: false
+  evidence_can_allow_external_share: false
+  sensitive_raw_content_allowed: false
+  passed_is_business_completion: false
+no_write_assertions:
+  writes_kds_fact: 0
+  writes_business_system: 0
+  writes_revenue_distribution: 0
+  writes_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_committee_decision_completion: 0
+  writes_external_share_permission: 0
+  writes_external_api: 0

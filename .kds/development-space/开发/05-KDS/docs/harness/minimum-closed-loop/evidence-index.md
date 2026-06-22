@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md
 source_path: docs/harness/minimum-closed-loop/evidence-index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -30,8 +30,8 @@ superseded_by: []
 | MMC | `MMC-L4-002` / `ResourceCapabilityCheck` / `equipment_id` / `line_id` / `process_capability_code` / `capacity_snapshot_id` / 36 passed | ready_for_review |
 | XiaoC | `XiaoC-L4-009` | ready_for_review |
 | XGD | `XGD-L4-010` | ready_for_review |
-| XiaoG | `XiaoG-L4-011` | ready_for_review |
-| GPCF | `GPCF-L4-GFIS-DEV-READY-SYNC-001` / control-plane development_ready audit plus repair evidence | repair_required |
+| XiaoG | `XiaoG-L4-011` / `docs/harness/evidence/kds-retrieval-XiaoG-L4-011.json` | ready_for_review |
+| GPCF | `GPCF-L4-IMPROVE-001` / cross-project contract verification + KDS backlink registry + XiaoG evidence gap closed; GFIS real business lane remains repair_required | repair_required |
 
 Round ID | GPCF-L4-002
 Round ID | GPCF-L4-003

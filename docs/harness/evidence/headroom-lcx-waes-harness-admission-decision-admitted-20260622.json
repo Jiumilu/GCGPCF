@@ -1,0 +1,23 @@
+{
+  "evidence_id": "HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-ADMITTED-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-ADMITTED-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-ADMITTED-001",
+  "date": "2026-06-22",
+  "decision": "admitted_for_sanitized_measurement_precheck",
+  "approved_fixture": "positive_sanitized_metadata_only",
+  "scope": "sanitized_metadata_dry_run_precheck_only",
+  "gates": {
+    "waes_harness_admitted": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

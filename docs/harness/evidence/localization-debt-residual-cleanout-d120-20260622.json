@@ -1,0 +1,68 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-RESIDUAL-CLEANOUT-D120-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": [
+    "docs/harness/evidence/evidence-index.md",
+    "templates/LOOP_ROUND_TEMPLATE.md",
+    "templates/evidence-index-template.md",
+    "templates/loop-state-template.md",
+    "02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md",
+    "packages/api/src/handler-stub.ts"
+  ],
+  "action": "clean_out_explicit_localization_residuals",
+  "before": {
+    "all_repo_findings": 8,
+    "target_scope_findings": 8
+  },
+  "after": {
+    "all_repo_findings": 3,
+    "target_scope_findings": 3
+  },
+  "delta": {
+    "all_repo_findings": -5,
+    "target_scope_findings": -5
+  },
+  "changed_files": [
+    "docs/harness/evidence/evidence-index.md",
+    "templates/LOOP_ROUND_TEMPLATE.md",
+    "templates/evidence-index-template.md",
+    "templates/loop-state-template.md",
+    "02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md",
+    "packages/api/src/handler-stub.ts"
+  ],
+  "changed_line_items": 294,
+  "remaining_target_findings": [
+    {
+      "path": "docs/harness/evidence/evidence-index.md",
+      "kind": "doc_english_line",
+      "line": 641
+    },
+    {
+      "path": "docs/harness/evidence/evidence-index.md",
+      "kind": "doc_english_line",
+      "line": 643
+    },
+    {
+      "path": "docs/harness/evidence/evidence-index.md",
+      "kind": "doc_english_line",
+      "line": 647
+    }
+  ],
+  "scope_note": "本轮清理了显式 residual 列表中的 templates、治理文档、软件提示文本以及 evidence-index 的多组英文标题，但 evidence-index 更靠后的 3 条英文非声明句仍持续浮现，因此本轮记为部分收敛而非完全收口。",
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_residual_cleanout_d120.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

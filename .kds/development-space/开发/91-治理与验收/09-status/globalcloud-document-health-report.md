@@ -11,58 +11,138 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-health-report.md
 source_path: 09-status/globalcloud-document-health-report.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-19T09:33:56.624247+00:00
+生成时间：2026-06-22T09:00:08.475371+00:00
 
-Loop 文档门禁：`rework_required`
+Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：1127
-- KDS 镜像 Markdown：1100
-- KDS 本地镜像流水：1087
-- KDS 本地镜像唯一文档：1087
-- KDS API 同步流水：129
-- 元数据缺失：29
-- README 缺失目录：2
+- 仓库 Markdown：2360
+- KDS 镜像 Markdown：2374
+- KDS 本地镜像流水：2360
+- KDS 本地镜像唯一文档：2360
+- KDS API 同步流水：141
+- 元数据缺失：0
+- README 缺失目录：0
+- 中文本地化债务：False
+- 固定 doc_id 漂移：False
+- 门禁原因：无
 
 ## 状态分布
 
 - archive: 85
-- controlled: 929
-- draft: 14
-- missing: 29
-- okf_derived: 47
-- operational_controlled: 19
+- controlled: 2104
+- draft: 13
+- okf_derived: 99
+- operational_controlled: 54
 
 ## 项目分布
 
 - Brain: 6
-- GFIS: 75
-- GPC: 34
-- GPCF: 588
-- KDS: 183
+- GFIS: 81
+- GPC: 40
+- GPCF: 1258
+- KDS: 738
 - MMC: 8
 - PKC: 6
 - PVAOS: 7
-- WAES: 129
+- WAES: 153
 - XGD: 6
 - XiaoC: 45
 - XiaoG: 7
-- missing: 29
 
 ## 命令结果
+
+### loop_engineering_five_direction
+
+```text
+loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false
+```
+
+### loop_engineering_master_plan
+
+```text
+loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0
+```
+
+### loop_capability_registry
+
+```text
+loop_capability_registry=pass pools=skill,tool,method statuses=fast_admitted,candidate,pilot,controlled,default_enabled,downgraded,disabled,deprecated,superseded default_enable=risk_tiered pilot_plus_evidence=required core_methods=CodeGraph,external_search,RAG,multi_agent_parallel capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAES_KDS_RAG_writeback
+```
+
+### loop_ui_quality_baseline
+
+```text
+loop_ui_quality_baseline=pass template_ui_section=present master_spec=present capability_status=pilot explicit_ui_scope_rounds=4 explicit_ui_scope_valid=4 historical_ui_signal_rounds_without_explicit_scope=559 baseline_evidence=present
+```
+
+### loop_session_mainline_control
+
+```text
+loop_session_mainline_control=pass session_mainline=required handoff_evidence=required mainline_drift_detected=hard_pause write_without_handoff=false commit_push_deploy_status_promotion_allowed=false
+```
+
+### current_session_mainline_declaration
+
+```text
+current_session_mainline_declaration=pass session_mainline=session-mainline-control-rollout handoff_required=false mainline_drift_detected=false status_ceiling=partial accepted=false integrated=false production_ready=false
+```
+
+### loop_session_registry
+
+```text
+loop_session_registry=pass repo_recorded_loop_rounds=944 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=404,Ontology___WAS_governance=82,CodeGraph_governance=38,Agent-Reach_governance=21,Headroom___LCX_governance=40,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=1,LOOP_localization_governance=1,UI_governance_and_validation=4,Session_declaration_and_mainline=5
+```
+
+### session_mainline_preflight_enforcement
+
+```text
+session_mainline_preflight_enforcement=pass preflight_decision=continue_current_mainline_only mainline_drift_detected=false handoff_required=false authorization_required=false live_codex_threads_covered=false auto_takeover_allowed=false
+```
+
+### session_mainline_drift_watch
+
+```text
+session_mainline_drift_watch=pass watch_mode=repo_recorded_governance_only positive_fixtures=2 negative_fixtures=4 live_codex_threads_covered=false auto_takeover_allowed=false
+```
+
+### session_mainline_handoff_request_gate
+
+```text
+session_mainline_handoff_request_gate=pass gate_mode=explicit_user_confirmation_required proposal_only_for_other_sessions=true live_codex_threads_covered=false auto_takeover_allowed=false
+```
 
 ### document_pollution
 
 ```text
 document_pollution=pass
+```
+
+### fixed_doc_id_preservation
+
+```text
+gckf_p0_document_control_preserves_fixed_doc_id=pass
+frontmatter_doc_id_preservation=covered
+old_short_doc_ids_present=0
+fixed_doc_ids_present=16
+execution_mode=read_only_validation
+```
+
+### chinese_localization
+
+```text
+localization_gate=pass
+docs_checked=2028
+software_files_checked=240
+findings=0
 ```
 
 ### kds_token

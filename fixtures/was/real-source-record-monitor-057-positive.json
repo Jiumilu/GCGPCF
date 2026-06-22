@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "circular_recovery_authorization_gaps": 0,
+  "reverse_logistics_pickup_record_gaps": 0,
+  "returned_material_inspection_gaps": 0,
+  "reuse_or_reprocessing_record_gaps": 0,
+  "recycling_partner_certificate_gaps": 0,
+  "waste_disposal_or_residue_manifest_gaps": 0,
+  "resource_recovery_accounting_gaps": 0,
+  "accepted_for_circular_recovery_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "circular_recovery_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

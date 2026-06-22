@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "purchase_requisition_gaps": 0,
+  "purchase_order_gaps": 0,
+  "supplier_order_acknowledgement_gaps": 1,
+  "delivery_schedule_commitment_gaps": 0,
+  "purchase_order_change_record_gaps": 0,
+  "procurement_approval_record_gaps": 0,
+  "supplier_communication_log_gaps": 0,
+  "accepted_for_purchase_commitment_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "purchase_commitment_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

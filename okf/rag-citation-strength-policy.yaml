@@ -1,0 +1,72 @@
+policy_id: okf.rag_citation_strength_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+levels:
+  - code: L0
+    label: no_reference
+    can_retrieve: false
+    can_display_summary: false
+    can_answer: false
+    can_strong_reference: false
+    can_business_assist: false
+  - code: L1
+    label: retrieval_only
+    can_retrieve: true
+    can_display_summary: false
+    can_answer: false
+    can_strong_reference: false
+    can_business_assist: false
+  - code: L2
+    label: metadata_or_summary
+    can_retrieve: true
+    can_display_summary: true
+    can_answer: false
+    can_strong_reference: false
+    can_business_assist: false
+  - code: L3
+    label: weak_reference
+    can_retrieve: true
+    can_display_summary: true
+    can_answer: true
+    can_strong_reference: false
+    can_business_assist: false
+  - code: L4
+    label: strong_reference
+    can_retrieve: true
+    can_display_summary: true
+    can_answer: true
+    can_strong_reference: true
+    can_business_assist: false
+  - code: L5
+    label: business_assist_reference
+    can_retrieve: true
+    can_display_summary: true
+    can_answer: true
+    can_strong_reference: true
+    can_business_assist: true
+rag_admission_mapping:
+  blocked: [L0]
+  sensitive_metadata_only: [L1, L2]
+  repair_required: [L1, L2]
+  limited: [L3]
+  safe: [L4]
+l5_conditions:
+  rag_admission: safe
+  trust_levels: [T0, T1]
+  confirmation_status: [human_confirmed, committee_confirmed]
+  evidence_required: true
+hard_boundaries:
+  l5_does_not_auto_writeback: true
+  l5_does_not_auto_confirm_revenue: true
+  l5_does_not_replace_committee_decision: true
+  sensitive_requires_metadata_or_redaction: true
+  limited_requires_boundary_notice: true
+  repair_required_must_not_be_conclusion: true
+no_write_assertions:
+  writes_kds_fact: 0
+  writes_waes_gate_result: 0
+  writes_business_system: 0
+  writes_revenue_distribution: 0
+  writes_external_api: 0

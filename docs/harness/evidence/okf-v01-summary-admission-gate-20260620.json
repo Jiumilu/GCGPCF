@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-22T01:57:59.854415+00:00",
+  "status": "pass",
+  "admission_state": "metadata_only_locked",
+  "concepts": 81,
+  "approved_summaries": 0,
+  "sensitive_hits": 0,
+  "ledger": "docs/harness/evidence/okf-v01-summary-admission-ledger-20260620.md",
+  "approval_request_gate": "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md",
+  "approval_request_gate_output": "okf_summary_approval_request_gate=pass requests=1 failures=0",
+  "approval_expiry_gate": "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
+  "approval_expiry_gate_output": "okf_summary_approval_expiry_gate=pass requests=1 expired_real_requests=0 fixtures=1",
+  "ledger_rows": 3,
+  "pending_requests": 3,
+  "approved_requests": 0,
+  "violations": [],
+  "required_before_summary_admission": [
+    "owner approval",
+    "source sensitivity review",
+    "explicit summary scope",
+    "active approval request within pending window",
+    "no token/account/credential/financial-voucher/contract-fulltext export",
+    "updated OKF source hash and collection gate"
+  ],
+  "boundary": {
+    "source_of_record": "KDS / Git controlled documents",
+    "current_derivation_policy": "metadata_only_no_body_copy",
+    "does_not_admit_summaries": true,
+    "does_not_upgrade_business_status": true
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "id": "waes-precheck-bundle-read-model-dks-107",
+  "description": "Local dry-run read models that bundle DKS-106 WAES prechecks for Brain, KWE, and GFIS Assistant. Bundles are read-only and do not persist gate results.",
+  "bundles": [
+    {
+      "bundleId": "waes-bundle-brain-governance-001",
+      "surface": "brain",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-gehua",
+      "scope": "governance_review",
+      "precheckRefs": [
+        "waes-precheck-committee-001",
+        "waes-precheck-freeze-001",
+        "waes-precheck-blocked-001"
+      ],
+      "routeRefs": ["route-finance-controlled-001", "route-quality-dispute-001"],
+      "gateSummary": [
+        {"gateType": "committee_gate", "status": "committee_required", "count": 1},
+        {"gateType": "freeze_gate", "status": "freeze_required", "count": 1},
+        {"gateType": "evidence_gate", "status": "blocked", "count": 1}
+      ],
+      "reasonCodeSummary": ["committee_required_by_policy", "missing_evidence", "major_violation_risk", "blocked_route_acknowledged"],
+      "requiredActions": ["prepare_committee_review_candidate", "route_to_waes_freeze_gate", "keep_blocked_until_evidence_repair"],
+      "reviewerRequirements": ["committee_required", "governance_owner_required"],
+      "allowedReadActions": [
+        "view_precheck_summary",
+        "view_required_actions",
+        "view_reason_codes",
+        "view_reviewer_requirement",
+        "view_harness_evidence_hint"
+      ],
+      "blockedActions": [
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "promote_lifecycle",
+        "write_business_system",
+        "complete_committee_decision",
+        "confirm_revenue_or_score"
+      ],
+      "canCreateWaesGateResult": false,
+      "canCreateKweWorkItem": false,
+      "canPromoteLifecycle": false,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "bundleId": "waes-bundle-kwe-validation-001",
+      "surface": "kwe",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-gehua",
+      "scope": "validation_queue",
+      "precheckRefs": [
+        "waes-precheck-submit-evidence-001",
+        "waes-precheck-metadata-review-001",
+        "waes-precheck-freeze-001"
+      ],
+      "routeRefs": ["route-order-status-001", "route-pod-metadata-001", "route-quality-dispute-001"],
+      "gateSummary": [
+        {"gateType": "source_gate", "status": "precheck_passed", "count": 1},
+        {"gateType": "sensitive_data_gate", "status": "repair_required", "count": 1},
+        {"gateType": "freeze_gate", "status": "freeze_required", "count": 1}
+      ],
+      "reasonCodeSummary": ["owner_confirmation_missing", "missing_evidence", "major_violation_risk"],
+      "requiredActions": ["run_source_gate", "confirm_metadata_only_scope", "repair_quality_evidence"],
+      "reviewerRequirements": ["human_required", "governance_owner_required"],
+      "allowedReadActions": [
+        "view_precheck_summary",
+        "view_required_actions",
+        "view_reason_codes",
+        "view_reviewer_requirement",
+        "view_harness_evidence_hint"
+      ],
+      "blockedActions": [
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "promote_lifecycle",
+        "write_business_system",
+        "complete_committee_decision",
+        "confirm_revenue_or_score"
+      ],
+      "canCreateWaesGateResult": false,
+      "canCreateKweWorkItem": false,
+      "canPromoteLifecycle": false,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "bundleId": "waes-bundle-gfis-guidance-001",
+      "surface": "gfis_assistant",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-gehua",
+      "scope": "gfis_writeback_guidance",
+      "precheckRefs": [
+        "waes-precheck-submit-evidence-001",
+        "waes-precheck-metadata-review-001"
+      ],
+      "routeRefs": ["route-order-status-001", "route-pod-metadata-001"],
+      "gateSummary": [
+        {"gateType": "evidence_gate", "status": "precheck_passed", "count": 1},
+        {"gateType": "sensitive_data_gate", "status": "repair_required", "count": 1}
+      ],
+      "reasonCodeSummary": ["owner_confirmation_missing"],
+      "requiredActions": ["run_evidence_gate", "run_sensitive_data_gate"],
+      "reviewerRequirements": ["human_required"],
+      "allowedReadActions": [
+        "view_precheck_summary",
+        "view_required_actions",
+        "view_reason_codes",
+        "view_reviewer_requirement",
+        "view_harness_evidence_hint"
+      ],
+      "blockedActions": [
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "promote_lifecycle",
+        "write_business_system",
+        "complete_committee_decision",
+        "confirm_revenue_or_score"
+      ],
+      "canCreateWaesGateResult": false,
+      "canCreateKweWorkItem": false,
+      "canPromoteLifecycle": false,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expected": {
+    "bundleCount": 3,
+    "brainBundles": 1,
+    "kweBundles": 1,
+    "gfisAssistantBundles": 1,
+    "bundlesWithBlockedActions": 3,
+    "gateSummaryItems": 8,
+    "canCreateWaesGateResults": 0,
+    "canCreateKweWorkItems": 0,
+    "canPromoteLifecycle": 0,
+    "writesWaesGateResult": 0,
+    "writesKweWorkItem": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesBusinessSystem": 0,
+    "writesTargetReceipt": 0,
+    "writesCommitteeDecisionCompletion": 0,
+    "writesRevenueOrScoreConfirmation": 0,
+    "writesQuotaTransfer": 0,
+    "writesBountySettlement": 0,
+    "writesExternalApi": 0
+  }
+}

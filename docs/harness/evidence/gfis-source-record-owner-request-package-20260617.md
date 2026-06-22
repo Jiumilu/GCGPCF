@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-7607A76253
-title: GFIS Source Record Owner Request Package
+title: GFIS 来源记录负责人请求包
 project: GPCF
 related_projects: [GFIS, GPC, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md
 source_path: docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GFIS Source Record Owner Request Package
+# GFIS 来源记录负责人请求包
 
 - package_id: `GPCF-GFIS-SOURCE-RECORD-OWNER-REQUEST-20260617`
 - round_id: `GPCF-L4-GFIS-REPAIR-214`
@@ -24,7 +24,7 @@ superseded_by: []
 - request_state: `ready_to_request_owner_response_not_submitted`
 - expected_submission_path: `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/*.customer-requirement-platform-order.source-record.json`
 
-## Required Fields
+## 必填字段
 
 - `object_family`
 - `sop_stage`
@@ -39,7 +39,7 @@ superseded_by: []
 - `received_at`
 - `runtime_site_context`
 
-## Forbidden Substitutes
+## 禁止替代材料
 
 - `formal_quotation`
 - `contract_review_draft`
@@ -48,7 +48,7 @@ superseded_by: []
 - `loop_document`
 - `gfis_demo`
 
-## Current Counts
+## 当前计数
 
 | metric | value |
 |---|---:|
@@ -62,7 +62,7 @@ superseded_by: []
 | `waes_review` | 0 |
 | `verified` | 0 |
 
-## Non-claims
+## 不声明事项
 
 - `request_package_is_source_record`: `false`
 - `owner_response_received`: `false`
@@ -82,6 +82,6 @@ superseded_by: []
 - `permission_change`: `false`
 - `accepted_integrated`: `false`
 
-## Next
+## 下一步
 
 `obtain_real_customer_order_original_or_platform_order_receipt_json_from_owner`

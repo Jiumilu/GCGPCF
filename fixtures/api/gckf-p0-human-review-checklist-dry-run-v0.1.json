@@ -1,0 +1,89 @@
+{
+  "contractId": "GCKF-P0-HUMAN-REVIEW-CHECKLIST-DRY-RUN-V0.1",
+  "description": "P0-D21 human review checklist dry-run generated from D20 closure readiness remaining actions and risks.",
+  "sourceReadiness": "fixtures/api/gckf-p0-closure-readiness-dry-run-v0.1.json",
+  "checklistStatus": "candidate",
+  "notFinalAcceptance": true,
+  "reviewItems": [
+    {
+      "id": "GCKF-P0-HR-001",
+      "title": "确认 D9-D19 候选证据是否足够进入 P0 人工验收",
+      "sourceActionIndex": 0,
+      "requiredDecision": "approve_or_repair",
+      "requiredEvidence": [
+        "D9-D19 validator output",
+        "D9-D20 LOOP evidence",
+        "D19 candidate ledger"
+      ],
+      "allowedOutcomes": ["approved_for_harness_review", "repair_required", "rejected"],
+      "defaultOutcome": "pending"
+    },
+    {
+      "id": "GCKF-P0-HR-002",
+      "title": "确认 Harness Governance 是否写入或拒绝正式 evidence record",
+      "sourceActionIndex": 1,
+      "requiredDecision": "write_or_reject_harness_evidence",
+      "requiredEvidence": [
+        "D20 closure readiness dry-run",
+        "D19 acceptance packet ledger dry-run",
+        "Harness reviewer decision"
+      ],
+      "allowedOutcomes": ["harness_evidence_written", "harness_rejected", "repair_required"],
+      "defaultOutcome": "pending"
+    },
+    {
+      "id": "GCKF-P0-HR-003",
+      "title": "确认 dry-run 不得提升 lifecycle 为 accepted 或 integrated",
+      "sourceActionIndex": 2,
+      "requiredDecision": "confirm_no_lifecycle_promotion",
+      "requiredEvidence": [
+        "D20 forbidden closure list",
+        "no accepted lifecycle validator outputs"
+      ],
+      "allowedOutcomes": ["no_promotion_confirmed", "violation_found"],
+      "defaultOutcome": "pending"
+    },
+    {
+      "id": "GCKF-P0-HR-004",
+      "title": "确认生产 runtime 与业务写回仍在 P0 dry-run 范围外",
+      "sourceActionIndex": 3,
+      "requiredDecision": "confirm_runtime_and_writeback_out_of_scope",
+      "requiredEvidence": [
+        "no server validator outputs",
+        "no database validator outputs",
+        "no business writeback validator outputs"
+      ],
+      "allowedOutcomes": ["out_of_scope_confirmed", "scope_violation_found"],
+      "defaultOutcome": "pending"
+    }
+  ],
+  "riskRefs": [
+    "GCKF-P0-RISK-HARNESS-NOT-WRITTEN",
+    "GCKF-P0-RISK-HUMAN-REVIEW-PENDING",
+    "GCKF-P0-RISK-RUNTIME-NOT-LIVE"
+  ],
+  "forbiddenClosures": [
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "harness_evidence_written_without_review"
+  ],
+  "expectedSummary": {
+    "checklistStatus": "candidate",
+    "reviewItemCount": 4,
+    "riskRefCount": 3,
+    "forbiddenClosureCount": 5,
+    "pendingOutcomeCount": 4,
+    "notFinalAcceptance": true,
+    "sourceReadinessStatus": "review_ready_candidate",
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

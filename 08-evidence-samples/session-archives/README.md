@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md
 source_path: 08-evidence-samples/session-archives/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

@@ -1,0 +1,115 @@
+{
+  "evidence_id": "CODEGRAPH-WATCHLIST-SYNC-PLAN-20260621",
+  "status": "watchlist_sync_plan_ready",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-WATCHLIST-SYNC-PLAN-001",
+  "objective": "Define owner, threshold, and action rules for CodeGraph watchlist items without syncing Brain or Studio and without business development.",
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260621.json",
+    "docs/harness/evidence/codegraph-sync-only-closure-authorized-20260621.json",
+    "docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.json"
+  ],
+  "watchlist": [
+    {
+      "repo": "GlobalCloud Brain",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "owner": "Brain repo owner + GPCF CodeGraph steward",
+      "current_pending": {"added": 0, "modified": 12, "removed": 0},
+      "classification": "active_drift_action_required",
+      "threshold": "pending_total >= 6 after an authorized sync-only closure",
+      "allowed_without_new_authorization": [
+        "codegraph status --json .",
+        "git status --short -- .codegraph",
+        "GPCF evidence and validator generation"
+      ],
+      "requires_explicit_authorization": [
+        "Brain codegraph sync",
+        "Brain business code edits",
+        "git add/commit/push",
+        "deploy"
+      ],
+      "next_action": "prepare_sync_authorization_pack"
+    },
+    {
+      "repo": "GlobalCloud Studio",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "owner": "Studio repo owner + GPCF CodeGraph steward",
+      "current_pending": {"added": 0, "modified": 5, "removed": 0},
+      "classification": "active_drift_action_required",
+      "threshold": "pending_total >= 5 after an authorized sync-only closure",
+      "allowed_without_new_authorization": [
+        "codegraph status --json .",
+        "git status --short -- .codegraph",
+        "GPCF evidence and validator generation"
+      ],
+      "requires_explicit_authorization": [
+        "Studio codegraph sync",
+        "Studio business code edits",
+        "git add/commit/push",
+        "deploy"
+      ],
+      "next_action": "prepare_sync_authorization_pack"
+    },
+    {
+      "repo": "GlobalCloud GFIS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+      "owner": "GFIS runtime owner + GPCF CodeGraph steward",
+      "current_pending": {"added": 1, "modified": 0, "removed": 0},
+      "classification": "policy_exception_watch",
+      "threshold": "pending_total == 1 and added file produces zero-node residual",
+      "allowed_without_new_authorization": [
+        "codegraph status --json .",
+        "git status --short -- .codegraph",
+        "policy exception revalidation"
+      ],
+      "requires_explicit_authorization": [
+        "GFIS codegraph sync",
+        "GFIS runtime or business repair",
+        "bench migrate/schema sync",
+        "production write"
+      ],
+      "next_action": "keep_policy_exception_watch"
+    },
+    {
+      "repo": "GlobalCoud GPCF",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+      "owner": "GPCF governance owner",
+      "current_pending": {"added": 0, "modified": 0, "removed": 0},
+      "classification": "self_sync_clear",
+      "threshold": "GPCF governance evidence pending may be self-synced after evidence generation",
+      "allowed_without_new_authorization": [
+        "GPCF codegraph sync after governance evidence generation",
+        "GPCF validator replay",
+        "document governance checks"
+      ],
+      "requires_explicit_authorization": [
+        "git add/commit/push",
+        "production write",
+        "accepted/integrated/production_ready upgrade"
+      ],
+      "next_action": "continue_self_sync_after_each_governance_round"
+    }
+  ],
+  "global_rules": {
+    "codegraph_git_status_entries_required": 0,
+    "business_development_allowed": false,
+    "sync_without_authorization_allowed_for_brain_or_studio": false,
+    "status_ceiling": "review_required",
+    "required_authorization_phrase": "授权执行 Brain/Studio CodeGraph watchlist sync-only closure"
+  },
+  "status_boundaries": {
+    "business_code_edits": false,
+    "project_internal_development": false,
+    "production_write": false,
+    "external_api_write": false,
+    "kds_canonical_write": false,
+    "git_add": false,
+    "git_commit": false,
+    "git_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002"
+}

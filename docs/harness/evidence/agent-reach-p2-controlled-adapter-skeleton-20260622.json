@@ -1,0 +1,84 @@
+{
+  "id": "agent-reach-controlled-adapter-dry-run-20260622",
+  "round": "GPCF-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001",
+  "date": "2026-06-22",
+  "status": "controlled_adapter_skeleton_ready",
+  "current_admission": "limited_candidate_only",
+  "phase": "P2 Controlled Adapter Skeleton",
+  "mode": "dry_run_only",
+  "upstream": {
+    "head": "22d7f03a59401b5740b380c3ad43e3ff7a9dc373",
+    "package": "agent-reach",
+    "version": "1.5.0"
+  },
+  "input_artifacts": [
+    "docs/harness/evidence/agent-reach-p1-isolated-install-20260622.json",
+    "fixtures/agent-reach/controlled-adapter-dry-run.json"
+  ],
+  "output_artifacts": [
+    "third_party/agent-reach/CONTROLLED_ADAPTER.md",
+    "tools/kds-sync/run_agent_reach_controlled_adapter_dry_run.py",
+    "tools/kds-sync/validate_agent_reach_p2_controlled_adapter_skeleton.py",
+    "docs/harness/evidence/agent-reach-p2-controlled-adapter-skeleton-20260622.json",
+    "docs/harness/evidence/agent-reach-p2-controlled-adapter-skeleton-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001.md"
+  ],
+  "adapter_policy": {
+    "allowed_command_count": 3,
+    "blocked_command_count": 6,
+    "candidate_schema_field_count": 7,
+    "candidate_count": 2,
+    "allowed_commands": [
+      "agent-reach --help",
+      "agent-reach --version",
+      "agent-reach doctor --json"
+    ],
+    "blocked_command_kinds": [
+      "configuration",
+      "installer",
+      "update",
+      "watch",
+      "transcribe",
+      "live_search"
+    ],
+    "policy_block_reasons": [
+      "credential_required_channel",
+      "production_write",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "global_mcp_config_write",
+      "live_external_search_without_authorization"
+    ]
+  },
+  "checks": {
+    "runner_executes": "pass",
+    "fixture_loaded": true,
+    "candidate_schema_valid": true,
+    "candidate_only": true,
+    "fixture_only": true,
+    "dry_run_only": true
+  },
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "live_external_search_invoked": false,
+    "doctor_health_probe_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "not_live_search_verified",
+    "not_search_quality_accepted",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P3-QUALITY-REPLAY-HARNESS-001"
+}

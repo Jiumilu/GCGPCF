@@ -1,0 +1,89 @@
+{
+  "schema_id": "HEADROOM-LCX-AUTHORIZATION-SCHEMA-20260622",
+  "schema_version": "v1.0",
+  "scope": {
+    "project_count": 15,
+    "projects": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "exact_project_scope_required": true
+  },
+  "required_fields": [
+    "authorized_window_id",
+    "authorized_by",
+    "authorized_at",
+    "sanitized_production_token_ledger",
+    "rollback_plan_id",
+    "waes_harness_admission_decision"
+  ],
+  "field_rules": {
+    "authorized_window_id": {
+      "required": true,
+      "type": "string",
+      "must_not_equal": "REQUIRED_USER_INPUT",
+      "prefix": "LCX-MEASURE-"
+    },
+    "authorized_by": {
+      "required": true,
+      "type": "string",
+      "must_not_equal": "REQUIRED_USER_INPUT",
+      "human_approver_required": true
+    },
+    "authorized_at": {
+      "required": true,
+      "type": "string",
+      "must_not_equal": "REQUIRED_USER_INPUT",
+      "requires_timezone": true
+    },
+    "sanitized_production_token_ledger": {
+      "required": true,
+      "type": "string",
+      "must_not_equal": "REQUIRED_USER_INPUT",
+      "reference_only": true,
+      "forbid_inline_raw_text": true
+    },
+    "rollback_plan_id": {
+      "required": true,
+      "type": "string",
+      "must_not_equal": "REQUIRED_USER_INPUT",
+      "must_reference_controlled_plan": true
+    },
+    "waes_harness_admission_decision": {
+      "required": true,
+      "type": "string",
+      "must_not_equal": "REQUIRED_USER_INPUT",
+      "allowed_values": [
+        "admitted_for_sanitized_measurement_precheck",
+        "blocked"
+      ],
+      "must_reference_evidence": true
+    }
+  },
+  "hard_false_until_waes_harness_admits": [
+    "production_token_measurement_allowed",
+    "production_proxy_started",
+    "production_sdk_enabled",
+    "production_external_api_write",
+    "kds_api_write",
+    "sensitive_material_processed",
+    "measured_production_tokens",
+    "production_admission_gate",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ]
+}

@@ -4,10 +4,10 @@ title: ODF Phase 9 动态源稳定化报告
 description: ODF Phase 9 动态源稳定化报告
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md
 source_path: docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md
-source_hash: 46e7549e29444fc2643145837d27299cb123c240b17f4e61866180cf8938f7da
+source_hash: 3bc6b366df66caea15d886d7ef082993f8788d16fc960f383f5dec5029696994
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 9 动态源稳定化报告
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md` |
-| source_hash | `46e7549e29444fc2643145837d27299cb123c240b17f4e61866180cf8938f7da` |
+| source_hash | `3bc6b366df66caea15d886d7ef082993f8788d16fc960f383f5dec5029696994` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

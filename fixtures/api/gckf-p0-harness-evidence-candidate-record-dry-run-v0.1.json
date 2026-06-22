@@ -1,0 +1,73 @@
+{
+  "contractId": "GCKF-P0-HARNESS-EVIDENCE-CANDIDATE-RECORD-DRY-RUN-V0.1",
+  "description": "P0-D23 Harness evidence candidate record dry-run derived from the D22 Harness review input packet. This is not a formal Harness evidence record.",
+  "candidateRecordStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceHarnessInputPacket": "fixtures/api/gckf-p0-harness-review-input-packet-dry-run-v0.1.json",
+  "candidateRecord": {
+    "id": "GCKF-P0-HER-CANDIDATE-001",
+    "recordType": "harness_evidence_candidate",
+    "subject": "GC-Knowledge Fabric P0 D9-D22 dry-run evidence review",
+    "sourcePacketRef": "GCKF-P0-HARNESS-REVIEW-INPUT-PACKET-DRY-RUN-V0.1",
+    "reviewStatus": "pending",
+    "allowedDecisionOutcomes": [
+      "approved_for_formal_harness_evidence",
+      "repair_required",
+      "rejected",
+      "scope_violation_found"
+    ],
+    "defaultDecisionOutcome": "pending",
+    "requiredReviewerType": "human_or_harness_governance",
+    "requiresHumanReview": true,
+    "requiresHarnessGovernance": true,
+    "writesFormalEvidence": false,
+    "writesAcceptedLifecycle": false
+  },
+  "sourceReviewInputs": [
+    "GCKF-P0-HI-001",
+    "GCKF-P0-HI-002",
+    "GCKF-P0-HI-003",
+    "GCKF-P0-HI-004"
+  ],
+  "sourceRiskRefs": [
+    "GCKF-P0-RISK-HARNESS-NOT-WRITTEN",
+    "GCKF-P0-RISK-HUMAN-REVIEW-PENDING",
+    "GCKF-P0-RISK-RUNTIME-NOT-LIVE"
+  ],
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-review-input-packet-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_harness_review_input_packet_dry_run.py",
+    "docs/gc-knowledge-fabric/harness-review-input-packet-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D22-001.md"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "candidateRecordStatus": "candidate",
+    "recordType": "harness_evidence_candidate",
+    "sourceHarnessInputPacketStatus": "candidate",
+    "reviewStatus": "pending",
+    "allowedDecisionOutcomeCount": 4,
+    "sourceReviewInputCount": 4,
+    "sourceRiskRefCount": 3,
+    "requiredSourceRefCount": 4,
+    "requiresHumanReview": true,
+    "requiresHarnessGovernance": true,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "waste_classification_record_gaps": 0,
+  "hazardous_waste_manifest_gaps": 0,
+  "licensed_disposal_vendor_permit_gaps": 0,
+  "waste_transfer_receipt_gaps": 0,
+  "treatment_or_recycling_certificate_gaps": 0,
+  "residue_disposal_confirmation_gaps": 0,
+  "regulator_disposal_report_gaps": 1,
+  "accepted_for_waste_disposal_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "waste_disposal_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "risk_transfer_document_gaps": 0,
+  "insurance_policy_evidence_gaps": 0,
+  "incident_report_gaps": 0,
+  "recall_record_gaps": 0,
+  "emergency_response_plan_gaps": 0,
+  "business_continuity_proof_gaps": 0,
+  "accepted_for_risk_resilience_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "risk_resilience_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

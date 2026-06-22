@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-070-20260622",
+  "status": "was_real_source_record_monitor_070_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-070",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-069",
+  "purpose": "Seventieth independent monitor pass for green supply chain biodiversity, land-use, protected-area, ecological impact, habitat restoration, stakeholder consultation, and nature-positive KPI evidence.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "biodiversity_baseline_survey_gaps": 0,
+    "land_use_compliance_permit_gaps": 0,
+    "protected_area_screening_record_gaps": 0,
+    "ecological_impact_assessment_gaps": 0,
+    "habitat_restoration_plan_gaps": 0,
+    "stakeholder_consultation_record_gaps": 0,
+    "nature_positive_kpi_monitoring_gaps": 0,
+    "accepted_for_biodiversity_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "biodiversity_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "biodiversity_baseline_survey_gap",
+      "land_use_compliance_permit_gap",
+      "protected_area_screening_record_gap",
+      "ecological_impact_assessment_gap",
+      "habitat_restoration_plan_gap",
+      "stakeholder_consultation_record_gap",
+      "nature_positive_kpi_monitoring_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "biodiversity_requirements": [
+    "biodiversity_baseline_survey",
+    "land_use_compliance_permit",
+    "protected_area_screening_record",
+    "ecological_impact_assessment",
+    "habitat_restoration_plan",
+    "stakeholder_consultation_record",
+    "nature_positive_kpi_monitoring"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-071",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer biodiversity baseline survey, land-use compliance permit, protected-area screening record, ecological impact assessment, habitat restoration plan, stakeholder consultation record, or nature-positive KPI monitoring",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

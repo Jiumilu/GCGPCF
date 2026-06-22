@@ -1,0 +1,24 @@
+{
+  "id": "waes-endpoint-no-write-smoke",
+  "expectedEndpoints": [
+    {"method": "POST", "path": "/api/v2/waes/gates/run", "routeMode": "gate_check"},
+    {"method": "POST", "path": "/api/v2/waes/rag-admission/check", "routeMode": "gate_check"},
+    {"method": "POST", "path": "/api/v2/waes/writeback/check", "routeMode": "gate_check"},
+    {"method": "POST", "path": "/api/v2/waes/revenue/check", "routeMode": "gate_check"},
+    {"method": "POST", "path": "/api/v2/waes/contribution/check", "routeMode": "gate_check"},
+    {"method": "POST", "path": "/api/v2/waes/external-share/check", "routeMode": "gate_check"},
+    {"method": "POST", "path": "/api/v2/waes/freeze", "routeMode": "freeze_request"}
+  ],
+  "expected": {
+    "endpointCount": 7,
+    "gateCheckCount": 6,
+    "freezeRequestCount": 1,
+    "routesRequiringHumanOrCommitteeFinality": 7,
+    "writesGateResult": 0,
+    "writesBusinessSystem": 0,
+    "writesAcceptedFact": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0,
+    "noWrite": true
+  }
+}

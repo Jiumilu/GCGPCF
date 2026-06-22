@@ -1,0 +1,51 @@
+{
+  "pack_id": "WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-NEGATIVE-WRITEBACK-PROMOTION",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "gate_stages": [
+    {
+      "stage_id": "S1-WAES-GATE-INPUT",
+      "owner": "WAES",
+      "required_contract": "was-waes-gate-input",
+      "decision_state": "approved",
+      "required_before": ["review_queue", "accepted", "integrated", "production_ready"],
+      "blocks": ["llm_only_claim", "missing_source_refs", "missing_evidence_refs"]
+    },
+    {
+      "stage_id": "S4-GFIS-KWE-WRITEBACK",
+      "owner": "GFIS/KWE",
+      "required_contract": "runtime_writeback_precheck",
+      "writeback_state": "authorized",
+      "required_before": ["runtime_intake", "runtime_primary_key", "gfis_write", "kwe_write"],
+      "blocks": ["waes_decision_missing", "kds_binding_missing", "owner_confirmation_missing"]
+    }
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 1,
+    "review_queue": 1,
+    "runtime_intake": 1,
+    "waes_review": 1,
+    "verified": 1,
+    "accepted": true,
+    "integrated": true,
+    "production_ready": true,
+    "runtime_write": true,
+    "kds_api_write": true
+  }
+}

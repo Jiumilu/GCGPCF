@@ -1,0 +1,104 @@
+{
+  "evidence_id": "HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-20260621",
+  "task_id": "GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001",
+  "date": "2026-06-21",
+  "status": "p2_mcp_sdk_dry_run_smoke_completed",
+  "headroom_version": "0.26.0",
+  "telemetry": "off",
+  "scope": "local_development_dry_run_only",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "sdk_smoke": {
+    "tokens_before": 82,
+    "tokens_after": 50,
+    "tokens_saved": 32,
+    "compression_ratio": 0.3902439024390244,
+    "transforms_applied": [
+      "router:text:0.20"
+    ],
+    "raw_sdk_marker_gate": false,
+    "missing_markers": [
+      "GPCF",
+      "KDS",
+      "WAES",
+      "production_admission_gate",
+      "accepted"
+    ],
+    "adapter": "compressed_payload_plus_marker_index",
+    "adapted_marker_gate": true,
+    "adapted_missing_markers": [],
+    "raw_text_stored": false,
+    "synthetic_input_only": true,
+    "sdk_smoke_gate": true
+  },
+  "mcp_smoke": {
+    "mcp_help_exit_code": 0,
+    "mcp_serve_help_exit_code": 0,
+    "mcp_status_help_exit_code": 0,
+    "mcp_cli_gate": true,
+    "mcp_install_executed": false,
+    "mcp_server_started": false,
+    "mcp_retrieve_called": false
+  },
+  "retrieve_gate": {
+    "configured": true,
+    "visibility": "restricted",
+    "requires_waes_gate": true,
+    "requires_reason": true,
+    "requires_harness_evidence": true,
+    "requires_sensitive_check": true
+  },
+  "harness_schema": {
+    "evidence_schema_gate": true
+  },
+  "gates": {
+    "p2_mcp_sdk_dry_run_gate": true,
+    "sdk_smoke_gate": true,
+    "mcp_cli_gate": true,
+    "retrieve_gate_configured": true,
+    "harness_evidence_schema_gate": true,
+    "telemetry_default_off": true,
+    "synthetic_input_only": true,
+    "raw_sensitive_context_stored": false,
+    "mcp_install_executed": false,
+    "mcp_server_started": false,
+    "mcp_retrieve_called": false,
+    "external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_mcp_installed": true,
+    "not_mcp_server_started": true,
+    "not_retrieve_called": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_sensitive_material_processing": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  },
+  "next_round": "GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001"
+}

@@ -1,0 +1,139 @@
+{
+  "evidence_id": "AGENT-REACH-LIMITED-CANDIDATE-INGESTION-DRY-RUN-LEDGER-20260622",
+  "date": "2026-06-22",
+  "status": "limited_candidate_ingestion_dry_run_complete",
+  "scope": "GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-DRY-RUN-001",
+  "objective": "Generate a replayable dry-run ledger for Agent-Reach limited candidates without writing KDS canonical Markdown, GFIS source-of-record, production configuration, or strong RAG corpus.",
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-limited-candidate-ingestion-plan-20260622.json",
+    "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json"
+  ],
+  "execution_mode": "candidate_metadata_dry_run_only",
+  "external_search_invoked": false,
+  "agent_reach_runtime_invoked": false,
+  "kds_canonical_write_count": 0,
+  "gfis_source_of_record_write_count": 0,
+  "production_config_write_count": 0,
+  "strong_rag_write_count": 0,
+  "candidate_records": [
+    {
+      "candidate_id": "agent-reach-limited-candidate-knowledge-provenance-rag",
+      "source_id": "knowledge_provenance_rag",
+      "source_url": "https://gautierdorval.com/en/frameworks/rag-governance-retrieval-and-inference-control/",
+      "secondary_source_url": "https://air-governance-framework.finos.org/mitigations/mi-13_providing-citations-and-source-traceability-for-ai-generated-information.html",
+      "source_type": "third_party_framework_with_governance_cross_check",
+      "decision": "accept_limited",
+      "accepted_scope": "rag_governance_context_only",
+      "verification_reason": "The candidate aligns with independent citation/source-traceability governance guidance, but it is not GlobalCloud canonical policy.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only",
+      "provenance_evidence_path": "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json",
+      "review_status": "dry_run_candidate_recorded",
+      "blocked_outputs": [
+        "kds_canonical_markdown",
+        "strong_rag_citation",
+        "production_config"
+      ]
+    },
+    {
+      "candidate_id": "agent-reach-limited-candidate-green-supply-chain-policy",
+      "source_id": "green_supply_chain_policy",
+      "official_standard_url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=810E2EDF4E19BAF0934D86105D45FE5A",
+      "standard_identifier": "GB/T 39256-2020",
+      "source_type": "official_standard_registry",
+      "decision": "accept_limited",
+      "accepted_scope": "official_standard_metadata_reference",
+      "verification_reason": "The commercial mirror should not be canonical, but the standard identity and status were verified against the official SAMR/SAC public standard registry.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only",
+      "provenance_evidence_path": "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json",
+      "review_status": "dry_run_candidate_recorded",
+      "blocked_outputs": [
+        "kds_canonical_markdown",
+        "strong_rag_citation",
+        "gfis_source_of_record"
+      ]
+    },
+    {
+      "candidate_id": "agent-reach-limited-candidate-ai-agent-evidence-gate",
+      "source_id": "ai_agent_evidence_gate",
+      "repository_url": "https://github.com/undercurrentai/aegis-mcp",
+      "license_observation": "MIT license file observed in repository navigation",
+      "source_type": "open_source_repository",
+      "decision": "accept_limited",
+      "accepted_scope": "open_source_tool_candidate_only",
+      "verification_reason": "The repository is relevant as a tool candidate for governance gates, but it is not WAES policy and still requires legal/security review before use.",
+      "security_review_required": true,
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only",
+      "provenance_evidence_path": "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json",
+      "review_status": "dry_run_candidate_recorded",
+      "blocked_outputs": [
+        "tool_installation",
+        "production_config",
+        "waes_policy_replacement"
+      ]
+    },
+    {
+      "candidate_id": "agent-reach-limited-candidate-agent-reach-capability",
+      "source_id": "agent_reach_capability",
+      "repository_url": "https://github.com/Panniantong/Agent-Reach",
+      "package_name": "agent-reach",
+      "version": "1.5.0",
+      "license": "MIT",
+      "source_type": "official_repository_metadata",
+      "decision": "accept_limited",
+      "accepted_scope": "agent_reach_capability_metadata_only",
+      "verification_reason": "The official repository metadata aligns with the isolated PoC version and license evidence, but this still does not prove production integration.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only",
+      "provenance_evidence_path": "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json",
+      "review_status": "dry_run_candidate_recorded",
+      "blocked_outputs": [
+        "production_integration",
+        "global_mcp_configuration",
+        "kds_canonical_markdown"
+      ]
+    }
+  ],
+  "rejected_records": [
+    {
+      "source_id": "factory_execution_traceability",
+      "decision": "reject",
+      "ingestion_allowed": false,
+      "blocked_reason": "Vendor explanatory material cannot define GlobalCloud GFIS source-of-record behavior or architecture boundaries.",
+      "provenance_evidence_path": "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json"
+    }
+  ],
+  "quality_summary": {
+    "candidate_count": 4,
+    "rejected_count": 1,
+    "all_candidates_have_source_provenance": true,
+    "all_candidates_have_review_status": true,
+    "all_candidates_keep_limited_admission": true,
+    "rejected_records_ingested": 0,
+    "credential_leakage_count": 0,
+    "canonical_write_count": 0,
+    "production_write_count": 0,
+    "status_upgrade_allowed": false
+  },
+  "rollback": {
+    "mode": "remove_dry_run_artifacts_only",
+    "canonical_data_touched": false,
+    "production_config_touched": false,
+    "rollback_scope": [
+      "docs/harness/evidence/agent-reach-limited-candidate-ingestion-dry-run-ledger-20260622.json",
+      "docs/harness/evidence/agent-reach-limited-candidate-ingestion-dry-run-ledger-20260622.md",
+      "docs/harness/loops/loop-round-GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-DRY-RUN-001.md",
+      "tools/kds-sync/validate_agent_reach_limited_candidate_ingestion_dry_run.py"
+    ]
+  },
+  "next_round": "GPCF-AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-001",
+  "non_claims": [
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not install or configure Agent-Reach in production",
+    "does not convert limited candidates into strong RAG citations",
+    "does not upgrade accepted, integrated, or production_ready status"
+  ]
+}

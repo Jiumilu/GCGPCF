@@ -1,0 +1,105 @@
+{
+  "contributions": [
+    {
+      "id": "contrib-knowledge-candidate-001",
+      "contributionType": "knowledge",
+      "candidateScore": 20,
+      "confirmationStatus": "candidate",
+      "revenueRelated": false,
+      "expectedConfirmed": false
+    },
+    {
+      "id": "contrib-order-confirmed-001",
+      "contributionType": "order",
+      "candidateScore": 100,
+      "confirmedScore": 80,
+      "confirmationStatus": "human_confirmed",
+      "revenueRelated": true,
+      "revenueRef": "rev-formal-001",
+      "expectedConfirmed": true
+    }
+  ],
+  "revenues": [
+    {
+      "id": "rev-formal-001",
+      "revenueType": "formal_revenue",
+      "basis": "cash_received",
+      "amount": 100000,
+      "evidenceRefs": ["ev-cash-001"],
+      "distributionStatus": "confirmed",
+      "expectedDistributionEligible": true
+    },
+    {
+      "id": "rev-invoiced-001",
+      "revenueType": "invoiced_revenue",
+      "basis": "invoice",
+      "amount": 120000,
+      "evidenceRefs": ["ev-invoice-001"],
+      "distributionStatus": "under_review",
+      "expectedDistributionEligible": false
+    },
+    {
+      "id": "rev-potential-001",
+      "revenueType": "potential_revenue",
+      "basis": "opportunity",
+      "amount": 300000,
+      "evidenceRefs": [],
+      "distributionStatus": "candidate",
+      "expectedDistributionEligible": false
+    }
+  ],
+  "quotas": [
+    {
+      "id": "quota-platform-001",
+      "quotaType": "platform_quota",
+      "amount": 1000000,
+      "usedAmount": 120000,
+      "revenuePoolEligible": true,
+      "expectedValid": true
+    },
+    {
+      "id": "quota-self-purchased-001",
+      "quotaType": "self_purchased_quota",
+      "amount": 200000,
+      "usedAmount": 10000,
+      "revenuePoolEligible": false,
+      "expectedValid": true
+    },
+    {
+      "id": "quota-self-purchased-invalid-001",
+      "quotaType": "self_purchased_quota",
+      "amount": 200000,
+      "usedAmount": 10000,
+      "revenuePoolEligible": true,
+      "expectedValid": false
+    }
+  ],
+  "bounties": [
+    {
+      "id": "bounty-gap-accepted-001",
+      "gapRef": "gap-pod-001",
+      "status": "accepted",
+      "settlementModes": ["knowledge_points"],
+      "evidenceRefs": ["ev-gap-acceptance-001"],
+      "expectedSettlementEligible": true
+    },
+    {
+      "id": "bounty-gap-submitted-001",
+      "gapRef": "gap-finance-proof-001",
+      "status": "submitted",
+      "settlementModes": ["future_revenue_reference"],
+      "evidenceRefs": [],
+      "expectedSettlementEligible": false
+    }
+  ],
+  "expected": {
+    "formalDistributionEligible": 1,
+    "confirmedContributions": 1,
+    "validQuotas": 2,
+    "invalidQuotas": 1,
+    "settlementEligibleBounties": 1,
+    "realRevenueDistributions": 0,
+    "realQuotaMutations": 0,
+    "realBountySettlements": 0
+  }
+}

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/gpcf-l3-handoff-readiness-package-lr014.md
 source_path: docs/harness/gpcf-l3-handoff-readiness-package-lr014.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

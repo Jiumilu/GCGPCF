@@ -1,0 +1,73 @@
+policy_id: rag-response-citation-packet-policy
+version: v0.1
+description: RAG response citation packet contract for GC-Knowledge Fabric assistants.
+assistant_surfaces:
+  - brain
+  - pkc
+  - gfis_knowledge_assistant
+  - gfis_usage_assistant
+  - gfis_document_acceptance_assistant
+  - command_center
+  - agent
+answer_modes:
+  - no_answer
+  - metadata_only
+  - weak_answer
+  - strong_answer
+  - business_assist
+  - blocked_with_reason
+minimum_packet_fields:
+  - packet_id
+  - tenant_id
+  - user_id
+  - assistant_surface
+  - query
+  - answer_mode
+  - citations
+  - highest_citation_strength
+  - boundary_notices
+  - missing_evidence_refs
+  - waes_gate_refs
+  - acl_decision_refs
+  - generated_at
+  - no_write
+minimum_citation_fields:
+  - citation_id
+  - object_id
+  - source_refs
+  - evidence_refs
+  - trust_level
+  - rag_admission
+  - citation_strength
+  - domain
+  - pool_refs
+  - visibility
+  - metadata_only
+  - redacted
+  - can_use_for_answer
+  - can_use_for_strong_reference
+  - can_use_for_business_assist
+required_boundary_notices:
+  - source_boundary
+  - evidence_boundary
+  - rag_strength_boundary
+  - no_auto_writeback
+  - human_or_committee_finality
+hard_boundaries:
+  l0_citation_allowed: false
+  metadata_only_raw_content_allowed: false
+  l3_requires_boundary_notice: true
+  l4_l5_auto_writeback_allowed: false
+  l5_replaces_human_or_committee: false
+  missing_evidence_allows_strong_answer: false
+  blocked_rag_allowed_in_packet: false
+  t5_ai_only_allowed_as_fact: false
+  no_acl_allowed_in_packet: false
+  packet_pass_is_formal_fact: false
+no_write_assertions:
+  writes_kds_fact: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_business_system: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

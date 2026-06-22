@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D899DB2508
 title: GlobalCloud 智能体团队实施前证据与阻塞总表
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md
 source_path: 05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

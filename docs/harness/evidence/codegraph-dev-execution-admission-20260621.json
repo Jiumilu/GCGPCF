@@ -1,0 +1,92 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-ADMISSION-20260621",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001",
+  "status": "dev_execution_admission_ready",
+  "generated_at": "2026-06-21",
+  "objective": "建立 CodeGraph 进入业务开发执行层的准入规则、证据模板和 validator，使未来业务开发任务必须带 CodeGraph 影响分析。",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "artifacts": {
+    "admission_rule": "docs/codegraph/codegraph-dev-execution-admission.md",
+    "evidence_template": "templates/CODEGRAPH_DEV_EXECUTION_EVIDENCE_TEMPLATE.json",
+    "evidence_markdown": "docs/harness/evidence/codegraph-dev-execution-admission-20260621.md",
+    "loop_round": "docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md",
+    "validator": "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+  },
+  "required_commands": [
+    "codegraph query \"<功能/模块/接口关键词>\" --json",
+    "codegraph node \"<候选文件>\"",
+    "codegraph affected \"<候选文件>\" --json"
+  ],
+  "required_layers": [
+    "pre_change_impact_location",
+    "implementation_scope_constraint",
+    "affected_test_selection",
+    "acceptance_evidence",
+    "efficiency_metrics"
+  ],
+  "required_fields": {
+    "implementation_constraints": [
+      "target_nodes",
+      "affected_scope",
+      "files_allowed_to_change",
+      "files_not_to_touch",
+      "expected_tests"
+    ],
+    "test_selection": [
+      "affected_tests",
+      "fallback_tests",
+      "fallback_reason"
+    ],
+    "codegraph_evidence": [
+      "query",
+      "target_nodes",
+      "affected",
+      "changed_files",
+      "test_selection_reason",
+      "post_change_status"
+    ],
+    "efficiency_metrics": [
+      "manual_scan_files",
+      "codegraph_candidate_files",
+      "actual_changed_files",
+      "affected_tests",
+      "missed_impact_count",
+      "time_to_first_target"
+    ]
+  },
+  "admission_rules": {
+    "business_development_without_pre_change_codegraph_analysis": "blocked",
+    "codegraph_unavailable_exception_required_fields": [
+      "reason",
+      "fallback_scan",
+      "reviewer",
+      "expires_at"
+    ],
+    "affected_empty_requires_fallback_reason": true,
+    "waes_approval_not_implied": true,
+    "business_completion_not_implied": true
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002"
+}

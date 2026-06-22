@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E164F62976
 title: GlobalCloud智能体团队6个专项首轮实施前验证执行台账
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md
 source_path: 05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

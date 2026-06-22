@@ -1,0 +1,136 @@
+{
+  "evidence_id": "HEADROOM-LOOP-COST-OBSERVATION-20260621",
+  "date": "2026-06-21",
+  "status": "continuous_loop_cost_observation_enabled_for_metric_output",
+  "observation_window": {
+    "window_id": "HEADROOM-LOOP-COST-WINDOW-20260621-001",
+    "source_count": 5,
+    "included_count": 4,
+    "runtime_included_count": 3,
+    "blocked_scenario_count": 3
+  },
+  "policy_source": "docs/harness/evidence/headroom-marker-preservation-policy-20260621.json",
+  "allowed_scenarios": [
+    "headroom_cost_measurement_output",
+    "headroom_metric_json_array",
+    "marker_preserving_log_search_adapter_output"
+  ],
+  "blocked_scenarios": [
+    {
+      "scenario_id": "project_group_evidence_json",
+      "reason": [
+        "below_saving_threshold",
+        "rejected_not_smaller"
+      ]
+    },
+    {
+      "scenario_id": "loop_validation_log",
+      "reason": [
+        "marker_loss"
+      ]
+    },
+    {
+      "scenario_id": "rg_marker_search_output",
+      "reason": [
+        "marker_loss"
+      ]
+    }
+  ],
+  "aggregate": {
+    "runtime_tokens_before": 12240,
+    "runtime_tokens_after": 8882,
+    "runtime_tokens_saved": 3358,
+    "runtime_saving_rate": 0.274346,
+    "all_included_gates_pass": true,
+    "all_blocked_scenarios_excluded": true,
+    "production_admission_gate": false
+  },
+  "observations": [
+    {
+      "observation_id": "HEADROOM-OBS-L2-SURROGATE",
+      "source_evidence": "docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json",
+      "observation_type": "structured_surrogate_baseline",
+      "runtime_used": false,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 224759,
+      "tokens_after": 2359,
+      "tokens_saved": 222400,
+      "saving_rate": 0.989506,
+      "gate": true,
+      "scope": "project_group_sample_cost_model",
+      "raw_text_stored": false
+    },
+    {
+      "observation_id": "HEADROOM-OBS-RUNTIME-DIRECT",
+      "source_evidence": "docs/harness/evidence/headroom-runtime-probe-20260621.json",
+      "observation_type": "direct_runtime_probe",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": false,
+      "tokens_before": 314799,
+      "tokens_after": 314799,
+      "tokens_saved": 0,
+      "saving_rate": 0.0,
+      "gate": false,
+      "scope": "blocked_direct_markdown_loop_state",
+      "raw_text_stored": false
+    },
+    {
+      "observation_id": "HEADROOM-OBS-RUNTIME-SCENARIO-MATRIX",
+      "source_evidence": "docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.json",
+      "observation_type": "runtime_scenario_matrix",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 9082,
+      "tokens_after": 7727,
+      "tokens_saved": 1355,
+      "saving_rate": 0.149196,
+      "gate": true,
+      "scope": "scenario_discovery_only",
+      "raw_text_stored": false
+    },
+    {
+      "observation_id": "HEADROOM-OBS-COST-MEASUREMENT-OUTPUT",
+      "source_evidence": "docs/harness/evidence/headroom-cost-measurement-output-20260621.json",
+      "observation_type": "allowed_structured_metric_output",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 662,
+      "tokens_after": 248,
+      "tokens_saved": 414,
+      "saving_rate": 0.625378,
+      "gate": true,
+      "scope": "structured_metric_tool_output_only",
+      "raw_text_stored": false
+    },
+    {
+      "observation_id": "HEADROOM-OBS-CONTROLLED-METRIC-PILOT",
+      "source_evidence": "docs/harness/evidence/headroom-controlled-metric-pilot-20260621.json",
+      "observation_type": "controlled_metric_pilot",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 2496,
+      "tokens_after": 907,
+      "tokens_saved": 1589,
+      "saving_rate": 0.636619,
+      "gate": true,
+      "scope": "structured_metric_and_marker_preserving_adapter_outputs",
+      "raw_text_stored": false
+    }
+  ],
+  "decision": {
+    "loop_cost_observation_gate": true,
+    "continuous_observation_scope": "metric_and_adapter_output_and_cost_evidence_only",
+    "next_required_action": "repeat observation on subsequent LOOP rounds before L3.5/L4 admission",
+    "production_admission_gate": false
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

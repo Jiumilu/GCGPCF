@@ -1,0 +1,39 @@
+{
+  "authorization_id": "",
+  "scope": "",
+  "candidate_task_id": "",
+  "authorized": false,
+  "authorized_by": "",
+  "authorized_at": "",
+  "authorization_phrase": "",
+  "project": "",
+  "allowed_repositories": [],
+  "allowed_files": [],
+  "forbidden_paths": [],
+  "allowed_commands": [],
+  "forbidden_commands": [],
+  "codegraph_sync_allowed": false,
+  "business_implementation_allowed": false,
+  "production_write_allowed": false,
+  "external_api_write_allowed": false,
+  "deployment_allowed": false,
+  "git_commit_allowed": false,
+  "git_push_allowed": false,
+  "rollback_plan": "",
+  "required_evidence": [
+    "codegraph query output",
+    "codegraph node output",
+    "codegraph affected output",
+    "target_nodes",
+    "affected_scope",
+    "files_allowed_to_change",
+    "files_not_to_touch",
+    "affected_tests or fallback_reason",
+    "post_change_status"
+  ],
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

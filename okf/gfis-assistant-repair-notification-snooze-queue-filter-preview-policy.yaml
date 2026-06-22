@@ -1,0 +1,133 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_filter_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write filter previews derived from DKS-123 GFIS Assistant
+  repair notification snooze queue previews. Filter previews describe local
+  filtering only. They do not create filter states, queue items, snooze
+  records, scheduled reminders, dismissal records, notifications, governance
+  records, lifecycle changes, business writes, settlements, or external API
+  calls.
+
+required_fields:
+  - filter_preview_id
+  - queue_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - filter_type
+  - filter_status
+  - filter_decision
+  - source_queue_preview_refs
+  - source_snooze_preview_refs
+  - filtered_snooze_preview_refs
+  - filter_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - filter_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_filter_state
+  - creates_queue_item
+  - creates_snooze_record
+  - creates_scheduled_reminder
+  - creates_dismissal_record
+  - creates_notification
+  - modifies_notification
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+filter_types:
+  - surface_filter_preview
+  - blocked_items_filter_preview
+  - retained_items_filter_preview
+  - metadata_boundary_filter_preview
+  - committee_filter_preview
+  - freeze_filter_preview
+
+filter_statuses:
+  - filter_preview_only
+  - filter_contains_blocked_items
+  - filter_contains_retained_items
+  - filter_metadata_boundary
+  - filter_committee_items
+  - filter_freeze_items
+
+filter_decisions:
+  - show_surface_filter_preview
+  - show_blocked_items_filter_preview
+  - show_retained_items_filter_preview
+  - show_metadata_boundary_filter_preview
+  - show_committee_filter_preview
+  - show_freeze_filter_preview
+
+blocked_actions:
+  - create_filter_state
+  - create_queue_item
+  - create_snooze_record
+  - create_scheduled_reminder
+  - create_dismissal_record
+  - create_notification
+  - modify_notification
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  filter_preview_only: true
+  filter_preview_is_not_filter_state: true
+  filter_preview_is_not_queue_item: true
+  filter_preview_is_not_snooze_record: true
+  filter_preview_is_not_scheduled_reminder: true
+  filter_preview_is_not_notification_update: true
+  filter_preview_is_not_harness_evidence: true
+  filter_preview_is_not_waes_result: true
+  filter_preview_is_not_kwe_work_item: true
+  filter_preview_is_not_lifecycle_change: true
+  filter_preview_is_not_business_writeback: true
+  creates_filter_state_must_be_false: true
+  creates_queue_item_must_be_false: true
+  creates_snooze_record_must_be_false: true
+  creates_scheduled_reminder_must_be_false: true
+  creates_dismissal_record_must_be_false: true
+  creates_notification_must_be_false: true
+  modifies_notification_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_filter_state: 0
+  writes_queue_item: 0
+  writes_snooze_record: 0
+  writes_scheduled_reminder: 0
+  writes_dismissal_record: 0
+  writes_notification: 0
+  modifies_notification: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

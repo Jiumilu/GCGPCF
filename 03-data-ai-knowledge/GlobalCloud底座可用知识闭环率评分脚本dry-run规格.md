@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md
 source_path: 03-data-ai-knowledge/GlobalCloud底座可用知识闭环率评分脚本dry-run规格.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

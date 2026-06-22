@@ -1,0 +1,61 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-GFIS-TOOL-STATE-AUDIT-BLOCKED-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-TOOL-STATE-AUDIT-BLOCKED-009",
+  "status": "clean_reindex_not_authorized_tool_state_audit_blocked",
+  "generated_at": "2026-06-22",
+  "objective": "固化用户不授权 GFIS CodeGraph clean reindex 的边界，停止工具级重建索引动作，仅保留 locator 证据与下一轮治理输入。",
+  "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-LOCATOR-008",
+  "authorization_decision": {
+    "requested_action": "GFIS CodeGraph clean reindex audit",
+    "user_response": "暂不授权 clean reindex",
+    "authorized": false,
+    "clean_reindex_allowed": false,
+    "codegraph_uninit_allowed": false,
+    "codegraph_reinit_allowed": false,
+    "gfis_file_cleanup_allowed": false
+  },
+  "gfis_status_snapshot": {
+    "codegraph_initialized": true,
+    "codegraph_version": "1.0.1",
+    "pending_changes": {
+      "added": 1,
+      "modified": 0,
+      "removed": 0
+    },
+    "worktree_mismatch": null,
+    "dot_codegraph_git_isolated": true
+  },
+  "blocked_actions": [
+    "codegraph uninit",
+    "rm -rf .codegraph",
+    "codegraph init",
+    "clean reindex",
+    "delete GFIS untracked files",
+    "stage GFIS files",
+    "commit GFIS changes",
+    "push GFIS changes",
+    "deploy GFIS"
+  ],
+  "allowed_actions": [
+    "preserve locator evidence",
+    "run read-only codegraph status",
+    "continue GPCF governance evidence closure",
+    "prepare next authorization question if clean reindex becomes necessary"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "gfis_file_cleanup_performed": false,
+    "codegraph_sync_only_closure": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-PROJECT-GROUP-CLOSURE-010"
+}

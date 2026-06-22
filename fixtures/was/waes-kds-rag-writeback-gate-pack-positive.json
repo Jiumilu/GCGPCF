@@ -1,0 +1,76 @@
+{
+  "pack_id": "WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-POSITIVE",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "gate_stages": [
+    {
+      "stage_id": "S1-WAES-GATE-INPUT",
+      "owner": "WAES",
+      "required_contract": "was-waes-gate-input",
+      "decision_state": "not_submitted",
+      "required_before": ["review_queue", "accepted", "integrated", "production_ready"],
+      "blocks": ["llm_only_claim", "missing_source_refs", "missing_evidence_refs"]
+    },
+    {
+      "stage_id": "S2-KDS-BINDING",
+      "owner": "KDS",
+      "required_contract": "kds_official_fact_binding",
+      "binding_state": "candidate_only",
+      "source_hash_state": "not_applicable_without_real_source_record",
+      "required_before": ["official_fact", "rag_strong_reference", "runtime_primary_key"],
+      "blocks": ["stale_source_hash", "missing_kds_backlink", "missing_owner_confirmation"]
+    },
+    {
+      "stage_id": "S3-RAG-REFERENCE",
+      "owner": "Brain/PKC/RAG",
+      "required_contract": "was-rag-reference",
+      "reference_state": "controlled_reference_only",
+      "required_before": ["strong_reference", "answer_fact_claim"],
+      "blocks": ["unverified_candidate", "llm_only_reference", "kds_binding_missing"]
+    },
+    {
+      "stage_id": "S4-GFIS-KWE-WRITEBACK",
+      "owner": "GFIS/KWE",
+      "required_contract": "runtime_writeback_precheck",
+      "writeback_state": "blocked_without_waes_kds_owner_confirmation",
+      "required_before": ["runtime_intake", "runtime_primary_key", "gfis_write", "kwe_write"],
+      "blocks": ["waes_decision_missing", "kds_binding_missing", "owner_confirmation_missing"]
+    },
+    {
+      "stage_id": "S5-ELEVEN-POOLS-LINK",
+      "owner": "GPC/GFIS/KDS/WAES",
+      "required_contract": "was-pool-link",
+      "pool_link_state": "schema_gate_only",
+      "required_before": ["pool_execution", "business_action"],
+      "blocks": ["pool_role_missing", "source_refs_missing", "waes_gate_missing"]
+    }
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "runtime_write": false,
+    "kds_api_write": false
+  }
+}

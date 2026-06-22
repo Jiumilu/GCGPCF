@@ -1,0 +1,47 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-LOOP-GOVERNANCE-RESIDUAL-REPAIR-D101-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "loop_governance_residual_and_sync_surface",
+  "action": "repair_loop_governance_and_sync_surface_localization_debt",
+  "before": {
+    "all_repo_findings": 198,
+    "target_file_findings": 23
+  },
+  "after": {
+    "all_repo_findings": 185,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -13,
+    "target_file_findings": -23
+  },
+  "changed_files": [
+    "docs/harness/evidence/loop-governance-round-review-plan-20260617.md",
+    "docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md",
+    "docs/harness/evidence/loop-governance-truth-field-review-20260617.md",
+    "docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md",
+    "docs/harness/evidence/was-real-source-record-candidate-precheck-execution-003-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md",
+    "third_party/agent-reach/MODIFICATIONS.md",
+    "third_party/agent-reach/OSS_REVIEW.md",
+    "third_party/agent-reach/SECURITY_REVIEW.md"
+  ],
+  "changed_line_items": 210,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_loop_governance_residual_repair_d101.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

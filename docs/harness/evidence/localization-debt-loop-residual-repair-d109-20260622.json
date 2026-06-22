@@ -1,0 +1,46 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-LOOP-RESIDUAL-REPAIR-D109-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/loops/loop-round-GPCF-L4-XIAOG-EVIDENCE-REPAIR-001.md,loop-round-GPCF-L4-GFIS-REPAIR-013.md,loop-round-GPCF-L4-GFIS-REPAIR-034.md,loop-round-GPCF-L4-GFIS-REPAIR-168.md,loop-round-GPCF-L4-GFIS-REPAIR-184.md,loop-round-GPCF-L4-GFIS-REPAIR-225.md,loop-round-GPCF-L4-GFIS-REPAIR-242.md,loop-round-GPCF-L4-GFIS-REPAIR-248.md",
+  "action": "repair_loop_residual_localization_debt",
+  "before": {
+    "all_repo_findings": 39,
+    "target_file_findings": 12
+  },
+  "after": {
+    "all_repo_findings": 27,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -12,
+    "target_file_findings": -12
+  },
+  "changed_files": [
+    "docs/harness/loops/loop-round-GPCF-L4-XIAOG-EVIDENCE-REPAIR-001.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-013.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-034.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-168.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-184.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-225.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md"
+  ],
+  "changed_line_items": 26,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_loop_residual_repair_d109.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "evidence_id": "GCKF-P0-SKELETON-BASELINE-D122-20260622",
+  "round_id": "GPCF-GCKF-P0-D122-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D121 门禁收口后，把 GC-Knowledge Fabric P0 T0-T6 任务包与当前可校验工程骨架绑定成新的主线 baseline。",
+  "baseline_sources": [
+    "docs/gc-knowledge-fabric/engineering-implementation-plan-v0.1.md",
+    "docs/gc-knowledge-fabric/requirements-confirmation-and-p0-p2-implementation-plan-v0.1.md",
+    "docs/gc-knowledge-fabric/executive-summary-v0.1.md",
+    "docs/gc-knowledge-fabric/p0-startup-pack-v0.1.md",
+    "docs/gc-knowledge-fabric/p0-two-week-execution-schedule-v0.1.md",
+    "09-status/gpcf-project-status-matrix.md",
+    "09-status/globalcloud-document-health-report.md",
+    "docs/harness/minimum-closed-loop/object-contracts.md",
+    "docs/harness/minimum-closed-loop/project-role-verification-matrix.md"
+  ],
+  "task_packages": {
+    "T0": {
+      "name": "规则固化",
+      "representative_artifacts": [
+        "docs/gc-knowledge-fabric/object-numbering-rule-v0.1.md",
+        "docs/gc-knowledge-fabric/kds-eleven-pool-binding-rule-v0.1.md",
+        "docs/gc-knowledge-fabric/rag-citation-strength-policy.md",
+        "docs/gc-knowledge-fabric/sensitive-metadata-storage-policy.md"
+      ],
+      "status": "covered"
+    },
+    "T1": {
+      "name": "OKF 契约",
+      "representative_artifacts": [
+        "okf/ontology.yaml",
+        "okf/knowledge-object.schema.json",
+        "okf/pool-binding-policy.yaml",
+        "okf/waes-gate-policy.yaml",
+        "okf/rag-admission-policy.yaml"
+      ],
+      "status": "covered"
+    },
+    "T2": {
+      "name": "KDS v2 骨架",
+      "representative_artifacts": [
+        "packages/api/src/kds/v2/contracts.ts",
+        "packages/api/src/kds/v2/routes.ts",
+        "packages/api/src/kds/v2/schema.sql",
+        "packages/shared/src/knowledge/object.ts",
+        "packages/shared/src/knowledge/source.ts",
+        "packages/shared/src/knowledge/evidence.ts"
+      ],
+      "status": "covered"
+    },
+    "T3": {
+      "name": "WAES 最小门禁",
+      "representative_artifacts": [
+        "docs/gc-knowledge-fabric/waes-gate-io-policy.md",
+        "docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md",
+        "scripts/waes/validate_waes_minimum_gates.py"
+      ],
+      "status": "covered"
+    },
+    "T4": {
+      "name": "KWE 最小流程",
+      "representative_artifacts": [
+        "docs/gc-knowledge-fabric/kwe-minimum-workflow-dry-run-v0.1.md",
+        "docs/gc-knowledge-fabric/kwe-confirmation-workpack-policy.md",
+        "docs/gc-knowledge-fabric/kwe-action-validation-workpack-policy.md",
+        "scripts/kwe/validate_kwe_minimum_workflow.py"
+      ],
+      "status": "covered"
+    },
+    "T5": {
+      "name": "葛化准备",
+      "representative_artifacts": [
+        "docs/gc-knowledge-fabric/pilot-rollout-checklist-v0.1.md",
+        "docs/gc-knowledge-fabric/gfis-document-acceptance-checklist-policy.md",
+        "docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md"
+      ],
+      "status": "covered_for_p0_baseline"
+    },
+    "T6": {
+      "name": "LOOP 指挥舱",
+      "representative_artifacts": [
+        "docs/gc-knowledge-fabric/loop-record-closure-policy.md",
+        "templates/loop-round-v2-five-direction.yaml",
+        "docs/harness/evidence/loop-engineering-five-direction-implementation-20260622.md",
+        "docs/harness/loop-state.md"
+      ],
+      "status": "covered"
+    }
+  },
+  "verification_snapshot": {
+    "coverage_validator": "okf_types_api_validator_coverage=pass coverage_items=199 okf_files=205 type_files=207 api_files=15 validator_files=200 fixture_files=205 missing_files=0 no_write=covered business_writes=0 external_api_writes=0",
+    "loop_engineering_master_plan": "loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0",
+    "loop_engineering_five_direction": "loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false",
+    "localization_gate": "pass",
+    "localization_findings": 0,
+    "document_pollution": "pass",
+    "kds_token": "pass fingerprint=bfd9553d",
+    "loop_document_gate": "pass"
+  },
+  "state_ceiling": {
+    "gpcf_status_ceiling": "repair_required",
+    "gfis_real_business_lane": "repair_required",
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": [
+    "本 evidence 不证明 P0 已整体完成。",
+    "本 evidence 不创建真实 KDS API 写入、GFIS/GPC/ERP/MES 写入、真实外部 API 写入或生产部署。",
+    "本 evidence 不把 candidate、dry-run、fixture、preview 或 no-write 产物升级为 accepted、integrated 或 production_ready。",
+    "GFIS 真实业务通道如无新增证据，继续保持 repair_required。"
+  ],
+  "next_round_candidate": "在 D122 baseline 上进入 GCKF P0 closure packet precheck，把 T0-T6 已覆盖项、未完成项、阻塞项和 P1 admission 前置条件收成受控收口包。"
+}

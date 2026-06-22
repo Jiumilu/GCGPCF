@@ -1,0 +1,80 @@
+---
+doc_id: GPCF-DOC-6C0AA90048
+title: WAS Real Source Record Monitor 048 证据
+project: KDS
+related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+domain: docs
+status: controlled
+version: v1.0
+owner: KDS
+kds_space: 开发
+kds_path: 开发/05-KDS/docs/harness/evidence/was-real-source-record-monitor-048-20260622.md
+source_path: docs/harness/evidence/was-real-source-record-monitor-048-20260622.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-22
+supersedes: []
+superseded_by: []
+---
+
+# WAS Real Source Record Monitor 048 证据
+
+## 范围
+
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-048` 将绿色供应链覆盖扩展到计量设备台账、校准证书、检测方法验证、测量不确定度、设备维护、超差处置和计量溯源链证据层。只有补齐这些证据，Ontology 才能安全地把质量判定、检测结果、合格放行、异常处置或设备状态绑定到下游 WAES/KDS/runtime 门禁中。
+
+## 监控检查
+
+| Check | Value |
+|---|---:|
+| submitted_real_candidate_files | `0` |
+| measurement_equipment_registry_gaps | `0` |
+| calibration_certificate_gaps | `0` |
+| inspection_method_validation_gaps | `0` |
+| measurement_uncertainty_record_gaps | `0` |
+| equipment_maintenance_record_gaps | `0` |
+| out_of_tolerance_disposition_gaps | `0` |
+| measurement_traceability_chain_gaps | `0` |
+| accepted_for_measurement_calibration_profile | `0` |
+| accepted_for_next_gate | `0` |
+| hold_required | `1` |
+| real_source_records | `0` |
+| valid_source_records | `0` |
+| runtime_primary_key_ready | `0` |
+| review_queue | `0` |
+| runtime_intake | `0` |
+| waes_review | `0` |
+| verified | `0` |
+| accepted | `false` |
+| integrated | `false` |
+| production_ready | `false` |
+
+## 必需证据类别
+
+- `measurement_equipment_registry`
+- `calibration_certificate`
+- `inspection_method_validation`
+- `measurement_uncertainty_record`
+- `equipment_maintenance_record`
+- `out_of_tolerance_disposition`
+- `measurement_traceability_chain`
+
+## 必需命令
+
+```bash
+python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py
+python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py
+python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py
+python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py
+python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py
+python3 tools/kds-sync/validate_was_real_source_record_monitor_048.py
+```
+
+## 非声明
+
+- 本证据不创建也不推断计量设备台账、校准证书、检测方法验证、测量不确定度、设备维护、超差处置或计量溯源链证据。
+- 本证据不写入 GFIS/KWE 运行层。
+- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+
+## 下一轮
+
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-049`

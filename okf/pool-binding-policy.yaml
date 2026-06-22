@@ -1,0 +1,32 @@
+policy_id: okf.pool_binding_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+default_bindings:
+  order_fact: [ORDER]
+  logistics_delivery: [TRANSPORT]
+  factory_line: [CAPACITY]
+  finance_voucher: [FUND]
+  policy_standard: [POLICY]
+  equipment_process: [EQUIPMENT]
+  document_ledger_report: [DATA]
+  energy_carbon: [ENERGY]
+  material_supplier: [MATERIAL]
+  team_expert_service: [TALENT]
+  project_scenario: [SCENARIO]
+composite_bindings:
+  pre_operation_oem_order:
+    pools: [ORDER, CAPACITY, FUND, TRANSPORT]
+  quality_acceptance:
+    pools: [DATA, SCENARIO, ORDER]
+  raw_material_policy_opportunity:
+    pools: [POLICY, MATERIAL, SCENARIO]
+  new_factory_replication_template:
+    pools: [SCENARIO, CAPACITY, EQUIPMENT, TALENT]
+  collection_payment_dispute:
+    pools: [FUND, ORDER, TRANSPORT, DATA]
+fallback:
+  pool: DATA
+  rag_admission: repair_required
+  create_gap: true

@@ -1,0 +1,38 @@
+{
+  "fixture_id": "WAS-P4-NEGATIVE-MISSING-RUNTIME-SITE-CONTEXT-001",
+  "fixture_only": true,
+  "expected_result": "rejected",
+  "object_family": "CustomerRequirementOrPlatformOrder",
+  "sop_stage": "S01-customer-requirement-or-platform-order",
+  "source_kind": "customer_order_original",
+  "customer_order_original_or_platform_order_receipt": "artifact://customer-order-original/LY-20260621-004",
+  "customer_confirmed_product_spec": "artifact://customer-spec/LY-20260621-004",
+  "delivery_requirement": "artifact://delivery-requirement/LY-20260621-004",
+  "source_of_record_backlink": "开发/01-GFIS/source-records/LY-20260621-004",
+  "source_record_hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "issuing_party": "Liaoning Yuanhang",
+  "owner_confirmation": "owner-confirmation://GPC_or_Liaoning_Yuanhang_order_owner/20260621",
+  "received_at": "2026-06-21T00:00:00+08:00",
+  "runtime_site_context": "",
+  "objectFamily": "CustomerRequirementOrPlatformOrder",
+  "sourceRecordId": "LY-20260621-004",
+  "assetDimension": "data_asset",
+  "flowType": "commerce_flow",
+  "lifecycle": "pending_business_verification",
+  "trustLevel": "T4",
+  "sourceRefs": [
+    "was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order"
+  ],
+  "evidenceRefs": [
+    "evidence://gfis/REAL-001-source-record-intake-gate"
+  ],
+  "waesGateRefs": [
+    "waes://gate/customer-order-source-record-review"
+  ],
+  "promotionBlockers": [
+    "valid_source_record_missing",
+    "customer_confirmation_missing"
+  ],
+  "nextAction": "collect_customer_order_or_platform_receipt",
+  "kdsBacklink": "开发/01-GFIS/source-records/LY-20260621-004"
+}

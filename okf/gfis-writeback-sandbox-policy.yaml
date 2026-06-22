@@ -1,0 +1,64 @@
+policy_id: okf.gfis_writeback_sandbox_policy
+version: v0.1
+status: draft
+owner: GFIS
+updated_at: "2026-06-20"
+writeback_modes:
+  - no_write
+  - sandbox
+  - approved_write
+  - production_write
+allowed_before_p1:
+  - no_write
+  - sandbox
+blocked_before_p1:
+  - approved_write
+  - production_write
+final_actions:
+  - pending
+  - accepted
+  - rejected
+  - returned
+  - rolled_back
+minimum_fields:
+  - candidate_id
+  - source_fact_id
+  - target_system
+  - target_module
+  - target_field
+  - current_value
+  - proposed_value
+  - diff_reason
+  - evidence_refs
+  - waes_result
+  - business_owner
+  - confirmation_status
+  - writeback_mode
+  - final_action
+  - no_write
+approved_write_requires:
+  - waes_writeback_gate_passed
+  - business_owner_confirmation
+  - confirmation_record
+  - harness_evidence
+production_write_requires:
+  - approved_write
+  - special_authorization
+  - rollback_plan
+  - target_system_receipt
+  - audit_record
+hard_boundaries:
+  ai_allowed_modes: [no_write, sandbox]
+  ai_blocked_modes: [approved_write, production_write]
+  no_write_cannot_emit_target_receipt: true
+  sandbox_cannot_emit_target_receipt: true
+  final_action_accepted_is_not_writeback_receipt: true
+  missing_evidence_blocks: true
+  missing_waes_result_blocks: true
+  missing_business_owner_blocks: true
+no_write_assertions:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_external_api: 0

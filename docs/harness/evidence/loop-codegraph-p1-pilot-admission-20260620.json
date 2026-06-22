@@ -1,0 +1,52 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-P1-ADMISSION-20260620",
+  "status": "authorization_required",
+  "date": "2026-06-20",
+  "current_state": {
+    "codegraph_cli_available": false,
+    "npm_package": "@colbymchenry/codegraph",
+    "npm_visible_version": "1.0.1",
+    "mcp_configuration_changed": false,
+    "codegraph_index_created": false,
+    "production_write": false,
+    "external_api_write": false,
+    "status_upgrade_allowed": false
+  },
+  "required_authorization_fields": [
+    "authorized_mode",
+    "authorized_repos",
+    "allow_global_npm_install",
+    "allow_agent_mcp_install",
+    "allow_codegraph_init",
+    "allow_network_download",
+    "rollback_required"
+  ],
+  "pilot_repos": [
+    "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+    "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"
+  ],
+  "candidate_commands": [
+    "npm i -g @colbymchenry/codegraph",
+    "codegraph install",
+    "codegraph init"
+  ],
+  "rollback_plan": [
+    "remove repo .codegraph directories",
+    "npm uninstall -g @colbymchenry/codegraph",
+    "run codegraph uninstall or manually remove MCP entry with audit note"
+  ],
+  "success_criteria": [
+    "authorization fields complete",
+    "codegraph_cli_available=true",
+    ".codegraph directories exist only as ignored local cache",
+    "at least three pilot records use the CodeGraph goal optimization record template",
+    "manual_source_check and related_validators recorded for every pilot",
+    "no production write, external API write, deployment, push, accepted, or integrated status upgrade"
+  ],
+  "non_claims": [
+    "does not prove CodeGraph installed",
+    "does not prove GFIS runtime SOP E2E passed",
+    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status",
+    "does not authorize production write, external API write, database migration, permission change, deployment, commit, push, or merge"
+  ]
+}

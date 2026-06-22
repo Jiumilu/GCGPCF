@@ -1,0 +1,122 @@
+---
+doc_id: GPCF-DOC-CODEGRAPH-WAES-GATES-V1
+title: WAES CodeGraph Gate Policy
+project: GPCF
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+domain: codegraph-governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/governance/codegraph/waes-codegraph-gates.yaml
+source_path: governance/codegraph/waes-codegraph-gates.yaml
+sync_direction: bidirectional
+last_reviewed: 2026-06-21
+supersedes: []
+superseded_by: []
+---
+
+waes_codegraph_gate:
+  required_for:
+    - auth_changes
+    - permission_changes
+    - tenant_boundary_changes
+    - financial_flow_changes
+    - settlement_changes
+    - points_or_benefit_pool_changes
+    - waes_rule_changes
+    - kds_schema_changes
+    - ontology_changes
+    - okf_collection_changes
+    - harness_policy_changes
+    - loop_policy_changes
+    - api_contract_changes
+    - multi_agent_protocol_changes
+  gate_inputs:
+    - codegraph_impact_report
+    - changed_files
+    - impacted_symbols
+    - impacted_tests
+    - risk_score
+    - evidence_bundle
+  gate_outputs:
+    - pass
+    - conditional_pass
+    - reject
+    - require_committee_review
+  forbidden_shortcuts:
+    - waive_without_evidence
+    - use_demo_as_runtime_evidence
+    - promote_candidate_to_accepted_without_review
+    - status_upgrade_by_agent_only
+
+rules:
+  - id: CG-WAES-001
+    name: 权限代码变更必须提供 CodeGraph 影响分析
+    severity: critical
+    condition:
+      changed_paths:
+        - '**/auth/**'
+        - '**/permission/**'
+        - '**/rbac/**'
+    required_evidence:
+      - codegraph_impact_report
+      - impacted_tests
+      - reviewer_approval
+    action: block_without_evidence
+
+  - id: CG-WAES-002
+    name: 租户隔离变更必须委员会确认
+    severity: critical
+    condition:
+      changed_paths:
+        - '**/tenant/**'
+        - '**/multi-tenant/**'
+    required_evidence:
+      - codegraph_dependency_trace
+      - tenant_boundary_impact
+      - committee_review
+    action: require_committee_review
+
+  - id: CG-WAES-003
+    name: 资金与结算相关调用链必须完整追踪
+    severity: critical
+    condition:
+      changed_paths:
+        - '**/settlement/**'
+        - '**/payment/**'
+        - '**/wallet/**'
+        - '**/benefit-pool/**'
+    required_evidence:
+      - call_graph_trace
+      - impacted_api_list
+      - impacted_test_list
+    action: block_without_evidence
+
+  - id: CG-WAES-004
+    name: KDS 与 OKF 候选事实不得自动升格
+    severity: high
+    condition:
+      changed_paths:
+        - '**/kds/**'
+        - '**/okf/**'
+        - '**/ontology/**'
+    required_evidence:
+      - codegraph_candidate_fact_lineage
+      - harness_evidence
+      - human_review
+    action: candidate_only_until_review
+
+  - id: CG-WAES-005
+    name: Harness 与 Loop 策略变更必须留存 CodeGraph 证据
+    severity: high
+    condition:
+      changed_paths:
+        - '**/harness/**'
+        - '**/loop/**'
+        - '**/tools/kds-sync/**'
+    required_evidence:
+      - changed_paths
+      - impacted_validators
+      - loop_evidence_ref
+    action: block_without_evidence

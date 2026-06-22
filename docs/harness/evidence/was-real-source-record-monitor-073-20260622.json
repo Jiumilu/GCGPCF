@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-073-20260622",
+  "status": "was_real_source_record_monitor_073_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-073",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-072",
+  "purpose": "Seventy-third independent monitor pass for green supply chain product safety, restricted substances, regulatory labeling claims, traceability and recall readiness, complaint corrective action, quality management certification, and market surveillance nonconformance evidence.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "product_safety_conformity_certificate_gaps": 0,
+    "restricted_substance_test_report_gaps": 0,
+    "regulatory_labeling_claim_review_gaps": 0,
+    "traceability_batch_recall_plan_gaps": 0,
+    "customer_complaint_corrective_action_record_gaps": 0,
+    "quality_management_system_certificate_gaps": 0,
+    "market_surveillance_nonconformance_record_gaps": 0,
+    "accepted_for_product_compliance_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "product_compliance_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "product_safety_conformity_certificate_gap",
+      "restricted_substance_test_report_gap",
+      "regulatory_labeling_claim_review_gap",
+      "traceability_batch_recall_plan_gap",
+      "customer_complaint_corrective_action_record_gap",
+      "quality_management_system_certificate_gap",
+      "market_surveillance_nonconformance_record_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "product_compliance_requirements": [
+    "product_safety_conformity_certificate",
+    "restricted_substance_test_report",
+    "regulatory_labeling_claim_review",
+    "traceability_batch_recall_plan",
+    "customer_complaint_corrective_action_record",
+    "quality_management_system_certificate",
+    "market_surveillance_nonconformance_record"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-074",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer product safety conformity certificate, restricted substance test report, regulatory labeling claim review, traceability batch recall plan, customer complaint corrective action record, quality management system certificate, or market surveillance nonconformance record",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

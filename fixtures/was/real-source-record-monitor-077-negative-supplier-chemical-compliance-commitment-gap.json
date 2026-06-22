@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "restricted_substance_declaration_gaps": 0,
+  "safety_data_sheet_gaps": 0,
+  "hazardous_waste_transfer_manifest_gaps": 0,
+  "chemical_storage_inspection_record_gaps": 0,
+  "spill_response_drill_record_gaps": 0,
+  "reach_rohs_compliance_certificate_gaps": 0,
+  "supplier_chemical_compliance_commitment_gaps": 1,
+  "accepted_for_chemical_compliance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "chemical_compliance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

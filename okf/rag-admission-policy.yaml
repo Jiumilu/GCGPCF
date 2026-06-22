@@ -1,0 +1,48 @@
+policy_id: okf.rag_admission_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+states:
+  safe:
+    allowed_use: [strong_answer, sop_basis, command_center_reference]
+  limited:
+    allowed_use: [background, weak_answer, risk_hint]
+    response_must_display_boundary: true
+  repair_required:
+    allowed_use: [gap_hint, missing_evidence_notice]
+    must_not_be_used_as_conclusion: true
+  blocked:
+    allowed_use: []
+    retrieval_allowed: false
+  sensitive_metadata_only:
+    allowed_use: [metadata_reference, controlled_original_pointer]
+    raw_content_retrieval_allowed: false
+admission_rules:
+  - when: { trust_level: T0, evidence_complete: true }
+    result: safe
+  - when: { trust_level: T1, source_scope_clear: true }
+    result: limited
+  - when: { trust_level: T2, evidence_complete: true }
+    result: limited
+  - when: { trust_level: T3, human_confirmed: false }
+    result: repair_required
+  - when: { trust_level: T4 }
+    result: repair_required
+  - when: { trust_level: T5 }
+    result: blocked
+response_fields:
+  - domain
+  - poolRefs
+  - objectType
+  - trustLevel
+  - ragAdmission
+  - lifecycle
+  - visibility
+  - sourceRefs
+  - evidenceRefs
+  - waesGateStatus
+  - canShare
+  - canPromote
+  - canUseForRAG
+  - canWriteback

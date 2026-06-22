@@ -1,0 +1,129 @@
+policy_id: okf.gfis_assistant_repair_handoff_review_admission_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run GFIS Assistant repair handoff review admission packets
+  derived from DKS-113 repair draft handoff packets. Admission packets decide
+  only whether a handoff may be displayed as a downstream review candidate.
+  They do not create admission records, review queues, KWE work items,
+  confirmation records, decision records, WAES gate results, evidence records,
+  lifecycle changes, business writes, revenue or score confirmations, or
+  external API calls.
+
+required_fields:
+  - admission_packet_id
+  - handoff_packet_ref
+  - decision_draft_ref
+  - review_packet_ref
+  - intake_ref
+  - tenant_id
+  - project_id
+  - assistant_surface
+  - source_handoff_type
+  - source_handoff_status
+  - target_candidate
+  - admission_status
+  - admission_decision
+  - admission_check_refs
+  - missing_requirement_refs
+  - metadata_ref_bundle
+  - blocked_reason_refs
+  - allowed_display_actions
+  - blocked_actions
+  - creates_admission_record
+  - creates_review_queue_item
+  - creates_kwe_work_item
+  - creates_confirmation_record
+  - creates_decision_record
+  - creates_waes_gate_result
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+admission_statuses:
+  - admitted_candidate
+  - repair_required
+  - metadata_only_admitted
+  - committee_agenda_blocked
+  - freeze_review_blocked
+  - blocked_hold
+
+admission_decisions:
+  - allow_review_candidate
+  - require_repair
+  - metadata_only_review_candidate
+  - prepare_committee_agenda_candidate
+  - prepare_freeze_review_candidate
+  - hold_blocked
+
+allowed_display_actions:
+  - show_admission_packet
+  - show_handoff_summary
+  - show_target_candidate
+  - show_missing_requirements
+  - show_metadata_boundary
+  - show_committee_agenda_note
+  - show_freeze_note
+  - show_blocked_hold_note
+  - show_no_write_notice
+
+blocked_actions:
+  - create_admission_record
+  - create_review_queue_item
+  - create_kwe_work_item
+  - create_confirmation_record
+  - create_decision_record
+  - create_waes_gate_result
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  admission_packet_only: true
+  admission_packet_is_not_admission_record: true
+  admission_packet_is_not_review_queue_item: true
+  admission_packet_is_not_kwe_work_item: true
+  admission_packet_is_not_confirmation: true
+  admission_packet_is_not_decision_record: true
+  admission_packet_is_not_waes_result: true
+  admission_packet_is_not_business_writeback: true
+  admission_decision_is_display_only: true
+  creates_admission_record_must_be_false: true
+  creates_review_queue_item_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_confirmation_record_must_be_false: true
+  creates_decision_record_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_admission_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

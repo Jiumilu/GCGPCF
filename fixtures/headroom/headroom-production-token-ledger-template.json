@@ -1,0 +1,46 @@
+{
+  "ledger_id": "HEADROOM-PRODUCTION-TOKEN-LEDGER-TEMPLATE",
+  "ledger_type": "sanitized_production_token_usage_ledger",
+  "authorization": {
+    "authorized_window_id": null,
+    "authorized_by": null,
+    "authorized_at": null,
+    "scope": "not_authorized_template"
+  },
+  "telemetry": "off",
+  "sensitive_raw_text_stored": false,
+  "raw_prompt_storage": "forbidden",
+  "contains_provider_secret": false,
+  "contains_authorization_header": false,
+  "contains_raw_prompt": false,
+  "contains_raw_completion": false,
+  "measured_production_tokens": false,
+  "entries": [
+    {
+      "measurement_id": "HEADROOM-PROD-TOKEN-TEMPLATE-001",
+      "project": "GPCF",
+      "scenario": "authorized_window_required_before_use",
+      "source_kind": "template_no_production_data",
+      "input_tokens_before": 0,
+      "input_tokens_after": 0,
+      "output_tokens_before": 0,
+      "output_tokens_after": 0,
+      "cache_write_tokens_before": 0,
+      "cache_write_tokens_after": 0,
+      "cache_read_tokens_before": 0,
+      "cache_read_tokens_after": 0,
+      "P_in": 1.0,
+      "P_out": 4.0,
+      "P_cache_write": 0.25,
+      "P_cache_read": 0.1,
+      "P_runtime": 0.0,
+      "retrieval_miss_count": 0,
+      "agreed_retrieval_miss_threshold": 1,
+      "answer_equivalence": "not_measured",
+      "sensitive_redaction_gate": "pass",
+      "minimum_saving_rate": 0.4,
+      "project_marker_gate": "not_measured",
+      "rollback_plan_id": null
+    }
+  ]
+}

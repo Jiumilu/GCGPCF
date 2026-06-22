@@ -1,0 +1,83 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006",
+  "status": "authorization_waiting_blocked",
+  "generated_at": "2026-06-22",
+  "objective": "固化 CodeGraph 首个真实业务候选在未获得完整授权前的等待态，防止从项目群治理与 Loop evidence 链误跳入 GFIS 业务实现。",
+  "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005",
+  "candidate_task": {
+    "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-CANDIDATE",
+    "project": "GFIS",
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "runtime_sop_e2e": "repair_required",
+    "business_implementation_authorized": false,
+    "business_implementation_allowed": false
+  },
+  "authorization_state": {
+    "authorization_complete": false,
+    "authorized": false,
+    "authorized_by": "",
+    "authorized_at": "",
+    "required_authorization_phrase": "授权执行 GFIS CodeGraph first real candidate business implementation",
+    "received_authorization_phrase": "",
+    "missing_authorization_fields": [
+      "authorized_by",
+      "authorized_at",
+      "authorization_phrase",
+      "allowed_files",
+      "rollback_plan"
+    ]
+  },
+  "gfis_codegraph_drift_snapshot": {
+    "observed_at": "2026-06-22",
+    "initialized": true,
+    "version": "1.0.1",
+    "pending_changes": {
+      "added": 1,
+      "modified": 0,
+      "removed": 0
+    },
+    "dot_codegraph_git_isolated": true,
+    "sync_performed": false,
+    "sync_allowed_without_explicit_authorization": false,
+    "sync_boundary_reason": "GFIS CodeGraph has pendingChanges.added=1 and requires explicit authorization before sync-only closure."
+  },
+  "current_allowed_actions": [
+    "review existing GPCF CodeGraph governance evidence",
+    "validate authorization package",
+    "record waiting-state evidence",
+    "generate next Loop input"
+  ],
+  "current_forbidden_actions": [
+    "GFIS business implementation",
+    "GFIS codegraph sync",
+    "production write",
+    "external API write",
+    "real KDS write",
+    "real WAES write",
+    "deployment",
+    "git commit",
+    "git push"
+  ],
+  "required_recheck_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate_authorization.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_authorization_waiting.py"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_sync_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round_if_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-006",
+  "next_round_if_still_waiting": "GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-RECHECK-007"
+}

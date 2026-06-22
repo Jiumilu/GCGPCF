@@ -1,0 +1,147 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_saved_view_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write saved view previews derived from DKS-124 GFIS Assistant
+  repair notification snooze queue filter previews. Saved view previews describe
+  local candidate view shapes only. They do not create saved views, view
+  preferences, filter states, queue items, snooze records, scheduled reminders,
+  notifications, governance records, lifecycle changes, business writes,
+  settlements, or external API calls.
+
+required_fields:
+  - saved_view_preview_id
+  - filter_preview_ref
+  - queue_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - saved_view_type
+  - saved_view_status
+  - saved_view_decision
+  - source_filter_preview_refs
+  - source_queue_preview_refs
+  - source_snooze_preview_refs
+  - view_scope
+  - view_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - view_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_saved_view
+  - creates_view_preference
+  - creates_filter_state
+  - creates_queue_item
+  - creates_snooze_record
+  - creates_scheduled_reminder
+  - creates_notification
+  - modifies_notification
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+saved_view_types:
+  - personal_saved_view_preview
+  - team_saved_view_preview
+  - surface_default_view_preview
+  - blocked_items_saved_view_preview
+  - committee_saved_view_preview
+  - freeze_saved_view_preview
+
+saved_view_statuses:
+  - saved_view_preview_only
+  - saved_view_contains_blocked_items
+  - saved_view_contains_retained_items
+  - saved_view_metadata_boundary
+  - saved_view_committee_items
+  - saved_view_freeze_items
+
+saved_view_decisions:
+  - show_personal_saved_view_preview
+  - show_team_saved_view_preview
+  - show_surface_default_view_preview
+  - show_blocked_items_saved_view_preview
+  - show_committee_saved_view_preview
+  - show_freeze_saved_view_preview
+
+view_scopes:
+  - personal
+  - team
+  - surface_default
+  - governance_review
+
+blocked_actions:
+  - create_saved_view
+  - create_view_preference
+  - create_filter_state
+  - create_queue_item
+  - create_snooze_record
+  - create_scheduled_reminder
+  - create_notification
+  - modify_notification
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  saved_view_preview_only: true
+  saved_view_preview_is_not_saved_view: true
+  saved_view_preview_is_not_view_preference: true
+  saved_view_preview_is_not_filter_state: true
+  saved_view_preview_is_not_queue_item: true
+  saved_view_preview_is_not_snooze_record: true
+  saved_view_preview_is_not_scheduled_reminder: true
+  saved_view_preview_is_not_notification_update: true
+  saved_view_preview_is_not_harness_evidence: true
+  saved_view_preview_is_not_waes_result: true
+  saved_view_preview_is_not_kwe_work_item: true
+  saved_view_preview_is_not_lifecycle_change: true
+  saved_view_preview_is_not_business_writeback: true
+  creates_saved_view_must_be_false: true
+  creates_view_preference_must_be_false: true
+  creates_filter_state_must_be_false: true
+  creates_queue_item_must_be_false: true
+  creates_snooze_record_must_be_false: true
+  creates_scheduled_reminder_must_be_false: true
+  creates_notification_must_be_false: true
+  modifies_notification_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_saved_view: 0
+  writes_view_preference: 0
+  writes_filter_state: 0
+  writes_queue_item: 0
+  writes_snooze_record: 0
+  writes_scheduled_reminder: 0
+  writes_notification: 0
+  modifies_notification: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

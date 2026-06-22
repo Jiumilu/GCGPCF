@@ -1,0 +1,43 @@
+{
+  "evidence_id": "GCKF-P0-FUTURE-FORMAL-WRITE-EXECUTION-PREFLIGHT-CURRENT-STATE-D130-20260622",
+  "round_id": "GPCF-GCKF-P0-D130-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D129 current-state governance decision intake 基础上刷新 future formal write execution preflight，使旧 D31 正式写入执行预检分支显式吸收 D124-D129 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-future-formal-write-execution-preflight-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-future-formal-write-execution-preflight-current-state-d130-20260622.json",
+    "fixtures/api/gckf-p0-harness-governance-review-decision-intake-current-state-d129-20260622.json",
+    "docs/harness/evidence/gckf-p0-harness-governance-review-decision-intake-current-state-d129-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_execution_preflight_status": "candidate_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d31_future_formal_write_execution_preflight": "gckf_p0_future_formal_write_execution_preflight_dry_run=pass status=candidate execution_status=candidate covered_decision=approve_for_future_formal_write preflight_checks=11 forbidden_actions=7",
+    "d129_current_state_governance_decision_intake": "gckf_p0_harness_governance_review_decision_intake_current_state_d129=pass intake_status=candidate_with_hold maximum_state=review_ready_with_hold review_status=pending_with_hold decision_guards=12 hold_context_refs=6",
+    "d128_current_state_repair_path": "gckf_p0_repair_path_workpack_current_state_d128=pass workpack_status=candidate_with_hold maximum_state=review_ready_with_hold covered_decisions=2 hold_context_refs=6",
+    "d127_current_state_decision_template": "gckf_p0_harness_decision_template_current_state_d127=pass template_status=candidate_with_hold maximum_state=review_ready_with_hold default_decision_status=pending_with_hold hold_context_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "preflight_scope": {
+    "required_inputs": 12,
+    "preflight_checks": 14,
+    "forbidden_actions": 9,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_intake_status": "candidate_with_hold",
+    "source_intake_review_status": "pending_with_hold",
+    "formal_harness_write_allowed": false,
+    "lifecycle_promotion_allowed": false,
+    "runtime_writeback_allowed": false,
+    "p1_admission_allowed": false,
+    "v1_upgrade_recommended": false
+  },
+  "non_claims": [
+    "本 current-state future formal write execution preflight 不写 formal Harness evidence 或 Harness evidence。",
+    "本 current-state future formal write execution preflight 不把 candidate_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state future formal write execution preflight 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "基于 D130 current-state future formal write execution preflight 刷新 formal evidence execution request current-state 分支，继续保持 no-write。"
+}

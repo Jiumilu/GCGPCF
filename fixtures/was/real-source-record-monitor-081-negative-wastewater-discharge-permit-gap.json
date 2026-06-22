@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "water_withdrawal_permit_gaps": 0,
+  "water_footprint_assessment_gaps": 0,
+  "wastewater_discharge_permit_gaps": 1,
+  "wastewater_treatment_record_gaps": 0,
+  "water_quality_test_report_gaps": 0,
+  "water_stress_risk_assessment_gaps": 0,
+  "supplier_water_stewardship_commitment_gaps": 0,
+  "accepted_for_water_stewardship_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "water_stewardship_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

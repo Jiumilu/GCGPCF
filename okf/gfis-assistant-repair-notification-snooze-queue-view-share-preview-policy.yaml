@@ -1,0 +1,155 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_view_share_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write view share previews derived from DKS-125 GFIS Assistant
+  repair notification snooze queue saved view previews. View share previews
+  describe candidate sharing shapes only. They do not create share links, ACL
+  grants, external share permissions, publication approvals, saved views, view
+  preferences, filter states, notifications, governance records, lifecycle
+  changes, business writes, settlements, or external API calls.
+
+required_fields:
+  - share_preview_id
+  - saved_view_preview_ref
+  - filter_preview_ref
+  - queue_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - share_type
+  - share_status
+  - share_decision
+  - share_scope
+  - source_saved_view_preview_refs
+  - source_filter_preview_refs
+  - source_queue_preview_refs
+  - source_snooze_preview_refs
+  - share_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - share_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_share_link
+  - creates_acl_grant
+  - creates_external_share_permission
+  - creates_publication_approval
+  - creates_saved_view
+  - creates_view_preference
+  - creates_filter_state
+  - creates_notification
+  - modifies_notification
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+share_types:
+  - personal_to_team_share_preview
+  - team_to_project_share_preview
+  - surface_default_share_preview
+  - governance_review_share_preview
+  - external_share_blocked_preview
+  - committee_share_preview
+
+share_statuses:
+  - share_preview_only
+  - share_contains_blocked_items
+  - share_contains_retained_items
+  - share_metadata_boundary
+  - share_committee_items
+  - share_external_blocked
+
+share_decisions:
+  - show_personal_to_team_share_preview
+  - show_team_to_project_share_preview
+  - show_surface_default_share_preview
+  - show_governance_review_share_preview
+  - show_external_share_blocked_preview
+  - show_committee_share_preview
+
+share_scopes:
+  - team_internal
+  - project_internal
+  - surface_default
+  - governance_review
+  - external_blocked
+
+blocked_actions:
+  - create_share_link
+  - create_acl_grant
+  - create_external_share_permission
+  - create_publication_approval
+  - create_saved_view
+  - create_view_preference
+  - create_filter_state
+  - create_notification
+  - modify_notification
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  share_preview_only: true
+  share_preview_is_not_share_link: true
+  share_preview_is_not_acl_grant: true
+  share_preview_is_not_external_share_permission: true
+  share_preview_is_not_publication_approval: true
+  share_preview_is_not_saved_view: true
+  share_preview_is_not_view_preference: true
+  share_preview_is_not_filter_state: true
+  share_preview_is_not_notification_update: true
+  share_preview_is_not_harness_evidence: true
+  share_preview_is_not_waes_result: true
+  share_preview_is_not_kwe_work_item: true
+  share_preview_is_not_lifecycle_change: true
+  share_preview_is_not_business_writeback: true
+  creates_share_link_must_be_false: true
+  creates_acl_grant_must_be_false: true
+  creates_external_share_permission_must_be_false: true
+  creates_publication_approval_must_be_false: true
+  creates_saved_view_must_be_false: true
+  creates_view_preference_must_be_false: true
+  creates_filter_state_must_be_false: true
+  creates_notification_must_be_false: true
+  modifies_notification_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_share_link: 0
+  writes_acl_grant: 0
+  writes_external_share_permission: 0
+  writes_publication_approval: 0
+  writes_saved_view: 0
+  writes_view_preference: 0
+  writes_filter_state: 0
+  writes_notification: 0
+  modifies_notification: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

@@ -1,0 +1,82 @@
+policy_id: okf.brain_pkc_revenue_attribution_read_model_policy
+version: v1.0
+owner: Brain-PKC
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define read-only revenue attribution view models for Brain and PKC. The model
+  presents attribution packet refs, revenue refs, contribution refs, WAES/KWE
+  refs, committee/freeze state, visibility, and blocked actions without writing
+  ledgers, KDS lifecycle, WAES results, KWE work items, business systems, or
+  external APIs.
+
+required_fields:
+  - view_id
+  - surface
+  - tenant_id
+  - viewer_id
+  - project_id
+  - scope
+  - attribution_packet_refs
+  - visible_revenue_refs
+  - visible_contribution_refs
+  - masked_contribution_refs
+  - waes_gate_refs
+  - kwe_workpack_refs
+  - committee_refs
+  - freeze_refs
+  - visibility
+  - display_mode
+  - blocked_actions
+  - no_write
+
+surfaces:
+  - brain
+  - pkc
+
+scopes:
+  - governance_overview
+  - project_revenue_contribution
+  - my_revenue_candidates
+  - my_contributions
+  - committee_review
+
+visibility_modes:
+  - own_only
+  - project_authorized
+  - governance_aggregate
+  - committee_authorized
+
+display_modes:
+  - summary_only
+  - metadata_only
+  - authorized_detail
+  - masked_cross_unit
+
+blocked_actions:
+  - confirm_score
+  - distribute_revenue
+  - promote_potential_revenue
+  - override_waes_gate
+  - complete_committee_decision
+  - write_business_system
+  - mutate_kds_lifecycle
+  - call_external_api
+
+hard_boundaries:
+  read_model_only: true
+  pkc_defaults_to_own_or_authorized_only: true
+  brain_cross_unit_detail_requires_committee_or_governance_authorization: true
+  masked_cross_unit_must_not_expose_contribution_ids: true
+  potential_revenue_not_promoted: true
+  attribution_view_is_not_distribution: true
+  attribution_view_is_not_score_confirmation: true
+
+no_write_assertions:
+  writes_kds_lifecycle: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_score_confirmation: 0
+  writes_revenue_distribution: 0
+  writes_business_system: 0
+  writes_external_api: 0

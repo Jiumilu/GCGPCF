@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-431C7A5400
-title: KDS OKF v0.1 Phase 1-2 Derived Bundle Report
+title: KDS OKF v0.1 Derived Bundle Report
 project: KDS
 related_projects: [WAES, KDS, Brain, GPCF]
 domain: docs
@@ -11,25 +11,26 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md
 source_path: docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# KDS OKF v0.1 Phase 1-2 Derived Bundle Report
+# KDS OKF v0.1 Derived Bundle Report
 
-日期：2026-06-19
+日期：2026-06-20
 
 ## 结论
 
-已开始执行 KDS 到 OKF v0.1 的受控派生层实施。当前输出为 metadata-only OKF bundle，已覆盖 `.okf/kds/index.md` 当前纳入的 KDS seed 文档；不复制 KDS 源文档正文，不替代 KDS 主存，不升级业务状态。
+已开始执行 kds 到 OKF v0.1 的受控派生层实施。当前输出为 metadata-only OKF bundle；不复制源文档正文，不替代 KDS 主存，不升级业务状态。
 
 ## Bundle
 
 | item | value |
 | --- | --- |
 | bundle_path | `.okf/bundles/kds-v0.1` |
-| concepts | 40 |
+| bundle_name | `kds` |
+| concepts | 36 |
 | policy | `metadata_only_no_body_copy` |
 | source_of_record | `KDS / Git controlled documents` |
 
@@ -38,8 +39,6 @@ superseded_by: []
 | purpose | source_path | okf_concept |
 | --- | --- | --- |
 | KDS 开发空间安全规范 | `02-governance/GlobalCloud项目群KDS开发空间安全规范.md` | `.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md` |
-| KDS 开发空间同步计划 | `09-status/kds-development-space-sync-plan.md` | `.okf/bundles/kds-v0.1/concepts/09-status/kds-development-space-sync-plan.md` |
-| KDS 同步台账 | `09-status/kds-development-space-sync-register.md` | `.okf/bundles/kds-v0.1/concepts/09-status/kds-development-space-sync-register.md` |
 | KDS 只读探测报告 | `09-status/kds-readonly-probe-report.md` | `.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md` |
 | KDS Markdown 化闭环方案 | `09-status/kds-md-okf-implementation-closure-plan.md` | `.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md` |
 | KDS 关联数据检索机制 | `03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md` | `.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md` |
@@ -75,8 +74,6 @@ superseded_by: []
 | KDS Phase 10 Backlog 分诊报告 | `docs/harness/evidence/kds-phase10-backlog-triage-20260619.md` | `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md` |
 | KDS Phase 10 Self-refresh 稳定化工作包 | `docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` | `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` |
 | KDS OKF v0.1 全量派生层实施方案 | `09-status/kds-okf-v01-full-implementation-plan.md` | `.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md` |
-| KDS OKF v0.1 Phase 1 派生 Bundle 报告 | `docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md` | `.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md` |
-| KDS OKF v0.1 派生 Bundle 根索引 | `.okf/bundles/kds-v0.1/index.md` | `.okf/bundles/kds-v0.1/concepts/.okf/bundles/kds-v0.1/index-concept.md` |
 
 ## 边界
 

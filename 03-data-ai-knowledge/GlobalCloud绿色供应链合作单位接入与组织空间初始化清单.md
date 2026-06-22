@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1C57589247
 title: GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md
 source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

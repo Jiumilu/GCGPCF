@@ -1,0 +1,78 @@
+{
+  "evidence_id": "HEADROOM-COST-MEASUREMENT-OUTPUT-20260621",
+  "date": "2026-06-21",
+  "status": "cost_measurement_output_class_measured",
+  "headroom_runtime_imported": true,
+  "headroom_runtime_used": true,
+  "headroom_version": "0.26.0",
+  "python_version": "3.12.13",
+  "telemetry": "off",
+  "schema": {
+    "name": "HeadroomCostMeasurement",
+    "shape": "array",
+    "allowed_application": "structured_metric_tool_output_only",
+    "required_fields": [
+      "type",
+      "project",
+      "source_path",
+      "structured_surrogate_input_tokens_before",
+      "structured_surrogate_input_tokens_after",
+      "structured_surrogate_saving_rate",
+      "marker_gate",
+      "raw_text_stored"
+    ],
+    "full_cost_detail_source": "docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json"
+  },
+  "project_count": 15,
+  "projects_covered": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "record_count": 15,
+  "aggregate": {
+    "tokens_before": 662,
+    "tokens_after": 248,
+    "tokens_saved": 414,
+    "saving_rate": 0.625378,
+    "minimum_saving_rate": 0.2,
+    "modified": true,
+    "strategy": "smart_crusher",
+    "reason": null,
+    "reason_category": "applied",
+    "transforms_applied": [
+      "router:gpcf:headroom_cost_measurement_output:headroom_cost_measurement_array:smart_crusher",
+      "smart_crusher"
+    ],
+    "missing_markers": [],
+    "marker_gate": true,
+    "output_gate": true
+  },
+  "decision": {
+    "headroom_cost_measurement_output_gate": true,
+    "allowed_for_next_pilot": true,
+    "reason": "HeadroomCostMeasurement structured metric output meets runtime saving and marker gates"
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

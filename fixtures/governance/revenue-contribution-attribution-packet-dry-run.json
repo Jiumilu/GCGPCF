@@ -1,0 +1,189 @@
+{
+  "id": "revenue-contribution-attribution-packet-dks-096",
+  "description": "Local dry-run attribution packets. These records are review material only and do not distribute revenue, confirm score, transfer quota, settle bounty, or call external APIs.",
+  "packets": [
+    {
+      "id": "rev-attr-gehua-cash-001",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-gehua",
+      "revenueRef": "revenue-gehua-cash-001",
+      "contributionRefs": [
+        {
+          "contributionRef": "contribution-gehua-order-001",
+          "confirmationStatus": "human_confirmed",
+          "proposedShare": 0.6,
+          "attributionReason": "confirmed order evidence and cash received voucher"
+        }
+      ],
+      "revenueType": "formal_revenue",
+      "revenueBasis": "cash_received",
+      "attributionBasis": "cash_received",
+      "evidenceRefs": ["evidence-cash-received-001"],
+      "waesGateRefs": ["waes-revenue-gate-pass-001", "waes-contribution-gate-pass-001"],
+      "confidence": 0.91,
+      "attributionStatus": "distribution_candidate",
+      "committeeRequired": false,
+      "freezeRecommended": false,
+      "distributionCandidateOnly": true,
+      "noWrite": {
+        "writesScoreConfirmation": 0,
+        "writesRevenueDistribution": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "id": "rev-attr-gehua-invoice-001",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-gehua",
+      "revenueRef": "revenue-gehua-invoice-001",
+      "contributionRefs": [
+        {
+          "contributionRef": "contribution-gehua-source-002",
+          "confirmationStatus": "human_confirmed",
+          "attributionReason": "invoice package is financial statistics only before cash received"
+        }
+      ],
+      "revenueType": "invoiced_revenue",
+      "revenueBasis": "invoice",
+      "attributionBasis": "invoice_statistical",
+      "evidenceRefs": ["evidence-invoice-001"],
+      "waesGateRefs": ["waes-revenue-gate-limited-002"],
+      "confidence": 0.82,
+      "attributionStatus": "under_review",
+      "committeeRequired": false,
+      "freezeRecommended": false,
+      "distributionCandidateOnly": false,
+      "noWrite": {
+        "writesScoreConfirmation": 0,
+        "writesRevenueDistribution": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "id": "rev-attr-hubei-potential-001",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-hubei-phosphorus",
+      "revenueRef": "revenue-hubei-opportunity-001",
+      "contributionRefs": [
+        {
+          "contributionRef": "contribution-hubei-policy-001",
+          "confirmationStatus": "candidate",
+          "attributionReason": "policy and factory expansion opportunity require committee review before any formal revenue claim"
+        }
+      ],
+      "revenueType": "potential_revenue",
+      "revenueBasis": "opportunity",
+      "attributionBasis": "opportunity_reference",
+      "evidenceRefs": ["evidence-opportunity-note-001"],
+      "waesGateRefs": ["waes-revenue-gate-committee-003"],
+      "confidence": 0.67,
+      "attributionStatus": "committee_required",
+      "committeeRequired": true,
+      "freezeRecommended": false,
+      "distributionCandidateOnly": false,
+      "noWrite": {
+        "writesScoreConfirmation": 0,
+        "writesRevenueDistribution": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "id": "rev-attr-channel-001",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-regional-supply-chain",
+      "revenueRef": "revenue-channel-opportunity-001",
+      "contributionRefs": [
+        {
+          "contributionRef": "contribution-channel-partner-001",
+          "confirmationStatus": "candidate",
+          "attributionReason": "channel introduction can be recorded as candidate contribution, not formal revenue distribution"
+        }
+      ],
+      "revenueType": "channel_opportunity",
+      "revenueBasis": "opportunity",
+      "attributionBasis": "channel_reference",
+      "evidenceRefs": ["evidence-channel-intro-001"],
+      "waesGateRefs": ["waes-contribution-gate-repair-004"],
+      "confidence": 0.72,
+      "attributionStatus": "under_review",
+      "committeeRequired": false,
+      "freezeRecommended": false,
+      "distributionCandidateOnly": false,
+      "noWrite": {
+        "writesScoreConfirmation": 0,
+        "writesRevenueDistribution": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "id": "rev-attr-cross-unit-dispute-001",
+      "tenantId": "tenant-gpcf",
+      "projectId": "project-gehua",
+      "revenueRef": "revenue-gehua-cash-disputed-001",
+      "contributionRefs": [
+        {
+          "contributionRef": "contribution-gehua-team-001",
+          "confirmationStatus": "human_confirmed",
+          "proposedShare": 0.5,
+          "attributionReason": "project team contribution is confirmed but disputed by partner"
+        },
+        {
+          "contributionRef": "contribution-partner-channel-001",
+          "confirmationStatus": "candidate",
+          "proposedShare": 0.5,
+          "attributionReason": "partner claims channel contribution without completed evidence"
+        }
+      ],
+      "revenueType": "formal_revenue",
+      "revenueBasis": "cash_received",
+      "attributionBasis": "cash_received",
+      "evidenceRefs": ["evidence-cash-received-disputed-001"],
+      "waesGateRefs": ["waes-revenue-gate-freeze-005", "waes-committee-gate-005"],
+      "confidence": 0.58,
+      "attributionStatus": "frozen",
+      "committeeRequired": true,
+      "freezeRecommended": true,
+      "distributionCandidateOnly": false,
+      "noWrite": {
+        "writesScoreConfirmation": 0,
+        "writesRevenueDistribution": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expected": {
+    "packetCount": 5,
+    "formalDistributionCandidates": 1,
+    "invoicedStatisticalOnly": 1,
+    "potentialNotPromoted": 1,
+    "channelReferenceOnly": 1,
+    "committeeRequired": 2,
+    "freezeRecommended": 1,
+    "scoreConfirmations": 0,
+    "revenueDistributions": 0,
+    "quotaTransfers": 0,
+    "bountySettlements": 0,
+    "businessWrites": 0,
+    "externalApiWrites": 0
+  }
+}

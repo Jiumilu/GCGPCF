@@ -1,0 +1,71 @@
+{
+  "evidence_id": "STUDIO-KANBAN-RUNTIME-VERIFIED-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-003",
+  "target": {
+    "project": "Studio",
+    "surface": "operation-workbench",
+    "page_component": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue",
+    "final_url": "http://127.0.0.1:8649/#/hermes/kanban?board=default"
+  },
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "in-app-browser"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "impeccable_not_invoked",
+    "figma_not_verified"
+  ],
+  "runtime": {
+    "login_authorized": true,
+    "login_success": true,
+    "post_login_default_url": "http://127.0.0.1:8649/#/hermes/chat",
+    "default_password_reminder_seen": true,
+    "kanban_access_requires_reload_after_chat_to_route_switch": true
+  },
+  "screenshots": {
+    "desktop": "docs/harness/evidence/assets/studio-kanban-desktop-20260622.png",
+    "mobile": "docs/harness/evidence/assets/studio-kanban-mobile-20260622.png"
+  },
+  "desktop_metrics": {
+    "width": 1280,
+    "height": 720,
+    "scrollWidth": 1280,
+    "overflowX": false,
+    "title": "看板",
+    "hasNewTask": true
+  },
+  "mobile_metrics": {
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "overflowX": false
+  },
+  "keyboard_focus_probe": {
+    "modal_opened": "新建任务",
+    "focused_element_tag": "INPUT",
+    "focused_placeholder": "任务标题",
+    "tab_progression_fully_verified": false
+  },
+  "gates": {
+    "G1": "pass",
+    "G2": "partial",
+    "G3": "pass",
+    "G4": "partial",
+    "G5": "partial",
+    "G6": "partial",
+    "G7": "pass",
+    "G8": "partial",
+    "G9": "pass"
+  },
+  "findings": [
+    "KanbanView is reachable in authenticated runtime state.",
+    "Switching from chat to kanban via URL requires reload before the view consistently renders Kanban."
+  ],
+  "non_claims": [
+    "does not prove ui_ready",
+    "does not prove task-detail runtime with real task data",
+    "does not grant accepted, integrated, or production_ready status"
+  ]
+}

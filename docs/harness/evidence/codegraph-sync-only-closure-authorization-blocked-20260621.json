@@ -1,0 +1,114 @@
+{
+  "evidence_id": "CODEGRAPH-SYNC-ONLY-CLOSURE-AUTHORIZATION-BLOCKED-20260621",
+  "status": "sync_only_closure_blocked_pending_authorization",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010",
+  "objective": "Execute the sync-only closure round up to the authorization boundary without syncing Brain or Studio.",
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-sync-authorization-pack-20260621.json",
+    "docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.json"
+  ],
+  "authorization_check": {
+    "required_phrase": "授权执行 Brain/Studio CodeGraph sync-only closure",
+    "phrase_received": false,
+    "decision": "do_not_execute_brain_or_studio_codegraph_sync",
+    "stop_type": "authorization_boundary"
+  },
+  "preflight_sample": {
+    "target_repos": [
+      {
+        "repo": "GlobalCloud Brain",
+        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+        "pending": {
+          "added": 3,
+          "modified": 13,
+          "removed": 0
+        },
+        "pending_total": 16,
+        "codegraph_git_status": "",
+        "threshold_result": "action_required",
+        "sync_executed": false
+      },
+      {
+        "repo": "GlobalCloud Studio",
+        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+        "pending": {
+          "added": 0,
+          "modified": 6,
+          "removed": 0
+        },
+        "pending_total": 6,
+        "codegraph_git_status": "",
+        "threshold_result": "action_required",
+        "sync_executed": false
+      }
+    ],
+    "gfis_policy_exception": {
+      "repo": "GlobalCloud GFIS",
+      "pending": {
+        "added": 1,
+        "modified": 0,
+        "removed": 0
+      },
+      "threshold_result": "watch"
+    },
+    "gpcf_local_index": {
+      "pending": {
+        "added": 1,
+        "modified": 0,
+        "removed": 0
+      },
+      "decision": "GPCF-only sync is allowed after governance evidence creation"
+    }
+  },
+  "impact_gate_sample": {
+    "target": "tools/kds-sync/validate_codegraph_sync_authorization_pack.py",
+    "query": {
+      "command": "codegraph query codegraph_sync_authorization_pack --json",
+      "result_count": 4,
+      "top_result": "tools/kds-sync/validate_codegraph_sync_authorization_pack.py"
+    },
+    "node": {
+      "command": "codegraph node tools/kds-sync/validate_codegraph_sync_authorization_pack.py",
+      "line_count": 134,
+      "symbols": 12,
+      "indexed_dependents": 0
+    },
+    "affected": {
+      "command": "codegraph affected tools/kds-sync/validate_codegraph_sync_authorization_pack.py --json",
+      "affected_tests": [],
+      "total_dependents_traversed": 0
+    },
+    "text_scan": {
+      "matched_files": 13,
+      "matched_lines": 29
+    }
+  },
+  "allowed_actions_completed": [
+    "Read-only codegraph status preflight for Brain and Studio",
+    "Read-only .codegraph git isolation check for Brain and Studio",
+    "GPCF evidence and validator generation",
+    "GPCF-only CodeGraph sync after governance evidence creation"
+  ],
+  "forbidden_actions_not_performed": [
+    "Brain codegraph sync",
+    "Studio codegraph sync",
+    "Brain or Studio business code edits",
+    "git add",
+    "git commit",
+    "git push",
+    "deploy",
+    "accepted/integrated/production_ready upgrade"
+  ],
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false,
+    "brain_or_studio_sync_executed": false
+  },
+  "next_round": "GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED"
+}

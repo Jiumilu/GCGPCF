@@ -48,6 +48,22 @@ def require_controlled(text: str, source_path: str) -> None:
         require(phrase in text, f"{source_path} missing controlled marker: {phrase}")
 
 
+def self_correction_efficiency_risk(self_correction: dict) -> str | None:
+    risk = self_correction.get("loop_efficiency", {}).get("metrics", {}).get("risk")
+    if risk:
+        return risk
+    loop_efficiency = self_correction.get("loop_efficiency", {})
+    meaning = loop_efficiency.get("governance_meaning", "")
+    blockers = set(self_correction.get("blockers", []))
+    if self_correction.get("gate") == "blocked" and (
+        "review_required" in meaning
+        or "loop_round_efficiency_audit_failed" in blockers
+        or "loop_round_efficiency_review_required" in blockers
+    ):
+        return "review_required"
+    return None
+
+
 def main() -> int:
     dashboard = read(DASHBOARD_DOC)
     phase = read(PHASE_DOC)
@@ -103,8 +119,7 @@ def main() -> int:
     require(metrics.get("audit_window_truth_fields_missing", 0) >= 1, "historical truth-field debt must remain visible")
     require(metrics.get("audit_window_five_segment_missing", 0) >= 1, "historical five-segment debt must remain visible")
 
-    loop_efficiency = self_correction.get("loop_efficiency", {})
-    require(loop_efficiency.get("metrics", {}).get("risk") == "review_required", "self-correction efficiency risk must match dashboard")
+    require(self_correction_efficiency_risk(self_correction) == "review_required", "self-correction efficiency risk must match dashboard")
     require(phase_evidence.get("current_status_ceiling", {}).get("accepted_integrated_allowed") is False, "phase evidence must forbid accepted/integrated")
     require(efficiency_backlog.get("status") == "review_required", "efficiency backlog evidence must stay review_required")
 

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-C7559F7570
-title: GPCF-L4-005 PKC Task Notification Evidence Intake
+title: GPCF-L4-005 PKC 任务通知证据接收
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoG, MMC, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-005.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-005.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-005 PKC Task Notification Evidence Intake
+# GPCF-L4-005 PKC 任务通知证据接收
 
 ## Round Output
 

@@ -1,0 +1,52 @@
+{
+  "evidence_id": "STUDIO-KANBAN-RUNTIME-ENTRY-GATE-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-002",
+  "target": {
+    "project": "Studio",
+    "surface": "operation-workbench",
+    "page_component": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue",
+    "attempted_url": "http://127.0.0.1:8649/#/hermes/kanban",
+    "resolved_url": "http://127.0.0.1:8649/#/"
+  },
+  "ui_gate_status": "ui_blocked",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "in-app-browser",
+    "npm run harness:check"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "playwright_not_started",
+    "impeccable_not_invoked",
+    "figma_not_verified"
+  ],
+  "runtime_probe": {
+    "frontend_port_8649_listening": true,
+    "kanban_route_reachable_without_auth": false,
+    "observed_body_text": [
+      "Hermes Web UI",
+      "输入用户名和密码以继续。",
+      "默认登录名：admin，默认密码：123456",
+      "登录"
+    ],
+    "screenshot": "docs/harness/evidence/assets/studio-kanban-login-gate-20260622.png"
+  },
+  "harness_check": {
+    "command": "npm run harness:check",
+    "result": "fail",
+    "reason": "Chat session chain changed without adding a docs/chat-chain-changes/*.md fragment.",
+    "note": "This failure is from existing dirty worktree changes outside the Kanban runtime entry probe."
+  },
+  "gates": {
+    "G4": "pass",
+    "G6": "partial",
+    "G7": "partial",
+    "G8": "fail",
+    "G9": "pass"
+  },
+  "non_claims": [
+    "does not prove KanbanView runtime page is verified",
+    "does not authorize automatic login",
+    "does not prove displayed default credentials will successfully log in"
+  ]
+}

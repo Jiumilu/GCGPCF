@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-081-20260622",
+  "status": "was_real_source_record_monitor_081_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-081",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-080",
+  "purpose": "Eighty-first independent monitor pass for water withdrawal permits, water footprint assessments, wastewater discharge permits, wastewater treatment records, water quality test reports, water stress risk assessments, and supplier water stewardship commitments.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "water_withdrawal_permit_gaps": 0,
+    "water_footprint_assessment_gaps": 0,
+    "wastewater_discharge_permit_gaps": 0,
+    "wastewater_treatment_record_gaps": 0,
+    "water_quality_test_report_gaps": 0,
+    "water_stress_risk_assessment_gaps": 0,
+    "supplier_water_stewardship_commitment_gaps": 0,
+    "accepted_for_water_stewardship_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "water_stewardship_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "water_withdrawal_permit_gap",
+      "water_footprint_assessment_gap",
+      "wastewater_discharge_permit_gap",
+      "wastewater_treatment_record_gap",
+      "water_quality_test_report_gap",
+      "water_stress_risk_assessment_gap",
+      "supplier_water_stewardship_commitment_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "water_stewardship_requirements": [
+    "water_withdrawal_permit",
+    "water_footprint_assessment",
+    "wastewater_discharge_permit",
+    "wastewater_treatment_record",
+    "water_quality_test_report",
+    "water_stress_risk_assessment",
+    "supplier_water_stewardship_commitment"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-082",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer water withdrawal permit, water footprint assessment, wastewater discharge permit, wastewater treatment record, water quality test report, water stress risk assessment, or supplier water stewardship commitment",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "kds-acl-external-share-policy-smoke",
+  "description": "Local no-write smoke fixture for KDS ACL and external-share view boundaries.",
+  "aclRecords": [
+    {
+      "aclId": "acl-gehu-external-metadata-001",
+      "tenantId": "tenant-gc",
+      "subjectType": "external_account",
+      "subjectId": "external-liaoning-yuanhang",
+      "objectId": "ko-gehu-pod-metadata-001",
+      "domain": "supply_chain",
+      "visibility": "external_shared",
+      "allowedActions": ["read_metadata", "read_redacted_summary"],
+      "deniedActions": ["read_full_content", "use_for_safe_rag"],
+      "poolRefs": ["order_pool", "data_pool"],
+      "projectId": "project-gehu",
+      "supplyChainNodeId": "supplier-liaoning-yuanhang",
+      "expiresAt": "2026-07-20T00:00:00Z",
+      "createdBy": "governance-admin",
+      "createdAt": "2026-06-20T00:00:00Z"
+    }
+  ],
+  "externalViews": [
+    {
+      "viewId": "view-gehu-pod-metadata-001",
+      "tenantId": "tenant-gc",
+      "externalAccountId": "external-liaoning-yuanhang",
+      "objectId": "ko-gehu-pod-metadata-001",
+      "visibleFields": ["id", "title", "summary", "status", "contentHash"],
+      "redactedFields": ["rawContent", "financeVoucher", "customerSensitiveTerms"],
+      "metadataOnly": true,
+      "ragAdmission": "sensitive_metadata_only",
+      "waesGateStatus": "metadata_only",
+      "publicationApprovalRef": "pub-approval-metadata-001",
+      "evidenceRefs": ["hev-share-metadata-001"],
+      "expiresAt": "2026-07-20T00:00:00Z"
+    }
+  ],
+  "blockedObjects": [
+    {
+      "objectId": "ko-ai-only-001",
+      "trustLevel": "T5",
+      "ragAdmission": "blocked",
+      "reason": "T5 AI-only content cannot be shared externally as fact."
+    }
+  ],
+  "expected": {
+    "subjectTypeCount": 6,
+    "allowedActionCount": 8,
+    "minimumAclFieldCount": 15,
+    "minimumExternalViewFieldCount": 12,
+    "externalAccountDefaultActionCount": 2,
+    "requiredGateCount": 7,
+    "sampleExternalAccountActions": ["read_metadata", "read_redacted_summary"],
+    "sampleDeniedActionCount": 2,
+    "sampleMetadataOnly": true,
+    "sampleVisibleRawContent": false,
+    "sampleBlockedObjectCount": 1,
+    "tenantIsolationRequired": true,
+    "supplyChainPartitionRequired": true,
+    "externalAccountCrossUnitDetailDefaultDenied": true,
+    "sensitiveMetadataOnlyRawContentDenied": true,
+    "blockedRagExternalShareDenied": true,
+    "t5AiOnlyExternalFactDenied": true,
+    "externalShareRequiresWaesGate": true,
+    "publicVisibilityRequiresPublicationApproval": true,
+    "aclPassIsNotRagStrongReference": true,
+    "aclPassIsNotBusinessWriteback": true,
+    "aclPassIsNotRevenueOrScoreConfirmation": true,
+    "writesAclStore": 0,
+    "writesExternalSharePermission": 0,
+    "writesPublicationApproval": 0,
+    "writesKdsObject": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueOrScoreConfirmation": 0,
+    "writesExternalApi": 0
+  }
+}

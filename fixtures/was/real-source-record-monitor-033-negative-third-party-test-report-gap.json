@@ -1,0 +1,27 @@
+{
+  "fixture_id": "real-source-record-monitor-033-negative-third-party-test-report-gap",
+  "fixture_only": true,
+  "submitted_real_candidate_files": 0,
+  "product_conformity_certificate_gaps": 0,
+  "third_party_test_report_gaps": 1,
+  "environmental_compliance_permit_gaps": 0,
+  "chain_of_custody_certificate_gaps": 0,
+  "import_export_license_gaps": 0,
+  "digital_product_passport_record_gaps": 0,
+  "accepted_for_regulatory_product_compliance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "regulatory_product_compliance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

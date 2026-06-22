@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "labor_rights_evidence_gaps": 0,
+  "health_safety_record_gaps": 0,
+  "training_qualification_gaps": 0,
+  "subcontractor_responsibility_gaps": 0,
+  "grievance_whistleblower_channel_gaps": 0,
+  "community_impact_evidence_gaps": 1,
+  "accepted_for_social_ehs_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "social_ehs_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

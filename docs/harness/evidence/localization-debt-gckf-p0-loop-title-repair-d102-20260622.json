@@ -1,0 +1,57 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GCKF-P0-LOOP-TITLE-REPAIR-D102-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D22..D42 title/H1",
+  "action": "repair_gckf_p0_legacy_loop_title_and_h1_localization_debt",
+  "before": {
+    "all_repo_findings": 183,
+    "target_file_findings": 18
+  },
+  "after": {
+    "all_repo_findings": 164,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -19,
+    "target_file_findings": -18
+  },
+  "sync_surface_note": "D102 target files reduced by 18 findings. After scoped document control and index normalization, the stable all-repo localization finding count is 164.",
+  "changed_files": [
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D22-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D23-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D27-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D28-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D29-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D30-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D31-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D32-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D33-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D34-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D35-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D36-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D37-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D38-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D39-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D40-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D41-001.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D42-001.md"
+  ],
+  "changed_line_items": 72,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_gckf_p0_loop_title_repair_d102.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

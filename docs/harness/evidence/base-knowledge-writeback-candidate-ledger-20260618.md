@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-C13F879695
-title: Base Knowledge Writeback Candidate Ledger
+title: 底座知识写回候选台账
 project: KDS
 related_projects: [WAES, KDS]
 domain: docs
@@ -11,18 +11,18 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md
 source_path: docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Base Knowledge Writeback Candidate Ledger
+# 底座知识写回候选台账
 
 日期：2026-06-18
 
 状态：`candidate_only`
 
-## Candidate Ledger
+## 候选台账
 
 | candidate_id | fixture_id | base_knowledge_id | target | reason | candidate_status | required_confirmation | write_authority |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -41,8 +41,8 @@ superseded_by: []
 | WBC-DKS-044-013 | FIX-BKC-LEDGER-ORPHAN-001 | BKC-HBLC-LEDGER-202606-0001 | evidencePassRate | evidence_level_below_reuse_threshold | candidate_only | manual_or_committee_required | none_dry_run_only |
 | WBC-DKS-044-014 | FIX-BKC-LEDGER-ORPHAN-001 | BKC-HBLC-LEDGER-202606-0001 | writebackClosureRate | gap_writeback_not_closed | candidate_only | manual_or_committee_required | none_dry_run_only |
 
-## Controls
+## 控制边界
 
-- Candidate rows do not close gaps.
-- Candidate rows do not create score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger writes.
-- Candidate rows must be confirmed by the proper human, KDS, WAES, or committee process before any downstream action.
+- 候选行不关闭缺口。
+- 候选行不创建积分结算、收益分配、悬赏发布、RAG 准入、指挥舱强引用或业务台账写入。
+- 候选行在任何下游动作前，必须经过相应人工、KDS、WAES 或委员会流程确认。

@@ -4,10 +4,10 @@ title: ODF Phase 8 小批量回归与漂移监控闭环报告
 description: ODF Phase 8 漂移监控闭环报告
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md
 source_path: docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md
-source_hash: e1136b78df938974064905377a770d65764d288a2b76e57bcb613fd5b8824bf0
+source_hash: 9412ab9b7c14b1a76e3d3ba197fddd6b5ef8971a20c3c49ed9e835d985008a07
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 8 漂移监控闭环报告
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md` |
-| source_hash | `e1136b78df938974064905377a770d65764d288a2b76e57bcb613fd5b8824bf0` |
+| source_hash | `9412ab9b7c14b1a76e3d3ba197fddd6b5ef8971a20c3c49ed9e835d985008a07` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

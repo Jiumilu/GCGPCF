@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-C378E21CCF
-title: Loop Round GPCF-WA-LR-002
+title: Loop Round GPCF-WA-LR-002：WAES 门禁语义验证清单
 project: WAES
 related_projects: [GPC, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/04-WAES/docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md
 source_path: docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF-WA-LR-002
+# Loop Round GPCF-WA-LR-002：WAES 门禁语义验证清单
 
 | 字段 | 值 |
 |---|---|
@@ -43,4 +43,4 @@ superseded_by: []
 | AI 越权控制 | pending-human-review | 越权场景、拦截规则、例外审批 |
 | 状态裁决 | pending-human-review | partial/ready/accepted/integrated 判定证据 |
 
-Current state remains `partial`; this round does not change WAES authority, accepted/integrated status, production configuration, or real project repository.
+当前状态保持 `partial`；本轮不改变 WAES 权限、accepted/integrated 状态、生产配置或真实项目仓。

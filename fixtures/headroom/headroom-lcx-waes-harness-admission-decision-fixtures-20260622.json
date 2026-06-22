@@ -1,0 +1,544 @@
+{
+  "fixture_id": "HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-FIXTURES-20260622",
+  "date": "2026-06-22",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "case_count": 8,
+  "positive_case_count": 1,
+  "negative_case_count": 7,
+  "expected_admitted_for_next_precheck_only": 1,
+  "expected_rejected": 7,
+  "current_waes_harness_admission_decision": "blocked",
+  "cases": [
+    {
+      "case_id": "positive_sanitized_metadata_only",
+      "expected": "admit_for_next_precheck_only",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": true,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_raw_prompt_allowed",
+      "expected": "reject",
+      "expected_reason": "sensitive_material_not_allowed",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": true,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": false,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence",
+          "read_raw_prompt"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_real_kds_write",
+      "expected": "reject",
+      "expected_reason": "real_kds_write_not_allowed",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": false,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence",
+          "real_kds_api_write"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_external_api_write",
+      "expected": "reject",
+      "expected_reason": "external_api_write_not_allowed",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": true,
+          "no_external_api_write": false,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence",
+          "external_api_write"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_production_proxy",
+      "expected": "reject",
+      "expected_reason": "production_proxy_not_allowed",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": true,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": false,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence",
+          "production_proxy_start"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_missing_human_approval",
+      "expected": "reject",
+      "expected_reason": "human_approval_required",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": false,
+          "no_real_kds_write": true,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_incomplete_project_scope",
+      "expected": "reject",
+      "expected_reason": "project_group_scope_must_be_15",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 14,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": true,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": true
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    },
+    {
+      "case_id": "negative_promotes_production_ready",
+      "expected": "reject",
+      "expected_reason": "production_status_upgrade_not_allowed",
+      "candidate": {
+        "decision": "admitted_for_sanitized_measurement_precheck",
+        "project_count": 15,
+        "projects": [
+          "GPCF",
+          "KDS",
+          "Brain",
+          "WAES",
+          "GFIS",
+          "GPC",
+          "PVAOS",
+          "Edge",
+          "PKC",
+          "XiaoC",
+          "XGD",
+          "XiaoG",
+          "MMC",
+          "Studio",
+          "WAS"
+        ],
+        "checks": {
+          "authorization_complete": true,
+          "missing_required_field_count_zero": true,
+          "sanitized_ledger_exists": true,
+          "sanitized_ledger_contains_no_raw_content": true,
+          "rollback_plan_exists": true,
+          "telemetry_off_required": true,
+          "waes_harness_decision_required": true,
+          "human_approval_required": true,
+          "no_real_kds_write": true,
+          "no_external_api_write": true,
+          "no_sensitive_material_processing": true,
+          "no_production_proxy": true,
+          "accepted_false": true,
+          "integrated_false": true,
+          "production_ready_false": false
+        },
+        "allowed_actions": [
+          "read_sanitized_ledger_metadata",
+          "calculate_token_saving_estimate",
+          "write_harness_evidence"
+        ],
+        "forbidden_actions": [
+          "production_proxy_start",
+          "real_kds_api_write",
+          "external_api_write",
+          "database_migration",
+          "permission_change",
+          "headroom_learn_apply",
+          "memory_as_kds_fact_source"
+        ],
+        "evidence_refs": {
+          "request": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+          "approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+          "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+          "sanitized_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+          "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+        }
+      }
+    }
+  ]
+}

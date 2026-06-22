@@ -1,0 +1,148 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_approval_sla_escalation_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write approval SLA escalation previews derived from DKS-129
+  GFIS Assistant repair notification snooze queue approval SLA previews.
+  Escalation previews describe candidate escalation queues, owner boundaries,
+  risk levels, and next-step suggestions only. They do not create escalation
+  schedules, tasks, reminders, approver assignments, approval requests,
+  approval decisions, governance records, lifecycle changes, business writes,
+  settlements, or external API calls.
+
+required_fields:
+  - escalation_preview_id
+  - sla_preview_ref
+  - route_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - escalation_type
+  - escalation_status
+  - escalation_decision
+  - escalation_scope
+  - escalation_level
+  - candidate_owner_refs
+  - responsibility_boundary_refs
+  - source_sla_preview_refs
+  - source_route_preview_refs
+  - escalation_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - escalation_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_escalation_schedule
+  - creates_escalation_task
+  - assigns_escalation_owner
+  - creates_reminder
+  - creates_approval_route
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+escalation_types:
+  - watch_escalation_preview
+  - urgent_escalation_preview
+  - governance_escalation_preview
+  - external_blocked_escalation_preview
+  - committee_escalation_preview
+  - freeze_escalation_preview
+
+escalation_statuses:
+  - escalation_preview_only
+  - escalation_at_risk_preview
+  - escalation_metadata_boundary
+  - escalation_external_blocked
+  - escalation_committee_required
+  - escalation_freeze_required
+
+escalation_decisions:
+  - show_watch_escalation_preview
+  - show_urgent_escalation_preview
+  - show_governance_escalation_preview
+  - show_external_blocked_escalation_preview
+  - show_committee_escalation_preview
+  - show_freeze_escalation_preview
+
+escalation_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+blocked_actions:
+  - create_escalation_schedule
+  - create_escalation_task
+  - assign_escalation_owner
+  - create_reminder
+  - create_approval_route
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  escalation_preview_only: true
+  escalation_preview_is_not_escalation_schedule: true
+  escalation_preview_is_not_escalation_task: true
+  escalation_preview_is_not_escalation_owner_assignment: true
+  escalation_preview_is_not_reminder: true
+  escalation_preview_is_not_approval_route: true
+  escalation_preview_is_not_approval_request: true
+  escalation_preview_is_not_approval_decision: true
+  escalation_preview_is_not_harness_evidence: true
+  escalation_preview_is_not_waes_result: true
+  escalation_preview_is_not_kwe_work_item: true
+  escalation_preview_is_not_lifecycle_change: true
+  escalation_preview_is_not_business_writeback: true
+  creates_escalation_schedule_must_be_false: true
+  creates_escalation_task_must_be_false: true
+  assigns_escalation_owner_must_be_false: true
+  creates_reminder_must_be_false: true
+  creates_approval_route_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_escalation_schedule: 0
+  writes_escalation_task: 0
+  writes_escalation_owner: 0
+  writes_reminder: 0
+  writes_approval_route: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

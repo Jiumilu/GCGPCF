@@ -1,4 +1,5 @@
 ---
+doc_id: GPCF-DOC-346B3F6F08
 name: globalcloud-document-governance
 description: GlobalCloud 项目群文档综合治理技能。用于文档治理、KDS 开发空间同步、Loop 文档门禁、文档受控检查、防污染检查、文档健康报告、KDS TOKEN 安全检查，确保项目群所有工作在文档中有体现、受控、更新、真实、防污染并纳入 KDS。
 ---

@@ -1,0 +1,132 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-ACTIVE-DRIFT-METRICS-20260621",
+  "status": "codegraph_active_drift_metrics_evidenced",
+  "date": "2026-06-21",
+  "sampled_at_utc": "2026-06-21T06:54:31Z",
+  "scope": "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002",
+  "source_evidence": [
+    "docs/harness/evidence/loop-codegraph-active-drift-monitor-20260621.json",
+    "docs/harness/evidence/loop-codegraph-impact-assessment-20260621.json",
+    "docs/harness/evidence/loop-codegraph-project-group-monitor-20260621.json"
+  ],
+  "metrics_window": {
+    "previous_sample_utc": "2026-06-21T04:55:48Z",
+    "current_sample_utc": "2026-06-21T06:54:31Z",
+    "elapsed_minutes": 119,
+    "mttd": "seeded",
+    "mttr": "unavailable_until_drift_closes"
+  },
+  "observations": [
+    {
+      "project": "GlobalCloud Brain",
+      "status": "active_drift_growing",
+      "previous_pending_changes": {
+        "added": 0,
+        "modified": 39,
+        "removed": 0
+      },
+      "current_pending_changes": {
+        "added": 0,
+        "modified": 56,
+        "removed": 0
+      },
+      "delta": {
+        "added": 0,
+        "modified": 17,
+        "removed": 0
+      },
+      "decision": "sync_only_closure_requires_user_authorization"
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "status": "active_drift_persisting",
+      "previous_pending_changes": {
+        "added": 2,
+        "modified": 5,
+        "removed": 0
+      },
+      "current_pending_changes": {
+        "added": 2,
+        "modified": 5,
+        "removed": 0
+      },
+      "delta": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "decision": "sync_only_closure_requires_user_authorization"
+    },
+    {
+      "project": "GlobalCloud GFIS",
+      "status": "controlled_residual_persisting",
+      "current_pending_changes": {
+        "added": 1,
+        "modified": 0,
+        "removed": 0
+      },
+      "policy": "large_generated_validator_exception_candidate",
+      "decision": "keep_policy_exception"
+    },
+    {
+      "project": "GlobalCoud GPCF",
+      "status": "local_governance_index_resynchronized",
+      "current_pending_changes": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "decision": "gpcf_only_codegraph_sync_allowed_and_executed"
+    }
+  ],
+  "authorization_boundary": {
+    "git_gate": "blocked",
+    "reason": "untracked sensitive-name files exist outside this CodeGraph metrics scope",
+    "sync_only_authorized_for_brain_or_studio": false,
+    "business_code_edits_authorized": false,
+    "commit_or_push_authorized": false
+  },
+  "decision": {
+    "result": "continue_read_only_metrics_until_sync_only_authorized",
+    "rationale": [
+      "Brain drift is still increasing, so MTTR cannot be measured yet.",
+      "Studio drift persists, so its MTTR also remains unavailable.",
+      "Sync-only closure for Brain or Studio would alter their .codegraph indexes and needs explicit authorization.",
+      "The GPCF governance index can be locally synchronized because this round created GPCF evidence and validator files."
+    ]
+  },
+  "boundaries": {
+    "project_business_code_edits": false,
+    "codegraph_sync_on_brain_or_studio": false,
+    "commit_or_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false
+  },
+  "next_loop_input": {
+    "round": "GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003",
+    "objective": "Ask for explicit authorization before running sync-only closure on Brain or Studio .codegraph indexes, or continue read-only metrics sampling if authorization is not granted.",
+    "allowed_without_extra_authorization": [
+      "read-only codegraph status sampling",
+      "read-only .codegraph git status checks",
+      "GPCF evidence and validator update",
+      "GPCF-only codegraph sync after governance evidence changes"
+    ],
+    "requires_explicit_authorization": [
+      "codegraph sync in GlobalCloud Brain",
+      "codegraph sync in GlobalCloud Studio"
+    ],
+    "forbidden_actions": [
+      "Brain business code edits",
+      "Studio business code edits",
+      "GFIS validator refactor",
+      "production writes",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  }
+}

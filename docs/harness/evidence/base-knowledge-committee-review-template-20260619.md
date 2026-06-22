@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-8066745911
-title: Base Knowledge Committee Review Template
+title: 底座知识委员会审查模板
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
 domain: docs
@@ -11,20 +11,20 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-template-20260619.md
 source_path: docs/harness/evidence/base-knowledge-committee-review-template-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Base Knowledge Committee Review Template
+# 底座知识委员会审查模板
 
 日期：2026-06-19
 
 状态：`blank_template_only`
 
-This file provides blank records for future committee review based on the DKS-046 committee review schema.
+本文件基于 DKS-046 委员会审查 schema，为未来委员会审查提供空白记录。
 
-## Summary
+## 摘要
 
 - template_id：`BKC-COMMITTEE-REVIEW-TEMPLATE-20260619`
 - source_schema_id：`BKC-COMMITTEE-REVIEW-SCHEMA-20260619`
@@ -32,7 +32,7 @@ This file provides blank records for future committee review based on the DKS-04
 - template_type：`committee_review_template`
 - record_count：`10`
 
-## Blank Records
+## 空白记录
 
 | template_record_id | source_queue_item_id | source_candidate_id | template_status | downstream_allowed |
 | --- | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ This file provides blank records for future committee review based on the DKS-04
 | T-DKS-044-013 | Q-DKS-044-013 | WBC-DKS-044-013 | blank_template_only | false |
 | T-DKS-044-014 | Q-DKS-044-014 | WBC-DKS-044-014 | blank_template_only | false |
 
-## Controls
+## 控制边界
 
 | control | value |
 | --- | --- |
@@ -61,9 +61,9 @@ This file provides blank records for future committee review based on the DKS-04
 | ragAdmission | false |
 | acceptedOrIntegratedUpgrade | false |
 
-## Boundary
+## 边界
 
-- Blank records are templates only and contain no real confirmation or committee decision.
-- Prefilled identity fields only preserve traceability to source candidates.
-- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
-- Future filled records require separate controlled evidence and human or committee action.
+- 空白记录仅为模板，不包含真实确认或委员会决议。
+- 预填身份字段仅用于保留到来源候选的可追溯性。
+- 本轮不执行真实 KDS API、WAES、GFIS、GPC、PVAOS、财务、结算、RAG 准入或生产写入。
+- 未来填报记录需要单独受控证据以及人工或委员会动作。

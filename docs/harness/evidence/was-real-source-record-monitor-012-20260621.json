@@ -1,0 +1,104 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-012-20260621",
+  "status": "was_real_source_record_monitor_012_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-012",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-011",
+  "purpose": "Twelfth independent monitor pass for project-group scope and lineage drift controls, proving legacy 13-project scope, missing WAS, unadmitted future projects, single-project-only candidates, inconsistent project scope, broken business/data lineage, missing handoff evidence, missing owner accountability, unmapped downstream impact, and source-to-runtime trace gaps cannot enter the P4 source-record promotion chain.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "future_project_policy": {
+    "future_project_additions_allowed": true,
+    "admission_required_before_scope_use": true,
+    "required_admission_evidence": [
+      "project_group_admission_record",
+      "controlled_document_registration",
+      "kds_development_space_binding",
+      "loop_was_context_update",
+      "scenario_profile_matrix_update"
+    ]
+  },
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "legacy_13_project_scope_candidates": 0,
+    "missing_was_scope_candidates": 0,
+    "unknown_unadmitted_project_candidates": 0,
+    "single_project_only_candidates": 0,
+    "scope_mismatch_between_evidence_loop_template": 0,
+    "future_project_without_admission": 0,
+    "business_chain_lineage_breaks": 0,
+    "data_lineage_breaks": 0,
+    "owner_accountability_gaps": 0,
+    "cross_project_handoff_evidence_gaps": 0,
+    "downstream_impact_unmapped": 0,
+    "source_to_runtime_trace_gaps": 0,
+    "accepted_for_project_group_lineage": 0,
+    "accepted_for_project_group_scope": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "project_group_scope_state": "current_14_project_scope_only"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 12,
+    "negative_cases": [
+      "legacy_13_project_scope",
+      "missing_was_scope",
+      "unknown_unadmitted_project",
+      "single_project_only_candidate",
+      "scope_mismatch_between_evidence_loop_template",
+      "future_project_without_admission",
+      "business_chain_lineage_break",
+      "data_lineage_break",
+      "owner_accountability_gap",
+      "cross_project_handoff_evidence_gap",
+      "downstream_impact_unmapped",
+      "source_to_runtime_trace_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_011.py"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-013",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not accept legacy 13-project scope",
+    "does not accept missing WAS scope",
+    "does not accept unadmitted future project scope",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not mark accepted, integrated, or production ready"
+  ]
+}

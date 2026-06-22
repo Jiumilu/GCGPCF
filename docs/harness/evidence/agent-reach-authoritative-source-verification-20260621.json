@@ -1,0 +1,133 @@
+{
+  "evidence_id": "AGENT-REACH-AUTHORITATIVE-SOURCE-VERIFICATION-20260621",
+  "date": "2026-06-21",
+  "status": "pass",
+  "mode": "authoritative_source_verification_for_deferred_items",
+  "execution_mode": "live_source_verification_without_agent_reach_search",
+  "agent_reach_search_invoked": false,
+  "external_source_verification_performed": true,
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-human-review-decisions-20260621.json"
+  ],
+  "verification_batch_id": "GPCF-AGENT-REACH-AUTHORITATIVE-SOURCE-VERIFICATION-001",
+  "decision_summary": {
+    "item_count": 5,
+    "accept_limited_count": 4,
+    "reject_count": 1,
+    "defer_count": 0,
+    "all_items_have_reason": true,
+    "all_items_keep_limited_admission": true,
+    "kds_canonical_write_count": 0,
+    "status_upgrade_allowed": false
+  },
+  "verifications": [
+    {
+      "id": "knowledge_provenance_rag",
+      "original_url": "https://gautierdorval.com/en/frameworks/rag-governance-retrieval-and-inference-control/",
+      "verification_sources": [
+        {
+          "url": "https://gautierdorval.com/en/frameworks/rag-governance-retrieval-and-inference-control/",
+          "evidence": "Page presents a RAG governance framework, published 2026-02-20 and updated 2026-02-26, with rules for source qualification, provenance, freshness, and retrieval not equaling authorization.",
+          "source_type": "third_party_framework"
+        },
+        {
+          "url": "https://air-governance-framework.finos.org/mitigations/mi-13_providing-citations-and-source-traceability-for-ai-generated-information.html",
+          "evidence": "FINOS AI Governance Framework describes source traceability, source vetting, metadata preservation, and link-rot/versioning considerations for RAG citations.",
+          "source_type": "governance_framework"
+        }
+      ],
+      "decision": "accept_limited",
+      "accepted_scope": "rag_governance_context_only",
+      "reason": "The candidate aligns with independent citation/source-traceability governance guidance, but it is not GlobalCloud canonical policy.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "green_supply_chain_policy",
+      "original_url": "https://www.chinesestandard.net/PDF/English.aspx/GBT39256-2020",
+      "authoritative_replacement_url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=810E2EDF4E19BAF0934D86105D45FE5A",
+      "verification_sources": [
+        {
+          "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=810E2EDF4E19BAF0934D86105D45FE5A",
+          "evidence": "Official national standard page verifies GB/T 39256-2020, title, current status, publication date 2020-11-19, implementation date 2021-03-01, competent body, and issuing bodies.",
+          "source_type": "official_standard_registry"
+        }
+      ],
+      "decision": "accept_limited",
+      "accepted_scope": "official_standard_metadata_reference",
+      "reason": "The commercial mirror should not be canonical, but the standard identity and status were verified against the official SAMR/SAC public standard registry.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "factory_execution_traceability",
+      "original_url": "https://sgsystemsglobal.com/glossary/mes-manufacturing-execution-system/",
+      "verification_sources": [
+        {
+          "url": "https://sgsystemsglobal.com/glossary/mes-manufacturing-execution-system/",
+          "evidence": "Vendor glossary page describes MES as a runtime control layer and discusses traceability, evidence capture, and execution gates, updated January 2026.",
+          "source_type": "vendor_glossary"
+        }
+      ],
+      "decision": "reject",
+      "rejected_scope": "gfis_source_of_record_or_canonical_architecture_evidence",
+      "reason": "The source is vendor explanatory material and cannot define GlobalCloud GFIS source-of-record behavior or architecture boundaries.",
+      "required_next_action": "Use internal GFIS runtime evidence or controlled architecture documents for source-of-record claims.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "ai_agent_evidence_gate",
+      "original_url": "https://github.com/undercurrentai/aegis-mcp",
+      "verification_sources": [
+        {
+          "url": "https://github.com/undercurrentai/aegis-mcp",
+          "evidence": "Repository page identifies AEGIS Governance MCP server, public repository, 7 commits, MIT license file present in navigation, and README describing six-gate quantitative decision evaluation with hash-chained audit trails.",
+          "source_type": "open_source_repository"
+        }
+      ],
+      "decision": "accept_limited",
+      "accepted_scope": "open_source_tool_candidate_only",
+      "reason": "The repository is relevant as a tool candidate for governance gates, but it is not WAES policy and still requires legal/security review before use.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "agent_reach_capability",
+      "original_url": "https://github.com/Panniantong/Agent-Reach",
+      "verification_sources": [
+        {
+          "url": "https://github.com/Panniantong/Agent-Reach/blob/main/pyproject.toml",
+          "evidence": "Project metadata verifies package name agent-reach, version 1.5.0, MIT license declaration, Python >=3.10, and project scripts.",
+          "source_type": "official_repository_metadata"
+        },
+        {
+          "url": "https://github.com/Panniantong/Agent-Reach/blob/main/LICENSE",
+          "evidence": "Repository LICENSE is MIT License.",
+          "source_type": "official_repository_license"
+        },
+        {
+          "url": "https://github.com/Panniantong/Agent-Reach/blob/main/docs/README_en.md",
+          "evidence": "Repository documentation describes Agent Reach as one-click internet access with installation and health-check routing.",
+          "source_type": "official_repository_documentation"
+        }
+      ],
+      "decision": "accept_limited",
+      "accepted_scope": "agent_reach_capability_metadata_only",
+      "reason": "The official repository metadata aligns with the isolated PoC version and license evidence, but this still does not prove production integration.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    }
+  ],
+  "admission_decision": {
+    "waes_review_status": "limited_verification_complete",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false,
+    "strong_rag_upgrade_allowed": false,
+    "kds_canonical_write_count": 0
+  },
+  "next_gate": "limited_candidate_ingestion_plan"
+}

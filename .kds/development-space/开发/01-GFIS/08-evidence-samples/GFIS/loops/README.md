@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/01-GFIS/08-evidence-samples/GFIS/loops/README.md
 source_path: 08-evidence-samples/GFIS/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

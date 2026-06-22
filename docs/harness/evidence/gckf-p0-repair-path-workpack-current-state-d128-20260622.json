@@ -1,0 +1,41 @@
+{
+  "evidence_id": "GCKF-P0-REPAIR-PATH-WORKPACK-CURRENT-STATE-D128-20260622",
+  "round_id": "GPCF-GCKF-P0-D128-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D127 current-state decision template 基础上刷新 repair path workpack，使 D25 repair_required / scope_violation_found 分支显式吸收 D124-D127 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-repair-path-workpack-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-repair-path-workpack-current-state-d128-20260622.json",
+    "fixtures/api/gckf-p0-harness-decision-template-current-state-d127-20260622.json",
+    "docs/harness/evidence/gckf-p0-harness-decision-template-current-state-d127-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_workpack_status": "candidate_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d25_repair_path_workpack": "gckf_p0_repair_path_workpack_dry_run=pass status=candidate source_template_status=candidate covered_decisions=2 excluded_decisions=2 candidate_work_items=2",
+    "d127_current_state_decision_template": "gckf_p0_harness_decision_template_current_state_d127=pass template_status=candidate_with_hold maximum_state=review_ready_with_hold default_decision_status=pending_with_hold hold_context_refs=6",
+    "d126_current_state_candidate_record": "gckf_p0_harness_evidence_candidate_current_state_d126=pass candidate_record_status=candidate_with_hold review_status=pending_with_hold hold_context_refs=6",
+    "d125_current_state_packet": "gckf_p0_harness_review_input_current_state_d125=pass packet_status=candidate_with_hold maximum_state=review_ready_with_hold hold_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "workpack_scope": {
+    "covered_decisions": 2,
+    "excluded_decisions": 2,
+    "candidate_work_items": 2,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "formal_harness_write_allowed": false,
+    "lifecycle_promotion_allowed": false,
+    "runtime_writeback_allowed": false,
+    "p1_admission_allowed": false,
+    "v1_upgrade_recommended": false
+  },
+  "non_claims": [
+    "本 current-state repair path workpack 不创建真实 KWE work item 或 LOOP follow-up。",
+    "本 current-state repair path workpack 不把 candidate_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state repair path workpack 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "基于 D128 current-state repair path workpack 刷新 governance review decision intake 或 formal packet 前置分支，使后续治理分流也显式吸收 hold 上下文。"
+}

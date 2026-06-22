@@ -1,0 +1,148 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_approval_acknowledgement_digest_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write approval acknowledgement digest previews derived from
+  DKS-131 GFIS Assistant repair notification snooze queue approval escalation
+  acknowledgement previews. Digest previews aggregate candidate
+  acknowledgement references, coverage counts, blocked acknowledgement counts,
+  boundary references, and next-step suggestions only. They do not create
+  digest records, acknowledgements, read receipts, reminders, governance
+  records, lifecycle changes, business writes, settlements, or external API
+  calls.
+
+required_fields:
+  - digest_preview_id
+  - acknowledgement_preview_refs
+  - tenant_id
+  - project_id
+  - surface
+  - digest_type
+  - digest_status
+  - digest_decision
+  - digest_scope
+  - coverage_count
+  - blocked_ack_count
+  - candidate_acknowledger_refs
+  - boundary_refs
+  - source_acknowledgement_preview_refs
+  - digest_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - digest_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_digest
+  - creates_acknowledgement
+  - creates_read_receipt
+  - creates_reminder
+  - creates_escalation_task
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+digest_types:
+  - team_ack_digest_preview
+  - project_ack_digest_preview
+  - governance_ack_digest_preview
+  - external_blocked_ack_digest_preview
+  - committee_ack_digest_preview
+  - freeze_ack_digest_preview
+
+digest_statuses:
+  - digest_preview_only
+  - digest_at_risk_preview
+  - digest_metadata_boundary
+  - digest_external_blocked
+  - digest_committee_required
+  - digest_freeze_required
+
+digest_decisions:
+  - show_team_ack_digest_preview
+  - show_project_ack_digest_preview
+  - show_governance_ack_digest_preview
+  - show_external_blocked_ack_digest_preview
+  - show_committee_ack_digest_preview
+  - show_freeze_ack_digest_preview
+
+digest_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+blocked_actions:
+  - create_digest
+  - create_acknowledgement
+  - create_read_receipt
+  - create_reminder
+  - create_escalation_task
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  digest_preview_only: true
+  digest_preview_is_not_digest_record: true
+  digest_preview_is_not_acknowledgement: true
+  digest_preview_is_not_read_receipt: true
+  digest_preview_is_not_reminder: true
+  digest_preview_is_not_escalation_task: true
+  digest_preview_is_not_approval_request: true
+  digest_preview_is_not_approval_decision: true
+  digest_preview_is_not_harness_evidence: true
+  digest_preview_is_not_waes_result: true
+  digest_preview_is_not_kwe_work_item: true
+  digest_preview_is_not_lifecycle_change: true
+  digest_preview_is_not_business_writeback: true
+  creates_digest_must_be_false: true
+  creates_acknowledgement_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  creates_reminder_must_be_false: true
+  creates_escalation_task_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_digest: 0
+  writes_acknowledgement: 0
+  writes_read_receipt: 0
+  writes_reminder: 0
+  writes_escalation_task: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

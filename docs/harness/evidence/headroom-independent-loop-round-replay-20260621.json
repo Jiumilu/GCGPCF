@@ -1,0 +1,93 @@
+{
+  "evidence_id": "HEADROOM-INDEPENDENT-LOOP-ROUND-REPLAY-20260621",
+  "date": "2026-06-21",
+  "status": "independent_production_token_free_loop_replay_ready",
+  "replay_round_id": "GPCF-HEADROOM-INDEPENDENT-LOOP-ROUND-REPLAY-001",
+  "normalized_scope": "metric_and_adapter_output_and_cost_evidence_only",
+  "source_evidence": [
+    "docs/harness/evidence/headroom-loop-cost-observation-20260621.json",
+    "docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json",
+    "docs/harness/evidence/headroom-marker-preservation-policy-20260621.json"
+  ],
+  "aggregate": {
+    "runtime_entry_count": 3,
+    "runtime_tokens_before": 12240,
+    "runtime_tokens_after": 8882,
+    "runtime_tokens_saved": 3358,
+    "runtime_saving_rate": 0.274346,
+    "baseline_series_saving_rate": 0.274346,
+    "saving_rate_drift": 0.0,
+    "drift_gate_threshold": 0.01,
+    "saving_rate_stability_gate": true,
+    "blocked_scenarios_excluded": true,
+    "production_tokens_used": false,
+    "production_admission_gate": false
+  },
+  "runtime_entries": [
+    {
+      "observation_id": "HEADROOM-OBS-RUNTIME-SCENARIO-MATRIX",
+      "source_evidence": "docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.json",
+      "observation_type": "runtime_scenario_matrix",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 9082,
+      "tokens_after": 7727,
+      "tokens_saved": 1355,
+      "saving_rate": 0.149196,
+      "gate": true,
+      "scope": "scenario_discovery_only",
+      "raw_text_stored": false
+    },
+    {
+      "observation_id": "HEADROOM-OBS-COST-MEASUREMENT-OUTPUT",
+      "source_evidence": "docs/harness/evidence/headroom-cost-measurement-output-20260621.json",
+      "observation_type": "allowed_structured_metric_output",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 662,
+      "tokens_after": 248,
+      "tokens_saved": 414,
+      "saving_rate": 0.625378,
+      "gate": true,
+      "scope": "structured_metric_tool_output_only",
+      "raw_text_stored": false
+    },
+    {
+      "observation_id": "HEADROOM-OBS-CONTROLLED-METRIC-PILOT",
+      "source_evidence": "docs/harness/evidence/headroom-controlled-metric-pilot-20260621.json",
+      "observation_type": "controlled_metric_pilot",
+      "runtime_used": true,
+      "included_in_loop_cost_observation": true,
+      "tokens_before": 2496,
+      "tokens_after": 907,
+      "tokens_saved": 1589,
+      "saving_rate": 0.636619,
+      "gate": true,
+      "scope": "structured_metric_and_marker_preserving_adapter_outputs",
+      "raw_text_stored": false
+    }
+  ],
+  "substantive_round": {
+    "independent_input": false,
+    "independent_judgment": true,
+    "independent_output": true,
+    "independent_validation": true,
+    "independent_feedback": true,
+    "substantive_round_gate": true
+  },
+  "decision": {
+    "independent_round_gate": true,
+    "next_required_action": "collect measured production token evidence before any L3.5/L4 admission or production_ready claim",
+    "production_admission_gate": false
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

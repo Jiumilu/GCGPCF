@@ -1,0 +1,27 @@
+{
+  "fixture_id": "real-source-record-monitor-028-negative-supplier-tier-traceability-gap",
+  "fixture_only": true,
+  "submitted_real_candidate_files": 0,
+  "supplier_esg_audit_report_gaps": 0,
+  "supplier_code_of_conduct_acknowledgement_gaps": 0,
+  "labor_standard_attestation_gaps": 0,
+  "anti_bribery_conflict_declaration_gaps": 0,
+  "corrective_action_plan_closure_gaps": 0,
+  "supplier_tier_traceability_gaps": 1,
+  "accepted_for_supplier_esg_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "supplier_esg_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "brain-pkc-endpoint-no-write-smoke",
+  "expectedBrainEndpoints": [
+    {"method": "POST", "path": "/api/v2/brain/command-center/query", "routeMode": "aggregate_read"},
+    {"method": "GET", "path": "/api/v2/brain/governance", "routeMode": "governance_read"},
+    {"method": "GET", "path": "/api/v2/brain/loop-dashboard", "routeMode": "dashboard_read"}
+  ],
+  "expectedPkcEndpoints": [
+    {"method": "POST", "path": "/api/v2/pkc/console/query", "routeMode": "console_read"},
+    {"method": "GET", "path": "/api/v2/pkc/tasks", "routeMode": "task_read"},
+    {"method": "GET", "path": "/api/v2/pkc/ledgers", "routeMode": "ledger_read"}
+  ],
+  "expected": {
+    "brainEndpointCount": 3,
+    "pkcEndpointCount": 3,
+    "aggregateReadCount": 1,
+    "dashboardReadCount": 1,
+    "governanceReadCount": 1,
+    "consoleReadCount": 1,
+    "taskReadCount": 1,
+    "ledgerReadCount": 1,
+    "routesAggregatingKds": 3,
+    "routesAggregatingKwe": 4,
+    "routesAggregatingGovernance": 5,
+    "writesKds": 0,
+    "writesWaes": 0,
+    "writesKwe": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0,
+    "noWrite": true
+  }
+}

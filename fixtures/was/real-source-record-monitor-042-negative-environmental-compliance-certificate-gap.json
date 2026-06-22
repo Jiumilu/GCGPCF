@@ -1,0 +1,28 @@
+{
+  "fixture_id": "real-source-record-monitor-042-negative-environmental-compliance-certificate-gap",
+  "fixture_only": true,
+  "submitted_real_candidate_files": 0,
+  "product_carbon_footprint_gaps": 0,
+  "energy_consumption_evidence_gaps": 0,
+  "emissions_factor_source_gaps": 0,
+  "environmental_compliance_certificate_gaps": 1,
+  "hazardous_substance_declaration_gaps": 0,
+  "recycling_end_of_life_plan_gaps": 0,
+  "green_claim_substantiation_gaps": 0,
+  "accepted_for_carbon_circularity_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "carbon_circularity_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

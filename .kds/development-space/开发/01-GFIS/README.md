@@ -1,11 +1,17 @@
 # GFIS 开发文档空间
 
-生成日期：2026-06-12
+生成日期：2026-06-22
 
 用途：KDS `开发` 空间中 `GFIS` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
+| GPCF-DOC-A001000012 | harden | .agents/skills/impeccable/reference/harden.md | controlled |
+| GPCF-DOC-A001000015 | Interaction Design | .agents/skills/impeccable/reference/interaction-design.md | controlled |
+| GPCF-DOC-A001000019 | overdrive | .agents/skills/impeccable/reference/overdrive.md | controlled |
+| GPCF-DOC-A001000021 | polish | .agents/skills/impeccable/reference/polish.md | controlled |
+| GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | controlled |
+| GPCF-DOC-F6D4D8B07A | 跨项目 Agent 长期记忆系统 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md | controlled |
 | GPCF-DOC-82A2F06757 | GPCF-GF-LR-001 输入定义 | 08-evidence-samples/GFIS/GPCF-GF-LR-001-input.md | controlled |
 | GPCF-DOC-C8373F0E81 | GFIS | 08-evidence-samples/GFIS/README.md | controlled |
 | GPCF-DOC-618A02EF68 | P0 SOP 到 GCFIS 单据映射表 | 08-evidence-samples/GFIS/docs/07-p0-sop-to-erpnext-doctype-mapping.md | controlled |
@@ -81,3 +87,7 @@
 | GPCF-DOC-E574C9CB52 | Loop Round GPCF-GF-LR-001 | 08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md | controlled |
 | GPCF-DOC-94C5F5E540 | 现代精工工厂岗位培训资料结构化分析 | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | controlled |
 | GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | controlled |
+| GPCF-DOC-AGENT-REACH-CONTROLLED-ADAPTER-20260622 | Agent-Reach 受控 Adapter Skeleton | third_party/agent-reach/CONTROLLED_ADAPTER.md | controlled |
+| GPCF-DOC-AGENT-REACH-ISOLATED-INSTALL-20260622 | Agent-Reach 隔离安装审查 | third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md | controlled |
+| GPCF-DOC-1A55A16A23 | agent-reach | third_party/agent-reach/README.md | controlled |
+| GPCF-DOC-AGENT-REACH-SOURCE-20260622 | Agent-Reach Source Lock | third_party/agent-reach/SOURCE.md | controlled |

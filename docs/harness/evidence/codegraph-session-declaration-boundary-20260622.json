@@ -1,0 +1,54 @@
+{
+  "evidence_id": "CODEGRAPH-SESSION-DECLARATION-BOUNDARY-20260622",
+  "scope": "GPCF-CODEGRAPH-SESSION-DECLARATION-BOUNDARY-001",
+  "status": "declaration_boundary_established",
+  "generated_at": "2026-06-22",
+  "main_session_objective": "完成 CodeGraph 在项目群和 Loop 工程体系中的部署集成，并把 CodeGraph 从工具层推进为未来业务开发任务的前置分析、过程约束、验收证据和效率评估输入。",
+  "completed_scope": [
+    "14 仓 CodeGraph 项目群覆盖与稳态验证",
+    ".codegraph Git 隔离检查",
+    "Brain/Studio/GFIS watchlist 与授权边界登记",
+    "GFIS policy exception 与残留 drift 记录",
+    "Loop/Harness/WAES/KDS 接入证据",
+    "CodeGraph 业务开发执行层准入规则",
+    "CodeGraph 开发执行 evidence 模板",
+    "CodeGraph 低风险 pilot pack",
+    "fallback_tests 与 fallback_reason 记录规则"
+  ],
+  "latest_rounds": [
+    "GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001",
+    "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002"
+  ],
+  "declaration_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "brain_studio_sync_authorized": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "allowed_claims": [
+    "CodeGraph 已纳入项目群治理与 Loop evidence 链",
+    "CodeGraph 开发执行层准入规则已建立",
+    "CodeGraph pilot pack 已生成并通过 validator",
+    "未来业务开发任务应在实现前携带 CodeGraph query/node/affected 证据",
+    "affectedTests 为空时必须记录 fallback_tests 与 fallback_reason"
+  ],
+  "forbidden_claims": [
+    "业务功能已完成",
+    "项目已 accepted 或 integrated",
+    "生产环境已就绪",
+    "已执行生产写入或外部 API 写入",
+    "CodeGraph 可替代 WAES/Harness/人工验收裁决",
+    "Brain/Studio watchlist 已在未授权情况下完成 sync-only closure"
+  ],
+  "required_future_gate": {
+    "round": "GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003",
+    "purpose": "把 codegraph_evidence、target_nodes、affected_scope、fallback_reason 和效率指标接入 Harness/Loop 检查链，使未来业务开发任务缺少 CodeGraph 影响分析时被阻断。"
+  }
+}

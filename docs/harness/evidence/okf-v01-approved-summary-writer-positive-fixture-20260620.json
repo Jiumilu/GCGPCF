@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-06-22T01:32:31.542670+00:00",
+  "status": "pass",
+  "approved_rows": 1,
+  "would_write": 1,
+  "blocked": [],
+  "boundary": {
+    "uses_temporary_files_only": true,
+    "does_not_modify_okf_concepts": true,
+    "does_not_approve_real_summary": true
+  }
+}

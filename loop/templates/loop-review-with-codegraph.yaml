@@ -1,0 +1,22 @@
+loop_review_with_codegraph:
+  review_id:
+  task_id:
+  repo:
+  codegraph:
+    required: true
+    snapshot_id:
+    changed_files: []
+    impacted_symbols: []
+    impacted_tests: []
+    risk_flags: []
+    evidence_ref:
+  findings: []
+  waes:
+    required:
+    result:
+    reviewer:
+  decision:
+    status: review_required
+    accepted: false
+    integrated: false
+    production_ready: false

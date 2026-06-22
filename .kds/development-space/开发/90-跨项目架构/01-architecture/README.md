@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/README.md
 source_path: 01-architecture/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -44,6 +44,7 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-16D9DC63AA | AI驱动GFIS与GlobalCloud体系结合分析 | 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | controlled |
 | GPCF-DOC-3F9E7988C6 | AI驱动工厂信息化系统完整方案V3.1 | 01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | GPCF | controlled |
 | GPCF-DOC-D54AF3DD5D | GPC方向全面分析报告 | 01-architecture/GPC方向全面分析报告.md | GPCF | controlled |
+| GPCF-DOC-45A09FDDC2 | GlobalCloud世界资产体系候选范围与门禁边界 | 01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md | GPCF | controlled |
 | GPCF-DOC-0C519C97BD | GlobalCloud体系最小闭环与三阶段激活深度总表 | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | controlled |
 | GPCF-DOC-3DBC8DC5C3 | GlobalCloud智慧工厂专项架构图集 | 01-architecture/GlobalCloud智慧工厂专项架构图集.md | GPCF | controlled |
 | GPCF-DOC-1DCB795545 | GlobalCloud智慧工厂进一步梳理与提示词库 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | GPCF | controlled |

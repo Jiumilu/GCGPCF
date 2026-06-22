@@ -1,0 +1,77 @@
+{
+  "evidence_id": "CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-20260621",
+  "status": "authorization_pack_ready",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002",
+  "objective": "Prepare explicit authorization package for Brain/Studio CodeGraph watchlist sync-only closure without executing sync.",
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-watchlist-sync-plan-20260621.json",
+    "docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260621.json"
+  ],
+  "required_authorization_phrase": "授权执行 Brain/Studio CodeGraph watchlist sync-only closure",
+  "authorization_received": false,
+  "decision": "do_not_execute_brain_or_studio_codegraph_sync",
+  "preflight": {
+    "GlobalCloud Brain": {
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "pending": {"added": 0, "modified": 11, "removed": 0},
+      "pending_total": 11,
+      "classification": "active_drift_action_required",
+      "codegraph_git_status_entries": 0
+    },
+    "GlobalCloud Studio": {
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "pending": {"added": 0, "modified": 5, "removed": 0},
+      "pending_total": 5,
+      "classification": "active_drift_action_required",
+      "codegraph_git_status_entries": 0
+    },
+    "GlobalCloud GFIS": {
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+      "pending": {"added": 1, "modified": 0, "removed": 0},
+      "pending_total": 1,
+      "classification": "policy_exception_watch",
+      "codegraph_git_status_entries": 0
+    },
+    "GlobalCoud GPCF": {
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+      "pending": {"added": 0, "modified": 0, "removed": 0},
+      "pending_total": 0,
+      "classification": "self_sync_clear",
+      "codegraph_git_status_entries": 0
+    }
+  },
+  "allowed_before_authorization": [
+    "codegraph status --json .",
+    "git status --short -- .codegraph",
+    "GPCF evidence and validator generation",
+    "GPCF document governance",
+    "GPCF CodeGraph self-sync after governance evidence generation"
+  ],
+  "forbidden_before_authorization": [
+    "Brain codegraph sync",
+    "Studio codegraph sync",
+    "Brain or Studio business code edits",
+    "GFIS policy exception repair",
+    "git add",
+    "git commit",
+    "git push",
+    "deploy",
+    "accepted/integrated/production_ready upgrade"
+  ],
+  "status_boundaries": {
+    "business_code_edits": false,
+    "project_internal_development": false,
+    "production_write": false,
+    "external_api_write": false,
+    "kds_canonical_write": false,
+    "git_add": false,
+    "git_commit": false,
+    "git_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED"
+}

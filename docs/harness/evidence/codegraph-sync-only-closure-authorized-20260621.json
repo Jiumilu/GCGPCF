@@ -1,0 +1,129 @@
+{
+  "evidence_id": "CODEGRAPH-SYNC-ONLY-CLOSURE-AUTHORIZED-20260621",
+  "status": "sync_only_closure_completed",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED",
+  "objective": "Execute authorized CodeGraph sync-only closure for Brain and Studio without entering project business development.",
+  "authorization": {
+    "required_phrase": "授权执行 Brain/Studio CodeGraph sync-only closure",
+    "phrase_received": true,
+    "decision": "execute_brain_and_studio_codegraph_sync_only",
+    "authorized_scope": [
+      "codegraph sync",
+      "codegraph status --json .",
+      "git status --short -- .codegraph"
+    ]
+  },
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-sync-authorization-pack-20260621.json",
+    "docs/harness/evidence/codegraph-sync-only-closure-authorization-blocked-20260621.json",
+    "docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.json"
+  ],
+  "executed_actions": [
+    {
+      "repo": "GlobalCloud Brain",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "pre_authorized_pending": {
+        "added": 3,
+        "modified": 16,
+        "removed": 0
+      },
+      "first_sync_result": {
+        "synced_changed_files": 19,
+        "added": 3,
+        "modified": 16,
+        "nodes_changed": 553
+      },
+      "residual_drift_sync_attempts": [
+        {
+          "synced_changed_files": 1,
+          "modified": 1,
+          "nodes_changed": 23,
+          "reason": "Brain showed one additional modified pending item during live post-sync verification."
+        },
+        {
+          "synced_changed_files": 5,
+          "modified": 5,
+          "nodes_changed": 80,
+          "reason": "Brain showed five additional modified pending items during validator execution; a second authorized sync-only pass cleared them."
+        }
+      ],
+      "post_sync_status": {
+        "initialized": true,
+        "fileCount": 156,
+        "nodeCount": 2691,
+        "edgeCount": 6256,
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "worktreeMismatch": null,
+        "reindexRecommended": false
+      },
+      "codegraph_git_status_entries": 0,
+      "sync_executed": true
+    },
+    {
+      "repo": "GlobalCloud Studio",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "pre_authorized_pending": {
+        "added": 0,
+        "modified": 6,
+        "removed": 0
+      },
+      "first_sync_result": {
+        "synced_changed_files": 6,
+        "modified": 6,
+        "nodes_changed": 162
+      },
+      "residual_drift_sync_result": null,
+      "post_sync_status": {
+        "initialized": true,
+        "fileCount": 801,
+        "nodeCount": 14580,
+        "edgeCount": 47333,
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "worktreeMismatch": null,
+        "reindexRecommended": false
+      },
+      "codegraph_git_status_entries": 0,
+      "sync_executed": true
+    }
+  ],
+  "gpcf_followup": {
+    "evidence_generated": true,
+    "validator_generated": true,
+    "gpcf_codegraph_sync_required_after_evidence": true
+  },
+  "forbidden_actions_not_performed": [
+    "Brain or Studio business code edits",
+    "project internal development tasks",
+    "git add",
+    "git commit",
+    "git push",
+    "deploy",
+    "accepted/integrated/production_ready upgrade"
+  ],
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false
+  },
+  "closure_result": {
+    "brain_pending_total": 0,
+    "studio_pending_total": 0,
+    "brain_codegraph_git_isolated": true,
+    "studio_codegraph_git_isolated": true,
+    "sync_only_closure_completed": true
+  },
+  "next_round": "GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-011"
+}

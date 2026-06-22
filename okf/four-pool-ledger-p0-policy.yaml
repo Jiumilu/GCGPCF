@@ -1,0 +1,32 @@
+policy_id: okf.four_pool_ledger_p0_policy
+version: v0.1
+status: draft
+owner: GPCF
+updated_at: "2026-06-20"
+pools:
+  contribution_points:
+    allowed_actions: [register_contribution, record_candidate_score, record_confirmation_status, bind_evidence_refs, freeze_record]
+    blocked_actions: [auto_confirm_score, auto_deduct_score, auto_exchange_reward]
+  revenue_pool:
+    allowed_actions: [register_revenue_basis, record_candidate_distribution, record_review_status, bind_evidence_refs, freeze_record]
+    blocked_actions: [auto_distribute_revenue, auto_promote_potential_to_formal, distribute_without_cash_received]
+  ai_quota_pool:
+    allowed_actions: [register_quota_type, record_owner, record_amount, record_used_amount, record_revenue_pool_eligibility]
+    blocked_actions: [put_self_purchased_quota_into_unified_pool, auto_transfer_quota, auto_exchange_quota]
+  bounty_pool:
+    allowed_actions: [register_gap, record_submission, record_acceptance_status, record_dispute_window, record_candidate_reward]
+    blocked_actions: [auto_settle_bounty, skip_dispute_window, ai_direct_acceptance]
+hard_boundaries:
+  formal_revenue_requires_cash_received: true
+  invoiced_revenue_is_financial_statistics_only: true
+  potential_revenue_must_not_auto_promote: true
+  contribution_confirmed_score_requires_human_or_committee: true
+  self_purchased_quota_excluded_from_unified_revenue_pool: true
+  bounty_settlement_requires_waes_human_acceptance_and_dispute_window_closed: true
+  major_dispute_can_freeze_all_four_pools: true
+no_write_assertions:
+  writes_score_confirmation: 0
+  writes_revenue_distribution: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

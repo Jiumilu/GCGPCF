@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5D5E27312C
 title: GlobalCloud 绿色供应链体系对话模式与操作模式规范
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD]
+related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md
 source_path: 04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

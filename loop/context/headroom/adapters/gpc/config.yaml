@@ -1,0 +1,7 @@
+adapter_id: gpc
+mode: sdk_dry_run
+launcher_required: gpc_harness
+allowed_profiles: [review_safe, log_debug]
+blocked_profiles: [production_external_write, cross_project_memory_as_fact]
+evidence_required: true
+production_enabled: false

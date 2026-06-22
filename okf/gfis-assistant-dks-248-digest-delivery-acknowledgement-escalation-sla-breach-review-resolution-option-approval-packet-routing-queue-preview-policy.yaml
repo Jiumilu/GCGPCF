@@ -1,0 +1,168 @@
+policy_id: okf.gfis_assistant_dks_248_digest_delivery_acknowledgement_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview_policy
+version: v1.0
+owner: GPCF
+status: draft
+last_reviewed: '2026-06-21'
+purpose: Define local no-write routing queue previews derived from DKS-247 approval packet previews. These previews show candidate queue slot, queue status, queue priority, candidate assignee, blocked route count, and next-step suggestions only. They do not create routing queues, queue items, approval assignments, approval locks, approval packets, approval requests, approval decisions, committee decisions, freeze actions, governance records, lifecycle changes, business writes, settlements, or external API calls.
+required_fields:
+- routing_queue_preview_id
+- approval_packet_preview_refs
+- resolution_option_preview_refs
+- breach_review_preview_refs
+- tenant_id
+- project_id
+- surface
+- routing_queue_type
+- routing_queue_status
+- routing_queue_decision
+- routing_queue_scope
+- routing_queue_slot
+- routing_queue_priority
+- candidate_assignee_refs
+- required_evidence_refs
+- queue_reason_refs
+- blocked_route_count
+- boundary_refs
+- source_approval_packet_preview_refs
+- routing_summary_ref
+- lineage_hint_refs
+- reason_refs
+- routing_note_refs
+- next_step_candidate_refs
+- blocked_actions
+- creates_routing_queue
+- creates_queue_item
+- creates_approval_assignment
+- locks_approver
+- creates_approval_packet
+- creates_approval_request
+- creates_approval_decision
+- creates_committee_decision
+- creates_freeze_action
+- creates_harness_evidence
+- creates_waes_gate_result
+- creates_kwe_work_item
+- persists_evidence
+- approves_business_write
+- promotes_lifecycle
+- completes_committee_decision
+- no_write
+routing_queue_types:
+- team_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- project_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- governance_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- external_blocked_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- committee_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- freeze_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+routing_queue_statuses:
+- routing_queue_preview_only
+- routing_queue_evidence_required
+- routing_queue_metadata_boundary
+- routing_queue_external_blocked
+- routing_queue_committee_required
+- routing_queue_freeze_required
+routing_queue_decisions:
+- show_team_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- show_project_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- show_governance_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- show_external_blocked_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- show_committee_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+- show_freeze_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview
+routing_queue_scopes:
+- team_internal
+- project_internal
+- governance_review
+- external_blocked
+- committee_review
+- freeze_review
+routing_queue_slots:
+- team_lead_candidate_slot
+- project_owner_candidate_slot
+- governance_reviewer_candidate_slot
+- external_share_blocked_candidate_slot
+- committee_candidate_slot
+- freeze_reviewer_candidate_slot
+routing_queue_priorities:
+- normal_candidate
+- evidence_candidate
+- metadata_candidate
+- blocked_candidate
+- committee_candidate
+- freeze_candidate
+queue_reasons:
+- approval_packet_candidate
+- evidence_required_candidate
+- metadata_boundary_candidate
+- external_share_blocked_candidate
+- committee_review_candidate
+- freeze_review_candidate
+blocked_actions:
+- create_routing_queue
+- create_queue_item
+- create_approval_assignment
+- lock_approver
+- create_approval_packet
+- create_approval_request
+- create_approval_decision
+- create_committee_decision
+- create_freeze_action
+- create_harness_evidence
+- create_waes_gate_result
+- create_kwe_work_item
+- persist_evidence
+- approve_business_write
+- promote_lifecycle
+- complete_committee_decision
+hard_boundaries:
+  routing_queue_preview_only: true
+  routing_queue_is_not_queue: true
+  routing_queue_is_not_queue_item: true
+  routing_queue_is_not_approval_assignment: true
+  routing_queue_does_not_lock_approver: true
+  routing_queue_is_not_approval_packet: true
+  routing_queue_is_not_approval_request: true
+  routing_queue_is_not_approval_decision: true
+  routing_queue_is_not_committee_decision: true
+  routing_queue_is_not_freeze_action: true
+  routing_queue_is_not_harness_evidence: true
+  routing_queue_is_not_waes_result: true
+  routing_queue_is_not_kwe_work_item: true
+  routing_queue_is_not_lifecycle_change: true
+  routing_queue_is_not_business_writeback: true
+  creates_routing_queue_must_be_false: true
+  creates_queue_item_must_be_false: true
+  creates_approval_assignment_must_be_false: true
+  locks_approver_must_be_false: true
+  creates_approval_packet_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_committee_decision_must_be_false: true
+  creates_freeze_action_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_routing_queue: 0
+  writes_queue_item: 0
+  writes_approval_assignment: 0
+  writes_approval_lock: 0
+  writes_approval_packet: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_committee_decision: 0
+  writes_freeze_action: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

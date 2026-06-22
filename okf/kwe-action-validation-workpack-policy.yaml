@@ -1,0 +1,71 @@
+policy_id: okf.kwe_action_validation_workpack_policy
+version: v1.0
+owner: KWE
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run validation workpacks for KWE queue action intake
+  requests. Workpacks validate action requests only. They do not create KWE
+  work items, mutate KDS lifecycle, create WAES gate results, write business
+  systems, complete approvals, confirm revenue or scores, or call external APIs.
+
+required_fields:
+  - workpack_id
+  - request_ref
+  - tenant_id
+  - project_id
+  - source_view_ref
+  - route_ref
+  - surface
+  - actor_id
+  - action_type
+  - validation_status
+  - validation_checks
+  - accepted_payload_refs
+  - accepted_evidence_refs
+  - rejected_refs
+  - required_followups
+  - validation_notes
+  - creates_kwe_work_item
+  - promotes_lifecycle
+  - no_write
+
+validation_checks:
+  - actor_permission
+  - route_consistency
+  - payload_integrity
+  - evidence_presence
+  - metadata_only_boundary
+  - blocked_reason_presence
+  - no_write_guard
+
+validation_statuses:
+  - validation_passed
+  - repair_required
+  - committee_review_candidate
+  - freeze_review_candidate
+  - blocked
+
+hard_boundaries:
+  validation_only: true
+  creates_kwe_work_item_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  validation_is_not_approval_completion: true
+  validation_is_not_committee_decision_completion: true
+  validation_is_not_business_writeback: true
+  metadata_only_cannot_include_raw_content: true
+  blocked_workpack_cannot_approve: true
+
+no_write_guards:
+  writes_kwe_work_item: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_waes_gate_result: 0
+  writes_business_system: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

@@ -1,0 +1,89 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-022-20260621",
+  "status": "was_real_source_record_monitor_022_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-022",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-021",
+  "purpose": "Twenty-second independent monitor pass for circular economy, takeback, reuse/remanufacture, recycling, waste disposal, hazardous waste handling, and resource recovery accounting evidence boundaries.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "takeback_program_evidence_gaps": 0,
+    "reuse_remanufacture_record_gaps": 0,
+    "recycling_certificate_gaps": 0,
+    "waste_disposal_manifest_gaps": 0,
+    "hazardous_waste_handling_gaps": 0,
+    "resource_recovery_accounting_gaps": 0,
+    "accepted_for_circular_economy_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "circular_economy_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 6,
+    "negative_cases": [
+      "takeback_program_evidence_gap",
+      "reuse_remanufacture_record_gap",
+      "recycling_certificate_gap",
+      "waste_disposal_manifest_gap",
+      "hazardous_waste_handling_gap",
+      "resource_recovery_accounting_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_021.py"
+  ],
+  "circular_economy_requirements": [
+    "takeback_program_evidence",
+    "reuse_remanufacture_record",
+    "recycling_certificate",
+    "waste_disposal_manifest",
+    "hazardous_waste_handling",
+    "resource_recovery_accounting"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-023",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer takeback program evidence",
+    "does not infer reuse or remanufacture records",
+    "does not infer recycling certificates",
+    "does not infer waste disposal manifests",
+    "does not infer hazardous waste handling evidence",
+    "does not infer resource recovery accounting",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

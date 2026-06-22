@@ -1,0 +1,113 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-20260621",
+  "status": "codegraph_sync_only_authorization_executed",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003",
+  "authorization": {
+    "authorized_by_user_message": "授权",
+    "interpreted_scope": "Brain and Studio codegraph sync-only closure",
+    "authorized_actions": [
+      "codegraph sync in GlobalCloud Brain",
+      "codegraph sync in GlobalCloud Studio"
+    ],
+    "not_authorized": [
+      "business code edits",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  },
+  "sync_results": [
+    {
+      "project": "GlobalCloud Brain",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "before": {
+        "sampled_at_utc": "2026-06-21T07:05:02Z",
+        "pending_changes": {
+          "added": 0,
+          "modified": 56,
+          "removed": 0
+        },
+        "files": 152,
+        "nodes": 2447,
+        "edges": 5758
+      },
+      "after": {
+        "last_indexed": "2026-06-21T07:08:11.825Z",
+        "pending_changes": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "files": 152,
+        "nodes": 2569,
+        "edges": 6025
+      },
+      "sync_output_summary": "Synced 56 changed files; Modified: 56; 1406 nodes; bounded retry synced 4 changed files; Modified: 4; 266 nodes",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "before": {
+        "sampled_at_utc": "2026-06-21T07:05:02Z",
+        "pending_changes": {
+          "added": 2,
+          "modified": 5,
+          "removed": 0
+        },
+        "files": 797,
+        "nodes": 14457,
+        "edges": 46854
+      },
+      "after": {
+        "last_indexed": "2026-06-21T07:05:13.269Z",
+        "pending_changes": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "files": 799,
+        "nodes": 14513,
+        "edges": 47053
+      },
+      "sync_output_summary": "Synced 7 changed files; Added: 2, Modified: 5; 134 nodes",
+      "codegraph_git_status_entries": 0
+    }
+  ],
+  "remaining_project_group_state": {
+    "brain_status": "up_to_date_after_sync_only_closure",
+    "studio_status": "up_to_date_after_sync_only_closure",
+    "gfis_status": "controlled_residual_persisting",
+    "gpcf_git_gate": "blocked_by_untracked_sensitive_name_files_outside_this_scope",
+    "status_ceiling": "partial"
+  },
+  "boundaries": {
+    "project_business_code_edits": false,
+    "commit_or_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false
+  },
+  "next_loop_input": {
+    "round": "GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-VERIFY-004",
+    "objective": "Re-run project-group CodeGraph steady-state verification after Brain and Studio sync-only closure, while keeping GFIS residual and Git sensitive-name blockers explicit.",
+    "allowed_actions": [
+      "read-only project-group codegraph status verification",
+      "read-only .codegraph git status checks",
+      "GPCF evidence and validator update",
+      "GPCF-only codegraph sync after governance evidence changes"
+    ],
+    "forbidden_actions": [
+      "business code edits",
+      "production writes",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  }
+}

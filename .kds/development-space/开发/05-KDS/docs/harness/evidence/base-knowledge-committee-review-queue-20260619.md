@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-B30625918B
-title: Base Knowledge Committee Review Queue
+title: 底座知识委员会审查队列
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
 domain: docs
@@ -11,20 +11,20 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-queue-20260619.md
 source_path: docs/harness/evidence/base-knowledge-committee-review-queue-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Base Knowledge Committee Review Queue
+# 底座知识委员会审查队列
 
 日期：2026-06-19
 
 状态：`candidate_only`
 
-This queue contains hard-stop writeback candidates that require committee review before any downstream action.
+本队列包含硬停止写回候选；任何下游动作前都必须先完成委员会审查。
 
-## Summary
+## 摘要
 
 - evidence_id：`BKC-COMMITTEE-REVIEW-QUEUE-20260619`
 - source_evidence_id：`BKC-DRY-RUN-SUMMARY-20260618`
@@ -33,7 +33,7 @@ This queue contains hard-stop writeback candidates that require committee review
 - queue_type：`committee_review`
 - item_count：`10`
 
-## Queue Items
+## 队列项
 
 | queue_item_id | source_candidate_id | base_knowledge_id | target | reason | decision_band | hard_stop | next_action | queue_status | write_authority |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ This queue contains hard-stop writeback candidates that require committee review
 | Q-DKS-044-013 | WBC-DKS-044-013 | BKC-HBLC-LEDGER-202606-0001 | evidencePassRate | evidence_level_below_reuse_threshold | blocked_or_invalid | true | committee_review_required_before_any_downstream_action | candidate_only | none_dry_run_only |
 | Q-DKS-044-014 | WBC-DKS-044-014 | BKC-HBLC-LEDGER-202606-0001 | writebackClosureRate | gap_writeback_not_closed | blocked_or_invalid | true | committee_review_required_before_any_downstream_action | candidate_only | none_dry_run_only |
 
-## Boundary
+## 边界
 
 | boundary | value |
 | --- | --- |
@@ -62,9 +62,9 @@ This queue contains hard-stop writeback candidates that require committee review
 | bountyPublication | false |
 | committeeDecisionCompleted | false |
 
-## Controls
+## 控制边界
 
-- Queue rows are candidate-only and do not confirm facts, close gaps, or write any system.
-- No score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger write is performed.
-- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, or production write is performed.
-- Committee rows are review candidates only; committee decision is not completed in this evidence.
+- 队列行均为 candidate-only，不确认事实、不关闭缺口、不写入任何系统。
+- 本轮不执行积分结算、收益分配、悬赏发布、RAG 准入、指挥舱强引用或业务台账写入。
+- 本轮不执行真实 KDS API、WAES、GFIS、GPC、PVAOS、财务、结算或生产写入。
+- 委员会行仅为审查候选；本证据不完成委员会决议。

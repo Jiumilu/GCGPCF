@@ -1,0 +1,591 @@
+{
+  "evidence_id": "HEADROOM-COST-SENSITIVITY-MODEL-20260621",
+  "date": "2026-06-21",
+  "status": "cost_sensitivity_model_defined",
+  "source_evidence": [
+    "docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json",
+    "docs/harness/evidence/headroom-project-application-coverage-matrix-20260621.json"
+  ],
+  "project_count": 15,
+  "profiles": [
+    {
+      "profile_id": "low_input_high_cache_discount",
+      "pricing": {
+        "P_in": 0.5,
+        "P_out": 2.0,
+        "P_cache_write": 0.05,
+        "P_cache_read": 0.02,
+        "P_runtime": 0.0
+      },
+      "aggregate": {
+        "baseline_cost": 125865.01,
+        "headroom_cost": 1320.93,
+        "gross_saving": 124544.08,
+        "saving_rate": 0.989505,
+        "minimum_saving_rate": 0.2,
+        "admission_gate": true
+      },
+      "measurements": [
+        {
+          "project": "GPCF",
+          "scenario": "loop_control_board_summary",
+          "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+          "admission_gate": true,
+          "baseline_cost": 4088.55,
+          "headroom_cost": 139.43,
+          "gross_saving": 3949.12,
+          "saving_rate": 0.965897,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "KDS",
+          "scenario": "kds_loop_state_summary",
+          "source_path": "docs/harness/KDS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 246.4,
+          "headroom_cost": 54.88,
+          "gross_saving": 191.52,
+          "saving_rate": 0.777273,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Brain",
+          "scenario": "brain_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 29640.8,
+          "headroom_cost": 165.19,
+          "gross_saving": 29475.61,
+          "saving_rate": 0.994427,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "WAES",
+          "scenario": "waes_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 29640.8,
+          "headroom_cost": 156.23,
+          "gross_saving": 29484.57,
+          "saving_rate": 0.994729,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "GFIS",
+          "scenario": "gfis_loop_state_summary",
+          "source_path": "08-evidence-samples/GFIS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 29420.16,
+          "headroom_cost": 40.87,
+          "gross_saving": 29379.29,
+          "saving_rate": 0.998611,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "GPC",
+          "scenario": "gpc_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 29640.8,
+          "headroom_cost": 93.51,
+          "gross_saving": 29547.29,
+          "saving_rate": 0.996845,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "PVAOS",
+          "scenario": "pvaos_loop_state_summary",
+          "source_path": "docs/harness/PVAOS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 162.4,
+          "headroom_cost": 43.11,
+          "gross_saving": 119.29,
+          "saving_rate": 0.734544,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Edge",
+          "scenario": "edge_access_security_summary",
+          "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+          "admission_gate": true,
+          "baseline_cost": 645.12,
+          "headroom_cost": 64.96,
+          "gross_saving": 580.16,
+          "saving_rate": 0.899306,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "PKC",
+          "scenario": "pkc_loop_state_summary",
+          "source_path": "docs/harness/PKC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 247.52,
+          "headroom_cost": 78.4,
+          "gross_saving": 169.12,
+          "saving_rate": 0.683258,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XiaoC",
+          "scenario": "xiaoc_loop_state_summary",
+          "source_path": "docs/harness/XiaoC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 231.84,
+          "headroom_cost": 71.11,
+          "gross_saving": 160.73,
+          "saving_rate": 0.69328,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XGD",
+          "scenario": "xgd_loop_state_summary",
+          "source_path": "docs/harness/XGD/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 248.07,
+          "headroom_cost": 75.59,
+          "gross_saving": 172.48,
+          "saving_rate": 0.695288,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XiaoG",
+          "scenario": "xiaog_loop_state_summary",
+          "source_path": "docs/harness/XiaoG/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 231.27,
+          "headroom_cost": 74.47,
+          "gross_saving": 156.8,
+          "saving_rate": 0.677995,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "MMC",
+          "scenario": "mmc_loop_state_summary",
+          "source_path": "docs/harness/MMC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 236.32,
+          "headroom_cost": 75.04,
+          "gross_saving": 161.28,
+          "saving_rate": 0.682464,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Studio",
+          "scenario": "studio_codegraph_boundary_summary",
+          "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+          "admission_gate": true,
+          "baseline_cost": 913.92,
+          "headroom_cost": 119.27,
+          "gross_saving": 794.65,
+          "saving_rate": 0.869496,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "WAS",
+          "scenario": "was_admission_summary",
+          "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+          "admission_gate": true,
+          "baseline_cost": 271.04,
+          "headroom_cost": 68.87,
+          "gross_saving": 202.17,
+          "saving_rate": 0.745905,
+          "profile_admission_gate": true
+        }
+      ]
+    },
+    {
+      "profile_id": "base_model",
+      "pricing": {
+        "P_in": 1.0,
+        "P_out": 4.0,
+        "P_cache_write": 0.25,
+        "P_cache_read": 0.1,
+        "P_runtime": 0.0
+      },
+      "aggregate": {
+        "baseline_cost": 292186.55,
+        "headroom_cost": 3066.15,
+        "gross_saving": 289120.4,
+        "saving_rate": 0.989506,
+        "minimum_saving_rate": 0.2,
+        "admission_gate": true
+      },
+      "measurements": [
+        {
+          "project": "GPCF",
+          "scenario": "loop_control_board_summary",
+          "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+          "admission_gate": true,
+          "baseline_cost": 9491.25,
+          "headroom_cost": 323.65,
+          "gross_saving": 9167.6,
+          "saving_rate": 0.9659,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "KDS",
+          "scenario": "kds_loop_state_summary",
+          "source_path": "docs/harness/KDS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 572.0,
+          "headroom_cost": 127.4,
+          "gross_saving": 444.6,
+          "saving_rate": 0.777273,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Brain",
+          "scenario": "brain_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 68809.0,
+          "headroom_cost": 383.45,
+          "gross_saving": 68425.55,
+          "saving_rate": 0.994427,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "WAES",
+          "scenario": "waes_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 68809.0,
+          "headroom_cost": 362.65,
+          "gross_saving": 68446.35,
+          "saving_rate": 0.99473,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "GFIS",
+          "scenario": "gfis_loop_state_summary",
+          "source_path": "08-evidence-samples/GFIS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 68296.8,
+          "headroom_cost": 94.85,
+          "gross_saving": 68201.95,
+          "saving_rate": 0.998611,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "GPC",
+          "scenario": "gpc_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 68809.0,
+          "headroom_cost": 217.05,
+          "gross_saving": 68591.95,
+          "saving_rate": 0.996846,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "PVAOS",
+          "scenario": "pvaos_loop_state_summary",
+          "source_path": "docs/harness/PVAOS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 377.0,
+          "headroom_cost": 100.05,
+          "gross_saving": 276.95,
+          "saving_rate": 0.734615,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Edge",
+          "scenario": "edge_access_security_summary",
+          "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+          "admission_gate": true,
+          "baseline_cost": 1497.6,
+          "headroom_cost": 150.8,
+          "gross_saving": 1346.8,
+          "saving_rate": 0.899306,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "PKC",
+          "scenario": "pkc_loop_state_summary",
+          "source_path": "docs/harness/PKC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 574.6,
+          "headroom_cost": 182.0,
+          "gross_saving": 392.6,
+          "saving_rate": 0.683258,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XiaoC",
+          "scenario": "xiaoc_loop_state_summary",
+          "source_path": "docs/harness/XiaoC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 538.2,
+          "headroom_cost": 165.05,
+          "gross_saving": 373.15,
+          "saving_rate": 0.69333,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XGD",
+          "scenario": "xgd_loop_state_summary",
+          "source_path": "docs/harness/XGD/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 575.85,
+          "headroom_cost": 175.45,
+          "gross_saving": 400.4,
+          "saving_rate": 0.69532,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XiaoG",
+          "scenario": "xiaog_loop_state_summary",
+          "source_path": "docs/harness/XiaoG/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 536.85,
+          "headroom_cost": 172.85,
+          "gross_saving": 364.0,
+          "saving_rate": 0.678029,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "MMC",
+          "scenario": "mmc_loop_state_summary",
+          "source_path": "docs/harness/MMC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 548.6,
+          "headroom_cost": 174.2,
+          "gross_saving": 374.4,
+          "saving_rate": 0.682464,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Studio",
+          "scenario": "studio_codegraph_boundary_summary",
+          "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+          "admission_gate": true,
+          "baseline_cost": 2121.6,
+          "headroom_cost": 276.85,
+          "gross_saving": 1844.75,
+          "saving_rate": 0.869509,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "WAS",
+          "scenario": "was_admission_summary",
+          "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+          "admission_gate": true,
+          "baseline_cost": 629.2,
+          "headroom_cost": 159.85,
+          "gross_saving": 469.35,
+          "saving_rate": 0.745947,
+          "profile_admission_gate": true
+        }
+      ]
+    },
+    {
+      "profile_id": "high_input_low_cache_discount",
+      "pricing": {
+        "P_in": 2.0,
+        "P_out": 8.0,
+        "P_cache_write": 0.5,
+        "P_cache_read": 0.2,
+        "P_runtime": 0.0
+      },
+      "aggregate": {
+        "baseline_cost": 584373.1,
+        "headroom_cost": 6132.3,
+        "gross_saving": 578240.8,
+        "saving_rate": 0.989506,
+        "minimum_saving_rate": 0.2,
+        "admission_gate": true
+      },
+      "measurements": [
+        {
+          "project": "GPCF",
+          "scenario": "loop_control_board_summary",
+          "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+          "admission_gate": true,
+          "baseline_cost": 18982.5,
+          "headroom_cost": 647.3,
+          "gross_saving": 18335.2,
+          "saving_rate": 0.9659,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "KDS",
+          "scenario": "kds_loop_state_summary",
+          "source_path": "docs/harness/KDS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 1144.0,
+          "headroom_cost": 254.8,
+          "gross_saving": 889.2,
+          "saving_rate": 0.777273,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Brain",
+          "scenario": "brain_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 137618.0,
+          "headroom_cost": 766.9,
+          "gross_saving": 136851.1,
+          "saving_rate": 0.994427,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "WAES",
+          "scenario": "waes_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 137618.0,
+          "headroom_cost": 725.3,
+          "gross_saving": 136892.7,
+          "saving_rate": 0.99473,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "GFIS",
+          "scenario": "gfis_loop_state_summary",
+          "source_path": "08-evidence-samples/GFIS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 136593.6,
+          "headroom_cost": 189.7,
+          "gross_saving": 136403.9,
+          "saving_rate": 0.998611,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "GPC",
+          "scenario": "gpc_status_matrix_summary",
+          "source_path": "09-status/gpcf-project-status-matrix.md",
+          "admission_gate": true,
+          "baseline_cost": 137618.0,
+          "headroom_cost": 434.1,
+          "gross_saving": 137183.9,
+          "saving_rate": 0.996846,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "PVAOS",
+          "scenario": "pvaos_loop_state_summary",
+          "source_path": "docs/harness/PVAOS/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 754.0,
+          "headroom_cost": 200.1,
+          "gross_saving": 553.9,
+          "saving_rate": 0.734615,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Edge",
+          "scenario": "edge_access_security_summary",
+          "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+          "admission_gate": true,
+          "baseline_cost": 2995.2,
+          "headroom_cost": 301.6,
+          "gross_saving": 2693.6,
+          "saving_rate": 0.899306,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "PKC",
+          "scenario": "pkc_loop_state_summary",
+          "source_path": "docs/harness/PKC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 1149.2,
+          "headroom_cost": 364.0,
+          "gross_saving": 785.2,
+          "saving_rate": 0.683258,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XiaoC",
+          "scenario": "xiaoc_loop_state_summary",
+          "source_path": "docs/harness/XiaoC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 1076.4,
+          "headroom_cost": 330.1,
+          "gross_saving": 746.3,
+          "saving_rate": 0.69333,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XGD",
+          "scenario": "xgd_loop_state_summary",
+          "source_path": "docs/harness/XGD/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 1151.7,
+          "headroom_cost": 350.9,
+          "gross_saving": 800.8,
+          "saving_rate": 0.69532,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "XiaoG",
+          "scenario": "xiaog_loop_state_summary",
+          "source_path": "docs/harness/XiaoG/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 1073.7,
+          "headroom_cost": 345.7,
+          "gross_saving": 728.0,
+          "saving_rate": 0.678029,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "MMC",
+          "scenario": "mmc_loop_state_summary",
+          "source_path": "docs/harness/MMC/loop-state.md",
+          "admission_gate": true,
+          "baseline_cost": 1097.2,
+          "headroom_cost": 348.4,
+          "gross_saving": 748.8,
+          "saving_rate": 0.682464,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "Studio",
+          "scenario": "studio_codegraph_boundary_summary",
+          "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+          "admission_gate": true,
+          "baseline_cost": 4243.2,
+          "headroom_cost": 553.7,
+          "gross_saving": 3689.5,
+          "saving_rate": 0.869509,
+          "profile_admission_gate": true
+        },
+        {
+          "project": "WAS",
+          "scenario": "was_admission_summary",
+          "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+          "admission_gate": true,
+          "baseline_cost": 1258.4,
+          "headroom_cost": 319.7,
+          "gross_saving": 938.7,
+          "saving_rate": 0.745947,
+          "profile_admission_gate": true
+        }
+      ]
+    }
+  ],
+  "gate": {
+    "profile_count": 3,
+    "project_count": 15,
+    "all_profiles_admission_gate": true,
+    "min_profile_saving_rate": 0.989505,
+    "max_profile_saving_rate": 0.989506,
+    "cost_sensitivity_gate": true,
+    "production_admission_gate": false
+  },
+  "decision": {
+    "next_allowed_action": "reuse sensitivity profiles for future authorized production-token ledger comparison",
+    "next_blocked_action": "production cost claim without sanitized production-token ledger",
+    "production_admission_gate": false
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_real_provider_price_claim": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

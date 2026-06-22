@@ -1,0 +1,140 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_share_approval_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write share approval previews derived from DKS-126 GFIS
+  Assistant repair notification snooze queue view share previews. Approval
+  previews describe candidate approval paths only. They do not create approval
+  requests, approval decisions, share links, ACL grants, external share
+  permissions, publication approvals, governance records, lifecycle changes,
+  business writes, settlements, or external API calls.
+
+required_fields:
+  - approval_preview_id
+  - share_preview_ref
+  - saved_view_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - approval_type
+  - approval_status
+  - approval_decision
+  - approval_scope
+  - source_share_preview_refs
+  - source_saved_view_preview_refs
+  - source_snooze_preview_refs
+  - approval_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - approval_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_share_link
+  - creates_acl_grant
+  - creates_external_share_permission
+  - creates_publication_approval
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+approval_types:
+  - team_approval_preview
+  - project_approval_preview
+  - governance_review_approval_preview
+  - external_share_blocked_approval_preview
+  - committee_approval_preview
+  - freeze_approval_preview
+
+approval_statuses:
+  - approval_preview_only
+  - approval_contains_blocked_items
+  - approval_metadata_boundary
+  - approval_committee_required
+  - approval_external_blocked
+  - approval_freeze_required
+
+approval_decisions:
+  - show_team_approval_preview
+  - show_project_approval_preview
+  - show_governance_review_approval_preview
+  - show_external_share_blocked_approval_preview
+  - show_committee_approval_preview
+  - show_freeze_approval_preview
+
+approval_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - committee_review
+  - external_blocked
+  - freeze_review
+
+blocked_actions:
+  - create_approval_request
+  - create_approval_decision
+  - create_share_link
+  - create_acl_grant
+  - create_external_share_permission
+  - create_publication_approval
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  approval_preview_only: true
+  approval_preview_is_not_approval_request: true
+  approval_preview_is_not_approval_decision: true
+  approval_preview_is_not_share_link: true
+  approval_preview_is_not_acl_grant: true
+  approval_preview_is_not_external_share_permission: true
+  approval_preview_is_not_publication_approval: true
+  approval_preview_is_not_harness_evidence: true
+  approval_preview_is_not_waes_result: true
+  approval_preview_is_not_kwe_work_item: true
+  approval_preview_is_not_lifecycle_change: true
+  approval_preview_is_not_business_writeback: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_share_link_must_be_false: true
+  creates_acl_grant_must_be_false: true
+  creates_external_share_permission_must_be_false: true
+  creates_publication_approval_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_share_link: 0
+  writes_acl_grant: 0
+  writes_external_share_permission: 0
+  writes_publication_approval: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

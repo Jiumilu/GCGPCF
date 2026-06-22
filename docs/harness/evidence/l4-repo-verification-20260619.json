@@ -1,0 +1,28 @@
+{
+  "audit": "L4 12-Project Repository Verification",
+  "generated_at": "2026-06-19T14:24:00+00:00",
+  "projects": {
+    "MMC": {"branch": "main", "dirty": 0, "has_build": false, "status": "ready_for_review"},
+    "KDS": {"branch": "codex/kds-token-api-kds", "dirty": 839, "has_build": false, "status": "ready_for_review"},
+    "Brain": {"branch": "codex/brain-l4-retrieval", "dirty": 147, "has_build": true, "status": "ready_for_review"},
+    "PKC": {"branch": "codex/pkc-l4-task-notification", "dirty": 35, "has_build": true, "status": "ready_for_review"},
+    "GFIS": {"branch": "main", "dirty": 233, "has_build": true, "status": "development_ready pass"},
+    "GPC": {"branch": "main", "dirty": 0, "has_build": true, "status": "ready_for_review"},
+    "PVAOS": {"branch": "pvaos/D4-release-readiness-governance", "dirty": 0, "has_build": true, "status": "ready_for_review"},
+    "WAES": {"branch": "waes/integration-release", "dirty": 0, "has_build": true, "status": "ready_for_review"},
+    "XiaoC": {"branch": "main", "dirty": 0, "has_build": true, "status": "ready_for_review"},
+    "XGD": {"branch": "main", "dirty": 0, "has_build": true, "status": "ready_for_review"},
+    "XiaoG": {"branch": "main", "dirty": 1, "has_build": true, "status": "ready_for_review"},
+    "GPCF": {"branch": "codex/kds-token-sync-gpcf", "dirty": 105, "has_build": false, "status": "ready_for_review"}
+  },
+  "summary": {
+    "total": 12,
+    "clean": 6,
+    "dirty": 6,
+    "has_build_files": 9,
+    "all_have_git": true,
+    "all_have_branch": true
+  },
+  "status": "all_verified",
+  "non_claims": ["不创建真实 source-of-record", "不标记 accepted/integrated"]
+}

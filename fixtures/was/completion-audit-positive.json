@@ -1,0 +1,23 @@
+{
+  "audit_id": "WAS-COMPLETION-AUDIT-POSITIVE",
+  "objective_items": 8,
+  "verified_governance_items": 8,
+  "hold_items": 1,
+  "project_group_scope_count": 14,
+  "required_validators_passed": 11,
+  "frontmatter_scope_complete": true,
+  "governance_completion": "verified_governance_complete",
+  "business_completion": "hold_waiting_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

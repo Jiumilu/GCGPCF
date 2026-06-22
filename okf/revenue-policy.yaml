@@ -1,0 +1,34 @@
+policy_id: okf.revenue_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+revenue_types:
+  formal_revenue:
+    basis: cash_received
+    can_enter_distribution: true
+  invoiced_revenue:
+    basis: invoice
+    can_enter_distribution: false
+    usage: financial_statistics
+  potential_revenue:
+    basis: contract_or_opportunity
+    can_enter_distribution: false
+  channel_opportunity:
+    basis: opportunity
+    can_enter_distribution: false
+  knowledge_potential_value:
+    basis: manual_estimate
+    can_enter_distribution: false
+distribution_statuses:
+  - not_applicable
+  - candidate
+  - under_review
+  - committee_required
+  - confirmed
+  - distributed
+  - frozen
+rules:
+  formal_distribution_requires: [cash_received, evidence_refs, confirmed_contribution_refs]
+  potential_must_not_auto_promote: true
+  committee_required_for: [cross_unit_dispute, potential_to_formal_conversion, revenue_pool_rule_dispute]

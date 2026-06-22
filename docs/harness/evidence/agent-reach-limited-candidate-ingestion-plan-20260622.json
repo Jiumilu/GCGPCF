@@ -1,0 +1,163 @@
+{
+  "evidence_id": "AGENT-REACH-LIMITED-CANDIDATE-INGESTION-PLAN-20260622",
+  "date": "2026-06-22",
+  "status": "limited_candidate_ingestion_plan_ready",
+  "scope": "GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-PLAN-001",
+  "objective": "Define a controlled dry-run ingestion plan for Agent-Reach verified limited candidates without writing KDS canonical Markdown or upgrading production status.",
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-recenter-20260622.json",
+    "docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.json",
+    "docs/harness/evidence/agent-reach-candidate-search-replay-ledger-20260621.json"
+  ],
+  "input_status": {
+    "authoritative_source_verification": "limited_verification_complete",
+    "accept_limited_count": 4,
+    "reject_count": 1,
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "production_integration_allowed": false,
+    "kds_canonical_write_allowed": false
+  },
+  "candidate_records": [
+    {
+      "id": "knowledge_provenance_rag",
+      "decision": "accept_limited",
+      "ingestion_scope": "candidate_reference_metadata_only",
+      "target_queue": "waes_kds_limited_candidate_queue",
+      "required_fields": [
+        "candidate_id",
+        "source_url",
+        "source_type",
+        "accepted_scope",
+        "verification_reason",
+        "rag_admission",
+        "kds_admission",
+        "provenance_evidence_path",
+        "review_status"
+      ],
+      "blocked_outputs": [
+        "kds_canonical_markdown",
+        "strong_rag_citation",
+        "production_config"
+      ]
+    },
+    {
+      "id": "green_supply_chain_policy",
+      "decision": "accept_limited",
+      "ingestion_scope": "official_standard_metadata_reference",
+      "target_queue": "waes_kds_limited_candidate_queue",
+      "required_fields": [
+        "candidate_id",
+        "official_standard_url",
+        "standard_identifier",
+        "accepted_scope",
+        "verification_reason",
+        "rag_admission",
+        "kds_admission",
+        "provenance_evidence_path",
+        "review_status"
+      ],
+      "blocked_outputs": [
+        "kds_canonical_markdown",
+        "strong_rag_citation",
+        "gfis_source_of_record"
+      ]
+    },
+    {
+      "id": "ai_agent_evidence_gate",
+      "decision": "accept_limited",
+      "ingestion_scope": "open_source_tool_candidate_only",
+      "target_queue": "waes_kds_limited_candidate_queue",
+      "required_fields": [
+        "candidate_id",
+        "repository_url",
+        "license_observation",
+        "accepted_scope",
+        "verification_reason",
+        "security_review_required",
+        "rag_admission",
+        "kds_admission",
+        "provenance_evidence_path",
+        "review_status"
+      ],
+      "blocked_outputs": [
+        "tool_installation",
+        "production_config",
+        "waes_policy_replacement"
+      ]
+    },
+    {
+      "id": "agent_reach_capability",
+      "decision": "accept_limited",
+      "ingestion_scope": "agent_reach_capability_metadata_only",
+      "target_queue": "waes_kds_limited_candidate_queue",
+      "required_fields": [
+        "candidate_id",
+        "repository_url",
+        "package_name",
+        "version",
+        "license",
+        "accepted_scope",
+        "verification_reason",
+        "rag_admission",
+        "kds_admission",
+        "provenance_evidence_path",
+        "review_status"
+      ],
+      "blocked_outputs": [
+        "production_integration",
+        "global_mcp_configuration",
+        "kds_canonical_markdown"
+      ]
+    }
+  ],
+  "rejected_records": [
+    {
+      "id": "factory_execution_traceability",
+      "decision": "reject",
+      "reason": "Vendor explanatory material cannot define GlobalCloud GFIS source-of-record behavior or architecture boundaries.",
+      "ingestion_allowed": false
+    }
+  ],
+  "dry_run_plan": {
+    "execution_mode": "candidate_metadata_dry_run_only",
+    "output_artifact": "agent-reach-limited-candidate-ingestion-dry-run-ledger",
+    "write_targets_allowed": [
+      "docs/harness/evidence",
+      "docs/harness/loops",
+      "tools/kds-sync"
+    ],
+    "write_targets_blocked": [
+      "KDS canonical Markdown",
+      "GFIS source-of-record",
+      "production configuration",
+      "global MCP configuration",
+      "strong RAG corpus"
+    ],
+    "promotion_requirements": [
+      "all candidate records validate against required fields",
+      "source provenance remains explicit",
+      "WAES/KDS review status remains limited",
+      "rollback path removes dry-run artifacts without touching canonical data",
+      "status_upgrade_allowed remains false"
+    ]
+  },
+  "quality_gates": {
+    "candidate_count": 4,
+    "rejected_count": 1,
+    "source_provenance_required": true,
+    "review_status_required": true,
+    "credential_leakage_allowed": false,
+    "canonical_write_allowed": false,
+    "production_write_allowed": false,
+    "accepted_or_integrated_claim_allowed": false
+  },
+  "next_round": "GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-DRY-RUN-001",
+  "non_claims": [
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not install or configure Agent-Reach in production",
+    "does not convert limited candidates into strong RAG citations",
+    "does not upgrade accepted, integrated, or production_ready status"
+  ]
+}

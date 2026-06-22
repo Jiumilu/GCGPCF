@@ -1,0 +1,67 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-GOAL-OPT-20260620",
+  "status": "p0_admission_pass",
+  "date": "2026-06-20",
+  "scope": {
+    "mode": "L0/L1 planning and governance admission",
+    "projects": ["GPCF", "GFIS"],
+    "installation_performed": false,
+    "mcp_configuration_changed": false,
+    "codegraph_index_created": false,
+    "production_write": false,
+    "external_api_write": false
+  },
+  "artifacts": {
+    "plan": "02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md",
+    "loop_round": "docs/harness/loops/loop-round-GPCF-CODEGRAPH-GOAL-OPT-001.md",
+    "record_template": "templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md",
+    "validator": "tools/kds-sync/validate_loop_codegraph_goal_optimization.py",
+    "gitignore": ".gitignore"
+  },
+  "required_fields": [
+    "codegraph_enabled",
+    "codegraph_scope_query",
+    "impacted_symbols",
+    "impacted_files",
+    "manual_source_check",
+    "related_validators",
+    "exploration_tool_calls_before",
+    "exploration_tool_calls_after",
+    "file_reads_before",
+    "file_reads_after",
+    "scope_precision_result",
+    "optimization_feedback"
+  ],
+  "target_optimization_loop": [
+    "target_statement",
+    "graph_precheck",
+    "impact_radius",
+    "minimal_action_plan",
+    "validator_selection",
+    "execution",
+    "metric_review",
+    "rule_feedback"
+  ],
+  "metrics": {
+    "exploration_tool_call_reduction_rate": "trend_down",
+    "file_read_reduction_rate": "trend_down",
+    "round_duration_delta": "trend_down_without_quality_loss",
+    "validator_first_pass_rate": "trend_up",
+    "wrong_scope_change_count": 0,
+    "impact_miss_count": "trend_down",
+    "rework_count": "trend_down"
+  },
+  "admission_controls": {
+    "codegraph_cache_gitignored": true,
+    "manual_source_check_required": true,
+    "harness_waes_not_replaced": true,
+    "kds_token_not_written": true,
+    "status_upgrade_allowed": false
+  },
+  "non_claims": [
+    "does not prove GFIS runtime SOP E2E passed",
+    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status",
+    "does not authorize production write, external API write, database migration, permission change, deployment, push, or merge",
+    "does not replace source review, tests, document gates, KDS TOKEN gate, Harness/WAES judgment, or human confirmation"
+  ]
+}

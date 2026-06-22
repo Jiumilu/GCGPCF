@@ -1,0 +1,190 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-SYNC-DRIFT-20260621",
+  "status": "codegraph_sync_drift_reduced_with_gfis_residual_notice",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-SYNC-DRIFT-001",
+  "codegraph": {
+    "version": "1.0.1",
+    "storage": ".codegraph/",
+    "mcp_install_executed": false
+  },
+  "sync_executed": [
+    "GlobalCloud Brain",
+    "GlobalCloud GFIS",
+    "GlobalCloud KDS",
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF"
+  ],
+  "project_group": {
+    "repo_count": 13,
+    "indexed_repo_count": 13,
+    "git_protected_repo_count": 13,
+    "codegraph_git_status_entries_total": 0,
+    "up_to_date_repo_count": 12,
+    "residual_pending_notice_repo_count": 1,
+    "pending_sync_repo_count": 0,
+    "residual_pending_notice_projects": [
+      "GlobalCloud GFIS"
+    ],
+    "pending_sync_projects": []
+  },
+  "repositories": [
+    {
+      "project": "GlobalCloud Brain",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "files": 152,
+      "nodes": 2415,
+      "edges": 5733,
+      "db_size": "6.28 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud GFIS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+      "files": 1022,
+      "nodes": 13152,
+      "edges": 38142,
+      "db_size": "65.24 MB",
+      "index_status": "residual_pending_notice",
+      "residual_notice": "After repeated codegraph sync, status still reports Added: 1 files while sync reports Added: 1 - 0 nodes.",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud GPC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC",
+      "files": 70,
+      "nodes": 705,
+      "edges": 1995,
+      "db_size": "2.77 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud KDS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS",
+      "files": 518,
+      "nodes": 3473,
+      "edges": 7053,
+      "db_size": "9.65 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud MMC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC",
+      "files": 84,
+      "nodes": 522,
+      "edges": 1083,
+      "db_size": "1.20 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud PKC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC",
+      "files": 110,
+      "nodes": 1034,
+      "edges": 2685,
+      "db_size": "2.41 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud PVAOS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS",
+      "files": 604,
+      "nodes": 8899,
+      "edges": 28838,
+      "db_size": "25.67 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "files": 787,
+      "nodes": 14326,
+      "edges": 46805,
+      "db_size": "43.00 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud WAES",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+      "files": 281,
+      "nodes": 3511,
+      "edges": 11298,
+      "db_size": "10.38 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XGD",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD",
+      "files": 181,
+      "nodes": 3645,
+      "edges": 9914,
+      "db_size": "8.57 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XiaoC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC",
+      "files": 1176,
+      "nodes": 15520,
+      "edges": 64515,
+      "db_size": "57.11 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XiaoG",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG",
+      "files": 752,
+      "nodes": 13943,
+      "edges": 45987,
+      "db_size": "42.53 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCoud GPCF",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+      "files": 808,
+      "nodes": 9096,
+      "edges": 20915,
+      "db_size": "26.11 MB",
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    }
+  ],
+  "loop_next_input": {
+    "round": "GPCF-CODEGRAPH-GFIS-RESIDUAL-NOTICE-001",
+    "objective": "Investigate GFIS CodeGraph residual Added: 1 files / 0 nodes notice at the integration layer only, without project code changes.",
+    "allowed_actions": [
+      "codegraph status on GFIS",
+      "CodeGraph cache and ignore-rule inspection",
+      "GPCF evidence update"
+    ],
+    "forbidden_actions": [
+      "GFIS business code edits",
+      "tests or build fixes",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false
+  }
+}

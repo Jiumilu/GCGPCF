@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-FF3BC7037F
-title: Loop Governance Efficiency Debt Backlog Evidence
+title: Loop 治理效率债务积压证据
 project: GPCF
-related_projects: [GFIS, GPC, GPCF]
+related_projects: [GFIS, GPC, WAES, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,24 +11,24 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md
 source_path: docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Governance Efficiency Debt Backlog Evidence
+# Loop 治理效率债务积压证据
 
 Evidence ID: `LOOP-GOV-EFF-DEBT-20260617`
 
-This evidence records the first review backlog for LOOP governance efficiency debt.
+本证据记录 LOOP 治理效率债务的首批审查积压项。
 
-## Source Signal
+## 来源信号
 
 ```text
 loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=5 audit_missing_truth_fields=0 audit_missing_five_segment=0 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=186 risk=review_required
 ```
 
-## Backlog Summary
+## 积压摘要
 
 | ID | Priority | Debt Type | Count | Status |
 |---|---|---|---:|---|
@@ -37,11 +37,11 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 | LEDB-003 | P1 | long_consecutive_sequence_risk | 186 | open |
 | LEDB-004 | P2 | dashboard_validator_drift_risk | 1 | monitoring |
 
-## Governance Meaning
+## 治理含义
 
-The backlog keeps historical efficiency debt visible while protecting the latest hard window. It does not rewrite historical round records in bulk and does not change GFIS business state.
+该积压项用于持续暴露历史效率债，同时保护最新硬窗口。它不批量重写历史轮次记录，也不改变 GFIS 业务状态。
 
-## Review Disposition Template
+## 审查处置模板
 
 | Field | Required Meaning |
 |---|---|
@@ -54,7 +54,7 @@ The backlog keeps historical efficiency debt visible while protecting the latest
 | business_status_impact | Must remain `none`; review does not upgrade GFIS or project completion status |
 | next_action | The next controlled action, or `none` if closed |
 
-## Initial Disposition Queue
+## 初始处置队列
 
 | disposition_id | backlog_item | reviewer | decision | evidence_ref | no_bulk_rewrite | business_status_impact | next_action |
 |---|---|---|---|---|---|---|---|
@@ -69,38 +69,34 @@ The backlog keeps historical efficiency debt visible while protecting the latest
 | LEDB-001-RD-004 | LEDB-001 | GPCF governance | current_window_review_required | `docs/harness/evidence/loop-governance-current-window-review-20260619.json` | true | none | Current live audit window has 2 truth-field review targets; review without rewriting historical rounds. |
 | LEDB-002-RD-003 | LEDB-002 | GPCF governance | current_window_review_required | `docs/harness/evidence/loop-governance-current-window-review-20260619.json` | true | none | Current live audit window has 7 five-segment review targets; review without rewriting historical rounds. |
 
-## Locator Evidence
+## 定位器证据
 
-`LOOP-GOV-EFF-DEBT-LOCATOR-20260617` locates 0 `LEDB-001` affected rounds
-and 0 `LEDB-002` affected rounds after targeted annotation of `loop-round-GPCF-L4-GFIS-REPAIR-218.md`. The locator does not rewrite
-historical records and has `business_status_impact=none`.
+`LOOP-GOV-EFF-DEBT-LOCATOR-20260617` 在对 `loop-round-GPCF-L4-GFIS-REPAIR-218.md` 定向标注后，
+定位到 0 个 `LEDB-001` 受影响轮次和 0 个 `LEDB-002` 受影响轮次。该定位器不重写历史记录，并保持 `business_status_impact=none`。
 
-## Current Window Review Evidence
+## 当前窗口审查证据
 
-`LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619` records current live audit-window
-review targets: 2 `LEDB-001` truth-field targets and 7 `LEDB-002` five-segment
-targets. It does not change the historical locator baseline, rewrite historical
-rounds, or change GFIS/GPCF business status.
+`LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619` 记录当前实时审计窗口审查目标：
+2 个 `LEDB-001` truth-field 目标和 7 个 `LEDB-002` five-segment 目标。
+它不改变历史定位器基线，不重写历史轮次，也不改变 GFIS/GPCF 业务状态。
 
-## Five-Segment Review Evidence
+## 五段式审查证据
 
-`LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617` records `LEDB-002-RD-002` for
-five reviewed records. It separates targeted annotation candidates from
-index-level exceptions and keeps `no_bulk_rewrite=true`.
+`LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617` 记录 `LEDB-002-RD-002` 对 5 条记录的审查。
+它区分定向标注候选和索引级例外，并保持 `no_bulk_rewrite=true`。
 
-## Truth-Field Review Evidence
+## Truth-Field 审查证据
 
-`LOOP-GOV-TRUTH-FIELD-REVIEW-20260617` records `LEDB-001-RD-003`. Shell
-records remain controlled exceptions unless a separate historical migration
-plan is authorized.
+`LOOP-GOV-TRUTH-FIELD-REVIEW-20260617` 记录 `LEDB-001-RD-003`。
+Shell 记录保持受控例外，除非另行授权历史迁移计划。
 
-## Sequence Checkpoint Evidence
+## 序列检查点证据
 
-`LOOP-GOV-SEQUENCE-CHECKPOINT-20260619` records `LEDB-003-RD-002`; the next
-required checkpoint remains sequence length 200 or hard-window debt recurrence.
+`LOOP-GOV-SEQUENCE-CHECKPOINT-20260619` 记录 `LEDB-003-RD-002`；
+下一次必需检查点仍为序列长度 200 或硬窗口债务复现。
 
-## Non-Claims
+## 非声明事项
 
-- This backlog does not prove GFIS runtime SOP E2E passed.
-- This backlog does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status.
-- This backlog does not authorize production write, external API write, schema sync, bench migrate, deployment, permission change, commit, or push.
+- 本积压记录不证明 GFIS runtime SOP E2E 已通过。
+- 本积压记录不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本积压记录不授权生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、commit 或 push。

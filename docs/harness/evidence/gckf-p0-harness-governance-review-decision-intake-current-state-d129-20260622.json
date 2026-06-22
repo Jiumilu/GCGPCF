@@ -1,0 +1,44 @@
+{
+  "evidence_id": "GCKF-P0-HARNESS-GOVERNANCE-REVIEW-DECISION-INTAKE-CURRENT-STATE-D129-20260622",
+  "round_id": "GPCF-GCKF-P0-D129-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D127 current-state decision template 与 D128 current-state repair path workpack 基础上刷新 governance review decision intake，使 D30 治理接收分支显式吸收 D124-D128 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-harness-governance-review-decision-intake-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-harness-governance-review-decision-intake-current-state-d129-20260622.json",
+    "fixtures/api/gckf-p0-harness-decision-template-current-state-d127-20260622.json",
+    "fixtures/api/gckf-p0-repair-path-workpack-current-state-d128-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_intake_status": "candidate_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d30_governance_decision_intake": "gckf_p0_harness_governance_review_decision_intake_dry_run=pass status=candidate review_status=pending decision_guards=9 forbidden_actions=7",
+    "d128_current_state_repair_path": "gckf_p0_repair_path_workpack_current_state_d128=pass workpack_status=candidate_with_hold maximum_state=review_ready_with_hold covered_decisions=2 hold_context_refs=6",
+    "d127_current_state_decision_template": "gckf_p0_harness_decision_template_current_state_d127=pass template_status=candidate_with_hold maximum_state=review_ready_with_hold default_decision_status=pending_with_hold hold_context_refs=6",
+    "d126_current_state_candidate_record": "gckf_p0_harness_evidence_candidate_current_state_d126=pass candidate_record_status=candidate_with_hold review_status=pending_with_hold hold_context_refs=6",
+    "d125_current_state_packet": "gckf_p0_harness_review_input_current_state_d125=pass packet_status=candidate_with_hold maximum_state=review_ready_with_hold hold_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "intake_scope": {
+    "allowed_decisions": 4,
+    "required_decision_fields": 8,
+    "decision_guards": 12,
+    "forbidden_actions": 9,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "review_status": "pending_with_hold",
+    "formal_harness_write_allowed": false,
+    "lifecycle_promotion_allowed": false,
+    "runtime_writeback_allowed": false,
+    "p1_admission_allowed": false,
+    "v1_upgrade_recommended": false
+  },
+  "non_claims": [
+    "本 current-state governance decision intake 不写 formal Harness evidence 或 Harness evidence。",
+    "本 current-state governance decision intake 不把 pending_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state governance decision intake 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "基于 D129 current-state governance decision intake 刷新 future formal write execution preflight 或 formal packet 前置分支，继续保持 no-write。"
+}

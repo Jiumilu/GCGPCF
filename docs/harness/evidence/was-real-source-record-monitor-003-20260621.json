@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-003-20260621",
+  "status": "was_real_source_record_monitor_003_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-003",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-002",
+  "purpose": "Third independent monitor pass for six P4 inputs, explicitly rejecting weak-evidence promotion such as external links, screenshots, or oral statements without controlled source records.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "required_p4_inputs": [
+    "real_customer_order_original_or_platform_order_receipt",
+    "customer_confirmed_product_spec",
+    "delivery_requirement",
+    "issuing_party_and_owner_confirmation",
+    "kds_source_backlink",
+    "runtime_site_context"
+  ],
+  "monitor_checks": {
+    "required_p4_inputs": 6,
+    "submitted_real_inputs": 0,
+    "submitted_files_found": 0,
+    "candidate_files_checked": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "weak_evidence_promoted": false
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 3,
+    "expected_positive_acceptance": 1,
+    "expected_negative_rejection": 3,
+    "negative_cases": [
+      "external_link_only",
+      "screenshot_only",
+      "oral_statement_only"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_002.py"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-004",
+  "next_round_condition": "continue_monitoring_until_controlled_real_p4_source_record_inputs_exist",
+  "non_claims": [
+    "does not accept external links as source-of-record",
+    "does not accept screenshots as source-of-record",
+    "does not accept oral statements as source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not create verified artifact",
+    "does not mark accepted, integrated, or production ready"
+  ]
+}

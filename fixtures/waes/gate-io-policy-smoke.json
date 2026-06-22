@@ -1,0 +1,29 @@
+{
+  "id": "gc-knowledge-fabric-dks-083-waes-gate-io-policy-smoke",
+  "description": "Static no-write smoke for WAES Gate input/output contracts and hard-stop rules.",
+  "expected": {
+    "minimumInputFieldCount": 12,
+    "minimumOutputFieldCount": 12,
+    "reasonCodeCount": 10,
+    "hardStopRuleCount": 6,
+    "allowedOperationCount": 10,
+    "hardStopGates": [
+      "rag_gate",
+      "writeback_gate",
+      "revenue_gate",
+      "contribution_gate",
+      "external_share_gate",
+      "freeze_gate"
+    ],
+    "p0P1RequiresDryRun": true,
+    "noDirectGateResultPersistence": true,
+    "noBusinessWriteback": true,
+    "noRevenueDistribution": true,
+    "noExternalApiWrite": true,
+    "humanOrCommitteeRequiredForFinality": true,
+    "writesGateResult": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0
+  }
+}

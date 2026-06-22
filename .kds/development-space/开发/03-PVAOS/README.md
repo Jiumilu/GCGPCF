@@ -1,6 +1,6 @@
 # PVAOS 开发文档空间
 
-生成日期：2026-06-12
+生成日期：2026-06-22
 
 用途：KDS `开发` 空间中 `PVAOS` 项目的受控文档入口。
 
@@ -12,4 +12,4 @@
 | GPCF-DOC-3A5C57AC3E | GlobalCloud PVAOS Loop State | docs/harness/PVAOS/loop-state.md | controlled |
 | GPCF-DOC-70CE112465 | loops | docs/harness/PVAOS/loops/README.md | controlled |
 | GPCF-DOC-8DDE495C90 | Loop Round GPCF-PV-LR-001 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-001.md | controlled |
-| GPCF-DOC-3F65E8E8EC | Loop Round GPCF-PV-LR-002 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md | controlled |
+| GPCF-DOC-3F65E8E8EC | Loop Round GPCF-PV-LR-002：PVAOS 门户运营对象验证清单 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md | controlled |

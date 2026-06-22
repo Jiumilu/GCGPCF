@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9A12E19CF2
 title: GPCF-L4-GFIS-REPAIR-126
 project: GPCF
-related_projects: [GFIS, GPC, WAES, XGD, GPCF]
+related_projects: [GFIS, GPC, WAES, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-126.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-126.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

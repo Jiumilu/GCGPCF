@@ -4,10 +4,10 @@ title: ODF Phase 4 小批量准入试运行闭环报告
 description: ODF Phase 4 闭环报告
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md
 source_path: docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md
-source_hash: ce97e5a8cb058acd2ecdef2b1f271b3e10dae2c70ad53eaccbae1ad24d8bac00
+source_hash: 77f2966f43ee634c3bbecd27510124ae27e71ce0a5bf4801b8a0fed16b39ffe7
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 4 闭环报告
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md` |
-| source_hash | `ce97e5a8cb058acd2ecdef2b1f271b3e10dae2c70ad53eaccbae1ad24d8bac00` |
+| source_hash | `77f2966f43ee634c3bbecd27510124ae27e71ce0a5bf4801b8a0fed16b39ffe7` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

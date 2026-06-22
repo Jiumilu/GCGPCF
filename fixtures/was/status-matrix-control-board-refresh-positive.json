@@ -1,0 +1,27 @@
+{
+  "refresh_id": "WAS-STATUS-MATRIX-CONTROL-BOARD-REFRESH-POSITIVE",
+  "control_board_round": "GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001",
+  "status_matrix_version": "v5.51",
+  "project_group_scope_count": 14,
+  "required_markers": [
+    "was_project_group_ontology_registry=pass",
+    "was_loop_context_coverage_refresh=pass",
+    "hold_required=1",
+    "real_source_records=0",
+    "accepted=false",
+    "integrated=false",
+    "production_ready=false"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

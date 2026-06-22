@@ -1,0 +1,49 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-OKF-V01-EVIDENCE-REPAIR-D99-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/evidence/okf-v01-*",
+  "action": "repair_okf_v01_evidence_localization_debt",
+  "before": {
+    "all_repo_findings": 229,
+    "target_file_findings": 25
+  },
+  "after": {
+    "all_repo_findings": 204,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -25,
+    "target_file_findings": -25
+  },
+  "changed_files": [
+    "docs/harness/evidence/okf-v01-approved-summary-writer-dry-run-20260620.md",
+    "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
+    "docs/harness/evidence/okf-v01-collection-gate-20260620.md",
+    "docs/harness/evidence/okf-v01-consumption-benchmark-20260620.md",
+    "docs/harness/evidence/okf-v01-relationship-graph-20260620.md",
+    "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
+    "docs/harness/evidence/okf-v01-summary-admission-ledger-20260620.md",
+    "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
+    "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
+    "docs/harness/evidence/okf-v01-summary-approval-request-OKF-SUM-20260620-001.md",
+    "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
+  ],
+  "changed_line_items": 248,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_okf_v01_evidence_repair_d99.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

@@ -1,0 +1,150 @@
+---
+doc_id: GPCF-DOC-CODEGRAPH-PERMISSIONS-V1
+title: CodeGraph Agent Permission Model
+project: GPCF
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+domain: codegraph-governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/governance/codegraph/agent-codegraph-permissions.yaml
+source_path: governance/codegraph/agent-codegraph-permissions.yaml
+sync_direction: bidirectional
+last_reviewed: 2026-06-21
+supersedes: []
+superseded_by: []
+---
+
+tool_authorization:
+  codegraph_runtime:
+    allowed:
+      - read_source_files
+      - parse_ast
+      - build_symbol_graph
+      - build_call_graph
+      - build_import_graph
+      - build_dependency_graph
+      - update_local_index
+      - expose_mcp_tools
+      - export_status_evidence
+    denied_by_default:
+      - modify_source_files
+      - commit_code
+      - push_code
+      - delete_files
+      - access_secrets
+      - access_env_files
+      - access_production_data
+      - promote_kds_accepted_fact
+      - approve_waes_gate
+
+repo_authorization:
+  default_indexing_scope:
+    include:
+      - src/**
+      - packages/**
+      - apps/**
+      - services/**
+      - tests/**
+      - scripts/**
+      - docs/architecture/**
+      - okf/**
+    exclude:
+      - .env
+      - .env.*
+      - secrets/**
+      - credentials/**
+      - private_keys/**
+      - node_modules/**
+      - dist/**
+      - build/**
+      - vendor/**
+      - logs/**
+      - .git/**
+      - .codegraph/**
+  sensitivity:
+    default_level: internal
+    restricted_path_patterns:
+      - '**/auth/**'
+      - '**/permission/**'
+      - '**/rbac/**'
+      - '**/tenant/**'
+      - '**/payment/**'
+      - '**/settlement/**'
+      - '**/wallet/**'
+      - '**/waes/**'
+      - '**/ontology/**'
+      - '**/okf/**'
+
+agent_authorization:
+  codex_agent:
+    codegraph: [context, explore, impact_analysis, evidence_linking]
+    write_code: allowed_with_patch_in_authorized_scope
+    direct_commit: denied
+    direct_push: denied
+  review_agent:
+    codegraph: [context, explore, dependency_trace, risk_scan]
+    write_code: denied
+    approve: denied
+  test_agent:
+    codegraph: [impacted_tests, coverage_mapping]
+    run_tests: allowed
+    write_code: denied
+  doc_agent:
+    codegraph: [module_summary, api_mapping, mermaid_generation]
+    write_docs: candidate_only
+    promote_docs: denied
+  waes_agent:
+    codegraph: [risk_path, rule_impact, permission_impact]
+    recommend_gate: allowed
+    approve: denied
+  loop_agent:
+    codegraph: [all_readonly_graph_queries, evidence_linking]
+    mutate_graph: denied
+    status_upgrade: denied
+
+loop_codegraph_permissions:
+  intake: [repo_overview, symbol_search, architecture_context]
+  planning: [impact_analysis, dependency_trace, risk_area_detection]
+  implementation: [symbol_explore, call_graph_trace, related_files]
+  validation: [impacted_tests, coverage_mapping, architecture_rule_check]
+  evidence: [snapshot_id, query_log, impacted_symbols, changed_paths]
+  closure: [doc_update_candidates, kds_candidate_generation]
+
+kds_authorization:
+  codegraph_outputs:
+    default_status: candidate
+    allowed_to_create:
+      - code_fact_candidate
+      - api_fact_candidate
+      - dependency_fact_candidate
+      - architecture_fact_candidate
+      - test_mapping_candidate
+    denied:
+      - accepted_fact
+      - governance_rule
+      - financial_rule
+      - permission_rule
+      - production_evidence
+    promotion_requires:
+      - harness_evidence
+      - waes_gate
+      - human_review
+
+human_roles:
+  project_owner: [approve_repo_enablement, approve_high_risk_codegraph_scope]
+  tech_lead: [approve_architecture_rule, approve_impact_analysis_baseline, approve_generated_architecture_docs]
+  security_owner: [approve_sensitive_path_policy, approve_secret_exclusion_policy, audit_agent_access]
+  waes_admin: [configure_gate_rules, block_high_risk_loop]
+  kds_curator: [promote_candidate_fact, reject_candidate_fact, attach_lineage]
+  developer: [query_own_repo_codegraph, submit_patch, view_impact_report]
+  ai_agent: [readonly_graph_query, candidate_generation]
+
+denied_for_all_ai_agents:
+  - final_approval
+  - production_deploy
+  - rule_override
+  - accepted_status_upgrade
+  - integrated_status_upgrade
+  - production_ready_status_upgrade

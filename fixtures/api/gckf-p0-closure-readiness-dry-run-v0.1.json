@@ -1,0 +1,68 @@
+{
+  "contractId": "GCKF-P0-CLOSURE-READINESS-DRY-RUN-V0.1",
+  "description": "P0-D20 closure readiness dry-run for GC-Knowledge Fabric D9-D19 candidate evidence.",
+  "readinessStatus": "review_ready_candidate",
+  "notFinalAcceptance": true,
+  "sourceLedger": "fixtures/api/gckf-p0-acceptance-packet-ledger-dry-run-v0.1.json",
+  "coveredRounds": {
+    "firstRound": "GCKF-P0-D9",
+    "lastRound": "GCKF-P0-D19",
+    "candidateEvidenceRoundCount": 11
+  },
+  "readyEvidence": [
+    "D9-D18 validators are indexed by the D19 candidate ledger.",
+    "D19 validates validator and LOOP evidence references.",
+    "No-write API skeleton, handler mapping, route adapter, and acceptance packet dry-run chain are covered.",
+    "Document pollution, KDS token, and loop document gates remain runnable as end-of-turn checks."
+  ],
+  "remainingHumanActions": [
+    "Human review must decide whether candidate evidence is sufficient for P0 acceptance.",
+    "Harness Governance must write or reject formal evidence records.",
+    "No lifecycle may be promoted to accepted or integrated by this dry-run.",
+    "Production server, database, KDS API, GFIS/GPC writeback, and business-system integration remain out of scope."
+  ],
+  "closureRisks": [
+    {
+      "id": "GCKF-P0-RISK-HARNESS-NOT-WRITTEN",
+      "severity": "P1",
+      "status": "open",
+      "note": "Dry-run evidence exists, but formal Harness evidence store has not been written."
+    },
+    {
+      "id": "GCKF-P0-RISK-HUMAN-REVIEW-PENDING",
+      "severity": "P1",
+      "status": "open",
+      "note": "Candidate readiness still requires human review."
+    },
+    {
+      "id": "GCKF-P0-RISK-RUNTIME-NOT-LIVE",
+      "severity": "P2",
+      "status": "open",
+      "note": "No HTTP server, DB, external API, KDS write, or GFIS/GPC writeback has been enabled."
+    }
+  ],
+  "forbiddenClosures": [
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "harness_evidence_written"
+  ],
+  "expectedSummary": {
+    "readinessStatus": "review_ready_candidate",
+    "notFinalAcceptance": true,
+    "candidateEvidenceRoundCount": 11,
+    "remainingHumanActionCount": 4,
+    "openRiskCount": 3,
+    "forbiddenClosureCount": 5,
+    "sourceLedgerStatus": "candidate",
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

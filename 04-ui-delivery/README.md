@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C4D724E837
 title: 界面与交付体验
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAES, KDS, GPCF, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/04-ui-delivery/README.md
 source_path: 04-ui-delivery/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -26,7 +26,7 @@ KDS 空间：`开发`
 
 KDS 路径前缀：`开发/12-GPCF/04-ui-delivery/`
 
-关联项目：GPC
+关联项目：GPC, GPCF
 
 受控规则：
 
@@ -56,7 +56,12 @@ KDS 路径前缀：`开发/12-GPCF/04-ui-delivery/`
 | GPCF-DOC-5371CCBDCB | GlobalCloud 绿色供应链体系首批统一组件接入样板清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件接入样板清单.md | GPC | controlled |
 | GPCF-DOC-0C4A339FD2 | GlobalCloud 绿色供应链体系首批统一组件清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件清单.md | GPC | controlled |
 | GPCF-DOC-DFFAFE5D69 | GlobalCloud绿色供应链体系首批统一组件验收标准 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件验收标准.md | GPC | controlled |
-| GPCF-DOC-3D439D777F | GlobalCloud 绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | GPC | controlled |
+| GPCF-DOC-3D439D777F | GlobalCloud绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | GPC | controlled |
 | GPCF-DOC-6008375BA7 | GlobalCloud绿色供应链体系高风险模块界面收口任务分解表 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md | GPC | controlled |
 | GPCF-DOC-505DFF5C49 | GlobalCloud 绿色供应链体系高风险模块界面收口计划 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md | GPC | controlled |
+| GPCF-DOC-7C1E59A4D2 | GlobalCloud项目群UI设计开发治理与评估统一规范 | 04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md | GPC | controlled |
+| GPCF-DOC-4E2A91B7C6 | GlobalCloud项目群界面工程整体实施方案 | 04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md | GPC | controlled |
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | GPC | controlled |
+| GPCF-DOC-7E5C41A9B3 | Studio操作工作台验证方案 | 04-ui-delivery/Studio操作工作台验证方案.md | GPCF | controlled |
+| GPCF-DOC-4B8F20D6A1 | WAES专业工作台母框架升级方案 | 04-ui-delivery/WAES专业工作台母框架升级方案.md | GPC | controlled |
+| GPCF-DOC-91A6D0F4C2 | WAES专业工作台母框架差距评估 | 04-ui-delivery/WAES专业工作台母框架差距评估.md | GPC | controlled |

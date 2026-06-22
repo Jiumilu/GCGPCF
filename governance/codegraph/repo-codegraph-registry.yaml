@@ -1,0 +1,194 @@
+---
+doc_id: GPCF-DOC-CODEGRAPH-REGISTRY-V1
+title: CodeGraph Project Group Repository Registry
+project: GPCF
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+domain: codegraph-governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/governance/codegraph/repo-codegraph-registry.yaml
+source_path: governance/codegraph/repo-codegraph-registry.yaml
+sync_direction: bidirectional
+last_reviewed: 2026-06-21
+supersedes: []
+superseded_by: []
+---
+
+registry:
+  name: GlobalCloud Code Intelligence Fabric Registry
+  scope: project_group_full
+  repo_count: 14
+  codegraph_role: code_intelligence_fabric
+  storage: .codegraph/
+  git_tracking_allowed: false
+  status_upgrade_allowed: false
+  accepted: false
+  integrated: false
+  production_ready: false
+
+defaults:
+  codegraph_enabled: true
+  evidence_required: true
+  kds_output_status: candidate
+  allowed_actions:
+    - codegraph_status
+    - codegraph_init_when_missing
+    - codegraph_sync_when_authorized
+    - git_status_codegraph_only
+    - evidence_capture
+  forbidden_actions:
+    - business_code_development
+    - production_write
+    - external_api_write
+    - database_migration
+    - permission_change
+    - deployment
+    - commit
+    - push
+    - accepted_status_upgrade
+    - integrated_status_upgrade
+    - production_ready_status_upgrade
+
+repositories:
+  - id: gfis
+    name: GlobalCloud GFIS
+    code: GF
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS
+    role: factory_execution_system
+    risk_level: critical
+    waes_gate_required: true
+    policy_exception_allowed: true
+    policy_exception: gfis_large_generated_validator_residual
+    restricted_domains: [finance, settlement, tenant, runtime_source_record, waes_review]
+
+  - id: gpc
+    name: GlobalCloud GPC
+    code: GP
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC
+    role: green_supply_chain_platform
+    risk_level: high
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [api_contract, permission, tenant]
+
+  - id: pvaos
+    name: GlobalCloud PVAOS
+    code: PV
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS
+    role: platform_operations_portal
+    risk_level: high
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [portal_auth, workflow, user_experience]
+
+  - id: waes
+    name: GlobalCloud WAES
+    code: WA
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES
+    role: governance_evidence_gate
+    risk_level: critical
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [gate_rule, approval, state_machine, override_control]
+
+  - id: kds
+    name: GlobalCloud KDS
+    code: KD
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    role: knowledge_data_store
+    risk_level: critical
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [knowledge_fact, token, index, candidate_promotion]
+
+  - id: brain
+    name: GlobalCloud Brain
+    code: BR
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain
+    role: knowledge_ui_and_engine
+    risk_level: medium
+    waes_gate_required: false
+    policy_exception_allowed: false
+    restricted_domains: [kds_api, llm_api, agent_context]
+
+  - id: pkc
+    name: GlobalCloud PKC
+    code: PK
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC
+    role: personal_knowledge_console
+    risk_level: medium
+    waes_gate_required: false
+    policy_exception_allowed: false
+    restricted_domains: [personal_knowledge, report_export, kds_dependency]
+
+  - id: xiaoc
+    name: GlobalCloud XiaoC
+    code: XC
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC
+    role: ai_capability_production_router
+    risk_level: high
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [model_route, capability_dispatch, cloudflare_worker]
+
+  - id: xgd
+    name: GlobalCloud XGD
+    code: XD
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD
+    role: long_running_agent_and_analysis
+    risk_level: high
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [agent_task, voice, multi_device, tick_loop]
+
+  - id: xiaog
+    name: GlobalCloud XiaoG
+    code: XG
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG
+    role: lightweight_execution_entry
+    risk_level: medium
+    waes_gate_required: false
+    policy_exception_allowed: false
+    restricted_domains: [readonly_query, pkc_notification, waes_audit_mock]
+
+  - id: mmc
+    name: GlobalCloud MMC
+    code: MM
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    role: management_configuration_center
+    risk_level: high
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [governance_template, config_baseline, admission]
+
+  - id: gpcf
+    name: GlobalCoud GPCF
+    code: CF
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF
+    role: project_group_governance_control
+    risk_level: critical
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [loop_policy, harness_evidence, kds_mirror, document_control]
+
+  - id: studio
+    name: GlobalCloud Studio
+    code: ST
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+    role: studio_hermes_agent_workspace
+    risk_level: high
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [hermes, agent_workspace, release_workflow, governance_extension]
+
+  - id: was
+    name: WAS世界资产体系
+    code: WAS
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系
+    role: semantic_foundation_project
+    risk_level: critical
+    waes_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [ontology_schema, okf_collection, semantic_contract, source_record_gate]

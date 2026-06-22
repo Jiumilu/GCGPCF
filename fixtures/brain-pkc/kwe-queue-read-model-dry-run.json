@@ -1,0 +1,275 @@
+{
+  "id": "brain-pkc-kwe-queue-read-model-dks-103",
+  "description": "Local dry-run read models for Brain, PKC, and GFIS Assistant KWE queue views. These records aggregate route refs only and do not create KWE work items, complete approvals, mutate KDS lifecycle, write WAES/business systems, or call external APIs.",
+  "views": [
+    {
+      "viewId": "brain-kwe-queue-overview-001",
+      "surface": "brain",
+      "tenantId": "tenant-gpcf",
+      "viewerId": "governance-owner-001",
+      "projectId": "project-gehua",
+      "scope": "kwe_queue_overview",
+      "routePacketRefs": ["kwe-route-gfis-gehua-001"],
+      "visibleRouteRefs": [],
+      "maskedRouteRefs": ["masked:route-aggregate:project-gehua"],
+      "queueSummary": {
+        "humanQueue": 1,
+        "committeeQueue": 2,
+        "metadataOnlyQueue": 1,
+        "repairQueue": 0,
+        "blockedQueue": 1
+      },
+      "filter": {
+        "routeQueues": ["human_queue", "committee_queue", "metadata_only_queue", "repair_queue", "blocked_queue"],
+        "targetSystem": "GFIS",
+        "includeBlocked": true
+      },
+      "visibility": "governance_aggregate",
+      "displayMode": "summary_only",
+      "blockedActions": [
+        "create_kwe_work_item",
+        "complete_approval",
+        "complete_committee_decision",
+        "approve_gfis_writeback",
+        "mutate_kds_lifecycle",
+        "write_waes_gate_result",
+        "write_business_system",
+        "call_external_api"
+      ],
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "viewId": "brain-committee-queue-001",
+      "surface": "brain",
+      "tenantId": "tenant-gpcf",
+      "viewerId": "committee-member-001",
+      "projectId": "project-gehua",
+      "scope": "committee_queue",
+      "routePacketRefs": ["kwe-route-gfis-gehua-001"],
+      "visibleRouteRefs": ["route-finance-controlled-001", "route-oem-boundary-001"],
+      "maskedRouteRefs": [],
+      "queueSummary": {
+        "humanQueue": 0,
+        "committeeQueue": 2,
+        "metadataOnlyQueue": 0,
+        "repairQueue": 0,
+        "blockedQueue": 0
+      },
+      "filter": {
+        "routeQueues": ["committee_queue"],
+        "targetSystem": "GFIS",
+        "includeBlocked": false
+      },
+      "visibility": "committee_authorized",
+      "displayMode": "queue_detail",
+      "blockedActions": [
+        "create_kwe_work_item",
+        "complete_approval",
+        "complete_committee_decision",
+        "approve_gfis_writeback",
+        "mutate_kds_lifecycle",
+        "write_waes_gate_result",
+        "write_business_system",
+        "call_external_api"
+      ],
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "viewId": "pkc-my-kwe-tasks-001",
+      "surface": "pkc",
+      "tenantId": "tenant-gpcf",
+      "viewerId": "user-gehua-ops-001",
+      "projectId": "project-gehua",
+      "scope": "my_kwe_tasks",
+      "routePacketRefs": ["kwe-route-gfis-gehua-001"],
+      "visibleRouteRefs": ["route-order-status-001"],
+      "maskedRouteRefs": ["masked:committee-route-count:2"],
+      "queueSummary": {
+        "humanQueue": 1,
+        "committeeQueue": 0,
+        "metadataOnlyQueue": 0,
+        "repairQueue": 0,
+        "blockedQueue": 0
+      },
+      "filter": {
+        "routeQueues": ["human_queue"],
+        "targetSystem": "GFIS",
+        "includeBlocked": false
+      },
+      "visibility": "own_only",
+      "displayMode": "queue_detail",
+      "blockedActions": [
+        "create_kwe_work_item",
+        "complete_approval",
+        "complete_committee_decision",
+        "approve_gfis_writeback",
+        "mutate_kds_lifecycle",
+        "write_waes_gate_result",
+        "write_business_system",
+        "call_external_api"
+      ],
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "viewId": "gfis-assistant-writeback-queue-001",
+      "surface": "gfis_assistant",
+      "tenantId": "tenant-gpcf",
+      "viewerId": "gfis-assistant-001",
+      "projectId": "project-gehua",
+      "scope": "gfis_writeback_queue",
+      "routePacketRefs": ["kwe-route-gfis-gehua-001"],
+      "visibleRouteRefs": ["route-order-status-001", "route-pod-metadata-001"],
+      "maskedRouteRefs": ["masked:committee-route-count:2", "masked:blocked-route-count:1"],
+      "queueSummary": {
+        "humanQueue": 1,
+        "committeeQueue": 0,
+        "metadataOnlyQueue": 1,
+        "repairQueue": 0,
+        "blockedQueue": 0
+      },
+      "filter": {
+        "routeQueues": ["human_queue", "metadata_only_queue"],
+        "targetSystem": "GFIS",
+        "includeBlocked": false
+      },
+      "visibility": "project_authorized",
+      "displayMode": "metadata_only",
+      "blockedActions": [
+        "create_kwe_work_item",
+        "complete_approval",
+        "complete_committee_decision",
+        "approve_gfis_writeback",
+        "mutate_kds_lifecycle",
+        "write_waes_gate_result",
+        "write_business_system",
+        "call_external_api"
+      ],
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "viewId": "brain-blocked-kwe-queue-001",
+      "surface": "brain",
+      "tenantId": "tenant-gpcf",
+      "viewerId": "governance-owner-001",
+      "projectId": "project-gehua",
+      "scope": "blocked_queue",
+      "routePacketRefs": ["kwe-route-gfis-gehua-001"],
+      "visibleRouteRefs": ["route-quality-dispute-001"],
+      "maskedRouteRefs": [],
+      "queueSummary": {
+        "humanQueue": 0,
+        "committeeQueue": 0,
+        "metadataOnlyQueue": 0,
+        "repairQueue": 0,
+        "blockedQueue": 1
+      },
+      "filter": {
+        "routeQueues": ["blocked_queue"],
+        "targetSystem": "GFIS",
+        "includeBlocked": true
+      },
+      "visibility": "governance_aggregate",
+      "displayMode": "queue_detail",
+      "blockedActions": [
+        "create_kwe_work_item",
+        "complete_approval",
+        "complete_committee_decision",
+        "approve_gfis_writeback",
+        "mutate_kds_lifecycle",
+        "write_waes_gate_result",
+        "write_business_system",
+        "call_external_api"
+      ],
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesTargetReceipt": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesQuotaTransfer": 0,
+        "writesBountySettlement": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expected": {
+    "viewCount": 5,
+    "brainViews": 3,
+    "pkcViews": 1,
+    "gfisAssistantViews": 1,
+    "committeeAuthorizedViews": 1,
+    "ownOnlyViews": 1,
+    "maskedViews": 3,
+    "blockedQueueViews": 1,
+    "blockedActionCount": 40,
+    "crossUnitLeakCount": 0,
+    "writesKweWorkItem": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesWaesGateResult": 0,
+    "writesBusinessSystem": 0,
+    "writesTargetReceipt": 0,
+    "writesCommitteeDecisionCompletion": 0,
+    "writesRevenueOrScoreConfirmation": 0,
+    "writesQuotaTransfer": 0,
+    "writesBountySettlement": 0,
+    "writesExternalApi": 0
+  }
+}

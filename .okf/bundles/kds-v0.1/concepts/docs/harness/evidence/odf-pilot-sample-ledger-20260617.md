@@ -4,10 +4,10 @@ title: ODF 试点样本准入台账
 description: ODF 试点样本准入台账
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md
 source_path: docs/harness/evidence/odf-pilot-sample-ledger-20260617.md
-source_hash: ce88ceb5d2495b24432c93bcbec9497510f2157dc6a6b25a2885f920e2418c35
+source_hash: 7b6c71c19189e1898af91192a08698c792caeffd405866efcf1392233c0639c7
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF 试点样本准入台账
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-pilot-sample-ledger-20260617.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md` |
-| source_hash | `ce88ceb5d2495b24432c93bcbec9497510f2157dc6a6b25a2885f920e2418c35` |
+| source_hash | `7b6c71c19189e1898af91192a08698c792caeffd405866efcf1392233c0639c7` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

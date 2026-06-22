@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/GCBrain-Development-Manual.md
 source_path: docs/GCBrain-Development-Manual.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

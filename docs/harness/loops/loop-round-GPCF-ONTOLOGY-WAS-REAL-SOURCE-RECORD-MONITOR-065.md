@@ -1,0 +1,109 @@
+---
+doc_id: GPCF-DOC-B1974D0065
+title: "Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-065"
+project: GPCF
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+domain: docs
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-065.md
+source_path: docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-065.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-22
+supersedes: []
+superseded_by: []
+---
+
+# Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-065
+
+## 输入
+
+- `docs/harness/evidence/was-real-source-record-monitor-064-20260622.json`
+- `tools/kds-sync/validate_was_real_source_record_monitor_064.py`
+- `docs/harness/intake/was-real-source-record-candidate-template.yaml`
+
+## 动作
+
+- 建立第六十五次真实 P4 输入 monitor。
+- 增加绿色供应链 EPR / 生产者责任延伸合规负例：EPR 注册缺失、生产者责任体系会员缺失、EPR 费用支付记录缺失、回收目标报告缺失、监管方确认回执缺失、EPR 审计证据缺失、EPR 整改关闭缺失。
+- 复跑当前 P4 必跑门禁和 candidate precheck。
+- 保持无真实 source-record 时的 hold 状态。
+
+## 输出
+
+- `docs/harness/evidence/was-real-source-record-monitor-065-20260622.json`
+- `docs/harness/evidence/was-real-source-record-monitor-065-20260622.md`
+- `tools/kds-sync/validate_was_real_source_record_monitor_065.py`
+- `fixtures/was/real-source-record-monitor-065-*.json`
+
+## 检查
+
+```bash
+python3 tools/kds-sync/validate_was_real_source_record_monitor_065.py
+```
+
+## 反馈
+
+真实 P4 输入 monitor 065 已建立。当前 `accepted_for_epr_compliance_profile=0`、`accepted_for_next_gate=0`、`hold_required=1`，EPR 注册、生产者责任体系会员、EPR 费用支付记录、回收目标报告、监管方确认回执、EPR 审计证据和 EPR 整改关闭均不得替代 KDS source-of-record。
+
+## loop_was_context
+
+```yaml
+loop_was_context:
+  project_group_scope:
+    - GFIS
+    - GPC
+    - PVAOS
+    - WAES
+    - KDS
+    - Brain
+    - PKC
+    - XiaoC
+    - XGD
+    - XiaoG
+    - MMC
+    - GPCF
+    - Studio
+    - WAS
+  asset_dimension: physical_asset
+  flow_type: reverse_flow
+  object_family: ExtendedProducerResponsibilityEvidence
+  source_of_record: KDS
+  ontology_role: real_source_record_monitor_065
+  scenario_scope: epr_registration_producer_responsibility_scheme_membership_epr_fee_payment_takeback_target_regulator_acknowledgement_epr_audit_corrective_action_closure
+  epr_compliance_requirements:
+    - epr_registration
+    - producer_responsibility_scheme_membership
+    - epr_fee_payment_record
+    - takeback_target_report
+    - regulator_acknowledgement
+    - epr_audit_evidence
+    - epr_corrective_action_closure
+  waes_gate: blocked_until_real_source_record_and_epr_compliance_proofs_exist
+  loop_role: evidence_closure
+  llm_role: candidate_generation_only
+  rag_role: controlled_reference_only
+  runtime_writeback: blocked_without_kds_bound_epr_compliance_evidence
+  rejected_epr_compliance_cases:
+    - epr_registration_gap
+    - producer_responsibility_scheme_membership_gap
+    - epr_fee_payment_record_gap
+    - takeback_target_report_gap
+    - regulator_acknowledgement_gap
+    - epr_audit_evidence_gap
+    - epr_corrective_action_closure_gap
+  promotion_boundary:
+    real_source_records: 0
+    valid_source_records: 0
+    runtime_primary_key_ready: 0
+    review_queue: 0
+    runtime_intake: 0
+    waes_review: 0
+    verified: 0
+    accepted: false
+    integrated: false
+    production_ready: false
+  next_round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-066
+```

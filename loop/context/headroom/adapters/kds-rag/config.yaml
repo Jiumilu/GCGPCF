@@ -1,0 +1,8 @@
+adapter_id: kds-rag
+mode: sdk_dry_run
+launcher_required: kds_harness
+allowed_profiles: [review_safe]
+blocked_profiles: [output_shaper_acceptance, cross_project_memory_as_fact]
+evidence_required: true
+production_enabled: false
+preserve_markers: [doc_id, source_path, kds_path]

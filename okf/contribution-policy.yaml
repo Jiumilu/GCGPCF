@@ -1,0 +1,34 @@
+policy_id: okf.contribution_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+contribution_types:
+  - knowledge
+  - evidence
+  - sop
+  - source
+  - correction
+  - channel
+  - order
+  - supplier
+  - customer
+  - policy
+  - acceptance
+  - dispute_resolution
+confirmation_statuses:
+  - candidate
+  - human_confirmed
+  - committee_confirmed
+  - rejected
+  - frozen
+rules:
+  candidate_score_allowed: true
+  confirmed_score_requires: [human_or_committee_confirmation, related_object_refs]
+  revenue_related_requires_revenue_ref_when_confirmed: true
+  no_income_means_knowledge_or_potential_contribution_only: true
+freeze_triggers:
+  - duplicate_claim_dispute
+  - malicious_pollution
+  - unauthorized_source_use
+  - revenue_distribution_dispute

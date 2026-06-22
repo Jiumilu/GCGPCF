@@ -1,0 +1,29 @@
+policy_id: okf.committee_policy
+version: v0.1
+status: draft
+owner: GPCF
+updated_at: "2026-06-20"
+committee_required_for:
+  - point_confirmation_dispute
+  - revenue_distribution_dispute
+  - major_violation
+  - bounty_settlement_dispute
+  - potential_to_formal_revenue_conversion
+  - cross_unit_contribution_dispute
+  - third_party_pool_distribution
+  - project_internal_dispute
+  - major_rag_strong_reference_dispute
+  - revenue_pool_rule_dispute
+decision_methods:
+  normal: majority_vote
+  major: record_and_freeze_if_needed
+records:
+  decision_object_type: decision
+  domain: governance
+  required_fields: [decision_id, issue_ref, participants, result, evidence_refs, created_at]
+visibility:
+  contributor_default_view: own_contribution_only
+  external_account_default_view: authorized_project_view_only
+rules:
+  committee_does_not_replace_waes_gate: true
+  platform_retains_rule_governance_right: true

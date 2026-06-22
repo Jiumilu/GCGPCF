@@ -1,0 +1,67 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GCKF-HEADING-REPAIR-D94-20260622",
+  "loop_round": "GPCF-GCKF-P0-D94-001",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/gc-knowledge-fabric remaining H1 localization repair",
+  "changed_files": [
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-243-digest-delivery-acknowledgement-escalation-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-244-digest-delivery-acknowledgement-escalation-sla-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-255-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-256-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-257-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-258-ack-escalation-sla-breach-review-resolution-option-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-259-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-260-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-261-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-262-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-263-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-264-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-265-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-266-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-267-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-268-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-270-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-policy.md",
+    "docs/gc-knowledge-fabric/gfis-assistant-dks-271-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md",
+    "docs/gc-knowledge-fabric/harness-governance-review-decision-intake-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/loop-document-gate-fixed-doc-id-drift-check-v0.1.md"
+  ],
+  "before": {
+    "localization_gate": "fail",
+    "findings": 315,
+    "docs_gc_knowledge_fabric_findings": 25,
+    "docs_gc_knowledge_fabric_h1_findings": 20
+  },
+  "after": {
+    "localization_gate": "fail",
+    "findings": 295,
+    "docs_gc_knowledge_fabric_findings": 5,
+    "docs_gc_knowledge_fabric_h1_findings": 0,
+    "findings_by_kind": {
+      "doc_english_heavy": 68,
+      "doc_english_line": 226,
+      "software_english_user_text": 1
+    },
+    "remaining_docs_gc_knowledge_fabric_findings": [
+      "docs/gc-knowledge-fabric/formal-evidence-execution-incident-escalation-preview-dry-run-v0.1.md:66",
+      "docs/gc-knowledge-fabric/formal-evidence-execution-incident-escalation-preview-dry-run-v0.1.md:71",
+      "docs/gc-knowledge-fabric/formal-evidence-execution-reentry-preflight-preview-dry-run-v0.1.md:43",
+      "docs/gc-knowledge-fabric/formal-evidence-execution-reentry-preflight-preview-dry-run-v0.1.md:44",
+      "docs/gc-knowledge-fabric/formal-evidence-execution-reentry-preflight-preview-dry-run-v0.1.md:45"
+    ]
+  },
+  "delta": {
+    "findings": -20,
+    "docs_gc_knowledge_fabric_findings": -20,
+    "docs_gc_knowledge_fabric_h1_findings": -20
+  },
+  "boundaries": {
+    "bulk_rewrite": false,
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  }
+}

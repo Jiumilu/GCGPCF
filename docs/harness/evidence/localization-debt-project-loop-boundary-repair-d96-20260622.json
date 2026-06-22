@@ -1,0 +1,43 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-PROJECT-LOOP-BOUNDARY-REPAIR-D96-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/{GPC,MMC,PVAOS,WAES,XiaoG}/loops",
+  "action": "repair_project_loop_h1_and_boundary_notes",
+  "before": {
+    "all_repo_findings": 290,
+    "target_file_findings": 10
+  },
+  "after": {
+    "all_repo_findings": 280,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -10,
+    "target_file_findings": -10
+  },
+  "changed_files": [
+    "docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md",
+    "docs/harness/MMC/loops/loop-round-GPCF-MM-LR-002.md",
+    "docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md",
+    "docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md",
+    "docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md"
+  ],
+  "changed_line_items": 10,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_project_loop_boundary_repair_d96.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

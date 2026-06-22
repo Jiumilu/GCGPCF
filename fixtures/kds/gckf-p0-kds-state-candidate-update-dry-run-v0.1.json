@@ -1,0 +1,171 @@
+{
+  "id": "gckf-p0-kds-state-candidate-update-dry-run-v0.1",
+  "description": "GC-Knowledge Fabric P0-D6 KDS state candidate update dry-run. It validates promotion and lifecycle audit candidates without mutating KDS lifecycle or business systems.",
+  "version": "v0.1",
+  "policyRefs": [
+    "okf/status-machine-policy.yaml",
+    "okf/kds-lifecycle-transition-audit-packet-policy.yaml",
+    "okf/kwe-promotion-request-policy.yaml",
+    "fixtures/kwe/gckf-p0-kwe-minimum-workflow-dry-run-v0.1.json",
+    "docs/gc-knowledge-fabric/kds-state-candidate-update-dry-run-v0.1.md"
+  ],
+  "cases": [
+    {
+      "caseId": "kds-p0-ai-candidate-blocked-accepted",
+      "sourceKweCaseId": "kwe-p0-ai-candidate-blocked",
+      "requestActor": "ai",
+      "currentLifecycle": "candidate",
+      "requestedLifecycle": "accepted",
+      "expectedPromotionStatus": "blocked",
+      "blockedReasons": ["ai_cannot_accept", "missing_source", "missing_evidence", "waes_blocked"],
+      "allowedCandidateOutput": "PromotionRequestCandidate",
+      "writesForbiddenState": false,
+      "noWrite": {
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesAcceptedFact": 0,
+        "writesPublishedObject": 0,
+        "writesWrittenBack": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kds-p0-pod-gap-repair-required",
+      "sourceKweCaseId": "kwe-p0-gap-pod-evidence",
+      "requestActor": "kwe",
+      "currentLifecycle": "reviewing",
+      "requestedLifecycle": "repair_required",
+      "expectedPromotionStatus": "repair_required",
+      "blockedReasons": ["missing_pod", "missing_evidence_hash"],
+      "allowedCandidateOutput": "LifecycleAuditCandidate",
+      "writesForbiddenState": false,
+      "noWrite": {
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesAcceptedFact": 0,
+        "writesPublishedObject": 0,
+        "writesWrittenBack": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kds-p0-writeback-human-cannot-writeback",
+      "sourceKweCaseId": "kwe-p0-writeback-owner-confirmation",
+      "requestActor": "kwe",
+      "currentLifecycle": "reviewing",
+      "requestedLifecycle": "accepted",
+      "expectedPromotionStatus": "human_required",
+      "blockedReasons": ["business_owner_confirmation_missing", "accepted_requires_human_or_committee"],
+      "allowedCandidateOutput": "PromotionRequestCandidate",
+      "writesForbiddenState": false,
+      "noWrite": {
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesAcceptedFact": 0,
+        "writesPublishedObject": 0,
+        "writesWrittenBack": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kds-p0-committee-required-no-accepted",
+      "sourceKweCaseId": "kwe-p0-duplicate-contribution-committee",
+      "requestActor": "committee",
+      "currentLifecycle": "reviewing",
+      "requestedLifecycle": "accepted",
+      "expectedPromotionStatus": "committee_required",
+      "blockedReasons": ["cross_unit_contribution_dispute", "committee_decision_missing"],
+      "allowedCandidateOutput": "PromotionRequestCandidate",
+      "writesForbiddenState": false,
+      "noWrite": {
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesAcceptedFact": 0,
+        "writesPublishedObject": 0,
+        "writesWrittenBack": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kds-p0-potential-revenue-no-distribution",
+      "sourceKweCaseId": "kwe-p0-potential-revenue-committee",
+      "requestActor": "committee",
+      "currentLifecycle": "reviewing",
+      "requestedLifecycle": "accepted",
+      "expectedPromotionStatus": "committee_required",
+      "blockedReasons": ["potential_revenue_cannot_auto_promote", "cash_received_missing"],
+      "allowedCandidateOutput": "PromotionRequestCandidate",
+      "writesForbiddenState": false,
+      "noWrite": {
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesAcceptedFact": 0,
+        "writesPublishedObject": 0,
+        "writesWrittenBack": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kds-p0-publication-blocked-without-gates",
+      "sourceKweCaseId": "kwe-p0-sensitive-finance-metadata-review",
+      "requestActor": "loop",
+      "currentLifecycle": "accepted",
+      "requestedLifecycle": "published",
+      "expectedPromotionStatus": "blocked",
+      "blockedReasons": ["loop_cannot_publish", "redaction_gate_missing", "external_share_gate_missing", "publication_approval_missing"],
+      "allowedCandidateOutput": "LifecycleAuditCandidate",
+      "writesForbiddenState": false,
+      "noWrite": {
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesAcceptedFact": 0,
+        "writesPublishedObject": 0,
+        "writesWrittenBack": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expectedSummary": {
+    "caseCount": 6,
+    "sourceKweCaseCount": 6,
+    "blockedCount": 2,
+    "repairRequiredCount": 1,
+    "humanRequiredCount": 1,
+    "committeeRequiredCount": 2,
+    "writesForbiddenState": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesAcceptedFact": 0,
+    "writesPublishedObject": 0,
+    "writesWrittenBack": 0,
+    "writesWaesGateResult": 0,
+    "writesKweWorkItem": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueOrScoreConfirmation": 0,
+    "writesExternalApi": 0
+  }
+}

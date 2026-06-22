@@ -1,0 +1,266 @@
+{
+  "id": "gckf-p0-kwe-minimum-workflow-dry-run-v0.1",
+  "description": "GC-Knowledge Fabric P0-D5 KWE minimum workflow dry-run. It maps WAES dry-run outputs into KWE candidate work items, gaps, bounty candidates, and confirmation workpacks without writing real workflow state.",
+  "version": "v0.1",
+  "policyRefs": [
+    "okf/flow-policy.yaml",
+    "okf/kwe-confirmation-workpack-policy.yaml",
+    "okf/kwe-queue-action-intake-request-policy.yaml",
+    "fixtures/waes/gckf-p0-waes-minimum-dry-run-cases-v0.1.json",
+    "docs/gc-knowledge-fabric/kwe-minimum-workflow-dry-run-v0.1.md"
+  ],
+  "cases": [
+    {
+      "caseId": "kwe-p0-gap-pod-evidence",
+      "sourceWaesCaseId": "waes-p0-evidence-missing-pod",
+      "waesStatus": "repair_required",
+      "expectedResult": "repair_required",
+      "candidateOutputs": {
+        "workItem": {
+          "id": "KWE-WI-GCKF-P0-D5-001",
+          "workType": "evidence_gap",
+          "status": "candidate_only",
+          "priority": "P1",
+          "targetDomain": "project",
+          "poolRefs": ["TRANSPORT", "ORDER", "DATA"],
+          "requiredActions": ["request_pod_evidence", "bind_evidence_hash", "rerun_evidence_gate"]
+        },
+        "gapRecord": {
+          "id": "GAP-GCKF-P0-D5-001",
+          "gapType": "missing_pod",
+          "status": "open_candidate",
+          "bountyEnabled": true,
+          "bountyRef": "BOUNTY-GCKF-P0-D5-001"
+        },
+        "bountyWorkItem": {
+          "id": "BOUNTY-GCKF-P0-D5-001",
+          "settlementMode": "knowledge_points",
+          "status": "bounty_candidate"
+        }
+      },
+      "canPromoteFact": false,
+      "createsKweWorkItem": false,
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesBountySettlement": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kwe-p0-ai-candidate-blocked",
+      "sourceWaesCaseId": "waes-p0-rag-ai-candidate",
+      "waesStatus": "blocked",
+      "expectedResult": "blocked",
+      "candidateOutputs": {
+        "workItem": {
+          "id": "KWE-WI-GCKF-P0-D5-002",
+          "workType": "source_evidence_repair",
+          "status": "candidate_only",
+          "priority": "P1",
+          "targetDomain": "workspace",
+          "poolRefs": ["DATA"],
+          "requiredActions": ["bind_source_refs", "bind_evidence_refs", "human_confirm_before_rag"]
+        },
+        "confirmationWorkpack": {
+          "id": "KWE-WP-GCKF-P0-D5-002",
+          "workpackResult": "blocked",
+          "reviewerType": "human",
+          "decisionOptions": ["request_repair", "reject"],
+          "allowAccept": false
+        }
+      },
+      "canPromoteFact": false,
+      "createsKweWorkItem": false,
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesBountySettlement": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kwe-p0-sensitive-finance-metadata-review",
+      "sourceWaesCaseId": "waes-p0-sensitive-finance",
+      "waesStatus": "metadata_only",
+      "expectedResult": "ready_for_human_review",
+      "candidateOutputs": {
+        "workItem": {
+          "id": "KWE-WI-GCKF-P0-D5-003",
+          "workType": "metadata_only_review",
+          "status": "candidate_only",
+          "priority": "P1",
+          "targetDomain": "project",
+          "poolRefs": ["FUND", "DATA"],
+          "requiredActions": ["verify_metadata_scope", "confirm_controlled_original_pointer", "enforce_acl"]
+        },
+        "confirmationWorkpack": {
+          "id": "KWE-WP-GCKF-P0-D5-003",
+          "workpackResult": "ready_for_human_review",
+          "reviewerType": "human",
+          "sensitiveHandling": "metadata_only",
+          "containsRawContent": false
+        }
+      },
+      "canPromoteFact": false,
+      "createsKweWorkItem": false,
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesBountySettlement": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kwe-p0-writeback-owner-confirmation",
+      "sourceWaesCaseId": "waes-p0-writeback-human",
+      "waesStatus": "human_required",
+      "expectedResult": "ready_for_human_review",
+      "candidateOutputs": {
+        "workItem": {
+          "id": "KWE-WI-GCKF-P0-D5-004",
+          "workType": "writeback_confirmation",
+          "status": "candidate_only",
+          "priority": "P1",
+          "targetDomain": "project",
+          "poolRefs": ["ORDER", "CAPACITY", "TRANSPORT"],
+          "requiredActions": ["route_to_business_owner", "collect_owner_confirmation", "rerun_writeback_gate"]
+        },
+        "confirmationWorkpack": {
+          "id": "KWE-WP-GCKF-P0-D5-004",
+          "targetObjectType": "writeback_candidate",
+          "workpackResult": "ready_for_human_review",
+          "reviewerType": "human",
+          "decisionOptions": ["request_repair", "reject", "escalate_committee"]
+        }
+      },
+      "canWriteBusinessSystem": false,
+      "createsKweWorkItem": false,
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesBountySettlement": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kwe-p0-duplicate-contribution-committee",
+      "sourceWaesCaseId": "waes-p0-contribution-duplicate",
+      "waesStatus": "committee_required",
+      "expectedResult": "ready_for_committee_review",
+      "candidateOutputs": {
+        "workItem": {
+          "id": "KWE-WI-GCKF-P0-D5-005",
+          "workType": "committee_review",
+          "status": "candidate_only",
+          "priority": "P0",
+          "targetDomain": "supply_chain",
+          "poolRefs": ["ORDER", "SCENARIO"],
+          "requiredActions": ["freeze_candidate_score", "prepare_committee_review_item", "collect_cross_unit_evidence"]
+        },
+        "confirmationWorkpack": {
+          "id": "KWE-WP-GCKF-P0-D5-005",
+          "workpackResult": "ready_for_committee_review",
+          "reviewerType": "committee",
+          "committeeTriggerReason": "cross_unit_contribution_dispute",
+          "decisionOptions": ["request_repair", "reject", "freeze"]
+        }
+      },
+      "canConfirmScore": false,
+      "createsKweWorkItem": false,
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesBountySettlement": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "kwe-p0-potential-revenue-committee",
+      "sourceWaesCaseId": "waes-p0-revenue-potential",
+      "waesStatus": "committee_required",
+      "expectedResult": "ready_for_committee_review",
+      "candidateOutputs": {
+        "workItem": {
+          "id": "KWE-WI-GCKF-P0-D5-006",
+          "workType": "revenue_review",
+          "status": "candidate_only",
+          "priority": "P0",
+          "targetDomain": "supply_chain",
+          "poolRefs": ["SCENARIO", "ORDER", "FUND"],
+          "requiredActions": ["keep_as_potential_revenue", "prepare_conversion_committee_review", "verify_cash_received_before_formal_distribution"]
+        },
+        "confirmationWorkpack": {
+          "id": "KWE-WP-GCKF-P0-D5-006",
+          "targetObjectType": "revenue_candidate",
+          "workpackResult": "ready_for_committee_review",
+          "reviewerType": "committee",
+          "committeeTriggerReason": "potential_to_formal_revenue_conversion",
+          "decisionOptions": ["request_repair", "reject", "freeze"]
+        }
+      },
+      "canDistributeRevenue": false,
+      "createsKweWorkItem": false,
+      "noWrite": {
+        "writesKweWorkItem": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesWaesGateResult": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueOrScoreConfirmation": 0,
+        "writesBountySettlement": 0,
+        "writesCommitteeDecisionCompletion": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expectedSummary": {
+    "caseCount": 6,
+    "sourceWaesCaseCount": 6,
+    "workItemCandidateCount": 6,
+    "gapCandidateCount": 1,
+    "bountyCandidateCount": 1,
+    "humanReviewWorkpackCount": 2,
+    "committeeReviewWorkpackCount": 2,
+    "blockedWorkpackCount": 1,
+    "createsKweWorkItems": 0,
+    "canPromoteFacts": 0,
+    "canWriteBusinessSystems": 0,
+    "canConfirmScores": 0,
+    "canDistributeRevenue": 0,
+    "writesKweWorkItem": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesWaesGateResult": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueOrScoreConfirmation": 0,
+    "writesBountySettlement": 0,
+    "writesCommitteeDecisionCompletion": 0,
+    "writesExternalApi": 0
+  }
+}

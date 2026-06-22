@@ -1,0 +1,49 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GCKF-HEADING-REPAIR-D91-20260622",
+  "loop_round": "GPCF-GCKF-P0-D91-001",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/gc-knowledge-fabric heading-only localization repair",
+  "changed_files": [
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-intake-acknowledgement-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-precheck-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-routing-dispatch-precheck-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-routing-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-case-opening-exception-return-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-case-opening-guard-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-case-opening-receipt-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-case-review-packet-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-docket-readiness-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-intake-acceptance-precheck-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-receipt-acknowledgement-routing-preview-dry-run-v0.1.md"
+  ],
+  "before": {
+    "localization_gate": "fail",
+    "findings": 356,
+    "docs_gc_knowledge_fabric_findings": 67
+  },
+  "after": {
+    "localization_gate": "fail",
+    "findings": 344,
+    "docs_gc_knowledge_fabric_findings": 55,
+    "findings_by_kind": {
+      "doc_english_line": 276,
+      "doc_english_heavy": 67,
+      "software_english_user_text": 1
+    }
+  },
+  "delta": {
+    "findings": -12,
+    "docs_gc_knowledge_fabric_findings": -12
+  },
+  "boundaries": {
+    "bulk_rewrite": false,
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  }
+}

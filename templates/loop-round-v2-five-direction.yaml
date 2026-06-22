@@ -1,0 +1,62 @@
+loop_round_v2_five_direction:
+  schema_version: v2
+  round_id:
+  project:
+  mode:
+  status_ceiling:
+  run:
+    input_refs: []
+    goal:
+    scope_in:
+    scope_out:
+    decision:
+    actions: []
+    output_refs: []
+    next_round:
+  stop:
+    stop_type:
+    stop_evidence:
+    completed_for_round: false
+    accepted_allowed: false
+    integrated_allowed: false
+    production_ready_allowed: false
+  verify:
+    precheck_refs: []
+    intermediate_check_refs: []
+    final_gate_refs: []
+    test_data_lane:
+    synthetic_dev_lane:
+    real_business_lane:
+  recover:
+    failed_or_stopped_at:
+    last_safe_state:
+    retryable_actions: []
+    non_retryable_actions: []
+    required_inputs: []
+    resume_round:
+  debug:
+    recent_state_changes: []
+    failing_gate:
+    status_ceiling:
+    real_lane_counts:
+      valid_source_records: 0
+      runtime_primary_key_ready: 0
+      review_queue: 0
+      runtime_intake: 0
+      waes_review: 0
+      verified: 0
+    synthetic_lane_counts:
+      test_data_lane:
+      synthetic_dev_lane:
+    write_counts:
+      production_writes: 0
+      real_external_api_writes: 0
+      kds_fact_writes: 0
+      waes_gate_result_writes: 0
+    next_authorization:
+  boundaries:
+    no_production_write: true
+    no_external_api_write: true
+    no_kds_fact_write: true
+    no_waes_gate_result_write: true
+    no_accepted_integrated_upgrade: true

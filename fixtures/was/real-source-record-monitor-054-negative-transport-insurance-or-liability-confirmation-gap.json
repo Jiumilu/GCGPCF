@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "carrier_booking_record_gaps": 0,
+  "pickup_appointment_gaps": 0,
+  "shipping_instruction_gaps": 0,
+  "export_transport_document_gaps": 0,
+  "chain_of_custody_handoff_gaps": 0,
+  "in_transit_tracking_event_gaps": 0,
+  "transport_insurance_or_liability_confirmation_gaps": 1,
+  "accepted_for_transport_start_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "transport_start_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

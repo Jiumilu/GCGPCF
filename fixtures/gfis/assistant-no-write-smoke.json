@@ -1,0 +1,75 @@
+{
+  "assistantRuns": [
+    {
+      "id": "gfis-knowledge-assistant-smoke",
+      "assistant": "knowledge",
+      "request": {
+        "tenantId": "tenant-gc",
+        "userId": "user-gehu-ops",
+        "projectId": "project-gehu",
+        "query": "葛化预运营订单是否可以进入GFIS正式写回？"
+      },
+      "response": {
+        "answer": "只能形成候选写回建议，必须经过WAES和人工确认。",
+        "citations": ["ko-order-001"],
+        "gaps": ["gap-human-confirmation-001"],
+        "noWrite": true,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    },
+    {
+      "id": "gfis-usage-assistant-smoke",
+      "assistant": "usage",
+      "request": {
+        "tenantId": "tenant-gc",
+        "userId": "user-gehu-ops",
+        "projectId": "project-gehu",
+        "query": "GFIS订单字段缺POD时怎么处理？"
+      },
+      "response": {
+        "answer": "提示POD缺口并创建候选缺口，不直接改变订单状态。",
+        "manualConfirmationPoints": ["pod_owner_confirm", "waes_writeback_gate"],
+        "noWrite": true,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    },
+    {
+      "id": "gfis-document-acceptance-smoke",
+      "assistant": "document_acceptance",
+      "request": {
+        "tenantId": "tenant-gc",
+        "userId": "user-gehu-ops",
+        "projectId": "project-gehu",
+        "sourceObjectId": "ko-doc-001"
+      },
+      "response": {
+        "factCandidates": ["fc-source-backed-001"],
+        "gaps": ["gap-pod-001"],
+        "gateResults": ["waes-gate-evidence-001"],
+        "requiresHumanConfirmation": true,
+        "requiresCommittee": false,
+        "noWrite": true,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    },
+    {
+      "id": "gfis-writeback-candidate-smoke",
+      "assistant": "writeback_candidate",
+      "request": {
+        "tenantId": "tenant-gc",
+        "userId": "user-gehu-ops",
+        "candidateId": "wc-order-001"
+      },
+      "response": {
+        "approvedForBusinessWrite": false,
+        "gateResults": ["waes-gate-writeback-001"],
+        "noWrite": true,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    }
+  ]
+}

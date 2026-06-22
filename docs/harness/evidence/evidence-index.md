@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-5D0159ED7D
-title: Evidence Index — GPCF
+title: GPCF 证据索引
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GPC, WAES, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,14 +11,223 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/evidence-index.md
 source_path: docs/harness/evidence/evidence-index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Evidence Index — GPCF
+# GPCF 证据索引
 
-## GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001 GFIS test data 12-stage negative transition guard sync
+## GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 Headroom project-group cost dry-run
+
+- Headroom admission evidence: `docs/harness/evidence/headroom-project-group-admission-20260621.md`
+- Headroom L2 dry-run evidence: `docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.md`
+- Headroom L2 dry-run JSON: `docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json`
+- Headroom L2 generator: `tools/kds-sync/generate_headroom_l2_project_group_dry_run.py`
+- Headroom L2 validator: `tools/kds-sync/validate_headroom_l2_project_group_dry_run.py`
+- Validator output: `headroom_l2_project_group_dry_run=pass project_count=15 saving_rate=0.989506 all_admission_gates_pass=true compressor_mode=structured_surrogate_no_headroom_runtime headroom_runtime_used=false measured_production_tokens=false`
+- Headroom runtime probe evidence: `docs/harness/evidence/headroom-runtime-probe-20260621.md`
+- Headroom runtime probe JSON: `docs/harness/evidence/headroom-runtime-probe-20260621.json`
+- Headroom runtime probe validator: `tools/kds-sync/validate_headroom_runtime_probe.py`
+- Runtime probe output: `headroom_runtime_probe=pass runtime_imported=true version=0.26.0 project_count=15 runtime_saving_rate=0.0 runtime_admission_gate=false measured_production_tokens=false`
+- Headroom runtime adapter dry-run evidence: `docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md`
+- Headroom runtime adapter dry-run JSON: `docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.json`
+- Headroom runtime adapter dry-run validator: `tools/kds-sync/validate_headroom_runtime_adapter_dry_run.py`
+- Runtime adapter output: `headroom_runtime_adapter_dry_run=pass runtime_imported=true version=0.26.0 project_count=15 runtime_adapter_saving_rate=0.022083 runtime_adapter_admission_gate=false measured_production_tokens=false`
+- Headroom runtime scenario matrix evidence: `docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md`
+- Headroom runtime scenario matrix JSON: `docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.json`
+- Headroom runtime scenario matrix validator: `tools/kds-sync/validate_headroom_runtime_scenario_matrix.py`
+- Runtime scenario matrix output: `headroom_runtime_scenario_matrix=pass scenario_count=4 scenario_gate_pass_count=1 saving_rate=0.15017 runtime_matrix_admission_gate=false measured_production_tokens=false`
+- HeadroomCostMeasurement output evidence: `docs/harness/evidence/headroom-cost-measurement-output-20260621.md`
+- HeadroomCostMeasurement output JSON: `docs/harness/evidence/headroom-cost-measurement-output-20260621.json`
+- Marker preservation policy evidence: `docs/harness/evidence/headroom-marker-preservation-policy-20260621.md`
+- Marker preservation policy JSON: `docs/harness/evidence/headroom-marker-preservation-policy-20260621.json`
+- Controlled metric pilot evidence: `docs/harness/evidence/headroom-controlled-metric-pilot-20260621.md`
+- Controlled metric pilot JSON: `docs/harness/evidence/headroom-controlled-metric-pilot-20260621.json`
+- Loop cost observation evidence: `docs/harness/evidence/headroom-loop-cost-observation-20260621.md`
+- Loop cost observation JSON: `docs/harness/evidence/headroom-loop-cost-observation-20260621.json`
+- Loop cost observation series evidence: `docs/harness/evidence/headroom-loop-cost-observation-series-20260621.md`
+- Loop cost observation series JSON: `docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json`
+- Independent LOOP round replay evidence: `docs/harness/evidence/headroom-independent-loop-round-replay-20260621.md`
+- Independent LOOP round replay JSON: `docs/harness/evidence/headroom-independent-loop-round-replay-20260621.json`
+- Production token intake gate evidence: `docs/harness/evidence/headroom-production-token-intake-gate-20260621.md`
+- Production token intake gate JSON: `docs/harness/evidence/headroom-production-token-intake-gate-20260621.json`
+- Production token ledger template: `fixtures/headroom/headroom-production-token-ledger-template.json`
+- Production token ledger template validator: `tools/kds-sync/validate_headroom_production_token_ledger_template.py`
+- Production token ledger evaluator: `tools/kds-sync/evaluate_headroom_production_token_ledger.py`
+- Production token ledger negative fixtures: `fixtures/headroom/headroom-production-token-ledger-negative-fixtures.json`
+- Production token ledger negative validator: `tools/kds-sync/validate_headroom_production_token_ledger_negative_fixtures.py`
+- Production token authorization package evidence: `docs/harness/evidence/headroom-production-token-authorization-package-20260621.md`
+- Production token authorization package JSON: `docs/harness/evidence/headroom-production-token-authorization-package-20260621.json`
+- Production token authorization action queue evidence: `docs/harness/evidence/headroom-production-token-authorization-action-queue-20260621.md`
+- Production token authorization action queue JSON: `docs/harness/evidence/headroom-production-token-authorization-action-queue-20260621.json`
+- Project-group application router evidence: `docs/harness/evidence/headroom-project-group-application-router-20260621.md`
+- Project-group application router JSON: `docs/harness/evidence/headroom-project-group-application-router-20260621.json`
+- Project application coverage matrix evidence: `docs/harness/evidence/headroom-project-application-coverage-matrix-20260621.md`
+- Project application coverage matrix JSON: `docs/harness/evidence/headroom-project-application-coverage-matrix-20260621.json`
+- Cost sensitivity model evidence: `docs/harness/evidence/headroom-cost-sensitivity-model-20260621.md`
+- Cost sensitivity model JSON: `docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json`
+- Headroom LCX full implementation plan: `02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md`
+- Headroom LCX full implementation Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md`
+- Headroom LCX controlled package evidence: `docs/harness/evidence/headroom-lcx-controlled-package-20260621.md`
+- Headroom LCX controlled package JSON: `docs/harness/evidence/headroom-lcx-controlled-package-20260621.json`
+- Headroom LCX controlled package validator: `tools/kds-sync/validate_headroom_lcx_controlled_package.py`
+- Headroom LCX controlled package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md`
+- Headroom LCX P0 runtime replay evidence: `docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.md`
+- Headroom LCX P0 runtime replay JSON: `docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.json`
+- Headroom LCX P0 runtime replay runner: `tools/kds-sync/run_headroom_lcx_p0_runtime_replay.py`
+- Headroom LCX P0 runtime replay validator: `tools/kds-sync/validate_headroom_lcx_p0_runtime_replay.py`
+- Headroom LCX P0 runtime replay Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001.md`
+- Headroom LCX P1 proxy dry-run smoke evidence: `docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.md`
+- Headroom LCX P1 proxy dry-run smoke JSON: `docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.json`
+- Headroom LCX P1 proxy dry-run smoke runner: `tools/kds-sync/run_headroom_lcx_p1_proxy_dry_run_smoke.py`
+- Headroom LCX P1 proxy dry-run smoke validator: `tools/kds-sync/validate_headroom_lcx_p1_proxy_dry_run_smoke.py`
+- Headroom LCX P1 proxy dry-run smoke Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001.md`
+- Headroom LCX P2 MCP/SDK dry-run smoke evidence: `docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.md`
+- Headroom LCX P2 MCP/SDK dry-run smoke JSON: `docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.json`
+- Headroom LCX P2 MCP/SDK dry-run smoke runner: `tools/kds-sync/run_headroom_lcx_p2_mcp_sdk_dry_run_smoke.py`
+- Headroom LCX P2 MCP/SDK dry-run smoke validator: `tools/kds-sync/validate_headroom_lcx_p2_mcp_sdk_dry_run_smoke.py`
+- Headroom LCX P2 MCP/SDK dry-run smoke Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001.md`
+- Headroom LCX P3 learn preview working memory gate 证据：`docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md`
+- Headroom LCX P3 learn preview working memory gate JSON: `docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.json`
+- Headroom LCX P3 学习预览工作记忆门禁运行器：`tools/kds-sync/run_headroom_lcx_p3_learn_preview_working_memory_gate.py`
+- Headroom LCX P3 学习预览工作记忆门禁校验器：`tools/kds-sync/validate_headroom_lcx_p3_learn_preview_working_memory_gate.py`
+- Headroom LCX P3 学习预览工作记忆门禁 Loop round：`docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md`
+- Headroom LCX P4 output shaper profile gate evidence: `docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.md`
+- Headroom LCX P4 output shaper profile gate JSON: `docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.json`
+- Headroom LCX P4 output shaper profile gate runner: `tools/kds-sync/run_headroom_lcx_p4_output_shaper_profile_gate.py`
+- Headroom LCX P4 output shaper profile gate validator: `tools/kds-sync/validate_headroom_lcx_p4_output_shaper_profile_gate.py`
+- Headroom LCX P4 output shaper profile gate Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md`
+- Headroom LCX P5 production admission package evidence: `docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.md`
+- Headroom LCX P5 production admission package JSON: `docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.json`
+- Headroom LCX P5 production admission package runner: `tools/kds-sync/run_headroom_lcx_p5_production_admission_package.py`
+- Headroom LCX P5 production admission package validator: `tools/kds-sync/validate_headroom_lcx_p5_production_admission_package.py`
+- Headroom LCX P5 production admission package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md`
+- Headroom LCX authorization boundary review evidence: `docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260621.md`
+- Headroom LCX authorization boundary review JSON: `docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260621.json`
+- Headroom LCX authorization boundary review runner: `tools/kds-sync/run_headroom_lcx_authorization_boundary_review.py`
+- Headroom LCX authorization boundary review validator: `tools/kds-sync/validate_headroom_lcx_authorization_boundary_review.py`
+- Headroom LCX authorization boundary review Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001.md`
+- Headroom LCX authorized measurement precheck evidence: `docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.md`
+- Headroom LCX authorized measurement precheck JSON: `docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json`
+- Headroom LCX authorized measurement precheck runner: `tools/kds-sync/run_headroom_lcx_authorized_measurement_precheck.py`
+- Headroom LCX authorized measurement precheck validator: `tools/kds-sync/validate_headroom_lcx_authorized_measurement_precheck.py`
+- Headroom LCX authorized measurement precheck Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md`
+- Headroom LCX authorized measurement authorization template evidence: `docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.md`
+- Headroom LCX authorized measurement authorization template JSON: `docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.json`
+- Headroom LCX authorized measurement authorization template fixture: `fixtures/headroom/headroom-lcx-authorized-measurement-authorization-template.json`
+- Headroom LCX authorized measurement authorization template runner: `tools/kds-sync/build_headroom_lcx_authorized_measurement_authorization_template.py`
+- Headroom LCX authorized measurement authorization template validator: `tools/kds-sync/validate_headroom_lcx_authorized_measurement_authorization_template.py`
+- Headroom LCX authorized measurement authorization template Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001.md`
+- Headroom LCX authorization negative fixtures evidence: `docs/harness/evidence/headroom-lcx-authorization-negative-fixtures-20260622.md`
+- Headroom LCX authorization negative fixtures JSON: `docs/harness/evidence/headroom-lcx-authorization-negative-fixtures-20260622.json`
+- Headroom LCX authorization negative fixtures fixture: `fixtures/headroom/headroom-lcx-authorized-measurement-authorization-negative-fixtures.json`
+- Headroom LCX authorization negative fixtures runner: `tools/kds-sync/build_headroom_lcx_authorization_negative_fixtures.py`
+- Headroom LCX authorization negative fixtures validator: `tools/kds-sync/validate_headroom_lcx_authorization_negative_fixtures.py`
+- Headroom LCX authorization negative fixtures Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001.md`
+- Headroom LCX authorization schema approval package evidence: `docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.md`
+- Headroom LCX authorization schema approval package JSON: `docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.json`
+- Headroom LCX authorization schema fixture: `fixtures/headroom/headroom-lcx-authorized-measurement-authorization.schema.json`
+- Headroom LCX human approval package template: `fixtures/headroom/headroom-lcx-human-approval-package-template.json`
+- Headroom LCX authorization schema approval package runner: `tools/kds-sync/build_headroom_lcx_authorization_schema_approval_package.py`
+- Headroom LCX authorization schema approval package validator: `tools/kds-sync/validate_headroom_lcx_authorization_schema_approval_package.py`
+- Headroom LCX authorization schema approval package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001.md`
+- Headroom LCX approval instance precheck evidence: `docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.md`
+- Headroom LCX approval instance precheck JSON: `docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json`
+- Headroom LCX approval instance pending fixture: `fixtures/headroom/headroom-lcx-human-approval-package-instance.pending.json`
+- Headroom LCX approval instance negative fixtures: `fixtures/headroom/headroom-lcx-human-approval-package-instance-negative-fixtures.json`
+- Headroom LCX approval instance precheck runner: `tools/kds-sync/build_headroom_lcx_approval_instance_precheck.py`
+- Headroom LCX approval instance precheck validator: `tools/kds-sync/validate_headroom_lcx_approval_instance_precheck.py`
+- Headroom LCX approval instance precheck Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001.md`
+- Headroom LCX session summary declaration boundary evidence: `docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md`
+- Headroom LCX session summary declaration boundary JSON: `docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.json`
+- Headroom LCX session summary declaration boundary validator: `tools/kds-sync/validate_headroom_lcx_session_summary_declaration_boundary.py`
+- Headroom LCX session summary declaration boundary Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md`
+- Headroom LCX measurement admission request evidence: `docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md`
+- Headroom LCX measurement admission request JSON: `docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json`
+- Headroom LCX measurement admission request runner: `tools/kds-sync/run_headroom_lcx_measurement_admission_request.py`
+- Headroom LCX measurement admission request validator: `tools/kds-sync/validate_headroom_lcx_measurement_admission_request.py`
+- Headroom LCX measurement admission request Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md`
+- Headroom LCX WAES/Harness admission decision checklist evidence: `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.md`
+- Headroom LCX WAES/Harness admission decision checklist JSON: `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.json`
+- Headroom LCX WAES/Harness admission decision fixtures: `fixtures/headroom/headroom-lcx-waes-harness-admission-decision-fixtures-20260622.json`
+- Headroom LCX WAES/Harness admission decision checklist runner: `tools/kds-sync/build_headroom_lcx_waes_harness_admission_decision_checklist.py`
+- Headroom LCX WAES/Harness admission decision checklist validator: `tools/kds-sync/validate_headroom_lcx_waes_harness_admission_decision_checklist.py`
+- Headroom LCX WAES/Harness admission decision checklist Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md`
+- Headroom LCX WAES/Harness admitted decision evidence: `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md`
+- Headroom LCX WAES/Harness admitted decision JSON: `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.json`
+- Headroom LCX sanitized measurement dry-run evidence: `docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md`
+- Headroom LCX sanitized measurement dry-run JSON: `docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.json`
+- Headroom LCX sanitized measurement dry-run runner: `tools/kds-sync/run_headroom_lcx_sanitized_measurement_dry_run.py`
+- Headroom LCX sanitized measurement dry-run validator: `tools/kds-sync/validate_headroom_lcx_sanitized_measurement_dry_run.py`
+- Headroom LCX sanitized measurement dry-run Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md`
+- Headroom LCX metadata replay check evidence: `docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.md`
+- Headroom LCX metadata replay check JSON: `docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.json`
+- Headroom LCX metadata replay check runner: `tools/kds-sync/run_headroom_lcx_metadata_replay_check.py`
+- Headroom LCX metadata replay check validator: `tools/kds-sync/validate_headroom_lcx_metadata_replay_check.py`
+- Headroom LCX metadata replay check Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md`
+- Headroom LCX marker/retrieval miss comparison gate evidence: `docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md`
+- Headroom LCX marker/retrieval miss comparison gate JSON: `docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.json`
+- Headroom LCX marker/retrieval miss comparison gate runner: `tools/kds-sync/run_headroom_lcx_marker_retrieval_miss_comparison_gate.py`
+- Headroom LCX marker/retrieval miss comparison gate validator: `tools/kds-sync/validate_headroom_lcx_marker_retrieval_miss_comparison_gate.py`
+- Headroom LCX marker/retrieval miss comparison gate Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md`
+- Marker-preserving adapter pilot evidence: `docs/harness/evidence/headroom-marker-preserving-adapter-pilot-20260621.md`
+- Marker-preserving adapter pilot JSON: `docs/harness/evidence/headroom-marker-preserving-adapter-pilot-20260621.json`
+- Cost measurement output: `headroom_cost_measurement_output=pass record_count=15 saving_rate=0.625378 output_gate=true measured_production_tokens=false`
+- Marker policy output: `headroom_marker_preservation_policy=pass allowed=3 rejected=3 log_and_search=adapter_only measured_production_tokens=false`
+- Controlled pilot output: `headroom_controlled_metric_pilot=pass allowed_applied=2 rejected_blocked=3 saving_rate=0.636619 production_admission_gate=false measured_production_tokens=false`
+- Loop cost observation output: `headroom_loop_cost_observation=pass runtime_included=3 runtime_saving_rate=0.274346 production_admission_gate=false measured_production_tokens=false`
+- Loop cost observation series output: `headroom_loop_cost_observation_series=pass window_count=3 max_drift=0.0 stability_gate=true production_admission_gate=false measured_production_tokens=false`
+- Independent LOOP round replay output: `headroom_independent_loop_round_replay=pass runtime_entry_count=3 runtime_saving_rate=0.274346 saving_rate_drift=0.0 independent_round_gate=true production_admission_gate=false measured_production_tokens=false`
+- Production token intake gate output: `headroom_production_token_intake_gate=pass production_token_intake_gate=false measured_production_tokens=false production_admission_gate=false`
+- Production token ledger template output: `headroom_production_token_ledger_template=pass entries=1 measured_production_tokens=false admission_gate=false production_admission_gate=false`
+- Production token ledger negative fixtures output: `headroom_production_token_ledger_negative_fixtures=pass case_count=5 rejected=5 production_admission_gate=false`
+- Production token authorization package output: `headroom_production_token_authorization_package=pass authorization_status=pending authorization_package_gate=false production_admission_gate=false measured_production_tokens=false`
+- Production token authorization action queue output: `headroom_production_token_authorization_action_queue=pass action_count=6 authorization_action_queue_gate=false production_admission_gate=false measured_production_tokens=false`
+- Project-group application router output: `headroom_project_group_application_router=pass allowed_routes=3 blocked_routes=3 dry_run_application_gate=true production_admission_gate=false measured_production_tokens=false`
+- Project application coverage matrix output: `headroom_project_application_coverage_matrix=pass project_count=15 dry_run_routes=3 blocked_routes=3 production_admission_gate=false measured_production_tokens=false`
+- Cost sensitivity model output: `headroom_cost_sensitivity_model=pass profile_count=3 min_saving_rate=0.989505 max_saving_rate=0.989506 production_admission_gate=false measured_production_tokens=false`
+- Headroom LCX controlled package output: `headroom_lcx_controlled_package=pass project_route_count=15 proxy=true sdk=true mcp=true agent_wrap=true ccr_retrieve_gate=true production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX P0 runtime replay output: `headroom_lcx_p0_runtime_replay=pass project_count=15 runtime_replay_gate=true production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX P1 proxy dry-run smoke output: `headroom_lcx_p1_proxy_dry_run_smoke=pass project_count=15 proxy_dry_run_gate=true production_proxy_refused=true dry_run_livez_pass=true production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX P2 MCP/SDK dry-run smoke output: `headroom_lcx_p2_mcp_sdk_dry_run_smoke=pass project_count=15 p2_mcp_sdk_dry_run_gate=true sdk_smoke_gate=true mcp_cli_gate=true retrieve_gate_configured=true production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX P3 学习预览工作记忆门禁输出：`headroom_lcx_p3_learn_preview_working_memory_gate=pass project_count=15 learn_preview_gate=true apply_guard_gate=true memory_governance_gate=true production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX P4 output shaper profile gate output: `headroom_lcx_p4_output_shaper_profile_gate=pass project_count=15 forbidden_context_pass_count=4 allowed_context_pass_count=5 production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX P5 production admission package output: `headroom_lcx_p5_production_admission_package=pass project_count=15 pending_action_count=6 request_package_generated=true production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX authorization boundary review 输出：`headroom_lcx_authorization_boundary_review=pass project_count=15 authorization_signal_present=true authorization_complete=false missing_required_field_count=6 production_admission_gate=false accepted=false integrated=false production_ready=false`（approval instance 完成前的历史 boundary review）
+- Headroom LCX authorized measurement precheck output: `headroom_lcx_authorized_measurement_precheck=pass_precheck_only project_count=15 authorization_signal_present=true authorization_complete=true missing_required_field_count=0 waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX authorized measurement authorization template output: `headroom_lcx_authorized_measurement_authorization_template=pass project_count=15 required_field_count=6 authorization_complete=false production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX authorization negative fixtures output: `headroom_lcx_authorization_negative_fixtures=pass project_count=15 case_count=7 rejected=7 accepted=0 production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX authorization schema approval package output: `headroom_lcx_authorization_schema_approval_package=pass project_count=15 required_field_count=6 human_attestation_count=7 authorization_complete=false production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX approval instance precheck output: `headroom_lcx_approval_instance_precheck=pass_precheck_only project_count=15 negative_case_count=7 rejected=7 approval_instance_precheck_gate=true authorization_complete=true waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX session summary declaration boundary output: `headroom_lcx_session_summary_declaration_boundary=pass project_count=15 declaration_boundary_gate=true authorization_complete=true waes_harness_admitted=true production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX measurement admission request output: `headroom_lcx_measurement_admission_request=pass project_count=15 current_waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck waes_harness_admitted=true production_token_measurement_allowed=false accepted=false integrated=false production_ready=false`
+- Headroom LCX WAES/Harness admission decision checklist output: `headroom_lcx_waes_harness_admission_decision_checklist=pass project_count=15 positive_case_count=1 negative_case_count=7 current_waes_harness_admission_decision=blocked waes_harness_admitted=false production_token_measurement_allowed=false accepted=false integrated=false production_ready=false`
+- Headroom LCX sanitized measurement dry-run output: `headroom_lcx_sanitized_measurement_dry_run=pass_check_only project_count=15 entry_count=1 check_only=true saving_rate=not_calculated measured_production_tokens=false production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX metadata replay check output: `headroom_lcx_metadata_replay_check=pass_check_only project_count=15 entry_count=1 replay_record_count=1 check_only=true saving_rate=not_calculated measured_production_tokens=false production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX marker/retrieval miss comparison gate output: `headroom_lcx_marker_retrieval_miss_comparison_gate=pass_check_only project_count=15 entry_count=1 comparison_count=1 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Marker-preserving adapter pilot output: `headroom_marker_preserving_adapter_pilot=pass scenario_count=2 adapter_gate_pass_count=2 saving_rate=0.640676 production_admission_gate=false measured_production_tokens=false`
+- 范围说明：该证据证明的是项目群样本 token/cost measurement、structured surrogate、受控 metric-and-adapter pilot、三窗口 LOOP cost observation、一次无 production token 的独立 LOOP replay、production token intake blocking gate、sanitized ledger 模板与负例、待授权包与动作队列、dry-run 项目群路由、15 项目覆盖矩阵、三档 cost sensitivity model、marker-preserving adapter pilot、P1 本地 proxy dry-run smoke、P2 MCP/SDK dry-run smoke、P3 学习预览/工作记忆门禁 smoke、P4 output shaper profile gate、P5 production admission request package、authorization boundary review、admitted-for-sanitized-precheck 授权预检、authorization template/negative fixtures/schema approval package、precheck-only approval instance、session declaration boundary、WAES/Harness measurement admission request package、WAES/Harness decision checklist、check-only sanitized measurement dry-run skeleton、check-only metadata replay 和 check-only marker/retrieval miss comparison gate；它不证明 full runtime admission、production token savings、accepted、integrated 或 production_ready。
+
+## GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001 GFIS test data scenario coverage sync
+
+- GFIS test-data scenario coverage validator: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_test_data_scenario_coverage.py`
+- GFIS scenario coverage matrix: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/scenario-coverage/gfis-runtime-sop-e2e.test-scenario-coverage.json`
+- GFIS mutation guard: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/scenario-coverage/gfis-runtime-sop-e2e.test-mutation-guard.json`
+- GFIS scenario evidence: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-test-scenario-coverage-evidence.json`
+- GFIS validator output: `gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 waes_evidence_candidate_count=15 kds_backlink_candidate_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass test_data_lane=pass real_business_lane=repair_required runtime_sop_e2e=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`
+- GPCF 自纠偏 validator 当前报告 `test_data_scenario_coverage=pass` 与 `test_data_mutation_guard=pass`，同时继续保持 `project_group_score=78` / `repair_required`；GPCF L4 聚合 validator 仍因缺失 XiaoG 外部 retrieval evidence 而失败，不能按通过计。
+
+## GPCF-L4-GFIS-TEST-REPLAY-SYNC-001 GFIS 测试数据运行层回放 harness 同步
+
+- GFIS test-data runtime replay validator: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_test_data_runtime_replay_harness.py`
+- GFIS test-data replay input: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/replay/gfis-runtime-sop-e2e.test-replay-input.json`
+- GFIS runtime object contract: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/replay/gfis-runtime-sop-e2e.test-runtime-object-contract.json`
+- GFIS test-data replay evidence: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-test-replay-evidence.json`
+- GFIS validator output: `gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass replay_stage_count=12 runtime_object_count=15 replay_transition_count=11 negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_lane=pass real_business_lane=repair_required runtime_sop_e2e=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`
+- GPCF L4/self-correction validators now report `test_data_12_stage_replay_harness=pass` and `test_data_runtime_object_contract=pass` while keeping `project_group_score=78` / `repair_required`.
+
+## GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001 GFIS 测试数据 12 阶段负向流转门禁同步
 
 - GFIS test-data 12-stage negative transition validator: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_test_data_12_stage_negative_transition_guard.py`
 - GFIS test-data 12-stage negative transition matrix: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/12-stage/gfis-runtime-sop-e2e.test-12-stage-negative-transition-matrix.json`
@@ -26,7 +235,7 @@ superseded_by: []
 - GFIS validator output: `gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`
 - GPCF L4/self-correction validators now report `test_data_12_stage_negative_transition_guard=pass` while keeping `project_group_score=78` / `repair_required`.
 
-## GPCF-L4-GFIS-TEST-12STAGE-TRANSITION-SYNC-001 GFIS test data 12-stage transition gate sync
+## GPCF-L4-GFIS-TEST-12STAGE-TRANSITION-SYNC-001 GFIS 测试数据 12 阶段流转门禁同步
 
 - GFIS test-data 12-stage transition validator: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_test_data_12_stage_transition_gate.py`
 - GFIS test-data 12-stage transition matrix: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/12-stage/gfis-runtime-sop-e2e.test-12-stage-transition-matrix.json`
@@ -34,7 +243,7 @@ superseded_by: []
 - GFIS validator output: `gfis_test_data_12_stage_transition_gate=pass test_stage_count=12 transition_count=11 boundary_count=12 manual_gate_count=2 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0`
 - GPCF L4/self-correction validators now report `test_data_12_stage_transition_gate=pass` while keeping `project_group_score=78` / `repair_required`.
 
-## GPCF-L4-GFIS-TEST-12STAGE-SYNC-001 GFIS test data 12-stage SOP E2E sync
+## GPCF-L4-GFIS-TEST-12STAGE-SYNC-001 GFIS 测试数据 12 阶段 SOP E2E 同步
 
 - GFIS test-data 12-stage SOP E2E validator: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_test_data_12_stage_sop_e2e.py`
 - GFIS test-data 12-stage fixture: `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/test-data/12-stage/gfis-runtime-sop-e2e.test-12-stage.json`
@@ -155,7 +364,7 @@ superseded_by: []
 - 本轮没有真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review、真实 KDS/WAES 写入或真实 verified artifact。
 - 真正业务闭环仍等待真实 source-of-record：`real source record -> runtime primary key -> review queue -> runtime intake -> WAES review -> verified artifact`。
 
-## GPCF-L4-GFIS-REPAIR-278 GFIS CustomerRequirementOrPlatformOrder owner reminder dispatch authorization negative fixture guard sync
+## GPCF-L4-GFIS-REPAIR-278 GFIS CustomerRequirementOrPlatformOrder 责任方提醒派发授权负例门禁同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -170,7 +379,7 @@ superseded_by: []
 - 本轮没有真实提醒派发、外部通知、valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步进入 `GFIS-RUNTIME-SOP-E2E-269`，把缺有效派发授权转换为 post-scan hold/action queue。
 
-## GPCF-L4-GFIS-REPAIR-277 GFIS CustomerRequirementOrPlatformOrder owner reminder dispatch authorization receiving scan sync
+## GPCF-L4-GFIS-REPAIR-277 GFIS CustomerRequirementOrPlatformOrder 责任方提醒派发授权接收扫描同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -185,7 +394,7 @@ superseded_by: []
 - 本轮没有真实提醒派发、外部通知、valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步进入 `GFIS-RUNTIME-SOP-E2E-268`，在授权接收目录仍为空时建立授权缺口 hold/action queue 或下一步受控补证机制。
 
-## GPCF-L4-GFIS-REPAIR-276 GFIS CustomerRequirementOrPlatformOrder owner reminder dispatch authorization preflight sync
+## GPCF-L4-GFIS-REPAIR-276 GFIS CustomerRequirementOrPlatformOrder 责任方提醒派发授权预检同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -200,7 +409,7 @@ superseded_by: []
 - 本轮没有真实提醒派发、外部通知、valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步扫描 owner reminder dispatch authorization 接收目录。
 
-## GPCF-L4-GFIS-REPAIR-275 GFIS CustomerRequirementOrPlatformOrder valid source-record index owner reminder escalation action package sync
+## GPCF-L4-GFIS-REPAIR-275 GFIS CustomerRequirementOrPlatformOrder 有效 source-record 索引责任方提醒升级动作包同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -215,7 +424,7 @@ superseded_by: []
 - 本轮没有真实提醒派发、valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步建立 owner 补证动作派发授权预检。
 
-## GPCF-L4-GFIS-REPAIR-274 GFIS CustomerRequirementOrPlatformOrder valid source-record index change listener sync
+## GPCF-L4-GFIS-REPAIR-274 GFIS CustomerRequirementOrPlatformOrder 有效 source-record 索引变更监听同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -230,7 +439,7 @@ superseded_by: []
 - 本轮没有 valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步继续监听真实 source-record index，并形成 owner 补证提醒/升级动作。
 
-## GPCF-L4-GFIS-REPAIR-273 GFIS CustomerRequirementOrPlatformOrder runtime primary key negative/pollution guard sync
+## GPCF-L4-GFIS-REPAIR-273 GFIS CustomerRequirementOrPlatformOrder 运行层主键负例 / 污染门禁同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -245,7 +454,7 @@ superseded_by: []
 - 本轮没有 valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步建立 valid source-record 接收目录的下一轮监听/变更检测。
 
-## GPCF-L4-GFIS-REPAIR-272 GFIS CustomerRequirementOrPlatformOrder runtime primary key gate sync
+## GPCF-L4-GFIS-REPAIR-272 GFIS CustomerRequirementOrPlatformOrder 运行层主键门禁同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -260,7 +469,7 @@ superseded_by: []
 - 本轮没有 valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步建立 runtime primary key gate 的负例/污染拒收。
 
-## GPCF-L4-GFIS-REPAIR-271 GFIS CustomerRequirementOrPlatformOrder valid source record index receiving scan sync
+## GPCF-L4-GFIS-REPAIR-271 GFIS CustomerRequirementOrPlatformOrder 有效 source record 索引接收扫描同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -275,7 +484,7 @@ superseded_by: []
 - 本轮没有 valid source record、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；下一步只有在真实 source-record index 出现并通过校验后才允许打开 runtime primary key gate。
 
-## GPCF-L4-GFIS-REPAIR-270 GFIS CustomerRequirementOrPlatformOrder valid source record eligibility sync
+## GPCF-L4-GFIS-REPAIR-270 GFIS CustomerRequirementOrPlatformOrder 有效 source record 准入同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -306,7 +515,7 @@ superseded_by: []
 - 本轮没有 valid source record、dispatch confirmation、运行层主键、review queue、runtime intake、WAES review、KDS write receipt 或 verified artifact。
 - 真正最小闭环仍未形成；只有至少一个阶段打通 `source record -> runtime primary key -> review queue -> runtime intake -> WAES review -> verified artifact` 后才能进入闭环判定。
 
-## GPCF-L4-GFIS-REPAIR-268 GFIS runtime 12-stage input gap convergence queue sync
+## GPCF-L4-GFIS-REPAIR-268 GFIS 运行层 12 阶段输入缺口收敛队列同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -320,7 +529,7 @@ superseded_by: []
 - 本轮没有真实 source-of-record、客户签样、转量产批准、生产订单、质检、库存、发货、POD、WAES review、KDS write receipt、运行层主键或 verified artifact。
 - 下一步进入 `GFIS-RUNTIME-SOP-E2E-259`：从 12 阶段队列中选择一个阶段建立真实输入接收门禁。
 
-## GPCF-L4-GFIS-REPAIR-267 GFIS source owner response release remediation evidence intake scanner sync
+## GPCF-L4-GFIS-REPAIR-267 GFIS source owner response release remediation evidence 接收扫描同步
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -357,12 +566,11 @@ superseded_by: []
 - GFIS real-lane validator now reports `review_queue_gate=pass` while keeping `real_business_lane=repair_required`.
 - GPCF validators: `tools/kds-sync/validate_loop_self_correction_gate.py` and `tools/kds-sync/validate_l4_minimum_closed_loop.py`
 - Truth counts: `declared_rounds=1/15`, `substantive_rounds=1/15`, `generated_items=5`, `batch_generated=false`, `substance_gate=pass`, `stop_type=completed`.
-- Non-claim: this evidence does not create source record, runtime primary key, review queue, runtime intake, WAES review, KDS/WAES write receipt, verified artifact, accepted, integrated, production write, external API write, schema sync, bench migrate, deployment, or permission change.
+- Non-claim：本证据不创建 source record、runtime primary key、review queue、runtime intake、WAES review、KDS/WAES write receipt、verified artifact，也不形成 accepted、integrated、production write、external API write、schema sync、bench migrate、deployment 或 permission change。
 
-This registry connects evidence already listed in `docs/harness/evidence/README.md`
-to the main evidence index. It is a discoverability registry only; it does not
-claim real KDS writeback, RAG admission, settlement, production write,
-accepted, or integrated status.
+本注册表把 `docs/harness/evidence/README.md` 中已列出的证据连接到主 evidence index。
+它只用于可发现性登记，不声明 real KDS writeback、RAG admission、settlement、production write、
+accepted 或 integrated 状态。
 
 | 证据 | 路径/命令 | 结果 | 状态 |
 |---|---|---|---|
@@ -395,11 +603,11 @@ accepted, or integrated status.
 
 ### Non-Claims
 
-- This registry does not perform or prove real KDS API writeback.
-- This registry does not admit any item into production RAG, settlement,
-  runtime business flow, accepted, or integrated status.
-- This registry does not authorize production write, external API write, schema
-  sync, bench migrate, deployment, commit, or push.
+- 本注册表不执行也不证明 real KDS API writeback。
+- 本注册表不把任何条目准入 production RAG、settlement、
+  runtime business flow、accepted 或 integrated 状态。
+- 本注册表不授权 production write、external API write、schema
+  sync、bench migrate、deployment、commit 或 push。
 
 ## Current Control Gates
 
@@ -418,7 +626,7 @@ accepted, or integrated status.
 |---|---|---|---|
 | Loop governance dashboard evidence | `docs/harness/evidence/loop-governance-dashboard-20260617.md` | 登记 `LOOP-GOV-DASHBOARD-20260617`，维持 `partial_repair` 状态上限、`repair_required` 业务事实和 accepted/integrated 禁止升级边界 | active_governance_dashboard |
 | Loop governance current window disposition evidence | `docs/harness/evidence/loop-governance-current-window-disposition-20260619.md` | 登记 `LOOP-GOV-CURRENT-WINDOW-DISPOSITION-20260619`，记录 `LEDB-001-RD-005` 与 `LEDB-002-RD-004`；区分 shell exceptions 与 targeted annotation candidates，不批量改写历史 | review_required |
-| Loop governance current window review evidence | `docs/harness/evidence/loop-governance-current-window-review-20260619.md` | 登记 `LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619`，记录当前 audit window 的 `truth_records=2`、`five_segment_records=7`、duplicate/similarity review 信号，不批量改写历史 | review_required |
+| Loop governance current window review evidence | `docs/harness/evidence/loop-governance-current-window-review-20260619.md` | 登记 `LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619`，记录当前 audit window 的 `truth_records=25`、`five_segment_records=0`、duplicate/similarity review 信号，不批量改写历史 | review_required |
 | Loop governance phase goal evidence | `docs/harness/evidence/loop-governance-phase-goal-20260617.md` | 登记 `LOOP-GOV-PHASE-20260617`，限定治理进程服务于实施主进程质量提升，维持 `partial_repair` 状态上限且不创建业务事实 | active_governance |
 | Loop governance efficiency debt backlog evidence | `docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md` | 登记 `LOOP-GOV-EFF-DEBT-20260617`，覆盖 `LEDB-001` 至 `LEDB-004` 的受控 review disposition 队列，不升级业务状态 | review_required |
 | Loop governance efficiency debt locator evidence | `docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md` | 登记 `LOOP-GOV-EFF-DEBT-LOCATOR-20260617`，用于定位 `LEDB-001` / `LEDB-002` 当前审计窗口债务，不批量改写历史 | review_required |
@@ -430,50 +638,50 @@ accepted, or integrated status.
 
 ## LOOP-GOV-DASHBOARD-20260617 Loop governance dashboard
 
-- Dashboard evidence is registered in the Governance Evidence Registry table above.
+- 仪表盘 evidence 已登记在上方治理证据登记表中。
 - It links `LOOP-GOV-PHASE-20260617`, keeps `efficiency_risk=review_required`, and enforces `status_ceiling=partial_repair`.
-- It does not prove GFIS runtime SOP E2E passed and does not allow accepted/integrated status.
+- 这不证明 GFIS runtime SOP E2E 已通过，也不允许升级到 accepted/integrated 状态。
 
 ## LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619 Loop governance current window review
 
-- Current-window review evidence is registered in the Governance Evidence Registry table above.
-- It records `LEDB-001-RD-004` and `LEDB-002-RD-003` for current live audit-window review targets.
-- It keeps `no_bulk_rewrite=true`, `business_status_impact=none`, and does not prove GFIS runtime SOP E2E passed.
+- 当前窗口 review evidence 已登记在上方治理证据登记表中。
+- 它记录 `LEDB-001-RD-004` 和 `LEDB-002-RD-003`，对应当前 live audit-window review 目标。
+- 它保持 `no_bulk_rewrite=true`、`business_status_impact=none`，且不证明 GFIS runtime SOP E2E 已通过。
 
 ## LOOP-GOV-CURRENT-WINDOW-DISPOSITION-20260619 Loop governance current window disposition
 
-- Current-window disposition evidence is registered in the Governance Evidence Registry table above.
-- It records `LEDB-001-RD-005` and `LEDB-002-RD-004` for affected records `252`, `254`, and `269` through `273`.
-- It distinguishes index-level shell exceptions from targeted annotation candidates, keeps `no_bulk_rewrite=true`, and does not prove GFIS runtime SOP E2E passed.
+- 当前窗口 disposition evidence 已登记在上方治理证据登记表中。
+- 它记录 `LEDB-001-RD-005` 和 `LEDB-002-RD-004`，对应受影响记录 `252`、`254` 与 `269` 到 `273`。
+- 它区分 index-level shell exceptions 与 targeted annotation candidates，保持 `no_bulk_rewrite=true`，且不证明 GFIS runtime SOP E2E 已通过。
 
 ## LOOP-GOV-PHASE-20260617 Loop governance phase goal
 
-- Phase goal evidence is registered in the Governance Evidence Registry table above.
-- It keeps Loop governance bound to quality, efficiency, and self-improvement support for the implementation main process.
-- It does not create real business facts or allow accepted/integrated status.
+- 阶段目标 evidence 已登记在上方治理证据登记表中。
+- 它保持 Loop governance 绑定在实施主流程的质量、效率与自我改进支撑范围内。
+- 它不创建真实业务事实，也不允许升级到 accepted/integrated 状态。
 
 ## LOOP-GOV-EFF-DEBT-20260617 Loop governance efficiency debt backlog
 
-- Efficiency debt backlog evidence is registered in the Governance Evidence Registry table above.
-- It records `LEDB-001`, `LEDB-002`, `LEDB-003`, and `LEDB-004`; it does not rewrite historical records in bulk or change GFIS/GPCF business status.
+- 效率债务 backlog evidence 已登记在上方治理证据登记表中。
+- 它记录 `LEDB-001`、`LEDB-002`、`LEDB-003` 与 `LEDB-004`；不会批量重写历史记录，也不会改变 GFIS/GPCF 业务状态。
 
 ## LOOP-GOV-ROUND-REVIEW-PLAN-20260617 Loop governance round review plan
 
-- Round review plan evidence is registered in the Governance Evidence Registry table above.
-- It binds review packages to `LOOP-GOV-EFF-DEBT-LOCATOR-20260617` and keeps `no_bulk_rewrite=true`.
-- It has `business_status_impact=none` and does not prove GFIS runtime SOP E2E passed.
+- 轮次 review plan evidence 已登记在上方治理证据登记表中。
+- 它将 review packages 绑定到 `LOOP-GOV-EFF-DEBT-LOCATOR-20260617`，并保持 `no_bulk_rewrite=true`。
+- 它保持 `business_status_impact=none`，且不证明 GFIS runtime SOP E2E 已通过。
 
 ## LOOP-GOV-TRUTH-FIELD-REVIEW-20260617 Loop governance truth-field review
 
-- Truth-field review evidence is registered in the Governance Evidence Registry table above.
-- It records `LEDB-001-RD-003`; shell records remain index-level exceptions unless a separate historical migration plan is authorized.
+- truth-field review evidence 已登记在上方治理证据登记表中。
+- 它记录 `LEDB-001-RD-003`；shell records 仍属于 index-level exceptions，除非另行授权独立的历史迁移方案。
 
 ## LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617 Loop governance five-segment review
 
-- Five-segment review evidence is registered in the Governance Evidence Registry table above.
-- It records `LEDB-002-RD-002`; targeted annotation candidates and index-level exceptions remain separated.
+- five-segment review evidence 已登记在上方治理证据登记表中。
+- 它记录 `LEDB-002-RD-002`；targeted annotation candidates 与 index-level exceptions 继续保持分离。
 
 ## LOOP-GOV-SEQUENCE-CHECKPOINT-20260619 Loop governance sequence checkpoint
 
-- Sequence checkpoint evidence is registered in the Governance Evidence Registry table above.
-- It records `LEDB-003-RD-002`; it does not close `LEDB-003`, rewrite historical records in bulk, or change GFIS/GPCF business status.
+- sequence checkpoint evidence 已登记在上方治理证据登记表中。
+- 它记录 `LEDB-003-RD-002`；不会关闭 `LEDB-003`，不会批量重写历史记录，也不会改变 GFIS/GPCF 业务状态。

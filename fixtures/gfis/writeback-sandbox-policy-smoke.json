@@ -1,0 +1,26 @@
+{
+  "id": "gc-knowledge-fabric-dks-085-gfis-writeback-sandbox-policy-smoke",
+  "description": "Static no-write smoke for GFIS Writeback Sandbox contract.",
+  "expected": {
+    "writebackModeCount": 4,
+    "allowedBeforeP1": ["no_write", "sandbox"],
+    "blockedBeforeP1": ["approved_write", "production_write"],
+    "finalActionCount": 5,
+    "minimumFieldCount": 15,
+    "approvedWriteRequiresCount": 4,
+    "productionWriteRequiresCount": 5,
+    "aiAllowedModes": ["no_write", "sandbox"],
+    "aiBlockedModes": ["approved_write", "production_write"],
+    "noWriteCannotEmitTargetReceipt": true,
+    "sandboxCannotEmitTargetReceipt": true,
+    "finalActionAcceptedIsNotWritebackReceipt": true,
+    "missingEvidenceBlocks": true,
+    "missingWaesResultBlocks": true,
+    "missingBusinessOwnerBlocks": true,
+    "writesGfis": 0,
+    "writesGpc": 0,
+    "writesErp": 0,
+    "writesMes": 0,
+    "writesExternalApi": 0
+  }
+}

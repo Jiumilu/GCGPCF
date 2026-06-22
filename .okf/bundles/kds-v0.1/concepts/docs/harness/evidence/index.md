@@ -1,7 +1,6 @@
 # concepts/docs/harness/evidence
 
 * [KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告](kds-md-okf-odf-full-closure-report-20260619.md) - KDS/OKF/ODF 全量治理闭环报告
-* [KDS OKF v0.1 Phase 1 Derived Bundle Report](kds-okf-v01-phase1-bundle-report-20260619.md) - KDS OKF v0.1 Phase 1 派生 Bundle 报告
 * [KDS Phase 10 Backlog Triage Report](kds-phase10-backlog-triage-20260619.md) - KDS Phase 10 Backlog 分诊报告
 * [KDS Phase 10 Self-refresh Stabilization Workpack](kds-phase10-self-refresh-stabilization-workpack-20260619.md) - KDS Phase 10 Self-refresh 稳定化工作包
 * [ODF Phase 2 扩大样本验证闭环报告](odf-phase2-closure-report-20260617.md) - ODF Phase 2 闭环报告

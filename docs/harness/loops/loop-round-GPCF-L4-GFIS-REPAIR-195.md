@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-7A56E22DB1
-title: GPCF-L4-GFIS-REPAIR-195
+title: GPCF-L4-GFIS-REPAIR-195 GFIS 审阅授权负样本门禁
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,25 +11,25 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-195.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-195.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-GFIS-REPAIR-195
+# GPCF-L4-GFIS-REPAIR-195 GFIS 审阅授权负样本门禁
 
-## Round Summary
+## 轮次摘要
 
 - round_id: `GPCF-L4-GFIS-REPAIR-195`
 - gfis_round_id: `GFIS-RUNTIME-SOP-E2E-188`
-- mode: L4 self-correction and GFIS runtime repair
-- subject: GFIS runtime layer, not GFIS Demo
-- business_positioning: GFIS is the runtime system for Modern Jinggong OEM production during Gehua factory construction and the same runtime system for Gehua self-built factory after commissioning.
+- mode: L4 自纠偏与 GFIS 运行时修复
+- subject: GFIS 运行层，不是 GFIS Demo
+- business_positioning: GFIS 是葛化工厂建设期间现代精工 OEM 生产的运行系统，也是葛化自建工厂投产后的同一运行系统。
 - target_object_family: `CustomerRequirementOrPlatformOrder`
 - target_stage: `01_customer_requirement_platform_order`
-- target_gap: weak authorization-like materials must not create review authorization, review queue, runtime intake, WAES review or verified state.
+- target_gap: 弱授权类材料不得创建 review authorization、review queue、runtime intake、WAES review 或 verified 状态。
 
-## Inputs Read
+## 已读取输入
 
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/AGENTS.md`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/README.md`
@@ -40,18 +40,18 @@ superseded_by: []
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_runtime_sop_e2e.py`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/gcfis_custom/gcfis_custom/api.py`
 
-## Changes Landed in GFIS
+## GFIS 已落地变更
 
-- Added `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_negative_fixture_guard.py`.
-- Added `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_negative_fixture_guard.py`.
-- Added `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-negative-fixture-guard.json`.
-- Added `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-negative-fixture-guard.md`.
-- Added `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-188.md`.
-- Updated `gcfis_custom/gcfis_custom/api.py` with read-only `get_customer_requirement_platform_order_review_authorization_envelope_negative_fixture_guard`.
-- Updated `scripts/validate_gfis_runtime_sop_e2e.py` to run the new validator and print the new runtime status line.
-- Updated GFIS loop-state, evidence index, loops README and SOP E2E README.
+- 新增 `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_negative_fixture_guard.py`。
+- 新增 `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_negative_fixture_guard.py`。
+- 新增 `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-negative-fixture-guard.json`。
+- 新增 `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-negative-fixture-guard.md`。
+- 新增 `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-188.md`。
+- 更新 `gcfis_custom/gcfis_custom/api.py`，增加只读 `get_customer_requirement_platform_order_review_authorization_envelope_negative_fixture_guard`。
+- 更新 `scripts/validate_gfis_runtime_sop_e2e.py`，运行新验证器并打印新的运行时状态行。
+- 更新 GFIS loop-state、evidence index、loops README 和 SOP E2E README。
 
-## Machine Facts
+## 机器事实
 
 | Fact | Value |
 |---|---|
@@ -76,7 +76,7 @@ superseded_by: []
 | state | `customer_requirement_platform_order_review_authorization_envelope_negative_fixtures_rejected` |
 | runtime_sop_e2e | `repair_required` |
 
-## Rejected Negative Fixtures
+## 已拒绝负样本
 
 - `reject_gfis_demo_state`
 - `reject_kds_candidate_only`
@@ -85,7 +85,7 @@ superseded_by: []
 - `reject_quotation_or_contract_draft`
 - `reject_unverified_accepted_integrated_claim`
 
-## Verification
+## 验证
 
 | Check | Result |
 |---|---|
@@ -95,29 +95,29 @@ superseded_by: []
 | `npm run test:e2e` in GFIS | 26 passed; `pass_demo_only` |
 | `git diff --check -- .` in GFIS | pass |
 
-## GPCF Backwrite
+## GPCF 回写
 
-- Updated `02-governance/loop/LOOP_CONTROL_BOARD.md`.
-- Updated `docs/harness/loop-state.md`.
-- Updated `docs/harness/evidence/evidence-index.md`.
-- Updated `docs/harness/minimum-closed-loop/l4-closure-score-matrix.md`.
-- Updated `09-status/gpcf-project-status-matrix.md`.
-- Added this GPCF loop round record.
+- 更新 `02-governance/loop/LOOP_CONTROL_BOARD.md`。
+- 更新 `docs/harness/loop-state.md`。
+- 更新 `docs/harness/evidence/evidence-index.md`。
+- 更新 `docs/harness/minimum-closed-loop/l4-closure-score-matrix.md`。
+- 更新 `09-status/gpcf-project-status-matrix.md`。
+- 新增本 GPCF Loop 轮次记录。
 
-## Non-Claims
+## 不声明事项
 
-- No customer order was created.
-- No platform order was created.
-- No real source-of-record was submitted.
-- No review authorization envelope was submitted.
-- No runtime primary key was created.
-- No review queue item was created.
-- No manual review was performed.
-- No WAES review was performed.
-- No runtime intake was performed.
-- No verified artifact was created.
-- No accepted or integrated status was set.
-- No production write, real external API write, KDS write, WAES write, database migration, schema sync, permission change, ECS/Aliyun/Caddy/tunnel/Docker change, deployment, Git push or merge was performed.
+- 未创建客户订单。
+- 未创建平台订单。
+- 未提交真实 source-of-record。
+- 未提交审阅授权信封。
+- 未创建运行时主键。
+- 未创建 review queue 项。
+- 未执行人工审阅。
+- 未执行 WAES 审阅。
+- 未执行 runtime intake。
+- 未创建 verified 工件。
+- 未设置 accepted 或 integrated 状态。
+- 未执行生产写入、真实外部 API 写入、KDS 写入、WAES 写入、数据库迁移、schema sync、权限变更、ECS/Aliyun/Caddy/tunnel/Docker 变更、部署、Git push 或 merge。
 
 ## Real Round Accounting
 
@@ -128,6 +128,6 @@ superseded_by: []
 - substance_gate: `pass`
 - stop_type: `authorization_boundary`
 
-## Next Target
+## 下一目标
 
-`GFIS-RUNTIME-SOP-E2E-189`: build the `CustomerRequirementOrPlatformOrder` review authorization envelope submission directory scanner, proving that only real, structured authorization envelope submissions can move toward review and that current submitted/valid envelopes remain zero until true files arrive.
+`GFIS-RUNTIME-SOP-E2E-189`：构建 `CustomerRequirementOrPlatformOrder` 审阅授权信封提交目录扫描器，证明只有真实、结构化的授权信封提交才能进入审阅路径，并且在真实文件到达前当前 submitted/valid envelopes 继续为零。

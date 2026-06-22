@@ -1,0 +1,140 @@
+{
+  "evidence_id": "ONTOLOGY-WAS-3H-IMPLEMENTATION-GOALS-20260621",
+  "status": "ontology_was_3h_implementation_goals_planned",
+  "date": "2026-06-21",
+  "timebox": {
+    "planned_minutes": 180,
+    "planned_hours": 3,
+    "mode": "controlled_phase_plan",
+    "execution_started": false
+  },
+  "scope": {
+    "primary_subject": "WAS/Ontology staged implementation for GlobalCloud project group",
+    "project_group_role": "GPCF governance and evidence closure",
+    "was_role": "semantic_foundation_project",
+    "gfis_role": "runtime_sop_subject",
+    "kds_role": "source_of_record_and_controlled_reference",
+    "waes_role": "gate_and_governance",
+    "loop_role": "evidence_closure_and_stop_condition"
+  },
+  "current_baseline": {
+    "latest_completed_round": "GPCF-GFIS-WAS-SOURCE-RECORD-CROSSWALK-001",
+    "gfis_real_business_lane": "repair_required",
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted_integrated": 0,
+    "production_ready": 0
+  },
+  "phase_goals": [
+    {
+      "phase_id": "P0-startup-calibration",
+      "time_window_minutes": "0-30",
+      "goal": "Reconfirm governance boundary and latest WAS/GFIS/KDS/WAES evidence chain before any implementation step.",
+      "inputs": [
+        "LOOP_CONTROL_BOARD.md",
+        "gpcf-project-status-matrix.md",
+        "GFIS-WAS profile/admission/precheck/negative/crosswalk evidence",
+        "WAS validators"
+      ],
+      "deliverables": [
+        "baseline validator rerun",
+        "no-accepted/no-integrated assertion",
+        "GFIS receiving directory remains empty unless real user-provided source record exists"
+      ],
+      "exit_gate": "all baseline validators pass and no real-business count is promoted"
+    },
+    {
+      "phase_id": "P1-real-source-record-readiness",
+      "time_window_minutes": "30-75",
+      "goal": "Prepare the exact intake packet requirements for a future real CustomerRequirementOrPlatformOrder source-of-record.",
+      "inputs": [
+        "GFIS native 12 fields",
+        "WAS/Ontology 12 fields",
+        "field crosswalk",
+        "negative fixture reject reasons"
+      ],
+      "deliverables": [
+        "operator-facing intake checklist candidate",
+        "reviewable field-completion matrix",
+        "explicit hold reasons when real source record is absent"
+      ],
+      "exit_gate": "checklist and matrix remain evidence-only and do not create source records"
+    },
+    {
+      "phase_id": "P2-gate-execution-and-replay",
+      "time_window_minutes": "75-135",
+      "goal": "Run the executable gate chain for source-record precheck, negative fixtures, field crosswalk, WAS profile mapping, and WAS validators.",
+      "inputs": [
+        "validate_gfis_was_source_record_submission_precheck.py",
+        "validate_gfis_was_source_record_negative_fixtures.py",
+        "validate_gfis_was_source_record_field_crosswalk.py",
+        "validate_gfis_was_profile_runtime_gate_mapping.py",
+        "WAS okf validators"
+      ],
+      "deliverables": [
+        "machine-readable gate run summary",
+        "pass/fail evidence with exact blocker if any",
+        "unchanged GFIS real-business counters"
+      ],
+      "exit_gate": "all gate outputs pass or execution stops with concrete blocker evidence"
+    },
+    {
+      "phase_id": "P3-closure-and-next-decision",
+      "time_window_minutes": "135-180",
+      "goal": "Close the 3-hour run with controlled documentation, Loop gate, and next decision boundary.",
+      "inputs": [
+        "document_control.py",
+        "check_document_pollution.py",
+        "validate_kds_token.py",
+        "loop_document_gate.py"
+      ],
+      "deliverables": [
+        "controlled evidence update",
+        "project status matrix update",
+        "next-step decision: wait for real source record, collect business input, or run another dry-run gate"
+      ],
+      "exit_gate": "document governance passes and no production/accepted/integrated claim is made"
+    }
+  ],
+  "success_metrics": {
+    "planned_phase_count": 4,
+    "planned_minutes": 180,
+    "minimum_required_validator_groups": 5,
+    "required_document_gates": [
+      "document_pollution",
+      "kds_token",
+      "loop_document_gate"
+    ],
+    "forbidden_promotions": [
+      "accepted",
+      "integrated",
+      "production_ready",
+      "runtime_primary_key_ready_without_real_source_record"
+    ]
+  },
+  "stop_conditions": [
+    "KDS token blocked or leaked",
+    "document pollution failure",
+    "Loop document gate failure",
+    "GFIS receiving directory contains unreviewed real source-record candidate",
+    "any validator tries to promote real_business_lane without real source-record evidence",
+    "production write, external API write, deployment, permission change, or Git push becomes necessary"
+  ],
+  "non_claims": [
+    "does not start an autonomous 3-hour run",
+    "does not write into GFIS receiving directory",
+    "does not create real source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not create verified artifact",
+    "does not mark accepted or integrated",
+    "does not mark production ready"
+  ]
+}

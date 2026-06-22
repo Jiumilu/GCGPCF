@@ -1,0 +1,88 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-038-20260622",
+  "status": "was_real_source_record_monitor_038_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-038",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-037",
+  "purpose": "Thirty-eighth independent monitor pass for responsible sourcing due diligence, conflict minerals declaration, forced labor due diligence, deforestation-free declaration, country of origin certificate, chain of custody due diligence, and grievance remediation records.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "conflict_minerals_declaration_gaps": 0,
+    "forced_labor_due_diligence_gaps": 0,
+    "deforestation_free_declaration_gaps": 0,
+    "country_of_origin_certificate_gaps": 0,
+    "chain_of_custody_due_diligence_gaps": 0,
+    "grievance_remediation_record_gaps": 0,
+    "accepted_for_responsible_sourcing_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "responsible_sourcing_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 6,
+    "negative_cases": [
+      "conflict_minerals_declaration_gap",
+      "forced_labor_due_diligence_gap",
+      "deforestation_free_declaration_gap",
+      "country_of_origin_certificate_gap",
+      "chain_of_custody_due_diligence_gap",
+      "grievance_remediation_record_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "responsible_sourcing_requirements": [
+    "conflict_minerals_declaration",
+    "forced_labor_due_diligence",
+    "deforestation_free_declaration",
+    "country_of_origin_certificate",
+    "chain_of_custody_due_diligence",
+    "grievance_remediation_record"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-039",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer conflict minerals declaration records",
+    "does not infer forced labor due diligence records",
+    "does not infer deforestation-free declarations",
+    "does not infer country of origin certificates",
+    "does not infer chain of custody due diligence records",
+    "does not infer grievance remediation records",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

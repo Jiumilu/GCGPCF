@@ -1,0 +1,29 @@
+{
+  "id": "governance-endpoint-no-write-smoke",
+  "expectedEndpoints": [
+    {"method": "POST", "path": "/api/v2/governance/loop", "routeMode": "loop_record_request"},
+    {"method": "GET", "path": "/api/v2/governance/loop/{id}", "routeMode": "read_only"},
+    {"method": "POST", "path": "/api/v2/governance/evidence", "routeMode": "evidence_request"},
+    {"method": "POST", "path": "/api/v2/governance/knowledge-ci/run", "routeMode": "knowledge_ci_dry_run"},
+    {"method": "GET", "path": "/api/v2/governance/ledger/contributions", "routeMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/governance/ledger/revenue", "routeMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/governance/ledger/quota", "routeMode": "read_only"},
+    {"method": "GET", "path": "/api/v2/governance/ledger/bounties", "routeMode": "read_only"}
+  ],
+  "expected": {
+    "endpointCount": 8,
+    "readOnlyCount": 5,
+    "loopRecordRequestCount": 1,
+    "evidenceRequestCount": 1,
+    "knowledgeCiDryRunCount": 1,
+    "routesRequiringEvidenceBoundary": 8,
+    "dryRunOnlyCount": 1,
+    "writesBusinessSystem": 0,
+    "writesAcceptedFact": 0,
+    "writesRevenueDistribution": 0,
+    "writesQuotaMutation": 0,
+    "writesBountySettlement": 0,
+    "writesExternalApi": 0,
+    "noWrite": true
+  }
+}

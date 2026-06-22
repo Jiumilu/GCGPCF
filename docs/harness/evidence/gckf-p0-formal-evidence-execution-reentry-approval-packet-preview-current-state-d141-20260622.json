@@ -1,0 +1,48 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-REENTRY-APPROVAL-PACKET-PREVIEW-CURRENT-STATE-D141-20260622",
+  "round_id": "GPCF-GCKF-P0-D141-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D140 current-state formal evidence execution re-entry preflight preview 基础上刷新 formal evidence execution re-entry approval packet preview，使旧 D42 正式 evidence 执行重入批准包预览分支显式吸收 D124-D140 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-reentry-approval-packet-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-reentry-approval-packet-preview-current-state-d141-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-reentry-preflight-preview-current-state-d140-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-execution-reentry-preflight-preview-current-state-d140-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_approval_packet_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d42_formal_evidence_execution_reentry_approval_packet_preview": "gckf_p0_formal_evidence_execution_reentry_approval_packet_preview_dry_run=pass status=candidate_preview preview_type=formal_evidence_execution_reentry_approval_packet_preview preview_status=candidate_preview execution_status=not_executed approval_execution_status=not_executed retry_execution_status=not_executed unfreeze_execution_status=not_executed execution_mode=dry_run_no_write approval_roles=8 approval_packet_sections=15 approval_checks=24 required_approval_refs=22 blocking_conditions=23 forbidden_actions=18",
+    "d140_current_state_reentry_preflight_preview": "gckf_p0_formal_evidence_execution_reentry_preflight_preview_current_state_d140=pass reentry_preflight_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed reentry_execution_status=not_executed unfreeze_execution_status=not_executed retry_execution_status=not_executed reentry_admission_states=6 reentry_preflight_checks=27 hold_context_refs=6",
+    "d139_current_state_incident_escalation_preview": "gckf_p0_formal_evidence_execution_incident_escalation_preview_current_state_d139=pass incident_escalation_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed incident_execution_status=not_executed freeze_execution_status=not_executed incident_classes=8 escalation_checks=27 hold_context_refs=6",
+    "d138_current_state_rollback_drill_preview": "gckf_p0_formal_evidence_execution_rollback_drill_preview_current_state_d138=pass rollback_drill_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed rollback_execution_status=not_executed rollback_triggers=8 rollback_drill_steps=27 hold_context_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "approval_scope": {
+    "approval_roles": 8,
+    "approval_packet_sections": 15,
+    "approval_checks": 27,
+    "required_approval_refs": 23,
+    "blocking_conditions": 24,
+    "forbidden_actions": 20,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_reentry_preflight_preview_status": "candidate_preview_with_hold",
+    "source_reentry_execution_status": "not_executed",
+    "source_unfreeze_execution_status": "not_executed",
+    "source_retry_execution_status": "not_executed",
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution re-entry approval packet preview 不执行 approval、formal write、retry、unfreeze，也不释放 freeze 或 execution lock，不写 approval result、reentry result、verification result、rollback result。",
+    "本 current-state formal evidence execution re-entry approval packet preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution re-entry approval packet preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "下一轮应优先核对 formal evidence execution signer receipt preview 的历史基线是否存在；若存在，则刷新 signer receipt preview current-state 分支，继续保持 no-write。"
+}

@@ -1,0 +1,77 @@
+{
+  "workflows": [
+    {
+      "id": "kwe-flow-ai-candidate-repair",
+      "description": "AI candidate without evidence must remain repair-required and cannot become a fact.",
+      "candidate": {
+        "id": "fc-ai-001",
+        "generatedBy": "ai",
+        "sourceRefs": [],
+        "evidenceRefs": [],
+        "waesGateStatus": "repair_required",
+        "confirmationStatus": "ai_checked"
+      },
+      "expected": {
+        "workItemStatus": "open",
+        "workType": "evidence_gap",
+        "canCreateFact": false,
+        "requiredActions": ["register_source", "bind_evidence", "human_confirm"]
+      }
+    },
+    {
+      "id": "kwe-flow-human-required",
+      "description": "Source-backed candidate with evidence but without confirmation must wait for human confirmation.",
+      "candidate": {
+        "id": "fc-source-backed-001",
+        "generatedBy": "partner",
+        "sourceRefs": ["src-partner-001"],
+        "evidenceRefs": ["ev-partner-001"],
+        "waesGateStatus": "human_required",
+        "confirmationStatus": "human_required"
+      },
+      "expected": {
+        "workItemStatus": "in_progress",
+        "workType": "fact_confirmation",
+        "canCreateFact": false,
+        "requiredActions": ["human_confirm"]
+      }
+    },
+    {
+      "id": "kwe-flow-confirmed-ready",
+      "description": "Human-confirmed candidate with evidence can become ready-for-kds-entry in dry-run.",
+      "candidate": {
+        "id": "fc-confirmed-001",
+        "generatedBy": "partner",
+        "sourceRefs": ["src-order-001"],
+        "evidenceRefs": ["ev-order-001"],
+        "waesGateStatus": "passed",
+        "confirmationStatus": "human_confirmed"
+      },
+      "expected": {
+        "workItemStatus": "approved",
+        "workType": "fact_confirmation",
+        "canCreateFact": true,
+        "nextLifecycle": "verified",
+        "realWrites": 0
+      }
+    },
+    {
+      "id": "kwe-flow-committee-required",
+      "description": "Committee-required candidate cannot be promoted by human-only flow.",
+      "candidate": {
+        "id": "fc-committee-001",
+        "generatedBy": "system",
+        "sourceRefs": ["src-revenue-001"],
+        "evidenceRefs": ["ev-revenue-001"],
+        "waesGateStatus": "committee_required",
+        "confirmationStatus": "committee_required"
+      },
+      "expected": {
+        "workItemStatus": "open",
+        "workType": "committee_review",
+        "canCreateFact": false,
+        "requiredActions": ["committee_decision"]
+      }
+    }
+  ]
+}

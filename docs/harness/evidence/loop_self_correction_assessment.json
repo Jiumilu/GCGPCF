@@ -1,5 +1,5 @@
 {
-  "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+  "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
   "gate": "blocked",
   "project_group_score": 78,
   "development_ready": "pass",
@@ -7,6 +7,10 @@
   "test_data_12_stage_sop_e2e": "pass",
   "test_data_12_stage_transition_gate": "pass",
   "test_data_12_stage_negative_transition_guard": "pass",
+  "test_data_12_stage_replay_harness": "pass",
+  "test_data_runtime_object_contract": "pass",
+  "test_data_scenario_coverage": "pass",
+  "test_data_mutation_guard": "pass",
   "synthetic_dev_lane": "dev_closed",
   "real_business_lane": "repair_required",
   "business_verification_pending": true,
@@ -47,12 +51,12 @@
     "pending_business_verification_gate_status": "pass",
     "pending_business_verification_gate_exit_code": 0,
     "pending_business_verification_gate_output": [
-      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=396 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=399 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "runtime_primary_key_gate_status": "pass",
     "runtime_primary_key_gate_exit_code": 0,
     "runtime_primary_key_gate_output": [
-      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=396 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=399 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "review_queue_admission_gate_status": "pass",
     "review_queue_admission_gate_exit_code": 0,
@@ -104,6 +108,16 @@
     "test_data_12_stage_negative_transition_guard_output": [
       "gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
+    "test_data_runtime_replay_harness_status": "pass",
+    "test_data_runtime_replay_harness_exit_code": 0,
+    "test_data_runtime_replay_harness_output": [
+      "gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required runtime_object_count=15 replay_stage_count=12 accepted_attempt_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    ],
+    "test_data_scenario_coverage_status": "pass",
+    "test_data_scenario_coverage_exit_code": 0,
+    "test_data_scenario_coverage_output": [
+      "gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    ],
     "git_dirty": true
   },
   "loop_efficiency": {
@@ -139,6 +153,8 @@
     "Keep test_data_12_stage_sop_e2e separate from real SOP acceptance; it proves 12-stage test-data shape and pollution guard only.",
     "Keep test_data_12_stage_transition_gate separate from real SOP acceptance; it proves test-stage transition boundaries, POD/finance manual gates, and pollution guard only.",
     "Keep test_data_12_stage_negative_transition_guard separate from real SOP acceptance; it proves invalid test transitions, bypass attempts, demo substitution, write claims, and status-upgrade claims are rejected only.",
+    "Keep test_data_runtime_replay_harness separate from real SOP acceptance; it proves test-data replayability and runtime object contract consistency only.",
+    "Keep test_data_scenario_coverage separate from real SOP acceptance; it proves test-data scenario coverage and mutation rejection only.",
     "Review Loop round efficiency debt before counting long continuous sequences as high-confidence progress."
   ],
   "stop_type": "blocked_real_business_lane_after_development_ready",

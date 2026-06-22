@@ -1,0 +1,280 @@
+{
+  "evidence_id": "HEADROOM-RUNTIME-PROBE-20260621",
+  "date": "2026-06-21",
+  "status": "runtime_probe_completed_no_project_group_compression",
+  "headroom_runtime_imported": true,
+  "headroom_runtime_used": true,
+  "headroom_version": "0.26.0",
+  "python_version": "3.12.13",
+  "telemetry": "off",
+  "source_fixture": "fixtures/headroom/headroom-l2-project-group-sources.json",
+  "project_count": 15,
+  "projects_covered": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "aggregate": {
+    "tokens_before": 314799,
+    "tokens_after": 314799,
+    "tokens_saved": 0,
+    "runtime_saving_rate": 0.0,
+    "all_marker_gates_pass": true,
+    "all_runtime_compressions_positive": false,
+    "all_transforms_noop": true
+  },
+  "measurements": [
+    {
+      "project": "GPCF",
+      "scenario": "loop_control_board_summary",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "tokens_before": 9625,
+      "tokens_after": 9625,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "KDS",
+      "scenario": "kds_loop_state_summary",
+      "source_path": "docs/harness/KDS/loop-state.md",
+      "tokens_before": 581,
+      "tokens_after": 581,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Brain",
+      "scenario": "brain_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "tokens_before": 76401,
+      "tokens_after": 76401,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "WAES",
+      "scenario": "waes_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "tokens_before": 76401,
+      "tokens_after": 76401,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "GFIS",
+      "scenario": "gfis_loop_state_summary",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "tokens_before": 67685,
+      "tokens_after": 67685,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "GPC",
+      "scenario": "gpc_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "tokens_before": 76401,
+      "tokens_after": 76401,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "PVAOS",
+      "scenario": "pvaos_loop_state_summary",
+      "source_path": "docs/harness/PVAOS/loop-state.md",
+      "tokens_before": 418,
+      "tokens_after": 418,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Edge",
+      "scenario": "edge_access_security_summary",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+      "tokens_before": 1316,
+      "tokens_after": 1316,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "PKC",
+      "scenario": "pkc_loop_state_summary",
+      "source_path": "docs/harness/PKC/loop-state.md",
+      "tokens_before": 579,
+      "tokens_after": 579,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XiaoC",
+      "scenario": "xiaoc_loop_state_summary",
+      "source_path": "docs/harness/XiaoC/loop-state.md",
+      "tokens_before": 558,
+      "tokens_after": 558,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XGD",
+      "scenario": "xgd_loop_state_summary",
+      "source_path": "docs/harness/XGD/loop-state.md",
+      "tokens_before": 575,
+      "tokens_after": 575,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XiaoG",
+      "scenario": "xiaog_loop_state_summary",
+      "source_path": "docs/harness/XiaoG/loop-state.md",
+      "tokens_before": 572,
+      "tokens_after": 572,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "MMC",
+      "scenario": "mmc_loop_state_summary",
+      "source_path": "docs/harness/MMC/loop-state.md",
+      "tokens_before": 538,
+      "tokens_after": 538,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Studio",
+      "scenario": "studio_codegraph_boundary_summary",
+      "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+      "tokens_before": 2453,
+      "tokens_after": 2453,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "WAS",
+      "scenario": "was_admission_summary",
+      "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+      "tokens_before": 696,
+      "tokens_after": 696,
+      "tokens_saved": 0,
+      "compression_ratio": 0.0,
+      "transforms_applied": [
+        "router:noop"
+      ],
+      "missing_markers": [],
+      "marker_gate": true,
+      "raw_text_stored": false
+    }
+  ],
+  "decision": {
+    "runtime_admission_gate": false,
+    "reason": "headroom-ai runtime imported and executed, but project-group samples returned router:noop with zero token savings",
+    "next_required_action": "identify supported Headroom transform path or adapter configuration before L3.5/L4 runtime use"
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_runtime_admission": true
+  },
+  "measured_production_tokens": false
+}

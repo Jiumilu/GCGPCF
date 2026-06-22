@@ -1,0 +1,266 @@
+{
+  "id": "gckf-p0-waes-minimum-dry-run-cases-v0.1",
+  "description": "GC-Knowledge Fabric P0-D4 WAES minimum dry-run cases. These cases are candidate checks only and must not persist gate results or business writes.",
+  "version": "v0.1",
+  "policyRefs": [
+    "okf/waes-gate-policy.yaml",
+    "okf/rag-admission-policy.yaml",
+    "okf/writeback-policy.yaml",
+    "okf/contribution-policy.yaml",
+    "okf/revenue-policy.yaml",
+    "okf/redaction-policy.yaml",
+    "docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md"
+  ],
+  "cases": [
+    {
+      "caseId": "waes-p0-source-authoritative-policy",
+      "gateType": "source_gate",
+      "inputObjectRef": "GCKF-GPCF-POLICY-SOURCE-20260621-001",
+      "input": {
+        "domain": "org",
+        "objectType": "source",
+        "poolRefs": ["POLICY"],
+        "trustLevel": "T1",
+        "sourceScopeClear": true,
+        "sourceTimestampPresent": true
+      },
+      "expectedStatus": "passed",
+      "reasonCodes": [],
+      "requiredActions": ["record_source_scope", "record_policy_version"],
+      "reviewerRequirement": "not_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-evidence-missing-pod",
+      "gateType": "evidence_gate",
+      "inputObjectRef": "GCKF-GPCF-PROJECT-FACTCAND-20260621-002",
+      "input": {
+        "domain": "project",
+        "objectType": "fact_candidate",
+        "poolRefs": ["TRANSPORT", "ORDER", "DATA"],
+        "trustLevel": "T3",
+        "sourceRefs": ["SRC-GEHUA-POD-MEETING-001"],
+        "evidenceRefs": [],
+        "controlledOriginalPointer": null
+      },
+      "expectedStatus": "repair_required",
+      "reasonCodes": ["missing_evidence_refs", "missing_controlled_original_pointer"],
+      "requiredActions": ["create_gap_record", "request_pod_evidence", "keep_rag_admission_repair_required"],
+      "reviewerRequirement": "human_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-rag-ai-candidate",
+      "gateType": "rag_gate",
+      "inputObjectRef": "GCKF-GPCF-WORKSPACE-FACTCAND-20260621-003",
+      "input": {
+        "domain": "workspace",
+        "objectType": "fact_candidate",
+        "poolRefs": ["DATA"],
+        "trustLevel": "T5",
+        "ragAdmission": "blocked",
+        "generatedBy": "ai",
+        "confirmationStatus": "ai_checked"
+      },
+      "expectedStatus": "blocked",
+      "reasonCodes": ["t5_ai_candidate", "missing_source_backing", "not_human_confirmed"],
+      "requiredActions": ["bind_source_refs", "bind_evidence_refs", "create_kwe_confirmation_work_item"],
+      "reviewerRequirement": "human_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-sensitive-finance",
+      "gateType": "rag_gate",
+      "secondaryGateType": "sensitive_data_gate",
+      "inputObjectRef": "GCKF-GPCF-PROJECT-EVIDENCE-20260621-004",
+      "input": {
+        "domain": "project",
+        "objectType": "evidence",
+        "poolRefs": ["FUND", "DATA"],
+        "trustLevel": "T0",
+        "ragAdmission": "sensitive_metadata_only",
+        "sensitiveClass": "finance_voucher",
+        "controlledOriginalPointer": "controlled://finance/voucher/gehua-001",
+        "rawContentExposureRequested": false
+      },
+      "expectedStatus": "metadata_only",
+      "reasonCodes": ["sensitive_finance_voucher", "metadata_only_required"],
+      "requiredActions": ["store_hash", "store_summary", "keep_original_in_controlled_space", "enforce_acl"],
+      "reviewerRequirement": "human_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-writeback-human",
+      "gateType": "writeback_gate",
+      "inputObjectRef": "GCKF-GPCF-PROJECT-WRITECAND-20260621-005",
+      "input": {
+        "domain": "project",
+        "objectType": "writeback_candidate",
+        "poolRefs": ["ORDER", "CAPACITY", "TRANSPORT"],
+        "targetSystem": "GFIS",
+        "targetEntityType": "order",
+        "proposedFieldsPresent": true,
+        "basedOnObjectRefsPresent": true,
+        "evidenceRefs": ["EV-GEHUA-ORDER-001"],
+        "businessOwnerConfirmed": false
+      },
+      "expectedStatus": "human_required",
+      "reasonCodes": ["business_owner_confirmation_missing"],
+      "requiredActions": ["route_to_business_owner", "create_confirmation_workpack_candidate"],
+      "reviewerRequirement": "human_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-contribution-duplicate",
+      "gateType": "contribution_gate",
+      "inputObjectRef": "GCKF-GPCF-SUPPLY_CHAIN-CONTRIB-20260621-006",
+      "input": {
+        "domain": "supply_chain",
+        "objectType": "contribution",
+        "poolRefs": ["ORDER", "SCENARIO"],
+        "contributorType": "external_account",
+        "relatedObjectRefs": ["GCKF-GPCF-PROJECT-FACT-20260621-010"],
+        "duplicateClaimDetected": true,
+        "confirmationStatus": "candidate"
+      },
+      "expectedStatus": "committee_required",
+      "reasonCodes": ["duplicate_claim_detected", "cross_unit_contribution_dispute"],
+      "requiredActions": ["freeze_candidate_score", "prepare_committee_review_item"],
+      "reviewerRequirement": "committee_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-revenue-formal",
+      "gateType": "revenue_gate",
+      "inputObjectRef": "GCKF-GPCF-PROJECT-REVENUE-20260621-007",
+      "input": {
+        "domain": "project",
+        "objectType": "revenue",
+        "poolRefs": ["FUND", "ORDER"],
+        "revenueType": "formal_revenue",
+        "basis": "cash_received",
+        "amountPresent": true,
+        "evidenceRefs": ["EV-CASH-RECEIVED-001"],
+        "confirmedContributionRefs": ["CONTRIB-GEHUA-001"]
+      },
+      "expectedStatus": "passed",
+      "reasonCodes": [],
+      "requiredActions": ["route_to_revenue_review_candidate", "keep_distribution_status_candidate_until_review"],
+      "reviewerRequirement": "human_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "caseId": "waes-p0-revenue-potential",
+      "gateType": "revenue_gate",
+      "inputObjectRef": "GCKF-GPCF-SUPPLY_CHAIN-REVENUE-20260621-008",
+      "input": {
+        "domain": "supply_chain",
+        "objectType": "revenue",
+        "poolRefs": ["SCENARIO", "ORDER", "FUND"],
+        "revenueType": "potential_revenue",
+        "basis": "opportunity",
+        "amountPresent": true,
+        "evidenceRefs": ["EV-OPPORTUNITY-001"],
+        "requestedFormalDistribution": true
+      },
+      "expectedStatus": "committee_required",
+      "reasonCodes": ["potential_revenue_cannot_auto_promote", "formal_distribution_requested_without_cash_received"],
+      "requiredActions": ["keep_as_potential_revenue", "prepare_committee_review_if_conversion_requested"],
+      "reviewerRequirement": "committee_required",
+      "harnessEvidenceRequired": true,
+      "noWrite": {
+        "writesWaesGateResult": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesBusinessSystem": 0,
+        "writesRevenueDistribution": 0,
+        "writesContributionScoreConfirmation": 0,
+        "writesCommitteeDecision": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expectedSummary": {
+    "caseCount": 8,
+    "gateTypes": ["source_gate", "evidence_gate", "rag_gate", "writeback_gate", "contribution_gate", "revenue_gate"],
+    "statuses": ["passed", "repair_required", "blocked", "metadata_only", "human_required", "committee_required"],
+    "writesWaesGateResult": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesContributionScoreConfirmation": 0,
+    "writesCommitteeDecision": 0,
+    "writesExternalApi": 0
+  }
+}

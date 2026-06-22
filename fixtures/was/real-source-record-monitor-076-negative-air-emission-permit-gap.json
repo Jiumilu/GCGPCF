@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "accepted_for_air_emission_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "air_emission_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "air_emission_permit_gaps": 1,
+  "stack_emission_monitoring_report_gaps": 0,
+  "volatile_organic_compound_inventory_gaps": 0,
+  "particulate_matter_control_record_gaps": 0,
+  "noise_boundary_monitoring_report_gaps": 0,
+  "odor_complaint_response_record_gaps": 0,
+  "environmental_inspection_notice_record_gaps": 0
+}

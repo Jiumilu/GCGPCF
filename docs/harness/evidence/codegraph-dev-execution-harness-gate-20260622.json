@@ -1,0 +1,50 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003",
+  "status": "harness_gate_ready",
+  "generated_at": "2026-06-22",
+  "objective": "把 CodeGraph 开发执行层证据要求接入 Harness/Loop 阻断链，使未来业务开发任务缺少 CodeGraph 影响分析时被阻断。",
+  "source_rounds": [
+    "GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001",
+    "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002",
+    "GPCF-CODEGRAPH-SESSION-DECLARATION-BOUNDARY-001"
+  ],
+  "gate_policy": "docs/codegraph/codegraph-dev-execution-harness-gate.md",
+  "positive_fixture": "fixtures/codegraph/dev-execution-harness-gate/positive-pilot-evidence.json",
+  "negative_fixture": "fixtures/codegraph/dev-execution-harness-gate/negative-missing-fallback-reason.json",
+  "required_sections": [
+    "pre_change_analysis",
+    "implementation_constraints",
+    "test_selection",
+    "codegraph_evidence",
+    "efficiency_metrics",
+    "status_boundaries"
+  ],
+  "blocking_rules": [
+    "missing_codegraph_evidence",
+    "missing_target_nodes",
+    "missing_affected_scope",
+    "empty_affected_tests_without_fallback_reason",
+    "changed_files_outside_allowed_scope",
+    "accepted_integrated_or_production_ready_true",
+    "production_write_or_external_api_write_true",
+    "codegraph_claimed_as_final_waes_or_harness_decision"
+  ],
+  "dry_run_results": {
+    "positive_fixture": "pass",
+    "negative_fixture": "blocked",
+    "negative_block_reason": "empty_affected_tests_without_fallback_reason"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004"
+}

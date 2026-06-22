@@ -1,0 +1,43 @@
+codegraph_evidence_bundle:
+  bundle_id:
+  task_id:
+  repo:
+  branch:
+  commit:
+  codegraph_version:
+  snapshot_id:
+  generated_at:
+  queries:
+    - query:
+      purpose:
+      result_ref:
+  impacted:
+    files: []
+    symbols: []
+    functions: []
+    classes: []
+    apis: []
+    routes: []
+    tests: []
+    docs: []
+    configs: []
+  risk:
+    level:
+    reasons: []
+    waes_required:
+    committee_required:
+  validation:
+    tests_selected: []
+    tests_run: []
+    tests_passed:
+    uncovered_risks: []
+  kds_candidates:
+    - fact_id:
+      status: candidate
+      evidence_ref:
+  boundaries:
+    production_write: false
+    external_api_write: false
+    accepted: false
+    integrated: false
+    production_ready: false

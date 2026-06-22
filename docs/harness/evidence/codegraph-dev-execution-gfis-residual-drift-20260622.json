@@ -1,0 +1,72 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-DRIFT-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-DRIFT-007",
+  "status": "residual_drift_confirmed_no_cleanup_performed",
+  "generated_at": "2026-06-22",
+  "objective": "复核 GFIS CodeGraph sync 后残余 pendingChanges.added=1 的真实状态，固化不清理、不提交、不推送、不部署的下一轮输入。",
+  "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-006",
+  "gfis_status_snapshot": {
+    "codegraph_initialized": true,
+    "codegraph_version": "1.0.1",
+    "pending_changes": {
+      "added": 1,
+      "modified": 0,
+      "removed": 0
+    },
+    "worktree_mismatch": null,
+    "dot_codegraph_git_isolated": true,
+    "untracked_files_total": 226,
+    "untracked_codegraph_scannable_files": 73
+  },
+  "authorized_candidate_scope_status": {
+    "project": "GFIS",
+    "scoped_files": [
+      "docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.json",
+      "docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.md",
+      "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "scoped_files_modified": true,
+    "candidate_validator": "pass",
+    "runtime_sop_e2e": "failed_existing_kds_coverage_missing_controlled_sources",
+    "runtime_sop_e2e_failure": "FAIL: KDS coverage must not have missing controlled sources"
+  },
+  "drift_assessment": {
+    "closure_possible_this_round": false,
+    "closure_blocker": "GFIS worktree contains broad pre-existing untracked files and CodeGraph still reports pendingChanges.added=1 after sync.",
+    "cleanup_performed": false,
+    "cleanup_reason": "Cleaning or staging unrelated GFIS untracked files would exceed the CodeGraph residual drift review scope.",
+    "risk": "Do not declare GFIS CodeGraph sync-only closure until pendingChanges.added returns 0 or the residual added file is explicitly identified and scoped."
+  },
+  "allowed_next_actions": [
+    "run GFIS CodeGraph status recheck",
+    "build a read-only residual-file locator for CodeGraph-supported extensions",
+    "compare locator output with CodeGraph pendingChanges",
+    "update GPCF evidence"
+  ],
+  "forbidden_next_actions_without_new_authorization": [
+    "delete GFIS untracked files",
+    "stage GFIS files",
+    "commit GFIS changes",
+    "push GFIS changes",
+    "deploy GFIS",
+    "production write",
+    "external API write",
+    "real KDS write",
+    "real WAES write"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "codegraph_sync_only_closure": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-LOCATOR-008"
+}

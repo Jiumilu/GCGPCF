@@ -4,10 +4,10 @@ title: GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单
 description: KDS 知识编制边界
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md
 tags: [controlled, kds, kds-governance, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md
 source_path: 03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md
-source_hash: efa666df065261594a5e21c9b54911b95b2ed8038fde31c9965ec6a90503f4d3
+source_hash: f1d520c7caac4fec46c6f2e3ae93aaec92c332c1cc439066c267d5478f4d0b26
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ KDS 知识编制边界
 | --- | --- |
 | source_path | `03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md` |
 | kds_path | `开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md` |
-| source_hash | `efa666df065261594a5e21c9b54911b95b2ed8038fde31c9965ec6a90503f4d3` |
+| source_hash | `f1d520c7caac4fec46c6f2e3ae93aaec92c332c1cc439066c267d5478f4d0b26` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

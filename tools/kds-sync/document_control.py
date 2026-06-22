@@ -17,7 +17,7 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-TODAY = "2026-06-12"
+TODAY = date.today().isoformat()
 
 PROJECTS = {
     "GFIS": ("01-GFIS", ["GFIS", "工厂", "厂行", "Edge"]),
@@ -32,6 +32,7 @@ PROJECTS = {
     "XiaoG": ("10-XiaoG", ["XiaoG", "ESP32", "语音"]),
     "MMC": ("11-MMC", ["MMC", "管理配置", "模板基线"]),
     "GPCF": ("12-GPCF", ["GPCF", "GlobalCoud GPCF", "项目群", "总控"]),
+    "Studio": ("13-Studio", ["Studio", "GlobalCloud Studio", "Hermes", "Agent 工作台"]),
 }
 
 DOMAIN_BY_TOP = {
@@ -119,6 +120,13 @@ def doc_id(source_path: str) -> str:
     return f"GPCF-DOC-{digest}"
 
 
+def controlled_doc_id(source_path: str, existing_frontmatter: dict[str, str]) -> str:
+    existing_doc_id = existing_frontmatter.get("doc_id", "").strip()
+    if existing_doc_id:
+        return existing_doc_id
+    return doc_id(source_path)
+
+
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
@@ -172,6 +180,11 @@ def frontmatter_managed_for(source_path: str) -> bool:
 
 
 def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]]:
+    if source_path in {
+        "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+        "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md",
+    }:
+        return "WAES", ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
     if source_path.startswith(".okf/"):
         return "GPCF", ["GPCF", "GPC", "WAES", "KDS"]
     haystack = f"{source_path}\n{title}\n{text[:5000]}"
@@ -294,13 +307,13 @@ def build_records(paths: list[Path]) -> list[dict[str, object]]:
     for path in paths:
         source_path = rel(path)
         text = read_text(path)
-        _, body = strip_existing_frontmatter(text)
+        existing, body = strip_existing_frontmatter(text)
         title = title_for(path, body)
         project, related = project_for(source_path, title, body)
         domain = domain_for(source_path)
         status = status_for(source_path)
         record = {
-            "doc_id": doc_id(source_path),
+            "doc_id": controlled_doc_id(source_path, existing),
             "title": title,
             "project": project,
             "related_projects": related,

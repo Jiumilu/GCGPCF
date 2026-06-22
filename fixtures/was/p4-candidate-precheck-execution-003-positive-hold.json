@@ -1,0 +1,18 @@
+{
+  "fixture_id": "p4-candidate-precheck-execution-003-positive-hold",
+  "fixture_only": true,
+  "submitted_real_candidate_files": 0,
+  "candidate_files_checked": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "real_source_records": 0,
+  "valid_source_records": 0,
+  "runtime_primary_key_ready": 0,
+  "review_queue": 0,
+  "runtime_intake": 0,
+  "waes_review": 0,
+  "verified": 0,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false
+}

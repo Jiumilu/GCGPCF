@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "biodiversity_baseline_survey_gaps": 0,
+  "land_use_compliance_permit_gaps": 0,
+  "protected_area_screening_record_gaps": 0,
+  "ecological_impact_assessment_gaps": 0,
+  "habitat_restoration_plan_gaps": 0,
+  "stakeholder_consultation_record_gaps": 0,
+  "nature_positive_kpi_monitoring_gaps": 0,
+  "accepted_for_biodiversity_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "biodiversity_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

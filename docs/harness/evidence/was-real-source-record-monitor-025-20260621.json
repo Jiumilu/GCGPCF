@@ -1,0 +1,89 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-025-20260621",
+  "status": "was_real_source_record_monitor_025_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-025",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-024",
+  "purpose": "Twenty-fifth independent monitor pass for land-use permits, environmental impact assessment, biodiversity baseline, protected-area screening, soil/groundwater assessment, and restoration mitigation evidence boundaries.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "land_use_permit_gaps": 0,
+    "environmental_impact_assessment_gaps": 0,
+    "biodiversity_baseline_gaps": 0,
+    "protected_area_screening_gaps": 0,
+    "soil_groundwater_assessment_gaps": 0,
+    "restoration_mitigation_plan_gaps": 0,
+    "accepted_for_land_ecology_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "land_ecology_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 6,
+    "negative_cases": [
+      "land_use_permit_gap",
+      "environmental_impact_assessment_gap",
+      "biodiversity_baseline_gap",
+      "protected_area_screening_gap",
+      "soil_groundwater_assessment_gap",
+      "restoration_mitigation_plan_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_024.py"
+  ],
+  "land_ecology_requirements": [
+    "land_use_permit",
+    "environmental_impact_assessment",
+    "biodiversity_baseline",
+    "protected_area_screening",
+    "soil_groundwater_assessment",
+    "restoration_mitigation_plan"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-026",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer land-use permits",
+    "does not infer environmental impact assessments",
+    "does not infer biodiversity baselines",
+    "does not infer protected-area screening",
+    "does not infer soil or groundwater assessment",
+    "does not infer restoration mitigation plans",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

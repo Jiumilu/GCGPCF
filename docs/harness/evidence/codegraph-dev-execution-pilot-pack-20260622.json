@@ -1,0 +1,126 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-PILOT-PACK-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002",
+  "status": "pilot_pack_ready",
+  "generated_at": "2026-06-22",
+  "objective": "按 CodeGraph 业务开发执行层准入规则生成一个低风险候选任务的前置分析、实现边界、测试选择和验收 evidence 样例；本轮不进入业务实现。",
+  "candidate_task": {
+    "task_id": "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002",
+    "project": "GPCF",
+    "candidate_type": "governance_validator_evidence_chain",
+    "candidate_description": "以 CodeGraph 开发准入 validator/evidence 链为低风险候选，演示未来业务开发任务如何在实现前完成 CodeGraph 影响分析。",
+    "business_implementation_allowed": false
+  },
+  "pre_change_analysis": {
+    "query": "CodeGraph 业务开发执行层准入 validator evidence",
+    "query_results": [
+      {
+        "filePath": "templates/CODEGRAPH_DEV_EXECUTION_EVIDENCE_TEMPLATE.json",
+        "kind": "file",
+        "score_observed": 41.10913268097684
+      },
+      {
+        "filePath": "tools/kds-sync/validate_loop_codegraph_active_drift_monitor.py",
+        "kind": "function",
+        "name": "codegraph_status",
+        "score_observed": 32.108545941646085
+      },
+      {
+        "filePath": "tools/kds-sync/validate_loop_codegraph_active_drift_metrics.py",
+        "kind": "function",
+        "name": "codegraph_status",
+        "score_observed": 32.108545941646085
+      },
+      {
+        "filePath": "tools/kds-sync/validate_codegraph_waes_gate_policy.py",
+        "kind": "variable",
+        "name": "EVIDENCE_TEMPLATE",
+        "score_observed": 27.021130637142058
+      }
+    ],
+    "target_nodes": [
+      "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+    ],
+    "node_inspection": {
+      "file": "tools/kds-sync/validate_codegraph_dev_execution_admission.py",
+      "lines": 145,
+      "symbol_count": 12,
+      "indexed_dependents": 0,
+      "summary": "CodeGraph node inspection reports no other indexed file depends on this validator."
+    },
+    "affected": {
+      "changedFiles": [
+        "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    },
+    "cross_project_dependency_risk": "none_observed_in_codegraph_for_selected_candidate"
+  },
+  "implementation_constraints": {
+    "target_nodes": [
+      "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+    ],
+    "affected_scope": [
+      "GPCF CodeGraph governance validator and its evidence/template references"
+    ],
+    "files_allowed_to_change": [],
+    "files_not_to_touch": [
+      "business application source files in GFIS/GPC/PVAOS/WAES/KDS/Brain/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS",
+      "production configuration files",
+      "real KDS token or secret files",
+      ".codegraph/**"
+    ],
+    "expected_tests": [
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_admission.py",
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_pilot_pack.py",
+      "python3 tools/kds-sync/check_document_pollution.py",
+      "python3 tools/kds-sync/validate_kds_token.py",
+      "python3 tools/kds-sync/loop_document_gate.py --check-only"
+    ]
+  },
+  "test_selection": {
+    "affected_tests": [],
+    "fallback_tests": [
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_admission.py",
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_pilot_pack.py",
+      "python3 tools/kds-sync/check_document_pollution.py",
+      "python3 tools/kds-sync/validate_kds_token.py",
+      "python3 tools/kds-sync/loop_document_gate.py --check-only"
+    ],
+    "fallback_reason": "codegraph affected returned affectedTests=[] and totalDependentsTraversed=0; fallback tests are selected from the validator's declared evidence boundaries and document governance gates."
+  },
+  "codegraph_evidence": {
+    "query": "CodeGraph 业务开发执行层准入 validator evidence",
+    "target_nodes": [
+      "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+    ],
+    "affected": {
+      "changedFiles": [
+        "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    },
+    "changed_files": [],
+    "test_selection_reason": "No implementation change is performed in this pilot pack; tests are selected from CodeGraph admission validator and document governance fallback gates because affectedTests is empty.",
+    "post_change_status": "pilot_pack_recorded_pending_codegraph_resync"
+  },
+  "efficiency_metrics": {
+    "manual_scan_files": 10,
+    "codegraph_candidate_files": 1,
+    "actual_changed_files": 0,
+    "affected_tests": [],
+    "missed_impact_count": 0,
+    "time_to_first_target": "under_1_minute_observed"
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "business_implementation": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003"
+}

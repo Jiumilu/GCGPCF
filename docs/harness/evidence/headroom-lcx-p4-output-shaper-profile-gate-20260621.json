@@ -1,0 +1,154 @@
+{
+  "evidence_id": "HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-20260621",
+  "task_id": "GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001",
+  "date": "2026-06-21",
+  "status": "p4_output_shaper_profile_gate_completed",
+  "scope": "local_profile_gate_dry_run_only",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "forbidden_contexts": [
+    "official_acceptance",
+    "compliance_review",
+    "legal_contract",
+    "finance_decision"
+  ],
+  "allowed_shaper_contexts": [
+    "development",
+    "local_debug",
+    "build_log",
+    "validation_log",
+    "search_output"
+  ],
+  "scenario_results": [
+    {
+      "context": "official_acceptance",
+      "expected_output_shaper": false,
+      "selected_profile": "compliance_strict",
+      "output_shaper": false,
+      "effort_routing": false,
+      "gate": true
+    },
+    {
+      "context": "compliance_review",
+      "expected_output_shaper": false,
+      "selected_profile": "compliance_strict",
+      "output_shaper": false,
+      "effort_routing": false,
+      "gate": true
+    },
+    {
+      "context": "legal_contract",
+      "expected_output_shaper": false,
+      "selected_profile": "compliance_strict",
+      "output_shaper": false,
+      "effort_routing": false,
+      "gate": true
+    },
+    {
+      "context": "finance_decision",
+      "expected_output_shaper": false,
+      "selected_profile": "compliance_strict",
+      "output_shaper": false,
+      "effort_routing": false,
+      "gate": true
+    },
+    {
+      "context": "development",
+      "expected_output_shaper": true,
+      "selected_profile": "dev_fast",
+      "output_shaper": true,
+      "effort_routing": true,
+      "gate": true
+    },
+    {
+      "context": "local_debug",
+      "expected_output_shaper": true,
+      "selected_profile": "dev_fast",
+      "output_shaper": true,
+      "effort_routing": true,
+      "gate": true
+    },
+    {
+      "context": "build_log",
+      "expected_output_shaper": true,
+      "selected_profile": "log_debug",
+      "output_shaper": true,
+      "effort_routing": true,
+      "gate": true
+    },
+    {
+      "context": "validation_log",
+      "expected_output_shaper": true,
+      "selected_profile": "log_debug",
+      "output_shaper": true,
+      "effort_routing": true,
+      "gate": true
+    },
+    {
+      "context": "search_output",
+      "expected_output_shaper": true,
+      "selected_profile": "log_debug",
+      "output_shaper": true,
+      "effort_routing": true,
+      "gate": true
+    }
+  ],
+  "profile_gate": {
+    "forbidden_context_count": 4,
+    "forbidden_context_pass_count": 4,
+    "allowed_context_count": 5,
+    "allowed_context_pass_count": 5,
+    "schema_forbidden_context_gate": true,
+    "waes_disable_output_shaper_gate": true,
+    "output_shaper_profile_gate": true
+  },
+  "gates": {
+    "p4_output_shaper_profile_gate": true,
+    "official_acceptance_output_shaper_disabled": true,
+    "compliance_review_output_shaper_disabled": true,
+    "legal_contract_output_shaper_disabled": true,
+    "finance_decision_output_shaper_disabled": true,
+    "development_output_shaper_allowed": true,
+    "log_debug_output_shaper_allowed": true,
+    "telemetry_default_off": true,
+    "external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_runtime_output_rewrite": true,
+    "not_acceptance_shaping": true,
+    "not_compliance_shaping": true,
+    "not_contract_shaping": true,
+    "not_finance_shaping": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_sensitive_material_processing": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  },
+  "next_round": "GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001"
+}

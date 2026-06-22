@@ -1,0 +1,57 @@
+{
+  "evidence_id": "GCKF-P0-CLOSURE-PACKET-PRECHECK-D123-20260622",
+  "round_id": "GPCF-GCKF-P0-D123-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "基于 D122 baseline 与既有 D18-D21 dry-run 收口链，确认 GCKF P0 当前是否具备进入 closure packet 的预检查条件。",
+  "inputs": [
+    "docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.json",
+    "docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/closure-readiness-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/human-review-checklist-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/p0-two-week-execution-schedule-v0.1.md",
+    "docs/gc-knowledge-fabric/pilot-rollout-checklist-v0.1.md"
+  ],
+  "precheck_status": "review_ready_with_hold",
+  "task_package_coverage": {
+    "covered_count": 7,
+    "total_count": 7,
+    "covered_task_packages": ["T0", "T1", "T2", "T3", "T4", "T5", "T6"]
+  },
+  "closure_chain": {
+    "d18_acceptance_packet": "gckf_p0_acceptance_packet_dry_run=pass packets=2 ready_for_review=1 repair_required=1",
+    "d19_acceptance_packet_ledger": "gckf_p0_acceptance_packet_ledger_dry_run=pass entries=10 first_round=GCKF-P0-D9 last_round=GCKF-P0-D18 ledger_status=candidate",
+    "d20_closure_readiness": "gckf_p0_closure_readiness_dry_run=pass status=review_ready_candidate candidate_rounds=11 remaining_human_actions=4 open_risks=3 source_ledger_status=candidate",
+    "d21_human_review_checklist": "gckf_p0_human_review_checklist_dry_run=pass status=candidate review_items=4 pending_outcomes=4 risk_refs=3 source_readiness_status=review_ready_candidate",
+    "d122_skeleton_baseline": "gckf_p0_skeleton_baseline_d122=pass task_packages=7 coverage_items=199 localization_gate=pass loop_document_gate=pass"
+  },
+  "warehouse_gates": {
+    "localization_gate": "pass",
+    "document_pollution": "pass",
+    "kds_token": "pass fingerprint=bfd9553d",
+    "loop_document_gate": "pass"
+  },
+  "hold_reasons": [
+    {
+      "id": "H1",
+      "reason": "D21 人工审查项仍全部为 pending，当前只能到 human review candidate。"
+    },
+    {
+      "id": "H2",
+      "reason": "Harness evidence store 仍未写入，closure packet 不能升级为最终验收完成。"
+    },
+    {
+      "id": "H3",
+      "reason": "试点推进清单中的 C-01 至 C-07 仍处于 待确认/待执行，P1 admission 前置条件未收口。"
+    },
+    {
+      "id": "H4",
+      "reason": "GFIS real_business_lane 无新增真实证据，继续保持 repair_required。"
+    }
+  ],
+  "non_claims": [
+    "本 precheck 不证明 GCKF P0 已整体完成。",
+    "本 precheck 不写入 Harness evidence、accepted lifecycle、KDS 正式对象或业务系统。",
+    "本 precheck 不把 review_ready_candidate 写成 accepted、integrated 或 production_ready。"
+  ],
+  "next_round_candidate": "进入 GCKF P0 closure packet draft/pack，把 T0-T6 covered、D18-D21 收口链、hold_reasons 和 P1 admission blockers 聚合成受控收口包候选。"
+}

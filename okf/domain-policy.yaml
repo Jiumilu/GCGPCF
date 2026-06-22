@@ -1,0 +1,45 @@
+policy_id: okf.domain_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+rules:
+  private:
+    allowed_owner_types: [user]
+    default_visibility: private
+    rag_allowed: false
+  workspace:
+    allowed_owner_types: [user, team]
+    default_visibility: restricted
+    rag_allowed: limited
+  project:
+    allowed_owner_types: [project, team, org]
+    default_visibility: internal
+    rag_allowed: gated
+  org:
+    allowed_owner_types: [org, team, system]
+    default_visibility: internal
+    rag_allowed: gated
+  supply_chain:
+    allowed_owner_types: [project, org, external_account, system]
+    default_visibility: restricted
+    rag_allowed: gated
+    requires_acl: true
+  public:
+    allowed_owner_types: [org, system]
+    default_visibility: public
+    rag_allowed: true
+    requires_publication_approval: true
+  governance:
+    allowed_owner_types: [org, system]
+    default_visibility: restricted
+    rag_allowed: metadata_only
+    stores_governance_evidence: true
+legacy_space_mapping:
+  private: private
+  personal: workspace
+  family: collection_only
+  team: project_or_org
+  partner: supply_chain_with_external_account_acl
+  public: public
+  ops: domain_tag_ops

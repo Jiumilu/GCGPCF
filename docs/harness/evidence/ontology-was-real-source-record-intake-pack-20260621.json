@@ -1,0 +1,189 @@
+{
+  "evidence_id": "ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-20260621",
+  "status": "ontology_was_real_source_record_intake_pack_ready",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-001",
+  "source_round": "GPCF-ONTOLOGY-WAS-3H-P3-CLOSURE-001",
+  "purpose": "Prepare a business-owner intake package for a future real CustomerRequirementOrPlatformOrder source-of-record.",
+  "target_owner": "GPC_or_Liaoning_Yuanhang_order_owner",
+  "target_object_family": "CustomerRequirementOrPlatformOrder",
+  "accepted_source_kinds": [
+    "customer_order_original",
+    "platform_order_receipt"
+  ],
+  "receiving_directory": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order",
+  "intake_package": {
+    "package_items": 6,
+    "required_original_artifacts": [
+      {
+        "item_id": "IP-001",
+        "artifact": "real_customer_order_original_or_platform_order_receipt",
+        "accepted_forms": [
+          "customer signed or system-issued order original",
+          "platform order receipt with platform identifier"
+        ],
+        "reject_if": [
+          "formal quotation only",
+          "contract review draft only",
+          "user statement only",
+          "Loop document only",
+          "GFIS demo only"
+        ]
+      },
+      {
+        "item_id": "IP-002",
+        "artifact": "customer_confirmed_product_spec",
+        "accepted_forms": [
+          "customer confirmed specification",
+          "signed sample or sealed sample reference",
+          "platform-attached specification"
+        ],
+        "reject_if": [
+          "internal estimate only",
+          "unconfirmed draft spec"
+        ]
+      },
+      {
+        "item_id": "IP-003",
+        "artifact": "delivery_requirement",
+        "accepted_forms": [
+          "order delivery date or delivery window",
+          "platform delivery requirement",
+          "customer confirmed delivery instruction"
+        ],
+        "reject_if": [
+          "sales assumption only",
+          "missing delivery destination or timing"
+        ]
+      },
+      {
+        "item_id": "IP-004",
+        "artifact": "issuing_party_and_owner_confirmation",
+        "accepted_forms": [
+          "issuing party identity",
+          "business owner confirmation",
+          "authorization that links the source to the owner"
+        ],
+        "reject_if": [
+          "unknown issuer",
+          "owner confirmation missing"
+        ]
+      },
+      {
+        "item_id": "IP-005",
+        "artifact": "kds_source_backlink",
+        "accepted_forms": [
+          "kds:// or 开发/01-GFIS backlink to controlled source record location"
+        ],
+        "reject_if": [
+          "KDS candidate without owner confirmation",
+          "backlink does not match source_of_record_backlink"
+        ]
+      },
+      {
+        "item_id": "IP-006",
+        "artifact": "runtime_site_context",
+        "accepted_forms": [
+          "runtime site or factory context",
+          "business scenario context for GFIS intake"
+        ],
+        "reject_if": [
+          "runtime context missing"
+        ]
+      }
+    ]
+  },
+  "required_gfis_native_fields": [
+    "object_family",
+    "sop_stage",
+    "source_kind",
+    "customer_order_original_or_platform_order_receipt",
+    "customer_confirmed_product_spec",
+    "delivery_requirement",
+    "source_of_record_backlink",
+    "source_record_hash",
+    "issuing_party",
+    "owner_confirmation",
+    "received_at",
+    "runtime_site_context"
+  ],
+  "required_was_fields": [
+    "objectFamily",
+    "sourceRecordId",
+    "assetDimension",
+    "flowType",
+    "lifecycle",
+    "trustLevel",
+    "sourceRefs",
+    "evidenceRefs",
+    "waesGateRefs",
+    "promotionBlockers",
+    "nextAction",
+    "kdsBacklink"
+  ],
+  "file_naming_rule": {
+    "required_suffix": ".customer-requirement-platform-order.source-record.json",
+    "template_files_must_not_count": true,
+    "rejected_examples_must_not_count": true
+  },
+  "pre_submit_self_check": [
+    "source_kind is customer_order_original or platform_order_receipt",
+    "source_record_hash is a 64-character SHA-256 hex string",
+    "objectFamily equals CustomerRequirementOrPlatformOrder",
+    "assetDimension equals data_asset",
+    "flowType equals commerce_flow",
+    "lifecycle equals pending_business_verification",
+    "trustLevel equals T4",
+    "kdsBacklink matches source_of_record_backlink",
+    "waesGateRefs includes waes://gate/customer-order-source-record-review",
+    "promotionBlockers include valid_source_record_missing and customer_confirmation_missing"
+  ],
+  "explicit_blocked_promotions": [
+    "runtime_primary_key",
+    "review_queue",
+    "runtime_intake",
+    "waes_review",
+    "verified_artifact",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ],
+  "current_boundary": {
+    "gfis_real_source_record_files": 0,
+    "submitted_files_found": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "next_gate_after_owner_submission": {
+    "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001",
+    "required_command": "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "additional_required_commands": [
+      "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+      "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+      "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py"
+    ]
+  },
+  "non_claims": [
+    "does not write into GFIS receiving directory",
+    "does not create real source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not create verified artifact",
+    "does not mark accepted or integrated",
+    "does not mark production ready",
+    "does not perform Git commit or push"
+  ]
+}

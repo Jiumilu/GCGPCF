@@ -1,0 +1,85 @@
+{
+  "evidence_id": "SESSION-MAINLINE-DRIFT-WATCH-20260622",
+  "scope": "GPCF-SESSION-MAINLINE-DRIFT-WATCH-003",
+  "status": "drift_watch_configured",
+  "current_session_mainline": "LOOP治理主线: session-mainline-control rollout",
+  "watch_mode": "repo_recorded_governance_only",
+  "live_codex_threads_covered": false,
+  "rules": [
+    {
+      "rule_id": "same_mainline_continue",
+      "match": ["下一步", "继续"],
+      "decision": "continue_current_mainline_only",
+      "requires_authorization": false
+    },
+    {
+      "rule_id": "other_session_family",
+      "match": ["GFIS", "CodeGraph", "Agent-Reach", "Headroom", "Ontology-WAS", "OKF", "LCX"],
+      "decision": "mainline_drift_detected",
+      "requires_authorization": true
+    },
+    {
+      "rule_id": "live_thread_access",
+      "match": ["其它 Codex 线程", "真实其它线程", "接管会话", "关闭会话"],
+      "decision": "authorization_required",
+      "requires_authorization": true
+    },
+    {
+      "rule_id": "write_or_release_action",
+      "match": ["commit", "push", "deploy", "真实 KDS API", "外部 API", "schema sync", "bench migrate", "accepted", "integrated", "production_ready"],
+      "decision": "authorization_required",
+      "requires_authorization": true
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "request": "继续 GFIS runtime repair",
+      "expected_decision": "mainline_drift_detected",
+      "expected_authorization_required": true
+    },
+    {
+      "request": "执行 CodeGraph 跨仓 recheck",
+      "expected_decision": "mainline_drift_detected",
+      "expected_authorization_required": true
+    },
+    {
+      "request": "接管其它 Codex 线程",
+      "expected_decision": "authorization_required",
+      "expected_authorization_required": true
+    },
+    {
+      "request": "提交并推送这些改动",
+      "expected_decision": "authorization_required",
+      "expected_authorization_required": true
+    }
+  ],
+  "positive_fixtures": [
+    {
+      "request": "下一步",
+      "expected_decision": "continue_current_mainline_only",
+      "expected_authorization_required": false
+    },
+    {
+      "request": "继续",
+      "expected_decision": "continue_current_mainline_only",
+      "expected_authorization_required": false
+    }
+  ],
+  "forbidden_actions": [
+    "auto_takeover_live_codex_threads",
+    "auto_execute_other_session_task",
+    "auto_cross_repo_execution",
+    "auto_external_api_write",
+    "auto_real_kds_api_write",
+    "auto_commit",
+    "auto_push",
+    "auto_deploy",
+    "auto_status_promotion"
+  ],
+  "next_round": "GPCF-SESSION-MAINLINE-HANDOFF-REQUEST-GATE-004",
+  "validators": [
+    "python3 tools/kds-sync/validate_session_mainline_drift_watch.py",
+    "python3 tools/kds-sync/validate_session_mainline_preflight_enforcement.py",
+    "python3 tools/kds-sync/validate_loop_session_registry.py"
+  ]
+}

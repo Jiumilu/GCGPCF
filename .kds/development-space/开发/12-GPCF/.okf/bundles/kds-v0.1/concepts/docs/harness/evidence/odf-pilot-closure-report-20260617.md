@@ -4,10 +4,10 @@ title: ODF 受控引入试点闭环报告
 description: ODF 试点闭环报告
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-pilot-closure-report-20260617.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md
 source_path: docs/harness/evidence/odf-pilot-closure-report-20260617.md
-source_hash: 354d059e2d8a9d74d29e28494346a032ae23b6a75a85963c6c655feb4245926a
+source_hash: 08dfeba84098b7fd07cbeec18848f9a1402f767ceaeb356c47f1502a251b8515
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF 试点闭环报告
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-pilot-closure-report-20260617.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md` |
-| source_hash | `354d059e2d8a9d74d29e28494346a032ae23b6a75a85963c6c655feb4245926a` |
+| source_hash | `08dfeba84098b7fd07cbeec18848f9a1402f767ceaeb356c47f1502a251b8515` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

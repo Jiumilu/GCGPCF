@@ -1,0 +1,162 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write snooze previews derived from DKS-121 GFIS Assistant
+  repair notification dismissal previews. Snooze previews describe what the UI
+  may show when a user asks to be reminded later about a notification preview.
+  They do not create snooze records, scheduled reminders, dismissal records,
+  notifications, read receipts, audit trace records, event records, action
+  receipts, Harness evidence, WAES gate results, KWE work items, lifecycle
+  changes, business writes, revenue or score confirmations, quota transfers,
+  bounty settlements, or external API calls.
+
+required_fields:
+  - snooze_preview_id
+  - dismissal_preview_ref
+  - notification_preview_ref
+  - read_receipt_preview_ref
+  - audit_trace_ref
+  - event_preview_ref
+  - action_guard_ref
+  - read_model_ref
+  - tenant_id
+  - project_id
+  - surface
+  - snooze_type
+  - snooze_status
+  - snooze_decision
+  - snooze_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - snooze_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_snooze_record
+  - creates_scheduled_reminder
+  - creates_dismissal_record
+  - creates_notification
+  - modifies_notification
+  - creates_read_receipt
+  - creates_audit_trace_record
+  - creates_event_record
+  - creates_action_receipt
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+snooze_types:
+  - snooze_display_notification_preview
+  - snooze_repair_notification_preview
+  - retain_metadata_boundary_snooze_preview
+  - retain_committee_snooze_preview
+  - block_freeze_snooze_preview
+  - retain_blocked_write_snooze_preview
+
+snooze_statuses:
+  - snooze_preview_only
+  - deferred_snooze_preview
+  - retained_snooze_preview
+  - blocked_snooze_preview
+  - metadata_boundary_snooze_retained_preview
+  - freeze_snooze_blocked_preview
+
+snooze_decisions:
+  - show_snooze_preview_only
+  - show_repair_snooze_preview
+  - show_metadata_snooze_retained_preview
+  - show_committee_snooze_retained_preview
+  - show_freeze_snooze_blocked_preview
+  - show_blocked_write_snooze_retained_preview
+
+blocked_actions:
+  - create_snooze_record
+  - create_scheduled_reminder
+  - create_dismissal_record
+  - create_notification
+  - modify_notification
+  - create_read_receipt
+  - create_audit_trace_record
+  - create_event_record
+  - create_action_receipt
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  snooze_preview_only: true
+  snooze_preview_is_not_snooze_record: true
+  snooze_preview_is_not_scheduled_reminder: true
+  snooze_preview_is_not_dismissal_record: true
+  snooze_preview_is_not_notification_update: true
+  snooze_preview_is_not_notification: true
+  snooze_preview_is_not_read_receipt: true
+  snooze_preview_is_not_audit_trace_record: true
+  snooze_preview_is_not_event_record: true
+  snooze_preview_is_not_action_receipt: true
+  snooze_preview_is_not_harness_evidence: true
+  snooze_preview_is_not_waes_result: true
+  snooze_preview_is_not_kwe_work_item: true
+  snooze_preview_is_not_lifecycle_change: true
+  snooze_preview_is_not_business_writeback: true
+  creates_snooze_record_must_be_false: true
+  creates_scheduled_reminder_must_be_false: true
+  creates_dismissal_record_must_be_false: true
+  creates_notification_must_be_false: true
+  modifies_notification_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  creates_audit_trace_record_must_be_false: true
+  creates_event_record_must_be_false: true
+  creates_action_receipt_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_snooze_record: 0
+  writes_scheduled_reminder: 0
+  writes_dismissal_record: 0
+  writes_notification: 0
+  modifies_notification: 0
+  writes_read_receipt: 0
+  writes_audit_trace_record: 0
+  writes_event_record: 0
+  writes_action_receipt: 0
+  writes_harness_evidence: 0
+  writes_admission_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

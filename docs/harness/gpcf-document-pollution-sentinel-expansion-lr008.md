@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/gpcf-document-pollution-sentinel-expansion-lr008.md
 source_path: docs/harness/gpcf-document-pollution-sentinel-expansion-lr008.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

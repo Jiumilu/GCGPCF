@@ -1,0 +1,95 @@
+{
+  "contractId": "GCKF-P0-ACCEPTANCE-PACKET-LEDGER-DRY-RUN-V0.1",
+  "description": "P0-D19 acceptance packet ledger dry-run index for D9-D18 validators and LOOP evidence. This is a candidate ledger only.",
+  "ledgerStatus": "candidate",
+  "writesHarnessEvidence": false,
+  "writesAcceptedLifecycle": false,
+  "entries": [
+    {
+      "roundId": "GCKF-P0-D9",
+      "title": "Physical Data Model Schema Dry-run",
+      "validator": "scripts/api/validate_gckf_p0_physical_data_model_schema_dry_run.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D9-001.md",
+      "expectedSignal": "gckf_p0_physical_data_model_schema_dry_run=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D10",
+      "title": "Repository Service Dry-run",
+      "validator": "scripts/api/validate_gckf_p0_repository_service_dry_run.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md",
+      "expectedSignal": "gckf_p0_repository_service_dry_run=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D11",
+      "title": "Handler Service Preflight",
+      "validator": "scripts/api/validate_gckf_p0_handler_service_preflight.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D11-001.md",
+      "expectedSignal": "gckf_p0_handler_service_preflight=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D12",
+      "title": "Handler Request Response Dry-run",
+      "validator": "scripts/api/validate_gckf_p0_handler_request_response_dry_run.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D12-001.md",
+      "expectedSignal": "gckf_p0_handler_request_response_dry_run=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D13",
+      "title": "Handler Stub Preview",
+      "validator": "scripts/api/validate_gckf_p0_handler_stub_preview.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D13-001.md",
+      "expectedSignal": "gckf_p0_handler_stub_preview=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D14",
+      "title": "Handler Stub Runtime Smoke",
+      "validator": "scripts/api/validate_gckf_p0_handler_stub_runtime_smoke.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D14-001.md",
+      "expectedSignal": "gckf_p0_handler_stub_runtime_smoke=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D15",
+      "title": "Handler Stub Negative Smoke",
+      "validator": "scripts/api/validate_gckf_p0_handler_stub_negative_smoke.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D15-001.md",
+      "expectedSignal": "gckf_p0_handler_stub_negative_smoke=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D16",
+      "title": "Handler Stub Envelope Contract",
+      "validator": "scripts/api/validate_gckf_p0_handler_stub_envelope_contract.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D16-001.md",
+      "expectedSignal": "gckf_p0_handler_stub_envelope_contract=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D17",
+      "title": "Route Adapter Dry-run Contract",
+      "validator": "scripts/api/validate_gckf_p0_route_adapter_dry_run_contract.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D17-001.md",
+      "expectedSignal": "gckf_p0_route_adapter_dry_run_contract=pass"
+    },
+    {
+      "roundId": "GCKF-P0-D18",
+      "title": "Acceptance Packet Dry-run",
+      "validator": "scripts/api/validate_gckf_p0_acceptance_packet_dry_run.py",
+      "loopEvidence": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D18-001.md",
+      "expectedSignal": "gckf_p0_acceptance_packet_dry_run=pass"
+    }
+  ],
+  "expectedSummary": {
+    "entryCount": 10,
+    "firstRound": "GCKF-P0-D9",
+    "lastRound": "GCKF-P0-D18",
+    "validatorsExist": true,
+    "loopEvidenceExists": true,
+    "ledgerStatus": "candidate",
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

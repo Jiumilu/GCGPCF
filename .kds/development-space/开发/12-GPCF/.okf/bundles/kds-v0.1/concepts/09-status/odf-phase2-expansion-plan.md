@@ -4,10 +4,10 @@ title: odf-phase2-expansion-plan
 description: ODF Phase 2 扩大样本验证计划
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/09-status/odf-phase2-expansion-plan.md
 tags: [controlled, kds, odf, okf-derived, status]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md
 source_path: 09-status/odf-phase2-expansion-plan.md
-source_hash: 14b15fb0e04fb7769445e52a63a6efb17f6adf4b0b8961df950c542b995f104f
+source_hash: 3842c22898d230e6297e670312e7f4baba62a67b5228bc0e3dae23bcd19a4696
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 2 扩大样本验证计划
 | --- | --- |
 | source_path | `09-status/odf-phase2-expansion-plan.md` |
 | kds_path | `开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md` |
-| source_hash | `14b15fb0e04fb7769445e52a63a6efb17f6adf4b0b8961df950c542b995f104f` |
+| source_hash | `3842c22898d230e6297e670312e7f4baba62a67b5228bc0e3dae23bcd19a4696` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

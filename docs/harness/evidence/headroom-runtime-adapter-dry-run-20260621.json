@@ -1,0 +1,252 @@
+{
+  "evidence_id": "HEADROOM-RUNTIME-ADAPTER-DRY-RUN-20260621",
+  "date": "2026-06-21",
+  "status": "runtime_adapter_dry_run_measured_below_l2_threshold",
+  "headroom_runtime_imported": true,
+  "headroom_runtime_used": true,
+  "headroom_version": "0.26.0",
+  "python_version": "3.12.13",
+  "telemetry": "off",
+  "source_fixture": "fixtures/headroom/headroom-l2-project-group-sources.json",
+  "adapter": {
+    "name": "project_group_evidence_json",
+    "role": "tool",
+    "endpoint": "headroom_runtime_adapter",
+    "cache_zone": "live",
+    "raw_text_stored": false,
+    "input_sha256": "ae9a925bd0f5aeb096bedca3c970b0d2578d83bea58f736413a9dacd54e4bafa"
+  },
+  "project_count": 15,
+  "projects_covered": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "aggregate": {
+    "tokens_before": 11058,
+    "tokens_after": 10549,
+    "tokens_saved": 509,
+    "runtime_adapter_saving_rate": 0.04603,
+    "minimum_saving_rate": 0.2,
+    "modified": true,
+    "strategy": "mixed",
+    "reason": null,
+    "reason_category": "applied",
+    "transforms_applied": [
+      "router:gpcf:headroom_runtime_adapter:project_group_evidence_json:mixed",
+      "mixed"
+    ],
+    "all_marker_gates_pass": true,
+    "missing_markers": []
+  },
+  "decision": {
+    "runtime_adapter_admission_gate": false,
+    "reason": "real headroom-ai runtime compressed the structured tool adapter payload, but saving_rate remains below the L2 threshold",
+    "next_required_action": "measure larger real tool-output payloads and compare against structured surrogate before L3.5/L4 runtime use"
+  },
+  "records": [
+    {
+      "project": "GPCF",
+      "scenario": "loop_control_board_summary",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "required_markers": [
+        "GPCF",
+        "repair_required",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "KDS",
+      "scenario": "kds_loop_state_summary",
+      "source_path": "docs/harness/KDS/loop-state.md",
+      "required_markers": [
+        "KDS",
+        "KDS Token",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Brain",
+      "scenario": "brain_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "required_markers": [
+        "GlobalCloud Brain",
+        "L3 Ready",
+        "ready_for_review"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "WAES",
+      "scenario": "waes_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "required_markers": [
+        "GlobalCloud WAES",
+        "governance",
+        "ready_for_review"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "GFIS",
+      "scenario": "gfis_loop_state_summary",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "required_markers": [
+        "GFIS",
+        "repair_required",
+        "runtime"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "GPC",
+      "scenario": "gpc_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "required_markers": [
+        "GlobalCloud GPC",
+        "L3 Ready",
+        "ready_for_review"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "PVAOS",
+      "scenario": "pvaos_loop_state_summary",
+      "source_path": "docs/harness/PVAOS/loop-state.md",
+      "required_markers": [
+        "PVAOS",
+        "loop",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Edge",
+      "scenario": "edge_access_security_summary",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+      "required_markers": [
+        "Edge",
+        "安全",
+        "GPCF"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "PKC",
+      "scenario": "pkc_loop_state_summary",
+      "source_path": "docs/harness/PKC/loop-state.md",
+      "required_markers": [
+        "PKC",
+        "个人知识",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XiaoC",
+      "scenario": "xiaoc_loop_state_summary",
+      "source_path": "docs/harness/XiaoC/loop-state.md",
+      "required_markers": [
+        "XiaoC",
+        "模型路由",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XGD",
+      "scenario": "xgd_loop_state_summary",
+      "source_path": "docs/harness/XGD/loop-state.md",
+      "required_markers": [
+        "XGD",
+        "长程",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XiaoG",
+      "scenario": "xiaog_loop_state_summary",
+      "source_path": "docs/harness/XiaoG/loop-state.md",
+      "required_markers": [
+        "XiaoG",
+        "轻量执行入口",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "MMC",
+      "scenario": "mmc_loop_state_summary",
+      "source_path": "docs/harness/MMC/loop-state.md",
+      "required_markers": [
+        "MMC",
+        "治理模板",
+        "accepted"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Studio",
+      "scenario": "studio_codegraph_boundary_summary",
+      "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+      "required_markers": [
+        "Studio",
+        "release boundary",
+        "production_ready"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    },
+    {
+      "project": "WAS",
+      "scenario": "was_admission_summary",
+      "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+      "required_markers": [
+        "WAS",
+        "semantic_foundation_project",
+        "production_ready"
+      ],
+      "evidence_line_count": 12,
+      "raw_text_stored": false
+    }
+  ],
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_runtime_admission": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

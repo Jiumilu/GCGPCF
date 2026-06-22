@@ -1,0 +1,116 @@
+policy_id: okf.kwe_promotion_request_policy
+version: v1.0
+owner: KWE
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run contract for KWE Promotion Request packages. Promotion
+  requests are review material only and do not mutate KDS lifecycle, accepted
+  facts, published objects, WAES gate results, KWE work items, business systems,
+  revenue, scores, or external APIs.
+
+required_fields:
+  - id
+  - tenant_id
+  - target_object_id
+  - target_object_type
+  - current_lifecycle
+  - requested_lifecycle
+  - requested_by
+  - request_actor
+  - source_refs
+  - evidence_refs
+  - waes_gate_refs
+  - workpack_refs
+  - harness_evidence_refs
+  - reviewer_requirement
+  - promotion_status
+  - blocked_reasons
+  - required_actions
+  - no_write
+
+promotion_statuses:
+  - draft_request
+  - ready_for_kwe_review
+  - repair_required
+  - waes_required
+  - human_required
+  - committee_required
+  - freeze_required
+  - blocked
+
+request_actors:
+  - ai
+  - owner
+  - system
+  - kds
+  - waes
+  - kwe
+  - human_reviewer
+  - committee
+  - publication_owner
+  - governance_owner
+  - loop
+
+reviewer_requirements:
+  - none
+  - human_required
+  - committee_required
+  - governance_owner_required
+  - publication_owner_required
+
+promotion_rules:
+  candidate_to_reviewing:
+    from: candidate
+    to: reviewing
+    allowed_status: ready_for_kwe_review
+    required_refs: [source_refs, workpack_refs]
+  reviewing_to_repair_required:
+    from: reviewing
+    to: repair_required
+    allowed_status: repair_required
+    required_refs: [waes_gate_refs]
+  repair_required_to_evidence_ready:
+    from: repair_required
+    to: evidence_ready
+    allowed_status: human_required
+    required_refs: [evidence_refs, harness_evidence_refs]
+  evidence_ready_to_verified:
+    from: evidence_ready
+    to: verified
+    allowed_status: waes_required
+    required_refs: [waes_gate_refs, harness_evidence_refs]
+  verified_to_accepted:
+    from: verified
+    to: accepted
+    allowed_status: human_required
+    required_refs: [workpack_refs, harness_evidence_refs]
+  accepted_to_published:
+    from: accepted
+    to: published
+    allowed_status: committee_required
+    required_refs: [waes_gate_refs, harness_evidence_refs]
+  any_to_frozen:
+    from: any
+    to: frozen
+    allowed_status: freeze_required
+    required_refs: [waes_gate_refs, harness_evidence_refs]
+
+hard_boundaries:
+  promotion_request_is_not_lifecycle_mutation: true
+  ai_cannot_request_verified_accepted_published: true
+  loop_cannot_request_verified_accepted_published: true
+  accepted_requires_human_or_committee: true
+  published_requires_publication_redaction_acl_gate: true
+  frozen_requires_freeze_reason: true
+  terminal_states_cannot_be_promoted: true
+
+no_write_guards:
+  writes_kds_lifecycle: 0
+  writes_accepted_fact: 0
+  writes_published_object: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_business_system: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

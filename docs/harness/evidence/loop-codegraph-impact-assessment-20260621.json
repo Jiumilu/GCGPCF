@@ -1,0 +1,104 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-IMPACT-ASSESSMENT-20260621",
+  "status": "codegraph_operational_value_evidenced_with_active_watchlist",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-IMPACT-ASSESSMENT-001",
+  "source_evidence": [
+    "docs/harness/evidence/loop-codegraph-project-group-coverage-20260620.json",
+    "docs/harness/evidence/loop-codegraph-sync-drift-20260621.json",
+    "docs/harness/evidence/loop-codegraph-gfis-residual-notice-20260621.json",
+    "docs/harness/evidence/loop-codegraph-large-file-policy-20260621.json",
+    "docs/harness/evidence/loop-codegraph-project-group-graphized-20260621.json",
+    "docs/harness/evidence/loop-codegraph-project-group-monitor-20260621.json"
+  ],
+  "validated_inputs": {
+    "repo_count": 14,
+    "indexed_repo_count": 14,
+    "up_to_date_repo_count": 11,
+    "active_drift_repo_count": 2,
+    "controlled_residual_projects": [
+      "GlobalCloud GFIS"
+    ],
+    "codegraph_git_status_entries_total": 0,
+    "next_loop_input": "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001",
+    "active_drift_projects": [
+      "GlobalCloud Brain",
+      "GlobalCloud Studio"
+    ]
+  },
+  "impact_dimensions": [
+    {
+      "dimension": "coverage_truth",
+      "score": 5,
+      "max_score": 5,
+      "evidence": "14 local project repositories are indexed and protected from Git tracking."
+    },
+    {
+      "dimension": "drift_detection",
+      "score": 5,
+      "max_score": 5,
+      "evidence": "Brain active drift expanded to 32 files and was detected by CodeGraph instead of being hidden by a stale success state."
+    },
+    {
+      "dimension": "loop_decision_support",
+      "score": 5,
+      "max_score": 5,
+      "evidence": "CodeGraph status produced concrete LOOP next inputs, including monitor, sync drift, residual notice, large-file policy, and project-group monitor rounds."
+    },
+    {
+      "dimension": "cost_reduction",
+      "score": 3,
+      "max_score": 5,
+      "evidence": "CodeGraph narrowed review from project-group-wide uncertainty to repo-level and file-level drift candidates; continuous time saved, MTTD, and MTTR are not yet measured."
+    },
+    {
+      "dimension": "risk_control",
+      "score": 5,
+      "max_score": 5,
+      "evidence": "CodeGraph prevents claiming full steady state while Brain and Studio active drift exists and keeps GFIS residual separate from business readiness."
+    },
+    {
+      "dimension": "replayability",
+      "score": 5,
+      "max_score": 5,
+      "evidence": "Graphized and monitor validators replay current CodeGraph state, Git protection, source evidence, and GFIS policy exception."
+    }
+  ],
+  "score": {
+    "total": 28,
+    "max": 30,
+    "rating": "effective_with_active_watchlist",
+    "threshold": {
+      "effective": 24,
+      "strong": 28
+    }
+  },
+  "boundaries": {
+    "business_completion": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "commit_or_push": false
+  },
+  "next_loop_input": {
+    "round": "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001",
+    "objective": "Monitor Brain and Studio active CodeGraph drift, collect MTTD/MTTR trend data, and avoid entering project business development.",
+    "metrics_to_collect": [
+      "drift_detected_at",
+      "drift_repo",
+      "drift_type",
+      "sync_or_policy_decision_at",
+      "drift_closed_at",
+      "manual_search_avoided_notes"
+    ],
+    "forbidden_actions": [
+      "project business code edits",
+      "production writes",
+      "accepted/integrated/production_ready upgrade",
+      "commit",
+      "push",
+      "deploy"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-C3B9DFCB0C
-title: Loop Round Template
+title: LOOP_ROUND_TEMPLATE
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
 domain: templates
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/LOOP_ROUND_TEMPLATE.md
 source_path: templates/LOOP_ROUND_TEMPLATE.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round Template
+ Loop Round Template
 
 复制到：`docs/harness/loops/loop-round-{ROUND_ID}.md`
 
@@ -218,6 +218,48 @@ Loop 模式为 L4 时必填。评分标准来源：`01-architecture/GlobalCloud�
 | 命令 | 结果 | 证据 |
 |---|---|---|
 |  | pass/partial/fail |  |
+
+## 7.1 UI 质量门禁（涉及 UI 时必填）
+
+仅当本轮涉及产品界面、控制塔、工作台、证据页、异常页、AI 对话页、配置页、移动端、桌面端、前端回归或可视化交互验收时填写。若 `UI scope=true`，则必须按 `.codex/skills/globalcloud-ui-quality-gate/` 输出完整 UI gate 记录。
+
+| 字段 | 值 |
+|---|---|
+| UI scope | true / false |
+| Surface | list / detail / edit-config / operation-workbench / exception-handling / evidence-audit / ai-chat / ai-sidebar / brand-marketing / mobile-desktop-shell / not_applicable |
+| Repository/path |  |
+| Scope |  |
+| Tools used | Impeccable / ui-ux-pro-max / Playwright / browser / Figma / manual / not_applicable |
+| Tools unavailable |  |
+| Verification |  |
+| Status ceiling | ui_evidence_candidate / partial / blocked / rework_required / not_applicable |
+
+```text
+UI gate status: ui_ready | ui_partial | ui_blocked | ui_rework_required | not_applicable
+Surface:
+Repository/path:
+Scope:
+Tools used:
+Tools unavailable:
+Verification:
+Status ceiling:
+```
+
+| Gate | Status | Evidence | Remaining work |
+|---|---|---|---|
+| G1 Surface Structure | pass/partial/fail/not_applicable |  |  |
+| G2 Design Tokens | pass/partial/fail/not_applicable |  |  |
+| G3 Component Consistency | pass/partial/fail/not_applicable |  |  |
+| G4 Evidence And Governance | pass/partial/fail/not_applicable |  |  |
+| G5 AI Fact Separation | pass/partial/fail/not_applicable |  |  |
+| G6 Accessibility | pass/partial/fail/not_applicable |  |  |
+| G7 Responsive And Text Robustness | pass/partial/fail/not_applicable |  |  |
+| G8 Runtime Verification | pass/partial/fail/not_applicable |  |  |
+| G9 Scope Control | pass/partial/fail/not_applicable |  |  |
+
+UI caveats：
+
+- runtime_not_verified / mobile_not_verified / a11y_manual_only / figma_not_verified / not_applicable（运行未验证 / 移动端未验证 / 仅做无障碍人工检查 / Figma 未验证 / 不适用）
 
 ## 8. 产出文件
 

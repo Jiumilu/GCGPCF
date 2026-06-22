@@ -1,0 +1,86 @@
+{
+  "contractId": "GCKF-P0-FUTURE-FORMAL-WRITE-EXECUTION-PREFLIGHT-DRY-RUN-V0.1",
+  "description": "P0-D31 future formal write execution preflight dry-run derived from D30 Harness Governance intake. It checks prerequisites after approve_for_future_formal_write without executing formal evidence writing.",
+  "executionPreflightStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceReviewIntake": "fixtures/api/gckf-p0-harness-governance-review-decision-intake-dry-run-v0.1.json",
+  "coveredDecisionOutcome": "approve_for_future_formal_write",
+  "executionPreflight": {
+    "id": "GCKF-P0-FUTURE-FORMAL-WRITE-EXECUTION-PREFLIGHT-001",
+    "preflightType": "future_formal_write_execution_preflight",
+    "sourceIntakeId": "GCKF-P0-HARNESS-GOVERNANCE-REVIEW-INTAKE-001",
+    "executionStatus": "candidate",
+    "requiredInputs": [
+      "reviewerId",
+      "reviewedAt",
+      "sourcePacketRef",
+      "approvalDecisionRef",
+      "authorityRef",
+      "evidenceRefs",
+      "idempotencyKey",
+      "duplicateCheckRef",
+      "rollbackPlanRef",
+      "executionLockRef",
+      "auditTrailRef"
+    ],
+    "preflightChecks": [
+      "source_intake_status_is_candidate",
+      "source_intake_review_status_is_pending",
+      "decision_outcome_is_approve_for_future_formal_write",
+      "approval_decision_ref_present",
+      "authority_ref_present",
+      "idempotency_key_present",
+      "duplicate_formal_evidence_absent",
+      "rollback_plan_present",
+      "execution_lock_present",
+      "audit_trail_ref_present",
+      "formal_write_requires_next_explicit_execution"
+    ],
+    "forbiddenActions": [
+      "write_formal_evidence",
+      "write_harness_evidence",
+      "write_kds",
+      "promote_lifecycle",
+      "enable_business_writeback",
+      "mark_p0_accepted",
+      "skip_execution_preflight"
+    ]
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-governance-review-decision-intake-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_harness_governance_review_decision_intake_dry_run.py",
+    "docs/gc-knowledge-fabric/harness-governance-review-decision-intake-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D30-001.md"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "executionPreflightStatus": "candidate",
+    "preflightType": "future_formal_write_execution_preflight",
+    "executionStatus": "candidate",
+    "sourceIntakeStatus": "candidate",
+    "sourceIntakeReviewStatus": "pending",
+    "coveredDecisionOutcome": "approve_for_future_formal_write",
+    "requiredInputCount": 11,
+    "preflightCheckCount": 11,
+    "forbiddenActionCount": 7,
+    "requiredSourceRefCount": 4,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

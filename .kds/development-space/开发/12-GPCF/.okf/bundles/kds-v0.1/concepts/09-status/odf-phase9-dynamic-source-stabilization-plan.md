@@ -1,13 +1,13 @@
 ---
 type: Governance Plan
-title: ODF Phase 9 动态源稳定化策略方案
+title: odf-phase9-dynamic-source-stabilization-plan
 description: ODF Phase 9 动态源稳定化方案
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/09-status/odf-phase9-dynamic-source-stabilization-plan.md
 tags: [controlled, kds, odf, okf-derived, status]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md
 source_path: 09-status/odf-phase9-dynamic-source-stabilization-plan.md
-source_hash: 90cbf6f77704e51fa02f2354cd6f8914bdda5c20ed78101bad039c7ca4da0b42
+source_hash: 2a5c30f64850d4ededc857f629ca9d889e90a37fc6b0629b54f4f040475f90af
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 9 动态源稳定化方案
 | --- | --- |
 | source_path | `09-status/odf-phase9-dynamic-source-stabilization-plan.md` |
 | kds_path | `开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md` |
-| source_hash | `90cbf6f77704e51fa02f2354cd6f8914bdda5c20ed78101bad039c7ca4da0b42` |
+| source_hash | `2a5c30f64850d4ededc857f629ca9d889e90a37fc6b0629b54f4f040475f90af` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 
@@ -34,6 +34,6 @@ ODF Phase 9 动态源稳定化方案
 
 # Citations
 
-[1] [ODF Phase 9 动态源稳定化策略方案](/../09-status/odf-phase9-dynamic-source-stabilization-plan.md)
+[1] [odf-phase9-dynamic-source-stabilization-plan](/../09-status/odf-phase9-dynamic-source-stabilization-plan.md)
 
 <!-- okf_concept_id: /concepts/09-status/odf-phase9-dynamic-source-stabilization-plan -->

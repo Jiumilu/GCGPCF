@@ -1,0 +1,106 @@
+{
+  "evidence_id": "ONTOLOGY-WAS-3H-P2-GATE-REPLAY-20260621",
+  "status": "ontology_was_3h_p2_gate_replay_pass",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-3H-P2-GATE-REPLAY-001",
+  "plan_ref": "ONTOLOGY-WAS-3H-IMPLEMENTATION-GOALS-20260621",
+  "previous_round": "GPCF-ONTOLOGY-WAS-3H-P1-SOURCE-READINESS-001",
+  "phase": {
+    "phase_id": "P2-gate-execution-and-replay",
+    "time_window_minutes": "75-135",
+    "execution_started": true,
+    "execution_mode": "controlled_local_validator_replay",
+    "goal": "Run the executable gate chain for source-record precheck, negative fixtures, field crosswalk, WAS profile mapping, and WAS validators."
+  },
+  "gate_replay_summary": {
+    "gate_groups_executed": 9,
+    "gate_groups_passed": 9,
+    "was_okf_validator_count": 12,
+    "was_okf_validator_passed": 12,
+    "failed_gate_groups": 0,
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "gate_outputs": [
+    {
+      "gate": "ontology_was_3h_p0_start",
+      "command": "python3 tools/kds-sync/validate_ontology_was_3h_p0_start.py",
+      "result": "pass",
+      "output": "ontology_was_3h_p0_start=pass phase=P0-startup-calibration execution_started=true planned_minutes=180 real_source_record_files=0 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "ontology_was_3h_p1_source_record_readiness",
+      "command": "python3 tools/kds-sync/validate_ontology_was_3h_p1_source_record_readiness.py",
+      "result": "pass",
+      "output": "ontology_was_3h_p1_source_record_readiness=pass phase=P1-real-source-record-readiness checklist_items=5 field_completion_entries=12 ready_by_rule_entries=9 missing_real_input_entries=3 hold_reasons=12 explicit_rejection_sources=6 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "gfis_was_source_record_submission_precheck",
+      "command": "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+      "result": "pass",
+      "output": "gfis_was_source_record_submission_precheck=pass submitted_files_found=0 candidate_files_checked=0 gfis_native_fields=12 was_fields=12 accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "gfis_was_source_record_negative_fixtures",
+      "command": "python3 tools/kds-sync/validate_gfis_was_source_record_negative_fixtures.py",
+      "result": "pass",
+      "output": "gfis_was_source_record_negative_fixtures=pass negative_fixture_count=6 rejected_fixture_count=6 accepted_fixture_count=0 gfis_directory_writes=0 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "gfis_was_source_record_field_crosswalk",
+      "command": "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+      "result": "pass",
+      "output": "gfis_was_source_record_field_crosswalk=pass gfis_native_required_fields=12 was_required_fields=12 crosswalk_entries=12 direct_equalities=2 fixed_was_values=5 explicit_submission_fields=5 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "gfis_was_source_record_admission_gate",
+      "command": "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+      "result": "pass",
+      "output": "gfis_was_source_record_admission_gate=pass required_was_fields=12 object_family=CustomerRequirementOrPlatformOrder asset_dimension=data_asset flow_type=commerce_flow lifecycle=pending_business_verification real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "gfis_was_profile_runtime_gate_mapping",
+      "command": "python3 tools/kds-sync/validate_gfis_was_profile_runtime_gate_mapping.py",
+      "result": "pass",
+      "output": "gfis_was_profile_runtime_gate_mapping=pass was_stages=12 gfis_stages=12 dimensions=8 flows=8 test_data_lane=pass real_business_lane=repair_required accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "was_project_group_admission",
+      "command": "python3 tools/kds-sync/validate_was_project_group_admission.py",
+      "result": "pass",
+      "output": "was_project_group_admission=pass project_group_position=14 role=semantic_foundation_project remote=Jiumilu/GCWAS visibility=PRIVATE codegraph=pass was_validators=pass accepted=false integrated=false production_ready=false"
+    },
+    {
+      "gate": "was_okf_validators",
+      "command": "python3 okf/validators/validate_all.py",
+      "result": "pass",
+      "output": "PASS validate_was_dimensions; PASS validate_was_flows; PASS validate_was_object_contract; PASS validate_was_relationship_contract; PASS validate_was_event_contract; PASS validate_was_loop_record; PASS validate_was_rag_admission; PASS validate_was_waes_gate_input; PASS validate_was_pool_link; PASS validate_no_illegal_promotion; PASS validate_no_stale_bundle; PASS validate_gfis_runtime_sop_e2e_profile"
+    }
+  ],
+  "p2_exit_gate": {
+    "definition": "all gate outputs pass or execution stops with concrete blocker evidence",
+    "status": "pass",
+    "blocker": null,
+    "promotion_allowed": false
+  },
+  "next_phase": "P3-closure-and-next-decision",
+  "non_claims": [
+    "does not write into GFIS receiving directory",
+    "does not create real source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not create verified artifact",
+    "does not mark accepted or integrated",
+    "does not mark production ready"
+  ]
+}

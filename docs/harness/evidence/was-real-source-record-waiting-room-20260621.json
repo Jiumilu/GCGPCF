@@ -1,0 +1,105 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-WAITING-ROOM-20260621",
+  "status": "was_real_source_record_waiting_room_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001",
+  "purpose": "Create a controlled waiting room for the six required P4 real source-record inputs after WAS-Ontology governance completion audit.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "required_p4_inputs": [
+    {
+      "input_id": "customer_order_original_or_platform_receipt",
+      "label": "真实客户订单原件或平台订单回执",
+      "state": "missing",
+      "owner": "GPC_or_Liaoning_Yuanhang_order_owner"
+    },
+    {
+      "input_id": "customer_confirmed_product_specification",
+      "label": "客户确认产品规格",
+      "state": "missing",
+      "owner": "GPC_or_Liaoning_Yuanhang_order_owner"
+    },
+    {
+      "input_id": "delivery_requirement",
+      "label": "交付要求",
+      "state": "missing",
+      "owner": "GPC_or_Liaoning_Yuanhang_order_owner"
+    },
+    {
+      "input_id": "issuer_and_responsible_owner_confirmation",
+      "label": "签发方与责任方确认",
+      "state": "missing",
+      "owner": "GPC_or_Liaoning_Yuanhang_order_owner"
+    },
+    {
+      "input_id": "kds_source_backlink",
+      "label": "KDS source backlink",
+      "state": "missing",
+      "owner": "KDS/GPCF"
+    },
+    {
+      "input_id": "runtime_site_context",
+      "label": "runtime site context",
+      "state": "missing",
+      "owner": "GFIS/GPCF"
+    }
+  ],
+  "intake_rules": {
+    "accepted_source_kinds": ["customer_order_original", "platform_order_receipt"],
+    "pending_equivalent_source_kinds": ["signed_customer_confirmation", "authorized_platform_export", "owner_signed_submission_packet"],
+    "rejected_source_kinds": ["llm_generated_candidate", "loop_document_only", "quotation_only", "demo_fixture", "unconfirmed_user_statement"],
+    "next_gate_condition": "all_required_inputs_present_and_candidate_precheck_passed"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 3,
+    "expected_positive_acceptance": 1,
+    "expected_negative_rejection": 3,
+    "negative_cases": [
+      "missing_required_input",
+      "missing_owner",
+      "premature_release"
+    ]
+  },
+  "waiting_state": {
+    "submitted_real_inputs": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "validator": "python3 tools/kds-sync/validate_was_real_source_record_waiting_room.py",
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-001",
+  "non_claims": [
+    "does not create real source-of-record",
+    "does not create runtime primary key",
+    "does not create review queue",
+    "does not create runtime intake",
+    "does not create WAES review",
+    "does not mark accepted, integrated, or production ready"
+  ]
+}

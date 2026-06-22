@@ -1,0 +1,26 @@
+{
+  "id": "gc-knowledge-fabric-dks-084-rag-citation-strength-policy-smoke",
+  "description": "Static no-write smoke for RAG citation strength L0-L5.",
+  "expected": {
+    "levelCount": 6,
+    "mappingCount": 5,
+    "blocked": ["L0"],
+    "sensitiveMetadataOnly": ["L1", "L2"],
+    "repairRequired": ["L1", "L2"],
+    "limited": ["L3"],
+    "safe": ["L4"],
+    "l5TrustLevels": ["T0", "T1"],
+    "l5ConfirmationStatus": ["human_confirmed", "committee_confirmed"],
+    "l5DoesNotAutoWriteback": true,
+    "l5DoesNotAutoConfirmRevenue": true,
+    "l5DoesNotReplaceCommitteeDecision": true,
+    "sensitiveRequiresMetadataOrRedaction": true,
+    "limitedRequiresBoundaryNotice": true,
+    "repairRequiredMustNotBeConclusion": true,
+    "writesKdsFact": 0,
+    "writesWaesGateResult": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0
+  }
+}

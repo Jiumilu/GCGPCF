@@ -4,10 +4,10 @@ title: KDS Markdown 化与 OKF 兼容层全面实施闭环方案
 description: KDS Markdown 化闭环方案
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/09-status/kds-md-okf-implementation-closure-plan.md
 tags: [controlled, kds, kds-governance, okf, okf-derived, status]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md
 source_path: 09-status/kds-md-okf-implementation-closure-plan.md
-source_hash: 0ac0e3eb806e608f5b118f3d04fdb058f6375f4ef1b720ebb268742df1a3a0d8
+source_hash: 35c91487b0fc4fe2d5af02521e5c005f61ebae4aca37cef39d7759e4eced0acc
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ KDS Markdown 化闭环方案
 | --- | --- |
 | source_path | `09-status/kds-md-okf-implementation-closure-plan.md` |
 | kds_path | `开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md` |
-| source_hash | `0ac0e3eb806e608f5b118f3d04fdb058f6375f4ef1b720ebb268742df1a3a0d8` |
+| source_hash | `35c91487b0fc4fe2d5af02521e5c005f61ebae4aca37cef39d7759e4eced0acc` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

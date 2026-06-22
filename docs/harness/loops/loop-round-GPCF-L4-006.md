@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-18774733CF
-title: GPCF-L4-006
+title: GPCF-L4-006 最小闭环历史校准
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-006.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-006.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-006
+# GPCF-L4-006 最小闭环历史校准
 
 | 字段 | 值 |
 |---|---|
@@ -53,7 +53,7 @@ superseded_by: []
 ## 检查
 
 - PVAOS-L4-006 evidence exists in PVAOS project harness.
-- GPCF L4 minimum closed loop validator can verify the phrases required for this round.
+- GPCF L4 最小闭环 validator 可校验本轮要求保留的关键短语。
 
 ## 反馈
 

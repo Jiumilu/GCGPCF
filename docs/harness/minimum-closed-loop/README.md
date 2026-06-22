@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/minimum-closed-loop/README.md
 source_path: docs/harness/minimum-closed-loop/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -40,5 +40,5 @@ KDS 空间：`开发`
 | GPCF-DOC-9886BDB110 | L4 Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | controlled |
 | GPCF-DOC-4C33B5D2B6 | Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | controlled |
 | GPCF-DOC-6913FD52DB | L4 Minimum Closed Loop Closure Score Matrix | docs/harness/minimum-closed-loop/l4-closure-score-matrix.md | KDS | controlled |
-| GPCF-DOC-3F160ABA27 | L4 Minimum Closed Loop Object Contracts | docs/harness/minimum-closed-loop/object-contracts.md | KDS | controlled |
-| GPCF-DOC-9096ABA44D | Project Role Verification Matrix | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | controlled |
+| GPCF-DOC-3F160ABA27 | L4 最小闭环对象契约 | docs/harness/minimum-closed-loop/object-contracts.md | KDS | controlled |
+| GPCF-DOC-9096ABA44D | 项目角色验证矩阵 | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | controlled |

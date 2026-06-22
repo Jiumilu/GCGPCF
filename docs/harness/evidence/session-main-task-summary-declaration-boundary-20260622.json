@@ -1,0 +1,76 @@
+{
+  "evidence_id": "SESSION-MAIN-TASK-SUMMARY-DECLARATION-BOUNDARY-20260622",
+  "status": "declaration_boundary_controlled",
+  "date": "2026-06-22",
+  "scope": "GPCF-SESSION-DECLARATION-CONTROL-BOUNDARY-001",
+  "objective": "Summarize the current session's main task chain and establish a controlled declaration boundary for future statements.",
+  "main_task_summary": [
+    {
+      "task": "Agent-Reach incorporation path",
+      "result": "Established as a Loop/GPCF governance path requiring evidence, validator output, and controlled next-round decisions before claims about search capability, efficiency, or quality improvement.",
+      "declaration_level": "governance_path_established"
+    },
+    {
+      "task": "Project-group Agent-Reach / CodeGraph status evaluation",
+      "result": "Converted project-group status into evidence-backed watchlist and authorization boundaries, separating runnable/index evidence from business acceptance claims.",
+      "declaration_level": "evidence_watchlist_controlled"
+    },
+    {
+      "task": "Brain/Studio CodeGraph watchlist sync-only closure",
+      "result": "Executed authorized Brain/Studio CodeGraph sync-only closure, including bounded residual sync passes, with final validator output showing Brain pending=0, Studio pending=0, GFIS pending=1, GPCF pending=0 at closure time.",
+      "declaration_level": "sync_only_closure_completed_at_evidence_time"
+    },
+    {
+      "task": "GPCF documentation governance",
+      "result": "Created controlled evidence, Loop record, and validator; ran document control, pollution, KDS token, Loop document gate, doc_id scan, diff check, and GPCF CodeGraph self-sync.",
+      "declaration_level": "document_governance_passed"
+    }
+  ],
+  "allowed_declarations": [
+    "Agent-Reach incorporation has a controlled Loop/GPCF governance path.",
+    "Brain/Studio CodeGraph watchlist sync-only closure was executed under explicit authorization.",
+    "At the recorded closure time, Brain and Studio CodeGraph pending counts were zero.",
+    "GFIS CodeGraph policy exception watch was preserved and not repaired in the authorized closure.",
+    "The session generated controlled GPCF evidence, Loop record, and validator artifacts.",
+    "No git add, commit, push, deploy, production write, or accepted/integrated/production_ready upgrade was performed in this closure."
+  ],
+  "forbidden_declarations": [
+    "Do not claim Agent-Reach is accepted, integrated, or production_ready.",
+    "Do not claim project-group search capability, efficiency, or quality is truly improved beyond the verified evidence level.",
+    "Do not claim GFIS runtime, real_business_lane, or policy exception has been repaired.",
+    "Do not claim Brain/Studio business code changed or business functionality improved from CodeGraph sync-only work.",
+    "Do not claim current live CodeGraph pending remains zero without rerunning live status checks.",
+    "Do not claim KDS canonical API writeback, external API write, deployment, or production operation occurred."
+  ],
+  "post_boundary_revalidation_observation": {
+    "check": "python3 tools/kds-sync/validate_codegraph_watchlist_sync_only_closure_authorized.py",
+    "result": "failed_after_boundary_generation",
+    "observed_failure": "GlobalCloud Brain live pending must be zero",
+    "interpretation": "The earlier sync-only closure remains an evidence-time closure, but current live zero must not be restated without rerunning and passing a fresh live status check."
+  },
+  "status_boundaries": {
+    "agent_reach_accepted": false,
+    "agent_reach_integrated": false,
+    "agent_reach_production_ready": false,
+    "search_quality_improvement_proven": false,
+    "gfis_policy_exception_repaired": false,
+    "gfis_real_business_lane_repaired": false,
+    "brain_studio_business_code_changed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "kds_canonical_write": false,
+    "git_add": false,
+    "git_commit": false,
+    "git_push": false,
+    "deploy": false
+  },
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-watchlist-sync-plan-20260621.json",
+    "docs/harness/evidence/codegraph-watchlist-sync-authorization-pack-20260621.json",
+    "docs/harness/evidence/codegraph-watchlist-sync-only-closure-authorized-20260622.json",
+    "docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED.md",
+    "tools/kds-sync/validate_codegraph_watchlist_sync_only_closure_authorized.py"
+  ],
+  "future_statement_rule": "Any later statement that says 'current', 'still zero', 'accepted', 'integrated', 'production_ready', or 'quality improved' must rerun the relevant live validator or status check before being stated as current fact. A post-boundary live revalidation already observed Brain drift, so zero-pending language must be time-qualified.",
+  "next_round": "GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-004"
+}

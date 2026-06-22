@@ -1,0 +1,62 @@
+{
+  "evidence_id": "HEADROOM-PRODUCTION-TOKEN-AUTHORIZATION-PACKAGE-20260621",
+  "date": "2026-06-21",
+  "status": "authorization_package_defined_pending",
+  "source_evidence": [
+    "docs/harness/evidence/headroom-production-token-intake-gate-20260621.json",
+    "fixtures/headroom/headroom-production-token-ledger-template.json"
+  ],
+  "requested_scope": {
+    "projects": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "token_source": "provider_billing_export_or_sanitized_runtime_usage_ledger",
+    "measurement_window": null,
+    "telemetry": "off",
+    "raw_prompt_storage": "forbidden",
+    "external_api_write_allowed": false,
+    "kds_write_allowed": false,
+    "rollback_plan_required": true
+  },
+  "authorization": {
+    "status": "pending",
+    "authorized_window_id": null,
+    "authorized_by": null,
+    "authorized_at": null,
+    "scope": "project_group_production_token_measurement"
+  },
+  "gate": {
+    "authorized_window_present": false,
+    "approver_present": false,
+    "approval_timestamp_present": false,
+    "sanitized_ledger_present": false,
+    "rollback_plan_present": false,
+    "negative_fixture_gate_passed": true,
+    "authorization_package_gate": false,
+    "production_admission_gate": false
+  },
+  "next_required_action": "obtain explicit human authorization window before collecting sanitized production token ledger",
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

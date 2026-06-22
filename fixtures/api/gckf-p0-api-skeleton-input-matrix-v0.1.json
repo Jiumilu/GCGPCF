@@ -1,0 +1,90 @@
+{
+  "id": "gckf-p0-api-skeleton-input-matrix-v0.1",
+  "description": "GC-Knowledge Fabric P0-D7 API skeleton input matrix. It aggregates existing no-write endpoint fixtures into one controlled implementation input. It does not prove API runtime deployment or production writes.",
+  "version": "v0.1",
+  "sourceFixtures": [
+    "fixtures/kds/v2-endpoint-no-write-smoke.json",
+    "fixtures/waes/endpoint-no-write-smoke.json",
+    "fixtures/kwe/endpoint-no-write-smoke.json",
+    "fixtures/gfis/endpoint-no-write-smoke.json",
+    "fixtures/governance/endpoint-no-write-smoke.json"
+  ],
+  "routeGroups": [
+    {
+      "group": "kds_v2",
+      "fixtureRef": "fixtures/kds/v2-endpoint-no-write-smoke.json",
+      "endpointCount": 11,
+      "allowedModes": ["read_only", "candidate_only"],
+      "candidateOnlyCount": 4,
+      "readOnlyCount": 7,
+      "requiresWaesGate": true,
+      "requiresKweFlow": true
+    },
+    {
+      "group": "waes",
+      "fixtureRef": "fixtures/waes/endpoint-no-write-smoke.json",
+      "endpointCount": 7,
+      "allowedModes": ["gate_check", "freeze_request"],
+      "gateCheckCount": 6,
+      "freezeRequestCount": 1,
+      "requiresHumanOrCommitteeFinality": true
+    },
+    {
+      "group": "kwe",
+      "fixtureRef": "fixtures/kwe/endpoint-no-write-smoke.json",
+      "endpointCount": 10,
+      "allowedModes": ["read_only", "work_request", "confirmation_request", "committee_request", "promotion_request", "redaction_request", "writeback_request"],
+      "readOnlyCount": 1,
+      "requestOnlyCount": 9,
+      "requiresWaesGate": true,
+      "requiresHumanOrCommitteeFinality": true
+    },
+    {
+      "group": "gfis_assistant",
+      "fixtureRef": "fixtures/gfis/endpoint-no-write-smoke.json",
+      "endpointCount": 4,
+      "allowedModes": ["assistant_query", "usage_guidance", "document_acceptance_check", "writeback_candidate"],
+      "assistantOrCheckCount": 3,
+      "writebackCandidateCount": 1,
+      "requiresKdsSearch": true,
+      "requiresWaesGate": true,
+      "requiresKweFinality": true
+    },
+    {
+      "group": "governance_loop",
+      "fixtureRef": "fixtures/governance/endpoint-no-write-smoke.json",
+      "endpointCount": 8,
+      "allowedModes": ["read_only", "loop_record_request", "evidence_request", "knowledge_ci_dry_run"],
+      "readOnlyCount": 5,
+      "requestOnlyCount": 2,
+      "dryRunOnlyCount": 1,
+      "requiresEvidenceBoundary": true
+    }
+  ],
+  "forbiddenMutations": {
+    "writesKdsLifecycle": 0,
+    "writesAcceptedFact": 0,
+    "writesPublishedObject": 0,
+    "writesWrittenBack": 0,
+    "writesWaesGateResult": 0,
+    "writesKweFinality": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesContributionConfirmation": 0,
+    "writesQuotaMutation": 0,
+    "writesBountySettlement": 0,
+    "writesExternalApi": 0
+  },
+  "expectedSummary": {
+    "groupCount": 5,
+    "endpointCount": 40,
+    "sourceFixtureCount": 5,
+    "readOnlyEndpointCount": 13,
+    "candidateOnlyEndpointCount": 4,
+    "requestOnlyEndpointCount": 11,
+    "gateOrFreezeEndpointCount": 7,
+    "assistantEndpointCount": 4,
+    "knowledgeCiDryRunCount": 1,
+    "noWrite": true
+  }
+}

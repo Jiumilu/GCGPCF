@@ -1,0 +1,53 @@
+{
+  "audit": "L4 Cross-Project Contract Verification",
+  "generated_at": "2026-06-19T14:20:00+00:00",
+  "contracts": {
+    "CON-GPC-GFIS-001": {
+      "from": "GPC (supply-chain platform)",
+      "to": "GFIS (factory execution)",
+      "verification": "pass",
+      "evidence": "GPC platform order → GFIS factory order mapping defined in object-contracts.md",
+      "gate": "FactoryOrder requires release gate; direct creation blocked"
+    },
+    "CON-GPC-WAES-001": {
+      "from": "GPC (supply-chain platform)",
+      "to": "WAES (governance gate)",
+      "verification": "pass",
+      "evidence": "SampleApproval and ProductionRelease gates use WAES for decision and confirmation",
+      "gate": "WAES reads GPC intent, does not modify platform records"
+    },
+    "CON-GFIS-WAES-001": {
+      "from": "GFIS (factory execution)",
+      "to": "WAES (governance gate)",
+      "verification": "pass",
+      "evidence": "REAL-001 through REAL-007 validate GFIS→WAES evidence flow",
+      "gate": "WAES confirmation required before verified artifact"
+    },
+    "CON-EDGE-GFIS-001": {
+      "from": "Edge (field collection)",
+      "to": "GFIS (factory execution)",
+      "verification": "defined_only",
+      "evidence": "Edge field collection feeds raw data to GFIS; integration pending real hardware",
+      "gate": "Edge data must pass validation before entering GFIS runtime"
+    },
+    "CON-EDGE-WAES-001": {
+      "from": "Edge (field collection)",
+      "to": "WAES (governance gate)",
+      "verification": "defined_only",
+      "evidence": "Edge field audit trail feeds WAES evidence ledger; integration pending",
+      "gate": "Edge evidence follows same admission rules as other sources"
+    }
+  },
+  "summary": {
+    "defined": 5,
+    "verified_pass": 3,
+    "defined_only": 2,
+    "missing": 0
+  },
+  "status": "ready_for_review",
+  "non_claims": [
+    "不创建真实 connector 写入",
+    "不修改项目仓库 code",
+    "不标记 accepted/integrated"
+  ]
+}

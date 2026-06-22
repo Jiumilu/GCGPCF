@@ -1,0 +1,36 @@
+policy_id: okf.trust_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+levels:
+  T0:
+    description: 系统正式业务记录、到账记录、正式合同、人工确认记录
+    default_rag_admission: safe
+    requires_evidence: true
+  T1:
+    description: 权威政策、标准网站、政府、行业协会、正式标准
+    default_rag_admission: limited
+    can_be_safe_when:
+      - version_scope_recorded
+      - applicable_boundary_recorded
+  T2:
+    description: 合作单位正式文档、盖章资料、验收资料
+    default_rag_admission: limited
+    can_be_safe_when:
+      - evidence_complete
+      - owner_confirmed
+  T3:
+    description: 会议、电话、邮件、飞书、WIKI、项目沟通记录
+    default_rag_admission: repair_required
+    requires_human_confirmation: true
+  T4:
+    description: 网络搜索、行业文章、第三方报告
+    default_rag_admission: repair_required
+    can_be_limited_when:
+      - source_url_recorded
+      - non_authoritative_boundary_displayed
+  T5:
+    description: LLM 分析结果，仅为候选
+    default_rag_admission: blocked
+    must_not_promote_without_source_backing: true

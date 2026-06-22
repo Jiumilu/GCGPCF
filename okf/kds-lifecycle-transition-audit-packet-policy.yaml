@@ -1,0 +1,118 @@
+policy_id: okf.kds_lifecycle_transition_audit_packet_policy
+version: v1.0
+owner: KDS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run contract for KDS lifecycle transition audit packets.
+  Audit packets are read models only and do not mutate KDS lifecycle, accepted
+  facts, published objects, WAES gate results, KWE work items, business systems,
+  revenue, scores, or external APIs.
+
+required_fields:
+  - audit_id
+  - tenant_id
+  - target_object_id
+  - target_object_type
+  - from_lifecycle
+  - to_lifecycle
+  - transition_actor
+  - promotion_request_refs
+  - source_refs
+  - evidence_refs
+  - waes_gate_refs
+  - workpack_refs
+  - harness_evidence_refs
+  - decision_refs
+  - reviewer_requirement
+  - audit_status
+  - blocked_reasons
+  - required_actions
+  - no_write
+
+audit_statuses:
+  - ready_for_review
+  - repair_required
+  - waes_required
+  - human_required
+  - committee_required
+  - publication_required
+  - freeze_required
+  - blocked
+
+transition_actors:
+  - ai
+  - owner
+  - system
+  - kds
+  - waes
+  - kwe
+  - human_reviewer
+  - committee
+  - publication_owner
+  - governance_owner
+  - loop
+
+reviewer_requirements:
+  - none
+  - human_required
+  - committee_required
+  - governance_owner_required
+  - publication_owner_required
+
+transition_rules:
+  candidate_to_reviewing:
+    from: candidate
+    to: reviewing
+    allowed_status: ready_for_review
+    required_refs: [source_refs, workpack_refs]
+  reviewing_to_repair_required:
+    from: reviewing
+    to: repair_required
+    allowed_status: repair_required
+    required_refs: [waes_gate_refs]
+  evidence_ready_to_verified:
+    from: evidence_ready
+    to: verified
+    allowed_status: waes_required
+    required_refs: [waes_gate_refs, harness_evidence_refs]
+  verified_to_accepted:
+    from: verified
+    to: accepted
+    allowed_status: human_required
+    required_refs: [workpack_refs, harness_evidence_refs]
+  accepted_to_published:
+    from: accepted
+    to: published
+    allowed_status: publication_required
+    required_refs: [waes_gate_refs, harness_evidence_refs]
+  any_to_frozen:
+    from: any
+    to: frozen
+    allowed_status: freeze_required
+    required_refs: [waes_gate_refs, harness_evidence_refs]
+  terminal_to_active:
+    from: [archived, superseded]
+    to: any
+    allowed_status: blocked
+    required_refs: []
+
+hard_boundaries:
+  audit_packet_is_not_lifecycle_mutation: true
+  ai_and_loop_cannot_audit_high_trust_as_approved: true
+  accepted_requires_human_or_committee: true
+  published_requires_publication_controls: true
+  frozen_requires_freeze_reason: true
+  terminal_states_block_transition: true
+  harness_evidence_is_required_for_high_trust: true
+  audit_pass_is_not_business_completion: true
+
+no_write_guards:
+  writes_kds_lifecycle: 0
+  writes_accepted_fact: 0
+  writes_published_object: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_business_system: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

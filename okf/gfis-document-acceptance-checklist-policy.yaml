@@ -1,0 +1,52 @@
+policy_id: okf.gfis_document_acceptance_checklist_policy
+version: v1.0
+owner: GFIS
+status: draft
+purpose: "Define batch checklist contract for GFIS document acceptance assistant."
+package_types:
+  - construction_package
+  - order_package
+  - quality_package
+  - delivery_pod_package
+  - finance_package
+  - oem_transition_package
+required_check_items:
+  - source_registered
+  - evidence_bound
+  - pool_refs_present
+  - domain_scope_present
+  - trust_level_assigned
+  - rag_admission_assessed
+  - sensitive_handling_assessed
+  - waes_gate_suggested
+  - kwe_workpack_suggested
+  - writeback_candidate_only
+batch_results:
+  - candidate_ready
+  - repair_required
+  - human_required
+  - committee_required
+  - metadata_only
+  - blocked
+sensitive_defaults:
+  finance_package: metadata_only
+  delivery_pod_package: metadata_only
+  quality_package: controlled_original
+  oem_transition_package: redaction_required
+hard_boundaries:
+  checklist_pass_is_not_formal_acceptance: true
+  batch_pass_is_not_gfis_writeback: true
+  t5_ai_only_cannot_strong_reference: true
+  sensitive_package_cannot_expose_raw_content: true
+  gaps_require_gap_or_workpack_suggestion: true
+  committee_required_cannot_be_human_only_released: true
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_kds_fact: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

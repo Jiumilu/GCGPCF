@@ -1,0 +1,113 @@
+{
+  "evidence_id": "CURRENT-SESSION-MAINLINE-DECLARATION-20260622",
+  "scope": "GPCF-SESSION-MAINLINE-DECLARATION-001",
+  "status": "session_mainline_declared",
+  "session_mainline": "LOOP治理主线: session-mainline-control rollout",
+  "objective": "把当前会话固定在 LOOP 会话主线治理、声明记录和防偏离门禁落地范围内",
+  "owner_session": "current_gpcf_loop_governance_session",
+  "current_project": "GlobalCoud GPCF",
+  "current_worktree": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+  "loop_mode": "L2-governance",
+  "status_ceiling": "partial",
+  "scope_in": [
+    "02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md",
+    "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+    "02-governance/loop/README.md",
+    "templates/LOOP_SESSION_MAINLINE_DECLARATION_TEMPLATE.md",
+    "templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md",
+    "templates/README.md",
+    "docs/harness/evidence/current-session-mainline-declaration-20260622.json",
+    "docs/harness/evidence/current-session-mainline-declaration-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-SESSION-MAINLINE-DECLARATION-001.md",
+    "tools/kds-sync/validate_loop_session_mainline_control.py",
+    "tools/kds-sync/validate_current_session_mainline_declaration.py",
+    "tools/kds-sync/loop_document_gate.py"
+  ],
+  "scope_out": [
+    "GFIS runtime repair execution",
+    "CodeGraph cross-repo steady-state recheck execution",
+    "Agent-Reach external API execution",
+    "Headroom production token measurement",
+    "real KDS API writeback",
+    "commit",
+    "push",
+    "deploy",
+    "accepted/integrated/production_ready status promotion"
+  ],
+  "allowed_actions": [
+    "read AGENTS and LOOP governance documents",
+    "create controlled session declaration evidence",
+    "update scoped validators",
+    "run local validators",
+    "run scoped document_control local mirror sync",
+    "run pollution and KDS token checks"
+  ],
+  "forbidden_actions": [
+    "production write",
+    "external API write",
+    "real KDS API write",
+    "schema sync",
+    "bench migrate",
+    "deployment",
+    "permission change",
+    "commit",
+    "push",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ],
+  "stop_conditions": [
+    "mainline_drift_detected",
+    "handoff_required_without_evidence",
+    "authorization_required",
+    "git_conflict_or_sensitive_file_risk",
+    "validator_hard_failure_outside_scope"
+  ],
+  "evidence_inputs": [
+    "AGENTS.md",
+    "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+    "02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md",
+    "templates/LOOP_SESSION_MAINLINE_DECLARATION_TEMPLATE.md",
+    "templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md",
+    "docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-004.md",
+    "docs/harness/loop-state.md",
+    "git status --short"
+  ],
+  "handoff": {
+    "handoff_required": false,
+    "handoff_source": "none",
+    "handoff_time": "not_applicable",
+    "scope_delta": "current request continues the same LOOP governance mainline",
+    "authorization_delta": "no additional authorization for commit, push, deploy, real API write, or status promotion",
+    "remaining_risks": [
+      "repo remains dirty from existing project-group work",
+      "global loop_document_gate remains rework_required due to localization_debt"
+    ]
+  },
+  "drift_check": {
+    "user_request_matches_session_mainline": true,
+    "worktree_in_scope": true,
+    "git_dirty_outside_scope_requires_no_touch": true,
+    "other_session_task_takeover": false,
+    "cross_project_execution": false,
+    "mainline_drift_detected": false,
+    "authorization_required": false
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "real_kds_api_write": false,
+    "commit": false,
+    "push": false,
+    "deploy": false
+  },
+  "validators": [
+    "python3 tools/kds-sync/validate_current_session_mainline_declaration.py",
+    "python3 tools/kds-sync/validate_loop_session_mainline_control.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ],
+  "next_round": "GPCF-SESSION-MAINLINE-PREFLIGHT-ENFORCEMENT-002"
+}

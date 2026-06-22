@@ -1,0 +1,108 @@
+{
+  "fixture_id": "HEADROOM-L2-PROJECT-GROUP-SOURCES",
+  "date": "2026-06-21",
+  "telemetry": "off",
+  "sensitive_raw_text_stored": false,
+  "compressor_mode": "structured_surrogate_no_headroom_runtime",
+  "minimum_saving_rate": 0.2,
+  "agreed_retrieval_miss_threshold": 1,
+  "pricing": {
+    "P_in": 1.0,
+    "P_out": 4.0,
+    "P_cache_write": 0.25,
+    "P_cache_read": 0.1,
+    "P_runtime": 0.0
+  },
+  "sources": [
+    {
+      "project": "GPCF",
+      "scenario": "loop_control_board_summary",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "required_markers": ["GPCF", "repair_required", "accepted"]
+    },
+    {
+      "project": "KDS",
+      "scenario": "kds_loop_state_summary",
+      "source_path": "docs/harness/KDS/loop-state.md",
+      "required_markers": ["KDS", "KDS Token", "accepted"]
+    },
+    {
+      "project": "Brain",
+      "scenario": "brain_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "required_markers": ["GlobalCloud Brain", "L3 Ready", "ready_for_review"]
+    },
+    {
+      "project": "WAES",
+      "scenario": "waes_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "required_markers": ["GlobalCloud WAES", "governance", "ready_for_review"]
+    },
+    {
+      "project": "GFIS",
+      "scenario": "gfis_loop_state_summary",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "required_markers": ["GFIS", "repair_required", "runtime"]
+    },
+    {
+      "project": "GPC",
+      "scenario": "gpc_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "required_markers": ["GlobalCloud GPC", "L3 Ready", "ready_for_review"]
+    },
+    {
+      "project": "PVAOS",
+      "scenario": "pvaos_loop_state_summary",
+      "source_path": "docs/harness/PVAOS/loop-state.md",
+      "required_markers": ["PVAOS", "loop", "accepted"]
+    },
+    {
+      "project": "Edge",
+      "scenario": "edge_access_security_summary",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+      "required_markers": ["Edge", "安全", "GPCF"]
+    },
+    {
+      "project": "PKC",
+      "scenario": "pkc_loop_state_summary",
+      "source_path": "docs/harness/PKC/loop-state.md",
+      "required_markers": ["PKC", "个人知识", "accepted"]
+    },
+    {
+      "project": "XiaoC",
+      "scenario": "xiaoc_loop_state_summary",
+      "source_path": "docs/harness/XiaoC/loop-state.md",
+      "required_markers": ["XiaoC", "模型路由", "accepted"]
+    },
+    {
+      "project": "XGD",
+      "scenario": "xgd_loop_state_summary",
+      "source_path": "docs/harness/XGD/loop-state.md",
+      "required_markers": ["XGD", "长程", "accepted"]
+    },
+    {
+      "project": "XiaoG",
+      "scenario": "xiaog_loop_state_summary",
+      "source_path": "docs/harness/XiaoG/loop-state.md",
+      "required_markers": ["XiaoG", "轻量执行入口", "accepted"]
+    },
+    {
+      "project": "MMC",
+      "scenario": "mmc_loop_state_summary",
+      "source_path": "docs/harness/MMC/loop-state.md",
+      "required_markers": ["MMC", "治理模板", "accepted"]
+    },
+    {
+      "project": "Studio",
+      "scenario": "studio_codegraph_boundary_summary",
+      "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+      "required_markers": ["Studio", "release boundary", "production_ready"]
+    },
+    {
+      "project": "WAS",
+      "scenario": "was_admission_summary",
+      "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+      "required_markers": ["WAS", "semantic_foundation_project", "production_ready"]
+    }
+  ]
+}

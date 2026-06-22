@@ -47,12 +47,7 @@ def read_frontmatter(path: Path) -> dict[str, str]:
 
 def is_okf_bundle_doc(path: Path) -> bool:
     rel = path.relative_to(ROOT).as_posix()
-    if not rel.startswith(".okf/bundles/"):
-        return False
-    if path.name in {"index.md", "log.md"}:
-        return True
-    fm = read_frontmatter(path)
-    return bool(fm.get("type"))
+    return rel.startswith(".okf/bundles/")
 
 
 def count_unique_mirror_docs(path: Path) -> int:
@@ -72,6 +67,34 @@ def count_unique_mirror_docs(path: Path) -> int:
         if isinstance(kds_path, str) and kds_path:
             unique_paths.add(kds_path)
     return len(unique_paths)
+
+
+def build_gate_reasons(
+    *,
+    missing_metadata: int,
+    missing_readme_dirs: int,
+    hard_failures: list[str],
+    localization_debt: bool,
+    token_blocked: bool,
+    fixed_doc_id_drift: bool,
+    kds_md: int,
+    local_mirror_unique_docs: int,
+) -> list[str]:
+    reasons: list[str] = []
+    if missing_metadata:
+        reasons.append("missing_metadata")
+    if missing_readme_dirs:
+        reasons.append("missing_readme_dirs")
+    reasons.extend(f"hard_failure:{name}" for name in hard_failures)
+    if localization_debt:
+        reasons.append("localization_debt")
+    if token_blocked:
+        reasons.append("kds_token_blocked")
+    if fixed_doc_id_drift:
+        reasons.append("fixed_doc_id_drift")
+    if kds_md < local_mirror_unique_docs:
+        reasons.append("kds_mirror_coverage_gap")
+    return reasons
 
 
 def write_report(summary: dict[str, object], command_results: dict[str, str]) -> None:
@@ -111,6 +134,9 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         f"- KDS API 同步流水：{summary['api_sync_ledger_lines']}",
         f"- 元数据缺失：{summary['missing_metadata']}",
         f"- README 缺失目录：{summary['missing_readme_dirs']}",
+        f"- 中文本地化债务：{summary['localization_debt']}",
+        f"- 固定 doc_id 漂移：{summary['fixed_doc_id_drift']}",
+        f"- 门禁原因：{', '.join(summary['gate_reasons']) if summary['gate_reasons'] else '无'}",
         "",
         "## 状态分布",
         "",
@@ -151,7 +177,7 @@ def main() -> int:
     project_counts: Counter[str] = Counter()
     for path in docs:
         rel = path.relative_to(ROOT).as_posix()
-        if rel.startswith(".codex/skills/") and path.name == "SKILL.md":
+        if (rel.startswith(".codex/skills/") or rel.startswith(".agents/skills/")) and path.name == "SKILL.md":
             continue
         if is_okf_bundle_doc(path):
             status_counts["okf_derived"] += 1
@@ -177,12 +203,30 @@ def main() -> int:
     api_sync_ledger = ROOT / ".kds/sync-ledger.jsonl"
     api_sync_ledger_lines = len(api_sync_ledger.read_text(encoding="utf-8").splitlines()) if api_sync_ledger.exists() else 0
     checks = {
+        "loop_engineering_five_direction": run([sys.executable, "tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"]),
+        "loop_engineering_master_plan": run([sys.executable, "tools/kds-sync/validate_loop_engineering_master_plan.py"]),
+        "loop_capability_registry": run([sys.executable, "tools/kds-sync/validate_loop_capability_registry.py"]),
+        "loop_ui_quality_baseline": run([sys.executable, "tools/kds-sync/validate_loop_ui_quality_baseline.py"]),
+        "loop_session_mainline_control": run([sys.executable, "tools/kds-sync/validate_loop_session_mainline_control.py"]),
+        "current_session_mainline_declaration": run([sys.executable, "tools/kds-sync/validate_current_session_mainline_declaration.py"]),
+        "loop_session_registry": run([sys.executable, "tools/kds-sync/validate_loop_session_registry.py"]),
+        "session_mainline_preflight_enforcement": run([sys.executable, "tools/kds-sync/validate_session_mainline_preflight_enforcement.py"]),
+        "session_mainline_drift_watch": run([sys.executable, "tools/kds-sync/validate_session_mainline_drift_watch.py"]),
+        "session_mainline_handoff_request_gate": run([sys.executable, "tools/kds-sync/validate_session_mainline_handoff_request_gate.py"]),
         "document_pollution": run([sys.executable, "tools/kds-sync/check_document_pollution.py"]),
+        "fixed_doc_id_preservation": run([sys.executable, "scripts/api/validate_gckf_p0_document_control_preserves_fixed_doc_id.py"]),
+        "chinese_localization": run([sys.executable, "tools/kds-sync/check_chinese_localization_gate.py"]),
         "kds_token": run([sys.executable, "tools/kds-sync/validate_kds_token.py"]),
     }
-    hard_failures = [name for name, (code, _) in checks.items() if code != 0 and name != "kds_token"]
+    hard_failures = [
+        name
+        for name, (code, _) in checks.items()
+        if code != 0 and name not in {"kds_token", "chinese_localization"}
+    ]
     token_blocked = checks["kds_token"][0] != 0
-    if missing_metadata or missing_readme_dirs or hard_failures:
+    fixed_doc_id_drift = checks["fixed_doc_id_preservation"][0] != 0
+    localization_debt = checks["chinese_localization"][0] != 0
+    if missing_metadata or missing_readme_dirs or hard_failures or localization_debt:
         gate = "rework_required"
     elif token_blocked:
         gate = "blocked"
@@ -190,8 +234,19 @@ def main() -> int:
         gate = "partial"
     else:
         gate = "pass"
+    gate_reasons = build_gate_reasons(
+        missing_metadata=missing_metadata,
+        missing_readme_dirs=missing_readme_dirs,
+        hard_failures=hard_failures,
+        localization_debt=localization_debt,
+        token_blocked=token_blocked,
+        fixed_doc_id_drift=fixed_doc_id_drift,
+        kds_md=kds_md,
+        local_mirror_unique_docs=local_mirror_unique_docs,
+    )
     summary = {
         "gate": gate,
+        "gate_reasons": gate_reasons,
         "repo_md": len(docs),
         "kds_md": kds_md,
         "local_mirror_ledger_lines": local_mirror_ledger_lines,
@@ -199,6 +254,8 @@ def main() -> int:
         "api_sync_ledger_lines": api_sync_ledger_lines,
         "missing_metadata": missing_metadata,
         "missing_readme_dirs": missing_readme_dirs,
+        "localization_debt": localization_debt,
+        "fixed_doc_id_drift": fixed_doc_id_drift,
         "status_counts": dict(status_counts),
         "project_counts": dict(project_counts),
     }

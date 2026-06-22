@@ -1,0 +1,12 @@
+repo=https://github.com/Panniantong/Agent-Reach.git
+verified_head=22d7f03a59401b5740b380c3ad43e3ff7a9dc373
+latest_commit_time=2026-06-16T20:45:57+08:00
+package_name=agent-reach
+package_version=1.5.0
+python_requirement=>=3.10
+license=MIT
+source_file_count=89
+source_archive_copied=false
+locked_at=2026-06-22
+admission=limited_candidate_only
+production_integration_allowed=false

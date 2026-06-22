@@ -4,10 +4,10 @@ title: odf-phase5-change-request-governance-plan
 description: ODF Phase 5 准入变更申请治理方案
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/09-status/odf-phase5-change-request-governance-plan.md
 tags: [controlled, kds, odf, okf-derived, status]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md
 source_path: 09-status/odf-phase5-change-request-governance-plan.md
-source_hash: 1ce11bdb5b0a6748bc0e3086d29da70df9397b32c02256389d89e1e09a83578c
+source_hash: e8fa7fe305a31358ec3b8d82f6d4e867846543b689b2b931fa56fd0e552a4097
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 5 准入变更申请治理方案
 | --- | --- |
 | source_path | `09-status/odf-phase5-change-request-governance-plan.md` |
 | kds_path | `开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md` |
-| source_hash | `1ce11bdb5b0a6748bc0e3086d29da70df9397b32c02256389d89e1e09a83578c` |
+| source_hash | `e8fa7fe305a31358ec3b8d82f6d4e867846543b689b2b931fa56fd0e552a4097` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

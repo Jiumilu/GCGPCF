@@ -1,0 +1,45 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-ROLLBACK-DRILL-PREVIEW-CURRENT-STATE-D138-20260622",
+  "round_id": "GPCF-GCKF-P0-D138-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D137 current-state formal evidence execution verification plan preview 基础上刷新 formal evidence execution rollback drill preview，使旧 D39 正式 evidence 执行回滚演练预览分支显式吸收 D124-D137 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-rollback-drill-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-rollback-drill-preview-current-state-d138-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-verification-plan-preview-current-state-d137-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-execution-verification-plan-preview-current-state-d137-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_rollback_drill_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d39_formal_evidence_execution_rollback_drill_preview": "gckf_p0_formal_evidence_execution_rollback_drill_preview_dry_run=pass status=candidate_preview preview_type=formal_evidence_execution_rollback_drill_preview preview_status=candidate_preview execution_status=not_executed rollback_execution_status=not_executed execution_mode=dry_run_no_write source_verification_plan_status=candidate_preview source_verification_plan_execution_status=not_executed covered_verification_plan_status=candidate_preview rollback_triggers=8 rollback_drill_steps=24 required_rollback_refs=13 blocking_conditions=18 forbidden_actions=13",
+    "d137_current_state_verification_plan_preview": "gckf_p0_formal_evidence_execution_verification_plan_preview_current_state_d137=pass verification_plan_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed verification_scopes=11 verification_checks=27 hold_context_refs=6",
+    "d136_current_state_evidence_preview": "gckf_p0_formal_evidence_execution_evidence_preview_current_state_d136=pass evidence_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed preview_fields=22 preview_checks=25 hold_context_refs=6",
+    "d135_current_state_final_execution_request": "gckf_p0_formal_evidence_final_execution_request_current_state_d135=pass final_execution_request_status=candidate_request_with_hold maximum_state=review_ready_with_hold request_status=candidate_request_with_hold execution_status=not_executed required_inputs=19 request_checks=23 hold_context_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "rollback_scope": {
+    "rollback_triggers": 8,
+    "rollback_drill_steps": 27,
+    "required_rollback_refs": 14,
+    "blocking_conditions": 19,
+    "forbidden_actions": 15,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_verification_plan_preview_status": "candidate_preview_with_hold",
+    "source_verification_plan_execution_status": "not_executed",
+    "formal_harness_write_allowed": false,
+    "lifecycle_promotion_allowed": false,
+    "runtime_writeback_allowed": false,
+    "p1_admission_allowed": false,
+    "v1_upgrade_recommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution rollback drill preview 不执行 formal write、rollback 或 rollback result、verification result 写入。",
+    "本 current-state formal evidence execution rollback drill preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution rollback drill preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "基于 D138 current-state formal evidence execution rollback drill preview 刷新 formal evidence execution incident escalation preview current-state 分支，继续保持 no-write。"
+}

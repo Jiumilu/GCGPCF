@@ -1,0 +1,90 @@
+{
+  "evidence_id": "AGENT-REACH-HUMAN-REVIEW-DECISIONS-20260621",
+  "date": "2026-06-21",
+  "status": "pass",
+  "mode": "human_review_decisions_accept_reject_defer",
+  "execution_mode": "governance_pre_review_without_external_search",
+  "external_search_invoked": false,
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.json"
+  ],
+  "decision_batch_id": "GPCF-AGENT-REACH-HUMAN-REVIEW-DECISIONS-001",
+  "decision_policy": {
+    "allowed_decisions": [
+      "accept_limited",
+      "reject",
+      "defer"
+    ],
+    "auto_accept_allowed": false,
+    "accept_without_authoritative_verification_allowed": false,
+    "strong_rag_upgrade_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "decision_summary": {
+    "item_count": 5,
+    "accept_limited_count": 0,
+    "reject_count": 0,
+    "defer_count": 5,
+    "all_items_have_reason": true,
+    "all_items_keep_limited_admission": true,
+    "status_upgrade_allowed": false
+  },
+  "decisions": [
+    {
+      "id": "knowledge_provenance_rag",
+      "first_url": "https://gautierdorval.com/en/frameworks/rag-governance-retrieval-and-inference-control/",
+      "decision": "defer",
+      "reason": "Third-party interpretation may be useful as a candidate, but no primary or official source cross-check is recorded.",
+      "required_next_action": "Cross-check against primary RAG governance sources or internal WAES citation policy before any limited acceptance.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "green_supply_chain_policy",
+      "first_url": "https://www.chinesestandard.net/PDF/English.aspx/GBT39256-2020",
+      "decision": "defer",
+      "reason": "The result appears to reference a standard, but the page may be a commercial mirror and the authoritative standard source/version has not been verified.",
+      "required_next_action": "Verify the standard identifier, version, effective scope, and authoritative publication source.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "factory_execution_traceability",
+      "first_url": "https://sgsystemsglobal.com/glossary/mes-manufacturing-execution-system/",
+      "decision": "defer",
+      "reason": "Vendor glossary content cannot define GFIS source-of-record behavior without internal GFIS evidence and WAES review.",
+      "required_next_action": "Cross-check against internal GFIS execution traceability evidence and keep vendor content as background only.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "ai_agent_evidence_gate",
+      "first_url": "https://github.com/undercurrentai/aegis-mcp",
+      "decision": "defer",
+      "reason": "Open-source repository candidate requires license, maintenance, security relevance, and fit review before limited acceptance.",
+      "required_next_action": "Verify repository license, maintenance state, commit context, and whether it maps to WAES evidence-gate policy.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    },
+    {
+      "id": "agent_reach_capability",
+      "first_url": "https://github.com/Panniantong/Agent-Reach",
+      "decision": "defer",
+      "reason": "Repository is relevant to the capability under review, but production integration is not proven and version/license verification must remain explicit.",
+      "required_next_action": "Verify repository license, version alignment with the isolated PoC, and keep the result as candidate capability evidence only.",
+      "rag_admission": "limited",
+      "kds_admission": "limited_candidate_only"
+    }
+  ],
+  "admission_decision": {
+    "waes_review_status": "deferred_pending_authoritative_verification",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false,
+    "kds_canonical_write_count": 0
+  },
+  "next_gate": "authoritative_source_verification_for_deferred_items"
+}

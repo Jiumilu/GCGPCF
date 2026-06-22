@@ -1,0 +1,80 @@
+{
+  "id": "gckf-p0-handler-service-preflight-v0.1",
+  "description": "GC-Knowledge Fabric P0-D11 route handler to service method dry-run preflight. It validates static handler mapping only and does not start servers, connect databases, mutate KDS, or write business systems.",
+  "version": "v0.1",
+  "handlerMapPath": "packages/api/src/handler-map.ts",
+  "indexPath": "packages/api/src/index.ts",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "groups": [
+    {
+      "group": "kds_v2",
+      "routeFile": "packages/api/src/kds/v2/routes.ts",
+      "serviceFile": "packages/api/src/kds/v2/service.ts",
+      "serviceName": "kdsV2Service",
+      "expectedEndpointCount": 11
+    },
+    {
+      "group": "waes",
+      "routeFile": "packages/api/src/waes/routes.ts",
+      "serviceFile": "packages/api/src/waes/service.ts",
+      "serviceName": "waesService",
+      "expectedEndpointCount": 7
+    },
+    {
+      "group": "kwe",
+      "routeFile": "packages/api/src/kwe/routes.ts",
+      "serviceFile": "packages/api/src/kwe/service.ts",
+      "serviceName": "kweService",
+      "expectedEndpointCount": 10
+    },
+    {
+      "group": "gfis_assistant",
+      "routeFile": "packages/api/src/gfis/routes.ts",
+      "serviceFile": "packages/api/src/gfis/service.ts",
+      "serviceName": "gfisService",
+      "expectedEndpointCount": 4
+    },
+    {
+      "group": "governance_loop",
+      "routeFile": "packages/api/src/governance/routes.ts",
+      "serviceFile": "packages/api/src/governance/service.ts",
+      "serviceName": "governanceService",
+      "expectedEndpointCount": 8
+    }
+  ],
+  "requiredMapFlags": [
+    "directBusinessWrite: false",
+    "acceptedLifecycleWrite: false",
+    "externalApiWrite: false",
+    "noWrite: true"
+  ],
+  "forbiddenRuntimeTerms": [
+    "fetch(",
+    "axios",
+    "PrismaClient",
+    "new Pool",
+    "INSERT INTO",
+    "UPDATE ",
+    "DELETE FROM",
+    "TRUNCATE",
+    "DROP TABLE",
+    "listen(",
+    "createServer("
+  ],
+  "expectedSummary": {
+    "groupCount": 5,
+    "endpointCount": 40,
+    "handlerMapCount": 40,
+    "serviceCoverageCount": 40,
+    "indexExportCount": 1,
+    "forbiddenRuntimeTermMatches": 0,
+    "typescriptNoEmit": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "accepted_for_water_stewardship_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "water_stewardship_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "water_withdrawal_metering_record_gaps": 0,
+  "water_stress_area_assessment_gaps": 0,
+  "wastewater_discharge_permit_gaps": 0,
+  "effluent_quality_test_report_gaps": 0,
+  "stormwater_pollution_prevention_plan_gaps": 0,
+  "water_recycling_reuse_record_gaps": 0,
+  "supplier_water_stewardship_commitment_gaps": 0
+}

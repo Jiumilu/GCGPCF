@@ -1,0 +1,25 @@
+{
+  "id": "gfis-endpoint-no-write-smoke",
+  "expectedEndpoints": [
+    {"method": "POST", "path": "/api/v2/gfis/knowledge-assistant/query", "routeMode": "assistant_query"},
+    {"method": "POST", "path": "/api/v2/gfis/usage-assistant/query", "routeMode": "usage_guidance"},
+    {"method": "POST", "path": "/api/v2/gfis/document-acceptance/check", "routeMode": "document_acceptance_check"},
+    {"method": "POST", "path": "/api/v2/gfis/writeback-candidates", "routeMode": "writeback_candidate"}
+  ],
+  "expected": {
+    "endpointCount": 4,
+    "assistantQueryCount": 1,
+    "usageGuidanceCount": 1,
+    "documentAcceptanceCheckCount": 1,
+    "writebackCandidateCount": 1,
+    "routesRequiringKdsSearch": 4,
+    "routesRequiringWaesGate": 4,
+    "routesRequiringKweFinality": 4,
+    "writesFact": 0,
+    "writesBusinessSystem": 0,
+    "writesAcceptedFact": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0,
+    "noWrite": true
+  }
+}

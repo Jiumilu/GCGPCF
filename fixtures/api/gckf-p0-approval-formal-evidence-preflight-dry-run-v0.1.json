@@ -1,0 +1,82 @@
+{
+  "contractId": "GCKF-P0-APPROVAL-FORMAL-EVIDENCE-PREFLIGHT-DRY-RUN-V0.1",
+  "description": "P0-D27 approval-to-formal-evidence preflight dry-run derived from D24 decision template. It checks prerequisites before any formal Harness evidence write.",
+  "preflightStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceDecisionTemplate": "fixtures/api/gckf-p0-harness-decision-template-dry-run-v0.1.json",
+  "coveredDecisionOutcomes": ["approved_for_formal_harness_evidence"],
+  "excludedDecisionOutcomes": ["repair_required", "rejected", "scope_violation_found"],
+  "preflightChecklist": {
+    "id": "GCKF-P0-FORMAL-EVIDENCE-PREFLIGHT-001",
+    "preflightType": "formal_harness_evidence_write_preflight",
+    "sourceDecisionOutcome": "approved_for_formal_harness_evidence",
+    "preflightStatus": "candidate",
+    "requiredFields": [
+      "reviewerId",
+      "reviewedAt",
+      "evidenceRefs",
+      "sourceCandidateRecordRef",
+      "decisionRationale",
+      "targetHarnessEvidenceType"
+    ],
+    "requiredEvidenceRefs": [
+      "D19 ledger",
+      "D20 readiness",
+      "D21 human checklist",
+      "D22 input packet",
+      "D23 candidate record",
+      "D24 decision template"
+    ],
+    "preflightChecks": [
+      "source_candidate_record_is_candidate",
+      "decision_template_status_is_candidate",
+      "decision_outcome_is_approved_for_formal_harness_evidence",
+      "no_repair_required_open_for_same_candidate",
+      "no_rejected_archive_for_same_candidate",
+      "no_scope_violation_open_for_same_candidate",
+      "human_or_harness_governance_reviewer_present",
+      "formal_write_requires_separate_harness_action"
+    ],
+    "forbiddenActions": [
+      "write_formal_evidence",
+      "promote_lifecycle",
+      "enable_business_writeback",
+      "mark_p0_accepted"
+    ]
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-decision-template-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_harness_decision_template_dry_run.py",
+    "docs/gc-knowledge-fabric/harness-decision-template-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D24-001.md"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "preflightStatus": "candidate",
+    "preflightType": "formal_harness_evidence_write_preflight",
+    "sourceDecisionTemplateStatus": "candidate",
+    "coveredDecisionOutcomeCount": 1,
+    "excludedDecisionOutcomeCount": 3,
+    "requiredFieldCount": 6,
+    "requiredEvidenceRefCount": 6,
+    "preflightCheckCount": 8,
+    "requiredSourceRefCount": 4,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

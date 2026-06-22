@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import re
 from pathlib import Path
 
@@ -83,7 +84,23 @@ def validate_concept(path: Path) -> dict[str, str]:
         fail(f"invalid_source_of_record:{rel(path)}")
     if meta.get("derivation_policy") != "metadata_only_no_body_copy":
         fail(f"invalid_derivation_policy:{rel(path)}")
+    source_path = meta.get("source_path", "")
+    if not source_path:
+        fail(f"missing_source_path:{rel(path)}")
+    source = ROOT / source_path
+    if not source.exists():
+        fail(f"missing_source:{rel(path)}:{source_path}")
+    source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
+    if meta.get("source_hash") != source_hash:
+        fail(f"stale_source_hash:{rel(path)}:{source_path}")
+    if f"`{source_path}`" not in body:
+        fail(f"missing_source_path_citation:{rel(path)}")
     return meta
+
+
+def markdown_links(path: Path) -> set[str]:
+    text = read_text(path)
+    return set(match.group(1) for match in re.finditer(r"\[[^\]]+\]\(([^)]+)\)", text))
 
 
 def main() -> int:
@@ -91,25 +108,43 @@ def main() -> int:
     parser.add_argument("--bundle", default=str(DEFAULT_BUNDLE))
     args = parser.parse_args()
 
-    bundle = Path(args.bundle)
+    bundle = (ROOT / args.bundle).resolve() if not Path(args.bundle).is_absolute() else Path(args.bundle).resolve()
     if not bundle.exists():
         fail(f"missing_bundle:{rel(bundle)}")
 
     concept_count = 0
     type_counts: dict[str, int] = {}
+    concept_paths: set[str] = set()
+    index_links: set[str] = set()
     for path in sorted(bundle.rglob("*.md")):
         if path.name == "index.md":
             validate_index(path, bundle)
+            base = path.parent
+            for link in markdown_links(path):
+                if link.startswith(("http://", "https://", "file://", "/../")):
+                    continue
+                target = (base / link).resolve()
+                try:
+                    target.relative_to(bundle.resolve())
+                except ValueError:
+                    fail(f"index_link_escapes_bundle:{rel(path)}:{link}")
+                if not target.exists():
+                    fail(f"missing_index_link_target:{rel(path)}:{link}")
+                index_links.add(target.relative_to(bundle.resolve()).as_posix())
             continue
         if path.name == "log.md":
             validate_log(path)
             continue
         meta = validate_concept(path)
         concept_count += 1
+        concept_paths.add(path.relative_to(bundle).as_posix())
         type_counts[meta["type"]] = type_counts.get(meta["type"], 0) + 1
 
     if concept_count == 0:
         fail("empty_bundle")
+    missing_backlinks = sorted(concept_paths - index_links)
+    if missing_backlinks:
+        fail(f"concept_not_indexed:{missing_backlinks[0]}")
 
     type_summary = ",".join(f"{key}:{type_counts[key]}" for key in sorted(type_counts))
     print(
@@ -118,7 +153,8 @@ def main() -> int:
         "okf_version=0.1 "
         f"concepts={concept_count} "
         f"types={type_summary} "
-        "reserved_filenames=pass frontmatter=pass source_of_record=kds derivation_policy=metadata_only_no_body_copy"
+        "reserved_filenames=pass frontmatter=pass source_of_record=kds "
+        "derivation_policy=metadata_only_no_body_copy links=pass backlinks=pass stale=pass"
     )
     return 0
 

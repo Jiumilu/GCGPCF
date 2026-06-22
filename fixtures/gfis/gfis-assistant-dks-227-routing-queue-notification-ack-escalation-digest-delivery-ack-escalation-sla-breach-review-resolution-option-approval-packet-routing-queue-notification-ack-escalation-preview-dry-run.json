@@ -1,0 +1,902 @@
+{
+  "escalationPreviews": [
+    {
+      "escalationPreviewId": "gfis-dks-227-ack-escalation-team-brain-001",
+      "acknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-team-brain-001"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-dks-225-routing-queue-notification-team-brain-001"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-dks-224-approval-packet-routing-queue-team-brain-001"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-team-brain-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-team-brain-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-team-brain-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "escalationType": "team_acknowledgement_escalation_preview",
+      "escalationStatus": "escalation_preview_only",
+      "escalationDecision": "show_team_acknowledgement_escalation_preview",
+      "escalationScope": "team_internal",
+      "escalationLevel": "team_lead_candidate_level",
+      "escalationTrigger": "acknowledgement_timeout_candidate",
+      "candidateEscalationRecipientRefs": [
+        "dks-227-escalation-recipient-team-brain-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-227-team-brain"
+      ],
+      "escalationReasonRefs": [
+        "acknowledgement_timeout_candidate"
+      ],
+      "blockedEscalationCount": 0,
+      "boundaryRefs": [
+        "dks-227-escalation-boundary-team-brain",
+        "boundary/no-write",
+        "boundary/no-timeout-event"
+      ],
+      "sourceAcknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-team-brain-001"
+      ],
+      "escalationSummaryRef": "summary-dks-227-escalation-team-brain-001",
+      "lineageHintRefs": [
+        "lineage-dks-227-escalation-team-brain",
+        "lineage-dks-226-notification-ack-team-brain-001",
+        "lineage-dks-225-routing-queue-notification-team-brain-001",
+        "lineage-dks-224-approval-packet-routing-queue-team-brain-001",
+        "lineage-dks-223-team-brain-001",
+        "lineage-dks-222-team-brain-001",
+        "lineage-dks-221-team-brain-001"
+      ],
+      "reasonRefs": [
+        "reason-dks-227-escalation-team-brain"
+      ],
+      "escalationNoteRefs": [
+        "note-dks-227-escalation-team-brain-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-227-escalation-team-brain"
+      ],
+      "blockedActions": [
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "escalationPreviewId": "gfis-dks-227-ack-escalation-project-pkc-002",
+      "acknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-project-pkc-002"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-dks-225-routing-queue-notification-project-pkc-002"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-dks-224-approval-packet-routing-queue-project-pkc-002"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-project-pkc-002"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-project-pkc-002"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-project-pkc-002"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "pkc",
+      "escalationType": "project_acknowledgement_escalation_preview",
+      "escalationStatus": "escalation_evidence_required",
+      "escalationDecision": "show_project_acknowledgement_escalation_preview",
+      "escalationScope": "project_internal",
+      "escalationLevel": "project_owner_candidate_level",
+      "escalationTrigger": "evidence_gap_candidate",
+      "candidateEscalationRecipientRefs": [
+        "dks-227-escalation-recipient-project-pkc-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-227-project-pkc"
+      ],
+      "escalationReasonRefs": [
+        "evidence_required_candidate"
+      ],
+      "blockedEscalationCount": 0,
+      "boundaryRefs": [
+        "dks-227-escalation-boundary-project-pkc",
+        "boundary/no-write",
+        "boundary/no-timeout-event"
+      ],
+      "sourceAcknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-project-pkc-002"
+      ],
+      "escalationSummaryRef": "summary-dks-227-escalation-project-pkc-002",
+      "lineageHintRefs": [
+        "lineage-dks-227-escalation-project-pkc",
+        "lineage-dks-226-notification-ack-project-pkc-002",
+        "lineage-dks-225-routing-queue-notification-project-pkc-002",
+        "lineage-dks-224-approval-packet-routing-queue-project-pkc-002",
+        "lineage-dks-223-project-pkc-002",
+        "lineage-dks-222-project-pkc-002",
+        "lineage-dks-221-project-pkc-002"
+      ],
+      "reasonRefs": [
+        "reason-dks-227-escalation-project-pkc"
+      ],
+      "escalationNoteRefs": [
+        "note-dks-227-escalation-project-pkc-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-227-escalation-project-pkc"
+      ],
+      "blockedActions": [
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "escalationPreviewId": "gfis-dks-227-ack-escalation-governance-brain-003",
+      "acknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-governance-brain-003"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-dks-225-routing-queue-notification-governance-brain-003"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-dks-224-approval-packet-routing-queue-governance-brain-003"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-governance-brain-003"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-governance-brain-003"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-governance-brain-003"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "escalationType": "governance_acknowledgement_escalation_preview",
+      "escalationStatus": "escalation_metadata_boundary",
+      "escalationDecision": "show_governance_acknowledgement_escalation_preview",
+      "escalationScope": "governance_review",
+      "escalationLevel": "governance_reviewer_candidate_level",
+      "escalationTrigger": "metadata_boundary_candidate",
+      "candidateEscalationRecipientRefs": [
+        "dks-227-escalation-recipient-governance-brain-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-227-governance-brain"
+      ],
+      "escalationReasonRefs": [
+        "metadata_boundary_candidate"
+      ],
+      "blockedEscalationCount": 1,
+      "boundaryRefs": [
+        "dks-227-escalation-boundary-governance-brain",
+        "boundary/no-write",
+        "boundary/no-timeout-event"
+      ],
+      "sourceAcknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-governance-brain-003"
+      ],
+      "escalationSummaryRef": "summary-dks-227-escalation-governance-brain-003",
+      "lineageHintRefs": [
+        "lineage-dks-227-escalation-governance-brain",
+        "lineage-dks-226-notification-ack-governance-brain-003",
+        "lineage-dks-225-routing-queue-notification-governance-brain-003",
+        "lineage-dks-224-approval-packet-routing-queue-governance-brain-003",
+        "lineage-dks-223-governance-brain-003",
+        "lineage-dks-222-governance-brain-003",
+        "lineage-dks-221-governance-brain-003"
+      ],
+      "reasonRefs": [
+        "reason-dks-227-escalation-governance-brain"
+      ],
+      "escalationNoteRefs": [
+        "note-dks-227-escalation-governance-brain-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-227-escalation-governance-brain"
+      ],
+      "blockedActions": [
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "escalationPreviewId": "gfis-dks-227-ack-escalation-external-blocked-gfis-assistant-004",
+      "acknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-external-blocked-gfis-assistant-004"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-dks-225-routing-queue-notification-external-blocked-gfis-assistant-004"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-dks-224-approval-packet-routing-queue-external-blocked-gfis-assistant-004"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-external_blocked-gfis_assistant-004"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-external_blocked-gfis_assistant-004"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-external_blocked-gfis_assistant-004"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "escalationType": "external_blocked_acknowledgement_escalation_preview",
+      "escalationStatus": "escalation_external_blocked",
+      "escalationDecision": "show_external_blocked_acknowledgement_escalation_preview",
+      "escalationScope": "external_blocked",
+      "escalationLevel": "external_blocked_candidate_level",
+      "escalationTrigger": "external_share_blocked_candidate",
+      "candidateEscalationRecipientRefs": [
+        "dks-227-escalation-recipient-external-blocked-gfis-assistant-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-227-external-blocked-gfis-assistant"
+      ],
+      "escalationReasonRefs": [
+        "external_share_blocked_candidate"
+      ],
+      "blockedEscalationCount": 1,
+      "boundaryRefs": [
+        "dks-227-escalation-boundary-external-blocked-gfis-assistant",
+        "boundary/no-write",
+        "boundary/no-timeout-event"
+      ],
+      "sourceAcknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-external-blocked-gfis-assistant-004"
+      ],
+      "escalationSummaryRef": "summary-dks-227-escalation-external-blocked-gfis-assistant-004",
+      "lineageHintRefs": [
+        "lineage-dks-227-escalation-external-blocked-gfis-assistant",
+        "lineage-dks-226-notification-ack-external-blocked-assistant-004",
+        "lineage-dks-225-routing-queue-notification-external-blocked-assistant-004",
+        "lineage-dks-224-approval-packet-routing-queue-external-blocked-assistant-004",
+        "lineage-dks-223-external_blocked-gfis_assistant-004",
+        "lineage-dks-222-external_blocked-gfis_assistant-004",
+        "lineage-dks-221-external_blocked-gfis_assistant-004"
+      ],
+      "reasonRefs": [
+        "reason-dks-227-escalation-external-blocked-gfis-assistant"
+      ],
+      "escalationNoteRefs": [
+        "note-dks-227-escalation-external-blocked-gfis-assistant-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-227-escalation-external-blocked-gfis-assistant"
+      ],
+      "blockedActions": [
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "escalationPreviewId": "gfis-dks-227-ack-escalation-committee-gfis-assistant-005",
+      "acknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-committee-gfis-assistant-005"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-dks-225-routing-queue-notification-committee-gfis-assistant-005"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-dks-224-approval-packet-routing-queue-committee-gfis-assistant-005"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-committee-gfis_assistant-005"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-committee-gfis_assistant-005"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-committee-gfis_assistant-005"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "escalationType": "committee_acknowledgement_escalation_preview",
+      "escalationStatus": "escalation_committee_required",
+      "escalationDecision": "show_committee_acknowledgement_escalation_preview",
+      "escalationScope": "committee_review",
+      "escalationLevel": "committee_candidate_level",
+      "escalationTrigger": "committee_review_candidate",
+      "candidateEscalationRecipientRefs": [
+        "dks-227-escalation-recipient-committee-gfis-assistant-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-227-committee-gfis-assistant"
+      ],
+      "escalationReasonRefs": [
+        "committee_review_candidate"
+      ],
+      "blockedEscalationCount": 1,
+      "boundaryRefs": [
+        "dks-227-escalation-boundary-committee-gfis-assistant",
+        "boundary/no-write",
+        "boundary/no-timeout-event"
+      ],
+      "sourceAcknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-committee-gfis-assistant-005"
+      ],
+      "escalationSummaryRef": "summary-dks-227-escalation-committee-gfis-assistant-005",
+      "lineageHintRefs": [
+        "lineage-dks-227-escalation-committee-gfis-assistant",
+        "lineage-dks-226-notification-ack-committee-assistant-005",
+        "lineage-dks-225-routing-queue-notification-committee-assistant-005",
+        "lineage-dks-224-approval-packet-routing-queue-committee-assistant-005",
+        "lineage-dks-223-committee-gfis_assistant-005",
+        "lineage-dks-222-committee-gfis_assistant-005",
+        "lineage-dks-221-committee-gfis_assistant-005"
+      ],
+      "reasonRefs": [
+        "reason-dks-227-escalation-committee-gfis-assistant"
+      ],
+      "escalationNoteRefs": [
+        "note-dks-227-escalation-committee-gfis-assistant-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-227-escalation-committee-gfis-assistant"
+      ],
+      "blockedActions": [
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "escalationPreviewId": "gfis-dks-227-ack-escalation-freeze-gfis-assistant-006",
+      "acknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-freeze-gfis-assistant-006"
+      ],
+      "notificationPreviewRefs": [
+        "gfis-dks-225-routing-queue-notification-freeze-gfis-assistant-006"
+      ],
+      "routingQueuePreviewRefs": [
+        "gfis-dks-224-approval-packet-routing-queue-freeze-gfis-assistant-006"
+      ],
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-freeze-gfis_assistant-006"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-freeze-gfis_assistant-006"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-freeze-gfis_assistant-006"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "escalationType": "freeze_acknowledgement_escalation_preview",
+      "escalationStatus": "escalation_freeze_required",
+      "escalationDecision": "show_freeze_acknowledgement_escalation_preview",
+      "escalationScope": "freeze_review",
+      "escalationLevel": "freeze_reviewer_candidate_level",
+      "escalationTrigger": "freeze_review_candidate",
+      "candidateEscalationRecipientRefs": [
+        "dks-227-escalation-recipient-freeze-gfis-assistant-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-227-freeze-gfis-assistant"
+      ],
+      "escalationReasonRefs": [
+        "freeze_review_candidate"
+      ],
+      "blockedEscalationCount": 0,
+      "boundaryRefs": [
+        "dks-227-escalation-boundary-freeze-gfis-assistant",
+        "boundary/no-write",
+        "boundary/no-timeout-event"
+      ],
+      "sourceAcknowledgementPreviewRefs": [
+        "gfis-dks-226-notification-ack-freeze-gfis-assistant-006"
+      ],
+      "escalationSummaryRef": "summary-dks-227-escalation-freeze-gfis-assistant-006",
+      "lineageHintRefs": [
+        "lineage-dks-227-escalation-freeze-gfis-assistant",
+        "lineage-dks-226-notification-ack-freeze-assistant-006",
+        "lineage-dks-225-routing-queue-notification-freeze-assistant-006",
+        "lineage-dks-224-approval-packet-routing-queue-freeze-assistant-006",
+        "lineage-dks-223-freeze-gfis_assistant-006",
+        "lineage-dks-222-freeze-gfis_assistant-006",
+        "lineage-dks-221-freeze-gfis_assistant-006"
+      ],
+      "reasonRefs": [
+        "reason-dks-227-escalation-freeze-gfis-assistant"
+      ],
+      "escalationNoteRefs": [
+        "note-dks-227-escalation-freeze-gfis-assistant-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-227-escalation-freeze-gfis-assistant"
+      ],
+      "blockedActions": [
+        "create_escalation",
+        "create_timeout_event",
+        "create_kwe_work_item",
+        "create_notification",
+        "create_acknowledgement",
+        "create_receipt",
+        "create_read_receipt",
+        "update_delivery_status",
+        "send_external_notification",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsEscalation": false,
+      "createsTimeoutEvent": false,
+      "createsKweWorkItem": false,
+      "createsNotification": false,
+      "createsAcknowledgement": false,
+      "createsReceipt": false,
+      "createsReadReceipt": false,
+      "updatesDeliveryStatus": false,
+      "sendsExternalNotification": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesEscalation": 0,
+        "writesTimeoutEvent": 0,
+        "writesKweWorkItem": 0,
+        "writesNotification": 0,
+        "writesAcknowledgement": 0,
+        "writesReceipt": 0,
+        "writesReadReceipt": 0,
+        "writesDeliveryStatus": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expected": {
+    "escalationPreviewCount": 6,
+    "brainSurface": 2,
+    "pkcSurface": 1,
+    "gfisAssistantSurface": 3,
+    "totalEscalationLevelCount": 6,
+    "totalCandidateEscalationRecipientCount": 6,
+    "totalRequiredEvidenceCount": 6,
+    "totalEscalationReasonCount": 6,
+    "totalBlockedEscalationCount": 3,
+    "createsEscalations": 0,
+    "createsTimeoutEvents": 0,
+    "createsKweWorkItems": 0,
+    "createsNotifications": 0,
+    "createsAcknowledgements": 0,
+    "createsReceipts": 0,
+    "createsReadReceipts": 0,
+    "updatesDeliveryStatus": 0,
+    "sendsExternalNotifications": 0,
+    "createsApprovalAssignments": 0,
+    "locksApprovers": 0,
+    "createsApprovalPackets": 0,
+    "createsApprovalRequests": 0,
+    "createsApprovalDecisions": 0,
+    "createsCommitteeDecisions": 0,
+    "createsFreezeActions": 0,
+    "createsHarnessEvidence": 0,
+    "createsWaesGateResults": 0,
+    "persistsEvidence": 0,
+    "approvesBusinessWrite": 0,
+    "promotesLifecycle": 0,
+    "completesCommitteeDecision": 0,
+    "writesGfis": 0,
+    "writesGpc": 0,
+    "writesErp": 0,
+    "writesMes": 0,
+    "writesEscalation": 0,
+    "writesTimeoutEvent": 0,
+    "writesKweWorkItem": 0,
+    "writesNotification": 0,
+    "writesAcknowledgement": 0,
+    "writesReceipt": 0,
+    "writesReadReceipt": 0,
+    "writesDeliveryStatus": 0,
+    "writesApprovalAssignment": 0,
+    "writesApprovalLock": 0,
+    "writesApprovalPacket": 0,
+    "writesApprovalRequest": 0,
+    "writesApprovalDecision": 0,
+    "writesCommitteeDecision": 0,
+    "writesFreezeAction": 0,
+    "writesWaesGateResult": 0,
+    "writesHarnessEvidence": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesExternalApi": 0
+  }
+}

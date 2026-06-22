@@ -1,0 +1,18 @@
+gate_id: WAES-LCX-SENSITIVE-PASS-THROUGH-v1
+default_action: block_or_passthrough
+never_compress:
+  - kds_token
+  - authorization_header
+  - cookie
+  - api_key
+  - customer_contract_original
+  - pod_original
+  - finance_credential
+  - production_credential
+  - private_key
+allowed_when:
+  - content_is_sanitized
+  - owner_authorized
+  - harness_evidence_recorded
+  - waes_decision_is_pass
+raw_text_storage_allowed: false

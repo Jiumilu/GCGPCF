@@ -1,0 +1,86 @@
+policy_id: okf.waes_action_gate_precheck_policy
+version: v1.0
+owner: WAES
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run WAES action gate prechecks derived from KWE action
+  validation workpacks. Prechecks identify candidate WAES gates only. They do
+  not persist WAES gate results, create KWE work items, mutate KDS lifecycle,
+  write business systems, complete approvals, confirm revenue or scores, or
+  call external APIs.
+
+required_fields:
+  - precheck_id
+  - workpack_ref
+  - tenant_id
+  - project_id
+  - route_ref
+  - action_type
+  - requested_gate_types
+  - precheck_status
+  - reason_codes
+  - required_actions
+  - reviewer_requirement
+  - harness_evidence_required
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - promotes_lifecycle
+  - no_write
+
+requested_gate_types:
+  - source_gate
+  - evidence_gate
+  - dsr_gate
+  - sensitive_data_gate
+  - writeback_gate
+  - committee_gate
+  - freeze_gate
+
+precheck_statuses:
+  - precheck_passed
+  - repair_required
+  - human_required
+  - committee_required
+  - freeze_required
+  - blocked
+
+reason_codes:
+  - missing_source
+  - missing_evidence
+  - acl_unknown
+  - sensitive_raw_content
+  - owner_confirmation_missing
+  - committee_required_by_policy
+  - major_violation_risk
+  - blocked_route_acknowledged
+
+reviewer_requirements:
+  - none
+  - human_required
+  - committee_required
+  - governance_owner_required
+
+hard_boundaries:
+  precheck_only: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  precheck_is_not_gate_result: true
+  precheck_is_not_approval_completion: true
+  precheck_is_not_committee_decision_completion: true
+  precheck_is_not_business_writeback: true
+
+no_write_guards:
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_business_system: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

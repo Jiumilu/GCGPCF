@@ -1,0 +1,79 @@
+policy_id: agent-used-knowledge-policy
+version: v0.1
+description: MMC AgentUsedKnowledge invocation evidence and overread blocking contract.
+capability_types:
+  - rag_query
+  - candidate_fact_generation
+  - candidate_sop_generation
+  - writeback_suggestion
+  - document_acceptance_check
+  - governance_review
+minimum_invocation_fields:
+  - invocation_id
+  - tenant_id
+  - agent_id
+  - user_id
+  - capability_id
+  - capability_type
+  - purpose
+  - requested_scope
+  - allowed_scope
+  - timestamp
+  - input_object_refs
+  - retrieved_object_refs
+  - source_refs
+  - evidence_refs
+  - waes_gate_refs
+  - output_candidate_refs
+  - overread_signals
+  - outcome
+  - writes_accepted
+  - writes_public
+  - writes_business_system
+  - writes_external_api
+overread_risk_signals:
+  - cross_tenant_access
+  - cross_supplier_access
+  - acl_missing
+  - domain_scope_mismatch
+  - rag_blocked_used
+  - t5_used_as_final_fact
+  - sensitive_raw_content_requested
+  - unverified_strong_conclusion
+  - promotion_bypass_attempt
+  - external_share_without_gate
+allowed_outcomes:
+  - candidate_fact
+  - candidate_sop
+  - candidate_writeback
+  - candidate_gap
+  - candidate_risk
+  - candidate_summary
+  - metadata_only_answer
+  - blocked_with_reason
+hard_boundaries:
+  agent_can_write_accepted: false
+  agent_can_write_public: false
+  agent_can_modify_governance_evidence: false
+  cross_supplier_without_acl_allowed: false
+  t5_final_fact_allowed: false
+  promotion_without_kwe_allowed: false
+  business_system_write_allowed: false
+  revenue_or_score_confirmation_allowed: false
+  sensitive_raw_content_allowed_in_evidence: false
+  harness_evidence_required_for_high_risk: true
+required_gates:
+  - acl_filter
+  - domain_scope_filter
+  - pool_scope_filter
+  - rag_admission_filter
+  - sensitive_data_gate
+  - external_share_gate
+  - waes_overread_gate
+no_write_assertions:
+  writes_accepted: 0
+  writes_public: 0
+  writes_governance_evidence: 0
+  writes_business_system: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-DDBD7C90C2
-title: {项目名} Loop State
+title: {项目名} 循环状态模板
 project: GPCF
 related_projects: [GPC, WAES, GPCF]
 domain: templates
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/loop-state-template.md
 source_path: templates/loop-state-template.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# {项目名} Loop State
+# {项目名} 循环状态模板
 
 > 复制此模板到项目仓 `docs/harness/loop-state.md`，替换 `{...}` 占位符。
 

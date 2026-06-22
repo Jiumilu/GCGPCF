@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-D4FE78D770
-title: GPCF-L4-GFIS-REPAIR-242
+title: GPCF-L4-GFIS-REPAIR-242 release override intake 空扫描
 project: GPCF
 related_projects: [GFIS, GPC, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-242.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-GFIS-REPAIR-242
+# GPCF-L4-GFIS-REPAIR-242 release override intake 空扫描
 
 ## 基本信息
 
@@ -90,7 +90,7 @@ runtime_sop_e2e=repair_required
 ## 验证
 
 - GFIS `python3 -m py_compile ...` passed。
-- GFIS release override approval intake empty scan validator passed。
+- GFIS 放行 override approval intake 空扫描校验器：通过。
 - GFIS release override negative fixture guard validator passed。
 - GFIS runtime SOP validator returned expected `repair_required` / exit 2。
 - GFIS `npm run test:e2e` passed 26 tests；仅作为 demo/frontend regression。

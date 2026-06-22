@@ -1,0 +1,66 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-LOCATOR-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-LOCATOR-008",
+  "status": "locator_completed_pending_added_not_mapped_to_untracked_scannable_file",
+  "generated_at": "2026-06-22",
+  "objective": "建立 GFIS CodeGraph residual added 只读 locator，判断 pendingChanges.added=1 是否能映射到 Git 未跟踪且 CodeGraph 可扫描但未入索引的文件。",
+  "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-DRIFT-007",
+  "locator_script": "tools/kds-sync/locate_gfis_codegraph_residual_added.py",
+  "locator_result": {
+    "locator_id": "GFIS-CODEGRAPH-RESIDUAL-ADDED-LOCATOR-20260622",
+    "gfis_root": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+    "pre_sync_pending_changes": {
+      "added": 1,
+      "modified": 0,
+      "removed": 0
+    },
+    "post_sync_pending_changes": {
+      "added": 1,
+      "modified": 0,
+      "removed": 0
+    },
+    "indexed_file_count": 1022,
+    "untracked_files_total": 226,
+    "untracked_codegraph_scannable_files": 73,
+    "untracked_codegraph_scannable_not_indexed_count": 0,
+    "untracked_codegraph_scannable_not_indexed": [],
+    "sync_probe_contains_added_one_zero_nodes": true,
+    "exact_pending_file_identified": false,
+    "locator_conclusion": "pending_added_not_mapped_to_untracked_scannable_file",
+    "cleanup_performed": false,
+    "git_write_performed": false
+  },
+  "interpretation": {
+    "exact_file_identified": false,
+    "likely_category": "codegraph_tool_state_or_non_git_scan_delta",
+    "reasoning": "All 73 Git-untracked CodeGraph-scannable files are already present in the CodeGraph file index, while sync still reports Added: 1 / 0 nodes and status remains pendingChanges.added=1.",
+    "closure_possible_this_round": false
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_file_cleanup_performed": false,
+    "codegraph_sync_only_closure": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "recommended_next_actions": [
+    "do not delete or stage GFIS untracked files",
+    "perform CodeGraph tool-level residual audit if closure is required",
+    "consider codegraph unlock or clean reindex only after explicit authorization",
+    "keep GFIS CodeGraph sync-only closure false until pendingChanges.added=0"
+  ],
+  "next_round_requires_authorization": true,
+  "next_round_authorization_question": {
+    "question": "是否授权执行 GFIS CodeGraph clean reindex audit?",
+    "recommended_answer": "暂不授权 clean reindex，先保留 locator 证据并继续项目群治理收口。",
+    "risk": "clean reindex 会重建 .codegraph 本地索引，虽不触碰 Git tracked 文件，但会改变本地索引状态。"
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-TOOL-STATE-AUDIT-009"
+}

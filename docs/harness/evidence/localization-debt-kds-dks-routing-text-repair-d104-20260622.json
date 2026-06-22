@@ -1,0 +1,61 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-KDS-DKS-ROUTING-TEXT-REPAIR-D104-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/loops/loop-round-GPCF-KDS-DKS-149..173 routing queue text first batch",
+  "action": "repair_kds_dks_routing_queue_and_acknowledgement_text_localization_debt",
+  "before": {
+    "all_repo_findings": 117,
+    "target_file_findings": 27
+  },
+  "after": {
+    "all_repo_findings": 81,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -36,
+    "target_file_findings": -27
+  },
+  "sync_surface_note": "D104 target files reduced by 27 findings. After scoped document control and index normalization, the stable all-repo localization finding count is 81.",
+  "changed_files": [
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-149.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-150.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-151.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-152.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-153.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-154.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-155.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-156.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-157.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-158.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-159.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-160.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-161.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-162.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-163.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-164.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-166.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-167.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-168.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-171.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-172.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-173.md"
+  ],
+  "changed_line_items": 27,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_kds_dks_routing_text_repair_d104.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

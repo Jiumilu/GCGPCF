@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-06-22T01:27:02.819197+00:00",
+  "bundle": ".okf/bundles/kds-v0.1",
+  "concepts": 36,
+  "queries": [
+    {
+      "query": "KDS 开发空间安全规范",
+      "expected_source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "top_source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "top_okf_path": ".okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "top_title": "GlobalCloud 项目群 KDS 开发空间安全规范",
+      "score": 2,
+      "status": "pass"
+    },
+    {
+      "query": "ODF Phase 7 小批量样本",
+      "expected_source_path": "09-status/odf-phase7-small-batch-execution-plan.md",
+      "top_source_path": "09-status/odf-phase7-small-batch-execution-plan.md",
+      "top_okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "top_title": "ODF Phase 7 小批量样本执行方案",
+      "score": 4,
+      "status": "pass"
+    },
+    {
+      "query": "KDS OKF v0.1 全量派生层实施方案",
+      "expected_source_path": "09-status/kds-okf-v01-full-implementation-plan.md",
+      "top_source_path": "09-status/kds-okf-v01-full-implementation-plan.md",
+      "top_okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "top_title": "KDS OKF v0.1 全量派生层实施方案",
+      "score": 4,
+      "status": "pass"
+    },
+    {
+      "query": "KDS Markdown 化 OKF 兼容层闭环方案",
+      "expected_source_path": "09-status/kds-md-okf-implementation-closure-plan.md",
+      "top_source_path": "09-status/kds-md-okf-implementation-closure-plan.md",
+      "top_okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "top_title": "KDS Markdown 化与 OKF 兼容层全面实施闭环方案",
+      "score": 4,
+      "status": "pass"
+    }
+  ],
+  "status": "pass"
+}

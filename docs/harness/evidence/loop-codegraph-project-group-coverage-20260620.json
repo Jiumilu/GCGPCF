@@ -1,0 +1,194 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-PROJECT-GROUP-COVERAGE-20260620",
+  "status": "codegraph_project_group_indexed",
+  "date": "2026-06-20",
+  "codegraph": {
+    "package": "@colbymchenry/codegraph",
+    "version": "1.0.1",
+    "telemetry": "disabled",
+    "mcp_install_executed": false,
+    "storage": ".codegraph/",
+    "git_tracking_entries_for_codegraph": 0
+  },
+  "project_group": {
+    "repo_count": 14,
+    "studio_included": true,
+    "was_included": true,
+    "status_upgrade_allowed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false
+  },
+  "repositories": [
+    {
+      "project": "GlobalCloud Brain",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "files": 150,
+      "nodes": 1990,
+      "edges": 4124,
+      "db_size": "4.43 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud GFIS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+      "files": 1022,
+      "nodes": 13152,
+      "edges": 38142,
+      "db_size": "65.24 MB",
+      "status": "indexed_with_internal_pending_notice",
+      "pending_notice": "Pending Changes: Added 1 files after sync; sync reported Added: 1 - 0 nodes",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud GPC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC",
+      "files": 70,
+      "nodes": 705,
+      "edges": 1995,
+      "db_size": "2.77 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud KDS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS",
+      "files": 516,
+      "nodes": 3437,
+      "edges": 6986,
+      "db_size": "9.65 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud MMC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC",
+      "files": 84,
+      "nodes": 522,
+      "edges": 1083,
+      "db_size": "1.20 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud PKC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC",
+      "files": 110,
+      "nodes": 1034,
+      "edges": 2685,
+      "db_size": "2.41 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud PVAOS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS",
+      "files": 604,
+      "nodes": 8899,
+      "edges": 28838,
+      "db_size": "25.67 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "files": 778,
+      "nodes": 14202,
+      "edges": 46489,
+      "db_size": "43.00 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0,
+      "loop_context_detected": true,
+      "loop_admission_status": "loop_ready_partial",
+      "loop_admission_validator": "scripts/validate_studio_loop_admission.py",
+      "quality_readiness_status": "test_build_harness_pass",
+      "quality_readiness_validator": "scripts/validate_studio_quality_readiness.py",
+      "test_evidence": "docs/harness/evidence/studio-test-run-20260620.json",
+      "quality_gate_repair_evidence": "docs/harness/evidence/studio-quality-gate-repair-20260620.json",
+      "harness_foundation_evidence": "docs/harness/evidence/studio-harness-foundation-20260620.json",
+      "workflow_release_boundary_evidence": "docs/harness/evidence/studio-workflow-release-boundary-20260620.json",
+      "npm_test_executed": true,
+      "npm_test_status": "pass",
+      "npm_build_executed": true,
+      "npm_build_status": "pass",
+      "harness_check_executed": true,
+      "harness_check_status": "pass",
+      "workflow_release_boundary_status": "review_required_before_commit"
+    },
+    {
+      "project": "GlobalCloud WAES",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+      "files": 281,
+      "nodes": 3511,
+      "edges": 11298,
+      "db_size": "10.38 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XGD",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD",
+      "files": 181,
+      "nodes": 3645,
+      "edges": 9914,
+      "db_size": "8.57 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XiaoC",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC",
+      "files": 1176,
+      "nodes": 15520,
+      "edges": 64515,
+      "db_size": "57.11 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XiaoG",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG",
+      "files": 752,
+      "nodes": 13943,
+      "edges": 45987,
+      "db_size": "42.53 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCoud GPCF",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+      "files": 363,
+      "nodes": 5158,
+      "edges": 14109,
+      "db_size": "15.26 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "WAS 世界资产体系",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系",
+      "files": 30,
+      "nodes": 70,
+      "edges": 209,
+      "db_size": "0.27 MB",
+      "status": "up_to_date",
+      "codegraph_git_status_entries": 0,
+      "loop_context_detected": true,
+      "remote": "https://github.com/Jiumilu/GCWAS.git",
+      "role": "semantic_foundation_project",
+      "was_validator_status": "pass",
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    }
+  ],
+  "non_claims": [
+    "does not run codegraph install or modify MCP configuration",
+    "does not prove GFIS runtime SOP E2E passed",
+    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, integrated, or production_ready status",
+    "does not authorize production write, external API write, database migration, permission change, deployment, commit, push, or merge"
+  ]
+}

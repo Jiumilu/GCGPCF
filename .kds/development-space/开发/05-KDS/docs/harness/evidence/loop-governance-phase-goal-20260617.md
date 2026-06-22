@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-28A638C09E
-title: Loop Governance Phase Goal Evidence
+title: Loop 治理阶段目标证据
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, GPC, WAES, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,22 +11,22 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/loop-governance-phase-goal-20260617.md
 source_path: docs/harness/evidence/loop-governance-phase-goal-20260617.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Governance Phase Goal Evidence
+# Loop 治理阶段目标证据
 
-## Evidence Summary
+## 证据摘要
 
 Evidence ID: `LOOP-GOV-PHASE-20260617`
 
-This evidence records the establishment and first execution of a LOOP governance phase goal.
+本证据记录 LOOP 治理阶段目标的建立和首次执行。
 
-The phase goal improves governance quality, efficiency, self-correction, boundary safety, and reproducibility. It does not replace the GFIS implementation main process and does not upgrade accepted or integrated status.
+该阶段目标用于提升治理质量、效率、自我纠错、边界安全和可复现性。它不替代 GFIS 实施主流程，也不升级 accepted 或 integrated 状态。
 
-## Deliverables
+## 交付物
 
 | Type | Path | Purpose |
 |---|---|---|
@@ -35,7 +35,7 @@ The phase goal improves governance quality, efficiency, self-correction, boundar
 | JSON evidence | `docs/harness/evidence/loop-governance-phase-goal-20260617.json` | Machine-readable phase evidence |
 | Markdown evidence | `docs/harness/evidence/loop-governance-phase-goal-20260617.md` | Human-readable phase evidence |
 
-## Current Governance Facts
+## 当前治理事实
 
 | Field | Value |
 |---|---|
@@ -50,9 +50,9 @@ The phase goal improves governance quality, efficiency, self-correction, boundar
 | verified | 0 |
 | accepted_integrated_allowed | false |
 
-## Governance Execution Checks
+## 治理执行检查
 
-The phase target is considered executed only when these local commands pass or preserve the expected blocked repair ceiling:
+只有当以下本地命令通过，或保持预期的阻断修复上限时，阶段目标才视为已执行：
 
 | Command | Expected Meaning |
 |---|---|
@@ -63,14 +63,14 @@ The phase target is considered executed only when these local commands pass or p
 | `python3 tools/kds-sync/validate_loop_governance_role_boundary.py` | Governance process remains separate from implementation process |
 | `python3 tools/kds-sync/validate_continuous_round_substance.py` | Continuous round accounting remains self-consistent |
 
-## Non-Claims
+## 非声明事项
 
-- This evidence is not a customer order, platform order receipt, source-of-record, WAES confirmation, KDS write receipt, POD, UAT, or customer satisfaction artifact.
-- This evidence does not create a runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted status, or integrated status.
-- This evidence does not execute production write, external API write, schema sync, bench migrate, deployment, permission change, Git push, or Git commit.
+- 本证据不是客户订单、平台订单回执、source-of-record、WAES confirmation、KDS write receipt、POD、UAT 或客户满意度材料。
+- 本证据不创建 runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 状态或 integrated 状态。
+- 本证据不执行生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、Git push 或 Git commit。
 
-## Next Governance Work
+## 下一步治理工作
 
-1. Keep LOOP efficiency debt visible until reviewed or explicitly accepted as historical debt.
-2. Build a governance dashboard for quality, efficiency, self-correction, and boundary-safety metrics.
-3. Continue sending implementation-main-process next steps toward real GFIS source-record submission without performing the business submission in governance.
+1. 保持 LOOP 效率债可见，直到完成审查或明确接受为历史债务。
+2. 建立覆盖质量、效率、自我纠错和边界安全指标的治理看板。
+3. 持续向实施主流程发送真实 GFIS source-record 提交的下一步建议，但不在治理流程中执行业务提交。

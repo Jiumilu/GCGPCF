@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2373AEE37
 title: GlobalCloud 项目群在 Codex 中的模型分工与成本控制方案
 project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md
 source_path: 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

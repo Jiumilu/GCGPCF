@@ -1,0 +1,7 @@
+adapter_id: claude
+mode: agent_wrap_dry_run
+launcher_required: loop
+allowed_profiles: [dev_fast, review_safe, log_debug]
+blocked_profiles: [compliance_strict_for_output_shaper]
+evidence_required: true
+production_enabled: false

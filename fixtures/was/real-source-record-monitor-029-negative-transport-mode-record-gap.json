@@ -1,0 +1,27 @@
+{
+  "fixture_id": "real-source-record-monitor-029-negative-transport-mode-record-gap",
+  "fixture_only": true,
+  "submitted_real_candidate_files": 0,
+  "transport_mode_record_gaps": 1,
+  "bill_of_lading_or_waybill_gaps": 0,
+  "customs_declaration_gaps": 0,
+  "chain_of_custody_handoff_gaps": 0,
+  "proof_of_delivery_gaps": 0,
+  "logistics_emission_record_gaps": 0,
+  "accepted_for_logistics_compliance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "logistics_compliance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

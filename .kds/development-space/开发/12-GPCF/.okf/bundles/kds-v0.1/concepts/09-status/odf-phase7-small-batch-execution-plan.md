@@ -4,10 +4,10 @@ title: ODF Phase 7 小批量样本执行方案
 description: ODF Phase 7 小批量样本执行方案
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/09-status/odf-phase7-small-batch-execution-plan.md
 tags: [controlled, kds, odf, okf-derived, status]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md
 source_path: 09-status/odf-phase7-small-batch-execution-plan.md
-source_hash: 2ba95f2fd09bcb295ddf90f9de96077945c34c344fd24d83997ab85a24d870a5
+source_hash: 39ae0c77610a371d41bb142ed7554b6aad732276f6432244c6342bc0b3e25861
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 7 小批量样本执行方案
 | --- | --- |
 | source_path | `09-status/odf-phase7-small-batch-execution-plan.md` |
 | kds_path | `开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md` |
-| source_hash | `2ba95f2fd09bcb295ddf90f9de96077945c34c344fd24d83997ab85a24d870a5` |
+| source_hash | `39ae0c77610a371d41bb142ed7554b6aad732276f6432244c6342bc0b3e25861` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

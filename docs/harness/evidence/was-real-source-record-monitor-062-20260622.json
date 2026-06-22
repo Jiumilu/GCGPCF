@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-062-20260622",
+  "status": "was_real_source_record_monitor_062_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-062",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-061",
+  "purpose": "Sixty-second independent monitor pass for green supply chain product use-phase environmental performance, use-phase energy performance record, customer operation environmental instruction, maintenance consumable record, use-phase emission or resource model, field performance feedback, software or firmware efficiency update record, and end-user environmental claim substantiation.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "use_phase_energy_performance_record_gaps": 0,
+    "customer_operation_environmental_instruction_gaps": 0,
+    "maintenance_consumable_record_gaps": 0,
+    "use_phase_emission_or_resource_model_gaps": 0,
+    "field_performance_feedback_gaps": 0,
+    "software_or_firmware_efficiency_update_record_gaps": 0,
+    "end_user_environmental_claim_substantiation_gaps": 0,
+    "accepted_for_use_phase_environmental_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "use_phase_environmental_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "use_phase_energy_performance_record_gap",
+      "customer_operation_environmental_instruction_gap",
+      "maintenance_consumable_record_gap",
+      "use_phase_emission_or_resource_model_gap",
+      "field_performance_feedback_gap",
+      "software_or_firmware_efficiency_update_record_gap",
+      "end_user_environmental_claim_substantiation_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "use_phase_environmental_requirements": [
+    "use_phase_energy_performance_record",
+    "customer_operation_environmental_instruction",
+    "maintenance_consumable_record",
+    "use_phase_emission_or_resource_model",
+    "field_performance_feedback",
+    "software_or_firmware_efficiency_update_record",
+    "end_user_environmental_claim_substantiation"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-063",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer use-phase energy performance record, customer operation environmental instruction, maintenance consumable record, use-phase emission or resource model, field performance feedback, software or firmware efficiency update record, or end-user environmental claim substantiation",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

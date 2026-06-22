@@ -1,0 +1,40 @@
+policy_id: okf.flow_policy
+version: v0.1
+status: draft
+owner: KWE
+updated_at: "2026-06-20"
+standard_chain:
+  - raw_input
+  - candidate_intake
+  - pool_classification
+  - source_registration
+  - evidence_binding
+  - ai_analysis
+  - waes_gate_check
+  - kwe_work_item
+  - human_or_committee_confirmation
+  - kds_fact_entry
+  - rag_admission
+  - writeback_candidate
+  - business_system_writeback
+  - harness_evidence
+  - gap_close_or_bounty_continue
+promotion_rules:
+  fact_candidate:
+    requires: [source_refs, evidence_refs, waes_gate_passed, human_or_committee_confirmation]
+  sop_candidate:
+    requires: [scope, gate_points, responsibility_boundary, review_record]
+  writeback_candidate:
+    requires: [waes_writeback_gate, business_owner_confirmation]
+  contribution_record:
+    requires: [human_or_committee_confirmation]
+  revenue_record:
+    requires: [basis_classification, evidence_refs]
+  gap_record:
+    requires: [acceptance_result]
+  decision_record:
+    requires: [committee_or_authorized_decision_record]
+hard_boundaries:
+  ai_cannot_write_lifecycle: [verified, accepted, published]
+  loop_cannot_auto_complete: true
+  template_is_not_fact: true

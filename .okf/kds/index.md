@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/.okf/kds/index.md
 source_path: .okf/kds/index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -61,6 +61,7 @@ superseded_by: []
 | KDS Phase 10 Self-refresh 稳定化工作包 | `docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` | `开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` |
 | KDS OKF v0.1 全量派生层实施方案 | `09-status/kds-okf-v01-full-implementation-plan.md` | `开发/91-治理与验收/09-status/kds-okf-v01-full-implementation-plan.md` |
 | KDS OKF v0.1 Phase 1 派生 Bundle 报告 | `docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md` | `开发/05-KDS/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md` |
+| KDS OKF v0.1 Agent 消费 Smoke Test | `docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md` | `开发/05-KDS/docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md` |
 | KDS OKF v0.1 派生 Bundle 根索引 | `.okf/bundles/kds-v0.1/index.md` | `开发/12-GPCF/.okf/bundles/kds-v0.1/index.md` |
 
 ## Ledger And Gates

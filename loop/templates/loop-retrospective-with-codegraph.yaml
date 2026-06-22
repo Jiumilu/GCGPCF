@@ -1,0 +1,16 @@
+loop_retrospective_with_codegraph:
+  retrospective_id:
+  task_id:
+  repo:
+  codegraph:
+    snapshot_id:
+    query_count:
+    impact_paths_count:
+    impacted_tests_count:
+    evidence_ref:
+  learned_constraints: []
+  next_loop_inputs: []
+  candidate_policy_updates: []
+  boundaries:
+    candidate_only: true
+    automatic_status_upgrade: false

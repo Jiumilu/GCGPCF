@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2656290CFC
 title: GlobalCloud 绿色供应链体系总体实施路线与交付保障方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md
 source_path: 01-architecture/GlobalCloud绿色供应链体系总体实施路线与交付保障方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

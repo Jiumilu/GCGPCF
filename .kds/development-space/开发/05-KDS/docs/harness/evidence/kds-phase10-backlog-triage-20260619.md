@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-A584BC19A5
-title: KDS Phase 10 Backlog Triage Report
+title: KDS Phase 10 Backlog 分诊报告
 project: KDS
 related_projects: [GFIS, GPC, WAES, KDS, Brain]
 domain: docs
@@ -11,20 +11,20 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md
 source_path: docs/harness/evidence/kds-phase10-backlog-triage-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# KDS Phase 10 Backlog Triage Report
+# KDS Phase 10 Backlog 分诊报告
 
 generated_at: 2026-06-19T03:24:36.532001+00:00
 
-## Scope
+## 范围
 
-This report classifies the current KDS sync-plan backlog for controlled execution. It is not a KDS write operation and does not authorize global blind sync.
+本报告对当前 KDS sync-plan backlog 进行分组，用于受控执行。它不是 KDS 写入操作，也不授权全局 blind sync。
 
-## Sync Plan Snapshot
+## Sync Plan 快照
 
 | metric | value |
 | --- | --- |
@@ -37,7 +37,7 @@ This report classifies the current KDS sync-plan backlog for controlled executio
 | conflicts | 0 |
 | missing_local | 0 |
 
-## By Action
+## 按 Action 分类
 
 | action | count |
 | --- | --- |
@@ -45,7 +45,7 @@ This report classifies the current KDS sync-plan backlog for controlled executio
 | update | 160 |
 | self_refresh | 2 |
 
-## By Bucket
+## 按 Bucket 分类
 
 | bucket | count |
 | --- | --- |
@@ -61,7 +61,7 @@ This report classifies the current KDS sync-plan backlog for controlled executio
 | evidence_sample_backlog | 2 |
 | self_refresh_control_surface | 3 |
 
-## By Disposition
+## 按 Disposition 分类
 
 | disposition | count |
 | --- | --- |
@@ -75,14 +75,14 @@ This report classifies the current KDS sync-plan backlog for controlled executio
 | hold_until_self_refresh_stable | 22 |
 | hold_self_refresh | 3 |
 
-## No-Blind-Write Queue Policy
+## No-Blind-Write 队列策略
 
-- `directed_sync_candidate`: may be synced only by explicit `--source-path` after gates pass.
-- `hold_self_refresh` and `hold_until_self_refresh_stable`: do not chase with repeated writes; stabilize generation first.
-- `requires_*_review`: group into small batches with human or owner review before any KDS write.
-- `requires_manual_triage`: no write until classified.
+- `directed_sync_candidate`：只能在 gates 通过后，通过明确的 `--source-path` 同步。
+- `hold_self_refresh` 和 `hold_until_self_refresh_stable`：不要用重复写入追赶，必须先稳定生成过程。
+- `requires_*_review`：在任何 KDS 写入前，先分成小批次并进行人工或 owner review。
+- `requires_manual_triage`：分类完成前不写入。
 
-## Sample Queue Items
+## 样例队列项
 
 | action | bucket | disposition | source_path |
 | --- | --- | --- | --- |
@@ -127,7 +127,7 @@ This report classifies the current KDS sync-plan backlog for controlled executio
 | create | agent_team_backlog | requires_owner_review | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md |
 | create | agent_team_backlog | requires_owner_review | 05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md |
 
-## Boundaries
+## 边界
 
 - No global blind KDS sync.
 - No accepted/integrated status upgrade.

@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "applicable_policy_gaps": 0,
+  "jurisdiction_compliance_gaps": 0,
+  "sanctions_screening_gaps": 0,
+  "restricted_goods_list_gaps": 0,
+  "license_customs_trade_control_gaps": 1,
+  "end_use_statement_gaps": 0,
+  "accepted_for_policy_regulatory_profile": 1,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "policy_regulatory_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 1,
+    "review_queue": 0,
+    "runtime_intake": 1,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": true,
+    "integrated": false,
+    "production_ready": false
+  }
+}

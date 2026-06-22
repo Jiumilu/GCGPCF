@@ -1,0 +1,43 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-EVIDENCE-BOUNDARY-REPAIR-D110-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md,loop-engineering-five-direction-implementation-20260622.md,session-main-task-summary-declaration-boundary-20260622.md,was-real-source-record-candidate-precheck-execution-20260622.md,was-real-source-record-candidate-precheck-execution-002-20260622.md",
+  "action": "repair_evidence_boundary_localization_debt",
+  "before": {
+    "all_repo_findings": 27,
+    "target_file_findings": 6
+  },
+  "after": {
+    "all_repo_findings": 21,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -6,
+    "target_file_findings": -6
+  },
+  "changed_files": [
+    "docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md",
+    "docs/harness/evidence/loop-engineering-five-direction-implementation-20260622.md",
+    "docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md",
+    "docs/harness/evidence/was-real-source-record-candidate-precheck-execution-20260622.md",
+    "docs/harness/evidence/was-real-source-record-candidate-precheck-execution-002-20260622.md"
+  ],
+  "changed_line_items": 11,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_evidence_boundary_repair_d110.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

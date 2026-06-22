@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-52B18BDBE9
 title: GlobalCloud 绿色供应链体系 LLM Wiki 与 Brain 测试评估矩阵
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD]
+related_projects: [GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md
 source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链体系LLM Wiki与Brain测试评估矩阵.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

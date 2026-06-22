@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/docs/harness/GPC/README.md
 source_path: docs/harness/GPC/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -42,4 +42,4 @@ KDS 空间：`开发`
 | GPCF-DOC-556B3EE58F | loop-state | docs/harness/GPC/loop-state.md | GPC | controlled |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | GPC | controlled |
 | GPCF-DOC-C02896A291 | loop-round-GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | GPC | controlled |
-| GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | GPC | controlled |
+| GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | GPC | controlled |

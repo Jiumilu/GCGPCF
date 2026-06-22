@@ -1,0 +1,77 @@
+policy_id: okf.committee_decision_policy
+version: v0.1
+status: draft
+owner: GPCF
+updated_at: "2026-06-20"
+decision_triggers:
+  - point_confirmation_dispute
+  - revenue_distribution_dispute
+  - major_violation
+  - bounty_settlement_dispute
+  - potential_to_formal_revenue_conversion
+  - cross_unit_contribution_dispute
+  - third_party_pool_distribution
+  - project_internal_dispute
+  - major_rag_strong_reference_dispute
+  - revenue_pool_rule_dispute
+minimum_input_fields:
+  - decision_id
+  - tenant_id
+  - issue_ref
+  - decision_type
+  - trigger_reason
+  - related_object_refs
+  - evidence_refs
+  - participants
+  - voting_method
+  - requested_by
+  - requires_freeze_review
+minimum_output_fields:
+  - decision_id
+  - result
+  - reason_codes
+  - required_actions
+  - freeze_scope
+  - visibility_scope
+  - harness_evidence_ref
+  - effective_state
+  - writes_business_system
+  - writes_revenue_distribution
+  - writes_score_confirmation
+  - writes_external_api
+freeze_scopes:
+  - object
+  - rag_admission
+  - contribution_score
+  - revenue_distribution
+  - quota_transfer
+  - bounty_settlement
+  - external_share
+reason_codes:
+  - evidence_conflict
+  - contribution_boundary_unclear
+  - revenue_basis_dispute
+  - major_violation_risk
+  - cross_unit_conflict
+  - bounty_acceptance_dispute
+  - rag_strong_reference_risk
+  - external_visibility_risk
+voting_methods:
+  - majority_vote
+  - supermajority_vote
+  - authorized_owner_decision
+hard_boundaries:
+  decision_domain: governance
+  committee_does_not_replace_waes_gate: true
+  committee_cannot_write_business_system: true
+  committee_cannot_directly_distribute_revenue: true
+  committee_cannot_directly_confirm_score: true
+  harness_evidence_required: true
+  external_account_authorized_view_only: true
+no_write_assertions:
+  writes_business_system: 0
+  writes_revenue_distribution: 0
+  writes_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

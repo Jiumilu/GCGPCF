@@ -4,13 +4,11 @@ okf_version: "0.1"
 
 # KDS OKF v0.1 Derived Bundle
 
-This bundle is derived from controlled KDS documents. KDS remains the source of record.
+This bundle is derived from controlled GlobalCloud documents. KDS remains the source of record.
 
 # Concepts
 
 * [KDS 开发空间安全规范](concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md) - `02-governance/GlobalCloud项目群KDS开发空间安全规范.md`
-* [KDS 开发空间同步计划](concepts/09-status/kds-development-space-sync-plan.md) - `09-status/kds-development-space-sync-plan.md`
-* [KDS 同步台账](concepts/09-status/kds-development-space-sync-register.md) - `09-status/kds-development-space-sync-register.md`
 * [KDS 只读探测报告](concepts/09-status/kds-readonly-probe-report.md) - `09-status/kds-readonly-probe-report.md`
 * [KDS Markdown 化闭环方案](concepts/09-status/kds-md-okf-implementation-closure-plan.md) - `09-status/kds-md-okf-implementation-closure-plan.md`
 * [KDS 关联数据检索机制](concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md) - `03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md`
@@ -46,5 +44,3 @@ This bundle is derived from controlled KDS documents. KDS remains the source of 
 * [KDS Phase 10 Backlog 分诊报告](concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md) - `docs/harness/evidence/kds-phase10-backlog-triage-20260619.md`
 * [KDS Phase 10 Self-refresh 稳定化工作包](concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md) - `docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md`
 * [KDS OKF v0.1 全量派生层实施方案](concepts/09-status/kds-okf-v01-full-implementation-plan.md) - `09-status/kds-okf-v01-full-implementation-plan.md`
-* [KDS OKF v0.1 Phase 1 派生 Bundle 报告](concepts/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md) - `docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md`
-* [KDS OKF v0.1 派生 Bundle 根索引](concepts/.okf/bundles/kds-v0.1/index-concept.md) - `.okf/bundles/kds-v0.1/index.md`

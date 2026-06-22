@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "supplier_production_plan_gaps": 0,
+  "supplier_material_allocation_gaps": 0,
+  "in_process_inspection_record_gaps": 0,
+  "pre_shipment_inspection_record_gaps": 1,
+  "packing_list_gaps": 0,
+  "advance_shipping_notice_gaps": 0,
+  "supplier_shipment_release_gaps": 0,
+  "accepted_for_supplier_shipment_readiness_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "supplier_shipment_readiness_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Generate an OKF v0.1 derived bundle from controlled KDS documents."""
+"""Generate an OKF v0.1 derived bundle from controlled documents."""
 
 from __future__ import annotations
 
 import argparse
 import hashlib
 import re
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -15,6 +16,14 @@ DEFAULT_SOURCE_INDEX = ROOT / ".okf/kds/index.md"
 DEFAULT_OUT = ROOT / ".okf/bundles/kds-v0.1"
 DEFAULT_REPORT = ROOT / "docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md"
 TODAY = "2026-06-19"
+EXCLUDED_DYNAMIC_SEEDS = {
+    "09-status/globalcloud-document-control-register.md",
+    "09-status/kds-development-space-sync-plan.md",
+    "09-status/kds-development-space-sync-register.md",
+    "09-status/document-deprecation-register.md",
+    "09-status/globalcloud-document-health-report.md",
+    "docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md",
+}
 
 
 def read_text(path: Path) -> str:
@@ -85,13 +94,21 @@ def concept_type(source_path: str, title: str) -> str:
         return "Governance Report"
     if "index" in lower or "索引" in title:
         return "Knowledge Index"
+    if source_path.startswith("01-architecture/") or "架构" in title:
+        return "Architecture Document"
     return "KDS Document"
 
 
-def tags_for(source_path: str, title: str) -> list[str]:
-    tags = ["kds", "okf-derived", "controlled"]
+def tags_for(source_path: str, title: str, bundle_name: str) -> list[str]:
+    tags = [bundle_name, "okf-derived", "controlled"]
+    if bundle_name != "kds":
+        tags.append("kds")
     if source_path.startswith("09-status/"):
         tags.append("status")
+    if source_path.startswith("01-architecture/"):
+        tags.append("architecture")
+    if source_path.startswith("02-governance/"):
+        tags.append("governance")
     if source_path.startswith("docs/harness/evidence/"):
         tags.append("evidence")
     if "ODF" in title or "odf" in source_path:
@@ -114,7 +131,7 @@ def markdown_link_escape(text: str) -> str:
     return text.replace("|", "\\|").replace("\n", " ")
 
 
-def generate_concept(row: dict[str, str]) -> tuple[Path, str] | None:
+def generate_concept(row: dict[str, str], bundle_name: str) -> tuple[Path, str] | None:
     source_rel = row["source_path"]
     source = ROOT / source_rel
     if not source.exists():
@@ -125,7 +142,7 @@ def generate_concept(row: dict[str, str]) -> tuple[Path, str] | None:
     description = row["purpose"] or title
     timestamp = meta.get("last_reviewed", TODAY)
     source_hash = hashlib.sha256(source.read_bytes()).hexdigest()
-    tags = ", ".join(tags_for(source_rel, title))
+    tags = ", ".join(tags_for(source_rel, title, bundle_name))
     ctype = concept_type(source_rel, title)
     out_rel = concept_path(source_rel)
     root_link = f"/{out_rel.as_posix()}"
@@ -173,15 +190,15 @@ derivation_policy: metadata_only_no_body_copy
     return out_rel, content
 
 
-def write_index(bundle: Path, concepts: list[tuple[Path, dict[str, str]]]) -> None:
+def write_index(bundle: Path, concepts: list[tuple[Path, dict[str, str]]], bundle_title: str) -> None:
     lines = [
         "---",
         'okf_version: "0.1"',
         "---",
         "",
-        "# KDS OKF v0.1 Derived Bundle",
+        f"# {bundle_title}",
         "",
-        "This bundle is derived from controlled KDS documents. KDS remains the source of record.",
+        "This bundle is derived from controlled GlobalCloud documents. KDS remains the source of record.",
         "",
         "# Concepts",
         "",
@@ -191,10 +208,10 @@ def write_index(bundle: Path, concepts: list[tuple[Path, dict[str, str]]]) -> No
     write_text(bundle / "index.md", "\n".join(lines) + "\n")
 
 
-def write_log(bundle: Path, count: int) -> None:
+def write_log(bundle: Path, count: int, bundle_title: str) -> None:
     generated_at = datetime.now(timezone.utc).isoformat()
     lines = [
-        "# KDS OKF Bundle Update Log",
+        f"# {bundle_title} Update Log",
         "",
         f"## {TODAY}",
         "",
@@ -221,42 +238,48 @@ def write_dir_indexes(bundle: Path) -> None:
         write_text(directory / "index.md", "\n".join(lines) + "\n")
 
 
-def write_report(report_path: Path, bundle: Path, concepts: list[tuple[Path, dict[str, str]]]) -> None:
+def doc_id_for(path: Path) -> str:
+    digest = hashlib.sha1(path.relative_to(ROOT).as_posix().encode("utf-8")).hexdigest()[:10].upper()
+    return f"GPCF-DOC-{digest}"
+
+
+def write_report(report_path: Path, bundle: Path, concepts: list[tuple[Path, dict[str, str]]], bundle_name: str, bundle_title: str) -> None:
     rows = "\n".join(
         f"| {row['purpose']} | `{row['source_path']}` | `{(bundle / rel_path).relative_to(ROOT).as_posix()}` |"
         for rel_path, row in concepts
     )
     content = f"""---
-doc_id: GPCF-DOC-2EC45F2D0B
-title: KDS OKF v0.1 Phase 1-2 Derived Bundle Report
-project: KDS
+doc_id: {doc_id_for(report_path)}
+title: {bundle_title} Report
+project: GPCF
 related_projects: [GPCF, KDS, WAES]
 domain: docs
 status: controlled
 version: v1.0
-owner: KDS
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/05-KDS/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md
-source_path: docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md
+kds_path: 开发/05-KDS/{report_path.relative_to(ROOT).as_posix()}
+source_path: {report_path.relative_to(ROOT).as_posix()}
 sync_direction: bidirectional
-last_reviewed: 2026-06-19
+last_reviewed: 2026-06-20
 supersedes: []
 superseded_by: []
 ---
 
-# KDS OKF v0.1 Phase 1-2 Derived Bundle Report
+# {bundle_title} Report
 
-日期：2026-06-19
+日期：2026-06-20
 
 ## 结论
 
-已开始执行 KDS 到 OKF v0.1 的受控派生层实施。当前输出为 metadata-only OKF bundle，已覆盖 `.okf/kds/index.md` 当前纳入的 KDS seed 文档；不复制 KDS 源文档正文，不替代 KDS 主存，不升级业务状态。
+已开始执行 {bundle_name} 到 OKF v0.1 的受控派生层实施。当前输出为 metadata-only OKF bundle；不复制源文档正文，不替代 KDS 主存，不升级业务状态。
 
 ## Bundle
 
 | item | value |
 | --- | --- |
 | bundle_path | `{bundle.relative_to(ROOT).as_posix()}` |
+| bundle_name | `{bundle_name}` |
 | concepts | {len(concepts)} |
 | policy | `metadata_only_no_body_copy` |
 | source_of_record | `KDS / Git controlled documents` |
@@ -283,29 +306,40 @@ def main() -> int:
     parser.add_argument("--source-index", default=str(DEFAULT_SOURCE_INDEX))
     parser.add_argument("--out", default=str(DEFAULT_OUT))
     parser.add_argument("--report", default=str(DEFAULT_REPORT))
+    parser.add_argument("--bundle-name", default="kds")
+    parser.add_argument("--bundle-title", default="KDS OKF v0.1 Derived Bundle")
     parser.add_argument("--limit", type=int, default=25)
     args = parser.parse_args()
 
-    source_index = Path(args.source_index)
-    out = Path(args.out)
-    report = Path(args.report)
-    rows = parse_source_index(source_index)
+    source_index = (ROOT / args.source_index).resolve() if not Path(args.source_index).is_absolute() else Path(args.source_index)
+    out = (ROOT / args.out).resolve() if not Path(args.out).is_absolute() else Path(args.out)
+    report = (ROOT / args.report).resolve() if not Path(args.report).is_absolute() else Path(args.report)
+    if out.exists():
+        shutil.rmtree(out)
+    report_rel = report.relative_to(ROOT).as_posix()
+    rows = [
+        row
+        for row in parse_source_index(source_index)
+        if row["source_path"] != report_rel
+        and not row["source_path"].startswith(".okf/bundles/")
+        and row["source_path"] not in EXCLUDED_DYNAMIC_SEEDS
+    ]
     if args.limit:
         rows = rows[: args.limit]
 
     concepts: list[tuple[Path, dict[str, str]]] = []
     for row in rows:
-        generated = generate_concept(row)
+        generated = generate_concept(row, args.bundle_name)
         if generated is None:
             continue
         rel_path, content = generated
         write_text(out / rel_path, content)
         concepts.append((rel_path, row))
 
-    write_index(out, concepts)
-    write_log(out, len(concepts))
+    write_index(out, concepts, args.bundle_title)
+    write_log(out, len(concepts), args.bundle_title)
     write_dir_indexes(out)
-    write_report(report, out, concepts)
+    write_report(report, out, concepts, args.bundle_name, args.bundle_title)
     print(f"okf_bundle_generate=pass bundle={out.relative_to(ROOT).as_posix()} concepts={len(concepts)} report={report.relative_to(ROOT).as_posix()}")
     return 0
 

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-36599EF2A8
-title: Loop Round GPCF-MM-LR-002
+title: Loop Round GPCF-MM-LR-002：MMC 治理模板字段字典
 project: MMC
 related_projects: [GPC, WAES, MMC, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/11-MMC/docs/harness/MMC/loops/loop-round-GPCF-MM-LR-002.md
 source_path: docs/harness/MMC/loops/loop-round-GPCF-MM-LR-002.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF-MM-LR-002
+# Loop Round GPCF-MM-LR-002：MMC 治理模板字段字典
 
 | 字段 | 值 |
 |---|---|
@@ -46,4 +46,4 @@ superseded_by: []
 | rollback_path | 回滚路径 | yes | draft-controlled |
 | customer_feedback | 客户满意/反馈 | no | draft-controlled |
 
-Current state remains `partial`; this round only creates a controlled governance dictionary and does not mark any project accepted/integrated.
+当前状态保持 `partial`；本轮只建立受控治理字典，不标记任何项目 accepted/integrated。

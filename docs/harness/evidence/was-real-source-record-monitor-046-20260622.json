@@ -1,0 +1,71 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-046-20260622",
+  "status": "was_real_source_record_monitor_046_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-046",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-045",
+  "purpose": "Forty-sixth independent monitor pass for green supply chain workforce, authority, and responsibility governance evidence, including role authorization, training qualification, safety record, contractor personnel, responsibility matrix, handover record, and labor compliance evidence.",
+  "project_group_scope": ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "role_authorization_gaps": 0,
+    "training_qualification_gaps": 0,
+    "safety_record_gaps": 0,
+    "contractor_personnel_gaps": 0,
+    "responsibility_matrix_gaps": 0,
+    "handover_record_gaps": 0,
+    "labor_compliance_gaps": 0,
+    "accepted_for_workforce_authority_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "workforce_authority_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "role_authorization_gap",
+      "training_qualification_gap",
+      "safety_record_gap",
+      "contractor_personnel_gap",
+      "responsibility_matrix_gap",
+      "handover_record_gap",
+      "labor_compliance_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "workforce_authority_requirements": [
+    "role_authorization",
+    "training_qualification",
+    "safety_record",
+    "contractor_personnel",
+    "responsibility_matrix",
+    "handover_record",
+    "labor_compliance"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-047",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer role authorization, training qualification, safety record, contractor personnel, responsibility matrix, handover record, or labor compliance evidence",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

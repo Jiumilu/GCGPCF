@@ -1,0 +1,85 @@
+---
+doc_id: GPCF-LOOP-GCKF-P0-D75-001
+title: Loop Round GPCF-GCKF-P0-D75-001
+project: GPCF
+related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+domain: docs
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D75-001.md
+source_path: docs/harness/loops/loop-round-GPCF-GCKF-P0-D75-001.md
+sync_direction: bidirectional
+last_reviewed: 2026-06-22
+supersedes: []
+superseded_by: []
+---
+
+# Loop Round GPCF-GCKF-P0-D75-001
+
+## 1. 本轮目标
+
+建立 GC-Knowledge Fabric P0-D75 repair request completeness precheck dry-run，承接 D74 aggregation precheck repair request intake preview，明确补正接收候选包进入后续处理前的完整性预检候选视图，并证明本轮仍不执行正式补正完整性预检、不执行正式补正接收、不创建补正请求、不立案、不裁决、不人工确认、不冻结释放、不正式写回、不写收益/贡献或 Harness evidence。
+
+## 2. 本轮输入资料
+
+| 输入 | 路径 |
+|---|---|
+| D74 repair request intake preview fixture | `fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-precheck-repair-request-intake-preview-dry-run-v0.1.json` |
+| D74 repair request intake preview validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_precheck_repair_request_intake_preview_dry_run.py` |
+| D74 repair request intake preview doc | `docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-precheck-repair-request-intake-preview-dry-run-v0.1.md` |
+| D74 Loop evidence | `docs/harness/loops/loop-round-GPCF-GCKF-P0-D74-001.md` |
+
+## 3. 本轮新增对象
+
+| 对象 | 路径 |
+|---|---|
+| D75 repair request intake completeness precheck fixture | `fixtures/api/gckf-p0-formal-evidence-execution-repair-request-intake-completeness-precheck-preview-dry-run-v0.1.json` |
+| D75 repair request intake completeness precheck validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_repair_request_intake_completeness_precheck_preview_dry_run.py` |
+| D75 repair request intake completeness precheck doc | `docs/gc-knowledge-fabric/formal-evidence-execution-repair-request-intake-completeness-precheck-preview-dry-run-v0.1.md` |
+
+## 4. WAES / Harness 边界
+
+| 项目 | 结果 |
+|---|---|
+| WAES gate override | not_allowed |
+| Harness evidence write | not_executed |
+| Formal evidence write | not_executed |
+| Repair request completeness precheck preview execution | not_executed |
+| Repair request completeness precheck execution | not_executed |
+| Repair intake execution | not_executed |
+| Repair request creation | not_executed |
+| Committee case opening | not_executed |
+| Committee decision | not_executed |
+| Human confirmation | not_executed |
+| Freeze release / unfreeze | not_executed |
+| KDS write | not_executed |
+| GFIS / GPC / business write | not_executed |
+| Revenue / contribution write | not_executed |
+
+## 5. 验证
+
+```bash
+python3 scripts/api/validate_gckf_p0_formal_evidence_execution_repair_request_intake_completeness_precheck_preview_dry_run.py
+```
+
+预期：
+
+```text
+gckf_p0_formal_evidence_execution_repair_request_intake_completeness_precheck_preview_dry_run=pass
+status=candidate_preview
+execution_mode=dry_run_no_write
+executes_completeness_precheck_preview=0
+executes_completeness_precheck=0
+creates_repair_request=0
+executes_repair_intake=0
+writes_harness_evidence=0
+no_write=covered
+```
+
+## 6. 结论
+
+D75 只完成 repair request completeness precheck dry-run。它证明补正接收候选包可以被描述为带有所需回执材料、已提交材料、缺失材料缺口、提交方边界、ACL、保持条件、阻断码、WAES 与 no-write 边界的 completeness precheck preview，但不产生任何正式补正完整性预检、正式补正接收、正式补正请求、委员会立案、委员会裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
+
+下一轮 D76 可继续建立 intake acknowledgement 或 repair request return path 的 no-write 预演。

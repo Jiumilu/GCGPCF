@@ -1,0 +1,705 @@
+{
+  "routingQueuePreviews": [
+    {
+      "routingQueuePreviewId": "gfis-dks-224-approval-packet-routing-queue-team-brain-001",
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-team-brain-001"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-team-brain-001"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-team-brain-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "routingQueueType": "team_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueStatus": "routing_queue_preview_only",
+      "routingQueueDecision": "show_team_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueScope": "team_internal",
+      "routingQueueSlot": "team_lead_candidate_slot",
+      "routingQueuePriority": "normal_candidate",
+      "candidateAssigneeRefs": [
+        "dks-224-routing-assignee-team-brain-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-224-team-brain"
+      ],
+      "queueReasonRefs": [
+        "approval_packet_candidate"
+      ],
+      "blockedRouteCount": 0,
+      "boundaryRefs": [
+        "dks-224-routing-queue-boundary-team"
+      ],
+      "sourceApprovalPacketPreviewRefs": [
+        "gfis-dks-223-team-brain-001"
+      ],
+      "routingSummaryRef": "summary-dks-224-routing-queue-team-brain-001",
+      "lineageHintRefs": [
+        "lineage-dks-224-routing-queue-team-brain",
+        "lineage-dks-223-team-brain-001",
+        "lineage-dks-222-team-brain-001",
+        "lineage-dks-221-team-brain-001"
+      ],
+      "reasonRefs": [
+        "reason-dks-224-routing-queue-team-brain"
+      ],
+      "routingNoteRefs": [
+        "note-dks-224-routing-queue-team-brain-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-224-routing-queue-team-brain"
+      ],
+      "blockedActions": [
+        "create_routing_queue",
+        "create_queue_item",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsRoutingQueue": false,
+      "createsQueueItem": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesRoutingQueue": 0,
+        "writesQueueItem": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "routingQueuePreviewId": "gfis-dks-224-approval-packet-routing-queue-project-pkc-002",
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-project-pkc-002"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-project-pkc-002"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-project-pkc-002"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "pkc",
+      "routingQueueType": "project_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueStatus": "routing_queue_evidence_required",
+      "routingQueueDecision": "show_project_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueScope": "project_internal",
+      "routingQueueSlot": "project_owner_candidate_slot",
+      "routingQueuePriority": "evidence_candidate",
+      "candidateAssigneeRefs": [
+        "dks-224-routing-assignee-project-pkc-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-224-project-pkc"
+      ],
+      "queueReasonRefs": [
+        "evidence_required_candidate"
+      ],
+      "blockedRouteCount": 0,
+      "boundaryRefs": [
+        "dks-224-routing-queue-boundary-project"
+      ],
+      "sourceApprovalPacketPreviewRefs": [
+        "gfis-dks-223-project-pkc-002"
+      ],
+      "routingSummaryRef": "summary-dks-224-routing-queue-project-pkc-002",
+      "lineageHintRefs": [
+        "lineage-dks-224-routing-queue-project-pkc",
+        "lineage-dks-223-project-pkc-002",
+        "lineage-dks-222-project-pkc-002",
+        "lineage-dks-221-project-pkc-002"
+      ],
+      "reasonRefs": [
+        "reason-dks-224-routing-queue-project-pkc"
+      ],
+      "routingNoteRefs": [
+        "note-dks-224-routing-queue-project-pkc-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-224-routing-queue-project-pkc"
+      ],
+      "blockedActions": [
+        "create_routing_queue",
+        "create_queue_item",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsRoutingQueue": false,
+      "createsQueueItem": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesRoutingQueue": 0,
+        "writesQueueItem": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "routingQueuePreviewId": "gfis-dks-224-approval-packet-routing-queue-governance-brain-003",
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-governance-brain-003"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-governance-brain-003"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-governance-brain-003"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "routingQueueType": "governance_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueStatus": "routing_queue_metadata_boundary",
+      "routingQueueDecision": "show_governance_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueScope": "governance_review",
+      "routingQueueSlot": "governance_reviewer_candidate_slot",
+      "routingQueuePriority": "metadata_candidate",
+      "candidateAssigneeRefs": [
+        "dks-224-routing-assignee-governance-brain-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-224-governance-brain"
+      ],
+      "queueReasonRefs": [
+        "metadata_boundary_candidate"
+      ],
+      "blockedRouteCount": 1,
+      "boundaryRefs": [
+        "dks-224-routing-queue-boundary-governance"
+      ],
+      "sourceApprovalPacketPreviewRefs": [
+        "gfis-dks-223-governance-brain-003"
+      ],
+      "routingSummaryRef": "summary-dks-224-routing-queue-governance-brain-003",
+      "lineageHintRefs": [
+        "lineage-dks-224-routing-queue-governance-brain",
+        "lineage-dks-223-governance-brain-003",
+        "lineage-dks-222-governance-brain-003",
+        "lineage-dks-221-governance-brain-003"
+      ],
+      "reasonRefs": [
+        "reason-dks-224-routing-queue-governance-brain"
+      ],
+      "routingNoteRefs": [
+        "note-dks-224-routing-queue-governance-brain-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-224-routing-queue-governance-brain"
+      ],
+      "blockedActions": [
+        "create_routing_queue",
+        "create_queue_item",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsRoutingQueue": false,
+      "createsQueueItem": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesRoutingQueue": 0,
+        "writesQueueItem": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "routingQueuePreviewId": "gfis-dks-224-approval-packet-routing-queue-external-blocked-gfis-assistant-004",
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-external_blocked-gfis_assistant-004"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-external_blocked-gfis_assistant-004"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-external_blocked-gfis_assistant-004"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "routingQueueType": "external_blocked_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueStatus": "routing_queue_external_blocked",
+      "routingQueueDecision": "show_external_blocked_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueScope": "external_blocked",
+      "routingQueueSlot": "external_share_blocked_candidate_slot",
+      "routingQueuePriority": "blocked_candidate",
+      "candidateAssigneeRefs": [
+        "dks-224-routing-assignee-external-blocked-gfis-assistant-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-224-external-blocked-gfis-assistant"
+      ],
+      "queueReasonRefs": [
+        "external_share_blocked_candidate"
+      ],
+      "blockedRouteCount": 1,
+      "boundaryRefs": [
+        "dks-224-routing-queue-boundary-external_blocked"
+      ],
+      "sourceApprovalPacketPreviewRefs": [
+        "gfis-dks-223-external_blocked-gfis_assistant-004"
+      ],
+      "routingSummaryRef": "summary-dks-224-routing-queue-external-blocked-gfis-assistant-004",
+      "lineageHintRefs": [
+        "lineage-dks-224-routing-queue-external-blocked-gfis-assistant",
+        "lineage-dks-223-external_blocked-gfis_assistant-004",
+        "lineage-dks-222-external_blocked-gfis_assistant-004",
+        "lineage-dks-221-external_blocked-gfis_assistant-004"
+      ],
+      "reasonRefs": [
+        "reason-dks-224-routing-queue-external-blocked-gfis-assistant"
+      ],
+      "routingNoteRefs": [
+        "note-dks-224-routing-queue-external-blocked-gfis-assistant-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-224-routing-queue-external-blocked-gfis-assistant"
+      ],
+      "blockedActions": [
+        "create_routing_queue",
+        "create_queue_item",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsRoutingQueue": false,
+      "createsQueueItem": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesRoutingQueue": 0,
+        "writesQueueItem": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "routingQueuePreviewId": "gfis-dks-224-approval-packet-routing-queue-committee-gfis-assistant-005",
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-committee-gfis_assistant-005"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-committee-gfis_assistant-005"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-committee-gfis_assistant-005"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "routingQueueType": "committee_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueStatus": "routing_queue_committee_required",
+      "routingQueueDecision": "show_committee_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueScope": "committee_review",
+      "routingQueueSlot": "committee_candidate_slot",
+      "routingQueuePriority": "committee_candidate",
+      "candidateAssigneeRefs": [
+        "dks-224-routing-assignee-committee-gfis-assistant-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-224-committee-gfis-assistant"
+      ],
+      "queueReasonRefs": [
+        "committee_review_candidate"
+      ],
+      "blockedRouteCount": 1,
+      "boundaryRefs": [
+        "dks-224-routing-queue-boundary-committee"
+      ],
+      "sourceApprovalPacketPreviewRefs": [
+        "gfis-dks-223-committee-gfis_assistant-005"
+      ],
+      "routingSummaryRef": "summary-dks-224-routing-queue-committee-gfis-assistant-005",
+      "lineageHintRefs": [
+        "lineage-dks-224-routing-queue-committee-gfis-assistant",
+        "lineage-dks-223-committee-gfis_assistant-005",
+        "lineage-dks-222-committee-gfis_assistant-005",
+        "lineage-dks-221-committee-gfis_assistant-005"
+      ],
+      "reasonRefs": [
+        "reason-dks-224-routing-queue-committee-gfis-assistant"
+      ],
+      "routingNoteRefs": [
+        "note-dks-224-routing-queue-committee-gfis-assistant-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-224-routing-queue-committee-gfis-assistant"
+      ],
+      "blockedActions": [
+        "create_routing_queue",
+        "create_queue_item",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsRoutingQueue": false,
+      "createsQueueItem": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesRoutingQueue": 0,
+        "writesQueueItem": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "routingQueuePreviewId": "gfis-dks-224-approval-packet-routing-queue-freeze-gfis-assistant-006",
+      "approvalPacketPreviewRefs": [
+        "gfis-dks-223-freeze-gfis_assistant-006"
+      ],
+      "resolutionOptionPreviewRefs": [
+        "gfis-dks-222-freeze-gfis_assistant-006"
+      ],
+      "breachReviewPreviewRefs": [
+        "gfis-dks-221-freeze-gfis_assistant-006"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "routingQueueType": "freeze_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueStatus": "routing_queue_freeze_required",
+      "routingQueueDecision": "show_freeze_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_preview",
+      "routingQueueScope": "freeze_review",
+      "routingQueueSlot": "freeze_reviewer_candidate_slot",
+      "routingQueuePriority": "freeze_candidate",
+      "candidateAssigneeRefs": [
+        "dks-224-routing-assignee-freeze-gfis-assistant-candidate"
+      ],
+      "requiredEvidenceRefs": [
+        "evidence-gap-dks-224-freeze-gfis-assistant"
+      ],
+      "queueReasonRefs": [
+        "freeze_review_candidate"
+      ],
+      "blockedRouteCount": 0,
+      "boundaryRefs": [
+        "dks-224-routing-queue-boundary-freeze"
+      ],
+      "sourceApprovalPacketPreviewRefs": [
+        "gfis-dks-223-freeze-gfis_assistant-006"
+      ],
+      "routingSummaryRef": "summary-dks-224-routing-queue-freeze-gfis-assistant-006",
+      "lineageHintRefs": [
+        "lineage-dks-224-routing-queue-freeze-gfis-assistant",
+        "lineage-dks-223-freeze-gfis_assistant-006",
+        "lineage-dks-222-freeze-gfis_assistant-006",
+        "lineage-dks-221-freeze-gfis_assistant-006"
+      ],
+      "reasonRefs": [
+        "reason-dks-224-routing-queue-freeze-gfis-assistant"
+      ],
+      "routingNoteRefs": [
+        "note-dks-224-routing-queue-freeze-gfis-assistant-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-224-routing-queue-freeze-gfis-assistant"
+      ],
+      "blockedActions": [
+        "create_routing_queue",
+        "create_queue_item",
+        "create_approval_assignment",
+        "lock_approver",
+        "create_approval_packet",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_committee_decision",
+        "create_freeze_action",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsRoutingQueue": false,
+      "createsQueueItem": false,
+      "createsApprovalAssignment": false,
+      "locksApprover": false,
+      "createsApprovalPacket": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsCommitteeDecision": false,
+      "createsFreezeAction": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesRoutingQueue": 0,
+        "writesQueueItem": 0,
+        "writesApprovalAssignment": 0,
+        "writesApprovalLock": 0,
+        "writesApprovalPacket": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesCommitteeDecision": 0,
+        "writesFreezeAction": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expected": {
+    "routingQueuePreviewCount": 6,
+    "brainSurface": 2,
+    "pkcSurface": 1,
+    "gfisAssistantSurface": 3,
+    "totalQueueSlotCount": 6,
+    "totalCandidateAssigneeCount": 6,
+    "totalRequiredEvidenceCount": 6,
+    "totalQueueReasonCount": 6,
+    "totalBlockedRouteCount": 3,
+    "createsRoutingQueues": 0,
+    "createsQueueItems": 0,
+    "createsApprovalAssignments": 0,
+    "locksApprovers": 0,
+    "createsApprovalPackets": 0,
+    "createsApprovalRequests": 0,
+    "createsApprovalDecisions": 0,
+    "createsCommitteeDecisions": 0,
+    "createsFreezeActions": 0,
+    "createsHarnessEvidence": 0,
+    "createsWaesGateResults": 0,
+    "createsKweWorkItems": 0,
+    "persistsEvidence": 0,
+    "approvesBusinessWrite": 0,
+    "promotesLifecycle": 0,
+    "completesCommitteeDecision": 0,
+    "writesGfis": 0,
+    "writesGpc": 0,
+    "writesErp": 0,
+    "writesMes": 0,
+    "writesRoutingQueue": 0,
+    "writesQueueItem": 0,
+    "writesApprovalAssignment": 0,
+    "writesApprovalLock": 0,
+    "writesApprovalPacket": 0,
+    "writesApprovalRequest": 0,
+    "writesApprovalDecision": 0,
+    "writesCommitteeDecision": 0,
+    "writesFreezeAction": 0,
+    "writesWaesGateResult": 0,
+    "writesKweWorkItem": 0,
+    "writesHarnessEvidence": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesExternalApi": 0
+  }
+}

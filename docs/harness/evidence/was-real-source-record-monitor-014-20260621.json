@@ -1,0 +1,87 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-014-20260621",
+  "status": "was_real_source_record_monitor_014_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-014",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-013",
+  "purpose": "Fourteenth independent monitor pass for ESG rating, carbon accounting methodology, third-party audit report, verifier qualification, audit-period alignment, and KDS backlink boundaries.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "esg_rating_substitution_attempts": 0,
+    "carbon_accounting_method_gaps": 0,
+    "third_party_audit_report_gaps": 0,
+    "verifier_qualification_gaps": 0,
+    "audit_period_mismatch": 0,
+    "audit_statement_without_kds_backlink": 0,
+    "accepted_for_esg_carbon_audit_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "esg_carbon_audit_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 6,
+    "negative_cases": [
+      "esg_rating_substitution_attempt",
+      "carbon_accounting_method_gap",
+      "third_party_audit_report_gap",
+      "verifier_qualification_gap",
+      "audit_period_mismatch",
+      "audit_statement_without_kds_backlink"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_013.py"
+  ],
+  "esg_carbon_audit_requirements": [
+    "no_esg_rating_substitution",
+    "carbon_accounting_method",
+    "third_party_audit_report",
+    "verifier_qualification",
+    "audit_period_alignment",
+    "kds_backlink"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-015",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not accept ESG rating as source record",
+    "does not infer carbon accounting method",
+    "does not infer third-party audit evidence",
+    "does not accept audit statement without KDS backlink",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

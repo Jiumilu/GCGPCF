@@ -1,0 +1,16 @@
+{
+  "fixture_id": "real-source-record-monitor-043-negative-trade-credit-insurance-gap",
+  "submitted_real_candidate_files": 0,
+  "invoice_issuance_gaps": 0,
+  "payment_confirmation_gaps": 0,
+  "tax_compliance_receipt_gaps": 0,
+  "trade_credit_insurance_gaps": 1,
+  "financing_approval_gaps": 0,
+  "reconciliation_statement_gaps": 0,
+  "financial_dispute_resolution_gaps": 0,
+  "accepted_for_finance_settlement_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "finance_settlement_state": "blocked_no_real_source_record",
+  "boundary": {"real_source_records": 0, "valid_source_records": 0, "runtime_primary_key_ready": 0, "review_queue": 0, "runtime_intake": 0, "waes_review": 0, "verified": 0, "accepted": false, "integrated": false, "production_ready": false}
+}

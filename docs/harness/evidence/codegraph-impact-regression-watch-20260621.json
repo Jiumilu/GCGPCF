@@ -1,0 +1,125 @@
+{
+  "evidence_id": "CODEGRAPH-IMPACT-REGRESSION-WATCH-20260621",
+  "status": "impact_regression_watch_active",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007",
+  "objective": "Establish and execute the next-stage CodeGraph regression watch for project-group impact metrics without project business development.",
+  "next_stage_goals": [
+    {
+      "goal": "coverage_regression_watch",
+      "definition_of_done": "14 repositories remain CodeGraph-initialized and .codegraph remains outside Git.",
+      "current_result": "pass"
+    },
+    {
+      "goal": "impact_precision_watch",
+      "definition_of_done": "Targeted CodeGraph query, node, and affected checks continue to return direct target, symbols, dependents, and affected tests.",
+      "current_result": "pass"
+    },
+    {
+      "goal": "noise_control_watch",
+      "definition_of_done": "Broad impact queries remain explicitly classified as noisy and unusable for gate evidence.",
+      "current_result": "pass"
+    },
+    {
+      "goal": "active_drift_watch",
+      "definition_of_done": "Brain/GFIS/Studio pending states are observed and classified without business development or unauthorized sync.",
+      "current_result": "watch_required"
+    },
+    {
+      "goal": "loop_input_generation",
+      "definition_of_done": "Next Loop input is generated from measured regression signals.",
+      "current_result": "pass"
+    }
+  ],
+  "baseline_reference": {
+    "evidence": "docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.json",
+    "baseline_status": "impact_metrics_baseline_ready",
+    "baseline_next_round": "GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007"
+  },
+  "project_group_regression_sample": {
+    "repo_count": 14,
+    "initialized_repo_count": 14,
+    "git_protected_repo_count": 14,
+    "codegraph_git_status_entries_total": 0,
+    "up_to_date_repo_count_at_sample": 11,
+    "watch_repos": [
+      {
+        "repo": "GlobalCloud GFIS",
+        "pending": {
+          "added": 1,
+          "modified": 0,
+          "removed": 0
+        },
+        "classification": "policy_exception_watch"
+      },
+      {
+        "repo": "GlobalCloud Brain",
+        "pending": {
+          "added": 3,
+          "modified": 3,
+          "removed": 0
+        },
+        "classification": "active_drift_watch"
+      },
+      {
+        "repo": "GlobalCloud Studio",
+        "pending": {
+          "added": 0,
+          "modified": 4,
+          "removed": 0
+        },
+        "classification": "active_drift_regression_watch"
+      }
+    ]
+  },
+  "impact_regression_sample": {
+    "target": "tools/kds-sync/validate_codegraph_impact_metrics_baseline.py",
+    "query": {
+      "command": "codegraph query codegraph_impact_metrics_baseline --json",
+      "result_count": 4,
+      "top_result": "tools/kds-sync/validate_codegraph_impact_metrics_baseline.py",
+      "regression": false
+    },
+    "node": {
+      "command": "codegraph node tools/kds-sync/validate_codegraph_impact_metrics_baseline.py",
+      "line_count": 144,
+      "symbols": 10,
+      "indexed_dependents": 0,
+      "regression": false
+    },
+    "affected": {
+      "command": "codegraph affected tools/kds-sync/validate_codegraph_impact_metrics_baseline.py --json",
+      "affected_tests": [],
+      "total_dependents_traversed": 0,
+      "regression": false
+    },
+    "noise_control": {
+      "command": "codegraph impact main --depth 2",
+      "affected_symbols": 101,
+      "usable_for_gate": false,
+      "regression": false
+    },
+    "text_scan": {
+      "matched_files": 13,
+      "matched_lines": 31,
+      "regression": false
+    }
+  },
+  "decisions": [
+    "Keep CodeGraph project-group status at review_required, not accepted or integrated.",
+    "Do not sync Brain or Studio .codegraph from this round without explicit sync-only authorization.",
+    "Keep GFIS policy exception as controlled watch item.",
+    "Use the next round to define alert thresholds and owners for active drift regressions."
+  ],
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false,
+    "brain_or_studio_sync_only": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008"
+}

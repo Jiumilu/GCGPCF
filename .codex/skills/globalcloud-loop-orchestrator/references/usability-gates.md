@@ -36,9 +36,12 @@ superseded_by: []
 最低要求：
 
 - 读取 `.codex/skills/globalcloud-ui-quality-gate/SKILL.md`。
+- 读取 `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`。
+- 读取 `04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md`。
 - 按 `references/quality-checklist.md` 对 G1-G9 逐项给出 `pass`、`partial`、`fail` 或 `not_applicable`。
 - 按 `references/evidence-output.md` 输出 UI gate status、工具、验证、状态上限和缺口。
 - 若使用 Impeccable、accessibility、Playwright/browser 或 Figma，必须记录命令、入口、截图、失败和未验证项。
+- 运行 `python3 tools/kds-sync/validate_loop_ui_quality_baseline.py`，确保 Loop 模板与显式 UI round 结构满足机检要求。
 
 UI 门禁输出的最高状态是 `ui_evidence_candidate`。`ui_ready` 只表示 UI 维度具备 evidence candidate，不表示业务完成、验收完成、accepted 或 integrated。
 

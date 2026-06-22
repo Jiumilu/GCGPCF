@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-7A5E9D6D56
-title: Loop Round GPCF-XG-LR-002
+title: Loop Round GPCF-XG-LR-002：XiaoG 设备与语音触发验证清单
 project: XiaoG
 related_projects: [GFIS, GPC, WAES, XiaoG, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/10-XiaoG/docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md
 source_path: docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF-XG-LR-002
+# Loop Round GPCF-XG-LR-002：XiaoG 设备与语音触发验证清单
 
 | 字段 | 值 |
 |---|---|
@@ -43,4 +43,4 @@ superseded_by: []
 | 语音触发 | not-validated | 语音意图、误触发策略、人工确认点 |
 | GFIS/WAES 依赖 | pending | 触发事件、门禁事件、回滚路径 |
 
-Current state remains `partial`; this round does not touch devices, production, real external APIs, or mark accepted/integrated.
+当前状态保持 `partial`；本轮不触碰设备、生产、真实外部 API，也不标记 accepted/integrated。

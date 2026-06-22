@@ -1,0 +1,92 @@
+policy_id: okf.gfis_writeback_candidate_batch_diff_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run contract for GFIS Writeback Candidate Batch Diff. Batch
+  diff records are candidate display and review material only; they do not write
+  GFIS/GPC/ERP/MES, KDS accepted facts, WAES gate results, KWE work items,
+  revenue, scores, or external APIs.
+
+required_batch_fields:
+  - batch_id
+  - tenant_id
+  - project_id
+  - target_system
+  - created_by
+  - dry_run
+  - items
+  - batch_no_write
+
+required_item_fields:
+  - candidate_id
+  - target_entity_type
+  - target_entity_id
+  - field_diffs
+  - based_on_object_refs
+  - evidence_refs
+  - pool_refs
+  - waes_gate_status
+  - writeback_status
+  - diff_action
+  - sensitive_handling
+  - kwe_next_action
+  - approved_for_business_write
+  - target_receipt_refs
+  - no_write
+
+required_field_diff_fields:
+  - field_path
+  - current_value
+  - proposed_value
+  - diff_reason
+  - risk_level
+
+diff_actions:
+  - candidate_only
+  - return_for_repair
+  - block_writeback
+  - escalate_human
+  - escalate_committee
+  - metadata_only
+
+sensitive_handling_modes:
+  - none
+  - redaction_required
+  - metadata_only
+  - controlled_original
+
+kwe_next_actions:
+  - none
+  - create_confirmation_workpack
+  - request_evidence_repair
+  - create_committee_review
+  - freeze_or_block
+
+risk_levels:
+  - low
+  - medium
+  - high
+  - critical
+
+hard_boundaries:
+  dry_run_required: true
+  approved_for_business_write_must_be_false: true
+  target_receipts_forbidden: true
+  written_back_status_forbidden: true
+  waes_passed_is_candidate_only: true
+  sensitive_raw_content_forbidden: true
+  missing_evidence_blocks_or_repairs: true
+  pod_finance_quality_dispute_requires_metadata_or_controlled_original: true
+
+no_write_assertions:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_kds_accepted_fact: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

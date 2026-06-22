@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md
 source_path: docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

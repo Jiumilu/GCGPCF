@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/.okf/index.md
 source_path: .okf/index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -35,6 +35,24 @@ superseded_by: []
 | architecture-bundle | `.okf/architecture/index.md` | 项目群架构、主线对齐、跨项目架构 |
 | kds-bundle | `.okf/kds/index.md` | KDS 同步、安全、镜像、导入规则 |
 | kds-okf-v0.1-derived-bundle | `.okf/bundles/kds-v0.1/index.md` | KDS 受控文档的 OKF v0.1 metadata-only 派生层 |
+| governance-okf-v0.1-derived-bundle | `.okf/bundles/governance-v0.1/index.md` | 治理、Loop、ODF 和 Harness evidence 的 OKF v0.1 metadata-only 派生层 |
+| architecture-okf-v0.1-derived-bundle | `.okf/bundles/architecture-v0.1/index.md` | 架构文档的 OKF v0.1 metadata-only 派生层 |
+
+## Collection Gates
+
+| evidence | path |
+| --- | --- |
+| OKF v0.1 collection gate | `docs/harness/evidence/okf-v01-collection-gate-20260620.md` |
+| OKF v0.1 relationship graph | `docs/harness/evidence/okf-v01-relationship-graph-20260620.md` |
+| OKF v0.1 consumption benchmark | `docs/harness/evidence/okf-v01-consumption-benchmark-20260620.md` |
+| OKF v0.1 summary admission gate | `docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md` |
+| OKF v0.1 summary admission ledger | `docs/harness/evidence/okf-v01-summary-admission-ledger-20260620.md` |
+| OKF v0.1 summary approval request gate | `docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md` |
+| OKF v0.1 summary approval negative fixtures | `docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md` |
+| OKF v0.1 summary approval expiry gate | `docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md` |
+| OKF v0.1 approved summary writer dry run | `docs/harness/evidence/okf-v01-approved-summary-writer-dry-run-20260620.md` |
+| OKF v0.1 approved summary writer positive fixture | `docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md` |
+| KDS OKF agent consumption smoke | `docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md` |
 
 ## Agent 读取顺序
 

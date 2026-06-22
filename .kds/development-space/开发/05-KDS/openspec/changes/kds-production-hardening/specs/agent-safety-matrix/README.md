@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md
 source_path: openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | KDS | draft |
-| GPCF-DOC-8ECD9BA263 | Agent Safety Matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | draft |
+| GPCF-DOC-8ECD9BA263 | 智能体安全矩阵 | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | GPCF | draft |

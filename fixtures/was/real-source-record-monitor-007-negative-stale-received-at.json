@@ -1,0 +1,22 @@
+{
+  "fixture_id": "real-source-record-monitor-007-negative-stale-received-at",
+  "candidate_replay_state": "stale_detected",
+  "submitted_real_candidate_files": 1,
+  "replayed_source_record_ids": 0,
+  "stale_received_at_candidates": 1,
+  "wrong_kds_backlink_scope_candidates": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

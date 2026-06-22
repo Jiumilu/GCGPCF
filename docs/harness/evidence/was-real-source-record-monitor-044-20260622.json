@@ -1,0 +1,71 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-044-20260622",
+  "status": "was_real_source_record_monitor_044_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-044",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-043",
+  "purpose": "Forty-fourth independent monitor pass for green supply chain data governance and digital traceability evidence, including master data version, data lineage, API integration log, access authorization, data quality validation, audit trail, and retention or deletion policy evidence.",
+  "project_group_scope": ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "master_data_version_gaps": 0,
+    "data_lineage_gaps": 0,
+    "api_integration_log_gaps": 0,
+    "access_authorization_gaps": 0,
+    "data_quality_validation_gaps": 0,
+    "audit_trail_gaps": 0,
+    "retention_deletion_policy_gaps": 0,
+    "accepted_for_data_traceability_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "data_traceability_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "master_data_version_gap",
+      "data_lineage_gap",
+      "api_integration_log_gap",
+      "access_authorization_gap",
+      "data_quality_validation_gap",
+      "audit_trail_gap",
+      "retention_deletion_policy_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "data_traceability_requirements": [
+    "master_data_version",
+    "data_lineage",
+    "api_integration_log",
+    "access_authorization",
+    "data_quality_validation",
+    "audit_trail",
+    "retention_deletion_policy"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-045",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer master data versions, lineage, API logs, access authorization, data quality validation, audit trails, or retention policy evidence",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

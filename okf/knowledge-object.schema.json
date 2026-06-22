@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.local/okf/knowledge-object.schema.json",
+  "title": "GC-Knowledge Fabric KnowledgeObject",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "uri",
+    "tenantId",
+    "domain",
+    "objectType",
+    "poolRefs",
+    "ownerType",
+    "ownerId",
+    "visibility",
+    "lifecycle",
+    "trustLevel",
+    "ragAdmission",
+    "confirmationStatus",
+    "sourceRefs",
+    "evidenceRefs",
+    "lineageRefs",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "uri": { "type": "string", "minLength": 1 },
+    "tenantId": { "type": "string", "minLength": 1 },
+    "domain": {
+      "type": "string",
+      "enum": ["private", "workspace", "project", "org", "supply_chain", "public", "governance"]
+    },
+    "objectType": {
+      "type": "string",
+      "enum": [
+        "source",
+        "claim",
+        "fact",
+        "entity",
+        "relation",
+        "view",
+        "evidence",
+        "policy",
+        "event",
+        "fact_candidate",
+        "sop_candidate",
+        "writeback_candidate",
+        "gap",
+        "bounty",
+        "contribution",
+        "decision",
+        "revenue",
+        "quota",
+        "dispute"
+      ]
+    },
+    "poolRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ORDER",
+          "TRANSPORT",
+          "CAPACITY",
+          "FUND",
+          "POLICY",
+          "EQUIPMENT",
+          "DATA",
+          "ENERGY",
+          "MATERIAL",
+          "TALENT",
+          "SCENARIO"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "projectId": { "type": "string" },
+    "supplyChainNodeId": { "type": "string" },
+    "businessSystemRef": { "type": "string" },
+    "ownerType": {
+      "type": "string",
+      "enum": ["user", "team", "project", "org", "external_account", "system"]
+    },
+    "ownerId": { "type": "string", "minLength": 1 },
+    "visibility": {
+      "type": "string",
+      "enum": ["private", "restricted", "internal", "external_shared", "public"]
+    },
+    "lifecycle": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "candidate",
+        "reviewing",
+        "repair_required",
+        "evidence_ready",
+        "verified",
+        "accepted",
+        "published",
+        "frozen",
+        "superseded",
+        "archived"
+      ]
+    },
+    "trustLevel": {
+      "type": "string",
+      "enum": ["T0", "T1", "T2", "T3", "T4", "T5"]
+    },
+    "ragAdmission": {
+      "type": "string",
+      "enum": ["safe", "limited", "repair_required", "blocked", "sensitive_metadata_only"]
+    },
+    "confirmationStatus": {
+      "type": "string",
+      "enum": [
+        "not_required",
+        "ai_checked",
+        "human_required",
+        "human_confirmed",
+        "committee_required",
+        "committee_confirmed",
+        "rejected"
+      ]
+    },
+    "sourceRefs": { "type": "array", "items": { "type": "string" } },
+    "evidenceRefs": { "type": "array", "items": { "type": "string" } },
+    "lineageRefs": { "type": "array", "items": { "type": "string" } },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

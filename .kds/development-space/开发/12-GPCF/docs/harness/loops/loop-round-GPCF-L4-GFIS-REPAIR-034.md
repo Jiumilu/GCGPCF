@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-4EC8B12513
-title: GPCF L4 GFIS Repair 034 Loop Engineering Master Gate Recap
+title: GPCF L4 GFIS Repair 034 Loop Engineering 主门禁回顾
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-034.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-034.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF L4 GFIS Repair 034 Loop Engineering Master Gate Recap
+# GPCF L4 GFIS Repair 034 Loop Engineering 主门禁回顾
 
 ## Round
 
@@ -77,8 +77,8 @@ git diff --check -- .
 
 ## Result
 
-This round does not claim GFIS SOP completion. It converts the user's correction into a Loop Engineering hard gate: when subject drift or SOP E2E Master failure appears, Loop must self-detect, self-downgrade, split the failure and keep GFIS/GPCF in repair state.
+本轮不宣称 GFIS SOP 已完成。它把用户纠正转化为 Loop Engineering 硬门禁：当主体漂移或 SOP E2E Master 失败出现时，Loop 必须自检、自降级、拆分失败原因，并保持 GFIS/GPCF 处于 repair 状态。
 
 ## Next
 
-Run the updated validators, then continue GFIS runtime repair through one independently validated actionable gap at a time. The next implementation round should inspect the current runtime gap resolution plan before choosing the next GFIS-owned gap.
+运行更新后的 validators，然后一次只沿着一个可独立验证的 actionable gap 继续推进 GFIS runtime repair。下一轮实施应先检查当前 runtime gap resolution plan，再选择下一个由 GFIS 自己负责的 gap。

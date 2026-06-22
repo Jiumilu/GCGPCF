@@ -1,0 +1,44 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-EVIDENCE-PREVIEW-CURRENT-STATE-D136-20260622",
+  "round_id": "GPCF-GCKF-P0-D136-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D135 current-state formal evidence final execution request 基础上刷新 formal evidence execution evidence preview，使旧 D37 正式 evidence 执行证据预览分支显式吸收 D124-D135 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-evidence-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-evidence-preview-current-state-d136-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-final-execution-request-current-state-d135-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-final-execution-request-current-state-d135-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_evidence_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d37_formal_evidence_execution_evidence_preview": "gckf_p0_formal_evidence_execution_evidence_preview_dry_run=pass status=candidate_preview preview_type=formal_evidence_execution_evidence_preview preview_status=candidate_preview execution_status=not_executed execution_mode=dry_run_no_write source_request_status=candidate_request source_request_execution_status=not_executed covered_request_status=candidate_request preview_fields=21 preview_checks=22 blocking_conditions=15 forbidden_actions=11",
+    "d135_current_state_final_execution_request": "gckf_p0_formal_evidence_final_execution_request_current_state_d135=pass final_execution_request_status=candidate_request_with_hold maximum_state=review_ready_with_hold request_status=candidate_request_with_hold execution_status=not_executed required_inputs=19 request_checks=23 hold_context_refs=6",
+    "d134_current_state_final_execution_guard": "gckf_p0_formal_evidence_final_execution_guard_current_state_d134=pass final_execution_guard_status=candidate_guard_with_hold maximum_state=review_ready_with_hold guard_status=candidate_guard_with_hold execution_status=not_executed guard_checks=21 hold_context_refs=6",
+    "d133_current_state_execution_step": "gckf_p0_formal_evidence_execution_step_current_state_d133=pass execution_step_status=candidate_step_with_hold maximum_state=review_ready_with_hold step_status=candidate_step_with_hold execution_status=not_executed step_checks=20 hold_context_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "preview_scope": {
+    "preview_fields": 22,
+    "preview_checks": 25,
+    "blocking_conditions": 16,
+    "forbidden_actions": 13,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_final_execution_request_status": "candidate_request_with_hold",
+    "source_final_execution_request_execution_status": "not_executed",
+    "formal_harness_write_allowed": false,
+    "lifecycle_promotion_allowed": false,
+    "runtime_writeback_allowed": false,
+    "p1_admission_allowed": false,
+    "v1_upgrade_recommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution evidence preview 不执行 formal write，也不写 formal Harness evidence 或 Harness evidence。",
+    "本 current-state formal evidence execution evidence preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution evidence preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "基于 D136 current-state formal evidence execution evidence preview 刷新 formal evidence execution verification plan preview current-state 分支，继续保持 no-write。"
+}

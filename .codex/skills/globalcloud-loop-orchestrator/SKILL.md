@@ -1,4 +1,5 @@
 ---
+doc_id: GPCF-DOC-2D8E4755AF
 name: globalcloud-loop-orchestrator
 description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“继续 Loop”“Loop 托管运行”“进入下一轮”“自动选择技能”“生成下一轮输入”时，读取项目群状态，选择相关技能，执行文档、Git、质量、可用性、客户满意、依赖、风险回滚和自我进化门禁检查，并给出受控下一步。不会替代人工确认、不会自动 accepted/integrated、不会绕过 KDS TOKEN、Git、质量或 evidence 门禁。
 ---

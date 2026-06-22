@@ -1,0 +1,83 @@
+{
+  "contractId": "GCKF-P0-ROUTE-ADAPTER-DRY-RUN-CONTRACT-V0.1",
+  "description": "P0-D17 route adapter dry-run contract that maps HTTP-like requests to handler stub envelopes without starting a server.",
+  "routeAdapterPath": "packages/api/src/route-adapter.ts",
+  "handlerStubPath": "packages/api/src/handler-stub.ts",
+  "handlerMapPath": "packages/api/src/handler-map.ts",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "tempOutDir": "/tmp/gckf-api-route-adapter",
+  "compiledRouteAdapterPath": "/tmp/gckf-api-route-adapter/api/src/route-adapter.js",
+  "successCases": [
+    {
+      "id": "route-kds-domains",
+      "method": "GET",
+      "path": "/api/v2/domains",
+      "expectedHandler": "listDomains",
+      "expectedStatusCode": 200,
+      "expectedCandidateOnly": false
+    },
+    {
+      "id": "route-kds-fact-candidate",
+      "method": "POST",
+      "path": "/api/v2/fact-candidates",
+      "expectedHandler": "createFactCandidate",
+      "expectedStatusCode": 200,
+      "expectedCandidateOnly": true
+    },
+    {
+      "id": "route-waes-rag-gate",
+      "method": "POST",
+      "path": "/api/v2/waes/rag-admission/check",
+      "expectedHandler": "checkRagAdmission",
+      "expectedStatusCode": 200,
+      "expectedCandidateOnly": false
+    },
+    {
+      "id": "route-gfis-document-acceptance",
+      "method": "POST",
+      "path": "/api/v2/gfis/document-acceptance/check",
+      "expectedHandler": "checkGfisDocumentAcceptance",
+      "expectedStatusCode": 200,
+      "expectedCandidateOnly": true
+    },
+    {
+      "id": "route-governance-ledger-revenue",
+      "method": "GET",
+      "path": "/api/v2/governance/ledger/revenue",
+      "expectedHandler": "getRevenueLedger",
+      "expectedStatusCode": 200,
+      "expectedCandidateOnly": false
+    }
+  ],
+  "failureCases": [
+    {
+      "id": "route-method-not-allowed",
+      "method": "GET",
+      "path": "/api/v2/search",
+      "expectedStatusCode": 405,
+      "expectedErrorCode": "UNKNOWN_HANDLER"
+    },
+    {
+      "id": "route-not-found",
+      "method": "GET",
+      "path": "/api/v2/not-found",
+      "expectedStatusCode": 404,
+      "expectedErrorCode": "UNKNOWN_HANDLER"
+    }
+  ],
+  "expectedSummary": {
+    "routeCount": 40,
+    "successCount": 5,
+    "failureCount": 2,
+    "typescriptRouteCompile": true,
+    "listRouteAdapterDryRunRoutes": true,
+    "adaptRouteDryRun": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

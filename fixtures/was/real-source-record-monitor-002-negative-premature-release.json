@@ -1,0 +1,23 @@
+{
+  "monitor_id": "WAS-REAL-SOURCE-RECORD-MONITOR-002-NEGATIVE-PREMATURE-RELEASE",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-002",
+  "required_p4_inputs": 6,
+  "submitted_real_inputs": 0,
+  "submitted_files_found": 0,
+  "candidate_files_checked": 0,
+  "accepted_for_next_gate": 1,
+  "hold_required": 0,
+  "monitor_state": "released",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 1,
+    "review_queue": 1,
+    "runtime_intake": 1,
+    "waes_review": 1,
+    "verified": 1,
+    "accepted": true,
+    "integrated": true,
+    "production_ready": true
+  }
+}

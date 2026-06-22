@@ -1,0 +1,84 @@
+policy_id: okf.waes_gate_io_policy
+version: v0.1
+status: draft
+owner: WAES
+updated_at: "2026-06-20"
+minimum_input_fields:
+  - gate_id
+  - tenant_id
+  - gate_type
+  - target_object_type
+  - target_object_id
+  - policy_refs
+  - source_refs
+  - evidence_refs
+  - acl_refs
+  - risk_signals
+  - requested_by
+  - dry_run
+minimum_output_fields:
+  - gate_id
+  - result
+  - reason_codes
+  - required_actions
+  - next_state
+  - allowed_operations
+  - reviewer_requirement
+  - harness_evidence_required
+  - writes_gate_result
+  - writes_business_system
+  - writes_revenue_distribution
+  - writes_external_api
+reason_codes:
+  - missing_source
+  - missing_evidence
+  - t5_ai_only
+  - acl_unknown
+  - sensitive_raw_content
+  - owner_confirmation_missing
+  - committee_required_by_policy
+  - revenue_basis_missing
+  - duplicate_or_conflicting_contribution
+  - major_violation_risk
+hard_stop_rules:
+  - gate_type: rag_gate
+    triggers: [t5_ai_only, missing_source, missing_evidence, sensitive_raw_content, acl_unknown]
+    default_result: blocked
+  - gate_type: writeback_gate
+    triggers: [owner_confirmation_missing, missing_evidence, missing_source]
+    default_result: human_required
+  - gate_type: revenue_gate
+    triggers: [revenue_basis_missing, missing_evidence, duplicate_or_conflicting_contribution]
+    default_result: committee_required
+  - gate_type: contribution_gate
+    triggers: [missing_evidence, duplicate_or_conflicting_contribution]
+    default_result: repair_required
+  - gate_type: external_share_gate
+    triggers: [acl_unknown, sensitive_raw_content]
+    default_result: redaction_required
+  - gate_type: freeze_gate
+    triggers: [major_violation_risk, duplicate_or_conflicting_contribution]
+    default_result: freeze_required
+allowed_operations:
+  - metadata_only
+  - weak_rag_reference
+  - strong_rag_reference
+  - create_kwe_work_item
+  - create_confirmation_workpack
+  - create_writeback_candidate
+  - create_redaction_request
+  - create_committee_review
+  - freeze_object
+  - block_operation
+hard_boundaries:
+  p0_p1_requires_dry_run: true
+  no_direct_gate_result_persistence: true
+  no_business_writeback: true
+  no_revenue_distribution: true
+  no_external_api_write: true
+  human_or_committee_required_for_finality: true
+no_write_assertions:
+  writes_gate_result: 0
+  writes_business_system: 0
+  writes_revenue_distribution: 0
+  writes_external_api: 0

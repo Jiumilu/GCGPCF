@@ -1,0 +1,64 @@
+{
+  "evidence_id": "AGENT-REACH-ZERO-CONFIG-REPAIR-20260620",
+  "date": "2026-06-20",
+  "status": "pass",
+  "mode": "L2_zero_config_repair",
+  "benchmark_case_count": 4,
+  "benchmark_success_count": 4,
+  "zero_config_success_rate": 1.0,
+  "latency_p50_seconds": 0.876,
+  "latency_p95_seconds": 1.377,
+  "cookies_configured": false,
+  "mcp_configuration_changed": false,
+  "production_write_count": 0,
+  "kds_canonical_write_count": 0,
+  "external_platform_write_count": 0,
+  "credential_leakage_count": 0,
+  "cases": [
+    {
+      "name": "web_jina_example_domain",
+      "channel": "web",
+      "success": true,
+      "latency_seconds": 0.876,
+      "source_provenance": "https://r.jina.ai/http://example.com",
+      "rag_admission": "limited",
+      "result_summary": "Title: Example Domain URL Source: http://example.com/"
+    },
+    {
+      "name": "web_jina_raw_agent_reach_readme",
+      "channel": "web",
+      "success": true,
+      "latency_seconds": 0.966,
+      "source_provenance": "https://r.jina.ai/https://raw.githubusercontent.com/Panniantong/Agent-Reach/main/README.md",
+      "rag_admission": "limited",
+      "result_summary": "Markdown Content: Agent Reach README"
+    },
+    {
+      "name": "github_api_agent_reach_readme",
+      "channel": "github",
+      "success": true,
+      "latency_seconds": 1.377,
+      "source_provenance": "gh api repos/Panniantong/Agent-Reach/readme",
+      "rag_admission": "limited",
+      "result_summary": "GitHub API returned README content"
+    },
+    {
+      "name": "rss_python_peps_feed",
+      "channel": "rss",
+      "success": true,
+      "latency_seconds": 0.753,
+      "source_provenance": "https://peps.python.org/peps.rss",
+      "rag_admission": "limited",
+      "result_summary": "Python PEP RSS feed returned readable content"
+    }
+  ],
+  "non_claims": [
+    "does not prove Agent-Reach production integration",
+    "does not configure cookies or login-state platforms",
+    "does not configure mcporter or Exa MCP",
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not upgrade GPCF accepted/integrated/production_ready status"
+  ],
+  "next_gate": "mcporter_exa_requires_explicit_authorization"
+}

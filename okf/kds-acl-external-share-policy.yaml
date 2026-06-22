@@ -1,0 +1,79 @@
+policy_id: kds-acl-external-share-policy
+version: v0.1
+description: KDS ACL and external-share view contract for GC-Knowledge Fabric.
+subject_types:
+  - user
+  - team
+  - project
+  - org
+  - external_account
+  - agent
+allowed_actions:
+  - read_metadata
+  - read_redacted_summary
+  - read_full_content
+  - use_for_limited_rag
+  - use_for_safe_rag
+  - create_candidate
+  - request_promotion
+  - request_external_share
+minimum_acl_fields:
+  - acl_id
+  - tenant_id
+  - subject_type
+  - subject_id
+  - object_id
+  - domain
+  - visibility
+  - allowed_actions
+  - denied_actions
+  - pool_refs
+  - project_id
+  - supply_chain_node_id
+  - expires_at
+  - created_by
+  - created_at
+minimum_external_view_fields:
+  - view_id
+  - tenant_id
+  - external_account_id
+  - object_id
+  - visible_fields
+  - redacted_fields
+  - metadata_only
+  - rag_admission
+  - waes_gate_status
+  - publication_approval_ref
+  - evidence_refs
+  - expires_at
+external_account_default_actions:
+  - read_metadata
+  - read_redacted_summary
+required_gates_for_external_share:
+  - tenant_isolation
+  - acl
+  - domain_scope
+  - supply_chain_partition
+  - redaction
+  - publication_approval
+  - external_share_gate
+hard_boundaries:
+  tenant_isolation_required: true
+  supply_chain_partition_required: true
+  external_account_cross_unit_detail_default_denied: true
+  sensitive_metadata_only_raw_content_denied: true
+  blocked_rag_external_share_denied: true
+  t5_ai_only_external_fact_denied: true
+  external_share_requires_waes_gate: true
+  public_visibility_requires_publication_approval: true
+  acl_pass_is_not_rag_strong_reference: true
+  acl_pass_is_not_business_writeback: true
+  acl_pass_is_not_revenue_or_score_confirmation: true
+no_write_assertions:
+  writes_acl_store: 0
+  writes_external_share_permission: 0
+  writes_publication_approval: 0
+  writes_kds_object: 0
+  writes_business_system: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

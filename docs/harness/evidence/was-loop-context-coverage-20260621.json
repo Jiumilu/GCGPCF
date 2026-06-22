@@ -1,0 +1,91 @@
+{
+  "evidence_id": "WAS-LOOP-CONTEXT-COVERAGE-20260621",
+  "status": "was_loop_context_coverage_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-LOOP-CONTEXT-COVERAGE-001",
+  "purpose": "Prove that WAS/Ontology related Loop rounds include structured loop_was_context.",
+  "coverage_scope": {
+    "loop_round_count": 13,
+    "project_group_scope": [
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "WAES",
+      "KDS",
+      "Brain",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "GPCF",
+      "Studio",
+      "WAS"
+    ],
+    "required_context_keys": [
+      "project_scope",
+      "related_asset_dimensions",
+      "related_flows",
+      "related_objects",
+      "related_events",
+      "source_refs",
+      "evidence_refs",
+      "waes_gate_refs",
+      "kds_backlinks",
+      "promotion_blockers",
+      "next_action",
+      "no_write_declaration"
+    ]
+  },
+  "required_values": {
+    "related_asset_dimensions": [
+      "data_asset"
+    ],
+    "related_flows": [
+      "commerce_flow"
+    ],
+    "related_objects": [
+      "CustomerRequirementOrPlatformOrder"
+    ],
+    "waes_gate_refs": [
+      "waes://gate/customer-order-source-record-review"
+    ],
+    "kds_backlinks": [
+      "pending_real_source_record"
+    ]
+  },
+  "covered_loop_rounds": [
+    "docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md",
+    "docs/harness/loops/loop-round-GPCF-GFIS-WAS-PROFILE-MAPPING-001.md",
+    "docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001.md",
+    "docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md",
+    "docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001.md",
+    "docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-CROSSWALK-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-3H-GOALS-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-3H-P0-START-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-3H-P1-SOURCE-READINESS-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-3H-P2-GATE-REPLAY-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-3H-P3-CLOSURE-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001.md"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "waes_review": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "validator": "python3 tools/kds-sync/validate_was_loop_context_coverage.py",
+  "next_round": "GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001",
+  "non_claims": [
+    "does not create real source-of-record",
+    "does not create runtime primary key",
+    "does not create WAES review",
+    "does not mark accepted or integrated",
+    "does not mark production ready"
+  ]
+}
+

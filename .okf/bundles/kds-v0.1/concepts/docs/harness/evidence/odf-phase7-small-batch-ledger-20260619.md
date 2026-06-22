@@ -4,10 +4,10 @@ title: ODF Phase 7 小批量样本台账
 description: ODF Phase 7 小批量样本台账
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md
 source_path: docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md
-source_hash: 076bd7104804489d7e661709b7d228b020ca8ab74d6bf5154713e914ac0febef
+source_hash: 9293520f41f533536c98d4d6a42d59abca04c24b53f652a30b3ccc6550c4f8ca
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 7 小批量样本台账
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md` |
-| source_hash | `076bd7104804489d7e661709b7d228b020ca8ab74d6bf5154713e914ac0febef` |
+| source_hash | `9293520f41f533536c98d4d6a42d59abca04c24b53f652a30b3ccc6550c4f8ca` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

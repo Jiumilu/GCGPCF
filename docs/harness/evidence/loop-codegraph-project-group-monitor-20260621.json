@@ -1,0 +1,215 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-PROJECT-GROUP-MONITOR-20260621",
+  "status": "project_group_codegraph_monitor_pass_with_active_watchlist",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-PROJECT-GROUP-MONITOR-001",
+  "codegraph": {
+    "version": "1.0.1",
+    "monitor_mode": "controlled_sync_followup",
+    "sync_executed_this_round": true,
+    "storage": ".codegraph/"
+  },
+  "project_group": {
+    "repo_count": 14,
+    "indexed_repo_count": 14,
+    "git_protected_repo_count": 14,
+    "codegraph_git_status_entries_total": 0,
+    "up_to_date_repo_count": 11,
+    "pending_sync_repo_count": 2,
+    "policy_exception_repo_count": 1,
+    "pending_sync_projects": [
+      "GlobalCloud Brain",
+      "GlobalCloud Studio"
+    ],
+    "policy_exception_projects": [
+      "GlobalCloud GFIS"
+    ]
+  },
+  "repositories": [
+    {
+      "project": "GlobalCloud Brain",
+      "files": 152,
+      "nodes": 2447,
+      "edges": 5758,
+      "index_status": "pending_sync",
+      "pending_notice": "Modified: 32 files after controlled .codegraph sync follow-up",
+      "codegraph_git_status_entries": 0,
+      "active_drift_files": [
+        "scripts/validate_brain_completion_matrix.mjs",
+        "scripts/validate_brain_harness_evidence.mjs",
+        "scripts/validate_brain_local_action_boundaries.mjs",
+        "scripts/validate_brain_loop_harness.mjs",
+        "scripts/validate_brain_mock_boundaries.mjs",
+        "scripts/validate_brain_status_audit.mjs",
+        "scripts/validate_brain_write_contract_readiness.mjs",
+        "src/app/components/AgentRunsPanel.test.tsx",
+        "src/app/components/AgentRunsPanel.tsx",
+        "src/app/components/BulkFixPanel.test.tsx",
+        "src/app/components/BulkFixPanel.tsx",
+        "src/app/components/CommandPalette.test.tsx",
+        "src/app/components/CommandPalette.tsx",
+        "src/app/components/DeepResearchPanel.test.tsx",
+        "src/app/components/DeepResearchPanel.tsx",
+        "src/app/components/DoctorPanel.test.tsx",
+        "src/app/components/DoctorPanel.tsx",
+        "src/app/components/ProjectsPanel.test.tsx",
+        "src/app/components/ProjectsPanel.tsx",
+        "src/app/components/ReportsPanel.test.tsx",
+        "src/app/components/ReportsPanel.tsx",
+        "src/app/components/ReviewPanel.test.tsx",
+        "src/app/components/ReviewPanel.tsx",
+        "src/app/components/agentRunsPanelGuards.ts",
+        "src/app/components/bulkFixPanelGuards.ts",
+        "src/app/components/commandPaletteGuards.ts",
+        "src/app/components/deepResearchGuards.ts",
+        "src/app/components/doctorPanelGuards.ts",
+        "src/app/components/projectsPanelGuards.ts",
+        "src/app/components/reviewPanelGuards.ts",
+        "src/app/hooks/useKdsApi.test.ts",
+        "src/app/hooks/useKdsApi.ts"
+      ]
+    },
+    {
+      "project": "GlobalCloud GFIS",
+      "files": 1022,
+      "nodes": 13152,
+      "edges": 38142,
+      "index_status": "policy_exception",
+      "pending_notice": "Added: 1 files",
+      "policy": "large_generated_validator_exception_candidate",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud GPC",
+      "files": 70,
+      "nodes": 705,
+      "edges": 1995,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud KDS",
+      "files": 518,
+      "nodes": 3499,
+      "edges": 7115,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud MMC",
+      "files": 84,
+      "nodes": 522,
+      "edges": 1083,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud PKC",
+      "files": 110,
+      "nodes": 1034,
+      "edges": 2685,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud PVAOS",
+      "files": 604,
+      "nodes": 8899,
+      "edges": 28838,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "files": 797,
+      "nodes": 14457,
+      "edges": 46854,
+      "index_status": "pending_sync",
+      "pending_notice": "Added: 2 files; Modified: 2 files after controlled .codegraph sync follow-up",
+      "codegraph_git_status_entries": 0,
+      "active_drift_files": [
+        "packages/client/src/components/studio/SessionContextBar.vue",
+        "packages/client/src/views/hermes/ChatView.vue",
+        "tests/client/chat-view-tab-title.test.ts",
+        "tests/client/session-context-bar.test.ts"
+      ]
+    },
+    {
+      "project": "GlobalCloud WAES",
+      "files": 281,
+      "nodes": 3511,
+      "edges": 11298,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XGD",
+      "files": 181,
+      "nodes": 3645,
+      "edges": 9914,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XiaoC",
+      "files": 1176,
+      "nodes": 15520,
+      "edges": 64515,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud XiaoG",
+      "files": 752,
+      "nodes": 13943,
+      "edges": 45987,
+      "index_status": "up_to_date",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCoud GPCF",
+      "files": 822,
+      "nodes": 9389,
+      "edges": 21819,
+      "index_status": "up_to_date",
+      "pending_notice": "none after controlled .codegraph sync follow-up",
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "WAS世界资产体系",
+      "files": 30,
+      "nodes": 70,
+      "edges": 209,
+      "index_status": "up_to_date",
+      "pending_notice": "none",
+      "codegraph_git_status_entries": 0
+    }
+  ],
+  "loop_next_input": {
+    "round": "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001",
+    "objective": "Monitor Brain and Studio active CodeGraph drift without entering project business development, while preserving 14-repo coverage and GFIS controlled residual.",
+    "allowed_actions": [
+      "read-only status recheck",
+      "read-only .codegraph git status",
+      "GPCF evidence update if drift appears"
+    ],
+    "forbidden_actions": [
+      "project business code edits",
+      "unscoped codegraph sync on project repos",
+      "GFIS validator refactor",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false
+  }
+}

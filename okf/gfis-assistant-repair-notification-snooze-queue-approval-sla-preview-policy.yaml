@@ -1,0 +1,150 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_approval_sla_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write approval SLA previews derived from DKS-128 GFIS
+  Assistant repair notification snooze queue approval route previews. SLA
+  previews describe candidate due windows, elapsed time, remaining time,
+  risk, and escalation suggestions only. They do not create timers,
+  reminders, escalation schedules, approver assignments, approval requests,
+  approval decisions, governance records, lifecycle changes, business writes,
+  settlements, or external API calls.
+
+required_fields:
+  - sla_preview_id
+  - route_preview_ref
+  - approval_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - sla_type
+  - sla_status
+  - sla_decision
+  - sla_scope
+  - due_window_minutes
+  - elapsed_minutes
+  - remaining_minutes
+  - escalation_level
+  - source_route_preview_refs
+  - source_approval_preview_refs
+  - source_snooze_preview_refs
+  - sla_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - sla_note_refs
+  - escalation_candidate_refs
+  - blocked_actions
+  - creates_sla_timer
+  - creates_reminder
+  - schedules_escalation
+  - assigns_escalation_owner
+  - creates_approval_route
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+sla_types:
+  - standard_sla_preview
+  - urgent_sla_preview
+  - governance_sla_preview
+  - external_blocked_sla_preview
+  - committee_sla_preview
+  - freeze_sla_preview
+
+sla_statuses:
+  - sla_preview_only
+  - sla_at_risk_preview
+  - sla_metadata_boundary
+  - sla_external_blocked
+  - sla_committee_required
+  - sla_freeze_required
+
+sla_decisions:
+  - show_standard_sla_preview
+  - show_urgent_sla_preview
+  - show_governance_sla_preview
+  - show_external_blocked_sla_preview
+  - show_committee_sla_preview
+  - show_freeze_sla_preview
+
+sla_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+blocked_actions:
+  - create_sla_timer
+  - create_reminder
+  - schedule_escalation
+  - assign_escalation_owner
+  - create_approval_route
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  sla_preview_only: true
+  sla_preview_is_not_sla_timer: true
+  sla_preview_is_not_reminder: true
+  sla_preview_is_not_escalation_schedule: true
+  sla_preview_is_not_escalation_owner_assignment: true
+  sla_preview_is_not_approval_route: true
+  sla_preview_is_not_approval_request: true
+  sla_preview_is_not_approval_decision: true
+  sla_preview_is_not_harness_evidence: true
+  sla_preview_is_not_waes_result: true
+  sla_preview_is_not_kwe_work_item: true
+  sla_preview_is_not_lifecycle_change: true
+  sla_preview_is_not_business_writeback: true
+  creates_sla_timer_must_be_false: true
+  creates_reminder_must_be_false: true
+  schedules_escalation_must_be_false: true
+  assigns_escalation_owner_must_be_false: true
+  creates_approval_route_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_sla_timer: 0
+  writes_reminder: 0
+  writes_escalation_schedule: 0
+  writes_escalation_owner: 0
+  writes_approval_route: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

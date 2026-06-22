@@ -1,6 +1,6 @@
 # XiaoG 开发文档空间
 
-生成日期：2026-06-12
+生成日期：2026-06-22
 
 用途：KDS `开发` 空间中 `XiaoG` 项目的受控文档入口。
 
@@ -12,4 +12,4 @@
 | GPCF-DOC-BE87700244 | GlobalCloud XiaoG Loop State | docs/harness/XiaoG/loop-state.md | controlled |
 | GPCF-DOC-CC7297EBCF | loops | docs/harness/XiaoG/loops/README.md | controlled |
 | GPCF-DOC-871E18BD6E | loop-round-GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | controlled |
-| GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | controlled |
+| GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002：XiaoG 设备与语音触发验证清单 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | controlled |

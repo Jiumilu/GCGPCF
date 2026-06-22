@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-21CF5F6F10
-title: Loop Governance Dashboard Evidence
+title: Loop 治理看板证据
 project: GPCF
 related_projects: [GPCF, WAES]
 domain: docs
@@ -11,24 +11,22 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/loop-governance-dashboard-20260617.md
 source_path: docs/harness/evidence/loop-governance-dashboard-20260617.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Governance Dashboard Evidence
+# Loop 治理看板证据
 
 Evidence ID: `LOOP-GOV-DASHBOARD-20260617`
 
-JSON companion:
+JSON 配套文件：
 `docs/harness/evidence/loop-governance-dashboard-20260617.json`
 
-This evidence records the active LOOP governance dashboard state. It links the
-current phase goal `LOOP-GOV-PHASE-20260617`, keeps `efficiency_risk` visible
-as `review_required`, and keeps the governance status ceiling at
-`partial_repair`.
+本证据记录当前 LOOP 治理看板状态。它关联当前阶段目标 `LOOP-GOV-PHASE-20260617`，
+保持 `efficiency_risk=review_required` 可见，并将治理状态上限保持为 `partial_repair`。
 
-## Signal Summary
+## 信号摘要
 
 | Field | Value |
 |---|---|
@@ -39,7 +37,7 @@ as `review_required`, and keeps the governance status ceiling at
 | status_ceiling | partial_repair |
 | reproducibility | local_validators_present |
 
-## Runtime Boundary Metrics
+## 运行边界指标
 
 | Metric | Value |
 |---|---|
@@ -51,12 +49,9 @@ as `review_required`, and keeps the governance status ceiling at
 | verified | 0 |
 | accepted_integrated_allowed | false |
 
-## Non-Claims
+## 非声明事项
 
-- This dashboard does not prove source-of-record receipt.
-- This dashboard does not create runtime primary key, review queue, runtime
-  intake, WAES review, or verified artifact.
-- This dashboard does not prove UAT, production, customer satisfaction, finance,
-  accepted, or integrated completion.
-- This dashboard does not authorize production write, external API write, schema
-  sync, bench migrate, deployment, permission change, commit, or push.
+- 本看板不证明 source-of-record 已接收。
+- 本看板不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本看板不证明 UAT、生产、客户满意度、财务、accepted 或 integrated 已完成。
+- 本看板不授权生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、commit 或 push。

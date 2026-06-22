@@ -1,0 +1,68 @@
+{
+  "evidence_id": "WAS-PROJECT-GROUP-ADMISSION-20260621",
+  "status": "was_project_group_admitted_as_semantic_foundation_candidate",
+  "date": "2026-06-21",
+  "project": {
+    "name": "WAS世界资产体系",
+    "key": "WAS",
+    "role": "semantic_foundation_project",
+    "project_group_position": 14,
+    "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系",
+    "remote": "https://github.com/Jiumilu/GCWAS.git",
+    "remote_visibility": "PRIVATE",
+    "default_branch": "main",
+    "head_commit": "7ec9c332db981f4d19d0edb3194fc7173f9b1d67"
+  },
+  "governance": {
+    "agents_md": true,
+    "project_harness_manifest": true,
+    "loop_state": true,
+    "evidence_index": true,
+    "loop_round": true,
+    "remote_push_completed": true,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "was_validation": {
+    "command": "python3 okf/validators/validate_all.py",
+    "status": "pass",
+    "validators": [
+      "validate_was_dimensions",
+      "validate_was_flows",
+      "validate_was_object_contract",
+      "validate_was_relationship_contract",
+      "validate_was_event_contract",
+      "validate_was_loop_record",
+      "validate_was_rag_admission",
+      "validate_was_waes_gate_input",
+      "validate_was_pool_link",
+      "validate_no_illegal_promotion",
+      "validate_no_stale_bundle"
+    ]
+  },
+  "codegraph": {
+    "version": "1.0.1",
+    "status": "up_to_date",
+    "files": 30,
+    "nodes": 70,
+    "edges": 209,
+    "db_size": "0.27 MB",
+    "git_tracking_entries_for_codegraph": 0
+  },
+  "boundaries": {
+    "kds_source_of_record": false,
+    "gfis_runtime": false,
+    "waes_gate_authority": false,
+    "semantic_contract_source": true,
+    "production_write": false,
+    "external_api_write": false,
+    "kds_write": false,
+    "waes_write": false
+  },
+  "next_steps": [
+    "Register WAS in GPCF project-group control documents",
+    "Build GFIS runtime SOP E2E WAS scenario profile",
+    "Add GPCF validator entry point for WAS admission"
+  ]
+}

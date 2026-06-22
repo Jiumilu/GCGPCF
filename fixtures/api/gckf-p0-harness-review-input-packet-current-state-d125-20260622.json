@@ -1,0 +1,123 @@
+{
+  "contractId": "GCKF-P0-HARNESS-REVIEW-INPUT-PACKET-CURRENT-STATE-D125-20260622",
+  "description": "Current-state Harness review input packet assembled from D19 ledger, D20 readiness, D21 human review checklist, and D124 closure packet candidate. This remains a no-write candidate_with_hold packet only.",
+  "packetStatus": "candidate_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "notFinalAcceptance": true,
+  "sourceChecklist": "fixtures/api/gckf-p0-human-review-checklist-dry-run-v0.1.json",
+  "sourceReadiness": "fixtures/api/gckf-p0-closure-readiness-dry-run-v0.1.json",
+  "sourceLedger": "fixtures/api/gckf-p0-acceptance-packet-ledger-dry-run-v0.1.json",
+  "sourceClosurePacketCandidate": "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json",
+  "reviewScope": {
+    "candidateEvidenceRoundCount": 11,
+    "reviewItemCount": 4,
+    "riskRefCount": 3,
+    "ledgerEntryCount": 10,
+    "closurePacketCompletedItemCount": 7,
+    "closurePacketBlockerCount": 6
+  },
+  "harnessInputs": [
+    {
+      "id": "GCKF-P0-HI-001",
+      "fromReviewItem": "GCKF-P0-HR-001",
+      "reviewQuestion": "D9-D19 candidate evidence sufficiency under D124 closure packet candidate",
+      "requiredHarnessDecision": "approve_for_formal_evidence_review_or_request_repair",
+      "allowedOutcomes": ["approved_for_harness_review", "repair_required", "rejected"],
+      "defaultOutcome": "pending",
+      "sourceContext": ["C1", "C2", "C3", "C4", "C5", "C6", "C7"]
+    },
+    {
+      "id": "GCKF-P0-HI-002",
+      "fromReviewItem": "GCKF-P0-HR-002",
+      "reviewQuestion": "formal Harness evidence write or reject remains hold-gated",
+      "requiredHarnessDecision": "write_or_reject_formal_harness_evidence",
+      "allowedOutcomes": ["harness_evidence_written", "harness_rejected", "repair_required"],
+      "defaultOutcome": "pending",
+      "sourceContext": ["B1", "B2"]
+    },
+    {
+      "id": "GCKF-P0-HI-003",
+      "fromReviewItem": "GCKF-P0-HR-003",
+      "reviewQuestion": "no lifecycle promotion despite current closure packet candidate",
+      "requiredHarnessDecision": "confirm_no_lifecycle_promotion",
+      "allowedOutcomes": ["no_promotion_confirmed", "violation_found"],
+      "defaultOutcome": "pending",
+      "sourceContext": ["B3"]
+    },
+    {
+      "id": "GCKF-P0-HI-004",
+      "fromReviewItem": "GCKF-P0-HR-004",
+      "reviewQuestion": "runtime, business writeback, P1 admission, and v1 upgrade remain out of scope or blocked",
+      "requiredHarnessDecision": "confirm_runtime_and_writeback_out_of_scope",
+      "allowedOutcomes": ["out_of_scope_confirmed", "scope_violation_found"],
+      "defaultOutcome": "pending",
+      "sourceContext": ["B4", "B5", "B6"]
+    }
+  ],
+  "holdRefs": ["B1", "B2", "B3", "B4", "B5", "B6"],
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-human-review-checklist-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_human_review_checklist_dry_run.py",
+    "docs/gc-knowledge-fabric/human-review-checklist-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md",
+    "fixtures/api/gckf-p0-closure-readiness-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_closure_readiness_dry_run.py",
+    "docs/gc-knowledge-fabric/closure-readiness-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md",
+    "fixtures/api/gckf-p0-acceptance-packet-ledger-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_acceptance_packet_ledger_dry_run.py",
+    "docs/gc-knowledge-fabric/acceptance-packet-ledger-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D124-001.md",
+    "tools/kds-sync/validate_gckf_p0_closure_packet_candidate_d124.py"
+  ],
+  "riskRefs": [
+    "GCKF-P0-RISK-HARNESS-NOT-WRITTEN",
+    "GCKF-P0-RISK-HUMAN-REVIEW-PENDING",
+    "GCKF-P0-RISK-RUNTIME-NOT-LIVE"
+  ],
+  "currentGateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "forbiddenOutputs": [
+    "accepted",
+    "integrated",
+    "production_ready",
+    "harness_evidence_written_without_review",
+    "business_write_enabled",
+    "p1_admission_granted",
+    "v1_upgrade_approved"
+  ],
+  "expectedSummary": {
+    "packetStatus": "candidate_with_hold",
+    "maximumState": "review_ready_with_hold",
+    "harnessInputCount": 4,
+    "holdRefCount": 6,
+    "requiredSourceRefCount": 16,
+    "reviewItemCount": 4,
+    "riskRefCount": 3,
+    "ledgerEntryCount": 10,
+    "closurePacketCompletedItemCount": 7,
+    "closurePacketBlockerCount": 6,
+    "notFinalAcceptance": true,
+    "sourceChecklistStatus": "candidate",
+    "sourceReadinessStatus": "review_ready_candidate",
+    "sourceLedgerStatus": "candidate",
+    "sourceClosurePacketStatus": "candidate_with_hold",
+    "sourceClosurePacketMaximumState": "review_ready_with_hold",
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "id": "gfis-doc-acceptance-partner-order",
+      "source": {
+        "id": "src-gehu-order-doc-001",
+        "sourceKind": "partner_document",
+        "trustLevel": "T2",
+        "title": "葛化预运营订单资料包",
+        "evidenceRefs": ["ev-gehu-order-doc-001"],
+        "missingFields": ["pod_record", "finance_proof"]
+      },
+      "expected": {
+        "factCandidates": 1,
+        "factTypes": ["order_fact"],
+        "gaps": ["missing_pod", "missing_finance_proof"],
+        "waesGateStatuses": ["human_required"],
+        "requiresHumanConfirmation": true,
+        "requiresCommittee": false,
+        "writebackStatuses": ["candidate"],
+        "noWrite": true,
+        "businessWrites": 0,
+        "kdsFactWrites": 0
+      }
+    },
+    {
+      "id": "gfis-doc-acceptance-sensitive-finance",
+      "source": {
+        "id": "src-finance-voucher-001",
+        "sourceKind": "cash_receipt",
+        "trustLevel": "T0",
+        "title": "葛化到账凭证",
+        "evidenceRefs": ["ev-cash-001"],
+        "sensitiveClass": "finance_voucher",
+        "missingFields": []
+      },
+      "expected": {
+        "factCandidates": 1,
+        "factTypes": ["finance_fact"],
+        "gaps": [],
+        "waesGateStatuses": ["metadata_only"],
+        "requiresHumanConfirmation": true,
+        "requiresCommittee": false,
+        "writebackStatuses": ["candidate"],
+        "noWrite": true,
+        "businessWrites": 0,
+        "kdsFactWrites": 0
+      }
+    },
+    {
+      "id": "gfis-doc-acceptance-ai-summary",
+      "source": {
+        "id": "src-ai-summary-001",
+        "sourceKind": "llm_output",
+        "trustLevel": "T5",
+        "title": "AI生成的订单总结",
+        "evidenceRefs": [],
+        "missingFields": ["source_record", "evidence"]
+      },
+      "expected": {
+        "factCandidates": 1,
+        "factTypes": ["order_fact"],
+        "gaps": ["missing_source", "missing_evidence"],
+        "waesGateStatuses": ["blocked"],
+        "requiresHumanConfirmation": true,
+        "requiresCommittee": false,
+        "writebackStatuses": ["candidate"],
+        "noWrite": true,
+        "businessWrites": 0,
+        "kdsFactWrites": 0
+      }
+    }
+  ]
+}

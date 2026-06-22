@@ -1,0 +1,208 @@
+{
+  "evidence_id": "HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-20260621",
+  "task_id": "GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001",
+  "date": "2026-06-21",
+  "status": "production_admission_request_package_generated_pending_authorization",
+  "scope": "request_package_only_no_production_entry",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "evidence_chain": [
+    {
+      "path": "docs/harness/evidence/headroom-lcx-controlled-package-20260621.json",
+      "evidence_id": "HEADROOM-LCX-CONTROLLED-PACKAGE-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.json",
+      "evidence_id": "HEADROOM-LCX-P0-RUNTIME-REPLAY-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.json",
+      "evidence_id": "HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.json",
+      "evidence_id": "HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.json",
+      "evidence_id": "HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.json",
+      "evidence_id": "HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-production-token-authorization-package-20260621.json",
+      "evidence_id": "HEADROOM-PRODUCTION-TOKEN-AUTHORIZATION-PACKAGE-20260621",
+      "production_admission_gate": false
+    },
+    {
+      "path": "docs/harness/evidence/headroom-production-token-authorization-action-queue-20260621.json",
+      "evidence_id": "HEADROOM-PRODUCTION-TOKEN-AUTHORIZATION-ACTION-QUEUE-20260621",
+      "production_admission_gate": false
+    }
+  ],
+  "required_authorization_items": [
+    "authorized_window_id",
+    "authorized_by",
+    "authorized_at",
+    "sanitized_production_token_ledger",
+    "rollback_plan_id",
+    "waes_harness_admission_decision"
+  ],
+  "pending_action_count": 6,
+  "pending_actions": [
+    {
+      "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-001",
+      "title": "define authorized measurement window",
+      "owner": "human_approver",
+      "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
+      "required_evidence": "authorized_window_id",
+      "status": "pending_human_authorization",
+      "gate": false
+    },
+    {
+      "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-002",
+      "title": "name approving owner and approval timestamp",
+      "owner": "human_approver",
+      "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
+      "required_evidence": "authorized_by_and_authorized_at",
+      "status": "pending_human_authorization",
+      "gate": false
+    },
+    {
+      "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-003",
+      "title": "attach sanitized production token usage ledger",
+      "owner": "KDS",
+      "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
+      "required_evidence": "provider_billing_export_or_sanitized_runtime_usage_ledger",
+      "status": "pending_sanitized_ledger",
+      "gate": false
+    },
+    {
+      "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-004",
+      "title": "attach rollback plan id",
+      "owner": "WAES",
+      "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
+      "required_evidence": "rollback_plan_id",
+      "status": "pending_rollback_plan",
+      "gate": false
+    },
+    {
+      "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-005",
+      "title": "rerun production token ledger negative fixtures and evaluator",
+      "owner": "GPCF",
+      "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
+      "required_evidence": "negative_fixture_validator_and_ledger_evaluator_output",
+      "status": "pending_authorized_ledger",
+      "gate": false
+    },
+    {
+      "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-006",
+      "title": "confirm no telemetry, raw prompt, external write, or KDS write",
+      "owner": "GPCF",
+      "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
+      "required_evidence": "security_non_claims_confirmation",
+      "status": "pending_authorized_window",
+      "gate": false
+    }
+  ],
+  "authorization_snapshot": {
+    "status": "pending",
+    "authorized_window_id": null,
+    "authorized_by": null,
+    "authorized_at": null,
+    "scope": "project_group_production_token_measurement"
+  },
+  "requested_scope": {
+    "projects": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "token_source": "provider_billing_export_or_sanitized_runtime_usage_ledger",
+    "measurement_window": null,
+    "telemetry": "off",
+    "raw_prompt_storage": "forbidden",
+    "external_api_write_allowed": false,
+    "kds_write_allowed": false,
+    "rollback_plan_required": true
+  },
+  "admission_decision": {
+    "request_package_generated": true,
+    "authorization_window_present": false,
+    "sanitized_production_token_ledger_present": false,
+    "rollback_plan_present": false,
+    "waes_harness_admission_decision_present": false,
+    "p5_request_package_gate": true,
+    "production_admission_gate": false
+  },
+  "gates": {
+    "p5_production_admission_package_gate": true,
+    "request_package_generated": true,
+    "prior_p0_p4_evidence_present": true,
+    "pending_actions_registered": true,
+    "authorization_window_present": false,
+    "sanitized_production_token_ledger_present": false,
+    "rollback_plan_present": false,
+    "waes_harness_admission_decision_present": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_production_entry": true,
+    "not_authorized_window": true,
+    "not_sanitized_production_token_measurement": true,
+    "not_waes_harness_admitted": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_sensitive_material_processing": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  },
+  "next_round": "GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001"
+}

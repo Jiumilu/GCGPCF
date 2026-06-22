@@ -1,0 +1,119 @@
+policy_id: okf.gfis_assistant_repair_intake_review_packet_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run GFIS Assistant repair intake review packets derived from
+  DKS-110 repair submission intake requests. Review packets expose reviewer
+  context and recommended focus only. They do not submit or persist evidence,
+  create review queue items, create KWE work items, persist WAES gate results,
+  mutate KDS lifecycle, write business systems, complete approvals, confirm
+  revenue or scores, or call external APIs.
+
+required_fields:
+  - review_packet_id
+  - intake_ref
+  - checklist_ref
+  - guidance_packet_ref
+  - tenant_id
+  - project_id
+  - assistant_surface
+  - review_type
+  - review_status
+  - reviewer_focus
+  - intake_item_refs
+  - metadata_ref_bundle
+  - evidence_hint_refs
+  - blocked_reason_refs
+  - blocked_actions
+  - allowed_display_actions
+  - submits_evidence
+  - persists_evidence
+  - creates_review_queue_item
+  - creates_gap_record
+  - creates_bounty_record
+  - creates_kwe_work_item
+  - creates_waes_gate_result
+  - routes_to_human_queue
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+review_types:
+  - human_review_packet
+  - metadata_boundary_packet
+  - committee_review_packet
+  - freeze_review_packet
+  - blocked_hold_packet
+
+review_statuses:
+  - queued_preview
+  - needs_repair
+  - blocked
+  - metadata_only
+
+allowed_display_actions:
+  - show_review_context
+  - show_intake_refs
+  - show_metadata_boundary
+  - show_reviewer_focus
+  - show_blocked_reason
+  - show_no_write_notice
+
+blocked_actions:
+  - submit_evidence
+  - persist_evidence
+  - create_review_queue_item
+  - create_kwe_work_item
+  - create_gap_record
+  - create_bounty_record
+  - create_waes_gate_result
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  review_packet_only: true
+  review_packet_is_not_queue_item: true
+  review_packet_is_not_submission: true
+  review_packet_is_not_evidence_record: true
+  review_packet_is_not_kwe_work_item: true
+  review_packet_is_not_gap_or_bounty: true
+  review_packet_is_not_waes_result: true
+  review_packet_is_not_business_writeback: true
+  review_packet_is_not_committee_decision: true
+  reviewer_focus_is_recommendation_only: true
+  submits_evidence_must_be_false: true
+  persists_evidence_must_be_false: true
+  creates_review_queue_item_must_be_false: true
+  creates_gap_record_must_be_false: true
+  creates_bounty_record_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  routes_to_human_queue_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_review_queue_item: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-664403C419
 title: GlobalCloud 绿色供应链体系 SOP 模板库
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md
 source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链体系SOP模板库.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

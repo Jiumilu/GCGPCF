@@ -1,0 +1,15 @@
+{
+  "submitted_real_candidate_files": 0,
+  "renewable_energy_contract_gaps": 0,
+  "energy_consumption_meter_record_gaps": 0,
+  "green_power_certificate_gaps": 0,
+  "renewable_energy_certificate_retirement_gaps": 0,
+  "onsite_generation_meter_record_gaps": 1,
+  "energy_mix_allocation_record_gaps": 0,
+  "grid_emission_factor_source_gaps": 0,
+  "accepted_for_renewable_energy_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "renewable_energy_state": "blocked_no_real_source_record",
+  "boundary": {"real_source_records": 0, "valid_source_records": 0, "runtime_primary_key_ready": 0, "review_queue": 0, "runtime_intake": 0, "waes_review": 0, "verified": 0, "accepted": false, "integrated": false, "production_ready": false}
+}

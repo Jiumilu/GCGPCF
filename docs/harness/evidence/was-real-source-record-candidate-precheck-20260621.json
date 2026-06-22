@@ -1,0 +1,130 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-20260621",
+  "status": "was_real_source_record_candidate_precheck_pass_with_empty_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-001",
+  "scope": {
+    "project_group_scope": "all_globalcloud_project_group",
+    "target_object_family": "CustomerRequirementOrPlatformOrder",
+    "candidate_directory": "docs/harness/intake",
+    "template": "docs/harness/intake/was-real-source-record-candidate-template.yaml",
+    "precheck_type": "template_fixture_and_real_candidate_scan_no_runtime_write"
+  },
+  "project_group_coverage": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "required_inputs": [
+    "real_customer_order_original_or_platform_order_receipt",
+    "customer_confirmed_product_spec",
+    "delivery_requirement",
+    "issuing_party_and_owner_confirmation",
+    "kds_source_backlink",
+    "runtime_site_context"
+  ],
+  "accepted_source_kinds": [
+    "customer_order_original",
+    "platform_order_receipt"
+  ],
+  "gfis_native_required_fields": [
+    "object_family",
+    "sop_stage",
+    "source_kind",
+    "customer_order_original_or_platform_order_receipt",
+    "customer_confirmed_product_spec",
+    "delivery_requirement",
+    "source_of_record_backlink",
+    "source_record_hash",
+    "issuing_party",
+    "owner_confirmation",
+    "received_at",
+    "runtime_site_context"
+  ],
+  "was_required_fields": [
+    "objectFamily",
+    "sourceRecordId",
+    "assetDimension",
+    "flowType",
+    "lifecycle",
+    "trustLevel",
+    "sourceRefs",
+    "evidenceRefs",
+    "waesGateRefs",
+    "promotionBlockers",
+    "nextAction",
+    "kdsBacklink"
+  ],
+  "required_was_values": {
+    "objectFamily": "CustomerRequirementOrPlatformOrder",
+    "assetDimension": "data_asset",
+    "flowType": "commerce_flow",
+    "lifecycle": "pending_business_verification",
+    "trustLevel": "T4",
+    "waesGateRef": "waes://gate/customer-order-source-record-review",
+    "nextAction": "collect_customer_order_or_platform_receipt"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 4,
+    "expected_positive_acceptance": 1,
+    "expected_negative_rejection": 4
+  },
+  "real_candidate_scan": {
+    "submitted_real_candidate_files": 0,
+    "candidate_files_checked": 0,
+    "accepted_for_next_gate": 0,
+    "rejected_candidate_files": 0,
+    "hold_required": 1
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "blocked_outputs": [
+    "runtime_primary_key",
+    "GFIS runtime write",
+    "verified artifact",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ],
+  "required_commands": [
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py"
+  ],
+  "next_round": "GPCF-ONTOLOGY-WAS-WAES-GATE-INPUT-CANDIDATE-001",
+  "next_round_condition": "only_after_accepted_for_next_gate_greater_than_zero",
+  "non_claims": [
+    "does not create a real source-of-record",
+    "does not create runtime primary key",
+    "does not create WAES review",
+    "does not write GFIS or KWE runtime",
+    "does not mark accepted or integrated",
+    "does not mark production ready"
+  ]
+}

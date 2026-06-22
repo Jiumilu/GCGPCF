@@ -1,0 +1,45 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-LOOP-GOVERNANCE-EVIDENCE-REPAIR-D98-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/evidence/loop-governance-*",
+  "action": "repair_loop_governance_evidence_localization_debt",
+  "before": {
+    "all_repo_findings": 256,
+    "target_file_findings": 22
+  },
+  "after": {
+    "all_repo_findings": 229,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -27,
+    "target_file_findings": -22
+  },
+  "changed_files": [
+    "docs/harness/evidence/loop-governance-current-window-disposition-20260619.md",
+    "docs/harness/evidence/loop-governance-current-window-review-20260619.md",
+    "docs/harness/evidence/loop-governance-dashboard-20260617.md",
+    "docs/harness/evidence/loop-governance-efficiency-debt-backlog-20260617.md",
+    "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md",
+    "docs/harness/evidence/loop-governance-five-segment-review-20260617.md",
+    "docs/harness/evidence/loop-governance-phase-goal-20260617.md"
+  ],
+  "changed_line_items": 76,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_loop_governance_evidence_repair_d98.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

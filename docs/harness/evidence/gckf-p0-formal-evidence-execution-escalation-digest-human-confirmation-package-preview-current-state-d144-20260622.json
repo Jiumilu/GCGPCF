@@ -1,0 +1,52 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-ESCALATION-DIGEST-HUMAN-CONFIRMATION-PACKAGE-PREVIEW-CURRENT-STATE-D144-20260622",
+  "round_id": "GPCF-GCKF-P0-D144-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D143 current-state formal evidence execution signer receipt escalation digest preview 基础上刷新 formal evidence execution escalation digest human confirmation package preview，使旧 D45 升级摘要人工确认包预览分支显式吸收 D124-D143 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-escalation-digest-human-confirmation-package-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-escalation-digest-human-confirmation-package-preview-current-state-d144-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-signer-receipt-escalation-digest-preview-current-state-d143-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-execution-signer-receipt-escalation-digest-preview-current-state-d143-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_human_confirmation_package_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d45_formal_evidence_execution_escalation_digest_human_confirmation_package_preview": "gckf_p0_formal_evidence_execution_escalation_digest_human_confirmation_package_preview_dry_run=pass status=candidate_preview preview_type=formal_evidence_execution_escalation_digest_human_confirmation_package_preview preview_status=candidate_preview execution_status=not_executed confirmation_execution_status=not_executed committee_execution_status=not_executed resend_execution_status=not_executed escalation_execution_status=not_executed approval_execution_status=not_executed retry_execution_status=not_executed unfreeze_execution_status=not_executed execution_mode=dry_run_no_write source_escalation_digest_status=candidate_preview source_digest_execution_status=not_executed source_resend_execution_status=not_executed source_escalation_execution_status=not_executed covered_escalation_digest_status=candidate_preview reviewer_roles=8 package_sections=11 decision_options=6 committee_triggers=5 confirmation_checks=30 required_confirmation_refs=21 blocking_conditions=26 forbidden_actions=24 forbidden_outputs=25 required_sources=4",
+    "d143_current_state_escalation_digest_preview": "gckf_p0_formal_evidence_execution_signer_receipt_escalation_digest_preview_current_state_d143=pass escalation_digest_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed receipt_execution_status=not_executed resend_execution_status=not_executed escalation_execution_status=not_executed digest_audience_roles=8 digest_checks=33 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d142_current_state_signer_receipt_preview": "gckf_p0_formal_evidence_execution_signer_receipt_preview_current_state_d142=pass signer_receipt_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed approval_execution_status=not_executed receipt_execution_status=not_executed resend_execution_status=not_executed escalation_execution_status=not_executed signer_roles=8 receipt_checks=31 hold_context_refs=6",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "package_scope": {
+    "reviewer_roles": 8,
+    "package_sections": 11,
+    "decision_options": 6,
+    "committee_triggers": 5,
+    "confirmation_checks": 33,
+    "required_confirmation_refs": 22,
+    "blocking_conditions": 27,
+    "forbidden_actions": 26,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_escalation_digest_preview_status": "candidate_preview_with_hold",
+    "source_digest_execution_status": "not_executed",
+    "source_resend_execution_status": "not_executed",
+    "source_escalation_execution_status": "not_executed",
+    "source_approval_execution_status": "not_executed",
+    "source_retry_execution_status": "not_executed",
+    "source_unfreeze_execution_status": "not_executed",
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution escalation digest human confirmation package preview 不执行人工确认、不执行委员会裁决、不发送升级摘要或通知、不执行重发、升级、approval、retry、unfreeze，也不写 confirmation result、committee result、receipt result、escalation result、resend result、approval result。",
+    "本 current-state formal evidence execution escalation digest human confirmation package preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution escalation digest human confirmation package preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "下一轮应优先刷新 formal evidence execution committee trigger package preview 的 current-state 分支，继续保持 no-write。"
+}

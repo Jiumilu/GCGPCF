@@ -1,0 +1,46 @@
+{
+  "registry_id": "WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-NEGATIVE-MISSING-PROJECT",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio"
+  ],
+  "registry_categories": [],
+  "promotion_policy": {
+    "kds_source_of_record": "required",
+    "waes_decision": "required_before_promotion",
+    "loop_evidence": "required",
+    "llm_candidate": "never_official_fact",
+    "runtime_writeback": "blocked_without_waes_kds_owner_confirmation"
+  },
+  "future_project_policy": {
+    "admission_required": true,
+    "must_bind_project_group_scope": true,
+    "must_map_to_registry_categories": ["object", "relationship", "event", "evidence", "state", "interface"],
+    "must_not_bypass_kds_waes_loop": true
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "runtime_write": false,
+    "kds_api_write": false
+  }
+}

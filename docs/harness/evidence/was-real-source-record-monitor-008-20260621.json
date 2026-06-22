@@ -1,0 +1,75 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-008-20260621",
+  "status": "was_real_source_record_monitor_008_pass_with_hold",
+  "date": "2026-06-21",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-008",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-007",
+  "purpose": "Eighth independent monitor pass for issuer, owner, KDS backlink, and runtime site context consistency before any next-gate promotion.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "owner_confirmation_missing": 0,
+    "issuer_confirmation_missing": 0,
+    "owner_runtime_context_mismatch": 0,
+    "kds_backlink_runtime_context_mismatch": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "candidate_consistency_state": "not_applicable_no_submission"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 4,
+    "negative_cases": [
+      "owner_confirmation_missing",
+      "issuer_confirmation_missing",
+      "owner_runtime_context_mismatch",
+      "kds_backlink_runtime_context_mismatch"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_007.py"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-009",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not create WAES review",
+    "does not create runtime intake",
+    "does not create review queue",
+    "does not create runtime primary key",
+    "does not create verified artifact",
+    "does not mark accepted, integrated, or production ready"
+  ]
+}

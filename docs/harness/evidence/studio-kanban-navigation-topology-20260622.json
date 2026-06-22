@@ -1,0 +1,51 @@
+{
+  "evidence_id": "STUDIO-KANBAN-NAVIGATION-TOPOLOGY-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-004",
+  "target": {
+    "project": "Studio",
+    "surface": "operation-workbench",
+    "page_component": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue"
+  },
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "in-app-browser"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "impeccable_not_invoked",
+    "figma_not_verified"
+  ],
+  "runtime": {
+    "same_tab_deeplink_transition_reliable": false,
+    "same_tab_deeplink_false_positive_applies_to_chat_and_kanban": true,
+    "in_app_navigation_kanban_to_chat_verified": true,
+    "chat_visible_kanban_entry_count": 0
+  },
+  "code_evidence": {
+    "app_layout": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/App.vue",
+    "workbench_sidebar": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/AppSidebar.vue",
+    "chat_sidebar": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/PageSidebarNav.vue"
+  },
+  "gates": {
+    "G1": "pass",
+    "G2": "partial",
+    "G3": "partial",
+    "G4": "partial",
+    "G5": "partial",
+    "G6": "partial",
+    "G7": "pass",
+    "G8": "pass",
+    "G9": "pass"
+  },
+  "findings": [
+    "The reload observation from round 003 is not stable enough to remain classified as a product defect.",
+    "Kanban to chat in-app navigation is verified.",
+    "Chat main surface lacks a visible entry to Kanban, while Kanban surface has a visible return path to chat."
+  ],
+  "non_claims": [
+    "does not prove ui_ready",
+    "does not prove bidirectional workbench discoverability is complete",
+    "does not grant accepted, integrated, or production_ready status"
+  ]
+}

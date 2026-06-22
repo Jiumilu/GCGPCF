@@ -1,0 +1,68 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-KDS-DKS-ROUTING-TEXT-REPAIR-D105-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/loops/loop-round-GPCF-KDS-DKS-179..213 routing queue text second batch",
+  "action": "repair_remaining_kds_dks_routing_queue_and_acknowledgement_text_localization_debt",
+  "before": {
+    "all_repo_findings": 81,
+    "target_file_findings": 32
+  },
+  "after": {
+    "all_repo_findings": 49,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -32,
+    "target_file_findings": -32
+  },
+  "changed_files": [
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-179.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-180.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-181.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-182.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-183.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-184.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-185.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-186.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-187.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-188.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-191.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-192.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-193.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-194.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-195.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-196.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-197.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-198.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-199.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-202.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-203.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-204.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-205.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-206.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-207.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-209.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-210.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-211.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-212.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-213.md"
+  ],
+  "changed_line_items": 32,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_kds_dks_routing_text_repair_d105.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

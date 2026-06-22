@@ -1,0 +1,134 @@
+policy_id: okf.gfis_assistant_repair_admission_read_model_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run read models derived from DKS-114 GFIS Assistant repair
+  handoff review admission packets. Read models are display-only views for
+  Brain, PKC, and GFIS Assistant. They do not create read receipts, admission
+  records, review queues, KWE work items, confirmation records, decision
+  records, WAES gate results, evidence records, lifecycle changes, business
+  writes, revenue or score confirmations, or external API calls.
+
+required_fields:
+  - read_model_id
+  - admission_packet_ref
+  - handoff_packet_ref
+  - tenant_id
+  - project_id
+  - surface
+  - view_type
+  - visibility_mode
+  - admission_status
+  - admission_decision
+  - target_candidate
+  - display_sections
+  - masked_fields
+  - metadata_ref_bundle
+  - missing_requirement_refs
+  - blocked_reason_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_read_receipt
+  - creates_admission_record
+  - creates_review_queue_item
+  - creates_kwe_work_item
+  - creates_confirmation_record
+  - creates_decision_record
+  - creates_waes_gate_result
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+surfaces:
+  - brain
+  - pkc
+  - gfis_assistant
+
+view_types:
+  - brain_governance_read
+  - pkc_owner_read
+  - gfis_assistant_read
+  - committee_candidate_read
+  - freeze_candidate_read
+
+visibility_modes:
+  - own_project_only
+  - metadata_only
+  - governance_summary
+  - committee_authorized
+  - freeze_authorized
+
+display_sections:
+  - admission_summary
+  - handoff_summary
+  - target_candidate
+  - missing_requirements
+  - blocked_reasons
+  - metadata_boundary
+  - no_write_notice
+  - next_step_candidate
+
+blocked_actions:
+  - create_read_receipt
+  - create_admission_record
+  - create_review_queue_item
+  - create_kwe_work_item
+  - create_confirmation_record
+  - create_decision_record
+  - create_waes_gate_result
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  read_model_only: true
+  read_model_is_not_read_receipt: true
+  read_model_is_not_admission_record: true
+  read_model_is_not_review_queue_item: true
+  read_model_is_not_kwe_work_item: true
+  read_model_is_not_confirmation: true
+  read_model_is_not_decision_record: true
+  read_model_is_not_waes_result: true
+  read_model_is_not_business_writeback: true
+  raw_content_must_be_hidden: true
+  creates_read_receipt_must_be_false: true
+  creates_admission_record_must_be_false: true
+  creates_review_queue_item_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_confirmation_record_must_be_false: true
+  creates_decision_record_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_read_receipt: 0
+  writes_admission_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

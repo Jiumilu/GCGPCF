@@ -1,0 +1,116 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write queue previews derived from DKS-122 GFIS Assistant
+  repair notification snooze previews. Queue previews describe local ordering
+  and grouping only. They do not create queue items, snooze records, scheduled
+  reminders, dismissal records, notifications, governance records, lifecycle
+  changes, business writes, settlements, or external API calls.
+
+required_fields:
+  - queue_preview_id
+  - tenant_id
+  - project_id
+  - surface
+  - queue_type
+  - queue_status
+  - queue_decision
+  - source_snooze_preview_refs
+  - ordered_snooze_preview_refs
+  - queue_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - queue_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_queue_item
+  - creates_snooze_record
+  - creates_scheduled_reminder
+  - creates_dismissal_record
+  - creates_notification
+  - modifies_notification
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+queue_types:
+  - brain_snooze_queue_preview
+  - pkc_snooze_queue_preview
+  - gfis_assistant_snooze_queue_preview
+
+queue_statuses:
+  - queue_preview_only
+  - queue_contains_blocked_items
+  - queue_contains_retained_items
+
+queue_decisions:
+  - show_brain_snooze_queue_preview
+  - show_pkc_snooze_queue_preview
+  - show_gfis_assistant_snooze_queue_preview
+
+blocked_actions:
+  - create_queue_item
+  - create_snooze_record
+  - create_scheduled_reminder
+  - create_dismissal_record
+  - create_notification
+  - modify_notification
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  queue_preview_only: true
+  queue_preview_is_not_queue_item: true
+  queue_preview_is_not_snooze_record: true
+  queue_preview_is_not_scheduled_reminder: true
+  queue_preview_is_not_notification_update: true
+  queue_preview_is_not_harness_evidence: true
+  queue_preview_is_not_waes_result: true
+  queue_preview_is_not_kwe_work_item: true
+  queue_preview_is_not_lifecycle_change: true
+  queue_preview_is_not_business_writeback: true
+  creates_queue_item_must_be_false: true
+  creates_snooze_record_must_be_false: true
+  creates_scheduled_reminder_must_be_false: true
+  creates_dismissal_record_must_be_false: true
+  creates_notification_must_be_false: true
+  modifies_notification_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_queue_item: 0
+  writes_snooze_record: 0
+  writes_scheduled_reminder: 0
+  writes_dismissal_record: 0
+  writes_notification: 0
+  modifies_notification: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

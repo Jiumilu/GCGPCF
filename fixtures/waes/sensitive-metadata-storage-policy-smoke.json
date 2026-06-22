@@ -1,0 +1,19 @@
+{
+  "id": "gc-knowledge-fabric-dks-088-sensitive-metadata-storage-policy-smoke",
+  "description": "Static no-write/no-secret smoke for sensitive metadata-only storage contract.",
+  "expected": {
+    "sensitiveClassCount": 8,
+    "storageModeCount": 4,
+    "minimumMetadataFieldCount": 14,
+    "metadataOnlyRawContentAllowed": false,
+    "controlledOriginalRawContentAllowedInKds": false,
+    "credentialOrTokenDefaultBlockedOrMetadataOnly": true,
+    "defaultRagAdmissionForSensitive": "sensitive_metadata_only",
+    "externalShareRequiresRedactionAclAndGate": true,
+    "rawOriginalStaysInControlledSpace": true,
+    "writesRawContentToKds": 0,
+    "writesSecretToDocs": 0,
+    "writesSecretToEvidence": 0,
+    "writesExternalApi": 0
+  }
+}

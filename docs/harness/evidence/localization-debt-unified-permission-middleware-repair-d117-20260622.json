@@ -1,0 +1,39 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-UNIFIED-PERMISSION-MIDDLEWARE-REPAIR-D117-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md",
+  "action": "repair_unified_permission_middleware_localization_debt",
+  "before": {
+    "all_repo_findings": 14,
+    "target_file_findings": 3
+  },
+  "after": {
+    "all_repo_findings": 11,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -3,
+    "target_file_findings": -3
+  },
+  "changed_files": [
+    "openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md"
+  ],
+  "changed_line_items": 17,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_unified_permission_middleware_repair_d117.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

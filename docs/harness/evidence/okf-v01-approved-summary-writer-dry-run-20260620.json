@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-06-22T01:57:59.979411+00:00",
+  "status": "pass",
+  "mode": "dry_run",
+  "ledger_rows": 3,
+  "approved_rows": 0,
+  "would_write": 0,
+  "blocked": [],
+  "candidates": [],
+  "boundary": {
+    "does_not_modify_okf_concepts": true,
+    "does_not_write_source_documents": true,
+    "does_not_approve_summaries": true,
+    "source_of_record": "KDS / Git controlled documents"
+  }
+}

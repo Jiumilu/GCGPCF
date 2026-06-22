@@ -1,0 +1,57 @@
+{
+  "evidence_id": "STUDIO-KANBAN-CHAT-ENTRY-VERIFIED-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-005",
+  "target": {
+    "project": "Studio",
+    "surface": "operation-workbench",
+    "component": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/PageSidebarNav.vue",
+    "test_file": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/tests/client/page-sidebar-nav.test.ts"
+  },
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "in-app-browser",
+    "vitest"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "impeccable_not_invoked",
+    "figma_not_verified"
+  ],
+  "implementation": {
+    "chat_only_kanban_entry_added": true,
+    "shared_nav_component_scope": "PageSidebarNav",
+    "unrelated_page_refactor": false
+  },
+  "verification": {
+    "unit_test_command": "npm test -- tests/client/page-sidebar-nav.test.ts",
+    "unit_test_passed": true,
+    "chat_to_kanban_runtime_verified": true,
+    "kanban_to_chat_runtime_verified": true
+  },
+  "screenshots": {
+    "chat_entry": "docs/harness/evidence/assets/studio-chat-kanban-entry-20260622.png",
+    "kanban_from_entry": "docs/harness/evidence/assets/studio-kanban-from-chat-entry-20260622.png"
+  },
+  "gates": {
+    "G1": "pass",
+    "G2": "partial",
+    "G3": "pass",
+    "G4": "partial",
+    "G5": "partial",
+    "G6": "partial",
+    "G7": "pass",
+    "G8": "pass",
+    "G9": "pass"
+  },
+  "findings": [
+    "Chat main surface now exposes a visible Kanban entry.",
+    "Chat to Kanban runtime navigation is verified.",
+    "Kanban to Chat runtime navigation is verified."
+  ],
+  "non_claims": [
+    "does not prove ui_ready",
+    "does not prove project-group UI governance closure",
+    "does not grant accepted, integrated, or production_ready status"
+  ]
+}

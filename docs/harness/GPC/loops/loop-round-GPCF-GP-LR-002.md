@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-F7E27E2A98
-title: Loop Round GPCF-GP-LR-002
+title: Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单
 project: GPC
 related_projects: [GFIS, GPC, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/02-GPC/docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md
 source_path: docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF-GP-LR-002
+# Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单
 
 | 字段 | 值 |
 |---|---|
@@ -43,4 +43,4 @@ superseded_by: []
 | 平台骨架 | not-validated | 可运行入口、主流程、接口边界 |
 | GFIS/GPC 边界 | pending-human-review | 订单/交付/POD/回款事实边界确认 |
 
-Current state remains `partial`; this round does not write the GPC blueprint, change architecture conclusions, or mark accepted/integrated.
+当前状态保持 `partial`；本轮不写入 GPC 蓝图，不改变架构结论，也不标记 accepted/integrated。

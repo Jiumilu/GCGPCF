@@ -1,0 +1,32 @@
+{
+  "id": "gc-knowledge-fabric-dks-082-object-relationship-policy-smoke",
+  "description": "Static no-write smoke for the GC-Knowledge Fabric core object relationship chain.",
+  "expected": {
+    "relationCount": 10,
+    "minimumFieldCount": 12,
+    "requiredRelationTypes": [
+      "source_provides_evidence",
+      "evidence_supports_object",
+      "object_generates_candidate",
+      "candidate_checked_by_gate",
+      "gate_opens_work_item",
+      "work_item_produces_confirmation",
+      "confirmation_enables_writeback_candidate",
+      "decision_records_contribution",
+      "contribution_links_revenue",
+      "governance_evidence_closes_loop"
+    ],
+    "sourceRequiredForFormalFact": true,
+    "evidenceRequiredForEvidenceReady": true,
+    "waesGateRequiredForCandidates": true,
+    "confirmationRequiredForWritebackCandidate": true,
+    "aiCannotCreateFormalWritebackRelation": true,
+    "loopCannotPromoteBusinessStatus": true,
+    "harnessStoresGovernanceEvidenceOnly": true,
+    "revenueBasisRequiredForDistribution": true,
+    "writesKdsFact": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0
+  }
+}

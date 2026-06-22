@@ -1,0 +1,27 @@
+{
+  "id": "kwe-endpoint-no-write-smoke",
+  "expectedEndpoints": [
+    {"method": "POST", "path": "/api/v2/kwe/work-items", "routeMode": "work_request"},
+    {"method": "GET", "path": "/api/v2/kwe/work-items", "routeMode": "read_only"},
+    {"method": "POST", "path": "/api/v2/kwe/gaps", "routeMode": "work_request"},
+    {"method": "POST", "path": "/api/v2/kwe/bounties", "routeMode": "work_request"},
+    {"method": "POST", "path": "/api/v2/kwe/confirmations", "routeMode": "confirmation_request"},
+    {"method": "POST", "path": "/api/v2/kwe/committees", "routeMode": "committee_request"},
+    {"method": "POST", "path": "/api/v2/kwe/promotions", "routeMode": "promotion_request"},
+    {"method": "POST", "path": "/api/v2/kwe/redactions", "routeMode": "redaction_request"},
+    {"method": "POST", "path": "/api/v2/kwe/writebacks", "routeMode": "writeback_request"},
+    {"method": "POST", "path": "/api/v2/kwe/disputes", "routeMode": "committee_request"}
+  ],
+  "expected": {
+    "endpointCount": 10,
+    "readOnlyCount": 1,
+    "workRequestCount": 3,
+    "waesGatedRequestCount": 6,
+    "humanOrCommitteeFinalityCount": 9,
+    "writesAcceptedFact": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0,
+    "noWrite": true
+  }
+}

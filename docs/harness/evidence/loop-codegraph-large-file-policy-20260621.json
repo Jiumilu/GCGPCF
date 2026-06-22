@@ -1,0 +1,61 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-LARGE-FILE-POLICY-20260621",
+  "status": "large_file_policy_defined",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-GFIS-LARGE-FILE-POLICY-001",
+  "policy": {
+    "path": "02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md",
+    "large_file_threshold_bytes": 1000000,
+    "large_file_threshold_lines": 15000,
+    "default_decision": "keep_residual_pending_notice_explained",
+    "project_repo_changes_authorized": false
+  },
+  "gfis_case": {
+    "project": "GlobalCloud GFIS",
+    "candidate_path": "scripts/validate_gfis_runtime_sop_e2e.py",
+    "classification": "large_generated_validator_exception_candidate",
+    "size_bytes": 1589665,
+    "line_count": 17784,
+    "git_status": "tracked_modified",
+    "indexed_in_codegraph_files_table": false,
+    "codegraph_pending_notice": "Added: 1 files",
+    "codegraph_git_status_entries": 0,
+    "decision": "keep_residual_pending_notice_explained"
+  },
+  "rules": {
+    "business_code_edits_allowed": false,
+    "validator_refactor_allowed": false,
+    "delete_generated_validator_allowed": false,
+    "project_codegraph_exclude_change_allowed": false,
+    "gpcf_policy_evidence_update_allowed": true,
+    "accepted_or_integrated_upgrade_allowed": false
+  },
+  "loop_next_input": {
+    "round": "GPCF-CODEGRAPH-PROJECT-GROUP-MONITOR-001",
+    "objective": "Add a lightweight recurring project-group CodeGraph monitor input that checks 13-repo coverage, .codegraph Git protection, residual notices, and policy exceptions without entering project development.",
+    "allowed_actions": [
+      "GPCF evidence update",
+      "GPCF validator update",
+      "read-only codegraph status",
+      "read-only git status for .codegraph"
+    ],
+    "forbidden_actions": [
+      "project business code edits",
+      "GFIS validator refactor",
+      "delete generated validators",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false
+  }
+}

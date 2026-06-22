@@ -1,0 +1,82 @@
+{
+  "evidence_id": "STUDIO-KANBAN-UI-GATE-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-001",
+  "target": {
+    "project": "Studio",
+    "route": "/hermes/kanban",
+    "surface": "operation-workbench",
+    "page_component": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue",
+    "supporting_components": [
+      "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/hermes/kanban/KanbanTaskCard.vue",
+      "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/hermes/kanban/KanbanTaskDrawer.vue"
+    ]
+  },
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "npm run build"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "browser_not_started",
+    "playwright_not_started",
+    "impeccable_not_invoked",
+    "accessibility_tool_not_invoked",
+    "figma_not_verified"
+  ],
+  "verification": {
+    "manual_review": true,
+    "runtime_verified": false,
+    "mobile_verified": false,
+    "a11y_mode": "manual_only",
+    "build_command": {
+      "cwd": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "command": "npm run build",
+      "result": "pass",
+      "date": "2026-06-22"
+    }
+  },
+  "gates": {
+    "G1": {
+      "status": "pass",
+      "summary": "Has header, action bar, status chips, filtered board columns, and task drawer."
+    },
+    "G2": {
+      "status": "partial",
+      "summary": "Studio has local token system, but status colors are still partly hard-coded in page and component styles."
+    },
+    "G3": {
+      "status": "pass",
+      "summary": "Shared component vocabulary is consistent across header actions, cards, drawer, and detail sections."
+    },
+    "G4": {
+      "status": "partial",
+      "summary": "Shows status, runs, comments, events, logs, and diagnostics, but lacks source-record and audit-receipt structure."
+    },
+    "G5": {
+      "status": "partial",
+      "summary": "Session/result context is linked, but AI suggestions are not explicitly separated from business facts."
+    },
+    "G6": {
+      "status": "partial",
+      "summary": "Some focus and text robustness exist, but clickable task/session containers still lack keyboard semantics."
+    },
+    "G7": {
+      "status": "partial",
+      "summary": "Has mobile header wrapping and text wrapping rules, but no real viewport verification was executed."
+    },
+    "G8": {
+      "status": "partial",
+      "summary": "Build passed, but browser and mobile runtime verification remain missing."
+    },
+    "G9": {
+      "status": "pass",
+      "summary": "This round only added governance evidence and did not change Studio UI code."
+    }
+  },
+  "non_claims": [
+    "does not prove WAES to Studio inheritance is complete",
+    "does not prove browser-level or mobile-level acceptance",
+    "does not grant accepted, integrated, or production_ready status"
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-AD3AE05919
-title: GPCF-L4-GFIS-REPAIR-248
+title: GPCF-L4-GFIS-REPAIR-248 收件文件扫描预检
 project: GPCF
 related_projects: [GFIS, GPC, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-248.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-GFIS-REPAIR-248
+# GPCF-L4-GFIS-REPAIR-248 收件文件扫描预检
 
 ## 轮次定位
 
@@ -107,7 +107,7 @@ runtime_sop_e2e=repair_required
 - GFIS runtime SOP E2E main validator: expected exit 2, `gfis_runtime_sop_e2e=repair_required`
 - GFIS Demo E2E: `26 passed`, only `pass_demo_only`
 - GFIS `git diff --check -- .`: pass
-- GPCF governance gates: pending in this round record until final gate run
+- GPCF governance gates：本轮记录中暂记为 pending，直到 final gate run 完成
 
 ## 未完成与禁止升级
 

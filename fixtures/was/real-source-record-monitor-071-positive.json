@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "labor_standard_audit_report_gaps": 0,
+  "working_hours_wage_record_gaps": 0,
+  "occupational_health_safety_record_gaps": 0,
+  "worker_grievance_mechanism_record_gaps": 0,
+  "human_rights_due_diligence_record_gaps": 0,
+  "forced_labor_screening_record_gaps": 0,
+  "community_impact_consultation_record_gaps": 0,
+  "accepted_for_social_responsibility_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "social_responsibility_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

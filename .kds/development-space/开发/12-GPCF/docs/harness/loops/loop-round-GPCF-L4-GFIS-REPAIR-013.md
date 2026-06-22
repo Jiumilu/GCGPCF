@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-255B06AF2A
-title: GPCF-L4-GFIS-REPAIR-013 GFIS Runtime Reload And WorkOrder BOM Closure
+title: GPCF-L4-GFIS-REPAIR-013 GFIS 运行层重载与 WorkOrder BOM 收口
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-013.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-013.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-GFIS-REPAIR-013 GFIS Runtime Reload And WorkOrder BOM Closure
+# GPCF-L4-GFIS-REPAIR-013 GFIS 运行层重载与 WorkOrder BOM 收口
 
 ## 本轮目标
 

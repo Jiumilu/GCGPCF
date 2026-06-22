@@ -1,0 +1,125 @@
+{
+  "cases": [
+    {
+      "id": "waes-case-t0-safe-order",
+      "description": "T0 business fact with complete source and evidence can pass basic source/evidence/rag gates.",
+      "object": {
+        "id": "ko-order-001",
+        "trustLevel": "T0",
+        "ragAdmission": "safe",
+        "lifecycle": "verified",
+        "confirmationStatus": "human_confirmed",
+        "sourceRefs": ["src-order-001"],
+        "evidenceRefs": ["ev-order-001"],
+        "sensitive": false,
+        "targetAction": "rag"
+      },
+      "expected": {
+        "source_gate": "passed",
+        "evidence_gate": "passed",
+        "rag_gate": "passed"
+      }
+    },
+    {
+      "id": "waes-case-ai-candidate-blocked",
+      "description": "AI generated T5 candidate cannot become strong RAG or formal writeback.",
+      "object": {
+        "id": "ko-ai-candidate-001",
+        "trustLevel": "T5",
+        "ragAdmission": "blocked",
+        "lifecycle": "candidate",
+        "confirmationStatus": "ai_checked",
+        "sourceRefs": [],
+        "evidenceRefs": [],
+        "sensitive": false,
+        "generatedBy": "ai",
+        "targetAction": "writeback"
+      },
+      "expected": {
+        "source_gate": "repair_required",
+        "evidence_gate": "repair_required",
+        "rag_gate": "blocked",
+        "writeback_gate": "blocked"
+      }
+    },
+    {
+      "id": "waes-case-writeback-needs-human",
+      "description": "Writeback candidate with evidence but without human confirmation requires human review.",
+      "object": {
+        "id": "ko-writeback-001",
+        "trustLevel": "T2",
+        "ragAdmission": "limited",
+        "lifecycle": "candidate",
+        "confirmationStatus": "human_required",
+        "sourceRefs": ["src-partner-001"],
+        "evidenceRefs": ["ev-partner-001"],
+        "sensitive": false,
+        "targetAction": "writeback"
+      },
+      "expected": {
+        "source_gate": "passed",
+        "evidence_gate": "passed",
+        "writeback_gate": "human_required"
+      }
+    },
+    {
+      "id": "waes-case-sensitive-finance",
+      "description": "Finance voucher must stay metadata-only unless redacted and approved.",
+      "object": {
+        "id": "ko-finance-001",
+        "trustLevel": "T0",
+        "ragAdmission": "sensitive_metadata_only",
+        "lifecycle": "verified",
+        "confirmationStatus": "human_confirmed",
+        "sourceRefs": ["src-finance-001"],
+        "evidenceRefs": ["ev-finance-001"],
+        "sensitive": true,
+        "sensitiveClass": "finance_voucher",
+        "targetAction": "rag"
+      },
+      "expected": {
+        "source_gate": "passed",
+        "evidence_gate": "passed",
+        "sensitive_data_gate": "metadata_only",
+        "rag_gate": "metadata_only"
+      }
+    },
+    {
+      "id": "waes-case-revenue-formal",
+      "description": "Formal revenue requires cash received and evidence.",
+      "object": {
+        "id": "ko-revenue-001",
+        "trustLevel": "T0",
+        "ragAdmission": "limited",
+        "lifecycle": "verified",
+        "confirmationStatus": "human_confirmed",
+        "sourceRefs": ["src-cash-001"],
+        "evidenceRefs": ["ev-cash-001"],
+        "revenueType": "formal_revenue",
+        "basis": "cash_received",
+        "targetAction": "revenue"
+      },
+      "expected": {
+        "revenue_gate": "passed"
+      }
+    },
+    {
+      "id": "waes-case-contribution-candidate",
+      "description": "Contribution candidate without confirmation remains human-required.",
+      "object": {
+        "id": "ko-contribution-001",
+        "trustLevel": "T3",
+        "ragAdmission": "repair_required",
+        "lifecycle": "candidate",
+        "confirmationStatus": "human_required",
+        "sourceRefs": ["src-meeting-001"],
+        "evidenceRefs": [],
+        "contributionStatus": "candidate",
+        "targetAction": "contribution"
+      },
+      "expected": {
+        "contribution_gate": "human_required"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "monitor_id": "WAS-REAL-SOURCE-RECORD-MONITOR-POSITIVE",
+  "required_p4_inputs": 6,
+  "submitted_real_inputs": 0,
+  "submitted_files_found": 0,
+  "candidate_files_checked": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

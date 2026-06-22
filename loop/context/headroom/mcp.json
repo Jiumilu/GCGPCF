@@ -1,0 +1,28 @@
+{
+  "name": "globalcloud-headroom-lcx-mcp",
+  "status": "controlled",
+  "production_admission_gate": false,
+  "tools": {
+    "headroom_compress": {
+      "visibility": "allowed",
+      "requires_harness_evidence": true,
+      "requires_sensitive_check": true
+    },
+    "headroom_stats": {
+      "visibility": "allowed",
+      "requires_harness_evidence": true
+    },
+    "headroom_retrieve": {
+      "visibility": "restricted",
+      "requires_waes_gate": true,
+      "requires_reason": true,
+      "requires_harness_evidence": true,
+      "requires_sensitive_check": true
+    }
+  },
+  "forbidden": [
+    "retrieve_without_reason",
+    "retrieve_without_evidence",
+    "retrieve_high_sensitive_original_without_waes"
+  ]
+}

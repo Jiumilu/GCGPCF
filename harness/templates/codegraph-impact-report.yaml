@@ -1,0 +1,30 @@
+codegraph_impact_report:
+  report_id:
+  task_id:
+  repo:
+  branch:
+  commit:
+  codegraph_version:
+  snapshot_id:
+  generated_at:
+  changed_files: []
+  impacted_symbols: []
+  impacted_apis: []
+  impacted_services: []
+  impacted_models: []
+  impacted_tests: []
+  impacted_docs: []
+  impacted_permissions: []
+  risk:
+    level:
+    reasons: []
+    waes_required:
+    committee_required:
+  evidence:
+    status_json:
+    query_log:
+    validator_output:
+  boundaries:
+    accepted: false
+    integrated: false
+    production_ready: false

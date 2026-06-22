@@ -1,0 +1,56 @@
+{
+  "evidence_id": "AGENT-REACH-CANDIDATE-SEARCH-REVIEW-20260620",
+  "date": "2026-06-20",
+  "status": "ready_for_review",
+  "mode": "candidate_search_capability_review",
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-zero-config-repair-20260620.json",
+    "docs/harness/evidence/agent-reach-exa-local-pilot-20260620.json",
+    "docs/harness/evidence/agent-reach-exa-fixed-benchmark-20260620.json"
+  ],
+  "capability_summary": {
+    "zero_config_channels": [
+      "web",
+      "github",
+      "rss"
+    ],
+    "exa_search": "local_pilot_pass_and_fixed_benchmark_pass",
+    "cookie_or_login_channels": "not_admitted",
+    "production_integration": "not_authorized"
+  },
+  "quality_metrics": {
+    "zero_config_success_rate": 1.0,
+    "exa_fixed_query_success_rate": 1.0,
+    "source_provenance_rate": 1.0,
+    "latency_p50_seconds": 3.889,
+    "latency_p95_seconds": 4.633,
+    "credential_leakage_count": 0,
+    "production_write_count": 0,
+    "kds_canonical_write_count": 0,
+    "rollback_verified": true
+  },
+  "admission_decision": {
+    "waes_review_status": "ready_for_review",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false
+  },
+  "continuous_improvement_controls": [
+    "fixed_query_benchmark_must_be_replayable",
+    "source_provenance_rate_must_remain_1_0_for_candidate_admission",
+    "all_search_results_require_downstream_review_before_kds_or_rag_promotion",
+    "temporary_mcp_configuration_must_be_rollback_verified",
+    "cookie_or_login_channels_require_separate_authorization_and_redaction_gate"
+  ],
+  "next_gate": "waes_kds_review_or_l3_candidate_pipeline",
+  "non_claims": [
+    "does not prove production integration",
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not upgrade GPCF accepted/integrated/production_ready status",
+    "does not turn Exa results into strong RAG citations",
+    "does not admit Twitter/Reddit/Xiaohongshu cookie channels"
+  ]
+}

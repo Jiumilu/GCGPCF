@@ -1,0 +1,20 @@
+{
+  "id": "gc-knowledge-fabric-dks-081-status-machine-policy-smoke",
+  "description": "Static no-write smoke for the GC-Knowledge Fabric unified lifecycle state machine.",
+  "expected": {
+    "stateCount": 11,
+    "promotionRuleCount": 10,
+    "terminalStates": ["superseded", "archived"],
+    "aiAllowedTargetStates": ["draft", "candidate", "repair_required"],
+    "loopAllowedTargetStates": ["draft", "candidate", "reviewing", "repair_required", "evidence_ready"],
+    "aiCannotPromoteTo": ["verified", "accepted", "published"],
+    "loopCannotPromoteTo": ["verified", "accepted", "published"],
+    "formalWritebackRequiresAccepted": true,
+    "revenueConfirmationRequiresAccepted": true,
+    "templateIsNotFact": true,
+    "writesKdsFact": 0,
+    "writesBusinessSystem": 0,
+    "writesRevenueDistribution": 0,
+    "writesExternalApi": 0
+  }
+}

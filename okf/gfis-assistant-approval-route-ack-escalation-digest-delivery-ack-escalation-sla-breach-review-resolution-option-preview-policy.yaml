@@ -1,0 +1,163 @@
+policy_id: okf.gfis_assistant_approval_route_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write resolution option previews derived from DKS-149
+  acknowledgement escalation SLA breach review previews. These previews show
+  candidate resolution option type, priority, path, candidate assignees,
+  required evidence, blocked resolution count, and next-step suggestions only.
+  They do not create resolutions, dispute updates, committee decisions, freeze
+  actions, approval decisions, governance records, lifecycle changes, business
+  writes, settlements, or external API calls.
+
+required_fields:
+  - resolution_option_preview_id
+  - breach_review_preview_refs
+  - sla_preview_refs
+  - escalation_preview_refs
+  - tenant_id
+  - project_id
+  - surface
+  - resolution_option_type
+  - resolution_option_status
+  - resolution_option_decision
+  - resolution_option_scope
+  - resolution_priority
+  - candidate_assignee_refs
+  - required_evidence_refs
+  - resolution_reason_refs
+  - blocked_resolution_count
+  - boundary_refs
+  - source_breach_review_preview_refs
+  - resolution_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - resolution_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_resolution
+  - creates_dispute_update
+  - creates_committee_decision
+  - creates_freeze_action
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+resolution_option_types:
+  - team_digest_delivery_ack_escalation_resolution_option_preview
+  - project_digest_delivery_ack_escalation_resolution_option_preview
+  - governance_digest_delivery_ack_escalation_resolution_option_preview
+  - external_blocked_digest_delivery_ack_escalation_resolution_option_preview
+  - committee_digest_delivery_ack_escalation_resolution_option_preview
+  - freeze_digest_delivery_ack_escalation_resolution_option_preview
+
+resolution_option_statuses:
+  - resolution_option_preview_only
+  - resolution_option_evidence_required
+  - resolution_option_metadata_boundary
+  - resolution_option_external_blocked
+  - resolution_option_committee_required
+  - resolution_option_freeze_required
+
+resolution_option_decisions:
+  - show_team_digest_delivery_ack_escalation_resolution_option_preview
+  - show_project_digest_delivery_ack_escalation_resolution_option_preview
+  - show_governance_digest_delivery_ack_escalation_resolution_option_preview
+  - show_external_blocked_digest_delivery_ack_escalation_resolution_option_preview
+  - show_committee_digest_delivery_ack_escalation_resolution_option_preview
+  - show_freeze_digest_delivery_ack_escalation_resolution_option_preview
+
+resolution_option_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+resolution_priorities:
+  - p3_candidate
+  - p2_candidate
+  - p1_candidate
+  - metadata_only_candidate
+  - external_blocked_candidate
+  - committee_required_candidate
+  - freeze_required_candidate
+
+resolution_reasons:
+  - supplement_delivery_ack_candidate
+  - repair_evidence_gap_candidate
+  - metadata_boundary_candidate
+  - external_share_blocked_candidate
+  - committee_review_candidate
+  - freeze_review_candidate
+
+blocked_actions:
+  - create_resolution
+  - create_dispute_update
+  - create_committee_decision
+  - create_freeze_action
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  resolution_option_preview_only: true
+  resolution_option_is_not_resolution: true
+  resolution_option_is_not_dispute_update: true
+  resolution_option_is_not_committee_decision: true
+  resolution_option_is_not_freeze_action: true
+  resolution_option_is_not_approval_request: true
+  resolution_option_is_not_approval_decision: true
+  resolution_option_is_not_harness_evidence: true
+  resolution_option_is_not_waes_result: true
+  resolution_option_is_not_kwe_work_item: true
+  resolution_option_is_not_lifecycle_change: true
+  resolution_option_is_not_business_writeback: true
+  creates_resolution_must_be_false: true
+  creates_dispute_update_must_be_false: true
+  creates_committee_decision_must_be_false: true
+  creates_freeze_action_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_resolution: 0
+  writes_dispute_update: 0
+  writes_committee_decision: 0
+  writes_freeze_action: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

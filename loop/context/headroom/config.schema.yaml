@@ -1,0 +1,46 @@
+schema_id: globalcloud.headroom_lcx.config.v1
+required:
+  - package
+  - telemetry_default
+  - runtime
+  - proxy
+  - mcp
+  - ccr
+  - memory
+  - learn
+  - output_shaper
+runtime:
+  headroom_package: headroom-ai
+  version_policy: pinned_or_locked
+  isolated_env_required: true
+  telemetry_default: off
+proxy:
+  port_default: 8787
+  bind_default: 127.0.0.1
+  production_enabled_default: false
+  require_loop_launcher: true
+mcp:
+  tools_allowed: [headroom_compress, headroom_stats]
+  tools_restricted: [headroom_retrieve]
+  retrieve_requires_waes_gate: true
+ccr:
+  enabled_default: true
+  original_cache_scope: local_or_controlled
+  retrieve_reason_required: true
+  evidence_required: true
+memory:
+  cross_project_memory_default: false
+  allowed_levels: [L0_session, L1_engineering_working_memory]
+  forbidden_level: L2_official_fact
+learn:
+  default_mode: preview
+  apply_requires_human_approval: true
+  auto_apply_allowed: false
+output_shaper:
+  default_enabled: false
+  forbidden_contexts: [official_acceptance, compliance_review, finance_decision, legal_contract]
+non_claims:
+  accepted: false
+  integrated: false
+  production_ready: false
+  measured_production_tokens: false

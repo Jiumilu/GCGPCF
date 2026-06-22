@@ -1,0 +1,47 @@
+{
+  "id": "gckf-p0-handler-stub-preview-v0.1",
+  "description": "GC-Knowledge Fabric P0-D13 handler stub preview coverage. It validates the static dispatcher boundary and does not start servers, connect databases, mutate KDS, or write business systems.",
+  "version": "v0.1",
+  "handlerStubPath": "packages/api/src/handler-stub.ts",
+  "handlerMapPath": "packages/api/src/handler-map.ts",
+  "requestResponseFixture": "fixtures/api/gckf-p0-handler-request-response-dry-run-v0.1.json",
+  "indexPath": "packages/api/src/index.ts",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "requiredStubTerms": [
+    "invokeHandlerStub",
+    "resolveHandlerMapping",
+    "HANDLER_PREFLIGHT_MAPPINGS",
+    "SERVICE_REGISTRY",
+    "noWrite: true",
+    "directBusinessWrite: false",
+    "acceptedLifecycleWrite: false",
+    "externalApiWrite: false"
+  ],
+  "forbiddenRuntimeTerms": [
+    "fetch(",
+    "axios",
+    "PrismaClient",
+    "new Pool",
+    "INSERT INTO",
+    "UPDATE ",
+    "DELETE FROM",
+    "TRUNCATE",
+    "DROP TABLE",
+    "listen(",
+    "createServer("
+  ],
+  "expectedSummary": {
+    "caseCount": 40,
+    "handlerStubCount": 1,
+    "indexExportCount": 1,
+    "forbiddenRuntimeTermMatches": 0,
+    "typescriptNoEmit": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/11-MMC/docs/harness/MMC/loops/README.md
 source_path: docs/harness/MMC/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -38,4 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-72EF36F3B2 | loops | docs/harness/MMC/loops/README.md | MMC | controlled |
 | GPCF-DOC-923334C992 | Loop Round GPCF-MM-LR-001 | docs/harness/MMC/loops/loop-round-GPCF-MM-LR-001.md | MMC | controlled |
-| GPCF-DOC-36599EF2A8 | Loop Round GPCF-MM-LR-002 | docs/harness/MMC/loops/loop-round-GPCF-MM-LR-002.md | MMC | controlled |
+| GPCF-DOC-36599EF2A8 | Loop Round GPCF-MM-LR-002：MMC 治理模板字段字典 | docs/harness/MMC/loops/loop-round-GPCF-MM-LR-002.md | MMC | controlled |

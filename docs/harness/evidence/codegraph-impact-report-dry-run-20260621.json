@@ -1,0 +1,114 @@
+{
+  "evidence_id": "CODEGRAPH-IMPACT-REPORT-DRY-RUN-20260621",
+  "status": "impact_report_dry_run_pass",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005",
+  "objective": "Use a low-risk governance validator as a dry-run target to verify CodeGraph impact report value without project business development.",
+  "target": {
+    "repo": "GlobalCoud GPCF",
+    "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+    "change_type": "governance_validator_and_evidence_dry_run",
+    "changed_files": [
+      "tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py",
+      "docs/harness/evidence/codegraph-project-group-steady-state-verify-20260621.json",
+      "docs/harness/evidence/codegraph-project-group-steady-state-verify-20260621.md",
+      "docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-VERIFY-004.md"
+    ]
+  },
+  "codegraph_queries": [
+    {
+      "command": "codegraph query codegraph_project_group_steady_state_verify --json",
+      "purpose": "Locate the validator and directly referenced constants.",
+      "result_count": 4,
+      "top_result": "tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py"
+    },
+    {
+      "command": "codegraph node tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py",
+      "purpose": "Read the target validator through CodeGraph and inspect indexed dependents.",
+      "symbols": 9,
+      "line_count": 129,
+      "indexed_dependents": 0
+    },
+    {
+      "command": "codegraph affected tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py --json",
+      "purpose": "Select impacted tests for the validator change.",
+      "affected_tests": [],
+      "total_dependents_traversed": 0
+    },
+    {
+      "command": "codegraph explore validate_codegraph_project_group_steady_state_verify REPOS evidence",
+      "purpose": "Find adjacent reusable project-group validator patterns.",
+      "symbols_found": 8,
+      "files_found": 8
+    },
+    {
+      "command": "codegraph impact main --depth 2",
+      "purpose": "Negative control showing broad symbol queries are too noisy for evidence.",
+      "affected_symbols": 101,
+      "usable_for_gate": false
+    }
+  ],
+  "rg_baseline": {
+    "command": "rg -n \"validate_codegraph_project_group_steady_state_verify|CODEGRAPH-PROJECT-GROUP-STEADY-STATE-VERIFY-20260621|GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-VERIFY-004|GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005\" docs tools governance harness loop 09-status",
+    "matched_files": 16,
+    "matched_lines": 31,
+    "limitation": "rg finds text locations but does not classify symbols, dependents, affected tests, or noisy symbol risk."
+  },
+  "impact_report": {
+    "changed_files": [
+      "tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py"
+    ],
+    "impacted_symbols": [
+      "file:tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py",
+      "variable:EVIDENCE_JSON",
+      "variable:EVIDENCE_MD",
+      "variable:LOOP_ROUND",
+      "variable:REPOS",
+      "function:require",
+      "function:read",
+      "function:run",
+      "function:main"
+    ],
+    "impacted_tests": [],
+    "impacted_docs": [
+      "docs/harness/evidence/codegraph-project-group-steady-state-verify-20260621.json",
+      "docs/harness/evidence/codegraph-project-group-steady-state-verify-20260621.md",
+      "docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-VERIFY-004.md"
+    ],
+    "risk": {
+      "level": "low",
+      "reasons": [
+        "Governance validator only",
+        "No project business code touched",
+        "No affected tests reported by CodeGraph",
+        "No indexed dependents reported by CodeGraph node"
+      ],
+      "waes_required": false,
+      "committee_required": false
+    },
+    "validation_plan": [
+      "python3 tools/kds-sync/validate_codegraph_project_group_steady_state_verify.py",
+      "python3 tools/kds-sync/validate_codegraph_project_group_full_coverage.py",
+      "python3 tools/kds-sync/check_document_pollution.py",
+      "python3 tools/kds-sync/validate_kds_token.py",
+      "python3 tools/kds-sync/loop_document_gate.py --check-only"
+    ]
+  },
+  "value_assessment": {
+    "context_precision": "CodeGraph query returned the target validator and its evidence constants directly.",
+    "impact_precision": "CodeGraph affected returned zero affected tests and zero traversed dependents for the validator file.",
+    "noise_control": "A broad main-symbol impact query returned 101 affected symbols and is explicitly rejected for gate evidence.",
+    "cost_signal": "Targeted CodeGraph commands reduced manual text scanning from 16 matched files and 31 text lines to a direct file/symbol/test impact set.",
+    "quality_signal": "The report separates changed files, impacted symbols, impacted docs, impacted tests, risk, and validation plan."
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false
+  },
+  "next_round": "GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006"
+}

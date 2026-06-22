@@ -1,0 +1,61 @@
+{
+  "id": "agent-reach-p0-source-lock-20260622",
+  "round": "GPCF-AGENT-REACH-P0-SOURCE-LOCK-001",
+  "date": "2026-06-22",
+  "status": "source_lock_ready",
+  "current_admission": "limited_candidate_only",
+  "phase": "P0 Source Lock",
+  "upstream": {
+    "repo": "https://github.com/Panniantong/Agent-Reach.git",
+    "head": "22d7f03a59401b5740b380c3ad43e3ff7a9dc373",
+    "latest_commit_time": "2026-06-16T20:45:57+08:00",
+    "package": "agent-reach",
+    "version": "1.5.0",
+    "python_requirement": ">=3.10",
+    "license": "MIT",
+    "source_file_count": 89
+  },
+  "artifacts": [
+    "third_party/agent-reach/README.md",
+    "third_party/agent-reach/SOURCE.md",
+    "third_party/agent-reach/VERSION.lock",
+    "third_party/agent-reach/OSS_REVIEW.md",
+    "third_party/agent-reach/SECURITY_REVIEW.md",
+    "third_party/agent-reach/MODIFICATIONS.md"
+  ],
+  "entrypoints": {
+    "cli": "agent-reach = agent_reach.cli:main",
+    "python_api": "agent_reach.core.AgentReach",
+    "health_command": "agent-reach doctor --json",
+    "config_path": "~/.agent-reach/config.yaml"
+  },
+  "capability_domains": [
+    "web",
+    "exa_search",
+    "github",
+    "youtube",
+    "rss",
+    "bilibili",
+    "v2ex",
+    "xueqiu",
+    "twitter",
+    "reddit",
+    "xiaohongshu",
+    "linkedin",
+    "xiaoyuzhou"
+  ],
+  "security_controls": {
+    "source_archive_copied": false,
+    "upstream_source_modified": false,
+    "package_installed": false,
+    "live_external_search_invoked": false,
+    "agent_reach_runtime_invoked": false,
+    "credential_written": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "next_round": "GPCF-AGENT-REACH-P1-ISOLATED-INSTALL-001"
+}

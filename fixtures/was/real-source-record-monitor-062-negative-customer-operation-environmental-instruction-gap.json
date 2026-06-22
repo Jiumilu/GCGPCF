@@ -1,0 +1,15 @@
+{
+  "submitted_real_candidate_files": 0,
+  "use_phase_energy_performance_record_gaps": 0,
+  "customer_operation_environmental_instruction_gaps": 1,
+  "maintenance_consumable_record_gaps": 0,
+  "use_phase_emission_or_resource_model_gaps": 0,
+  "field_performance_feedback_gaps": 0,
+  "software_or_firmware_efficiency_update_record_gaps": 0,
+  "end_user_environmental_claim_substantiation_gaps": 0,
+  "accepted_for_use_phase_environmental_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "use_phase_environmental_state": "blocked_no_real_source_record",
+  "boundary": {"real_source_records": 0, "valid_source_records": 0, "runtime_primary_key_ready": 0, "review_queue": 0, "runtime_intake": 0, "waes_review": 0, "verified": 0, "accepted": false, "integrated": false, "production_ready": false}
+}

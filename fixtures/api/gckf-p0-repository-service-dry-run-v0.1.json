@@ -1,0 +1,85 @@
+{
+  "id": "gckf-p0-repository-service-dry-run-v0.1",
+  "description": "GC-Knowledge Fabric P0-D10 repository/service dry-run skeleton coverage. It validates local no-write service boundaries only and does not start servers, connect databases, mutate KDS, or write business systems.",
+  "version": "v0.1",
+  "commonContract": "packages/api/src/no-write-repository.ts",
+  "indexPath": "packages/api/src/index.ts",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "groups": [
+    {
+      "group": "kds_v2",
+      "repository": "packages/api/src/kds/v2/repository.ts",
+      "service": "packages/api/src/kds/v2/service.ts",
+      "requiredExports": ["./kds/v2/repository", "./kds/v2/service"],
+      "expectedOperationCount": 12
+    },
+    {
+      "group": "waes",
+      "repository": "packages/api/src/waes/repository.ts",
+      "service": "packages/api/src/waes/service.ts",
+      "requiredExports": ["./waes/repository", "./waes/service"],
+      "expectedOperationCount": 9
+    },
+    {
+      "group": "kwe",
+      "repository": "packages/api/src/kwe/repository.ts",
+      "service": "packages/api/src/kwe/service.ts",
+      "requiredExports": ["./kwe/repository", "./kwe/service"],
+      "expectedOperationCount": 10
+    },
+    {
+      "group": "gfis_assistant",
+      "repository": "packages/api/src/gfis/repository.ts",
+      "service": "packages/api/src/gfis/service.ts",
+      "requiredExports": ["./gfis/repository", "./gfis/service"],
+      "expectedOperationCount": 7
+    },
+    {
+      "group": "governance_loop",
+      "repository": "packages/api/src/governance/repository.ts",
+      "service": "packages/api/src/governance/service.ts",
+      "requiredExports": ["./governance/repository", "./governance/service"],
+      "expectedOperationCount": 12
+    }
+  ],
+  "requiredCommonFlags": [
+    "connectsDatabase: false",
+    "callsExternalApi: false",
+    "writesKds: false",
+    "writesBusinessSystem: false",
+    "writesAcceptedLifecycle: false",
+    "noWrite: true"
+  ],
+  "forbiddenRuntimeTerms": [
+    "fetch(",
+    "axios",
+    "PrismaClient",
+    "new Pool",
+    "pg.",
+    "mysql",
+    "sqlite",
+    "sequelize",
+    "INSERT INTO",
+    "UPDATE ",
+    "DELETE FROM",
+    "TRUNCATE",
+    "DROP TABLE"
+  ],
+  "expectedSummary": {
+    "groupCount": 5,
+    "repositoryCount": 5,
+    "serviceCount": 5,
+    "commonContractCount": 1,
+    "operationCount": 50,
+    "indexExportCount": 10,
+    "forbiddenRuntimeTermMatches": 0,
+    "typescriptNoEmit": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

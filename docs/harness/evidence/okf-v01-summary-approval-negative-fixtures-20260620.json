@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-06-22T01:41:15.779577+00:00",
+  "status": "pass",
+  "fixtures": [
+    {
+      "name": "missing_required_fields",
+      "actual_status": "fail",
+      "actual_reason": "missing_fields:source_path,kds_path,requested_summary_scope,confirmer,confirmation_date,owner_approval,sensitivity_review,approved_summary_scope",
+      "expected_status": "fail",
+      "expected_reason_prefix": "missing_fields:",
+      "status": "pass"
+    },
+    {
+      "name": "partial_confirmation",
+      "actual_status": "fail",
+      "actual_reason": "partial_confirmation:sensitivity_review,approved_summary_scope",
+      "expected_status": "fail",
+      "expected_reason_prefix": "partial_confirmation:",
+      "status": "pass"
+    },
+    {
+      "name": "sensitivity_not_pass",
+      "actual_status": "fail",
+      "actual_reason": "sensitivity_review_not_pass",
+      "expected_status": "fail",
+      "expected_reason_prefix": "sensitivity_review_not_pass",
+      "status": "pass"
+    },
+    {
+      "name": "pending_request_allowed",
+      "actual_status": "pending_review",
+      "actual_reason": "awaiting_human_confirmation",
+      "expected_status": "pending_review",
+      "expected_reason_prefix": "awaiting_human_confirmation",
+      "status": "pass"
+    }
+  ],
+  "boundary": {
+    "does_not_approve_summaries": true,
+    "does_not_modify_okf_concepts": true,
+    "uses_temporary_files_only": true
+  }
+}

@@ -1,0 +1,85 @@
+policy_id: okf.revenue_contribution_attribution_packet_policy
+version: v1.0
+owner: GPCF
+status: draft
+last_reviewed: "2026-06-20"
+description: >
+  Defines the no-write attribution packet boundary between RevenueRecord and
+  ContributionRecord. The packet is review material only and does not confirm
+  scores, distribute revenue, transfer quota, settle bounty, or write external
+  systems.
+
+required_fields:
+  - id
+  - tenant_id
+  - project_id
+  - revenue_ref
+  - contribution_refs
+  - revenue_type
+  - revenue_basis
+  - attribution_basis
+  - evidence_refs
+  - waes_gate_refs
+  - confidence
+  - attribution_status
+  - committee_required
+  - freeze_recommended
+  - distribution_candidate_only
+  - no_write
+
+attribution_basis:
+  - cash_received
+  - invoice_statistical
+  - contract_reference
+  - opportunity_reference
+  - knowledge_value_reference
+  - channel_reference
+  - manual_estimate
+
+attribution_status:
+  - candidate
+  - under_review
+  - committee_required
+  - repair_required
+  - frozen
+  - distribution_candidate
+
+formal_distribution_candidate_requirements:
+  revenue_type: formal_revenue
+  revenue_basis: cash_received
+  minimum_evidence_refs: 1
+  minimum_waes_gate_refs: 1
+  required_confirmed_contribution_status:
+    - human_confirmed
+    - committee_confirmed
+  freeze_recommended: false
+
+committee_triggers:
+  - potential_to_formal_revenue
+  - cross_unit_attribution_dispute
+  - revenue_pool_rule_dispute
+  - unclear_contribution_boundary
+  - major_violation
+  - evidence_revenue_basis_mismatch
+  - waes_committee_required
+  - waes_freeze_required
+
+hard_boundaries:
+  formal_distribution_requires_cash_received: true
+  invoiced_is_statistics_only: true
+  potential_must_not_auto_promote: true
+  channel_opportunity_is_reference_only: true
+  knowledge_value_is_contribution_only: true
+  attribution_packet_is_not_distribution: true
+  attribution_packet_is_not_score_confirmation: true
+  committee_required_for_cross_unit_or_potential_to_formal: true
+  freeze_required_for_dispute_or_major_violation: true
+
+no_write_assertions:
+  writes_score_confirmation: 0
+  writes_revenue_distribution: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_kds_fact: 0
+  writes_business_system: 0
+  writes_external_api: 0

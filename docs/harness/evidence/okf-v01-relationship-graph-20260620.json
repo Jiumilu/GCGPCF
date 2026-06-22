@@ -1,0 +1,3526 @@
+{
+  "generated_at": "2026-06-21T00:41:44.528518+00:00",
+  "status": "pass",
+  "bundles": [
+    "architecture",
+    "governance",
+    "kds"
+  ],
+  "concepts": [
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "title": "GlobalCloud 项目群 KDS 开发空间安全规范",
+      "type": "KDS Document",
+      "source_path": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "source_hash": "31a84c070bfc15f79146a667d42fced62337b1606f2f7603f5172bc4856c9d2c",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "title": "GlobalCloud Loop开发KDS关联数据检索机制",
+      "type": "KDS Document",
+      "source_path": "03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "source_hash": "7c52abd81691d7aaafa46bfeb789bec1800ad2ccbdb55713c5dadfcf99364cc7",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "title": "GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单",
+      "type": "KDS Document",
+      "source_path": "03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "kds_path": "开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "source_hash": "efa666df065261594a5e21c9b54911b95b2ed8038fde31c9965ec6a90503f4d3",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "title": "KDS Markdown 化与 OKF 兼容层全面实施闭环方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/kds-md-okf-implementation-closure-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md",
+      "source_hash": "0ac0e3eb806e608f5b118f3d04fdb058f6375f4ef1b720ebb268742df1a3a0d8",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "title": "KDS OKF v0.1 全量派生层实施方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/kds-okf-v01-full-implementation-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-okf-v01-full-implementation-plan.md",
+      "source_hash": "6e5e9254ec6cc110cd00b5a2a5cf8cf89b87201f269e13229f87e1499db6fc49",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "title": "KDS Phase 10 Governance Sustainment Plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/kds-phase10-governance-sustainment-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md",
+      "source_hash": "129a7875b01ecba774f46a65daf66d6d7d9e574a51cf4c10648d8c1d9f70990e",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md",
+      "title": "KDS Readonly Probe Report",
+      "type": "Governance Report",
+      "source_path": "09-status/kds-readonly-probe-report.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-readonly-probe-report.md",
+      "source_hash": "6d09ccf39932a1097db955af232e8614a7105391b11a9b619106885b51060b4f",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "title": "ODF 受控引入与治理试点方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-introduction-governance-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-introduction-governance-plan.md",
+      "source_hash": "9cfac9cd4192e1f991b89d91e10c3e53b03210e4c1f91a5e2bf192368952f5d3",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "title": "odf-phase2-expansion-plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase2-expansion-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md",
+      "source_hash": "14b15fb0e04fb7769445e52a63a6efb17f6adf4b0b8961df950c542b995f104f",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "title": "ODF Phase 3 受控模板化与准入门禁计划",
+      "type": "Governance Gate",
+      "source_path": "09-status/odf-phase3-schema-gate-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md",
+      "source_hash": "37622cb4dc87d595003ce3a60073c3ca80957e5ce515329524408e95ae5694d2",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "title": "ODF Phase 4 小批量准入试运行方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase4-small-batch-admission-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md",
+      "source_hash": "24e5f825b3e2a06e3f8b9119fb19a9b2d271e993c0b40ffe59403d8bb5af95b4",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "title": "odf-phase5-change-request-governance-plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase5-change-request-governance-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md",
+      "source_hash": "1ce11bdb5b0a6748bc0e3086d29da70df9397b32c02256389d89e1e09a83578c",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "title": "odf-phase6-manual-confirmation-workbench-plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "source_hash": "20dfd27dab5bf2e69c584011a8cc322a1f18bd1c8a804b019e3ba82d244f1935",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "title": "ODF Phase 7 小批量样本执行方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase7-small-batch-execution-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md",
+      "source_hash": "2ba95f2fd09bcb295ddf90f9de96077945c34c344fd24d83997ab85a24d870a5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "title": "ODF Phase 8 小批量回归与漂移监控方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase8-drift-monitoring-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md",
+      "source_hash": "79d4a3b0a678cc8ab0dbd3e10906c650fe9324b9440d7a3043ae920b18aa22a5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "title": "ODF Phase 9 动态源稳定化策略方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "source_hash": "90cbf6f77704e51fa02f2354cd6f8914bdda5c20ed78101bad039c7ca4da0b42",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "title": "KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "source_hash": "9f14f34f1fd07b794a8dbd231e1a6f4080df0b1197bf3572497b2e93a74aa303",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "title": "KDS Phase 10 Backlog Triage Report",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "source_hash": "387c9fe6a9a0d96372507be53e2f2bed7ff9b4a4cda8b446f35a6985ef4b6ff2",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "title": "KDS Phase 10 Self-refresh Stabilization Workpack",
+      "type": "KDS Document",
+      "source_path": "docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "source_hash": "788df43696c647352abe1063f336d104114f1215a466c44d0a06381d4b312078",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "title": "ODF Phase 2 扩大样本验证闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "source_hash": "dd8f55585083d49b6113bce1371a17ee133bf3c69b2f839e76de47447830b905",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "title": "ODF Phase 2 样本准入台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "source_hash": "60fb57b79f9a5d265bf01de091ba87c0b1bda191e385f62493a015a3d5341d72",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "title": "ODF Phase 3 Schema Gate Evidence",
+      "type": "Governance Gate",
+      "source_path": "docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "source_hash": "dcad9996b60c9d98c7a75c917f246159a5bd7ea79140902c30e863144ccb2367",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "title": "ODF Phase 4 小批量准入试运行闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "source_hash": "ce97e5a8cb058acd2ecdef2b1f271b3e10dae2c70ad53eaccbae1ad24d8bac00",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "title": "ODF Phase 4 小批量准入试运行台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "source_hash": "75441df7da3d978ead0abe12194b13e631e57d37839150d0afe1f31582d2a994",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "title": "ODF Phase 5 准入变更申请机制闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "source_hash": "b695106343b887393d564a750e44aa8391b2bd9fcfc3ea8cd4b65625c76722b0",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "title": "ODF Phase 5 准入变更申请台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "source_hash": "40a1d2b38b7f514c3636a0590cca0ce8b6102dc850ff3f5d289e450eccb2f792",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "title": "ODF Phase 6 人工确认工作台",
+      "type": "KDS Document",
+      "source_path": "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "source_hash": "c3aa625b77611b48ceccc7690cf33a275646b64168d97b9a7307d23dc46ae438",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "title": "ODF Phase 6 人工确认工作台闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "source_hash": "54d2ad6da1fede07910004d06464e279e084fd141fc4cd48fb08aecd47cbce67",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "title": "ODF Phase 7 小批量样本闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "source_hash": "8796894c42b6c6508f99d226bccf562fab315a91c7c6177801f7389b0dd4cdd5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "title": "ODF Phase 7 小批量样本台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "source_hash": "076bd7104804489d7e661709b7d228b020ca8ab74d6bf5154713e914ac0febef",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "title": "ODF Phase 8 小批量回归与漂移监控闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "source_hash": "e1136b78df938974064905377a770d65764d288a2b76e57bcb613fd5b8824bf0",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "title": "ODF Phase 8 漂移监控报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "source_hash": "39f6ef1e2fd674a265d21f99954dc3d9fb3e85d89575955a1fdb92183b80e9a0",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "title": "ODF Phase 9 动态源稳定化闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "source_hash": "eb5f169c817da39321e1cf5585f8f70c5663af17ace1276b8566a752c87ca475",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "title": "ODF Phase 9 动态源稳定化报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "source_hash": "46e7549e29444fc2643145837d27299cb123c240b17f4e61866180cf8938f7da",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "title": "ODF 受控引入试点闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "source_hash": "354d059e2d8a9d74d29e28494346a032ae23b6a75a85963c6c655feb4245926a",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "kds",
+      "okf_path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "title": "ODF 试点样本准入台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "source_hash": "ce88ceb5d2495b24432c93bcbec9497510f2157dc6a6b25a2885f920e2418c35",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "title": "GlobalCloud 项目群文档综合治理规范",
+      "type": "KDS Document",
+      "source_path": "02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "source_hash": "5e4bdc5e1ae218b455f931e90f5961f6ebc8230ff680034b028891cd8ae3e005",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "title": "GlobalCloud 项目群文档防污染规则",
+      "type": "KDS Document",
+      "source_path": "02-governance/GlobalCloud项目群文档防污染规则.md",
+      "kds_path": "开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "source_hash": "49a9f7fb3545e92b96c18810f3add07d032975d320a1657d9b015e6a9bfa4896",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "title": "Loop Control Board",
+      "type": "KDS Document",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "source_hash": "2d3d472f3c718011d8883319e5c905adfb58709865932aacb247af4d99f0ce08",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "title": "LOOP_EXECUTION_RULES",
+      "type": "KDS Document",
+      "source_path": "02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "source_hash": "74d6cd3412f90279e1ad01efba90e5360dd1b3115540a2d43264b5977c62c570",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "title": "Loop Governance Operating Boundary",
+      "type": "KDS Document",
+      "source_path": "02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "source_hash": "7461e3b7787b5cfd25ae24ccff5786a39b41a2e5559df1a11e4fe970fb27d631",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "title": "Loop Governance Phase Goal",
+      "type": "KDS Document",
+      "source_path": "02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "kds_path": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "source_hash": "f3033b869324a225e39eddc6fa18c22a42a724ad9927cc16722e25d880d7d7d5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "title": "KDS Phase 10 Governance Sustainment Plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/kds-phase10-governance-sustainment-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md",
+      "source_hash": "129a7875b01ecba774f46a65daf66d6d7d9e574a51cf4c10648d8c1d9f70990e",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "title": "ODF 受控引入与治理试点方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-introduction-governance-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-introduction-governance-plan.md",
+      "source_hash": "9cfac9cd4192e1f991b89d91e10c3e53b03210e4c1f91a5e2bf192368952f5d3",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "title": "odf-phase2-expansion-plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase2-expansion-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md",
+      "source_hash": "14b15fb0e04fb7769445e52a63a6efb17f6adf4b0b8961df950c542b995f104f",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "title": "ODF Phase 3 受控模板化与准入门禁计划",
+      "type": "Governance Gate",
+      "source_path": "09-status/odf-phase3-schema-gate-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md",
+      "source_hash": "37622cb4dc87d595003ce3a60073c3ca80957e5ce515329524408e95ae5694d2",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "title": "ODF Phase 4 小批量准入试运行方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase4-small-batch-admission-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md",
+      "source_hash": "24e5f825b3e2a06e3f8b9119fb19a9b2d271e993c0b40ffe59403d8bb5af95b4",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "title": "odf-phase5-change-request-governance-plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase5-change-request-governance-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md",
+      "source_hash": "1ce11bdb5b0a6748bc0e3086d29da70df9397b32c02256389d89e1e09a83578c",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "title": "odf-phase6-manual-confirmation-workbench-plan",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "source_hash": "20dfd27dab5bf2e69c584011a8cc322a1f18bd1c8a804b019e3ba82d244f1935",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "title": "ODF Phase 7 小批量样本执行方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase7-small-batch-execution-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md",
+      "source_hash": "2ba95f2fd09bcb295ddf90f9de96077945c34c344fd24d83997ab85a24d870a5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "title": "ODF Phase 8 小批量回归与漂移监控方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase8-drift-monitoring-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md",
+      "source_hash": "79d4a3b0a678cc8ab0dbd3e10906c650fe9324b9440d7a3043ae920b18aa22a5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "title": "ODF Phase 9 动态源稳定化策略方案",
+      "type": "Governance Plan",
+      "source_path": "09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "kds_path": "开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "source_hash": "90cbf6f77704e51fa02f2354cd6f8914bdda5c20ed78101bad039c7ca4da0b42",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md",
+      "title": "Evidence Index — GPCF",
+      "type": "Knowledge Index",
+      "source_path": "docs/harness/evidence/evidence-index.md",
+      "kds_path": "开发/12-GPCF/docs/harness/evidence/evidence-index.md",
+      "source_hash": "6352bb1e12ce142e0c9667c9000938219257f876f41532a8d8519f513ce3942f",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "title": "KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "source_hash": "9f14f34f1fd07b794a8dbd231e1a6f4080df0b1197bf3572497b2e93a74aa303",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "title": "KDS Phase 10 Backlog Triage Report",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "source_hash": "387c9fe6a9a0d96372507be53e2f2bed7ff9b4a4cda8b446f35a6985ef4b6ff2",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "title": "KDS Phase 10 Self-refresh Stabilization Workpack",
+      "type": "KDS Document",
+      "source_path": "docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "source_hash": "788df43696c647352abe1063f336d104114f1215a466c44d0a06381d4b312078",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "title": "ODF Phase 2 扩大样本验证闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "source_hash": "dd8f55585083d49b6113bce1371a17ee133bf3c69b2f839e76de47447830b905",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "title": "ODF Phase 2 样本准入台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "source_hash": "60fb57b79f9a5d265bf01de091ba87c0b1bda191e385f62493a015a3d5341d72",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "title": "ODF Phase 3 Schema Gate Evidence",
+      "type": "Governance Gate",
+      "source_path": "docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "source_hash": "dcad9996b60c9d98c7a75c917f246159a5bd7ea79140902c30e863144ccb2367",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "title": "ODF Phase 4 小批量准入试运行闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "source_hash": "ce97e5a8cb058acd2ecdef2b1f271b3e10dae2c70ad53eaccbae1ad24d8bac00",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "title": "ODF Phase 4 小批量准入试运行台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "source_hash": "75441df7da3d978ead0abe12194b13e631e57d37839150d0afe1f31582d2a994",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "title": "ODF Phase 5 准入变更申请机制闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "source_hash": "b695106343b887393d564a750e44aa8391b2bd9fcfc3ea8cd4b65625c76722b0",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "title": "ODF Phase 5 准入变更申请台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "source_hash": "40a1d2b38b7f514c3636a0590cca0ce8b6102dc850ff3f5d289e450eccb2f792",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "title": "ODF Phase 6 人工确认工作台",
+      "type": "KDS Document",
+      "source_path": "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "source_hash": "c3aa625b77611b48ceccc7690cf33a275646b64168d97b9a7307d23dc46ae438",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "title": "ODF Phase 6 人工确认工作台闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "source_hash": "54d2ad6da1fede07910004d06464e279e084fd141fc4cd48fb08aecd47cbce67",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "title": "ODF Phase 7 小批量样本闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "source_hash": "8796894c42b6c6508f99d226bccf562fab315a91c7c6177801f7389b0dd4cdd5",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "title": "ODF Phase 7 小批量样本台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "source_hash": "076bd7104804489d7e661709b7d228b020ca8ab74d6bf5154713e914ac0febef",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "title": "ODF Phase 8 小批量回归与漂移监控闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "source_hash": "e1136b78df938974064905377a770d65764d288a2b76e57bcb613fd5b8824bf0",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "title": "ODF Phase 8 漂移监控报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "source_hash": "39f6ef1e2fd674a265d21f99954dc3d9fb3e85d89575955a1fdb92183b80e9a0",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "title": "ODF Phase 9 动态源稳定化闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "source_hash": "eb5f169c817da39321e1cf5585f8f70c5663af17ace1276b8566a752c87ca475",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "title": "ODF Phase 9 动态源稳定化报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "source_hash": "46e7549e29444fc2643145837d27299cb123c240b17f4e61866180cf8938f7da",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "title": "ODF 受控引入试点闭环报告",
+      "type": "Governance Report",
+      "source_path": "docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "source_hash": "354d059e2d8a9d74d29e28494346a032ae23b6a75a85963c6c655feb4245926a",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "title": "ODF 试点样本准入台账",
+      "type": "KDS Ledger",
+      "source_path": "docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "kds_path": "开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "source_hash": "ce88ceb5d2495b24432c93bcbec9497510f2157dc6a6b25a2885f920e2418c35",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md",
+      "title": "GPCF Loop State",
+      "type": "KDS Document",
+      "source_path": "docs/harness/loop-state.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loop-state.md",
+      "source_hash": "2e958f00ba6276564d13b44f721db57cbf8ac184ccb220467c27af8da76b2b28",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "governance",
+      "okf_path": ".okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md",
+      "title": "loops",
+      "type": "KDS Document",
+      "source_path": "docs/harness/loops/README.md",
+      "kds_path": "开发/12-GPCF/docs/harness/loops/README.md",
+      "source_hash": "991927192a84679652b732fbee865201ec14a70b52b18dd0d0b5979938f41b0b",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "architecture",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "title": "AI驱动GFIS与GlobalCloud体系结合分析",
+      "type": "Architecture Document",
+      "source_path": "01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "source_hash": "9b26aa890a50f2fb2b966a8a1fb0c8d4af12e4ce9e34607cea6e7f2d4b9158f7",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "architecture",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "title": "GlobalCloud体系最小闭环与三阶段激活深度总表",
+      "type": "Architecture Document",
+      "source_path": "01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "source_hash": "9d546accd9bc6019898a7cd0e6c23c2f05ab21ae18f3c722b3d343546aeb4d40",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "architecture",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "title": "GlobalCloud绿色供应链体系WAES控制塔治理架构图",
+      "type": "Architecture Document",
+      "source_path": "01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "source_hash": "720ec92a8c1b2305fe522e1b420d1fb327cdef2874e87838ba84d2573992ebfd",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "architecture",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "title": "GlobalCloud绿色供应链体系总架构",
+      "type": "Architecture Document",
+      "source_path": "01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "source_hash": "ae22eee56e2adb701ff20b2180f35c684c1d52a41d87b391ed9d77deca9211e3",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "architecture",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "title": "GlobalCloud V0.0.1 项目群交叉分析报告",
+      "type": "Governance Report",
+      "source_path": "01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "source_hash": "f61dcc4eda885fbbe54e712511248b14f352f3a28eb6e8bdd97dde850b479264",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    },
+    {
+      "bundle": "architecture",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "title": "GlobalCloud项目群最小闭环L4实施方案",
+      "type": "Governance Plan",
+      "source_path": "01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "source_hash": "37392b4759e0aa8adc5f1873efdf255d258493df076c74fd42b15933a41feabc",
+      "source_of_record": "kds",
+      "derivation_policy": "metadata_only_no_body_copy"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "bundle:kds",
+      "kind": "bundle",
+      "label": "kds"
+    },
+    {
+      "id": "bundle:governance",
+      "kind": "bundle",
+      "label": "governance"
+    },
+    {
+      "id": "bundle:architecture",
+      "kind": "bundle",
+      "label": "architecture"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "kind": "concept",
+      "label": "GlobalCloud 项目群 KDS 开发空间安全规范",
+      "path": ".okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "kind": "source_document",
+      "label": "02-governance/GlobalCloud项目群KDS开发空间安全规范.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "kind": "concept",
+      "label": "GlobalCloud Loop开发KDS关联数据检索机制",
+      "path": ".okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "kind": "source_document",
+      "label": "03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "kind": "concept",
+      "label": "GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单",
+      "path": ".okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "kind": "source_document",
+      "label": "03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "kind": "concept",
+      "label": "KDS Markdown 化与 OKF 兼容层全面实施闭环方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/kds-md-okf-implementation-closure-plan.md",
+      "kind": "source_document",
+      "label": "09-status/kds-md-okf-implementation-closure-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "kind": "concept",
+      "label": "KDS OKF v0.1 全量派生层实施方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/kds-okf-v01-full-implementation-plan.md",
+      "kind": "source_document",
+      "label": "09-status/kds-okf-v01-full-implementation-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/kds-okf-v01-full-implementation-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/kds-okf-v01-full-implementation-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "kind": "concept",
+      "label": "KDS Phase 10 Governance Sustainment Plan",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/kds-phase10-governance-sustainment-plan.md",
+      "kind": "source_document",
+      "label": "09-status/kds-phase10-governance-sustainment-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md",
+      "kind": "concept",
+      "label": "KDS Readonly Probe Report",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:09-status/kds-readonly-probe-report.md",
+      "kind": "source_document",
+      "label": "09-status/kds-readonly-probe-report.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/kds-readonly-probe-report.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/kds-readonly-probe-report.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "kind": "concept",
+      "label": "ODF 受控引入与治理试点方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-introduction-governance-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-introduction-governance-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-introduction-governance-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-introduction-governance-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "kind": "concept",
+      "label": "odf-phase2-expansion-plan",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase2-expansion-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase2-expansion-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 3 受控模板化与准入门禁计划",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "Governance Gate"
+    },
+    {
+      "id": "source:09-status/odf-phase3-schema-gate-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase3-schema-gate-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 4 小批量准入试运行方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase4-small-batch-admission-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase4-small-batch-admission-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "kind": "concept",
+      "label": "odf-phase5-change-request-governance-plan",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase5-change-request-governance-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase5-change-request-governance-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "kind": "concept",
+      "label": "odf-phase6-manual-confirmation-workbench-plan",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase6-manual-confirmation-workbench-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 7 小批量样本执行方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase7-small-batch-execution-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase7-small-batch-execution-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 8 小批量回归与漂移监控方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase8-drift-monitoring-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase8-drift-monitoring-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 9 动态源稳定化策略方案",
+      "path": ".okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "kind": "source_document",
+      "label": "09-status/odf-phase9-dynamic-source-stabilization-plan.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "kind": "concept",
+      "label": "KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kind": "concept",
+      "label": "KDS Phase 10 Backlog Triage Report",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/kds-phase10-backlog-triage-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kind": "concept",
+      "label": "KDS Phase 10 Self-refresh Stabilization Workpack",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 2 扩大样本验证闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase2-closure-report-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 2 样本准入台账",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase2-sample-ledger-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 3 Schema Gate Evidence",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "Governance Gate"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase3-schema-gate-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 4 小批量准入试运行闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 4 小批量准入试运行台账",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 5 准入变更申请机制闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase5-change-request-closure-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 5 准入变更申请台账",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "kind": "concept",
+      "label": "ODF Phase 6 人工确认工作台",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "kind": "concept",
+      "label": "ODF Phase 6 人工确认工作台闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 7 小批量样本闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 7 小批量样本台账",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 8 小批量回归与漂移监控闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 8 漂移监控报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 9 动态源稳定化闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 9 动态源稳定化报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "kind": "concept",
+      "label": "ODF 受控引入试点闭环报告",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-pilot-closure-report-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF 试点样本准入台账",
+      "path": ".okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "source:docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/odf-pilot-sample-ledger-20260617.md"
+    },
+    {
+      "id": "kds:开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "kind": "kds_path",
+      "label": "开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "kind": "concept",
+      "label": "GlobalCloud 项目群文档综合治理规范",
+      "path": ".okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "kind": "source_document",
+      "label": "02-governance/GlobalCloud项目群文档综合治理规范.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "kind": "concept",
+      "label": "GlobalCloud 项目群文档防污染规则",
+      "path": ".okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/GlobalCloud项目群文档防污染规则.md",
+      "kind": "source_document",
+      "label": "02-governance/GlobalCloud项目群文档防污染规则.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "kind": "concept",
+      "label": "Loop Control Board",
+      "path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "kind": "source_document",
+      "label": "02-governance/loop/LOOP_CONTROL_BOARD.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "kind": "concept",
+      "label": "LOOP_EXECUTION_RULES",
+      "path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "kind": "source_document",
+      "label": "02-governance/loop/LOOP_EXECUTION_RULES.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "kind": "concept",
+      "label": "Loop Governance Operating Boundary",
+      "path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "kind": "source_document",
+      "label": "02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "kind": "concept",
+      "label": "Loop Governance Phase Goal",
+      "path": ".okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "kind": "source_document",
+      "label": "02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md"
+    },
+    {
+      "id": "kds:开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "kind": "kds_path",
+      "label": "开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "kind": "concept",
+      "label": "KDS Phase 10 Governance Sustainment Plan",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "kind": "concept",
+      "label": "ODF 受控引入与治理试点方案",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "kind": "concept",
+      "label": "odf-phase2-expansion-plan",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 3 受控模板化与准入门禁计划",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "Governance Gate"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 4 小批量准入试运行方案",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "kind": "concept",
+      "label": "odf-phase5-change-request-governance-plan",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "kind": "concept",
+      "label": "odf-phase6-manual-confirmation-workbench-plan",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 7 小批量样本执行方案",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 8 小批量回归与漂移监控方案",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "kind": "concept",
+      "label": "ODF Phase 9 动态源稳定化策略方案",
+      "path": ".okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md",
+      "kind": "concept",
+      "label": "Evidence Index — GPCF",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md",
+      "type": "Knowledge Index"
+    },
+    {
+      "id": "source:docs/harness/evidence/evidence-index.md",
+      "kind": "source_document",
+      "label": "docs/harness/evidence/evidence-index.md"
+    },
+    {
+      "id": "kds:开发/12-GPCF/docs/harness/evidence/evidence-index.md",
+      "kind": "kds_path",
+      "label": "开发/12-GPCF/docs/harness/evidence/evidence-index.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "kind": "concept",
+      "label": "KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "kind": "concept",
+      "label": "KDS Phase 10 Backlog Triage Report",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "kind": "concept",
+      "label": "KDS Phase 10 Self-refresh Stabilization Workpack",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 2 扩大样本验证闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 2 样本准入台账",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 3 Schema Gate Evidence",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "Governance Gate"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 4 小批量准入试运行闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 4 小批量准入试运行台账",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 5 准入变更申请机制闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF Phase 5 准入变更申请台账",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "kind": "concept",
+      "label": "ODF Phase 6 人工确认工作台",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "kind": "concept",
+      "label": "ODF Phase 6 人工确认工作台闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 7 小批量样本闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 7 小批量样本台账",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 8 小批量回归与漂移监控闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 8 漂移监控报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 9 动态源稳定化闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "kind": "concept",
+      "label": "ODF Phase 9 动态源稳定化报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "kind": "concept",
+      "label": "ODF 受控引入试点闭环报告",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "kind": "concept",
+      "label": "ODF 试点样本准入台账",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "KDS Ledger"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md",
+      "kind": "concept",
+      "label": "GPCF Loop State",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:docs/harness/loop-state.md",
+      "kind": "source_document",
+      "label": "docs/harness/loop-state.md"
+    },
+    {
+      "id": "kds:开发/12-GPCF/docs/harness/loop-state.md",
+      "kind": "kds_path",
+      "label": "开发/12-GPCF/docs/harness/loop-state.md"
+    },
+    {
+      "id": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md",
+      "kind": "concept",
+      "label": "loops",
+      "path": ".okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md",
+      "type": "KDS Document"
+    },
+    {
+      "id": "source:docs/harness/loops/README.md",
+      "kind": "source_document",
+      "label": "docs/harness/loops/README.md"
+    },
+    {
+      "id": "kds:开发/12-GPCF/docs/harness/loops/README.md",
+      "kind": "kds_path",
+      "label": "开发/12-GPCF/docs/harness/loops/README.md"
+    },
+    {
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "kind": "concept",
+      "label": "AI驱动GFIS与GlobalCloud体系结合分析",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "type": "Architecture Document"
+    },
+    {
+      "id": "source:01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "kind": "source_document",
+      "label": "01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md"
+    },
+    {
+      "id": "kds:开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "kind": "kds_path",
+      "label": "开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md"
+    },
+    {
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "kind": "concept",
+      "label": "GlobalCloud体系最小闭环与三阶段激活深度总表",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "type": "Architecture Document"
+    },
+    {
+      "id": "source:01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "kind": "source_document",
+      "label": "01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md"
+    },
+    {
+      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "kind": "kds_path",
+      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md"
+    },
+    {
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "kind": "concept",
+      "label": "GlobalCloud绿色供应链体系WAES控制塔治理架构图",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "type": "Architecture Document"
+    },
+    {
+      "id": "source:01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "kind": "source_document",
+      "label": "01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md"
+    },
+    {
+      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "kind": "kds_path",
+      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md"
+    },
+    {
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "kind": "concept",
+      "label": "GlobalCloud绿色供应链体系总架构",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "type": "Architecture Document"
+    },
+    {
+      "id": "source:01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "kind": "source_document",
+      "label": "01-architecture/GlobalCloud绿色供应链体系总架构.md"
+    },
+    {
+      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "kind": "kds_path",
+      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md"
+    },
+    {
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "kind": "concept",
+      "label": "GlobalCloud V0.0.1 项目群交叉分析报告",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "type": "Governance Report"
+    },
+    {
+      "id": "source:01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "kind": "source_document",
+      "label": "01-architecture/GlobalCloud项目群交叉分析报告.md"
+    },
+    {
+      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "kind": "kds_path",
+      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md"
+    },
+    {
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "kind": "concept",
+      "label": "GlobalCloud项目群最小闭环L4实施方案",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "type": "Governance Plan"
+    },
+    {
+      "id": "source:01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "kind": "source_document",
+      "label": "01-architecture/GlobalCloud项目群最小闭环L4实施方案.md"
+    },
+    {
+      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "kind": "kds_path",
+      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md"
+    }
+  ],
+  "edges": [
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "to": "source:02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "to": "kds:开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "to": "source:03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "to": "kds:开发/05-KDS/03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "to": "source:03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "to": "kds:开发/05-KDS/03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "to": "source:09-status/kds-md-okf-implementation-closure-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-md-okf-implementation-closure-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/kds-md-okf-implementation-closure-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "to": "source:09-status/kds-okf-v01-full-implementation-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-okf-v01-full-implementation-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/kds-okf-v01-full-implementation-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "to": "source:09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md",
+      "to": "source:09-status/kds-readonly-probe-report.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-readonly-probe-report.md",
+      "to": "kds:开发/91-治理与验收/09-status/kds-readonly-probe-report.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "to": "source:09-status/odf-introduction-governance-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-introduction-governance-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "to": "source:09-status/odf-phase2-expansion-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "to": "source:09-status/odf-phase3-schema-gate-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "to": "source:09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "to": "source:09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "to": "source:09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "to": "source:09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "to": "source:09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "to": "source:09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "to": "source:docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "to": "source:docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "to": "source:docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "to": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "to": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "to": "source:docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:kds",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "to": "source:02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "to": "kds:开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "to": "source:02-governance/GlobalCloud项目群文档防污染规则.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "to": "kds:开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "to": "source:02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "to": "kds:开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "to": "source:02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "to": "kds:开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "to": "source:02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "to": "kds:开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "to": "source:02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "to": "kds:开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "to": "source:09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "to": "source:09-status/odf-introduction-governance-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-introduction-governance-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "to": "source:09-status/odf-phase2-expansion-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase2-expansion-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "to": "source:09-status/odf-phase3-schema-gate-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "to": "source:09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "to": "source:09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "to": "source:09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "to": "source:09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "to": "source:09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "to": "source:09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "to": "kds:开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md",
+      "to": "source:docs/harness/evidence/evidence-index.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/evidence-index.md",
+      "to": "kds:开发/12-GPCF/docs/harness/evidence/evidence-index.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "to": "source:docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "to": "source:docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "to": "source:docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "to": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "to": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "to": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "to": "source:docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "to": "source:docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "to": "kds:开发/05-KDS/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md",
+      "to": "source:docs/harness/loop-state.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loop-state.md",
+      "to": "kds:开发/12-GPCF/docs/harness/loop-state.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:governance",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md",
+      "to": "source:docs/harness/loops/README.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/loops/README.md",
+      "to": "kds:开发/12-GPCF/docs/harness/loops/README.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:architecture",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "to": "source:01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:architecture",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "to": "source:01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:architecture",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "to": "source:01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:architecture",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "to": "source:01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系总架构.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:architecture",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "to": "source:01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "bundle:architecture",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "type": "bundle_contains_concept"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "to": "source:01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "type": "concept_derives_from_source"
+    },
+    {
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md",
+      "type": "concept_targets_kds_path"
+    },
+    {
+      "from": "source:09-status/kds-phase10-governance-sustainment-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/kds-phase10-governance-sustainment-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/kds-phase10-governance-sustainment-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-introduction-governance-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-introduction-governance-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-introduction-governance-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase2-expansion-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase2-expansion-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase2-expansion-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase3-schema-gate-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase3-schema-gate-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase3-schema-gate-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase4-small-batch-admission-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase4-small-batch-admission-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase4-small-batch-admission-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase5-change-request-governance-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase5-change-request-governance-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase5-change-request-governance-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase6-manual-confirmation-workbench-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase7-small-batch-execution-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase7-small-batch-execution-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase7-small-batch-execution-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase8-drift-monitoring-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase8-drift-monitoring-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase8-drift-monitoring-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/09-status/odf-phase9-dynamic-source-stabilization-plan.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-backlog-triage-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-closure-report-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase3-schema-gate-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-closure-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase4-small-batch-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-closure-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase5-change-request-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-20260618.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase6-manual-confirmation-workbench-closure-20260618.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-closure-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase7-small-batch-ledger-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-closure-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase8-drift-monitoring-report-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-closure-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-closure-report-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "to": "concept:.okf/bundles/kds-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    },
+    {
+      "from": "source:docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "to": "concept:.okf/bundles/governance-v0.1/concepts/docs/harness/evidence/odf-pilot-sample-ledger-20260617.md",
+      "type": "same_source_multi_bundle_view"
+    }
+  ],
+  "metrics": {
+    "bundle_count": 3,
+    "concept_count": 81,
+    "node_count": 186,
+    "edge_count": 303,
+    "duplicate_source_count": 30
+  },
+  "boundary": {
+    "source_of_record": "KDS / Git controlled documents",
+    "derivation_policy": "metadata_only_no_body_copy",
+    "does_not_replace_kds": true,
+    "does_not_upgrade_business_status": true
+  }
+}

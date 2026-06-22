@@ -1,0 +1,34 @@
+policy_id: okf.bounty_policy
+version: v0.1
+status: draft
+owner: KWE
+updated_at: "2026-06-20"
+gap_types:
+  - missing_source
+  - missing_evidence
+  - missing_field
+  - missing_sop
+  - missing_policy
+  - missing_order_data
+  - missing_finance_proof
+  - missing_pod
+  - missing_quality_record
+  - missing_responsibility_boundary
+gap_statuses:
+  - open
+  - in_progress
+  - submitted
+  - partially_accepted
+  - accepted
+  - rejected
+  - closed
+settlement_modes:
+  - knowledge_points
+  - ai_reward_quota
+  - future_revenue_reference
+  - project_contribution_record
+  - committee_confirmed_reward
+rules:
+  bounty_must_bind_gap_record: true
+  ai_review_is_advisory_only: true
+  settlement_requires: [waes_gate, human_acceptance, dispute_window_closed]

@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "green_financing_purpose_document_gaps": 0,
+  "fund_disbursement_trace_gaps": 0,
+  "supplier_esg_rating_record_gaps": 0,
+  "lender_due_diligence_record_gaps": 0,
+  "use_of_proceeds_tracking_gaps": 0,
+  "sustainability_performance_kpi_covenant_gaps": 0,
+  "financial_institution_verification_receipt_gaps": 0,
+  "accepted_for_sustainable_finance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "sustainable_finance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

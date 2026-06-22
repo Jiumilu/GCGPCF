@@ -1,0 +1,8 @@
+adapter_id: harness
+mode: sdk_dry_run
+launcher_required: harness_runner
+allowed_profiles: [review_safe, log_debug]
+blocked_profiles: [output_shaper_acceptance]
+evidence_required: true
+production_enabled: false
+preserve_markers: [evidence_id, validator, loop_round_id]

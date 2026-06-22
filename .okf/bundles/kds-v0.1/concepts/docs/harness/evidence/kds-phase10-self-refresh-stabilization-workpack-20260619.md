@@ -4,10 +4,10 @@ title: KDS Phase 10 Self-refresh Stabilization Workpack
 description: KDS Phase 10 Self-refresh 稳定化工作包
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md
 tags: [controlled, evidence, kds, kds-governance, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md
 source_path: docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md
-source_hash: 788df43696c647352abe1063f336d104114f1215a466c44d0a06381d4b312078
+source_hash: 867f550e5398de11c943286ddcf88c82e685898c31f8a2f6b34c486eb81b56b0
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ KDS Phase 10 Self-refresh 稳定化工作包
 | --- | --- |
 | source_path | `docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/kds-phase10-self-refresh-stabilization-workpack-20260619.md` |
-| source_hash | `788df43696c647352abe1063f336d104114f1215a466c44d0a06381d4b312078` |
+| source_hash | `867f550e5398de11c943286ddcf88c82e685898c31f8a2f6b34c486eb81b56b0` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

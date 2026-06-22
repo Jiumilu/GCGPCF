@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "accepted_for_green_logistics_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "green_logistics_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "sustainable_packaging_specification_gaps": 0,
+  "packaging_recycled_content_certificate_gaps": 0,
+  "packaging_recyclability_assessment_gaps": 1,
+  "transport_route_emission_record_gaps": 0,
+  "carrier_environmental_compliance_certificate_gaps": 0,
+  "warehouse_storage_condition_log_gaps": 0,
+  "delivery_damage_loss_claim_record_gaps": 0
+}

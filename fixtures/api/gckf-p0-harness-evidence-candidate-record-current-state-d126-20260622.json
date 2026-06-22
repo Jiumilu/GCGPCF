@@ -1,0 +1,92 @@
+{
+  "contractId": "GCKF-P0-HARNESS-EVIDENCE-CANDIDATE-RECORD-CURRENT-STATE-D126-20260622",
+  "description": "Current-state Harness evidence candidate record derived from the D125 Harness review input packet current state. This is still not a formal Harness evidence record.",
+  "candidateRecordStatus": "candidate_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "notFinalAcceptance": true,
+  "sourceHarnessInputPacket": "fixtures/api/gckf-p0-harness-review-input-packet-current-state-d125-20260622.json",
+  "candidateRecord": {
+    "id": "GCKF-P0-HER-CANDIDATE-CURRENT-STATE-D126-001",
+    "recordType": "harness_evidence_candidate",
+    "subject": "GC-Knowledge Fabric P0 D9-D25 current-state evidence review with hold context",
+    "sourcePacketRef": "GCKF-P0-HARNESS-REVIEW-INPUT-PACKET-CURRENT-STATE-D125-20260622",
+    "reviewStatus": "pending_with_hold",
+    "allowedDecisionOutcomes": [
+      "approved_for_formal_harness_evidence",
+      "repair_required",
+      "rejected",
+      "scope_violation_found"
+    ],
+    "defaultDecisionOutcome": "pending",
+    "requiredReviewerType": "human_or_harness_governance",
+    "requiresHumanReview": true,
+    "requiresHarnessGovernance": true,
+    "writesFormalEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "holdContextRequired": true
+  },
+  "sourceReviewInputs": [
+    "GCKF-P0-HI-001",
+    "GCKF-P0-HI-002",
+    "GCKF-P0-HI-003",
+    "GCKF-P0-HI-004"
+  ],
+  "sourceRiskRefs": [
+    "GCKF-P0-RISK-HARNESS-NOT-WRITTEN",
+    "GCKF-P0-RISK-HUMAN-REVIEW-PENDING",
+    "GCKF-P0-RISK-RUNTIME-NOT-LIVE"
+  ],
+  "holdContextRefs": ["B1", "B2", "B3", "B4", "B5", "B6"],
+  "sourceCompletedItemRefs": ["C1", "C2", "C3", "C4", "C5", "C6", "C7"],
+  "currentGateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-review-input-packet-current-state-d125-20260622.json",
+    "docs/harness/evidence/gckf-p0-harness-review-input-current-state-d125-20260622.json",
+    "docs/harness/evidence/gckf-p0-harness-review-input-current-state-d125-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D125-001.md",
+    "tools/kds-sync/validate_gckf_p0_harness_review_input_current_state_d125.py"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled",
+    "p1_admission_granted",
+    "v1_upgrade_approved"
+  ],
+  "expectedSummary": {
+    "candidateRecordStatus": "candidate_with_hold",
+    "maximumState": "review_ready_with_hold",
+    "recordType": "harness_evidence_candidate",
+    "sourceHarnessInputPacketStatus": "candidate_with_hold",
+    "sourceHarnessInputPacketMaximumState": "review_ready_with_hold",
+    "reviewStatus": "pending_with_hold",
+    "allowedDecisionOutcomeCount": 4,
+    "sourceReviewInputCount": 4,
+    "sourceRiskRefCount": 3,
+    "holdContextRefCount": 6,
+    "sourceCompletedItemRefCount": 7,
+    "requiredSourceRefCount": 5,
+    "requiresHumanReview": true,
+    "requiresHarnessGovernance": true,
+    "holdContextRequired": true,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

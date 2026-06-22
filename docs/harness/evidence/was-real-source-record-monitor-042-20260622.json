@@ -1,0 +1,92 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-042-20260622",
+  "status": "was_real_source_record_monitor_042_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-042",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-041",
+  "purpose": "Forty-second independent monitor pass for green supply chain carbon, environmental compliance, circularity, product carbon footprint, energy consumption evidence, emissions factor source, environmental compliance certificate, hazardous substance declaration, recycling or end-of-life plan, and green claim substantiation evidence.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "product_carbon_footprint_gaps": 0,
+    "energy_consumption_evidence_gaps": 0,
+    "emissions_factor_source_gaps": 0,
+    "environmental_compliance_certificate_gaps": 0,
+    "hazardous_substance_declaration_gaps": 0,
+    "recycling_end_of_life_plan_gaps": 0,
+    "green_claim_substantiation_gaps": 0,
+    "accepted_for_carbon_circularity_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "carbon_circularity_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "product_carbon_footprint_gap",
+      "energy_consumption_evidence_gap",
+      "emissions_factor_source_gap",
+      "environmental_compliance_certificate_gap",
+      "hazardous_substance_declaration_gap",
+      "recycling_end_of_life_plan_gap",
+      "green_claim_substantiation_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "carbon_circularity_requirements": [
+    "product_carbon_footprint",
+    "energy_consumption_evidence",
+    "emissions_factor_source",
+    "environmental_compliance_certificate",
+    "hazardous_substance_declaration",
+    "recycling_end_of_life_plan",
+    "green_claim_substantiation"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-043",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer product carbon footprints",
+    "does not infer energy consumption evidence",
+    "does not infer emissions factor sources",
+    "does not infer environmental compliance certificates",
+    "does not infer hazardous substance declarations",
+    "does not infer recycling or end-of-life plans",
+    "does not infer green claim substantiation",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

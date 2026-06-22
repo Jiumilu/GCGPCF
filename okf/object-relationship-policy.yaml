@@ -1,0 +1,73 @@
+policy_id: okf.object_relationship_policy
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+relation_chain:
+  - relation_type: source_provides_evidence
+    from_type: source_record
+    to_type: evidence_record
+    required_refs: [source_ref, evidence_ref, source_trust_level]
+  - relation_type: evidence_supports_object
+    from_type: evidence_record
+    to_type: knowledge_object
+    required_refs: [evidence_ref, object_id, support_scope]
+  - relation_type: object_generates_candidate
+    from_type: knowledge_object
+    to_type: candidate_or_gap
+    required_refs: [object_id, candidate_id, generated_by]
+  - relation_type: candidate_checked_by_gate
+    from_type: candidate
+    to_type: waes_gate_result
+    required_refs: [candidate_id, gate_result_id, gate_type]
+  - relation_type: gate_opens_work_item
+    from_type: waes_gate_result
+    to_type: kwe_work_item
+    required_refs: [gate_result_id, work_item_id, required_actions]
+  - relation_type: work_item_produces_confirmation
+    from_type: kwe_work_item
+    to_type: confirmation_or_decision_record
+    required_refs: [work_item_id, reviewer, decision]
+  - relation_type: confirmation_enables_writeback_candidate
+    from_type: confirmation_record
+    to_type: writeback_candidate
+    required_refs: [confirmation_ref, writeback_candidate_id, target_system]
+  - relation_type: decision_records_contribution
+    from_type: decision_record
+    to_type: contribution_record
+    required_refs: [decision_ref, contributor_id, contribution_type]
+  - relation_type: contribution_links_revenue
+    from_type: contribution_record
+    to_type: revenue_record
+    required_refs: [contribution_ref, revenue_ref, basis]
+  - relation_type: governance_evidence_closes_loop
+    from_type: harness_evidence_record
+    to_type: loop_record
+    required_refs: [evidence_ref, loop_id, status_delta]
+minimum_relation_fields:
+  - id
+  - tenant_id
+  - relation_type
+  - from_type
+  - from_id
+  - to_type
+  - to_id
+  - required_refs
+  - pool_refs
+  - created_by
+  - created_at
+  - no_write
+hard_boundaries:
+  source_required_for_formal_fact: true
+  evidence_required_for_evidence_ready: true
+  waes_gate_required_for_candidates: true
+  confirmation_required_for_writeback_candidate: true
+  ai_cannot_create_formal_writeback_relation: true
+  loop_cannot_promote_business_status: true
+  harness_stores_governance_evidence_only: true
+  revenue_basis_required_for_distribution: true
+no_write_assertions:
+  writes_kds_fact: 0
+  writes_business_system: 0
+  writes_revenue_distribution: 0
+  writes_external_api: 0

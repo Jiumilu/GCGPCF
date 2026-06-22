@@ -1,0 +1,40 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-AGENT-SAFETY-MATRIX-REPAIR-D113-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md",
+  "action": "repair_agent_safety_matrix_localization_debt",
+  "before": {
+    "all_repo_findings": 20,
+    "target_file_findings": 3
+  },
+  "after": {
+    "all_repo_findings": 20,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": 0,
+    "target_file_findings": -3
+  },
+  "changed_files": [
+    "openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md"
+  ],
+  "changed_line_items": 17,
+  "remaining_target_findings": [],
+  "scope_note": "目标文件命中已清零，但全仓总 finding 未下降；原因为同批 residual 中的 was-real-source-record-monitor-045-20260622.md 进入当前 sample findings。",
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_agent_safety_matrix_repair_d113.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

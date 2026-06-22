@@ -1,0 +1,73 @@
+policy_id: okf.kwe_queue_action_intake_request_policy
+version: v1.0
+owner: KWE
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run contract for KWE queue action intake requests from
+  Brain, PKC, and GFIS Assistant queue read models. Requests capture user
+  intent only. They do not create KWE work items, mutate KDS lifecycle, create
+  WAES gate results, write business systems, complete approvals, confirm
+  revenue or scores, or call external APIs.
+
+required_fields:
+  - request_id
+  - tenant_id
+  - project_id
+  - source_view_ref
+  - route_ref
+  - surface
+  - actor_id
+  - action_type
+  - action_status
+  - payload_refs
+  - evidence_refs
+  - required_followups
+  - blocked_reasons
+  - creates_kwe_work_item
+  - no_write
+
+surfaces:
+  - brain
+  - pkc
+  - gfis_assistant
+
+action_types:
+  - submit_evidence
+  - request_repair
+  - escalate_committee
+  - request_freeze
+  - add_comment
+  - metadata_only_review
+  - acknowledge_blocked
+
+action_statuses:
+  - intake_received
+  - validation_required
+  - committee_request_candidate
+  - freeze_request_candidate
+  - blocked
+
+hard_boundaries:
+  request_only: true
+  creates_kwe_work_item_must_be_false: true
+  intake_is_not_approval_completion: true
+  intake_is_not_committee_decision_completion: true
+  intake_is_not_business_writeback: true
+  blocked_queue_cannot_approve: true
+  metadata_only_cannot_include_raw_content: true
+  evidence_submission_requires_payload_or_evidence: true
+
+no_write_guards:
+  writes_kwe_work_item: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_waes_gate_result: 0
+  writes_business_system: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

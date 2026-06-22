@@ -1,0 +1,68 @@
+{
+  "evidence_id": "AGENT-REACH-RECENTER-20260622",
+  "date": "2026-06-22",
+  "status": "agent_reach_mainline_recentered",
+  "scope": "GPCF-AGENT-REACH-RECENTER-001",
+  "objective": "Recenter the current session on Agent-Reach integration after CodeGraph watchlist work displaced the original search-capability objective.",
+  "original_user_goal": "Integrate Panniantong/Agent-Reach.git into the Loop project to improve search capability, efficiency, quality, and continuous evolution.",
+  "deviation_assessment": {
+    "deviated": true,
+    "deviation_type": "governance_infrastructure_branch_displaced_search_integration_mainline",
+    "direct_agent_reach_integration_completed": false,
+    "codegraph_work_relevant_but_indirect": true
+  },
+  "deviation_causes": [
+    {
+      "cause": "authorization_chain_shift",
+      "explanation": "After the Agent-Reach work, the user explicitly authorized Brain/Studio CodeGraph watchlist sync-only closure, so subsequent 'next step' execution followed that authorized CodeGraph queue."
+    },
+    {
+      "cause": "latest_next_round_bias",
+      "explanation": "Loop orchestration repeatedly selected the latest produced next_round artifact instead of pinning the original Agent-Reach integration objective as the active task lock."
+    },
+    {
+      "cause": "shared_governance_infrastructure_overlap",
+      "explanation": "CodeGraph, document gates, and watchlist thresholds are valid Loop governance infrastructure, but they only support continuous evolution indirectly and do not deliver Agent-Reach search integration."
+    },
+    {
+      "cause": "declaration_boundary_created_late",
+      "explanation": "The session declaration boundary was created after several CodeGraph rounds, so it recorded status ceilings but did not prevent the earlier mainline drift."
+    }
+  ],
+  "current_agent_reach_state": {
+    "candidate_search_review": "ready_for_review",
+    "l3_candidate_pipeline": "pass",
+    "candidate_search_replay_ledger": "pass",
+    "waes_kds_review_queue": "ready_for_human_review",
+    "human_review_decisions": "deferred_then_resolved_by_authoritative_verification",
+    "authoritative_source_verification": "limited_verification_complete",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "validated_inputs": [
+    "tools/kds-sync/validate_agent_reach_candidate_search_review.py",
+    "tools/kds-sync/validate_agent_reach_l3_candidate_pipeline.py",
+    "tools/kds-sync/validate_agent_reach_candidate_search_replay_ledger.py",
+    "tools/kds-sync/validate_agent_reach_waes_kds_candidate_review_queue.py",
+    "tools/kds-sync/validate_agent_reach_human_review_decisions.py",
+    "tools/kds-sync/validate_agent_reach_authoritative_source_verification.py"
+  ],
+  "recenter_controls": {
+    "active_mainline": "Agent-Reach search capability integration",
+    "non_mainline_work_requires_explicit_user_authorization": true,
+    "codegraph_watchlist_is_paused_as_primary_line": true,
+    "agent_reach_status_ceiling": "limited_candidate_only",
+    "next_required_artifact": "limited_candidate_ingestion_plan"
+  },
+  "next_round": "GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-PLAN-001",
+  "non_claims": [
+    "Agent-Reach is not production integrated",
+    "Agent-Reach is not accepted or integrated",
+    "Agent-Reach results are not strong RAG citations",
+    "Agent-Reach results are not written to KDS canonical Markdown",
+    "CodeGraph watchlist closure does not equal Agent-Reach search integration"
+  ]
+}

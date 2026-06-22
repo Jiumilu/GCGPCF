@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md
 source_path: 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

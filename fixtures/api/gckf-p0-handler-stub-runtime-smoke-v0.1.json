@@ -1,0 +1,23 @@
+{
+  "id": "gckf-p0-handler-stub-runtime-smoke-v0.1",
+  "description": "GC-Knowledge Fabric P0-D14 handler stub runtime smoke. It compiles the API TypeScript package into /tmp and invokes invokeHandlerStub for all dry-run cases without starting an HTTP server, connecting a database, calling external APIs, or writing business systems.",
+  "version": "v0.1",
+  "handlerStubPath": "packages/api/src/handler-stub.ts",
+  "requestResponseFixture": "fixtures/api/gckf-p0-handler-request-response-dry-run-v0.1.json",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "tempOutDir": "/tmp/gckf-api-smoke-runtime",
+  "compiledStubPath": "/tmp/gckf-api-smoke-runtime/api/src/handler-stub.js",
+  "expectedSummary": {
+    "caseCount": 40,
+    "groupCount": 5,
+    "compiled": true,
+    "invoked": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

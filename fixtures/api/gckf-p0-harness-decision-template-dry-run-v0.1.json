@@ -1,0 +1,76 @@
+{
+  "contractId": "GCKF-P0-HARNESS-DECISION-TEMPLATE-DRY-RUN-V0.1",
+  "description": "P0-D24 Harness decision template dry-run derived from the D23 Harness evidence candidate record. This template defines allowed decision shapes only.",
+  "templateStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceCandidateRecord": "fixtures/api/gckf-p0-harness-evidence-candidate-record-dry-run-v0.1.json",
+  "decisionTemplate": {
+    "id": "GCKF-P0-HARNESS-DECISION-TEMPLATE-001",
+    "templateType": "harness_decision_template",
+    "sourceCandidateRecordRef": "GCKF-P0-HER-CANDIDATE-001",
+    "defaultDecisionStatus": "pending",
+    "requiredReviewerType": "human_or_harness_governance",
+    "requiresHumanReview": true,
+    "requiresHarnessGovernance": true,
+    "writesFormalEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "decisionCases": [
+      {
+        "outcome": "approved_for_formal_harness_evidence",
+        "meaning": "Candidate evidence may proceed to formal Harness evidence writing review.",
+        "requiredFields": ["reviewerId", "reviewedAt", "evidenceRefs", "sourceCandidateRecordRef", "decisionRationale"],
+        "requiredEvidenceRefs": ["D19 ledger", "D20 readiness", "D21 human checklist", "D22 input packet", "D23 candidate record"],
+        "forbiddenActions": ["write_formal_evidence", "promote_lifecycle", "enable_business_writeback"]
+      },
+      {
+        "outcome": "repair_required",
+        "meaning": "Candidate evidence has gaps and must return to a repair path before formal evidence writing review.",
+        "requiredFields": ["reviewerId", "reviewedAt", "repairActions", "gapRefs", "decisionRationale"],
+        "requiredEvidenceRefs": ["D20 closure risks", "D21 review items", "D23 candidate record"],
+        "forbiddenActions": ["write_formal_evidence", "promote_lifecycle", "close_p0_acceptance"]
+      },
+      {
+        "outcome": "rejected",
+        "meaning": "Candidate evidence is rejected and cannot proceed without a new candidate packet.",
+        "requiredFields": ["reviewerId", "reviewedAt", "rejectionReason", "evidenceRefs", "decisionRationale"],
+        "requiredEvidenceRefs": ["D23 candidate record", "reviewer rejection basis"],
+        "forbiddenActions": ["write_formal_evidence", "promote_lifecycle", "reuse_rejected_packet_as_accepted"]
+      },
+      {
+        "outcome": "scope_violation_found",
+        "meaning": "Review found a scope or boundary violation requiring governance follow-up.",
+        "requiredFields": ["reviewerId", "reviewedAt", "violationRefs", "severity", "decisionRationale"],
+        "requiredEvidenceRefs": ["D23 candidate record", "scope violation evidence"],
+        "forbiddenActions": ["write_formal_evidence", "promote_lifecycle", "enable_business_writeback", "ignore_violation"]
+      }
+    ]
+  },
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "templateStatus": "candidate",
+    "templateType": "harness_decision_template",
+    "sourceCandidateRecordStatus": "candidate",
+    "sourceCandidateReviewStatus": "pending",
+    "decisionCaseCount": 4,
+    "requiredReviewerType": "human_or_harness_governance",
+    "requiresHumanReview": true,
+    "requiresHarnessGovernance": true,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

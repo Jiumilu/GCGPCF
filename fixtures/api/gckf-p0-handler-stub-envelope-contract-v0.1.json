@@ -1,0 +1,87 @@
+{
+  "contractId": "GCKF-P0-HANDLER-STUB-ENVELOPE-CONTRACT-V0.1",
+  "description": "P0-D16 handler stub response envelope contract without server, database, external API, or accepted lifecycle writes.",
+  "handlerStubPath": "packages/api/src/handler-stub.ts",
+  "handlerMapPath": "packages/api/src/handler-map.ts",
+  "requestResponseFixture": "fixtures/api/gckf-p0-handler-request-response-dry-run-v0.1.json",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "tempOutDir": "/tmp/gckf-api-envelope-contract",
+  "compiledStubPath": "/tmp/gckf-api-envelope-contract/api/src/handler-stub.js",
+  "compiledHandlerMapPath": "/tmp/gckf-api-envelope-contract/api/src/handler-map.js",
+  "successCases": [
+    {
+      "id": "envelope-read-only-kds-domains",
+      "sourceCaseId": "kds_v2:listDomains",
+      "expectedBoundary": "read_only",
+      "candidateOnly": false
+    },
+    {
+      "id": "envelope-candidate-fact",
+      "sourceCaseId": "kds_v2:createFactCandidate",
+      "expectedBoundary": "candidate_request",
+      "candidateOnly": true
+    },
+    {
+      "id": "envelope-waes-rag-gate",
+      "sourceCaseId": "waes:checkRagAdmission",
+      "expectedBoundary": "gate_check",
+      "candidateOnly": false
+    }
+  ],
+  "failureCases": [
+    {
+      "id": "envelope-unknown-handler",
+      "handler": "unknownEnvelopeHandler",
+      "expectedErrorCode": "UNKNOWN_HANDLER"
+    },
+    {
+      "id": "envelope-missing-service-method",
+      "handler": "envelopeMissingServiceMethodProbe",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "missingEnvelopeServiceMethodProbe",
+      "writeBoundary": "read_only",
+      "expectedErrorCode": "MISSING_SERVICE_METHOD"
+    }
+  ],
+  "requiredEnvelopeFields": [
+    "ok",
+    "requestId",
+    "traceId",
+    "dryRun",
+    "handler",
+    "noWrite",
+    "directBusinessWrite",
+    "acceptedLifecycleWrite",
+    "externalApiWrite"
+  ],
+  "requiredSuccessFields": [
+    "group",
+    "method",
+    "path",
+    "writeBoundary",
+    "gateRequired",
+    "kweRequired",
+    "humanOrCommitteeRequired",
+    "candidateOnly",
+    "preview"
+  ],
+  "requiredFailureFields": [
+    "errorCode",
+    "errorMessage"
+  ],
+  "expectedSummary": {
+    "successCount": 3,
+    "failureCount": 2,
+    "typescriptEnvelopeCompile": true,
+    "invokeHandlerStubEnvelope": true,
+    "unknownHandlerEnveloped": true,
+    "missingServiceMethodEnveloped": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

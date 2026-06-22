@@ -1,0 +1,124 @@
+{
+  "evidence_id": "CODEGRAPH-SYNC-AUTHORIZATION-PACK-20260621",
+  "status": "sync_authorization_pack_ready",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009",
+  "objective": "Create an auditable sync-only authorization package for Brain and Studio CodeGraph indexes without executing external repo sync.",
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.json",
+    "docs/harness/evidence/codegraph-impact-regression-watch-20260621.json"
+  ],
+  "authorization_request": {
+    "requested_action": "sync_only_codegraph_indexes",
+    "target_repos": [
+      {
+        "repo": "GlobalCloud Brain",
+        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+        "current_pending": {
+          "added": 3,
+          "modified": 10,
+          "removed": 0
+        },
+        "threshold_result": "action_required",
+        "allowed_command_after_authorization": "codegraph sync && codegraph status --json . && git status --short -- .codegraph",
+        "forbidden_actions": [
+          "business code edits",
+          "git add",
+          "git commit",
+          "git push",
+          "deploy",
+          "accepted/integrated/production_ready upgrade"
+        ]
+      },
+      {
+        "repo": "GlobalCloud Studio",
+        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+        "current_pending": {
+          "added": 0,
+          "modified": 6,
+          "removed": 0
+        },
+        "threshold_result": "action_required",
+        "allowed_command_after_authorization": "codegraph sync && codegraph status --json . && git status --short -- .codegraph",
+        "forbidden_actions": [
+          "business code edits",
+          "git add",
+          "git commit",
+          "git push",
+          "deploy",
+          "accepted/integrated/production_ready upgrade"
+        ]
+      }
+    ],
+    "not_authorized_in_this_round": true,
+    "approval_phrase": "授权执行 Brain/Studio CodeGraph sync-only closure"
+  },
+  "preflight_checks": {
+    "codegraph_git_status_entries_total": 0,
+    "removed_pending_total": 0,
+    "gfis_policy_exception": {
+      "repo": "GlobalCloud GFIS",
+      "pending": {
+        "added": 1,
+        "modified": 0,
+        "removed": 0
+      },
+      "threshold_result": "watch"
+    },
+    "gpcf_index_status": {
+      "pending": {
+        "added": 3,
+        "modified": 1,
+        "removed": 0
+      },
+      "decision": "GPCF local evidence sync allowed after this governance round"
+    }
+  },
+  "impact_gate_sample": {
+    "target": "tools/kds-sync/validate_codegraph_drift_alert_thresholds.py",
+    "query": {
+      "command": "codegraph query codegraph_drift_alert_thresholds --json",
+      "result_count": 4,
+      "top_result": "tools/kds-sync/validate_codegraph_drift_alert_thresholds.py"
+    },
+    "node": {
+      "command": "codegraph node tools/kds-sync/validate_codegraph_drift_alert_thresholds.py",
+      "line_count": 160,
+      "symbols": 12,
+      "indexed_dependents": 0
+    },
+    "affected": {
+      "command": "codegraph affected tools/kds-sync/validate_codegraph_drift_alert_thresholds.py --json",
+      "affected_tests": [],
+      "total_dependents_traversed": 0
+    },
+    "text_scan": {
+      "matched_files": 13,
+      "matched_lines": 29
+    }
+  },
+  "execution_protocol_after_authorization": [
+    "Run codegraph status --json . in Brain and Studio.",
+    "Run git status --short -- .codegraph in Brain and Studio; abort if any output appears.",
+    "Run codegraph sync in Brain and Studio only.",
+    "Re-run codegraph status --json . and require pendingChanges added=0 modified=0 removed=0.",
+    "Re-run git status --short -- .codegraph and require no output.",
+    "Record evidence in GPCF only; do not edit Brain or Studio business files."
+  ],
+  "rollback_plan": [
+    "No Git rollback is required because .codegraph is Git-isolated.",
+    "If sync fails, leave business files untouched and record failure evidence.",
+    "If .codegraph appears in Git status, stop and do not continue without user review."
+  ],
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false,
+    "brain_or_studio_sync_executed": false
+  },
+  "next_round": "GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010"
+}

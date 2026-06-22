@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/10-XiaoG/docs/harness/XiaoG/README.md
 source_path: docs/harness/XiaoG/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -42,4 +42,4 @@ KDS 空间：`开发`
 | GPCF-DOC-BE87700244 | GlobalCloud XiaoG Loop State | docs/harness/XiaoG/loop-state.md | XiaoG | controlled |
 | GPCF-DOC-CC7297EBCF | loops | docs/harness/XiaoG/loops/README.md | XiaoG | controlled |
 | GPCF-DOC-871E18BD6E | loop-round-GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | XiaoG | controlled |
-| GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | XiaoG | controlled |
+| GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002：XiaoG 设备与语音触发验证清单 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | XiaoG | controlled |

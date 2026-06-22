@@ -1,0 +1,139 @@
+{
+  "evidence_id": "LOOP-CODEGRAPH-ACTIVE-DRIFT-MONITOR-20260621",
+  "status": "codegraph_active_drift_monitor_evidenced",
+  "date": "2026-06-21",
+  "sampled_at_utc": "2026-06-21T04:55:48Z",
+  "scope": "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001",
+  "stage_goal": {
+    "objective": "Monitor active CodeGraph drift for Brain and Studio, keep GFIS residual controlled, and avoid project business development.",
+    "mode": "L1/L2 governance evidence and validator only",
+    "success_criteria": [
+      "Brain active drift is detected and quantified",
+      "Studio active drift is detected and quantified",
+      "GFIS residual remains policy-controlled",
+      "GPCF governance index is resynchronized locally",
+      "next LOOP input is generated without status upgrade"
+    ]
+  },
+  "observations": [
+    {
+      "project": "GlobalCloud Brain",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
+      "status": "active_drift",
+      "pending_changes": {
+        "added": 0,
+        "modified": 36,
+        "removed": 0
+      },
+      "previous_pending_changes": {
+        "modified": 32
+      },
+      "trend": "drift_increased",
+      "files": 152,
+      "nodes": 2447,
+      "edges": 5758,
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+      "status": "active_drift",
+      "pending_changes": {
+        "added": 2,
+        "modified": 2,
+        "removed": 0
+      },
+      "previous_pending_changes": {
+        "added": 2,
+        "modified": 2
+      },
+      "trend": "drift_persisted",
+      "files": 797,
+      "nodes": 14457,
+      "edges": 46854,
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCloud GFIS",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+      "status": "controlled_residual",
+      "pending_changes": {
+        "added": 1,
+        "modified": 0,
+        "removed": 0
+      },
+      "policy": "large_generated_validator_exception_candidate",
+      "files": 1022,
+      "nodes": 13152,
+      "edges": 38142,
+      "codegraph_git_status_entries": 0
+    },
+    {
+      "project": "GlobalCoud GPCF",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF",
+      "status": "up_to_date_after_final_sync",
+      "pending_changes": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "files": 862,
+      "nodes": 9782,
+      "edges": 22799,
+      "codegraph_git_status_entries": 0
+    }
+  ],
+  "metrics_seed": {
+    "mttd_seed_available": true,
+    "mttr_seed_available": false,
+    "detected_at_utc": "2026-06-21T04:55:48Z",
+    "drift_projects": [
+      "GlobalCloud Brain",
+      "GlobalCloud Studio"
+    ],
+    "controlled_residual_projects": [
+      "GlobalCloud GFIS"
+    ],
+    "manual_search_avoided_notes": [
+      "Brain drift is quantified as modified=36 from CodeGraph status instead of broad manual file inspection.",
+      "Studio drift is quantified as added=2 and modified=2 from CodeGraph status instead of project-wide review."
+    ]
+  },
+  "loop_gates": {
+    "document_gate": "pass",
+    "kds_token": "pass",
+    "git_gate": "partial_dirty_worktree",
+    "operational_gates": "blocked_by_existing_quality_usability_customer_satisfaction_signals",
+    "status_ceiling": "partial"
+  },
+  "boundaries": {
+    "project_business_code_edits": false,
+    "codegraph_sync_on_brain_or_studio": false,
+    "commit_or_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false
+  },
+  "next_loop_input": {
+    "round": "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002",
+    "objective": "Continue read-only drift sampling for Brain and Studio, collect a second MTTD/MTTR data point, and decide whether sync-only closure is authorized.",
+    "allowed_actions": [
+      "read-only codegraph status sampling",
+      "read-only .codegraph git status checks",
+      "GPCF evidence and validator update",
+      "GPCF-only codegraph sync after governance evidence changes"
+    ],
+    "forbidden_actions": [
+      "Brain business code edits",
+      "Studio business code edits",
+      "GFIS validator refactor",
+      "production writes",
+      "commit",
+      "push",
+      "deploy",
+      "accepted/integrated/production_ready upgrade"
+    ]
+  }
+}

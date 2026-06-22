@@ -1,0 +1,71 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-KDS-DKS-LOOP-TITLE-REPAIR-D103-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/loops/loop-round-GPCF-KDS-DKS-077..123 title/H1 first batch",
+  "action": "repair_kds_dks_legacy_loop_title_and_h1_localization_debt",
+  "before": {
+    "all_repo_findings": 164,
+    "target_file_findings": 32
+  },
+  "after": {
+    "all_repo_findings": 117,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -47,
+    "target_file_findings": -32
+  },
+  "sync_surface_note": "D103 target files reduced by 32 findings. After scoped document control and index normalization, the stable all-repo localization finding count is 117.",
+  "changed_files": [
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-077.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-078.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-079.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-081.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-082.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-083.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-087.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-088.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-091.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-092.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-093.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-094.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-095.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-096.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-097.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-098.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-099.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-100.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-104.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-111.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-112.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-113.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-114.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-115.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-116.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-117.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-118.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-119.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-120.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-121.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-122.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-123.md"
+  ],
+  "changed_line_items": 128,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_kds_dks_loop_title_repair_d103.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

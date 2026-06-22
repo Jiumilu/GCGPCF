@@ -1,0 +1,46 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-INDEX-CODEGRAPH-REPAIR-D111-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/evidence/evidence-index.md,docs/codegraph/codegraph-loop-integration.md",
+  "action": "repair_index_and_codegraph_localization_debt",
+  "before": {
+    "all_repo_findings": 21,
+    "target_file_findings": 4
+  },
+  "after": {
+    "all_repo_findings": 23,
+    "target_file_findings": 3
+  },
+  "delta": {
+    "all_repo_findings": 2,
+    "target_file_findings": -1
+  },
+  "changed_files": [
+    "docs/harness/evidence/evidence-index.md",
+    "docs/codegraph/codegraph-loop-integration.md"
+  ],
+  "changed_line_items": 8,
+  "remaining_target_findings": [
+    {
+      "path": "docs/harness/evidence/evidence-index.md",
+      "kind": "doc_english_line",
+      "detail": "rolling aggregate index still surfaces later english-heavy sync headings and summaries"
+    }
+  ],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_index_codegraph_repair_d111.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

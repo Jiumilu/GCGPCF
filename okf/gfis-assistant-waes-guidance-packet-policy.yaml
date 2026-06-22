@@ -1,0 +1,85 @@
+policy_id: okf.gfis_assistant_waes_guidance_packet_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run GFIS Assistant guidance packets derived from WAES
+  precheck bundle read models. Packets explain gate blockers and repair paths
+  only. They do not approve GFIS writeback, persist WAES gate results, create
+  KWE work items, mutate KDS lifecycle, write business systems, complete
+  approvals, confirm revenue or scores, or call external APIs.
+
+required_fields:
+  - packet_id
+  - bundle_ref
+  - tenant_id
+  - project_id
+  - assistant_surface
+  - guidance_mode
+  - writeback_explanation
+  - repair_prompts
+  - metadata_only_hints
+  - manual_confirmation_points
+  - committee_triggers
+  - blocked_actions
+  - allowed_assistant_actions
+  - approved_for_business_write
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - promotes_lifecycle
+  - no_write
+
+assistant_surfaces:
+  - gfis_assistant
+
+guidance_modes:
+  - writeback_blocked
+  - repair_guidance
+  - metadata_only_guidance
+  - committee_guidance
+  - freeze_guidance
+
+allowed_assistant_actions:
+  - explain_waes_gate
+  - suggest_repair
+  - show_metadata_boundary
+  - show_manual_confirmation
+  - show_committee_path
+  - show_harness_evidence_hint
+
+blocked_actions:
+  - approve_business_write
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - promote_lifecycle
+  - complete_committee_decision
+  - confirm_revenue_or_score
+
+hard_boundaries:
+  guidance_only: true
+  approved_for_business_write_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  packet_is_not_writeback_approval: true
+  packet_is_not_gate_result: true
+  packet_is_not_work_item: true
+  packet_is_not_business_writeback: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

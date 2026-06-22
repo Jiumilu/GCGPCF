@@ -1,0 +1,91 @@
+{
+  "id": "loop-engineering-five-direction-implementation-20260622",
+  "schema_version": "v1",
+  "source_article_takeaway": "run_stop_verify_recover_debug",
+  "status": "implemented_control_plane",
+  "status_ceiling": "partial_repair",
+  "directions": {
+    "run": {
+      "implemented": true,
+      "artifact": "templates/loop-round-v2-five-direction.yaml",
+      "required_fields": ["input_refs", "goal", "scope_in", "scope_out", "decision", "actions", "output_refs", "next_round"]
+    },
+    "stop": {
+      "implemented": true,
+      "detector_required": true,
+      "allowed_stop_types": ["completed_for_round", "authorization_boundary", "repair_required", "task_queue_empty", "production_safety"],
+      "forbidden_completion_claims": ["accepted", "integrated", "production_ready"]
+    },
+    "verify": {
+      "implemented": true,
+      "required_stages": ["precheck", "intermediate_check", "final_gate"],
+      "lane_separation_required": true
+    },
+    "recover": {
+      "implemented": true,
+      "checkpoint_required": true,
+      "required_fields": ["failed_or_stopped_at", "last_safe_state", "retryable_actions", "non_retryable_actions", "required_inputs", "resume_round"]
+    },
+    "debug": {
+      "implemented": true,
+      "signals": ["recent_state_changes", "failing_gate", "status_ceiling", "real_lane_counts", "synthetic_lane_counts", "write_counts", "next_authorization"]
+    }
+  },
+  "current_debug_snapshot": {
+    "recent_state_changes": [
+      "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-026",
+      "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
+      "GPCF-L4-GFIS-REAL-SYNC-007"
+    ],
+    "failing_gate": "GFIS real_business_lane",
+    "status_ceiling": "partial_repair",
+    "real_lane_counts": {
+      "valid_source_records": 0,
+      "runtime_primary_key_ready": 0,
+      "review_queue": 0,
+      "runtime_intake": 0,
+      "waes_review": 0,
+      "verified": 0
+    },
+    "synthetic_lane_counts": {
+      "test_data_lane": "pass",
+      "synthetic_dev_lane": "dev_closed"
+    },
+    "write_counts": {
+      "production_writes": 0,
+      "real_external_api_writes": 0,
+      "kds_fact_writes": 0,
+      "waes_gate_result_writes": 0
+    },
+    "next_authorization": "real source-of-record or equivalent formal confirmation is required before real lane promotion"
+  },
+  "recovery_checkpoint": {
+    "failed_or_stopped_at": "GFIS real source-of-record admission",
+    "last_safe_state": "development_ready=pass; synthetic_dev_lane=dev_closed; real_business_lane=repair_required",
+    "retryable_actions": [
+      "refresh controlled status dashboard",
+      "run no-write validators",
+      "prepare source-of-record collection package"
+    ],
+    "non_retryable_actions": [
+      "create runtime primary key without verified source record",
+      "create review queue without business verification",
+      "write accepted or integrated status",
+      "write production or external API"
+    ],
+    "required_inputs": [
+      "real customer order or platform order receipt",
+      "manual business verification",
+      "WAES review result",
+      "KDS backlink receipt"
+    ],
+    "resume_round": "GPCF-LOOP-FIVE-DIRECTION-RECOVERY-001"
+  },
+  "completion_guards": {
+    "accepted_allowed": false,
+    "integrated_allowed": false,
+    "production_ready_allowed": false,
+    "business_completion_claim_allowed": false,
+    "no_write_boundary_enforced": true
+  }
+}

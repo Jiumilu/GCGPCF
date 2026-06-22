@@ -1,0 +1,22 @@
+schema_id: globalcloud.headroom_lcx.metrics.v1
+required:
+  - project_id
+  - scenario_id
+  - input_tokens_before
+  - input_tokens_after
+  - output_tokens_before
+  - output_tokens_after
+  - cache_write_tokens_before
+  - cache_write_tokens_after
+  - cache_read_tokens_before
+  - cache_read_tokens_after
+  - runtime_cost
+  - saving_rate
+  - admission_gate
+properties:
+  admission_gate:
+    expression: answer_equivalence == pass and sensitive_redaction_gate == pass and marker_gate == pass
+  raw_context_stored:
+    default: false
+  production_token_source:
+    enum: [none, sanitized_ledger, authorized_window]

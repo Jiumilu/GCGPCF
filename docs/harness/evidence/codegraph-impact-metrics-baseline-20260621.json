@@ -1,0 +1,106 @@
+{
+  "evidence_id": "CODEGRAPH-IMPACT-METRICS-BASELINE-20260621",
+  "status": "impact_metrics_baseline_ready",
+  "date": "2026-06-21",
+  "scope": "GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006",
+  "objective": "Establish a repeatable baseline for measuring CodeGraph value across the project group without project business development.",
+  "source_evidence": [
+    "docs/harness/evidence/codegraph-impact-report-dry-run-20260621.json",
+    "docs/harness/evidence/codegraph-project-group-full-coverage-20260621.json",
+    "docs/harness/evidence/codegraph-project-group-steady-state-verify-20260621.json"
+  ],
+  "project_group_baseline": {
+    "repo_count": 14,
+    "indexed_repo_count": 14,
+    "git_protected_repo_count": 14,
+    "codegraph_git_status_entries_total": 0,
+    "studio_included": true,
+    "was_included": true,
+    "up_to_date_repo_count_at_sample": 12,
+    "controlled_exception_repos": [
+      {
+        "repo": "GlobalCloud GFIS",
+        "reason": "large_generated_validator_exception_candidate",
+        "pending_total_at_sample": 1
+      },
+      {
+        "repo": "GlobalCloud Brain",
+        "reason": "active_drift_watchlist",
+        "pending_total_at_sample": 6
+      }
+    ]
+  },
+  "impact_command_baseline": [
+    {
+      "command": "codegraph query codegraph_impact_report_dry_run --json",
+      "purpose": "Locate the current impact-report validator and its evidence constants.",
+      "result_count": 4,
+      "top_result": "tools/kds-sync/validate_codegraph_impact_report_dry_run.py",
+      "sample_duration_ms": 950
+    },
+    {
+      "command": "codegraph node tools/kds-sync/validate_codegraph_impact_report_dry_run.py",
+      "purpose": "Inspect file-level symbols and indexed dependents for the validator.",
+      "line_count": 108,
+      "symbols": 9,
+      "indexed_dependents": 0,
+      "sample_duration_ms": 402
+    },
+    {
+      "command": "codegraph affected tools/kds-sync/validate_codegraph_impact_report_dry_run.py --json",
+      "purpose": "Select impacted tests for the validator change.",
+      "affected_tests": [],
+      "total_dependents_traversed": 0,
+      "sample_duration_ms": 349
+    },
+    {
+      "command": "codegraph impact main --depth 2",
+      "purpose": "Negative control for broad symbol noise.",
+      "affected_symbols": 101,
+      "usable_for_gate": false,
+      "sample_duration_ms": 362
+    }
+  ],
+  "text_scan_baseline": {
+    "command": "rg -n \"validate_codegraph_impact_report_dry_run|CODEGRAPH-IMPACT-REPORT-DRY-RUN-20260621|GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005|GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006\" docs tools governance harness loop 09-status",
+    "matched_files": 13,
+    "matched_lines": 28,
+    "limitation": "Text scan remains useful for discovery but cannot classify symbols, dependents, affected tests, or noisy impact queries."
+  },
+  "metrics": {
+    "coverage": {
+      "definition": "All project-group repositories have initialized CodeGraph indexes and .codegraph remains outside Git.",
+      "baseline": "14/14 indexed and 14/14 git-protected"
+    },
+    "query_precision": {
+      "definition": "Targeted query returns the intended validator as the top result.",
+      "baseline": "4 results, top result is validate_codegraph_impact_report_dry_run.py"
+    },
+    "impact_precision": {
+      "definition": "Affected analysis returns tests and dependency traversal for the target file.",
+      "baseline": "0 affected tests and 0 traversed dependents"
+    },
+    "noise_control": {
+      "definition": "Broad symbols are measured and rejected when too noisy for gate evidence.",
+      "baseline": "main produces 101 affected symbols and is not usable for gate evidence"
+    },
+    "manual_scan_reduction": {
+      "definition": "Compare CodeGraph targeted evidence with rg text scan volume.",
+      "baseline": "CodeGraph direct file/symbol/test impact set vs rg 13 files and 28 lines"
+    },
+    "gate_replayability": {
+      "definition": "The baseline is guarded by a validator that reruns CodeGraph, rg, coverage, and boundary checks.",
+      "baseline": "tools/kds-sync/validate_codegraph_impact_metrics_baseline.py"
+    }
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_or_push": false,
+    "project_internal_development": false
+  },
+  "next_round": "GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007"
+}

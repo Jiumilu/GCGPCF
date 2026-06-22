@@ -1,0 +1,142 @@
+policy_id: okf.gfis_assistant_repair_draft_handoff_packet_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run GFIS Assistant repair draft handoff packets derived from
+  DKS-112 repair review decision drafts. Handoff packets express recommended
+  downstream candidates only. They do not submit or persist evidence, create
+  handoff records, review queue items, confirmation or decision records, KWE
+  work items, WAES gate results, KDS lifecycle changes, business writes,
+  approvals, revenue or score confirmations, or external API calls.
+
+required_fields:
+  - handoff_packet_id
+  - decision_draft_ref
+  - review_packet_ref
+  - intake_ref
+  - checklist_ref
+  - guidance_packet_ref
+  - tenant_id
+  - project_id
+  - assistant_surface
+  - handoff_type
+  - handoff_status
+  - target_candidate
+  - handoff_note_refs
+  - required_repair_refs
+  - metadata_ref_bundle
+  - evidence_hint_refs
+  - blocked_reason_refs
+  - blocked_actions
+  - allowed_display_actions
+  - submits_evidence
+  - persists_evidence
+  - creates_handoff_record
+  - creates_review_queue_item
+  - creates_confirmation_record
+  - creates_decision_record
+  - creates_gap_record
+  - creates_bounty_record
+  - creates_kwe_work_item
+  - creates_waes_gate_result
+  - routes_to_human_queue
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+handoff_types:
+  - human_review_handoff
+  - metadata_boundary_handoff
+  - committee_agenda_handoff
+  - freeze_review_handoff
+  - blocked_hold_handoff
+
+handoff_statuses:
+  - draft
+  - ready_for_handoff_review
+  - needs_repair
+  - blocked
+  - metadata_only
+
+target_candidates:
+  - kwe_human_review_candidate
+  - metadata_boundary_review_candidate
+  - committee_agenda_candidate
+  - freeze_review_candidate
+  - blocked_hold_candidate
+
+allowed_display_actions:
+  - show_handoff_packet
+  - show_target_candidate
+  - show_required_repair
+  - show_metadata_boundary
+  - show_committee_agenda_note
+  - show_freeze_note
+  - show_no_write_notice
+
+blocked_actions:
+  - submit_evidence
+  - persist_evidence
+  - create_handoff_record
+  - create_review_queue_item
+  - create_confirmation_record
+  - create_decision_record
+  - create_kwe_work_item
+  - create_gap_record
+  - create_bounty_record
+  - create_waes_gate_result
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  handoff_packet_only: true
+  handoff_packet_is_not_handoff_record: true
+  handoff_packet_is_not_review_queue_item: true
+  handoff_packet_is_not_confirmation: true
+  handoff_packet_is_not_committee_decision: true
+  handoff_packet_is_not_decision_record: true
+  handoff_packet_is_not_waes_result: true
+  handoff_packet_is_not_business_writeback: true
+  target_candidate_is_recommendation_only: true
+  submits_evidence_must_be_false: true
+  persists_evidence_must_be_false: true
+  creates_handoff_record_must_be_false: true
+  creates_review_queue_item_must_be_false: true
+  creates_confirmation_record_must_be_false: true
+  creates_decision_record_must_be_false: true
+  creates_gap_record_must_be_false: true
+  creates_bounty_record_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  routes_to_human_queue_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_handoff_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

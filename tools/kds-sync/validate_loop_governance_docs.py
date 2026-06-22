@@ -139,7 +139,20 @@ def main() -> int:
         require(phrase in execution, f"LOOP_EXECUTION_RULES.md missing phrase: {phrase}")
 
     round_template = texts[ROOT / "templates/LOOP_ROUND_TEMPLATE.md"]
-    for phrase in ["Round ID", "授权边界", "验证命令", "Evidence 清单", "状态判定", "轮次真实性检查", "substantive_round"]:
+    for phrase in [
+        "Round ID",
+        "授权边界",
+        "验证命令",
+        "Evidence 清单",
+        "状态判定",
+        "轮次真实性检查",
+        "substantive_round",
+        "## 7.1 UI 质量门禁（涉及 UI 时必填）",
+        "| UI scope | true / false |",
+        "UI gate status: ui_ready | ui_partial | ui_blocked | ui_rework_required | not_applicable",
+        "G1 Surface Structure",
+        "G9 Scope Control",
+    ]:
         require(phrase in round_template, f"LOOP_ROUND_TEMPLATE.md missing phrase: {phrase}")
 
     skill = read(ROOT / ".codex/skills/globalcloud-loop-orchestrator/SKILL.md")
@@ -590,9 +603,22 @@ def main() -> int:
         "count_unique_mirror_docs",
         "local_mirror_unique_docs",
         "kds_md < local_mirror_unique_docs",
+        "loop_ui_quality_baseline",
         "write_report(summary, command_results)",
     ]:
         require(phrase in loop_document_gate, f"loop_document_gate.py missing phrase: {phrase}")
+
+    ui_quality_baseline = read(ROOT / "tools/kds-sync/validate_loop_ui_quality_baseline.py")
+    for phrase in [
+        "Validate that UI quality gating is wired into Loop",
+        "UI scope",
+        "historical_ui_signal_rounds_without_explicit_scope",
+        "loop_ui_quality_baseline=pass",
+    ]:
+        require(
+            phrase in ui_quality_baseline,
+            f"validate_loop_ui_quality_baseline.py missing phrase: {phrase}",
+        )
 
     evidence_discovery_chain = read(ROOT / "tools/kds-sync/validate_evidence_discovery_chain.py")
     for phrase in [
@@ -643,13 +669,16 @@ def main() -> int:
         "none",
         "current-window review evidence",
     )
+    current_window_review_signal = current_window_review_json.get("source_signal", {})
     require(
-        len(current_window_review_json.get("affected_truth_field_records", [])) == 2,
-        "current-window review evidence must list 2 affected truth-field records",
+        len(current_window_review_json.get("affected_truth_field_records", []))
+        == current_window_review_signal.get("audit_missing_truth_fields"),
+        "current-window review truth record list must match source signal",
     )
     require(
-        len(current_window_review_json.get("affected_five_segment_records", [])) == 7,
-        "current-window review evidence must list 7 affected five-segment records",
+        len(current_window_review_json.get("affected_five_segment_records", []))
+        == current_window_review_signal.get("audit_missing_five_segment"),
+        "current-window review five-segment record list must match source signal",
     )
     review_disposition_ids = {
         item.get("disposition_id") for item in current_window_review_json.get("review_dispositions", [])

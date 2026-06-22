@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/README.md
 source_path: templates/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -39,11 +39,14 @@ KDS 路径前缀：`开发/12-GPCF/templates/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | GPCF | controlled |
+| GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-342D4B85A7 | Loop Evidence Template | templates/LOOP_EVIDENCE_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-D72226E1D3 | Loop Handoff Template | templates/LOOP_HANDOFF_TEMPLATE.md | GPCF | controlled |
-| GPCF-DOC-C3B9DFCB0C | Loop Round Template | templates/LOOP_ROUND_TEMPLATE.md | GPCF | controlled |
+| GPCF-DOC-C3B9DFCB0C | LOOP_ROUND_TEMPLATE | templates/LOOP_ROUND_TEMPLATE.md | GPCF | controlled |
+| GPCF-DOC-9A5D7C1B3E | LOOP 会话主线声明模板 | templates/LOOP_SESSION_MAINLINE_DECLARATION_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-48D043BA78 | 模板库 | templates/README.md | GPCF | controlled |
-| GPCF-DOC-33F4C1195D | Evidence Index — {项目名} | templates/evidence-index-template.md | GPCF | controlled |
-| GPCF-DOC-8C2AA8996B | Status Audit — {YYYY-MM-DD} | templates/loop-audit-template.md | GPCF | controlled |
+| GPCF-DOC-33F4C1195D | 证据索引模板 — {项目名} | templates/evidence-index-template.md | GPCF | controlled |
+| GPCF-DOC-8C2AA8996B | loop-audit-template | templates/loop-audit-template.md | GPCF | controlled |
 | GPCF-DOC-1D2FA3DB71 | Loop Round {N} | templates/loop-round-template.md | GPCF | controlled |
-| GPCF-DOC-DDBD7C90C2 | {项目名} Loop State | templates/loop-state-template.md | GPCF | controlled |
+| GPCF-DOC-DDBD7C90C2 | {项目名} 循环状态模板 | templates/loop-state-template.md | GPCF | controlled |

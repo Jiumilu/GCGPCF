@@ -1,0 +1,30 @@
+loop_task_with_codegraph:
+  task_id:
+  repo:
+  objective:
+  codegraph:
+    required: true
+    snapshot_id:
+    context_queries: []
+    explored_symbols: []
+    impact_paths: []
+    impacted_tests: []
+    risk_flags: []
+    evidence_ref:
+  harness:
+    impact_report_ref:
+    evidence_bundle_ref:
+  waes:
+    gate_required:
+    gate_result:
+  kds_okf:
+    candidate_refs: []
+    accepted_direct_write_allowed: false
+  boundaries:
+    business_code_development:
+    commit: false
+    push: false
+    deploy: false
+    accepted: false
+    integrated: false
+    production_ready: false

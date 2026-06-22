@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-247164F00E
 title: Loop Round GPCF-KDS-DKS-013
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-013.md
 source_path: docs/harness/loops/loop-round-GPCF-KDS-DKS-013.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

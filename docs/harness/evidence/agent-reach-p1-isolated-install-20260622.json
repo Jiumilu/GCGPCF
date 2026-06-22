@@ -1,0 +1,104 @@
+{
+  "id": "agent-reach-p1-isolated-install-20260622",
+  "round": "GPCF-AGENT-REACH-P1-ISOLATED-INSTALL-001",
+  "date": "2026-06-22",
+  "status": "isolated_install_ready",
+  "current_admission": "limited_candidate_only",
+  "phase": "P1 Isolated Install",
+  "upstream": {
+    "repo": "https://github.com/Panniantong/Agent-Reach.git",
+    "head": "22d7f03a59401b5740b380c3ad43e3ff7a9dc373",
+    "package": "agent-reach",
+    "version": "1.5.0",
+    "license": "MIT"
+  },
+  "environment": {
+    "default_python_attempted": "3.9.6",
+    "default_python_result": "blocked_by_python_requirement",
+    "required_python": ">=3.10",
+    "isolated_python": "3.12.13",
+    "temporary_home": "/tmp/gpcf-agent-reach-p1-home",
+    "temporary_venv": "/tmp/gpcf-agent-reach-p1-venv",
+    "temporary_source": "/tmp/agent-reach-p1-source"
+  },
+  "installation": {
+    "isolated_venv_install": true,
+    "project_install": false,
+    "global_install": false,
+    "package_version": "1.5.0",
+    "dependencies": [
+      "feedparser==6.0.12",
+      "loguru==0.7.3",
+      "python-dotenv==1.2.2",
+      "PyYAML==6.0.3",
+      "requests==2.34.2",
+      "rich==15.0.0",
+      "yt-dlp==2026.6.9"
+    ]
+  },
+  "checks": {
+    "python_import_agent_reach": "pass",
+    "python_import_core_agent_reach": "pass",
+    "cli_help": "pass",
+    "cli_version": "Agent Reach v1.5.0",
+    "doctor_json": "pass_with_probe",
+    "temporary_config_file_absent": true
+  },
+  "doctor_summary": {
+    "ok": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "warn": [
+      "github",
+      "twitter",
+      "youtube",
+      "v2ex",
+      "xueqiu"
+    ],
+    "off": [
+      "reddit",
+      "xiaohongshu",
+      "linkedin",
+      "xiaoyuzhou",
+      "exa_search"
+    ]
+  },
+  "security_controls": {
+    "source_archive_copied": false,
+    "upstream_source_modified": false,
+    "package_installed_in_isolated_venv": true,
+    "package_installed_in_project": false,
+    "package_installed_globally": false,
+    "doctor_health_probe_invoked": true,
+    "live_external_search_invoked": false,
+    "agent_reach_search_command_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "temporary_config_directory_created": true,
+    "temporary_config_file_written": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "artifacts": [
+    "third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md",
+    "docs/harness/evidence/agent-reach-p1-isolated-install-20260622.json",
+    "docs/harness/evidence/agent-reach-p1-isolated-install-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P1-ISOLATED-INSTALL-001.md",
+    "tools/kds-sync/validate_agent_reach_p1_isolated_install.py"
+  ],
+  "non_claims": [
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_live_search_verified"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001"
+}

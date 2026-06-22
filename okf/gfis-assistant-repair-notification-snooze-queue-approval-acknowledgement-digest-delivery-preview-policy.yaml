@@ -1,0 +1,166 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_approval_acknowledgement_digest_delivery_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write approval acknowledgement digest delivery previews
+  derived from DKS-132 GFIS Assistant repair notification snooze queue
+  approval acknowledgement digest previews. Delivery previews show candidate
+  delivery recipients, channels, blocked delivery counts, boundary references,
+  and next-step suggestions only. They do not create delivery records,
+  notifications, digest records, acknowledgements, read receipts, reminders,
+  governance records, lifecycle changes, business writes, settlements, or
+  external API calls.
+
+required_fields:
+  - delivery_preview_id
+  - digest_preview_refs
+  - tenant_id
+  - project_id
+  - surface
+  - delivery_type
+  - delivery_status
+  - delivery_decision
+  - delivery_scope
+  - candidate_recipient_refs
+  - candidate_channel_refs
+  - blocked_delivery_count
+  - boundary_refs
+  - source_digest_preview_refs
+  - delivery_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - delivery_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_delivery
+  - creates_notification
+  - creates_digest
+  - creates_acknowledgement
+  - creates_read_receipt
+  - creates_reminder
+  - creates_escalation_task
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+delivery_types:
+  - team_digest_delivery_preview
+  - project_digest_delivery_preview
+  - governance_digest_delivery_preview
+  - external_blocked_digest_delivery_preview
+  - committee_digest_delivery_preview
+  - freeze_digest_delivery_preview
+
+delivery_statuses:
+  - delivery_preview_only
+  - delivery_at_risk_preview
+  - delivery_metadata_boundary
+  - delivery_external_blocked
+  - delivery_committee_required
+  - delivery_freeze_required
+
+delivery_decisions:
+  - show_team_digest_delivery_preview
+  - show_project_digest_delivery_preview
+  - show_governance_digest_delivery_preview
+  - show_external_blocked_digest_delivery_preview
+  - show_committee_digest_delivery_preview
+  - show_freeze_digest_delivery_preview
+
+delivery_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+delivery_channels:
+  - brain_inbox
+  - pkc_task_center
+  - gfis_assistant_panel
+  - governance_console
+  - committee_console
+  - freeze_review_console
+
+blocked_actions:
+  - create_delivery
+  - create_notification
+  - create_digest
+  - create_acknowledgement
+  - create_read_receipt
+  - create_reminder
+  - create_escalation_task
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  delivery_preview_only: true
+  delivery_preview_is_not_delivery_record: true
+  delivery_preview_is_not_notification: true
+  delivery_preview_is_not_digest_record: true
+  delivery_preview_is_not_acknowledgement: true
+  delivery_preview_is_not_read_receipt: true
+  delivery_preview_is_not_reminder: true
+  delivery_preview_is_not_escalation_task: true
+  delivery_preview_is_not_approval_request: true
+  delivery_preview_is_not_approval_decision: true
+  delivery_preview_is_not_harness_evidence: true
+  delivery_preview_is_not_waes_result: true
+  delivery_preview_is_not_kwe_work_item: true
+  delivery_preview_is_not_lifecycle_change: true
+  delivery_preview_is_not_business_writeback: true
+  creates_delivery_must_be_false: true
+  creates_notification_must_be_false: true
+  creates_digest_must_be_false: true
+  creates_acknowledgement_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  creates_reminder_must_be_false: true
+  creates_escalation_task_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_delivery: 0
+  writes_notification: 0
+  writes_digest: 0
+  writes_acknowledgement: 0
+  writes_read_receipt: 0
+  writes_reminder: 0
+  writes_escalation_task: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

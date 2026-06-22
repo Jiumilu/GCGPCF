@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-09655E45C0
 title: ADR：GPC 从 Odoo 二开调整为原生公共服务平台
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, XiaoC, XGD, GPCF, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md
 source_path: 01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

@@ -1,0 +1,131 @@
+{
+  "cases": [
+    {
+      "id": "brain-command-center-read",
+      "surface": "brain",
+      "requestedModules": [
+        "knowledge_command_center",
+        "kds_object_center",
+        "waes_gate_center",
+        "kwe_work_queue",
+        "loop_dashboard"
+      ],
+      "expected": {
+        "coveredViews": [
+          "knowledge_command_center",
+          "kds_object_center",
+          "waes_gate_center",
+          "kwe_work_queue",
+          "loop_dashboard"
+        ],
+        "blockedActions": [
+          "direct_accept_fact",
+          "direct_publish_object",
+          "direct_gfis_writeback",
+          "direct_waes_gate_override"
+        ],
+        "noWrite": true,
+        "kdsWrites": 0,
+        "waesWrites": 0,
+        "kweWrites": 0,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    },
+    {
+      "id": "brain-governance-read-only",
+      "surface": "brain",
+      "requestedModules": [
+        "governance_center",
+        "committee_center",
+        "revenue_contribution_center",
+        "ai_quota_center"
+      ],
+      "expected": {
+        "coveredViews": [
+          "governance_center",
+          "committee_center",
+          "revenue_contribution_center",
+          "ai_quota_center"
+        ],
+        "blockedActions": [
+          "direct_accept_fact",
+          "direct_gfis_writeback",
+          "direct_waes_gate_override",
+          "direct_revenue_distribution",
+          "direct_contribution_confirmation",
+          "direct_committee_decision"
+        ],
+        "noWrite": true,
+        "kdsWrites": 0,
+        "waesWrites": 0,
+        "kweWrites": 0,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    },
+    {
+      "id": "pkc-my-work-read",
+      "surface": "pkc",
+      "requestedSections": [
+        "my_knowledge",
+        "my_tasks",
+        "my_agent_outputs",
+        "my_kwe_work_items",
+        "my_project_packs"
+      ],
+      "expected": {
+        "coveredViews": [
+          "my_knowledge",
+          "my_tasks",
+          "my_agent_outputs",
+          "my_kwe_work_items",
+          "my_project_packs"
+        ],
+        "blockedActions": [
+          "final_fact_confirmation",
+          "force_kds_lifecycle_change",
+          "business_system_writeback"
+        ],
+        "noWrite": true,
+        "kdsWrites": 0,
+        "waesWrites": 0,
+        "kweWrites": 0,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    },
+    {
+      "id": "pkc-ledger-read",
+      "surface": "pkc",
+      "requestedSections": [
+        "my_contributions",
+        "my_points",
+        "my_ai_quota",
+        "my_bounties"
+      ],
+      "expected": {
+        "coveredViews": [
+          "my_contributions",
+          "my_points",
+          "my_ai_quota",
+          "my_bounties"
+        ],
+        "blockedActions": [
+          "final_fact_confirmation",
+          "force_kds_lifecycle_change",
+          "business_system_writeback",
+          "committee_decision",
+          "waes_gate_override",
+          "formal_revenue_distribution"
+        ],
+        "noWrite": true,
+        "kdsWrites": 0,
+        "waesWrites": 0,
+        "kweWrites": 0,
+        "businessWrites": 0,
+        "externalApiWrites": 0
+      }
+    }
+  ]
+}

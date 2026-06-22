@@ -1,0 +1,72 @@
+{
+  "registry_id": "WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-NEGATIVE-PROMOTION",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "registry_categories": [
+    {
+      "category": "object",
+      "entries": ["CustomerRequirementOrPlatformOrder"]
+    },
+    {
+      "category": "relationship",
+      "entries": ["source_record_to_runtime_object"]
+    },
+    {
+      "category": "event",
+      "entries": ["candidate_submitted"]
+    },
+    {
+      "category": "evidence",
+      "entries": ["source_record_original"]
+    },
+    {
+      "category": "state",
+      "entries": ["candidate_only"]
+    },
+    {
+      "category": "interface",
+      "entries": ["gfis_source_record_intake"]
+    }
+  ],
+  "promotion_policy": {
+    "kds_source_of_record": "optional",
+    "waes_decision": "optional",
+    "loop_evidence": "optional",
+    "llm_candidate": "can_be_official_fact",
+    "runtime_writeback": "authorized"
+  },
+  "future_project_policy": {
+    "admission_required": false,
+    "must_bind_project_group_scope": false,
+    "must_map_to_registry_categories": [],
+    "must_not_bypass_kds_waes_loop": false
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 1,
+    "review_queue": 1,
+    "runtime_intake": 1,
+    "waes_review": 1,
+    "verified": 1,
+    "accepted": true,
+    "integrated": true,
+    "production_ready": true,
+    "runtime_write": true,
+    "kds_api_write": true
+  }
+}

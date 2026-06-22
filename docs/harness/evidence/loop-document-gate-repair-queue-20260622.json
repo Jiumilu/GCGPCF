@@ -1,0 +1,41 @@
+{
+  "evidence_id": "LOOP-DOCUMENT-GATE-REPAIR-QUEUE-20260622",
+  "generated_at": "2026-06-22T01:42:01.512908+00:00",
+  "source": "tools/kds-sync/loop_document_gate.py --check-only",
+  "gate": "rework_required",
+  "gate_reasons": [
+    "localization_debt"
+  ],
+  "queue_item_count": 1,
+  "queue_items": [
+    {
+      "queue_id": "LDG-REPAIR-001",
+      "reason": "localization_debt",
+      "category": "localization",
+      "owner": "GPCF document governance",
+      "priority": "P1",
+      "status": "open",
+      "repair_action": "按中文本地化门禁报告分组修复旧英文或旧口径文档，不改变业务事实状态。",
+      "allowed_mode": "controlled_document_governance_only",
+      "no_write_boundary": {
+        "production_write": false,
+        "business_writeback": false,
+        "real_kds_api_write": false,
+        "status_upgrade": false
+      }
+    }
+  ],
+  "known_boundary": {
+    "candidate_no_write": true,
+    "gfis_real_business_lane": "repair_required",
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "source_summary": {
+    "localization_debt": true,
+    "fixed_doc_id_drift": false,
+    "missing_metadata": 0,
+    "missing_readme_dirs": 0
+  }
+}

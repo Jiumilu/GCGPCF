@@ -1,0 +1,25 @@
+{
+  "monitor_id": "WAS-REAL-SOURCE-RECORD-MONITOR-003-NEGATIVE-EXTERNAL-LINK-ONLY",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-003",
+  "required_p4_inputs": 6,
+  "submitted_real_inputs": 1,
+  "submitted_files_found": 0,
+  "candidate_files_checked": 0,
+  "accepted_for_next_gate": 1,
+  "hold_required": 0,
+  "monitor_state": "released",
+  "weak_evidence_promoted": true,
+  "weak_evidence_type": "external_link_only",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 1,
+    "runtime_intake": 0,
+    "waes_review": 1,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

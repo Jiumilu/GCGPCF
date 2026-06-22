@@ -1,0 +1,83 @@
+{
+  "contractId": "GCKF-P0-REJECTION-ARCHIVE-PATH-DRY-RUN-V0.1",
+  "description": "P0-D26 rejection archive path dry-run derived from D24 decision template. It maps rejected evidence candidates to archive candidate rules and rebuild preconditions only.",
+  "archivePathStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceDecisionTemplate": "fixtures/api/gckf-p0-harness-decision-template-dry-run-v0.1.json",
+  "coveredDecisionOutcomes": ["rejected"],
+  "excludedDecisionOutcomes": [
+    "approved_for_formal_harness_evidence",
+    "repair_required",
+    "scope_violation_found"
+  ],
+  "archiveCandidate": {
+    "id": "GCKF-P0-REJECT-ARCHIVE-CANDIDATE-001",
+    "archiveType": "rejected_harness_candidate_archive",
+    "sourceDecisionOutcome": "rejected",
+    "archiveStatus": "candidate",
+    "requiredFields": [
+      "reviewerId",
+      "reviewedAt",
+      "rejectionReason",
+      "evidenceRefs",
+      "decisionRationale",
+      "sourceCandidateRecordRef"
+    ],
+    "requiredActions": [
+      "mark_candidate_packet_not_reusable",
+      "record_rejection_basis",
+      "require_new_candidate_packet_for_resubmission",
+      "preserve_lineage_refs"
+    ],
+    "rebuildPreconditions": [
+      "new_or_repaired_source_evidence",
+      "new_harness_review_input_packet",
+      "new_harness_evidence_candidate_record",
+      "new_harness_decision_template_review"
+    ],
+    "forbiddenActions": [
+      "write_formal_evidence",
+      "promote_lifecycle",
+      "reuse_rejected_packet_as_accepted",
+      "enable_business_writeback"
+    ]
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-decision-template-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_harness_decision_template_dry_run.py",
+    "docs/gc-knowledge-fabric/harness-decision-template-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D24-001.md"
+  ],
+  "forbiddenOutputs": [
+    "archive_record_written",
+    "formal_harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "archivePathStatus": "candidate",
+    "archiveType": "rejected_harness_candidate_archive",
+    "archiveStatus": "candidate",
+    "sourceDecisionTemplateStatus": "candidate",
+    "coveredDecisionOutcomeCount": 1,
+    "excludedDecisionOutcomeCount": 3,
+    "requiredFieldCount": 6,
+    "requiredActionCount": 4,
+    "rebuildPreconditionCount": 4,
+    "requiredSourceRefCount": 4,
+    "notFinalAcceptance": true,
+    "writesArchiveRecord": false,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

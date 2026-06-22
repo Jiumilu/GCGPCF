@@ -1,0 +1,42 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GFIS-LOOP-REPAIR-D106-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-194,195,207.md",
+  "action": "repair_late_gfis_loop_localization_debt",
+  "before": {
+    "all_repo_findings": 90,
+    "target_file_findings": 9
+  },
+  "after": {
+    "all_repo_findings": 49,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -41,
+    "target_file_findings": -9
+  },
+  "changed_files": [
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-194.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-195.md",
+    "docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-207.md"
+  ],
+  "changed_line_items": 240,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_gfis_loop_repair_d106.py",
+    "python3 tools/kds-sync/validate_localization_debt_gfis_loop_repair_d104.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

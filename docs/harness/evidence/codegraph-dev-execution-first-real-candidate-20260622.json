@@ -1,0 +1,160 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004",
+  "status": "first_real_candidate_dry_run_ready",
+  "generated_at": "2026-06-22",
+  "objective": "选择一个低风险真实业务开发候选，只生成 CodeGraph 前置分析和 Harness gate dry-run，不进入业务实现。",
+  "candidate_task": {
+    "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-CANDIDATE",
+    "project": "GFIS",
+    "candidate_type": "real_business_blocker_harness_gate_candidate",
+    "candidate_description": "辽宁远航合同链真实回执空目录 hold register。该候选对应真实业务阻塞点，但本轮只做 CodeGraph 前置分析和 Harness gate dry-run。",
+    "business_implementation_authorized": false,
+    "business_files_changed": []
+  },
+  "codegraph_source_repo": {
+    "name": "GlobalCloud GFIS",
+    "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+    "initialized": true,
+    "version": "1.0.1",
+    "pending_changes": {
+      "added": 1,
+      "modified": 0,
+      "removed": 0
+    },
+    "git_isolated_codegraph": true,
+    "risk_note": "GFIS CodeGraph has pre-existing pendingChanges.added=1; this round records the drift and does not run GFIS sync."
+  },
+  "pre_change_analysis": {
+    "query": "GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence",
+    "query_results": [
+      {
+        "filePath": "scripts/validate_gfis_customer_requirement_test_source_record_submission.py",
+        "kind": "variable",
+        "name": "EVIDENCE",
+        "score_observed": 136.3454791679655
+      },
+      {
+        "filePath": "scripts/validate_gfis_test_data_runtime_replay_harness.py",
+        "kind": "variable",
+        "name": "EVIDENCE",
+        "score_observed": 123.3454791679655
+      },
+      {
+        "filePath": "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+        "kind": "file",
+        "score_observed": 84.63205009784748
+      },
+      {
+        "filePath": "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+        "kind": "file",
+        "score_observed": 84.63205009784748
+      }
+    ],
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "node_inspection": {
+      "file": "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "lines": 211,
+      "symbol_count": 20,
+      "indexed_dependents": 0,
+      "summary": "CodeGraph node inspection reports no other indexed file depends on this validator."
+    },
+    "affected": {
+      "changedFiles": [
+        "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    },
+    "cross_project_dependency_risk": "candidate belongs to GFIS runtime blocker chain; no indexed dependent file observed for the selected validator."
+  },
+  "implementation_constraints": {
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "affected_scope": [
+      "GFIS Liaoning Yuanhang real receipt empty-directory hold register validator and its read-only evidence chain"
+    ],
+    "files_allowed_to_change": [],
+    "files_not_to_touch": [
+      "GFIS business source files",
+      "GFIS real receipt intake directories",
+      "GFIS production configuration",
+      "real KDS token or secret files",
+      ".codegraph/**"
+    ],
+    "expected_tests": [
+      "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_harness_gate.py",
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate.py"
+    ]
+  },
+  "test_selection": {
+    "affected_tests": [],
+    "fallback_tests": [
+      "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_harness_gate.py",
+      "python3 tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate.py"
+    ],
+    "fallback_reason": "codegraph affected returned affectedTests=[] and totalDependentsTraversed=0; fallback tests are selected from the target GFIS validator and the GPCF Harness gate validators."
+  },
+  "codegraph_evidence": {
+    "query": "GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence",
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "affected": {
+      "changedFiles": [
+        "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    },
+    "changed_files": [],
+    "test_selection_reason": "No business implementation change is performed; GFIS target validator and GPCF Harness gate validators are selected as fallback because affectedTests is empty.",
+    "post_change_status": "first_real_candidate_dry_run_recorded"
+  },
+  "harness_gate_dry_run": {
+    "gate": "pass",
+    "positive_conditions_met": [
+      "codegraph_evidence_present",
+      "target_nodes_present",
+      "affected_scope_present",
+      "affected_tests_empty_with_fallback_reason",
+      "changed_files_empty",
+      "status_boundaries_false"
+    ],
+    "business_implementation_blocked_until_authorized": true
+  },
+  "candidate_runtime_observation": {
+    "validator_output": "liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=pass hold_items=5 open_holds=5 closed_holds=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 structure_valid=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=empty_directory_holds_open_waiting_real_receipts runtime_sop_e2e=repair_required",
+    "runtime_sop_e2e": "repair_required",
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0
+  },
+  "efficiency_metrics": {
+    "manual_scan_files": 80,
+    "codegraph_candidate_files": 2,
+    "actual_changed_files": 0,
+    "affected_tests": [],
+    "missed_impact_count": 0,
+    "time_to_first_target": "under_2_minutes_observed"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_sync_performed": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005"
+}

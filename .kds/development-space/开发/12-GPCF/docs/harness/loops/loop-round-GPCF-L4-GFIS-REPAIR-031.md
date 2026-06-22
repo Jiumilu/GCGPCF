@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-406B36B7D1
-title: GPCF L4 GFIS Repair 031 Runtime Incoming Quality Repair Candidate
+title: GPCF L4 GFIS Repair 031 运行时来料质量修复候选
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-031.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-031.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF L4 GFIS Repair 031 Runtime Incoming Quality Repair Candidate
+# GPCF L4 GFIS Repair 031 运行时来料质量修复候选
 
-## Round
+## 轮次
 
 - round_id: GPCF-L4-GFIS-REPAIR-031
 - date: 2026-06-14
@@ -30,20 +30,20 @@ superseded_by: []
 - substance_gate: partial
 - stop_type: authorization_boundary
 
-## Input
+## 输入
 
-- GFIS runtime self-diagnosis still reports `runtime_gap_resolution_plan=repair_required`.
-- Previous round created a candidate-only repair item for `raw_material_batch`.
+- GFIS 运行时自诊断仍报告 `runtime_gap_resolution_plan=repair_required`。
+- 上一轮已为 `raw_material_batch` 创建 candidate-only 修复项。
 - `get_runtime_raw_material_gate` still reports blocked gates: `raw_material_plan`, `raw_material_batch`, `incoming_quality_inspection`.
 
-## Action
+## 动作
 
-- GFIS runner now creates a fourth `GFISActionableRepairCandidate` for `incoming_quality_inspection`.
-- GFIS runtime validator now requires runtime evidence to include `production_execution`, `raw_material_plan`, `raw_material_batch` and `incoming_quality_inspection` repair candidate calls.
-- GFIS API contract validator now covers incoming quality repair candidate behavior.
-- GPCF integrity validator now reads GFIS runtime evidence JSON and checks all four candidate gaps.
+- GFIS runner 现在为 `incoming_quality_inspection` 创建第四个 `GFISActionableRepairCandidate`。
+- GFIS 运行时验证器现在要求运行时 evidence 包含 `production_execution`、`raw_material_plan`、`raw_material_batch` 和 `incoming_quality_inspection` 修复候选调用。
+- GFIS API contract 验证器现在覆盖来料质量修复候选行为。
+- GPCF 完整性验证器现在读取 GFIS 运行时 evidence JSON，并检查全部四个候选缺口。
 
-## Validation
+## 验证
 
 ```text
 GFIS runner:
@@ -78,17 +78,17 @@ GFIS Demo E2E:
 status=pass_demo_only
 ```
 
-## Boundary
+## 边界
 
-- No production write.
-- No real external API write.
-- No stock, batch, purchase receipt, incoming QA submit, WorkOrder completion, WAES/KDS final write, POD, finance confirmation, accepted or integrated status.
-- Demo remains display regression only.
+- 不进行生产写入。
+- 不进行真实外部 API 写入。
+- 不创建库存、批次、采购收货、来料 QA 提交、WorkOrder 完成、WAES/KDS 最终写入、POD、财务确认、accepted 或 integrated 状态。
+- Demo 仍仅作为显示回归验证。
 
-## Result
+## 结果
 
-The project now has another real Loop Engineering self-repair step after self-diagnosis: `incoming_quality_inspection` can be converted into a controlled GFIS runtime repair candidate and cleaned up. The full SOP E2E remains `repair_required`, and the project-group score remains frozen at 79/100.
+项目现在具备自诊断后的另一个真实 Loop Engineering 自修复步骤：`incoming_quality_inspection` 可以转换为受控 GFIS 运行时修复候选并完成清理。完整 SOP E2E 仍保持 `repair_required`，项目群评分继续冻结在 79/100。
 
-## Next
+## 下一步
 
-Continue with another GFIS-owned actionable gap from `get_runtime_sop_gap_resolution_plan`, such as `quality_inspection`, or collect verified live business inputs for external dependency gaps.
+继续处理 `get_runtime_sop_gap_resolution_plan` 中另一个 GFIS 负责的可执行缺口，例如 `quality_inspection`，或为外部依赖缺口收集已验证真实业务输入。

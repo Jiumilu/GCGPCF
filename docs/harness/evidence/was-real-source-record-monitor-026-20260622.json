@@ -1,0 +1,90 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-026-20260622",
+  "status": "was_real_source_record_monitor_026_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-026",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-001",
+  "purpose": "Twenty-sixth independent monitor pass for energy metering, GHG scope records, renewable certificates, and emission factor calculation evidence boundaries.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "energy_meter_record_gaps": 0,
+    "scope1_fuel_record_gaps": 0,
+    "scope2_electricity_invoice_gaps": 0,
+    "scope3_transport_material_record_gaps": 0,
+    "renewable_certificate_gaps": 0,
+    "emission_factor_method_gaps": 0,
+    "accepted_for_energy_carbon_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "energy_carbon_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 6,
+    "negative_cases": [
+      "energy_meter_record_gap",
+      "scope1_fuel_record_gap",
+      "scope2_electricity_invoice_gap",
+      "scope3_transport_material_record_gap",
+      "renewable_certificate_gap",
+      "emission_factor_method_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck_execution.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_monitor_025.py"
+  ],
+  "energy_carbon_requirements": [
+    "energy_meter_record",
+    "scope1_fuel_record",
+    "scope2_electricity_invoice",
+    "scope3_transport_material_record",
+    "renewable_certificate",
+    "emission_factor_method"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-027",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer energy meter records",
+    "does not infer scope 1 fuel records",
+    "does not infer scope 2 electricity invoices",
+    "does not infer scope 3 transport or material records",
+    "does not infer renewable certificates",
+    "does not infer emission factor methods",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

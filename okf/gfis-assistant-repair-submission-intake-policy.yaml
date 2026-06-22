@@ -1,0 +1,111 @@
+policy_id: okf.gfis_assistant_repair_submission_intake_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run GFIS Assistant repair submission intake requests derived
+  from DKS-109 repair prompt checklists. Intake requests express submission
+  intent and recommended review routes only. They do not submit or persist
+  evidence, create gaps or bounties, create KWE work items, persist WAES gate
+  results, mutate KDS lifecycle, write business systems, complete approvals,
+  confirm revenue or scores, or call external APIs.
+
+required_fields:
+  - intake_id
+  - checklist_ref
+  - guidance_packet_ref
+  - tenant_id
+  - project_id
+  - assistant_surface
+  - intake_status
+  - recommended_route
+  - submitted_item_refs
+  - metadata_ref_bundle
+  - evidence_hint_refs
+  - blocked_reason_refs
+  - blocked_actions
+  - allowed_display_actions
+  - submits_evidence
+  - persists_evidence
+  - creates_gap_record
+  - creates_bounty_record
+  - creates_kwe_work_item
+  - creates_waes_gate_result
+  - routes_to_human_queue
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+intake_statuses:
+  - draft
+  - ready_for_review
+  - repair_required
+  - blocked
+
+recommended_routes:
+  - human_review
+  - committee_review
+  - metadata_boundary_review
+  - freeze_review
+  - blocked_hold
+
+allowed_display_actions:
+  - show_intake_summary
+  - show_required_refs
+  - show_metadata_boundary
+  - show_recommended_route
+  - show_blocked_reason
+
+blocked_actions:
+  - submit_evidence
+  - persist_evidence
+  - create_gap_record
+  - create_bounty_record
+  - create_kwe_work_item
+  - create_waes_gate_result
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  intake_only: true
+  intake_is_not_submission: true
+  intake_is_not_evidence_record: true
+  intake_is_not_kwe_work_item: true
+  intake_is_not_gap_or_bounty: true
+  intake_is_not_waes_result: true
+  intake_is_not_business_writeback: true
+  intake_is_not_committee_decision: true
+  routes_are_recommendations_only: true
+  submits_evidence_must_be_false: true
+  persists_evidence_must_be_false: true
+  creates_gap_record_must_be_false: true
+  creates_bounty_record_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  routes_to_human_queue_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

@@ -1,0 +1,64 @@
+{
+  "pre_change_analysis": {
+    "query": "CodeGraph 业务开发执行层准入 validator evidence",
+    "target_nodes": [
+      "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+    ],
+    "affected": {
+      "changedFiles": [
+        "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    }
+  },
+  "implementation_constraints": {
+    "target_nodes": [
+      "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+    ],
+    "affected_scope": [
+      "GPCF CodeGraph governance validator and evidence references"
+    ],
+    "files_allowed_to_change": [],
+    "files_not_to_touch": [
+      ".codegraph/**"
+    ],
+    "expected_tests": []
+  },
+  "test_selection": {
+    "affected_tests": [],
+    "fallback_tests": [],
+    "fallback_reason": ""
+  },
+  "codegraph_evidence": {
+    "query": "CodeGraph 业务开发执行层准入 validator evidence",
+    "target_nodes": [
+      "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+    ],
+    "affected": {
+      "changedFiles": [
+        "tools/kds-sync/validate_codegraph_dev_execution_admission.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    },
+    "changed_files": [],
+    "test_selection_reason": "",
+    "post_change_status": "pilot_pack_recorded"
+  },
+  "efficiency_metrics": {
+    "manual_scan_files": 10,
+    "codegraph_candidate_files": 1,
+    "actual_changed_files": 0,
+    "affected_tests": [],
+    "missed_impact_count": 0,
+    "time_to_first_target": "under_1_minute_observed"
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

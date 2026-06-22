@@ -1,0 +1,99 @@
+policy_id: okf.kwe_approval_route_packet_policy
+version: v1.0
+owner: KWE
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run contract for KWE approval route packets. Route packets
+  map GFIS writeback approval preflight items to KWE queue suggestions only.
+  They do not create KWE work items, mutate KDS lifecycle, write facts, create
+  WAES gate results, write business systems, complete committee decisions,
+  confirm revenue or scores, or call external APIs.
+
+required_packet_fields:
+  - route_packet_id
+  - tenant_id
+  - project_id
+  - based_on_preflight_batch_ref
+  - created_by
+  - dry_run
+  - items
+  - queue_summary
+  - packet_no_write
+
+required_item_fields:
+  - route_id
+  - preflight_ref
+  - candidate_id
+  - target_system
+  - target_entity_type
+  - target_entity_id
+  - preflight_status
+  - reviewer_requirement
+  - sensitive_handling
+  - evidence_refs
+  - waes_gate_refs
+  - lifecycle_audit_refs
+  - route_queue
+  - route_status
+  - required_actions
+  - blocked_reasons
+  - creates_kwe_work_item
+  - no_write
+
+route_queues:
+  - human_queue
+  - committee_queue
+  - metadata_only_queue
+  - repair_queue
+  - blocked_queue
+
+route_statuses:
+  - route_ready
+  - preflight_required
+  - repair_required
+  - blocked
+
+routing_rules:
+  human_required:
+    route_queue: human_queue
+    route_status: route_ready
+  committee_required:
+    route_queue: committee_queue
+    route_status: route_ready
+  metadata_only_required:
+    route_queue: metadata_only_queue
+    route_status: route_ready
+  repair_required:
+    route_queue: repair_queue
+    route_status: repair_required
+  blocked:
+    route_queue: blocked_queue
+    route_status: blocked
+  preflight_required:
+    route_queue: repair_queue
+    route_status: preflight_required
+
+hard_boundaries:
+  dry_run_required: true
+  creates_kwe_work_item_must_be_false: true
+  route_ready_is_not_approval_completion: true
+  blocked_routes_cannot_leave_blocked_queue: true
+  committee_required_routes_cannot_be_human_queue: true
+  metadata_only_routes_cannot_include_raw_content: true
+  repair_routes_cannot_be_route_ready: true
+  route_packet_is_not_business_writeback: true
+
+no_write_guards:
+  writes_kwe_work_item: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_waes_gate_result: 0
+  writes_business_system: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

@@ -4,10 +4,10 @@ title: KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告
 description: KDS/OKF/ODF 全量治理闭环报告
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md
 tags: [controlled, evidence, kds, kds-governance, odf, okf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md
 source_path: docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md
-source_hash: 9f14f34f1fd07b794a8dbd231e1a6f4080df0b1197bf3572497b2e93a74aa303
+source_hash: 06f6406575113ca70a5ee024d94576f1b41d61c557812074af7cbb9c1226a6a7
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ KDS/OKF/ODF 全量治理闭环报告
 | --- | --- |
 | source_path | `docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md` |
-| source_hash | `9f14f34f1fd07b794a8dbd231e1a6f4080df0b1197bf3572497b2e93a74aa303` |
+| source_hash | `06f6406575113ca70a5ee024d94576f1b41d61c557812074af7cbb9c1226a6a7` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

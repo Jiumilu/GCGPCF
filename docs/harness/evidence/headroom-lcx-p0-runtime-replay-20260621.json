@@ -1,0 +1,117 @@
+{
+  "evidence_id": "HEADROOM-LCX-P0-RUNTIME-REPLAY-20260621",
+  "task_id": "GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001",
+  "date": "2026-06-21",
+  "status": "p0_runtime_replay_completed",
+  "headroom_runtime_imported": true,
+  "headroom_runtime_used": true,
+  "headroom_version": "0.26.0",
+  "python_version": "3.12.13",
+  "telemetry": "off",
+  "package_dir": "loop/context/headroom",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "runtime_smoke": {
+    "headroom_cli_help_exit_code": 0,
+    "headroom_cli_help_pass": true,
+    "script_syntax": [
+      {
+        "script": "loop/context/headroom/scripts/install-headroom.sh",
+        "exit_code": 0,
+        "pass": true
+      },
+      {
+        "script": "loop/context/headroom/scripts/start-proxy.sh",
+        "exit_code": 0,
+        "pass": true
+      },
+      {
+        "script": "loop/context/headroom/scripts/wrap-codex.sh",
+        "exit_code": 0,
+        "pass": true
+      },
+      {
+        "script": "loop/context/headroom/scripts/collect-metrics.sh",
+        "exit_code": 0,
+        "pass": true
+      },
+      {
+        "script": "loop/context/headroom/scripts/learn-preview.sh",
+        "exit_code": 0,
+        "pass": true
+      },
+      {
+        "script": "loop/context/headroom/scripts/apply-approved-memory.sh",
+        "exit_code": 0,
+        "pass": true
+      }
+    ],
+    "cost_model_exit_code": 0,
+    "cost_model_pass": true
+  },
+  "compression_replay": {
+    "input_sha256": "c3610038b634fc9cb6229062debad267a0b5527a34340f9746e573ffbbbf7776",
+    "tokens_before": 3285,
+    "tokens_after": 3285,
+    "tokens_saved": 0,
+    "saving_rate": 0.0,
+    "modified": false,
+    "strategy": "passthrough",
+    "reason": "immutable",
+    "reason_category": "immutable",
+    "transforms_applied": [],
+    "marker_gate": true,
+    "missing_markers": [],
+    "raw_text_stored": false
+  },
+  "gates": {
+    "runtime_replay_gate": true,
+    "headroom_runtime_imported": true,
+    "headroom_cli_help_pass": true,
+    "script_syntax_gate": true,
+    "cost_model_replay_gate": true,
+    "marker_gate": true,
+    "telemetry_default_off": true,
+    "raw_sensitive_context_stored": false,
+    "production_proxy_started": false,
+    "learn_apply_executed": false,
+    "external_api_write": false,
+    "kds_api_write": false,
+    "database_migration": false,
+    "permission_change": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_production_proxy": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_database_migration": true,
+    "not_permission_change": true,
+    "not_deployment": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  },
+  "next_round": "GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001"
+}

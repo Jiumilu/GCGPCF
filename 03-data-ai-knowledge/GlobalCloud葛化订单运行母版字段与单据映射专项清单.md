@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md
 source_path: 03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

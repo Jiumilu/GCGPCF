@@ -1,0 +1,46 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-BASE-KNOWLEDGE-EVIDENCE-REPAIR-D97-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/harness/evidence/base-knowledge-*",
+  "action": "repair_base_knowledge_evidence_localization_debt",
+  "before": {
+    "all_repo_findings": 280,
+    "target_file_findings": 24
+  },
+  "after": {
+    "all_repo_findings": 256,
+    "target_file_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -24,
+    "target_file_findings": -24
+  },
+  "changed_files": [
+    "docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md",
+    "docs/harness/evidence/base-knowledge-committee-review-queue-20260619.md",
+    "docs/harness/evidence/base-knowledge-committee-review-schema-20260619.md",
+    "docs/harness/evidence/base-knowledge-committee-review-template-20260619.md",
+    "docs/harness/evidence/base-knowledge-human-confirmation-queue-20260619.md",
+    "docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md",
+    "docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md",
+    "docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md"
+  ],
+  "changed_line_items": 58,
+  "remaining_target_findings": [],
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_base_knowledge_evidence_repair_d97.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

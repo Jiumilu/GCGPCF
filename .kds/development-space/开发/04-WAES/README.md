@@ -1,6 +1,6 @@
 # WAES 开发文档空间
 
-生成日期：2026-06-12
+生成日期：2026-06-22
 
 用途：KDS `开发` 空间中 `WAES` 项目的受控文档入口。
 
@@ -20,4 +20,9 @@
 | GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAES/loop-state.md | controlled |
 | GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAES/loops/README.md | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | controlled |
-| GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | controlled |
+| GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAES 门禁语义验证清单 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | controlled |
+| GPCF-DOC-8749FB9903 | Headroom LCX 架构说明 | loop/context/headroom/docs/architecture.md | controlled |
+| GPCF-DOC-BF9AA5F60D | Headroom LCX 运行模型 | loop/context/headroom/docs/operating-model.md | controlled |
+| GPCF-DOC-260DDD94E9 | Headroom LCX Rollout 计划 | loop/context/headroom/docs/rollout.md | controlled |
+| GPCF-DOC-AGENT-REACH-MODIFICATIONS-20260622 | Agent-Reach 修改登记表 | third_party/agent-reach/MODIFICATIONS.md | controlled |
+| GPCF-DOC-AGENT-REACH-OSS-REVIEW-20260622 | Agent-Reach OSS 审查 | third_party/agent-reach/OSS_REVIEW.md | controlled |

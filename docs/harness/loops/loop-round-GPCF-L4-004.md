@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-716F05C368
-title: GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake
+title: GPCF-L4-004 Brain SOP 案例检索证据接收
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-004.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-004.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-004 Brain SOP Case Retrieval Evidence Intake
+# GPCF-L4-004 Brain SOP 案例检索证据接收
 
 ## Round Output
 

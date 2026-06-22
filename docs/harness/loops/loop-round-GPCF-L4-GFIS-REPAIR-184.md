@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-514115E964
-title: GPCF-L4-GFIS-REPAIR-184 GFIS Runtime Positioning Source Doc Guard Extension
+title: GPCF-L4-GFIS-REPAIR-184 GFIS 运行层定位源文档门禁扩展
 project: GPCF
 related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-184.md
 source_path: docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-184.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF-L4-GFIS-REPAIR-184 GFIS Runtime Positioning Source Doc Guard Extension
+# GPCF-L4-GFIS-REPAIR-184 GFIS 运行层定位源文档门禁扩展
 
 ## Round Summary
 

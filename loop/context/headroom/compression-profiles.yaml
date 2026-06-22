@@ -1,0 +1,35 @@
+profiles:
+  dev_fast:
+    allowed_contexts: [development, local_debug, repeated_read]
+    output_shaper: true
+    effort_routing: true
+    verbosity: low
+    require_answer_equivalence: true
+    require_marker_gate: true
+  review_safe:
+    allowed_contexts: [review, code_audit, dry_run_evidence]
+    output_shaper: false
+    effort_routing: false
+    verbosity: normal
+    require_answer_equivalence: true
+    require_marker_gate: true
+  compliance_strict:
+    allowed_contexts: [official_acceptance, compliance_review, finance_decision, legal_contract]
+    output_shaper: false
+    effort_routing: false
+    verbosity: full
+    require_answer_equivalence: true
+    require_marker_gate: true
+    require_original_evidence_reference: true
+  log_debug:
+    allowed_contexts: [build_log, validation_log, search_output]
+    output_shaper: true
+    effort_routing: true
+    verbosity: terse
+    require_marker_preserving_adapter: true
+minimum_gates:
+  l2_dry_run_saving_rate: 0.20
+  l3_controlled_pilot_saving_rate: 0.30
+  l4_candidate_saving_rate: 0.40
+  ccr_recoverability: 1.00
+  sensitive_redaction_gate: pass

@@ -1,0 +1,42 @@
+schema_id: globalcloud.headroom_lcx.evidence.v1
+required:
+  - task_id
+  - loop_round_id
+  - project_id
+  - agent_id
+  - model_id
+  - mode
+  - content_type
+  - tokens_before
+  - tokens_after
+  - tokens_saved
+  - saving_rate
+  - ccr_enabled
+  - ccr_retrieve_count
+  - policy_profile
+  - waes_decision
+  - answer_equivalence
+  - marker_gate
+  - sensitive_redaction_gate
+  - measured_production_tokens
+  - accepted
+  - integrated
+  - production_ready
+properties:
+  mode:
+    enum: [proxy, sdk, mcp, wrap]
+  content_type:
+    enum: [tool_output, log, rag_chunk, file, conversation, metric_output, validation_output]
+  waes_decision:
+    enum: [pass, warn, block]
+  answer_equivalence:
+    enum: [pass, partial, fail, unknown]
+  marker_gate:
+    enum: [pass, fail]
+  sensitive_redaction_gate:
+    enum: [pass, blocked]
+non_claim_defaults:
+  measured_production_tokens: false
+  accepted: false
+  integrated: false
+  production_ready: false

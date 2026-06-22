@@ -1,0 +1,95 @@
+policy_id: okf.ontology
+version: v0.1
+status: draft
+owner: KDS
+updated_at: "2026-06-20"
+domains:
+  - code: private
+    label: 个人私密草稿
+    default_visibility: private
+  - code: workspace
+    label: 个人或团队整理区
+    default_visibility: restricted
+  - code: project
+    label: 项目事实中心
+    default_visibility: internal
+  - code: org
+    label: 组织级复用资产
+    default_visibility: internal
+  - code: supply_chain
+    label: 供应链协同事实
+    default_visibility: restricted
+  - code: public
+    label: 对外发布内容
+    default_visibility: public
+  - code: governance
+    label: 治理证据和审计记录
+    default_visibility: restricted
+pools:
+  - code: ORDER
+    label: 订单池
+  - code: TRANSPORT
+    label: 运力池
+  - code: CAPACITY
+    label: 产能池
+  - code: FUND
+    label: 资金池
+  - code: POLICY
+    label: 政策池
+  - code: EQUIPMENT
+    label: 装备池
+  - code: DATA
+    label: 数据池
+  - code: ENERGY
+    label: 能源池
+  - code: MATERIAL
+    label: 原料池
+  - code: TALENT
+    label: 人才池
+  - code: SCENARIO
+    label: 场景池
+object_types:
+  - source
+  - claim
+  - fact
+  - entity
+  - relation
+  - view
+  - evidence
+  - policy
+  - event
+  - fact_candidate
+  - sop_candidate
+  - writeback_candidate
+  - gap
+  - bounty
+  - contribution
+  - decision
+  - revenue
+  - quota
+  - dispute
+lifecycle:
+  - draft
+  - candidate
+  - reviewing
+  - repair_required
+  - evidence_ready
+  - verified
+  - accepted
+  - published
+  - frozen
+  - superseded
+  - archived
+trust_levels:
+  - code: T0
+    label: 系统正式记录或人工确认记录
+  - code: T1
+    label: 权威政策、标准和正式网站
+  - code: T2
+    label: 合作单位正式文档和验收资料
+  - code: T3
+    label: 会议、邮件、飞书、WIKI、沟通记录
+  - code: T4
+    label: 网络搜索、行业文章、第三方报告
+  - code: T5
+    label: LLM 分析结果或 AI 候选

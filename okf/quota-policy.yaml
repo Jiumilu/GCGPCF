@@ -1,0 +1,28 @@
+policy_id: okf.quota_policy
+version: v0.1
+status: draft
+owner: MMC
+updated_at: "2026-06-20"
+quota_types:
+  platform_quota:
+    revenue_pool_eligible: true
+  self_purchased_quota:
+    revenue_pool_eligible: false
+    default_use: owner_self_use
+  contributed_quota:
+    revenue_pool_eligible: true
+  shared_quota:
+    revenue_pool_eligible: false
+    default_use: project_or_partner_shared_service
+  reward_quota:
+    revenue_pool_eligible: false
+    default_use: incentive_or_points_exchange
+owner_types:
+  - platform
+  - company
+  - project
+  - user
+rules:
+  must_record_owner: true
+  must_record_amount_and_used_amount: true
+  self_purchased_quota_must_not_enter_unified_revenue_pool: true

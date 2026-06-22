@@ -1,0 +1,132 @@
+policy_id: okf.gfis_assistant_repair_audit_trace_read_receipt_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write read receipt previews derived from DKS-118 GFIS
+  Assistant repair audit trace previews. Read receipt previews describe what
+  the UI may show when a user views an audit trace explanation. They do not
+  create read receipts, audit trace records, event records, action receipts,
+  Harness evidence, WAES gate results, KWE work items, lifecycle changes,
+  business writes, revenue or score confirmations, quota transfers, bounty
+  settlements, or external API calls.
+
+required_fields:
+  - read_receipt_preview_id
+  - audit_trace_ref
+  - event_preview_ref
+  - action_guard_ref
+  - read_model_ref
+  - tenant_id
+  - project_id
+  - surface
+  - receipt_type
+  - receipt_status
+  - receipt_decision
+  - receipt_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - receipt_note_refs
+  - blocked_actions
+  - creates_read_receipt
+  - creates_audit_trace_record
+  - creates_event_record
+  - creates_action_receipt
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+receipt_types:
+  - display_read_receipt_preview
+  - repair_read_receipt_preview
+  - metadata_boundary_read_receipt_preview
+  - committee_read_receipt_preview
+  - freeze_read_receipt_preview
+  - blocked_write_read_receipt_preview
+
+receipt_statuses:
+  - receipt_preview_only
+  - blocked_receipt_preview
+  - metadata_receipt_preview
+  - repair_receipt_preview
+  - committee_receipt_preview
+  - freeze_receipt_preview
+
+receipt_decisions:
+  - show_receipt_preview_only
+  - show_repair_receipt_preview
+  - show_metadata_boundary_receipt_preview
+  - show_committee_receipt_preview
+  - show_freeze_receipt_preview
+  - show_blocked_write_receipt_preview
+
+blocked_actions:
+  - create_read_receipt
+  - create_audit_trace_record
+  - create_event_record
+  - create_action_receipt
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  read_receipt_preview_only: true
+  read_receipt_preview_is_not_read_receipt: true
+  read_receipt_preview_is_not_audit_trace_record: true
+  read_receipt_preview_is_not_event_record: true
+  read_receipt_preview_is_not_action_receipt: true
+  read_receipt_preview_is_not_harness_evidence: true
+  read_receipt_preview_is_not_waes_result: true
+  read_receipt_preview_is_not_kwe_work_item: true
+  read_receipt_preview_is_not_lifecycle_change: true
+  read_receipt_preview_is_not_business_writeback: true
+  creates_read_receipt_must_be_false: true
+  creates_audit_trace_record_must_be_false: true
+  creates_event_record_must_be_false: true
+  creates_action_receipt_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_read_receipt: 0
+  writes_audit_trace_record: 0
+  writes_event_record: 0
+  writes_action_receipt: 0
+  writes_harness_evidence: 0
+  writes_admission_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

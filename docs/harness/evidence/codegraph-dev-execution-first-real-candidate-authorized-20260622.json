@@ -1,0 +1,113 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-006",
+  "status": "authorized_minimal_execution_completed_with_residual_gfis_drift",
+  "generated_at": "2026-06-22",
+  "objective": "在用户给出全部授权后，执行 GFIS 首个真实业务候选的最小 CodeGraph 开发执行层闭环：前置分析、边界约束、候选实现、测试选择、验收证据与残余风险登记。",
+  "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006",
+  "authorization": {
+    "received_authorization_phrase": "全部授权",
+    "interpreted_authorization_scope": "GFIS CodeGraph first real candidate business implementation plus scoped GFIS CodeGraph sync",
+    "commit_authorized": false,
+    "push_authorized": false,
+    "deployment_authorized": false,
+    "production_write_authorized": false,
+    "external_api_write_authorized": false,
+    "real_kds_write_authorized": false,
+    "real_waes_write_authorized": false
+  },
+  "candidate_task": {
+    "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-CANDIDATE",
+    "project": "GFIS",
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "business_implementation_authorized": true,
+    "business_implementation_scope": "Add CodeGraph development execution evidence into the existing GFIS empty-directory hold register path without changing business status counters.",
+    "runtime_sop_e2e": "repair_required"
+  },
+  "codegraph_pre_change": {
+    "query": "GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence",
+    "query_result_target_files": [
+      "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "node": "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+    "affected": {
+      "changedFiles": [
+        "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+      ],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    }
+  },
+  "implementation_boundary": {
+    "files_allowed_to_change": [
+      "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.json",
+      "docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.md"
+    ],
+    "actual_changed_files": [
+      "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.json",
+      "docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.md"
+    ],
+    "files_not_to_touch": [
+      "docs/harness/sop-e2e/intake-submissions/contract-chain/**",
+      ".codegraph/**",
+      "production configuration files",
+      "real KDS token or secret files"
+    ],
+    "business_status_changed": false,
+    "post_change_status": "repair_required"
+  },
+  "codegraph_evidence_added_to_gfis": {
+    "register_json_contains_codegraph_evidence": true,
+    "register_markdown_contains_codegraph_evidence": true,
+    "validator_enforces_codegraph_evidence": true,
+    "affected_tests": [],
+    "fallback_tests": [
+      "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "python3 scripts/validate_gfis_runtime_sop_e2e.py"
+    ],
+    "fallback_reason": "codegraph affected returned affectedTests=[] and no indexed dependents, so the candidate validator and enclosing runtime SOP validator are required."
+  },
+  "validation_results": {
+    "candidate_build": "pass",
+    "candidate_validator": "pass",
+    "git_diff_check": "pass",
+    "gfis_runtime_sop_e2e": "failed_existing_kds_coverage_missing_controlled_sources",
+    "gfis_runtime_sop_e2e_failure": "FAIL: KDS coverage must not have missing controlled sources"
+  },
+  "gfis_codegraph_sync": {
+    "sync_performed": true,
+    "synced_changed_files": 3,
+    "status_after_sync": {
+      "initialized": true,
+      "version": "1.0.1",
+      "pendingChanges": {
+        "added": 1,
+        "modified": 0,
+        "removed": 0
+      },
+      "worktreeMismatch": null
+    },
+    "dot_codegraph_git_isolated": true,
+    "closure_status": "not_closed_due_residual_pending_added_1"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-DRIFT-007"
+}

@@ -1,0 +1,98 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005",
+  "status": "authorization_package_ready_not_authorized",
+  "generated_at": "2026-06-22",
+  "objective": "为 GFIS 首个真实业务候选建立 CodeGraph 开发执行授权包，明确进入业务实现前必须具备的授权字段、允许边界、禁止边界、测试和 CodeGraph sync 条件。",
+  "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004",
+  "candidate_task": {
+    "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-CANDIDATE",
+    "project": "GFIS",
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "runtime_sop_e2e": "repair_required",
+    "business_implementation_authorized": false
+  },
+  "authorization_state": {
+    "authorization_complete": false,
+    "authorized": false,
+    "authorized_by": "",
+    "authorized_at": "",
+    "required_authorization_phrase": "授权执行 GFIS CodeGraph first real candidate business implementation",
+    "received_authorization_phrase": "",
+    "missing_authorization_fields": [
+      "authorized_by",
+      "authorized_at",
+      "authorization_phrase",
+      "allowed_files",
+      "rollback_plan"
+    ]
+  },
+  "allowed_if_authorized": {
+    "repositories": [
+      "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"
+    ],
+    "files": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.json",
+      "docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.md"
+    ],
+    "commands": [
+      "codegraph query \"GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence\" --json",
+      "codegraph node \"scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py\"",
+      "codegraph affected \"scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py\" --json",
+      "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "codegraph_sync": "requires explicit authorization because GFIS currently has pendingChanges.added=1"
+  },
+  "forbidden_without_further_authorization": {
+    "paths": [
+      "docs/harness/sop-e2e/intake-submissions/contract-chain/**",
+      "production configuration files",
+      "real KDS token or secret files",
+      ".codegraph/**"
+    ],
+    "commands": [
+      "bench migrate",
+      "schema sync",
+      "production write",
+      "real KDS write",
+      "real WAES write",
+      "external API write",
+      "deployment",
+      "git commit",
+      "git push"
+    ]
+  },
+  "required_tests_if_authorized": [
+    "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_harness_gate.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate_authorization.py"
+  ],
+  "codegraph_gate_requirements": {
+    "query_required": true,
+    "node_required": true,
+    "affected_required": true,
+    "target_nodes_required": true,
+    "affected_scope_required": true,
+    "fallback_reason_required_when_affected_tests_empty": true,
+    "post_change_status_required": true
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_sync_performed": false
+  },
+  "next_round_if_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-006",
+  "next_round_if_not_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006"
+}

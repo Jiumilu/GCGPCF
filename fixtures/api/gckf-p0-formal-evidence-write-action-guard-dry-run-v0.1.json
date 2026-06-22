@@ -1,0 +1,95 @@
+{
+  "contractId": "GCKF-P0-FORMAL-EVIDENCE-WRITE-ACTION-GUARD-DRY-RUN-V0.1",
+  "description": "P0-D28 formal evidence write action guard dry-run derived from D27 approval preflight. It defines the guard around a future formal Harness evidence write action without executing the write.",
+  "guardStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceApprovalPreflight": "fixtures/api/gckf-p0-approval-formal-evidence-preflight-dry-run-v0.1.json",
+  "coveredPreflightType": "formal_harness_evidence_write_preflight",
+  "guardedAction": {
+    "id": "GCKF-P0-FORMAL-EVIDENCE-WRITE-ACTION-GUARD-001",
+    "actionType": "formal_harness_evidence_write_action_guard",
+    "sourcePreflightId": "GCKF-P0-FORMAL-EVIDENCE-PREFLIGHT-001",
+    "guardStatus": "candidate",
+    "outputType": "candidate_write_request",
+    "requiredInputs": [
+      "reviewerId",
+      "reviewedAt",
+      "evidenceRefs",
+      "sourceCandidateRecordRef",
+      "decisionRationale",
+      "targetHarnessEvidenceType",
+      "approvalPreflightRef",
+      "idempotencyKey",
+      "writeAuthorityRef",
+      "rollbackPlanRef"
+    ],
+    "guardChecks": [
+      "approval_preflight_status_is_candidate",
+      "approval_preflight_type_matches",
+      "approved_decision_outcome_only",
+      "reviewer_authority_present",
+      "idempotency_key_present",
+      "duplicate_formal_evidence_absent",
+      "rollback_plan_present",
+      "formal_write_requires_explicit_harness_governance_execution",
+      "no_business_writeback_in_same_action"
+    ],
+    "forbiddenActions": [
+      "write_formal_evidence",
+      "write_harness_evidence",
+      "write_kds",
+      "promote_lifecycle",
+      "enable_business_writeback",
+      "mark_p0_accepted",
+      "bypass_harness_governance"
+    ]
+  },
+  "candidateWriteRequest": {
+    "requestStatus": "candidate",
+    "requestType": "formal_harness_evidence_write_request_candidate",
+    "formalEvidenceWritten": false,
+    "harnessEvidenceWritten": false,
+    "requiresSeparateHarnessExecution": true,
+    "requiresHumanOrHarnessGovernanceReviewer": true,
+    "requiresIdempotencyKey": true,
+    "requiresRollbackPlan": true
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-approval-formal-evidence-preflight-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_approval_formal_evidence_preflight_dry_run.py",
+    "docs/gc-knowledge-fabric/approval-formal-evidence-preflight-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D27-001.md"
+  ],
+  "forbiddenOutputs": [
+    "formal_harness_evidence_record_written",
+    "harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "guardStatus": "candidate",
+    "actionType": "formal_harness_evidence_write_action_guard",
+    "outputType": "candidate_write_request",
+    "sourcePreflightStatus": "candidate",
+    "sourcePreflightType": "formal_harness_evidence_write_preflight",
+    "requiredInputCount": 10,
+    "guardCheckCount": 9,
+    "forbiddenActionCount": 7,
+    "requiredSourceRefCount": 4,
+    "notFinalAcceptance": true,
+    "formalEvidenceWritten": false,
+    "harnessEvidenceWritten": false,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

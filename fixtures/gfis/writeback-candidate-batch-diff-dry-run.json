@@ -1,0 +1,221 @@
+{
+  "id": "gfis-writeback-candidate-batch-diff-dks-098",
+  "description": "Local dry-run GFIS writeback candidate batch diff. This fixture does not write GFIS, GPC, ERP, MES, KDS accepted facts, WAES gate results, KWE work items, revenue, scores, or external APIs.",
+  "batch": {
+    "batchId": "gfis-wb-batch-gehua-001",
+    "tenantId": "tenant-gpcf",
+    "projectId": "project-gehua",
+    "targetSystem": "GFIS",
+    "createdBy": "gfis-document-acceptance-assistant",
+    "dryRun": true,
+    "items": [
+      {
+        "candidateId": "wb-candidate-order-status-001",
+        "targetEntityType": "order",
+        "targetEntityId": "gfis-order-001",
+        "fieldDiffs": [
+          {
+            "fieldPath": "order.preOperationStatus",
+            "currentValue": "draft",
+            "proposedValue": "evidence_ready",
+            "diffReason": "source and order evidence are present, but business owner still needs confirmation",
+            "riskLevel": "medium"
+          }
+        ],
+        "basedOnObjectRefs": ["fact-candidate-gehua-order-001"],
+        "evidenceRefs": ["evidence-order-contract-metadata-001"],
+        "poolRefs": ["order_pool", "capacity_pool"],
+        "waesGateStatus": "human_required",
+        "writebackStatus": "candidate",
+        "diffAction": "escalate_human",
+        "sensitiveHandling": "none",
+        "kweNextAction": "create_confirmation_workpack",
+        "approvedForBusinessWrite": false,
+        "targetReceiptRefs": [],
+        "noWrite": {
+          "writesGfis": 0,
+          "writesGpc": 0,
+          "writesErp": 0,
+          "writesMes": 0,
+          "writesKdsAcceptedFact": 0,
+          "writesWaesGateResult": 0,
+          "writesKweWorkItem": 0,
+          "writesRevenueOrScoreConfirmation": 0,
+          "writesExternalApi": 0
+        }
+      },
+      {
+        "candidateId": "wb-candidate-pod-metadata-001",
+        "targetEntityType": "pod_record",
+        "targetEntityId": "gfis-pod-001",
+        "fieldDiffs": [
+          {
+            "fieldPath": "pod.controlledOriginalRef",
+            "currentValue": null,
+            "proposedValue": "controlled://pod/metadata/001",
+            "diffReason": "POD original must remain controlled; only metadata reference can be proposed",
+            "riskLevel": "high"
+          }
+        ],
+        "basedOnObjectRefs": ["fact-candidate-pod-001"],
+        "evidenceRefs": ["evidence-pod-hash-001"],
+        "poolRefs": ["transport_pool", "order_pool", "data_pool"],
+        "waesGateStatus": "human_required",
+        "writebackStatus": "candidate",
+        "diffAction": "metadata_only",
+        "sensitiveHandling": "metadata_only",
+        "kweNextAction": "create_confirmation_workpack",
+        "approvedForBusinessWrite": false,
+        "targetReceiptRefs": [],
+        "noWrite": {
+          "writesGfis": 0,
+          "writesGpc": 0,
+          "writesErp": 0,
+          "writesMes": 0,
+          "writesKdsAcceptedFact": 0,
+          "writesWaesGateResult": 0,
+          "writesKweWorkItem": 0,
+          "writesRevenueOrScoreConfirmation": 0,
+          "writesExternalApi": 0
+        }
+      },
+      {
+        "candidateId": "wb-candidate-finance-controlled-001",
+        "targetEntityType": "finance_record",
+        "targetEntityId": "gfis-finance-001",
+        "fieldDiffs": [
+          {
+            "fieldPath": "finance.voucherHash",
+            "currentValue": null,
+            "proposedValue": "sha256:finance-voucher-001",
+            "diffReason": "financial voucher can only be represented by hash and controlled original reference",
+            "riskLevel": "critical"
+          }
+        ],
+        "basedOnObjectRefs": ["fact-candidate-finance-001"],
+        "evidenceRefs": ["evidence-finance-voucher-hash-001"],
+        "poolRefs": ["fund_pool", "data_pool"],
+        "waesGateStatus": "committee_required",
+        "writebackStatus": "candidate",
+        "diffAction": "escalate_committee",
+        "sensitiveHandling": "controlled_original",
+        "kweNextAction": "create_committee_review",
+        "approvedForBusinessWrite": false,
+        "targetReceiptRefs": [],
+        "noWrite": {
+          "writesGfis": 0,
+          "writesGpc": 0,
+          "writesErp": 0,
+          "writesMes": 0,
+          "writesKdsAcceptedFact": 0,
+          "writesWaesGateResult": 0,
+          "writesKweWorkItem": 0,
+          "writesRevenueOrScoreConfirmation": 0,
+          "writesExternalApi": 0
+        }
+      },
+      {
+        "candidateId": "wb-candidate-quality-dispute-001",
+        "targetEntityType": "quality_record",
+        "targetEntityId": "gfis-quality-001",
+        "fieldDiffs": [
+          {
+            "fieldPath": "quality.acceptanceStatus",
+            "currentValue": "pending",
+            "proposedValue": "accepted",
+            "diffReason": "quality dispute is unresolved and cannot be accepted by candidate diff",
+            "riskLevel": "critical"
+          }
+        ],
+        "basedOnObjectRefs": ["fact-candidate-quality-001"],
+        "evidenceRefs": [],
+        "poolRefs": ["data_pool", "scenario_pool", "order_pool"],
+        "waesGateStatus": "blocked",
+        "writebackStatus": "rejected",
+        "diffAction": "block_writeback",
+        "sensitiveHandling": "controlled_original",
+        "kweNextAction": "freeze_or_block",
+        "approvedForBusinessWrite": false,
+        "targetReceiptRefs": [],
+        "noWrite": {
+          "writesGfis": 0,
+          "writesGpc": 0,
+          "writesErp": 0,
+          "writesMes": 0,
+          "writesKdsAcceptedFact": 0,
+          "writesWaesGateResult": 0,
+          "writesKweWorkItem": 0,
+          "writesRevenueOrScoreConfirmation": 0,
+          "writesExternalApi": 0
+        }
+      },
+      {
+        "candidateId": "wb-candidate-oem-boundary-001",
+        "targetEntityType": "factory",
+        "targetEntityId": "gfis-factory-gehua-001",
+        "fieldDiffs": [
+          {
+            "fieldPath": "operation.oemResponsibilityBoundary",
+            "currentValue": "unclassified",
+            "proposedValue": "target_factory_plus_oem承接方责任待委员会确认",
+            "diffReason": "OEM transition boundary impacts production and delivery responsibility",
+            "riskLevel": "high"
+          }
+        ],
+        "basedOnObjectRefs": ["sop-candidate-oem-transition-001"],
+        "evidenceRefs": ["evidence-oem-transition-001"],
+        "poolRefs": ["capacity_pool", "order_pool", "scenario_pool"],
+        "waesGateStatus": "committee_required",
+        "writebackStatus": "candidate",
+        "diffAction": "escalate_committee",
+        "sensitiveHandling": "none",
+        "kweNextAction": "create_committee_review",
+        "approvedForBusinessWrite": false,
+        "targetReceiptRefs": [],
+        "noWrite": {
+          "writesGfis": 0,
+          "writesGpc": 0,
+          "writesErp": 0,
+          "writesMes": 0,
+          "writesKdsAcceptedFact": 0,
+          "writesWaesGateResult": 0,
+          "writesKweWorkItem": 0,
+          "writesRevenueOrScoreConfirmation": 0,
+          "writesExternalApi": 0
+        }
+      }
+    ],
+    "batchNoWrite": {
+      "writesGfis": 0,
+      "writesGpc": 0,
+      "writesErp": 0,
+      "writesMes": 0,
+      "writesKdsAcceptedFact": 0,
+      "writesWaesGateResult": 0,
+      "writesKweWorkItem": 0,
+      "writesRevenueOrScoreConfirmation": 0,
+      "writesExternalApi": 0
+    }
+  },
+  "expected": {
+    "itemCount": 5,
+    "fieldDiffCount": 5,
+    "metadataOnlyItems": 1,
+    "controlledOriginalItems": 2,
+    "humanEscalations": 1,
+    "committeeEscalations": 2,
+    "blockedItems": 1,
+    "approvedForBusinessWrite": 0,
+    "targetReceipts": 0,
+    "writtenBackStatuses": 0,
+    "writesGfis": 0,
+    "writesGpc": 0,
+    "writesErp": 0,
+    "writesMes": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesWaesGateResult": 0,
+    "writesKweWorkItem": 0,
+    "writesRevenueOrScoreConfirmation": 0,
+    "writesExternalApi": 0
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "contractId": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-REPAIR-REQUEST-INTAKE-COMPLETENESS-PRECHECK-PREVIEW-DRY-RUN-V0.1",
+  "repairRequestIntakeCompletenessPrecheckStatus": "candidate_preview",
+  "executionMode": "dry_run_no_write",
+  "notFinalRepairRequestCompletenessPrecheck": true,
+  "sourceRepairRequestIntakePreview": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-precheck-repair-request-intake-preview-dry-run-v0.1.json",
+  "repairRequestIntakeCompletenessPrecheck": {
+    "id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-REPAIR-REQUEST-INTAKE-COMPLETENESS-PRECHECK-PREVIEW-001",
+    "previewType": "formal_evidence_execution_repair_request_intake_completeness_precheck_preview",
+    "sourceRepairRequestIntakePreviewId": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-COMMITTEE-ACCEPTANCE-ACKNOWLEDGEMENT-NOTIFICATION-RECEIPT-AGGREGATION-PRECHECK-REPAIR-REQUEST-INTAKE-PREVIEW-001",
+    "previewStatus": "candidate_preview",
+    "executionStatus": "not_executed",
+    "completenessPrecheckPreviewExecutionStatus": "not_executed",
+    "completenessPrecheckExecutionStatus": "not_executed",
+    "repairRequestCreationStatus": "not_executed",
+    "repairIntakeExecutionStatus": "not_executed",
+    "aggregationCompletenessPrecheckExecutionStatus": "not_executed",
+    "committeeCaseExecutionStatus": "not_executed",
+    "committeeDecisionExecutionStatus": "not_executed",
+    "confirmationExecutionStatus": "not_executed",
+    "formalWriteExecutionStatus": "not_executed",
+    "executionMode": "dry_run_no_write",
+    "dryRunOnly": true,
+    "precheckSections": [
+      "source_repair_intake_lineage",
+      "candidate_required_material_checklist",
+      "candidate_missing_material_matrix",
+      "candidate_submitter_identity_boundary",
+      "candidate_acl_boundary_snapshot",
+      "candidate_precheck_hold_conditions",
+      "candidate_precheck_blocker_codes",
+      "waes_negative_gate_snapshot",
+      "harness_no_write_guard",
+      "no_write_attestation"
+    ],
+    "forbiddenActions": [
+      "execute_completeness_precheck_preview",
+      "execute_completeness_precheck",
+      "create_repair_request",
+      "execute_repair_intake",
+      "execute_aggregation_completeness_precheck",
+      "open_committee_case",
+      "execute_committee_decision",
+      "write_harness_evidence",
+      "write_formal_evidence",
+      "write_kds",
+      "write_business_system",
+      "write_revenue_distribution",
+      "write_contribution_score",
+      "promote_lifecycle",
+      "mark_p0_accepted",
+      "override_waes_gate"
+    ]
+  },
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-precheck-repair-request-intake-preview-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_precheck_repair_request_intake_preview_dry_run.py",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-precheck-repair-request-intake-preview-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D74-001.md"
+  ]
+}

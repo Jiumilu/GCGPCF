@@ -1,0 +1,148 @@
+policy_id: okf.gfis_assistant_repair_notification_snooze_queue_approval_escalation_acknowledgement_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write approval escalation acknowledgement previews derived
+  from DKS-130 GFIS Assistant repair notification snooze queue approval SLA
+  escalation previews. Acknowledgement previews describe candidate
+  acknowledgers, acknowledgement boundaries, risk, and next-step suggestions
+  only. They do not create acknowledgements, read receipts, reminders,
+  approver assignments, approval requests, approval decisions, governance
+  records, lifecycle changes, business writes, settlements, or external API
+  calls.
+
+required_fields:
+  - acknowledgement_preview_id
+  - escalation_preview_ref
+  - sla_preview_ref
+  - tenant_id
+  - project_id
+  - surface
+  - ack_type
+  - ack_status
+  - ack_decision
+  - ack_scope
+  - candidate_acknowledger_refs
+  - ack_boundary_refs
+  - source_escalation_preview_refs
+  - source_sla_preview_refs
+  - ack_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - ack_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_acknowledgement
+  - creates_read_receipt
+  - assigns_acknowledger
+  - creates_reminder
+  - creates_escalation_task
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+ack_types:
+  - watch_ack_preview
+  - urgent_ack_preview
+  - governance_ack_preview
+  - external_blocked_ack_preview
+  - committee_ack_preview
+  - freeze_ack_preview
+
+ack_statuses:
+  - ack_preview_only
+  - ack_at_risk_preview
+  - ack_metadata_boundary
+  - ack_external_blocked
+  - ack_committee_required
+  - ack_freeze_required
+
+ack_decisions:
+  - show_watch_ack_preview
+  - show_urgent_ack_preview
+  - show_governance_ack_preview
+  - show_external_blocked_ack_preview
+  - show_committee_ack_preview
+  - show_freeze_ack_preview
+
+ack_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+blocked_actions:
+  - create_acknowledgement
+  - create_read_receipt
+  - assign_acknowledger
+  - create_reminder
+  - create_escalation_task
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  ack_preview_only: true
+  ack_preview_is_not_acknowledgement: true
+  ack_preview_is_not_read_receipt: true
+  ack_preview_is_not_acknowledger_assignment: true
+  ack_preview_is_not_reminder: true
+  ack_preview_is_not_escalation_task: true
+  ack_preview_is_not_approval_request: true
+  ack_preview_is_not_approval_decision: true
+  ack_preview_is_not_harness_evidence: true
+  ack_preview_is_not_waes_result: true
+  ack_preview_is_not_kwe_work_item: true
+  ack_preview_is_not_lifecycle_change: true
+  ack_preview_is_not_business_writeback: true
+  creates_acknowledgement_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  assigns_acknowledger_must_be_false: true
+  creates_reminder_must_be_false: true
+  creates_escalation_task_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_acknowledgement: 0
+  writes_read_receipt: 0
+  writes_acknowledger_assignment: 0
+  writes_reminder: 0
+  writes_escalation_task: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

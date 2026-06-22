@@ -1,11 +1,13 @@
 # GPC 开发文档空间
 
-生成日期：2026-06-12
+生成日期：2026-06-22
 
 用途：KDS `开发` 空间中 `GPC` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
+| GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | controlled |
+| GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | controlled |
 | GPCF-DOC-56BC03A70C | GlobalCloud 绿色供应链体系 P0 最小闭环界面实施清单 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | controlled |
 | GPCF-DOC-BD1C1FE02E | GlobalCloud 绿色供应链体系 P0 最小闭环界面验收矩阵 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面验收矩阵.md | controlled |
 | GPCF-DOC-5D5E27312C | GlobalCloud 绿色供应链体系对话模式与操作模式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md | controlled |
@@ -23,15 +25,21 @@
 | GPCF-DOC-5371CCBDCB | GlobalCloud 绿色供应链体系首批统一组件接入样板清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件接入样板清单.md | controlled |
 | GPCF-DOC-0C4A339FD2 | GlobalCloud 绿色供应链体系首批统一组件清单 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件清单.md | controlled |
 | GPCF-DOC-DFFAFE5D69 | GlobalCloud绿色供应链体系首批统一组件验收标准 | 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件验收标准.md | controlled |
-| GPCF-DOC-3D439D777F | GlobalCloud 绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | controlled |
+| GPCF-DOC-3D439D777F | GlobalCloud绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | controlled |
 | GPCF-DOC-6008375BA7 | GlobalCloud绿色供应链体系高风险模块界面收口任务分解表 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md | controlled |
 | GPCF-DOC-505DFF5C49 | GlobalCloud 绿色供应链体系高风险模块界面收口计划 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md | controlled |
+| GPCF-DOC-7C1E59A4D2 | GlobalCloud项目群UI设计开发治理与评估统一规范 | 04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md | controlled |
+| GPCF-DOC-4E2A91B7C6 | GlobalCloud项目群界面工程整体实施方案 | 04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md | controlled |
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | controlled |
-| GPCF-DOC-37DD68363F | AGENTS.md | AGENTS.md | controlled |
+| GPCF-DOC-4B8F20D6A1 | WAES专业工作台母框架升级方案 | 04-ui-delivery/WAES专业工作台母框架升级方案.md | controlled |
+| GPCF-DOC-91A6D0F4C2 | WAES专业工作台母框架差距评估 | 04-ui-delivery/WAES专业工作台母框架差距评估.md | controlled |
 | GPCF-DOC-B637BE22F8 | GPC | docs/harness/GPC/README.md | controlled |
 | GPCF-DOC-61C2D40981 | evidence | docs/harness/GPC/evidence/README.md | controlled |
 | GPCF-DOC-6AA1BB56F0 | Evidence Index — GPC | docs/harness/GPC/evidence/evidence-index.md | controlled |
 | GPCF-DOC-556B3EE58F | loop-state | docs/harness/GPC/loop-state.md | controlled |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | controlled |
 | GPCF-DOC-C02896A291 | loop-round-GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | controlled |
-| GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | controlled |
+| GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | controlled |
+| GPCF-DOC-6C2D5BB513 | headroom | loop/context/headroom/README.md | controlled |
+| GPCF-DOC-A1FFDD1AE2 | docs | loop/context/headroom/docs/README.md | controlled |
+| GPCF-DOC-AGENT-REACH-SECURITY-REVIEW-20260622 | Agent-Reach 安全审查 | third_party/agent-reach/SECURITY_REVIEW.md | controlled |

@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-06-22T01:58:00.083454+00:00",
+  "status": "pass",
+  "requests": [
+    {
+      "path": "docs/harness/evidence/okf-v01-summary-approval-request-OKF-SUM-20260620-001.md",
+      "status": "pending_review",
+      "reason": "awaiting_human_confirmation"
+    }
+  ],
+  "boundary": {
+    "does_not_approve_summaries": true,
+    "does_not_modify_okf_concepts": true,
+    "source_of_record": "KDS / Git controlled documents"
+  }
+}

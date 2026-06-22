@@ -1,0 +1,91 @@
+{
+  "id": "gckf-p0-shared-types-api-contract-alignment-v0.1",
+  "description": "GC-Knowledge Fabric P0-D8 shared types and API contract alignment matrix. It checks local file coverage only and does not start servers, run real APIs, mutate KDS, or write business systems.",
+  "version": "v0.1",
+  "apiMatrixRef": "fixtures/api/gckf-p0-api-skeleton-input-matrix-v0.1.json",
+  "groups": [
+    {
+      "group": "kds_v2",
+      "requiredSharedTypes": [
+        "packages/shared/src/knowledge/object.ts",
+        "packages/shared/src/knowledge/source.ts",
+        "packages/shared/src/knowledge/evidence.ts",
+        "packages/shared/src/knowledge/fact-candidate.ts",
+        "packages/shared/src/knowledge/sop-candidate.ts",
+        "packages/shared/src/knowledge/writeback-candidate.ts",
+        "packages/shared/src/knowledge/pool.ts",
+        "packages/shared/src/knowledge/rag-admission.ts",
+        "packages/shared/src/knowledge/waes-gate.ts"
+      ],
+      "requiredApiContracts": ["packages/api/src/kds/v2/contracts.ts"],
+      "requiredRoutes": ["packages/api/src/kds/v2/routes.ts"],
+      "requiredValidators": ["scripts/kds/validate_kds_v2_endpoint_no_write_smoke.py"],
+      "expectedEndpointCount": 11
+    },
+    {
+      "group": "waes",
+      "requiredSharedTypes": ["packages/shared/src/knowledge/waes-gate.ts"],
+      "requiredApiContracts": ["packages/api/src/waes/contracts.ts"],
+      "requiredRoutes": ["packages/api/src/waes/routes.ts"],
+      "requiredValidators": ["scripts/waes/validate_waes_endpoint_no_write_smoke.py"],
+      "expectedEndpointCount": 7
+    },
+    {
+      "group": "kwe",
+      "requiredSharedTypes": [
+        "packages/shared/src/knowledge/gap.ts",
+        "packages/shared/src/knowledge/bounty.ts",
+        "packages/shared/src/knowledge/writeback-candidate.ts",
+        "packages/shared/src/knowledge/waes-gate.ts"
+      ],
+      "requiredApiContracts": ["packages/api/src/kwe/contracts.ts"],
+      "requiredRoutes": ["packages/api/src/kwe/routes.ts"],
+      "requiredValidators": ["scripts/kwe/validate_kwe_endpoint_no_write_smoke.py"],
+      "expectedEndpointCount": 10
+    },
+    {
+      "group": "gfis_assistant",
+      "requiredSharedTypes": [
+        "packages/shared/src/knowledge/fact-candidate.ts",
+        "packages/shared/src/knowledge/gap.ts",
+        "packages/shared/src/knowledge/rag-admission.ts",
+        "packages/shared/src/knowledge/waes-gate.ts",
+        "packages/shared/src/knowledge/writeback-candidate.ts"
+      ],
+      "requiredApiContracts": ["packages/api/src/gfis/contracts.ts"],
+      "requiredRoutes": ["packages/api/src/gfis/routes.ts"],
+      "requiredValidators": ["scripts/gfis/validate_gfis_endpoint_no_write_smoke.py"],
+      "expectedEndpointCount": 4
+    },
+    {
+      "group": "governance_loop",
+      "requiredSharedTypes": [
+        "packages/shared/src/knowledge/bounty.ts",
+        "packages/shared/src/knowledge/contribution.ts",
+        "packages/shared/src/knowledge/evidence.ts",
+        "packages/shared/src/knowledge/loop.ts",
+        "packages/shared/src/knowledge/quota.ts",
+        "packages/shared/src/knowledge/revenue.ts"
+      ],
+      "requiredApiContracts": ["packages/api/src/governance/contracts.ts"],
+      "requiredRoutes": ["packages/api/src/governance/routes.ts"],
+      "requiredValidators": ["scripts/governance/validate_governance_endpoint_no_write_smoke.py"],
+      "expectedEndpointCount": 8
+    }
+  ],
+  "expectedSummary": {
+    "groupCount": 5,
+    "endpointCount": 40,
+    "apiMatrixGroupCount": 5,
+    "apiMatrixEndpointCount": 40,
+    "validatorCount": 5,
+    "contractFileCount": 5,
+    "routeFileCount": 5,
+    "forbiddenMutationTotal": 0,
+    "startsServer": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

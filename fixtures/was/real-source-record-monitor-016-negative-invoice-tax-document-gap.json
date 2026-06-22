@@ -1,0 +1,25 @@
+{
+  "submitted_real_candidate_files": 0,
+  "contract_terms_gaps": 0,
+  "payment_settlement_gaps": 0,
+  "invoice_tax_document_gaps": 1,
+  "logistics_document_gaps": 0,
+  "commercial_document_consistency_gaps": 0,
+  "delivery_finance_reconciliation_gaps": 0,
+  "accepted_for_commercial_logistics_profile": 1,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "commercial_logistics_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 1,
+    "accepted": true,
+    "integrated": false,
+    "production_ready": false
+  }
+}

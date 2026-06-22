@@ -1,0 +1,134 @@
+policy_id: okf.gfis_assistant_repair_action_guard_event_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run event previews derived from DKS-116 GFIS Assistant
+  repair read-model action guards. Event previews describe what a display-only
+  or blocked button interaction would show locally. They do not create event
+  records, action receipts, read receipts, admission records, review queues,
+  KWE work items, confirmation records, decision records, WAES gate results,
+  evidence records, lifecycle changes, business writes, revenue or score
+  confirmations, or external API calls.
+
+required_fields:
+  - event_preview_id
+  - action_guard_ref
+  - read_model_ref
+  - tenant_id
+  - project_id
+  - surface
+  - preview_type
+  - preview_status
+  - preview_decision
+  - preview_summary_ref
+  - reason_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_event_record
+  - creates_action_receipt
+  - creates_read_receipt
+  - creates_admission_record
+  - creates_review_queue_item
+  - creates_kwe_work_item
+  - creates_confirmation_record
+  - creates_decision_record
+  - creates_waes_gate_result
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+preview_types:
+  - display_event_preview
+  - repair_prompt_event_preview
+  - metadata_boundary_event_preview
+  - committee_note_event_preview
+  - freeze_note_event_preview
+  - blocked_write_event_preview
+
+preview_statuses:
+  - preview_only
+  - blocked_preview
+  - metadata_only_preview
+  - repair_required_preview
+  - committee_preview
+  - freeze_preview
+
+preview_decisions:
+  - show_preview_only
+  - show_repair_preview
+  - show_metadata_boundary_preview
+  - show_committee_preview
+  - show_freeze_preview
+  - show_blocked_write_preview
+
+blocked_actions:
+  - create_event_record
+  - create_action_receipt
+  - create_read_receipt
+  - create_admission_record
+  - create_review_queue_item
+  - create_kwe_work_item
+  - create_confirmation_record
+  - create_decision_record
+  - create_waes_gate_result
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  event_preview_only: true
+  event_preview_is_not_event_record: true
+  event_preview_is_not_action_receipt: true
+  event_preview_is_not_read_receipt: true
+  event_preview_is_not_admission_record: true
+  event_preview_is_not_review_queue_item: true
+  event_preview_is_not_kwe_work_item: true
+  event_preview_is_not_confirmation: true
+  event_preview_is_not_decision_record: true
+  event_preview_is_not_waes_result: true
+  event_preview_is_not_business_writeback: true
+  creates_event_record_must_be_false: true
+  creates_action_receipt_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  creates_admission_record_must_be_false: true
+  creates_review_queue_item_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_confirmation_record_must_be_false: true
+  creates_decision_record_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_event_record: 0
+  writes_action_receipt: 0
+  writes_read_receipt: 0
+  writes_admission_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

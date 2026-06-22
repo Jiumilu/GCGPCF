@@ -4,10 +4,10 @@ title: ODF Phase 2 扩大样本验证闭环报告
 description: ODF Phase 2 闭环报告
 resource: file:///Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/odf-phase2-closure-report-20260617.md
 tags: [controlled, evidence, kds, odf, okf-derived]
-timestamp: 2026-06-12T00:00:00Z
+timestamp: 2026-06-22T00:00:00Z
 kds_path: 开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md
 source_path: docs/harness/evidence/odf-phase2-closure-report-20260617.md
-source_hash: dd8f55585083d49b6113bce1371a17ee133bf3c69b2f839e76de47447830b905
+source_hash: 2abce8add058163388904b01849d75e0941053c157088b38ea743a92afa247fd
 source_of_record: kds
 derivation_policy: metadata_only_no_body_copy
 ---
@@ -22,7 +22,7 @@ ODF Phase 2 闭环报告
 | --- | --- |
 | source_path | `docs/harness/evidence/odf-phase2-closure-report-20260617.md` |
 | kds_path | `开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md` |
-| source_hash | `dd8f55585083d49b6113bce1371a17ee133bf3c69b2f839e76de47447830b905` |
+| source_hash | `2abce8add058163388904b01849d75e0941053c157088b38ea743a92afa247fd` |
 | source_of_record | `KDS / Git controlled document` |
 | derivation_policy | `metadata_only_no_body_copy` |
 

@@ -1,0 +1,89 @@
+{
+  "evidence_id": "AGENT-REACH-L2-POC-20260620",
+  "date": "2026-06-20",
+  "status": "partial",
+  "mode": "L2_isolated_poc",
+  "installation_scope": "/tmp/agent-reach-poc-venv",
+  "repo_source": "/tmp/agent-reach-readonly",
+  "agent_reach_version": "Agent Reach v1.5.0",
+  "python_version": "Python 3.12.13",
+  "installation_performed": true,
+  "installation_persisted_to_project": false,
+  "credentials_written": false,
+  "cookies_configured": false,
+  "mcp_configuration_changed": false,
+  "production_write_count": 0,
+  "kds_canonical_write_count": 0,
+  "external_platform_write_count": 0,
+  "credential_leakage_count": 0,
+  "doctor_ok_channels": 4,
+  "doctor_total_channels": 13,
+  "doctor_available_channel_rate": 0.3077,
+  "doctor_ok_channel_names": ["github", "bilibili", "rss", "web"],
+  "doctor_blocked_or_warn_channel_names": [
+    "twitter",
+    "youtube",
+    "reddit",
+    "xiaohongshu",
+    "linkedin",
+    "xiaoyuzhou",
+    "v2ex",
+    "xueqiu",
+    "exa_search"
+  ],
+  "benchmark_case_count": 4,
+  "benchmark_success_count": 2,
+  "search_success_rate": 0.5,
+  "citation_validity_rate": 1.0,
+  "source_provenance_rate": 1.0,
+  "duplicate_rate": 0.0,
+  "latency_p50_seconds": 0.753,
+  "latency_p95_seconds": 1.337,
+  "fallback_success_rate": null,
+  "cases": [
+    {
+      "name": "read_agent_reach_github_page_via_jina",
+      "channel": "web",
+      "success": false,
+      "latency_seconds": 0.666,
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "source_provenance": "https://github.com/Panniantong/Agent-Reach via https://r.jina.ai/",
+      "rag_admission": "repair_required"
+    },
+    {
+      "name": "github_repo_view_agent_reach",
+      "channel": "github",
+      "success": true,
+      "latency_seconds": 1.337,
+      "source_provenance": "gh repo view Panniantong/Agent-Reach",
+      "rag_admission": "limited",
+      "result_summary": "name=Agent-Reach license=MIT stargazerCount=35216 updatedAt=2026-06-20T05:04:07Z"
+    },
+    {
+      "name": "rss_python_peps_feed",
+      "channel": "rss",
+      "success": true,
+      "latency_seconds": 0.753,
+      "source_provenance": "https://peps.python.org/peps.rss",
+      "rag_admission": "limited",
+      "result_summary": "PEP 835: Shorthand syntax for Annotated type metadata"
+    },
+    {
+      "name": "semantic_search_exa_doctor_gate",
+      "channel": "exa_search",
+      "success": false,
+      "latency_seconds": 0.0,
+      "error": "mcporter + Exa MCP not configured; MCP or global npm changes require separate authorization",
+      "source_provenance": "agent-reach doctor exa_search",
+      "rag_admission": "repair_required"
+    }
+  ],
+  "non_claims": [
+    "does not prove Agent-Reach production integration",
+    "does not configure cookies or login-state platforms",
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not upgrade GPCF accepted/integrated/production_ready status"
+  ],
+  "next_gate": "semantic_search_requires_mcporter_authorization"
+}

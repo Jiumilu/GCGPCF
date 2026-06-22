@@ -1,0 +1,27 @@
+{
+  "fixture_id": "real-source-record-monitor-036-positive",
+  "fixture_only": true,
+  "submitted_real_candidate_files": 0,
+  "iot_sensor_calibration_record_gaps": 0,
+  "machine_data_capture_record_gaps": 0,
+  "digital_traceability_event_log_gaps": 0,
+  "evidence_hash_manifest_gaps": 0,
+  "model_or_algorithm_version_record_gaps": 0,
+  "data_retention_policy_record_gaps": 0,
+  "accepted_for_digital_traceability_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "digital_traceability_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

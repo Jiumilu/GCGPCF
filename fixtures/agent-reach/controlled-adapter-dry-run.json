@@ -1,0 +1,40 @@
+{
+  "fixture_id": "agent-reach-controlled-adapter-dry-run-20260622",
+  "round": "GPCF-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001",
+  "mode": "dry_run_only",
+  "query": "GlobalCloud Agent-Reach integration controlled dry run",
+  "requested_channels": [
+    "web",
+    "rss",
+    "bilibili",
+    "exa_search"
+  ],
+  "candidate_results": [
+    {
+      "candidate_id": "fixture-web-001",
+      "channel": "web",
+      "title": "Agent-Reach source lock evidence",
+      "source_url": "fixture://agent-reach/source-lock",
+      "snippet": "P0 locked upstream source, version, license, entrypoints, and non-claims.",
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    },
+    {
+      "candidate_id": "fixture-rss-001",
+      "channel": "rss",
+      "title": "Agent-Reach isolated install evidence",
+      "source_url": "fixture://agent-reach/isolated-install",
+      "snippet": "P1 proved isolated install with Python 3.12.13 and no credential write.",
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    }
+  ],
+  "expected_blocks": [
+    "credential_required_channel",
+    "production_write",
+    "kds_canonical_write",
+    "gfis_source_of_record_write",
+    "global_mcp_config_write",
+    "live_external_search_without_authorization"
+  ]
+}

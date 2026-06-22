@@ -1,0 +1,60 @@
+{
+  "id": "gckf-p0-handler-stub-negative-smoke-v0.1",
+  "description": "GC-Knowledge Fabric P0-D15 handler stub negative smoke. It validates failure and guard paths for unknown handlers, missing service methods, read-only boundary preservation, candidate-only no-write preservation, and accepted lifecycle blocking without starting servers, connecting databases, or writing business systems.",
+  "version": "v0.1",
+  "handlerStubPath": "packages/api/src/handler-stub.ts",
+  "handlerMapPath": "packages/api/src/handler-map.ts",
+  "requestResponseFixture": "fixtures/api/gckf-p0-handler-request-response-dry-run-v0.1.json",
+  "typescriptProject": "packages/api/tsconfig.json",
+  "tempOutDir": "/tmp/gckf-api-negative-smoke",
+  "compiledStubPath": "/tmp/gckf-api-negative-smoke/api/src/handler-stub.js",
+  "compiledHandlerMapPath": "/tmp/gckf-api-negative-smoke/api/src/handler-map.js",
+  "negativeCases": [
+    {
+      "id": "unknown-handler-blocked",
+      "type": "throws",
+      "handler": "__unknown_handler__",
+      "expectedMessage": "Unknown handler stub"
+    },
+    {
+      "id": "missing-service-method-blocked",
+      "type": "throws_after_mapping_injection",
+      "handler": "__missing_service_method_probe__",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "__missing_service_method__",
+      "writeBoundary": "read_only",
+      "expectedMessage": "Missing service method"
+    },
+    {
+      "id": "read-only-boundary-not-candidate",
+      "type": "boundary_guard",
+      "sourceCaseId": "kds_v2:listDomains",
+      "forbiddenWriteBoundary": "candidate_request"
+    },
+    {
+      "id": "candidate-request-remains-no-write",
+      "type": "candidate_no_write_guard",
+      "sourceCaseId": "kds_v2:createFactCandidate",
+      "requiredWriteBoundary": "candidate_request"
+    },
+    {
+      "id": "accepted-lifecycle-remains-blocked",
+      "type": "accepted_lifecycle_guard",
+      "sourceCaseId": "kds_v2:createWritebackCandidate"
+    }
+  ],
+  "expectedSummary": {
+    "negativeCaseCount": 5,
+    "throwsCount": 2,
+    "guardCount": 3,
+    "compiled": true,
+    "invoked": true,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

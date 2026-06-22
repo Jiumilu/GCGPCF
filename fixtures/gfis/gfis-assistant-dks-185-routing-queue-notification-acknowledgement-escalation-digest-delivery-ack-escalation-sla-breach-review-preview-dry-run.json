@@ -1,0 +1,691 @@
+{
+  "breachReviewPreviews": [
+    {
+      "breachReviewPreviewId": "gfis-dks-185-breach-review-team-brain-001",
+      "slaPreviewRefs": [
+        "gfis-dks-184-sla-team-brain-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-dks-183-delivery-ack-escalation-team-brain-001"
+      ],
+      "deliveryAcknowledgementPreviewRefs": [
+        "gfis-dks-182-delivery-ack-team-brain-001"
+      ],
+      "deliveryPreviewRefs": [
+        "gfis-dks-181-delivery-team-brain-001"
+      ],
+      "digestPreviewRefs": [
+        "gfis-dks-180-digest-team-brain-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "breachReviewType": "team_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewStatus": "breach_review_preview_only",
+      "breachReviewDecision": "show_team_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewScope": "team_internal",
+      "breachSeverity": "low_candidate",
+      "overdueMinutes": 0,
+      "candidateReviewerRefs": [
+        "dks-185-delivery-ack-escalation-reviewer-team-brain-candidate"
+      ],
+      "evidenceGapRefs": [],
+      "breachReasonRefs": [
+        "overdue_ack_candidate"
+      ],
+      "blockedReviewCount": 0,
+      "boundaryRefs": [
+        "dks-185-breach-review-boundary-team"
+      ],
+      "sourceSlaPreviewRefs": [
+        "gfis-dks-184-sla-team-brain-001"
+      ],
+      "breachSummaryRef": "summary-dks-185-breach-review-team-brain-001",
+      "lineageHintRefs": [
+        "lineage-dks-185-team-brain",
+        "lineage-dks-184-team-brain",
+        "lineage-dks-183-team-brain"
+      ],
+      "reasonRefs": [
+        "reason-dks-185-breach-review-team-brain"
+      ],
+      "breachNoteRefs": [
+        "note-dks-185-breach-review-team-brain-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-185-breach-review-team-brain"
+      ],
+      "blockedActions": [
+        "create_breach_record",
+        "create_dispute",
+        "create_committee_case",
+        "create_freeze_request",
+        "create_reminder",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsBreachRecord": false,
+      "createsDispute": false,
+      "createsCommitteeCase": false,
+      "createsFreezeRequest": false,
+      "createsReminder": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesBreachRecord": 0,
+        "writesDispute": 0,
+        "writesCommitteeCase": 0,
+        "writesFreezeRequest": 0,
+        "writesReminder": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "breachReviewPreviewId": "gfis-dks-185-breach-review-project-pkc-001",
+      "slaPreviewRefs": [
+        "gfis-dks-184-sla-project-pkc-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-dks-183-delivery-ack-escalation-project-pkc-001"
+      ],
+      "deliveryAcknowledgementPreviewRefs": [
+        "gfis-dks-182-delivery-ack-project-pkc-001"
+      ],
+      "deliveryPreviewRefs": [
+        "gfis-dks-181-delivery-project-pkc-001"
+      ],
+      "digestPreviewRefs": [
+        "gfis-dks-180-digest-project-pkc-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "pkc",
+      "breachReviewType": "project_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewStatus": "breach_review_evidence_gap",
+      "breachReviewDecision": "show_project_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewScope": "project_internal",
+      "breachSeverity": "medium_candidate",
+      "overdueMinutes": 0,
+      "candidateReviewerRefs": [
+        "dks-185-delivery-ack-escalation-reviewer-project-pkc-candidate"
+      ],
+      "evidenceGapRefs": [
+        "evidence-gap-dks-185-project-pkc-sla-at-risk"
+      ],
+      "breachReasonRefs": [
+        "missing_evidence_candidate"
+      ],
+      "blockedReviewCount": 0,
+      "boundaryRefs": [
+        "dks-185-breach-review-boundary-project"
+      ],
+      "sourceSlaPreviewRefs": [
+        "gfis-dks-184-sla-project-pkc-001"
+      ],
+      "breachSummaryRef": "summary-dks-185-breach-review-project-pkc-001",
+      "lineageHintRefs": [
+        "lineage-dks-185-project-pkc",
+        "lineage-dks-184-project-pkc",
+        "lineage-dks-183-project-pkc"
+      ],
+      "reasonRefs": [
+        "reason-dks-185-breach-review-project-pkc"
+      ],
+      "breachNoteRefs": [
+        "note-dks-185-breach-review-project-pkc-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-185-breach-review-project-pkc"
+      ],
+      "blockedActions": [
+        "create_breach_record",
+        "create_dispute",
+        "create_committee_case",
+        "create_freeze_request",
+        "create_reminder",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsBreachRecord": false,
+      "createsDispute": false,
+      "createsCommitteeCase": false,
+      "createsFreezeRequest": false,
+      "createsReminder": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesBreachRecord": 0,
+        "writesDispute": 0,
+        "writesCommitteeCase": 0,
+        "writesFreezeRequest": 0,
+        "writesReminder": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "breachReviewPreviewId": "gfis-dks-185-breach-review-governance-gfis-001",
+      "slaPreviewRefs": [
+        "gfis-dks-184-sla-governance-gfis-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-dks-183-delivery-ack-escalation-governance-gfis-001"
+      ],
+      "deliveryAcknowledgementPreviewRefs": [
+        "gfis-dks-182-delivery-ack-governance-gfis-001"
+      ],
+      "deliveryPreviewRefs": [
+        "gfis-dks-181-delivery-governance-gfis-001"
+      ],
+      "digestPreviewRefs": [
+        "gfis-dks-180-digest-governance-gfis-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "breachReviewType": "governance_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewStatus": "breach_review_metadata_boundary",
+      "breachReviewDecision": "show_governance_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewScope": "governance_review",
+      "breachSeverity": "metadata_only_candidate",
+      "overdueMinutes": 0,
+      "candidateReviewerRefs": [
+        "dks-185-delivery-ack-escalation-reviewer-governance-gfis-candidate"
+      ],
+      "evidenceGapRefs": [],
+      "breachReasonRefs": [
+        "metadata_boundary_candidate"
+      ],
+      "blockedReviewCount": 0,
+      "boundaryRefs": [
+        "dks-185-breach-review-boundary-governance"
+      ],
+      "sourceSlaPreviewRefs": [
+        "gfis-dks-184-sla-governance-gfis-001"
+      ],
+      "breachSummaryRef": "summary-dks-185-breach-review-governance-gfis-001",
+      "lineageHintRefs": [
+        "lineage-dks-185-governance-gfis",
+        "lineage-dks-184-governance-gfis",
+        "lineage-dks-183-governance-gfis"
+      ],
+      "reasonRefs": [
+        "reason-dks-185-breach-review-governance-gfis"
+      ],
+      "breachNoteRefs": [
+        "note-dks-185-breach-review-governance-gfis-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-185-breach-review-governance-gfis"
+      ],
+      "blockedActions": [
+        "create_breach_record",
+        "create_dispute",
+        "create_committee_case",
+        "create_freeze_request",
+        "create_reminder",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsBreachRecord": false,
+      "createsDispute": false,
+      "createsCommitteeCase": false,
+      "createsFreezeRequest": false,
+      "createsReminder": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesBreachRecord": 0,
+        "writesDispute": 0,
+        "writesCommitteeCase": 0,
+        "writesFreezeRequest": 0,
+        "writesReminder": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "breachReviewPreviewId": "gfis-dks-185-breach-review-external-gfis-001",
+      "slaPreviewRefs": [
+        "gfis-dks-184-sla-external-gfis-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-dks-183-delivery-ack-escalation-external-gfis-001"
+      ],
+      "deliveryAcknowledgementPreviewRefs": [
+        "gfis-dks-182-delivery-ack-external-gfis-001"
+      ],
+      "deliveryPreviewRefs": [
+        "gfis-dks-181-delivery-external-gfis-001"
+      ],
+      "digestPreviewRefs": [
+        "gfis-dks-180-digest-external-gfis-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "breachReviewType": "external_blocked_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewStatus": "breach_review_external_blocked",
+      "breachReviewDecision": "show_external_blocked_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewScope": "external_blocked",
+      "breachSeverity": "external_blocked_candidate",
+      "overdueMinutes": 15,
+      "candidateReviewerRefs": [
+        "dks-185-delivery-ack-escalation-reviewer-external-gfis-candidate"
+      ],
+      "evidenceGapRefs": [
+        "evidence-gap-dks-185-external-blocked"
+      ],
+      "breachReasonRefs": [
+        "external_share_blocked_candidate"
+      ],
+      "blockedReviewCount": 1,
+      "boundaryRefs": [
+        "dks-185-breach-review-boundary-external"
+      ],
+      "sourceSlaPreviewRefs": [
+        "gfis-dks-184-sla-external-gfis-001"
+      ],
+      "breachSummaryRef": "summary-dks-185-breach-review-external-gfis-001",
+      "lineageHintRefs": [
+        "lineage-dks-185-external-gfis",
+        "lineage-dks-184-external-gfis",
+        "lineage-dks-183-external-gfis"
+      ],
+      "reasonRefs": [
+        "reason-dks-185-breach-review-external-gfis"
+      ],
+      "breachNoteRefs": [
+        "note-dks-185-breach-review-external-gfis-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-185-breach-review-external-gfis"
+      ],
+      "blockedActions": [
+        "create_breach_record",
+        "create_dispute",
+        "create_committee_case",
+        "create_freeze_request",
+        "create_reminder",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsBreachRecord": false,
+      "createsDispute": false,
+      "createsCommitteeCase": false,
+      "createsFreezeRequest": false,
+      "createsReminder": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesBreachRecord": 0,
+        "writesDispute": 0,
+        "writesCommitteeCase": 0,
+        "writesFreezeRequest": 0,
+        "writesReminder": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "breachReviewPreviewId": "gfis-dks-185-breach-review-committee-brain-001",
+      "slaPreviewRefs": [
+        "gfis-dks-184-sla-committee-brain-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-dks-183-delivery-ack-escalation-committee-brain-001"
+      ],
+      "deliveryAcknowledgementPreviewRefs": [
+        "gfis-dks-182-delivery-ack-committee-brain-001"
+      ],
+      "deliveryPreviewRefs": [
+        "gfis-dks-181-delivery-committee-brain-001"
+      ],
+      "digestPreviewRefs": [
+        "gfis-dks-180-digest-committee-brain-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "brain",
+      "breachReviewType": "committee_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewStatus": "breach_review_committee_required",
+      "breachReviewDecision": "show_committee_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewScope": "committee_review",
+      "breachSeverity": "committee_required_candidate",
+      "overdueMinutes": 20,
+      "candidateReviewerRefs": [
+        "dks-185-delivery-ack-escalation-reviewer-committee-brain-candidate"
+      ],
+      "evidenceGapRefs": [
+        "evidence-gap-dks-185-committee-review"
+      ],
+      "breachReasonRefs": [
+        "committee_review_candidate"
+      ],
+      "blockedReviewCount": 1,
+      "boundaryRefs": [
+        "dks-185-breach-review-boundary-committee"
+      ],
+      "sourceSlaPreviewRefs": [
+        "gfis-dks-184-sla-committee-brain-001"
+      ],
+      "breachSummaryRef": "summary-dks-185-breach-review-committee-brain-001",
+      "lineageHintRefs": [
+        "lineage-dks-185-committee-brain",
+        "lineage-dks-184-committee-brain",
+        "lineage-dks-183-committee-brain"
+      ],
+      "reasonRefs": [
+        "reason-dks-185-breach-review-committee-brain"
+      ],
+      "breachNoteRefs": [
+        "note-dks-185-breach-review-committee-brain-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-185-breach-review-committee-brain"
+      ],
+      "blockedActions": [
+        "create_breach_record",
+        "create_dispute",
+        "create_committee_case",
+        "create_freeze_request",
+        "create_reminder",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsBreachRecord": false,
+      "createsDispute": false,
+      "createsCommitteeCase": false,
+      "createsFreezeRequest": false,
+      "createsReminder": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesBreachRecord": 0,
+        "writesDispute": 0,
+        "writesCommitteeCase": 0,
+        "writesFreezeRequest": 0,
+        "writesReminder": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    },
+    {
+      "breachReviewPreviewId": "gfis-dks-185-breach-review-freeze-gfis-001",
+      "slaPreviewRefs": [
+        "gfis-dks-184-sla-freeze-gfis-001"
+      ],
+      "escalationPreviewRefs": [
+        "gfis-dks-183-delivery-ack-escalation-freeze-gfis-001"
+      ],
+      "deliveryAcknowledgementPreviewRefs": [
+        "gfis-dks-182-delivery-ack-freeze-gfis-001"
+      ],
+      "deliveryPreviewRefs": [
+        "gfis-dks-181-delivery-freeze-gfis-001"
+      ],
+      "digestPreviewRefs": [
+        "gfis-dks-180-digest-freeze-gfis-001"
+      ],
+      "tenantId": "tenant-gpcf-dry-run",
+      "projectId": "project-gfis-repair",
+      "surface": "gfis_assistant",
+      "breachReviewType": "freeze_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewStatus": "breach_review_freeze_required",
+      "breachReviewDecision": "show_freeze_digest_delivery_ack_escalation_sla_breach_review_preview",
+      "breachReviewScope": "freeze_review",
+      "breachSeverity": "freeze_required_candidate",
+      "overdueMinutes": 60,
+      "candidateReviewerRefs": [
+        "dks-185-delivery-ack-escalation-reviewer-freeze-gfis-candidate"
+      ],
+      "evidenceGapRefs": [
+        "evidence-gap-dks-185-freeze-review"
+      ],
+      "breachReasonRefs": [
+        "freeze_review_candidate"
+      ],
+      "blockedReviewCount": 1,
+      "boundaryRefs": [
+        "dks-185-breach-review-boundary-freeze"
+      ],
+      "sourceSlaPreviewRefs": [
+        "gfis-dks-184-sla-freeze-gfis-001"
+      ],
+      "breachSummaryRef": "summary-dks-185-breach-review-freeze-gfis-001",
+      "lineageHintRefs": [
+        "lineage-dks-185-freeze-gfis",
+        "lineage-dks-184-freeze-gfis",
+        "lineage-dks-183-freeze-gfis"
+      ],
+      "reasonRefs": [
+        "reason-dks-185-breach-review-freeze-gfis"
+      ],
+      "breachNoteRefs": [
+        "note-dks-185-breach-review-freeze-gfis-no-write"
+      ],
+      "nextStepCandidateRefs": [
+        "next-step-dks-185-breach-review-freeze-gfis"
+      ],
+      "blockedActions": [
+        "create_breach_record",
+        "create_dispute",
+        "create_committee_case",
+        "create_freeze_request",
+        "create_reminder",
+        "create_approval_request",
+        "create_approval_decision",
+        "create_harness_evidence",
+        "create_waes_gate_result",
+        "create_kwe_work_item",
+        "persist_evidence",
+        "approve_business_write",
+        "promote_lifecycle",
+        "complete_committee_decision"
+      ],
+      "createsBreachRecord": false,
+      "createsDispute": false,
+      "createsCommitteeCase": false,
+      "createsFreezeRequest": false,
+      "createsReminder": false,
+      "createsApprovalRequest": false,
+      "createsApprovalDecision": false,
+      "createsHarnessEvidence": false,
+      "createsWaesGateResult": false,
+      "createsKweWorkItem": false,
+      "persistsEvidence": false,
+      "approvesBusinessWrite": false,
+      "promotesLifecycle": false,
+      "completesCommitteeDecision": false,
+      "noWrite": {
+        "writesGfis": 0,
+        "writesGpc": 0,
+        "writesErp": 0,
+        "writesMes": 0,
+        "writesBreachRecord": 0,
+        "writesDispute": 0,
+        "writesCommitteeCase": 0,
+        "writesFreezeRequest": 0,
+        "writesReminder": 0,
+        "writesApprovalRequest": 0,
+        "writesApprovalDecision": 0,
+        "writesWaesGateResult": 0,
+        "writesKweWorkItem": 0,
+        "writesHarnessEvidence": 0,
+        "writesKdsLifecycle": 0,
+        "writesKdsFact": 0,
+        "writesKdsAcceptedFact": 0,
+        "writesExternalApi": 0
+      }
+    }
+  ],
+  "expected": {
+    "breachReviewPreviewCount": 6,
+    "brainSurface": 2,
+    "pkcSurface": 1,
+    "gfisAssistantSurface": 3,
+    "totalReviewerCount": 6,
+    "totalEvidenceGapCount": 4,
+    "totalBreachReasonCount": 6,
+    "totalBlockedReviewCount": 3,
+    "totalOverdueMinutes": 95,
+    "createsBreachRecords": 0,
+    "createsDisputes": 0,
+    "createsCommitteeCases": 0,
+    "createsFreezeRequests": 0,
+    "createsReminders": 0,
+    "createsApprovalRequests": 0,
+    "createsApprovalDecisions": 0,
+    "createsHarnessEvidence": 0,
+    "createsWaesGateResults": 0,
+    "createsKweWorkItems": 0,
+    "persistsEvidence": 0,
+    "approvesBusinessWrite": 0,
+    "promotesLifecycle": 0,
+    "completesCommitteeDecision": 0,
+    "writesGfis": 0,
+    "writesGpc": 0,
+    "writesErp": 0,
+    "writesMes": 0,
+    "writesBreachRecord": 0,
+    "writesDispute": 0,
+    "writesCommitteeCase": 0,
+    "writesFreezeRequest": 0,
+    "writesReminder": 0,
+    "writesApprovalRequest": 0,
+    "writesApprovalDecision": 0,
+    "writesWaesGateResult": 0,
+    "writesKweWorkItem": 0,
+    "writesHarnessEvidence": 0,
+    "writesKdsLifecycle": 0,
+    "writesKdsFact": 0,
+    "writesKdsAcceptedFact": 0,
+    "writesExternalApi": 0
+  }
+}

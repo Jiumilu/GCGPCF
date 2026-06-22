@@ -1,0 +1,140 @@
+policy_id: okf.gfis_assistant_dks_223_routing_queue_notification_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: '2026-06-21'
+purpose: Define local no-write resolution option approval packet previews derived from DKS-222 resolution option previews. These previews show candidate approvers, approval route, required evidence, approval reasons, blocked approval count, boundary references, and next-step suggestions only. They do not create approval packets, approval requests, approval decisions, committee decisions, freeze actions, governance records, lifecycle changes, business writes, settlements, or external API calls.
+required_fields:
+- approval_packet_preview_id
+- resolution_option_preview_refs
+- breach_review_preview_refs
+- sla_preview_refs
+- tenant_id
+- project_id
+- surface
+- approval_packet_type
+- approval_packet_status
+- approval_packet_decision
+- approval_packet_scope
+- approval_route
+- candidate_approver_refs
+- required_evidence_refs
+- approval_reason_refs
+- blocked_approval_count
+- boundary_refs
+- source_resolution_option_preview_refs
+- approval_summary_ref
+- lineage_hint_refs
+- reason_refs
+- approval_note_refs
+- next_step_candidate_refs
+- blocked_actions
+- creates_approval_packet
+- creates_approval_request
+- creates_approval_decision
+- creates_committee_decision
+- creates_freeze_action
+- creates_harness_evidence
+- creates_waes_gate_result
+- creates_kwe_work_item
+- persists_evidence
+- approves_business_write
+- promotes_lifecycle
+- completes_committee_decision
+- no_write
+approval_packet_types:
+- team_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- project_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- governance_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- external_blocked_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- committee_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- freeze_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+approval_packet_statuses:
+- approval_packet_preview_only
+- approval_packet_evidence_required
+- approval_packet_metadata_boundary
+- approval_packet_external_blocked
+- approval_packet_committee_required
+- approval_packet_freeze_required
+approval_packet_decisions:
+- show_team_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- show_project_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- show_governance_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- show_external_blocked_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- show_committee_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+- show_freeze_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview
+approval_packet_scopes:
+- team_internal
+- project_internal
+- governance_review
+- external_blocked
+- committee_review
+- freeze_review
+approval_routes:
+- team_lead_candidate
+- project_owner_candidate
+- governance_reviewer_candidate
+- external_share_blocked_candidate
+- committee_candidate
+- freeze_reviewer_candidate
+approval_reasons:
+- resolution_option_candidate
+- evidence_required_candidate
+- metadata_boundary_candidate
+- external_share_blocked_candidate
+- committee_review_candidate
+- freeze_review_candidate
+blocked_actions:
+- create_approval_packet
+- create_approval_request
+- create_approval_decision
+- create_committee_decision
+- create_freeze_action
+- create_harness_evidence
+- create_waes_gate_result
+- create_kwe_work_item
+- persist_evidence
+- approve_business_write
+- promote_lifecycle
+- complete_committee_decision
+hard_boundaries:
+  approval_packet_preview_only: true
+  approval_packet_is_not_approval_packet: true
+  approval_packet_is_not_approval_request: true
+  approval_packet_is_not_approval_decision: true
+  approval_packet_is_not_committee_decision: true
+  approval_packet_is_not_freeze_action: true
+  approval_packet_is_not_harness_evidence: true
+  approval_packet_is_not_waes_result: true
+  approval_packet_is_not_kwe_work_item: true
+  approval_packet_is_not_lifecycle_change: true
+  approval_packet_is_not_business_writeback: true
+  creates_approval_packet_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_committee_decision_must_be_false: true
+  creates_freeze_action_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_approval_packet: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_committee_decision: 0
+  writes_freeze_action: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

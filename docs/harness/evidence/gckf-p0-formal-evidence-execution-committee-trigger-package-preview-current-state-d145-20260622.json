@@ -1,0 +1,52 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-COMMITTEE-TRIGGER-PACKAGE-PREVIEW-CURRENT-STATE-D145-20260622",
+  "round_id": "GPCF-GCKF-P0-D145-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D144 current-state formal evidence execution escalation digest human confirmation package preview 基础上刷新 formal evidence execution committee trigger package preview，使旧 D46 委员会触发包预览分支显式吸收 D124-D144 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-committee-trigger-package-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-committee-trigger-package-preview-current-state-d145-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-escalation-digest-human-confirmation-package-preview-current-state-d144-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-execution-escalation-digest-human-confirmation-package-preview-current-state-d144-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_committee_trigger_package_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d46_formal_evidence_execution_committee_trigger_package_preview": "gckf_p0_formal_evidence_execution_committee_trigger_package_preview_dry_run=pass status=candidate_preview execution_mode=dry_run_no_write opens_committee_case=0 executes_committee_decision=0 executes_human_confirmation=0 releases_freeze=0 executes_unfreeze=0 writes_kds=0 writes_business_system=0 writes_harness_evidence=0 writes_formal_evidence=0 writes_revenue_distribution=0 writes_contribution_score=0 no_write=covered",
+    "d144_current_state_human_confirmation_package_preview": "gckf_p0_formal_evidence_execution_escalation_digest_human_confirmation_package_preview_current_state_d144=pass human_confirmation_package_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed confirmation_execution_status=not_executed committee_execution_status=not_executed reviewer_roles=8 confirmation_checks=33 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d143_current_state_escalation_digest_preview": "gckf_p0_formal_evidence_execution_signer_receipt_escalation_digest_preview_current_state_d143=pass escalation_digest_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed receipt_execution_status=not_executed resend_execution_status=not_executed escalation_execution_status=not_executed digest_audience_roles=8 digest_checks=33 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "package_scope": {
+    "committee_routing_roles": 8,
+    "committee_case_types": 5,
+    "package_sections": 12,
+    "trigger_checks": 35,
+    "required_trigger_refs": 24,
+    "blocking_conditions": 31,
+    "forbidden_actions": 28,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_human_confirmation_package_preview_status": "candidate_preview_with_hold",
+    "source_human_confirmation_execution_status": "not_executed",
+    "source_committee_execution_status": "not_executed",
+    "source_resend_execution_status": "not_executed",
+    "source_escalation_execution_status": "not_executed",
+    "source_approval_execution_status": "not_executed",
+    "source_retry_execution_status": "not_executed",
+    "source_unfreeze_execution_status": "not_executed",
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution committee trigger package preview 不立案、不执行委员会裁决、不执行人工确认、不释放冻结、不执行 unfreeze、resend、escalation、approval、retry，也不写 committee case、committee result、confirmation result、freeze release、revenue distribution、contribution score 或 formal evidence。",
+    "本 current-state formal evidence execution committee trigger package preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution committee trigger package preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "下一轮应优先刷新 formal evidence execution committee review input preview 的 current-state 分支，继续保持 no-write。"
+}

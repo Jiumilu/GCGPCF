@@ -1,0 +1,430 @@
+{
+  "evidence_id": "HEADROOM-PROJECT-APPLICATION-COVERAGE-MATRIX-20260621",
+  "date": "2026-06-21",
+  "status": "project_application_coverage_defined",
+  "source_evidence": [
+    "docs/harness/evidence/headroom-project-group-application-router-20260621.json",
+    "docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.json",
+    "docs/harness/evidence/headroom-production-token-authorization-action-queue-20260621.json"
+  ],
+  "coverage": [
+    {
+      "project": "GPCF",
+      "scenario": "loop_control_board_summary",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "l2_input_tokens_before": 7301,
+      "l2_input_tokens_after": 249,
+      "l2_saving_rate": 0.9659,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "KDS",
+      "scenario": "kds_loop_state_summary",
+      "source_path": "docs/harness/KDS/loop-state.md",
+      "l2_input_tokens_before": 440,
+      "l2_input_tokens_after": 98,
+      "l2_saving_rate": 0.777273,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Brain",
+      "scenario": "brain_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "l2_input_tokens_before": 52930,
+      "l2_input_tokens_after": 295,
+      "l2_saving_rate": 0.994427,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "WAES",
+      "scenario": "waes_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "l2_input_tokens_before": 52930,
+      "l2_input_tokens_after": 279,
+      "l2_saving_rate": 0.99473,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "GFIS",
+      "scenario": "gfis_loop_state_summary",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "l2_input_tokens_before": 52536,
+      "l2_input_tokens_after": 73,
+      "l2_saving_rate": 0.998611,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "GPC",
+      "scenario": "gpc_status_matrix_summary",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "l2_input_tokens_before": 52930,
+      "l2_input_tokens_after": 167,
+      "l2_saving_rate": 0.996846,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "PVAOS",
+      "scenario": "pvaos_loop_state_summary",
+      "source_path": "docs/harness/PVAOS/loop-state.md",
+      "l2_input_tokens_before": 290,
+      "l2_input_tokens_after": 77,
+      "l2_saving_rate": 0.734615,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Edge",
+      "scenario": "edge_access_security_summary",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+      "l2_input_tokens_before": 1152,
+      "l2_input_tokens_after": 116,
+      "l2_saving_rate": 0.899306,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "PKC",
+      "scenario": "pkc_loop_state_summary",
+      "source_path": "docs/harness/PKC/loop-state.md",
+      "l2_input_tokens_before": 442,
+      "l2_input_tokens_after": 140,
+      "l2_saving_rate": 0.683258,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XiaoC",
+      "scenario": "xiaoc_loop_state_summary",
+      "source_path": "docs/harness/XiaoC/loop-state.md",
+      "l2_input_tokens_before": 414,
+      "l2_input_tokens_after": 127,
+      "l2_saving_rate": 0.69333,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XGD",
+      "scenario": "xgd_loop_state_summary",
+      "source_path": "docs/harness/XGD/loop-state.md",
+      "l2_input_tokens_before": 443,
+      "l2_input_tokens_after": 135,
+      "l2_saving_rate": 0.69532,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "XiaoG",
+      "scenario": "xiaog_loop_state_summary",
+      "source_path": "docs/harness/XiaoG/loop-state.md",
+      "l2_input_tokens_before": 413,
+      "l2_input_tokens_after": 133,
+      "l2_saving_rate": 0.678029,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "MMC",
+      "scenario": "mmc_loop_state_summary",
+      "source_path": "docs/harness/MMC/loop-state.md",
+      "l2_input_tokens_before": 422,
+      "l2_input_tokens_after": 134,
+      "l2_saving_rate": 0.682464,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "Studio",
+      "scenario": "studio_codegraph_boundary_summary",
+      "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+      "l2_input_tokens_before": 1632,
+      "l2_input_tokens_after": 213,
+      "l2_saving_rate": 0.869509,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    },
+    {
+      "project": "WAS",
+      "scenario": "was_admission_summary",
+      "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+      "l2_input_tokens_before": 484,
+      "l2_input_tokens_after": 123,
+      "l2_saving_rate": 0.745947,
+      "l2_admission_gate": true,
+      "dry_run_route_count": 3,
+      "blocked_route_count": 3,
+      "allowed_dry_run_routes": [
+        "headroom_metric_json_array",
+        "headroom_cost_measurement_output",
+        "marker_preserving_log_search_adapter_output"
+      ],
+      "blocked_routes": [
+        "project_group_evidence_json",
+        "loop_validation_log",
+        "rg_marker_search_output"
+      ],
+      "allow_production_application": false,
+      "production_admission_gate": false,
+      "requires_authorized_window": true,
+      "requires_sanitized_production_token_ledger": true,
+      "raw_text_stored": false
+    }
+  ],
+  "gate": {
+    "project_count": 15,
+    "projects_with_l2_measurement": 15,
+    "projects_with_dry_run_routes": 15,
+    "projects_with_production_routes": 0,
+    "all_projects_have_l2_measurement": true,
+    "all_projects_have_dry_run_routes": true,
+    "all_projects_block_production": true,
+    "dry_run_application_gate": true,
+    "authorization_action_queue_gate": false,
+    "project_application_coverage_gate": true,
+    "production_admission_gate": false
+  },
+  "decision": {
+    "next_allowed_action": "repeat dry-run route coverage on subsequent LOOP cost evidence",
+    "next_blocked_action": "production rollout without authorized sanitized token ledger",
+    "production_admission_gate": false
+  },
+  "non_claims": {
+    "no_production_proxy": true,
+    "no_real_external_api_write": true,
+    "no_kds_write": true,
+    "no_status_upgrade": true,
+    "no_sensitive_raw_text_stored": true,
+    "no_cross_project_memory": true,
+    "no_accepted_integrated_or_production_ready": true
+  },
+  "measured_production_tokens": false
+}

@@ -1,0 +1,82 @@
+policy_id: loop-record-closure-policy
+version: v0.1
+description: LOOP record schema and next-action closure gate for GC-Knowledge Fabric.
+minimum_loop_record_fields:
+  - loop_id
+  - tenant_id
+  - project_id
+  - round_id
+  - goal
+  - input_refs
+  - new_object_refs
+  - new_gap_refs
+  - candidate_fact_refs
+  - candidate_sop_refs
+  - waes_result_refs
+  - confirmation_refs
+  - committee_refs
+  - risk_refs
+  - validation_refs
+  - next_actions
+  - closure_gate
+  - created_by
+  - created_at
+minimum_next_action_fields:
+  - action_id
+  - title
+  - priority
+  - owner_type
+  - owner_id
+  - required_evidence_refs
+  - required_gate_refs
+  - blocked_by_refs
+  - status
+  - close_condition
+next_action_statuses:
+  - open
+  - in_progress
+  - blocked
+  - evidence_ready
+  - closed
+closure_gate_statuses:
+  - open
+  - blocked
+  - repair_required
+  - evidence_ready
+  - closed_for_round
+closure_rules:
+  - id: validation_refs_required
+    required: true
+    description: Every required validation must have evidence or explicit not_applicable reason.
+  - id: p0_p1_owner_required
+    required: true
+    description: P0/P1 next actions cannot remain open or blocked without owner.
+  - id: blocked_action_has_blocker_ref
+    required: true
+    description: Blocked next actions must have blocked_by_refs and close_condition.
+  - id: human_committee_not_auto_confirmed
+    required: true
+    description: LOOP can record human_required or committee_required but cannot confirm them.
+  - id: no_auto_business_completion
+    required: true
+    description: LOOP cannot create accepted, integrated, production-ready, formal writeback, formal revenue, score confirmation, quota transfer, bounty settlement, or committee decision completion.
+hard_boundaries:
+  loop_can_mark_accepted: false
+  loop_can_mark_integrated: false
+  loop_can_mark_production_readiness: false
+  loop_can_write_business_system: false
+  loop_can_confirm_revenue_or_score: false
+  loop_can_transfer_quota: false
+  loop_can_settle_bounty: false
+  loop_can_complete_committee_decision: false
+  loop_can_write_external_api: false
+  closed_for_round_is_business_completion: false
+no_write_assertions:
+  writes_accepted: 0
+  writes_integrated: 0
+  writes_business_system: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_committee_decision_completion: 0
+  writes_external_api: 0

@@ -1,0 +1,75 @@
+{
+  "evidence_id": "AGENT-REACH-L3-CANDIDATE-PIPELINE-20260621",
+  "date": "2026-06-21",
+  "status": "pass",
+  "mode": "l3_candidate_pipeline_definition",
+  "execution_mode": "read_only_replay_plan",
+  "external_search_invoked": false,
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-zero-config-repair-20260620.json",
+    "docs/harness/evidence/agent-reach-exa-local-pilot-20260620.json",
+    "docs/harness/evidence/agent-reach-exa-fixed-benchmark-20260620.json",
+    "docs/harness/evidence/agent-reach-candidate-search-review-20260620.json"
+  ],
+  "pipeline": {
+    "id": "GPCF-AGENT-REACH-L3-CANDIDATE-PIPELINE-001",
+    "scope": "project_group_candidate_search",
+    "stages": [
+      "P0 Source Intake",
+      "P1 Normalize",
+      "P2 Score",
+      "P3 Admit",
+      "P4 Review"
+    ],
+    "output": "waes_kds_review_queue_item",
+    "admission": "limited_candidate_only"
+  },
+  "quality_targets": {
+    "source_provenance_rate": 1.0,
+    "minimum_search_success_rate": 0.8,
+    "maximum_duplicate_rate": 0.2,
+    "latency_p50_seconds_max": 10,
+    "latency_p95_seconds_max": 30,
+    "credential_leakage_count": 0,
+    "production_write_count": 0,
+    "kds_canonical_write_count": 0
+  },
+  "current_verified_metrics": {
+    "exa_fixed_query_count": 5,
+    "exa_fixed_success_count": 5,
+    "exa_fixed_query_success_rate": 1.0,
+    "source_provenance_rate": 1.0,
+    "latency_p50_seconds": 3.889,
+    "latency_p95_seconds": 4.633,
+    "rollback_verified": true
+  },
+  "admission_decision": {
+    "waes_review_status": "ready_for_review",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false
+  },
+  "continuous_improvement": {
+    "replay_required": true,
+    "trend_metrics": [
+      "search_success_rate",
+      "source_provenance_rate",
+      "duplicate_rate",
+      "latency_p50_seconds",
+      "latency_p95_seconds",
+      "review_acceptance_rate"
+    ],
+    "next_required_artifact": "candidate_search_replay_ledger"
+  },
+  "non_claims": [
+    "does not prove production integration",
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not upgrade GPCF accepted/integrated/production_ready status",
+    "does not turn Agent-Reach results into strong RAG citations",
+    "does not authorize cookie or login-state platforms"
+  ],
+  "next_gate": "candidate_search_replay_ledger"
+}

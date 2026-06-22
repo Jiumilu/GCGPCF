@@ -1,0 +1,1173 @@
+{
+  "id": "gckf-p0-handler-request-response-dry-run-v0.1",
+  "description": "P0-D12 generated request/response dry-run examples for all route handlers. Generated from route skeletons only.",
+  "version": "v0.1",
+  "generatedBy": "scripts/api/generate_gckf_p0_handler_request_response_fixture.py",
+  "handlerMapRef": "fixtures/api/gckf-p0-handler-service-preflight-v0.1.json",
+  "cases": [
+    {
+      "id": "kds_v2:listDomains",
+      "group": "kds_v2",
+      "method": "GET",
+      "path": "/api/v2/domains",
+      "handler": "listDomains",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "listDomains",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-listDomains",
+        "dryRun": true,
+        "query": "dry-run listDomains"
+      },
+      "response": {
+        "ok": true,
+        "handler": "listDomains",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:listPools",
+      "group": "kds_v2",
+      "method": "GET",
+      "path": "/api/v2/pools",
+      "handler": "listPools",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "listPools",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-listPools",
+        "dryRun": true,
+        "query": "dry-run listPools"
+      },
+      "response": {
+        "ok": true,
+        "handler": "listPools",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:listProjects",
+      "group": "kds_v2",
+      "method": "GET",
+      "path": "/api/v2/projects",
+      "handler": "listProjects",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "listProjects",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-listProjects",
+        "dryRun": true,
+        "query": "dry-run listProjects"
+      },
+      "response": {
+        "ok": true,
+        "handler": "listProjects",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:searchKnowledge",
+      "group": "kds_v2",
+      "method": "POST",
+      "path": "/api/v2/search",
+      "handler": "searchKnowledge",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "searchKnowledge",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-searchKnowledge",
+        "dryRun": true,
+        "query": "dry-run searchKnowledge"
+      },
+      "response": {
+        "ok": true,
+        "handler": "searchKnowledge",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:getKnowledgeObject",
+      "group": "kds_v2",
+      "method": "GET",
+      "path": "/api/v2/objects/{uri}",
+      "handler": "getKnowledgeObject",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "getKnowledgeObject",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getKnowledgeObject",
+        "dryRun": true,
+        "query": "dry-run getKnowledgeObject"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getKnowledgeObject",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:importSourceCandidate",
+      "group": "kds_v2",
+      "method": "POST",
+      "path": "/api/v2/sources/import",
+      "handler": "importSourceCandidate",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "importSourceCandidate",
+      "writeBoundary": "candidate_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-importSourceCandidate",
+        "dryRun": true,
+        "candidate": {
+          "id": "CAND-importSourceCandidate",
+          "lifecycle": "candidate"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "importSourceCandidate",
+        "writeBoundary": "candidate_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:createFactCandidate",
+      "group": "kds_v2",
+      "method": "POST",
+      "path": "/api/v2/fact-candidates",
+      "handler": "createFactCandidate",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "createFactCandidate",
+      "writeBoundary": "candidate_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createFactCandidate",
+        "dryRun": true,
+        "candidate": {
+          "id": "CAND-createFactCandidate",
+          "lifecycle": "candidate"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createFactCandidate",
+        "writeBoundary": "candidate_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:createSopCandidate",
+      "group": "kds_v2",
+      "method": "POST",
+      "path": "/api/v2/sop-candidates",
+      "handler": "createSopCandidate",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "createSopCandidate",
+      "writeBoundary": "candidate_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createSopCandidate",
+        "dryRun": true,
+        "candidate": {
+          "id": "CAND-createSopCandidate",
+          "lifecycle": "candidate"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createSopCandidate",
+        "writeBoundary": "candidate_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:createWritebackCandidate",
+      "group": "kds_v2",
+      "method": "POST",
+      "path": "/api/v2/writeback-candidates",
+      "handler": "createWritebackCandidate",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "createWritebackCandidate",
+      "writeBoundary": "candidate_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createWritebackCandidate",
+        "dryRun": true,
+        "candidate": {
+          "id": "CAND-createWritebackCandidate",
+          "lifecycle": "candidate"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createWritebackCandidate",
+        "writeBoundary": "candidate_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:getKnowledgeGraph",
+      "group": "kds_v2",
+      "method": "GET",
+      "path": "/api/v2/graph",
+      "handler": "getKnowledgeGraph",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "getKnowledgeGraph",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getKnowledgeGraph",
+        "dryRun": true,
+        "query": "dry-run getKnowledgeGraph"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getKnowledgeGraph",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kds_v2:getGovernanceEvidence",
+      "group": "kds_v2",
+      "method": "GET",
+      "path": "/api/v2/governance/evidence",
+      "handler": "getGovernanceEvidence",
+      "serviceName": "kdsV2Service",
+      "serviceMethod": "getGovernanceEvidence",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getGovernanceEvidence",
+        "dryRun": true,
+        "query": "dry-run getGovernanceEvidence"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getGovernanceEvidence",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:runWaesGates",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/gates/run",
+      "handler": "runWaesGates",
+      "serviceName": "waesService",
+      "serviceMethod": "runWaesGates",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-runWaesGates",
+        "dryRun": true,
+        "objectId": "OBJ-runWaesGates",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "runWaesGates",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:checkRagAdmission",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/rag-admission/check",
+      "handler": "checkRagAdmission",
+      "serviceName": "waesService",
+      "serviceMethod": "checkRagAdmission",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-checkRagAdmission",
+        "dryRun": true,
+        "objectId": "OBJ-checkRagAdmission",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "checkRagAdmission",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:checkWriteback",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/writeback/check",
+      "handler": "checkWriteback",
+      "serviceName": "waesService",
+      "serviceMethod": "checkWriteback",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-checkWriteback",
+        "dryRun": true,
+        "objectId": "OBJ-checkWriteback",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "checkWriteback",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:checkRevenue",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/revenue/check",
+      "handler": "checkRevenue",
+      "serviceName": "waesService",
+      "serviceMethod": "checkRevenue",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-checkRevenue",
+        "dryRun": true,
+        "objectId": "OBJ-checkRevenue",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "checkRevenue",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:checkContribution",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/contribution/check",
+      "handler": "checkContribution",
+      "serviceName": "waesService",
+      "serviceMethod": "checkContribution",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-checkContribution",
+        "dryRun": true,
+        "objectId": "OBJ-checkContribution",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "checkContribution",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:checkExternalShare",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/external-share/check",
+      "handler": "checkExternalShare",
+      "serviceName": "waesService",
+      "serviceMethod": "checkExternalShare",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-checkExternalShare",
+        "dryRun": true,
+        "objectId": "OBJ-checkExternalShare",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "checkExternalShare",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "waes:requestFreeze",
+      "group": "waes",
+      "method": "POST",
+      "path": "/api/v2/waes/freeze",
+      "handler": "requestFreeze",
+      "serviceName": "waesService",
+      "serviceMethod": "requestFreeze",
+      "writeBoundary": "gate_check",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-requestFreeze",
+        "dryRun": true,
+        "objectId": "OBJ-requestFreeze",
+        "gateTypes": [
+          "RAG"
+        ]
+      },
+      "response": {
+        "ok": true,
+        "handler": "requestFreeze",
+        "writeBoundary": "gate_check",
+        "candidateOnly": false,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:createWorkItemRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/work-items",
+      "handler": "createWorkItemRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "createWorkItemRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createWorkItemRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-createWorkItemRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createWorkItemRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:listWorkItems",
+      "group": "kwe",
+      "method": "GET",
+      "path": "/api/v2/kwe/work-items",
+      "handler": "listWorkItems",
+      "serviceName": "kweService",
+      "serviceMethod": "listWorkItems",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-listWorkItems",
+        "dryRun": true,
+        "query": "dry-run listWorkItems"
+      },
+      "response": {
+        "ok": true,
+        "handler": "listWorkItems",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:createGapRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/gaps",
+      "handler": "createGapRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "createGapRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createGapRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-createGapRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createGapRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:createBountyRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/bounties",
+      "handler": "createBountyRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "createBountyRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createBountyRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-createBountyRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createBountyRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:submitConfirmationRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/confirmations",
+      "handler": "submitConfirmationRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "submitConfirmationRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-submitConfirmationRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-submitConfirmationRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "submitConfirmationRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:submitCommitteeReviewRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/committees",
+      "handler": "submitCommitteeReviewRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "submitCommitteeReviewRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-submitCommitteeReviewRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-submitCommitteeReviewRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "submitCommitteeReviewRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:submitPromotionRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/promotions",
+      "handler": "submitPromotionRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "submitPromotionRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-submitPromotionRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-submitPromotionRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "submitPromotionRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:submitRedactionRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/redactions",
+      "handler": "submitRedactionRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "submitRedactionRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-submitRedactionRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-submitRedactionRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "submitRedactionRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:submitWritebackRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/writebacks",
+      "handler": "submitWritebackRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "submitWritebackRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-submitWritebackRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-submitWritebackRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "submitWritebackRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "kwe:submitDisputeRequest",
+      "group": "kwe",
+      "method": "POST",
+      "path": "/api/v2/kwe/disputes",
+      "handler": "submitDisputeRequest",
+      "serviceName": "kweService",
+      "serviceMethod": "submitDisputeRequest",
+      "writeBoundary": "work_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-submitDisputeRequest",
+        "dryRun": true,
+        "workItem": {
+          "id": "KWE-submitDisputeRequest",
+          "status": "open"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "submitDisputeRequest",
+        "writeBoundary": "work_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "gfis_assistant:queryGfisKnowledgeAssistant",
+      "group": "gfis_assistant",
+      "method": "POST",
+      "path": "/api/v2/gfis/knowledge-assistant/query",
+      "handler": "queryGfisKnowledgeAssistant",
+      "serviceName": "gfisService",
+      "serviceMethod": "queryGfisKnowledgeAssistant",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-queryGfisKnowledgeAssistant",
+        "dryRun": true,
+        "query": "dry-run queryGfisKnowledgeAssistant"
+      },
+      "response": {
+        "ok": true,
+        "handler": "queryGfisKnowledgeAssistant",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "gfis_assistant:queryGfisUsageAssistant",
+      "group": "gfis_assistant",
+      "method": "POST",
+      "path": "/api/v2/gfis/usage-assistant/query",
+      "handler": "queryGfisUsageAssistant",
+      "serviceName": "gfisService",
+      "serviceMethod": "queryGfisUsageAssistant",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-queryGfisUsageAssistant",
+        "dryRun": true,
+        "query": "dry-run queryGfisUsageAssistant"
+      },
+      "response": {
+        "ok": true,
+        "handler": "queryGfisUsageAssistant",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "gfis_assistant:checkGfisDocumentAcceptance",
+      "group": "gfis_assistant",
+      "method": "POST",
+      "path": "/api/v2/gfis/document-acceptance/check",
+      "handler": "checkGfisDocumentAcceptance",
+      "serviceName": "gfisService",
+      "serviceMethod": "checkGfisDocumentAcceptance",
+      "writeBoundary": "candidate_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-checkGfisDocumentAcceptance",
+        "dryRun": true,
+        "candidate": {
+          "id": "CAND-checkGfisDocumentAcceptance",
+          "lifecycle": "candidate"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "checkGfisDocumentAcceptance",
+        "writeBoundary": "candidate_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "gfis_assistant:createGfisWritebackCandidate",
+      "group": "gfis_assistant",
+      "method": "POST",
+      "path": "/api/v2/gfis/writeback-candidates",
+      "handler": "createGfisWritebackCandidate",
+      "serviceName": "gfisService",
+      "serviceMethod": "createGfisWritebackCandidate",
+      "writeBoundary": "candidate_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createGfisWritebackCandidate",
+        "dryRun": true,
+        "candidate": {
+          "id": "CAND-createGfisWritebackCandidate",
+          "lifecycle": "candidate"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createGfisWritebackCandidate",
+        "writeBoundary": "candidate_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:createLoopRecordRequest",
+      "group": "governance_loop",
+      "method": "POST",
+      "path": "/api/v2/governance/loop",
+      "handler": "createLoopRecordRequest",
+      "serviceName": "governanceService",
+      "serviceMethod": "createLoopRecordRequest",
+      "writeBoundary": "governance_evidence_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createLoopRecordRequest",
+        "dryRun": true,
+        "evidence": {
+          "id": "EVD-createLoopRecordRequest",
+          "status": "draft"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createLoopRecordRequest",
+        "writeBoundary": "governance_evidence_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:getLoopRecord",
+      "group": "governance_loop",
+      "method": "GET",
+      "path": "/api/v2/governance/loop/{id}",
+      "handler": "getLoopRecord",
+      "serviceName": "governanceService",
+      "serviceMethod": "getLoopRecord",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getLoopRecord",
+        "dryRun": true,
+        "query": "dry-run getLoopRecord"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getLoopRecord",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:createGovernanceEvidenceRequest",
+      "group": "governance_loop",
+      "method": "POST",
+      "path": "/api/v2/governance/evidence",
+      "handler": "createGovernanceEvidenceRequest",
+      "serviceName": "governanceService",
+      "serviceMethod": "createGovernanceEvidenceRequest",
+      "writeBoundary": "governance_evidence_request",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-createGovernanceEvidenceRequest",
+        "dryRun": true,
+        "evidence": {
+          "id": "EVD-createGovernanceEvidenceRequest",
+          "status": "draft"
+        }
+      },
+      "response": {
+        "ok": true,
+        "handler": "createGovernanceEvidenceRequest",
+        "writeBoundary": "governance_evidence_request",
+        "candidateOnly": true,
+        "requiresGateOrReview": true,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:runKnowledgeCiDryRun",
+      "group": "governance_loop",
+      "method": "POST",
+      "path": "/api/v2/governance/knowledge-ci/run",
+      "handler": "runKnowledgeCiDryRun",
+      "serviceName": "governanceService",
+      "serviceMethod": "runKnowledgeCiDryRun",
+      "writeBoundary": "read_only",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-runKnowledgeCiDryRun",
+        "dryRun": true,
+        "query": "dry-run runKnowledgeCiDryRun"
+      },
+      "response": {
+        "ok": true,
+        "handler": "runKnowledgeCiDryRun",
+        "writeBoundary": "read_only",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:getContributionLedger",
+      "group": "governance_loop",
+      "method": "GET",
+      "path": "/api/v2/governance/ledger/contributions",
+      "handler": "getContributionLedger",
+      "serviceName": "governanceService",
+      "serviceMethod": "getContributionLedger",
+      "writeBoundary": "ledger_read",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getContributionLedger",
+        "dryRun": true,
+        "ledgerScope": "governance_loop"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getContributionLedger",
+        "writeBoundary": "ledger_read",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:getRevenueLedger",
+      "group": "governance_loop",
+      "method": "GET",
+      "path": "/api/v2/governance/ledger/revenue",
+      "handler": "getRevenueLedger",
+      "serviceName": "governanceService",
+      "serviceMethod": "getRevenueLedger",
+      "writeBoundary": "ledger_read",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getRevenueLedger",
+        "dryRun": true,
+        "ledgerScope": "governance_loop"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getRevenueLedger",
+        "writeBoundary": "ledger_read",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:getQuotaLedger",
+      "group": "governance_loop",
+      "method": "GET",
+      "path": "/api/v2/governance/ledger/quota",
+      "handler": "getQuotaLedger",
+      "serviceName": "governanceService",
+      "serviceMethod": "getQuotaLedger",
+      "writeBoundary": "ledger_read",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getQuotaLedger",
+        "dryRun": true,
+        "ledgerScope": "governance_loop"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getQuotaLedger",
+        "writeBoundary": "ledger_read",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    },
+    {
+      "id": "governance_loop:getBountyLedger",
+      "group": "governance_loop",
+      "method": "GET",
+      "path": "/api/v2/governance/ledger/bounties",
+      "handler": "getBountyLedger",
+      "serviceName": "governanceService",
+      "serviceMethod": "getBountyLedger",
+      "writeBoundary": "ledger_read",
+      "request": {
+        "tenantId": "tenant-gckf-p0",
+        "requestId": "REQ-getBountyLedger",
+        "dryRun": true,
+        "ledgerScope": "governance_loop"
+      },
+      "response": {
+        "ok": true,
+        "handler": "getBountyLedger",
+        "writeBoundary": "ledger_read",
+        "candidateOnly": false,
+        "requiresGateOrReview": false,
+        "noWrite": true,
+        "directBusinessWrite": false,
+        "acceptedLifecycleWrite": false,
+        "externalApiWrite": false
+      }
+    }
+  ],
+  "expectedSummary": {
+    "caseCount": 40,
+    "groupCount": 5,
+    "forbiddenRuntimeTermMatches": 0,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "writesAcceptedLifecycle": false,
+    "noWrite": true
+  }
+}

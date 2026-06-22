@@ -1,0 +1,42 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-EVIDENCE-INDEX-CLOSURE-D121-20260622",
+  "execution_mode": "local_evidence_no_write",
+  "scope": [
+    "docs/harness/evidence/evidence-index.md"
+  ],
+  "action": "close_final_localization_residuals_in_evidence_index",
+  "before": {
+    "all_repo_findings": 3,
+    "target_scope_findings": 3
+  },
+  "after": {
+    "all_repo_findings": 0,
+    "target_scope_findings": 0
+  },
+  "delta": {
+    "all_repo_findings": -3,
+    "target_scope_findings": -3
+  },
+  "changed_files": [
+    "docs/harness/evidence/evidence-index.md"
+  ],
+  "changed_line_items": 22,
+  "remaining_target_findings": [],
+  "scope_note": "本轮仅继续处理 D120 遗留在 docs/harness/evidence/evidence-index.md 中的最后 3 组英文非声明句，并在同一连续治理段内做最小中文化收口，使中文化门禁从 3 降至 0。",
+  "boundaries": {
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  },
+  "checks": [
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/validate_localization_debt_evidence_index_closure_d121.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ]
+}

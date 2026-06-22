@@ -1,0 +1,53 @@
+{
+  "package_id": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-TEMPLATE-20260622",
+  "schema_id": "HEADROOM-LCX-AUTHORIZATION-SCHEMA-20260622",
+  "purpose": "human_approval_package_before_rerunning_authorized_measurement_precheck",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "authorization_fields": {
+    "authorized_window_id": "LCX-MEASURE-20260622-001",
+    "authorized_by": "lujunxiang / GPCF owner",
+    "authorized_at": "2026-06-22T08:42:06+08:00",
+    "sanitized_production_token_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+  },
+  "human_attestations": {
+    "telemetry_off_confirmed": "confirmed_for_precheck_only",
+    "sanitized_ledger_reference_only": "confirmed_for_precheck_only",
+    "no_sensitive_raw_material": "confirmed_for_precheck_only",
+    "no_real_kds_write": "confirmed_for_precheck_only",
+    "no_external_api_write": "confirmed_for_precheck_only",
+    "rollback_plan_reviewed": "confirmed_for_precheck_only",
+    "waes_harness_evidence_attached": "confirmed_for_precheck_only"
+  },
+  "required_false_until_completed": {
+    "authorization_complete": false,
+    "production_token_measurement_allowed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "instance_id": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
+  "instance_status": "precheck_only_authorization_fields_complete_waes_harness_admitted",
+  "created_at": "2026-06-22",
+  "source_template": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-TEMPLATE-20260622",
+  "schema_validation_expected": "pass_fields_complete_waes_harness_admitted_for_sanitized_precheck_no_measurement"
+}

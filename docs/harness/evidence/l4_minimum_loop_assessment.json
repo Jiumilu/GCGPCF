@@ -1,11 +1,15 @@
 {
-  "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+  "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
   "gate": "blocked",
   "development_ready": "pass",
   "test_data_minimum_sop_e2e": "pass",
   "test_data_12_stage_sop_e2e": "pass",
   "test_data_12_stage_transition_gate": "pass",
   "test_data_12_stage_negative_transition_guard": "pass",
+  "test_data_12_stage_replay_harness": "pass",
+  "test_data_runtime_object_contract": "pass",
+  "test_data_scenario_coverage": "pass",
+  "test_data_mutation_guard": "pass",
   "synthetic_dev_lane": "dev_closed",
   "real_business_lane": "repair_required",
   "business_verification_pending": true,
@@ -65,7 +69,7 @@
   ],
   "project_group_score": 78,
   "self_correction": {
-    "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+    "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
     "previous_l4_score_invalidated": true,
     "gfis_runtime_subject": "blocked",
     "gfis_demo_counted_as_runtime_evidence": true,
@@ -74,20 +78,7 @@
     "gfis_runtime_sop_e2e_status": "repair_required",
     "gfis_runtime_sop_e2e_exit_code": 1,
     "gfis_runtime_sop_e2e_output": [
-      "FAIL: customer requirement/platform order source record pending business verification manual completion receiving hold gate validator failed: Traceback (most recent call last):",
-      "File \"/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate.py\", line 231, in <module>",
-      "main()",
-      "File \"/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate.py\", line 68, in main",
-      "evidence = load_json(EVIDENCE_PATH)",
-      "File \"/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate.py\", line 43, in load_json",
-      "value = json.loads(path.read_text(encoding=\"utf-8\"))",
-      "File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py\", line 346, in loads",
-      "return _default_decoder.decode(s)",
-      "File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py\", line 337, in decode",
-      "obj, end = self.raw_decode(s, idx=_w(s, 0).end())",
-      "File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/decoder.py\", line 355, in raw_decode",
-      "raise JSONDecodeError(\"Expecting value\", s, err.value) from None",
-      "json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "FAIL: KDS coverage must not have missing controlled sources"
     ],
     "gfis_real_source_record_intake_gate_status": "pass",
     "gfis_real_source_record_intake_gate_exit_code": 0,
@@ -97,12 +88,12 @@
     "gfis_pending_business_verification_gate_status": "pass",
     "gfis_pending_business_verification_gate_exit_code": 0,
     "gfis_pending_business_verification_gate_output": [
-      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=396 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=399 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_runtime_primary_key_gate_status": "pass",
     "gfis_runtime_primary_key_gate_exit_code": 0,
     "gfis_runtime_primary_key_gate_output": [
-      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=396 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=399 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_review_queue_admission_gate_status": "pass",
     "gfis_review_queue_admission_gate_exit_code": 0,
@@ -153,6 +144,16 @@
     "gfis_test_data_12_stage_negative_transition_guard_exit_code": 0,
     "gfis_test_data_12_stage_negative_transition_guard_output": [
       "gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    ],
+    "gfis_test_data_runtime_replay_harness_status": "pass",
+    "gfis_test_data_runtime_replay_harness_exit_code": 0,
+    "gfis_test_data_runtime_replay_harness_output": [
+      "gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required runtime_object_count=15 replay_stage_count=12 accepted_attempt_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    ],
+    "gfis_test_data_scenario_coverage_status": "pass",
+    "gfis_test_data_scenario_coverage_exit_code": 0,
+    "gfis_test_data_scenario_coverage_output": [
+      "gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ]
   },
   "l4_closure": {
@@ -232,6 +233,10 @@
       "test_data_12_stage_sop_e2e": "pass",
       "test_data_12_stage_transition_gate": "pass",
       "test_data_12_stage_negative_transition_guard": "pass",
+      "test_data_12_stage_replay_harness": "pass",
+      "test_data_runtime_object_contract": "pass",
+      "test_data_scenario_coverage": "pass",
+      "test_data_mutation_guard": "pass",
       "synthetic_dev_lane": "dev_closed",
       "real_business_lane": "repair_required",
       "business_verification_pending": true,
@@ -248,6 +253,7 @@
       "verified_artifact_gate": "pass",
       "development_ready_goal": "pass",
       "test_source_record_submission_gate": "pass",
+      "test_data_runtime_replay_harness": "pass",
       "test_source_records": 1,
       "test_runtime_primary_keys": 1,
       "test_review_queue_items": 1,
@@ -293,7 +299,7 @@
       "accepted_integrated": false
     },
     "GPCF": {
-      "round_id": "GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001",
+      "round_id": "GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001",
       "status": "repair_required",
       "closure_score_matrix": "invalidated_by_self_correction",
       "score": 78,

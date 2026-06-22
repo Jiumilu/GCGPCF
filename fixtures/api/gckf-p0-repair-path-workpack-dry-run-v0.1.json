@@ -1,0 +1,80 @@
+{
+  "contractId": "GCKF-P0-REPAIR-PATH-WORKPACK-DRY-RUN-V0.1",
+  "description": "P0-D25 repair path workpack dry-run derived from D24 decision template. It converts repair_required and scope_violation_found into candidate KWE/LOOP work items only.",
+  "workpackStatus": "candidate",
+  "notFinalAcceptance": true,
+  "sourceDecisionTemplate": "fixtures/api/gckf-p0-harness-decision-template-dry-run-v0.1.json",
+  "coveredDecisionOutcomes": ["repair_required", "scope_violation_found"],
+  "excludedDecisionOutcomes": ["approved_for_formal_harness_evidence", "rejected"],
+  "candidateWorkItems": [
+    {
+      "id": "GCKF-P0-REPAIR-WI-001",
+      "sourceDecisionOutcome": "repair_required",
+      "workType": "evidence_repair",
+      "targetEngine": "KWE",
+      "targetStatus": "candidate",
+      "priority": "P1",
+      "requiredActions": [
+        "identify_missing_evidence",
+        "bind_gap_refs",
+        "collect_repair_evidence",
+        "return_to_harness_review_input"
+      ],
+      "requiredRefs": ["repairActions", "gapRefs", "decisionRationale"],
+      "forbiddenActions": ["write_formal_evidence", "promote_lifecycle", "close_p0_acceptance"]
+    },
+    {
+      "id": "GCKF-P0-REPAIR-WI-002",
+      "sourceDecisionOutcome": "scope_violation_found",
+      "workType": "governance_follow_up",
+      "targetEngine": "LOOP",
+      "targetStatus": "candidate",
+      "priority": "P0",
+      "requiredActions": [
+        "record_violation_refs",
+        "classify_severity",
+        "open_governance_follow_up",
+        "return_to_harness_review_input_or_freeze_path"
+      ],
+      "requiredRefs": ["violationRefs", "severity", "decisionRationale"],
+      "forbiddenActions": ["write_formal_evidence", "promote_lifecycle", "enable_business_writeback", "ignore_violation"]
+    }
+  ],
+  "requiredSourceRefs": [
+    "fixtures/api/gckf-p0-harness-decision-template-dry-run-v0.1.json",
+    "scripts/api/validate_gckf_p0_harness_decision_template_dry_run.py",
+    "docs/gc-knowledge-fabric/harness-decision-template-dry-run-v0.1.md",
+    "docs/harness/loops/loop-round-GPCF-GCKF-P0-D24-001.md"
+  ],
+  "forbiddenOutputs": [
+    "kwe_work_item_created",
+    "loop_follow_up_created",
+    "formal_harness_evidence_record_written",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "business_write_enabled",
+    "kds_write_enabled"
+  ],
+  "expectedSummary": {
+    "workpackStatus": "candidate",
+    "sourceDecisionTemplateStatus": "candidate",
+    "coveredDecisionOutcomeCount": 2,
+    "excludedDecisionOutcomeCount": 2,
+    "candidateWorkItemCount": 2,
+    "requiredSourceRefCount": 4,
+    "requiresKweOrLoopFollowUp": true,
+    "notFinalAcceptance": true,
+    "writesFormalEvidence": false,
+    "writesHarnessEvidence": false,
+    "writesAcceptedLifecycle": false,
+    "createsKweWorkItem": false,
+    "createsLoopFollowUp": false,
+    "startsServer": false,
+    "connectsDatabase": false,
+    "callsExternalApi": false,
+    "writesKds": false,
+    "writesBusinessSystem": false,
+    "noWrite": true
+  }
+}

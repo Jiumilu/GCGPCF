@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/README.md
 source_path: 03-data-ai-knowledge/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-12
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -39,11 +39,26 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-60E4A89F37 | GC-Knowledge Fabric KDS十一池挂接规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md | KDS | controlled |
+| GPCF-DOC-2BE90FCE73 | GC-Knowledge Fabric LOOP跟踪模板 | 03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md | KDS | controlled |
+| GPCF-DOC-139A718B66 | GC-Knowledge Fabric P0 11受控文档包实施清单 | 03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md | KDS | controlled |
+| GPCF-DOC-C831F07BC3 | GC-Knowledge Fabric RAG准入与引用强度规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md | KDS | controlled |
+| GPCF-DOC-63E07DE019 | GC-Knowledge Fabric WAES门禁规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md | KDS | controlled |
+| GPCF-DOC-A0469C3170 | GC-Knowledge Fabric 敏感资料入库规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-敏感资料入库规则.md | KDS | controlled |
+| GPCF-DOC-2F3CC2EAA1 | GC-Knowledge Fabric 核心对象关系与最小字段契约 | 03-data-ai-knowledge/GC-Knowledge-Fabric-核心对象关系与最小字段契约.md | KDS | controlled |
+| GPCF-DOC-651E9768F7 | GC-Knowledge Fabric 湖北磷材知识库目录 | 03-data-ai-knowledge/GC-Knowledge-Fabric-湖北磷材知识库目录.md | KDS | controlled |
+| GPCF-DOC-0C9C673398 | GC-Knowledge Fabric 积分收益额度悬赏台账模型 | 03-data-ai-knowledge/GC-Knowledge-Fabric-积分收益额度悬赏台账模型.md | KDS | controlled |
+| GPCF-DOC-5F592CAC71 | GC-Knowledge Fabric 统一状态机与状态提升规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-统一状态机与状态提升规则.md | KDS | controlled |
+| GPCF-DOC-B69A039079 | GC-Knowledge Fabric 统一编号规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-统一编号规则.md | KDS | controlled |
+| GPCF-DOC-802968853F | GC-Knowledge Fabric 综合实施方案完整评审与问题清单 | 03-data-ai-knowledge/GC-Knowledge-Fabric-综合实施方案完整评审与问题清单.md | KDS | controlled |
+| GPCF-DOC-6CF5DB2D6B | GC-Knowledge Fabric 葛化GFIS知识库目录 | 03-data-ai-knowledge/GC-Knowledge-Fabric-葛化GFIS知识库目录.md | KDS | controlled |
 | GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | GPCF | controlled |
+| GPCF-DOC-934A1F0623 | GlobalCloud GC-Knowledge Fabric 综合实施方案与实施计划 | 03-data-ai-knowledge/GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划.md | KDS | controlled |
 | GPCF-DOC-E3822328DF | GlobalCloud Loop开发KDS关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | KDS | controlled |
+| GPCF-DOC-A4F06F496D | GlobalCloud Agent-Reach搜索能力Loop接入方案 | 03-data-ai-knowledge/GlobalCloud-Agent-Reach搜索能力Loop接入方案.md | KDS | controlled |
 | GPCF-DOC-54C6C8B58B | GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单 | 03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | KDS | controlled |
-| GPCF-DOC-C8FDA82F75 | GlobalCloudKDS11池与增强治理账本项目群级映射 | 03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md | KDS | controlled |
-| GPCF-DOC-11BCEF96A6 | GlobalCloud PKC-KDS 个人知识与贡献入口清单 | 03-data-ai-knowledge/GlobalCloudPKC-KDS个人知识与贡献入口清单.md | KDS | controlled |
+| GPCF-DOC-C8FDA82F75 | GlobalCloud KDS 11 池与增强治理账本项目群级映射 | 03-data-ai-knowledge/GlobalCloudKDS11池与增强治理账本项目群级映射.md | KDS | controlled |
+| GPCF-DOC-11BCEF96A6 | GlobalCloudPKC-KDS个人知识与贡献入口清单 | 03-data-ai-knowledge/GlobalCloudPKC-KDS个人知识与贡献入口清单.md | KDS | controlled |
 | GPCF-DOC-1F12054E1C | GlobalCloud企业级知识系统冲突点与收口方案 | 03-data-ai-knowledge/GlobalCloud企业级知识系统冲突点与收口方案.md | KDS | controlled |
 | GPCF-DOC-F5B3269058 | GlobalCloud 企业级知识系统总目标与执行分解表 | 03-data-ai-knowledge/GlobalCloud企业级知识系统总目标与执行分解表.md | KDS | controlled |
 | GPCF-DOC-A3B30485E9 | GlobalCloud 全局模型目录与能力标签标准 | 03-data-ai-knowledge/GlobalCloud全局模型目录与能力标签标准.md | KDS | controlled |
@@ -82,19 +97,20 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-062D4DA687 | GlobalCloud绿色供应链体系系统-数据库边界总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md | GPCF | controlled |
 | GPCF-DOC-E2FDF91E39 | GlobalCloud绿色供应链体系资源仓库-业务对象映射总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md | GPCF | controlled |
 | GPCF-DOC-E4DDF33CF8 | GlobalCloud绿色供应链体系连接器合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md | GPCF | controlled |
-| GPCF-DOC-21BF6751A0 | GlobalCloud 绿色供应链分布式知识系统完整实施提示词 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md | KDS | controlled |
+| GPCF-DOC-21BF6751A0 | GlobalCloud绿色供应链分布式知识系统完整实施提示词 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md | KDS | controlled |
 | GPCF-DOC-85BD23AD58 | GlobalCloud绿色供应链分布式知识系统实施治理方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md | KDS | controlled |
-| GPCF-DOC-52D30A36F6 | GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md | KDS | controlled |
+| GPCF-DOC-52D30A36F6 | GlobalCloud 绿色供应链分布式知识系统对象字段与 11 池映射清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md | KDS | controlled |
 | GPCF-DOC-766DBAA9E3 | GlobalCloud 绿色供应链分布式知识系统当前实施分析与下一阶段推进 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md | KDS | controlled |
-| GPCF-DOC-89872D1387 | GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | KDS | controlled |
-| GPCF-DOC-2A520469C6 | GlobalCloud绿色供应链分布式知识系统权限与密级矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | KDS | controlled |
+| GPCF-DOC-89872D1387 | GlobalCloud 绿色供应链分布式知识系统数据对象最小落库与 API 契约草案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | KDS | controlled |
+| GPCF-DOC-2A520469C6 | GlobalCloud 绿色供应链分布式知识系统权限与密级矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | KDS | controlled |
 | GPCF-DOC-1C57589247 | GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | KDS | controlled |
 | GPCF-DOC-62E56B6121 | GlobalCloud 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | KDS | controlled |
-| GPCF-DOC-A22E7CBF43 | GlobalCloud 葛化 DKS-053 dry-run 结果可填写执行包与责任方说明 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | KDS | controlled |
-| GPCF-DOC-D241F6E17C | GlobalCloud 葛化 DKS-054 执行包派发授权信封与负例拒收门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | KDS | controlled |
-| GPCF-DOC-AACA2824CD | GlobalCloud 葛化 DKS-055 派发授权信封接收目录空状态 hold 队列与补证提醒门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md | KDS | controlled |
+| GPCF-DOC-A22E7CBF43 | GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | GPCF | controlled |
+| GPCF-DOC-D241F6E17C | GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | GPCF | controlled |
+| GPCF-DOC-AACA2824CD | GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁.md | GPCF | controlled |
 | GPCF-DOC-49F4A296F5 | GlobalCloud 葛化 DKS-056 补证提醒发送授权包与回执字段模板 | 03-data-ai-knowledge/GlobalCloud葛化DKS056补证提醒发送授权包与回执字段模板.md | KDS | controlled |
-| GPCF-DOC-93BE3CC3E0 | GlobalCloud 葛化 DKS-057 发送授权包人工确认接收扫描空状态与授权缺口台账 | 03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md | KDS | controlled |
+| GPCF-DOC-93BE3CC3E0 | GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账 | 03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md | GPCF | controlled |
+| GPCF-DOC-D2933575F5 | GlobalCloud 葛化 DKS-060 GFIS 三助手 NoWrite 评测与人工发送授权补证执行包 | 03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md | KDS | controlled |
 | GPCF-DOC-19ED27EAD7 | GlobalCloud 葛化 GFIS AI 助手三件套首批 dry-run 评测运行记录 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手三件套首批dry-run评测运行记录.md | KDS | controlled |
 | GPCF-DOC-EFF75D9725 | GlobalCloud 葛化 GFIS AI 助手内测运行记录模板 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录模板.md | KDS | controlled |
 | GPCF-DOC-BA893D6FF7 | GlobalCloud 葛化 GFIS AI 助手内测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录首批空白台账.md | KDS | controlled |
@@ -104,7 +120,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-FEE06CC888 | GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材真实脱敏资料接收任务包与首批人工审核演练.md | GPCF | controlled |
 | GPCF-DOC-66F17A9F37 | GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材试点样本表与MMC参数基线落地包.md | GPCF | controlled |
 | GPCF-DOC-6298DD1B0D | GlobalCloud葛化湖北磷材首批填报实例包与提交门禁 | 03-data-ai-knowledge/GlobalCloud葛化湖北磷材首批填报实例包与提交门禁.md | GPCF | controlled |
-| GPCF-DOC-54564B95F6 | GlobalCloud 葛化第一阶段 GFIS AI 助手三件套实施清单 | 03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md | KDS | controlled |
+| GPCF-DOC-54564B95F6 | GlobalCloud葛化第一阶段GFISAI助手三件套实施清单 | 03-data-ai-knowledge/GlobalCloud葛化第一阶段GFISAI助手三件套实施清单.md | GPCF | controlled |
 | GPCF-DOC-486DF4F549 | GlobalCloud 葛化订单运行母版字段与单据映射专项清单 | 03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md | KDS | controlled |
 | GPCF-DOC-EE793CBD55 | GlobalCloud 葛化辽宁远航与金融凭证缺口专项台账 | 03-data-ai-knowledge/GlobalCloud葛化辽宁远航与金融凭证缺口专项台账.md | KDS | controlled |
 | GPCF-DOC-E361BE8080 | GlobalCloud 葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包 | 03-data-ai-knowledge/GlobalCloud葛化辽宁远航补证请求包与金融凭证脱敏索引空白填报包.md | KDS | controlled |

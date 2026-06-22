@@ -1,0 +1,80 @@
+policy_id: okf.gfis_writeback_approval_preflight_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run contract for GFIS writeback approval preflight
+  checklists. Preflight items combine writeback batch diff and KDS lifecycle
+  transition audit packets to determine the next approval path only. They do
+  not approve writeback, write business systems, mutate KDS lifecycle, create
+  WAES gate results, create KWE work items, confirm revenue or scores, or call
+  external APIs.
+
+required_batch_fields:
+  - preflight_batch_id
+  - tenant_id
+  - project_id
+  - target_system
+  - based_on_batch_diff_ref
+  - created_by
+  - dry_run
+  - items
+  - batch_no_write
+
+required_item_fields:
+  - preflight_id
+  - candidate_id
+  - target_system
+  - target_entity_type
+  - target_entity_id
+  - batch_diff_ref
+  - lifecycle_audit_refs
+  - field_paths
+  - evidence_refs
+  - waes_gate_refs
+  - harness_evidence_refs
+  - sensitive_handling
+  - waes_gate_status
+  - lifecycle_audit_status
+  - reviewer_requirement
+  - preflight_status
+  - required_actions
+  - blocked_reasons
+  - approval_eligible
+  - business_write_allowed
+  - target_receipt_refs
+  - no_write
+
+preflight_statuses:
+  - preflight_required
+  - human_required
+  - committee_required
+  - metadata_only_required
+  - repair_required
+  - blocked
+
+hard_boundaries:
+  dry_run_required: true
+  approval_eligible_must_be_false: true
+  business_write_allowed_must_be_false: true
+  target_receipts_forbidden: true
+  blocked_gate_blocks_preflight: true
+  committee_gate_requires_committee_path: true
+  metadata_only_requires_metadata_path: true
+  lifecycle_block_blocks_preflight: true
+  missing_evidence_repairs_or_blocks: true
+  preflight_pass_is_not_writeback_approval: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_kds_accepted_fact: 0
+  writes_kds_lifecycle: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_target_receipt: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_external_api: 0

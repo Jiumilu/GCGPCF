@@ -1,0 +1,128 @@
+{
+  "fixture_id": "agent-reach-quality-replay-harness-20260622",
+  "round": "GPCF-AGENT-REACH-P3-QUALITY-REPLAY-HARNESS-001",
+  "mode": "offline_replay_only",
+  "thresholds": {
+    "minimum_query_count": 3,
+    "minimum_candidate_count": 5,
+    "minimum_average_score": 0.78,
+    "minimum_precision_at_1": 0.66,
+    "minimum_required_field_coverage": 1.0,
+    "maximum_forbidden_claim_count": 0
+  },
+  "required_candidate_fields": [
+    "candidate_id",
+    "query_id",
+    "channel",
+    "title",
+    "source_url",
+    "snippet",
+    "relevance_score",
+    "freshness_score",
+    "authority_score",
+    "traceability_score",
+    "evidence_tier",
+    "admission_status"
+  ],
+  "queries": [
+    {
+      "query_id": "q-source-lock",
+      "intent": "find upstream source lock facts",
+      "expected_top_candidate_id": "c-source-lock",
+      "expected_channels": ["web"]
+    },
+    {
+      "query_id": "q-isolated-install",
+      "intent": "find isolated install readiness facts",
+      "expected_top_candidate_id": "c-isolated-install",
+      "expected_channels": ["rss"]
+    },
+    {
+      "query_id": "q-adapter-policy",
+      "intent": "find controlled adapter policy boundaries",
+      "expected_top_candidate_id": "c-adapter-policy",
+      "expected_channels": ["web"]
+    }
+  ],
+  "candidate_results": [
+    {
+      "candidate_id": "c-source-lock",
+      "query_id": "q-source-lock",
+      "channel": "web",
+      "title": "Agent-Reach P0 source lock",
+      "source_url": "fixture://agent-reach/p0-source-lock",
+      "snippet": "Source lock records upstream head, version, license, entrypoints, and non-claims.",
+      "relevance_score": 0.92,
+      "freshness_score": 0.9,
+      "authority_score": 0.85,
+      "traceability_score": 1.0,
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    },
+    {
+      "candidate_id": "c-source-lock-support",
+      "query_id": "q-source-lock",
+      "channel": "rss",
+      "title": "Agent-Reach source review package",
+      "source_url": "fixture://agent-reach/source-review",
+      "snippet": "Review package lists source, license, security review, and modification record.",
+      "relevance_score": 0.72,
+      "freshness_score": 0.88,
+      "authority_score": 0.78,
+      "traceability_score": 1.0,
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    },
+    {
+      "candidate_id": "c-isolated-install",
+      "query_id": "q-isolated-install",
+      "channel": "rss",
+      "title": "Agent-Reach P1 isolated install",
+      "source_url": "fixture://agent-reach/p1-isolated-install",
+      "snippet": "Isolated install uses Python 3.12.13, temporary HOME, and records no credential write.",
+      "relevance_score": 0.91,
+      "freshness_score": 0.9,
+      "authority_score": 0.82,
+      "traceability_score": 1.0,
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    },
+    {
+      "candidate_id": "c-adapter-policy",
+      "query_id": "q-adapter-policy",
+      "channel": "web",
+      "title": "Agent-Reach P2 controlled adapter policy",
+      "source_url": "fixture://agent-reach/p2-controlled-adapter",
+      "snippet": "Controlled adapter defines allowed diagnostics, blocked actions, policy blocks, and candidate schema.",
+      "relevance_score": 0.94,
+      "freshness_score": 0.92,
+      "authority_score": 0.84,
+      "traceability_score": 1.0,
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    },
+    {
+      "candidate_id": "c-adapter-policy-support",
+      "query_id": "q-adapter-policy",
+      "channel": "bilibili",
+      "title": "Agent-Reach policy block support record",
+      "source_url": "fixture://agent-reach/policy-blocks",
+      "snippet": "Policy blocks include credential-required channels, production writes, KDS canonical writes, GFIS source records, global MCP config, and unauthorized live search.",
+      "relevance_score": 0.76,
+      "freshness_score": 0.88,
+      "authority_score": 0.78,
+      "traceability_score": 1.0,
+      "evidence_tier": "fixture_only",
+      "admission_status": "candidate_only"
+    }
+  ],
+  "forbidden_claims": [
+    "live search verified",
+    "production integrated",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "KDS canonical written",
+    "GFIS source-of-record created"
+  ]
+}

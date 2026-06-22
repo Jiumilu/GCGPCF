@@ -1,0 +1,48 @@
+{
+  "package_id": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-TEMPLATE-20260622",
+  "schema_id": "HEADROOM-LCX-AUTHORIZATION-SCHEMA-20260622",
+  "purpose": "human_approval_package_before_rerunning_authorized_measurement_precheck",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "authorization_fields": {
+    "authorized_window_id": "REQUIRED_USER_INPUT",
+    "authorized_by": "REQUIRED_USER_INPUT",
+    "authorized_at": "REQUIRED_USER_INPUT",
+    "sanitized_production_token_ledger": "REQUIRED_USER_INPUT",
+    "rollback_plan_id": "REQUIRED_USER_INPUT",
+    "waes_harness_admission_decision": "REQUIRED_USER_INPUT"
+  },
+  "human_attestations": {
+    "telemetry_off_confirmed": "REQUIRED_USER_INPUT",
+    "sanitized_ledger_reference_only": "REQUIRED_USER_INPUT",
+    "no_sensitive_raw_material": "REQUIRED_USER_INPUT",
+    "no_real_kds_write": "REQUIRED_USER_INPUT",
+    "no_external_api_write": "REQUIRED_USER_INPUT",
+    "rollback_plan_reviewed": "REQUIRED_USER_INPUT",
+    "waes_harness_evidence_attached": "REQUIRED_USER_INPUT"
+  },
+  "required_false_until_completed": {
+    "authorization_complete": false,
+    "production_token_measurement_allowed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

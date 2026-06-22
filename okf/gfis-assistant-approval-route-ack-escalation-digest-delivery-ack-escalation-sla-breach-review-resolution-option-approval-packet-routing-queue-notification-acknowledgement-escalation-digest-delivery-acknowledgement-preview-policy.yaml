@@ -1,0 +1,171 @@
+policy_id: okf.gfis_assistant_approval_route_ack_escalation_digest_delivery_ack_escalation_sla_breach_review_resolution_option_approval_packet_routing_queue_notification_acknowledgement_escalation_digest_delivery_acknowledgement_preview_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local no-write approval acknowledgement digest delivery acknowledgement
+  previews derived from DKS-157 GFIS Assistant repair notification snooze queue
+  acknowledgement escalation digest delivery previews. These previews show
+  candidate acknowledgers, acknowledgement methods, blocked acknowledgement
+  counts, boundary references, and next-step suggestions only. They do not
+  create delivery acknowledgements, delivery records, notifications, digest
+  records, acknowledgements, read receipts, reminders, governance records,
+  lifecycle changes, business writes, settlements, or external API calls.
+
+required_fields:
+  - delivery_acknowledgement_preview_id
+  - delivery_preview_refs
+  - tenant_id
+  - project_id
+  - surface
+  - acknowledgement_type
+  - acknowledgement_status
+  - acknowledgement_decision
+  - acknowledgement_scope
+  - candidate_acknowledger_refs
+  - acknowledgement_method_refs
+  - blocked_acknowledgement_count
+  - boundary_refs
+  - source_delivery_preview_refs
+  - acknowledgement_summary_ref
+  - lineage_hint_refs
+  - reason_refs
+  - acknowledgement_note_refs
+  - next_step_candidate_refs
+  - blocked_actions
+  - creates_delivery_acknowledgement
+  - creates_delivery
+  - creates_notification
+  - creates_digest
+  - creates_acknowledgement
+  - creates_read_receipt
+  - creates_reminder
+  - creates_escalation_task
+  - creates_approval_request
+  - creates_approval_decision
+  - creates_harness_evidence
+  - creates_waes_gate_result
+  - creates_kwe_work_item
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+acknowledgement_types:
+  - team_delivery_ack_preview
+  - project_delivery_ack_preview
+  - governance_delivery_ack_preview
+  - external_blocked_delivery_ack_preview
+  - committee_delivery_ack_preview
+  - freeze_delivery_ack_preview
+
+acknowledgement_statuses:
+  - acknowledgement_preview_only
+  - acknowledgement_at_risk_preview
+  - acknowledgement_metadata_boundary
+  - acknowledgement_external_blocked
+  - acknowledgement_committee_required
+  - acknowledgement_freeze_required
+
+acknowledgement_decisions:
+  - show_team_delivery_ack_preview
+  - show_project_delivery_ack_preview
+  - show_governance_delivery_ack_preview
+  - show_external_blocked_delivery_ack_preview
+  - show_committee_delivery_ack_preview
+  - show_freeze_delivery_ack_preview
+
+acknowledgement_scopes:
+  - team_internal
+  - project_internal
+  - governance_review
+  - external_blocked
+  - committee_review
+  - freeze_review
+
+acknowledgement_methods:
+  - preview_seen
+  - candidate_ack
+  - manual_review_candidate
+  - committee_review_candidate
+  - freeze_review_candidate
+  - external_blocked_candidate
+
+blocked_actions:
+  - create_delivery_acknowledgement
+  - create_delivery
+  - create_notification
+  - create_digest
+  - create_acknowledgement
+  - create_read_receipt
+  - create_reminder
+  - create_escalation_task
+  - create_approval_request
+  - create_approval_decision
+  - create_harness_evidence
+  - create_waes_gate_result
+  - create_kwe_work_item
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  acknowledgement_preview_only: true
+  acknowledgement_preview_is_not_delivery_acknowledgement: true
+  acknowledgement_preview_is_not_delivery_record: true
+  acknowledgement_preview_is_not_notification: true
+  acknowledgement_preview_is_not_digest_record: true
+  acknowledgement_preview_is_not_acknowledgement: true
+  acknowledgement_preview_is_not_read_receipt: true
+  acknowledgement_preview_is_not_reminder: true
+  acknowledgement_preview_is_not_escalation_task: true
+  acknowledgement_preview_is_not_approval_request: true
+  acknowledgement_preview_is_not_approval_decision: true
+  acknowledgement_preview_is_not_harness_evidence: true
+  acknowledgement_preview_is_not_waes_result: true
+  acknowledgement_preview_is_not_kwe_work_item: true
+  acknowledgement_preview_is_not_lifecycle_change: true
+  acknowledgement_preview_is_not_business_writeback: true
+  creates_delivery_acknowledgement_must_be_false: true
+  creates_delivery_must_be_false: true
+  creates_notification_must_be_false: true
+  creates_digest_must_be_false: true
+  creates_acknowledgement_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  creates_reminder_must_be_false: true
+  creates_escalation_task_must_be_false: true
+  creates_approval_request_must_be_false: true
+  creates_approval_decision_must_be_false: true
+  creates_harness_evidence_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_delivery_acknowledgement: 0
+  writes_delivery: 0
+  writes_notification: 0
+  writes_digest: 0
+  writes_acknowledgement: 0
+  writes_read_receipt: 0
+  writes_reminder: 0
+  writes_escalation_task: 0
+  writes_approval_request: 0
+  writes_approval_decision: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_harness_evidence: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_external_api: 0

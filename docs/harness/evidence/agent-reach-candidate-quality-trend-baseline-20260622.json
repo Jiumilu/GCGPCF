@@ -1,0 +1,120 @@
+{
+  "evidence_id": "AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-20260622",
+  "date": "2026-06-22",
+  "status": "candidate_quality_trend_baseline_ready",
+  "scope": "GPCF-AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-001",
+  "objective": "Establish a controlled quality trend baseline for Agent-Reach candidate search and dry-run ingestion without production integration or canonical writes.",
+  "source_evidence": [
+    "docs/harness/evidence/agent-reach-candidate-search-replay-ledger-20260621.json",
+    "docs/harness/evidence/agent-reach-limited-candidate-ingestion-dry-run-ledger-20260622.json"
+  ],
+  "execution_mode": "read_only_quality_trend_baseline",
+  "external_search_invoked": false,
+  "agent_reach_runtime_invoked": false,
+  "search_replay_baseline": {
+    "entry_count": 5,
+    "successful_entry_count": 5,
+    "search_success_rate": 1.0,
+    "source_provenance_rate": 1.0,
+    "duplicate_rate": 0.0,
+    "latency_p50_seconds": 3.889,
+    "latency_p95_seconds": 4.633,
+    "review_status": "pending_waes_kds_review"
+  },
+  "ingestion_dry_run_baseline": {
+    "candidate_count": 4,
+    "rejected_count": 1,
+    "accepted_limited_rate": 0.8,
+    "rejected_records_ingested": 0,
+    "all_candidates_have_source_provenance": true,
+    "all_candidates_have_review_status": true,
+    "all_candidates_keep_limited_admission": true,
+    "canonical_write_count": 0,
+    "production_write_count": 0,
+    "credential_leakage_count": 0
+  },
+  "trend_metrics": [
+    {
+      "metric": "search_success_rate",
+      "baseline_value": 1.0,
+      "direction": "higher_is_better",
+      "guardrail": "must_remain_at_or_above_0.8_for_candidate_use",
+      "next_measurement_source": "fixed_query_replay_or_authorized_agent_reach_benchmark"
+    },
+    {
+      "metric": "source_provenance_rate",
+      "baseline_value": 1.0,
+      "direction": "higher_is_better",
+      "guardrail": "must_remain_1.0_for_candidate_admission",
+      "next_measurement_source": "candidate_search_replay_ledger"
+    },
+    {
+      "metric": "duplicate_rate",
+      "baseline_value": 0.0,
+      "direction": "lower_is_better",
+      "guardrail": "must_remain_at_or_below_0.2",
+      "next_measurement_source": "candidate_search_replay_ledger"
+    },
+    {
+      "metric": "latency_p50_seconds",
+      "baseline_value": 3.889,
+      "direction": "lower_is_better",
+      "guardrail": "must_remain_at_or_below_10_seconds",
+      "next_measurement_source": "fixed_query_replay_or_authorized_agent_reach_benchmark"
+    },
+    {
+      "metric": "latency_p95_seconds",
+      "baseline_value": 4.633,
+      "direction": "lower_is_better",
+      "guardrail": "must_remain_at_or_below_30_seconds",
+      "next_measurement_source": "fixed_query_replay_or_authorized_agent_reach_benchmark"
+    },
+    {
+      "metric": "accepted_limited_rate",
+      "baseline_value": 0.8,
+      "direction": "contextual",
+      "guardrail": "does_not_authorize_strong_rag_or_canonical_write",
+      "next_measurement_source": "authoritative_source_verification_or_human_review"
+    },
+    {
+      "metric": "canonical_write_count",
+      "baseline_value": 0,
+      "direction": "must_remain_zero",
+      "guardrail": "must_remain_0_without_separate_authorization",
+      "next_measurement_source": "ingestion_dry_run_validator"
+    },
+    {
+      "metric": "production_write_count",
+      "baseline_value": 0,
+      "direction": "must_remain_zero",
+      "guardrail": "must_remain_0_without_separate_authorization",
+      "next_measurement_source": "ingestion_dry_run_validator"
+    }
+  ],
+  "quality_status": {
+    "candidate_search_quality": "baseline_pass",
+    "candidate_ingestion_quality": "baseline_pass",
+    "safety_quality": "baseline_pass",
+    "kds_admission": "limited_candidate_only",
+    "rag_admission": "limited",
+    "status_upgrade_allowed": false,
+    "production_integration_allowed": false,
+    "accepted_or_integrated_claim_allowed": false
+  },
+  "continuous_evolution_controls": [
+    "repeat fixed-query replay before any quality trend upgrade",
+    "preserve source provenance rate at 1.0",
+    "keep canonical and production write counts at 0 without separate authorization",
+    "record human or WAES/KDS review decisions separately from search success",
+    "treat accepted_limited as candidate metadata only, not strong RAG or canonical knowledge"
+  ],
+  "next_round": "GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-001",
+  "non_claims": [
+    "does not invoke live external search",
+    "does not invoke Agent-Reach runtime",
+    "does not write KDS canonical Markdown",
+    "does not create GFIS source-of-record",
+    "does not install or configure Agent-Reach in production",
+    "does not upgrade accepted, integrated, or production_ready status"
+  ]
+}

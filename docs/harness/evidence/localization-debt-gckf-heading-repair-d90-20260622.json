@@ -1,0 +1,47 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GCKF-HEADING-REPAIR-D90-20260622",
+  "loop_round": "GPCF-GCKF-P0-D90-001",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/gc-knowledge-fabric heading-only localization repair",
+  "changed_files": [
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-completeness-precheck-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-precheck-repair-request-intake-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-delivery-precheck-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-aggregation-completeness-precheck-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-aggregation-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-completeness-precheck-dry-run-v0.1.md"
+  ],
+  "before": {
+    "localization_gate": "fail",
+    "findings": 360,
+    "docs_gc_knowledge_fabric_findings": 77
+  },
+  "after": {
+    "localization_gate": "fail",
+    "findings": 350,
+    "docs_gc_knowledge_fabric_findings": 67,
+    "findings_by_kind": {
+      "doc_english_line": 288,
+      "doc_english_heavy": 61,
+      "software_english_user_text": 1
+    }
+  },
+  "delta": {
+    "findings": -10,
+    "docs_gc_knowledge_fabric_findings": -10
+  },
+  "boundaries": {
+    "bulk_rewrite": false,
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  }
+}

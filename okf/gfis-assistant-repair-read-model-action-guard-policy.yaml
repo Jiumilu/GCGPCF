@@ -1,0 +1,140 @@
+policy_id: okf.gfis_assistant_repair_read_model_action_guard_policy
+version: v1.0
+owner: GFIS
+status: draft
+last_reviewed: "2026-06-20"
+purpose: >
+  Define local dry-run button-level action guards derived from DKS-115 GFIS
+  Assistant repair admission read models. Action guards classify read-model
+  buttons and actions as display-only prompts or blocked write actions. They
+  do not create action receipts, read receipts, admission records, review
+  queues, KWE work items, confirmation records, decision records, WAES gate
+  results, evidence records, lifecycle changes, business writes, revenue or
+  score confirmations, or external API calls.
+
+required_fields:
+  - action_guard_id
+  - read_model_ref
+  - admission_packet_ref
+  - tenant_id
+  - project_id
+  - surface
+  - view_type
+  - action_id
+  - action_kind
+  - guard_status
+  - guard_decision
+  - display_label_ref
+  - reason_refs
+  - blocked_actions
+  - creates_action_receipt
+  - creates_read_receipt
+  - creates_admission_record
+  - creates_review_queue_item
+  - creates_kwe_work_item
+  - creates_confirmation_record
+  - creates_decision_record
+  - creates_waes_gate_result
+  - persists_evidence
+  - approves_business_write
+  - promotes_lifecycle
+  - completes_committee_decision
+  - no_write
+
+action_kinds:
+  - display_only
+  - repair_prompt
+  - metadata_boundary_prompt
+  - committee_note_prompt
+  - freeze_note_prompt
+  - blocked_write_action
+
+guard_statuses:
+  - allowed_display_only
+  - repair_prompt_only
+  - metadata_prompt_only
+  - committee_prompt_only
+  - freeze_prompt_only
+  - blocked_no_write
+
+guard_decisions:
+  - show_only
+  - show_repair_prompt
+  - show_metadata_boundary_prompt
+  - show_committee_note_prompt
+  - show_freeze_note_prompt
+  - block_write_action
+
+allowed_display_actions:
+  - view_admission_summary
+  - view_handoff_summary
+  - view_missing_requirements
+  - view_metadata_boundary
+  - view_committee_note
+  - view_freeze_note
+  - view_no_write_notice
+  - view_next_step_candidate
+
+blocked_actions:
+  - create_action_receipt
+  - create_read_receipt
+  - create_admission_record
+  - create_review_queue_item
+  - create_kwe_work_item
+  - create_confirmation_record
+  - create_decision_record
+  - create_waes_gate_result
+  - persist_evidence
+  - approve_business_write
+  - promote_lifecycle
+  - complete_committee_decision
+
+hard_boundaries:
+  action_guard_only: true
+  action_guard_is_not_action_receipt: true
+  action_guard_is_not_read_receipt: true
+  action_guard_is_not_admission_record: true
+  action_guard_is_not_review_queue_item: true
+  action_guard_is_not_kwe_work_item: true
+  action_guard_is_not_confirmation: true
+  action_guard_is_not_decision_record: true
+  action_guard_is_not_waes_result: true
+  action_guard_is_not_business_writeback: true
+  creates_action_receipt_must_be_false: true
+  creates_read_receipt_must_be_false: true
+  creates_admission_record_must_be_false: true
+  creates_review_queue_item_must_be_false: true
+  creates_kwe_work_item_must_be_false: true
+  creates_confirmation_record_must_be_false: true
+  creates_decision_record_must_be_false: true
+  creates_waes_gate_result_must_be_false: true
+  persists_evidence_must_be_false: true
+  approves_business_write_must_be_false: true
+  promotes_lifecycle_must_be_false: true
+  completes_committee_decision_must_be_false: true
+
+no_write_guards:
+  writes_gfis: 0
+  writes_gpc: 0
+  writes_erp: 0
+  writes_mes: 0
+  writes_waes_gate_result: 0
+  writes_kwe_work_item: 0
+  writes_action_receipt: 0
+  writes_read_receipt: 0
+  writes_admission_record: 0
+  writes_review_queue_item: 0
+  writes_confirmation_record: 0
+  writes_decision_record: 0
+  writes_gap_record: 0
+  writes_bounty_record: 0
+  writes_kds_lifecycle: 0
+  writes_kds_fact: 0
+  writes_kds_accepted_fact: 0
+  writes_evidence_record: 0
+  writes_target_receipt: 0
+  writes_committee_decision_completion: 0
+  writes_revenue_or_score_confirmation: 0
+  writes_quota_transfer: 0
+  writes_bounty_settlement: 0
+  writes_external_api: 0

@@ -1,0 +1,56 @@
+{
+  "evidence_id": "LOCALIZATION-DEBT-GCKF-HEADING-REPAIR-D93-20260622",
+  "loop_round": "GPCF-GCKF-P0-D93-001",
+  "execution_mode": "local_evidence_no_write",
+  "scope": "docs/gc-knowledge-fabric heading-only localization repair",
+  "changed_files": [
+    "docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-acknowledgement-routing-receipt-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-assignment-acknowledgement-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-rollback-drill-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-routing-package-acknowledgement-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-routing-package-intake-guard-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-routing-receipt-reviewer-acceptance-precheck-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-routing-reviewer-assignment-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-signer-receipt-escalation-digest-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-signer-receipt-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-supplement-completeness-precheck-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-supplement-precheck-repair-request-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-execution-verification-plan-preview-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-final-execution-guard-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-final-execution-request-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/formal-evidence-write-action-guard-dry-run-v0.1.md",
+    "docs/gc-knowledge-fabric/future-formal-write-execution-preflight-dry-run-v0.1.md"
+  ],
+  "before": {
+    "localization_gate": "fail",
+    "findings": 331,
+    "docs_gc_knowledge_fabric_findings": 41,
+    "docs_gc_knowledge_fabric_h1_findings": 36
+  },
+  "after": {
+    "localization_gate": "fail",
+    "findings": 315,
+    "docs_gc_knowledge_fabric_findings": 25,
+    "docs_gc_knowledge_fabric_h1_findings": 20,
+    "findings_by_kind": {
+      "doc_english_heavy": 68,
+      "doc_english_line": 246,
+      "software_english_user_text": 1
+    }
+  },
+  "delta": {
+    "findings": -16,
+    "docs_gc_knowledge_fabric_findings": -16,
+    "docs_gc_knowledge_fabric_h1_findings": -16
+  },
+  "boundaries": {
+    "bulk_rewrite": false,
+    "real_kds_api_write": false,
+    "business_system_writeback": false,
+    "status_upgrade": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "gfis_real_business_lane": "repair_required"
+  }
+}

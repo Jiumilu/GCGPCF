@@ -1,0 +1,20 @@
+{
+  "id": "gc-knowledge-fabric-dks-086-four-pool-ledger-p0-policy-smoke",
+  "description": "Static no-write smoke for four-pool P0 ledger boundary.",
+  "expected": {
+    "poolCount": 4,
+    "requiredPools": ["contribution_points", "revenue_pool", "ai_quota_pool", "bounty_pool"],
+    "formalRevenueRequiresCashReceived": true,
+    "invoicedRevenueIsFinancialStatisticsOnly": true,
+    "potentialRevenueMustNotAutoPromote": true,
+    "contributionConfirmedScoreRequiresHumanOrCommittee": true,
+    "selfPurchasedQuotaExcludedFromUnifiedRevenuePool": true,
+    "bountySettlementRequiresWaesHumanAcceptanceAndDisputeWindowClosed": true,
+    "majorDisputeCanFreezeAllFourPools": true,
+    "writesScoreConfirmation": 0,
+    "writesRevenueDistribution": 0,
+    "writesQuotaTransfer": 0,
+    "writesBountySettlement": 0,
+    "writesExternalApi": 0
+  }
+}
