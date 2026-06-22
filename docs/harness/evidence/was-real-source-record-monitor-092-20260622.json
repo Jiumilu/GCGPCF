@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-092-20260622",
+  "status": "was_real_source_record_monitor_092_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-092",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-091",
+  "purpose": "Ninety-second independent monitor pass for green supply-chain AI assistance, automated decision, model governance, prompt lineage, human review, bias test, output provenance, and rollback evidence boundaries.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "ai_assisted_decision_policy_gaps": 0,
+    "model_version_registry_gaps": 0,
+    "prompt_template_approval_record_gaps": 0,
+    "human_review_decision_log_gaps": 0,
+    "bias_and_fairness_test_report_gaps": 0,
+    "ai_output_provenance_record_gaps": 0,
+    "automated_decision_rollback_record_gaps": 0,
+    "accepted_for_ai_governance_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "ai_governance_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "ai_assisted_decision_policy_gap",
+      "model_version_registry_gap",
+      "prompt_template_approval_record_gap",
+      "human_review_decision_log_gap",
+      "bias_and_fairness_test_report_gap",
+      "ai_output_provenance_record_gap",
+      "automated_decision_rollback_record_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "ai_governance_requirements": [
+    "ai_assisted_decision_policy",
+    "model_version_registry",
+    "prompt_template_approval_record",
+    "human_review_decision_log",
+    "bias_and_fairness_test_report",
+    "ai_output_provenance_record",
+    "automated_decision_rollback_record"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-093",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer AI assisted decision policy, model version registry, prompt template approval, human review decision log, bias and fairness test report, AI output provenance record, or automated decision rollback record",
+    "does not allow LLM, RAG, Brain, PKC, or Loop candidate output to become official KDS fact or runtime writeback without WAES/KDS/runtime evidence"
+  ]
+}

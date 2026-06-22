@@ -1,0 +1,188 @@
+{
+  "id": "agent-reach-p8-project-group-full-live-search-batch-authorization-request-20260622",
+  "purpose": "collect_machine_valid_p8_batch_execution_authorization_before_full_project_group_live_search",
+  "authorization_status": "pending_human_authorization",
+  "generated_local_authorization_files": false,
+  "execution_allowed_now": false,
+  "source_plan": "fixtures/agent-reach/project-group-full-live-search-coverage-plan-20260622.json",
+  "batch_authorization_requests": [
+    {
+      "batch_id": "p8-batch-1",
+      "required_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
+      "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json",
+      "projects": [
+        "GPCF",
+        "KDS",
+        "WAES",
+        "Brain",
+        "GFIS"
+      ],
+      "query_ids": [
+        "p8-q01",
+        "p8-q02",
+        "p8-q03",
+        "p8-q04",
+        "p8-q05"
+      ],
+      "required_authorization_fields": {
+        "authorization_id": "GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-1-20260622-001",
+        "authorization_status": "approved_for_p8_project_group_full_live_search_batch",
+        "authorized_by": "lujunxiang",
+        "authorized_at": "<required-iso8601>",
+        "expires_at": "<required-iso8601>",
+        "batch_id": "p8-batch-1",
+        "allowed_channels": [
+          "web",
+          "rss",
+          "bilibili"
+        ],
+        "max_queries": 5,
+        "max_results_per_query": 10,
+        "allow_agent_reach_binary_invocation": false,
+        "allow_external_network": true,
+        "allow_write_evidence_only": true,
+        "forbidden_actions": [
+          "credential_write",
+          "browser_cookie_extraction",
+          "kds_canonical_write",
+          "gfis_source_of_record_write",
+          "production_config_write",
+          "global_mcp_config_write",
+          "production_integration",
+          "accepted_claim",
+          "integrated_claim",
+          "production_ready_claim"
+        ],
+        "logging_redaction": {
+          "redact_tokens": true,
+          "redact_cookies": true,
+          "redact_authorization_headers": true,
+          "redact_query_personal_data": true,
+          "persist_redacted_snippets_only": true
+        }
+      }
+    },
+    {
+      "batch_id": "p8-batch-2",
+      "required_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
+      "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json",
+      "projects": [
+        "GPC",
+        "PVAOS",
+        "PKC",
+        "XiaoC",
+        "XGD"
+      ],
+      "query_ids": [
+        "p8-q06",
+        "p8-q07",
+        "p8-q08",
+        "p8-q09",
+        "p8-q10"
+      ],
+      "required_authorization_fields": {
+        "authorization_id": "GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-2-20260622-001",
+        "authorization_status": "approved_for_p8_project_group_full_live_search_batch",
+        "authorized_by": "lujunxiang",
+        "authorized_at": "<required-iso8601>",
+        "expires_at": "<required-iso8601>",
+        "batch_id": "p8-batch-2",
+        "allowed_channels": [
+          "web",
+          "rss",
+          "bilibili"
+        ],
+        "max_queries": 5,
+        "max_results_per_query": 10,
+        "allow_agent_reach_binary_invocation": false,
+        "allow_external_network": true,
+        "allow_write_evidence_only": true,
+        "forbidden_actions": [
+          "credential_write",
+          "browser_cookie_extraction",
+          "kds_canonical_write",
+          "gfis_source_of_record_write",
+          "production_config_write",
+          "global_mcp_config_write",
+          "production_integration",
+          "accepted_claim",
+          "integrated_claim",
+          "production_ready_claim"
+        ],
+        "logging_redaction": {
+          "redact_tokens": true,
+          "redact_cookies": true,
+          "redact_authorization_headers": true,
+          "redact_query_personal_data": true,
+          "persist_redacted_snippets_only": true
+        }
+      }
+    },
+    {
+      "batch_id": "p8-batch-3",
+      "required_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3",
+      "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json",
+      "projects": [
+        "XiaoG",
+        "MMC",
+        "Studio",
+        "WAS"
+      ],
+      "query_ids": [
+        "p8-q11",
+        "p8-q12",
+        "p8-q13",
+        "p8-q14"
+      ],
+      "required_authorization_fields": {
+        "authorization_id": "GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-3-20260622-001",
+        "authorization_status": "approved_for_p8_project_group_full_live_search_batch",
+        "authorized_by": "lujunxiang",
+        "authorized_at": "<required-iso8601>",
+        "expires_at": "<required-iso8601>",
+        "batch_id": "p8-batch-3",
+        "allowed_channels": [
+          "web",
+          "rss",
+          "bilibili"
+        ],
+        "max_queries": 4,
+        "max_results_per_query": 10,
+        "allow_agent_reach_binary_invocation": false,
+        "allow_external_network": true,
+        "allow_write_evidence_only": true,
+        "forbidden_actions": [
+          "credential_write",
+          "browser_cookie_extraction",
+          "kds_canonical_write",
+          "gfis_source_of_record_write",
+          "production_config_write",
+          "global_mcp_config_write",
+          "production_integration",
+          "accepted_claim",
+          "integrated_claim",
+          "production_ready_claim"
+        ],
+        "logging_redaction": {
+          "redact_tokens": true,
+          "redact_cookies": true,
+          "redact_authorization_headers": true,
+          "redact_query_personal_data": true,
+          "persist_redacted_snippets_only": true
+        }
+      }
+    }
+  ],
+  "next_required_runtime_artifact": "tools/kds-sync/run_agent_reach_project_group_full_live_search_batch.py",
+  "required_quality_gate_after_execution": "python3 tools/kds-sync/validate_agent_reach_project_group_full_live_coverage_output.py",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "evidenceId": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-COMMITTEE-ACCEPTANCE-ACKNOWLEDGEMENT-NOTIFICATION-PREVIEW-CURRENT-STATE-D170-20260622",
+  "fixturePath": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-preview-current-state-d170-20260622.json",
+  "historicalSource": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-preview-dry-run-v0.1.json",
+  "currentSource": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-routing-dispatch-precheck-current-state-d169-20260622.json",
+  "current_committee_acceptance_acknowledgement_notification_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "execution_mode": "local_evidence_no_write",
+  "execution_status": "not_executed",
+  "holdContextRefs": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+  ],
+  "package_scope": {
+    "notification_roles": 17,
+    "notification_sections": 20,
+    "candidate_notification_fields": 18,
+    "notification_readiness_prerequisites": 17,
+    "notification_decision_constraints": 25,
+    "notification_checks": 59,
+    "required_notification_refs": 40,
+    "blocking_conditions": 20,
+    "forbidden_actions": 17,
+    "hold_context_refs": 6
+  },
+  "gateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "validator": "tools/kds-sync/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_preview_current_state_d170.py"
+}

@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-090-20260622",
+  "status": "was_real_source_record_monitor_090_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-090",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-089",
+  "purpose": "Ninetieth independent monitor pass for digital MRV, meter calibration, data acquisition logs, emission calculation workbooks, chain-of-custody signatures, anomaly correction records, verifier data packages, and retention access-control logs.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "meter_calibration_certificate_gaps": 0,
+    "mrv_data_acquisition_log_gaps": 0,
+    "emissions_calculation_workbook_gaps": 0,
+    "digital_chain_of_custody_signature_gaps": 0,
+    "mrv_anomaly_correction_record_gaps": 0,
+    "third_party_verifier_data_package_gaps": 0,
+    "retention_access_control_log_gaps": 0,
+    "accepted_for_digital_mrv_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "digital_mrv_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "meter_calibration_certificate_gap",
+      "mrv_data_acquisition_log_gap",
+      "emissions_calculation_workbook_gap",
+      "digital_chain_of_custody_signature_gap",
+      "mrv_anomaly_correction_record_gap",
+      "third_party_verifier_data_package_gap",
+      "retention_access_control_log_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "digital_mrv_requirements": [
+    "meter_calibration_certificate",
+    "mrv_data_acquisition_log",
+    "emissions_calculation_workbook",
+    "digital_chain_of_custody_signature",
+    "mrv_anomaly_correction_record",
+    "third_party_verifier_data_package",
+    "retention_access_control_log"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-091",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer meter calibration certificate, MRV data acquisition log, emissions calculation workbook, digital chain-of-custody signature, anomaly correction record, verifier data package, or retention access-control log",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

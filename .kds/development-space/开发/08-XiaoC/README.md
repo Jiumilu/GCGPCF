@@ -1,6 +1,6 @@
 # XiaoC 开发文档空间
 
-生成日期：2026-06-22
+生成日期：2026-06-23
 
 用途：KDS `开发` 空间中 `XiaoC` 项目的受控文档入口。
 
@@ -11,13 +11,10 @@
 | GPCF-DOC-E164F62976 | GlobalCloud智能体团队6个专项首轮实施前验证执行台账 | 05-agent-team/GlobalCloud智能体团队6个专项首轮实施前验证执行台账.md | controlled |
 | GPCF-DOC-3874DD0406 | GlobalCloud 智能体团队PMBOK项目管理台账 | 05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md | controlled |
 | GPCF-DOC-8CDB82A404 | GlobalCloud 智能体团队下一步执行清单 | 05-agent-team/GlobalCloud智能体团队下一步执行清单.md | controlled |
-| GPCF-DOC-7249EEECFE | GlobalCloud 智能体团队专项执行版包模板 | 05-agent-team/GlobalCloud智能体团队专项执行版包模板.md | controlled |
 | GPCF-DOC-5D6CD718DA | GlobalCloud 智能体团队侧边聊天10条主线-当前实施准备完成度总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md | controlled |
 | GPCF-DOC-62063BBDE9 | GlobalCloud 智能体团队实施前准备差距清单 | 05-agent-team/GlobalCloud智能体团队实施前准备差距清单.md | controlled |
 | GPCF-DOC-3D6A5A4056 | GlobalCloud 智能体团队实施前准备目标模式要求 | 05-agent-team/GlobalCloud智能体团队实施前准备目标模式要求.md | controlled |
 | GPCF-DOC-D899DB2508 | GlobalCloud 智能体团队实施前证据与阻塞总表 | 05-agent-team/GlobalCloud智能体团队实施前证据与阻塞总表.md | controlled |
-| GPCF-DOC-FF53116C54 | GlobalCloud智能体团队文档全量盘点与分类总表 | 05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md | controlled |
-| GPCF-DOC-A080E39115 | GlobalCloud智能体团队文档清理与补充完善建议 | 05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md | controlled |
 | GPCF-DOC-C892CAB85A | GlobalCloud 智能体团队本阶段首轮实施前验证目标 | 05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md | controlled |
 | GPCF-DOC-A8F6B69EE5 | GlobalCloud 智能体团队阶段行动计划 | 05-agent-team/GlobalCloud智能体团队阶段行动计划.md | controlled |
 | GPCF-DOC-0D3224DFB9 | GlobalCloud 智能体实施团队准备度评估 | 05-agent-team/GlobalCloud智能体实施团队准备度评估.md | controlled |

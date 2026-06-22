@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系状态升级与验收放行规范.md
 source_path: 02-governance/GlobalCloud绿色供应链体系状态升级与验收放行规范.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

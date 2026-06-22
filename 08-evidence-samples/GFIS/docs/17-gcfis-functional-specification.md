@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/01-GFIS/docs/17-gcfis-functional-specification.md
 source_path: 08-evidence-samples/GFIS/docs/17-gcfis-functional-specification.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

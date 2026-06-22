@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md
 source_path: .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -37,5 +37,5 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | WAES | archive |
-| GPCF-DOC-9AF8C291EB | Acceptance Matrix: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | WAES | archive |
+| GPCF-DOC-9AF8C291EB | acceptance-matrix | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | WAES | archive |
 | GPCF-DOC-4609775857 | status-audit | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | WAES | archive |

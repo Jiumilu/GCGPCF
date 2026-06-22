@@ -1,0 +1,93 @@
+{
+  "authorization_state": {
+    "execution_allowed_now": false,
+    "generated_local_authorization_files": false,
+    "local_authorization_files": [
+      {
+        "batch_id": "p8-batch-1",
+        "exists": false,
+        "path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json"
+      },
+      {
+        "batch_id": "p8-batch-2",
+        "exists": false,
+        "path": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json"
+      },
+      {
+        "batch_id": "p8-batch-3",
+        "exists": false,
+        "path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json"
+      }
+    ],
+    "missing_authorization_batches": [
+      "p8-batch-1",
+      "p8-batch-2",
+      "p8-batch-3"
+    ],
+    "request_package": "fixtures/agent-reach/project-group-full-live-search-batch-authorization.request.json",
+    "request_status": "pending_human_authorization",
+    "required_authorization_texts": [
+      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
+      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
+      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3"
+    ]
+  },
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-22",
+  "id": "agent-reach-p8-execution-audit-bundle-20260622",
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "output_quality_gate": {
+    "reasons": [],
+    "status": "full_project_group_live_coverage_output_quality_gate_ready"
+  },
+  "pipeline_state": {
+    "missing_authorization_batches": [
+      "p8-batch-1",
+      "p8-batch-2",
+      "p8-batch-3"
+    ],
+    "next_required_authorizations": [
+      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
+      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
+      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3"
+    ],
+    "quality_preflight": {
+      "output_quality_gate_reasons": [],
+      "output_quality_gate_status": "full_project_group_live_coverage_output_quality_gate_ready",
+      "query_quality_failing_count": 0,
+      "query_quality_status": "p8_query_quality_preflight_pass"
+    },
+    "status": "blocked_pending_batch_authorization"
+  },
+  "query_preflight": {
+    "channel_coverage": 1.0,
+    "duplicate_normalized_query_count": 0,
+    "failing_query_count": 0,
+    "project_coverage": 1.0,
+    "query_count": 14,
+    "status": "p8_query_quality_preflight_pass"
+  },
+  "ready_for_human_authorization": true,
+  "round": "GPCF-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-001",
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_execution_audit_ready_for_human_authorization"
+}

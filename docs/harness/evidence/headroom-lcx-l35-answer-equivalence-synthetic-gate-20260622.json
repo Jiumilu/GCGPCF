@@ -1,0 +1,3282 @@
+{
+  "evidence_id": "HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001",
+  "date": "2026-06-22",
+  "status": "l3_5_answer_equivalence_synthetic_gate_pass_check_only",
+  "scope": "l3_5_synthetic_answer_equivalence_only",
+  "source_evidence": "docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.json",
+  "project_count": 15,
+  "scenario_count": 3,
+  "sample_count": 45,
+  "samples": [
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GPCF-answer_summary",
+      "project_id": "GPCF",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GPCF",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPCF-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPCF-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPCF/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPCF"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPCF::answer_summary",
+          "PROJECT::GPCF",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GPCF",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPCF-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPCF-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPCF/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPCF"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPCF::answer_summary",
+          "PROJECT::GPCF",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "387bb6845ebb1580b4b049b6052153574b3b99001ef42cb5bda6ea2ad8961fa2",
+      "after_hash": "387bb6845ebb1580b4b049b6052153574b3b99001ef42cb5bda6ea2ad8961fa2",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GPCF-citation_preservation",
+      "project_id": "GPCF",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GPCF",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPCF-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPCF-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPCF/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPCF"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPCF::citation_preservation",
+          "PROJECT::GPCF",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GPCF",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPCF-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPCF-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPCF/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPCF"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPCF::citation_preservation",
+          "PROJECT::GPCF",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "ae8ff9137782062e118995da6b124dd99d34828a10cbf4b1f4b1aae1fb3dc87b",
+      "after_hash": "ae8ff9137782062e118995da6b124dd99d34828a10cbf4b1f4b1aae1fb3dc87b",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GPCF-project_boundary_marker",
+      "project_id": "GPCF",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GPCF",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPCF-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPCF-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPCF/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPCF"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPCF::project_boundary_marker",
+          "PROJECT::GPCF",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GPCF",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPCF-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPCF-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPCF/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPCF"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPCF::project_boundary_marker",
+          "PROJECT::GPCF",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "d0625592a06b48546f87400146072933dfcf1e20e26a2a417fd6d9d5a3e2f28e",
+      "after_hash": "d0625592a06b48546f87400146072933dfcf1e20e26a2a417fd6d9d5a3e2f28e",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-KDS-answer_summary",
+      "project_id": "KDS",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "KDS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "KDS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "KDS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/KDS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "KDS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::KDS::answer_summary",
+          "PROJECT::KDS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "KDS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "KDS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "KDS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/KDS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "KDS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::KDS::answer_summary",
+          "PROJECT::KDS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "60b025aaa82ea703d354ddf81eb625a4d236705948f86c74b4142df60529dce7",
+      "after_hash": "60b025aaa82ea703d354ddf81eb625a4d236705948f86c74b4142df60529dce7",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-KDS-citation_preservation",
+      "project_id": "KDS",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "KDS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "KDS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "KDS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/KDS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "KDS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::KDS::citation_preservation",
+          "PROJECT::KDS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "KDS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "KDS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "KDS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/KDS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "KDS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::KDS::citation_preservation",
+          "PROJECT::KDS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "6b402b80208af45e2077903bfad91fd07020c9216208e9a8510696e5fd6dc554",
+      "after_hash": "6b402b80208af45e2077903bfad91fd07020c9216208e9a8510696e5fd6dc554",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-KDS-project_boundary_marker",
+      "project_id": "KDS",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "KDS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "KDS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "KDS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/KDS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "KDS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::KDS::project_boundary_marker",
+          "PROJECT::KDS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "KDS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "KDS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "KDS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/KDS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "KDS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::KDS::project_boundary_marker",
+          "PROJECT::KDS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "528465b9195ae88304258f12575bd09f3c61714237d93167ab6b40b45cc52ea1",
+      "after_hash": "528465b9195ae88304258f12575bd09f3c61714237d93167ab6b40b45cc52ea1",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Brain-answer_summary",
+      "project_id": "Brain",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Brain",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Brain-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Brain-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/Brain/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Brain"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Brain::answer_summary",
+          "PROJECT::Brain",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Brain",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Brain-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Brain-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/Brain/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Brain"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Brain::answer_summary",
+          "PROJECT::Brain",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "7481beb959d31e2f2abb6ff90e7f9f6e33eb48121d08169eb59b045200d184e1",
+      "after_hash": "7481beb959d31e2f2abb6ff90e7f9f6e33eb48121d08169eb59b045200d184e1",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Brain-citation_preservation",
+      "project_id": "Brain",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Brain",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Brain-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Brain-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/Brain/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Brain"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Brain::citation_preservation",
+          "PROJECT::Brain",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Brain",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Brain-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Brain-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/Brain/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Brain"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Brain::citation_preservation",
+          "PROJECT::Brain",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "a766cb072d8df71a4e0e795eeeffa23eabc011c68b047b11dcc3fc8179a5bf21",
+      "after_hash": "a766cb072d8df71a4e0e795eeeffa23eabc011c68b047b11dcc3fc8179a5bf21",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Brain-project_boundary_marker",
+      "project_id": "Brain",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Brain",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Brain-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Brain-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/Brain/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Brain"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Brain::project_boundary_marker",
+          "PROJECT::Brain",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Brain",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Brain-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Brain-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/Brain/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Brain"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Brain::project_boundary_marker",
+          "PROJECT::Brain",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "6b3bf4e7329c101e46b73ec35b511c2bfa6b85e6e195db4d8dbe1cfed42b1caf",
+      "after_hash": "6b3bf4e7329c101e46b73ec35b511c2bfa6b85e6e195db4d8dbe1cfed42b1caf",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAES-answer_summary",
+      "project_id": "WAES",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "WAES",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAES-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAES-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAES/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAES"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAES::answer_summary",
+          "PROJECT::WAES",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "WAES",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAES-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAES-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAES/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAES"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAES::answer_summary",
+          "PROJECT::WAES",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "d2a242d4a9ae89e5dbf0dc7203a50e3f829fed39efdfeb8f698dc358cf8afa50",
+      "after_hash": "d2a242d4a9ae89e5dbf0dc7203a50e3f829fed39efdfeb8f698dc358cf8afa50",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAES-citation_preservation",
+      "project_id": "WAES",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "WAES",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAES-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAES-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAES/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAES"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAES::citation_preservation",
+          "PROJECT::WAES",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "WAES",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAES-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAES-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAES/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAES"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAES::citation_preservation",
+          "PROJECT::WAES",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "6dfe3b03690132c3fa41b1ebbc9765e5fd2dd85a7152a308d122a32131d59ad8",
+      "after_hash": "6dfe3b03690132c3fa41b1ebbc9765e5fd2dd85a7152a308d122a32131d59ad8",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAES-project_boundary_marker",
+      "project_id": "WAES",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "WAES",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAES-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAES-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAES/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAES"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAES::project_boundary_marker",
+          "PROJECT::WAES",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "WAES",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAES-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAES-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAES/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAES"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAES::project_boundary_marker",
+          "PROJECT::WAES",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "256f8199d24111f0c6a0bf2b42907a2cef987cf0038a3b58d249b55ab9b4a93e",
+      "after_hash": "256f8199d24111f0c6a0bf2b42907a2cef987cf0038a3b58d249b55ab9b4a93e",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GFIS-answer_summary",
+      "project_id": "GFIS",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GFIS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GFIS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GFIS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/GFIS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GFIS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GFIS::answer_summary",
+          "PROJECT::GFIS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GFIS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GFIS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GFIS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/GFIS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GFIS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GFIS::answer_summary",
+          "PROJECT::GFIS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "738dc621d27930807e0a0b5b770d6d86ac006a63efda5c020d61cde2b482caa8",
+      "after_hash": "738dc621d27930807e0a0b5b770d6d86ac006a63efda5c020d61cde2b482caa8",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GFIS-citation_preservation",
+      "project_id": "GFIS",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GFIS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GFIS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GFIS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/GFIS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GFIS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GFIS::citation_preservation",
+          "PROJECT::GFIS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GFIS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GFIS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GFIS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/GFIS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GFIS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GFIS::citation_preservation",
+          "PROJECT::GFIS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "331c87198f8952e6c5c8e541ddd396e6a44e1c4f447bb2b0fe792b4f08a9a439",
+      "after_hash": "331c87198f8952e6c5c8e541ddd396e6a44e1c4f447bb2b0fe792b4f08a9a439",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GFIS-project_boundary_marker",
+      "project_id": "GFIS",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GFIS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GFIS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GFIS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/GFIS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GFIS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GFIS::project_boundary_marker",
+          "PROJECT::GFIS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GFIS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GFIS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GFIS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/GFIS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GFIS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GFIS::project_boundary_marker",
+          "PROJECT::GFIS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "35dde7fcb64bf00575b9ca0be9900e5c673a989aa8a7f0eb8cb6c36b61ded7ee",
+      "after_hash": "35dde7fcb64bf00575b9ca0be9900e5c673a989aa8a7f0eb8cb6c36b61ded7ee",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GPC-answer_summary",
+      "project_id": "GPC",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GPC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPC::answer_summary",
+          "PROJECT::GPC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GPC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPC::answer_summary",
+          "PROJECT::GPC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "ec37cecebc72a5780ca7af634239d007bdfc198408f7fa89da3647ab89cfe62b",
+      "after_hash": "ec37cecebc72a5780ca7af634239d007bdfc198408f7fa89da3647ab89cfe62b",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GPC-citation_preservation",
+      "project_id": "GPC",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GPC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPC::citation_preservation",
+          "PROJECT::GPC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GPC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPC::citation_preservation",
+          "PROJECT::GPC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "94dcb09682da0144f63e0ee179a69de8355864df0b8dffbb4b9129c5144e5d30",
+      "after_hash": "94dcb09682da0144f63e0ee179a69de8355864df0b8dffbb4b9129c5144e5d30",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-GPC-project_boundary_marker",
+      "project_id": "GPC",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "GPC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPC::project_boundary_marker",
+          "PROJECT::GPC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "GPC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "GPC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "GPC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/GPC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "GPC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::GPC::project_boundary_marker",
+          "PROJECT::GPC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "28a125a3dddd0414a23495ac8bda660eed4ec54929eb96e94a55064115755009",
+      "after_hash": "28a125a3dddd0414a23495ac8bda660eed4ec54929eb96e94a55064115755009",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-PVAOS-answer_summary",
+      "project_id": "PVAOS",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "PVAOS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PVAOS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PVAOS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/PVAOS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PVAOS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PVAOS::answer_summary",
+          "PROJECT::PVAOS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "PVAOS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PVAOS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PVAOS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/PVAOS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PVAOS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PVAOS::answer_summary",
+          "PROJECT::PVAOS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "0f49400a94e3b81a24393e540b4253b30d00517db0888413423a896fd8b1dd31",
+      "after_hash": "0f49400a94e3b81a24393e540b4253b30d00517db0888413423a896fd8b1dd31",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-PVAOS-citation_preservation",
+      "project_id": "PVAOS",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "PVAOS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PVAOS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PVAOS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/PVAOS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PVAOS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PVAOS::citation_preservation",
+          "PROJECT::PVAOS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "PVAOS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PVAOS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PVAOS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/PVAOS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PVAOS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PVAOS::citation_preservation",
+          "PROJECT::PVAOS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "94565a1f7b6a645b612417be9e7a199cbda46769b3fa9c4ad3df82e3d39dbd96",
+      "after_hash": "94565a1f7b6a645b612417be9e7a199cbda46769b3fa9c4ad3df82e3d39dbd96",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-PVAOS-project_boundary_marker",
+      "project_id": "PVAOS",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "PVAOS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PVAOS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PVAOS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/PVAOS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PVAOS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PVAOS::project_boundary_marker",
+          "PROJECT::PVAOS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "PVAOS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PVAOS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PVAOS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/PVAOS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PVAOS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PVAOS::project_boundary_marker",
+          "PROJECT::PVAOS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "d8eeb9e0f3ec1df0ee35dbefa778522bf2c59423e236fc90f844e1eaa32c212b",
+      "after_hash": "d8eeb9e0f3ec1df0ee35dbefa778522bf2c59423e236fc90f844e1eaa32c212b",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Edge-answer_summary",
+      "project_id": "Edge",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Edge",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Edge-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Edge-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/Edge/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Edge"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Edge::answer_summary",
+          "PROJECT::Edge",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Edge",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Edge-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Edge-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/Edge/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Edge"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Edge::answer_summary",
+          "PROJECT::Edge",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "7f3fab439427171971088db50629a3c6123fa68c9a0c497a7101189edc7daca8",
+      "after_hash": "7f3fab439427171971088db50629a3c6123fa68c9a0c497a7101189edc7daca8",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Edge-citation_preservation",
+      "project_id": "Edge",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Edge",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Edge-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Edge-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/Edge/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Edge"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Edge::citation_preservation",
+          "PROJECT::Edge",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Edge",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Edge-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Edge-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/Edge/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Edge"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Edge::citation_preservation",
+          "PROJECT::Edge",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "1d18b13b4055322c89b3a5cf47e424eb1111c720a9bc8cd563d436e41a3cd72e",
+      "after_hash": "1d18b13b4055322c89b3a5cf47e424eb1111c720a9bc8cd563d436e41a3cd72e",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Edge-project_boundary_marker",
+      "project_id": "Edge",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Edge",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Edge-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Edge-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/Edge/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Edge"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Edge::project_boundary_marker",
+          "PROJECT::Edge",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Edge",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Edge-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Edge-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/Edge/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Edge"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Edge::project_boundary_marker",
+          "PROJECT::Edge",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "4fee20693a37e232eacca1be595cf6f66d6583d43d40bab9d20797d6c3b3dc33",
+      "after_hash": "4fee20693a37e232eacca1be595cf6f66d6583d43d40bab9d20797d6c3b3dc33",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-PKC-answer_summary",
+      "project_id": "PKC",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "PKC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PKC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PKC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/PKC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PKC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PKC::answer_summary",
+          "PROJECT::PKC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "PKC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PKC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PKC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/PKC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PKC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PKC::answer_summary",
+          "PROJECT::PKC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "3a1f405c0dec224ef27eb5817218919c1e689b39786e4056924933496e5e6eef",
+      "after_hash": "3a1f405c0dec224ef27eb5817218919c1e689b39786e4056924933496e5e6eef",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-PKC-citation_preservation",
+      "project_id": "PKC",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "PKC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PKC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PKC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/PKC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PKC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PKC::citation_preservation",
+          "PROJECT::PKC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "PKC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PKC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PKC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/PKC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PKC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PKC::citation_preservation",
+          "PROJECT::PKC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "ec89159b289a8aa5f3aa39375050b5c1e6766f7605d75ef37c59f75675ced72a",
+      "after_hash": "ec89159b289a8aa5f3aa39375050b5c1e6766f7605d75ef37c59f75675ced72a",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-PKC-project_boundary_marker",
+      "project_id": "PKC",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "PKC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PKC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PKC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/PKC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PKC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PKC::project_boundary_marker",
+          "PROJECT::PKC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "PKC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "PKC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "PKC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/PKC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "PKC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::PKC::project_boundary_marker",
+          "PROJECT::PKC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "14256c66cbc66081a03690db261bc1dc4462599a10f8e0c2b06e871b3dde246b",
+      "after_hash": "14256c66cbc66081a03690db261bc1dc4462599a10f8e0c2b06e871b3dde246b",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XiaoC-answer_summary",
+      "project_id": "XiaoC",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XiaoC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoC::answer_summary",
+          "PROJECT::XiaoC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XiaoC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoC::answer_summary",
+          "PROJECT::XiaoC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "5b91925bd56263e9168f4329dce19f68b94c9f866eaa32f7936c7b3110cd07d5",
+      "after_hash": "5b91925bd56263e9168f4329dce19f68b94c9f866eaa32f7936c7b3110cd07d5",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XiaoC-citation_preservation",
+      "project_id": "XiaoC",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XiaoC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoC::citation_preservation",
+          "PROJECT::XiaoC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XiaoC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoC::citation_preservation",
+          "PROJECT::XiaoC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "0cfc9396df68a6515b4c25d48a0350362fa7c615171faff4352472b5c0b0d36e",
+      "after_hash": "0cfc9396df68a6515b4c25d48a0350362fa7c615171faff4352472b5c0b0d36e",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XiaoC-project_boundary_marker",
+      "project_id": "XiaoC",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XiaoC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoC::project_boundary_marker",
+          "PROJECT::XiaoC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XiaoC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoC::project_boundary_marker",
+          "PROJECT::XiaoC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "deaf4c66ce305e937eb08063e3359ac05f36e5c6b1c7ffb8ea679241fe0312b3",
+      "after_hash": "deaf4c66ce305e937eb08063e3359ac05f36e5c6b1c7ffb8ea679241fe0312b3",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XGD-answer_summary",
+      "project_id": "XGD",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XGD",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XGD-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XGD-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/XGD/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XGD"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XGD::answer_summary",
+          "PROJECT::XGD",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XGD",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XGD-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XGD-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/XGD/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XGD"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XGD::answer_summary",
+          "PROJECT::XGD",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "016a54e789de06f1a949abc279c141c77682ab8a7664f648d2434941afde642f",
+      "after_hash": "016a54e789de06f1a949abc279c141c77682ab8a7664f648d2434941afde642f",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XGD-citation_preservation",
+      "project_id": "XGD",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XGD",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XGD-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XGD-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/XGD/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XGD"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XGD::citation_preservation",
+          "PROJECT::XGD",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XGD",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XGD-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XGD-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/XGD/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XGD"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XGD::citation_preservation",
+          "PROJECT::XGD",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "db97109b53d001648b62667787deb8653b9bd2bed326c9ba1b6289f72bffbed0",
+      "after_hash": "db97109b53d001648b62667787deb8653b9bd2bed326c9ba1b6289f72bffbed0",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XGD-project_boundary_marker",
+      "project_id": "XGD",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XGD",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XGD-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XGD-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/XGD/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XGD"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XGD::project_boundary_marker",
+          "PROJECT::XGD",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XGD",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XGD-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XGD-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/XGD/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XGD"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XGD::project_boundary_marker",
+          "PROJECT::XGD",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "cfbf77fbdfb81797456b3a59bf59aa58d7396f668697f183f5f477bb29fb89b9",
+      "after_hash": "cfbf77fbdfb81797456b3a59bf59aa58d7396f668697f183f5f477bb29fb89b9",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XiaoG-answer_summary",
+      "project_id": "XiaoG",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XiaoG",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoG-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoG-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoG/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoG"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoG::answer_summary",
+          "PROJECT::XiaoG",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XiaoG",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoG-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoG-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoG/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoG"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoG::answer_summary",
+          "PROJECT::XiaoG",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "bcd36ea01f97245a4e030840503874310d1c54ec8698c40e00c7bb37d509c6c2",
+      "after_hash": "bcd36ea01f97245a4e030840503874310d1c54ec8698c40e00c7bb37d509c6c2",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XiaoG-citation_preservation",
+      "project_id": "XiaoG",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XiaoG",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoG-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoG-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoG/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoG"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoG::citation_preservation",
+          "PROJECT::XiaoG",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XiaoG",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoG-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoG-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoG/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoG"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoG::citation_preservation",
+          "PROJECT::XiaoG",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "610eb6b62b368f020dcd65515ab08fd405ef8c5d26b43fe3e0c62021b3dd00f7",
+      "after_hash": "610eb6b62b368f020dcd65515ab08fd405ef8c5d26b43fe3e0c62021b3dd00f7",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-XiaoG-project_boundary_marker",
+      "project_id": "XiaoG",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "XiaoG",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoG-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoG-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoG/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoG"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoG::project_boundary_marker",
+          "PROJECT::XiaoG",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "XiaoG",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "XiaoG-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "XiaoG-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/XiaoG/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "XiaoG"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::XiaoG::project_boundary_marker",
+          "PROJECT::XiaoG",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "6f95f6fd0171fc7eeee03732e93784ff58294c248e4854ae047e9ec6d89f1ad6",
+      "after_hash": "6f95f6fd0171fc7eeee03732e93784ff58294c248e4854ae047e9ec6d89f1ad6",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-MMC-answer_summary",
+      "project_id": "MMC",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "MMC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "MMC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "MMC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/MMC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "MMC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::MMC::answer_summary",
+          "PROJECT::MMC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "MMC",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "MMC-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "MMC-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/MMC/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "MMC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::MMC::answer_summary",
+          "PROJECT::MMC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "3be6e6bc66106977a70edee770a755e9c9217e7fd3feb7b3be55ddd61f955495",
+      "after_hash": "3be6e6bc66106977a70edee770a755e9c9217e7fd3feb7b3be55ddd61f955495",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-MMC-citation_preservation",
+      "project_id": "MMC",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "MMC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "MMC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "MMC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/MMC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "MMC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::MMC::citation_preservation",
+          "PROJECT::MMC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "MMC",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "MMC-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "MMC-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/MMC/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "MMC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::MMC::citation_preservation",
+          "PROJECT::MMC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "3a97b8922ba0a179da2081cc145ede72773ba33e8dba5bbfa0f05b6a692a1cc9",
+      "after_hash": "3a97b8922ba0a179da2081cc145ede72773ba33e8dba5bbfa0f05b6a692a1cc9",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-MMC-project_boundary_marker",
+      "project_id": "MMC",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "MMC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "MMC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "MMC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/MMC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "MMC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::MMC::project_boundary_marker",
+          "PROJECT::MMC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "MMC",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "MMC-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "MMC-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/MMC/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "MMC"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::MMC::project_boundary_marker",
+          "PROJECT::MMC",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "fc8a43318c6d0fd6531c660a8e6b70b9b9981d9e03f5e1c559dfebc357b69bb5",
+      "after_hash": "fc8a43318c6d0fd6531c660a8e6b70b9b9981d9e03f5e1c559dfebc357b69bb5",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Studio-answer_summary",
+      "project_id": "Studio",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Studio",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Studio-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Studio-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/Studio/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Studio"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Studio::answer_summary",
+          "PROJECT::Studio",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Studio",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Studio-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Studio-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/Studio/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Studio"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Studio::answer_summary",
+          "PROJECT::Studio",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "1b3492ca3b06920c23bcd5230ea423ec186d2293e8db2c7cccaf65b0cbf0da40",
+      "after_hash": "1b3492ca3b06920c23bcd5230ea423ec186d2293e8db2c7cccaf65b0cbf0da40",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Studio-citation_preservation",
+      "project_id": "Studio",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Studio",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Studio-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Studio-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/Studio/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Studio"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Studio::citation_preservation",
+          "PROJECT::Studio",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Studio",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Studio-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Studio-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/Studio/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Studio"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Studio::citation_preservation",
+          "PROJECT::Studio",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "a914ab1e0d0de5e6c98e965c7435c47e37d38916afa7b876b1e6bf611ce0d7e4",
+      "after_hash": "a914ab1e0d0de5e6c98e965c7435c47e37d38916afa7b876b1e6bf611ce0d7e4",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-Studio-project_boundary_marker",
+      "project_id": "Studio",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "Studio",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Studio-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Studio-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/Studio/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Studio"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Studio::project_boundary_marker",
+          "PROJECT::Studio",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "Studio",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "Studio-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "Studio-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/Studio/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "Studio"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::Studio::project_boundary_marker",
+          "PROJECT::Studio",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "de045d7d9b547e37ecebb9cbe6951d7a6f1fdbc2b03c4e076c386328e1136065",
+      "after_hash": "de045d7d9b547e37ecebb9cbe6951d7a6f1fdbc2b03c4e076c386328e1136065",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAS-answer_summary",
+      "project_id": "WAS",
+      "scenario": "answer_summary",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "WAS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAS::answer_summary",
+          "PROJECT::WAS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "WAS",
+        "scenario": "answer_summary",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAS-answer_summary-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAS-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAS/answer_summary",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAS::answer_summary",
+          "PROJECT::WAS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "546d1502099fd1a736f6638c41120a6835012958b2a9f41695e9b426c264832c",
+      "after_hash": "546d1502099fd1a736f6638c41120a6835012958b2a9f41695e9b426c264832c",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAS-citation_preservation",
+      "project_id": "WAS",
+      "scenario": "citation_preservation",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "WAS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAS::citation_preservation",
+          "PROJECT::WAS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "WAS",
+        "scenario": "citation_preservation",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAS-citation_preservation-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAS-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAS/citation_preservation",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAS::citation_preservation",
+          "PROJECT::WAS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "1aa1bd1c329724e492902c49793e32b65b81814c2951a32313aa53e10fba4316",
+      "after_hash": "1aa1bd1c329724e492902c49793e32b65b81814c2951a32313aa53e10fba4316",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    {
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAS-project_boundary_marker",
+      "project_id": "WAS",
+      "scenario": "project_boundary_marker",
+      "input_kind": "synthetic_sanitized_answer_fixture",
+      "before_answer": {
+        "project_id": "WAS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAS::project_boundary_marker",
+          "PROJECT::WAS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "after_answer": {
+        "project_id": "WAS",
+        "scenario": "project_boundary_marker",
+        "answer_shape": "synthetic_structured_answer",
+        "claims": [
+          {
+            "claim_id": "WAS-project_boundary_marker-claim-01",
+            "text": "synthetic_governance_claim_placeholder",
+            "status": "candidate_only"
+          }
+        ],
+        "citations": [
+          {
+            "citation_id": "WAS-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAS/project_boundary_marker",
+            "source_kind": "synthetic_sanitized_fixture",
+            "project_id": "WAS"
+          }
+        ],
+        "markers": [
+          "LCX_SYNTH_EQ::WAS::project_boundary_marker",
+          "PROJECT::WAS",
+          "LCX_SYNTHETIC_ONLY"
+        ],
+        "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
+      },
+      "before_hash": "e3a11c4afddab30bf6dc6386859ad03b81969fb92271dfa80e285f790f665ea9",
+      "after_hash": "e3a11c4afddab30bf6dc6386859ad03b81969fb92271dfa80e285f790f665ea9",
+      "answer_equivalence": "synthetic_equivalent",
+      "answer_equivalence_gate": true,
+      "citation_preservation_gate": true,
+      "marker_preservation_gate": true,
+      "project_boundary_gate": true,
+      "sensitive_redaction_gate": "pass",
+      "tokens_saved": "not_calculated",
+      "saving_rate": "not_calculated",
+      "measured_production_tokens": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    }
+  ],
+  "gates": {
+    "l3_5_answer_equivalence_synthetic_gate": true,
+    "source_multi_window_stability_gate": true,
+    "project_coverage_gate": true,
+    "sample_count_gate": true,
+    "answer_equivalence_gate": true,
+    "citation_preservation_gate": true,
+    "marker_preservation_gate": true,
+    "project_boundary_gate": true,
+    "synthetic_only": true,
+    "metadata_only": true,
+    "check_only": true,
+    "business_answer_equivalence_proven": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "headroom_learn_apply_executed": false,
+    "l4_candidate": false,
+    "l5_candidate": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "failures": []
+}

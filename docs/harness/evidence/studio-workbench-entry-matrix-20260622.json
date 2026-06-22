@@ -1,0 +1,52 @@
+{
+  "evidence_id": "STUDIO-WORKBENCH-ENTRY-MATRIX-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-006",
+  "target": {
+    "project": "Studio",
+    "surface": "operation-workbench",
+    "chat_shell": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/PageSidebarNav.vue",
+    "workbench_shell": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/AppSidebar.vue",
+    "router": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/router/index.ts"
+  },
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "in-app-browser"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "impeccable_not_invoked",
+    "figma_not_verified"
+  ],
+  "matrix": {
+    "kanban": {
+      "chat_to_surface": true,
+      "surface_to_chat": true,
+      "status": "closed"
+    },
+    "jobs": {
+      "chat_to_surface": false,
+      "surface_to_chat": true,
+      "status": "gap"
+    },
+    "channels": {
+      "chat_to_surface": false,
+      "surface_to_chat": true,
+      "status": "gap"
+    }
+  },
+  "priority": {
+    "p1": "jobs",
+    "p2": "channels"
+  },
+  "findings": [
+    "Agent workbench group in AppSidebar contains jobs, kanban, and channels.",
+    "Chat main surface currently exposes only kanban among those three workbench entries.",
+    "Jobs and Channels both have verified return paths back to chat."
+  ],
+  "non_claims": [
+    "does not prove ui_ready",
+    "does not prove all professional workbench entries are unified",
+    "does not grant accepted, integrated, or production_ready status"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "assurance_report_distribution_acknowledgement_gaps": 0,
+  "management_response_approval_record_gaps": 0,
+  "corrective_action_owner_assignment_gaps": 0,
+  "remediation_evidence_package_gaps": 0,
+  "verifier_follow_up_review_record_gaps": 0,
+  "waes_reliance_decision_memo_gaps": 0,
+  "kds_assurance_publication_receipt_gaps": 1,
+  "accepted_for_assurance_reliance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "assurance_reliance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

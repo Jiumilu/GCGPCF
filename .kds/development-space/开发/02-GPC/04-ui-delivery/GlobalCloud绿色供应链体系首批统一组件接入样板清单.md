@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件接入样板清单.md
 source_path: 04-ui-delivery/GlobalCloud绿色供应链体系首批统一组件接入样板清单.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

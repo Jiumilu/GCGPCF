@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md
 source_path: 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

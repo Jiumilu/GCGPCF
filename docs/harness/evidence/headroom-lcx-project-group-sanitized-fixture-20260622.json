@@ -1,0 +1,60 @@
+{
+  "evidence_id": "HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001",
+  "date": "2026-06-22",
+  "status": "project_group_sanitized_fixture_pass_no_measurement",
+  "scope": "project_group_fixture_metadata_only",
+  "fixture": "fixtures/headroom/headroom-lcx-project-group-sanitized-fixture-20260622.json",
+  "project_count": 15,
+  "scenario_count": 3,
+  "entry_count": 45,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "scenarios": [
+    "loop_gate_metadata",
+    "retrieval_context_metadata",
+    "tool_output_metadata"
+  ],
+  "coverage_failures": [],
+  "calculation": {
+    "saving_rate": "not_calculated",
+    "tokens_saved": "not_calculated",
+    "reason": "project_group_fixture_only_no_real_measurement"
+  },
+  "gates": {
+    "project_group_fixture_gate": true,
+    "project_coverage_gate": true,
+    "scenario_coverage_gate": true,
+    "entry_count_gate": true,
+    "metadata_only": true,
+    "check_only": true,
+    "raw_text_stored": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

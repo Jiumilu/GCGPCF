@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/LOOP_SESSION_MAINLINE_DECLARATION_TEMPLATE.md
 source_path: templates/LOOP_SESSION_MAINLINE_DECLARATION_TEMPLATE.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-A1C8A72190
 title: WAS Real Source Record Candidate Precheck Evidence
-project: KDS
+project: WAS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: ontology-governance
 status: controlled
 version: v1.0
-owner: KDS
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/05-KDS/docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md
+kds_path: 开发/14-WAS/docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md
 source_path: docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

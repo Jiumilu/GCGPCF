@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/01-GFIS/.kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md
 source_path: .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

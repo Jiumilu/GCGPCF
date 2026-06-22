@@ -1,0 +1,595 @@
+{
+  "evidence_id": "HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001",
+  "date": "2026-06-22",
+  "status": "fixture_stability_gate_pass_no_measurement",
+  "scope": "sanitized_fixture_metadata_stability_only",
+  "fixture": "fixtures/headroom/headroom-lcx-sanitized-token-fixture-extension-20260622.json",
+  "round_count": 3,
+  "project_count": 5,
+  "scenario_count": 3,
+  "entry_count": 15,
+  "stable_hash_count": 1,
+  "stable_hash": "26849b45a8d4d6446bc82f89899b24e5961c679258fc08de70000fa451f1cb1f",
+  "rounds": [
+    {
+      "round_id": 1,
+      "project_count": 5,
+      "scenario_count": 3,
+      "entry_count": 15,
+      "projects": [
+        "GPCF",
+        "KDS",
+        "Brain",
+        "WAES",
+        "GFIS"
+      ],
+      "scenarios": [
+        "loop_gate_metadata",
+        "retrieval_context_metadata",
+        "tool_output_metadata"
+      ],
+      "record_keys": [
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-01",
+          "project": "GPCF",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-02",
+          "project": "GPCF",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-03",
+          "project": "GPCF",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-01",
+          "project": "KDS",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-02",
+          "project": "KDS",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-03",
+          "project": "KDS",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-01",
+          "project": "Brain",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-02",
+          "project": "Brain",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-03",
+          "project": "Brain",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-01",
+          "project": "WAES",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-02",
+          "project": "WAES",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-03",
+          "project": "WAES",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-01",
+          "project": "GFIS",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-02",
+          "project": "GFIS",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-03",
+          "project": "GFIS",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        }
+      ],
+      "forbidden_claims": {
+        "raw_text_stored": false,
+        "contains_raw_prompt": false,
+        "contains_raw_completion": false,
+        "contains_customer_contract_text": false,
+        "contains_provider_secret": false,
+        "production_token_measurement_allowed": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      },
+      "stable_hash": "26849b45a8d4d6446bc82f89899b24e5961c679258fc08de70000fa451f1cb1f"
+    },
+    {
+      "round_id": 2,
+      "project_count": 5,
+      "scenario_count": 3,
+      "entry_count": 15,
+      "projects": [
+        "GPCF",
+        "KDS",
+        "Brain",
+        "WAES",
+        "GFIS"
+      ],
+      "scenarios": [
+        "loop_gate_metadata",
+        "retrieval_context_metadata",
+        "tool_output_metadata"
+      ],
+      "record_keys": [
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-01",
+          "project": "GPCF",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-02",
+          "project": "GPCF",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-03",
+          "project": "GPCF",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-01",
+          "project": "KDS",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-02",
+          "project": "KDS",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-03",
+          "project": "KDS",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-01",
+          "project": "Brain",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-02",
+          "project": "Brain",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-03",
+          "project": "Brain",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-01",
+          "project": "WAES",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-02",
+          "project": "WAES",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-03",
+          "project": "WAES",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-01",
+          "project": "GFIS",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-02",
+          "project": "GFIS",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-03",
+          "project": "GFIS",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        }
+      ],
+      "forbidden_claims": {
+        "raw_text_stored": false,
+        "contains_raw_prompt": false,
+        "contains_raw_completion": false,
+        "contains_customer_contract_text": false,
+        "contains_provider_secret": false,
+        "production_token_measurement_allowed": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      },
+      "stable_hash": "26849b45a8d4d6446bc82f89899b24e5961c679258fc08de70000fa451f1cb1f"
+    },
+    {
+      "round_id": 3,
+      "project_count": 5,
+      "scenario_count": 3,
+      "entry_count": 15,
+      "projects": [
+        "GPCF",
+        "KDS",
+        "Brain",
+        "WAES",
+        "GFIS"
+      ],
+      "scenarios": [
+        "loop_gate_metadata",
+        "retrieval_context_metadata",
+        "tool_output_metadata"
+      ],
+      "record_keys": [
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-01",
+          "project": "GPCF",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-02",
+          "project": "GPCF",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GPCF-03",
+          "project": "GPCF",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-01",
+          "project": "KDS",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-02",
+          "project": "KDS",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-KDS-03",
+          "project": "KDS",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-01",
+          "project": "Brain",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-02",
+          "project": "Brain",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-Brain-03",
+          "project": "Brain",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-01",
+          "project": "WAES",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-02",
+          "project": "WAES",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-WAES-03",
+          "project": "WAES",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-01",
+          "project": "GFIS",
+          "scenario": "loop_gate_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-02",
+          "project": "GFIS",
+          "scenario": "retrieval_context_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 1,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        },
+        {
+          "measurement_id": "HEADROOM-LCX-SANITIZED-FIXTURE-GFIS-03",
+          "project": "GFIS",
+          "scenario": "tool_output_metadata",
+          "source_kind": "sanitized_fixture_metadata_only",
+          "retrieval_miss_count": 0,
+          "answer_equivalence": "not_measured",
+          "sensitive_redaction_gate": "pass",
+          "project_marker_gate": "fixture_marker_preserved"
+        }
+      ],
+      "forbidden_claims": {
+        "raw_text_stored": false,
+        "contains_raw_prompt": false,
+        "contains_raw_completion": false,
+        "contains_customer_contract_text": false,
+        "contains_provider_secret": false,
+        "production_token_measurement_allowed": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      },
+      "stable_hash": "26849b45a8d4d6446bc82f89899b24e5961c679258fc08de70000fa451f1cb1f"
+    }
+  ],
+  "failures": [],
+  "calculation": {
+    "saving_rate": "not_calculated",
+    "tokens_saved": "not_calculated",
+    "reason": "stability_gate_only_no_real_measurement"
+  },
+  "gates": {
+    "fixture_stability_gate": true,
+    "multi_round_stability_gate": true,
+    "project_coverage_gate": true,
+    "scenario_coverage_gate": true,
+    "entry_count_gate": true,
+    "metadata_only": true,
+    "check_only": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

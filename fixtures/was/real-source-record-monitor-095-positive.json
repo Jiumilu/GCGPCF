@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "verifier_accreditation_certificate_gaps": 0,
+  "verifier_competence_matrix_gaps": 0,
+  "assurance_sampling_plan_gaps": 0,
+  "site_visit_attendance_record_gaps": 0,
+  "evidence_sampling_trace_gaps": 0,
+  "assurance_exception_log_gaps": 0,
+  "assurance_final_opinion_statement_gaps": 0,
+  "accepted_for_external_assurance_execution_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "external_assurance_execution_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

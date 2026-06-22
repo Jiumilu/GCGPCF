@@ -1,0 +1,56 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-REPAIR-REQUEST-ACKNOWLEDGEMENT-PREVIEW-CURRENT-STATE-D157-20260622",
+  "round_id": "GPCF-GCKF-P0-D157-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D156 current-state formal evidence execution supplement precheck repair request preview 基础上刷新 formal evidence execution repair request acknowledgement preview，使旧 D58 修复请求回执预览分支显式吸收 D124-D156 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-repair-request-acknowledgement-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-repair-request-acknowledgement-preview-current-state-d157-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-supplement-precheck-repair-request-preview-current-state-d156-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-execution-supplement-precheck-repair-request-preview-current-state-d156-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_repair_request_acknowledgement_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d58_formal_evidence_execution_repair_request_acknowledgement_preview": "gckf_p0_formal_evidence_execution_repair_request_acknowledgement_preview_dry_run=pass status=candidate_preview execution_mode=dry_run_no_write executes_acknowledgement=0 executes_repair_request=0 executes_supplement_intake=0 accepts_supplement_material=0 executes_committee_reentry=0 opens_committee_case=0 writes_kds=0 writes_business_system=0 writes_harness_evidence=0 writes_formal_evidence=0 writes_revenue_distribution=0 writes_contribution_score=0 no_write=covered",
+    "d156_current_state_supplement_precheck_repair_request_preview": "gckf_p0_formal_evidence_execution_supplement_precheck_repair_request_preview_current_state_d156=pass supplement_precheck_repair_request_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed repair_request_execution_status=not_executed completeness_precheck_execution_status=not_executed supplement_intake_execution_status=not_executed supplement_acceptance_execution_status=not_executed committee_reentry_execution_status=not_executed committee_case_execution_status=not_executed committee_decision_execution_status=not_executed repair_request_roles=8 repair_request_checks=36 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d155_current_state_supplement_completeness_precheck_preview": "gckf_p0_formal_evidence_execution_supplement_completeness_precheck_preview_current_state_d155=pass supplement_completeness_precheck_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed supplement_intake_execution_status=not_executed supplement_acceptance_execution_status=not_executed completeness_precheck_execution_status=not_executed intake_acceptance_execution_status=not_executed committee_submission_execution_status=not_executed committee_docket_execution_status=not_executed committee_receipt_execution_status=not_executed committee_routing_execution_status=not_executed committee_exception_return_execution_status=not_executed committee_reentry_execution_status=not_executed committee_case_execution_status=not_executed committee_decision_execution_status=not_executed precheck_roles=8 precheck_checks=36 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "package_scope": {
+    "acknowledgement_roles": 9,
+    "acknowledgement_sections": 14,
+    "acknowledgement_envelope_fields": 9,
+    "acknowledgement_readiness_prerequisites": 8,
+    "acknowledgement_decision_constraints": 11,
+    "acknowledgement_checks": 36,
+    "required_acknowledgement_refs": 24,
+    "blocking_conditions": 29,
+    "forbidden_actions": 31,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_supplement_precheck_repair_request_preview_status": "candidate_preview_with_hold",
+    "source_repair_request_execution_status": "not_executed",
+    "source_completeness_precheck_execution_status": "not_executed",
+    "source_supplement_intake_execution_status": "not_executed",
+    "source_supplement_acceptance_execution_status": "not_executed",
+    "source_committee_reentry_execution_status": "not_executed",
+    "source_committee_case_execution_status": "not_executed",
+    "source_committee_decision_execution_status": "not_executed",
+    "source_confirmation_execution_status": "not_executed",
+    "source_unfreeze_execution_status": "not_executed",
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution repair request acknowledgement preview 不执行正式回执、不签发正式修复请求回执、不执行正式修复请求、不执行正式完整性预检、不执行正式补件接收、不执行补件验收、不执行 committee reentry、不立案、不执行委员会裁决、不执行人工确认、不释放冻结、不执行 unfreeze，也不写 acknowledgement、repair request、formal evidence、committee case、committee result、revenue distribution 或 contribution score。",
+    "本 current-state formal evidence execution repair request acknowledgement preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution repair request acknowledgement preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "下一轮应优先刷新 formal evidence execution acknowledgement routing precheck preview 或 committee routing reviewer assignment preview 的 current-state 分支，继续保持 no-write。"
+}

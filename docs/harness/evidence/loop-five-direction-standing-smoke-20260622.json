@@ -1,0 +1,56 @@
+{
+  "round_id": "GPCF-LOOP-FIVE-DIRECTION-STANDING-SMOKE-001",
+  "test_target": "GFIS-runtime-gap-resolution-plan",
+  "mode": "L3-smoke",
+  "scope": "no-write",
+  "purpose": "prove five-direction standing adoption applies to non-RUN-001 Loop work",
+  "started": true,
+  "completed_for_round": true,
+  "stop_type": "authorization_boundary",
+  "directions": {
+    "run": {
+      "implemented": true,
+      "input": "GFIS-runtime-gap-resolution-plan",
+      "output": "no-write smoke evidence"
+    },
+    "stop": {
+      "implemented": true,
+      "accepted_allowed": false,
+      "integrated_allowed": false,
+      "production_ready_allowed": false
+    },
+    "verify": {
+      "implemented": true,
+      "real_business_lane": "repair_required"
+    },
+    "recover": {
+      "implemented": true,
+      "last_safe_state": "real_business_lane=repair_required"
+    },
+    "debug": {
+      "implemented": true,
+      "status_ceiling": "partial_repair"
+    }
+  },
+  "real_lane_counts": {
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0
+  },
+  "write_counts": {
+    "production_writes": 0,
+    "real_external_api_writes": 0,
+    "kds_fact_writes": 0,
+    "waes_gate_result_writes": 0
+  },
+  "completion_guards": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "no_write_boundary_enforced": true
+  },
+  "next_authorization_required": true
+}

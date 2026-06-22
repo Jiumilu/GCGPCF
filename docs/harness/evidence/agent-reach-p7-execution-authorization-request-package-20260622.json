@@ -1,0 +1,62 @@
+{
+  "id": "agent-reach-p7-execution-authorization-request-package-20260622",
+  "round": "GPCF-AGENT-REACH-P7-EXECUTION-AUTHORIZATION-REQUEST-PACKAGE-001",
+  "date": "2026-06-22",
+  "status": "p7_execution_authorization_request_package_ready",
+  "current_admission": "limited_candidate_only",
+  "completion_claim_allowed": false,
+  "phase": "P7 Execution Authorization Request Package",
+  "mode": "authorization_request_only",
+  "input_artifacts": [
+    "docs/harness/evidence/agent-reach-p7-authorization-precheck-20260622.json",
+    "docs/harness/evidence/agent-reach-project-group-search-readiness-audit-20260622.json",
+    "fixtures/agent-reach/limited-live-search-dry-run-authorization.template.json"
+  ],
+  "output_artifacts": [
+    "fixtures/agent-reach/limited-live-search-dry-run-authorization.request.json",
+    "tools/kds-sync/validate_agent_reach_p7_execution_authorization_request_package.py",
+    "docs/harness/evidence/agent-reach-p7-execution-authorization-request-package-20260622.json",
+    "docs/harness/evidence/agent-reach-p7-execution-authorization-request-package-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-EXECUTION-AUTHORIZATION-REQUEST-PACKAGE-001.md"
+  ],
+  "request_checks": {
+    "request_package_created": true,
+    "required_text_fixed": true,
+    "local_authorization_file_not_created": true,
+    "default_runner_blocks_without_authorization": true,
+    "required_fields_machine_validatable": true,
+    "execution_command_documented_after_authorization": true
+  },
+  "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/limited-live-search-dry-run-authorization.local.json",
+  "required_text": "授权执行 Agent-Reach P7 Limited Live Search Dry Run",
+  "execution_command_after_authorization_file_exists": "python3 tools/kds-sync/validate_agent_reach_p7_authorization_precheck.py --authorization fixtures/agent-reach/limited-live-search-dry-run-authorization.local.json && python3 tools/kds-sync/run_agent_reach_limited_live_search_dry_run.py --authorization fixtures/agent-reach/limited-live-search-dry-run-authorization.local.json --execute --write-evidence && python3 tools/kds-sync/validate_agent_reach_p7_limited_live_search_output.py",
+  "remaining_completion_gaps": [
+    "p7_execution_authorization_missing",
+    "p7_live_runtime_evidence_missing",
+    "p7_live_candidate_quality_report_missing",
+    "project_group_14_project_live_coverage_missing",
+    "human_review_and_production_admission_missing"
+  ],
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "live_external_search_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_live_search_quality_accepted",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P7-LIMITED-LIVE-SEARCH-DRY-RUN-001"
+}

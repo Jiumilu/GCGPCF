@@ -1,0 +1,77 @@
+{
+  "evidence_id": "CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-20260622",
+  "scope": "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016",
+  "status": "pass_with_watch",
+  "generated_at": "2026-06-22",
+  "objective": "在 Studio sync-only precheck 后重新监控 CodeGraph watchlist，确认 Studio residual watch 未扩大，同时保留 Brain/GFIS/KDS 授权边界。",
+  "previous_round": "GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015",
+  "watchlist": {
+    "repo_count": 4,
+    "repos": {
+      "Brain": {
+        "codegraph_pending": {"added": 4, "modified": 54, "removed": 0},
+        "git_dirty": {"modified": 90, "deleted": 5, "untracked": 108, "renamed": 0, "other": 0, "total": 203},
+        "decision": "authorization_required",
+        "status": "unchanged_authorization_boundary"
+      },
+      "GFIS": {
+        "codegraph_pending": {"added": 1, "modified": 2, "removed": 0},
+        "git_dirty": {"modified": 37, "deleted": 0, "untracked": 202, "renamed": 0, "other": 0, "total": 239},
+        "decision": "authorization_required_without_clean_reindex",
+        "status": "unchanged_policy_exception_boundary"
+      },
+      "KDS": {
+        "codegraph_pending": {"added": 0, "modified": 1, "removed": 0},
+        "git_dirty": {"modified": 371, "deleted": 59, "untracked": 1229, "renamed": 0, "other": 0, "total": 1659},
+        "decision": "authorization_required",
+        "status": "active_mirror_workwiki_drift_growth",
+        "growth_from_authorization_pack_total": 7
+      },
+      "Studio": {
+        "codegraph_pending": {"added": 0, "modified": 7, "removed": 0},
+        "git_dirty": {"modified": 11, "deleted": 0, "untracked": 1, "renamed": 0, "other": 0, "total": 12},
+        "decision": "sync_only_precheck_completed_with_residual_watch",
+        "status": "residual_within_authorized_ceiling",
+        "authorized_modified_ceiling": 9
+      }
+    }
+  },
+  "governance": {
+    "mode": "post_studio_monitor_only",
+    "studio_sync_performed_this_round": false,
+    "brain_sync_performed": false,
+    "gfis_sync_performed": false,
+    "kds_sync_performed": false,
+    "clean_reindex_performed": false,
+    "business_development_performed": false,
+    "commit_performed": false,
+    "push_performed": false,
+    "deployment_performed": false,
+    "codegraph_git_isolated": true
+  },
+  "five_direction": {
+    "run": "只读监控 Studio sync-only 后状态，以及 Brain/GFIS/KDS 未授权 watchlist 状态。",
+    "stop": "stop_type=pass_with_watch；Studio residual 未超过授权上限，Brain/GFIS/KDS 仍需独立授权，不能自动执行 sync 或 clean reindex。",
+    "verify": "验证四仓 CodeGraph status、.codegraph Git 隔离、GPCF 文档治理门禁与 KDS token。",
+    "recover": "若 Studio residual 超过 modified=9 或出现 added/removed，则回到 Studio 专项授权；若 KDS 继续增长，进入 KDS mirror scope review 授权包。",
+    "debug": "KDS dirty 持续增长，是下一轮最明确的治理风险；GFIS clean reindex 仍不授权。"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "brain_sync_only_closure_completed": false,
+    "gfis_sync_only_closure_completed": false,
+    "kds_sync_only_closure_completed": false,
+    "studio_business_closure_completed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017"
+}

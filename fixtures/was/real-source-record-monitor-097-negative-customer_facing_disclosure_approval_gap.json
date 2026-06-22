@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "green_claim_approval_record_gaps": 0,
+  "eco_label_use_authorization_gaps": 0,
+  "product_carbon_claim_substantiation_gaps": 0,
+  "customer_facing_disclosure_approval_gaps": 1,
+  "marketing_material_compliance_review_gaps": 0,
+  "green_claim_complaint_handling_record_gaps": 0,
+  "claim_retraction_or_correction_log_gaps": 0,
+  "accepted_for_green_claim_disclosure_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "green_claim_disclosure_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

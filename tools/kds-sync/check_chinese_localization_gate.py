@@ -332,21 +332,27 @@ def write_report(summary: dict[str, object], findings: list[dict[str, object]]) 
     lines.extend(["", "## 重点目录", ""])
     for bucket, count in by_bucket.most_common(30):
         lines.append(f"- `{bucket}`：{count}")
-    lines.extend(
-        [
-            "",
-            "## 治理判定",
-            "",
-            "- 本报告证明当前项目群存在存量中文化债务。",
-            "- 中文化债务应以 `localization_debt=true` 进入 Loop 文档门禁摘要，作为可治理债务持续追踪。",
-            "- 中文化债务不等同于文档污染、TOKEN 风险或 KDS 镜像冲突，不单独阻断当前文档门禁。",
-            "- 新增或本轮修改内容触发中文化问题时，本轮状态应为 `rework_required`。",
-            "- 历史归档允许保留原文，但不得作为当前有效规范复用。",
-            "",
-            "## 样本问题",
-            "",
-        ]
-    )
+    lines.extend(["", "## 治理判定", ""])
+    if findings:
+        lines.extend(
+            [
+                "- 本报告证明当前项目群存在存量中文化债务。",
+                "- 中文化债务应以 `localization_debt=true` 进入 Loop 文档门禁摘要，作为可治理债务持续追踪。",
+                "- 中文化债务不等同于文档污染、TOKEN 风险或 KDS 镜像冲突。",
+                "- 新增或本轮修改内容触发中文化问题时，本轮状态应为 `rework_required`。",
+                "- 历史归档允许保留原文，但不得作为当前有效规范复用。",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "- 本报告证明当前项目群中文化门禁已通过。",
+                "- `localization_debt=false`，Loop 文档门禁不得继续因中文化债务保持 `rework_required`。",
+                "- 后续新增或修改文档仍必须保持中文优先；若重新触发命中项，应重新登记为本地化债务。",
+                "- 历史记录中描述过往债务的证据可以保留，但不得覆盖当前门禁结论。",
+            ]
+        )
+    lines.extend(["", "## 样本问题", ""])
     for item in findings[:120]:
         lines.append(
             f"- `{item['path']}:{item['line']}` `{item['kind']}`：{item['detail']}"

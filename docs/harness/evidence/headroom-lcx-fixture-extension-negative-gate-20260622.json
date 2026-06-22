@@ -1,0 +1,98 @@
+{
+  "evidence_id": "HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001",
+  "date": "2026-06-22",
+  "status": "negative_gate_pass_no_measurement",
+  "scope": "fixture_extension_negative_boundary_cases",
+  "negative_fixture": "fixtures/headroom/headroom-lcx-fixture-extension-negative-fixtures-20260622.json",
+  "case_count": 9,
+  "rejected": 9,
+  "accepted_count": 0,
+  "results": [
+    {
+      "case_id": "raw_prompt_field_present",
+      "expected_rejection_reason": "raw_prompt_forbidden",
+      "actual_rejection_reason": "raw_prompt_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "raw_completion_field_present",
+      "expected_rejection_reason": "raw_completion_forbidden",
+      "actual_rejection_reason": "raw_completion_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "sensitive_material_unredacted",
+      "expected_rejection_reason": "sensitive_material_forbidden",
+      "actual_rejection_reason": "sensitive_material_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "production_token_measurement_claimed",
+      "expected_rejection_reason": "production_measurement_forbidden",
+      "actual_rejection_reason": "production_measurement_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "kds_api_write_claimed",
+      "expected_rejection_reason": "kds_api_write_forbidden",
+      "actual_rejection_reason": "kds_api_write_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "production_proxy_started_claimed",
+      "expected_rejection_reason": "production_proxy_forbidden",
+      "actual_rejection_reason": "production_proxy_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "accepted_status_claimed",
+      "expected_rejection_reason": "accepted_status_forbidden",
+      "actual_rejection_reason": "accepted_status_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "integrated_status_claimed",
+      "expected_rejection_reason": "integrated_status_forbidden",
+      "actual_rejection_reason": "integrated_status_forbidden",
+      "rejected": true,
+      "accepted": false
+    },
+    {
+      "case_id": "production_ready_claimed",
+      "expected_rejection_reason": "production_ready_forbidden",
+      "actual_rejection_reason": "production_ready_forbidden",
+      "rejected": true,
+      "accepted": false
+    }
+  ],
+  "gates": {
+    "negative_fixture_gate": true,
+    "raw_prompt_rejected": true,
+    "raw_completion_rejected": true,
+    "sensitive_material_rejected": true,
+    "production_measurement_rejected": true,
+    "kds_api_write_rejected": true,
+    "production_proxy_rejected": true,
+    "status_upgrade_rejected": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

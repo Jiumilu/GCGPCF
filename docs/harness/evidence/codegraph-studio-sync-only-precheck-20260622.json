@@ -1,0 +1,106 @@
+{
+  "evidence_id": "CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-20260622",
+  "scope": "GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015",
+  "status": "studio_codegraph_sync_only_pass_with_residual_watch",
+  "generated_at": "2026-06-22",
+  "objective": "在用户授权后，只对 GlobalCloud Studio 执行 CodeGraph sync-only precheck 与索引闭合，不进入业务开发、不提交、不推送、不部署。",
+  "authorization_source": "user_reply_authorized_after_GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-014",
+  "previous_round": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-014",
+  "studio": {
+    "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
+    "pre_sync_codegraph_pending": {"added": 2, "modified": 9, "removed": 0},
+    "sync_command": "codegraph sync",
+    "sync_result": {
+      "changed_files_synced": 12,
+      "added_files_synced": 2,
+      "modified_files_synced": 10,
+      "nodes_changed": 237
+    },
+    "followup_sync_result": {
+      "reason": "Studio reported 2 modified pending entries during final validation while Git dirty scope remained unchanged.",
+      "changed_files_synced": 2,
+      "added_files_synced": 0,
+      "modified_files_synced": 2,
+      "nodes_changed": 22
+    },
+    "post_sync_codegraph": {
+      "fileCount": 803,
+      "nodeCount": 14659,
+      "edgeCount": 47666,
+      "pendingChanges": {"added": 0, "modified": 7, "removed": 0},
+      "worktreeMismatch": null,
+      "reindexRecommended": false
+    },
+    "residual_watch": {
+      "status": "active_file_drift_after_sync",
+      "allowed_pending_ceiling": {"added": 0, "modified": 9, "removed": 0},
+      "reason": "Studio reported recurring modified pending entries while Git dirty scope remained unchanged at 12 files."
+    },
+    "git_dirty_after_sync": {
+      "modified": 11,
+      "deleted": 0,
+      "untracked": 1,
+      "renamed": 0,
+      "other": 0,
+      "total": 12
+    },
+    "dirty_files_after_sync": [
+      "docs/harness/loops/loop-round-GPCF-STUDIO-LR-017.md",
+      "packages/client/src/components/layout/PageSidebarNav.vue",
+      "packages/client/src/components/studio/SessionObjectPanel.vue",
+      "packages/server/src/routes/governance/session-bindings.ts",
+      "packages/server/src/services/core/kds-audit.ts",
+      "packages/server/src/services/governance/kds-governance-context.ts",
+      "packages/server/src/services/governance/session-binding-context.ts",
+      "tests/client/page-sidebar-nav.test.ts",
+      "tests/client/session-object-panel.test.ts",
+      "tests/server/kds-governance-context.test.ts",
+      "tests/server/session-binding-context.test.ts",
+      "tests/server/session-bindings-route.test.ts"
+    ],
+    "codegraph_git_isolated": true
+  },
+  "other_watchlist_repos": {
+    "brain_sync_performed": false,
+    "gfis_sync_performed": false,
+    "kds_sync_performed": false,
+    "clean_reindex_performed_anywhere": false
+  },
+  "governance": {
+    "mode": "studio_sync_only_precheck",
+    "business_development_performed": false,
+    "release_performed": false,
+    "workflow_release_write_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "commit_performed": false,
+    "push_performed": false,
+    "deployment_performed": false,
+    "accepted_or_integrated_claim": false
+  },
+  "five_direction": {
+    "run": "按授权只对 Studio 执行 CodeGraph status refresh 与 codegraph sync，并采集 post-sync status。",
+    "stop": "stop_type=sync_only_pass_with_residual_watch；Studio CodeGraph sync-only 已执行，但仍保留小幅 modified residual watch，不能升级 accepted/integrated/production_ready。",
+    "verify": "验证 Studio pendingChanges 不超过 residual watch ceiling、reindexRecommended=false、worktreeMismatch=null、.codegraph Git 隔离，以及 GPCF 文档治理门禁。",
+    "recover": "如后续 Studio 继续发生 dirty 漂移，恢复到 watchlist monitor_only 或重新请求 Studio 专项授权。",
+    "debug": "Studio 索引闭合不等于业务开发闭合；下一轮应转回 Brain/GFIS/KDS 授权边界或项目群 watchlist monitor。"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "brain_sync_only_closure_completed": false,
+    "gfis_sync_only_closure_completed": false,
+    "kds_sync_only_closure_completed": false,
+    "studio_business_closure_completed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016"
+}

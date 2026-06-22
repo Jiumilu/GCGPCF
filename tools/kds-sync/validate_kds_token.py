@@ -39,17 +39,30 @@ def contains_token(token: str) -> list[str]:
     if not token:
         return []
     leaks = []
-    for path in ROOT.rglob("*"):
-        if path.is_dir() or ".git" in path.parts:
-            continue
-        if path.stat().st_size > 2_000_000:
-            continue
-        try:
-            text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
-            continue
-        if token in text:
-            leaks.append(path.relative_to(ROOT).as_posix())
+    for dirpath, dirnames, filenames in os.walk(ROOT, onerror=lambda _exc: None):
+        dirnames[:] = [name for name in dirnames if name != ".git"]
+        for filename in filenames:
+            path = Path(dirpath) / filename
+            if ".git" in path.parts:
+                continue
+            try:
+                size = path.stat().st_size
+            except FileNotFoundError:
+                continue
+            except OSError:
+                continue
+            if size > 2_000_000:
+                continue
+            try:
+                text = path.read_text(encoding="utf-8")
+            except UnicodeDecodeError:
+                continue
+            except FileNotFoundError:
+                continue
+            except OSError:
+                continue
+            if token in text:
+                leaks.append(path.relative_to(ROOT).as_posix())
     return leaks
 
 

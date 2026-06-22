@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md
 source_path: 05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

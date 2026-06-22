@@ -1,0 +1,85 @@
+{
+  "authorization_id": "GPCF-AGENT-REACH-LIVE-SEARCH-<yyyymmdd>-<sequence>",
+  "authorization_status": "pending_human_authorization",
+  "live_search_authorized": false,
+  "authorized_by": "<required-human-approver>",
+  "authorized_at": "<required-iso8601>",
+  "expires_at": "<required-iso8601>",
+  "scope": {
+    "purpose": "Agent-Reach controlled live search pilot for candidate discovery only.",
+    "current_admission": "limited_candidate_only",
+    "allowed_channels": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "allowed_actions": [
+      "read_external_public_content",
+      "generate_candidate_record",
+      "write_harness_evidence_only"
+    ],
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration"
+    ]
+  },
+  "limits": {
+    "max_queries": 5,
+    "max_results_per_query": 10,
+    "dry_run_before_live": true,
+    "network_timeout_seconds": 30
+  },
+  "credential_boundary": {
+    "credential_source": "operator_provided_runtime_environment_only",
+    "store_credentials": false,
+    "write_env_files": false,
+    "read_browser_cookies": false,
+    "require_secret_redaction": true
+  },
+  "network_boundary": {
+    "external_network_allowed": false,
+    "allowed_hosts": [],
+    "blocked_hosts": [
+      "internal-source-of-record",
+      "production-control-plane"
+    ],
+    "require_host_allowlist_before_live": true
+  },
+  "logging_redaction": {
+    "redact_tokens": true,
+    "redact_cookies": true,
+    "redact_authorization_headers": true,
+    "redact_query_personal_data": true
+  },
+  "rollback_plan": {
+    "disable_live_search": "Remove the explicit authorization file and rerun P4 validator.",
+    "delete_generated_candidates": "Delete only evidence files created by the authorized pilot run.",
+    "restore_admission": "Keep current_admission as limited_candidate_only unless P5 evidence passes."
+  },
+  "acceptance_metrics": {
+    "minimum_query_count": 1,
+    "minimum_candidate_count": 1,
+    "minimum_required_field_coverage": 1.0,
+    "maximum_forbidden_claim_count": 0,
+    "maximum_credential_leak_count": 0
+  },
+  "evidence_output_paths": [
+    "docs/harness/evidence/agent-reach-p5-live-search-precheck-20260622.json",
+    "docs/harness/evidence/agent-reach-p5-live-search-precheck-20260622.md"
+  ],
+  "non_claims": [
+    "not_live_search_authorized",
+    "not_live_search_invoked",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md
 source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

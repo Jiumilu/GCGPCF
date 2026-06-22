@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-5D0159ED7D
-title: GPCF 证据索引
+title: evidence-index
 project: GPCF
 related_projects: [GPC, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/evidence-index.md
 source_path: docs/harness/evidence/evidence-index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
 
-# GPCF 证据索引
+ GPCF 证据索引
 
 ## GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 Headroom project-group cost dry-run
 
@@ -171,6 +171,39 @@ superseded_by: []
 - Headroom LCX marker/retrieval miss comparison gate runner: `tools/kds-sync/run_headroom_lcx_marker_retrieval_miss_comparison_gate.py`
 - Headroom LCX marker/retrieval miss comparison gate validator: `tools/kds-sync/validate_headroom_lcx_marker_retrieval_miss_comparison_gate.py`
 - Headroom LCX marker/retrieval miss comparison gate Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md`
+- Headroom LCX sanitized token fixture extension fixture: `fixtures/headroom/headroom-lcx-sanitized-token-fixture-extension-20260622.json`
+- Headroom LCX sanitized token fixture extension evidence: `docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md`
+- Headroom LCX sanitized token fixture extension JSON: `docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.json`
+- Headroom LCX sanitized token fixture extension runner: `tools/kds-sync/build_headroom_lcx_sanitized_token_fixture_extension.py`
+- Headroom LCX sanitized token fixture extension validator: `tools/kds-sync/validate_headroom_lcx_sanitized_token_fixture_extension.py`
+- Headroom LCX sanitized token fixture extension Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md`
+- Headroom LCX fixture extension replay comparison evidence: `docs/harness/evidence/headroom-lcx-fixture-extension-replay-comparison-20260622.md`
+- Headroom LCX fixture extension replay comparison JSON: `docs/harness/evidence/headroom-lcx-fixture-extension-replay-comparison-20260622.json`
+- Headroom LCX fixture extension replay comparison runner: `tools/kds-sync/run_headroom_lcx_fixture_extension_replay_comparison.py`
+- Headroom LCX fixture extension replay comparison validator: `tools/kds-sync/validate_headroom_lcx_fixture_extension_replay_comparison.py`
+- Headroom LCX fixture extension replay comparison Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md`
+- Headroom LCX fixture extension negative fixtures: `fixtures/headroom/headroom-lcx-fixture-extension-negative-fixtures-20260622.json`
+- Headroom LCX fixture extension negative gate evidence: `docs/harness/evidence/headroom-lcx-fixture-extension-negative-gate-20260622.md`
+- Headroom LCX fixture extension negative gate JSON: `docs/harness/evidence/headroom-lcx-fixture-extension-negative-gate-20260622.json`
+- Headroom LCX fixture extension negative gate runner: `tools/kds-sync/build_headroom_lcx_fixture_extension_negative_gate.py`
+- Headroom LCX fixture extension negative gate validator: `tools/kds-sync/validate_headroom_lcx_fixture_extension_negative_gate.py`
+- Headroom LCX fixture extension negative gate Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md`
+- Headroom LCX fixture stability gate evidence: `docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md`
+- Headroom LCX fixture stability gate JSON: `docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.json`
+- Headroom LCX fixture stability gate runner: `tools/kds-sync/run_headroom_lcx_fixture_stability_gate.py`
+- Headroom LCX fixture stability gate validator: `tools/kds-sync/validate_headroom_lcx_fixture_stability_gate.py`
+- Headroom LCX fixture stability gate Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md`
+- Headroom LCX project group sanitized fixture: `fixtures/headroom/headroom-lcx-project-group-sanitized-fixture-20260622.json`
+- Headroom LCX project group sanitized fixture evidence: `docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.md`
+- Headroom LCX project group sanitized fixture JSON: `docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.json`
+- Headroom LCX project group sanitized fixture runner: `tools/kds-sync/build_headroom_lcx_project_group_sanitized_fixture.py`
+- Headroom LCX project group sanitized fixture validator: `tools/kds-sync/validate_headroom_lcx_project_group_sanitized_fixture.py`
+- Headroom LCX project group sanitized fixture Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001.md`
+- Headroom LCX project group replay stability evidence: `docs/harness/evidence/headroom-lcx-project-group-replay-stability-20260622.md`
+- Headroom LCX project group replay stability JSON: `docs/harness/evidence/headroom-lcx-project-group-replay-stability-20260622.json`
+- Headroom LCX project group replay stability runner: `tools/kds-sync/run_headroom_lcx_project_group_replay_stability.py`
+- Headroom LCX project group replay stability validator: `tools/kds-sync/validate_headroom_lcx_project_group_replay_stability.py`
+- Headroom LCX project group replay stability Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-001.md`
 - Marker-preserving adapter pilot evidence: `docs/harness/evidence/headroom-marker-preserving-adapter-pilot-20260621.md`
 - Marker-preserving adapter pilot JSON: `docs/harness/evidence/headroom-marker-preserving-adapter-pilot-20260621.json`
 - Cost measurement output: `headroom_cost_measurement_output=pass record_count=15 saving_rate=0.625378 output_gate=true measured_production_tokens=false`
@@ -206,8 +239,38 @@ superseded_by: []
 - Headroom LCX sanitized measurement dry-run output: `headroom_lcx_sanitized_measurement_dry_run=pass_check_only project_count=15 entry_count=1 check_only=true saving_rate=not_calculated measured_production_tokens=false production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
 - Headroom LCX metadata replay check output: `headroom_lcx_metadata_replay_check=pass_check_only project_count=15 entry_count=1 replay_record_count=1 check_only=true saving_rate=not_calculated measured_production_tokens=false production_token_measurement_allowed=false production_admission_gate=false accepted=false integrated=false production_ready=false`
 - Headroom LCX marker/retrieval miss comparison gate output: `headroom_lcx_marker_retrieval_miss_comparison_gate=pass_check_only project_count=15 entry_count=1 comparison_count=1 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX sanitized token fixture extension output: `headroom_lcx_sanitized_token_fixture_extension=pass_check_only project_count=5 scenario_count=3 entry_count=15 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX fixture extension replay comparison output: `headroom_lcx_fixture_extension_replay_comparison=pass_check_only project_count=5 scenario_count=3 entry_count=15 replay_record_count=15 comparison_count=15 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX fixture extension negative gate output: `headroom_lcx_fixture_extension_negative_gate=pass_check_only case_count=9 rejected=9 accepted=0 production_admission_gate=false measured_production_tokens=false accepted=false integrated=false production_ready=false`
+- Headroom LCX fixture stability gate output: `headroom_lcx_fixture_stability_gate=pass_check_only round_count=3 project_count=5 scenario_count=3 entry_count=15 stable_hash_count=1 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX project group sanitized fixture output: `headroom_lcx_project_group_sanitized_fixture=pass_check_only project_count=15 scenario_count=3 entry_count=45 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX project group replay stability output: `headroom_lcx_project_group_replay_stability=pass_check_only round_count=3 project_count=15 scenario_count=3 entry_count=45 stable_hash_count=1 metadata_only=true saving_rate=not_calculated measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX readiness pilot authorization package evidence: `docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md`
+- Headroom LCX readiness pilot authorization package JSON: `docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.json`
+- Headroom LCX readiness pilot authorization package builder: `tools/kds-sync/build_headroom_lcx_readiness_pilot_authorization_package.py`
+- Headroom LCX readiness pilot authorization package validator: `tools/kds-sync/validate_headroom_lcx_readiness_pilot_authorization_package.py`
+- Headroom LCX readiness pilot authorization package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md`
+- Headroom LCX readiness pilot authorization package output: `headroom_lcx_readiness_pilot_authorization_package=pass_check_only recommended_next_authorization=L3.5_controlled_sanitized_pilot project_count=15 evidence_chain_count=23 l4_candidate=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX L3.5 controlled sanitized pilot window evidence: `docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md`
+- Headroom LCX L3.5 controlled sanitized pilot window JSON: `docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.json`
+- Headroom LCX L3.5 controlled sanitized pilot window runner: `tools/kds-sync/run_headroom_lcx_l35_controlled_sanitized_pilot_window.py`
+- Headroom LCX L3.5 controlled sanitized pilot window validator: `tools/kds-sync/validate_headroom_lcx_l35_controlled_sanitized_pilot_window.py`
+- Headroom LCX L3.5 controlled sanitized pilot window Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001.md`
+- Headroom LCX L3.5 controlled sanitized pilot window output: `headroom_lcx_l35_controlled_sanitized_pilot_window=pass_check_only authorized_window_id=HEADROOM-LCX-L35-SANITIZED-PILOT-WINDOW-20260622-001 project_count=15 pilot_smoke_record_count=45 l4_candidate=false measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX L3.5 multi-window stability evidence: `docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.md`
+- Headroom LCX L3.5 multi-window stability JSON: `docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.json`
+- Headroom LCX L3.5 multi-window stability runner: `tools/kds-sync/run_headroom_lcx_l35_multi_window_stability.py`
+- Headroom LCX L3.5 multi-window stability validator: `tools/kds-sync/validate_headroom_lcx_l35_multi_window_stability.py`
+- Headroom LCX L3.5 multi-window stability Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-001.md`
+- Headroom LCX L3.5 multi-window stability output: `headroom_lcx_l35_multi_window_stability=pass_check_only window_count=5 project_count=15 record_count_per_window=45 stable_hash_count=1 substantive_rounds=1 l4_candidate=false measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX L3.5 answer equivalence synthetic gate evidence: `docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.md`
+- Headroom LCX L3.5 answer equivalence synthetic gate JSON: `docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.json`
+- Headroom LCX L3.5 answer equivalence synthetic gate runner: `tools/kds-sync/run_headroom_lcx_l35_answer_equivalence_synthetic_gate.py`
+- Headroom LCX L3.5 answer equivalence synthetic gate validator: `tools/kds-sync/validate_headroom_lcx_l35_answer_equivalence_synthetic_gate.py`
+- Headroom LCX L3.5 answer equivalence synthetic gate Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001.md`
+- Headroom LCX L3.5 answer equivalence synthetic gate output: `headroom_lcx_l35_answer_equivalence_synthetic_gate=pass_check_only project_count=15 scenario_count=3 sample_count=45 answer_equivalence_gate=true business_answer_equivalence_proven=false l4_candidate=false measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
 - Marker-preserving adapter pilot output: `headroom_marker_preserving_adapter_pilot=pass scenario_count=2 adapter_gate_pass_count=2 saving_rate=0.640676 production_admission_gate=false measured_production_tokens=false`
-- 范围说明：该证据证明的是项目群样本 token/cost measurement、structured surrogate、受控 metric-and-adapter pilot、三窗口 LOOP cost observation、一次无 production token 的独立 LOOP replay、production token intake blocking gate、sanitized ledger 模板与负例、待授权包与动作队列、dry-run 项目群路由、15 项目覆盖矩阵、三档 cost sensitivity model、marker-preserving adapter pilot、P1 本地 proxy dry-run smoke、P2 MCP/SDK dry-run smoke、P3 学习预览/工作记忆门禁 smoke、P4 output shaper profile gate、P5 production admission request package、authorization boundary review、admitted-for-sanitized-precheck 授权预检、authorization template/negative fixtures/schema approval package、precheck-only approval instance、session declaration boundary、WAES/Harness measurement admission request package、WAES/Harness decision checklist、check-only sanitized measurement dry-run skeleton、check-only metadata replay 和 check-only marker/retrieval miss comparison gate；它不证明 full runtime admission、production token savings、accepted、integrated 或 production_ready。
+- 范围说明：该证据证明的是项目群样本 token/cost measurement、structured surrogate、受控 metric-and-adapter pilot、三窗口 LOOP cost observation、一次无 production token 的独立 LOOP replay、production token intake blocking gate、sanitized ledger 模板与负例、待授权包与动作队列、dry-run 项目群路由、15 项目覆盖矩阵、三档 cost sensitivity model、marker-preserving adapter pilot、P1 本地 proxy dry-run smoke、P2 MCP/SDK dry-run smoke、P3 学习预览/工作记忆门禁 smoke、P4 output shaper profile gate、P5 production admission request package、authorization boundary review、admitted-for-sanitized-precheck 授权预检、authorization template/negative fixtures/schema approval package、precheck-only approval instance、session declaration boundary、WAES/Harness measurement admission request package、WAES/Harness decision checklist、check-only sanitized measurement dry-run skeleton、check-only metadata replay、check-only marker/retrieval miss comparison gate、5 项目域/3 场景 sanitized token fixture extension、15 条扩展 fixture replay/comparison、9 类负向边界拒绝门禁、3 轮稳定性门禁、15 项目域 sanitized fixture、15 项目域 replay/stability、L3.5 受控脱敏试点授权建议包、L3.5 受控脱敏试点窗口、L3.5 多窗口脱敏稳定性和 L3.5 synthetic answer/citation/marker 等价门禁；它不证明 full runtime admission、production token savings、真实业务答案等价、L4/L5、accepted、integrated 或 production_ready。
 
 ## GPCF-L4-GFIS-TEST-SCENARIO-SYNC-001 GFIS test data scenario coverage sync
 

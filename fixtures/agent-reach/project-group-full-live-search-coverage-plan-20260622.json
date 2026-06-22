@@ -1,0 +1,174 @@
+{
+  "id": "agent-reach-project-group-full-live-search-coverage-plan-20260622",
+  "round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-001",
+  "mode": "full_coverage_plan_only",
+  "current_admission": "limited_candidate_only",
+  "execution_authorization_required_before_live": true,
+  "live_external_search_invoked": false,
+  "agent_reach_binary_invoked": false,
+  "project_scope": [
+    "GPCF",
+    "KDS",
+    "WAES",
+    "Brain",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "batch_policy": {
+    "allowed_channels": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "max_queries_per_batch": 5,
+    "max_results_per_query": 10,
+    "batch_count": 3,
+    "requires_separate_authorization_per_batch": true,
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration",
+      "accepted_claim",
+      "integrated_claim",
+      "production_ready_claim"
+    ]
+  },
+  "batches": [
+    {
+      "batch_id": "p8-batch-1",
+      "authorization_required_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
+      "queries": [
+        {
+          "query_id": "p8-q01",
+          "project": "GPCF",
+          "channel": "web",
+          "query": "GlobalCloud GPCF LOOP evidence governance search"
+        },
+        {
+          "query_id": "p8-q02",
+          "project": "KDS",
+          "channel": "rss",
+          "query": "KDS knowledge fabric controlled document search governance"
+        },
+        {
+          "query_id": "p8-q03",
+          "project": "WAES",
+          "channel": "web",
+          "query": "WAES evidence admission quality gate search"
+        },
+        {
+          "query_id": "p8-q04",
+          "project": "Brain",
+          "channel": "web",
+          "query": "GlobalCloud Brain runtime harness search evidence"
+        },
+        {
+          "query_id": "p8-q05",
+          "project": "GFIS",
+          "channel": "web",
+          "query": "GFIS source record green finance evidence search"
+        }
+      ]
+    },
+    {
+      "batch_id": "p8-batch-2",
+      "authorization_required_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
+      "queries": [
+        {
+          "query_id": "p8-q06",
+          "project": "GPC",
+          "channel": "bilibili",
+          "query": "GlobalCloud GPC planning control evidence search quality"
+        },
+        {
+          "query_id": "p8-q07",
+          "project": "PVAOS",
+          "channel": "web",
+          "query": "PVAOS project evidence runtime search governance"
+        },
+        {
+          "query_id": "p8-q08",
+          "project": "PKC",
+          "channel": "web",
+          "query": "PKC project knowledge candidate search evidence"
+        },
+        {
+          "query_id": "p8-q09",
+          "project": "XiaoC",
+          "channel": "web",
+          "query": "XiaoC assistant evidence search quality"
+        },
+        {
+          "query_id": "p8-q10",
+          "project": "XGD",
+          "channel": "rss",
+          "query": "XGD voice runtime evidence search"
+        }
+      ]
+    },
+    {
+      "batch_id": "p8-batch-3",
+      "authorization_required_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3",
+      "queries": [
+        {
+          "query_id": "p8-q11",
+          "project": "XiaoG",
+          "channel": "web",
+          "query": "GlobalCloud XiaoG assistant governance evidence search"
+        },
+        {
+          "query_id": "p8-q12",
+          "project": "MMC",
+          "channel": "web",
+          "query": "GlobalCloud MMC control governance evidence search"
+        },
+        {
+          "query_id": "p8-q13",
+          "project": "Studio",
+          "channel": "web",
+          "query": "GlobalCloud Studio workbench evidence search"
+        },
+        {
+          "query_id": "p8-q14",
+          "project": "WAS",
+          "channel": "rss",
+          "query": "WAS ontology asset source record evidence search"
+        }
+      ]
+    }
+  ],
+  "quality_requirements": {
+    "project_coverage": 1.0,
+    "query_candidate_coverage": 1.0,
+    "channel_candidate_coverage": 1.0,
+    "maximum_duplicate_url_count": 0,
+    "maximum_query_error_count": 0,
+    "minimum_required_field_coverage": 1.0,
+    "minimum_average_overall_score": 0.65,
+    "minimum_candidate_overall_score": 0.5,
+    "minimum_traceability_score": 1.0,
+    "maximum_credential_leak_count": 0,
+    "maximum_forbidden_claim_count": 0
+  },
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

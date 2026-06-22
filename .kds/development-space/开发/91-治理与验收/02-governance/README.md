@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/README.md
 source_path: 02-governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -66,23 +66,23 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-F949595C37 | 治理规范 | 02-governance/README.md | WAES | controlled |
 | GPCF-DOC-F3EADEE56A | GPCF Agent 架构六要素 — 顶层设计总纲 | 02-governance/gpcf-agent-architecture-six-elements.md | WAES | controlled |
 | GPCF-DOC-F113DF5034 | GPCF Loop Engineering 证据分类体系 | 02-governance/gpcf-evidence-taxonomy.md | WAES | controlled |
-| GPCF-DOC-20CE547AAF | GPCF Loop Engineering v1.0 — 项目群工程闭环运行协议 | 02-governance/gpcf-loop-engineering-spec-v1.md | WAES | controlled |
+| GPCF-DOC-20CE547AAF | gpcf-loop-engineering-spec-v1 | 02-governance/gpcf-loop-engineering-spec-v1.md | GPCF | controlled |
 | GPCF-DOC-D67341FE2B | GPCF Loop Engineering 角色边界定义 | 02-governance/gpcf-role-boundary.md | WAES | controlled |
 | GPCF-DOC-A33E51C815 | GPCF Loop Engineering 状态机定义 | 02-governance/gpcf-status-machine.md | WAES | controlled |
 | GPCF-DOC-A882F89F6C | Loop Agent-Reach Exa授权包 | 02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md | WAES | controlled |
 | GPCF-DOC-95CB463CBF | Loop Agent-Reach L3候选搜索流水线目标 | 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | WAES | controlled |
-| GPCF-DOC-29E5B0AC17 | Loop Autonomy Policy | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |
-| GPCF-DOC-9B8C2D4F61 | LOOP 能力注册表 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | WAES | controlled |
+| GPCF-DOC-29E5B0AC17 | LOOP_AUTONOMY_POLICY | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | GPCF | controlled |
+| GPCF-DOC-9B8C2D4F61 | LOOP_CAPABILITY_REGISTRY | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | WAES | controlled |
 | GPCF-DOC-AB6DC46557 | Loop CodeGraph Goal Optimization Plan | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-622398264F | Loop CodeGraph Large File Policy | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | WAES | controlled |
-| GPCF-DOC-23DDC94324 | Loop CodeGraph P1 Pilot Admission | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | WAES | controlled |
+| GPCF-DOC-23DDC94324 | LOOP_CODEGRAPH_P1_PILOT_ADMISSION | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | GPCF | controlled |
 | GPCF-DOC-6CC5F6A45C | Loop CodeGraph Project Group Coverage | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | WAES | controlled |
 | GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
 | GPCF-DOC-4BA3D31617 | Loop Engineering 五方向实施规范 | 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | WAES | controlled |
 | GPCF-DOC-6E7DCE4A91 | LOOP 工程体系整体实施规范 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | controlled |
 | GPCF-DOC-04BF76145B | LOOP 执行规则 | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
-| GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | controlled |
+| GPCF-DOC-FE20CDD358 | LOOP_GOVERNANCE_DASHBOARD | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | GPCF | controlled |
 | GPCF-DOC-07906C7E54 | Loop 治理效率债务 Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAES | controlled |
 | GPCF-DOC-D63AEEB17D | Loop 治理运行边界 | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAES | controlled |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAES | controlled |

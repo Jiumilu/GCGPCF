@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/README.md
 source_path: 01-architecture/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -68,4 +68,4 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-535BF5C0CA | GlobalCloud V0.0.1 项目群交叉分析报告 | 01-architecture/GlobalCloud项目群交叉分析报告.md | GPCF | controlled |
 | GPCF-DOC-7B5E3B05D7 | GlobalCloud项目群最小闭环L4实施方案 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | GPCF | controlled |
 | GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | controlled |
-| GPCF-DOC-1D47877518 | 基于 GlobalCloud 项目群的 GlobalCloud 绿色供应链体系架构设计方案 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | GPCF | controlled |
+| GPCF-DOC-1D47877518 | 基于GlobalCloud项目群的智慧工厂架构设计方案 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | GPCF | controlled |

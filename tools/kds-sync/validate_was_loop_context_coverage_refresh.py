@@ -123,7 +123,7 @@ def validate_nested_context(source: str, context: dict[str, Any]) -> None:
 
 def validate_fixture(fixture: dict[str, Any]) -> list[str]:
     failures: list[str] = []
-    if fixture.get("loop_round_count") != 112:
+    if fixture.get("loop_round_count") != 136:
         failures.append("loop_round_count_mismatch")
     if fixture.get("project_group_scope") != PROJECT_GROUP:
         failures.append("project_group_scope_mismatch")
@@ -155,7 +155,7 @@ def main() -> int:
 
     covered = evidence.get("covered_loop_rounds")
     require(isinstance(covered, list), "covered_loop_rounds must be a list")
-    require(len(covered) == evidence.get("coverage_scope", {}).get("loop_round_count") == 112, "loop round count mismatch")
+    require(len(covered) == evidence.get("coverage_scope", {}).get("loop_round_count") == 136, "loop round count mismatch")
     require(evidence.get("coverage_scope", {}).get("project_group_scope") == PROJECT_GROUP, "project group scope mismatch")
     require(evidence.get("coverage_scope", {}).get("context_shapes_supported") == CONTEXT_SHAPES, "context shape list mismatch")
 
@@ -191,18 +191,18 @@ def main() -> int:
         require(boundary.get(key) is False, f"boundary.{key} must remain false")
 
     for phrase in [
-        "loop_round_count | `112`",
+        "loop_round_count | `136`",
         "project_scope_count | `14`",
         "context_shapes_supported | `flat_v1,nested_v2`",
         "production_ready | `false`",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
-    require("覆盖统计已刷新到 112 个 round" in loop_text, "loop feedback missing")
+    require("覆盖统计已刷新到 136 个 round" in loop_text, "loop feedback missing")
     require("object_family: LoopWasContextCoverageRefresh" in loop_text, "loop_was_context missing refresh object family")
 
     print(
         "was_loop_context_coverage_refresh=pass "
-        "loop_round_count=112 project_scope_count=14 context_shapes=flat_v1,nested_v2 "
+        "loop_round_count=136 project_scope_count=14 context_shapes=flat_v1,nested_v2 "
         "positive_fixtures=1 negative_fixtures=3 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
         "accepted=false integrated=false production_ready=false "

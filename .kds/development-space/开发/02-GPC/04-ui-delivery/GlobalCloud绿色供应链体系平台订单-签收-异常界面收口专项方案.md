@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系平台订单-签收-异常界面收口专项方案.md
 source_path: 04-ui-delivery/GlobalCloud绿色供应链体系平台订单-签收-异常界面收口专项方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

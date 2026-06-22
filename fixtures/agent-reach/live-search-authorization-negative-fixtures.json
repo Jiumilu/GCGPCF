@@ -1,0 +1,46 @@
+{
+  "id": "agent-reach-live-search-authorization-negative-fixtures-20260622",
+  "expected_decision": "all_rejected",
+  "fixtures": [
+    {
+      "case_id": "missing_authorized_by",
+      "mutation": "authorized_by is empty",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "expired_window",
+      "mutation": "expires_at is earlier than authorized_at",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "allows_credential_write",
+      "mutation": "credential_boundary.store_credentials is true",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "allows_kds_canonical_write",
+      "mutation": "scope.allowed_actions includes kds_canonical_write",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "allows_gfis_source_of_record_write",
+      "mutation": "scope.allowed_actions includes gfis_source_of_record_write",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "allows_global_mcp_config_write",
+      "mutation": "scope.allowed_actions includes global_mcp_config_write",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "missing_redaction",
+      "mutation": "logging_redaction.redact_tokens is false",
+      "expected_decision": "reject"
+    },
+    {
+      "case_id": "excessive_query_limit",
+      "mutation": "limits.max_queries is greater than 5",
+      "expected_decision": "reject"
+    }
+  ]
+}

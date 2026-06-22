@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/README.md
 source_path: docs/harness/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -38,24 +38,52 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-59D8079155 | loops | docs/harness/loops/README.md | GPCF | controlled |
 | GPCF-DOC-A042EDA2EA | GPCF-AGENT-REACH-AUTHORITATIVE-SOURCE-VERIFICATION-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-AUTHORITATIVE-SOURCE-VERIFICATION-001.md | GPCF | controlled |
-| GPCF-DOC-LOOP-AGENT-REACH-QUALITY-REGRESSION-001 | GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-001.md | GPCF | controlled |
-| GPCF-DOC-LOOP-AGENT-REACH-QUALITY-TREND-001 | GPCF-AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-001.md | GPCF | controlled |
-| GPCF-DOC-9B31D33243 | GPCF-AGENT-REACH-CANDIDATE-SEARCH-REPLAY-LEDGER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-SEARCH-REPLAY-LEDGER-001.md | GPCF | controlled |
-| GPCF-DOC-81584F6F45 | GPCF-AGENT-REACH-CANDIDATE-SEARCH-REVIEW-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-SEARCH-REVIEW-001.md | GPCF | controlled |
-| GPCF-DOC-A412B97247 | GPCF-AGENT-REACH-EXA-AUTH-PACK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-AUTH-PACK-001.md | GPCF | controlled |
-| GPCF-DOC-4D7E1FF80C | GPCF-AGENT-REACH-EXA-FIXED-BENCHMARK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-FIXED-BENCHMARK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-QUALITY-REGRESSION-001 | loop-round-GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-QUALITY-REGRESSION-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-QUALITY-TREND-001 | loop-round-GPCF-AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-QUALITY-TREND-BASELINE-001.md | GPCF | controlled |
+| GPCF-DOC-9B31D33243 | loop-round-GPCF-AGENT-REACH-CANDIDATE-SEARCH-REPLAY-LEDGER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-SEARCH-REPLAY-LEDGER-001.md | GPCF | controlled |
+| GPCF-DOC-81584F6F45 | loop-round-GPCF-AGENT-REACH-CANDIDATE-SEARCH-REVIEW-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-CANDIDATE-SEARCH-REVIEW-001.md | GPCF | controlled |
+| GPCF-DOC-A412B97247 | loop-round-GPCF-AGENT-REACH-EXA-AUTH-PACK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-AUTH-PACK-001.md | GPCF | controlled |
+| GPCF-DOC-4D7E1FF80C | loop-round-GPCF-AGENT-REACH-EXA-FIXED-BENCHMARK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-FIXED-BENCHMARK-001.md | GPCF | controlled |
 | GPCF-DOC-C7BD30A8E1 | GPCF-AGENT-REACH-EXA-LOCAL-PILOT-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-LOCAL-PILOT-001.md | GPCF | controlled |
-| GPCF-DOC-57CA1D25B2 | GPCF-AGENT-REACH-EXA-LOCAL-PILOT-GATE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-LOCAL-PILOT-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-57CA1D25B2 | loop-round-GPCF-AGENT-REACH-EXA-LOCAL-PILOT-GATE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-EXA-LOCAL-PILOT-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-AGENT-REACH-FULL-GOAL-LOOP-20260622 | Loop Round GPCF Agent-Reach Full Implementation Goal 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-FULL-IMPLEMENTATION-GOAL-001.md | GPCF | controlled |
-| GPCF-DOC-DBA6783155 | GPCF-AGENT-REACH-HUMAN-REVIEW-DECISIONS-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-HUMAN-REVIEW-DECISIONS-001.md | GPCF | controlled |
+| GPCF-DOC-DBA6783155 | loop-round-GPCF-AGENT-REACH-HUMAN-REVIEW-DECISIONS-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-HUMAN-REVIEW-DECISIONS-001.md | GPCF | controlled |
 | GPCF-DOC-8C0F59F540 | GPCF-AGENT-REACH-L2-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-L2-001.md | GPCF | controlled |
-| GPCF-DOC-ABA0AE4BF6 | GPCF-AGENT-REACH-L2-ZERO-CONFIG-REPAIR-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-L2-ZERO-CONFIG-REPAIR-001.md | GPCF | controlled |
+| GPCF-DOC-ABA0AE4BF6 | loop-round-GPCF-AGENT-REACH-L2-ZERO-CONFIG-REPAIR-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-L2-ZERO-CONFIG-REPAIR-001.md | GPCF | controlled |
 | GPCF-DOC-44A495A9C7 | GPCF-AGENT-REACH-L3-CANDIDATE-PIPELINE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-L3-CANDIDATE-PIPELINE-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-INGESTION-DRY-RUN-001 | GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-DRY-RUN-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-INGESTION-PLAN-001 | GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-PLAN-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-LIMITED-CANDIDATE-INGESTION-PLAN-001.md | GPCF | controlled |
 | GPCF-DOC-AGENT-REACH-P0-SOURCE-LOCK-LOOP-20260622 | Loop Round GPCF Agent-Reach P0 Source Lock 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P0-SOURCE-LOCK-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-P1-ISOLATED-INSTALL-001 | Agent-Reach P1 隔离安装 Loop 记录 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P1-ISOLATED-INSTALL-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001 | Agent-Reach P2 受控 Adapter Skeleton Loop 记录 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P2-CONTROLLED-ADAPTER-SKELETON-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P3-QUALITY-REPLAY-HARNESS-001 | Agent-Reach P3 离线质量 Replay Harness Loop 记录 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P3-QUALITY-REPLAY-HARNESS-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P4-LIVE-SEARCH-AUTHORIZATION-PACK-001 | LOOP Round GPCF-AGENT-REACH-P4-LIVE-SEARCH-AUTHORIZATION-PACK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P4-LIVE-SEARCH-AUTHORIZATION-PACK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P5-LIVE-SEARCH-PRECHECK-001 | LOOP Round GPCF-AGENT-REACH-P5-LIVE-SEARCH-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P5-LIVE-SEARCH-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P5B-LIVE-SEARCH-PRECHECK-CORRECTED-AUTHORIZATION-001 | LOOP Round GPCF-AGENT-REACH-P5B-LIVE-SEARCH-PRECHECK-CORRECTED-AUTHORIZATION-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P5B-LIVE-SEARCH-PRECHECK-CORRECTED-AUTHORIZATION-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-001 | LOOP Round GPCF-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-AGENT-REACH-P7-AUTHORIZATION-PRECHECK-001 | Loop Round GPCF-AGENT-REACH-P7-AUTHORIZATION-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-AUTHORIZATION-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P7-EXECUTION-AUTHORIZATION-REQUEST-PACKAGE-001 | LOOP Round GPCF-AGENT-REACH-P7-EXECUTION-AUTHORIZATION-REQUEST-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-EXECUTION-AUTHORIZATION-REQUEST-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P7-EXECUTION-HARNESS-GUARD-001 | LOOP Round GPCF-AGENT-REACH-P7-EXECUTION-HARNESS-GUARD-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-EXECUTION-HARNESS-GUARD-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P7-OUTPUT-QUALITY-GATE-001 | LOOP Round GPCF-AGENT-REACH-P7-OUTPUT-QUALITY-GATE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-OUTPUT-QUALITY-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P7-RUNTIME-DEPENDENCY-PRECHECK-001 | LOOP Round GPCF-AGENT-REACH-P7-RUNTIME-DEPENDENCY-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-RUNTIME-DEPENDENCY-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P7-WEB-BACKEND-RUNTIME-REPAIR-001 | LOOP Round GPCF-AGENT-REACH-P7-WEB-BACKEND-RUNTIME-REPAIR-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-WEB-BACKEND-RUNTIME-REPAIR-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-001 | Agent-Reach P8 授权文本摄取 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-AUTHORIZED-PIPELINE-CLOSURE-001 | Agent-Reach P8 授权后 Pipeline 闭包 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-AUTHORIZED-PIPELINE-CLOSURE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-BATCH-AUTHORIZATION-REQUEST-PACKAGE-001 | LOOP Round GPCF-AGENT-REACH-P8-BATCH-AUTHORIZATION-REQUEST-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-BATCH-AUTHORIZATION-REQUEST-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-BATCH-LOCAL-AUTHORIZATION-CREATOR-001 | Agent-Reach P8 批次本地授权创建器 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-BATCH-LOCAL-AUTHORIZATION-CREATOR-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-BATCH-MERGE-RUNNER-001 | LOOP Round GPCF-AGENT-REACH-P8-BATCH-MERGE-RUNNER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-BATCH-MERGE-RUNNER-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-BATCH-RUNTIME-RUNNER-001 | LOOP Round GPCF-AGENT-REACH-P8-BATCH-RUNTIME-RUNNER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-BATCH-RUNTIME-RUNNER-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-001 | Agent-Reach P8 执行审计包 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-FULL-LIVE-SEARCH-PIPELINE-001 | LOOP Round GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-PIPELINE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-PIPELINE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-LIVE-EXECUTION-READINESS-MATRIX-001 | Agent-Reach P8 真实搜索执行准备矩阵 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-LIVE-EXECUTION-READINESS-MATRIX-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-LOCAL-AUTHORIZATION-WINDOW-AUDIT-001 | Agent-Reach P8 Local Authorization Window Audit Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-LOCAL-AUTHORIZATION-WINDOW-AUDIT-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-OPERATOR-HANDOFF-001 | Agent-Reach P8 Operator Handoff Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-OPERATOR-HANDOFF-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-POST-AUTHORIZATION-DRIVER-001 | Agent-Reach P8 授权后执行 Driver Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-POST-AUTHORIZATION-DRIVER-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-OUTPUT-QUALITY-GATE-001 | LOOP Round GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-OUTPUT-QUALITY-GATE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-OUTPUT-QUALITY-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-001 | LOOP Round GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-001 | Agent-Reach P8 查询质量预检 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-P8-REWORK-QUEUE-001 | Agent-Reach P8 返工队列 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-REWORK-QUEUE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001 | LOOP Round GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-RECENTER-001 | GPCF-AGENT-REACH-RECENTER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-RECENTER-001.md | GPCF | controlled |
 | GPCF-DOC-5C7F800184 | GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001.md | GPCF | controlled |
 | GPCF-DOC-7CD4D9DE05 | loop-round-GPCF-CF-LR-001 | docs/harness/loops/loop-round-GPCF-CF-LR-001.md | GPCF | controlled |
@@ -95,6 +123,7 @@ KDS 空间：`开发`
 | GPCF-DOC-8CB660E132 | GPCF CodeGraph Active Drift Monitor | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001.md | GPCF | controlled |
 | GPCF-DOC-DE30AB91D7 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | GPCF | controlled |
 | GPCF-DOC-31365B7D25 | Loop Round - CodeGraph 开发执行授权等待态 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | GPCF | controlled |
+| GPCF-DOC-AC51B4A6F1 | Loop Round - CodeGraph 开发执行层中文化文档债务收口 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | GPCF | controlled |
 | GPCF-DOC-0D35D7BC63 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | GPCF | controlled |
 | GPCF-DOC-11E86C4B9A | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | GPCF | controlled |
 | GPCF-DOC-5A4D73BB84 | Loop Round - CodeGraph 首个真实业务候选授权执行 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-006.md | GPCF | controlled |
@@ -103,6 +132,10 @@ KDS 空间：`开发`
 | GPCF-DOC-F03925A181 | Loop Round - CodeGraph GFIS 工具状态审计授权阻断 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-TOOL-STATE-AUDIT-BLOCKED-009.md | GPCF | controlled |
 | GPCF-DOC-16936490ED | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003.md | GPCF | controlled |
 | GPCF-DOC-9464E9A367 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002.md | GPCF | controlled |
+| GPCF-DOC-9A1E41F170 | Loop Round - CodeGraph 开发执行层项目群收口 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-PROJECT-GROUP-CLOSURE-010.md | GPCF | controlled |
+| GPCF-DOC-4C71056C92 | Loop Round - CodeGraph 开发执行层稳态监控 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-STEADY-STATE-MONITOR-012.md | GPCF | controlled |
+| GPCF-DOC-E17EF2D241 | Loop Round - CodeGraph watchlist 授权包 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-014.md | GPCF | controlled |
+| GPCF-DOC-F5BC0C93DF | Loop Round - CodeGraph watchlist 漂移分诊 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-DRIFT-TRIAGE-013.md | GPCF | controlled |
 | GPCF-DOC-33EED81A10 | GPCF CodeGraph Drift Alert Thresholds 008 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md | GPCF | controlled |
 | GPCF-DOC-794D90A6F1 | GPCF CodeGraph GFIS Large File Policy | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-LARGE-FILE-POLICY-001.md | GPCF | controlled |
 | GPCF-DOC-8B82DFE880 | GPCF CodeGraph GFIS Residual Notice Investigation | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-RESIDUAL-NOTICE-001.md | GPCF | controlled |
@@ -112,6 +145,7 @@ KDS 空间：`开发`
 | GPCF-DOC-75314D153A | GPCF CodeGraph Impact Regression Watch 007 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007.md | GPCF | controlled |
 | GPCF-DOC-B9144A4914 | GPCF CodeGraph Impact Report Dry-run 005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005.md | GPCF | controlled |
 | GPCF-DOC-28984FE940 | GPCF CodeGraph Integration Closure Audit | docs/harness/loops/loop-round-GPCF-CODEGRAPH-INTEGRATION-CLOSURE-001.md | GPCF | controlled |
+| GPCF-DOC-7272ECE5C1 | Loop Round - CodeGraph KDS mirror scope review 授权复核 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017.md | GPCF | controlled |
 | GPCF-DOC-DA39A6A262 | Loop Round GPCF-CODEGRAPH-P1-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-P1-ADMISSION-001.md | GPCF | controlled |
 | GPCF-DOC-F57E6B4E33 | Loop Round GPCF-CODEGRAPH-PROJECT-GROUP-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-001.md | GPCF | controlled |
 | GPCF-DOC-55CEA573A4 | GPCF CodeGraph Project Group Full Fabric 001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001.md | GPCF | controlled |
@@ -120,11 +154,13 @@ KDS 空间：`开发`
 | GPCF-DOC-BEB8F3E134 | GPCF CodeGraph Project Group Steady State Recheck 004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-004.md | GPCF | controlled |
 | GPCF-DOC-FC49098409 | GPCF CodeGraph Project Group Steady State Recheck 011 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-RECHECK-011.md | GPCF | controlled |
 | GPCF-DOC-5D6D87B8C4 | GPCF CodeGraph Project Group Steady State Verify 004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-STEADY-STATE-VERIFY-004.md | GPCF | controlled |
+| GPCF-DOC-D86BB8E18F | Loop Round - CodeGraph Studio sync-only precheck | docs/harness/loops/loop-round-GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015.md | GPCF | controlled |
 | GPCF-DOC-277A170C82 | GPCF CodeGraph Sync Authorization Pack 009 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009.md | GPCF | controlled |
 | GPCF-DOC-85B4EB50A3 | GPCF CodeGraph Sync Drift Closure | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-DRIFT-001.md | GPCF | controlled |
 | GPCF-DOC-3BC26C2DFE | GPCF CodeGraph Sync-Only Authorization 003 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003.md | GPCF | controlled |
 | GPCF-DOC-3DB2BD8346 | GPCF CodeGraph Sync-only Closure 010 Authorized | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED.md | GPCF | controlled |
 | GPCF-DOC-BE4E5F68B8 | GPCF CodeGraph Sync-only Closure 010 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010.md | GPCF | controlled |
+| GPCF-DOC-9D0EC80EB6 | Loop Round - CodeGraph watchlist post-Studio 监控 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md | GPCF | controlled |
 | GPCF-DOC-005FDDA3DC | GPCF CodeGraph Watchlist Sync Authorization Pack 002 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002.md | GPCF | controlled |
 | GPCF-DOC-BB1D26426D | GPCF CodeGraph Watchlist Sync-only Closure 003 Authorized | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED.md | GPCF | controlled |
 | GPCF-DOC-D3B37861BD | GPCF CodeGraph Watchlist Sync Plan 001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-PLAN-001.md | GPCF | controlled |
@@ -143,17 +179,17 @@ KDS 空间：`开发`
 | GPCF-LOOP-GCKF-P0-D109-001 | Loop Round GPCF-GCKF-P0-D109-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D109-001.md | GPCF | controlled |
 | GPCF-DOC-DEAE441DB1 | GC-Knowledge Fabric P0-D11 Handler 到 Service Dry-run Preflight LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D11-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D110-001 | Loop Round GPCF-GCKF-P0-D110-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D110-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D111-001 | Loop Round GPCF-GCKF-P0-D111-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D111-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D112-001 | Loop Round GPCF-GCKF-P0-D112-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D112-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D113-001 | Loop Round GPCF-GCKF-P0-D113-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D113-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D114-001 | Loop Round GPCF-GCKF-P0-D114-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D114-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D115-001 | Loop Round GPCF-GCKF-P0-D115-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D115-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D116-001 | Loop Round GPCF-GCKF-P0-D116-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D116-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D117-001 | Loop Round GPCF-GCKF-P0-D117-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D117-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D118-001 | Loop Round GPCF-GCKF-P0-D118-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D118-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D119-001 | Loop Round GPCF-GCKF-P0-D119-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D119-001.md | GPCF | controlled |
-| GPCF-DOC-72528AEF4C | GC-Knowledge Fabric P0-D12 Handler Request / Response Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D12-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D120-001 | Loop Round GPCF-GCKF-P0-D120-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D120-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D111-001 | loop-round-GPCF-GCKF-P0-D111-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D111-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D112-001 | loop-round-GPCF-GCKF-P0-D112-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D112-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D113-001 | loop-round-GPCF-GCKF-P0-D113-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D113-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D114-001 | loop-round-GPCF-GCKF-P0-D114-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D114-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D115-001 | loop-round-GPCF-GCKF-P0-D115-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D115-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D116-001 | loop-round-GPCF-GCKF-P0-D116-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D116-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D117-001 | loop-round-GPCF-GCKF-P0-D117-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D117-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D118-001 | loop-round-GPCF-GCKF-P0-D118-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D118-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D119-001 | loop-round-GPCF-GCKF-P0-D119-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D119-001.md | GPCF | controlled |
+| GPCF-DOC-72528AEF4C | loop-round-GPCF-GCKF-P0-D12-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D12-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D120-001 | loop-round-GPCF-GCKF-P0-D120-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D120-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D121-001 | Loop Round GPCF-GCKF-P0-D121-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D121-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D122-001 | Loop Round GPCF-GCKF-P0-D122-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D122-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D123-001 | Loop Round GPCF-GCKF-P0-D123-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D123-001.md | GPCF | controlled |
@@ -193,8 +229,28 @@ KDS 空间：`开发`
 | GPCF-LOOP-GCKF-P0-D154-001 | Loop Round GPCF-GCKF-P0-D154-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D154-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D155-001 | Loop Round GPCF-GCKF-P0-D155-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D155-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D156-001 | Loop Round GPCF-GCKF-P0-D156-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D156-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D157-001 | Loop Round GPCF-GCKF-P0-D157-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D157-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D158-001 | Loop Round GPCF-GCKF-P0-D158-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D158-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D159-001 | Loop Round GPCF-GCKF-P0-D159-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D159-001.md | GPCF | controlled |
 | GPCF-DOC-3D9384C901 | GC-Knowledge Fabric P0-D16 Handler Stub Envelope Contract LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D16-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D160-001 | Loop Round GPCF-GCKF-P0-D160-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D160-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D161-001 | Loop Round GPCF-GCKF-P0-D161-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D161-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D162-001 | Loop Round GPCF-GCKF-P0-D162-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D162-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D163-001 | Loop Round GPCF-GCKF-P0-D163-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D163-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D164-001 | Loop Round GPCF-GCKF-P0-D164-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D164-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D165-001 | Loop Round GPCF-GCKF-P0-D165-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D165-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D166-001 | Loop Round GPCF-GCKF-P0-D166-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D166-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D167-001 | Loop Round GPCF-GCKF-P0-D167-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D167-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D168-001 | Loop Round GPCF-GCKF-P0-D168-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D168-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D169-001 | Loop Round GPCF-GCKF-P0-D169-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D169-001.md | GPCF | controlled |
 | GPCF-DOC-8C41475AD9 | GC-Knowledge Fabric P0-D17 Route Adapter Dry-run Contract LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D17-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D170-001 | Loop Round GPCF-GCKF-P0-D170-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D170-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D171-001 | Loop Round GPCF-GCKF-P0-D171-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D171-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D172-001 | Loop Round GPCF-GCKF-P0-D172-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D172-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D173-001 | Loop Round GPCF-GCKF-P0-D173-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D173-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D174-001 | Loop Round GPCF-GCKF-P0-D174-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D174-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D175-001 | Loop Round GPCF-GCKF-P0-D175-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D175-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D176-001 | Loop Round GPCF-GCKF-P0-D176-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D176-001.md | GPCF | controlled |
 | GPCF-DOC-DECCEEE934 | GC-Knowledge Fabric P0-D18 Acceptance Packet Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D18-001.md | GPCF | controlled |
 | GPCF-DOC-156556AE22 | GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md | GPCF | controlled |
 | GPCF-DOC-9F56DFB107 | GC-Knowledge Fabric P0-D2 目录编号与挂池规则 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md | GPCF | controlled |
@@ -301,9 +357,15 @@ KDS 空间：`开发`
 | GPCF-DOC-F59787B942 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001.md | GPCF | controlled |
 | GPCF-DOC-1320B915AE | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001.md | GPCF | controlled |
 | GPCF-DOC-2EF89E2432 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001.md | GPCF | controlled |
-| GPCF-DOC-74DFF5CB30 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md | GPCF | controlled |
-| GPCF-DOC-C81CB2CF9A | Loop Round GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-74DFF5CB30 | loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-C81CB2CF9A | loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-5FF130412D | Loop Round GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622 | Loop Round GPCF Headroom LCX L3.5 Answer Equivalence Synthetic Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622 | Loop Round GPCF Headroom LCX L3.5 Controlled Sanitized Pilot Window 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622 | Loop Round GPCF Headroom LCX L3.5 Multi Window Stability 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Loop Round GPCF Headroom LCX marker retrieval miss 比较门禁 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-4F8936D7E5 | Loop Round GPCF Headroom LCX Measurement Admission Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md | GPCF | controlled |
 | GPCF-DOC-A7161F4187 | Loop Round GPCF Headroom LCX Metadata Replay Check 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md | GPCF | controlled |
@@ -313,7 +375,11 @@ KDS 空间：`开发`
 | GPCF-DOC-8161B0C039 | Loop Round GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-01EFEECC41 | Loop Round GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-FA44EE9146 | Loop Round GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | Loop Round GPCF Headroom LCX Project Group Replay Stability 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622 | Loop Round GPCF Headroom LCX Project Group Sanitized Fixture 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | Loop Round GPCF Headroom LCX Readiness Pilot Authorization Package 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md | GPCF | controlled |
 | GPCF-DOC-D83FE8C1B1 | Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Loop Round GPCF Headroom LCX Sanitized Token Fixture Extension 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | GPCF | controlled |
 | GPCF-DOC-82B704BBFF | Loop Round GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | GPCF | controlled |
 | GPCF-DOC-B36D4C856B | Loop Round GPCF Headroom LCX WAES Harness Admission Decision Checklist 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md | GPCF | controlled |
 | GPCF-DOC-F9C0CBE512 | LOOP Round GPCF Headroom Loop Cost Observation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LOOP-COST-OBSERVATION-001.md | GPCF | controlled |
@@ -361,7 +427,7 @@ KDS 空间：`开发`
 | GPCF-DOC-5EDE1944EC | LOOP Round GPCF-KDS-DKS-029 - 葛化 GFIS AI 助手内测运行记录首批空白台账 | docs/harness/loops/loop-round-GPCF-KDS-DKS-029.md | GPCF | controlled |
 | GPCF-DOC-84A7C6F6E2 | LOOP Round GPCF-KDS-DKS-030 - 湖北磷材首批知识对象运行空白台账 | docs/harness/loops/loop-round-GPCF-KDS-DKS-030.md | GPCF | controlled |
 | GPCF-DOC-8A341D2005 | LOOP Round GPCF-KDS-DKS-031 - 湖北磷材拓厂评估与知识源评测集 | docs/harness/loops/loop-round-GPCF-KDS-DKS-031.md | GPCF | controlled |
-| GPCF-DOC-7ABB6F0F12 | LOOP Round GPCF-KDS-DKS-032 - 湖北磷材评测运行记录首批空白台账 | docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md | GPCF | controlled |
+| GPCF-DOC-7ABB6F0F12 | loop-round-GPCF-KDS-DKS-032 | docs/harness/loops/loop-round-GPCF-KDS-DKS-032.md | GPCF | controlled |
 | GPCF-DOC-D079E70BA9 | LOOP Round GPCF-KDS-DKS-033 - 湖北磷材真实资料接收任务包与人工评测演练 | docs/harness/loops/loop-round-GPCF-KDS-DKS-033.md | GPCF | controlled |
 | GPCF-DOC-856A557C07 | LOOP Round GPCF-KDS-DKS-034 - 湖北磷材 Brain 知识页候选结构与发布门禁 | docs/harness/loops/loop-round-GPCF-KDS-DKS-034.md | GPCF | controlled |
 | GPCF-DOC-3B0051E50E | LOOP Round GPCF-KDS-DKS-035 - 湖北磷材 Brain 知识页候选运行评审空白台账与发布前问题清单 | docs/harness/loops/loop-round-GPCF-KDS-DKS-035.md | GPCF | controlled |
@@ -533,43 +599,43 @@ KDS 空间：`开发`
 | GPCF-DOC-E6A2D5B629 | LOOP Round GPCF KDS DKS-202 | docs/harness/loops/loop-round-GPCF-KDS-DKS-202.md | GPCF | controlled |
 | GPCF-DOC-9A06B49204 | LOOP Round GPCF KDS DKS-203 | docs/harness/loops/loop-round-GPCF-KDS-DKS-203.md | GPCF | controlled |
 | GPCF-DOC-4C0C481DF8 | LOOP Round GPCF KDS DKS-204 | docs/harness/loops/loop-round-GPCF-KDS-DKS-204.md | GPCF | controlled |
-| GPCF-DOC-9AEC9D8CF0 | LOOP Round GPCF KDS DKS-205 | docs/harness/loops/loop-round-GPCF-KDS-DKS-205.md | GPCF | controlled |
-| GPCF-DOC-76275B4B71 | LOOP Round GPCF KDS DKS-206 | docs/harness/loops/loop-round-GPCF-KDS-DKS-206.md | GPCF | controlled |
-| GPCF-DOC-9316F9D79E | LOOP Round GPCF KDS DKS-207 | docs/harness/loops/loop-round-GPCF-KDS-DKS-207.md | GPCF | controlled |
+| GPCF-DOC-9AEC9D8CF0 | loop-round-GPCF-KDS-DKS-205 | docs/harness/loops/loop-round-GPCF-KDS-DKS-205.md | GPCF | controlled |
+| GPCF-DOC-76275B4B71 | loop-round-GPCF-KDS-DKS-206 | docs/harness/loops/loop-round-GPCF-KDS-DKS-206.md | GPCF | controlled |
+| GPCF-DOC-9316F9D79E | loop-round-GPCF-KDS-DKS-207 | docs/harness/loops/loop-round-GPCF-KDS-DKS-207.md | GPCF | controlled |
 | GPCF-DOC-23A484B070 | loop-round-GPCF-KDS-DKS-208 | docs/harness/loops/loop-round-GPCF-KDS-DKS-208.md | GPCF | controlled |
 | GPCF-DOC-910C95E754 | LOOP Round GPCF KDS DKS-209 | docs/harness/loops/loop-round-GPCF-KDS-DKS-209.md | GPCF | controlled |
 | GPCF-DOC-D36642BBEA | LOOP Round GPCF-KDS-DKS-210 | docs/harness/loops/loop-round-GPCF-KDS-DKS-210.md | GPCF | controlled |
-| GPCF-DOC-E2F8B55C92 | LOOP Round GPCF-KDS-DKS-211 | docs/harness/loops/loop-round-GPCF-KDS-DKS-211.md | GPCF | controlled |
-| GPCF-DOC-686132BB29 | LOOP Round GPCF-KDS-DKS-212 | docs/harness/loops/loop-round-GPCF-KDS-DKS-212.md | GPCF | controlled |
-| GPCF-DOC-FA1BD39D18 | LOOP Round GPCF-KDS-DKS-213 | docs/harness/loops/loop-round-GPCF-KDS-DKS-213.md | GPCF | controlled |
-| GPCF-DOC-0220DCA7B5 | LOOP Round GPCF KDS DKS-214 | docs/harness/loops/loop-round-GPCF-KDS-DKS-214.md | GPCF | controlled |
-| GPCF-DOC-18BD22C540 | LOOP Round GPCF KDS DKS-215 | docs/harness/loops/loop-round-GPCF-KDS-DKS-215.md | GPCF | controlled |
-| GPCF-DOC-394EC8D774 | LOOP Round GPCF KDS DKS-216 | docs/harness/loops/loop-round-GPCF-KDS-DKS-216.md | GPCF | controlled |
-| GPCF-DOC-7A3A865A9E | LOOP Round GPCF KDS DKS-217 | docs/harness/loops/loop-round-GPCF-KDS-DKS-217.md | GPCF | controlled |
-| GPCF-DOC-AD706EB2DF | LOOP Round GPCF KDS DKS-218 | docs/harness/loops/loop-round-GPCF-KDS-DKS-218.md | GPCF | controlled |
-| GPCF-DOC-1D40C88CA4 | LOOP Round GPCF KDS DKS-219 | docs/harness/loops/loop-round-GPCF-KDS-DKS-219.md | GPCF | controlled |
-| GPCF-DOC-AC8B91CFDD | LOOP Round GPCF KDS DKS-220 | docs/harness/loops/loop-round-GPCF-KDS-DKS-220.md | GPCF | controlled |
-| GPCF-DOC-96B73254FB | LOOP Round GPCF KDS DKS-221 | docs/harness/loops/loop-round-GPCF-KDS-DKS-221.md | GPCF | controlled |
+| GPCF-DOC-E2F8B55C92 | loop-round-GPCF-KDS-DKS-211 | docs/harness/loops/loop-round-GPCF-KDS-DKS-211.md | GPCF | controlled |
+| GPCF-DOC-686132BB29 | loop-round-GPCF-KDS-DKS-212 | docs/harness/loops/loop-round-GPCF-KDS-DKS-212.md | GPCF | controlled |
+| GPCF-DOC-FA1BD39D18 | loop-round-GPCF-KDS-DKS-213 | docs/harness/loops/loop-round-GPCF-KDS-DKS-213.md | GPCF | controlled |
+| GPCF-DOC-0220DCA7B5 | loop-round-GPCF-KDS-DKS-214 | docs/harness/loops/loop-round-GPCF-KDS-DKS-214.md | GPCF | controlled |
+| GPCF-DOC-18BD22C540 | loop-round-GPCF-KDS-DKS-215 | docs/harness/loops/loop-round-GPCF-KDS-DKS-215.md | GPCF | controlled |
+| GPCF-DOC-394EC8D774 | loop-round-GPCF-KDS-DKS-216 | docs/harness/loops/loop-round-GPCF-KDS-DKS-216.md | GPCF | controlled |
+| GPCF-DOC-7A3A865A9E | loop-round-GPCF-KDS-DKS-217 | docs/harness/loops/loop-round-GPCF-KDS-DKS-217.md | GPCF | controlled |
+| GPCF-DOC-AD706EB2DF | loop-round-GPCF-KDS-DKS-218 | docs/harness/loops/loop-round-GPCF-KDS-DKS-218.md | GPCF | controlled |
+| GPCF-DOC-1D40C88CA4 | loop-round-GPCF-KDS-DKS-219 | docs/harness/loops/loop-round-GPCF-KDS-DKS-219.md | GPCF | controlled |
+| GPCF-DOC-AC8B91CFDD | loop-round-GPCF-KDS-DKS-220 | docs/harness/loops/loop-round-GPCF-KDS-DKS-220.md | GPCF | controlled |
+| GPCF-DOC-96B73254FB | loop-round-GPCF-KDS-DKS-221 | docs/harness/loops/loop-round-GPCF-KDS-DKS-221.md | GPCF | controlled |
 | GPCF-DOC-4A2DF5BC1C | LOOP Round GPCF KDS DKS-222 | docs/harness/loops/loop-round-GPCF-KDS-DKS-222.md | GPCF | controlled |
 | GPCF-DOC-5F1B044BF8 | LOOP Round GPCF KDS DKS-223 | docs/harness/loops/loop-round-GPCF-KDS-DKS-223.md | GPCF | controlled |
 | GPCF-DOC-8E40428833 | LOOP Round GPCF KDS DKS-224 | docs/harness/loops/loop-round-GPCF-KDS-DKS-224.md | GPCF | controlled |
 | GPCF-DOC-6A4F1842BD | LOOP Round GPCF KDS DKS-225 | docs/harness/loops/loop-round-GPCF-KDS-DKS-225.md | GPCF | controlled |
 | GPCF-DOC-447257FDBA | LOOP Round GPCF KDS DKS-226 | docs/harness/loops/loop-round-GPCF-KDS-DKS-226.md | GPCF | controlled |
 | GPCF-DOC-08E386D860 | LOOP Round GPCF KDS DKS-227 | docs/harness/loops/loop-round-GPCF-KDS-DKS-227.md | GPCF | controlled |
-| GPCF-DOC-1ED9E2787A | LOOP Round GPCF KDS DKS-228 | docs/harness/loops/loop-round-GPCF-KDS-DKS-228.md | GPCF | controlled |
-| GPCF-DOC-59F6DFADCF | LOOP Round GPCF KDS DKS-229 | docs/harness/loops/loop-round-GPCF-KDS-DKS-229.md | GPCF | controlled |
-| GPCF-DOC-3B79640DC4 | LOOP Round GPCF KDS DKS-230 | docs/harness/loops/loop-round-GPCF-KDS-DKS-230.md | GPCF | controlled |
-| GPCF-DOC-A5950538E9 | LOOP Round GPCF KDS DKS-231 | docs/harness/loops/loop-round-GPCF-KDS-DKS-231.md | GPCF | controlled |
-| GPCF-DOC-6CCCF2BB73 | GPCF KDS DKS-232 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-232.md | GPCF | controlled |
-| GPCF-DOC-41F6213339 | GPCF KDS DKS-233 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-233.md | GPCF | controlled |
-| GPCF-DOC-5B9B9E46C7 | GPCF KDS DKS-234 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-234.md | GPCF | controlled |
-| GPCF-DOC-19F2C28A4D | GPCF KDS DKS-235 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-235.md | GPCF | controlled |
-| GPCF-DOC-70EE4FF084 | GPCF KDS DKS-236 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-236.md | GPCF | controlled |
+| GPCF-DOC-1ED9E2787A | loop-round-GPCF-KDS-DKS-228 | docs/harness/loops/loop-round-GPCF-KDS-DKS-228.md | GPCF | controlled |
+| GPCF-DOC-59F6DFADCF | loop-round-GPCF-KDS-DKS-229 | docs/harness/loops/loop-round-GPCF-KDS-DKS-229.md | GPCF | controlled |
+| GPCF-DOC-3B79640DC4 | loop-round-GPCF-KDS-DKS-230 | docs/harness/loops/loop-round-GPCF-KDS-DKS-230.md | GPCF | controlled |
+| GPCF-DOC-A5950538E9 | loop-round-GPCF-KDS-DKS-231 | docs/harness/loops/loop-round-GPCF-KDS-DKS-231.md | GPCF | controlled |
+| GPCF-DOC-6CCCF2BB73 | loop-round-GPCF-KDS-DKS-232 | docs/harness/loops/loop-round-GPCF-KDS-DKS-232.md | GPCF | controlled |
+| GPCF-DOC-41F6213339 | loop-round-GPCF-KDS-DKS-233 | docs/harness/loops/loop-round-GPCF-KDS-DKS-233.md | GPCF | controlled |
+| GPCF-DOC-5B9B9E46C7 | loop-round-GPCF-KDS-DKS-234 | docs/harness/loops/loop-round-GPCF-KDS-DKS-234.md | GPCF | controlled |
+| GPCF-DOC-19F2C28A4D | loop-round-GPCF-KDS-DKS-235 | docs/harness/loops/loop-round-GPCF-KDS-DKS-235.md | GPCF | controlled |
+| GPCF-DOC-70EE4FF084 | loop-round-GPCF-KDS-DKS-236 | docs/harness/loops/loop-round-GPCF-KDS-DKS-236.md | GPCF | controlled |
 | GPCF-DOC-3B0B60DBA5 | GPCF KDS DKS-237 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-237.md | GPCF | controlled |
-| GPCF-DOC-386B5F64E1 | GPCF KDS DKS-238 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-238.md | GPCF | controlled |
-| GPCF-DOC-EEB61CCCB9 | GPCF KDS DKS-239 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-239.md | GPCF | controlled |
-| GPCF-DOC-B5FFD8608D | GPCF KDS DKS-240 Loop | docs/harness/loops/loop-round-GPCF-KDS-DKS-240.md | GPCF | controlled |
-| GPCF-DOC-57D2400DBD | LOOP Round GPCF KDS DKS-241 Digest Delivery Preview | docs/harness/loops/loop-round-GPCF-KDS-DKS-241.md | GPCF | controlled |
+| GPCF-DOC-386B5F64E1 | loop-round-GPCF-KDS-DKS-238 | docs/harness/loops/loop-round-GPCF-KDS-DKS-238.md | GPCF | controlled |
+| GPCF-DOC-EEB61CCCB9 | loop-round-GPCF-KDS-DKS-239 | docs/harness/loops/loop-round-GPCF-KDS-DKS-239.md | GPCF | controlled |
+| GPCF-DOC-B5FFD8608D | loop-round-GPCF-KDS-DKS-240 | docs/harness/loops/loop-round-GPCF-KDS-DKS-240.md | GPCF | controlled |
+| GPCF-DOC-57D2400DBD | loop-round-GPCF-KDS-DKS-241 | docs/harness/loops/loop-round-GPCF-KDS-DKS-241.md | GPCF | controlled |
 | GPCF-DOC-6B2C20DFF9 | LOOP Round GPCF KDS DKS-242 Digest Delivery Acknowledgement Preview | docs/harness/loops/loop-round-GPCF-KDS-DKS-242.md | GPCF | controlled |
 | GPCF-DOC-F15B0972EC | LOOP Round GPCF KDS DKS-243 Digest Delivery Acknowledgement Escalation Preview | docs/harness/loops/loop-round-GPCF-KDS-DKS-243.md | GPCF | controlled |
 | GPCF-DOC-59D6DE2C76 | Loop Round GPCF-KDS-DKS-244 | docs/harness/loops/loop-round-GPCF-KDS-DKS-244.md | GPCF | controlled |
@@ -633,53 +699,53 @@ KDS 空间：`开发`
 | GPCF-DOC-B9D88CDED1 | GPCF-L4-GFIS-REPAIR-009 GFIS Runtime Contract Status Preflight | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-009.md | GPCF | controlled |
 | GPCF-DOC-7E39DE14EA | GPCF-L4-GFIS-REPAIR-010 GFIS Runtime Evidence Candidate Calls | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-010.md | GPCF | controlled |
 | GPCF-DOC-4BCB989BD4 | GPCF-L4-GFIS-REPAIR-011 GFIS Runtime Handoff Candidate Control | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-011.md | GPCF | controlled |
-| GPCF-DOC-0E0B8A7E4B | GPCF-L4-GFIS-REPAIR-012 GFIS Runtime Sample Candidate Control | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-012.md | GPCF | controlled |
+| GPCF-DOC-0E0B8A7E4B | loop-round-GPCF-L4-GFIS-REPAIR-012 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-012.md | GPCF | controlled |
 | GPCF-DOC-255B06AF2A | GPCF-L4-GFIS-REPAIR-013 GFIS 运行层重载与 WorkOrder BOM 收口 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-013.md | GPCF | controlled |
 | GPCF-DOC-8AB30F85DB | GPCF-L4-GFIS-REPAIR-014 GFIS Sync Event Candidate Fallback | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-014.md | GPCF | controlled |
 | GPCF-DOC-927C685E15 | loop-round-GPCF-L4-GFIS-REPAIR-015 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-015.md | GPCF | controlled |
-| GPCF-DOC-BD295729DE | GPCF-L4-GFIS-REPAIR-016 GFIS Runtime KDS Live Input Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-016.md | GPCF | controlled |
-| GPCF-DOC-30D0532CC9 | GPCF-L4-GFIS-REPAIR-017 GFIS Runtime SOP Chain Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-017.md | GPCF | controlled |
-| GPCF-DOC-BD1F2F41C6 | GPCF-L4-GFIS-REPAIR-018 Loop Engineering Self Discovery Reinforcement | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-018.md | GPCF | controlled |
-| GPCF-DOC-424C01C82A | GPCF-L4-GFIS-REPAIR-019 GFIS Runtime Sample Request Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-019.md | GPCF | controlled |
-| GPCF-DOC-E9B2F44369 | GPCF-L4-GFIS-REPAIR-020 GFIS Runtime Raw Material Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-020.md | GPCF | controlled |
+| GPCF-DOC-BD295729DE | loop-round-GPCF-L4-GFIS-REPAIR-016 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-016.md | GPCF | controlled |
+| GPCF-DOC-30D0532CC9 | loop-round-GPCF-L4-GFIS-REPAIR-017 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-017.md | GPCF | controlled |
+| GPCF-DOC-BD1F2F41C6 | loop-round-GPCF-L4-GFIS-REPAIR-018 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-018.md | GPCF | controlled |
+| GPCF-DOC-424C01C82A | loop-round-GPCF-L4-GFIS-REPAIR-019 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-019.md | GPCF | controlled |
+| GPCF-DOC-E9B2F44369 | loop-round-GPCF-L4-GFIS-REPAIR-020 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-020.md | GPCF | controlled |
 | GPCF-DOC-173EF82828 | GPCF-L4-GFIS-REPAIR-021 Loop Engineering Self Discovery Hardening | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-021.md | GPCF | controlled |
-| GPCF-DOC-F3DCFD7FDA | GPCF L4 GFIS Repair 022 Runtime POD Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-022.md | GPCF | controlled |
-| GPCF-DOC-622E443E1B | GPCF L4 GFIS Repair 023 Runtime Production Execution Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-023.md | GPCF | controlled |
-| GPCF-DOC-4D55C79A97 | GPCF L4 GFIS Repair 024 Runtime Quality Inventory Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-024.md | GPCF | controlled |
-| GPCF-DOC-9CEB70099F | GPCF L4 GFIS Repair 025 Runtime Delivery Logistics Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-025.md | GPCF | controlled |
+| GPCF-DOC-F3DCFD7FDA | loop-round-GPCF-L4-GFIS-REPAIR-022 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-022.md | GPCF | controlled |
+| GPCF-DOC-622E443E1B | loop-round-GPCF-L4-GFIS-REPAIR-023 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-023.md | GPCF | controlled |
+| GPCF-DOC-4D55C79A97 | loop-round-GPCF-L4-GFIS-REPAIR-024 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-024.md | GPCF | controlled |
+| GPCF-DOC-9CEB70099F | loop-round-GPCF-L4-GFIS-REPAIR-025 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-025.md | GPCF | controlled |
 | GPCF-DOC-0EBE21FEA6 | GPCF L4 GFIS Repair 026 Runtime Finance Boundary Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-026.md | GPCF | controlled |
-| GPCF-DOC-DDF4235DF5 | GPCF L4 GFIS Repair 027 Runtime Gap Resolution Plan | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-027.md | GPCF | controlled |
+| GPCF-DOC-DDF4235DF5 | loop-round-GPCF-L4-GFIS-REPAIR-027 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-027.md | GPCF | controlled |
 | GPCF-DOC-384E1076F7 | GPCF-L4-GFIS-REPAIR-028 GFIS 运行时生产执行修复候选 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-028.md | GPCF | controlled |
 | GPCF-DOC-0C02118386 | GPCF L4 GFIS Repair 029 运行时原料修复候选 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-029.md | GPCF | controlled |
 | GPCF-DOC-1E1A4202C8 | GPCF L4 GFIS Repair 030 运行时原料批次修复候选 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-030.md | GPCF | controlled |
-| GPCF-DOC-406B36B7D1 | GPCF L4 GFIS Repair 031 运行时来料质量修复候选 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-031.md | GPCF | controlled |
+| GPCF-DOC-406B36B7D1 | loop-round-GPCF-L4-GFIS-REPAIR-031 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-031.md | GPCF | controlled |
 | GPCF-DOC-8859BC723B | GPCF L4 GFIS Repair 032 运行时质量检验修复候选 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-032.md | GPCF | controlled |
 | GPCF-DOC-90ED8CF38C | loop-round-GPCF-L4-GFIS-REPAIR-033 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-033.md | GPCF | controlled |
-| GPCF-DOC-4EC8B12513 | GPCF L4 GFIS Repair 034 Loop Engineering 主门禁回顾 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-034.md | GPCF | controlled |
+| GPCF-DOC-4EC8B12513 | loop-round-GPCF-L4-GFIS-REPAIR-034 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-034.md | GPCF | controlled |
 | GPCF-DOC-E3F1EA8438 | loop-round-GPCF-L4-GFIS-REPAIR-035 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-035.md | GPCF | controlled |
-| GPCF-DOC-B9037CAE15 | GPCF L4 GFIS Repair 036 Verified Live Artifact Gate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-036.md | GPCF | controlled |
+| GPCF-DOC-B9037CAE15 | loop-round-GPCF-L4-GFIS-REPAIR-036 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-036.md | GPCF | controlled |
 | GPCF-DOC-3E5BE3EDD8 | loop-round-GPCF-L4-GFIS-REPAIR-037 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-037.md | GPCF | controlled |
-| GPCF-DOC-CB718E4EA2 | GPCF L4 GFIS Repair 038 Verified Artifact Request Package | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-038.md | GPCF | controlled |
-| GPCF-DOC-139C007EDA | GPCF L4 GFIS Repair 039 Verified Artifact Request Candidate | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-039.md | GPCF | controlled |
+| GPCF-DOC-CB718E4EA2 | loop-round-GPCF-L4-GFIS-REPAIR-038 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-038.md | GPCF | controlled |
+| GPCF-DOC-139C007EDA | loop-round-GPCF-L4-GFIS-REPAIR-039 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-039.md | GPCF | controlled |
 | GPCF-DOC-830CB0D405 | GPCF L4 GFIS Repair 041 Loop Engineering Redefinition | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-041.md | GPCF | controlled |
-| GPCF-DOC-A9B70C1F17 | GPCF L4 GFIS Repair 042 Runtime SOP E2E Master Status | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-042.md | GPCF | controlled |
-| GPCF-DOC-FAEDEF156D | GPCF L4 GFIS Repair 043 Verified Artifact Intake Summary | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-043.md | GPCF | controlled |
-| GPCF-DOC-191596F2F1 | GPCF L4 GFIS Repair 044 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-044.md | GPCF | controlled |
-| GPCF-DOC-A8BF33A921 | GPCF L4 GFIS Repair 045 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-045.md | GPCF | controlled |
-| GPCF-DOC-B2B2AA6E07 | GPCF L4 GFIS Repair 046 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-046.md | GPCF | controlled |
-| GPCF-DOC-8223EEE13E | GPCF L4 GFIS Repair 047 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-047.md | GPCF | controlled |
-| GPCF-DOC-13851022C1 | GPCF L4 GFIS Repair 048 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-048.md | GPCF | controlled |
-| GPCF-DOC-36CF236EFA | GPCF L4 GFIS Repair 049 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-049.md | GPCF | controlled |
-| GPCF-DOC-42172F1051 | GPCF L4 GFIS Repair 050 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-050.md | GPCF | controlled |
-| GPCF-DOC-EDE5497147 | GPCF L4 GFIS Repair 051 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-051.md | GPCF | controlled |
-| GPCF-DOC-57CC84A9C1 | GPCF L4 GFIS Repair 052 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-052.md | GPCF | controlled |
-| GPCF-DOC-0D2CA38415 | GPCF-L4-GFIS-REPAIR-053 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-053.md | GPCF | controlled |
-| GPCF-DOC-A3864C5A67 | GPCF-L4-GFIS-REPAIR-054 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-054.md | GPCF | controlled |
+| GPCF-DOC-A9B70C1F17 | loop-round-GPCF-L4-GFIS-REPAIR-042 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-042.md | GPCF | controlled |
+| GPCF-DOC-FAEDEF156D | loop-round-GPCF-L4-GFIS-REPAIR-043 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-043.md | GPCF | controlled |
+| GPCF-DOC-191596F2F1 | loop-round-GPCF-L4-GFIS-REPAIR-044 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-044.md | GPCF | controlled |
+| GPCF-DOC-A8BF33A921 | loop-round-GPCF-L4-GFIS-REPAIR-045 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-045.md | GPCF | controlled |
+| GPCF-DOC-B2B2AA6E07 | loop-round-GPCF-L4-GFIS-REPAIR-046 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-046.md | GPCF | controlled |
+| GPCF-DOC-8223EEE13E | loop-round-GPCF-L4-GFIS-REPAIR-047 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-047.md | GPCF | controlled |
+| GPCF-DOC-13851022C1 | loop-round-GPCF-L4-GFIS-REPAIR-048 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-048.md | GPCF | controlled |
+| GPCF-DOC-36CF236EFA | loop-round-GPCF-L4-GFIS-REPAIR-049 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-049.md | GPCF | controlled |
+| GPCF-DOC-42172F1051 | loop-round-GPCF-L4-GFIS-REPAIR-050 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-050.md | GPCF | controlled |
+| GPCF-DOC-EDE5497147 | loop-round-GPCF-L4-GFIS-REPAIR-051 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-051.md | GPCF | controlled |
+| GPCF-DOC-57CC84A9C1 | loop-round-GPCF-L4-GFIS-REPAIR-052 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-052.md | GPCF | controlled |
+| GPCF-DOC-0D2CA38415 | loop-round-GPCF-L4-GFIS-REPAIR-053 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-053.md | GPCF | controlled |
+| GPCF-DOC-A3864C5A67 | loop-round-GPCF-L4-GFIS-REPAIR-054 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-054.md | GPCF | controlled |
 | GPCF-DOC-7A8497F896 | GPCF-L4-GFIS-REPAIR-055 GFIS 辽宁远航四项凭证检索分类账 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-055.md | GPCF | controlled |
 | GPCF-DOC-AB61A7E360 | GPCF-L4-GFIS-REPAIR-056 GFIS 辽宁远航原始凭证采集包 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-056.md | GPCF | controlled |
-| GPCF-DOC-19A55BF909 | GPCF-L4-GFIS-REPAIR-057 GFIS KDS 原始凭证字段缺口矩阵 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-057.md | GPCF | controlled |
+| GPCF-DOC-19A55BF909 | loop-round-GPCF-L4-GFIS-REPAIR-057 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-057.md | GPCF | controlled |
 | GPCF-DOC-4D38A5B81C | loop-round-GPCF-L4-GFIS-REPAIR-058 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-058.md | GPCF | controlled |
-| GPCF-DOC-50628558F3 | GPCF-L4-GFIS-REPAIR-059 GFIS KDS 弱凭证与客户确认误判防护 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-059.md | GPCF | controlled |
+| GPCF-DOC-50628558F3 | loop-round-GPCF-L4-GFIS-REPAIR-059 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-059.md | GPCF | controlled |
 | GPCF-DOC-9C82BC7376 | loop-round-GPCF-L4-GFIS-REPAIR-060 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-060.md | GPCF | controlled |
 | GPCF-DOC-259A611CFF | GPCF-L4-GFIS-REPAIR-061 GFIS KDS candidate expansion truth guard | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-061.md | GPCF | controlled |
 | GPCF-DOC-FF36CE622C | GPCF-L4-GFIS-REPAIR-062 GFIS 辽宁远航原始凭证采集清单 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-062.md | GPCF | controlled |
@@ -727,7 +793,7 @@ KDS 空间：`开发`
 | GPCF-DOC-B165A8DB92 | loop-round-GPCF-L4-GFIS-REPAIR-104 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-104.md | GPCF | controlled |
 | GPCF-DOC-813A84ED52 | loop-round-GPCF-L4-GFIS-REPAIR-105 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-105.md | GPCF | controlled |
 | GPCF-DOC-D49FDCB521 | Loop Round GPCF-L4-GFIS-REPAIR-106 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-106.md | GPCF | controlled |
-| GPCF-DOC-A610B7F8F8 | Loop Round GPCF-L4-GFIS-REPAIR-107 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-107.md | GPCF | controlled |
+| GPCF-DOC-A610B7F8F8 | loop-round-GPCF-L4-GFIS-REPAIR-107 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-107.md | GPCF | controlled |
 | GPCF-DOC-A8F8DFAE11 | loop-round-GPCF-L4-GFIS-REPAIR-108 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-108.md | GPCF | controlled |
 | GPCF-DOC-904A1650B6 | GPCF-L4-GFIS-REPAIR-109 GFIS Dispatch Authorization Preflight | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-109.md | GPCF | controlled |
 | GPCF-DOC-197A95A2C5 | loop-round-GPCF-L4-GFIS-REPAIR-110 | docs/harness/loops/loop-round-GPCF-L4-GFIS-REPAIR-110.md | GPCF | controlled |
@@ -907,6 +973,8 @@ KDS 空间：`开发`
 | GPCF-DOC-F52140FBE0 | GPCF-L4-IMPROVE-001: L4 评分提升轮次 | docs/harness/loops/loop-round-GPCF-L4-IMPROVE-001.md | GPCF | controlled |
 | GPCF-DOC-A30ABC3B99 | GPCF-L4-XIAOG-EVIDENCE-REPAIR-001 XiaoG 外部证据修复 | docs/harness/loops/loop-round-GPCF-L4-XIAOG-EVIDENCE-REPAIR-001.md | GPCF | controlled |
 | GPCF-DOC-EDD3670D2E | Loop Round GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001.md | GPCF | controlled |
+| GPCF-DOC-FIVE-DIRECTION-RUN-001 | GPCF-LOOP-FIVE-DIRECTION-RUN-001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-RUN-001.md | GPCF | controlled |
+| GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-001 | Loop 五方向常驻采纳冒烟轮次 001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-STANDING-SMOKE-001.md | GPCF | controlled |
 | GPCF-DOC-55A6B73433 | Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | GPCF | controlled |
 | GPCF-DOC-AC4F4B6A2E | Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | GPCF | controlled |
 | GPCF-DOC-E1CC4F445E | Loop Round GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | GPCF | controlled |
@@ -929,6 +997,13 @@ KDS 空间：`开发`
 | GPCF-DOC-61A6C90006 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-006 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-006.md | GPCF | controlled |
 | GPCF-DOC-61A6C90007 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-007 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-007.md | GPCF | controlled |
 | GPCF-DOC-61A6C90008 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-008 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-008.md | GPCF | controlled |
+| GPCF-DOC-61A6C90009 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-009 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-009.md | GPCF | controlled |
+| GPCF-DOC-61A6C90010 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-010 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-010.md | GPCF | controlled |
+| GPCF-DOC-61A6C90011 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-011 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-011.md | GPCF | controlled |
+| GPCF-DOC-61A6C90012 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-012 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-012.md | GPCF | controlled |
+| GPCF-DOC-61A6C90013 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-013 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-013.md | GPCF | controlled |
+| GPCF-DOC-61A6C90014 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-014 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-014.md | GPCF | controlled |
+| GPCF-DOC-61A6C90015 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-015 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-015.md | GPCF | controlled |
 | GPCF-DOC-DE42C51DE1 | Loop Round GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-001.md | GPCF | controlled |
 | GPCF-DOC-2CF706BF5D | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-001.md | GPCF | controlled |
 | GPCF-DOC-640FDD701B | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-002 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-002.md | GPCF | controlled |
@@ -1013,6 +1088,23 @@ KDS 空间：`开发`
 | GPCF-DOC-B1974D0081 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-081 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-081.md | GPCF | controlled |
 | GPCF-DOC-B1974D0082 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-082 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-082.md | GPCF | controlled |
 | GPCF-DOC-B1974D0083 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-083 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-083.md | GPCF | controlled |
+| GPCF-DOC-B1974D0084 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084.md | GPCF | controlled |
+| GPCF-DOC-B1974D0085 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-085 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-085.md | GPCF | controlled |
+| GPCF-DOC-B1974D0086 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-086 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-086.md | GPCF | controlled |
+| GPCF-DOC-B1974D0087 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-087 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-087.md | GPCF | controlled |
+| GPCF-DOC-B1974D0088 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-088 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-088.md | GPCF | controlled |
+| GPCF-DOC-B1974D0089 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-089 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-089.md | GPCF | controlled |
+| GPCF-DOC-B1974D0090 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-090 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-090.md | GPCF | controlled |
+| GPCF-DOC-B1974D0091 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-091 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-091.md | GPCF | controlled |
+| GPCF-DOC-B1974D0092 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-092 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-092.md | GPCF | controlled |
+| GPCF-DOC-B1974D0093 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-093 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-093.md | GPCF | controlled |
+| GPCF-DOC-B1974D0094 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-094 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-094.md | GPCF | controlled |
+| GPCF-DOC-B1974D0095 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-095 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-095.md | GPCF | controlled |
+| GPCF-DOC-B1974D0096 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-096 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-096.md | GPCF | controlled |
+| GPCF-DOC-B1974D0097 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-097 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-097.md | GPCF | controlled |
+| GPCF-DOC-B1974D0098 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-098 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-098.md | GPCF | controlled |
+| GPCF-DOC-B1974D0099 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-099 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-099.md | GPCF | controlled |
+| GPCF-DOC-B1974D0100 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100.md | GPCF | controlled |
 | GPCF-DOC-CF42DB87F1 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001.md | GPCF | controlled |
 | GPCF-DOC-DEB7C6D159 | Loop Round GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-7682DAC0E5 | Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md | GPCF | controlled |
@@ -1028,4 +1120,12 @@ KDS 空间：`开发`
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-003 | Loop Round GPCF-UI-STUDIO-WORKBENCH-003 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-003.md | GPCF | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-004 | Loop Round GPCF-UI-STUDIO-WORKBENCH-004 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-004.md | GPCF | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-005 | Loop Round GPCF-UI-STUDIO-WORKBENCH-005 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-005.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-006 | Loop Round GPCF-UI-STUDIO-WORKBENCH-006 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-006.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-007 | Loop Round GPCF-UI-STUDIO-WORKBENCH-007 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-007.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-008 | Loop Round GPCF-UI-STUDIO-WORKBENCH-008 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-008.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-009 | Loop Round GPCF-UI-STUDIO-WORKBENCH-009 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-009.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-010 | Loop Round GPCF-UI-STUDIO-WORKBENCH-010 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-010.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-011 | Loop Round GPCF-UI-STUDIO-WORKBENCH-011 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-011.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-012 | Loop Round GPCF-UI-STUDIO-WORKBENCH-012 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-012.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-013 | Loop Round GPCF-UI-STUDIO-WORKBENCH-013 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-013.md | GPCF | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | controlled |

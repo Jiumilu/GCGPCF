@@ -1,0 +1,173 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-014",
+  "status": "authorization_pack_ready",
+  "generated_at": "2026-06-22",
+  "objective": "将 CodeGraph watchlist 漂移分诊结果转成可问答授权的执行包，明确建议、边界、验证命令与下一轮输入。",
+  "previous_round": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-DRIFT-TRIAGE-013",
+  "watchlist": {
+    "repo_count": 4,
+    "repos": {
+      "Brain": {
+        "codegraph_pending": {"added": 4, "modified": 54, "removed": 0},
+        "git_dirty": {"modified": 90, "deleted": 5, "untracked": 108, "renamed": 0, "other": 0, "total": 203},
+        "classification": "broad_active_development_drift_with_deleted_openspec_archive",
+        "authorization_question": "是否授权 Brain 进入独立 CodeGraph sync-only closure 预检？",
+        "recommended_answer": "暂缓，先要求 Brain owner 确认 deleted openspec archive 与活动开发漂移边界。",
+        "allowed_if_authorized": [
+          "read_only_status_refresh",
+          "sync_only_precheck",
+          "codegraph_sync_after_dirty_scope_confirmation"
+        ],
+        "forbidden": [
+          "business_development",
+          "deleted_file_recovery_or_removal",
+          "commit",
+          "push",
+          "deploy",
+          "accepted_or_integrated_claim"
+        ],
+        "next_round_candidate": "GPCF-CODEGRAPH-BRAIN-SYNC-ONLY-PRECHECK-015"
+      },
+      "GFIS": {
+        "codegraph_pending": {"added": 1, "modified": 2, "removed": 0},
+        "git_dirty": {"modified": 37, "deleted": 0, "untracked": 202, "renamed": 0, "other": 0, "total": 239},
+        "classification": "broad_runtime_sop_e2e_governance_drift_with_policy_exception",
+        "authorization_question": "是否授权 GFIS 进入 CodeGraph sync-only closure 预检，且继续禁止 clean reindex？",
+        "recommended_answer": "只授权 read-only 与 sync-only precheck；继续不授权 clean reindex，先保留 GFIS policy exception。",
+        "allowed_if_authorized": [
+          "read_only_status_refresh",
+          "sync_only_precheck",
+          "codegraph_sync_without_clean_reindex_after_policy_exception_review"
+        ],
+        "forbidden": [
+          "clean_reindex",
+          "business_development",
+          "bench_migrate",
+          "schema_sync",
+          "production_write",
+          "external_api_write",
+          "commit",
+          "push",
+          "deploy",
+          "accepted_or_integrated_claim"
+        ],
+        "next_round_candidate": "GPCF-CODEGRAPH-GFIS-SYNC-ONLY-PRECHECK-015"
+      },
+      "KDS": {
+        "codegraph_pending": {"added": 0, "modified": 1, "removed": 0},
+        "git_dirty": {"modified": 370, "deleted": 58, "untracked": 1224, "renamed": 0, "other": 0, "total": 1652},
+        "classification": "broad_kds_mirror_workwiki_content_drift",
+        "authorization_question": "是否授权 KDS 进入 CodeGraph sync-only closure 预检？",
+        "recommended_answer": "暂缓，先做 KDS mirror / WorkWiki 同步治理复核，避免把镜像漂移误判为代码 closure。",
+        "allowed_if_authorized": [
+          "read_only_status_refresh",
+          "mirror_workwiki_scope_review",
+          "sync_only_precheck_after_mirror_review"
+        ],
+        "forbidden": [
+          "real_kds_api_write",
+          "mirror_overwrite",
+          "business_development",
+          "commit",
+          "push",
+          "deploy",
+          "accepted_or_integrated_claim"
+        ],
+        "next_round_candidate": "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-015"
+      },
+      "Studio": {
+        "codegraph_pending": {"added": 2, "modified": 9, "removed": 0},
+        "git_dirty": {"modified": 11, "deleted": 0, "untracked": 1, "renamed": 0, "other": 0, "total": 12},
+        "classification": "bounded_studio_session_binding_and_kds_governance_drift",
+        "authorization_question": "是否授权 Studio 先进入低风险 CodeGraph sync-only precheck？",
+        "recommended_answer": "建议授权 Studio 作为第一候选，只允许 CodeGraph sync-only precheck，不发布、不部署、不处理业务源码。",
+        "allowed_if_authorized": [
+          "read_only_status_refresh",
+          "sync_only_precheck",
+          "codegraph_sync_if_pending_scope_matches_session_binding_and_kds_governance"
+        ],
+        "forbidden": [
+          "release",
+          "deployment",
+          "business_development",
+          "workflow_release_write",
+          "commit",
+          "push",
+          "accepted_or_integrated_claim"
+        ],
+        "next_round_candidate": "GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015"
+      }
+    }
+  },
+  "authorization_questions": [
+    {
+      "id": "authorize_studio_sync_only_precheck",
+      "question": "是否授权 Studio 先进入低风险 CodeGraph sync-only precheck？",
+      "recommended": true,
+      "recommendation": "建议授权；范围最小，dirty 总量 12，适合作为 watchlist sync-only 试点。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_brain_sync_only_precheck",
+      "question": "是否授权 Brain 进入独立 sync-only precheck？",
+      "recommended": false,
+      "recommendation": "建议暂缓；Brain 有 203 项 dirty 且含 deleted openspec archive，需要 owner 先确认。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_gfis_sync_only_precheck_without_clean_reindex",
+      "question": "是否授权 GFIS 进入 sync-only precheck，并继续禁止 clean reindex？",
+      "recommended": false,
+      "recommendation": "建议只在 GFIS policy exception 复核后授权；clean reindex 仍不建议授权。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_kds_mirror_scope_review",
+      "question": "是否授权 KDS 先做 mirror / WorkWiki scope review？",
+      "recommended": false,
+      "recommendation": "建议先复核镜像与 WorkWiki 同步边界，再考虑 CodeGraph sync-only closure。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_clean_reindex_any_repo",
+      "question": "是否授权任一 watchlist 仓执行 clean reindex？",
+      "recommended": false,
+      "recommendation": "建议不授权；当前四仓 reindexRecommended=false，clean reindex 没有必要且风险更高。",
+      "default_if_no_answer": "not_authorized"
+    }
+  ],
+  "governance": {
+    "mode": "authorization_pack_only",
+    "codegraph_sync_performed_in_watchlist_repos": false,
+    "clean_reindex_performed": false,
+    "business_development_performed": false,
+    "commit_performed": false,
+    "push_performed": false,
+    "deployment_performed": false,
+    "codegraph_git_isolated": true,
+    "recommended_first_execution": "Studio sync-only precheck only after explicit user authorization"
+  },
+  "five_direction": {
+    "run": "把 Brain/GFIS/KDS/Studio 的活动漂移分诊转成问答式授权包，列出每仓允许动作、禁止动作和下一轮候选。",
+    "stop": "stop_type=authorization_boundary；本轮只生成授权包，不执行 watchlist sync、clean reindex、commit、push、deploy 或业务开发。",
+    "verify": "验证上一轮分诊、四仓 CodeGraph 状态、.codegraph Git 隔离、中文化门禁、Loop 文档门禁、防污染与 KDS token。",
+    "recover": "若用户不授权，恢复为 watchlist monitor_only；若授权范围不清，只允许重新生成授权问题，不执行仓内动作。",
+    "debug": "当前最小可执行授权建议是 Studio sync-only precheck；Brain/GFIS/KDS 仍需独立边界复核。"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "watchlist_sync_only_closure_completed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015"
+}

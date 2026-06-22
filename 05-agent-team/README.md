@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/05-agent-team/README.md
 source_path: 05-agent-team/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -46,7 +46,7 @@ KDS 路径前缀：`开发/12-GPCF/05-agent-team/`
 | GPCF-DOC-3874DD0406 | GlobalCloud 智能体团队PMBOK项目管理台账 | 05-agent-team/GlobalCloud智能体团队PMBOK项目管理台账.md | XiaoC | controlled |
 | GPCF-DOC-8CDB82A404 | GlobalCloud 智能体团队下一步执行清单 | 05-agent-team/GlobalCloud智能体团队下一步执行清单.md | XiaoC | controlled |
 | GPCF-DOC-6C1B946AA5 | GlobalCloud智能体团队专项回报汇总台账 | 05-agent-team/GlobalCloud智能体团队专项回报汇总台账.md | GPCF | controlled |
-| GPCF-DOC-7249EEECFE | GlobalCloud 智能体团队专项执行版包模板 | 05-agent-team/GlobalCloud智能体团队专项执行版包模板.md | XiaoC | controlled |
+| GPCF-DOC-7249EEECFE | GlobalCloud智能体团队专项执行版包模板 | 05-agent-team/GlobalCloud智能体团队专项执行版包模板.md | GPCF | controlled |
 | GPCF-DOC-582A23D485 | GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-团队责任分配总表.md | GPCF | controlled |
 | GPCF-DOC-5D6CD718DA | GlobalCloud 智能体团队侧边聊天10条主线-当前实施准备完成度总表 | 05-agent-team/GlobalCloud智能体团队侧边聊天10条主线-当前实施准备完成度总表.md | XiaoC | controlled |
 | GPCF-DOC-61BD531C70 | GlobalCloud智能体团队侧边聊天完整归纳总览 | 05-agent-team/GlobalCloud智能体团队侧边聊天完整归纳总览.md | GPCF | controlled |
@@ -57,8 +57,8 @@ KDS 路径前缀：`开发/12-GPCF/05-agent-team/`
 | GPCF-DOC-8A91086A7D | GlobalCloud智能体团队当前总目标 | 05-agent-team/GlobalCloud智能体团队当前总目标.md | GPCF | controlled |
 | GPCF-DOC-FE641179EC | GlobalCloud智能体团队总体规划与行动计划 | 05-agent-team/GlobalCloud智能体团队总体规划与行动计划.md | GPCF | controlled |
 | GPCF-DOC-B2499B523C | GlobalCloud智能体团队控制塔与周报机制 | 05-agent-team/GlobalCloud智能体团队控制塔与周报机制.md | GPCF | controlled |
-| GPCF-DOC-FF53116C54 | GlobalCloud智能体团队文档全量盘点与分类总表 | 05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md | XiaoC | controlled |
-| GPCF-DOC-A080E39115 | GlobalCloud智能体团队文档清理与补充完善建议 | 05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md | XiaoC | controlled |
+| GPCF-DOC-FF53116C54 | GlobalCloud智能体团队文档全量盘点与分类总表 | 05-agent-team/GlobalCloud智能体团队文档全量盘点与分类总表.md | GPCF | controlled |
+| GPCF-DOC-A080E39115 | GlobalCloud智能体团队文档清理与补充完善建议 | 05-agent-team/GlobalCloud智能体团队文档清理与补充完善建议.md | GPCF | controlled |
 | GPCF-DOC-A45C28115C | GlobalCloud智能体团队文档理解与纳入审计 | 05-agent-team/GlobalCloud智能体团队文档理解与纳入审计.md | GPCF | controlled |
 | GPCF-DOC-6F5B2A27CF | GlobalCloud智能体团队显性智能体名录与可见机制 | 05-agent-team/GlobalCloud智能体团队显性智能体名录与可见机制.md | GPCF | controlled |
 | GPCF-DOC-C892CAB85A | GlobalCloud 智能体团队本阶段首轮实施前验证目标 | 05-agent-team/GlobalCloud智能体团队本阶段首轮实施前验证目标.md | XiaoC | controlled |

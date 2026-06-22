@@ -1,0 +1,70 @@
+{
+  "evidence_id": "STUDIO-CHAT-WORKBENCH-KEYBOARD-MOBILE-VERIFIED-20260622",
+  "round_id": "GPCF-UI-STUDIO-WORKBENCH-009",
+  "target": {
+    "project": "Studio",
+    "surface": "operation-workbench",
+    "component": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/PageSidebarNav.vue"
+  },
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tools_used": [
+    "manual",
+    "safaridriver"
+  ],
+  "tools_unavailable_or_not_invoked": [
+    "impeccable_not_invoked",
+    "figma_not_verified"
+  ],
+  "implementation": {
+    "studio_code_changed_this_round": false,
+    "verification_only_round": true,
+    "mobile_gap_initial_judgement_withdrawn": true
+  },
+  "verification": {
+    "runtime_browser": "Safari WebDriver",
+    "desktop_keyboard_focus_visible": true,
+    "desktop_keyboard_enter_jobs_verified": true,
+    "desktop_keyboard_enter_kanban_verified": true,
+    "desktop_keyboard_enter_channels_verified": true,
+    "mobile_menu_button_visible": true,
+    "mobile_sidebar_entries_visible_after_menu_open": [
+      "新建对话",
+      "搜索",
+      "历史",
+      "任务",
+      "看板",
+      "频道"
+    ],
+    "mobile_menu_to_kanban_verified": true,
+    "mobile_navigation_result": "#/hermes/kanban?board=default"
+  },
+  "screenshots": {
+    "desktop_keyboard_focus": "docs/harness/evidence/assets/studio-chat-workbench-keyboard-focus-20260622.png",
+    "mobile_menu_open": "docs/harness/evidence/assets/studio-chat-workbench-mobile-menu-20260622.png",
+    "mobile_kanban_result": "docs/harness/evidence/assets/studio-kanban-from-mobile-menu-20260622.png"
+  },
+  "gates": {
+    "G1": "pass",
+    "G2": "partial",
+    "G3": "pass",
+    "G4": "partial",
+    "G5": "pass",
+    "G6": "pass",
+    "G7": "pass",
+    "G8": "pass",
+    "G9": "pass"
+  },
+  "findings": [
+    "Desktop keyboard focus and Enter activation work for Jobs, Kanban, and Channels.",
+    "Mobile chat does not expose the sidebar by default, but the hamburger menu opens a sidebar that contains Jobs, Kanban, and Channels.",
+    "Mobile menu navigation to Kanban is verified in real Safari.",
+    "The prior mobile missing-entry suspicion is withdrawn and replaced by a verified menu-based navigation model.",
+    "Default credential reminder modal remains a separate interaction occlusion risk."
+  ],
+  "non_claims": [
+    "does not prove full project-group UI governance closure",
+    "does not prove default credential reminder issue is resolved",
+    "does not grant accepted, integrated, or production_ready status"
+  ]
+}

@@ -72,7 +72,7 @@ def validate_fixture(value: dict[str, Any]) -> list[str]:
     failures: list[str] = []
     if value.get("control_board_round") != "GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001":
         failures.append("control_board_round_mismatch")
-    if value.get("status_matrix_version") != "v5.51":
+    if value.get("status_matrix_version") != "v5.72":
         failures.append("status_matrix_version_mismatch")
     if value.get("project_group_scope_count") != 14:
         failures.append("project_group_scope_count_mismatch")
@@ -111,12 +111,12 @@ def main() -> int:
     for marker in REQUIRED_MARKERS:
         require(marker in control_board, f"control board missing marker: {marker}")
         require(marker in status_matrix, f"status matrix missing marker: {marker}")
-    require("当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-083`" in control_board, "control board current round not refreshed to monitor 080")
-    require("状态：v5.51" in status_matrix, "status matrix version not refreshed")
-    require("WAS-Ontology monitor 083 已完成" in status_matrix, "status matrix summary not refreshed")
-    require("Monitor 083 已建立绿色供应链限制物质声明、RoHS 合规证书、REACH SVHC 声明、材料安全数据表、化学品清单记录、物质检测报告和供应商化学合规承诺证据边界" in control_board, "control board summary not refreshed")
-    require("下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084`" in control_board, "control board next round missing")
-    require("GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084" in status_matrix, "status matrix next round missing")
+    require("当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`" in control_board, "control board current round not refreshed to monitor 100")
+    require("状态：v5.72" in status_matrix, "status matrix version not refreshed")
+    require("WAS-Ontology monitor 100 已完成" in status_matrix, "status matrix summary not refreshed")
+    require("was_real_source_record_monitor_100=pass" in control_board, "control board summary not refreshed")
+    require("下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`" in control_board, "control board next round missing")
+    require("GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101" in status_matrix, "status matrix next round missing")
 
     positive = load_json(FIXTURE_DIR / "status-matrix-control-board-refresh-positive.json")
     require(not validate_fixture(positive), "positive fixture should pass")
@@ -152,7 +152,7 @@ def main() -> int:
         "project_group_scope=14/14 refreshed_documents=2 positive_fixtures=1 negative_fixtures=3 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
         "accepted=false integrated=false production_ready=false "
-        "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084"
+        "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101"
     )
     return 0
 

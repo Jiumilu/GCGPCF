@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/openspec/changes/kds-production-hardening/proposal.md
 source_path: openspec/changes/kds-production-hardening/proposal.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

@@ -1,0 +1,56 @@
+{
+  "id": "agent-reach-p7-limited-live-search-dry-run-authorization-request-20260622",
+  "purpose": "collect_machine_valid_p7_execution_authorization_before_any_live_external_search",
+  "required_text": "授权执行 Agent-Reach P7 Limited Live Search Dry Run",
+  "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/limited-live-search-dry-run-authorization.local.json",
+  "authorization_status": "pending_human_authorization",
+  "generated_local_authorization_file": false,
+  "execution_allowed_now": false,
+  "required_authorization_fields": {
+    "authorization_id": "GPCF-AGENT-REACH-P7-LIVE-SEARCH-20260622-001",
+    "authorization_status": "approved_for_p7_limited_live_search_dry_run",
+    "authorized_by": "lujunxiang",
+    "authorized_at": "<required-iso8601>",
+    "expires_at": "<required-iso8601>",
+    "allowed_channels": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "max_queries": 5,
+    "max_results_per_query": 10,
+    "allow_agent_reach_binary_invocation": false,
+    "allow_external_network": true,
+    "allow_write_evidence_only": true,
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration",
+      "accepted_claim",
+      "integrated_claim",
+      "production_ready_claim"
+    ],
+    "logging_redaction": {
+      "redact_tokens": true,
+      "redact_cookies": true,
+      "redact_authorization_headers": true,
+      "redact_query_personal_data": true,
+      "persist_redacted_snippets_only": true
+    }
+  },
+  "execution_command_after_authorization_file_exists": "python3 tools/kds-sync/validate_agent_reach_p7_authorization_precheck.py --authorization fixtures/agent-reach/limited-live-search-dry-run-authorization.local.json && python3 tools/kds-sync/run_agent_reach_limited_live_search_dry_run.py --authorization fixtures/agent-reach/limited-live-search-dry-run-authorization.local.json --execute --write-evidence && python3 tools/kds-sync/validate_agent_reach_p7_limited_live_search_output.py",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_live_search_quality_accepted",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

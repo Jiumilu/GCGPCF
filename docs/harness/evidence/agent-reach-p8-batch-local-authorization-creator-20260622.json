@@ -1,0 +1,62 @@
+{
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-22",
+  "dry_run_batch_status": {
+    "p8-batch-1": "dry_run_valid",
+    "p8-batch-2": "dry_run_valid",
+    "p8-batch-3": "dry_run_valid"
+  },
+  "dry_run_status": "dry_run_valid",
+  "id": "agent-reach-p8-batch-local-authorization-creator-20260622",
+  "input_artifacts": [
+    "fixtures/agent-reach/project-group-full-live-search-batch-authorization.request.json",
+    "tools/kds-sync/run_agent_reach_project_group_full_live_search_batch.py"
+  ],
+  "isolated_authorization_files_created": true,
+  "isolated_write_batch_status": {
+    "p8-batch-1": "local_authorization_written",
+    "p8-batch-2": "local_authorization_written",
+    "p8-batch-3": "local_authorization_written"
+  },
+  "isolated_write_status": "local_authorization_files_written",
+  "local_authorization_files_created": false,
+  "negative_reasons": [
+    "required_authorization_text_missing"
+  ],
+  "negative_status": "rejected",
+  "next_required_authorizations": [
+    "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
+    "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
+    "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "output_artifacts": [
+    "tools/kds-sync/create_agent_reach_p8_batch_authorization_local.py",
+    "tools/kds-sync/validate_agent_reach_p8_batch_local_authorization_creator.py",
+    "docs/harness/evidence/agent-reach-p8-batch-local-authorization-creator-20260622.json",
+    "docs/harness/evidence/agent-reach-p8-batch-local-authorization-creator-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-BATCH-LOCAL-AUTHORIZATION-CREATOR-001.md"
+  ],
+  "round": "GPCF-AGENT-REACH-P8-BATCH-LOCAL-AUTHORIZATION-CREATOR-001",
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_batch_local_authorization_creator_ready"
+}

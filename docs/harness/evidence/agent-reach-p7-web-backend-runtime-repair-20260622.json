@@ -1,0 +1,58 @@
+{
+  "id": "agent-reach-p7-web-backend-runtime-repair-20260622",
+  "round": "GPCF-AGENT-REACH-P7-WEB-BACKEND-RUNTIME-REPAIR-001",
+  "date": "2026-06-22",
+  "status": "web_backend_runtime_dependency_repaired",
+  "current_admission": "limited_candidate_only",
+  "phase": "P7 Web Backend Runtime Repair",
+  "mode": "runtime_dependency_repair_only",
+  "problem": {
+    "previous_backend": "exa_via_mcporter",
+    "missing_binary": "mcporter",
+    "affected_queries": [
+      "q1",
+      "q2",
+      "q4"
+    ]
+  },
+  "repair": {
+    "new_backend": "duckduckgo_html_via_python_stdlib",
+    "required_binary": "python3",
+    "credential_required": false,
+    "cookie_required": false,
+    "raw_provider_payload_persisted": false
+  },
+  "post_repair_dependency_status": {
+    "checked_queries": 5,
+    "missing_binaries": [],
+    "runtime_dependencies_ready": true
+  },
+  "output_artifacts": [
+    "tools/kds-sync/run_agent_reach_limited_live_search_dry_run.py",
+    "docs/harness/evidence/agent-reach-p7-web-backend-runtime-repair-20260622.json",
+    "docs/harness/evidence/agent-reach-p7-web-backend-runtime-repair-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P7-WEB-BACKEND-RUNTIME-REPAIR-001.md"
+  ],
+  "security_controls": {
+    "live_external_search_invoked": false,
+    "agent_reach_binary_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_live_search_quality_accepted",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P7-LIMITED-LIVE-SEARCH-DRY-RUN-001"
+}

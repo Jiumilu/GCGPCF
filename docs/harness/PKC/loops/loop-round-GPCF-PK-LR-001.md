@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/07-PKC/docs/harness/PKC/loops/loop-round-GPCF-PK-LR-001.md
 source_path: docs/harness/PKC/loops/loop-round-GPCF-PK-LR-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

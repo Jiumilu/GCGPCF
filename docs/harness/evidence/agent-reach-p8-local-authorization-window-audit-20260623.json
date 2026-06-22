@@ -1,0 +1,69 @@
+{
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-23",
+  "default_local_authorization_files_created": false,
+  "id": "agent-reach-p8-local-authorization-window-audit-20260623",
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "round": "GPCF-AGENT-REACH-P8-LOCAL-AUTHORIZATION-WINDOW-AUDIT-001",
+  "scenario_results": {
+    "current_window": {
+      "authorization_reasons": [],
+      "authorization_valid": true,
+      "live_external_search_invoked": false,
+      "status": "authorized_execution_not_requested"
+    },
+    "expired_window": {
+      "authorization_reasons": [
+        "authorization_expired"
+      ],
+      "authorization_valid": false,
+      "live_external_search_invoked": false,
+      "status": "blocked_pending_execution_authorization"
+    },
+    "future_window": {
+      "authorization_reasons": [
+        "authorization_not_yet_active"
+      ],
+      "authorization_valid": false,
+      "live_external_search_invoked": false,
+      "status": "blocked_pending_execution_authorization"
+    },
+    "missing_file": {
+      "authorization_reasons": [
+        "authorization_file_missing"
+      ],
+      "authorization_valid": false,
+      "live_external_search_invoked": false,
+      "status": "blocked_pending_execution_authorization"
+    },
+    "wrong_batch": {
+      "authorization_reasons": [
+        "batch_id_mismatch"
+      ],
+      "authorization_valid": false,
+      "live_external_search_invoked": false,
+      "status": "blocked_pending_execution_authorization"
+    }
+  },
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_local_authorization_window_audit_pass"
+}

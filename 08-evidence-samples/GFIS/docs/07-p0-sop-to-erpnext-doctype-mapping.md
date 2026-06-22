@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/01-GFIS/docs/07-p0-sop-to-erpnext-doctype-mapping.md
 source_path: 08-evidence-samples/GFIS/docs/07-p0-sop-to-erpnext-doctype-mapping.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

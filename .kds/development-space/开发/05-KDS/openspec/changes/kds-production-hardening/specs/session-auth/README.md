@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/session-auth/README.md
 source_path: openspec/changes/kds-production-hardening/specs/session-auth/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | KDS | draft |
-| GPCF-DOC-18A2F48E80 | 会话认证 | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | GPCF | draft |
+| GPCF-DOC-18A2F48E80 | spec | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | GPCF | draft |

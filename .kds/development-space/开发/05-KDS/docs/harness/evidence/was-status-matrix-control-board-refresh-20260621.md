@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-2B1B5A8C55
 title: WAS Status Matrix Control Board Refresh Evidence
-project: KDS
+project: WAS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: ontology-governance
 status: controlled
 version: v1.0
-owner: KDS
+owner: GPCF
 kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md
 source_path: docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -30,7 +30,7 @@ superseded_by: []
 |---|---:|
 | project_group_scope | `14/14` |
 | refreshed_documents | `2` |
-| source_evidence | `51` |
+| source_evidence | `78` |
 | positive_fixtures | `1` |
 | negative_fixtures | `3` |
 | real_source_records | `0` |
@@ -67,6 +67,6 @@ python3 tools/kds-sync/validate_was_status_matrix_control_board_refresh.py
 
 ## 下一轮
 
-推荐下一轮：`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-084`。
+推荐下一轮：`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`。
 
 该下一轮继续监控真实 P4 candidate 文件提交，不能以 validator 全绿替代真实 source-record、WAES/KDS/runtime evidence。

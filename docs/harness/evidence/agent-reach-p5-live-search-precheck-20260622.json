@@ -1,0 +1,63 @@
+{
+  "id": "agent-reach-live-search-precheck-20260622",
+  "round": "GPCF-AGENT-REACH-P5-LIVE-SEARCH-PRECHECK-001",
+  "date": "2026-06-22",
+  "status": "live_search_precheck_rejected",
+  "current_admission": "limited_candidate_only",
+  "phase": "P5 Live Search Precheck",
+  "authorization_status": "rejected_missing_concrete_time_window",
+  "live_search_authorized": false,
+  "precheck_decision": "reject",
+  "rejection_reasons": [
+    "authorized_at_contains_placeholder",
+    "expires_at_contains_placeholder"
+  ],
+  "input_artifacts": [
+    "docs/harness/evidence/agent-reach-p4-live-search-authorization-pack-20260622.json",
+    "fixtures/agent-reach/live-search-precheck-authorization-submission-20260622.json"
+  ],
+  "output_artifacts": [
+    "fixtures/agent-reach/live-search-precheck-authorization-submission-20260622.json",
+    "tools/kds-sync/validate_agent_reach_p5_live_search_precheck.py",
+    "docs/harness/evidence/agent-reach-p5-live-search-precheck-20260622.json",
+    "docs/harness/evidence/agent-reach-p5-live-search-precheck-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P5-LIVE-SEARCH-PRECHECK-001.md"
+  ],
+  "accepted_controls": {
+    "authorized_by_present": true,
+    "allowed_channels_within_p4_boundary": true,
+    "max_queries_within_limit": true,
+    "max_results_per_query_within_limit": true,
+    "forbidden_actions_preserved": true,
+    "precheck_before_live_required": true
+  },
+  "failed_controls": {
+    "authorized_at_concrete_iso8601": false,
+    "expires_at_concrete_iso8601": false,
+    "expires_at_after_authorized_at": false
+  },
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "live_external_search_invoked": false,
+    "doctor_health_probe_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "not_live_search_authorized",
+    "not_live_search_invoked",
+    "not_live_search_quality_accepted",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P5B-LIVE-SEARCH-PRECHECK-CORRECTED-AUTHORIZATION-001"
+}

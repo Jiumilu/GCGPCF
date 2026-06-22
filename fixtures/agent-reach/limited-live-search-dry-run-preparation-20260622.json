@@ -1,0 +1,128 @@
+{
+  "id": "agent-reach-limited-live-search-dry-run-preparation-20260622",
+  "round": "GPCF-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-001",
+  "mode": "preparation_only",
+  "authorization_source": "docs/harness/evidence/agent-reach-p5b-live-search-precheck-corrected-authorization-20260622.json",
+  "execution_authorization_required_before_live": true,
+  "live_external_search_invoked": false,
+  "agent_reach_binary_invoked": false,
+  "scope": {
+    "current_admission": "limited_candidate_only",
+    "allowed_channels": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "max_queries": 5,
+    "max_results_per_query": 10,
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration",
+      "accepted_claim",
+      "integrated_claim",
+      "production_ready_claim"
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "q1",
+      "project": "GPCF",
+      "channel": "web",
+      "query": "GlobalCloud GPCF LOOP evidence search integration",
+      "purpose": "Find public references relevant to Loop-governed search integration."
+    },
+    {
+      "query_id": "q2",
+      "project": "GFIS",
+      "channel": "web",
+      "query": "GlobalCloud GFIS source record search evidence",
+      "purpose": "Find public references relevant to GFIS source-record search candidates."
+    },
+    {
+      "query_id": "q3",
+      "project": "KDS",
+      "channel": "rss",
+      "query": "KDS knowledge fabric controlled document search",
+      "purpose": "Find RSS-compatible references relevant to controlled knowledge-document search."
+    },
+    {
+      "query_id": "q4",
+      "project": "WAES",
+      "channel": "web",
+      "query": "WAES governance evidence search quality gate",
+      "purpose": "Find public references relevant to governance evidence and quality gates."
+    },
+    {
+      "query_id": "q5",
+      "project": "GPC",
+      "channel": "bilibili",
+      "query": "GlobalCloud project governance search quality",
+      "purpose": "Find Bilibili-compatible public content candidates if the channel is available."
+    }
+  ],
+  "output_contract": {
+    "candidate_schema_required_fields": [
+      "candidate_id",
+      "query_id",
+      "project",
+      "channel",
+      "title",
+      "url",
+      "source_domain",
+      "retrieved_at",
+      "snippet_redacted",
+      "relevance_score",
+      "authority_score",
+      "freshness_score",
+      "traceability_score",
+      "overall_score",
+      "non_claims"
+    ],
+    "evidence_json": "docs/harness/evidence/agent-reach-p7-limited-live-search-dry-run-20260622.json",
+    "evidence_md": "docs/harness/evidence/agent-reach-p7-limited-live-search-dry-run-20260622.md",
+    "raw_output_policy": "do_not_persist_raw_provider_payloads"
+  },
+  "quality_thresholds": {
+    "minimum_query_count": 1,
+    "maximum_query_count": 5,
+    "minimum_candidate_count": 1,
+    "minimum_required_field_coverage": 1.0,
+    "minimum_average_score": 0.7,
+    "minimum_traceability_score": 0.6,
+    "maximum_forbidden_claim_count": 0,
+    "maximum_credential_leak_count": 0
+  },
+  "logging_redaction": {
+    "redact_tokens": true,
+    "redact_cookies": true,
+    "redact_authorization_headers": true,
+    "redact_query_personal_data": true,
+    "persist_redacted_snippets_only": true
+  },
+  "rollback_plan": {
+    "delete_p7_outputs": [
+      "docs/harness/evidence/agent-reach-p7-limited-live-search-dry-run-20260622.json",
+      "docs/harness/evidence/agent-reach-p7-limited-live-search-dry-run-20260622.md"
+    ],
+    "restore_admission": "Keep current_admission as limited_candidate_only unless live dry-run evidence passes review.",
+    "disable_live_run": "Do not run P7 without an explicit execution authorization."
+  },
+  "p7_execution_authorization_template": {
+    "required_text": "授权执行 Agent-Reach P7 Limited Live Search Dry Run",
+    "required_fields": [
+      "authorized_by",
+      "authorized_at",
+      "expires_at",
+      "allowed_channels",
+      "max_queries",
+      "max_results_per_query",
+      "allow_agent_reach_binary_invocation"
+    ],
+    "default_allow_agent_reach_binary_invocation": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-PROJECT-GROUP-CLOSURE-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-PROJECT-GROUP-CLOSURE-010",
+  "status": "project_group_codegraph_dev_execution_chain_validated_with_document_localization_debt",
+  "generated_at": "2026-06-22",
+  "objective": "收口 CodeGraph 进入 GlobalCloud 项目群与 Loop 开发执行层的证据链，明确已完成治理闭环、仍禁止声明业务完成或生产就绪。",
+  "evidence_chain": [
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-admission-20260621.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_admission.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-pilot-pack-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_pilot_pack.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-harness-gate-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_harness_gate.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-first-real-candidate-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorization-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate_authorization.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_authorization_waiting.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZED-006",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorized-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate_authorized.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-DRIFT-007",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-gfis-residual-drift-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_gfis_residual_drift.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-LOCATOR-008",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-gfis-residual-locator-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_gfis_residual_locator.py",
+      "result": "pass"
+    },
+    {
+      "round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-TOOL-STATE-AUDIT-BLOCKED-009",
+      "evidence": "docs/harness/evidence/codegraph-dev-execution-gfis-tool-state-audit-blocked-20260622.json",
+      "validator": "tools/kds-sync/validate_codegraph_dev_execution_gfis_tool_state_audit_blocked.py",
+      "result": "pass"
+    }
+  ],
+  "closure_claims_allowed": [
+    "CodeGraph dev execution admission is established.",
+    "CodeGraph pilot pack exists and is validated.",
+    "Harness gate blocks missing fallback_reason when affected_tests is empty.",
+    "GFIS first real candidate contains CodeGraph evidence.",
+    "GFIS residual CodeGraph drift is documented and clean reindex is not authorized.",
+    "Loop next inputs are controlled."
+  ],
+  "closure_claims_forbidden": [
+    "business implementation completed",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "GFIS CodeGraph sync-only closure completed",
+    "WAES final approval",
+    "Harness final acceptance",
+    "git commit performed",
+    "git push performed",
+    "deployment performed"
+  ],
+  "gfis_open_items": {
+    "codegraph_pending_added": 1,
+    "clean_reindex_authorized": false,
+    "runtime_sop_e2e": "failed_existing_kds_coverage_missing_controlled_sources",
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "project_group_state": {
+    "gpcf_codegraph_pending_changes": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "document_pollution": "pass",
+    "kds_token": "pass",
+    "loop_document_gate": "rework_required",
+    "loop_document_gate_reason": "localization_debt",
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "deployment_performed": false
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "gfis_file_cleanup_performed": false,
+    "codegraph_sync_only_closure": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011"
+}

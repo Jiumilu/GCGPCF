@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "data_processing_agreement_gaps": 0,
+  "personal_data_consent_or_authorization_gaps": 0,
+  "data_classification_register_gaps": 0,
+  "cross_border_data_transfer_assessment_gaps": 0,
+  "security_incident_response_record_gaps": 0,
+  "privileged_access_review_record_gaps": 0,
+  "data_retention_deletion_certificate_gaps": 1,
+  "accepted_for_data_governance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "data_governance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

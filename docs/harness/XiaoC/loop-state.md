@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/docs/harness/XiaoC/loop-state.md
 source_path: docs/harness/XiaoC/loop-state.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---

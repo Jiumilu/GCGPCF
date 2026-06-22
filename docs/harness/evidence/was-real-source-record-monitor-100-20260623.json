@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-100-20260623",
+  "status": "was_real_source_record_monitor_100_pass_with_hold",
+  "date": "2026-06-23",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-099",
+  "purpose": "One-hundredth independent monitor pass for green supply-chain digital product passport, public disclosure, QR/data carrier, traceability dataset, access governance, update log, and regulator/customer retrieval evidence boundaries.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "digital_product_passport_dataset_gaps": 0,
+    "product_data_carrier_or_qr_label_gaps": 0,
+    "public_disclosure_page_snapshot_gaps": 0,
+    "traceability_dataset_version_gaps": 0,
+    "data_access_governance_record_gaps": 0,
+    "passport_update_change_log_gaps": 0,
+    "regulator_or_customer_retrieval_receipt_gaps": 0,
+    "accepted_for_digital_product_passport_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "digital_product_passport_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "digital_product_passport_dataset_gap",
+      "product_data_carrier_or_qr_label_gap",
+      "public_disclosure_page_snapshot_gap",
+      "traceability_dataset_version_gap",
+      "data_access_governance_record_gap",
+      "passport_update_change_log_gap",
+      "regulator_or_customer_retrieval_receipt_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "digital_product_passport_requirements": [
+    "digital_product_passport_dataset",
+    "product_data_carrier_or_qr_label",
+    "public_disclosure_page_snapshot",
+    "traceability_dataset_version",
+    "data_access_governance_record",
+    "passport_update_change_log",
+    "regulator_or_customer_retrieval_receipt"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer digital product passport dataset, QR/data carrier, public disclosure page, traceability dataset version, data access governance, passport update log, or regulator/customer retrieval receipt",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

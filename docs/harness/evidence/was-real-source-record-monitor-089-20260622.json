@@ -1,0 +1,86 @@
+{
+  "evidence_id": "WAS-REAL-SOURCE-RECORD-MONITOR-089-20260622",
+  "status": "was_real_source_record_monitor_089_pass_with_hold",
+  "date": "2026-06-22",
+  "round_id": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-089",
+  "source_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-088",
+  "purpose": "Eighty-ninth independent monitor pass for green finance facility agreements, ESG assurance, carbon credit registry statements, green subsidy or tax incentive evidence, sustainability-linked KPI verification, green invoice settlement, and green finance audit workpapers.",
+  "project_group_scope": [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS"
+  ],
+  "monitor_checks": {
+    "submitted_real_candidate_files": 0,
+    "green_finance_facility_agreement_gaps": 0,
+    "esg_assurance_statement_gaps": 0,
+    "carbon_credit_registry_statement_gaps": 0,
+    "green_subsidy_or_tax_incentive_record_gaps": 0,
+    "sustainability_linked_kpi_verification_gaps": 0,
+    "green_invoice_settlement_record_gaps": 0,
+    "green_finance_audit_workpaper_gaps": 0,
+    "accepted_for_green_finance_esg_profile": 0,
+    "accepted_for_next_gate": 0,
+    "hold_required": 1,
+    "monitor_state": "waiting",
+    "green_finance_esg_state": "blocked_no_real_source_record"
+  },
+  "fixture_gate": {
+    "positive_fixtures": 1,
+    "negative_fixtures": 7,
+    "negative_cases": [
+      "green_finance_facility_agreement_gap",
+      "esg_assurance_statement_gap",
+      "carbon_credit_registry_statement_gap",
+      "green_subsidy_or_tax_incentive_record_gap",
+      "sustainability_linked_kpi_verification_gap",
+      "green_invoice_settlement_record_gap",
+      "green_finance_audit_workpaper_gap"
+    ]
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_admission_gate.py",
+    "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
+    "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py",
+    "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py"
+  ],
+  "green_finance_esg_requirements": [
+    "green_finance_facility_agreement",
+    "esg_assurance_statement",
+    "carbon_credit_registry_statement",
+    "green_subsidy_or_tax_incentive_record",
+    "sustainability_linked_kpi_verification",
+    "green_invoice_settlement_record",
+    "green_finance_audit_workpaper"
+  ],
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "next_round": "GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-090",
+  "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
+  "non_claims": [
+    "does not infer green finance facility agreement, ESG assurance statement, carbon credit registry statement, green subsidy or tax incentive record, sustainability-linked KPI verification, green invoice settlement record, or green finance audit workpaper",
+    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+  ]
+}

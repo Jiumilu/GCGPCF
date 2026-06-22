@@ -12,6 +12,10 @@ SPEC_DOC = ROOT / "02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTA
 TEMPLATE = ROOT / "templates/loop-round-v2-five-direction.yaml"
 FIXTURE = ROOT / "fixtures/loop-dashboard/loop-engineering-five-direction-implementation.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/loop-engineering-five-direction-implementation-20260622.md"
+SELF_EVOLUTION_JSON = ROOT / "docs/harness/evidence/loop-five-direction-self-evolution-20260622.json"
+SELF_EVOLUTION_MD = ROOT / "docs/harness/evidence/loop-five-direction-self-evolution-20260622.md"
+ORCHESTRATOR_SKILL = ROOT / ".codex/skills/globalcloud-loop-orchestrator/SKILL.md"
+AUTONOMY_POLICY = ROOT / "02-governance/loop/LOOP_AUTONOMY_POLICY.md"
 CONTROL_BOARD = ROOT / "02-governance/loop/LOOP_CONTROL_BOARD.md"
 LOOP_STATE = ROOT / "docs/harness/loop-state.md"
 STATUS_MATRIX = ROOT / "09-status/gpcf-project-status-matrix.md"
@@ -54,11 +58,16 @@ def main() -> int:
     template = read(TEMPLATE)
     fixture = load_json(FIXTURE)
     evidence = read(EVIDENCE_MD)
+    self_evolution = load_json(SELF_EVOLUTION_JSON)
+    self_evolution_md = read(SELF_EVOLUTION_MD)
+    orchestrator_skill = read(ORCHESTRATOR_SKILL)
+    autonomy_policy = read(AUTONOMY_POLICY)
     loop_document_gate = read(LOOP_DOCUMENT_GATE)
     status_text = "\n".join([read(CONTROL_BOARD), read(LOOP_STATE), read(STATUS_MATRIX)])
 
     require_controlled(spec, "02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md")
     require_controlled(evidence, "docs/harness/evidence/loop-engineering-five-direction-implementation-20260622.md")
+    require_controlled(self_evolution_md, "docs/harness/evidence/loop-five-direction-self-evolution-20260622.md")
 
     for phrase in [
         "Loop Engineering 五方向实施规范",
@@ -81,6 +90,11 @@ def main() -> int:
 
     for phrase in [
         "loop_round_v2_five_direction:",
+        "official_name: \"LOOP 运行控制闭环\"",
+        "legacy_alias: \"LOOP 五方向\"",
+        "applies_to: all_loop_work_except_readonly_qa",
+        "mandatory_for: [L1, L2, L3, L3.5, L4, L5]",
+        "replaces_legacy_loop_shape: \"input_action_output_check_feedback\"",
         "run:",
         "stop:",
         "verify:",
@@ -99,6 +113,37 @@ def main() -> int:
         "validate_loop_engineering_five_direction_implementation.py",
     ]:
         require(phrase in loop_document_gate, f"loop_document_gate missing integration phrase: {phrase}")
+
+    for phrase in [
+        "LOOP 运行控制闭环",
+        "历史别名为 LOOP 五方向",
+        "templates/loop-round-v2-five-direction.yaml",
+        "run",
+        "stop",
+        "verify",
+        "recover",
+        "debug",
+        "不得退回只记录",
+    ]:
+        require(phrase in orchestrator_skill, f"orchestrator skill missing standing adoption phrase: {phrase}")
+
+    for phrase in [
+        "LOOP 运行控制闭环常驻接入规则",
+        "LOOP 运行控制闭环为所有 Loop 工作的默认工程接口",
+        "适用于 L1、L2、L3、L3.5、L4、L5",
+        "旧五段式",
+        "不得替代运行控制闭环结构",
+        "状态最高为 `partial`",
+    ]:
+        require(phrase in autonomy_policy, f"autonomy policy missing standing adoption phrase: {phrase}")
+
+    for phrase in [
+        "LOOP 运行控制闭环常驻能力",
+        "active / all Loop work",
+        "后续所有非只读 Loop 工作必须按",
+        "未登记运行控制闭环的轮次不得升级 accepted/integrated/production_ready",
+    ]:
+        require(phrase in status_text, f"control board missing standing adoption phrase: {phrase}")
 
     require(SPEC_MIRROR.exists(), "spec markdown is not mirrored to KDS development-space")
     require(EVIDENCE_MIRROR.exists(), "evidence markdown is not mirrored to KDS development-space")
@@ -144,6 +189,25 @@ def main() -> int:
         "loop_engineering_five_direction_implementation=pass",
     ]:
         require(phrase in evidence, f"evidence missing phrase: {phrase}")
+
+    require(
+        self_evolution.get("self_evolution_id") == "GPCF-LOOP-FIVE-DIRECTION-SELF-EVOLUTION-001",
+        "self-evolution id must be registered",
+    )
+    require(
+        self_evolution.get("status") == "adopted_as_default_loop_constraint",
+        "self-evolution status must be adopted_as_default_loop_constraint",
+    )
+    require(
+        self_evolution.get("real_business_lane") == "repair_required",
+        "self-evolution must preserve repair_required",
+    )
+    for key in ["accepted", "integrated", "production_ready"]:
+        require(self_evolution.get(key) is False, f"self-evolution guard must be false: {key}")
+    require(
+        "GPCF-LOOP-FIVE-DIRECTION-SELF-EVOLUTION-001" in self_evolution_md,
+        "self-evolution evidence markdown missing id",
+    )
 
     for phrase in [
         "real_business_lane=repair_required",

@@ -1,0 +1,90 @@
+{
+  "command_recipe": [
+    {
+      "command": "python3 tools/kds-sync/ingest_agent_reach_p8_authorization_text.py --authorization-text-file <authorization-text-file>",
+      "expected": "status=dry_run_valid",
+      "step": "authorization_text_dry_run"
+    },
+    {
+      "command": "python3 tools/kds-sync/ingest_agent_reach_p8_authorization_text.py --authorization-text-file <authorization-text-file> --write-local-auth",
+      "expected": "writes fixtures/agent-reach/project-group-full-live-search-batch-*-authorization.local.json only after valid authorization",
+      "step": "authorization_text_write_local_auth"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p8_local_authorization_window_audit.py",
+      "expected": "blocks missing, future, expired, and wrong-batch local authorization files without network access",
+      "step": "local_authorization_window_audit"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p8_live_execution_readiness_matrix.py",
+      "expected": "status=p8_live_execution_ready_pending_human_authorization before local auth, or no readiness regression after local auth",
+      "step": "pre_execution_readiness"
+    },
+    {
+      "command": "python3 tools/kds-sync/run_agent_reach_p8_post_authorization_driver.py --authorization-text-file <authorization-text-file> --write-local-auth --execute-live --write-evidence --report docs/harness/evidence/agent-reach-p8-post-authorization-driver-live-20260623.json",
+      "expected": "requires --write-evidence with --execute-live",
+      "step": "execute_live_with_evidence"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_project_group_full_live_coverage_output.py",
+      "expected": "all project/query/channel coverage, no duplicate URLs, no query errors, required field coverage 1.0",
+      "step": "output_quality_gate"
+    },
+    {
+      "command": "python3 tools/kds-sync/document_control.py && python3 tools/kds-sync/check_document_pollution.py && python3 tools/kds-sync/validate_kds_token.py && python3 tools/kds-sync/loop_document_gate.py",
+      "expected": "controlled evidence, pollution pass, KDS token pass, loop document gate pass",
+      "step": "document_governance"
+    }
+  ],
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-23",
+  "id": "agent-reach-p8-operator-handoff-20260623",
+  "local_authorization_files": [
+    {
+      "exists": false,
+      "path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json"
+    },
+    {
+      "exists": false,
+      "path": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json"
+    },
+    {
+      "exists": false,
+      "path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json"
+    }
+  ],
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "post_execution_required_gates": [
+    "validate_agent_reach_project_group_full_live_coverage_output.py",
+    "validate_agent_reach_p8_rework_queue.py",
+    "document_control.py",
+    "check_document_pollution.py",
+    "validate_kds_token.py",
+    "loop_document_gate.py"
+  ],
+  "readiness_status": "p8_live_execution_ready_pending_human_authorization",
+  "required_authorization_text": "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1\n授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2\n授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3\n授权人：lujunxiang\n有效期：<start-iso8601> 至 <end-iso8601>\n仅允许 web/rss/bilibili 公开内容读取，Batch 1/2 最多 5 个 query，Batch 3 最多 4 个 query，每个 query 最多 10 条结果。\n禁止写凭据、提取 cookie、写 KDS canonical、写 GFIS source-of-record、改生产配置、改全局 MCP 配置、生产集成或声明 accepted/integrated/production_ready。",
+  "round": "GPCF-AGENT-REACH-P8-OPERATOR-HANDOFF-001",
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "source_readiness_matrix": "docs/harness/evidence/agent-reach-p8-live-execution-readiness-matrix-20260622.json",
+  "status": "p8_operator_handoff_ready_pending_authorization"
+}

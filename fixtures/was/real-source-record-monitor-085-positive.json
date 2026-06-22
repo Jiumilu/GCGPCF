@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "supplier_grievance_record_gaps": 0,
+  "corrective_action_reverification_record_gaps": 0,
+  "environmental_claim_dispute_record_gaps": 0,
+  "evidence_withdrawal_record_gaps": 0,
+  "regulatory_inquiry_response_gaps": 0,
+  "customer_complaint_environmental_claim_record_gaps": 0,
+  "remediation_closure_assurance_statement_gaps": 0,
+  "accepted_for_dispute_remediation_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "dispute_remediation_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "third_party_auditor_independence_statement_gaps": 0,
+  "audit_scope_approval_record_gaps": 1,
+  "evidence_chain_of_custody_register_gaps": 0,
+  "audit_workpaper_index_gaps": 0,
+  "management_representation_letter_gaps": 0,
+  "finding_remediation_tracking_log_gaps": 0,
+  "assurance_report_release_approval_gaps": 0,
+  "accepted_for_third_party_assurance_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "third_party_assurance_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

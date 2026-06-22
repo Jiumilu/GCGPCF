@@ -1,0 +1,72 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-CLOSURE-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011",
+  "status": "document_localization_debt_closed",
+  "generated_at": "2026-06-22",
+  "objective": "收口 CodeGraph 项目群开发执行层证据链遗留的中文化文档债务，证明 Loop 文档门禁不再因 localization_debt 保持 rework_required。",
+  "inputs": {
+    "previous_round": "GPCF-CODEGRAPH-DEV-EXECUTION-PROJECT-GROUP-CLOSURE-010",
+    "previous_evidence": "docs/harness/evidence/codegraph-dev-execution-project-group-closure-20260622.json",
+    "localization_report": "09-status/globalcloud-chinese-localization-governance-report.md",
+    "localization_gate": "tools/kds-sync/check_chinese_localization_gate.py",
+    "loop_document_gate": "tools/kds-sync/loop_document_gate.py"
+  },
+  "localization_gate_evidence": {
+    "localization_gate": "pass",
+    "docs_checked": 2148,
+    "software_files_checked": 240,
+    "findings": 0,
+    "findings_by_kind": {},
+    "localization_debt": false
+  },
+  "loop_document_gate_evidence": {
+    "gate": "pass",
+    "missing_metadata": 0,
+    "missing_readme_dirs": 0,
+    "localization_debt": false,
+    "fixed_doc_id_drift": false
+  },
+  "governance_evidence": {
+    "document_pollution": "pass",
+    "kds_token": "pass",
+    "kds_token_fingerprint": "bfd9553d",
+    "report_contains_current_pass_judgement": true,
+    "report_stale_debt_claim_removed": true,
+    "codegraph_git_isolated": true
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "gfis_file_cleanup_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "allowed_claims": [
+    "CodeGraph 项目群治理链的中文化文档债务已闭合。",
+    "中文化门禁已通过，findings=0。",
+    "Loop 文档门禁已通过，localization_debt=false。",
+    "当前收口不代表业务功能完成、accepted、integrated 或 production_ready。"
+  ],
+  "forbidden_claims": [
+    "business implementation completed",
+    "accepted",
+    "integrated",
+    "production_ready",
+    "production write performed",
+    "external API write performed",
+    "git commit performed",
+    "git push performed",
+    "deployment performed",
+    "GFIS clean reindex performed",
+    "WAES final approval",
+    "Harness final acceptance"
+  ],
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-STEADY-STATE-MONITOR-012"
+}

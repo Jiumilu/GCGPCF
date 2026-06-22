@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-7682DAC0E5
 title: "Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001"
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
-domain: docs
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+domain: ontology-governance
 status: controlled
 version: v1.0
 owner: GPCF
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md
 source_path: docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -46,7 +46,7 @@ superseded_by: []
 ## 动作
 
 - 刷新 `02-governance/loop/LOOP_CONTROL_BOARD.md` 的当前轮次、当前阶段和本轮新增事实。
-- 刷新 `09-status/gpcf-project-status-matrix.md` 的 v5.27 状态摘要、WAS 行和更新记录。
+- 刷新 `09-status/gpcf-project-status-matrix.md` 的 v5.72 状态摘要、WAS 行和更新记录。
 - 建立状态刷新 validator、正例和 3 个反例。
 
 ## 输出
@@ -68,12 +68,12 @@ python3 tools/kds-sync/validate_was_status_matrix_control_board_refresh.py
 期望输出：
 
 ```text
-was_status_matrix_control_board_refresh=pass project_group_scope=14/14 refreshed_documents=2 positive_fixtures=1 negative_fixtures=3 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-060
+was_status_matrix_control_board_refresh=pass project_group_scope=14/14 refreshed_documents=2 positive_fixtures=1 negative_fixtures=3 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101
 ```
 
 ## 反馈
 
-GPCF 状态矩阵和 Loop 控制板已刷新到 WAS-Ontology monitor 059 阶段。本轮仍保持 `hold_required=1` 和所有业务提升阻断，不声明 accepted、integrated 或 production_ready。
+GPCF 状态矩阵和 Loop 控制板已刷新到 WAS-Ontology monitor 100 阶段。本轮仍保持 `hold_required=1` 和所有业务提升阻断，不声明 accepted、integrated 或 production_ready。
 
 ## 连续运行真实性记录
 

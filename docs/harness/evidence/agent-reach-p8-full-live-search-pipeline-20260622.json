@@ -1,0 +1,53 @@
+{
+  "id": "agent-reach-p8-full-live-search-pipeline-20260622",
+  "round": "GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-PIPELINE-001",
+  "date": "2026-06-22",
+  "status": "p8_full_live_search_pipeline_ready",
+  "current_admission": "limited_candidate_only",
+  "phase": "P8 Full Live Search Pipeline",
+  "mode": "pipeline_ready_without_live_execution",
+  "completion_claim_allowed": false,
+  "input_artifacts": [
+    "tools/kds-sync/run_agent_reach_project_group_full_live_search_batch.py",
+    "tools/kds-sync/merge_agent_reach_project_group_full_live_search_batches.py",
+    "tools/kds-sync/validate_agent_reach_project_group_full_live_coverage_output.py"
+  ],
+  "output_artifacts": [
+    "tools/kds-sync/run_agent_reach_project_group_full_live_search_pipeline.py",
+    "tools/kds-sync/validate_agent_reach_p8_full_live_search_pipeline.py",
+    "docs/harness/evidence/agent-reach-p8-full-live-search-pipeline-20260622.json",
+    "docs/harness/evidence/agent-reach-p8-full-live-search-pipeline-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-FULL-LIVE-SEARCH-PIPELINE-001.md"
+  ],
+  "pipeline_checks": {
+    "pipeline_created": true,
+    "blocks_without_three_batch_authorizations": true,
+    "runs_three_batches_when_execute_enabled": true,
+    "merges_batch_outputs": true,
+    "requires_query_quality_preflight": true,
+    "requires_output_quality_gate_preflight": true,
+    "runs_full_output_quality_gate": true,
+    "does_not_execute_live_search_in_preflight": true
+  },
+  "security_controls": {
+    "live_external_search_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001"
+}

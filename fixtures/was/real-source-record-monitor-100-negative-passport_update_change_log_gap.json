@@ -1,0 +1,26 @@
+{
+  "submitted_real_candidate_files": 0,
+  "digital_product_passport_dataset_gaps": 0,
+  "product_data_carrier_or_qr_label_gaps": 0,
+  "public_disclosure_page_snapshot_gaps": 0,
+  "traceability_dataset_version_gaps": 0,
+  "data_access_governance_record_gaps": 0,
+  "passport_update_change_log_gaps": 1,
+  "regulator_or_customer_retrieval_receipt_gaps": 0,
+  "accepted_for_digital_product_passport_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "digital_product_passport_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

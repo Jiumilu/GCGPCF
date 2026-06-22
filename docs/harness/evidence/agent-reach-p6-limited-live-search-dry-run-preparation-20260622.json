@@ -1,0 +1,54 @@
+{
+  "id": "agent-reach-limited-live-search-dry-run-preparation-20260622",
+  "round": "GPCF-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-001",
+  "date": "2026-06-22",
+  "status": "limited_live_search_dry_run_preparation_ready",
+  "current_admission": "limited_candidate_only",
+  "phase": "P6 Limited Live Search Dry Run Preparation",
+  "mode": "preparation_only",
+  "input_artifacts": [
+    "docs/harness/evidence/agent-reach-p5b-live-search-precheck-corrected-authorization-20260622.json",
+    "fixtures/agent-reach/limited-live-search-dry-run-preparation-20260622.json"
+  ],
+  "output_artifacts": [
+    "fixtures/agent-reach/limited-live-search-dry-run-preparation-20260622.json",
+    "tools/kds-sync/validate_agent_reach_p6_limited_live_search_dry_run_preparation.py",
+    "docs/harness/evidence/agent-reach-p6-limited-live-search-dry-run-preparation-20260622.json",
+    "docs/harness/evidence/agent-reach-p6-limited-live-search-dry-run-preparation-20260622.md",
+    "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-001.md"
+  ],
+  "preparation_checks": {
+    "query_count": 5,
+    "allowed_channel_count": 3,
+    "max_queries": 5,
+    "max_results_per_query": 10,
+    "candidate_schema_required_field_count": 15,
+    "quality_thresholds_defined": true,
+    "logging_redaction_defined": true,
+    "rollback_plan_defined": true,
+    "p7_execution_authorization_required": true
+  },
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "live_external_search_invoked": false,
+    "doctor_health_probe_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_live_search_quality_accepted",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_production_integrated",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "next_round": "GPCF-AGENT-REACH-P7-LIMITED-LIVE-SEARCH-DRY-RUN-001"
+}

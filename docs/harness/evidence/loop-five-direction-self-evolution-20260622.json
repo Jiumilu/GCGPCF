@@ -1,0 +1,28 @@
+{
+  "self_evolution_id": "GPCF-LOOP-FIVE-DIRECTION-SELF-EVOLUTION-001",
+  "trigger": "RUN-001 proved the five-direction package could run once, but follow-up review identified that it also had to become the default Loop behavior for other work.",
+  "change": {
+    "orchestrator": "globalcloud-loop-orchestrator now requires run/stop/verify/recover/debug for all non-readonly Loop work.",
+    "policy": "LOOP_AUTONOMY_POLICY defines five-direction standing adoption across L1, L2, L3, L3.5, L4, and L5.",
+    "control_board": "LOOP_CONTROL_BOARD records the five-direction capability as active for all Loop work.",
+    "template": "loop-round-v2-five-direction.yaml marks the shape mandatory for L1-L5 except readonly QA.",
+    "validator": "validate_loop_engineering_five_direction_implementation.py checks the standing adoption points."
+  },
+  "verification": {
+    "run_001": "validate_loop_five_direction_run_001=pass",
+    "standing_smoke": "five_direction_standing_smoke=pass target=GFIS-runtime-gap-resolution-plan",
+    "base_validator": "loop_engineering_five_direction_implementation=pass"
+  },
+  "next_constraint": "all non-readonly Loop rounds must include run, stop, verify, recover, and debug; old input-action-output-check-feedback can only be an internal explanation.",
+  "status": "adopted_as_default_loop_constraint",
+  "status_ceiling": "partial_repair",
+  "real_business_lane": "repair_required",
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "no_write_boundary_enforced": true,
+  "production_writes": 0,
+  "real_external_api_writes": 0,
+  "kds_fact_writes": 0,
+  "waes_gate_result_writes": 0
+}

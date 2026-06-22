@@ -1,0 +1,86 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-WATCHLIST-DRIFT-TRIAGE-20260622",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-DRIFT-TRIAGE-013",
+  "status": "triage_complete_authorization_boundary",
+  "generated_at": "2026-06-22",
+  "objective": "只读分诊 CodeGraph 活动漂移 watchlist，区分可后续授权 sync-only closure 的对象和必须继续保留人工边界的对象。",
+  "previous_round": "GPCF-CODEGRAPH-DEV-EXECUTION-STEADY-STATE-MONITOR-012",
+  "watchlist": {
+    "repo_count": 4,
+    "repos": {
+      "Brain": {
+        "codegraph_pending": {"added": 4, "modified": 54, "removed": 0},
+        "git_dirty_total": 203,
+        "git_modified": 90,
+        "git_deleted": 5,
+        "git_untracked": 108,
+        "classification": "broad_active_development_drift_with_deleted_openspec_archive",
+        "decision": "authorization_required",
+        "recommended_next": "requires_separate_brain_sync_only_or_dev_closure_authorization"
+      },
+      "GFIS": {
+        "codegraph_pending": {"added": 1, "modified": 2, "removed": 0},
+        "git_dirty_total": 239,
+        "git_modified": 37,
+        "git_deleted": 0,
+        "git_untracked": 202,
+        "classification": "broad_runtime_sop_e2e_governance_drift_with_policy_exception",
+        "decision": "authorization_required",
+        "recommended_next": "keep_clean_reindex_unauthorized_and_require_gfis_specific_sync_only_closure_authorization"
+      },
+      "KDS": {
+        "codegraph_pending": {"added": 0, "modified": 1, "removed": 0},
+        "git_dirty_total": 1651,
+        "git_modified": 370,
+        "git_deleted": 58,
+        "git_untracked": 1223,
+        "classification": "broad_kds_mirror_workwiki_content_drift",
+        "decision": "authorization_required",
+        "recommended_next": "requires_kds_mirror_workwiki_sync_governance_review_before_sync_only_closure"
+      },
+      "Studio": {
+        "codegraph_pending": {"added": 2, "modified": 9, "removed": 0},
+        "git_dirty_total": 12,
+        "git_modified": 11,
+        "git_deleted": 0,
+        "git_untracked": 1,
+        "classification": "bounded_studio_session_binding_and_kds_governance_drift",
+        "decision": "precheck_candidate",
+        "recommended_next": "eligible_for_future_studio_sync_only_precheck_without_release_or_deployment"
+      }
+    }
+  },
+  "governance": {
+    "mode": "read_only_triage",
+    "codegraph_sync_performed_in_watchlist_repos": false,
+    "clean_reindex_performed": false,
+    "business_development_performed": false,
+    "document_localization_gate": "pass",
+    "loop_document_gate": "pass",
+    "document_pollution": "pass",
+    "kds_token": "pass",
+    "codegraph_git_isolated": true
+  },
+  "five_direction": {
+    "run": "只读采集 Brain/GFIS/KDS/Studio 的 CodeGraph status 与 Git dirty 计数，并形成分诊分类。",
+    "stop": "stop_type=authorization_boundary；watchlist 仓库存在大范围 dirty 或需专项授权，不能在本轮自动 sync-only closure。",
+    "verify": "回放 steady-state validator、中文化门禁、Loop 文档门禁、防污染与 KDS token。",
+    "recover": "恢复点为上一轮 STEADY-STATE-MONITOR-012；若后续授权不足，保持 monitor_only。",
+    "debug": "当前阻塞在 Brain/GFIS/KDS/Studio 漂移授权边界；下一轮只允许生成授权包或对 Studio 做 sync-only precheck。"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "watchlist_sync_only_closure_completed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-014"
+}

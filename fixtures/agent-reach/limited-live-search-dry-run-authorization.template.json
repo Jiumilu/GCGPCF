@@ -1,0 +1,36 @@
+{
+  "authorization_id": "GPCF-AGENT-REACH-P7-LIVE-SEARCH-<yyyymmdd>-<sequence>",
+  "authorization_status": "pending_human_authorization",
+  "authorized_by": "<required-human-approver>",
+  "authorized_at": "<required-iso8601>",
+  "expires_at": "<required-iso8601>",
+  "allowed_channels": [
+    "web",
+    "rss",
+    "bilibili"
+  ],
+  "max_queries": 5,
+  "max_results_per_query": 10,
+  "allow_agent_reach_binary_invocation": false,
+  "allow_external_network": true,
+  "allow_write_evidence_only": true,
+  "forbidden_actions": [
+    "credential_write",
+    "browser_cookie_extraction",
+    "kds_canonical_write",
+    "gfis_source_of_record_write",
+    "production_config_write",
+    "global_mcp_config_write",
+    "production_integration",
+    "accepted_claim",
+    "integrated_claim",
+    "production_ready_claim"
+  ],
+  "logging_redaction": {
+    "redact_tokens": true,
+    "redact_cookies": true,
+    "redact_authorization_headers": true,
+    "redact_query_personal_data": true,
+    "persist_redacted_snippets_only": true
+  }
+}

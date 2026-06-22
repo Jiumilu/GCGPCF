@@ -1,0 +1,46 @@
+{
+  "batch_authorization_text_count": 3,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-22",
+  "default_local_authorization_files_created": false,
+  "execution_requested": false,
+  "id": "agent-reach-p8-authorized-pipeline-closure-20260622",
+  "isolated_authorization_status": "local_authorization_files_written",
+  "missing_authorization_batches": [],
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_default_local_authorization_written",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "pipeline_status_with_isolated_authorizations": "authorized_execution_not_requested",
+  "preflight_status": {
+    "p8-batch-1": "authorized_execution_not_requested",
+    "p8-batch-2": "authorized_execution_not_requested",
+    "p8-batch-3": "authorized_execution_not_requested"
+  },
+  "quality_preflight": {
+    "output_quality_gate_reasons": [],
+    "output_quality_gate_status": "full_project_group_live_coverage_output_quality_gate_ready",
+    "query_quality_failing_count": 0,
+    "query_quality_status": "p8_query_quality_preflight_pass"
+  },
+  "round": "GPCF-AGENT-REACH-P8-AUTHORIZED-PIPELINE-CLOSURE-001",
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_authorized_pipeline_closure_ready",
+  "write_evidence_requested": false
+}

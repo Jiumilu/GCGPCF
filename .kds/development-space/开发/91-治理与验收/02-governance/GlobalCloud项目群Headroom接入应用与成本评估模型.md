@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md
 source_path: 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -636,6 +636,16 @@ python3 tools/kds-sync/validate_headroom_cost_sensitivity_model.py
 | LCX sanitized measurement dry-run skeleton | pass_check_only_no_real_measurement |
 | LCX metadata replay check | pass_check_only_no_real_measurement |
 | LCX marker/retrieval miss comparison gate | pass_check_only_no_real_measurement |
+| LCX sanitized token fixture extension | pass_check_only_5_projects_3_scenarios_no_real_measurement |
+| LCX fixture extension replay/comparison | pass_check_only_15_records_no_real_measurement |
+| LCX fixture extension negative gate | pass_check_only_9_rejected_0_accepted |
+| LCX fixture stability gate | pass_check_only_3_rounds_stable_no_real_measurement |
+| LCX project group sanitized fixture | pass_check_only_15_projects_45_records_no_real_measurement |
+| LCX project group replay/stability | pass_check_only_15_projects_45_records_3_rounds_stable_no_real_measurement |
+| LCX readiness pilot authorization package | pass_check_only_l3_5_controlled_sanitized_pilot_recommended_l4_false |
+| LCX L3.5 controlled sanitized pilot window | pass_check_only_15_projects_45_records_no_real_measurement |
+| LCX L3.5 multi-window stability | pass_check_only_5_windows_225_records_stable_hash_no_real_measurement |
+| LCX L3.5 answer equivalence synthetic gate | pass_check_only_15_projects_45_synthetic_samples_business_equivalence_false |
 | Loop evidence 已建立 | done |
 | Validator 已建立 | done |
 | 真实生产接入 | not_done |
@@ -644,8 +654,10 @@ python3 tools/kds-sync/validate_headroom_cost_sensitivity_model.py
 
 ## 9. 下一步
 
-1. 建立 sanitized token fixture 扩展包，至少覆盖 5 个项目域和 3 类场景。
-2. fixture 仍只允许记录 token 计数、marker、redaction、retrieval miss、answer equivalence 等脱敏元数据。
-3. 继续保持 `production_token_measurement_allowed=false`、`measured_production_tokens=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
-4. 不读取原文、不计算真实生产节省、不启动 Headroom production proxy。
-5. 只有扩展 fixture、marker/retrieval miss 门禁、脱敏 token evidence、独立轮次稳定性门禁和授权条件均通过后，才申请 L3.5 或 L4 试点授权。
+1. 已形成 L3.5 受控脱敏试点授权建议包：`docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md`。
+2. 已按用户“批准”生成 L3.5 受控脱敏试点窗口：`docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md`。
+3. 已生成 L3.5 多窗口脱敏稳定性证据：`docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.md`。
+4. 已生成 L3.5 synthetic answer/citation/marker 等价门禁：`docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.md`。
+5. readiness 汇总、L3.5 窗口、多窗口稳定性和 synthetic answer equivalence 均区分 15 项目域 fixture coverage、15 项目域 LCX route coverage 与真实生产实测 token，fixture 不等同于全项目生产实测。
+6. 继续保持 `production_token_measurement_allowed=false`、`measured_production_tokens=false`、`business_answer_equivalence_proven=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
+7. 下一步可生成 L4 真实测量与真实业务答案等价授权申请包，或继续增加 L3.5 synthetic 负向等价样例。

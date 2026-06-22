@@ -1,0 +1,27 @@
+{
+  "submitted_real_candidate_files": 0,
+  "post_market_environmental_incident_record_gaps": 1,
+  "field_corrective_action_notice_gaps": 0,
+  "product_recall_environmental_risk_assessment_gaps": 0,
+  "customer_site_containment_record_gaps": 0,
+  "replacement_or_rework_disposition_record_gaps": 0,
+  "regulatory_field_action_notification_gaps": 0,
+  "post_market_closure_verification_statement_gaps": 0,
+  "accepted_for_post_market_field_action_profile": 0,
+  "accepted_for_next_gate": 0,
+  "hold_required": 1,
+  "monitor_state": "waiting",
+  "post_market_field_action_state": "blocked_no_real_source_record",
+  "boundary": {
+    "real_source_records": 0,
+    "valid_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "review_queue": 0,
+    "runtime_intake": 0,
+    "waes_review": 0,
+    "verified": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

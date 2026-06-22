@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D156-001.md
 source_path: docs/harness/loops/loop-round-GPCF-GCKF-P0-D156-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -34,6 +34,8 @@ superseded_by: []
 - completeness precheck 执行
 - supplement intake 执行
 - supplement material acceptance
+- intake acceptance 执行
+- committee case packet submission / review input submission
 - committee reentry 执行
 - committee case opening
 - committee decision 执行
@@ -62,7 +64,7 @@ superseded_by: []
 
 ## 边界
 
-- 不执行正式修复请求、不执行正式完整性预检、不执行正式补件接收、不执行补件验收、不执行委员会 reentry、不立案、不执行委员会裁决、不执行人工确认、不释放冻结、不执行 unfreeze、formal write，也不写 repair request、committee case、committee result、revenue_distribution、contribution_score。
+- 不执行正式修复请求、不执行正式完整性预检、不执行正式补件接收、不执行补件验收、不执行 committee reentry、不立案、不执行委员会裁决、不执行人工确认、不释放冻结、不执行 unfreeze、formal write，也不写 repair request、committee case、committee result、revenue_distribution、contribution_score。
 - 不写 formal Harness evidence、KDS、GFIS、GPC 或其他业务系统。
 - 不升级 accepted/integrated/production_ready。
 - 不放行 P1 admission，不建议升级 v1.0。

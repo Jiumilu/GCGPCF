@@ -1,5 +1,10 @@
 loop_round_v2_five_direction:
   schema_version: v2
+  official_name: "LOOP 运行控制闭环"
+  legacy_alias: "LOOP 五方向"
+  applies_to: all_loop_work_except_readonly_qa
+  mandatory_for: [L1, L2, L3, L3.5, L4, L5]
+  replaces_legacy_loop_shape: "input_action_output_check_feedback"
   round_id:
   project:
   mode:

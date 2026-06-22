@@ -1,0 +1,38 @@
+{
+  "evidenceId": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-ROUTING-PACKAGE-ACKNOWLEDGEMENT-PREVIEW-CURRENT-STATE-D165-20260622",
+  "fixturePath": "fixtures/api/gckf-p0-formal-evidence-execution-routing-package-acknowledgement-preview-current-state-d165-20260622.json",
+  "historicalSource": "fixtures/api/gckf-p0-formal-evidence-execution-routing-package-acknowledgement-preview-dry-run-v0.1.json",
+  "currentSource": "fixtures/api/gckf-p0-formal-evidence-execution-reviewer-acceptance-acknowledgement-routing-package-preview-current-state-d164-20260622.json",
+  "routingPackageAcknowledgementPreviewStatus": "candidate_preview_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "executionMode": "local_evidence_no_write",
+  "executionStatus": "not_executed",
+  "holdContextRefs": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+  ],
+  "counts": {
+    "acknowledgementRoles": 15,
+    "acknowledgementSections": 14,
+    "acknowledgementEnvelopeFields": 9,
+    "acknowledgementReadinessPrerequisites": 8,
+    "acknowledgementDecisionConstraints": 19,
+    "acknowledgementChecks": 48,
+    "requiredAcknowledgementRefs": 30,
+    "blockingConditions": 43,
+    "forbiddenActions": 56,
+    "forbiddenOutputs": 45
+  },
+  "gateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "validator": "tools/kds-sync/validate_gckf_p0_formal_evidence_execution_routing_package_acknowledgement_preview_current_state_d165.py"
+}

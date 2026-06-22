@@ -1,0 +1,100 @@
+{
+  "evidence_id": "LOOP-FIVE-DIRECTION-RUN-001-20260622",
+  "round_id": "GPCF-LOOP-FIVE-DIRECTION-RUN-001",
+  "mode": "L3",
+  "scope": "no-write",
+  "status": "completed_for_round_with_authorization_boundary",
+  "started": true,
+  "completed_for_round": true,
+  "stop_type": "authorization_boundary",
+  "stop_evidence": "User authorization covered RUN-001 only; the next round requires a selected task queue or additional authorization.",
+  "five_direction_runtime": {
+    "run": {
+      "status": "executed",
+      "input_refs": [
+        "AGENTS.md",
+        "02-governance/loop/LOOP_CONTROL_BOARD.md",
+        "02-governance/loop/LOOP_AUTONOMY_POLICY.md",
+        "09-status/gpcf-project-status-matrix.md",
+        "templates/loop-round-v2-five-direction.yaml"
+      ],
+      "output_refs": [
+        "docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-RUN-001.md",
+        "docs/harness/evidence/loop-five-direction-run-001-20260622.json",
+        "docs/harness/evidence/loop-five-direction-run-001-20260622.md",
+        "tools/kds-sync/validate_loop_five_direction_run_001.py"
+      ]
+    },
+    "stop": {
+      "status": "executed",
+      "completed_for_round": true,
+      "accepted_allowed": false,
+      "integrated_allowed": false,
+      "production_ready_allowed": false
+    },
+    "verify": {
+      "status": "executed",
+      "precheck_refs": [
+        "python3 tools/kds-sync/check_document_pollution.py",
+        "python3 tools/kds-sync/validate_kds_token.py",
+        "python3 tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"
+      ],
+      "intermediate_check_refs": [
+        "python3 tools/kds-sync/validate_loop_five_direction_run_001.py",
+        "python3 -m py_compile tools/kds-sync/validate_loop_five_direction_run_001.py"
+      ],
+      "final_gate_refs": [
+        "DOCUMENT_CONTROL_SCOPE=... python3 tools/kds-sync/document_control.py",
+        "python3 tools/kds-sync/loop_document_gate.py --check-only"
+      ]
+    },
+    "recover": {
+      "status": "recorded",
+      "failed_or_stopped_at": "RUN-001 authorization boundary",
+      "last_safe_state": "five_direction_control_plane=pass; run_001=pass; real_business_lane=repair_required",
+      "resume_round": "GPCF-LOOP-FIVE-DIRECTION-RUN-002"
+    },
+    "debug": {
+      "status": "recorded",
+      "failing_gate": "GFIS real_business_lane",
+      "status_ceiling": "partial_repair",
+      "real_lane_counts": {
+        "valid_source_records": 0,
+        "runtime_primary_key_ready": 0,
+        "review_queue": 0,
+        "runtime_intake": 0,
+        "waes_review": 0,
+        "verified": 0
+      },
+      "write_counts": {
+        "production_writes": 0,
+        "real_external_api_writes": 0,
+        "kds_fact_writes": 0,
+        "waes_gate_result_writes": 0
+      }
+    }
+  },
+  "continuous_runtime": {
+    "session": "stopped",
+    "mode": "L3",
+    "declared_rounds": 1,
+    "substantive_rounds": 1,
+    "generated_items": 4,
+    "batch_generated": false,
+    "substance_gate": "pass",
+    "completed_rounds": "1/15",
+    "remaining_rounds": 14,
+    "final_answer_allowed": true
+  },
+  "boundaries": {
+    "no_production_write": true,
+    "no_external_api_write": true,
+    "no_kds_fact_write": true,
+    "no_waes_gate_result_write": true,
+    "no_accepted_integrated_upgrade": true,
+    "real_business_lane": "repair_required",
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

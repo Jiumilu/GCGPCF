@@ -1,0 +1,66 @@
+{
+  "evidence_id": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-ROUTING-PACKAGE-INTAKE-GUARD-PREVIEW-CURRENT-STATE-D165-20260622",
+  "round_id": "GPCF-GCKF-P0-D165-001",
+  "execution_mode": "local_evidence_no_write",
+  "goal": "在 D164 current-state formal evidence execution reviewer acceptance acknowledgement routing package preview 基础上刷新 formal evidence execution routing package intake guard preview，使旧 D66 routing package intake guard preview 分支显式吸收 D124-D164 的 hold 上下文。",
+  "inputs": [
+    "fixtures/api/gckf-p0-formal-evidence-execution-routing-package-intake-guard-preview-dry-run-v0.1.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-routing-package-intake-guard-preview-current-state-d165-20260622.json",
+    "fixtures/api/gckf-p0-formal-evidence-execution-reviewer-acceptance-acknowledgement-routing-package-preview-current-state-d164-20260622.json",
+    "docs/harness/evidence/gckf-p0-formal-evidence-execution-reviewer-acceptance-acknowledgement-routing-package-preview-current-state-d164-20260622.json",
+    "docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.json"
+  ],
+  "current_routing_package_intake_guard_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "source_chain": {
+    "d66_formal_evidence_execution_routing_package_intake_guard_preview": "gckf_p0_formal_evidence_execution_routing_package_intake_guard_preview_dry_run=pass status=candidate_preview execution_mode=dry_run_no_write executes_intake_guard=0 executes_routing_package=0 executes_routing=0 executes_committee_reentry=0 opens_committee_case=0 writes_kds=0 writes_business_system=0 writes_harness_evidence=0 writes_formal_evidence=0 writes_revenue_distribution=0 writes_contribution_score=0 no_write=covered",
+    "d164_current_state_reviewer_acceptance_acknowledgement_routing_package_preview": "gckf_p0_formal_evidence_execution_reviewer_acceptance_acknowledgement_routing_package_preview_current_state_d164=pass reviewer_acceptance_acknowledgement_routing_package_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed routing_package_execution_status=not_executed reviewer_acceptance_acknowledgement_execution_status=not_executed reviewer_acceptance_precheck_execution_status=not_executed reviewer_acceptance_execution_status=not_executed routing_receipt_execution_status=not_executed assignment_acknowledgement_execution_status=not_executed reviewer_assignment_execution_status=not_executed routing_precheck_execution_status=not_executed routing_execution_status=not_executed acknowledgement_execution_status=not_executed repair_request_execution_status=not_executed supplement_intake_execution_status=not_executed supplement_acceptance_execution_status=not_executed committee_reentry_execution_status=not_executed committee_case_execution_status=not_executed committee_decision_execution_status=not_executed routing_package_roles=16 routing_package_checks=51 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d163_current_state_reviewer_acceptance_acknowledgement_preview": "gckf_p0_formal_evidence_execution_reviewer_acceptance_acknowledgement_preview_current_state_d163=pass reviewer_acceptance_acknowledgement_preview_status=candidate_preview_with_hold maximum_state=review_ready_with_hold preview_status=candidate_preview_with_hold execution_status=not_executed reviewer_acceptance_acknowledgement_execution_status=not_executed reviewer_acceptance_precheck_execution_status=not_executed reviewer_acceptance_execution_status=not_executed routing_receipt_execution_status=not_executed assignment_acknowledgement_execution_status=not_executed reviewer_assignment_execution_status=not_executed routing_precheck_execution_status=not_executed routing_execution_status=not_executed acknowledgement_execution_status=not_executed repair_request_execution_status=not_executed supplement_intake_execution_status=not_executed supplement_acceptance_execution_status=not_executed committee_reentry_execution_status=not_executed committee_case_execution_status=not_executed committee_decision_execution_status=not_executed reviewer_acceptance_acknowledgement_roles=15 reviewer_acceptance_acknowledgement_checks=50 hold_context_refs=6 localization_gate=pass loop_document_gate=pass execution_mode=local_evidence_no_write",
+    "d124_closure_packet_candidate": "gckf_p0_closure_packet_candidate_d124=pass closure_packet_status=candidate_with_hold maximum_state=review_ready_with_hold blockers=6"
+  },
+  "package_scope": {
+    "intake_guard_roles": 17,
+    "intake_guard_sections": 15,
+    "intake_guard_envelope_fields": 10,
+    "intake_guard_readiness_prerequisites": 10,
+    "intake_guard_decision_constraints": 22,
+    "intake_guard_checks": 55,
+    "required_intake_guard_refs": 36,
+    "blocking_conditions": 49,
+    "forbidden_actions": 38,
+    "hold_context_refs": 6
+  },
+  "hold_context": {
+    "source_routing_package_preview_status": "candidate_preview_with_hold",
+    "source_routing_package_execution_status": "not_executed",
+    "source_reviewer_acceptance_acknowledgement_execution_status": "not_executed",
+    "source_reviewer_acceptance_precheck_execution_status": "not_executed",
+    "source_reviewer_acceptance_execution_status": "not_executed",
+    "source_routing_receipt_execution_status": "not_executed",
+    "source_assignment_acknowledgement_execution_status": "not_executed",
+    "source_reviewer_notification_execution_status": "not_executed",
+    "source_reviewer_assignment_execution_status": "not_executed",
+    "source_routing_precheck_execution_status": "not_executed",
+    "source_routing_execution_status": "not_executed",
+    "source_acknowledgement_execution_status": "not_executed",
+    "source_repair_request_execution_status": "not_executed",
+    "source_supplement_intake_execution_status": "not_executed",
+    "source_supplement_acceptance_execution_status": "not_executed",
+    "source_committee_reentry_execution_status": "not_executed",
+    "source_committee_case_execution_status": "not_executed",
+    "source_committee_decision_execution_status": "not_executed",
+    "source_confirmation_execution_status": "not_executed",
+    "source_unfreeze_execution_status": "not_executed",
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "non_claims": [
+    "本 current-state formal evidence execution routing package intake guard preview 不执行正式 intake guard、不执行正式 routing package、不提交正式 routing package、不执行正式 reviewer acceptance acknowledgement、不执行正式 reviewer acceptance precheck、不执行正式 reviewer acceptance、不执行正式 routing receipt、不执行正式 assignment acknowledgement、不通知审阅人、不执行正式 reviewer assignment、不执行正式 routing precheck、不执行正式 routing、不执行正式 acknowledgement、不执行正式 repair request、不执行正式 supplement intake、不执行 supplement acceptance、不执行 committee reentry、不立案、不执行委员会裁决、不执行人工确认、不释放冻结、不执行 unfreeze，也不写 intake guard、routing package、reviewer acceptance acknowledgement、reviewer acceptance precheck、reviewer acceptance、routing receipt、assignment acknowledgement、reviewer notification、reviewer assignment、routing、acknowledgement、repair request、formal evidence、committee case、committee result、revenue distribution 或 contribution score。",
+    "本 current-state formal evidence execution routing package intake guard preview 不把 candidate_preview_with_hold 升级为 accepted、integrated 或 production_ready。",
+    "本 current-state formal evidence execution routing package intake guard preview 不放行 P1 admission，也不建议升级 v1.0。"
+  ],
+  "next_round_candidate": "下一轮应优先刷新 committee acceptance acknowledgement precheck preview 或 routing package acknowledgement preview 的 current-state 分支，继续保持 no-write。"
+}

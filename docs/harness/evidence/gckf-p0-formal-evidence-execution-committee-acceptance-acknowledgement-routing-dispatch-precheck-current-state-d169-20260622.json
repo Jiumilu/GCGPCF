@@ -1,0 +1,38 @@
+{
+  "evidenceId": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-COMMITTEE-ACCEPTANCE-ACKNOWLEDGEMENT-ROUTING-DISPATCH-PRECHECK-CURRENT-STATE-D169-20260622",
+  "fixturePath": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-routing-dispatch-precheck-current-state-d169-20260622.json",
+  "historicalSource": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-routing-dispatch-precheck-dry-run-v0.1.json",
+  "currentSource": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-routing-preview-current-state-d168-20260622.json",
+  "current_committee_acceptance_acknowledgement_routing_dispatch_precheck_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "execution_mode": "local_evidence_no_write",
+  "execution_status": "not_executed",
+  "holdContextRefs": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+  ],
+  "package_scope": {
+    "dispatch_precheck_roles": 15,
+    "dispatch_precheck_sections": 17,
+    "candidate_dispatch_precheck_fields": 15,
+    "dispatch_precheck_readiness_prerequisites": 16,
+    "dispatch_precheck_decision_constraints": 24,
+    "dispatch_precheck_checks": 57,
+    "required_dispatch_precheck_refs": 36,
+    "blocking_conditions": 20,
+    "forbidden_actions": 16,
+    "hold_context_refs": 6
+  },
+  "gateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "validator": "tools/kds-sync/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_routing_dispatch_precheck_current_state_d169.py"
+}

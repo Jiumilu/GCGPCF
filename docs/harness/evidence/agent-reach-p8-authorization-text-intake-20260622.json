@@ -1,0 +1,40 @@
+{
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-22",
+  "default_local_authorization_files_created": false,
+  "dry_run_status": "dry_run_valid",
+  "id": "agent-reach-p8-authorization-text-intake-20260622",
+  "isolated_write_status": "local_authorization_files_written",
+  "negative_reasons": [
+    "required_batch_authorization_text_missing"
+  ],
+  "negative_status": "rejected",
+  "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "non_claims": [
+    "not_live_search_invoked",
+    "not_full_project_group_live_coverage_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "required_authorization_texts": [
+    "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
+    "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
+    "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3"
+  ],
+  "round": "GPCF-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-001",
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_authorization_text_intake_ready"
+}

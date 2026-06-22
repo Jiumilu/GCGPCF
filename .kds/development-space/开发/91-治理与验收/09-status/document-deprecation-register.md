@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/document-deprecation-register.md
 source_path: 09-status/document-deprecation-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
 
 # 文档过期与归档台账
 
-日期：2026-06-22
+日期：2026-06-23
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 
@@ -55,7 +55,7 @@ superseded_by: []
 | GPCF-DOC-D1E79591EA | Harness 运行证据 | .harness/README.md | archive | 开发/92-证据与会话归档/.harness/README.md |
 | GPCF-DOC-32ED2727B9 | Harness 运行记录 | .harness/runs/README.md | archive | 开发/92-证据与会话归档/.harness/runs/README.md |
 | GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md |
-| GPCF-DOC-9AF8C291EB | Acceptance Matrix: gbrain-admin-console-v1 | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md |
+| GPCF-DOC-9AF8C291EB | acceptance-matrix | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md |
 | GPCF-DOC-4609775857 | status-audit | .harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/status-audit.md |
 | GPCF-DOC-6A1A3247B5 | gbrain-admin-console-v2-20260610-205407 | .harness/runs/gbrain-admin-console-v2-20260610-205407/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/README.md |
 | GPCF-DOC-44D60534C4 | status-audit | .harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v2-20260610-205407/status-audit.md |
@@ -126,7 +126,7 @@ superseded_by: []
 | GPCF-DOC-66C878138B | kds-real-token-sync-20260613-062146 | .harness/runs/kds-real-token-sync-20260613-062146/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/README.md |
 | GPCF-DOC-C93F8F0441 | Acceptance Matrix: KDS Real Token Sync | .harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/acceptance-matrix.md |
 | GPCF-DOC-71D00E7EBE | evidence | .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md |
-| GPCF-DOC-B89D14C3C8 | KDS Real Token Sync Git Change Groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md |
+| GPCF-DOC-B89D14C3C8 | git-change-groups | .harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/git-change-groups.md |
 | GPCF-DOC-D5957ABBD9 | patches | .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md |
 | GPCF-DOC-0498FF3BEF | status-audit | .harness/runs/kds-real-token-sync-20260613-062146/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/status-audit.md |
 | GPCF-DOC-44F8F11A42 | workspaces | .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md |

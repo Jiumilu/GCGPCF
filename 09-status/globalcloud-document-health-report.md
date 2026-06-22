@@ -11,34 +11,34 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-health-report.md
 source_path: 09-status/globalcloud-document-health-report.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-22
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-22T09:00:08.475371+00:00
+生成时间：2026-06-22T16:12:10.355400+00:00
 
-Loop 文档门禁：`pass`
+Loop 文档门禁：`rework_required`
 
 ## 总览
 
-- 仓库 Markdown：2360
-- KDS 镜像 Markdown：2374
-- KDS 本地镜像流水：2360
-- KDS 本地镜像唯一文档：2360
+- 仓库 Markdown：2662
+- KDS 镜像 Markdown：2676
+- KDS 本地镜像流水：2662
+- KDS 本地镜像唯一文档：2662
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
 - 中文本地化债务：False
 - 固定 doc_id 漂移：False
-- 门禁原因：无
+- 门禁原因：hard_failure:loop_engineering_five_direction, hard_failure:loop_engineering_master_plan, hard_failure:loop_capability_registry, hard_failure:loop_ui_quality_baseline
 
 ## 状态分布
 
 - archive: 85
-- controlled: 2104
+- controlled: 2406
 - draft: 13
 - okf_derived: 99
 - operational_controlled: 54
@@ -46,16 +46,16 @@ Loop 文档门禁：`pass`
 ## 项目分布
 
 - Brain: 6
-- GFIS: 81
+- GFIS: 83
 - GPC: 40
-- GPCF: 1258
-- KDS: 738
+- GPCF: 1566
+- KDS: 737
 - MMC: 8
 - PKC: 6
 - PVAOS: 7
-- WAES: 153
+- WAES: 149
 - XGD: 6
-- XiaoC: 45
+- XiaoC: 42
 - XiaoG: 7
 
 ## 命令结果
@@ -63,25 +63,25 @@ Loop 文档门禁：`pass`
 ### loop_engineering_five_direction
 
 ```text
-loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false
+FAIL validate_loop_engineering_five_direction_implementation: autonomy policy missing standing adoption phrase: LOOP 运行控制闭环常驻接入规则
 ```
 
 ### loop_engineering_master_plan
 
 ```text
-loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0
+FAIL validate_loop_engineering_master_plan: loop README missing capability registry entry
 ```
 
 ### loop_capability_registry
 
 ```text
-loop_capability_registry=pass pools=skill,tool,method statuses=fast_admitted,candidate,pilot,controlled,default_enabled,downgraded,disabled,deprecated,superseded default_enable=risk_tiered pilot_plus_evidence=required core_methods=CodeGraph,external_search,RAG,multi_agent_parallel capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAES_KDS_RAG_writeback
+FAIL validate_loop_capability_registry: registry missing governance phrase: LOOP 能力注册表
 ```
 
 ### loop_ui_quality_baseline
 
 ```text
-loop_ui_quality_baseline=pass template_ui_section=present master_spec=present capability_status=pilot explicit_ui_scope_rounds=4 explicit_ui_scope_valid=4 historical_ui_signal_rounds_without_explicit_scope=559 baseline_evidence=present
+LOOP_CAPABILITY_REGISTRY.md must promote skill.globalcloud-ui-quality-gate to pilot
 ```
 
 ### loop_session_mainline_control
@@ -99,7 +99,7 @@ current_session_mainline_declaration=pass session_mainline=session-mainline-cont
 ### loop_session_registry
 
 ```text
-loop_session_registry=pass repo_recorded_loop_rounds=944 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=404,Ontology___WAS_governance=82,CodeGraph_governance=38,Agent-Reach_governance=21,Headroom___LCX_governance=40,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=1,LOOP_localization_governance=1,UI_governance_and_validation=4,Session_declaration_and_mainline=5
+loop_session_registry=pass repo_recorded_loop_rounds=1092 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=446,Ontology___WAS_governance=131,CodeGraph_governance=46,Agent-Reach_governance=49,Headroom___LCX_governance=50,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=1,LOOP_localization_governance=3,UI_governance_and_validation=13,Session_declaration_and_mainline=5
 ```
 
 ### session_mainline_preflight_enforcement
@@ -140,7 +140,7 @@ execution_mode=read_only_validation
 
 ```text
 localization_gate=pass
-docs_checked=2028
+docs_checked=2330
 software_files_checked=240
 findings=0
 ```

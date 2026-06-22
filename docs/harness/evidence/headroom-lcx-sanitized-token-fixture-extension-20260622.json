@@ -1,0 +1,50 @@
+{
+  "evidence_id": "HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622",
+  "task_id": "GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001",
+  "date": "2026-06-22",
+  "status": "sanitized_token_fixture_extension_pass_no_measurement",
+  "scope": "fixture_metadata_only",
+  "fixture": "fixtures/headroom/headroom-lcx-sanitized-token-fixture-extension-20260622.json",
+  "project_count": 5,
+  "scenario_count": 3,
+  "entry_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS"
+  ],
+  "scenarios": [
+    "loop_gate_metadata",
+    "retrieval_context_metadata",
+    "tool_output_metadata"
+  ],
+  "coverage_failures": [],
+  "calculation": {
+    "saving_rate": "not_calculated",
+    "tokens_saved": "not_calculated",
+    "reason": "fixture_extension_only_no_real_measurement"
+  },
+  "gates": {
+    "fixture_extension_gate": true,
+    "project_coverage_gate": true,
+    "scenario_coverage_gate": true,
+    "entry_count_gate": true,
+    "metadata_only": true,
+    "raw_text_stored": false,
+    "check_only": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "sensitive_material_processed": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

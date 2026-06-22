@@ -1,6 +1,6 @@
 # GFIS 开发文档空间
 
-生成日期：2026-06-22
+生成日期：2026-06-23
 
 用途：KDS `开发` 空间中 `GFIS` 项目的受控文档入口。
 
@@ -30,15 +30,15 @@
 | GPCF-DOC-F8290EDC89 | liaoning-yuanhang | 08-evidence-samples/GFIS/liaoning-yuanhang/README.md | controlled |
 | GPCF-DOC-8FA34C737E | GlobalCloud GFIS Loop State | 08-evidence-samples/GFIS/loop-state.md | controlled |
 | GPCF-DOC-A3ED7AB63E | loops | 08-evidence-samples/GFIS/loops/README.md | controlled |
-| GPCF-DOC-BA5565D6F8 | Loop Round — GFIS-RUNTIME-SOP-E2E-219 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md | controlled |
-| GPCF-DOC-BEF1C8B38D | Loop Round — GFIS-RUNTIME-SOP-E2E-220 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md | controlled |
+| GPCF-DOC-BA5565D6F8 | loop-round-GFIS-RUNTIME-SOP-E2E-219 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-219.md | controlled |
+| GPCF-DOC-BEF1C8B38D | loop-round-GFIS-RUNTIME-SOP-E2E-220 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-220.md | controlled |
 | GPCF-DOC-C821EDD617 | loop-round-GFIS-RUNTIME-SOP-E2E-221 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-221.md | controlled |
-| GPCF-DOC-D345E7C1ED | Loop Round — GFIS-RUNTIME-SOP-E2E-222 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md | controlled |
+| GPCF-DOC-D345E7C1ED | loop-round-GFIS-RUNTIME-SOP-E2E-222 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-222.md | controlled |
 | GPCF-DOC-82AC5DFB29 | loop-round-GFIS-RUNTIME-SOP-E2E-223 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-223.md | controlled |
 | GPCF-DOC-8782B6913D | loop-round-GFIS-RUNTIME-SOP-E2E-224 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-224.md | controlled |
 | GPCF-DOC-635D19B8DC | loop-round-GFIS-RUNTIME-SOP-E2E-225 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-225.md | controlled |
 | GPCF-DOC-B3820AE5D0 | GFIS-RUNTIME-SOP-E2E-226 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-226.md | controlled |
-| GPCF-DOC-2E594C3FB5 | GFIS-RUNTIME-SOP-E2E-227 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md | controlled |
+| GPCF-DOC-2E594C3FB5 | loop-round-GFIS-RUNTIME-SOP-E2E-227 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-227.md | controlled |
 | GPCF-DOC-28B099A397 | GFIS-RUNTIME-SOP-E2E-228 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-228.md | controlled |
 | GPCF-DOC-0052427870 | GFIS-RUNTIME-SOP-E2E-229 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-229.md | controlled |
 | GPCF-DOC-EE36B84ABC | GFIS-RUNTIME-SOP-E2E-230 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-230.md | controlled |
@@ -67,7 +67,7 @@
 | GPCF-DOC-E5392F9022 | GFIS-RUNTIME-SOP-E2E-253 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-253.md | controlled |
 | GPCF-DOC-E9138F78A5 | GFIS-RUNTIME-SOP-E2E-254 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-254.md | controlled |
 | GPCF-DOC-7C32CAFEF5 | GFIS-RUNTIME-SOP-E2E-255 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-255.md | controlled |
-| GPCF-DOC-D084E55E8B | GFIS-RUNTIME-SOP-E2E-256 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-256.md | controlled |
+| GPCF-DOC-D084E55E8B | loop-round-GFIS-RUNTIME-SOP-E2E-256 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-256.md | controlled |
 | GPCF-DOC-0462A0414D | GFIS-RUNTIME-SOP-E2E-257 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-257.md | controlled |
 | GPCF-DOC-AC8367DD7C | GFIS-RUNTIME-SOP-E2E-258 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-258.md | controlled |
 | GPCF-DOC-32B9B2717C | GFIS-RUNTIME-SOP-E2E-259 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-259.md | controlled |
@@ -78,16 +78,18 @@
 | GPCF-DOC-4A278D9296 | GFIS-RUNTIME-SOP-E2E-264 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-264.md | controlled |
 | GPCF-DOC-5AAB820256 | GFIS-RUNTIME-SOP-E2E-265 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-265.md | controlled |
 | GPCF-DOC-0F6EA84318 | GFIS-RUNTIME-SOP-E2E-266 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-266.md | controlled |
-| GPCF-DOC-02E4716431 | GFIS-RUNTIME-SOP-E2E-267 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-267.md | controlled |
-| GPCF-DOC-630113CBDF | GFIS-RUNTIME-SOP-E2E-268 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-268.md | controlled |
-| GPCF-DOC-E43D430104 | GFIS-RUNTIME-SOP-E2E-269 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-269.md | controlled |
-| GPCF-DOC-365757D092 | GFIS-RUNTIME-SOP-E2E-DEV-001 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001.md | controlled |
+| GPCF-DOC-02E4716431 | loop-round-GFIS-RUNTIME-SOP-E2E-267 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-267.md | controlled |
+| GPCF-DOC-630113CBDF | loop-round-GFIS-RUNTIME-SOP-E2E-268 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-268.md | controlled |
+| GPCF-DOC-E43D430104 | loop-round-GFIS-RUNTIME-SOP-E2E-269 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-269.md | controlled |
+| GPCF-DOC-365757D092 | loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-001.md | controlled |
 | GPCF-DOC-A72D8F02F7 | GFIS-RUNTIME-SOP-E2E-DEV-002 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-002.md | controlled |
-| GPCF-DOC-36C5892CB8 | GFIS-RUNTIME-SOP-E2E-DEV-003 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md | controlled |
+| GPCF-DOC-36C5892CB8 | loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md | controlled |
 | GPCF-DOC-E574C9CB52 | Loop Round GPCF-GF-LR-001 | 08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md | controlled |
-| GPCF-DOC-94C5F5E540 | 现代精工工厂岗位培训资料结构化分析 | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | controlled |
+| GPCF-DOC-94C5F5E540 | modern-jinggong-training-analysis | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | controlled |
 | GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | controlled |
 | GPCF-DOC-AGENT-REACH-CONTROLLED-ADAPTER-20260622 | Agent-Reach 受控 Adapter Skeleton | third_party/agent-reach/CONTROLLED_ADAPTER.md | controlled |
 | GPCF-DOC-AGENT-REACH-ISOLATED-INSTALL-20260622 | Agent-Reach 隔离安装审查 | third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md | controlled |
+| GPCF-DOC-AGENT-REACH-LIVE-SEARCH-AUTHORIZATION-20260622 | Agent-Reach Live Search Authorization Boundary | third_party/agent-reach/LIVE_SEARCH_AUTHORIZATION.md | controlled |
+| GPCF-DOC-AGENT-REACH-QUALITY-REPLAY-HARNESS-20260622 | Agent-Reach 离线质量 Replay Harness | third_party/agent-reach/QUALITY_REPLAY_HARNESS.md | controlled |
 | GPCF-DOC-1A55A16A23 | agent-reach | third_party/agent-reach/README.md | controlled |
 | GPCF-DOC-AGENT-REACH-SOURCE-20260622 | Agent-Reach Source Lock | third_party/agent-reach/SOURCE.md | controlled |

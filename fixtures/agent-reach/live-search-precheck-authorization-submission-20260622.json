@@ -1,0 +1,53 @@
+{
+  "id": "agent-reach-live-search-precheck-authorization-submission-20260622",
+  "round": "GPCF-AGENT-REACH-P5-LIVE-SEARCH-PRECHECK-001",
+  "submitted_by": "lujunxiang",
+  "submitted_at": "2026-06-22",
+  "authorization_text": {
+    "authorized_by": "lujunxiang",
+    "effective_window": "2026-06-22T<开始时间>+08:00 至 2026-06-22T<结束时间>+08:00",
+    "allowed_channels": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "max_queries": 5,
+    "max_results_per_query": 10,
+    "allowed_actions": [
+      "read_external_public_content",
+      "generate_candidate_record",
+      "write_harness_evidence_only"
+    ],
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration",
+      "accepted_claim",
+      "integrated_claim",
+      "production_ready_claim"
+    ],
+    "precheck_required_before_live": true
+  },
+  "parsed_authorization": {
+    "authorization_id": "GPCF-AGENT-REACH-LIVE-SEARCH-20260622-001",
+    "authorized_by": "lujunxiang",
+    "authorized_at": "2026-06-22T<开始时间>+08:00",
+    "expires_at": "2026-06-22T<结束时间>+08:00",
+    "authorization_status": "submitted_for_precheck",
+    "live_search_authorized": false
+  },
+  "precheck_result": {
+    "decision": "reject",
+    "reason": "authorization_window_contains_placeholders",
+    "missing_or_invalid_fields": [
+      "authorized_at",
+      "expires_at"
+    ],
+    "live_external_search_invoked": false,
+    "agent_reach_binary_invoked": false
+  }
+}
