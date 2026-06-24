@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md
 source_path: 01-architecture/ADR-GPC从Odoo二开调整为原生公共服务平台.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/KDS/evidence/README.md
 source_path: docs/harness/KDS/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -38,3 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
+| GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | KDS 真实运行基线证据 2026-06-24 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | KDS | controlled |

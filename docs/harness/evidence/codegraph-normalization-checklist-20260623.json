@@ -1,0 +1,61 @@
+{
+  "evidence_id": "CODEGRAPH-NORMALIZATION-CHECKLIST-20260623",
+  "scope": "GPCF-CODEGRAPH-NORMALIZATION-CHECKLIST-001",
+  "status": "normalization_checklist_ready_with_watch",
+  "generated_at": "2026-06-23",
+  "objective": "把 CodeGraph 常态化执行要求收束为一份长期受控清单，并用现有项目群门禁与稳态监控证明它可以重放。",
+  "checklist": {
+    "path": "02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md",
+    "documents_linked": true,
+    "gates_linked": true,
+    "fields_linked": [
+      "target_nodes",
+      "affected_scope",
+      "files_allowed_to_change",
+      "files_not_to_touch",
+      "fallback_tests",
+      "fallback_reason",
+      "codegraph_evidence",
+      "manual_scan_files",
+      "codegraph_candidate_files",
+      "actual_changed_files",
+      "affected_tests",
+      "missed_impact_count",
+      "time_to_first_target",
+      "review_rework_count"
+    ]
+  },
+  "operational_gates": {
+    "project_group_steady_state_verify": "pass",
+    "dev_execution_admission": "pass",
+    "dev_execution_pilot_pack": "pass",
+    "dev_execution_harness_gate": "pass",
+    "impact_metrics_baseline": "pass",
+    "impact_report_dry_run": "pass",
+    "dev_execution_steady_state_monitor": "pass_with_watch"
+  },
+  "current_state": {
+    "repo_count": 14,
+    "all_repo_codegraph_initialized": true,
+    "all_codegraph_git_isolated": true,
+    "codegraph_reindex_recommended": false,
+    "watchlist_mode": "monitor_only",
+    "watchlist_repos": ["Studio"],
+    "gpcf_pending": 0,
+    "studio_pending": 18
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-NORMALIZATION-WATCH-002"
+}

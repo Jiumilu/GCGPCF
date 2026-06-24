@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md
 source_path: 05-agent-team/GlobalCloud智能体团队真实项目仓库映射与只读预检计划.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

@@ -1,0 +1,162 @@
+{
+  "id": "agent-reach-green-supply-chain-priority-search-targets-20260623",
+  "date": "2026-06-23",
+  "status": "candidate_priority_targets_ready",
+  "current_admission": "limited_candidate_only",
+  "scope": "green_supply_chain_system_priority_search_targets",
+  "related_projects": [
+    "GFIS",
+    "WAS",
+    "WAES",
+    "KDS",
+    "GPCF"
+  ],
+  "strong_association_criteria": [
+    "official_or_public_platform_for_green_supply_chain_or_green_manufacturing",
+    "contains_policy_standard_product_carbon_footprint_scope3_or_due_diligence_content",
+    "useful_for_supplier_esg_green_finance_chain_of_custody_or_carbon_traceability_queries",
+    "public_read_only_without_credentials_or_cookie_extraction"
+  ],
+  "priority_search_targets": [
+    {
+      "target_id": "gsc-p0-greenscs",
+      "priority": "P0",
+      "name": "绿色低碳供应链公共服务平台",
+      "domain": "greenscs.com",
+      "url": "https://www.greenscs.com/",
+      "target_type": "public_platform",
+      "recommended_queries": [
+        "site:greenscs.com 绿色低碳供应链 产品碳足迹",
+        "site:greenscs.com CBAM 供应链 碳足迹",
+        "site:greenscs.com 绿色低碳供应链 标准"
+      ],
+      "reason": "供应链、产品碳足迹、碳因子、CBAM 和绿色低碳服务高度集中，适合作为绿色供应链体系首要检索对象。"
+    },
+    {
+      "target_id": "gsc-p0-gmpsp",
+      "priority": "P0",
+      "name": "绿色制造公共服务平台",
+      "domain": "gmpsp.org.cn",
+      "url": "https://www.gmpsp.org.cn/",
+      "target_type": "public_platform",
+      "recommended_queries": [
+        "site:gmpsp.org.cn 绿色供应链 绿色制造",
+        "site:gmpsp.org.cn 绿色金融 绿色供应链",
+        "site:gmpsp.org.cn 绿色供应链 政策 数据"
+      ],
+      "reason": "覆盖绿色工厂、绿色园区、绿色设计产品、绿色供应链和绿色金融，适合 GFIS/WAS 绿色制造与供应链交叉检索。"
+    },
+    {
+      "target_id": "gsc-p0-miit",
+      "priority": "P0",
+      "name": "工业和信息化部",
+      "domain": "miit.gov.cn",
+      "url": "https://www.miit.gov.cn/",
+      "target_type": "government_policy",
+      "recommended_queries": [
+        "site:miit.gov.cn 绿色供应链管理企业 绿色制造名单",
+        "site:miit.gov.cn 绿色制造 绿色供应链 管理企业",
+        "site:miit.gov.cn 绿色供应链 标准 工业"
+      ],
+      "reason": "绿色制造、绿色供应链管理企业与工业政策的主管部门入口，适合作为政策与名单类强关联来源。"
+    },
+    {
+      "target_id": "gsc-p0-samr-standards",
+      "priority": "P0",
+      "name": "国家标准与市场监管公开平台",
+      "domain": "samr.gov.cn",
+      "url": "https://www.samr.gov.cn/",
+      "target_type": "government_standard",
+      "recommended_queries": [
+        "site:samr.gov.cn 绿色供应链 标准",
+        "site:std.samr.gov.cn 绿色供应链",
+        "site:std.samr.gov.cn 产品碳足迹 标准"
+      ],
+      "reason": "标准、认证、产品碳足迹与绿色供应链规范检索入口，适合 WAES/KDS 对搜索结果做标准依据追溯。"
+    },
+    {
+      "target_id": "gsc-p1-mee",
+      "priority": "P1",
+      "name": "生态环境部",
+      "domain": "mee.gov.cn",
+      "url": "https://www.mee.gov.cn/",
+      "target_type": "government_environment_policy",
+      "recommended_queries": [
+        "site:mee.gov.cn 供应链 碳足迹",
+        "site:mee.gov.cn 绿色采购 供应链",
+        "site:mee.gov.cn 产品碳足迹 管理"
+      ],
+      "reason": "生态环境、气候与绿色采购政策相关，适合作为供应链环境合规和产品碳足迹政策补充来源。"
+    },
+    {
+      "target_id": "gsc-p1-pbc",
+      "priority": "P1",
+      "name": "中国人民银行",
+      "domain": "pbc.gov.cn",
+      "url": "https://www.pbc.gov.cn/",
+      "target_type": "green_finance_policy",
+      "recommended_queries": [
+        "site:pbc.gov.cn 绿色金融 供应链",
+        "site:pbc.gov.cn 绿色贷款 统计制度",
+        "site:pbc.gov.cn 绿色债券 支持项目目录"
+      ],
+      "reason": "绿色金融政策、绿色贷款和绿色债券相关，适合 GFIS 将供应链绿色证据与金融工具检索关联。"
+    },
+    {
+      "target_id": "gsc-p0-ghgprotocol",
+      "priority": "P0",
+      "name": "GHG Protocol Scope 3",
+      "domain": "ghgprotocol.org",
+      "url": "https://ghgprotocol.org/corporate-value-chain-scope-3-standard",
+      "target_type": "international_standard",
+      "recommended_queries": [
+        "site:ghgprotocol.org Scope 3 supply chain emissions",
+        "site:ghgprotocol.org corporate value chain standard",
+        "site:ghgprotocol.org supplier emissions calculation guidance"
+      ],
+      "reason": "Scope 3 与企业价值链排放核算直接对应供应链碳数据，适合作为国际口径强关联对象。"
+    },
+    {
+      "target_id": "gsc-p1-eu-csddd",
+      "priority": "P1",
+      "name": "European Commission CSDDD",
+      "domain": "commission.europa.eu",
+      "url": "https://commission.europa.eu/topics/business-and-industry/doing-business-eu/sustainability-due-diligence-responsible-business/corporate-sustainability-due-diligence_en",
+      "target_type": "international_due_diligence_policy",
+      "recommended_queries": [
+        "site:commission.europa.eu corporate sustainability due diligence supply chain",
+        "site:eur-lex.europa.eu 2024/1760 supply chain due diligence",
+        "site:commission.europa.eu chains of activities environmental impacts"
+      ],
+      "reason": "企业可持续尽职调查和供应链环境影响要求明确，适合作为出口、合规和供应商尽调检索对象。"
+    }
+  ],
+  "usage_policy": {
+    "search_mode": "priority_target_candidate_filter",
+    "may_use_site_restricted_queries": true,
+    "may_boost_matching_domains": true,
+    "must_not_treat_as_source_of_record": true,
+    "must_not_write_kds_canonical": true,
+    "must_not_write_gfis_source_of_record": true,
+    "must_not_claim_accepted_integrated_or_production_ready": true
+  },
+  "security_controls": {
+    "live_external_search_invoked_by_this_file": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "candidate_priority_targets_only",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

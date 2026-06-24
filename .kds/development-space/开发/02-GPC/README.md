@@ -1,6 +1,6 @@
 # GPC 开发文档空间
 
-生成日期：2026-06-23
+生成日期：2026-06-24
 
 用途：KDS `开发` 空间中 `GPC` 项目的受控文档入口。
 
@@ -33,13 +33,18 @@
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | controlled |
 | GPCF-DOC-4B8F20D6A1 | WAES专业工作台母框架升级方案 | 04-ui-delivery/WAES专业工作台母框架升级方案.md | controlled |
 | GPCF-DOC-91A6D0F4C2 | WAES专业工作台母框架差距评估 | 04-ui-delivery/WAES专业工作台母框架差距评估.md | controlled |
+| GPCF-DOC-GLOBALCLOUD-GPCF-IMPLEMENTATION-PLAN-20260624 | GlobalCloud GPCF 实施方案 | GlobalCloud GPCF 实施方案.md | controlled |
 | GPCF-DOC-B637BE22F8 | GPC | docs/harness/GPC/README.md | controlled |
 | GPCF-DOC-61C2D40981 | evidence | docs/harness/GPC/evidence/README.md | controlled |
 | GPCF-DOC-6AA1BB56F0 | Evidence Index — GPC | docs/harness/GPC/evidence/evidence-index.md | controlled |
+| GPCF-DOC-GPC-REAL-RUNTIME-BASELINE-20260624 | GPC 真实运行基线证据 2026-06-24 | docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-556B3EE58F | loop-state | docs/harness/GPC/loop-state.md | controlled |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | controlled |
 | GPCF-DOC-C02896A291 | loop-round-GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | controlled |
 | GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | controlled |
-| GPCF-DOC-6C2D5BB513 | headroom | loop/context/headroom/README.md | controlled |
-| GPCF-DOC-A1FFDD1AE2 | docs | loop/context/headroom/docs/README.md | controlled |
+| GPCF-DOC-25ADFEBCF8 | cognee | loop/context/cognee/README.md | controlled |
+| GPCF-DOC-6BA1B0CCA6 | harness | loop/context/cognee/harness/README.md | controlled |
+| GPCF-DOC-7A2A6D4F05 | COGNEE P1 召回对照表模板（并行） | loop/context/cognee/harness/p1-recall-comparison-template.md | controlled |
+| GPCF-DOC-7A2A6D4F06 | COGNEE P2 写入预览模板（最小字段） | loop/context/cognee/harness/p2-write-preview-template.md | controlled |
+| GPCF-DOC-8C7F2F5001 | COGNEE P4 真实写入前置预检模板（最小字段） | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | controlled |
 | GPCF-DOC-AGENT-REACH-SECURITY-REVIEW-20260622 | Agent-Reach 安全审查 | third_party/agent-reach/SECURITY_REVIEW.md | controlled |

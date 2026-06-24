@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-51A6C90015
 title: WAS 真实来源记录候选预检执行 015 证据
-project: WAS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
-domain: ontology-governance
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF]
+domain: docs
 status: controlled
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/was-real-source-record-candidate-precheck-execution-015-20260623.md
 source_path: docs/harness/evidence/was-real-source-record-candidate-precheck-execution-015-20260623.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

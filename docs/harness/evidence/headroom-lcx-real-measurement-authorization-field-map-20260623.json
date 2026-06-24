@@ -1,0 +1,125 @@
+{
+  "field_map_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623",
+  "status": "authorization_field_map_defined_precheck_only",
+  "date": "2026-06-23",
+  "scope": {
+    "project_count": 15,
+    "project_ids": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ]
+  },
+  "current_state": {
+    "real_measurement_gap_present": true,
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "field_map": [
+    {
+      "field": "authorized_window_id",
+      "current_value": "LCX-MEASURE-20260622-001",
+      "source_evidence": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
+      "future_runner_input": "authorized_window_id",
+      "future_action": "bind a real measurement window before any execution"
+    },
+    {
+      "field": "authorized_by",
+      "current_value": "lujunxiang / GPCF owner",
+      "source_evidence": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
+      "future_runner_input": "authorized_by",
+      "future_action": "bind approving owner before any execution"
+    },
+    {
+      "field": "authorized_at",
+      "current_value": "2026-06-22T08:42:06+08:00",
+      "source_evidence": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
+      "future_runner_input": "authorized_at",
+      "future_action": "bind approval timestamp before any execution"
+    },
+    {
+      "field": "sanitized_production_token_ledger",
+      "current_value": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+      "source_evidence": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+      "future_runner_input": "sanitized_production_token_ledger",
+      "future_action": "allow metadata-only ledger reads for cost replay"
+    },
+    {
+      "field": "rollback_plan_id",
+      "current_value": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+      "source_evidence": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+      "future_runner_input": "rollback_plan_id",
+      "future_action": "attach rollback runbook identifier before any measurement execution"
+    },
+    {
+      "field": "waes_harness_admission_decision",
+      "current_value": "admitted_for_sanitized_measurement_precheck",
+      "source_evidence": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+      "future_runner_input": "waes_harness_admission_decision",
+      "future_action": "keep precheck-only until a new WAES/Harness decision is issued"
+    }
+  ],
+  "future_runner_inputs": [
+    "authorized_window_id",
+    "authorized_by",
+    "authorized_at",
+    "sanitized_production_token_ledger",
+    "rollback_plan_id",
+    "waes_harness_admission_decision"
+  ],
+  "execution_guard": {
+    "executable_now": false,
+    "requires_real_measurement_authorization_window": true,
+    "requires_waes_harness_decision": true,
+    "requires_sanitized_token_ledger_metadata_only": true,
+    "requires_rollback_plan_id": true,
+    "requires_no_production_proxy": true,
+    "requires_no_real_kds_write": true,
+    "requires_no_external_api_write": true
+  },
+  "rollback_anchor": {
+    "rollback_plan_present": true,
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "rollback_runbook_written": true
+  },
+  "source_refs": {
+    "graph_transition": "docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json",
+    "gap_matrix": "docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json",
+    "approval_instance": "docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json",
+    "authorization_template": "docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.md",
+    "rollback_plan": "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md"
+  },
+  "non_claims": {
+    "real_measurement_open": false,
+    "production_branch_open": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "business_answer_equivalence_proven": false
+  },
+  "notes": [
+    "This field map only aligns current precheck artifacts to future runner inputs.",
+    "It does not authorize production measurement or real business equivalence measurement.",
+    "It remains precheck-only until WAES/Harness issues a new decision.",
+    "All production gates remain false."
+  ]
+}

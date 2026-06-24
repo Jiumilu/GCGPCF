@@ -19,6 +19,12 @@ SENSITIVE_PATTERNS = [
 
 SENSITIVE_ALLOW = {".env.example"}
 
+SENSITIVE_PATH_ALLOW_PATTERNS = [
+    # Controlled fixture/evidence files that document sanitized-token checks.
+    # This only avoids filename false positives; real token/secret paths remain blocked.
+    re.compile(r"(^|/)headroom-lcx-sanitized-token-fixture-extension-\d{8}\.(md|json)$"),
+]
+
 
 def run(repo: Path, args: list[str]) -> tuple[int, str, str]:
     proc = subprocess.run(
@@ -35,10 +41,13 @@ def git(repo: Path, args: list[str]) -> str:
 
 
 def is_sensitive(path: str) -> bool:
-    name = Path(path).name
+    normalized_path = path.strip('"')
+    name = Path(normalized_path).name
     if name in SENSITIVE_ALLOW:
         return False
-    return any(pattern.search(path) for pattern in SENSITIVE_PATTERNS)
+    if any(pattern.search(normalized_path) for pattern in SENSITIVE_PATH_ALLOW_PATTERNS):
+        return False
+    return any(pattern.search(normalized_path) for pattern in SENSITIVE_PATTERNS)
 
 
 def ahead_behind(repo: Path, upstream: str) -> tuple[int | None, int | None]:

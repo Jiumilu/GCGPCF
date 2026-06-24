@@ -1,0 +1,157 @@
+{
+  "evidence_id": "CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-20260623",
+  "scope": "GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018",
+  "status": "gfis_authorization_boundary_with_kds_studio_watch",
+  "generated_at": "2026-06-23",
+  "objective": "复核 Brain/GFIS 授权边界；以 live 状态为准，Brain 仍有 1 项 Git dirty，KDS CodeGraph clean 但 Git mirror 进入 watch，Studio 出现 post-clean drift，GFIS 仍保持只读授权边界，需要单独授权边界。",
+  "previous_round": "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017",
+  "watchlist": {
+    "Brain": {
+      "codegraph_pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "current_state_dirty_monitor_only"
+    },
+    "GFIS": {
+      "codegraph_pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "authorization_required_without_clean_reindex",
+      "classification": "live_readonly_boundary_watch"
+    },
+    "KDS": {
+      "codegraph_pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty": {
+        "modified": 6,
+        "deleted": 11,
+        "untracked": 46,
+        "renamed": 0,
+        "other": 0,
+        "total": 63
+      },
+      "decision": "codegraph_git_mirror_drift_watch_no_write"
+    },
+    "Studio": {
+      "codegraph_pending": {
+        "added": 0,
+        "modified": 18,
+        "removed": 0
+      },
+      "git_dirty": {
+        "modified": 19,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 20
+      },
+      "decision": "post_clean_drift_watch_no_sync"
+    }
+  },
+  "authorization_questions": [
+    {
+      "id": "authorize_gfis_read_only_scope_review",
+      "question": "是否授权 GFIS 执行只读 CodeGraph/Git scope review？",
+      "recommended": true,
+      "recommendation": "建议授权；只读分类 239 项 dirty 与 3 项 CodeGraph pending，判断是否可进入 sync-only closure。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_gfis_codegraph_sync_only_after_scope_review",
+      "question": "是否授权 GFIS 在 scope review 通过后执行 CodeGraph sync-only？",
+      "recommended": false,
+      "recommendation": "暂不建议直接授权；GFIS 涉及 runtime SOP E2E governance drift 和 policy exception，应先做只读边界复核。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_gfis_clean_reindex",
+      "question": "是否授权 GFIS clean reindex？",
+      "recommended": false,
+      "recommendation": "不建议授权；GFIS reindexRecommended=false，且用户此前明确暂不授权 clean reindex。",
+      "default_if_no_answer": "not_authorized"
+    },
+    {
+      "id": "authorize_gfis_business_development",
+      "question": "是否授权进入 GFIS 业务开发？",
+      "recommended": false,
+      "recommendation": "不建议授权；当前会话主线是 CodeGraph 项目群集成，不进入项目业务开发。",
+      "default_if_no_answer": "not_authorized"
+    }
+  ],
+  "allowed_if_authorized": [
+    "read_only_gfis_git_status_classification",
+    "gfis_codegraph_status_refresh",
+    "gfis_policy_exception_boundary_summary",
+    "sync_only_candidate_assessment_after_scope_review"
+  ],
+  "forbidden": [
+    "clean_reindex",
+    "business_development",
+    "bench_migrate",
+    "schema_sync",
+    "production_write",
+    "external_api_write",
+    "real_kds_api_write",
+    "commit",
+    "push",
+    "deploy",
+    "accepted_or_integrated_claim"
+  ],
+  "governance": {
+    "mode": "gfis_authorization_boundary_only",
+    "gfis_scope_review_performed": false,
+    "gfis_sync_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "business_development_performed": false,
+    "commit_performed": false,
+    "push_performed": false,
+    "deployment_performed": false,
+    "codegraph_git_isolated": true
+  },
+  "five_direction": {
+    "run": "复核 Brain/GFIS/KDS/Studio live 状态，确认 GFIS 需要授权边界，KDS 仅保留 Git mirror drift watch。",
+    "stop": "stop_type=authorization_boundary；未获授权前不执行 GFIS scope review、sync、clean reindex 或业务开发。",
+    "verify": "验证四仓 CodeGraph status、.codegraph Git 隔离、GPCF 文档治理门禁与 KDS token。",
+    "recover": "若用户不授权，保持 GFIS monitor_only；若授权范围不清，只重新生成问答，不执行 GFIS 仓动作。",
+    "debug": "Brain 已 clean；KDS CodeGraph clean 但 Git mirror 仍有 4 项漂移；Studio 出现 post-clean drift；GFIS 是主要授权边界风险，且 clean reindex 继续禁止。"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "gfis_sync_only_closure_completed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019"
+}

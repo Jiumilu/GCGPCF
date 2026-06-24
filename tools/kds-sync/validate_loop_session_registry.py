@@ -37,6 +37,8 @@ def classify(round_id: str) -> str | None:
         return "Ontology / WAS governance"
     if round_id.startswith("GPCF-CODEGRAPH"):
         return "CodeGraph governance"
+    if round_id.startswith("GPCF-COGNEE"):
+        return "COGNEE pilot / writeback"
     if round_id.startswith("GPCF-AGENT-REACH"):
         return "Agent-Reach governance"
     if round_id.startswith("GPCF-HEADROOM"):
@@ -102,6 +104,7 @@ def main() -> int:
         "KDS / DKS governance",
         "Ontology / WAS governance",
         "CodeGraph governance",
+        "COGNEE pilot / writeback",
         "Agent-Reach governance",
         "Headroom / LCX governance",
         "OKF / ODF governance",

@@ -11,22 +11,22 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md
 source_path: docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
 # CodeGraph Sync 授权包证据
 
-本轮执行 `GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009`，目标是把 Brain 与 Studio 的 `action_required` 漂移转成可审计的 sync-only 授权包。本轮只生成授权包，不执行 Brain/Studio `codegraph sync`。
+本轮执行 `GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009`，目标是把 Brain 的 zero-pending monitor-only 状态与 Studio 的 `action_required` 漂移转成可审计的 sync-only 授权边界。本轮只生成授权包，不执行 Brain/Studio `codegraph sync`。
 
 当前状态：`sync_authorization_pack_ready`。
 
-边界说明：本轮不执行 Brain/Studio sync-only closure。
+边界说明：本轮 not execute Brain/Studio sync-only closure。
 
 ## 授权请求
 
-需要用户明确回复以下口令后，才允许下一轮执行 Brain/Studio CodeGraph sync-only closure：
+需要用户明确回复以下口令后，才允许下一轮执行 Studio CodeGraph sync-only closure：
 
 `授权执行 Brain/Studio CodeGraph sync-only closure`
 
@@ -34,8 +34,8 @@ superseded_by: []
 
 | repo | pending | threshold_result | 授权后允许命令 |
 |---|---|---|---|
-| GlobalCloud Brain | added=3 / modified=10 / removed=0 | action_required | `codegraph sync && codegraph status --json . && git status --short -- .codegraph` |
-| GlobalCloud Studio | added=0 / modified=6 / removed=0 | action_required | `codegraph sync && codegraph status --json . && git status --short -- .codegraph` |
+| GlobalCloud Brain | added=0 / modified=0 / removed=0 | green | `monitor_only; no sync required` |
+| GlobalCloud Studio | added=0 / modified=18 / removed=0 | action_required | `codegraph sync && codegraph status --json . && git status --short -- .codegraph` |
 
 ## 禁止动作
 
@@ -49,8 +49,8 @@ superseded_by: []
 
 1. 在 Brain 和 Studio 分别运行 `codegraph status --json .`。
 2. 在 Brain 和 Studio 分别运行 `git status --short -- .codegraph`，若有输出立即停止。
-3. 只运行 `codegraph sync`。
-4. 重跑 `codegraph status --json .`，要求 pendingChanges 全部为 0。
+3. 仅对 Studio 运行 `codegraph sync`。
+4. 重跑 `codegraph status --json .`，要求 Brain 维持 `pendingChanges=0`，Studio 的 `pendingChanges` 全部为 0。
 5. 重跑 `git status --short -- .codegraph`，要求无输出。
 6. 只在 GPCF 记录 evidence，不触碰业务开发任务。
 

@@ -88,12 +88,12 @@
     "gfis_pending_business_verification_gate_status": "pass",
     "gfis_pending_business_verification_gate_exit_code": 0,
     "gfis_pending_business_verification_gate_output": [
-      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=399 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=452 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_runtime_primary_key_gate_status": "pass",
     "gfis_runtime_primary_key_gate_exit_code": 0,
     "gfis_runtime_primary_key_gate_output": [
-      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=399 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=452 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_review_queue_admission_gate_status": "pass",
     "gfis_review_queue_admission_gate_exit_code": 0,

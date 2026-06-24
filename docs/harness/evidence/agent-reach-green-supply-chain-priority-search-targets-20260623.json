@@ -1,0 +1,48 @@
+{
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-23",
+  "domains": [
+    "commission.europa.eu",
+    "ghgprotocol.org",
+    "gmpsp.org.cn",
+    "greenscs.com",
+    "mee.gov.cn",
+    "miit.gov.cn",
+    "pbc.gov.cn",
+    "samr.gov.cn"
+  ],
+  "id": "agent-reach-green-supply-chain-priority-search-targets-20260623",
+  "non_claims": [
+    "candidate_priority_targets_only",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "p0_count": 5,
+  "p1_count": 3,
+  "plan_priority_ref_present": true,
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked_by_this_file": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "green_supply_chain_priority_targets_ready",
+  "target_count": 8,
+  "target_types": [
+    "government_environment_policy",
+    "government_policy",
+    "government_standard",
+    "green_finance_policy",
+    "international_due_diligence_policy",
+    "international_standard",
+    "public_platform"
+  ]
+}

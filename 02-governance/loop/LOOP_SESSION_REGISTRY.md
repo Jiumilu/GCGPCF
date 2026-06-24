@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md
 source_path: 02-governance/loop/LOOP_SESSION_REGISTRY.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -56,6 +56,7 @@ superseded_by: []
 | KDS / DKS governance | `GPCF-KDS-DKS*`, `GPCF-GCKF*` | KDS/GPCF | KDS remains source of record | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
 | Ontology / WAS governance | `GPCF-ONTOLOGY-WAS*`, `GPCF-WAS*` | WAES/GPCF | semantic contract only, no business completion | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | CodeGraph governance | `GPCF-CODEGRAPH*` | GPCF | sync/readiness work remains evidence bounded | handoff_required_for_cross_repo_execution | read_only_registry_or_user_confirmed_handoff |
+| COGNEE pilot / writeback | `GPCF-COGNEE*` | GPCF | COGNEE P1-P4 remains controlled pilot / writeback boundary | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
 | Agent-Reach governance | `GPCF-AGENT-REACH*` | WAES/GPCF | candidate/search governance only | handoff_required_for_external_api | read_only_registry_or_user_confirmed_handoff |
 | Headroom / LCX governance | `GPCF-HEADROOM*` | WAES/GPCF | cost/runtime evidence only | handoff_required_for_measurement_or_production_token | read_only_registry_or_user_confirmed_handoff |
 | OKF / ODF governance | `GPCF-OKF*` | KDS/GPCF | no-write or candidate gate unless separately authorized | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |

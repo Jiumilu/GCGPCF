@@ -1,0 +1,37 @@
+{
+  "name": "globalcloud-cognee-mcp",
+  "status": "controlled",
+  "production_admission_gate": false,
+  "tools": {
+    "cognee_recall": {
+      "visibility": "restricted",
+      "requires_waes_gate": true,
+      "requires_harness_evidence": true,
+      "requires_sensitive_check": true,
+      "marker_required": true
+    },
+    "cognee_stats": {
+      "visibility": "allowed",
+      "requires_harness_evidence": true
+    },
+    "cognee_remember": {
+      "visibility": "restricted",
+      "requires_preview_authorization": true,
+      "requires_harness_evidence": true,
+      "requires_sensitive_check": true
+    },
+    "cognee_forget": {
+      "visibility": "restricted",
+      "requires_preview_authorization": true,
+      "requires_harness_evidence": true,
+      "requires_reason": true
+    }
+  },
+  "forbidden": [
+    "recall_without_marker",
+    "recall_without_reason",
+    "write_without_authorization",
+    "write_sensitive_fact_without_review",
+    "production_mode"
+  ]
+}

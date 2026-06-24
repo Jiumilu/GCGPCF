@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-F861799E08
-title: 底座知识委员会审查 Schema
+title: 基础知识委员会评审模式
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
 domain: docs
@@ -11,20 +11,20 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-schema-20260619.md
 source_path: docs/harness/evidence/base-knowledge-committee-review-schema-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# 底座知识委员会审查 Schema
+# 基础知识委员会评审模式
 
 日期：2026-06-19
 
 状态：`schema_dry_run_only`
 
-本 schema 定义未来委员会审查硬停止底座知识候选所需字段。
+This schema defines the fields required for future committee review of hard-stop base knowledge candidates.
 
-## 摘要
+## 概要
 
 - schema_id：`BKC-COMMITTEE-REVIEW-SCHEMA-20260619`
 - source_queue_evidence_id：`BKC-COMMITTEE-REVIEW-QUEUE-20260619`
@@ -53,7 +53,7 @@ superseded_by: []
 | filingRequired | boolean | true | - | 是否需要备案。 |
 | reviewNotes | string | false | - | 委员会复核说明。 |
 
-## 控制边界
+## 控制
 
 | control | value |
 | --- | --- |
@@ -69,7 +69,7 @@ superseded_by: []
 
 ## 边界
 
-- 本文件仅定义 schema，不创建人工确认事实。
-- 本文件仅定义 schema，不创建委员会决议。
-- 本轮不执行真实 KDS API、WAES、GFIS、GPC、PVAOS、财务、结算、RAG 准入或生产写入。
-- 未来使用本 schema 仍需明确的人工或委员会动作，并形成单独受控证据记录。
+- This file defines schema only and does not create human confirmation facts.
+- This file defines schema only and does not create committee decisions.
+- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.
+- Any future use of this schema still requires explicit human or committee action and a separate controlled evidence record.

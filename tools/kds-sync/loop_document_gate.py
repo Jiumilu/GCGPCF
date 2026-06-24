@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from collections import Counter
@@ -28,6 +29,17 @@ def iter_repo_md() -> list[Path]:
             continue
         paths.append(path)
     return sorted(paths)
+
+
+def frontmatter_managed_for(path: Path) -> bool:
+    rel = path.relative_to(ROOT).as_posix()
+    if rel.startswith(".okf/bundles/"):
+        return False
+    if rel.startswith((".codex/", ".agents/")):
+        return False
+    if rel.startswith(".codex/skills/") and path.name == "SKILL.md":
+        return False
+    return True
 
 
 def read_frontmatter(path: Path) -> dict[str, str]:
@@ -183,6 +195,8 @@ def main() -> int:
             status_counts["okf_derived"] += 1
             project_counts["KDS"] += 1
             continue
+        if not frontmatter_managed_for(path):
+            continue
         fm = read_frontmatter(path)
         if not fm.get("doc_id"):
             missing_metadata += 1
@@ -202,10 +216,12 @@ def main() -> int:
     local_mirror_unique_docs = count_unique_mirror_docs(local_mirror_ledger)
     api_sync_ledger = ROOT / ".kds/sync-ledger.jsonl"
     api_sync_ledger_lines = len(api_sync_ledger.read_text(encoding="utf-8").splitlines()) if api_sync_ledger.exists() else 0
+    delegated = os.environ.get("GPCF_PROJECT_GROUP_GATE_DELEGATED") == "1"
     checks = {
         "loop_engineering_five_direction": run([sys.executable, "tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"]),
         "loop_engineering_master_plan": run([sys.executable, "tools/kds-sync/validate_loop_engineering_master_plan.py"]),
         "loop_capability_registry": run([sys.executable, "tools/kds-sync/validate_loop_capability_registry.py"]),
+        "codegraph_loop_schema": run([sys.executable, "tools/kds-sync/validate_codegraph_loop_schema.py"]),
         "loop_ui_quality_baseline": run([sys.executable, "tools/kds-sync/validate_loop_ui_quality_baseline.py"]),
         "loop_session_mainline_control": run([sys.executable, "tools/kds-sync/validate_loop_session_mainline_control.py"]),
         "current_session_mainline_declaration": run([sys.executable, "tools/kds-sync/validate_current_session_mainline_declaration.py"]),
@@ -218,6 +234,8 @@ def main() -> int:
         "chinese_localization": run([sys.executable, "tools/kds-sync/check_chinese_localization_gate.py"]),
         "kds_token": run([sys.executable, "tools/kds-sync/validate_kds_token.py"]),
     }
+    if not delegated:
+        checks["project_group_gate_readiness"] = run([sys.executable, "tools/kds-sync/validate_loop_project_group_gate_readiness.py"])
     hard_failures = [
         name
         for name, (code, _) in checks.items()

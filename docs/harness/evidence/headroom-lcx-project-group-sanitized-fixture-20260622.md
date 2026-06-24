@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622
-title: Headroom LCX 项目群脱敏夹具证据
+title: Headroom LCX Project Group Sanitized Fixture Evidence
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.md
 source_path: docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX 项目群脱敏夹具证据
+# Headroom LCX Project Group Sanitized Fixture Evidence
 
-## 摘要
+## Summary
 
 - evidence_id: `HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622`
 - status: `project_group_sanitized_fixture_pass_no_measurement`
@@ -27,9 +27,9 @@ superseded_by: []
 - scenario_count: `3`
 - entry_count: `45`
 
-## 门禁
+## Gates
 
-| 门禁项 | 当前值 |
+| Gate | Value |
 |---|---|
 | project_group_fixture_gate | true |
 | project_coverage_gate | true |
@@ -52,9 +52,9 @@ superseded_by: []
 | saving_rate | not_calculated |
 | tokens_saved | not_calculated |
 
-## 非声明
+## Non-Claims
 
-- 该夹具覆盖 15 个项目域，但仍然只包含脱敏后的元数据。
-- 该夹具不包含原始提示词、原始补全文本、客户合同、POD、财务凭证、密钥、生产凭据或提供方密钥。
-- 该夹具不代表已测量的生产 token 使用量。
-- 该夹具不授权生产代理、KDS API 写入，也不构成 `accepted`、`integrated` 或 `production_ready`。
+- This fixture covers 15 project domains but still contains sanitized metadata only.
+- This fixture does not contain raw prompts, raw completions, customer contracts, POD, financial vouchers, keys, production credentials, or provider secrets.
+- This fixture does not represent measured production token usage.
+- This fixture does not authorize production proxy, KDS API write, accepted, integrated, or production_ready.

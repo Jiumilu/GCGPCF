@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/minimum-closed-loop/object-contracts.md
 source_path: docs/harness/minimum-closed-loop/object-contracts.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -37,13 +37,18 @@ superseded_by: []
 ## 门禁规则
 
 - PlatformOrder 不得直接创建 FactoryOrder。
+  验证锚点：`PlatformOrder cannot create FactoryOrder directly`。
 - FactoryOrder 必须满足以下其一：approved SampleApproval、approved waiver 或 approved ProductionRelease。
-- SampleApproval.status in ["approved", "waived"].
-- ProductionRelease.status == "approved".
-- WAES.gate == "confirmed".
+  验证锚点：`FactoryOrder requires one of: approved SampleApproval, approved waiver, or approved ProductionRelease`。
+- `SampleApproval.status` 必须为 `approved` 或 `waived`。
+  验证锚点：`SampleApproval.status in ["approved", "waived"]`。
+- `ProductionRelease.status` 必须为 `approved`。
+  验证锚点：`ProductionRelease.status == "approved"`。
+- `WAES.gate` 必须为 `confirmed`。
+  验证锚点：`WAES.gate == "confirmed"`。
 
 ## 当前边界
 
 - 这些契约只定义 L4 控制面的规则。
-- GFIS runtime SOP E2E remains `repair_required`.
+- GFIS 运行态 SOP E2E 当前仍为 `repair_required`。
 - 本文档不创建 customer orders、platform orders、runtime primary keys、production write、real external API write，也不升级 accepted/integrated 状态。

@@ -31,6 +31,26 @@ def main() -> int:
 
     required_fields = [
         "required: true",
+        "assumptions:",
+        "tradeoff_options:",
+        "simpler_path:",
+        "minimal_scope:",
+        "task_intake:",
+        "query:",
+        "query_results:",
+        "target_nodes:",
+        "node_inspection:",
+        "affected:",
+        "affected_scope:",
+        "files_allowed_to_change:",
+        "files_not_to_touch:",
+        "expected_tests:",
+        "affected_tests:",
+        "fallback_tests:",
+        "fallback_reason:",
+        "acceptance_criteria:",
+        "clarifying_questions:",
+        "resolved_before_run:",
         "snapshot_id:",
         "context_queries:",
         "explored_symbols:",
@@ -38,20 +58,35 @@ def main() -> int:
         "impacted_tests:",
         "risk_flags:",
         "evidence_ref:",
+        "codegraph_evidence:",
+        "test_selection_reason:",
+        "post_change_status:",
+        "efficiency_metrics:",
+        "manual_scan_files:",
+        "codegraph_candidate_files:",
+        "actual_changed_files:",
+        "missed_impact_count:",
+        "time_to_first_target:",
+        "review_rework_count:",
     ]
     for field in required_fields:
         require(field in task, f"task template missing field: {field}")
 
     for field in ["changed_files:", "impacted_symbols:", "impacted_tests:", "risk_flags:", "status: review_required"]:
         require(field in review, f"review template missing field: {field}")
+    for field in ["assumptions_reported:", "assumptions_clarified:", "minimal_scope_confirmed:", "alternative_paths_disclosed:", "tradeoff_documented:", "acceptance_checklist:", "orphan_cleanup_checked:", "reusable_criteria:"]:
+        require(field in review, f"review template missing field: {field}")
 
-    for field in ["query_count:", "impact_paths_count:", "impacted_tests_count:", "automatic_status_upgrade: false"]:
+    for field in ["query_count:", "impact_paths_count:", "impacted_tests_count:", "automatic_status_upgrade: false", "karpathy_gate:"]:
         require(field in retro, f"retrospective template missing field: {field}")
 
-    for phrase in ["Task Intake", "CodeGraph Context", "Impact Analysis", "Evidence Capture", "KDS / OKF Candidate Record"]:
+    for phrase in ["Task Intake", "CodeGraph Context", "Impact Analysis", "Evidence Capture", "KDS / OKF Candidate Record", "Karpathy 行为门禁", "assumptions", "acceptance_criteria", "clarifying_questions"]:
         require(phrase in doc, f"loop integration doc missing phrase: {phrase}")
 
-    print("codegraph_loop_schema=pass templates=3 required_fields=7 automatic_status_upgrade=false")
+    print(
+        f"codegraph_loop_schema=pass templates=3 required_fields={len(required_fields)} "
+        "automatic_status_upgrade=false karpathy_gate=enabled"
+    )
     return 0
 
 

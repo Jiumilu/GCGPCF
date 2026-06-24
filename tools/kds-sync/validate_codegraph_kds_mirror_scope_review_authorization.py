@@ -54,7 +54,7 @@ def main() -> int:
 
     require(evidence["evidence_id"] == "CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-20260622", "invalid evidence id")
     require(evidence["scope"] == "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017", "invalid scope")
-    require(evidence["status"] == "authorization_not_required_current_state_clean", "invalid status")
+    require(evidence["status"] == "authorization_required_current_state_dirty", "invalid status")
     require(evidence["previous_round"] == "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016", "invalid previous round")
     require(evidence["next_round"] == "GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018", "invalid next round")
 
@@ -67,18 +67,18 @@ def main() -> int:
     require(status["worktreeMismatch"] is None, "KDS worktree mismatch must be null")
     require(status["index"]["reindexRecommended"] is False, "KDS reindex must not be recommended")
 
-    require(git_dirty_total(KDS) == 0, "KDS Git dirty must be zero")
+    require(git_dirty_total(KDS) == current["git_dirty"]["total"], "KDS Git dirty must match evidence")
     git_status = run(["git", "status", "--short", "--", ".codegraph"], cwd=KDS)
     require(git_status.returncode == 0, f"KDS .codegraph git status failed: {git_status.stderr}")
     require(git_status.stdout.strip() == "", "KDS .codegraph must remain git-isolated")
 
     decision = evidence["authorization_decision"]
-    require(decision["kds_mirror_scope_review_required_now"] is False, "KDS scope review must not be required now")
+    require(decision["kds_mirror_scope_review_required_now"] is True, "KDS scope review must be required now")
     require(decision["kds_codegraph_sync_required_now"] is False, "KDS sync must not be required now")
     require(decision["kds_clean_reindex_required_now"] is False, "KDS clean reindex must not be required now")
 
     governance = evidence["governance"]
-    require(governance["mode"] == "kds_scope_review_authorization_cancelled_by_clean_state", "invalid governance mode")
+    require(governance["mode"] == "kds_scope_review_authorization_required_by_dirty_state", "invalid governance mode")
     for key, value in governance.items():
         if key == "mode":
             continue
@@ -110,19 +110,19 @@ def main() -> int:
     require(token.returncode == 0 and "kds_token=pass" in token.stdout, "KDS token must pass")
 
     for phrase in [
-        "authorization_not_required_current_state_clean",
-        "KDS Git dirty：`0`",
+        "authorization_required_current_state_dirty",
+        "KDS Git dirty：`59`",
         "KDS CodeGraph pending：`added=0, modified=0, removed=0`",
-        "取消授权请求",
+        "保留 KDS scope review 授权边界",
         "GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
 
     print(
-        "codegraph_kds_mirror_scope_review_authorization=not_required_current_state_clean "
-        "kds_git_dirty=0 "
+        "codegraph_kds_mirror_scope_review_authorization=required_current_state_dirty "
+        f"kds_git_dirty={git_dirty_total(KDS)} "
         "kds_pending=0 "
-        "kds_scope_review_required=false "
+        "kds_scope_review_required=true "
         "kds_sync_performed=false "
         "real_kds_api_write=false "
         "mirror_overwrite=false "

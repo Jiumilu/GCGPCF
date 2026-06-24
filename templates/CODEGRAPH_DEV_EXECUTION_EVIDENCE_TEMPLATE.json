@@ -36,7 +36,8 @@
     "actual_changed_files": 0,
     "affected_tests": [],
     "missed_impact_count": 0,
-    "time_to_first_target": ""
+    "time_to_first_target": "",
+    "review_rework_count": 0
   },
   "codegraph_unavailable_exception": {
     "reason": "",

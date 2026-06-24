@@ -28,6 +28,7 @@
     "affected_scope",
     "files_allowed_to_change",
     "files_not_to_touch",
+    "expected_tests",
     "affected_tests or fallback_reason",
     "post_change_status"
   ],

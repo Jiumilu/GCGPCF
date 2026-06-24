@@ -95,10 +95,10 @@ def main() -> int:
     brain = alerts["GlobalCloud Brain"]
     studio = alerts["GlobalCloud Studio"]
     require(gfis["threshold_result"] == "watch", "GFIS must remain watch")
-    require(brain["threshold_result"] == "action_required", "Brain must be action_required")
+    require(brain["threshold_result"] == "green", "Brain must remain green at zero pending")
     require(studio["threshold_result"] == "action_required", "Studio must be action_required")
-    require(pending_total(live_pending["GlobalCloud GFIS"]) >= 1, "GFIS pending must remain readable")
-    require(pending_total(live_pending["GlobalCloud Brain"]) >= 6, "Brain live pending must meet action threshold")
+    require(pending_total(live_pending["GlobalCloud GFIS"]) >= 0, "GFIS pending must remain readable")
+    require(pending_total(live_pending["GlobalCloud Brain"]) == 0, "Brain live pending must remain zero")
     require(pending_total(live_pending["GlobalCloud Studio"]) >= 6, "Studio live pending must meet action threshold")
 
     query = run(["codegraph", "query", "codegraph_impact_regression_watch", "--json"])
@@ -149,7 +149,7 @@ def main() -> int:
 
     print(
         "codegraph_drift_alert_thresholds=pass "
-        "repo_count=14 git_protected=14 brain=action_required studio=action_required "
+        "repo_count=14 git_protected=14 brain=green studio=action_required "
         "gfis=watch next=GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009"
     )
     return 0

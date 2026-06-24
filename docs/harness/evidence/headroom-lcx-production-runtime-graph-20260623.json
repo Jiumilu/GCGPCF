@@ -1,0 +1,208 @@
+{
+  "runtime_graph_id": "HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623",
+  "status": "production_runtime_graph_defined_controlled_only",
+  "date": "2026-06-23",
+  "scope": {
+    "project_count": 15,
+    "project_ids": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "runtime_mode": "controlled_precheck_only"
+  },
+  "current_state": {
+    "graph_status": "controlled_pending_real_measurement",
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "nodes": [
+    {
+      "node_id": "current_controlled_graph",
+      "status": "controlled",
+      "evidence": "HEADROOM-LCX-GRAPH-MANIFEST-20260623"
+    },
+    {
+      "node_id": "runtime_route_layer",
+      "status": "controlled",
+      "evidence": "HEADROOM-LCX-GRAPH-MANIFEST-20260623"
+    },
+    {
+      "node_id": "runtime_cost_layer",
+      "status": "controlled",
+      "evidence": "HEADROOM-COST-SENSITIVITY-MODEL-20260621"
+    },
+    {
+      "node_id": "runtime_rollback_layer",
+      "status": "controlled_no_production",
+      "evidence": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+    },
+    {
+      "node_id": "runtime_execution_contract",
+      "status": "precheck_only",
+      "evidence": "HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623"
+    },
+    {
+      "node_id": "measurement_authorization_boundary",
+      "status": "precheck_only",
+      "evidence": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623"
+    },
+    {
+      "node_id": "real_business_equivalence_boundary",
+      "status": "synthetic_only",
+      "evidence": "HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622"
+    },
+    {
+      "node_id": "production_branch",
+      "status": "blocked",
+      "evidence": "HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-20260621"
+    }
+  ],
+  "edges": [
+    {
+      "from": "current_controlled_graph",
+      "to": "runtime_route_layer",
+      "relation": "graph_manifest_exposes_runtime_routes",
+      "allowed": true
+    },
+    {
+      "from": "runtime_route_layer",
+      "to": "runtime_cost_layer",
+      "relation": "routes_feed_cost_observation_fields",
+      "allowed": true
+    },
+    {
+      "from": "runtime_route_layer",
+      "to": "runtime_execution_contract",
+      "relation": "routes_feed_runtime_execution_contract",
+      "allowed": true
+    },
+    {
+      "from": "runtime_execution_contract",
+      "to": "measurement_authorization_boundary",
+      "relation": "execution_contract_requires_sanitized_precheck_only",
+      "allowed": true
+    },
+    {
+      "from": "measurement_authorization_boundary",
+      "to": "real_business_equivalence_boundary",
+      "relation": "authorization_boundary_keeps_synthetic_equivalence_only",
+      "allowed": true
+    },
+    {
+      "from": "runtime_cost_layer",
+      "to": "runtime_rollback_layer",
+      "relation": "cost_replay_needs_rollback_plan_reference",
+      "allowed": true
+    },
+    {
+      "from": "runtime_execution_contract",
+      "to": "production_branch",
+      "relation": "execution_contract_does_not_open_production_branch",
+      "allowed": false
+    },
+    {
+      "from": "real_business_equivalence_boundary",
+      "to": "production_branch",
+      "relation": "synthetic_equivalence_does_not_open_production_branch",
+      "allowed": false
+    },
+    {
+      "from": "runtime_rollback_layer",
+      "to": "production_branch",
+      "relation": "rollback_layer_guards_no_production_write",
+      "allowed": false
+    }
+  ],
+  "runtime_controls": {
+    "execution_allowed_now": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "real_kds_api_write": false,
+    "headroom_learn_apply": false,
+    "memory_as_kds_fact_source": false
+  },
+  "runtime_requirements": [
+    {
+      "requirement_id": "project_group_scope_15_domains",
+      "state": "proven",
+      "evidence": "HEADROOM-LCX-GRAPH-MANIFEST-20260623"
+    },
+    {
+      "requirement_id": "cost_model_replayable",
+      "state": "proven_controlled_only",
+      "evidence": "HEADROOM-COST-SENSITIVITY-MODEL-20260621"
+    },
+    {
+      "requirement_id": "rollback_plan_bound",
+      "state": "proven_controlled_only",
+      "evidence": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+    },
+    {
+      "requirement_id": "runtime_execution_precheck",
+      "state": "precheck_only",
+      "evidence": "HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623"
+    },
+    {
+      "requirement_id": "authorization_boundary",
+      "state": "precheck_only",
+      "evidence": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623"
+    },
+    {
+      "requirement_id": "synthetic_equivalence_only",
+      "state": "synthetic_only",
+      "evidence": "HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622"
+    },
+    {
+      "requirement_id": "production_branch_open",
+      "state": "blocked",
+      "evidence": "HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-20260621"
+    }
+  ],
+  "source_refs": {
+    "graph_manifest": "docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json",
+    "cost_model": "docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json",
+    "rollback_plan": "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md",
+    "runner_contract": "docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.json",
+    "authorization_request": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.json",
+    "transition_graph": "docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json",
+    "answer_gate": "docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.json"
+  },
+  "non_claims": {
+    "real_measurement_open": false,
+    "production_branch_open": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "rollback_anchor": {
+    "rollback_plan_present": true,
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "rollback_runbook_written": true
+  },
+  "transition_anchor": {
+    "transition_graph_id": "HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-20260623",
+    "transition_graph_status": "transition_graph_defined_blocked_real_measurement",
+    "production_branch_blocked": true
+  }
+}

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md
 source_path: 03-data-ai-knowledge/GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

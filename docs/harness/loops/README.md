@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/README.md
 source_path: docs/harness/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -121,8 +121,10 @@ KDS 空间：`开发`
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | GPCF | controlled |
 | GPCF-DOC-A1A8006738 | GPCF CodeGraph Active Drift Metrics 002 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002.md | GPCF | controlled |
 | GPCF-DOC-8CB660E132 | GPCF CodeGraph Active Drift Monitor | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001.md | GPCF | controlled |
+| GPCF-DOC-D1B5B8B030 | Loop Round - CodeGraph Brain/GFIS 授权边界复核 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018.md | GPCF | controlled |
 | GPCF-DOC-DE30AB91D7 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | GPCF | controlled |
 | GPCF-DOC-31365B7D25 | Loop Round - CodeGraph 开发执行授权等待态 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | GPCF | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007 | Loop Round - CodeGraph 业务开发执行窗口授予 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md | GPCF | controlled |
 | GPCF-DOC-AC51B4A6F1 | Loop Round - CodeGraph 开发执行层中文化文档债务收口 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | GPCF | controlled |
 | GPCF-DOC-0D35D7BC63 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | GPCF | controlled |
 | GPCF-DOC-11E86C4B9A | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | GPCF | controlled |
@@ -139,6 +141,7 @@ KDS 空间：`开发`
 | GPCF-DOC-33EED81A10 | GPCF CodeGraph Drift Alert Thresholds 008 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md | GPCF | controlled |
 | GPCF-DOC-794D90A6F1 | GPCF CodeGraph GFIS Large File Policy | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-LARGE-FILE-POLICY-001.md | GPCF | controlled |
 | GPCF-DOC-8B82DFE880 | GPCF CodeGraph GFIS Residual Notice Investigation | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-RESIDUAL-NOTICE-001.md | GPCF | controlled |
+| GPCF-DOC-CGFSR019 | Loop Round - CodeGraph GFIS 只读 Scope Review | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019.md | GPCF | controlled |
 | GPCF-DOC-895151260A | Loop Round GPCF-CODEGRAPH-GOAL-OPT-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GOAL-OPT-001.md | GPCF | controlled |
 | GPCF-DOC-44DA9A4D2E | GPCF CodeGraph Impact Assessment | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-ASSESSMENT-001.md | GPCF | controlled |
 | GPCF-DOC-8055ED77AE | GPCF CodeGraph Impact Metrics Baseline 006 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006.md | GPCF | controlled |
@@ -146,6 +149,7 @@ KDS 空间：`开发`
 | GPCF-DOC-B9144A4914 | GPCF CodeGraph Impact Report Dry-run 005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005.md | GPCF | controlled |
 | GPCF-DOC-28984FE940 | GPCF CodeGraph Integration Closure Audit | docs/harness/loops/loop-round-GPCF-CODEGRAPH-INTEGRATION-CLOSURE-001.md | GPCF | controlled |
 | GPCF-DOC-7272ECE5C1 | Loop Round - CodeGraph KDS mirror scope review 授权复核 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017.md | GPCF | controlled |
+| GPCF-DOC-CGNC001 | Loop Round - CodeGraph 常态化归一清单 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-NORMALIZATION-CHECKLIST-001.md | GPCF | controlled |
 | GPCF-DOC-DA39A6A262 | Loop Round GPCF-CODEGRAPH-P1-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-P1-ADMISSION-001.md | GPCF | controlled |
 | GPCF-DOC-F57E6B4E33 | Loop Round GPCF-CODEGRAPH-PROJECT-GROUP-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-001.md | GPCF | controlled |
 | GPCF-DOC-55CEA573A4 | GPCF CodeGraph Project Group Full Fabric 001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001.md | GPCF | controlled |
@@ -160,11 +164,19 @@ KDS 空间：`开发`
 | GPCF-DOC-3BC26C2DFE | GPCF CodeGraph Sync-Only Authorization 003 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003.md | GPCF | controlled |
 | GPCF-DOC-3DB2BD8346 | GPCF CodeGraph Sync-only Closure 010 Authorized | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED.md | GPCF | controlled |
 | GPCF-DOC-BE4E5F68B8 | GPCF CodeGraph Sync-only Closure 010 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010.md | GPCF | controlled |
+| GPCF-DOC-9B7D44D8F2 | Loop Round - GPCF-CODEGRAPH-TASK-INTAKE-GATE-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-TASK-INTAKE-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-9D0EC80EB6 | Loop Round - CodeGraph watchlist post-Studio 监控 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md | GPCF | controlled |
+| GPCF-DOC-8C1A3F9020 | Loop Round - CodeGraph watchlist steady monitor 20260623 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020.md | GPCF | controlled |
 | GPCF-DOC-005FDDA3DC | GPCF CodeGraph Watchlist Sync Authorization Pack 002 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002.md | GPCF | controlled |
 | GPCF-DOC-BB1D26426D | GPCF CodeGraph Watchlist Sync-only Closure 003 Authorized | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED.md | GPCF | controlled |
 | GPCF-DOC-D3B37861BD | GPCF CodeGraph Watchlist Sync Plan 001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-PLAN-001.md | GPCF | controlled |
 | GPCF-DOC-7AAEB2E376 | Loop Round GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P1-P2-P3-CLOSURE-001 | Loop Round - GPCF Cognee 受控试点 P1/P2/P3 收口 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P1-P2-P3-CLOSURE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-LIVE-001 | Loop Round - GPCF Cognee P4 真实写入运行演练 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001 | Loop Round - GPCF Cognee P4 真实写入前置预检 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002 | Loop Round - GPCF Cognee P4 真实写入前置修复与复测 002 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003 | Loop Round - GPCF Cognee P4 真实写入前置复核与确认 003 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004 | Loop Round - GPCF Cognee P4 真实写入执行前授权评审 004 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004.md | GPCF | controlled |
 | GPCF-DOC-B0BFD5B1FB | GC-Knowledge Fabric P0-D1 启动与规则冻结 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | GPCF | controlled |
 | GPCF-DOC-4F7DC277C5 | GC-Knowledge Fabric P0-D10 Repository / Service Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D100-001 | Loop Round GPCF-GCKF-P0-D100-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | GPCF | controlled |
@@ -354,30 +366,48 @@ KDS 空间：`开发`
 | GPCF-DOC-6AAF1F40B0 | Loop Round GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-F43423639D | Loop Round GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001.md | GPCF | controlled |
 | GPCF-DOC-CB613DC3D1 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623 | Loop Round GPCF Headroom LCX Authorization Boundary Review 20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623.md | GPCF | controlled |
 | GPCF-DOC-F59787B942 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001.md | GPCF | controlled |
 | GPCF-DOC-1320B915AE | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001.md | GPCF | controlled |
 | GPCF-DOC-2EF89E2432 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001.md | GPCF | controlled |
 | GPCF-DOC-74DFF5CB30 | loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-001 | Loop Round: GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001.md | GPCF | controlled |
 | GPCF-DOC-C81CB2CF9A | loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-COST-BRIDGE-001 | Loop Round GPCF Headroom LCX Cost Bridge 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COST-BRIDGE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | Loop Round GPCF Headroom LCX Fixture Extension Negative Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | Loop Round GPCF Headroom LCX Fixture Extension Replay Comparison 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | Loop Round GPCF Headroom LCX Fixture Stability Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623 | Loop Round GPCF Headroom LCX Frontmatter 冲突修复与闭环回写 20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623.md | GPCF | controlled |
 | GPCF-DOC-5FF130412D | Loop Round GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-LOOP-001 | Loop Round GPCF Headroom LCX Graph Manifest 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-GRAPH-MANIFEST-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622 | Loop Round GPCF Headroom LCX L3.5 Answer Equivalence Synthetic Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622 | Loop Round GPCF Headroom LCX L3.5 Controlled Sanitized Pilot Window 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622 | Loop Round GPCF Headroom LCX L3.5 Multi Window Stability 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Loop Round GPCF Headroom LCX marker retrieval miss 比较门禁 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Loop Round GPCF Headroom LCX Marker Retrieval Miss Comparison Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-4F8936D7E5 | Loop Round GPCF Headroom LCX Measurement Admission Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md | GPCF | controlled |
 | GPCF-DOC-A7161F4187 | Loop Round GPCF Headroom LCX Metadata Replay Check 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001 | Loop Round: GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-AD82144FCE | Loop Round GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001.md | GPCF | controlled |
 | GPCF-DOC-58AA82BBE3 | Loop Round GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001.md | GPCF | controlled |
 | GPCF-DOC-5966FE20DD | Loop Round GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001.md | GPCF | controlled |
 | GPCF-DOC-8161B0C039 | Loop Round GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-01EFEECC41 | Loop Round GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-FA44EE9146 | Loop Round GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001 | Loop Round: GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | Loop Round GPCF Headroom LCX Project Group Replay Stability 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622 | Loop Round GPCF Headroom LCX Project Group Sanitized Fixture 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | Loop Round GPCF Headroom LCX Readiness Pilot Authorization Package 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001 | Loop Round GPCF Headroom LCX Real Measurement Approval Signed Bundle 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-LOOP-001 | Loop 轮次 GPCF Headroom LCX 真实测量授权字段映射 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623 | Loop Round GPCF Headroom LCX Real Measurement Authorization Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001 | Loop Round GPCF Headroom LCX Real Measurement Authorization Signoff Template 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001 | 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001 | 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-LOOP-001 | Loop Round GPCF Headroom LCX Real Measurement Gap Matrix 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001 | 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-LOOP-001 | Loop Round GPCF Headroom LCX Real Measurement Runner Contract 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-LOOP-001 | Loop Round GPCF Headroom LCX Real Measurement Transition Graph 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001 | Loop Round: GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001.md | GPCF | controlled |
 | GPCF-DOC-D83FE8C1B1 | Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Loop Round GPCF Headroom LCX Sanitized Token Fixture Extension 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | GPCF | controlled |
 | GPCF-DOC-82B704BBFF | Loop Round GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | GPCF | controlled |
@@ -975,6 +1005,8 @@ KDS 空间：`开发`
 | GPCF-DOC-EDD3670D2E | Loop Round GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001.md | GPCF | controlled |
 | GPCF-DOC-FIVE-DIRECTION-RUN-001 | GPCF-LOOP-FIVE-DIRECTION-RUN-001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-001 | Loop 五方向常驻采纳冒烟轮次 001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-STANDING-SMOKE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | LOOP Multi-Agent Execution Smoke Round 001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | GPCF | controlled |
+| GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | Loop Round GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | GPCF | controlled |
 | GPCF-DOC-55A6B73433 | Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | GPCF | controlled |
 | GPCF-DOC-AC4F4B6A2E | Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | GPCF | controlled |
 | GPCF-DOC-E1CC4F445E | Loop Round GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | GPCF | controlled |
@@ -1128,4 +1160,10 @@ KDS 空间：`开发`
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-011 | Loop Round GPCF-UI-STUDIO-WORKBENCH-011 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-011.md | GPCF | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-012 | Loop Round GPCF-UI-STUDIO-WORKBENCH-012 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-012.md | GPCF | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-013 | Loop Round GPCF-UI-STUDIO-WORKBENCH-013 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-013.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-014 | Loop Round GPCF-UI-STUDIO-WORKBENCH-014 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-014.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-015 | Loop Round GPCF-UI-STUDIO-WORKBENCH-015 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-015.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-016 | Loop Round GPCF-UI-STUDIO-WORKBENCH-016 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-016.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-017 | Loop Round GPCF-UI-STUDIO-WORKBENCH-017 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-018 | Loop Round GPCF-UI-STUDIO-WORKBENCH-018 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-019 | Loop Round GPCF-UI-STUDIO-WORKBENCH-019 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | GPCF | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | controlled |

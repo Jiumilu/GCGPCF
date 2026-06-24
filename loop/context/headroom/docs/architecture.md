@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAES/loop/context/headroom/docs/architecture.md
 source_path: loop/context/headroom/docs/architecture.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-21
 supersedes: []
 superseded_by: []
 ---
@@ -28,6 +28,8 @@ Loop     -> 微循环、中循环和大循环编排
 LCX      -> 压缩、恢复、成本观测、候选工作记忆
 Agents   -> Codex、Claude、Cursor、LiteLLM、LangChain、项目自研运行体
 ```
+
+真实测量授权窗口请求已作为受控证据接入图谱，但当前仍是 `requested_not_granted`，因此不会把 LCX 从上下文优化层升格为生产测量层。
 
 ## 数据流
 
@@ -48,3 +50,4 @@ tool output / log / RAG chunk / file / conversation
 - LCX memory 不是业务事实。
 - LCX evidence 不能替代原始 source path、doc_id、validator output 或 Harness evidence。
 - LCX dry-run 通过不等于 accepted、integrated 或 production_ready。
+- 真实测量窗口请求不等于真实授权窗口打开。

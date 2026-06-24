@@ -1,0 +1,107 @@
+schema_id: globalcloud.cognee_p4_real_writeback_live_result.v1
+required:
+  - schema_id
+  - pilot_id
+  - pilot_round_id
+  - status
+  - status_reason
+  - allow_live_write
+  - dry_run_output_only
+  - records
+  - summary
+  - generated_at
+  - validation
+properties:
+  allow_live_write:
+    type: boolean
+  dry_run_output_only:
+    type: boolean
+  status:
+    enum: [pass, hold, fail]
+  status_reason:
+    enum: [dry_run_ready, live_execution_gate_not_reached, live_execution_blocked]
+  records:
+    type: array
+  summary:
+    type: object
+  validation:
+    type: object
+
+record_schema:
+  required:
+    - task_id
+    - loop_round_id
+    - project_id
+    - agent_id
+    - model_id
+    - pilot_phase
+    - source_tag
+    - source_tenant
+    - retrieval_mode
+    - scenario_id
+    - operation
+    - caller
+    - tenant_id
+    - owner
+    - payload_tier
+    - harness_evidence_ref
+    - authorization_token_source
+    - reason_for_request
+    - precheck_passed
+    - expected_blocked_reason
+    - runtime_dependency_ok
+    - rollback_plan_verified
+    - owner_authorization_present
+    - waes_decision
+    - answer_equivalence
+    - write_requested
+    - write_allowed
+    - live_execution_ready
+    - write_executed
+    - production_write
+    - execution_status
+    - token_before
+    - token_after
+    - saving_rate
+    - latency_ms_p95
+  properties:
+    retrieval_mode:
+      enum: [writeback_live_execution]
+    operation:
+      enum: [remember, forget]
+    source_tag:
+      enum: [headroom, cognee, dual]
+    source_tenant:
+      enum: [project_group]
+    payload_tier:
+      enum: [writeback_live, preview]
+    tenant_id:
+      enum: [project_group]
+    waes_decision:
+      enum: [pass, warn, block]
+    answer_equivalence:
+      enum: [pass, partial, fail, unknown]
+    expected_blocked_reason:
+      enum: [none, authorization_absent, runtime_dependency_missing, waes_block, token_missing, rollback_not_verified, operation_invalid]
+    owner_authorization_present:
+      enum: [true, false]
+    write_requested:
+      enum: [true, false]
+    write_allowed:
+      enum: [true, false]
+    live_execution_ready:
+      enum: [true, false]
+    write_executed:
+      enum: [true, false]
+    production_write:
+      enum: [true, false]
+    execution_status:
+      enum: [dry_run, blocked_by_policy_or_precheck, executed]
+    token_before:
+      type: integer
+    token_after:
+      type: integer
+    saving_rate:
+      type: number
+    latency_ms_p95:
+      type: number

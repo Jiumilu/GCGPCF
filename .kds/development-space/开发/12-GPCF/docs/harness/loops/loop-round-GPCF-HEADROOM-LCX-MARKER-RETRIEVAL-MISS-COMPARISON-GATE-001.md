@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622
-title: Loop Round GPCF Headroom LCX marker retrieval miss 比较门禁 001
+title: Loop Round GPCF Headroom LCX Marker Retrieval Miss Comparison Gate 001
 project: GPCF
 related_projects: [GPC, WAES, GPCF]
 domain: docs
@@ -11,12 +11,12 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md
 source_path: docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Loop Round GPCF Headroom LCX marker retrieval miss 比较门禁 001
+# Loop Round GPCF Headroom LCX Marker Retrieval Miss Comparison Gate 001
 
 ## 输入
 

@@ -1,0 +1,90 @@
+schema_id: globalcloud.cognee_p4_real_writeback_precheck_result.v1
+required:
+  - task_id
+  - loop_round_id
+  - project_id
+  - agent_id
+  - model_id
+  - pilot_phase
+  - source_tag
+  - source_tenant
+  - retrieval_mode
+  - scenario_id
+  - operation
+  - caller
+  - tenant_id
+  - owner
+  - payload_tier
+  - harness_evidence_ref
+  - retrieval_query_hash
+  - marker_gate
+  - waes_decision
+  - answer_equivalence
+  - write_requested
+  - owner_authorization_present
+  - write_allowed
+  - authorization_token_source
+  - reason_for_request
+  - precheck_passed
+  - expected_blocked_reason
+  - runtime_dependency_ok
+  - rollback_plan_verified
+  - token_before
+  - token_after
+  - saving_rate
+  - latency_ms_p95
+  - unauthorized_write_blocked
+  - measured_production_tokens
+  - accepted
+  - integrated
+  - production_ready
+properties:
+  retrieval_mode:
+    enum: [write_precheck]
+  operation:
+    enum: [remember, forget]
+  source_tag:
+    enum: [headroom, cognee, dual]
+  source_tenant:
+    enum: [project_group]
+  payload_tier:
+    enum: [writeback_live, preview]
+  tenant_id:
+    enum: [project_group]
+  waes_decision:
+    enum: [pass, warn, block]
+  marker_gate:
+    enum: [pass, fail]
+  answer_equivalence:
+    enum: [pass, partial, fail, unknown]
+  authorization_token_source:
+    enum: [none, owner_jwt, project_group_jwt, service_account, runtime_token, human_token]
+  expected_blocked_reason:
+    enum: [none, authorization_absent, runtime_dependency_missing, waes_block, token_missing, rollback_not_verified, operation_invalid]
+  owner_authorization_present:
+    enum: [true, false]
+  write_requested:
+    enum: [true, false]
+  write_allowed:
+    enum: [true, false]
+  precheck_passed:
+    enum: [true, false]
+  runtime_dependency_ok:
+    enum: [true, false]
+  rollback_plan_verified:
+    enum: [true, false]
+  unauthorized_write_blocked:
+    enum: [true, false]
+  accepted:
+    type: boolean
+  integrated:
+    type: boolean
+  production_ready:
+    type: boolean
+  measured_production_tokens:
+    type: boolean
+non_claim_defaults:
+  measured_production_tokens: false
+  accepted: false
+  integrated: false
+  production_ready: false

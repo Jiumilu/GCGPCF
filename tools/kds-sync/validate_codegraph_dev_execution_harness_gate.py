@@ -86,7 +86,7 @@ def evaluate_harness_gate(evidence: dict[str, Any]) -> str:
         if status.get(key) is True:
             raise GateBlocked("production_write_or_external_api_write_true")
 
-    for key in ("manual_scan_files", "codegraph_candidate_files", "actual_changed_files", "missed_impact_count", "time_to_first_target"):
+    for key in ("manual_scan_files", "codegraph_candidate_files", "actual_changed_files", "missed_impact_count", "time_to_first_target", "review_rework_count"):
         if key not in metrics:
             raise GateBlocked(f"missing_metric_{key}")
 
@@ -137,6 +137,7 @@ def main() -> int:
         "codegraph_dev_execution_harness_gate=blocked",
         "affected.affectedTests=[]",
         "fallback_reason",
+        "review_rework_count",
         "CodeGraph 替代 WAES/Harness/人工验收裁决",
         "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004",
     ]:

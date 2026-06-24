@@ -74,9 +74,10 @@ def main() -> int:
 
     require(evidence["evidence_id"] == "CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-20260622", "invalid evidence id")
     require(evidence["scope"] == "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016", "invalid scope")
-    require(evidence["status"] == "pass_with_watch", "invalid status")
+    require(evidence["status"] == "watch_required", "invalid status")
     require(evidence["previous_round"] == "GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015", "invalid previous round")
     require(evidence["next_round"] == "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017", "invalid next round")
+    require(evidence["review_rework_count"] == 0, "review rework count baseline must be zero")
 
     watchlist = evidence["watchlist"]
     require(watchlist["repo_count"] == 4, "watchlist repo_count must be 4")
@@ -93,7 +94,8 @@ def main() -> int:
         if name == "Studio":
             require(status["pendingChanges"]["added"] == 0, "Studio added pending must be zero")
             require(status["pendingChanges"]["removed"] == 0, "Studio removed pending must be zero")
-            require(status["pendingChanges"]["modified"] <= item["authorized_modified_ceiling"], "Studio residual exceeds authorized ceiling")
+            require(status["pendingChanges"]["modified"] == item["codegraph_pending"]["modified"], "Studio modified pending mismatch")
+            require(status["pendingChanges"]["modified"] > item["authorized_modified_ceiling"], "Studio residual must exceed authorized ceiling in this watch_required snapshot")
         else:
             require(status["pendingChanges"] == item["codegraph_pending"], f"pending mismatch: {name}")
 
@@ -142,18 +144,20 @@ def main() -> int:
     require(token.returncode == 0 and "kds_token=pass" in token.stdout, "KDS token must pass")
 
     for phrase in [
-        "pass_with_watch",
-        "Studio：residual pending 为 added=0、modified=7、removed=0",
-        "KDS：dirty total 从授权包基线 1652 增长到 1659",
+        "watch_required",
+        "Studio：residual pending 为 added=0、modified=18、removed=0",
+        "Brain：CodeGraph pending 已归零，但仍有 1 个 Git dirty",
+        "KDS：CodeGraph pending 已归零，但仍有 31 个 Git dirty",
         "GFIS clean reindex 仍不授权",
         "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017",
+        "review_rework_count=0",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
 
     print(
-        "codegraph_watchlist_post_studio_monitor=pass_with_watch "
-        "studio_residual_modified<=9 "
-        "kds_dirty_growth=7 "
+        "codegraph_watchlist_post_studio_monitor=watch_required "
+        "studio_residual_modified=18 "
+        "kds_dirty_total=31 "
         "brain_authorization=required "
         "gfis_clean_reindex_authorized=false "
         "kds_authorization=required "

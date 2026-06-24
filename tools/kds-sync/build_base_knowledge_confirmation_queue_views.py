@@ -126,14 +126,14 @@ def write_queue_md(queue: dict[str, Any], path: Path, title: str, description: s
     md += "日期：2026-06-19\n\n"
     md += "状态：`candidate_only`\n\n"
     md += f"{description}\n\n"
-    md += "## Summary\n\n"
+    md += "## 概要\n\n"
     md += f"- evidence_id：`{queue['evidenceId']}`\n"
     md += f"- source_evidence_id：`{queue['sourceEvidenceId']}`\n"
     md += f"- source_round：`{queue['sourceRound']}`\n"
     md += f"- current_round：`{queue['currentRound']}`\n"
     md += f"- queue_type：`{queue['queueType']}`\n"
     md += f"- item_count：`{queue['itemCount']}`\n\n"
-    md += "## Queue Items\n\n"
+    md += "## 队列项目\n\n"
     md += table(
         [
             "queue_item_id",
@@ -150,13 +150,13 @@ def write_queue_md(queue: dict[str, Any], path: Path, title: str, description: s
         rows,
     )
     md += "\n\n"
-    md += "## Boundary\n\n"
+    md += "## 边界\n\n"
     md += table(
         ["boundary", "value"],
         [[key, str(value).lower()] for key, value in queue["boundary"].items()],
     )
     md += "\n\n"
-    md += "## Controls\n\n"
+    md += "## 控制\n\n"
     md += "- Queue rows are candidate-only and do not confirm facts, close gaps, or write any system.\n"
     md += "- No score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger write is performed.\n"
     md += "- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, or production write is performed.\n"
@@ -174,13 +174,13 @@ def main() -> int:
     write_queue_md(
         human_queue,
         HUMAN_MD,
-        "Base Knowledge Human Confirmation Queue",
+        "基础知识人工确认队列",
         "This queue contains non-hard-stop writeback candidates that still require human confirmation before any downstream action.",
     )
     write_queue_md(
         committee_queue,
         COMMITTEE_MD,
-        "Base Knowledge Committee Review Queue",
+        "基础知识委员会评审队列",
         "This queue contains hard-stop writeback candidates that require committee review before any downstream action.",
     )
 

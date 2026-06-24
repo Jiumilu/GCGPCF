@@ -6,6 +6,21 @@
   "execution_authorization_required_before_live": true,
   "live_external_search_invoked": false,
   "agent_reach_binary_invoked": false,
+  "priority_target_refs": [
+    {
+      "scope": "green_supply_chain_system",
+      "fixture": "fixtures/agent-reach/green-supply-chain-priority-search-targets-20260623.json",
+      "status": "candidate_priority_targets_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "non_claim": "priority targets are not source-of-record and do not change production search configuration"
+    }
+  ],
   "project_scope": [
     "GPCF",
     "KDS",
@@ -54,31 +69,31 @@
           "query_id": "p8-q01",
           "project": "GPCF",
           "channel": "web",
-          "query": "GlobalCloud GPCF LOOP evidence governance search"
+                    "query": "Microsoft Loop app"
         },
         {
           "query_id": "p8-q02",
           "project": "KDS",
           "channel": "rss",
-          "query": "KDS knowledge fabric controlled document search governance"
+                    "query": "document governance compliance"
         },
         {
           "query_id": "p8-q03",
           "project": "WAES",
-          "channel": "web",
-          "query": "WAES evidence admission quality gate search"
+          "channel": "rss",
+                    "query": "quality control process"
         },
         {
           "query_id": "p8-q04",
           "project": "Brain",
-          "channel": "web",
-          "query": "GlobalCloud Brain runtime harness search evidence"
+          "channel": "rss",
+                    "query": "observability monitoring tools"
         },
         {
           "query_id": "p8-q05",
           "project": "GFIS",
-          "channel": "web",
-          "query": "GFIS source record green finance evidence search"
+          "channel": "rss",
+                    "query": "green finance standards"
         }
       ]
     },
@@ -90,31 +105,31 @@
           "query_id": "p8-q06",
           "project": "GPC",
           "channel": "bilibili",
-          "query": "GlobalCloud GPC planning control evidence search quality"
+                    "query": "model predictive control"
         },
         {
           "query_id": "p8-q07",
           "project": "PVAOS",
-          "channel": "web",
-          "query": "PVAOS project evidence runtime search governance"
+          "channel": "rss",
+                    "query": "compliance monitoring controls"
         },
         {
           "query_id": "p8-q08",
           "project": "PKC",
-          "channel": "web",
-          "query": "PKC project knowledge candidate search evidence"
+          "channel": "rss",
+                    "query": "knowledge graph search"
         },
         {
           "query_id": "p8-q09",
           "project": "XiaoC",
           "channel": "web",
-          "query": "XiaoC assistant evidence search quality"
+                    "query": "AI chatbot evaluation"
         },
         {
           "query_id": "p8-q10",
           "project": "XGD",
           "channel": "rss",
-          "query": "XGD voice runtime evidence search"
+                    "query": "speech recognition AI news"
         }
       ]
     },
@@ -126,25 +141,25 @@
           "query_id": "p8-q11",
           "project": "XiaoG",
           "channel": "web",
-          "query": "GlobalCloud XiaoG assistant governance evidence search"
+                    "query": "AI automation workflow"
         },
         {
           "query_id": "p8-q12",
           "project": "MMC",
-          "channel": "web",
-          "query": "GlobalCloud MMC control governance evidence search"
+          "channel": "rss",
+                    "query": "continuous controls monitoring"
         },
         {
           "query_id": "p8-q13",
           "project": "Studio",
-          "channel": "web",
-          "query": "GlobalCloud Studio workbench evidence search"
+          "channel": "rss",
+                    "query": "developer workbench tools"
         },
         {
           "query_id": "p8-q14",
           "project": "WAS",
           "channel": "rss",
-          "query": "WAS ontology asset source record evidence search"
+                    "query": "digital asset ontology"
         }
       ]
     }

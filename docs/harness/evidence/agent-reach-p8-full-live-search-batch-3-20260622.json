@@ -1,0 +1,336 @@
+{
+  "auth_path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json",
+  "authorization_reasons": [],
+  "authorization_valid": true,
+  "batch_id": "p8-batch-3",
+  "candidates": [
+    {
+      "authority_score": 0.8,
+      "candidate_id": "p8-q11-c2",
+      "channel": "web",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.9,
+      "project": "XiaoG",
+      "query_id": "p8-q11",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:22.036937+00:00",
+      "snippet_redacted": "Jun 3, 2026 · I did not master every automation tool. I did not build some giant system from scratch. I just picked one repeated task, described it clearly, tested the AI workflow manually, and only then …",
+      "source_domain": "x.com",
+      "title": "How I turned one repeated task into a simple AI automation as a non ...",
+      "traceability_score": 1.0,
+      "url": "https://x.com/S_Omolabi/article/2062115564353384763"
+    },
+    {
+      "authority_score": 0.8,
+      "candidate_id": "p8-q11-c3",
+      "channel": "web",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.9,
+      "project": "XiaoG",
+      "query_id": "p8-q11",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:22.037048+00:00",
+      "snippet_redacted": "2 days ago · Tulsi Soni (@shedntcare_). 4 likes. 4/ AI Automation Workflow Design a complete YouTube automation system for a [NICHE] channel with $0 budget. Map out: - Free AI tools for each …",
+      "source_domain": "x.com",
+      "title": "4/ AI Automation Workflow Design a complete YouTube automation …",
+      "traceability_score": 1.0,
+      "url": "https://x.com/shedntcare_/status/2068740979532997048"
+    },
+    {
+      "authority_score": 0.8,
+      "candidate_id": "p8-q11-c4",
+      "channel": "web",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.9,
+      "project": "XiaoG",
+      "query_id": "p8-q11",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:22.037150+00:00",
+      "snippet_redacted": "Jun 9, 2026 · RAVI KUMAR SAHU (@RAVIKUMARSAHU78). 7 likes 692 views. 4. AI Automation Workflow Design a complete YouTube automation system for a [NICHE] channel with $0 budget. …",
+      "source_domain": "x.com",
+      "title": "4. AI Automation Workflow Design a complete YouTube automation …",
+      "traceability_score": 1.0,
+      "url": "https://x.com/RAVIKUMARSAHU78/status/2064313598214885554"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q12-c1",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "MMC",
+      "query_id": "p8-q12",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:22.818456+00:00",
+      "snippet_redacted": "Craig is the founder/CEO of compliance operations software company Hyperproof and an expert in the compliance, risk, and technology space. In today’s volatile environment, organizations need to have ...",
+      "source_domain": "www.bing.com",
+      "title": "Continuous Controls Monitoring: The Next Generation Of Controls Testing",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5acf9ce442fb3c3f48ac2e09f31&url=https%3a%2f%2fwww.forbes.com%2fcouncils%2fforbestechcouncil%2f2022%2f06%2f02%2fcontinuous-controls-monitoring-the-next-generation-of-controls-testing%2f&c=5961242965515828182&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q12-c2",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "MMC",
+      "query_id": "p8-q12",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:22.818494+00:00",
+      "snippet_redacted": "TYSONS, Va., June 24, 2024 /PRNewswire/ -- RegScale, the Continuous Controls Monitoring (CCM) platform, today released an essential new white paper, \"Continuous Controls Monitoring GRC in 2030: A CISO ...",
+      "source_domain": "www.bing.com",
+      "title": "RegScale Releases \"Continuous Controls Monitoring GRC in 2030: A CISO Survival Guide\" White ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5acf9ce442fb3c3f48ac2e09f31&url=https%3a%2f%2ffinance.yahoo.com%2fnews%2fregscale-releases-continuous-controls-monitoring-124300930.html&c=5732586251154863890&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q12-c3",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "MMC",
+      "query_id": "p8-q12",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:22.818519+00:00",
+      "snippet_redacted": "A Must-Read for CISOs Facing Future Challenges in Governance, Risk, and Compliance TYSONS, Va., June 24, 2024 /PRNewswire/ -- RegScale, the Continuous Controls Monitoring (CCM) platform, today ...",
+      "source_domain": "www.bing.com",
+      "title": "RegScale Releases \"Continuous Controls Monitoring GRC in 2030: A CISO Survival Guide\" White ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5acf9ce442fb3c3f48ac2e09f31&url=https%3a%2f%2fwww.marketwatch.com%2fpress-release%2fregscale-releases-continuous-controls-monitoring-grc-in-2030-a-ciso-survival-guide-white-paper-7cfd9213&c=16765710229626763294&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q13-c1",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "Studio",
+      "query_id": "p8-q13",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:23.631093+00:00",
+      "snippet_redacted": "The latest trends in software development from the Computer Weekly Application Developer Network. Known for its technology portfolio spanning AI, data analytics and software toolsets that impact the ...",
+      "source_domain": "www.bing.com",
+      "title": "Coding canvas, SAS Viya Workbench tools up AI model developers",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5adec1142f0b7e3d747ea162184&url=https%3a%2f%2fwww.computerweekly.com%2fblog%2fCW-Developer-Network%2fCoding-canvas-SAS-Viya-Workbench-tools-up-AI-model-developers&c=1736845553572925983&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q13-c2",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.6733,
+      "project": "Studio",
+      "query_id": "p8-q13",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:23.631132+00:00",
+      "snippet_redacted": "Oracle has announced the general availability of Oracle SQL Developer Release 1.2 that features new capabilities to ease the migration and consolidation of third-party databases onto Oracle Database ...",
+      "source_domain": "www.bing.com",
+      "title": "Oracle SQL Developer Migration Workbench Eases Move to Oracle Database 11g",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5adec1142f0b7e3d747ea162184&url=https%3a%2f%2fwww.tdworld.com%2fsmart-utility%2farticle%2f20955723%2foracle-sql-developer-migration-workbench-eases-move-to-oracle-database-11g&c=1425489687464754953&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q14-c1",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.6733,
+      "project": "WAS",
+      "query_id": "p8-q14",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:24.388208+00:00",
+      "snippet_redacted": "調査回答者: 調査は、収益に基づいて企業を対象に実施されました。 調査結果: 質問: デジタル資産管理市場の規模はどのくらいですか? 世界のデジタル資産管理市場は、2023 ー2035 年までの予測期間中に、最大16.60% の CAGR で成長することにより、2035 年末 ...",
+      "source_domain": "www.bing.com",
+      "title": "デジタル資産管理市場（Digital Asset Management Market）に関する調査は ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5ae5f074aa58ee70cdc7a3c477b&url=https%3a%2f%2fprtimes.jp%2fmain%2fhtml%2frd%2fp%2f000003365.000059861.html&c=6858714633222060050&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q14-c2",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.6733,
+      "project": "WAS",
+      "query_id": "p8-q14",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:24.388306+00:00",
+      "snippet_redacted": "NADA NEWS、韓国のデジタル資産メディア「DIGITAL ASSET」とコンテンツ業務提携 NADA NEWS（ナダ・ニュース）は2月12日、日本と韓国におけるデジタル資産コンテンツ協力のため、韓国のデジタル資産メディア「DIGITAL ASSET」とMOUを締結しました。 DIGITAL ASSETは、2022年 ...",
+      "source_domain": "www.bing.com",
+      "title": "NADA NEWS、韓国のデジタル資産メディア「DIGITAL ASSET」とコンテンツ ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5ae5f074aa58ee70cdc7a3c477b&url=https%3a%2f%2fnews.yahoo.co.jp%2farticles%2f67d3ab1f4fe61fd80b52bb574ccbb8f7c75a1f6b&c=3050121664994774423&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q14-c3",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.6733,
+      "project": "WAS",
+      "query_id": "p8-q14",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:24.388359+00:00",
+      "snippet_redacted": "米国Digital Asset社への出資とJV設立に関するお知らせ SBIホールディングス株式会社（本社:東京都港区、代表取締役社長:北尾 吉孝、以下「SBIホールディングス」）は、ブロックチェーンプラットフォーム開発を手掛けるDigital Asset Holdings, LLC（所在地:米国 ...",
+      "source_domain": "www.bing.com",
+      "title": "SBIホールディングス、米Digital Asset社に出資し日本での合弁事業会社 ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5ae5f074aa58ee70cdc7a3c477b&url=https%3a%2f%2fwww.nikkei.com%2farticle%2fDGXZRSP633255_X20C22A5000000%2f&c=9659345910435858606&mkt=ja-jp"
+    }
+  ],
+  "current_admission": "limited_candidate_only",
+  "execution_plan": [
+    {
+      "backend": "duckduckgo_html_via_python_stdlib",
+      "channel": "web",
+      "planned_command": [
+        "python3",
+        "stdlib_urllib_duckduckgo_html",
+        "https://html.duckduckgo.com/html/?q=AI%20automation%20workflow"
+      ],
+      "project": "XiaoG",
+      "query": "AI automation workflow",
+      "query_id": "p8-q11"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=continuous%20controls%20monitoring"
+      ],
+      "project": "MMC",
+      "query": "continuous controls monitoring",
+      "query_id": "p8-q12"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=developer%20workbench%20tools"
+      ],
+      "project": "Studio",
+      "query": "developer workbench tools",
+      "query_id": "p8-q13"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=digital%20asset%20ontology"
+      ],
+      "project": "WAS",
+      "query": "digital asset ontology",
+      "query_id": "p8-q14"
+    }
+  ],
+  "execution_requested": true,
+  "generated_at": "2026-06-23T01:47:21.248028+00:00",
+  "id": "agent-reach-p8-project-group-full-live-search-batch-runtime",
+  "projects": [
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "quality_report": {
+    "average_overall_score": 0.7957,
+    "average_score": 0.7957,
+    "candidate_count": 11,
+    "channel_candidate_coverage": 1.0,
+    "credential_leak_count": 0,
+    "duplicate_url_count": 0,
+    "forbidden_claim_count": 0,
+    "minimum_candidate_overall_score": 0.6733,
+    "minimum_traceability_score": 1.0,
+    "missing_channels": [],
+    "missing_query_ids": [],
+    "query_candidate_coverage": 1.0,
+    "query_error_count": 0,
+    "required_field_coverage": 1.0,
+    "threshold_pass": true
+  },
+  "query_errors": [],
+  "query_ids": [
+    "p8-q11",
+    "p8-q12",
+    "p8-q13",
+    "p8-q14"
+  ],
+  "round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": true,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_live_search_batch_completed"
+}

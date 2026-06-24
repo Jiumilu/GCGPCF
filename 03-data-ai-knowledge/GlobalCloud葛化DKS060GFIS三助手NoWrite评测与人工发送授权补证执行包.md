@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md
 source_path: 03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

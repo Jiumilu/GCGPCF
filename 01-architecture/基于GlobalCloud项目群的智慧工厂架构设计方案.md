@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md
 source_path: 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

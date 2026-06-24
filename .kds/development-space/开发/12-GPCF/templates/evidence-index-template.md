@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/evidence-index-template.md
 source_path: templates/evidence-index-template.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

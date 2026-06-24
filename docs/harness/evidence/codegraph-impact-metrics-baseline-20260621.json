@@ -88,6 +88,10 @@
       "definition": "Compare CodeGraph targeted evidence with rg text scan volume.",
       "baseline": "CodeGraph direct file/symbol/test impact set vs rg 13 files and 28 lines"
     },
+    "review_rework_count": {
+      "definition": "Track whether CodeGraph-assisted review rework keeps trending down across repeated tasks.",
+      "baseline": "0 at baseline; compare against future task-intake and business-change evidence"
+    },
     "gate_replayability": {
       "definition": "The baseline is guarded by a validator that reruns CodeGraph, rg, coverage, and boundary checks.",
       "baseline": "tools/kds-sync/validate_codegraph_impact_metrics_baseline.py"

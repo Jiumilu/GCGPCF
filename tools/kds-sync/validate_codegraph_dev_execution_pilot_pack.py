@@ -78,6 +78,7 @@ def main() -> int:
     require(metrics["codegraph_candidate_files"] == 1, "candidate file count mismatch")
     require(metrics["actual_changed_files"] == 0, "pilot must not change business implementation files")
     require(metrics["missed_impact_count"] == 0, "missed impact count must be zero")
+    require(metrics["review_rework_count"] == 0, "review rework count must be zero")
 
     for value in evidence["status_boundaries"].values():
         require(value is False, "status boundaries must stay false")
@@ -88,6 +89,7 @@ def main() -> int:
         "fallback_reason",
         "files_allowed_to_change=[]",
         "actual_changed_files=0",
+        "review_rework_count=0",
         "不进入任何业务实现",
         "GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003",
     ]:

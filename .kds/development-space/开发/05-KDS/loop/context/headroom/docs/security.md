@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/loop/context/headroom/docs/security.md
 source_path: loop/context/headroom/docs/security.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-21
 supersedes: []
 superseded_by: []
 ---

@@ -1,0 +1,382 @@
+{
+  "evidence_id": "CODEGRAPH-WATCHLIST-STEADY-MONITOR-20260623",
+  "scope": "GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020",
+  "status": "watch_required",
+  "generated_at": "2026-06-23",
+  "objective": "复核 14 仓 live CodeGraph / Git 状态，保留 Brain、GFIS、KDS、Studio 与 GPCF drift watch；本轮仅做只读监控与 GPCF 本仓 self-sync 收口，不进入业务开发，不对 watchlist 仓执行 sync 或 clean reindex。",
+  "previous_round": "GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019",
+  "summary": {
+    "repo_count": 14,
+    "initialized_repo_count": 14,
+    "codegraph_git_status_entries_total": 0,
+    "review_rework_count": 0,
+    "gpcf_pending_before_self_sync": 3,
+    "gpcf_pending_after_self_sync": 0,
+    "gpcf_git_dirty_total": 408,
+    "brain_pending": 0,
+    "gfis_pending": 0,
+    "kds_pending": 0,
+    "studio_pending": 18,
+    "status_ceiling": "watch_required"
+  },
+  "repo_status": [
+    {
+      "repo_id": "gfis",
+      "repo": "GlobalCloud GFIS",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "monitor_only_without_clean_reindex"
+    },
+    {
+      "repo_id": "gpc",
+      "repo": "GlobalCloud GPC",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "pvaos",
+      "repo": "GlobalCloud PVAOS",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "waes",
+      "repo": "GlobalCloud WAES",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "kds",
+      "repo": "GlobalCloud KDS",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 6,
+        "deleted": 11,
+        "untracked": 46,
+        "renamed": 0,
+        "other": 0,
+        "total": 63
+      },
+      "decision": "mirror_scope_review_required_now"
+    },
+    {
+      "repo_id": "brain",
+      "repo": "GlobalCloud Brain",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "monitor_only"
+    },
+    {
+      "repo_id": "pkc",
+      "repo": "GlobalCloud PKC",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 17,
+        "deleted": 0,
+        "untracked": 22,
+        "renamed": 0,
+        "other": 0,
+        "total": 39
+      },
+      "decision": "steady_git_dirty_watch"
+    },
+    {
+      "repo_id": "xiaoc",
+      "repo": "GlobalCloud XiaoC",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "xgd",
+      "repo": "GlobalCloud XGD",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "xiaog",
+      "repo": "GlobalCloud XiaoG",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "mmc",
+      "repo": "GlobalCloud MMC",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 1
+      },
+      "decision": "steady"
+    },
+    {
+      "repo_id": "gpcf",
+      "repo": "GlobalCoud GPCF",
+      "pending": {
+        "added": 7,
+        "modified": 21,
+        "removed": 0
+      },
+      "pending_total": 28,
+      "git_dirty": {
+        "modified": 196,
+        "deleted": 12,
+        "untracked": 200,
+        "renamed": 0,
+        "other": 0,
+        "total": 408
+      },
+      "decision": "self_sync_clear_but_git_dirty"
+    },
+    {
+      "repo_id": "studio",
+      "repo": "GlobalCloud Studio",
+      "pending": {
+        "added": 0,
+        "modified": 18,
+        "removed": 0
+      },
+      "pending_total": 18,
+      "git_dirty": {
+        "modified": 19,
+        "deleted": 0,
+        "untracked": 1,
+        "renamed": 0,
+        "other": 0,
+        "total": 20
+      },
+      "decision": "residual_pending_watch"
+    },
+    {
+      "repo_id": "was",
+      "repo": "WAS世界资产体系",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "git_dirty": {
+        "modified": 0,
+        "deleted": 0,
+        "untracked": 2,
+        "renamed": 0,
+        "other": 0,
+        "total": 2
+      },
+      "decision": "steady"
+    }
+  ],
+  "watch_items": [
+    {
+      "repo": "GlobalCloud Brain",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty_total": 1,
+      "decision": "monitor_only",
+      "reason": "CodeGraph clean but local git dirty remains 1."
+    },
+    {
+      "repo": "GlobalCloud GFIS",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty_total": 1,
+      "decision": "monitor_only_without_clean_reindex",
+      "reason": "CodeGraph clean but local git dirty remains 1; clean reindex still not authorized."
+    },
+    {
+      "repo": "GlobalCloud KDS",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty_total": 38,
+      "decision": "mirror_scope_review_required_now",
+      "reason": "CodeGraph clean but KDS mirror / WorkWiki dirty persists."
+    },
+    {
+      "repo": "GlobalCloud Studio",
+      "pending": {
+        "added": 0,
+        "modified": 18,
+        "removed": 0
+      },
+      "git_dirty_total": 20,
+      "decision": "residual_pending_watch",
+      "reason": "Studio retains modified pending above the earlier residual ceiling."
+    },
+    {
+      "repo": "GlobalCoud GPCF",
+      "pending": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "git_dirty_total": 285,
+      "decision": "self_sync_clear_but_git_dirty",
+      "reason": "本仓 self-sync 已清 pending，但 local git dirty still high."
+    }
+  ],
+  "governance": {
+    "mode": "watchlist_steady_monitor",
+    "codegraph_sync_performed_in_watchlist_repos": false,
+    "clean_reindex_performed": false,
+    "business_development_performed": false,
+    "gpcf_self_sync_performed": true,
+    "codegraph_git_isolated": true
+  },
+  "five_direction": {
+    "run": "读取 14 仓 live CodeGraph 状态与 Git dirty，记录当前 watchlist 和本仓 self-sync 后收口。",
+    "stop": "stop_type=watch_required；Brain/GFIS/KDS 进入 monitor_only，Studio 保留 residual watch，GPCF 仅完成本仓 self-sync，不执行非 GPCF sync 或 clean reindex。",
+    "verify": "验证 14 仓 `codegraph status --json .`、14 仓 `.codegraph` Git 隔离，以及当前 watch_items 和 GPCF self-sync 后 pending=0。",
+    "recover": "若 Brain/KDS/GFIS/Studio 再次出现新的 pending 增长，回到只读 watchlist recheck；非 GPCF sync 继续要求显式授权。",
+    "debug": "当前 KDS mirror / WorkWiki 仍有 Git dirty，Studio 仍有 CodeGraph modified residual，GPCF 已 self-sync 清零 pending，但本地工作树仍 dirty。"
+  },
+  "status_boundaries": {
+    "brain_sync": false,
+    "gfis_sync": false,
+    "kds_sync": false,
+    "studio_sync": false,
+    "business_code_edits": false,
+    "project_internal_development": false,
+    "production_write": false,
+    "external_api_write": false,
+    "kds_canonical_write": false,
+    "git_add": false,
+    "git_commit": false,
+    "git_push": false,
+    "deploy": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"
+}

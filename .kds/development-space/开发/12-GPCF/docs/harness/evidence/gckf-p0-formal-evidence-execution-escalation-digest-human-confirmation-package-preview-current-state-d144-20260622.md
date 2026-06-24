@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/gckf-p0-formal-evidence-execution-escalation-digest-human-confirmation-package-preview-current-state-d144-20260622.md
 source_path: docs/harness/evidence/gckf-p0-formal-evidence-execution-escalation-digest-human-confirmation-package-preview-current-state-d144-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

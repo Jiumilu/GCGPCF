@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/codegraph-watchlist-post-studio-monitor-20260622.md
 source_path: docs/harness/evidence/codegraph-watchlist-post-studio-monitor-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -24,21 +24,22 @@ superseded_by: []
 
 本轮只读监控 Studio sync-only precheck 后状态，以及 Brain、GFIS、KDS 未授权 watchlist 状态。本轮不执行任何 watchlist 仓 `codegraph sync`，不执行 clean reindex，不进入业务开发，不提交、不推送、不部署。
 
-结论为 `pass_with_watch`：
+结论为 `watch_required`：
 
-- Studio：residual pending 为 added=0、modified=7、removed=0，仍低于授权前 modified=9 上限，保持 residual watch。
-- Brain：pending 未变，仍需独立授权。
-- GFIS：pending 未变，GFIS clean reindex 仍不授权。
-- KDS：dirty total 从授权包基线 1652 增长到 1659，下一轮应优先做 KDS mirror / WorkWiki scope review 授权包。
+- Studio：residual pending 为 added=0、modified=18、removed=0，已超过授权前 modified=9 上限，需要重新收口 watch 边界。
+- Brain：CodeGraph pending 已归零，但仍有 1 个 Git dirty，继续保持授权边界。
+- GFIS：CodeGraph pending 已归零，但仍有 1 个 Git dirty，GFIS clean reindex 仍不授权。
+- KDS：CodeGraph pending 已归零，但仍有 31 个 Git dirty，下一轮应优先做 KDS mirror / WorkWiki scope review 授权包。
+- `review_rework_count=0`，沿用稳态监控基线；本轮未进入业务开发，因此没有新增 review 返工。
 
 ## 监控表
 
 | repo | CodeGraph pending | Git dirty | 状态 | 决策 |
 | --- | --- | ---: | --- | --- |
-| Brain | added=4, modified=54, removed=0 | 203 | unchanged_authorization_boundary | authorization_required |
-| GFIS | added=1, modified=2, removed=0 | 239 | unchanged_policy_exception_boundary | authorization_required_without_clean_reindex |
-| KDS | added=0, modified=1, removed=0 | 1659 | active_mirror_workwiki_drift_growth | authorization_required |
-| Studio | added=0, modified=7, removed=0 | 12 | residual_within_authorized_ceiling | sync_only_precheck_completed_with_residual_watch |
+| Brain | added=0, modified=0, removed=0 | 1 | codegraph_clean_but_git_dirty | authorization_required |
+| GFIS | added=0, modified=0, removed=0 | 1 | codegraph_clean_but_git_dirty | authorization_required_without_clean_reindex |
+| KDS | added=0, modified=0, removed=0 | 31 | git_dirty_growth_watch | authorization_required |
+| Studio | added=0, modified=18, removed=0 | 20 | residual_exceeds_authorized_ceiling | sync_only_precheck_completed_with_residual_watch |
 
 ## 五方向
 
@@ -48,7 +49,7 @@ superseded_by: []
 
 ### stop
 
-`stop_type=pass_with_watch`。Studio residual 未超过授权上限，Brain/GFIS/KDS 仍需独立授权，不能自动执行 sync 或 clean reindex。
+`stop_type=watch_required`。Studio residual 已超过授权上限，Brain/GFIS/KDS 仍需独立授权，不能自动执行 sync 或 clean reindex。
 
 ### verify
 
@@ -64,11 +65,11 @@ python3 tools/kds-sync/validate_kds_token.py
 
 ### recover
 
-若 Studio residual 超过 modified=9 或出现 added/removed，则回到 Studio 专项授权；若 KDS 继续增长，进入 KDS mirror scope review 授权包。
+若 Studio residual 继续增长或出现 added/removed，则回到 Studio 专项授权；若 KDS 继续增长，进入 KDS mirror scope review 授权包。
 
 ### debug
 
-KDS dirty 持续增长，是下一轮最明确的治理风险；GFIS clean reindex 仍不授权。
+Studio residual 已超过授权上限；KDS dirty 仍是下一轮最明确的治理风险；GFIS clean reindex 仍不授权。
 
 ## 非声明
 

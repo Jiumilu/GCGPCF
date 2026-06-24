@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-steady-state-monitor-20260622.md
 source_path: docs/harness/evidence/codegraph-dev-execution-steady-state-monitor-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -29,9 +29,10 @@ superseded_by: []
 - 14 仓 CodeGraph 索引均可读。
 - 14 仓均无 `reindexRecommended`。
 - 14 仓 `.codegraph/` 均未进入 Git 状态。
-- GPCF 本仓已执行普通 `codegraph sync`，`pendingChanges=0`。
-- 中文化债务已闭合，`localization_debt=false`。
+- GPCF 当前 CodeGraph pending 为 `added=7, modified=21, removed=0`，工作树 Git dirty 为 406，继续 watch，不进入业务开发。
+- 中文化债务当前仍有存量，`localization_gate=fail` / `findings=49`，作为独立 watch，不阻断 CodeGraph 稳态监控。
 - Loop 文档门禁为 `pass`。
+- `review_rework_count=0`，作为稳态监控的趋势基线。
 
 ## 活动漂移 watchlist
 
@@ -39,10 +40,11 @@ superseded_by: []
 
 | repo | pending |
 | --- | --- |
-| Brain | added=4, modified=53, removed=0 |
-| GFIS | added=1, modified=2, removed=0 |
-| KDS | added=0, modified=1, removed=0 |
-| Studio | added=2, modified=9, removed=0 |
+| Brain | added=0, modified=0, removed=0 |
+| GFIS | added=0, modified=0, removed=0 |
+| KDS | added=0, modified=0, removed=0 |
+| Studio | added=0, modified=18, removed=0 |
+| GPCF | added=7, modified=21, removed=0 |
 
 ## CodeGraph 实际作用探针
 
@@ -58,6 +60,7 @@ codegraph affected tools/kds-sync/validate_codegraph_dev_execution_document_loca
 - top result：`tools/kds-sync/validate_codegraph_dev_execution_document_localization_debt_closure.py`
 - affected_tests：`[]`
 - fallback_reason：稳态监控对象是治理 validator evidence，CodeGraph 未返回 indexed dependent test files，因此回放 validator 与文档门禁作为 fallback tests。
+- review_rework_count：0。
 
 ## 禁止声明
 

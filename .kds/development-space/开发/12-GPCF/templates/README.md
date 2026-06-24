@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/README.md
 source_path: templates/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -50,3 +50,6 @@ KDS 路径前缀：`开发/12-GPCF/templates/`
 | GPCF-DOC-8C2AA8996B | loop-audit-template | templates/loop-audit-template.md | GPCF | controlled |
 | GPCF-DOC-1D2FA3DB71 | Loop Round {N} | templates/loop-round-template.md | GPCF | controlled |
 | GPCF-DOC-DDBD7C90C2 | {项目名} 循环状态模板 | templates/loop-state-template.md | GPCF | controlled |
+| PROJECT-DOC-IMPLEMENTATION-PLAN-TEMPLATE | {{PROJECT_DISPLAY_NAME}} 实施方案 | templates/project-implementation-plan-template.md | GPCF | controlled |
+| PROJECT-DOC-MASTER-PLAN-TEMPLATE | {{PROJECT_DISPLAY_NAME}} 总体方案 | templates/project-master-plan-template.md | GPCF | controlled |
+| PROJECT-DOC-REAL-EVIDENCE-RECORD-TEMPLATE | 真实证据记录模板 | templates/real-evidence-record-template.md | GPCF | controlled |

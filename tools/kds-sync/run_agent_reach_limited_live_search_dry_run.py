@@ -5,11 +5,15 @@ from __future__ import annotations
 
 import argparse
 import html
+import http.client
 import json
 import re
+import base64
+import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+from xml.etree import ElementTree
 from pathlib import Path
 from typing import Any
 
@@ -69,6 +73,10 @@ TOKEN_PATTERN = re.compile(r"(?i)(api[_-]?key|token|secret|authorization|cookie)
 DUCKDUCKGO_RESULT_PATTERN = re.compile(r'<div[^>]+class="[^"]*result[^"]*"[^>]*>(?P<body>.*?)</div>\s*</div>', re.S)
 DUCKDUCKGO_LINK_PATTERN = re.compile(r'<a[^>]+class="[^"]*result__a[^"]*"[^>]+href="(?P<href>[^"]+)"[^>]*>(?P<title>.*?)</a>', re.S)
 DUCKDUCKGO_SNIPPET_PATTERN = re.compile(r'<a[^>]+class="[^"]*result__snippet[^"]*"[^>]*>(?P<snippet>.*?)</a>|<div[^>]+class="[^"]*result__snippet[^"]*"[^>]*>(?P<div_snippet>.*?)</div>', re.S)
+BING_RESULT_PATTERN = re.compile(r'<li[^>]+class="[^"]*b_algo[^"]*"[^>]*>(?P<body>.*?)</li>', re.S)
+BING_LINK_PATTERN = re.compile(r'<h2[^>]*>\s*<a[^>]+href="(?P<href>[^"]+)"[^>]*>(?P<title>.*?)</a>', re.S)
+BING_SNIPPET_PATTERN = re.compile(r'<p[^>]*>(?P<snippet>.*?)</p>', re.S)
+MAX_RETAINED_CANDIDATES_PER_QUERY = 3
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -110,6 +118,45 @@ def normalize_duckduckgo_href(href: str) -> str:
     return url
 
 
+def normalize_bing_href(href: str) -> str:
+    url = html.unescape(href)
+    parsed = urllib.parse.urlparse(url)
+    if parsed.netloc.endswith("bing.com"):
+        query_values = urllib.parse.parse_qs(parsed.query)
+        encoded = query_values.get("u", [url])[0]
+        if encoded.startswith("a1"):
+            payload = encoded[2:]
+            padding = "=" * ((4 - len(payload) % 4) % 4)
+            try:
+                return base64.urlsafe_b64decode(payload + padding).decode("utf-8", errors="replace")
+            except Exception:
+                return encoded
+        return encoded
+    return url
+
+
+def read_response_text(resp) -> str:
+    try:
+        payload = resp.read()
+    except http.client.IncompleteRead as exc:
+        payload = exc.partial
+    return payload.decode("utf-8", errors="replace")
+
+
+def read_json_with_retries(url: str, headers: dict[str, str], attempts: int = 3) -> dict[str, Any]:
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                return json.loads(read_response_text(resp))
+        except Exception as exc:
+            last_error = exc
+            if attempt + 1 < attempts:
+                time.sleep(0.5 * (attempt + 1))
+    raise last_error if last_error else RuntimeError("json_fetch_failed")
+
+
 def score_candidate(query: dict[str, Any], title: str, snippet: str, url: str) -> dict[str, float]:
     query_terms = {part.lower() for part in re.findall(r"[A-Za-z0-9]+", query["query"]) if len(part) >= 3}
     text = f"{title} {snippet} {url}".lower()
@@ -118,7 +165,7 @@ def score_candidate(query: dict[str, Any], title: str, snippet: str, url: str) -
     authority = 0.8 if url.startswith("https://") else 0.5
     freshness = 0.6
     traceability = 1.0 if url else 0.0
-    overall = round(relevance * 0.4 + freshness * 0.2 + authority * 0.2 + traceability * 0.2, 4)
+    overall = round(relevance * 0.5 + freshness * 0.15 + authority * 0.2 + traceability * 0.15, 4)
     return {
         "relevance_score": round(relevance, 4),
         "authority_score": round(authority, 4),
@@ -195,20 +242,33 @@ def build_execution_plan(plan: dict[str, Any]) -> list[dict[str, Any]]:
 
 def fetch_rss_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any]]:
     encoded = urllib.parse.quote(query["query"])
-    url = f"https://news.google.com/rss/search?q={encoded}"
+    url = f"https://www.bing.com/news/search?q={encoded}&format=rss"
     req = urllib.request.Request(url, headers={"User-Agent": "agent-reach-controlled-dry-run/1.0"})
     with urllib.request.urlopen(req, timeout=20) as resp:
-        text = resp.read().decode("utf-8", errors="replace")
-    links = re.findall(r"<item>.*?<title><!\[CDATA\[(.*?)\]\]></title>.*?<link>(.*?)</link>.*?<description><!\[CDATA\[(.*?)\]\]></description>", text, re.S)
-    return build_candidates(query, [(title, link, desc) for title, link, desc in links[:limit]])
+        text = read_response_text(resp)
+    rows: list[tuple[str, str, str]] = []
+    root = ElementTree.fromstring(text)
+    for item in root.findall(".//item"):
+        title = item.findtext("title") or ""
+        link = item.findtext("link") or ""
+        desc = item.findtext("description") or ""
+        if title and link:
+            rows.append((title, link, desc))
+        if len(rows) >= limit:
+            break
+    return build_candidates(query, rows)
 
 
 def fetch_bilibili_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any]]:
     encoded = urllib.parse.quote(query["query"])
     url = f"https://api.bilibili.com/x/web-interface/search/all/v2?keyword={encoded}&page=1"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=20) as resp:
-        payload = json.loads(resp.read().decode("utf-8", errors="replace"))
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36",
+        "Referer": "https://search.bilibili.com/",
+        "Accept": "application/json,text/plain,*/*",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    }
+    payload = read_json_with_retries(url, headers)
     rows: list[tuple[str, str, str]] = []
     for group in payload.get("data", {}).get("result", []):
         for item in group.get("data", [])[:limit]:
@@ -226,26 +286,27 @@ def fetch_bilibili_candidate(query: dict[str, Any], limit: int) -> list[dict[str
 
 def fetch_web_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any]]:
     encoded = urllib.parse.quote(query["query"])
-    url = f"https://html.duckduckgo.com/html/?q={encoded}"
+    url = f"https://www.bing.com/search?q={encoded}&mkt=en-US&setlang=en-US&cc=US"
     req = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "agent-reach-controlled-dry-run/1.0",
+            "User-Agent": "Mozilla/5.0",
             "Accept": "text/html",
+            "Accept-Language": "en-US,en;q=0.9",
         },
     )
     with urllib.request.urlopen(req, timeout=20) as resp:
-        text = resp.read().decode("utf-8", errors="replace")
+        text = read_response_text(resp)
     rows: list[tuple[str, str, str]] = []
-    for block in DUCKDUCKGO_RESULT_PATTERN.finditer(text):
+    for block in BING_RESULT_PATTERN.finditer(text):
         body = block.group("body")
-        link_match = DUCKDUCKGO_LINK_PATTERN.search(body)
+        link_match = BING_LINK_PATTERN.search(body)
         if not link_match:
             continue
-        snippet_match = DUCKDUCKGO_SNIPPET_PATTERN.search(body)
-        href = normalize_duckduckgo_href(link_match.group("href"))
+        snippet_match = BING_SNIPPET_PATTERN.search(body)
+        href = normalize_bing_href(link_match.group("href"))
         title = strip_html(link_match.group("title"))
-        snippet = strip_html((snippet_match.group("snippet") or snippet_match.group("div_snippet")) if snippet_match else "")
+        snippet = strip_html(snippet_match.group("snippet") if snippet_match else "")
         if title and href:
             rows.append((title, href, snippet))
         if len(rows) >= limit:
@@ -255,8 +316,16 @@ def fetch_web_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any
 
 def build_candidates(query: dict[str, Any], rows: list[tuple[str, str, str]]) -> list[dict[str, Any]]:
     candidates = []
+    seen_urls: set[str] = set()
     for idx, (title, url, snippet) in enumerate(rows, start=1):
+        if not strip_html(snippet):
+            continue
+        if url in seen_urls:
+            continue
+        seen_urls.add(url)
         scores = score_candidate(query, title, snippet, url)
+        if scores["overall_score"] < 0.5:
+            continue
         candidates.append(
             {
                 "candidate_id": f"{query['query_id']}-c{idx}",
@@ -272,7 +341,7 @@ def build_candidates(query: dict[str, Any], rows: list[tuple[str, str, str]]) ->
                 "non_claims": ["candidate_only", "not_kds_canonical_written", "not_gfis_source_of_record_written"],
             }
         )
-    return candidates
+    return sorted(candidates, key=lambda item: item["overall_score"], reverse=True)[:MAX_RETAINED_CANDIDATES_PER_QUERY]
 
 
 def execute_live(plan: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:

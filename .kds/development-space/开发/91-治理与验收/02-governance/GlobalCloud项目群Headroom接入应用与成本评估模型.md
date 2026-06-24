@@ -646,6 +646,11 @@ python3 tools/kds-sync/validate_headroom_cost_sensitivity_model.py
 | LCX L3.5 controlled sanitized pilot window | pass_check_only_15_projects_45_records_no_real_measurement |
 | LCX L3.5 multi-window stability | pass_check_only_5_windows_225_records_stable_hash_no_real_measurement |
 | LCX L3.5 answer equivalence synthetic gate | pass_check_only_15_projects_45_synthetic_samples_business_equivalence_false |
+| LCX graph manifest | done_route_cost_rollback_equivalence_graph_controlled_pending_real_measurement |
+| LCX real measurement gap matrix | done_blocked_requirements_mapped |
+| LCX real measurement transition graph | done_blocked_transitions_mapped |
+| LCX real measurement authorization field map | done_precheck_fields_mapped_to_future_runner_inputs |
+| LCX real measurement runner contract | done_precheck_only_runner_contract_defined |
 | Loop evidence 已建立 | done |
 | Validator 已建立 | done |
 | 真实生产接入 | not_done |
@@ -659,5 +664,11 @@ python3 tools/kds-sync/validate_headroom_cost_sensitivity_model.py
 3. 已生成 L3.5 多窗口脱敏稳定性证据：`docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.md`。
 4. 已生成 L3.5 synthetic answer/citation/marker 等价门禁：`docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.md`。
 5. readiness 汇总、L3.5 窗口、多窗口稳定性和 synthetic answer equivalence 均区分 15 项目域 fixture coverage、15 项目域 LCX route coverage 与真实生产实测 token，fixture 不等同于全项目生产实测。
-6. 继续保持 `production_token_measurement_allowed=false`、`measured_production_tokens=false`、`business_answer_equivalence_proven=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
-7. 下一步可生成 L4 真实测量与真实业务答案等价授权申请包，或继续增加 L3.5 synthetic 负向等价样例。
+6. 已生成受控图谱 manifest：`docs/harness/evidence/headroom-lcx-graph-manifest-20260623.md` / `.json`，串联路由、成本、回滚、授权前置与 synthetic equivalence，但 production branch 仍 blocked。
+7. 已生成真实测量缺口矩阵：`docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.md` / `.json`，明确 real measurement authorization window、WAES/Harness decision、token ledger、production proxy/sdk enablement 和 real business equivalence 仍缺。
+8. 已生成真实测量状态转移图：`docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.md` / `.json`，明确 current_controlled_graph 到 production_branch 之间所有仍 blocked 的边和要求。
+9. 已补写回滚 runbook：`docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md`，只覆盖停止、隔离、恢复、验证，不打开 production branch。
+10. 继续保持 `production_token_measurement_allowed=false`、`measured_production_tokens=false`、`business_answer_equivalence_proven=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
+11. 已生成真实测量授权字段映射：`docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.md` / `.json`，把当前审批实例字段直接映射到未来 runner 输入。
+12. 已生成真实测量受控 runner contract：`docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.md` / `.json`，限定 future runner inputs、allow/forbid actions 和 precheck-only 执行边界。
+13. 下一步可等待真实授权窗口后再进入执行态，或继续补充 contract 对应的真实 runner 设计。

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/loop-governance-current-window-disposition-20260619.md
 source_path: docs/harness/evidence/loop-governance-current-window-disposition-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -61,6 +61,7 @@ loop_round_efficiency_audit=pass total_rounds=377 audit_checked=30 hard_checked=
 
 机器边界：不证明 GFIS runtime SOP E2E 已通过。
 
+- does not prove GFIS runtime SOP E2E passed
 - 本证据不重写历史轮次记录。
 - 本证据不证明 GFIS runtime SOP E2E 已通过。
 - 本证据不全局关闭 `LEDB-001`、`LEDB-002` 或 `LEDB-003`。

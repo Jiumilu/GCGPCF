@@ -1,0 +1,69 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623",
+  "template_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623",
+  "status": "authorization_signoff_template_generated_no_authorization_completion",
+  "date": "2026-06-23",
+  "scope": {
+    "project_count": 15,
+    "project_ids": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ]
+  },
+  "template_path": "fixtures/headroom/headroom-lcx-real-measurement-authorization-signoff-template.json",
+  "required_field_count": 6,
+  "required_fields": [
+    "authorized_window_id",
+    "authorized_by",
+    "authorized_at",
+    "sanitized_production_token_ledger",
+    "rollback_plan_id",
+    "waes_harness_admission_decision"
+  ],
+  "required_signature_field_count": 6,
+  "signature_fields": [
+    "signer_name",
+    "signer_role",
+    "signed_at",
+    "signature_method",
+    "signature_statement",
+    "signature_intent"
+  ],
+  "required_false_until_completed": {
+    "authorization_complete": false,
+    "real_measurement_window_open": false,
+    "production_token_measurement_allowed": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "template_is_not_authorization": true,
+    "template_is_not_real_measurement": true,
+    "not_production_entry": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  }
+}

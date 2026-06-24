@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/tools/README.md
 source_path: tools/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,5 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | GPCF | controlled |
+| GPCF-DOC-C9A7E8D2B1 | Frontmatter 写入权责清单（tools/kds-sync） | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | GPCF | controlled |
 | GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | GPCF | controlled |

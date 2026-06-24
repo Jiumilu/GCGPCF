@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-harness-gate-20260622.md
 source_path: docs/harness/evidence/codegraph-dev-execution-harness-gate-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -30,6 +30,8 @@ Harness/Loop gate 必须检查未来业务开发 evidence 是否包含：
 - `codegraph_evidence`
 - `efficiency_metrics`
 - `status_boundaries`
+
+其中 `efficiency_metrics` 现在还要覆盖 `review_rework_count`，保持返工趋势可复核。
 
 ## 阻断规则
 

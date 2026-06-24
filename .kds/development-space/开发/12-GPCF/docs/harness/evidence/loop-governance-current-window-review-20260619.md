@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/loop-governance-current-window-review-20260619.md
 source_path: docs/harness/evidence/loop-governance-current-window-review-20260619.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -58,6 +58,7 @@ Validator locator summary: `truth_records=25`, `five_segment_records=0`,
 
 机器边界：不证明 GFIS runtime SOP E2E 已通过。
 
+- does not prove GFIS runtime SOP E2E passed
 - 本证据不重写历史轮次记录。
 - 本证据不证明 GFIS runtime SOP E2E 已通过。
 - 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。

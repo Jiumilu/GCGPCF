@@ -1,0 +1,156 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001",
+  "date": "2026-06-23",
+  "status": "real_measurement_authorization_request_blocked_until_real_window",
+  "scope": "real_measurement_authorization_request_precheck_only",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "evidence_chain_count": 7,
+  "evidence_chain": [
+    "docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.json",
+    "docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.json",
+    "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json"
+  ],
+  "requested_future_decision": "open_real_measurement_window",
+  "current_waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+  "field_bindings": [
+    {
+      "field": "authorized_window_id",
+      "current_value": "LCX-MEASURE-20260622-001",
+      "source_evidence": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
+      "future_runner_input": "authorized_window_id",
+      "binding_state": "precheck_only"
+    },
+    {
+      "field": "authorized_by",
+      "current_value": "lujunxiang / GPCF owner",
+      "source_evidence": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
+      "future_runner_input": "authorized_by",
+      "binding_state": "precheck_only"
+    },
+    {
+      "field": "authorized_at",
+      "current_value": "2026-06-22T08:42:06+08:00",
+      "source_evidence": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
+      "future_runner_input": "authorized_at",
+      "binding_state": "precheck_only"
+    },
+    {
+      "field": "sanitized_production_token_ledger",
+      "current_value": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+      "source_evidence": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+      "future_runner_input": "sanitized_production_token_ledger",
+      "binding_state": "precheck_only"
+    },
+    {
+      "field": "rollback_plan_id",
+      "current_value": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+      "source_evidence": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+      "future_runner_input": "rollback_plan_id",
+      "binding_state": "precheck_only"
+    },
+    {
+      "field": "waes_harness_admission_decision",
+      "current_value": "admitted_for_sanitized_measurement_precheck",
+      "source_evidence": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+      "future_runner_input": "waes_harness_admission_decision",
+      "binding_state": "precheck_only"
+    }
+  ],
+  "requested_boundary": {
+    "allowed_inputs": [
+      "authorized_window_id",
+      "authorized_by",
+      "authorized_at",
+      "sanitized_production_token_ledger",
+      "rollback_plan_id",
+      "waes_harness_admission_decision"
+    ],
+    "forbidden_inputs": [
+      "raw_prompt",
+      "raw_completion",
+      "customer_contract",
+      "pod",
+      "financial_voucher",
+      "secret",
+      "production_credential",
+      "production_proxy",
+      "production_sdk",
+      "real_kds_write",
+      "external_api_write"
+    ],
+    "allowed_actions": [
+      "read_sanitized_ledger_metadata",
+      "calculate_token_saving_estimate",
+      "write_harness_evidence"
+    ],
+    "forbidden_actions": [
+      "production_proxy_start",
+      "production_sdk_enable",
+      "real_kds_api_write",
+      "external_api_write",
+      "database_migration",
+      "permission_change",
+      "headroom_learn_apply",
+      "memory_as_kds_fact_source"
+    ]
+  },
+  "current_state": {
+    "real_measurement_gap_present": true,
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "execution_guard": {
+    "executable_now": false,
+    "requires_real_measurement_authorization_window": true,
+    "requires_waes_harness_decision": true,
+    "requires_sanitized_token_ledger_metadata_only": true,
+    "requires_rollback_plan_id": true,
+    "requires_no_production_proxy": true,
+    "requires_no_real_kds_write": true,
+    "requires_no_external_api_write": true
+  },
+  "source_refs": {
+    "field_map": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json",
+    "runner_contract": "docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.json",
+    "transition_graph": "docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json",
+    "gap_matrix": "docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json"
+  },
+  "non_claims": {
+    "real_measurement_open": false,
+    "production_branch_open": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "business_answer_equivalence_proven": false
+  }
+}

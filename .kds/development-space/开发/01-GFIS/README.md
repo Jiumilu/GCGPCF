@@ -1,6 +1,6 @@
 # GFIS 开发文档空间
 
-生成日期：2026-06-23
+生成日期：2026-06-24
 
 用途：KDS `开发` 空间中 `GFIS` 项目的受控文档入口。
 
@@ -86,7 +86,14 @@
 | GPCF-DOC-36C5892CB8 | loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md | controlled |
 | GPCF-DOC-E574C9CB52 | Loop Round GPCF-GF-LR-001 | 08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md | controlled |
 | GPCF-DOC-94C5F5E540 | modern-jinggong-training-analysis | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | controlled |
+| GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624 | GlobalCloud GPCF 总体方案 | GlobalCloud GPCF 总体方案.md | controlled |
 | GPCF-DOC-16DD6DC90F | GPCF 项目 Harness Manifest | PROJECT_HARNESS_MANIFEST.md | controlled |
+| GPCF-DOC-D375EBD5DA | GFIS | docs/harness/GFIS/README.md | controlled |
+| GPCF-DOC-9BF6A3D875 | evidence | docs/harness/GFIS/evidence/README.md | controlled |
+| GPCF-DOC-GFIS-REAL-RUNTIME-BASELINE-20260624 | GFIS 真实运行基线证据 2026-06-24 | docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md | controlled |
+| GPCF-DOC-6C2D5BB513 | headroom | loop/context/headroom/README.md | controlled |
+| GPCF-DOC-A1FFDD1AE2 | docs | loop/context/headroom/docs/README.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-GRAPH-20260623 | Headroom LCX Graph | loop/context/headroom/docs/graph.md | controlled |
 | GPCF-DOC-AGENT-REACH-CONTROLLED-ADAPTER-20260622 | Agent-Reach 受控 Adapter Skeleton | third_party/agent-reach/CONTROLLED_ADAPTER.md | controlled |
 | GPCF-DOC-AGENT-REACH-ISOLATED-INSTALL-20260622 | Agent-Reach 隔离安装审查 | third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md | controlled |
 | GPCF-DOC-AGENT-REACH-LIVE-SEARCH-AUTHORIZATION-20260622 | Agent-Reach Live Search Authorization Boundary | third_party/agent-reach/LIVE_SEARCH_AUTHORIZATION.md | controlled |

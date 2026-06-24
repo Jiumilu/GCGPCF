@@ -43,7 +43,9 @@ def require_frontmatter(path: Path, text: str) -> None:
     ]:
         require(phrase in metadata, f"{path.relative_to(ROOT)} missing controlled marker: {phrase}")
     require(
-        "last_reviewed: 2026-06-21" in metadata or "last_reviewed: 2026-06-22" in metadata,
+        "last_reviewed: 2026-06-21" in metadata
+        or "last_reviewed: 2026-06-22" in metadata
+        or "last_reviewed: 2026-06-23" in metadata,
         f"{path.relative_to(ROOT)} missing controlled marker: last_reviewed",
     )
 

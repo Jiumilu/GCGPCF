@@ -325,7 +325,7 @@ def build_records(paths: list[Path]) -> list[dict[str, object]]:
             "kds_path": kds_path_for(source_path, project, status, domain),
             "source_path": source_path,
             "sync_direction": "bidirectional" if status != "operational_controlled" else "register_and_mirror",
-            "last_reviewed": TODAY,
+            "last_reviewed": existing.get("last_reviewed", TODAY),
             "supersedes": [],
             "superseded_by": [],
             "frontmatter_managed": frontmatter_managed_for(source_path),

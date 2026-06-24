@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/loop-document-gate-repair-queue-20260622.md
 source_path: docs/harness/evidence/loop-document-gate-repair-queue-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -30,9 +30,9 @@ superseded_by: []
 
 | 字段 | 值 |
 |---|---|
-| gate | `rework_required` |
-| gate_reasons | `localization_debt` |
-| queue_item_count | `1` |
+| gate | `pass` |
+| gate_reasons | `none` |
+| queue_item_count | `0` |
 | fixed_doc_id_drift | `False` |
 | gfis_real_business_lane | `repair_required` |
 | accepted | `False` |
@@ -43,7 +43,7 @@ superseded_by: []
 
 | queue_id | reason | category | owner | priority | status | repair_action |
 |---|---|---|---|---|---|---|
-| LDG-REPAIR-001 | localization_debt | localization | GPCF document governance | P1 | open | 按中文本地化门禁报告分组修复旧英文或旧口径文档，不改变业务事实状态。 |
+| - | none | - | - | - | closed | 当前无门禁修复项 |
 
 ## 非声明
 

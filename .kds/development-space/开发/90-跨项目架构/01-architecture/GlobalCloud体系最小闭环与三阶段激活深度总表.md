@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md
 source_path: 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

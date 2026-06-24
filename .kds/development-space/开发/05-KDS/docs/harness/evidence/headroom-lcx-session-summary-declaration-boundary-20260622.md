@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md
 source_path: docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

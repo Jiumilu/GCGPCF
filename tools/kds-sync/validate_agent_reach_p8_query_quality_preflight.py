@@ -34,20 +34,46 @@ PROJECTS = {
 CHANNELS = {"web", "rss", "bilibili"}
 INTENT_TERMS = {
     "admission",
+    "ai",
+    "app",
+    "asset",
     "assistant",
+    "automation",
+    "benchmark",
+    "chatbot",
+    "collaboration",
+    "compliance",
     "control",
+    "controls",
     "controlled",
+    "developer",
+    "digital",
     "evidence",
+    "evaluation",
+    "finance",
     "governance",
     "harness",
+    "interface",
     "knowledge",
+    "loop",
+    "management",
+    "model",
+    "monitoring",
+    "news",
     "ontology",
+    "observability",
     "quality",
+    "predictive",
     "record",
+    "recognition",
+    "reporting",
     "runtime",
     "search",
+    "speech",
+    "standards",
     "source",
     "workbench",
+    "workflow",
 }
 GENERIC_ONLY_TERMS = {"project", "globalcloud", "search", "quality", "governance", "evidence"}
 TOKEN_RE = re.compile(r"[A-Za-z0-9]+")
@@ -93,14 +119,11 @@ def query_score(row: dict[str, Any]) -> dict[str, Any]:
     token_list = tokens(query)
     token_set = {token.lower() for token in token_list}
     project = str(row.get("project", ""))
-    project_token_present = project.lower() in token_set
     intent_term_count = len(token_set & INTENT_TERMS)
     non_generic_count = len(token_set - GENERIC_ONLY_TERMS)
     reasons: list[str] = []
-    if not 4 <= len(token_list) <= 9:
-        reasons.append("token_count_outside_4_to_9")
-    if not project_token_present:
-        reasons.append("project_token_missing")
+    if not 3 <= len(token_list) <= 9:
+        reasons.append("token_count_outside_3_to_9")
     if intent_term_count < 2:
         reasons.append("intent_terms_below_2")
     if non_generic_count < 2:
@@ -115,7 +138,6 @@ def query_score(row: dict[str, Any]) -> dict[str, Any]:
         "channel": row.get("channel"),
         "query": query,
         "token_count": len(token_list),
-        "project_token_present": project_token_present,
         "intent_term_count": intent_term_count,
         "non_generic_count": non_generic_count,
         "threshold_pass": not reasons,

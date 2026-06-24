@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/document-deprecation-register.md
 source_path: 09-status/document-deprecation-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
 # 文档过期与归档台账
 
-日期：2026-06-23
+日期：2026-06-24
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 

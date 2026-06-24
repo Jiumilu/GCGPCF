@@ -11,20 +11,20 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-chinese-localization-governance-report.md
 source_path: 09-status/globalcloud-chinese-localization-governance-report.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 项目群中文化治理报告
 
-生成时间：2026-06-22T14:31:30.746849+00:00
+生成时间：2026-06-22T23:49:56.126651+00:00
 
 中文化门禁：`pass`
 
 ## 总览
 
-- 检查文档：2246
+- 检查文档：2336
 - 检查软件/样例文件：240
 - 问题总数：0
 

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md
 source_path: 03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

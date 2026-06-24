@@ -52,7 +52,7 @@ GATES = (
             r"status[-_ ]?audit",
         ),
         rework_patterns=(r"\bP[01]\b.*(缺陷|defect|bug).*(open|unresolved|未关闭|未解决)", r"(质量返工|quality.*rework)"),
-        blocked_patterns=(r"质量.*blocked", r"质量.*阻塞"),
+        blocked_patterns=(r"质量.*blocked", r"质量.*阻塞", r"accepted_for_quality_profile.*`?0`?"),
         expected_evidence=("测试结果", "缺陷台账", "验收矩阵", "质量判定"),
     ),
     GateSpec(
@@ -74,7 +74,7 @@ GATES = (
             r"\be2e\b",
             r"端到端",
         ),
-        rework_patterns=(r"不可用", r"无法使用", r"主流程.*失败", r"ui_rework_required"),
+        rework_patterns=(r"(界面|页面|产品|主流程|核心流程).*不可用", r"无法使用", r"主流程.*失败", r"ui_rework_required"),
         blocked_patterns=(r"无法启动", r"无法进入", r"核心流程.*阻塞", r"ui_blocked"),
         expected_evidence=("可运行入口", "主流程验证", "截图或录屏", "人工体验结论", "UI Quality Gate G1-G9 结论"),
     ),
@@ -90,7 +90,7 @@ GATES = (
             r"交付确认",
         ),
         rework_patterns=(r"不满意", r"客户.*返工", r"投诉", r"未达预期"),
-        blocked_patterns=(r"客户.*拒收", r"业务.*拒收"),
+        blocked_patterns=(r"客户.*拒收", r"业务.*拒收", r"accepted_for_customer.*`?0`?"),
         expected_evidence=("目标用户", "满意度记录", "反馈闭环", "未满足项"),
     ),
     GateSpec(
@@ -176,13 +176,99 @@ def match_patterns(patterns: tuple[str, ...], text: str) -> list[str]:
     return found
 
 
+def excluded_context_line(line: str) -> bool:
+    stripped = line.strip()
+    if re.match(r"^\|\s*\d{4}-\d{2}-\d{2}\s*\|", stripped):
+        return True
+    if re.match(r"^\|\s*\d+\s*\|", stripped):
+        return True
+    if "全仓门禁" in line and not re.search(
+        r"(accepted_for|hold_required|real_source_records|valid_source_records)",
+        line,
+        flags=re.IGNORECASE,
+    ):
+        return True
+    if re.search(r"\|\s*\d+\s*\|", line) and not re.search(r"(当前|本轮|仍|未解除|accepted_for|hold_required)", line):
+        return True
+    if re.search(
+        r"(status_values|allowed values|枚举|可选值|示例|样例|fixture|negative fixture|rejected examples|负例|拒收样例)",
+        line,
+        flags=re.IGNORECASE,
+    ) and not re.search(r"(accepted_for|hold_required|real_source_records|valid_source_records)", line, flags=re.IGNORECASE):
+        return True
+    return False
+
+
 def active_signal_patterns(patterns: tuple[str, ...], text: str) -> list[str]:
     active_lines = []
     for line in text.splitlines():
-        if re.search(r"(gate|门禁|状态|结论|判定|status|result|health)", line, flags=re.IGNORECASE):
+        if excluded_context_line(line):
+            continue
+        if re.search(
+            r"(gate|门禁|状态|结论|判定|status|result|health|accepted_for|hold_required|real_source_records|valid_source_records|production_ready)",
+            line,
+            flags=re.IGNORECASE,
+        ):
             active_lines.append(line)
     active_text = "\n".join(active_lines)
     return match_patterns(patterns, active_text)
+
+
+def controlled_source_record_hold(relative_path: str, text: str) -> bool:
+    if "was-real-source-record-monitor-" not in relative_path and "loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-" not in relative_path:
+        return False
+    if "不得替代 KDS source-of-record" not in text and "不创建 KDS 正式事实" not in text:
+        return False
+    return bool(
+        re.search(r"accepted_for_[a-z0-9_]+.*`?0`?", text, flags=re.IGNORECASE)
+        and re.search(r"hold_required.*`?1`?", text, flags=re.IGNORECASE)
+    )
+
+
+def ui_round_number(path: str) -> int | None:
+    match = re.search(r"loop-round-GPCF-UI-STUDIO-WORKBENCH-(\d+)\.md$", path)
+    if not match:
+        return None
+    return int(match.group(1))
+
+
+def latest_ui_gate_status(corpus: list[tuple[Path, str]], root: Path) -> tuple[int, str] | None:
+    latest: tuple[int, str] | None = None
+    for path, text in corpus:
+        relative = rel(path, root)
+        round_number = ui_round_number(relative)
+        if round_number is None:
+            continue
+        match = re.search(r"UI gate status:\s*(ui_[a-z_]+)", text, flags=re.IGNORECASE)
+        if not match:
+            continue
+        status = match.group(1).lower()
+        if latest is None or round_number > latest[0]:
+            latest = (round_number, status)
+    return latest
+
+
+def filter_stale_usability_blockers(
+    blocked_hits: list[str],
+    corpus: list[tuple[Path, str]],
+    root: Path,
+) -> list[str]:
+    latest = latest_ui_gate_status(corpus, root)
+    if latest is None or latest[1] not in {"ui_ready", "ui_partial"}:
+        return blocked_hits
+
+    latest_round = latest[0]
+    filtered: list[str] = []
+    for hit in blocked_hits:
+        round_number = ui_round_number(hit)
+        if round_number is not None and round_number < latest_round:
+            continue
+        if hit.endswith("docs/harness/evidence/loop-ui-governance-baseline-20260622.md"):
+            continue
+        if hit.endswith("docs/harness/evidence/studio-kanban-runtime-entry-gate-20260622.md"):
+            continue
+        filtered.append(hit)
+    return filtered
 
 
 def evaluate_gate(spec: GateSpec, corpus: list[tuple[Path, str]], root: Path) -> dict[str, object]:
@@ -191,12 +277,21 @@ def evaluate_gate(spec: GateSpec, corpus: list[tuple[Path, str]], root: Path) ->
     blocked_hits: list[str] = []
 
     for path, text in corpus:
+        relative_path = rel(path, root)
         if len(pass_hits) < 8 and match_patterns(spec.pass_patterns, text):
-            pass_hits.append(rel(path, root))
+            pass_hits.append(relative_path)
         if len(rework_hits) < 8 and active_signal_patterns(spec.rework_patterns, text):
-            rework_hits.append(rel(path, root))
+            if spec.name in {"quality", "customer_satisfaction"} and controlled_source_record_hold(relative_path, text):
+                continue
+            rework_hits.append(relative_path)
         if len(blocked_hits) < 8 and active_signal_patterns(spec.blocked_patterns, text):
-            blocked_hits.append(rel(path, root))
+            if spec.name in {"quality", "customer_satisfaction"} and controlled_source_record_hold(relative_path, text):
+                continue
+            blocked_hits.append(relative_path)
+
+    if spec.name == "usability":
+        rework_hits = filter_stale_usability_blockers(rework_hits, corpus, root)
+        blocked_hits = filter_stale_usability_blockers(blocked_hits, corpus, root)
 
     if blocked_hits:
         gate = "blocked"

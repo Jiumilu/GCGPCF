@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/06-Brain/docs/harness/Brain/evidence/README.md
 source_path: docs/harness/Brain/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,6 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-4A654203DE | evidence | docs/harness/Brain/evidence/README.md | Brain | controlled |
+| GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624 | Brain 真实运行基线证据 2026-06-24 | docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | Brain | controlled |
+| GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | Brain team 空间授权契约 C 口径确认证据 2026-06-24 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | Brain | controlled |
 | GPCF-DOC-33E55CB86C | evidence-index | docs/harness/Brain/evidence/evidence-index.md | Brain | controlled |

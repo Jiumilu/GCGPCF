@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md
 source_path: 04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

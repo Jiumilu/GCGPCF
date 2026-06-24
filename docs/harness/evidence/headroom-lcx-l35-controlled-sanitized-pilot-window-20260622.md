@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md
 source_path: docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -33,7 +33,7 @@ superseded_by: []
 |---|---|
 | authorized_window_id | HEADROOM-LCX-L35-SANITIZED-PILOT-WINDOW-20260622-001 |
 | authorized_by | user_current_codex_session |
-| authorized_at | 2026-06-22T21:48:40+08:00 |
+| authorized_at | 2026-06-22T10:00:00+08:00 |
 | authorization_signal | 用户回复：批准 |
 | authorization_scope | L3.5_controlled_sanitized_pilot_only |
 | sanitized_production_token_ledger | fixtures/headroom/headroom-lcx-project-group-sanitized-fixture-20260622.json |

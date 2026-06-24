@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009.md
 source_path: docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -49,4 +49,4 @@ superseded_by: []
 
 ## 反馈
 
-Brain 与 Studio sync-only 授权包已建立，当前状态为 `sync_authorization_pack_ready`。本轮未执行 Brain/Studio `codegraph sync`，未进入业务开发，未提交、未推送、未部署。下一轮只有在用户明确授权后才进入 `GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010`。
+Brain 当前为 `green` / monitor-only，Studio 为 `action_required`，sync-only 授权包已建立，当前状态为 `sync_authorization_pack_ready`。本轮未执行 Brain/Studio `codegraph sync`，未进入业务开发，未提交、未推送、未部署。下一轮只有在用户明确授权后才进入 `GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010`。

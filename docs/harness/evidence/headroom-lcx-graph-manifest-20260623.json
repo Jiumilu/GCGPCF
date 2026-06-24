@@ -1,0 +1,754 @@
+{
+  "graph_id": "HEADROOM-LCX-GRAPH-MANIFEST-20260623",
+  "status": "controlled_pending_real_measurement",
+  "date": "2026-06-23",
+  "scope": {
+    "project_count": 15,
+    "project_ids": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "real_business_equivalence_scope": "sanitized_metadata_only_pending_real_measurement_authorization"
+  },
+  "layers": [
+    {
+      "layer_id": "route_layer",
+      "status": "controlled",
+      "purpose": "15_project_domain_lcx_route_coverage",
+      "source_path": "loop/context/headroom/policy.yaml"
+    },
+    {
+      "layer_id": "authorization_layer",
+      "status": "admitted_for_sanitized_measurement_precheck",
+      "purpose": "authorized_measurement_window_and_waes_harness_decision",
+      "source_paths": [
+        "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
+        "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json",
+        "docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+        "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json"
+      ]
+    },
+    {
+      "layer_id": "authorization_bridge_layer",
+      "status": "next_stage_authorization_package_granted_precheck_only",
+      "purpose": "next_stage_authorization_package_and_window_request_bridge",
+      "source_path": "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json"
+    },
+    {
+      "layer_id": "token_ledger_bridge_layer",
+      "status": "metadata_replay_check_pass_no_measurement",
+      "purpose": "sanitized_token_ledger_metadata_replay_only",
+      "source_paths": [
+        "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+        "docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.json",
+        "docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.json"
+      ]
+    },
+    {
+      "layer_id": "cost_bridge_layer",
+      "status": "independent_production_token_free_loop_replay_ready",
+      "purpose": "sanitized_ledger_and_loop_cost_replay_bridge",
+      "source_paths": [
+        "docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json",
+        "docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json",
+        "docs/harness/evidence/headroom-independent-loop-round-replay-20260621.json"
+      ]
+    },
+    {
+      "layer_id": "cost_layer",
+      "status": "controlled",
+      "purpose": "cost_sensitivity_and_loop_cost_observation",
+      "source_paths": [
+        "docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json",
+        "docs/harness/evidence/headroom-loop-cost-observation-20260621.json",
+        "docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json"
+      ]
+    },
+    {
+      "layer_id": "runtime_layer",
+      "status": "production_runtime_graph_defined_controlled_only",
+      "purpose": "production_runtime_cost_and_rollback_control",
+      "source_path": "docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json"
+    },
+    {
+      "layer_id": "rollback_layer",
+      "status": "controlled_no_production",
+      "purpose": "rollback_plan_reference_and_no_write_boundary",
+      "source_path": "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md"
+    },
+    {
+      "layer_id": "equivalence_layer",
+      "status": "synthetic_only",
+      "purpose": "answer_equivalence_synthetic_gate_only",
+      "source_path": "docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.json"
+    },
+    {
+      "layer_id": "production_branch",
+      "status": "blocked",
+      "purpose": "production_measurement_and_admission_not_open",
+      "source_path": "docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.json"
+    }
+  ],
+  "project_routes": [
+    {
+      "project_id": "GPCF",
+      "source_path": "02-governance/loop/LOOP_CONTROL_BOARD.md",
+      "allowed_modes": [
+        "proxy_dry_run",
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats",
+        "agent_wrap_dry_run"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "loop_gate_tokens_before",
+        "loop_gate_tokens_after",
+        "governance_log_tokens_before",
+        "governance_log_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "kds_token",
+        "authorization_header",
+        "governance_source_of_record"
+      ],
+      "owner": "GPCF",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "KDS",
+      "source_path": "docs/harness/KDS/loop-state.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "rag_chunk_tokens_before",
+        "rag_chunk_tokens_after",
+        "metadata_tokens_before",
+        "metadata_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "kds_token",
+        "controlled_original",
+        "private_space_content"
+      ],
+      "owner": "KDS",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "Brain",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "retrieval_context_tokens_before",
+        "retrieval_context_tokens_after",
+        "citation_context_tokens_before",
+        "citation_context_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "citation_marker",
+        "source_path",
+        "doc_id",
+        "private_knowledge_chunk"
+      ],
+      "owner": "Brain",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "WAES",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "audit_context_tokens_before",
+        "audit_context_tokens_after",
+        "gate_trace_tokens_before",
+        "gate_trace_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "waes_decision",
+        "policy_rule",
+        "risk_verdict"
+      ],
+      "owner": "WAES",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "GFIS",
+      "source_path": "08-evidence-samples/GFIS/loop-state.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "runtime_log_tokens_before",
+        "runtime_log_tokens_after",
+        "sop_gate_tokens_before",
+        "sop_gate_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "customer_order_original",
+        "contract",
+        "pod",
+        "factory_source_record",
+        "production_credential"
+      ],
+      "owner": "GFIS",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "GPC",
+      "source_path": "09-status/gpcf-project-status-matrix.md",
+      "allowed_modes": [
+        "proxy_dry_run",
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "workflow_trace_tokens_before",
+        "workflow_trace_tokens_after",
+        "public_service_trace_tokens_before",
+        "public_service_trace_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "order_fact",
+        "partner_private_data",
+        "approval_record"
+      ],
+      "owner": "GPC",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "PVAOS",
+      "source_path": "docs/harness/PVAOS/loop-state.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "config_review_tokens_before",
+        "config_review_tokens_after",
+        "partner_config_tokens_before",
+        "partner_config_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "tenant_config",
+        "permission_config",
+        "partner_identity"
+      ],
+      "owner": "PVAOS",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "Edge",
+      "source_path": "03-data-ai-knowledge/GlobalCloud绿色供应链体系Edge接入与安全模型.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "edge_log_tokens_before",
+        "edge_log_tokens_after",
+        "replay_trace_tokens_before",
+        "replay_trace_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "device_credential",
+        "production_receipt",
+        "edge_secret"
+      ],
+      "owner": "Edge",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "PKC",
+      "source_path": "docs/harness/PKC/loop-state.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "personal_rag_tokens_before",
+        "personal_rag_tokens_after",
+        "workflow_output_tokens_before",
+        "workflow_output_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "personal_private_content",
+        "user_identity",
+        "cross_user_memory"
+      ],
+      "owner": "PKC",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "XiaoC",
+      "source_path": "docs/harness/XiaoC/loop-state.md",
+      "allowed_modes": [
+        "proxy_dry_run",
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats",
+        "agent_wrap_dry_run"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "agent_tool_tokens_before",
+        "agent_tool_tokens_after",
+        "model_route_tokens_before",
+        "model_route_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "tool_permission",
+        "model_route_secret",
+        "agent_authorization"
+      ],
+      "owner": "XiaoC",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "XGD",
+      "source_path": "docs/harness/XGD/loop-state.md",
+      "allowed_modes": [
+        "proxy_dry_run",
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats",
+        "agent_wrap_dry_run"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "risk_analysis_tokens_before",
+        "risk_analysis_tokens_after",
+        "long_task_trace_tokens_before",
+        "long_task_trace_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "risk_verdict",
+        "validation_result",
+        "multi_step_private_trace"
+      ],
+      "owner": "XGD",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "XiaoG",
+      "source_path": "docs/harness/XiaoG/loop-state.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "readonly_query_tokens_before",
+        "readonly_query_tokens_after",
+        "audit_mock_tokens_before",
+        "audit_mock_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "device_ota",
+        "external_write",
+        "runtime_command"
+      ],
+      "owner": "XiaoG",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "MMC",
+      "source_path": "docs/harness/MMC/loop-state.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "template_diff_tokens_before",
+        "template_diff_tokens_after",
+        "config_list_tokens_before",
+        "config_list_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "template_baseline",
+        "governance_template",
+        "config_secret"
+      ],
+      "owner": "MMC",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "Studio",
+      "source_path": "02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md",
+      "allowed_modes": [
+        "proxy_dry_run",
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats",
+        "agent_wrap_dry_run"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "workflow_log_tokens_before",
+        "workflow_log_tokens_after",
+        "build_log_tokens_before",
+        "build_log_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "release_write_workflow",
+        "deployment_secret",
+        "build_token"
+      ],
+      "owner": "Studio",
+      "current_gate": "dry_run_only"
+    },
+    {
+      "project_id": "WAS",
+      "source_path": "docs/harness/evidence/was-project-group-admission-20260621.md",
+      "allowed_modes": [
+        "sdk_dry_run",
+        "mcp_compress",
+        "mcp_stats"
+      ],
+      "blocked_modes": [
+        "production_proxy",
+        "mcp_retrieve_without_waes_gate",
+        "cross_project_memory_as_fact",
+        "learn_apply_auto",
+        "output_shaper_acceptance",
+        "production_external_write"
+      ],
+      "requires_authorization": true,
+      "cost_fields": [
+        "ontology_gate_tokens_before",
+        "ontology_gate_tokens_after",
+        "okf_validator_tokens_before",
+        "okf_validator_tokens_after"
+      ],
+      "sensitive_boundaries": [
+        "semantic_contract_source",
+        "okf_original",
+        "source_record_candidate"
+      ],
+      "owner": "WAS",
+      "current_gate": "dry_run_only"
+    }
+  ],
+  "authorization": {
+    "request_evidence_id": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+    "request_status": "request_package_approved_for_sanitized_precheck_no_measurement",
+    "approval_package_evidence_id": "HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-20260622",
+    "approval_package_status": "schema_and_approval_package_generated_no_authorization_completion",
+    "authorization_window_request_evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
+    "authorization_window_request_status": "real_measurement_authorization_window_requested_not_granted",
+    "next_stage_authorization_package_evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623",
+    "next_stage_authorization_package_status": "next_stage_authorization_package_granted_precheck_only",
+    "sanitized_token_ledger_id": "HEADROOM-LCX-SANITIZED-PRODUCTION-TOKEN-LEDGER-PRECHECK-20260622",
+    "sanitized_token_ledger_type": "sanitized_production_token_usage_ledger_precheck_template",
+    "metadata_replay_check_evidence_id": "HEADROOM-LCX-METADATA-REPLAY-CHECK-20260622",
+    "metadata_replay_check_status": "metadata_replay_check_pass_no_measurement",
+    "loop_cost_observation_series_evidence_id": "HEADROOM-LOOP-COST-OBSERVATION-SERIES-20260621",
+    "loop_cost_observation_series_status": "three_window_loop_cost_observation_series_ready",
+    "independent_replay_evidence_id": "HEADROOM-INDEPENDENT-LOOP-ROUND-REPLAY-20260621",
+    "independent_replay_status": "independent_production_token_free_loop_replay_ready",
+    "precheck_evidence_id": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+    "precheck_status": "authorized_measurement_precheck_admitted_for_sanitized_dry_run_only",
+    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+    "authorized_window_id": "LCX-MEASURE-20260622-001",
+    "authorized_by": "lujunxiang / GPCF owner",
+    "authorized_at": "2026-06-22T08:42:06+08:00",
+    "sanitized_production_token_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "telemetry_default": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "cost_graph": {
+    "source_evidence_id": "HEADROOM-COST-SENSITIVITY-MODEL-20260621",
+    "status": "cost_sensitivity_model_defined",
+    "project_count": 15,
+    "profile_count": 3,
+    "saving_rate_floor": 0.2,
+    "production_admission_gate": false,
+    "measured_production_tokens": false
+  },
+  "rollback_graph": {
+    "evidence_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "status": "rollback_plan_present_no_production_write",
+    "rollback_plan_present": true,
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "rollback_plan_source": "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md",
+    "rollback_coverage": [
+      "production_proxy_start_blocked",
+      "production_sdk_enable_blocked",
+      "real_kds_api_write_blocked",
+      "external_api_write_blocked",
+      "headroom_learn_apply_blocked",
+      "memory_as_kds_fact_source_blocked"
+    ]
+  },
+  "equivalence_graph": {
+    "source_evidence_id": "HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622",
+    "status": "l3_5_answer_equivalence_synthetic_gate_pass_check_only",
+    "business_answer_equivalence_proven": false,
+    "answer_equivalence_gate": true,
+    "marker_preservation_gate": true,
+    "citation_preservation_gate": true,
+    "real_business_measurement_allowed": false
+  },
+  "runtime_graph": {
+    "source_evidence_id": "HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623",
+    "status": "production_runtime_graph_defined_controlled_only",
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "edges": [
+    {
+      "from": "route_layer",
+      "to": "cost_layer",
+      "relation": "project_routes_feed_cost_fields"
+    },
+    {
+      "from": "route_layer",
+      "to": "authorization_layer",
+      "relation": "project_routes_require_measurement_authorization"
+    },
+    {
+      "from": "authorization_layer",
+      "to": "authorization_bridge_layer",
+      "relation": "window_request_materializes_next_stage_authorization_package"
+    },
+    {
+      "from": "authorization_bridge_layer",
+      "to": "token_ledger_bridge_layer",
+      "relation": "bridge_package_requires_sanitized_token_ledger_metadata_replay"
+    },
+    {
+      "from": "token_ledger_bridge_layer",
+      "to": "cost_bridge_layer",
+      "relation": "sanitized_ledger_metadata_replay_feeds_cost_replay"
+    },
+    {
+      "from": "cost_bridge_layer",
+      "to": "cost_layer",
+      "relation": "cost_bridge_materializes_cost_graph_from_replay_evidence"
+    },
+    {
+      "from": "cost_layer",
+      "to": "rollback_layer",
+      "relation": "cost_graph_still_requires_rollback_plan"
+    },
+    {
+      "from": "runtime_layer",
+      "to": "rollback_layer",
+      "relation": "runtime_graph_references_rollback_plan"
+    },
+    {
+      "from": "authorization_layer",
+      "to": "equivalence_graph",
+      "relation": "only_sanitized_equivalence_evidence_admitted"
+    },
+    {
+      "from": "equivalence_graph",
+      "to": "production_branch",
+      "relation": "synthetic_only_does_not_open_production"
+    },
+    {
+      "from": "rollback_layer",
+      "to": "production_branch",
+      "relation": "rollback_plan_present_but_not_a_production_opening_signal"
+    }
+  ],
+  "non_claims": {
+    "real_kds_api_write": false,
+    "production_proxy": false,
+    "production_sdk": false,
+    "production_external_api_write": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "business_answer_equivalence_proven": false,
+    "headroom_memory_as_kds_fact_source": false
+  },
+  "source_refs": {
+    "policy": "loop/context/headroom/policy.yaml",
+    "measurement_request": "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json",
+    "precheck": "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
+    "approval_package": "docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.json",
+    "authorization_window_request": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
+    "next_stage_authorization_package": "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json",
+    "approval_signed_bundle": "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+    "authorization_boundary_review": "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json",
+    "sanitized_token_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+    "metadata_replay_check": "docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.json",
+    "loop_cost_observation_series": "docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json",
+    "independent_replay": "docs/harness/evidence/headroom-independent-loop-round-replay-20260621.json",
+    "p5_package": "docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.json",
+    "cost_model": "docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json",
+    "rollback_plan": "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md",
+    "equivalence_gate": "docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.json",
+    "runtime_graph": "docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json"
+  }
+}

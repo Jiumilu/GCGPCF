@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -31,7 +32,9 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def run(args: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(args, cwd=ROOT, text=True, capture_output=True, check=False)
+    env = os.environ.copy()
+    env["GPCF_PROJECT_GROUP_GATE_DELEGATED"] = "1"
+    return subprocess.run(args, cwd=ROOT, env=env, text=True, capture_output=True, check=False)
 
 
 def extract_json(stdout: str) -> dict[str, Any]:

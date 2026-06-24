@@ -80,7 +80,7 @@ def main() -> int:
     implementation_fields = ["target_nodes", "affected_scope", "files_allowed_to_change", "files_not_to_touch", "expected_tests"]
     test_fields = ["affected_tests", "fallback_tests", "fallback_reason"]
     codegraph_evidence_fields = ["query", "target_nodes", "affected", "changed_files", "test_selection_reason", "post_change_status"]
-    metric_fields = ["manual_scan_files", "codegraph_candidate_files", "actual_changed_files", "affected_tests", "missed_impact_count", "time_to_first_target"]
+    metric_fields = ["manual_scan_files", "codegraph_candidate_files", "actual_changed_files", "affected_tests", "missed_impact_count", "time_to_first_target", "review_rework_count"]
     exception_fields = ["reason", "fallback_scan", "reviewer", "expires_at"]
 
     require_keys(template["pre_change_analysis"], ["query", "query_results", "target_nodes", "node_inspection", "affected"], "template pre_change_analysis")
@@ -114,6 +114,7 @@ def main() -> int:
         "codegraph_evidence",
         "fallback_reason",
         "missed_impact_count",
+        "review_rework_count",
         "不代表业务完成",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")

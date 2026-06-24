@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/README.md
 source_path: 01-architecture/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -44,7 +44,8 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-16D9DC63AA | AI驱动GFIS与GlobalCloud体系结合分析 | 01-architecture/AI驱动GFIS与GlobalCloud体系结合分析.md | GPCF | controlled |
 | GPCF-DOC-3F9E7988C6 | AI驱动工厂信息化系统完整方案V3.1 | 01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | GPCF | controlled |
 | GPCF-DOC-D54AF3DD5D | GPC方向全面分析报告 | 01-architecture/GPC方向全面分析报告.md | GPCF | controlled |
-| GPCF-DOC-45A09FDDC2 | GlobalCloud世界资产体系候选范围与门禁边界 | 01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md | GPCF | controlled |
+| GPCF-DOC-45A09FDDC2 | GlobalCloud世界资产体系 WAE-WAES 与 SCaaS 关系门禁边界 | 01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md | GPCF | controlled |
+| GPCF-DOC-WAS-TOPLINE-20260623 | GlobalCloud 世界资产体系正式命名与产品系统架构总纲 | 01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md | GPCF | controlled |
 | GPCF-DOC-0C519C97BD | GlobalCloud体系最小闭环与三阶段激活深度总表 | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | GPCF | controlled |
 | GPCF-DOC-3DBC8DC5C3 | GlobalCloud智慧工厂专项架构图集 | 01-architecture/GlobalCloud智慧工厂专项架构图集.md | GPCF | controlled |
 | GPCF-DOC-1DCB795545 | GlobalCloud智慧工厂进一步梳理与提示词库 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | GPCF | controlled |
@@ -66,6 +67,12 @@ KDS 路径前缀：`开发/12-GPCF/01-architecture/`
 | GPCF-DOC-3DB47E5509 | GlobalCloud 绿色供应链平台业务流架构图 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | GPCF | controlled |
 | GPCF-DOC-AA2468EDC8 | GlobalCloud 绿色供应链平台主架构与宪法约束融合建议 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | GPCF | controlled |
 | GPCF-DOC-535BF5C0CA | GlobalCloud V0.0.1 项目群交叉分析报告 | 01-architecture/GlobalCloud项目群交叉分析报告.md | GPCF | controlled |
+| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | GlobalCloud 项目群实施方案 | 01-architecture/GlobalCloud项目群实施方案.md | GPCF | controlled |
 | GPCF-DOC-7B5E3B05D7 | GlobalCloud项目群最小闭环L4实施方案 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | GPCF | controlled |
 | GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | controlled |
+| GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | WAS-Ontology-XWAIL 语义契约与映射机制 | 01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md | GPCF | controlled |
+| GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624 | WAS-XWAIL-AaaS 三主项目方案协同矩阵与门禁 | 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | GPCF | controlled |
+| GPCF-DOC-WAS-MASTER-PLAN-20260624 | WAS世界资产体系总体方案 | 01-architecture/WAS世界资产体系总体方案.md | GPCF | controlled |
+| GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623 | XWAIL V1.2 Validator 规则清单 | 01-architecture/XWAIL-V1.2-Validator规则清单.md | GPCF | controlled |
+| GPCF-DOC-XWAIL-V12-DRAFT-20260623 | XWAIL 可扩展世界资产信息建模语言规范 V1.2 草案 | 01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md | GPCF | controlled |
 | GPCF-DOC-1D47877518 | 基于GlobalCloud项目群的智慧工厂架构设计方案 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | GPCF | controlled |

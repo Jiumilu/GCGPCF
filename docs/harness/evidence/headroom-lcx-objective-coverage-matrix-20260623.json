@@ -1,0 +1,138 @@
+{
+  "evidence_id": "HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-20260623",
+  "status": "objective_coverage_matrix_defined_partial",
+  "date": "2026-06-23",
+  "objective": "完成完整真实功能图谱：真实业务等价授权测量，以及生产级运行/成本/回滚图谱。",
+  "project_group_scope": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "project_count": 15,
+  "rows": [
+    {
+      "objective_item": "real_business_equivalence_authorized_measurement",
+      "state": "blocked",
+      "evidence": [
+        "docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+        "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json"
+      ],
+      "blocking_reason": "real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only"
+    },
+    {
+      "objective_item": "production_runtime_graph",
+      "state": "proven_controlled_only",
+      "evidence": [
+        "docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.json",
+        "docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.json"
+      ],
+      "blocking_reason": "production_runtime_graph_is_controlled_only_and_production_branch_remains_blocked"
+    },
+    {
+      "objective_item": "production_cost_graph",
+      "state": "proven_controlled_only",
+      "evidence": [
+        "docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json",
+        "docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json",
+        "docs/harness/evidence/headroom-loop-cost-observation-20260621.json",
+        "docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json",
+        "docs/harness/evidence/headroom-lcx-cost-bridge-20260623.json"
+      ],
+      "blocking_reason": "cost_graph_is_replayable_but_not_production_measured"
+    },
+    {
+      "objective_item": "production_rollback_graph",
+      "state": "proven_controlled_only",
+      "evidence": [
+        "docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json",
+        "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md"
+      ],
+      "blocking_reason": "rollback_plan_exists_but_does_not_open_production_branch"
+    },
+    {
+      "objective_item": "project_group_scope_15_domains",
+      "state": "proven",
+      "evidence": [
+        "docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json",
+        "docs/harness/evidence/headroom-project-group-application-router-20260621.md",
+        "docs/harness/evidence/headroom-project-application-coverage-matrix-20260621.md"
+      ],
+      "blocking_reason": "none"
+    },
+    {
+      "objective_item": "accepted_integrated_production_ready_guard",
+      "state": "false_guard",
+      "evidence": [
+        "docs/harness/evidence/headroom-lcx-completion-audit-20260623.json",
+        "docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md"
+      ],
+      "blocking_reason": "accepted_integrated_and_production_ready_remain_false"
+    }
+  ],
+  "supporting_evidence": {
+    "completion_audit": "HEADROOM-LCX-COMPLETION-AUDIT-20260623",
+    "graph_manifest": "HEADROOM-LCX-GRAPH-MANIFEST-20260623",
+    "gap_matrix": "HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623",
+    "transition_graph": "HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-20260623",
+    "authorization_field_map": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623",
+    "authorization_window_request": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
+    "next_stage_authorization_package": "HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623",
+    "approval_signed_bundle": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+    "authorization_boundary_review": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623",
+    "runner_contract": "HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623",
+    "runtime_graph": "HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623",
+    "cost_model": "HEADROOM-COST-SENSITIVITY-MODEL-20260621",
+    "answer_gate": "HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622"
+  },
+  "current_state": {
+    "graph_status": "controlled_pending_real_measurement",
+    "real_measurement_gap_present": true,
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+    "authorization_window_id": "LCX-MEASURE-20260622-001",
+    "next_stage_authorization_package_status": "next_stage_authorization_package_granted_precheck_only",
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+  },
+  "summary": {
+    "proven_count": 1,
+    "controlled_only_count": 3,
+    "blocked_count": 1,
+    "false_guard_count": 1,
+    "project_count": 15
+  },
+  "non_claims": {
+    "real_business_equivalence_proven": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "real_kds_api_write": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

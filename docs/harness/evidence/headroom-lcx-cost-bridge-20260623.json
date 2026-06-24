@@ -1,0 +1,42 @@
+{
+  "evidence_id": "HEADROOM-LCX-COST-BRIDGE-20260623",
+  "date": "2026-06-23",
+  "status": "cost_bridge_defined_replay_only",
+  "project_count": 15,
+  "bridge_mode": "replay_only",
+  "source_evidence": {
+    "cost_sensitivity_model": "HEADROOM-COST-SENSITIVITY-MODEL-20260621",
+    "loop_cost_observation_series": "HEADROOM-LOOP-COST-OBSERVATION-SERIES-20260621",
+    "independent_replay": "HEADROOM-INDEPENDENT-LOOP-ROUND-REPLAY-20260621",
+    "metadata_replay_check": "HEADROOM-LCX-METADATA-REPLAY-CHECK-20260622"
+  },
+  "current_state": {
+    "cost_sensitivity_gate": true,
+    "series_gate": true,
+    "independent_round_gate": true,
+    "metadata_replay_gate": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "bridge_summary": {
+    "cost_model_saving_rate": 0.989505,
+    "series_runtime_saving_rate": null,
+    "independent_replay_runtime_saving_rate": 0.274346
+  },
+  "non_claims": {
+    "real_measurement_open": false,
+    "real_business_equivalence_proven": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "real_kds_api_write": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

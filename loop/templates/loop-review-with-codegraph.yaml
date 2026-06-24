@@ -11,6 +11,18 @@ loop_review_with_codegraph:
     risk_flags: []
     evidence_ref:
   findings: []
+  karpathy_gate:
+    assumptions_reported:
+    assumptions_clarified:
+    minimal_scope_confirmed:
+    alternative_paths_disclosed:
+    tradeoff_documented:
+    acceptance_checklist:
+    orphan_cleanup_checked:
+    reusable_criteria:
+      - criterion:
+        verified:
+        evidence:
   waes:
     required:
     result:

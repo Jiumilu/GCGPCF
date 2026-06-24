@@ -1,0 +1,76 @@
+schema_id: globalcloud.cognee_p3_write_preview_rollback_result.v1
+required:
+  - task_id
+  - loop_round_id
+  - project_id
+  - agent_id
+  - model_id
+  - pilot_phase
+  - source_tag
+  - source_tenant
+  - retrieval_mode
+  - scenario_id
+  - operation
+  - caller
+  - tenant_id
+  - owner
+  - payload_tier
+  - harness_evidence_ref
+  - retrieval_query_hash
+  - marker_gate
+  - waes_decision
+  - answer_equivalence
+  - write_requested
+  - owner_authorization_present
+  - write_allowed
+  - expected_blocked_reason
+  - reason_for_request
+  - token_before
+  - token_after
+  - saving_rate
+  - latency_ms_p95
+  - unauthorized_write_blocked
+  - measured_production_tokens
+  - accepted
+  - integrated
+  - production_ready
+properties:
+  retrieval_mode:
+    enum: [write_preview]
+  operation:
+    enum: [remember_preview, forget_preview]
+  source_tag:
+    enum: [headroom, cognee, dual]
+  payload_tier:
+    enum: [preview, non_business_only]
+  tenant_id:
+    enum: [project_group]
+  expected_blocked_reason:
+    enum: [authorization_absent, waes_block, missing_evidence, operation_invalid]
+  waes_decision:
+    enum: [pass, warn, block]
+  marker_gate:
+    enum: [pass, fail]
+  answer_equivalence:
+    enum: [pass, partial, fail, unknown]
+  write_requested:
+    enum: [true, false]
+  owner_authorization_present:
+    enum: [true, false]
+  write_allowed:
+    enum: [true, false]
+  unauthorized_write_blocked:
+    enum: [true, false]
+  accepted:
+    type: boolean
+  integrated:
+    type: boolean
+  production_ready:
+    type: boolean
+  measured_production_tokens:
+    type: boolean
+non_claim_defaults:
+  measured_production_tokens: false
+  accepted: false
+  integrated: false
+  production_ready: false

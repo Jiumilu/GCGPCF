@@ -1,0 +1,55 @@
+package: globalcloud-cognee-pilot
+status: controlled
+version: v1.0
+owner: GPCF
+date: 2026-06-23
+telemetry_default: off
+production_admission_gate: false
+measured_production_tokens: false
+accepted: false
+integrated: false
+production_ready: false
+current_gate: pilot_dry_run
+global_allowed_modes:
+  - mcp_recall_dry_run
+  - mcp_stats_dry_run
+  - api_forget_preview
+  - api_remember_preview
+  - api_retrieve_preview
+global_blocked_modes:
+  - production_proxy
+  - production_recall
+  - production_remember
+  - production_forget
+  - memory_as_business_fact
+  - cross_project_memory_merge
+  - output_shaper_override
+route_required_fields:
+  - project_id
+  - source_path
+  - requires_authorization
+  - allowed_modes
+  - blocked_modes
+  - allowed_tenant
+  - owner
+  - cost_fields
+  - marker_gate
+project_routes:
+  - project_id: GPCF
+    source_path: 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md
+    owner: GPCF
+    allowed_modes: [mcp_recall_dry_run, mcp_stats_dry_run, api_forget_preview, api_remember_preview]
+    blocked_modes: [production_proxy, production_recall, production_remember, production_forget, memory_as_business_fact, cross_project_memory_merge, output_shaper_override]
+    requires_authorization: true
+    cost_fields: [cognee_recall_tokens_before, cognee_recall_tokens_after, cognee_recall_latency_ms]
+    marker_gate: mandatory
+    allowed_tenant: project_group
+  - project_id: KDS
+    source_path: docs/harness/KDS/evidence/loop-state.md
+    owner: KDS
+    allowed_modes: [mcp_recall_dry_run, mcp_stats_dry_run, api_retrieve_preview]
+    blocked_modes: [production_proxy, production_recall, production_remember, production_forget, memory_as_business_fact, cross_project_memory_merge, output_shaper_override]
+    requires_authorization: true
+    cost_fields: [cognee_recall_tokens_before, cognee_recall_tokens_after, cognee_recall_latency_ms]
+    marker_gate: mandatory
+    allowed_tenant: project_group

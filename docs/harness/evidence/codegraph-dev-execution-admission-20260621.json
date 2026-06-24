@@ -66,7 +66,8 @@
       "actual_changed_files",
       "affected_tests",
       "missed_impact_count",
-      "time_to_first_target"
+      "time_to_first_target",
+      "review_rework_count"
     ]
   },
   "admission_rules": {

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md
 source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

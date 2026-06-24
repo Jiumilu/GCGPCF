@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-pilot-pack-20260622.md
 source_path: docs/harness/evidence/codegraph-dev-execution-pilot-pack-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -83,6 +83,7 @@ actual_changed_files=0
 affected_tests=[]
 missed_impact_count=0
 time_to_first_target=under_1_minute_observed
+review_rework_count=0
 ```
 
 ## 状态边界

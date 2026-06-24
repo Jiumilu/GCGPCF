@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-7682DAC0E5
 title: "Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001"
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
-domain: ontology-governance
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+domain: docs
 status: controlled
 version: v1.0
 owner: GPCF
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md
 source_path: docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

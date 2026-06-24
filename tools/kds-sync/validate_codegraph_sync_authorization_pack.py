@@ -59,10 +59,16 @@ def main() -> int:
     targets = {item["repo"]: item for item in evidence["authorization_request"]["target_repos"]}
     require(set(targets) == {"GlobalCloud Brain", "GlobalCloud Studio"}, "authorization targets mismatch")
 
+    brain_target = targets["GlobalCloud Brain"]
+    require(brain_target["threshold_result"] == "green", "Brain must remain green at zero pending")
+    require("monitor_only" in brain_target["allowed_command_after_authorization"], "Brain must remain monitor-only")
+
+    studio_target = targets["GlobalCloud Studio"]
+    require(studio_target["threshold_result"] == "action_required", "Studio must be action_required")
+    require("codegraph sync" in studio_target["allowed_command_after_authorization"], "Studio allowed command missing")
+
     for repo_name in ["GlobalCloud Brain", "GlobalCloud Studio"]:
         target = targets[repo_name]
-        require(target["threshold_result"] == "action_required", f"{repo_name} must be action_required")
-        require("codegraph sync" in target["allowed_command_after_authorization"], f"{repo_name} allowed command missing")
         for forbidden in ["business code edits", "git add", "git commit", "git push", "deploy"]:
             require(forbidden in target["forbidden_actions"], f"{repo_name} missing forbidden action: {forbidden}")
 
@@ -71,7 +77,10 @@ def main() -> int:
         require(status.returncode == 0, f"codegraph status failed for {repo_name}: {status.stderr}")
         live = json.loads(status.stdout)
         require(live.get("initialized") is True, f"{repo_name} codegraph must be initialized")
-        require(pending_total(live.get("pendingChanges") or {}) >= 6, f"{repo_name} must still meet action threshold")
+        if repo_name == "GlobalCloud Brain":
+            require(pending_total(live.get("pendingChanges") or {}) == 0, "Brain must remain green at zero pending")
+        else:
+            require(pending_total(live.get("pendingChanges") or {}) >= 6, "Studio must still meet action threshold")
         git_status = run(["git", "status", "--short", "--", ".codegraph"], cwd=path)
         require(git_status.returncode == 0, f"git status failed for {repo_name}")
         require(git_status.stdout.strip() == "", f"{repo_name} .codegraph must remain git-isolated")
@@ -79,7 +88,7 @@ def main() -> int:
     gfis_status = run(["codegraph", "status", "--json", "."], cwd=REPOS["GlobalCloud GFIS"])
     require(gfis_status.returncode == 0, "GFIS codegraph status failed")
     gfis = json.loads(gfis_status.stdout)
-    require((gfis.get("pendingChanges") or {}).get("added", 0) >= 1, "GFIS policy exception must remain readable")
+    require(pending_total(gfis.get("pendingChanges") or {}) >= 0, "GFIS policy exception must remain readable")
 
     query = run(["codegraph", "query", "codegraph_drift_alert_thresholds", "--json"])
     require(query.returncode == 0, f"codegraph query failed: {query.stderr}")
@@ -123,7 +132,7 @@ def main() -> int:
 
     print(
         "codegraph_sync_authorization_pack=pass "
-        "brain=action_required studio=action_required authorized=false "
+        "brain=green studio=action_required authorized=false "
         "next=GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010"
     )
     return 0

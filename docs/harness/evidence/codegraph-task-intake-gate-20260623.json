@@ -1,0 +1,77 @@
+{
+  "evidence_id": "CODEGRAPH-TASK-INTAKE-GATE-20260623",
+  "scope": "GPCF-CODEGRAPH-TASK-INTAKE-GATE-001",
+  "status": "task_intake_gate_ready",
+  "task_schema": "ready",
+  "gate_policy": "docs/codegraph/codegraph-task-intake-gate.md",
+  "validator": "tools/kds-sync/validate_codegraph_task_intake_gate.py",
+  "positive_fixture": "fixtures/codegraph/task-intake-gate/positive-task-intake.json",
+  "negative_fixtures": [
+    "fixtures/codegraph/task-intake-gate/negative-missing-codegraph-evidence.json",
+    "fixtures/codegraph/task-intake-gate/negative-empty-affected-tests-no-fallback.json",
+    "fixtures/codegraph/task-intake-gate/negative-missing-expected-tests.json"
+  ],
+  "required_fields": {
+    "pre_change_analysis": [
+      "query",
+      "query_results",
+      "target_nodes",
+      "node_inspection",
+      "affected"
+    ],
+    "implementation_constraints": [
+      "target_nodes",
+      "affected_scope",
+      "files_allowed_to_change",
+      "files_not_to_touch",
+      "expected_tests"
+    ],
+    "test_selection": [
+      "affected_tests",
+      "fallback_tests",
+      "fallback_reason"
+    ],
+    "codegraph_evidence": [
+      "query",
+      "target_nodes",
+      "affected",
+      "changed_files",
+      "test_selection_reason",
+      "post_change_status"
+    ],
+    "efficiency_metrics": [
+      "manual_scan_files",
+      "codegraph_candidate_files",
+      "actual_changed_files",
+      "affected_tests",
+      "missed_impact_count",
+      "time_to_first_target",
+      "review_rework_count"
+    ]
+  },
+  "blocking_rules": [
+    "missing_codegraph_evidence",
+    "missing_target_nodes",
+    "missing_affected_scope",
+    "empty_affected_tests_without_fallback_reason",
+    "missing_expected_tests",
+    "changed_files_outside_allowed_scope",
+    "accepted_integrated_or_production_ready_true",
+    "production_write_or_external_api_write_true",
+    "codegraph_claimed_as_final_waes_or_harness_decision"
+  ],
+  "dry_run_results": {
+    "positive_fixture": "pass",
+    "negative_missing_codegraph_evidence": "blocked",
+    "negative_empty_affected_tests_no_fallback": "blocked",
+    "negative_missing_expected_tests": "blocked"
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004",
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

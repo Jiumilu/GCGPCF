@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-06-23
+生成日期：2026-06-24
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -211,6 +211,7 @@
 | GPCF-DOC-37DD68363F | AGENTS | AGENTS.md | controlled |
 | GPCF-DOC-990EE0035A | CodeGraph 业务开发执行层准入规则 | docs/codegraph/codegraph-dev-execution-admission.md | controlled |
 | GPCF-DOC-E1D4339FD6 | CodeGraph 业务开发执行 Harness 门禁 | docs/codegraph/codegraph-dev-execution-harness-gate.md | controlled |
+| GPCF-DOC-7C6A2D0D31 | CodeGraph 任务 Intake 门禁 | docs/codegraph/codegraph-task-intake-gate.md | controlled |
 | GPCF-DOC-CD33EDEF59 | domain-pool-dual-model-v0.1 | docs/gc-knowledge-fabric/domain-pool-dual-model-v0.1.md | controlled |
 | GPCF-DOC-3D7D5278CC | formal-evidence-execution-repair-response-deadline-monitor-preview-dry-run-v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-repair-response-deadline-monitor-preview-dry-run-v0.1.md | controlled |
 | GPCF-DOC-FAE70E409E | formal-evidence-execution-reviewer-acceptance-acknowledgement-routing-package-preview-dry-run-v0.1 | docs/gc-knowledge-fabric/formal-evidence-execution-reviewer-acceptance-acknowledgement-routing-package-preview-dry-run-v0.1.md | controlled |
@@ -271,6 +272,8 @@
 | GPCF-DOC-B4EAB2D0DA | route-adapter-dry-run-contract-v0.1 | docs/gc-knowledge-fabric/route-adapter-dry-run-contract-v0.1.md | controlled |
 | GPCF-DOC-C994E78BC6 | shared-types-api-contract-alignment-v0.1 | docs/gc-knowledge-fabric/shared-types-api-contract-alignment-v0.1.md | controlled |
 | GPCF-DOC-E716105009 | status-machine-policy | docs/gc-knowledge-fabric/status-machine-policy.md | controlled |
+| GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | controlled |
+| GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-975562EE9E | Harness 项目验收清单 — GPCF | docs/harness/acceptance.md | controlled |
 | GPCF-DOC-FF1E624F1E | agent-reach-candidate-search-replay-ledger-20260621 | docs/harness/evidence/agent-reach-candidate-search-replay-ledger-20260621.md | controlled |
 | GPCF-DOC-980866F10E | agent-reach-candidate-search-review-20260620 | docs/harness/evidence/agent-reach-candidate-search-review-20260620.md | controlled |
@@ -289,6 +292,7 @@
 | GPCF-DOC-AGENT-REACH-P7-EXECUTION-HARNESS-GUARD-20260622 | agent-reach-p7-execution-harness-guard-20260622 | docs/harness/evidence/agent-reach-p7-execution-harness-guard-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P8-AUTHORIZED-PIPELINE-CLOSURE-20260622 | Agent-Reach P8 授权后 Pipeline 闭包证据 2026-06-22 | docs/harness/evidence/agent-reach-p8-authorized-pipeline-closure-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P8-POST-AUTHORIZATION-DRIVER-20260622 | Agent-Reach P8 授权后执行 Driver 证据 2026-06-22 | docs/harness/evidence/agent-reach-p8-post-authorization-driver-20260622.md | controlled |
+| GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-20260622 | 项目群全量真实搜索覆盖证据 2026-06-22 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-20260622.md | controlled |
 | GPCF-DOC-A1E6C5C544 | CodeGraph 业务开发执行层准入证据 | docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | controlled |
 | GPCF-DOC-C8BB19E987 | codegraph-dev-execution-authorization-waiting-20260622 | docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.md | controlled |
 | GPCF-DOC-6D28F6D4CE | codegraph-dev-execution-document-localization-debt-closure-20260622 | docs/harness/evidence/codegraph-dev-execution-document-localization-debt-closure-20260622.md | controlled |
@@ -300,7 +304,15 @@
 | GPCF-DOC-BB2EA6B15E | CodeGraph GFIS 工具状态审计授权阻断证据 | docs/harness/evidence/codegraph-dev-execution-gfis-tool-state-audit-blocked-20260622.md | controlled |
 | GPCF-DOC-D2709494C0 | CodeGraph 业务开发执行 Harness 门禁证据 | docs/harness/evidence/codegraph-dev-execution-harness-gate-20260622.md | controlled |
 | GPCF-DOC-9F97322FB4 | CodeGraph 开发执行层项目群收口证据 | docs/harness/evidence/codegraph-dev-execution-project-group-closure-20260622.md | controlled |
+| GPCF-DOC-CGFSR20260623 | CodeGraph GFIS 只读 Scope Review | docs/harness/evidence/codegraph-gfis-scope-review-20260623.md | controlled |
+| GPCF-DOC-CGNC20260623 | CodeGraph 常态化归一清单证据 | docs/harness/evidence/codegraph-normalization-checklist-20260623.md | controlled |
+| GPCF-DOC-2AF01CCB7C | CodeGraph 任务 Intake 门禁证据 | docs/harness/evidence/codegraph-task-intake-gate-20260623.md | controlled |
 | GPCF-DOC-481D44CB8A | codegraph-watchlist-sync-plan-20260621 | docs/harness/evidence/codegraph-watchlist-sync-plan-20260621.md | controlled |
+| GPCF-DOC-8C7F2F4D5A | Cognee P1 召回对照 Evidence | docs/harness/evidence/cognee-p1-recall-comparison-pilot-20260623.md | controlled |
+| GPCF-DOC-8C7F2D6F01 | Cognee P2 写入预览 Evidence | docs/harness/evidence/cognee-p2-write-preview-pilot-20260623.md | controlled |
+| GPCF-DOC-8C7F2F4F01 | Cognee P3 写入预览回滚演练 Evidence | docs/harness/evidence/cognee-p3-write-preview-rollback-20260623.md | controlled |
+| GPCF-DOC-8C7F2F5002 | Cognee P4 真实写入前置预检 Evidence | docs/harness/evidence/cognee-p4-real-writeback-precheck-20260623.md | controlled |
+| GPCF-DOC-8C7F2F5003 | Cognee P4 真实写入前置预检 Evidence（修复复测 20260624） | docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.md | controlled |
 | GPCF-DOC-5D0159ED7D | evidence-index | docs/harness/evidence/evidence-index.md | controlled |
 | GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONACKNOWLEDGEMENTROUTINGPRECHECKPREVIEWCURRENTSTATED15820260622 | GCKF P0 正式 evidence 回执路由预检预览当前态证据 D158 | docs/harness/evidence/gckf-p0-formal-evidence-execution-acknowledgement-routing-precheck-preview-current-state-d158-20260622.md | controlled |
 | GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONAPPROVALCURRENTSTATED13220260622 | GCKF P0 正式 evidence 执行批准当前态证据 D132 | docs/harness/evidence/gckf-p0-formal-evidence-execution-approval-current-state-d132-20260622.md | controlled |
@@ -361,20 +373,26 @@
 | GPCF-DOC-3674F84C97 | GFIS WAS Source Record Submission Precheck Evidence | docs/harness/evidence/gfis-was-source-record-submission-precheck-20260621.md | controlled |
 | GPCF-DOC-89DF4CBBFA | git-risk-classification-20260617 | docs/harness/evidence/git-risk-classification-20260617.md | controlled |
 | GPCF-DOC-7EC36CDCAD | Headroom Cost Sensitivity Model | docs/harness/evidence/headroom-cost-sensitivity-model-20260621.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | Headroom LCX 夹具扩展回放对比证据 | docs/harness/evidence/headroom-lcx-fixture-extension-replay-comparison-20260622.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | Headroom LCX 脱敏夹具稳定性门禁证据 | docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | Headroom LCX Completion Audit Evidence | docs/harness/evidence/headroom-lcx-completion-audit-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-COST-BRIDGE-20260623 | Headroom LCX Cost Bridge Evidence | docs/harness/evidence/headroom-lcx-cost-bridge-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | Headroom LCX Fixture Extension Replay Comparison Evidence | docs/harness/evidence/headroom-lcx-fixture-extension-replay-comparison-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | Headroom LCX Fixture Stability Gate Evidence | docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622 | Headroom LCX L3.5 脱敏答案等价样例门禁 | docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Headroom LCX marker retrieval miss 比较门禁证据 | docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md | controlled |
-| GPCF-DOC-54C01FA442 | headroom-lcx-measurement-admission-request-20260622 | docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Headroom LCX Marker Retrieval Miss Comparison Gate Evidence | docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md | controlled |
 | GPCF-DOC-1F18B14E93 | Headroom LCX Metadata Replay Check Evidence 20260622 | docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-20260623 | Headroom LCX Objective Coverage Matrix Evidence | docs/harness/evidence/headroom-lcx-objective-coverage-matrix-20260623.md | controlled |
 | GPCF-DOC-0F02316005 | headroom-lcx-p0-runtime-replay-20260621 | docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.md | controlled |
 | GPCF-DOC-22C297756A | headroom-lcx-p1-proxy-dry-run-smoke-20260621 | docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.md | controlled |
 | GPCF-DOC-7C93269D31 | Headroom LCX P2 MCP SDK Dry-run Smoke Evidence | docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | headroom-lcx-project-group-replay-stability-20260622 | docs/harness/evidence/headroom-lcx-project-group-replay-stability-20260622.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | headroom-lcx-readiness-pilot-authorization-package-20260622 | docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md | controlled |
-| GPCF-DOC-666816F27E | headroom-lcx-rollback-plan-20260622-001 | docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | controlled |
-| GPCF-DOC-A1E6CF72D2 | headroom-lcx-sanitized-measurement-dry-run-20260622 | docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | headroom-lcx-sanitized-token-fixture-extension-20260622 | docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623 | Headroom LCX Production Runtime Graph Evidence | docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | Headroom LCX Project Group Replay Stability Evidence | docs/harness/evidence/headroom-lcx-project-group-replay-stability-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623 | Headroom LCX 真实测量授权字段映射证据 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623 | Headroom LCX Real Measurement Authorization Request | docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623 | Headroom LCX Real Measurement Authorization Signoff Template Evidence | docs/harness/evidence/headroom-lcx-real-measurement-authorization-signoff-template-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623 | Headroom LCX Real Measurement Gap Matrix Evidence | docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623 | Headroom LCX Real Measurement Runner Contract Evidence | docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-20260623 | Headroom LCX Real Measurement Transition Graph Evidence | docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | Headroom LCX Remaining Blocker Inventory Evidence | docs/harness/evidence/headroom-lcx-remaining-blocker-inventory-20260623.md | controlled |
 | GPCF-DOC-A9483B7541 | Headroom LCX WAES Harness 准入决定 admitted 20260622 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md | controlled |
 | GPCF-DOC-3AA4B2B9B0 | Headroom LCX WAES Harness 准入决定 blocked 20260622 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-blocked-20260622.md | controlled |
 | GPCF-DOC-EE2D84B879 | Headroom LCX WAES Harness Admission Decision Checklist 20260622 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.md | controlled |
@@ -416,6 +434,7 @@
 | GPCF-DOC-7FB5D5F117 | Loop 治理效率债务定位器证据 | docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md | controlled |
 | GPCF-DOC-2EEC93C354 | Loop 治理五段式审查证据 | docs/harness/evidence/loop-governance-five-segment-review-20260617.md | controlled |
 | GPCF-DOC-E768727850 | Loop 治理轮次审查计划证据 | docs/harness/evidence/loop-governance-round-review-plan-20260617.md | controlled |
+| GPCF-DOC-LOOP-OPERATIONAL-GATE-TRIAGE-20260624 | Loop Operational Gate Triage 20260624 | docs/harness/evidence/loop-operational-gate-triage-20260624.md | controlled |
 | GPCF-DOC-5F4B0C8D71 | Loop UI 治理基线证据 | docs/harness/evidence/loop-ui-governance-baseline-20260622.md | controlled |
 | GPCF-DOC-8EDCE099ED | ODF Phase 9 动态源稳定化报告 | docs/harness/evidence/odf-phase9-dynamic-source-stabilization-report-20260619.md | controlled |
 | GPCF-DOC-62444E2231 | OKF v0.1 已批准摘要写入器正向 fixture 证据 | docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md | controlled |
@@ -425,10 +444,16 @@
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | controlled |
 | GPCF-DOC-718A85136C | Studio Channels Chat 入口补齐验证证据 | docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | controlled |
 | GPCF-DOC-7D6C9E5C21 | Studio Chat 工作台键盘与移动端复验证据 | docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | controlled |
+| GPCF-DOC-A13F6D7B4E | Studio 默认凭据整改链路可访问性复验证据 | docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | controlled |
+| GPCF-DOC-8C4A16F2DE | Studio 默认凭据后端强制门禁落地证据 | docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md | controlled |
+| GPCF-DOC-F1A4B89C2D | Studio 默认凭据后端门禁真实运行复验证据 | docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md | controlled |
 | GPCF-DOC-9F2A7D61B3 | Studio 默认凭据登录分流验证证据 | docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md | controlled |
+| GPCF-DOC-5A9F2D1C7E | Studio 默认凭据移动端运行链路验证证据 | docs/harness/evidence/studio-default-credential-mobile-runtime-verified-20260623.md | controlled |
 | GPCF-DOC-1D4C8A73E2 | Studio 默认凭据治理动作后收口验证证据 | docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md | controlled |
 | GPCF-DOC-6C81F0E2A4 | Studio 默认凭据提醒移动端紧凑化验证证据 | docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md | controlled |
 | GPCF-DOC-5B7A12D4E9 | Studio 默认凭据提醒非阻断化验证证据 | docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md | controlled |
+| GPCF-DOC-7C5E1A92D4 | Studio 默认凭据治理运行链路验证证据 | docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md | controlled |
+| GPCF-DOC-5A7D23B8E1 | Studio 默认凭据整改零噪声复验证据 | docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md | controlled |
 | GPCF-DOC-5C7D184EA2 | Studio Jobs Chat 入口补齐验证证据 | docs/harness/evidence/studio-jobs-chat-entry-verified-20260622.md | controlled |
 | GPCF-DOC-8A54D0E2C1 | Studio Kanban Chat 入口补齐验证证据 | docs/harness/evidence/studio-kanban-chat-entry-verified-20260622.md | controlled |
 | GPCF-DOC-BF2C4E0A91 | Studio Kanban 导航拓扑复核证据 | docs/harness/evidence/studio-kanban-navigation-topology-20260622.md | controlled |
@@ -443,7 +468,7 @@
 | GPCF-DOC-51A6C90013 | was-real-source-record-candidate-precheck-execution-013-20260622 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-013-20260622.md | controlled |
 | GPCF-DOC-51A6C90014 | was-real-source-record-candidate-precheck-execution-014-20260622 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-014-20260622.md | controlled |
 | GPCF-DOC-1E408CB4A5 | was-real-source-record-candidate-precheck-execution-20260622 | docs/harness/evidence/was-real-source-record-candidate-precheck-execution-20260622.md | controlled |
-| GPCF-DOC-9B3297DFDC | was-real-source-record-monitor-002-20260621 | docs/harness/evidence/was-real-source-record-monitor-002-20260621.md | controlled |
+| GPCF-DOC-9B3297DFDC | WAS Real Source Record Monitor 002 Evidence | docs/harness/evidence/was-real-source-record-monitor-002-20260621.md | controlled |
 | GPCF-DOC-408248DB31 | WAS Real Source Record Monitor 006 Evidence | docs/harness/evidence/was-real-source-record-monitor-006-20260621.md | controlled |
 | GPCF-DOC-4E75E94A0F | WAS Real Source Record Monitor 012 Evidence | docs/harness/evidence/was-real-source-record-monitor-012-20260621.md | controlled |
 | GPCF-DOC-102515B96D | WAS Real Source Record Monitor 013 Evidence | docs/harness/evidence/was-real-source-record-monitor-013-20260621.md | controlled |
@@ -549,8 +574,10 @@
 | GPCF-DOC-1496E69CD8 | GPCF-CF-LR-066 Post-push L3 Admission Reconciliation | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | controlled |
 | GPCF-DOC-A1A8006738 | GPCF CodeGraph Active Drift Metrics 002 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002.md | controlled |
 | GPCF-DOC-8CB660E132 | GPCF CodeGraph Active Drift Monitor | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001.md | controlled |
+| GPCF-DOC-D1B5B8B030 | Loop Round - CodeGraph Brain/GFIS 授权边界复核 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018.md | controlled |
 | GPCF-DOC-DE30AB91D7 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | controlled |
 | GPCF-DOC-31365B7D25 | Loop Round - CodeGraph 开发执行授权等待态 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007 | Loop Round - CodeGraph 业务开发执行窗口授予 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md | controlled |
 | GPCF-DOC-AC51B4A6F1 | Loop Round - CodeGraph 开发执行层中文化文档债务收口 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | controlled |
 | GPCF-DOC-0D35D7BC63 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | controlled |
 | GPCF-DOC-11E86C4B9A | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | controlled |
@@ -567,6 +594,7 @@
 | GPCF-DOC-33EED81A10 | GPCF CodeGraph Drift Alert Thresholds 008 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md | controlled |
 | GPCF-DOC-794D90A6F1 | GPCF CodeGraph GFIS Large File Policy | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-LARGE-FILE-POLICY-001.md | controlled |
 | GPCF-DOC-8B82DFE880 | GPCF CodeGraph GFIS Residual Notice Investigation | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-RESIDUAL-NOTICE-001.md | controlled |
+| GPCF-DOC-CGFSR019 | Loop Round - CodeGraph GFIS 只读 Scope Review | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019.md | controlled |
 | GPCF-DOC-895151260A | Loop Round GPCF-CODEGRAPH-GOAL-OPT-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GOAL-OPT-001.md | controlled |
 | GPCF-DOC-44DA9A4D2E | GPCF CodeGraph Impact Assessment | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-ASSESSMENT-001.md | controlled |
 | GPCF-DOC-8055ED77AE | GPCF CodeGraph Impact Metrics Baseline 006 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006.md | controlled |
@@ -574,6 +602,7 @@
 | GPCF-DOC-B9144A4914 | GPCF CodeGraph Impact Report Dry-run 005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005.md | controlled |
 | GPCF-DOC-28984FE940 | GPCF CodeGraph Integration Closure Audit | docs/harness/loops/loop-round-GPCF-CODEGRAPH-INTEGRATION-CLOSURE-001.md | controlled |
 | GPCF-DOC-7272ECE5C1 | Loop Round - CodeGraph KDS mirror scope review 授权复核 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017.md | controlled |
+| GPCF-DOC-CGNC001 | Loop Round - CodeGraph 常态化归一清单 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-NORMALIZATION-CHECKLIST-001.md | controlled |
 | GPCF-DOC-DA39A6A262 | Loop Round GPCF-CODEGRAPH-P1-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-P1-ADMISSION-001.md | controlled |
 | GPCF-DOC-F57E6B4E33 | Loop Round GPCF-CODEGRAPH-PROJECT-GROUP-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-001.md | controlled |
 | GPCF-DOC-55CEA573A4 | GPCF CodeGraph Project Group Full Fabric 001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001.md | controlled |
@@ -588,11 +617,19 @@
 | GPCF-DOC-3BC26C2DFE | GPCF CodeGraph Sync-Only Authorization 003 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003.md | controlled |
 | GPCF-DOC-3DB2BD8346 | GPCF CodeGraph Sync-only Closure 010 Authorized | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED.md | controlled |
 | GPCF-DOC-BE4E5F68B8 | GPCF CodeGraph Sync-only Closure 010 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010.md | controlled |
+| GPCF-DOC-9B7D44D8F2 | Loop Round - GPCF-CODEGRAPH-TASK-INTAKE-GATE-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-TASK-INTAKE-GATE-001.md | controlled |
 | GPCF-DOC-9D0EC80EB6 | Loop Round - CodeGraph watchlist post-Studio 监控 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md | controlled |
+| GPCF-DOC-8C1A3F9020 | Loop Round - CodeGraph watchlist steady monitor 20260623 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020.md | controlled |
 | GPCF-DOC-005FDDA3DC | GPCF CodeGraph Watchlist Sync Authorization Pack 002 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002.md | controlled |
 | GPCF-DOC-BB1D26426D | GPCF CodeGraph Watchlist Sync-only Closure 003 Authorized | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED.md | controlled |
 | GPCF-DOC-D3B37861BD | GPCF CodeGraph Watchlist Sync Plan 001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-PLAN-001.md | controlled |
 | GPCF-DOC-7AAEB2E376 | Loop Round GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005.md | controlled |
+| GPCF-DOC-LOOP-COGNEE-P1-P2-P3-CLOSURE-001 | Loop Round - GPCF Cognee 受控试点 P1/P2/P3 收口 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P1-P2-P3-CLOSURE-001.md | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-LIVE-001 | Loop Round - GPCF Cognee P4 真实写入运行演练 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001 | Loop Round - GPCF Cognee P4 真实写入前置预检 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001.md | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002 | Loop Round - GPCF Cognee P4 真实写入前置修复与复测 002 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002.md | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003 | Loop Round - GPCF Cognee P4 真实写入前置复核与确认 003 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003.md | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004 | Loop Round - GPCF Cognee P4 真实写入执行前授权评审 004 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004.md | controlled |
 | GPCF-DOC-B0BFD5B1FB | GC-Knowledge Fabric P0-D1 启动与规则冻结 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | controlled |
 | GPCF-DOC-4F7DC277C5 | GC-Knowledge Fabric P0-D10 Repository / Service Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | controlled |
 | GPCF-LOOP-GCKF-P0-D100-001 | Loop Round GPCF-GCKF-P0-D100-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | controlled |
@@ -782,30 +819,48 @@
 | GPCF-DOC-6AAF1F40B0 | Loop Round GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001.md | controlled |
 | GPCF-DOC-F43423639D | Loop Round GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001.md | controlled |
 | GPCF-DOC-CB613DC3D1 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623 | Loop Round GPCF Headroom LCX Authorization Boundary Review 20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623.md | controlled |
 | GPCF-DOC-F59787B942 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001.md | controlled |
 | GPCF-DOC-1320B915AE | Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001.md | controlled |
 | GPCF-DOC-2EF89E2432 | Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001.md | controlled |
 | GPCF-DOC-74DFF5CB30 | loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-001 | Loop Round: GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001.md | controlled |
 | GPCF-DOC-C81CB2CF9A | loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-COST-BRIDGE-001 | Loop Round GPCF Headroom LCX Cost Bridge 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COST-BRIDGE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | Loop Round GPCF Headroom LCX Fixture Extension Negative Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | Loop Round GPCF Headroom LCX Fixture Extension Replay Comparison 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | Loop Round GPCF Headroom LCX Fixture Stability Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623 | Loop Round GPCF Headroom LCX Frontmatter 冲突修复与闭环回写 20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623.md | controlled |
 | GPCF-DOC-5FF130412D | Loop Round GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-LOOP-001 | Loop Round GPCF Headroom LCX Graph Manifest 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-GRAPH-MANIFEST-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622 | Loop Round GPCF Headroom LCX L3.5 Answer Equivalence Synthetic Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622 | Loop Round GPCF Headroom LCX L3.5 Controlled Sanitized Pilot Window 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622 | Loop Round GPCF Headroom LCX L3.5 Multi Window Stability 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-001.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Loop Round GPCF Headroom LCX marker retrieval miss 比较门禁 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | Loop Round GPCF Headroom LCX Marker Retrieval Miss Comparison Gate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | controlled |
 | GPCF-DOC-4F8936D7E5 | Loop Round GPCF Headroom LCX Measurement Admission Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md | controlled |
 | GPCF-DOC-A7161F4187 | Loop Round GPCF Headroom LCX Metadata Replay Check 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001 | Loop Round: GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001.md | controlled |
 | GPCF-DOC-AD82144FCE | Loop Round GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001.md | controlled |
 | GPCF-DOC-58AA82BBE3 | Loop Round GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001.md | controlled |
 | GPCF-DOC-5966FE20DD | Loop Round GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001.md | controlled |
 | GPCF-DOC-8161B0C039 | Loop Round GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md | controlled |
 | GPCF-DOC-01EFEECC41 | Loop Round GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md | controlled |
 | GPCF-DOC-FA44EE9146 | Loop Round GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001 | Loop Round: GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | Loop Round GPCF Headroom LCX Project Group Replay Stability 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622 | Loop Round GPCF Headroom LCX Project Group Sanitized Fixture 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | Loop Round GPCF Headroom LCX Readiness Pilot Authorization Package 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001 | Loop Round GPCF Headroom LCX Real Measurement Approval Signed Bundle 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-LOOP-001 | Loop 轮次 GPCF Headroom LCX 真实测量授权字段映射 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623 | Loop Round GPCF Headroom LCX Real Measurement Authorization Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001 | Loop Round GPCF Headroom LCX Real Measurement Authorization Signoff Template 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001 | 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001 | 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-LOOP-001 | Loop Round GPCF Headroom LCX Real Measurement Gap Matrix 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001 | 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-LOOP-001 | Loop Round GPCF Headroom LCX Real Measurement Runner Contract 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-LOOP-001 | Loop Round GPCF Headroom LCX Real Measurement Transition Graph 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-001.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001 | Loop Round: GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001.md | controlled |
 | GPCF-DOC-D83FE8C1B1 | Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Loop Round GPCF Headroom LCX Sanitized Token Fixture Extension 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | controlled |
 | GPCF-DOC-82B704BBFF | Loop Round GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | controlled |
@@ -1403,6 +1458,8 @@
 | GPCF-DOC-EDD3670D2E | Loop Round GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001.md | controlled |
 | GPCF-DOC-FIVE-DIRECTION-RUN-001 | GPCF-LOOP-FIVE-DIRECTION-RUN-001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-RUN-001.md | controlled |
 | GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-001 | Loop 五方向常驻采纳冒烟轮次 001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-STANDING-SMOKE-001.md | controlled |
+| GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | LOOP Multi-Agent Execution Smoke Round 001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | controlled |
+| GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | Loop Round GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | controlled |
 | GPCF-DOC-55A6B73433 | Loop Round GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | controlled |
 | GPCF-DOC-AC4F4B6A2E | Loop Round GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | controlled |
 | GPCF-DOC-E1CC4F445E | Loop Round GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003 | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | controlled |
@@ -1556,6 +1613,12 @@
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-011 | Loop Round GPCF-UI-STUDIO-WORKBENCH-011 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-011.md | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-012 | Loop Round GPCF-UI-STUDIO-WORKBENCH-012 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-012.md | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-013 | Loop Round GPCF-UI-STUDIO-WORKBENCH-013 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-013.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-014 | Loop Round GPCF-UI-STUDIO-WORKBENCH-014 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-014.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-015 | Loop Round GPCF-UI-STUDIO-WORKBENCH-015 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-015.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-016 | Loop Round GPCF-UI-STUDIO-WORKBENCH-016 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-016.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-017 | Loop Round GPCF-UI-STUDIO-WORKBENCH-017 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-018 | Loop Round GPCF-UI-STUDIO-WORKBENCH-018 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-019 | Loop Round GPCF-UI-STUDIO-WORKBENCH-019 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | controlled |
 | GPCF-DOC-27101F3BEB | multi-tenant-permission-design | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-40F0A4CB83 | status-audit-2026-06-10 | docs/harness/status-audit-2026-06-10.md | controlled |
@@ -1576,5 +1639,9 @@
 | GPCF-DOC-8C2AA8996B | loop-audit-template | templates/loop-audit-template.md | controlled |
 | GPCF-DOC-1D2FA3DB71 | Loop Round {N} | templates/loop-round-template.md | controlled |
 | GPCF-DOC-DDBD7C90C2 | {项目名} 循环状态模板 | templates/loop-state-template.md | controlled |
+| PROJECT-DOC-IMPLEMENTATION-PLAN-TEMPLATE | {{PROJECT_DISPLAY_NAME}} 实施方案 | templates/project-implementation-plan-template.md | controlled |
+| PROJECT-DOC-MASTER-PLAN-TEMPLATE | {{PROJECT_DISPLAY_NAME}} 总体方案 | templates/project-master-plan-template.md | controlled |
+| PROJECT-DOC-REAL-EVIDENCE-RECORD-TEMPLATE | 真实证据记录模板 | templates/real-evidence-record-template.md | controlled |
 | GPCF-DOC-016DDA517E | 工具目录 | tools/README.md | controlled |
+| GPCF-DOC-C9A7E8D2B1 | Frontmatter 写入权责清单（tools/kds-sync） | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | controlled |
 | GPCF-DOC-C039431381 | KDS Sync Tools | tools/kds-sync/README.md | controlled |

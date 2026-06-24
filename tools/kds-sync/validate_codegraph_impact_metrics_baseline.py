@@ -119,13 +119,13 @@ def main() -> int:
     require(rg.returncode == 0, "rg baseline should find references")
     require(len(rg.stdout.splitlines()) >= evidence["text_scan_baseline"]["matched_lines"], "rg matched lines regressed")
 
-    for metric in ["coverage", "query_precision", "impact_precision", "noise_control", "manual_scan_reduction", "gate_replayability"]:
+    for metric in ["coverage", "query_precision", "impact_precision", "noise_control", "manual_scan_reduction", "review_rework_count", "gate_replayability"]:
         require(metric in evidence["metrics"], f"missing metric: {metric}")
 
     for value in evidence["status_boundaries"].values():
         require(value is False, "status boundary must remain false")
 
-    for phrase in ["impact_metrics_baseline_ready", "13 个 matched files / 28 个 matched lines", "101 affected symbols", "GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007"]:
+    for phrase in ["impact_metrics_baseline_ready", "13 个 matched files / 28 个 matched lines", "101 affected symbols", "review_rework_count", "GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007"]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
     for phrase in ["输入", "动作", "输出", "检查", "反馈", "GPCF-CODEGRAPH-IMPACT-REGRESSION-WATCH-007"]:
         require(phrase in loop_round, f"loop round missing phrase: {phrase}")

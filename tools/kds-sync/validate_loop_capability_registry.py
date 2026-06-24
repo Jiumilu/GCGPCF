@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md"
 MASTER = ROOT / "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md"
 README = ROOT / "02-governance/loop/README.md"
+SUPERPOWERS_VALIDATOR = ROOT / "tools/kds-sync/validate_superpowers_loop_admission.py"
 
 
 def require(condition: bool, message: str) -> None:
@@ -156,8 +157,23 @@ def main() -> int:
         "公开资料核验",
         "受控文档召回",
         "分离文件分析",
+        "Superpowers LOOP execution discipline",
+        "method.superpowers.loop_execution_discipline",
     ]:
         require(phrase in registry, f"registry missing core method: {phrase}")
+
+    for phrase in [
+        "method.superpowers.loop_execution_discipline",
+        "method/skill wrapper",
+        "candidate",
+        "medium",
+        "SOP + GPCF",
+        "planning,tdd,debugging,verification,review,independent_subtasks",
+        "auto_commit,auto_push,production_write,cross_repo_write,status_promotion,release,deployment",
+        "validate_superpowers_loop_admission.py + validate_loop_project_group_gate_readiness.py",
+        "disabled / repair_required",
+    ]:
+        require(phrase in registry, f"registry missing Superpowers admission field: {phrase}")
 
     for phrase in [
         "family.codegraph",
@@ -243,6 +259,16 @@ def main() -> int:
         "LOOP 能力注册表 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md" in readme,
         "loop README missing capability registry entry",
     )
+
+    superpowers_validator = read(SUPERPOWERS_VALIDATOR)
+    for phrase in [
+        "method.superpowers.loop_execution_discipline",
+        "planning,tdd,debugging,verification,review,independent_subtasks",
+        "auto_commit,auto_push,production_write,cross_repo_write,status_promotion,release,deployment",
+        "validate_loop_project_group_gate_readiness.py",
+        "superpowers_loop_admission=pass status=candidate",
+    ]:
+        require(phrase in superpowers_validator, f"Superpowers validator missing phrase: {phrase}")
 
     forbidden = [
         "能力登记授权 production write",

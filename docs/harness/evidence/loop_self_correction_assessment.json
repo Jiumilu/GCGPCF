@@ -51,12 +51,12 @@
     "pending_business_verification_gate_status": "pass",
     "pending_business_verification_gate_exit_code": 0,
     "pending_business_verification_gate_output": [
-      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=399 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=452 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "runtime_primary_key_gate_status": "pass",
     "runtime_primary_key_gate_exit_code": 0,
     "runtime_primary_key_gate_output": [
-      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=399 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=452 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "review_queue_admission_gate_status": "pass",
     "review_queue_admission_gate_exit_code": 0,
@@ -121,10 +121,27 @@
     "git_dirty": true
   },
   "loop_efficiency": {
-    "status": "failed",
-    "exit_code": 1,
-    "metrics": {},
-    "output": [],
+    "status": "pass",
+    "exit_code": 0,
+    "metrics": {
+      "loop_round_efficiency_audit": "pass",
+      "total_rounds": "1130",
+      "audit_checked": "30",
+      "hard_checked": "5",
+      "audit_missing_truth_fields": "6",
+      "audit_missing_five_segment": "0",
+      "audit_batch_generated_counted": "0",
+      "hard_missing_truth_fields": "0",
+      "hard_missing_five_segment": "0",
+      "hard_batch_generated_counted": "0",
+      "duplicate_fingerprint_groups": "0",
+      "high_similarity_adjacent_pairs": "0",
+      "max_consecutive_sequence": "196",
+      "risk": "review_required"
+    },
+    "output": [
+      "loop_round_efficiency_audit=pass total_rounds=1130 audit_checked=30 hard_checked=5 audit_missing_truth_fields=6 audit_missing_five_segment=0 audit_batch_generated_counted=0 hard_missing_truth_fields=0 hard_missing_five_segment=0 hard_batch_generated_counted=0 duplicate_fingerprint_groups=0 high_similarity_adjacent_pairs=0 max_consecutive_sequence=196 risk=review_required"
+    ],
     "governance_meaning": "Loop round records are machine-audited for truth fields, five-segment substance, batch-generated counting, duplicate fingerprints, high similarity, and long sequence risk. A review_required risk does not mean GFIS implementation completed; it means governance must keep efficiency debt visible."
   },
   "blockers": [
@@ -132,7 +149,7 @@
     "gfis_runtime_sop_e2e_repair_required",
     "gfis_kds_controlled_sources_missing",
     "gfis_repo_dirty_user_work_present",
-    "loop_round_efficiency_audit_failed"
+    "loop_round_efficiency_review_required"
   ],
   "required_repairs": [
     "Replace GFIS-L4-008 demo fixture evidence with GFIS runtime-layer DocType/workflow/API evidence.",

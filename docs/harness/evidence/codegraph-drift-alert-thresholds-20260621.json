@@ -17,13 +17,15 @@
     },
     "gfis_policy_exception": {
       "green": "pending_total == 0",
-      "watch": "pending_total == 1 and added == 1 and modified == 0 and removed == 0",
+      "watch": "pending_total == 0 or (pending_total == 1 and added == 1 and modified == 0 and removed == 0)",
       "action_required": "pending_total >= 2 or modified > 0 or removed > 0",
       "critical": "codegraph_git_status_entries > 0"
     },
     "brain_or_studio_sync_only": {
+      "green": "pending_total == 0",
       "watch": "1 <= pending_total <= 5",
       "action_required": "pending_total >= 6",
+      "critical": "unauthorized sync or codegraph_git_status_entries > 0",
       "required_authorization": "explicit sync-only authorization before running codegraph sync in Brain or Studio"
     }
   },
@@ -36,35 +38,35 @@
       {
         "repo": "GlobalCloud GFIS",
         "pending": {
-          "added": 1,
+          "added": 0,
           "modified": 0,
           "removed": 0
         },
-        "pending_total": 1,
+        "pending_total": 0,
         "threshold_result": "watch",
-        "reason": "GFIS controlled policy exception remains within the added=1 watch threshold."
+        "reason": "GFIS controlled policy exception remains within the zero-pending watch threshold."
       },
       {
         "repo": "GlobalCloud Brain",
         "pending": {
-          "added": 3,
-          "modified": 3,
+          "added": 0,
+          "modified": 0,
           "removed": 0
         },
-        "pending_total": 6,
-        "threshold_result": "action_required",
-        "reason": "Brain active drift reached pending_total >= 6 and requires sync-only authorization or continued watch."
+        "pending_total": 0,
+        "threshold_result": "green",
+        "reason": "Brain returned to zero pending and remains monitor-only until future drift appears."
       },
       {
         "repo": "GlobalCloud Studio",
         "pending": {
           "added": 0,
-          "modified": 6,
+          "modified": 18,
           "removed": 0
         },
-        "pending_total": 6,
+        "pending_total": 18,
         "threshold_result": "action_required",
-        "reason": "Studio active drift reached pending_total >= 6 and requires sync-only authorization or continued watch."
+        "reason": "Studio active drift remains above the action threshold and requires explicit sync-only authorization or continued watch."
       }
     ]
   },
@@ -98,7 +100,8 @@
   },
   "decisions": [
     "Keep CodeGraph project-group state at review_required.",
-    "Brain and Studio are action_required but not auto-synced in this round.",
+    "Brain is green at zero pending and remains monitor-only.",
+    "Studio is action_required but not auto-synced in this round.",
     "GFIS remains a policy-exception watch item, not a failure.",
     "Any Brain or Studio sync-only closure must be explicitly authorized and must not include business code edits.",
     "A .codegraph Git status entry or removed pending file is critical and blocks status upgrades."

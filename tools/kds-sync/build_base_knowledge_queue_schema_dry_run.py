@@ -140,20 +140,20 @@ def write_schema_md(schema: dict[str, Any], path: Path, title: str, purpose: str
     md += "日期：2026-06-19\n\n"
     md += "状态：`schema_dry_run_only`\n\n"
     md += f"{purpose}\n\n"
-    md += "## Summary\n\n"
+    md += "## 概要\n\n"
     md += f"- schema_id：`{schema['schemaId']}`\n"
     md += f"- source_queue_evidence_id：`{schema['sourceQueueEvidenceId']}`\n"
     md += f"- source_queue_type：`{schema['sourceQueueType']}`\n"
     md += f"- source_queue_item_count：`{schema['sourceQueueItemCount']}`\n"
     md += f"- field_count：`{schema['fieldCount']}`\n"
     md += f"- required_field_count：`{schema['requiredFieldCount']}`\n\n"
-    md += "## Fields\n\n"
+    md += "## 字段\n\n"
     md += table(["field", "type", "required", "enum", "description"], rows)
     md += "\n\n"
-    md += "## Controls\n\n"
+    md += "## 控制\n\n"
     md += table(["control", "value"], [[key, str(value).lower()] for key, value in schema["controls"].items()])
     md += "\n\n"
-    md += "## Boundary\n\n"
+    md += "## 边界\n\n"
     md += "- This file defines schema only and does not create human confirmation facts.\n"
     md += "- This file defines schema only and does not create committee decisions.\n"
     md += "- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.\n"
@@ -172,13 +172,13 @@ def main() -> int:
     write_schema_md(
         human_schema,
         HUMAN_SCHEMA_MD,
-        "Base Knowledge Human Confirmation Schema",
+        "基础知识人工确认模式",
         "This schema defines the fields required for future manual confirmation of non-hard-stop base knowledge candidates.",
     )
     write_schema_md(
         committee_schema,
         COMMITTEE_SCHEMA_MD,
-        "Base Knowledge Committee Review Schema",
+        "基础知识委员会评审模式",
         "This schema defines the fields required for future committee review of hard-stop base knowledge candidates.",
     )
 

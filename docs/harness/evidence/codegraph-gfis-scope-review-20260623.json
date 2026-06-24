@@ -1,0 +1,98 @@
+{
+  "evidence_id": "CODEGRAPH-GFIS-SCOPE-REVIEW-20260623",
+  "scope": "GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019",
+  "status": "gfis_scope_review_completed_no_sync_needed",
+  "generated_at": "2026-06-23",
+  "authorization": {
+    "user_authorized": true,
+    "authorized_action": "GFIS read-only CodeGraph/Git scope review",
+    "explicit_exclusions": [
+      "codegraph sync",
+      "clean reindex",
+      "business development",
+      "commit",
+      "push",
+      "deploy"
+    ]
+  },
+  "gfis_live_scope_review": {
+    "repo_path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+    "git_dirty": {
+      "modified": 0,
+      "deleted": 0,
+      "untracked": 1,
+      "renamed": 0,
+      "other": 0,
+      "total": 1
+    },
+    "codegraph_status": {
+      "initialized": true,
+      "version": "1.0.1",
+      "fileCount": 1022,
+      "nodeCount": 13153,
+      "edgeCount": 38153,
+      "lastIndexed": "2026-06-22T01:32:23.616Z",
+      "pendingChanges": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "worktreeMismatch": null,
+      "reindexRecommended": false
+    },
+    "codegraph_git_isolated": true,
+    "scope_review_result": "current_state_dirty_no_sync_needed",
+    "sync_only_candidate": false,
+    "sync_only_candidate_reason": "GFIS live CodeGraph pending is 0/0/0 and Git dirty is 1; read-only scope review is still sufficient and no sync-only closure is currently needed.",
+    "clean_reindex_candidate": false,
+    "clean_reindex_candidate_reason": "reindexRecommended=false and user excluded clean reindex."
+  },
+  "observed_drift_resolution": {
+    "previous_round": "GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018",
+    "previous_gfis_pending": {
+      "added": 1,
+      "modified": 2,
+      "removed": 0
+    },
+    "previous_gfis_git_dirty_total": 239,
+    "current_gfis_pending": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "current_gfis_git_dirty_total": 1,
+    "resolution_source": "external_or_preexisting_state_change_observed_during_read_only_review",
+    "codex_performed_gfis_sync": false,
+    "codex_performed_gfis_clean_reindex": false,
+    "codex_modified_gfis_business_files": false
+  },
+  "classification": {
+    "risk": "low_current_state_dirty",
+    "action_gate": "monitor_only",
+    "next_if_drift_reappears": "reopen_read_only_scope_review_before_any_sync",
+    "status_ceiling": "partial_evidence_only"
+  },
+  "five_direction": {
+    "run": "在用户授权范围内只读复核 GFIS Git 与 CodeGraph live 状态。",
+    "stop": "stop_type=monitor_only；GFIS pending 为 0，但 dirty 仍为 1，本轮停止在 evidence 固化，不执行 sync、clean reindex 或业务开发。",
+    "verify": "验证 GFIS git status、codegraph status、.codegraph Git 隔离、GPCF 文档门禁、防污染和 KDS token。",
+    "recover": "若 GFIS drift 重新出现，只能重新进入只读 scope review；不得直接 sync 或 clean reindex。",
+    "debug": "上一轮 GFIS pending=3/dirty=239 已在本轮只读复核时变为 pending=0/dirty=1；原因归类为外部或既有状态变化，不归因为本轮 Codex sync。"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_sync_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "gfis_business_development_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020"
+}

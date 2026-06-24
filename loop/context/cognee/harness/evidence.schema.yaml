@@ -1,0 +1,62 @@
+schema_id: globalcloud.cognee_poc.evidence.v1
+required:
+  - task_id
+  - loop_round_id
+  - project_id
+  - agent_id
+  - model_id
+  - pilot_phase
+  - source_tag
+  - source_tenant
+  - retrieval_mode
+  - scenario_id
+  - retrieval_query_hash
+  - retrieved_count
+  - retrieved_relevant_count
+  - retrieved_precision
+  - marker_gate
+  - waes_decision
+  - answer_equivalence
+  - token_before
+  - token_after
+  - saving_rate
+  - latency_ms_p95
+  - unauthorized_write_blocked
+  - write_requested
+  - write_allowed
+  - measured_production_tokens
+  - accepted
+  - integrated
+  - production_ready
+properties:
+  retrieval_mode:
+    enum: [dry_run_recall, pilot_recall, compare_recall, write_preview]
+  waes_decision:
+    enum: [pass, warn, block]
+  marker_gate:
+    enum: [pass, fail]
+  answer_equivalence:
+    enum: [pass, partial, fail, unknown]
+  source_tag:
+    enum: [headroom, cognee, dual]
+  write_requested:
+    enum: [true, false]
+  write_allowed:
+    enum: [true, false]
+  unauthorized_write_blocked:
+    enum: [true, false]
+  accepted:
+    type: boolean
+  integrated:
+    type: boolean
+  production_ready:
+    type: boolean
+  measured_production_tokens:
+    type: boolean
+non_claim_defaults:
+  measured_production_tokens: false
+  accepted: false
+  integrated: false
+  production_ready: false
+  write_requested: false
+  write_allowed: false

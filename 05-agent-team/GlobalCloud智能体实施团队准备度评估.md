@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/05-agent-team/GlobalCloud智能体实施团队准备度评估.md
 source_path: 05-agent-team/GlobalCloud智能体实施团队准备度评估.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

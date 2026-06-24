@@ -1,0 +1,111 @@
+{
+  "template_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623",
+  "purpose": "collect_signable_human_authorization_for_open_real_measurement_window_under_precheck_only_constraints",
+  "scope": {
+    "project_count": 15,
+    "projects": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "allowed_next_action_after_signature": "rerun_authorized_measurement_precheck_only",
+    "not_allowed_by_this_template": [
+      "production_proxy_start",
+      "production_sdk_enablement",
+      "real_kds_api_write",
+      "external_api_write",
+      "database_migration",
+      "permission_change",
+      "sensitive_raw_material_processing",
+      "accepted_or_integrated_or_production_ready_upgrade"
+    ]
+  },
+  "authorization_fields": {
+    "authorized_window_id": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "stable_window_identifier",
+      "example": "LCX-MEASURE-YYYYMMDD-001"
+    },
+    "authorized_by": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "human_approver_or_governance_role",
+      "example": "GPCF/WAES named approver"
+    },
+    "authorized_at": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "ISO-8601 timestamp with timezone",
+      "example": "2026-06-23T00:00:00+08:00"
+    },
+    "sanitized_production_token_ledger": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "path_to_sanitized_ledger_or_evidence_id",
+      "must_not_include": [
+        "raw prompt",
+        "raw completion",
+        "secret",
+        "credential",
+        "customer contract text",
+        "production token"
+      ]
+    },
+    "rollback_plan_id": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "controlled_rollback_plan_or_runbook_id",
+      "minimum_contents": [
+        "disable proxy",
+        "disable SDK",
+        "delete temporary cache",
+        "retain evidence",
+        "restore blocked state"
+      ]
+    },
+    "waes_harness_admission_decision": {
+      "value": "REQUIRED_USER_INPUT",
+      "required": true,
+      "format": "WAES/Harness decision evidence id",
+      "allowed_values": [
+        "admitted_for_sanitized_measurement_precheck",
+        "blocked"
+      ]
+    }
+  },
+  "signature_block": {
+    "signer_name": "REQUIRED_USER_INPUT",
+    "signer_role": "REQUIRED_USER_INPUT",
+    "signed_at": "REQUIRED_USER_INPUT",
+    "signature_method": "REQUIRED_USER_INPUT",
+    "signature_statement": "REQUIRED_USER_INPUT",
+    "signature_intent": "approve_open_real_measurement_window_or_reject_or_defer"
+  },
+  "required_false_until_completed": {
+    "authorization_complete": false,
+    "real_measurement_window_open": false,
+    "production_token_measurement_allowed": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

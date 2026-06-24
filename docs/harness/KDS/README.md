@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/KDS/README.md
 source_path: docs/harness/KDS/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -39,6 +39,7 @@ KDS 空间：`开发`
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | KDS | controlled |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
+| GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | KDS 真实运行基线证据 2026-06-24 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | KDS | controlled |
 | GPCF-DOC-19C33DD1F8 | GlobalCloud KDS Loop State | docs/harness/KDS/loop-state.md | KDS | controlled |
 | GPCF-DOC-F54729C154 | loops | docs/harness/KDS/loops/README.md | KDS | controlled |
 | GPCF-DOC-8DA5979C40 | Loop Round GPCF-KD-LR-001 | docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | KDS | controlled |

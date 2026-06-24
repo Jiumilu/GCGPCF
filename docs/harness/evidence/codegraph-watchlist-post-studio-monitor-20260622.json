@@ -1,37 +1,37 @@
 {
   "evidence_id": "CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-20260622",
   "scope": "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016",
-  "status": "pass_with_watch",
+  "status": "watch_required",
   "generated_at": "2026-06-22",
   "objective": "在 Studio sync-only precheck 后重新监控 CodeGraph watchlist，确认 Studio residual watch 未扩大，同时保留 Brain/GFIS/KDS 授权边界。",
   "previous_round": "GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015",
+  "review_rework_count": 0,
   "watchlist": {
     "repo_count": 4,
     "repos": {
       "Brain": {
-        "codegraph_pending": {"added": 4, "modified": 54, "removed": 0},
-        "git_dirty": {"modified": 90, "deleted": 5, "untracked": 108, "renamed": 0, "other": 0, "total": 203},
+        "codegraph_pending": {"added": 0, "modified": 0, "removed": 0},
+        "git_dirty": {"modified": 0, "deleted": 0, "untracked": 1, "renamed": 0, "other": 0, "total": 1},
         "decision": "authorization_required",
-        "status": "unchanged_authorization_boundary"
+        "status": "codegraph_clean_but_git_dirty"
       },
       "GFIS": {
-        "codegraph_pending": {"added": 1, "modified": 2, "removed": 0},
-        "git_dirty": {"modified": 37, "deleted": 0, "untracked": 202, "renamed": 0, "other": 0, "total": 239},
+        "codegraph_pending": {"added": 0, "modified": 0, "removed": 0},
+        "git_dirty": {"modified": 0, "deleted": 0, "untracked": 1, "renamed": 0, "other": 0, "total": 1},
         "decision": "authorization_required_without_clean_reindex",
-        "status": "unchanged_policy_exception_boundary"
+        "status": "codegraph_clean_but_git_dirty"
       },
       "KDS": {
-        "codegraph_pending": {"added": 0, "modified": 1, "removed": 0},
-        "git_dirty": {"modified": 371, "deleted": 59, "untracked": 1229, "renamed": 0, "other": 0, "total": 1659},
+        "codegraph_pending": {"added": 0, "modified": 0, "removed": 0},
+        "git_dirty": {"modified": 4, "deleted": 5, "untracked": 22, "renamed": 0, "other": 0, "total": 31},
         "decision": "authorization_required",
-        "status": "active_mirror_workwiki_drift_growth",
-        "growth_from_authorization_pack_total": 7
+        "status": "git_dirty_growth_watch"
       },
       "Studio": {
-        "codegraph_pending": {"added": 0, "modified": 7, "removed": 0},
-        "git_dirty": {"modified": 11, "deleted": 0, "untracked": 1, "renamed": 0, "other": 0, "total": 12},
+        "codegraph_pending": {"added": 0, "modified": 18, "removed": 0},
+        "git_dirty": {"modified": 19, "deleted": 0, "untracked": 1, "renamed": 0, "other": 0, "total": 20},
         "decision": "sync_only_precheck_completed_with_residual_watch",
-        "status": "residual_within_authorized_ceiling",
+        "status": "residual_exceeds_authorized_ceiling",
         "authorized_modified_ceiling": 9
       }
     }

@@ -1,0 +1,25 @@
+gate_id: WAES-COGNEE-WRITE-GATE-v1
+default_action: block
+required_fields:
+  - task_id
+  - loop_round_id
+  - caller
+  - project_id
+  - tenant_id
+  - operation
+  - payload_tier
+  - owner
+  - evidence_ref
+  - waes_decision
+allow_if:
+  - waes_decision == "pass"
+  - owner_authorization_present
+  - payload_tier_in {preview,non_business_only}
+  - harness_evidence_ref_present
+deny_if:
+  - no_owner_authorization
+  - payload_tier_not_allowed
+  - missing_evidence
+  - operation_not_preview
+  - cross_tenant_merge
+  - non_business_boundary_violation

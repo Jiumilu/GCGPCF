@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md
 source_path: 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -89,8 +89,11 @@ superseded_by: []
 
 ## 7. 成本与效率指标
 
+这里的优化观察重点包括探索工具调用、读文件数、轮次耗时、返工次数和影响遗漏。
+
 | 指标 | 目标 | 说明 |
 |---|---|---|
+| `trend_down` | 趋势下降 | 统一标记所有效率与返工类下降目标 |
 | `exploration_tool_call_reduction_rate` | 趋势下降 | 与同类任务历史基线比较 |
 | `file_read_reduction_rate` | 趋势下降 | 减少无目标读文件 |
 | `round_duration_delta` | 趋势下降 | 不以牺牲质量为代价 |

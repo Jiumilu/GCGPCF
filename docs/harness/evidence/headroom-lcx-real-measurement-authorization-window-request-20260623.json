@@ -1,0 +1,64 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001",
+  "date": "2026-06-23",
+  "status": "real_measurement_authorization_window_requested_not_granted",
+  "scope": "requested_window_precheck_only",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "requested_window_id": "LCX-MEASURE-20260622-001",
+  "requested_by": "lujunxiang / GPCF owner",
+  "requested_at": "2026-06-22T08:42:06+08:00",
+  "requested_future_decision": "open_real_measurement_window",
+  "current_waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+  "authorization_complete": false,
+  "real_measurement_open": false,
+  "production_branch_blocked": true,
+  "production_token_measurement_allowed": false,
+  "measured_production_tokens": false,
+  "production_admission_gate": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "source_refs": {
+    "precheck": "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
+    "field_map": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json",
+    "authorization_request": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.json",
+    "transition_graph": "docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json",
+    "gap_matrix": "docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json"
+  },
+  "non_claims": {
+    "real_measurement_open": false,
+    "production_branch_open": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "transition_anchor": {
+    "transition_graph_id": "HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-20260623",
+    "transition_graph_status": "transition_graph_defined_blocked_real_measurement"
+  },
+  "gap_anchor": {
+    "gap_id": "HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623",
+    "real_measurement_gap_present": true
+  }
+}

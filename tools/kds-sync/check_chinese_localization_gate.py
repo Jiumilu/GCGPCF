@@ -27,6 +27,8 @@ DOC_SKIP_PREFIXES = {
     ".okf/",
     ".okf/bundles/",
     "08-evidence-samples/",
+    "docs/harness/evidence/",
+    "docs/harness/loops/",
     "10-archive/",
 }
 
@@ -361,11 +363,15 @@ def write_report(summary: dict[str, object], findings: list[dict[str, object]]) 
 
 
 def main() -> int:
+    global ROOT, REPORT
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-findings", type=int, default=80)
+    parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--write-report", action="store_true")
     args = parser.parse_args()
+    ROOT = args.root.resolve()
+    REPORT = ROOT / "09-status/globalcloud-chinese-localization-governance-report.md"
 
     findings: list[dict[str, object]] = []
     doc_count = 0

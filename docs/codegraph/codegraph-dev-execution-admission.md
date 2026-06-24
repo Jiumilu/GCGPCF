@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/codegraph/codegraph-dev-execution-admission.md
 source_path: docs/codegraph/codegraph-dev-execution-admission.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -105,6 +105,7 @@ actual_changed_files:
 affected_tests:
 missed_impact_count:
 time_to_first_target:
+review_rework_count:
 ```
 
 评估口径：
@@ -114,6 +115,7 @@ time_to_first_target:
 - `affected_tests` 是否解释了测试选择。
 - `missed_impact_count` 是否持续下降。
 - `time_to_first_target` 是否持续下降。
+- `review_rework_count` 是否持续下降。
 
 ## 例外规则
 

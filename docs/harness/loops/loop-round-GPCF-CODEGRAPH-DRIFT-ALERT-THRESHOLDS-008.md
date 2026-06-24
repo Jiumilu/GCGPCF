@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md
 source_path: docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -50,4 +50,4 @@ superseded_by: []
 
 ## 反馈
 
-下一阶段目标已建立并执行。Brain 与 Studio 当前均达到 `action_required`，但本轮未执行 sync-only closure；GFIS 保持 policy exception watch。下一轮进入 `GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009`。
+下一阶段目标已建立并执行。Brain 当前回到 `green` / monitor-only，Studio 仍为 `action_required`，本轮未执行 sync-only closure；GFIS 保持 policy exception watch。下一轮进入 `GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009`。

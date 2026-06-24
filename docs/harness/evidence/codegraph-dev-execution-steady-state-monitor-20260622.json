@@ -17,8 +17,12 @@
         "fileCount": 156,
         "nodeCount": 2861,
         "edgeCount": 6381,
-        "pendingChanges": {"added": 4, "modified": 53, "removed": 0},
-        "pendingTotal": 57,
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
         "codegraphGitStatus": ""
@@ -29,8 +33,12 @@
         "fileCount": 1022,
         "nodeCount": 13153,
         "edgeCount": 38153,
-        "pendingChanges": {"added": 1, "modified": 2, "removed": 0},
-        "pendingTotal": 3,
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
         "codegraphGitStatus": ""
@@ -41,7 +49,11 @@
         "fileCount": 70,
         "nodeCount": 705,
         "edgeCount": 1995,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -53,8 +65,12 @@
         "fileCount": 518,
         "nodeCount": 3499,
         "edgeCount": 7115,
-        "pendingChanges": {"added": 0, "modified": 1, "removed": 0},
-        "pendingTotal": 1,
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
         "codegraphGitStatus": ""
@@ -65,7 +81,11 @@
         "fileCount": 84,
         "nodeCount": 522,
         "edgeCount": 1083,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -77,7 +97,11 @@
         "fileCount": 110,
         "nodeCount": 1034,
         "edgeCount": 2685,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -89,7 +113,11 @@
         "fileCount": 604,
         "nodeCount": 8899,
         "edgeCount": 28838,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -101,8 +129,12 @@
         "fileCount": 801,
         "nodeCount": 14603,
         "edgeCount": 47399,
-        "pendingChanges": {"added": 2, "modified": 9, "removed": 0},
-        "pendingTotal": 11,
+        "pendingChanges": {
+          "added": 0,
+          "modified": 18,
+          "removed": 0
+        },
+        "pendingTotal": 18,
         "worktreeMismatch": null,
         "reindexRecommended": false,
         "codegraphGitStatus": ""
@@ -113,7 +145,11 @@
         "fileCount": 281,
         "nodeCount": 3511,
         "edgeCount": 11298,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -125,7 +161,11 @@
         "fileCount": 181,
         "nodeCount": 3645,
         "edgeCount": 9914,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -137,7 +177,11 @@
         "fileCount": 1176,
         "nodeCount": 15520,
         "edgeCount": 64515,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -149,7 +193,11 @@
         "fileCount": 752,
         "nodeCount": 13943,
         "edgeCount": 45987,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -161,8 +209,12 @@
         "fileCount": 1291,
         "nodeCount": 16400,
         "edgeCount": 42704,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
-        "pendingTotal": 0,
+        "pendingChanges": {
+          "added": 7,
+          "modified": 21,
+          "removed": 0
+        },
+        "pendingTotal": 28,
         "worktreeMismatch": null,
         "reindexRecommended": false,
         "codegraphGitStatus": ""
@@ -173,7 +225,11 @@
         "fileCount": 30,
         "nodeCount": 70,
         "edgeCount": 209,
-        "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
         "pendingTotal": 0,
         "worktreeMismatch": null,
         "reindexRecommended": false,
@@ -182,8 +238,18 @@
     ]
   },
   "watchlist": {
-    "active_drift_repos": ["Brain", "GFIS", "KDS", "Studio"],
-    "gpcf_pending_changes": {"added": 0, "modified": 0, "removed": 0},
+    "active_drift_repos": [
+      "Brain",
+      "GFIS",
+      "KDS",
+      "Studio",
+      "GPCF"
+    ],
+    "gpcf_pending_changes": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
     "gfis_clean_reindex_authorized": false,
     "clean_reindex_performed": false,
     "drift_policy": "monitor_only"
@@ -201,7 +267,8 @@
     "query_top_result": "tools/kds-sync/validate_codegraph_dev_execution_document_localization_debt_closure.py",
     "affected": "codegraph affected tools/kds-sync/validate_codegraph_dev_execution_document_localization_debt_closure.py --json",
     "affected_tests": [],
-    "fallback_reason": "The steady-state monitor is governance validator evidence; no indexed dependent test files were returned, so validator replay and document gates are the fallback tests."
+    "fallback_reason": "The steady-state monitor is governance validator evidence; no indexed dependent test files were returned, so validator replay and document gates are the fallback tests.",
+    "review_rework_count": 0
   },
   "status_boundaries": {
     "business_implementation_completed": false,

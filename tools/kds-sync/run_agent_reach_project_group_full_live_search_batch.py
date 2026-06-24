@@ -371,11 +371,11 @@ def render_markdown(report: dict[str, Any]) -> str:
             "",
             "## 非声明",
             "",
-            "- This evidence is candidate-only.",
-            "- This evidence does not claim accepted, integrated, or production_ready status.",
-            "- This evidence does not write KDS canonical Markdown.",
-            "- This evidence does not write GFIS source-of-record.",
-            "- Raw provider payloads are not persisted.",
+            "- 本证据仅为候选数据。",
+            "- 本证据不主张 accepted、integrated 或 production_ready。",
+            "- 本证据不写入 KDS canonical Markdown。",
+            "- 本证据不写入 GFIS source-of-record。",
+            "- 原始供应商返回载荷不会持久化。",
             "",
         ]
     )

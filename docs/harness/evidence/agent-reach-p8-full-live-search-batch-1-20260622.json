@@ -1,0 +1,434 @@
+{
+  "auth_path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json",
+  "authorization_reasons": [],
+  "authorization_valid": true,
+  "batch_id": "p8-batch-1",
+  "candidates": [
+    {
+      "authority_score": 0.8,
+      "candidate_id": "p8-q01-c1",
+      "channel": "web",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.7333,
+      "project": "GPCF",
+      "query_id": "p8-q01",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:11.866539+00:00",
+      "snippet_redacted": "Explore Microsoft products and services and support for your home or business. Shop Microsoft 365, Copilot, Teams, Xbox, Windows, Azure, Surface and more.",
+      "source_domain": "www.microsoft.com",
+      "title": "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps",
+      "traceability_score": 1.0,
+      "url": "https://www.microsoft.com/en-us?msockid=33f4f05742826c902b58e7d643846d02"
+    },
+    {
+      "authority_score": 0.8,
+      "candidate_id": "p8-q01-c6",
+      "channel": "web",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.7333,
+      "project": "GPCF",
+      "query_id": "p8-q01",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:11.866890+00:00",
+      "snippet_redacted": "Download free Microsoft Outlook email and calendar, plus Office Online apps like Word, Excel, and PowerPoint. Sign in to access your Outlook email account.",
+      "source_domain": "www.outlook.com",
+      "title": "Microsoft Outlook Personal Email and Calendar | Microsoft 365",
+      "traceability_score": 1.0,
+      "url": "https://www.outlook.com/"
+    },
+    {
+      "authority_score": 0.8,
+      "candidate_id": "p8-q01-c2",
+      "channel": "web",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.5667,
+      "project": "GPCF",
+      "query_id": "p8-q01",
+      "relevance_score": 0.3333,
+      "retrieved_at": "2026-06-23T01:47:11.866574+00:00",
+      "snippet_redacted": "Get access to free online versions of Outlook, Word, Excel, and PowerPoint.",
+      "source_domain": "account.microsoft.com",
+      "title": "Microsoft account | Sign In or Create Your Account Today – Microsoft",
+      "traceability_score": 1.0,
+      "url": "https://account.microsoft.com/account"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q02-c3",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.6733,
+      "project": "KDS",
+      "query_id": "p8-q02",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:13.740444+00:00",
+      "snippet_redacted": "Employees are going to use AI to summarize contracts, analyze files, extract information, and automate repetitive work. Your tech stack is going to determine whether that work happens inside governed, ...",
+      "source_domain": "www.bing.com",
+      "title": "Securing the AI workflow: A guide to safe document automation and governance",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a2ef51477a8b0951e2fb1c8793&url=https%3a%2f%2fwww.cio.com%2farticle%2f4185258%2fsecuring-the-ai-workflow-a-guide-to-safe-document-automation-and-governance.html&c=11345402210495564779&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q02-c4",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.6733,
+      "project": "KDS",
+      "query_id": "p8-q02",
+      "relevance_score": 0.6667,
+      "retrieved_at": "2026-06-23T01:47:13.740554+00:00",
+      "snippet_redacted": "AI-powered redaction solutions let teams automate repetitive review tasks, improve PII detection consistency, and maintain compliance across large document sets. Organizations that combine AI-assisted ...",
+      "source_domain": "www.bing.com",
+      "title": "How to Use AI to Redact PII in Large Document Sets",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a2ef51477a8b0951e2fb1c8793&url=https%3a%2f%2fwww.cio.com%2farticle%2f4185269%2fhow-to-use-ai-to-redact-pii-in-large-document-sets.html&c=4593308562752188100&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q02-c5",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.5067,
+      "project": "KDS",
+      "query_id": "p8-q02",
+      "relevance_score": 0.3333,
+      "retrieved_at": "2026-06-23T01:47:13.740585+00:00",
+      "snippet_redacted": "Compliance Group (CG), a trusted leader in quality, validation, compliance, and digital transformation services for regulated industries, reveals iQuality, an AI-native quality and compliance platform ...",
+      "source_domain": "www.bing.com",
+      "title": "Compliance Group Reveals iQuality, an AI-Native End-to-End Compliance Intelligence Solution ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a2ef51477a8b0951e2fb1c8793&url=https%3a%2f%2ffinance.yahoo.com%2fhealthcare%2farticles%2fcompliance-group-reveals-iquality-ai-120000649.html&c=7412288303924060615&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q03-c1",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "WAES",
+      "query_id": "p8-q03",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:14.511750+00:00",
+      "snippet_redacted": "A CrowdStrike software update that crashed computers globally last week hitting services from aviation to banking and healthcare was caused by a bug in the U.S. cybersecurity firm's quality control ...",
+      "source_domain": "www.bing.com",
+      "title": "CrowdStrike says bug in quality control process led to botched update",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a43e6b42b69e4bb46b972af621&url=https%3a%2f%2fwww.cnbc.com%2f2024%2f07%2f24%2fcrowdstrike-says-bug-in-quality-control-process-led-to-botched-update.html&c=10714481844461568873&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q03-c2",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "WAES",
+      "query_id": "p8-q03",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:14.511786+00:00",
+      "snippet_redacted": "Quality by design is critical for cell and gene therapy manufacturing where process controls directly influence product quality and safety.",
+      "source_domain": "www.bing.com",
+      "title": "Integrating Quality by Design Principles into Gene-Therapy CMC Programs: Establishing ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a43e6b42b69e4bb46b972af621&url=https%3a%2f%2fwww.bioprocessintl.com%2fgene-therapies%2fintegrating-quality-by-design-principles-into-gene-therapy-cmc-programs-establishing-manufacturing-control-and-comparability&c=15866845515547737676&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q03-c4",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "WAES",
+      "query_id": "p8-q03",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:14.511897+00:00",
+      "snippet_redacted": "In 2022, the dominating segment for computer vision (CV) was quality assurance and inspection because of the rapid adoption of process automation in the manufacturing industry. One of the key benefits ...",
+      "source_domain": "www.bing.com",
+      "title": "What To Know About Implementing Computer Vision For Quality Control",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a43e6b42b69e4bb46b972af621&url=https%3a%2f%2fwww.forbes.com%2fcouncils%2fforbestechcouncil%2f2024%2f03%2f12%2fwhat-to-know-about-implementing-computer-vision-for-quality-control%2f&c=15364776119225932769&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q04-c1",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "Brain",
+      "query_id": "p8-q04",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:15.506553+00:00",
+      "snippet_redacted": "New benchmark report shows enterprises can cut event noise by as much as 99.9% and use event management data to drive observability stack consolidation. Based on analysis from 130 enterprise ...",
+      "source_domain": "www.bing.com",
+      "title": "BigPanda Report Finds Many Monitoring and Observability Tools Flood Enterprises With Noise ...",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a5a51141c68ef162180925ace3&url=https%3a%2f%2ffinance.yahoo.com%2fnews%2fbigpanda-report-finds-many-monitoring-130000240.html&c=18111499113028911985&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q04-c2",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "Brain",
+      "query_id": "p8-q04",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:15.506590+00:00",
+      "snippet_redacted": "The serverless trend is only getting stronger as it takes the 'on-demand' facility to the next level and allows enterprises to build applications faster. Serverless enables auto scalability and allows ...",
+      "source_domain": "www.bing.com",
+      "title": "Serverless observability and monitoring: Using advanced tools for applications",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a5a51141c68ef162180925ace3&url=https%3a%2f%2fcio.economictimes.indiatimes.com%2fnews%2fnext-gen-technologies%2fserverless-observability-and-monitoring-using-advanced-for-applications%2f108539714&c=15024682606805966396&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q04-c5",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "Brain",
+      "query_id": "p8-q04",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:15.506667+00:00",
+      "snippet_redacted": "Datadog draws attention after strong cloud monitoring results, supported by revenue growth, customer expansion, and stronger demand for observability tools.",
+      "source_domain": "www.bing.com",
+      "title": "Can Datadog (NASDAQ:DDOG) Keep Its Growth Story Intact?",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a5a51141c68ef162180925ace3&url=https%3a%2f%2fkalkinemedia.com%2fus%2fstocks%2ftechnology%2fcan-datadog-nasdaqddog-keep-its-growth-story-intact&c=2543351284787770388&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q05-c1",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "GFIS",
+      "query_id": "p8-q05",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:16.314106+00:00",
+      "snippet_redacted": "The British Standards Institution said market participants can immediately start using the Overarching Principles Standard. Sign up for the top news stories every day to keep you informed with what's ...",
+      "source_domain": "www.bing.com",
+      "title": "Green finance standards launched to set bar for nature investments",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a69d324e4982439f621b434aae&url=https%3a%2f%2fwww.expressandstar.com%2fuk-news%2fgreen-finance-standards-launched-to-set-bar-for-nature-investments-5712717&c=17796645213384669074&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q05-c2",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "GFIS",
+      "query_id": "p8-q05",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:16.314143+00:00",
+      "snippet_redacted": "The British Standards Institution said market participants can immediately start using the Overarching Principles Standard. Did you know with a Plus subscription to Shropshire Star you get full access ...",
+      "source_domain": "www.bing.com",
+      "title": "Green finance standards launched to set bar for nature investments",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a69d324e4982439f621b434aae&url=https%3a%2f%2fwww.shropshirestar.com%2fuk-news%2fgreen-finance-standards-launched-to-set-bar-for-nature-investments-5712717&c=12601836821034575518&mkt=ja-jp"
+    },
+    {
+      "authority_score": 0.5,
+      "candidate_id": "p8-q05-c5",
+      "channel": "rss",
+      "freshness_score": 0.6,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.84,
+      "project": "GFIS",
+      "query_id": "p8-q05",
+      "relevance_score": 1.0,
+      "retrieved_at": "2026-06-23T01:47:16.314209+00:00",
+      "snippet_redacted": "BEIJING, Dec 9 (Reuters) - China will improve its green finance standards to support carbon neutrality objectives, central bank governor Yi Gang said on Wednesday. China will strengthen its study on ...",
+      "source_domain": "www.bing.com",
+      "title": "China to improve green finance standards to support carbon neutrality goal -c.bank head",
+      "traceability_score": 1.0,
+      "url": "http://www.bing.com/news/apiclick.aspx?ref=FexRss&aid=&tid=6a39e5a69d324e4982439f621b434aae&url=https%3a%2f%2fjp.reuters.com%2farticle%2fchina-to-improve-green-finance-standards-to-support-carbon-neutrality-goal-cba-idUSB9N2GJ014%2f&c=7824091406754605187&mkt=ja-jp"
+    }
+  ],
+  "current_admission": "limited_candidate_only",
+  "execution_plan": [
+    {
+      "backend": "duckduckgo_html_via_python_stdlib",
+      "channel": "web",
+      "planned_command": [
+        "python3",
+        "stdlib_urllib_duckduckgo_html",
+        "https://html.duckduckgo.com/html/?q=Microsoft%20Loop%20app"
+      ],
+      "project": "GPCF",
+      "query": "Microsoft Loop app",
+      "query_id": "p8-q01"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=document%20governance%20compliance"
+      ],
+      "project": "KDS",
+      "query": "document governance compliance",
+      "query_id": "p8-q02"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=quality%20control%20process"
+      ],
+      "project": "WAES",
+      "query": "quality control process",
+      "query_id": "p8-q03"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=observability%20monitoring%20tools"
+      ],
+      "project": "Brain",
+      "query": "observability monitoring tools",
+      "query_id": "p8-q04"
+    },
+    {
+      "backend": "feedparser_google_news_rss",
+      "channel": "rss",
+      "planned_command": [
+        "curl",
+        "-s",
+        "https://news.google.com/rss/search?q=green%20finance%20standards"
+      ],
+      "project": "GFIS",
+      "query": "green finance standards",
+      "query_id": "p8-q05"
+    }
+  ],
+  "execution_requested": true,
+  "generated_at": "2026-06-23T01:47:10.864512+00:00",
+  "id": "agent-reach-p8-project-group-full-live-search-batch-runtime",
+  "projects": [
+    "GPCF",
+    "KDS",
+    "WAES",
+    "Brain",
+    "GFIS"
+  ],
+  "quality_report": {
+    "average_overall_score": 0.7631,
+    "average_score": 0.7631,
+    "candidate_count": 15,
+    "channel_candidate_coverage": 1.0,
+    "credential_leak_count": 0,
+    "duplicate_url_count": 0,
+    "forbidden_claim_count": 0,
+    "minimum_candidate_overall_score": 0.5067,
+    "minimum_traceability_score": 1.0,
+    "missing_channels": [],
+    "missing_query_ids": [],
+    "query_candidate_coverage": 1.0,
+    "query_error_count": 0,
+    "required_field_coverage": 1.0,
+    "threshold_pass": true
+  },
+  "query_errors": [],
+  "query_ids": [
+    "p8-q01",
+    "p8-q02",
+    "p8-q03",
+    "p8-q04",
+    "p8-q05"
+  ],
+  "round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+  "security_controls": {
+    "agent_reach_binary_invoked": false,
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": true,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p8_live_search_batch_completed"
+}

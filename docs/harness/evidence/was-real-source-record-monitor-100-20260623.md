@@ -1,17 +1,17 @@
 ---
 doc_id: GPCF-DOC-6C0AA9100
 title: WAS Real Source Record Monitor 100 证据
-project: WAS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
-domain: ontology-governance
+project: KDS
+related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+domain: docs
 status: controlled
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/14-WAS/docs/harness/evidence/was-real-source-record-monitor-100-20260623.md
+kds_path: 开发/05-KDS/docs/harness/evidence/was-real-source-record-monitor-100-20260623.md
 source_path: docs/harness/evidence/was-real-source-record-monitor-100-20260623.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---

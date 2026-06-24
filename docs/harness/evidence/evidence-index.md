@@ -11,12 +11,68 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/evidence-index.md
 source_path: docs/harness/evidence/evidence-index.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
- GPCF 证据索引
+GPCF 证据索引
+
+## GPCF-COGNEE-P1-RECALL-001 COGNEE P1 recall 对照试点
+
+- Cognee 评估方案：`02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md`
+- Cognee P1 policy: `loop/context/cognee/policy.yaml`
+- Cognee MCP 接口：`loop/context/cognee/mcp.json`
+- Cognee marker gate：`loop/context/cognee/waes/cognee-marker-gate.yaml`
+- Cognee write gate：`loop/context/cognee/waes/cognee-write-gate.yaml`
+- Cognee evidence schema：`loop/context/cognee/harness/evidence.schema.yaml`
+- P1 召回对照模板：`fixtures/cognee/cognee-p1-recall-comparison-template.json`
+- P1 召回对照 runner：`loop/context/cognee/scripts/run-cognee-p1-recall-comparison.py`
+- P1 召回对照 validator：`loop/context/cognee/scripts/validate-cognee-p1-recall-output.py`
+- Cognee P1 evidence.md：`docs/harness/evidence/cognee-p1-recall-comparison-pilot-20260623.md`
+- Cognee P1 evidence.json：`docs/harness/evidence/cognee-p1-recall-comparison-pilot-20260623.json`
+- COGNEE P1 recall pilot evidence 输出：`cognee_p1_recall_output=hold record_count=5 mean_retrieval_precision=0.73619 marker_coverage=1.0 unauthorized_write_block_rate=1.0 pilot_gate_pass=false`
+
+## GPCF-COGNEE-P2-WRITE-PREVIEW-001 COGNEE P2 写入预览受控试点
+
+- Cognee 评估方案：`02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md`
+- Cognee P2 policy：`loop/context/cognee/policy.yaml`
+- P2 写入预览模板：`loop/context/cognee/harness/p2-write-preview-template.md`
+- P2 写入预览 fixture：`fixtures/cognee/cognee-p2-write-preview-template.json`
+- P2 写入预览 runner：`loop/context/cognee/scripts/run-cognee-p2-write-preview.py`
+- P2 写入预览 validator：`loop/context/cognee/scripts/validate-cognee-p2-write-preview-output.py`
+- P2 写入预览 evidence schema：`loop/context/cognee/harness/evidence-p2.schema.yaml`
+- Cognee P2 evidence.md：`docs/harness/evidence/cognee-p2-write-preview-pilot-20260623.md`
+- Cognee P2 evidence.json：`docs/harness/evidence/cognee-p2-write-preview-pilot-20260623.json`
+- COGNEE P2 preview pilot evidence 输出：`cognee_p2_write_preview_output=pass record_count=5 requested_write_count=5 pilot_gate_pass=True preview_block_rate=1.0`
+
+## GPCF-COGNEE-P3-WRITE-PREVIEW-ROLLBACK-001 COGNEE P3 写入预览回滚演练
+
+- Cognee 评估方案：`02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md`
+- Cognee P3 policy：`loop/context/cognee/policy.yaml`
+- P3 回滚演练 template：`fixtures/cognee/cognee-p3-write-preview-rollback-template.json`
+- P3 回滚演练 runner：`loop/context/cognee/scripts/run-cognee-p3-write-preview-rollback.py`
+- P3 回滚演练 validator：`loop/context/cognee/scripts/validate-cognee-p3-write-preview-rollback.py`
+- P3 回滚演练 evidence schema：`loop/context/cognee/harness/evidence-p3.schema.yaml`
+- Cognee P3 evidence.md：`docs/harness/evidence/cognee-p3-write-preview-rollback-20260623.md`
+- Cognee P3 evidence.json：`docs/harness/evidence/cognee-p3-write-preview-rollback-20260623.json`
+- COGNEE P3 preview rollback evidence 输出：`cognee_p3_write_preview_rollback_output=pass record_count=4 requested_write_count=4 rollback_block_rate=1.0`
+
+## GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001 COGNEE P4 真实写入前置预检
+
+- Cognee 评估方案：`02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md`
+- Cognee P4 policy：`loop/context/cognee/policy.yaml`
+- P4 前置预检 template：`fixtures/cognee/cognee-p4-real-writeback-precheck-template.json`
+- P4 前置预检修复 template（20260624）：`fixtures/cognee/cognee-p4-real-writeback-precheck-repair-20260624.json`
+- P4 前置预检 runner：`loop/context/cognee/scripts/run-cognee-p4-real-writeback-precheck.py`
+- P4 前置预检 validator：`loop/context/cognee/scripts/validate-cognee-p4-real-writeback-precheck.py`
+- P4 前置预检 evidence schema：`loop/context/cognee/harness/evidence-p4.schema.yaml`
+- Cognee P4 evidence.md：`docs/harness/evidence/cognee-p4-real-writeback-precheck-20260623.md`
+- Cognee P4 evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-precheck-20260623.json`
+- COGNEE P4 real writeback precheck 输出：`cognee_p4_real_writeback_precheck_output=pass record_count=5 requested_write_count=5 precheck_pass_rate=0.8`
+- Cognee P4 复测 evidence.md：`docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.md`
+- Cognee P4 复测 evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.json`
+- COGNEE P4 real writeback precheck 复测输出：`cognee_p4_real_writeback_precheck_output=pass record_count=5 requested_write_count=5 precheck_pass_rate=1.0`
 
 ## GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 Headroom project-group cost dry-run
 
@@ -113,6 +169,12 @@ superseded_by: []
 - Headroom LCX authorized measurement precheck runner: `tools/kds-sync/run_headroom_lcx_authorized_measurement_precheck.py`
 - Headroom LCX authorized measurement precheck validator: `tools/kds-sync/validate_headroom_lcx_authorized_measurement_precheck.py`
 - Headroom LCX authorized measurement precheck Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md`
+- Headroom LCX next-stage real measurement authorization package evidence: `docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.md`
+- Headroom LCX next-stage real measurement authorization package JSON: `docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json`
+- Headroom LCX next-stage real measurement authorization package runner: `tools/kds-sync/build_headroom_lcx_real_measurement_next_stage_authorization_package.py`
+- Headroom LCX next-stage real measurement authorization package validator: `tools/kds-sync/validate_headroom_lcx_real_measurement_next_stage_authorization_package.py`
+- Headroom LCX next-stage real measurement authorization package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001.md`
+- Headroom LCX next-stage real measurement authorization package output: `headroom_lcx_real_measurement_next_stage_authorization_package=generated real_measurement_window_requested=true real_measurement_window_granted=true real_measurement_open=false production_branch_blocked=true production_token_measurement_allowed=false measured_production_tokens=false accepted=false integrated=false production_ready=false`
 - Headroom LCX authorized measurement authorization template evidence: `docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.md`
 - Headroom LCX authorized measurement authorization template JSON: `docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.json`
 - Headroom LCX authorized measurement authorization template fixture: `fixtures/headroom/headroom-lcx-authorized-measurement-authorization-template.json`
@@ -143,6 +205,14 @@ superseded_by: []
 - Headroom LCX session summary declaration boundary JSON: `docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.json`
 - Headroom LCX session summary declaration boundary validator: `tools/kds-sync/validate_headroom_lcx_session_summary_declaration_boundary.py`
 - Headroom LCX session summary declaration boundary Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md`
+- Headroom LCX completion audit evidence: `docs/harness/evidence/headroom-lcx-completion-audit-20260623.md`
+- Headroom LCX completion audit JSON: `docs/harness/evidence/headroom-lcx-completion-audit-20260623.json`
+- Headroom LCX completion audit validator: `tools/kds-sync/validate_headroom_lcx_completion_audit.py`
+- Headroom LCX completion audit Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001.md`
+- Headroom LCX objective coverage matrix evidence: `docs/harness/evidence/headroom-lcx-objective-coverage-matrix-20260623.md`
+- Headroom LCX objective coverage matrix JSON: `docs/harness/evidence/headroom-lcx-objective-coverage-matrix-20260623.json`
+- Headroom LCX objective coverage matrix validator: `tools/kds-sync/validate_headroom_lcx_objective_coverage_matrix.py`
+- Headroom LCX objective coverage matrix Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001.md`
 - Headroom LCX measurement admission request evidence: `docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md`
 - Headroom LCX measurement admission request JSON: `docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json`
 - Headroom LCX measurement admission request runner: `tools/kds-sync/run_headroom_lcx_measurement_admission_request.py`
@@ -251,6 +321,23 @@ superseded_by: []
 - Headroom LCX readiness pilot authorization package validator: `tools/kds-sync/validate_headroom_lcx_readiness_pilot_authorization_package.py`
 - Headroom LCX readiness pilot authorization package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md`
 - Headroom LCX readiness pilot authorization package output: `headroom_lcx_readiness_pilot_authorization_package=pass_check_only recommended_next_authorization=L3.5_controlled_sanitized_pilot project_count=15 evidence_chain_count=23 l4_candidate=false production_admission_gate=false accepted=false integrated=false production_ready=false`
+- Headroom LCX real measurement authorization request evidence: `docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.md`
+- Headroom LCX real measurement authorization request JSON: `docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.json`
+- Headroom LCX real measurement authorization request builder: `tools/kds-sync/build_headroom_lcx_real_measurement_authorization_request.py`
+- Headroom LCX real measurement authorization request validator: `tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_request.py`
+- Headroom LCX real measurement authorization request Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001.md`
+- Headroom LCX real measurement authorization request output: `headroom_lcx_real_measurement_authorization_request=pass_check_only project_count=15 requested_future_decision=open_real_measurement_window production_token_measurement_allowed=false accepted=false integrated=false production_ready=false`
+- Headroom LCX production runtime graph evidence: `docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.md`
+- Headroom LCX production runtime graph JSON: `docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json`
+- Headroom LCX production runtime graph validator: `tools/kds-sync/validate_headroom_lcx_production_runtime_graph.py`
+- Headroom LCX production runtime graph Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001.md`
+- Headroom LCX production runtime graph output: `headroom_lcx_production_runtime_graph=pass project_count=15 production_branch_blocked=true production_token_measurement_allowed=false measured_production_tokens=false accepted=false integrated=false production_ready=false`
+- Headroom LCX cost bridge evidence: `docs/harness/evidence/headroom-lcx-cost-bridge-20260623.md`
+- Headroom LCX cost bridge JSON: `docs/harness/evidence/headroom-lcx-cost-bridge-20260623.json`
+- Headroom LCX cost bridge runner: `tools/kds-sync/build_headroom_lcx_cost_bridge.py`
+- Headroom LCX cost bridge validator: `tools/kds-sync/validate_headroom_lcx_cost_bridge.py`
+- Headroom LCX cost bridge Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COST-BRIDGE-001.md`
+- Headroom LCX cost bridge output: `headroom_lcx_cost_bridge=pass project_count=15 bridge_mode=replay_only production_token_measurement_allowed=false measured_production_tokens=false production_admission_gate=false accepted=false integrated=false production_ready=false`
 - Headroom LCX L3.5 controlled sanitized pilot window evidence: `docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md`
 - Headroom LCX L3.5 controlled sanitized pilot window JSON: `docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.json`
 - Headroom LCX L3.5 controlled sanitized pilot window runner: `tools/kds-sync/run_headroom_lcx_l35_controlled_sanitized_pilot_window.py`
@@ -667,8 +754,10 @@ accepted 或 integrated 状态。
 ### Non-Claims
 
 - 本注册表不执行也不证明 real KDS API writeback。
+- does not perform or prove real KDS API writeback
 - 本注册表不把任何条目准入 production RAG、settlement、
   runtime business flow、accepted 或 integrated 状态。
+- It does not place any entry into accepted, or integrated status.
 - 本注册表不授权 production write、external API write、schema
   sync、bench migrate、deployment、commit 或 push。
 
@@ -748,3 +837,63 @@ accepted 或 integrated 状态。
 
 - sequence checkpoint evidence 已登记在上方治理证据登记表中。
 - 它记录 `LEDB-003-RD-002`；不会关闭 `LEDB-003`，不会批量重写历史记录，也不会改变 GFIS/GPCF 业务状态。
+
+## CODEGRAPH-TASK-INTAKE-GATE-20260623 CodeGraph 任务 Intake 门禁证据
+
+- 任务 Intake 门禁证据已登记在 `docs/harness/evidence/codegraph-task-intake-gate-20260623.md`。
+- 它把 `query`、`target_nodes`、`affected_scope`、`files_allowed_to_change`、`files_not_to_touch`、`fallback_tests`、`fallback_reason` 和 `codegraph_evidence` 固化为任务开工前必填项。
+- 它提供正负例回放，确保 `affected_tests=[]` 且无 fallback 时被阻断。
+- 它不证明业务功能完成，也不升级 `accepted`、`integrated` 或 `production_ready`。
+
+## CODEGRAPH-WATCHLIST-STEADY-MONITOR-20260623 CodeGraph watchlist steady monitor
+
+- 监控 evidence 已登记在 `docs/harness/evidence/codegraph-watchlist-steady-monitor-20260623.md` 与 `docs/harness/evidence/codegraph-watchlist-steady-monitor-20260623.json`。
+- 它记录 14 仓 live CodeGraph / Git 状态、`.codegraph/` Git 隔离、Brain/GFIS/KDS/Studio/GPCF drift watch 与 GPCF 本仓 self-sync 收口。
+- 它明确 `watch_required` 上限，不进入业务开发，不执行 watchlist 仓 sync 或 clean reindex，不声明 accepted/integrated/production_ready。
+- 对应 validator 为 `python3 tools/kds-sync/validate_codegraph_watchlist_steady_monitor_20260623.py`。
+
+## CODEGRAPH-NORMALIZATION-CHECKLIST-20260623 CodeGraph 常态化归一清单证据
+
+- 归一清单证据已登记在 `docs/harness/evidence/codegraph-normalization-checklist-20260623.md` 与 `docs/harness/evidence/codegraph-normalization-checklist-20260623.json`。
+- 它把任务 Intake、验收证据、效率指标、14 仓稳态监控、`.codegraph/` Git 隔离和授权边界收束为长期受控清单。
+- 它连接到现有项目群门禁与稳态监控链，不把 CodeGraph 当参考材料，而是当默认执行门禁。
+- 对应 validator 为 `python3 tools/kds-sync/validate_codegraph_normalization_checklist.py`。
+
+## GPCF-HEADROOM-LCX-REAL-MEASUREMENT-WINDOW-REQUEST-20260623 Headroom LCX real measurement window request
+
+- 窗口请求 evidence 已登记在 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.md` 与 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json`。
+- 它记录真实测量授权窗口仍为 `requested_not_granted`，并把窗口请求显式挂到 manifest、gap matrix、transition graph、objective coverage 和 completion audit 的受控引用链上。
+- 它只表示 precheck-only 请求被结构化，不表示真实测量已打开，也不改变 `accepted=false`、`integrated=false`、`production_ready=false`。
+
+## GPCF-HEADROOM-LCX-REAL-MEASUREMENT-WINDOW-GRANT-20260623 Headroom LCX real measurement window grant
+
+- 窗口授予 evidence 已登记在 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.md` 与 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.json`。
+- 它记录真实测量窗口已进入 `granted_precheck_only`，但 `real_measurement_open=false`，因此仍不能进入生产测量。
+- 它把窗口授予显式挂到 transition graph、gap matrix、remaining blocker inventory 和 next-stage authorization package 的受控引用链上。
+- 它只表示授权窗口被预检授予，不表示真实测量已打开，也不改变 `accepted=false`、`integrated=false`、`production_ready=false`。
+
+## GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623 Headroom LCX real measurement authorization signoff template
+
+- 授权签字模板 evidence 已登记在 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-signoff-template-20260623.md` 与 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-signoff-template-20260623.json`。
+- 对应 validator 为 `python3 tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_signoff_template.py`。
+- 它只提供 6 个必须签字字段与签署区占位，不表示授权完成，也不打开 real measurement window。
+- 它要求签字后仍保持 `authorization_complete=false`、`real_measurement_window_open=false`、`production_token_measurement_allowed=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
+
+## GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623 Headroom LCX authorization boundary review 20260623
+
+- 授权边界审查 evidence 已登记在 `docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.md` 与 `docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json`。
+- 对应 validator 为 `python3 tools/kds-sync/validate_headroom_lcx_authorization_boundary_review_20260623.py`。
+- 它记录已签字审批 bundle，但仍不表示 production admission 已打开，也不表示 real measurement window 已打开。
+- 它要求 `authorization_complete=true`，同时保持 `production_admission_gate=false`、`real_measurement_window_open=false`、`accepted=false`、`integrated=false`、`production_ready=false`。
+
+## GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 Headroom LCX remaining blocker inventory
+
+- 剩余阻断清单 evidence 已登记在 `docs/harness/evidence/headroom-lcx-remaining-blocker-inventory-20260623.md` 与 `docs/harness/evidence/headroom-lcx-remaining-blocker-inventory-20260623.json`。
+- 它把真实测量仍缺的授权窗口预检开放、WAES/Harness 决策、token ledger、proxy / SDK enablement 和真实业务等价测量固定成可校验清单。
+- 它只说明当前仍 blocked，不表示真实测量、accepted、integrated 或 production_ready。
+
+## GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623 Headroom LCX next-stage real measurement authorization package
+
+- 下一阶段授权桥接包已登记在 `docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.md` 与 `docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json`。
+- 它把授权前置完成、真实窗口已预检授予但仍未打开、production branch 仍 blocked 的状态收束到单一桥接入口。
+- 它只表示 next-stage bridge boundary 已结构化，不表示真实测量已打开，也不改变 `accepted=false`、`integrated=false`、`production_ready=false`。

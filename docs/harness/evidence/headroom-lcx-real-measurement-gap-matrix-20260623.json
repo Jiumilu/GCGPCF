@@ -1,0 +1,126 @@
+{
+  "gap_id": "HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623",
+  "status": "real_measurement_gap_matrix_defined_no_measurement",
+  "date": "2026-06-23",
+  "scope": {
+    "project_count": 15,
+    "project_ids": [
+      "GPCF",
+      "KDS",
+      "Brain",
+      "WAES",
+      "GFIS",
+      "GPC",
+      "PVAOS",
+      "Edge",
+      "PKC",
+      "XiaoC",
+      "XGD",
+      "XiaoG",
+      "MMC",
+      "Studio",
+      "WAS"
+    ],
+    "measurement_mode": "sanitized_metadata_only"
+  },
+  "current_graph_state": {
+    "graph_id": "HEADROOM-LCX-GRAPH-MANIFEST-20260623",
+    "graph_status": "controlled_pending_real_measurement",
+    "production_branch": "blocked",
+    "real_business_equivalence_scope": "sanitized_metadata_only_pending_real_measurement_authorization"
+  },
+  "blocking_state": {
+    "production_branch_open": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "real_measurement_window_granted": true,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false
+  },
+  "existing_supporting_evidence": {
+    "precheck_evidence_id": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+    "request_evidence_id": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+    "window_request_evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
+    "window_grant_evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623",
+    "p5_package_evidence_id": "HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-20260621",
+    "rollback_plan_evidence_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+  },
+  "missing_requirements": [
+    {
+      "requirement_id": "real_measurement_authorization_window",
+      "needed_for": "true_real_business_equivalence_measurement",
+      "current_status": "granted_precheck_only",
+      "blocking_evidence": "real_measurement_window_granted_but_open_remains_false"
+    },
+    {
+      "requirement_id": "real_measurement_waes_harness_decision",
+      "needed_for": "open_production_branch_for_measurement",
+      "current_status": "blocked",
+      "blocking_evidence": "waes_harness_admission_decision_is_precheck_only"
+    },
+    {
+      "requirement_id": "real_measurement_token_ledger",
+      "needed_for": "real_token_cost_and_saving_replay",
+      "current_status": "missing",
+      "blocking_evidence": "only_sanitized_precheck_ledger_exists"
+    },
+    {
+      "requirement_id": "production_proxy_or_sdk_enablement",
+      "needed_for": "actual_runtime_measurement_path",
+      "current_status": "blocked",
+      "blocking_evidence": "production_proxy_and_sdk_flags_remain_false"
+    },
+    {
+      "requirement_id": "real_business_equivalence_measurement",
+      "needed_for": "production_level_answer_equivalence_graph",
+      "current_status": "not_proven",
+      "blocking_evidence": "equivalence_layer_is_synthetic_only"
+    }
+  ],
+  "rollback_plan_integrity": {
+    "rollback_plan_present": true,
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "rollback_runbook_written": true
+  },
+  "non_claims": {
+    "real_business_equivalence_proven": false,
+    "real_measurement_open": false,
+    "production_branch_open": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "gates": {
+    "gap_matrix_defined": true,
+    "real_measurement_gap_present": true,
+    "production_branch_blocked": true,
+    "rollback_plan_present": true,
+    "waes_precheck_only": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false
+  },
+  "source_refs": {
+    "graph_manifest": "docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json",
+    "rollback_plan": "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md",
+    "measurement_request": "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json",
+    "window_request": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
+    "window_grant": "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.json",
+    "precheck": "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
+    "approval_signed_bundle": "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+    "authorization_boundary_review": "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json"
+  },
+  "policy_false_gates": {
+    "production_admission_gate": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-admission-20260621.md
 source_path: docs/harness/evidence/codegraph-dev-execution-admission-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -42,7 +42,7 @@ codegraph affected "<候选文件>" --json
 - 实现中：固化 `affected_scope`、`files_allowed_to_change`、`files_not_to_touch`、`expected_tests`。
 - 测试选择：优先使用 `affected_tests`；为空时记录 `fallback_tests` 和 `fallback_reason`。
 - 验收证据：必须包含 `codegraph_evidence`，字段为 `query`、`target_nodes`、`affected`、`changed_files`、`test_selection_reason`、`post_change_status`。
-- 持续评估：记录 `manual_scan_files`、`codegraph_candidate_files`、`actual_changed_files`、`affected_tests`、`missed_impact_count`、`time_to_first_target`。
+- 持续评估：记录 `manual_scan_files`、`codegraph_candidate_files`、`actual_changed_files`、`affected_tests`、`missed_impact_count`、`time_to_first_target`、`review_rework_count`。
 
 ## 模板
 

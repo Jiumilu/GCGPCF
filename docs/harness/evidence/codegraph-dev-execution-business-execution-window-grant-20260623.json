@@ -1,0 +1,105 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-20260623",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007",
+  "status": "business_execution_window_granted_project_group",
+  "generated_at": "2026-06-23T05:04:53Z",
+  "objective": "在保持 production、commit、push、deploy 边界关闭的前提下，为 GlobalCloud 项目群的业务开发执行层授予可进入窗口，使未来真实业务任务可以依 CodeGraph 前置分析进入实现。",
+  "source_refs": {
+    "project_group_full_coverage": "docs/harness/evidence/codegraph-project-group-full-coverage-20260621.json",
+    "watchlist_authorization_pack": "docs/harness/evidence/codegraph-dev-execution-watchlist-authorization-pack-20260622.json",
+    "admission_rule": "docs/codegraph/codegraph-dev-execution-admission.md",
+    "harness_gate": "docs/codegraph/codegraph-dev-execution-harness-gate.md",
+    "first_real_candidate_authorized": "docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorized-20260622.json"
+  },
+  "project_group_scope": {
+    "repo_count": 14,
+    "coverage_repo_count": 14,
+    "studio_included": true,
+    "was_included": true
+  },
+  "authorization_state": {
+    "authorization_complete": true,
+    "authorized": true,
+    "authorized_by": "user",
+    "authorized_at": "2026-06-23T05:04:53Z",
+    "authorization_phrase": "全部授权",
+    "missing_authorization_fields": []
+  },
+  "execution_window": {
+    "business_implementation_allowed": true,
+    "codegraph_sync_allowed": true,
+    "commit_authorized": false,
+    "push_authorized": false,
+    "deployment_authorized": false,
+    "production_write_authorized": false,
+    "external_api_write_authorized": false,
+    "real_kds_write_authorized": false,
+    "real_waes_write_authorized": false,
+    "clean_reindex_authorized": false
+  },
+  "current_status_snapshot": {
+    "GPCF": {
+      "initialized": true,
+      "pendingChanges": {"added": 16, "modified": 32, "removed": 0},
+      "reindexRecommended": false,
+      "codegraph_git_isolated": true
+    },
+    "GFIS": {
+      "initialized": true,
+      "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+      "reindexRecommended": false,
+      "codegraph_git_isolated": true
+    },
+    "Brain": {
+      "initialized": true,
+      "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+      "reindexRecommended": false,
+      "codegraph_git_isolated": true
+    },
+    "KDS": {
+      "initialized": true,
+      "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
+      "reindexRecommended": false,
+      "codegraph_git_isolated": true
+    },
+    "Studio": {
+      "initialized": true,
+      "pendingChanges": {"added": 0, "modified": 18, "removed": 0},
+      "reindexRecommended": false,
+      "codegraph_git_isolated": true
+    }
+  },
+  "allowed_actions": [
+    "enter business implementation for authorized project-group tasks",
+    "run codegraph query, node, and affected before implementation",
+    "record CodeGraph evidence in task-level harness artifacts",
+    "run codegraph sync for authorized task scopes",
+    "keep commit, push, deployment, production write, and external API write disabled"
+  ],
+  "forbidden_actions": [
+    "commit",
+    "push",
+    "deploy",
+    "production_write",
+    "external_api_write",
+    "real_kds_write",
+    "real_waes_write",
+    "accepted_or_integrated_claim",
+    "production_ready_claim",
+    "clean_reindex"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_clean_reindex_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008"
+}

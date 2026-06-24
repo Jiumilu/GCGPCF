@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622
-title: Headroom LCX marker retrieval miss 比较门禁证据
+title: Headroom LCX Marker Retrieval Miss Comparison Gate Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md
 source_path: docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX marker retrieval miss 比较门禁证据
+# Headroom LCX Marker Retrieval Miss Comparison Gate Evidence
 
-## 摘要
+## Summary
 
 - evidence_id: `HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622`
 - status: `marker_retrieval_miss_comparison_gate_pass_no_measurement`
@@ -28,14 +28,14 @@ superseded_by: []
 - entry_count: `1`
 - comparison_count: `1`
 
-## 允许比较字段
+## Allowed Compare Fields
 
 - `marker_gate`
 - `sensitive_redaction_gate`
 - `ccr_retrieval_miss_count`
 - `answer_equivalence`
 
-## 门禁
+## Gates
 
 | Gate | Value |
 |---|---|
@@ -58,9 +58,9 @@ superseded_by: []
 | saving_rate | not_calculated |
 | tokens_saved | not_calculated |
 
-## 非声明事项
+## Non-Claims
 
-- 本 evidence 不比较 raw prompt、raw completion、customer contract text、POD、financial voucher、key、production credential 或 provider secret。
-- 本 evidence 不计算真实 production token saving。
-- 本 evidence 不启动 Headroom production proxy，也不启用 production SDK。
-- 本 evidence 不把 Headroom 标记为 accepted、integrated 或 production_ready。
+- This evidence does not compare raw prompt, raw completion, customer contract text, POD, financial voucher, key, production credential, or provider secret.
+- This evidence does not calculate real production token saving.
+- This evidence does not start Headroom production proxy or enable production SDK.
+- This evidence does not mark Headroom as accepted, integrated, or production_ready.

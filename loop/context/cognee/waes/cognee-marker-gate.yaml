@@ -1,0 +1,26 @@
+gate_id: WAES-COGNEE-MARKER-GATE-v1
+default_action: require_evidence
+required_fields:
+  - task_id
+  - loop_round_id
+  - caller
+  - project_id
+  - tenant_id
+  - source_tag
+  - marker_id
+  - reason
+  - sensitive_check
+  - evidence_ref
+  - retention_owner
+allow_if:
+  - marker_id_present
+  - reason_present
+  - sensitive_check_pass
+  - harness_evidence_ref_present
+  - tenant_isolation_pass
+deny_if:
+  - high_sensitive_original_without_owner
+  - missing_reason
+  - missing_evidence
+  - cross_tenant_recall
+  - tenant_boundary_violation

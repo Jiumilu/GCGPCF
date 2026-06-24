@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAES/loop/context/headroom/docs/operating-model.md
 source_path: loop/context/headroom/docs/operating-model.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-21
 supersedes: []
 superseded_by: []
 ---
@@ -21,6 +21,10 @@ superseded_by: []
 ## LCX-Proxy
 
 `start-proxy.sh` 只允许 dev/test/dry-run，本地脚本拒绝 `HEADROOM_PRODUCTION_PROXY=true`。
+
+## Real Measurement Authorization
+
+`headroom-lcx-real-measurement-authorization-window-request-20260623` 只表示真实测量窗口请求已结构化并进入受控证据链，当前仍是 `requested_not_granted`。它不会打开 production branch，也不会把授权请求提升为授权结果。
 
 ## LCX-SDK
 

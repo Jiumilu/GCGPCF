@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md
 source_path: 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -20,7 +20,7 @@ superseded_by: []
 
 Plan ID: `LOOP-GOV-ROUND-REVIEW-PLAN-20260617`
 
-本计划（`Loop Governance Round Review Plan`）把 `LOOP-GOV-EFF-DEBT-LOCATOR-20260617` 转为 `LEDB-001`、`LEDB-002` 和 `LEDB-003` 的受控复核流程。它只是治理复核计划：`does not rewrite historical` Loop round records in bulk，也不改变 GFIS 或项目业务状态。
+本计划（`Loop Governance Round Review Plan`）把 `LOOP-GOV-EFF-DEBT-LOCATOR-20260617` 转为 `LEDB-001`、`LEDB-002` 和 `LEDB-003` 的受控复核流程。它只是治理复核计划：does not rewrite historical Loop round records in bulk，也不改变 GFIS 或项目业务状态。
 
 机器边界：不批量重写历史 Loop 轮次记录。
 

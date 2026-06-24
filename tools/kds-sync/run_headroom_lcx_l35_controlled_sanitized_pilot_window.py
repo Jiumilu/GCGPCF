@@ -5,9 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from datetime import datetime
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -36,6 +34,8 @@ PROJECTS = [
     "Studio",
     "WAS",
 ]
+
+AUTHORIZED_AT = "2026-06-22T10:00:00+08:00"
 
 
 def load_json(path: Path) -> dict:
@@ -136,7 +136,6 @@ def build_evidence() -> dict:
         if record["accepted"] or record["integrated"] or record["production_ready"]:
             failures.append(f"status_promotion_forbidden:{record['task_id']}")
 
-    authorized_at = datetime.now(ZoneInfo("Asia/Shanghai")).replace(microsecond=0).isoformat()
     return {
         "evidence_id": "HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622",
         "task_id": "GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001",
@@ -147,7 +146,7 @@ def build_evidence() -> dict:
         "authorization": {
             "authorized_window_id": "HEADROOM-LCX-L35-SANITIZED-PILOT-WINDOW-20260622-001",
             "authorized_by": "user_current_codex_session",
-            "authorized_at": authorized_at,
+            "authorized_at": AUTHORIZED_AT,
             "authorization_signal": "用户回复：批准",
             "authorization_scope": "L3.5_controlled_sanitized_pilot_only",
             "sanitized_production_token_ledger": FIXTURE_JSON.relative_to(ROOT).as_posix(),

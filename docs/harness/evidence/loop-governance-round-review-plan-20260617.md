@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md
 source_path: docs/harness/evidence/loop-governance-round-review-plan-20260617.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -55,6 +55,7 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 
 ## 非声明事项
 
+- does not rewrite historical Loop round records in bulk.
 - 本 evidence 不批量改写历史 round records。
 - 本 evidence 不证明 GFIS runtime SOP E2E 已通过。
 - 本 evidence 不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。

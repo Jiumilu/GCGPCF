@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622
-title: Headroom LCX 脱敏夹具稳定性门禁证据
+title: Headroom LCX Fixture Stability Gate Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md
 source_path: docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX 脱敏夹具稳定性门禁证据
+# Headroom LCX Fixture Stability Gate Evidence
 
-## 摘要
+## Summary
 
 - evidence_id: `HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622`
 - status: `fixture_stability_gate_pass_no_measurement`
@@ -28,9 +28,9 @@ superseded_by: []
 - entry_count: `15`
 - stable_hash_count: `1`
 
-## 门禁
+## Gates
 
-| 门禁项 | 当前值 |
+| Gate | Value |
 |---|---|
 | fixture_stability_gate | true |
 | multi_round_stability_gate | true |
@@ -53,9 +53,9 @@ superseded_by: []
 | saving_rate | not_calculated |
 | tokens_saved | not_calculated |
 
-## 非声明
+## Non-Claims
 
-- 本门禁只比对脱敏后的元数据摘要。
-- 本门禁不读取原始提示词、原始完成内容、客户合同、签收凭证、财务凭证、密钥、生产凭证或供应商密钥。
-- 本门禁不计算真实生产令牌节省。
-- 本门禁不把 Headroom 标记为已验收、已集成或生产就绪。
+- This gate compares sanitized metadata summaries only.
+- It does not read raw prompt, raw completion, customer contract, POD, financial voucher, key, production credential, or provider secret.
+- It does not calculate real production token saving.
+- It does not mark Headroom as accepted, integrated, or production_ready.

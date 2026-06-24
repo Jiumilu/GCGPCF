@@ -21,13 +21,13 @@ COMMITTEE_TEMPLATE_MD = ROOT / "docs/harness/evidence/base-knowledge-committee-r
 DOC_META = {
     HUMAN_TEMPLATE_MD: {
         "doc_id": "GPCF-DOC-7797BB4F55",
-        "title": "Base Knowledge Human Confirmation Template",
+        "title": "基础知识人工确认模板",
         "project": "KDS",
         "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md",
     },
     COMMITTEE_TEMPLATE_MD: {
         "doc_id": "GPCF-DOC-8066745911",
-        "title": "Base Knowledge Committee Review Template",
+        "title": "基础知识委员会评审模板",
         "project": "KDS",
         "kds_path": "开发/05-KDS/docs/harness/evidence/base-knowledge-committee-review-template-20260619.md",
     },
@@ -161,26 +161,26 @@ def write_md(template: dict[str, Any], path: Path, title: str, purpose: str) -> 
     md += "日期：2026-06-19\n\n"
     md += "状态：`blank_template_only`\n\n"
     md += f"{purpose}\n\n"
-    md += "## Summary\n\n"
+    md += "## 概要\n\n"
     md += f"- template_id：`{template['templateId']}`\n"
     md += f"- source_schema_id：`{template['sourceSchemaId']}`\n"
     md += f"- source_queue_evidence_id：`{template['sourceQueueEvidenceId']}`\n"
     md += f"- template_type：`{template['templateType']}`\n"
     md += f"- record_count：`{template['recordCount']}`\n\n"
-    md += "## Blank Records\n\n"
+    md += "## 空白记录\n\n"
     md += table(
         ["template_record_id", "source_queue_item_id", "source_candidate_id", "template_status", "downstream_allowed"],
         preview_rows,
     )
     md += "\n\n"
-    md += "## Controls\n\n"
+    md += "## 控制项\n\n"
     md += table(["control", "value"], [[key, str(value).lower()] for key, value in template["controls"].items()])
     md += "\n\n"
-    md += "## Boundary\n\n"
-    md += "- Blank records are templates only and contain no real confirmation or committee decision.\n"
-    md += "- Prefilled identity fields only preserve traceability to source candidates.\n"
-    md += "- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.\n"
-    md += "- Future filled records require separate controlled evidence and human or committee action.\n"
+    md += "## 边界\n\n"
+    md += "- 空白记录仅作模板，不包含真实的确认或委员会决策。\n"
+    md += "- 预填身份字段仅保留与来源候选人的可追溯链路。\n"
+    md += "- 不会执行真实 KDS API、WAES、GFIS、GPC、PVAOS、财务入账、清算、RAG 入场或生产写入。\n"
+    md += "- 未来填充记录需另行提供受控证据并由人工或委员会处理。\n"
     path.write_text(preserve_frontmatter(path, md, title), encoding="utf-8")
 
 
@@ -198,14 +198,14 @@ def main() -> int:
     write_md(
         human_template,
         HUMAN_TEMPLATE_MD,
-        "Base Knowledge Human Confirmation Template",
-        "This file provides blank records for future manual confirmation based on the DKS-046 human confirmation schema.",
+        "基础知识人工确认模板",
+        "本文件基于 DKS-046 人工确认模式，提供未来人工确认所需的空白记录模板。",
     )
     write_md(
         committee_template,
         COMMITTEE_TEMPLATE_MD,
-        "Base Knowledge Committee Review Template",
-        "This file provides blank records for future committee review based on the DKS-046 committee review schema.",
+        "基础知识委员会评审模板",
+        "本文件基于 DKS-046 委员会评审模式，提供未来委员会评审所需的空白记录模板。",
     )
 
     print(

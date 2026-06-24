@@ -1,0 +1,94 @@
+{
+  "task_id": "CODEGRAPH-TASK-INTAKE-GATE-DEMO-NEG-002",
+  "project": "GPCF",
+  "status": "intake_ready",
+  "codegraph_required": true,
+  "pre_change_analysis": {
+    "query": "codegraph task intake gate docs/codegraph/codegraph-task-intake-gate.md",
+    "query_results": [
+      {
+        "path": "docs/codegraph/codegraph-task-intake-gate.md"
+      }
+    ],
+    "target_nodes": [
+      "docs/codegraph/codegraph-task-intake-gate.md"
+    ],
+    "node_inspection": [
+      {
+        "path": "docs/codegraph/codegraph-task-intake-gate.md",
+        "kind": "markdown"
+      }
+    ],
+    "affected": {
+      "changedFiles": [
+        "docs/codegraph/codegraph-task-intake-gate.md"
+      ],
+      "affectedTests": []
+    }
+  },
+  "implementation_constraints": {
+    "target_nodes": [
+      "docs/codegraph/codegraph-task-intake-gate.md"
+    ],
+    "affected_scope": [
+      "docs/codegraph"
+    ],
+    "files_allowed_to_change": [
+      "docs/codegraph/codegraph-task-intake-gate.md"
+    ],
+    "files_not_to_touch": [
+      "docs/harness",
+      "templates",
+      "tools/kds-sync"
+    ],
+    "expected_tests": [
+      "python3 tools/kds-sync/validate_codegraph_task_intake_gate.py"
+    ]
+  },
+  "test_selection": {
+    "affected_tests": [],
+    "fallback_tests": [
+      "python3 tools/kds-sync/validate_codegraph_task_intake_gate.py"
+    ],
+    "fallback_reason": ""
+  },
+  "codegraph_evidence": {
+    "query": "codegraph task intake gate docs/codegraph/codegraph-task-intake-gate.md",
+    "target_nodes": [
+      "docs/codegraph/codegraph-task-intake-gate.md"
+    ],
+    "affected": {
+      "changedFiles": [
+        "docs/codegraph/codegraph-task-intake-gate.md"
+      ],
+      "affectedTests": []
+    },
+    "changed_files": [
+      "docs/codegraph/codegraph-task-intake-gate.md"
+    ],
+    "test_selection_reason": "fallback tests missing so gate must block",
+    "post_change_status": "intake_recorded_pending_implementation"
+  },
+  "efficiency_metrics": {
+    "manual_scan_files": 4,
+    "codegraph_candidate_files": 1,
+    "actual_changed_files": 1,
+    "affected_tests": [],
+    "missed_impact_count": 0,
+    "time_to_first_target": "under_1_minute_observed",
+    "review_rework_count": 0
+  },
+  "codegraph_unavailable_exception": {
+    "reason": "",
+    "fallback_scan": [],
+    "reviewer": "",
+    "expires_at": ""
+  },
+  "status_boundaries": {
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false
+  }
+}

@@ -108,25 +108,25 @@ def write_markdown(summary: dict[str, Any]) -> None:
         ]
         for item in summary["writebackCandidates"]
     ]
-    md = "# Base Knowledge Closure Score Dry-run Summary\n\n"
+    md = "# 基础知识闭环评分试运行汇总\n\n"
     md += "日期：2026-06-18\n\n"
     md += "状态：`dry_run_evidence_only`\n\n"
-    md += "## Summary\n\n"
+    md += "## 概要\n\n"
     md += f"- evidence_id：`{summary['evidenceId']}`\n"
     md += f"- source_round：`{summary['sourceRound']}`\n"
     md += f"- fixture_count：`{summary['fixtureCount']}`\n"
     md += f"- expected_hard_stops：`{summary['expectedHardStops']}`\n"
     md += f"- writeback_candidate_count：`{summary['writebackCandidateCount']}`\n\n"
-    md += "## Decision Bands\n\n"
+    md += "## 决策分档\n\n"
     md += table(["decision_band", "count"], band_rows)
     md += "\n\n"
-    md += "## Boundary\n\n"
+    md += "## 边界\n\n"
     md += table(
         ["boundary", "value"],
         [[key, str(value).lower()] for key, value in summary["boundary"].items()],
     )
     md += "\n\n"
-    md += "## Writeback Candidate Preview\n\n"
+    md += "## 写回候选预览\n\n"
     md += table(
         [
             "candidate_id",
@@ -142,17 +142,17 @@ def write_markdown(summary: dict[str, Any]) -> None:
         candidate_md_rows,
     )
     md += "\n\n"
-    md += "## Controls\n\n"
+    md += "## 控制边界\n\n"
     md += "- This evidence is generated from local fixtures only.\n"
     md += "- All writeback rows are candidate-only and require manual or committee confirmation.\n"
     md += "- No real KDS API, WAES write, GFIS/GPC/PVAOS business ledger write, RAG admission, settlement, bounty release, revenue allocation, or AI quota allocation is performed.\n"
     md += "- Hard-stop rows remain blocked even when the calculated score is above a lower decision band.\n"
     OUTPUT_MD.write_text(preserve_frontmatter(OUTPUT_MD, md), encoding="utf-8")
 
-    ledger = "# Base Knowledge Writeback Candidate Ledger\n\n"
+    ledger = "# 基础知识回写候选账本\n\n"
     ledger += "日期：2026-06-18\n\n"
     ledger += "状态：`candidate_only`\n\n"
-    ledger += "## Candidate Ledger\n\n"
+    ledger += "## 候选账本\n\n"
     ledger += table(
         [
             "candidate_id",
@@ -179,7 +179,7 @@ def write_markdown(summary: dict[str, Any]) -> None:
         ],
     )
     ledger += "\n\n"
-    ledger += "## Controls\n\n"
+    ledger += "## 控制边界\n\n"
     ledger += "- Candidate rows do not close gaps.\n"
     ledger += "- Candidate rows do not create score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger writes.\n"
     ledger += "- Candidate rows must be confirmed by the proper human, KDS, WAES, or committee process before any downstream action.\n"

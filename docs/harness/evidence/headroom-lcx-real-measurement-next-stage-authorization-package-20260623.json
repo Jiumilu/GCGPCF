@@ -1,0 +1,86 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001",
+  "date": "2026-06-23",
+  "status": "next_stage_authorization_package_granted_precheck_only",
+  "scope": "bridge_precheck_complete_to_real_measurement_window_request",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "source_evidence": {
+    "boundary_review": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260621",
+    "authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
+    "authorization_window_request": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
+    "authorization_window_grant": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623",
+    "authorization_field_map": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623",
+    "runner_contract": "HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623",
+    "gap_matrix": "HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623",
+    "completion_audit": null
+  },
+  "bridge_state": {
+    "authorization_complete": true,
+    "missing_required_field_count": 0,
+    "waes_harness_admitted": true,
+    "real_measurement_window_requested": true,
+    "real_measurement_window_granted": true,
+    "real_measurement_open": false,
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "required_next_decision": "open_real_measurement_window",
+  "required_next_actions": [
+    "obtain explicit human authorization window",
+    "keep precheck-only boundary intact",
+    "do not start production proxy or production SDK",
+    "do not write real KDS or external API",
+    "do not process sensitive material without redaction"
+  ],
+  "current_guard": {
+    "real_measurement_gap_present": true,
+    "production_branch_blocked": true,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_real_measurement_window_granted": false,
+    "not_real_measurement_open": true,
+    "not_production_branch_open": true,
+    "not_production_token_measurement": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_sensitive_material_processing": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  },
+  "notes": [
+    "This package bridges the completed sanitized precheck to the missing real measurement window decision.",
+    "It is evidence of the next-stage bridge boundary, not evidence of execution.",
+    "It keeps the production branch blocked until WAES/Harness issues a new real-measurement decision."
+  ]
+}

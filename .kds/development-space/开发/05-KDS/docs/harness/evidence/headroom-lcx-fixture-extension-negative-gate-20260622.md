@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622
-title: Headroom LCX fixture 扩展负向门禁证据
+title: Headroom LCX Fixture Extension Negative Gate Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/headroom-lcx-fixture-extension-negative-gate-20260622.md
 source_path: docs/harness/evidence/headroom-lcx-fixture-extension-negative-gate-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX fixture 扩展负向门禁证据
+# Headroom LCX Fixture Extension Negative Gate Evidence
 
-## 摘要
+## Summary
 
 - evidence_id: `HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622`
 - status: `negative_gate_pass_no_measurement`
@@ -28,9 +28,9 @@ superseded_by: []
 - rejected: `9`
 - accepted_count: `0`
 
-## 门禁
+## Gates
 
-| 门禁项 | 值 |
+| Gate | Value |
 |---|---|
 | negative_fixture_gate | true |
 | raw_prompt_rejected | true |
@@ -52,8 +52,8 @@ superseded_by: []
 | integrated | false |
 | production_ready | false |
 
-## 非声明
+## Non-Claims
 
-- 负向 fixture 只使用占位标记表示被禁止的原始字段或敏感字段。
-- 本证据不保存真实客户材料、供应商密钥、KDS token、授权头、生产凭证或生产 token 台账。
-- 本证据不授权 accepted、integrated、production_ready、生产代理、真实 KDS API 写入或外部 API 写入。
+- Negative fixtures use placeholder-only markers for forbidden raw or sensitive fields.
+- No real customer material, provider secret, KDS token, authorization header, production credential, or production token ledger is stored.
+- This evidence does not authorize accepted, integrated, production_ready, production proxy, real KDS API write, or external API write.

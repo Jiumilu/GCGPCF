@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md
 source_path: docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -30,8 +30,8 @@ superseded_by: []
 
 ## stop
 
-- stop_type：`pass_with_watch`
-- 停止证据：Studio residual 仍在授权上限内；Brain/GFIS/KDS 未授权；KDS dirty 持续增长，需要下一轮授权包。
+- stop_type：`watch_required`
+- 停止证据：Studio residual 已超过授权上限；Brain/GFIS pending 已归零但仍有 Git dirty；KDS dirty 仍需下一轮授权包复核。
 - 状态上限：不得升级 accepted、integrated 或 production_ready。
 
 ## verify
@@ -60,7 +60,7 @@ python3 tools/kds-sync/validate_kds_token.py
 
 ## debug
 
-- 当前阻塞：KDS mirror / WorkWiki dirty 增长，Brain/GFIS 仍未授权。
+- 当前阻塞：Studio residual 超过授权上限，KDS mirror / WorkWiki dirty 仍需复核，Brain/GFIS 仍保留 Git dirty。
 - 下一轮：`GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017`
 - 真实 lane：未进入业务开发，真实业务计数不变。
 - 写入计数：生产写入 0，外部 API 写入 0，commit 0，push 0，deploy 0。

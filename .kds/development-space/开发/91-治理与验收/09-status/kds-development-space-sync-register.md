@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-06-23
+日期：2026-06-24
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -32,18 +32,18 @@ superseded_by: []
 
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
-| GFIS | 01-GFIS | 87 | 87 | 已建空间 |
-| GPC | 02-GPC | 42 | 37 | 已建空间 |
-| PVAOS | 03-PVAOS | 7 | 7 | 已建空间 |
-| WAES | 04-WAES | 149 | 20 | 已建空间 |
-| KDS | 05-KDS | 635 | 635 | 已建空间 |
-| Brain | 06-Brain | 6 | 6 | 已建空间 |
+| GFIS | 01-GFIS | 94 | 94 | 已建空间 |
+| GPC | 02-GPC | 47 | 42 | 已建空间 |
+| PVAOS | 03-PVAOS | 8 | 8 | 已建空间 |
+| WAES | 04-WAES | 162 | 23 | 已建空间 |
+| KDS | 05-KDS | 659 | 659 | 已建空间 |
+| Brain | 06-Brain | 8 | 8 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 42 | 42 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 1667 | 1572 | 已建空间 |
+| GPCF | 12-GPCF | 1743 | 1639 | 已建空间 |
 | Studio | 13-Studio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
@@ -51,8 +51,8 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 54 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 89 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 61 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 101 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -313,6 +313,7 @@ superseded_by: []
 | GPCF-DOC-3F9E7988C6 | 01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | 开发/90-跨项目架构/01-architecture/AI驱动工厂信息化系统完整方案V3.1.md | bidirectional | pending_api |
 | GPCF-DOC-D54AF3DD5D | 01-architecture/GPC方向全面分析报告.md | 开发/90-跨项目架构/01-architecture/GPC方向全面分析报告.md | bidirectional | pending_api |
 | GPCF-DOC-45A09FDDC2 | 01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md | 开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系候选范围与门禁边界.md | bidirectional | pending_api |
+| GPCF-DOC-WAS-TOPLINE-20260623 | 01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md | 开发/90-跨项目架构/01-architecture/GlobalCloud世界资产体系正式命名与产品系统架构总纲.md | bidirectional | pending_api |
 | GPCF-DOC-0C519C97BD | 01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | 开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md | bidirectional | pending_api |
 | GPCF-DOC-3DBC8DC5C3 | 01-architecture/GlobalCloud智慧工厂专项架构图集.md | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂专项架构图集.md | bidirectional | pending_api |
 | GPCF-DOC-1DCB795545 | 01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | 开发/90-跨项目架构/01-architecture/GlobalCloud智慧工厂进一步梳理与提示词库.md | bidirectional | pending_api |
@@ -334,8 +335,14 @@ superseded_by: []
 | GPCF-DOC-3DB47E5509 | 01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台业务流架构图.md | bidirectional | pending_api |
 | GPCF-DOC-AA2468EDC8 | 01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | 开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链平台主架构与宪法约束融合建议.md | bidirectional | pending_api |
 | GPCF-DOC-535BF5C0CA | 01-architecture/GlobalCloud项目群交叉分析报告.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群交叉分析报告.md | bidirectional | pending_api |
+| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624 | 01-architecture/GlobalCloud项目群实施方案.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群实施方案.md | bidirectional | pending_api |
 | GPCF-DOC-7B5E3B05D7 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | bidirectional | pending_api |
 | GPCF-DOC-75A25DFFB1 | 01-architecture/README.md | 开发/90-跨项目架构/01-architecture/README.md | bidirectional | pending_api |
+| GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | 01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md | 开发/90-跨项目架构/01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md | bidirectional | pending_api |
+| GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624 | 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | 开发/90-跨项目架构/01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | bidirectional | pending_api |
+| GPCF-DOC-WAS-MASTER-PLAN-20260624 | 01-architecture/WAS世界资产体系总体方案.md | 开发/90-跨项目架构/01-architecture/WAS世界资产体系总体方案.md | bidirectional | pending_api |
+| GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623 | 01-architecture/XWAIL-V1.2-Validator规则清单.md | 开发/90-跨项目架构/01-architecture/XWAIL-V1.2-Validator规则清单.md | bidirectional | pending_api |
+| GPCF-DOC-XWAIL-V12-DRAFT-20260623 | 01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md | 开发/90-跨项目架构/01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md | bidirectional | pending_api |
 | GPCF-DOC-1D47877518 | 01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | 开发/90-跨项目架构/01-architecture/基于GlobalCloud项目群的智慧工厂架构设计方案.md | bidirectional | pending_api |
 | GPCF-DOC-78AE1A47AE | 02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md | bidirectional | pending_api |
 | GPCF-DOC-39A8CE7FE1 | 02-governance/GlobalCloud智能体团队工作区与项目仓库操作规范.md | 开发/91-治理与验收/02-governance/GlobalCloud智能体团队工作区与项目仓库操作规范.md | bidirectional | pending_api |
@@ -353,11 +360,13 @@ superseded_by: []
 | GPCF-DOC-FD6BA2EC78 | 02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | bidirectional | pending_api |
 | GPCF-DOC-94AA31880F | 02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-FULL-IMPLEMENTATION-20260622 | 02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md | bidirectional | pending_api |
+| GPCF-DOC-3A9B7F4E12 | 02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md | bidirectional | pending_api |
 | GPCF-DOC-5E60043D38 | 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | bidirectional | pending_api |
 | GPCF-DOC-2BBAE6E546 | 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | bidirectional | pending_api |
 | GPCF-DOC-AC66DE8415 | 02-governance/GlobalCloud项目群KDS开发空间安全规范.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群KDS开发空间安全规范.md | bidirectional | pending_api |
 | GPCF-DOC-785AEA3125 | 02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md | bidirectional | pending_api |
 | GPCF-DOC-D2373AEE37 | 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624 | 02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | bidirectional | pending_api |
 | GPCF-DOC-F150434D98 | 02-governance/GlobalCloud项目群文档与软件中文化治理规范.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群文档与软件中文化治理规范.md | bidirectional | pending_api |
 | GPCF-DOC-B8ADFA9E30 | 02-governance/GlobalCloud项目群文档综合治理规范.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群文档综合治理规范.md | bidirectional | pending_api |
 | GPCF-DOC-87DD7D79CD | 02-governance/GlobalCloud项目群文档防污染规则.md | 开发/91-治理与验收/02-governance/GlobalCloud项目群文档防污染规则.md | bidirectional | pending_api |
@@ -373,6 +382,7 @@ superseded_by: []
 | GPCF-DOC-9B8C2D4F61 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | 开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | bidirectional | pending_api |
 | GPCF-DOC-AB6DC46557 | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | bidirectional | pending_api |
 | GPCF-DOC-622398264F | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | bidirectional | pending_api |
+| GPCF-DOC-4C7D46A1B3 | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | bidirectional | pending_api |
 | GPCF-DOC-23DDC94324 | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | bidirectional | pending_api |
 | GPCF-DOC-6CC5F6A45C | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | bidirectional | pending_api |
 | GPCF-DOC-0DF6AA8647 | 02-governance/loop/LOOP_CONTROL_BOARD.md | 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md | bidirectional | pending_api |
@@ -389,6 +399,7 @@ superseded_by: []
 | GPCF-DOC-5E646AC9A6 | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | 开发/91-治理与验收/02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | bidirectional | pending_api |
 | GPCF-DOC-7FB1181082 | 02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | 开发/91-治理与验收/02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | bidirectional | pending_api |
 | GPCF-DOC-D5550386C6 | 02-governance/loop/LOOP_METRICS.md | 开发/91-治理与验收/02-governance/loop/LOOP_METRICS.md | bidirectional | pending_api |
+| GPCF-DOC-0A2D9C6B81 | 02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md | 开发/91-治理与验收/02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md | bidirectional | pending_api |
 | GPCF-DOC-8D5147AC17 | 02-governance/loop/LOOP_RISK_GATE.md | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md | bidirectional | pending_api |
 | GPCF-DOC-6C7A1E9D2B | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | bidirectional | pending_api |
 | GPCF-DOC-4E83A9C210 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md | bidirectional | pending_api |
@@ -397,6 +408,10 @@ superseded_by: []
 | GPCF-DOC-FA5685423F | 02-governance/loop/studio/README.md | 开发/91-治理与验收/02-governance/loop/studio/README.md | bidirectional | pending_api |
 | GPCF-DOC-81FE104C6D | 02-governance/ops/README.md | 开发/91-治理与验收/02-governance/ops/README.md | bidirectional | pending_api |
 | GPCF-DOC-8DCFDAD068 | 02-governance/ops/ecs-access-control-and-network-boundary.md | 开发/91-治理与验收/02-governance/ops/ecs-access-control-and-network-boundary.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-IMPLEMENTATION-CHANGE-PROPAGATION-TEMPLATE-20260624 | 02-governance/project-implementation-plan-change-propagation-template.md | 开发/91-治理与验收/02-governance/project-implementation-plan-change-propagation-template.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-MASTER-PLAN-BATCH-1-AUTH-REQUEST-20260624 | 02-governance/project-master-plan-batch-1-authorization-request.md | 开发/91-治理与验收/02-governance/project-master-plan-batch-1-authorization-request.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-MASTER-PLAN-BATCH-2-AUTH-REQUEST-20260624 | 02-governance/project-master-plan-batch-2-authorization-request.md | 开发/91-治理与验收/02-governance/project-master-plan-batch-2-authorization-request.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-MASTER-PLAN-CHANGE-PROPAGATION-TEMPLATE-20260624 | 02-governance/project-master-plan-change-propagation-template.md | 开发/91-治理与验收/02-governance/project-master-plan-change-propagation-template.md | bidirectional | pending_api |
 | GPCF-DOC-60E4A89F37 | 03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md | 开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md | bidirectional | pending_api |
 | GPCF-DOC-2BE90FCE73 | 03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md | 开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md | bidirectional | pending_api |
 | GPCF-DOC-139A718B66 | 03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md | 开发/05-KDS/03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md | bidirectional | pending_api |
@@ -679,12 +694,15 @@ superseded_by: []
 | GPCF-DOC-D77EFFB8F7 | 09-status/README.md | 开发/91-治理与验收/09-status/README.md | bidirectional | pending_api |
 | GPCF-DOC-0295C05F40 | 09-status/document-deprecation-register.md | 开发/91-治理与验收/09-status/document-deprecation-register.md | bidirectional | pending_api |
 | GPCF-DOC-0B97A8283D | 09-status/globalcloud-chinese-localization-governance-report.md | 开发/91-治理与验收/09-status/globalcloud-chinese-localization-governance-report.md | bidirectional | pending_api |
+| GPCF-DOC-CORE-CHAIN-REAL-EVIDENCE-REGISTER-20260624 | 09-status/globalcloud-core-chain-real-evidence-register.md | 开发/91-治理与验收/09-status/globalcloud-core-chain-real-evidence-register.md | bidirectional | pending_api |
 | GPCF-DOC-5EF9F8EE5D | 09-status/globalcloud-document-control-register.md | 开发/91-治理与验收/09-status/globalcloud-document-control-register.md | bidirectional | pending_api |
 | GPCF-DOC-71779DF3C3 | 09-status/globalcloud-document-governance-loop-gate.md | 开发/91-治理与验收/09-status/globalcloud-document-governance-loop-gate.md | bidirectional | pending_api |
 | GPCF-DOC-C436DDB0F6 | 09-status/globalcloud-document-health-report.md | 开发/91-治理与验收/09-status/globalcloud-document-health-report.md | bidirectional | pending_api |
 | GPCF-DOC-C582EFCACE | 09-status/globalcloud-l3-admission-matrix.md | 开发/91-治理与验收/09-status/globalcloud-l3-admission-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-C10C271958 | 09-status/globalcloud-project-document-loop-maturity-matrix.md | 开发/91-治理与验收/09-status/globalcloud-project-document-loop-maturity-matrix.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | 09-status/globalcloud-project-implementation-control-register.md | 开发/91-治理与验收/09-status/globalcloud-project-implementation-control-register.md | bidirectional | pending_api |
 | GPCF-DOC-6CE17269E9 | 09-status/globalcloud-project-mainline-alignment-matrix.md | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md | bidirectional | pending_api |
+| GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | 09-status/globalcloud-project-master-plan-control-register.md | 开发/91-治理与验收/09-status/globalcloud-project-master-plan-control-register.md | bidirectional | pending_api |
 | GPCF-DOC-C586488E67 | 09-status/gpcf-project-status-matrix.md | 开发/91-治理与验收/09-status/gpcf-project-status-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-B1085FD000 | 09-status/kds-api-sync-ledger-incident-20260617.md | 开发/91-治理与验收/09-status/kds-api-sync-ledger-incident-20260617.md | bidirectional | pending_api |
 | GPCF-DOC-KDS-SYNC-PLAN | 09-status/kds-development-space-sync-plan.md | 开发/91-治理与验收/09-status/kds-development-space-sync-plan.md | bidirectional | pending_api |
@@ -702,6 +720,7 @@ superseded_by: []
 | GPCF-DOC-89108DD154 | 09-status/odf-phase7-small-batch-execution-plan.md | 开发/91-治理与验收/09-status/odf-phase7-small-batch-execution-plan.md | bidirectional | pending_api |
 | GPCF-DOC-4B4A93C3B9 | 09-status/odf-phase8-drift-monitoring-plan.md | 开发/91-治理与验收/09-status/odf-phase8-drift-monitoring-plan.md | bidirectional | pending_api |
 | GPCF-DOC-26BEA382B1 | 09-status/odf-phase9-dynamic-source-stabilization-plan.md | 开发/91-治理与验收/09-status/odf-phase9-dynamic-source-stabilization-plan.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-STATUS-20260624 | 09-status/project-group-master-plan-governance-status-report.md | 开发/91-治理与验收/09-status/project-group-master-plan-governance-status-report.md | bidirectional | pending_api |
 | GPCF-DOC-7BB91E7428 | 09-status/session-main-task-summary-and-statement-control-boundary-20260622.md | 开发/91-治理与验收/09-status/session-main-task-summary-and-statement-control-boundary-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-A55E6422C8 | 10-archive/README.md | 开发/92-证据与会话归档/10-archive/README.md | bidirectional | pending_api |
 | GPCF-DOC-5112E5A758 | 10-archive/deprecated/README.md | 开发/92-证据与会话归档/10-archive/deprecated/README.md | bidirectional | pending_api |
@@ -709,6 +728,8 @@ superseded_by: []
 | GPCF-DOC-73C77D0200 | 10-archive/imported-legacy/README.md | 开发/92-证据与会话归档/10-archive/imported-legacy/README.md | bidirectional | pending_api |
 | GPCF-DOC-36F8C5657B | 10-archive/superseded/README.md | 开发/92-证据与会话归档/10-archive/superseded/README.md | bidirectional | pending_api |
 | GPCF-DOC-37DD68363F | AGENTS.md | 开发/12-GPCF/AGENTS.md | bidirectional | pending_api |
+| GPCF-DOC-GLOBALCLOUD-GPCF-IMPLEMENTATION-PLAN-20260624 | GlobalCloud GPCF 实施方案.md | 开发/02-GPC/GlobalCloud GPCF 实施方案.md | bidirectional | pending_api |
+| GPCF-DOC-GLOBALCLOUD-GPCF-MASTER-PLAN-20260624 | GlobalCloud GPCF 总体方案.md | 开发/01-GFIS/GlobalCloud GPCF 总体方案.md | bidirectional | pending_api |
 | GPCF-DOC-16DD6DC90F | PROJECT_HARNESS_MANIFEST.md | 开发/01-GFIS/PROJECT_HARNESS_MANIFEST.md | bidirectional | pending_api |
 | GPCF-DOC-8EC9A00BFD | README.md | 开发/00-项目群总控/README.md | bidirectional | pending_api |
 | GPCF-DOC-A2F5EC5E20 | docs/GCBrain-Development-Manual.md | 开发/05-KDS/docs/GCBrain-Development-Manual.md | bidirectional | pending_api |
@@ -720,6 +741,7 @@ superseded_by: []
 | GPCF-DOC-13B5A26E7C | docs/codegraph/codegraph-kds-okf-mapping.md | 开发/05-KDS/docs/codegraph/codegraph-kds-okf-mapping.md | bidirectional | pending_api |
 | GPCF-DOC-F7ADE9DF11 | docs/codegraph/codegraph-loop-integration.md | 开发/05-KDS/docs/codegraph/codegraph-loop-integration.md | bidirectional | pending_api |
 | GPCF-DOC-016C584865 | docs/codegraph/codegraph-positioning.md | 开发/05-KDS/docs/codegraph/codegraph-positioning.md | bidirectional | pending_api |
+| GPCF-DOC-7C6A2D0D31 | docs/codegraph/codegraph-task-intake-gate.md | 开发/12-GPCF/docs/codegraph/codegraph-task-intake-gate.md | bidirectional | pending_api |
 | GPCF-DOC-8C267BC542 | docs/codegraph/codegraph-waes-gate.md | 开发/05-KDS/docs/codegraph/codegraph-waes-gate.md | bidirectional | pending_api |
 | GPCF-DOC-B27F8FD59C | docs/gc-knowledge-fabric/README.md | 开发/05-KDS/docs/gc-knowledge-fabric/README.md | bidirectional | pending_api |
 | GPCF-DOC-F59EC32059 | docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md | 开发/05-KDS/docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md | bidirectional | pending_api |
@@ -1011,15 +1033,24 @@ superseded_by: []
 | GPCF-DOC-9B51263381 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | 开发/05-KDS/docs/gc-knowledge-fabric/waes-gate-io-policy.md | bidirectional | pending_api |
 | GPCF-DOC-19D7F0C3F0 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | 开发/05-KDS/docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | bidirectional | pending_api |
 | GPCF-DOC-1946E4144B | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | 开发/05-KDS/docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | bidirectional | pending_api |
+| GPCF-DOC-92A4C970C1 | docs/harness/AaaS/README.md | 开发/05-KDS/docs/harness/AaaS/README.md | bidirectional | pending_api |
+| GPCF-DOC-76A4B3F001 | docs/harness/AaaS/evidence/README.md | 开发/05-KDS/docs/harness/AaaS/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-0857798863 | docs/harness/Brain/README.md | 开发/06-Brain/docs/harness/Brain/README.md | bidirectional | pending_api |
 | GPCF-DOC-4A654203DE | docs/harness/Brain/evidence/README.md | 开发/06-Brain/docs/harness/Brain/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624 | docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | bidirectional | pending_api |
+| GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-33E55CB86C | docs/harness/Brain/evidence/evidence-index.md | 开发/06-Brain/docs/harness/Brain/evidence/evidence-index.md | bidirectional | pending_api |
 | GPCF-DOC-B0F22D2E45 | docs/harness/Brain/loop-state.md | 开发/06-Brain/docs/harness/Brain/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-0209DFB721 | docs/harness/Brain/loops/README.md | 开发/06-Brain/docs/harness/Brain/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-F61B890C31 | docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | 开发/06-Brain/docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | bidirectional | pending_api |
+| GPCF-DOC-D375EBD5DA | docs/harness/GFIS/README.md | 开发/01-GFIS/docs/harness/GFIS/README.md | bidirectional | pending_api |
+| GPCF-DOC-9BF6A3D875 | docs/harness/GFIS/evidence/README.md | 开发/01-GFIS/docs/harness/GFIS/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-GFIS-REAL-RUNTIME-BASELINE-20260624 | docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md | 开发/01-GFIS/docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-B637BE22F8 | docs/harness/GPC/README.md | 开发/02-GPC/docs/harness/GPC/README.md | bidirectional | pending_api |
 | GPCF-DOC-61C2D40981 | docs/harness/GPC/evidence/README.md | 开发/02-GPC/docs/harness/GPC/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-6AA1BB56F0 | docs/harness/GPC/evidence/evidence-index.md | 开发/02-GPC/docs/harness/GPC/evidence/evidence-index.md | bidirectional | pending_api |
+| GPCF-DOC-GPC-REAL-RUNTIME-BASELINE-20260624 | docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md | 开发/02-GPC/docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-556B3EE58F | docs/harness/GPC/loop-state.md | 开发/02-GPC/docs/harness/GPC/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-15295B49FF | docs/harness/GPC/loops/README.md | 开发/02-GPC/docs/harness/GPC/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-C02896A291 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | 开发/02-GPC/docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | bidirectional | pending_api |
@@ -1027,6 +1058,7 @@ superseded_by: []
 | GPCF-DOC-FB255EAED0 | docs/harness/KDS/README.md | 开发/05-KDS/docs/harness/KDS/README.md | bidirectional | pending_api |
 | GPCF-DOC-ADEB250FC7 | docs/harness/KDS/evidence/README.md | 开发/05-KDS/docs/harness/KDS/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-0749030BBD | docs/harness/KDS/evidence/evidence-index.md | 开发/05-KDS/docs/harness/KDS/evidence/evidence-index.md | bidirectional | pending_api |
+| GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | 开发/05-KDS/docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-19C33DD1F8 | docs/harness/KDS/loop-state.md | 开发/05-KDS/docs/harness/KDS/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-F54729C154 | docs/harness/KDS/loops/README.md | 开发/05-KDS/docs/harness/KDS/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-8DA5979C40 | docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | 开发/05-KDS/docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | bidirectional | pending_api |
@@ -1047,6 +1079,7 @@ superseded_by: []
 | GPCF-DOC-C16FB51046 | docs/harness/PVAOS/README.md | 开发/03-PVAOS/docs/harness/PVAOS/README.md | bidirectional | pending_api |
 | GPCF-DOC-A7F2AE6ACC | docs/harness/PVAOS/evidence/README.md | 开发/03-PVAOS/docs/harness/PVAOS/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-5266DDB981 | docs/harness/PVAOS/evidence/evidence-index.md | 开发/03-PVAOS/docs/harness/PVAOS/evidence/evidence-index.md | bidirectional | pending_api |
+| GPCF-DOC-PVAOS-REAL-RUNTIME-BASELINE-20260624 | docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md | 开发/03-PVAOS/docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-3A5C57AC3E | docs/harness/PVAOS/loop-state.md | 开发/03-PVAOS/docs/harness/PVAOS/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-70CE112465 | docs/harness/PVAOS/loops/README.md | 开发/03-PVAOS/docs/harness/PVAOS/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-8DDE495C90 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-001.md | 开发/03-PVAOS/docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-001.md | bidirectional | pending_api |
@@ -1055,6 +1088,7 @@ superseded_by: []
 | GPCF-DOC-04C744A2DC | docs/harness/WAES/README.md | 开发/04-WAES/docs/harness/WAES/README.md | bidirectional | pending_api |
 | GPCF-DOC-144B2195C3 | docs/harness/WAES/evidence/README.md | 开发/04-WAES/docs/harness/WAES/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-460215ED8F | docs/harness/WAES/evidence/evidence-index.md | 开发/04-WAES/docs/harness/WAES/evidence/evidence-index.md | bidirectional | pending_api |
+| GPCF-DOC-WAES-REAL-RUNTIME-BASELINE-20260624 | docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md | 开发/04-WAES/docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-FFA52ED4FF | docs/harness/WAES/loop-state.md | 开发/04-WAES/docs/harness/WAES/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-4F7B5760F0 | docs/harness/WAES/loops/README.md | 开发/04-WAES/docs/harness/WAES/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-5F557A77DA | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | 开发/04-WAES/docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | bidirectional | pending_api |
@@ -1065,6 +1099,9 @@ superseded_by: []
 | GPCF-DOC-B8F78D5CEF | docs/harness/XGD/loop-state.md | 开发/09-XGD/docs/harness/XGD/loop-state.md | bidirectional | pending_api |
 | GPCF-DOC-817579A2B2 | docs/harness/XGD/loops/README.md | 开发/09-XGD/docs/harness/XGD/loops/README.md | bidirectional | pending_api |
 | GPCF-DOC-4CBD09FE9B | docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | 开发/09-XGD/docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | bidirectional | pending_api |
+| GPCF-DOC-0CE26414BA | docs/harness/XWAIL/README.md | 开发/05-KDS/docs/harness/XWAIL/README.md | bidirectional | pending_api |
+| GPCF-DOC-5770D36F5C | docs/harness/XWAIL/evidence/README.md | 开发/05-KDS/docs/harness/XWAIL/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-86DB4AB0BA | docs/harness/XiaoC/README.md | 开发/08-XiaoC/docs/harness/XiaoC/README.md | bidirectional | pending_api |
 | GPCF-DOC-7C2E2BCB61 | docs/harness/XiaoC/evidence/README.md | 开发/08-XiaoC/docs/harness/XiaoC/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-63536E3201 | docs/harness/XiaoC/evidence/evidence-index.md | 开发/08-XiaoC/docs/harness/XiaoC/evidence/evidence-index.md | bidirectional | pending_api |
@@ -1090,6 +1127,7 @@ superseded_by: []
 | GPCF-DOC-CADCE617E6 | docs/harness/evidence/agent-reach-exa-local-pilot-20260620.md | 开发/05-KDS/docs/harness/evidence/agent-reach-exa-local-pilot-20260620.md | bidirectional | pending_api |
 | GPCF-DOC-ECA9896FC8 | docs/harness/evidence/agent-reach-exa-local-pilot-gate-20260620.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-exa-local-pilot-gate-20260620.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-FULL-GOAL-20260622 | docs/harness/evidence/agent-reach-full-implementation-goal-20260622.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-full-implementation-goal-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-AGENT-REACH-GREEN-SUPPLY-CHAIN-PRIORITY-TARGETS-20260623 | docs/harness/evidence/agent-reach-green-supply-chain-priority-search-targets-20260623.md | 开发/05-KDS/docs/harness/evidence/agent-reach-green-supply-chain-priority-search-targets-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-3378C90628 | docs/harness/evidence/agent-reach-human-review-decisions-20260621.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-human-review-decisions-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-22516238C0 | docs/harness/evidence/agent-reach-l2-poc-20260620.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-l2-poc-20260620.md | bidirectional | pending_api |
 | GPCF-DOC-23C9EEDF9B | docs/harness/evidence/agent-reach-l3-candidate-pipeline-20260621.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-l3-candidate-pipeline-20260621.md | bidirectional | pending_api |
@@ -1116,6 +1154,9 @@ superseded_by: []
 | GPCF-DOC-AGENT-REACH-P8-BATCH-MERGE-RUNNER-20260622 | docs/harness/evidence/agent-reach-p8-batch-merge-runner-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-batch-merge-runner-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-BATCH-RUNTIME-RUNNER-20260622 | docs/harness/evidence/agent-reach-p8-batch-runtime-runner-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-batch-runtime-runner-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-20260622 | docs/harness/evidence/agent-reach-p8-execution-audit-bundle-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-execution-audit-bundle-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-1-20260622 | docs/harness/evidence/agent-reach-p8-full-live-search-batch-1-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-full-live-search-batch-1-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-2-20260622 | docs/harness/evidence/agent-reach-p8-full-live-search-batch-2-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-full-live-search-batch-2-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-3-20260622 | docs/harness/evidence/agent-reach-p8-full-live-search-batch-3-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-full-live-search-batch-3-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-FULL-LIVE-SEARCH-PIPELINE-20260622 | docs/harness/evidence/agent-reach-p8-full-live-search-pipeline-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-full-live-search-pipeline-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-LIVE-EXECUTION-READINESS-MATRIX-20260622 | docs/harness/evidence/agent-reach-p8-live-execution-readiness-matrix-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-live-execution-readiness-matrix-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-LOCAL-AUTHORIZATION-WINDOW-AUDIT-20260623 | docs/harness/evidence/agent-reach-p8-local-authorization-window-audit-20260623.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-local-authorization-window-audit-20260623.md | bidirectional | pending_api |
@@ -1123,6 +1164,7 @@ superseded_by: []
 | GPCF-DOC-AGENT-REACH-P8-POST-AUTHORIZATION-DRIVER-20260622 | docs/harness/evidence/agent-reach-p8-post-authorization-driver-20260622.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-p8-post-authorization-driver-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-20260622 | docs/harness/evidence/agent-reach-p8-query-quality-preflight-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-query-quality-preflight-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-P8-REWORK-QUEUE-20260622 | docs/harness/evidence/agent-reach-p8-rework-queue-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-p8-rework-queue-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-20260622 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-20260622.md | 开发/12-GPCF/docs/harness/evidence/agent-reach-project-group-full-live-coverage-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-OUTPUT-QUALITY-GATE-20260622 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-output-quality-gate-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-project-group-full-live-coverage-output-quality-gate-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-20260622 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-plan-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-project-group-full-live-coverage-plan-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-20260622 | docs/harness/evidence/agent-reach-project-group-search-readiness-audit-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-project-group-search-readiness-audit-20260622.md | bidirectional | pending_api |
@@ -1138,8 +1180,10 @@ superseded_by: []
 | GPCF-DOC-9C22552EEE | docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | 开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | bidirectional | pending_api |
 | GPCF-DOC-7797BB4F55 | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | 开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | bidirectional | pending_api |
 | GPCF-DOC-C13F879695 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | 开发/05-KDS/docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | bidirectional | pending_api |
+| GPCF-DOC-4E29A86D95 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | 开发/05-KDS/docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-A1E6C5C544 | docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-C8BB19E987 | docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-20260623 | docs/harness/evidence/codegraph-dev-execution-business-execution-window-grant-20260623.md | 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-business-execution-window-grant-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-6D28F6D4CE | docs/harness/evidence/codegraph-dev-execution-document-localization-debt-closure-20260622.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-document-localization-debt-closure-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-07988FA674 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-20260622.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-first-real-candidate-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-C7B06F23A9 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorization-20260622.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorization-20260622.md | bidirectional | pending_api |
@@ -1154,10 +1198,12 @@ superseded_by: []
 | GPCF-DOC-2B8C8B68C2 | docs/harness/evidence/codegraph-dev-execution-watchlist-authorization-pack-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-watchlist-authorization-pack-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-1EC63249AE | docs/harness/evidence/codegraph-dev-execution-watchlist-drift-triage-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-watchlist-drift-triage-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-43BA653EFB | docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-CGFSR20260623 | docs/harness/evidence/codegraph-gfis-scope-review-20260623.md | 开发/12-GPCF/docs/harness/evidence/codegraph-gfis-scope-review-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-82A9FD6319 | docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-DCD5E4AA37 | docs/harness/evidence/codegraph-impact-regression-watch-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-impact-regression-watch-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-6C2F2CC1ED | docs/harness/evidence/codegraph-impact-report-dry-run-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-impact-report-dry-run-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-0B6826B488 | docs/harness/evidence/codegraph-kds-mirror-scope-review-authorization-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-kds-mirror-scope-review-authorization-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-CGNC20260623 | docs/harness/evidence/codegraph-normalization-checklist-20260623.md | 开发/12-GPCF/docs/harness/evidence/codegraph-normalization-checklist-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-DA0B8578AF | docs/harness/evidence/codegraph-project-group-full-coverage-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-project-group-full-coverage-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-2BB0310392 | docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-769242C3DB | docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-project-group-steady-state-recheck-20260622.md | bidirectional | pending_api |
@@ -1167,11 +1213,18 @@ superseded_by: []
 | GPCF-DOC-24E6A9A471 | docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-sync-authorization-pack-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-9940064EF2 | docs/harness/evidence/codegraph-sync-only-closure-authorization-blocked-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-sync-only-closure-authorization-blocked-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-78E2051FFD | docs/harness/evidence/codegraph-sync-only-closure-authorized-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-sync-only-closure-authorized-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-2AF01CCB7C | docs/harness/evidence/codegraph-task-intake-gate-20260623.md | 开发/12-GPCF/docs/harness/evidence/codegraph-task-intake-gate-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-61F5839244 | docs/harness/evidence/codegraph-watchlist-post-studio-monitor-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-watchlist-post-studio-monitor-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-4D7F2B9020 | docs/harness/evidence/codegraph-watchlist-steady-monitor-20260623.md | 开发/05-KDS/docs/harness/evidence/codegraph-watchlist-steady-monitor-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-89B4FED3DA | docs/harness/evidence/codegraph-watchlist-sync-authorization-pack-20260621.md | 开发/05-KDS/docs/harness/evidence/codegraph-watchlist-sync-authorization-pack-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-5558944E2C | docs/harness/evidence/codegraph-watchlist-sync-only-closure-authorized-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-watchlist-sync-only-closure-authorized-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-481D44CB8A | docs/harness/evidence/codegraph-watchlist-sync-plan-20260621.md | 开发/12-GPCF/docs/harness/evidence/codegraph-watchlist-sync-plan-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-FB9A023039 | docs/harness/evidence/codegraph-watchlist-threshold-review-20260622.md | 开发/05-KDS/docs/harness/evidence/codegraph-watchlist-threshold-review-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-8C7F2F4D5A | docs/harness/evidence/cognee-p1-recall-comparison-pilot-20260623.md | 开发/12-GPCF/docs/harness/evidence/cognee-p1-recall-comparison-pilot-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-8C7F2D6F01 | docs/harness/evidence/cognee-p2-write-preview-pilot-20260623.md | 开发/12-GPCF/docs/harness/evidence/cognee-p2-write-preview-pilot-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-8C7F2F4F01 | docs/harness/evidence/cognee-p3-write-preview-rollback-20260623.md | 开发/12-GPCF/docs/harness/evidence/cognee-p3-write-preview-rollback-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-8C7F2F5002 | docs/harness/evidence/cognee-p4-real-writeback-precheck-20260623.md | 开发/12-GPCF/docs/harness/evidence/cognee-p4-real-writeback-precheck-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-8C7F2F5003 | docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.md | 开发/12-GPCF/docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-7B2E61A9D4 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | 开发/05-KDS/docs/harness/evidence/current-session-mainline-declaration-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-5D0159ED7D | docs/harness/evidence/evidence-index.md | 开发/12-GPCF/docs/harness/evidence/evidence-index.md | bidirectional | pending_api |
 | GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622 | docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | 开发/05-KDS/docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | bidirectional | pending_api |
@@ -1246,32 +1299,49 @@ superseded_by: []
 | GPCF-DOC-07ADF1B23E | docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-l2-project-group-dry-run-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-C1E752CB0B | docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-90AB2CEFD0 | docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623 | docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-72360135C4 | docs/harness/evidence/headroom-lcx-authorization-negative-fixtures-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-authorization-negative-fixtures-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-55C5A514B5 | docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-9D362F48F8 | docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-E92337280E | docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | docs/harness/evidence/headroom-lcx-completion-audit-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-completion-audit-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-F6D2D165A7 | docs/harness/evidence/headroom-lcx-controlled-package-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-controlled-package-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-COST-BRIDGE-20260623 | docs/harness/evidence/headroom-lcx-cost-bridge-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-cost-bridge-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | docs/harness/evidence/headroom-lcx-fixture-extension-negative-gate-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-fixture-extension-negative-gate-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | docs/harness/evidence/headroom-lcx-fixture-extension-replay-comparison-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-fixture-extension-replay-comparison-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-20260623 | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-graph-manifest-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622 | docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622 | docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-l35-controlled-sanitized-pilot-window-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622 | docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-l35-multi-window-stability-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.md | bidirectional | pending_api |
-| GPCF-DOC-54C01FA442 | docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-54C01FA442 | docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-1F18B14E93 | docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-20260623 | docs/harness/evidence/headroom-lcx-objective-coverage-matrix-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-objective-coverage-matrix-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-0F02316005 | docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-p0-runtime-replay-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-22C297756A | docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-p1-proxy-dry-run-smoke-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-7C93269D31 | docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-D754FEE0EB | docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-3278429C0F | docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-FA6CBD2283 | docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623 | docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | docs/harness/evidence/headroom-lcx-project-group-replay-stability-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-project-group-replay-stability-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622 | docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.md | bidirectional | pending_api |
-| GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md | bidirectional | pending_api |
-| GPCF-DOC-666816F27E | docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | bidirectional | pending_api |
-| GPCF-DOC-A1E6CF72D2 | docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | bidirectional | pending_api |
-| GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-signoff-template-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-real-measurement-authorization-signoff-template-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-20260623 | docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | docs/harness/evidence/headroom-lcx-remaining-blocker-inventory-20260623.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-remaining-blocker-inventory-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-666816F27E | docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | bidirectional | pending_api |
+| GPCF-DOC-A1E6CF72D2 | docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-0EF0B535FC | docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md | 开发/05-KDS/docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-A9483B7541 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-3AA4B2B9B0 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-blocked-20260622.md | 开发/12-GPCF/docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-blocked-20260622.md | bidirectional | pending_api |
@@ -1364,6 +1434,8 @@ superseded_by: []
 | GPCF-DOC-E768727850 | docs/harness/evidence/loop-governance-round-review-plan-20260617.md | 开发/12-GPCF/docs/harness/evidence/loop-governance-round-review-plan-20260617.md | bidirectional | pending_api |
 | GPCF-DOC-1750E1606B | docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md | 开发/05-KDS/docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md | bidirectional | pending_api |
 | GPCF-DOC-F8461F5919 | docs/harness/evidence/loop-governance-truth-field-review-20260617.md | 开发/05-KDS/docs/harness/evidence/loop-governance-truth-field-review-20260617.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-20260624 | docs/harness/evidence/loop-multi-agent-execution-smoke-20260624.md | 开发/05-KDS/docs/harness/evidence/loop-multi-agent-execution-smoke-20260624.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-OPERATIONAL-GATE-TRIAGE-20260624 | docs/harness/evidence/loop-operational-gate-triage-20260624.md | 开发/12-GPCF/docs/harness/evidence/loop-operational-gate-triage-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-5F4B0C8D71 | docs/harness/evidence/loop-ui-governance-baseline-20260622.md | 开发/12-GPCF/docs/harness/evidence/loop-ui-governance-baseline-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-6FD038491B | docs/harness/evidence/odf-phase2-closure-report-20260617.md | 开发/05-KDS/docs/harness/evidence/odf-phase2-closure-report-20260617.md | bidirectional | pending_api |
 | GPCF-DOC-86BB2ABBFD | docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | 开发/05-KDS/docs/harness/evidence/odf-phase2-sample-ledger-20260617.md | bidirectional | pending_api |
@@ -1409,10 +1481,16 @@ superseded_by: []
 | GPCF-DOC-1F8C4D6B21 | docs/harness/evidence/session-mainline-preflight-enforcement-20260622.md | 开发/05-KDS/docs/harness/evidence/session-mainline-preflight-enforcement-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-718A85136C | docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-7D6C9E5C21 | docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-A13F6D7B4E | docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | bidirectional | pending_api |
+| GPCF-DOC-8C4A16F2DE | docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-F1A4B89C2D | docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-9F2A7D61B3 | docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-5A9F2D1C7E | docs/harness/evidence/studio-default-credential-mobile-runtime-verified-20260623.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-mobile-runtime-verified-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-1D4C8A73E2 | docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-6C81F0E2A4 | docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-5B7A12D4E9 | docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md | bidirectional | pending_api |
+| GPCF-DOC-7C5E1A92D4 | docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md | bidirectional | pending_api |
+| GPCF-DOC-5A7D23B8E1 | docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-5C7D184EA2 | docs/harness/evidence/studio-jobs-chat-entry-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-jobs-chat-entry-verified-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-8A54D0E2C1 | docs/harness/evidence/studio-kanban-chat-entry-verified-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-kanban-chat-entry-verified-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-BF2C4E0A91 | docs/harness/evidence/studio-kanban-navigation-topology-20260622.md | 开发/12-GPCF/docs/harness/evidence/studio-kanban-navigation-topology-20260622.md | bidirectional | pending_api |
@@ -1662,8 +1740,10 @@ superseded_by: []
 | GPCF-DOC-1496E69CD8 | docs/harness/loops/loop-round-GPCF-CF-LR-066.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CF-LR-066.md | bidirectional | pending_api |
 | GPCF-DOC-A1A8006738 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002.md | bidirectional | pending_api |
 | GPCF-DOC-8CB660E132 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001.md | bidirectional | pending_api |
+| GPCF-DOC-D1B5B8B030 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018.md | bidirectional | pending_api |
 | GPCF-DOC-DE30AB91D7 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | bidirectional | pending_api |
 | GPCF-DOC-31365B7D25 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | bidirectional | pending_api |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md | bidirectional | pending_api |
 | GPCF-DOC-AC51B4A6F1 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | bidirectional | pending_api |
 | GPCF-DOC-0D35D7BC63 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | bidirectional | pending_api |
 | GPCF-DOC-11E86C4B9A | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | bidirectional | pending_api |
@@ -1680,6 +1760,7 @@ superseded_by: []
 | GPCF-DOC-33EED81A10 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DRIFT-ALERT-THRESHOLDS-008.md | bidirectional | pending_api |
 | GPCF-DOC-794D90A6F1 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-LARGE-FILE-POLICY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-LARGE-FILE-POLICY-001.md | bidirectional | pending_api |
 | GPCF-DOC-8B82DFE880 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-RESIDUAL-NOTICE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-RESIDUAL-NOTICE-001.md | bidirectional | pending_api |
+| GPCF-DOC-CGFSR019 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019.md | bidirectional | pending_api |
 | GPCF-DOC-895151260A | docs/harness/loops/loop-round-GPCF-CODEGRAPH-GOAL-OPT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-GOAL-OPT-001.md | bidirectional | pending_api |
 | GPCF-DOC-44DA9A4D2E | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-ASSESSMENT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-ASSESSMENT-001.md | bidirectional | pending_api |
 | GPCF-DOC-8055ED77AE | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006.md | bidirectional | pending_api |
@@ -1687,6 +1768,7 @@ superseded_by: []
 | GPCF-DOC-B9144A4914 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005.md | bidirectional | pending_api |
 | GPCF-DOC-28984FE940 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-INTEGRATION-CLOSURE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-INTEGRATION-CLOSURE-001.md | bidirectional | pending_api |
 | GPCF-DOC-7272ECE5C1 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017.md | bidirectional | pending_api |
+| GPCF-DOC-CGNC001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-NORMALIZATION-CHECKLIST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-NORMALIZATION-CHECKLIST-001.md | bidirectional | pending_api |
 | GPCF-DOC-DA39A6A262 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-P1-ADMISSION-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-P1-ADMISSION-001.md | bidirectional | pending_api |
 | GPCF-DOC-F57E6B4E33 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-001.md | bidirectional | pending_api |
 | GPCF-DOC-55CEA573A4 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-PROJECT-GROUP-FULL-FABRIC-001.md | bidirectional | pending_api |
@@ -1701,11 +1783,19 @@ superseded_by: []
 | GPCF-DOC-3BC26C2DFE | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003.md | bidirectional | pending_api |
 | GPCF-DOC-3DB2BD8346 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010-AUTHORIZED.md | bidirectional | pending_api |
 | GPCF-DOC-BE4E5F68B8 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-SYNC-ONLY-CLOSURE-010.md | bidirectional | pending_api |
+| GPCF-DOC-9B7D44D8F2 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-TASK-INTAKE-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-TASK-INTAKE-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-9D0EC80EB6 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016.md | bidirectional | pending_api |
+| GPCF-DOC-8C1A3F9020 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020.md | bidirectional | pending_api |
 | GPCF-DOC-005FDDA3DC | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-AUTHORIZATION-PACK-002.md | bidirectional | pending_api |
 | GPCF-DOC-BB1D26426D | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-ONLY-CLOSURE-003-AUTHORIZED.md | bidirectional | pending_api |
 | GPCF-DOC-D3B37861BD | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-PLAN-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-SYNC-PLAN-001.md | bidirectional | pending_api |
 | GPCF-DOC-7AAEB2E376 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-COGNEE-P1-P2-P3-CLOSURE-001 | docs/harness/loops/loop-round-GPCF-COGNEE-P1-P2-P3-CLOSURE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-P1-P2-P3-CLOSURE-001.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-LIVE-001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-004.md | bidirectional | pending_api |
 | GPCF-DOC-B0BFD5B1FB | docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | bidirectional | pending_api |
 | GPCF-DOC-4F7DC277C5 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | bidirectional | pending_api |
 | GPCF-LOOP-GCKF-P0-D100-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | bidirectional | pending_api |
@@ -1895,30 +1985,48 @@ superseded_by: []
 | GPCF-DOC-6AAF1F40B0 | docs/harness/loops/loop-round-GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001.md | bidirectional | pending_api |
 | GPCF-DOC-F43423639D | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001.md | bidirectional | pending_api |
 | GPCF-DOC-CB613DC3D1 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-F59787B942 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001.md | bidirectional | pending_api |
 | GPCF-DOC-1320B915AE | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001.md | bidirectional | pending_api |
 | GPCF-DOC-2EF89E2432 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-74DFF5CB30 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001.md | bidirectional | pending_api |
 | GPCF-DOC-C81CB2CF9A | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-CONTROLLED-PACKAGE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-COST-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COST-BRIDGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-COST-BRIDGE-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-EXTENSION-REPLAY-COMPARISON-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FRONTMATTER-CONFLICT-CLOSURE-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-5FF130412D | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FULL-IMPLEMENTATION-PLAN-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-LOOP-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-GRAPH-MANIFEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-GRAPH-MANIFEST-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MARKER-RETRIEVAL-MISS-COMPARISON-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-4F8936D7E5 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001.md | bidirectional | pending_api |
 | GPCF-DOC-A7161F4187 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-METADATA-REPLAY-CHECK-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001.md | bidirectional | pending_api |
 | GPCF-DOC-AD82144FCE | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P0-RUNTIME-REPLAY-001.md | bidirectional | pending_api |
 | GPCF-DOC-58AA82BBE3 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P1-PROXY-DRY-RUN-SMOKE-001.md | bidirectional | pending_api |
 | GPCF-DOC-5966FE20DD | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P2-MCP-SDK-DRY-RUN-SMOKE-001.md | bidirectional | pending_api |
 | GPCF-DOC-8161B0C039 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-01EFEECC41 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-FA44EE9146 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-REPLAY-STABILITY-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-LOOP-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-LOOP-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-LOOP-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-LOOP-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-TRANSITION-GRAPH-001.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001.md | bidirectional | pending_api |
 | GPCF-DOC-D83FE8C1B1 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | bidirectional | pending_api |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | bidirectional | pending_api |
 | GPCF-DOC-82B704BBFF | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | bidirectional | pending_api |
@@ -2516,6 +2624,8 @@ superseded_by: []
 | GPCF-DOC-EDD3670D2E | docs/harness/loops/loop-round-GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-DOCUMENT-LOCALIZATION-DEBT-TRIAGE-001.md | bidirectional | pending_api |
 | GPCF-DOC-FIVE-DIRECTION-RUN-001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-RUN-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-RUN-001.md | bidirectional | pending_api |
 | GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-001 | docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-STANDING-SMOKE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-FIVE-DIRECTION-STANDING-SMOKE-001.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001 | docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-MULTI-AGENT-EXECUTION-SMOKE-001.md | bidirectional | pending_api |
+| GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001 | docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-LOOP-OPERATIONAL-GATE-TRIAGE-001.md | bidirectional | pending_api |
 | GPCF-DOC-55A6B73433 | docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-GOVERNANCE-CLOSURE-RECOVERY-001.md | bidirectional | pending_api |
 | GPCF-DOC-AC4F4B6A2E | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-ADMISSION-PRECHECK-002.md | bidirectional | pending_api |
 | GPCF-DOC-E1CC4F445E | docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-OKF-SUMMARY-HUMAN-CONFIRMATION-PACK-003.md | bidirectional | pending_api |
@@ -2669,6 +2779,12 @@ superseded_by: []
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-011 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-011.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-011.md | bidirectional | pending_api |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-012 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-012.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-012.md | bidirectional | pending_api |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-013 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-013.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-013.md | bidirectional | pending_api |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-014 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-014.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-014.md | bidirectional | pending_api |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-015 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-015.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-015.md | bidirectional | pending_api |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-016 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-016.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-016.md | bidirectional | pending_api |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-017 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md | bidirectional | pending_api |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-018 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md | bidirectional | pending_api |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-019 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | bidirectional | pending_api |
 | GPCF-DOC-F4C5AF2694 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | bidirectional | pending_api |
 | GPCF-DOC-DF19BA9F40 | docs/harness/minimum-closed-loop/README.md | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md | bidirectional | pending_api |
 | GPCF-DOC-9886BDB110 | docs/harness/minimum-closed-loop/control-plane.md | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md | bidirectional | pending_api |
@@ -2678,9 +2794,17 @@ superseded_by: []
 | GPCF-DOC-9096ABA44D | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-27101F3BEB | docs/harness/multi-tenant-permission-design.md | 开发/12-GPCF/docs/harness/multi-tenant-permission-design.md | bidirectional | pending_api |
 | GPCF-DOC-40F0A4CB83 | docs/harness/status-audit-2026-06-10.md | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md | bidirectional | pending_api |
-| GPCF-DOC-6C2D5BB513 | loop/context/headroom/README.md | 开发/02-GPC/loop/context/headroom/README.md | bidirectional | pending_api |
-| GPCF-DOC-A1FFDD1AE2 | loop/context/headroom/docs/README.md | 开发/02-GPC/loop/context/headroom/docs/README.md | bidirectional | pending_api |
+| GPCF-DOC-25ADFEBCF8 | loop/context/cognee/README.md | 开发/02-GPC/loop/context/cognee/README.md | bidirectional | pending_api |
+| GPCF-DOC-6BA1B0CCA6 | loop/context/cognee/harness/README.md | 开发/02-GPC/loop/context/cognee/harness/README.md | bidirectional | pending_api |
+| GPCF-DOC-7A2A6D4F05 | loop/context/cognee/harness/p1-recall-comparison-template.md | 开发/02-GPC/loop/context/cognee/harness/p1-recall-comparison-template.md | bidirectional | pending_api |
+| GPCF-DOC-7A2A6D4F06 | loop/context/cognee/harness/p2-write-preview-template.md | 开发/02-GPC/loop/context/cognee/harness/p2-write-preview-template.md | bidirectional | pending_api |
+| GPCF-DOC-8C7F2F5001 | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | 开发/02-GPC/loop/context/cognee/harness/p4-real-writeback-precheck-template.md | bidirectional | pending_api |
+| GPCF-DOC-6C2D5BB513 | loop/context/headroom/README.md | 开发/01-GFIS/loop/context/headroom/README.md | bidirectional | pending_api |
+| GPCF-DOC-A1FFDD1AE2 | loop/context/headroom/docs/README.md | 开发/01-GFIS/loop/context/headroom/docs/README.md | bidirectional | pending_api |
 | GPCF-DOC-8749FB9903 | loop/context/headroom/docs/architecture.md | 开发/04-WAES/loop/context/headroom/docs/architecture.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | loop/context/headroom/docs/blocker-inventory.md | 开发/04-WAES/loop/context/headroom/docs/blocker-inventory.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | loop/context/headroom/docs/completion-audit.md | 开发/04-WAES/loop/context/headroom/docs/completion-audit.md | bidirectional | pending_api |
+| GPCF-DOC-HEADROOM-LCX-GRAPH-20260623 | loop/context/headroom/docs/graph.md | 开发/01-GFIS/loop/context/headroom/docs/graph.md | bidirectional | pending_api |
 | GPCF-DOC-00463F9971 | loop/context/headroom/docs/license.md | 开发/12-GPCF/loop/context/headroom/docs/license.md | bidirectional | pending_api |
 | GPCF-DOC-BF9AA5F60D | loop/context/headroom/docs/operating-model.md | 开发/04-WAES/loop/context/headroom/docs/operating-model.md | bidirectional | pending_api |
 | GPCF-DOC-260DDD94E9 | loop/context/headroom/docs/rollout.md | 开发/04-WAES/loop/context/headroom/docs/rollout.md | bidirectional | pending_api |
@@ -2711,6 +2835,9 @@ superseded_by: []
 | GPCF-DOC-8C2AA8996B | templates/loop-audit-template.md | 开发/12-GPCF/templates/loop-audit-template.md | bidirectional | pending_api |
 | GPCF-DOC-1D2FA3DB71 | templates/loop-round-template.md | 开发/12-GPCF/templates/loop-round-template.md | bidirectional | pending_api |
 | GPCF-DOC-DDBD7C90C2 | templates/loop-state-template.md | 开发/12-GPCF/templates/loop-state-template.md | bidirectional | pending_api |
+| PROJECT-DOC-IMPLEMENTATION-PLAN-TEMPLATE | templates/project-implementation-plan-template.md | 开发/12-GPCF/templates/project-implementation-plan-template.md | bidirectional | pending_api |
+| PROJECT-DOC-MASTER-PLAN-TEMPLATE | templates/project-master-plan-template.md | 开发/12-GPCF/templates/project-master-plan-template.md | bidirectional | pending_api |
+| PROJECT-DOC-REAL-EVIDENCE-RECORD-TEMPLATE | templates/real-evidence-record-template.md | 开发/12-GPCF/templates/real-evidence-record-template.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-CONTROLLED-ADAPTER-20260622 | third_party/agent-reach/CONTROLLED_ADAPTER.md | 开发/01-GFIS/third_party/agent-reach/CONTROLLED_ADAPTER.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-ISOLATED-INSTALL-20260622 | third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md | 开发/01-GFIS/third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-LIVE-SEARCH-AUTHORIZATION-20260622 | third_party/agent-reach/LIVE_SEARCH_AUTHORIZATION.md | 开发/01-GFIS/third_party/agent-reach/LIVE_SEARCH_AUTHORIZATION.md | bidirectional | pending_api |
@@ -2721,4 +2848,5 @@ superseded_by: []
 | GPCF-DOC-AGENT-REACH-SECURITY-REVIEW-20260622 | third_party/agent-reach/SECURITY_REVIEW.md | 开发/02-GPC/third_party/agent-reach/SECURITY_REVIEW.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-SOURCE-20260622 | third_party/agent-reach/SOURCE.md | 开发/01-GFIS/third_party/agent-reach/SOURCE.md | bidirectional | pending_api |
 | GPCF-DOC-016DDA517E | tools/README.md | 开发/12-GPCF/tools/README.md | bidirectional | pending_api |
+| GPCF-DOC-C9A7E8D2B1 | tools/kds-sync/FRONTMATTER_OWNERSHIP.md | 开发/12-GPCF/tools/kds-sync/FRONTMATTER_OWNERSHIP.md | bidirectional | pending_api |
 | GPCF-DOC-C039431381 | tools/kds-sync/README.md | 开发/12-GPCF/tools/kds-sync/README.md | bidirectional | pending_api |

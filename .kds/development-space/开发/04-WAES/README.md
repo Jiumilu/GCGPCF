@@ -1,6 +1,6 @@
 # WAES 开发文档空间
 
-生成日期：2026-06-23
+生成日期：2026-06-24
 
 用途：KDS `开发` 空间中 `WAES` 项目的受控文档入口。
 
@@ -17,11 +17,14 @@
 | GPCF-DOC-04C744A2DC | WAES | docs/harness/WAES/README.md | controlled |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | controlled |
 | GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | controlled |
+| GPCF-DOC-WAES-REAL-RUNTIME-BASELINE-20260624 | WAES 真实运行基线证据 2026-06-24 | docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAES/loop-state.md | controlled |
 | GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAES/loops/README.md | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | controlled |
 | GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAES 门禁语义验证清单 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | controlled |
 | GPCF-DOC-8749FB9903 | Headroom LCX 架构说明 | loop/context/headroom/docs/architecture.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | Headroom LCX 剩余阻断清单 | loop/context/headroom/docs/blocker-inventory.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | Headroom LCX 完成审计 | loop/context/headroom/docs/completion-audit.md | controlled |
 | GPCF-DOC-BF9AA5F60D | Headroom LCX 运行模型 | loop/context/headroom/docs/operating-model.md | controlled |
 | GPCF-DOC-260DDD94E9 | Headroom LCX Rollout 计划 | loop/context/headroom/docs/rollout.md | controlled |
 | GPCF-DOC-AGENT-REACH-MODIFICATIONS-20260622 | Agent-Reach 修改登记表 | third_party/agent-reach/MODIFICATIONS.md | controlled |

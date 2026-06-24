@@ -15,12 +15,12 @@
         "repo": "GlobalCloud Brain",
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
         "current_pending": {
-          "added": 3,
-          "modified": 10,
+          "added": 0,
+          "modified": 0,
           "removed": 0
         },
-        "threshold_result": "action_required",
-        "allowed_command_after_authorization": "codegraph sync && codegraph status --json . && git status --short -- .codegraph",
+        "threshold_result": "green",
+        "allowed_command_after_authorization": "monitor_only; no sync required",
         "forbidden_actions": [
           "business code edits",
           "git add",
@@ -35,7 +35,7 @@
         "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
         "current_pending": {
           "added": 0,
-          "modified": 6,
+          "modified": 18,
           "removed": 0
         },
         "threshold_result": "action_required",
@@ -59,7 +59,7 @@
     "gfis_policy_exception": {
       "repo": "GlobalCloud GFIS",
       "pending": {
-        "added": 1,
+        "added": 0,
         "modified": 0,
         "removed": 0
       },
@@ -67,8 +67,8 @@
     },
     "gpcf_index_status": {
       "pending": {
-        "added": 3,
-        "modified": 1,
+        "added": 9,
+        "modified": 30,
         "removed": 0
       },
       "decision": "GPCF local evidence sync allowed after this governance round"

@@ -1,0 +1,80 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+  "bundle_id": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001",
+  "date": "2026-06-23",
+  "status": "signed_approval_record_created_no_production_activation",
+  "scope": "signed_approval_record_precheck_only",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "bundle_path": "fixtures/headroom/headroom-lcx-real-measurement-approval-signed-bundle.json",
+  "required_field_count": 6,
+  "required_signature_field_count": 6,
+  "human_attestation_count": 7,
+  "authorization_fields": {
+    "authorized_window_id": "LCX-MEASURE-20260623-001",
+    "authorized_by": "lujunxiang / 总架构师",
+    "authorized_at": "2026-06-23T14:30:00+08:00",
+    "sanitized_production_token_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+    "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
+    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+  },
+  "human_attestations": {
+    "telemetry_off_confirmed": "confirmed_for_precheck_only",
+    "sanitized_ledger_reference_only": "confirmed_for_precheck_only",
+    "no_sensitive_raw_material": "confirmed_for_precheck_only",
+    "no_real_kds_write": "confirmed_for_precheck_only",
+    "no_external_api_write": "confirmed_for_precheck_only",
+    "rollback_plan_reviewed": "confirmed_for_precheck_only",
+    "waes_harness_evidence_attached": "confirmed_for_precheck_only"
+  },
+  "signature_block": {
+    "signer_name": "lujunxiang",
+    "signer_role": "总架构师",
+    "signed_at": "2026-06-23T14:30:00+08:00",
+    "signature_method": "typed_approval",
+    "signature_statement": "I approve opening the real measurement window under the stated precheck-only constraints.",
+    "signature_intent": "approve_open_real_measurement_window_or_reject_or_defer"
+  },
+  "completion_flags": {
+    "authorization_complete": true,
+    "real_measurement_window_open": false,
+    "production_token_measurement_allowed": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "production_external_api_write": false,
+    "kds_api_write": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "signed_record_is_not_production_authorization": true,
+    "signed_record_is_not_real_measurement": true,
+    "not_production_entry": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  }
+}

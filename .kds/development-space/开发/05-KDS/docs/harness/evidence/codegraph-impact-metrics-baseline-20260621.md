@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.md
 source_path: docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -57,6 +57,7 @@ superseded_by: []
 | impact_precision | affected tests 与 dependents 是否明确 | 0 tests / 0 dependents |
 | noise_control | 宽泛符号是否被识别并拒绝 | `main` = 101 affected symbols，rejected |
 | manual_scan_reduction | CodeGraph 结构化结果对照 rg 文本结果 | direct file/symbol/test set vs 13 files / 28 lines |
+| review_rework_count | CodeGraph review 返工是否趋势下降 | baseline 先记 0，后续对照任务 Intake 与业务变更证据 |
 | gate_replayability | 是否有 validator 可重放 | `validate_codegraph_impact_metrics_baseline.py` |
 
 ## 边界

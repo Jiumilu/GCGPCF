@@ -11,6 +11,12 @@ loop_retrospective_with_codegraph:
   learned_constraints: []
   next_loop_inputs: []
   candidate_policy_updates: []
+  karpathy_gate:
+    assumptions_held:
+    tradeoff_disclosed:
+    minimal_scope_followed:
+    acceptance_verified:
+    orphan_cleanup_recorded:
   boundaries:
     candidate_only: true
     automatic_status_upgrade: false

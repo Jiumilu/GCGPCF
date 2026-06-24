@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-CF3A246F25
-title: 底座知识闭环评分 dry-run 汇总
+title: 基础知识闭环评分试运行汇总
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
 domain: docs
@@ -11,18 +11,18 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md
 source_path: docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
 
-# 底座知识闭环评分 dry-run 汇总
+# 基础知识闭环评分试运行汇总
 
 日期：2026-06-18
 
 状态：`dry_run_evidence_only`
 
-## 摘要
+## 概要
 
 - evidence_id：`BKC-DRY-RUN-SUMMARY-20260618`
 - source_round：`GPCF-KDS-DKS-044`
@@ -69,7 +69,7 @@ superseded_by: []
 
 ## 控制边界
 
-- 本证据仅由本地 fixture 生成。
-- 所有写回行均为 candidate-only，必须经过人工或委员会确认。
-- 本轮不执行真实 KDS API、WAES 写入、GFIS/GPC/PVAOS 业务台账写入、RAG 准入、结算、悬赏释放、收益分配或 AI 额度分配。
-- 即使计算分数高于较低决策分档，硬停止行仍保持阻断。
+- This evidence is generated from local fixtures only.
+- All writeback rows are candidate-only and require manual or committee confirmation.
+- No real KDS API, WAES write, GFIS/GPC/PVAOS business ledger write, RAG admission, settlement, bounty release, revenue allocation, or AI quota allocation is performed.
+- Hard-stop rows remain blocked even when the calculated score is above a lower decision band.

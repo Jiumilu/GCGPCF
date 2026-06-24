@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/README.md
 source_path: 02-governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -55,11 +55,13 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-FD6BA2EC78 | GlobalCloud绿色供应链体系设计-实现追踪矩阵规范 | 02-governance/GlobalCloud绿色供应链体系设计-实现追踪矩阵规范.md | GPCF | controlled |
 | GPCF-DOC-94AA31880F | GlobalCloud 绿色供应链体系项目仓库实施准入规范 | 02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md | WAES | controlled |
 | GPCF-DOC-AGENT-REACH-FULL-IMPLEMENTATION-20260622 | GlobalCloud 项目群 Agent-Reach 全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群Agent-Reach全量实施方案与执行提示词.md | WAES | controlled |
+| GPCF-DOC-3A9B7F4E12 | GlobalCloud 项目群 Cognee 纳入项目群及 LOOP 工程体系评估与 POC 方案 | 02-governance/GlobalCloud项目群Cognee纳入项目群及LOOP工程体系评估与POC方案.md | WAES | controlled |
 | GPCF-DOC-5E60043D38 | GlobalCloud 项目群 Headroom LCX 全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群Headroom-LCX全量实施方案与执行提示词.md | WAES | controlled |
 | GPCF-DOC-2BBAE6E546 | GlobalCloud 项目群 Headroom 接入应用与成本评估模型 | 02-governance/GlobalCloud项目群Headroom接入应用与成本评估模型.md | WAES | controlled |
 | GPCF-DOC-AC66DE8415 | GlobalCloud 项目群 KDS 开发空间安全规范 | 02-governance/GlobalCloud项目群KDS开发空间安全规范.md | WAES | controlled |
 | GPCF-DOC-785AEA3125 | GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词 | 02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md | WAES | controlled |
 | GPCF-DOC-D2373AEE37 | GlobalCloud 项目群在 Codex 中的模型分工与成本控制方案 | 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md | WAES | controlled |
+| GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624 | GlobalCloud 项目群总体方案治理专项目标与路线图 | 02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md | WAES | controlled |
 | GPCF-DOC-F150434D98 | GlobalCloud 项目群文档与软件中文化治理规范 | 02-governance/GlobalCloud项目群文档与软件中文化治理规范.md | WAES | controlled |
 | GPCF-DOC-B8ADFA9E30 | GlobalCloud 项目群文档综合治理规范 | 02-governance/GlobalCloud项目群文档综合治理规范.md | WAES | controlled |
 | GPCF-DOC-87DD7D79CD | GlobalCloud 项目群文档防污染规则 | 02-governance/GlobalCloud项目群文档防污染规则.md | WAES | controlled |
@@ -71,10 +73,11 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-A33E51C815 | GPCF Loop Engineering 状态机定义 | 02-governance/gpcf-status-machine.md | WAES | controlled |
 | GPCF-DOC-A882F89F6C | Loop Agent-Reach Exa授权包 | 02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md | WAES | controlled |
 | GPCF-DOC-95CB463CBF | Loop Agent-Reach L3候选搜索流水线目标 | 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | WAES | controlled |
-| GPCF-DOC-29E5B0AC17 | LOOP_AUTONOMY_POLICY | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | GPCF | controlled |
-| GPCF-DOC-9B8C2D4F61 | LOOP_CAPABILITY_REGISTRY | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | WAES | controlled |
+| GPCF-DOC-29E5B0AC17 | LOOP_AUTONOMY_POLICY | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |
+| GPCF-DOC-9B8C2D4F61 | LOOP 能力注册表 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | WAES | controlled |
 | GPCF-DOC-AB6DC46557 | Loop CodeGraph Goal Optimization Plan | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-622398264F | Loop CodeGraph Large File Policy | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | WAES | controlled |
+| GPCF-DOC-4C7D46A1B3 | LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | WAES | controlled |
 | GPCF-DOC-23DDC94324 | LOOP_CODEGRAPH_P1_PILOT_ADMISSION | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | GPCF | controlled |
 | GPCF-DOC-6CC5F6A45C | Loop CodeGraph Project Group Coverage | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | WAES | controlled |
 | GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
@@ -82,7 +85,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-6E7DCE4A91 | LOOP 工程体系整体实施规范 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | controlled |
 | GPCF-DOC-04BF76145B | LOOP 执行规则 | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
-| GPCF-DOC-FE20CDD358 | LOOP_GOVERNANCE_DASHBOARD | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | GPCF | controlled |
+| GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | controlled |
 | GPCF-DOC-07906C7E54 | Loop 治理效率债务 Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAES | controlled |
 | GPCF-DOC-D63AEEB17D | Loop 治理运行边界 | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAES | controlled |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAES | controlled |
@@ -91,6 +94,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-5E646AC9A6 | LOOP_L4_AUTONOMOUS_OPERATIONS | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | GPCF | controlled |
 | GPCF-DOC-7FB1181082 | Loop L5 Full Production Autonomy Policy | 02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | WAES | controlled |
 | GPCF-DOC-D5550386C6 | Loop Metrics | 02-governance/loop/LOOP_METRICS.md | WAES | controlled |
+| GPCF-DOC-0A2D9C6B81 | LOOP Multi-Agent Execution Policy | 02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md | WAES | controlled |
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | controlled |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAES | controlled |
 | GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | controlled |
@@ -99,3 +103,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | controlled |
 | GPCF-DOC-81FE104C6D | ops | 02-governance/ops/README.md | WAES | controlled |
 | GPCF-DOC-8DCFDAD068 | ecs-access-control-and-network-boundary | 02-governance/ops/ecs-access-control-and-network-boundary.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-IMPLEMENTATION-CHANGE-PROPAGATION-TEMPLATE-20260624 | 项目实施方案变更传导模板 | 02-governance/project-implementation-plan-change-propagation-template.md | WAES | controlled |
+| GPCF-DOC-PROJECT-MASTER-PLAN-BATCH-1-AUTH-REQUEST-20260624 | 项目总体方案第一批批量更新授权请求 | 02-governance/project-master-plan-batch-1-authorization-request.md | WAES | controlled |
+| GPCF-DOC-PROJECT-MASTER-PLAN-BATCH-2-AUTH-REQUEST-20260624 | 项目总体方案第二批批量更新授权请求 | 02-governance/project-master-plan-batch-2-authorization-request.md | WAES | controlled |
+| GPCF-DOC-PROJECT-MASTER-PLAN-CHANGE-PROPAGATION-TEMPLATE-20260624 | 项目总体方案变更传导与用户确认模板 | 02-governance/project-master-plan-change-propagation-template.md | WAES | controlled |

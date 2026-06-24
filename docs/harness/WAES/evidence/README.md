@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAES/docs/harness/WAES/evidence/README.md
 source_path: docs/harness/WAES/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -38,3 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | WAES | controlled |
 | GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | WAES | controlled |
+| GPCF-DOC-WAES-REAL-RUNTIME-BASELINE-20260624 | WAES 真实运行基线证据 2026-06-24 | docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md | WAES | controlled |

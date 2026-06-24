@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/README.md
 source_path: 09-status/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-23
+last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
@@ -42,12 +42,15 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-D77EFFB8F7 | 状态与控制台账 | 09-status/README.md | GPCF | controlled |
 | GPCF-DOC-0295C05F40 | 文档过期与归档台账 | 09-status/document-deprecation-register.md | GPCF | controlled |
 | GPCF-DOC-0B97A8283D | GlobalCloud 项目群中文化治理报告 | 09-status/globalcloud-chinese-localization-governance-report.md | GPCF | controlled |
+| GPCF-DOC-CORE-CHAIN-REAL-EVIDENCE-REGISTER-20260624 | GlobalCloud 核心链路真实证据台账 | 09-status/globalcloud-core-chain-real-evidence-register.md | GPCF | controlled |
 | GPCF-DOC-5EF9F8EE5D | GlobalCloud 文档控制总台账 | 09-status/globalcloud-document-control-register.md | GPCF | controlled |
 | GPCF-DOC-71779DF3C3 | globalcloud-document-governance-loop-gate | 09-status/globalcloud-document-governance-loop-gate.md | GPCF | controlled |
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | controlled |
 | GPCF-DOC-C582EFCACE | globalcloud-l3-admission-matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
 | GPCF-DOC-C10C271958 | globalcloud-project-document-loop-maturity-matrix | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | controlled |
 | GPCF-DOC-6CE17269E9 | globalcloud-project-mainline-alignment-matrix | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | controlled |
+| GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | controlled |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | controlled |
 | GPCF-DOC-B1085FD000 | kds-api-sync-ledger-incident-20260617 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
 | GPCF-DOC-KDS-SYNC-PLAN | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |
@@ -65,4 +68,5 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-89108DD154 | ODF Phase 7 小批量样本执行方案 | 09-status/odf-phase7-small-batch-execution-plan.md | GPCF | controlled |
 | GPCF-DOC-4B4A93C3B9 | ODF Phase 8 小批量回归与漂移监控方案 | 09-status/odf-phase8-drift-monitoring-plan.md | GPCF | controlled |
 | GPCF-DOC-26BEA382B1 | odf-phase9-dynamic-source-stabilization-plan | 09-status/odf-phase9-dynamic-source-stabilization-plan.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-STATUS-20260624 | GlobalCloud 项目群总体方案治理最终状态报告 | 09-status/project-group-master-plan-governance-status-report.md | GPCF | controlled |
 | GPCF-DOC-7BB91E7428 | 当前会话主要任务总结与声明控制边界 | 09-status/session-main-task-summary-and-statement-control-boundary-20260622.md | GPCF | controlled |
