@@ -38,4 +38,5 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | WAES | controlled |
 | GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | WAES | controlled |
+| GPCF-DOC-WAES-LINT-RUNTIME-REPAIR-AUTHORIZATION-20260625 | WAES lint runtime 修复授权包 2026-06-25 | docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md | WAES | controlled |
 | GPCF-DOC-WAES-REAL-RUNTIME-BASELINE-20260624 | WAES 真实运行基线证据 2026-06-24 | docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md | WAES | controlled |

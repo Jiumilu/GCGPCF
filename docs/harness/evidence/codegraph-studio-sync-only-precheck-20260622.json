@@ -8,56 +8,43 @@
   "previous_round": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-AUTHORIZATION-PACK-014",
   "studio": {
     "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
-    "pre_sync_codegraph_pending": {"added": 2, "modified": 9, "removed": 0},
+    "pre_sync_codegraph_pending": {"added": 3, "modified": 4, "removed": 0},
     "sync_command": "codegraph sync",
     "sync_result": {
-      "changed_files_synced": 12,
-      "added_files_synced": 2,
-      "modified_files_synced": 10,
-      "nodes_changed": 237
+      "changed_files_synced": 41,
+      "added_files_synced": 6,
+      "modified_files_synced": 35,
+      "nodes_changed": 660
     },
     "followup_sync_result": {
-      "reason": "Studio reported 2 modified pending entries during final validation while Git dirty scope remained unchanged.",
-      "changed_files_synced": 2,
+      "reason": "Studio post-sync pendingChanges already reached zero, so no follow-up sync was required in this run.",
+      "changed_files_synced": 0,
       "added_files_synced": 0,
-      "modified_files_synced": 2,
-      "nodes_changed": 22
+      "modified_files_synced": 0,
+      "nodes_changed": 0
     },
     "post_sync_codegraph": {
-      "fileCount": 803,
-      "nodeCount": 14659,
-      "edgeCount": 47666,
-      "pendingChanges": {"added": 0, "modified": 7, "removed": 0},
+      "fileCount": 809,
+      "nodeCount": 14775,
+      "edgeCount": 47725,
+      "pendingChanges": {"added": 0, "modified": 0, "removed": 0},
       "worktreeMismatch": null,
       "reindexRecommended": false
     },
     "residual_watch": {
-      "status": "active_file_drift_after_sync",
-      "allowed_pending_ceiling": {"added": 0, "modified": 9, "removed": 0},
-      "reason": "Studio reported recurring modified pending entries while Git dirty scope remained unchanged at 12 files."
+      "status": "clean_after_sync",
+      "allowed_pending_ceiling": {"added": 0, "modified": 0, "removed": 0},
+      "reason": "Studio CodeGraph pending entries reached zero and Git worktree is clean after sync."
     },
     "git_dirty_after_sync": {
-      "modified": 11,
+      "modified": 0,
       "deleted": 0,
-      "untracked": 1,
+      "untracked": 0,
       "renamed": 0,
       "other": 0,
-      "total": 12
+      "total": 0
     },
-    "dirty_files_after_sync": [
-      "docs/harness/loops/loop-round-GPCF-STUDIO-LR-017.md",
-      "packages/client/src/components/layout/PageSidebarNav.vue",
-      "packages/client/src/components/studio/SessionObjectPanel.vue",
-      "packages/server/src/routes/governance/session-bindings.ts",
-      "packages/server/src/services/core/kds-audit.ts",
-      "packages/server/src/services/governance/kds-governance-context.ts",
-      "packages/server/src/services/governance/session-binding-context.ts",
-      "tests/client/page-sidebar-nav.test.ts",
-      "tests/client/session-object-panel.test.ts",
-      "tests/server/kds-governance-context.test.ts",
-      "tests/server/session-binding-context.test.ts",
-      "tests/server/session-bindings-route.test.ts"
-    ],
+    "dirty_files_after_sync": [],
     "codegraph_git_isolated": true
   },
   "other_watchlist_repos": {

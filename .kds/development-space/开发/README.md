@@ -9,7 +9,7 @@
 | GFIS | 01-GFIS | 94 |
 | GPC | 02-GPC | 42 |
 | PVAOS | 03-PVAOS | 8 |
-| WAES | 04-WAES | 23 |
+| WAES | 04-WAES | 24 |
 | KDS | 05-KDS | 660 |
 | Brain | 06-Brain | 10 |
 | PKC | 07-PKC | 6 |

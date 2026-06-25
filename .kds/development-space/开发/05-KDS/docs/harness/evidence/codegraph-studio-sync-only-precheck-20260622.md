@@ -26,40 +26,35 @@ superseded_by: []
 
 结果为 `studio_codegraph_sync_only_pass_with_residual_watch`：
 
-- sync 前：`pendingChanges={added:2, modified:9, removed:0}`
+- sync 前：`pendingChanges={added:3, modified:4, removed:0}`
 - sync 命令：`codegraph sync`
-- sync 结果：`Synced 12 changed files`，`Added: 2`，`Modified: 10`，`237 nodes`
-- 最终验证中 Studio 在同一 Git dirty 范围内再次出现 2 个 modified pending，已按授权内 sync-only 边界补充执行一次 `codegraph sync`，结果为 `Synced 2 changed files`、`Modified: 2`、`22 nodes`
-- 最终观测：`pendingChanges={added:0, modified:7, removed:0}`，属于残留 watch；允许上限为 added=0、modified<=9、removed=0，不能超过授权前 modified=9 的范围
+- sync 结果：`Synced 41 changed files`，`Added: 6`，`Modified: 35`，`660 nodes`
+- 最终观测：`pendingChanges={added:0, modified:0, removed:0}`，CodeGraph 已收敛；工作树仍保留 8 项既有 dirty，属于 Git residual watch
 - `reindexRecommended=false`
 - `worktreeMismatch=null`
 - `.codegraph/` 未进入 Git 状态
 
 ## Studio dirty 保留
 
-CodeGraph sync-only 已执行，但 Studio 仍存在小幅 modified residual watch；Studio 工作树仍有 12 项既有业务/治理 dirty。本轮不处理这些文件，不声明业务完成。
+CodeGraph sync-only 已执行，但 Studio 工作树仍保留 8 项既有业务/治理 dirty。本轮不处理这些文件，不声明业务完成。
 
 | 类型 | 数量 |
 | --- | ---: |
-| modified | 11 |
+| modified | 8 |
 | deleted | 0 |
-| untracked | 1 |
-| total | 12 |
+| untracked | 0 |
+| total | 8 |
 
 文件清单：
 
-- `docs/harness/loops/loop-round-GPCF-STUDIO-LR-017.md`
-- `packages/client/src/components/layout/PageSidebarNav.vue`
-- `packages/client/src/components/studio/SessionObjectPanel.vue`
-- `packages/server/src/routes/governance/session-bindings.ts`
-- `packages/server/src/services/core/kds-audit.ts`
-- `packages/server/src/services/governance/kds-governance-context.ts`
-- `packages/server/src/services/governance/session-binding-context.ts`
-- `tests/client/page-sidebar-nav.test.ts`
-- `tests/client/session-object-panel.test.ts`
-- `tests/server/kds-governance-context.test.ts`
-- `tests/server/session-binding-context.test.ts`
-- `tests/server/session-bindings-route.test.ts`
+- `packages/client/src/components/hermes/settings/AccountSettings.vue`
+- `packages/client/src/router/index.ts`
+- `packages/client/src/views/hermes/SettingsView.vue`
+- `packages/server/src/middleware/user-auth.ts`
+- `tests/client/account-settings-default-credential.test.ts`
+- `tests/client/router-default-credential-guard.test.ts`
+- `tests/client/settings-view-default-credential.test.ts`
+- `tests/server/user-auth.test.ts`
 
 ## 五方向
 
@@ -69,7 +64,7 @@ CodeGraph sync-only 已执行，但 Studio 仍存在小幅 modified residual wat
 
 ### stop
 
-`stop_type=sync_only_pass_with_residual_watch`。Studio CodeGraph sync-only 已执行，但仍保留小幅 modified residual watch；业务 dirty 仍保留，不能升级 accepted、integrated 或 production_ready。
+`stop_type=sync_only_pass_with_residual_watch`。Studio CodeGraph sync-only 已执行，CodeGraph pending 已收敛为 0，但工作树仍保留 8 项既有 dirty；不能升级 accepted、integrated 或 production_ready。
 
 ### verify
 

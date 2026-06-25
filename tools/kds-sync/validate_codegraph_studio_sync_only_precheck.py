@@ -75,14 +75,14 @@ def main() -> int:
 
     studio = evidence["studio"]
     require(STUDIO.exists(), "Studio repo missing")
-    require(studio["pre_sync_codegraph_pending"] == {"added": 2, "modified": 9, "removed": 0}, "pre-sync pending mismatch")
-    require(studio["sync_result"]["changed_files_synced"] == 12, "changed file count mismatch")
-    require(studio["sync_result"]["added_files_synced"] == 2, "added sync count mismatch")
-    require(studio["sync_result"]["modified_files_synced"] == 10, "modified sync count mismatch")
-    require(studio["sync_result"]["nodes_changed"] == 237, "nodes changed mismatch")
-    require(studio["followup_sync_result"]["changed_files_synced"] == 2, "follow-up changed file count mismatch")
-    require(studio["followup_sync_result"]["modified_files_synced"] == 2, "follow-up modified sync count mismatch")
-    require(studio["followup_sync_result"]["nodes_changed"] == 22, "follow-up nodes changed mismatch")
+    require(studio["pre_sync_codegraph_pending"] == {"added": 3, "modified": 4, "removed": 0}, "pre-sync pending mismatch")
+    require(studio["sync_result"]["changed_files_synced"] == 41, "changed file count mismatch")
+    require(studio["sync_result"]["added_files_synced"] == 6, "added sync count mismatch")
+    require(studio["sync_result"]["modified_files_synced"] == 35, "modified sync count mismatch")
+    require(studio["sync_result"]["nodes_changed"] == 660, "nodes changed mismatch")
+    require(studio["followup_sync_result"]["changed_files_synced"] == 0, "follow-up changed file count mismatch")
+    require(studio["followup_sync_result"]["modified_files_synced"] == 0, "follow-up modified sync count mismatch")
+    require(studio["followup_sync_result"]["nodes_changed"] == 0, "follow-up nodes changed mismatch")
 
     status_result = run(["codegraph", "status", "--json", "."], cwd=STUDIO)
     require(status_result.returncode == 0, f"Studio codegraph status failed: {status_result.stderr}")
@@ -90,7 +90,7 @@ def main() -> int:
     require(status["initialized"] is True, "Studio CodeGraph not initialized")
     require(status["pendingChanges"]["added"] == 0, "Studio added pending must be zero")
     require(status["pendingChanges"]["removed"] == 0, "Studio removed pending must be zero")
-    require(status["pendingChanges"]["modified"] <= studio["residual_watch"]["allowed_pending_ceiling"]["modified"], "Studio modified pending exceeds residual watch ceiling")
+    require(status["pendingChanges"]["modified"] == 0, "Studio modified pending must be zero")
     require(status["worktreeMismatch"] is None, "Studio worktree mismatch must be null")
     require(status["index"]["reindexRecommended"] is False, "Studio reindex must not be recommended")
     require(status["fileCount"] == studio["post_sync_codegraph"]["fileCount"], "Studio fileCount mismatch")
@@ -141,20 +141,20 @@ def main() -> int:
     require(token.returncode == 0 and "kds_token=pass" in token.stdout, "KDS token must pass")
 
     for phrase in [
-        "studio_codegraph_sync_only_pass_with_residual_watch",
-        "sync 前：`pendingChanges={added:2, modified:9, removed:0}`",
-        "最终观测：`pendingChanges={added:0, modified:7, removed:0}`",
-        "CodeGraph sync-only 已执行，但 Studio 仍存在小幅 modified residual watch",
+        "studio_codegraph_sync_only_pass_clean",
+        "sync 前：`pendingChanges={added:3, modified:4, removed:0}`",
+        "最终观测：`pendingChanges={added:0, modified:0, removed:0}`",
+        "CodeGraph sync-only 已执行，Studio 工作树已清空",
         "不声明 Studio 业务实现完成",
         "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
 
     print(
-        "codegraph_studio_sync_only_precheck=pass_with_residual_watch "
+        "codegraph_studio_sync_only_precheck=pass_clean "
         f"studio_pending_modified={status['pendingChanges']['modified']} "
         "studio_reindex_recommended=false "
-        "studio_dirty_total=12 "
+        "studio_dirty_total=0 "
         "studio_codegraph_git_isolated=true "
         "business_development=false "
         "commit=false push=false deploy=false "

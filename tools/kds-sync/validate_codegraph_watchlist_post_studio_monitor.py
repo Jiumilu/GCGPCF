@@ -91,13 +91,7 @@ def main() -> int:
         require(status["initialized"] is True, f"CodeGraph not initialized: {name}")
         require(status["worktreeMismatch"] is None, f"worktree mismatch: {name}")
         require(status["index"]["reindexRecommended"] is False, f"reindex recommended: {name}")
-        if name == "Studio":
-            require(status["pendingChanges"]["added"] == 0, "Studio added pending must be zero")
-            require(status["pendingChanges"]["removed"] == 0, "Studio removed pending must be zero")
-            require(status["pendingChanges"]["modified"] == item["codegraph_pending"]["modified"], "Studio modified pending mismatch")
-            require(status["pendingChanges"]["modified"] > item["authorized_modified_ceiling"], "Studio residual must exceed authorized ceiling in this watch_required snapshot")
-        else:
-            require(status["pendingChanges"] == item["codegraph_pending"], f"pending mismatch: {name}")
+        require(status["pendingChanges"] == item["codegraph_pending"], f"pending mismatch: {name}")
 
         git_status = run(["git", "status", "--short", "--", ".codegraph"], cwd=repo)
         require(git_status.returncode == 0, f".codegraph git status failed for {name}: {git_status.stderr}")
@@ -145,9 +139,10 @@ def main() -> int:
 
     for phrase in [
         "watch_required",
-        "Studio：residual pending 为 added=0、modified=18、removed=0",
-        "Brain：CodeGraph pending 已归零，但仍有 1 个 Git dirty",
-        "KDS：CodeGraph pending 已归零，但仍有 31 个 Git dirty",
+        "Brain：CodeGraph pending 已归零，Git dirty=0，继续监控即可。",
+        "GFIS：CodeGraph pending 已归零，Git dirty=0，继续监控即可。",
+        "Studio：CodeGraph pending 已归零，Git dirty=0，sync-only 已收口。",
+        "KDS：CodeGraph pending 为 modified=2，仍有 17 个 Git dirty",
         "GFIS clean reindex 仍不授权",
         "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017",
         "review_rework_count=0",
@@ -156,9 +151,9 @@ def main() -> int:
 
     print(
         "codegraph_watchlist_post_studio_monitor=watch_required "
-        "studio_residual_modified=18 "
-        "kds_dirty_total=31 "
-        "brain_authorization=required "
+        "studio_residual_modified=0 "
+        "kds_dirty_total=17 "
+        "brain_authorization=monitor_only "
         "gfis_clean_reindex_authorized=false "
         "kds_authorization=required "
         "business_development=false commit=false push=false deploy=false "

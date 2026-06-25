@@ -20,7 +20,7 @@ superseded_by: []
 
 ## run
 
-- 输入：`GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015` 的 residual watch 结果。
+- 输入：`GPCF-CODEGRAPH-STUDIO-SYNC-ONLY-PRECHECK-015` 的 clean 收口结果。
 - 范围：Brain、GFIS、KDS、Studio 四仓 watchlist。
 - 动作：只读采集四仓 CodeGraph status 与 Git dirty，确认 Studio residual 和其他三仓授权边界。
 - 输出：
@@ -31,7 +31,7 @@ superseded_by: []
 ## stop
 
 - stop_type：`watch_required`
-- 停止证据：Studio residual 已超过授权上限；Brain/GFIS pending 已归零但仍有 Git dirty；KDS dirty 仍需下一轮授权包复核。
+- 停止证据：Brain/GFIS/Studio 已收口，KDS 仍有 Git dirty，需要下一轮授权包复核。
 - 状态上限：不得升级 accepted、integrated 或 production_ready。
 
 ## verify
@@ -60,7 +60,7 @@ python3 tools/kds-sync/validate_kds_token.py
 
 ## debug
 
-- 当前阻塞：Studio residual 超过授权上限，KDS mirror / WorkWiki dirty 仍需复核，Brain/GFIS 仍保留 Git dirty。
+- 当前阻塞：KDS mirror / WorkWiki dirty 仍需复核，Brain/GFIS/Studio 已收口。
 - 下一轮：`GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017`
 - 真实 lane：未进入业务开发，真实业务计数不变。
 - 写入计数：生产写入 0，外部 API 写入 0，commit 0，push 0，deploy 0。

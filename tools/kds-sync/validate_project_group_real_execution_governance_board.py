@@ -93,10 +93,11 @@ REQUIRED_TASK_DETAIL_TOKENS = {
     ],
     "KDS-RAG-EXPORT-001": [
         "validate_rag_export.py",
-        "kds-rag-export-repair-*",
+        "kds-rag-export-repair-20260625.md",
         "KDS RAG export gate",
-        "回滚导出清单",
-        "不声明 RAG 导出完成",
+        "validate_kds_rag_export_repair.py",
+        "回滚 `_governance/scripts/rag_admission_policy.py`",
+        "不声明 KDS 真实运行闭环完成",
     ],
     "XWAIL-MIN-VALIDATOR-001": [
         "validate_xwail.py",

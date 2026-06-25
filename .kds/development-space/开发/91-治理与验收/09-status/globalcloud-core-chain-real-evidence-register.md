@@ -74,7 +74,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | 链路/项目 | 当前实施方案 | 真实进度 | 真实研发 | 真实运行 | 真实集成 | 真实交付 | 客户验收 | 下一步 |
 |---|---|---|---|---|---|---|---|---|
 | GPCF | `GlobalCloud GPCF 实施方案.md` | `verified` | `candidate` | `candidate` | `declared` | `not_collected` | `not_collected` | 建立 evidence schema 和真实运行记录 |
-| WAES | `GlobalCloud WAES 实施方案.md` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | 修复 lint 解析错误后重新执行 `npm run check`；证据见 `docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md` |
+| WAES | `GlobalCloud WAES 实施方案.md` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
 | XWAIL | `GlobalCloud XWAIL 实施方案.md` | `candidate` | `candidate` | `repair_required` | `declared` | `not_collected` | `not_collected` | 建立最小 Validator/XAP 命令；证据见 `docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md` |
 | AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `candidate` | `candidate` | `repair_required` | `declared` | `not_collected` | `not_collected` | 建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令；证据见 `docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md` |
 | GFIS | `GlobalCloud GFIS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
@@ -88,7 +88,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | 项目 | 已登记命令 | 状态 |
 |---|---|---|
 | GPCF | `validate_project_group_implementation_plan.py`、`loop_document_gate.py` | `candidate` |
-| WAES | `npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` | `repair_required`，`typecheck/test/build/check:wasm` 已通过，`lint` 解析错误阻断综合检查 |
+| WAES | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`validate_waes_lint_runtime_repair_authorization.py` | `authorization_required / repair_required`，`npm run lint` 当前仍因 `AppLazyImports.ts` JSX 解析和 `PluginManager.tsx` import type 解析失败；修复需用户确认 WAES dirty workspace 接管边界 |
 | XWAIL | 规划命令 `python scripts/validate_xwail.py --all`、`python scripts/build_xap.py --check`、`python scripts/verify_xap.py --all` 已检查，当前脚本缺失 | `repair_required` |
 | AaaS | 规划命令 `python scripts/validate_service_package.py --all`、`python scripts/validate_metering.py --all`、`python scripts/validate_sla.py --all`、`python scripts/verify_evidence_requirements.py --all` 已检查，当前脚本缺失 | `repair_required` |
 | GFIS | `npm run check:js`、`npm run quality:100`、`npm run quality:repo`、`npm run test:e2e`、`npm run test:coverage`、`npm run quality:ops` | `partial_verified`，运行态可达、接口/核心流部分通过；外部证据、中文映射、浏览器依赖和 ops drill 仍需修复 |
@@ -126,6 +126,20 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 已通过命令 | `npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` |
 | 未通过命令 | `npm run check`，失败于 `npm run lint` |
 | 边界 | 不声明 WAES 真实运行闭环完成，不声明跨项目真实集成完成，不声明真实交付完成，不声明客户验收通过 |
+
+## 8.1 本轮 WAES lint runtime 授权包登记
+
+| 项 | 内容 |
+|---|---|
+| 证据文件 | `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
+| 采集日期 | 2026-06-25 |
+| 当前分支 | `waes/integration-release` |
+| 工作区状态 | dirty，存在未跟踪 WAES 方案文档和 `tools/` |
+| 预检结论 | `git diff --check` pass、`git ls-files -u` pass、lock 检查无输出 |
+| 失败命令 | `npm run lint` |
+| 失败点 | `src/app/components/AppLazyImports.ts` JSX 位于 `.ts` 文件；`src/app/plugin/PluginManager.tsx` 存在不完整 `import type` |
+| 授权状态 | `waes_lint_runtime_repair_authorization = required` |
+| 边界 | 未修改 WAES 源码，未提交，未推送，未部署，未升级 WAES 状态 |
 
 ## 9. 本轮 XWAIL 证据登记
 

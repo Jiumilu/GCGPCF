@@ -41,7 +41,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 | 每个任务绑定命令、证据、门禁、回滚边界 | 本文第 6 节任务控制字段和第 7 节任务执行控制矩阵 |
 | 将项目间依赖纳入矩阵 | 本文第 8 节依赖矩阵 |
 | 逐步推进到 `ready_for_review` | 只允许通过 evidence 与 gate 推进 |
-| 人工确认后才允许 `accepted`、`integrated`、客户验收 | 本文第 8 节状态升级门禁 |
+| 人工确认后才允许 `accepted`、`integrated`、客户验收 | 本文第 9 节状态升级门禁 |
 
 ## 3. 当前真实状态基线
 
@@ -74,7 +74,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 | 优先级 | 任务 ID | 项目 | 目标 | 当前状态 | 执行入口 |
 |---|---|---|---|---|---|
 | P0 | `GFIS-REAL-SOR-001` | GFIS | 获取或登记真实 source-of-record，形成 pending_business_verification 输入 | `authorization_or_business_input_required` | 等待真实客户订单、平台订单回执或等效正式确认 |
-| P0 | `WAES-LINT-RUNTIME-001` | WAES | 修复 lint 解析错误并恢复综合 `npm run check` | `repair_required` | WAES 仓本地质量门禁 |
+| P0 | `WAES-LINT-RUNTIME-001` | WAES | 修复 lint 解析错误并恢复综合 `npm run check` | `authorization_required / repair_required` | `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
 | P0 | `KDS-RAG-EXPORT-001` | KDS | 修复 RAG 导出缺失文件、哈希/大小和 allowlist 问题 | `repair_required` | KDS `validate_rag_export.py` |
 | P1 | `XWAIL-MIN-VALIDATOR-001` | XWAIL | 建立最小 Validator/XAP 命令，使规划命令有真实执行入口 | `command_missing` | `scripts/validate_xwail.py`、`scripts/build_xap.py`、`scripts/verify_xap.py` |
 | P1 | `AAAS-SERVICE-RUNTIME-001` | AaaS | 建立 ServicePackage、Metering、SLA、EvidenceRequirement 最小验证命令 | `command_missing` | `scripts/validate_service_package.py` 等 |
@@ -105,7 +105,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 | task_id | project | baseline_evidence | commands | expected_evidence | gate | rollback | dependency_impact | human_confirmation_required | forbidden_claims |
 |---|---|---|---|---|---|---|---|---|---|
 | `GFIS-REAL-SOR-001` | GFIS | `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` | `validate_gfis_was_source_record_submission_precheck.py`、GFIS 真实 source-of-record 接收目录扫描、人工核验记录检查 | `docs/harness/GFIS/evidence/gfis-real-source-record-intake-*.md`、真实订单或平台订单回执索引、人工核验结论 | GFIS source-record validator、GPCF core-chain register gate、WAES review gate | 不写入 GFIS runtime；若输入不合格，保持 `repair_required` 并登记 rejected reason | 解锁 `GFIS/GPC/PVAOS -> SCaaS`，影响 WAS profile、KDS backlink、WAES review | 是，需要订单 owner 或等效正式确认 | 不声明真实 SOP E2E 完成、不声明生产写入、不声明客户验收、不声明 `accepted`/`integrated`/`production_ready` |
-| `WAES-LINT-RUNTIME-001` | WAES | `docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md` | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` | `docs/harness/WAES/evidence/waes-lint-runtime-repair-*.md`、命令输出 JSON 或日志摘要 | WAES quality gate、GPCF core-chain register gate | 回滚 lint 修复相关文件；若 `npm run check` 失败，保持 `repair_required` | 影响 `WAES -> XWAIL -> AaaS` 和 Brain/KDS 证据裁决链 | 否，除非需要修改权限、部署或外部服务 | 不声明 WAES 治理运行闭环完成、不声明发布、不声明权限变更 |
+| `WAES-LINT-RUNTIME-001` | WAES | `docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md` | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` | `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md`、`docs/harness/WAES/evidence/waes-lint-runtime-repair-*.md`、命令输出 JSON 或日志摘要 | WAES quality gate、`validate_waes_lint_runtime_repair_authorization.py`、GPCF core-chain register gate | 回滚 lint 修复相关文件；若 `npm run check` 失败，保持 `repair_required` | 影响 `WAES -> XWAIL -> AaaS` 和 Brain/KDS 证据裁决链 | 是，WAES dirty workspace 且 AGENTS 要求授权后才能实现 | 不声明 WAES 治理运行闭环完成、不声明发布、不声明权限变更 |
 | `KDS-RAG-EXPORT-001` | KDS | `docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md` | `python3 -m pytest tests/test_api_smoke.py`、`python3 scripts/validate_rag_export.py`、`python3 scripts/validate_evidence_gates.py`、`gbrain search`、`gbrain query` | `docs/harness/KDS/evidence/kds-rag-export-repair-*.md`、RAG export error diff、allowlist/hash/size 修复证据 | KDS RAG export gate、evidence gate、GPCF core-chain register gate | 回滚导出清单、allowlist 或生成物；失败时保留失败 evidence | 影响 `KDS -> Brain`、Brain 检索与 RAG 上下文可信度 | 否，除非需要真实 TOKEN、生产索引或外部写入 | 不声明 RAG 导出完成、不声明真实交付、不声明客户验收 |
 | `XWAIL-MIN-VALIDATOR-001` | XWAIL | `docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md` | `python scripts/validate_xwail.py --all`、`python scripts/build_xap.py --check`、`python scripts/verify_xap.py --all` | `docs/harness/XWAIL/evidence/xwail-min-validator-runtime-*.md`、最小 schema/profile/XAP 验证输出 | XWAIL validator gate、WAS-XWAIL-AaaS alignment gate、GPCF register gate | 回滚新增脚本或样例模型；失败时保持 `validator_commands_missing` | 影响 `WAS -> Ontology -> XWAIL` 和 `WAES -> XWAIL -> AaaS` | 否 | 不声明完整 XWAIL 工具链完成、不声明 WAES 发布完成、不声明 AaaS 绑定完成 |
 | `AAAS-SERVICE-RUNTIME-001` | AaaS | `docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md` | `python scripts/validate_service_package.py --all`、`python scripts/validate_metering.py --all`、`python scripts/validate_sla.py --all`、`python scripts/verify_evidence_requirements.py --all` | `docs/harness/AaaS/evidence/aaas-service-runtime-*.md`、ServicePackage/Metering/SLA/EvidenceRequirement 验证输出 | AaaS service runtime gate、XWAIL binding gate、GPCF register gate | 回滚新增服务包样例或计量规则；失败时保持 `service_package_metering_sla_commands_missing` | 影响 SCaaS 服务化交付、GFIS/GPC/PVAOS 服务订阅边界 | 否，除非涉及真实计费、客户订阅或生产 SLA | 不声明客户可订阅、不声明商业交付完成、不声明真实计费完成 |

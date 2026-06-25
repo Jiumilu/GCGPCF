@@ -18,16 +18,16 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-25T00:25:48.403527+00:00
+生成时间：2026-06-25T00:42:41.537726+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：2799
-- KDS 镜像 Markdown：2813
-- KDS 本地镜像流水：2799
-- KDS 本地镜像唯一文档：2799
+- 仓库 Markdown：2802
+- KDS 镜像 Markdown：2814
+- KDS 本地镜像流水：2800
+- KDS 本地镜像唯一文档：2800
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
@@ -38,7 +38,7 @@ Loop 文档门禁：`pass`
 ## 状态分布
 
 - archive: 85
-- controlled: 2543
+- controlled: 2546
 - draft: 13
 - okf_derived: 99
 
@@ -47,12 +47,12 @@ Loop 文档门禁：`pass`
 - Brain: 10
 - GFIS: 90
 - GPC: 45
-- GPCF: 1597
-- KDS: 759
+- GPCF: 1598
+- KDS: 760
 - MMC: 8
 - PKC: 6
 - PVAOS: 8
-- WAES: 162
+- WAES: 163
 - XGD: 6
 - XiaoC: 42
 - XiaoG: 7
@@ -145,7 +145,7 @@ execution_mode=read_only_validation
 
 ```text
 localization_gate=pass
-docs_checked=823
+docs_checked=825
 software_files_checked=240
 findings=0
 ```
@@ -159,5 +159,5 @@ kds_token=pass fingerprint=bfd9553d
 ### project_group_gate_readiness
 
 ```text
-project_group_gate_readiness=watch_required checked_repos=13 passed=12 failed=1 reasons=GlobalCloud Brain loop gate status=rework_required reasons=missing_metadata
+project_group_gate_readiness=pass checked_repos=13 passed=13 failed=0 reasons=none
 ```
