@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 1755 | 1650 | 已建空间 |
+| GPCF | 12-GPCF | 1756 | 1651 | 已建空间 |
 | Studio | 13-Studio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
@@ -1037,6 +1037,7 @@ superseded_by: []
 | GPCF-DOC-92A4C970C1 | docs/harness/AaaS/README.md | 开发/05-KDS/docs/harness/AaaS/README.md | bidirectional | pending_api |
 | GPCF-DOC-76A4B3F001 | docs/harness/AaaS/evidence/README.md | 开发/05-KDS/docs/harness/AaaS/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | bidirectional | pending_api |
+| GPCF-DOC-AAAS-SERVICE-RUNTIME-20260625 | docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md | bidirectional | pending_api |
 | GPCF-DOC-0857798863 | docs/harness/Brain/README.md | 开发/06-Brain/docs/harness/Brain/README.md | bidirectional | pending_api |
 | GPCF-DOC-4A654203DE | docs/harness/Brain/evidence/README.md | 开发/06-Brain/docs/harness/Brain/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | bidirectional | pending_api |

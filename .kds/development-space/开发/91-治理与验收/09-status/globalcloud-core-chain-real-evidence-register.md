@@ -76,7 +76,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GPCF | `GlobalCloud GPCF 实施方案.md` | `verified` | `candidate` | `candidate` | `declared` | `not_collected` | `not_collected` | 建立 evidence schema 和真实运行记录 |
 | WAES | `GlobalCloud WAES 实施方案.md` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
 | XWAIL | `GlobalCloud XWAIL 实施方案.md` | `candidate` | `ready_for_review / local_dev_boundary` | `ready_for_review / local_dev_boundary` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；证据见 `docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md` |
-| AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `candidate` | `candidate` | `repair_required` | `declared` | `not_collected` | `not_collected` | 建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令；证据见 `docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md` |
+| AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `candidate` | `ready_for_review / local_dev_boundary` | `ready_for_review / local_dev_boundary` | `declared` | `not_collected` | `not_collected` | `AAAS-SERVICE-RUNTIME-001` 已建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令并在 local dev 通过；证据见 `docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md` |
 | GFIS | `GlobalCloud GFIS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
 | GPC | `GlobalCloud GPC 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复 README 索引、外部证据和 Playwright 浏览器；证据见 `docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md` |
 | PVAOS | `GlobalCloud PVAOS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `declared` | `repair_required` | `not_collected` | 修复 Vitest localStorage 环境与 release gate；证据见 `docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md` |
@@ -90,7 +90,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GPCF | `validate_project_group_implementation_plan.py`、`loop_document_gate.py` | `candidate` |
 | WAES | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`validate_waes_lint_runtime_repair_authorization.py` | `authorization_required / repair_required`，`npm run lint` 当前仍因 `AppLazyImports.ts` JSX 解析和 `PluginManager.tsx` import type 解析失败；修复需用户确认 WAES dirty workspace 接管边界 |
 | XWAIL | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py` | `ready_for_review / local_dev_boundary`，最小模型校验、XAP manifest build check、XAP verify 和 GPCF evidence reference gate 已通过；仍不声明完整 XWAIL 工具链、WAES 发布或 AaaS 绑定完成 |
-| AaaS | 规划命令 `python scripts/validate_service_package.py --all`、`python scripts/validate_metering.py --all`、`python scripts/validate_sla.py --all`、`python scripts/verify_evidence_requirements.py --all` 已检查，当前脚本缺失 | `repair_required` |
+| AaaS | `python3 scripts/validate_service_package.py --all`、`python3 scripts/validate_metering.py --all`、`python3 scripts/validate_sla.py --all`、`python3 scripts/verify_evidence_requirements.py --all`、`python3 tools/kds-sync/validate_aaas_service_runtime.py` | `ready_for_review / local_dev_boundary`，最小 ServicePackage、Metering、SLA、EvidenceRequirement 和 GPCF evidence reference gate 已通过；仍不声明真实计费、真实结算、SLA 强制执行、客户订阅、客户交付或 WAES 发布完成 |
 | GFIS | `npm run check:js`、`npm run quality:100`、`npm run quality:repo`、`npm run test:e2e`、`npm run test:coverage`、`npm run quality:ops` | `partial_verified`，运行态可达、接口/核心流部分通过；外部证据、中文映射、浏览器依赖和 ops drill 仍需修复 |
 | GPC | `npm run check:js`、`npm run quality:repo`、`validate_gpc_l3_harness.py`、`validate_gpc_l4_platform_contract.py`、`npm run quality:100`、`npm run test:e2e`、`npm run quality:ops` | `partial_verified`，运行态、ops drill、runtime API、L3/L4 和核心流片段通过；README、外部证据和浏览器依赖仍需修复 |
 | PVAOS | `npm run lint`、`npm run validate:modules`、`npm run typecheck`、`npm run test`、`npm run release:gate:local`、`npm run check:production-domain`、`npm run build` | `partial_verified`，lint/modules/typecheck/build/domain 通过；test 与 release gate 仍需修复 |
@@ -159,14 +159,15 @@ reason = core-chain real evidence register and evidence standards are establishe
 
 | 项 | 内容 |
 |---|---|
-| 证据文件 | `docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md` |
-| 采集日期 | 2026-06-24 |
+| 证据文件 | `docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md` |
+| 采集日期 | 2026-06-25 |
 | 治理结论 | `aaas_governance_evidence = verified` |
-| 运行结论 | `aaas_runtime_evidence = repair_required` |
-| 阻塞状态 | `aaas_repair_required = service_package_metering_sla_commands_missing` |
-| 已通过命令 | `validate_project_implementation_inheritance.py`、`validate_project_terms_consistency.py`、`validate_project_version_compatibility.py`、`validate_was_xwail_aaas_plan_alignment.py` |
-| 缺失命令 | `scripts/validate_service_package.py`、`scripts/validate_metering.py`、`scripts/validate_sla.py`、`scripts/verify_evidence_requirements.py` |
-| 边界 | 不声明 AaaS 服务包已实现，不声明计量/SLA 已真实运行，不声明客户可订阅状态达成，不声明商业交付完成 |
+| 运行结论 | `aaas_service_runtime = verified_with_local_dev_boundary` |
+| 状态建议 | `aaas_status_candidate = ready_for_review` |
+| 已通过命令 | `python3 scripts/validate_service_package.py --all`、`python3 scripts/validate_metering.py --all`、`python3 scripts/validate_sla.py --all`、`python3 scripts/verify_evidence_requirements.py --all`、`python3 tools/kds-sync/validate_aaas_service_runtime.py` |
+| 运行摘要 | `issue_count=0`、`high_count=0`、`aaas_checked_service_packages = 1` |
+| 依赖链 | `WAES -> XWAIL -> AaaS` 已获得 XWAIL local dev 最小契约验证与 AaaS local dev 最小服务化验证；WAES 仍为 Draft/授权边界 |
+| 边界 | 不声明客户可订阅，不声明商业交付完成，不声明真实计费完成，不声明真实结算完成，不声明 SLA 强制执行完成，不声明 WAES 发布完成；`accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false` |
 
 ## 11. 本轮 GFIS 证据登记
 
