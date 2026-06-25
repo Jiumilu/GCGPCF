@@ -38,4 +38,5 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | KDS | controlled |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | KDS | controlled |
+| GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | GPCF | controlled |

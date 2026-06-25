@@ -40,5 +40,6 @@ KDS 空间：`开发`
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625 | Brain 授权型闭包证据刷新执行结果 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | Brain | controlled |
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-REQUEST-20260625 | Brain 授权型闭包证据刷新请求 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md | Brain | controlled |
 | GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624 | Brain 真实运行基线证据 2026-06-24 | docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | Brain | controlled |
+| GPCF-DOC-BRAIN-REVIEW-HANDOFF-20260625 | Brain 人工审查移交包 2026-06-25 | docs/harness/Brain/evidence/brain-review-handoff-20260625.md | Brain | controlled |
 | GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | Brain team 空间授权契约 C 口径确认证据 2026-06-24 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | Brain | controlled |
 | GPCF-DOC-33E55CB86C | Brain 证据索引 | docs/harness/Brain/evidence/evidence-index.md | Brain | controlled |

@@ -37,13 +37,13 @@ superseded_by: []
 | PVAOS | 03-PVAOS | 8 | 8 | 已建空间 |
 | WAES | 04-WAES | 163 | 24 | 已建空间 |
 | KDS | 05-KDS | 661 | 661 | 已建空间 |
-| Brain | 06-Brain | 10 | 10 | 已建空间 |
+| Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 42 | 42 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 1754 | 1649 | 已建空间 |
+| GPCF | 12-GPCF | 1755 | 1650 | 已建空间 |
 | Studio | 13-Studio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
@@ -1042,6 +1042,7 @@ superseded_by: []
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | bidirectional | pending_api |
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-REQUEST-20260625 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md | bidirectional | pending_api |
 | GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624 | docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | bidirectional | pending_api |
+| GPCF-DOC-BRAIN-REVIEW-HANDOFF-20260625 | docs/harness/Brain/evidence/brain-review-handoff-20260625.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-review-handoff-20260625.md | bidirectional | pending_api |
 | GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | 开发/06-Brain/docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-33E55CB86C | docs/harness/Brain/evidence/evidence-index.md | 开发/06-Brain/docs/harness/Brain/evidence/evidence-index.md | bidirectional | pending_api |
 | GPCF-DOC-B0F22D2E45 | docs/harness/Brain/loop-state.md | 开发/06-Brain/docs/harness/Brain/loop-state.md | bidirectional | pending_api |
@@ -1106,6 +1107,7 @@ superseded_by: []
 | GPCF-DOC-4CBD09FE9B | docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | 开发/09-XGD/docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | bidirectional | pending_api |
 | GPCF-DOC-0CE26414BA | docs/harness/XWAIL/README.md | 开发/05-KDS/docs/harness/XWAIL/README.md | bidirectional | pending_api |
 | GPCF-DOC-5770D36F5C | docs/harness/XWAIL/evidence/README.md | 开发/05-KDS/docs/harness/XWAIL/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | bidirectional | pending_api |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | bidirectional | pending_api |
 | GPCF-DOC-86DB4AB0BA | docs/harness/XiaoC/README.md | 开发/08-XiaoC/docs/harness/XiaoC/README.md | bidirectional | pending_api |
 | GPCF-DOC-7C2E2BCB61 | docs/harness/XiaoC/evidence/README.md | 开发/08-XiaoC/docs/harness/XiaoC/evidence/README.md | bidirectional | pending_api |

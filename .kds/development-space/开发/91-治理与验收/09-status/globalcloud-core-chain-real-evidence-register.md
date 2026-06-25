@@ -75,13 +75,13 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 |---|---|---|---|---|---|---|---|---|
 | GPCF | `GlobalCloud GPCF 实施方案.md` | `verified` | `candidate` | `candidate` | `declared` | `not_collected` | `not_collected` | 建立 evidence schema 和真实运行记录 |
 | WAES | `GlobalCloud WAES 实施方案.md` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
-| XWAIL | `GlobalCloud XWAIL 实施方案.md` | `candidate` | `candidate` | `repair_required` | `declared` | `not_collected` | `not_collected` | 建立最小 Validator/XAP 命令；证据见 `docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md` |
+| XWAIL | `GlobalCloud XWAIL 实施方案.md` | `candidate` | `ready_for_review / local_dev_boundary` | `ready_for_review / local_dev_boundary` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；证据见 `docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md` |
 | AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `candidate` | `candidate` | `repair_required` | `declared` | `not_collected` | `not_collected` | 建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令；证据见 `docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md` |
 | GFIS | `GlobalCloud GFIS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
 | GPC | `GlobalCloud GPC 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复 README 索引、外部证据和 Playwright 浏览器；证据见 `docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md` |
 | PVAOS | `GlobalCloud PVAOS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `declared` | `repair_required` | `not_collected` | 修复 Vitest localStorage 环境与 release gate；证据见 `docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md` |
 | KDS | `GlobalCloud KDS 实施方案.md` | `candidate` | `partial_verified` | `ready_for_review / local_dev_boundary` | `partial_verified` | `not_collected` | `not_collected` | `KDS-RAG-EXPORT-001` 已在 local dev 修复并通过导出、校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit；证据见 `docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md` |
-| Brain | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `verified` | `verified_with_authorization_boundary` | `verified_with_authorization_boundary` | `not_collected` | `not_collected` | A1/A2/A3 授权型闭包证据已在 local dev 范围执行并通过 completion/harness/loop；状态保持 `ready_for_review / authorization_boundary`，证据见 `docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md` |
+| Brain | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `verified` | `verified_with_authorization_boundary` | `ready_for_human_review / authorization_boundary` | `not_collected` | `not_collected` | A1/A2/A3 授权型闭包、KDS RAG export 输入和 Brain review handoff 已通过本地门禁；状态保持 `ready_for_review / authorization_boundary`，人工审查包见 `docs/harness/Brain/evidence/brain-review-handoff-20260625.md` |
 
 ## 6. 运行命令登记
 
@@ -89,13 +89,13 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 |---|---|---|
 | GPCF | `validate_project_group_implementation_plan.py`、`loop_document_gate.py` | `candidate` |
 | WAES | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`validate_waes_lint_runtime_repair_authorization.py` | `authorization_required / repair_required`，`npm run lint` 当前仍因 `AppLazyImports.ts` JSX 解析和 `PluginManager.tsx` import type 解析失败；修复需用户确认 WAES dirty workspace 接管边界 |
-| XWAIL | 规划命令 `python scripts/validate_xwail.py --all`、`python scripts/build_xap.py --check`、`python scripts/verify_xap.py --all` 已检查，当前脚本缺失 | `repair_required` |
+| XWAIL | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py` | `ready_for_review / local_dev_boundary`，最小模型校验、XAP manifest build check、XAP verify 和 GPCF evidence reference gate 已通过；仍不声明完整 XWAIL 工具链、WAES 发布或 AaaS 绑定完成 |
 | AaaS | 规划命令 `python scripts/validate_service_package.py --all`、`python scripts/validate_metering.py --all`、`python scripts/validate_sla.py --all`、`python scripts/verify_evidence_requirements.py --all` 已检查，当前脚本缺失 | `repair_required` |
 | GFIS | `npm run check:js`、`npm run quality:100`、`npm run quality:repo`、`npm run test:e2e`、`npm run test:coverage`、`npm run quality:ops` | `partial_verified`，运行态可达、接口/核心流部分通过；外部证据、中文映射、浏览器依赖和 ops drill 仍需修复 |
 | GPC | `npm run check:js`、`npm run quality:repo`、`validate_gpc_l3_harness.py`、`validate_gpc_l4_platform_contract.py`、`npm run quality:100`、`npm run test:e2e`、`npm run quality:ops` | `partial_verified`，运行态、ops drill、runtime API、L3/L4 和核心流片段通过；README、外部证据和浏览器依赖仍需修复 |
 | PVAOS | `npm run lint`、`npm run validate:modules`、`npm run typecheck`、`npm run test`、`npm run release:gate:local`、`npm run check:production-domain`、`npm run build` | `partial_verified`，lint/modules/typecheck/build/domain 通过；test 与 release gate 仍需修复 |
 | KDS | `python3 -m pytest tests/test_api_smoke.py`、`validate_kds_loop_harness.py`、`validate_kds_l4_sample_knowledge_index.py`、`export_rag_admission.py`、`validate_rag_export.py`、`validate_evidence_gates.py`、`wiki_trust_audit.py`、`gbrain doctor --json --fast`、`gbrain search`、`gbrain query`、`validate_kds_rag_export_repair.py` | `ready_for_review / local_dev_boundary`，RAG 准入导出、导出校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit 已通过；仍不声明生产索引、真实交付或客户验收 |
-| Brain | `npm run lint`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run dev:local`、`npm run validate:runtime-health`、`npm run validate:browser-runtime-smoke`、`npm run validate:browser-user-flow`、`npm run validate:read-closure-matrix`、`npm run validate:chinese-gates`、`npm run validate:projects-write-boundary`、`npm run validate:settings-write-boundary`、`npm run validate:bulk-fix-acceptance-execution`、`npm run validate:chat-llm-boundary`、`npm run validate:completion-matrix`、`npm run validate:harness-evidence`、`npm run validate:loop-harness`、`npm run validate:local-action-boundaries`、`npm run format:check` | `ready_for_review / authorization_boundary`，A1/A2/A3 已按用户授权在 local dev 范围执行；`brain_status=200`、`kds_total_pages=2732`、`test_count=208`、`test_passed=208`、`requirements=11 achieved=11 blockers=0`、`brain_harness_evidence=pass`、`brain_loop_harness=pass` |
+| Brain | `npm run lint`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run dev:local`、`npm run validate:runtime-health`、`npm run validate:browser-runtime-smoke`、`npm run validate:browser-user-flow`、`npm run validate:read-closure-matrix`、`npm run validate:chinese-gates`、`npm run validate:projects-write-boundary`、`npm run validate:settings-write-boundary`、`npm run validate:bulk-fix-acceptance-execution`、`npm run validate:chat-llm-boundary`、`npm run validate:completion-matrix`、`npm run validate:harness-evidence`、`npm run validate:loop-harness`、`npm run validate:local-action-boundaries`、`npm run format:check`、`validate_brain_review_handoff.py` | `ready_for_human_review / authorization_boundary`，A1/A2/A3 与 Brain review handoff 已按 local dev 边界执行；`brain_status=200`、`kds_total_pages=2732`、`test_count=208`、`test_passed=208`、`requirements=11 achieved=11 blockers=0`、`brain_harness_evidence=pass`、`brain_loop_harness=pass` |
 
 ## 7. 非声明边界
 
@@ -145,14 +145,15 @@ reason = core-chain real evidence register and evidence standards are establishe
 
 | 项 | 内容 |
 |---|---|
-| 证据文件 | `docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md` |
-| 采集日期 | 2026-06-24 |
+| 证据文件 | `docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md` |
+| 采集日期 | 2026-06-25 |
 | 治理结论 | `xwail_governance_evidence = verified` |
-| 运行结论 | `xwail_runtime_evidence = repair_required` |
-| 阻塞状态 | `xwail_repair_required = validator_commands_missing` |
-| 已通过命令 | `validate_project_implementation_inheritance.py`、`validate_project_terms_consistency.py`、`validate_project_version_compatibility.py`、`validate_was_xwail_aaas_plan_alignment.py` |
-| 缺失命令 | `scripts/validate_xwail.py`、`scripts/build_xap.py`、`scripts/verify_xap.py` |
-| 边界 | 不声明 XWAIL Validator 已实现，不声明 XWAIL 工具链闭环完成，不声明 WAES 发布完成，不声明 AaaS 绑定完成 |
+| 运行结论 | `xwail_min_validator = verified_with_local_dev_boundary` |
+| 状态建议 | `xwail_status_candidate = ready_for_review` |
+| 已通过命令 | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py` |
+| 运行摘要 | `issue_count=0`、`high_count=0`、`xwail_checked_models = 2`、`xap_checked_manifests = 1` |
+| 依赖链 | `WAES -> XWAIL -> AaaS` 已获得 XWAIL local dev 最小契约验证；WAES 仍为 Draft/授权边界，AaaS 仍缺服务 runtime |
+| 边界 | 不声明完整 XWAIL 工具链完成，不声明 WAES 发布完成，不声明 AaaS 绑定完成；`accepted = false`、`integrated = false`、`production_ready = false`、`customer_accepted = false` |
 
 ## 10. 本轮 AaaS 证据登记
 
@@ -263,3 +264,21 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 当前未通过命令 | 本轮授权范围内未保留未通过 Brain 闭包命令 |
 | 关键边界 | 仍不声明生产写入、权限变更、部署、真实交付、客户验收、`accepted`、`integrated` 或 `production_ready` |
 | 边界 | Brain 当前最高状态为 `ready_for_review / authorization_boundary`，需后续人工裁决才能升级 |
+
+## 15.2 本轮 Brain 人工审查移交包登记
+
+| 项 | 内容 |
+|---|---|
+| 证据文件 | `docs/harness/Brain/evidence/brain-review-handoff-20260625.md` |
+| 采集日期 | 2026-06-25 |
+| 输入证据 | `brain-authorized-closure-refresh-execution-20260625.md`、`kds-rag-export-repair-20260625.md` |
+| 首次失败 | dev server 未启动，`connect ECONNREFUSED 127.0.0.1:5175` |
+| 恢复动作 | `npm run dev:local`，Brain dev server 监听 `http://127.0.0.1:5175/` |
+| completion matrix | pass，`requirements=11 achieved=11 blockers=0 completion_status=not_complete` |
+| harness evidence | pass，`test_count=208 test_passed=208 runtime_brain_status=200 runtime_kds_total_pages=2732` |
+| loop harness | pass，`harness_evidence_current_run=pass loop_harness_evidence_current_run=pass` |
+| local action boundaries | pass，`missing_mutation_endpoint_ui_disclosures=0 prepared_mutation_client_ui_invocations=0` |
+| format check | pass，`All matched files use Prettier code style!` |
+| GPCF 校验器 | `validate_brain_review_handoff.py` |
+| 当前建议状态 | `brain_review_handoff = ready_for_human_review`，`brain_status = ready_for_review / authorization_boundary` |
+| 边界 | 不声明 `accepted`，不声明 `integrated`，不声明 `production_ready`，不声明客户验收通过 |

@@ -81,6 +81,7 @@ GPCF 证据索引
 - Cognee P4 live writeback evidence schema：`loop/context/cognee/harness/evidence-p4-live.schema.yaml`
 - Cognee P4 live writeback evidence.md：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.md`
 - Cognee P4 live writeback evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json`
+- Cognee P4 live 授权签核包（待签）：`docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md`
 - COGNEE P4 real writeback live 演练输出：`cognee_p4_real_writeback_live_output=pass record_count=5 requested_write_count=5 execution_count=5 live_execution_ready_rate=1.0`
 
 ## GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 Headroom project-group cost dry-run

@@ -33,13 +33,13 @@ superseded_by: []
 | PVAOS | 03-PVAOS | 8 | 8 | 已建空间 |
 | WAES | 04-WAES | 163 | 24 | 已建空间 |
 | KDS | 05-KDS | 661 | 661 | 已建空间 |
-| Brain | 06-Brain | 10 | 10 | 已建空间 |
+| Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 42 | 42 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 1754 | 1649 | 已建空间 |
+| GPCF | 12-GPCF | 1755 | 1650 | 已建空间 |
 | Studio | 13-Studio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
@@ -1038,6 +1038,7 @@ superseded_by: []
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625 | Brain 授权型闭包证据刷新执行结果 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | Brain | WAES, Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md |
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-REQUEST-20260625 | Brain 授权型闭包证据刷新请求 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md | Brain | GPC, WAES, KDS, Brain, MMC, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md |
 | GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624 | Brain 真实运行基线证据 2026-06-24 | docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | Brain | GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md |
+| GPCF-DOC-BRAIN-REVIEW-HANDOFF-20260625 | Brain 人工审查移交包 2026-06-25 | docs/harness/Brain/evidence/brain-review-handoff-20260625.md | Brain | WAES, KDS, Brain, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-review-handoff-20260625.md |
 | GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | Brain team 空间授权契约 C 口径确认证据 2026-06-24 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | Brain | GFIS, WAES, KDS, Brain, MMC | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md |
 | GPCF-DOC-33E55CB86C | Brain 证据索引 | docs/harness/Brain/evidence/evidence-index.md | Brain | WAES, Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/evidence-index.md |
 | GPCF-DOC-B0F22D2E45 | loop-state | docs/harness/Brain/loop-state.md | Brain | Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/loop-state.md |
@@ -1102,6 +1103,7 @@ superseded_by: []
 | GPCF-DOC-4CBD09FE9B | Loop Round GPCF-XD-LR-001 | docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | XGD | GPC, WAES, KDS, XGD, XiaoG, GPCF | docs | controlled | 开发/09-XGD/docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/XWAIL/README.md |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/XWAIL/evidence/README.md |
+| GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md |
 | GPCF-DOC-86DB4AB0BA | XiaoC | docs/harness/XiaoC/README.md | XiaoC | GPC, WAES, KDS, XiaoC, GPCF | docs | controlled | 开发/08-XiaoC/docs/harness/XiaoC/README.md |
 | GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | XiaoC | GPC, WAES, KDS, XiaoC, GPCF | docs | controlled | 开发/08-XiaoC/docs/harness/XiaoC/evidence/README.md |

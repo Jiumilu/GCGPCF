@@ -273,6 +273,7 @@
 | GPCF-DOC-C994E78BC6 | shared-types-api-contract-alignment-v0.1 | docs/gc-knowledge-fabric/shared-types-api-contract-alignment-v0.1.md | controlled |
 | GPCF-DOC-E716105009 | status-machine-policy | docs/gc-knowledge-fabric/status-machine-policy.md | controlled |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | controlled |
+| GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | controlled |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-975562EE9E | Harness 项目验收清单 — GPCF | docs/harness/acceptance.md | controlled |
 | GPCF-DOC-FF1E624F1E | agent-reach-candidate-search-replay-ledger-20260621 | docs/harness/evidence/agent-reach-candidate-search-replay-ledger-20260621.md | controlled |
