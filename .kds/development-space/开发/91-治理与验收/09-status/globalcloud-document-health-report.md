@@ -18,16 +18,16 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-生成时间：2026-06-24T13:57:12.382717+00:00
+生成时间：2026-06-25T00:25:48.403527+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：2790
-- KDS 镜像 Markdown：2804
-- KDS 本地镜像流水：2790
-- KDS 本地镜像唯一文档：2790
+- 仓库 Markdown：2799
+- KDS 镜像 Markdown：2813
+- KDS 本地镜像流水：2799
+- KDS 本地镜像唯一文档：2799
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
@@ -38,17 +38,17 @@ Loop 文档门禁：`pass`
 ## 状态分布
 
 - archive: 85
-- controlled: 2534
+- controlled: 2543
 - draft: 13
 - okf_derived: 99
 
 ## 项目分布
 
-- Brain: 8
+- Brain: 10
 - GFIS: 90
 - GPC: 45
-- GPCF: 1591
-- KDS: 758
+- GPCF: 1597
+- KDS: 759
 - MMC: 8
 - PKC: 6
 - PVAOS: 8
@@ -86,7 +86,7 @@ codegraph_loop_schema=pass templates=3 required_fields=38 automatic_status_upgra
 ### loop_ui_quality_baseline
 
 ```text
-loop_ui_quality_baseline=pass template_ui_section=present master_spec=present capability_status=pilot explicit_ui_scope_rounds=19 explicit_ui_scope_valid=19 historical_ui_signal_rounds_without_explicit_scope=594 baseline_evidence=present
+loop_ui_quality_baseline=pass template_ui_section=present master_spec=present capability_status=pilot explicit_ui_scope_rounds=21 explicit_ui_scope_valid=21 historical_ui_signal_rounds_without_explicit_scope=594 baseline_evidence=present
 ```
 
 ### loop_session_mainline_control
@@ -104,7 +104,7 @@ current_session_mainline_declaration=pass session_mainline=session-mainline-cont
 ### loop_session_registry
 
 ```text
-loop_session_registry=pass repo_recorded_loop_rounds=1130 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=446,Ontology___WAS_governance=131,CodeGraph_governance=52,COGNEE_pilot___writeback=6,Agent-Reach_governance=49,Headroom___LCX_governance=68,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=1,LOOP_localization_governance=5,UI_governance_and_validation=19,Session_declaration_and_mainline=5
+loop_session_registry=pass repo_recorded_loop_rounds=1133 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=446,Ontology___WAS_governance=131,CodeGraph_governance=53,COGNEE_pilot___writeback=6,Agent-Reach_governance=49,Headroom___LCX_governance=68,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=1,LOOP_localization_governance=5,UI_governance_and_validation=21,Session_declaration_and_mainline=5
 ```
 
 ### session_mainline_preflight_enforcement
@@ -145,7 +145,7 @@ execution_mode=read_only_validation
 
 ```text
 localization_gate=pass
-docs_checked=820
+docs_checked=823
 software_files_checked=240
 findings=0
 ```

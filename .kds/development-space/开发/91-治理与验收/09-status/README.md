@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/README.md
 source_path: 09-status/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-25
 supersedes: []
 superseded_by: []
 ---
@@ -48,6 +48,7 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | controlled |
 | GPCF-DOC-C582EFCACE | globalcloud-l3-admission-matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | controlled |
 | GPCF-DOC-C10C271958 | globalcloud-project-document-loop-maturity-matrix | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-BOARD-20260625 | GlobalCloud 项目群真实执行治理总控板 | 09-status/globalcloud-project-group-real-execution-governance-board.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | controlled |
 | GPCF-DOC-6CE17269E9 | globalcloud-project-mainline-alignment-matrix | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | controlled |
 | GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | controlled |

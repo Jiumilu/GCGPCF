@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-06-24
+生成日期：2026-06-25
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -445,6 +445,7 @@
 | GPCF-DOC-718A85136C | Studio Channels Chat 入口补齐验证证据 | docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | controlled |
 | GPCF-DOC-7D6C9E5C21 | Studio Chat 工作台键盘与移动端复验证据 | docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | controlled |
 | GPCF-DOC-A13F6D7B4E | Studio 默认凭据整改链路可访问性复验证据 | docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | controlled |
+| GPCF-EVIDENCE-79B4D3F1A6 | Studio 默认凭据整改态账户动作白名单复验 | docs/harness/evidence/studio-default-credential-account-action-whitelist-verified-20260625.md | controlled |
 | GPCF-DOC-8C4A16F2DE | Studio 默认凭据后端强制门禁落地证据 | docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md | controlled |
 | GPCF-DOC-F1A4B89C2D | Studio 默认凭据后端门禁真实运行复验证据 | docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md | controlled |
 | GPCF-DOC-9F2A7D61B3 | Studio 默认凭据登录分流验证证据 | docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md | controlled |
@@ -452,6 +453,7 @@
 | GPCF-DOC-1D4C8A73E2 | Studio 默认凭据治理动作后收口验证证据 | docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md | controlled |
 | GPCF-DOC-6C81F0E2A4 | Studio 默认凭据提醒移动端紧凑化验证证据 | docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md | controlled |
 | GPCF-DOC-5B7A12D4E9 | Studio 默认凭据提醒非阻断化验证证据 | docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md | controlled |
+| GPCF-EVIDENCE-8E2F18C4D1 | Studio 默认凭据整改态白名单复验 | docs/harness/evidence/studio-default-credential-remediation-whitelist-verified-20260625.md | controlled |
 | GPCF-DOC-7C5E1A92D4 | Studio 默认凭据治理运行链路验证证据 | docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md | controlled |
 | GPCF-DOC-5A7D23B8E1 | Studio 默认凭据整改零噪声复验证据 | docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md | controlled |
 | GPCF-DOC-5C7D184EA2 | Studio Jobs Chat 入口补齐验证证据 | docs/harness/evidence/studio-jobs-chat-entry-verified-20260622.md | controlled |
@@ -578,6 +580,7 @@
 | GPCF-DOC-DE30AB91D7 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | controlled |
 | GPCF-DOC-31365B7D25 | Loop Round - CodeGraph 开发执行授权等待态 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007 | Loop Round - CodeGraph 业务开发执行窗口授予 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md | controlled |
+| GPCF-DOC-2B9E7E6A18 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008.md | controlled |
 | GPCF-DOC-AC51B4A6F1 | Loop Round - CodeGraph 开发执行层中文化文档债务收口 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | controlled |
 | GPCF-DOC-0D35D7BC63 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | controlled |
 | GPCF-DOC-11E86C4B9A | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | controlled |
@@ -1619,6 +1622,8 @@
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-017 | Loop Round GPCF-UI-STUDIO-WORKBENCH-017 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-018 | Loop Round GPCF-UI-STUDIO-WORKBENCH-018 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-019 | Loop Round GPCF-UI-STUDIO-WORKBENCH-019 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-020 | Loop Round GPCF-UI-STUDIO-WORKBENCH-020 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-020.md | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-021 | Loop Round GPCF-UI-STUDIO-WORKBENCH-021 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-021.md | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | controlled |
 | GPCF-DOC-27101F3BEB | multi-tenant-permission-design | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-40F0A4CB83 | status-audit-2026-06-10 | docs/harness/status-audit-2026-06-10.md | controlled |

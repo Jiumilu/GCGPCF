@@ -1,0 +1,135 @@
+{
+  "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-TASK-INTAKE-008",
+  "project": "GFIS",
+  "status": "ready",
+  "codegraph_required": true,
+  "business_context": {
+    "source_round": "GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007",
+    "authorized_by": "user",
+    "authorization_phrase": "全部授权",
+    "business_blocker": "FAIL: KDS coverage must not have missing controlled sources",
+    "runtime_sop_e2e": "repair_required",
+    "next_action": "collect_real_receipt_files_and_owner_responses_then_rerun_runtime_sop"
+  },
+  "pre_change_analysis": {
+    "query": "GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence",
+    "query_results": [
+      {
+        "filePath": "scripts/validate_gfis_customer_requirement_test_source_record_submission.py",
+        "kind": "variable",
+        "name": "EVIDENCE",
+        "score_observed": 174.49794387890327
+      },
+      {
+        "filePath": "scripts/validate_gfis_test_data_runtime_replay_harness.py",
+        "kind": "variable",
+        "name": "EVIDENCE",
+        "score_observed": 161.49794387890327
+      },
+      {
+        "filePath": "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+        "kind": "file",
+        "score_observed": 84.54359542392409
+      },
+      {
+        "filePath": "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+        "kind": "file",
+        "score_observed": 84.54359542392409
+      }
+    ],
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "node_inspection": [
+      {
+        "filePath": "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+        "kind": "python",
+        "lines": 247,
+        "symbol_count": 20,
+        "indexed_dependents": 0,
+        "summary": "CodeGraph node inspection reports no other indexed file depends on this validator."
+      }
+    ],
+    "affected": {
+      "changedFiles": [],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    }
+  },
+  "implementation_constraints": {
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "affected_scope": [
+      "GFIS Liaoning Yuanhang real receipt empty-directory hold register validator and its read-only evidence chain"
+    ],
+    "files_allowed_to_change": [
+      "scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.json",
+      "docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.md"
+    ],
+    "files_not_to_touch": [
+      "GFIS business source files",
+      "GFIS real receipt intake directories",
+      "GFIS production configuration",
+      "real KDS token or secret files",
+      ".codegraph/**"
+    ],
+    "expected_tests": [
+      "python3 tools/kds-sync/validate_codegraph_task_intake_gate.py --task-file docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json",
+      "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "python3 scripts/validate_gfis_runtime_sop_e2e.py"
+    ]
+  },
+  "test_selection": {
+    "affected_tests": [],
+    "fallback_tests": [
+      "python3 tools/kds-sync/validate_codegraph_task_intake_gate.py --task-file docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json",
+      "python3 scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+      "python3 scripts/validate_gfis_runtime_sop_e2e.py"
+    ],
+    "fallback_reason": "codegraph affected returned affectedTests=[] and totalDependentsTraversed=0; fallback tests are selected from the task-intake gate validator plus the GFIS hold-register and runtime SOP validators."
+  },
+  "codegraph_evidence": {
+    "query": "GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence",
+    "target_nodes": [
+      "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py"
+    ],
+    "affected": {
+      "changedFiles": [],
+      "affectedTests": [],
+      "totalDependentsTraversed": 0
+    },
+    "changed_files": [],
+    "test_selection_reason": "Task intake only; CodeGraph affected produced no tests, so the hold-register validator and GFIS runtime SOP validator remain the fallback checks.",
+    "post_change_status": "task_intake_recorded_pending_implementation"
+  },
+  "efficiency_metrics": {
+    "manual_scan_files": 80,
+    "codegraph_candidate_files": 2,
+    "actual_changed_files": 0,
+    "affected_tests": [],
+    "missed_impact_count": 0,
+    "time_to_first_target": "under_2_minutes_observed",
+    "review_rework_count": 0
+  },
+  "codegraph_unavailable_exception": {
+    "reason": "",
+    "fallback_scan": [],
+    "reviewer": "",
+    "expires_at": ""
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "gfis_sync_performed": false
+  }
+}

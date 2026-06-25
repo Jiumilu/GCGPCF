@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/agent-reach-green-supply-chain-priority-search-targets-20260623.md
 source_path: docs/harness/evidence/agent-reach-green-supply-chain-priority-search-targets-20260623.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -20,9 +20,9 @@ superseded_by: []
 
 - status: `green_supply_chain_priority_targets_ready`
 - current_admission: `limited_candidate_only`
-- target_count: `8`
-- p0_count: `5`
-- p1_count: `3`
+- target_count: `13`
+- p0_count: `9`
+- p1_count: `4`
 - plan_priority_ref_present: `True`
 
 ## 覆盖域名
@@ -32,7 +32,9 @@ superseded_by: []
 - `gmpsp.org.cn`
 - `greenscs.com`
 - `mee.gov.cn`
+- `meescc.cn`
 - `miit.gov.cn`
+- `ndrc.gov.cn`
 - `pbc.gov.cn`
 - `samr.gov.cn`
 

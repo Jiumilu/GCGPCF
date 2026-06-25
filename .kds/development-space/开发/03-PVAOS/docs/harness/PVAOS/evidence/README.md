@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/03-PVAOS/docs/harness/PVAOS/evidence/README.md
 source_path: docs/harness/PVAOS/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-25
 supersedes: []
 superseded_by: []
 ---

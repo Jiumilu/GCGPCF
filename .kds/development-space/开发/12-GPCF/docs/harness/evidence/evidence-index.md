@@ -74,6 +74,14 @@ GPCF 证据索引
 - Cognee P4 复测 evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.json`
 - COGNEE P4 real writeback precheck 复测输出：`cognee_p4_real_writeback_precheck_output=pass record_count=5 requested_write_count=5 precheck_pass_rate=1.0`
 
+## GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001 Cognee P4 真实写入运行演练 001
+
+- Cognee P4 live writeback runner：`loop/context/cognee/scripts/run-cognee-p4-real-writeback-live.py`
+- Cognee P4 live writeback validator：`loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py`
+- Cognee P4 live writeback evidence schema：`loop/context/cognee/harness/evidence-p4-live.schema.yaml`
+- Cognee P4 live writeback evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json`
+- COGNEE P4 real writeback live 演练输出：`cognee_p4_real_writeback_live_output=pass record_count=5 requested_write_count=5 execution_count=5 live_execution_ready_rate=1.0`
+
 ## GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 Headroom project-group cost dry-run
 
 - Headroom admission evidence: `docs/harness/evidence/headroom-project-group-admission-20260621.md`

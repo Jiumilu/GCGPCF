@@ -8,7 +8,7 @@
   "agent_reach_binary_invoked": false,
   "priority_target_refs": [
     {
-      "scope": "green_supply_chain_system",
+      "scope": "green_supply_chain_and_solid_waste_resource_utilization",
       "fixture": "fixtures/agent-reach/green-supply-chain-priority-search-targets-20260623.json",
       "status": "candidate_priority_targets_ready",
       "applies_to_query_ids": [
@@ -17,6 +17,13 @@
         "p8-q10",
         "p8-q12",
         "p8-q14"
+      ],
+      "priority_topics": [
+        "green_supply_chain",
+        "phosphogypsum",
+        "industrial_solid_waste",
+        "zero_waste_city",
+        "solid_waste_resource_utilization"
       ],
       "non_claim": "priority targets are not source-of-record and do not change production search configuration"
     }

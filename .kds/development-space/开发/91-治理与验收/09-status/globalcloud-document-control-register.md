@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-25
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-06-24
+日期：2026-06-25
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 47 | 42 | 已建空间 |
 | PVAOS | 03-PVAOS | 8 | 8 | 已建空间 |
 | WAES | 04-WAES | 162 | 23 | 已建空间 |
-| KDS | 05-KDS | 659 | 659 | 已建空间 |
-| Brain | 06-Brain | 8 | 8 | 已建空间 |
+| KDS | 05-KDS | 660 | 660 | 已建空间 |
+| Brain | 06-Brain | 10 | 10 | 已建空间 |
 | PKC | 07-PKC | 6 | 6 | 已建空间 |
 | XiaoC | 08-XiaoC | 42 | 42 | 已建空间 |
 | XGD | 09-XGD | 6 | 6 | 已建空间 |
 | XiaoG | 10-XiaoG | 7 | 7 | 已建空间 |
 | MMC | 11-MMC | 8 | 8 | 已建空间 |
-| GPCF | 12-GPCF | 1743 | 1639 | 已建空间 |
+| GPCF | 12-GPCF | 1749 | 1644 | 已建空间 |
 | Studio | 13-Studio | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
@@ -48,7 +48,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 61 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 101 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 102 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -696,6 +696,7 @@ superseded_by: []
 | GPCF-DOC-C436DDB0F6 | GlobalCloud 文档健康报告 | 09-status/globalcloud-document-health-report.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-document-health-report.md |
 | GPCF-DOC-C582EFCACE | globalcloud-l3-admission-matrix | 09-status/globalcloud-l3-admission-matrix.md | GPCF | GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-l3-admission-matrix.md |
 | GPCF-DOC-C10C271958 | globalcloud-project-document-loop-maturity-matrix | 09-status/globalcloud-project-document-loop-maturity-matrix.md | GPCF | GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-document-loop-maturity-matrix.md |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-BOARD-20260625 | GlobalCloud 项目群真实执行治理总控板 | 09-status/globalcloud-project-group-real-execution-governance-board.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-group-real-execution-governance-board.md |
 | GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624 | GlobalCloud 项目群实施方案控制台账 | 09-status/globalcloud-project-implementation-control-register.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-implementation-control-register.md |
 | GPCF-DOC-6CE17269E9 | globalcloud-project-mainline-alignment-matrix | 09-status/globalcloud-project-mainline-alignment-matrix.md | GPCF | GPCF | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-mainline-alignment-matrix.md |
 | GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | status | controlled | 开发/91-治理与验收/09-status/globalcloud-project-master-plan-control-register.md |
@@ -1034,9 +1035,11 @@ superseded_by: []
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md |
 | GPCF-DOC-0857798863 | Brain | docs/harness/Brain/README.md | Brain | GPC, WAES, KDS, Brain, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/README.md |
 | GPCF-DOC-4A654203DE | evidence | docs/harness/Brain/evidence/README.md | Brain | GPC, WAES, KDS, Brain, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/README.md |
+| GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625 | Brain 授权型闭包证据刷新执行结果 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | Brain | WAES, Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md |
+| GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-REQUEST-20260625 | Brain 授权型闭包证据刷新请求 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md | Brain | GPC, WAES, KDS, Brain, MMC, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md |
 | GPCF-DOC-BRAIN-REAL-RUNTIME-BASELINE-20260624 | Brain 真实运行基线证据 2026-06-24 | docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md | Brain | GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md |
 | GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624 | Brain team 空间授权契约 C 口径确认证据 2026-06-24 | docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md | Brain | GFIS, WAES, KDS, Brain, MMC | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md |
-| GPCF-DOC-33E55CB86C | evidence-index | docs/harness/Brain/evidence/evidence-index.md | Brain | Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/evidence-index.md |
+| GPCF-DOC-33E55CB86C | Brain 证据索引 | docs/harness/Brain/evidence/evidence-index.md | Brain | WAES, Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/evidence/evidence-index.md |
 | GPCF-DOC-B0F22D2E45 | loop-state | docs/harness/Brain/loop-state.md | Brain | Brain | docs | controlled | 开发/06-Brain/docs/harness/Brain/loop-state.md |
 | GPCF-DOC-0209DFB721 | loops | docs/harness/Brain/loops/README.md | Brain | GPC, WAES, KDS, Brain, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/loops/README.md |
 | GPCF-DOC-F61B890C31 | Loop Round GPCF-BR-LR-001 | docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md | Brain | GPC, WAES, KDS, Brain, PKC, GPCF | docs | controlled | 开发/06-Brain/docs/harness/Brain/loops/loop-round-GPCF-BR-LR-001.md |
@@ -1180,6 +1183,7 @@ superseded_by: []
 | GPCF-DOC-A1E6C5C544 | CodeGraph 业务开发执行层准入证据 | docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-admission-20260621.md |
 | GPCF-DOC-C8BB19E987 | codegraph-dev-execution-authorization-waiting-20260622 | docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.md | GPCF | GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-authorization-waiting-20260622.md |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-20260623 | CodeGraph 业务开发执行窗口授予证据 | docs/harness/evidence/codegraph-dev-execution-business-execution-window-grant-20260623.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-business-execution-window-grant-20260623.md |
+| GPCF-DOC-4F4A3C1C9E | CodeGraph 业务任务 Intake 008 | docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.md |
 | GPCF-DOC-6D28F6D4CE | codegraph-dev-execution-document-localization-debt-closure-20260622 | docs/harness/evidence/codegraph-dev-execution-document-localization-debt-closure-20260622.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-document-localization-debt-closure-20260622.md |
 | GPCF-DOC-07988FA674 | codegraph-dev-execution-first-real-candidate-20260622 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-20260622.md | GPCF | GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-first-real-candidate-20260622.md |
 | GPCF-DOC-C7B06F23A9 | codegraph-dev-execution-first-real-candidate-authorization-20260622 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorization-20260622.md | GPCF | GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorization-20260622.md |
@@ -1478,6 +1482,7 @@ superseded_by: []
 | GPCF-DOC-718A85136C | Studio Channels Chat 入口补齐验证证据 | docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-channels-chat-entry-verified-20260622.md |
 | GPCF-DOC-7D6C9E5C21 | Studio Chat 工作台键盘与移动端复验证据 | docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-chat-workbench-keyboard-mobile-verified-20260622.md |
 | GPCF-DOC-A13F6D7B4E | Studio 默认凭据整改链路可访问性复验证据 | docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-a11y-verified-20260624.md |
+| GPCF-EVIDENCE-79B4D3F1A6 | Studio 默认凭据整改态账户动作白名单复验 | docs/harness/evidence/studio-default-credential-account-action-whitelist-verified-20260625.md | GPCF | GPCF, WAES, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-account-action-whitelist-verified-20260625.md |
 | GPCF-DOC-8C4A16F2DE | Studio 默认凭据后端强制门禁落地证据 | docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md |
 | GPCF-DOC-F1A4B89C2D | Studio 默认凭据后端门禁真实运行复验证据 | docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md |
 | GPCF-DOC-9F2A7D61B3 | Studio 默认凭据登录分流验证证据 | docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md |
@@ -1485,6 +1490,7 @@ superseded_by: []
 | GPCF-DOC-1D4C8A73E2 | Studio 默认凭据治理动作后收口验证证据 | docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md |
 | GPCF-DOC-6C81F0E2A4 | Studio 默认凭据提醒移动端紧凑化验证证据 | docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-prompt-mobile-compact-verified-20260622.md |
 | GPCF-DOC-5B7A12D4E9 | Studio 默认凭据提醒非阻断化验证证据 | docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-prompt-nonblocking-verified-20260622.md |
+| GPCF-EVIDENCE-8E2F18C4D1 | Studio 默认凭据整改态白名单复验 | docs/harness/evidence/studio-default-credential-remediation-whitelist-verified-20260625.md | GPCF | GPCF, WAES, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-remediation-whitelist-verified-20260625.md |
 | GPCF-DOC-7C5E1A92D4 | Studio 默认凭据治理运行链路验证证据 | docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-runtime-chain-verified-20260623.md |
 | GPCF-DOC-5A7D23B8E1 | Studio 默认凭据整改零噪声复验证据 | docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-default-credential-zero-noise-remediation-20260624.md |
 | GPCF-DOC-5C7D184EA2 | Studio Jobs Chat 入口补齐验证证据 | docs/harness/evidence/studio-jobs-chat-entry-verified-20260622.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/evidence/studio-jobs-chat-entry-verified-20260622.md |
@@ -1740,6 +1746,7 @@ superseded_by: []
 | GPCF-DOC-DE30AB91D7 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001.md |
 | GPCF-DOC-31365B7D25 | Loop Round - CodeGraph 开发执行授权等待态 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-WAITING-006.md |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007 | Loop Round - CodeGraph 业务开发执行窗口授予 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007.md |
+| GPCF-DOC-2B9E7E6A18 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008.md |
 | GPCF-DOC-AC51B4A6F1 | Loop Round - CodeGraph 开发执行层中文化文档债务收口 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011.md |
 | GPCF-DOC-0D35D7BC63 | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md | GPCF | GFIS, GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004.md |
 | GPCF-DOC-11E86C4B9A | Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-AUTHORIZATION-005.md |
@@ -2781,6 +2788,8 @@ superseded_by: []
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-017 | Loop Round GPCF-UI-STUDIO-WORKBENCH-017 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-017.md |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-018 | Loop Round GPCF-UI-STUDIO-WORKBENCH-018 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-018.md |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-019 | Loop Round GPCF-UI-STUDIO-WORKBENCH-019 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-020 | Loop Round GPCF-UI-STUDIO-WORKBENCH-020 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-020.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-020.md |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-021 | Loop Round GPCF-UI-STUDIO-WORKBENCH-021 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-021.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-021.md |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
 | GPCF-DOC-9886BDB110 | L4 Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |

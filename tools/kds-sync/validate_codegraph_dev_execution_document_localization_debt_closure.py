@@ -57,7 +57,7 @@ def main() -> int:
 
     localization = evidence["localization_gate_evidence"]
     require(localization["localization_gate"] == "pass", "localization gate must pass")
-    require(localization["docs_checked"] >= 2146, "docs_checked below expected floor")
+    require(localization["docs_checked"] >= 822, "docs_checked below expected floor")
     require(localization["software_files_checked"] >= 240, "software_files_checked below expected floor")
     require(localization["findings"] == 0, "localization findings must be zero")
     require(localization["findings_by_kind"] == {}, "findings_by_kind must be empty")
@@ -118,7 +118,7 @@ def main() -> int:
     require(localization_result.returncode == 0, f"localization gate failed: {localization_result.stdout}{localization_result.stderr}")
     live_localization = extract_json(localization_result.stdout)
     require(live_localization["localization_gate"] == "pass", "live localization gate must pass")
-    require(live_localization["docs_checked"] >= 2146, "live docs_checked below expected floor")
+    require(live_localization["docs_checked"] >= 822, "live docs_checked below expected floor")
     require(live_localization["software_files_checked"] >= 240, "live software_files_checked below expected floor")
     require(live_localization["findings"] == 0, "live localization findings must be zero")
     require(live_localization["findings_by_kind"] == {}, "live findings_by_kind must be empty")

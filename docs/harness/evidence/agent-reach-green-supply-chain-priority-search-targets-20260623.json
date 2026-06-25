@@ -7,7 +7,9 @@
     "gmpsp.org.cn",
     "greenscs.com",
     "mee.gov.cn",
+    "meescc.cn",
     "miit.gov.cn",
+    "ndrc.gov.cn",
     "pbc.gov.cn",
     "samr.gov.cn"
   ],
@@ -21,8 +23,8 @@
     "not_integrated",
     "not_production_ready"
   ],
-  "p0_count": 5,
-  "p1_count": 3,
+  "p0_count": 9,
+  "p1_count": 4,
   "plan_priority_ref_present": true,
   "security_controls": {
     "browser_cookie_extraction_invoked": false,
@@ -35,14 +37,19 @@
     "production_integration_allowed": false
   },
   "status": "green_supply_chain_priority_targets_ready",
-  "target_count": 8,
+  "target_count": 13,
   "target_types": [
+    "government_circular_economy_policy",
     "government_environment_policy",
+    "government_industrial_solid_waste_policy",
     "government_policy",
+    "government_solid_waste_standard",
     "government_standard",
+    "government_zero_waste_city_policy",
     "green_finance_policy",
     "international_due_diligence_policy",
     "international_standard",
-    "public_platform"
+    "public_platform",
+    "technical_center_zero_waste_city"
   ]
 }

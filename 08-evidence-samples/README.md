@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/04-WAES/08-evidence-samples/README.md
 source_path: 08-evidence-samples/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-25
 supersedes: []
 superseded_by: []
 ---

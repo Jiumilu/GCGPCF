@@ -24,6 +24,8 @@ superseded_by: []
 
 本文不替代项目实施方案，不把历史 evidence、README、mock、演示页面或脚本存在自动声明为真实运行完成。
 
+项目群下一批真实执行任务、命令、证据、门禁、回滚边界和跨项目依赖由 `GlobalCloud 项目群真实执行治理总控板` 控制，受控文件为 `09-status/globalcloud-project-group-real-execution-governance-board.md`。
+
 ## 2. 核心链路范围
 
 本阶段优先控制以下核心链路：
@@ -79,7 +81,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GPC | `GlobalCloud GPC 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复 README 索引、外部证据和 Playwright 浏览器；证据见 `docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md` |
 | PVAOS | `GlobalCloud PVAOS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `declared` | `repair_required` | `not_collected` | 修复 Vitest localStorage 环境与 release gate；证据见 `docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md` |
 | KDS | `GlobalCloud KDS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复 RAG 准入导出缺失文件、哈希/大小不匹配和 allowlist 准入问题；证据见 `docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md` |
-| Brain | `GlobalCloud Brain 实施方案.md` | `candidate` | `verified` | `partial_verified` | `repair_required` | `repair_required` | `not_collected` | 已启动 Brain dev server 并通过 runtime-health；browser-runtime-smoke、browser-user-flow、read-closure、Chinese gates 已按 C 口径通过；继续刷新 status-audit、bulk-fix execution、authorized prompt 与 harness evidence；证据见 `docs/harness/Brain/evidence/brain-real-runtime-baseline-20260624.md` |
+| Brain | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `verified` | `verified_with_authorization_boundary` | `verified_with_authorization_boundary` | `not_collected` | `not_collected` | A1/A2/A3 授权型闭包证据已在 local dev 范围执行并通过 completion/harness/loop；状态保持 `ready_for_review / authorization_boundary`，证据见 `docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md` |
 
 ## 6. 运行命令登记
 
@@ -93,7 +95,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GPC | `npm run check:js`、`npm run quality:repo`、`validate_gpc_l3_harness.py`、`validate_gpc_l4_platform_contract.py`、`npm run quality:100`、`npm run test:e2e`、`npm run quality:ops` | `partial_verified`，运行态、ops drill、runtime API、L3/L4 和核心流片段通过；README、外部证据和浏览器依赖仍需修复 |
 | PVAOS | `npm run lint`、`npm run validate:modules`、`npm run typecheck`、`npm run test`、`npm run release:gate:local`、`npm run check:production-domain`、`npm run build` | `partial_verified`，lint/modules/typecheck/build/domain 通过；test 与 release gate 仍需修复 |
 | KDS | `python3 -m pytest tests/test_api_smoke.py`、`validate_kds_loop_harness.py`、`validate_kds_l4_sample_knowledge_index.py`、`validate_evidence_gates.py`、`validate_rag_export.py`、`gbrain doctor --json --fast`、`gbrain search`、`gbrain query` | `partial_verified`，API smoke、Loop harness、L4 样本索引、evidence gate 与 GBrain 检索通过；`kds_rag_export` 失败，RAG 准入导出仍为 `repair_required` |
-| Brain | `npm run lint`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run dev:local`、`npm run validate:runtime-health`、`npm run validate:target-panel-runtime-matrix`、`npm run validate:target-panel-data-quality`、`npm run validate:browser-runtime-smoke`、`npm run validate:browser-user-flow`、`npm run validate:read-closure-matrix`、`npm run validate:chinese-gates`、`npm run format:check`、`Chrome Playwright live browser observation`、`npm run validate:completion-matrix`、`npm run validate:harness-evidence`、`npm run validate:loop-harness` | `partial_verified`，lint/typecheck/test/build/format 通过，21 test files / 208 tests 通过；启动 5175 后 runtime health 通过并返回 `brain_status=200`、`kds_total_pages=2732`；browser-runtime-smoke、browser-user-flow、read-closure、Chinese gates 已按 C 口径通过；completion/harness/loop 证据仍需刷新 |
+| Brain | `npm run lint`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run dev:local`、`npm run validate:runtime-health`、`npm run validate:browser-runtime-smoke`、`npm run validate:browser-user-flow`、`npm run validate:read-closure-matrix`、`npm run validate:chinese-gates`、`npm run validate:projects-write-boundary`、`npm run validate:settings-write-boundary`、`npm run validate:bulk-fix-acceptance-execution`、`npm run validate:chat-llm-boundary`、`npm run validate:completion-matrix`、`npm run validate:harness-evidence`、`npm run validate:loop-harness`、`npm run validate:local-action-boundaries`、`npm run format:check` | `ready_for_review / authorization_boundary`，A1/A2/A3 已按用户授权在 local dev 范围执行；`brain_status=200`、`kds_total_pages=2732`、`test_count=208`、`test_passed=208`、`requirements=11 achieved=11 blockers=0`、`brain_harness_evidence=pass`、`brain_loop_harness=pass` |
 
 ## 7. 非声明边界
 
@@ -221,7 +223,9 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 候选浏览器证据 | `Chrome Playwright live browser observation` 看到 `总览 (personal)`、`KDS API`、`totalPages=2732`、`graphNodes=280`、`graphEdges=1085`、`8 个结果 · personal · KDS 关键词搜索 · KDS API`、`MMC LLM · 8` |
 | 授权契约漂移证据 | `docs/harness/Brain/evidence/brain-team-authorization-contract-drift-20260624.md` |
 | 浏览器授权状态 | `brain_chrome_browser_visible_signals = confirmed`；用户已确认 C，`team authorization` 采用读写分层：team 可读 KDS dashboard/graph/search，写入、prompt、secret、持久化操作继续强授权控制，`brain_team_authorization_contract = confirmed_c_read_write_split` |
-| 已通过结果 | `21 test files / 208 tests`、Vite build `2100 modules transformed`、`brain_status=200`、`kds_total_pages=2732`、`target_panels=12`、`checks=30 usable=30`、`All matched files use Prettier code style!`、`npm run validate:browser-runtime-smoke`、`npm run validate:browser-user-flow`、`npm run validate:read-closure-matrix`、`npm run validate:chinese-gates` |
-| 当前未通过命令 | `npm run validate:completion-matrix`、`npm run validate:harness-evidence`、`npm run validate:loop-harness` |
-| 关键失败 | `browser-runtime-smoke`、`browser-user-flow`、`read-closure`、`Chinese gates` 已按 C 口径通过；status audit 仍缺 projects/settings write boundary 当前 evidence；bulk-fix execution 与 authorized prompt evidence 需刷新 |
-| 边界 | 不声明 Brain 真实运行闭环完成，不声明 KDS/Brain 真实集成完成，不声明真实交付完成，不声明客户验收通过 |
+| 授权刷新请求 | `docs/harness/Brain/evidence/brain-authorized-closure-refresh-request-20260625.md`；用户已确认 A1/A2/A3 local dev 授权 |
+| 授权执行结果 | `docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md`；`brain_authorized_closure_refresh_result = verified_with_authorization_boundary` |
+| 已通过结果 | `21 test files / 208 tests`、Vite build `2100 modules transformed`、`brain_status=200`、`kds_total_pages=2732`、`projects_write_boundary=pass`、`settings_write_boundary=pass`、`bulk_fix_execution_id=bulk-fix-exec-01249afa30ff`、`chat_llm_prompt_invoked=true`、`completion_matrix requirements=11 achieved=11 blockers=0`、`brain_harness_evidence=pass`、`brain_loop_harness=pass` |
+| 当前未通过命令 | 本轮授权范围内未保留未通过 Brain 闭包命令 |
+| 关键边界 | 仍不声明生产写入、权限变更、部署、真实交付、客户验收、`accepted`、`integrated` 或 `production_ready` |
+| 边界 | Brain 当前最高状态为 `ready_for_review / authorization_boundary`，需后续人工裁决才能升级 |

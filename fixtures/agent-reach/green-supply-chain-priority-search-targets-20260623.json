@@ -14,6 +14,7 @@
   "strong_association_criteria": [
     "official_or_public_platform_for_green_supply_chain_or_green_manufacturing",
     "contains_policy_standard_product_carbon_footprint_scope3_or_due_diligence_content",
+    "contains_phosphogypsum_industrial_solid_waste_zero_waste_city_or_resource_utilization_content",
     "useful_for_supplier_esg_green_finance_chain_of_custody_or_carbon_traceability_queries",
     "public_read_only_without_credentials_or_cookie_extraction"
   ],
@@ -129,6 +130,76 @@
         "site:commission.europa.eu chains of activities environmental impacts"
       ],
       "reason": "企业可持续尽职调查和供应链环境影响要求明确，适合作为出口、合规和供应商尽调检索对象。"
+    },
+    {
+      "target_id": "gsc-p0-mee-phosphogypsum-standard",
+      "priority": "P0",
+      "name": "生态环境部磷石膏污染控制标准",
+      "domain": "mee.gov.cn",
+      "url": "https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/gthw/gtfwwrkzbz/202506/t20250610_1121013.shtml",
+      "target_type": "government_solid_waste_standard",
+      "recommended_queries": [
+        "site:mee.gov.cn 磷石膏 利用 无害化 贮存 污染控制",
+        "site:mee.gov.cn HJ 1415 2025 磷石膏",
+        "site:mee.gov.cn 磷石膏 综合利用 环境管理"
+      ],
+      "reason": "HJ 1415-2025 直接覆盖磷石膏利用、无害化贮存、污染控制、监测和环境管理，是磷石膏检索的 P0 标准锚点。"
+    },
+    {
+      "target_id": "gsc-p0-mee-zero-waste-city",
+      "priority": "P0",
+      "name": "生态环境部无废城市建设专题",
+      "domain": "mee.gov.cn",
+      "url": "https://www.mee.gov.cn/home/ztbd/2020/wfcsjssdgz/",
+      "target_type": "government_zero_waste_city_policy",
+      "recommended_queries": [
+        "site:mee.gov.cn 无废城市 工业固体废物 综合利用率",
+        "site:mee.gov.cn 无废城市 建设 工作方案 工业固废",
+        "site:mee.gov.cn 无废城市 指标体系 一般工业固体废物"
+      ],
+      "reason": "无废城市专题聚合顶层设计、政策文件、试点进展和指标体系，适合纳入工业固废和城市固废治理检索。"
+    },
+    {
+      "target_id": "gsc-p0-meescc-zero-waste-city",
+      "priority": "P0",
+      "name": "生态环境部固管中心无废城市专题",
+      "domain": "meescc.cn",
+      "url": "https://www.meescc.cn/ztzl/wfcs/",
+      "target_type": "technical_center_zero_waste_city",
+      "recommended_queries": [
+        "site:meescc.cn 无废城市 工业固体废物",
+        "site:meescc.cn 无废城市 试点进展 固体废物",
+        "site:meescc.cn 一般工业固体废物 综合利用 无废城市"
+      ],
+      "reason": "固体废物与化学品管理技术中心提供无废城市试点与技术支撑内容，可作为生态环境部政策之外的技术型补充检索对象。"
+    },
+    {
+      "target_id": "gsc-p0-miit-phosphogypsum-action",
+      "priority": "P0",
+      "name": "工信部磷石膏综合利用行动方案",
+      "domain": "miit.gov.cn",
+      "url": "https://www.miit.gov.cn/",
+      "target_type": "government_industrial_solid_waste_policy",
+      "recommended_queries": [
+        "site:miit.gov.cn 磷石膏 综合利用 行动方案",
+        "site:miit.gov.cn 工信部联节 2024 58号 磷石膏",
+        "site:miit.gov.cn 工业固废 综合利用 磷石膏"
+      ],
+      "reason": "工信部及多部门行动方案是磷石膏规模化综合利用、工业固废资源化和产业政策检索的 P0 入口。"
+    },
+    {
+      "target_id": "gsc-p1-ndrc-circular-economy-solid-waste",
+      "priority": "P1",
+      "name": "国家发展改革委循环经济与资源综合利用",
+      "domain": "ndrc.gov.cn",
+      "url": "https://www.ndrc.gov.cn/",
+      "target_type": "government_circular_economy_policy",
+      "recommended_queries": [
+        "site:ndrc.gov.cn 工业固废 综合利用 循环经济",
+        "site:ndrc.gov.cn 大宗固体废弃物 综合利用",
+        "site:ndrc.gov.cn 资源综合利用 工业固体废物"
+      ],
+      "reason": "发改委循环经济和资源综合利用政策与工业固废、大宗固废利用强相关，适合作为政策和产业化补充对象。"
     }
   ],
   "usage_policy": {

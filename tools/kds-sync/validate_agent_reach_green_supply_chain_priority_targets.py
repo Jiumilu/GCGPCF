@@ -34,6 +34,8 @@ REQUIRED_DOMAINS = {
     "pbc.gov.cn",
     "ghgprotocol.org",
     "commission.europa.eu",
+    "meescc.cn",
+    "ndrc.gov.cn",
 }
 REQUIRED_TYPES = {
     "public_platform",
@@ -43,6 +45,11 @@ REQUIRED_TYPES = {
     "green_finance_policy",
     "international_standard",
     "international_due_diligence_policy",
+    "government_solid_waste_standard",
+    "government_zero_waste_city_policy",
+    "technical_center_zero_waste_city",
+    "government_industrial_solid_waste_policy",
+    "government_circular_economy_policy",
 }
 REQUIRED_NON_CLAIMS = {
     "candidate_priority_targets_only",
@@ -96,8 +103,8 @@ def build_report() -> dict[str, Any]:
         fail("status_not_ready")
     if data.get("current_admission") != "limited_candidate_only":
         fail("current_admission_mismatch")
-    if len(targets) < 8:
-        fail("target_count_below_8")
+    if len(targets) < 13:
+        fail("target_count_below_13")
     for target in targets:
         validate_target(target)
     domains = {target["domain"] for target in targets}
