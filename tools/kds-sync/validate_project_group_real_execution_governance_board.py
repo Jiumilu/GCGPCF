@@ -129,7 +129,8 @@ REQUIRED_TASK_DETAIL_TOKENS = {
     ],
     "BRAIN-REVIEW-HANDOFF-001": [
         "npm run validate:harness-evidence",
-        "brain-review-handoff-*",
+        "brain-review-handoff-20260625.md",
+        "validate_brain_review_handoff.py",
         "human review gate",
         "保持 `ready_for_review / authorization_boundary`",
         "需要人工确认才能升级",
