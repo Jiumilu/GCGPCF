@@ -52,6 +52,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py \
 - `docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json`
 - 本轮运行验证结果日志（dry-run 或授权通过后的 live 模式）
 - `docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md`（执行边界与复核更新）
+- `docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md`（签核模板，待签）
 
 ## stop
 
@@ -112,3 +113,4 @@ python3 loop/context/cognee/scripts/run-cognee-p4-real-writeback-live.py \
 ## debug
 
 - 关键阻断：脚本层已就绪，当前闭环关键点在执行授权（Owner/WAES 双签）与 live-write 审批，未完成前不得进入生产执行。
+- 下一步建议：进入 `GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-002` 完成双签签核文本与人工授权确认。

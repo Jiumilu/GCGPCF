@@ -53,7 +53,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 | GFIS | `partial_verified / repair_required` | `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` | 缺真实 source-of-record 与外部证据；不得用测试数据替代真实业务事实 |
 | GPC | `partial_verified` | `docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md` | README、外部证据和浏览器依赖仍需修复；不得声明外部联调完成 |
 | PVAOS | `partial_verified` | `docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md` | Vitest localStorage 与 release gate 仍需修复；不得声明发布完成 |
-| KDS | `partial_verified / repair_required` | `docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md` | RAG 导出失败；不得声明 RAG 导出或真实交付完成 |
+| KDS | `ready_for_review / local_dev_boundary` | `docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md` | RAG 导出、导出校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit 已在 local dev 通过；不得声明真实交付或客户验收完成 |
 | Brain | `ready_for_review / authorization_boundary` | `docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md` | A1/A2/A3 已通过，但不得升级 accepted、integrated、production_ready |
 | GPCF | `repair_required` | `09-status/globalcloud-core-chain-real-evidence-register.md` | 作为总控仓需继续把真实执行治理传导到任务队列与依赖矩阵 |
 | WAS | `semantic_foundation_candidate / not_accepted` | `09-status/gpcf-project-status-matrix.md` | 作为语义契约源，不替代 KDS 事实主存、GFIS 运行层或 WAES 裁决层 |
@@ -75,7 +75,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 |---|---|---|---|---|---|
 | P0 | `GFIS-REAL-SOR-001` | GFIS | 获取或登记真实 source-of-record，形成 pending_business_verification 输入 | `authorization_or_business_input_required` | 等待真实客户订单、平台订单回执或等效正式确认 |
 | P0 | `WAES-LINT-RUNTIME-001` | WAES | 修复 lint 解析错误并恢复综合 `npm run check` | `authorization_required / repair_required` | `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
-| P0 | `KDS-RAG-EXPORT-001` | KDS | 修复 RAG 导出缺失文件、哈希/大小和 allowlist 问题 | `repair_required` | KDS `validate_rag_export.py` |
+| P0 | `KDS-RAG-EXPORT-001` | KDS | 修复 RAG 导出缺失文件、哈希/大小和 allowlist 问题 | `verified_with_local_dev_boundary` | `docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md` |
 | P1 | `XWAIL-MIN-VALIDATOR-001` | XWAIL | 建立最小 Validator/XAP 命令，使规划命令有真实执行入口 | `command_missing` | `scripts/validate_xwail.py`、`scripts/build_xap.py`、`scripts/verify_xap.py` |
 | P1 | `AAAS-SERVICE-RUNTIME-001` | AaaS | 建立 ServicePackage、Metering、SLA、EvidenceRequirement 最小验证命令 | `command_missing` | `scripts/validate_service_package.py` 等 |
 | P1 | `PVAOS-RELEASE-GATE-001` | PVAOS | 修复 Vitest localStorage 环境与 local release gate | `repair_required` | `npm run test`、`npm run release:gate:local` |
@@ -106,7 +106,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 |---|---|---|---|---|---|---|---|---|---|
 | `GFIS-REAL-SOR-001` | GFIS | `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` | `validate_gfis_was_source_record_submission_precheck.py`、GFIS 真实 source-of-record 接收目录扫描、人工核验记录检查 | `docs/harness/GFIS/evidence/gfis-real-source-record-intake-*.md`、真实订单或平台订单回执索引、人工核验结论 | GFIS source-record validator、GPCF core-chain register gate、WAES review gate | 不写入 GFIS runtime；若输入不合格，保持 `repair_required` 并登记 rejected reason | 解锁 `GFIS/GPC/PVAOS -> SCaaS`，影响 WAS profile、KDS backlink、WAES review | 是，需要订单 owner 或等效正式确认 | 不声明真实 SOP E2E 完成、不声明生产写入、不声明客户验收、不声明 `accepted`/`integrated`/`production_ready` |
 | `WAES-LINT-RUNTIME-001` | WAES | `docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md` | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` | `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md`、`docs/harness/WAES/evidence/waes-lint-runtime-repair-*.md`、命令输出 JSON 或日志摘要 | WAES quality gate、`validate_waes_lint_runtime_repair_authorization.py`、GPCF core-chain register gate | 回滚 lint 修复相关文件；若 `npm run check` 失败，保持 `repair_required` | 影响 `WAES -> XWAIL -> AaaS` 和 Brain/KDS 证据裁决链 | 是，WAES dirty workspace 且 AGENTS 要求授权后才能实现 | 不声明 WAES 治理运行闭环完成、不声明发布、不声明权限变更 |
-| `KDS-RAG-EXPORT-001` | KDS | `docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md` | `python3 -m pytest tests/test_api_smoke.py`、`python3 scripts/validate_rag_export.py`、`python3 scripts/validate_evidence_gates.py`、`gbrain search`、`gbrain query` | `docs/harness/KDS/evidence/kds-rag-export-repair-*.md`、RAG export error diff、allowlist/hash/size 修复证据 | KDS RAG export gate、evidence gate、GPCF core-chain register gate | 回滚导出清单、allowlist 或生成物；失败时保留失败 evidence | 影响 `KDS -> Brain`、Brain 检索与 RAG 上下文可信度 | 否，除非需要真实 TOKEN、生产索引或外部写入 | 不声明 RAG 导出完成、不声明真实交付、不声明客户验收 |
+| `KDS-RAG-EXPORT-001` | KDS | `docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md` | `python3 -m pytest tests/test_api_smoke.py`、`python3 _governance/scripts/export_rag_admission.py`、`python3 _governance/scripts/validate_rag_export.py`、`python3 _governance/scripts/validate_evidence_gates.py`、`gbrain search`、`gbrain query`、`python3 _governance/scripts/wiki_trust_audit.py` | `docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md`、`/tmp/kds-rag-export-20260625-083909/*`、RAG export error diff、allowlist/hash/size 修复证据 | KDS RAG export gate、`validate_kds_rag_export_repair.py`、evidence gate、GPCF core-chain register gate | 回滚 `_governance/scripts/rag_admission_policy.py` 和 `_governance/scripts/wiki_trust_audit.py` 的类型兼容修复；失败时保留失败 evidence | 影响 `KDS -> Brain`、Brain 检索与 RAG 上下文可信度 | 否，除非需要真实 TOKEN、生产索引、客户环境或外部写入 | 不声明 KDS 真实运行闭环完成、不声明真实交付、不声明客户验收 |
 | `XWAIL-MIN-VALIDATOR-001` | XWAIL | `docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md` | `python scripts/validate_xwail.py --all`、`python scripts/build_xap.py --check`、`python scripts/verify_xap.py --all` | `docs/harness/XWAIL/evidence/xwail-min-validator-runtime-*.md`、最小 schema/profile/XAP 验证输出 | XWAIL validator gate、WAS-XWAIL-AaaS alignment gate、GPCF register gate | 回滚新增脚本或样例模型；失败时保持 `validator_commands_missing` | 影响 `WAS -> Ontology -> XWAIL` 和 `WAES -> XWAIL -> AaaS` | 否 | 不声明完整 XWAIL 工具链完成、不声明 WAES 发布完成、不声明 AaaS 绑定完成 |
 | `AAAS-SERVICE-RUNTIME-001` | AaaS | `docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md` | `python scripts/validate_service_package.py --all`、`python scripts/validate_metering.py --all`、`python scripts/validate_sla.py --all`、`python scripts/verify_evidence_requirements.py --all` | `docs/harness/AaaS/evidence/aaas-service-runtime-*.md`、ServicePackage/Metering/SLA/EvidenceRequirement 验证输出 | AaaS service runtime gate、XWAIL binding gate、GPCF register gate | 回滚新增服务包样例或计量规则；失败时保持 `service_package_metering_sla_commands_missing` | 影响 SCaaS 服务化交付、GFIS/GPC/PVAOS 服务订阅边界 | 否，除非涉及真实计费、客户订阅或生产 SLA | 不声明客户可订阅、不声明商业交付完成、不声明真实计费完成 |
 | `PVAOS-RELEASE-GATE-001` | PVAOS | `docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md` | `npm run test`、`npm run release:gate:local`、`npm run lint`、`npm run typecheck`、`npm run build` | `docs/harness/PVAOS/evidence/pvaos-release-gate-repair-*.md`、localStorage 环境修复证据、release gate 输出 | PVAOS release local gate、GPCF register gate | 回滚测试环境或 release gate 配置；失败时保持 `repair_required` | 影响 `GFIS/GPC/PVAOS -> SCaaS` 门户与运营入口 | 否，除非触发发布、外部 API 或权限变更 | 不声明发布完成、不声明客户验收、不声明 AaaS 运营闭环完成 |
@@ -119,7 +119,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 | 依赖链 | 当前状态 | 风险 | 下一步 |
 |---|---|---|---|
 | `WAES -> XWAIL -> AaaS` | `declared / repair_required` | XWAIL/AaaS 缺最小运行命令，WAES 综合检查受 lint 阻断 | 先修 WAES lint，再补 XWAIL/AaaS 最小 validator |
-| `KDS -> Brain` | `partial_verified -> ready_for_review` | Brain 已通过授权型闭包，KDS RAG export 仍 repair_required | 保持 Brain review 包；并行修复 KDS RAG export |
+| `KDS -> Brain` | `ready_for_review / local_dev_boundary -> ready_for_review / authorization_boundary` | Brain 已通过授权型闭包，KDS RAG export 已在 local dev 修复并通过 GPCF 证据登记 | 将 KDS RAG export 修复证据作为 `BRAIN-REVIEW-HANDOFF-001` 的输入，但 Brain 状态升级仍需人工确认 |
 | `GFIS/GPC/PVAOS -> SCaaS` | `partial_verified / repair_required` | GFIS 缺真实 source-of-record；GPC/PVAOS 仍有证据和 release gate 缺口 | 优先 GFIS 真实业务输入，其次修 GPC/PVAOS 门禁 |
 | `WAS -> Ontology -> XWAIL` | `semantic_foundation_candidate` | WAS 是语义契约源，但不能替代事实主存或运行层 | 将 WAS 术语和 profile 映射为 XWAIL validator 输入 |
 | `GPCF -> all projects` | `controlled / in_progress` | 总控台账已存在，但任务队列与传导验证需要持续更新 | 本文建立后由 validator 守住任务、依赖和禁止声明 |
@@ -161,7 +161,7 @@ status_upgrade_rule = no accepted / integrated / customer acceptance without exp
 ```text
 project_group_real_execution_board = established
 next_execution_mode = project_by_project_real_gate_repair
-first_priority = GFIS real source-of-record, WAES lint/runtime gate, KDS RAG export
+first_priority = GFIS real source-of-record, WAES lint/runtime gate, Brain review handoff after KDS RAG export
 brain_status = ready_for_review / authorization_boundary
 accepted = false
 integrated = false

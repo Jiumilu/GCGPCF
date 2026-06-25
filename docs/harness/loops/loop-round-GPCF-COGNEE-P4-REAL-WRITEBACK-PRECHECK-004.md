@@ -36,6 +36,7 @@ superseded_by: []
   - 要求输出确认清单（owner 授权、runtime permission、回滚链路、监控指标）。
 - 为下一轮创建可执行运行指令草案：
   - `run-cognee-p4-real-writeback-live.py` 已落地，下一轮可直接进入 `LIVE-001` 演练清单执行。
+- `GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001` 已完成 dry-run 与 `--allow-live-write` 演练后，下一步进入 `LIVE-002` 完成人审签字。
 
 ## 输出
 
@@ -43,6 +44,8 @@ superseded_by: []
 - `docs/harness/evidence/cognee-p4-real-writeback-live-20260624.md`
 - `docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json`
 - `docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md`（下一步执行稿）
+- `docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md`（签核模板）
+- `docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-002.md`（签核执行稿）
 
 ## stop
 

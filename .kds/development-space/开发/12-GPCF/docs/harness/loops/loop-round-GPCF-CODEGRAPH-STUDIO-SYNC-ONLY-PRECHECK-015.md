@@ -30,8 +30,8 @@ superseded_by: []
 
 ## stop
 
-- stop_type：`sync_only_pass_with_residual_watch`
-- 停止证据：Studio CodeGraph sync-only 已执行；最终仍观测到小幅 modified residual watch；Studio 工作树仍有 12 项既有 dirty，且本轮没有业务开发授权。
+- stop_type：`sync_only_pass_clean`
+- 停止证据：Studio CodeGraph sync-only 已执行；CodeGraph pending 与 Git 工作树均已收敛，且本轮没有业务开发授权。
 - 状态上限：不得升级 accepted、integrated 或 production_ready。
 
 ## verify

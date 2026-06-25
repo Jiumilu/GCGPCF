@@ -316,6 +316,7 @@
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | controlled |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | controlled |
 | GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | controlled |
+| GPCF-DOC-KDS-RAG-EXPORT-REPAIR-20260625 | KDS RAG export 修复证据 2026-06-25 | docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md | controlled |
 | GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | KDS 真实运行基线证据 2026-06-24 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-19C33DD1F8 | GlobalCloud KDS Loop State | docs/harness/KDS/loop-state.md | controlled |
 | GPCF-DOC-F54729C154 | loops | docs/harness/KDS/loops/README.md | controlled |

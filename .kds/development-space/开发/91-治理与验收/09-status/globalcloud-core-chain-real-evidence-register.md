@@ -80,7 +80,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GFIS | `GlobalCloud GFIS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
 | GPC | `GlobalCloud GPC 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复 README 索引、外部证据和 Playwright 浏览器；证据见 `docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md` |
 | PVAOS | `GlobalCloud PVAOS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `declared` | `repair_required` | `not_collected` | 修复 Vitest localStorage 环境与 release gate；证据见 `docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md` |
-| KDS | `GlobalCloud KDS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复 RAG 准入导出缺失文件、哈希/大小不匹配和 allowlist 准入问题；证据见 `docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md` |
+| KDS | `GlobalCloud KDS 实施方案.md` | `candidate` | `partial_verified` | `ready_for_review / local_dev_boundary` | `partial_verified` | `not_collected` | `not_collected` | `KDS-RAG-EXPORT-001` 已在 local dev 修复并通过导出、校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit；证据见 `docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md` |
 | Brain | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `verified` | `verified_with_authorization_boundary` | `verified_with_authorization_boundary` | `not_collected` | `not_collected` | A1/A2/A3 授权型闭包证据已在 local dev 范围执行并通过 completion/harness/loop；状态保持 `ready_for_review / authorization_boundary`，证据见 `docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md` |
 
 ## 6. 运行命令登记
@@ -94,7 +94,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GFIS | `npm run check:js`、`npm run quality:100`、`npm run quality:repo`、`npm run test:e2e`、`npm run test:coverage`、`npm run quality:ops` | `partial_verified`，运行态可达、接口/核心流部分通过；外部证据、中文映射、浏览器依赖和 ops drill 仍需修复 |
 | GPC | `npm run check:js`、`npm run quality:repo`、`validate_gpc_l3_harness.py`、`validate_gpc_l4_platform_contract.py`、`npm run quality:100`、`npm run test:e2e`、`npm run quality:ops` | `partial_verified`，运行态、ops drill、runtime API、L3/L4 和核心流片段通过；README、外部证据和浏览器依赖仍需修复 |
 | PVAOS | `npm run lint`、`npm run validate:modules`、`npm run typecheck`、`npm run test`、`npm run release:gate:local`、`npm run check:production-domain`、`npm run build` | `partial_verified`，lint/modules/typecheck/build/domain 通过；test 与 release gate 仍需修复 |
-| KDS | `python3 -m pytest tests/test_api_smoke.py`、`validate_kds_loop_harness.py`、`validate_kds_l4_sample_knowledge_index.py`、`validate_evidence_gates.py`、`validate_rag_export.py`、`gbrain doctor --json --fast`、`gbrain search`、`gbrain query` | `partial_verified`，API smoke、Loop harness、L4 样本索引、evidence gate 与 GBrain 检索通过；`kds_rag_export` 失败，RAG 准入导出仍为 `repair_required` |
+| KDS | `python3 -m pytest tests/test_api_smoke.py`、`validate_kds_loop_harness.py`、`validate_kds_l4_sample_knowledge_index.py`、`export_rag_admission.py`、`validate_rag_export.py`、`validate_evidence_gates.py`、`wiki_trust_audit.py`、`gbrain doctor --json --fast`、`gbrain search`、`gbrain query`、`validate_kds_rag_export_repair.py` | `ready_for_review / local_dev_boundary`，RAG 准入导出、导出校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit 已通过；仍不声明生产索引、真实交付或客户验收 |
 | Brain | `npm run lint`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run dev:local`、`npm run validate:runtime-health`、`npm run validate:browser-runtime-smoke`、`npm run validate:browser-user-flow`、`npm run validate:read-closure-matrix`、`npm run validate:chinese-gates`、`npm run validate:projects-write-boundary`、`npm run validate:settings-write-boundary`、`npm run validate:bulk-fix-acceptance-execution`、`npm run validate:chat-llm-boundary`、`npm run validate:completion-matrix`、`npm run validate:harness-evidence`、`npm run validate:loop-harness`、`npm run validate:local-action-boundaries`、`npm run format:check` | `ready_for_review / authorization_boundary`，A1/A2/A3 已按用户授权在 local dev 范围执行；`brain_status=200`、`kds_total_pages=2732`、`test_count=208`、`test_passed=208`、`requirements=11 achieved=11 blockers=0`、`brain_harness_evidence=pass`、`brain_loop_harness=pass` |
 
 ## 7. 非声明边界
@@ -222,6 +222,26 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 已通过命令 | `python3 -m pytest tests/test_api_smoke.py`、`validate_kds_loop_harness.py`、`validate_kds_l4_sample_knowledge_index.py`、`validate_evidence_gates.py`、`gbrain search`、`gbrain query` |
 | 未通过命令 | `validate_rag_export.py`，失败于 185 个错误和 1 个 warning |
 | 边界 | 不声明 KDS 真实运行闭环完成，不声明 RAG 导出完成，不声明真实交付完成，不声明客户验收通过 |
+
+## 14.1 本轮 KDS RAG export 修复证据登记
+
+| 项 | 内容 |
+|---|---|
+| 证据文件 | `docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md` |
+| 采集日期 | 2026-06-25 |
+| 执行目录 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS` |
+| 输出目录 | `/tmp/kds-rag-export-20260625-083909` |
+| 原始失败 | `TypeError: unhashable type: 'list'` |
+| 修复文件 | `_governance/scripts/rag_admission_policy.py`、`_governance/scripts/wiki_trust_audit.py` |
+| RAG 导出 | pass，`allowlist_count=156 rejected_count=6053` |
+| RAG 导出校验 | pass，`manifest_count=156 error_count=0 warning_count=1` |
+| evidence gate | pass，`gate_count=46 issue_count=0 warning_count=0` |
+| API smoke | pass，`2 passed in 4.52s` |
+| GBrain | `gbrain search` 和 `gbrain query` 均可执行并返回上下文 |
+| wiki trust audit | pass，`rag_admissible_count=156` |
+| GPCF 校验器 | `validate_kds_rag_export_repair.py` |
+| 当前建议状态 | `kds_rag_export = verified_with_local_dev_boundary`，`kds_status_candidate = ready_for_review` |
+| 边界 | 不声明 KDS 真实运行闭环完成，不声明生产索引完成，不声明真实交付完成，不声明客户验收通过 |
 
 ## 15. 本轮 Brain 证据登记
 

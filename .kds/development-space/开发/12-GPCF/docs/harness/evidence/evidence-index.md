@@ -79,6 +79,7 @@ GPCF 证据索引
 - Cognee P4 live writeback runner：`loop/context/cognee/scripts/run-cognee-p4-real-writeback-live.py`
 - Cognee P4 live writeback validator：`loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py`
 - Cognee P4 live writeback evidence schema：`loop/context/cognee/harness/evidence-p4-live.schema.yaml`
+- Cognee P4 live writeback evidence.md：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.md`
 - Cognee P4 live writeback evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json`
 - COGNEE P4 real writeback live 演练输出：`cognee_p4_real_writeback_live_output=pass record_count=5 requested_write_count=5 execution_count=5 live_execution_ready_rate=1.0`
 

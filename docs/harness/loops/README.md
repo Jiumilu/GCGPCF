@@ -174,6 +174,7 @@ KDS 空间：`开发`
 | GPCF-DOC-7AAEB2E376 | Loop Round GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005 | docs/harness/loops/loop-round-GPCF-CODEGRAPH-WATCHLIST-THRESHOLD-REVIEW-005.md | GPCF | controlled |
 | GPCF-DOC-LOOP-COGNEE-P1-P2-P3-CLOSURE-001 | Loop Round - GPCF Cognee 受控试点 P1/P2/P3 收口 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P1-P2-P3-CLOSURE-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-LIVE-001 | Loop Round - GPCF Cognee P4 真实写入运行演练 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-LIVE-002 | Loop Round - GPCF Cognee P4 真实写入生产写入前授权签核 002 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-002.md | GPCF | controlled |
 | GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001 | Loop Round - GPCF Cognee P4 真实写入前置预检 001 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002 | Loop Round - GPCF Cognee P4 真实写入前置修复与复测 002 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-002.md | GPCF | controlled |
 | GPCF-DOC-LOOP-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003 | Loop Round - GPCF Cognee P4 真实写入前置复核与确认 003 | docs/harness/loops/loop-round-GPCF-COGNEE-P4-REAL-WRITEBACK-PRECHECK-003.md | GPCF | controlled |
@@ -1169,4 +1170,5 @@ KDS 空间：`开发`
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-019 | Loop Round GPCF-UI-STUDIO-WORKBENCH-019 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-019.md | GPCF | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-020 | Loop Round GPCF-UI-STUDIO-WORKBENCH-020 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-020.md | GPCF | controlled |
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-021 | Loop Round GPCF-UI-STUDIO-WORKBENCH-021 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-021.md | GPCF | controlled |
+| GPCF-LOOP-UI-STUDIO-WORKBENCH-022 | Loop Round GPCF-UI-STUDIO-WORKBENCH-022 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-022.md | GPCF | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | controlled |

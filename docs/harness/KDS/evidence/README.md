@@ -38,4 +38,5 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
+| GPCF-DOC-KDS-RAG-EXPORT-REPAIR-20260625 | KDS RAG export 修复证据 2026-06-25 | docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md | KDS | controlled |
 | GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | KDS 真实运行基线证据 2026-06-24 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | KDS | controlled |

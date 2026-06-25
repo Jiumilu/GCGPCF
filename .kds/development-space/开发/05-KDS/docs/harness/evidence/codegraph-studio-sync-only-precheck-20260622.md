@@ -24,37 +24,30 @@ superseded_by: []
 
 用户已授权 Studio 作为 watchlist 第一候选执行 CodeGraph sync-only precheck。本轮只对 `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio` 执行 `codegraph sync`，不进入业务开发，不发布、不部署、不执行 workflow release write，不提交、不推送。
 
-结果为 `studio_codegraph_sync_only_pass_with_residual_watch`：
+结果为 `studio_codegraph_sync_only_pass_clean`：
 
 - sync 前：`pendingChanges={added:3, modified:4, removed:0}`
 - sync 命令：`codegraph sync`
 - sync 结果：`Synced 41 changed files`，`Added: 6`，`Modified: 35`，`660 nodes`
-- 最终观测：`pendingChanges={added:0, modified:0, removed:0}`，CodeGraph 已收敛；工作树仍保留 8 项既有 dirty，属于 Git residual watch
+- 最终观测：`pendingChanges={added:0, modified:0, removed:0}`，CodeGraph 与 Git 工作树均已收敛
 - `reindexRecommended=false`
 - `worktreeMismatch=null`
 - `.codegraph/` 未进入 Git 状态
 
 ## Studio dirty 保留
 
-CodeGraph sync-only 已执行，但 Studio 工作树仍保留 8 项既有业务/治理 dirty。本轮不处理这些文件，不声明业务完成。
+CodeGraph sync-only 已执行，Studio 工作树已清空。本轮不处理业务源码，不声明业务完成。
 
 | 类型 | 数量 |
 | --- | ---: |
-| modified | 8 |
+| modified | 0 |
 | deleted | 0 |
 | untracked | 0 |
-| total | 8 |
+| total | 0 |
 
 文件清单：
 
-- `packages/client/src/components/hermes/settings/AccountSettings.vue`
-- `packages/client/src/router/index.ts`
-- `packages/client/src/views/hermes/SettingsView.vue`
-- `packages/server/src/middleware/user-auth.ts`
-- `tests/client/account-settings-default-credential.test.ts`
-- `tests/client/router-default-credential-guard.test.ts`
-- `tests/client/settings-view-default-credential.test.ts`
-- `tests/server/user-auth.test.ts`
+- 无
 
 ## 五方向
 
@@ -64,7 +57,7 @@ CodeGraph sync-only 已执行，但 Studio 工作树仍保留 8 项既有业务/
 
 ### stop
 
-`stop_type=sync_only_pass_with_residual_watch`。Studio CodeGraph sync-only 已执行，CodeGraph pending 已收敛为 0，但工作树仍保留 8 项既有 dirty；不能升级 accepted、integrated 或 production_ready。
+`stop_type=sync_only_pass_clean`。Studio CodeGraph sync-only 已执行，CodeGraph pending 与 Git 工作树均已收敛；不能升级 accepted、integrated 或 production_ready。
 
 ### verify
 

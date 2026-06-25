@@ -144,6 +144,8 @@ KDS 空间：`开发`
 | GPCF-DOC-8C7F2F4D5A | Cognee P1 召回对照 Evidence | docs/harness/evidence/cognee-p1-recall-comparison-pilot-20260623.md | GPCF | controlled |
 | GPCF-DOC-8C7F2D6F01 | Cognee P2 写入预览 Evidence | docs/harness/evidence/cognee-p2-write-preview-pilot-20260623.md | GPCF | controlled |
 | GPCF-DOC-8C7F2F4F01 | Cognee P3 写入预览回滚演练 Evidence | docs/harness/evidence/cognee-p3-write-preview-rollback-20260623.md | GPCF | controlled |
+| GPCF-DOC-8C7F2F6001 | Cognee P4 真实写入 live 演练 Evidence（复测 20260624） | docs/harness/evidence/cognee-p4-real-writeback-live-20260624.md | GPCF | controlled |
+| GPCF-DOC-8C7F2F6002 | Cognee P4 真实写入 live 授权签核包（待签） | docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md | GPCF | controlled |
 | GPCF-DOC-8C7F2F5002 | Cognee P4 真实写入前置预检 Evidence | docs/harness/evidence/cognee-p4-real-writeback-precheck-20260623.md | GPCF | controlled |
 | GPCF-DOC-8C7F2F5003 | Cognee P4 真实写入前置预检 Evidence（修复复测 20260624） | docs/harness/evidence/cognee-p4-real-writeback-precheck-20260624.md | GPCF | controlled |
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | KDS | controlled |
@@ -406,6 +408,7 @@ KDS 空间：`开发`
 | GPCF-EVIDENCE-79B4D3F1A6 | Studio 默认凭据整改态账户动作白名单复验 | docs/harness/evidence/studio-default-credential-account-action-whitelist-verified-20260625.md | GPCF | controlled |
 | GPCF-DOC-8C4A16F2DE | Studio 默认凭据后端强制门禁落地证据 | docs/harness/evidence/studio-default-credential-backend-enforcement-20260623.md | GPCF | controlled |
 | GPCF-DOC-F1A4B89C2D | Studio 默认凭据后端门禁真实运行复验证据 | docs/harness/evidence/studio-default-credential-backend-runtime-verified-20260624.md | GPCF | controlled |
+| GPCF-EVIDENCE-6C4D2A91F8 | Studio 默认凭据整改完成态门禁复验 | docs/harness/evidence/studio-default-credential-completion-gate-verified-20260625.md | GPCF | controlled |
 | GPCF-DOC-9F2A7D61B3 | Studio 默认凭据登录分流验证证据 | docs/harness/evidence/studio-default-credential-login-redirect-verified-20260622.md | GPCF | controlled |
 | GPCF-DOC-5A9F2D1C7E | Studio 默认凭据移动端运行链路验证证据 | docs/harness/evidence/studio-default-credential-mobile-runtime-verified-20260623.md | GPCF | controlled |
 | GPCF-DOC-1D4C8A73E2 | Studio 默认凭据治理动作后收口验证证据 | docs/harness/evidence/studio-default-credential-post-change-closure-verified-20260622.md | GPCF | controlled |
