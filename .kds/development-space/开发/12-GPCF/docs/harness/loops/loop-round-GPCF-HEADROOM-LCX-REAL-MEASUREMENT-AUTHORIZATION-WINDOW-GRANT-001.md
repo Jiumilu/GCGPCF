@@ -21,6 +21,7 @@ superseded_by: []
 ## 输入
 
 - `docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json`
+- `docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json`
 - `docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.json`
 - `docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json`
 - `docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json`

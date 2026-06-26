@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/README.md
 source_path: 02-governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -39,6 +39,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-SCHEME-RECOGNITION-RULES-20260626 | GlobalCloud 项目群方案体系识别规则 | 02-governance/GlobalCloud 项目群方案体系识别规则.md | WAES | controlled |
 | GPCF-DOC-78AE1A47AE | GlobalCloud智能体团队Codex工具与技能使用治理规范 | 02-governance/GlobalCloud智能体团队Codex工具与技能使用治理规范.md | WAES | controlled |
 | GPCF-DOC-39A8CE7FE1 | GlobalCloud智能体团队工作区与项目仓库操作规范 | 02-governance/GlobalCloud智能体团队工作区与项目仓库操作规范.md | WAES | controlled |
 | GPCF-DOC-7F63F2D675 | GlobalCloud智能体团队总体运行机制 | 02-governance/GlobalCloud智能体团队总体运行机制.md | GPCF | controlled |

@@ -75,13 +75,13 @@ def main() -> int:
     require(project_group["indexed_repo_count"] == 14, "indexed_repo_count must be 14")
     require(project_group["git_protected_repo_count"] == 14, "git_protected_repo_count must be 14")
     require(project_group["codegraph_git_status_entries_total"] == 0, ".codegraph git entries must be 0")
-    require(project_group["up_to_date_repo_count"] == 11, "up_to_date_repo_count must be 11")
-    require(project_group["pending_sync_repo_count"] == 2, "pending_sync_repo_count must be 2")
+    require(project_group["up_to_date_repo_count"] == 13, "up_to_date_repo_count must be 13")
+    require(project_group["pending_sync_repo_count"] == 1, "pending_sync_repo_count must be 1")
     require(
-        project_group["pending_sync_projects"] == ["GlobalCloud Brain", "GlobalCloud Studio"],
-        "Brain and Studio must be pending sync projects",
+        project_group["pending_sync_projects"] == ["GlobalCloud Studio"],
+        "Studio must be the pending sync project",
     )
-    require(project_group["policy_exception_projects"] == ["GlobalCloud GFIS"], "GFIS must be the policy exception")
+    require(project_group["policy_exception_projects"] == [], "GFIS policy exception must be cleared in current snapshot")
 
     repos = {repo["project"]: repo for repo in evidence["repositories"]}
     require(list(repos) == [name for name, _ in REPOS], "repository order mismatch")
@@ -106,11 +106,11 @@ def main() -> int:
     require(total_git_entries == 0, "aggregated .codegraph git entries must be 0")
     require("large_generated_validator_exception_candidate" in policy, "large file policy missing GFIS exception")
     for phrase in [
-        "project_group_codegraph_monitor_pass_with_active_watchlist",
+        "project_group_codegraph_monitor_pass_with_watchlist",
         "14 个仓库",
-        "GFIS policy exception",
-        "Brain 活动",
-        "Studio",
+        "Brain green",
+        "Studio watch",
+        "GFIS green",
     ]:
         require(phrase in evidence_md, f"evidence md missing phrase: {phrase}")
     for phrase in ["输入", "动作", "输出", "检查", "反馈", "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001"]:
@@ -122,7 +122,7 @@ def main() -> int:
         "loop_codegraph_project_group_monitor=pass "
         "evidence=LOOP-CODEGRAPH-PROJECT-GROUP-MONITOR-20260621 "
         "repo_count=14 git_protected_repo_count=14 "
-        "watchlist=Brain,Studio policy_exception=GFIS "
+        "watchlist=Studio policy_exception=none "
         "codegraph_git_status_entries_total=0 sync_executed=controlled_followup"
     )
     return 0

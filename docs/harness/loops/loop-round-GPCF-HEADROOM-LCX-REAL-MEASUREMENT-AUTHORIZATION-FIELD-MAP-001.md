@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-LOOP-001
-title: Loop 轮次 GPCF Headroom LCX 真实测量授权字段映射 001
+title: Loop Round GPCF Headroom LCX Real Measurement Authorization Field Map 001
 project: GPCF
 related_projects: [GPC, GPCF]
 domain: docs
@@ -16,7 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
-# Loop 轮次 GPCF Headroom LCX 真实测量授权字段映射 001
+# Loop Round GPCF Headroom LCX Real Measurement Authorization Field Map 001
 
 ## 输入
 

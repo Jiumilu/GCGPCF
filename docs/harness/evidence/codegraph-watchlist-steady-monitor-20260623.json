@@ -2,7 +2,7 @@
   "evidence_id": "CODEGRAPH-WATCHLIST-STEADY-MONITOR-20260623",
   "scope": "GPCF-CODEGRAPH-WATCHLIST-STEADY-MONITOR-020",
   "status": "watch_required",
-  "generated_at": "2026-06-23",
+  "generated_at": "2026-06-26T01:06:10.191335+00:00",
   "objective": "复核 14 仓 live CodeGraph / Git 状态，保留 Brain、GFIS、KDS、Studio 与 GPCF drift watch；本轮仅做只读监控与 GPCF 本仓 self-sync 收口，不进入业务开发，不对 watchlist 仓执行 sync 或 clean reindex。",
   "previous_round": "GPCF-CODEGRAPH-GFIS-SCOPE-REVIEW-019",
   "summary": {
@@ -12,11 +12,11 @@
     "review_rework_count": 0,
     "gpcf_pending_before_self_sync": 3,
     "gpcf_pending_after_self_sync": 0,
-    "gpcf_git_dirty_total": 408,
+    "gpcf_git_dirty_total": 405,
     "brain_pending": 0,
     "gfis_pending": 0,
     "kds_pending": 0,
-    "studio_pending": 18,
+    "studio_pending": 3,
     "status_ceiling": "watch_required"
   },
   "repo_status": [
@@ -32,10 +32,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
       "decision": "monitor_only_without_clean_reindex"
     },
@@ -44,17 +44,17 @@
       "repo": "GlobalCloud GPC",
       "pending": {
         "added": 0,
-        "modified": 0,
+        "modified": 1,
         "removed": 0
       },
-      "pending_total": 0,
+      "pending_total": 1,
       "git_dirty": {
-        "modified": 0,
+        "modified": 3,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 3
       },
       "decision": "steady"
     },
@@ -63,17 +63,17 @@
       "repo": "GlobalCloud PVAOS",
       "pending": {
         "added": 0,
-        "modified": 0,
+        "modified": 1,
         "removed": 0
       },
-      "pending_total": 0,
+      "pending_total": 1,
       "git_dirty": {
-        "modified": 0,
+        "modified": 3,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 3
       },
       "decision": "steady"
     },
@@ -89,10 +89,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
       "decision": "steady"
     },
@@ -106,12 +106,12 @@
       },
       "pending_total": 0,
       "git_dirty": {
-        "modified": 6,
-        "deleted": 11,
-        "untracked": 46,
+        "modified": 7,
+        "deleted": 2,
+        "untracked": 9,
         "renamed": 0,
         "other": 0,
-        "total": 63
+        "total": 18
       },
       "decision": "mirror_scope_review_required_now"
     },
@@ -127,12 +127,12 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
-      "decision": "monitor_only"
+      "decision": "steady"
     },
     {
       "repo_id": "pkc",
@@ -144,14 +144,14 @@
       },
       "pending_total": 0,
       "git_dirty": {
-        "modified": 17,
+        "modified": 0,
         "deleted": 0,
-        "untracked": 22,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 39
+        "total": 0
       },
-      "decision": "steady_git_dirty_watch"
+      "decision": "steady"
     },
     {
       "repo_id": "xiaoc",
@@ -165,10 +165,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
       "decision": "steady"
     },
@@ -184,10 +184,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
       "decision": "steady"
     },
@@ -203,10 +203,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
       "decision": "steady"
     },
@@ -222,10 +222,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 0,
         "renamed": 0,
         "other": 0,
-        "total": 1
+        "total": 0
       },
       "decision": "steady"
     },
@@ -233,37 +233,37 @@
       "repo_id": "gpcf",
       "repo": "GlobalCoud GPCF",
       "pending": {
-        "added": 7,
-        "modified": 21,
+        "added": 28,
+        "modified": 4,
         "removed": 0
       },
-      "pending_total": 28,
+      "pending_total": 32,
       "git_dirty": {
-        "modified": 196,
-        "deleted": 12,
-        "untracked": 200,
+        "modified": 319,
+        "deleted": 0,
+        "untracked": 86,
         "renamed": 0,
         "other": 0,
-        "total": 408
+        "total": 405
       },
-      "decision": "self_sync_clear_but_git_dirty"
+      "decision": "self_sync_pending_residual_and_git_dirty"
     },
     {
       "repo_id": "studio",
       "repo": "GlobalCloud Studio",
       "pending": {
-        "added": 0,
-        "modified": 18,
+        "added": 1,
+        "modified": 2,
         "removed": 0
       },
-      "pending_total": 18,
+      "pending_total": 3,
       "git_dirty": {
-        "modified": 19,
+        "modified": 5,
         "deleted": 0,
-        "untracked": 1,
+        "untracked": 4,
         "renamed": 0,
         "other": 0,
-        "total": 20
+        "total": 9
       },
       "decision": "residual_pending_watch"
     },
@@ -279,10 +279,10 @@
       "git_dirty": {
         "modified": 0,
         "deleted": 0,
-        "untracked": 2,
+        "untracked": 1,
         "renamed": 0,
         "other": 0,
-        "total": 2
+        "total": 1
       },
       "decision": "steady"
     }
@@ -295,9 +295,9 @@
         "modified": 0,
         "removed": 0
       },
-      "git_dirty_total": 1,
-      "decision": "monitor_only",
-      "reason": "CodeGraph clean but local git dirty remains 1."
+      "git_dirty_total": 0,
+      "decision": "steady",
+      "reason": "CodeGraph clean and local git dirty remains 0."
     },
     {
       "repo": "GlobalCloud GFIS",
@@ -306,9 +306,9 @@
         "modified": 0,
         "removed": 0
       },
-      "git_dirty_total": 1,
+      "git_dirty_total": 0,
       "decision": "monitor_only_without_clean_reindex",
-      "reason": "CodeGraph clean but local git dirty remains 1; clean reindex still not authorized."
+      "reason": "CodeGraph clean; sync and clean reindex still not authorized."
     },
     {
       "repo": "GlobalCloud KDS",
@@ -317,31 +317,31 @@
         "modified": 0,
         "removed": 0
       },
-      "git_dirty_total": 38,
+      "git_dirty_total": 18,
       "decision": "mirror_scope_review_required_now",
-      "reason": "CodeGraph clean but KDS mirror / WorkWiki dirty persists."
+      "reason": "CodeGraph clean but KDS mirror / WorkWiki dirty persists at 18."
     },
     {
       "repo": "GlobalCloud Studio",
       "pending": {
-        "added": 0,
-        "modified": 18,
+        "added": 1,
+        "modified": 2,
         "removed": 0
       },
-      "git_dirty_total": 20,
+      "git_dirty_total": 9,
       "decision": "residual_pending_watch",
-      "reason": "Studio retains modified pending above the earlier residual ceiling."
+      "reason": "Studio retains modified pending residual at 2."
     },
     {
       "repo": "GlobalCoud GPCF",
       "pending": {
-        "added": 0,
-        "modified": 0,
+        "added": 28,
+        "modified": 4,
         "removed": 0
       },
-      "git_dirty_total": 285,
-      "decision": "self_sync_clear_but_git_dirty",
-      "reason": "本仓 self-sync 已清 pending，但 local git dirty still high."
+      "git_dirty_total": 405,
+      "decision": "self_sync_pending_residual_and_git_dirty",
+      "reason": "本仓 pending 仍为 32，local git dirty still high."
     }
   ],
   "governance": {

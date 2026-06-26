@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/README.md
 source_path: 09-status/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -40,6 +40,7 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-D77EFFB8F7 | 状态与控制台账 | 09-status/README.md | GPCF | controlled |
+| GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-CONTROL-MEMORY-20260626 | CodeGraph 开发态控制记忆 2026-06-26 | 09-status/codegraph-development-state-control-memory-20260626.md | GPCF | controlled |
 | GPCF-DOC-0295C05F40 | 文档过期与归档台账 | 09-status/document-deprecation-register.md | GPCF | controlled |
 | GPCF-DOC-0B97A8283D | GlobalCloud 项目群中文化治理报告 | 09-status/globalcloud-chinese-localization-governance-report.md | GPCF | controlled |
 | GPCF-DOC-CORE-CHAIN-REAL-EVIDENCE-REGISTER-20260624 | GlobalCloud 核心链路真实证据台账 | 09-status/globalcloud-core-chain-real-evidence-register.md | GPCF | controlled |

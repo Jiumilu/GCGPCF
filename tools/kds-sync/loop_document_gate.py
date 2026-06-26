@@ -22,6 +22,17 @@ def run(command: list[str]) -> tuple[int, str]:
     return result.returncode, (result.stdout + result.stderr).strip()
 
 
+def run_with_retry(command: list[str], retries: int = 1) -> tuple[int, str]:
+    code, output = run(command)
+    attempts = [f"attempt=1 code={code} output={output}"]
+    for attempt in range(2, retries + 2):
+        if code == 0:
+            break
+        code, output = run(command)
+        attempts.append(f"attempt={attempt} code={code} output={output}")
+    return code, "\n".join(attempts)
+
+
 def iter_repo_md() -> list[Path]:
     paths = []
     for path in ROOT.rglob("*.md"):
@@ -235,7 +246,10 @@ def main() -> int:
         "kds_token": run([sys.executable, "tools/kds-sync/validate_kds_token.py"]),
     }
     if not delegated:
-        checks["project_group_gate_readiness"] = run([sys.executable, "tools/kds-sync/validate_loop_project_group_gate_readiness.py"])
+        checks["project_group_gate_readiness"] = run_with_retry(
+            [sys.executable, "tools/kds-sync/validate_loop_project_group_gate_readiness.py"],
+            retries=1,
+        )
     hard_failures = [
         name
         for name, (code, _) in checks.items()

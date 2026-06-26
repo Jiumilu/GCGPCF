@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A01A3E358
 title: evidence
 project: PKC
-related_projects: [GPC, WAES, KDS, PKC, GPCF]
+related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/07-PKC/docs/harness/PKC/evidence/README.md
 source_path: docs/harness/PKC/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -38,3 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-5A01A3E358 | evidence | docs/harness/PKC/evidence/README.md | PKC | controlled |
 | GPCF-DOC-D091AC39DE | Evidence Index — PKC | docs/harness/PKC/evidence/evidence-index.md | PKC | controlled |
+| GPCF-DOC-PKC-KDS-BRAIN-WORKFLOW-DRYRUN-20260625 | PKC-KDS-Brain Workflow Dry-run 证据 2026-06-25 | docs/harness/PKC/evidence/pkc-kds-brain-workflow-dryrun-20260625.md | PKC | controlled |

@@ -28,7 +28,7 @@ superseded_by: []
 
 ## 结论
 
-GFIS 当前 live 状态为只读复核可见的轻度 dirty：Git dirty 为 1，CodeGraph pending 为 added=0、modified=0、removed=0。
+GFIS 当前 live 状态为只读复核可见的 clean current state：Git dirty 为 0，CodeGraph pending 为 added=0、modified=0、removed=0。
 
 本轮结论为 `gfis_scope_review_completed_no_sync_needed`。当前不需要 GFIS sync-only closure，也不需要 clean reindex。
 
@@ -37,12 +37,12 @@ GFIS 当前 live 状态为只读复核可见的轻度 dirty：Git dirty 为 1，
 | 项 | 值 |
 | --- | --- |
 | repo | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS` |
-| Git dirty | 1 |
+| Git dirty | 0 |
 | CodeGraph pending | added=0, modified=0, removed=0 |
-| CodeGraph fileCount | 1022 |
+| CodeGraph fileCount | 1023 |
 | CodeGraph nodeCount | 13153 |
 | CodeGraph edgeCount | 38153 |
-| lastIndexed | 2026-06-22T01:32:23.616Z |
+| lastIndexed | 2026-06-24T23:40:25.544Z |
 | worktreeMismatch | null |
 | reindexRecommended | false |
 | .codegraph Git isolation | true |
@@ -51,7 +51,7 @@ GFIS 当前 live 状态为只读复核可见的轻度 dirty：Git dirty 为 1，
 
 上一轮 `GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018` 记录 GFIS pending=3、Git dirty=239。
 
-本轮只读复核时 GFIS 已维持 CodeGraph pending=0，但 Git dirty 仍为 1。该变化归类为 `external_or_preexisting_state_change_observed_during_read_only_review`，不归因为本轮 Codex sync。
+本轮只读复核时 GFIS 已维持 CodeGraph pending=0，Git dirty 也为 0。该变化归类为 `external_or_preexisting_state_change_observed_during_read_only_review`，不归因为本轮 Codex sync。
 
 ## 判定
 
@@ -70,7 +70,7 @@ GFIS 当前 live 状态为只读复核可见的轻度 dirty：Git dirty 为 1，
 
 ### stop
 
-`stop_type=monitor_only`。GFIS pending 为 0，但 dirty 仍有 1 项，本轮停止在只读 evidence 固化，不执行 sync、clean reindex 或业务开发。
+`stop_type=monitor_only`。GFIS pending 为 0，dirty 也为 0，本轮停止在只读 evidence 固化，不执行 sync、clean reindex 或业务开发。
 
 ### verify
 
@@ -90,7 +90,7 @@ python3 tools/kds-sync/validate_kds_token.py
 
 ### debug
 
-上一轮 GFIS pending=3/dirty=239 已在本轮只读复核时变为 pending=0/dirty=1；原因归类为外部或既有状态变化，不归因为本轮 Codex sync。
+上一轮 GFIS pending=3/dirty=239 已在本轮只读复核时变为 pending=0/dirty=0；原因归类为外部或既有状态变化，不归因为本轮 Codex sync。
 
 ## 非声明
 

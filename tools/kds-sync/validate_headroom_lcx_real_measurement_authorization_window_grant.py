@@ -59,6 +59,18 @@ def main() -> int:
     require(grant.get("evidence_id") == "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623", "invalid evidence id")
     require(grant.get("status") == "real_measurement_authorization_window_granted_precheck_only", "invalid status")
     require(grant.get("project_count") == 15, "project count mismatch")
+    require(grant.get("authorized_window_id") == "LCX-MEASURE-20260623-001", "authorized window mismatch")
+    require(grant.get("authorized_by") == "lujunxiang / 总架构师", "authorized_by mismatch")
+    require(grant.get("authorized_at") == "2026-06-23T14:30:00+08:00", "authorized_at mismatch")
+    require(
+        grant.get("sanitized_production_token_ledger") == "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+        "sanitized ledger mismatch",
+    )
+    require(grant.get("rollback_plan_id") == "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001", "rollback plan mismatch")
+    require(
+        grant.get("waes_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
+        "waes decision mismatch",
+    )
     require(grant.get("real_measurement_window_granted") is True, "window must be granted")
     require(grant.get("real_measurement_open") is False, "real measurement must remain closed")
     require(grant.get("production_branch_blocked") is True, "production branch must remain blocked")
@@ -72,6 +84,9 @@ def main() -> int:
     for phrase in [
         "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623",
         "real_measurement_authorization_window_granted_precheck_only",
+        "authorized_window_id | `LCX-MEASURE-20260623-001`",
+        "authorized_by | `lujunxiang / 总架构师`",
+        "sanitized_production_token_ledger | `docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json`",
         "real_measurement_window_granted | `true`",
         "real_measurement_open | `false`",
         "production_branch_blocked | `true`",

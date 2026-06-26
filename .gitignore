@@ -1,5 +1,6 @@
 .globalcloud/
 *.local
+fixtures/agent-reach/*authorization.local.json
 .env
 .env.*
 !.env.example

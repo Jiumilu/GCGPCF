@@ -60,7 +60,7 @@ def main() -> int:
     require(evidence["scope"] == "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001", "invalid scope")
     require(evidence["metrics_seed"]["mttd_seed_available"] is True, "MTTD seed must be available")
     require(evidence["metrics_seed"]["mttr_seed_available"] is False, "MTTR seed must remain unavailable")
-    require(evidence["next_loop_input"]["round"] == "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002", "invalid next loop input")
+    require(evidence["next_loop_input"]["round"] == "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006", "invalid next loop input")
 
     observations = {item["project"]: item for item in evidence["observations"]}
     require(list(observations) == list(REPOS), "observation project order mismatch")
@@ -78,10 +78,10 @@ def main() -> int:
     gfis = codegraph_status(REPOS["GlobalCloud GFIS"])
     gpcf = codegraph_status(REPOS["GlobalCoud GPCF"])
 
-    require(brain["pendingChanges"]["modified"] >= observations["GlobalCloud Brain"]["pending_changes"]["modified"], "Brain drift must not be below evidence")
-    require(studio["pendingChanges"]["added"] >= 2, "Studio added drift expected")
-    require(studio["pendingChanges"]["modified"] >= 2, "Studio modified drift expected")
-    require(gfis["pendingChanges"]["added"] >= 1, "GFIS controlled residual expected")
+    require(brain["pendingChanges"]["modified"] == 0, "Brain drift must be zero")
+    require(studio["pendingChanges"]["added"] <= 2, "Studio added drift must remain within watch threshold")
+    require(studio["pendingChanges"]["modified"] <= 5, "Studio modified drift must remain within watch threshold")
+    require(gfis["pendingChanges"]["added"] == 0, "GFIS controlled residual must be cleared")
     require(gpcf["pendingChanges"] == {"added": 0, "modified": 0, "removed": 0}, "GPCF must be up to date after final sync")
     require("large_generated_validator_exception_candidate" in policy, "GFIS large-file policy missing")
 
@@ -91,13 +91,13 @@ def main() -> int:
     for phrase in [
         "codegraph_active_drift_monitor_evidenced",
         "Brain 与 Studio",
-        "modified=36",
-        "added=2, modified=2",
-        "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002",
+        "Brain green",
+        "watch threshold",
+        "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006",
         "不提交、不推送、不部署",
     ]:
         require(phrase in evidence_md, f"evidence md missing phrase: {phrase}")
-    for phrase in ["输入", "动作", "输出", "检查", "反馈", "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002"]:
+    for phrase in ["输入", "动作", "输出", "检查", "反馈", "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"]:
         require(phrase in loop_round, f"loop round missing phrase: {phrase}")
 
     print(
@@ -107,7 +107,7 @@ def main() -> int:
         f"studio_added={studio['pendingChanges']['added']} "
         f"studio_modified={studio['pendingChanges']['modified']} "
         f"gfis_added={gfis['pendingChanges']['added']} "
-        "next=GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002"
+        "next=GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"
     )
     return 0
 

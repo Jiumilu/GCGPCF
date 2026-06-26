@@ -1,0 +1,36 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-NEGATIVE-FIXTURES-CURRENT-STATE-D184-20260626",
+  "roundId": "GPCF-GCKF-P0-D184-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-repair-owner-response-collection-checklist-current-state-d183-20260626.json",
+  "negativeFixtureStatus": "response_intake_negative_fixtures_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "holdRequired": true,
+  "actualRepairOwnerResponseReceived": false,
+  "packageScope": {
+    "negativeFixtures": 4,
+    "rejectedNegativeFixtures": 4,
+    "acceptedNegativeFixtures": 0
+  },
+  "gateAssertions": {
+    "collectionChecklistIsActualResponse": false,
+    "unsignedPackageAccepted": false,
+    "waesReviewBypassed": false,
+    "humanConfirmationBypassed": false,
+    "responseIntakeAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "checks": [
+    "python3 tools/kds-sync/validate_gckf_p0_repair_owner_response_negative_fixtures_current_state_d184.py",
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ],
+  "nextRoundCandidate": "收到真实 repair owner response、签署响应包、WAES review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。"
+}

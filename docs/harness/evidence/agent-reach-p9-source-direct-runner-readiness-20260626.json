@@ -1,0 +1,32 @@
+{
+  "authorization_request": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.request.json",
+  "authorized_no_execute_status": "authorized_execution_not_requested",
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-runner-readiness-20260626",
+  "live_external_fetch_invoked": false,
+  "missing_authorization_status": "blocked_pending_p9_source_direct_authorization",
+  "non_claims": [
+    "runner_readiness_only",
+    "not_live_fetch_invoked",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "planned_entrypoint_count": 13,
+  "planned_target_count": 13,
+  "precheck_fixture": "fixtures/agent-reach/p9-source-direct-hit-rate-precheck-20260626.json",
+  "runner": "tools/kds-sync/run_agent_reach_p9_source_direct_hit_rate.py",
+  "source_direct_charset_fallback_enabled": true,
+  "source_direct_content_type_guard_enabled": true,
+  "source_direct_discovery_enabled": true,
+  "source_direct_login_guard_enabled": true,
+  "source_direct_max_pages_per_entrypoint": 5,
+  "source_direct_max_transient_retry_count": 1,
+  "source_direct_redirect_guard_enabled": true,
+  "source_direct_transient_retry_enabled": true,
+  "status": "p9_source_direct_runner_readiness_ready"
+}

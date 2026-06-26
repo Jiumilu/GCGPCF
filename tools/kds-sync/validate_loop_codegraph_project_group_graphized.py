@@ -74,13 +74,13 @@ def main() -> int:
     require(project_group["indexed_repo_count"] == 14, "indexed_repo_count must be 14")
     require(project_group["effective_repo_count_this_round"] == 14, "effective repo count must be 14")
     require(project_group["git_protected_repo_count"] == 14, "git_protected_repo_count must be 14")
-    require(project_group["up_to_date_repo_count"] == 11, "up_to_date_repo_count must be 11")
-    require(project_group["active_drift_repo_count"] == 2, "active drift count must be 2")
+    require(project_group["up_to_date_repo_count"] == 13, "up_to_date_repo_count must be 13")
+    require(project_group["active_drift_repo_count"] == 1, "active drift count must be 1")
     require(
-        project_group["active_drift_projects"] == ["GlobalCloud Brain", "GlobalCloud Studio"],
-        "Brain and Studio must be active drift projects",
+        project_group["active_drift_projects"] == ["GlobalCloud Studio"],
+        "Studio must be the only watch project",
     )
-    require(project_group["controlled_residual_projects"] == ["GlobalCloud GFIS"], "GFIS must be only controlled residual")
+    require(project_group["controlled_residual_projects"] == [], "GFIS controlled residual must be cleared")
 
     repos = {repo["project"]: repo for repo in evidence["repositories"]}
     require(list(repos) == [name for name, _ in REPOS], "repository order mismatch")
@@ -99,12 +99,9 @@ def main() -> int:
         require(parse_count("Files", status) >= int(repos[name]["files"]), f"{name} file count below evidence")
         require(parse_count("Nodes", status) >= int(repos[name]["nodes"]), f"{name} node count below evidence")
         require(parse_count("Edges", status) >= int(repos[name]["edges"]), f"{name} edge count below evidence")
-        if name == "GlobalCloud GFIS":
-            require("Pending Changes:" in status and "Added:" in status, "GFIS controlled residual notice expected")
-            require(repos[name]["index_status"] == "controlled_residual", "GFIS must be controlled_residual")
-        elif name in {"GlobalCloud Brain", "GlobalCloud Studio"}:
-            require("Pending Changes:" in status, f"{name} active drift notice expected")
-            require(repos[name]["index_status"] == "pending_sync_watchlist", f"{name} must be pending_sync_watchlist")
+        if name == "GlobalCloud Studio":
+            require("Pending Changes:" in status, "Studio watch notice expected")
+            require(repos[name]["index_status"] == "pending_sync_watchlist", "Studio must be pending_sync_watchlist")
         else:
             require("Index is up to date" in status, f"{name} must be up to date")
             require(repos[name]["index_status"].startswith("up_to_date"), f"{name} evidence must be up_to_date")
@@ -113,13 +110,12 @@ def main() -> int:
     require("large_generated_validator_exception_candidate" in policy, "large file policy missing GFIS exception")
 
     for phrase in [
-        "project_group_codegraph_graphized_with_controlled_gfis_residual_and_active_watchlist",
+        "project_group_codegraph_graphized_with_studio_watch_and_no_controlled_residual",
         "14 个本机 Git 仓",
-        "Brain 活动漂移",
         "Studio 活动漂移",
         "GlobalCloud Studio",
         "WAS世界资产体系",
-        "Added: 1 - 0 nodes",
+        "Added: 0 files",
         "不进入项目内部开发",
     ]:
         require(phrase in evidence_md, f"evidence md missing phrase: {phrase}")
@@ -132,8 +128,8 @@ def main() -> int:
     print(
         "loop_codegraph_project_group_graphized=pass "
         "repo_count=14 indexed_repo_count=14 effective_repo_count=14 "
-        "up_to_date_repo_count=11 active_drift=Brain,Studio "
-        "controlled_residual=GFIS codegraph_git_status_entries_total=0 "
+        "up_to_date_repo_count=13 active_drift=Studio "
+        "controlled_residual=none codegraph_git_status_entries_total=0 "
         "next=GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001"
     )
     return 0

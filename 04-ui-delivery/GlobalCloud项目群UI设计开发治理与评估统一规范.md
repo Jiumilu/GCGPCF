@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md
 source_path: 04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-26
 supersedes: []
 superseded_by: []
 ---
@@ -144,12 +144,18 @@ Loop 轮次出现以下任一情况，必须执行 UI Quality Gate：
 
 1. `UI scope = true`
 2. `UI gate status`
-3. `Surface`
-4. `Tools used`
-5. `Verification`
-6. `Status ceiling`
-7. G1-G9 gate table
-8. UI caveats，例如 `runtime_not_verified`、`mobile_not_verified`、`a11y_manual_only`、`figma_not_verified`
+3. `Tool route`
+4. `Context package`
+5. `Prompt profile`
+6. `Design options`
+7. `Selected option`
+8. `WAES baseline reuse`
+9. `Surface`
+10. `Tools used`
+11. `Verification`
+12. `Status ceiling`
+13. G1-G9 gate table
+14. UI caveats，例如 `runtime_not_verified`、`mobile_not_verified`、`a11y_manual_only`、`figma_not_verified`
 
 ### 6.3 Loop 状态上限
 
@@ -203,7 +209,74 @@ Loop 轮次出现以下任一情况，必须执行 UI Quality Gate：
 7. screenshot、browser、Playwright 或同等级运行证据
 8. remaining work 和 status ceiling
 
-## 10. 非声明事项
+## 10. 标准工具链
+
+项目群 UI 统一采用以下工具链：
+
+1. `@product-design`
+2. `WAES` 现有界面框架
+3. `ui-ux-pro-max`
+4. `Figma`
+5. `Storybook`
+6. `impeccable`
+7. `Playwright/browser`
+8. `axe-core` / `Lighthouse`
+9. `GPCF Loop UI Quality Gate`
+
+执行规则：
+
+1. 整体界面、页面类、关键组件类和结构性重设计，必须先走 `@product-design` 的 `get-context -> ideate -> 选择方案`。
+2. 专业工作台类默认先对齐 `WAES` 现有界面框架，再做项目级优化。
+3. 没有运行验证的工具输出，最高只算候选，不算完成。
+
+## 11. 工具上下文包与提示词能力
+
+### 11.1 工具上下文包
+
+所有 UI 任务都必须具备统一 `工具上下文包`，至少包含：
+
+1. 项目与业务角色
+2. 页面类或组件类
+3. 用户目标与关键路径
+4. 视觉/代码/设计系统来源
+5. `WAES` 复用层级
+6. 约束、非目标和禁改项
+7. 门禁、证据与交付要求
+
+### 11.2 提示词能力
+
+所有 UI 工具都必须使用可审计的 `提示词能力`，至少覆盖：
+
+1. `functional-accuracy`
+2. `visual-quality`
+3. `usability-experience`
+4. `governance-evidence`
+5. `scope-control`
+
+不允许只给模糊要求。最小提示词必须写出：
+
+1. 要解决的对象
+2. 要达成的结果
+3. 禁止越权的边界
+4. 输出格式
+5. 验证要求
+
+## 12. 三方案机制
+
+以下对象必须至少给出 `3` 种界面设计方案：
+
+1. 项目总界面
+2. 高风险页面类
+3. 关键组件类
+4. 结构性重设计对象
+
+规则如下：
+
+1. 三方案必须保持统一框架、统一令牌和统一风格样式。
+2. 三方案产出后必须明确 `Selected option`，未选定不得直接实现。
+3. 小型缺陷修复可复用既有选定方向，但必须显式写 `Selected option = existing`。
+
+## 13. 非声明事项
 
 本规范不自动声明以下事项：
 

@@ -1,0 +1,217 @@
+{
+  "authorization_path": "fixtures/agent-reach/p9-priority-target-hit-rate-authorization.local.json",
+  "authorization_reasons": [],
+  "authorization_valid": true,
+  "candidates": [],
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "execution_requested": true,
+  "hit_rate_report": {
+    "candidate_count": 0,
+    "query_error_count": 20,
+    "threshold_pass": false,
+    "topic_coverage": 0.0,
+    "topic_reports": {
+      "green_supply_chain": {
+        "candidate_count": 0,
+        "expected_p0_domain_hit_count": 0,
+        "expected_priority_domain_hit_count": 0,
+        "missing_query_ids": [
+          "p9-gsc-q01",
+          "p9-gsc-q02",
+          "p9-gsc-q03",
+          "p9-gsc-q04",
+          "p9-gsc-q05",
+          "p9-gsc-q06"
+        ],
+        "query_candidate_coverage": 0.0,
+        "threshold_pass": false
+      },
+      "industrial_solid_waste": {
+        "candidate_count": 0,
+        "expected_p0_domain_hit_count": 0,
+        "expected_priority_domain_hit_count": 0,
+        "missing_query_ids": [
+          "p9-isw-q01",
+          "p9-isw-q02",
+          "p9-isw-q03",
+          "p9-isw-q04"
+        ],
+        "query_candidate_coverage": 0.0,
+        "threshold_pass": false
+      },
+      "phosphogypsum": {
+        "candidate_count": 0,
+        "expected_p0_domain_hit_count": 0,
+        "expected_priority_domain_hit_count": 0,
+        "missing_query_ids": [
+          "p9-pg-q01",
+          "p9-pg-q02",
+          "p9-pg-q03",
+          "p9-pg-q04",
+          "p9-pg-q05"
+        ],
+        "query_candidate_coverage": 0.0,
+        "threshold_pass": false
+      },
+      "zero_waste_city": {
+        "candidate_count": 0,
+        "expected_p0_domain_hit_count": 0,
+        "expected_priority_domain_hit_count": 0,
+        "missing_query_ids": [
+          "p9-zwc-q01",
+          "p9-zwc-q02",
+          "p9-zwc-q03",
+          "p9-zwc-q04",
+          "p9-zwc-q05"
+        ],
+        "query_candidate_coverage": 0.0,
+        "threshold_pass": false
+      }
+    }
+  },
+  "id": "agent-reach-p9-priority-target-hit-rate-live-run-20260626",
+  "non_claims": [
+    "candidate_only",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "planned_query_count": 20,
+  "query_errors": [
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-gsc-q01",
+      "topic_id": "green_supply_chain"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-gsc-q02",
+      "topic_id": "green_supply_chain"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-gsc-q03",
+      "topic_id": "green_supply_chain"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-gsc-q04",
+      "topic_id": "green_supply_chain"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-gsc-q05",
+      "topic_id": "green_supply_chain"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-gsc-q06",
+      "topic_id": "green_supply_chain"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-pg-q01",
+      "topic_id": "phosphogypsum"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-pg-q02",
+      "topic_id": "phosphogypsum"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-pg-q03",
+      "topic_id": "phosphogypsum"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-pg-q04",
+      "topic_id": "phosphogypsum"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-pg-q05",
+      "topic_id": "phosphogypsum"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-isw-q01",
+      "topic_id": "industrial_solid_waste"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-isw-q02",
+      "topic_id": "industrial_solid_waste"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-isw-q03",
+      "topic_id": "industrial_solid_waste"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-isw-q04",
+      "topic_id": "industrial_solid_waste"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-zwc-q01",
+      "topic_id": "zero_waste_city"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-zwc-q02",
+      "topic_id": "zero_waste_city"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-zwc-q03",
+      "topic_id": "zero_waste_city"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-zwc-q04",
+      "topic_id": "zero_waste_city"
+    },
+    {
+      "error_type": "empty_result",
+      "message": "No candidates returned for query.",
+      "query_id": "p9-zwc-q05",
+      "topic_id": "zero_waste_city"
+    }
+  ],
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": true,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_priority_target_hit_rate_rework_required"
+}

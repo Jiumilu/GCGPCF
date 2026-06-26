@@ -1,0 +1,38 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-COLLECTION-CHECKLIST-CURRENT-STATE-D183-20260626",
+  "roundId": "GPCF-GCKF-P0-D183-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-repair-owner-response-requirement-precheck-current-state-d182-20260626.json",
+  "collectionChecklistStatus": "response_collection_checklist_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "holdRequired": true,
+  "actualRepairOwnerResponseReceived": false,
+  "packageScope": {
+    "collectionChannels": 4,
+    "requiredResponseFields": 12,
+    "acceptancePreconditions": 6,
+    "blockingConditions": 4,
+    "forbiddenActions": 11
+  },
+  "gateAssertions": {
+    "collectionChecklistIsActualResponse": false,
+    "responseIntakeAllowed": false,
+    "repairOwnerNotificationSendAllowed": false,
+    "repairOwnerResponsibilityConfirmationAllowed": false,
+    "committeeCaseOpeningAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "checks": [
+    "python3 tools/kds-sync/validate_gckf_p0_repair_owner_response_collection_checklist_current_state_d183.py",
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ],
+  "nextRoundCandidate": "收到真实 repair owner response 后进入 response intake precheck；未收到前继续保持 hold。"
+}

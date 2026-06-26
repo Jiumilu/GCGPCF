@@ -3,7 +3,7 @@
   "scope": "GPCF-CODEGRAPH-KDS-MIRROR-SCOPE-REVIEW-AUTHORIZATION-017",
   "status": "authorization_required_current_state_dirty",
   "generated_at": "2026-06-22",
-  "objective": "复核 KDS mirror / WorkWiki scope review 授权需求；以 live KDS 状态为准，当前 pending 已清零但 Git dirty 仍非零，因此保留本轮授权边界。",
+  "objective": "复核 KDS mirror / WorkWiki scope review 授权需求；以 live KDS 状态为准，当前 pending=0 且 Git dirty 仍非零，因此保留本轮授权边界。",
   "previous_round": "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016",
   "prior_snapshot": {
     "source": "post_studio_monitor_and_initial_read",
@@ -31,12 +31,12 @@
       "edgeCount": 7115
     },
     "git_dirty": {
-      "modified": 6,
-      "deleted": 11,
-      "untracked": 46,
+      "modified": 1,
+      "deleted": 0,
+      "untracked": 0,
       "renamed": 0,
       "other": 0,
-      "total": 63
+      "total": 1
     },
     "codegraph_git_isolated": true
   },
@@ -44,13 +44,13 @@
     "kds_mirror_scope_review_required_now": true,
     "kds_codegraph_sync_required_now": false,
     "kds_clean_reindex_required_now": false,
-    "reason": "Current live KDS CodeGraph pending is zero, but Git dirty remains 31; current KDS mirror / WorkWiki drift still requires scope review."
+    "reason": "Current live KDS CodeGraph pending is 0, and Git dirty remains 1; current KDS mirror / WorkWiki drift still requires scope review."
   },
   "watchlist_after_kds_recheck": {
-    "Brain": "authorization_required",
-    "GFIS": "authorization_required_without_clean_reindex",
+    "Brain": "monitor_only",
+    "GFIS": "monitor_only",
     "KDS": "mirror_scope_review_required_now",
-    "Studio": "sync_only_precheck_completed_with_residual_watch"
+    "Studio": "monitor_only"
   },
   "governance": {
     "mode": "kds_scope_review_authorization_required_by_dirty_state",
@@ -65,11 +65,11 @@
     "deployment_performed": false
   },
   "five_direction": {
-    "run": "复核 KDS live CodeGraph 与 Git 状态，发现当前 KDS pending 已清零但 Git dirty 仍非零。",
-    "stop": "stop_type=authorization_boundary；KDS 当前 CodeGraph pending 归零但 Git dirty 仍非零，本轮停止在授权边界，不执行 KDS sync、真实 KDS API 写入、mirror overwrite 或 clean reindex。",
-    "verify": "验证 KDS CodeGraph pending=0、Git dirty=31、.codegraph Git 隔离、GPCF 文档治理门禁与 KDS token。",
+    "run": "复核 KDS live CodeGraph 与 Git 状态，发现当前 KDS pending=0 且 Git dirty 仍非零。",
+    "stop": "stop_type=authorization_boundary；KDS 当前 CodeGraph pending 已归零但 Git dirty 仍非零，本轮停止在授权边界，不执行 KDS sync、真实 KDS API 写入、mirror overwrite 或 clean reindex。",
+    "verify": "验证 KDS CodeGraph pending=0、Git dirty=1、.codegraph Git 隔离、GPCF 文档治理门禁与 KDS token。",
     "recover": "若 KDS 后续再次清零，可重新评估是否取消 scope review；若 dirty 继续存在，则保持授权边界。",
-    "debug": "当前 KDS mirror / WorkWiki 仍有 dirty，Brain 与 GFIS 后续边界继续保留；Studio 维持 residual watch。"
+    "debug": "当前 KDS mirror / WorkWiki 仍有 dirty，Brain、GFIS、Studio 继续保持 monitor_only。"
   },
   "status_boundaries": {
     "business_implementation_completed": false,

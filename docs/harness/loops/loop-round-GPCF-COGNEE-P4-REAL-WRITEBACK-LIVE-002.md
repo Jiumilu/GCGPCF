@@ -33,8 +33,15 @@ superseded_by: []
   - WAES 决策与运行时依赖确认；
   - 回滚计划与失败退出条件；
   - 数据范围、授权有效期与失效策略。
-- 生成签核包证据 `docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md`（待签字段待录入）。
+- 生成签核包证据 `docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md`（待签字段由人工录入，不得代填）。
+- 维护机读签核实例 `fixtures/cognee/cognee-p4-live-authorization-signoff.pending.json`，后续人工签核信息先写该文件，再同步 Markdown。
 - 仍不执行真实外部系统写入；脚本仅用于受控证据复核口径。
+- 固定签核收口校验：
+```bash
+python3 tools/kds-sync/sync_cognee_p4_live_authorization_signoff.py
+
+python3 tools/kds-sync/validate_cognee_p4_live_authorization_signoff.py
+```
 
 ## stop
 
@@ -56,11 +63,33 @@ superseded_by: []
   - `waes_decision=pass` 与 `runtime_dependency_ok=true`；
   - `rollback_plan_verified=true` 与回滚窗口记录完整；
   - `authorization_token_source_coverage=1.0`。
+- 签核收口命令：
+```bash
+python3 tools/kds-sync/sync_cognee_p4_live_authorization_signoff.py
+
+python3 tools/kds-sync/validate_cognee_p4_live_authorization_signoff.py \
+  --require-complete-signoff
+```
+- 固定执行命令清单（签核完成后才允许进入）：
+```bash
+python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py \
+  --input docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json
+
+python3 loop/context/cognee/scripts/run-cognee-p4-real-writeback-live.py \
+  --input fixtures/cognee/cognee-p4-real-writeback-precheck-repair-20260624.json \
+  --output-json docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json \
+  --allow-live-write
+
+python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py \
+  --input docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json
+```
 
 ## 反馈
 
 - 当前输出仍是演练口径，未形成生产授权许可；
 - 下一步动作为：完成 Owner/WAES 签字补齐后，输出 `GPCF-COGNEE-P4-REAL-WRITEBACK-LIVE-002` 的签核结论并驱动下轮生产执行决策文档。
+- 文档门禁保持：未完成双签前，`production_write`、`accepted`、`integrated`、`production_ready` 不得提升为 `true`。
+- 数据同步门禁保持：Markdown 与 `cognee-p4-live-authorization-signoff.pending.json` 必须一致，否则签核校验失败。
 
 ## recover
 

@@ -1,0 +1,44 @@
+{
+  "authorization_valid": true,
+  "candidate_count": 0,
+  "classification": "search_provider_path_rework_required",
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "error_type_counts": {
+    "ProviderResultUnavailable": 19,
+    "timeout": 1
+  },
+  "execution_requested": true,
+  "id": "agent-reach-p9-rerun-rework-classification-20260626",
+  "live_external_search_invoked": true,
+  "non_claims": [
+    "classification_only",
+    "not_hit_rate_completed",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "planned_query_count": 20,
+  "provider_blocked_error_count": 19,
+  "query_error_count": 20,
+  "recommended_next_path": "p9_source_direct_hit_rate_live_run_after_human_authorization",
+  "rerun_evidence": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json",
+  "rerun_status": "p9_priority_target_hit_rate_rework_required",
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": true,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_rerun_rework_classification_pass",
+  "threshold_pass": false,
+  "topic_coverage": 0.0
+}

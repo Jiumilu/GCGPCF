@@ -1,0 +1,634 @@
+{
+  "coverage": {
+    "objective_business_field_coverage": [
+      "green_financing_purpose",
+      "product_carbon_footprint",
+      "resource_utilization_product",
+      "solid_waste_disposal_receipt",
+      "supplier_esg",
+      "zero_waste_city_indicator"
+    ],
+    "p0_topic_coverage": 1.0,
+    "preview_item_count": 13,
+    "route_project_coverage": [
+      "GFIS",
+      "KDS",
+      "WAES",
+      "WAS"
+    ],
+    "target_coverage": 1.0,
+    "threshold_pass": true,
+    "topic_coverage": 1.0
+  },
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-review-queue-bridge-readiness-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "source_direct_review_queue_bridge_preview_only",
+  "non_claims": [
+    "bridge_readiness_only",
+    "preview_only",
+    "not_live_fetch_invoked",
+    "not_review_queue_created",
+    "not_runtime_intake_created",
+    "not_waes_review_created",
+    "not_verified",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "precheck_source": "fixtures/agent-reach/p9-source-direct-hit-rate-precheck-20260626.json",
+  "preview_items": [
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "supplier_esg",
+        "product_carbon_footprint",
+        "carbon_traceability"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-greenscs",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "greenscs.com",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-greenscs",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "supplier_esg",
+        "green_supply_chain_registry"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-gmpsp",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES"
+      ],
+      "source_domain": "gmpsp.org.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-gmpsp",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "supplier_esg",
+        "green_supply_chain_registry",
+        "industrial_solid_waste_policy"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-miit",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES"
+      ],
+      "source_domain": "miit.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-miit",
+      "topics": [
+        "green_supply_chain",
+        "industrial_solid_waste"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "evidence_standard_reference",
+        "supplier_esg"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-samr-standards",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES"
+      ],
+      "source_domain": "samr.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-samr-standards",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "product_carbon_footprint",
+        "policy_evidence"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p1-mee",
+      "priority": "P1",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "mee.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p1-mee",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "green_financing_purpose",
+        "use_of_proceeds_tracking"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p1-pbc",
+      "priority": "P1",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAS"
+      ],
+      "source_domain": "pbc.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p1-pbc",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "scope3_emissions",
+        "carbon_traceability"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-ghgprotocol",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "ghgprotocol.org",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-ghgprotocol",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "supplier_esg",
+        "policy_evidence"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p1-eu-csddd",
+      "priority": "P1",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES"
+      ],
+      "source_domain": "commission.europa.eu",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p1-eu-csddd",
+      "topics": [
+        "green_supply_chain"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "solid_waste_disposal_receipt",
+        "pollution_control_standard",
+        "resource_utilization_product"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-mee-phosphogypsum-standard",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "mee.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-mee-phosphogypsum-standard",
+      "topics": [
+        "phosphogypsum"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "zero_waste_city_indicator",
+        "industrial_solid_waste_policy"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-mee-zero-waste-city",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "mee.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-mee-zero-waste-city",
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "zero_waste_city_case",
+        "solid_waste_disposal_receipt",
+        "solid_waste_resource_utilization"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-meescc-zero-waste-city",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "meescc.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-meescc-zero-waste-city",
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "resource_utilization_product",
+        "industrial_solid_waste_policy"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p0-miit-phosphogypsum-action",
+      "priority": "P0",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "miit.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p0-miit-phosphogypsum-action",
+      "topics": [
+        "phosphogypsum",
+        "industrial_solid_waste"
+      ]
+    },
+    {
+      "admission": "candidate_only_review_candidate",
+      "business_fields": [
+        "resource_utilization_product",
+        "solid_waste_resource_utilization"
+      ],
+      "entrypoint_methods": [
+        "target_url"
+      ],
+      "non_claims": [
+        "preview_only",
+        "candidate_only",
+        "not_review_queue_created",
+        "not_runtime_intake_created",
+        "not_waes_review_created",
+        "not_verified",
+        "not_source_of_record",
+        "not_accepted",
+        "not_integrated",
+        "not_production_ready"
+      ],
+      "preview_item_id": "p9s-review-preview-gsc-p1-ndrc-circular-economy-solid-waste",
+      "priority": "P1",
+      "queue_status": "review_queue_preview_only",
+      "review_decision_required": true,
+      "review_lanes": [
+        "gfis_business_owner_review",
+        "was_asset_evidence_review",
+        "waes_policy_and_compliance_review",
+        "kds_traceability_review"
+      ],
+      "route_projects": [
+        "GFIS",
+        "KDS",
+        "WAES",
+        "WAS"
+      ],
+      "source_domain": "ndrc.gov.cn",
+      "source_record_promotion_allowed": false,
+      "source_target_id": "gsc-p1-ndrc-circular-economy-solid-waste",
+      "topics": [
+        "phosphogypsum",
+        "industrial_solid_waste",
+        "zero_waste_city"
+      ]
+    }
+  ],
+  "review_queue_created": false,
+  "runtime_intake_created": false,
+  "source_record_promotion_allowed": false,
+  "status": "p9_source_direct_review_queue_bridge_readiness_ready",
+  "validator_checks": {
+    "blocks_real_review_queue_creation": true,
+    "blocks_source_record_promotion": true,
+    "requires_13_preview_items": true,
+    "requires_candidate_only_admission": true,
+    "requires_four_topic_coverage": true,
+    "requires_full_target_coverage": true,
+    "requires_gfis_was_waes_kds_routes": true,
+    "requires_objective_business_fields": true,
+    "requires_p0_topic_coverage": true
+  },
+  "verified_artifact_created": false,
+  "waes_review_created": false
+}

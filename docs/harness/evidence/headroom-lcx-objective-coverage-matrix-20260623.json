@@ -32,6 +32,7 @@
         "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
         "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json",
         "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+        "docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json",
         "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json"
       ],
       "blocking_reason": "real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only"
@@ -96,6 +97,7 @@
     "authorization_window_request": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
     "next_stage_authorization_package": "HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623",
     "approval_signed_bundle": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+    "authorization_chain_replay": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-20260623",
     "authorization_boundary_review": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623",
     "runner_contract": "HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623",
     "runtime_graph": "HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623",

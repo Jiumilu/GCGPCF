@@ -1,0 +1,90 @@
+{
+  "id": "agent-reach-p9-priority-target-hit-rate-rerun-authorization-request-20260626",
+  "date": "2026-06-26",
+  "status": "p9_priority_target_hit_rate_rerun_authorization_request_ready",
+  "current_admission": "limited_candidate_only",
+  "required_text": "授权执行 Agent-Reach P9R Priority Target Hit-Rate Live Rerun",
+  "purpose": "Rerun the P9 public-read-only hit-rate evaluation after the web provider fallback repair, because the first authorized P9 run consumed 20 queries and ended with provider-level empty results.",
+  "prior_rework_evidence": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-live-run-20260626.json",
+  "repair_evidence": "docs/harness/evidence/agent-reach-p9-web-provider-fallback-20260626.json",
+  "precheck_fixture": "fixtures/agent-reach/p9-priority-target-hit-rate-precheck-20260626.json",
+  "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/p9-priority-target-hit-rate-rerun-authorization.local.json",
+  "rerun_output_json": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json",
+  "rerun_output_md": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md",
+  "runner_command_after_human_approval": "python3 tools/kds-sync/run_agent_reach_p9_priority_target_hit_rate.py --auth fixtures/agent-reach/p9-priority-target-hit-rate-rerun-authorization.local.json --execute-live --write-evidence --output-json docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json --output-md docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md",
+  "post_live_validation_commands": [
+    "python3 tools/kds-sync/validate_agent_reach_p9_hit_rate_output_quality_gate.py --validate-report --report docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json --markdown docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md",
+    "python3 tools/kds-sync/validate_agent_reach_p9_review_queue_bridge_readiness.py",
+    "python3 tools/kds-sync/loop_document_gate.py"
+  ],
+  "required_authorization_fields": {
+    "authorization_id": "agent-reach-p9-priority-target-hit-rate-live-run",
+    "authorization_status": "approved_for_p9_priority_target_hit_rate_live_run",
+    "authorized_by": "<required-human-name>",
+    "authorized_at": "<required-iso8601>",
+    "expires_at": "<required-iso8601>",
+    "allowed_channels": [
+      "web",
+      "rss",
+      "bilibili"
+    ],
+    "max_queries": 20,
+    "max_results_per_query": 5,
+    "allow_agent_reach_binary_invocation": false,
+    "allow_external_network": true,
+    "allow_write_evidence_only": true,
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration",
+      "accepted_claim",
+      "integrated_claim",
+      "production_ready_claim"
+    ],
+    "logging_redaction": {
+      "redact_tokens": true,
+      "redact_cookies": true,
+      "redact_authorization_headers": true,
+      "redact_query_personal_data": true,
+      "persist_redacted_snippets_only": true
+    }
+  },
+  "execution_scope": {
+    "topics": [
+      "green_supply_chain",
+      "phosphogypsum",
+      "industrial_solid_waste",
+      "zero_waste_city"
+    ],
+    "query_count": 20,
+    "priority_target_count": 13,
+    "max_results_per_query": 5,
+    "public_read_only": true,
+    "write_evidence_only": true,
+    "rerun_after_repair": true
+  },
+  "security_controls": {
+    "live_external_search_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "authorization_request_only",
+    "not_live_search_invoked",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

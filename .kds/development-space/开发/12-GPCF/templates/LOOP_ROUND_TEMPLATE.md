@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/LOOP_ROUND_TEMPLATE.md
 source_path: templates/LOOP_ROUND_TEMPLATE.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-26
 supersedes: []
 superseded_by: []
 ---
@@ -226,16 +226,28 @@ Loop 模式为 L4 时必填。评分标准来源：`01-architecture/GlobalCloud�
 | 字段 | 值 |
 |---|---|
 | UI scope | true / false |
+| Tool route | `@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` / project-specific route / not_applicable |
+| Context package | completed / partial / missing / not_applicable |
+| Prompt profile | functional-accuracy / visual-quality / usability-experience / governance-evidence / scope-control / mixed / not_applicable |
+| Design options | 3 / 1_with_existing_selected_direction / not_applicable |
+| Selected option | 1 / 2 / 3 / existing / not_applicable |
+| WAES baseline reuse | shell / page-skeleton / core-components / full-stack / exception-approved / not_applicable |
 | Surface | list / detail / edit-config / operation-workbench / exception-handling / evidence-audit / ai-chat / ai-sidebar / brand-marketing / mobile-desktop-shell / not_applicable |
 | Repository/path |  |
 | Scope |  |
-| Tools used | Impeccable / ui-ux-pro-max / Playwright / browser / Figma / manual / not_applicable |
+| Tools used | `@product-design` / WAES / Impeccable / ui-ux-pro-max / Playwright / browser / Figma / Storybook / axe-core / Lighthouse / manual / not_applicable |
 | Tools unavailable |  |
 | Verification |  |
 | Status ceiling | ui_evidence_candidate / partial / blocked / rework_required / not_applicable |
 
 ```text
 UI gate status: ui_ready | ui_partial | ui_blocked | ui_rework_required | not_applicable
+Tool route:
+Context package:
+Prompt profile:
+Design options:
+Selected option:
+WAES baseline reuse:
 Surface:
 Repository/path:
 Scope:

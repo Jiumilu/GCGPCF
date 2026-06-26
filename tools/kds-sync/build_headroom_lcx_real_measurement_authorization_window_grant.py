@@ -24,6 +24,7 @@ KDS_OUT_MD = KDS_EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-win
 KDS_OUT_LOOP = KDS_LOOPS_DIR / "loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001.md"
 
 APPROVAL_INSTANCE = EVIDENCE_DIR / "headroom-lcx-approval-instance-precheck-20260622.json"
+SIGNED_BUNDLE = EVIDENCE_DIR / "headroom-lcx-real-measurement-approval-signed-bundle-20260623.json"
 REQUEST = EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-request-20260623.json"
 WINDOW_REQUEST = EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-window-request-20260623.json"
 TRANSITION = EVIDENCE_DIR / "headroom-lcx-real-measurement-transition-graph-20260623.json"
@@ -45,13 +46,14 @@ def read_json(path: Path) -> dict[str, Any]:
 
 def build_headroom_lcx_real_measurement_authorization_window_grant() -> dict[str, Any]:
     approval = read_json(APPROVAL_INSTANCE)
+    signed_bundle = read_json(SIGNED_BUNDLE)
     request = read_json(REQUEST)
     window_request = read_json(WINDOW_REQUEST)
     transition = read_json(TRANSITION)
     gap = read_json(GAP)
     runner = read_json(RUNNER_CONTRACT)
 
-    fields = approval.get("authorization_fields", {})
+    fields = signed_bundle.get("authorization_fields", {})
     grant = {
         "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623",
         "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001",
@@ -80,6 +82,7 @@ def build_headroom_lcx_real_measurement_authorization_window_grant() -> dict[str
         "production_ready": False,
         "source_refs": {
             "approval_instance": approval.get("evidence_id"),
+            "signed_bundle": signed_bundle.get("evidence_id"),
             "authorization_request": request.get("evidence_id"),
             "authorization_window_request": window_request.get("evidence_id"),
             "transition_graph": transition.get("transition_graph_id"),
@@ -205,6 +208,7 @@ def write_outputs(grant: dict[str, Any]) -> None:
         ## 输入
 
         - `docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json`
+        - `docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json`
         - `docs/harness/evidence/headroom-lcx-real-measurement-authorization-request-20260623.json`
         - `docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json`
         - `docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json`

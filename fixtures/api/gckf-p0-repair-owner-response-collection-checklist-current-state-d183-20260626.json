@@ -1,0 +1,75 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-COLLECTION-CHECKLIST-CURRENT-STATE-D183-20260626",
+  "roundId": "GPCF-GCKF-P0-D183-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-repair-owner-response-requirement-precheck-current-state-d182-20260626.json",
+  "collectionChecklistStatus": "response_collection_checklist_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "holdRequired": true,
+  "actualRepairOwnerResponseReceived": false,
+  "collectionChecklist": {
+    "checklistType": "repair_owner_response_collection_current_state",
+    "checklistStatus": "candidate_checklist_with_hold",
+    "collectionChannels": [
+      "controlled_document_submission",
+      "signed_response_package",
+      "waes_review_note",
+      "kds_backlink_candidate"
+    ],
+    "requiredResponseFields": [
+      "repair_owner_identity",
+      "response_timestamp",
+      "acknowledgement_receipt_batch_ref",
+      "repair_scope_confirmation",
+      "hold_context_refs",
+      "responsibility_boundary",
+      "next_action_owner",
+      "no_write_boundary_confirmation",
+      "waes_review_requirement",
+      "harness_evidence_candidate_ref",
+      "kds_backlink_candidate_ref",
+      "human_confirmation_requirement"
+    ],
+    "acceptancePreconditions": [
+      "response_file_submitted",
+      "repair_owner_identity_matched",
+      "hold_context_refs_preserved",
+      "no_write_boundary_preserved",
+      "waes_review_pending",
+      "human_confirmation_pending"
+    ],
+    "blockingConditions": [
+      "missing_actual_repair_owner_response",
+      "missing_signed_response_package",
+      "missing_waes_review_note",
+      "missing_human_confirmation"
+    ],
+    "forbiddenActions": [
+      "treat_checklist_as_response",
+      "execute_response_intake",
+      "send_repair_owner_notification",
+      "confirm_repair_owner_responsibility",
+      "create_repair_request",
+      "open_committee_case",
+      "write_formal_harness_evidence",
+      "write_kds",
+      "write_business_system",
+      "promote_p1_admission",
+      "recommend_v1_upgrade"
+    ]
+  },
+  "gateAssertions": {
+    "collectionChecklistIsActualResponse": false,
+    "responseIntakeAllowed": false,
+    "repairOwnerNotificationSendAllowed": false,
+    "repairOwnerResponsibilityConfirmationAllowed": false,
+    "committeeCaseOpeningAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "nextRoundCandidate": "收到真实 repair owner response 后进入 response intake precheck；未收到前继续保持 hold。"
+}

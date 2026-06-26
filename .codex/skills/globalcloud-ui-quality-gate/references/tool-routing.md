@@ -24,6 +24,7 @@ Use the smallest tool set that can produce evidence.
 
 | Scenario | Primary tool | Secondary tool | Notes |
 |---|---|---|---|
+| Overall interface, page-class, key-component, or structural redesign | `@product-design` | `ui-ux-pro-max` / `Figma` | Must run `get-context -> ideate -> select option`; produce exactly 3 design options before implementation unless the task is a small fix on an already selected direction. |
 | Product UI, dashboard, control tower, admin, settings, forms | Impeccable | ui-ux-pro-max | Use Impeccable for audit, harden, polish, layout, clarify, adapt, optimize. |
 | New GlobalCloud design system or inconsistent tokens | ui-ux-pro-max | Impeccable document/extract | Persist recommendations only after checking local controlled docs. |
 | Figma design implementation or component mapping | Figma skills | Playwright/browser | Use Figma as source of visual truth when a Figma URL or node is provided. |
@@ -48,5 +49,12 @@ GlobalCloud project-group UI defaults to product register:
 - evidence and state always visible
 - motion for state feedback only
 - no decorative motion in operational flows
+
+Professional workbench UI defaults to `WAES` parent-frame reuse:
+
+- shell first
+- page skeleton second
+- core high-risk components third
+- local optimization only after reuse mapping is explicit
 
 Use brand register only for public marketing, landing, portfolio, or presentation surfaces.

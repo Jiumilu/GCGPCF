@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7272ECE5C1
 title: Loop Round - CodeGraph KDS mirror scope review 授权复核
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 ## stop
 
 - stop_type：`authorization_boundary`
-- 停止证据：KDS 当前 CodeGraph pending=0，但 Git dirty=31；需要保留 scope review 授权边界，不能执行 sync、真实 KDS API 写入、mirror overwrite 或 clean reindex。
+- 停止证据：KDS 当前 CodeGraph pending=0，但 Git dirty=1；需要保留 scope review 授权边界，不能执行 sync、真实 KDS API 写入、mirror overwrite 或 clean reindex。
 - 状态上限：不得升级 accepted、integrated 或 production_ready。
 
 ## verify
@@ -60,7 +60,7 @@ python3 tools/kds-sync/validate_kds_token.py
 
 ## debug
 
-- 当前阻塞：KDS mirror / WorkWiki 仍有 dirty，Brain/GFIS 仍需后续边界复核。
+- 当前阻塞：KDS mirror / WorkWiki 仍有 dirty，Brain、GFIS、Studio 继续保持 monitor_only。
 - 下一轮：`GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018`
 - 真实 lane：未进入业务开发，真实业务计数不变。
 - 写入计数：生产写入 0，外部 API 写入 0，真实 KDS API 写入 0，commit 0，push 0，deploy 0。

@@ -1,0 +1,70 @@
+{
+  "authorization_file": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json",
+  "authorization_intake_status": "blocked_pending_p9_source_direct_authorization",
+  "closure_runner_command": "python3 tools/kds-sync/run_agent_reach_p9_source_direct_live_closure.py --execute-live --write-evidence",
+  "closure_runner_evidence": "docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-20260626.json",
+  "commands": [
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_authorization_intake.py",
+      "live_external_fetch_invoked": false,
+      "required_before_next": true,
+      "step": "authorization_intake"
+    },
+    {
+      "command": "python3 tools/kds-sync/run_agent_reach_p9_source_direct_hit_rate.py --auth fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json --execute-live --write-evidence",
+      "live_external_fetch_invoked": true,
+      "required_before_next": true,
+      "step": "live_run"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_output_quality_gate.py --validate-report",
+      "live_external_fetch_invoked": false,
+      "required_before_next": true,
+      "step": "output_quality_gate"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_review_queue_bridge_readiness.py",
+      "live_external_fetch_invoked": false,
+      "required_before_next": true,
+      "step": "review_queue_bridge_preview"
+    },
+    {
+      "command": "python3 tools/kds-sync/document_control.py",
+      "live_external_fetch_invoked": false,
+      "required_before_next": true,
+      "step": "document_control"
+    },
+    {
+      "command": "python3 tools/kds-sync/loop_document_gate.py",
+      "live_external_fetch_invoked": false,
+      "required_before_next": true,
+      "step": "loop_document_gate"
+    }
+  ],
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-live-execution-command-pack-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "post_authorization_command_pack",
+  "non_claims": [
+    "command_pack_only",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_review_queue_created",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "post_live_success_criteria": [
+    "authorization_intake status is p9_source_direct_live_authorization_intake_ready",
+    "live run status is p9_source_direct_hit_rate_completed",
+    "output quality gate passes with --validate-report",
+    "review queue bridge remains preview-only",
+    "loop_document_gate passes"
+  ],
+  "required_authorization_text": "授权执行 Agent-Reach P9S Source Direct Hit-Rate Live Run",
+  "status": "p9_source_direct_live_execution_command_pack_ready"
+}

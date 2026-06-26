@@ -76,7 +76,12 @@ DUCKDUCKGO_SNIPPET_PATTERN = re.compile(r'<a[^>]+class="[^"]*result__snippet[^"]
 BING_RESULT_PATTERN = re.compile(r'<li[^>]+class="[^"]*b_algo[^"]*"[^>]*>(?P<body>.*?)</li>', re.S)
 BING_LINK_PATTERN = re.compile(r'<h2[^>]*>\s*<a[^>]+href="(?P<href>[^"]+)"[^>]*>(?P<title>.*?)</a>', re.S)
 BING_SNIPPET_PATTERN = re.compile(r'<p[^>]*>(?P<snippet>.*?)</p>', re.S)
+PROVIDER_BLOCK_PATTERN = re.compile(r"captcha|unusual traffic|verify|verification|anomaly|bot", re.I)
 MAX_RETAINED_CANDIDATES_PER_QUERY = 3
+
+
+class ProviderResultUnavailable(RuntimeError):
+    """Raised when public search provider output cannot produce parseable candidates."""
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -284,19 +289,17 @@ def fetch_bilibili_candidate(query: dict[str, Any], limit: int) -> list[dict[str
     return build_candidates(query, rows)
 
 
-def fetch_web_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any]]:
-    encoded = urllib.parse.quote(query["query"])
-    url = f"https://www.bing.com/search?q={encoded}&mkt=en-US&setlang=en-US&cc=US"
-    req = urllib.request.Request(
-        url,
-        headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "text/html",
-            "Accept-Language": "en-US,en;q=0.9",
-        },
-    )
+def fetch_html(url: str, headers: dict[str, str]) -> str:
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=20) as resp:
-        text = read_response_text(resp)
+        return read_response_text(resp)
+
+
+def provider_blocked(text: str) -> bool:
+    return bool(PROVIDER_BLOCK_PATTERN.search(text))
+
+
+def parse_bing_rows(text: str, limit: int) -> list[tuple[str, str, str]]:
     rows: list[tuple[str, str, str]] = []
     for block in BING_RESULT_PATTERN.finditer(text):
         body = block.group("body")
@@ -311,7 +314,57 @@ def fetch_web_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any
             rows.append((title, href, snippet))
         if len(rows) >= limit:
             break
-    return build_candidates(query, rows)
+    return rows
+
+
+def parse_duckduckgo_rows(text: str, limit: int) -> list[tuple[str, str, str]]:
+    rows: list[tuple[str, str, str]] = []
+    for link_match in DUCKDUCKGO_LINK_PATTERN.finditer(text):
+        snippet_window = text[link_match.end() : link_match.end() + 2000]
+        snippet_match = DUCKDUCKGO_SNIPPET_PATTERN.search(snippet_window)
+        href = normalize_duckduckgo_href(link_match.group("href"))
+        title = strip_html(link_match.group("title"))
+        snippet_source = ""
+        if snippet_match:
+            snippet_source = snippet_match.group("snippet") or snippet_match.group("div_snippet") or ""
+        snippet = strip_html(snippet_source)
+        if title and href:
+            rows.append((title, href, snippet))
+        if len(rows) >= limit:
+            break
+    return rows
+
+
+def fetch_web_candidate(query: dict[str, Any], limit: int) -> list[dict[str, Any]]:
+    encoded = urllib.parse.quote(query["query"])
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "text/html",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    }
+    provider_states: list[str] = []
+
+    bing_url = f"https://www.bing.com/search?q={encoded}&mkt=zh-CN&setlang=zh-CN&cc=CN"
+    bing_text = fetch_html(bing_url, headers)
+    if provider_blocked(bing_text):
+        provider_states.append("bing:blocked")
+    else:
+        rows = parse_bing_rows(bing_text, limit)
+        if rows:
+            return build_candidates(query, rows)
+        provider_states.append("bing:no_parseable_results")
+
+    ddg_url = f"https://html.duckduckgo.com/html/?q={encoded}"
+    ddg_text = fetch_html(ddg_url, headers)
+    if provider_blocked(ddg_text):
+        provider_states.append("duckduckgo:blocked")
+    else:
+        rows = parse_duckduckgo_rows(ddg_text, limit)
+        if rows:
+            return build_candidates(query, rows)
+        provider_states.append("duckduckgo:no_parseable_results")
+
+    raise ProviderResultUnavailable("web_provider_unavailable:" + ",".join(provider_states))
 
 
 def build_candidates(query: dict[str, Any], rows: list[tuple[str, str, str]]) -> list[dict[str, Any]]:

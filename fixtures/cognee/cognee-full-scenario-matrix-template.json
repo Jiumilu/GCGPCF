@@ -1,0 +1,36 @@
+{
+  "scenario_matrix_id": "COGNEE-FULL-SCENARIO-MATRIX-YYYYMMDD-NNN",
+  "scenario_scope": "cognee_full_run_candidate_scenarios",
+  "source_admission_package": "docs/harness/evidence/cognee-full-run-admission-package-20260626.md",
+  "source_full_run_ledger": "fixtures/cognee/cognee-full-run-ledger-template.json",
+  "source_object_coverage": "fixtures/cognee/cognee-full-object-coverage-template.json",
+  "scenario_inventory_source": "REQUIRED_FULL_SCENARIO_INVENTORY_SOURCE",
+  "total_scenario_count": 0,
+  "in_scope_scenario_count": 0,
+  "excluded_scenario_count": 0,
+  "passed_scenario_count": 0,
+  "failed_scenario_count": 0,
+  "untested_scenario_count": 0,
+  "pass_rate": 0.0,
+  "scenario_groups": [
+    {
+      "group_id": "COGNEE-SCENARIO-GROUP-YYYYMMDD-NNN",
+      "group_name": "REQUIRED_SCENARIO_GROUP_NAME",
+      "scenario_type": "REQUIRED_SCENARIO_TYPE",
+      "scenario_count": 0,
+      "passed_count": 0,
+      "failed_count": 0,
+      "untested_count": 0,
+      "evidence_ref": "REQUIRED_WHEN_REAL_SCENARIO_RECORDED",
+      "operator_note": "REQUIRED_WHEN_REAL_SCENARIO_RECORDED"
+    }
+  ],
+  "failure_records": [],
+  "exclusion_records": [],
+  "scenario_matrix_status": "template_only",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

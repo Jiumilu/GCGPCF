@@ -1,0 +1,79 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-020",
+  "status": "authorization_waiting_default_not_authorized",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Record the waiting state after the real-input dispatch authorization request was prepared but no explicit authorization was received. The default state remains not_authorized.",
+  "source_evidence": {
+    "dispatch_authorization_request": "docs/harness/evidence/codegraph-dev-execution-real-input-dispatch-authorization-20260626.json",
+    "collection_pack": "docs/harness/evidence/codegraph-dev-execution-real-input-collection-pack-20260626.json",
+    "real_input_readiness": "docs/harness/evidence/codegraph-dev-execution-real-input-readiness-20260626.json"
+  },
+  "waiting_state": {
+    "authorization_question_presented": true,
+    "authorization_received": false,
+    "default_if_no_answer": "not_authorized",
+    "effective_authorization": "not_authorized",
+    "dispatch_allowed": false,
+    "dispatch_performed": false,
+    "collection_pack_remains_prepared": true,
+    "codegraph_development_state_remains_usable": true
+  },
+  "current_blockers": {
+    "human_dispatch_authorization_missing": true,
+    "recipient_identity_confirmed": false,
+    "manual_channel_confirmed": false,
+    "payload_reviewed": false,
+    "evidence_destination_confirmed": false,
+    "real_source_input_arrived": false
+  },
+  "allowed_while_waiting": [
+    "keep collection pack prepared",
+    "rerun read-only validators",
+    "update authorization question wording",
+    "inspect local evidence only"
+  ],
+  "forbidden_while_waiting": [
+    "external notification dispatch",
+    "external API write",
+    "real KDS write",
+    "real WAES write",
+    "production write",
+    "deployment",
+    "git commit",
+    "git push",
+    "business status upgrade"
+  ],
+  "decision": {
+    "dispatch_authorization": "not_authorized",
+    "next_action": "wait_for_human_authorization_or_keep_collection_pack_prepared",
+    "real_business_execution": "blocked_until_real_source_input_arrives",
+    "runtime_state": "not_verified",
+    "status_ceiling": "partial"
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_dispatch_authorization.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_authorization_waiting.py"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "dispatch_authorized": false,
+    "dispatch_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-021"
+}

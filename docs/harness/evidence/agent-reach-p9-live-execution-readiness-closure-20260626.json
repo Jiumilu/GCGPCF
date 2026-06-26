@@ -1,0 +1,96 @@
+{
+  "agent_reach_binary_invoked": false,
+  "authorization_required_before_live": true,
+  "check_results": [
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_project_group_full_live_coverage_plan.py",
+      "id": "coverage_plan",
+      "output_tail": "agent_reach_project_group_full_live_coverage_plan=pass status=full_project_group_live_coverage_plan_ready project_coverage=14/14 batch_count=3 max_queries_per_batch=5 live_external_search_invoked=false completion_claim_allowed=false next=GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",
+      "passed": true,
+      "required": "agent_reach_project_group_full_live_coverage_plan=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_priority_target_hit_rate_precheck.py",
+      "id": "p9_precheck",
+      "output_tail": "agent_reach_p9_priority_target_hit_rate_precheck=pass status=p9_priority_target_hit_rate_precheck_ready topics=4 queries=20 p0_domains=7 priority_domains=9 live_external_search_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_priority_target_hit_rate_precheck=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_hit_rate_runner_readiness.py",
+      "id": "p9_runner_readiness",
+      "output_tail": "agent_reach_p9_hit_rate_runner_readiness=pass status=p9_hit_rate_runner_readiness_ready query_count=20 live_external_search_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_hit_rate_runner_readiness=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_hit_rate_output_quality_gate.py --gate-readiness",
+      "id": "p9_output_quality_gate",
+      "output_tail": "agent_reach_p9_hit_rate_output_quality_gate=pass status=p9_hit_rate_output_quality_gate_ready planned_query_count=20 self_test=pass live_external_search_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_hit_rate_output_quality_gate=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_full_coverage_markdown_drift_monitor.py",
+      "id": "full_coverage_markdown_drift_monitor",
+      "output_tail": "agent_reach_full_coverage_markdown_drift_monitor=pass status=full_coverage_markdown_drift_monitor_pass marker_coverage=1.0 live_external_search_invoked=false",
+      "passed": true,
+      "required": "agent_reach_full_coverage_markdown_drift_monitor=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_review_queue_bridge_readiness.py",
+      "id": "p9_review_queue_bridge_readiness",
+      "output_tail": "agent_reach_p9_review_queue_bridge_readiness=pass status=p9_review_queue_bridge_readiness_ready preview_items=20 query_coverage=1.0 topic_coverage=1.0 review_queue_created=false",
+      "passed": true,
+      "required": "agent_reach_p9_review_queue_bridge_readiness=pass",
+      "returncode": 0
+    }
+  ],
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "evidence_statuses": {
+    "docs/harness/evidence/agent-reach-full-coverage-markdown-drift-monitor-20260626.json": "full_coverage_markdown_drift_monitor_pass",
+    "docs/harness/evidence/agent-reach-p9-hit-rate-output-quality-gate-20260626.json": "p9_hit_rate_output_quality_gate_ready",
+    "docs/harness/evidence/agent-reach-p9-hit-rate-runner-readiness-20260626.json": "p9_hit_rate_runner_readiness_ready",
+    "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-precheck-20260626.json": "p9_priority_target_hit_rate_precheck_ready",
+    "docs/harness/evidence/agent-reach-p9-review-queue-bridge-readiness-20260626.json": "p9_review_queue_bridge_readiness_ready"
+  },
+  "id": "agent-reach-p9-live-execution-readiness-closure-20260626",
+  "live_external_search_invoked": false,
+  "mode": "authorization_pre_execution_closure",
+  "non_claims": [
+    "readiness_closure_only",
+    "not_live_search_invoked",
+    "not_p9_live_run_completed",
+    "not_review_queue_created",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "p9_live_run_completed": false,
+  "post_live_validation_commands": [
+    "python3 tools/kds-sync/validate_agent_reach_p9_hit_rate_output_quality_gate.py --validate-report",
+    "python3 tools/kds-sync/validate_agent_reach_p9_review_queue_bridge_readiness.py",
+    "python3 tools/kds-sync/loop_document_gate.py"
+  ],
+  "ready_components": [
+    "priority_target_hit_rate_precheck",
+    "query_expansion",
+    "domain_boost_source_scoring",
+    "runner_authorization_gate",
+    "output_quality_gate",
+    "markdown_drift_monitor",
+    "review_queue_bridge_preview"
+  ],
+  "remaining_authorization_text": "授权执行 Agent-Reach P9 Priority Target Hit-Rate Live Run",
+  "required_live_command_after_authorization": "python3 tools/kds-sync/run_agent_reach_p9_priority_target_hit_rate.py --auth fixtures/agent-reach/p9-priority-target-hit-rate-authorization.local.json --execute-live --write-evidence",
+  "status": "p9_live_execution_readiness_closure_ready"
+}

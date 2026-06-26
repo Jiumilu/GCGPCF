@@ -57,7 +57,7 @@ def classify(round_id: str) -> str | None:
         return "Project group phase goals"
     if round_id.startswith("GPCF-LOOP"):
         return "LOOP localization/governance"
-    if round_id.startswith("GPCF-UI"):
+    if round_id.startswith(("GPCF-UI", "GPCF-STUDIO", "GPCF-IMPLEMENTATION")):
         return "UI governance and validation"
     if round_id.startswith("GPCF-SESSION"):
         return "Session declaration and mainline"

@@ -1,0 +1,35 @@
+{
+  "allowed_source_direct_methods": [
+    "target_url",
+    "sitemap",
+    "rss",
+    "public_list_page",
+    "site_search_endpoint_without_credentials"
+  ],
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "domain_count": 10,
+  "id": "agent-reach-p9-source-direct-precheck-20260626",
+  "live_external_fetch_invoked": false,
+  "non_claims": [
+    "source_direct_precheck_only",
+    "candidate_only",
+    "not_live_fetch_invoked",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "p0_domain_count": 7,
+  "prior_rework_evidence": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json",
+  "status": "p9_source_direct_precheck_ready",
+  "target_count": 13,
+  "topic_coverage": [
+    "green_supply_chain",
+    "industrial_solid_waste",
+    "phosphogypsum",
+    "zero_waste_city"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "authorization_valid": false,
+  "blocked_status": "blocked_pending_p9_source_direct_authorization",
+  "blocked_steps": [
+    "authorization_intake"
+  ],
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "execution_requested": false,
+  "id": "agent-reach-p9-source-direct-live-closure-runner-readiness-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "blocked_probe_without_live_fetch",
+  "non_claims": [
+    "closure_runner_readiness_only",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "probe": {
+    "command": "python3 tools/kds-sync/run_agent_reach_p9_source_direct_live_closure.py --write-evidence",
+    "output_tail": ": {\n    \"browser_cookie_extraction_invoked\": false,\n    \"credential_written\": false,\n    \"gfis_source_of_record_write_allowed\": false,\n    \"global_mcp_config_write_allowed\": false,\n    \"kds_canonical_write_allowed\": false,\n    \"production_config_write_allowed\": false,\n    \"production_integration_allowed\": false\n  },\n  \"status\": \"blocked_pending_p9_source_direct_authorization\",\n  \"steps\": [\n    {\n      \"command\": \"python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_authorization_intake.py\",\n      \"output_tail\": \"agent_reach_p9_source_direct_live_authorization_intake=pass status=blocked_pending_p9_source_direct_authorization authorization_valid=false live_external_fetch_invoked=false\",\n      \"passed\": true,\n      \"returncode\": 0,\n      \"step\": \"authorization_intake\"\n    }\n  ]\n}",
+    "returncode": 0
+  },
+  "runner": "tools/kds-sync/run_agent_reach_p9_source_direct_live_closure.py",
+  "runner_evidence": "docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-20260626.json",
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_source_direct_live_closure_runner_readiness_pass"
+}

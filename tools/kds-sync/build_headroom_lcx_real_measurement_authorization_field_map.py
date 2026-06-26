@@ -22,6 +22,7 @@ GAP_JSON = EVIDENCE_DIR / "headroom-lcx-real-measurement-gap-matrix-20260623.jso
 REQUEST_JSON = EVIDENCE_DIR / "headroom-lcx-measurement-admission-request-20260622.json"
 PRECHECK_JSON = EVIDENCE_DIR / "headroom-lcx-authorized-measurement-precheck-20260621.json"
 APPROVAL_JSON = EVIDENCE_DIR / "headroom-lcx-approval-instance-precheck-20260622.json"
+SIGNED_BUNDLE_JSON = EVIDENCE_DIR / "headroom-lcx-real-measurement-approval-signed-bundle-20260623.json"
 AUTH_TEMPLATE_MD = EVIDENCE_DIR / "headroom-lcx-authorized-measurement-authorization-template-20260621.md"
 ROLLBACK_MD = EVIDENCE_DIR / "headroom-lcx-rollback-plan-20260622-001.md"
 
@@ -48,6 +49,7 @@ def build_map() -> dict[str, Any]:
     request = load_json(REQUEST_JSON)
     precheck = load_json(PRECHECK_JSON)
     approval = load_json(APPROVAL_JSON)
+    signed_bundle = load_json(SIGNED_BUNDLE_JSON)
     auth_template = read(AUTH_TEMPLATE_MD)
     rollback_text = read(ROLLBACK_MD)
 
@@ -75,8 +77,8 @@ def build_map() -> dict[str, Any]:
         },
         {
             "field": "sanitized_production_token_ledger",
-            "current_value": approval["sanitized_production_token_ledger"],
-            "source_evidence": request["evidence_id"],
+            "current_value": signed_bundle["authorization_fields"]["sanitized_production_token_ledger"],
+            "source_evidence": signed_bundle["evidence_id"],
             "future_runner_input": "sanitized_production_token_ledger",
             "future_action": "allow metadata-only ledger reads for cost replay",
         },

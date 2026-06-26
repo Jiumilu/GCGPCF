@@ -53,6 +53,10 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
    ```bash
    python3 .codex/skills/globalcloud-loop-orchestrator/scripts/loop_git_gate.py .
    ```
+   需要检查项目群 17 仓全量 Git clean 门禁时运行：
+   ```bash
+   python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_git_clean_gate.py
+   ```
    需要检查完整运行门禁时运行：
    ```bash
    python3 .codex/skills/globalcloud-loop-orchestrator/scripts/loop_operational_gates.py .
@@ -65,6 +69,7 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 | 需求到实现到 evidence | `opsx-full-cycle` |
 | 验收、状态裁决 | `globalcloud-harness-governance` |
 | 多智能体并行开发 | `globalcloud-collaborative-dev` |
+| 项目群 17 仓 Git clean、全量 Git 收口、Loop Git clean 门禁 | `globalcloud-project-group-git-clean` |
 | 项目健康评估 | `software-project-assessment` |
 | UI 质量、产品界面、控制塔、工作台、证据页、异常页、AI 对话页、移动端/桌面端界面门禁 | `globalcloud-ui-quality-gate` |
 | PDF/培训资料分析 | `pdf` |

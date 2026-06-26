@@ -1,0 +1,91 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-RESUMED-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-RESUMED-024",
+  "status": "actual_dispatch_later_intent_recorded_details_missing",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Record the user's selection of option 3, authorize_actual_dispatch_later, while preserving the requirement that actual dispatch still needs recipient, channel, payload, and evidence destination details.",
+  "source_evidence": {
+    "blocked_hold": "docs/harness/evidence/codegraph-dev-execution-authorization-blocked-hold-20260626.json",
+    "previous_answer": "docs/harness/evidence/codegraph-dev-execution-dispatch-authorization-answer-20260626.json",
+    "dispatch_authorization_request": "docs/harness/evidence/codegraph-dev-execution-real-input-dispatch-authorization-20260626.json"
+  },
+  "user_answer": {
+    "raw_input": "3",
+    "interpreted_option": "authorize_actual_dispatch_later",
+    "explicit_answer_received": true,
+    "selection_source": "user_message",
+    "answer_recorded": true
+  },
+  "authorization_effect": {
+    "dispatch_direction_authorized": true,
+    "actual_dispatch_authorized": false,
+    "dispatch_precheck_authorized": true,
+    "dispatch_allowed": false,
+    "dispatch_performed": false,
+    "reason_actual_dispatch_not_authorized": "Option 3 requires separate recipient, channel, payload, and evidence destination details before actual dispatch."
+  },
+  "missing_actual_dispatch_details": {
+    "recipient": "",
+    "channel": "",
+    "payload": "",
+    "evidence_destination": "",
+    "sensitive_data_review": false,
+    "rollback_or_cancellation_path": ""
+  },
+  "next_intake_required_fields": [
+    "recipient",
+    "channel",
+    "payload",
+    "evidence_destination",
+    "sensitive_data_review",
+    "rollback_or_cancellation_path"
+  ],
+  "allowed_next_scope": [
+    "dispatch precheck",
+    "payload preview",
+    "recipient and channel confirmation",
+    "evidence destination confirmation",
+    "no-send dry run"
+  ],
+  "forbidden_until_details_complete": [
+    "actual dispatch",
+    "external API write",
+    "real KDS write",
+    "real WAES write",
+    "production write",
+    "deployment",
+    "git commit",
+    "git push",
+    "business status upgrade"
+  ],
+  "decision": {
+    "resume_status": "resumed_by_user_answer_3",
+    "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-DISPATCH-PRECHECK-DETAIL-INTAKE-025",
+    "goal_complete": false,
+    "status_ceiling": "partial"
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "actual_dispatch_authorized": false,
+    "dispatch_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_authorization_blocked_hold.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_dispatch_authorization_answer_resumed.py"
+  ]
+}

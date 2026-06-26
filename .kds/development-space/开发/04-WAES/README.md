@@ -1,6 +1,6 @@
 # WAES 开发文档空间
 
-生成日期：2026-06-25
+生成日期：2026-06-27
 
 用途：KDS `开发` 空间中 `WAES` 项目的受控文档入口。
 
@@ -14,6 +14,7 @@
 | GPCF-DOC-DB81495EC4 | 宪衡专项连接器阻断与状态链样本 | 08-evidence-samples/宪衡专项连接器阻断与状态链样本.md | controlled |
 | GPCF-DOC-7ACBAC23C6 | 数枢专项运行前样本收集记录 | 08-evidence-samples/数枢专项运行前样本收集记录.md | controlled |
 | GPCF-DOC-B2E453D9F1 | 知源专项运行前样本收集记录 | 08-evidence-samples/知源专项运行前样本收集记录.md | controlled |
+| GPCF-DOC-37DD68363F | AGENTS | AGENTS.md | controlled |
 | GPCF-DOC-04C744A2DC | WAES | docs/harness/WAES/README.md | controlled |
 | GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | controlled |
 | GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | controlled |

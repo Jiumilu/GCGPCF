@@ -1,6 +1,6 @@
 # GPC 开发文档空间
 
-生成日期：2026-06-25
+生成日期：2026-06-27
 
 用途：KDS `开发` 空间中 `GPC` 项目的受控文档入口。
 
@@ -37,6 +37,7 @@
 | GPCF-DOC-B637BE22F8 | GPC | docs/harness/GPC/README.md | controlled |
 | GPCF-DOC-61C2D40981 | evidence | docs/harness/GPC/evidence/README.md | controlled |
 | GPCF-DOC-6AA1BB56F0 | Evidence Index — GPC | docs/harness/GPC/evidence/evidence-index.md | controlled |
+| GPCF-DOC-84431522D2 | GPC Evidence/Browser 修复与边界证据 2026-06-25 | docs/harness/GPC/evidence/gpc-evidence-browser-repair-20260625.md | controlled |
 | GPCF-DOC-GPC-REAL-RUNTIME-BASELINE-20260624 | GPC 真实运行基线证据 2026-06-24 | docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-556B3EE58F | loop-state | docs/harness/GPC/loop-state.md | controlled |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | controlled |

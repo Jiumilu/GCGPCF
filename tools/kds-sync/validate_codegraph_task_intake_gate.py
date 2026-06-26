@@ -42,6 +42,8 @@ def read(path: Path) -> str:
 
 
 def load_json(path: Path) -> dict[str, Any]:
+    if not path.is_absolute():
+        path = ROOT / path
     return json.loads(read(path))
 
 

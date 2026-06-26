@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-06-25
+生成日期：2026-06-27
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -316,12 +316,15 @@
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | controlled |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | controlled |
 | GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | controlled |
+| GPCF-DOC-KDS-BRAIN-REPORT-HOLD-REVIEW-20260625 | KDS Brain Report Hold Review 证据 2026-06-25 | docs/harness/KDS/evidence/kds-brain-report-hold-review-20260625.md | controlled |
 | GPCF-DOC-KDS-RAG-EXPORT-REPAIR-20260625 | KDS RAG export 修复证据 2026-06-25 | docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md | controlled |
 | GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | KDS 真实运行基线证据 2026-06-24 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | controlled |
 | GPCF-DOC-19C33DD1F8 | GlobalCloud KDS Loop State | docs/harness/KDS/loop-state.md | controlled |
 | GPCF-DOC-F54729C154 | loops | docs/harness/KDS/loops/README.md | controlled |
 | GPCF-DOC-8DA5979C40 | Loop Round GPCF-KD-LR-001 | docs/harness/KDS/loops/loop-round-GPCF-KD-LR-001.md | controlled |
 | GPCF-DOC-F99E5285C9 | Harness 工程说明 | docs/harness/README.md | controlled |
+| GPCF-DOC-CA7902060F | evidence | docs/harness/SOP/evidence/README.md | controlled |
+| GPCF-DOC-SOP-SCENARIO-OWNER-REVIEW-20260625 | SOP 场景生成物 Owner Review 证据 2026-06-25 | docs/harness/SOP/evidence/sop-scenario-owner-review-20260625.md | controlled |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | controlled |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | controlled |
@@ -329,6 +332,7 @@
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | Agent-Reach Candidate Quality Regression Gate 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-TREND-20260622 | Agent-Reach Candidate Quality Trend Baseline 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-trend-baseline-20260622.md | controlled |
 | GPCF-DOC-CADCE617E6 | Agent-Reach Exa local pilot evidence | docs/harness/evidence/agent-reach-exa-local-pilot-20260620.md | controlled |
+| GPCF-DOC-AGENT-REACH-FULL-COVERAGE-MARKDOWN-DRIFT-MONITOR-20260626 | Agent-Reach Full Coverage Markdown 漂移监控 2026-06-26 | docs/harness/evidence/agent-reach-full-coverage-markdown-drift-monitor-20260626.md | controlled |
 | GPCF-DOC-AGENT-REACH-GREEN-SUPPLY-CHAIN-PRIORITY-TARGETS-20260623 | Agent-Reach 绿色供应链重点搜索对象证据 2026-06-23 | docs/harness/evidence/agent-reach-green-supply-chain-priority-search-targets-20260623.md | controlled |
 | GPCF-DOC-AGENT-REACH-P1-ISOLATED-INSTALL-20260622 | Agent-Reach P1 隔离安装证据 2026-06-22 | docs/harness/evidence/agent-reach-p1-isolated-install-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P2-CONTROLLED-ADAPTER-20260622 | Agent-Reach P2 受控 Adapter Skeleton 证据 2026-06-22 | docs/harness/evidence/agent-reach-p2-controlled-adapter-skeleton-20260622.md | controlled |
@@ -355,6 +359,37 @@
 | GPCF-DOC-AGENT-REACH-P8-OPERATOR-HANDOFF-20260623 | Agent-Reach P8 Operator Handoff 2026-06-23 | docs/harness/evidence/agent-reach-p8-operator-handoff-20260623.md | controlled |
 | GPCF-DOC-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-20260622 | Agent-Reach P8 查询质量预检证据 2026-06-22 | docs/harness/evidence/agent-reach-p8-query-quality-preflight-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-P8-REWORK-QUEUE-20260622 | Agent-Reach P8 返工队列证据 2026-06-22 | docs/harness/evidence/agent-reach-p8-rework-queue-20260622.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-HIT-RATE-OUTPUT-QUALITY-GATE-20260626 | Agent-Reach P9 命中率输出质量门禁 2026-06-26 | docs/harness/evidence/agent-reach-p9-hit-rate-output-quality-gate-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-HIT-RATE-RUNNER-READINESS-20260626 | Agent-Reach P9 命中率 Runner 就绪证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-hit-rate-runner-readiness-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-LIVE-EXECUTION-READINESS-CLOSURE-20260626 | Agent-Reach P9 Live Execution Readiness Closure 2026-06-26 | docs/harness/evidence/agent-reach-p9-live-execution-readiness-closure-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-OBJECTIVE-COMPLETION-AUDIT-20260626 | Agent-Reach P9 Objective Completion Audit 2026-06-26 | docs/harness/evidence/agent-reach-p9-objective-completion-audit-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-OBJECTIVE-POST-LIVE-PATH-SIM-20260626 | Agent-Reach P9 Objective Post-Live Path Simulation 2026-06-26 | docs/harness/evidence/agent-reach-p9-objective-post-live-path-simulation-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-PRIORITY-TARGET-HIT-RATE-LIVE-RUN-20260626 | Agent-Reach P9 重点对象命中率运行证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-live-run-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-PRIORITY-TARGET-HIT-RATE-PRECHECK-20260626 | Agent-Reach P9 重点对象命中率预检证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-precheck-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-PRIORITY-TARGET-HIT-RATE-LIVE-RUN-20260626 | Agent-Reach P9 重点对象命中率运行证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-RERUN-AUTHORIZATION-REQUEST-20260626 | Agent-Reach P9R Live Rerun 授权请求 2026-06-26 | docs/harness/evidence/agent-reach-p9-rerun-authorization-request-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-RERUN-REWORK-CLASSIFICATION-20260626 | Agent-Reach P9R Rerun Rework Classification 2026-06-26 | docs/harness/evidence/agent-reach-p9-rerun-rework-classification-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-REVIEW-QUEUE-BRIDGE-READINESS-20260626 | Agent-Reach P9 Review Queue Bridge 就绪证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-review-queue-bridge-readiness-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-AUTH-FILE-SAFETY-20260626 | Agent-Reach P9S Source Direct Authorization File Safety 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-authorization-file-safety-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-AUTH-HANDOFF-20260626 | Agent-Reach P9S Source Direct Authorization Handoff Pack 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-authorization-handoff-pack-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-AUTHORIZATION-NEGATIVE-FIXTURES-20260626 | Agent-Reach P9S Source Direct Authorization Negative Fixtures 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-authorization-negative-fixtures-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-AUTHORIZATION-REQUEST-20260626 | Agent-Reach P9S Source Direct 授权请求 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-authorization-request-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-AUTHORIZATION-TEMPLATE-20260626 | Agent-Reach P9S Source Direct Authorization Template 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-authorization-template-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-HIT-RATE-LIVE-RUN-20260626 | Agent-Reach P9S Source Direct 命中率运行证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-AUTHORIZATION-INTAKE-20260626 | Agent-Reach P9S Source Direct Live Authorization Intake 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-authorization-intake-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-CLOSURE-AUTH-GATE-20260626 | Agent-Reach P9S Source Direct Live Closure Authorization Gate 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-closure-authorization-gate-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-CLOSURE-RUNNER-20260626 | Agent-Reach P9S Source Direct Live Closure Runner 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-CLOSURE-RUNNER-READINESS-20260626 | Agent-Reach P9S Source Direct Live Closure Runner Readiness 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-readiness-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-EXECUTION-COMMAND-PACK-20260626 | Agent-Reach P9S Source Direct Live Execution Command Pack 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-execution-command-pack-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-EXECUTION-READINESS-CLOSURE-20260626 | Agent-Reach P9S Source Direct Live Execution Readiness Closure 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-execution-readiness-closure-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-MARKDOWN-DRIFT-MONITOR-20260626 | Agent-Reach P9S Source Direct Markdown Drift Monitor 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-markdown-drift-monitor-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-OFFLINE-HIT-RATE-SIMULATION-20260626 | Agent-Reach P9S Source Direct Offline Hit-Rate Simulation 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-offline-hit-rate-simulation-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-OUTPUT-QUALITY-GATE-20260626 | Agent-Reach P9S Source Direct 输出质量门禁 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-output-quality-gate-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-PRE-LIVE-PREFLIGHT-20260626 | Agent-Reach P9S Source Direct Pre-Live Preflight 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-pre-live-preflight-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-PRECHECK-20260626 | Agent-Reach P9S Source Direct 预检证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-precheck-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-REVIEW-QUEUE-BRIDGE-READINESS-20260626 | Agent-Reach P9S Source Direct Review Queue Bridge 就绪证据 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-review-queue-bridge-readiness-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-RUNNER-READINESS-20260626 | Agent-Reach P9S Source Direct Runner Readiness 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-runner-readiness-20260626.md | controlled |
+| GPCF-DOC-AGENT-REACH-P9-WEB-PROVIDER-FALLBACK-20260626 | Agent-Reach P9 Web Provider Fallback 离线验证 2026-06-26 | docs/harness/evidence/agent-reach-p9-web-provider-fallback-20260626.md | controlled |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-OUTPUT-QUALITY-GATE-20260622 | Agent-Reach 项目群全量真实搜索覆盖输出质量门禁 2026-06-22 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-output-quality-gate-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-20260622 | Agent-Reach Project Group Full Live Coverage Plan 2026-06-22 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-plan-20260622.md | controlled |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-20260622 | Agent-Reach Project Group Search Readiness Audit 2026-06-22 | docs/harness/evidence/agent-reach-project-group-search-readiness-audit-20260622.md | controlled |
@@ -371,12 +406,26 @@
 | GPCF-DOC-7797BB4F55 | 基础知识人工确认模板 | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | controlled |
 | GPCF-DOC-C13F879695 | 基础知识回写候选账本 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | controlled |
 | GPCF-DOC-4E29A86D95 | CodeGraph Brain/GFIS 授权边界复核 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-20260626 | CodeGraph 开发执行层收益证明 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-benefit-proof-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-20260626 | CodeGraph 开发执行层收益回归监控 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-benefit-regression-watch-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-20260623 | CodeGraph 业务开发执行窗口授予证据 | docs/harness/evidence/codegraph-dev-execution-business-execution-window-grant-20260623.md | controlled |
 | GPCF-DOC-4F4A3C1C9E | CodeGraph 业务任务 Intake 008 | docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-AUTHORIZATION-ANSWER-RESUMED-20260626 | CodeGraph 开发执行层派发授权回答恢复记录 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-dispatch-authorization-answer-resumed-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-PRECHECK-DETAIL-INTAKE-20260626 | CodeGraph 开发执行层派发预检详情 Intake 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-dispatch-precheck-detail-intake-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-SENSITIVE-REVIEW-20260626 | CodeGraph 开发执行层派发敏感数据审查 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-dispatch-sensitive-review-20260626.md | controlled |
+| GPCF-DOC-F787D5A4F3 | CodeGraph 首个真实候选授权执行 | docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorized-20260622.md | controlled |
+| GPCF-DOC-68559C2B7E | GFIS Residual Drift Evidence | docs/harness/evidence/codegraph-dev-execution-gfis-residual-drift-20260622.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-20260626 | CodeGraph 开发执行层目标完成度审计 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-goal-completion-audit-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-NO-SEND-DISPATCH-PRECHECK-20260626 | CodeGraph 开发执行层 No-send 派发预检 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-no-send-dispatch-precheck-20260626.md | controlled |
 | GPCF-DOC-C4EB23909A | CodeGraph 业务开发执行层 Pilot Pack 证据 | docs/harness/evidence/codegraph-dev-execution-pilot-pack-20260622.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-20260626 | CodeGraph 开发执行层真实输入授权等待态 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-authorization-waiting-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-COLLECTION-PACK-20260626 | CodeGraph 开发执行层真实输入采集包 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-collection-pack-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-AUTHORIZATION-20260626 | CodeGraph 开发执行层真实输入派发授权请求 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-dispatch-authorization-20260626.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-READINESS-20260626 | CodeGraph 开发执行层真实输入准入验证 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-real-input-readiness-20260626.md | controlled |
 | GPCF-DOC-F77CE8F66C | CodeGraph 开发执行层稳态监控证据 | docs/harness/evidence/codegraph-dev-execution-steady-state-monitor-20260622.md | controlled |
 | GPCF-DOC-2B8C8B68C2 | CodeGraph watchlist 授权包 | docs/harness/evidence/codegraph-dev-execution-watchlist-authorization-pack-20260622.md | controlled |
 | GPCF-DOC-1EC63249AE | CodeGraph 开发执行层 watchlist 漂移分诊证据 | docs/harness/evidence/codegraph-dev-execution-watchlist-drift-triage-20260622.md | controlled |
+| GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-20260626 | CodeGraph 开发态正常工作验证 2026-06-26 | docs/harness/evidence/codegraph-development-state-normal-work-20260626.md | controlled |
 | GPCF-DOC-43BA653EFB | CodeGraph Drift Alert Thresholds Evidence | docs/harness/evidence/codegraph-drift-alert-thresholds-20260621.md | controlled |
 | GPCF-DOC-82A9FD6319 | CodeGraph Impact Metrics Baseline Evidence | docs/harness/evidence/codegraph-impact-metrics-baseline-20260621.md | controlled |
 | GPCF-DOC-DCD5E4AA37 | CodeGraph Impact Regression Watch Evidence | docs/harness/evidence/codegraph-impact-regression-watch-20260621.md | controlled |
@@ -399,10 +448,53 @@
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622 | GCKF P0 收口包候选证据 D124 | docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETPRECHECKD12320260622 | GCKF P0 收口包预检查证据 D123 | docs/harness/evidence/gckf-p0-closure-packet-precheck-d123-20260622.md | controlled |
-| GPCF-DOC-2A3503A859 | GCKF P0 正式 evidence 委员会受理确认 notification receipt aggregation repair request intake acknowledgement preview 当前态证据 D176 | docs/harness/evidence/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-intake-acknowledgement-preview-current-state-d176-20260622.md | controlled |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS 负责人回执任务台账 | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | controlled |
 | GPCF-DOC-3FAF2E3718 | GFIS WAS Source Record Admission Gate Evidence | docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.md | controlled |
+| GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626 | GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26 | docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群授权项执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群授权项执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-environment-readiness-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-ROUTING-20260625 | GlobalCloud 项目群授权路由证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626 | GlobalCloud 项目群当前真实状态基线刷新 2026-06-26 | docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-DEPENDENCY-EXECUTION-MATRIX-20260625 | GlobalCloud 项目群依赖执行矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md | controlled |
+| GPCF-DOC-DEV-P0-BLOCKER-REDUCTION-20260626 | GlobalCloud 项目群开发态 P0 阻点消减证据 | docs/harness/evidence/globalcloud-project-group-dev-p0-blocker-reduction-20260626.md | controlled |
+| GPCF-DOC-DEV-P0-DIRTY-CLASSIFICATION-20260626 | GlobalCloud 项目群开发态 P0-A Dirty 分类证据 | docs/harness/evidence/globalcloud-project-group-dev-p0-dirty-classification-20260626.md | controlled |
+| GPCF-DOC-DEV-P0-PROJECT-VALIDATION-20260626 | GlobalCloud 项目群开发态 P0-B 项目级最小验证证据 | docs/harness/evidence/globalcloud-project-group-dev-p0-project-validation-20260626.md | controlled |
+| GPCF-DOC-DEV-TASK-QUEUE-20260626 | GlobalCloud 项目群开发态任务队列 | docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-DIRTY-CLASSIFICATION-20260625 | GlobalCloud 项目群 Dirty 变更分类证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dirty-classification-20260625.md | controlled |
+| GPCF-DOC-DIRTY-CLASSIFICATION-P0A-20260626 | GlobalCloud 项目群 P0-A Dirty 分类证据 | docs/harness/evidence/globalcloud-project-group-dirty-classification-p0a-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-DIRTY-DISPOSITION-QUEUE-20260625 | GlobalCloud 项目群 Dirty 仓逐仓处置队列 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dirty-disposition-queue-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-DIRTY-DISPOSITION-QUEUE-POST-SCHEME-RECOGNITION-20260626 | GlobalCloud 项目群 Dirty 仓逐仓处置队列｜方案识别规则写入后 2026-06-26 | docs/harness/evidence/globalcloud-project-group-dirty-disposition-queue-post-scheme-recognition-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-EXECUTION-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群真实执行授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-EXECUTION-AUTHORIZATION-RECEIPT-TEMPLATE-20260626 | GlobalCloud 项目群真实执行授权确认回执模板 2026-06-26 | docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-template-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-FIRST-EXECUTION-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群第一批真实执行授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-FULL-PROJECT-BASELINE-20260625 | GlobalCloud 项目群全量项目真实状态基线 2026-06-25 | docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-GIT-CLEAN-20260625 | GlobalCloud 项目群 17 仓 Git Clean 门禁证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-git-clean-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-HUMAN-CONFIRMATION-REQUEST-20260625 | GlobalCloud 项目群提交前人工确认请求包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-KDS-DIFFCHECK-BLOCKER-20260626 | GlobalCloud 项目群 KDS Diff Check 阻塞证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-kds-diffcheck-blocker-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626 | GlobalCloud 项目群 KDS Diff Check Cleanup 授权命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-kds-diffcheck-cleanup-command-pack-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-LIVE-STATUS-SNAPSHOT-20260626 | GlobalCloud 项目群 Live 状态快照 2026-06-26 | docs/harness/evidence/globalcloud-project-group-live-status-snapshot-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-LOOP-GATE-READINESS-PASS-20260626 | GlobalCloud 项目群 Loop Gate Readiness Pass 证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-loop-gate-readiness-pass-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-LOOP-SESSION-REGISTRY-REWORK-20260626 | GlobalCloud 项目群 Loop Session Registry Rework 包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-loop-session-registry-rework-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-EXECUTABLE-TASK-PACKS-20260625 | GlobalCloud 项目群下一批可执行任务包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-DECISION-BOARD-20260626 | GlobalCloud 项目群下一阶段授权决策板 2026-06-26 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-OPERATIONAL-BLOCKER-RESOLUTION-MATRIX-20260626 | GlobalCloud 项目群运行门禁阻塞解除矩阵 | docs/harness/evidence/globalcloud-project-group-operational-blocker-resolution-matrix-20260626.md | controlled |
+| GPCF-DOC-P0B-PROJECT-VALIDATION-20260626 | GlobalCloud 项目群 P0-B 项目级验证复跑证据 | docs/harness/evidence/globalcloud-project-group-p0b-project-validation-20260626.md | controlled |
+| GPCF-DOC-P0C-MINIMAL-VALIDATION-20260626 | GlobalCloud 项目群 P0-C 剩余项目最小验证证据 | docs/harness/evidence/globalcloud-project-group-p0c-minimal-validation-20260626.md | controlled |
+| GPCF-DOC-P0D-REVIEW-QUEUE-20260626 | GlobalCloud 项目群 P0-D 开发态 Review Queue 拆分证据 | docs/harness/evidence/globalcloud-project-group-p0d-review-queue-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群 Post-Scheme Review 授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Post-Scheme Review 执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-pre-execution-command-pack-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群方案识别规则写入后 Review 授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-review-authorization-request-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626 | GlobalCloud 项目群 Ready for Review 推进队列 2026-06-26 | docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-COMPLETION-GAP-MATRIX-20260626 | GlobalCloud 项目群真实执行治理完成度与剩余缺口矩阵 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-PROGRESS-20260626 | GlobalCloud 项目群真实执行治理推进证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-OBJECTIVE-COVERAGE-AUDIT-20260626 | GlobalCloud 项目群真实执行治理目标覆盖审计 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REVIEW-PACKAGES-20260625 | GlobalCloud 项目群提交前 Review 分组证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-review-packages-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-STATUS-ADVANCEMENT-MATRIX-20260625 | GlobalCloud 项目群状态推进判定矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群 Wave 1 授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群 Wave 1 真实执行授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md | controlled |
 | GPCF-DOC-48474E7AEE | Governance OKF v0.1 Derived Bundle Report | docs/harness/evidence/governance-okf-v01-bundle-report-20260620.md | controlled |
 | GPCF-DOC-03FE63E1D0 | Headroom Controlled Metric Pilot Evidence | docs/harness/evidence/headroom-controlled-metric-pilot-20260621.md | controlled |
 | GPCF-DOC-78C4270FD2 | Headroom Cost Measurement Output Evidence | docs/harness/evidence/headroom-cost-measurement-output-20260621.md | controlled |
@@ -427,13 +519,23 @@
 | GPCF-DOC-HEADROOM-LCX-PROJECT-GROUP-SANITIZED-FIXTURE-20260622 | Headroom LCX Project Group Sanitized Fixture Evidence | docs/harness/evidence/headroom-lcx-project-group-sanitized-fixture-20260622.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622 | Headroom LCX Readiness Pilot Authorization Package | docs/harness/evidence/headroom-lcx-readiness-pilot-authorization-package-20260622.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623 | Headroom LCX Real Measurement Approval Signed Bundle Evidence | docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-20260623 | Headroom LCX Real Measurement Authorization Chain Replay Evidence | docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623 | Headroom LCX 真实测量授权窗口授予证据 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-grant-20260623.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623 | Headroom LCX 真实测量授权窗口请求证据 | docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-AUTHORIZATION-RECEIPT-TEMPLATE-20260623 | Headroom LCX Real Measurement External Authorization Receipt Template | docs/harness/evidence/headroom-lcx-real-measurement-external-authorization-receipt-template-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-COMPLETION-PACKAGE-20260623 | Headroom LCX Real Measurement External Receipt Completion Package | docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-completion-package-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-HUMAN-FILL-REQUEST-20260623 | Headroom LCX Real Measurement External Receipt Human Fill Request | docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-human-fill-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-INTAKE-20260623 | Headroom LCX Real Measurement External Receipt Intake Evidence | docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-intake-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-NEGATIVE-FIXTURES-20260623 | Headroom LCX Real Measurement External Receipt Negative Fixtures | docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-negative-fixtures-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-PRECHECK-20260623 | Headroom LCX Real Measurement External Receipt Precheck Evidence | docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-precheck-20260623.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623 | Headroom LCX Real Measurement Next-Stage Authorization Package Evidence | docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.md | controlled |
 | GPCF-DOC-666816F27E | Headroom LCX Rollback Plan 20260622-001 | docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | controlled |
 | GPCF-DOC-A1E6CF72D2 | Headroom LCX Sanitized Measurement Dry Run Evidence 20260622 | docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Headroom LCX Sanitized Token Fixture Extension Evidence | docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | controlled |
 | GPCF-DOC-0EF0B535FC | Headroom LCX Session Summary Declaration Boundary Evidence | docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-20260623 | Headroom LCX WAES Harness Final Receipt Decision Human Fill Request | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-human-fill-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623 | Headroom LCX WAES Harness Final Receipt Decision Request | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.md | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-20260623 | Headroom LCX WAES Harness Final Receipt Decision Response Template | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-response-template-20260623.md | controlled |
 | GPCF-DOC-0058E113EE | Headroom Loop Cost Observation Evidence | docs/harness/evidence/headroom-loop-cost-observation-20260621.md | controlled |
 | GPCF-DOC-C82995EACD | Headroom Loop Cost Observation Series Evidence | docs/harness/evidence/headroom-loop-cost-observation-series-20260621.md | controlled |
 | GPCF-DOC-BEAC22ACA5 | Headroom Marker Preservation Policy Evidence | docs/harness/evidence/headroom-marker-preservation-policy-20260621.md | controlled |
@@ -521,6 +623,7 @@
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | controlled |
 | GPCF-DOC-1F8C4D6B21 | Session Mainline Preflight Enforcement 20260622 | docs/harness/evidence/session-mainline-preflight-enforcement-20260622.md | controlled |
+| GPCF-EVIDENCE-STUDIO-WAES-WORKBENCH-THREE-OPTION-DESIGN-20260626 | Studio WAES Workbench Three Option Design Evidence | docs/harness/evidence/studio-waes-workbench-three-option-design-20260626.md | controlled |
 | GPCF-DOC-35411435D9 | WAS Completion Audit Evidence | docs/harness/evidence/was-completion-audit-20260621.md | controlled |
 | GPCF-DOC-FE2C0C050F | WAS Loop Context Coverage Refresh Evidence | docs/harness/evidence/was-loop-context-coverage-refresh-20260621.md | controlled |
 | GPCF-DOC-1F4A26731F | WAS Project Group Admission Evidence | docs/harness/evidence/was-project-group-admission-20260621.md | controlled |
@@ -634,6 +737,7 @@
 | GPCF-DOC-1F7DEFD3F1 | WAS Scenario Profile Matrix Evidence | docs/harness/evidence/was-scenario-profile-matrix-20260621.md | controlled |
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | controlled |
 | GPCF-DOC-A1617A5806 | WAS-Ontology WAES/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md | controlled |
+| GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | controlled |
 | GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | controlled |
 | GPCF-DOC-2A9E353FAE | 跨项目 readiness scorecard | docs/harness/gpcf-cross-project-readiness-scorecard-lr028.md | controlled |

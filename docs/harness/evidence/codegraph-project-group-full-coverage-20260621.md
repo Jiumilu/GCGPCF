@@ -27,8 +27,8 @@ superseded_by: []
 | repo_count | 14 |
 | indexed_repo_count | 14 |
 | git_protected_repo_count | 14 |
-| up_to_date_repo_count | 10 |
-| pending_sync_repo_count | 3 |
+| up_to_date_repo_count | 8 |
+| pending_sync_repo_count | 5 |
 | policy_exception_repo_count | 1 |
 | codegraph_git_status_entries_total | 0 |
 | GlobalCloud Studio included | true |
@@ -39,13 +39,13 @@ superseded_by: []
 
 | 项目 | index_status | files | nodes | edges | pending_total | .codegraph git entries |
 |---|---|---:|---:|---:|---:|---:|
-| GlobalCloud GFIS | policy_exception | 1022 | 13152 | 38142 | 0 | 0 |
+| GlobalCloud GFIS | policy_exception | 1022 | 13152 | 38131 | 0 | 0 |
 | GlobalCloud GPC | up_to_date | 70 | 705 | 1995 | 0 | 0 |
-| GlobalCloud PVAOS | up_to_date | 604 | 8899 | 28838 | 0 | 0 |
+| GlobalCloud PVAOS | pending_sync | 604 | 8899 | 28838 | 1 | 0 |
 | GlobalCloud WAES | up_to_date | 281 | 3511 | 11298 | 0 | 0 |
 | GlobalCloud KDS | up_to_date | 518 | 3499 | 7115 | 0 | 0 |
 | GlobalCloud Brain | pending_sync | 153 | 2594 | 6071 | 0 | 0 |
-| GlobalCloud PKC | up_to_date | 110 | 1034 | 2685 | 0 | 0 |
+| GlobalCloud PKC | pending_sync | 110 | 1034 | 2685 | 1 | 0 |
 | GlobalCloud XiaoC | up_to_date | 1176 | 15520 | 64515 | 0 | 0 |
 | GlobalCloud XGD | up_to_date | 181 | 3645 | 9914 | 0 | 0 |
 | GlobalCloud XiaoG | up_to_date | 752 | 13943 | 45987 | 0 | 0 |

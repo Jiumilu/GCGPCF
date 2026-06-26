@@ -16,6 +16,12 @@ supersedes: []
 superseded_by: []
 ---
 
+## 项目群主方案继承声明
+
+本项目总体方案继承《GlobalCloud 项目群总体方案》。
+本项目实施方案继承《GlobalCloud 项目群实施方案》。
+若本项目方案与项目群主方案冲突，以项目群主方案为准，并触发回传与协同修订。
+
 # GlobalCloud GPCF 总体方案
 
 ## 1. 项目定位

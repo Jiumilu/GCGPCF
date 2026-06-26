@@ -1,0 +1,48 @@
+{
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-output-quality-gate-20260626",
+  "live_external_fetch_invoked": false,
+  "non_claims": [
+    "gate_readiness_only",
+    "not_live_fetch_invoked",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "planned_target_count": 13,
+  "status": "p9_source_direct_output_quality_gate_ready",
+  "topics": [
+    "green_supply_chain",
+    "industrial_solid_waste",
+    "phosphogypsum",
+    "zero_waste_city"
+  ],
+  "validator_checks": {
+    "allows_noncritical_discovery_fetch_errors_when_threshold_passes": true,
+    "blocks_credential_leak": true,
+    "blocks_critical_fetch_errors": true,
+    "blocks_forbidden_claims": true,
+    "blocks_raw_payload_persistence": true,
+    "requires_allowed_content_type": true,
+    "requires_authorization_valid": true,
+    "requires_business_field_mapping": true,
+    "requires_candidate_only_non_claims": true,
+    "requires_completed_status": true,
+    "requires_discovery_rank": true,
+    "requires_execution_requested": true,
+    "requires_four_topic_reports": true,
+    "requires_keyword_hit_per_topic": true,
+    "requires_live_external_fetch_invoked": true,
+    "requires_markdown_candidate_only_marker": true,
+    "requires_markdown_non_claim_marker": true,
+    "requires_p0_hit_per_topic": true,
+    "requires_requested_and_final_url": true,
+    "requires_retry_count": true,
+    "requires_source_direct_candidate_schema": true,
+    "requires_topic_coverage_one": true,
+    "self_test_passed_without_network": true
+  }
+}

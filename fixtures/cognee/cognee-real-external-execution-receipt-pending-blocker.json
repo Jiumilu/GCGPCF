@@ -1,0 +1,27 @@
+{
+  "blocker_id": "COGNEE-REAL-EXT-RECEIPT-PENDING-BLOCKER-20260626-001",
+  "blocker_scope": "cognee_gap_001_real_external_execution_receipt_pending",
+  "source_submission_request": "docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md",
+  "source_update_patch_plan": "docs/harness/evidence/cognee-real-external-execution-receipt-update-patch-plan-20260626.md",
+  "blocked_gap_id": "COGNEE-FULL-RUN-GAP-001",
+  "blocked_reason": "real_external_execution_receipt_not_received",
+  "required_unblock_artifacts": [
+    "REAL_RECEIPT_REF",
+    "REAL_RECEIPT_ID",
+    "EXECUTED_AT",
+    "EXECUTION_COUNTS",
+    "ROLLBACK_STATUS",
+    "OPERATOR_NOTE"
+  ],
+  "unblock_commands": [
+    "python3 tools/kds-sync/validate_cognee_real_external_execution_receipt_intake.py --require-real-receipt",
+    "python3 tools/kds-sync/validate_cognee_full_run_readiness_rollup.py"
+  ],
+  "blocker_status": "blocked_pending_real_receipt",
+  "gap_001_ready": false,
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

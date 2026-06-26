@@ -48,7 +48,7 @@ superseded_by: []
 | authorized_window_id | LCX-MEASURE-20260622-001 | authorized_window_id | precheck_only |
 | authorized_by | lujunxiang / GPCF owner | authorized_by | precheck_only |
 | authorized_at | 2026-06-22T08:42:06+08:00 | authorized_at | precheck_only |
-| sanitized_production_token_ledger | fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json | sanitized_production_token_ledger | precheck_only |
+| sanitized_production_token_ledger | docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json | sanitized_production_token_ledger | precheck_only |
 | rollback_plan_id | HEADROOM-LCX-ROLLBACK-PLAN-20260622-001 | rollback_plan_id | precheck_only |
 | waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck | waes_harness_admission_decision | precheck_only |
 

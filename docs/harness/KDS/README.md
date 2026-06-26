@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FB255EAED0
 title: KDS
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAES, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/KDS/README.md
 source_path: docs/harness/KDS/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -39,6 +39,7 @@ KDS 空间：`开发`
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | KDS | controlled |
 | GPCF-DOC-ADEB250FC7 | evidence | docs/harness/KDS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-0749030BBD | evidence-index | docs/harness/KDS/evidence/evidence-index.md | KDS | controlled |
+| GPCF-DOC-KDS-BRAIN-REPORT-HOLD-REVIEW-20260625 | KDS Brain Report Hold Review 证据 2026-06-25 | docs/harness/KDS/evidence/kds-brain-report-hold-review-20260625.md | KDS | controlled |
 | GPCF-DOC-KDS-RAG-EXPORT-REPAIR-20260625 | KDS RAG export 修复证据 2026-06-25 | docs/harness/KDS/evidence/kds-rag-export-repair-20260625.md | KDS | controlled |
 | GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624 | KDS 真实运行基线证据 2026-06-24 | docs/harness/KDS/evidence/kds-real-runtime-baseline-20260624.md | KDS | controlled |
 | GPCF-DOC-19C33DD1F8 | GlobalCloud KDS Loop State | docs/harness/KDS/loop-state.md | KDS | controlled |

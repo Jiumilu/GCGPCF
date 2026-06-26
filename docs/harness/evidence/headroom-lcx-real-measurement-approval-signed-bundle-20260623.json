@@ -32,7 +32,7 @@
     "authorized_window_id": "LCX-MEASURE-20260623-001",
     "authorized_by": "lujunxiang / 总架构师",
     "authorized_at": "2026-06-23T14:30:00+08:00",
-    "sanitized_production_token_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
+    "sanitized_production_token_ledger": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
     "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
     "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
   },

@@ -48,6 +48,34 @@
     "integrated": false,
     "production_ready": false
   },
+  "authorization_requirements": {
+    "signature_fields": [
+      "authorized_window_id",
+      "authorized_by",
+      "authorized_at",
+      "sanitized_production_token_ledger",
+      "rollback_plan_id",
+      "waes_harness_admission_decision"
+    ],
+    "runtime_switches": [
+      "open_real_measurement_window",
+      "allow_production_proxy_start",
+      "allow_production_sdk_enablement",
+      "allow_real_KDS_write",
+      "allow_real_external_API_write",
+      "allow_production_token_measurement",
+      "allow_production_admission_gate_true"
+    ],
+    "required_state": {
+      "open_real_measurement_window": false,
+      "allow_production_proxy_start": false,
+      "allow_production_sdk_enablement": false,
+      "allow_real_KDS_write": false,
+      "allow_real_external_API_write": false,
+      "allow_production_token_measurement": false,
+      "allow_production_admission_gate_true": false
+    }
+  },
   "required_next_decision": "open_real_measurement_window",
   "required_next_actions": [
     "obtain explicit human authorization window",

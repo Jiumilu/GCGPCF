@@ -189,6 +189,40 @@
         ],
         "scope": "green_supply_chain_and_solid_waste_resource_utilization",
         "status": "candidate_priority_targets_ready"
+      },
+      {
+        "applies_to_query_ids": [
+          "p8-q05",
+          "p8-q07",
+          "p8-q10",
+          "p8-q12",
+          "p8-q14"
+        ],
+        "fixture": "fixtures/agent-reach/p9-priority-target-hit-rate-precheck-20260626.json",
+        "non_claim": "P9 precheck does not invoke live search and requires separate authorization for hit-rate execution",
+        "priority_topics": [
+          "green_supply_chain",
+          "phosphogypsum",
+          "industrial_solid_waste",
+          "zero_waste_city"
+        ],
+        "scope": "p9_priority_target_hit_rate_precheck",
+        "status": "p9_priority_target_hit_rate_precheck_ready"
+      },
+      {
+        "applies_to_query_ids": [
+          "p8-q05",
+          "p8-q07",
+          "p8-q10",
+          "p8-q12",
+          "p8-q14"
+        ],
+        "fixture": "fixtures/agent-reach/p9-priority-target-hit-rate-authorization.request.json",
+        "non_claim": "runner readiness does not invoke live search and requires separate P9 authorization",
+        "runner": "tools/kds-sync/run_agent_reach_p9_priority_target_hit_rate.py",
+        "scope": "p9_priority_target_hit_rate_runner_readiness",
+        "status": "p9_hit_rate_runner_readiness_ready",
+        "validator": "tools/kds-sync/validate_agent_reach_p9_hit_rate_runner_readiness.py"
       }
     ],
     "project_scope": [

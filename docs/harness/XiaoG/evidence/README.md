@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/10-XiaoG/docs/harness/XiaoG/evidence/README.md
 source_path: docs/harness/XiaoG/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -38,3 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-F8A19C3159 | evidence | docs/harness/XiaoG/evidence/README.md | XiaoG | controlled |
 | GPCF-DOC-C1614FDCEB | Evidence Index — XiaoG | docs/harness/XiaoG/evidence/evidence-index.md | XiaoG | controlled |
+| GPCF-DOC-XIAOG-LIVE-API-AUTH-PACK-20260625 | XiaoG Live API 授权包证据 2026-06-25 | docs/harness/XiaoG/evidence/xiaog-live-api-auth-pack-20260625.md | XiaoG | controlled |

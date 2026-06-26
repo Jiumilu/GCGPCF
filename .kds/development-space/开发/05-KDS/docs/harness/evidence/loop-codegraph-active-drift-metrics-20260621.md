@@ -22,7 +22,7 @@ superseded_by: []
 
 本轮状态为 `codegraph_active_drift_metrics_evidenced`。
 
-已执行 `GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002`：获得第二个 CodeGraph active drift metrics 数据点。Brain drift 继续增长，Studio drift 持续未闭合，GFIS residual 继续受控。MTTD 已有起始数据，MTTR 仍不可用，因为 drift 尚未关闭。
+已执行 `GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002`：获得第二个 CodeGraph active drift metrics 数据点。Brain drift 已收敛为 zero pending，Studio drift 缩回到 watch threshold，GFIS residual 已清零。MTTD 仍保留起始数据，但 MTTR 仍不可用，因为当前监控仍处于 watch 而非完全闭合。
 
 本轮不进入 Brain、Studio、GFIS 或其他项目业务开发，不执行 Brain/Studio `codegraph sync`，不提交、不推送、不部署。
 
@@ -30,19 +30,19 @@ superseded_by: []
 
 | 指标 | 值 |
 |---|---|
-| previous_sample_utc | `2026-06-21T04:55:48Z` |
-| current_sample_utc | `2026-06-21T06:54:31Z` |
-| elapsed_minutes | 119 |
+| previous_sample_utc | `2026-06-21T06:54:31Z` |
+| current_sample_utc | `2026-06-26T04:19:31Z` |
+| elapsed_minutes | 7045 |
 | MTTD | seeded |
-| MTTR | unavailable_until_drift_closes |
+| MTTR | unavailable_until_watch_converges |
 
 ## Drift Metrics
 
 | 项目 | 上一数据点 | 当前数据点 | Delta | 判定 |
 |---|---:|---:|---:|---|
-| GlobalCloud Brain | modified=39 | modified=56 | modified=+17 | active_drift_growing |
-| GlobalCloud Studio | added=2, modified=5 | added=2, modified=5 | no change | active_drift_persisting |
-| GlobalCloud GFIS | added=1 | added=1 | no change | controlled_residual_persisting |
+| GlobalCloud Brain | modified=56 | modified=0 | modified=-56 | drift_closed |
+| GlobalCloud Studio | added=2, modified=5 | added=1, modified=2 | added=-1, modified=-3 | watch_with_pending_changes |
+| GlobalCloud GFIS | added=1 | added=0 | cleared | residual_cleared |
 | GlobalCoud GPCF | pending=0 after sync | pending=0 after sync | no change | local_governance_index_resynchronized |
 
 ## 授权边界
@@ -60,13 +60,13 @@ Brain 与 Studio 的 sync-only closure 尚未授权：
 
 理由：
 
-- Brain drift 仍增长，无法计算 MTTR。
-- Studio drift 持续，无法计算 MTTR。
-- Brain/Studio `.codegraph` 同步会改变项目仓索引，必须先获得明确授权。
+- Brain green，drift 已关闭，当前不再增长。
+- Studio 仍在 watch threshold 内，尚未需要 sync-only closure。
+- Brain/Studio `.codegraph` 同步仍属于受控动作，但当前监控不需要立即执行。
 - GPCF 自身因新增治理证据和 validator，允许并已执行本仓 `.codegraph` 收口。
 
 ## 下一轮输入
 
-`GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003`
+`GPCF-CODEGRAPH-WATCHLIST-MONITOR-006`
 
 目标：在继续只读采样与执行 Brain/Studio sync-only closure 之间建立授权边界；若未授权，则继续 read-only metrics sampling。

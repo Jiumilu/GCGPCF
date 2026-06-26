@@ -1,0 +1,53 @@
+{
+  "submission_request_id": "COGNEE-REAL-EXT-RECEIPT-SUBMISSION-REQUEST-20260626-001",
+  "request_scope": "cognee_gap_001_real_external_execution_receipt_submission",
+  "request_to": "external_execution_operator",
+  "request_from": "GPCF",
+  "source_responsibility_assignment": "docs/harness/evidence/cognee-real-external-execution-receipt-responsibility-assignment-20260626.md",
+  "source_receipt_intake": "docs/harness/evidence/cognee-real-external-execution-receipt-intake-20260626.md",
+  "requested_artifacts": [
+    {
+      "artifact_id": "REAL_RECEIPT_REF",
+      "description": "path_or_identifier_of_real_external_execution_receipt",
+      "required": true
+    },
+    {
+      "artifact_id": "REAL_RECEIPT_ID",
+      "description": "unique_receipt_id_from_external_execution",
+      "required": true
+    },
+    {
+      "artifact_id": "EXECUTED_AT",
+      "description": "real_execution_timestamp",
+      "required": true
+    },
+    {
+      "artifact_id": "EXECUTION_COUNTS",
+      "description": "record_count_execution_count_error_count",
+      "required": true
+    },
+    {
+      "artifact_id": "ROLLBACK_STATUS",
+      "description": "rollback_triggered_and_rollback_evidence_if_any",
+      "required": true
+    },
+    {
+      "artifact_id": "OPERATOR_NOTE",
+      "description": "plain_summary_from_execution_operator",
+      "required": true
+    }
+  ],
+  "forbidden_artifacts": [
+    "fixtures/cognee/cognee-external-execution-receipt.completed.example.json",
+    "docs/harness/evidence/cognee-external-execution-receipt-completed-example-20260626.md",
+    "template_only_receipt",
+    "screenshot_without_receipt_fields"
+  ],
+  "submission_status": "requested_pending_real_receipt",
+  "gap_001_ready": false,
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

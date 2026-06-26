@@ -77,6 +77,9 @@ def main() -> int:
         "P3：项目群覆盖",
         "P4：真实业务闭环候选",
         "P5：受控自治准入",
+        "GlobalCloud 项目群实施方案.md",
+        "04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md",
+        "04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md",
     ]:
         require(phrase in master, f"master plan missing phrase: {phrase}")
 
@@ -149,6 +152,16 @@ def main() -> int:
         "多智能体并行开发",
         "只读、分析、检索、规划类子能力",
         "写入、自动执行、跨仓变更、外部 API 写入",
+        "@product-design",
+        "WAES` 母框架复用",
+        "globalcloud-ui-quality-gate",
+        "Tool route",
+        "Context package",
+        "Prompt profile",
+        "Design options",
+        "Selected option",
+        "WAES baseline reuse",
+        "UI gate status",
     ]:
         require(phrase in master, f"master plan missing capability baseline: {phrase}")
 

@@ -1,0 +1,42 @@
+{
+  "authorization_id": "agent-reach-p9-source-direct-hit-rate-live-run",
+  "authorization_status": "approved_for_p9_source_direct_hit_rate_live_run",
+  "authorized_by": "<required-human-name>",
+  "authorized_at": "<required-iso8601-start>",
+  "expires_at": "<required-iso8601-end>",
+  "allowed_methods": [
+    "target_url",
+    "sitemap",
+    "rss",
+    "public_list_page",
+    "site_search_endpoint_without_credentials"
+  ],
+  "max_targets": 13,
+  "max_entrypoints_per_target": 3,
+  "max_pages_per_entrypoint": 5,
+  "allow_external_network": true,
+  "allow_write_evidence_only": true,
+  "forbidden_actions": [
+    "credential_write",
+    "browser_cookie_extraction",
+    "credentialed_api",
+    "login_required_page",
+    "kds_canonical_write",
+    "gfis_source_of_record_write",
+    "production_config_write",
+    "global_mcp_config_write",
+    "production_integration",
+    "accepted_claim",
+    "integrated_claim",
+    "production_ready_claim"
+  ],
+  "logging_redaction": {
+    "redact_tokens": true,
+    "redact_cookies": true,
+    "redact_authorization_headers": true,
+    "redact_query_personal_data": true,
+    "persist_redacted_snippets_only": true
+  },
+  "human_authorization_text": "授权执行 Agent-Reach P9S Source Direct Hit-Rate Live Run",
+  "scope_note": "仅允许 target_url/sitemap/rss/public_list_page/site_search_endpoint_without_credentials 公开内容读取，最多 13 个 target、每个 target 最多 3 个 entrypoint、每个 entrypoint 最多 5 页；允许写 evidence-only 输出；禁止写凭据、提取 cookie、访问登录页或 credentialed API、写 KDS canonical、写 GFIS source-of-record、改生产配置、改全局 MCP 配置、生产集成或声明 accepted/integrated/production_ready。"
+}

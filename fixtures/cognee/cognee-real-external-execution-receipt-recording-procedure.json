@@ -1,0 +1,60 @@
+{
+  "procedure_id": "COGNEE-REAL-EXT-RECEIPT-RECORDING-PROCEDURE-20260626-001",
+  "procedure_scope": "cognee_gap_001_real_external_execution_receipt_recording",
+  "source_receipt_intake": "docs/harness/evidence/cognee-real-external-execution-receipt-intake-20260626.md",
+  "source_readiness_rollup": "docs/harness/evidence/cognee-full-run-readiness-rollup-20260626.md",
+  "steps": [
+    {
+      "step_id": "RECEIPT-RECORD-001",
+      "action": "receive_real_external_execution_receipt",
+      "required_output": "real_receipt_ref_and_receipt_id",
+      "status": "defined"
+    },
+    {
+      "step_id": "RECEIPT-RECORD-002",
+      "action": "reject_completed_example_or_template_receipt",
+      "required_output": "non_sample_receipt_boundary_confirmed",
+      "status": "defined"
+    },
+    {
+      "step_id": "RECEIPT-RECORD-003",
+      "action": "fill_receipt_intake_fields",
+      "required_output": "receipt_intake_updated_with_real_counts",
+      "status": "defined"
+    },
+    {
+      "step_id": "RECEIPT-RECORD-004",
+      "action": "run_receipt_intake_validator_require_real_receipt",
+      "required_output": "cognee_real_external_execution_receipt_intake=pass_real",
+      "status": "defined"
+    },
+    {
+      "step_id": "RECEIPT-RECORD-005",
+      "action": "update_readiness_rollup_gap_001_only",
+      "required_output": "gap_001_ready_true_without_full_run_claim",
+      "status": "defined"
+    },
+    {
+      "step_id": "RECEIPT-RECORD-006",
+      "action": "rerun_readiness_rollup_validator",
+      "required_output": "readiness_rollup_recomputed",
+      "status": "defined"
+    }
+  ],
+  "forbidden_inputs": [
+    "fixtures/cognee/cognee-external-execution-receipt.completed.example.json",
+    "docs/harness/evidence/cognee-external-execution-receipt-completed-example-20260626.md",
+    "template_only_receipt",
+    "operator_note_without_receipt"
+  ],
+  "required_commands": [
+    "python3 tools/kds-sync/validate_cognee_real_external_execution_receipt_intake.py --require-real-receipt",
+    "python3 tools/kds-sync/validate_cognee_full_run_readiness_rollup.py"
+  ],
+  "procedure_status": "defined_pending_real_receipt",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

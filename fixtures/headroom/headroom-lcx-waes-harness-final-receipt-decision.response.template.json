@@ -1,0 +1,21 @@
+{
+  "decision_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-20260623-001",
+  "request_evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623",
+  "receipt_id": "HEADROOM-LCX-EXT-AUTH-RECEIPT-20260623-001",
+  "decision_maker": "REQUIRED_WAES_OR_HARNESS_DECISION_MAKER",
+  "decision_role": "REQUIRED_WAES_OR_HARNESS_ROLE",
+  "decided_at": "REQUIRED_DECISION_TIMESTAMP_WITH_TIMEZONE",
+  "decision_value": "REQUIRED_ONE_OF_admitted_for_next_precheck_only_or_rejected_requires_rework_or_deferred_pending_additional_evidence",
+  "decision_reason": "REQUIRED_DECISION_REASON_NO_SENSITIVE_RAW_TEXT",
+  "linked_evidence_refs": [
+    "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-intake-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-precheck-20260623.json"
+  ],
+  "can_open_real_measurement": false,
+  "real_measurement_open": false,
+  "measured_production_tokens": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false
+}

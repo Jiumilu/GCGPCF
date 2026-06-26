@@ -154,8 +154,8 @@ def main() -> int:
         "14 仓 CodeGraph 均可读",
         "review_rework_count=0",
         "KDS Git dirty 仍为",
-        "Studio CodeGraph pending 为 `added=0, modified=18, removed=0`",
-        "GPCF 当前 CodeGraph pending 为 `added=9, modified=21, removed=0`",
+        "Studio CodeGraph pending 为 `added=1, modified=2, removed=0`",
+        "GPCF 当前 CodeGraph pending 为 `added=28, modified=4, removed=0`",
         "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")

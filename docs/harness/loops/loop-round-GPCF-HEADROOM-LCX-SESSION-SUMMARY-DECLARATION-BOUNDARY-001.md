@@ -49,6 +49,7 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 ## 反馈
 
 本轮只建立声明控制边界，不构成授权完成，不进入生产测量。
+长期目标已写入 `docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md`，后续引用应以该受控目标声明为准。
 
 ## 下一轮
 

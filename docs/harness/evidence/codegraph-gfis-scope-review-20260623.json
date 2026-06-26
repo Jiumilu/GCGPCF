@@ -20,30 +20,30 @@
     "git_dirty": {
       "modified": 0,
       "deleted": 0,
-      "untracked": 1,
+      "untracked": 0,
       "renamed": 0,
       "other": 0,
-      "total": 1
+      "total": 0
     },
-    "codegraph_status": {
-      "initialized": true,
-      "version": "1.0.1",
-      "fileCount": 1022,
-      "nodeCount": 13153,
-      "edgeCount": 38153,
-      "lastIndexed": "2026-06-22T01:32:23.616Z",
-      "pendingChanges": {
-        "added": 0,
-        "modified": 0,
+      "codegraph_status": {
+        "initialized": true,
+        "version": "1.0.1",
+      "fileCount": 1023,
+        "nodeCount": 13153,
+        "edgeCount": 38153,
+      "lastIndexed": "2026-06-24T23:40:25.544Z",
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
         "removed": 0
       },
       "worktreeMismatch": null,
       "reindexRecommended": false
     },
     "codegraph_git_isolated": true,
-    "scope_review_result": "current_state_dirty_no_sync_needed",
+    "scope_review_result": "current_state_clean_no_sync_needed",
     "sync_only_candidate": false,
-    "sync_only_candidate_reason": "GFIS live CodeGraph pending is 0/0/0 and Git dirty is 1; read-only scope review is still sufficient and no sync-only closure is currently needed.",
+    "sync_only_candidate_reason": "GFIS live CodeGraph pending is 0/0/0 and Git dirty is 0; read-only scope review is sufficient and no sync-only closure is currently needed.",
     "clean_reindex_candidate": false,
     "clean_reindex_candidate_reason": "reindexRecommended=false and user excluded clean reindex."
   },
@@ -60,7 +60,7 @@
       "modified": 0,
       "removed": 0
     },
-    "current_gfis_git_dirty_total": 1,
+    "current_gfis_git_dirty_total": 0,
     "resolution_source": "external_or_preexisting_state_change_observed_during_read_only_review",
     "codex_performed_gfis_sync": false,
     "codex_performed_gfis_clean_reindex": false,
@@ -77,7 +77,7 @@
     "stop": "stop_type=monitor_only；GFIS pending 为 0，但 dirty 仍为 1，本轮停止在 evidence 固化，不执行 sync、clean reindex 或业务开发。",
     "verify": "验证 GFIS git status、codegraph status、.codegraph Git 隔离、GPCF 文档门禁、防污染和 KDS token。",
     "recover": "若 GFIS drift 重新出现，只能重新进入只读 scope review；不得直接 sync 或 clean reindex。",
-    "debug": "上一轮 GFIS pending=3/dirty=239 已在本轮只读复核时变为 pending=0/dirty=1；原因归类为外部或既有状态变化，不归因为本轮 Codex sync。"
+    "debug": "上一轮 GFIS pending=3/dirty=239 已在本轮只读复核时变为 pending=0/dirty=0；原因归类为外部或既有状态变化，不归因为本轮 Codex sync。"
   },
   "status_boundaries": {
     "business_implementation_completed": false,

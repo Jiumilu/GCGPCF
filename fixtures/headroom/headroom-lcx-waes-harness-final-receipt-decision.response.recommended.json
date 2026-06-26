@@ -1,0 +1,21 @@
+{
+  "decision_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-20260623-001",
+  "request_evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623",
+  "receipt_id": "HEADROOM-LCX-EXT-AUTH-RECEIPT-20260623-001",
+  "decision_maker": "WAES/Harness reviewer to confirm",
+  "decision_role": "WAES/Harness final receipt reviewer to confirm",
+  "decided_at": "2026-06-23T14:33:00+08:00",
+  "decision_value": "admitted_for_next_precheck_only",
+  "decision_reason": "Candidate draft only. Receipt is valid for precheck-only intake, all production and acceptance flags remain false, and independent WAES/Harness review is still required before any next-stage motion.",
+  "linked_evidence_refs": [
+    "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-intake-20260623.json",
+    "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-precheck-20260623.json"
+  ],
+  "can_open_real_measurement": false,
+  "real_measurement_open": false,
+  "measured_production_tokens": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false
+}

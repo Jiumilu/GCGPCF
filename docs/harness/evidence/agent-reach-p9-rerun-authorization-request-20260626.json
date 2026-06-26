@@ -1,0 +1,32 @@
+{
+  "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/p9-priority-target-hit-rate-rerun-authorization.local.json",
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-rerun-authorization-request-20260626",
+  "live_external_search_invoked": false,
+  "max_queries": 20,
+  "max_results_per_query": 5,
+  "non_claims": [
+    "authorization_request_only",
+    "not_live_search_invoked",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "post_live_validation_commands": [
+    "python3 tools/kds-sync/validate_agent_reach_p9_hit_rate_output_quality_gate.py --validate-report --report docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json --markdown docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md",
+    "python3 tools/kds-sync/validate_agent_reach_p9_review_queue_bridge_readiness.py",
+    "python3 tools/kds-sync/loop_document_gate.py"
+  ],
+  "prior_rework_evidence": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-live-run-20260626.json",
+  "repair_evidence": "docs/harness/evidence/agent-reach-p9-web-provider-fallback-20260626.json",
+  "required_text": "授权执行 Agent-Reach P9R Priority Target Hit-Rate Live Rerun",
+  "rerun_output_json": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json",
+  "rerun_output_md": "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md",
+  "runner_accepts_rerun_authorization_file": true,
+  "runner_command_after_human_approval": "python3 tools/kds-sync/run_agent_reach_p9_priority_target_hit_rate.py --auth fixtures/agent-reach/p9-priority-target-hit-rate-rerun-authorization.local.json --execute-live --write-evidence --output-json docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json --output-md docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.md",
+  "status": "p9_rerun_authorization_request_ready"
+}

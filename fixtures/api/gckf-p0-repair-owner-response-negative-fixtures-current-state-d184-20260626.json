@@ -1,0 +1,63 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-NEGATIVE-FIXTURES-CURRENT-STATE-D184-20260626",
+  "roundId": "GPCF-GCKF-P0-D184-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-repair-owner-response-collection-checklist-current-state-d183-20260626.json",
+  "negativeFixtureStatus": "response_intake_negative_fixtures_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "holdRequired": true,
+  "actualRepairOwnerResponseReceived": false,
+  "negativeFixtures": [
+    {
+      "fixtureId": "D184-NEG-001",
+      "inputType": "collection_checklist_submitted_as_response",
+      "inputRef": "fixtures/api/gckf-p0-repair-owner-response-collection-checklist-current-state-d183-20260626.json",
+      "rejectedReason": "collection_checklist_is_not_actual_repair_owner_response",
+      "expectedDecision": "reject",
+      "responseIntakeAllowed": false
+    },
+    {
+      "fixtureId": "D184-NEG-002",
+      "inputType": "unsigned_response_package",
+      "inputRef": "pending_real_repair_owner_response",
+      "rejectedReason": "missing_signed_response_package",
+      "expectedDecision": "reject",
+      "responseIntakeAllowed": false
+    },
+    {
+      "fixtureId": "D184-NEG-003",
+      "inputType": "response_without_waes_review_note",
+      "inputRef": "pending_waes_review_note",
+      "rejectedReason": "missing_waes_review_note",
+      "expectedDecision": "reject",
+      "responseIntakeAllowed": false
+    },
+    {
+      "fixtureId": "D184-NEG-004",
+      "inputType": "promotion_request_without_human_confirmation",
+      "inputRef": "pending_human_confirmation",
+      "rejectedReason": "missing_human_confirmation",
+      "expectedDecision": "reject",
+      "responseIntakeAllowed": false
+    }
+  ],
+  "negativeFixtureSummary": {
+    "negativeFixtureCount": 4,
+    "rejectedNegativeFixtures": 4,
+    "acceptedNegativeFixtures": 0
+  },
+  "gateAssertions": {
+    "collectionChecklistIsActualResponse": false,
+    "unsignedPackageAccepted": false,
+    "waesReviewBypassed": false,
+    "humanConfirmationBypassed": false,
+    "responseIntakeAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "nextRoundCandidate": "收到真实 repair owner response、签署响应包、WAES review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。"
+}

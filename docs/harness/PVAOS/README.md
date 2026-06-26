@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/03-PVAOS/docs/harness/PVAOS/README.md
 source_path: docs/harness/PVAOS/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -40,6 +40,8 @@ KDS 空间：`开发`
 | GPCF-DOC-A7F2AE6ACC | evidence | docs/harness/PVAOS/evidence/README.md | PVAOS | controlled |
 | GPCF-DOC-5266DDB981 | Evidence Index — PVAOS | docs/harness/PVAOS/evidence/evidence-index.md | PVAOS | controlled |
 | GPCF-DOC-PVAOS-REAL-RUNTIME-BASELINE-20260624 | PVAOS 真实运行基线证据 2026-06-24 | docs/harness/PVAOS/evidence/pvaos-real-runtime-baseline-20260624.md | PVAOS | controlled |
+| GPCF-DOC-PVAOS-RELEASE-GATE-REPAIR-20260625 | PVAOS Release Gate 修复与本地发布准入证据 2026-06-25 | docs/harness/PVAOS/evidence/pvaos-release-gate-repair-20260625.md | PVAOS | controlled |
+| GPCF-DOC-PVAOS-RELEASE-REVIEW-20260625 | PVAOS 发布审查候选证据 2026-06-25 | docs/harness/PVAOS/evidence/pvaos-release-review-20260625.md | PVAOS | controlled |
 | GPCF-DOC-3A5C57AC3E | GlobalCloud PVAOS Loop State | docs/harness/PVAOS/loop-state.md | PVAOS | controlled |
 | GPCF-DOC-70CE112465 | loops | docs/harness/PVAOS/loops/README.md | PVAOS | controlled |
 | GPCF-DOC-8DDE495C90 | Loop Round GPCF-PV-LR-001 | docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-001.md | PVAOS | controlled |

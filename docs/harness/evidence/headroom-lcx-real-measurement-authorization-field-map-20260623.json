@@ -56,8 +56,8 @@
     },
     {
       "field": "sanitized_production_token_ledger",
-      "current_value": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
-      "source_evidence": "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
+      "current_value": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+      "source_evidence": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
       "future_runner_input": "sanitized_production_token_ledger",
       "future_action": "allow metadata-only ledger reads for cost replay"
     },

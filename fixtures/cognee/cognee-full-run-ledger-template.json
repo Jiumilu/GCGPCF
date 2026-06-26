@@ -1,0 +1,37 @@
+{
+  "ledger_id": "COGNEE-FULL-RUN-LEDGER-YYYYMMDD-NNN",
+  "ledger_scope": "cognee_full_run_candidate",
+  "source_admission_package": "docs/harness/evidence/cognee-full-run-admission-package-20260626.md",
+  "source_external_execution_receipt": "REQUIRED_REAL_EXTERNAL_EXECUTION_RECEIPT",
+  "batch_count": 0,
+  "record_count": 0,
+  "successful_record_count": 0,
+  "failed_record_count": 0,
+  "excluded_record_count": 0,
+  "coverage_summary": {
+    "object_coverage_ready": false,
+    "scenario_coverage_ready": false,
+    "coverage_basis": "REQUIRED_FULL_OBJECT_AND_SCENARIO_COVERAGE_EVIDENCE"
+  },
+  "batches": [
+    {
+      "batch_id": "COGNEE-FULL-RUN-BATCH-YYYYMMDD-NNN",
+      "execution_receipt_id": "REQUIRED_REAL_RECEIPT_ID",
+      "started_at": "REQUIRED_REAL_TIMESTAMP",
+      "finished_at": "REQUIRED_REAL_TIMESTAMP",
+      "record_count": 0,
+      "successful_record_count": 0,
+      "failed_record_count": 0,
+      "rollback_triggered": false,
+      "rollback_evidence": "REQUIRED_IF_ROLLBACK_TRIGGERED",
+      "operator_note": "REQUIRED_REAL_OPERATOR_NOTE"
+    }
+  ],
+  "exception_records": [],
+  "full_run_ledger_status": "template_only",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

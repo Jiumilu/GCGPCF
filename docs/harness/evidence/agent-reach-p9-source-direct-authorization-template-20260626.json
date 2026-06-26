@@ -1,0 +1,30 @@
+{
+  "authorization_request": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.request.json",
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-authorization-template-20260626",
+  "live_external_fetch_invoked": false,
+  "non_claims": [
+    "authorization_template_only",
+    "template_not_valid_authorization",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "placeholder_fields": [
+    "authorized_at",
+    "authorized_by",
+    "expires_at"
+  ],
+  "status": "p9_source_direct_authorization_template_ready",
+  "template_authorization_valid": false,
+  "template_field_count": 15,
+  "template_intake_status": "blocked_invalid_p9_source_direct_authorization",
+  "template_path": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.template.json",
+  "template_ready_for_live_execution": false
+}

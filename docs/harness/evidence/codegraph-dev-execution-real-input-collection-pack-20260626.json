@@ -1,0 +1,102 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-REAL-INPUT-COLLECTION-PACK-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-COLLECTION-PACK-018",
+  "status": "real_input_collection_pack_prepared_not_dispatched",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Prepare a development-state collection pack for the real GFIS source inputs that block CodeGraph-backed business execution, without dispatching requests, writing external systems, or claiming runtime readiness.",
+  "source_evidence": {
+    "real_input_readiness": "docs/harness/evidence/codegraph-dev-execution-real-input-readiness-20260626.json",
+    "business_task_intake": "docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json",
+    "gfis_loop_state": "08-evidence-samples/GFIS/loop-state.md",
+    "gfis_evidence_index": "08-evidence-samples/GFIS/evidence-index.md"
+  },
+  "collection_status": {
+    "prepared": true,
+    "dispatched": false,
+    "external_notifications_sent": 0,
+    "external_api_write": false,
+    "real_kds_write": false,
+    "real_waes_write": false
+  },
+  "primary_owner_request": {
+    "owner": "GPC_or_Liaoning_Yuanhang_order_owner",
+    "object_family": "CustomerRequirementOrPlatformOrder",
+    "target_path": "docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/*.customer-requirement-platform-order.source-record.json",
+    "accepted_inputs": [
+      "customer order original",
+      "platform order receipt",
+      "purchase order",
+      "equivalent formal customer confirmation"
+    ],
+    "rejected_substitutes": [
+      "quotation PDF without customer confirmation",
+      "KDS candidate only",
+      "user oral statement",
+      "Loop document assertion",
+      "synthetic/dev-only fixture",
+      "unverified accepted/integrated claim"
+    ]
+  },
+  "twelve_stage_real_input_request": {
+    "runtime_object_family_count": 12,
+    "required_inputs": [
+      "customer order or platform order source-of-record",
+      "sample receipt or mass-production approval",
+      "raw material batch",
+      "factory order",
+      "production work order",
+      "operation card",
+      "quality inspection record",
+      "finished goods batch",
+      "delivery record",
+      "POD",
+      "WAES confirmation",
+      "KDS write receipt"
+    ],
+    "current_ready_counts": {
+      "valid_source_records": 0,
+      "runtime_primary_key_ready": 0,
+      "runtime_intake": 0,
+      "waes_review": 0,
+      "verified": 0
+    }
+  },
+  "codegraph_usage_when_input_arrives": {
+    "rerun_task_intake_gate": true,
+    "rerun_query": "GFIS runtime gap hold register source record receipt fallback_reason codegraph evidence",
+    "rerun_node": "scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py",
+    "rerun_affected": true,
+    "fallback_tests_required_if_affected_tests_empty": true
+  },
+  "decision": {
+    "collection_pack": "prepared",
+    "dispatch": "not_authorized",
+    "real_business_execution": "blocked_until_real_source_input_arrives",
+    "runtime_state": "not_verified",
+    "status_ceiling": "partial"
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_readiness.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_collection_pack.py"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "dispatch_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-AUTHORIZATION-019"
+}

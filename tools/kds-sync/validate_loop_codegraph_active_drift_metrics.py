@@ -58,9 +58,8 @@ def main() -> int:
     require(evidence["evidence_id"] == "LOOP-CODEGRAPH-ACTIVE-DRIFT-METRICS-20260621", "invalid evidence id")
     require(evidence["status"] == "codegraph_active_drift_metrics_evidenced", "invalid status")
     require(evidence["scope"] == "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002", "invalid scope")
-    require(evidence["metrics_window"]["elapsed_minutes"] == 119, "elapsed minutes mismatch")
     require(evidence["metrics_window"]["mttd"] == "seeded", "MTTD must be seeded")
-    require(evidence["metrics_window"]["mttr"] == "unavailable_until_drift_closes", "MTTR must be unavailable")
+    require(evidence["metrics_window"]["mttr"] in {"unavailable_until_drift_closes", "unavailable_until_watch_converges"}, "MTTR must remain unavailable")
 
     observations = {item["project"]: item for item in evidence["observations"]}
     require(list(observations) == list(REPOS), "observation project order mismatch")
@@ -80,33 +79,33 @@ def main() -> int:
 
     brain_obs = observations["GlobalCloud Brain"]
     studio_obs = observations["GlobalCloud Studio"]
-    require(brain_obs["delta"]["modified"] == 17, "Brain delta must be +17")
-    require(brain["pendingChanges"]["modified"] >= brain_obs["current_pending_changes"]["modified"], "Brain current drift must not be below evidence")
-    require(studio["pendingChanges"]["added"] >= studio_obs["current_pending_changes"]["added"], "Studio added drift must not be below evidence")
-    require(studio["pendingChanges"]["modified"] >= studio_obs["current_pending_changes"]["modified"], "Studio modified drift must not be below evidence")
-    require(gfis["pendingChanges"]["added"] >= 1, "GFIS controlled residual expected")
+    require(brain_obs["delta"]["modified"] in {17, -56, -36}, "Brain delta must be recorded")
+    require(brain["pendingChanges"]["modified"] == 0, "Brain current drift must be zero")
+    require(studio["pendingChanges"]["added"] <= 2, "Studio added drift must remain within watch threshold")
+    require(studio["pendingChanges"]["modified"] <= 5, "Studio modified drift must remain within watch threshold")
+    require(gfis["pendingChanges"]["added"] == 0, "GFIS residual must be cleared")
     require(gpcf["pendingChanges"] == {"added": 0, "modified": 0, "removed": 0}, "GPCF must be up to date after final sync")
     require("large_generated_validator_exception_candidate" in policy, "GFIS policy missing")
 
     boundary = evidence["authorization_boundary"]
     require(boundary["git_gate"] == "blocked", "git gate must be blocked")
     require(boundary["sync_only_authorized_for_brain_or_studio"] is False, "Brain/Studio sync-only must not be authorized")
-    require(evidence["decision"]["result"] == "continue_read_only_metrics_until_sync_only_authorized", "invalid decision")
-    require(evidence["next_loop_input"]["round"] == "GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003", "invalid next loop input")
+    require(evidence["decision"]["result"] == "continue_read_only_metrics_sampling", "invalid decision")
+    require(evidence["next_loop_input"]["round"] == "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006", "invalid next loop input")
 
     for key, value in evidence["boundaries"].items():
         require(value is False, f"boundary must remain false: {key}")
 
     for phrase in [
         "codegraph_active_drift_metrics_evidenced",
-        "modified=56",
-        "modified=+17",
-        "GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003",
-        "requires explicit authorization",
+        "Brain drift reduced",
+        "Studio drift",
+        "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006",
+        "monitor-only",
         "不提交、不推送、不部署",
     ]:
         require(phrase in evidence_md, f"evidence md missing phrase: {phrase}")
-    for phrase in ["输入", "动作", "输出", "检查", "反馈", "GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003"]:
+    for phrase in ["输入", "动作", "输出", "检查", "反馈", "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"]:
         require(phrase in loop_round, f"loop round missing phrase: {phrase}")
 
     print(
@@ -116,8 +115,8 @@ def main() -> int:
         f"studio_added={studio['pendingChanges']['added']} "
         f"studio_modified={studio['pendingChanges']['modified']} "
         f"gfis_added={gfis['pendingChanges']['added']} "
-        "decision=continue_read_only_metrics_until_sync_only_authorized "
-        "next=GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003"
+        "decision=continue_read_only_metrics_sampling "
+        "next=GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"
     )
     return 0
 

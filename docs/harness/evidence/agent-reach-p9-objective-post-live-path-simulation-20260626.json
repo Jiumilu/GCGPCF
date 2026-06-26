@@ -1,0 +1,35 @@
+{
+  "audit_script": "tools/kds-sync/validate_agent_reach_p9_objective_completion_audit.py",
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-objective-post-live-path-simulation-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "offline_synthetic_no_live_fetch",
+  "non_claims": [
+    "offline_simulation_only",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_objective_post_live_path_simulation_pass",
+  "synthetic_result": {
+    "authorization_boundary_status": "complete",
+    "live_completed": true,
+    "post_live_source_direct_completed": true,
+    "source_direct_execution_mode": "post_live_closure_completed"
+  }
+}

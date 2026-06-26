@@ -1,0 +1,31 @@
+{
+  "receipt_id": "COGNEE-EXT-RECEIPT-20260626-001",
+  "execution_entry_id": "COGNEE-EXT-ENTRY-20260626-001",
+  "execution_scope": "cognee_p4_external_execution_validation_only",
+  "execution_target": "cognee_self_hosted_validation_gateway_staging",
+  "execution_owner": "lujunxiang",
+  "authorized_by": [
+    "lujunxiang",
+    "WAES Duty Reviewer"
+  ],
+  "authorized_at": "2026-06-26T10:15:00+08:00",
+  "executed_at": "2026-06-26T10:42:00+08:00",
+  "record_count": 5,
+  "execution_count": 5,
+  "error_count": 0,
+  "rollback_triggered": false,
+  "rollback_evidence": "not_required",
+  "sample_only": true,
+  "sample_boundary": "completed_example_only_not_actual_execution_receipt",
+  "forbidden_claims": [
+    "Cognee 已全量运行",
+    "production_write=true",
+    "accepted=true",
+    "integrated=true",
+    "production_ready=true"
+  ],
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false
+}

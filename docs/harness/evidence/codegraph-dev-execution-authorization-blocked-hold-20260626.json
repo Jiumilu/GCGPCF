@@ -1,0 +1,66 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-BLOCKED-HOLD-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-BLOCKED-HOLD-023",
+  "status": "blocked_hold_requires_user_authorization_or_real_input",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Stop generating additional dispatch-preparation artifacts while the same authorization and real-input blockers remain unresolved.",
+  "source_evidence": {
+    "dispatch_authorization_answer": "docs/harness/evidence/codegraph-dev-execution-dispatch-authorization-answer-20260626.json",
+    "goal_completion_audit": "docs/harness/evidence/codegraph-dev-execution-goal-completion-audit-20260626.json",
+    "authorization_waiting": "docs/harness/evidence/codegraph-dev-execution-real-input-authorization-waiting-20260626.json"
+  },
+  "blocked_audit": {
+    "same_blocker_repeated": true,
+    "consecutive_goal_turns_observed": 3,
+    "meaningful_progress_without_user_input_remaining": false,
+    "blocking_conditions": [
+      "dispatch_authorization_not_received",
+      "effective_authorization_not_authorized",
+      "real_source_input_not_arrived",
+      "goal_complete_false"
+    ]
+  },
+  "current_state": {
+    "development_state_proven": true,
+    "benefit_quantified": true,
+    "goal_complete": false,
+    "effective_authorization": "not_authorized",
+    "dispatch_allowed": false,
+    "dispatch_performed": false,
+    "real_input_blocked": true,
+    "runtime_state": "not_verified"
+  },
+  "resume_conditions": [
+    "User explicitly selects authorize_dispatch_precheck_only.",
+    "User explicitly selects authorize_actual_dispatch_later with recipient, channel, payload, and evidence destination.",
+    "A real source input arrives and is placed in the controlled intake path.",
+    "User explicitly changes scope back to read-only assessment."
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "dispatch_authorized": false,
+    "dispatch_precheck_authorized": false,
+    "actual_dispatch_authorized": false,
+    "dispatch_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_dispatch_authorization_answer.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_authorization_blocked_hold.py"
+  ],
+  "next_action_required_from_user": "Select one authorization option or provide real source input."
+}

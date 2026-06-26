@@ -1,0 +1,43 @@
+{
+  "evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001",
+  "date": "2026-06-23",
+  "status": "fill_recommendation_ready_not_formal_decision",
+  "scope": "recommendation_only_no_formal_response",
+  "source_draft_candidate": "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-draft-candidate-20260623.json",
+  "source_human_fill_request": "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-human-fill-request-20260623.json",
+  "recommended_response_path": "fixtures/headroom/headroom-lcx-waes-harness-final-receipt-decision.response.recommended.json",
+  "recommended_response": {
+    "decision_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-20260623-001",
+    "request_evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623",
+    "receipt_id": "HEADROOM-LCX-EXT-AUTH-RECEIPT-20260623-001",
+    "decision_maker": "WAES/Harness reviewer to confirm",
+    "decision_role": "WAES/Harness final receipt reviewer to confirm",
+    "decided_at": "2026-06-23T14:33:00+08:00",
+    "decision_value": "admitted_for_next_precheck_only",
+    "decision_reason": "Candidate draft only. Receipt is valid for precheck-only intake, all production and acceptance flags remain false, and independent WAES/Harness review is still required before any next-stage motion.",
+    "linked_evidence_refs": [
+      "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.json",
+      "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-intake-20260623.json",
+      "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-precheck-20260623.json"
+    ],
+    "can_open_real_measurement": false,
+    "real_measurement_open": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "recommendation_boundary": {
+    "recommendation_only": true,
+    "not_formal_response": true,
+    "requires_waes_harness_confirmation": true,
+    "can_open_real_measurement": false,
+    "real_measurement_open": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

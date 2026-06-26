@@ -1,0 +1,51 @@
+{
+  "rollup_id": "COGNEE-FULL-RUN-READINESS-ROLLUP-20260626-001",
+  "rollup_scope": "cognee_full_run_readiness",
+  "source_admission_package": "docs/harness/evidence/cognee-full-run-admission-package-20260626.md",
+  "gap_results": [
+    {
+      "gap_id": "COGNEE-FULL-RUN-GAP-001",
+      "gap_name": "external_execution_validation",
+      "template_or_prework_state": "prepared",
+      "real_evidence_state": "missing_real_execution_receipt",
+      "ready": false
+    },
+    {
+      "gap_id": "COGNEE-FULL-RUN-GAP-002",
+      "gap_name": "full_object_coverage",
+      "template_or_prework_state": "template_prepared",
+      "real_evidence_state": "missing_real_object_inventory_and_coverage",
+      "ready": false
+    },
+    {
+      "gap_id": "COGNEE-FULL-RUN-GAP-003",
+      "gap_name": "full_scenario_matrix",
+      "template_or_prework_state": "template_prepared",
+      "real_evidence_state": "missing_real_scenario_inventory_and_execution_records",
+      "ready": false
+    },
+    {
+      "gap_id": "COGNEE-FULL-RUN-GAP-004",
+      "gap_name": "production_state_promotion",
+      "template_or_prework_state": "template_prepared",
+      "real_evidence_state": "missing_waes_harness_decision_and_real_promotion_evidence",
+      "ready": false
+    },
+    {
+      "gap_id": "COGNEE-FULL-RUN-GAP-005",
+      "gap_name": "full_run_ledger",
+      "template_or_prework_state": "template_prepared",
+      "real_evidence_state": "missing_real_full_run_ledger",
+      "ready": false
+    }
+  ],
+  "ready_gap_count": 0,
+  "total_gap_count": 5,
+  "readiness_status": "not_ready",
+  "next_required_action": "record_real_external_execution_receipt_or_collect_real_full_run_inputs",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

@@ -6,12 +6,14 @@ from __future__ import annotations
 import argparse
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md"
 PROJECT_GROUP_GATE = ROOT / "tools/kds-sync/validate_loop_project_group_gate_readiness.py"
+PROJECT_GROUP_GATE_TIMEOUT_SECONDS = 180
 
 REQUIRED_REGISTRY_PHRASES = [
     "method.superpowers.loop_execution_discipline",
@@ -61,18 +63,33 @@ def validate_registry() -> None:
 
 def run_project_group_gate() -> None:
     require(PROJECT_GROUP_GATE.exists(), f"missing project group gate: {PROJECT_GROUP_GATE}")
-    result = subprocess.run(
-        [sys.executable, str(PROJECT_GROUP_GATE)],
-        cwd=ROOT,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
+    started_at = time.monotonic()
+    try:
+        result = subprocess.run(
+            [sys.executable, str(PROJECT_GROUP_GATE)],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=PROJECT_GROUP_GATE_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as exc:
+        elapsed = time.monotonic() - started_at
+        output = ((exc.stdout or "") + (exc.stderr or "")).strip()
+        detail = f" output={output[:300]}" if output else ""
+        raise SystemExit(
+            "FAIL validate_superpowers_loop_admission: "
+            "project group gate failed:\n"
+            f"project_group_gate_readiness=fail elapsed_sec={elapsed:.3f} "
+            f"returncode=timeout{detail}"
+        )
+    elapsed = time.monotonic() - started_at
     output = (result.stdout + result.stderr).strip()
-    require(result.returncode == 0, f"project group gate failed:\n{output}")
+    diagnostic = f"elapsed_sec={elapsed:.3f} returncode={result.returncode}"
+    require(result.returncode == 0, f"project group gate failed:\n{output}\n{diagnostic}")
     require(
         "project_group_gate_readiness=pass" in output,
-        f"project group gate did not pass:\n{output}",
+        f"project group gate did not pass:\n{output}\n{diagnostic}",
     )
     print(output)
 

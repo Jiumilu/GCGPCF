@@ -27,40 +27,40 @@ superseded_by: []
 结论为 `watch_required`：
 
 - 14 仓 CodeGraph 均可读，`.codegraph/` 均未进入 Git 状态。
-- Brain、GFIS 的 CodeGraph pending 已清零，但各自仍有 1 个 Git dirty，继续 monitor only。
-- KDS Git dirty 仍为 63，CodeGraph pending 已清零，KDS mirror / WorkWiki 仍需授权边界。
-- Studio CodeGraph pending 为 `added=0, modified=18, removed=0`，仍保持 residual watch。
-- GPCF 当前 CodeGraph pending 为 `added=9, modified=21, removed=0`，工作树仍有 408 个 Git dirty，继续 watch。
+- Brain、GFIS 的 CodeGraph pending 已清零，且各自 Git dirty 也已清零，继续纳入稳态 watch。
+- KDS Git dirty 仍为 18，CodeGraph pending 已清零，KDS mirror / WorkWiki 仍需授权边界。
+- Studio CodeGraph pending 为 `added=1, modified=2, removed=0`，仍保持 residual watch。
+- GPCF 当前 CodeGraph pending 为 `added=28, modified=4, removed=0`，工作树仍有 405 个 Git dirty，继续 watch。
 - `review_rework_count=0`，继续作为稳态监控趋势基线。
 
 ## 14 仓矩阵
 
 | repo | CodeGraph pending | Git dirty | 决策 |
 | --- | --- | ---: | --- |
-| Brain | added=0, modified=0, removed=0 | 1 | monitor_only |
-| GFIS | added=0, modified=0, removed=0 | 1 | monitor_only_without_clean_reindex |
-| KDS | added=0, modified=0, removed=0 | 59 | mirror_scope_review_required_now |
-| Studio | added=0, modified=18, removed=0 | 20 | residual_pending_watch |
-| GPCF | added=9, modified=21, removed=0 | 408 | self_sync_clear_but_git_dirty |
-| GPC | added=0, modified=0, removed=0 | 1 | steady |
-| PVAOS | added=0, modified=0, removed=0 | 1 | steady |
-| WAES | added=0, modified=0, removed=0 | 1 | steady |
-| PKC | added=0, modified=0, removed=0 | 39 | steady_git_dirty_watch |
-| XiaoC | added=0, modified=0, removed=0 | 1 | steady |
-| XGD | added=0, modified=0, removed=0 | 1 | steady |
-| XiaoG | added=0, modified=0, removed=0 | 1 | steady |
-| MMC | added=0, modified=0, removed=0 | 1 | steady |
-| WAS | added=0, modified=0, removed=0 | 2 | steady |
+| Brain | added=0, modified=0, removed=0 | 0 | steady |
+| GFIS | added=0, modified=0, removed=0 | 0 | monitor_only_without_clean_reindex |
+| KDS | added=0, modified=0, removed=0 | 18 | mirror_scope_review_required_now |
+| Studio | added=1, modified=2, removed=0 | 9 | residual_pending_watch |
+| GPCF | added=28, modified=4, removed=0 | 405 | self_sync_pending_residual_and_git_dirty |
+| GPC | added=0, modified=1, removed=0 | 3 | steady |
+| PVAOS | added=0, modified=1, removed=0 | 3 | steady |
+| WAES | added=0, modified=0, removed=0 | 0 | steady |
+| PKC | added=0, modified=0, removed=0 | 0 | steady |
+| XiaoC | added=0, modified=0, removed=0 | 0 | steady |
+| XGD | added=0, modified=0, removed=0 | 0 | steady |
+| XiaoG | added=0, modified=0, removed=0 | 0 | steady |
+| MMC | added=0, modified=0, removed=0 | 0 | steady |
+| WAS | added=0, modified=0, removed=0 | 1 | steady |
 
 ## watch items
 
 | repo | 决策 | 原因 |
 | --- | --- | --- |
-| Brain | monitor_only | CodeGraph clean but local git dirty remains 1. |
-| GFIS | monitor_only_without_clean_reindex | CodeGraph clean but local git dirty remains 1; clean reindex still not authorized. |
-| KDS | mirror_scope_review_required_now | CodeGraph clean but KDS mirror / WorkWiki dirty persists at 59. |
-| Studio | residual_pending_watch | Studio retains modified pending above the earlier residual ceiling. |
-| GPCF | self_sync_clear_but_git_dirty | 本仓当前 pending 仍在上升，local git dirty still high. |
+| Brain | steady | CodeGraph clean and local git dirty remains 0. |
+| GFIS | monitor_only_without_clean_reindex | CodeGraph clean; sync and clean reindex still not authorized. |
+| KDS | mirror_scope_review_required_now | CodeGraph clean but KDS mirror / WorkWiki dirty persists at 18. |
+| Studio | residual_pending_watch | Studio retains modified pending residual at 3. |
+| GPCF | self_sync_pending_residual_and_git_dirty | 本仓 pending 仍为 30，local git dirty still high. |
 
 ## 五方向
 
@@ -88,7 +88,7 @@ superseded_by: []
 
 ### debug
 
-当前 KDS mirror / WorkWiki 仍有 Git dirty 63，Studio 仍有 CodeGraph modified residual，GPCF 当前仍有 28 项 CodeGraph pending 且本地工作树 dirty 408。
+当前 KDS mirror / WorkWiki 仍有 Git dirty 18，Studio 仍有 CodeGraph modified residual 2，GPCF 当前仍有 32 项 CodeGraph pending 且本地工作树 dirty 405。
 
 ## 非声明
 

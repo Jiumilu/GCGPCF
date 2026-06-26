@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/docs/harness/GPC/README.md
 source_path: docs/harness/GPC/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -39,6 +39,7 @@ KDS 空间：`开发`
 | GPCF-DOC-B637BE22F8 | GPC | docs/harness/GPC/README.md | GPC | controlled |
 | GPCF-DOC-61C2D40981 | evidence | docs/harness/GPC/evidence/README.md | GPC | controlled |
 | GPCF-DOC-6AA1BB56F0 | Evidence Index — GPC | docs/harness/GPC/evidence/evidence-index.md | GPC | controlled |
+| GPCF-DOC-84431522D2 | GPC Evidence/Browser 修复与边界证据 2026-06-25 | docs/harness/GPC/evidence/gpc-evidence-browser-repair-20260625.md | GPC | controlled |
 | GPCF-DOC-GPC-REAL-RUNTIME-BASELINE-20260624 | GPC 真实运行基线证据 2026-06-24 | docs/harness/GPC/evidence/gpc-real-runtime-baseline-20260624.md | GPC | controlled |
 | GPCF-DOC-556B3EE58F | loop-state | docs/harness/GPC/loop-state.md | GPC | controlled |
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | GPC | controlled |

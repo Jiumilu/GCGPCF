@@ -1,0 +1,52 @@
+{
+  "patch_plan_id": "COGNEE-REAL-EXT-RECEIPT-UPDATE-PATCH-PLAN-20260626-001",
+  "patch_plan_scope": "cognee_gap_001_real_receipt_intake_and_readiness_update",
+  "source_submission_request": "docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md",
+  "source_receipt_intake": "fixtures/cognee/cognee-real-external-execution-receipt-intake.pending.json",
+  "source_readiness_rollup": "fixtures/cognee/cognee-full-run-readiness-rollup.json",
+  "patch_targets": [
+    {
+      "target": "fixtures/cognee/cognee-real-external-execution-receipt-intake.pending.json",
+      "fields_to_update": [
+        "received_receipt_ref",
+        "received_receipt_id",
+        "received_at",
+        "received_by",
+        "receipt_validation_status",
+        "record_count",
+        "execution_count",
+        "error_count",
+        "rollback_triggered",
+        "gap_001_ready"
+      ],
+      "required_result": "receipt_validation_status=real_receipt_recorded and gap_001_ready=true"
+    },
+    {
+      "target": "fixtures/cognee/cognee-full-run-readiness-rollup.json",
+      "fields_to_update": [
+        "gap_results[COGNEE-FULL-RUN-GAP-001].real_evidence_state",
+        "gap_results[COGNEE-FULL-RUN-GAP-001].ready",
+        "ready_gap_count",
+        "readiness_status"
+      ],
+      "required_result": "gap_001_ready=true and readiness_status remains not_ready unless all five gaps are ready"
+    }
+  ],
+  "required_commands_after_patch": [
+    "python3 tools/kds-sync/validate_cognee_real_external_execution_receipt_intake.py --require-real-receipt",
+    "python3 tools/kds-sync/validate_cognee_full_run_readiness_rollup.py"
+  ],
+  "forbidden_updates": [
+    "production_write=true",
+    "accepted=true",
+    "integrated=true",
+    "production_ready=true",
+    "full_run_claim=true"
+  ],
+  "patch_plan_status": "prepared_pending_real_receipt",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

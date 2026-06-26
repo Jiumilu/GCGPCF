@@ -97,6 +97,7 @@ GENERATED_REGISTERS = {
     "09-status/kds-development-space-sync-register.md",
     "09-status/document-deprecation-register.md",
 }
+PROJECT_GROUP_IMPLEMENTATION_PLAN = "GlobalCloud 项目群实施方案.md"
 
 SCOPE_ENV = "DOCUMENT_CONTROL_SCOPE"
 
@@ -148,6 +149,8 @@ def top_dir(source_path: str) -> str:
 
 
 def domain_for(source_path: str) -> str:
+    if source_path == PROJECT_GROUP_IMPLEMENTATION_PLAN:
+        return "architecture"
     if source_path.startswith(".okf/"):
         return "governance"
     return DOMAIN_BY_TOP.get(top_dir(source_path), "general")
@@ -180,6 +183,8 @@ def frontmatter_managed_for(source_path: str) -> bool:
 
 
 def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]]:
+    if source_path == PROJECT_GROUP_IMPLEMENTATION_PLAN:
+        return "GPCF", ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio"]
     if source_path in {
         "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
         "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md",
@@ -223,6 +228,8 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
         primary = "XiaoC" if "XiaoC" in hits or "小即" in haystack else "GPCF"
     elif source_path.startswith("07-acceptance/") or source_path.startswith("08-evidence-samples/") or source_path.startswith(".harness/"):
         primary = "WAES"
+    elif source_path.startswith("docs/harness/evidence/gckf-p0-") and "current-state" in source_path:
+        primary = "GPCF"
     elif source_path.startswith(("docs/harness/loop-state.md", "docs/harness/loops/", "docs/harness/evidence/evidence-index.md")):
         primary = "GPCF"
     elif source_path.startswith("docs/") or source_path.startswith("openspec/"):
@@ -236,6 +243,8 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
 
 
 def kds_path_for(source_path: str, project: str, status: str, domain: str) -> str:
+    if source_path == PROJECT_GROUP_IMPLEMENTATION_PLAN:
+        return "开发/12-GPCF/GlobalCloud 项目群实施方案.md"
     if source_path.startswith(".okf/"):
         return f"开发/12-GPCF/{source_path}"
     if source_path.startswith("08-evidence-samples/GFIS/docs/"):

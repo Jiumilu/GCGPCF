@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/templates/real-evidence-record-template.md
 source_path: templates/real-evidence-record-template.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-26
 supersedes: []
 superseded_by: []
 ---
@@ -35,7 +35,7 @@ superseded_by: []
 |---|---|
 | 项目总体方案 |  |
 | 项目实施方案 |  |
-| 项目群实施方案 | `01-architecture/GlobalCloud项目群实施方案.md` |
+| 项目群实施方案 | `GlobalCloud 项目群实施方案.md` |
 | 真实证据台账 | `09-status/globalcloud-core-chain-real-evidence-register.md` |
 
 ## 3. 执行命令

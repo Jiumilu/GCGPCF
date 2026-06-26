@@ -1,0 +1,108 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-AUTHORIZATION-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-AUTHORIZATION-019",
+  "status": "dispatch_authorization_request_ready_not_authorized",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Prepare the human authorization request needed before dispatching the GFIS real-input collection request. This evidence does not grant authorization and does not send any external notification.",
+  "source_evidence": {
+    "collection_pack": "docs/harness/evidence/codegraph-dev-execution-real-input-collection-pack-20260626.json",
+    "real_input_readiness": "docs/harness/evidence/codegraph-dev-execution-real-input-readiness-20260626.json",
+    "business_task_intake": "docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json"
+  },
+  "authorization_state": {
+    "request_prepared": true,
+    "authorization_received": false,
+    "default_if_no_answer": "not_authorized",
+    "dispatch_allowed": false,
+    "dispatch_performed": false,
+    "external_notifications_sent": 0,
+    "external_api_write": false,
+    "real_kds_write": false,
+    "real_waes_write": false
+  },
+  "authorization_questions": [
+    {
+      "id": "real_input_collection_dispatch",
+      "question": "是否授权向 GPC_or_Liaoning_Yuanhang_order_owner 派发真实输入采集请求？",
+      "recommended_option": "not_authorized_keep_prepared",
+      "default_if_no_answer": "not_authorized",
+      "options": [
+        {
+          "id": "not_authorized_keep_prepared",
+          "label": "暂不派发",
+          "effect": "Keep the collection pack prepared; no external notification or write is performed."
+        },
+        {
+          "id": "authorize_dispatch_precheck_only",
+          "label": "只授权派发预检",
+          "effect": "Allow a future precheck to verify recipient, channel, and payload before any dispatch."
+        },
+        {
+          "id": "authorize_actual_dispatch_later",
+          "label": "后续授权实际派发",
+          "effect": "Requires a separate explicit confirmation containing recipient, channel, payload, and evidence destination."
+        }
+      ]
+    }
+  ],
+  "dispatch_prerequisites": {
+    "recipient_identity_confirmed": false,
+    "manual_channel_confirmed": false,
+    "payload_reviewed": false,
+    "evidence_destination_confirmed": false,
+    "rollback_or_cancellation_path_confirmed": false,
+    "sensitive_data_review_completed": false
+  },
+  "allowed_future_precheck_scope": [
+    "recipient identity confirmation",
+    "manual channel confirmation",
+    "payload preview",
+    "evidence destination confirmation",
+    "sensitive data review",
+    "no-send dry run"
+  ],
+  "forbidden_in_this_round": [
+    "external notification dispatch",
+    "external API write",
+    "real KDS write",
+    "real WAES write",
+    "production write",
+    "deployment",
+    "git commit",
+    "git push",
+    "accepted/integrated/production_ready/customer_accepted status upgrade"
+  ],
+  "decision": {
+    "dispatch_authorization_request": "ready",
+    "dispatch_authorization": "not_authorized",
+    "real_business_execution": "blocked_until_real_source_input_arrives",
+    "runtime_state": "not_verified",
+    "status_ceiling": "partial"
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_collection_pack.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_real_input_dispatch_authorization.py"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "dispatch_authorized": false,
+    "dispatch_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round_if_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-PRECHECK-020",
+  "next_round_if_not_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-020"
+}

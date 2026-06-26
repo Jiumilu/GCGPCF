@@ -86,8 +86,9 @@ def main() -> int:
 
     graphized = run(["python3", "tools/kds-sync/validate_loop_codegraph_project_group_graphized.py"])
     monitor = run(["python3", "tools/kds-sync/validate_loop_codegraph_project_group_monitor.py"])
-    require("active_drift=Brain,Studio" in graphized, "graphized validator must show Brain and Studio active drift")
-    require("watchlist=Brain,Studio" in monitor, "monitor validator must show Brain and Studio watchlist")
+    require("active_drift=Studio" in graphized, "graphized validator must show Studio watch")
+    require("controlled_residual=none" in graphized, "graphized validator must show GFIS residual cleared")
+    require("watchlist=Studio" in monitor, "monitor validator must show Studio watchlist")
 
     print(
         "loop_codegraph_impact_assessment=pass "

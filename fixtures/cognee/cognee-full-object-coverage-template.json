@@ -1,0 +1,33 @@
+{
+  "coverage_id": "COGNEE-FULL-OBJECT-COVERAGE-YYYYMMDD-NNN",
+  "coverage_scope": "cognee_full_run_candidate_objects",
+  "source_admission_package": "docs/harness/evidence/cognee-full-run-admission-package-20260626.md",
+  "source_full_run_ledger": "fixtures/cognee/cognee-full-run-ledger-template.json",
+  "object_inventory_source": "REQUIRED_FULL_OBJECT_INVENTORY_SOURCE",
+  "total_object_count": 0,
+  "in_scope_object_count": 0,
+  "excluded_object_count": 0,
+  "covered_object_count": 0,
+  "uncovered_object_count": 0,
+  "coverage_rate": 0.0,
+  "coverage_basis": "template_only_no_real_inventory",
+  "object_groups": [
+    {
+      "group_id": "COGNEE-OBJECT-GROUP-YYYYMMDD-NNN",
+      "group_name": "REQUIRED_OBJECT_GROUP_NAME",
+      "group_source": "REQUIRED_OBJECT_GROUP_SOURCE",
+      "object_count": 0,
+      "covered_count": 0,
+      "excluded_count": 0,
+      "coverage_rate": 0.0,
+      "operator_note": "REQUIRED_WHEN_REAL_COVERAGE_RECORDED"
+    }
+  ],
+  "exclusion_records": [],
+  "coverage_status": "template_only",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

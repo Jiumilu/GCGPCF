@@ -1,0 +1,56 @@
+{
+  "evidence_id": "CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-20260626",
+  "scope": "GPCF-CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-017",
+  "status": "development_state_normal_work_verified",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Record the current session boundary that CodeGraph work is development-state only, then verify that the development-state CodeGraph task intake, benefit proof, regression watch, and .codegraph Git isolation remain usable.",
+  "source_evidence": {
+    "development_state_memory": "09-status/codegraph-development-state-control-memory-20260626.md",
+    "benefit_proof": "docs/harness/evidence/codegraph-dev-execution-benefit-proof-20260626.json",
+    "benefit_regression_watch": "docs/harness/evidence/codegraph-dev-execution-benefit-regression-watch-20260626.json",
+    "business_task_intake": "docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json"
+  },
+  "development_state_checks": {
+    "benefit_proof_validator_passed": true,
+    "benefit_regression_watch_validator_passed": true,
+    "task_intake_gate_required": true,
+    "fallback_required_when_affected_tests_empty": true,
+    "codegraph_git_isolation_required": true,
+    "dirty_worktree_allowed_as_development_state": true,
+    "git_clean_required": false
+  },
+  "current_metrics": {
+    "manual_scan_files_before": 80,
+    "codegraph_candidate_files_after": 2,
+    "manual_scan_reduction_percent": 97.5,
+    "actual_changed_files_outside_allowed_scope": 0,
+    "missed_impact_count": 0,
+    "review_rework_count": 0,
+    "affected_tests": [],
+    "fallback_tests_recorded": true
+  },
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "remaining_blockers": [
+    "GFIS runtime SOP and real business source input remain incomplete.",
+    "The current worktree is development-state dirty; Git clean is not claimed.",
+    "Runtime-state verification, deployment, production write, external API write, real KDS write, and real WAES write are outside this evidence scope."
+  ],
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-READINESS-017"
+}

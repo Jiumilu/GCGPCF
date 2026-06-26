@@ -7,12 +7,14 @@ import json
 import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
 PROJECT_GROUP_ROOT = ROOT.parent
 GATE_PATH = Path("tools/kds-sync/loop_document_gate.py")
+GATE_TIMEOUT_SECONDS = 90
 REPOS = [
     ("GlobalCloud Brain", PROJECT_GROUP_ROOT / "GlobalCloud Brain"),
     ("GlobalCloud GFIS", PROJECT_GROUP_ROOT / "GlobalCloud GFIS"),
@@ -42,25 +44,39 @@ def run_gate(repo_path: Path, repo_label: str) -> tuple[bool, str]:
         return False, f"{repo_label} missing {GATE_PATH.as_posix()}"
     env = os.environ.copy()
     env["GPCF_PROJECT_GROUP_GATE_DELEGATED"] = "1"
-    result = subprocess.run(
-        [sys.executable, "tools/kds-sync/loop_document_gate.py", "--check-only"],
-        cwd=repo_path,
-        env=env,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
+    started_at = time.monotonic()
+    try:
+        result = subprocess.run(
+            [sys.executable, "tools/kds-sync/loop_document_gate.py", "--check-only"],
+            cwd=repo_path,
+            env=env,
+            text=True,
+            capture_output=True,
+            check=False,
+            timeout=GATE_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as exc:
+        elapsed = time.monotonic() - started_at
+        output = ((exc.stdout or "") + (exc.stderr or "")).strip()
+        detail = f" output={output[:300]}" if output else ""
+        return (
+            False,
+            f"{repo_label} loop gate timeout repo_label={repo_label} "
+            f"elapsed_sec={elapsed:.3f} returncode=timeout{detail}",
+        )
+    elapsed = time.monotonic() - started_at
+    diagnostic = f"repo_label={repo_label} elapsed_sec={elapsed:.3f} returncode={result.returncode}"
     try:
         payload = json.loads(result.stdout)
     except json.JSONDecodeError:
         if result.returncode != 0:
-            return False, f"{repo_label} loop gate run failed ({result.returncode})"
-        return False, f"{repo_label} loop gate output is not valid JSON"
+            return False, f"{repo_label} loop gate run failed {diagnostic}"
+        return False, f"{repo_label} loop gate output is not valid JSON {diagnostic}"
     if payload.get("gate") != "pass":
         reasons = ",".join(payload.get("gate_reasons") or []) or payload.get("gate", "unknown")
-        return False, f"{repo_label} loop gate status={payload.get('gate', 'unknown')} reasons={reasons}"
+        return False, f"{repo_label} loop gate {diagnostic} status={payload.get('gate', 'unknown')} reasons={reasons}"
     if result.returncode != 0:
-        return False, f"{repo_label} loop gate run failed ({result.returncode})"
+        return False, f"{repo_label} loop gate run failed {diagnostic}"
     return True, ""
 
 

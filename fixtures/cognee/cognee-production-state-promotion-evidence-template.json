@@ -1,0 +1,44 @@
+{
+  "promotion_evidence_id": "COGNEE-PRODUCTION-STATE-PROMOTION-YYYYMMDD-NNN",
+  "promotion_scope": "cognee_full_run_candidate_state_promotion",
+  "source_admission_package": "docs/harness/evidence/cognee-full-run-admission-package-20260626.md",
+  "source_external_execution_receipt": "REQUIRED_REAL_EXTERNAL_EXECUTION_RECEIPT",
+  "source_full_run_ledger": "fixtures/cognee/cognee-full-run-ledger-template.json",
+  "source_object_coverage": "fixtures/cognee/cognee-full-object-coverage-template.json",
+  "source_scenario_matrix": "fixtures/cognee/cognee-full-scenario-matrix-template.json",
+  "promotion_request": {
+    "requested_by": "REQUIRED_OWNER_OR_DELEGATE",
+    "requested_at": "REQUIRED_REAL_TIMESTAMP",
+    "requested_state_changes": {
+      "production_write": false,
+      "accepted": false,
+      "integrated": false,
+      "production_ready": false
+    },
+    "request_evidence_ref": "REQUIRED_REAL_PROMOTION_REQUEST_EVIDENCE"
+  },
+  "waes_decision": {
+    "decision": "pending",
+    "decided_by": "REQUIRED_WHEN_DECIDED",
+    "decided_at": "REQUIRED_WHEN_DECIDED",
+    "decision_evidence_ref": "REQUIRED_WHEN_DECIDED"
+  },
+  "harness_decision": {
+    "decision": "pending",
+    "decided_by": "REQUIRED_WHEN_DECIDED",
+    "decided_at": "REQUIRED_WHEN_DECIDED",
+    "decision_evidence_ref": "REQUIRED_WHEN_DECIDED"
+  },
+  "rollback_plan": {
+    "rollback_entry": "return_to_cognee_full_run_admission_not_admitted",
+    "rollback_owner": "REQUIRED_ROLLBACK_OWNER",
+    "rollback_condition": "state_promotion_conflict or production_receipt_mismatch or coverage_gate_failure",
+    "rollback_evidence_ref": "REQUIRED_IF_ROLLBACK_TRIGGERED"
+  },
+  "promotion_status": "template_only",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

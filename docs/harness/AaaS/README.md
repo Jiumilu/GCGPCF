@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/AaaS/README.md
 source_path: docs/harness/AaaS/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -40,3 +40,4 @@ KDS 空间：`开发`
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | controlled |
 | GPCF-DOC-AAAS-SERVICE-RUNTIME-20260625 | AaaS 最小 ServicePackage/Metering/SLA/EvidenceRequirement 运行证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md | GPCF | controlled |
+| GPCF-DOC-AAAS-WAES-BINDING-PRECHECK-20260625 | AaaS-WAES 绑定前置预检证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md | GPCF | controlled |

@@ -50,4 +50,4 @@ superseded_by: []
 
 ## 反馈
 
-下一阶段目标已建立并执行。Brain 当前回到 `green` / monitor-only，Studio 仍为 `action_required`，本轮未执行 sync-only closure；GFIS 保持 policy exception watch。下一轮进入 `GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009`。
+下一阶段目标已建立并执行。Brain 当前回到 `green` / monitor-only，Studio 维持 `watch`，本轮未执行 sync-only closure；GFIS 保持 policy exception watch。下一轮进入 `GPCF-CODEGRAPH-WATCHLIST-MONITOR-006`。

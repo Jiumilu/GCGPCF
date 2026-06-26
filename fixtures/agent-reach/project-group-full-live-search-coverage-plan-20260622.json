@@ -26,6 +26,428 @@
         "solid_waste_resource_utilization"
       ],
       "non_claim": "priority targets are not source-of-record and do not change production search configuration"
+    },
+    {
+      "scope": "p9_priority_target_hit_rate_precheck",
+      "fixture": "fixtures/agent-reach/p9-priority-target-hit-rate-precheck-20260626.json",
+      "status": "p9_priority_target_hit_rate_precheck_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "priority_topics": [
+        "green_supply_chain",
+        "phosphogypsum",
+        "industrial_solid_waste",
+        "zero_waste_city"
+      ],
+      "non_claim": "P9 precheck does not invoke live search and requires separate authorization for hit-rate execution"
+    },
+    {
+      "scope": "p9_priority_target_hit_rate_runner_readiness",
+      "fixture": "fixtures/agent-reach/p9-priority-target-hit-rate-authorization.request.json",
+      "status": "p9_hit_rate_runner_readiness_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "runner": "tools/kds-sync/run_agent_reach_p9_priority_target_hit_rate.py",
+      "validator": "tools/kds-sync/validate_agent_reach_p9_hit_rate_runner_readiness.py",
+      "non_claim": "runner readiness does not invoke live search and requires separate P9 authorization"
+    },
+    {
+      "scope": "p9_priority_target_hit_rate_output_quality_gate",
+      "fixture": "docs/harness/evidence/agent-reach-p9-hit-rate-output-quality-gate-20260626.json",
+      "status": "p9_hit_rate_output_quality_gate_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_hit_rate_output_quality_gate.py",
+      "non_claim": "output quality gate validates P9 live hit-rate results after authorization and does not invoke live search"
+    },
+    {
+      "scope": "agent_reach_full_coverage_markdown_drift_monitor",
+      "fixture": "docs/harness/evidence/agent-reach-full-coverage-markdown-drift-monitor-20260626.json",
+      "status": "full_coverage_markdown_drift_monitor_pass",
+      "applies_to_query_ids": [
+        "p8-q01",
+        "p8-q02",
+        "p8-q03",
+        "p8-q04",
+        "p8-q05",
+        "p8-q06",
+        "p8-q07",
+        "p8-q08",
+        "p8-q09",
+        "p8-q10",
+        "p8-q11",
+        "p8-q12",
+        "p8-q13",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_full_coverage_markdown_drift_monitor.py",
+      "non_claim": "drift monitor only checks candidate-only and non-claim markers; it does not invoke live search"
+    },
+    {
+      "scope": "p9_review_queue_bridge_readiness",
+      "fixture": "docs/harness/evidence/agent-reach-p9-review-queue-bridge-readiness-20260626.json",
+      "status": "p9_review_queue_bridge_readiness_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_review_queue_bridge_readiness.py",
+      "non_claim": "review queue bridge readiness maps P9 candidate fields to GFIS/WAS/WAES/KDS review lanes but does not create real review queue items"
+    },
+    {
+      "scope": "p9_live_execution_readiness_closure",
+      "fixture": "docs/harness/evidence/agent-reach-p9-live-execution-readiness-closure-20260626.json",
+      "status": "p9_live_execution_readiness_closure_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_live_execution_readiness_closure.py",
+      "non_claim": "readiness closure aggregates P9 precheck, runner, output quality, drift monitor, and review bridge without invoking live search"
+    },
+    {
+      "scope": "p9_rerun_authorization_request",
+      "fixture": "fixtures/agent-reach/p9-priority-target-hit-rate-rerun-authorization.request.json",
+      "status": "p9_rerun_authorization_request_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_rerun_authorization_request.py",
+      "non_claim": "rerun authorization request only prepares a fresh P9R live rerun boundary after provider fallback repair and does not invoke live search"
+    },
+    {
+      "scope": "p9_rerun_rework_classification",
+      "fixture": "docs/harness/evidence/agent-reach-p9-rerun-rework-classification-20260626.json",
+      "status": "p9_rerun_rework_classification_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_rerun_rework_classification.py",
+      "non_claim": "P9R live rerun was authorized and invoked public search, but provider-level failures kept hit-rate incomplete; this does not claim completion"
+    },
+    {
+      "scope": "p9_source_direct_precheck",
+      "fixture": "fixtures/agent-reach/p9-source-direct-hit-rate-precheck-20260626.json",
+      "status": "p9_source_direct_precheck_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_precheck.py",
+      "non_claim": "source-direct precheck prepares target-site direct public reads after search provider block and does not invoke live fetch"
+    },
+    {
+      "scope": "p9_source_direct_authorization_request",
+      "fixture": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.request.json",
+      "status": "p9_source_direct_authorization_request_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_request.py",
+      "non_claim": "source-direct authorization request only prepares a target-site public-read boundary and does not invoke live fetch"
+    },
+    {
+      "scope": "p9_source_direct_runner_readiness",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-runner-readiness-20260626.json",
+      "status": "p9_source_direct_runner_readiness_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "runner": "tools/kds-sync/run_agent_reach_p9_source_direct_hit_rate.py",
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_runner_readiness.py",
+      "non_claim": "source-direct runner readiness verifies authorization gating and parser behavior without invoking live fetch"
+    },
+    {
+      "scope": "p9_source_direct_output_quality_gate",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-output-quality-gate-20260626.json",
+      "status": "p9_source_direct_output_quality_gate_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_output_quality_gate.py",
+      "non_claim": "source-direct output quality gate validates authorized P9S live results after execution and does not invoke live fetch during readiness"
+    },
+    {
+      "scope": "p9_source_direct_live_execution_readiness_closure",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-execution-readiness-closure-20260626.json",
+      "status": "p9_source_direct_live_execution_readiness_closure_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_execution_readiness_closure.py",
+      "non_claim": "source-direct live execution readiness closure aggregates P9S precheck, authorization request, runner, output quality, and blocked live placeholder without invoking live fetch"
+    },
+    {
+      "scope": "p9_source_direct_review_queue_bridge_readiness",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-review-queue-bridge-readiness-20260626.json",
+      "status": "p9_source_direct_review_queue_bridge_readiness_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_review_queue_bridge_readiness.py",
+      "non_claim": "source-direct review queue bridge readiness maps P9S target candidates to GFIS/WAS/WAES/KDS review lanes without creating real review queue items"
+    },
+    {
+      "scope": "p9_source_direct_live_authorization_intake",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-authorization-intake-20260626.json",
+      "status": "blocked_pending_p9_source_direct_authorization",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_authorization_intake.py",
+      "non_claim": "source-direct authorization intake validates the human authorization file without invoking live fetch; pending status is expected before authorization"
+    },
+    {
+      "scope": "p9_source_direct_live_execution_command_pack",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-execution-command-pack-20260626.json",
+      "status": "p9_source_direct_live_execution_command_pack_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_execution_command_pack.py",
+      "non_claim": "source-direct live execution command pack fixes the post-authorization execution order without invoking live fetch"
+    },
+    {
+      "scope": "p9_source_direct_live_closure_runner",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-20260626.json",
+      "status": "blocked_pending_p9_source_direct_authorization",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "runner": "tools/kds-sync/run_agent_reach_p9_source_direct_live_closure.py",
+      "non_claim": "source-direct live closure runner stops at authorization intake until P9S approval exists and does not invoke live fetch while blocked"
+    },
+    {
+      "scope": "p9_source_direct_live_closure_runner_readiness",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-readiness-20260626.json",
+      "status": "p9_source_direct_live_closure_runner_readiness_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_closure_runner_readiness.py",
+      "non_claim": "source-direct live closure runner readiness probes the blocked path and verifies no live fetch is invoked before P9S authorization"
+    },
+    {
+      "scope": "p9_source_direct_live_closure_authorization_gate",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-closure-authorization-gate-20260626.json",
+      "status": "p9_source_direct_live_closure_authorization_gate_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_closure_authorization_gate.py",
+      "non_claim": "source-direct live closure authorization gate probes execute-live without P9S approval and verifies no live fetch is invoked"
+    },
+    {
+      "scope": "p9_source_direct_live_rework_classification",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-rework-classification-20260627.json",
+      "status": "p9_source_direct_live_rework_classification_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_rework_classification.py",
+      "non_claim": "source-direct live rework classification records the authorized P9S hit-rate run result without converting rework into completion"
+    },
+    {
+      "scope": "p9_objective_post_live_path_simulation",
+      "fixture": "docs/harness/evidence/agent-reach-p9-objective-post-live-path-simulation-20260626.json",
+      "status": "p9_objective_post_live_path_simulation_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_objective_post_live_path_simulation.py",
+      "non_claim": "objective post-live path simulation verifies the future completed closure mode offline and does not invoke live fetch or complete P9"
+    },
+    {
+      "scope": "p9_source_direct_authorization_handoff_pack",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-authorization-handoff-pack-20260626.json",
+      "status": "p9_source_direct_authorization_handoff_pack_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_handoff_pack.py",
+      "non_claim": "source-direct authorization handoff pack fixes the required P9S approval text and post-authorization closure command without invoking live fetch"
+    },
+    {
+      "scope": "p9_objective_completion_audit",
+      "fixture": "docs/harness/evidence/agent-reach-p9-objective-completion-audit-20260626.json",
+      "status": "p9_objective_not_completed_authorization_boundary",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_objective_completion_audit.py",
+      "non_claim": "objective completion audit proves P9 is not complete until authorized live hit-rate evidence passes"
+    },
+    {
+      "scope": "p9_source_direct_offline_hit_rate_simulation",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-offline-hit-rate-simulation-20260626.json",
+      "status": "p9_source_direct_offline_hit_rate_simulation_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_offline_hit_rate_simulation.py",
+      "non_claim": "offline hit-rate simulation proves runner logic with fixtures only and does not invoke live fetch or complete P9"
+    },
+    {
+      "scope": "p9_source_direct_authorization_negative_fixtures",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-authorization-negative-fixtures-20260626.json",
+      "status": "p9_source_direct_authorization_negative_fixtures_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_negative_fixtures.py",
+      "non_claim": "authorization negative fixtures prove unsafe P9S live authorizations are rejected without invoking live fetch"
+    },
+    {
+      "scope": "p9_source_direct_authorization_template",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-authorization-template-20260626.json",
+      "status": "p9_source_direct_authorization_template_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_template.py",
+      "non_claim": "authorization template is human-fill only and intentionally invalid until placeholders are replaced; it does not invoke live fetch"
+    },
+    {
+      "scope": "p9_source_direct_authorization_file_safety",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-authorization-file-safety-20260626.json",
+      "status": "p9_source_direct_authorization_file_safety_ready",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_file_safety.py",
+      "non_claim": "authorization file safety verifies local authorization is not tracked by git and the template is non-executable without invoking live fetch"
+    },
+    {
+      "scope": "p9_source_direct_markdown_drift_monitor",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-markdown-drift-monitor-20260626.json",
+      "status": "p9_source_direct_markdown_drift_monitor_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_markdown_drift_monitor.py",
+      "non_claim": "source-direct Markdown drift monitor checks P9S candidate-only and non-claim markers without invoking live fetch"
+    },
+    {
+      "scope": "p9_source_direct_pre_live_preflight",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-pre-live-preflight-20260626.json",
+      "status": "p9_source_direct_pre_live_preflight_pass",
+      "applies_to_query_ids": [
+        "p8-q05",
+        "p8-q07",
+        "p8-q10",
+        "p8-q12",
+        "p8-q14"
+      ],
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_pre_live_preflight.py",
+      "non_claim": "source-direct pre-live preflight runs all non-live gates before human authorization and does not invoke live fetch"
     }
   ],
   "project_scope": [

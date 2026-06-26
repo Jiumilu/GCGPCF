@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-3E7F2A1B9C
 name: globalcloud-ui-quality-gate
-description: GlobalCloud 项目群 UI 质量门禁技能。用于评估、设计、改造、审计或验收 GlobalCloud 产品界面、控制塔、工作台、证据页、异常页、AI 对话页、配置页、移动端和桌面端 UI 时，组合 Impeccable、ui-ux-pro-max、accessibility、Playwright/browser、Figma 等能力，并强制对齐项目群统一体验骨架、设计令牌、AI 建议/业务事实隔离、证据与状态门禁。只产出 UI evidence candidate 和整改建议，不自动升级 complete/accepted/integrated。
+description: GlobalCloud 项目群 UI 质量门禁技能。用于评估、设计、改造、审计或验收 GlobalCloud 产品界面、控制塔、工作台、证据页、异常页、AI 对话页、配置页、移动端和桌面端 UI 时，组合 @product-design、Impeccable、ui-ux-pro-max、accessibility、Playwright/browser、Figma 等能力，并强制对齐项目群统一体验骨架、设计令牌、AI 建议/业务事实隔离、证据与状态门禁。只产出 UI evidence candidate 和整改建议，不自动升级 complete/accepted/integrated。
 ---
 
 # GlobalCloud UI Quality Gate
 
 ## Overview
 
-本技能用于把 GlobalCloud 项目群 UI 工作从“好看”收口到“可审计、可复现、可验收”。它不替代 Impeccable、ui-ux-pro-max、Figma、accessibility 或 Playwright，而是规定这些能力在项目群中的调用顺序、门禁边界和 evidence 输出格式。
+本技能用于把 GlobalCloud 项目群 UI 工作从“好看”收口到“可审计、可复现、可验收”。它不替代 `@product-design`、Impeccable、ui-ux-pro-max、Figma、accessibility 或 Playwright，而是规定这些能力在项目群中的调用顺序、门禁边界和 evidence 输出格式。
 
 ## Non-Negotiables
 
@@ -37,12 +37,21 @@ If working inside a project repo rather than GPCF, also read its local `AGENTS.m
 ## Workflow
 
 1. **Classify the surface.** Use one type: list, detail, edit/config, operation workbench, exception handling, evidence/audit, AI chat, AI sidebar, brand/marketing, or mobile/desktop shell.
-2. **Select tools.** Read `references/tool-routing.md` and use only the minimum set needed. Impeccable is the product UI main engine when available; ui-ux-pro-max is the design-system source; accessibility and Playwright/browser provide verification.
-3. **Create or inspect the design system.** For new or inconsistent UI systems, use `ui-ux-pro-max` to derive a GlobalCloud design system. For existing code, preserve committed tokens unless they violate project-group rules.
+2. **Select tools.** Read `references/tool-routing.md` and use only the minimum set needed. `@product-design` is the mandatory design-brief and three-option layer for overall interface, page-class, key-component, and structural redesign work; Impeccable is the product UI main engine when available; ui-ux-pro-max is the design-system source; accessibility and Playwright/browser provide verification.
+3. **Create or inspect the design system.** For new or inconsistent UI systems, use `ui-ux-pro-max` to derive a GlobalCloud design system. Professional workbench surfaces must first map to the existing `WAES` UI framework before project-level optimization. For existing code, preserve committed tokens unless they violate project-group rules.
 4. **Audit against gates.** Read `references/quality-checklist.md`. Score every gate with evidence: `pass`, `partial`, `fail`, or `not_applicable`.
 5. **Implement only when asked.** If the user asked for changes, make surgical UI edits in the target repo. Do not refactor unrelated components.
 6. **Verify with real evidence.** Use browser screenshots, responsive checks, keyboard/focus checks, automated tests, or Playwright where available. If a check cannot run, mark it `not_verified`.
 7. **Report status safely.** Read `references/evidence-output.md` and output a UI gate report. Never claim project status completion from UI evidence alone.
+
+When a task is design-led rather than fix-led, require the UI round to record:
+
+- `Tool route`
+- `Context package`
+- `Prompt profile`
+- `Design options`
+- `Selected option`
+- `WAES baseline reuse`
 
 ## Gate Model
 

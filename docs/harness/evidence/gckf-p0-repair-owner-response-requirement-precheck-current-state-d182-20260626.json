@@ -1,0 +1,35 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-REQUIREMENT-PRECHECK-CURRENT-STATE-D182-20260626",
+  "roundId": "GPCF-GCKF-P0-D182-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D181-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-repair-owner-notification-acknowledgement-receipt-aggregation-preview-current-state-d181-20260622.json",
+  "precheckStatus": "repair_owner_response_requirement_precheck_with_hold",
+  "maximumState": "review_ready_with_hold",
+  "holdRequired": true,
+  "actualRepairOwnerResponseReceived": false,
+  "packageScope": {
+    "requiredRoles": 8,
+    "requirementItems": 10,
+    "blockingConditions": 5,
+    "forbiddenActions": 11
+  },
+  "gateAssertions": {
+    "repairOwnerNotificationSendAllowed": false,
+    "acknowledgementReceiptExecutionAllowed": false,
+    "committeeCaseOpeningAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "checks": [
+    "python3 tools/kds-sync/validate_gckf_p0_repair_owner_response_requirement_precheck_current_state_d182.py",
+    "python3 tools/kds-sync/check_chinese_localization_gate.py --json --max-findings 10000",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py",
+    "python3 tools/kds-sync/loop_document_gate.py --check-only"
+  ],
+  "nextRoundCandidate": "继续保持 no-write，等待真实 repair owner response 或进入 response collection checklist current-state。"
+}

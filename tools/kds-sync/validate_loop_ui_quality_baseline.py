@@ -59,7 +59,19 @@ def main() -> int:
     for phrase in [
         "## 7.1 UI 质量门禁（涉及 UI 时必填）",
         "| UI scope | true / false |",
+        "| Tool route | `@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` / project-specific route / not_applicable |",
+        "| Context package | completed / partial / missing / not_applicable |",
+        "| Prompt profile | functional-accuracy / visual-quality / usability-experience / governance-evidence / scope-control / mixed / not_applicable |",
+        "| Design options | 3 / 1_with_existing_selected_direction / not_applicable |",
+        "| Selected option | 1 / 2 / 3 / existing / not_applicable |",
+        "| WAES baseline reuse | shell / page-skeleton / core-components / full-stack / exception-approved / not_applicable |",
         "UI gate status: ui_ready | ui_partial | ui_blocked | ui_rework_required | not_applicable",
+        "Tool route:",
+        "Context package:",
+        "Prompt profile:",
+        "Design options:",
+        "Selected option:",
+        "WAES baseline reuse:",
         "runtime_not_verified / mobile_not_verified / a11y_manual_only / figma_not_verified / not_applicable",
     ]:
         require(phrase in template, f"LOOP_ROUND_TEMPLATE.md missing phrase: {phrase}")
@@ -72,6 +84,10 @@ def main() -> int:
         "UI gate status",
         "G1 Surface Structure",
         "ui_evidence_candidate",
+        "@product-design",
+        "工具上下文包",
+        "提示词能力",
+        "三方案机制",
         "accepted",
         "integrated",
     ]:
@@ -83,6 +99,10 @@ def main() -> int:
         "Loop 接入规则",
         "分阶段实施方案",
         "UI gate",
+        "@product-design",
+        "工具上下文包",
+        "提示词能力体系",
+        "三方案机制",
         "accepted",
         "integrated",
     ]:
@@ -97,6 +117,18 @@ def main() -> int:
         "04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md" in ui_skill,
         "globalcloud-ui-quality-gate skill must read the UI master doc",
     )
+    require(
+        "@product-design" in ui_skill,
+        "globalcloud-ui-quality-gate skill must route product-design for design-led UI work",
+    )
+
+    tool_routing = read(ROOT / ".codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md")
+    for phrase in [
+        "@product-design",
+        "Must run `get-context -> ideate -> select option`",
+        "Professional workbench UI defaults to `WAES` parent-frame reuse",
+    ]:
+        require(phrase in tool_routing, f"tool-routing.md missing phrase: {phrase}")
 
     usability_gates = read(ROOT / ".codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md")
     require(

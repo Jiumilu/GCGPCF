@@ -1,0 +1,75 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-NO-SEND-DISPATCH-PRECHECK-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-NO-SEND-DISPATCH-PRECHECK-026",
+  "status": "no_send_dispatch_precheck_passed_actual_dispatch_blocked",
+  "generated_at": "2026-06-26",
+  "operation_mode": "development_state",
+  "runtime_mode": false,
+  "objective": "Run a no-send dispatch precheck against the supplied detail intake, confirming that the collection request can be reviewed locally while actual dispatch remains blocked.",
+  "source_evidence": {
+    "detail_intake": "docs/harness/evidence/codegraph-dev-execution-dispatch-precheck-detail-intake-20260626.json",
+    "collection_pack": "docs/harness/evidence/codegraph-dev-execution-real-input-collection-pack-20260626.json"
+  },
+  "precheck_inputs": {
+    "recipient": "GPC_or_Liaoning_Yuanhang_order_owner",
+    "channel": "manual_controlled_channel_pending_confirmation",
+    "payload_contains_real_input_request": true,
+    "payload_contains_rejected_substitutes": true,
+    "evidence_destination": "docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/*.customer-requirement-platform-order.source-record.json",
+    "sensitive_data_review": false,
+    "rollback_or_cancellation_path_present": true
+  },
+  "precheck_results": {
+    "recipient_present": true,
+    "channel_is_manual_controlled_pending_confirmation": true,
+    "payload_preview_available": true,
+    "payload_has_no_external_send_instruction": true,
+    "evidence_destination_is_controlled_intake_path": true,
+    "rollback_or_cancellation_path_present": true,
+    "sensitive_data_review_pending": true,
+    "no_send_precheck_passed": true,
+    "actual_dispatch_ready": false,
+    "actual_dispatch_blocked_reason": "sensitive_data_review=false and channel remains pending confirmation"
+  },
+  "allowed_after_precheck": [
+    "sensitive data review",
+    "recipient confirmation",
+    "channel confirmation",
+    "payload wording review",
+    "evidence destination review"
+  ],
+  "forbidden_after_precheck": [
+    "actual dispatch",
+    "external API write",
+    "real KDS write",
+    "real WAES write",
+    "production write",
+    "deployment",
+    "git commit",
+    "git push",
+    "business status upgrade"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false,
+    "runtime_state_verified": false,
+    "actual_dispatch_authorized": false,
+    "dispatch_performed": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_dispatch_precheck_detail_intake.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_no_send_dispatch_precheck.py"
+  ],
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-DISPATCH-SENSITIVE-REVIEW-027"
+}

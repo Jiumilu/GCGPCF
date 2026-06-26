@@ -123,7 +123,7 @@ def main() -> int:
 
     for phrase in [
         "gfis_scope_review_completed_no_sync_needed",
-        "Git dirty 为 1",
+        "Git dirty 为 0",
         "CodeGraph pending 为 added=0、modified=0、removed=0",
         "不执行 `codegraph sync`",
         "不执行 clean reindex",

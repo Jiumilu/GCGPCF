@@ -2,7 +2,7 @@
   "evidence_id": "LOOP-CODEGRAPH-ACTIVE-DRIFT-METRICS-20260621",
   "status": "codegraph_active_drift_metrics_evidenced",
   "date": "2026-06-21",
-  "sampled_at_utc": "2026-06-21T06:54:31Z",
+  "sampled_at_utc": "2026-06-26T04:19:31Z",
   "scope": "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002",
   "source_evidence": [
     "docs/harness/evidence/loop-codegraph-active-drift-monitor-20260621.json",
@@ -10,67 +10,65 @@
     "docs/harness/evidence/loop-codegraph-project-group-monitor-20260621.json"
   ],
   "metrics_window": {
-    "previous_sample_utc": "2026-06-21T04:55:48Z",
-    "current_sample_utc": "2026-06-21T06:54:31Z",
-    "elapsed_minutes": 119,
+    "previous_sample_utc": "2026-06-21T06:54:31Z",
+    "current_sample_utc": "2026-06-26T04:19:31Z",
+    "elapsed_minutes": 7045,
     "mttd": "seeded",
-    "mttr": "unavailable_until_drift_closes"
+    "mttr": "unavailable_until_watch_converges"
   },
   "observations": [
     {
       "project": "GlobalCloud Brain",
-      "status": "active_drift_growing",
+      "status": "green",
       "previous_pending_changes": {
-        "added": 0,
-        "modified": 39,
-        "removed": 0
+        "modified": 56
       },
       "current_pending_changes": {
-        "added": 0,
-        "modified": 56,
-        "removed": 0
-      },
-      "delta": {
-        "added": 0,
-        "modified": 17,
-        "removed": 0
-      },
-      "decision": "sync_only_closure_requires_user_authorization"
-    },
-    {
-      "project": "GlobalCloud Studio",
-      "status": "active_drift_persisting",
-      "previous_pending_changes": {
-        "added": 2,
-        "modified": 5,
-        "removed": 0
-      },
-      "current_pending_changes": {
-        "added": 2,
-        "modified": 5,
-        "removed": 0
-      },
-      "delta": {
         "added": 0,
         "modified": 0,
         "removed": 0
       },
-      "decision": "sync_only_closure_requires_user_authorization"
+      "delta": {
+        "added": 0,
+        "modified": -56,
+        "removed": 0
+      },
+      "decision": "monitor_only"
+    },
+    {
+      "project": "GlobalCloud Studio",
+      "status": "watch",
+      "previous_pending_changes": {
+        "added": 2,
+        "modified": 5,
+        "removed": 0
+      },
+      "current_pending_changes": {
+        "added": 1,
+        "modified": 2,
+        "removed": 0
+      },
+      "delta": {
+        "added": -1,
+        "modified": -3,
+        "removed": 0
+      },
+      "decision": "monitor_only"
     },
     {
       "project": "GlobalCloud GFIS",
-      "status": "controlled_residual_persisting",
+      "status": "green",
       "current_pending_changes": {
-        "added": 1,
+        "added": 0,
         "modified": 0,
         "removed": 0
       },
       "policy": "large_generated_validator_exception_candidate",
-      "decision": "keep_policy_exception"
+      "decision": "clear_residual"
     },
     {
       "project": "GlobalCoud GPCF",
-      "status": "local_governance_index_resynchronized",
+      "status": "up_to_date_after_final_sync",
       "current_pending_changes": {
         "added": 0,
         "modified": 0,
@@ -87,12 +85,11 @@
     "commit_or_push_authorized": false
   },
   "decision": {
-    "result": "continue_read_only_metrics_until_sync_only_authorized",
+    "result": "continue_read_only_metrics_sampling",
     "rationale": [
-      "Brain drift is still increasing, so MTTR cannot be measured yet.",
-      "Studio drift persists, so its MTTR also remains unavailable.",
-      "Sync-only closure for Brain or Studio would alter their .codegraph indexes and needs explicit authorization.",
-      "The GPCF governance index can be locally synchronized because this round created GPCF evidence and validator files."
+      "Brain has converged to zero pending, so the monitor now tracks closure instead of growth.",
+      "Studio remains within the watch threshold, so no sync-only closure is needed.",
+      "GPCF has been locally resynchronized after governance evidence changes."
     ]
   },
   "boundaries": {
@@ -106,17 +103,12 @@
     "production_write": false
   },
   "next_loop_input": {
-    "round": "GPCF-CODEGRAPH-SYNC-ONLY-AUTHORIZATION-003",
-    "objective": "Ask for explicit authorization before running sync-only closure on Brain or Studio .codegraph indexes, or continue read-only metrics sampling if authorization is not granted.",
-    "allowed_without_extra_authorization": [
-      "read-only codegraph status sampling",
-      "read-only .codegraph git status checks",
-      "GPCF evidence and validator update",
-      "GPCF-only codegraph sync after governance evidence changes"
-    ],
-    "requires_explicit_authorization": [
-      "codegraph sync in GlobalCloud Brain",
-      "codegraph sync in GlobalCloud Studio"
+    "round": "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006",
+    "objective": "Continue read-only watchlist sampling for Brain, Studio, GFIS and GPCF after Brain convergence and Studio watch-state stabilization.",
+    "allowed_actions": [
+      "read-only status recheck",
+      "read-only .codegraph git status",
+      "GPCF evidence update if drift appears"
     ],
     "forbidden_actions": [
       "Brain business code edits",

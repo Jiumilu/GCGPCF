@@ -65,11 +65,11 @@ status: business_execution_window_granted_project_group
 
 | repo | initialized | pendingChanges.added | pendingChanges.modified | pendingChanges.removed | reindexRecommended | codegraph_git_isolated |
 |---|---|---:|---:|---:|---|---|
-| GPCF | `true` | `16` | `32` | `0` | `false` | `true` |
+| GPCF | `true` | `52` | `7` | `0` | `false` | `true` |
 | GFIS | `true` | `0` | `0` | `0` | `false` | `true` |
 | Brain | `true` | `0` | `0` | `0` | `false` | `true` |
 | KDS | `true` | `0` | `0` | `0` | `false` | `true` |
-| Studio | `true` | `0` | `18` | `0` | `false` | `true` |
+| Studio | `true` | `1` | `2` | `0` | `false` | `true` |
 
 ## 非声明
 

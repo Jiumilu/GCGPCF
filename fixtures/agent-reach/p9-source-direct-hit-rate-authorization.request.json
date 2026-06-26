@@ -1,0 +1,75 @@
+{
+  "id": "agent-reach-p9-source-direct-hit-rate-authorization-request-20260626",
+  "date": "2026-06-26",
+  "status": "p9_source_direct_authorization_request_ready",
+  "current_admission": "limited_candidate_only",
+  "required_text": "授权执行 Agent-Reach P9S Source Direct Hit-Rate Live Run",
+  "purpose": "Run public-read-only direct target-site hit-rate evaluation after Bing/DuckDuckGo provider block prevented P9/P9R search-engine-based hit-rate assessment.",
+  "precheck_fixture": "fixtures/agent-reach/p9-source-direct-hit-rate-precheck-20260626.json",
+  "authorization_file_to_create_after_human_approval": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json",
+  "execution_scope": {
+    "target_count": 13,
+    "domain_count": 10,
+    "topics": ["green_supply_chain", "phosphogypsum", "industrial_solid_waste", "zero_waste_city"],
+    "allowed_methods": ["target_url", "sitemap", "rss", "public_list_page", "site_search_endpoint_without_credentials"],
+    "max_targets": 13,
+    "max_entrypoints_per_target": 3,
+    "max_pages_per_entrypoint": 5,
+    "public_read_only": true,
+    "write_evidence_only": true
+  },
+  "required_authorization_fields": {
+    "authorization_id": "agent-reach-p9-source-direct-hit-rate-live-run",
+    "authorization_status": "approved_for_p9_source_direct_hit_rate_live_run",
+    "authorized_by": "<required-human-name>",
+    "authorized_at": "<required-iso8601>",
+    "expires_at": "<required-iso8601>",
+    "allowed_methods": ["target_url", "sitemap", "rss", "public_list_page", "site_search_endpoint_without_credentials"],
+    "max_targets": 13,
+    "max_entrypoints_per_target": 3,
+    "max_pages_per_entrypoint": 5,
+    "allow_external_network": true,
+    "allow_write_evidence_only": true,
+    "forbidden_actions": [
+      "credential_write",
+      "browser_cookie_extraction",
+      "credentialed_api",
+      "login_required_page",
+      "kds_canonical_write",
+      "gfis_source_of_record_write",
+      "production_config_write",
+      "global_mcp_config_write",
+      "production_integration",
+      "accepted_claim",
+      "integrated_claim",
+      "production_ready_claim"
+    ],
+    "logging_redaction": {
+      "redact_tokens": true,
+      "redact_cookies": true,
+      "redact_authorization_headers": true,
+      "redact_query_personal_data": true,
+      "persist_redacted_snippets_only": true
+    }
+  },
+  "security_controls": {
+    "live_external_fetch_invoked": false,
+    "credential_written": false,
+    "browser_cookie_extraction_invoked": false,
+    "kds_canonical_write_allowed": false,
+    "gfis_source_of_record_write_allowed": false,
+    "production_config_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "non_claims": [
+    "authorization_request_only",
+    "not_live_fetch_invoked",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ]
+}

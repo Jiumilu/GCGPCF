@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md
 source_path: openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---

@@ -2,7 +2,7 @@
   "evidence_id": "LOOP-CODEGRAPH-ACTIVE-DRIFT-MONITOR-20260621",
   "status": "codegraph_active_drift_monitor_evidenced",
   "date": "2026-06-21",
-  "sampled_at_utc": "2026-06-21T04:55:48Z",
+  "sampled_at_utc": "2026-06-26T04:19:31Z",
   "scope": "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001",
   "stage_goal": {
     "objective": "Monitor active CodeGraph drift for Brain and Studio, keep GFIS residual controlled, and avoid project business development.",
@@ -19,16 +19,16 @@
     {
       "project": "GlobalCloud Brain",
       "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain",
-      "status": "active_drift",
+      "status": "green",
       "pending_changes": {
         "added": 0,
-        "modified": 36,
+        "modified": 0,
         "removed": 0
       },
       "previous_pending_changes": {
-        "modified": 32
+        "modified": 36
       },
-      "trend": "drift_increased",
+      "trend": "drift_closed",
       "files": 152,
       "nodes": 2447,
       "edges": 5758,
@@ -37,9 +37,9 @@
     {
       "project": "GlobalCloud Studio",
       "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio",
-      "status": "active_drift",
+      "status": "watch",
       "pending_changes": {
-        "added": 2,
+        "added": 1,
         "modified": 2,
         "removed": 0
       },
@@ -47,7 +47,7 @@
         "added": 2,
         "modified": 2
       },
-      "trend": "drift_persisted",
+      "trend": "watch_with_pending_changes",
       "files": 797,
       "nodes": 14457,
       "edges": 46854,
@@ -56,13 +56,13 @@
     {
       "project": "GlobalCloud GFIS",
       "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
-      "status": "controlled_residual",
+      "status": "green",
       "pending_changes": {
-        "added": 1,
+        "added": 0,
         "modified": 0,
         "removed": 0
       },
-      "policy": "large_generated_validator_exception_candidate",
+      "policy": "cleared",
       "files": 1022,
       "nodes": 13152,
       "edges": 38142,
@@ -88,15 +88,12 @@
     "mttr_seed_available": false,
     "detected_at_utc": "2026-06-21T04:55:48Z",
     "drift_projects": [
-      "GlobalCloud Brain",
       "GlobalCloud Studio"
     ],
-    "controlled_residual_projects": [
-      "GlobalCloud GFIS"
-    ],
+    "controlled_residual_projects": [],
     "manual_search_avoided_notes": [
-      "Brain drift is quantified as modified=36 from CodeGraph status instead of broad manual file inspection.",
-      "Studio drift is quantified as added=2 and modified=2 from CodeGraph status instead of project-wide review."
+      "Brain drift is now zero pending from CodeGraph status instead of broad manual file inspection.",
+      "Studio remains quantified as a watch item with added=1 and modified=2 instead of project-wide review."
     ]
   },
   "loop_gates": {
@@ -117,19 +114,17 @@
     "production_write": false
   },
   "next_loop_input": {
-    "round": "GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002",
-    "objective": "Continue read-only drift sampling for Brain and Studio, collect a second MTTD/MTTR data point, and decide whether sync-only closure is authorized.",
+    "round": "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006",
+    "objective": "Continue read-only watchlist monitoring for Brain, Studio, GFIS and GPCF after Brain convergence and Studio watch-state stabilization.",
     "allowed_actions": [
-      "read-only codegraph status sampling",
-      "read-only .codegraph git status checks",
-      "GPCF evidence and validator update",
-      "GPCF-only codegraph sync after governance evidence changes"
+      "read-only status recheck",
+      "read-only .codegraph git status",
+      "GPCF evidence update if drift appears"
     ],
     "forbidden_actions": [
-      "Brain business code edits",
-      "Studio business code edits",
+      "project business code edits",
+      "unscoped codegraph sync on project repos",
       "GFIS validator refactor",
-      "production writes",
       "commit",
       "push",
       "deploy",

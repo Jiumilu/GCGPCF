@@ -24,7 +24,7 @@ superseded_by: []
 
 本轮原计划生成 KDS mirror / WorkWiki scope review 授权包。live KDS 状态复核显示：
 
-- KDS Git dirty：`59`
+- KDS Git dirty：`1`
 - KDS CodeGraph pending：`added=0, modified=0, removed=0`
 - `reindexRecommended=false`
 - `worktreeMismatch=null`
@@ -34,26 +34,26 @@ superseded_by: []
 
 ## 快照修正
 
-上一轮和本轮初始采集曾观察到 KDS dirty 增长到 1677，属于历史活动漂移快照。当前 live 状态以本轮复核为准：KDS Git dirty 仍为 59，scope review 仍需保留，不应误判为已清零。
+上一轮和本轮初始采集曾观察到 KDS dirty 增长到 1677，属于历史活动漂移快照。当前 live 状态以本轮复核为准：KDS Git dirty 仍为 1，scope review 仍需保留，不应误判为已清零。
 
 ## 当前 watchlist
 
 | repo | 当前决策 |
 | --- | --- |
-| Brain | authorization_required |
-| GFIS | authorization_required_without_clean_reindex |
+| Brain | monitor_only |
+| GFIS | monitor_only |
 | KDS | mirror_scope_review_required_now |
-| Studio | sync_only_precheck_completed_with_residual_watch |
+| Studio | monitor_only |
 
 ## 五方向
 
 ### run
 
-复核 KDS live CodeGraph 与 Git 状态，发现当前 KDS pending 已清零但 Git dirty 仍为 59。
+复核 KDS live CodeGraph 与 Git 状态，发现当前 KDS pending=0 但 Git dirty 仍非零。
 
 ### stop
 
-`stop_type=authorization_boundary`。KDS 当前 CodeGraph pending 归零但 Git dirty 仍为 59，本轮停止在授权边界，不执行 KDS sync、真实 KDS API 写入、mirror overwrite 或 clean reindex。
+`stop_type=authorization_boundary`。KDS 当前 CodeGraph pending 已归零但 Git dirty 仍为 1，本轮停止在授权边界，不执行 KDS sync、真实 KDS API 写入、mirror overwrite 或 clean reindex。
 
 ### verify
 
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_kds_token.py
 
 ### debug
 
-当前 KDS mirror / WorkWiki 仍有 dirty，Brain 与 GFIS 后续边界继续保留；Studio 维持 residual watch。
+当前 KDS mirror / WorkWiki 仍有 dirty，Brain、GFIS、Studio 继续保持 monitor_only。
 
 ## 非声明
 

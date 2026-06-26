@@ -56,6 +56,31 @@ status: next_stage_authorization_package_granted_precheck_only
 - gap_matrix: `HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623`
 - completion_audit: `None`
 
+## 全运行授权清单
+
+### 签字字段
+
+| field | required_state | note |
+|---|---|---|
+| `authorized_window_id` | required | 绑定真实授权窗口 ID |
+| `authorized_by` | required | 绑定授权人或治理角色 |
+| `authorized_at` | required | 绑定带时区的授权时间 |
+| `sanitized_production_token_ledger` | required | 只允许脱敏账本引用 |
+| `rollback_plan_id` | required | 绑定回滚预案或 runbook ID |
+| `waes_harness_admission_decision` | required | 绑定 WAES/Harness 裁决证据 |
+
+### 运行开闸项
+
+| switch | required_state | note |
+|---|---|---|
+| `open_real_measurement_window` | false until explicit approval | 打开真实测量窗口 |
+| `allow_production_proxy_start` | false until explicit approval | 启动生产 proxy |
+| `allow_production_sdk_enablement` | false until explicit approval | 启用生产 SDK |
+| `allow_real_KDS_write` | false until explicit approval | 允许真实 KDS 写入 |
+| `allow_real_external_API_write` | false until explicit approval | 允许真实外部 API 写入 |
+| `allow_production_token_measurement` | false until explicit approval | 允许真实生产 token 测量 |
+| `allow_production_admission_gate_true` | false until explicit approval | 允许生产准入门禁为 true |
+
 ## 下一步决策
 
 `open_real_measurement_window`

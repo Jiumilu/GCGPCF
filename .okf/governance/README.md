@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/.okf/governance/README.md
 source_path: .okf/governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---

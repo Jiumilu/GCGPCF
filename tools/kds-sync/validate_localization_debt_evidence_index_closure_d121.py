@@ -76,6 +76,18 @@ def main() -> None:
     if evidence.get("remaining_target_findings") != []:
         fail("remaining_target_findings_not_empty")
 
+    loop_text = LOOP_MD.read_text(encoding="utf-8")
+    for marker in (
+        "## LOOP 运行控制闭环",
+        "### run",
+        "### stop",
+        "### verify",
+        "### recover",
+        "### debug",
+    ):
+        if marker not in loop_text:
+            fail(f"loop_control_marker_missing:{marker}")
+
     print("localization_debt_evidence_index_closure_d121=pass")
     print(f"changed_files={len(changed_files)}")
     print(f"changed_line_items={evidence.get('changed_line_items')}")

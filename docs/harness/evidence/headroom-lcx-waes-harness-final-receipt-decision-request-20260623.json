@@ -1,0 +1,58 @@
+{
+  "evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001",
+  "date": "2026-06-23",
+  "status": "waes_harness_final_receipt_decision_requested_pending",
+  "scope": "decision_request_only_no_measurement",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "source_intake": "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-intake-20260623.json",
+  "source_precheck": "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-precheck-20260623.json",
+  "source_completed_receipt": "fixtures/headroom/headroom-lcx-real-measurement-external-authorization-receipt.completed.json",
+  "receipt_id": "HEADROOM-LCX-EXT-AUTH-RECEIPT-20260623-001",
+  "receipt_valid_precheck_only": true,
+  "requested_decision": "waes_harness_final_receipt_decision",
+  "allowed_decision_values": [
+    "admitted_for_next_precheck_only",
+    "rejected_requires_rework",
+    "deferred_pending_additional_evidence"
+  ],
+  "decision_pending": true,
+  "required_waes_harness_checks": [
+    "receipt_fields_match_completion_template",
+    "negative_fixtures_rejected_count_11_accepted_count_0",
+    "telemetry_off",
+    "no_unsanitized_sensitive_material",
+    "no_production_proxy_or_sdk",
+    "no_real_kds_or_external_api_write",
+    "no_database_migration_or_permission_change",
+    "accepted_integrated_production_ready_false",
+    "measurement_window_not_opened"
+  ],
+  "pre_execution_decision": {
+    "waes_harness_final_decision_recorded": false,
+    "can_open_real_measurement": false,
+    "real_measurement_open": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

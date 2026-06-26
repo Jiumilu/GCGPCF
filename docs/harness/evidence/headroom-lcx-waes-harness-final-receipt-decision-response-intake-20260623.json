@@ -1,0 +1,45 @@
+{
+  "evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001",
+  "date": "2026-06-23",
+  "status": "response_intake_ready_missing_final_response",
+  "scope": "final_response_intake_only_no_measurement",
+  "source_request": "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.json",
+  "response_template_path": "fixtures/headroom/headroom-lcx-waes-harness-final-receipt-decision.response.template.json",
+  "target_response_path": "fixtures/headroom/headroom-lcx-waes-harness-final-receipt-decision.response.json",
+  "final_response_recorded": false,
+  "response_check": {
+    "response_instance_valid": false,
+    "missing_fields": [
+      "decision_id",
+      "request_evidence_id",
+      "receipt_id",
+      "decision_maker",
+      "decision_role",
+      "decided_at",
+      "decision_value",
+      "decision_reason",
+      "linked_evidence_refs",
+      "can_open_real_measurement",
+      "real_measurement_open",
+      "measured_production_tokens",
+      "accepted",
+      "integrated",
+      "production_ready"
+    ],
+    "invalid_false_fields": [],
+    "invalid_fields": [
+      "final_response_file_missing"
+    ]
+  },
+  "pre_execution_decision": {
+    "waes_harness_final_decision_recorded": false,
+    "can_open_real_measurement": false,
+    "real_measurement_open": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

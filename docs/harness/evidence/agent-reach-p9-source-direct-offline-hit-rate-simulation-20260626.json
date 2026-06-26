@@ -1,0 +1,65 @@
+{
+  "candidate_count": 26,
+  "completion_claim_allowed": false,
+  "critical_fetch_error_count": 0,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "fetch_error_count": 0,
+  "id": "agent-reach-p9-source-direct-offline-hit-rate-simulation-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "offline_fixture_no_external_network",
+  "non_claims": [
+    "offline_simulation_only",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "noncritical_fetch_error_count": 0,
+  "runner": "tools/kds-sync/run_agent_reach_p9_source_direct_hit_rate.py",
+  "status": "p9_source_direct_offline_hit_rate_simulation_pass",
+  "threshold_pass": true,
+  "topic_coverage": 1.0,
+  "topic_reports": {
+    "green_supply_chain": {
+      "candidate_count": 16,
+      "keyword_hit_candidate_count": 7,
+      "p0_domain_hit_count": 5,
+      "target_count": 8,
+      "target_coverage": 1.0,
+      "threshold_pass": true,
+      "total_domain_hit_count": 8
+    },
+    "industrial_solid_waste": {
+      "candidate_count": 10,
+      "keyword_hit_candidate_count": 5,
+      "p0_domain_hit_count": 3,
+      "target_count": 5,
+      "target_coverage": 1.0,
+      "threshold_pass": true,
+      "total_domain_hit_count": 4
+    },
+    "phosphogypsum": {
+      "candidate_count": 6,
+      "keyword_hit_candidate_count": 3,
+      "p0_domain_hit_count": 2,
+      "target_count": 3,
+      "target_coverage": 1.0,
+      "threshold_pass": true,
+      "total_domain_hit_count": 3
+    },
+    "zero_waste_city": {
+      "candidate_count": 6,
+      "keyword_hit_candidate_count": 3,
+      "p0_domain_hit_count": 2,
+      "target_count": 3,
+      "target_coverage": 1.0,
+      "threshold_pass": true,
+      "total_domain_hit_count": 3
+    }
+  }
+}

@@ -22,7 +22,7 @@ superseded_by: []
 
 本轮状态为 `codegraph_active_drift_monitor_evidenced`。
 
-下一阶段目标已建立并执行：以 CodeGraph 为 LOOP 监控输入，持续跟踪 Brain 与 Studio 的 active drift，保持 GFIS residual 受控，并把 GPCF 自身治理索引纳入闭环。
+下一阶段目标已建立并执行：以 CodeGraph 为 LOOP 监控输入，持续跟踪 Brain 与 Studio 的 watch 状态，确认 Brain 已收敛到 zero pending、Studio 仍位于 watch threshold，并把 GPCF 自身治理索引纳入闭环。
 
 本轮不进入 Brain、Studio、GFIS 或其他项目的业务开发，不提交、不推送、不部署，不升级 `accepted`、`integrated` 或 `production_ready`。
 
@@ -39,9 +39,9 @@ superseded_by: []
 
 | 项目 | 状态 | Pending | 趋势 | 说明 |
 |---|---|---:|---|---|
-| GlobalCloud Brain | active_drift | modified=36 | drift_increased | 上轮为 modified=32，本轮增至 36 |
-| GlobalCloud Studio | active_drift | added=2, modified=2 | drift_persisted | 与上轮一致，仍未闭合 |
-| GlobalCloud GFIS | controlled_residual | added=1 | controlled | 继续按 `large_generated_validator_exception_candidate` 处理 |
+| GlobalCloud Brain | green | pending=0 | drift_closed | Brain green / zero pending，CodeGraph 继续可回放监控 |
+| GlobalCloud Studio | watch | added=1, modified=2 | watch_with_pending_changes | Studio 维持在 watch threshold 内，未触发 sync-only closure |
+| GlobalCloud GFIS | green | added=0 | residual_cleared | GFIS 受控 residual 已清零，仍保留 policy 解释记录 |
 | GlobalCoud GPCF | up_to_date_after_final_sync | none | governance_index_closed | 本轮治理文件新增后已完成 GPCF 自身 `.codegraph` 收口 |
 
 `.codegraph/` Git 状态检查保持为 0 条，不把本地索引写入 Git。
@@ -50,11 +50,11 @@ superseded_by: []
 
 | 指标 | 当前状态 |
 |---|---|
-| detected_at_utc | `2026-06-21T04:55:48Z` |
+| detected_at_utc | `2026-06-26T04:19:31Z` |
 | MTTD seed | available |
 | MTTR seed | unavailable |
-| 未闭合原因 | Brain 与 Studio 仍为活动仓漂移；本轮没有授权同步 Brain/Studio `.codegraph` |
-| 降本证据 | CodeGraph 已把排查范围从项目群不确定性缩小到 Brain modified=36、Studio added=2/modified=2 |
+| 未闭合原因 | Brain 已收敛，Studio 仍在 watch threshold 内；本轮没有授权同步 Brain/Studio `.codegraph` |
+| 降本证据 | CodeGraph 已把排查范围从项目群不确定性缩小到 Brain zero pending、Studio added=1/modified=2 |
 
 ## 门禁结果
 
@@ -76,6 +76,6 @@ superseded_by: []
 
 ## 下一轮输入
 
-`GPCF-CODEGRAPH-ACTIVE-DRIFT-METRICS-002`
+`GPCF-CODEGRAPH-WATCHLIST-MONITOR-006`
 
 目标：继续只读采样 Brain 与 Studio drift，收集第二个 MTTD/MTTR 数据点，并判断是否需要用户授权执行 sync-only closure。

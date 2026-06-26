@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-43BA653EFB
 title: CodeGraph Drift Alert Thresholds Evidence
 project: KDS
-related_projects: [KDS, GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ superseded_by: []
 |---|---|---|---|
 | GlobalCloud GFIS | added=0 / modified=0 / removed=0 | watch | 维持 policy exception watch |
 | GlobalCloud Brain | added=0 / modified=0 / removed=0 | green | 维持 monitor-only |
-| GlobalCloud Studio | added=0 / modified=18 / removed=0 | action_required | 需要 sync-only 授权包或继续 watch |
+| GlobalCloud Studio | added=1 / modified=2 / removed=0 | watch | 继续 watch，不进入 sync-only closure |
 
 14 仓仍全部 initialized，`.codegraph` Git status entries 仍为 0。Studio 达到 action_required 不等于允许自动 sync，本轮不进入业务开发、不提交、不推送、不部署。Brain 当前回到 zero pending，仍仅作 monitor-only 观察。
 
@@ -56,7 +56,7 @@ superseded_by: []
 - Brain 维持 monitor-only，Studio 达到 `action_required`，但本轮不执行 sync-only closure。
 - GFIS 保持 policy exception watch，不作为业务失败。
 - `.codegraph` 进 Git 或 removed>0 为 critical，阻断任何状态升级。
-- 下一轮生成 Brain/Studio sync-only 授权包。
+- 下一轮进入 `GPCF-CODEGRAPH-WATCHLIST-MONITOR-006`，继续监控 Brain / KDS / GFIS / Studio 的 watch 状态。
 
 ## 下一轮
 

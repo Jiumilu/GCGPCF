@@ -82,6 +82,56 @@ GPCF 证据索引
 - Cognee P4 live writeback evidence.md：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.md`
 - Cognee P4 live writeback evidence.json：`docs/harness/evidence/cognee-p4-real-writeback-live-20260624.json`
 - Cognee P4 live 授权签核包（待签）：`docs/harness/evidence/cognee-p4-real-writeback-live-authorization-signoff-20260625.md`
+- Cognee P4 live 授权签核实例：`fixtures/cognee/cognee-p4-live-authorization-signoff.pending.json`
+- Cognee P4 live 授权签核校验器：`tools/kds-sync/validate_cognee_p4_live_authorization_signoff.py`
+- Cognee 全量运行状态判定：`docs/harness/evidence/cognee-full-run-status-assessment-20260626.md`
+- Cognee 全量运行差距清单：`docs/harness/evidence/cognee-full-run-gap-checklist-20260626.md`
+- Cognee 外部执行层接入验证清单：`docs/harness/evidence/cognee-external-execution-integration-validation-checklist-20260626.md`
+- Cognee 外部执行入口与回执模板：`docs/harness/evidence/cognee-external-execution-entry-and-receipt-template-20260626.md`
+- Cognee 外部执行层接入验证 Evidence：`docs/harness/evidence/cognee-external-execution-integration-validation-20260626.md`
+- Cognee 外部执行层接入 intake：`docs/harness/evidence/cognee-external-execution-integration-intake-20260626.md`
+- Cognee 外部执行层接入 intake 实例：`fixtures/cognee/cognee-external-execution-integration-intake.pending.json`
+- Cognee 外部执行层接入 intake 校验器：`tools/kds-sync/validate_cognee_external_execution_integration_intake.py`
+- Cognee 外部执行回执 completed 样例：`docs/harness/evidence/cognee-external-execution-receipt-completed-example-20260626.md`
+- Cognee 外部执行回执 completed 样例 JSON：`fixtures/cognee/cognee-external-execution-receipt.completed.example.json`
+- Cognee 外部执行固定命令包：`docs/harness/evidence/cognee-external-execution-fixed-command-pack-20260626.md`
+- Cognee 外部执行后回填 Evidence 草稿：`docs/harness/evidence/cognee-external-execution-postfill-evidence-draft-20260626.md`
+- Cognee 外部执行回执正式模板：`docs/harness/evidence/cognee-external-execution-receipt-template-20260626.md`
+- Cognee 外部执行回填检查清单：`docs/harness/evidence/cognee-external-execution-postfill-checklist-20260626.md`
+- Cognee 全量运行准入包：`docs/harness/evidence/cognee-full-run-admission-package-20260626.md`
+- Cognee 全量运行账本模板：`docs/harness/evidence/cognee-full-run-ledger-template-20260626.md`
+- Cognee 全量运行账本模板 JSON：`fixtures/cognee/cognee-full-run-ledger-template.json`
+- Cognee 全量运行账本模板校验器：`tools/kds-sync/validate_cognee_full_run_ledger_template.py`
+- Cognee 全量对象覆盖模板：`docs/harness/evidence/cognee-full-object-coverage-template-20260626.md`
+- Cognee 全量对象覆盖模板 JSON：`fixtures/cognee/cognee-full-object-coverage-template.json`
+- Cognee 全量对象覆盖模板校验器：`tools/kds-sync/validate_cognee_full_object_coverage_template.py`
+- Cognee 全量场景矩阵模板：`docs/harness/evidence/cognee-full-scenario-matrix-template-20260626.md`
+- Cognee 全量场景矩阵模板 JSON：`fixtures/cognee/cognee-full-scenario-matrix-template.json`
+- Cognee 全量场景矩阵模板校验器：`tools/kds-sync/validate_cognee_full_scenario_matrix_template.py`
+- Cognee 生产状态提升证据模板：`docs/harness/evidence/cognee-production-state-promotion-evidence-template-20260626.md`
+- Cognee 生产状态提升证据模板 JSON：`fixtures/cognee/cognee-production-state-promotion-evidence-template.json`
+- Cognee 生产状态提升证据模板校验器：`tools/kds-sync/validate_cognee_production_state_promotion_template.py`
+- Cognee 全量运行 readiness 汇总门禁：`docs/harness/evidence/cognee-full-run-readiness-rollup-20260626.md`
+- Cognee 全量运行 readiness 汇总 JSON：`fixtures/cognee/cognee-full-run-readiness-rollup.json`
+- Cognee 全量运行 readiness 汇总校验器：`tools/kds-sync/validate_cognee_full_run_readiness_rollup.py`
+- Cognee 真实外部执行回执 intake：`docs/harness/evidence/cognee-real-external-execution-receipt-intake-20260626.md`
+- Cognee 真实外部执行回执 intake JSON：`fixtures/cognee/cognee-real-external-execution-receipt-intake.pending.json`
+- Cognee 真实外部执行回执 intake 校验器：`tools/kds-sync/validate_cognee_real_external_execution_receipt_intake.py`
+- Cognee 真实外部执行回执登记流程：`docs/harness/evidence/cognee-real-external-execution-receipt-recording-procedure-20260626.md`
+- Cognee 真实外部执行回执登记流程 JSON：`fixtures/cognee/cognee-real-external-execution-receipt-recording-procedure.json`
+- Cognee 真实外部执行回执登记流程校验器：`tools/kds-sync/validate_cognee_real_external_execution_receipt_recording_procedure.py`
+- Cognee 真实外部执行回执责任分配：`docs/harness/evidence/cognee-real-external-execution-receipt-responsibility-assignment-20260626.md`
+- Cognee 真实外部执行回执责任分配 JSON：`fixtures/cognee/cognee-real-external-execution-receipt-responsibility-assignment.json`
+- Cognee 真实外部执行回执责任分配校验器：`tools/kds-sync/validate_cognee_real_external_execution_receipt_responsibility_assignment.py`
+- Cognee 真实外部执行回执提交请求包：`docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md`
+- Cognee 真实外部执行回执提交请求包 JSON：`fixtures/cognee/cognee-real-external-execution-receipt-submission-request.json`
+- Cognee 真实外部执行回执提交请求包校验器：`tools/kds-sync/validate_cognee_real_external_execution_receipt_submission_request.py`
+- Cognee 真实外部执行回执更新补丁计划：`docs/harness/evidence/cognee-real-external-execution-receipt-update-patch-plan-20260626.md`
+- Cognee 真实外部执行回执更新补丁计划 JSON：`fixtures/cognee/cognee-real-external-execution-receipt-update-patch-plan.json`
+- Cognee 真实外部执行回执更新补丁计划校验器：`tools/kds-sync/validate_cognee_real_external_execution_receipt_update_patch_plan.py`
+- Cognee 真实外部执行回执等待阻断：`docs/harness/evidence/cognee-real-external-execution-receipt-pending-blocker-20260626.md`
+- Cognee 真实外部执行回执等待阻断 JSON：`fixtures/cognee/cognee-real-external-execution-receipt-pending-blocker.json`
+- Cognee 真实外部执行回执等待阻断校验器：`tools/kds-sync/validate_cognee_real_external_execution_receipt_pending_blocker.py`
 - COGNEE P4 real writeback live 演练输出：`cognee_p4_real_writeback_live_output=pass record_count=5 requested_write_count=5 execution_count=5 live_execution_ready_rate=1.0`
 
 ## GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001 Headroom project-group cost dry-run
@@ -185,6 +235,12 @@ GPCF 证据索引
 - Headroom LCX next-stage real measurement authorization package validator: `tools/kds-sync/validate_headroom_lcx_real_measurement_next_stage_authorization_package.py`
 - Headroom LCX next-stage real measurement authorization package Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001.md`
 - Headroom LCX next-stage real measurement authorization package output: `headroom_lcx_real_measurement_next_stage_authorization_package=generated real_measurement_window_requested=true real_measurement_window_granted=true real_measurement_open=false production_branch_blocked=true production_token_measurement_allowed=false measured_production_tokens=false accepted=false integrated=false production_ready=false`
+- Headroom LCX real measurement authorization chain replay evidence: `docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.md`
+- Headroom LCX real measurement authorization chain replay JSON: `docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json`
+- Headroom LCX real measurement authorization chain replay builder: `tools/kds-sync/build_headroom_lcx_real_measurement_authorization_chain_replay.py`
+- Headroom LCX real measurement authorization chain replay validator: `tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_chain_replay.py`
+- Headroom LCX real measurement authorization chain replay Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-001.md`
+- Headroom LCX real measurement authorization chain replay output: `headroom_lcx_real_measurement_authorization_chain_replay=pass project_count=15 same_ledger_reference=true real_measurement_open=false production_token_measurement_allowed=false accepted=false integrated=false production_ready=false`
 - Headroom LCX authorized measurement authorization template evidence: `docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.md`
 - Headroom LCX authorized measurement authorization template JSON: `docs/harness/evidence/headroom-lcx-authorized-measurement-authorization-template-20260621.json`
 - Headroom LCX authorized measurement authorization template fixture: `fixtures/headroom/headroom-lcx-authorized-measurement-authorization-template.json`
@@ -337,6 +393,9 @@ GPCF 证据索引
 - Headroom LCX real measurement authorization request validator: `tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_request.py`
 - Headroom LCX real measurement authorization request Loop round: `docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-001.md`
 - Headroom LCX real measurement authorization request output: `headroom_lcx_real_measurement_authorization_request=pass_check_only project_count=15 requested_future_decision=open_real_measurement_window production_token_measurement_allowed=false accepted=false integrated=false production_ready=false`
+- Headroom LCX real measurement authorization chain replay evidence: `docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.md`
+- Headroom LCX real measurement authorization chain replay validator: `tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_chain_replay.py`
+- Headroom LCX real measurement authorization chain replay output: `headroom_lcx_real_measurement_authorization_chain_replay=pass project_count=15 same_ledger_reference=true real_measurement_open=false production_token_measurement_allowed=false accepted=false integrated=false production_ready=false`
 - Headroom LCX production runtime graph evidence: `docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.md`
 - Headroom LCX production runtime graph JSON: `docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json`
 - Headroom LCX production runtime graph validator: `tools/kds-sync/validate_headroom_lcx_production_runtime_graph.py`
@@ -907,3 +966,10 @@ accepted 或 integrated 状态。
 - 下一阶段授权桥接包已登记在 `docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.md` 与 `docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json`。
 - 它把授权前置完成、真实窗口已预检授予但仍未打开、production branch 仍 blocked 的状态收束到单一桥接入口。
 - 它只表示 next-stage bridge boundary 已结构化，不表示真实测量已打开，也不改变 `accepted=false`、`integrated=false`、`production_ready=false`。
+
+## GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-20260623 Headroom LCX real measurement authorization chain replay
+
+- 授权链回放 evidence 已登记在 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.md` 与 `docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json`。
+- 对应 builder 为 `python3 tools/kds-sync/build_headroom_lcx_real_measurement_authorization_chain_replay.py`，validator 为 `python3 tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_chain_replay.py`。
+- 它把 authorization request、authorization field map、approval signed bundle、authorization window grant 和 sanitized usage ledger 统一回放到同一 ledger 引用。
+- 它只表示授权链可回放且仍保持 precheck-only，不表示真实测量已执行，也不改变 `accepted=false`、`integrated=false`、`production_ready=false`。

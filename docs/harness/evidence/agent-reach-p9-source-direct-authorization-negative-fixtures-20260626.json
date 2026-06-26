@@ -1,0 +1,86 @@
+{
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-authorization-negative-fixtures-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "authorization_negative_fixture_no_live_fetch",
+  "negative_case_count": 8,
+  "negative_cases": [
+    {
+      "authorization_valid": false,
+      "case_id": "expired_authorization",
+      "expected_reason": "authorization_expired",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "method_out_of_scope",
+      "expected_reason": "allowed_methods_mismatch",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "page_limit_too_high",
+      "expected_reason": "max_pages_per_entrypoint_mismatch",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "target_limit_too_high",
+      "expected_reason": "max_targets_mismatch",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "write_scope_not_evidence_only",
+      "expected_reason": "write_scope_not_evidence_only",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "forbidden_action_missing",
+      "expected_reason": "forbidden_actions_missing",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "redaction_missing",
+      "expected_reason": "redaction_not_true:redact_cookies",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    },
+    {
+      "authorization_valid": false,
+      "case_id": "required_field_missing",
+      "expected_reason": "authorization_missing_fields:authorized_by",
+      "live_external_fetch_invoked": false,
+      "ready_for_live_execution": false,
+      "status": "blocked_invalid_p9_source_direct_authorization"
+    }
+  ],
+  "non_claims": [
+    "negative_fixture_only",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "status": "p9_source_direct_authorization_negative_fixtures_pass"
+}

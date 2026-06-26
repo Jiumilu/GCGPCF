@@ -1,0 +1,50 @@
+{
+  "authorization_file_policy": {
+    "live_execution_requires_separate_authorization_intake_pass": true,
+    "local_authorization_must_be_git_ignored": true,
+    "local_authorization_must_not_be_tracked_by_git": true,
+    "template_must_remain_non_executable_until_human_filled": true
+  },
+  "authorization_request_status": "p9_source_direct_authorization_request_ready",
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-authorization-file-safety-20260626",
+  "local_authorization_file": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json",
+  "local_authorization_file_git_ignored": true,
+  "local_authorization_file_present": true,
+  "local_authorization_file_tracked": false,
+  "local_authorization_git_status": "",
+  "mode": "authorization_file_safety_only",
+  "non_claims": [
+    "authorization_file_safety_only",
+    "not_live_fetch_invoked",
+    "not_authorization_intake_passed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_fetch_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_source_direct_authorization_file_safety_ready",
+  "template_authorization_valid": false,
+  "template_file": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.template.json",
+  "template_file_present": true,
+  "template_file_tracked": false,
+  "template_git_status": "?? fixtures/agent-reach/p9-source-direct-hit-rate-authorization.template.json",
+  "template_placeholder_fields": {
+    "authorized_at": true,
+    "authorized_by": true,
+    "expires_at": true
+  }
+}

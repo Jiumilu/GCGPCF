@@ -57,6 +57,9 @@ def build_rows() -> list[dict[str, Any]]:
                 "docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json",
+                "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+                "docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json",
+                "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json",
             ],
             "blocking_reason": "real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only",
         },
@@ -125,6 +128,7 @@ def build_matrix() -> dict[str, Any]:
     answer_gate = read_json(EVIDENCE_DIR / "headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.json")
     window_request = read_json(EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-window-request-20260623.json")
     next_stage_package = read_json(EVIDENCE_DIR / "headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json")
+    authorization_chain_replay = read_json(EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-chain-replay-20260623.json")
 
     rows = build_rows()
     return {
@@ -143,6 +147,9 @@ def build_matrix() -> dict[str, Any]:
             "authorization_field_map": field_map.get("field_map_id"),
             "authorization_window_request": window_request.get("evidence_id"),
             "next_stage_authorization_package": next_stage_package.get("evidence_id"),
+            "approval_signed_bundle": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+            "authorization_chain_replay": authorization_chain_replay.get("evidence_id"),
+            "authorization_boundary_review": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623",
             "runner_contract": runner.get("contract_id"),
             "runtime_graph": runtime_graph.get("runtime_graph_id"),
             "cost_model": cost_model.get("evidence_id"),

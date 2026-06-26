@@ -1,0 +1,53 @@
+{
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-hit-rate-output-quality-gate-20260626",
+  "live_external_search_invoked": false,
+  "non_claims": [
+    "gate_readiness_only",
+    "not_live_search_invoked",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "planned_query_count": 20,
+  "status": "p9_hit_rate_output_quality_gate_ready",
+  "topics": [
+    "green_supply_chain",
+    "industrial_solid_waste",
+    "phosphogypsum",
+    "zero_waste_city"
+  ],
+  "validator_checks": {
+    "blocks_credential_leak": true,
+    "blocks_forbidden_claims": true,
+    "blocks_raw_provider_payload_persistence": true,
+    "negative_bad_boost_test_passed": true,
+    "negative_credential_leak_test_passed": true,
+    "negative_forbidden_claim_test_passed": true,
+    "negative_missing_marker_test_passed": true,
+    "negative_missing_topic_query_test_passed": true,
+    "negative_query_error_test_passed": true,
+    "negative_raw_payload_test_passed": true,
+    "negative_status_test_passed": true,
+    "requires_boosted_score_cap": true,
+    "requires_business_field_mapping": true,
+    "requires_candidate_only_non_claims": true,
+    "requires_completed_status": true,
+    "requires_domain_boost_consistency": true,
+    "requires_execution_requested": true,
+    "requires_four_topic_reports": true,
+    "requires_live_external_search_invoked": true,
+    "requires_markdown_candidate_only_marker": true,
+    "requires_markdown_non_claim_marker": true,
+    "requires_p9_candidate_schema": true,
+    "requires_planned_query_count_20": true,
+    "requires_priority_domain_threshold_pass": true,
+    "requires_query_candidate_coverage_one_per_topic": true,
+    "requires_topic_coverage_one": true,
+    "requires_zero_query_errors": true,
+    "self_test_passed_without_network": true
+  }
+}

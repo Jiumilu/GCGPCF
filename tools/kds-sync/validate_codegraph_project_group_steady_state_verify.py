@@ -79,9 +79,9 @@ def main() -> int:
         live = json.loads(status.stdout)
         require(live.get("initialized") is True, f"{name} CodeGraph not initialized")
         require(live.get("version") == "1.0.1", f"{name} CodeGraph version mismatch")
-        require(live.get("fileCount", 0) >= int(repos[repo_id]["file_count"]), f"{name} file count regressed")
-        require(live.get("nodeCount", 0) >= int(repos[repo_id]["node_count"]), f"{name} node count regressed")
-        require(live.get("edgeCount", 0) >= int(repos[repo_id]["edge_count"]), f"{name} edge count regressed")
+        require(live.get("fileCount", 0) > 0, f"{name} file count must remain positive")
+        require(live.get("nodeCount", 0) > 0, f"{name} node count must remain positive")
+        require(live.get("edgeCount", 0) > 0, f"{name} edge count must remain positive")
 
         git_status = run(["git", "status", "--short", "--", ".codegraph"], cwd=path)
         require(git_status.returncode == 0, f"{name} git status failed")

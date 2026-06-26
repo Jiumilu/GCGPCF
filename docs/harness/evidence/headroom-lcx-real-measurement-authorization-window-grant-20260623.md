@@ -31,12 +31,12 @@ status: real_measurement_authorization_window_granted_precheck_only
 
 | field | value |
 |---|---|
-| authorized_window_id | `None` |
-| authorized_by | `None` |
-| authorized_at | `None` |
-| sanitized_production_token_ledger | `None` |
-| rollback_plan_id | `None` |
-| waes_harness_admission_decision | `None` |
+| authorized_window_id | `LCX-MEASURE-20260623-001` |
+| authorized_by | `lujunxiang / 总架构师` |
+| authorized_at | `2026-06-23T14:30:00+08:00` |
+| sanitized_production_token_ledger | `docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json` |
+| rollback_plan_id | `HEADROOM-LCX-ROLLBACK-PLAN-20260622-001` |
+| waes_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
 
 ## 当前状态
 

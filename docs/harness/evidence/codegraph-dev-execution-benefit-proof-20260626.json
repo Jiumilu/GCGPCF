@@ -1,0 +1,71 @@
+{
+  "evidence_id": "CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-20260626",
+  "scope": "GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015",
+  "status": "development_state_benefit_proof_ready",
+  "generated_at": "2026-06-26",
+  "objective": "Prove CodeGraph has moved from governance evidence into development-state business task execution by validating a real GFIS task intake, scoped implementation evidence, test fallback selection, and measurable scan reduction.",
+  "source_evidence": {
+    "business_task_intake": "docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json",
+    "authorized_minimal_execution": "docs/harness/evidence/codegraph-dev-execution-first-real-candidate-authorized-20260622.json",
+    "task_intake_gate": "tools/kds-sync/validate_codegraph_task_intake_gate.py",
+    "authorized_candidate_validator": "tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate_authorized.py"
+  },
+  "business_execution_layer_proof": {
+    "project": "GFIS",
+    "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-TASK-INTAKE-008",
+    "codegraph_required": true,
+    "pre_change_analysis_present": true,
+    "target_nodes_present": true,
+    "files_allowed_to_change_present": true,
+    "files_not_to_touch_present": true,
+    "expected_tests_present": true,
+    "affected_tests_empty_with_fallback_reason": true,
+    "task_intake_gate_passed": true,
+    "authorized_minimal_execution_validator_passed": true
+  },
+  "benefit_metrics": {
+    "manual_scan_files_before": 80,
+    "codegraph_candidate_files_after": 2,
+    "manual_scan_reduction_files": 78,
+    "manual_scan_reduction_percent": 97.5,
+    "actual_changed_files_authorized_candidate": 4,
+    "actual_changed_files_outside_allowed_scope": 0,
+    "affected_tests": [],
+    "fallback_tests_recorded": true,
+    "missed_impact_count": 0,
+    "review_rework_count": 0,
+    "time_to_first_target": "under_2_minutes_observed"
+  },
+  "benefit_interpretation": {
+    "coverage_value": "CodeGraph is mandatory in the task intake gate and the real GFIS candidate evidence.",
+    "cost_value": "The task intake narrows an 80-file manual scan baseline to 2 CodeGraph candidate files before implementation.",
+    "quality_value": "Implementation boundaries constrain allowed files and record zero changed files outside allowed scope in the authorized candidate.",
+    "test_value": "When affectedTests=[] and dependents=0, fallback tests and fallback_reason are required and validated.",
+    "governance_value": "The benefit is development-state evidence only; it does not complete GFIS business implementation or runtime SOP."
+  },
+  "required_commands": [
+    "python3 tools/kds-sync/validate_codegraph_task_intake_gate.py --task-file docs/harness/evidence/codegraph-dev-execution-business-task-intake-008.json",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_first_real_candidate_authorized.py",
+    "python3 tools/kds-sync/validate_codegraph_dev_execution_benefit_proof.py"
+  ],
+  "remaining_blockers": [
+    "GFIS runtime SOP remains repair_required",
+    "Real receipt files, customer confirmation, signed completion documents, or equivalent formal originals are still required before business completion can be claimed",
+    "Existing GFIS runtime SOP failure remains: FAIL: KDS coverage must not have missing controlled sources"
+  ],
+  "status_boundaries": {
+    "business_implementation_completed": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "production_write": false,
+    "external_api_write": false,
+    "deployment_performed": false,
+    "git_commit_performed": false,
+    "git_push_performed": false,
+    "real_kds_write_performed": false,
+    "real_waes_write_performed": false,
+    "codegraph_as_final_waes_decision": false
+  },
+  "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-016"
+}

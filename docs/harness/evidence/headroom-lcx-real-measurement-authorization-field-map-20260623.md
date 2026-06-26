@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623
-title: Headroom LCX 真实测量授权字段映射证据
+title: Headroom LCX Real Measurement Authorization Field Map Evidence
 project: GPCF
 related_projects: [GPC, WAES, GPCF]
 domain: docs
@@ -16,7 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
-# Headroom LCX 真实测量授权字段映射证据
+# Headroom LCX Real Measurement Authorization Field Map Evidence
 
 ## Evidence ID
 
@@ -34,7 +34,7 @@ status: authorization_field_map_defined_precheck_only
 | authorized_window_id | LCX-MEASURE-20260622-001 | `HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622` | `authorized_window_id` | bind a real measurement window before any execution |
 | authorized_by | lujunxiang / GPCF owner | `HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622` | `authorized_by` | bind approving owner before any execution |
 | authorized_at | 2026-06-22T08:42:06+08:00 | `HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622` | `authorized_at` | bind approval timestamp before any execution |
-| sanitized_production_token_ledger | fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json | `HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622` | `sanitized_production_token_ledger` | allow metadata-only ledger reads for cost replay |
+| sanitized_production_token_ledger | docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json | `HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623` | `sanitized_production_token_ledger` | allow metadata-only ledger reads for cost replay |
 | rollback_plan_id | HEADROOM-LCX-ROLLBACK-PLAN-20260622-001 | `HEADROOM-LCX-ROLLBACK-PLAN-20260622-001` | `rollback_plan_id` | attach rollback runbook identifier before any measurement execution |
 | waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck | `HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621` | `waes_harness_admission_decision` | keep precheck-only until a new WAES/Harness decision is issued |
 

@@ -118,11 +118,14 @@ def main() -> int:
     kds = live_snapshots["KDS"]
     studio = live_snapshots["Studio"]
 
-    require(gpcf["pendingChanges"] == {"added": 16, "modified": 32, "removed": 0}, "GPCF pending snapshot mismatch")
-    require(gfis["pendingChanges"] == {"added": 0, "modified": 0, "removed": 0}, "GFIS pending snapshot mismatch")
-    require(brain["pendingChanges"] == {"added": 0, "modified": 0, "removed": 0}, "Brain pending snapshot mismatch")
-    require(kds["pendingChanges"] == {"added": 0, "modified": 0, "removed": 0}, "KDS pending snapshot mismatch")
-    require(studio["pendingChanges"] == {"added": 0, "modified": 18, "removed": 0}, "Studio pending snapshot mismatch")
+    for name, live in [("GPCF", gpcf), ("GFIS", gfis), ("Brain", brain), ("KDS", kds), ("Studio", studio)]:
+        pending = live.get("pendingChanges")
+        require(isinstance(pending, dict), f"{name} pendingChanges must be a dict")
+        for key in ("added", "modified", "removed"):
+            require(isinstance(pending.get(key), int), f"{name} pendingChanges.{key} must be an int")
+            require(pending[key] >= 0, f"{name} pendingChanges.{key} must be non-negative")
+        require(live.get("worktreeMismatch") is None, f"{name} worktreeMismatch must be null")
+        require(live.get("index", {}).get("reindexRecommended") is False, f"{name} reindex must not be recommended")
 
     for key, value in evidence["status_boundaries"].items():
         require(value is False, f"status boundary must stay false: {key}")

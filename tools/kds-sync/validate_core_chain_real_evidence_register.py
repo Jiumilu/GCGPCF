@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
-IMPLEMENTATION_PLAN = ROOT / "01-architecture/GlobalCloud项目群实施方案.md"
+IMPLEMENTATION_PLAN = ROOT / "GlobalCloud 项目群实施方案.md"
 TEMPLATE = ROOT / "templates/real-evidence-record-template.md"
 
 REQUIRED_PROJECTS = [

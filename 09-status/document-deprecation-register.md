@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/document-deprecation-register.md
 source_path: 09-status/document-deprecation-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
 
 # 文档过期与归档台账
 
-日期：2026-06-25
+日期：2026-06-27
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 
@@ -44,6 +44,8 @@ superseded_by: []
 | GPCF-DOC-1213F2E70E | GlobalCloud Loop Risk and Rollback Gates | .codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md |
 | GPCF-DOC-CE28DA4C36 | GlobalCloud Loop Orchestrator Stage Gates | .codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md |
 | GPCF-DOC-221282A70B | GlobalCloud Loop Usability Gates | .codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md |
+| GPCF-DOC-A4D6B9E217 | globalcloud-project-group-git-clean | .codex/skills/globalcloud-project-group-git-clean/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-project-group-git-clean/README.md |
+| GPCF-DOC-7F9C2E9A61 | GlobalCloud Project Group Git Clean | .codex/skills/globalcloud-project-group-git-clean/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-project-group-git-clean/SKILL.md |
 | GPCF-DOC-A1B2C3D4E5 | globalcloud-ui-quality-gate | .codex/skills/globalcloud-ui-quality-gate/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/README.md |
 | GPCF-DOC-3E7F2A1B9C | GlobalCloud UI Quality Gate | .codex/skills/globalcloud-ui-quality-gate/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/SKILL.md |
 | GPCF-DOC-F6E5D4C3B2 | references | .codex/skills/globalcloud-ui-quality-gate/references/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/README.md |

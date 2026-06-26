@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/docs/harness/XiaoC/README.md
 source_path: docs/harness/XiaoC/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -39,6 +39,7 @@ KDS 空间：`开发`
 | GPCF-DOC-86DB4AB0BA | XiaoC | docs/harness/XiaoC/README.md | XiaoC | controlled |
 | GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | XiaoC | controlled |
 | GPCF-DOC-63536E3201 | Evidence Index — XiaoC | docs/harness/XiaoC/evidence/evidence-index.md | XiaoC | controlled |
+| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | XiaoC 模型路由 Dry-run 环境阻塞证据 2026-06-25 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | XiaoC | controlled |
 | GPCF-DOC-9CACBDF863 | GlobalCloud XiaoC Loop State | docs/harness/XiaoC/loop-state.md | XiaoC | controlled |
 | GPCF-DOC-857DCECF45 | loops | docs/harness/XiaoC/loops/README.md | XiaoC | controlled |
 | GPCF-DOC-328F61B887 | Loop Round GPCF-XC-LR-001 | docs/harness/XiaoC/loops/loop-round-GPCF-XC-LR-001.md | XiaoC | controlled |

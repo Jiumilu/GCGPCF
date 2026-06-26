@@ -1,0 +1,61 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-PRECHECK-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-PRECHECK-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-PRECHECK-001",
+  "date": "2026-06-23",
+  "status": "receipt_instance_valid_precheck_only",
+  "scope": "external_receipt_instance_precheck_no_measurement",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "template_evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-AUTHORIZATION-RECEIPT-TEMPLATE-20260623",
+  "template_status": "external_authorization_receipt_template_ready_no_execution",
+  "receipt_check": {
+    "expected_receipt_path": "fixtures/headroom/headroom-lcx-real-measurement-external-authorization-receipt.completed.json",
+    "external_receipt_recorded": true,
+    "receipt_instance_valid": true,
+    "missing_required_fields": [],
+    "invalid_false_fields": [],
+    "status": "receipt_instance_valid_precheck_only"
+  },
+  "pre_execution_decision": {
+    "can_open_real_measurement": false,
+    "blocked": false,
+    "blocker": "waes_harness_final_receipt_decision_required",
+    "real_measurement_open": false,
+    "production_proxy_started": false,
+    "production_sdk_enabled": false,
+    "real_kds_write": false,
+    "external_api_write": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_external_receipt_recorded": false,
+    "not_real_measurement_execution": true,
+    "not_production_proxy_start": true,
+    "not_production_sdk_enablement": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  }
+}

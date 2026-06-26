@@ -60,13 +60,13 @@
       {
         "repo": "GlobalCloud Studio",
         "pending": {
-          "added": 0,
-          "modified": 18,
+          "added": 1,
+          "modified": 2,
           "removed": 0
         },
-        "pending_total": 18,
-        "threshold_result": "action_required",
-        "reason": "Studio active drift remains above the action threshold and requires explicit sync-only authorization or continued watch."
+        "pending_total": 3,
+        "threshold_result": "watch",
+        "reason": "Studio live drift remains within the watch threshold and does not require sync-only authorization in this round."
       }
     ]
   },
@@ -101,7 +101,7 @@
   "decisions": [
     "Keep CodeGraph project-group state at review_required.",
     "Brain is green at zero pending and remains monitor-only.",
-    "Studio is action_required but not auto-synced in this round.",
+    "Studio is watch and remains monitor-only; no sync-only closure is executed in this round.",
     "GFIS remains a policy-exception watch item, not a failure.",
     "Any Brain or Studio sync-only closure must be explicitly authorized and must not include business code edits.",
     "A .codegraph Git status entry or removed pending file is critical and blocks status upgrades."
@@ -116,5 +116,5 @@
     "project_internal_development": false,
     "brain_or_studio_sync_only": false
   },
-  "next_round": "GPCF-CODEGRAPH-SYNC-AUTHORIZATION-PACK-009"
+  "next_round": "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"
 }

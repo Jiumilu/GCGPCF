@@ -1,0 +1,117 @@
+{
+  "business_field_mapping_projects": [
+    "GFIS",
+    "KDS",
+    "WAES",
+    "WAS"
+  ],
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "domain_boost_policy": {
+    "maximum_boosted_overall_score": 0.98,
+    "mode": "candidate_scoring_only",
+    "must_preserve_candidate_only": true,
+    "must_preserve_raw_base_score": true,
+    "official_government_domain_boost": 0.04,
+    "p0_domain_boost": 0.12,
+    "p1_domain_boost": 0.06,
+    "priority_domains": {
+      "P0": [
+        "greenscs.com",
+        "gmpsp.org.cn",
+        "miit.gov.cn",
+        "samr.gov.cn",
+        "ghgprotocol.org",
+        "mee.gov.cn",
+        "meescc.cn"
+      ],
+      "P1": [
+        "pbc.gov.cn",
+        "commission.europa.eu",
+        "ndrc.gov.cn"
+      ]
+    }
+  },
+  "drift_monitoring_markers_present": true,
+  "expected_p0_domain_count": 7,
+  "expected_priority_domain_count": 9,
+  "id": "agent-reach-p9-priority-target-hit-rate-precheck-20260626",
+  "live_authorization_required_before_hit_rate_run": true,
+  "mode": "precheck_only_no_live_search",
+  "non_claims": [
+    "precheck_only",
+    "candidate_only",
+    "not_live_search_invoked",
+    "not_source_of_record",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "query_count": 20,
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "live_external_search_invoked": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_priority_target_hit_rate_precheck_ready",
+  "topic_count": 4,
+  "topic_domain_coverage": {
+    "green_supply_chain": {
+      "business_fields": [
+        "carbon_traceability",
+        "evidence_standard_reference",
+        "green_financing_purpose",
+        "green_manufacturing_evidence",
+        "green_supply_chain_registry",
+        "product_carbon_footprint",
+        "scope3_emissions",
+        "supplier_esg",
+        "use_of_proceeds_tracking"
+      ],
+      "expected_domain_count": 6,
+      "expected_p0_domain_count": 5
+    },
+    "industrial_solid_waste": {
+      "business_fields": [
+        "industrial_solid_waste_policy",
+        "resource_utilization_product",
+        "solid_waste_disposal_receipt",
+        "solid_waste_resource_utilization",
+        "zero_waste_city_indicator"
+      ],
+      "expected_domain_count": 4,
+      "expected_p0_domain_count": 3
+    },
+    "phosphogypsum": {
+      "business_fields": [
+        "evidence_standard_reference",
+        "industrial_solid_waste_policy",
+        "pollution_control_standard",
+        "resource_utilization_product",
+        "solid_waste_disposal_receipt",
+        "solid_waste_resource_utilization"
+      ],
+      "expected_domain_count": 3,
+      "expected_p0_domain_count": 2
+    },
+    "zero_waste_city": {
+      "business_fields": [
+        "industrial_solid_waste_policy",
+        "policy_evidence",
+        "solid_waste_disposal_receipt",
+        "solid_waste_resource_utilization",
+        "zero_waste_city_case",
+        "zero_waste_city_indicator"
+      ],
+      "expected_domain_count": 3,
+      "expected_p0_domain_count": 2
+    }
+  }
+}

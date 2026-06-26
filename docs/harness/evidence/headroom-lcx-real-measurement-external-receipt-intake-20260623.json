@@ -1,0 +1,40 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-INTAKE-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-INTAKE-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-INTAKE-001",
+  "date": "2026-06-23",
+  "status": "receipt_intake_valid_precheck_only",
+  "scope": "formal_receipt_intake_validator_no_measurement",
+  "project_count": 15,
+  "source_completion_package": "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-completion-package-20260623.json",
+  "source_negative_fixtures": "docs/harness/evidence/headroom-lcx-real-measurement-external-receipt-negative-fixtures-20260623.json",
+  "expected_completed_receipt_path": "fixtures/headroom/headroom-lcx-real-measurement-external-authorization-receipt.completed.json",
+  "negative_fixture_count": 11,
+  "negative_fixture_expected_accepted_count": 0,
+  "completed_receipt_recorded": true,
+  "receipt_check": {
+    "receipt_instance_valid": true,
+    "missing_fields": [],
+    "invalid_false_fields": [],
+    "invalid_fields": []
+  },
+  "intake_rules": {
+    "required_fields_match_completion_template": true,
+    "negative_fixtures_must_reject_all": true,
+    "telemetry_must_remain_off": true,
+    "no_unsanitized_sensitive_material": true,
+    "production_and_write_flags_must_remain_false": true,
+    "accepted_integrated_production_ready_must_remain_false": true,
+    "intake_does_not_open_measurement": true
+  },
+  "pre_execution_decision": {
+    "completed_receipt_recorded": true,
+    "receipt_instance_valid": true,
+    "can_open_real_measurement": false,
+    "real_measurement_open": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

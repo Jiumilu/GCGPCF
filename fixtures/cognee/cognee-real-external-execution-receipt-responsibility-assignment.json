@@ -1,0 +1,50 @@
+{
+  "assignment_id": "COGNEE-REAL-EXT-RECEIPT-RESPONSIBILITY-20260626-001",
+  "assignment_scope": "cognee_gap_001_real_external_execution_receipt_responsibility",
+  "source_receipt_intake": "docs/harness/evidence/cognee-real-external-execution-receipt-intake-20260626.md",
+  "source_recording_procedure": "docs/harness/evidence/cognee-real-external-execution-receipt-recording-procedure-20260626.md",
+  "roles": [
+    {
+      "role_id": "receipt_provider",
+      "owner": "external_execution_operator",
+      "responsibility": "provide_real_external_execution_receipt",
+      "required_output": "real_receipt_ref_and_receipt_id",
+      "status": "assigned_pending_real_receipt"
+    },
+    {
+      "role_id": "technical_recorder",
+      "owner": "GPCF",
+      "responsibility": "fill_receipt_intake_and_run_validator",
+      "required_output": "cognee_real_external_execution_receipt_intake=pass_real",
+      "status": "assigned_pending_real_receipt"
+    },
+    {
+      "role_id": "waes_reviewer",
+      "owner": "WAES",
+      "responsibility": "review_receipt_boundary_and_reject_sample_receipts",
+      "required_output": "waes_receipt_review_evidence",
+      "status": "assigned_pending_real_receipt"
+    },
+    {
+      "role_id": "readiness_owner",
+      "owner": "GPCF",
+      "responsibility": "update_gap_001_and_rerun_readiness_rollup",
+      "required_output": "readiness_rollup_recomputed_without_full_run_claim",
+      "status": "assigned_pending_real_receipt"
+    },
+    {
+      "role_id": "rollback_owner",
+      "owner": "GPCF",
+      "responsibility": "record_rollback_evidence_if_triggered",
+      "required_output": "rollback_evidence_ref_or_not_triggered_note",
+      "status": "assigned_pending_real_receipt"
+    }
+  ],
+  "escalation_rule": "missing_receipt_or_sample_receipt_blocks_gap_001",
+  "assignment_status": "assigned_pending_real_receipt",
+  "production_write": false,
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false,
+  "full_run_claim": false
+}

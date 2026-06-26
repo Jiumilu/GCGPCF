@@ -43,6 +43,58 @@ superseded_by: []
 | push rejected / 远端冲突 | `blocked` |
 | clean + pushed + evidence 完整 | 可申请 `accepted` |
 
+## 项目群 17 仓全量 clean 门禁
+
+当 Loop 任务涉及项目群整体状态、跨仓提交/推送、全量收口或验收前状态判定时，必须运行：
+
+```bash
+python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_git_clean_gate.py
+```
+
+该门禁固定检查 17 个项目群仓库：
+
+- `GlobalCloud AAAS`
+- `GlobalCloud Brain`
+- `WAS世界资产体系`
+- `GlobalCloud XiaoC`
+- `GlobalCloud WAES`
+- `GlobalCloud GPC`
+- `GlobalCloud Studio`
+- `GlobalCoud GPCF`
+- `GlobalCloud XWAIL`
+- `GlobalCloud GFIS`
+- `GlobalCloud MMC`
+- `GlobalCloud KDS`
+- `GlobalCloud XiaoG`
+- `GlobalCloud PVAOS`
+- `GlobalCloud SOP`
+- `GlobalCloud PKC`
+- `GlobalCloud XGD`
+
+全量 `pass` 条件：
+
+- 17 个仓库全部存在且是 Git 仓库。
+- 每个仓库有当前分支和 upstream。
+- 每个仓库 `git status --porcelain=v1` 为空。
+- 每个仓库 `ahead=0` 且 `behind=0`。
+- 每个仓库 `git diff --check -- .` 通过。
+- Git 状态路径中无敏感文件模式。
+
+状态上限：
+
+| 项目群 Git clean gate | Loop 状态上限 |
+|---|---|
+| 仓库缺失 / 非 Git 仓库 | `blocked` |
+| upstream 缺失 | `blocked` |
+| 任一仓库 behind upstream | `blocked` |
+| 任一仓库 diff check 失败 | `blocked` |
+| 任一仓库出现敏感路径 | `blocked` |
+| 任一仓库普通 dirty/untracked | `rework_required` |
+| 任一仓库 ahead upstream | `harness_review` |
+| 17 仓全部 clean 且 pushed | 可申请 `accepted` |
+
+本门禁只读，不自动执行 `stash`、`reset`、`clean`、提交或推送。若门禁不是 `pass`，不得宣告“项目群 Git 全量 clean”。
+
 ## 敏感文件
 
 以下文件或模式不得自动提交：

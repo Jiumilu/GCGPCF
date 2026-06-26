@@ -1,0 +1,132 @@
+{
+  "authorization_required_before_live": true,
+  "check_count": 12,
+  "check_results": [
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_authorization_intake.py",
+      "id": "authorization_intake_pending",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_live_authorization_intake=pass status=blocked_pending_p9_source_direct_authorization authorization_valid=false live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "status=blocked_pending_p9_source_direct_authorization",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_file_safety.py",
+      "id": "authorization_file_safety",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_authorization_file_safety=pass status=p9_source_direct_authorization_file_safety_ready local_auth_present=false live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_authorization_file_safety=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_runner_readiness.py",
+      "id": "runner_readiness",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_runner_readiness=pass status=p9_source_direct_runner_readiness_ready targets=13 live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_runner_readiness=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_output_quality_gate.py --gate-readiness",
+      "id": "output_quality_gate_readiness",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_output_quality_gate=pass status=p9_source_direct_output_quality_gate_ready planned_target_count=13 self_test=pass live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_output_quality_gate=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_review_queue_bridge_readiness.py",
+      "id": "review_queue_bridge_preview",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_review_queue_bridge_readiness=pass status=p9_source_direct_review_queue_bridge_readiness_ready preview_items=13 target_coverage=1.0 topic_coverage=1.0 review_queue_created=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_review_queue_bridge_readiness=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_negative_fixtures.py",
+      "id": "authorization_negative_fixtures",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_authorization_negative_fixtures=pass cases=8 live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_authorization_negative_fixtures=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_authorization_template.py",
+      "id": "authorization_template",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_authorization_template=pass status=p9_source_direct_authorization_template_ready template_valid=false live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_authorization_template=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_offline_hit_rate_simulation.py",
+      "id": "offline_hit_rate_simulation",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_offline_hit_rate_simulation=pass candidate_count=26 topic_coverage=1.0 live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_offline_hit_rate_simulation=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_markdown_drift_monitor.py",
+      "id": "markdown_drift_monitor",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_markdown_drift_monitor=pass files=12 live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_markdown_drift_monitor=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_execution_command_pack.py",
+      "id": "live_execution_command_pack",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_live_execution_command_pack=pass status=p9_source_direct_live_execution_command_pack_ready commands=6 live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_live_execution_command_pack=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_closure_runner_readiness.py",
+      "id": "live_closure_runner_readiness",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_live_closure_runner_readiness=pass status=p9_source_direct_live_closure_runner_readiness_pass blocked_status=blocked_pending_p9_source_direct_authorization live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_live_closure_runner_readiness=pass",
+      "returncode": 0
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_closure_authorization_gate.py",
+      "id": "live_closure_authorization_gate",
+      "live_external_fetch_invoked": false,
+      "output_tail": "agent_reach_p9_source_direct_live_closure_authorization_gate=pass status=p9_source_direct_live_closure_authorization_gate_pass execution_requested=true live_external_fetch_invoked=false",
+      "passed": true,
+      "required": "agent_reach_p9_source_direct_live_closure_authorization_gate=pass",
+      "returncode": 0
+    }
+  ],
+  "completion_claim_allowed": false,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-source-direct-pre-live-preflight-20260626",
+  "live_external_fetch_invoked": false,
+  "mode": "pre_live_no_external_fetch",
+  "next_required_authorization_text": "授权执行 Agent-Reach P9S Source Direct Hit-Rate Live Run",
+  "non_claims": [
+    "pre_live_preflight_only",
+    "not_live_fetch_invoked",
+    "not_live_run_completed",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "status": "p9_source_direct_pre_live_preflight_pass"
+}

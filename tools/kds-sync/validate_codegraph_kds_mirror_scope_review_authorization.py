@@ -63,7 +63,7 @@ def main() -> int:
     require(status_result.returncode == 0, f"KDS codegraph status failed: {status_result.stderr}")
     status = json.loads(status_result.stdout)
     require(status["initialized"] is True, "KDS CodeGraph not initialized")
-    require(status["pendingChanges"] == current["codegraph"]["pendingChanges"], "KDS CodeGraph pending must be zero")
+    require(status["pendingChanges"] == current["codegraph"]["pendingChanges"], "KDS CodeGraph pending must match evidence")
     require(status["worktreeMismatch"] is None, "KDS worktree mismatch must be null")
     require(status["index"]["reindexRecommended"] is False, "KDS reindex must not be recommended")
 
@@ -111,7 +111,7 @@ def main() -> int:
 
     for phrase in [
         "authorization_required_current_state_dirty",
-        "KDS Git dirty：`59`",
+        "KDS Git dirty：`1`",
         "KDS CodeGraph pending：`added=0, modified=0, removed=0`",
         "保留 KDS scope review 授权边界",
         "GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018",

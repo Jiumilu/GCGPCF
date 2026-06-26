@@ -1,0 +1,46 @@
+{
+  "evidence_id": "STUDIO-WAES-WORKBENCH-THREE-OPTION-DESIGN-20260626",
+  "round": "GPCF-UI-STUDIO-WORKBENCH-023",
+  "date": "2026-06-26",
+  "surface": "operation workbench",
+  "repository_path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/ChatView.vue",
+  "ui_gate_status": "ui_partial",
+  "status_ceiling": "ui_evidence_candidate",
+  "tool_route": [
+    "@product-design(protocol-required; callable-not-exposed)",
+    "WAES baseline",
+    "ui-ux-pro-max",
+    "local code inspection",
+    "GPCF UI Quality Gate"
+  ],
+  "tools_unavailable": [
+    "product_design_tool_not_exposed",
+    "impeccable_blocked_by_NO_PRODUCT_MD",
+    "figma_not_verified",
+    "runtime_not_verified",
+    "mobile_not_verified"
+  ],
+  "context_package": "completed",
+  "prompt_profile": [
+    "functional-accuracy",
+    "visual-quality",
+    "usability-experience",
+    "governance-evidence",
+    "scope-control"
+  ],
+  "design_options": [
+    "WAES Shell-first Workbench",
+    "Studio Knowledge Cockpit",
+    "Chat-Kanban Split Focus"
+  ],
+  "selected_option": "1",
+  "waes_baseline_reuse": {
+    "shell": "reuse",
+    "page_skeleton": "partial",
+    "core_components": "partial",
+    "exception": "not_required"
+  },
+  "accepted": false,
+  "integrated": false,
+  "production_ready": false
+}

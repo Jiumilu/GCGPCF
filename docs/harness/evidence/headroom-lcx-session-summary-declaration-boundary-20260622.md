@@ -36,6 +36,10 @@ Headroom 的受控定位只限于：
 - 工作记忆候选。
 - 失败经验学习候选。
 
+## 会话长期目标
+
+在 GlobalCloud 项目群范围内，将 `chopratejas/headroom` 受控纳入为 LCX / LOOP Context Optimization Layer，覆盖 `GPCF、KDS、Brain、WAES、GFIS、GPC、PVAOS、Edge、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS` 共 15 个项目/域，完成上下文压缩、成本治理、可逆上下文缓存、工作记忆候选和失败经验学习候选的完整受控图谱建设；同时严格保持 Headroom 不是 Agent 框架、不是 KDS / WAES / Harness 替代品、不是业务事实源、不是验收裁决源、不是生产自治授权源，并在未获得明确授权前持续维持 `accepted=false`、`integrated=false`、`production_ready=false`。
+
 ## 已完成受控工件链
 
 | 阶段 | 当前状态 |

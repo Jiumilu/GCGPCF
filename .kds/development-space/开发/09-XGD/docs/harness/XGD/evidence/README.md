@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ADB6828C57
 title: evidence
 project: XGD
-related_projects: [GPC, WAES, KDS, XGD, GPCF]
+related_projects: [GPC, WAES, KDS, Brain, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/09-XGD/docs/harness/XGD/evidence/README.md
 source_path: docs/harness/XGD/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -38,3 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-ADB6828C57 | evidence | docs/harness/XGD/evidence/README.md | XGD | controlled |
 | GPCF-DOC-6057F8A869 | Evidence Index — XGD | docs/harness/XGD/evidence/evidence-index.md | XGD | controlled |
+| GPCF-DOC-XGD-TICK-BRAIN-SMOKE-20260625 | XGD TICK Brain Smoke 证据 2026-06-25 | docs/harness/XGD/evidence/xgd-tick-brain-smoke-20260625.md | XGD | controlled |

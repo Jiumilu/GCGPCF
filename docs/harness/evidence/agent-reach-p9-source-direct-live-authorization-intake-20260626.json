@@ -1,0 +1,42 @@
+{
+  "allowed_methods_required": [
+    "public_list_page",
+    "rss",
+    "site_search_endpoint_without_credentials",
+    "sitemap",
+    "target_url"
+  ],
+  "authorization_path": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json",
+  "authorization_reasons": [],
+  "authorization_valid": true,
+  "authorized_at": "2026-06-27T07:37:18+08:00",
+  "authorized_by_present": true,
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "expires_at": "2026-06-27T23:59:59+08:00",
+  "id": "agent-reach-p9-source-direct-live-authorization-intake-20260626",
+  "live_external_fetch_invoked": false,
+  "max_entrypoints_per_target_required": 3,
+  "max_pages_per_entrypoint_required": 5,
+  "non_claims": [
+    "authorization_intake_only",
+    "not_live_fetch_invoked",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "planned_target_count": 13,
+  "ready_for_live_execution": true,
+  "security_controls": {
+    "browser_cookie_extraction_invoked": false,
+    "credential_written": false,
+    "gfis_source_of_record_write_allowed": false,
+    "global_mcp_config_write_allowed": false,
+    "kds_canonical_write_allowed": false,
+    "production_config_write_allowed": false,
+    "production_integration_allowed": false
+  },
+  "status": "p9_source_direct_live_authorization_intake_ready"
+}

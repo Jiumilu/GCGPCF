@@ -14,16 +14,13 @@
     "indexed_repo_count": 14,
     "git_protected_repo_count": 14,
     "codegraph_git_status_entries_total": 0,
-    "up_to_date_repo_count": 11,
-    "pending_sync_repo_count": 2,
-    "policy_exception_repo_count": 1,
+    "up_to_date_repo_count": 13,
+    "pending_sync_repo_count": 1,
+    "policy_exception_repo_count": 0,
     "pending_sync_projects": [
-      "GlobalCloud Brain",
       "GlobalCloud Studio"
     ],
-    "policy_exception_projects": [
-      "GlobalCloud GFIS"
-    ]
+    "policy_exception_projects": []
   },
   "repositories": [
     {
@@ -31,52 +28,19 @@
       "files": 152,
       "nodes": 2447,
       "edges": 5758,
-      "index_status": "pending_sync",
-      "pending_notice": "Modified: 32 files after controlled .codegraph sync follow-up",
+      "index_status": "up_to_date",
+      "pending_notice": "none",
       "codegraph_git_status_entries": 0,
-      "active_drift_files": [
-        "scripts/validate_brain_completion_matrix.mjs",
-        "scripts/validate_brain_harness_evidence.mjs",
-        "scripts/validate_brain_local_action_boundaries.mjs",
-        "scripts/validate_brain_loop_harness.mjs",
-        "scripts/validate_brain_mock_boundaries.mjs",
-        "scripts/validate_brain_status_audit.mjs",
-        "scripts/validate_brain_write_contract_readiness.mjs",
-        "src/app/components/AgentRunsPanel.test.tsx",
-        "src/app/components/AgentRunsPanel.tsx",
-        "src/app/components/BulkFixPanel.test.tsx",
-        "src/app/components/BulkFixPanel.tsx",
-        "src/app/components/CommandPalette.test.tsx",
-        "src/app/components/CommandPalette.tsx",
-        "src/app/components/DeepResearchPanel.test.tsx",
-        "src/app/components/DeepResearchPanel.tsx",
-        "src/app/components/DoctorPanel.test.tsx",
-        "src/app/components/DoctorPanel.tsx",
-        "src/app/components/ProjectsPanel.test.tsx",
-        "src/app/components/ProjectsPanel.tsx",
-        "src/app/components/ReportsPanel.test.tsx",
-        "src/app/components/ReportsPanel.tsx",
-        "src/app/components/ReviewPanel.test.tsx",
-        "src/app/components/ReviewPanel.tsx",
-        "src/app/components/agentRunsPanelGuards.ts",
-        "src/app/components/bulkFixPanelGuards.ts",
-        "src/app/components/commandPaletteGuards.ts",
-        "src/app/components/deepResearchGuards.ts",
-        "src/app/components/doctorPanelGuards.ts",
-        "src/app/components/projectsPanelGuards.ts",
-        "src/app/components/reviewPanelGuards.ts",
-        "src/app/hooks/useKdsApi.test.ts",
-        "src/app/hooks/useKdsApi.ts"
-      ]
+      "active_drift_files": []
     },
     {
       "project": "GlobalCloud GFIS",
       "files": 1022,
-      "nodes": 13152,
-      "edges": 38142,
-      "index_status": "policy_exception",
-      "pending_notice": "Added: 1 files",
-      "policy": "large_generated_validator_exception_candidate",
+      "nodes": 13163,
+      "edges": 38131,
+      "index_status": "up_to_date",
+      "pending_notice": "none",
+      "policy": "cleared",
       "codegraph_git_status_entries": 0
     },
     {
@@ -125,7 +89,7 @@
       "nodes": 14457,
       "edges": 46854,
       "index_status": "pending_sync",
-      "pending_notice": "Added: 2 files; Modified: 2 files after controlled .codegraph sync follow-up",
+      "pending_notice": "Added: 1 files; Modified: 2 files after controlled .codegraph sync follow-up",
       "codegraph_git_status_entries": 0,
       "active_drift_files": [
         "packages/client/src/components/studio/SessionContextBar.vue",
@@ -171,7 +135,7 @@
       "files": 822,
       "nodes": 9389,
       "edges": 21819,
-      "index_status": "up_to_date",
+      "index_status": "up_to_date_after_final_sync",
       "pending_notice": "none after controlled .codegraph sync follow-up",
       "codegraph_git_status_entries": 0
     },
@@ -186,8 +150,8 @@
     }
   ],
   "loop_next_input": {
-    "round": "GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001",
-    "objective": "Monitor Brain and Studio active CodeGraph drift without entering project business development, while preserving 14-repo coverage and GFIS controlled residual.",
+    "round": "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006",
+    "objective": "Continue read-only watchlist monitoring for Brain, Studio, GFIS and GPCF after Brain convergence and Studio watch-state stabilization.",
     "allowed_actions": [
       "read-only status recheck",
       "read-only .codegraph git status",

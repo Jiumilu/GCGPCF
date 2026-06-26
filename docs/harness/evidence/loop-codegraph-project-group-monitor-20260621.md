@@ -28,7 +28,7 @@ superseded_by: []
 
 14 个仓库仍全部有 `.codegraph/` 本地索引，全部通过 `.git/info/exclude` 保护，`.codegraph/` Git 状态总数为 `0`。
 
-当前监控结果为 `project_group_codegraph_monitor_pass_with_active_watchlist`：11 仓 up-to-date，2 仓 Brain 与 Studio 活动 pending sync watchlist，1 仓 GFIS controlled residual。
+当前监控结果为 `project_group_codegraph_monitor_pass_with_watchlist`：13 仓 up-to-date，1 仓 Studio watch，Brain 与 GFIS 已回到 green。
 
 ## 项目群状态
 
@@ -38,17 +38,17 @@ superseded_by: []
 | indexed_repo_count | 14 |
 | git_protected_repo_count | 14 |
 | codegraph_git_status_entries_total | 0 |
-| up_to_date_repo_count | 11 |
-| pending_sync_repo_count | 2 |
-| policy_exception_repo_count | 1 |
+| up_to_date_repo_count | 13 |
+| pending_sync_repo_count | 1 |
+| policy_exception_repo_count | 0 |
 
 ## 当前 watchlist 与 residual
 
 | 项目 | 状态 | 说明 |
 |---|---|---|
-| GlobalCloud Brain | pending_sync | 受控 `.codegraph` 同步复核后出现 `Modified: 32 files`，登记为活动仓漂移，不进入 Brain 业务开发 |
-| GlobalCloud Studio | pending_sync | 受控 `.codegraph` 同步复核后再次出现 `Added: 2 files; Modified: 2 files`，登记为活动仓漂移，不进入 Studio 业务开发 |
-| GlobalCloud GFIS | policy_exception | `Added: 1 files`，按 `LOOP_CODEGRAPH_LARGE_FILE_POLICY.md` 解释为 `large_generated_validator_exception_candidate` |
+| GlobalCloud Brain | up_to_date | 受控 `.codegraph` 同步复核后已回到 zero pending，不进入 Brain 业务开发 |
+| GlobalCloud Studio | pending_sync | 受控 `.codegraph` 同步复核后保留 `Added: 1 file; Modified: 2 files` watch，不进入 Studio 业务开发 |
+| GlobalCloud GFIS | up_to_date | 当前 pending 已清零，历史 policy exception 仅保留为解释性记录 |
 
 GFIS policy exception 保持受控，不作为项目群图谱覆盖失败处理。
 
@@ -70,4 +70,4 @@ Brain 活动漂移与 Studio 活动漂移均已进入下一轮 watchlist。
 
 ## 下一轮输入
 
-`GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001`：持续监控 Brain 与 Studio 活动 CodeGraph drift，GFIS 继续保持 policy exception；不进入项目业务开发。
+`GPCF-CODEGRAPH-WATCHLIST-MONITOR-006`：持续监控 Brain 与 Studio watch 状态，GFIS 仅保留历史解释记录；不进入项目业务开发。

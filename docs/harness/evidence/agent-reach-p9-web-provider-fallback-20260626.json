@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "bing_parser": "pass",
+    "candidate_building": "pass",
+    "duckduckgo_parser": "pass",
+    "provider_block_detection": "pass"
+  },
+  "current_admission": "limited_candidate_only",
+  "date": "2026-06-26",
+  "id": "agent-reach-p9-web-provider-fallback-20260626",
+  "live_external_search_invoked": false,
+  "non_claims": [
+    "offline_fixture_only",
+    "not_live_search_invoked",
+    "not_kds_canonical_written",
+    "not_gfis_source_of_record_written",
+    "not_accepted",
+    "not_integrated",
+    "not_production_ready"
+  ],
+  "status": "p9_web_provider_fallback_offline_validated"
+}

@@ -1,0 +1,66 @@
+{
+  "evidence_id": "HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001",
+  "date": "2026-06-23",
+  "status": "waes_harness_final_receipt_decision_human_fill_request_ready",
+  "scope": "human_fill_request_only_no_decision_recorded",
+  "project_count": 15,
+  "source_request": "docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.json",
+  "response_template_path": "fixtures/headroom/headroom-lcx-waes-harness-final-receipt-decision.response.template.json",
+  "target_response_path": "fixtures/headroom/headroom-lcx-waes-harness-final-receipt-decision.response.json",
+  "required_fields": [
+    "decision_id",
+    "request_evidence_id",
+    "receipt_id",
+    "decision_maker",
+    "decision_role",
+    "decided_at",
+    "decision_value",
+    "decision_reason",
+    "linked_evidence_refs",
+    "can_open_real_measurement",
+    "real_measurement_open",
+    "measured_production_tokens",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ],
+  "must_replace_required_placeholders": [
+    "decision_maker",
+    "decision_role",
+    "decided_at",
+    "decision_value",
+    "decision_reason"
+  ],
+  "allowed_decision_values": [
+    "admitted_for_next_precheck_only",
+    "rejected_requires_rework",
+    "deferred_pending_additional_evidence"
+  ],
+  "must_remain_false": [
+    "can_open_real_measurement",
+    "real_measurement_open",
+    "measured_production_tokens",
+    "accepted",
+    "integrated",
+    "production_ready"
+  ],
+  "verification_commands_after_fill": [
+    "python3 tools/kds-sync/validate_headroom_lcx_waes_harness_final_receipt_decision_response_template.py",
+    "python3 tools/kds-sync/validate_headroom_lcx_waes_harness_final_receipt_decision_request.py",
+    "python3 tools/kds-sync/validate_headroom_lcx_real_measurement_external_receipt_intake.py",
+    "python3 tools/kds-sync/validate_headroom_lcx_real_measurement_external_receipt_precheck.py",
+    "python3 tools/kds-sync/check_document_pollution.py",
+    "python3 tools/kds-sync/validate_kds_token.py"
+  ],
+  "pre_execution_decision": {
+    "waes_harness_final_decision_recorded": false,
+    "can_open_real_measurement": false,
+    "real_measurement_open": false,
+    "measured_production_tokens": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

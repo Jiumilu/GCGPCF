@@ -1,0 +1,38 @@
+{
+  "evidenceId": "GCKF-P0-FORMAL-EVIDENCE-EXECUTION-COMMITTEE-ACCEPTANCE-ACKNOWLEDGEMENT-NOTIFICATION-RECEIPT-AGGREGATION-REPAIR-REQUEST-ACKNOWLEDGEMENT-ROUTING-PREVIEW-CURRENT-STATE-D177-20260622",
+  "fixturePath": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-preview-current-state-d177-20260622.json",
+  "historicalSource": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-acknowledgement-routing-preview-dry-run-v0.1.json",
+  "currentSource": "fixtures/api/gckf-p0-formal-evidence-execution-committee-acceptance-acknowledgement-notification-receipt-aggregation-repair-request-intake-acknowledgement-preview-current-state-d176-20260622.json",
+  "current_repair_request_acknowledgement_routing_preview_status": "candidate_preview_with_hold",
+  "maximum_state": "review_ready_with_hold",
+  "execution_mode": "local_evidence_no_write",
+  "execution_status": "not_executed",
+  "holdContextRefs": [
+    "B1",
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6"
+  ],
+  "package_scope": {
+    "routing_roles": 12,
+    "routing_sections": 13,
+    "candidate_routing_fields": 13,
+    "routing_readiness_prerequisites": 10,
+    "routing_decision_constraints": 12,
+    "routing_checks": 37,
+    "required_routing_refs": 26,
+    "blocking_conditions": 15,
+    "forbidden_actions": 19,
+    "hold_context_refs": 6
+  },
+  "gateAssertions": {
+    "formalHarnessWriteAllowed": false,
+    "lifecyclePromotionAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "validator": "tools/kds-sync/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_notification_receipt_aggregation_repair_request_acknowledgement_routing_preview_current_state_d177.py"
+}

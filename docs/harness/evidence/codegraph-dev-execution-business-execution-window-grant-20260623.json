@@ -40,7 +40,7 @@
   "current_status_snapshot": {
     "GPCF": {
       "initialized": true,
-      "pendingChanges": {"added": 16, "modified": 32, "removed": 0},
+      "pendingChanges": {"added": 52, "modified": 7, "removed": 0},
       "reindexRecommended": false,
       "codegraph_git_isolated": true
     },
@@ -64,7 +64,7 @@
     },
     "Studio": {
       "initialized": true,
-      "pendingChanges": {"added": 0, "modified": 18, "removed": 0},
+      "pendingChanges": {"added": 1, "modified": 2, "removed": 0},
       "reindexRecommended": false,
       "codegraph_git_isolated": true
     }

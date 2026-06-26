@@ -30,6 +30,7 @@ superseded_by: []
 
 - 把“预检已完成、真实窗口未开”整理成单一桥接包。
 - bridge_precheck_complete_to_real_measurement_window_request
+- 补充全运行授权清单，显式列出 6 个签字字段与 7 个运行开闸项。
 - obtain explicit human authorization window
 - keep precheck-only boundary intact
 - do not start production proxy or production SDK

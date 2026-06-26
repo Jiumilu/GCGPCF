@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PLAN = ROOT / "01-architecture/GlobalCloud项目群实施方案.md"
+PLAN = ROOT / "GlobalCloud 项目群实施方案.md"
 REGISTER = ROOT / "09-status/globalcloud-project-implementation-control-register.md"
 
 REQUIRED_TOKENS = [

@@ -29,6 +29,7 @@ TRANSITION_GRAPH = EVIDENCE_DIR / "headroom-lcx-real-measurement-transition-grap
 AUTH_FIELD_MAP = EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-field-map-20260623.json"
 WINDOW_REQUEST = EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-window-request-20260623.json"
 NEXT_STAGE_PACKAGE = EVIDENCE_DIR / "headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json"
+AUTHORIZATION_CHAIN_REPLAY = EVIDENCE_DIR / "headroom-lcx-real-measurement-authorization-chain-replay-20260623.json"
 RUNNER_CONTRACT = EVIDENCE_DIR / "headroom-lcx-real-measurement-runner-contract-20260623.json"
 RUNTIME_GRAPH = EVIDENCE_DIR / "headroom-lcx-production-runtime-graph-20260623.json"
 ROUTER = EVIDENCE_DIR / "headroom-project-group-application-router-20260621.md"
@@ -85,6 +86,7 @@ def build_completion_audit() -> dict[str, Any]:
     field_map = load_json(AUTH_FIELD_MAP)
     window_request = load_json(WINDOW_REQUEST)
     next_stage_package = load_json(NEXT_STAGE_PACKAGE)
+    authorization_chain_replay = load_json(AUTHORIZATION_CHAIN_REPLAY)
     runner = load_json(RUNNER_CONTRACT)
     runtime_graph = load_json(RUNTIME_GRAPH)
     cost_model = load_json(COST_MODEL)
@@ -134,6 +136,9 @@ def build_completion_audit() -> dict[str, Any]:
                 "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json",
+                "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
+                "docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json",
+                "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json",
             ],
         },
         {
@@ -182,6 +187,9 @@ def build_completion_audit() -> dict[str, Any]:
             "authorization_field_map": field_map.get("field_map_id"),
             "authorization_window_request": window_request.get("evidence_id"),
             "next_stage_authorization_package": next_stage_package.get("evidence_id"),
+            "approval_signed_bundle": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+            "authorization_chain_replay": authorization_chain_replay.get("evidence_id"),
+            "authorization_boundary_review": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623",
             "remaining_blocker_inventory": blocker_inventory.get("evidence_id"),
             "runner_contract": runner.get("contract_id"),
             "runtime_graph": runtime_graph.get("runtime_graph_id"),

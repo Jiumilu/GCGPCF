@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md
 source_path: 02-governance/loop/LOOP_SESSION_REGISTRY.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-26
 supersedes: []
 superseded_by: []
 ---
@@ -64,7 +64,8 @@ superseded_by: []
 | XiaoG evidence repair | `GPCF-L4-XIAOG*` | GPCF/XiaoG | evidence repair only | handoff_required_for_project_execution | read_only_registry_or_user_confirmed_handoff |
 | Project group phase goals | `GPCF-PROJECT*` | GPCF | planning/governance only | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | LOOP localization/governance | `GPCF-LOOP*` | GPCF | localization debt remains blocking | handoff_required_for_bulk_repair | read_only_registry_or_user_confirmed_handoff |
-| UI governance and validation | `GPCF-UI*` | GPCF/Studio | UI gate evidence only, no acceptance promotion | handoff_required_for_page_refactor | read_only_registry_or_user_confirmed_handoff |
+| Studio workflow boundary / permissions | `GPCF-STUDIO*` | GPCF/Studio | workflow boundary and permissions evidence only | handoff_required_for_release_boundary | read_only_registry_or_user_confirmed_handoff |
+| UI governance and validation | `GPCF-UI*`, `GPCF-IMPLEMENTATION*` | GPCF/Studio | UI gate evidence only, no acceptance promotion | handoff_required_for_page_refactor | read_only_registry_or_user_confirmed_handoff |
 | Session declaration and mainline | `GPCF-SESSION*` | GPCF | declaration boundary and mainline control | active_controlled | continue_current_mainline_only |
 
 ## 4. 其它会话处理规则

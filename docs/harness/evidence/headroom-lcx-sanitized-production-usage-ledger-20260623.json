@@ -1,0 +1,42 @@
+{
+  "ledger_id": "HEADROOM-LCX-SANITIZED-PRODUCTION-TOKEN-LEDGER-20260623",
+  "ledger_type": "sanitized_production_token_usage_ledger_measurement_metadata_only",
+  "authorization": {
+    "authorized_window_id": "LCX-MEASURE-20260623-001",
+    "authorized_by": "lujunxiang / 总架构师",
+    "authorized_at": "2026-06-23T14:30:00+08:00",
+    "scope": "precheck_only_no_production_measurement"
+  },
+  "telemetry": "off",
+  "sensitive_raw_text_stored": false,
+  "raw_prompt_storage": "forbidden",
+  "raw_completion_storage": "forbidden",
+  "contains_provider_secret": false,
+  "contains_authorization_header": false,
+  "contains_raw_prompt": false,
+  "contains_raw_completion": false,
+  "contains_customer_contract_text": false,
+  "measured_production_tokens": false,
+  "production_token_measurement_allowed": false,
+  "entries": [
+    {
+      "measurement_id": "HEADROOM-LCX-SANITIZED-PRODUCTION-TOKEN-LEDGER-20260623-PLACEHOLDER",
+      "project": "GPCF",
+      "scenario": "sanitized_metadata_only_no_production_data",
+      "source_kind": "reference_only_metadata",
+      "input_tokens_before": 0,
+      "input_tokens_after": 0,
+      "output_tokens_before": 0,
+      "output_tokens_after": 0,
+      "cache_write_tokens_before": 0,
+      "cache_write_tokens_after": 0,
+      "cache_read_tokens_before": 0,
+      "cache_read_tokens_after": 0,
+      "retrieval_miss_count": 0,
+      "answer_equivalence": "not_measured",
+      "sensitive_redaction_gate": "pass",
+      "project_marker_gate": "not_measured",
+      "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
+    }
+  ]
+}

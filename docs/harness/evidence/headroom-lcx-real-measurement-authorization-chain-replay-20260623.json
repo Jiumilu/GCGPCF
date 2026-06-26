@@ -1,0 +1,131 @@
+{
+  "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-20260623",
+  "task_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-001",
+  "loop_round_id": "GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-CHAIN-REPLAY-001",
+  "date": "2026-06-23",
+  "status": "authorization_chain_replayed_precheck_only",
+  "scope": "real_measurement_authorization_chain_replay_no_execution",
+  "project_count": 15,
+  "projects": [
+    "GPCF",
+    "KDS",
+    "Brain",
+    "WAES",
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "Edge",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "Studio",
+    "WAS"
+  ],
+  "ledger_reference": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+  "chain": [
+    {
+      "step": "authorization_request",
+      "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623",
+      "status": "real_measurement_authorization_request_blocked_until_real_window",
+      "ledger_reference": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+      "state": {
+        "real_measurement_gap_present": true,
+        "production_branch_blocked": true,
+        "production_token_measurement_allowed": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      }
+    },
+    {
+      "step": "authorization_field_map",
+      "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623",
+      "status": "authorization_field_map_defined_precheck_only",
+      "ledger_reference": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+      "state": {
+        "real_measurement_gap_present": true,
+        "production_branch_blocked": true,
+        "production_token_measurement_allowed": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      }
+    },
+    {
+      "step": "approval_signed_bundle",
+      "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623",
+      "status": "signed_approval_record_created_no_production_activation",
+      "ledger_reference": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+      "state": {
+        "authorization_complete": true,
+        "real_measurement_window_open": false,
+        "production_token_measurement_allowed": false,
+        "production_proxy_started": false,
+        "production_sdk_enabled": false,
+        "production_external_api_write": false,
+        "kds_api_write": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      }
+    },
+    {
+      "step": "authorization_window_grant",
+      "evidence_id": "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623",
+      "status": "real_measurement_authorization_window_granted_precheck_only",
+      "ledger_reference": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+      "state": {
+        "real_measurement_window_granted": true,
+        "real_measurement_open": false,
+        "production_branch_blocked": true,
+        "production_token_measurement_allowed": false,
+        "measured_production_tokens": false,
+        "production_admission_gate": false,
+        "accepted": false,
+        "integrated": false,
+        "production_ready": false
+      }
+    },
+    {
+      "step": "sanitized_usage_ledger",
+      "evidence_id": "HEADROOM-LCX-SANITIZED-PRODUCTION-TOKEN-LEDGER-20260623",
+      "status": "metadata_only_no_production_measurement",
+      "ledger_reference": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
+      "state": {
+        "telemetry": "off",
+        "sensitive_raw_text_stored": false,
+        "measured_production_tokens": false,
+        "production_token_measurement_allowed": false
+      }
+    }
+  ],
+  "chain_gate": {
+    "same_ledger_reference": true,
+    "real_measurement_open": false,
+    "production_token_measurement_allowed": false,
+    "measured_production_tokens": false,
+    "production_admission_gate": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": {
+    "not_real_measurement_execution": true,
+    "not_production_proxy_start": true,
+    "not_production_sdk_enablement": true,
+    "not_real_kds_write": true,
+    "not_external_api_write": true,
+    "not_business_equivalence_proven": true,
+    "not_accepted": true,
+    "not_integrated": true,
+    "not_production_ready": true
+  }
+}
