@@ -23,10 +23,12 @@
   "source_direct_charset_fallback_enabled": true,
   "source_direct_content_type_guard_enabled": true,
   "source_direct_discovery_enabled": true,
+  "source_direct_incomplete_read_partial_enabled": true,
   "source_direct_login_guard_enabled": true,
   "source_direct_max_pages_per_entrypoint": 5,
   "source_direct_max_transient_retry_count": 1,
   "source_direct_redirect_guard_enabled": true,
+  "source_direct_static_asset_filter_enabled": true,
   "source_direct_transient_retry_enabled": true,
   "status": "p9_source_direct_runner_readiness_ready"
 }

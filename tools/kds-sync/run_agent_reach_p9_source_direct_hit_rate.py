@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import html
+import http.client
 import json
 import re
 import urllib.error
@@ -55,7 +56,7 @@ REQUIRED_AUTH_FIELDS = {
 TOPIC_KEYWORDS = {
     "green_supply_chain": ["绿色供应链", "green supply chain", "供应商", "ESG", "碳足迹", "scope 3", "供应链"],
     "phosphogypsum": ["磷石膏", "phosphogypsum", "综合利用", "污染控制", "无害化", "贮存"],
-    "industrial_solid_waste": ["工业固废", "工业固体废物", "大宗固废", "资源综合利用", "solid waste"],
+    "industrial_solid_waste": ["工业固废", "工业固体废物", "固体废物", "固废", "大宗固废", "大宗固体废弃物", "资源综合利用", "循环经济", "solid waste"],
     "zero_waste_city": ["无废城市", "zero-waste", "指标体系", "试点", "工业固废综合利用率"],
 }
 LOGIN_PATH_PATTERN = re.compile(r"(?i)(/login|/signin|/auth|/oauth|/sso|/passport|/user/login)")
@@ -71,6 +72,7 @@ ALLOWED_CONTENT_TYPE_PREFIXES = (
 )
 TRANSIENT_FETCH_ERROR_TYPES = (urllib.error.URLError, TimeoutError, ConnectionError)
 MAX_TRANSIENT_RETRY_COUNT = 1
+SKIPPED_DISCOVERY_EXTENSIONS = (".css", ".js", ".ico", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".woff", ".woff2", ".ttf", ".map")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -136,6 +138,10 @@ def same_target_domain(target: dict[str, Any], url: str) -> bool:
     return parsed.scheme == "https" and bool(parsed.netloc) and parsed.netloc.endswith(target["domain"])
 
 
+def is_static_asset_url(url: str) -> bool:
+    return urlparse(url).path.lower().endswith(SKIPPED_DISCOVERY_EXTENSIONS)
+
+
 def discover_urls(target: dict[str, Any], base_url: str, raw_text: str, limit: int = 5) -> list[str]:
     urls = [base_url]
     seen = {base_url}
@@ -149,7 +155,7 @@ def discover_urls(target: dict[str, Any], base_url: str, raw_text: str, limit: i
         for match in re.finditer(pattern, raw_text, re.IGNORECASE):
             url = html.unescape(match.group(1).strip())
             absolute = urljoin(base_url, url)
-            if absolute in seen or not same_target_domain(target, absolute):
+            if absolute in seen or not same_target_domain(target, absolute) or is_static_asset_url(absolute):
                 continue
             folded = absolute.lower()
             score = sum(1 for term in terms if term.lower() in folded)
@@ -177,7 +183,10 @@ def fetch_url(url: str) -> tuple[int | None, str, str, str, str, str]:
         content_type = response.headers.get_content_type()
         if not any(content_type.lower().startswith(prefix) for prefix in ALLOWED_CONTENT_TYPE_PREFIXES):
             raise ValueError(f"content_type_not_allowed:{content_type}")
-        payload = response.read(128_000)
+        try:
+            payload = response.read(128_000)
+        except http.client.IncompleteRead as exc:
+            payload = exc.partial
         charset = response.headers.get_content_charset()
         raw_text = decode_payload(payload, charset)
         title, body = strip_html(raw_text)

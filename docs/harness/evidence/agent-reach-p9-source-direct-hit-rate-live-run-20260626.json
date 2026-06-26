@@ -27,7 +27,7 @@
       "priority": "P0",
       "relevance_score": 0.63,
       "requested_url": "https://www.greenscs.com/",
-      "retrieved_at": "2026-06-26T23:37:59.680055+00:00",
+      "retrieved_at": "2026-06-26T23:44:59.688719+00:00",
       "retry_count": 0,
       "snippet_redacted": "绿色低碳供应链公共服务平台 @font-face { font-family: 'AlibabaPuHuiTi_2_55_Regular'; src: url('/font/AlibabaPuHuiTi-2-55-Regular.ttf') format('truetype'); } @font-face { font-family: 'AlibabaPuHuiTi_2_75_SemiBold'; src: url('/font/AlibabaPuHuiTi-2-75-SemiBold.ttf') format('truetype'); } @font-face { font-family: 'AlibabaPuHuiTi_2_85_Bold'; src: url('/font/AlibabaPuHuiTi-2-85-Bold.ttf') format('truetype'); } @font-face { font-famil",
       "source_domain": "greenscs.com",
@@ -68,7 +68,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://www.miit.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:20.099049+00:00",
+      "retrieved_at": "2026-06-26T23:45:18.831689+00:00",
       "retry_count": 0,
       "snippet_redacted": "中华人民共和国工业和信息化部 .floornew { margin-top: 42px; float: left; width: 100%; } .new-cbox-l { width: 815px; margin-right: 45px; float: left; } .floor2 { height: 90px; } .floor4{ height:404px; } .new-cbox-r { width: 32.8125%; float: left; } ul.wzbd_list li { width: 100%; height: 70px; line-height: normal; background-color: #f6f6f6; background-position: none; margin-bottom: 12px; } ul.wzbd_list li:hover { background-color: #f",
       "source_domain": "miit.gov.cn",
@@ -109,7 +109,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://baosong.miit.gov.cn/ScaleTest",
-      "retrieved_at": "2026-06-26T23:38:22.694147+00:00",
+      "retrieved_at": "2026-06-26T23:45:20.944772+00:00",
       "retry_count": 0,
       "snippet_redacted": "中小企业运行监测平台",
       "source_domain": "miit.gov.cn",
@@ -150,7 +150,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://bzxx.miit.gov.cn/qa/znzx/main",
-      "retrieved_at": "2026-06-26T23:38:26.766929+00:00",
+      "retrieved_at": "2026-06-26T23:45:24.482255+00:00",
       "retry_count": 0,
       "snippet_redacted": "中华人民共和国工业和信息化部 #loading-mask { display: flex; justify-content: center; align-items: center; min-height: 420px; height: 100vh; position: relative; } .loading-dot { animation: antRotate 1.2s infinite linear; transform: rotate(45deg); position: relative; display: inline-block; font-size: 22px; width: 22px; height: 22px; box-sizing: border-box } .loading-dot i { width: 9px; height: 9px; position: absolute; display: block",
       "source_domain": "miit.gov.cn",
@@ -191,9 +191,9 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://safetybigdata.miit.gov.cn/sibdp-web/",
-      "retrieved_at": "2026-06-26T23:38:30.453590+00:00",
+      "retrieved_at": "2026-06-26T23:45:28.402202+00:00",
       "retry_count": 0,
-      "snippet_redacted": "安全应急产业申报系统 $(document).ready(function() { $('input, textarea').placeholder(); }); var ctx =\"/sibdp-web\" .content-wrapper{ /*min-height: 100%;*/ background-color:#f5f5f5; margin-left: auto; margin-right: auto; width: 100%; padding-top: 1px !important; } var tokenValue = '-6214226953759905482'; window.csrftoken = tokenValue; var downUrl = 'http://fileback.miit.gov.cn/file/download?m='; window.downUrl = downUrl; $(docum",
+      "snippet_redacted": "安全应急产业申报系统 $(document).ready(function() { $('input, textarea').placeholder(); }); var ctx =\"/sibdp-web\" .content-wrapper{ /*min-height: 100%;*/ background-color:#f5f5f5; margin-left: auto; margin-right: auto; width: 100%; padding-top: 1px !important; } var tokenValue = '-2983784722538655213'; window.csrftoken = tokenValue; var downUrl = 'http://fileback.miit.gov.cn/file/download?m='; window.downUrl = downUrl; $(docum",
       "source_domain": "miit.gov.cn",
       "target_id": "gsc-p0-miit",
       "title": "安全应急产业申报系统",
@@ -232,7 +232,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://std.miit.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:32.535798+00:00",
+      "retrieved_at": "2026-06-26T23:45:30.248400+00:00",
       "retry_count": 0,
       "snippet_redacted": "工业和信息化标准信息服务平台 html { height: 100%; } body { margin: 0; padding: 0; height: 100%; } #app{ height: 100%; } We're sorry but vue3gch doesn't work properly without JavaScript enabled. Please enable it to continue.",
       "source_domain": "miit.gov.cn",
@@ -272,7 +272,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://www.samr.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:35.156170+00:00",
+      "retrieved_at": "2026-06-26T23:45:32.555129+00:00",
       "retry_count": 0,
       "snippet_redacted": "国家市场监督管理总局 习近平会见孟加拉国总理塔里克 var tttext=$(\".tttext\").attr(\"href\"); if(tttext==\"https://www.gov.cn/yaowen/liebiao/202311/content_6913254.htm\"){ $(\".tttext\").css(\"color\",\"#2f2f2f\"); $(\".tttextfbt\").css(\"color\",\"#2f2f2f\"); } .ttztlist { overflow: hidden; width: 2026px; height: 100px; } .ttztcont { float: left; width: 1013px; height: 100px; text-align: center; } // ttztgdt var ttztdt=window.setInterval(ttztpre,3000); functi",
       "source_domain": "samr.gov.cn",
@@ -293,10 +293,86 @@
         "evidence_standard_reference",
         "supplier_esg"
       ],
-      "candidate_id": "p9s-gsc-p0-samr-standards-55956c60e1",
+      "candidate_id": "p9s-gsc-p0-samr-standards-1af04d856a",
       "candidate_only": true,
       "content_type": "text/html",
       "discovery_rank": 1,
+      "entrypoint_method": "target_url",
+      "final_url": "https://dj.samr.gov.cn/djfww/zczl/index.html",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://dj.samr.gov.cn/djfww/zczl/index.html",
+      "retrieved_at": "2026-06-26T23:45:35.258311+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "优化营商环境政策专栏 公司登记有问有答 保护竞争促进发展 学习政策做好经营 网上办事智慧服务 信息透明加强监管 注册公司必须有名称吗？关于公司名称有哪些基本要求？ 根据《中华人民共和国市场主体登记管理条例》，公司名称是注册公司的法定登记事项，经登记的市场主体名称受法律保护。《企业名称登记管理规定》进一步为企业名称申报提供了明确、具体的规则要求，企业名称经由申请人依法自主申报。具体请参考以下规定： 《市场主体登记管理条例》 https://flk.npc.gov.cn/detail2.html?ZmY4MDgxODE3YjYzYjY3OTAxN2I3YjIwODU5NTM2MDc 《企业名称登记管理规定》 https://www.gov.cn/gongbao/content/2021/content_5582625.htm 《企业名称登记管理规定实施办法》 https://www.gov.cn/gongbao/2023/issue",
+      "source_domain": "samr.gov.cn",
+      "target_id": "gsc-p0-samr-standards",
+      "title": "优化营商环境政策专栏",
+      "topic_keyword_hits": {
+        "green_supply_chain": []
+      },
+      "topics": [
+        "green_supply_chain"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://dj.samr.gov.cn/djfww/zczl/index.html"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "evidence_standard_reference",
+        "supplier_esg"
+      ],
+      "candidate_id": "p9s-gsc-p0-samr-standards-57b1207704",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 2,
+      "entrypoint_method": "target_url",
+      "final_url": "https://dj.samr.gov.cn/gxbcyjszq/index.html",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://dj.samr.gov.cn/gxbcyjszq/index.html",
+      "retrieved_at": "2026-06-26T23:45:36.631910+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "高效办成一件事 /*设计图里的数值/100=css里设计的rem ** 例如设计图里设计的调试为20px，在css里设计0.2rem，计算方法是：20px/100 = 0.2rem */ (function (doc, win) { function dataset(element) { var obj = {}; if (element.dataset) { return element.dataset; } else { for (var i = 0; i 750) { width = 750 * dpr; } dataset(docEl).width = width dataset(docEl).percent = 100 * (width / 750); docEl.style.fontSize = 100 * (width / 750) + 'px'; }; recalc(); if (!doc.addEventLis",
+      "source_domain": "samr.gov.cn",
+      "target_id": "gsc-p0-samr-standards",
+      "title": "高效办成一件事",
+      "topic_keyword_hits": {
+        "green_supply_chain": []
+      },
+      "topics": [
+        "green_supply_chain"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://dj.samr.gov.cn/gxbcyjszq/index.html"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "evidence_standard_reference",
+        "supplier_esg"
+      ],
+      "candidate_id": "p9s-gsc-p0-samr-standards-55956c60e1",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 3,
       "entrypoint_method": "target_url",
       "final_url": "https://hfjs.samr.gov.cn",
       "freshness_score": 0.7,
@@ -310,7 +386,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://hfjs.samr.gov.cn",
-      "retrieved_at": "2026-06-26T23:38:37.104929+00:00",
+      "retrieved_at": "2026-06-26T23:45:38.244270+00:00",
       "retry_count": 0,
       "snippet_redacted": "国家市场监督管理总局专项行动举报平台",
       "source_domain": "samr.gov.cn",
@@ -334,7 +410,7 @@
       "candidate_id": "p9s-gsc-p0-samr-standards-d0103c6c05",
       "candidate_only": true,
       "content_type": "text/html",
-      "discovery_rank": 2,
+      "discovery_rank": 4,
       "entrypoint_method": "target_url",
       "final_url": "https://htsfwb.samr.gov.cn/",
       "freshness_score": 0.7,
@@ -348,7 +424,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://htsfwb.samr.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:39.088869+00:00",
+      "retrieved_at": "2026-06-26T23:45:40.321730+00:00",
       "retry_count": 0,
       "snippet_redacted": "首页 - 合同示范文本库 - 国家市场监督管理总局 文本库使用说明 合同示范文本库收集了市场监管部门制定发布的合同示范文本，供社会公众查阅下载。 当事人可以参照各类合同示范文本订立合同。根据规定，当事人参照合同示范文本订立合同的，应充分理解合同中条款的内容，并自行承担合同订立履行所发生的法律后果。当事人对合同条款理解发生争议时，应按照有关法律法规规定对条款进行解释。 对于当事人利用、冒用合同示范文本，实施侵害消费者权益、危害国家利益和社会公共利益等合同违法行为的，各级市场监管部门一经发现，将依法追究其责任。 我知道了  搜索 常用关键词： 买卖 租赁 建设 广告 服务 公用事业 高级检索： 收起  展开  年份 1999年以前 2000-2004年 2005-2009年 2010-2014年 2015-2019年 2020年以后 地区 北京 天津 河北 山西 内蒙古 辽宁 吉林 黑龙江 上海 江苏 浙江 安徽 福建 江西 ",
       "source_domain": "samr.gov.cn",
@@ -362,82 +438,6 @@
       ],
       "traceability_score": 1.0,
       "url": "https://htsfwb.samr.gov.cn/"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "evidence_standard_reference",
-        "supplier_esg"
-      ],
-      "candidate_id": "p9s-gsc-p0-samr-standards-5c6871d6b2",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 3,
-      "entrypoint_method": "target_url",
-      "final_url": "https://sjfg.samr.gov.cn/law/pageInfo/main.main",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://sjfg.samr.gov.cn/law/pageInfo/main.main",
-      "retrieved_at": "2026-06-26T23:38:41.553995+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "市场监管法律法规规章数据库 --> /*html{*/ /* -webkit-filter: grayscale(100%);*/ /* -moz-filter: grayscale(100%);*/ /* -ms-filter: grayscale(100%);*/ /* -o-filter: grayscale(100%);*/ /* filter: grayscale(100%);*/ /* filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);*/ /* filter: gray;*/ /*}*/ /*.no_gray{*/ /* filter: grayscale(0%);*/ /* -webkit-filter: grayscale(0%);*/ /* -moz-filter: grayscale(0%);*/ /* -ms-filter:",
-      "source_domain": "samr.gov.cn",
-      "target_id": "gsc-p0-samr-standards",
-      "title": "市场监管法律法规规章数据库",
-      "topic_keyword_hits": {
-        "green_supply_chain": []
-      },
-      "topics": [
-        "green_supply_chain"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://sjfg.samr.gov.cn/law/pageInfo/main.main"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "evidence_standard_reference",
-        "supplier_esg"
-      ],
-      "candidate_id": "p9s-gsc-p0-samr-standards-621006a4cd",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 4,
-      "entrypoint_method": "target_url",
-      "final_url": "https://spjb.samr.gov.cn/",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://spjb.samr.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:43.294504+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "全国食品安全内部知情人举报系统 import.meta.url;import(\"_\").catch(()=>1);(async function*(){})().next();if(location.protocol!=\"file:\"){window.__vite_is_modern_browser=true} !function(){if(window.__vite_is_modern_browser)return;console.warn(\"vite: loading legacy chunks, syntax error above and the same error below should be ignored\");var e=document.getElementById(\"vite-legacy-polyfill\"),n=document.createElement(\"script\");n.src=e.src,n",
-      "source_domain": "samr.gov.cn",
-      "target_id": "gsc-p0-samr-standards",
-      "title": "全国食品安全内部知情人举报系统",
-      "topic_keyword_hits": {
-        "green_supply_chain": []
-      },
-      "topics": [
-        "green_supply_chain"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://spjb.samr.gov.cn/"
     },
     {
       "authority_score": 0.82,
@@ -462,7 +462,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://www.mee.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:44.725364+00:00",
+      "retrieved_at": "2026-06-26T23:45:41.851725+00:00",
       "retry_count": 0,
       "snippet_redacted": "中华人民共和国生态环境部 var localName = 'waterData' var localData = JSON.parse( localStorage.getItem(localName) ) || [] var limitTime = 10 // var limitTime = 1000 * 60 * 60 * 24 * 30 // 调用外部jason数据时用 // console.log(localData) // console.log(new Date().getTime() - localData.time) // console.log(limitTime) var myData var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(function(){ dataPC(); }) $(\".mobileStyle\").remove();",
       "source_domain": "mee.gov.cn",
@@ -500,7 +500,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://www.mee.gov.cn/djgz/",
-      "retrieved_at": "2026-06-26T23:38:47.612228+00:00",
+      "retrieved_at": "2026-06-26T23:45:44.930591+00:00",
       "retry_count": 0,
       "snippet_redacted": "机关党建 a,a:link,a:visited,a:hover{ font-size:12px; } window.location.href = \"./jgdj/\"; 如果你的浏览器不支持跳转,请点击此处 document.write(unescape(\"%3Cscript src='http://cl3.webterren.com/webdig.js?z=41' type='text/javascript'%3E%3C/script%3E\")); wd_paramtracker(\"_wdxid=000000000000000000000000000000000000000000\")",
       "source_domain": "mee.gov.cn",
@@ -538,7 +538,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://www.mee.gov.cn/djgz/jgdj/",
-      "retrieved_at": "2026-06-26T23:38:48.656659+00:00",
+      "retrieved_at": "2026-06-26T23:45:45.879303+00:00",
       "retry_count": 0,
       "snippet_redacted": "党建信息_中华人民共和国生态环境部 var isPC = IsPC(); //获取是否为PC端 if (isPC) { //如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_cj_pc_v2019.js') } else { //如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appendChi",
       "source_domain": "mee.gov.cn",
@@ -576,7 +576,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://www.mee.gov.cn/djgz/jgdj/202509/t20250930_1128827.shtml",
-      "retrieved_at": "2026-06-26T23:38:49.698681+00:00",
+      "retrieved_at": "2026-06-26T23:45:46.783916+00:00",
       "retry_count": 0,
       "snippet_redacted": "生态环境部举行“四好”党员先进代表事迹宣讲会_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('hea",
       "source_domain": "mee.gov.cn",
@@ -614,7 +614,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://www.pbc.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:51.713757+00:00",
+      "retrieved_at": "2026-06-26T23:45:48.670924+00:00",
       "retry_count": 0,
       "snippet_redacted": "中国人民银行 var _speedMark = new Date(); /*导航css*/ body{margin:0;padding:0;} a{ text-decoration:none; color:#333333;font-size: 12px;} .header{ width:950px; height:auto; clear:both; margin:0 auto;font-size: 12px;font-family: \"宋体\";} #logo{ width:950px; margin:auto; text-align:center; font-size:13px;font-weight:bold; } #logo .logo1{ width:950px; height:25px;background-color:#f0f0f0;} #biaotou{font-size:18px; width:119px;font",
       "source_domain": "pbc.gov.cn",
@@ -652,7 +652,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://beijing.pbc.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:53.729439+00:00",
+      "retrieved_at": "2026-06-26T23:45:50.787920+00:00",
       "retry_count": 0,
       "snippet_redacted": "--> 北京市分行 var _speedMark = new Date(); 无障碍浏览器 访问人民银行主站 首 页 机构简介 公告信息 工作动态 金融数据 区域金融 政务公开 金融知识 办事指南 热点专题 高级搜索 var day=\"\"; var month=\"\"; var ampm=\"\"; var ampmhour=\"\"; var myweekday=\"\"; var year=\"\"; mydate=new Date(); myweekday=mydate.getDay(); mymonth=mydate.getMonth()+1; myday= mydate.getDate(); myyear= mydate.getYear(); year=(myyear > 200) ? myyear : 1900 + myyear; if(myweekday == 0) weekday=\" 星期日 \"; else if(myweekda",
       "source_domain": "pbc.gov.cn",
@@ -690,7 +690,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://camlmac.pbc.gov.cn",
-      "retrieved_at": "2026-06-26T23:38:56.007119+00:00",
+      "retrieved_at": "2026-06-26T23:45:52.620926+00:00",
       "retry_count": 0,
       "snippet_redacted": "反洗钱中心 var _speedMark = new Date(); /*导航css*/ body{margin:0;padding:0;} a{ text-decoration:none; color:#333333;font-size: 12px;} .header{ width:950px; height:auto; clear:both; margin:0 auto;font-size: 12px;font-family: \"宋体\";} #logo{ width:950px; margin:auto; text-align:center; font-size:13px;font-weight:bold; } #logo .logo1{ width:950px; height:25px;background-color:#f0f0f0;} #biaotou{font-size:18px; width:119px;font-",
       "source_domain": "pbc.gov.cn",
@@ -728,7 +728,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://changchun.pbc.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:58.062772+00:00",
+      "retrieved_at": "2026-06-26T23:45:54.428760+00:00",
       "retry_count": 0,
       "snippet_redacted": "吉林省分行 var _speedMark = new Date(); body,table{ margin:0; padding:0;font-family: \"宋体\";} .header{ width:950px; height:auto; margin:0 auto; clear:both; font-size:12px;} a{ text-decoration:none;} .header a{ color:#fff;} .daohangxian { border-right-width: 1px; border-right-style: solid; border-right-color: #8a9198; } .header .hei12 { color: #333333; } 无障碍浏览 访问人民银行主站 function locationurl(){ var childweburl = \"chongqing\"; v",
       "source_domain": "pbc.gov.cn",
@@ -766,7 +766,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://fuzhou.pbc.gov.cn/",
-      "retrieved_at": "2026-06-26T23:38:59.903481+00:00",
+      "retrieved_at": "2026-06-26T23:45:56.263727+00:00",
       "retry_count": 0,
       "snippet_redacted": "福建省分行 var _speedMark = new Date(); body,table{ margin:0; padding:0;font-family: \"宋体\";} .header{ width:950px; height:auto; margin:0 auto; clear:both; font-size:12px;} a{ text-decoration:none;} .header a{ color:#fff;} .daohangxian { border-right-width: 1px; border-right-style: solid; border-right-color: #8a9198; } .header .hei12 { color: #333333; } 无障碍浏览 访问人民银行主站 function locationurl(){ var childweburl = \"chongqing\"; v",
       "source_domain": "pbc.gov.cn",
@@ -800,178 +800,24 @@
         "not_kds_canonical_written",
         "not_gfis_source_of_record_written"
       ],
-      "overall_score": 0.8555,
+      "overall_score": 0.8195,
       "priority": "P0",
-      "relevance_score": 0.63,
+      "relevance_score": 0.55,
       "requested_url": "https://ghgprotocol.org/corporate-value-chain-scope-3-standard",
-      "retrieved_at": "2026-06-26T23:39:01.152508+00:00",
+      "retrieved_at": "2026-06-26T23:45:57.229026+00:00",
       "retry_count": 0,
-      "snippet_redacted": "window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={}; Corporate Value Chain (Scope 3) Standard | GHG Protocol {\"path\":{\"baseUrl\":\"\\/\",\"pathPrefix\":\"\",\"currentPath\":\"node\\/487\",\"currentPathIsAdmin\":false,\"isFront\":false,\"currentLanguage\":\"en\"},\"pluralDelimiter\":\"\\u0003\",\"suppressDeprecationErrors\":true,\"gtag\":{\"tagId\":\"\",\"consentMode\":false,\"otherIds\":[],\"event",
+      "snippet_redacted": "",
       "source_domain": "ghgprotocol.org",
       "target_id": "gsc-p0-ghgprotocol",
-      "title": "Corporate Value Chain (Scope 3) Standard | GHG Protocol",
+      "title": "",
       "topic_keyword_hits": {
-        "green_supply_chain": [
-          "scope 3"
-        ]
+        "green_supply_chain": []
       },
       "topics": [
         "green_supply_chain"
       ],
       "traceability_score": 1.0,
       "url": "https://ghgprotocol.org/corporate-value-chain-scope-3-standard"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "scope3_emissions",
-        "carbon_traceability"
-      ],
-      "candidate_id": "p9s-gsc-p0-ghgprotocol-45629d3611",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 1,
-      "entrypoint_method": "target_url",
-      "final_url": "https://ghgprotocol.org/",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://ghgprotocol.org/",
-      "retrieved_at": "2026-06-26T23:39:01.984813+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={}; Homepage | GHG Protocol {\"path\":{\"baseUrl\":\"\\/\",\"pathPrefix\":\"\",\"currentPath\":\"node\\/1776\",\"currentPathIsAdmin\":false,\"isFront\":true,\"currentLanguage\":\"en\"},\"pluralDelimiter\":\"\\u0003\",\"suppressDeprecationErrors\":true,\"gtag\":{\"tagId\":\"\",\"consentMode\":false,\"otherIds\":[],\"events\":[],\"additionalConfigInfo\":[]}",
-      "source_domain": "ghgprotocol.org",
-      "target_id": "gsc-p0-ghgprotocol",
-      "title": "Homepage | GHG Protocol",
-      "topic_keyword_hits": {
-        "green_supply_chain": []
-      },
-      "topics": [
-        "green_supply_chain"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://ghgprotocol.org/"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "scope3_emissions",
-        "carbon_traceability"
-      ],
-      "candidate_id": "p9s-gsc-p0-ghgprotocol-cef5ad5743",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 2,
-      "entrypoint_method": "target_url",
-      "final_url": "https://ghgprotocol.org/about-us",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://ghgprotocol.org/about-us",
-      "retrieved_at": "2026-06-26T23:39:02.805503+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={}; About Us | GHG Protocol {\"path\":{\"baseUrl\":\"\\/\",\"pathPrefix\":\"\",\"currentPath\":\"node\\/615\",\"currentPathIsAdmin\":false,\"isFront\":false,\"currentLanguage\":\"en\"},\"pluralDelimiter\":\"\\u0003\",\"suppressDeprecationErrors\":true,\"gtag\":{\"tagId\":\"\",\"consentMode\":false,\"otherIds\":[],\"events\":[],\"additionalConfigInfo\":[]}",
-      "source_domain": "ghgprotocol.org",
-      "target_id": "gsc-p0-ghgprotocol",
-      "title": "About Us | GHG Protocol",
-      "topic_keyword_hits": {
-        "green_supply_chain": []
-      },
-      "topics": [
-        "green_supply_chain"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://ghgprotocol.org/about-us"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "scope3_emissions",
-        "carbon_traceability"
-      ],
-      "candidate_id": "p9s-gsc-p0-ghgprotocol-7635ffa5ec",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 3,
-      "entrypoint_method": "target_url",
-      "final_url": "https://ghgprotocol.org/about/secretariat",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://ghgprotocol.org/about/secretariat",
-      "retrieved_at": "2026-06-26T23:39:03.701132+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={}; Secretariat | GHG Protocol {\"path\":{\"baseUrl\":\"\\/\",\"pathPrefix\":\"\",\"currentPath\":\"node\\/1943\",\"currentPathIsAdmin\":false,\"isFront\":false,\"currentLanguage\":\"en\"},\"pluralDelimiter\":\"\\u0003\",\"suppressDeprecationErrors\":true,\"gtag\":{\"tagId\":\"\",\"consentMode\":false,\"otherIds\":[],\"events\":[],\"additionalConfigInfo\"",
-      "source_domain": "ghgprotocol.org",
-      "target_id": "gsc-p0-ghgprotocol",
-      "title": "Secretariat | GHG Protocol",
-      "topic_keyword_hits": {
-        "green_supply_chain": []
-      },
-      "topics": [
-        "green_supply_chain"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://ghgprotocol.org/about/secretariat"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "scope3_emissions",
-        "carbon_traceability"
-      ],
-      "candidate_id": "p9s-gsc-p0-ghgprotocol-5b4271fe81",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 4,
-      "entrypoint_method": "target_url",
-      "final_url": "https://ghgprotocol.org/actions-and-market-instruments-standard",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://ghgprotocol.org/actions-and-market-instruments-standard",
-      "retrieved_at": "2026-06-26T23:39:04.351916+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={}; Actions and Market Instruments Standard | GHG Protocol {\"path\":{\"baseUrl\":\"\\/\",\"pathPrefix\":\"\",\"currentPath\":\"node\\/2222\",\"currentPathIsAdmin\":false,\"isFront\":false,\"currentLanguage\":\"en\"},\"pluralDelimiter\":\"\\u0003\",\"suppressDeprecationErrors\":true,\"gtag\":{\"tagId\":\"\",\"consentMode\":false,\"otherIds\":[],\"event",
-      "source_domain": "ghgprotocol.org",
-      "target_id": "gsc-p0-ghgprotocol",
-      "title": "Actions and Market Instruments Standard | GHG Protocol",
-      "topic_keyword_hits": {
-        "green_supply_chain": []
-      },
-      "topics": [
-        "green_supply_chain"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://ghgprotocol.org/actions-and-market-instruments-standard"
     },
     {
       "authority_score": 0.82,
@@ -996,7 +842,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://commission.europa.eu/topics/business-and-industry/doing-business-eu/sustainability-due-diligence-responsible-business/corporate-sustainability-due-diligence_en",
-      "retrieved_at": "2026-06-26T23:39:06.258688+00:00",
+      "retrieved_at": "2026-06-26T23:45:58.879378+00:00",
       "retry_count": 0,
       "snippet_redacted": "{\"service\":\"preview\",\"position\":\"before\"} { \"@context\": \"https:\\/\\/schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [ { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/index_en\", \"name\": \"Home\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/topics_en\", \"name\": \"Topics\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@i",
       "source_domain": "commission.europa.eu",
@@ -1034,7 +880,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://commission.europa.eu/about-european-commission/organisation-european-commission/college-commissioners_en",
-      "retrieved_at": "2026-06-26T23:39:09.065724+00:00",
+      "retrieved_at": "2026-06-26T23:46:01.602450+00:00",
       "retry_count": 0,
       "snippet_redacted": "{\"service\":\"preview\",\"position\":\"before\"} { \"@context\": \"https:\\/\\/schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [ { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/index_en\", \"name\": \"Home\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/about_en\", \"name\": \"About\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@id\"",
       "source_domain": "commission.europa.eu",
@@ -1072,7 +918,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://commission.europa.eu/about-european-commission/organisation-european-commission/president_en",
-      "retrieved_at": "2026-06-26T23:39:12.103498+00:00",
+      "retrieved_at": "2026-06-26T23:46:04.866304+00:00",
       "retry_count": 0,
       "snippet_redacted": "{\"service\":\"preview\",\"position\":\"before\"} { \"@context\": \"https:\\/\\/schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [ { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/index_en\", \"name\": \"Home\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/about_en\", \"name\": \"About\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@id\"",
       "source_domain": "commission.europa.eu",
@@ -1110,7 +956,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://commission.europa.eu/about/contact_en",
-      "retrieved_at": "2026-06-26T23:39:13.511846+00:00",
+      "retrieved_at": "2026-06-26T23:46:06.193198+00:00",
       "retry_count": 0,
       "snippet_redacted": "{\"service\":\"preview\",\"position\":\"before\"} { \"@context\": \"https:\\/\\/schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [ { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/index_en\", \"name\": \"Home\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/about_en\", \"name\": \"About\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@id\"",
       "source_domain": "commission.europa.eu",
@@ -1148,7 +994,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://commission.europa.eu/about/departments-and-executive-agencies_en",
-      "retrieved_at": "2026-06-26T23:39:14.851615+00:00",
+      "retrieved_at": "2026-06-26T23:46:07.564267+00:00",
       "retry_count": 0,
       "snippet_redacted": "{\"service\":\"preview\",\"position\":\"before\"} { \"@context\": \"https:\\/\\/schema.org\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [ { \"@type\": \"ListItem\", \"position\": 1, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/index_en\", \"name\": \"Home\" } }, { \"@type\": \"ListItem\", \"position\": 2, \"item\": { \"@id\": \"https:\\/\\/commission.europa.eu\\/about_en\", \"name\": \"About\" } }, { \"@type\": \"ListItem\", \"position\": 3, \"item\": { \"@id\"",
       "source_domain": "commission.europa.eu",
@@ -1187,7 +1033,7 @@
       "priority": "P0",
       "relevance_score": 0.87,
       "requested_url": "https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/gthw/gtfwwrkzbz/202506/t20250610_1121013.shtml",
-      "retrieved_at": "2026-06-26T23:39:15.916774+00:00",
+      "retrieved_at": "2026-06-26T23:46:08.523582+00:00",
       "retry_count": 0,
       "snippet_redacted": "磷石膏利用和无害化贮存污染控制技术规范_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')",
       "source_domain": "mee.gov.cn",
@@ -1231,7 +1077,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://www.mee.gov.cn/",
-      "retrieved_at": "2026-06-26T23:39:18.245749+00:00",
+      "retrieved_at": "2026-06-26T23:46:10.707029+00:00",
       "retry_count": 0,
       "snippet_redacted": "中华人民共和国生态环境部 var localName = 'waterData' var localData = JSON.parse( localStorage.getItem(localName) ) || [] var limitTime = 10 // var limitTime = 1000 * 60 * 60 * 24 * 30 // 调用外部jason数据时用 // console.log(localData) // console.log(new Date().getTime() - localData.time) // console.log(limitTime) var myData var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(function(){ dataPC(); }) $(\".mobileStyle\").remove();",
       "source_domain": "mee.gov.cn",
@@ -1245,6 +1091,286 @@
       ],
       "traceability_score": 1.0,
       "url": "https://www.mee.gov.cn/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "solid_waste_disposal_receipt",
+        "pollution_control_standard",
+        "resource_utilization_product"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-phosphogypsum-standard-759c7edf8e",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 3,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/home/lxwm/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://www.mee.gov.cn/home/lxwm/",
+      "retrieved_at": "2026-06-26T23:46:11.668665+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "联系我们_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appendChild",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-phosphogypsum-standard",
+      "title": "联系我们_中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "phosphogypsum": []
+      },
+      "topics": [
+        "phosphogypsum"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/home/lxwm/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "solid_waste_disposal_receipt",
+        "pollution_control_standard",
+        "resource_utilization_product"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-phosphogypsum-standard-aa42382fa5",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 4,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/home/wzdt/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://www.mee.gov.cn/home/wzdt/",
+      "retrieved_at": "2026-06-26T23:46:12.604666+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "网站地图_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appendChild",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-phosphogypsum-standard",
+      "title": "网站地图_中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "phosphogypsum": []
+      },
+      "topics": [
+        "phosphogypsum"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/home/wzdt/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "zero_waste_city_indicator",
+        "industrial_solid_waste_policy"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-zero-waste-city-7d094b6be4",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 0,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/home/ztbd/2020/wfcsjssdgz/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8555,
+      "priority": "P0",
+      "relevance_score": 0.63,
+      "requested_url": "https://www.mee.gov.cn/home/ztbd/2020/wfcsjssdgz/",
+      "retrieved_at": "2026-06-26T23:46:13.564905+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "“无废城市”建设_中华人民共和国生态环境部 var isPC = IsPC(); //获取是否为PC端 if (isPC) { //如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_cj_pc_v2019.js') } else { //如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appen",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-zero-waste-city",
+      "title": "“无废城市”建设_中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "industrial_solid_waste": [],
+        "zero_waste_city": [
+          "无废城市"
+        ]
+      },
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/home/ztbd/2020/wfcsjssdgz/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "zero_waste_city_indicator",
+        "industrial_solid_waste_policy"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-zero-waste-city-e6fdd37acb",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 1,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://www.mee.gov.cn/",
+      "retrieved_at": "2026-06-26T23:46:14.620143+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "中华人民共和国生态环境部 var localName = 'waterData' var localData = JSON.parse( localStorage.getItem(localName) ) || [] var limitTime = 10 // var limitTime = 1000 * 60 * 60 * 24 * 30 // 调用外部jason数据时用 // console.log(localData) // console.log(new Date().getTime() - localData.time) // console.log(limitTime) var myData var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(function(){ dataPC(); }) $(\".mobileStyle\").remove();",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-zero-waste-city",
+      "title": "中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "industrial_solid_waste": [],
+        "zero_waste_city": []
+      },
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "zero_waste_city_indicator",
+        "industrial_solid_waste_policy"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-zero-waste-city-759c7edf8e",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 2,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/home/lxwm/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://www.mee.gov.cn/home/lxwm/",
+      "retrieved_at": "2026-06-26T23:46:15.566832+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "联系我们_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appendChild",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-zero-waste-city",
+      "title": "联系我们_中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "industrial_solid_waste": [],
+        "zero_waste_city": []
+      },
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/home/lxwm/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "zero_waste_city_indicator",
+        "industrial_solid_waste_policy"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-zero-waste-city-aa42382fa5",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 3,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/home/wzdt/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://www.mee.gov.cn/home/wzdt/",
+      "retrieved_at": "2026-06-26T23:46:16.458625+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "网站地图_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appendChild",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-zero-waste-city",
+      "title": "网站地图_中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "industrial_solid_waste": [],
+        "zero_waste_city": []
+      },
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/home/wzdt/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "zero_waste_city_indicator",
+        "industrial_solid_waste_policy"
+      ],
+      "candidate_id": "p9s-gsc-p0-mee-zero-waste-city-ec4a8f1b83",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 4,
+      "entrypoint_method": "target_url",
+      "final_url": "https://www.mee.gov.cn/home/wzsm/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://www.mee.gov.cn/home/wzsm/",
+      "retrieved_at": "2026-06-26T23:46:17.432318+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "网站声明_中华人民共和国生态环境部 var isPC = IsPC();//获取是否为PC端 if (isPC) {//如果是PC端加载PC的js和css $(\".mobileStyle\").remove(); dynamicLoadJs('/images/MEPC_base_pc_v2019.js') dynamicLoadJs('/images/MEPC_hzx_pc_v2019.js') } else {//如果是移动端加载移动端的js和css if(window.sessionStorage.getItem(\"isPc\")==\"true\"){ var oMeta = document.createElement('meta'); oMeta.content = ''; oMeta.name = 'viewport'; document.getElementsByTagName('head')[0].appendChild",
+      "source_domain": "mee.gov.cn",
+      "target_id": "gsc-p0-mee-zero-waste-city",
+      "title": "网站声明_中华人民共和国生态环境部",
+      "topic_keyword_hits": {
+        "industrial_solid_waste": [],
+        "zero_waste_city": []
+      },
+      "topics": [
+        "zero_waste_city",
+        "industrial_solid_waste"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://www.mee.gov.cn/home/wzsm/"
     },
     {
       "authority_score": 0.92,
@@ -1270,7 +1396,7 @@
       "priority": "P0",
       "relevance_score": 0.63,
       "requested_url": "https://www.meescc.cn/ztzl/wfcs/",
-      "retrieved_at": "2026-06-26T23:39:23.111545+00:00",
+      "retrieved_at": "2026-06-26T23:46:18.871943+00:00",
       "retry_count": 0,
       "snippet_redacted": "无废城市 a,a:link,a:visited,a:hover{ font-size:12px; } window.location.href = \"./sdjz/\"; 如果你的浏览器不支持跳转,请点击此处",
       "source_domain": "meescc.cn",
@@ -1313,7 +1439,7 @@
       "priority": "P0",
       "relevance_score": 0.63,
       "requested_url": "https://www.meescc.cn/ztzl/wfcs/sdjz/",
-      "retrieved_at": "2026-06-26T23:39:24.145433+00:00",
+      "retrieved_at": "2026-06-26T23:46:19.841233+00:00",
       "retry_count": 0,
       "snippet_redacted": "试点进展 function HTMLEncode(html) { var temp = document.createElement(\"div\"); (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html); var output = temp.innerHTML; temp = null; return output; } function HTMLDecode(text) { var temp = document.createElement(\"div\"); temp.innerHTML = text; var output = temp.innerText || temp.textContent; temp = null; return output; } function checkForm(){ $(\"#search",
       "source_domain": "meescc.cn",
@@ -1355,7 +1481,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://www.miit.gov.cn/",
-      "retrieved_at": "2026-06-26T23:39:25.783136+00:00",
+      "retrieved_at": "2026-06-26T23:46:21.629953+00:00",
       "retry_count": 0,
       "snippet_redacted": "中华人民共和国工业和信息化部 .floornew { margin-top: 42px; float: left; width: 100%; } .new-cbox-l { width: 815px; margin-right: 45px; float: left; } .floor2 { height: 90px; } .floor4{ height:404px; } .new-cbox-r { width: 32.8125%; float: left; } ul.wzbd_list li { width: 100%; height: 70px; line-height: normal; background-color: #f6f6f6; background-position: none; margin-bottom: 12px; } ul.wzbd_list li:hover { background-color: #f",
       "source_domain": "miit.gov.cn",
@@ -1395,7 +1521,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://baosong.miit.gov.cn/ScaleTest",
-      "retrieved_at": "2026-06-26T23:39:27.259761+00:00",
+      "retrieved_at": "2026-06-26T23:46:23.203436+00:00",
       "retry_count": 0,
       "snippet_redacted": "中小企业运行监测平台",
       "source_domain": "miit.gov.cn",
@@ -1418,50 +1544,10 @@
         "resource_utilization_product",
         "industrial_solid_waste_policy"
       ],
-      "candidate_id": "p9s-gsc-p0-miit-phosphogypsum-action-778212e429",
-      "candidate_only": true,
-      "content_type": "text/html",
-      "discovery_rank": 2,
-      "entrypoint_method": "target_url",
-      "final_url": "https://bzxx.miit.gov.cn/#/smallLetter",
-      "freshness_score": 0.7,
-      "http_status": 200,
-      "non_claims": [
-        "candidate_only",
-        "not_kds_canonical_written",
-        "not_gfis_source_of_record_written"
-      ],
-      "overall_score": 0.8195,
-      "priority": "P0",
-      "relevance_score": 0.55,
-      "requested_url": "https://bzxx.miit.gov.cn/qa/znzx/main",
-      "retrieved_at": "2026-06-26T23:39:30.097260+00:00",
-      "retry_count": 0,
-      "snippet_redacted": "中华人民共和国工业和信息化部 #loading-mask { display: flex; justify-content: center; align-items: center; min-height: 420px; height: 100vh; position: relative; } .loading-dot { animation: antRotate 1.2s infinite linear; transform: rotate(45deg); position: relative; display: inline-block; font-size: 22px; width: 22px; height: 22px; box-sizing: border-box } .loading-dot i { width: 9px; height: 9px; position: absolute; display: block",
-      "source_domain": "miit.gov.cn",
-      "target_id": "gsc-p0-miit-phosphogypsum-action",
-      "title": "中华人民共和国工业和信息化部",
-      "topic_keyword_hits": {
-        "industrial_solid_waste": [],
-        "phosphogypsum": []
-      },
-      "topics": [
-        "phosphogypsum",
-        "industrial_solid_waste"
-      ],
-      "traceability_score": 1.0,
-      "url": "https://bzxx.miit.gov.cn/#/smallLetter"
-    },
-    {
-      "authority_score": 0.92,
-      "business_fields": [
-        "resource_utilization_product",
-        "industrial_solid_waste_policy"
-      ],
       "candidate_id": "p9s-gsc-p0-miit-phosphogypsum-action-60a41c40e4",
       "candidate_only": true,
       "content_type": "text/html",
-      "discovery_rank": 3,
+      "discovery_rank": 2,
       "entrypoint_method": "target_url",
       "final_url": "https://safetybigdata.miit.gov.cn/sibdp-web/",
       "freshness_score": 0.7,
@@ -1475,9 +1561,9 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://safetybigdata.miit.gov.cn/sibdp-web/",
-      "retrieved_at": "2026-06-26T23:39:33.112505+00:00",
+      "retrieved_at": "2026-06-26T23:46:25.894125+00:00",
       "retry_count": 0,
-      "snippet_redacted": "安全应急产业申报系统 $(document).ready(function() { $('input, textarea').placeholder(); }); var ctx =\"/sibdp-web\" .content-wrapper{ /*min-height: 100%;*/ background-color:#f5f5f5; margin-left: auto; margin-right: auto; width: 100%; padding-top: 1px !important; } var tokenValue = '6810779672444182304'; window.csrftoken = tokenValue; var downUrl = 'http://fileback.miit.gov.cn/file/download?m='; window.downUrl = downUrl; $(docume",
+      "snippet_redacted": "安全应急产业申报系统 $(document).ready(function() { $('input, textarea').placeholder(); }); var ctx =\"/sibdp-web\" .content-wrapper{ /*min-height: 100%;*/ background-color:#f5f5f5; margin-left: auto; margin-right: auto; width: 100%; padding-top: 1px !important; } var tokenValue = '8793671799801969932'; window.csrftoken = tokenValue; var downUrl = 'http://fileback.miit.gov.cn/file/download?m='; window.downUrl = downUrl; $(docume",
       "source_domain": "miit.gov.cn",
       "target_id": "gsc-p0-miit-phosphogypsum-action",
       "title": "安全应急产业申报系统",
@@ -1501,7 +1587,7 @@
       "candidate_id": "p9s-gsc-p0-miit-phosphogypsum-action-bd427bfd1f",
       "candidate_only": true,
       "content_type": "text/html",
-      "discovery_rank": 4,
+      "discovery_rank": 3,
       "entrypoint_method": "target_url",
       "final_url": "https://std.miit.gov.cn/",
       "freshness_score": 0.7,
@@ -1515,7 +1601,7 @@
       "priority": "P0",
       "relevance_score": 0.55,
       "requested_url": "https://std.miit.gov.cn/",
-      "retrieved_at": "2026-06-26T23:39:34.297745+00:00",
+      "retrieved_at": "2026-06-26T23:46:27.204109+00:00",
       "retry_count": 0,
       "snippet_redacted": "工业和信息化标准信息服务平台 html { height: 100%; } body { margin: 0; padding: 0; height: 100%; } #app{ height: 100%; } We're sorry but vue3gch doesn't work properly without JavaScript enabled. Please enable it to continue.",
       "source_domain": "miit.gov.cn",
@@ -1531,6 +1617,46 @@
       ],
       "traceability_score": 1.0,
       "url": "https://std.miit.gov.cn/"
+    },
+    {
+      "authority_score": 0.92,
+      "business_fields": [
+        "resource_utilization_product",
+        "industrial_solid_waste_policy"
+      ],
+      "candidate_id": "p9s-gsc-p0-miit-phosphogypsum-action-3ab06fe6b4",
+      "candidate_only": true,
+      "content_type": "text/html",
+      "discovery_rank": 4,
+      "entrypoint_method": "target_url",
+      "final_url": "https://szgx.miit.gov.cn/zzyszh/",
+      "freshness_score": 0.7,
+      "http_status": 200,
+      "non_claims": [
+        "candidate_only",
+        "not_kds_canonical_written",
+        "not_gfis_source_of_record_written"
+      ],
+      "overall_score": 0.8195,
+      "priority": "P0",
+      "relevance_score": 0.55,
+      "requested_url": "https://szgx.miit.gov.cn/zzyszh/",
+      "retrieved_at": "2026-06-26T23:46:29.619564+00:00",
+      "retry_count": 0,
+      "snippet_redacted": "制造业数字化转型综合信息服务平台 html, body, #app { height: 100%; margin: 0px; padding: 0px; } .chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; } #loader-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; } #loader { display: block; position: relative; left: 50%; top: 50%; width: 150px; height: 150px; margin: -75px 0 0 -75px; border-radius: 50%; border: 3px solid t",
+      "source_domain": "miit.gov.cn",
+      "target_id": "gsc-p0-miit-phosphogypsum-action",
+      "title": "制造业数字化转型综合信息服务平台",
+      "topic_keyword_hits": {
+        "industrial_solid_waste": [],
+        "phosphogypsum": []
+      },
+      "topics": [
+        "phosphogypsum",
+        "industrial_solid_waste"
+      ],
+      "traceability_score": 1.0,
+      "url": "https://szgx.miit.gov.cn/zzyszh/"
     },
     {
       "authority_score": 0.82,
@@ -1551,18 +1677,20 @@
         "not_kds_canonical_written",
         "not_gfis_source_of_record_written"
       ],
-      "overall_score": 0.7705,
+      "overall_score": 0.8065,
       "priority": "P1",
-      "relevance_score": 0.63,
+      "relevance_score": 0.71,
       "requested_url": "https://www.ndrc.gov.cn/",
-      "retrieved_at": "2026-06-26T23:39:35.768238+00:00",
+      "retrieved_at": "2026-06-26T23:46:31.232655+00:00",
       "retry_count": 0,
       "snippet_redacted": "中华人民共和国国家发展和改革委员会 uaredirect('/wapindex/'); .fenlei ul{ margin-left: 56px; } 新闻发布 | 国家发展改革委举行6月份新闻发布会 国家发展改革委、人力资源社会保障部有关负责人就《实施就业优先战略“十五五”规划》答记者问 2026年6月18日国内成品油价格调整 署名文章丨努力开创服务业高质量发展新局面（深入学习贯彻习近平新时代中国特色社会主义思想） 中央和国家机关开展党员第四次“同上一堂课” 郑栅洁主任主持召开民营企业座谈会 围绕系统推进“六张网”建设听取意见建议 “信用数智创新发展”总观摩会在北京召开 郑栅洁主任主持召开经济形势专家座谈会 围绕当前经济形势和做好下一步经济工作听取意见建议 时政要闻 | 习近平会见柬埔寨人民党主席、参议院主席洪森 习近平会见孟加拉国总理塔里克 “在党的领导下把家园建设得越来越美”——习近平总书记在山东德州考察纪实 李强同孟加",
       "source_domain": "ndrc.gov.cn",
       "target_id": "gsc-p1-ndrc-circular-economy-solid-waste",
       "title": "中华人民共和国国家发展和改革委员会",
       "topic_keyword_hits": {
-        "industrial_solid_waste": [],
+        "industrial_solid_waste": [
+          "循环经济"
+        ],
         "phosphogypsum": [],
         "zero_waste_city": [
           "试点"
@@ -1599,7 +1727,7 @@
       "priority": "P1",
       "relevance_score": 0.55,
       "requested_url": "https://myjj.ndrc.gov.cn/",
-      "retrieved_at": "2026-06-26T23:39:37.320294+00:00",
+      "retrieved_at": "2026-06-26T23:46:32.365234+00:00",
       "retry_count": 0,
       "snippet_redacted": "民营经济发展综合服务平台 uaredirect(window.location.href ); .topsearch{ margin-top:10px; } --> 民营经济政策一点通 （试运行） --> 查 询 投资促进 减税降费 营商环境 数字化转型 债券市场 31条及配套文件 动态要闻 习近平在民营企业座谈会上强调：民营经济发展前景广阔大有可为 民营企业和民营企业... 新华社北京2月17日电 中共中央总书记、国家主席、中央军委主席习近平17日上午在京出席民营企业座谈会并发表重要讲话。他强调... 2025/02/17 促进民营经济健康发展、高质量发展 党中央召开这次座谈会，目的是听听民营企业家心声，同大家深入交流，统一思想、坚定信心，进一步推动解决民营经济发展面临的... 2025/08/18 郑栅洁主任主持召开民营企业座谈会 围绕系统推进“六张网”建设听取意见建议 6月16日上午，国家发展改革委主任郑栅洁主持召开座谈会",
       "source_domain": "ndrc.gov.cn",
@@ -1623,38 +1751,6 @@
   "date": "2026-06-26",
   "execution_requested": true,
   "fetch_errors": [
-    {
-      "critical": false,
-      "discovery_rank": 1,
-      "error_type": "ValueError",
-      "message": "content_type_not_allowed:image/x-icon",
-      "target_id": "gsc-p0-greenscs",
-      "url": "https://www.greenscs.com/favicon.ico"
-    },
-    {
-      "critical": false,
-      "discovery_rank": 2,
-      "error_type": "ValueError",
-      "message": "content_type_not_allowed:text/css",
-      "target_id": "gsc-p0-greenscs",
-      "url": "https://www.greenscs.com/static/css/app.0eab7c37.css"
-    },
-    {
-      "critical": false,
-      "discovery_rank": 3,
-      "error_type": "ValueError",
-      "message": "content_type_not_allowed:text/css",
-      "target_id": "gsc-p0-greenscs",
-      "url": "https://www.greenscs.com/static/css/chunk-00970cdc.b636500b.css"
-    },
-    {
-      "critical": false,
-      "discovery_rank": 4,
-      "error_type": "ValueError",
-      "message": "content_type_not_allowed:text/css",
-      "target_id": "gsc-p0-greenscs",
-      "url": "https://www.greenscs.com/static/css/chunk-00c9986c.66e6406e.css"
-    },
     {
       "critical": true,
       "discovery_rank": 0,
@@ -1681,64 +1777,40 @@
     },
     {
       "critical": false,
-      "discovery_rank": 3,
-      "error_type": "IncompleteRead",
-      "message": "IncompleteRead(0 bytes read)",
-      "target_id": "gsc-p0-mee-phosphogypsum-standard",
-      "url": "https://www.mee.gov.cn/home/lxwm/"
-    },
-    {
-      "critical": false,
-      "discovery_rank": 4,
-      "error_type": "IncompleteRead",
-      "message": "IncompleteRead(15601 bytes read)",
-      "target_id": "gsc-p0-mee-phosphogypsum-standard",
-      "url": "https://www.mee.gov.cn/home/wzdt/"
-    },
-    {
-      "critical": true,
-      "discovery_rank": 0,
-      "error_type": "IncompleteRead",
-      "message": "IncompleteRead(29445 bytes read)",
-      "target_id": "gsc-p0-mee-zero-waste-city",
-      "url": "https://www.mee.gov.cn/home/ztbd/2020/wfcsjssdgz/"
-    },
-    {
-      "critical": false,
       "discovery_rank": 2,
-      "error_type": "http_error",
-      "message": "502 Bad Gateway",
+      "error_type": "target_response_rejected",
+      "message": "final_url_login_path",
       "target_id": "gsc-p1-ndrc-circular-economy-solid-waste",
       "url": "https://quyukaifang.ndrc.gov.cn/ydyl/sso/login?display=true"
     },
     {
       "critical": false,
       "discovery_rank": 3,
-      "error_type": "RemoteDisconnected",
-      "message": "Remote end closed connection without response",
+      "error_type": "http_error",
+      "message": "403 Forbidden",
       "target_id": "gsc-p1-ndrc-circular-economy-solid-waste",
       "url": "https://services.ndrc.gov.cn/ecdomain/portal/portlets/bjweb/newpage/firstpage/firstpage.jsp"
     },
     {
       "critical": false,
       "discovery_rank": 4,
-      "error_type": "RemoteDisconnected",
-      "message": "Remote end closed connection without response",
+      "error_type": "http_error",
+      "message": "403 Forbidden",
       "target_id": "gsc-p1-ndrc-circular-economy-solid-waste",
       "url": "https://services.ndrc.gov.cn/ecdomain/portal/portlets/bjweb/newpage/itemlist/hotQuestionDetail.jsp?keyword="
     }
   ],
   "hit_rate_report": {
-    "candidate_count": 41,
-    "critical_fetch_error_count": 2,
-    "fetch_error_count": 13,
-    "noncritical_fetch_error_count": 11,
+    "candidate_count": 44,
+    "critical_fetch_error_count": 1,
+    "fetch_error_count": 6,
+    "noncritical_fetch_error_count": 5,
     "threshold_pass": false,
-    "topic_coverage": 0.75,
+    "topic_coverage": 1.0,
     "topic_reports": {
       "green_supply_chain": {
-        "candidate_count": 30,
-        "keyword_hit_candidate_count": 2,
+        "candidate_count": 26,
+        "keyword_hit_candidate_count": 1,
         "p0_domain_hit_count": 4,
         "target_count": 8,
         "target_coverage": 0.875,
@@ -1746,16 +1818,16 @@
         "total_domain_hit_count": 7
       },
       "industrial_solid_waste": {
-        "candidate_count": 14,
-        "keyword_hit_candidate_count": 0,
-        "p0_domain_hit_count": 2,
+        "candidate_count": 19,
+        "keyword_hit_candidate_count": 1,
+        "p0_domain_hit_count": 3,
         "target_count": 5,
-        "target_coverage": 0.8,
-        "threshold_pass": false,
-        "total_domain_hit_count": 3
+        "target_coverage": 1.0,
+        "threshold_pass": true,
+        "total_domain_hit_count": 4
       },
       "phosphogypsum": {
-        "candidate_count": 9,
+        "candidate_count": 11,
         "keyword_hit_candidate_count": 1,
         "p0_domain_hit_count": 2,
         "target_count": 3,
@@ -1764,13 +1836,13 @@
         "total_domain_hit_count": 3
       },
       "zero_waste_city": {
-        "candidate_count": 4,
-        "keyword_hit_candidate_count": 2,
-        "p0_domain_hit_count": 1,
+        "candidate_count": 9,
+        "keyword_hit_candidate_count": 3,
+        "p0_domain_hit_count": 2,
         "target_count": 3,
-        "target_coverage": 0.6667,
+        "target_coverage": 1.0,
         "threshold_pass": true,
-        "total_domain_hit_count": 2
+        "total_domain_hit_count": 3
       }
     }
   },

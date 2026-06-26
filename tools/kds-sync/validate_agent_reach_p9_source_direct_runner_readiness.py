@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import importlib.util
+import http.client
 import json
 import tempfile
 import urllib.error
@@ -116,6 +117,22 @@ def build_report() -> dict[str, Any]:
     )
     if "https://www.miit.gov.cn/jgsj/jns/wjfb/art/solid-waste.html" not in sitemap_discovered:
         fail("sitemap_discovery_missing")
+    asset_filtered = runner.discover_urls(
+        {"domain": "greenscs.com", "topics": ["green_supply_chain"]},
+        "https://www.greenscs.com/",
+        """
+        <html>
+          <a href="/favicon.ico">favicon</a>
+          <a href="/static/app.css">css</a>
+          <a href="/green-supply-chain.html">绿色供应链</a>
+        </html>
+        """,
+        limit=5,
+    )
+    if any(url.endswith((".ico", ".css")) for url in asset_filtered):
+        fail("static_asset_discovery_not_filtered")
+    if "https://www.greenscs.com/green-supply-chain.html" not in asset_filtered:
+        fail("static_asset_filter_removed_valid_page")
     if runner.reject_final_url({"domain": "mee.gov.cn"}, "https://example.com/login") != "final_url_domain_mismatch:example.com":
         fail("cross_domain_redirect_rejection_missing")
     if runner.reject_final_url({"domain": "mee.gov.cn"}, "https://www.mee.gov.cn/user/login") != "final_url_login_path":
@@ -142,6 +159,38 @@ def build_report() -> dict[str, Any]:
         runner.fetch_url = original_fetch_url
     if retry_count != 1 or retry_state["count"] != 2:
         fail("transient_retry_self_test_failed")
+    original_urlopen = runner.urllib.request.urlopen
+
+    class PartialResponse:
+        status = 200
+        headers = type(
+            "Headers",
+            (),
+            {
+                "get_content_type": lambda self: "text/html",
+                "get_content_charset": lambda self: "utf-8",
+            },
+        )()
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def read(self, _limit: int):
+            raise http.client.IncompleteRead("<html><title>工业固废</title><body>固体废物 资源综合利用</body></html>".encode("utf-8"))
+
+        def geturl(self):
+            return "https://www.miit.gov.cn/solid-waste.html"
+
+    runner.urllib.request.urlopen = lambda *_args, **_kwargs: PartialResponse()
+    try:
+        _status, partial_title, partial_body, _raw, _final_url, _content_type = runner.fetch_url("https://www.miit.gov.cn/solid-waste.html")
+    finally:
+        runner.urllib.request.urlopen = original_urlopen
+    if "工业固废" not in partial_title or "资源综合利用" not in partial_body:
+        fail("incomplete_read_partial_not_parsed")
     return {
         "id": "agent-reach-p9-source-direct-runner-readiness-20260626",
         "date": "2026-06-26",
@@ -159,6 +208,8 @@ def build_report() -> dict[str, Any]:
         "source_direct_redirect_guard_enabled": True,
         "source_direct_login_guard_enabled": True,
         "source_direct_content_type_guard_enabled": True,
+        "source_direct_static_asset_filter_enabled": True,
+        "source_direct_incomplete_read_partial_enabled": True,
         "source_direct_transient_retry_enabled": True,
         "source_direct_max_transient_retry_count": runner.MAX_TRANSIENT_RETRY_COUNT,
         "source_direct_max_pages_per_entrypoint": 5,

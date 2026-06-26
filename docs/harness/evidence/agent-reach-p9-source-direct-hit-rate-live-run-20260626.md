@@ -23,9 +23,9 @@ superseded_by: []
 - execution_requested: `True`
 - live_external_fetch_invoked: `True`
 - planned_target_count: `13`
-- candidate_count: `41`
-- fetch_error_count: `13`
-- topic_coverage: `0.75`
+- candidate_count: `44`
+- fetch_error_count: `6`
+- topic_coverage: `1.0`
 - threshold_pass: `False`
 
 ## 非声明

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-RUNNER-READINESS-20260626
 title: Agent-Reach P9S Source Direct Runner Readiness 2026-06-26
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAS, WAES, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
