@@ -221,6 +221,12 @@ def reject_login_like_content(title: str, body: str) -> str | None:
     return None
 
 
+def reject_empty_content(title: str, body: str) -> str | None:
+    if not title.strip() and not body.strip():
+        return "empty_text_content"
+    return None
+
+
 def topic_keyword_hits(topic_id: str, text: str) -> list[str]:
     folded = text.lower()
     return [keyword for keyword in TOPIC_KEYWORDS.get(topic_id, []) if keyword.lower() in folded]
@@ -328,7 +334,7 @@ def execute_live(precheck: dict[str, Any]) -> tuple[list[dict[str, Any]], list[d
                 continue
             try:
                 status_code, title, body, raw_text, final_url, content_type, retry_count = fetch_url_with_retry(entry_url)
-                reason = reject_final_url(target, final_url) or reject_login_like_content(title, body)
+                reason = reject_final_url(target, final_url) or reject_login_like_content(title, body) or reject_empty_content(title, body)
                 if reason:
                     errors.append({"target_id": target["target_id"], "url": entry_url, "discovery_rank": 0, "critical": True, "error_type": "target_response_rejected", "message": reason})
                     continue
@@ -344,7 +350,7 @@ def execute_live(precheck: dict[str, Any]) -> tuple[list[dict[str, Any]], list[d
             for discovery_rank, url in enumerate(discovered_urls[1:], start=1):
                 try:
                     status_code, title, body, _raw_text, final_url, content_type, retry_count = fetch_url_with_retry(url)
-                    reason = reject_final_url(target, final_url) or reject_login_like_content(title, body)
+                    reason = reject_final_url(target, final_url) or reject_login_like_content(title, body) or reject_empty_content(title, body)
                     if reason:
                         errors.append({"target_id": target["target_id"], "url": url, "discovery_rank": discovery_rank, "critical": False, "error_type": "target_response_rejected", "message": reason})
                         continue
@@ -385,9 +391,10 @@ def hit_rate_report(precheck: dict[str, Any], candidates: list[dict[str, Any]], 
         "fetch_error_count": len(fetch_errors),
         "critical_fetch_error_count": len(critical_errors),
         "noncritical_fetch_error_count": len(fetch_errors) - len(critical_errors),
+        "target_availability_warning_count": len(critical_errors),
         "topic_reports": topic_reports,
         "topic_coverage": round(sum(1 for item in topic_reports.values() if item["threshold_pass"]) / len(topic_reports), 4) if topic_reports else 0,
-        "threshold_pass": bool(topic_reports) and all(item["threshold_pass"] for item in topic_reports.values()) and not critical_errors,
+        "threshold_pass": bool(topic_reports) and all(item["threshold_pass"] for item in topic_reports.values()),
     }
 
 

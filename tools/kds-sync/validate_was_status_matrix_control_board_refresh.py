@@ -17,6 +17,8 @@ STATUS_MATRIX = ROOT / "09-status/gpcf-project-status-matrix.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
 PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+HISTORICAL_STATUS_MATRIX_VERSION = "v5.72"
+CURRENT_STATUS_MATRIX_VERSION = "v5.75"
 REQUIRED_MARKERS = [
     "was_project_group_ontology_registry=pass",
     "was_loop_context_coverage_refresh=pass",
@@ -72,7 +74,7 @@ def validate_fixture(value: dict[str, Any]) -> list[str]:
     failures: list[str] = []
     if value.get("control_board_round") != "GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001":
         failures.append("control_board_round_mismatch")
-    if value.get("status_matrix_version") != "v5.72":
+    if value.get("status_matrix_version") != HISTORICAL_STATUS_MATRIX_VERSION:
         failures.append("status_matrix_version_mismatch")
     if value.get("project_group_scope_count") != 14:
         failures.append("project_group_scope_count_mismatch")
@@ -112,9 +114,11 @@ def main() -> int:
         require(marker in control_board, f"control board missing marker: {marker}")
         require(marker in status_matrix, f"status matrix missing marker: {marker}")
     require("当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`" in control_board, "control board current round not refreshed to monitor 100")
-    require("状态：v5.72" in status_matrix, "status matrix version not refreshed")
-    require("WAS-Ontology monitor 100 已完成" in status_matrix, "status matrix summary not refreshed")
+    require(f"状态：{CURRENT_STATUS_MATRIX_VERSION}" in status_matrix, "status matrix version not refreshed")
+    require("项目群状态矩阵补齐为 17 项目口径" in status_matrix, "status matrix current 17-project scope missing")
+    require("WAS-Ontology monitor 100 仍保持 hold" in status_matrix, "status matrix summary not refreshed")
     require("was_real_source_record_monitor_100=pass" in control_board, "control board summary not refreshed")
+    require("GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001" in control_board, "control board current 17-project scope missing")
     require("下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`" in control_board, "control board next round missing")
     require("GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101" in status_matrix, "status matrix next round missing")
 
@@ -149,7 +153,8 @@ def main() -> int:
 
     print(
         "was_status_matrix_control_board_refresh=pass "
-        "project_group_scope=14/14 refreshed_documents=2 positive_fixtures=1 negative_fixtures=3 "
+        f"project_group_scope=14/14 current_status_matrix={CURRENT_STATUS_MATRIX_VERSION} "
+        "refreshed_documents=2 positive_fixtures=1 negative_fixtures=3 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101"

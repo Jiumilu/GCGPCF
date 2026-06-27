@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626
 title: GlobalCloud 项目群授权项执行前命令包 2026-06-26
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md
 source_path: docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -30,6 +30,8 @@ superseded_by: []
 | receipt_record_count | `0` |
 | authorization_granted_count | `0` |
 | action_executed_count | `0` |
+| review_boundary_repo_count | `6` |
+| noise_cleanup_repo_count | `1` |
 | review_allowed | `false` |
 | stage_allowed | `false` |
 | commit_allowed | `false` |
@@ -40,7 +42,26 @@ superseded_by: []
 | production_ready | `false` |
 | customer_accepted | `false` |
 
+当前授权项执行前命令包还必须继续服从：
+
+```text
+review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP
+noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
+```
+
 本文只把 7 个授权项绑定到执行前命令、证据、门禁和回滚边界。它不代表任何用户授权已经发生，也不执行任何项目动作。
+
+当前授权项执行前命令包与以下两份证据保持一致：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
+当前必须保持：
+
+```text
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
+```
 
 ## 2. 执行前命令包
 
@@ -53,6 +74,26 @@ superseded_by: []
 | `AUTH-GPCF-GOVERNANCE-REVIEW-20260626` | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF` | 仅允许进入 GPCF governance/KDS local mirror review，不等于真实 KDS API 同步 | `python3 tools/kds-sync/validate_project_group_real_execution_governance_board.py`、`python3 tools/kds-sync/validate_core_chain_real_evidence_register.py`、`python3 tools/kds-sync/loop_document_gate.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_ledger_20260626.py` | `docs/harness/evidence/gpcf-governance-review-receipt-*.md` | GPCF governance gate、Loop document gate、receipt ledger gate | 任一命令失败保持 `execution_authorization_receipt_ledger_ready`，不 stage/commit/push | 不声明真实 KDS API 已同步、不声明项目群可提交 |
 | `AUTH-KDS-OWNER-DECISION-20260626` | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS` | 仅允许登记业务 owner 与 KDS owner 决策，不自动纳入资金报告或 sync-run | `git status --short --untracked-files=all`、`git diff --name-status`、`python3 tools/kds-sync/validate_kds_brain_report_hold_review.py`、KDS TOKEN gate | `docs/harness/KDS/evidence/kds-owner-decision-receipt-*.md` | KDS evidence gate、KDS TOKEN gate、owner review gate、receipt ledger gate | 未确认保持 `owner_review_required`，不执行真实 KDS API 同步 | 不声明资金追踪报告已业务确认、不声明 Brain/WAES 已消费 |
 | `AUTH-SOP-OWNER-DECISION-20260626` | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SOP` | 仅允许登记 scenario owner 决策，不自动入 KDS 或对外交付 | `python3 scripts/validate_sop_assets.py`、`python3 scripts/run_smoke_test.py`、`python3 tools/kds-sync/validate_sop_scenario_owner_review.py` | `docs/harness/SOP/evidence/sop-owner-decision-receipt-*.md` | SOP owner review gate、asset/smoke gate、receipt ledger gate | 未确认保持 `owner_review_required` 或 `hold_scenario_output`，不发布对外 PDF | 不声明场景方案已确认、不声明 KDS 事实主存已入库 |
+
+## 2.1 A 项 WAS 单仓核对卡
+
+```text
+1. repo_path 只限 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系
+2. scope 只限 .DS_Store；不扩大到任何业务文件
+3. compact_dirty_count = 1 / compact_untracked_count = 0 / raw_expanded_status_lines = 1
+4. 必跑 git status --short --untracked-files=all
+5. 必跑 git diff --check
+6. 必跑 python3 tools/kds-sync/check_document_pollution.py
+7. 必跑 python3 tools/kds-sync/loop_document_gate.py
+8. 只允许写入 execution authorization receipt ledger 对应 receipt
+```
+
+## 2.2 A 项复核 / 状态传导复用入口
+
+```text
+单仓复核 -> docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.1 A 项单仓核对卡
+状态传导 -> docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.2 A 项确认后状态传导摘要
+```
 
 ## 3. 通用执行顺序
 
@@ -72,6 +113,8 @@ command_pack_count=7
 receipt_record_count=0
 authorization_granted_count=0
 action_executed_count=0
+review_boundary_repo_count=6
+noise_cleanup_repo_count=1
 review_allowed=false
 stage_allowed=false
 commit_allowed=false

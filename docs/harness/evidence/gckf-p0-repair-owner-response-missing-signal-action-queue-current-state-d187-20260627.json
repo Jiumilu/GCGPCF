@@ -1,0 +1,36 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-MISSING-SIGNAL-ACTION-QUEUE-CURRENT-STATE-D187-20260627",
+  "roundId": "GPCF-GCKF-P0-D187-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.json",
+  "actionQueueStatus": "missing_signal_action_queue_with_hold",
+  "actionQueueSummary": {
+    "queueItems": 4,
+    "readyForExecution": 0,
+    "executedActions": 0,
+    "blockedByExternalInput": 4
+  },
+  "stateBoundary": {
+    "maximumState": "review_ready_with_hold",
+    "holdRequired": true,
+    "actualRepairOwnerResponseReceived": false,
+    "responseIntakeAllowed": false,
+    "businessCompletionClaimed": false,
+    "kdsApiWriteExecuted": false,
+    "runtimeWritebackExecuted": false
+  },
+  "gateAssertions": {
+    "actionQueueIsActualResponse": false,
+    "externalNotificationSent": false,
+    "responseIntakeAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "kdsApiWriteExecuted": false,
+    "lifecyclePromotionAllowed": false,
+    "acceptedOrIntegratedAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "nextRoundCandidate": "若任一 action item 收到真实外部输入，应先回到 arrival scan；四项全部满足后再进入 response intake precheck。"
+}

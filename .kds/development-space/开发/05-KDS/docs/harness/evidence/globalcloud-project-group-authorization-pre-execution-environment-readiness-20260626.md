@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626
 title: GlobalCloud 项目群授权项执行前环境就绪检查 2026-06-26
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-environment-readiness-20260626.md
 source_path: docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-environment-readiness-20260626.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -38,12 +38,35 @@ superseded_by: []
 | receipt_record_count | `0` |
 | authorization_granted_count | `0` |
 | action_executed_count | `0` |
+| review_boundary_repo_count | `6` |
+| noise_cleanup_repo_count | `1` |
+| review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` |
+| noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)` |
 | accepted | `false` |
 | integrated | `false` |
 | production_ready | `false` |
 | customer_accepted | `false` |
 
 本文只做只读环境就绪检查，确认授权项执行前命令包引用的仓库路径、package scripts、目标脚本和 GPCF 总控校验器真实存在。本文不执行命令包，不登记授权，不 review、delete、stage、commit、push、merge、deploy、release 或同步真实 KDS API。
+
+当前授权项执行前环境就绪检查与以下两份证据保持一致：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
+当前必须保持：
+
+```text
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
+```
+
+当前单仓复核锚点：
+
+```text
+WAS -> docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要
+KDS -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要
+```
 
 ## 2. 仓库路径检查
 
@@ -103,6 +126,8 @@ command_execution_allowed=false
 receipt_record_count=0
 authorization_granted_count=0
 action_executed_count=0
+review_boundary_repo_count=6
+noise_cleanup_repo_count=1
 accepted=false
 integrated=false
 production_ready=false

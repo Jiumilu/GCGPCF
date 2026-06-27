@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
 domain: architecture
 status: controlled
 version: v1.0
@@ -40,6 +40,8 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 - `09-status/globalcloud-project-master-plan-control-register.md`
 - `09-status/globalcloud-project-implementation-control-register.md`
 - `09-status/globalcloud-core-chain-real-evidence-register.md`
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
 - `02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md`
 - `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`
 - `04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md`
@@ -98,6 +100,23 @@ Agent、脚本或自动化不得自动声明 `customer_accepted`、`accepted`、
 
 项目实施状态由 `09-status/globalcloud-project-implementation-control-register.md` 统一登记。每个项目实施方案必须列出当前真实状态、当前里程碑、阻塞项、证据索引和下一步动作。
 
+项目群当前 live 基线与开发态入口口径由以下两份证据控制：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
+当前必须保持：
+
+```text
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
+dirty_repo_count = 7
+trigger_layer_binding_count = 17
+dependency_edge_binding_count = 17
+```
+
+若项目级实施方案、状态矩阵、真实执行治理总控板与上述两份证据冲突，以当前状态刷新证据、开发态任务队列和总控板为准，并触发回写。
+
 ## 6. 真实研发管理
 
 真实研发必须有代码、配置、脚本、测试或工程证据。文档更新不能单独声明研发完成。
@@ -116,6 +135,23 @@ Agent、脚本或自动化不得自动声明 `customer_accepted`、`accepted`、
 真实运行必须有环境、启动命令、健康检查、日志、依赖服务和最近一次运行证据。页面存在、README 存在或 mock 成功都不能替代真实运行。
 
 每个项目实施方案必须列出运行环境、启动命令、健康检查方式、日志位置、依赖服务和运行失败处理。
+
+运行、集成、交付和客户验收的当前前置控制统一以以下两份证据为准：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
+当前必须保持：
+
+```text
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
+dirty_repo_count = 7
+trigger_layer_binding_count = 17
+dependency_edge_binding_count = 17
+```
+
+在上述前置控制未变化前，不得把任何运行、集成、交付或客户验收候选直接解释为真实完成。
 
 ## 8. 真实集成管理
 

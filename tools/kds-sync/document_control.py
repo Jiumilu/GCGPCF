@@ -35,6 +35,89 @@ PROJECTS = {
     "Studio": ("13-Studio", ["Studio", "GlobalCloud Studio", "Hermes", "Agent 工作台"]),
 }
 
+WAS_ONTOLOGY_GOVERNANCE_DOCS = {
+    "docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md",
+    "docs/harness/evidence/was-real-source-record-monitor-100-20260623.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001.md",
+    "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100.md",
+}
+
+WAS_ONTOLOGY_PROJECT_GROUP = [
+    "GFIS",
+    "GPC",
+    "PVAOS",
+    "WAES",
+    "KDS",
+    "Brain",
+    "PKC",
+    "XiaoC",
+    "XGD",
+    "XiaoG",
+    "MMC",
+    "GPCF",
+    "Studio",
+    "WAS",
+]
+
+PROJECT_GROUP_REAL_EXECUTION_CORE_DOCS = {
+    "docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md",
+    "docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md",
+    "docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-execution-receipt-pre-execution-bridge-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md",
+    "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+    "09-status/gpcf-project-status-matrix.md",
+    "09-status/globalcloud-document-health-report.md",
+    "09-status/globalcloud-project-group-real-execution-governance-board.md",
+    "02-governance/loop/LOOP_CONTROL_BOARD.md",
+    "09-status/project-group-master-plan-governance-status-report.md",
+    "02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md",
+    "09-status/globalcloud-project-implementation-control-register.md",
+}
+
+PROJECT_GROUP_FULL_SCOPE = [
+    "AAAS",
+    "Brain",
+    "WAS",
+    "XiaoC",
+    "WAES",
+    "GPC",
+    "Studio",
+    "GPCF",
+    "XWAIL",
+    "GFIS",
+    "MMC",
+    "KDS",
+    "XiaoG",
+    "PVAOS",
+    "SOP",
+    "PKC",
+    "XGD",
+]
+
 DOMAIN_BY_TOP = {
     "00-index": "index",
     "01-architecture": "architecture",
@@ -149,6 +232,8 @@ def top_dir(source_path: str) -> str:
 
 
 def domain_for(source_path: str) -> str:
+    if source_path in WAS_ONTOLOGY_GOVERNANCE_DOCS:
+        return "ontology-governance"
     if source_path == PROJECT_GROUP_IMPLEMENTATION_PLAN:
         return "architecture"
     if source_path.startswith(".okf/"):
@@ -183,8 +268,25 @@ def frontmatter_managed_for(source_path: str) -> bool:
 
 
 def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]]:
+    if source_path in WAS_ONTOLOGY_GOVERNANCE_DOCS:
+        primary = "GPCF" if source_path.startswith("docs/harness/loops/") else "KDS"
+        return primary, WAS_ONTOLOGY_PROJECT_GROUP
     if source_path == PROJECT_GROUP_IMPLEMENTATION_PLAN:
-        return "GPCF", ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio"]
+        return "GPCF", PROJECT_GROUP_FULL_SCOPE
+    if source_path in PROJECT_GROUP_REAL_EXECUTION_CORE_DOCS:
+        if source_path.startswith("02-governance/loop/"):
+            return "WAES", PROJECT_GROUP_FULL_SCOPE
+        if source_path.startswith("02-governance/"):
+            return "WAES", PROJECT_GROUP_FULL_SCOPE
+        if source_path.startswith("09-status/"):
+            return "GPCF", PROJECT_GROUP_FULL_SCOPE
+        haystack = f"{source_path}\n{title}\n{text[:5000]}"
+        hits: list[str] = []
+        for project, (_, keys) in PROJECTS.items():
+            if any(key in haystack for key in keys):
+                hits.append(project)
+        primary = hits[0] if hits else "GPCF"
+        return primary, PROJECT_GROUP_FULL_SCOPE
     if source_path in {
         "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
         "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md",

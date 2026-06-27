@@ -36,6 +36,8 @@ REQUIRED_LEDGER_TOKENS = [
     "authorization_granted_count | `0`",
     "action_executed_count | `0`",
     "pending_authorization_items | `7`",
+    "review_boundary_repo_count | `6`",
+    "noise_cleanup_repo_count | `1`",
     "review_allowed | `false`",
     "stage_allowed | `false`",
     "commit_allowed | `false`",
@@ -45,10 +47,22 @@ REQUIRED_LEDGER_TOKENS = [
     "integrated | `false`",
     "production_ready | `false`",
     "customer_accepted | `false`",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
+    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
+    "A 项 WAS 落账回放摘要",
+    "A/B 单仓复核 / 状态传导复用入口",
+    "4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要",
+    "5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要",
+    "authorized_action = noise_cleanup_decision_registration_only",
+    "receipt_status_before = pending_confirmation",
     "receipt_record_count=0",
     "authorization_granted_count=0",
     "action_executed_count=0",
     "pending_authorization_items=7",
+    "review_boundary_repo_count=6",
+    "noise_cleanup_repo_count=1",
 ]
 
 REQUIRED_GOVERNANCE_TOKENS = [
@@ -57,6 +71,8 @@ REQUIRED_GOVERNANCE_TOKENS = [
     "validate_project_group_execution_authorization_receipt_ledger_20260626.py",
     "project_group_execution_authorization_receipt_ledger_20260626 = controlled",
     "execution_authorization_receipt_ledger_ready",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
 ]
 
 FORBIDDEN_TOKENS = [
@@ -118,8 +134,6 @@ def main() -> int:
         if auth_id not in ledger_text:
             failures.append(f"ledger missing auth id: {auth_id}")
 
-    if ledger_text.count("pending_confirmation") != len(AUTH_IDS):
-        failures.append("ledger must keep all 7 auth rows as pending_confirmation")
     if ledger_text.count("| `none` | `pending_confirmation` | `false` | `false` |") != len(AUTH_IDS):
         failures.append("ledger auth rows must have none receipt_id, pending status, and false authorization/action")
 

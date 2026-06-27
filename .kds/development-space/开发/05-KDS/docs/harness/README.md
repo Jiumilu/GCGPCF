@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/README.md
 source_path: docs/harness/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -213,6 +213,8 @@ KDS 空间：`开发`
 | GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-CLOSURE-RUNNER-READINESS-20260626 | Agent-Reach P9S Source Direct Live Closure Runner Readiness 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-closure-runner-readiness-20260626.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-EXECUTION-COMMAND-PACK-20260626 | Agent-Reach P9S Source Direct Live Execution Command Pack 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-execution-command-pack-20260626.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-EXECUTION-READINESS-CLOSURE-20260626 | Agent-Reach P9S Source Direct Live Execution Readiness Closure 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-live-execution-readiness-closure-20260626.md | KDS | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-RESULT-CLASSIFICATION-20260627 | Agent-Reach P9S Source Direct Live Result Classification 2026-06-27 | docs/harness/evidence/agent-reach-p9-source-direct-live-result-classification-20260627.md | KDS | controlled |
+| GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-REWORK-CLASSIFICATION-20260627 | Agent-Reach P9S Source Direct Live Rework Classification 2026-06-27 | docs/harness/evidence/agent-reach-p9-source-direct-live-rework-classification-20260627.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-MARKDOWN-DRIFT-MONITOR-20260626 | Agent-Reach P9S Source Direct Markdown Drift Monitor 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-markdown-drift-monitor-20260626.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-OFFLINE-HIT-RATE-SIMULATION-20260626 | Agent-Reach P9S Source Direct Offline Hit-Rate Simulation 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-offline-hit-rate-simulation-20260626.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-OUTPUT-QUALITY-GATE-20260626 | Agent-Reach P9S Source Direct 输出质量门禁 2026-06-26 | docs/harness/evidence/agent-reach-p9-source-direct-output-quality-gate-20260626.md | KDS | controlled |
@@ -383,11 +385,17 @@ KDS 空间：`开发`
 | GPCF-DOC-GCKFP0HARNESSEVIDENCECANDIDATECURRENTSTATED12620260622 | GCKF P0 Harness evidence 候选记录当前态证据 D126 | docs/harness/evidence/gckf-p0-harness-evidence-candidate-current-state-d126-20260622.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0HARNESSGOVERNANCEREVIEWDECISIONINTAKECURRENTSTATED12920260622 | GCKF P0 Harness 治理审阅决策接收当前态证据 D129 | docs/harness/evidence/gckf-p0-harness-governance-review-decision-intake-current-state-d129-20260622.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0HARNESSREVIEWINPUTCURRENTSTATED12520260622 | GCKF P0 Harness 审查输入包当前态证据 D125 | docs/harness/evidence/gckf-p0-harness-review-input-current-state-d125-20260622.md | GPCF | controlled |
+| GPCF-DOC-GCKFP0NOWRITECONTINUITYD18920260627 | GCKF P0 No-write 连续性门禁当前态 D189 | docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.md | GPCF | controlled |
+| GPCF-DOC-GCKFP0RESPONSEARRIVALSCAND18620260627 | GCKF P0 修复负责人响应到达扫描当前态 D186 | docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.md | GPCF | controlled |
+| GPCF-DOC-GCKFP0RESPONSEAUTHBOUNDARYD18820260627 | GCKF P0 修复负责人响应授权边界预检查当前态 D188 | docs/harness/evidence/gckf-p0-repair-owner-response-authorization-boundary-precheck-current-state-d188-20260627.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0REPAIROWNERRESPONSECHECKLISTD18320260626 | GCKF P0 修复负责人响应收集清单当前态 D183 | docs/harness/evidence/gckf-p0-repair-owner-response-collection-checklist-current-state-d183-20260626.md | GPCF | controlled |
+| GPCF-DOC-GCKFP0RESPONSESIGNALACTIOND18720260627 | GCKF P0 修复负责人响应缺失信号补齐队列当前态 D187 | docs/harness/evidence/gckf-p0-repair-owner-response-missing-signal-action-queue-current-state-d187-20260627.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0REPAIROWNERRESPONSENEGFIXD18420260626 | GCKF P0 修复负责人响应负例门禁当前态 D184 | docs/harness/evidence/gckf-p0-repair-owner-response-negative-fixtures-current-state-d184-20260626.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0REPAIROWNERRESPONSEREQUIREMENTPRECHECKD18220260626 | GCKF P0 修复负责人响应要求预检当前态 D182 | docs/harness/evidence/gckf-p0-repair-owner-response-requirement-precheck-current-state-d182-20260626.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0REPAIRPATHWORKPACKCURRENTSTATED12820260622 | GCKF P0 Repair Path Workpack 当前态证据 D128 | docs/harness/evidence/gckf-p0-repair-path-workpack-current-state-d128-20260622.md | GPCF | controlled |
+| GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627 | GCKF P0 会话主线接管当前态 D185 | docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | KDS | controlled |
+| GPCF-DOC-GCKFP0STOPRESUMED19020260627 | GCKF P0 停止条件与恢复触发器当前态 D190 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | GPCF | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS 负责人回执任务台账 | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | KDS | controlled |
 | GPCF-DOC-7607A76253 | GFIS 来源记录负责人请求包 | docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md | GPCF | controlled |
 | GPCF-DOC-825C3B3AC5 | GFIS WAS Profile Runtime Gate Mapping Evidence | docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md | GPCF | controlled |
@@ -397,32 +405,44 @@ KDS 空间：`开发`
 | GPCF-DOC-3674F84C97 | GFIS WAS Source Record Submission Precheck Evidence | docs/harness/evidence/gfis-was-source-record-submission-precheck-20260621.md | GPCF | controlled |
 | GPCF-DOC-89DF4CBBFA | git-risk-classification-20260617 | docs/harness/evidence/git-risk-classification-20260617.md | GPCF | controlled |
 | GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626 | GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26 | docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md | KDS | controlled |
+| GPCF-DOC-AUTHORIZATION-LAYER-MATRIX-20260627 | GlobalCloud 项目群开发过程授权层级矩阵 2026-06-27 | docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md | GFIS | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群授权项执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群授权项执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-environment-readiness-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-ROUTING-20260625 | GlobalCloud 项目群授权路由证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626 | GlobalCloud 项目群当前真实状态基线刷新 2026-06-26 | docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-DEPENDENCY-EXECUTION-MATRIX-20260625 | GlobalCloud 项目群依赖执行矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-ROUTING-20260625 | GlobalCloud 项目群授权路由证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群授权到执行前总桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626 | GlobalCloud 项目群当前真实状态基线刷新 2026-06-26 | docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-DEPENDENCY-EXECUTION-MATRIX-20260625 | GlobalCloud 项目群依赖执行矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md | GFIS | controlled |
 | GPCF-DOC-DEV-P0-BLOCKER-REDUCTION-20260626 | GlobalCloud 项目群开发态 P0 阻点消减证据 | docs/harness/evidence/globalcloud-project-group-dev-p0-blocker-reduction-20260626.md | KDS | controlled |
 | GPCF-DOC-DEV-P0-DIRTY-CLASSIFICATION-20260626 | GlobalCloud 项目群开发态 P0-A Dirty 分类证据 | docs/harness/evidence/globalcloud-project-group-dev-p0-dirty-classification-20260626.md | KDS | controlled |
 | GPCF-DOC-DEV-P0-PROJECT-VALIDATION-20260626 | GlobalCloud 项目群开发态 P0-B 项目级最小验证证据 | docs/harness/evidence/globalcloud-project-group-dev-p0-project-validation-20260626.md | KDS | controlled |
-| GPCF-DOC-DEV-TASK-QUEUE-20260626 | GlobalCloud 项目群开发态任务队列 | docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md | KDS | controlled |
+| GPCF-DOC-DEV-TASK-QUEUE-20260626 | GlobalCloud 项目群开发态任务队列 | docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md | GFIS | controlled |
 | GPCF-DOC-PROJECT-GROUP-DIRTY-CLASSIFICATION-20260625 | GlobalCloud 项目群 Dirty 变更分类证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dirty-classification-20260625.md | KDS | controlled |
 | GPCF-DOC-DIRTY-CLASSIFICATION-P0A-20260626 | GlobalCloud 项目群 P0-A Dirty 分类证据 | docs/harness/evidence/globalcloud-project-group-dirty-classification-p0a-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-DIRTY-DISPOSITION-QUEUE-20260625 | GlobalCloud 项目群 Dirty 仓逐仓处置队列 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dirty-disposition-queue-20260625.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-DIRTY-DISPOSITION-QUEUE-POST-SCHEME-RECOGNITION-20260626 | GlobalCloud 项目群 Dirty 仓逐仓处置队列｜方案识别规则写入后 2026-06-26 | docs/harness/evidence/globalcloud-project-group-dirty-disposition-queue-post-scheme-recognition-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-EXECUTION-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群真实执行授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-EXECUTION-AUTHORIZATION-RECEIPT-TEMPLATE-20260626 | GlobalCloud 项目群真实执行授权确认回执模板 2026-06-26 | docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-template-20260626.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群执行回执与执行前桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-execution-receipt-pre-execution-bridge-audit-20260627.md | GPC | controlled |
+| GPCF-DOC-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-20260627 | GlobalCloud 项目群外部 Loop Gate Delegate 基线与 Review Replay 边界 2026-06-27 | docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-FIRST-EXECUTION-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群第一批真实执行授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-FULL-PROJECT-BASELINE-20260625 | GlobalCloud 项目群全量项目真实状态基线 2026-06-25 | docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-FULL-PROJECT-BASELINE-20260625 | GlobalCloud 项目群全量项目真实状态基线 2026-06-25 | docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md | GFIS | controlled |
+| GPCF-DOC-GENERATED-OUTPUT-DIST-ISOLATION-20260627 | GlobalCloud 项目群 SOP/PKC generated-output-dist 提交前隔离重放判定 | docs/harness/evidence/globalcloud-project-group-generated-output-dist-isolation-20260627.md | KDS | controlled |
+| GPCF-DOC-GFIS-DIRTY-DRIFT-CLASSIFICATION-20260627 | GlobalCloud 项目群 GFIS Dirty 漂移分类证据 2026-06-27 | docs/harness/evidence/globalcloud-project-group-gfis-dirty-drift-classification-20260627.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-GIT-CLEAN-20260625 | GlobalCloud 项目群 17 仓 Git Clean 门禁证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-git-clean-20260625.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-HUMAN-CONFIRMATION-REQUEST-20260625 | GlobalCloud 项目群提交前人工确认请求包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md | KDS | controlled |
+| GPCF-DOC-GPCF-WORKTREE-REVIEW-PACKAGES-20260627 | GlobalCloud 项目群 GPCF 本仓工作区 Review 包拆分证据 | docs/harness/evidence/globalcloud-project-group-gpcf-worktree-review-packages-20260627.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-HUMAN-CONFIRMATION-REQUEST-20260625 | GlobalCloud 项目群提交前人工确认请求包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md | GFIS | controlled |
 | GPCF-DOC-PROJECT-GROUP-KDS-DIFFCHECK-BLOCKER-20260626 | GlobalCloud 项目群 KDS Diff Check 阻塞证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-kds-diffcheck-blocker-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626 | GlobalCloud 项目群 KDS Diff Check Cleanup 授权命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-kds-diffcheck-cleanup-command-pack-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-LIVE-STATUS-SNAPSHOT-20260626 | GlobalCloud 项目群 Live 状态快照 2026-06-26 | docs/harness/evidence/globalcloud-project-group-live-status-snapshot-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-LOOP-GATE-READINESS-PASS-20260626 | GlobalCloud 项目群 Loop Gate Readiness Pass 证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-loop-gate-readiness-pass-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-LOOP-SESSION-REGISTRY-REWORK-20260626 | GlobalCloud 项目群 Loop Session Registry Rework 包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-loop-session-registry-rework-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-NEXT-EXECUTABLE-TASK-PACKS-20260625 | GlobalCloud 项目群下一批可执行任务包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-DECISION-BOARD-20260626 | GlobalCloud 项目群下一阶段授权决策板 2026-06-26 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-EXECUTABLE-TASK-PACKS-20260625 | GlobalCloud 项目群下一批可执行任务包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627 | GlobalCloud 项目群下一阶段授权链一致性审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-DECISION-BOARD-20260626 | GlobalCloud 项目群下一阶段授权决策板 2026-06-26 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627 | GlobalCloud 项目群下一阶段授权人工填写请求包 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260627 | GlobalCloud 项目群下一阶段授权包 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-RECEIPT-EXAMPLE-PACK-20260627 | GlobalCloud 项目群下一阶段授权回执示例包 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-RECEIPT-RECORDING-PROCEDURE-20260627 | GlobalCloud 项目群下一阶段授权回执录入流程 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md | GFIS | controlled |
 | GPCF-DOC-PROJECT-GROUP-OPERATIONAL-BLOCKER-RESOLUTION-MATRIX-20260626 | GlobalCloud 项目群运行门禁阻塞解除矩阵 | docs/harness/evidence/globalcloud-project-group-operational-blocker-resolution-matrix-20260626.md | KDS | controlled |
 | GPCF-DOC-P0B-PROJECT-VALIDATION-20260626 | GlobalCloud 项目群 P0-B 项目级验证复跑证据 | docs/harness/evidence/globalcloud-project-group-p0b-project-validation-20260626.md | KDS | controlled |
 | GPCF-DOC-P0C-MINIMAL-VALIDATION-20260626 | GlobalCloud 项目群 P0-C 剩余项目最小验证证据 | docs/harness/evidence/globalcloud-project-group-p0c-minimal-validation-20260626.md | KDS | controlled |
@@ -430,16 +450,22 @@ KDS 空间：`开发`
 | GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群 Post-Scheme Review 授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Post-Scheme Review 执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-pre-execution-command-pack-20260626.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群方案识别规则写入后 Review 授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-review-authorization-request-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626 | GlobalCloud 项目群 Ready for Review 推进队列 2026-06-26 | docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-COMPLETION-GAP-MATRIX-20260626 | GlobalCloud 项目群真实执行治理完成度与剩余缺口矩阵 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-PROGRESS-20260626 | GlobalCloud 项目群真实执行治理推进证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-OBJECTIVE-COVERAGE-AUDIT-20260626 | GlobalCloud 项目群真实执行治理目标覆盖审计 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627 | GlobalCloud 项目群 Pre-Wave1 Review 授权桥接请求 2026-06-27 | docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626 | GlobalCloud 项目群 Ready for Review 推进队列 2026-06-26 | docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md | GPC | controlled |
+| GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-TRIGGER-MAP-20260627 | GlobalCloud 项目群 Ready for Review 触发映射表 2026-06-27 | docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-COMPLETION-GAP-MATRIX-20260626 | GlobalCloud 项目群真实执行治理完成度与剩余缺口矩阵 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-PROGRESS-20260626 | GlobalCloud 项目群真实执行治理推进证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md | GPC | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-OBJECTIVE-COVERAGE-AUDIT-20260626 | GlobalCloud 项目群真实执行治理目标覆盖审计 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md | GFIS | controlled |
+| GPCF-DOC-REVIEW-AUTH-GPCF-RP7-REVIEW-CONCLUSION-20260627 | GlobalCloud 项目群 REVIEW-AUTH GPCF-RP7 Review 结论登记 2026-06-27 | docs/harness/evidence/globalcloud-project-group-review-auth-gpcf-rp7-review-conclusion-20260627.md | KDS | controlled |
+| GPCF-DOC-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-20260627 | GlobalCloud 项目群 REVIEW-AUTH GPCF 工作区逐包确认请求 2026-06-27 | docs/harness/evidence/globalcloud-project-group-review-auth-gpcf-worktree-confirmation-20260627.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群 REVIEW-AUTH / Pre-Wave1 / Wave1 桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-review-auth-pre-wave1-wave1-bridge-audit-20260627.md | KDS | controlled |
 | GPCF-DOC-PROJECT-GROUP-REVIEW-PACKAGES-20260625 | GlobalCloud 项目群提交前 Review 分组证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-review-packages-20260625.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-STATUS-ADVANCEMENT-MATRIX-20260625 | GlobalCloud 项目群状态推进判定矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群 Wave 1 授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群 Wave 1 真实执行授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md | KDS | controlled |
-| GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md | KDS | controlled |
+| GPCF-DOC-PROJECT-GROUP-STATUS-ADVANCEMENT-MATRIX-20260625 | GlobalCloud 项目群状态推进判定矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md | GPC | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群 Wave 1 授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群 Wave 1 真实执行授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md | GFIS | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群 Wave1 回执与执行前桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md | GFIS | controlled |
 | GPCF-DOC-48474E7AEE | Governance OKF v0.1 Derived Bundle Report | docs/harness/evidence/governance-okf-v01-bundle-report-20260620.md | KDS | controlled |
 | GPCF-DOC-03FE63E1D0 | Headroom Controlled Metric Pilot Evidence | docs/harness/evidence/headroom-controlled-metric-pilot-20260621.md | KDS | controlled |
 | GPCF-DOC-78C4270FD2 | Headroom Cost Measurement Output Evidence | docs/harness/evidence/headroom-cost-measurement-output-20260621.md | KDS | controlled |
@@ -1091,7 +1117,13 @@ KDS 空间：`开发`
 | GPCF-LOOP-GCKF-P0-D182-001 | Loop Round GPCF-GCKF-P0-D182-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D183-001 | Loop Round GPCF-GCKF-P0-D183-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D184-001 | Loop Round GPCF-GCKF-P0-D184-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D185-001 | Loop Round GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D186-001 | Loop Round GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D187-001 | Loop Round GPCF-GCKF-P0-D187-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D187-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D188-001 | Loop Round GPCF-GCKF-P0-D188-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D188-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D189-001 | Loop Round GPCF-GCKF-P0-D189-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md | GPCF | controlled |
 | GPCF-DOC-156556AE22 | GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D190-001 | Loop Round GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | controlled |
 | GPCF-DOC-9F56DFB107 | GC-Knowledge Fabric P0-D2 目录编号与挂池规则 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md | GPCF | controlled |
 | GPCF-DOC-DBB5A54AC3 | GC-Knowledge Fabric P0-D20 Closure Readiness Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md | GPCF | controlled |
 | GPCF-DOC-3317FFE9B5 | GC-Knowledge Fabric P0-D21 Human Review Checklist Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md | GPCF | controlled |
@@ -1982,14 +2014,27 @@ KDS 空间：`开发`
 | GPCF-DOC-DEB7C6D159 | Loop Round GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-7682DAC0E5 | Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md | GPCF | controlled |
 | GPCF-DOC-01A5916499 | Loop Round: GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001.md | GPCF | controlled |
+| GPCF-LOOP-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001 | GPCF PROJECT GROUP AUTHORIZATION LAYER MATRIX 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001 | Loop Round GPCF-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001 | Loop Round GPCF-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-P0-PROJECT-VALIDATION-001 | Loop Round GPCF-PROJECT-GROUP-DEV-P0-PROJECT-VALIDATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-P0-PROJECT-VALIDATION-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001 | Loop Round GPCF-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001 | loop-round-GPCF-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001.md | GPCF | controlled |
+| GPCF-LOOP-PROJECT-GROUP-GENERATED-OUTPUT-DIST-ISOLATION-001 | GPCF PROJECT GROUP GENERATED OUTPUT DIST ISOLATION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-GENERATED-OUTPUT-DIST-ISOLATION-001.md | GPCF | controlled |
+| GPCF-LOOP-PROJECT-GROUP-GFIS-DIRTY-DRIFT-CLASSIFICATION-001 | GPCF PROJECT GROUP GFIS DIRTY DRIFT CLASSIFICATION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-GFIS-DIRTY-DRIFT-CLASSIFICATION-001.md | GPCF | controlled |
+| GPCF-LOOP-PROJECT-GROUP-GPCF-WORKTREE-REVIEW-PACKAGES-001 | GPCF PROJECT GROUP GPCF WORKTREE REVIEW PACKAGES 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-GPCF-WORKTREE-REVIEW-PACKAGES-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md | GPC | controlled |
 | GPCF-LOOP-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001 | Loop Round GPCF-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001 | Loop Round GPCF-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-P0D-REVIEW-QUEUE-001 | Loop Round GPCF-PROJECT-GROUP-P0D-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-P0D-REVIEW-QUEUE-001.md | GPCF | controlled |
 | GPCF-DOC-62B1AFEC53 | GPCF Project Group Phase Goals | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-PHASE-GOALS-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001 | loop-round-GPCF-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001.md | GPCF | controlled |
+| GPCF-LOOP-PROJECT-GROUP-REVIEW-AUTH-GPCF-RP7-CONCLUSION-001 | GPCF PROJECT GROUP REVIEW AUTH GPCF RP7 CONCLUSION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-GPCF-RP7-CONCLUSION-001.md | GPCF | controlled |
+| GPCF-LOOP-PROJECT-GROUP-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-001 | GPCF PROJECT GROUP REVIEW AUTH GPCF WORKTREE CONFIRMATION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-001.md | GPCF | controlled |
 | GPCF-DOC-D910A1EAEB | GPCF Session Declaration Control Boundary 001 | docs/harness/loops/loop-round-GPCF-SESSION-DECLARATION-CONTROL-BOUNDARY-001.md | GPCF | controlled |
 | GPCF-DOC-52A3C9B7E1 | GPCF Session Mainline Declaration 001 | docs/harness/loops/loop-round-GPCF-SESSION-MAINLINE-DECLARATION-001.md | GPCF | controlled |
 | GPCF-DOC-8D6E4A1F29 | GPCF Session Mainline Drift Watch 003 | docs/harness/loops/loop-round-GPCF-SESSION-MAINLINE-DRIFT-WATCH-003.md | GPCF | controlled |

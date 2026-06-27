@@ -32,6 +32,15 @@ REQUIRED_DOC_TOKENS = [
     "receipt_template_count | `7`",
     "authorization_granted | `false`",
     "action_executed | `false`",
+    "review_boundary_repo_count | `6`",
+    "noise_cleanup_repo_count | `1`",
+    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
+    "单仓复核 / 状态传导复用入口",
+    "4.1 A 项单仓核对卡",
+    "4.2 A 项确认后状态传导摘要",
+    "5.3 KDS 单仓核对卡",
+    "5.4 KDS 确认后状态传导摘要",
     "stage_allowed | `false`",
     "commit_allowed | `false`",
     "push_allowed | `false`",
@@ -41,6 +50,8 @@ REQUIRED_DOC_TOKENS = [
     "customer_accepted | `false`",
     "receipt_recorded",
     "package_specific_authorization_recorded",
+    "review_boundary_repo_count = 6",
+    "noise_cleanup_repo_count = 1",
 ]
 
 REFERENCE_TOKENS = [

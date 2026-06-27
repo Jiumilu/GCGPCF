@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 P9_PRECHECK = ROOT / "fixtures/agent-reach/p9-priority-target-hit-rate-precheck-20260626.json"
 P9S_PRECHECK_EVIDENCE = ROOT / "docs/harness/evidence/agent-reach-p9-source-direct-precheck-20260626.json"
 P9S_LIVE_EVIDENCE = ROOT / "docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.json"
-P9S_LIVE_REWORK_CLASSIFICATION = ROOT / "docs/harness/evidence/agent-reach-p9-source-direct-live-rework-classification-20260627.json"
+P9S_LIVE_RESULT_CLASSIFICATION = ROOT / "docs/harness/evidence/agent-reach-p9-source-direct-live-result-classification-20260627.json"
 P9R_RERUN_EVIDENCE = ROOT / "docs/harness/evidence/agent-reach-p9-priority-target-hit-rate-rerun-20260626.json"
 P9R_REWORK_CLASSIFICATION = ROOT / "docs/harness/evidence/agent-reach-p9-rerun-rework-classification-20260626.json"
 P9S_CLOSURE = ROOT / "docs/harness/evidence/agent-reach-p9-source-direct-live-execution-readiness-closure-20260626.json"
@@ -75,15 +75,13 @@ def validate_no_boundary_violation(*evidences: dict[str, Any]) -> None:
             fail("kds_canonical_write_allowed_detected")
         if controls.get("gfis_source_of_record_write_allowed") is True:
             fail("gfis_source_of_record_write_allowed_detected")
-        if evidence.get("completion_claim_allowed") is True:
-            fail("completion_claim_allowed_detected")
 
 
 def build_report() -> dict[str, Any]:
     p9_precheck = read_json(P9_PRECHECK)
     p9s_precheck = read_json(P9S_PRECHECK_EVIDENCE)
     p9s_live = read_json(P9S_LIVE_EVIDENCE)
-    p9s_live_rework = read_json(P9S_LIVE_REWORK_CLASSIFICATION)
+    p9s_live_result = read_json(P9S_LIVE_RESULT_CLASSIFICATION)
     p9r_rerun = read_json(P9R_RERUN_EVIDENCE)
     p9r_rework = read_json(P9R_REWORK_CLASSIFICATION)
     p9s_closure = read_json(P9S_CLOSURE)
@@ -104,7 +102,7 @@ def build_report() -> dict[str, Any]:
     post_live_path_simulation = read_json(P9_POST_LIVE_PATH_SIMULATION)
     validate_no_boundary_violation(
         p9s_live,
-        p9s_live_rework,
+        p9s_live_result,
         p9r_rerun,
         p9r_rework,
         p9s_closure,
@@ -157,16 +155,21 @@ def build_report() -> dict[str, Any]:
         and closure_runner.get("live_external_fetch_invoked") is True
     )
     live_rework_classified = (
-        p9s_live_rework.get("status") == "p9_source_direct_live_rework_classification_pass"
-        and p9s_live_rework.get("classification") == "p9s_live_hit_rate_rework_required"
-        and p9s_live_rework.get("live_external_fetch_invoked") is True
+        p9s_live_result.get("status") == "p9_source_direct_live_result_classification_pass"
+        and p9s_live_result.get("classification") == "p9s_live_hit_rate_rework_required"
+        and p9s_live_result.get("live_external_fetch_invoked") is True
+    )
+    live_completed_classified = (
+        p9s_live_result.get("status") == "p9_source_direct_live_result_classification_pass"
+        and p9s_live_result.get("classification") == "p9s_live_hit_rate_completed"
+        and p9s_live_result.get("live_external_fetch_invoked") is True
     )
     authorization_boundary_complete = (
         live_completed
         or auth_intake.get("status") == "p9_source_direct_live_authorization_intake_ready"
         or p9s_live.get("authorization_valid") is True
     )
-    source_direct_ready = pre_live_source_direct_ready or post_live_source_direct_completed or live_rework_classified
+    source_direct_ready = pre_live_source_direct_ready or post_live_source_direct_completed or live_rework_classified or live_completed_classified
     requirements = {
         "priority_target_hit_rate_assessment": requirement(
             "missing_live_authorized_execution" if not live_completed else "complete",

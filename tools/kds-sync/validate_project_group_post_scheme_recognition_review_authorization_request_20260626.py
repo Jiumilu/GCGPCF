@@ -13,33 +13,37 @@ BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-bo
 REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 TASKS = ROOT / "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md"
 POST_SCHEME_QUEUE = ROOT / "docs/harness/evidence/globalcloud-project-group-dirty-disposition-queue-post-scheme-recognition-20260626.md"
+EXTERNAL_DELEGATE_BASELINE = ROOT / "docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md"
 
 AUTH_ITEMS = [
-    "AUTH-AAAS-SCHEME-REVIEW-20260626",
-    "AUTH-BRAIN-SCHEME-REVIEW-20260626",
-    "AUTH-WAS-SCHEME-REVIEW-20260626",
-    "AUTH-XIAOC-SCHEME-REVIEW-20260626",
-    "AUTH-WAES-SCHEME-REVIEW-20260626",
-    "AUTH-GPC-SCHEME-REVIEW-20260626",
-    "AUTH-STUDIO-SCHEME-REVIEW-20260626",
+    "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GPCF-SCHEME-REVIEW-20260626",
-    "AUTH-XWAIL-SCHEME-REVIEW-20260626",
+    "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GFIS-SCHEME-REVIEW-20260626",
-    "AUTH-MMC-SCHEME-REVIEW-20260626",
     "AUTH-KDS-SCHEME-REVIEW-20260626",
-    "AUTH-XIAOG-SCHEME-REVIEW-20260626",
-    "AUTH-PVAOS-SCHEME-REVIEW-20260626",
-    "AUTH-SOP-SCHEME-REVIEW-20260626",
-    "AUTH-PKC-SCHEME-REVIEW-20260626",
-    "AUTH-XGD-SCHEME-REVIEW-20260626",
+    "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
 ]
 
 REQUIRED_DOC_TOKENS = [
     "GPCF-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626-001",
     "project_group_post_scheme_recognition_review_authorization_request_20260626 = prepared",
     "post_scheme_recognition_review_authorization_request_prepared",
-    "request_item_count | `17`",
-    "scheme_review_items | `17`",
+    "recheck_date | `2026-06-27`",
+    "live_dirty_repo_count | `7`",
+    "review_boundary_repo_count | `6`",
+    "noise_cleanup_repo_count | `1`",
+    "request_item_count | `6`",
+    "live_dirty_review_items | `6`",
+    "excluded_noise_cleanup_items | `1`",
+    "scheme_recognition_replay_items | `1`",
+    "delegate_wrapper_review_items | `3`",
+    "globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
+    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
     "review_allowed | `false`",
     "stage_allowed | `false`",
     "commit_allowed | `false`",
@@ -60,6 +64,15 @@ REQUIRED_DOC_TOKENS = [
     "owner_decision_confirmed=false",
     "repo_specific_scheme_review_allowed",
     "authorization_boundary",
+    "validate_project_group_external_loop_gate_delegate_baseline_20260627.py",
+    "5.3 KDS 单仓核对卡",
+    "5.4 KDS 确认后状态传导摘要",
+    "5.5.1 AAAS delegated wrapper 单仓核对卡",
+    "5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
+    "5.5.2 XWAIL delegated wrapper 单仓核对卡",
+    "5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
+    "5.5.3 SOP delegated wrapper 单仓核对卡",
+    "5.6.3 SOP delegated wrapper 确认后状态传导摘要",
 ]
 
 REFERENCE_TOKENS = [
@@ -104,7 +117,7 @@ def read(path: Path, failures: list[str]) -> str:
 def main() -> int:
     failures: list[str] = []
     doc_text = read(DOC, failures)
-    refs_text = "\n".join([read(BOARD, failures), read(REGISTER, failures), read(TASKS, failures), read(POST_SCHEME_QUEUE, failures)])
+    refs_text = "\n".join([read(BOARD, failures), read(REGISTER, failures), read(TASKS, failures), read(POST_SCHEME_QUEUE, failures), read(EXTERNAL_DELEGATE_BASELINE, failures)])
 
     for token in REQUIRED_DOC_TOKENS:
         if token not in doc_text:

@@ -1,0 +1,52 @@
+{
+  "evidenceId": "GCKF-P0-SESSION-MAINLINE-TAKEOVER-CURRENT-STATE-D185-20260627",
+  "roundId": "GPCF-GCKF-P0-D185-001",
+  "executionMode": "local_evidence_no_write",
+  "primaryInheritedThreadId": "019eede2-75a3-7943-9a77-a210a40a569b",
+  "mergedPreconditionThreadId": "019ed328-556e-7f83-a9b2-ace87c16acdb",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-repair-owner-response-negative-fixtures-current-state-d184-20260626.json",
+  "takeoverStatus": "session_mainline_takeover_with_hold",
+  "dksBaselineStatus": "merged_precondition_controlled",
+  "maximumState": "review_ready_with_hold",
+  "holdRequired": true,
+  "actualRepairOwnerResponseReceived": false,
+  "sourceGckfBoundary": {
+    "latestRound": "GPCF-GCKF-P0-D184-001",
+    "negativeFixtureStatus": "response_intake_negative_fixtures_with_hold",
+    "acceptedNegativeFixtures": 0,
+    "responseIntakeAllowed": false
+  },
+  "mergedDksBaseline": [
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-054.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-055.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-056.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-057.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-058.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-059.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-060.md",
+    "docs/harness/loops/loop-round-GPCF-KDS-DKS-060-GH-AI-AUTH.md",
+    "03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md",
+    "03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md"
+  ],
+  "gateAssertions": {
+    "dksBaselineIsBusinessCompletion": false,
+    "sessionTakeoverIsResponseIntake": false,
+    "responseIntakeAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "kdsApiWriteExecuted": false,
+    "lifecyclePromotionAllowed": false,
+    "acceptedOrIntegratedAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "validationEvidence": {
+    "readinessDedupValidator": "pass",
+    "projectGroupGateReadiness": "pass",
+    "checkedRepos": 13,
+    "passedRepos": 13,
+    "failedRepos": 0
+  },
+  "nextRoundCandidate": "若收到真实 repair owner response、签署响应包、WAES review note 与人工确认，进入 response intake precheck；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。"
+}

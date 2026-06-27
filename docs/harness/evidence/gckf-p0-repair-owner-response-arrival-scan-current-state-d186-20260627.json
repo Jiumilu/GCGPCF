@@ -1,0 +1,37 @@
+{
+  "evidenceId": "GCKF-P0-REPAIR-OWNER-RESPONSE-ARRIVAL-SCAN-CURRENT-STATE-D186-20260627",
+  "roundId": "GPCF-GCKF-P0-D186-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.json",
+  "arrivalScanStatus": "response_arrival_scan_with_hold",
+  "arrivalScanSummary": {
+    "requiredSignals": 4,
+    "foundSignals": 0,
+    "missingSignals": 4
+  },
+  "stateBoundary": {
+    "maximumState": "review_ready_with_hold",
+    "holdRequired": true,
+    "actualRepairOwnerResponseReceived": false,
+    "responseIntakeAllowed": false,
+    "businessCompletionClaimed": false,
+    "kdsApiWriteExecuted": false,
+    "runtimeWritebackExecuted": false
+  },
+  "gateAssertions": {
+    "responseArrivalConfirmed": false,
+    "signedPackagePresent": false,
+    "waesReviewNotePresent": false,
+    "humanConfirmationPresent": false,
+    "responseIntakeAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "kdsApiWriteExecuted": false,
+    "lifecyclePromotionAllowed": false,
+    "acceptedOrIntegratedAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "nextRoundCandidate": "若四项 arrival signals 全部到达并通过 WAES 与人工确认，进入 response intake precheck；未到达前继续保持 hold。"
+}

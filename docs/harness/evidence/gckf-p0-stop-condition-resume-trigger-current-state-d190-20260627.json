@@ -1,0 +1,39 @@
+{
+  "evidenceId": "GCKF-P0-STOP-CONDITION-RESUME-TRIGGER-CURRENT-STATE-D190-20260627",
+  "roundId": "GPCF-GCKF-P0-D190-001",
+  "executionMode": "local_evidence_no_write",
+  "sourceRound": "docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md",
+  "sourceEvidence": "docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.json",
+  "stopConditionStatus": "authorization_boundary_stop_condition_with_resume_trigger",
+  "stopType": "authorization_boundary",
+  "resumeTriggerSummary": {
+    "requiredResumeTriggers": 4,
+    "satisfiedResumeTriggers": 0,
+    "missingResumeTriggers": 4,
+    "nextExecutableRounds": 0,
+    "resumeAllowed": false
+  },
+  "stateBoundary": {
+    "maximumState": "review_ready_with_hold",
+    "holdRequired": true,
+    "actualRepairOwnerResponseReceived": false,
+    "responseIntakeAllowed": false,
+    "businessCompletionClaimed": false,
+    "kdsApiWriteExecuted": false,
+    "runtimeWritebackExecuted": false
+  },
+  "gateAssertions": {
+    "stopConditionIsActualResponse": false,
+    "externalNotificationSent": false,
+    "actionQueueExecutionAllowed": false,
+    "responseIntakeAllowed": false,
+    "formalHarnessWriteAllowed": false,
+    "runtimeWritebackAllowed": false,
+    "kdsApiWriteExecuted": false,
+    "lifecyclePromotionAllowed": false,
+    "acceptedOrIntegratedAllowed": false,
+    "p1AdmissionAllowed": false,
+    "v1UpgradeRecommended": false
+  },
+  "nextRoundCandidate": "仅当四项 resume triggers 全部满足时，才允许新增 arrival scan refresh；当前 nextExecutableRounds=0。"
+}

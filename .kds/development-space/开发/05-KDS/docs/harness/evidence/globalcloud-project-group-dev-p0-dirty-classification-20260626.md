@@ -23,7 +23,7 @@ superseded_by: []
 - 授权范围：GlobalCloud 项目群 17 仓开发态阻点消减 P0-A。
 - 允许动作：只读 Git 扫描、本地最小 evidence、validator、Loop round。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、标记 accepted、integrated、production_ready。
-- 本轮目标：把 17 仓 dirty/untracked 从单一阻点拆为开发态任务类别，支持正常开发工作启动。
+- 本轮目标：把 17 仓 dirty/untracked 从单一阻点拆为开发态任务类别，支持正常开发工作启动。2026-06-28 live recheck 显示 Git gate 已重新收紧为 `blocked`，但 dirty 分类本身仍有效。
 
 ## 总结判定
 
@@ -35,16 +35,16 @@ superseded_by: []
 | missing_repos | [] |
 | ahead_repos | [] |
 | behind_repos | [] |
-| sensitive_repos | [] |
+| sensitive_repos | [`GlobalCloud KDS`] |
 | diff_check | 17/17 pass |
-| project_group_git_gate | partial |
+| project_group_git_gate | blocked |
 | development_start_allowed | true |
 | accepted | false |
 | integrated | false |
 | production_ready | false |
 | customer_accepted | false |
 
-结论：WAES 授权不再是本轮开发态的唯一最大硬阻点；经 P0 前置修复后，当前最大剩余阻点是 17 仓普通 dirty/untracked 尚未逐仓纳入提交前分类、测试与 owner review。该阻点限制提交、推送和验收，不限制开发态启动。
+结论：WAES 授权不再是本轮开发态的唯一最大硬阻点；2026-06-28 当前最大剩余阻点已具体化为 7 仓 dirty、`GlobalCloud KDS/.env.production.example` sensitive_path，以及 `WAS世界资产体系/.DS_Store` / `GlobalCloud SOP/output/.DS_Store` 等本地产物隔离边界。该阻点限制提交、推送和验收，不限制开发态启动。
 
 ## 分类规则
 
@@ -100,7 +100,7 @@ superseded_by: []
 1. P0-B：对 GPC、Studio、MMC、KDS、PKC 跑项目级最小测试或 harness。
 2. P0-C：对 SOP/PKC 的 generated/output/dist 类路径做提交前隔离判断，不删除用户工作。
 3. P0-D：对 GPCF 大工作区拆分为 KDS mirror、harness evidence、tooling、governance_doc 四组，分别建立提交候选边界。
-4. P0-E：复跑 17 仓 Git gate，要求继续保持 no missing / no ahead / no behind / no sensitive / diff-check pass。
+4. P0-E：复跑 17 仓 Git gate，要求继续保持 no missing / no ahead / no behind / diff-check pass，并显式重放 `GlobalCloud KDS` sensitive-path 边界。
 
 ## 验证命令
 
@@ -113,7 +113,9 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 to
 
 - dirty_classification_ready = true
 - development_start_allowed = true
-- project_group_git_gate = partial
+- project_group_git_gate = blocked
+- dirty_repo_count = 7
+- sensitive_repos = GlobalCloud KDS(.env.production.example)
 - accepted = false
 - integrated = false
 - production_ready = false

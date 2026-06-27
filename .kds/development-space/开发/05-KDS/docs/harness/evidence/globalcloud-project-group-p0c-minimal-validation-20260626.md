@@ -24,7 +24,7 @@ superseded_by: []
 - 范围：GFIS、WAS、WAES、GPC、PVAOS、XiaoC、XiaoG、XGD、XWAIL、AAAS、SOP 的最小验证命令登记与复跑。
 - 允许动作：只读 `git status --short --branch`、`git diff --check -- .`、生成 evidence、KDS 本地镜像同步。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、真实外部 API 写入、清理工作区、删除本地产物、标记 accepted、integrated、production_ready、customer_accepted。
-- 判定边界：P0-C 只证明剩余 11 仓的最小开发门禁可读且 diff-check 通过，不证明项目级完整测试、业务闭环或验收通过。
+- 判定边界：P0-C 只证明剩余 11 仓的最小开发门禁可读且 diff-check 通过；2026-06-28 live recheck 下项目群 Git gate 已收紧为 `blocked`，但这不推翻最小验证本身，只说明提交/推送前边界更严格。
 
 ## P0-C 最小验证结果
 
@@ -49,14 +49,14 @@ superseded_by: []
 | checked_projects | 11 |
 | status_command | 11/11 exit 0 |
 | diff_check | 11/11 pass |
-| sensitive_path_review | delegated to 17 仓 Git gate |
-| project_group_git_gate | partial |
-| remaining_gate_reason | ordinary dirty/untracked only |
+| sensitive_path_review | `GlobalCloud KDS/.env.production.example` 继续委托给 17 仓 Git gate |
+| project_group_git_gate | blocked |
+| remaining_gate_reason | 7 仓 dirty + `GlobalCloud KDS` sensitive_path；`WAS世界资产体系/.DS_Store` 与 `GlobalCloud SOP/output/.DS_Store` 继续沿单独隔离/owner review 路径处理 |
 
 ## 仍未关闭事项
 
 - P0-C 不替代 P0-B 中 Brain、MMC、KDS、PKC、Studio 的项目级验证；它补齐的是剩余 11 仓的最小命令登记。
-- 17 仓 Git gate 仍为 `partial`，原因是普通 dirty/untracked；不得声明全仓 clean。
+- 17 仓 Git gate 当前为 `blocked`；原因是 7 仓 dirty 且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path；不得声明全仓 clean。
 - GFIS/GPCF 真实业务 lane 仍为 `repair_required`，不得创建真实运行层对象或升级状态。
 - WAS `.DS_Store`、SOP `output/`、PKC `dist`、KDS 知识导入仍需后续 review queue 拆分。
 
@@ -71,7 +71,9 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 .c
 
 - p0c_minimal_validation_ready = true
 - development_start_allowed = true
-- project_group_git_gate = partial
+- project_group_git_gate = blocked
+- dirty_repo_count = 7
+- sensitive_repos = GlobalCloud KDS(.env.production.example)
 - accepted = false
 - integrated = false
 - production_ready = false

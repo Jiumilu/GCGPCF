@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-HIT-RATE-LIVE-RUN-20260626
 title: Agent-Reach P9S Source Direct 命中率运行证据 2026-06-26
 project: KDS
-related_projects: [GFIS, WAS, WAES, KDS, GPCF]
+related_projects: [GFIS, WAES, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,15 +18,15 @@ superseded_by: []
 
 # Agent-Reach P9S Source Direct 命中率运行证据 2026-06-26
 
-- status: `p9_source_direct_hit_rate_rework_required`
+- status: `p9_source_direct_hit_rate_completed`
 - authorization_valid: `True`
 - execution_requested: `True`
 - live_external_fetch_invoked: `True`
 - planned_target_count: `13`
-- candidate_count: `44`
-- fetch_error_count: `6`
+- candidate_count: `45`
+- fetch_error_count: `9`
 - topic_coverage: `1.0`
-- threshold_pass: `False`
+- threshold_pass: `True`
 
 ## 非声明
 

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/08-XiaoC/docs/harness/XiaoC/evidence/README.md
 source_path: docs/harness/XiaoC/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---

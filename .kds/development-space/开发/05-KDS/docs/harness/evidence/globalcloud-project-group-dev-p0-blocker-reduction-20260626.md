@@ -23,15 +23,15 @@ superseded_by: []
 - 授权范围：GlobalCloud 项目群 17 仓开发态 P0 阻点消减。
 - 允许动作：本地最小修改、运行测试、修复开发门禁、生成 evidence。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、标记 accepted、integrated、production_ready。
-- 状态边界：本轮只把全项目开发态从硬阻断降为可推进；不声明全仓 clean，不声明验收通过。
+- 状态边界：本轮只把全项目开发态从“不可解析的硬阻断”推进到“阻点已受控、开发可继续”；不声明全仓 clean，不声明验收通过。2026-06-28 live recheck 下，Git gate 已重新收紧为 `blocked`。
 
 ## 本轮已消减硬阻点
 
 | 阻点 | 处理 | 验证 |
 |---|---|---|
 | KDS `wiki/log.md` trailing whitespace | 仅移除 `git diff --check` 报出的新增行尾空格 | `git diff --check -- wiki/log.md` pass |
-| GPCF sanitized ledger 路径触发 sensitive path | 复核未发现 OpenAI/GitHub/AWS/private-key/Bearer token 形态；将路径迁为 `headroom-lcx-sanitized-production-usage-ledger-20260623.json` | Headroom 两个 validator pass；GPCF git gate 从 blocked 降为 partial |
-| 项目群 Git gate blocked | 消除 sensitive path 与 diff-check failed 两类硬阻点 | 17 仓 Git gate 当前为 partial，原因仅为各仓 dirty |
+| GPCF sanitized ledger 路径触发 sensitive path | 复核未发现 OpenAI/GitHub/AWS/private-key/Bearer token 形态；将路径迁为 `headroom-lcx-sanitized-production-usage-ledger-20260623.json` | Headroom 两个 validator pass；该历史阻点已解除，但当前 live gate 已由 KDS sensitive-path 接管 |
+| 项目群 Git gate 历史阻断 | 早期 sensitive path 与 diff-check failed 两类硬阻点已被拆解并登记 | 2026-06-28 live recheck 下，17 仓 Git gate 当前为 `blocked`，原因为 7 仓 dirty + `GlobalCloud KDS/.env.production.example` sensitive_path |
 
 ## 当前项目群 Git 门禁快照
 
@@ -42,10 +42,10 @@ superseded_by: []
 | missing_repos | [] |
 | ahead_repos | [] |
 | behind_repos | [] |
-| sensitive_repos | [] |
+| sensitive_repos | [`GlobalCloud KDS`] |
 | diff_check | 17/17 pass |
-| gate | partial |
-| 仍未关闭原因 | 17 仓均存在普通 dirty/untracked 工作区，需要逐仓分类 |
+| gate | blocked |
+| 仍未关闭原因 | 7 仓 dirty 工作区需要逐仓分类，且 `GlobalCloud KDS/.env.production.example` 仍需沿 sensitive-path review 边界单独确认 |
 
 ## 17 仓开发态分类
 
@@ -89,7 +89,9 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 to
 ## 状态声明
 
 - development_start_allowed = true
-- project_group_git_gate = partial
+- project_group_git_gate = blocked
+- dirty_repo_count = 7
+- sensitive_repos = GlobalCloud KDS(.env.production.example)
 - accepted = false
 - integrated = false
 - production_ready = false

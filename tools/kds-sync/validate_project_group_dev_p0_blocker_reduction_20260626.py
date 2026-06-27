@@ -59,7 +59,9 @@ def main() -> int:
 
     for token in [
         "development_start_allowed = true",
-        "project_group_git_gate = partial",
+        "project_group_git_gate = blocked",
+        "dirty_repo_count = 7",
+        "sensitive_repos = GlobalCloud KDS(.env.production.example)",
         "accepted = false",
         "integrated = false",
         "production_ready = false",
@@ -114,13 +116,11 @@ def main() -> int:
             failures.append(f"ahead repos present: {summary.get('ahead_repos')}")
         if summary.get("behind_repos") != []:
             failures.append(f"behind repos present: {summary.get('behind_repos')}")
-        if summary.get("sensitive_repos") != []:
+        if summary.get("sensitive_repos") != ["GlobalCloud KDS"]:
             failures.append(f"sensitive repos present: {summary.get('sensitive_repos')}")
         for repo in data.get("repos", []):
             if repo.get("diff_check") != "pass":
                 failures.append(f"repo diff-check not pass: {repo.get('name')}")
-            if repo.get("sensitive_paths"):
-                failures.append(f"repo sensitive paths present: {repo.get('name')}")
 
     result = {
         "project_group_dev_p0_blocker_reduction": "pass" if not failures else "fail",

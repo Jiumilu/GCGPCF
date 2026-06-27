@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/README.md
 source_path: 01-architecture/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---

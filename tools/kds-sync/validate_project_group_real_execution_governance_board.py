@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import os
+import subprocess
 from pathlib import Path
 
 
@@ -35,6 +37,9 @@ REQUIRED_TASKS = [
     "GFIS-REAL-SOR-001",
     "WAES-LINT-RUNTIME-001",
     "KDS-RAG-EXPORT-001",
+    "AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
+    "XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
+    "SOP-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
     "XWAIL-MIN-VALIDATOR-001",
     "AAAS-SERVICE-RUNTIME-001",
     "AAAS-WAES-BINDING-PRECHECK-001",
@@ -56,6 +61,7 @@ REQUIRED_TASKS = [
     "GPCF-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626-001",
     "GPCF-AUTHORIZATION-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626-001",
     "GPCF-FULL-PROJECT-BASELINE-001",
+    "GPCF-DEV-TASK-QUEUE-20260626-001",
     "GPCF-NEXT-TASK-PACKS-001",
     "GPCF-DEPENDENCY-MATRIX-001",
     "GPCF-STATUS-ADVANCEMENT-001",
@@ -65,6 +71,9 @@ REQUIRED_TASKS = [
     "GPCF-SCHEME-RECOGNITION-RULES-20260626-001",
     "GPCF-DIRTY-DISPOSITION-QUEUE-POST-SCHEME-RECOGNITION-20260626-001",
     "GPCF-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626-001",
+    "GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001",
+    "GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001",
+    "GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627-001",
     "GPCF-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626-001",
     "GPCF-REAL-EXECUTION-OBJECTIVE-COVERAGE-AUDIT-20260626-001",
     "WAS-XWAIL-ONTOLOGY-MAPPING-001",
@@ -111,13 +120,27 @@ REQUIRED_STATUS_TOKENS = [
 ]
 
 REQUIRED_BOUNDARY_TOKENS = [
+    "| 项目 | 当前状态 | trigger_layer | 证据基线 | 当前推进边界 |",
     "### 3.1 17 项目全量状态基线索引",
     "docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md",
     "docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md",
+    "validate_project_group_dev_task_queue_20260626.py",
+    "development_queue = controlled",
+    "development_queue_status = development_queue_ready",
+    "trigger_layer_binding_count = 17",
+    "dependency_edge_binding_count = 17",
+    "authorization_to_pre_execution_total_bridge",
+    "pre_wave1_review_bridge",
+    "local_release_review_boundary",
     "mock、fixture、synthetic/dev-only 数据",
     "未经授权的生产、权限或部署动作",
     "project_group_real_execution_completion_gap_matrix_20260626 = controlled",
     "real_execution_completion_gap_matrix_result = coverage_controlled_count=7 / execution_complete_count=0 / remaining_gap_count=7",
+    "external_loop_gate_delegate_baseline_ready",
+    "pre_wave1_review_authorization_ready",
+    "globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md",
+    "globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -131,11 +154,14 @@ REQUIRED_FULL_BASELINE_TOKENS = {
         "不声明 KDS 事实主存",
     ],
     "GlobalCloud XWAIL": [
-        "ready_for_review / local_dev_boundary / integration_precheck_candidate",
+        "ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required",
+        "XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
         "XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001",
         "不声明完整工具链闭环",
     ],
     "GlobalCloud AaaS / AAAS": [
+        "ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required",
+        "AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
         "AAAS-SERVICE-RUNTIME-001",
         "AAAS-WAES-BINDING-PRECHECK-001",
         "不声明真实计费",
@@ -186,7 +212,8 @@ REQUIRED_FULL_BASELINE_TOKENS = {
         "不声明真实 KDS/Brain 集成",
     ],
     "GlobalCloud SOP": [
-        "owner_review_required / scenario_candidate_controlled",
+        "owner_review_required / scenario_candidate_controlled / wrapper_review_required",
+        "SOP-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
         "SOP-SCENARIO-OWNER-REVIEW-001",
         "不声明场景方案已确认",
     ],
@@ -304,7 +331,7 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "globalcloud-project-group-git-clean-20260625.md",
         "globalcloud-project-group-git-clean-20260625.json",
         "validate_project_group_git_clean_evidence.py",
-        "project_group_git_clean = partial",
+        "project_group_git_clean = blocked",
         "不自动 clean、stash、commit、push 或 reset",
         "不声明项目群 Git 全量 clean",
     ],
@@ -365,9 +392,10 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "globalcloud-project-group-live-status-snapshot-20260626.md",
         "project_group_live_status_snapshot_20260626 = controlled",
         "live_status_snapshot_controlled",
-        "dirty_repo_count = 17",
-        "pass_repo_count = 0",
-        "2026-06-26",
+        "dirty_repo_count = 7",
+        "pass_repo_count = 10",
+        "2026-06-27",
+        "project_group_git_clean = blocked",
         "不自动删除",
         "不声明项目群 Git 全量 clean",
     ],
@@ -509,9 +537,9 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "globalcloud-project-group-dirty-disposition-queue-post-scheme-recognition-20260626.md",
         "project_group_dirty_disposition_queue_post_scheme_recognition_20260626 = controlled",
         "dirty_disposition_queue_post_scheme_recognition_ready",
-        "dirty_repo_count = 17",
-        "scheme_recognition_dirty_count = 17",
-        "project_group_git_clean = partial",
+        "dirty_repo_count = 7",
+        "scheme_recognition_dirty_count = 1",
+        "project_group_git_clean = blocked",
         "不自动删除、cleanup、stage、commit、push",
         "不声明项目群 Git 全量 clean",
     ],
@@ -520,7 +548,7 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "globalcloud-project-group-post-scheme-recognition-review-authorization-request-20260626.md",
         "project_group_post_scheme_recognition_review_authorization_request_20260626 = prepared",
         "post_scheme_recognition_review_authorization_request_prepared",
-        "request_item_count = 17",
+        "request_item_count = 6",
         "review_allowed=false",
         "不声明任何 scheme review 已授权",
         "不声明可 stage/commit/push",
@@ -652,6 +680,44 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "最高状态为 `partial/rework`",
         "不声明项目群完成",
     ],
+    "GPCF-DEV-TASK-QUEUE-20260626-001": [
+        "validate_project_group_dev_task_queue_20260626.py",
+        "globalcloud-project-group-dev-task-queue-20260626.md",
+        "development_queue_ready = true",
+        "trigger_layer_binding_count = 17",
+        "dependency_edge_binding_count = 17",
+        "binding_row_count = 17",
+        "不自动执行 17 仓开发态任务",
+        "不声明任何开发态任务已执行",
+    ],
+    "GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001": [
+        "validate_project_group_pre_wave1_review_authorization_request_20260627.py",
+        "globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md",
+        "pre_wave1_review_authorization_ready",
+        "wave1_entry_blocked_by_pre_review = true",
+        "review_boundary_count = 6",
+        "pending_confirmation",
+        "不声明 Wave 1 已授权",
+    ],
+    "GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001": [
+        "validate_project_group_next_stage_authorization_human_fill_request_20260627.py",
+        "globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md",
+        "project_group_next_stage_authorization_human_fill_request_20260627 = prepared",
+        "next_stage_authorization_human_fill_request_ready",
+        "fill_item_count = 7",
+        "authorization_granted_count = 0",
+        "不声明任何 human fill request 已转成真实授权",
+    ],
+    "GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627-001": [
+        "validate_project_group_next_stage_authorization_chain_consistency_audit_20260627.py",
+        "globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md",
+        "project_group_next_stage_authorization_chain_consistency_audit_20260627 = controlled",
+        "next_stage_authorization_chain_consistency_audit_ready",
+        "auth_count = 7",
+        "execution_ledger_auth_count = 1",
+        "post_scheme_ledger_auth_count = 6",
+        "不声明任何 receipt 已真实写入总账",
+    ],
 }
 
 FORBIDDEN_UNBOUNDED_CLAIMS = [
@@ -659,6 +725,17 @@ FORBIDDEN_UNBOUNDED_CLAIMS = [
     "integrated = true",
     "production_ready = true",
     "customer_accepted = true",
+]
+
+GFIS_ZERO_KEYS = [
+    "real_source_records",
+    "valid_source_records",
+    "formal_confirmation_files",
+    "runtime_primary_key_ready",
+    "review_queue",
+    "runtime_intake",
+    "waes_review",
+    "verified",
 ]
 
 
@@ -669,10 +746,52 @@ def read(path: Path, failures: list[str]) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def parse_kv_output(output: str) -> dict[str, str]:
+    parsed: dict[str, str] = {}
+    for part in output.replace("\n", " ").split():
+        if "=" not in part:
+            continue
+        key, value = part.split("=", 1)
+        parsed[key.strip()] = value.strip().strip(",")
+    return parsed
+
+
+def validate_gfis_real_fact_entry(failures: list[str]) -> dict[str, str]:
+    cached = os.environ.get("GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT")
+    if cached:
+        values = parse_kv_output(cached)
+    else:
+        result = subprocess.run(
+            ["python3", "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            timeout=180,
+            check=False,
+        )
+        values = parse_kv_output(result.stdout)
+        if result.returncode != 0:
+            failures.append("GFIS real-fact entry gate failed: " + result.stdout.strip())
+            return values
+    if values.get("strong_block") != "true":
+        failures.append("GFIS real-fact entry gate must keep strong_block=true")
+    if values.get("status_ceiling") != "repair_required":
+        failures.append("GFIS real-fact entry status ceiling must remain repair_required")
+    for key in GFIS_ZERO_KEYS:
+        if values.get(key) != "0":
+            failures.append(f"GFIS real-fact entry must keep {key}=0, got {values.get(key)!r}")
+    for key in ["accepted", "integrated", "production_ready"]:
+        if values.get(key) != "false":
+            failures.append(f"GFIS real-fact entry must keep {key}=false, got {values.get(key)!r}")
+    return values
+
+
 def main() -> int:
     failures: list[str] = []
     board_text = read(BOARD, failures)
     register_text = read(CORE_REGISTER, failures)
+    gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
 
     for token in [
         "GlobalCloud 项目群真实执行治理总控板",
@@ -745,6 +864,7 @@ def main() -> int:
         "full_baseline_projects_checked": len(REQUIRED_FULL_BASELINE_TOKENS),
         "tasks_checked": len(REQUIRED_TASKS),
         "dependencies_checked": len(REQUIRED_DEPENDENCIES),
+        "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
             "This gate validates the governance board structure and boundary wording; it does not execute project repositories.",

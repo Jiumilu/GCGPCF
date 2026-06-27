@@ -24,7 +24,7 @@ superseded_by: []
 - 范围：只复跑已有明确本地验证入口的 Brain、MMC、KDS、PKC、Studio。
 - 允许动作：本地构建、pytest smoke、本地 harness check、生成 evidence、KDS 本地镜像同步。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、真实外部 API 写入、标记 accepted、integrated、production_ready、customer_accepted。
-- 判定边界：P0-B 只证明开发态验证入口可运行，不证明验收通过，不关闭 GFIS/GPCF 真实业务 repair_required。
+- 判定边界：P0-B 只证明开发态验证入口可运行，不证明验收通过，不关闭 GFIS/GPCF 真实业务 repair_required。2026-06-28 live recheck 下，项目群 Git gate 已回到 `blocked`，但不影响这些本地验证结论仍然成立。
 
 ## P0-B 复跑结果
 
@@ -48,7 +48,7 @@ superseded_by: []
 
 ## 当前未关闭事项
 
-- 17 仓 Git gate 仍为 `partial`，原因是普通 dirty/untracked；不得声明全仓 clean。
+- 17 仓 Git gate 当前为 `blocked`；原因是 7 仓 dirty 且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path；不得声明全仓 clean。
 - GFIS/GPCF 真实业务 lane 仍为 `repair_required`；P0-B 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
 - WAES/人工确认仍是验收态、状态提升、提交/推送/发布前边界。
 - PKC `dist` 和 KDS 知识导入仍需后续 review queue 拆分。
@@ -68,7 +68,9 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 to
 
 - p0b_project_validation_ready = true
 - development_start_allowed = true
-- project_group_git_gate = partial
+- project_group_git_gate = blocked
+- dirty_repo_count = 7
+- sensitive_repos = GlobalCloud KDS(.env.production.example)
 - accepted = false
 - integrated = false
 - production_ready = false

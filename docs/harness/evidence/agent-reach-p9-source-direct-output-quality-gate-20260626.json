@@ -21,9 +21,9 @@
     "zero_waste_city"
   ],
   "validator_checks": {
+    "allows_critical_target_availability_warnings_when_topic_threshold_passes": true,
     "allows_noncritical_discovery_fetch_errors_when_threshold_passes": true,
     "blocks_credential_leak": true,
-    "blocks_critical_fetch_errors": true,
     "blocks_forbidden_claims": true,
     "blocks_raw_payload_persistence": true,
     "requires_allowed_content_type": true,

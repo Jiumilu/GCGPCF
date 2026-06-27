@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 from pathlib import Path
 
@@ -75,6 +76,14 @@ REQUIRED_EVIDENCE_TOKENS = [
     "command_execution_allowed | `false`",
     "authorization_granted_count | `0`",
     "action_executed_count | `0`",
+    "review_boundary_repo_count | `6`",
+    "noise_cleanup_repo_count | `1`",
+    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
+    "4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要",
+    "5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
 ]
 
 REQUIRED_GOVERNANCE_TOKENS = [
@@ -83,6 +92,19 @@ REQUIRED_GOVERNANCE_TOKENS = [
     "validate_project_group_authorization_pre_execution_environment_readiness_20260626.py",
     "project_group_authorization_pre_execution_environment_readiness_20260626 = controlled",
     "authorization_pre_execution_environment_ready",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
+]
+
+GFIS_ZERO_KEYS = [
+    "real_source_records",
+    "valid_source_records",
+    "formal_confirmation_files",
+    "runtime_primary_key_ready",
+    "review_queue",
+    "runtime_intake",
+    "waes_review",
+    "verified",
 ]
 
 
@@ -116,6 +138,47 @@ def require_tokens(label: str, text: str, tokens: list[str], failures: list[str]
             failures.append(f"{label} missing token: {token}")
 
 
+def parse_kv_output(output: str) -> dict[str, str]:
+    parsed: dict[str, str] = {}
+    for part in output.replace("\n", " ").split():
+        if "=" not in part:
+            continue
+        key, value = part.split("=", 1)
+        parsed[key.strip()] = value.strip().strip(",")
+    return parsed
+
+
+def validate_gfis_real_fact_entry(failures: list[str]) -> dict[str, str]:
+    cached = os.environ.get("GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT")
+    if cached:
+        values = parse_kv_output(cached)
+    else:
+        result = subprocess.run(
+            ["python3", "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            timeout=180,
+            check=False,
+        )
+        values = parse_kv_output(result.stdout)
+        if result.returncode != 0:
+            failures.append("GFIS real-fact entry gate failed: " + result.stdout.strip())
+            return values
+    if values.get("strong_block") != "true":
+        failures.append("GFIS real-fact entry gate must keep strong_block=true")
+    if values.get("status_ceiling") != "repair_required":
+        failures.append("GFIS real-fact entry status ceiling must remain repair_required")
+    for key in GFIS_ZERO_KEYS:
+        if values.get(key) != "0":
+            failures.append(f"GFIS real-fact entry must keep {key}=0, got {values.get(key)!r}")
+    for key in ["accepted", "integrated", "production_ready", "customer_accepted"]:
+        if values.get(key) != "false":
+            failures.append(f"GFIS real-fact entry must keep {key}=false, got {values.get(key)!r}")
+    return values
+
+
 def main() -> int:
     failures: list[str] = []
     evidence_text = read(EVIDENCE, failures)
@@ -124,6 +187,7 @@ def main() -> int:
     core_register_text = read(CORE_REGISTER, failures)
     task_packs_text = read(TASK_PACKS, failures)
     status_matrix_text = read(STATUS_MATRIX, failures)
+    gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
 
     repo_results = {auth_id: is_git_repo(path) for auth_id, path in REPOS.items()}
     for auth_id, ok in repo_results.items():
@@ -172,6 +236,7 @@ def main() -> int:
         "gpcf_validator_check_count": len(validator_results),
         "authorization_granted_count": 0,
         "action_executed_count": 0,
+        "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
             "This validates read-only environment readiness only; it does not execute authorization command packs.",

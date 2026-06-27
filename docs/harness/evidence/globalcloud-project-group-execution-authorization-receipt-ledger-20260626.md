@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-EXECUTION-AUTHORIZATION-RECEIPT-LEDGER-20260626
 title: GlobalCloud 项目群真实执行授权回执总账 2026-06-26
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md
 source_path: docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -30,6 +30,8 @@ superseded_by: []
 | authorization_granted_count | `0` |
 | action_executed_count | `0` |
 | pending_authorization_items | `7` |
+| review_boundary_repo_count | `6` |
+| noise_cleanup_repo_count | `1` |
 | review_allowed | `false` |
 | stage_allowed | `false` |
 | commit_allowed | `false` |
@@ -39,6 +41,10 @@ superseded_by: []
 | integrated | `false` |
 | production_ready | `false` |
 | customer_accepted | `false` |
+| current_state_refresh | `project_group_current_state_baseline_refresh_20260626 = controlled` |
+| development_queue | `development_queue_ready = true` |
+| review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` |
+| noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)` |
 
 本文只建立第一批真实执行授权回执总账。当前没有登记任何用户授权，没有执行任何 review、owner decision、delete、stage、commit、push、merge、deploy、release、真实 KDS API 同步或客户验收动作。
 
@@ -53,6 +59,46 @@ superseded_by: []
 | `AUTH-GPCF-GOVERNANCE-REVIEW-20260626` | `review_candidate_with_mirror_boundary` | GPCF 治理包与 `.kds` 本地镜像包 | `none` | `pending_confirmation` | `false` | `false` | 等待是否允许进入 GPCF governance/KDS mirror review |
 | `AUTH-KDS-OWNER-DECISION-20260626` | `owner_decision` | `DISP-KDS-FUNDING-SYNC-RUNS-20260625` | `none` | `pending_confirmation` | `false` | `false` | 等待业务 owner 与 KDS owner 决策 |
 | `AUTH-SOP-OWNER-DECISION-20260626` | `owner_decision` | `DISP-SOP-WUHAN-SCENARIO-20260625` | `none` | `pending_confirmation` | `false` | `false` | 等待 scenario owner 决策 |
+
+## 2.1 A 项 WAS 落账回放摘要
+
+```text
+auth_id = AUTH-WAS-DELETE-DS-STORE-20260626
+receipt_status_before = pending_confirmation
+target_ledger = execution authorization receipt ledger
+authorized_action = noise_cleanup_decision_registration_only
+authorization_granted = false
+action_executed = false
+```
+
+落账前必须复跑：
+
+```text
+git -C /Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系 status --short --untracked-files=all
+git -C /Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系 diff --check
+python3 tools/kds-sync/check_document_pollution.py
+python3 tools/kds-sync/loop_document_gate.py
+```
+
+落账后仍必须保持：
+
+```text
+authorization_granted = false
+action_executed = false
+delete_allowed = false
+stage_allowed = false
+commit_allowed = false
+push_allowed = false
+```
+
+## 2.2 A/B 单仓复核 / 状态传导复用入口
+
+```text
+AUTH-WAS-DELETE-DS-STORE-20260626 -> docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要
+AUTH-KDS-OWNER-DECISION-20260626 -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要
+authorization_granted = false
+action_executed = false
+```
 
 ## 3. 回执登记规则
 
@@ -73,6 +119,8 @@ receipt_record_count=0
 authorization_granted_count=0
 action_executed_count=0
 pending_authorization_items=7
+review_boundary_repo_count=6
+noise_cleanup_repo_count=1
 review_allowed=false
 stage_allowed=false
 commit_allowed=false

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/globalcloud-project-group-review-packages-20260625.md
 source_path: docs/harness/evidence/globalcloud-project-group-review-packages-20260625.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-25
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -122,11 +122,28 @@ docs/harness/PVAOS/evidence/pvaos-release-gate-repair-20260625.md
 docs/harness/evidence/globalcloud-project-group-git-clean-20260625.*
 docs/harness/evidence/globalcloud-project-group-dirty-classification-20260625.md
 docs/harness/evidence/globalcloud-project-group-review-packages-20260625.md
+docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md
+docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md
+docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md
+docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md
+docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md
+docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md
+docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md
+docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md
+docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md
 tools/kds-sync/validate_gpc_evidence_browser_repair.py
 tools/kds-sync/validate_pvaos_release_gate_repair.py
 tools/kds-sync/validate_project_group_git_clean_evidence.py
 tools/kds-sync/validate_project_group_dirty_classification.py
 tools/kds-sync/validate_project_group_review_packages.py
+tools/kds-sync/validate_project_group_pre_wave1_review_authorization_request_20260627.py
+tools/kds-sync/validate_project_group_next_stage_authorization_decision_board_20260626.py
+tools/kds-sync/validate_project_group_next_stage_authorization_receipt_example_pack_20260627.py
+tools/kds-sync/validate_project_group_next_stage_authorization_receipt_recording_procedure_20260627.py
+tools/kds-sync/validate_project_group_next_stage_authorization_human_fill_request_20260627.py
+tools/kds-sync/validate_project_group_next_stage_authorization_chain_consistency_audit_20260627.py
+tools/kds-sync/validate_project_group_next_stage_authorization_package_20260627.py
+tools/kds-sync/validate_project_group_authorization_routing.py
 tools/kds-sync/validate_project_group_real_execution_governance_board.py
 ```
 
@@ -136,6 +153,14 @@ tools/kds-sync/validate_project_group_real_execution_governance_board.py
 validate_project_group_git_clean_evidence.py = pass
 validate_project_group_dirty_classification.py = pass
 validate_project_group_real_execution_governance_board.py = pass
+validate_project_group_pre_wave1_review_authorization_request_20260627.py = pass
+validate_project_group_next_stage_authorization_decision_board_20260626.py = pass
+validate_project_group_next_stage_authorization_receipt_example_pack_20260627.py = pass
+validate_project_group_next_stage_authorization_receipt_recording_procedure_20260627.py = pass
+validate_project_group_next_stage_authorization_human_fill_request_20260627.py = pass
+validate_project_group_next_stage_authorization_chain_consistency_audit_20260627.py = pass
+validate_project_group_next_stage_authorization_package_20260627.py = pass
+validate_project_group_authorization_routing.py = pass
 validate_core_chain_real_evidence_register.py = pass
 validate_core_chain_runtime_claims.py = pass
 loop_document_gate.py = pass
@@ -144,7 +169,11 @@ loop_document_gate.py = pass
 边界：
 
 ```text
-project_group_git_clean = partial
+project_group_git_clean = blocked
+historical_project_group_git_clean_20260625 = partial
+live_recheck_gate_20260628 = blocked
+pre_wave1_review_authorization_ready = true
+next_stage_authorization_chain_loop_round_ready = true
 commit_ready = false
 push_ready = false
 accepted = false
@@ -223,6 +252,9 @@ project_group_review_packages = controlled
 review_package_count = 7
 review_ready_packages = 4
 hold_packages = 3
+project_group_git_clean = blocked
+historical_project_group_git_clean_20260625 = partial
+live_recheck_gate_20260628 = blocked
 commit_ready = false
 push_ready = false
 accepted = false

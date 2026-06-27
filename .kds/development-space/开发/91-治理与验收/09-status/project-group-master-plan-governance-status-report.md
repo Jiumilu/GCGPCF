@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-STATUS-20260624
 title: GlobalCloud 项目群总体方案治理最终状态报告
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
 domain: status
 status: controlled
 version: v1.0
@@ -24,6 +24,8 @@ superseded_by: []
 project_group_master_plan_governance = controlled
 delivery_readiness = partial
 reason = all registered business projects have one authoritative project master plan; delivery remains partial because business implementation and customer delivery are outside this document-governance claim
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
 ```
 
 本报告是当前文档治理状态报告，可作为总体方案治理专项的当前证据输入。不得把本文解释为业务实现完成、客户交付完成或 production_ready。
@@ -74,6 +76,7 @@ non_completion_scope = business implementation, runtime production readiness, cu
 | 主方案与项目方案双向传导机制 | `02-governance/project-master-plan-change-propagation-template.md` 与台账传导清单 | pass |
 | 用户确认点和变更记录机制 | 第一批/第二批授权请求文档与确认时间 | pass |
 | 文档治理门禁 | `document_control.py`、污染检查、KDS TOKEN、LOOP 文档门禁 | pass |
+| 主方案治理向真实执行治理接力 | `globalcloud-project-group-current-state-baseline-refresh-20260626.md`、`globalcloud-project-group-dev-task-queue-20260626.md` | pass |
 | 非声明边界 | 本报告第 6 节与各项目总体方案第 11 节 | pass |
 
 ## 5. 当前验证命令
@@ -88,10 +91,31 @@ python3 tools/kds-sync/validate_project_version_compatibility.py
 python3 tools/kds-sync/validate_project_group_delivery_readiness.py
 python3 tools/kds-sync/validate_was_master_plan_control.py
 python3 tools/kds-sync/validate_was_xwail_aaas_plan_alignment.py
+python3 tools/kds-sync/validate_project_group_current_state_baseline_refresh_20260626.py
+python3 tools/kds-sync/validate_project_group_dev_task_queue_20260626.py
 python3 tools/kds-sync/document_control.py
 python3 tools/kds-sync/check_document_pollution.py
 python3 tools/kds-sync/validate_kds_token.py
 python3 tools/kds-sync/loop_document_gate.py
+```
+
+## 5.1 接力边界
+
+主方案治理本轮完成的是“统一主方案、统一继承、统一术语、统一版本和统一文档门禁”。
+
+后续真实执行治理必须以以下两份证据作为当前运行入口：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
+当前接力事实保持：
+
+```text
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
+dirty_repo_count = 7
+trigger_layer_binding_count = 17
+dependency_edge_binding_count = 17
 ```
 
 ## 6. 非声明边界

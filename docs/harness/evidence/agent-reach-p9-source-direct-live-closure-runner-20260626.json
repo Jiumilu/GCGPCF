@@ -7,7 +7,7 @@
   "execution_requested": true,
   "id": "agent-reach-p9-source-direct-live-closure-runner-20260626",
   "live_external_fetch_invoked": true,
-  "live_run_status": "p9_source_direct_hit_rate_rework_required",
+  "live_run_status": "p9_source_direct_hit_rate_completed",
   "non_claims": [
     "closure_runner_only",
     "not_kds_canonical_written",
@@ -25,7 +25,7 @@
     "production_config_write_allowed": false,
     "production_integration_allowed": false
   },
-  "status": "p9_source_direct_live_closure_rework_required",
+  "status": "p9_source_direct_live_closure_completed",
   "steps": [
     {
       "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_live_authorization_intake.py",
@@ -36,17 +36,52 @@
     },
     {
       "command": "python3 tools/kds-sync/run_agent_reach_p9_source_direct_hit_rate.py --auth fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json --execute-live --write-evidence",
-      "output_tail": "gent-reach-p9-source-direct-hit-rate-live-run-20260626\",\n  \"non_claims\": [\n    \"candidate_only\",\n    \"not_source_of_record\",\n    \"not_kds_canonical_written\",\n    \"not_gfis_source_of_record_written\",\n    \"not_accepted\",\n    \"not_integrated\",\n    \"not_production_ready\"\n  ],\n  \"planned_entrypoint_count\": 13,\n  \"planned_target_count\": 13,\n  \"security_controls\": {\n    \"browser_cookie_extraction_invoked\": false,\n    \"credential_written\": false,\n    \"gfis_source_of_record_write_allowed\": false,\n    \"global_mcp_config_write_allowed\": false,\n    \"kds_canonical_write_allowed\": false,\n    \"live_external_fetch_invoked\": true,\n    \"production_config_write_allowed\": false,\n    \"production_integration_allowed\": false\n  },\n  \"status\": \"p9_source_direct_hit_rate_rework_required\",\n  \"written_evidence\": {\n    \"json\": \"docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.json\",\n    \"markdown\": \"docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.md\"\n  }\n}",
+      "output_tail": "d\": \"agent-reach-p9-source-direct-hit-rate-live-run-20260626\",\n  \"non_claims\": [\n    \"candidate_only\",\n    \"not_source_of_record\",\n    \"not_kds_canonical_written\",\n    \"not_gfis_source_of_record_written\",\n    \"not_accepted\",\n    \"not_integrated\",\n    \"not_production_ready\"\n  ],\n  \"planned_entrypoint_count\": 13,\n  \"planned_target_count\": 13,\n  \"security_controls\": {\n    \"browser_cookie_extraction_invoked\": false,\n    \"credential_written\": false,\n    \"gfis_source_of_record_write_allowed\": false,\n    \"global_mcp_config_write_allowed\": false,\n    \"kds_canonical_write_allowed\": false,\n    \"live_external_fetch_invoked\": true,\n    \"production_config_write_allowed\": false,\n    \"production_integration_allowed\": false\n  },\n  \"status\": \"p9_source_direct_hit_rate_completed\",\n  \"written_evidence\": {\n    \"json\": \"docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.json\",\n    \"markdown\": \"docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.md\"\n  }\n}",
       "passed": true,
       "returncode": 0,
       "step": "live_run"
     },
     {
       "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_output_quality_gate.py --validate-report",
-      "output_tail": "agent_reach_p9_source_direct_output_quality_gate=fail reason=status_not_completed:p9_source_direct_hit_rate_rework_required",
-      "passed": false,
-      "returncode": 1,
+      "output_tail": "agent_reach_p9_source_direct_output_quality_gate=pass report=/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF/docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.json",
+      "passed": true,
+      "returncode": 0,
       "step": "output_quality_gate"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_agent_reach_p9_source_direct_review_queue_bridge_readiness.py",
+      "output_tail": "agent_reach_p9_source_direct_review_queue_bridge_readiness=pass status=p9_source_direct_review_queue_bridge_readiness_ready preview_items=13 target_coverage=1.0 topic_coverage=1.0 review_queue_created=false",
+      "passed": true,
+      "returncode": 0,
+      "step": "review_queue_bridge_preview"
+    },
+    {
+      "command": "python3 tools/kds-sync/document_control.py",
+      "output_tail": "",
+      "passed": true,
+      "returncode": 0,
+      "step": "document_control"
+    },
+    {
+      "command": "python3 tools/kds-sync/check_document_pollution.py",
+      "output_tail": "document_pollution=pass",
+      "passed": true,
+      "returncode": 0,
+      "step": "document_pollution"
+    },
+    {
+      "command": "python3 tools/kds-sync/validate_kds_token.py",
+      "output_tail": "kds_token=pass fingerprint=bfd9553d",
+      "passed": true,
+      "returncode": 0,
+      "step": "kds_token"
+    },
+    {
+      "command": "python3 tools/kds-sync/loop_document_gate.py",
+      "output_tail": "{\n  \"gate\": \"pass\",\n  \"gate_reasons\": [],\n  \"repo_md\": 3031,\n  \"kds_md\": 3045,\n  \"local_mirror_ledger_lines\": 3031,\n  \"local_mirror_unique_docs\": 3031,\n  \"api_sync_ledger_lines\": 141,\n  \"missing_metadata\": 0,\n  \"missing_readme_dirs\": 0,\n  \"localization_debt\": false,\n  \"fixed_doc_id_drift\": false,\n  \"status_counts\": {\n    \"archive\": 85,\n    \"controlled\": 2773,\n    \"okf_derived\": 99,\n    \"draft\": 13\n  },\n  \"project_counts\": {\n    \"WAES\": 165,\n    \"GFIS\": 90,\n    \"GPCF\": 1707,\n    \"KDS\": 865,\n    \"GPC\": 46,\n    \"XiaoC\": 43,\n    \"Brain\": 11,\n    \"MMC\": 9,\n    \"PKC\": 7,\n    \"PVAOS\": 10,\n    \"Studio\": 2,\n    \"XGD\": 7,\n    \"XiaoG\": 8\n  }\n}",
+      "passed": true,
+      "returncode": 0,
+      "step": "loop_document_gate"
     }
   ]
 }

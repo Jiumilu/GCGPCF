@@ -6,6 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 SPEC_DOC = ROOT / "02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md"
@@ -54,6 +56,7 @@ def require_controlled(text: str, source_path: str) -> None:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     spec = read(SPEC_DOC)
     template = read(TEMPLATE)
     fixture = load_json(FIXTURE)
@@ -236,7 +239,8 @@ def main() -> int:
         "run=implemented stop=implemented verify=implemented recover=implemented debug=implemented "
         "status_ceiling=partial_repair real_business_lane=repair_required "
         "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
-        "accepted_allowed=false integrated_allowed=false production_ready_allowed=false"
+        "accepted_allowed=false integrated_allowed=false production_ready_allowed=false "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

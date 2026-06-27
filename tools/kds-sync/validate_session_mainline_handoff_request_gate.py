@@ -6,6 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/session-mainline-handoff-request-gate-20260622.json"
@@ -25,6 +27,7 @@ def read(path: Path) -> str:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     evidence = json.loads(read(EVIDENCE_JSON))
     evidence_md = read(EVIDENCE_MD)
     loop_round = read(LOOP_ROUND)
@@ -113,7 +116,8 @@ def main() -> int:
         "session_mainline_handoff_request_gate=pass "
         "gate_mode=explicit_user_confirmation_required "
         "proposal_only_for_other_sessions=true "
-        "live_codex_threads_covered=false auto_takeover_allowed=false"
+        "live_codex_threads_covered=false auto_takeover_allowed=false "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6E7DCE4A91
 title: LOOP 工程体系整体实施规范
 project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
 domain: governance
 status: controlled
 version: v1.0
@@ -21,6 +21,21 @@ superseded_by: []
 本文是 LOOP 工程体系的权威整体实施基线。它定义 LOOP 工程体系的目标、边界、文档层级、版本路线图、状态升级规则、证据链、门禁链和自我提升机制。
 
 本文不替代 [Loop Control Board](./LOOP_CONTROL_BOARD.md)，不替代 [Loop Autonomy Policy](./LOOP_AUTONOMY_POLICY.md)，不替代 [LOOP 执行规则](./LOOP_EXECUTION_RULES.md)，也不替代 [Loop Engineering 五方向实施规范](./LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md)。本文负责定义整体基线；控制板负责记录当前事实；自治策略负责授权和停止；执行规则负责每轮动作；五方向规范负责运行、停止、验证、恢复、调试的操作模型。
+
+当前真实执行治理入口必须以以下两份证据为准：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
+当前接力事实保持：
+
+```text
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
+dirty_repo_count = 7
+trigger_layer_binding_count = 17
+dependency_edge_binding_count = 17
+```
 
 ## 1. 基线目标
 

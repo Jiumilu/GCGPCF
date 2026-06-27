@@ -23,14 +23,15 @@ superseded_by: []
 - 授权范围：GlobalCloud 项目群 17 仓开发态阻点消减 P0-A。
 - 允许动作：本地只读采样、最小 evidence、只读 validator、文档门禁同步。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、标记 accepted、integrated、production_ready、customer_accepted。
-- 当前判断：WAES 授权不是开发态全面启动的最大阻点；WAES/人工确认仍是验收态和状态提升边界。开发态当前最大阻点是 17 仓 dirty 工作区未分类、未形成逐仓处理队列。
+- 当前判断：WAES 授权不是开发态全面启动的最大阻点；WAES/人工确认仍是验收态和状态提升边界。2026-06-28 live recheck 下，开发态当前最大阻点已具体化为 7 仓 dirty 工作区、`GlobalCloud KDS/.env.production.example` sensitive_path，以及未完成的逐仓处理队列。
 
 ## P0-A 成功标准
 
 | 标准 | 结果 |
 |---|---|
 | 17 仓存在并纳入分类 | pass |
-| missing/ahead/behind/sensitive path | none |
+| missing/ahead/behind | none |
+| sensitive path | `GlobalCloud KDS/.env.production.example` |
 | `git diff --check` | 17/17 pass |
 | dirty 类型已分流 | pass |
 | 开发态是否可启动 | yes |
@@ -44,13 +45,13 @@ superseded_by: []
 |---|---|
 | checked_repo_count | 17 |
 | expected_repo_count | 17 |
-| gate | partial |
+| gate | blocked |
 | missing_repos | [] |
 | ahead_repos | [] |
 | behind_repos | [] |
-| sensitive_repos | [] |
+| sensitive_repos | [`GlobalCloud KDS`] |
 | diff_check | 17/17 pass |
-| remaining_gate_reason | ordinary dirty/untracked only |
+| remaining_gate_reason | 7 仓 dirty + `GlobalCloud KDS` sensitive_path；`WAS .DS_Store` 与 `SOP output/.DS_Store` 继续沿本地产物路径隔离 |
 
 ## 17 仓 Dirty 分类
 
@@ -97,7 +98,9 @@ cd "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF" && python3 to
 
 - dirty_classification_ready = true
 - development_start_allowed = true
-- project_group_git_gate = partial
+- project_group_git_gate = blocked
+- dirty_repo_count = 7
+- sensitive_repos = GlobalCloud KDS(.env.production.example)
 - accepted = false
 - integrated = false
 - production_ready = false

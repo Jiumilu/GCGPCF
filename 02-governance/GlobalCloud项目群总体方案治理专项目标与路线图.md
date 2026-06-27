@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624
 title: GlobalCloud 项目群总体方案治理专项目标与路线图
 project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
 domain: governance
 status: controlled
 version: v1.0
@@ -44,12 +44,24 @@ superseded_by: []
 | 其余业务项目总体方案 | 已建立 | 台账状态为 `authoritative` |
 | GPCF 项目总体方案 | 已建立 | `GlobalCloud GPCF 总体方案.md` |
 | shared/python_utils | 非业务项目 | 台账状态为 `not_project` |
+| 当前真实执行治理接力入口 | 已建立 | `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`、`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` |
 
 当前专项状态：
 
 ```text
 project_group_master_plan_governance = controlled
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
 reason = all registered business projects have one authoritative project master plan
+```
+
+当前接力说明：
+
+```text
+master_plan_governance_handoff = current_state_baseline_refresh + development_queue
+dirty_repo_count = 7
+trigger_layer_binding_count = 17
+dependency_edge_binding_count = 17
 ```
 
 ## 3. 覆盖范围

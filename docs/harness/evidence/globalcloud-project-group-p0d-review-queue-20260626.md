@@ -24,7 +24,7 @@ superseded_by: []
 - 范围：把项目群剩余 dirty 工作区拆成开发态 review queue。
 - 允许动作：只读 Git 采样、review queue 分类、生成 evidence、KDS 本地镜像同步。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、真实外部 API 写入、删除文件、清理 `.DS_Store`、清理 `dist`/`output`、标记 accepted、integrated、production_ready、customer_accepted。
-- 判定边界：P0-D 只建立提交/推送/验收前的 review queue，不等于 review 已完成。
+- 判定边界：P0-D 只建立提交/推送/验收前的 review queue，不等于 review 已完成。2026-06-28 live recheck 下，该队列必须服务于 `blocked` Git gate 的受控重放，而不是继续假定 `partial`。
 
 ## P0-D 重点采样
 
@@ -55,24 +55,28 @@ superseded_by: []
 |---|---|
 | review_queue_count | 7 |
 | review_queue_ready | true |
-| project_group_git_gate | partial |
-| hard_blockers | none |
-| missing/ahead/behind/sensitive | none |
+| project_group_git_gate | blocked |
+| hard_blockers | `GlobalCloud KDS/.env.production.example` sensitive_path |
+| missing/ahead/behind | none |
+| sensitive | `GlobalCloud KDS` |
 | diff_check | pass |
 
 ## 下一轮建议
 
-1. P0-E1：先处理 `WAS .DS_Store` 和 SOP `output/` 的隔离策略，只登记，不自动删除。
-2. P0-E2：对 PKC `dist` 做 build artifact consistency decision，确认是否可进入提交候选。
-3. P0-E3：把 GPCF/KDS 大队列拆成 3 到 5 个可 review 的候选包。
-4. P0-E4：Studio release review 人工复核记录到位前，不进入发布或 push。
+1. P0-E1：先处理 `WAS .DS_Store` 和 `GlobalCloud SOP/output/.DS_Store` 的隔离策略，只登记，不自动删除。
+2. P0-E2：沿 KDS sensitive-path review 边界确认 `.env.production.example` 仍是当前硬阻塞来源，不得绕过。
+3. P0-E3：对 PKC `dist` 做 build artifact consistency decision，确认是否可进入提交候选。
+4. P0-E4：把 GPCF/KDS 大队列拆成 3 到 5 个可 review 的候选包。
+5. P0-E5：Studio release review 人工复核记录到位前，不进入发布或 push。
 
 ## 状态声明
 
 - p0d_review_queue_ready = true
 - review_queue_count = 7
 - development_start_allowed = true
-- project_group_git_gate = partial
+- project_group_git_gate = blocked
+- dirty_repo_count = 7
+- sensitive_repos = GlobalCloud KDS(.env.production.example)
 - accepted = false
 - integrated = false
 - production_ready = false

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 from pathlib import Path
 
@@ -38,22 +39,12 @@ EXPECTED_REPOS = [
 
 EXPECTED_DIRTY_REPOS = [
     "GlobalCloud AAAS",
-    "GlobalCloud Brain",
     "WAS世界资产体系",
-    "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
-    "GlobalCloud GPC",
-    "GlobalCloud Studio",
     "GlobalCoud GPCF",
     "GlobalCloud XWAIL",
     "GlobalCloud GFIS",
-    "GlobalCloud MMC",
     "GlobalCloud KDS",
-    "GlobalCloud XiaoG",
-    "GlobalCloud PVAOS",
     "GlobalCloud SOP",
-    "GlobalCloud PKC",
-    "GlobalCloud XGD",
 ]
 
 REQUIRED_DOC_TOKENS = [
@@ -61,18 +52,28 @@ REQUIRED_DOC_TOKENS = [
     "project_group_live_status_snapshot_20260626 = controlled",
     "live_status_snapshot_controlled",
     "snapshot_date | `2026-06-26`",
+    "recheck_date | `2026-06-27`",
     "checked_repo_count | `17`",
     "expected_repo_count | `17`",
-    "git_gate | `partial`",
-    "dirty_repo_count | `17`",
-    "pass_repo_count | `0`",
+    "git_gate | `blocked`",
+    "dirty_repo_count | `7`",
+    "review_boundary_repo_count = 6",
+    "noise_cleanup_repo_count = 1",
+    "pass_repo_count | `10`",
     "ahead_repos | `0`",
     "behind_repos | `0`",
-    "sensitive_repos | `0`",
+    "sensitive_repos | `1`",
     "diff_check | `pass`",
-    "仓集合已变",
-    "方案识别规则写入后全部项目均为 dirty",
-    "已发生 live 漂移",
+    "当前 dirty 仓为 `GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` 七仓",
+    "review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP",
+    "noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)",
+    "4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要",
+    "5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要",
+    "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
+    "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
+    "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要",
+    "Git clean gate 从 `partial` 收紧为 `blocked`",
+    "`GlobalCloud KDS` 因 `.env.production.example`",
     "authorization_boundary",
     "accepted | `false`",
     "integrated | `false`",
@@ -96,12 +97,64 @@ FORBIDDEN_POSITIVE_CLAIMS = [
     "真实 KDS API 已同步 = true",
 ]
 
+GFIS_ZERO_KEYS = [
+    "real_source_records",
+    "valid_source_records",
+    "formal_confirmation_files",
+    "runtime_primary_key_ready",
+    "review_queue",
+    "runtime_intake",
+    "waes_review",
+    "verified",
+]
+
 
 def read(path: Path, failures: list[str]) -> str:
     if not path.exists():
         failures.append(f"missing file: {path}")
         return ""
     return path.read_text(encoding="utf-8")
+
+
+def parse_kv_output(output: str) -> dict[str, str]:
+    parsed: dict[str, str] = {}
+    for part in output.replace("\n", " ").split():
+        if "=" not in part:
+            continue
+        key, value = part.split("=", 1)
+        parsed[key.strip()] = value.strip().strip(",")
+    return parsed
+
+
+def validate_gfis_real_fact_entry(failures: list[str]) -> dict[str, str]:
+    cached = os.environ.get("GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT")
+    if cached:
+        values = parse_kv_output(cached)
+    else:
+        result = subprocess.run(
+            ["python3", "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            timeout=180,
+            check=False,
+        )
+        values = parse_kv_output(result.stdout)
+        if result.returncode != 0:
+            failures.append("GFIS real-fact entry gate failed: " + result.stdout.strip())
+            return values
+    if values.get("strong_block") != "true":
+        failures.append("GFIS real-fact entry gate must keep strong_block=true")
+    if values.get("status_ceiling") != "repair_required":
+        failures.append("GFIS real-fact entry status ceiling must remain repair_required")
+    for key in GFIS_ZERO_KEYS:
+        if values.get(key) != "0":
+            failures.append(f"GFIS real-fact entry must keep {key}=0, got {values.get(key)!r}")
+    for key in ["accepted", "integrated", "production_ready", "customer_accepted"]:
+        if values.get(key) != "false":
+            failures.append(f"GFIS real-fact entry must keep {key}=false, got {values.get(key)!r}")
+    return values
 
 
 def git_status(repo: Path) -> list[str]:
@@ -120,6 +173,7 @@ def main() -> int:
     failures: list[str] = []
     doc_text = read(DOC, failures)
     refs_text = "\n".join([read(BOARD, failures), read(REGISTER, failures), read(TASKS, failures), read(STATUS, failures)])
+    gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
 
     for token in REQUIRED_DOC_TOKENS:
         if token not in doc_text:
@@ -166,6 +220,7 @@ def main() -> int:
         "dirty_repo_count": len(dirty_repos),
         "dirty_repos": dirty_repos,
         "live_dirty_counts": live_dirty_counts,
+        "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
             "This validates the live status snapshot only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status.",

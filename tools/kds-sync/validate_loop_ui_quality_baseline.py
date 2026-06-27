@@ -7,6 +7,8 @@ import json
 import re
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 UI_SIGNAL_RE = re.compile(
@@ -55,6 +57,7 @@ def load_json(path: Path) -> dict[str, object]:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     template = read(ROOT / "templates/LOOP_ROUND_TEMPLATE.md")
     for phrase in [
         "## 7.1 UI 质量门禁（涉及 UI 时必填）",
@@ -182,7 +185,8 @@ def main() -> int:
         f"explicit_ui_scope_rounds={explicit_ui_scope_rounds} "
         f"explicit_ui_scope_valid={explicit_ui_scope_valid} "
         f"historical_ui_signal_rounds_without_explicit_scope={historical_ui_signal_rounds_without_explicit_scope} "
-        "baseline_evidence=present"
+        "baseline_evidence=present "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

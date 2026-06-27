@@ -1,9 +1,9 @@
 {
   "authorization_valid": true,
-  "candidate_count": 41,
+  "candidate_count": 44,
   "classification": "p9s_live_hit_rate_rework_required",
   "completion_claim_allowed": false,
-  "critical_fetch_error_count": 2,
+  "critical_fetch_error_count": 1,
   "critical_fetch_errors": [
     {
       "critical": true,
@@ -12,23 +12,13 @@
       "message": "The read operation timed out",
       "target_id": "gsc-p0-gmpsp",
       "url": "https://www.gmpsp.org.cn/"
-    },
-    {
-      "critical": true,
-      "discovery_rank": 0,
-      "error_type": "IncompleteRead",
-      "message": "IncompleteRead(29445 bytes read)",
-      "target_id": "gsc-p0-mee-zero-waste-city",
-      "url": "https://www.mee.gov.cn/home/ztbd/2020/wfcsjssdgz/"
     }
   ],
   "current_admission": "limited_candidate_only",
   "date": "2026-06-27",
   "execution_requested": true,
-  "failed_topics": [
-    "industrial_solid_waste"
-  ],
-  "fetch_error_count": 13,
+  "failed_topics": [],
+  "fetch_error_count": 6,
   "id": "agent-reach-p9-source-direct-live-rework-classification-20260627",
   "live_external_fetch_invoked": true,
   "live_report": "docs/harness/evidence/agent-reach-p9-source-direct-hit-rate-live-run-20260626.json",
@@ -43,17 +33,18 @@
     "not_integrated",
     "not_production_ready"
   ],
-  "noncritical_fetch_error_count": 11,
+  "noncritical_fetch_error_count": 5,
   "passed_topics": [
     "green_supply_chain",
+    "industrial_solid_waste",
     "phosphogypsum",
     "zero_waste_city"
   ],
   "recommended_rework_focus": [
-    "industrial_solid_waste_keyword_hit_gap",
     "critical_entrypoint_fetch_errors",
-    "source_direct_discovery_filter_for_non_html_assets"
+    "target_availability_or_alternate_entrypoint_review"
   ],
+  "rework_reason": "critical_fetch_errors_only",
   "security_controls": {
     "browser_cookie_extraction_invoked": false,
     "credential_written": false,
@@ -66,5 +57,5 @@
   },
   "status": "p9_source_direct_live_rework_classification_pass",
   "threshold_pass": false,
-  "topic_coverage": 0.75
+  "topic_coverage": 1.0
 }

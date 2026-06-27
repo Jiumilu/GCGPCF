@@ -26,6 +26,11 @@ superseded_by: []
 
 本文不替代任何项目总体方案，也不把候选方案声明为已完成方案。本文只做控制、盘点、传导和门禁输入。
 
+项目群当前真实执行推进口径还必须与以下受控证据保持一致：
+
+- `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`
+
 ## 2. 控制原则
 
 1. 项目群唯一总控方案是 `01-architecture/WAS世界资产体系总体方案.md`。
@@ -35,6 +40,7 @@ superseded_by: []
 5. 主方案变化必须先更新本台账的受影响项目，再传导到对应项目总体方案。
 6. 项目方案变化必须先回流到主方案或 Change Proposal，再更新本台账，再传导到关联项目。
 7. 未经过用户确认的结构性变化，只能登记为 `candidate` 或 `repair_required`。
+8. 当当前状态刷新证据或开发态任务队列与项目总体方案口径冲突时，以当前状态刷新证据、开发态任务队列和项目群实施方案总控口径为准，并触发本台账回写。
 
 ## 3. 状态定义
 
@@ -53,7 +59,7 @@ superseded_by: []
 | project | repo_path | 当前有效总体方案 | 候选/相关文档 | status | 主要问题 | 下一步 |
 |---|---|---|---|---|---|---|
 | 项目群总控 | `GlobalCoud GPCF` | `01-architecture/WAS世界资产体系总体方案.md` | `AGENTS.md`, `README.md` | `authoritative` | 项目群唯一总体控制性文档 | 持续维护主方案、台账、术语、版本、传导和门禁 |
-| GlobalCloud GPCF | `GlobalCoud GPCF` | `GlobalCloud GPCF 总体方案.md` | `01-architecture/WAS世界资产体系总体方案.md`, `AGENTS.md`, `README.md` | `authoritative` | 已建立 GPCF 作为治理项目的独立总体方案 | 后续补齐 GPCF 运行控制、文档治理和 LOOP evidence |
+| GlobalCloud GPCF | `GlobalCoud GPCF` | `GlobalCloud GPCF 总体方案.md` | `01-architecture/WAS世界资产体系总体方案.md`, `AGENTS.md`, `README.md` | `authoritative` | 已建立 GPCF 作为治理项目的独立总体方案；当前真实执行推进以 `project_group_current_state_baseline_refresh_20260626 = controlled`、`development_queue_ready = true`、`dirty_repo_count = 7` 为当前事实控制面 | 后续补齐 GPCF 运行控制、文档治理和 LOOP evidence，并保持与当前状态刷新证据和开发态任务队列一致 |
 | WAS世界资产体系 | `WAS世界资产体系` | `docs/GlobalCloud WAS 总体方案.md` | `docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md` | `authoritative` | 已建立仓内唯一当前有效总体方案，旧 V1.2 文档作为来源底稿 | 后续补充语义变更回流记录和验证证据 |
 | GlobalCloud XWAIL | `GlobalCloud XWAIL` | `GlobalCloud XWAIL 总体方案.md` | `XWAIL实施方案.md` | `authoritative` | 已建立总体方案，实施方案降级为工程实施底稿 | 后续补齐 Schema/Validator/XAP 实现证据 |
 | GlobalCloud AAAS / AaaS | `GlobalCloud AAAS` | `docs/GlobalCloud AaaS 总体方案.md` | `docs/AaaS总体方案_GPCF对齐版.md` | `authoritative` | 已统一显示名为 GlobalCloud AaaS，AAAS 保留为仓库名 | 后续补齐 ServicePackage/Metering/SLA 验证证据 |
@@ -78,6 +84,8 @@ superseded_by: []
 
 ```text
 project_master_plan_alignment = controlled
+project_group_current_state_baseline_refresh_20260626 = controlled
+development_queue_ready = true
 reason = all registered business projects have one authoritative project master plan
 ```
 

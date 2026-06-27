@@ -18,9 +18,9 @@ superseded_by: []
 
 # Agent-Reach P9S Source Direct Live Authorization Intake 2026-06-26
 
-- status: `blocked_pending_p9_source_direct_authorization`
-- authorization_valid: `False`
-- ready_for_live_execution: `False`
+- status: `p9_source_direct_live_authorization_intake_ready`
+- authorization_valid: `True`
+- ready_for_live_execution: `True`
 - planned_target_count: `13`
 - live_external_fetch_invoked: `False`
 

@@ -1,6 +1,6 @@
 # GFIS 开发文档空间
 
-生成日期：2026-06-27
+生成日期：2026-06-28
 
 用途：KDS `开发` 空间中 `GFIS` 项目的受控文档入口。
 
@@ -91,6 +91,29 @@
 | GPCF-DOC-D375EBD5DA | GFIS | docs/harness/GFIS/README.md | controlled |
 | GPCF-DOC-9BF6A3D875 | evidence | docs/harness/GFIS/evidence/README.md | controlled |
 | GPCF-DOC-GFIS-REAL-RUNTIME-BASELINE-20260624 | GFIS 真实运行基线证据 2026-06-24 | docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md | controlled |
+| GPCF-DOC-AUTHORIZATION-LAYER-MATRIX-20260627 | GlobalCloud 项目群开发过程授权层级矩阵 2026-06-27 | docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-ROUTING-20260625 | GlobalCloud 项目群授权路由证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群授权到执行前总桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626 | GlobalCloud 项目群当前真实状态基线刷新 2026-06-26 | docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-DEPENDENCY-EXECUTION-MATRIX-20260625 | GlobalCloud 项目群依赖执行矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md | controlled |
+| GPCF-DOC-DEV-TASK-QUEUE-20260626 | GlobalCloud 项目群开发态任务队列 | docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-FULL-PROJECT-BASELINE-20260625 | GlobalCloud 项目群全量项目真实状态基线 2026-06-25 | docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-HUMAN-CONFIRMATION-REQUEST-20260625 | GlobalCloud 项目群提交前人工确认请求包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-EXECUTABLE-TASK-PACKS-20260625 | GlobalCloud 项目群下一批可执行任务包 2026-06-25 | docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627 | GlobalCloud 项目群下一阶段授权链一致性审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-DECISION-BOARD-20260626 | GlobalCloud 项目群下一阶段授权决策板 2026-06-26 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627 | GlobalCloud 项目群下一阶段授权人工填写请求包 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260627 | GlobalCloud 项目群下一阶段授权包 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-RECEIPT-EXAMPLE-PACK-20260627 | GlobalCloud 项目群下一阶段授权回执示例包 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-RECEIPT-RECORDING-PROCEDURE-20260627 | GlobalCloud 项目群下一阶段授权回执录入流程 2026-06-27 | docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-TRIGGER-MAP-20260627 | GlobalCloud 项目群 Ready for Review 触发映射表 2026-06-27 | docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-COMPLETION-GAP-MATRIX-20260626 | GlobalCloud 项目群真实执行治理完成度与剩余缺口矩阵 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-OBJECTIVE-COVERAGE-AUDIT-20260626 | GlobalCloud 项目群真实执行治理目标覆盖审计 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-RECEIPT-LEDGER-20260626 | GlobalCloud 项目群 Wave 1 授权回执总账 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-REQUEST-20260626 | GlobalCloud 项目群 Wave 1 真实执行授权请求 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群 Wave1 回执与执行前桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md | controlled |
 | GPCF-DOC-6C2D5BB513 | headroom | loop/context/headroom/README.md | controlled |
 | GPCF-DOC-A1FFDD1AE2 | docs | loop/context/headroom/docs/README.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-GRAPH-20260623 | Headroom LCX Graph | loop/context/headroom/docs/graph.md | controlled |

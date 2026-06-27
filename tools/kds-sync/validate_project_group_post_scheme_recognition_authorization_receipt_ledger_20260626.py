@@ -16,23 +16,12 @@ CORE_REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.
 TASK_PACKS = ROOT / "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md"
 
 AUTH_IDS = [
-    "AUTH-AAAS-SCHEME-REVIEW-20260626",
-    "AUTH-BRAIN-SCHEME-REVIEW-20260626",
-    "AUTH-WAS-SCHEME-REVIEW-20260626",
-    "AUTH-XIAOC-SCHEME-REVIEW-20260626",
-    "AUTH-WAES-SCHEME-REVIEW-20260626",
-    "AUTH-GPC-SCHEME-REVIEW-20260626",
-    "AUTH-STUDIO-SCHEME-REVIEW-20260626",
+    "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GPCF-SCHEME-REVIEW-20260626",
-    "AUTH-XWAIL-SCHEME-REVIEW-20260626",
+    "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GFIS-SCHEME-REVIEW-20260626",
-    "AUTH-MMC-SCHEME-REVIEW-20260626",
     "AUTH-KDS-SCHEME-REVIEW-20260626",
-    "AUTH-XIAOG-SCHEME-REVIEW-20260626",
-    "AUTH-PVAOS-SCHEME-REVIEW-20260626",
-    "AUTH-SOP-SCHEME-REVIEW-20260626",
-    "AUTH-PKC-SCHEME-REVIEW-20260626",
-    "AUTH-XGD-SCHEME-REVIEW-20260626",
+    "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
 ]
 
 REQUIRED_LEDGER_TOKENS = [
@@ -44,13 +33,28 @@ REQUIRED_LEDGER_TOKENS = [
     "receipt_record_count | `0`",
     "authorization_granted_count | `0`",
     "action_executed_count | `0`",
-    "pending_authorization_items | `17`",
+    "live_dirty_repo_count | `7`",
+    "review_boundary_repo_count | `6`",
+    "noise_cleanup_repo_count | `1`",
+    "pending_authorization_items | `6`",
+    "excluded_noise_cleanup_items | `1`",
     "review_allowed | `false`",
     "stage_allowed | `false`",
     "commit_allowed | `false`",
     "push_allowed | `false`",
     "delete_allowed | `false`",
     "cleanup_allowed | `false`",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
+    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
+    "B 项 KDS 落账回放摘要",
+    "C/D/G delegated wrapper 落账回放摘要",
+    "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
+    "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
+    "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要",
+    "authorized_action = human_review_and_conclusion_registration_only",
+    "receipt_status_before = pending_confirmation",
     "accepted | `false`",
     "integrated | `false`",
     "production_ready | `false`",
@@ -58,7 +62,9 @@ REQUIRED_LEDGER_TOKENS = [
     "receipt_record_count=0",
     "authorization_granted_count=0",
     "action_executed_count=0",
-    "pending_authorization_items=17",
+    "pending_authorization_items=6",
+    "review_boundary_repo_count=6",
+    "noise_cleanup_repo_count=1",
 ]
 
 REQUIRED_GOVERNANCE_TOKENS = [
@@ -67,6 +73,8 @@ REQUIRED_GOVERNANCE_TOKENS = [
     "validate_project_group_post_scheme_recognition_authorization_receipt_ledger_20260626.py",
     "project_group_post_scheme_recognition_authorization_receipt_ledger_20260626 = controlled",
     "post_scheme_recognition_authorization_receipt_ledger_ready",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
 ]
 
 FORBIDDEN_TOKENS = [
@@ -127,8 +135,6 @@ def main() -> int:
     if "globalcloud-project-group-execution-authorization-receipt-template-20260626.md" not in ledger_text:
         failures.append("ledger must reference the receipt template")
 
-    if ledger_text.count("pending_confirmation") != len(AUTH_IDS):
-        failures.append("ledger must keep all 17 auth rows as pending_confirmation")
     if ledger_text.count("| `none` | `pending_confirmation` | `false` | `false` |") != len(AUTH_IDS):
         failures.append("ledger auth rows must have none receipt_id, pending status, and false authorization/action")
 

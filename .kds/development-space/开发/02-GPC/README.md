@@ -1,6 +1,6 @@
 # GPC 开发文档空间
 
-生成日期：2026-06-27
+生成日期：2026-06-28
 
 用途：KDS `开发` 空间中 `GPC` 项目的受控文档入口。
 
@@ -43,6 +43,11 @@
 | GPCF-DOC-15295B49FF | loops | docs/harness/GPC/loops/README.md | controlled |
 | GPCF-DOC-C02896A291 | loop-round-GPCF-GP-LR-001 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-001.md | controlled |
 | GPCF-DOC-F7E27E2A98 | Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单 | docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群执行回执与执行前桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-execution-receipt-pre-execution-bridge-audit-20260627.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626 | GlobalCloud 项目群 Ready for Review 推进队列 2026-06-26 | docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-PROGRESS-20260626 | GlobalCloud 项目群真实执行治理推进证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-STATUS-ADVANCEMENT-MATRIX-20260625 | GlobalCloud 项目群状态推进判定矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md | controlled |
 | GPCF-DOC-25ADFEBCF8 | cognee | loop/context/cognee/README.md | controlled |
 | GPCF-DOC-6BA1B0CCA6 | harness | loop/context/cognee/harness/README.md | controlled |
 | GPCF-DOC-7A2A6D4F05 | COGNEE P1 召回对照表模板（并行） | loop/context/cognee/harness/p1-recall-comparison-template.md | controlled |

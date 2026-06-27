@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/globalcloud-project-group-live-status-snapshot-20260626.md
 source_path: docs/harness/evidence/globalcloud-project-group-live-status-snapshot-20260626.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -27,80 +27,98 @@ superseded_by: []
 | 当前结论 | `project_group_live_status_snapshot_20260626 = controlled` |
 | 状态候选 | `live_status_snapshot_controlled` |
 | snapshot_date | `2026-06-26` |
+| recheck_date | `2026-06-27` |
 | checked_repo_count | `17` |
 | expected_repo_count | `17` |
-| git_gate | `partial` |
-| dirty_repo_count | `17` |
-| pass_repo_count | `0` |
+| git_gate | `blocked` |
+| dirty_repo_count | `7` |
+| pass_repo_count | `10` |
 | ahead_repos | `0` |
 | behind_repos | `0` |
-| sensitive_repos | `0` |
+| sensitive_repos | `1` |
 | diff_check | `pass` |
 | accepted | `false` |
 | integrated | `false` |
 | production_ready | `false` |
 | customer_accepted | `false` |
 
-本文只登记 2026-06-26 live 状态复核结果，用于替换人工记忆和旧 dirty 计数；本版已纳入方案识别规则写入后的全项目 dirty 状态。它不执行删除、stage、commit、push、merge、真实 KDS API 同步、部署或状态升级。
+本文保留 `GPCF-LIVE-STATUS-SNAPSHOT-20260626-001` 任务编号，并在 2026-06-27 按当前工作树重新复核 live 状态，用于替换人工记忆和失效 dirty 计数。当前 dirty 仓为 `GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` 七仓，10 个仓 clean，且 `GlobalCloud KDS` 因 `.env.production.example` 被 Git clean gate 识别为 `sensitive_path`，所以项目群 Git gate 从 `partial` 收紧为 `blocked`。其中 `WAS世界资产体系/.DS_Store` 仍按 system noise cleanup 单独治理，不并入 `pre-wave1` 六仓 review 边界。它不执行删除、stage、commit、push、merge、真实 KDS API 同步、部署或状态升级。
+
+当前单仓锚点：
+
+```text
+WAS -> globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要
+KDS -> globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要
+AAAS -> globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要
+XWAIL -> globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要
+SOP -> globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要
+```
+
+```text
+review_boundary_repo_count = 6
+noise_cleanup_repo_count = 1
+review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP
+noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
+```
 
 ## 2. 17 仓 Live Git 快照
 
 | 仓库 | 分支 | upstream | dirty_count | untracked_count | ahead | behind | diff_check | 当前队列 |
 |---|---|---|---:|---:|---:|---:|---|---|
-| `GlobalCloud AAAS` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud Brain` | `codex/brain-l4-retrieval` | `origin/codex/brain-l4-retrieval` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `WAS世界资产体系` | `main` | `origin/main` | 4 | 1 | 0 | 0 | `pass` | `DISP-WAS-SYSTEM-NOISE-20260625` |
-| `GlobalCloud XiaoC` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud WAES` | `waes/integration-release` | `origin/waes/integration-release` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud GPC` | `main` | `origin/main` | 6 | 0 | 0 | 0 | `pass` | `DISP-GPC-EVIDENCE-BROWSER-20260625` |
-| `GlobalCloud Studio` | `main` | `origin/main` | 12 | 4 | 0 | 0 | `pass` | `DISP-STUDIO-EVIDENCE-INDEX-20260625` |
-| `GlobalCoud GPCF` | `codex/kds-token-sync-gpcf` | `origin/codex/kds-token-sync-gpcf` | 934 | 482 | 0 | 0 | `pass` | `DISP-GPCF-GOVERNANCE-EVIDENCE-20260625 / DISP-GPCF-SCHEME-RECOGNITION-20260626` |
-| `GlobalCloud XWAIL` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud GFIS` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud MMC` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud KDS` | `codex/kds-token-api-kds` | `origin/codex/kds-token-api-kds` | 62 | 35 | 0 | 0 | `pass` | `DISP-KDS-FUNDING-SYNC-RUNS-20260625 / DISP-KDS-SCHEME-RECOGNITION-20260626` |
-| `GlobalCloud XiaoG` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud PVAOS` | `pvaos/D4-release-readiness-governance` | `origin/pvaos/D4-release-readiness-governance` | 6 | 0 | 0 | 0 | `pass` | `DISP-PVAOS-RELEASE-GATE-20260625` |
-| `GlobalCloud SOP` | `main` | `origin/main` | 16 | 8 | 0 | 0 | `pass` | `DISP-SOP-WUHAN-SCENARIO-20260625 / DISP-SOP-SCHEME-RECOGNITION-20260626` |
-| `GlobalCloud PKC` | `codex/pkc-l4-task-notification` | `origin/codex/pkc-l4-task-notification` | 8 | 2 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
-| `GlobalCloud XGD` | `main` | `origin/main` | 3 | 0 | 0 | 0 | `pass` | `SCHEME-RECOGNITION-RULES-20260626` |
+| `GlobalCloud AAAS` | `main` | `origin/main` | 1 | 1 | 0 | 0 | `pass` | `loop_gate_missing_review / untracked loop_document_gate.py` |
+| `GlobalCloud Brain` | `codex/brain-l4-retrieval` | `origin/codex/brain-l4-retrieval` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `WAS世界资产体系` | `main` | `origin/main` | 1 | 0 | 0 | 0 | `pass` | `noise_cleanup_pending / tracked .DS_Store` |
+| `GlobalCloud XiaoC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud WAES` | `waes/integration-release` | `origin/waes/integration-release` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud GPC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud Studio` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCoud GPCF` | `codex/kds-token-sync-gpcf` | `origin/codex/kds-token-sync-gpcf` | 231 | 72 | 0 | 0 | `pass` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627 / REVIEW-AUTH-GPCF-WORKTREE-20260627 / GPCF-EXECUTION-CONTROL-001` |
+| `GlobalCloud XWAIL` | `main` | `origin/main` | 1 | 1 | 0 | 0 | `pass` | `loop_gate_missing_review / untracked loop_document_gate.py` |
+| `GlobalCloud GFIS` | `main` | `origin/main` | 54 | 0 | 0 | 0 | `pass` | `GFIS-REAL-SOR-001 / existing dirty review boundary` |
+| `GlobalCloud MMC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud KDS` | `codex/kds-token-api-kds` | `origin/codex/kds-token-api-kds` | 24 | 15 | 0 | 0 | `pass` | `GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001 / sensitive_path(.env.production.example)` |
+| `GlobalCloud XiaoG` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud PVAOS` | `pvaos/D4-release-readiness-governance` | `origin/pvaos/D4-release-readiness-governance` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud SOP` | `main` | `origin/main` | 2 | 1 | 0 | 0 | `pass` | `loop_gate_missing_review / output_.DS_Store_noise_pending / untracked loop_document_gate.py` |
+| `GlobalCloud PKC` | `codex/pkc-l4-task-notification` | `origin/codex/pkc-l4-task-notification` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud XGD` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 
 ## 3. 跨日漂移结论
 
-| 项 | 2026-06-25 基线 | 2026-06-26 live | 判断 |
+| 项 | 2026-06-26 记录值 | 2026-06-27 live recheck | 判断 |
 |---|---:|---:|---|
-| dirty 仓集合 | 7 | 17 | 仓集合已变：方案识别规则写入后全部项目均为 dirty |
-| pass 仓数量 | 10 | 0 | 已变：全部项目存在受控文档改动 |
-| ahead/behind/sensitive | 0 | 0 | 未出现版本或敏感路径风险 |
-| `GlobalCloud KDS` dirty | 4 | 62 | 已发生 live 漂移，仍归入 KDS funding/sync-run owner decision 和 scheme recognition review，不升级事实状态；当前 diff_check 为 pass |
-| `GlobalCoud GPCF` dirty | 156 | 934 | 治理文档、validator 与本地镜像聚合仍为 dirty，后续会随受控文档增加继续波动 |
-| `GlobalCloud SOP` dirty | 7 | 16 | SOP 场景 owner review 和 scheme recognition review 均在队列内，当前 untracked_count 为 8，计数按 live Git clean gate 输出更新 |
+| dirty 仓数量 | 17 | 7 | 已收敛但仍阻断：当前 dirty 仓为 `GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` 七仓 |
+| pass 仓数量 | 0 | 10 | 已恢复：10 仓 clean，可从旧的全量 dirty 口径中剥离 |
+| ahead/behind | 0 | 0 | 未出现版本追赶风险 |
+| sensitive_repos | 0 | 1 | 新阻塞：`GlobalCloud KDS` 出现 `.env.production.example`，Git clean gate 从 `partial` 收紧为 `blocked` |
+| `GlobalCloud KDS` dirty | 62 | 24 | compact 口径已下降，但 sensitive_path 仍在，review/stage/commit/push 继续阻断 |
+| `GlobalCoud GPCF` dirty | 934 | 231 | 治理证据聚合仍为主要 dirty 来源，且本轮 live gate 收口已新增 delegated wrapper review 与 pre-wave1 桥接动作 |
+| `GlobalCloud GFIS` dirty | 3 | 54 | 当前 dirty 明显上升，需与 `GFIS-REAL-SOR-001` 一并审查来源与保留边界 |
+| `GlobalCloud AAAS/XWAIL/SOP` dirty | 0 | 1/1/2 | AAAS/XWAIL 仍为 delegated wrapper 未跟踪；SOP 额外包含 `output/.DS_Store` system noise，需与 wrapper replay 一并判定 |
+| `WAS世界资产体系` dirty | 4 | 1 | 当前只剩 `.DS_Store` system noise；需沿既有 `AUTH-WAS-DELETE-DS-STORE-20260626` 路径处理，不并入 pre-wave1 六仓 review 边界 |
 
 ## 4. 下一步执行入口
 
 说明：第 2 节 `dirty_count` / `untracked_count` 采用 17 仓 Git clean gate 的 compact 口径，即 `git status --porcelain=v1`，未跟踪目录可能折叠为一行。`validate_project_group_live_status_snapshot_20260626.py` 采用 raw expanded 口径，即 `git status --short --untracked-files=all`，会展开未跟踪目录内文件。因此判断状态时以 dirty 仓集合、ahead/behind/sensitive/diff_check 和当前门禁结果为准，不以单次行数作为状态升级依据。
 
-raw expanded dirty counts 不在本文中硬编码为固定事实；每次执行前必须以 `validate_project_group_live_status_snapshot_20260626.py` 的当次输出为准。GPCF、KDS、SOP 等包含本地镜像、证据和未跟踪目录的仓库，raw expanded 数字会随受控证据写入继续波动。
+当前 raw expanded live counts 为 `GlobalCloud AAAS=1`、`WAS世界资产体系=1`、`GlobalCoud GPCF=231`、`GlobalCloud XWAIL=1`、`GlobalCloud GFIS=54`、`GlobalCloud KDS=38`、`GlobalCloud SOP=2`，其余 10 仓为 0。GPCF、KDS 等包含本地镜像、证据和未跟踪目录的仓库，raw expanded 数字仍会随受控证据写入继续波动。
 
 | 优先级 | 执行入口 | 当前动作 | 前置确认 |
 |---|---|---|---|
-| P0 | `DISP-WAS-SYSTEM-NOISE-20260625` | 选择删除 `.DS_Store` 或补充忽略规则 | 需要 `allow_delete_ds_store` 或 `allow_gitignore_update` |
-| P0 | `DISP-KDS-FUNDING-SYNC-RUNS-20260625` | 业务 owner 确认资金报告口径，KDS owner 确认 sync-run 归档/纳入/删除 | 需要 business owner 与 KDS owner |
-| P0 | `DISP-SOP-WUHAN-SCENARIO-20260625` | scenario owner 确认场景方案保留/返工/归档/入 KDS/对外 | 需要 scenario owner |
-| P1 | `DISP-GPCF-GOVERNANCE-EVIDENCE-20260625` | 审查治理包与 KDS 本地镜像包 | 需要 review/stage/commit/push 逐项确认 |
-| P1 | `DISP-GPC-EVIDENCE-BROWSER-20260625` | GPC evidence/browser review | 需要 review/stage/commit/push 逐项确认 |
-| P1 | `DISP-PVAOS-RELEASE-GATE-20260625` | PVAOS release gate review | 需要 review/stage/commit/push 逐项确认 |
-| P1 | `DISP-STUDIO-EVIDENCE-INDEX-20260625` | Studio evidence-index review | 需要 review/stage/commit/push 逐项确认 |
+| P0 | `GPCF-LIVE-STATUS-SNAPSHOT-20260626-001` | 按 7 仓 dirty 新事实重放 dirty classification / post-scheme queue / review authorization chain，防止继续沿用 3 仓口径；其中 6 仓 review 边界继续收口到 `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，`WAS .DS_Store` 沿 system noise cleanup 路径单独处理 | 需要先接受 7 仓 live drift 为当前真实基线，再决定是否扩容授权链 |
+| P0 | `GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` | 审查 `GlobalCloud KDS` 的 `.env.production.example` sensitive_path，决定保留、改名、忽略或清理路径，并在执行前复跑 Git gate | 需要 KDS owner 与显式 review/cleanup 授权 |
+| P0 | `GFIS-REAL-SOR-001` | 将 `GlobalCloud GFIS` 当前 dirty 审查与真实 source-of-record 补证入口合并处理，防止脏工作树掩盖真实业务输入边界 | 需要业务输入或人工确认保留边界 |
+| P1 | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | 对 `KDS/AAAS/XWAIL/GPCF/GFIS/SOP` 六仓 review 边界做人工确认和结论登记，再进入 Wave 1 或 GPCF worktree review | 需要逐仓人工确认 |
 
 ## 5. LOOP 运行控制闭环
 
 | 方向 | 本轮定义 |
 |---|---|
-| run | 重新执行 17 仓 Git clean 门禁，读取 SOP live Git 状态，形成 2026-06-26 live 快照 |
+| run | 重新执行 17 仓 Git clean 门禁，读取当前 17 仓 live Git 状态，形成 2026-06-27 recheck 结果，并验证 delegated loop gate 缺口已补齐 |
 | stop | 停止在 `authorization_boundary`，不执行删除、stage、commit、push、真实同步或状态升级 |
 | verify | 通过 `validate_project_group_live_status_snapshot_20260626.py`、Git clean 门禁和 Loop 文档门禁复核 |
 | recover | 若 live 仓集合、dirty 分类或敏感路径发生变化，回滚本文并重新采集快照 |
-| debug | 当前阻塞是人工确认边界和 dirty 未处置，不是仓库缺失、远端落后、敏感路径或 diff_check 失败；当前 17 仓均存在受控文档 dirty |
+| debug | 当前阻塞是 `GlobalCloud KDS` sensitive_path、`GlobalCloud AAAS / WAS世界资产体系 / GlobalCoud GPCF / GlobalCloud XWAIL / GlobalCloud GFIS / GlobalCloud KDS / GlobalCloud SOP` 七仓 dirty 和人工确认边界；其中 `WAS .DS_Store` 仍走 noise cleanup 路径。仓库缺失型 loop gate blocker 已消除，远端落后和 diff_check 仍未出现 |
 
 ## 6. 禁止升级
 

@@ -19,7 +19,7 @@ superseded_by: []
 # Agent-Reach P9S Source Direct Authorization File Safety 2026-06-26
 
 - status: `p9_source_direct_authorization_file_safety_ready`
-- local_authorization_file_present: `False`
+- local_authorization_file_present: `True`
 - local_authorization_file_tracked: `False`
 - local_authorization_file_git_ignored: `True`
 - template_authorization_valid: `False`

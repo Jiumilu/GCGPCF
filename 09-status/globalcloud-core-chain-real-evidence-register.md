@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-core-chain-real-evidence-register.md
 source_path: 09-status/globalcloud-core-chain-real-evidence-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-27
 supersedes: []
 superseded_by: []
 ---
@@ -43,6 +43,22 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 - KDS/Brain 知识证据、候选推理和治理边界；
 - GPCF 文档、门禁、LOOP 和证据台账。
 
+## 2.1 Trigger Layer 对齐
+
+核心链路当前状态、下一批任务和人工确认边界，统一以 `docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md`、`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`、`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 和 `09-status/globalcloud-project-group-real-execution-governance-board.md` 为主控口径；对应总表标题为 `GlobalCloud 项目群 Ready for Review 触发映射表 2026-06-27`。
+
+`trigger_layer` 只说明“当前若继续推进，会先触发哪一段门禁或桥接层”，不等于授权已发生、命令已执行或状态已升级。
+
+| 链路/项目 | trigger_layer | 对应入口 | 当前含义 |
+|---|---|---|---|
+| GPCF | `authorization_to_pre_execution_total_bridge` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001` | 人工确认入口到执行前只读就绪已建模，但仍是 `authorization_granted=0`、`action_executed=0` |
+| WAES | `repair_authorization_boundary` | `WAES-LINT-RUNTIME-001` | 未获授权前只保留 repair 候选，不进入发布绑定 |
+| XWAIL / AaaS / KDS | `pre_wave1_review_bridge` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | pre-wave1 review 未确认前，不进入 Wave 1 回执或执行前桥接 |
+| GFIS | `source_record_boundary` | `GFIS-REAL-SOR-001` | 未收到真实 source-of-record 或 owner 确认前，不推进业务事实链 |
+| GPC | `external_runtime_boundary` | `GPC-EXTERNAL-RUNTIME-EVIDENCE-001` | 外部 runtime 证据缺失前，不声明真实交付或客户验收 |
+| PVAOS | `local_release_review_boundary` | `PVAOS-RELEASE-REVIEW-001` | 本地 release review 候选不等于远程 CI、PR、merge 或生产发布 |
+| Brain | `human_review_boundary` | `BRAIN-HUMAN-REVIEW-DECISION-001` | 人工审查未确认前，不升级到 `accepted` 或 `integrated` |
+
 ## 3. 真实证据状态机
 
 | 状态 | 含义 | 是否可声明完成 |
@@ -71,23 +87,23 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 
 ## 5. 核心链路真实证据矩阵
 
-| 链路/项目 | 当前实施方案 | 真实进度 | 真实研发 | 真实运行 | 真实集成 | 真实交付 | 客户验收 | 下一步 |
-|---|---|---|---|---|---|---|---|---|
-| GPCF | `GlobalCloud GPCF 实施方案.md` | `verified` | `candidate` | `controlled / git_clean_partial / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / gpcf_project_status_matrix_17_project_scope_controlled / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled` | `declared` | `not_collected` | `not_collected` | `GPCF-GIT-CLEAN-001` 已建立项目群 17 仓 Git/version control 真实基线；`GPCF-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626-001` 已建立 17 项目 ready_for_review 推进队列；`GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001` 已将状态矩阵补齐为 17 项目口径并通过 `validate_gpcf_project_status_matrix_17_project_scope.py`，当前状态分布为 `ready_for_review=12`、`partial_verified=1`、`repair_required=3`、`owner_review_required=1`；`GPCF-SCHEME-RECOGNITION-RULES-20260626-001` 已写入 17 个 `AGENTS.md` 和 34 个项目级方案继承声明；`GPCF-DIRTY-DISPOSITION-QUEUE-POST-SCHEME-RECOGNITION-20260626-001` 已将方案识别规则写入后的 17 仓 dirty 建立逐仓处置队列；`GPCF-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626-001` 已生成 17 个逐仓 scheme review 授权确认项且默认全部 false；`GPCF-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626-001` 已对 Loop document gate 内部 readiness 调用增加一次重试硬化且不放松门禁；历史 KDS diffcheck blocker 证据保留，但当前 live recheck 为 diff_check pass；`GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` 未获授权且未执行 cleanup；当前不能声明项目群 Git 全量 clean、任何授权已发生、任何项目自动升级到 ready_for_review、可提交、可推送或可验收；证据见 `09-status/gpcf-project-status-matrix.md`、`09-status/globalcloud-project-group-real-execution-governance-board.md`、`docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md` |
-| WAES | `GlobalCloud WAES 实施方案.md` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
-| XWAIL | `GlobalCloud XWAIL 实施方案.md` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已完成 7 条 XWAIL/AaaS 本地命令验证并形成 integration precheck candidate；证据见 `docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md` |
-| AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate` | `declared` | `not_collected` | `not_collected` | `AAAS-SERVICE-RUNTIME-001` 已建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已复核 AaaS 服务包可作为 WAES 绑定前置候选输入；`AAAS-WAES-BINDING-PRECHECK-001` 已完成 AaaS-WAES 绑定前置预检并保持 WAES Draft/候选边界；证据见 `docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md` |
-| GFIS | `GlobalCloud GFIS 实施方案.md` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
-| GPC | `GlobalCloud GPC 实施方案.md` | `candidate` | `partial_verified / browser_repaired` | `partial_verified / external_runtime_evidence_required` | `partial_verified` | `repair_required` | `not_collected` | `GPC-EVIDENCE-BROWSER-001` 已修复 README 索引和 Playwright 浏览器 E2E，并通过 `quality:repo` 与 `test:e2e`；生产确认、外部联调和 GCFIS runtime surface 仍缺证据；证据见 `docs/harness/GPC/evidence/gpc-evidence-browser-repair-20260625.md` |
-| PVAOS | `GlobalCloud PVAOS 实施方案.md` | `candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `partial_verified` | `not_collected` | `not_collected` | `PVAOS-RELEASE-GATE-001` 已修复 Vitest setup、依赖 audit 和 Playwright browser smoke，并通过本地 release gate；`PVAOS-RELEASE-REVIEW-001` 已复跑本地 release readiness gate 并形成提交前 review candidate；证据见 `docs/harness/PVAOS/evidence/pvaos-release-review-20260625.md` |
-| KDS | `GlobalCloud KDS 实施方案.md` | `candidate` | `partial_verified` | `owner_review_required / kds_report_hold_controlled` | `partial_verified` | `not_collected` | `not_collected` | `KDS-RAG-EXPORT-001` 已在 local dev 修复并通过导出、校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit；`KDS-BRAIN-REPORT-HOLD-REVIEW-001` 已登记资金追踪报告和 2026-06-25 sync-run 产物 owner review 包；证据见 `docs/harness/KDS/evidence/kds-brain-report-hold-review-20260625.md` |
-| Brain | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `verified` | `verified_with_authorization_boundary` | `ready_for_human_review / authorization_boundary` | `not_collected` | `not_collected` | A1/A2/A3 授权型闭包、KDS RAG export 输入和 Brain review handoff 已通过本地门禁；状态保持 `ready_for_review / authorization_boundary`，人工审查包见 `docs/harness/Brain/evidence/brain-review-handoff-20260625.md` |
+| 链路/项目 | 当前实施方案 | trigger_layer | 真实进度 | 真实研发 | 真实运行 | 真实集成 | 真实交付 | 客户验收 | 下一步 |
+|---|---|---|---|---|---|---|---|---|---|
+| GPCF | `GlobalCloud GPCF 实施方案.md` | `authorization_to_pre_execution_total_bridge` | `verified` | `candidate` | `controlled / git_clean_blocked / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / gpcf_project_status_matrix_17_project_scope_controlled / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / external_loop_gate_delegate_baseline_ready / pre_wave1_review_authorization_ready / next_stage_authorization_decision_board_prepared / next_stage_authorization_receipt_example_pack_ready / next_stage_authorization_receipt_recording_procedure_ready / next_stage_authorization_human_fill_request_ready / next_stage_authorization_chain_consistency_audit_ready / next_stage_authorization_package_ready / next_stage_authorization_chain_loop_round_ready / operational_blocker_resolution_matrix_controlled / wave1_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled` | `declared` | `not_collected` | `not_collected` | `GPCF-GIT-CLEAN-001` 已建立项目群 17 仓 Git/version control 真实基线；`GPCF-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626-001` 已建立 17 项目 ready_for_review 推进队列；`GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001` 已将状态矩阵补齐为 17 项目口径并通过 `validate_gpcf_project_status_matrix_17_project_scope.py`，当前状态分布为 `ready_for_review=12`、`partial_verified=1`、`repair_required=3`、`owner_review_required=1`；`GPCF-SCHEME-RECOGNITION-RULES-20260626-001` 已写入 17 个 `AGENTS.md` 和 34 个项目级方案继承声明；`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 当前保持 `project_group_current_state_baseline_refresh_20260626 = controlled`、`dirty_repo_count = 7`，`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 当前保持 `development_queue_ready = true`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；post-scheme 处置队列和 review 授权请求仍受控，但 live recheck 已从 17 仓 dirty 收敛为 `GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP` 七仓 dirty、10 仓 clean，其中 `WAS世界资产体系/.DS_Store` 仅沿 noise cleanup 路径单独治理，且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path，导致当前 project-group Git gate 为 `blocked`；`GPCF-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-20260627-001` 已将 `GlobalCloud AAAS/XWAIL/SOP` delegated loop gate wrapper 的当前 baseline 与 replay 边界收口为统一受控证据；`GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` 已将当前 6 仓 review 边界进一步收口为 Wave 1 前置桥接入口；当前 next-stage 授权链又进一步收口为“决策板 -> 回执示例包 -> 回执录入流程 -> human fill request -> 一致性审计 -> 两本目标总账 -> 聚合授权包 -> loop-round 归档”的受控链，用于在人工确认前固定 7 个 auth_id、1/6 总账分流和默认边界；`GPCF-OPERATIONAL-BLOCKER-RESOLUTION-MATRIX-20260626-001` 已将运行门禁阻塞口径同步到当前 7 仓总事实、6 仓 review 边界与 KDS sensitive_path 前置；`GPCF-WAVE1-AUTHORIZATION-REQUEST-20260626-001` 当前已明确必须先满足上述 6 仓 review 边界确认后，才进入 WAES/GFIS/GPC/Brain 的 Wave 1 授权入口；`GPCF-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626-001` 已对 Loop document gate 内部 readiness 调用增加一次重试硬化且不放松门禁；历史 KDS diffcheck blocker 证据保留，但当前 live recheck 的新硬阻塞已转为 sensitive_path review；`GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` 未获授权且未执行 cleanup；当前不能声明项目群 Git 全量 clean、任何授权已发生、任何项目自动升级到 ready_for_review、可提交、可推送或可验收；证据见 `09-status/gpcf-project-status-matrix.md`、`09-status/globalcloud-project-group-real-execution-governance-board.md`、`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md`、`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md`、`docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md`、`docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md`、`docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md`、`docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md`、`docs/harness/evidence/globalcloud-project-group-operational-blocker-resolution-matrix-20260626.md`、`docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md` |
+| WAES | `GlobalCloud WAES 实施方案.md` | `repair_authorization_boundary` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
+| XWAIL | `GlobalCloud XWAIL 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已完成 7 条 XWAIL/AaaS 本地命令验证并形成 integration precheck candidate；但当前仍先受 `XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
+| AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `AAAS-SERVICE-RUNTIME-001` 已建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已复核 AaaS 服务包可作为 WAES 绑定前置候选输入；`AAAS-WAES-BINDING-PRECHECK-001` 已完成 AaaS-WAES 绑定前置预检并保持 WAES Draft/候选边界；但当前仍先受 `AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
+| GFIS | `GlobalCloud GFIS 实施方案.md` | `source_record_boundary` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
+| GPC | `GlobalCloud GPC 实施方案.md` | `external_runtime_boundary` | `candidate` | `partial_verified / browser_repaired` | `partial_verified / external_runtime_evidence_required` | `partial_verified` | `repair_required` | `not_collected` | `GPC-EVIDENCE-BROWSER-001` 已修复 README 索引和 Playwright 浏览器 E2E，并通过 `quality:repo` 与 `test:e2e`；生产确认、外部联调和 GCFIS runtime surface 仍缺证据；证据见 `docs/harness/GPC/evidence/gpc-evidence-browser-repair-20260625.md` |
+| PVAOS | `GlobalCloud PVAOS 实施方案.md` | `local_release_review_boundary` | `candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `partial_verified` | `not_collected` | `not_collected` | `PVAOS-RELEASE-GATE-001` 已修复 Vitest setup、依赖 audit 和 Playwright browser smoke，并通过本地 release gate；`PVAOS-RELEASE-REVIEW-001` 已复跑本地 release readiness gate 并形成提交前 review candidate；证据见 `docs/harness/PVAOS/evidence/pvaos-release-review-20260625.md` |
+| KDS | `GlobalCloud KDS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `partial_verified` | `owner_review_required / kds_report_hold_controlled / git_sensitive_review_boundary` | `partial_verified` | `not_collected` | `not_collected` | `KDS-RAG-EXPORT-001` 已在 local dev 修复并通过导出、校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit；`KDS-BRAIN-REPORT-HOLD-REVIEW-001` 已登记资金追踪报告和 2026-06-25 sync-run 产物 owner review 包；当前 live recheck 另有 `GlobalCloud KDS/.env.production.example` sensitive_path review 前置；证据见 `docs/harness/KDS/evidence/kds-brain-report-hold-review-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-kds-diffcheck-cleanup-command-pack-20260626.md` |
+| Brain | `GlobalCloud Brain 实施方案.md` | `human_review_boundary` | `ready_for_review` | `verified` | `verified_with_authorization_boundary` | `ready_for_human_review / authorization_boundary` | `not_collected` | `not_collected` | A1/A2/A3 授权型闭包、KDS RAG export 输入和 Brain review handoff 已通过本地门禁；状态保持 `ready_for_review / authorization_boundary`，人工审查包见 `docs/harness/Brain/evidence/brain-review-handoff-20260625.md` |
 
 ## 6. 运行命令登记
 
 | 项目 | 已登记命令 | 状态 |
 |---|---|---|
-| GPCF | `validate_project_group_implementation_plan.py`、`loop_document_gate.py`、`python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_git_clean_gate.py --allow-non-pass-exit-zero`、`python3 tools/kds-sync/validate_project_group_git_clean_evidence.py`、`python3 tools/kds-sync/validate_project_group_dirty_classification.py`、`python3 tools/kds-sync/validate_project_group_review_packages.py`、`python3 tools/kds-sync/validate_project_group_human_confirmation_request.py`、`python3 tools/kds-sync/validate_project_group_authorization_routing.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue_post_scheme_recognition_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_review_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_loop_document_gate_readiness_retry_hardening_20260626.py`、`python3 tools/kds-sync/validate_gpcf_project_status_matrix_17_project_scope.py`、`python3 tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py`、`python3 tools/kds-sync/validate_project_group_loop_gate_readiness_pass_20260626.py`、`python3 tools/kds-sync/validate_project_group_first_execution_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_template_20260626.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_ledger_20260626.py`、`python3 tools/kds-sync/validate_project_group_authorization_pre_execution_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_authorization_pre_execution_environment_readiness_20260626.py`、`python3 tools/kds-sync/validate_project_group_full_project_baseline.py`、`python3 tools/kds-sync/validate_project_group_next_executable_task_packs.py`、`python3 tools/kds-sync/validate_project_group_dependency_execution_matrix.py`、`python3 tools/kds-sync/validate_project_group_status_advancement_matrix.py`、`python3 tools/kds-sync/validate_project_group_ready_for_review_advancement_queue_20260626.py`、`python3 tools/kds-sync/validate_project_group_kds_diffcheck_blocker_20260626.py`、`python3 tools/kds-sync/validate_project_group_kds_diffcheck_cleanup_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_scheme_recognition_rules_20260626.py`、`python3 tools/kds-sync/validate_xiaoc_model_routing_dryrun_environment_blocked.py`、`python3 tools/kds-sync/validate_mmc_governance_template_smoke.py`、`python3 tools/kds-sync/validate_pkc_kds_brain_workflow_dryrun.py`、`python3 tools/kds-sync/validate_xgd_tick_brain_smoke.py`、`python3 tools/kds-sync/validate_studio_workflow_permissions_recheck.py`、`python3 tools/kds-sync/validate_xiaog_live_api_auth_pack.py`、`python3 tools/kds-sync/validate_sop_scenario_owner_review.py`、`python3 tools/kds-sync/validate_kds_brain_report_hold_review.py` | `controlled / git_clean_partial / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / dirty_disposition_queue_ready / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled / gpcf_project_status_matrix_17_project_scope_controlled / live_status_snapshot_controlled / loop_gate_readiness_pass / first_execution_authorization_request_prepared / execution_authorization_receipt_template_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / xiaoc_model_routing_dryrun_environment_blocked / mmc_governance_template_smoke_controlled / pkc_kds_brain_workflow_dryrun_controlled / xgd_tick_brain_smoke_controlled / studio_workflow_permissions_recheck_controlled / xiaog_live_api_auth_pack_controlled / sop_scenario_owner_review_controlled / kds_brain_report_hold_review_controlled`，17 仓均存在，无 ahead、behind、敏感路径且 diff_check pass；Git clean 当前为 partial，原因是 17 仓 dirty；状态矩阵已补齐为 17 项目口径且由 validator 控制；第一批真实执行授权请求、post-scheme 17 仓 review 授权请求、Loop document gate readiness 重试硬化、确认回执模板、授权回执总账、授权项执行前命令包、只读环境就绪检查、ready_for_review 推进队列、历史 KDS diff check 阻塞证据、KDS cleanup 授权命令包、项目群方案体系会话入口识别规则和 post-scheme dirty 处置队列已准备 |
+| GPCF | `validate_project_group_implementation_plan.py`、`loop_document_gate.py`、`python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_git_clean_gate.py --allow-non-pass-exit-zero`、`python3 tools/kds-sync/validate_project_group_git_clean_evidence.py`、`python3 tools/kds-sync/validate_project_group_dirty_classification.py`、`python3 tools/kds-sync/validate_project_group_review_packages.py`、`python3 tools/kds-sync/validate_project_group_human_confirmation_request.py`、`python3 tools/kds-sync/validate_project_group_authorization_routing.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue_post_scheme_recognition_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_review_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_authorization_receipt_ledger_20260626.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_pre_execution_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_external_loop_gate_delegates.py`、`python3 tools/kds-sync/validate_project_group_external_loop_gate_delegate_baseline_20260627.py`、`python3 tools/kds-sync/validate_project_group_pre_wave1_review_authorization_request_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_decision_board_20260626.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_receipt_example_pack_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_receipt_recording_procedure_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_human_fill_request_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_chain_consistency_audit_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_package_20260627.py`、`python3 tools/kds-sync/validate_project_group_next_stage_authorization_chain_loop_round_20260627.py`、`python3 tools/kds-sync/validate_project_group_operational_blocker_resolution_matrix_20260626.py`、`python3 tools/kds-sync/validate_project_group_wave1_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_loop_document_gate_readiness_retry_hardening_20260626.py`、`python3 tools/kds-sync/validate_gpcf_project_status_matrix_17_project_scope.py`、`python3 tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py`、`python3 tools/kds-sync/validate_project_group_loop_gate_readiness_pass_20260626.py`、`python3 tools/kds-sync/validate_project_group_first_execution_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_template_20260626.py`、`python3 tools/kds-sync/validate_project_group_execution_authorization_receipt_ledger_20260626.py`、`python3 tools/kds-sync/validate_project_group_authorization_pre_execution_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_authorization_pre_execution_environment_readiness_20260626.py`、`python3 tools/kds-sync/validate_project_group_full_project_baseline.py`、`python3 tools/kds-sync/validate_project_group_next_executable_task_packs.py`、`python3 tools/kds-sync/validate_project_group_dependency_execution_matrix.py`、`python3 tools/kds-sync/validate_project_group_status_advancement_matrix.py`、`python3 tools/kds-sync/validate_project_group_ready_for_review_advancement_queue_20260626.py`、`python3 tools/kds-sync/validate_project_group_kds_diffcheck_blocker_20260626.py`、`python3 tools/kds-sync/validate_project_group_kds_diffcheck_cleanup_command_pack_20260626.py`、`python3 tools/kds-sync/validate_project_group_scheme_recognition_rules_20260626.py`、`python3 tools/kds-sync/validate_xiaoc_model_routing_dryrun_environment_blocked.py`、`python3 tools/kds-sync/validate_mmc_governance_template_smoke.py`、`python3 tools/kds-sync/validate_pkc_kds_brain_workflow_dryrun.py`、`python3 tools/kds-sync/validate_xgd_tick_brain_smoke.py`、`python3 tools/kds-sync/validate_studio_workflow_permissions_recheck.py`、`python3 tools/kds-sync/validate_xiaog_live_api_auth_pack.py`、`python3 tools/kds-sync/validate_sop_scenario_owner_review.py`、`python3 tools/kds-sync/validate_kds_brain_report_hold_review.py` | `controlled / git_clean_blocked / dirty_classification_controlled / review_packages_controlled / human_confirmation_request_prepared / authorization_routing_ready / dirty_disposition_queue_ready / dirty_disposition_queue_post_scheme_recognition_ready / post_scheme_recognition_review_authorization_request_prepared / external_loop_gate_delegate_baseline_ready / pre_wave1_review_authorization_ready / next_stage_authorization_decision_board_prepared / next_stage_authorization_receipt_example_pack_ready / next_stage_authorization_receipt_recording_procedure_ready / next_stage_authorization_human_fill_request_ready / next_stage_authorization_chain_consistency_audit_ready / next_stage_authorization_package_ready / next_stage_authorization_chain_loop_round_ready / operational_blocker_resolution_matrix_controlled / wave1_authorization_request_prepared / loop_document_gate_readiness_retry_hardening_controlled / gpcf_project_status_matrix_17_project_scope_controlled / live_status_snapshot_controlled / loop_gate_readiness_pass / first_execution_authorization_request_prepared / execution_authorization_receipt_template_ready / execution_authorization_receipt_ledger_ready / authorization_pre_execution_command_pack_ready / authorization_pre_execution_environment_ready / full_project_baseline_controlled / next_executable_task_packs_controlled / dependency_execution_matrix_controlled / status_advancement_matrix_controlled / ready_for_review_advancement_queue_ready / kds_diffcheck_blocker_controlled / kds_diffcheck_cleanup_command_pack_ready / scheme_recognition_rules_controlled / xiaoc_model_routing_dryrun_environment_blocked / mmc_governance_template_smoke_controlled / pkc_kds_brain_workflow_dryrun_controlled / xgd_tick_brain_smoke_controlled / studio_workflow_permissions_recheck_controlled / xiaog_live_api_auth_pack_controlled / sop_scenario_owner_review_controlled / kds_brain_report_hold_review_controlled`，17 仓均存在，无 ahead/behind，diff_check pass；当前 live recheck 为 10 仓 clean、7 仓 dirty（`GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`），且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path，项目群 Git gate 因此为 blocked；其中 `WAS世界资产体系/.DS_Store` 继续沿 noise cleanup 路径单独治理，不并入当前 6 仓 review 边界；状态矩阵已补齐为 17 项目口径且由 validator 控制；post-scheme 6 仓 review 授权请求、post-scheme 授权回执总账、post-scheme 预执行命令包、AAAS/XWAIL/SOP delegated wrapper baseline、Pre-Wave1 review 桥接入口、next-stage 决策板、回执示例包、回执录入流程、human fill request、一致性审计、聚合授权包、loop-round 归档、运行门禁阻塞矩阵、Wave 1 授权请求、Loop document gate readiness 重试硬化、确认回执模板、授权回执总账、授权项执行前命令包、只读环境就绪检查、ready_for_review 推进队列、历史 KDS diff check 阻塞证据、KDS cleanup 授权命令包、项目群方案体系会话入口识别规则和 post-scheme dirty 处置队列已准备 |
 | WAES | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`validate_waes_lint_runtime_repair_authorization.py` | `authorization_required / repair_required`，`npm run lint` 当前仍因 `AppLazyImports.ts` JSX 解析和 `PluginManager.tsx` import type 解析失败；修复需用户确认 WAES dirty workspace 接管边界 |
 | XWAIL | `python3 scripts/validate_xwail.py --all`、`python3 scripts/build_xap.py --check`、`python3 scripts/verify_xap.py --all`、`python3 tools/kds-sync/validate_xwail_min_validator_runtime.py`、`python3 tools/kds-sync/validate_xwail_waes_aaas_contract_precheck.py` | `ready_for_review / local_dev_boundary / integration_precheck_candidate`，最小模型校验、XAP manifest build check、XAP verify、GPCF evidence reference gate 和 XWAIL-WAES-AaaS contract precheck 已通过；仍不声明完整 XWAIL 工具链、WAES 发布或 AaaS 绑定完成 |
 | AaaS | `python3 scripts/validate_service_package.py --all`、`python3 scripts/validate_metering.py --all`、`python3 scripts/validate_sla.py --all`、`python3 scripts/verify_evidence_requirements.py --all`、`python3 tools/kds-sync/validate_aaas_service_runtime.py`、`python3 tools/kds-sync/validate_xwail_waes_aaas_contract_precheck.py`、`python3 tools/kds-sync/validate_aaas_waes_binding_precheck.py` | `ready_for_review / local_dev_boundary / integration_precheck_candidate`，最小 ServicePackage、Metering、SLA、EvidenceRequirement、GPCF evidence reference gate、XWAIL-WAES-AaaS contract precheck 和 AaaS-WAES binding precheck 已通过；仍不声明真实计费、真实结算、SLA 强制执行、客户订阅、客户交付或 WAES 发布完成 |
@@ -126,7 +142,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 检查范围 | 17 个项目 Git 仓库 |
 | 执行命令 | `python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_git_clean_gate.py --allow-non-pass-exit-zero` |
 | GPCF 校验器 | `validate_project_group_git_clean_evidence.py` |
-| 门禁结论 | `project_group_git_clean = partial` |
+| 门禁结论 | `project_group_git_clean = blocked` |
 | 通过项 | `expected_repo_count=17`、`checked_repo_count=17`、`missing_repos=[]`、`ahead_repos=[]`、`behind_repos=[]`、`sensitive_repos=[]`、`diff_check=pass` |
 | Dirty 仓库 | `WAS世界资产体系`、`GlobalCloud GPC`、`GlobalCloud Studio`、`GlobalCoud GPCF`、`GlobalCloud KDS`、`GlobalCloud PVAOS`、`GlobalCloud SOP` |
 | 状态影响 | 当前不能声明项目群 Git 全量 clean、可提交、可推送、可验收或项目群 ready_for_review |
@@ -223,8 +239,8 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_project_group_live_status_snapshot_20260626.py` |
 | 当前结论 | `project_group_live_status_snapshot_20260626 = controlled` |
 | 状态候选 | `live_status_snapshot_controlled` |
-| 快照结果 | 17 仓检查；0 仓 pass；17 仓 dirty；无 ahead、behind、敏感路径；KDS diff check fail |
-| 漂移结论 | dirty 仓集合已变为 17 仓；新增 dirty 主要来自方案识别规则写入 17 个 AGENTS.md 和 34 个项目级方案文件；当前 diff_check 为 pass，Git clean 仍因 17 仓 dirty 保持 partial |
+| 快照结果 | 17 仓检查；10 仓 pass；7 仓 dirty（`GlobalCloud AAAS`、`WAS世界资产体系`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`）；无 ahead、behind；`GlobalCloud KDS/.env.production.example` 触发 sensitive_path；diff_check pass |
+| 漂移结论 | dirty 仓集合已从 17 仓收敛为 7 仓；当前 Git clean 不再是全量 dirty 阻塞，而是 KDS sensitive_path、6 仓 review 边界与 1 项 WAS noise cleanup 共同保持 `blocked` |
 | 状态影响 | 将 2026-06-26 live 状态作为下一轮执行入口，防止沿用 2026-06-25 旧计数 |
 | 边界 | 不声明项目群 Git 全量 clean，不声明可提交、可推送，不声明 KDS/SOP 业务内容已确认，不声明 accepted、integrated 或 customer_accepted |
 
@@ -239,10 +255,10 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_project_group_dirty_disposition_queue_post_scheme_recognition_20260626.py` |
 | 当前结论 | `project_group_dirty_disposition_queue_post_scheme_recognition_20260626 = controlled` |
 | 状态候选 | `dirty_disposition_queue_post_scheme_recognition_ready` |
-| 队列项 | 17 个 dirty 仓；17 个 scheme recognition review candidate、2 个 owner decision、1 个 noise decision、1 个 KDS diff check blocker |
+| 队列项 | 6 个当前 dirty 仓；3 个 delegated wrapper review candidate、1 个 GPCF current governance review candidate、1 个 GFIS repair boundary review candidate、1 个 KDS sensitive_path review candidate |
 | 默认授权状态 | `review_allowed=false`、`stage_allowed=false`、`commit_allowed=false`、`push_allowed=false`、`delete_allowed=false` |
-| 状态影响 | 将方案识别规则写入后的 17 仓 dirty 状态转为逐仓处置队列，防止沿用 2026-06-25 的 7 仓旧口径 |
-| 边界 | 不声明项目群 Git 全量 clean，不声明可提交、可推送，不声明 KDS diff check 已修复，不声明 accepted、integrated 或 customer_accepted |
+| 状态影响 | 将方案识别规则写入后的 post-scheme dirty 状态重放为当前 6 仓处置队列，防止沿用 2026-06-25 的 7 仓旧口径或 17 仓历史口径 |
+| 边界 | 不声明项目群 Git 全量 clean，不声明可提交、可推送，不声明 KDS sensitive_path 已解除，不声明 accepted、integrated 或 customer_accepted |
 
 ## 7.4.3.2 项目群 Post-Scheme Review 授权请求登记
 
@@ -255,12 +271,44 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_project_group_post_scheme_recognition_review_authorization_request_20260626.py` |
 | 当前结论 | `project_group_post_scheme_recognition_review_authorization_request_20260626 = prepared` |
 | 状态候选 | `post_scheme_recognition_review_authorization_request_prepared` |
-| 请求项 | 17 个 `AUTH-*-SCHEME-REVIEW-20260626` |
+| 请求项 | 6 个当前 dirty review 授权项：`AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-GFIS-SCHEME-REVIEW-20260626`、`AUTH-KDS-SCHEME-REVIEW-20260626`、`AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` |
 | 默认授权状态 | `review_allowed=false`、`stage_allowed=false`、`commit_allowed=false`、`push_allowed=false`、`delete_allowed=false`、`cleanup_allowed=false` |
-| 状态影响 | 将 17 仓 scheme recognition review 变成逐仓人工确认入口；不自动执行 review 或 Git 动作 |
+| 状态影响 | 将当前 7 仓 dirty 分成 `6 仓 review 边界 + 1 项 WAS noise cleanup` 两条确认路径；不自动执行 review 或 Git 动作 |
+| 单仓锚点 | `GlobalCloud KDS` 复用 `5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要`；`GlobalCloud AAAS` 复用 `5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要`；`GlobalCloud XWAIL` 复用 `5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要`；`GlobalCloud SOP` 复用 `5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要` |
 | 边界 | 不声明任何 scheme review 已授权，不声明可 stage、commit、push，不声明 accepted、integrated 或 customer_accepted |
 
-## 7.4.3.3 Loop Document Gate Readiness 重试硬化登记
+## 7.4.3.3 项目群 Post-Scheme 授权回执总账登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-POST-SCHEME-RECOGNITION-AUTHORIZATION-RECEIPT-LEDGER-20260626-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-post-scheme-recognition-review-authorization-request-20260626.md`、`globalcloud-project-group-execution-authorization-receipt-template-20260626.md` |
+| GPCF 校验器 | `validate_project_group_post_scheme_recognition_authorization_receipt_ledger_20260626.py` |
+| 当前结论 | `project_group_post_scheme_recognition_authorization_receipt_ledger_20260626 = controlled` |
+| 状态候选 | `post_scheme_recognition_authorization_receipt_ledger_ready` |
+| 总账状态 | `receipt_record_count=0`、`authorization_granted_count=0`、`action_executed_count=0`、`pending_authorization_items=6` |
+| 状态影响 | 将当前 7 仓 dirty 中的 6 仓 review 边界串成 post-scheme 授权回执总账；`WAS .DS_Store` 继续沿既有 noise cleanup 路径单独处置；未获人工确认前不得写入任何授权或执行状态 |
+| 单仓锚点 | delegated wrapper 三仓写入前均需回放 `5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要`、`5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要`、`5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要`；KDS 写入前需回放 `5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要` |
+| 边界 | 不声明任何授权已发生，不声明任何动作已执行，不声明可 review、stage、commit、push、delete、cleanup，不声明 accepted、integrated 或 customer_accepted |
+
+## 7.4.3.4 项目群 Post-Scheme 执行前命令包登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-POST-SCHEME-RECOGNITION-PRE-EXECUTION-COMMAND-PACK-20260626-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-pre-execution-command-pack-20260626.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-post-scheme-recognition-review-authorization-request-20260626.md`、`globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md` |
+| GPCF 校验器 | `validate_project_group_post_scheme_recognition_pre_execution_command_pack_20260626.py` |
+| 当前结论 | `project_group_post_scheme_recognition_pre_execution_command_pack_20260626 = controlled` |
+| 状态候选 | `post_scheme_recognition_pre_execution_command_pack_ready` |
+| 命令包状态 | `command_pack_count=6`、`receipt_record_count=0`、`authorization_granted_count=0`、`action_executed_count=0` |
+| 状态影响 | 为当前 7 仓 dirty 中的 6 仓 review 边界绑定执行前命令、receipt ledger gate、Git live、证据、门禁和回滚边界；`WAS .DS_Store` 继续沿 noise cleanup 路径单独处置；未获授权前不得执行任何 review、cleanup 或 Git 动作 |
+| 边界 | 不声明任何命令包已执行，不声明任何授权已发生，不声明项目群 Git 全量 clean，不声明 accepted、integrated 或 customer_accepted |
+
+## 7.4.3.5 Loop Document Gate Readiness 重试硬化登记
 
 | 项 | 内容 |
 |---|---|
@@ -366,6 +414,81 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 状态影响 | 7 项授权命令包的路径和入口已完成只读就绪检查；当前没有任何授权或命令包动作已执行 |
 | 边界 | 不声明任何授权已发生，不声明任何命令包已执行，不 review、stage、commit、push，不声明 accepted、integrated 或 customer_accepted |
 
+## 7.4.10 项目群下一阶段授权决策板登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-NEXT-STAGE-AUTHORIZATION-DECISION-BOARD-20260626-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md`、`globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md`、`globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md` |
+| GPCF 校验器 | `validate_project_group_next_stage_authorization_decision_board_20260626.py` |
+| 当前结论 | `project_group_next_stage_authorization_decision_board_20260626 = prepared` |
+| 状态候选 | `authorization_decision_board_prepared` |
+| 决策项 | `7` 项：`1` 项 `WAS .DS_Store` noise cleanup 决策 + `6` 项 Pre-Wave1 review 边界确认 |
+| 状态影响 | 把当前人工确认入口从“是否进入 Wave 1”前移到“先确认 next-stage 决策项”；未确认前所有授权和动作保持 `false` |
+| 边界 | 不声明任何授权已发生，不声明任何动作已执行，不 review、cleanup、stage、commit、push，不声明 accepted、integrated 或 customer_accepted |
+
+## 7.4.11 项目群下一阶段授权回执示例包登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-NEXT-STAGE-AUTHORIZATION-RECEIPT-EXAMPLE-PACK-20260627-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md`、`globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md` |
+| GPCF 校验器 | `validate_project_group_next_stage_authorization_receipt_example_pack_20260627.py` |
+| 当前结论 | `project_group_next_stage_authorization_receipt_example_pack_20260627 = controlled` |
+| 状态候选 | `next_stage_authorization_receipt_example_pack_ready` |
+| 示例项 | `7` 条标准 receipt 示例，全部保持 `example_only_not_recorded` |
+| 状态影响 | 把 `7` 个 next-stage 决策项统一映射成可直接复用的 receipt 结构；当前没有任何示例被当成真实授权写入总账 |
+| 边界 | 不声明任何示例回执已写入总账，不声明任何授权已发生，不声明 accepted、integrated 或 customer_accepted |
+
+## 7.4.12 项目群下一阶段授权回执录入流程登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-NEXT-STAGE-AUTHORIZATION-RECEIPT-RECORDING-PROCEDURE-20260627-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md` |
+| GPCF 校验器 | `validate_project_group_next_stage_authorization_receipt_recording_procedure_20260627.py` |
+| 当前结论 | `project_group_next_stage_authorization_receipt_recording_procedure_20260627 = controlled` |
+| 状态候选 | `next_stage_authorization_receipt_recording_procedure_ready` |
+| 支持范围 | `7` 个 next-stage `auth_id`，并明确分流到 execution ledger 或 post-scheme receipt ledger |
+| 状态影响 | 固定“用户确认 -> 选择示例 -> 替换字段 -> 写入对应 ledger -> 复跑门禁 -> 生成 evidence”的最小安全录入顺序 |
+| 边界 | 不声明任何 receipt 已真实录入，不声明任何授权已发生，不声明任何动作已执行，不声明 accepted、integrated 或 customer_accepted |
+
+## 7.4.13 项目群下一阶段授权人工填写请求登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md`、`globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md` |
+| GPCF 校验器 | `validate_project_group_next_stage_authorization_human_fill_request_20260627.py` |
+| 当前结论 | `project_group_next_stage_authorization_human_fill_request_20260627 = prepared` |
+| 状态候选 | `next_stage_authorization_human_fill_request_ready` |
+| 填写项 | `7` 条：`A` 为 WAS noise cleanup，`B-G` 为 6 仓 Pre-Wave1 review 边界 |
+| 状态影响 | 把 next-stage 决策项转成用户可直接填写的标准确认请求，避免在人工确认时临时组织 receipt 字段 |
+| 边界 | 不声明任何 human fill request 已转成真实授权，不声明任何 receipt 已真实落账，不声明 accepted、integrated 或 customer_accepted |
+
+## 7.4.14 项目群下一阶段授权链一致性审计登记
+
+| 项 | 内容 |
+|---|---|
+| task_id | `GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627-001` |
+| 证据文件 | `docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md` |
+| 采集日期 | 2026-06-27 |
+| 前置证据 | `globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md`、`globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md`、`globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md`、两本 next-stage 目标总账和 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` |
+| GPCF 校验器 | `validate_project_group_next_stage_authorization_chain_consistency_audit_20260627.py` |
+| 当前结论 | `project_group_next_stage_authorization_chain_consistency_audit_20260627 = controlled` |
+| 状态候选 | `next_stage_authorization_chain_consistency_audit_ready` |
+| 审计范围 | `7` 个 auth_id；`1` 项 execution ledger 分流；`6` 项 post-scheme ledger 分流 |
+| 状态影响 | 把 next-stage 决策板、示例回执、录入流程、human fill request、Pre-Wave1 bridge 和两本总账统一回放到一条一致性审计链；当前保持 `0` 授权、`0` 执行动作 |
+| 边界 | 不声明任何授权已发生，不声明任何 receipt 已真实落账，不声明 accepted、integrated 或 customer_accepted |
+
 ## 7.5 项目群全量项目真实状态基线登记
 
 | 项 | 内容 |
@@ -452,7 +575,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | 状态候选 | `kds_diffcheck_blocker_controlled` |
 | 阻塞项 | 历史阻塞：`GlobalCloud KDS/wiki/log.md` trailing whitespace；当前 live recheck：`diff_check_pass_current`、`blocker_count=0` |
 | 授权入口 | `AUTH-KDS-DIFFCHECK-CLEANUP-20260626` |
-| 状态影响 | 当前 Git clean 总门禁为 partial，原因是 17 仓 dirty；KDS cleanup、KDS API sync、stage、commit、push 均未执行 |
+| 状态影响 | 当前 Git clean 总门禁为 blocked，原因是 7 仓 dirty（其中 `WAS .DS_Store` 沿 noise cleanup 单独治理）且 `GlobalCloud KDS/.env.production.example` 命中 sensitive_path；KDS cleanup、KDS API sync、stage、commit、push 均未执行 |
 | 边界 | 不声明 cleanup 已执行，不声明项目群 Git 全量 clean，不声明 KDS API 已同步，不声明 accepted、integrated 或 customer_accepted |
 
 ## 7.8.3 KDS Diff Check Cleanup 授权命令包登记

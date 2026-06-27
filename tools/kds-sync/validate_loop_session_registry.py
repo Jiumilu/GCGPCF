@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "02-governance/loop/LOOP_SESSION_REGISTRY.md"
@@ -72,6 +74,7 @@ def iter_round_ids() -> list[str]:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     registry = read(REGISTRY)
     readme = read(README)
     current_validator = read(CURRENT_DECLARATION_VALIDATOR)
@@ -188,7 +191,8 @@ def main() -> int:
         "orphan_session_family=0 "
         "live_codex_threads_covered=false "
         "auto_takeover_allowed=false "
-        f"{counts_text}"
+        f"{counts_text} "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

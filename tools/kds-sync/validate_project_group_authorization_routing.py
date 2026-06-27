@@ -26,6 +26,16 @@ ROUTES = [
     "ROUTE-SOP-WUHAN-SCENARIO-20260625",
 ]
 
+NEXT_STAGE_ROUTES = [
+    "ROUTE-NEXT-STAGE-WAS-NOISE-20260627",
+    "ROUTE-NEXT-STAGE-KDS-REVIEW-20260627",
+    "ROUTE-NEXT-STAGE-AAAS-REVIEW-20260627",
+    "ROUTE-NEXT-STAGE-XWAIL-REVIEW-20260627",
+    "ROUTE-NEXT-STAGE-GPCF-REVIEW-20260627",
+    "ROUTE-NEXT-STAGE-GFIS-REVIEW-20260627",
+    "ROUTE-NEXT-STAGE-SOP-REVIEW-20260627",
+]
+
 PACKAGES = [
     "PKG-GPC-EVIDENCE-BROWSER-20260625",
     "PKG-PVAOS-RELEASE-GATE-20260625",
@@ -43,7 +53,15 @@ REQUIRED_DOC_TOKENS = [
     "confirmation_item_count = 7",
     "review_package_count = 4",
     "hold_package_count = 3",
+    "review_boundary_repo_count | `6`",
+    "noise_cleanup_repo_count | `1`",
+    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
     "review_allowed = false",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
     "stage_allowed = false",
     "commit_allowed = false",
     "push_allowed = false",
@@ -52,6 +70,19 @@ REQUIRED_DOC_TOKENS = [
     "integrated = false",
     "production_ready = false",
     "customer_accepted = false",
+    "next_stage_route_count = 7",
+    "next_stage_route_status = prepared",
+    "next_stage_review_allowed = false",
+    "next_stage_receipt_record_allowed = false",
+    "next_stage_authorization_package_status = controlled",
+    "next_stage_chain_loop_round_status = controlled",
+    "Next-Stage 单仓复核 / 传导复用入口",
+    "5.5.1 AAAS delegated wrapper 单仓核对卡",
+    "5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
+    "5.5.2 XWAIL delegated wrapper 单仓核对卡",
+    "5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
+    "5.5.3 SOP delegated wrapper 单仓核对卡",
+    "5.6.3 SOP delegated wrapper 确认后状态传导摘要",
     "none_until_user_confirmation",
     "动作门禁",
     "状态传导规则",
@@ -108,6 +139,10 @@ def main() -> int:
         if route not in doc_text:
             failures.append(f"missing authorization route: {route}")
 
+    for route in NEXT_STAGE_ROUTES:
+        if route not in doc_text:
+            failures.append(f"missing next-stage authorization route: {route}")
+
     for package in PACKAGES:
         if package not in doc_text:
             failures.append(f"missing package in authorization routing: {package}")
@@ -117,6 +152,17 @@ def main() -> int:
     for token in REQUIRED_SOURCE_TOKENS:
         if token not in sources_text:
             failures.append(f"missing token in routing source docs: {token}")
+
+    for token in [
+        "project_group_next_stage_authorization_human_fill_request_20260627 = prepared",
+        "globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md",
+        "project_group_next_stage_authorization_package_20260627 = controlled",
+        "globalcloud-project-group-next-stage-authorization-package-20260627.md",
+        "project_group_next_stage_authorization_chain_loop_round_20260627 = controlled",
+        "loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md",
+    ]:
+        if token not in sources_text and token not in refs_text:
+            failures.append(f"missing next-stage routing source token: {token}")
 
     for token in REQUIRED_REFERENCE_TOKENS:
         if token not in refs_text:

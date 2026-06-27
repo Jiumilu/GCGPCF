@@ -6,6 +6,8 @@ import re
 import sys
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -30,6 +32,14 @@ EXPECTED_PROJECTS = [
 ]
 
 KEY_DOCS = [
+    "GlobalCloud 项目群实施方案.md",
+    "02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md",
+    "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+    "02-governance/loop/LOOP_CONTROL_BOARD.md",
+    "09-status/globalcloud-document-health-report.md",
+    "09-status/gpcf-project-status-matrix.md",
+    "09-status/globalcloud-project-group-real-execution-governance-board.md",
+    "09-status/project-group-master-plan-governance-status-report.md",
     "docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md",
     "docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md",
     "docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md",
@@ -41,10 +51,23 @@ KEY_DOCS = [
     "docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md",
     "docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md",
     "docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md",
+    "docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md",
     "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md",
+    "docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md",
     "docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md",
     "docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md",
     "docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md",
+    "docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-execution-receipt-pre-execution-bridge-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md",
+    "docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md",
 ]
 
 
@@ -58,6 +81,7 @@ def parse_related(text: str) -> list[str]:
 def main() -> int:
     failures: list[str] = []
     expected = set(EXPECTED_PROJECTS)
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
 
     for relative in KEY_DOCS:
         path = ROOT / relative
@@ -81,6 +105,7 @@ def main() -> int:
         "status": "fail" if failures else "pass",
         "key_doc_count": len(KEY_DOCS),
         "expected_project_count": len(EXPECTED_PROJECTS),
+        "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
             "This validates frontmatter related_projects coverage only; it does not execute tasks, grant authorization, stage, commit, push, deploy, release, sync KDS API, or grant accepted/integrated/customer acceptance."

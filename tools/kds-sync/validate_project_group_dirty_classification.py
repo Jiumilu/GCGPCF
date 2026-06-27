@@ -16,7 +16,9 @@ REQUIRED_DOC_TOKENS = [
     "GlobalCloud 项目群 Dirty 变更分类证据 2026-06-25",
     "GPCF-GIT-DIRTY-CLASSIFY-001",
     "project_group_dirty_classification = controlled",
-    "project_group_git_clean = partial",
+    "project_group_git_clean = blocked",
+    "historical_project_group_git_clean_20260625 = partial",
+    "live_recheck_gate_20260628 = blocked",
     "WAS世界资产体系",
     "system_noise / not_business_change",
     "GlobalCloud GPC",
@@ -46,6 +48,7 @@ REQUIRED_REFERENCE_TOKENS = [
     "globalcloud-project-group-dirty-classification-20260625.md",
     "validate_project_group_dirty_classification.py",
     "project_group_dirty_classification = controlled",
+    "project_group_git_clean = blocked",
 ]
 
 FORBIDDEN_POSITIVE_CLAIMS = [

@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 CONTROL_PACK = ROOT / "02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md"
@@ -45,6 +47,7 @@ def require_phrases(label: str, text: str, phrases: list[str]) -> None:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     control_pack = read(CONTROL_PACK)
     master = read(MASTER)
     declaration_template = read(DECLARATION_TEMPLATE)
@@ -189,7 +192,8 @@ def main() -> int:
         "loop_session_mainline_control=pass "
         "session_mainline=required handoff_evidence=required "
         "mainline_drift_detected=hard_pause write_without_handoff=false "
-        "commit_push_deploy_status_promotion_allowed=false"
+        "commit_push_deploy_status_promotion_allowed=false "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

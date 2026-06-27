@@ -18,15 +18,22 @@ superseded_by: []
 
 # Agent-Reach P9S Source Direct Live Closure Runner 2026-06-26
 
-- status: `blocked_pending_p9_source_direct_authorization`
+- status: `p9_source_direct_live_closure_completed`
 - execution_requested: `True`
-- authorization_valid: `False`
-- live_external_fetch_invoked: `False`
+- authorization_valid: `True`
+- live_external_fetch_invoked: `True`
 - completion_claim_allowed: `False`
 
 ## Steps
 
 - `authorization_intake`: `True`
+- `live_run`: `True`
+- `output_quality_gate`: `True`
+- `review_queue_bridge_preview`: `True`
+- `document_control`: `True`
+- `document_pollution`: `True`
+- `kds_token`: `True`
+- `loop_document_gate`: `True`
 
 ## Boundary
 

@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import os
+import subprocess
 from pathlib import Path
 
 
@@ -40,6 +42,20 @@ REQUIRED_DOC_TOKENS = [
     "accepted_requires_human_confirmation = true",
     "integrated_requires_human_confirmation = true",
     "customer_accepted_requires_human_confirmation = true",
+    "live_project_group_git_gate = blocked",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
+    "GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001",
+    "GPCF-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260627-001",
+    "GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-LOOP-ROUND-20260627-001",
+    "pre-wave1 review authorization gate",
+    "next-stage authorization package gate",
+    "next-stage chain loop-round gate",
+    "globalcloud-project-group-next-stage-authorization-package-20260627.md",
+    "loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md",
+    "globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -53,6 +69,8 @@ REQUIRED_REFERENCE_TOKENS = [
     "globalcloud-project-group-status-advancement-matrix-20260625.md",
     "validate_project_group_status_advancement_matrix.py",
     "status_advancement_matrix = controlled",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
 ]
 
 FORBIDDEN_CLAIMS = [
@@ -60,6 +78,17 @@ FORBIDDEN_CLAIMS = [
     "integrated = true",
     "production_ready = true",
     "customer_accepted = true",
+]
+
+GFIS_ZERO_KEYS = [
+    "real_source_records",
+    "valid_source_records",
+    "formal_confirmation_files",
+    "runtime_primary_key_ready",
+    "review_queue",
+    "runtime_intake",
+    "waes_review",
+    "verified",
 ]
 
 
@@ -70,10 +99,52 @@ def read(path: Path, failures: list[str]) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def parse_kv_output(output: str) -> dict[str, str]:
+    parsed: dict[str, str] = {}
+    for part in output.replace("\n", " ").split():
+        if "=" not in part:
+            continue
+        key, value = part.split("=", 1)
+        parsed[key.strip()] = value.strip().strip(",")
+    return parsed
+
+
+def validate_gfis_real_fact_entry(failures: list[str]) -> dict[str, str]:
+    cached = os.environ.get("GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT")
+    if cached:
+        values = parse_kv_output(cached)
+    else:
+        result = subprocess.run(
+            ["python3", "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            timeout=180,
+            check=False,
+        )
+        values = parse_kv_output(result.stdout)
+        if result.returncode != 0:
+            failures.append("GFIS real-fact entry gate failed: " + result.stdout.strip())
+            return values
+    if values.get("strong_block") != "true":
+        failures.append("GFIS real-fact entry gate must keep strong_block=true")
+    if values.get("status_ceiling") != "repair_required":
+        failures.append("GFIS real-fact entry status ceiling must remain repair_required")
+    for key in GFIS_ZERO_KEYS:
+        if values.get(key) != "0":
+            failures.append(f"GFIS real-fact entry must keep {key}=0, got {values.get(key)!r}")
+    for key in ["accepted", "integrated", "production_ready"]:
+        if values.get(key) != "false":
+            failures.append(f"GFIS real-fact entry must keep {key}=false, got {values.get(key)!r}")
+    return values
+
+
 def main() -> int:
     failures: list[str] = []
     doc_text = read(DOC, failures)
     refs_text = read(BOARD, failures) + "\n" + read(REGISTER, failures)
+    gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
 
     for token in REQUIRED_DOC_TOKENS:
         if token not in doc_text:
@@ -122,6 +193,7 @@ def main() -> int:
         "gate": "project_group_status_advancement_matrix",
         "status": "pass" if not failures else "fail",
         "project_status_rule_count": len(PROJECTS),
+        "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
             "This validates advancement criteria only; it does not execute tasks or grant accepted, integrated, production, customer acceptance, commit, push, deploy, or release authority.",

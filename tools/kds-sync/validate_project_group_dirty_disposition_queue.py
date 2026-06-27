@@ -18,11 +18,11 @@ STATUS = ROOT / "docs/harness/evidence/globalcloud-project-group-status-advancem
 
 DIRTY_REPOS = {
     "WAS世界资产体系": ["DISP-WAS-SYSTEM-NOISE-20260625", ".DS_Store", "noise_decision_required"],
-    "GlobalCloud GPC": ["DISP-GPC-EVIDENCE-BROWSER-20260625", "gpc-evidence-browser-repair-20260625.md", "review_candidate"],
-    "GlobalCloud Studio": ["DISP-STUDIO-EVIDENCE-INDEX-20260625", "studio-workflow-permissions-recheck-20260625.md", "review_candidate"],
     "GlobalCoud GPCF": ["DISP-GPCF-GOVERNANCE-EVIDENCE-20260625", "PKG-GPCF-KDS-MIRROR-20260625", "review_candidate_with_mirror_boundary"],
+    "GlobalCloud AAAS": ["DISP-AAAS-DELEGATE-REVIEW-20260628", "globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md", "noise_or_review_boundary_confirmation_required"],
+    "GlobalCloud XWAIL": ["DISP-XWAIL-DELEGATE-REVIEW-20260628", "globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md", "noise_or_review_boundary_confirmation_required"],
+    "GlobalCloud GFIS": ["DISP-GFIS-REAL-SOR-20260628", "gfis-real-runtime-baseline-20260624.md", "owner_decision_required"],
     "GlobalCloud KDS": ["DISP-KDS-FUNDING-SYNC-RUNS-20260625", "kds-brain-report-hold-review-20260625.md", "owner_decision_required"],
-    "GlobalCloud PVAOS": ["DISP-PVAOS-RELEASE-GATE-20260625", "pvaos-release-review-20260625.md", "review_candidate"],
     "GlobalCloud SOP": ["DISP-SOP-WUHAN-SCENARIO-20260625", "sop-scenario-owner-review-20260625.md", "owner_decision_required"],
 }
 
@@ -31,9 +31,9 @@ REQUIRED_DOC_TOKENS = [
     "project_group_dirty_disposition_queue = controlled",
     "dirty_disposition_queue_ready",
     "dirty_repo_count | `7`",
-    "review_candidate_count | `4`",
+    "review_candidate_count | `1`",
     "owner_decision_count | `2`",
-    "noise_decision_count | `1`",
+    "noise_decision_count | `4`",
     "review_allowed | `false`",
     "stage_allowed | `false`",
     "commit_allowed | `false`",

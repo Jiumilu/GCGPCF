@@ -139,6 +139,10 @@ def build_report() -> dict[str, Any]:
         fail("login_path_rejection_missing")
     if runner.reject_login_like_content("登录", "password captcha") != "login_like_content":
         fail("login_content_rejection_missing")
+    if runner.reject_empty_content("", "") != "empty_text_content":
+        fail("empty_content_rejection_missing")
+    if runner.reject_empty_content("工业固废", "") is not None:
+        fail("nonempty_title_rejected")
     if "text/html" not in runner.ALLOWED_CONTENT_TYPE_PREFIXES or "application/rss+xml" not in runner.ALLOWED_CONTENT_TYPE_PREFIXES:
         fail("allowed_content_type_prefixes_missing")
     if any(prefix.startswith("application/pdf") for prefix in runner.ALLOWED_CONTENT_TYPE_PREFIXES):

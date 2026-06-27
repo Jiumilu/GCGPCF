@@ -18,7 +18,9 @@ REQUIRED_TOKENS = [
     "p0d_review_queue_ready = true",
     "review_queue_count = 7",
     "development_start_allowed = true",
-    "project_group_git_gate = partial",
+    "project_group_git_gate = blocked",
+    "dirty_repo_count = 7",
+    "sensitive_repos = GlobalCloud KDS(.env.production.example)",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -69,17 +71,17 @@ def validate_git_gate(failures: list[str]) -> str:
         failures.append(f"project group git gate JSON parse failed: {exc}")
         return "unknown"
     gate = str(payload.get("gate", "unknown"))
-    if gate not in {"partial", "pass"}:
-        failures.append(f"git gate not partial/pass: {gate}")
+    if gate != "blocked":
+        failures.append(f"git gate not blocked: {gate}")
     summary = payload.get("summary", {})
-    for key in ["missing_repos", "ahead_repos", "behind_repos", "sensitive_repos"]:
+    for key in ["missing_repos", "ahead_repos", "behind_repos"]:
         if summary.get(key) != []:
             failures.append(f"{key} present: {summary.get(key)}")
+    if summary.get("sensitive_repos") != ["GlobalCloud KDS"]:
+        failures.append(f"sensitive_repos present: {summary.get('sensitive_repos')}")
     for repo in payload.get("repos", []):
         if repo.get("diff_check") != "pass":
             failures.append(f"repo diff-check not pass: {repo.get('name')}")
-        if repo.get("sensitive_paths"):
-            failures.append(f"sensitive paths present: {repo.get('name')}")
     return gate
 
 

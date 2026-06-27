@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-06-27
+生成日期：2026-06-28
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -402,10 +402,16 @@
 | GPCF-DOC-GCKFP0HARNESSEVIDENCECANDIDATECURRENTSTATED12620260622 | GCKF P0 Harness evidence 候选记录当前态证据 D126 | docs/harness/evidence/gckf-p0-harness-evidence-candidate-current-state-d126-20260622.md | controlled |
 | GPCF-DOC-GCKFP0HARNESSGOVERNANCEREVIEWDECISIONINTAKECURRENTSTATED12920260622 | GCKF P0 Harness 治理审阅决策接收当前态证据 D129 | docs/harness/evidence/gckf-p0-harness-governance-review-decision-intake-current-state-d129-20260622.md | controlled |
 | GPCF-DOC-GCKFP0HARNESSREVIEWINPUTCURRENTSTATED12520260622 | GCKF P0 Harness 审查输入包当前态证据 D125 | docs/harness/evidence/gckf-p0-harness-review-input-current-state-d125-20260622.md | controlled |
+| GPCF-DOC-GCKFP0NOWRITECONTINUITYD18920260627 | GCKF P0 No-write 连续性门禁当前态 D189 | docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.md | controlled |
+| GPCF-DOC-GCKFP0RESPONSEARRIVALSCAND18620260627 | GCKF P0 修复负责人响应到达扫描当前态 D186 | docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.md | controlled |
+| GPCF-DOC-GCKFP0RESPONSEAUTHBOUNDARYD18820260627 | GCKF P0 修复负责人响应授权边界预检查当前态 D188 | docs/harness/evidence/gckf-p0-repair-owner-response-authorization-boundary-precheck-current-state-d188-20260627.md | controlled |
 | GPCF-DOC-GCKFP0REPAIROWNERRESPONSECHECKLISTD18320260626 | GCKF P0 修复负责人响应收集清单当前态 D183 | docs/harness/evidence/gckf-p0-repair-owner-response-collection-checklist-current-state-d183-20260626.md | controlled |
+| GPCF-DOC-GCKFP0RESPONSESIGNALACTIOND18720260627 | GCKF P0 修复负责人响应缺失信号补齐队列当前态 D187 | docs/harness/evidence/gckf-p0-repair-owner-response-missing-signal-action-queue-current-state-d187-20260627.md | controlled |
 | GPCF-DOC-GCKFP0REPAIROWNERRESPONSENEGFIXD18420260626 | GCKF P0 修复负责人响应负例门禁当前态 D184 | docs/harness/evidence/gckf-p0-repair-owner-response-negative-fixtures-current-state-d184-20260626.md | controlled |
 | GPCF-DOC-GCKFP0REPAIROWNERRESPONSEREQUIREMENTPRECHECKD18220260626 | GCKF P0 修复负责人响应要求预检当前态 D182 | docs/harness/evidence/gckf-p0-repair-owner-response-requirement-precheck-current-state-d182-20260626.md | controlled |
 | GPCF-DOC-GCKFP0REPAIRPATHWORKPACKCURRENTSTATED12820260622 | GCKF P0 Repair Path Workpack 当前态证据 D128 | docs/harness/evidence/gckf-p0-repair-path-workpack-current-state-d128-20260622.md | controlled |
+| GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627 | GCKF P0 会话主线接管当前态 D185 | docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | controlled |
+| GPCF-DOC-GCKFP0STOPRESUMED19020260627 | GCKF P0 停止条件与恢复触发器当前态 D190 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | controlled |
 | GPCF-DOC-7607A76253 | GFIS 来源记录负责人请求包 | docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md | controlled |
 | GPCF-DOC-825C3B3AC5 | GFIS WAS Profile Runtime Gate Mapping Evidence | docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md | controlled |
 | GPCF-DOC-2C3EE1AAC6 | GFIS WAS Source Record Field Crosswalk Evidence | docs/harness/evidence/gfis-was-source-record-field-crosswalk-20260621.md | controlled |
@@ -804,7 +810,13 @@
 | GPCF-LOOP-GCKF-P0-D182-001 | Loop Round GPCF-GCKF-P0-D182-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md | controlled |
 | GPCF-LOOP-GCKF-P0-D183-001 | Loop Round GPCF-GCKF-P0-D183-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md | controlled |
 | GPCF-LOOP-GCKF-P0-D184-001 | Loop Round GPCF-GCKF-P0-D184-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md | controlled |
+| GPCF-LOOP-GCKF-P0-D185-001 | Loop Round GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | controlled |
+| GPCF-LOOP-GCKF-P0-D186-001 | Loop Round GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | controlled |
+| GPCF-LOOP-GCKF-P0-D187-001 | Loop Round GPCF-GCKF-P0-D187-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D187-001.md | controlled |
+| GPCF-LOOP-GCKF-P0-D188-001 | Loop Round GPCF-GCKF-P0-D188-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D188-001.md | controlled |
+| GPCF-LOOP-GCKF-P0-D189-001 | Loop Round GPCF-GCKF-P0-D189-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md | controlled |
 | GPCF-DOC-156556AE22 | GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md | controlled |
+| GPCF-LOOP-GCKF-P0-D190-001 | Loop Round GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | controlled |
 | GPCF-DOC-9F56DFB107 | GC-Knowledge Fabric P0-D2 目录编号与挂池规则 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md | controlled |
 | GPCF-DOC-DBB5A54AC3 | GC-Knowledge Fabric P0-D20 Closure Readiness Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md | controlled |
 | GPCF-DOC-3317FFE9B5 | GC-Knowledge Fabric P0-D21 Human Review Checklist Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md | controlled |
@@ -1695,14 +1707,26 @@
 | GPCF-DOC-DEB7C6D159 | Loop Round GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001.md | controlled |
 | GPCF-DOC-7682DAC0E5 | Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md | controlled |
 | GPCF-DOC-01A5916499 | Loop Round: GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001.md | controlled |
+| GPCF-LOOP-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001 | GPCF PROJECT GROUP AUTHORIZATION LAYER MATRIX 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001 | Loop Round GPCF-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-P0-BLOCKER-REDUCTION-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001 | Loop Round GPCF-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-P0-DIRTY-CLASSIFICATION-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-P0-PROJECT-VALIDATION-001 | Loop Round GPCF-PROJECT-GROUP-DEV-P0-PROJECT-VALIDATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-P0-PROJECT-VALIDATION-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001 | Loop Round GPCF-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-EXECUTION-RECEIPT-PRE-EXECUTION-BRIDGE-001.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001 | loop-round-GPCF-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-EXTERNAL-LOOP-GATE-DELEGATE-BASELINE-001.md | controlled |
+| GPCF-LOOP-PROJECT-GROUP-GENERATED-OUTPUT-DIST-ISOLATION-001 | GPCF PROJECT GROUP GENERATED OUTPUT DIST ISOLATION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-GENERATED-OUTPUT-DIST-ISOLATION-001.md | controlled |
+| GPCF-LOOP-PROJECT-GROUP-GFIS-DIRTY-DRIFT-CLASSIFICATION-001 | GPCF PROJECT GROUP GFIS DIRTY DRIFT CLASSIFICATION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-GFIS-DIRTY-DRIFT-CLASSIFICATION-001.md | controlled |
+| GPCF-LOOP-PROJECT-GROUP-GPCF-WORKTREE-REVIEW-PACKAGES-001 | GPCF PROJECT GROUP GPCF WORKTREE REVIEW PACKAGES 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-GPCF-WORKTREE-REVIEW-PACKAGES-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001 | Loop Round GPCF-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-P0B-PROJECT-VALIDATION-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001 | Loop Round GPCF-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-P0C-MINIMAL-VALIDATION-001.md | controlled |
 | GPCF-LOOP-PROJECT-GROUP-P0D-REVIEW-QUEUE-001 | Loop Round GPCF-PROJECT-GROUP-P0D-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-P0D-REVIEW-QUEUE-001.md | controlled |
 | GPCF-DOC-62B1AFEC53 | GPCF Project Group Phase Goals | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-PHASE-GOALS-001.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001 | loop-round-GPCF-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-001.md | controlled |
+| GPCF-LOOP-PROJECT-GROUP-REVIEW-AUTH-GPCF-RP7-CONCLUSION-001 | GPCF PROJECT GROUP REVIEW AUTH GPCF RP7 CONCLUSION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-GPCF-RP7-CONCLUSION-001.md | controlled |
+| GPCF-LOOP-PROJECT-GROUP-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-001 | GPCF PROJECT GROUP REVIEW AUTH GPCF WORKTREE CONFIRMATION 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-001.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-REVIEW-AUTH-PRE-WAVE1-WAVE1-BRIDGE-001.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-001.md | controlled |
 | GPCF-DOC-D910A1EAEB | GPCF Session Declaration Control Boundary 001 | docs/harness/loops/loop-round-GPCF-SESSION-DECLARATION-CONTROL-BOUNDARY-001.md | controlled |
 | GPCF-DOC-52A3C9B7E1 | GPCF Session Mainline Declaration 001 | docs/harness/loops/loop-round-GPCF-SESSION-MAINLINE-DECLARATION-001.md | controlled |
 | GPCF-DOC-8D6E4A1F29 | GPCF Session Mainline Drift Watch 003 | docs/harness/loops/loop-round-GPCF-SESSION-MAINLINE-DRIFT-WATCH-003.md | controlled |

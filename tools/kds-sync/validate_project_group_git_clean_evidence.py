@@ -25,17 +25,19 @@ EXPECTED_DIRTY_REPOS = {
 REQUIRED_DOC_TOKENS = [
     "GlobalCloud 项目群 17 仓 Git Clean 门禁证据 2026-06-25",
     "GPCF-GIT-CLEAN-001",
-    "project_group_git_clean = partial",
+    "project_group_git_clean = blocked",
+    "historical_project_group_git_clean_20260625 = partial",
+    "live_recheck_gate_20260628 = blocked",
     "expected_repo_count = 17",
     "checked_repo_count = 17",
-    "pass = 11",
-    "partial_or_blocked = 6",
+    "pass = 10",
+    "partial_or_blocked = 7",
     "missing_repos = []",
     "ahead_repos = []",
     "behind_repos = []",
-    "sensitive_repos = []",
+    "sensitive_repos = [GlobalCloud KDS]",
     "project_group_git_clean_pass = false",
-    "project_group_git_sensitive_paths = false",
+    "project_group_git_sensitive_paths = true",
     "project_group_git_behind = false",
     "project_group_git_diff_check = pass",
     "不声明项目群 Git 全量 clean",
@@ -53,7 +55,7 @@ REQUIRED_REFERENCE_TOKENS = [
     "globalcloud-project-group-git-clean-20260625.md",
     "globalcloud-project-group-git-clean-20260625.json",
     "validate_project_group_git_clean_evidence.py",
-    "project_group_git_clean = partial",
+    "project_group_git_clean = blocked",
 ]
 
 FORBIDDEN_POSITIVE_CLAIMS = [
@@ -116,7 +118,7 @@ def main() -> int:
 
     if data:
         if data.get("gate") != "partial":
-            failures.append(f"expected JSON gate partial, got {data.get('gate')}")
+            failures.append(f"expected historical JSON gate partial, got {data.get('gate')}")
         if data.get("expected_repo_count") != 17 or data.get("checked_repo_count") != 17:
             failures.append("expected 17 checked repos in JSON evidence")
         summary = data.get("summary", {})
@@ -127,7 +129,7 @@ def main() -> int:
         if summary.get("behind_repos") != []:
             failures.append("expected no behind repos")
         if summary.get("sensitive_repos") != []:
-            failures.append("expected no sensitive repos")
+            failures.append("expected no sensitive repos in historical JSON snapshot")
         if set(summary.get("dirty_repos", [])) != EXPECTED_DIRTY_REPOS:
             failures.append(f"dirty repo set mismatch: {summary.get('dirty_repos')}")
         repos = data.get("repos", [])
@@ -146,7 +148,7 @@ def main() -> int:
     result = {
         "gate": "project_group_git_clean_evidence",
         "status": "pass" if not failures else "fail",
-        "git_clean_status": "partial",
+        "git_clean_status": "blocked",
         "failures": failures,
         "warnings": [
             "This validates read-only Git status evidence only; it does not clean, commit, push, or approve any repository.",

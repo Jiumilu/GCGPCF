@@ -199,6 +199,38 @@ def run_gfis_named_validator(gfis_root: Path, script_name: str) -> dict:
     return {"status": "pass" if result.returncode == 0 else "failed", "exit_code": result.returncode, "output": output}
 
 
+def run_gpcf_named_validator(script_name: str) -> dict:
+    validator = ROOT / "tools/kds-sync" / script_name
+    if not validator.exists():
+        return {"status": "missing_validator", "exit_code": None, "output": []}
+    try:
+        result = subprocess.run(
+            ["python3", str(validator.relative_to(ROOT))],
+            cwd=str(ROOT),
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=300,
+        )
+    except subprocess.TimeoutExpired as exc:
+        output = [line.strip() for line in ((exc.stdout or "") + "\n" + (exc.stderr or "")).splitlines() if line.strip()]
+        output.append(f"TIMEOUT: {validator.relative_to(ROOT)} exceeded 300s")
+        return {"status": "failed", "exit_code": 124, "output": output}
+    output = [line.strip() for line in (result.stdout + "\n" + result.stderr).splitlines() if line.strip()]
+    return {"status": "pass" if result.returncode == 0 else "failed", "exit_code": result.returncode, "output": output}
+
+
+def parse_kv_lines(lines: list[str]) -> dict[str, str]:
+    parsed: dict[str, str] = {}
+    for line in lines:
+        for part in line.split():
+            if "=" not in part:
+                continue
+            key, value = part.split("=", 1)
+            parsed[key.strip()] = value.strip().strip(",")
+    return parsed
+
+
 def runtime_kds_source_paths_closed(runtime_sop: dict) -> bool:
     return any("missing_kds_source_paths=0" in line for line in runtime_sop.get("output", []))
 
@@ -499,6 +531,8 @@ def main() -> int:
         gfis_root,
         "validate_gfis_verified_artifact_gate.py",
     )
+    gfis_real_fact_entry_gate = run_gpcf_named_validator("validate_gfis_real_fact_entry_gate.py")
+    gfis_real_fact_entry_values = parse_kv_lines(gfis_real_fact_entry_gate["output"])
     gfis_development_ready_goal = run_gfis_named_validator(
         gfis_root,
         "validate_gfis_development_ready_goal.py",
@@ -539,10 +573,16 @@ def main() -> int:
     gfis_sop_e2e_failed = gfis_sop_e2e_status == "failed"
     gfis_runtime_sop_status = gfis_runtime_sop["status"]
     gfis_runtime_sop_blocked = gfis_runtime_sop_status != "pass"
+    gfis_real_fact_entry_blocked = (
+        gfis_real_fact_entry_gate["exit_code"] != 0
+        or gfis_real_fact_entry_values.get("strong_block") == "true"
+        or gfis_real_fact_entry_values.get("status_ceiling") == "repair_required"
+    )
     self_correction_blocked = (
         gfis_demo_counted_as_runtime
         or gfis_sop_e2e_failed
         or gfis_runtime_sop_blocked
+        or gfis_real_fact_entry_blocked
         or gfis_pending_business_verification_gate["exit_code"] != 0
         or gfis_runtime_primary_key_gate["exit_code"] != 0
         or gfis_review_queue_admission_gate["exit_code"] != 0
@@ -730,6 +770,9 @@ def main() -> int:
         "test_data_mutation_guard": "pass" if gfis_test_data_scenario_coverage["exit_code"] == 0 else "failed",
         "synthetic_dev_lane": "dev_closed",
         "real_business_lane": "repair_required" if self_correction_blocked else "ready_for_review",
+        "real_fact_entry_gate": gfis_real_fact_entry_gate["status"],
+        "real_fact_entry_status_ceiling": gfis_real_fact_entry_values.get("status_ceiling", "unknown"),
+        "real_fact_entry_next_required_input": gfis_real_fact_entry_values.get("next_required_input", "unknown"),
         "business_verification_pending": self_correction_blocked,
         "projects": PROJECTS,
         "core_objects": CORE_OBJECTS,
@@ -779,6 +822,10 @@ def main() -> int:
             "gfis_verified_artifact_gate_status": gfis_verified_artifact_gate["status"],
             "gfis_verified_artifact_gate_exit_code": gfis_verified_artifact_gate["exit_code"],
             "gfis_verified_artifact_gate_output": gfis_verified_artifact_gate["output"],
+            "gfis_real_fact_entry_gate_status": gfis_real_fact_entry_gate["status"],
+            "gfis_real_fact_entry_gate_exit_code": gfis_real_fact_entry_gate["exit_code"],
+            "gfis_real_fact_entry_gate_output": gfis_real_fact_entry_gate["output"],
+            "gfis_real_fact_entry_gate_values": gfis_real_fact_entry_values,
             "gfis_development_ready_goal_status": gfis_development_ready_goal["status"],
             "gfis_development_ready_goal_exit_code": gfis_development_ready_goal["exit_code"],
             "gfis_development_ready_goal_output": gfis_development_ready_goal["output"],
@@ -899,6 +946,9 @@ def main() -> int:
                 "runtime_intake_gate": gfis_runtime_intake_gate["status"],
                 "waes_review_gate": gfis_waes_review_gate["status"],
                 "verified_artifact_gate": gfis_verified_artifact_gate["status"],
+                "real_fact_entry_gate": gfis_real_fact_entry_gate["status"],
+                "real_fact_entry_status_ceiling": gfis_real_fact_entry_values.get("status_ceiling", "unknown"),
+                "real_fact_entry_next_required_input": gfis_real_fact_entry_values.get("next_required_input", "unknown"),
                 "development_ready_goal": gfis_development_ready_goal["status"],
                 "test_source_record_submission_gate": gfis_test_source_record_submission_gate["status"],
                 "test_data_minimum_sop_e2e": gfis_test_data_minimum_sop_e2e["status"],
@@ -976,6 +1026,9 @@ def main() -> int:
         f"runtime_intake_gate={gfis_runtime_intake_gate['status']} "
         f"waes_review_gate={gfis_waes_review_gate['status']} "
         f"verified_artifact_gate={gfis_verified_artifact_gate['status']} "
+        f"real_fact_entry_gate={gfis_real_fact_entry_gate['status']} "
+        f"real_fact_entry_status_ceiling={gfis_real_fact_entry_values.get('status_ceiling', 'unknown')} "
+        f"real_fact_entry_next_required_input={gfis_real_fact_entry_values.get('next_required_input', 'unknown')} "
         f"development_ready_goal={gfis_development_ready_goal['status']} "
         f"test_source_record_submission_gate={gfis_test_source_record_submission_gate['status']} "
         f"test_data_minimum_sop_e2e={gfis_test_data_minimum_sop_e2e['status']} "

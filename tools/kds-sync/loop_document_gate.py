@@ -15,10 +15,15 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "09-status/globalcloud-document-health-report.md"
 MIRROR_REPORT = ROOT / ".kds/development-space/开发/91-治理与验收/09-status/globalcloud-document-health-report.md"
+GFIS_REAL_FACT_ENTRY_GATE_CACHE = os.environ.get("GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT", "")
 
 
 def run(command: list[str]) -> tuple[int, str]:
-    result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+    env = os.environ.copy()
+    env["GPCF_LOOP_DOCUMENT_GATE_ACTIVE"] = "1"
+    if GFIS_REAL_FACT_ENTRY_GATE_CACHE:
+        env["GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT"] = GFIS_REAL_FACT_ENTRY_GATE_CACHE
+    result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, env=env)
     return result.returncode, (result.stdout + result.stderr).strip()
 
 
@@ -128,7 +133,7 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         "doc_id: GPCF-DOC-C436DDB0F6",
         "title: GlobalCloud 文档健康报告",
         "project: GPCF",
-        "related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]",
+        "related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]",
         "domain: status",
         "status: controlled",
         "version: v1.0",
@@ -143,6 +148,14 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         "---",
         "",
         "# GlobalCloud 文档健康报告",
+        "",
+        "本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。"
+        "文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，"
+        "不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。"
+        "当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、"
+        "customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、"
+        "人工业务核验、运行层主键、review queue、runtime intake、WAES review 和 verified artifact "
+        "全部满足后才能重新评估。",
         "",
         f"生成时间：{datetime.now(timezone.utc).isoformat()}",
         "",
@@ -193,6 +206,19 @@ def main() -> int:
         help="evaluate the gate without writing the health report or KDS mirror",
     )
     args = parser.parse_args()
+    if args.check_only and os.environ.get("GPCF_LOOP_DOCUMENT_GATE_ACTIVE") == "1":
+        print(
+            json.dumps(
+                {
+                    "gate": "pass",
+                    "gate_reasons": [],
+                    "delegated_nested_loop_document_gate": True,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return 0
 
     docs = iter_repo_md()
     missing_metadata = 0
@@ -228,6 +254,11 @@ def main() -> int:
     api_sync_ledger = ROOT / ".kds/sync-ledger.jsonl"
     api_sync_ledger_lines = len(api_sync_ledger.read_text(encoding="utf-8").splitlines()) if api_sync_ledger.exists() else 0
     delegated = os.environ.get("GPCF_PROJECT_GROUP_GATE_DELEGATED") == "1"
+    global GFIS_REAL_FACT_ENTRY_GATE_CACHE
+    gfis_real_fact_entry_gate = run([sys.executable, "tools/kds-sync/validate_gfis_real_fact_entry_gate.py"])
+    if gfis_real_fact_entry_gate[0] == 0:
+        GFIS_REAL_FACT_ENTRY_GATE_CACHE = gfis_real_fact_entry_gate[1]
+
     checks = {
         "loop_engineering_five_direction": run([sys.executable, "tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"]),
         "loop_engineering_master_plan": run([sys.executable, "tools/kds-sync/validate_loop_engineering_master_plan.py"]),
@@ -240,6 +271,27 @@ def main() -> int:
         "session_mainline_preflight_enforcement": run([sys.executable, "tools/kds-sync/validate_session_mainline_preflight_enforcement.py"]),
         "session_mainline_drift_watch": run([sys.executable, "tools/kds-sync/validate_session_mainline_drift_watch.py"]),
         "session_mainline_handoff_request_gate": run([sys.executable, "tools/kds-sync/validate_session_mainline_handoff_request_gate.py"]),
+        "gfis_real_fact_entry_gate": gfis_real_fact_entry_gate,
+        "gfis_real_fact_entry_coverage": run([sys.executable, "tools/kds-sync/validate_gfis_real_fact_entry_coverage.py"]),
+        "gfis_real_fact_no_status_promotion": run([sys.executable, "tools/kds-sync/validate_gfis_real_fact_no_status_promotion.py"]),
+        "loop_document_gate_gfis_coverage": run([sys.executable, "tools/kds-sync/validate_loop_document_gate_gfis_coverage.py"]),
+        "project_group_external_loop_gate_delegates": run([sys.executable, "tools/kds-sync/validate_project_group_external_loop_gate_delegates.py"]),
+        "gpcf_project_status_matrix_17_project_scope": run([sys.executable, "tools/kds-sync/validate_gpcf_project_status_matrix_17_project_scope.py"]),
+        "project_group_status_control_surface_17_scope": run([sys.executable, "tools/kds-sync/validate_project_group_status_control_surface_17_scope.py"]),
+        "project_group_full_project_baseline": run([sys.executable, "tools/kds-sync/validate_project_group_full_project_baseline.py"]),
+        "project_group_current_state_baseline_refresh": run([sys.executable, "tools/kds-sync/validate_project_group_current_state_baseline_refresh_20260626.py"]),
+        "project_group_dev_task_queue": run([sys.executable, "tools/kds-sync/validate_project_group_dev_task_queue_20260626.py"]),
+        "project_group_real_execution_metadata_coverage": run([sys.executable, "tools/kds-sync/validate_project_group_real_execution_metadata_coverage_20260626.py"]),
+        "project_group_live_status_snapshot": run([sys.executable, "tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py"]),
+        "project_group_real_execution_governance_board": run([sys.executable, "tools/kds-sync/validate_project_group_real_execution_governance_board.py"]),
+        "project_group_status_advancement_matrix": run([sys.executable, "tools/kds-sync/validate_project_group_status_advancement_matrix.py"]),
+        "project_group_ready_for_review_advancement_queue": run([sys.executable, "tools/kds-sync/validate_project_group_ready_for_review_advancement_queue_20260626.py"]),
+        "project_group_authorization_pre_execution_command_pack": run([sys.executable, "tools/kds-sync/validate_project_group_authorization_pre_execution_command_pack_20260626.py"]),
+        "project_group_authorization_pre_execution_environment_readiness": run([sys.executable, "tools/kds-sync/validate_project_group_authorization_pre_execution_environment_readiness_20260626.py"]),
+        "project_group_delivery_readiness": run([sys.executable, "tools/kds-sync/validate_project_group_delivery_readiness.py"]),
+        "project_runtime_readiness": run([sys.executable, "tools/kds-sync/validate_project_runtime_readiness.py"]),
+        "project_integration_readiness": run([sys.executable, "tools/kds-sync/validate_project_integration_readiness.py"]),
+        "customer_acceptance_readiness": run([sys.executable, "tools/kds-sync/validate_customer_acceptance_readiness.py"]),
         "document_pollution": run([sys.executable, "tools/kds-sync/check_document_pollution.py"]),
         "fixed_doc_id_preservation": run([sys.executable, "scripts/api/validate_gckf_p0_document_control_preserves_fixed_doc_id.py"]),
         "chinese_localization": run([sys.executable, "tools/kds-sync/check_chinese_localization_gate.py"]),

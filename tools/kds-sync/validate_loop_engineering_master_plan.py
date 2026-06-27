@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 MASTER = ROOT / "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md"
@@ -39,6 +41,7 @@ def require_controlled(text: str, source_path: str) -> None:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     master = read(MASTER)
     readme = read(README)
     combined_current = "\n".join([read(CONTROL_BOARD), read(LOOP_STATE)])
@@ -50,8 +53,8 @@ def main() -> int:
 
     require_controlled(master, "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md")
     require(
-        "related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]" in master,
-        "master plan must keep project-group related_projects",
+        "related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]" in master,
+        "master plan must keep 17-project related_projects scope",
     )
 
     for phrase in [
@@ -96,6 +99,8 @@ def main() -> int:
         "LOOP_CAPABILITY_REGISTRY.md",
         "validate_loop_capability_registry.py",
         "validate_loop_session_mainline_control.py",
+        "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+        "globalcloud-project-group-dev-task-queue-20260626.md",
     ]:
         require(phrase in master, f"master plan missing dependency: {phrase}")
 
@@ -172,6 +177,11 @@ def main() -> int:
         "runtime intake",
         "WAES review",
         "verified artifact",
+        "project_group_current_state_baseline_refresh_20260626 = controlled",
+        "development_queue_ready = true",
+        "dirty_repo_count = 7",
+        "trigger_layer_binding_count = 17",
+        "dependency_edge_binding_count = 17",
         "accepted",
         "integrated",
         "production_ready",
@@ -220,7 +230,8 @@ def main() -> int:
         "baseline=v1.0 authority=master_implementation_plan "
         "roadmap=P0,P1,P2,P3,P4,P5 "
         "status_ceiling=repair_required accepted_allowed=false integrated_allowed=false "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0"
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

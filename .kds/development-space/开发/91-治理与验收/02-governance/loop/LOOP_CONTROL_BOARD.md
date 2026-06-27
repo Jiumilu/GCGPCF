@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0DF6AA8647
 title: Loop Control Board
 project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
 domain: governance
 status: controlled
 version: v1.0
@@ -32,6 +32,7 @@ superseded_by: []
 | 当前涉及项目 | WAS、XWAIL、AaaS/AAAS、GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、SOP |
 | 当前状态判定 | `partial_repair`；`development_ready=pass`、`synthetic_dev_lane=dev_closed`，但 `real_business_lane=repair_required`，`business_verification_pending=true`。DEV-READY-001 只证明开发态完整闭环可审计，不证明真实业务闭环完成；真实链路仍无真实客户订单/平台订单、样品、工单、质检、库存、发货、POD、WAES confirmation、KDS write receipt、运行层主键、review queue、runtime intake、WAES review 或 verified artifact；不得升级 accepted/integrated/production_ready |
 | 项目状态矩阵口径 | `GPCF-PROJECT-STATUS-MATRIX-17-SCOPE-001` 已将 `09-status/gpcf-project-status-matrix.md` 从 14 项目摘要补齐为 17 项目口径，并新增 validator `tools/kds-sync/validate_gpcf_project_status_matrix_17_project_scope.py`。当前状态分布为 `ready_for_review=12`、`partial_verified=1`、`repair_required=3`、`owner_review_required=1`；XWAIL 和 AaaS 仅为 `ready_for_review / local_dev_boundary / integration_precheck_candidate`，SOP 为 `owner_review_required / scenario_candidate_controlled`，GPC 为 `partial_verified / external_runtime_evidence_required`，WAES 为 `repair_required / authorization_required`。本口径不覆盖历史 WAS 14/14 专项 evidence，只控制当前项目群状态矩阵和后续会话入口。 |
+| 当前真实执行入口 | `project_group_current_state_baseline_refresh_20260626 = controlled`、`development_queue_ready = true`、`dirty_repo_count = 7`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；以 `docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 和 `docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 为准 | 当前所有项目级运行/集成/交付/验收判断都必须先服从这两层受控入口，不得绕过 live 基线或开发态入口直接升状态 |
 | 本轮新增事实 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-015` 与 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100` 已完成并补齐受控索引。当前已完成 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001`、`GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001`、`GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001`、`GPCF-ONTOLOGY-WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-001`、`GPCF-ONTOLOGY-WAS-LOOP-CONTEXT-COVERAGE-REFRESH-001`、source-record monitor 025-100 和 candidate precheck execution 001-015；新增/校准证据 `docs/harness/evidence/was-real-source-record-candidate-precheck-execution-015-20260623.{json,md}`、`docs/harness/evidence/was-real-source-record-monitor-100-20260623.{json,md}`、对应 Loop round、validators 和 fixtures。本轮不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted/integrated/production_ready。下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`。 |
 | KDS TOKEN | 已配置于本机私有文件；`validate_kds_token.py` pass，fingerprint=`bfd9553d`；不得写入 Git/文档/evidence/log |
 | L3 上限 | 最多 15 轮或 2 小时，以先到者为准 |

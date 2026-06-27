@@ -6,6 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/current-session-mainline-declaration-20260622.json"
@@ -29,6 +31,7 @@ def require_phrases(label: str, text: str, phrases: list[str]) -> None:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     evidence = json.loads(read(EVIDENCE_JSON))
     evidence_md = read(EVIDENCE_MD)
     loop_round = read(LOOP_ROUND)
@@ -104,7 +107,8 @@ def main() -> int:
         "current_session_mainline_declaration=pass "
         "session_mainline=session-mainline-control-rollout "
         "handoff_required=false mainline_drift_detected=false "
-        "status_ceiling=partial accepted=false integrated=false production_ready=false"
+        "status_ceiling=partial accepted=false integrated=false production_ready=false "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 

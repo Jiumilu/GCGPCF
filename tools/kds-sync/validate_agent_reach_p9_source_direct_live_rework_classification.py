@@ -48,8 +48,8 @@ def build_report() -> dict[str, Any]:
         fail(f"unexpected_live_status:{live.get('status')}")
     if hit_rate.get("threshold_pass") is not False:
         fail("threshold_should_not_pass")
-    if not failed_topics:
-        fail("failed_topics_missing")
+    if not failed_topics and not critical_errors:
+        fail("rework_reason_missing")
     for field in [
         "credential_written",
         "browser_cookie_extraction_invoked",
@@ -82,11 +82,25 @@ def build_report() -> dict[str, Any]:
         "failed_topics": failed_topics,
         "critical_fetch_errors": critical_errors,
         "classification": "p9s_live_hit_rate_rework_required",
-        "recommended_rework_focus": [
-            "industrial_solid_waste_keyword_hit_gap",
-            "critical_entrypoint_fetch_errors",
-            "source_direct_discovery_filter_for_non_html_assets",
-        ],
+        "rework_reason": (
+            "topic_threshold_gap_and_critical_fetch_errors"
+            if failed_topics and critical_errors
+            else "topic_threshold_gap"
+            if failed_topics
+            else "critical_fetch_errors_only"
+        ),
+        "recommended_rework_focus": (
+            [
+                "critical_entrypoint_fetch_errors",
+                "target_availability_or_alternate_entrypoint_review",
+            ]
+            if critical_errors and not failed_topics
+            else [
+                "industrial_solid_waste_keyword_hit_gap",
+                "critical_entrypoint_fetch_errors",
+                "source_direct_discovery_filter_for_non_html_assets",
+            ]
+        ),
         "security_controls": controls,
         "completion_claim_allowed": False,
         "non_claims": [

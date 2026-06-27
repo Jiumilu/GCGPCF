@@ -31,7 +31,19 @@ REQUIRED_DOC_TOKENS = [
     "GPCF-DEPENDENCY-MATRIX-001",
     "dependency_execution_matrix = controlled",
     "dependency_edge_count = 12",
-    "project_group_git_clean = partial",
+    "project_group_git_clean = blocked",
+    "live_project_group_git_gate = blocked",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
+    "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
+    "globalcloud-project-group-dev-task-queue-20260626.md",
+    "依赖边与 Trigger Layer 对照",
+    "pre_wave1_review_bridge",
+    "authorization_to_pre_execution_total_bridge",
+    "local_release_review_boundary",
+    "source_record_boundary",
+    "semantic_mapping_boundary",
+    "baseline_only_task_pack_ready",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -46,6 +58,8 @@ REQUIRED_REFERENCE_TOKENS = [
     "globalcloud-project-group-dependency-execution-matrix-20260625.md",
     "validate_project_group_dependency_execution_matrix.py",
     "dependency_execution_matrix = controlled",
+    "project_group_current_state_baseline_refresh_20260626 = controlled",
+    "development_queue_ready = true",
 ]
 
 FORBIDDEN_CLAIMS = [
@@ -79,29 +93,30 @@ def main() -> int:
             if not line.startswith("|") or f"`{edge}`" not in line:
                 continue
             columns = [part.strip() for part in line.strip().strip("|").split("|")]
-            if len(columns) == 12 and columns[1] == f"`{edge}`":
+            if len(columns) == 13 and columns[1] == f"`{edge}`":
                 rows.append(line)
         if len(rows) != 1:
             failures.append(f"dependency edge must have exactly one row: {edge}")
             continue
         columns = [part.strip() for part in rows[0].strip().strip("|").split("|")]
-        if len(columns) != 12:
-            failures.append(f"dependency row must have 12 columns: {edge}")
+        if len(columns) != 13:
+            failures.append(f"dependency row must have 13 columns: {edge}")
             continue
         required_columns = {
-            "upstream_evidence": columns[5],
-            "downstream_task": columns[6],
-            "propagation_gate": columns[7],
-            "blocker_or_risk": columns[8],
-            "rollback_or_downgrade": columns[9],
-            "forbidden_claims": columns[11],
+            "trigger_layer": columns[5],
+            "upstream_evidence": columns[6],
+            "downstream_task": columns[7],
+            "propagation_gate": columns[8],
+            "blocker_or_risk": columns[9],
+            "rollback_or_downgrade": columns[10],
+            "forbidden_claims": columns[12],
         }
         for name, value in required_columns.items():
             if not value or value == "-":
                 failures.append(f"dependency row missing {name}: {edge}")
-        if "gate" not in columns[7]:
+        if "gate" not in columns[8]:
             failures.append(f"dependency row gate column must include gate wording: {edge}")
-        if "不声明" not in columns[11]:
+        if "不声明" not in columns[12]:
             failures.append(f"dependency row forbidden claims must include 不声明: {edge}")
 
     for token in REQUIRED_REFERENCE_TOKENS:

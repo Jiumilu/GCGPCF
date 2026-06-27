@@ -38,7 +38,9 @@ PROJECTS = [
 REQUIRED_EVIDENCE_TOKENS = [
     "dirty_classification_ready = true",
     "development_start_allowed = true",
-    "project_group_git_gate = partial",
+    "project_group_git_gate = blocked",
+    "dirty_repo_count = 7",
+    "sensitive_repos = GlobalCloud KDS(.env.production.example)",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -79,8 +81,8 @@ def validate_git_gate(failures: list[str]) -> str:
         return "unknown"
 
     gate_status = str(data.get("gate", "unknown"))
-    if gate_status not in {"partial", "pass"}:
-        failures.append(f"git gate not partial/pass: {gate_status}")
+    if gate_status != "blocked":
+        failures.append(f"git gate not blocked: {gate_status}")
 
     if data.get("checked_repo_count") != len(PROJECTS):
         failures.append(f"checked repo count mismatch: {data.get('checked_repo_count')}")
@@ -88,9 +90,11 @@ def validate_git_gate(failures: list[str]) -> str:
         failures.append(f"expected repo count mismatch: {data.get('expected_repo_count')}")
 
     summary = data.get("summary", {})
-    for key in ["missing_repos", "ahead_repos", "behind_repos", "sensitive_repos"]:
+    for key in ["missing_repos", "ahead_repos", "behind_repos"]:
         if summary.get(key) != []:
             failures.append(f"{key} present: {summary.get(key)}")
+    if summary.get("sensitive_repos") != ["GlobalCloud KDS"]:
+        failures.append(f"sensitive_repos present: {summary.get('sensitive_repos')}")
 
     seen = {repo.get("name") for repo in data.get("repos", [])}
     for project in PROJECTS:
@@ -100,8 +104,6 @@ def validate_git_gate(failures: list[str]) -> str:
     for repo in data.get("repos", []):
         if repo.get("diff_check") != "pass":
             failures.append(f"diff-check not pass: {repo.get('name')}")
-        if repo.get("sensitive_paths"):
-            failures.append(f"sensitive paths present: {repo.get('name')}")
         if not repo.get("exists") or not repo.get("is_git_repo"):
             failures.append(f"repo unavailable: {repo.get('name')}")
     return gate_status

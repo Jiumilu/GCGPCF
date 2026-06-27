@@ -310,9 +310,9 @@
       "non_claim": "source-direct live closure authorization gate probes execute-live without P9S approval and verifies no live fetch is invoked"
     },
     {
-      "scope": "p9_source_direct_live_rework_classification",
-      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-rework-classification-20260627.json",
-      "status": "p9_source_direct_live_rework_classification_pass",
+      "scope": "p9_source_direct_live_result_classification",
+      "fixture": "docs/harness/evidence/agent-reach-p9-source-direct-live-result-classification-20260627.json",
+      "status": "p9_source_direct_live_result_classification_pass",
       "applies_to_query_ids": [
         "p8-q05",
         "p8-q07",
@@ -320,8 +320,8 @@
         "p8-q12",
         "p8-q14"
       ],
-      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_rework_classification.py",
-      "non_claim": "source-direct live rework classification records the authorized P9S hit-rate run result without converting rework into completion"
+      "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_live_result_classification.py",
+      "non_claim": "source-direct live result classification records the authorized P9S hit-rate result without creating source-of-record or accepted/integrated/production_ready claims"
     },
     {
       "scope": "p9_objective_post_live_path_simulation",

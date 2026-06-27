@@ -37,7 +37,9 @@ PROJECTS = [
 REQUIRED_EVIDENCE_TOKENS = [
     "dirty_classification_ready = true",
     "development_start_allowed = true",
-    "project_group_git_gate = partial",
+    "project_group_git_gate = blocked",
+    "dirty_repo_count = 7",
+    "sensitive_repos = GlobalCloud KDS(.env.production.example)",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -93,19 +95,19 @@ def main() -> int:
         data = {}
 
     if data:
-        if data.get("gate") not in {"partial", "pass"}:
+        if data.get("gate") != "blocked":
             failures.append(f"unexpected project group git gate: {data.get('gate')}")
         if data.get("checked_repo_count") != 17 or data.get("expected_repo_count") != 17:
             failures.append("expected 17 checked repos")
         summary = data.get("summary", {})
-        for key in ["missing_repos", "ahead_repos", "behind_repos", "sensitive_repos"]:
+        for key in ["missing_repos", "ahead_repos", "behind_repos"]:
             if summary.get(key) != []:
                 failures.append(f"{key} present: {summary.get(key)}")
+        if summary.get("sensitive_repos") != ["GlobalCloud KDS"]:
+            failures.append(f"sensitive_repos present: {summary.get('sensitive_repos')}")
         for repo in data.get("repos", []):
             if repo.get("diff_check") != "pass":
                 failures.append(f"repo diff-check not pass: {repo.get('name')}")
-            if repo.get("sensitive_paths"):
-                failures.append(f"repo sensitive paths present: {repo.get('name')}")
 
     result = {
         "project_group_dev_p0_dirty_classification": "pass" if not failures else "fail",

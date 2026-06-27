@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
+
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md"
@@ -34,6 +36,7 @@ def require_controlled(text: str, source_path: str) -> None:
 
 
 def main() -> int:
+    gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     registry = read(REGISTRY)
     master = read(MASTER)
     readme = read(README)
@@ -289,7 +292,8 @@ def main() -> int:
         "statuses=fast_admitted,candidate,pilot,controlled,default_enabled,downgraded,disabled,deprecated,superseded "
         "default_enable=risk_tiered pilot_plus_evidence=required "
         "core_methods=CodeGraph,external_search,RAG,multi_agent_parallel "
-        "capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAES_KDS_RAG_writeback"
+        "capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAES_KDS_RAG_writeback "
+        f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0
 
