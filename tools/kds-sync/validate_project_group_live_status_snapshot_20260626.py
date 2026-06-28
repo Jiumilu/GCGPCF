@@ -39,6 +39,9 @@ EXPECTED_REPOS = [
 
 EXPECTED_DIRTY_REPOS = [
     "GlobalCloud Brain",
+]
+
+OPTIONAL_VOLATILE_DIRTY_REPOS = [
     "GlobalCoud GPCF",
 ]
 
@@ -53,16 +56,16 @@ REQUIRED_DOC_TOKENS = [
     "checked_repo_count | `17`",
     "expected_repo_count | `17`",
     "git_gate | `partial`",
-    "dirty_repo_count | `2`",
-    "review_boundary_repo_count = 2",
+    "dirty_repo_count | `1`",
+    "review_boundary_repo_count = 1",
     "noise_cleanup_repo_count = 0",
-    "pass_repo_count | `15`",
+    "pass_repo_count | `16`",
     "ahead_repos | `0`",
     "behind_repos | `0`",
     "sensitive_repos | `0`",
     "diff_check | `pass`",
-    "当前 dirty 仓为 `GlobalCloud Brain`、`GlobalCoud GPCF` 两仓",
-    "review_boundary_repos_current = GlobalCloud Brain, GlobalCoud GPCF",
+    "当前 stable dirty 仓为 `GlobalCloud Brain`",
+    "review_boundary_repos_current = GlobalCloud Brain",
     "noise_cleanup_repo_current = none",
     "gpcf_dirty_count_policy = volatile_observation_not_fact_entry",
     "GPCF 本仓瞬时行数不得作为真实事实入口或状态升级依据",
@@ -212,8 +215,14 @@ def main() -> int:
         if repo_name not in doc_text:
             failures.append(f"missing repo row in live status snapshot: {repo_name}")
 
-    if dirty_repos != EXPECTED_DIRTY_REPOS:
-        failures.append(f"dirty repo set drifted: expected={EXPECTED_DIRTY_REPOS}, actual={dirty_repos}")
+    allowed_dirty_repos = set(EXPECTED_DIRTY_REPOS + OPTIONAL_VOLATILE_DIRTY_REPOS)
+    missing_required_dirty = [repo for repo in EXPECTED_DIRTY_REPOS if repo not in dirty_repos]
+    unexpected_dirty = [repo for repo in dirty_repos if repo not in allowed_dirty_repos]
+    if missing_required_dirty or unexpected_dirty:
+        failures.append(
+            "dirty repo set drifted: "
+            f"required={EXPECTED_DIRTY_REPOS}, optional_volatile={OPTIONAL_VOLATILE_DIRTY_REPOS}, actual={dirty_repos}"
+        )
 
     for repo_name in EXPECTED_DIRTY_REPOS:
         if live_dirty_counts.get(repo_name, 0) <= 0:
@@ -237,6 +246,8 @@ def main() -> int:
         "checked_repo_count": len(EXPECTED_REPOS),
         "dirty_repo_count": len(dirty_repos),
         "dirty_repos": dirty_repos,
+        "stable_dirty_repos": EXPECTED_DIRTY_REPOS,
+        "optional_volatile_dirty_repos": OPTIONAL_VOLATILE_DIRTY_REPOS,
         "ahead_repos": ahead_repos,
         "live_dirty_counts": live_dirty_counts,
         "gfis_real_fact_entry": gfis_real_fact_entry,

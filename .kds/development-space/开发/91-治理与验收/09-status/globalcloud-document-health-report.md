@@ -20,16 +20,16 @@ superseded_by: []
 
 本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、人工业务核验、运行层主键、review queue、runtime intake、WAES review 和 verified artifact 全部满足后才能重新评估。
 
-生成时间：2026-06-28T08:05:37.404049+00:00
+生成时间：2026-06-28T08:56:58.588622+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：3092
-- KDS 镜像 Markdown：3107
-- KDS 本地镜像流水：3092
-- KDS 本地镜像唯一文档：3092
+- 仓库 Markdown：3094
+- KDS 镜像 Markdown：3109
+- KDS 本地镜像流水：3094
+- KDS 本地镜像唯一文档：3094
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
@@ -40,7 +40,7 @@ Loop 文档门禁：`pass`
 ## 状态分布
 
 - archive: 85
-- controlled: 2834
+- controlled: 2836
 - draft: 13
 - okf_derived: 99
 
@@ -50,7 +50,7 @@ Loop 文档门禁：`pass`
 - GFIS: 110
 - GPC: 49
 - GPCF: 1798
-- KDS: 814
+- KDS: 816
 - MMC: 9
 - PKC: 7
 - PVAOS: 10
@@ -414,28 +414,34 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   "gate": "project_group_live_status_snapshot_20260626",
   "status": "pass",
   "checked_repo_count": 17,
-  "dirty_repo_count": 3,
+  "dirty_repo_count": 2,
   "dirty_repos": [
-    "GlobalCoud GPCF",
-    "GlobalCloud GFIS",
-    "GlobalCloud SOP"
+    "GlobalCloud Brain",
+    "GlobalCoud GPCF"
   ],
+  "stable_dirty_repos": [
+    "GlobalCloud Brain"
+  ],
+  "optional_volatile_dirty_repos": [
+    "GlobalCoud GPCF"
+  ],
+  "ahead_repos": [],
   "live_dirty_counts": {
     "GlobalCloud AAAS": 0,
-    "GlobalCloud Brain": 0,
+    "GlobalCloud Brain": 25,
     "WAS世界资产体系": 0,
     "GlobalCloud XiaoC": 0,
     "GlobalCloud WAES": 0,
     "GlobalCloud GPC": 0,
     "GlobalCloud Studio": 0,
-    "GlobalCoud GPCF": 36,
+    "GlobalCoud GPCF": 6,
     "GlobalCloud XWAIL": 0,
-    "GlobalCloud GFIS": 91,
+    "GlobalCloud GFIS": 0,
     "GlobalCloud MMC": 0,
     "GlobalCloud KDS": 0,
     "GlobalCloud XiaoG": 0,
     "GlobalCloud PVAOS": 0,
-    "GlobalCloud SOP": 2,
+    "GlobalCloud SOP": 0,
     "GlobalCloud PKC": 0,
     "GlobalCloud XGD": 0
   },
