@@ -20,27 +20,27 @@ superseded_by: []
 
 本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、人工业务核验、运行层主键、review queue、runtime intake、WAES review 和 verified artifact 全部满足后才能重新评估。
 
-生成时间：2026-06-28T08:56:58.588622+00:00
+生成时间：2026-06-28T16:05:10.608835+00:00
 
-Loop 文档门禁：`pass`
+Loop 文档门禁：`rework_required`
 
 ## 总览
 
-- 仓库 Markdown：3094
-- KDS 镜像 Markdown：3109
-- KDS 本地镜像流水：3094
-- KDS 本地镜像唯一文档：3094
+- 仓库 Markdown：3096
+- KDS 镜像 Markdown：3110
+- KDS 本地镜像流水：3096
+- KDS 本地镜像唯一文档：3096
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
 - 中文本地化债务：False
 - 固定 doc_id 漂移：False
-- 门禁原因：无
+- 门禁原因：hard_failure:project_group_live_status_snapshot
 
 ## 状态分布
 
 - archive: 85
-- controlled: 2836
+- controlled: 2838
 - draft: 13
 - okf_derived: 99
 
@@ -49,7 +49,7 @@ Loop 文档门禁：`pass`
 - Brain: 11
 - GFIS: 110
 - GPC: 49
-- GPCF: 1798
+- GPCF: 1800
 - KDS: 816
 - MMC: 9
 - PKC: 7
@@ -412,15 +412,18 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
 ```text
 {
   "gate": "project_group_live_status_snapshot_20260626",
-  "status": "pass",
+  "status": "fail",
   "checked_repo_count": 17,
-  "dirty_repo_count": 2,
+  "dirty_repo_count": 4,
   "dirty_repos": [
     "GlobalCloud Brain",
-    "GlobalCoud GPCF"
+    "GlobalCoud GPCF",
+    "GlobalCloud KDS",
+    "GlobalCloud SOP"
   ],
   "stable_dirty_repos": [
-    "GlobalCloud Brain"
+    "GlobalCloud Brain",
+    "GlobalCloud SOP"
   ],
   "optional_volatile_dirty_repos": [
     "GlobalCoud GPCF"
@@ -428,20 +431,20 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   "ahead_repos": [],
   "live_dirty_counts": {
     "GlobalCloud AAAS": 0,
-    "GlobalCloud Brain": 25,
+    "GlobalCloud Brain": 46,
     "WAS世界资产体系": 0,
     "GlobalCloud XiaoC": 0,
     "GlobalCloud WAES": 0,
     "GlobalCloud GPC": 0,
     "GlobalCloud Studio": 0,
-    "GlobalCoud GPCF": 6,
+    "GlobalCoud GPCF": 63,
     "GlobalCloud XWAIL": 0,
     "GlobalCloud GFIS": 0,
     "GlobalCloud MMC": 0,
-    "GlobalCloud KDS": 0,
+    "GlobalCloud KDS": 18,
     "GlobalCloud XiaoG": 0,
     "GlobalCloud PVAOS": 0,
-    "GlobalCloud SOP": 0,
+    "GlobalCloud SOP": 16,
     "GlobalCloud PKC": 0,
     "GlobalCloud XGD": 0
   },
@@ -471,7 +474,9 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "production_ready": "false",
     "customer_accepted": "false"
   },
-  "failures": [],
+  "failures": [
+    "dirty repo set drifted: required=['GlobalCloud Brain', 'GlobalCloud SOP'], optional_volatile=['GlobalCoud GPCF'], actual=['GlobalCloud Brain', 'GlobalCoud GPCF', 'GlobalCloud KDS', 'GlobalCloud SOP']"
+  ],
   "warnings": [
     "This validates the live status snapshot only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status."
   ]
@@ -874,7 +879,7 @@ execution_mode=read_only_validation
 
 ```text
 localization_gate=pass
-docs_checked=854
+docs_checked=856
 software_files_checked=240
 findings=0
 ```

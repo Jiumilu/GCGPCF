@@ -39,6 +39,7 @@ EXPECTED_REPOS = [
 
 EXPECTED_DIRTY_REPOS = [
     "GlobalCloud Brain",
+    "GlobalCloud SOP",
 ]
 
 OPTIONAL_VOLATILE_DIRTY_REPOS = [
@@ -56,16 +57,16 @@ REQUIRED_DOC_TOKENS = [
     "checked_repo_count | `17`",
     "expected_repo_count | `17`",
     "git_gate | `partial`",
-    "dirty_repo_count | `1`",
-    "review_boundary_repo_count = 1",
+    "dirty_repo_count | `3`",
+    "review_boundary_repo_count = 3",
     "noise_cleanup_repo_count = 0",
-    "pass_repo_count | `16`",
+    "pass_repo_count | `14`",
     "ahead_repos | `0`",
     "behind_repos | `0`",
     "sensitive_repos | `0`",
     "diff_check | `pass`",
-    "当前 stable dirty 仓为 `GlobalCloud Brain`",
-    "review_boundary_repos_current = GlobalCloud Brain",
+    "当前 stable dirty 仓为 `GlobalCloud Brain`、`GlobalCloud SOP`",
+    "review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP",
     "noise_cleanup_repo_current = none",
     "gpcf_dirty_count_policy = volatile_observation_not_fact_entry",
     "GPCF 本仓瞬时行数不得作为真实事实入口或状态升级依据",

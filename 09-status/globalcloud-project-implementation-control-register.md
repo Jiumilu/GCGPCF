@@ -83,8 +83,8 @@ superseded_by: []
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
 implementation_plan_governance = phase_3_all_project_plans_controlled
 implementation_plan_governance = phase_4_real_execution_governance_controlled
-current_live_project_group_git_gate = partial_due_to_gpcf_gfis_sop_dirty
-current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP
+current_live_project_group_git_gate = partial_due_to_gpcf_brain_sop_dirty
+current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
 current_live_sensitive_repos = none
 current_live_kds_blocker = resolved_not_in_git_status
 current_state_baseline_refresh_controlled = true

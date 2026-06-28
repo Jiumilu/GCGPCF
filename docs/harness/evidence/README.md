@@ -36,6 +36,8 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-4795938811 | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 Evidence | docs/harness/evidence/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md | GPCF | controlled |
+| GPCF-DOC-7C1A4D2E91 | LOOP Governance Summary GFIS Runtime SOP E2E Dev Completion 001 | docs/harness/evidence/LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md | GPCF | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | KDS | controlled |
 | GPCF-DOC-33DE44F307 | Agent-Reach Authoritative Source Verification 20260621 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | Agent-Reach Candidate Quality Regression Gate 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | KDS | controlled |
@@ -291,6 +293,9 @@ KDS 空间：`开发`
 | GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627 | GCKF P0 会话主线接管当前态 D185 | docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | KDS | controlled |
 | GPCF-DOC-GCKFP0STOPRESUMED19020260627 | GCKF P0 停止条件与恢复触发器当前态 D190 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | GPCF | controlled |
+| GPCF-DOC-GFIS-DEV-READY-DIRTY-REVIEW-20260628 | GFIS development_ready confirmation and dirty evidence review 2026-06-28 | docs/harness/evidence/gfis-development-ready-confirmation-and-dirty-review-20260628.md | KDS | controlled |
+| GPCF-DOC-GFIS-DEV-READY-AUTH-20260628 | GFIS development_ready_for_real_business_validation 授权确认请求 2026-06-28 | docs/harness/evidence/gfis-development-ready-for-real-business-validation-authorization-request-20260628.md | KDS | controlled |
+| GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628 | GFIS dirty evidence stage commit authorization request 2026-06-28 | docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | KDS | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS 负责人回执任务台账 | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | KDS | controlled |
 | GPCF-DOC-7607A76253 | GFIS 来源记录负责人请求包 | docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md | GPCF | controlled |
 | GPCF-DOC-825C3B3AC5 | GFIS WAS Profile Runtime Gate Mapping Evidence | docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md | GPCF | controlled |

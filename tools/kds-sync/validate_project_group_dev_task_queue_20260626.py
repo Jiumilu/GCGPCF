@@ -73,7 +73,7 @@ REQUIRED_TOKENS = [
     "KDS-BRAIN-REPORT-HOLD-REVIEW-001",
     "2026-06-28 live override",
     "当前项目群 Git gate 为 `partial`",
-    "`GlobalCoud GPCF`、`GlobalCloud GFIS`、`GlobalCloud SOP`",
+    "`GlobalCoud GPCF`、`GlobalCloud Brain`、`GlobalCloud SOP`",
     "KDS 已从当前 dirty/sensitive 阻塞源移除",
     "KDS blocker 已解除并保持 clean",
     "sensitive_path=resolved_not_in_git_status",

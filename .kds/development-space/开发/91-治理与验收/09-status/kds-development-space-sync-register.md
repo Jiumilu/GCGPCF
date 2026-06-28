@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 7 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 8 | 8 | 已建空间 |
 | MMC | 11-MMC | 9 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1952 | 1844 | 已建空间 |
+| GPCF | 12-GPCF | 1954 | 1845 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 106 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 107 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -384,6 +384,7 @@ superseded_by: []
 | GPCF-DOC-95CB463CBF | 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | 开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | bidirectional | pending_api |
 | GPCF-DOC-29E5B0AC17 | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | 开发/91-治理与验收/02-governance/loop/LOOP_AUTONOMY_POLICY.md | bidirectional | pending_api |
 | GPCF-DOC-9B8C2D4F61 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | 开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | bidirectional | pending_api |
+| GPCF-DOC-2830FAF6E4 | 02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md | 开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md | bidirectional | pending_api |
 | GPCF-DOC-AB6DC46557 | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | bidirectional | pending_api |
 | GPCF-DOC-622398264F | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | bidirectional | pending_api |
 | GPCF-DOC-4C7D46A1B3 | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | bidirectional | pending_api |
@@ -3093,6 +3094,7 @@ superseded_by: []
 | GPCF-DOC-9096ABA44D | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md | bidirectional | pending_api |
 | GPCF-DOC-27101F3BEB | docs/harness/multi-tenant-permission-design.md | 开发/12-GPCF/docs/harness/multi-tenant-permission-design.md | bidirectional | pending_api |
 | GPCF-DOC-40F0A4CB83 | docs/harness/status-audit-2026-06-10.md | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md | bidirectional | pending_api |
+| GPCF-DOC-9126B167F5 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | bidirectional | pending_api |
 | GPCF-DOC-15B317110B | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | bidirectional | pending_api |
 | GPCF-DOC-4ED15E157A | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | 开发/05-KDS/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | bidirectional | pending_api |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | bidirectional | pending_api |

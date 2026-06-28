@@ -34,7 +34,7 @@ partial_verified=1
 repair_required=3
 owner_review_required=1
 project_group_git_gate = partial
-current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP
+current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
 current_live_sensitive_repos = none
 current_live_kds_blocker = resolved_not_in_git_status
 current_live_kds_status = clean / ahead=0 / behind=0 / diff_check=pass
@@ -80,6 +80,7 @@ delivery_plane=GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 default_dev_protocol=Delivery Loop
 status_promotion_mode=application_only
 tooling_mode=minimal_whitelist
+capability_selection_source=task_interface + LOOP_CAPABILITY_USAGE_MATRIX.md
 ```
 
 当前阶段工具白名单：
@@ -184,6 +185,32 @@ GFIS:
   execution_mode: controlled_multi_agent
   default_loop: Delivery Loop
   governance_level: G1
+  capability_profile: development_completion_minimal
+
+  enabled_capabilities:
+    skills:
+      - globalcloud-loop-orchestrator
+      - globalcloud-collaborative-dev
+    tools:
+      - build_gfis_dev_completion_controlled_sample.py
+      - run_gfis_runtime_sop_dev_completion_dry_run.py
+      - validate_loop_v11_delivery_boundary.py
+    methods:
+      - controlled_multi_agent
+      - Delivery Loop
+      - local dry-run
+
+  disabled_capabilities:
+    - real_kds_api_write
+    - real_external_api_write
+    - schema_migrate
+    - production_write
+    - commit
+    - push
+    - deploy
+    - real_business_validation
+    - production_autonomy
+    - automatic_status_promotion
 
   multi_agent_execution:
     mode: controlled_multi_agent

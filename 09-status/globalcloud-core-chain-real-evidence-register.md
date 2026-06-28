@@ -30,8 +30,8 @@ superseded_by: []
 
 以下事实覆盖本文保留的 2026-06-25/2026-06-26 历史 Git 阻塞证据，用于当前执行判断：
 
-- 当前 Git 门禁：current_live_project_group_git_gate = partial_due_to_gpcf_gfis_sop_dirty。
-- 当前 dirty 仓：current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP。
+- 当前 Git 门禁：current_live_project_group_git_gate = partial_due_to_gpcf_brain_sop_dirty。
+- 当前 dirty 仓：current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP。
 - 当前敏感仓：current_live_sensitive_repos = none。
 - 当前 KDS blocker：current_live_kds_blocker = resolved_not_in_git_status。
 - 当前 KDS 状态：current_live_kds_status = clean / ahead=0 / behind=0 / diff_check=pass。

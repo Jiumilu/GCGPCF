@@ -445,6 +445,8 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-871E18BD6E | loop-round-GPCF-XG-LR-001 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | XiaoG | controlled |
 | GPCF-DOC-7A5E9D6D56 | Loop Round GPCF-XG-LR-002：XiaoG 设备与语音触发验证清单 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | XiaoG | controlled |
 | GPCF-DOC-975562EE9E | Harness 项目验收清单 — GPCF | docs/harness/acceptance.md | GPCF | controlled |
+| GPCF-DOC-4795938811 | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 Evidence | docs/harness/evidence/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md | GPCF | controlled |
+| GPCF-DOC-7C1A4D2E91 | LOOP Governance Summary GFIS Runtime SOP E2E Dev Completion 001 | docs/harness/evidence/LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md | GPCF | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | KDS | controlled |
 | GPCF-DOC-33DE44F307 | Agent-Reach Authoritative Source Verification 20260621 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | Agent-Reach Candidate Quality Regression Gate 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | KDS | controlled |
@@ -700,6 +702,9 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627 | GCKF P0 会话主线接管当前态 D185 | docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | GPCF | controlled |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | KDS | controlled |
 | GPCF-DOC-GCKFP0STOPRESUMED19020260627 | GCKF P0 停止条件与恢复触发器当前态 D190 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | GPCF | controlled |
+| GPCF-DOC-GFIS-DEV-READY-DIRTY-REVIEW-20260628 | GFIS development_ready confirmation and dirty evidence review 2026-06-28 | docs/harness/evidence/gfis-development-ready-confirmation-and-dirty-review-20260628.md | KDS | controlled |
+| GPCF-DOC-GFIS-DEV-READY-AUTH-20260628 | GFIS development_ready_for_real_business_validation 授权确认请求 2026-06-28 | docs/harness/evidence/gfis-development-ready-for-real-business-validation-authorization-request-20260628.md | KDS | controlled |
+| GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628 | GFIS dirty evidence stage commit authorization request 2026-06-28 | docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | KDS | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS 负责人回执任务台账 | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | KDS | controlled |
 | GPCF-DOC-7607A76253 | GFIS 来源记录负责人请求包 | docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md | GPCF | controlled |
 | GPCF-DOC-825C3B3AC5 | GFIS WAS Profile Runtime Gate Mapping Evidence | docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md | GPCF | controlled |
@@ -2386,5 +2391,8 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-9096ABA44D | 项目角色验证矩阵 | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | controlled |
 | GPCF-DOC-27101F3BEB | multi-tenant-permission-design | docs/harness/multi-tenant-permission-design.md | GPCF | controlled |
 | GPCF-DOC-40F0A4CB83 | status-audit-2026-06-10 | docs/harness/status-audit-2026-06-10.md | GPCF | controlled |
+| GPCF-DOC-9126B167F5 | GFIS 运行时 SOP 端到端开发完成 001 执行台账 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | GPCF | controlled |
+| GPCF-DOC-15B317110B | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | GPCF | controlled |
+| GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | KDS | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | GPCF | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | KDS | controlled |

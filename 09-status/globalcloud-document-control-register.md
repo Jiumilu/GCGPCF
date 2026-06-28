@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 7 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 8 | 8 | 已建空间 |
 | MMC | 11-MMC | 9 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1952 | 1844 | 已建空间 |
+| GPCF | 12-GPCF | 1954 | 1845 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -48,7 +48,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 106 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 107 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -380,6 +380,7 @@ superseded_by: []
 | GPCF-DOC-95CB463CBF | Loop Agent-Reach L3候选搜索流水线目标 | 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md |
 | GPCF-DOC-29E5B0AC17 | LOOP_AUTONOMY_POLICY | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | WAES, KDS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_AUTONOMY_POLICY.md |
 | GPCF-DOC-9B8C2D4F61 | LOOP 能力注册表 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_REGISTRY.md |
+| GPCF-DOC-2830FAF6E4 | LOOP 能力使用矩阵 | 02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md | GPCF | GPCF, GFIS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md |
 | GPCF-DOC-AB6DC46557 | Loop CodeGraph Goal Optimization Plan | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | WAES | GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md |
 | GPCF-DOC-622398264F | Loop CodeGraph Large File Policy | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | WAES | GFIS, GPC, WAES, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md |
 | GPCF-DOC-4C7D46A1B3 | LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | WAES | GFIS, GPC, WAES, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md |
@@ -1598,7 +1599,7 @@ superseded_by: []
 | GPCF-DOC-LOCALIZATIONDEBTWASMONITOR045REPAIRD11420260622 | WAS Monitor 045 D114 中文化修复证据 | docs/harness/evidence/localization-debt-was-monitor-045-repair-d114-20260622.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/localization-debt-was-monitor-045-repair-d114-20260622.md |
 | GPCF-DOC-LOCALIZATIONDEBTWASMONITOR046REPAIRD11620260622 | WAS Monitor 046 D116 中文化修复证据 | docs/harness/evidence/localization-debt-was-monitor-046-repair-d116-20260622.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/localization-debt-was-monitor-046-repair-d116-20260622.md |
 | GPCF-DOC-LOCALIZATIONDEBTWASMONITOR047REPAIRD11920260622 | WAS Monitor 047 D119 中文化修复证据 | docs/harness/evidence/localization-debt-was-monitor-047-repair-d119-20260622.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/localization-debt-was-monitor-047-repair-d119-20260622.md |
-| GPCF-DOC-LOCALIZATIONDEBTWORKPACK20260622 | Localization Debt Workpack 20260622 | docs/harness/evidence/localization-debt-workpack-20260622.md | KDS | GFIS, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/localization-debt-workpack-20260622.md |
+| GPCF-DOC-LOCALIZATIONDEBTWORKPACK20260622 | Localization Debt Workpack 20260622 | docs/harness/evidence/localization-debt-workpack-20260622.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/localization-debt-workpack-20260622.md |
 | GPCF-DOC-9377D0E7EE | Loop CodeGraph Active Drift Metrics Evidence | docs/harness/evidence/loop-codegraph-active-drift-metrics-20260621.md | KDS | KDS, GFIS, GPC, WAES, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/loop-codegraph-active-drift-metrics-20260621.md |
 | GPCF-DOC-C51A5428BB | Loop CodeGraph Active Drift Monitor Evidence | docs/harness/evidence/loop-codegraph-active-drift-monitor-20260621.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/loop-codegraph-active-drift-monitor-20260621.md |
 | GPCF-DOC-615B48C8D7 | Loop CodeGraph GFIS Residual Notice Evidence | docs/harness/evidence/loop-codegraph-gfis-residual-notice-20260621.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/loop-codegraph-gfis-residual-notice-20260621.md |
@@ -3089,6 +3090,7 @@ superseded_by: []
 | GPCF-DOC-9096ABA44D | 项目角色验证矩阵 | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/project-role-verification-matrix.md |
 | GPCF-DOC-27101F3BEB | multi-tenant-permission-design | docs/harness/multi-tenant-permission-design.md | GPCF | GPCF | docs | controlled | 开发/12-GPCF/docs/harness/multi-tenant-permission-design.md |
 | GPCF-DOC-40F0A4CB83 | status-audit-2026-06-10 | docs/harness/status-audit-2026-06-10.md | GPCF | GPCF | docs | controlled | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md |
+| GPCF-DOC-9126B167F5 | GFIS 运行时 SOP 端到端开发完成 001 执行台账 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | GPCF | GPCF, GFIS, WAES | docs | controlled | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md |
 | GPCF-DOC-15B317110B | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | GPCF | GPCF, GFIS, WAES | docs | controlled | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md |
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | GPCF | GPCF, GFIS, WAES | docs | controlled | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md |

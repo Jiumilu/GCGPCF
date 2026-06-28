@@ -10,9 +10,12 @@ from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md"
+USAGE_MATRIX = ROOT / "02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md"
 MASTER = ROOT / "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md"
 README = ROOT / "02-governance/loop/README.md"
 SUPERPOWERS_VALIDATOR = ROOT / "tools/kds-sync/validate_superpowers_loop_admission.py"
+TASK_INTERFACE_PARSER = ROOT / "tools/kds-sync/parse_loop_task_interface.py"
+EXECUTION_PLAN_BUILDER = ROOT / "tools/kds-sync/build_loop_multi_agent_execution_plan.py"
 
 
 def require(condition: bool, message: str) -> None:
@@ -38,10 +41,12 @@ def require_controlled(text: str, source_path: str) -> None:
 def main() -> int:
     gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
     registry = read(REGISTRY)
+    usage_matrix = read(USAGE_MATRIX)
     master = read(MASTER)
     readme = read(README)
 
     require_controlled(registry, "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md")
+    require_controlled(usage_matrix, "02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md")
     require(
         "related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]" in registry,
         "registry must keep project-group related_projects",
@@ -121,12 +126,32 @@ def main() -> int:
         "validate_loop_round_efficiency_audit.py",
         "validate_continuous_round_substance.py",
         "validate_l3_continuation_guard.py",
+        "validate_loop_v11_delivery_boundary.py",
+        "parse_loop_task_interface.py",
+        "build_loop_multi_agent_execution_plan.py",
         "git status",
         "git diff",
         "git diff --check",
         "document_control.py",
     ]:
         require(phrase in registry, f"registry missing core tool: {phrase}")
+
+    require(TASK_INTERFACE_PARSER.exists(), "missing parser tool: parse_loop_task_interface.py")
+    require(EXECUTION_PLAN_BUILDER.exists(), "missing builder tool: build_loop_multi_agent_execution_plan.py")
+
+    for phrase in [
+        "LOOP 能力使用矩阵",
+        "capability_usage_matrix",
+        "development_completion",
+        "real_business_validation",
+        "governance_audit",
+        "production_readiness",
+        "parse_loop_task_interface.py",
+        "build_loop_multi_agent_execution_plan.py",
+        "GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001",
+        "task_interface",
+    ]:
+        require(phrase in usage_matrix, f"usage matrix missing phrase: {phrase}")
 
     for phrase in [
         "六段式",

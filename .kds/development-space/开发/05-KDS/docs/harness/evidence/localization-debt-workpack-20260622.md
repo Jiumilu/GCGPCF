@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTWORKPACK20260622
 title: Localization Debt Workpack 20260622
 project: KDS
-related_projects: [GFIS, WAES, KDS, GPCF]
+related_projects: [GFIS, WAES, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/localization-debt-workpack-20260622.md
 source_path: docs/harness/evidence/localization-debt-workpack-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -31,11 +31,11 @@ superseded_by: []
 | 字段 | 值 |
 |---|---|
 | localization_gate | `fail` |
-| findings | `49` |
-| docs_checked | `1916` |
+| findings | `1` |
+| docs_checked | `856` |
 | software_files_checked | `240` |
-| bucket_count | `10` |
-| work_item_count | `10` |
+| bucket_count | `1` |
+| work_item_count | `1` |
 | gfis_real_business_lane | `repair_required` |
 | accepted | `False` |
 | integrated | `False` |
@@ -45,39 +45,19 @@ superseded_by: []
 
 ```json
 {
-  "doc_english_heavy": 14,
-  "doc_english_line": 34,
-  "software_english_user_text": 1
+  "doc_english_heavy": 1
 }
 ```
 
 ## 重点目录
 
-- `docs/harness/loops`：18
-- `openspec/changes`：12
-- `docs/harness/evidence`：9
-- `docs/harness`：4
-- `02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md`：1
-- `docs/codegraph`：1
-- `templates/LOOP_ROUND_TEMPLATE.md`：1
-- `templates/evidence-index-template.md`：1
-- `templates/loop-state-template.md`：1
-- `packages/api`：1
+- `docs/harness`：1
 
 ## Workpack
 
 | workpack_id | bucket | finding_count | dominant_kind | priority | status |
 |---|---|---:|---|---|---|
-| LOC-DEBT-001 | docs/harness/loops | 18 | doc_english_line | P2 | open |
-| LOC-DEBT-002 | openspec/changes | 12 | doc_english_line | P2 | open |
-| LOC-DEBT-003 | docs/harness/evidence | 9 | doc_english_line | P2 | open |
-| LOC-DEBT-004 | docs/harness | 4 | doc_english_heavy | P2 | open |
-| LOC-DEBT-005 | 02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md | 1 | doc_english_heavy | P2 | open |
-| LOC-DEBT-006 | docs/codegraph | 1 | doc_english_line | P2 | open |
-| LOC-DEBT-007 | templates/LOOP_ROUND_TEMPLATE.md | 1 | doc_english_line | P2 | open |
-| LOC-DEBT-008 | templates/evidence-index-template.md | 1 | doc_english_heavy | P2 | open |
-| LOC-DEBT-009 | templates/loop-state-template.md | 1 | doc_english_heavy | P2 | open |
-| LOC-DEBT-010 | packages/api | 1 | software_english_user_text | P2 | open |
+| LOC-DEBT-001 | docs/harness | 1 | doc_english_heavy | P2 | open |
 
 ## 处理原则
 

@@ -18,7 +18,7 @@ superseded_by: []
 
 # LOOP 能力注册表
 
-本文件是 GlobalCloud LOOP 能力注册表，覆盖技能池、工具池、方法池的状态模型、风险分级、注册字段、核心能力族与子能力矩阵、能力族升级规则、快速准入、default_enabled、降级、停用、废弃、替代和 rework_required 边界。
+本文件是 GlobalCloud LOOP 能力注册表，覆盖技能池、工具池、方法池的状态模型、风险分级、注册字段、核心能力族与子能力矩阵、能力族升级规则、快速准入、default_enabled、降级、停用、废弃、替代和 rework_required 边界。当前任务类型到能力选择的默认映射由 `LOOP_CAPABILITY_USAGE_MATRIX.md` 控制。
 
 ## 注册字段
 
@@ -43,7 +43,14 @@ superseded_by: []
 
 ## 核心工具
 
-`loop_document_gate.py`、`check_document_pollution.py`、`validate_kds_token.py`、`check_chinese_localization_gate.py`、`validate_loop_engineering_master_plan.py`、`validate_loop_capability_registry.py`、`validate_loop_baseline_sync_readiness.py`、`validate_loop_engineering_five_direction_implementation.py`、`validate_loop_round_efficiency_audit.py`、`validate_continuous_round_substance.py`、`validate_l3_continuation_guard.py`、`git status`、`git diff`、`git diff --check`、`document_control.py`。
+`loop_document_gate.py`、`check_document_pollution.py`、`validate_kds_token.py`、`check_chinese_localization_gate.py`、`validate_loop_engineering_master_plan.py`、`validate_loop_capability_registry.py`、`validate_loop_baseline_sync_readiness.py`、`validate_loop_engineering_five_direction_implementation.py`、`validate_loop_round_efficiency_audit.py`、`validate_continuous_round_substance.py`、`validate_l3_continuation_guard.py`、`validate_loop_v11_delivery_boundary.py`、`parse_loop_task_interface.py`、`build_loop_multi_agent_execution_plan.py`、`git status`、`git diff`、`git diff --check`、`document_control.py`。
+
+## 任务界面执行工具
+
+| capability_id | type | status | risk_level | owner | allowed_contexts | forbidden_contexts | validator_or_gate | rollback_or_disable |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `tool.parse_loop_task_interface.py` | `tool` | `controlled` | `low` | `GPCF` | `task_interface_validation,delivery_planning,governance_audit` | `production_write,status_promotion,cross_repo_write` | `docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md`; `LOOP_CAPABILITY_USAGE_MATRIX.md` | `readonly_only / disable_tool` |
+| `tool.build_loop_multi_agent_execution_plan.py` | `tool` | `controlled` | `low` | `GPCF` | `delivery_planning,multi_agent_orchestration,governance_audit` | `production_write,status_promotion,cross_repo_write` | `LOOP_MULTI_AGENT_EXECUTION_POLICY.md`; `LOOP_CAPABILITY_USAGE_MATRIX.md` | `readonly_only / disable_tool` |
 
 ## 核心方法
 

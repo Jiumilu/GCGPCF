@@ -39,6 +39,165 @@ file_lock_required=true
 same_file_parallel_write_allowed=false
 ```
 
+## 1.1 Task Interface
+
+```yaml
+task_interface:
+  id: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
+  project: GFIS
+  objective: 完成 runtime SOP E2E 最小可运行开发闭环
+  task_type: development_completion
+  lifecycle: dev
+  loop_mode: build
+  autonomy_level: L3_candidate
+  risk_gate: partial
+
+  inputs:
+    required:
+      - controlled_contract_valid_sample
+      - existing_gfis_runtime_context
+      - current_loop_rules
+    optional:
+      - fixture
+      - mock
+      - synthetic_but_contract_valid_data
+    forbidden:
+      - production_data
+      - real_external_api_write
+      - real_kds_api_write
+
+  outputs:
+    required:
+      - CustomerRequirementOrPlatformOrder contract
+      - controlled contract-valid sample
+      - runtime intake dry-run result
+      - primary key candidate
+      - source validation result
+      - review queue item
+      - WAES review candidate
+      - verified artifact candidate by fixture
+      - local E2E dry-run result
+      - delivery boundary validator result
+    optional:
+      - ready_for_internal_review candidate
+    forbidden_claims:
+      - real_business_verified
+      - accepted
+      - integrated
+      - production_ready
+      - customer_accepted
+
+  agents:
+    required:
+      - LOOP Orchestrator
+      - Contract Agent
+      - Runtime Intake Agent
+      - Primary Key / Source Validation Agent
+      - Review Queue Agent
+      - WAES Candidate / Artifact Agent
+      - Boundary Validator Agent
+    optional:
+      - globalcloud-harness-governance
+    forbidden:
+      - production_autonomy
+
+  tools:
+    required:
+      - build_gfis_dev_completion_controlled_sample.py
+      - run_gfis_runtime_sop_dev_completion_dry_run.py
+      - validate_loop_v11_delivery_boundary.py
+    readonly:
+      - classify_git_risk.py
+      - loop_document_gate.py
+      - check_document_pollution.py
+      - parse_loop_task_interface.py
+      - build_loop_multi_agent_execution_plan.py
+    optional:
+      - document_control.py
+    forbidden:
+      - kds_sync_apply.py
+      - real_kds_api_write
+      - real_external_api_write
+      - schema_migrate
+      - bench_migrate
+      - deploy
+      - push
+      - production_token_tools
+
+  methods:
+    required:
+      - controlled_multi_agent
+      - Delivery Loop
+      - controlled sample
+      - local dry-run
+    optional:
+      - governance_audit
+    forbidden:
+      - real_business_validation
+      - production_autonomy
+      - automatic_status_promotion
+      - L4
+      - L5
+
+  execution:
+    mode: controlled_multi_agent
+    default_loop: Delivery Loop
+    governance_level: G1
+    parallel_allowed:
+      - phase_a_readonly_design
+    serial_required:
+      - contract
+      - runtime_intake
+      - primary_key_validation
+      - review_queue
+      - waes_artifact
+      - boundary_validation
+      - orchestrator_summary
+
+  file_locks:
+    orchestrator_only:
+      - LOOP_CONTROL_BOARD.md
+      - gpcf-project-status-matrix.md
+      - GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md
+      - LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md
+    single_writer_per_file: true
+
+  evidence:
+    max_per_slice: 1
+    final_evidence: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md
+    explicit_non_claims:
+      - not real_business_verified
+      - not accepted
+      - not integrated
+      - not production_ready
+      - not customer_accepted
+      - not real source-of-record validated
+
+  success_criteria:
+    - contract_defined
+    - controlled_sample_exists
+    - contract_validator_passed
+    - runtime_intake_dry_run_passed
+    - primary_key_candidate_generated
+    - source_validation_passed
+    - review_queue_item_generated
+    - waes_review_candidate_generated
+    - verified_artifact_candidate_by_fixture_generated
+    - local_e2e_dry_run_passed
+    - delivery_boundary_validator_passed
+
+  stop_conditions:
+    - production_write_required
+    - real_external_api_write_required
+    - real_kds_api_write_required
+    - schema_migrate_required
+    - commit_push_deploy_required
+    - status_promotion_required
+    - accepted_integrated_production_ready_claim_required
+    - cross_agent_file_conflict
+    - secret_or_token_detected
+```
+
 ## 2. Development Chain
 
 本开发切片只证明 GFIS 具备接收真实业务输入并处理到候选验证产物的能力，不证明真实业务完成。

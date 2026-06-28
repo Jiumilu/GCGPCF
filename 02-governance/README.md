@@ -76,6 +76,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-95CB463CBF | Loop Agent-Reach L3候选搜索流水线目标 | 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | WAES | controlled |
 | GPCF-DOC-29E5B0AC17 | LOOP_AUTONOMY_POLICY | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |
 | GPCF-DOC-9B8C2D4F61 | LOOP 能力注册表 | 02-governance/loop/LOOP_CAPABILITY_REGISTRY.md | WAES | controlled |
+| GPCF-DOC-2830FAF6E4 | LOOP 能力使用矩阵 | 02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md | GPCF | controlled |
 | GPCF-DOC-AB6DC46557 | Loop CodeGraph Goal Optimization Plan | 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-622398264F | Loop CodeGraph Large File Policy | 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md | WAES | controlled |
 | GPCF-DOC-4C7D46A1B3 | LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | WAES | controlled |
