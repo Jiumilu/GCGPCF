@@ -20,16 +20,16 @@ superseded_by: []
 
 本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、人工业务核验、运行层主键、review queue、runtime intake、WAES review 和 verified artifact 全部满足后才能重新评估。
 
-生成时间：2026-06-28T00:48:37.714856+00:00
+生成时间：2026-06-28T08:05:37.404049+00:00
 
 Loop 文档门禁：`pass`
 
 ## 总览
 
-- 仓库 Markdown：3084
-- KDS 镜像 Markdown：3098
-- KDS 本地镜像流水：3084
-- KDS 本地镜像唯一文档：3084
+- 仓库 Markdown：3092
+- KDS 镜像 Markdown：3107
+- KDS 本地镜像流水：3092
+- KDS 本地镜像唯一文档：3092
 - KDS API 同步流水：141
 - 元数据缺失：0
 - README 缺失目录：0
@@ -40,22 +40,22 @@ Loop 文档门禁：`pass`
 ## 状态分布
 
 - archive: 85
-- controlled: 2826
+- controlled: 2834
 - draft: 13
 - okf_derived: 99
 
 ## 项目分布
 
 - Brain: 11
-- GFIS: 114
-- GPC: 50
-- GPCF: 1734
-- KDS: 861
+- GFIS: 110
+- GPC: 49
+- GPCF: 1798
+- KDS: 814
 - MMC: 9
 - PKC: 7
 - PVAOS: 10
 - Studio: 2
-- WAES: 167
+- WAES: 163
 - XGD: 7
 - XiaoC: 43
 - XiaoG: 8
@@ -71,7 +71,7 @@ loop_engineering_five_direction_implementation=pass run=implemented stop=impleme
 ### loop_v11_slimming_delivery_recovery
 
 ```text
-loop_v11_slimming_delivery_recovery=pass delivery_loop=enabled governance_loop=stage_or_risk_triggered gate_levels=P0,P1,P2,P3 gfis_min_slice=registered gfis_status_ceiling=repair_required accepted=false integrated=false production_ready=false customer_accepted=false status_promotion_allowed=false
+loop_v11_slimming_delivery_recovery=pass delivery_loop=enabled governance_loop=stage_or_risk_triggered gate_levels=P0,P1,P2,P3 gfis_min_slice=registered gfis_dev_completion_slice=registered gfis_dev_completion_multi_agent=registered gfis_dev_completion_evidence=registered gfis_dev_completion_governance_summary=registered fixture_e2e_passed=true contract_validator_passed=true development_lane=continue_allowed real_business_validation_lane=pending_source_of_record gfis_status_ceiling=repair_required accepted=false integrated=false production_ready=false customer_accepted=false status_promotion_allowed=false kds_sensitive_blocker=resolved_not_in_git_status kds_safe_to_auto_commit=false governance_drift=pass gfis_authorization_boundary=pass
 ```
 
 ### loop_engineering_master_plan
@@ -95,7 +95,7 @@ codegraph_loop_schema=pass templates=3 required_fields=38 automatic_status_upgra
 ### loop_ui_quality_baseline
 
 ```text
-loop_ui_quality_baseline=pass template_ui_section=present master_spec=present capability_status=pilot explicit_ui_scope_rounds=23 explicit_ui_scope_valid=23 historical_ui_signal_rounds_without_explicit_scope=634 baseline_evidence=present gfis_status_ceiling=repair_required
+loop_ui_quality_baseline=pass template_ui_section=present master_spec=present capability_status=pilot explicit_ui_scope_rounds=23 explicit_ui_scope_valid=23 historical_ui_signal_rounds_without_explicit_scope=585 baseline_evidence=present gfis_status_ceiling=repair_required
 ```
 
 ### loop_session_mainline_control
@@ -113,7 +113,7 @@ current_session_mainline_declaration=pass session_mainline=session-mainline-cont
 ### loop_session_registry
 
 ```text
-loop_session_registry=pass repo_recorded_loop_rounds=1220 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=461,Ontology___WAS_governance=131,CodeGraph_governance=67,COGNEE_pilot___writeback=24,Agent-Reach_governance=49,Headroom___LCX_governance=81,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=22,LOOP_localization_governance=5,UI_governance_and_validation=27,Session_declaration_and_mainline=5 gfis_status_ceiling=repair_required
+loop_session_registry=pass repo_recorded_loop_rounds=1221 orphan_session_family=0 live_codex_threads_covered=false auto_takeover_allowed=false GFIS_L4_repair_and_test_sync=296,KDS___DKS_governance=461,Ontology___WAS_governance=131,CodeGraph_governance=67,COGNEE_pilot___writeback=24,Agent-Reach_governance=49,Headroom___LCX_governance=81,OKF___ODF_governance=4,GPCF_CF___governance_rounds=47,XiaoG_evidence_repair=1,Project_group_phase_goals=22,LOOP_localization_governance=6,UI_governance_and_validation=27,Session_declaration_and_mainline=5 gfis_status_ceiling=repair_required
 ```
 
 ### session_mainline_preflight_enforcement
@@ -137,7 +137,7 @@ session_mainline_handoff_request_gate=pass gate_mode=explicit_user_confirmation_
 ### gfis_real_fact_entry_gate
 
 ```text
-gfis_real_fact_entry_gate=pass strong_block=true read_only_verified=true real_source_records=0 valid_source_records=0 formal_confirmation_files=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 manual_business_verification_pending=true real_business_lane=repair_required status_ceiling=repair_required next_required_input=real_source_record_or_equivalent_formal_confirmation accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_real_fact_entry_gate=pass strong_block=true read_only_verified=true development_lane=continue_allowed real_business_validation_lane=pending_source_of_record real_source_records_zero_is_not_dev_blocker=true real_business_validation_block=true status_promotion_block=true real_source_records=0 valid_source_records=0 formal_confirmation_files=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 manual_business_verification_pending=true real_business_lane=repair_required status_ceiling=repair_required next_required_input=real_source_record_or_equivalent_formal_confirmation accepted=false integrated=false production_ready=false customer_accepted=false
 ```
 
 ### gfis_real_fact_entry_coverage
@@ -175,6 +175,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -210,6 +215,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -246,6 +256,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -281,6 +296,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -317,6 +337,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -353,6 +378,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -388,7 +418,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
   "dirty_repos": [
     "GlobalCoud GPCF",
     "GlobalCloud GFIS",
-    "GlobalCloud KDS"
+    "GlobalCloud SOP"
   ],
   "live_dirty_counts": {
     "GlobalCloud AAAS": 0,
@@ -398,14 +428,14 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "GlobalCloud WAES": 0,
     "GlobalCloud GPC": 0,
     "GlobalCloud Studio": 0,
-    "GlobalCoud GPCF": 115,
+    "GlobalCoud GPCF": 36,
     "GlobalCloud XWAIL": 0,
-    "GlobalCloud GFIS": 51,
+    "GlobalCloud GFIS": 91,
     "GlobalCloud MMC": 0,
-    "GlobalCloud KDS": 56,
+    "GlobalCloud KDS": 0,
     "GlobalCloud XiaoG": 0,
     "GlobalCloud PVAOS": 0,
-    "GlobalCloud SOP": 0,
+    "GlobalCloud SOP": 2,
     "GlobalCloud PKC": 0,
     "GlobalCloud XGD": 0
   },
@@ -413,6 +443,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -451,6 +486,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -486,6 +526,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -522,6 +567,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -560,6 +610,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -604,6 +659,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -639,6 +699,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -674,6 +739,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -709,6 +779,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -744,6 +819,11 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "gfis_real_fact_entry_gate": "pass",
     "strong_block": "true",
     "read_only_verified": "true",
+    "development_lane": "continue_allowed",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker": "true",
+    "real_business_validation_block": "true",
+    "status_promotion_block": "true",
     "real_source_records": "0",
     "valid_source_records": "0",
     "formal_confirmation_files": "0",
@@ -788,7 +868,7 @@ execution_mode=read_only_validation
 
 ```text
 localization_gate=pass
-docs_checked=852
+docs_checked=854
 software_files_checked=240
 findings=0
 ```

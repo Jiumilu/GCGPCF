@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md
 source_path: 02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -34,11 +34,14 @@ superseded_by: []
 ## 派发规则
 
 - 默认由主 Codex 会话担任 LOOP Orchestrator，负责 `run`、`stop`、`verify`、`recover`、`debug` 的状态闭环。
+- 开发态默认采用“并行设计，串行落地”：Phase A 允许并行只读设计；Phase B 只允许受控串行实现。
 - 只在任务能拆成互不冲突的独立子任务时启用并行子智能体。
 - `explorer` 只做代码、文档、门禁、风险、依赖的只读调查。
 - `worker` 只在写入范围清晰时使用，必须声明负责文件或模块，不得与其他 worker 共享写入边界。
 - 同轮默认最多 3 个并行 agent；单 agent 最多 12 个文件、30 分钟、1 次重试。
 - 跨项目、跨仓库、真实外部 API、生产配置、KDS/WAES/GFIS 真实写入、部署、推送、状态提升必须另行授权。
+- `LOOP_CONTROL_BOARD.md`、`09-status/gpcf-project-status-matrix.md`、主 evidence 和 Governance Summary 只能由 Orchestrator 修改。
+- 子智能体只能提交 design note、delivery note、局部 validator 结果和局部 dry-run 结果，不得直接修改状态矩阵、Control Board 或主 evidence。
 
 ## 证据要求
 
@@ -58,6 +61,53 @@ superseded_by: []
 - 标注本轮 `substantive_round` 是否成立。
 - 明确是否满足 Definition of Done。
 - 明确不得自动升级 `accepted`、`integrated`、`production_ready`。
+
+子智能体禁止直接输出以下最终结论：
+
+- `real_business_verified`
+- `accepted`
+- `integrated`
+- `production_ready`
+- `customer_accepted`
+- 最终状态矩阵更新
+- Control Board 更新
+- 最终 evidence 定稿
+
+## GFIS 当前主线约束
+
+GFIS 当前主线固定为：
+
+```text
+GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
+```
+
+当前角色分工固定为：
+
+```text
+LOOP Orchestrator
+Contract Agent
+Runtime Intake Agent
+Primary Key / Source Validation Agent
+Review Queue Agent
+WAES Candidate / Artifact Agent
+Boundary Validator Agent
+```
+
+当前允许的唯一状态申请为：
+
+```text
+development_ready_for_real_business_validation
+```
+
+当前禁止的自动结论为：
+
+```text
+real_business_verified
+accepted
+integrated
+production_ready
+customer_accepted
+```
 
 ## 工具边界
 

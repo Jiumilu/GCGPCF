@@ -38,10 +38,11 @@ EXPECTED_REPOS = [
 ]
 
 EXPECTED_DIRTY_REPOS = [
+    "GlobalCloud Brain",
     "GlobalCoud GPCF",
-    "GlobalCloud GFIS",
-    "GlobalCloud SOP",
 ]
+
+EXPECTED_AHEAD_REPOS: list[str] = []
 
 REQUIRED_DOC_TOKENS = [
     "GPCF-LIVE-STATUS-SNAPSHOT-20260626-001",
@@ -52,16 +53,16 @@ REQUIRED_DOC_TOKENS = [
     "checked_repo_count | `17`",
     "expected_repo_count | `17`",
     "git_gate | `partial`",
-    "dirty_repo_count | `3`",
-    "review_boundary_repo_count = 3",
+    "dirty_repo_count | `2`",
+    "review_boundary_repo_count = 2",
     "noise_cleanup_repo_count = 0",
-    "pass_repo_count | `14`",
+    "pass_repo_count | `15`",
     "ahead_repos | `0`",
     "behind_repos | `0`",
     "sensitive_repos | `0`",
     "diff_check | `pass`",
-    "当前 dirty 仓为 `GlobalCoud GPCF`、`GlobalCloud GFIS`、`GlobalCloud SOP` 三仓",
-    "review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP",
+    "当前 dirty 仓为 `GlobalCloud Brain`、`GlobalCoud GPCF` 两仓",
+    "review_boundary_repos_current = GlobalCloud Brain, GlobalCoud GPCF",
     "noise_cleanup_repo_current = none",
     "gpcf_dirty_count_policy = volatile_observation_not_fact_entry",
     "GPCF 本仓瞬时行数不得作为真实事实入口或状态升级依据",
@@ -162,6 +163,19 @@ def git_status(repo: Path) -> list[str]:
     return [line for line in result.stdout.splitlines() if line.strip()]
 
 
+def git_ahead_behind(repo: Path) -> tuple[int, int]:
+    result = subprocess.run(
+        ["git", "rev-list", "--left-right", "--count", "@{upstream}...HEAD"],
+        cwd=repo,
+        check=True,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    left, right = result.stdout.strip().split()
+    return int(right), int(left)
+
+
 def main() -> int:
     failures: list[str] = []
     doc_text = read(DOC, failures)
@@ -173,6 +187,7 @@ def main() -> int:
             failures.append(f"missing token in live status snapshot: {token}")
 
     dirty_repos: list[str] = []
+    ahead_repos: list[str] = []
     live_dirty_counts: dict[str, int] = {}
     for repo_name in EXPECTED_REPOS:
         repo = PROJECT_ROOT / repo_name
@@ -187,6 +202,13 @@ def main() -> int:
         live_dirty_counts[repo_name] = len(lines)
         if lines:
             dirty_repos.append(repo_name)
+        try:
+            ahead, _behind = git_ahead_behind(repo)
+        except subprocess.CalledProcessError as exc:
+            failures.append(f"git ahead/behind failed for {repo_name}: {exc.stderr.strip()}")
+            ahead = 0
+        if ahead:
+            ahead_repos.append(repo_name)
         if repo_name not in doc_text:
             failures.append(f"missing repo row in live status snapshot: {repo_name}")
 
@@ -196,6 +218,9 @@ def main() -> int:
     for repo_name in EXPECTED_DIRTY_REPOS:
         if live_dirty_counts.get(repo_name, 0) <= 0:
             failures.append(f"expected dirty repo is clean: {repo_name}")
+
+    if ahead_repos != EXPECTED_AHEAD_REPOS:
+        failures.append(f"ahead repo set drifted: expected={EXPECTED_AHEAD_REPOS}, actual={ahead_repos}")
 
     for token in REQUIRED_REFERENCE_TOKENS:
         if token not in refs_text:
@@ -212,6 +237,7 @@ def main() -> int:
         "checked_repo_count": len(EXPECTED_REPOS),
         "dirty_repo_count": len(dirty_repos),
         "dirty_repos": dirty_repos,
+        "ahead_repos": ahead_repos,
         "live_dirty_counts": live_dirty_counts,
         "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,

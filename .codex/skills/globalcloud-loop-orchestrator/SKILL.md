@@ -34,7 +34,11 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 - 质量、可用性、客户满意、依赖、风险回滚、自我进化任一门禁 blocked 时，不得升级状态。
 - 文档债务存在时，状态最高为 `partial`。
 - GPCF 总控仓自身也必须参与 Loop，不是免审计例外。
-- LOOP 运行控制闭环为所有 Loop 工作的默认工程接口，历史别名为 LOOP 五方向。除只读问答外，每轮 Loop 必须按 `templates/loop-round-v2-five-direction.yaml` 覆盖 `run`、`stop`、`verify`、`recover`、`debug`，不得退回只记录“输入 → 动作 → 输出 → 检查 → 反馈”的旧五段式。
+- LOOP 运行控制闭环为所有 Loop 工作的默认工程接口，历史别名为 LOOP 五方向。
+- Governance Loop 使用 `run / stop / verify / recover / debug`。
+- Delivery Loop 使用 `goal / changed / verified / risk / next`。
+- 开发态默认 Delivery Loop；只有 guarded、blocked、状态提升、生产动作、阶段收口或触发 P0/P1 风险时才强制切换到 Governance Loop。
+- `templates/loop-round-v2-five-direction.yaml` 仍是 Governance Loop 的标准模板；历史旧五段式 `输入 → 动作 → 输出 → 检查 → 反馈` 不得直接替代 Governance Loop 的 `run / stop / verify / recover / debug`。
 
 ## 编排流程
 
@@ -75,11 +79,17 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 | PDF/培训资料分析 | `pdf` |
 | OpenSpec 变更 | `openspec-*` |
 
-4. 生成本轮 LOOP 运行控制闭环：
-   ```text
-   run → stop → verify → recover → debug
-   ```
-   旧五段式 `输入 → 动作 → 输出 → 检查 → 反馈` 只能作为 `run` 与 `verify` 内部说明，不得替代五方向结构。
+4. 根据当前模式生成本轮 LOOP 运行控制闭环：
+   - Delivery Loop：
+     ```text
+     goal → changed → verified → risk → next
+     ```
+   - Governance Loop：
+     ```text
+     run → stop → verify → recover → debug
+     ```
+   Delivery Loop 只用于开发态；Governance Loop 只用于 guarded、blocked、状态提升、生产动作、阶段收口或 P0/P1 风险。
+   对进入 Governance Loop 的轮次，仍必须按 `templates/loop-round-v2-five-direction.yaml` 覆盖 `run`、`stop`、`verify`、`recover`、`debug`，不得退回只记录“输入 → 动作 → 输出 → 检查 → 反馈”的旧五段式。
 5. 把 `debug` 与 `recover` 的结论转成下一轮候选输入，但只作为建议，不自动越权执行。
 
 ## 阶段门禁

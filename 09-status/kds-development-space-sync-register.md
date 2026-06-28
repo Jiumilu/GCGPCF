@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 51 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
 | WAES | 04-WAES | 163 | 22 | 已建空间 |
-| KDS | 05-KDS | 713 | 713 | 已建空间 |
+| KDS | 05-KDS | 717 | 717 | 已建空间 |
 | Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 7 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 43 | 43 | 已建空间 |
 | XGD | 09-XGD | 7 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 8 | 8 | 已建空间 |
 | MMC | 11-MMC | 9 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1950 | 1842 | 已建空间 |
+| GPCF | 12-GPCF | 1952 | 1844 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -1147,6 +1147,8 @@ superseded_by: []
 | GPCF-DOC-871E18BD6E | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | 开发/10-XiaoG/docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-001.md | bidirectional | pending_api |
 | GPCF-DOC-7A5E9D6D56 | docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | 开发/10-XiaoG/docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md | bidirectional | pending_api |
 | GPCF-DOC-975562EE9E | docs/harness/acceptance.md | 开发/12-GPCF/docs/harness/acceptance.md | bidirectional | pending_api |
+| GPCF-DOC-4795938811 | docs/harness/evidence/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md | 开发/12-GPCF/docs/harness/evidence/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md | bidirectional | pending_api |
+| GPCF-DOC-7C1A4D2E91 | docs/harness/evidence/LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md | 开发/12-GPCF/docs/harness/evidence/LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md | bidirectional | pending_api |
 | GPCF-DOC-D190529EF4 | docs/harness/evidence/README.md | 开发/05-KDS/docs/harness/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-33DE44F307 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | 开发/05-KDS/docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | 开发/05-KDS/docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | bidirectional | pending_api |
@@ -1402,6 +1404,9 @@ superseded_by: []
 | GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627 | docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | 开发/12-GPCF/docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | bidirectional | pending_api |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | 开发/05-KDS/docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-GCKFP0STOPRESUMED19020260627 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | 开发/12-GPCF/docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | bidirectional | pending_api |
+| GPCF-DOC-GFIS-DEV-READY-DIRTY-REVIEW-20260628 | docs/harness/evidence/gfis-development-ready-confirmation-and-dirty-review-20260628.md | 开发/05-KDS/docs/harness/evidence/gfis-development-ready-confirmation-and-dirty-review-20260628.md | bidirectional | pending_api |
+| GPCF-DOC-GFIS-DEV-READY-AUTH-20260628 | docs/harness/evidence/gfis-development-ready-for-real-business-validation-authorization-request-20260628.md | 开发/05-KDS/docs/harness/evidence/gfis-development-ready-for-real-business-validation-authorization-request-20260628.md | bidirectional | pending_api |
+| GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628 | docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | 开发/05-KDS/docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | bidirectional | pending_api |
 | GPCF-DOC-DE35E75C5A | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | 开发/05-KDS/docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | bidirectional | pending_api |
 | GPCF-DOC-7607A76253 | docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md | 开发/12-GPCF/docs/harness/evidence/gfis-source-record-owner-request-package-20260617.md | bidirectional | pending_api |
 | GPCF-DOC-825C3B3AC5 | docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md | 开发/12-GPCF/docs/harness/evidence/gfis-was-profile-runtime-gate-mapping-20260621.md | bidirectional | pending_api |
@@ -3089,6 +3094,7 @@ superseded_by: []
 | GPCF-DOC-27101F3BEB | docs/harness/multi-tenant-permission-design.md | 开发/12-GPCF/docs/harness/multi-tenant-permission-design.md | bidirectional | pending_api |
 | GPCF-DOC-40F0A4CB83 | docs/harness/status-audit-2026-06-10.md | 开发/12-GPCF/docs/harness/status-audit-2026-06-10.md | bidirectional | pending_api |
 | GPCF-DOC-15B317110B | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | bidirectional | pending_api |
+| GPCF-DOC-4ED15E157A | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | 开发/05-KDS/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | bidirectional | pending_api |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | bidirectional | pending_api |
 | GPCF-DOC-5FE5ED4E8B | docs/harness/tasks/README.md | 开发/05-KDS/docs/harness/tasks/README.md | bidirectional | pending_api |
 | GPCF-DOC-25ADFEBCF8 | loop/context/cognee/README.md | 开发/02-GPC/loop/context/cognee/README.md | bidirectional | pending_api |

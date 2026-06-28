@@ -1,0 +1,611 @@
+{
+  "generated_at": "2026-06-28T08:10:43.937364+00:00",
+  "mainline": "GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001",
+  "authorization": {
+    "source": "user_confirmation_in_current_session",
+    "scope": [
+      "AUTH-GFIS-DEV-READY-CANDIDATE-20260628",
+      "AUTH-GFIS-DIRTY-EVIDENCE-REVIEW-20260628"
+    ],
+    "authorization_granted_count": 2,
+    "action_executed_count": 2,
+    "stage_allowed": false,
+    "commit_allowed": false,
+    "push_allowed": false,
+    "delete_allowed": false,
+    "cleanup_allowed": false,
+    "deploy_allowed": false,
+    "status_promotion_allowed": false
+  },
+  "development_result": {
+    "development_lane": "continue_allowed",
+    "development_ready_for_real_business_validation": "candidate_confirmed_for_entry_record",
+    "real_business_validation_lane": "pending_source_of_record",
+    "real_business_lane": "repair_required",
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "customer_accepted": false
+  },
+  "gfis_dirty_review": {
+    "repo": "GlobalCloud GFIS",
+    "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS",
+    "branch": "## main...origin/main",
+    "ahead": 0,
+    "behind": 0,
+    "dirty_count": 91,
+    "status_counts": {
+      "modified": 53,
+      "untracked": 38
+    },
+    "category_counts": {
+      "evidence_index_update": 1,
+      "gfis_dev_dry_run_result_update": 1,
+      "gfis_dev_evidence_json": 11,
+      "gfis_dev_loop_rounds": 11,
+      "gfis_dev_validators": 11,
+      "gfis_intake_readme_update": 1,
+      "gfis_min_candidate_json": 1,
+      "gfis_min_loop_round": 1,
+      "gfis_min_validator": 1,
+      "gfis_runtime_evidence_gate_json": 50,
+      "gfis_valid_source_record_template_or_schema": 2
+    },
+    "sensitive_paths": [],
+    "deleted_paths": [],
+    "manual_review_paths": [],
+    "diff_check": {
+      "returncode": 0,
+      "status": "pass",
+      "output": ""
+    },
+    "entries": [
+      {
+        "status": "M ",
+        "path": "docs/harness/evidence/evidence-index.md",
+        "category": "evidence_index_update",
+        "raw": "M docs/harness/evidence/evidence-index.md"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-kds-candidate-source-record-mapping-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-kds-candidate-source-record-mapping-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-preflight.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-preflight.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-receiving-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-receiving-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-runtime-primary-key-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-runtime-primary-key-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-runtime-primary-key-negative-pollution-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-runtime-primary-key-negative-pollution-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-owner-response-release-remediation-evidence-intake-scanner.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-owner-response-release-remediation-evidence-intake-scanner.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-file-quarantine-precheck.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-file-quarantine-precheck.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-file-empty-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-file-empty-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-precheck.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-precheck.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-empty-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-empty-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-hold-release-precheck.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-hold-release-precheck.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-receiving-hold-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-receiving-hold-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-attempt-hard-stop-audit.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-attempt-hard-stop-audit.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-intake-empty-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-intake-empty-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-authorization-preflight.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-authorization-preflight.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-gap-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-gap-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-owner-response-reopen-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-owner-response-reopen-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-post-scan-hold-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-post-scan-hold-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-release-attempt-hard-stop-audit.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-release-attempt-hard-stop-audit.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-hard-stop-remediation-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-hard-stop-remediation-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-remediation-reopen-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-remediation-reopen-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-reopen-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-reopen-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-attempt-hard-stop-audit.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-attempt-hard-stop-audit.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-precheck.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-precheck.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-intake-scanner.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-intake-scanner.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-post-scan-hold-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-post-scan-hold-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-remediation-action-hold-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-remediation-action-hold-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-remediation-action-recheck.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-remediation-action-recheck.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-reopen-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-reopen-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-package.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-package.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-negative-fixture-guard.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-negative-fixture-guard.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-schema.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-schema.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-schema.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-schema.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-review-queue-preblock.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-review-queue-preblock.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-eligibility-gate.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-eligibility-gate.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-change-listener.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-change-listener.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-owner-reminder-escalation-action-package.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-owner-reminder-escalation-action-package.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-receiving-scan.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-receiving-scan.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-runtime-12-stage-input-gap-convergence-queue.json",
+        "category": "gfis_runtime_evidence_gate_json",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-runtime-12-stage-input-gap-convergence-queue.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dev-dry-run-result.json",
+        "category": "gfis_dev_dry_run_result_update",
+        "raw": " M docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dev-dry-run-result.json"
+      },
+      {
+        "status": " M",
+        "path": "docs/harness/sop-e2e/intake/customer-requirement-platform-order/valid-source-record/README.md",
+        "category": "gfis_intake_readme_update",
+        "raw": " M docs/harness/sop-e2e/intake/customer-requirement-platform-order/valid-source-record/README.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-001.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-001.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-002.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-002.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-003.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-003.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-004.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-004.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-005.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-005.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-006.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-006.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-007.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-007.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-008.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-008.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-009.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-009.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-010.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-010.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-DEV-011.md",
+        "category": "gfis_dev_loop_rounds",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-DEV-011.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-MIN-001.md",
+        "category": "gfis_min_loop_round",
+        "raw": "?? docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-MIN-001.md"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-001-source-record-runtime-readiness-chain.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-001-source-record-runtime-readiness-chain.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-002-valid-source-record-index-template-readiness.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-002-valid-source-record-index-template-readiness.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-003-valid-source-record-index-schema-preflight.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-003-valid-source-record-index-schema-preflight.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-004-valid-source-record-pre-submission-package.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-004-valid-source-record-pre-submission-package.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-005-source-record-owner-submission-handoff-readiness.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-005-source-record-owner-submission-handoff-readiness.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-006-external-candidate-handoff-dry-run.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-006-external-candidate-handoff-dry-run.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-007-external-candidate-dir-handoff-dry-run.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-007-external-candidate-dir-handoff-dry-run.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-008-external-candidate-dir-remediation-summary.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-008-external-candidate-dir-remediation-summary.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-009-external-candidate-dir-manual-submission-manifest.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-009-external-candidate-dir-manual-submission-manifest.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-010-manual-submission-command-preview.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-010-manual-submission-command-preview.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-dev-011-manual-execution-authorization-preflight.json",
+        "category": "gfis_dev_evidence_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-dev-011-manual-execution-authorization-preflight.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-min-001-candidate.json",
+        "category": "gfis_min_candidate_json",
+        "raw": "?? docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-min-001-candidate.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.valid-source-record-index.schema.json",
+        "category": "gfis_valid_source_record_template_or_schema",
+        "raw": "?? docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.valid-source-record-index.schema.json"
+      },
+      {
+        "status": "??",
+        "path": "docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.valid-source-record-index.template.json",
+        "category": "gfis_valid_source_record_template_or_schema",
+        "raw": "?? docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/customer-requirement-platform-order.valid-source-record-index.template.json"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_001_source_record_runtime_readiness_chain.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_001_source_record_runtime_readiness_chain.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_002_valid_source_record_index_template_readiness.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_002_valid_source_record_index_template_readiness.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_003_valid_source_record_index_schema_preflight.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_003_valid_source_record_index_schema_preflight.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_004_valid_source_record_pre_submission_package.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_004_valid_source_record_pre_submission_package.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_005_source_record_owner_submission_handoff_readiness.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_005_source_record_owner_submission_handoff_readiness.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_006_external_candidate_handoff_dry_run.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_006_external_candidate_handoff_dry_run.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_007_external_candidate_dir_handoff_dry_run.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_007_external_candidate_dir_handoff_dry_run.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_008_external_candidate_dir_remediation_summary.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_008_external_candidate_dir_remediation_summary.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_009_external_candidate_dir_manual_submission_manifest.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_009_external_candidate_dir_manual_submission_manifest.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_010_manual_submission_command_preview.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_010_manual_submission_command_preview.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_dev_011_manual_execution_authorization_preflight.py",
+        "category": "gfis_dev_validators",
+        "raw": "?? scripts/validate_gfis_dev_011_manual_execution_authorization_preflight.py"
+      },
+      {
+        "status": "??",
+        "path": "scripts/validate_gfis_runtime_sop_e2e_min_001.py",
+        "category": "gfis_min_validator",
+        "raw": "?? scripts/validate_gfis_runtime_sop_e2e_min_001.py"
+      }
+    ]
+  }
+}

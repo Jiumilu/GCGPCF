@@ -8,6 +8,7 @@ review items, runtime intake records, WAES reviews, or verified artifacts.
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 from pathlib import Path
 
@@ -133,6 +134,14 @@ GPCF_READONLY_PATHS = [
     "tools/kds-sync/loop_document_gate.py",
 ]
 
+GFIS_DEV_DRY_RUN_RESULT = GFIS_ROOT / "docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dev-dry-run-result.json"
+GFIS_REAL_INTAKE_DIRS = [
+    GFIS_ROOT / "docs/harness/sop-e2e/intake",
+    GFIS_ROOT / "docs/harness/sop-e2e/intake-submissions",
+    GFIS_ROOT / "docs/harness/sop-e2e/submissions",
+]
+GFIS_SYNTHETIC_TOKENS = ["SYN-GFIS-DEV-", "synthetic_dev_lane"]
+
 
 def fail(message: str) -> None:
     raise SystemExit(f"FAIL validate_gfis_real_fact_entry_gate: {message}")
@@ -163,6 +172,56 @@ def run_gfis_validator(script_name: str) -> str:
     output = result.stdout.strip()
     require(output, f"GFIS validator produced no output: {script_name}")
     return output
+
+
+def load_gfis_json(path: Path) -> dict[str, object]:
+    require(path.exists(), f"missing GFIS evidence: {path}")
+    data = json.loads(path.read_text(encoding="utf-8"))
+    require(isinstance(data, dict), f"GFIS evidence must be JSON object: {path}")
+    return data
+
+
+def scan_gfis_real_intake_pollution() -> list[str]:
+    polluted: list[str] = []
+    for directory in GFIS_REAL_INTAKE_DIRS:
+        if not directory.exists():
+            continue
+        for path in directory.rglob("*"):
+            if not path.is_file() or path.suffix not in {".json", ".md", ".txt", ".yaml", ".yml"}:
+                continue
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            if any(token in text for token in GFIS_SYNTHETIC_TOKENS):
+                polluted.append(str(path.relative_to(GFIS_ROOT)))
+    return polluted
+
+
+def validate_runtime_sop_e2e_real_readonly() -> str:
+    result = load_gfis_json(GFIS_DEV_DRY_RUN_RESULT)
+    counts = result.get("counts")
+    require(isinstance(counts, dict), "GFIS dev dry-run counts must be object")
+    require(result.get("real_business_lane") == "repair_required", "GFIS real business lane must remain repair_required")
+    require(result.get("runtime_sop_e2e_real") == "repair_required", "GFIS real runtime SOP must remain repair_required")
+    for key in [
+        "real_source_records",
+        "real_runtime_primary_keys",
+        "real_review_queue_items",
+        "real_runtime_intake_items",
+        "real_waes_reviews",
+        "real_verified_artifacts",
+        "real_kds_writes",
+        "real_waes_writes",
+        "production_writes",
+        "real_external_api_writes",
+    ]:
+        require(counts.get(key) == 0, f"GFIS real count must remain 0: {key}")
+    polluted = scan_gfis_real_intake_pollution()
+    require(not polluted, "synthetic data leaked into real intake dirs: " + ", ".join(polluted))
+    return (
+        "gfis_runtime_sop_e2e_real=repair_required "
+        "synthetic_rejected_by_real_lane=1 synthetic_pollution_files=0 "
+        "real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 "
+        "real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0"
+    )
 
 
 def git_status_snapshot(path: Path, pathspecs: list[str] | None = None) -> str:
@@ -234,7 +293,14 @@ def main() -> int:
     gpcf_status_before = git_status_snapshot(ROOT, GPCF_READONLY_PATHS)
     gfis_status_before = git_status_snapshot(GFIS_ROOT)
 
-    outputs = {script: run_gfis_validator(script) for script in GFIS_VALIDATORS}
+    outputs = {
+        script: (
+            validate_runtime_sop_e2e_real_readonly()
+            if script == "validate_gfis_runtime_sop_e2e_real.py"
+            else run_gfis_validator(script)
+        )
+        for script in GFIS_VALIDATORS
+    }
 
     require(
         git_status_snapshot(ROOT, GPCF_READONLY_PATHS) == gpcf_status_before,

@@ -22,7 +22,7 @@ superseded_by: []
 
 LOOP 运行控制闭环常驻能力 = active / all Loop work.
 
-后续所有非只读 Loop 工作必须按 `run / stop / verify / recover / debug` 记录。未登记运行控制闭环的轮次不得升级 accepted/integrated/production_ready。
+后续所有非只读 Loop 工作必须按对应运行结构登记：Governance Loop 使用 `run / stop / verify / recover / debug`；Delivery Loop 只使用 `goal / changed / verified / risk / next`，且 `risk` 必须声明是否触发 P0/P1。未登记运行控制闭环的轮次不得升级 accepted/integrated/production_ready。
 
 当前状态边界：
 
@@ -44,6 +44,15 @@ dependency_edge_binding_count = 17
 real_business_lane=repair_required
 development_lane=continue_allowed
 real_business_validation_lane=pending_source_of_record
+acceptance_lane=not_started
+production_lane=not_started
+current_mainline=GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
+execution_mode=controlled_multi_agent
+default_loop=Delivery Loop
+governance_level=G1
+multi_agent_phase=orchestrator_summary
+file_lock_required=true
+same_file_parallel_write_allowed=false
 real_source_records_zero_is_not_dev_blocker=true
 runtime_primary_key_ready=0
 review_queue=0
@@ -76,17 +85,23 @@ decision:
     - all_project_group
   development_lane:
     status: continue_allowed
+    current_mainline: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
+    completion_target: development_ready_for_real_business_validation
     allowed:
       - local_development
       - fixture_e2e
-      - controlled_sample_e2e
       - dry_run
       - contract_validator
+      - controlled_sample_e2e
       - runtime_intake_development
       - review_queue_development
       - waes_review_candidate_development
       - verified_artifact_candidate_development
       - development_ready_for_real_business_validation
+    progress:
+      development_completion: 60
+      real_business_validation: 0
+      acceptance: 0
   real_business_validation_lane:
     status: pending_source_of_record
     blocked_until:
@@ -97,6 +112,78 @@ decision:
       - real_waes_review
       - real_verified_artifact_candidate
   forbidden_claims:
+    - real_business_verified
+    - accepted
+    - integrated
+    - production_ready
+    - customer_accepted
+    - production_write
+    - real_external_api_write
+    - schema_migrate
+    - commit
+    - push
+    - deploy
+```
+
+## GFIS v1.1 State Transmission
+
+```yaml
+GFIS:
+  development_lane: continue_allowed
+  real_business_validation_lane: pending_source_of_record
+  acceptance_lane: not_started
+  production_lane: not_started
+  current_mainline: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
+  execution_mode: controlled_multi_agent
+  default_loop: Delivery Loop
+  governance_level: G1
+
+  multi_agent_execution:
+    mode: controlled_multi_agent
+    phase: orchestrator_summary
+    orchestrator: LOOP Orchestrator
+    agents:
+      - Contract Agent
+      - Runtime Intake Agent
+      - Primary Key / Source Validation Agent
+      - Review Queue Agent
+      - WAES Candidate / Artifact Agent
+      - Boundary Validator Agent
+    file_lock_required: true
+    same_file_parallel_write_allowed: false
+    orchestrator_only_files:
+      - LOOP_CONTROL_BOARD.md
+      - gpcf-project-status-matrix.md
+      - GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md
+      - LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md
+
+  development_completion:
+    contract_defined: true
+    controlled_sample_exists: true
+    fixture_contract_valid: true
+    contract_validator_passed: true
+    runtime_intake_development: true
+    runtime_intake_dry_run_passed: true
+    primary_key_candidate_generated: true
+    source_validation_passed: true
+    review_queue_item_generated: true
+    waes_review_candidate_generated: true
+    verified_artifact_candidate_by_fixture: true
+    verified_artifact_candidate_by_fixture_generated: true
+    local_e2e_dry_run_passed: true
+    delivery_boundary_validator_passed: true
+    development_ready_for_real_business_validation: candidate
+
+  real_business_validation:
+    real_source_records: 0
+    valid_source_records: 0
+    runtime_intake: 0
+    review_queue: 0
+    waes_review: 0
+    verified: 0
+    status: pending_source_of_record
+
+  forbidden_status:
     - real_business_verified
     - accepted
     - integrated

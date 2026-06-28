@@ -6,6 +6,8 @@ related_projects: [GFIS, GPC, WAES, KDS, PKC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
+doc_schema_version: v1.0
+policy_version: v1.1
 owner: WAES
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md
@@ -26,6 +28,16 @@ superseded_by: []
 
 ```text
 用最少的治理动作挡住最大的风险，把主要时间还给真实开发。
+```
+
+当前 v1.1 主线冻结为：
+
+```text
+控制面保持冻结；
+执行面进入受控多智能体；
+状态面防止误升；
+工具面只补最小缺口；
+交付面以 GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 为唯一主线。
 ```
 
 ## v1.1 冻结规则
@@ -55,6 +67,24 @@ Delivery Loop 每轮只回答：
 
 Governance Loop 继续使用 `run / stop / verify / recover / debug`，并保留完整证据、门禁和回滚要求。
 
+## 项目群 LOOP 分层执行模型
+
+当前项目群 LOOP 按 4 层执行，不再把所有治理动作压到单轮开发切片里：
+
+| 层级 | 名称 | 作用 | 更新频率 |
+|---|---|---|---|
+| L0 | 最高规范层 | 项目群实施方案、Master Plan、Gate Classification、Autonomy Policy、Multi-Agent Policy | 只在重大架构变化时更新 |
+| L1 | 项目群控制层 | Control Board、Status Matrix、Session Registry、Capability Registry | 记录当前事实和主线，不写业务完成事实 |
+| L2 | 项目执行层 | GFIS Delivery Completion Sprint、KDS blocker review、WAES candidate、SOP/PKC maintenance | 只按当前主线推进，不做全局泛化 |
+| L3 | 任务切片层 | DEV-COMP-001 到 DEV-COMP-007 等开发切片 | 默认 Delivery Loop；每切片最多 1 个主 evidence |
+
+执行约束：
+
+- L0/L1 不参与日常开发摩擦。
+- L2 只围绕当前主线创建任务包。
+- L3 只记录当前切片的 `goal / changed / verified / risk / next`。
+- L3 若触发 P0/P1、guarded、blocked、状态提升、生产动作或阶段收口，必须切回 Governance Loop。
+
 ## 阶段性治理收口
 
 治理动作从“每轮同步”改为“批处理”：
@@ -74,6 +104,38 @@ Governance Summary 只回答：
 
 已登记开发切片未达到 5 个时，不强制生成实际 Summary 文档；一旦达到 5 个 Delivery Loop，必须先收口再进入状态提升、提交候选或下一阶段治理判断。达到 5 个 Delivery Loop 后的首个收口证据为 `docs/harness/evidence/loop-v11-delivery-governance-summary-20260628.md`。
 
+## 状态提升申请制
+
+开发完成后只允许提交状态申请，不允许自动提升状态。
+
+当前 GFIS 主线最多只允许申请：
+
+```text
+development_ready_for_real_business_validation
+```
+
+统一流程：
+
+```text
+Delivery Loop 完成
+→ Orchestrator 汇总 evidence
+→ delivery boundary validator pass
+→ Governance Summary
+→ 状态申请草案
+→ 人工确认
+→ 状态矩阵更新
+```
+
+禁止自动进入：
+
+```text
+real_business_verified
+accepted
+integrated
+production_ready
+customer_accepted
+```
+
 ## 三档治理强度
 
 | 档位 | 适用场景 | 证据要求 |
@@ -91,6 +153,47 @@ Governance Summary 只回答：
 | KDS | dev | audit | L2 | partial | G2 | KDS blocker 已解除；保持 hold review、dry-run 和真实 KDS API 未授权边界 |
 | WAES | governance | audit | L1/L2 | guarded | G2 | 裁决层，不参与日常开发 |
 | SOP/PKC | maintenance | verify | L2 | partial | G0/G1 | 专项验证和小切片维护 |
+
+## 当前阶段工具白名单
+
+当前阶段只把直接服务开发闭环或边界防误判的工具保留为 P0/P1 白名单：
+
+```text
+document_control.py
+loop_document_gate.py
+check_document_pollution.py
+classify_git_risk.py
+validate_loop_v11_delivery_boundary.py
+build_gfis_dev_completion_controlled_sample.py
+run_gfis_runtime_sop_dev_completion_dry_run.py
+```
+
+其他能力族工具默认降级为 P2/P3 审计或研究工具，包括但不限于：
+
+```text
+Agent-Reach
+Headroom
+LCX
+OKF
+CodeGraph 大范围治理
+KDS real writeback
+production token
+external receipt
+real measurement
+```
+
+这些工具可以继续存在，但不应阻断 GFIS 当前本地开发主线。
+
+## 当前项目群调度优先级
+
+当前调度顺序固定为：
+
+1. GFIS：最高优先级，完成 Delivery Completion Sprint。
+2. GPCF：维护 v1.1 瘦身基线，不再扩治理。
+3. KDS：只处理 sensitive、token、real API write 边界。
+4. WAES：等待 GFIS candidate 进入裁决输入。
+5. SOP / PKC：小修维护和专项 dry-run。
+6. 其他 `ready_for_review` 项目：默认暂缓，不抢占主线。
 
 ## L3.5 / L4 延后规则
 

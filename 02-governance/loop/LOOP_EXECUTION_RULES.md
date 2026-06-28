@@ -6,6 +6,8 @@ related_projects: [WAES]
 domain: governance
 status: controlled
 version: v1.0
+doc_schema_version: v1.0
+policy_version: v1.1
 owner: WAES
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md
@@ -32,7 +34,15 @@ superseded_by: []
 
 开发态默认 Delivery Loop。普通本地开发不要求完整展开治理审计，只需保留当前切片的目标、变更、验证、风险和下一步。Governance Loop 只在 guarded、blocked、状态提升、生产动作、阶段收口或 P0/P1 风险触发时进入。
 
-最小结构仍必须保留：
+Delivery Loop 不强制展开 `run / stop / verify / recover / debug`。Delivery Loop 只使用以下 5 字段：
+
+```text
+goal / changed / verified / risk / next
+```
+
+Delivery Loop 的 `risk` 字段必须显式声明是否触发 P0/P1。一旦触发 P0/P1，或进入 guarded、blocked、状态提升、生产动作、阶段收口，必须停止 Delivery Loop 并切换到 Governance Loop。
+
+Governance Loop 才强制展开：
 
 ```text
 run / stop / verify / recover / debug
