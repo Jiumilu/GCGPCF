@@ -14,10 +14,6 @@ EXAMPLE_PACK = ROOT / "docs/harness/evidence/globalcloud-project-group-next-stag
 RECORDING_PROCEDURE = ROOT / "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md"
 
 AUTH_IDS = [
-    "AUTH-WAS-DELETE-DS-STORE-20260626",
-    "AUTH-KDS-SCHEME-REVIEW-20260626",
-    "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GPCF-SCHEME-REVIEW-20260626",
     "AUTH-GFIS-SCHEME-REVIEW-20260626",
     "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
@@ -27,7 +23,7 @@ REQUIRED_DOC_TOKENS = [
     "GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001",
     "project_group_next_stage_authorization_human_fill_request_20260627 = prepared",
     "next_stage_authorization_human_fill_request_ready",
-    "fill_item_count | `7`",
+    "fill_item_count | `3`",
     "authorization_granted_count | `0`",
     "action_executed_count | `0`",
     "project_group_current_state_baseline_refresh_20260626 = controlled",
@@ -48,24 +44,13 @@ REQUIRED_DOC_TOKENS = [
     "deferred_pending_more_context",
     "rejected_keep_pending",
     "建议填写顺序",
-    "AUTH-WAS-DELETE-DS-STORE-20260626",
-    "AUTH-KDS-SCHEME-REVIEW-20260626",
-    "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GPCF-SCHEME-REVIEW-20260626",
     "AUTH-GFIS-SCHEME-REVIEW-20260626",
-    "5.3 KDS 单仓核对卡",
-    "5.5.1 AAAS delegated wrapper 单仓核对卡",
-    "5.5.2 XWAIL delegated wrapper 单仓核对卡",
+    "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "5.5.3 SOP delegated wrapper 单仓核对卡",
-    "4.2 A 项确认后状态传导摘要",
-    "5.4 KDS 确认后状态传导摘要",
-    "5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
-    "5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
     "5.6.3 SOP delegated wrapper 确认后状态传导摘要",
-    "A-E 最小核对单",
-    "7.3 C-E 项 delegated wrapper review",
+    "A/B 项 GPCF/GFIS review",
+    "当前 active next-stage 授权项只包含 `GPCF/GFIS/SOP` 三项",
 ]
 
 FORBIDDEN_TOKENS = [

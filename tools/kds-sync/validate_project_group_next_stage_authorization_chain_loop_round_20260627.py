@@ -26,12 +26,9 @@ REQUIRED_TOKENS = [
     "globalcloud-project-group-dev-task-queue-20260626.md",
     "project_group_current_state_baseline_refresh_20260626 = controlled",
     "development_queue_ready = true",
-    "7 项",
-    "execution ledger",
+    "3 项",
     "post-scheme receipt ledger",
-    "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
-    "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
-    "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要",
+    "当前 active next-stage 授权项只包含 `GPCF/GFIS/SOP` 三项",
 ]
 
 
@@ -64,10 +61,6 @@ def main() -> int:
             failures.append(f"missing loop section: {section}")
 
     for auth_id in [
-        "AUTH-WAS-DELETE-DS-STORE-20260626",
-        "AUTH-KDS-SCHEME-REVIEW-20260626",
-        "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
-        "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
         "AUTH-GPCF-SCHEME-REVIEW-20260626",
         "AUTH-GFIS-SCHEME-REVIEW-20260626",
         "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",

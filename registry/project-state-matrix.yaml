@@ -1,0 +1,71 @@
+# LOOP v1.1 project state matrix.
+# This file keeps the four-factor state model in the background so daily
+# delivery work can use the smaller Delivery Loop template.
+projects:
+  GPCF:
+    lifecycle: governance
+    loop_mode: evolve
+    autonomy_level: L2
+    risk_gate: partial
+    governance_intensity: G1/G2
+    delivery_priority: medium
+    daily_loop_template: governance
+    priority: 治理瘦身，不再扩张
+  GFIS:
+    lifecycle: dev
+    loop_mode: build
+    autonomy_level: L3_candidate
+    risk_gate: partial
+    governance_intensity: G1
+    delivery_priority: high
+    daily_loop_template: delivery
+    priority: runtime SOP E2E 最小闭环
+  KDS:
+    lifecycle: dev
+    loop_mode: audit
+    autonomy_level: L2
+    risk_gate: partial
+    governance_intensity: G2
+    delivery_priority: medium
+    daily_loop_template: governance
+    priority: KDS blocker 已解除；保持 hold review、dry-run 和真实 KDS API 未授权边界
+  WAES:
+    lifecycle: governance
+    loop_mode: audit
+    autonomy_level: L1/L2
+    risk_gate: guarded
+    governance_intensity: G2
+    delivery_priority: low
+    daily_loop_template: governance
+    priority: 裁决层，不参与日常开发
+  SOP_PKC:
+    lifecycle: maintenance
+    loop_mode: verify
+    autonomy_level: L2
+    risk_gate: partial
+    governance_intensity: G0/G1
+    delivery_priority: low
+    daily_loop_template: delivery
+    priority: 专项验证和小切片维护
+
+global_rules:
+  state_model: "Lifecycle x LoopMode x AutonomyLevel x RiskGate"
+  delivery_loop_default: true
+  governance_loop_triggers:
+    - guarded
+    - blocked
+    - status_promotion
+    - production_action
+    - sensitive_path
+    - phase_closure
+  forbidden_without_authorization:
+    - production_write
+    - real_external_api_write
+    - schema_migrate
+    - bench_migrate
+    - commit
+    - push
+    - deploy
+    - accepted
+    - integrated
+    - production_ready

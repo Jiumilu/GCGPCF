@@ -53,7 +53,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-802968853F | GC-Knowledge Fabric 综合实施方案完整评审与问题清单 | 03-data-ai-knowledge/GC-Knowledge-Fabric-综合实施方案完整评审与问题清单.md | KDS | controlled |
 | GPCF-DOC-6CF5DB2D6B | GC-Knowledge Fabric 葛化GFIS知识库目录 | 03-data-ai-knowledge/GC-Knowledge-Fabric-葛化GFIS知识库目录.md | KDS | controlled |
 | GPCF-DOC-E4579BFF7E | GPC 绿色供应链公共服务平台总体方案 | 03-data-ai-knowledge/GPC 绿色供应链公共服务平台总体方案.md | GPCF | controlled |
-| GPCF-DOC-934A1F0623 | GlobalCloud GC-Knowledge Fabric 综合实施方案与实施计划 | 03-data-ai-knowledge/GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划.md | KDS | controlled |
+| GPCF-DOC-934A1F0623 | GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划 | 03-data-ai-knowledge/GlobalCloud GC-Knowledge Fabric综合实施方案与实施计划.md | KDS | controlled |
 | GPCF-DOC-E3822328DF | GlobalCloud Loop开发KDS关联数据检索机制 | 03-data-ai-knowledge/GlobalCloud Loop开发KDS关联数据检索机制.md | KDS | controlled |
 | GPCF-DOC-A4F06F496D | GlobalCloud Agent-Reach搜索能力Loop接入方案 | 03-data-ai-knowledge/GlobalCloud-Agent-Reach搜索能力Loop接入方案.md | KDS | controlled |
 | GPCF-DOC-54C6C8B58B | GlobalCloud Brain-KDS 知识编制与知识 UI 边界清单 | 03-data-ai-knowledge/GlobalCloudBrain-KDS知识编制与知识UI边界清单.md | KDS | controlled |
@@ -97,7 +97,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-062D4DA687 | GlobalCloud绿色供应链体系系统-数据库边界总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系系统-数据库边界总表.md | GPCF | controlled |
 | GPCF-DOC-E2FDF91E39 | GlobalCloud绿色供应链体系资源仓库-业务对象映射总表 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系资源仓库-业务对象映射总表.md | GPCF | controlled |
 | GPCF-DOC-E4DDF33CF8 | GlobalCloud绿色供应链体系连接器合同 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系连接器合同.md | GPCF | controlled |
-| GPCF-DOC-21BF6751A0 | GlobalCloud绿色供应链分布式知识系统完整实施提示词 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md | KDS | controlled |
+| GPCF-DOC-21BF6751A0 | GlobalCloud 绿色供应链分布式知识系统完整实施提示词 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统完整实施提示词.md | KDS | controlled |
 | GPCF-DOC-85BD23AD58 | GlobalCloud绿色供应链分布式知识系统实施治理方案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统实施治理方案.md | KDS | controlled |
 | GPCF-DOC-52D30A36F6 | GlobalCloud 绿色供应链分布式知识系统对象字段与 11 池映射清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md | KDS | controlled |
 | GPCF-DOC-766DBAA9E3 | GlobalCloud 绿色供应链分布式知识系统当前实施分析与下一阶段推进 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统当前实施分析与下一阶段推进.md | KDS | controlled |

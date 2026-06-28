@@ -107,13 +107,17 @@ def main() -> int:
         "historical_annotation_present",
         "no_bulk_rewrite",
         "business_status_impact",
-        "does not rewrite historical round records",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
+    require(
+        "does not rewrite historical round records" in evidence_md
+        or "不改写历史 round records" in evidence_md
+        or "不重写历史轮次记录" in evidence_md,
+        "evidence markdown missing no historical rewrite statement",
+    )
     require("LEDB-001-RD-003" in backlog, "backlog missing LEDB-001-RD-003")
     require(
-        "Loop Governance Truth Field Review Evidence | docs/harness/evidence/loop-governance-truth-field-review-20260617.md"
-        in evidence_readme,
+        "docs/harness/evidence/loop-governance-truth-field-review-20260617.md" in evidence_readme,
         "evidence README missing truth-field review entry",
     )
     require("LOOP-GOV-TRUTH-FIELD-REVIEW-20260617" in evidence_index, "evidence index missing truth-field review section")

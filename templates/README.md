@@ -41,6 +41,7 @@ KDS 路径前缀：`开发/12-GPCF/templates/`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | GPCF | controlled |
+| GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | LOOP Delivery Round Template | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-342D4B85A7 | Loop Evidence Template | templates/LOOP_EVIDENCE_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-D72226E1D3 | Loop Handoff Template | templates/LOOP_HANDOFF_TEMPLATE.md | GPCF | controlled |
 | GPCF-DOC-C3B9DFCB0C | LOOP_ROUND_TEMPLATE | templates/LOOP_ROUND_TEMPLATE.md | GPCF | controlled |

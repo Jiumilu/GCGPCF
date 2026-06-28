@@ -88,41 +88,37 @@ superseded_by: []
 project_group_git_clean = blocked
 live_project_group_git_gate = blocked
 checked_repo_count = 17
-dirty_repo_count = 7
-review_boundary_repo_count = 6
-noise_cleanup_repo_count = 1
-pass_repo_count = 10
+dirty_repo_count = 3
+review_boundary_repo_count = 3
+noise_cleanup_repo_count = 0
+pass_repo_count = 14
 ahead_repos = 0
 behind_repos = 0
 sensitive_repos = 1
 diff_check = pass
 ```
 
-当前 7 个 dirty 仓如下：
+当前 3 个 dirty 仓如下：
 
 | 仓库 | raw_expanded_count | 说明 |
 |---|---:|---|
-| GlobalCloud AAAS | 1 | delegated loop gate wrapper review 边界 |
-| WAS世界资产体系 | 1 | `.DS_Store` system noise，沿单独 cleanup 路径治理 |
-| GlobalCoud GPCF | 231 | 总控证据、validator 和 `.kds` 镜像聚合修改 |
-| GlobalCloud XWAIL | 1 | delegated loop gate wrapper review 边界 |
+| GlobalCoud GPCF | 36 | 总控证据、validator 和 `.kds` 镜像聚合修改；当前按 dirty 仓集合与门禁结果解释，不以单次行数升级状态 |
 | GlobalCloud GFIS | 54 | repair boundary 与真实 source-of-record 待补证 |
-| GlobalCloud KDS | 38 | `.env.production.example` 命中 sensitive_path，且存在 hold review 边界 |
-| GlobalCloud SOP | 2 | delegated loop gate wrapper 边界与 system noise |
+| GlobalCloud KDS | 56 | `.env.production.example` 命中 sensitive_path，且存在 hold review 边界 |
 
-其余 10 仓当前为 clean。状态解释必须以 dirty 仓集合、`GlobalCloud KDS/.env.production.example` sensitive_path、`diff_check=pass` 和文档门禁为准，不得回退到旧的 17 仓全 dirty 口径。
+其余 14 仓当前为 clean。状态解释必须以 dirty 仓集合、`GlobalCloud KDS/.env.production.example` sensitive_path、`diff_check=pass` 和文档门禁为准，不得回退到旧的 17 仓全 dirty 口径。
 
 ```text
-review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP
-noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
+review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud KDS
+noise_cleanup_repo_current = none
 ```
 
 ## 5. 发现的状态漂移
 
-当前真实漂移已从“17 仓全 dirty”收敛到“7 仓总事实、10 仓 clean、6 仓 review 边界 + 1 项 WAS noise cleanup”。因此：
+当前真实漂移已从“17 仓全 dirty”收敛到“3 仓总事实、14 仓 clean、3 仓 review 边界”。因此：
 
 - 任何执行前判断都必须优先引用 `globalcloud-project-group-live-status-snapshot-20260626.md` 和 `globalcloud-project-group-current-state-baseline-refresh-20260626.md`。
-- `WAS世界资产体系/.DS_Store` 不并入 Pre-Wave1 六仓 review 边界。
+- AAAS、WAS、XWAIL 和 SOP 已从当前 dirty 集合中剥离，应回到各自主任务入口继续推进。
 - `GlobalCloud KDS/.env.production.example` 是当前 live Git gate 的硬阻塞点，优先级高于历史 diffcheck blocker 口径。
 
 漂移不代表门禁失败，但说明“下一批可执行任务”进入执行前必须先复核 live Git gate，不能继续使用旧的 17 仓 dirty 或“6 仓 dirty 直接导致 blocked”的简化口径。
@@ -131,14 +127,15 @@ noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
 
 | 优先级 | 任务 | 项目/链路 | 当前边界 | 执行前门禁 | 回滚边界 |
 |---|---|---|---|---|---|
-| P0 | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | GPCF -> all projects | 当前 6 仓 review 边界已收口为 Wave 1 前置桥接入口 | pre-wave1 review authorization gate、Loop document gate、Git clean gate | 未确认时保持 `review_allowed=false`，Wave 1 不进入执行回执 |
-| P0 | `AUTH-WAS-DELETE-DS-STORE-20260626` | WAS世界资产体系 | `WAS世界资产体系/.DS_Store` 仍是单独 noise cleanup 路径 | Git clean gate、noise cleanup authorization boundary | 未确认时保持 `noise_decision_required` |
-| P0 | `GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` | GPCF/KDS | KDS sensitive_path 是当前 live blocked 主因 | KDS sensitive path gate、Loop document gate、receipt ledger gate | 未确认或门禁失败时保持 blocked |
+| P0 | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | GPCF -> all projects | 当前 `GPCF/GFIS/KDS` 三仓 review 边界已收口为 Wave 1 前置桥接入口 | pre-wave1 review authorization gate、Loop document gate、Git clean gate | 未确认时保持 `review_allowed=false`，Wave 1 不进入执行回执 |
+| P0 | `AUTH-KDS-SCHEME-REVIEW-20260626` | KDS | KDS sensitive_path 是当前 live blocked 主因 | KDS sensitive path gate、Loop document gate、receipt ledger gate | 未确认或门禁失败时保持 blocked |
 | P0 | `WAES-LINT-RUNTIME-001` | WAES -> XWAIL/AaaS | WAES 仍为 `repair_required / authorization_required` | WAES 项目门禁、GPCF dependency gate、Loop document gate、人工授权 | 修复失败则保持 WAES `repair_required`，XWAIL/AaaS 不升级发布绑定 |
 | P0 | `GFIS-REAL-SOR-001` | GFIS/GPC/PVAOS -> SCaaS | 缺真实 source-of-record | 业务 owner 输入确认、source-record gate、GPC external runtime gate | 输入缺失或证据不合格时保持 GFIS `repair_required` |
 | P1 | `GPC-EXTERNAL-RUNTIME-EVIDENCE-001` | GPC -> PVAOS/SCaaS | GPC 仍缺生产确认、外部联调和 runtime surface 证据 | GPC runtime evidence gate、外部环境/owner 确认 | 外部证据缺失时保持 `external_runtime_evidence_required` |
 | P1 | `BRAIN-HUMAN-REVIEW-DECISION-001` | KDS -> Brain | Brain 到人工审查边界 | KDS RAG export gate、Brain review handoff gate、人工确认 | 未确认时保持 `ready_for_review / authorization_boundary` |
-| P1 | `GPCF-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626-001` | GPCF -> all projects | 当前只覆盖 6 仓 review 边界；`WAS .DS_Store` 单独处理 | 逐仓授权回执、Git gate、Loop document gate | 未授权时不 review、不 stage、不 commit、不 push、不 delete |
+| P1 | `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` | XWAIL/AaaS | XWAIL 已从当前 dirty 集合剥离，应回到主契约预检入口 | XWAIL validator gate、AaaS service runtime gate、Loop document gate | 若命令失败则保持 `integration_precheck_candidate` |
+| P1 | `AAAS-WAES-BINDING-PRECHECK-001` | AAAS | AAAS 已从当前 dirty 集合剥离，应回到服务包绑定预检入口 | AaaS service runtime gate、WAES binding precheck gate、Loop document gate | 若 validator 失败则保持 `integration_precheck_candidate` |
+| P1 | `SOP-SCENARIO-OWNER-REVIEW-001` | SOP | SOP 已从当前 dirty 集合剥离，应回到场景 owner review 主入口 | SOP owner review gate、Loop document gate | owner 未确认时保持 `owner_review_required` |
 
 ## 7. LOOP 运行控制闭环
 
@@ -146,9 +143,9 @@ noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
 |---|---|
 | run | 复核总控板、当前状态基线、依赖矩阵、状态推进矩阵、任务包、目标覆盖审计和完成度缺口矩阵，并恢复 Loop 文档门禁到 `pass` |
 | stop | 当前停止在 `authorization_boundary`，因为下一步进入真实修复、真实业务输入、review/stage/commit/push 或状态提升都需要人工确认 |
-| verify | 当前状态基线、依赖矩阵、状态推进矩阵、任务包、目标覆盖审计、完成度缺口矩阵、总控板、污染检查、KDS TOKEN 和 Loop 文档门禁均已通过；live Git gate 仍因 7 仓总事实与 KDS sensitive_path 保持 `blocked` |
+| verify | 当前状态基线、依赖矩阵、状态推进矩阵、任务包、目标覆盖审计、完成度缺口矩阵、总控板、污染检查、KDS TOKEN 和 Loop 文档门禁均已通过；live Git gate 仍因 3 仓总事实与 KDS sensitive_path 保持 `blocked` |
 | recover | 若后续任务失败，按对应任务回滚边界降级为 `repair_required`、`external_runtime_evidence_required`、`dependency_review_required`、`noise_decision_required` 或继续保持 `authorization_boundary` |
-| debug | 当前最大实际阻塞不是文档结构，而是 7 仓总 dirty 事实、KDS sensitive_path、WAS noise cleanup、WAES repair、GFIS 真实 source-of-record、GPC 外部 runtime evidence 和 Brain 人工审查确认 |
+| debug | 当前最大实际阻塞不是文档结构，而是 `GlobalCoud GPCF / GlobalCloud GFIS / GlobalCloud KDS` 三仓 dirty 事实、KDS sensitive_path、WAES repair、GFIS 真实 source-of-record、GPC 外部 runtime evidence 和 Brain 人工审查确认 |
 
 ## 8. 禁止声明
 
@@ -192,8 +189,7 @@ release_allowed = false
 
 | 优先级 | 授权入口 | 目标 | 仍需人工确认 |
 |---|---|---|---|
-| P0 | `AUTH-KDS-SCHEME-REVIEW-20260626`、`AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-GFIS-SCHEME-REVIEW-20260626`、`AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` | 完成当前 6 仓 Pre-Wave1 review 边界确认；KDS 复用 `5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要`，AAAS/XWAIL/SOP 分别复用 `5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要`、`5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要`、`5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要` | 是 |
-| P0 | `AUTH-WAS-DELETE-DS-STORE-20260626` | 决定 `WAS世界资产体系/.DS_Store` 的 noise cleanup 路径 | 是 |
+| P0 | `AUTH-KDS-SCHEME-REVIEW-20260626`、`AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-GFIS-SCHEME-REVIEW-20260626` | 完成当前 3 仓 Pre-Wave1 review 边界确认；KDS 继续复用 `5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要`，GPCF/GFIS 继续沿现有 pre-wave1 与 review-auth 包登记结论 | 是 |
 | P0 | `GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001` | 将上面 7 项确认转成可直接填写的标准请求，再按 receipt 录入流程落到对应总账 | 是 |
 | P0 | `GPCF-AUTHORIZATION-PACKAGE-ROUTING-001` + next-stage routing supplement | 保持主路由与 next-stage 二级路由同步，避免人工确认后写错 execution ledger / post-scheme ledger | 是 |
 | P0 | `AUTH-WAVE1-WAES-LINT-RUNTIME-20260626` | 修复 WAES lint/runtime，解除 `WAES -> XWAIL -> AaaS` 发布前阻塞 | 是 |

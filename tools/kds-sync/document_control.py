@@ -457,7 +457,11 @@ def apply_frontmatter(records: list[dict[str, object]]) -> None:
         # content alone only when an explicit external marker is present.
         if existing.get("doc_control") == "external":
             continue
-        write_text(path, metadata_block(record) + body.rstrip() + "\n")
+        stripped_body = body.rstrip()
+        if stripped_body:
+            write_text(path, metadata_block(record) + stripped_body + "\n")
+        else:
+            write_text(path, metadata_block(record).rstrip() + "\n")
 
 
 def markdown_table(headers: list[str], rows: list[list[str]]) -> str:

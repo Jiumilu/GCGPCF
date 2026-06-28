@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md
 source_path: 01-architecture/GlobalCloud 项目群总体方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -52,6 +52,23 @@ superseded_by: []
 | XiaoG | live API、通知、审计和设备验证授权包 |
 | SOP | 绿色供应链场景 SOP 和对外材料候选 |
 | GPCF | 项目群治理、文档、证据、门禁、状态传导和 LOOP 编排 |
+
+## 2.1 武汉城市圈绿色供应链运营 SOP 场景链路
+
+武汉城市圈绿色供应链运营 SOP 是项目群首个按“运营在前、投厂在后、订单先行、本地协同”进入受控内部试运行的场景链路。该链路覆盖武汉、应城、咸宁、武穴和 N 地区五个任务单元，目标是在 2026-06-29 至 2026-07-05 首轮 7 天内部试运行中跑通统一订单池、G0-G8 轻量闸门、红黄灯清单、周评分和补证队列。
+
+项目群职责边界如下：
+
+| 项目 | 场景职责 | 边界 |
+|---|---|---|
+| SOP | 输出场景规则、模板、评分口径、硬否决项和周评分报告 | 不制造业务事实，不替代 owner 确认 |
+| KDS | 作为客户、订单、主体、合同、交付、回款和会议材料的唯一知识事实引用源 | 未授权前只读，不执行真实 KDS API 写入 |
+| GFIS | 承接 G5-G7 以后生产、质检、仓储、发货、POD、财务凭证和运行层主键 | 无真实 source-of-record 时不得声明真实 SOP E2E |
+| GPC | 承接订单池、红黄灯、签收、异常和周评分看板等后续页面需求 | 不以页面可见替代业务闭环 |
+| GPCF | 纳入项目群门禁、证据、状态矩阵、依赖矩阵和 LOOP 闭环 | 不替代业务 owner、WAES 或客户验收 |
+| WAES | 承接授权、审查、越权控制和状态裁决入口 | 未经人工确认不得 accepted、integrated 或 production_ready |
+
+该链路的总体定位是 `controlled_internal_pilot`。它可以作为项目群真实运营补证和系统开发任务的输入，不得直接声明正式 SOP 发布、客户验收、生产运行完成、项目群集成完成或 1+8 全覆盖已达成。
 
 ## 3. 总体架构原则
 

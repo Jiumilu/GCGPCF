@@ -15,10 +15,6 @@ POST_SCHEME_LEDGER = ROOT / "docs/harness/evidence/globalcloud-project-group-pos
 EXECUTION_LEDGER = ROOT / "docs/harness/evidence/globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md"
 
 AUTH_IDS = [
-    "AUTH-WAS-DELETE-DS-STORE-20260626",
-    "AUTH-KDS-SCHEME-REVIEW-20260626",
-    "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GPCF-SCHEME-REVIEW-20260626",
     "AUTH-GFIS-SCHEME-REVIEW-20260626",
     "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
@@ -28,16 +24,16 @@ REQUIRED_DOC_TOKENS = [
     "GPCF-NEXT-STAGE-AUTHORIZATION-RECEIPT-RECORDING-PROCEDURE-20260627-001",
     "project_group_next_stage_authorization_receipt_recording_procedure_20260627 = controlled",
     "next_stage_authorization_receipt_recording_procedure_ready",
-    "supported_auth_count | `7`",
+    "supported_auth_count | `3`",
     "recorded_receipt_count | `0`",
     "authorization_granted_count | `0`",
     "action_executed_count | `0`",
     "project_group_current_state_baseline_refresh_20260626 = controlled",
     "development_queue_ready = true",
-    "review_boundary_repo_count | `6`",
-    "noise_cleanup_repo_count | `1`",
-    "review_boundary_repos_current | `GlobalCloud AAAS`、`GlobalCoud GPCF`、`GlobalCloud XWAIL`、`GlobalCloud GFIS`、`GlobalCloud KDS`、`GlobalCloud SOP`",
-    "noise_cleanup_repo_current | `WAS世界资产体系(.DS_Store)`",
+    "review_boundary_repo_count | `3`",
+    "noise_cleanup_repo_count | `0`",
+    "review_boundary_repos_current | `GlobalCoud GPCF`、`GlobalCloud GFIS`、`GlobalCloud SOP`",
+    "noise_cleanup_repo_current | `none`",
     "review_allowed | `false`",
     "stage_allowed | `false`",
     "commit_allowed | `false`",
@@ -55,13 +51,9 @@ REQUIRED_DOC_TOKENS = [
     "globalcloud-project-group-dev-task-queue-20260626.md",
     "如果用户只说“继续”“下一步”“开始执行”，必须视为 `pending_confirmation`",
     "录入前单仓复核复用入口",
-    "5.5.1 AAAS delegated wrapper 单仓核对卡",
-    "5.5.2 XWAIL delegated wrapper 单仓核对卡",
-    "5.5.3 SOP delegated wrapper 单仓核对卡",
     "确认后状态传导复用入口",
-    "5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
-    "5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
-    "5.6.3 SOP delegated wrapper 确认后状态传导摘要",
+    "SOP delegated wrapper",
+    "当前 active next-stage 授权项只包含 `GPCF/GFIS/SOP` 三项",
 ]
 
 FORBIDDEN_TOKENS = [

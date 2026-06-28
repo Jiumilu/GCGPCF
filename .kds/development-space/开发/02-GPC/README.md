@@ -8,6 +8,7 @@
 | --- | --- | --- | --- |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | controlled |
 | GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | controlled |
+| GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | controlled |
 | GPCF-DOC-56BC03A70C | GlobalCloud 绿色供应链体系 P0 最小闭环界面实施清单 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | controlled |
 | GPCF-DOC-BD1C1FE02E | GlobalCloud 绿色供应链体系 P0 最小闭环界面验收矩阵 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面验收矩阵.md | controlled |
 | GPCF-DOC-5D5E27312C | GlobalCloud 绿色供应链体系对话模式与操作模式规范 | 04-ui-delivery/GlobalCloud绿色供应链体系对话模式与操作模式规范.md | controlled |
@@ -47,10 +48,7 @@
 | GPCF-DOC-PROJECT-GROUP-READY-FOR-REVIEW-ADVANCEMENT-QUEUE-20260626 | GlobalCloud 项目群 Ready for Review 推进队列 2026-06-26 | docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-PROGRESS-20260626 | GlobalCloud 项目群真实执行治理推进证据 2026-06-26 | docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-STATUS-ADVANCEMENT-MATRIX-20260625 | GlobalCloud 项目群状态推进判定矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md | controlled |
-| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md | controlled |
 | GPCF-DOC-25ADFEBCF8 | cognee | loop/context/cognee/README.md | controlled |
 | GPCF-DOC-6BA1B0CCA6 | harness | loop/context/cognee/harness/README.md | controlled |
-| GPCF-DOC-7A2A6D4F05 | COGNEE P1 召回对照表模板（并行） | loop/context/cognee/harness/p1-recall-comparison-template.md | controlled |
 | GPCF-DOC-7A2A6D4F06 | COGNEE P2 写入预览模板（最小字段） | loop/context/cognee/harness/p2-write-preview-template.md | controlled |
-| GPCF-DOC-8C7F2F5001 | COGNEE P4 真实写入前置预检模板（最小字段） | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | controlled |
 | GPCF-DOC-AGENT-REACH-SECURITY-REVIEW-20260622 | Agent-Reach 安全审查 | third_party/agent-reach/SECURITY_REVIEW.md | controlled |

@@ -12,10 +12,10 @@ DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-real-execution-gov
 REQUIRED_STRINGS = [
     "project_group_git_clean = blocked",
     "checked_repo_count = 17",
-    "dirty_repo_count = 7",
-    "review_boundary_repo_count = 6",
-    "noise_cleanup_repo_count = 1",
-    "pass_repo_count = 10",
+    "dirty_repo_count = 3",
+    "review_boundary_repo_count = 3",
+    "noise_cleanup_repo_count = 0",
+    "pass_repo_count = 14",
     "ahead_repos = 0",
     "behind_repos = 0",
     "sensitive_repos = 1",
@@ -32,9 +32,11 @@ REQUIRED_STRINGS = [
     "GFIS-REAL-SOR-001",
     "GPC-EXTERNAL-RUNTIME-EVIDENCE-001",
     "BRAIN-HUMAN-REVIEW-DECISION-001",
-    "GPCF-POST-SCHEME-RECOGNITION-REVIEW-AUTHORIZATION-REQUEST-20260626-001",
+    "AUTH-KDS-SCHEME-REVIEW-20260626",
     "GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001",
-    "AUTH-WAS-DELETE-DS-STORE-20260626",
+    "XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001",
+    "AAAS-WAES-BINDING-PRECHECK-001",
+    "SOP-SCENARIO-OWNER-REVIEW-001",
     "validate_project_group_next_stage_authorization_decision_board_20260626.py",
     "validate_project_group_next_stage_authorization_receipt_example_pack_20260627.py",
     "validate_project_group_next_stage_authorization_receipt_recording_procedure_20260627.py",
@@ -63,8 +65,8 @@ REQUIRED_STRINGS = [
     "WAES -> XWAIL/AaaS",
     "GFIS/GPC/PVAOS -> SCaaS",
     "KDS -> Brain",
-    "review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP",
-    "noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)",
+    "review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud KDS",
+    "noise_cleanup_repo_current = none",
     "trigger_layer 控制面传导",
     "trigger layer 已从总控板传导到核心链路证据台账和实施方案台账",
     "core_trigger_layer_count=8",
@@ -77,13 +79,9 @@ REQUIRED_STRINGS = [
 ]
 
 PROJECTS = [
-    "GlobalCloud AAAS",
-    "WAS世界资产体系",
     "GlobalCoud GPCF",
-    "GlobalCloud XWAIL",
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
-    "GlobalCloud SOP",
 ]
 
 

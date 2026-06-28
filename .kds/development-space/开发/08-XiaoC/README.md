@@ -45,7 +45,7 @@
 | GPCF-DOC-86DB4AB0BA | XiaoC | docs/harness/XiaoC/README.md | controlled |
 | GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | controlled |
 | GPCF-DOC-63536E3201 | Evidence Index — XiaoC | docs/harness/XiaoC/evidence/evidence-index.md | controlled |
-| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | XiaoC 模型路由 Dry-run 环境阻塞证据 2026-06-25 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | controlled |
-| GPCF-DOC-9CACBDF863 | GlobalCloud XiaoC Loop State | docs/harness/XiaoC/loop-state.md | controlled |
+| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | xiaoc-model-routing-dryrun-environment-blocked-20260625 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | controlled |
+| GPCF-DOC-9CACBDF863 | loop-state | docs/harness/XiaoC/loop-state.md | controlled |
 | GPCF-DOC-857DCECF45 | loops | docs/harness/XiaoC/loops/README.md | controlled |
 | GPCF-DOC-328F61B887 | Loop Round GPCF-XC-LR-001 | docs/harness/XiaoC/loops/loop-round-GPCF-XC-LR-001.md | controlled |

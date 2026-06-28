@@ -20,9 +20,6 @@ BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-bo
 TASK_PACKS = ROOT / "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md"
 
 AUTH_IDS = [
-    "AUTH-KDS-SCHEME-REVIEW-20260626",
-    "AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "AUTH-GPCF-SCHEME-REVIEW-20260626",
     "AUTH-GFIS-SCHEME-REVIEW-20260626",
     "AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
@@ -32,46 +29,25 @@ REQUIRED_DOC_TOKENS = [
     "project_group_pre_wave1_review_authorization_request_20260627 = prepared",
     "task_id = GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001",
     "state_candidate = pre_wave1_review_authorization_ready",
-    "review_boundary_count = 6",
-    "review_boundary_repo_count = 6",
-    "noise_cleanup_repo_count = 1",
+    "review_boundary_count = 3",
+    "review_boundary_repo_count = 3",
+    "noise_cleanup_repo_count = 0",
     "authorization_granted_count = 0",
     "action_executed_count = 0",
     "wave1_entry_blocked_by_pre_review = true",
     "project_group_current_state_baseline_refresh_20260626 = controlled",
     "development_queue_ready = true",
-    "review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP",
-    "noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)",
-    "KDS 单仓核对卡",
-    "compact_dirty_count = 25",
-    "compact_untracked_count = 19",
-    "raw_expanded_status_lines = 39",
-    "sensitive_path = .env.production.example",
-    "target_ledger = globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md",
-    "expected_evidence = docs/harness/KDS/evidence/kds-sensitive-path-review-receipt-*.md",
-    "KDS 确认后状态传导摘要",
-    "receipt_recorded_for_auth = AUTH-KDS-SCHEME-REVIEW-20260626",
-    "allowed_state_propagation = kds_review_boundary_recorded_only",
-    "Delegated wrapper 单仓核对卡",
-    "AAAS delegated wrapper 单仓核对卡",
-    "repo_path = /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud AAAS",
-    "expected_evidence = docs/harness/evidence/project-group-aaas-loop-gate-delegate-review-receipt-*.md",
-    "downstream_unlock_candidate = AAAS-WAES-BINDING-PRECHECK-001",
-    "XWAIL delegated wrapper 单仓核对卡",
-    "repo_path = /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XWAIL",
-    "expected_evidence = docs/harness/evidence/project-group-xwail-loop-gate-delegate-review-receipt-*.md",
-    "downstream_unlock_candidate = XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001",
+    "review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP",
+    "noise_cleanup_repo_current = none",
+    "KDS blocker resolved",
     "SOP delegated wrapper 单仓核对卡",
-    "repo_path = /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SOP",
+    "target_ledger = globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md",
     "expected_evidence = docs/harness/evidence/project-group-sop-loop-gate-delegate-review-receipt-*.md",
-    "downstream_unlock_candidate = SOP-SCENARIO-OWNER-REVIEW-001",
-    "Delegated wrapper 确认后状态传导摘要",
-    "receipt_recorded_for_auth = AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "allowed_state_propagation = aaas_delegate_review_boundary_recorded_only",
-    "receipt_recorded_for_auth = AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627",
-    "allowed_state_propagation = xwail_delegate_review_boundary_recorded_only",
+    "SOP delegated wrapper 确认后状态传导摘要",
     "receipt_recorded_for_auth = AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627",
     "allowed_state_propagation = sop_delegate_review_boundary_recorded_only",
+    "历史 delegated wrapper 单仓核对卡仍保留在本文附录中",
+    "`AAAS/XWAIL` delegated wrapper 单仓锚点已回退到各自主任务入口",
     "validate_project_group_post_scheme_recognition_authorization_receipt_ledger_20260626.py",
     "validate_project_group_post_scheme_recognition_pre_execution_command_pack_20260626.py",
     "review_allowed = false",
@@ -89,6 +65,7 @@ REQUIRED_DOC_TOKENS = [
     "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
     "globalcloud-project-group-dev-task-queue-20260626.md",
     "pending_confirmation",
+    "当前 active Pre-Wave1 review 边界只包含 `GPCF/GFIS/SOP` 三仓",
 ]
 
 FORBIDDEN_TOKENS = [
@@ -144,7 +121,7 @@ def main() -> int:
 
     auth_rows = [line for line in doc.splitlines() if line.startswith("| `AUTH-")]
     if len(auth_rows) != len(AUTH_IDS):
-        failures.append("pre-wave1 bridge must have exactly 6 auth rows")
+        failures.append("pre-wave1 bridge must have exactly 3 auth rows")
 
     for section in ["run", "stop", "verify", "recover", "debug"]:
         if f"## {section}" not in loop:

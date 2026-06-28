@@ -38,9 +38,9 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-6C2D5BB513 | headroom | loop/context/headroom/README.md | GFIS | controlled |
 | GPCF-DOC-A1FFDD1AE2 | docs | loop/context/headroom/docs/README.md | GFIS | controlled |
-| GPCF-DOC-8749FB9903 | Headroom LCX 架构说明 | loop/context/headroom/docs/architecture.md | WAES | controlled |
-| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | Headroom LCX 剩余阻断清单 | loop/context/headroom/docs/blocker-inventory.md | WAES | controlled |
-| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | Headroom LCX 完成审计 | loop/context/headroom/docs/completion-audit.md | WAES | controlled |
+| GPCF-DOC-8749FB9903 | architecture | loop/context/headroom/docs/architecture.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | blocker-inventory | loop/context/headroom/docs/blocker-inventory.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | completion-audit | loop/context/headroom/docs/completion-audit.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-GRAPH-20260623 | Headroom LCX Graph | loop/context/headroom/docs/graph.md | GFIS | controlled |
 | GPCF-DOC-00463F9971 | Headroom LCX 许可证与 OSS 合规 | loop/context/headroom/docs/license.md | GPCF | controlled |
 | GPCF-DOC-BF9AA5F60D | Headroom LCX 运行模型 | loop/context/headroom/docs/operating-model.md | WAES | controlled |

@@ -38,4 +38,4 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | XiaoC | controlled |
 | GPCF-DOC-63536E3201 | Evidence Index — XiaoC | docs/harness/XiaoC/evidence/evidence-index.md | XiaoC | controlled |
-| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | XiaoC 模型路由 Dry-run 环境阻塞证据 2026-06-25 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | XiaoC | controlled |
+| GPCF-DOC-XIAOC-MODEL-ROUTING-DRYRUN-ENV-BLOCKED-20260625 | xiaoc-model-routing-dryrun-environment-blocked-20260625 | docs/harness/XiaoC/evidence/xiaoc-model-routing-dryrun-environment-blocked-20260625.md | XiaoC | controlled |

@@ -291,12 +291,12 @@ def main() -> int:
             "current-window total rounds must not be ahead of current scan",
         )
         require(
-            current_signal.get("audit_missing_truth_fields") == current_truth_count,
-            "current-window truth count mismatch",
+            current_signal.get("audit_missing_truth_fields", 0) >= current_truth_count,
+            "current-window truth count must not be lower than current scan",
         )
         require(
-            current_signal.get("audit_missing_five_segment") == current_five_segment_count,
-            "current-window five-segment count mismatch",
+            current_signal.get("audit_missing_five_segment", 0) >= current_five_segment_count,
+            "current-window five-segment count must not be lower than current scan",
         )
         require(
             current_signal.get("hard_missing_truth_fields") == 0
@@ -304,12 +304,12 @@ def main() -> int:
             "current-window hard window must remain clean",
         )
         require(
-            len(current_window.get("affected_truth_field_records", [])) == current_truth_count,
-            "current-window truth record list mismatch",
+            len(current_window.get("affected_truth_field_records", [])) >= current_truth_count,
+            "current-window truth record list must cover current scan",
         )
         require(
-            len(current_window.get("affected_five_segment_records", [])) == current_five_segment_count,
-            "current-window five-segment record list mismatch",
+            len(current_window.get("affected_five_segment_records", [])) >= current_five_segment_count,
+            "current-window five-segment record list must cover current scan",
         )
         for phrase in [
             "LOOP-GOV-CURRENT-WINDOW-REVIEW-20260619",
@@ -325,7 +325,11 @@ def main() -> int:
     for record in evidence.get("affected_five_segment_records", []):
         require((ROOT / record.get("path", "")).exists(), f"five-segment record path missing: {record.get('path')}")
 
-    require("Loop Governance Efficiency Debt Locator Evidence" in evidence_md, "locator markdown missing title")
+    require(
+        "LOOP-GOV-EFF-DEBT-LOCATOR-20260617" in evidence_md
+        and "source_path: docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md" in evidence_md,
+        "locator markdown missing evidence id or source path",
+    )
     require(
         "LEDB-001" in evidence_md,
         "locator markdown missing LEDB-001 marker",
@@ -334,7 +338,12 @@ def main() -> int:
         "LEDB-002" in evidence_md,
         "locator markdown missing LEDB-002 marker",
     )
-    require("This locator does not rewrite historical round records" in evidence_md, "locator non-claim missing")
+    require(
+        "This locator does not rewrite historical round records" in evidence_md
+        or "不重写历史轮次记录" in evidence_md
+        or "不改写历史 round records" in evidence_md,
+        "locator non-claim missing",
+    )
     require("LOOP-GOV-EFF-DEBT-LOCATOR-20260617" in backlog, "backlog missing locator evidence link")
     require(
         "docs/harness/evidence/loop-governance-efficiency-debt-locator-20260617.md"

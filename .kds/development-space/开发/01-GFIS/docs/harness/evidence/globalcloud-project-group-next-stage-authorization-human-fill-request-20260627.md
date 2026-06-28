@@ -26,7 +26,7 @@ superseded_by: []
 | 前置证据 | `globalcloud-project-group-next-stage-authorization-decision-board-20260626.md`、`globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md`、`globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md` |
 | 当前结论 | `project_group_next_stage_authorization_human_fill_request_20260627 = prepared` |
 | 状态候选 | `next_stage_authorization_human_fill_request_ready` |
-| fill_item_count | `7` |
+| fill_item_count | `3` |
 | authorization_granted_count | `0` |
 | action_executed_count | `0` |
 | current_state_refresh | `project_group_current_state_baseline_refresh_20260626 = controlled` |
@@ -42,7 +42,9 @@ superseded_by: []
 | production_ready | `false` |
 | customer_accepted | `false` |
 
-本文只把 7 个当前决策项整理成用户可直接填写的确认请求包。它不创建真实 receipt，不更新任何总账，不执行 review、cleanup、stage、commit、push、deploy、release 或真实 KDS API 同步。
+本文只把当前 active 的 `GPCF/GFIS/SOP` 3 个决策项整理成用户可直接填写的确认请求包。它不创建真实 receipt，不更新任何总账，不执行 review、cleanup、stage、commit、push、deploy、release 或真实 KDS API 同步。
+
+当前 active next-stage 授权项只包含 `GPCF/GFIS/SOP` 三项。
 
 当前 next-stage 授权人工填写请求包还必须与以下两份证据保持一致：
 
@@ -53,56 +55,24 @@ superseded_by: []
 
 | 字段 | 要求 |
 |---|---|
-| `auth_id` | 必须来自本文 7 个决策项之一 |
+| `auth_id` | 必须来自本文当前 3 个决策项之一 |
 | `receipt_id` | 必须使用真实格式 `RECEIPT-<AUTH-ID>-<YYYYMMDD>`，不得保留 `-EXAMPLE` |
 | `authorized_by` | 必须填写真实确认人 |
 | `authorized_at` | 必须填写真实确认时间 |
-| `authorized_action` | A 固定为 `noise_cleanup_decision_registration_only`；B-G 固定为 `human_review_and_conclusion_registration_only` |
+| `authorized_action` | 固定为 `human_review_and_conclusion_registration_only` |
 | `decision_value` | 只允许 `authorized_for_recording_only`、`deferred_pending_more_context`、`rejected_keep_pending` |
 | `scope` | 只允许限定到本文对应单项范围 |
 | `authorization_granted` | 填写前必须保持 `false`；只有总账真实落账时才改成 `true` |
 | `action_executed` | 固定 `false`，本请求包不允许预写已执行 |
 
-## 3. 七项人工填写请求
+## 3. 三项人工填写请求
 
-### 3.1 A 项 `AUTH-WAS-DELETE-DS-STORE-20260626`
-
-填写模板：
-
-```text
-auth_id = AUTH-WAS-DELETE-DS-STORE-20260626
-receipt_id = RECEIPT-AUTH-WAS-DELETE-DS-STORE-20260626-YYYYMMDD
-authorized_by = <REAL_USER_OR_OWNER>
-authorized_at = <YYYY-MM-DDTHH:MM:SS+08:00>
-authorized_action = noise_cleanup_decision_registration_only
-decision_value = authorized_for_recording_only / deferred_pending_more_context / rejected_keep_pending
-scope = WAS世界资产体系/.DS_Store only
-target_ledger = globalcloud-project-group-execution-authorization-receipt-ledger-20260626.md
-authorization_granted = false
-action_executed = false
-```
-
-必须保持：
-
-```text
-stage_allowed = false
-commit_allowed = false
-push_allowed = false
-cleanup_allowed = false
-accepted = false
-integrated = false
-production_ready = false
-customer_accepted = false
-```
-
-### 3.2 B-G 项 Pre-Wave1 review 边界
-
-适用 `AUTH-KDS-SCHEME-REVIEW-20260626`、`AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-GFIS-SCHEME-REVIEW-20260626`、`AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627`。
+适用 `AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-GFIS-SCHEME-REVIEW-20260626`、`AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627`。
 
 填写模板：
 
 ```text
-auth_id = <ONE_OF_B_TO_G_AUTH_IDS>
+auth_id = <ONE_OF_A_TO_C_AUTH_IDS>
 receipt_id = RECEIPT-<AUTH-ID>-YYYYMMDD
 authorized_by = <REAL_USER_OR_OWNER>
 authorized_at = <YYYY-MM-DDTHH:MM:SS+08:00>
@@ -159,83 +129,59 @@ customer_accepted = false
 
 | 顺序 | auth_id | 建议原因 | 目标 ledger |
 |---|---|---|---|
-| P0-1 | `AUTH-WAS-DELETE-DS-STORE-20260626` | `WAS世界资产体系(.DS_Store)` 是当前 `7` 仓 total dirty 中单独 noise cleanup 路径，先决定可减少后续边界歧义 | execution authorization receipt ledger |
-| P0-2 | `AUTH-KDS-SCHEME-REVIEW-20260626` | KDS sensitive_path 是当前 live gate 的硬阻塞主因，也是 `KDS -> Brain`、Wave1 与 review 边界的共同前置 | post-scheme recognition authorization receipt ledger |
-| P0-3 | `AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627`、`AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` | 三个 delegated wrapper replay 边界共享同一 baseline，成组确认能减少后续重复判断 | post-scheme recognition authorization receipt ledger |
-| P0-4 | `AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-GFIS-SCHEME-REVIEW-20260626` | GPCF 当前治理 review 与 GFIS repair review 直接影响后续 command pack / Wave1 入口是否可继续讨论 | post-scheme recognition authorization receipt ledger |
+| P0-1 | `AUTH-GPCF-SCHEME-REVIEW-20260626` | GPCF 当前治理 review 是当前 3 仓边界与总控证据回放的中心入口 | post-scheme recognition authorization receipt ledger |
+| P0-2 | `AUTH-GFIS-SCHEME-REVIEW-20260626` | GFIS repair review 直接影响后续真实 SOR intake / Wave1 入口是否可继续讨论 | post-scheme recognition authorization receipt ledger |
+| P0-3 | `AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627` | SOP delegated wrapper review 是当前项目群 Git partial 的活动边界之一 | post-scheme recognition authorization receipt ledger |
 
 当前建议顺序仍需服从：
 
 ```text
-review_boundary_repo_count = 6
-noise_cleanup_repo_count = 1
-review_boundary_repos_current = GlobalCloud AAAS, GlobalCoud GPCF, GlobalCloud XWAIL, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud SOP
-noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
+review_boundary_repo_count = 3
+noise_cleanup_repo_count = 0
+review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP
+noise_cleanup_repo_current = none
 ```
 
-KDS 单仓详细核对请直接复用：
+SOP delegated wrapper 单仓详细核对请直接复用：
 
 ```text
 docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md
-section = 5.3 KDS 单仓核对卡
-```
-
-delegated wrapper 单仓详细核对请直接复用：
-
-```text
-AAAS -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.5.1 AAAS delegated wrapper 单仓核对卡
-XWAIL -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.5.2 XWAIL delegated wrapper 单仓核对卡
-SOP -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.5.3 SOP delegated wrapper 单仓核对卡
+section = 5.5.3 SOP delegated wrapper 单仓核对卡
 ```
 
 确认后状态传导请直接复用：
 
 ```text
-A -> docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.2 A 项确认后状态传导摘要
-B -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.4 KDS 确认后状态传导摘要
-C -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.6.1 AAAS delegated wrapper 确认后状态传导摘要
-D -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要
-E -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.6.3 SOP delegated wrapper 确认后状态传导摘要
+A -> state_propagation = review_boundary_recorded_only (GPCF)
+B -> state_propagation = review_boundary_recorded_only (GFIS)
+C -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.6.3 SOP delegated wrapper 确认后状态传导摘要
 ```
 
-## 7. A-E 最小核对单
+## 7. A-C 最小核对单
 
-### 7.1 A 项 `AUTH-WAS-DELETE-DS-STORE-20260626`
+### 7.1 A/B 项 GPCF/GFIS review
 
 填写前最少核对：
 
 ```text
-1. auth_id 固定为 AUTH-WAS-DELETE-DS-STORE-20260626
-2. scope 固定为 WAS世界资产体系/.DS_Store only
-3. target_ledger 固定为 execution authorization receipt ledger
-4. authorized_action 固定为 noise_cleanup_decision_registration_only
-5. stage_allowed / commit_allowed / push_allowed / cleanup_allowed 均保持 false
+1. auth_id 只允许 AUTH-GPCF-SCHEME-REVIEW-20260626 / AUTH-GFIS-SCHEME-REVIEW-20260626
+2. scope 固定为 single repo current review boundary only
+3. target_ledger 固定为 post-scheme recognition authorization receipt ledger
+4. authorized_action 固定为 human_review_and_conclusion_registration_only
+5. 不得扩大到 cleanup、真实 KDS API 同步、stage、commit、push、delete 或真实 SOR intake
 6. authorization_granted / action_executed 均保持 false
 ```
 
-### 7.2 B 项 `AUTH-KDS-SCHEME-REVIEW-20260626`
+### 7.2 C 项 SOP delegated wrapper review
 
 填写前最少核对：
 
 ```text
-1. auth_id 固定为 AUTH-KDS-SCHEME-REVIEW-20260626
-2. scope 只限 GlobalCloud KDS sensitive_path 与 hold review 边界
+1. auth_id 固定为 AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627
+2. scope 只限 GlobalCloud SOP delegated wrapper review 边界
 3. target_ledger 固定为 post-scheme recognition authorization receipt ledger
 4. authorized_action 固定为 human_review_and_conclusion_registration_only
-5. 不得扩大到 cleanup、真实 KDS API 同步、stage、commit、push、delete
-6. authorization_granted / action_executed 均保持 false
-```
-
-### 7.3 C-E 项 delegated wrapper review
-
-填写前最少核对：
-
-```text
-1. auth_id 只允许 AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627 / AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627 / AUTH-SOP-LOOP-GATE-DELEGATE-REVIEW-20260627
-2. scope 固定为 single repo delegated loop gate wrapper replay review only
-3. target_ledger 固定为 post-scheme recognition authorization receipt ledger
-4. authorized_action 固定为 human_review_and_conclusion_registration_only
-5. 不得扩大到真实 KDS API 同步、stage、commit、push、delete、cleanup 或 loop gate 已验收
+5. 不得扩大到 wrapper 保留/删除决策、真实 KDS API 同步、stage、commit、push、delete、cleanup
 6. authorization_granted / action_executed 均保持 false
 ```
 
@@ -243,7 +189,7 @@ E -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorizat
 
 | 方向 | 控制说明 |
 |---|---|
-| run | 把 7 个决策项转成人工可直接填写的请求包 |
+| run | 把当前 `GPCF/GFIS/SOP` 3 个决策项转成人工可直接填写的请求包 |
 | stop | 未收到真实确认内容前，全部请求项保持 `prepared` |
 | verify | 通过 human fill request validator、example pack validator、recording procedure validator 和 Loop 文档门禁复核 |
 | recover | 若误填越权字段，回滚到空白模板状态，保持 `authorization_granted=false` |

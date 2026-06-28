@@ -65,7 +65,7 @@ superseded_by: []
 | GlobalCloud GFIS | `GlobalCloud GFIS 总体方案.md` | `GlobalCloud GFIS 实施方案.md` | `repair_required` | `source_record_boundary` | 业务事实源实施 | 测试数据链通过，真实业务链仍为 `real_business_lane=repair_required` | 补齐真实 source-of-record、pending_business_verification、运行层主键、review queue、runtime intake 和 WAES review |
 | GlobalCloud GPC | `GlobalCloud GPC 总体方案.md` | `GlobalCloud GPC 实施方案.md` | `partial_verified` | `external_runtime_boundary` | 绿色供应链场景实施 | README 索引与浏览器 E2E 已修复，外部运行证据仍缺失 | 补 GPC production/external/runtime evidence，并与 GFIS/PVAOS 的 SCaaS 链路复核 |
 | GlobalCloud PVAOS | `GlobalCloud PVAOS 总体方案.md` | `GlobalCloud PVAOS 实施方案.md` | `ready_for_review` | `local_release_review_boundary` | 供应链价值联盟运营实施 | PVAOS D4 分支最小 L3 harness、Manifest、validator 和 module validation evidence 已具备 | 补 PVAOS usability/customer evidence 或 WAES/GPC dependency dry-run |
-| GlobalCloud KDS | `GlobalCloud KDS 总体方案.md` | `GlobalCloud KDS 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 知识和证据源实施 | RAG 导出、API smoke、GBrain search/query 和 wiki trust audit 已在 local dev 通过；2026-06-27 项目群 Git clean live recheck 额外发现 `GlobalCloud KDS/.env.production.example` sensitive_path，当前 review/stage/commit/push 需先完成路径归类与授权判断 | 先进入 `AUTH-KDS-SCHEME-REVIEW-20260626` / `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再推进 KDS runtime index read-only check 或 API contract dry-run |
+| GlobalCloud KDS | `GlobalCloud KDS 总体方案.md` | `GlobalCloud KDS 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 知识和证据源实施 | RAG 导出、API smoke、GBrain search/query 和 wiki trust audit 已在 local dev 通过；2026-06-28 live recheck 确认 KDS 已 clean、ahead/behind 为 `0/0`，`DEV-001` 本地 dry-run 资产已改为 Git-safe 命名并推送，KDS 已从当前 dirty/sensitive 阻塞源移除；资金报告、sync-run 接收/归档、Brain/WAES 消费和真实 KDS API 同步仍需 owner 确认 | 在保持真实 KDS API 未授权边界下推进 KDS runtime index read-only check 或 API contract dry-run；提交、推送、真实 sync 或状态提升仍需按任务授权 |
 | GlobalCloud Brain | `GlobalCloud Brain 总体方案.md` | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `human_review_boundary` | 知识治理和候选推理实施 | A1/A2/A3 授权型闭包与 Brain review handoff 已进入人工审查边界 | 推进 Brain format/test script/lint warning 专项或 KDS 依赖映射 |
 | GlobalCloud Studio | `GlobalCloud Studio 总体方案.md` | `GlobalCloud Studio 实施方案.md` | `ready_for_review` | `local_release_review_boundary` | Studio / Hermes / Agent 工作台 | workflow release boundary、permissions hardening、test/build/harness 已通过，提交前仍需人工复核 | 明确授权后执行人工复核记录，再决定是否进入 stage/commit/push 候选 |
 | GlobalCloud MMC | `GlobalCloud MMC 总体方案.md` | `GlobalCloud MMC 实施方案.md` | `ready_for_review` | `local_document_smoke_boundary` | 治理模板基线 | L3 admission validator、dependency dry-run、self-evolution checklist 和 runtime tests 已具备 | 推进治理模板复用 smoke 或下游项目 contract dry-run |
@@ -83,7 +83,10 @@ superseded_by: []
 implementation_plan_previous_governance_baseline = phase_3_all_project_plans_controlled
 implementation_plan_governance = phase_3_all_project_plans_controlled
 implementation_plan_governance = phase_4_real_execution_governance_controlled
-current_live_project_group_git_gate = blocked_due_to_kds_sensitive_path_review
+current_live_project_group_git_gate = partial_due_to_gpcf_gfis_sop_dirty
+current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP
+current_live_sensitive_repos = none
+current_live_kds_blocker = resolved_not_in_git_status
 current_state_baseline_refresh_controlled = true
 development_queue_ready = true
 reason = all 17 projects have one authoritative implementation plan and current statuses are aligned to the project status matrix and real execution governance board

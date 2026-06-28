@@ -92,8 +92,7 @@ def main() -> int:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
     require("LEDB-003-RD-002" in backlog, "backlog missing LEDB-003-RD-002")
     require(
-        "Loop Governance Sequence Checkpoint Evidence | docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md"
-        in evidence_readme,
+        "docs/harness/evidence/loop-governance-sequence-checkpoint-20260619.md" in evidence_readme,
         "evidence README missing sequence checkpoint entry",
     )
     require("LOOP-GOV-SEQUENCE-CHECKPOINT-20260619" in evidence_index, "evidence index missing sequence checkpoint section")

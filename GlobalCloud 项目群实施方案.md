@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
 source_path: GlobalCloud 项目群实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-06-28
 supersedes: []
 superseded_by: []
 ---
@@ -93,6 +93,98 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 | `closed` | 完整闭环 | 有验收、交付和归档证据 |
 
 Agent、脚本或自动化不得自动声明 `customer_accepted`、`accepted`、`integrated` 或 `production_ready`。
+
+## 4.1 开发完成与真实业务验证分离原则
+
+本原则是项目群最高实施规范的一部分，适用于 GFIS、GPCF、KDS、WAES、SOP、GPC、PVAOS、Brain、Studio、XiaoG、XiaoC、XGD、WAS、XWAIL、AAAS、MMC 和其它纳入项目群的项目。
+
+最高裁决语句：
+
+```text
+真实业务输入是验收门，不是开发门。
+```
+
+项目群实施体系必须明确区分：
+
+```text
+开发完成
+真实业务验证
+人工验收
+系统集成
+生产就绪
+客户接受
+```
+
+真实业务 source-of-record 是真实业务验证、人工验收、系统集成、生产就绪和客户接受的必要条件，但不是开发完成的前置条件。任何项目不得因为尚未取得真实客户文件、真实平台订单、真实采购订单或真实 owner 确认，就阻断本地开发、fixture E2E、dry-run、contract validator、候选链路开发或内部开发完成态。
+
+每个项目至少区分以下状态线：
+
+| 状态线 | 用途 | 允许证据 | 不得声明 |
+|---|---|---|---|
+| `development_lane` | 完成系统能力、开发闭环、契约、dry-run、fixture E2E、本地 validator | fixture、mock、controlled sample、synthetic-but-contract-valid data、dry-run、local validator | 真实业务验证完成、客户验收、生产就绪 |
+| `real_business_validation_lane` | 使用真实 source-of-record 验证系统能力 | 真实 source-of-record、source owner 确认、真实 runtime intake、真实 review queue、真实 WAES review、真实 verified artifact candidate | accepted、integrated、production_ready、customer_accepted |
+| `acceptance_lane` | owner、WAES、客户或授权主体进行验收裁决 | 人工确认、验收记录、裁决回执 | 自动验收、脚本验收 |
+| `production_lane` | 生产、安全、回滚、运行、客户交付和生产就绪判断 | 生产运行证据、回滚方案、权限和安全确认 | 未授权生产写入或生产就绪 |
+
+新增开发完成候选状态：
+
+```text
+development_ready_for_real_business_validation
+```
+
+该状态表示系统已经完成可运行开发闭环，具备接收真实业务输入并进入真实业务验证的能力；但尚未经过真实业务 source-of-record 验证。该状态不得被解释为 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
+
+达到该状态至少需要：
+
+| 序号 | 条件 |
+|---:|---|
+| 1 | 核心业务 contract/schema 完成 |
+| 2 | runtime intake 能接收 contract-valid 输入 |
+| 3 | primary key 生成或校验规则完成 |
+| 4 | source validation 规则完成 |
+| 5 | review queue item 生成完成 |
+| 6 | WAES review candidate 生成完成 |
+| 7 | verified artifact candidate 生成完成 |
+| 8 | fixture / controlled sample / dry-run E2E 通过 |
+| 9 | 本地 validator 通过 |
+| 10 | evidence 明确标记尚未经过真实业务 source-of-record 验证 |
+
+在 `development_ready_for_real_business_validation` 下允许声明：
+
+```text
+development_ready_for_real_business_validation
+ready_for_internal_review
+fixture_e2e_passed
+contract_validator_passed
+dry_run_passed
+verified_artifact_candidate_generated_by_fixture
+```
+
+禁止声明：
+
+```text
+real_business_verified
+accepted
+integrated
+production_ready
+customer_accepted
+real_source_record_verified
+customer_acceptance_passed
+production_lane_ready
+```
+
+GFIS 当前适用裁决：
+
+```yaml
+GFIS:
+  development_lane: continue_allowed
+  real_business_validation_lane: pending_source_of_record
+  acceptance_lane: not_started
+  production_lane: not_started
+  current_development_mainline: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
+```
+
+`real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 只阻断真实业务验证、accepted、integrated、production_ready、customer_accepted、生产发布和客户交付声明；不阻断本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAES review candidate development、verified artifact candidate development 或 `development_ready_for_real_business_validation`。
 
 ## 5. 真实进度管理
 
@@ -184,6 +276,7 @@ declared -> contracted -> mocked -> tested -> verified -> accepted
 | 模型契约链路 | WAS、Ontology、XWAIL、WAES | 模型、Profile、Validator、发布状态 |
 | 服务运营链路 | XWAIL、WAES、AaaS、PVAOS | ServicePackage、计量、SLA、订阅状态 |
 | 业务事实链路 | GFIS、GPC、PVAOS、KDS | 事实源、证据源、审计和回滚 |
+| 场景运营 SOP 链路 | SOP、KDS、GFIS、GPC、GPCF、WAES | 订单池、G0-G8 闸门、红黄灯、周评分、补证队列和授权审查 |
 | 知识智能链路 | KDS、Brain、XiaoC、PKC、XGD、XiaoG | 知识、提示、智能体输出和候选边界 |
 | 工程治理链路 | GPCF、MMC、SOP、Studio | Harness、LOOP、SOP、模板、配置和证据 |
 | 界面工程链路 | WAES、Studio、PKC、XGD、GPC、GFIS、GPCF | 统一体验骨架、设计令牌、工作台母框架、UI 工具链、UI gate 和页面/组件三方案机制 |
@@ -300,7 +393,134 @@ ui_evidence_status_ceiling = ui_evidence_candidate
 
 界面工程专项不得把设计稿、截图、mock、前端构建通过、浏览器可见性或 UI gate 直接写成客户验收、业务完成、accepted、integrated 或 production_ready。
 
-## 14.2 WAS/LOOP 实施链路
+## 14.2 武汉城市圈绿色供应链运营 SOP 实施链路
+
+武汉城市圈绿色供应链运营 SOP 已纳入项目群主体实施方案，作为场景运营 SOP 链路的首个受控内部试运行包。该链路承接 `019efc82-48ed-7b81-8c19-e3aedf2acf0b` 会话形成的 SOP 口径，并以项目群门禁方式进入 GPCF 总控。
+
+实施定位：
+
+```text
+sop_scenario = wuhan_city_circle_green_supply_chain_operations
+pilot_status = controlled_internal_pilot
+pilot_period = 2026-06-29..2026-07-05
+target_score = 80
+mainline = order_pool + G0-G8_gate
+task_units = Wuhan, Yingcheng, Xianning, Wuxue, N-region
+factory_chain = observation_only_in_first_round
+accepted = false
+integrated = false
+production_ready = false
+customer_accepted = false
+```
+
+受控入口：
+
+- `GlobalCloud SOP/docs/operations/wuhan-city-circle-sop-pilot-execution-package.md`
+- `GlobalCloud SOP/docs/operations/wuhan-city-circle-supply-chain-sop-assessment-system.md`
+- `GlobalCloud SOP/docs/operations/wuhan-city-circle-initial-real-mapping-run-20260626.md`
+- `GlobalCloud SOP/docs/operations/templates/sop-project-kds-mapping-registry-initial-20260626.csv`
+- `GlobalCloud SOP/docs/operations/templates/sop-kds-writeback-queue-initial-20260626.csv`
+- `docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md`
+- `docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md`
+
+项目职责：
+
+| 项目 | P0/P1 | 实施职责 | 当前边界 |
+|---|---|---|---|
+| SOP | P0 | 维护执行包、评分体系、订单池模板、G0-G8 检查表、城市节点评分、红黄灯清单和首周评分报告 | `owner_review_required`，不得直接晋升正式 SOP |
+| KDS | P0 | 提供或承载客户、订单、主体、合同、交付、回款、会议和补证引用 | 当前只读；真实 KDS API sync 未授权 |
+| GFIS | P0 | 承接 G5-G7 以后规格冻结、工单、质检、仓储、发货、POD、对账和财务凭证 | 缺真实 source-of-record，真实 SOP E2E 不成立 |
+| GPCF | P0 | 将 SOP 评分、补证队列和阻塞项纳入项目群门禁、状态矩阵和 LOOP evidence | 当前 Git gate 为 partial，状态不得升级 |
+| GPC | P1 | 承接订单池、红黄灯、签收、异常和周评分看板页面需求 | 页面需求不阻塞 7 天内部试运行 |
+| Hermes / 飞书链路 | P1 | 将会议、沟通和纪要沉淀为 KDS 可引用证据候选 | 沟通材料不能替代 KDS 事实 |
+| Brain / XiaoG / XiaoC / XGD | P2 | 辅助生成周报、风险摘要、证据缺口提示和轻执行提醒 | AI 输出只能作为候选建议 |
+
+首轮 7 天节奏：
+
+| 日期 | 动作 | 输出 | 验证 |
+|---|---|---|---|
+| 2026-06-29 | 启动内部试运行并确认填报责任 | 执行包确认、责任主体清单 | 五个任务单元均有责任主体 |
+| 2026-06-30 | 建立首版机会/客户级订单池 | Markdown/CSV 订单池 | 每条记录具备区域、客户/机会、阶段、预计吨数、责任主体和 KDS/证据引用 |
+| 2026-07-01 | 标注 G0-G8 当前闸门 | G0-G8 检查表 | 每条机会有当前闸门、已具备证据、缺失证据和下一步 |
+| 2026-07-02 | 完成主体、授权、价格、规格、回款路径红线排查 | 红黄灯清单 | 硬否决项逐项排查 |
+| 2026-07-03 | 周五 18:00 冻结评分数据 | 冻结版订单池、闸门表和补证队列 | 数据口径锁定 |
+| 2026-07-04 | 形成首周评分报告 | 周评分报告 | 总分、等级、硬否决、整改项完整 |
+| 2026-07-05 | 首轮复盘和下周动作 | 复盘结论、下周 P0/P1 队列 | 判断是否达到内部 80 分运行线 |
+
+80 分内部达标拆解：
+
+| 维度 | 权重 | 最低达标动作 |
+|---|---:|---|
+| A 主体与授权 | 12 | 五个任务单元均明确机构责任和执行接口 |
+| B 1+3+N 订单池 | 18 | 推进机会进入统一订单池，字段完整率达到 80% 以上 |
+| C G0-G8 过程执行 | 18 | 所有机会完成当前闸门、缺失证据和下一步标注 |
+| D 产能、质量与交付 | 14 | G5 以后机会具备规格、排产、交付或 POD 状态字段 |
+| E 财务、回款与毛利 | 12 | G4 以后机会具备价格、账期、回款路径或缺口说明 |
+| F 区域协同与周调度 | 10 | 每日 18:00 更新，周五 18:00 冻结评分 |
+| G 风险、异常与变更 | 8 | 红黄灯清单完整，硬否决项逐项排查 |
+| H 复购、复制与建厂观察 | 8 | 首轮只观察订单复购、稳定渠道、地方资源、产能承接和建厂触发信号 |
+
+硬否决项：
+
+| 否决项 | 处理 |
+|---|---|
+| 虚假订单、虚假客户、虚假签收或虚假回款 | 首轮最高 `repair_required` |
+| 未入统一台账但对外承诺价格、交期、投资或收益 | 首轮最高 `blocked` |
+| 低于价格底线且无审批 | 首轮最高 `repair_required` |
+| 无规格冻结直接投产并造成损失 | 首轮最高 `repair_required` |
+| 合同、发票、收款主体不一致且无书面说明 | 首轮最高 `repair_required` |
+| 重大质量、安全、环保问题未升级 | 首轮最高 `blocked` |
+| 逾期仍无条件新增发货 | 首轮最高 `blocked` |
+| 建厂条件未满足但对外承诺投资额、产线或投产日期 | 首轮最高 `blocked` |
+
+当前首批 KDS 映射边界：
+
+| 项 | 当前状态 |
+|---|---|
+| 映射对象 | 20 条，含咸宁补充对象 |
+| 写回队列 | 11 条 P0/P1 缺口 |
+| 咸宁 | 已有 KDS 项目和会议证据，但未进入 KDS 订单池 Active/Candidate 表，只能计为 G0 线索和补证对象 |
+| 证据等级 | 多数仍为 `E1_raw / unverified` |
+| 可计入范围 | 线索、补证、字段映射、内部试运行评分候选 |
+| 不可计入范围 | 交付、回款、复购、客户验收、正式 KDS 事实入库 |
+
+项目群门禁：
+
+| 门禁 | 要求 | 不通过时状态上限 |
+|---|---|---|
+| SOP owner review | 场景 owner 明确确认保留、返工、归档、删除噪声、入 KDS 或对外交付 | `owner_review_required` |
+| KDS evidence gate | 订单、客户、主体、合同、交付、回款等事实必须来自 KDS 或 KDS 引用 | `candidate` |
+| GFIS source-record gate | 真实 source-of-record 或等效正式确认、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact | `repair_required` |
+| GPCF Git gate | GPCF/GFIS/SOP 三仓 dirty review 边界闭合 | `partial` |
+| Authorization gate | review、stage、commit、push、KDS API sync、真实外部 API、生产写入均需单独授权 | `blocked` |
+| Customer acceptance gate | 需要业务 owner、客户/授权人、验收场景、验收数据和签收证据 | `customer_review` 以下 |
+
+LOOP 运行控制闭环：
+
+| 方向 | 本 SOP 实施要求 |
+|---|---|
+| run | 按 7 天内部试运行推进订单池、G0-G8、红黄灯、周评分和补证队列 |
+| stop | 触发硬否决、缺 KDS 事实、缺 GFIS source-record、缺授权或 Git gate 失败时停止升级 |
+| verify | 使用 SOP 模板校验、KDS 只读引用、GPCF 门禁和周评分报告验证 |
+| recover | 回退到补证队列、owner review、字段映射或只读候选状态 |
+| debug | 输出缺口来源：事实缺口、系统字段缺口、owner 决策缺口、授权缺口或运行证据缺口 |
+
+禁止声明：
+
+```text
+accepted=false
+integrated=false
+production_ready=false
+customer_accepted=false
+real_sop_e2e_completed=false
+kds_api_sync_executed=false
+gfis_runtime_verified=false
+project_group_git_clean=false
+```
+
+本 SOP 实施链路可以支撑项目群进入受控内部试运行、补证和系统开发任务拆解；不得把内部试运行、文档模板、KDS 候选、会议线索、用户口述、报价或 mock 写成真实运营闭环、客户验收、正式 SOP 发布、生产运行完成或 1+8 全覆盖完成。
+
+## 14.3 WAS/LOOP 实施链路
 
 WAS/LOOP 实施链路是本实施方案体系的默认主链之一，用于把 WAS 顶层语义、Ontology 语义知识层、XWAIL 机器契约、WAES 审查门禁、KDS 证据引用、Brain 候选解释和 GPCF LOOP 运行控制闭环合并到同一实施路径。
 

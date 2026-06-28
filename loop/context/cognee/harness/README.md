@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：GPC
+关联项目：GPC, GPCF
 
 受控规则：
 
@@ -37,6 +37,6 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-6BA1B0CCA6 | harness | loop/context/cognee/harness/README.md | GPC | controlled |
-| GPCF-DOC-7A2A6D4F05 | COGNEE P1 召回对照表模板（并行） | loop/context/cognee/harness/p1-recall-comparison-template.md | GPC | controlled |
+| GPCF-DOC-7A2A6D4F05 | p1-recall-comparison-template | loop/context/cognee/harness/p1-recall-comparison-template.md | GPCF | controlled |
 | GPCF-DOC-7A2A6D4F06 | COGNEE P2 写入预览模板（最小字段） | loop/context/cognee/harness/p2-write-preview-template.md | GPC | controlled |
-| GPCF-DOC-8C7F2F5001 | COGNEE P4 真实写入前置预检模板（最小字段） | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | GPC | controlled |
+| GPCF-DOC-8C7F2F5001 | p4-real-writeback-precheck-template | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | GPCF | controlled |

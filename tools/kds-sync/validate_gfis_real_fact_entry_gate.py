@@ -113,6 +113,9 @@ STATUS_BOUNDARY_PHRASES = [
     "real_source_records=0",
     "valid_source_records=0",
     "formal_confirmation_files=0",
+    "development_lane=continue_allowed",
+    "real_business_validation_lane=pending_source_of_record",
+    "real_source_records_zero_is_not_dev_blocker=true",
     "real_business_lane=repair_required",
     "runtime_primary_key_ready=0",
     "review_queue=0",
@@ -301,6 +304,10 @@ def main() -> int:
     print(
         "gfis_real_fact_entry_gate=pass strong_block=true "
         "read_only_verified=true "
+        "development_lane=continue_allowed "
+        "real_business_validation_lane=pending_source_of_record "
+        "real_source_records_zero_is_not_dev_blocker=true "
+        "real_business_validation_block=true status_promotion_block=true "
         "real_source_records=0 valid_source_records=0 formal_confirmation_files=0 runtime_primary_key_ready=0 "
         "review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
         "manual_business_verification_pending=true real_business_lane=repair_required "

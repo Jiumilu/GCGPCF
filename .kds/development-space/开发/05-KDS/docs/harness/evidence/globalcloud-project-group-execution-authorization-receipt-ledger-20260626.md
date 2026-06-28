@@ -95,10 +95,12 @@ push_allowed = false
 
 ```text
 AUTH-WAS-DELETE-DS-STORE-20260626 -> docs/harness/evidence/globalcloud-project-group-first-execution-authorization-request-20260626.md section = 4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要
-AUTH-KDS-OWNER-DECISION-20260626 -> docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要
 authorization_granted = false
 action_executed = false
 ```
+
+补充说明：
+`docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md section = 5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要` 只对应 `AUTH-KDS-SCHEME-REVIEW-20260626` 的 Pre-Wave1 review 链，不作为 `AUTH-KDS-OWNER-DECISION-20260626` 的 execution ledger 复用入口。`AUTH-KDS-OWNER-DECISION-20260626` 在本总账中仅保持 `owner_decision / pending_confirmation / authorization_granted=false / action_executed=false`。
 
 ## 3. 回执登记规则
 

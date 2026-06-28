@@ -38,10 +38,10 @@ KDS 空间：`开发`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | WAES | archive |
 | GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-5C8B07F574 | Design Review: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAES | archive |
+| GPCF-DOC-5C8B07F574 | design | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAES | archive |
 | GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | WAES | archive |
 | GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAES | archive |
-| GPCF-DOC-F7F2EF5A5D | OpsX Proposal: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAES | archive |
+| GPCF-DOC-F7F2EF5A5D | proposal | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAES | archive |
 | GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | WAES | archive |
 | GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | WAES | archive |
 | GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | WAES | archive |

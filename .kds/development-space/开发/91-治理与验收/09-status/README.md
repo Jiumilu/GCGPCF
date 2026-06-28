@@ -55,7 +55,7 @@ KDS 路径前缀：`开发/12-GPCF/09-status/`
 | GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624 | GlobalCloud 项目群主方案控制台账 | 09-status/globalcloud-project-master-plan-control-register.md | GPCF | controlled |
 | GPCF-DOC-C586488E67 | GPCF Project Status Matrix | 09-status/gpcf-project-status-matrix.md | GPCF | controlled |
 | GPCF-DOC-B1085FD000 | kds-api-sync-ledger-incident-20260617 | 09-status/kds-api-sync-ledger-incident-20260617.md | GPCF | controlled |
-| GPCF-DOC-KDS-SYNC-PLAN | KDS Development Space Sync Plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |
+| GPCF-DOC-KDS-SYNC-PLAN | kds-development-space-sync-plan | 09-status/kds-development-space-sync-plan.md | GPCF | controlled |
 | GPCF-DOC-BA63F9BF32 | KDS 开发空间同步台账 | 09-status/kds-development-space-sync-register.md | GPCF | controlled |
 | GPCF-DOC-B15126F708 | kds-md-okf-implementation-closure-plan | 09-status/kds-md-okf-implementation-closure-plan.md | GPCF | controlled |
 | GPCF-DOC-78DAA04814 | KDS OKF v0.1 全量派生层实施方案 | 09-status/kds-okf-v01-full-implementation-plan.md | GPCF | controlled |

@@ -71,13 +71,17 @@ def main() -> int:
         "index_level_exception",
         "no_bulk_rewrite",
         "business_status_impact",
-        "does not rewrite historical round records",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
+    require(
+        "does not rewrite historical round records" in evidence_md
+        or "不改写历史 round records" in evidence_md
+        or "不重写历史轮次记录" in evidence_md,
+        "evidence markdown missing no historical rewrite statement",
+    )
     require("LEDB-002-RD-002" in backlog, "backlog missing LEDB-002-RD-002")
     require(
-        "Loop Governance Five Segment Review Evidence | docs/harness/evidence/loop-governance-five-segment-review-20260617.md"
-        in evidence_readme,
+        "docs/harness/evidence/loop-governance-five-segment-review-20260617.md" in evidence_readme,
         "evidence README missing five-segment review entry",
     )
     require("LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617" in evidence_index, "evidence index missing five-segment review section")

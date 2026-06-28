@@ -45,16 +45,18 @@ KDS 空间：`开发`
 | GPCF-DOC-4C7D46A1B3 | LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST | 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md | WAES | controlled |
 | GPCF-DOC-23DDC94324 | LOOP_CODEGRAPH_P1_PILOT_ADMISSION | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | GPCF | controlled |
 | GPCF-DOC-6CC5F6A45C | Loop CodeGraph Project Group Coverage | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | WAES | controlled |
-| GPCF-DOC-0DF6AA8647 | Loop Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
+| GPCF-DOC-0DF6AA8647 | LOOP Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
 | GPCF-DOC-4BA3D31617 | Loop Engineering 五方向实施规范 | 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | WAES | controlled |
 | GPCF-DOC-6E7DCE4A91 | LOOP 工程体系整体实施规范 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | controlled |
-| GPCF-DOC-04BF76145B | LOOP 执行规则 | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
+| GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | controlled |
+| GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11 | LOOP Gate Classification | 02-governance/loop/LOOP_GATE_CLASSIFICATION.md | WAES | controlled |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | controlled |
-| GPCF-DOC-07906C7E54 | Loop 治理效率债务 Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAES | controlled |
+| GPCF-DOC-07906C7E54 | LOOP Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAES | controlled |
 | GPCF-DOC-D63AEEB17D | Loop 治理运行边界 | 02-governance/loop/LOOP_GOVERNANCE_OPERATING_BOUNDARY.md | WAES | controlled |
 | GPCF-DOC-48F5DD5538 | Loop Governance Phase Goal | 02-governance/loop/LOOP_GOVERNANCE_PHASE_GOAL.md | WAES | controlled |
 | GPCF-DOC-8A21A00749 | Loop 治理轮次复核计划 | 02-governance/loop/LOOP_GOVERNANCE_ROUND_REVIEW_PLAN.md | WAES | controlled |
+| GPCF-DOC-LOOP-V11-SLIMMING-DELIVERY-RECOVERY | LOOP v1.1 治理瘦身与交付恢复基线 | 02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md | WAES | controlled |
 | GPCF-DOC-1B5550FF05 | Loop L3.5 Real API Verification Policy | 02-governance/loop/LOOP_L3_5_REAL_API_VERIFICATION.md | WAES | controlled |
 | GPCF-DOC-5E646AC9A6 | LOOP_L4_AUTONOMOUS_OPERATIONS | 02-governance/loop/LOOP_L4_AUTONOMOUS_OPERATIONS.md | GPCF | controlled |
 | GPCF-DOC-7FB1181082 | Loop L5 Full Production Autonomy Policy | 02-governance/loop/LOOP_L5_FULL_PRODUCTION_AUTONOMY.md | WAES | controlled |

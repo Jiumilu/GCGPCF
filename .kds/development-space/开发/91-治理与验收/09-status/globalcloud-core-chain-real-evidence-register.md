@@ -26,6 +26,21 @@ superseded_by: []
 
 项目群下一批真实执行任务、命令、证据、门禁、回滚边界和跨项目依赖由 `GlobalCloud 项目群真实执行治理总控板` 控制，受控文件为 `09-status/globalcloud-project-group-real-execution-governance-board.md`。
 
+### 1.1 当前 Live Override 2026-06-28
+
+以下事实覆盖本文保留的 2026-06-25/2026-06-26 历史 Git 阻塞证据，用于当前执行判断：
+
+- 当前 Git 门禁：current_live_project_group_git_gate = partial_due_to_gpcf_gfis_sop_dirty。
+- 当前 dirty 仓：current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud SOP。
+- 当前敏感仓：current_live_sensitive_repos = none。
+- 当前 KDS blocker：current_live_kds_blocker = resolved_not_in_git_status。
+- 当前 KDS 状态：current_live_kds_status = clean / ahead=0 / behind=0 / diff_check=pass。
+- 当前授权状态：current_authorization_granted = false。
+- 当前执行状态：current_action_executed = false。
+- 当前状态提升许可：current_status_promotion_allowed = false。
+
+历史 KDS diffcheck、sensitive path、7 仓 dirty 或 6 仓 review 边界证据只用于 replay 和溯源；不得作为当前 live 阻塞源、不得恢复 `blocked_due_to_kds_sensitive_path_review`，也不得授权真实 KDS API sync、stage、commit、push、deploy 或状态提升。
+
 ## 2. 核心链路范围
 
 本阶段优先控制以下核心链路：
@@ -54,7 +69,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | GPCF | `authorization_to_pre_execution_total_bridge` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001` | 人工确认入口到执行前只读就绪已建模，但仍是 `authorization_granted=0`、`action_executed=0` |
 | WAES | `repair_authorization_boundary` | `WAES-LINT-RUNTIME-001` | 未获授权前只保留 repair 候选，不进入发布绑定 |
 | XWAIL / AaaS / KDS | `pre_wave1_review_bridge` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | pre-wave1 review 未确认前，不进入 Wave 1 回执或执行前桥接 |
-| GFIS | `source_record_boundary` | `GFIS-REAL-SOR-001` | 未收到真实 source-of-record 或 owner 确认前，不推进业务事实链 |
+| GFIS | `source_record_boundary` | `GFIS-REAL-SOR-001` | 未收到真实 source-of-record 或 owner 确认前，不推进真实业务验证、状态提升或客户交付声明；不阻断开发线 `GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001` |
 | GPC | `external_runtime_boundary` | `GPC-EXTERNAL-RUNTIME-EVIDENCE-001` | 外部 runtime 证据缺失前，不声明真实交付或客户验收 |
 | PVAOS | `local_release_review_boundary` | `PVAOS-RELEASE-REVIEW-001` | 本地 release review 候选不等于远程 CI、PR、merge 或生产发布 |
 | Brain | `human_review_boundary` | `BRAIN-HUMAN-REVIEW-DECISION-001` | 人工审查未确认前，不升级到 `accepted` 或 `integrated` |
@@ -93,7 +108,7 @@ WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain
 | WAES | `GlobalCloud WAES 实施方案.md` | `repair_authorization_boundary` | `candidate` | `partial_verified` | `repair_required` | `declared` | `not_collected` | `not_collected` | `npm run lint` 失败已在 2026-06-25 复现；WAES 工作区 dirty 且 AGENTS 限制未授权实现，已形成授权包 `docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md` |
 | XWAIL | `GlobalCloud XWAIL 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `XWAIL-MIN-VALIDATOR-001` 已建立最小 Validator/XAP 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已完成 7 条 XWAIL/AaaS 本地命令验证并形成 integration precheck candidate；但当前仍先受 `XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
 | AaaS | `docs/GlobalCloud AaaS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `ready_for_review / local_dev_boundary / integration_precheck_candidate / wrapper_review_required` | `declared` | `not_collected` | `not_collected` | `AAAS-SERVICE-RUNTIME-001` 已建立最小 ServicePackage/Metering/SLA/EvidenceRequirement 命令并在 local dev 通过；`XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已复核 AaaS 服务包可作为 WAES 绑定前置候选输入；`AAAS-WAES-BINDING-PRECHECK-001` 已完成 AaaS-WAES 绑定前置预检并保持 WAES Draft/候选边界；但当前仍先受 `AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001` 约束；证据见 `docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md` |
-| GFIS | `GlobalCloud GFIS 实施方案.md` | `source_record_boundary` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 修复外部证据、中文映射、Playwright 浏览器和 ops drill；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
+| GFIS | `GlobalCloud GFIS 实施方案.md` | `source_record_boundary / development_lane_continue_allowed` | `candidate` | `partial_verified` | `partial_verified` | `partial_verified` | `repair_required` | `not_collected` | 开发线可继续推进 `GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001`；真实业务验证线仍等待 source-of-record、owner 确认、runtime intake、review queue、WAES review 和 verified artifact；证据见 `docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md` |
 | GPC | `GlobalCloud GPC 实施方案.md` | `external_runtime_boundary` | `candidate` | `partial_verified / browser_repaired` | `partial_verified / external_runtime_evidence_required` | `partial_verified` | `repair_required` | `not_collected` | `GPC-EVIDENCE-BROWSER-001` 已修复 README 索引和 Playwright 浏览器 E2E，并通过 `quality:repo` 与 `test:e2e`；生产确认、外部联调和 GCFIS runtime surface 仍缺证据；证据见 `docs/harness/GPC/evidence/gpc-evidence-browser-repair-20260625.md` |
 | PVAOS | `GlobalCloud PVAOS 实施方案.md` | `local_release_review_boundary` | `candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `ready_for_review / local_release_gate_boundary / review_candidate` | `partial_verified` | `not_collected` | `not_collected` | `PVAOS-RELEASE-GATE-001` 已修复 Vitest setup、依赖 audit 和 Playwright browser smoke，并通过本地 release gate；`PVAOS-RELEASE-REVIEW-001` 已复跑本地 release readiness gate 并形成提交前 review candidate；证据见 `docs/harness/PVAOS/evidence/pvaos-release-review-20260625.md` |
 | KDS | `GlobalCloud KDS 实施方案.md` | `pre_wave1_review_bridge` | `candidate` | `partial_verified` | `owner_review_required / kds_report_hold_controlled / git_sensitive_review_boundary` | `partial_verified` | `not_collected` | `not_collected` | `KDS-RAG-EXPORT-001` 已在 local dev 修复并通过导出、校验、evidence gate、API smoke、GBrain search/query 和 wiki trust audit；`KDS-BRAIN-REPORT-HOLD-REVIEW-001` 已登记资金追踪报告和 2026-06-25 sync-run 产物 owner review 包；当前 live recheck 另有 `GlobalCloud KDS/.env.production.example` sensitive_path review 前置；证据见 `docs/harness/KDS/evidence/kds-brain-report-hold-review-20260625.md` 与 `docs/harness/evidence/globalcloud-project-group-kds-diffcheck-cleanup-command-pack-20260626.md` |

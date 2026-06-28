@@ -30,6 +30,20 @@ LOOP 运行控制闭环为所有 Loop 工作的默认工程接口，适用于 L1
 - L4：真实业务 lane 仍需保持 repair_required，直到 source-of-record、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact 全部具备。
 - L5：必须在 owner、WAES、Harness 全部确认后另行授权。
 
+## 开发完成与真实业务验证分离
+
+LOOP 自治策略必须遵守以下最高裁决：
+
+```text
+真实业务输入是验收门，不是开发门。
+```
+
+- Delivery Loop 默认服务 `development_lane`，允许继续推进本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、候选链路开发和 `development_ready_for_real_business_validation`。
+- Governance Loop 服务真实业务验证、状态提升、生产动作、客户交付声明和阶段收口。
+- `real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 不得单独作为 Delivery Loop 开发阻断。
+- fixture/dry-run/controlled sample 可以证明开发能力，不得证明真实业务验证、accepted、integrated、production_ready 或 customer_accepted。
+- 真实业务验证通过也不得自动释放 accepted、integrated、production_ready 或 customer_accepted；所有状态提升必须有人工、owner、WAES 或最高授权主体裁决。
+
 ## L3 final answer guard
 
 LOOP 运行控制闭环常驻能力要求：

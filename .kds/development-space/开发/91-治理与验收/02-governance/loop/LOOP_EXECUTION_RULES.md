@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-04BF76145B
-title: LOOP 执行规则
+title: LOOP Execution Rules
 project: WAES
 related_projects: [WAES]
 domain: governance
@@ -16,32 +16,39 @@ supersedes: []
 superseded_by: []
 ---
 
-# LOOP 执行规则
+# LOOP Execution Rules
 
-## 必读输入
+## Definition of Done / 完成定义
 
-每一轮 Loop 治理或执行在改文件之前，必须先读取当前仓库的执行说明和控制状态：
+每轮 LOOP 的完成定义不是“生成了文档”，而是满足以下最小条件：
 
-- `AGENTS.md`
-- `02-governance/loop/LOOP_CONTROL_BOARD.md`
-- `02-governance/loop/LOOP_AUTONOMY_POLICY.md`
+- run：本轮目标、输入、范围和授权边界已明确。
+- stop：硬停止条件已检查，未越过人工确认、生产写入、真实 API、schema migrate、deploy、commit/push 授权边界。
+- verify：本轮修改有本地命令、validator、diff-check 或等价证据。
+- recover：失败或暂停时可回到上一个安全状态。
+- debug：当前阻塞、下一步和需要人工确认的问题已登记。
 
-如果上述任一文件缺失、为空或内部结论冲突，本轮必须停在治理修复，不得升级项目状态。
+## v1.1 Delivery Default
 
-## 完成定义
+开发态默认 Delivery Loop。普通本地开发不要求完整展开治理审计，只需保留当前切片的目标、变更、验证、风险和下一步。Governance Loop 只在 guarded、blocked、状态提升、生产动作、阶段收口或 P0/P1 风险触发时进入。
 
-Definition of Done：
+最小结构仍必须保留：
 
-只有满足以下适用条件时，Loop 轮次才可视为完成：
+```text
+run / stop / verify / recover / debug
+```
 
-- 已声明范围和授权边界。
-- 已记录输入、动作、输出、检查和反馈。
-- 已列出验证命令或证据引用。
-- 连续运行模式下已记录 `declared_rounds`、`substantive_rounds`、`generated_items`、`batch_generated`、`substance_gate` 和 `stop_type`。
-- 当本轮不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态时，必须明确写出非声明边界。
+边界：
 
-## 不可绕过规则
-
-- 文档或 validator 通过，不等于业务完成。
-- 没有所需证据和人工授权，任何轮次都不得标记 `accepted` 或 `integrated`。
-- 未取得明确授权并形成独立证据时，任何轮次都不得授权 production write、external API write、schema sync、bench migrate、deployment、permission change、commit 或 push。
+```text
+accepted = false
+integrated = false
+production_ready = false
+customer_accepted = false
+real_business_lane=repair_required
+runtime_primary_key_ready=0
+review_queue=0
+runtime_intake=0
+waes_review=0
+verified=0
+```

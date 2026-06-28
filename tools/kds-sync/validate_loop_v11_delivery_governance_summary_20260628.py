@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""Validate the first LOOP v1.1 Delivery Governance Summary."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import subprocess
+
+
+ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = ROOT.parent
+GFIS_ROOT = PROJECT_ROOT / "GlobalCloud GFIS"
+KDS_ROOT = PROJECT_ROOT / "GlobalCloud KDS"
+SUMMARY = ROOT / "docs/harness/evidence/loop-v11-delivery-governance-summary-20260628.md"
+
+KDS_DEV_001 = KDS_ROOT / "scripts/validate_kds_dev_001_local_api_sync_dry_run.py"
+GFIS_DEV_VALIDATORS = [
+    GFIS_ROOT / "scripts/validate_gfis_dev_001_source_record_runtime_readiness_chain.py",
+    GFIS_ROOT / "scripts/validate_gfis_dev_002_valid_source_record_index_template_readiness.py",
+    GFIS_ROOT / "scripts/validate_gfis_dev_003_valid_source_record_index_schema_preflight.py",
+    GFIS_ROOT / "scripts/validate_gfis_dev_004_valid_source_record_pre_submission_package.py",
+]
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise SystemExit(f"FAIL validate_loop_v11_delivery_governance_summary_20260628: {message}")
+
+
+def read(path: Path) -> str:
+    require(path.exists(), f"missing file: {path.relative_to(ROOT)}")
+    return path.read_text(encoding="utf-8", errors="ignore")
+
+
+def run_validator(path: Path, cwd: Path, pass_marker: str) -> str:
+    require(path.exists(), f"missing validator: {path}")
+    result = subprocess.run(
+        ["python3", str(path.relative_to(cwd))],
+        cwd=cwd,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    output = (result.stdout + result.stderr).strip()
+    require(result.returncode == 0, f"validator failed: {path.name}: {output}")
+    require(pass_marker in output, f"missing pass marker {pass_marker}: {output}")
+    return output
+
+
+def main() -> int:
+    summary = read(SUMMARY)
+
+    for phrase in [
+        "status: controlled",
+        "kds_space: 开发",
+        "source_path: docs/harness/evidence/loop-v11-delivery-governance-summary-20260628.md",
+        "sync_direction: bidirectional",
+        "delivery_loop_count = 5",
+        "governance_summary_required = true",
+        "governance_summary_status = completed_check_only",
+        "status_promotion_requested = false",
+        "status_promotion_allowed = false",
+        "KDS-DEV-001",
+        "GFIS-DEV-001",
+        "GFIS-DEV-002",
+        "GFIS-DEV-003",
+        "GFIS-DEV-004",
+        "production_write_executed=false",
+        "real_external_api_write_executed=false",
+        "schema_migrate_executed=false",
+        "bench_migrate_executed=false",
+        "deploy_executed=false",
+        "commit_executed=false",
+        "push_executed=false",
+        "real_kds_api_write_executed=false",
+        "waes_write_executed=false",
+        "accepted=false",
+        "integrated=false",
+        "production_ready=false",
+        "customer_accepted=false",
+    ]:
+        require(phrase in summary, f"summary missing phrase: {phrase}")
+
+    kds_output = run_validator(
+        KDS_DEV_001,
+        KDS_ROOT,
+        "kds_dev_001_local_api_sync_dry_run=pass",
+    )
+    gfis_outputs = [
+        run_validator(
+            GFIS_DEV_VALIDATORS[0],
+            GFIS_ROOT,
+            "gfis_dev_001_source_record_runtime_readiness_chain=pass",
+        ),
+        run_validator(
+            GFIS_DEV_VALIDATORS[1],
+            GFIS_ROOT,
+            "gfis_dev_002_valid_source_record_index_template_readiness=pass",
+        ),
+        run_validator(
+            GFIS_DEV_VALIDATORS[2],
+            GFIS_ROOT,
+            "gfis_dev_003_valid_source_record_index_schema_preflight=pass",
+        ),
+        run_validator(
+            GFIS_DEV_VALIDATORS[3],
+            GFIS_ROOT,
+            "gfis_dev_004_valid_source_record_pre_submission_package=pass",
+        ),
+    ]
+
+    for phrase in [
+        "env_template=sanitized_example_template",
+        "live_api_called=false",
+        "sync_executed=false",
+        "docker_started=false",
+        "gbrain_write_executed=false",
+        "commit_allowed=true",
+        "push_allowed=true",
+        "accepted=false",
+        "integrated=false",
+        "production_ready=false",
+    ]:
+        require(phrase in kds_output, f"KDS-DEV-001 output missing phrase: {phrase}")
+
+    combined_gfis = "\n".join(gfis_outputs)
+    for phrase in [
+        "valid_source_records=0",
+        "runtime_primary_key_ready=0",
+        "review_queue=0",
+        "runtime_intake=0",
+        "waes_review=0",
+        "verified=0",
+        "accepted=false",
+        "integrated=false",
+        "production_ready=false",
+        "customer_accepted=false",
+    ]:
+        require(phrase in combined_gfis, f"GFIS outputs missing phrase: {phrase}")
+
+    print(
+        "loop_v11_delivery_governance_summary_20260628=pass "
+        "delivery_loop_count=5 governance_summary_status=completed_check_only "
+        "status_promotion_allowed=false accepted=false integrated=false "
+        "production_ready=false customer_accepted=false"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

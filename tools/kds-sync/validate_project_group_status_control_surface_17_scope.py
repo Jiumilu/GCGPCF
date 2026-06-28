@@ -59,7 +59,7 @@ FILE_SPECIFIC_TOKENS = {
     "current_state": [
         "project_group_current_state_baseline_refresh_20260626 = controlled",
         "development_queue_ready = true",
-        "dirty_repo_count = 7",
+        "dirty_repo_count = 3",
         "trigger_layer_binding_count = 17",
         "dependency_edge_binding_count = 17",
     ],

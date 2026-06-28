@@ -94,7 +94,9 @@ noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
 | auth_id | 单仓复核复用入口 | 状态传导复用入口 |
 |---|---|---|
 | `AUTH-WAS-DELETE-DS-STORE-20260626` | `globalcloud-project-group-first-execution-authorization-request-20260626.md` 第 `4.1 A 项单仓核对卡` | `globalcloud-project-group-first-execution-authorization-request-20260626.md` 第 `4.2 A 项确认后状态传导摘要` |
-| `AUTH-KDS-OWNER-DECISION-20260626` | `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.3 KDS 单仓核对卡` | `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.4 KDS 确认后状态传导摘要` |
+
+说明：
+`globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.3 KDS 单仓核对卡` / 第 `5.4 KDS 确认后状态传导摘要` 只服务于 `AUTH-KDS-SCHEME-REVIEW-20260626` 的 Pre-Wave1 review 链，不作为 `AUTH-KDS-OWNER-DECISION-20260626` 的复用入口。`AUTH-KDS-OWNER-DECISION-20260626` 在本文只登记 owner decision 回执模板，状态传导仍仅限 `DISP-KDS-FUNDING-SYNC-RUNS-20260625`。
 
 ## 4. 状态传导规则
 

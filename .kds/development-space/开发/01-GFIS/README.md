@@ -10,8 +10,6 @@
 | GPCF-DOC-A001000015 | Interaction Design | .agents/skills/impeccable/reference/interaction-design.md | controlled |
 | GPCF-DOC-A001000019 | overdrive | .agents/skills/impeccable/reference/overdrive.md | controlled |
 | GPCF-DOC-A001000021 | polish | .agents/skills/impeccable/reference/polish.md | controlled |
-| GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | controlled |
-| GPCF-DOC-F6D4D8B07A | 跨项目 Agent 长期记忆系统 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/requirement.md | controlled |
 | GPCF-DOC-82A2F06757 | GPCF-GF-LR-001 输入定义 | 08-evidence-samples/GFIS/GPCF-GF-LR-001-input.md | controlled |
 | GPCF-DOC-C8373F0E81 | GFIS | 08-evidence-samples/GFIS/README.md | controlled |
 | GPCF-DOC-618A02EF68 | P0 SOP 到 GCFIS 单据映射表 | 08-evidence-samples/GFIS/docs/07-p0-sop-to-erpnext-doctype-mapping.md | controlled |
@@ -91,10 +89,9 @@
 | GPCF-DOC-D375EBD5DA | GFIS | docs/harness/GFIS/README.md | controlled |
 | GPCF-DOC-9BF6A3D875 | evidence | docs/harness/GFIS/evidence/README.md | controlled |
 | GPCF-DOC-GFIS-REAL-RUNTIME-BASELINE-20260624 | GFIS 真实运行基线证据 2026-06-24 | docs/harness/GFIS/evidence/gfis-real-runtime-baseline-20260624.md | controlled |
-| GPCF-DOC-AUTHORIZATION-LAYER-MATRIX-20260627 | GlobalCloud 项目群开发过程授权层级矩阵 2026-06-27 | docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-ROUTING-20260625 | GlobalCloud 项目群授权路由证据 2026-06-25 | docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群授权到执行前总桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md | controlled |
-| GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626 | GlobalCloud 项目群当前真实状态基线刷新 2026-06-26 | docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md | controlled |
+| GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626 | GlobalCloud Project Group Current State Baseline Refresh | docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-DEPENDENCY-EXECUTION-MATRIX-20260625 | GlobalCloud 项目群依赖执行矩阵 2026-06-25 | docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md | controlled |
 | GPCF-DOC-DEV-TASK-QUEUE-20260626 | GlobalCloud 项目群开发态任务队列 | docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-FULL-PROJECT-BASELINE-20260625 | GlobalCloud 项目群全量项目真实状态基线 2026-06-25 | docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md | controlled |
@@ -114,12 +111,12 @@
 | GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26 | docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-WAVE1-RECEIPT-PRE-EXECUTION-BRIDGE-AUDIT-20260627 | GlobalCloud 项目群 Wave1 回执与执行前桥接审计 2026-06-27 | docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md | controlled |
+| GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md | controlled |
 | GPCF-DOC-6C2D5BB513 | headroom | loop/context/headroom/README.md | controlled |
 | GPCF-DOC-A1FFDD1AE2 | docs | loop/context/headroom/docs/README.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-GRAPH-20260623 | Headroom LCX Graph | loop/context/headroom/docs/graph.md | controlled |
 | GPCF-DOC-AGENT-REACH-CONTROLLED-ADAPTER-20260622 | Agent-Reach 受控 Adapter Skeleton | third_party/agent-reach/CONTROLLED_ADAPTER.md | controlled |
 | GPCF-DOC-AGENT-REACH-ISOLATED-INSTALL-20260622 | Agent-Reach 隔离安装审查 | third_party/agent-reach/ISOLATED_INSTALL_REVIEW.md | controlled |
 | GPCF-DOC-AGENT-REACH-LIVE-SEARCH-AUTHORIZATION-20260622 | Agent-Reach Live Search Authorization Boundary | third_party/agent-reach/LIVE_SEARCH_AUTHORIZATION.md | controlled |
-| GPCF-DOC-AGENT-REACH-QUALITY-REPLAY-HARNESS-20260622 | Agent-Reach 离线质量 Replay Harness | third_party/agent-reach/QUALITY_REPLAY_HARNESS.md | controlled |
 | GPCF-DOC-1A55A16A23 | agent-reach | third_party/agent-reach/README.md | controlled |
 | GPCF-DOC-AGENT-REACH-SOURCE-20260622 | Agent-Reach Source Lock | third_party/agent-reach/SOURCE.md | controlled |

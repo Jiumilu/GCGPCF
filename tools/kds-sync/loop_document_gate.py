@@ -261,6 +261,7 @@ def main() -> int:
 
     checks = {
         "loop_engineering_five_direction": run([sys.executable, "tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"]),
+        "loop_v11_slimming_delivery_recovery": run([sys.executable, "tools/kds-sync/validate_loop_v11_slimming_delivery_recovery.py"]),
         "loop_engineering_master_plan": run([sys.executable, "tools/kds-sync/validate_loop_engineering_master_plan.py"]),
         "loop_capability_registry": run([sys.executable, "tools/kds-sync/validate_loop_capability_registry.py"]),
         "codegraph_loop_schema": run([sys.executable, "tools/kds-sync/validate_codegraph_loop_schema.py"]),

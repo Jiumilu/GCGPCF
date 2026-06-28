@@ -74,7 +74,7 @@ superseded_by: []
 | GPCF-DOC-0AC4F38B1A | gbrain-v2.1-sprint1-20260610-214441 | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/README.md |
 | GPCF-DOC-54C43FAC33 | status-audit | .harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint1-20260610-214441/status-audit.md |
 | GPCF-DOC-BFEB10D711 | gbrain-v2.1-sprint2-20260610-214842 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md |
-| GPCF-DOC-D03E6BE997 | Harness Governance: gbrain-v2.1-sprint2 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md |
+| GPCF-DOC-D03E6BE997 | status-audit | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md |
 | GPCF-DOC-520E6A10FE | gbrain-v2.1-sprint3-20260610-215034 | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/README.md |
 | GPCF-DOC-2AEC389E51 | status-audit | .harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint3-20260610-215034/status-audit.md |
 | GPCF-DOC-B0E20E2E16 | gbrain-v2.1-sprint4-20260610-215232 | .harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint4-20260610-215232/README.md |
@@ -87,10 +87,10 @@ superseded_by: []
 | GPCF-DOC-ED2B81A98D | workspaces | .harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260610-222505/workspaces/README.md |
 | GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md |
 | GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md |
-| GPCF-DOC-5C8B07F574 | Design Review: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md |
+| GPCF-DOC-5C8B07F574 | design | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md |
 | GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md |
 | GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md |
-| GPCF-DOC-F7F2EF5A5D | OpsX Proposal: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md |
+| GPCF-DOC-F7F2EF5A5D | proposal | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md |
 | GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md |
 | GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md |
 | GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md |

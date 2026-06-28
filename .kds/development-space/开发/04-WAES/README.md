@@ -24,9 +24,6 @@
 | GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAES/loops/README.md | controlled |
 | GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | controlled |
 | GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAES 门禁语义验证清单 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | controlled |
-| GPCF-DOC-8749FB9903 | Headroom LCX 架构说明 | loop/context/headroom/docs/architecture.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | Headroom LCX 剩余阻断清单 | loop/context/headroom/docs/blocker-inventory.md | controlled |
-| GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | Headroom LCX 完成审计 | loop/context/headroom/docs/completion-audit.md | controlled |
 | GPCF-DOC-BF9AA5F60D | Headroom LCX 运行模型 | loop/context/headroom/docs/operating-model.md | controlled |
 | GPCF-DOC-260DDD94E9 | Headroom LCX Rollout 计划 | loop/context/headroom/docs/rollout.md | controlled |
 | GPCF-DOC-AGENT-REACH-MODIFICATIONS-20260622 | Agent-Reach 修改登记表 | third_party/agent-reach/MODIFICATIONS.md | controlled |
