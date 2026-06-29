@@ -200,12 +200,24 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--check-only",
-        "--no-write-report",
         action="store_true",
         dest="check_only",
         help="evaluate the gate without writing the health report or KDS mirror",
     )
+    parser.add_argument(
+        "--no-write-report",
+        action="store_true",
+        dest="check_only",
+        help="deprecated alias for --check-only",
+    )
+    parser.add_argument(
+        "--write-report",
+        action="store_true",
+        help="explicitly write the health report and KDS mirror after evaluation",
+    )
     args = parser.parse_args()
+    if args.check_only and args.write_report:
+        parser.error("--check-only and --write-report cannot be used together")
     if args.check_only and os.environ.get("GPCF_LOOP_DOCUMENT_GATE_ACTIVE") == "1":
         print(
             json.dumps(
@@ -345,7 +357,7 @@ def main() -> int:
         "project_counts": dict(project_counts),
     }
     command_results = {name: output for name, (_, output) in checks.items()}
-    if not args.check_only:
+    if args.write_report:
         write_report(summary, command_results)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0 if gate == "pass" else 1
