@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/AaaS/evidence/README.md
 source_path: docs/harness/AaaS/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-28
+last_reviewed: 2026-06-29
 supersedes: []
 superseded_by: []
 ---

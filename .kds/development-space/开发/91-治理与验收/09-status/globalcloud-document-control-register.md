@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-28
+last_reviewed: 2026-06-29
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-06-28
+日期：2026-06-29
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -2129,13 +2129,13 @@ superseded_by: []
 | GPCF-LOOP-GCKF-P0-D182-001 | Loop Round GPCF-GCKF-P0-D182-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md |
 | GPCF-LOOP-GCKF-P0-D183-001 | loop-round-GPCF-GCKF-P0-D183-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md |
 | GPCF-LOOP-GCKF-P0-D184-001 | Loop Round GPCF-GCKF-P0-D184-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md |
-| GPCF-LOOP-GCKF-P0-D185-001 | loop-round-GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md |
-| GPCF-LOOP-GCKF-P0-D186-001 | loop-round-GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md |
+| GPCF-LOOP-GCKF-P0-D185-001 | Loop Round GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md |
+| GPCF-LOOP-GCKF-P0-D186-001 | Loop Round GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md |
 | GPCF-LOOP-GCKF-P0-D187-001 | Loop Round GPCF-GCKF-P0-D187-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D187-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D187-001.md |
 | GPCF-LOOP-GCKF-P0-D188-001 | Loop Round GPCF-GCKF-P0-D188-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D188-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D188-001.md |
 | GPCF-LOOP-GCKF-P0-D189-001 | Loop Round GPCF-GCKF-P0-D189-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md |
 | GPCF-DOC-156556AE22 | GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md |
-| GPCF-LOOP-GCKF-P0-D190-001 | loop-round-GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md |
+| GPCF-LOOP-GCKF-P0-D190-001 | Loop Round GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md |
 | GPCF-DOC-9F56DFB107 | GC-Knowledge Fabric P0-D2 目录编号与挂池规则 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md | GPCF | GPC, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md |
 | GPCF-DOC-DBB5A54AC3 | loop-round-GPCF-GCKF-P0-D20-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md |
 | GPCF-DOC-3317FFE9B5 | loop-round-GPCF-GCKF-P0-D21-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md |

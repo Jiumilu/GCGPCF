@@ -27,7 +27,7 @@ superseded_by: []
 | 当前结论 | `project_group_live_status_snapshot_20260626 = controlled` |
 | 状态候选 | `live_status_snapshot_controlled` |
 | snapshot_date | `2026-06-26` |
-| recheck_date | `2026-06-28` |
+| recheck_date | `2026-06-29` |
 | checked_repo_count | `17` |
 | expected_repo_count | `17` |
 | git_gate | `partial` |
@@ -42,7 +42,7 @@ superseded_by: []
 | production_ready | `false` |
 | customer_accepted | `false` |
 
-本文保留 `GPCF-LIVE-STATUS-SNAPSHOT-20260626-001` 任务编号，并在 2026-06-28 按当前工作树重新复核 live 状态，用于替换人工记忆和失效 dirty 计数。当前 stable dirty 仓为 `GlobalCloud Brain`、`GlobalCloud SOP`，14 个仓 clean，且 KDS 已从当前 dirty/sensitive 阻塞源中移除，项目群 Git gate 当前为 `partial`。GPCF 本仓在治理自更新与提交前检查过程中可能短暂显示为 dirty，仅作为 volatile observation，不作为独立业务事实入口；GFIS 已从当前 dirty 集合中剥离并保持 clean；SOP 当前新增一份 owner review 候选文档，因此重新进入 stable dirty 集合。Brain / SOP 作为当前稳定 review 边界，GPCF 作为治理 worktree volatile observation 一并纳入当前 live 复核。本轮不执行删除、cleanup、merge、真实 KDS API 同步、部署或状态升级。
+本文保留 `GPCF-LIVE-STATUS-SNAPSHOT-20260626-001` 任务编号，并在 2026-06-29 按当前工作树重新复核 live 状态，用于替换人工记忆和失效 dirty 计数。当前 stable dirty 仓为 `GlobalCloud KDS`、`GlobalCloud SOP`，14 个仓 clean，且 KDS 重新进入 dirty review 边界但 sensitive repos 仍为 0，项目群 Git gate 当前为 `partial`。GPCF 本仓在治理自更新与提交前检查过程中可能短暂显示为 dirty，仅作为 volatile observation，不作为独立业务事实入口；GFIS 已从当前 dirty 集合中剥离并保持 clean；SOP 当前保留 owner review 候选文档，因此继续处于 stable dirty 集合。KDS / SOP 作为当前稳定 review 边界，GPCF 作为治理 worktree volatile observation 一并纳入当前 live 复核。本轮不执行删除、cleanup、merge、真实 KDS API 同步、部署或状态升级。
 
 当前单仓锚点：
 
@@ -53,7 +53,7 @@ KDS -> globalcloud-project-group-pre-wave1-review-authorization-request-20260627
 ```text
 review_boundary_repo_count = 3
 noise_cleanup_repo_count = 0
-review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
+review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud KDS, GlobalCloud SOP
 noise_cleanup_repo_current = none
 gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 ```
@@ -63,7 +63,7 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 | 仓库 | 分支 | upstream | dirty_count | untracked_count | ahead | behind | diff_check | 当前队列 |
 |---|---|---|---:|---:|---:|---:|---|---|
 | `GlobalCloud AAAS` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
-| `GlobalCloud Brain` | `codex/brain-l4-retrieval` | `origin/codex/brain-l4-retrieval` | 43 | 3 | 0 | 0 | `pass` | `Brain source ingest boundary dirty / review required` |
+| `GlobalCloud Brain` | `codex/brain-l4-retrieval` | `origin/codex/brain-l4-retrieval` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `WAS世界资产体系` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud XiaoC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud WAES` | `waes/integration-release` | `origin/waes/integration-release` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
@@ -73,7 +73,7 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 | `GlobalCloud XWAIL` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud GFIS` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / pushed c7bd07e / no pending git action` |
 | `GlobalCloud MMC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
-| `GlobalCloud KDS` | `codex/kds-token-api-kds` | `origin/codex/kds-token-api-kds` | 0 | 0 | 0 | 0 | `pass` | `clean / pushed 042f4803 / no pending git action` |
+| `GlobalCloud KDS` | `codex/kds-token-api-kds` | `origin/codex/kds-token-api-kds` | 77 | 55 | 0 | 0 | `pass` | `KDS 2026-06-29 workwiki / distributed knowledge / search anchor dirty review required` |
 | `GlobalCloud XiaoG` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud PVAOS` | `pvaos/D4-release-readiness-governance` | `origin/pvaos/D4-release-readiness-governance` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud SOP` | `main` | `origin/main` | 0 | 1 | 0 | 0 | `pass` | `owner review candidate untracked / review required` |
@@ -84,14 +84,14 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 
 | 项 | 2026-06-26 记录值 | 2026-06-28 live recheck | 判断 |
 |---|---:|---:|---|
-| dirty 仓数量 | 17 | 3 | 已收敛但仍未全量 clean：当前 stable dirty 仓为 `GlobalCloud Brain`、`GlobalCloud SOP`，`GlobalCoud GPCF` 保持 volatile observation |
+| dirty 仓数量 | 17 | 3 | 已收敛但仍未全量 clean：当前 stable dirty 仓为 `GlobalCloud KDS`、`GlobalCloud SOP`，`GlobalCoud GPCF` 保持 volatile observation |
 | pass 仓数量 | 0 | 14 | 已恢复：14 仓 clean，可从旧的全量 dirty 口径中剥离 |
 | ahead/behind | 0 | 0 | GFIS 与 SOP main 已推送，当前无 ahead/behind |
 | sensitive_repos | 0 | 0 | KDS sensitive_path 已处理并推送，当前 sensitive repos 为空 |
-| `GlobalCloud KDS` dirty | 62 | 0 | KDS 已 clean，HEAD `042f4803`，ahead/behind 为 `0/0` |
+| `GlobalCloud KDS` dirty | 62 | 77 | KDS 重新进入 dirty review 边界，ahead/behind 为 `0/0`，当前 sensitive repos 仍为 `0` |
 | `GlobalCoud GPCF` dirty | 934 | volatile / observed_only | 治理证据聚合仍需人工 review；当前以 dirty 仓集合和门禁结果为准，GPCF 本仓瞬时行数不得作为真实事实入口或状态升级依据 |
 | `GlobalCloud GFIS` dirty | 3 | 0 / ahead=0 | dirty 已由 commit `c7bd07e` 收口并推送；真实业务验证仍等待 source-of-record |
-| `GlobalCloud Brain` dirty | 0 | 46 | Brain 当前出现 AGENTS / 总体方案 / 实施方案 / harness evidence / script 边界相关 dirty 与 untracked，需单独 review |
+| `GlobalCloud Brain` dirty | 0 | 0 | Brain 当前 clean，不再作为 stable dirty review 边界 |
 | `GlobalCloud SOP` dirty | 2 | 1 | SOP 当前新增 `docs/operations/wuhan-city-circle-sop-master-implementation-plan.md`，进入 owner review 边界 |
 | `GlobalCloud AAAS/XWAIL/SOP` dirty | 0 | 0/0/1 | AAAS/XWAIL delegated wrapper dirty 已收敛；SOP 当前因 owner review 候选文档进入 stable dirty 边界，不得声明场景方案已确认或交付 |
 | `WAS世界资产体系` dirty | 4 | 0 | system noise 已收敛，当前不再纳入 dirty review 边界 |
@@ -100,14 +100,14 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 
 说明：第 2 节 `dirty_count` / `untracked_count` 采用 raw expanded 口径，即 `git status --short --untracked-files=all`，会展开未跟踪目录内文件；compact 对照仅在第 3 节漂移结论中保留。因此判断状态时以 dirty 仓集合、ahead/behind/sensitive/diff_check 和当前门禁结果为准，不以单次行数作为状态升级依据。
 
-当前 raw expanded live counts 中 `GlobalCoud GPCF` 只作为 volatile observation 记录，由 validator 实时输出并允许在提交前自更新过程中短暂出现；`GlobalCloud Brain` 与 `GlobalCloud SOP` 是当前 stable dirty 仓，`GlobalCloud GFIS=0`、`GlobalCloud KDS=0`，其余 14 仓为 0。GPCF、Brain 等包含本地证据和未跟踪目录的仓库，raw expanded 数字仍会随受控证据写入继续波动。GPCF 本仓瞬时行数不得替代 GFIS 真实 source-of-record、等效正式确认文件、人工核验、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+当前 raw expanded live counts 中 `GlobalCoud GPCF` 只作为 volatile observation 记录，由 validator 实时输出并允许在提交前自更新过程中短暂出现；`GlobalCloud KDS` 与 `GlobalCloud SOP` 是当前 stable dirty 仓，`GlobalCloud GFIS=0`、`GlobalCloud Brain=0`，其余 14 仓为 0。GPCF、KDS、SOP 等包含本地证据和未跟踪目录的仓库，raw expanded 数字仍会随受控证据写入继续波动。GPCF 本仓瞬时行数不得替代 GFIS 真实 source-of-record、等效正式确认文件、人工核验、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
 
 | 优先级 | 执行入口 | 当前动作 | 前置确认 |
 |---|---|---|---|
-| P0 | `GPCF-LIVE-STATUS-SNAPSHOT-20260626-001` | 按 2 仓 stable dirty + 1 仓 volatile observation 新事实重放 dirty classification / review authorization chain，防止继续沿用失效的 `GPCF/GFIS/SOP` 口径；当前 review 边界收敛到 `GlobalCoud GPCF / GlobalCloud Brain / GlobalCloud SOP` | 需要先接受当前 live drift 为最新真实基线，再决定是否收缩授权链 |
-| P0 | `GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` | KDS sensitive_path 已处理并推送，保留为历史 cleanup 证据，不再作为当前 live 阻塞源 | 无需继续阻断本地开发；真实 KDS API sync 仍未授权 |
+| P0 | `GPCF-LIVE-STATUS-SNAPSHOT-20260626-001` | 按 2 仓 stable dirty + 1 仓 volatile observation 新事实重放 dirty classification / review authorization chain，防止继续沿用失效的 `GPCF/Brain/SOP` 口径；当前 review 边界收敛到 `GlobalCoud GPCF / GlobalCloud KDS / GlobalCloud SOP` | 需要先接受当前 live drift 为最新真实基线，再决定是否收缩授权链 |
+| P0 | `GPCF-KDS-DIFFCHECK-CLEANUP-COMMAND-PACK-20260626-001` | KDS sensitive_path 已处理并推送，但 2026-06-29 KDS workwiki / distributed knowledge / search anchor 改动重新进入 dirty review 边界 | 无需声明 KDS clean；真实 KDS API sync 仍未授权 |
 | P0 | `GFIS-REAL-SOR-001` | GFIS dirty 已由 commit `c7bd07e` 收口并推送；本任务仍不补真实 source-of-record | 需要业务输入或人工确认保留边界 |
-| P1 | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | 对 `Brain/SOP` stable dirty 与 `GPCF` volatile governance review 边界做人工确认和结论登记，再进入 Wave 1 或 GPCF worktree review | 需要逐仓人工确认 |
+| P1 | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | 对 `KDS/SOP` stable dirty 与 `GPCF` volatile governance review 边界做人工确认和结论登记，再进入 Wave 1 或 GPCF worktree review | 需要逐仓人工确认 |
 
 ## 5. LOOP 运行控制闭环
 
@@ -117,7 +117,7 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 | stop | 停止在 `authorization_boundary`，不执行删除、stage、commit、push、真实同步或状态升级 |
 | verify | 通过 `validate_project_group_live_status_snapshot_20260626.py`、Git clean 门禁和 Loop 文档门禁复核 |
 | recover | 若 live 仓集合、dirty 分类或敏感路径发生变化，回滚本文并重新采集快照 |
-| debug | 当前稳定阻塞是 `GlobalCloud Brain`、`GlobalCloud SOP` dirty 和人工确认边界；`GlobalCoud GPCF` 本仓 dirty 只作为治理自更新过程中的 volatile observation。GFIS 已 clean；KDS sensitive_path 已从当前阻塞源移除，仓库缺失型 loop gate blocker 已消除，远端落后和 diff_check 仍未出现 |
+| debug | 当前稳定阻塞是 `GlobalCloud KDS`、`GlobalCloud SOP` dirty 和人工确认边界；`GlobalCoud GPCF` 本仓 dirty 只作为治理自更新过程中的 volatile observation。GFIS 与 Brain 已 clean；KDS sensitive_path 未重新出现，远端落后和 diff_check 仍未出现 |
 
 ## 6. 禁止升级
 

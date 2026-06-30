@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md
 source_path: openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-28
+last_reviewed: 2026-06-29
 supersedes: []
 superseded_by: []
 ---

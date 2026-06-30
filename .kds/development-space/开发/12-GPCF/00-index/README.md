@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/00-index/README.md
 source_path: 00-index/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-28
+last_reviewed: 2026-06-29
 supersedes: []
 superseded_by: []
 ---

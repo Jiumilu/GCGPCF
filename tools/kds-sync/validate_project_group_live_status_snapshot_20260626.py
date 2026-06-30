@@ -39,6 +39,8 @@ EXPECTED_REPOS = [
 
 EXPECTED_DIRTY_REPOS = [
     "GlobalCloud Brain",
+    "GlobalCloud Studio",
+    "GlobalCloud KDS",
     "GlobalCloud SOP",
 ]
 
@@ -46,32 +48,35 @@ OPTIONAL_VOLATILE_DIRTY_REPOS = [
     "GlobalCoud GPCF",
 ]
 
-EXPECTED_AHEAD_REPOS: list[str] = []
+EXPECTED_AHEAD_REPOS: list[str] = [
+    "GlobalCloud Studio",
+    "GlobalCloud MMC",
+]
 
 REQUIRED_DOC_TOKENS = [
     "GPCF-LIVE-STATUS-SNAPSHOT-20260626-001",
     "project_group_live_status_snapshot_20260626 = controlled",
     "live_status_snapshot_controlled",
     "snapshot_date | `2026-06-26`",
-    "recheck_date | `2026-06-28`",
+    "recheck_date | `2026-06-30`",
     "checked_repo_count | `17`",
     "expected_repo_count | `17`",
     "git_gate | `partial`",
-    "dirty_repo_count | `3`",
-    "review_boundary_repo_count = 3",
+    "dirty_repo_count | `5`",
+    "review_boundary_repo_count = 5",
     "noise_cleanup_repo_count = 0",
-    "pass_repo_count | `14`",
-    "ahead_repos | `0`",
+    "pass_repo_count | `12`",
+    "ahead_repos | `2`",
     "behind_repos | `0`",
     "sensitive_repos | `0`",
     "diff_check | `pass`",
-    "当前 stable dirty 仓为 `GlobalCloud Brain`、`GlobalCloud SOP`",
-    "review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP",
+    "当前 stable dirty 仓为 `GlobalCloud Brain`、`GlobalCloud Studio`、`GlobalCloud KDS`、`GlobalCloud SOP`",
+    "review_boundary_repos_current = GlobalCloud Brain, GlobalCoud GPCF, GlobalCloud Studio, GlobalCloud KDS, GlobalCloud SOP",
     "noise_cleanup_repo_current = none",
     "gpcf_dirty_count_policy = volatile_observation_not_fact_entry",
     "GPCF 本仓瞬时行数不得作为真实事实入口或状态升级依据",
     "5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要",
-    "KDS 已从当前 dirty/sensitive 阻塞源中移除",
+    "KDS 重新进入 dirty review 边界但 sensitive repos 仍为 0",
     "authorization_boundary",
     "accepted | `false`",
     "integrated | `false`",
