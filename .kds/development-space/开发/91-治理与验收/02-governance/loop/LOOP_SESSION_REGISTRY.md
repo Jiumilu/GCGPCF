@@ -53,7 +53,7 @@ superseded_by: []
 | session_family | pattern | owner | current_control | handoff_status | allowed_next_action |
 |---|---|---|---|---|---|
 | GFIS L4 repair and test sync | `GPCF-L4-GFIS*`, `GPCF-GFIS*` | GPCF/GFIS | real_business_lane remains repair_required | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
-| KDS / DKS governance | `GPCF-KDS-DKS*`, `GPCF-GCKF*` | KDS/GPCF | KDS remains source of record | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
+| KDS / DKS governance | `GPCF-KDS-*`, `GPCF-GCKF*` | KDS/GPCF | KDS remains source of record | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
 | Ontology / WAS governance | `GPCF-ONTOLOGY-WAS*`, `GPCF-WAS*` | WAES/GPCF | semantic contract only, no business completion | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | CodeGraph governance | `GPCF-CODEGRAPH*` | GPCF | sync/readiness work remains evidence bounded | handoff_required_for_cross_repo_execution | read_only_registry_or_user_confirmed_handoff |
 | COGNEE pilot / writeback | `GPCF-COGNEE*` | GPCF | COGNEE P1-P4 remains controlled pilot / writeback boundary | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |

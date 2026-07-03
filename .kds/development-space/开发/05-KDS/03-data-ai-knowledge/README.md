@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/README.md
 source_path: 03-data-ai-knowledge/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-29
+last_reviewed: 2026-07-03
 supersedes: []
 superseded_by: []
 ---
@@ -104,6 +104,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-89872D1387 | GlobalCloud 绿色供应链分布式知识系统数据对象最小落库与 API 契约草案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | KDS | controlled |
 | GPCF-DOC-2A520469C6 | GlobalCloud 绿色供应链分布式知识系统权限与密级矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | KDS | controlled |
 | GPCF-DOC-1C57589247 | GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | KDS | controlled |
+| GPCF-DOC-GSCROLEVIEWKDSENTITY20260701 | GlobalCloud 绿色供应链角色视图 KDS 实体产物 | 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md | KDS | controlled |
 | GPCF-DOC-62E56B6121 | GlobalCloud 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | KDS | controlled |
 | GPCF-DOC-A22E7CBF43 | GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | GPCF | controlled |
 | GPCF-DOC-D241F6E17C | GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | GPCF | controlled |

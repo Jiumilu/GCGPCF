@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-29
+last_reviewed: 2026-07-03
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-06-29
+日期：2026-07-03
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 51 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
 | WAES | 04-WAES | 163 | 22 | 已建空间 |
-| KDS | 05-KDS | 717 | 717 | 已建空间 |
+| KDS | 05-KDS | 719 | 719 | 已建空间 |
 | Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 7 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 43 | 43 | 已建空间 |
 | XGD | 09-XGD | 7 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 8 | 8 | 已建空间 |
 | MMC | 11-MMC | 9 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1954 | 1845 | 已建空间 |
+| GPCF | 12-GPCF | 1955 | 1846 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -484,6 +484,7 @@ superseded_by: []
 | GPCF-DOC-89872D1387 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | bidirectional | pending_api |
 | GPCF-DOC-2A520469C6 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | bidirectional | pending_api |
 | GPCF-DOC-1C57589247 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | bidirectional | pending_api |
+| GPCF-DOC-GSCROLEVIEWKDSENTITY20260701 | 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md | bidirectional | pending_api |
 | GPCF-DOC-62E56B6121 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | bidirectional | pending_api |
 | GPCF-DOC-A22E7CBF43 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | bidirectional | pending_api |
 | GPCF-DOC-D241F6E17C | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | bidirectional | pending_api |
@@ -1679,6 +1680,7 @@ superseded_by: []
 | GPCF-DOC-8DC131D430 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-20DAB7011D | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-C21E66324C | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | 开发/05-KDS/docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | bidirectional | pending_api |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | docs/harness/evidence/project_group_live_status_current.md | 开发/05-KDS/docs/harness/evidence/project_group_live_status_current.md | bidirectional | pending_api |
 | GPCF-DOC-FACA370CCA | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | 开发/05-KDS/docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-3A9B82D614 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | 开发/05-KDS/docs/harness/evidence/session-mainline-drift-watch-20260622.md | bidirectional | pending_api |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | 开发/05-KDS/docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | bidirectional | pending_api |
@@ -2586,6 +2588,7 @@ superseded_by: []
 | GPCF-DOC-50039DF35A | docs/harness/loops/loop-round-GPCF-KDS-DKS-270.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-270.md | bidirectional | pending_api |
 | GPCF-DOC-B023346B78 | docs/harness/loops/loop-round-GPCF-KDS-DKS-271.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-271.md | bidirectional | pending_api |
 | GPCF-DOC-A91E4D6B72 | docs/harness/loops/loop-round-GPCF-KDS-DKS-PROMPT-REFRESH-20260628.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-PROMPT-REFRESH-20260628.md | bidirectional | pending_api |
+| GPCF-DOC-GSCROLEVIEWLOOP001 | docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md | bidirectional | pending_api |
 | GPCF-DOC-352145BD54 | docs/harness/loops/loop-round-GPCF-L4-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-001.md | bidirectional | pending_api |
 | GPCF-DOC-DE330E086C | docs/harness/loops/loop-round-GPCF-L4-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-002.md | bidirectional | pending_api |
 | GPCF-DOC-B305BF004A | docs/harness/loops/loop-round-GPCF-L4-003.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-003.md | bidirectional | pending_api |

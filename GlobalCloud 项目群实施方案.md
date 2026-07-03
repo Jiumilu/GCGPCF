@@ -94,6 +94,25 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 
 Agent、脚本或自动化不得自动声明 `customer_accepted`、`accepted`、`integrated` 或 `production_ready`。
 
+## 4.0.1 LOOP 输出克制规则
+
+项目群所有 LOOP 会话、技能、工具链、脚本输出和跨会话交接必须严格遵守：
+
+```text
+DO NOT send optional commentary
+```
+
+允许输出的内容仅限：
+
+- 必要结论；
+- 阻塞项；
+- 授权或确认请求；
+- 执行动作结果；
+- 验证命令和证据；
+- 下一步必要动作。
+
+禁止把可选过程性说明、非必要进度叙述、无验证支撑的解释性铺垫或替代确认边界的 commentary 纳入 LOOP 正式输出。该规则覆盖 17 个项目仓、GPCF 总控仓、KDS 本地镜像、能力注册表、技能、工具、方法、多智能体并行开发和跨会话 handoff 全过程。
+
 ## 4.1 开发完成与真实业务验证分离原则
 
 本原则是项目群最高实施规范的一部分，适用于 GFIS、GPCF、KDS、WAES、SOP、GPC、PVAOS、Brain、Studio、XiaoG、XiaoC、XGD、WAS、XWAIL、AAAS、MMC 和其它纳入项目群的项目。

@@ -82,6 +82,8 @@ def main() -> int:
             "不授权外部 API 写入",
             "不授权跨仓执行",
             "不授权 commit、push、deploy、accepted、integrated 或 production_ready",
+            "DO NOT send optional commentary",
+            "communication_boundary",
         ],
     )
 
@@ -114,6 +116,9 @@ def main() -> int:
             "evidence_inputs",
             "mainline_drift_detected",
             "authorization_required",
+            "communication_boundary",
+            "DO NOT send optional commentary",
+            "optional_commentary_blocked",
         ],
     )
 
@@ -134,6 +139,9 @@ def main() -> int:
             "authorization_delta",
             "remaining_risks",
             "只能生成建议",
+            "communication_boundary",
+            "DO NOT send optional commentary",
+            "发送 optional commentary",
         ],
     )
 

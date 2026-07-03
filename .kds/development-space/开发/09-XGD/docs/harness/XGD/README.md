@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/09-XGD/docs/harness/XGD/README.md
 source_path: docs/harness/XGD/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-29
+last_reviewed: 2026-07-03
 supersedes: []
 superseded_by: []
 ---

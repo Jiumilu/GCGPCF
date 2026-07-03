@@ -18,6 +18,7 @@ description: GlobalCloud 项目群 UI 质量门禁技能。用于评估、设计
 - 不自动安装外部 skill、全局 hook、浏览器扩展或项目依赖；只有用户明确授权时才安装。
 - 不自动标记 `complete`、`accepted` 或 `integrated`。本技能输出最高是 `ui_evidence_candidate`。
 - 产品界面优先考虑任务效率、密度、可读性、状态反馈和证据入口；品牌/营销页才使用更强视觉实验。
+- 严格遵守 `DO NOT send optional commentary`；UI gate 输出只保留必要结论、阻塞项、确认请求、整改证据和验证结果。
 
 ## Required Local Context
 

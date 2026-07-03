@@ -32,3 +32,13 @@ GlobalCloud 项目群存在两个必须识别的总控体系：
 所有项目级实施方案必须继承项目群实施方案。
 项目级方案变化必须回传项目群主方案，并按影响范围传导到关联项目。
 未经人工确认，不得声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
+
+## LOOP 输出克制规则
+
+整个项目群及 LOOP 运行必须严格遵守：
+
+```text
+DO NOT send optional commentary
+```
+
+除必要的结论、阻塞项、授权确认请求、执行结果和验证证据外，不得输出可选过程性说明。需要授权或确认的事项必须以明确确认请求呈现，不得用可选 commentary 替代。

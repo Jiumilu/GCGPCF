@@ -271,10 +271,14 @@ def main() -> int:
     if gfis_real_fact_entry_gate[0] == 0:
         GFIS_REAL_FACT_ENTRY_GATE_CACHE = gfis_real_fact_entry_gate[1]
 
+    project_group_live_status_current = run([sys.executable, "tools/kds-sync/build_project_group_live_status_current.py"])
+
     checks = {
+        "project_group_live_status_current": project_group_live_status_current,
         "loop_engineering_five_direction": run([sys.executable, "tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"]),
         "loop_v11_slimming_delivery_recovery": run([sys.executable, "tools/kds-sync/validate_loop_v11_slimming_delivery_recovery.py"]),
         "loop_engineering_master_plan": run([sys.executable, "tools/kds-sync/validate_loop_engineering_master_plan.py"]),
+        "loop_optional_commentary_policy": run([sys.executable, "tools/kds-sync/validate_loop_optional_commentary_policy.py"]),
         "loop_capability_registry": run([sys.executable, "tools/kds-sync/validate_loop_capability_registry.py"]),
         "codegraph_loop_schema": run([sys.executable, "tools/kds-sync/validate_codegraph_loop_schema.py"]),
         "loop_ui_quality_baseline": run([sys.executable, "tools/kds-sync/validate_loop_ui_quality_baseline.py"]),

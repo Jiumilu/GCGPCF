@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the 2026-06-26 GlobalCloud project-group live status snapshot."""
+"""Validate the dynamic project-group live status snapshot."""
 
 from __future__ import annotations
 
+from datetime import datetime, timedelta, timezone
 import json
 import os
 import subprocess
@@ -16,6 +17,9 @@ BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-bo
 REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 TASKS = ROOT / "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md"
 STATUS = ROOT / "docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md"
+CURRENT_JSON = ROOT / "docs/harness/evidence/project_group_live_status_current.json"
+FRESHNESS_HOURS = 12
+TZ = timezone(timedelta(hours=8))
 
 EXPECTED_REPOS = [
     "GlobalCloud AAAS",
@@ -37,46 +41,12 @@ EXPECTED_REPOS = [
     "GlobalCloud XGD",
 ]
 
-EXPECTED_DIRTY_REPOS = [
-    "GlobalCloud Brain",
-    "GlobalCloud Studio",
-    "GlobalCloud KDS",
-    "GlobalCloud SOP",
-]
+VOLATILE_DIRTY_ALLOWLIST = ["GlobalCoud GPCF"]
 
-OPTIONAL_VOLATILE_DIRTY_REPOS = [
-    "GlobalCoud GPCF",
-]
-
-EXPECTED_AHEAD_REPOS: list[str] = [
-    "GlobalCloud Studio",
-    "GlobalCloud MMC",
-]
-
-REQUIRED_DOC_TOKENS = [
+CORE_DOC_TOKENS = [
     "GPCF-LIVE-STATUS-SNAPSHOT-20260626-001",
     "project_group_live_status_snapshot_20260626 = controlled",
     "live_status_snapshot_controlled",
-    "snapshot_date | `2026-06-26`",
-    "recheck_date | `2026-06-30`",
-    "checked_repo_count | `17`",
-    "expected_repo_count | `17`",
-    "git_gate | `partial`",
-    "dirty_repo_count | `5`",
-    "review_boundary_repo_count = 5",
-    "noise_cleanup_repo_count = 0",
-    "pass_repo_count | `12`",
-    "ahead_repos | `2`",
-    "behind_repos | `0`",
-    "sensitive_repos | `0`",
-    "diff_check | `pass`",
-    "当前 stable dirty 仓为 `GlobalCloud Brain`、`GlobalCloud Studio`、`GlobalCloud KDS`、`GlobalCloud SOP`",
-    "review_boundary_repos_current = GlobalCloud Brain, GlobalCoud GPCF, GlobalCloud Studio, GlobalCloud KDS, GlobalCloud SOP",
-    "noise_cleanup_repo_current = none",
-    "gpcf_dirty_count_policy = volatile_observation_not_fact_entry",
-    "GPCF 本仓瞬时行数不得作为真实事实入口或状态升级依据",
-    "5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要",
-    "KDS 重新进入 dirty review 边界但 sensitive repos 仍为 0",
     "authorization_boundary",
     "accepted | `false`",
     "integrated | `false`",
@@ -185,57 +155,27 @@ def git_ahead_behind(repo: Path) -> tuple[int, int]:
     return int(right), int(left)
 
 
+def load_current_snapshot(failures: list[str]) -> dict:
+    if not CURRENT_JSON.exists():
+        failures.append(f"missing current snapshot: {CURRENT_JSON}")
+        return {}
+    try:
+        return json.loads(CURRENT_JSON.read_text(encoding="utf-8"))
+    except Exception as exc:
+        failures.append(f"failed to parse current snapshot: {exc}")
+        return {}
+
+
 def main() -> int:
     failures: list[str] = []
     doc_text = read(DOC, failures)
     refs_text = "\n".join([read(BOARD, failures), read(REGISTER, failures), read(TASKS, failures), read(STATUS, failures)])
     gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
+    current = load_current_snapshot(failures)
 
-    for token in REQUIRED_DOC_TOKENS:
+    for token in CORE_DOC_TOKENS:
         if token not in doc_text:
             failures.append(f"missing token in live status snapshot: {token}")
-
-    dirty_repos: list[str] = []
-    ahead_repos: list[str] = []
-    live_dirty_counts: dict[str, int] = {}
-    for repo_name in EXPECTED_REPOS:
-        repo = PROJECT_ROOT / repo_name
-        if not repo.exists():
-            failures.append(f"missing repo: {repo_name}")
-            continue
-        try:
-            lines = git_status(repo)
-        except subprocess.CalledProcessError as exc:
-            failures.append(f"git status failed for {repo_name}: {exc.stderr.strip()}")
-            continue
-        live_dirty_counts[repo_name] = len(lines)
-        if lines:
-            dirty_repos.append(repo_name)
-        try:
-            ahead, _behind = git_ahead_behind(repo)
-        except subprocess.CalledProcessError as exc:
-            failures.append(f"git ahead/behind failed for {repo_name}: {exc.stderr.strip()}")
-            ahead = 0
-        if ahead:
-            ahead_repos.append(repo_name)
-        if repo_name not in doc_text:
-            failures.append(f"missing repo row in live status snapshot: {repo_name}")
-
-    allowed_dirty_repos = set(EXPECTED_DIRTY_REPOS + OPTIONAL_VOLATILE_DIRTY_REPOS)
-    missing_required_dirty = [repo for repo in EXPECTED_DIRTY_REPOS if repo not in dirty_repos]
-    unexpected_dirty = [repo for repo in dirty_repos if repo not in allowed_dirty_repos]
-    if missing_required_dirty or unexpected_dirty:
-        failures.append(
-            "dirty repo set drifted: "
-            f"required={EXPECTED_DIRTY_REPOS}, optional_volatile={OPTIONAL_VOLATILE_DIRTY_REPOS}, actual={dirty_repos}"
-        )
-
-    for repo_name in EXPECTED_DIRTY_REPOS:
-        if live_dirty_counts.get(repo_name, 0) <= 0:
-            failures.append(f"expected dirty repo is clean: {repo_name}")
-
-    if ahead_repos != EXPECTED_AHEAD_REPOS:
-        failures.append(f"ahead repo set drifted: expected={EXPECTED_AHEAD_REPOS}, actual={ahead_repos}")
 
     for token in REQUIRED_REFERENCE_TOKENS:
         if token not in refs_text:
@@ -246,20 +186,95 @@ def main() -> int:
         if token in combined:
             failures.append(f"forbidden positive claim: {token}")
 
+    generated_at_raw = str(current.get("generated_at") or "")
+    if not generated_at_raw:
+        failures.append("current snapshot missing generated_at")
+    else:
+        try:
+            generated_at = datetime.fromisoformat(generated_at_raw)
+            if datetime.now(TZ) - generated_at > timedelta(hours=FRESHNESS_HOURS):
+                failures.append("current snapshot is stale")
+        except ValueError:
+            failures.append("current snapshot generated_at is invalid")
+
+    observed_dirty: list[str] = []
+    observed_ahead: list[str] = []
+    sensitive_repos: list[str] = []
+    pass_repo_count = 0
+    live_dirty_counts: dict[str, int] = {}
+
+    dirty_details = current.get("dirty_details", {})
+
+    for repo_name in EXPECTED_REPOS:
+        repo = PROJECT_ROOT / repo_name
+        if not repo.exists():
+            failures.append(f"missing repo: {repo_name}")
+            continue
+        try:
+            lines = git_status(repo)
+            ahead, behind = git_ahead_behind(repo)
+        except subprocess.CalledProcessError as exc:
+            failures.append(f"git scan failed for {repo_name}: {exc.stderr.strip()}")
+            continue
+        live_dirty_counts[repo_name] = len(lines)
+        if lines:
+            observed_dirty.append(repo_name)
+        if ahead > 0:
+            observed_ahead.append(repo_name)
+        detail = dirty_details.get(repo_name, {})
+        if detail.get("sensitive_paths"):
+            sensitive_repos.append(repo_name)
+        if not lines and ahead == 0 and behind == 0:
+            pass_repo_count += 1
+
+    snapshot_observed_dirty = [str(item) for item in current.get("observed_dirty", [])]
+    snapshot_observed_ahead = [str(item) for item in current.get("observed_ahead", [])]
+    snapshot_stable_dirty = [str(item) for item in current.get("stable_dirty", [])]
+    snapshot_stable_ahead = [str(item) for item in current.get("stable_ahead", [])]
+    snapshot_volatile_dirty = [str(item) for item in current.get("volatile_dirty", [])]
+    snapshot_review_boundary = [str(item) for item in current.get("review_boundary", [])]
+    snapshot_sensitive_repos = [str(item) for item in current.get("sensitive_repos", [])]
+
+    if snapshot_observed_dirty != observed_dirty:
+        failures.append(f"observed_dirty mismatch: snapshot={snapshot_observed_dirty}, actual={observed_dirty}")
+    if snapshot_observed_ahead != observed_ahead:
+        failures.append(f"observed_ahead mismatch: snapshot={snapshot_observed_ahead}, actual={observed_ahead}")
+
+    expected_volatile_dirty = sorted(set(observed_dirty) & set(VOLATILE_DIRTY_ALLOWLIST))
+    if snapshot_volatile_dirty != expected_volatile_dirty:
+        failures.append(f"volatile_dirty mismatch: snapshot={snapshot_volatile_dirty}, expected={expected_volatile_dirty}")
+
+    if not set(snapshot_stable_dirty).issubset(set(snapshot_observed_dirty)):
+        failures.append("stable_dirty must be a subset of observed_dirty")
+    if not set(snapshot_stable_ahead).issubset(set(snapshot_observed_ahead)):
+        failures.append("stable_ahead must be a subset of observed_ahead")
+    expected_review_boundary = sorted(set(snapshot_stable_dirty) | set(snapshot_volatile_dirty) | set(snapshot_sensitive_repos))
+    if snapshot_review_boundary != expected_review_boundary:
+        failures.append(
+            f"review_boundary mismatch: snapshot={snapshot_review_boundary}, expected={expected_review_boundary}"
+        )
+    if int(current.get("pass_repo_count", -1)) != pass_repo_count:
+        failures.append(f"pass_repo_count mismatch: snapshot={current.get('pass_repo_count')}, actual={pass_repo_count}")
+    if snapshot_sensitive_repos != sensitive_repos:
+        failures.append(f"sensitive_repos mismatch: snapshot={snapshot_sensitive_repos}, actual={sensitive_repos}")
+
     result = {
         "gate": "project_group_live_status_snapshot_20260626",
         "status": "pass" if not failures else "fail",
         "checked_repo_count": len(EXPECTED_REPOS),
-        "dirty_repo_count": len(dirty_repos),
-        "dirty_repos": dirty_repos,
-        "stable_dirty_repos": EXPECTED_DIRTY_REPOS,
-        "optional_volatile_dirty_repos": OPTIONAL_VOLATILE_DIRTY_REPOS,
-        "ahead_repos": ahead_repos,
+        "dirty_repo_count": len(observed_dirty),
+        "dirty_repos": observed_dirty,
+        "observed_ahead": observed_ahead,
+        "stable_dirty_repos": snapshot_stable_dirty,
+        "stable_ahead_repos": snapshot_stable_ahead,
+        "optional_volatile_dirty_repos": snapshot_volatile_dirty,
+        "review_boundary": snapshot_review_boundary,
         "live_dirty_counts": live_dirty_counts,
+        "current_snapshot": str(CURRENT_JSON.relative_to(ROOT)),
         "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
-            "This validates the live status snapshot only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status.",
+            "This validates the live status snapshot only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status."
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

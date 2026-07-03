@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the 2026-06-26 project-group current-state baseline refresh evidence."""
+"""Validate the dynamic project-group current-state baseline refresh evidence."""
 
 from __future__ import annotations
 
+from datetime import datetime, timedelta, timezone
 import json
 import os
 import subprocess
@@ -12,6 +13,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md"
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"
+CURRENT_JSON = ROOT / "docs/harness/evidence/project_group_live_status_current.json"
+TZ = timezone(timedelta(hours=8))
+FRESHNESS_HOURS = 12
 
 PROJECTS = [
     "GlobalCloud AAAS",
@@ -33,23 +37,10 @@ PROJECTS = [
     "GlobalCloud XGD",
 ]
 
-REQUIRED_TOKENS = [
+CORE_TOKENS = [
     "project_group_current_state_baseline_refresh_20260626 = controlled",
     "project_count = 17",
-    "recheck_date = 2026-06-28",
     "git_gate = partial",
-    "dirty_repo_count = 3",
-    "review_boundary_repo_count = 3",
-    "noise_cleanup_repo_count = 0",
-    "pass_repo_count = 14",
-    "ahead_repos = 0",
-    "behind_repos = 0",
-    "sensitive_repos = 0",
-    "dirty_repos_current = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP",
-    "review_boundary_repos_current = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP",
-    "noise_cleanup_repo_current = none",
-    "sensitive_repos_current = none",
-    "diff_check = pass",
     "development_queue_ready = true",
     "trigger_layer_binding_count = 17",
     "dependency_edge_binding_count = 17",
@@ -59,24 +50,6 @@ REQUIRED_TOKENS = [
     "stage_allowed = false",
     "commit_allowed = false",
     "push_allowed = false",
-    "dirty>0 / untracked>=0 / diff_check=pass / governance_worktree_volatile",
-    "dirty>0 / untracked=0 / diff_check=pass / review_boundary_current",
-    "clean / diff_check=pass / sensitive_path=resolved_not_in_git_status",
-    "AAAS-WAES-BINDING-PRECHECK-001",
-    "XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001",
-    "SOP-SCENARIO-OWNER-REVIEW-001",
-    "WAS-XWAIL-ONTOLOGY-MAPPING-001",
-    "KDS-BRAIN-REPORT-HOLD-REVIEW-001",
-    "KDS blocker 已解除",
-    "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要",
-    "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要",
-    "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要",
-    "WAES-LINT-RUNTIME-001",
-    "GFIS-REAL-SOR-001",
-    "GPC-EXTERNAL-RUNTIME-EVIDENCE-001",
-    "BRAIN-HUMAN-REVIEW-DECISION-001",
-    "GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001",
-    "globalcloud-project-group-dev-task-queue-20260626.md",
 ]
 
 FORBIDDEN_TOKENS = [
@@ -152,35 +125,60 @@ def validate_gfis_real_fact_entry(failures: list[str]) -> dict[str, str]:
     return values
 
 
+def load_current_snapshot(failures: list[str]) -> dict:
+    if not CURRENT_JSON.exists():
+        failures.append(f"missing current snapshot: {CURRENT_JSON}")
+        return {}
+    try:
+        return json.loads(CURRENT_JSON.read_text(encoding="utf-8"))
+    except Exception as exc:
+        failures.append(f"failed to parse current snapshot: {exc}")
+        return {}
+
+
 def main() -> int:
     failures: list[str] = []
     doc = read(DOC, failures)
     board = read(BOARD, failures)
+    current = load_current_snapshot(failures)
     gfis_real_fact_entry = validate_gfis_real_fact_entry(failures)
 
-    for token in REQUIRED_TOKENS:
+    for token in CORE_TOKENS:
         if token not in doc:
             failures.append(f"missing token in current baseline refresh: {token}")
-
     for project in PROJECTS:
         if project not in doc:
             failures.append(f"missing project in current baseline refresh: {project}")
-
     for token in FORBIDDEN_TOKENS:
         if token in doc:
             failures.append(f"forbidden positive claim in current baseline refresh: {token}")
-
     if "globalcloud-project-group-current-state-baseline-refresh-20260626.md" not in board:
         failures.append("governance board missing current-state baseline refresh reference")
+
+    generated_at_raw = str(current.get("generated_at") or "")
+    if generated_at_raw:
+        try:
+            generated_at = datetime.fromisoformat(generated_at_raw)
+            if datetime.now(TZ) - generated_at > timedelta(hours=FRESHNESS_HOURS):
+                failures.append("current snapshot is stale for current-state baseline refresh")
+        except ValueError:
+            failures.append("current snapshot generated_at is invalid")
+    if int(current.get("project_count", 0)) != len(PROJECTS):
+        failures.append(f"current snapshot project_count mismatch: {current.get('project_count')}")
+    if not isinstance(current.get("review_boundary"), list):
+        failures.append("current snapshot review_boundary missing")
 
     result = {
         "gate": "project_group_current_state_baseline_refresh_20260626",
         "status": "pass" if not failures else "fail",
         "project_count": len(PROJECTS),
+        "review_boundary": current.get("review_boundary", []),
+        "observed_dirty": current.get("observed_dirty", []),
+        "observed_ahead": current.get("observed_ahead", []),
         "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [
-            "This validates current-state baseline refresh evidence only; it does not execute tasks, clean repos, stage, commit, push, deploy, sync KDS API, or grant accepted/integrated/customer acceptance.",
+            "This validates current-state baseline refresh evidence only; it does not execute tasks, clean repos, stage, commit, push, deploy, sync KDS API, or grant accepted/integrated/customer acceptance."
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

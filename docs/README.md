@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/README.md
 source_path: docs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-29
+last_reviewed: 2026-07-03
 supersedes: []
 superseded_by: []
 ---
@@ -976,6 +976,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | GPCF | controlled |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | GPCF | controlled |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | KDS | controlled |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | KDS | controlled |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | controlled |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | KDS | controlled |
@@ -1430,13 +1431,13 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-LOOP-GCKF-P0-D182-001 | Loop Round GPCF-GCKF-P0-D182-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D183-001 | loop-round-GPCF-GCKF-P0-D183-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D184-001 | Loop Round GPCF-GCKF-P0-D184-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D185-001 | loop-round-GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D186-001 | loop-round-GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D185-001 | Loop Round GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D186-001 | Loop Round GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D187-001 | Loop Round GPCF-GCKF-P0-D187-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D187-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D188-001 | Loop Round GPCF-GCKF-P0-D188-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D188-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D189-001 | Loop Round GPCF-GCKF-P0-D189-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md | GPCF | controlled |
 | GPCF-DOC-156556AE22 | GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D190-001 | loop-round-GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D190-001 | Loop Round GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | controlled |
 | GPCF-DOC-9F56DFB107 | GC-Knowledge Fabric P0-D2 目录编号与挂池规则 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md | GPCF | controlled |
 | GPCF-DOC-DBB5A54AC3 | loop-round-GPCF-GCKF-P0-D20-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md | GPCF | controlled |
 | GPCF-DOC-3317FFE9B5 | loop-round-GPCF-GCKF-P0-D21-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md | GPCF | controlled |
@@ -1883,6 +1884,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-50039DF35A | LOOP Round GPCF KDS DKS-270 | docs/harness/loops/loop-round-GPCF-KDS-DKS-270.md | GPCF | controlled |
 | GPCF-DOC-B023346B78 | loop-round-GPCF-KDS-DKS-271 | docs/harness/loops/loop-round-GPCF-KDS-DKS-271.md | GPCF | controlled |
 | GPCF-DOC-A91E4D6B72 | LOOP Round GPCF-KDS-DKS-PROMPT-REFRESH-20260628 | docs/harness/loops/loop-round-GPCF-KDS-DKS-PROMPT-REFRESH-20260628.md | GPCF | controlled |
+| GPCF-DOC-GSCROLEVIEWLOOP001 | loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001 | docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md | GPCF | controlled |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | controlled |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | controlled |
 | GPCF-DOC-B305BF004A | GPCF-L4-003 KDS 知识索引证据接收 | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | controlled |

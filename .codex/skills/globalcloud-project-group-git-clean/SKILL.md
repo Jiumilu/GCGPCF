@@ -93,3 +93,7 @@ python3 .codex/skills/globalcloud-project-group-git-clean/scripts/project_group_
 Loop 启动、继续、提交前或验收前，如涉及项目群整体状态，必须运行本技能脚本并把输出纳入本轮 evidence。门禁未 `pass` 时不得宣告项目群 Git 全量 clean；若有敏感路径或远端冲突，状态最高为 `blocked`。
 
 本技能不会自动执行任何修复动作。若需要提交或推送，必须在用户授权、敏感检查通过、变更范围受控后另行执行。
+
+## 输出边界
+
+本技能必须严格遵守 `DO NOT send optional commentary`。输出只保留 Git gate 结论、阻塞仓库、敏感路径风险、授权确认请求和可复现验证证据，不发送可选过程性说明。

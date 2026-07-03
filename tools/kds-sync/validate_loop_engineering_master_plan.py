@@ -65,6 +65,7 @@ def main() -> int:
         "体系边界",
         "运行模型",
         "会话主线与跨会话防偏离控制",
+        "输出克制",
         "工程执行型 LOOP 决策基线",
         "能力纳入与治理机制",
         "版本基线",
@@ -120,6 +121,7 @@ def main() -> int:
         "当前会话主线优先",
         "handoff evidence",
         "用户确认",
+        "DO NOT send optional commentary",
     ]:
         require(phrase in master, f"master plan missing decision baseline: {phrase}")
 
@@ -136,6 +138,7 @@ def main() -> int:
         "会话主线边界",
         "会话主线漂移",
         "启动/恢复前置门禁",
+        "不得发送 optional commentary",
     ]:
         require(phrase in master, f"master plan missing session mainline control: {phrase}")
 

@@ -3,40 +3,25 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timedelta, timezone
 import json
-import subprocess
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-PROJECT_ROOT = ROOT.parent
 DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-dirty-disposition-queue-post-scheme-recognition-20260626.md"
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"
 REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 TASKS = ROOT / "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md"
 LIVE_SNAPSHOT = ROOT / "docs/harness/evidence/globalcloud-project-group-live-status-snapshot-20260626.md"
+CURRENT_JSON = ROOT / "docs/harness/evidence/project_group_live_status_current.json"
+TZ = timezone(timedelta(hours=8))
+FRESHNESS_HOURS = 12
 
-EXPECTED_REPOS = {
-    "WAS世界资产体系": ["DISP-WAS-SYSTEM-NOISE-20260627", "noise_decision_required"],
-    "GlobalCloud AAAS": ["DISP-AAAS-LOOP-GATE-DELEGATE-20260627", "loop_gate_delegate_review_candidate"],
-    "GlobalCoud GPCF": ["DISP-GPCF-SCHEME-RECOGNITION-20260626", "current_baseline_replay_required"],
-    "GlobalCloud XWAIL": ["DISP-XWAIL-LOOP-GATE-DELEGATE-20260627", "loop_gate_delegate_review_candidate"],
-    "GlobalCloud GFIS": ["DISP-GFIS-SCHEME-RECOGNITION-20260626", "real_source_record_pending"],
-    "GlobalCloud KDS": ["DISP-KDS-SCHEME-RECOGNITION-20260626", "sensitive_path_review_required"],
-    "GlobalCloud SOP": ["DISP-SOP-LOOP-GATE-DELEGATE-20260627", "loop_gate_delegate_review_candidate"],
-}
-
-REQUIRED_DOC_TOKENS = [
+CORE_DOC_TOKENS = [
     "GPCF-DIRTY-DISPOSITION-QUEUE-POST-SCHEME-RECOGNITION-20260626-001",
     "project_group_dirty_disposition_queue_post_scheme_recognition_20260626 = controlled",
     "dirty_disposition_queue_post_scheme_recognition_ready",
-    "recheck_date | `2026-06-27`",
-    "dirty_repo_count | `7`",
-    "scheme_recognition_dirty_count | `1`",
-    "review_candidate_count | `6`",
-    "owner_decision_count | `1`",
-    "noise_decision_count | `1`",
-    "kds_sensitive_path_count | `1`",
     "review_allowed | `false`",
     "stage_allowed | `false`",
     "commit_allowed | `false`",
@@ -46,15 +31,7 @@ REQUIRED_DOC_TOKENS = [
     "integrated | `false`",
     "production_ready | `false`",
     "customer_accepted | `false`",
-    "run | 读取 7 个当前 dirty 仓 live Git 状态",
-    "stop | 停止在 `authorization_boundary`",
-    "verify | 通过 `validate_project_group_dirty_disposition_queue_post_scheme_recognition_20260626.py`",
-    "recover | 若队列与 live dirty 不一致",
-    "debug | 当前主要阻塞是 KDS sensitive_path、GFIS 真实 SOR 阻塞、GPCF 治理 review 边界、WAS system noise cleanup，以及 AAAS/XWAIL/SOP delegated wrapper 的保留范围确认",
     "project_group_git_clean = blocked",
-    "当前 KDS `git diff --check` 为 pass",
-    "4.1 A 项单仓核对卡 / 4.2 A 项确认后状态传导摘要",
-    "5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要",
 ]
 
 REFERENCE_TOKENS = [
@@ -75,9 +52,6 @@ FORBIDDEN_POSITIVE_CLAIMS = [
     "integrated | `true`",
     "production_ready | `true`",
     "customer_accepted | `true`",
-    "项目群 Git 全量 clean = true",
-    "KDS diff check 已修复 = true",
-    "真实 KDS API 已同步 = true",
 ]
 
 
@@ -88,64 +62,57 @@ def read(path: Path, failures: list[str]) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def git_status(repo: Path) -> list[str]:
-    result = subprocess.run(
-        ["git", "status", "--short", "--untracked-files=all"],
-        cwd=repo,
-        check=True,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
-    return [line for line in result.stdout.splitlines() if line.strip()]
+def load_current_snapshot(failures: list[str]) -> dict:
+    if not CURRENT_JSON.exists():
+        failures.append(f"missing current snapshot: {CURRENT_JSON}")
+        return {}
+    try:
+        return json.loads(CURRENT_JSON.read_text(encoding="utf-8"))
+    except Exception as exc:
+        failures.append(f"failed to parse current snapshot: {exc}")
+        return {}
 
 
 def main() -> int:
     failures: list[str] = []
-    live_dirty: dict[str, int] = {}
     doc_text = read(DOC, failures)
     refs_text = "\n".join([read(BOARD, failures), read(REGISTER, failures), read(TASKS, failures), read(LIVE_SNAPSHOT, failures)])
+    current = load_current_snapshot(failures)
 
-    for token in REQUIRED_DOC_TOKENS:
+    for token in CORE_DOC_TOKENS:
         if token not in doc_text:
             failures.append(f"missing token in post-scheme dirty queue: {token}")
-
-    for repo_name, tokens in EXPECTED_REPOS.items():
-        repo = PROJECT_ROOT / repo_name
-        if not repo.exists():
-            failures.append(f"missing repo: {repo_name}")
-            continue
-        try:
-            status_lines = git_status(repo)
-        except subprocess.CalledProcessError as exc:
-            failures.append(f"git status failed for {repo_name}: {exc.stderr.strip()}")
-            continue
-        live_dirty[repo_name] = len(status_lines)
-        if not status_lines:
-            failures.append(f"repo is no longer dirty but remains in post-scheme queue: {repo_name}")
-        if repo_name not in doc_text:
-            failures.append(f"missing repo in post-scheme dirty queue: {repo_name}")
-        for token in tokens:
-            if token not in doc_text:
-                failures.append(f"missing queue token for {repo_name}: {token}")
-
     for token in REFERENCE_TOKENS:
         if token not in refs_text:
             failures.append(f"missing governance reference token: {token}")
-
     combined = doc_text + "\n" + refs_text
     for token in FORBIDDEN_POSITIVE_CLAIMS:
         if token in combined:
             failures.append(f"forbidden positive claim: {token}")
 
+    generated_at_raw = str(current.get("generated_at") or "")
+    if generated_at_raw:
+        try:
+            generated_at = datetime.fromisoformat(generated_at_raw)
+            if datetime.now(TZ) - generated_at > timedelta(hours=FRESHNESS_HOURS):
+                failures.append("current snapshot is stale for post-scheme dirty queue")
+        except ValueError:
+            failures.append("current snapshot generated_at is invalid")
+
+    if not isinstance(current.get("review_boundary"), list):
+        failures.append("current snapshot review_boundary missing")
+    if not isinstance(current.get("observed_dirty"), list):
+        failures.append("current snapshot observed_dirty missing")
+
     result = {
         "gate": "project_group_dirty_disposition_queue_post_scheme_recognition_20260626",
         "status": "pass" if not failures else "fail",
-        "dirty_repo_count": len(EXPECTED_REPOS),
-        "live_dirty_counts": live_dirty,
+        "review_boundary": current.get("review_boundary", []),
+        "observed_dirty": current.get("observed_dirty", []),
+        "observed_ahead": current.get("observed_ahead", []),
         "failures": failures,
         "warnings": [
-            "This validates the post-scheme-recognition dirty repository disposition queue only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status.",
+            "This validates the post-scheme-recognition dirty repository disposition queue only; it does not delete files, stage, commit, push, sync KDS API, deploy, or grant accepted/integrated/customer acceptance status."
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

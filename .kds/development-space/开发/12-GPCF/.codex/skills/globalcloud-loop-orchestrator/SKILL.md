@@ -34,6 +34,7 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 - 质量、可用性、客户满意、依赖、风险回滚、自我进化任一门禁 blocked 时，不得升级状态。
 - 文档债务存在时，状态最高为 `partial`。
 - GPCF 总控仓自身也必须参与 Loop，不是免审计例外。
+- 严格遵守 `DO NOT send optional commentary`；只输出必要结论、阻塞项、授权确认请求、执行结果、验证证据和下一步必要动作。
 - LOOP 运行控制闭环为所有 Loop 工作的默认工程接口，历史别名为 LOOP 五方向。
 - Governance Loop 使用 `run / stop / verify / recover / debug`。
 - Delivery Loop 使用 `goal / changed / verified / risk / next`。

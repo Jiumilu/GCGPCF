@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-29
+last_reviewed: 2026-07-03
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-06-29
+日期：2026-07-03
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 51 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
 | WAES | 04-WAES | 163 | 22 | 已建空间 |
-| KDS | 05-KDS | 717 | 717 | 已建空间 |
+| KDS | 05-KDS | 719 | 719 | 已建空间 |
 | Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 7 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 43 | 43 | 已建空间 |
 | XGD | 09-XGD | 7 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 8 | 8 | 已建空间 |
 | MMC | 11-MMC | 9 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1954 | 1845 | 已建空间 |
+| GPCF | 12-GPCF | 1955 | 1846 | 已建空间 |
 | Studio | 13-Studio | 2 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -390,7 +390,7 @@ superseded_by: []
 | GPCF-DOC-4BA3D31617 | Loop Engineering 五方向实施规范 | 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md |
 | GPCF-DOC-6E7DCE4A91 | LOOP 工程体系整体实施规范 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | WAES | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md |
-| GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
+| GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | WAES, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
 | GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11 | LOOP Gate Classification | 02-governance/loop/LOOP_GATE_CLASSIFICATION.md | WAES | GFIS, WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GATE_CLASSIFICATION.md |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md |
 | GPCF-DOC-07906C7E54 | LOOP Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAES | GFIS, WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md |
@@ -480,6 +480,7 @@ superseded_by: []
 | GPCF-DOC-89872D1387 | GlobalCloud 绿色供应链分布式知识系统数据对象最小落库与 API 契约草案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | KDS | GFIS, GPC, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md |
 | GPCF-DOC-2A520469C6 | GlobalCloud 绿色供应链分布式知识系统权限与密级矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md |
 | GPCF-DOC-1C57589247 | GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, XiaoC, XGD, GPCF, Studio | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md |
+| GPCF-DOC-GSCROLEVIEWKDSENTITY20260701 | GlobalCloud 绿色供应链角色视图 KDS 实体产物 | 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md |
 | GPCF-DOC-62E56B6121 | GlobalCloud 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md |
 | GPCF-DOC-A22E7CBF43 | GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明 | 03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md | GPCF | GPCF | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md |
 | GPCF-DOC-D241F6E17C | GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁 | 03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md | GPCF | GPCF | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud葛化DKS054执行包派发授权信封与负例拒收门禁.md |
@@ -1675,6 +1676,7 @@ superseded_by: []
 | GPCF-DOC-8DC131D430 | Ontology/WAS 3 小时实施 P2 门禁执行与回放证据 | docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p2-gate-replay-20260621.md |
 | GPCF-DOC-20DAB7011D | Ontology/WAS 3 小时实施 P3 收口与下一步决策证据 | docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md | GPCF | GFIS, GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/ontology-was-3h-p3-closure-20260621.md |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/project_group_live_status_current.md |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF, Studio | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-drift-watch-20260622.md |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md |
@@ -2582,6 +2584,7 @@ superseded_by: []
 | GPCF-DOC-50039DF35A | LOOP Round GPCF KDS DKS-270 | docs/harness/loops/loop-round-GPCF-KDS-DKS-270.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-270.md |
 | GPCF-DOC-B023346B78 | loop-round-GPCF-KDS-DKS-271 | docs/harness/loops/loop-round-GPCF-KDS-DKS-271.md | GPCF | GPC, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-271.md |
 | GPCF-DOC-A91E4D6B72 | LOOP Round GPCF-KDS-DKS-PROMPT-REFRESH-20260628 | docs/harness/loops/loop-round-GPCF-KDS-DKS-PROMPT-REFRESH-20260628.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-PROMPT-REFRESH-20260628.md |
+| GPCF-DOC-GSCROLEVIEWLOOP001 | loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001 | docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md | GPCF | GPC, PVAOS, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-001.md |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | GFIS, GPC, WAES, KDS, MMC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-002.md |
 | GPCF-DOC-B305BF004A | GPCF-L4-003 KDS 知识索引证据接收 | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | GFIS, GPC, WAES, KDS, Brain, PKC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-L4-003.md |

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/README.md
 source_path: docs/harness/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-29
+last_reviewed: 2026-07-03
 supersedes: []
 superseded_by: []
 ---
@@ -305,13 +305,13 @@ KDS 空间：`开发`
 | GPCF-LOOP-GCKF-P0-D182-001 | Loop Round GPCF-GCKF-P0-D182-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D182-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D183-001 | loop-round-GPCF-GCKF-P0-D183-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D183-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D184-001 | Loop Round GPCF-GCKF-P0-D184-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D184-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D185-001 | loop-round-GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D186-001 | loop-round-GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D185-001 | Loop Round GPCF-GCKF-P0-D185-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D186-001 | Loop Round GPCF-GCKF-P0-D186-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D187-001 | Loop Round GPCF-GCKF-P0-D187-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D187-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D188-001 | Loop Round GPCF-GCKF-P0-D188-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D188-001.md | GPCF | controlled |
 | GPCF-LOOP-GCKF-P0-D189-001 | Loop Round GPCF-GCKF-P0-D189-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md | GPCF | controlled |
 | GPCF-DOC-156556AE22 | GC-Knowledge Fabric P0-D19 Acceptance Packet Ledger Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D19-001.md | GPCF | controlled |
-| GPCF-LOOP-GCKF-P0-D190-001 | loop-round-GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | controlled |
+| GPCF-LOOP-GCKF-P0-D190-001 | Loop Round GPCF-GCKF-P0-D190-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md | GPCF | controlled |
 | GPCF-DOC-9F56DFB107 | GC-Knowledge Fabric P0-D2 目录编号与挂池规则 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D2-001.md | GPCF | controlled |
 | GPCF-DOC-DBB5A54AC3 | loop-round-GPCF-GCKF-P0-D20-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D20-001.md | GPCF | controlled |
 | GPCF-DOC-3317FFE9B5 | loop-round-GPCF-GCKF-P0-D21-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D21-001.md | GPCF | controlled |
@@ -758,6 +758,7 @@ KDS 空间：`开发`
 | GPCF-DOC-50039DF35A | LOOP Round GPCF KDS DKS-270 | docs/harness/loops/loop-round-GPCF-KDS-DKS-270.md | GPCF | controlled |
 | GPCF-DOC-B023346B78 | loop-round-GPCF-KDS-DKS-271 | docs/harness/loops/loop-round-GPCF-KDS-DKS-271.md | GPCF | controlled |
 | GPCF-DOC-A91E4D6B72 | LOOP Round GPCF-KDS-DKS-PROMPT-REFRESH-20260628 | docs/harness/loops/loop-round-GPCF-KDS-DKS-PROMPT-REFRESH-20260628.md | GPCF | controlled |
+| GPCF-DOC-GSCROLEVIEWLOOP001 | loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001 | docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md | GPCF | controlled |
 | GPCF-DOC-352145BD54 | GPCF-L4-001 Minimum Closed Loop Control Plane | docs/harness/loops/loop-round-GPCF-L4-001.md | GPCF | controlled |
 | GPCF-DOC-DE330E086C | GPCF-L4-002 MMC Production Resource Policy Evidence Intake | docs/harness/loops/loop-round-GPCF-L4-002.md | GPCF | controlled |
 | GPCF-DOC-B305BF004A | GPCF-L4-003 KDS 知识索引证据接收 | docs/harness/loops/loop-round-GPCF-L4-003.md | GPCF | controlled |

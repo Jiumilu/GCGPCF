@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-06-29
+生成日期：2026-07-03
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -60,6 +60,7 @@
 | GPCF-DOC-89872D1387 | GlobalCloud 绿色供应链分布式知识系统数据对象最小落库与 API 契约草案 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md | controlled |
 | GPCF-DOC-2A520469C6 | GlobalCloud 绿色供应链分布式知识系统权限与密级矩阵 | 03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统权限与密级矩阵.md | controlled |
 | GPCF-DOC-1C57589247 | GlobalCloud 绿色供应链合作单位接入与组织空间初始化清单 | 03-data-ai-knowledge/GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md | controlled |
+| GPCF-DOC-GSCROLEVIEWKDSENTITY20260701 | GlobalCloud 绿色供应链角色视图 KDS 实体产物 | 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md | controlled |
 | GPCF-DOC-62E56B6121 | GlobalCloud 葛化 DKS-052 填报包 dry-run 验收与人工确认队列视图 | 03-data-ai-knowledge/GlobalCloud葛化DKS052填报包dry-run验收与人工确认队列视图.md | controlled |
 | GPCF-DOC-49F4A296F5 | GlobalCloud 葛化 DKS-056 补证提醒发送授权包与回执字段模板 | 03-data-ai-knowledge/GlobalCloud葛化DKS056补证提醒发送授权包与回执字段模板.md | controlled |
 | GPCF-DOC-D2933575F5 | GlobalCloud 葛化 DKS-060 GFIS 三助手 NoWrite 评测与人工发送授权补证执行包 | 03-data-ai-knowledge/GlobalCloud葛化DKS060GFIS三助手NoWrite评测与人工发送授权补证执行包.md | controlled |
@@ -583,6 +584,7 @@
 | GPCF-DOC-B3ABDDC956 | Ontology/WAS 3 小时实施 P0 启动校准证据 | docs/harness/evidence/ontology-was-3h-p0-start-20260621.md | controlled |
 | GPCF-DOC-90C8663294 | Ontology/WAS 3 小时实施 P1 Source Record 准备度证据 | docs/harness/evidence/ontology-was-3h-p1-source-record-readiness-20260621.md | controlled |
 | GPCF-DOC-C21E66324C | Ontology/WAS 真实 Source Record Intake Package | docs/harness/evidence/ontology-was-real-source-record-intake-pack-20260621.md | controlled |
+| GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701 | GlobalCloud 项目群当前 Live 状态快照 | docs/harness/evidence/project_group_live_status_current.md | controlled |
 | GPCF-DOC-FACA370CCA | 会话主任务总结与声明控制边界 | docs/harness/evidence/session-main-task-summary-declaration-boundary-20260622.md | controlled |
 | GPCF-DOC-3A9B82D614 | Session Mainline Drift Watch 20260622 | docs/harness/evidence/session-mainline-drift-watch-20260622.md | controlled |
 | GPCF-DOC-SESSION-HANDOFF-REQUEST-GATE-20260622 | Session Mainline Handoff Request Gate 20260622 | docs/harness/evidence/session-mainline-handoff-request-gate-20260622.md | controlled |

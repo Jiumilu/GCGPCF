@@ -48,6 +48,7 @@ superseded_by: []
 |---|---|
 | `scope_delta` |  |
 | `authorization_delta` |  |
+| `communication_boundary` | DO NOT send optional commentary |
 | `remaining_risks` |  |
 | `blocked_items` |  |
 | `revalidation_required` |  |
@@ -63,6 +64,7 @@ superseded_by: []
 - commit、push、merge 或发布。
 - accepted、integrated 或 production_ready 状态升级。
 - 关闭其它会话结论或修改其它会话 owner 状态。
+- 发送 optional commentary 或用过程性叙述替代确认请求。
 
 ## 5. 交接判定
 

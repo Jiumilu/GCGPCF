@@ -24,6 +24,16 @@ LOOP 运行控制闭环为所有 Loop 工作的默认工程接口，适用于 L1
 
 旧五段式只能作为历史记录读取，不得替代运行控制闭环结构。任何未登记 run、stop、verify、recover、debug 的轮次，状态最高为 `partial`，不得升级 accepted、integrated 或 production_ready。
 
+## LOOP 输出克制边界
+
+所有自治级别 L1、L2、L3、L3.5、L4、L5 必须遵守：
+
+```text
+DO NOT send optional commentary
+```
+
+自治运行不得发送可选过程性 commentary。允许输出的内容仅限必要结论、阻塞项、授权或确认请求、执行结果、验证证据和下一步必要动作。该规则不授权隐藏阻塞、不授权跳过验证、不授权跳过人工确认；它只约束输出噪声和确认边界表达。
+
 ## 模式边界
 
 - L3：只允许受控开发态证据闭环。

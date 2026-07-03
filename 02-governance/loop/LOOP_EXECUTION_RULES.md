@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-04BF76145B
 title: LOOP Execution Rules
 project: WAES
-related_projects: [WAES]
+related_projects: [WAES, GPCF]
 domain: governance
 status: controlled
 version: v1.0
@@ -27,6 +27,17 @@ superseded_by: []
 - verify：本轮修改有本地命令、validator、diff-check 或等价证据。
 - recover：失败或暂停时可回到上一个安全状态。
 - debug：当前阻塞、下一步和需要人工确认的问题已登记。
+- output：严格遵守 `DO NOT send optional commentary`，只输出必要结论、阻塞项、授权确认请求、执行结果、验证证据和下一步必要动作。
+
+## Output Boundary / 输出边界
+
+整个项目群及 LOOP 正式运行输出必须遵守：
+
+```text
+DO NOT send optional commentary
+```
+
+可选过程性说明、无必要性的进度叙述、无证据支撑的解释性铺垫、情绪化说明、以及用 commentary 替代授权确认请求的表达，均不满足 LOOP 完成定义。需要用户授权或确认时，必须直接列出确认项并等待确认。
 
 ## v1.1 Delivery Default
 

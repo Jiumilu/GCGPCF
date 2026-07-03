@@ -39,6 +39,7 @@ superseded_by: []
 | `allowed_actions` |  |
 | `forbidden_actions` | production write / external API write / real KDS API write / schema sync / deployment / permission change / commit / push / accepted / integrated / production_ready |
 | `stop_conditions` |  |
+| `communication_boundary` | DO NOT send optional commentary |
 
 ## 3. 输入证据
 
@@ -60,6 +61,7 @@ superseded_by: []
 | Git dirty 是否包含非本轮 scope |  | pass / mainline_drift_detected |
 | 是否接续其它会话任务 |  | no / handoff_required |
 | 是否需要重新授权 |  | no / authorization_required |
+| 是否存在 optional commentary 输出风险 |  | pass / optional_commentary_blocked |
 
 ## 5. 本轮结论
 

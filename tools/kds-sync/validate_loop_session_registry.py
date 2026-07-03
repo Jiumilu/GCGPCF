@@ -33,7 +33,7 @@ def read(path: Path) -> str:
 def classify(round_id: str) -> str | None:
     if round_id.startswith(("GPCF-L4-GFIS", "GPCF-GFIS")):
         return "GFIS L4 repair and test sync"
-    if round_id.startswith(("GPCF-KDS-DKS", "GPCF-GCKF")):
+    if round_id.startswith(("GPCF-KDS-", "GPCF-GCKF")):
         return "KDS / DKS governance"
     if round_id.startswith(("GPCF-ONTOLOGY-WAS", "GPCF-WAS")):
         return "Ontology / WAS governance"

@@ -47,6 +47,17 @@ superseded_by: []
 | `stop_conditions` | 触发暂停或请求确认的条件 |
 | `owner_session` | 当前任务 owner 会话或主会话 |
 | `evidence_inputs` | 本轮必须读取的控制板、round、evidence、validator 或 Git 状态 |
+| `communication_boundary` | 必须包含 `DO NOT send optional commentary` |
+
+## 2.1 输出克制规则
+
+每次 LOOP 启动、恢复、继续、跨会话接续或多智能体集成前，必须确认通信边界：
+
+```text
+DO NOT send optional commentary
+```
+
+只允许输出必要结论、阻塞项、授权确认请求、执行结果、验证证据和下一步必要动作。若需要用户授权或确认，必须直接提出确认项；不得用可选 commentary、过程性叙述或非必要解释替代确认请求。
 
 ## 3. 跨会话交接
 
@@ -59,6 +70,7 @@ superseded_by: []
 - 新会话记录 `handoff_source`、`handoff_time`、`scope_delta`、`authorization_delta` 和 `remaining_risks`。
 - 若涉及其它项目仓、真实 KDS API、外部 API、提交、推送、部署或状态升级，必须重新请求授权。
 - 若没有完整交接证据，只能生成建议，不能执行写入。
+- 交接输出必须遵守 `DO NOT send optional commentary`。
 
 ## 4. 偏离判定
 
