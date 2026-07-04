@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-04T10:58:29.868536+08:00",
+  "generated_at": "2026-07-05T00:03:27.692321+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud Studio",
     "GlobalCloud KDS",
-    "GlobalCloud SOP"
+    "GlobalCloud SOP",
+    "GlobalCloud PKC"
   ],
   "observed_ahead": [
     "GlobalCloud Studio"
@@ -29,9 +30,9 @@
   "sensitive_repos": [
     "GlobalCloud Studio"
   ],
-  "pass_repo_count": 14,
+  "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-04T10:57:32.556286+08:00",
+  "previous_generated_at": "2026-07-04T22:12:30.908690+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -76,8 +77,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 110,
-      "ahead": 174,
+      "dirty_count": 107,
+      "ahead": 243,
       "behind": 0,
       "paths": [
         "ARCHITECTURE.md",
@@ -105,7 +106,6 @@
         "packages/client/src/i18n/locales/zh.ts",
         "packages/client/src/router/index.ts",
         "packages/client/src/stores/hermes/chat.ts",
-        "packages/client/src/views/hermes/ChatView.vue",
         "packages/desktop/README.md",
         "packages/desktop/build/icon.icns",
         "packages/desktop/build/icon.ico",
@@ -138,12 +138,10 @@
         "tests/client/account-settings-default-credential.test.ts",
         "tests/client/api.test.ts",
         "tests/client/chat-store-compression-state.test.ts",
-        "tests/client/chat-view-binding-errors.test.ts",
         "tests/client/chat-view-tab-title.test.ts",
         "tests/client/pwa-metadata.test.ts",
         "tests/client/router-default-credential-guard.test.ts",
         "tests/desktop/cli-shim.test.ts",
-        "tests/e2e/project-session-mvp.spec.ts",
         "tests/server/agent-bridge-manager.test.ts",
         "tests/server/coding-agents-launch.test.ts",
         "tests/server/handle-coding-agent-run.test.ts",
@@ -227,11 +225,14 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 12,
+      "dirty_count": 15,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "_governance/graph-health/kds-graph-health-current.json",
+        "_governance/graph-health/kds-graph-health-current.md",
         "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260704-073205/report.md",
+        "_governance/kds-daily-reports/kds-daily-2026-07-04.md",
         "_governance/sync-runs/feishu-xiaog-closure-20260704-071202/local-evidence.json",
         "_governance/sync-runs/feishu-xiaog-closure-20260704-071202/macmini-evidence.json",
         "_governance/sync-runs/feishu-xiaog-closure-20260704-071202/report.md",
@@ -270,10 +271,47 @@
       "sensitive_paths": []
     },
     "GlobalCloud PKC": {
-      "dirty_count": 0,
+      "dirty_count": 36,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "docs/harness/evidence/evidence-index.md",
+        "docs/harness/loop-state.md",
+        "docs/harness/loops/loop-round-PKC-L4-005.md",
+        "node_modules/.pnpm-workspace-state-v1.json",
+        "package.json",
+        "src/app/components/auth/useAuth.ts",
+        "src/app/pages/DoctorPage.tsx",
+        "src/app/pages/HomePage.tsx",
+        "src/app/pages/SettingsPage.tsx",
+        "src/app/routes.tsx",
+        "src/app/services/index.ts",
+        "src/lib/apiClient.ts",
+        "src/test/pages.test.tsx",
+        "scripts/smoke_pkc_runtime.py",
+        "scripts/validate_pkc_dependency_health.py",
+        "scripts/validate_pkc_doctor.py",
+        "scripts/validate_pkc_full_verification.py",
+        "scripts/validate_pkc_home_dashboard.py",
+        "scripts/validate_pkc_offline_queue_ui.py",
+        "scripts/validate_pkc_runtime_smoke.py",
+        "scripts/validate_pkc_settings_auth.py",
+        "scripts/validate_pkc_workflow_evidence.py",
+        "scripts/verify_pkc_full.py",
+        "src/app/pages/LoginPage.tsx",
+        "src/app/services/dependencyHealthService.ts",
+        "src/app/services/doctorService.ts",
+        "src/app/services/homeService.ts",
+        "src/app/services/offlineQueueService.ts",
+        "src/app/services/settingsService.ts",
+        "src/app/services/workflowEvidenceService.ts",
+        "src/test/dependency-health-service.test.ts",
+        "src/test/doctor-service.test.ts",
+        "src/test/home-service.test.ts",
+        "src/test/offline-queue-service.test.ts",
+        "src/test/settings-service.test.ts",
+        "src/test/workflow-evidence-service.test.ts"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XGD": {
