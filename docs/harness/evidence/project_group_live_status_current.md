@@ -18,28 +18,28 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-07-04 00:07:40 +0800
+generated_at: 2026-07-04 10:54:16 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-07-04T00:07:40.701693+08:00`
+- generated_at: `2026-07-04T10:54:16.832788+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `13`
+- pass_repo_count: `14`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS, GlobalCloud SOP`
+- observed_dirty: `GlobalCloud Studio, GlobalCloud KDS, GlobalCloud SOP`
 - observed_ahead: `GlobalCloud Studio`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud SOP, GlobalCloud Studio, GlobalCoud GPCF`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud SOP, GlobalCloud Studio`
 - stable_ahead: `GlobalCloud Studio`
-- volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCloud Studio, GlobalCoud GPCF`
-- review_boundary: `GlobalCloud KDS, GlobalCloud SOP, GlobalCloud Studio, GlobalCoud GPCF`
+- volatile_dirty: `none`
+- sensitive_repos: `GlobalCloud Studio`
+- review_boundary: `GlobalCloud KDS, GlobalCloud SOP, GlobalCloud Studio`
 
 ## Repo details
 
@@ -51,12 +51,12 @@ generated_at: 2026-07-04 00:07:40 +0800
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 110 | 144 | 0 | `.tmp/lr017-browser-home/.token, .tmp/lr017-browser-prod-home/.token, tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
-| `GlobalCoud GPCF` | 339 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud Studio` | 107 | 174 | 0 | `.tmp/lr017-browser-home/.token, .tmp/lr017-browser-prod-home/.token, tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
+| `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 16 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 12 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 1 | 0 | 0 | `none` |
