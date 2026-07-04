@@ -40,6 +40,24 @@ FRESHNESS_HOURS = 12
 
 DEFAULT_JSON = ROOT / "docs/harness/evidence/project_group_live_status_current.json"
 DEFAULT_MD = ROOT / "docs/harness/evidence/project_group_live_status_current.md"
+SELF_GENERATED_STATUS_PATHS = {
+    "docs/harness/evidence/project_group_live_status_current.json",
+    "docs/harness/evidence/project_group_live_status_current.md",
+}
+SEMANTIC_KEYS = [
+    "freshness_ok",
+    "project_count",
+    "observed_dirty",
+    "observed_ahead",
+    "stable_dirty",
+    "stable_ahead",
+    "volatile_dirty",
+    "review_boundary",
+    "sensitive_repos",
+    "pass_repo_count",
+    "bootstrap_window",
+    "dirty_details",
+]
 
 SENSITIVE_PATTERNS = [
     re.compile(r"(^|/)\.env(\.|$)"),
@@ -85,6 +103,19 @@ def parse_paths(lines: list[str]) -> list[str]:
     return paths
 
 
+def parse_status_path(line: str) -> str:
+    path = line[3:].strip()
+    if " -> " in path:
+        path = path.split(" -> ", 1)[1]
+    return path
+
+
+def filter_self_generated_status(repo_name: str, lines: list[str]) -> list[str]:
+    if repo_name != "GlobalCoud GPCF":
+        return lines
+    return [line for line in lines if parse_status_path(line) not in SELF_GENERATED_STATUS_PATHS]
+
+
 def is_sensitive_path(path: str) -> bool:
     return any(pattern.search(path) for pattern in SENSITIVE_PATTERNS)
 
@@ -96,6 +127,21 @@ def load_previous(path: Path) -> dict:
         return json.loads(path.read_text(encoding="utf-8"))
     except Exception:
         return {}
+
+
+def previous_snapshot_is_fresh(previous: dict) -> bool:
+    generated_at_raw = str(previous.get("generated_at") or "")
+    if not generated_at_raw:
+        return False
+    try:
+        generated_at = datetime.fromisoformat(generated_at_raw)
+    except ValueError:
+        return False
+    return datetime.now(TZ) - generated_at <= timedelta(hours=FRESHNESS_HOURS)
+
+
+def semantically_same(previous: dict, snapshot: dict) -> bool:
+    return all(previous.get(key) == snapshot.get(key) for key in SEMANTIC_KEYS)
 
 
 def stable_from_previous(current: list[str], previous: list[str], bootstrap: bool) -> list[str]:
@@ -130,7 +176,7 @@ def main() -> int:
 
     for repo_name in EXPECTED_REPOS:
         repo = PROJECT_ROOT / repo_name
-        status_lines = git_status(repo)
+        status_lines = filter_self_generated_status(repo_name, git_status(repo))
         ahead, behind = git_ahead_behind(repo)
         paths = parse_paths(status_lines)
         sensitive = sorted({path for path in paths if is_sensitive_path(path)})
@@ -174,6 +220,10 @@ def main() -> int:
         "previous_generated_at": previous.get("generated_at"),
         "dirty_details": dirty_details,
     }
+    if previous and previous_snapshot_is_fresh(previous) and semantically_same(previous, snapshot):
+        snapshot["generated_at"] = previous["generated_at"]
+        snapshot["previous_generated_at"] = previous.get("previous_generated_at")
+        generated_at = datetime.fromisoformat(str(snapshot["generated_at"]))
 
     json_out.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

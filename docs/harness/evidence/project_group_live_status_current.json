@@ -1,11 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-04T10:54:16.832788+08:00",
+  "generated_at": "2026-07-04T10:57:32.556286+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud Studio",
+    "GlobalCoud GPCF",
     "GlobalCloud KDS",
     "GlobalCloud SOP"
   ],
@@ -15,23 +16,27 @@
   "stable_dirty": [
     "GlobalCloud KDS",
     "GlobalCloud SOP",
-    "GlobalCloud Studio"
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF"
   ],
   "stable_ahead": [
     "GlobalCloud Studio"
   ],
-  "volatile_dirty": [],
+  "volatile_dirty": [
+    "GlobalCoud GPCF"
+  ],
   "review_boundary": [
     "GlobalCloud KDS",
     "GlobalCloud SOP",
-    "GlobalCloud Studio"
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF"
   ],
   "sensitive_repos": [
     "GlobalCloud Studio"
   ],
-  "pass_repo_count": 14,
+  "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-04T00:07:40.701693+08:00",
+  "previous_generated_at": "2026-07-04T10:55:53.344206+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -76,7 +81,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 107,
+      "dirty_count": 110,
       "ahead": 174,
       "behind": 0,
       "paths": [
@@ -105,6 +110,7 @@
         "packages/client/src/i18n/locales/zh.ts",
         "packages/client/src/router/index.ts",
         "packages/client/src/stores/hermes/chat.ts",
+        "packages/client/src/views/hermes/ChatView.vue",
         "packages/desktop/README.md",
         "packages/desktop/build/icon.icns",
         "packages/desktop/build/icon.ico",
@@ -137,10 +143,12 @@
         "tests/client/account-settings-default-credential.test.ts",
         "tests/client/api.test.ts",
         "tests/client/chat-store-compression-state.test.ts",
+        "tests/client/chat-view-binding-errors.test.ts",
         "tests/client/chat-view-tab-title.test.ts",
         "tests/client/pwa-metadata.test.ts",
         "tests/client/router-default-credential-guard.test.ts",
         "tests/desktop/cli-shim.test.ts",
+        "tests/e2e/project-session-mvp.spec.ts",
         "tests/server/agent-bridge-manager.test.ts",
         "tests/server/coding-agents-launch.test.ts",
         "tests/server/handle-coding-agent-run.test.ts",
@@ -196,10 +204,13 @@
       ]
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 0,
+      "dirty_count": 2,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "tools/kds-sync/build_project_group_live_status_current.py",
+        "tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {

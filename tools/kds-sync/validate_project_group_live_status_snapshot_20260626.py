@@ -42,6 +42,10 @@ EXPECTED_REPOS = [
 ]
 
 VOLATILE_DIRTY_ALLOWLIST = ["GlobalCoud GPCF"]
+SELF_GENERATED_STATUS_PATHS = {
+    "docs/harness/evidence/project_group_live_status_current.json",
+    "docs/harness/evidence/project_group_live_status_current.md",
+}
 
 CORE_DOC_TOKENS = [
     "GPCF-LIVE-STATUS-SNAPSHOT-20260626-001",
@@ -142,6 +146,19 @@ def git_status(repo: Path) -> list[str]:
     return [line for line in result.stdout.splitlines() if line.strip()]
 
 
+def parse_status_path(line: str) -> str:
+    path = line[3:].strip()
+    if " -> " in path:
+        path = path.split(" -> ", 1)[1]
+    return path
+
+
+def filter_self_generated_status(repo_name: str, lines: list[str]) -> list[str]:
+    if repo_name != "GlobalCoud GPCF":
+        return lines
+    return [line for line in lines if parse_status_path(line) not in SELF_GENERATED_STATUS_PATHS]
+
+
 def git_ahead_behind(repo: Path) -> tuple[int, int]:
     result = subprocess.run(
         ["git", "rev-list", "--left-right", "--count", "@{upstream}...HEAD"],
@@ -211,7 +228,7 @@ def main() -> int:
             failures.append(f"missing repo: {repo_name}")
             continue
         try:
-            lines = git_status(repo)
+            lines = filter_self_generated_status(repo_name, git_status(repo))
             ahead, behind = git_ahead_behind(repo)
         except subprocess.CalledProcessError as exc:
             failures.append(f"git scan failed for {repo_name}: {exc.stderr.strip()}")
