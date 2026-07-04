@@ -1,12 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-04T10:57:32.556286+08:00",
+  "generated_at": "2026-07-04T10:58:29.868536+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud Studio",
-    "GlobalCoud GPCF",
     "GlobalCloud KDS",
     "GlobalCloud SOP"
   ],
@@ -16,27 +15,23 @@
   "stable_dirty": [
     "GlobalCloud KDS",
     "GlobalCloud SOP",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud Studio"
   ],
   "stable_ahead": [
     "GlobalCloud Studio"
   ],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
-  ],
+  "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud KDS",
     "GlobalCloud SOP",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud Studio"
   ],
   "sensitive_repos": [
     "GlobalCloud Studio"
   ],
-  "pass_repo_count": 13,
+  "pass_repo_count": 14,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-04T10:55:53.344206+08:00",
+  "previous_generated_at": "2026-07-04T10:57:32.556286+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -204,13 +199,10 @@
       ]
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 2,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "tools/kds-sync/build_project_group_live_status_current.py",
-        "tools/kds-sync/validate_project_group_live_status_snapshot_20260626.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
