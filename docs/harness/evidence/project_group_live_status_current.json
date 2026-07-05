@@ -1,11 +1,10 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T08:36:57.545968+08:00",
+  "generated_at": "2026-07-05T08:38:14.875159+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
-    "GlobalCloud Brain",
     "GlobalCloud Studio",
     "GlobalCloud KDS"
   ],
@@ -14,7 +13,6 @@
     "GlobalCloud PKC"
   ],
   "stable_dirty": [
-    "GlobalCloud Brain",
     "GlobalCloud KDS",
     "GlobalCloud Studio"
   ],
@@ -24,16 +22,15 @@
   ],
   "volatile_dirty": [],
   "review_boundary": [
-    "GlobalCloud Brain",
     "GlobalCloud KDS",
     "GlobalCloud Studio"
   ],
   "sensitive_repos": [
     "GlobalCloud Studio"
   ],
-  "pass_repo_count": 13,
+  "pass_repo_count": 14,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-05T08:35:59.084196+08:00",
+  "previous_generated_at": "2026-07-05T08:36:57.545968+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -43,24 +40,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud Brain": {
-      "dirty_count": 13,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        ".github/workflows/brain-p2-static-review.yml",
-        "docs/harness/README.md",
-        "docs/harness/brain-p2-acceptance-review-packet.md",
-        "docs/harness/brain-p2-componentization-candidates.md",
-        "docs/harness/brain-p2-remote-review-path.md",
-        "docs/harness/brain-p2-review-ci-figma-acceptance-plan.md",
-        "docs/harness/evidence/brain-p2-ci-workflow-20260705.json",
-        "docs/harness/evidence/evidence-index.md",
-        "docs/harness/evidence/openspec-archive-20260621.json",
-        "package.json",
-        "docs/harness/evidence/brain-p2-review-package-20260705.json",
-        "docs/harness/figma-componentization/brain-p2-componentization-candidates.json",
-        "scripts/validate_brain_p2_review_package.mjs"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
