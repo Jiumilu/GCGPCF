@@ -1,13 +1,12 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-05T08:35:59.084196+08:00",
+  "generated_at": "2026-07-05T08:36:57.545968+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud Brain",
     "GlobalCloud Studio",
-    "GlobalCoud GPCF",
     "GlobalCloud KDS"
   ],
   "observed_ahead": [
@@ -17,28 +16,24 @@
   "stable_dirty": [
     "GlobalCloud Brain",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud Studio"
   ],
   "stable_ahead": [
     "GlobalCloud PKC",
     "GlobalCloud Studio"
   ],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
-  ],
+  "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud Brain",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud Studio"
   ],
   "sensitive_repos": [
     "GlobalCloud Studio"
   ],
-  "pass_repo_count": 12,
+  "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-05T08:25:42.835820+08:00",
+  "previous_generated_at": "2026-07-05T08:35:59.084196+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -97,14 +92,13 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 112,
-      "ahead": 271,
+      "dirty_count": 107,
+      "ahead": 272,
       "behind": 0,
       "paths": [
         "ARCHITECTURE.md",
         "IMPLEMENTATION_PROMPT.md",
         "bin/hermes-web-ui-mcp.mjs",
-        "docs/harness/evidence/studio-loop-history-index.md",
         "docs/openapi.json",
         "packages/client/index.html",
         "packages/client/public/coding-agents/hermes.png",
@@ -127,7 +121,6 @@
         "packages/client/src/i18n/locales/zh.ts",
         "packages/client/src/router/index.ts",
         "packages/client/src/stores/hermes/chat.ts",
-        "packages/client/src/views/hermes/ChatView.vue",
         "packages/desktop/README.md",
         "packages/desktop/build/icon.icns",
         "packages/desktop/build/icon.ico",
@@ -160,12 +153,10 @@
         "tests/client/account-settings-default-credential.test.ts",
         "tests/client/api.test.ts",
         "tests/client/chat-store-compression-state.test.ts",
-        "tests/client/chat-view-binding-errors.test.ts",
         "tests/client/chat-view-tab-title.test.ts",
         "tests/client/pwa-metadata.test.ts",
         "tests/client/router-default-credential-guard.test.ts",
         "tests/desktop/cli-shim.test.ts",
-        "tests/e2e/project-session-mvp.spec.ts",
         "tests/server/agent-bridge-manager.test.ts",
         "tests/server/coding-agents-launch.test.ts",
         "tests/server/handle-coding-agent-run.test.ts",
@@ -207,7 +198,6 @@
         ".tmp/studio-original-interface-package/images/07-audit-controlled-version-management-center.png",
         ".tmp/xiaoji-04b-preview.png",
         "docs/chat-chain-changes/2026-07-01-hide-codex-gpt55-autocompaction-notice.md",
-        "docs/harness/loops/loop-round-GPCF-STUDIO-LR-151.md",
         "docs/studio-calm-os-interface-redesign.md",
         "docs/studio-final-interface-scheme.md",
         "docs/studio-interface-engineering-plan.md",
@@ -222,32 +212,10 @@
       ]
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 21,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        ".codex/skills/globalcloud-ui-quality-gate/SKILL.md",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/02-GPC/04-ui-delivery/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244UI\\350\\256\\276\\350\\256\\241\\345\\274\\200\\345\\217\\221\\346\\262\\273\\347\\220\\206\\344\\270\\216\\350\\257\\204\\344\\274\\260\\347\\273\\237\\344\\270\\200\\350\\247\\204\\350\\214\\203.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/SKILL.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_EXECUTION_RULES.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/README.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/document-deprecation-register.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"",
-        ".kds/local-mirror-ledger.jsonl",
-        "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
-        "02-governance/loop/LOOP_EXECUTION_RULES.md",
-        "02-governance/loop/README.md",
-        "\"04-ui-delivery/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244UI\\350\\256\\276\\350\\256\\241\\345\\274\\200\\345\\217\\221\\346\\262\\273\\347\\220\\206\\344\\270\\216\\350\\257\\204\\344\\274\\260\\347\\273\\237\\344\\270\\200\\350\\247\\204\\350\\214\\203.md\"",
-        "09-status/document-deprecation-register.md",
-        "09-status/globalcloud-document-control-register.md",
-        "09-status/kds-development-space-sync-register.md",
-        "tools/kds-sync/loop_document_gate.py",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md\"",
-        "02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md",
-        "tools/kds-sync/validate_loop_ui_product_first_control.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
