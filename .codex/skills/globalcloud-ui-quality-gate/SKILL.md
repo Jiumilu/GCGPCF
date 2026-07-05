@@ -19,12 +19,14 @@ description: GlobalCloud 项目群 UI 质量门禁技能。用于评估、设计
 - 不自动标记 `complete`、`accepted` 或 `integrated`。本技能输出最高是 `ui_evidence_candidate`。
 - 产品界面优先考虑任务效率、密度、可读性、状态反馈和证据入口；品牌/营销页才使用更强视觉实验。
 - 严格遵守 `DO NOT send optional commentary`；UI gate 输出只保留必要结论、阻塞项、确认请求、整改证据和验证结果。
+- 必须遵守 `LOOP_UI_PRODUCT_FIRST_CONTROL.md`：UI evidence is not UI structure；治理证据可追溯但不得默认主导产品界面；技术细节默认进入调试或治理详情。
 
 ## Required Local Context
 
 Before assessing or changing UI, read the relevant local standards when present:
 
 - `AGENTS.md`
+- `02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md`
 - `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`
 - `04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md`
 - `04-ui-delivery/GlobalCloud绿色供应链体系统一体验骨架规范.md`
@@ -41,6 +43,7 @@ If working inside a project repo rather than GPCF, also read its local `AGENTS.m
 2. **Select tools.** Read `references/tool-routing.md` and use only the minimum set needed. `@product-design` is the mandatory design-brief and three-option layer for overall interface, page-class, key-component, and structural redesign work; Impeccable is the product UI main engine when available; ui-ux-pro-max is the design-system source; accessibility and Playwright/browser provide verification.
 3. **Create or inspect the design system.** For new or inconsistent UI systems, use `ui-ux-pro-max` to derive a GlobalCloud design system. Professional workbench surfaces must first map to the existing `WAES` UI framework before project-level optimization. For existing code, preserve committed tokens unless they violate project-group rules.
 4. **Audit against gates.** Read `references/quality-checklist.md`. Score every gate with evidence: `pass`, `partial`, `fail`, or `not_applicable`.
+   For Studio or product-workbench surfaces, also score `product_first_ui_gate`, `evidence_overexposure_gate`, `debug_details_visibility`, `task_flow_e2e_status`, and `audit_traceability_gate`.
 5. **Implement only when asked.** If the user asked for changes, make surgical UI edits in the target repo. Do not refactor unrelated components.
 6. **Verify with real evidence.** Use browser screenshots, responsive checks, keyboard/focus checks, automated tests, or Playwright where available. If a check cannot run, mark it `not_verified`.
 7. **Report status safely.** Read `references/evidence-output.md` and output a UI gate report. Never claim project status completion from UI evidence alone.

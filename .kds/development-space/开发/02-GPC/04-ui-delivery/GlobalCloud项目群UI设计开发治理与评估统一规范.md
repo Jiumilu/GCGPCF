@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C1E59A4D2
 title: GlobalCloud项目群UI设计开发治理与评估统一规范
 project: GPC
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAES, KDS, GPCF, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -61,7 +61,7 @@ superseded_by: []
 1. 颜色克制，状态区分清楚。
 2. 信息密度高但可读。
 3. 页面结构稳定，可预测。
-4. 证据、状态、阻断、来源必须始终可见。
+4. 关键状态、阻断和来源必须可见；详细治理证据必须可追溯，但不得默认主导产品界面。
 5. 动效只服务于状态反馈、切换或定位，不做装饰性炫技。
 
 只有品牌页、宣传页、展示页、演示页才允许切换到更高实验性的视觉寄存器。
@@ -164,6 +164,32 @@ Loop 轮次出现以下任一情况，必须执行 UI Quality Gate：
 3. UI gate 为 `ui_rework_required`，本轮状态上限为 `rework_required`。
 4. UI gate 为 `ui_partial`，本轮状态上限仍为 `partial`。
 5. UI gate 为 `ui_ready` 也只代表 `ui_evidence_candidate`，不等于业务完成。
+
+### 6.4 UI 产品优先控制
+
+涉及 Studio、工作台、AI 会话工作区、KDS 对象工作区或其它产品界面的 LOOP 轮次，必须遵守 `LOOP_UI_PRODUCT_FIRST_CONTROL.md`。
+
+最高规则：
+
+```text
+LOOP success must not reduce product usability.
+UI evidence is not UI structure.
+Governance evidence must be traceable, not dominant.
+Debug details must not become default product copy.
+A test-visible element is not automatically user-visible.
+```
+
+UI Quality Gate 需要额外判断：
+
+| Gate | 要求 |
+|---|---|
+| `product_first_ui_gate` | 本轮是否推进用户可识别任务流 |
+| `evidence_overexposure_gate` | 是否避免默认界面继续堆叠治理证据 |
+| `debug_details_visibility` | 技术细节是否默认隐藏并进入调试或治理详情 |
+| `task_flow_e2e_status` | E2E 是否验证用户任务流，而不是只验证治理条存在 |
+| `audit_traceability_gate` | 审计、权限、回执、边界是否仍可追溯 |
+
+任一核心 gate 失败时，UI gate 不得高于 `ui_rework_required`。
 
 ## 7. 评估基线
 

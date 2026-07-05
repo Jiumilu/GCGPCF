@@ -92,6 +92,7 @@ GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 | L2 自我纠错 | `LOOP_ENGINEERING_SELF_CORRECTION.md` | 定义主体错位、弱证据和失败优先的防复发规则 | 是 |
 | L2 会话主线 | `LOOP_SESSION_MAINLINE_CONTROL_PACK.md` | 定义会话主线声明、跨会话 handoff、防偏离和启动/恢复前置门禁 | 是 |
 | L2 治理视图 | `LOOP_GOVERNANCE_DASHBOARD.md` | 聚合质量、效率、自我纠错、边界和状态上限信号 | 是 |
+| L2 UI 产品优先控制 | `LOOP_UI_PRODUCT_FIRST_CONTROL.md` | 控制 UI evidence 反噬产品界面，约束 Studio 等项目继续快速开发时不得偏离用户任务流 | 是 |
 | L2 专项实施链路 | `GlobalCloud 项目群实施方案.md`、`04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`、`04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md` | 定义项目群总实施主线与界面工程/UI/工作台专项实施链路 | 是 |
 | L3 状态记录 | `docs/harness/loop-state.md` | 记录项目群轮次状态和最近事实 | 是 |
 | L3 轮次证据 | `docs/harness/loops/loop-round-*.md` | 记录单轮输入、动作、输出、检查和反馈 | 是 |
@@ -224,6 +225,18 @@ LOOP 工程实施方案必须纳入技能、工具和方法。能力不再只作
 - `Selected option`
 - `WAES baseline reuse`
 - `UI gate status`
+
+UI 轮次还必须遵守 [LOOP UI Product First Control](./LOOP_UI_PRODUCT_FIRST_CONTROL.md)：
+
+```text
+LOOP success must not reduce product usability.
+UI evidence is not UI structure.
+Governance evidence must be traceable, not dominant.
+Debug details must not become default product copy.
+A test-visible element is not automatically user-visible.
+```
+
+Studio 当前目标开发可继续快速推进，但必须受 `product_first_ui_gate`、`evidence_overexposure_gate`、`debug_details_visibility`、`task_flow_e2e_status` 和 `audit_traceability_gate` 约束。GPCF 只控制 LOOP 防偏和项目群 UI 门禁，不隐式接管 Studio 本地开发会话。
 
 ## 8. 版本基线
 

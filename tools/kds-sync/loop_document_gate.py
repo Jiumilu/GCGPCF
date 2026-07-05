@@ -282,6 +282,7 @@ def main() -> int:
         "loop_capability_registry": run([sys.executable, "tools/kds-sync/validate_loop_capability_registry.py"]),
         "codegraph_loop_schema": run([sys.executable, "tools/kds-sync/validate_codegraph_loop_schema.py"]),
         "loop_ui_quality_baseline": run([sys.executable, "tools/kds-sync/validate_loop_ui_quality_baseline.py"]),
+        "loop_ui_product_first_control": run([sys.executable, "tools/kds-sync/validate_loop_ui_product_first_control.py"]),
         "loop_session_mainline_control": run([sys.executable, "tools/kds-sync/validate_loop_session_mainline_control.py"]),
         "current_session_mainline_declaration": run([sys.executable, "tools/kds-sync/validate_current_session_mainline_declaration.py"]),
         "loop_session_registry": run([sys.executable, "tools/kds-sync/validate_loop_session_registry.py"]),

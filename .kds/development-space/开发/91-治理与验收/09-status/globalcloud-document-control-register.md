@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-05
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-07-03
+日期：2026-07-05
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -31,7 +31,7 @@ superseded_by: []
 | GFIS | 01-GFIS | 114 | 114 | 已建空间 |
 | GPC | 02-GPC | 51 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
-| WAES | 04-WAES | 163 | 22 | 已建空间 |
+| WAES | 04-WAES | 164 | 22 | 已建空间 |
 | KDS | 05-KDS | 719 | 719 | 已建空间 |
 | Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 7 | 7 | 已建空间 |
@@ -48,7 +48,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 107 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 108 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -110,7 +110,7 @@ superseded_by: []
 | GPCF-DOC-A4D6B9E217 | globalcloud-project-group-git-clean | .codex/skills/globalcloud-project-group-git-clean/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-project-group-git-clean/README.md |
 | GPCF-DOC-7F9C2E9A61 | GlobalCloud Project Group Git Clean | .codex/skills/globalcloud-project-group-git-clean/SKILL.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-project-group-git-clean/SKILL.md |
 | GPCF-DOC-A1B2C3D4E5 | globalcloud-ui-quality-gate | .codex/skills/globalcloud-ui-quality-gate/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/README.md |
-| GPCF-DOC-3E7F2A1B9C | GlobalCloud UI Quality Gate | .codex/skills/globalcloud-ui-quality-gate/SKILL.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/SKILL.md |
+| GPCF-DOC-3E7F2A1B9C | GlobalCloud UI Quality Gate | .codex/skills/globalcloud-ui-quality-gate/SKILL.md | GPCF | GPC, WAES, KDS, GPCF, Studio | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/SKILL.md |
 | GPCF-DOC-F6E5D4C3B2 | references | .codex/skills/globalcloud-ui-quality-gate/references/README.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/README.md |
 | GPCF-DOC-9A8B7C6D5E | Evidence Output | .codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md | GPCF | GPC, WAES, KDS, GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/evidence-output.md |
 | GPCF-DOC-1F2E3D4C5B | Quality Checklist | .codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md | GPCF | GPCF | operational-skill | operational_controlled | 开发/12-GPCF/.codex/skills/globalcloud-ui-quality-gate/references/quality-checklist.md |
@@ -390,7 +390,7 @@ superseded_by: []
 | GPCF-DOC-4BA3D31617 | Loop Engineering 五方向实施规范 | 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md |
 | GPCF-DOC-6E7DCE4A91 | LOOP 工程体系整体实施规范 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | WAES | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | GFIS, GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md |
-| GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | WAES, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
+| GPCF-DOC-04BF76145B | LOOP Execution Rules | 02-governance/loop/LOOP_EXECUTION_RULES.md | WAES | WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md |
 | GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11 | LOOP Gate Classification | 02-governance/loop/LOOP_GATE_CLASSIFICATION.md | WAES | GFIS, WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GATE_CLASSIFICATION.md |
 | GPCF-DOC-FE20CDD358 | Loop Governance Dashboard | 02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_DASHBOARD.md |
 | GPCF-DOC-07906C7E54 | LOOP Governance Efficiency Debt Backlog | 02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md | WAES | GFIS, WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md |
@@ -406,6 +406,7 @@ superseded_by: []
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md |
 | GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | GFIS, GPC, WAES, KDS, XiaoG, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/README.md |
 | GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAES | GFIS, GPC, WAES, KDS, PKC, XiaoG, MMC, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md |
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/README.md |
@@ -527,7 +528,7 @@ superseded_by: []
 | GPCF-DOC-3D439D777F | GlobalCloud绿色供应链体系高风险模块样板页清单 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md | GPC | GPC | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块样板页清单.md |
 | GPCF-DOC-6008375BA7 | GlobalCloud绿色供应链体系高风险模块界面收口任务分解表 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md | GPC | GPC | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口任务分解表.md |
 | GPCF-DOC-505DFF5C49 | GlobalCloud 绿色供应链体系高风险模块界面收口计划 | 04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md | GPC | GPC, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系高风险模块界面收口计划.md |
-| GPCF-DOC-7C1E59A4D2 | GlobalCloud项目群UI设计开发治理与评估统一规范 | 04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md | GPC | GPC, WAES, GPCF | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md |
+| GPCF-DOC-7C1E59A4D2 | GlobalCloud项目群UI设计开发治理与评估统一规范 | 04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md | GPC | GPC, WAES, KDS, GPCF, Studio | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md |
 | GPCF-DOC-4E2A91B7C6 | GlobalCloud项目群界面工程整体实施方案 | 04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md | GPC | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md |
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | GPC | GPC, WAES, KDS, GPCF, Studio | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/README.md |
 | GPCF-DOC-7E5C41A9B3 | Studio操作工作台验证方案 | 04-ui-delivery/Studio操作工作台验证方案.md | GPCF | PVAOS, WAES, PKC, XGD, GPCF, Studio | ui-delivery | controlled | 开发/12-GPCF/04-ui-delivery/Studio操作工作台验证方案.md |

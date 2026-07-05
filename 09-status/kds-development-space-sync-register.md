@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-05
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-07-03
+日期：2026-07-05
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -35,7 +35,7 @@ superseded_by: []
 | GFIS | 01-GFIS | 114 | 114 | 已建空间 |
 | GPC | 02-GPC | 51 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
-| WAES | 04-WAES | 163 | 22 | 已建空间 |
+| WAES | 04-WAES | 164 | 22 | 已建空间 |
 | KDS | 05-KDS | 719 | 719 | 已建空间 |
 | Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 7 | 7 | 已建空间 |
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 107 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 108 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -410,6 +410,7 @@ superseded_by: []
 | GPCF-DOC-8D5147AC17 | 02-governance/loop/LOOP_RISK_GATE.md | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md | bidirectional | pending_api |
 | GPCF-DOC-6C7A1E9D2B | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | bidirectional | pending_api |
 | GPCF-DOC-4E83A9C210 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | bidirectional | pending_api |
 | GPCF-DOC-0AD0A529B5 | 02-governance/loop/README.md | 开发/91-治理与验收/02-governance/loop/README.md | bidirectional | pending_api |
 | GPCF-DOC-31D8E9632A | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | 开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | bidirectional | pending_api |
 | GPCF-DOC-FA5685423F | 02-governance/loop/studio/README.md | 开发/91-治理与验收/02-governance/loop/studio/README.md | bidirectional | pending_api |

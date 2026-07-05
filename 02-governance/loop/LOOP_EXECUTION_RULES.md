@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-04BF76145B
 title: LOOP Execution Rules
 project: WAES
-related_projects: [WAES, GPCF]
+related_projects: [WAES, KDS, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
@@ -56,6 +56,30 @@ Governance Loop 才强制展开：
 ```text
 run / stop / verify / recover / debug
 ```
+
+## v1.2 UI Product First Control
+
+涉及 Studio、工作台、AI 会话工作区、KDS 对象工作区或其它产品界面的 LOOP 轮次，必须优先保护用户任务流：
+
+```text
+LOOP success must not reduce product usability.
+UI evidence is not UI structure.
+Governance evidence must be traceable, not dominant.
+Debug details must not become default product copy.
+A test-visible element is not automatically user-visible.
+```
+
+Studio 可继续快速开发当前目标，但每轮必须明确：
+
+```text
+product_first_ui_gate
+evidence_overexposure_gate
+debug_details_visibility
+task_flow_e2e_status
+audit_traceability_gate
+```
+
+若新增常驻 `receipt`、`preflight`、`dry-run`、`boundary`、`readiness`、`controlled-write` 条，或把 `createObject`、`writeToKds`、`idempotency`、`rollback`、`package hash` 放到默认主界面，本轮 UI gate 必须判为 `ui_rework_required`。E2E 不得只以治理条存在作为主要验收，必须验证用户任务流完成。
 
 边界：
 
