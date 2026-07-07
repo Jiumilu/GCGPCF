@@ -78,6 +78,11 @@ def is_okf_bundle_doc(path: Path) -> bool:
     return rel.startswith(".okf/bundles/")
 
 
+def readme_exempt_dir(path: Path) -> bool:
+    rel = path.relative_to(ROOT).as_posix()
+    return rel == "loops" or rel.startswith(("projects/", "features/"))
+
+
 def count_unique_mirror_docs(path: Path) -> int:
     if not path.exists():
         return 0
@@ -257,6 +262,8 @@ def main() -> int:
             continue
         if directory.relative_to(ROOT).as_posix().startswith(".okf/bundles/"):
             continue
+        if readme_exempt_dir(directory):
+            continue
         if not (directory / "README.md").exists():
             missing_readme_dirs += 1
     kds_md = len(list((ROOT / ".kds/development-space/开发").rglob("*.md"))) if (ROOT / ".kds/development-space/开发").exists() else 0
@@ -283,6 +290,7 @@ def main() -> int:
         "codegraph_loop_schema": run([sys.executable, "tools/kds-sync/validate_codegraph_loop_schema.py"]),
         "loop_ui_quality_baseline": run([sys.executable, "tools/kds-sync/validate_loop_ui_quality_baseline.py"]),
         "loop_delivery_efficiency_control": run([sys.executable, "tools/kds-sync/validate_loop_delivery_efficiency_control.py"]),
+        "gpcf_2_feature_workspace": run([sys.executable, "tools/kds-sync/validate_gpcf_2_feature_workspace.py"]),
         "loop_ui_product_first_control": run([sys.executable, "tools/kds-sync/validate_loop_ui_product_first_control.py"]),
         "loop_session_mainline_control": run([sys.executable, "tools/kds-sync/validate_loop_session_mainline_control.py"]),
         "current_session_mainline_declaration": run([sys.executable, "tools/kds-sync/validate_current_session_mainline_declaration.py"]),

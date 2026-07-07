@@ -45,6 +45,18 @@ def require(condition: bool, message: str) -> None:
         raise SystemExit(f"FAIL: {message}")
 
 
+def parse_gate_payload(stdout: str) -> dict[str, object]:
+    try:
+        return json.loads(stdout)
+    except json.JSONDecodeError:
+        pass
+    start = stdout.find("{")
+    end = stdout.rfind("}")
+    if start == -1 or end == -1 or end <= start:
+        raise json.JSONDecodeError("no JSON object found", stdout, 0)
+    return json.loads(stdout[start : end + 1])
+
+
 def run_gate(repo_path: Path, repo_label: str) -> tuple[bool, str]:
     gate_path = repo_path / GATE_PATH
     if not gate_path.exists():
@@ -80,7 +92,7 @@ def run_gate(repo_path: Path, repo_label: str) -> tuple[bool, str]:
             f"elapsed_sec={elapsed:.3f} returncode={result.returncode}"
         )
         try:
-            payload = json.loads(result.stdout)
+            payload = parse_gate_payload(result.stdout)
         except json.JSONDecodeError:
             last_reason = f"{repo_label} loop gate run failed {diagnostic}"
             if result.returncode == 143:

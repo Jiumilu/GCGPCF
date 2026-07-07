@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-04BF76145B
 title: LOOP Execution Rules
 project: WAES
-related_projects: [WAES, KDS, GPCF, Studio]
+related_projects: [GPC, WAES, KDS, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
@@ -117,3 +117,35 @@ delivery_efficiency_gate
 - 连续 3 轮 `product_progress=false` 时，必须暂停开发态并回到 Governance Loop 复核。
 - `single_label_copy_tweak_heavy_loop_blocked`：单个 label、copy、测试选择器或同类微文案调整，不得独立触发完整 G2 治理轮，除非它阻塞主用户路径、授权边界、P0/P1 风险或状态提升。
 - 本规则覆盖 `project_group_scope_17_projects`，并由 `validate_loop_delivery_efficiency_control.py` 接入 `loop_document_gate.py`。
+
+## v2.0 Feature Delivery Loop
+
+GPCF 2.0 的新开发入口必须是 Feature Workspace：
+
+```bash
+python scripts/gpcf_new_feature.py
+```
+
+GPCF 2.0 的新开发出口必须是 Evidence Gate：
+
+```bash
+python scripts/gpcf_close_feature.py
+```
+
+执行闭环统一为：
+
+```text
+Plan -> Implement -> Evaluate -> Repair -> Commit
+```
+
+每轮只回答五个问题：
+
+```text
+1. 这轮做什么？
+2. 改了什么？
+3. 怎么验证？
+4. 发现什么问题？
+5. 是否可以提交？
+```
+
+单个 Feature 不得扩张 progress、review、task、status、log、notes 或 decision 文档；Evidence 只保留结果。

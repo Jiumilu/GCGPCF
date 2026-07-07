@@ -32,19 +32,19 @@ superseded_by: []
 
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
-| GFIS | 01-GFIS | 114 | 114 | 已建空间 |
-| GPC | 02-GPC | 51 | 46 | 已建空间 |
-| PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
-| WAES | 04-WAES | 165 | 22 | 已建空间 |
-| KDS | 05-KDS | 719 | 719 | 已建空间 |
-| Brain | 06-Brain | 11 | 11 | 已建空间 |
-| PKC | 07-PKC | 7 | 7 | 已建空间 |
-| XiaoC | 08-XiaoC | 43 | 43 | 已建空间 |
-| XGD | 09-XGD | 7 | 7 | 已建空间 |
-| XiaoG | 10-XiaoG | 8 | 8 | 已建空间 |
-| MMC | 11-MMC | 9 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1955 | 1846 | 已建空间 |
-| Studio | 13-Studio | 2 | 2 | 已建空间 |
+| GFIS | 01-GFIS | 117 | 114 | 已建空间 |
+| GPC | 02-GPC | 54 | 46 | 已建空间 |
+| PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
+| WAES | 04-WAES | 168 | 22 | 已建空间 |
+| KDS | 05-KDS | 724 | 721 | 已建空间 |
+| Brain | 06-Brain | 14 | 11 | 已建空间 |
+| PKC | 07-PKC | 10 | 7 | 已建空间 |
+| XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
+| XGD | 09-XGD | 10 | 7 | 已建空间 |
+| XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
+| MMC | 11-MMC | 12 | 9 | 已建空间 |
+| GPCF | 12-GPCF | 1967 | 1850 | 已建空间 |
+| Studio | 13-Studio | 5 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
 
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 109 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 165 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -747,6 +747,7 @@ superseded_by: []
 | GPCF-DOC-8EC9A00BFD | README.md | 开发/00-项目群总控/README.md | bidirectional | pending_api |
 | GPCF-DOC-A2F5EC5E20 | docs/GCBrain-Development-Manual.md | 开发/05-KDS/docs/GCBrain-Development-Manual.md | bidirectional | pending_api |
 | GPCF-DOC-9F7CBCE127 | docs/README.md | 开发/05-KDS/docs/README.md | bidirectional | pending_api |
+| GPCF-DOC-26EE0B96B8 | docs/architecture/README.md | 开发/12-GPCF/docs/architecture/README.md | bidirectional | pending_api |
 | GPCF-DOC-137295729F | docs/codegraph/README.md | 开发/05-KDS/docs/codegraph/README.md | bidirectional | pending_api |
 | GPCF-DOC-ACDBF80B37 | docs/codegraph/codegraph-authorization-model.md | 开发/05-KDS/docs/codegraph/codegraph-authorization-model.md | bidirectional | pending_api |
 | GPCF-DOC-990EE0035A | docs/codegraph/codegraph-dev-execution-admission.md | 开发/12-GPCF/docs/codegraph/codegraph-dev-execution-admission.md | bidirectional | pending_api |
@@ -1046,6 +1047,9 @@ superseded_by: []
 | GPCF-DOC-9B51263381 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | 开发/05-KDS/docs/gc-knowledge-fabric/waes-gate-io-policy.md | bidirectional | pending_api |
 | GPCF-DOC-19D7F0C3F0 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | 开发/05-KDS/docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | bidirectional | pending_api |
 | GPCF-DOC-1946E4144B | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | 开发/05-KDS/docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | bidirectional | pending_api |
+| GPCF-DOC-CC2C02D1FB | docs/governance/README.md | 开发/12-GPCF/docs/governance/README.md | bidirectional | pending_api |
+| GPCF-DOC-94532311B5 | docs/governance/gpcf-2-governance-file-inventory.md | 开发/05-KDS/docs/governance/gpcf-2-governance-file-inventory.md | bidirectional | pending_api |
+| GPCF-DOC-12C308D619 | docs/governance/gpcf-2-implementation.md | 开发/05-KDS/docs/governance/gpcf-2-implementation.md | bidirectional | pending_api |
 | GPCF-DOC-92A4C970C1 | docs/harness/AaaS/README.md | 开发/05-KDS/docs/harness/AaaS/README.md | bidirectional | pending_api |
 | GPCF-DOC-76A4B3F001 | docs/harness/AaaS/evidence/README.md | 开发/05-KDS/docs/harness/AaaS/evidence/README.md | bidirectional | pending_api |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | bidirectional | pending_api |
@@ -3104,6 +3108,10 @@ superseded_by: []
 | GPCF-DOC-4ED15E157A | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | 开发/05-KDS/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | bidirectional | pending_api |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | 开发/12-GPCF/docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | bidirectional | pending_api |
 | GPCF-DOC-5FE5ED4E8B | docs/harness/tasks/README.md | 开发/05-KDS/docs/harness/tasks/README.md | bidirectional | pending_api |
+| GPCF-DOC-AE29585A23 | docs/standards/README.md | 开发/12-GPCF/docs/standards/README.md | bidirectional | pending_api |
+| GPCF-DOC-E6A5B97688 | docs/standards/feature-workspace.md | 开发/12-GPCF/docs/standards/feature-workspace.md | bidirectional | pending_api |
+| GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-25ADFEBCF8 | loop/context/cognee/README.md | 开发/02-GPC/loop/context/cognee/README.md | bidirectional | pending_api |
 | GPCF-DOC-6BA1B0CCA6 | loop/context/cognee/harness/README.md | 开发/02-GPC/loop/context/cognee/harness/README.md | bidirectional | pending_api |
 | GPCF-DOC-7A2A6D4F05 | loop/context/cognee/harness/p1-recall-comparison-template.md | 开发/12-GPCF/loop/context/cognee/harness/p1-recall-comparison-template.md | bidirectional | pending_api |
@@ -3119,6 +3127,9 @@ superseded_by: []
 | GPCF-DOC-BF9AA5F60D | loop/context/headroom/docs/operating-model.md | 开发/04-WAES/loop/context/headroom/docs/operating-model.md | bidirectional | pending_api |
 | GPCF-DOC-260DDD94E9 | loop/context/headroom/docs/rollout.md | 开发/04-WAES/loop/context/headroom/docs/rollout.md | bidirectional | pending_api |
 | GPCF-DOC-187BF785F5 | loop/context/headroom/docs/security.md | 开发/05-KDS/loop/context/headroom/docs/security.md | bidirectional | pending_api |
+| GPCF-DOC-4F0E8E6D9C | loops/execution_loop.md | 开发/91-治理与验收/loops/execution_loop.md | bidirectional | pending_api |
+| GPCF-DOC-7373A1BEDE | loops/repair_loop.md | 开发/91-治理与验收/loops/repair_loop.md | bidirectional | pending_api |
+| GPCF-DOC-08716345C2 | loops/review_loop.md | 开发/91-治理与验收/loops/review_loop.md | bidirectional | pending_api |
 | GPCF-DOC-4F39AFF310 | openspec/README.md | 开发/05-KDS/openspec/README.md | bidirectional | pending_api |
 | GPCF-DOC-855B715B04 | openspec/changes/README.md | 开发/05-KDS/openspec/changes/README.md | bidirectional | pending_api |
 | GPCF-DOC-D84C374BDC | openspec/changes/archive/README.md | 开发/05-KDS/openspec/changes/archive/README.md | bidirectional | pending_api |
@@ -3134,6 +3145,57 @@ superseded_by: []
 | GPCF-DOC-D067D700F1 | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | 开发/12-GPCF/openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | bidirectional | pending_api |
 | GPCF-DOC-B1187FF6E1 | openspec/changes/kds-production-hardening/tasks.md | 开发/05-KDS/openspec/changes/kds-production-hardening/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-89FBFF25D3 | openspec/specs/README.md | 开发/05-KDS/openspec/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-60B2E3BD94 | projects/aaas/RISK.md | 开发/91-治理与验收/projects/aaas/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-FB24610A83 | projects/aaas/ROADMAP.md | 开发/91-治理与验收/projects/aaas/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-FEC2988B71 | projects/aaas/STATUS.md | 开发/91-治理与验收/projects/aaas/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-A233ABB969 | projects/brain/RISK.md | 开发/91-治理与验收/projects/brain/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-D40C9F208D | projects/brain/ROADMAP.md | 开发/91-治理与验收/projects/brain/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-70E004C4E1 | projects/brain/STATUS.md | 开发/91-治理与验收/projects/brain/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-2D5F274D6B | projects/gfis/RISK.md | 开发/91-治理与验收/projects/gfis/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-31E1D4AB3F | projects/gfis/ROADMAP.md | 开发/91-治理与验收/projects/gfis/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-CCEE8B7E4A | projects/gfis/STATUS.md | 开发/91-治理与验收/projects/gfis/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-F6A7A6522E | projects/gpc/RISK.md | 开发/91-治理与验收/projects/gpc/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-19C3FB3E2F | projects/gpc/ROADMAP.md | 开发/91-治理与验收/projects/gpc/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-B35947A669 | projects/gpc/STATUS.md | 开发/91-治理与验收/projects/gpc/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-EBBF586184 | projects/gpcf/RISK.md | 开发/91-治理与验收/projects/gpcf/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-1253D15498 | projects/gpcf/ROADMAP.md | 开发/91-治理与验收/projects/gpcf/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-3968FEF2EF | projects/gpcf/STATUS.md | 开发/91-治理与验收/projects/gpcf/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-0E569B2E96 | projects/kds/RISK.md | 开发/91-治理与验收/projects/kds/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-6C1B02F201 | projects/kds/ROADMAP.md | 开发/91-治理与验收/projects/kds/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-14CA10A04F | projects/kds/STATUS.md | 开发/91-治理与验收/projects/kds/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-6A4D355996 | projects/mmc/RISK.md | 开发/91-治理与验收/projects/mmc/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-1C4498259E | projects/mmc/ROADMAP.md | 开发/91-治理与验收/projects/mmc/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-0CD635B751 | projects/mmc/STATUS.md | 开发/91-治理与验收/projects/mmc/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-857E6A9307 | projects/pkc/RISK.md | 开发/91-治理与验收/projects/pkc/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-950A22AC4D | projects/pkc/ROADMAP.md | 开发/91-治理与验收/projects/pkc/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-88EC26FE57 | projects/pkc/STATUS.md | 开发/91-治理与验收/projects/pkc/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-73296C1685 | projects/pvaos/RISK.md | 开发/91-治理与验收/projects/pvaos/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-00153CD8B3 | projects/pvaos/ROADMAP.md | 开发/91-治理与验收/projects/pvaos/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-FBDF40CE54 | projects/pvaos/STATUS.md | 开发/91-治理与验收/projects/pvaos/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-068AE09B46 | projects/sop/RISK.md | 开发/91-治理与验收/projects/sop/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-86C94554EC | projects/sop/ROADMAP.md | 开发/91-治理与验收/projects/sop/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-5F3201F8C9 | projects/sop/STATUS.md | 开发/91-治理与验收/projects/sop/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-EBFFF7C374 | projects/studio/RISK.md | 开发/91-治理与验收/projects/studio/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-46D1584AC5 | projects/studio/ROADMAP.md | 开发/91-治理与验收/projects/studio/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-D67FFAE452 | projects/studio/STATUS.md | 开发/91-治理与验收/projects/studio/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-25E061C8E6 | projects/waes/RISK.md | 开发/91-治理与验收/projects/waes/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-B18F453C5F | projects/waes/ROADMAP.md | 开发/91-治理与验收/projects/waes/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-4F77004DF4 | projects/waes/STATUS.md | 开发/91-治理与验收/projects/waes/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-D4EC6E6167 | projects/was/RISK.md | 开发/91-治理与验收/projects/was/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-20DCA6FD0E | projects/was/ROADMAP.md | 开发/91-治理与验收/projects/was/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-9406A78FC6 | projects/was/STATUS.md | 开发/91-治理与验收/projects/was/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-F32278139B | projects/xgd/RISK.md | 开发/91-治理与验收/projects/xgd/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-10B748AECE | projects/xgd/ROADMAP.md | 开发/91-治理与验收/projects/xgd/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-290EC323FC | projects/xgd/STATUS.md | 开发/91-治理与验收/projects/xgd/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-23A74D48D0 | projects/xiaoc/RISK.md | 开发/91-治理与验收/projects/xiaoc/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-CFC20989E9 | projects/xiaoc/ROADMAP.md | 开发/91-治理与验收/projects/xiaoc/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-B2A922E9F6 | projects/xiaoc/STATUS.md | 开发/91-治理与验收/projects/xiaoc/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-A82E5A95AD | projects/xiaog/RISK.md | 开发/91-治理与验收/projects/xiaog/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-A42EDCFEA0 | projects/xiaog/ROADMAP.md | 开发/91-治理与验收/projects/xiaog/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-053F337921 | projects/xiaog/STATUS.md | 开发/91-治理与验收/projects/xiaog/STATUS.md | bidirectional | pending_api |
+| GPCF-DOC-9956646696 | projects/xwail/RISK.md | 开发/91-治理与验收/projects/xwail/RISK.md | bidirectional | pending_api |
+| GPCF-DOC-9CF88778FF | projects/xwail/ROADMAP.md | 开发/91-治理与验收/projects/xwail/ROADMAP.md | bidirectional | pending_api |
+| GPCF-DOC-0EB767BDC4 | projects/xwail/STATUS.md | 开发/91-治理与验收/projects/xwail/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-4C34AF960B | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | 开发/12-GPCF/templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | bidirectional | pending_api |
 | GPCF-DOC-0F4B8E6C2A | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | 开发/12-GPCF/templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | bidirectional | pending_api |
 | GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | 开发/12-GPCF/templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | bidirectional | pending_api |

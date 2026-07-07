@@ -1,0 +1,21 @@
+---
+doc_id: GPCF-DOC-D40C9F208D
+title: Brain 路线图
+project: Brain
+related_projects: [Brain]
+domain: governance
+status: controlled
+version: v1.0
+owner: Brain
+kds_space: 开发
+kds_path: 开发/91-治理与验收/projects/brain/ROADMAP.md
+source_path: projects/brain/ROADMAP.md
+sync_direction: bidirectional
+last_reviewed: 2026-07-08
+supersedes: []
+superseded_by: []
+---
+
+# Brain 路线图
+
+本文件只记录 Brain 在 GPCF 2.0 下的项目节奏和阶段方向。具体交付不在这里展开，统一进入功能工作区，避免重复过程文档。

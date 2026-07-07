@@ -137,6 +137,10 @@ DOMAIN_BY_TOP = {
     ".harness": "harness-evidence",
     ".codex": "operational-skill",
     "tools": "tools",
+    "projects": "governance",
+    "features": "governance",
+    "loops": "governance",
+    "runtime": "tools",
 }
 
 README_META = {
@@ -269,6 +273,33 @@ def frontmatter_managed_for(source_path: str) -> bool:
 
 
 def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]]:
+    if source_path == "AGENTS.md":
+        return "WAES", ["WAES", "GPCF"]
+    project_dir_map = {
+        "aaas": "AAAS",
+        "brain": "Brain",
+        "was": "WAS",
+        "xiaoc": "XiaoC",
+        "waes": "WAES",
+        "gpc": "GPC",
+        "studio": "Studio",
+        "gpcf": "GPCF",
+        "xwail": "XWAIL",
+        "gfis": "GFIS",
+        "mmc": "MMC",
+        "kds": "KDS",
+        "xiaog": "XiaoG",
+        "pvaos": "PVAOS",
+        "sop": "SOP",
+        "pkc": "PKC",
+        "xgd": "XGD",
+    }
+    if source_path.startswith("projects/"):
+        parts = source_path.split("/")
+        project = project_dir_map.get(parts[1], "GPCF") if len(parts) > 1 else "GPCF"
+        return project, [project]
+    if source_path.startswith(("features/", "loops/", "runtime/")):
+        return "GPCF", PROJECT_GROUP_FULL_SCOPE
     if source_path in WAS_ONTOLOGY_GOVERNANCE_DOCS:
         primary = "GPCF" if source_path.startswith("docs/harness/loops/") else "KDS"
         return primary, WAS_ONTOLOGY_PROJECT_GROUP
@@ -618,6 +649,8 @@ def should_have_readme(dir_path: Path) -> bool:
     if rel_dir in README_META:
         return False
     if rel_dir.startswith((".codex", ".agents")):
+        return False
+    if rel_dir == "loops" or rel_dir.startswith(("projects/", "features/")):
         return False
     if rel_dir.startswith(".okf/bundles"):
         return False

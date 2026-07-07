@@ -30,6 +30,9 @@ GlobalCoud GPCF 是 GlobalCloud 项目群的体系文档工作区与总控治理
 | `09-status/kds-development-space-sync-register.md` | KDS 开发空间同步台账 |
 | `09-status/globalcloud-document-health-report.md` | 文档健康报告 |
 | `tools/kds-sync/` | 文档控制、KDS 同步和 Loop 文档门禁脚本 |
+| `features/active/` | GPCF 2.0 Feature 交付入口 |
+| `projects/` | 项目群 17 项目的 ROADMAP、STATUS、RISK 节奏文件 |
+| `loops/` | GPCF 2.0 执行、复核、修复闭环 |
 
 文档治理要求：
 
@@ -37,3 +40,15 @@ GlobalCoud GPCF 是 GlobalCloud 项目群的体系文档工作区与总控治理
 - 新增目录必须有 README。
 - KDS `开发` 空间同步必须留下同步流水。
 - 旧命名、旧 AI 定位和真实性污染不得回流。
+
+GPCF 2.0 开发入口：
+
+```bash
+python scripts/gpcf_new_feature.py --project gpcf --name supplier-onboarding --priority P0 --goal "完成供应商入驻主流程"
+```
+
+GPCF 2.0 开发出口：
+
+```bash
+python scripts/gpcf_close_feature.py F-001
+```

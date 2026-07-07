@@ -42,3 +42,29 @@ DO NOT send optional commentary
 ```
 
 除必要的结论、阻塞项、授权确认请求、执行结果和验证证据外，不得输出可选过程性说明。需要授权或确认的事项必须以明确确认请求呈现，不得用可选 commentary 替代。
+
+## GPCF 2.0 Feature 交付规则
+
+GPCF 2.0 默认执行模型为：
+
+```text
+Program 定方向
+Project 管节奏
+Feature 做交付
+Loop 只服务执行
+Evidence 只保留结果
+```
+
+新开发入口必须优先使用：
+
+```bash
+python scripts/gpcf_new_feature.py
+```
+
+新开发出口必须优先使用：
+
+```bash
+python scripts/gpcf_close_feature.py
+```
+
+每个 Feature 只保留 `feature.yaml`、`journal.md`、`evidence/`、`artifacts/`。不得为单个 Feature 扩张 progress、review、task、status、log、notes 或 decision 文档。

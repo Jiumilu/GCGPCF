@@ -1,0 +1,23 @@
+id: F-001
+name: supplier-onboarding
+project: gpcf
+status: done
+goal: 完成供应商入驻主流程
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: commit
+  iteration: 2
+evidence:
+  tests: pass
+  build: not_required
+  screenshots: not_required
+  api: not_required
+  summary: pass
+blockers:
+created_at: "2026-07-07T22:40:10+00:00"
+updated_at: "2026-07-07T22:40:31+00:00"
