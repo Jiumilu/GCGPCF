@@ -68,3 +68,13 @@ python scripts/gpcf_close_feature.py
 ```
 
 每个 Feature 只保留 `feature.yaml`、`journal.md`、`evidence/`、`artifacts/`。不得为单个 Feature 扩张 progress、review、task、status、log、notes 或 decision 文档。
+
+GPCF 2.0 运行态必须维护：
+
+```text
+features/active/F-xxx/
+runtime/queue.json
+runtime/state.json
+```
+
+Evidence Gate 必须由 `python scripts/gpcf_check_evidence.py <FEATURE_ID>` 产生本地可回放结果。非适用证据只能写为 `waived` 并说明原因；不得用默认 `not_required` 替代测试、构建、lint 或范围证据。

@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 
-from gpcf_feature_lib import ACTIVE, PRIORITIES, PROJECTS, default_feature, next_feature_id, render_journal, slugify, write_feature
+from gpcf_feature_lib import ACTIVE, PRIORITIES, PROJECTS, default_feature, enqueue_feature, next_feature_id, render_journal, slugify, write_feature
 
 
 def main() -> int:
@@ -44,6 +44,7 @@ def main() -> int:
     )
     write_feature(feature_dir / "feature.yaml", data)
     (feature_dir / "journal.md").write_text(render_journal(feature_id, slug), encoding="utf-8")
+    enqueue_feature(data, feature_dir)
     print(f"feature_created={feature_id} path={feature_dir.relative_to(ACTIVE.parents[1])}")
     return 0
 

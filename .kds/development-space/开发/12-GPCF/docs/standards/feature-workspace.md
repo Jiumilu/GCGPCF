@@ -67,3 +67,22 @@ updated_at: ""
 4. 发现什么问题？
 5. 是否可以提交？
 ```
+
+## Evidence Gate
+
+关闭 Feature 前必须运行：
+
+```bash
+python scripts/gpcf_check_evidence.py <FEATURE_ID>
+```
+
+证据状态只允许：
+
+```text
+pending
+pass
+fail
+waived
+```
+
+`waived` 只能用于 scope 不适用的截图或接口证据，并必须在 evidence 文件中写明原因。`fail` 或 `pending` 均不得关闭 Feature。

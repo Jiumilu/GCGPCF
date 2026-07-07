@@ -18,7 +18,7 @@ superseded_by: []
 
 # GlobalCoud GPCF
 
-GlobalCoud GPCF 是 GlobalCloud 项目群的体系文档工作区与总控治理仓。
+GlobalCoud GPCF 是 GlobalCloud 项目群的 Feature 交付中心与轻治理控制仓。历史体系文档继续受控保留，新开发默认从 Feature Workspace 进入。
 
 主要入口：
 
@@ -33,6 +33,8 @@ GlobalCoud GPCF 是 GlobalCloud 项目群的体系文档工作区与总控治理
 | `features/active/` | GPCF 2.0 Feature 交付入口 |
 | `projects/` | 项目群 17 项目的 ROADMAP、STATUS、RISK 节奏文件 |
 | `loops/` | GPCF 2.0 执行、复核、修复闭环 |
+| `runtime/queue.json` | Feature 调度队列 |
+| `runtime/state.json` | Feature 交付运行状态 |
 
 文档治理要求：
 
@@ -51,4 +53,10 @@ GPCF 2.0 开发出口：
 
 ```bash
 python scripts/gpcf_close_feature.py F-001
+```
+
+GPCF 2.0 Evidence Gate：
+
+```bash
+python scripts/gpcf_check_evidence.py F-001
 ```

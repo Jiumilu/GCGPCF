@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-07-08 07:10:59 +0800
+generated_at: 2026-07-08 07:50:17 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-07-08T07:10:59.250350+08:00`
+- generated_at: `2026-07-08T07:50:17.330922+08:00`
 - freshness_ok: `true`
 - project_count: `17`
 - pass_repo_count: `14`
@@ -51,12 +51,12 @@ generated_at: 2026-07-08 07:10:59 +0800
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 13 | 39 | 0 | `none` |
-| `GlobalCoud GPCF` | 160 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 14 | 42 | 0 | `none` |
+| `GlobalCoud GPCF` | 66 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 13 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 16 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |

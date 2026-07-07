@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "mode": "feature_delivery",
-  "current_feature": null,
+  "current_feature": "F-002",
   "roles": [
     "Dispatcher",
     "Planner",
@@ -9,6 +9,8 @@
     "Evaluator",
     "Repair",
     "Recorder"
-  ]
+  ],
+  "active_feature_count": 3,
+  "queue_length": 3,
+  "updated_at": "2026-07-07T23:31:52+00:00"
 }
-

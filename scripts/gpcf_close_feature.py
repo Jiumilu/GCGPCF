@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 
-from gpcf_feature_lib import ACTIVE, append_journal, evidence_complete, feature_file, find_feature, move_feature_to_done, read_feature, write_feature
+from gpcf_feature_lib import ACTIVE, append_journal, evidence_complete, feature_file, find_feature, move_feature_to_done, read_feature, update_queue_entry, write_feature
 
 
 def main() -> int:
@@ -31,12 +31,13 @@ def main() -> int:
         answers=[
             "Close Feature through Evidence Gate.",
             "Marked feature.yaml status as done.",
-            "Verified all evidence fields are pass or not_required.",
+            "Verified all evidence fields are pass or waived.",
             "No close blocker found.",
             "yes, as submit candidate only; commit/push still require explicit authorization.",
         ],
     )
     target = move_feature_to_done(feature_dir)
+    update_queue_entry(data["id"], status="closed", role="Recorder")
     print(f"feature_closed={data['id']} path={target.relative_to(ACTIVE.parents[1])}")
     return 0
 

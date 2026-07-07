@@ -19,3 +19,10 @@ superseded_by: []
 # GPCF 状态
 
 本文件只记录 GPCF 的当前项目节奏状态。功能级进度、证据、阻塞和关闭状态统一由 features 目录中的 feature.yaml 承载。
+
+## 当前状态
+
+- GPCF 2.0 已进入 Feature 运行态。
+- 当前 active Feature：`F-002`、`F-003`、`F-004`。
+- 调度状态写入 `runtime/queue.json` 和 `runtime/state.json`。
+- 本阶段不授权自动 commit、push、deploy、真实 API、真实 KDS API 或状态提升。

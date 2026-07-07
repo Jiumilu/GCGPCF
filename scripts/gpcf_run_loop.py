@@ -5,7 +5,16 @@ from __future__ import annotations
 
 import argparse
 
-from gpcf_feature_lib import STEPS, append_journal, feature_file, find_feature, read_feature, write_feature
+from gpcf_feature_lib import STEPS, append_journal, feature_file, find_feature, read_feature, update_queue_entry, write_feature
+
+
+ROLE_BY_STEP = {
+    "plan": "Planner",
+    "implement": "Builder",
+    "evaluate": "Evaluator",
+    "repair": "Repair",
+    "commit": "Recorder",
+}
 
 
 def main() -> int:
@@ -26,6 +35,7 @@ def main() -> int:
     data["loop"]["current_step"] = next_step
     data["loop"]["iteration"] = int(data["loop"].get("iteration", 0)) + 1
     write_feature(feature_file(feature_dir), data)
+    update_queue_entry(data["id"], status=next_step, role=ROLE_BY_STEP[next_step])
     append_journal(
         feature_dir,
         iteration=data["loop"]["iteration"],

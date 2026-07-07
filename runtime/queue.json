@@ -1,5 +1,38 @@
 {
   "schema_version": "2.0",
-  "queue": []
+  "queue": [
+    {
+      "id": "F-002",
+      "name": "project-group-feature-queue",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "evaluated",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-002-project-group-feature-queue",
+      "created_at": "2026-07-07T23:24:58+00:00",
+      "updated_at": "2026-07-07T23:31:52+00:00"
+    },
+    {
+      "id": "F-003",
+      "name": "evidence-gate-profile",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "evaluated",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-003-evidence-gate-profile",
+      "created_at": "2026-07-07T23:24:58+00:00",
+      "updated_at": "2026-07-07T23:31:52+00:00"
+    },
+    {
+      "id": "F-004",
+      "name": "loop-governance-slimming",
+      "project": "gpcf",
+      "priority": "P1",
+      "status": "evaluated",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-004-loop-governance-slimming",
+      "created_at": "2026-07-07T23:24:58+00:00",
+      "updated_at": "2026-07-07T23:31:52+00:00"
+    }
+  ]
 }
-

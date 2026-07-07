@@ -52,6 +52,7 @@ FEATURE_FIELDS = [
 ]
 
 EVIDENCE_FIELDS = ["tests", "build", "screenshots", "api", "summary"]
+EVIDENCE_STATUS = {"pending", "pass", "fail", "waived", "not_required"}
 SCRIPTS = [
     "scripts/gpcf_new_feature.py",
     "scripts/gpcf_run_loop.py",
@@ -82,6 +83,10 @@ def validate_feature_dir(path: Path) -> None:
         require(field in data, f"feature.yaml missing field {field}: {path.relative_to(ROOT)}")
     for field in EVIDENCE_FIELDS:
         require(field in data["evidence"], f"feature.yaml missing evidence field {field}: {path.relative_to(ROOT)}")
+        require(
+            str(data["evidence"][field]) in EVIDENCE_STATUS,
+            f"unsupported evidence status {field}={data['evidence'][field]}: {path.relative_to(ROOT)}",
+        )
     journal = (path / "journal.md").read_text(encoding="utf-8", errors="ignore")
     for phrase in ["这轮做什么", "改了什么", "怎么验证", "发现什么问题", "是否可以提交"]:
         require(phrase in journal, f"journal missing five-question loop phrase: {phrase}")
@@ -108,6 +113,10 @@ def main() -> int:
         text = read(script)
         for forbidden in ["git commit", "git push", "kubectl", "vercel deploy", "real KDS API authorized"]:
             require(forbidden not in text, f"script contains forbidden boundary phrase: {script}: {forbidden}")
+    evidence_script = read("scripts/gpcf_check_evidence.py")
+    require("not_required" not in evidence_script, "evidence gate must not default to not_required")
+    for phrase in ["py_compile", "git\", \"diff\", \"--check", "UI evidence required", "API evidence required"]:
+        require(phrase in evidence_script, f"evidence gate missing project-profile check: {phrase}")
 
     for path in ["loops/execution_loop.md", "loops/review_loop.md", "loops/repair_loop.md"]:
         text = read(path)
@@ -117,6 +126,10 @@ def main() -> int:
     runtime_state = json.loads(read("runtime/state.json"))
     require(runtime_queue.get("schema_version") == "2.0", "runtime/queue.json schema_version must be 2.0")
     require(runtime_state.get("mode") == "feature_delivery", "runtime/state.json mode must be feature_delivery")
+    require(isinstance(runtime_queue.get("queue"), list), "runtime/queue.json queue must be a list")
+    queued_ids = {entry.get("id") for entry in runtime_queue.get("queue", [])}
+    for role in ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"]:
+        require(role in runtime_state.get("roles", []), f"runtime/state.json missing role: {role}")
 
     implementation = read("docs/governance/gpcf-2-implementation.md")
     inventory = read("docs/governance/gpcf-2-governance-file-inventory.md")
@@ -155,8 +168,13 @@ def main() -> int:
         for path in base.iterdir()
         if path.is_dir() and path.name.startswith("F-")
     ]
+    active_feature_dirs = [path for path in (ROOT / "features/active").iterdir() if path.is_dir() and path.name.startswith("F-")]
+    require(len(active_feature_dirs) >= 3, "GPCF 2.0 must keep at least 3 active real Feature samples")
     for path in feature_dirs:
         validate_feature_dir(path)
+        data = read_feature(path / "feature.yaml")
+        if path.parent.name == "active":
+            require(data["id"] in queued_ids, f"active feature missing runtime queue entry: {data['id']}")
 
     print(
         "gpcf_2_feature_workspace=pass "

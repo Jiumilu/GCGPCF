@@ -33,3 +33,18 @@ Plan -> Implement -> Evaluate -> Repair -> Commit
 4. 发现什么问题？
 5. 是否可以提交？
 ```
+
+运行状态必须写入：
+
+```text
+runtime/queue.json
+runtime/state.json
+```
+
+角色流转：
+
+```text
+Dispatcher -> Planner -> Builder -> Evaluator -> Repair -> Recorder
+```
+
+Loop 只更新 Feature Workspace 和 runtime 状态，不创建额外过程文档。

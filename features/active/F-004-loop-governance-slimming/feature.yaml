@@ -1,0 +1,32 @@
+id: F-004
+name: loop-governance-slimming
+project: gpcf
+status: active
+goal: 将历史 LOOP 治理结果降级归档为参考，不再主导 Feature 开发节奏
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - 标记历史 LOOP 治理结果为参考证据
+    - 新开发入口统一到 features/active
+    - 单 Feature 上下文保持 4 项以内
+  out:
+    - 物理删除历史文档
+    - 改写历史 evidence 事实
+    - 状态提升到 accepted 或 integrated
+acceptance:
+  - 治理文件清单明确降级与归档候选
+  - validator 检查 active Feature 样本存在
+  - 文档门禁仍可回放历史治理证据但不要求新增过程文档
+loop:
+  current_step: evaluate
+  iteration: 5
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-07T23:24:58+00:00"
+updated_at: "2026-07-07T23:31:52+00:00"

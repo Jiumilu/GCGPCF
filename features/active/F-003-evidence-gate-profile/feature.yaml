@@ -1,0 +1,33 @@
+id: F-003
+name: evidence-gate-profile
+project: gpcf
+status: active
+goal: 增强 Evidence Gate，使测试、构建、lint 和范围证据按项目类型检查
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+    - 本地 validator 证据
+    - Python 脚本编译证据
+    - git diff --check 证据
+    - 按 Feature 范围判定专项证据需求
+  out:
+    - 真实外部 API 调用
+    - 真实 KDS API 写入
+    - 生产构建或部署
+acceptance:
+  - gpcf_check_evidence.py 不再默认生成 not_required
+  - 非 UI/API Feature 使用 waived 并写明豁免原因
+  - UI/API Feature 缺少对应证据时阻断 close
+loop:
+  current_step: evaluate
+  iteration: 5
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-07T23:24:58+00:00"
+updated_at: "2026-07-07T23:31:52+00:00"

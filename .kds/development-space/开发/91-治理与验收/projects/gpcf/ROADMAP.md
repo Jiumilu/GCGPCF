@@ -19,3 +19,10 @@ superseded_by: []
 # GPCF 路线图
 
 本文件只记录 GPCF 在 GPCF 2.0 下的项目节奏和阶段方向。具体交付不在这里展开，统一进入功能工作区，避免重复过程文档。
+
+## 近期路线
+
+- Phase 1：保持历史文档受控，停止新增重复治理过程文档。
+- Phase 2：所有新开发从 `features/active/F-xxx/` 进入。
+- Phase 3：以 `runtime/queue.json` 驱动 Dispatcher 到 Recorder 的轻量流转。
+- Phase 4：Evidence Gate 以本地可回放结果决定 Feature 是否可关闭。

@@ -1,0 +1,9 @@
+# Tests Evidence
+
+## validate_gpcf_2_feature_workspace
+
+status: pass
+
+```text
+gpcf_2_feature_workspace=pass feature_delivery_center=true project_scope=17 new_feature_entry=enabled close_feature_exit=enabled status_promotion_allowed=false
+```

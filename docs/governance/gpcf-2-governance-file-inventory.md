@@ -38,3 +38,14 @@ superseded_by: []
 - 新开发只从 `features/active/F-xxx/` 进入。
 - 项目节奏只写入 `projects/<project>/ROADMAP.md`、`STATUS.md`、`RISK.md`。
 - 单个 Feature 不再创建 progress、review、task、status、log、notes 或 decision 文档。
+
+## 降级归档执行规则
+
+以下内容保留为历史证据，不再作为新开发主入口：
+
+- 历史 LOOP round、receipt、status_ceiling、authorization、gate 细节。
+- `loop_v11_slimming_delivery_recovery` 等治理恢复类结果。
+- 为证明治理存在而创建的重复 checklist。
+- 开发后重复复盘文档。
+
+新开发必须由 Feature Workspace 承载。历史治理结果仅在 Evidence Gate、审计复核或风险追溯时引用。

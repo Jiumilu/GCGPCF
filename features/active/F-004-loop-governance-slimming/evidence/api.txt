@@ -1,0 +1,1 @@
+waived: Feature scope has no API evidence requirement and no real external or KDS API call is authorized.

@@ -1,0 +1,31 @@
+id: F-002
+name: project-group-feature-queue
+project: gpcf
+status: active
+goal: 建立项目群 Feature 队列样本，验证 Dispatcher 到 Feature Workspace 的真实入口
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+    - runtime/queue.json 写入 active Feature 调度队列
+    - runtime/state.json 反映当前 Feature 与队列长度
+    - 新 Feature 创建时自动进入 Dispatcher 队列
+  out:
+    - 自动 commit、push、merge
+    - 跨仓真实任务派发
+acceptance:
+  - 创建 Feature 后 runtime/queue.json 出现对应队列项
+  - runtime/state.json 显示 feature_delivery 模式和 active_feature_count
+  - validator 能检查 active Feature 与队列一致
+loop:
+  current_step: evaluate
+  iteration: 5
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-07T23:24:58+00:00"
+updated_at: "2026-07-07T23:31:52+00:00"

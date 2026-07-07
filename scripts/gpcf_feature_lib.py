@@ -6,6 +6,7 @@ from __future__ import annotations
 import re
 import shutil
 import subprocess
+import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -16,6 +17,9 @@ FEATURE_ROOT = ROOT / "features"
 ACTIVE = FEATURE_ROOT / "active"
 DONE = FEATURE_ROOT / "done"
 ARCHIVED = FEATURE_ROOT / "archived"
+RUNTIME = ROOT / "runtime"
+QUEUE_FILE = RUNTIME / "queue.json"
+STATE_FILE = RUNTIME / "state.json"
 PROJECTS = {
     "aaas",
     "brain",
@@ -37,7 +41,7 @@ PROJECTS = {
 }
 PRIORITIES = {"P0", "P1", "P2", "P3"}
 STEPS = ["plan", "implement", "evaluate", "repair", "commit"]
-PASSING_EVIDENCE = {"pass", "not_required"}
+PASSING_EVIDENCE = {"pass", "waived"}
 FEATURE_ID_RE = re.compile(r"^F-(\d{3})")
 
 
@@ -53,6 +57,100 @@ def slugify(value: str) -> str:
 def ensure_base_dirs() -> None:
     for path in [ACTIVE, DONE, ARCHIVED]:
         path.mkdir(parents=True, exist_ok=True)
+    (RUNTIME / "logs").mkdir(parents=True, exist_ok=True)
+    if not QUEUE_FILE.exists():
+        write_json(QUEUE_FILE, {"schema_version": "2.0", "queue": []})
+    if not STATE_FILE.exists():
+        write_json(
+            STATE_FILE,
+            {
+                "schema_version": "2.0",
+                "mode": "feature_delivery",
+                "current_feature": None,
+                "roles": ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"],
+            },
+        )
+
+
+def read_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
+    if not path.exists():
+        return default
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def write_json(path: Path, data: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def enqueue_feature(data: dict[str, Any], feature_dir: Path) -> None:
+    ensure_base_dirs()
+    queue = read_json(QUEUE_FILE, {"schema_version": "2.0", "queue": []})
+    entries = [entry for entry in queue.get("queue", []) if entry.get("id") != data["id"]]
+    entries.append(
+        {
+            "id": data["id"],
+            "name": data["name"],
+            "project": data["project"],
+            "priority": data["priority"],
+            "status": "queued",
+            "current_role": "Dispatcher",
+            "workspace": feature_dir.relative_to(ROOT).as_posix(),
+            "created_at": data["created_at"],
+            "updated_at": now(),
+        }
+    )
+    priority_order = {"P0": 0, "P1": 1, "P2": 2, "P3": 3}
+    entries.sort(key=lambda item: (priority_order.get(str(item.get("priority")), 9), str(item.get("id"))))
+    queue["schema_version"] = "2.0"
+    queue["queue"] = entries
+    write_json(QUEUE_FILE, queue)
+    refresh_runtime_state()
+
+
+def update_queue_entry(feature_id: str, *, status: str | None = None, role: str | None = None) -> None:
+    ensure_base_dirs()
+    queue = read_json(QUEUE_FILE, {"schema_version": "2.0", "queue": []})
+    for entry in queue.get("queue", []):
+        if entry.get("id") == feature_id:
+            if status:
+                entry["status"] = status
+            if role:
+                entry["current_role"] = role
+            entry["updated_at"] = now()
+            break
+    write_json(QUEUE_FILE, queue)
+    refresh_runtime_state()
+
+
+def refresh_runtime_state() -> None:
+    queue = read_json(QUEUE_FILE, {"schema_version": "2.0", "queue": []})
+    active_entries = [
+        entry
+        for entry in queue.get("queue", [])
+        if entry.get("status") not in {"closed", "archived"}
+    ]
+    state = read_json(
+        STATE_FILE,
+        {
+            "schema_version": "2.0",
+            "mode": "feature_delivery",
+            "current_feature": None,
+            "roles": ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"],
+        },
+    )
+    state.update(
+        {
+            "schema_version": "2.0",
+            "mode": "feature_delivery",
+            "current_feature": active_entries[0]["id"] if active_entries else None,
+            "active_feature_count": len(active_entries),
+            "queue_length": len(queue.get("queue", [])),
+            "updated_at": now(),
+        }
+    )
+    state.setdefault("roles", ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"])
+    write_json(STATE_FILE, state)
 
 
 def feature_dirs() -> list[Path]:
@@ -218,8 +316,8 @@ def read_feature(path: Path) -> dict[str, Any]:
             continue
         if current in {"scope", "loop", "evidence"} and raw.startswith("  "):
             item = raw[2:]
-            if item.startswith("- ") and nested_list:
-                data[current][nested_list].append(unquote(item[2:]))
+            if item.strip().startswith("- ") and nested_list:
+                data[current][nested_list].append(unquote(item.strip()[2:]))
                 continue
             key, _, value = item.partition(":")
             key = key.strip()
@@ -244,20 +342,20 @@ def render_journal(feature_id: str, name: str) -> str:
         [
             f"# {feature_id} {name}",
             "",
-            "## Loop Journal",
+            "## LOOP 日志",
             "",
             "### Iteration 0",
             "",
             "1. 这轮做什么？",
-            "   - Create Feature Workspace.",
+            "   - 创建 Feature Workspace。",
             "2. 改了什么？",
-            "   - Initialized feature.yaml, journal.md, evidence/, artifacts/.",
+            "   - 初始化 feature.yaml、journal.md、evidence/、artifacts/。",
             "3. 怎么验证？",
-            "   - Run gpcf_check_evidence.py before close.",
+            "   - 关闭前运行 gpcf_check_evidence.py。",
             "4. 发现什么问题？",
             "   - none",
             "5. 是否可以提交？",
-            "   - no, evidence gate pending.",
+            "   - 否，Evidence Gate 仍待验证。",
             "",
         ]
     )
