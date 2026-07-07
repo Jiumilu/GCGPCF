@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-05
+last_reviewed: 2026-07-08
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-07-05
+日期：2026-07-08
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -35,7 +35,7 @@ superseded_by: []
 | GFIS | 01-GFIS | 114 | 114 | 已建空间 |
 | GPC | 02-GPC | 51 | 46 | 已建空间 |
 | PVAOS | 03-PVAOS | 10 | 10 | 已建空间 |
-| WAES | 04-WAES | 164 | 22 | 已建空间 |
+| WAES | 04-WAES | 165 | 22 | 已建空间 |
 | KDS | 05-KDS | 719 | 719 | 已建空间 |
 | Brain | 06-Brain | 11 | 11 | 已建空间 |
 | PKC | 07-PKC | 7 | 7 | 已建空间 |
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 108 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 109 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -391,6 +391,7 @@ superseded_by: []
 | GPCF-DOC-23DDC94324 | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | bidirectional | pending_api |
 | GPCF-DOC-6CC5F6A45C | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | bidirectional | pending_api |
 | GPCF-DOC-0DF6AA8647 | 02-governance/loop/LOOP_CONTROL_BOARD.md | 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md | bidirectional | pending_api |
+| GPCF-DOC-666112D107 | 02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md | 开发/91-治理与验收/02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md | bidirectional | pending_api |
 | GPCF-DOC-4BA3D31617 | 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | bidirectional | pending_api |
 | GPCF-DOC-6E7DCE4A91 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | bidirectional | pending_api |
 | GPCF-DOC-744D083B96 | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | bidirectional | pending_api |

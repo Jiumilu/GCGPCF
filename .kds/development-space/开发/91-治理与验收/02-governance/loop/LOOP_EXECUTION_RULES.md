@@ -95,3 +95,25 @@ runtime_intake=0
 waes_review=0
 verified=0
 ```
+
+## v1.3 Delivery Efficiency Control
+
+开发态 Delivery Loop 必须防止 `high_compliance_low_product_progress`。每轮除 `goal / changed / verified / risk / next` 外，还必须显式记录：
+
+```text
+product_delta
+user_visible_delta
+loop_cost_level
+substantive_round
+task_flow_e2e_status
+evidence_overexposure_gate
+delivery_efficiency_gate
+```
+
+规则：
+
+- `governance_progress` 不得替代 `product_progress`。
+- 没有产品、业务流、接口、数据处理、用户任务或运行能力增量时，必须标记 `product_progress=false`。
+- 连续 3 轮 `product_progress=false` 时，必须暂停开发态并回到 Governance Loop 复核。
+- `single_label_copy_tweak_heavy_loop_blocked`：单个 label、copy、测试选择器或同类微文案调整，不得独立触发完整 G2 治理轮，除非它阻塞主用户路径、授权边界、P0/P1 风险或状态提升。
+- 本规则覆盖 `project_group_scope_17_projects`，并由 `validate_loop_delivery_efficiency_control.py` 接入 `loop_document_gate.py`。

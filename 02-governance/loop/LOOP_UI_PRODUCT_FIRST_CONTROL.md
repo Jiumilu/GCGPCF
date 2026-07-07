@@ -22,6 +22,8 @@ superseded_by: []
 
 GPCF 只控制 LOOP 防偏、项目群 UI 门禁和跨会话治理边界，不隐式接管 Studio 本地开发会话。
 
+涉及 UI 的开发态 LOOP 还必须同时遵守 `LOOP_DELIVERY_EFFICIENCY_CONTROL.md`，确保 UI 降噪和治理证据收敛能转化为 `product_delta`、`user_visible_delta` 和 `delivery_efficiency_gate`，避免 `high_compliance_low_product_progress`。
+
 ## 1. 最高裁决
 
 ```text

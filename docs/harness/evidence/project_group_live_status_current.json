@@ -1,25 +1,34 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-08T00:18:05.669206+08:00",
+  "generated_at": "2026-07-08T06:20:24.855306+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF"
+  ],
+  "observed_ahead": [
     "GlobalCloud Studio"
   ],
-  "observed_ahead": [],
   "stable_dirty": [
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF"
+  ],
+  "stable_ahead": [
     "GlobalCloud Studio"
   ],
-  "stable_ahead": [],
-  "volatile_dirty": [],
+  "volatile_dirty": [
+    "GlobalCoud GPCF"
+  ],
   "review_boundary": [
-    "GlobalCloud Studio"
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 16,
+  "pass_repo_count": 15,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-08T00:17:23.623305+08:00",
+  "previous_generated_at": "2026-07-08T06:15:08.236293+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -64,21 +73,50 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 3,
-      "ahead": 0,
+      "dirty_count": 9,
+      "ahead": 35,
       "behind": 0,
       "paths": [
-        "docs/harness/evidence/evidence-index.md",
-        "docs/harness/evidence/studio-loop-history-index.md",
-        "docs/harness/loops/loop-round-GPCF-STUDIO-LR-341.md"
+        "AGENTS.md",
+        "docs/harness/README.md",
+        "docs/harness/validation.md",
+        "packages/client/src/views/hermes/ChatView.vue",
+        "scripts/harness-check.mjs",
+        "tools/kds-sync/loop_document_gate.py",
+        "docs/harness/LOOP_STUDIO_DELIVERY_EFFICIENCY_CONTROL.md",
+        "docs/harness/LOOP_STUDIO_PRODUCT_FIRST_CONTROL.md",
+        "tools/kds-sync/validate_studio_loop_control.py"
       ],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 0,
+      "dirty_count": 22,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        ".codex/skills/globalcloud-loop-orchestrator/SKILL.md",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/.codex/skills/globalcloud-loop-orchestrator/SKILL.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_EXECUTION_RULES.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/README.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/document-deprecation-register.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"",
+        ".kds/local-mirror-ledger.jsonl",
+        "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+        "02-governance/loop/LOOP_EXECUTION_RULES.md",
+        "02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md",
+        "02-governance/loop/README.md",
+        "09-status/document-deprecation-register.md",
+        "09-status/globalcloud-document-control-register.md",
+        "09-status/kds-development-space-sync-register.md",
+        "tools/kds-sync/document_control.py",
+        "tools/kds-sync/loop_document_gate.py",
+        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md\"",
+        "02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md",
+        "tools/kds-sync/validate_loop_delivery_efficiency_control.py"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {

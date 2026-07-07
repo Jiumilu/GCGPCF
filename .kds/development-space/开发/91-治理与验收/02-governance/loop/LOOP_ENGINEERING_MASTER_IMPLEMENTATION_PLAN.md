@@ -92,6 +92,7 @@ GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 | L2 自我纠错 | `LOOP_ENGINEERING_SELF_CORRECTION.md` | 定义主体错位、弱证据和失败优先的防复发规则 | 是 |
 | L2 会话主线 | `LOOP_SESSION_MAINLINE_CONTROL_PACK.md` | 定义会话主线声明、跨会话 handoff、防偏离和启动/恢复前置门禁 | 是 |
 | L2 治理视图 | `LOOP_GOVERNANCE_DASHBOARD.md` | 聚合质量、效率、自我纠错、边界和状态上限信号 | 是 |
+| L2 交付效率控制 | `LOOP_DELIVERY_EFFICIENCY_CONTROL.md` | 防止高合规低进展，要求 Delivery Loop 显式记录产品增量、用户可见增量、治理成本和实质轮次 | 是 |
 | L2 UI 产品优先控制 | `LOOP_UI_PRODUCT_FIRST_CONTROL.md` | 控制 UI evidence 反噬产品界面，约束 Studio 等项目继续快速开发时不得偏离用户任务流 | 是 |
 | L2 专项实施链路 | `GlobalCloud 项目群实施方案.md`、`04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`、`04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md` | 定义项目群总实施主线与界面工程/UI/工作台专项实施链路 | 是 |
 | L3 状态记录 | `docs/harness/loop-state.md` | 记录项目群轮次状态和最近事实 | 是 |
@@ -238,6 +239,20 @@ A test-visible element is not automatically user-visible.
 
 Studio 当前目标开发可继续快速推进，但必须受 `product_first_ui_gate`、`evidence_overexposure_gate`、`debug_details_visibility`、`task_flow_e2e_status` 和 `audit_traceability_gate` 约束。GPCF 只控制 LOOP 防偏和项目群 UI 门禁，不隐式接管 Studio 本地开发会话。
 
+所有开发态 Delivery Loop 还必须遵守 [LOOP Delivery Efficiency Control](./LOOP_DELIVERY_EFFICIENCY_CONTROL.md)。该控制把 Studio、Brain 中暴露的 `high_compliance_low_product_progress` 风险升级为项目群级门禁，覆盖 `project_group_scope_17_projects`，并要求每轮显式记录：
+
+```text
+product_delta
+user_visible_delta
+loop_cost_level
+substantive_round
+task_flow_e2e_status
+evidence_overexposure_gate
+delivery_efficiency_gate
+```
+
+连续 3 轮只有 `governance_progress`、没有 `product_progress` 时，必须暂停开发态并回到治理复核。`single_label_copy_tweak_heavy_loop_blocked`：单个 label、copy、测试选择器或同类微文案调整，不得独立触发完整 G2 治理轮，除非它阻塞主用户路径、授权边界、P0/P1 风险或状态提升。
+
 ## 8. 版本基线
 
 | 版本 | 名称 | 目标 | 状态 |
@@ -249,6 +264,7 @@ Studio 当前目标开发可继续快速推进，但必须受 `product_first_ui_
 | v1.0 | 整体实施基线 | 建立本文、文档层级、能力注册表、版本路线图、状态升级规则和总纲 validator | 当前目标 |
 | v1.1 | 中文治理与测试 lane | 清理核心治理文档中文本地化债务，稳定 `test_data_lane` 可回放链路 | 规划中 |
 | v1.2 | 项目群任务队列 | 建立跨项目调度、任务包队列和 `candidate_lane` 可审查机制 | 规划中 |
+| v1.3 | 交付效率控制 | 把高合规低进展、过细切片、治理证据吞没产品进展升级为项目群级 Delivery Loop 门禁 | 当前补强 |
 | v2.0 | 工程执行型 LOOP | 形成工程执行主进程，GFIS 运行层 SOP E2E 进入真实业务 lane 候选 | 阻塞中 |
 | v2.1 | 跨项目联动执行 | GPC、GFIS、KDS、WAES 形成可回放联动，candidate 到 real 的放行可验证 | 未启动 |
 | v3.0 | 受控自治运行 | 具备可回滚、可审计、可授权的受控自治，端到端绿色供应链闭环进入候选 | 未启动 |
@@ -359,6 +375,7 @@ Studio 当前目标开发可继续快速推进，但必须受 `product_first_ui_
 8. 证据边界：evidence JSON/Markdown、round record、loop-state、control board 对齐。
 9. 状态边界：不得越过当前 status ceiling。
 10. 能力边界：技能、工具、方法必须符合 `LOOP_CAPABILITY_REGISTRY.md`，且 `pilot` 以上状态变化必须有 evidence。
+11. 交付效率边界：Delivery Loop 必须满足 `product_delta`、`user_visible_delta`、`loop_cost_level`、`substantive_round`、`task_flow_e2e_status`、`evidence_overexposure_gate` 和 `delivery_efficiency_gate`，不得出现连续高合规低进展。
 
 ## 12. 自我提升机制
 
@@ -372,6 +389,7 @@ Studio 当前目标开发可继续快速推进，但必须受 `product_first_ui_
 - validator 漂移：例如 evidence schema 变化导致校验器误报或漏报。
 - 能力漂移：例如工具快速准入后缺少风险分级、证据、回滚、降级或停用路径。
 - 会话主线漂移：例如一个会话偏离当前主线，转去执行其它会话、其它项目或其它任务包的工作。
+- 交付效率漂移：例如连续多轮只有 governance_progress、没有 product_progress，或把普通微文案改动升级为完整 G2 治理轮。
 
 ## 13. 非声明边界
 

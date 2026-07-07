@@ -39,6 +39,7 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 - Governance Loop 使用 `run / stop / verify / recover / debug`。
 - Delivery Loop 使用 `goal / changed / verified / risk / next`。
 - 开发态默认 Delivery Loop；只有 guarded、blocked、状态提升、生产动作、阶段收口或触发 P0/P1 风险时才强制切换到 Governance Loop。
+- Delivery Loop 必须遵守 `LOOP_DELIVERY_EFFICIENCY_CONTROL.md`，记录 `product_delta`、`user_visible_delta`、`loop_cost_level`、`substantive_round`、`task_flow_e2e_status`、`evidence_overexposure_gate` 和 `delivery_efficiency_gate`，防止 `high_compliance_low_product_progress`。
 - `templates/loop-round-v2-five-direction.yaml` 仍是 Governance Loop 的标准模板；历史旧五段式 `输入 → 动作 → 输出 → 检查 → 反馈` 不得直接替代 Governance Loop 的 `run / stop / verify / recover / debug`。
 
 ## 编排流程
@@ -84,6 +85,10 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
    - Delivery Loop：
      ```text
      goal → changed → verified → risk → next
+     ```
+     并记录：
+     ```text
+     product_delta / user_visible_delta / loop_cost_level / substantive_round / task_flow_e2e_status / evidence_overexposure_gate / delivery_efficiency_gate
      ```
    - Governance Loop：
      ```text

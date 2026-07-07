@@ -89,6 +89,7 @@ PROJECT_GROUP_REAL_EXECUTION_CORE_DOCS = {
     "docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md",
     "docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md",
     "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
+    "02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md",
     "09-status/gpcf-project-status-matrix.md",
     "09-status/globalcloud-document-health-report.md",
     "09-status/globalcloud-project-group-real-execution-governance-board.md",
