@@ -1,43 +1,39 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-08T10:44:45.654220+08:00",
+  "generated_at": "2026-07-08T11:32:46.783872+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF",
+    "GlobalCloud AAAS",
+    "WAS世界资产体系",
     "GlobalCloud KDS"
   ],
-  "observed_ahead": [
-    "GlobalCloud Studio"
-  ],
+  "observed_ahead": [],
   "stable_dirty": [
+    "GlobalCloud AAAS",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "WAS世界资产体系"
   ],
-  "stable_ahead": [
-    "GlobalCloud Studio"
-  ],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
-  ],
+  "stable_ahead": [],
+  "volatile_dirty": [],
   "review_boundary": [
+    "GlobalCloud AAAS",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "WAS世界资产体系"
   ],
   "sensitive_repos": [],
   "pass_repo_count": 14,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-08T10:43:14.179135+08:00",
+  "previous_generated_at": "2026-07-08T11:24:57.915169+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        ".DS_Store"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud Brain": {
@@ -48,10 +44,12 @@
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        ".DS_Store"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XiaoC": {
@@ -76,127 +74,17 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 12,
-      "ahead": 58,
+      "dirty_count": 0,
+      "ahead": 0,
       "behind": 0,
-      "paths": [
-        "AGENTS.md",
-        "docs/harness/README.md",
-        "docs/harness/evidence/studio-loop-history-index.md",
-        "docs/harness/validation.md",
-        "packages/client/src/components/studio/SessionObjectPanel.vue",
-        "scripts/harness-check.mjs",
-        "tests/e2e/project-session-mvp.spec.ts",
-        "tools/kds-sync/loop_document_gate.py",
-        "docs/harness/LOOP_STUDIO_DELIVERY_EFFICIENCY_CONTROL.md",
-        "docs/harness/LOOP_STUDIO_PRODUCT_FIRST_CONTROL.md",
-        "docs/harness/loops/loop-round-GPCF-STUDIO-LR-400.md",
-        "tools/kds-sync/validate_studio_loop_control.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 96,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/00-\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\200\\273\\346\\216\\247/README.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/04-WAES/AGENTS.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/05-KDS/docs/governance/gpcf-2-implementation.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/12-GPCF/docs/standards/feature-workspace.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/globalcloud-document-control-register.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/09-status/kds-development-space-sync-register.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-002-project-group-feature-queue/evidence/summary.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-002-project-group-feature-queue/journal.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-003-evidence-gate-profile/evidence/summary.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-003-evidence-gate-profile/journal.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-004-loop-governance-slimming/journal.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/loops/execution_loop.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/loops/review_loop.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/projects/gfis/STATUS.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/projects/gpcf/RISK.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/projects/gpcf/ROADMAP.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/projects/gpcf/STATUS.md\"",
-        ".kds/local-mirror-ledger.jsonl",
-        "09-status/globalcloud-document-control-register.md",
-        "09-status/kds-development-space-sync-register.md",
-        "AGENTS.md",
-        "README.md",
-        "docs/governance/gpcf-2-implementation.md",
-        "docs/standards/feature-workspace.md",
-        "features/active/F-002-project-group-feature-queue/artifacts/.gitkeep",
-        "features/active/F-002-project-group-feature-queue/evidence/.gitkeep",
-        "features/active/F-002-project-group-feature-queue/evidence/api.txt",
-        "features/active/F-002-project-group-feature-queue/evidence/build.txt",
-        "features/active/F-002-project-group-feature-queue/evidence/screenshots.txt",
-        "features/active/F-002-project-group-feature-queue/evidence/summary.md",
-        "features/active/F-002-project-group-feature-queue/evidence/tests.txt",
-        "features/active/F-002-project-group-feature-queue/feature.yaml",
-        "features/active/F-002-project-group-feature-queue/journal.md",
-        "features/active/F-003-evidence-gate-profile/artifacts/.gitkeep",
-        "features/active/F-003-evidence-gate-profile/evidence/.gitkeep",
-        "features/active/F-003-evidence-gate-profile/evidence/api.txt",
-        "features/active/F-003-evidence-gate-profile/evidence/build.txt",
-        "features/active/F-003-evidence-gate-profile/evidence/screenshots.txt",
-        "features/active/F-003-evidence-gate-profile/evidence/summary.md",
-        "features/active/F-003-evidence-gate-profile/evidence/tests.txt",
-        "features/active/F-003-evidence-gate-profile/feature.yaml",
-        "features/active/F-003-evidence-gate-profile/journal.md",
-        "features/active/F-004-loop-governance-slimming/feature.yaml",
-        "features/active/F-004-loop-governance-slimming/journal.md",
-        "loops/execution_loop.md",
-        "loops/review_loop.md",
-        "projects/gfis/STATUS.md",
-        "projects/gpcf/RISK.md",
-        "projects/gpcf/ROADMAP.md",
-        "projects/gpcf/STATUS.md",
-        "runtime/queue.json",
-        "runtime/state.json",
-        "scripts/gpcf_check_evidence.py",
-        "scripts/gpcf_close_feature.py",
-        "scripts/gpcf_feature_lib.py",
-        "scripts/gpcf_run_loop.py",
-        "tools/kds-sync/document_control.py",
-        "tools/kds-sync/validate_gpcf_2_feature_workspace.py",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/active/F-005-factory-exception-intake-dry-run/journal.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-002-project-group-feature-queue/evidence/summary.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-002-project-group-feature-queue/journal.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-003-evidence-gate-profile/evidence/summary.md\"",
-        "\".kds/development-space/\\345\\274\\200\\345\\217\\221/91-\\346\\262\\273\\347\\220\\206\\344\\270\\216\\351\\252\\214\\346\\224\\266/features/done/F-003-evidence-gate-profile/journal.md\"",
-        "features/active/F-005-factory-exception-intake-dry-run/artifacts/.gitkeep",
-        "features/active/F-005-factory-exception-intake-dry-run/evidence/.gitkeep",
-        "features/active/F-005-factory-exception-intake-dry-run/evidence/api.txt",
-        "features/active/F-005-factory-exception-intake-dry-run/evidence/build.txt",
-        "features/active/F-005-factory-exception-intake-dry-run/evidence/screenshots.txt",
-        "features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md",
-        "features/active/F-005-factory-exception-intake-dry-run/evidence/tests.txt",
-        "features/active/F-005-factory-exception-intake-dry-run/feature.yaml",
-        "features/active/F-005-factory-exception-intake-dry-run/journal.md",
-        "features/done/F-002-project-group-feature-queue/artifacts/.gitkeep",
-        "features/done/F-002-project-group-feature-queue/evidence/.gitkeep",
-        "features/done/F-002-project-group-feature-queue/evidence/api.txt",
-        "features/done/F-002-project-group-feature-queue/evidence/build.txt",
-        "features/done/F-002-project-group-feature-queue/evidence/screenshots.txt",
-        "features/done/F-002-project-group-feature-queue/evidence/summary.md",
-        "features/done/F-002-project-group-feature-queue/evidence/tests.txt",
-        "features/done/F-002-project-group-feature-queue/feature.yaml",
-        "features/done/F-002-project-group-feature-queue/journal.md",
-        "features/done/F-003-evidence-gate-profile/artifacts/.gitkeep",
-        "features/done/F-003-evidence-gate-profile/evidence/.gitkeep",
-        "features/done/F-003-evidence-gate-profile/evidence/api.txt",
-        "features/done/F-003-evidence-gate-profile/evidence/build.txt",
-        "features/done/F-003-evidence-gate-profile/evidence/screenshots.txt",
-        "features/done/F-003-evidence-gate-profile/evidence/summary.md",
-        "features/done/F-003-evidence-gate-profile/evidence/tests.txt",
-        "features/done/F-003-evidence-gate-profile/feature.yaml",
-        "features/done/F-003-evidence-gate-profile/journal.md",
-        "runtime/logs/F-002.jsonl",
-        "runtime/logs/F-003.jsonl",
-        "runtime/logs/F-004.jsonl",
-        "runtime/logs/F-005.jsonl",
-        "scripts/gpcf_dispatch.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
@@ -221,7 +109,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 16,
+      "dirty_count": 28,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -240,7 +128,19 @@
         "_governance/sync-runs/macmini-workwiki-20260708-064150/remote-md.sha256",
         "_governance/sync-runs/macmini-workwiki-20260708-064150/remote-only.txt",
         "_governance/sync-runs/macmini-workwiki-20260708-064150/report.md",
-        "_governance/sync-runs/macmini-workwiki-20260708-064150/rsync.log"
+        "_governance/sync-runs/macmini-workwiki-20260708-064150/rsync.log",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/changed.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/frontmatter-audit.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/gbrain-refresh.log",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/local-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/local-md.sha256",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/local-only.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/remote-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/remote-identity.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/remote-md.sha256",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/remote-only.txt",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/report.md",
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/rsync.log"
       ],
       "sensitive_paths": []
     },
