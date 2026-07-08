@@ -41,6 +41,22 @@ PROJECTS = {
 }
 PRIORITIES = {"P0", "P1", "P2", "P3"}
 STEPS = ["plan", "implement", "evaluate", "repair", "commit"]
+ROLES = ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"]
+ROLE_BY_STEP = {
+    "plan": "Planner",
+    "implement": "Builder",
+    "evaluate": "Evaluator",
+    "repair": "Repair",
+    "commit": "Recorder",
+}
+STEP_BY_ROLE = {
+    "Dispatcher": "plan",
+    "Planner": "plan",
+    "Builder": "implement",
+    "Evaluator": "evaluate",
+    "Repair": "repair",
+    "Recorder": "commit",
+}
 PASSING_EVIDENCE = {"pass", "waived"}
 FEATURE_ID_RE = re.compile(r"^F-(\d{3})")
 
@@ -67,7 +83,7 @@ def ensure_base_dirs() -> None:
                 "schema_version": "2.0",
                 "mode": "feature_delivery",
                 "current_feature": None,
-                "roles": ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"],
+                "roles": ROLES,
             },
         )
 
@@ -108,7 +124,13 @@ def enqueue_feature(data: dict[str, Any], feature_dir: Path) -> None:
     refresh_runtime_state()
 
 
-def update_queue_entry(feature_id: str, *, status: str | None = None, role: str | None = None) -> None:
+def update_queue_entry(
+    feature_id: str,
+    *,
+    status: str | None = None,
+    role: str | None = None,
+    workspace: str | None = None,
+) -> None:
     ensure_base_dirs()
     queue = read_json(QUEUE_FILE, {"schema_version": "2.0", "queue": []})
     for entry in queue.get("queue", []):
@@ -117,6 +139,8 @@ def update_queue_entry(feature_id: str, *, status: str | None = None, role: str 
                 entry["status"] = status
             if role:
                 entry["current_role"] = role
+            if workspace:
+                entry["workspace"] = workspace
             entry["updated_at"] = now()
             break
     write_json(QUEUE_FILE, queue)
@@ -136,7 +160,7 @@ def refresh_runtime_state() -> None:
             "schema_version": "2.0",
             "mode": "feature_delivery",
             "current_feature": None,
-            "roles": ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"],
+            "roles": ROLES,
         },
     )
     state.update(
@@ -149,8 +173,38 @@ def refresh_runtime_state() -> None:
             "updated_at": now(),
         }
     )
-    state.setdefault("roles", ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"])
+    state.setdefault("roles", ROLES)
     write_json(STATE_FILE, state)
+
+
+def queue_entries() -> list[dict[str, Any]]:
+    ensure_base_dirs()
+    queue = read_json(QUEUE_FILE, {"schema_version": "2.0", "queue": []})
+    return list(queue.get("queue", []))
+
+
+def append_runtime_log(
+    feature_id: str,
+    *,
+    role: str,
+    status: str,
+    input_summary: str,
+    output_summary: str,
+    evidence: str,
+) -> None:
+    ensure_base_dirs()
+    entry = {
+        "timestamp": now(),
+        "feature_id": feature_id,
+        "role": role,
+        "status": status,
+        "input": input_summary,
+        "output": output_summary,
+        "evidence": evidence,
+    }
+    path = RUNTIME / "logs" / f"{feature_id}.jsonl"
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
 def feature_dirs() -> list[Path]:

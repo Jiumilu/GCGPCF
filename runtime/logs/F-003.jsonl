@@ -1,0 +1,2 @@
+{"timestamp": "2026-07-08T00:02:28+00:00", "feature_id": "F-003", "role": "Evaluator", "status": "commit", "input": "推进 Evidence Gate 样本进入 Recorder 候选。", "output": "Evaluator -> Recorder；status=commit", "evidence": "feature.yaml evidence=pass/waived；runtime queue。"}
+{"timestamp": "2026-07-08T02:42:07+00:00", "feature_id": "F-003", "role": "Recorder", "status": "closed", "input": "Evidence Gate 已通过。", "output": "Feature 已移动到 features/done/F-003-evidence-gate-profile。", "evidence": "feature.yaml status=done；queue status=closed。"}

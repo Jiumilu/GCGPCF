@@ -1,0 +1,1 @@
+{"timestamp": "2026-07-08T00:02:28+00:00", "feature_id": "F-002", "role": "Recorder", "status": "closed", "input": "Evidence Gate 已通过。", "output": "Feature 已移动到 features/done/F-002-project-group-feature-queue。", "evidence": "feature.yaml status=done；queue status=closed。"}

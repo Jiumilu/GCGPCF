@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1973 | 1850 | 已建空间 |
+| GPCF | 12-GPCF | 1975 | 1850 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -48,7 +48,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 171 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 173 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -1045,7 +1045,7 @@ superseded_by: []
 | GPCF-DOC-1946E4144B | WAES Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | KDS | GFIS, GPC, WAES, KDS, Brain | docs | controlled | 开发/05-KDS/docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md |
 | GPCF-DOC-CC2C02D1FB | GPCF 2.0 治理 | docs/governance/README.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/governance/README.md |
 | GPCF-DOC-94532311B5 | GPCF 2.0 治理文件收敛清单 | docs/governance/gpcf-2-governance-file-inventory.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/governance/gpcf-2-governance-file-inventory.md |
-| GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/governance/gpcf-2-implementation.md |
+| GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/governance/gpcf-2-implementation.md |
 | GPCF-DOC-92A4C970C1 | AaaS | docs/harness/AaaS/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/AaaS/README.md |
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/AaaS/evidence/README.md |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md |
@@ -3106,14 +3106,16 @@ superseded_by: []
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/tasks/README.md |
 | GPCF-DOC-AE29585A23 | GPCF 2.0 标准 | docs/standards/README.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/standards/README.md |
 | GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/standards/feature-workspace.md |
-| GPCF-DOC-87C12A1121 | 证据摘要 | features/active/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-002-project-group-feature-queue/evidence/summary.md |
-| GPCF-DOC-EA15CD5231 | F-002 project-group-feature-queue | features/active/F-002-project-group-feature-queue/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-002-project-group-feature-queue/journal.md |
-| GPCF-DOC-CEC0E2AC3F | 证据摘要 | features/active/F-003-evidence-gate-profile/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-003-evidence-gate-profile/evidence/summary.md |
-| GPCF-DOC-C38007BF35 | F-003 evidence-gate-profile | features/active/F-003-evidence-gate-profile/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-003-evidence-gate-profile/journal.md |
 | GPCF-DOC-4B430A4564 | 证据摘要 | features/active/F-004-loop-governance-slimming/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/evidence/summary.md |
 | GPCF-DOC-818D26D88F | F-004 loop-governance-slimming | features/active/F-004-loop-governance-slimming/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/journal.md |
+| GPCF-DOC-C853A45195 | 证据摘要 | features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md |
+| GPCF-DOC-D84CBF8493 | F-005 factory-exception-intake-dry-run | features/active/F-005-factory-exception-intake-dry-run/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |
+| GPCF-DOC-87C12A1121 | 证据摘要 | features/done/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md |
+| GPCF-DOC-EA15CD5231 | F-002 project-group-feature-queue | features/done/F-002-project-group-feature-queue/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/journal.md |
+| GPCF-DOC-CEC0E2AC3F | 证据摘要 | features/done/F-003-evidence-gate-profile/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/done/F-003-evidence-gate-profile/evidence/summary.md |
+| GPCF-DOC-C38007BF35 | F-003 evidence-gate-profile | features/done/F-003-evidence-gate-profile/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/91-治理与验收/features/done/F-003-evidence-gate-profile/journal.md |
 | GPCF-DOC-25ADFEBCF8 | cognee | loop/context/cognee/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/loop/context/cognee/README.md |
 | GPCF-DOC-6BA1B0CCA6 | harness | loop/context/cognee/harness/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/loop/context/cognee/harness/README.md |
 | GPCF-DOC-7A2A6D4F05 | p1-recall-comparison-template | loop/context/cognee/harness/p1-recall-comparison-template.md | GPCF | GPCF | general | controlled | 开发/12-GPCF/loop/context/cognee/harness/p1-recall-comparison-template.md |

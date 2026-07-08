@@ -86,3 +86,25 @@ waived
 ```
 
 `waived` 只能用于 scope 不适用的截图或接口证据，并必须在 evidence 文件中写明原因。`fail` 或 `pending` 均不得关闭 Feature。
+
+## Runtime 日志
+
+Feature 调度必须写入：
+
+```text
+runtime/logs/F-xxx.jsonl
+```
+
+每条日志至少记录：
+
+```text
+timestamp
+feature_id
+role
+status
+input
+output
+evidence
+```
+
+日志只记录角色输入、输出、证据和状态变化，不替代 `feature.yaml` 和 `journal.md`。

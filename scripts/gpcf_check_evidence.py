@@ -12,6 +12,7 @@ from gpcf_feature_lib import append_journal, feature_file, find_feature, read_fe
 SCRIPT_CHECKS = [
     "scripts/gpcf_feature_lib.py",
     "scripts/gpcf_new_feature.py",
+    "scripts/gpcf_dispatch.py",
     "scripts/gpcf_run_loop.py",
     "scripts/gpcf_check_evidence.py",
     "scripts/gpcf_close_feature.py",

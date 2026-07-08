@@ -55,6 +55,7 @@ EVIDENCE_FIELDS = ["tests", "build", "screenshots", "api", "summary"]
 EVIDENCE_STATUS = {"pending", "pass", "fail", "waived", "not_required"}
 SCRIPTS = [
     "scripts/gpcf_new_feature.py",
+    "scripts/gpcf_dispatch.py",
     "scripts/gpcf_run_loop.py",
     "scripts/gpcf_check_evidence.py",
     "scripts/gpcf_close_feature.py",
@@ -128,8 +129,24 @@ def main() -> int:
     require(runtime_state.get("mode") == "feature_delivery", "runtime/state.json mode must be feature_delivery")
     require(isinstance(runtime_queue.get("queue"), list), "runtime/queue.json queue must be a list")
     queued_ids = {entry.get("id") for entry in runtime_queue.get("queue", [])}
+    entries_by_id = {entry.get("id"): entry for entry in runtime_queue.get("queue", [])}
     for role in ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"]:
         require(role in runtime_state.get("roles", []), f"runtime/state.json missing role: {role}")
+    require("F-002" in entries_by_id, "runtime queue must keep F-002 close history")
+    require(entries_by_id["F-002"].get("status") == "closed", "F-002 must be closed in runtime queue")
+    require(entries_by_id["F-002"].get("current_role") == "Recorder", "F-002 must end at Recorder")
+    require("F-003" in entries_by_id, "runtime queue must keep F-003 close history")
+    require(entries_by_id["F-003"].get("status") == "closed", "F-003 must be closed in runtime queue")
+    require(entries_by_id["F-003"].get("current_role") == "Recorder", "F-003 must end at Recorder")
+    require("F-005" in entries_by_id, "runtime queue must include F-005 business chain sample")
+    require(entries_by_id["F-005"].get("current_role") == "Recorder", "F-005 must reach Recorder")
+    require((ROOT / "runtime/logs/F-002.jsonl").exists(), "missing runtime log for F-002")
+    f002_log = read("runtime/logs/F-002.jsonl")
+    for phrase in ["Recorder", "closed", "Evidence Gate"]:
+        require(phrase in f002_log, f"F-002 runtime log missing phrase: {phrase}")
+    f005_log = read("runtime/logs/F-005.jsonl")
+    for role in ["Dispatcher", "Planner", "Builder", "Evaluator", "Repair", "Recorder"]:
+        require(f'"role": "{role}"' in f005_log, f"F-005 runtime log missing role: {role}")
 
     implementation = read("docs/governance/gpcf-2-implementation.md")
     inventory = read("docs/governance/gpcf-2-governance-file-inventory.md")
@@ -157,6 +174,7 @@ def main() -> int:
     for phrase in [
         "python scripts/gpcf_new_feature.py",
         "python scripts/gpcf_close_feature.py",
+        "gpcf_dispatch.py",
         "Feature 做交付",
         "validate_gpcf_2_feature_workspace.py",
     ]:
@@ -169,7 +187,10 @@ def main() -> int:
         if path.is_dir() and path.name.startswith("F-")
     ]
     active_feature_dirs = [path for path in (ROOT / "features/active").iterdir() if path.is_dir() and path.name.startswith("F-")]
-    require(len(active_feature_dirs) >= 3, "GPCF 2.0 must keep at least 3 active real Feature samples")
+    done_feature_dirs = [path for path in (ROOT / "features/done").iterdir() if path.is_dir() and path.name.startswith("F-")]
+    require(len(active_feature_dirs) >= 2, "GPCF 2.0 must keep at least 2 active Feature samples after closing one")
+    require(any(path.name.startswith("F-002-") for path in done_feature_dirs), "F-002 must be closed into features/done")
+    require(any(path.name.startswith("F-003-") for path in done_feature_dirs), "F-003 must be closed into features/done")
     for path in feature_dirs:
         validate_feature_dir(path)
         data = read_feature(path / "feature.yaml")

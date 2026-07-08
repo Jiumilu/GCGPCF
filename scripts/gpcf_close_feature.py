@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 
-from gpcf_feature_lib import ACTIVE, append_journal, evidence_complete, feature_file, find_feature, move_feature_to_done, read_feature, update_queue_entry, write_feature
+from gpcf_feature_lib import ACTIVE, append_journal, append_runtime_log, evidence_complete, feature_file, find_feature, move_feature_to_done, read_feature, update_queue_entry, write_feature
 
 
 def main() -> int:
@@ -29,16 +29,25 @@ def main() -> int:
         feature_dir,
         iteration=data["loop"]["iteration"],
         answers=[
-            "Close Feature through Evidence Gate.",
-            "Marked feature.yaml status as done.",
-            "Verified all evidence fields are pass or waived.",
-            "No close blocker found.",
-            "yes, as submit candidate only; commit/push still require explicit authorization.",
+            "通过 Evidence Gate 关闭 Feature。",
+            "将 feature.yaml 状态标记为 done。",
+            "验证所有 evidence 字段均为 pass 或 waived。",
+            "未发现关闭阻塞项。",
+            "是，仅作为提交候选；commit/push 仍需明确授权。",
         ],
     )
     target = move_feature_to_done(feature_dir)
-    update_queue_entry(data["id"], status="closed", role="Recorder")
-    print(f"feature_closed={data['id']} path={target.relative_to(ACTIVE.parents[1])}")
+    target_rel = target.relative_to(ACTIVE.parents[1]).as_posix()
+    update_queue_entry(data["id"], status="closed", role="Recorder", workspace=target_rel)
+    append_runtime_log(
+        data["id"],
+        role="Recorder",
+        status="closed",
+        input_summary="Evidence Gate 已通过。",
+        output_summary=f"Feature 已移动到 {target_rel}。",
+        evidence="feature.yaml status=done；queue status=closed。",
+    )
+    print(f"feature_closed={data['id']} path={target_rel}")
     return 0
 
 

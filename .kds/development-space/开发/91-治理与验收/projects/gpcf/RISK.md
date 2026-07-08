@@ -25,3 +25,4 @@ superseded_by: []
 - 历史 Markdown 体量仍重，必须继续降级归档而非新增过程文档。
 - Evidence Gate 已增强，但各业务项目的真实 test/build/UI/API 命令仍需逐项接入。
 - GPCF 只做项目群轻治理和节奏控制，不能替代各项目本地实时开发控制。
+- Runtime 调度仍是轻量状态机，尚未替代真实多 Agent 并行执行引擎。

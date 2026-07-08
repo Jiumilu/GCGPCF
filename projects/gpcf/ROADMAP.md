@@ -26,3 +26,4 @@ superseded_by: []
 - Phase 2：所有新开发从 `features/active/F-xxx/` 进入。
 - Phase 3：以 `runtime/queue.json` 驱动 Dispatcher 到 Recorder 的轻量流转。
 - Phase 4：Evidence Gate 以本地可回放结果决定 Feature 是否可关闭。
+- Phase 5：通过 `gpcf_dispatch.py` 推进角色状态机，并用 `runtime/logs/F-xxx.jsonl` 记录每轮角色输入、输出和证据。

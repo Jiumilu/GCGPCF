@@ -48,3 +48,15 @@ Dispatcher -> Planner -> Builder -> Evaluator -> Repair -> Recorder
 ```
 
 Loop 只更新 Feature Workspace 和 runtime 状态，不创建额外过程文档。
+
+Runtime 调度命令：
+
+```bash
+python scripts/gpcf_dispatch.py <FEATURE_ID>
+```
+
+关闭命令：
+
+```bash
+python scripts/gpcf_close_feature.py <FEATURE_ID>
+```

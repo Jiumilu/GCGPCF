@@ -60,3 +60,9 @@ GPCF 2.0 Evidence Gate：
 ```bash
 python scripts/gpcf_check_evidence.py F-001
 ```
+
+GPCF 2.0 Runtime 调度：
+
+```bash
+python scripts/gpcf_dispatch.py F-001
+```

@@ -6,33 +6,44 @@
       "name": "project-group-feature-queue",
       "project": "gpcf",
       "priority": "P0",
-      "status": "evaluated",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-002-project-group-feature-queue",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-002-project-group-feature-queue",
       "created_at": "2026-07-07T23:24:58+00:00",
-      "updated_at": "2026-07-07T23:31:52+00:00"
+      "updated_at": "2026-07-08T00:02:28+00:00"
     },
     {
       "id": "F-003",
       "name": "evidence-gate-profile",
       "project": "gpcf",
       "priority": "P0",
-      "status": "evaluated",
-      "current_role": "Evaluator",
-      "workspace": "features/active/F-003-evidence-gate-profile",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-003-evidence-gate-profile",
       "created_at": "2026-07-07T23:24:58+00:00",
-      "updated_at": "2026-07-07T23:31:52+00:00"
+      "updated_at": "2026-07-08T02:42:07+00:00"
+    },
+    {
+      "id": "F-005",
+      "name": "factory-exception-intake-dry-run",
+      "project": "gfis",
+      "priority": "P0",
+      "status": "commit",
+      "current_role": "Recorder",
+      "workspace": "features/active/F-005-factory-exception-intake-dry-run",
+      "created_at": "2026-07-08T02:41:12+00:00",
+      "updated_at": "2026-07-08T02:44:08+00:00"
     },
     {
       "id": "F-004",
       "name": "loop-governance-slimming",
       "project": "gpcf",
       "priority": "P1",
-      "status": "evaluated",
-      "current_role": "Evaluator",
+      "status": "commit",
+      "current_role": "Recorder",
       "workspace": "features/active/F-004-loop-governance-slimming",
       "created_at": "2026-07-07T23:24:58+00:00",
-      "updated_at": "2026-07-07T23:31:52+00:00"
+      "updated_at": "2026-07-08T00:02:28+00:00"
     }
   ]
 }

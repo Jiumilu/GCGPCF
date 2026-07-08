@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1973 | 1850 | 已建空间 |
+| GPCF | 12-GPCF | 1975 | 1850 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 
 ## KDS 公共空间文档统计
@@ -52,7 +52,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 171 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 173 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3110,14 +3110,16 @@ superseded_by: []
 | GPCF-DOC-5FE5ED4E8B | docs/harness/tasks/README.md | 开发/05-KDS/docs/harness/tasks/README.md | bidirectional | pending_api |
 | GPCF-DOC-AE29585A23 | docs/standards/README.md | 开发/12-GPCF/docs/standards/README.md | bidirectional | pending_api |
 | GPCF-DOC-E6A5B97688 | docs/standards/feature-workspace.md | 开发/12-GPCF/docs/standards/feature-workspace.md | bidirectional | pending_api |
-| GPCF-DOC-87C12A1121 | features/active/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/active/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
-| GPCF-DOC-EA15CD5231 | features/active/F-002-project-group-feature-queue/journal.md | 开发/91-治理与验收/features/active/F-002-project-group-feature-queue/journal.md | bidirectional | pending_api |
-| GPCF-DOC-CEC0E2AC3F | features/active/F-003-evidence-gate-profile/evidence/summary.md | 开发/91-治理与验收/features/active/F-003-evidence-gate-profile/evidence/summary.md | bidirectional | pending_api |
-| GPCF-DOC-C38007BF35 | features/active/F-003-evidence-gate-profile/journal.md | 开发/91-治理与验收/features/active/F-003-evidence-gate-profile/journal.md | bidirectional | pending_api |
 | GPCF-DOC-4B430A4564 | features/active/F-004-loop-governance-slimming/evidence/summary.md | 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-818D26D88F | features/active/F-004-loop-governance-slimming/journal.md | 开发/91-治理与验收/features/active/F-004-loop-governance-slimming/journal.md | bidirectional | pending_api |
+| GPCF-DOC-C853A45195 | features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-D84CBF8493 | features/active/F-005-factory-exception-intake-dry-run/journal.md | 开发/91-治理与验收/features/active/F-005-factory-exception-intake-dry-run/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
+| GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-EA15CD5231 | features/done/F-002-project-group-feature-queue/journal.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/journal.md | bidirectional | pending_api |
+| GPCF-DOC-CEC0E2AC3F | features/done/F-003-evidence-gate-profile/evidence/summary.md | 开发/91-治理与验收/features/done/F-003-evidence-gate-profile/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-C38007BF35 | features/done/F-003-evidence-gate-profile/journal.md | 开发/91-治理与验收/features/done/F-003-evidence-gate-profile/journal.md | bidirectional | pending_api |
 | GPCF-DOC-25ADFEBCF8 | loop/context/cognee/README.md | 开发/02-GPC/loop/context/cognee/README.md | bidirectional | pending_api |
 | GPCF-DOC-6BA1B0CCA6 | loop/context/cognee/harness/README.md | 开发/02-GPC/loop/context/cognee/harness/README.md | bidirectional | pending_api |
 | GPCF-DOC-7A2A6D4F05 | loop/context/cognee/harness/p1-recall-comparison-template.md | 开发/12-GPCF/loop/context/cognee/harness/p1-recall-comparison-template.md | bidirectional | pending_api |

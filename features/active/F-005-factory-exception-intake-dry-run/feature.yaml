@@ -1,0 +1,32 @@
+id: F-005
+name: factory-exception-intake-dry-run
+project: gfis
+status: active
+goal: 建立 GFIS 生产异常接入 dry-run Feature，验证业务 Feature 可通过 GPCF 2.0 Runtime 完整角色链推进
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+    - GFIS 生产异常接入 dry-run 业务样本
+    - 异常来源、责任角色、处理状态、证据摘要的最小字段说明
+    - GPCF Runtime 完整角色链日志
+  out:
+    - 真实工厂系统写入
+    - 真实外部服务调用
+    - 生产发布或客户验收
+acceptance:
+  - runtime/logs/F-005.jsonl 包含 Dispatcher、Planner、Builder、Evaluator、Repair、Recorder
+  - Evidence Gate 结果为 pass 或 waived
+  - Feature 保持 active，作为业务样本候选，不做状态提升
+loop:
+  current_step: commit
+  iteration: 13
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-08T02:41:12+00:00"
+updated_at: "2026-07-08T02:44:08+00:00"

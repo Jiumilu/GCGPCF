@@ -747,7 +747,8 @@ def mirror_scope_to_kds(records: list[dict[str, object]]) -> None:
                 entry = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            if str(entry.get("source_path", "")) not in scoped_sources:
+            source_path = str(entry.get("source_path", ""))
+            if source_path not in scoped_sources and (ROOT / source_path).exists():
                 existing_entries.append(entry)
     entries = []
     for r in records:

@@ -1,7 +1,7 @@
 id: F-002
 name: project-group-feature-queue
 project: gpcf
-status: active
+status: done
 goal: 建立项目群 Feature 队列样本，验证 Dispatcher 到 Feature Workspace 的真实入口
 owner: agent-dev-01
 priority: P0
@@ -18,8 +18,8 @@ acceptance:
   - runtime/state.json 显示 feature_delivery 模式和 active_feature_count
   - validator 能检查 active Feature 与队列一致
 loop:
-  current_step: evaluate
-  iteration: 5
+  current_step: commit
+  iteration: 6
 evidence:
   tests: pass
   build: pass
@@ -28,4 +28,4 @@ evidence:
   summary: pass
 blockers:
 created_at: "2026-07-07T23:24:58+00:00"
-updated_at: "2026-07-07T23:31:52+00:00"
+updated_at: "2026-07-08T00:02:28+00:00"

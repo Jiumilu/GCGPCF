@@ -19,3 +19,10 @@ superseded_by: []
 # GFIS 状态
 
 本文件只记录 GFIS 的当前项目节奏状态。功能级进度、证据、阻塞和关闭状态统一由 features 目录中的 feature.yaml 承载。
+
+## 当前 GPCF 2.0 样本
+
+- `F-005 factory-exception-intake-dry-run` 已作为 GFIS 业务 Feature 样本进入 GPCF Runtime。
+- 当前状态：`commit / Recorder`。
+- 证据状态：tests、build、summary 为 pass；screenshots、api 为 waived。
+- 本样本不代表真实工厂系统写入、生产发布或客户验收。

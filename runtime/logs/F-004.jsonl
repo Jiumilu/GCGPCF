@@ -1,0 +1,1 @@
+{"timestamp": "2026-07-08T00:02:28+00:00", "feature_id": "F-004", "role": "Evaluator", "status": "commit", "input": "推进治理瘦身样本进入 Recorder 候选。", "output": "Evaluator -> Recorder；status=commit", "evidence": "feature.yaml evidence=pass/waived；runtime queue。"}

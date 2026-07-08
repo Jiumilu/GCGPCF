@@ -23,6 +23,10 @@ superseded_by: []
 ## 当前状态
 
 - GPCF 2.0 已进入 Feature 运行态。
-- 当前 active Feature：`F-002`、`F-003`、`F-004`。
+- 当前出口验证 Feature：`F-002` 关闭到 `features/done/`。
+- 第二个出口验证 Feature：`F-003` 关闭到 `features/done/`。
+- 当前 active Feature：`F-004`、`F-005`。
 - 调度状态写入 `runtime/queue.json` 和 `runtime/state.json`。
+- 角色流转日志写入 `runtime/logs/F-xxx.jsonl`。
+- `F-005` 已作为 GFIS 业务样本跑通完整角色链。
 - 本阶段不授权自动 commit、push、deploy、真实 API、真实 KDS API 或状态提升。

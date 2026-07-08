@@ -78,3 +78,11 @@ runtime/state.json
 ```
 
 Evidence Gate 必须由 `python scripts/gpcf_check_evidence.py <FEATURE_ID>` 产生本地可回放结果。非适用证据只能写为 `waived` 并说明原因；不得用默认 `not_required` 替代测试、构建、lint 或范围证据。
+
+Runtime 调度必须优先使用：
+
+```bash
+python scripts/gpcf_dispatch.py <FEATURE_ID>
+```
+
+每次角色流转必须写入 `runtime/logs/F-xxx.jsonl`。关闭 Feature 必须通过 `python scripts/gpcf_close_feature.py <FEATURE_ID>`，关闭后 queue 状态为 `closed`，角色为 `Recorder`。

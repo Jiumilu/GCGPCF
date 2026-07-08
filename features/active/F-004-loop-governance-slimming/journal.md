@@ -97,3 +97,16 @@ superseded_by: []
    - 未发现阻塞项。
 5. 是否可以提交？
    - 是，前提是 close gate 通过。
+
+### Iteration 6
+
+1. 这轮做什么？
+   - Evaluator 执行 runtime 调度。
+2. 改了什么？
+   - Evaluator -> Recorder；status=commit
+3. 怎么验证？
+   - feature.yaml evidence=pass/waived；runtime queue。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
