@@ -1,7 +1,7 @@
 id: F-006
 name: knowledge-e2e-flow
 project: brain
-status: active
+status: done
 goal: 完成 Brain 知识治理端到端产品功能闭环：搜索→WikiPreview→Review/Tasks 派生→Reports 生成
 owner: agent-dev-01
 priority: P1
@@ -11,7 +11,7 @@ scope:
 acceptance:
 loop:
   current_step: commit
-  iteration: 3
+  iteration: 4
 evidence:
   tests: pass
   build: pass
@@ -20,4 +20,4 @@ evidence:
   summary: pass
 blockers:
 created_at: "2026-07-09T13:19:16+00:00"
-updated_at: "2026-07-09T13:32:15+00:00"
+updated_at: "2026-07-09T16:28:16+00:00"
