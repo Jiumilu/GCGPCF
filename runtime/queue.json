@@ -44,6 +44,17 @@
       "workspace": "features/active/F-004-loop-governance-slimming",
       "created_at": "2026-07-07T23:24:58+00:00",
       "updated_at": "2026-07-08T00:02:28+00:00"
+    },
+    {
+      "id": "F-006",
+      "name": "knowledge-e2e-flow",
+      "project": "brain",
+      "priority": "P1",
+      "status": "commit",
+      "current_role": "Recorder",
+      "workspace": "features/active/F-006-knowledge-e2e-flow",
+      "created_at": "2026-07-09T13:19:16+00:00",
+      "updated_at": "2026-07-09T13:32:15+00:00"
     }
   ]
 }
