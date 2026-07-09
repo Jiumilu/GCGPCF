@@ -1,0 +1,23 @@
+id: F-007
+name: reports-data-flow
+project: brain
+status: active
+goal: 打通 ReportsPanel 与 Review/Tasks 数据流断点，形成完整知识治理端到端闭环
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: commit
+  iteration: 3
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-09T16:32:44+00:00"
+updated_at: "2026-07-09T16:38:22+00:00"
