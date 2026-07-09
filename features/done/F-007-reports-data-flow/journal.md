@@ -53,3 +53,16 @@
    - 未发现调度阻塞项。
 5. 是否可以提交？
    - 否，commit/push 仍需明确授权。
+
+### Iteration 4
+
+1. 这轮做什么？
+   - 通过 Evidence Gate 关闭 Feature。
+2. 改了什么？
+   - 将 feature.yaml 状态标记为 done。
+3. 怎么验证？
+   - 验证所有 evidence 字段均为 pass 或 waived。
+4. 发现什么问题？
+   - 未发现关闭阻塞项。
+5. 是否可以提交？
+   - 是，仅作为提交候选；commit/push 仍需明确授权。

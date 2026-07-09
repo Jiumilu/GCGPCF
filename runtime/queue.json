@@ -61,11 +61,11 @@
       "name": "reports-data-flow",
       "project": "brain",
       "priority": "P1",
-      "status": "commit",
+      "status": "closed",
       "current_role": "Recorder",
-      "workspace": "features/active/F-007-reports-data-flow",
+      "workspace": "features/done/F-007-reports-data-flow",
       "created_at": "2026-07-09T16:32:44+00:00",
-      "updated_at": "2026-07-09T16:38:22+00:00"
+      "updated_at": "2026-07-09T23:30:09+00:00"
     }
   ]
 }
