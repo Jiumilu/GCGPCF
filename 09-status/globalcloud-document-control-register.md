@@ -56,6 +56,7 @@ superseded_by: []
 
 | doc_id | title | source_path | project | related_projects | domain | status | kds_path |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD | governance | controlled | 开发/12-GPCF/docs/harness/globalcloud-zcode-codex-collaboration-scheme.md |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/README.md |
 | GPCF-DOC-B6A5C4D3E2 | SKILL | .agents/skills/impeccable/SKILL.md | GPCF | GPCF | general | controlled | 开发/12-GPCF/.agents/skills/impeccable/SKILL.md |
 | GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/reference/README.md |

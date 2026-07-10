@@ -1,31 +1,46 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-08T11:32:46.783872+08:00",
+  "generated_at": "2026-07-10T07:44:44.703139+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud AAAS",
+    "GlobalCloud Brain",
     "WAS世界资产体系",
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF",
     "GlobalCloud KDS"
   ],
-  "observed_ahead": [],
+  "observed_ahead": [
+    "GlobalCloud Studio"
+  ],
   "stable_dirty": [
     "GlobalCloud AAAS",
+    "GlobalCloud Brain",
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
-  "stable_ahead": [],
-  "volatile_dirty": [],
+  "stable_ahead": [
+    "GlobalCloud Studio"
+  ],
+  "volatile_dirty": [
+    "GlobalCoud GPCF"
+  ],
   "review_boundary": [
     "GlobalCloud AAAS",
+    "GlobalCloud Brain",
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
+    "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 14,
+  "pass_repo_count": 11,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-08T11:24:57.915169+08:00",
+  "previous_generated_at": "2026-07-10T07:43:02.424481+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 1,
@@ -37,10 +52,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud Brain": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        ".zcode/plans/plan-sess_ca26b593-0d2f-4a59-a272-32da3f23538b.md"
+      ],
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
@@ -74,17 +91,34 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 0,
-      "ahead": 0,
+      "dirty_count": 5,
+      "ahead": 2,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "docs/harness/evidence/studio-loop-history-index.md",
+        "packages/client/src/components/studio/SessionObjectPanel.vue",
+        "tests/client/session-object-panel.test.ts",
+        "tests/e2e/project-session-mvp.spec.ts",
+        "docs/harness/loops/loop-round-GPCF-STUDIO-LR-403.md"
+      ],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 0,
+      "dirty_count": 10,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "09-status/globalcloud-document-control-register.md",
+        ".zcode/commands/evidence.md",
+        ".zcode/commands/loop.md",
+        ".zcode/commands/propose.md",
+        ".zcode/commands/status.md",
+        ".zcode/commands/sync-kds.md",
+        ".zcode/config.json",
+        ".zcode/hooks/session-start.sh",
+        ".zcode/hooks/stop-gate.sh",
+        "docs/harness/globalcloud-zcode-codex-collaboration-scheme.md"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
@@ -109,14 +143,22 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 28,
+      "dirty_count": 40,
       "ahead": 0,
       "behind": 0,
       "paths": [
+        "_governance/graph-health/kds-graph-health-current.json",
+        "_governance/graph-health/kds-graph-health-current.md",
         "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260708-073213/report.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260710-074205/report.md",
+        "_governance/kds-daily-reports/kds-daily-2026-07-08.md",
+        "_governance/kds-daily-reports/kds-daily-2026-07-10.md",
         "_governance/sync-runs/feishu-xiaog-closure-20260708-071031/local-evidence.json",
         "_governance/sync-runs/feishu-xiaog-closure-20260708-071031/macmini-evidence.json",
         "_governance/sync-runs/feishu-xiaog-closure-20260708-071031/report.md",
+        "_governance/sync-runs/feishu-xiaog-closure-20260710-074200/local-evidence.json",
+        "_governance/sync-runs/feishu-xiaog-closure-20260710-074200/macmini-evidence.json",
+        "_governance/sync-runs/feishu-xiaog-closure-20260710-074200/report.md",
         "_governance/sync-runs/macmini-workwiki-20260708-064150/changed.txt",
         "_governance/sync-runs/macmini-workwiki-20260708-064150/frontmatter-audit.txt",
         "_governance/sync-runs/macmini-workwiki-20260708-064150/gbrain-refresh.log",
@@ -140,7 +182,11 @@
         "_governance/sync-runs/macmini-workwiki-20260708-111750/remote-md.sha256",
         "_governance/sync-runs/macmini-workwiki-20260708-111750/remote-only.txt",
         "_governance/sync-runs/macmini-workwiki-20260708-111750/report.md",
-        "_governance/sync-runs/macmini-workwiki-20260708-111750/rsync.log"
+        "_governance/sync-runs/macmini-workwiki-20260708-111750/rsync.log",
+        "_governance/sync-runs/macmini-workwiki-20260710-074208/local-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260710-074208/remote-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260710-074208/remote-identity.txt",
+        "_governance/sync-runs/macmini-workwiki-20260710-074208/rsync.log"
       ],
       "sensitive_paths": []
     },
