@@ -1,28 +1,38 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-11T00:05:40.594112+08:00",
+  "generated_at": "2026-07-12T00:03:34.467977+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud AAAS",
-    "WAS世界资产体系"
+    "WAS世界资产体系",
+    "GlobalCloud Studio",
+    "GlobalCloud KDS"
   ],
-  "observed_ahead": [],
+  "observed_ahead": [
+    "GlobalCloud Studio"
+  ],
   "stable_dirty": [
     "GlobalCloud AAAS",
+    "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "WAS世界资产体系"
   ],
-  "stable_ahead": [],
+  "stable_ahead": [
+    "GlobalCloud Studio"
+  ],
   "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud AAAS",
+    "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "WAS世界资产体系"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 15,
+  "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-10T23:00:16.270619+08:00",
+  "previous_generated_at": "2026-07-11T23:35:35.614245+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 1,
@@ -71,10 +81,14 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 0,
-      "ahead": 0,
+      "dirty_count": 3,
+      "ahead": 29,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "packages/client/src/components/studio/SessionObjectPanel.vue",
+        "tests/client/session-object-panel.test.ts",
+        "tests/e2e/project-session-mvp.spec.ts"
+      ],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
@@ -106,10 +120,38 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 0,
+      "dirty_count": 27,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "_governance/graph-health/kds-graph-health-current.json",
+        "_governance/graph-health/kds-graph-health-current.md",
+        "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.json",
+        "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260711-073106/report.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260712-000327/report.md",
+        "_governance/kds-daily-reports/kds-daily-2026-07-11.md",
+        "_governance/sync-runs/feishu-xiaog-closure-20260711-071050/local-evidence.json",
+        "_governance/sync-runs/feishu-xiaog-closure-20260711-071050/macmini-evidence.json",
+        "_governance/sync-runs/feishu-xiaog-closure-20260711-071050/report.md",
+        "_governance/sync-runs/macmini-workwiki-20260711-064138/local-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260711-064138/remote-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260711-064138/remote-identity.txt",
+        "_governance/sync-runs/macmini-workwiki-20260711-064138/rsync.log",
+        "_governance/sync-runs/macmini-workwiki-20260711-064224/local-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260711-064224/remote-git-status.txt",
+        "_governance/sync-runs/macmini-workwiki-20260711-064224/remote-identity.txt",
+        "_governance/sync-runs/macmini-workwiki-20260711-064224/rsync.log",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/collaboration/sessions_\\344\\274\\232\\350\\257\\235/derived-session-st-project-kds-tenants-stage4-orgs-lr429-operations-operating-projects-readonly-target-lr429-20260711143.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-derived-session-confirmation-write-stage4-lr429-lr429-20260711143154-kds-tenants-stage4-orgs-lr429-operations-operating-.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-derived-session-confirmation-write-stage4-lr429-lr429-20260711143325-kds-tenants-stage4-orgs-lr429-operations-operating-.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-derived-session-create-rollback-derived-session-st-project-kds-tenants-stage4-orgs-lr429-operations-operating-projects-r.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-derived-session-create-success-derived-session-st-project-kds-tenants-stage4-orgs-lr429-operations-operating-projects-re.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/governance/confirmations_\\347\\241\\256\\350\\256\\244\\345\\212\\250\\344\\275\\234/derived-session-create-confirmation-stage4-lr429-lr429-20260711143154-kds-tenants-stage4-orgs-lr429-operations-operating.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/stage4/orgs/lr429/governance/confirmations_\\347\\241\\256\\350\\256\\244\\345\\212\\250\\344\\275\\234/derived-session-create-confirmation-stage4-lr429-lr429-20260711143325-kds-tenants-stage4-orgs-lr429-operations-operating.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/tenant-demo/orgs/org-demo/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-derived-session-confirmation-write-mrgjbc981dol3p-kds-tenants-tenant-demo-orgs-org-demo-operations-operating-projects-kd.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/tenant-demo/orgs/org-demo/governance/confirmations_\\347\\241\\256\\350\\256\\244\\345\\212\\250\\344\\275\\234/derived-session-create-confirmation-mrgjbc981dol3p-kds-tenants-tenant-demo-orgs-org-demo-operations-operating-projects-k.md\""
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XiaoG": {
