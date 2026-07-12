@@ -1,11 +1,13 @@
 # WAES 开发文档空间
 
-生成日期：2026-07-03
+生成日期：2026-07-12
 
 用途：KDS `开发` 空间中 `WAES` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
+| GPCF-ZCODE-COMMAND-PROPOSE-20260712 | propose | .zcode/commands/propose.md | controlled |
+| GPCF-ZCODE-COMMAND-STATUS-20260712 | status | .zcode/commands/status.md | controlled |
 | GPCF-DOC-E37161A1FB | A23 模型使用计量与统计回指样本 | 08-evidence-samples/A23 模型使用计量与统计回指样本.md | controlled |
 | GPCF-DOC-9DAA6C3FEC | 证据样本 | 08-evidence-samples/README.md | controlled |
 | GPCF-DOC-32B2E77806 | 宪衡专项审批阻断与证据写入链样本 | 08-evidence-samples/宪衡专项审批阻断与证据写入链样本.md | controlled |

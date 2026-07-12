@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-07-03
+生成日期：2026-07-12
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -51,6 +51,8 @@
 | GPCF-DOC-1213F2E70E | GlobalCloud Loop Risk and Rollback Gates | .codex/skills/globalcloud-loop-orchestrator/references/risk-rollback-gates.md | operational_controlled |
 | GPCF-DOC-CE28DA4C36 | GlobalCloud Loop Orchestrator Stage Gates | .codex/skills/globalcloud-loop-orchestrator/references/stage-gates.md | operational_controlled |
 | GPCF-DOC-221282A70B | GlobalCloud Loop Usability Gates | .codex/skills/globalcloud-loop-orchestrator/references/usability-gates.md | operational_controlled |
+| GPCF-DOC-1E7B56C480 | globalcloud-openspec-governance | .codex/skills/globalcloud-openspec-governance/README.md | operational_controlled |
+| GPCF-DOC-A7C2E40931 | GlobalCloud OpenSpec Governance | .codex/skills/globalcloud-openspec-governance/SKILL.md | operational_controlled |
 | GPCF-DOC-A4D6B9E217 | globalcloud-project-group-git-clean | .codex/skills/globalcloud-project-group-git-clean/README.md | operational_controlled |
 | GPCF-DOC-7F9C2E9A61 | GlobalCloud Project Group Git Clean | .codex/skills/globalcloud-project-group-git-clean/SKILL.md | operational_controlled |
 | GPCF-DOC-A1B2C3D4E5 | globalcloud-ui-quality-gate | .codex/skills/globalcloud-ui-quality-gate/README.md | operational_controlled |
@@ -1822,17 +1824,21 @@
 | GPCF-DOC-9126B167F5 | GFIS 运行时 SOP 端到端开发完成 001 执行台账 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.execution-ledger.md | controlled |
 | GPCF-DOC-15B317110B | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.md | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | controlled |
+| GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | controlled |
 | GPCF-DOC-7A2A6D4F05 | p1-recall-comparison-template | loop/context/cognee/harness/p1-recall-comparison-template.md | controlled |
 | GPCF-DOC-8C7F2F5001 | p4-real-writeback-precheck-template | loop/context/cognee/harness/p4-real-writeback-precheck-template.md | controlled |
 | GPCF-DOC-8749FB9903 | architecture | loop/context/headroom/docs/architecture.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623 | blocker-inventory | loop/context/headroom/docs/blocker-inventory.md | controlled |
 | GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | completion-audit | loop/context/headroom/docs/completion-audit.md | controlled |
 | GPCF-DOC-00463F9971 | Headroom LCX 许可证与 OSS 合规 | loop/context/headroom/docs/license.md | controlled |
+| GPCF-OS-OPEN-SPEC-COVERAGE-DESIGN-20260712 | design | openspec/changes/enable-project-group-openspec-coverage/design.md | draft |
+| GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | draft |
 | GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | draft |
 | GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | draft |
 | GPCF-DOC-8ECD9BA263 | spec | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/spec.md | draft |
 | GPCF-DOC-18A2F48E80 | spec | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |
 | GPCF-DOC-D067D700F1 | spec | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | draft |
+| GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | draft |
 | GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | controlled |
 | GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | controlled |
 | GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | LOOP Delivery Round Template | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | controlled |

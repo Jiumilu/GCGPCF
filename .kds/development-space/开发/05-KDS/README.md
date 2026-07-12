@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-07-03
+生成日期：2026-07-12
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -76,6 +76,7 @@
 | GPCF-DOC-A7C38B4EA7 | 数据、AI 与知识 | 03-data-ai-knowledge/README.md | controlled |
 | GPCF-DOC-A2F5EC5E20 | GCBrain-Development-Manual | docs/GCBrain-Development-Manual.md | controlled |
 | GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | controlled |
+| GPCF-DOC-26EE0B96B8 | architecture | docs/architecture/README.md | controlled |
 | GPCF-DOC-137295729F | codegraph | docs/codegraph/README.md | controlled |
 | GPCF-DOC-ACDBF80B37 | CodeGraph 授权模型 | docs/codegraph/codegraph-authorization-model.md | controlled |
 | GPCF-DOC-13B5A26E7C | CodeGraph KDS OKF 映射说明 | docs/codegraph/codegraph-kds-okf-mapping.md | controlled |
@@ -287,6 +288,9 @@
 | GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAES Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | controlled |
 | GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAES 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | controlled |
 | GPCF-DOC-1946E4144B | WAES Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | controlled |
+| GPCF-DOC-CC2C02D1FB | governance | docs/governance/README.md | controlled |
+| GPCF-DOC-94532311B5 | GPCF 2.0 治理文件收敛清单 | docs/governance/gpcf-2-governance-file-inventory.md | controlled |
+| GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | controlled |
 | GPCF-DOC-92A4C970C1 | AaaS | docs/harness/AaaS/README.md | controlled |
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | controlled |
 | GPCF-DOC-FB255EAED0 | KDS | docs/harness/KDS/README.md | controlled |
@@ -421,6 +425,7 @@
 | GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628 | GFIS dirty evidence stage commit authorization request 2026-06-28 | docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | controlled |
 | GPCF-DOC-DE35E75C5A | GFIS 负责人回执任务台账 | docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.md | controlled |
 | GPCF-DOC-3FAF2E3718 | GFIS WAS Source Record Admission Gate Evidence | docs/harness/evidence/gfis-was-source-record-admission-gate-20260621.md | controlled |
+| GPCF-EVIDENCE-ICP-REGISTRATION-20260712 | GlobalCloud ICP 项目群候选登记证据 | docs/harness/evidence/globalcloud-icp-registration-20260712.md | controlled |
 | GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626 | GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26 | docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群授权项执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626 | GlobalCloud 项目群授权项执行前环境就绪 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-environment-readiness-20260626.md | controlled |
@@ -692,6 +697,7 @@
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | controlled |
 | GPCF-DOC-A1617A5806 | WAS-Ontology WAES/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md | controlled |
 | GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | controlled |
+| GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | controlled |
 | GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | controlled |
 | GPCF-DOC-2A9E353FAE | 跨项目 readiness scorecard | docs/harness/gpcf-cross-project-readiness-scorecard-lr028.md | controlled |
@@ -714,14 +720,26 @@
 | GPCF-DOC-9096ABA44D | 项目角色验证矩阵 | docs/harness/minimum-closed-loop/project-role-verification-matrix.md | controlled |
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | controlled |
+| GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | controlled |
 | GPCF-DOC-187BF785F5 | Headroom LCX 安全规则 | loop/context/headroom/docs/security.md | controlled |
 | GPCF-DOC-4F39AFF310 | OpenSpec 变更 | openspec/README.md | controlled |
 | GPCF-DOC-855B715B04 | OpenSpec 变更集 | openspec/changes/README.md | draft |
 | GPCF-DOC-D84C374BDC | archive | openspec/changes/archive/README.md | draft |
+| GPCF-DOC-15FFD3BE22 | enable-project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/README.md | draft |
+| GPCF-OS-OPEN-SPEC-COVERAGE-PROPOSAL-20260712 | proposal | openspec/changes/enable-project-group-openspec-coverage/proposal.md | draft |
+| GPCF-DOC-E61CE550C4 | specs | openspec/changes/enable-project-group-openspec-coverage/specs/README.md | draft |
+| GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | draft |
+| GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | draft |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | draft |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | draft |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | draft |
 | GPCF-DOC-9E32DA48ED | session-auth | openspec/changes/kds-production-hardening/specs/session-auth/README.md | draft |
 | GPCF-DOC-D0174E85D8 | unified-permission-middleware | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/README.md | draft |
 | GPCF-DOC-B1187FF6E1 | 任务清单 — KDS v3.1 生产加固 | openspec/changes/kds-production-hardening/tasks.md | draft |
+| GPCF-DOC-4A5CCF7D61 | register-globalcloud-icp | openspec/changes/register-globalcloud-icp/README.md | draft |
+| GPCF-OS-ICP-REGISTRATION-DESIGN-20260712 | design | openspec/changes/register-globalcloud-icp/design.md | draft |
+| GPCF-OS-ICP-REGISTRATION-PROPOSAL-20260712 | proposal | openspec/changes/register-globalcloud-icp/proposal.md | draft |
+| GPCF-DOC-8742549A10 | specs | openspec/changes/register-globalcloud-icp/specs/README.md | draft |
+| GPCF-DOC-FB59167101 | project-group-icp-registration | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md | draft |
+| GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | draft |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | controlled |

@@ -1,6 +1,6 @@
 ---
 doc_id: GPCF-DOC-8EC9A00BFD
-title: GlobalCoud GPCF
+title: GlobalCloud GPCF 项目群治理控制仓
 project: GPCF
 related_projects: [GPC, WAES, KDS, GPCF]
 domain: general
@@ -16,7 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
-# GlobalCoud GPCF
+# GlobalCloud GPCF 项目群治理控制仓
 
 GlobalCoud GPCF 是 GlobalCloud 项目群的 Feature 交付中心与轻治理控制仓。历史体系文档继续受控保留，新开发默认从 Feature Workspace 进入。
 
@@ -31,7 +31,7 @@ GlobalCoud GPCF 是 GlobalCloud 项目群的 Feature 交付中心与轻治理控
 | `09-status/globalcloud-document-health-report.md` | 文档健康报告 |
 | `tools/kds-sync/` | 文档控制、KDS 同步和 Loop 文档门禁脚本 |
 | `features/active/` | GPCF 2.0 Feature 交付入口 |
-| `projects/` | 项目群 17 项目的 ROADMAP、STATUS、RISK 节奏文件 |
+| `projects/` | 项目群 18 项目的 ROADMAP、STATUS、RISK 节奏文件 |
 | `loops/` | GPCF 2.0 执行、复核、修复闭环 |
 | `runtime/queue.json` | Feature 调度队列 |
 | `runtime/state.json` | Feature 交付运行状态 |

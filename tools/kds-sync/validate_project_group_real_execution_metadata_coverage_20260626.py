@@ -6,30 +6,19 @@ import re
 import sys
 from pathlib import Path
 
+import yaml
+
 from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
 
 
 ROOT = Path(__file__).resolve().parents[2]
 
-EXPECTED_PROJECTS = [
-    "AAAS",
-    "Brain",
-    "WAS",
-    "XiaoC",
-    "WAES",
-    "GPC",
-    "Studio",
-    "GPCF",
-    "XWAIL",
-    "GFIS",
-    "MMC",
-    "KDS",
-    "XiaoG",
-    "PVAOS",
-    "SOP",
-    "PKC",
-    "XGD",
-]
+PROJECT_REGISTRY = ROOT / "config/project-group-projects.yaml"
+
+
+def current_projects() -> list[str]:
+    data = yaml.safe_load(PROJECT_REGISTRY.read_text(encoding="utf-8"))
+    return [item["id"] for item in data["projects"]]
 
 KEY_DOCS = [
     "GlobalCloud 项目群实施方案.md",
@@ -80,8 +69,8 @@ def parse_related(text: str) -> list[str]:
 
 def main() -> int:
     failures: list[str] = []
-    expected = set(EXPECTED_PROJECTS)
     gfis_real_fact_entry = require_gfis_real_fact_entry(ROOT)
+    projects = current_projects()
 
     for relative in KEY_DOCS:
         path = ROOT / relative
@@ -91,20 +80,22 @@ def main() -> int:
         text = path.read_text(encoding="utf-8")
         related = parse_related(text)
         related_set = set(related)
+        expected = set(projects)
         missing = sorted(expected - related_set)
         extra = sorted(related_set - expected)
         if missing:
             failures.append(f"{relative} missing related_projects: {missing}")
         if extra:
             failures.append(f"{relative} has unexpected related_projects: {extra}")
-        if len(related) != len(EXPECTED_PROJECTS):
-            failures.append(f"{relative} related_projects count is {len(related)}, expected {len(EXPECTED_PROJECTS)}")
+        if len(related) != len(projects):
+            failures.append(f"{relative} related_projects count is {len(related)}, expected {len(projects)}")
 
     result = {
         "gate": "project_group_real_execution_metadata_coverage_20260626",
         "status": "fail" if failures else "pass",
         "key_doc_count": len(KEY_DOCS),
-        "expected_project_count": len(EXPECTED_PROJECTS),
+        "current_project_count": len(projects),
+        "historical_expected_project_count": 17,
         "gfis_real_fact_entry": gfis_real_fact_entry,
         "failures": failures,
         "warnings": [

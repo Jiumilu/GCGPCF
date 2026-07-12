@@ -32,6 +32,7 @@ PROJECTS = [
     "sop",
     "pkc",
     "xgd",
+    "icp",
 ]
 
 FEATURE_FIELDS = [
@@ -59,6 +60,8 @@ SCRIPTS = [
     "scripts/gpcf_run_loop.py",
     "scripts/gpcf_check_evidence.py",
     "scripts/gpcf_close_feature.py",
+    "tools/kds-sync/validate_project_group_skill_chain.py",
+    "tools/kds-sync/validate_project_group_ui_engineering_coverage.py",
 ]
 
 
@@ -150,6 +153,8 @@ def main() -> int:
 
     implementation = read("docs/governance/gpcf-2-implementation.md")
     inventory = read("docs/governance/gpcf-2-governance-file-inventory.md")
+    skill_chain_registry = read("config/project-group-skill-chain.yaml")
+    ui_master_plan = read("04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md")
     for phrase in [
         "Program 定方向",
         "Project 管节奏",
@@ -161,6 +166,17 @@ def main() -> int:
         require(phrase in implementation, f"implementation doc missing phrase: {phrase}")
     for phrase in ["高频使用", "低频使用", "无效使用", "保留", "降级", "归档", "待删除"]:
         require(phrase in inventory, f"governance inventory missing category: {phrase}")
+    for phrase in [
+        "default_entry: globalcloud-loop-orchestrator",
+        "globalcloud-document-governance",
+        "globalcloud-project-group-git-clean",
+        "globalcloud-ui-quality-gate",
+        "globalcloud-openspec-governance",
+        "ui-ux-pro-max",
+    ]:
+        require(phrase in skill_chain_registry, f"skill-chain registry missing phrase: {phrase}")
+    for phrase in ["AAAS", "XWAIL", "SOP", "ICP"]:
+        require(phrase in ui_master_plan, f"UI master plan missing project coverage phrase: {phrase}")
 
     combined = "\n".join(
         [
@@ -168,7 +184,10 @@ def main() -> int:
             read("README.md"),
             read("02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md"),
             read("02-governance/loop/LOOP_EXECUTION_RULES.md"),
+            read(".codex/skills/globalcloud-loop-orchestrator/SKILL.md"),
             read("tools/kds-sync/loop_document_gate.py"),
+            read("tools/kds-sync/validate_project_group_skill_chain.py"),
+            read("tools/kds-sync/validate_project_group_ui_engineering_coverage.py"),
         ]
     )
     for phrase in [
@@ -177,6 +196,9 @@ def main() -> int:
         "gpcf_dispatch.py",
         "Feature 做交付",
         "validate_gpcf_2_feature_workspace.py",
+        "config/project-group-skill-chain.yaml",
+        "validate_project_group_skill_chain.py",
+        "validate_project_group_ui_engineering_coverage.py",
     ]:
         require(phrase in combined, f"GPCF 2.0 rule not propagated: {phrase}")
 
@@ -200,7 +222,7 @@ def main() -> int:
     print(
         "gpcf_2_feature_workspace=pass "
         "feature_delivery_center=true "
-        "project_scope=17 "
+        "project_scope=18 "
         "new_feature_entry=enabled "
         "close_feature_exit=enabled "
         "status_promotion_allowed=false"

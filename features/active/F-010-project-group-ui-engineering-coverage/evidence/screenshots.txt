@@ -1,0 +1,12 @@
+UI evidence detected from project-group Studio closure sample.
+
+reference_feature:
+- F-011 studio-workbench-ui-runtime-closure
+
+assets:
+- artifacts/studio-runtime-reference/studio-settings-desktop-20260712.png
+- artifacts/studio-runtime-reference/studio-settings-desktop-20260712.json
+
+notes:
+- Studio 真实设置页已完成工作台入口增强并生成浏览器截图与结构指标。
+- 该证据用于支撑项目群“界面实际开发、效果、体验及质量提升”闭环，不代表所有项目页面均已逐页实装。

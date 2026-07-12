@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624
 title: GlobalCloud 项目群实施方案控制台账
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: status
 status: controlled
 version: v1.0
@@ -74,6 +74,7 @@ superseded_by: []
 | GlobalCloud XGD | `GlobalCloud XGD 总体方案.md` | `GlobalCloud XGD 实施方案.md` | `ready_for_review` | `local_dev_smoke_boundary` | 长程 Agent、重分析和复杂任务承载 | 最小 Loop、结构化任务队列、自我进化 checklist 和 harness validator 已具备 | 推进 XGD bounded TICK loop dry-run 或 Brain UI/ACUI smoke |
 | GlobalCloud XiaoC | `GlobalCloud XiaoC 总体方案.md` | `GlobalCloud XiaoC 实施方案.md` | `ready_for_review` | `environment_block_boundary` | AI 能力生产与编排路由 | 最小 Loop 文档体系已具备；UI/Wrangler/模型路由和真实部署仍需专项授权 | 推进 XiaoC 模型路由、AI 能力生产或 UI/Wrangler dry-run |
 | GlobalCloud XiaoG | `GlobalCloud XiaoG 总体方案.md` | `GlobalCloud XiaoG 实施方案.md` | `ready_for_review` | `authorization_pack_boundary` | 轻量执行入口 | L4 只读审计 mock 已通过；live API/设备验证需专项授权 | 等待 GFIS 真实 source-of-record；XiaoG live API/设备验证另行授权 |
+| GlobalCloud ICP | `GlobalCloud ICP 总体方案.md` | `GlobalCloud ICP 实施方案.md` | `candidate` | `candidate_registration_boundary` | 产业控制平面首期骨架 | 24节点、11池、3场景、10项测试、契约门禁和本地 HTTP smoke 已通过；仅证明 fixture/development 闭环 | 等待人工确认和 GPCF/WAES 治理审查；真实 KDS/GPC/GFIS 连接器另行立项 |
 | GlobalCloud GPCF | `GlobalCloud GPCF 总体方案.md` | `GlobalCloud GPCF 实施方案.md` | `repair_required` | `authorization_to_pre_execution_total_bridge` | 实施治理控制 | 真实执行治理已受控，但 2026-06-27 live Git gate 已因 `GlobalCloud KDS/.env.production.example` sensitive_path 和当前 7 仓 total dirty 事实收紧为 blocked；其中 `GlobalCloud AAAS` / `GlobalCoud GPCF` / `GlobalCloud XWAIL` / `GlobalCloud GFIS` / `GlobalCloud KDS` / `GlobalCloud SOP` 构成当前 6 仓 review 边界，`WAS世界资产体系/.DS_Store` 继续沿 noise cleanup 单独治理，dependency 仍 blocked、customer_satisfaction 仍为 rework；`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 当前保持 `project_group_current_state_baseline_refresh_20260626 = controlled`、`dirty_repo_count = 7`，`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 当前保持 `development_queue_ready = true`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；当前人工确认链已补齐到 `authorization-layer -> human-confirmation -> authorization-routing -> pre-wave1 -> human fill -> chain consistency -> authorization package -> chain loop-round -> target ledger`，但仍保持 `authorization_granted=0`、`action_executed=0` | 先完成 `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再按 `GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-LOOP-ROUND-20260627-001` 继续收敛 KDS sensitive_path review、授权回执、依赖阻塞和客户验收证据 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
 

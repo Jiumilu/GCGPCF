@@ -22,6 +22,7 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 
 - 启动 Loop 前必须读取：
   - `AGENTS.md`
+  - `config/project-group-skill-chain.yaml`
   - `02-governance/loop/LOOP_CONTROL_BOARD.md`
   - `02-governance/loop/LOOP_AUTONOMY_POLICY.md`
   - 最近一轮 `docs/harness/loops/loop-round-*.md`
@@ -53,6 +54,7 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
    - 如存在项目仓 `docs/harness/loop-state.md`，一并读取。
 2. 运行脚本获得建议：
    ```bash
+   python3 tools/kds-sync/validate_project_group_skill_chain.py
    python3 .codex/skills/globalcloud-loop-orchestrator/scripts/loop_orchestrator.py
    ```
    需要单独检查 Git 门禁时运行：
@@ -79,7 +81,9 @@ description: GlobalCloud Loop 编排入口。用于用户说“启动 Loop”“
 | 项目健康评估 | `software-project-assessment` |
 | UI 质量、产品界面、控制塔、工作台、证据页、异常页、AI 对话页、移动端/桌面端界面门禁 | `globalcloud-ui-quality-gate` |
 | PDF/培训资料分析 | `pdf` |
-| OpenSpec 变更 | `openspec-*` |
+| OpenSpec 提案、实施、规格同步、归档 | 先用 `globalcloud-openspec-governance`，再按意图加载 `openspec-propose` / `openspec-apply-change` / `openspec-sync-specs` / `openspec-archive-change` |
+
+OpenSpec 场景必须读取 `config/project-group-projects.yaml` 与 `09-status/globalcloud-project-group-openspec-applicability-matrix.md`，并运行 `python3 tools/kds-sync/validate_project_group_openspec_coverage.py`；缺少项目入口/豁免、Feature/Loop/Evidence/Harness 映射时不得进入 apply。
 
 4. 根据当前模式生成本轮 LOOP 运行控制闭环：
    - Delivery Loop：

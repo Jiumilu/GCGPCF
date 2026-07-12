@@ -1,0 +1,23 @@
+id: F-011
+name: studio-workbench-ui-runtime-closure
+project: studio
+status: active
+goal: 对 Studio 真实工作台页面执行界面开发与运行验证闭环，补齐截图/浏览器证据并提升实际效果、体验与质量
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: evaluate
+  iteration: 2
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-12T09:57:45+00:00"
+updated_at: "2026-07-12T10:01:53+00:00"

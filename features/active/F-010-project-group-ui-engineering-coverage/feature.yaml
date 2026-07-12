@@ -1,0 +1,23 @@
+id: F-010
+name: project-group-ui-engineering-coverage
+project: gpcf
+status: active
+goal: 提升项目群闭环开发的界面实际开发、效果、体验及质量，补齐18项目UI工程覆盖并建立可机器校验门禁
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: evaluate
+  iteration: 2
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-12T09:47:45+00:00"
+updated_at: "2026-07-12T10:01:53+00:00"

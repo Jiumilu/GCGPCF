@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# GPC 绿色供应链公共服务平台总体方案

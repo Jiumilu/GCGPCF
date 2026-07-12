@@ -36,6 +36,37 @@ DOC_SKIP_FILES = {
     "09-status/globalcloud-chinese-localization-governance-report.md",
 }
 
+REQUIRED_MAIN_DOCUMENT_GROUPS = {
+    "project_group_master_plan": [
+        "GlobalCloud 项目群总体方案.md",
+        "01-architecture/GlobalCloud 项目群总体方案.md",
+    ],
+    "project_group_implementation_plan": [
+        "GlobalCloud 项目群实施方案.md",
+    ],
+}
+
+MAIN_DOCUMENT_PREFIXES = (
+    "00-index/",
+    "01-architecture/",
+    "02-governance/",
+    "03-data-ai-knowledge/",
+    "04-ui-delivery/",
+    "09-status/",
+)
+
+MAIN_DOCUMENT_NAME_KEYWORDS = (
+    "README.md",
+    "总体方案",
+    "实施方案",
+    "治理",
+    "规范",
+    "路线图",
+    "矩阵",
+    "台账",
+    "报告",
+)
+
 SOFTWARE_DIRS = {
     "packages",
 }
@@ -74,6 +105,13 @@ TECHNICAL_ALLOWLIST = {
     "TS",
     "UI",
     "URL",
+    "artifact",
+    "key",
+    "primary",
+    "queue",
+    "review",
+    "runtime",
+    "verified",
     "WAES",
     "XGD",
     "XiaoC",
@@ -176,7 +214,7 @@ def doc_findings(path: Path) -> list[dict[str, object]]:
     chinese_chars = CHINESE_CHAR.findall(joined)
     findings: list[dict[str, object]] = []
 
-    if english_words and len(chinese_chars) < max(30, len(english_words) // 2):
+    if len(english_words) >= 8 and len(chinese_chars) < max(30, len(english_words) // 2):
         findings.append(
             {
                 "kind": "doc_english_heavy",
@@ -198,6 +236,92 @@ def doc_findings(path: Path) -> list[dict[str, object]]:
                 }
             )
             if len(findings) >= 3:
+                break
+    return findings
+
+
+def is_main_document(path: Path) -> bool:
+    source_path = rel(path)
+    if source_path.startswith("."):
+        return False
+    if source_path in DOC_SKIP_FILES:
+        return False
+    if any(source_path.startswith(prefix) for prefix in DOC_SKIP_PREFIXES):
+        return False
+    if "/" not in source_path:
+        return any(keyword in path.name for keyword in MAIN_DOCUMENT_NAME_KEYWORDS)
+    if not any(source_path.startswith(prefix) for prefix in MAIN_DOCUMENT_PREFIXES):
+        return False
+    if source_path.count("/") > 1:
+        return False
+    name = path.name
+    return any(keyword in name for keyword in MAIN_DOCUMENT_NAME_KEYWORDS)
+
+
+def main_document_findings(path: Path) -> list[dict[str, object]]:
+    text = path.read_text(encoding="utf-8")
+    findings: list[dict[str, object]] = []
+    source_path = rel(path)
+
+    title_line = ""
+    if text.startswith("---\n"):
+        end = text.find("\n---\n", 4)
+        if end != -1:
+            for line in text[4:end].splitlines():
+                if line.startswith("title:"):
+                    title_line = line.split(":", 1)[1].strip()
+                    break
+    if title_line and not has_chinese(title_line):
+        findings.append(
+            {
+                "kind": "main_doc_non_chinese_title",
+                "path": source_path,
+                "line": 1,
+                "detail": title_line[:180],
+            }
+        )
+
+    h1_seen = False
+    for line_no, line in strip_code_and_frontmatter(text):
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            h1_seen = True
+            if not has_chinese(stripped):
+                findings.append(
+                    {
+                        "kind": "main_doc_non_chinese_h1",
+                        "path": source_path,
+                        "line": line_no,
+                        "detail": stripped[:180],
+                    }
+                )
+            break
+    if not h1_seen:
+        findings.append(
+            {
+                "kind": "main_doc_missing_h1",
+                "path": source_path,
+                "line": 1,
+                "detail": "主要文档缺少中文 H1 标题",
+            }
+        )
+
+    for line_no, line in strip_code_and_frontmatter(text):
+        stripped = line.strip()
+        if stripped.startswith(("#", "- [", "<", ">", "::")):
+            continue
+        words = normalized_english_words(stripped)
+        chinese_count = len(CHINESE_CHAR.findall(stripped))
+        if len(words) >= 6 and chinese_count < len(words):
+            findings.append(
+                {
+                    "kind": "main_doc_english_dominant_line",
+                    "path": source_path,
+                    "line": line_no,
+                    "detail": stripped[:180],
+                }
+            )
+            if len([item for item in findings if item["kind"] == "main_doc_english_dominant_line"]) >= 5:
                 break
     return findings
 
@@ -265,6 +389,30 @@ def iter_docs() -> list[Path]:
             continue
         paths.append(path)
     return sorted(paths, key=rel)
+
+
+def iter_main_documents() -> list[Path]:
+    docs = []
+    for path in iter_docs():
+        if is_main_document(path):
+            docs.append(path)
+    return sorted(docs, key=rel)
+
+
+def required_main_document_findings() -> list[dict[str, object]]:
+    findings: list[dict[str, object]] = []
+    for group, candidates in REQUIRED_MAIN_DOCUMENT_GROUPS.items():
+        if any((ROOT / candidate).exists() for candidate in candidates):
+            continue
+        findings.append(
+            {
+                "kind": "main_doc_required_missing",
+                "path": candidates[0],
+                "line": 1,
+                "detail": f"{group} 缺少主要文档；候选路径：{', '.join(candidates)}",
+            }
+        )
+    return findings
 
 
 def iter_software_files() -> list[Path]:
@@ -380,6 +528,10 @@ def main() -> int:
     for path in iter_docs():
         doc_count += 1
         findings.extend(doc_findings(path))
+    main_docs = iter_main_documents()
+    findings.extend(required_main_document_findings())
+    for path in main_docs:
+        findings.extend(main_document_findings(path))
     for path in iter_software_files():
         software_count += 1
         findings.extend(software_findings(path))
@@ -387,6 +539,7 @@ def main() -> int:
     summary = {
         "localization_gate": "pass" if not findings else "fail",
         "docs_checked": doc_count,
+        "main_docs_checked": len(main_docs),
         "software_files_checked": software_count,
         "findings": len(findings),
         "findings_by_kind": dict(Counter(str(item["kind"]) for item in findings)),

@@ -35,6 +35,50 @@
       "updated_at": "2026-07-08T02:44:08+00:00"
     },
     {
+      "id": "F-008",
+      "name": "icp-project-group-admission",
+      "project": "icp",
+      "priority": "P0",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-008-icp-project-group-admission",
+      "created_at": "2026-07-12T02:06:05+00:00",
+      "updated_at": "2026-07-12T06:08:37+00:00"
+    },
+    {
+      "id": "F-009",
+      "name": "project-group-openspec-coverage",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "closed",
+      "current_role": "Recorder",
+      "workspace": "features/done/F-009-project-group-openspec-coverage",
+      "created_at": "2026-07-12T05:45:26+00:00",
+      "updated_at": "2026-07-12T06:07:06+00:00"
+    },
+    {
+      "id": "F-010",
+      "name": "project-group-ui-engineering-coverage",
+      "project": "gpcf",
+      "priority": "P0",
+      "status": "blocked",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-010-project-group-ui-engineering-coverage",
+      "created_at": "2026-07-12T09:47:45+00:00",
+      "updated_at": "2026-07-12T09:50:32+00:00"
+    },
+    {
+      "id": "F-011",
+      "name": "studio-workbench-ui-runtime-closure",
+      "project": "studio",
+      "priority": "P0",
+      "status": "evaluated",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-011-studio-workbench-ui-runtime-closure",
+      "created_at": "2026-07-12T09:57:45+00:00",
+      "updated_at": "2026-07-12T10:01:53+00:00"
+    },
+    {
       "id": "F-004",
       "name": "loop-governance-slimming",
       "project": "gpcf",

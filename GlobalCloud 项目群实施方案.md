@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: architecture
 status: controlled
 version: v1.0
@@ -72,6 +72,9 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 15. GlobalCloud XiaoC
 16. GlobalCloud XiaoG
 17. GlobalCoud GPCF
+18. GlobalCloud ICP
+
+`GlobalCloud ICP` 自 2026-07-12 起作为第18个候选项目登记。此前17项目的 trigger、dependency、dirty repo 和完成证据均为历史基线，不因本次登记自动重算；ICP 的项目群触发层和依赖边需在后续受控变更中单独建立。
 
 `shared/python_utils` 是共享工具目录，不建立项目实施方案，但必须纳入依赖、导入可用性和回滚控制。
 
@@ -412,7 +415,34 @@ ui_evidence_status_ceiling = ui_evidence_candidate
 
 界面工程专项不得把设计稿、截图、mock、前端构建通过、浏览器可见性或 UI gate 直接写成客户验收、业务完成、accepted、integrated 或 production_ready。
 
-## 14.2 武汉城市圈绿色供应链运营 SOP 实施链路
+## 14.2 OpenSpec/LOOP 规格变更链路
+
+OpenSpec 正式纳入项目群规格变更层，由 `.codex/skills/globalcloud-openspec-governance/SKILL.md` 统一路由以下技能：
+
+- `openspec-propose`
+- `openspec-apply-change`
+- `openspec-sync-specs`
+- `openspec-archive-change`
+
+受控链路为：
+
+```text
+需求 → OpenSpec proposal/design/specs/tasks → GPCF Feature 实施 → evidence → specs sync → archive → Harness 验收裁决
+```
+
+最低门禁：
+
+| 阶段 | 必须满足 |
+|---|---|
+| 提案 | `openspec status --change <name> --json` 可解析，影响项目与 Feature 明确 |
+| 实施 | 绑定 `features/active/F-xxx/`，任务勾选与代码、测试、journal、evidence 一致 |
+| 同步 | delta specs 合入主规格后通过文档控制与污染检查 |
+| 归档 | artifact/task 完成状态已核验，Feature Evidence Gate 和 Loop 文档门禁通过 |
+| 验收 | 由 Harness Governance 裁决；OpenSpec 完成或归档不得直接提升交付或验收状态 |
+
+未经人工确认，不得通过 OpenSpec 流程声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
+
+## 14.3 武汉城市圈绿色供应链运营 SOP 实施链路
 
 武汉城市圈绿色供应链运营 SOP 已纳入项目群主体实施方案，作为场景运营 SOP 链路的首个受控内部试运行包。该链路承接 `019efc82-48ed-7b81-8c19-e3aedf2acf0b` 会话形成的 SOP 口径，并以项目群门禁方式进入 GPCF 总控。
 
@@ -539,7 +569,7 @@ project_group_git_clean=false
 
 本 SOP 实施链路可以支撑项目群进入受控内部试运行、补证和系统开发任务拆解；不得把内部试运行、文档模板、KDS 候选、会议线索、用户口述、报价或 mock 写成真实运营闭环、客户验收、正式 SOP 发布、生产运行完成或 1+8 全覆盖完成。
 
-## 14.3 WAS/LOOP 实施链路
+## 14.4 WAS/LOOP 实施链路
 
 WAS/LOOP 实施链路是本实施方案体系的默认主链之一，用于把 WAS 顶层语义、Ontology 语义知识层、XWAIL 机器契约、WAES 审查门禁、KDS 证据引用、Brain 候选解释和 GPCF LOOP 运行控制闭环合并到同一实施路径。
 
@@ -564,6 +594,29 @@ WAS/LOOP 实施链路的最低推进规则：
 当前 WAS/LOOP 状态固定为：`latest_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`，`next_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`，`real_source_records=0`，`valid_source_records=0`，`runtime_primary_key_ready=0`，`review_queue=0`，`runtime_intake=0`，`waes_review=0`，`verified=0`，`accepted=false`，`integrated=false`，`production_ready=false`。
 
 WAS/LOOP 实施链路不得把文档、模板、测试数据、mock、KDS 候选、用户口述、报价材料、合同审阅稿或治理 validator 写成真实 source-of-record、业务事实、客户验收或生产完成。
+
+## 14.5 绿色供应链24字与十一池分层合并候选链路
+
+项目群登记以下候选影响，不改变项目群完成状态：
+
+```text
+24字产业业务层
+  -> 第十一池场景规则与编排层
+  -> 前十池资源事实层
+```
+
+实施边界：
+
+| 对象 | 候选职责 | 当前状态 | 禁止声明 |
+|---|---|---|---|
+| 24字矩阵 | 定义产业、运营、能力和履约节点 | `candidate` | 节点已真实运行 |
+| 前十池 | 承载订单、运力、产能、资金、政策、装备、数据、能源、原料和人才事实 | `partial` | 池内记录已全部核验 |
+| 场景池 | 编排准入、资源调用、证据、退出和确认规则 | `candidate` | 合同、金额、产能、交付、回款或收益成立 |
+| 场景装配 | 组合产业节点、必需池、辅助池和证据门禁 | `candidate` | 场景已 accepted/integrated/production_ready |
+
+KDS 受控候选入口为 `工业绿链/底座/24字与十一池分层合并治理包.md`、`24字十一池主次映射矩阵.yaml`、`24字场景装配规范.yaml` 和人工确认包。知识对象继续保留 `poolRefs`，可选增加 `industryNodeRefs`；场景对象必须保留 `noWriteAssertion=true` 和 `human_required` 确认边界。
+
+本候选链路只有在 KDS 校验、GPCF 文档门禁和人工确认均完成后，才能另行提交状态晋升变更。门禁失败时保持 `partial/rework`；人工确认缺失时保持 `candidate/partial`。任何脚本不得自动声明 `accepted`、`published`、`integrated`、`production_ready`、`customer_accepted` 或 `revenue_confirmed`。
 
 ## 15. 变更传导机制
 
@@ -630,3 +683,9 @@ Implementation Change Proposal
 - 不声明任何项目已经客户交付完成；
 - 不声明任何项目已经客户验收通过；
 - 不声明 accepted、integrated 或 production_ready。
+
+## 18. 宪法治理实施链与 G00 门禁
+
+本实施方案继承 `GlobalCloud宪法`，并将其原则转化为任务、命令、证据、门禁、回滚和验收约束。宪法修订按以下责任链执行：ICP 生成产业模型驱动的修订候选，SOP 形成程序审计回执，GPCF 执行 G00 继承与方案传导门禁，WAES 与人工形成授权和状态裁决回执，KDS 在回执齐备后保管并发布 canonical 正本。
+
+G00 验证命令为 `python3 tools/kds-sync/validate_constitution_inheritance_gate.py`。门禁通过只说明责任结构和双主方案继承关系可回读；缺少人工授权或 KDS 发布回执时，状态仍保持 `candidate/partial/human_required`。

@@ -73,6 +73,7 @@ SourceRecord
 | `domain` | 是 | 七类知识域 |
 | `objectType` | 是 | 对象类型 |
 | `poolRefs` | 是 | KDS 十一池挂接 |
+| `industryNodeRefs` | 否 | 24字产业节点挂接；节点代码由 KDS 候选映射矩阵控制 |
 | `ownerType` | 是 | user/team/project/org/external_account/system |
 | `ownerId` | 是 | owner 标识 |
 | `visibility` | 是 | private/restricted/internal/external_shared/public |
@@ -87,6 +88,8 @@ SourceRecord
 | `promotionBlockers` | 否 | 不能升级的原因 |
 | `createdAt` | 是 | 创建时间 |
 | `updatedAt` | 是 | 更新时间 |
+
+`poolRefs` 的规范输出采用 snake_case 池代码。历史大写代码只作为兼容输入并在读取时归一化。场景对象除上述字段外，还必须提供 `requiredPoolRefs`、`supportingPoolRefs`、`entryGate`、`evidenceRequirements`、`exitConditions`、`confirmationStatus` 和 `noWriteAssertion=true`。
 
 ## 4. FactCandidate 最小字段
 

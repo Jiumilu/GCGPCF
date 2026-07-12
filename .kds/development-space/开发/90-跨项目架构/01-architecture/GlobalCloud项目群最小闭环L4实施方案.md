@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# GlobalCloud项目群最小闭环L4实施方案

@@ -20,6 +20,14 @@ superseded_by: []
 
 本文件只记录 GFIS 的当前项目节奏状态。功能级进度、证据、阻塞和关闭状态统一由 features 目录中的 feature.yaml 承载。
 
+## OpenSpec 入口
+
+- 策略：`required`
+- 中央入口：`openspec/changes/gfis-<change>/`
+- Feature：`python scripts/gpcf_new_feature.py --project gfis`
+- 默认 Loop：`Governance`
+- Evidence/Harness：`required/required`
+
 ## 当前 GPCF 2.0 样本
 
 - `F-005 factory-exception-intake-dry-run` 已作为 GFIS 业务 Feature 样本进入 GPCF Runtime。

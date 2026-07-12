@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# GPC方向全面分析报告

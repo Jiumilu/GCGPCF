@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/README.md
 source_path: 02-governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-12
 supersedes: []
 superseded_by: []
 ---
@@ -67,6 +67,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-B8ADFA9E30 | GlobalCloud项目群文档综合治理规范 | 02-governance/GlobalCloud项目群文档综合治理规范.md | WAES | controlled |
 | GPCF-DOC-87DD7D79CD | GlobalCloud 项目群文档防污染规则 | 02-governance/GlobalCloud项目群文档防污染规则.md | WAES | controlled |
 | GPCF-DOC-F949595C37 | 治理规范 | 02-governance/README.md | WAES | controlled |
+| GPCF-DOC-CONSTITUTION-GOVERNANCE-RESPONSIBILITY-20260712 | GlobalCloud 宪法治理责任与 G00 门禁 | 02-governance/constitution-governance-responsibility.md | WAES | controlled |
 | GPCF-DOC-F3EADEE56A | GPCF Agent 架构六要素 — 顶层设计总纲 | 02-governance/gpcf-agent-architecture-six-elements.md | WAES | controlled |
 | GPCF-DOC-F113DF5034 | GPCF Loop Engineering 证据分类体系 | 02-governance/gpcf-evidence-taxonomy.md | WAES | controlled |
 | GPCF-DOC-20CE547AAF | gpcf-loop-engineering-spec-v1 | 02-governance/gpcf-loop-engineering-spec-v1.md | GPCF | controlled |
@@ -83,6 +84,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-23DDC94324 | LOOP_CODEGRAPH_P1_PILOT_ADMISSION | 02-governance/loop/LOOP_CODEGRAPH_P1_PILOT_ADMISSION.md | GPCF | controlled |
 | GPCF-DOC-6CC5F6A45C | Loop CodeGraph Project Group Coverage | 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md | WAES | controlled |
 | GPCF-DOC-0DF6AA8647 | LOOP Control Board | 02-governance/loop/LOOP_CONTROL_BOARD.md | WAES | controlled |
+| GPCF-DOC-666112D107 | LOOP Delivery Efficiency Control | 02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md | WAES | controlled |
 | GPCF-DOC-4BA3D31617 | Loop Engineering 五方向实施规范 | 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md | WAES | controlled |
 | GPCF-DOC-6E7DCE4A91 | LOOP 工程体系整体实施规范 | 02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md | WAES | controlled |
 | GPCF-DOC-744D083B96 | LOOP_ENGINEERING_SELF_CORRECTION | 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md | WAES | controlled |
@@ -102,6 +104,7 @@ KDS 路径前缀：`开发/12-GPCF/02-governance/`
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | controlled |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAES | controlled |
 | GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | controlled |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | controlled |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | controlled |
 | GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAES | controlled |
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | controlled |

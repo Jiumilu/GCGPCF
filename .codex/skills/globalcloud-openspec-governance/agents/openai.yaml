@@ -1,0 +1,4 @@
+interface:
+  display_name: "GlobalCloud OpenSpec Governance"
+  short_description: "Govern OpenSpec changes through GlobalCloud Feature and Loop gates."
+  default_prompt: "Use globalcloud-openspec-governance to route this OpenSpec change through the required proposal, implementation, spec sync, archive, Feature evidence, document, and acceptance gates."

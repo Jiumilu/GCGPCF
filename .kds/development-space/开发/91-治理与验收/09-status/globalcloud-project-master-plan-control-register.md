@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-PROJECT-MASTER-PLAN-REGISTER-20260624
 title: GlobalCloud 项目群主方案控制台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
 domain: status
 status: controlled
 version: v1.0
@@ -76,6 +76,7 @@ superseded_by: []
 | GlobalCloud XGD | `GlobalCloud XGD` | `GlobalCloud XGD 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐智能体运行、记忆和证据治理 |
 | GlobalCloud XiaoC | `GlobalCloud XiaoC` | `GlobalCloud XiaoC 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐提示资产注册和 MCP 服务治理证据 |
 | GlobalCloud XiaoG | `GlobalCloud XiaoG` | `GlobalCloud XiaoG 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐本地智能体运行和 Harness 证据 |
+| GlobalCloud ICP | `GlobalCloud ICP` | `GlobalCloud ICP 总体方案.md` | `README.md`, `AGENTS.md`, `PROJECT_HARNESS_MANIFEST.md` | `candidate` | 已建立独立总体方案、24×11契约和产业控制平面边界；尚未完成人工确认和项目群集成 | 保持 candidate/partial，补 WAES/GPCF 人工确认及后续只读连接器变更 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论

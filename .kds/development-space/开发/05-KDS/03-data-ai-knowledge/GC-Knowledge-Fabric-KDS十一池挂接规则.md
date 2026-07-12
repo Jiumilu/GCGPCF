@@ -20,7 +20,9 @@ superseded_by: []
 
 ## 1. 定位
 
-KDS 十一池用于把知识对象挂接到绿色供应链业务事实底座。Domain 解决治理归属，Pool 解决业务事实归属。一个对象可以有一个或多个 `poolRefs`。
+KDS 十一池用于把知识对象挂接到绿色供应链底座。Domain 解决治理归属，Pool 解决资源事实或场景规则归属。一个对象可以有一个或多个 `poolRefs`；涉及24字产业节点时可增加 `industryNodeRefs`。
+
+分层边界固定为：前十池是资源事实层，第十一池场景池是规则编排层。场景池不得单独证明合同、金额、产能、交付、回款或收益。
 
 ## 2. 十一池定义
 
@@ -36,7 +38,9 @@ KDS 十一池用于把知识对象挂接到绿色供应链业务事实底座。D
 | 能源池 | energy_pool | 能耗、碳、绿电、能源数据 |
 | 原料池 | material_pool | 原料、供应商、采购、库存线索 |
 | 人才池 | talent_pool | 团队、专家、服务商、责任人 |
-| 场景池 | scenario_pool | 项目场景、区域机会、应用案例 |
+| 场景池 | scenario_pool | 场景准入、资源调用、证据门禁、退出与确认规则 |
+
+上述 snake_case 代码是规范输出值。历史 `ORDER`、`LOGISTICS`、`CAPACITY`、`FINANCE`、`POLICY`、`EQUIPMENT`、`DATA`、`ENERGY`、`MATERIAL`、`TALENT`、`SCENARIO` 仅作为输入兼容别名，读取后必须规范化，不得用于新记录输出。
 
 ## 3. 默认挂接规则
 
@@ -65,3 +69,10 @@ KDS 十一池用于把知识对象挂接到绿色供应链业务事实底座。D
 ## 5. 例外处理
 
 当对象无法明确挂池时，先进入数据池并标记 `repair_required`，由 KWE 生成补充分类工单。不得因为挂池不明确而直接进入强引用、写回或收益确认。
+
+## 6. 24字产业节点扩展
+
+- `poolRefs` 继续必填，表示对象挂接的十一池。
+- `industryNodeRefs` 可选，表示对象涉及的24字产业节点；节点代码由 KDS `工业绿链/底座/24字十一池主次映射矩阵.yaml` 控制。
+- 场景对象必须增加 `requiredPoolRefs`、`supportingPoolRefs`、`entryGate`、`evidenceRequirements`、`exitConditions`、`confirmationStatus` 和 `noWriteAssertion`。
+- `candidate/partial` 场景不得自动写回、自动确认收益或晋升 `accepted/published/integrated/production_ready/customer_accepted`。

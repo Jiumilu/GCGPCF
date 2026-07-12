@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# GlobalCloud项目群文档与软件中文化治理规范

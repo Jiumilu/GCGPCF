@@ -34,6 +34,7 @@ superseded_by: []
 | ragAdmission | 是 | safe/limited/repair_required/blocked/sensitive_metadata_only |
 | confirmationStatus | 是 | not_required/ai_checked/human_required/human_confirmed/committee_required/committee_confirmed/rejected |
 | poolRefs | 是 | KDS 十一池 poolCode 数组 |
+| industryNodeRefs | 否 | 24字产业节点代码数组；仅在对象明确涉及产业节点时填写 |
 | sourceRefs | 是 | 来源引用 |
 | evidenceRefs | 否 | 证据引用 |
 | metadataOnly | 否 | 是否仅元数据入库 |
@@ -50,7 +51,8 @@ superseded_by: []
   "lifecycle": "candidate",
   "ragAdmission": "repair_required",
   "confirmationStatus": "human_required",
-  "poolRefs": ["ORDER", "CAPACITY", "DATA"],
+  "poolRefs": ["order_pool", "capacity_pool", "data_pool"],
+  "industryNodeRefs": ["material.board", "execution.production"],
   "sourceRefs": ["SRC-GEHUA-ORDER-001"],
   "evidenceRefs": [],
   "metadataOnly": false,
@@ -66,3 +68,5 @@ superseded_by: []
 - `noWriteAssertion` 不是 true。
 - 敏感对象缺少 `metadataOnly` 或 `blocked` 标记。
 - `ragAdmission=blocked` 但仍标记为可强引用。
+
+规范输出只允许 snake_case 池代码。历史大写代码可作为输入兼容别名，但 validator 必须先归一化再校验；新对象不得继续输出大写代码。

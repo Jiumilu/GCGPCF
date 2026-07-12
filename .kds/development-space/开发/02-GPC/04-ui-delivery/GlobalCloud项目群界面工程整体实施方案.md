@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4E2A91B7C6
 title: GlobalCloud项目群界面工程整体实施方案
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -114,6 +114,7 @@ superseded_by: []
 | 项目 | 主类 | 副类 | 定位摘要 |
 |---|---|---|---|
 | GPCF | 控制塔类 | 系统配置与治理类 | 项目群总控、门禁、证据、状态汇总入口 |
+| AAAS | 系统配置与治理类 | 控制塔类 | 授权、适配与受控接入支撑界面 |
 | WAES | 专业工作台类 | 控制塔类；系统配置与治理类 | 以项目为基础单元的治理执行主体 |
 | GPC | 专业工作台类 | 控制塔类 | 协同主业务工作台 |
 | GFIS | 专业工作台类 | 系统配置与治理类 | 工厂执行与连续作业工作台 |
@@ -122,11 +123,14 @@ superseded_by: []
 | Brain | 分析决策类 | 专业工作台类 | 知识编制、检索、洞察、AI 协作 |
 | KDS | 分析决策类 | 系统配置与治理类 | 知识检索、引用、回指、证据查看 |
 | PKC | 专业工作台类 | 分析决策类 | 个人与团队知识工作台 |
+| XWAIL | 分析决策类 | 系统配置与治理类 | 跨语义映射、知识推理与治理辅助界面 |
 | XiaoC | 系统配置与治理类 | 专业工作台类 | AI 能力编排、模型路由、Prompt/MCP 控制 |
 | XGD | 专业工作台类 | 分析决策类 | 长任务、重分析、多端交互运行工作台 |
 | XiaoG | 移动作业类 | 专业工作台类 | 轻执行、轻查询、通知、只读入口 |
 | Studio | 专业工作台类 | 分析决策类；系统配置与治理类 | 面向个人/团队、以知识系统为基础的智能工作台 |
+| SOP | 系统配置与治理类 | 专业工作台类 | 场景方案、流程约束与操作规程支撑界面 |
 | WAS | 系统配置与治理类 | 分析决策类 | 语义契约、资产语义骨架、治理支撑源 |
+| ICP | 门户与展示类 | 系统配置与治理类 | 对外备案、资质与项目信息展示入口 |
 
 ## 6. 统一与差异边界
 

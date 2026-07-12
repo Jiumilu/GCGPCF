@@ -1,0 +1,64 @@
+{
+  "viewport": "settings-desktop",
+  "url": "http://127.0.0.1:8679/#/hermes/settings",
+  "layout": "global-nav-smart-session-center-kds",
+  "shellColumns": "global-nav|smart-session|center-workspace|kds-workspace",
+  "gridTemplateColumns": "64px 288px 743px 405px",
+  "viewportWidth": 1500,
+  "boxes": {
+    "globalNav": {
+      "x": 0,
+      "y": 0,
+      "width": 64,
+      "height": 834
+    },
+    "sessionRail": {
+      "x": 64,
+      "y": 0,
+      "width": 288,
+      "height": 834
+    },
+    "chatWorkspace": null,
+    "main": {
+      "x": 352,
+      "y": 0,
+      "width": 743,
+      "height": 834
+    },
+    "contentCenterWorkspace": {
+      "x": 352,
+      "y": 0,
+      "width": 743,
+      "height": 834
+    },
+    "centerWorkspace": null,
+    "kdsWorkspace": null,
+    "contentKdsWorkspace": {
+      "x": 1095,
+      "y": 0,
+      "width": 405,
+      "height": 834
+    }
+  },
+  "styles": {
+    "globalNav": {
+      "backgroundColor": "color(srgb 0.158118 0.191843 0.222196)",
+      "backgroundImage": "linear-gradient(rgba(51, 51, 51, 0.34), rgba(0, 0, 0, 0.18) 136px), linear-gradient(90deg, rgba(255, 255, 255, 0.09), rgba(0, 0, 0, 0) 68%), none",
+      "borderRightWidth": "3px",
+      "borderLeftWidth": "0px"
+    },
+    "sessionRail": {
+      "backgroundColor": "color(srgb 0.996863 0.996863 0.996863)",
+      "backgroundImage": "linear-gradient(rgba(51, 51, 51, 0.075), rgba(0, 0, 0, 0) 198px), linear-gradient(90deg, rgba(51, 51, 51, 0.035), rgba(0, 0, 0, 0) 76px), none",
+      "borderRightWidth": "3px",
+      "borderLeftWidth": "0px"
+    },
+    "contentKdsWorkspace": {
+      "backgroundColor": "rgb(255, 255, 255)",
+      "backgroundImage": "linear-gradient(rgba(51, 51, 51, 0.055), rgba(0, 0, 0, 0) 220px), none",
+      "borderRightWidth": "0px",
+      "borderLeftWidth": "2px"
+    },
+    "kdsWorkspace": null
+  }
+}

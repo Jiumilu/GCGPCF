@@ -1,0 +1,25 @@
+schema_version: 1
+current_project_count: 18
+historical_baselines:
+  - count: 17
+    through: 2026-06-27
+    note: Historical evidence retains its recorded scope and is not rewritten.
+projects:
+  - {id: AAAS, slug: aaas}
+  - {id: Brain, slug: brain}
+  - {id: WAS, slug: was}
+  - {id: XiaoC, slug: xiaoc}
+  - {id: WAES, slug: waes}
+  - {id: GPC, slug: gpc}
+  - {id: Studio, slug: studio}
+  - {id: GPCF, slug: gpcf}
+  - {id: XWAIL, slug: xwail}
+  - {id: GFIS, slug: gfis}
+  - {id: MMC, slug: mmc}
+  - {id: KDS, slug: kds}
+  - {id: XiaoG, slug: xiaog}
+  - {id: PVAOS, slug: pvaos}
+  - {id: SOP, slug: sop}
+  - {id: PKC, slug: pkc}
+  - {id: XGD, slug: xgd}
+  - {id: ICP, slug: icp}

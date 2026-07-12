@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/README.md
 source_path: docs/harness/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-12
 supersedes: []
 superseded_by: []
 ---
@@ -409,6 +409,7 @@ KDS 空间：`开发`
 | GPCF-DOC-6417D8DF39 | GFIS WAS Source Record Negative Fixtures Evidence | docs/harness/evidence/gfis-was-source-record-negative-fixtures-20260621.md | GPCF | controlled |
 | GPCF-DOC-3674F84C97 | GFIS WAS Source Record Submission Precheck Evidence | docs/harness/evidence/gfis-was-source-record-submission-precheck-20260621.md | GPCF | controlled |
 | GPCF-DOC-89DF4CBBFA | git-risk-classification-20260617 | docs/harness/evidence/git-risk-classification-20260617.md | GPCF | controlled |
+| GPCF-EVIDENCE-ICP-REGISTRATION-20260712 | GlobalCloud ICP 项目群候选登记证据 | docs/harness/evidence/globalcloud-icp-registration-20260712.md | KDS | controlled |
 | GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626 | GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26 | docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md | KDS | controlled |
 | GPCF-DOC-AUTHORIZATION-LAYER-MATRIX-20260627 | globalcloud-project-group-authorization-layer-matrix-20260627 | docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群授权项执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md | KDS | controlled |
@@ -826,6 +827,7 @@ KDS 空间：`开发`
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | KDS | controlled |
 | GPCF-DOC-A1617A5806 | WAS-Ontology WAES/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md | KDS | controlled |
 | GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | KDS | controlled |
+| GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | KDS | controlled |
 | GPCF-DOC-E60D35F595 | gpcf-12-project-document-control-queue-lr013 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | GPCF | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | KDS | controlled |
 | GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | KDS | controlled |

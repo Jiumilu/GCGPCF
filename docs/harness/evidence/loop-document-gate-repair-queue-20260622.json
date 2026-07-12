@@ -1,11 +1,81 @@
 {
   "evidence_id": "LOOP-DOCUMENT-GATE-REPAIR-QUEUE-20260622",
-  "generated_at": "2026-06-24T11:42:09.666335+00:00",
+  "generated_at": "2026-07-12T01:16:34.318603+00:00",
   "source": "tools/kds-sync/loop_document_gate.py --check-only",
-  "gate": "pass",
-  "gate_reasons": [],
-  "queue_item_count": 0,
-  "queue_items": [],
+  "gate": "rework_required",
+  "gate_reasons": [
+    "missing_metadata",
+    "missing_readme_dirs",
+    "hard_failure:project_group_real_execution_metadata_coverage",
+    "localization_debt"
+  ],
+  "queue_item_count": 4,
+  "queue_items": [
+    {
+      "queue_id": "LDG-REPAIR-001",
+      "reason": "missing_metadata",
+      "category": "document_control",
+      "owner": "GPCF document governance",
+      "priority": "P0",
+      "status": "open",
+      "repair_action": "补齐 Markdown frontmatter doc_id/status/project/source_path 等受控元数据后重跑 document_control。",
+      "allowed_mode": "controlled_document_governance_only",
+      "no_write_boundary": {
+        "production_write": false,
+        "business_writeback": false,
+        "real_kds_api_write": false,
+        "status_upgrade": false
+      }
+    },
+    {
+      "queue_id": "LDG-REPAIR-002",
+      "reason": "missing_readme_dirs",
+      "category": "directory_index",
+      "owner": "GPCF document governance",
+      "priority": "P1",
+      "status": "open",
+      "repair_action": "为缺失 README 的目录补齐目录说明和文档清单，或按受控规则登记例外。",
+      "allowed_mode": "controlled_document_governance_only",
+      "no_write_boundary": {
+        "production_write": false,
+        "business_writeback": false,
+        "real_kds_api_write": false,
+        "status_upgrade": false
+      }
+    },
+    {
+      "queue_id": "LDG-REPAIR-003",
+      "reason": "hard_failure:project_group_real_execution_metadata_coverage",
+      "category": "hard_failure",
+      "owner": "GPCF document governance",
+      "priority": "P0",
+      "status": "open",
+      "repair_action": "修复 hard failure 检查项 `project_group_real_execution_metadata_coverage` 后重跑 loop_document_gate。",
+      "allowed_mode": "controlled_document_governance_only",
+      "no_write_boundary": {
+        "production_write": false,
+        "business_writeback": false,
+        "real_kds_api_write": false,
+        "status_upgrade": false
+      }
+    },
+    {
+      "queue_id": "LDG-REPAIR-004",
+      "reason": "localization_debt",
+      "category": "localization",
+      "owner": "GPCF document governance",
+      "priority": "P1",
+      "status": "open",
+      "repair_action": "按中文本地化门禁报告分组修复旧英文或旧口径文档，不改变业务事实状态。",
+      "allowed_mode": "controlled_document_governance_only",
+      "no_write_boundary": {
+        "production_write": false,
+        "business_writeback": false,
+        "real_kds_api_write": false,
+        "status_upgrade": false
+      }
+    }
+  ],
   "known_boundary": {
     "candidate_no_write": true,
     "gfis_real_business_lane": "repair_required",
@@ -14,9 +84,9 @@
     "production_ready": false
   },
   "source_summary": {
-    "localization_debt": false,
+    "localization_debt": true,
     "fixed_doc_id_drift": false,
-    "missing_metadata": 0,
-    "missing_readme_dirs": 0
+    "missing_metadata": 14,
+    "missing_readme_dirs": 2
   }
 }

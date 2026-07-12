@@ -1,0 +1,113 @@
+schema_version: 1
+default_entry: globalcloud-loop-orchestrator
+project_coverage:
+  current_project_count: 18
+  default_required_skills:
+    - globalcloud-loop-orchestrator
+    - globalcloud-document-governance
+    - globalcloud-project-group-git-clean
+  optional_skill_rules:
+    - skill: globalcloud-ui-quality-gate
+      trigger: ui_surface_or_workbench
+    - skill: globalcloud-openspec-governance
+      trigger: openspec_change_or_spec_gate
+    - skill: ui-ux-pro-max
+      trigger: design_system_or_ui_reasoning
+  projects:
+    - slug: aaas
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: brain
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: was
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: xiaoc
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: waes
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: gpc
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: studio
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-ui-quality-gate]
+    - slug: gpcf
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance]
+    - slug: xwail
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: gfis
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: mmc
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: kds
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance]
+    - slug: xiaog
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: pvaos
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: sop
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: pkc
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: xgd
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
+    - slug: icp
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance]
+skills:
+  - name: globalcloud-loop-orchestrator
+    path: .codex/skills/globalcloud-loop-orchestrator
+    role: orchestrator
+    agent_manifest: true
+    required_files:
+      - SKILL.md
+      - README.md
+      - agents/openai.yaml
+      - scripts/loop_orchestrator.py
+      - scripts/loop_git_gate.py
+      - scripts/loop_operational_gates.py
+    downstream_skills:
+      - globalcloud-document-governance
+      - globalcloud-project-group-git-clean
+      - globalcloud-ui-quality-gate
+      - globalcloud-openspec-governance
+      - ui-ux-pro-max
+  - name: globalcloud-document-governance
+    path: .codex/skills/globalcloud-document-governance
+    role: governance
+    agent_manifest: false
+    required_files:
+      - SKILL.md
+      - README.md
+      - scripts/run_document_governance.py
+  - name: globalcloud-project-group-git-clean
+    path: .codex/skills/globalcloud-project-group-git-clean
+    role: git_gate
+    agent_manifest: true
+    required_files:
+      - SKILL.md
+      - README.md
+      - agents/openai.yaml
+      - scripts/project_group_git_clean_gate.py
+  - name: globalcloud-ui-quality-gate
+    path: .codex/skills/globalcloud-ui-quality-gate
+    role: ui_gate
+    agent_manifest: true
+    required_files:
+      - SKILL.md
+      - README.md
+      - agents/openai.yaml
+      - references/tool-routing.md
+      - references/quality-checklist.md
+      - references/evidence-output.md
+  - name: globalcloud-openspec-governance
+    path: .codex/skills/globalcloud-openspec-governance
+    role: spec_gate
+    agent_manifest: true
+    required_files:
+      - SKILL.md
+      - README.md
+      - agents/openai.yaml
+  - name: ui-ux-pro-max
+    path: .codex/skills/ui-ux-pro-max
+    role: design_system
+    agent_manifest: false
+    required_files:
+      - SKILL.md
+      - README.md

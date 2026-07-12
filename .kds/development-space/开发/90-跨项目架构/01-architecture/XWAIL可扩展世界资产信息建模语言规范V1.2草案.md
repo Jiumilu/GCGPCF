@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# XWAIL可扩展世界资产信息建模语言规范V1.2草案

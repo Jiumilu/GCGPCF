@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# GlobalCloud绿色供应链分布式知识系统实施治理方案

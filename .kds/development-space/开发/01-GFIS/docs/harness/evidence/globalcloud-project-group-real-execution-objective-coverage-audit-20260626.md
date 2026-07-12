@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-OBJECTIVE-COVERAGE-AUDIT-20260626
 title: GlobalCloud 项目群真实执行治理目标覆盖审计 2026-06-26
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0

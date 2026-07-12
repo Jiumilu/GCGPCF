@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "09-status/globalcloud-document-health-report.md"
 MIRROR_REPORT = ROOT / ".kds/development-space/开发/91-治理与验收/09-status/globalcloud-document-health-report.md"
 GFIS_REAL_FACT_ENTRY_GATE_CACHE = os.environ.get("GPCF_GFIS_REAL_FACT_ENTRY_GATE_OUTPUT", "")
+DELEGATED_PROJECT_ROOT = os.environ.get("GPCF_DELEGATED_PROJECT_ROOT", "")
 
 
 def run(command: list[str]) -> tuple[int, str]:
@@ -38,10 +39,29 @@ def run_with_retry(command: list[str], retries: int = 1) -> tuple[int, str]:
     return code, "\n".join(attempts)
 
 
+def run_delegated_project_localization() -> tuple[int, str]:
+    if not DELEGATED_PROJECT_ROOT:
+        return 0, "delegated_project_localization=not_requested"
+    project_root = Path(DELEGATED_PROJECT_ROOT).resolve()
+    if project_root.parent != ROOT.parent or not project_root.is_dir():
+        return 1, f"invalid delegated project root: {project_root}"
+    gate = project_root / "scripts/validate_chinese_document_gate.py"
+    if not gate.is_file():
+        return 1, f"missing delegated Chinese document gate: {gate}"
+    result = subprocess.run(
+        [sys.executable, str(gate)],
+        cwd=project_root,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    return result.returncode, (result.stdout + result.stderr).strip()
+
+
 def iter_repo_md() -> list[Path]:
     paths = []
     for path in ROOT.rglob("*.md"):
-        if ".git" in path.parts or ".kds" in path.parts:
+        if ".git" in path.parts or ".kds" in path.parts or ".zcode" in path.parts:
             continue
         paths.append(path)
     return sorted(paths)
@@ -280,6 +300,7 @@ def main() -> int:
 
     project_group_live_status_current = run([sys.executable, "tools/kds-sync/build_project_group_live_status_current.py"])
 
+    delegated_project_localization = run_delegated_project_localization()
     checks = {
         "project_group_live_status_current": project_group_live_status_current,
         "loop_engineering_five_direction": run([sys.executable, "tools/kds-sync/validate_loop_engineering_five_direction_implementation.py"]),
@@ -291,6 +312,8 @@ def main() -> int:
         "loop_ui_quality_baseline": run([sys.executable, "tools/kds-sync/validate_loop_ui_quality_baseline.py"]),
         "loop_delivery_efficiency_control": run([sys.executable, "tools/kds-sync/validate_loop_delivery_efficiency_control.py"]),
         "gpcf_2_feature_workspace": run([sys.executable, "tools/kds-sync/validate_gpcf_2_feature_workspace.py"]),
+        "icp_project_registration": run([sys.executable, "tools/kds-sync/validate_icp_project_registration.py"]),
+        "constitution_g00_inheritance": run([sys.executable, "tools/kds-sync/validate_constitution_inheritance_gate.py"]),
         "loop_ui_product_first_control": run([sys.executable, "tools/kds-sync/validate_loop_ui_product_first_control.py"]),
         "loop_session_mainline_control": run([sys.executable, "tools/kds-sync/validate_loop_session_mainline_control.py"]),
         "current_session_mainline_declaration": run([sys.executable, "tools/kds-sync/validate_current_session_mainline_declaration.py"]),
@@ -322,6 +345,7 @@ def main() -> int:
         "document_pollution": run([sys.executable, "tools/kds-sync/check_document_pollution.py"]),
         "fixed_doc_id_preservation": run([sys.executable, "scripts/api/validate_gckf_p0_document_control_preserves_fixed_doc_id.py"]),
         "chinese_localization": run([sys.executable, "tools/kds-sync/check_chinese_localization_gate.py"]),
+        "delegated_project_chinese_localization": delegated_project_localization,
         "kds_token": run([sys.executable, "tools/kds-sync/validate_kds_token.py"]),
     }
     if not delegated:
@@ -332,11 +356,14 @@ def main() -> int:
     hard_failures = [
         name
         for name, (code, _) in checks.items()
-        if code != 0 and name not in {"kds_token", "chinese_localization"}
+        if code != 0 and name not in {"kds_token", "chinese_localization", "delegated_project_chinese_localization"}
     ]
     token_blocked = checks["kds_token"][0] != 0
     fixed_doc_id_drift = checks["fixed_doc_id_preservation"][0] != 0
-    localization_debt = checks["chinese_localization"][0] != 0
+    localization_debt = (
+        checks["chinese_localization"][0] != 0
+        or checks["delegated_project_chinese_localization"][0] != 0
+    )
     if missing_metadata or missing_readme_dirs or hard_failures or localization_debt:
         gate = "rework_required"
     elif token_blocked:

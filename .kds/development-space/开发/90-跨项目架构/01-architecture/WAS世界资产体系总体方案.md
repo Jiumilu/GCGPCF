@@ -15,3 +15,11 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# WAS世界资产体系总体方案
+
+本方案纳入 GlobalCloud 项目群主方案控制台账：
+`09-status/globalcloud-project-master-plan-control-register.md`。
+
+本方案的项目群总方案台账一致性由以下 validator 约束：
+`tools/kds-sync/validate_project_master_plan_register.py`。

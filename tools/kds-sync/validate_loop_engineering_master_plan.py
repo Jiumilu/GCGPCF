@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import yaml
+
 from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
 
 
@@ -18,6 +20,7 @@ FIVE_DIRECTION = ROOT / "02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPL
 LOOP_STATE = ROOT / "docs/harness/loop-state.md"
 CAPABILITY_REGISTRY = ROOT / "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md"
 SESSION_MAINLINE_CONTROL = ROOT / "02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md"
+PROJECT_REGISTRY = ROOT / "config/project-group-projects.yaml"
 
 
 def require(condition: bool, message: str) -> None:
@@ -50,11 +53,13 @@ def main() -> int:
     five_direction = read(FIVE_DIRECTION)
     capability_registry = read(CAPABILITY_REGISTRY)
     session_mainline_control = read(SESSION_MAINLINE_CONTROL)
+    registry = yaml.safe_load(read(PROJECT_REGISTRY))
+    projects = [item["id"] for item in registry["projects"]]
 
     require_controlled(master, "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md")
     require(
-        "related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]" in master,
-        "master plan must keep 17-project related_projects scope",
+        f"related_projects: [{', '.join(projects)}]" in master,
+        f"master plan must keep {len(projects)}-project related_projects scope",
     )
 
     for phrase in [

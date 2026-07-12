@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/loop/context/cognee/harness/README.md
 source_path: loop/context/cognee/harness/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-12
 supersedes: []
 superseded_by: []
 ---

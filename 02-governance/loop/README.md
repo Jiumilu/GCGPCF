@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/README.md
 source_path: 02-governance/loop/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-12
 supersedes: []
 superseded_by: []
 ---
@@ -67,7 +67,7 @@ KDS 空间：`开发`
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | controlled |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAES | controlled |
 | GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | controlled |
-| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | GPCF | controlled |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | controlled |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | controlled |
 | GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAES | controlled |
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | controlled |

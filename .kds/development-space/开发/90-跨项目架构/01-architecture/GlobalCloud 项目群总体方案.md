@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626
 title: GlobalCloud 项目群总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
 domain: architecture
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 2. 项目群范围
 
-项目群当前纳入 17 个项目：
+项目群当前纳入 18 个项目。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
 
 | 项目 | 主职责 |
 |---|---|
@@ -52,6 +52,21 @@ superseded_by: []
 | XiaoG | live API、通知、审计和设备验证授权包 |
 | SOP | 绿色供应链场景 SOP 和对外材料候选 |
 | GPCF | 项目群治理、文档、证据、门禁、状态传导和 LOOP 编排 |
+| ICP | 24字产业模型、十一池只读资源投影、场景编排、产业匹配和控制决策候选 |
+
+## 2.2 GC-ICP 产业控制平面边界
+
+GC-ICP 是项目群产业控制中枢候选项目，拥有产业建模、资源投影、场景评估和产业控制决策候选职责，但不拥有业务事实写入权、治理批准权或生产执行权。
+
+| 相邻项目 | 主责保持 | ICP 禁止越权 |
+|---|---|---|
+| KDS | 知识主存和十一池事实索引 | 不建立第二套资源事实主账 |
+| WAES | 治理、证据、状态和人工确认 | 不自动批准或晋升状态 |
+| GPC | 平台订单和跨组织协同 | 不创建订单、运输或 POD 事实 |
+| GFIS | 工厂生产、质量、库存和设备 | 不排产、放行或控制设备 |
+| PVAOS | 租户、组织、伙伴和门户 | 不管理身份或生态主数据 |
+
+ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、API 和 fixture 验证不得解释为真实业务接入、项目群集成或生产就绪。
 
 ## 2.1 武汉城市圈绿色供应链运营 SOP 场景链路
 
@@ -102,3 +117,9 @@ customer_accepted = false
 ```
 
 本文只建立项目群总体控制基线，不声明真实运行、真实集成、真实交付或客户验收完成。
+
+## 6. GlobalCloud 宪法继承与治理归属
+
+本方案继承 `GlobalCloud宪法`。宪法是产业模型的具体实践总纲和项目群最高规范性权威文件；本方案是其授权下的最高总体执行控制文件，不得反向覆盖宪法的产业模型、根本原则、体系边界和权威关系。
+
+宪法治理的产业领域主责归 ICP，canonical 正本与版本保管归 KDS。SOP 负责修订程序与审计，GPCF 负责方案传导、冲突检测和 G00 继承门禁，WAES 与人工负责授权和状态裁决。任何单一项目不得完成自提、自审、自批、自发布闭环。

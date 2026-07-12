@@ -38,6 +38,7 @@ PROJECTS = {
     "sop",
     "pkc",
     "xgd",
+    "icp",
 }
 PRIORITIES = {"P0", "P1", "P2", "P3"}
 STEPS = ["plan", "implement", "evaluate", "repair", "commit"]
@@ -154,6 +155,12 @@ def refresh_runtime_state() -> None:
         for entry in queue.get("queue", [])
         if entry.get("status") not in {"closed", "archived"}
     ]
+    current_feature = None
+    if active_entries:
+        current_feature = max(
+            active_entries,
+            key=lambda entry: (str(entry.get("updated_at", "")), str(entry.get("id", ""))),
+        )["id"]
     state = read_json(
         STATE_FILE,
         {
@@ -167,7 +174,7 @@ def refresh_runtime_state() -> None:
         {
             "schema_version": "2.0",
             "mode": "feature_delivery",
-            "current_feature": active_entries[0]["id"] if active_entries else None,
+            "current_feature": current_feature,
             "active_feature_count": len(active_entries),
             "queue_length": len(queue.get("queue", [])),
             "updated_at": now(),

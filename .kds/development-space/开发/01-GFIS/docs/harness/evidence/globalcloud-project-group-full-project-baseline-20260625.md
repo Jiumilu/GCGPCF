@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-FULL-PROJECT-BASELINE-20260625
 title: GlobalCloud 项目群全量项目真实状态基线 2026-06-25
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0

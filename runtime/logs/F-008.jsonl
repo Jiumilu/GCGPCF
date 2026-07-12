@@ -1,0 +1,2 @@
+{"timestamp": "2026-07-12T06:08:30+00:00", "feature_id": "F-008", "role": "Evaluator", "status": "commit", "input": "收口 ICP 项目群纳入候选边界并准备进入 Recorder", "output": "Evaluator -> Recorder；status=commit", "evidence": "runtime/queue.json 与 runtime/state.json。"}
+{"timestamp": "2026-07-12T06:08:37+00:00", "feature_id": "F-008", "role": "Recorder", "status": "closed", "input": "Evidence Gate 已通过。", "output": "Feature 已移动到 features/done/F-008-icp-project-group-admission。", "evidence": "feature.yaml status=done；queue status=closed。"}

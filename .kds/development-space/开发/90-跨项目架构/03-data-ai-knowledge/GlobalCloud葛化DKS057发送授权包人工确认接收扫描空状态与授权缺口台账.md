@@ -15,3 +15,5 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+
+# GlobalCloud葛化DKS057发送授权包人工确认接收扫描空状态与授权缺口台账

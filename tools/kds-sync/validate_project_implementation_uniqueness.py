@@ -27,6 +27,7 @@ EXPECTED_IMPLEMENTATION_PLANS = {
     "GlobalCloud XiaoC": [PROJECT_ROOT / "GlobalCloud XiaoC/GlobalCloud XiaoC 实施方案.md"],
     "GlobalCloud XiaoG": [PROJECT_ROOT / "GlobalCloud XiaoG/GlobalCloud XiaoG 实施方案.md"],
     "GlobalCloud GPCF": [PROJECT_ROOT / "GlobalCoud GPCF/GlobalCloud GPCF 实施方案.md"],
+    "GlobalCloud ICP": [PROJECT_ROOT / "GlobalCloud ICP/GlobalCloud ICP 实施方案.md"],
 }
 
 REQUIRED_PROJECTS = {
@@ -47,7 +48,10 @@ REQUIRED_PROJECTS = {
     "GlobalCloud XGD",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
+    "GlobalCloud ICP",
 }
+
+CANDIDATE_PROJECTS = {"GlobalCloud ICP"}
 
 
 def is_controlled_implementation_plan(path: Path) -> bool:
@@ -57,6 +61,13 @@ def is_controlled_implementation_plan(path: Path) -> bool:
     return "status: controlled" in text and "实施方案" in text
 
 
+def is_candidate_implementation_plan(path: Path) -> bool:
+    if not path.exists():
+        return False
+    text = path.read_text(encoding="utf-8")
+    return "status: candidate" in text and "实施方案" in text
+
+
 def main() -> int:
     failures: list[str] = []
     warnings: list[str] = []
@@ -64,6 +75,8 @@ def main() -> int:
 
     for project, paths in EXPECTED_IMPLEMENTATION_PLANS.items():
         existing = [str(path) for path in paths if is_controlled_implementation_plan(path)]
+        if not existing and project in CANDIDATE_PROJECTS:
+            existing = [str(path) for path in paths if is_candidate_implementation_plan(path)]
         authoritative[project] = existing
         if len(existing) > 1:
             failures.append(f"multiple implementation plans for {project}: {existing}")

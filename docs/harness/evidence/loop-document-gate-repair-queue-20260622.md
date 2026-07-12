@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/loop-document-gate-repair-queue-20260622.md
 source_path: docs/harness/evidence/loop-document-gate-repair-queue-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -30,9 +30,9 @@ superseded_by: []
 
 | 字段 | 值 |
 |---|---|
-| gate | `pass` |
-| gate_reasons | `none` |
-| queue_item_count | `0` |
+| gate | `rework_required` |
+| gate_reasons | `missing_metadata, missing_readme_dirs, hard_failure:project_group_real_execution_metadata_coverage, localization_debt` |
+| queue_item_count | `4` |
 | fixed_doc_id_drift | `False` |
 | gfis_real_business_lane | `repair_required` |
 | accepted | `False` |
@@ -43,7 +43,10 @@ superseded_by: []
 
 | queue_id | reason | category | owner | priority | status | repair_action |
 |---|---|---|---|---|---|---|
-| - | none | - | - | - | closed | 当前无门禁修复项 |
+| LDG-REPAIR-001 | missing_metadata | document_control | GPCF document governance | P0 | open | 补齐 Markdown frontmatter doc_id/status/project/source_path 等受控元数据后重跑 document_control。 |
+| LDG-REPAIR-002 | missing_readme_dirs | directory_index | GPCF document governance | P1 | open | 为缺失 README 的目录补齐目录说明和文档清单，或按受控规则登记例外。 |
+| LDG-REPAIR-003 | hard_failure:project_group_real_execution_metadata_coverage | hard_failure | GPCF document governance | P0 | open | 修复 hard failure 检查项 `project_group_real_execution_metadata_coverage` 后重跑 loop_document_gate。 |
+| LDG-REPAIR-004 | localization_debt | localization | GPCF document governance | P1 | open | 按中文本地化门禁报告分组修复旧英文或旧口径文档，不改变业务事实状态。 |
 
 ## 非声明
 

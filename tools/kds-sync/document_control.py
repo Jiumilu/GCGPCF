@@ -33,6 +33,7 @@ PROJECTS = {
     "MMC": ("11-MMC", ["MMC", "管理配置", "模板基线"]),
     "GPCF": ("12-GPCF", ["GPCF", "GlobalCoud GPCF", "项目群", "总控"]),
     "Studio": ("13-Studio", ["Studio", "GlobalCloud Studio", "Hermes", "Agent 工作台"]),
+    "ICP": ("14-ICP", ["ICP", "GlobalCloud ICP", "Industry Control Plane", "产业控制", "产业模型", "产业控制平面"]),
 }
 
 WAS_ONTOLOGY_GOVERNANCE_DOCS = {
@@ -117,6 +118,7 @@ PROJECT_GROUP_FULL_SCOPE = [
     "SOP",
     "PKC",
     "XGD",
+    "ICP",
 ]
 
 DOMAIN_BY_TOP = {

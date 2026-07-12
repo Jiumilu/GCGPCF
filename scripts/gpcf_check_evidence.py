@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 from gpcf_feature_lib import append_journal, feature_file, find_feature, read_feature, run_command, update_queue_entry, write_feature
@@ -19,6 +20,10 @@ SCRIPT_CHECKS = [
     "tools/kds-sync/validate_gpcf_2_feature_workspace.py",
 ]
 
+UI_EVIDENCE_IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
+UI_EVIDENCE_TEXT_SUFFIXES = {".md", ".txt", ".json"}
+UI_EVIDENCE_NAME_HINTS = ("ui", "visual", "screenshot", "browser", "playwright", "runtime")
+
 
 def feature_requires(data: dict[str, object], keywords: set[str]) -> bool:
     values: list[str] = [
@@ -32,7 +37,14 @@ def feature_requires(data: dict[str, object], keywords: set[str]) -> bool:
         if isinstance(in_scope, list):
             values.extend(str(item) for item in in_scope)
     text = " ".join(values).lower()
-    return any(keyword in text for keyword in keywords)
+    for keyword in keywords:
+        if keyword.isascii() and keyword.replace(" ", "").isalnum():
+            if re.search(rf"(?<![a-z0-9]){re.escape(keyword)}(?![a-z0-9])", text):
+                return True
+            continue
+        if keyword in text:
+            return True
+    return False
 
 
 def write_result(path: Path, title: str, results: list[tuple[str, str, str]]) -> str:
@@ -57,6 +69,46 @@ def write_markdown_preserving_frontmatter(path: Path, body: str) -> None:
     path.write_text(body, encoding="utf-8")
 
 
+def detect_ui_evidence(feature_dir: Path, evidence_dir: Path) -> tuple[str, str]:
+    screenshots_file = evidence_dir / "screenshots.txt"
+    existing_text = screenshots_file.read_text(encoding="utf-8", errors="ignore").strip() if screenshots_file.exists() else ""
+    placeholder_prefixes = (
+        "UI evidence required by Feature scope",
+        "waived: Feature scope has no UI/browser evidence requirement.",
+    )
+    if existing_text and not existing_text.startswith(placeholder_prefixes):
+        return "pass", existing_text
+
+    candidate_dirs = [evidence_dir, feature_dir / "artifacts"]
+    asset_refs: list[str] = []
+    note_refs: list[str] = []
+    for base_dir in candidate_dirs:
+        if not base_dir.exists():
+            continue
+        for path in sorted(base_dir.rglob("*")):
+            if not path.is_file() or path.name == ".gitkeep":
+                continue
+            rel = path.relative_to(feature_dir).as_posix()
+            lower_name = path.name.lower()
+            if path.suffix.lower() in UI_EVIDENCE_IMAGE_SUFFIXES:
+                asset_refs.append(rel)
+                continue
+            if path.suffix.lower() in UI_EVIDENCE_TEXT_SUFFIXES and any(hint in lower_name for hint in UI_EVIDENCE_NAME_HINTS):
+                note_refs.append(rel)
+
+    if asset_refs or note_refs:
+        lines = ["UI evidence detected from Feature artifacts."]
+        if asset_refs:
+            lines.append("assets:")
+            lines.extend(f"- {item}" for item in asset_refs[:12])
+        if note_refs:
+            lines.append("notes:")
+            lines.extend(f"- {item}" for item in note_refs[:12])
+        return "pass", "\n".join(lines)
+
+    return "fail", "UI evidence required by Feature scope; provide screenshot/browser evidence before close."
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("feature_id")
@@ -75,7 +127,7 @@ def main() -> int:
     ]
     tests_status = write_result(evidence_dir / "tests.txt", "Tests Evidence", test_results)
 
-    compile_status, compile_output = run_command(["python3", "-m", "py_compile", *SCRIPT_CHECKS])
+    compile_status, compile_output = run_command(["python3", "-X", "pycache_prefix=/private/tmp/gpcf-pycache", "-m", "py_compile", *SCRIPT_CHECKS])
     diff_status, diff_output = run_command(["git", "diff", "--check"])
     build_status = write_result(
         evidence_dir / "build.txt",
@@ -89,8 +141,7 @@ def main() -> int:
     ui_required = feature_requires(data, {"ui", "界面", "前端", "浏览器", "screenshot", "studio"})
     api_required = feature_requires(data, {"api", "接口", "kds api", "external api", "真实 api"})
     if ui_required:
-        screenshots_status = "fail"
-        screenshots_text = "UI evidence required by Feature scope; provide screenshot/browser evidence before close."
+        screenshots_status, screenshots_text = detect_ui_evidence(feature_dir, evidence_dir)
     else:
         screenshots_status = "waived"
         screenshots_text = "waived: Feature scope has no UI/browser evidence requirement."

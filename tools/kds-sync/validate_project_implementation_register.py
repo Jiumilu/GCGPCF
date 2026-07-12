@@ -29,6 +29,7 @@ REQUIRED_PROJECTS = [
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
     "GlobalCloud GPCF",
+    "GlobalCloud ICP",
     "shared/python_utils",
 ]
 

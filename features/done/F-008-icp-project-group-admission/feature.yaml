@@ -1,0 +1,35 @@
+id: F-008
+name: icp-project-group-admission
+project: icp
+status: done
+goal: 将 ICP 以 candidate/partial/human_required 边界纳入 GlobalCloud 项目群当前 18 项范围
+owner: agent-dev-01
+priority: P0
+scope:
+  in:
+    - projects/icp 路线图、状态、风险入口
+    - GPCF 2.0 项目枚举与 runtime 创建入口
+    - 文档控制 KDS 本地镜像项目映射
+    - ICP candidate/partial/human_required 边界验证
+  out:
+    - 真实业务集成
+    - 生产部署
+    - 真实 KDS、GPC、GFIS、PVAOS 或 WAES 写入
+    - accepted、integrated、production_ready 或 customer_accepted 状态提升
+acceptance:
+  - validate_icp_project_registration.py 通过
+  - validate_gpcf_2_feature_workspace.py 输出 project_scope=18
+  - loop_document_gate.py 纳入 ICP registration validator
+  - F-008 Evidence Gate 通过且保持 active candidate
+loop:
+  current_step: commit
+  iteration: 9
+evidence:
+  tests: pass
+  build: pass
+  screenshots: waived
+  api: waived
+  summary: pass
+blockers:
+created_at: "2026-07-12T02:06:05+00:00"
+updated_at: "2026-07-12T06:08:37+00:00"

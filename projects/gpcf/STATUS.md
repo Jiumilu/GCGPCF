@@ -20,6 +20,14 @@ superseded_by: []
 
 本文件只记录 GPCF 的当前项目节奏状态。功能级进度、证据、阻塞和关闭状态统一由 features 目录中的 feature.yaml 承载。
 
+## OpenSpec 入口
+
+- 策略：`required`
+- 中央入口：`openspec/changes/gpcf-<change>/`
+- Feature：`python scripts/gpcf_new_feature.py --project gpcf`
+- 默认 Loop：`Governance`
+- Evidence/Harness：`required/required`
+
 ## 当前状态
 
 - GPCF 2.0 已进入 Feature 运行态。

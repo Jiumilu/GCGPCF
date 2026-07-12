@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/README.md
 source_path: docs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-03
+last_reviewed: 2026-07-12
 supersedes: []
 superseded_by: []
 ---
@@ -41,6 +41,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-A2F5EC5E20 | GCBrain-Development-Manual | docs/GCBrain-Development-Manual.md | KDS | controlled |
 | GPCF-DOC-9F7CBCE127 | 工程说明 | docs/README.md | KDS | controlled |
+| GPCF-DOC-26EE0B96B8 | architecture | docs/architecture/README.md | KDS | controlled |
 | GPCF-DOC-137295729F | codegraph | docs/codegraph/README.md | KDS | controlled |
 | GPCF-DOC-ACDBF80B37 | CodeGraph 授权模型 | docs/codegraph/codegraph-authorization-model.md | KDS | controlled |
 | GPCF-DOC-990EE0035A | CodeGraph 业务开发执行层准入规则 | docs/codegraph/codegraph-dev-execution-admission.md | GPCF | controlled |
@@ -340,6 +341,9 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAES Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | KDS | controlled |
 | GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAES 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | KDS | controlled |
 | GPCF-DOC-1946E4144B | WAES Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | KDS | controlled |
+| GPCF-DOC-CC2C02D1FB | governance | docs/governance/README.md | KDS | controlled |
+| GPCF-DOC-94532311B5 | GPCF 2.0 治理文件收敛清单 | docs/governance/gpcf-2-governance-file-inventory.md | KDS | controlled |
+| GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | KDS | controlled |
 | GPCF-DOC-92A4C970C1 | AaaS | docs/harness/AaaS/README.md | KDS | controlled |
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | controlled |
@@ -713,6 +717,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-6417D8DF39 | GFIS WAS Source Record Negative Fixtures Evidence | docs/harness/evidence/gfis-was-source-record-negative-fixtures-20260621.md | GPCF | controlled |
 | GPCF-DOC-3674F84C97 | GFIS WAS Source Record Submission Precheck Evidence | docs/harness/evidence/gfis-was-source-record-submission-precheck-20260621.md | GPCF | controlled |
 | GPCF-DOC-89DF4CBBFA | git-risk-classification-20260617 | docs/harness/evidence/git-risk-classification-20260617.md | GPCF | controlled |
+| GPCF-EVIDENCE-ICP-REGISTRATION-20260712 | GlobalCloud ICP 项目群候选登记证据 | docs/harness/evidence/globalcloud-icp-registration-20260712.md | KDS | controlled |
 | GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626 | GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26 | docs/harness/evidence/globalcloud-loop-document-gate-readiness-retry-hardening-20260626.md | KDS | controlled |
 | GPCF-DOC-AUTHORIZATION-LAYER-MATRIX-20260627 | globalcloud-project-group-authorization-layer-matrix-20260627 | docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md | GPCF | controlled |
 | GPCF-DOC-PROJECT-GROUP-AUTHORIZATION-PRE-EXECUTION-COMMAND-PACK-20260626 | GlobalCloud 项目群授权项执行前命令包 2026-06-26 | docs/harness/evidence/globalcloud-project-group-authorization-pre-execution-command-pack-20260626.md | KDS | controlled |
@@ -1130,6 +1135,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | KDS | controlled |
 | GPCF-DOC-A1617A5806 | WAS-Ontology WAES/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md | KDS | controlled |
 | GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | KDS | controlled |
+| GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | KDS | controlled |
 | GPCF-DOC-E60D35F595 | gpcf-12-project-document-control-queue-lr013 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | GPCF | controlled |
 | GPCF-DOC-D7809CB67F | 12 项目 Loop 准备度基线重算 | docs/harness/gpcf-12-project-loop-readiness-baseline-lr017.md | KDS | controlled |
 | GPCF-DOC-ECC8C7D894 | Brain loop-state 补齐包 | docs/harness/gpcf-brain-loop-state-completion-pack-lr024.md | KDS | controlled |
@@ -2398,3 +2404,5 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-4ED15E157A | GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001.multi-agent.md | KDS | controlled |
 | GPCF-DOC-GFIS-RUNTIME-SOP-E2E-MIN-001 | GFIS-RUNTIME-SOP-E2E-MIN-001 | docs/harness/tasks/GFIS-RUNTIME-SOP-E2E-MIN-001.md | GPCF | controlled |
 | GPCF-DOC-5FE5ED4E8B | tasks | docs/harness/tasks/README.md | KDS | controlled |
+| GPCF-DOC-AE29585A23 | standards | docs/standards/README.md | KDS | controlled |
+| GPCF-DOC-E6A5B97688 | Feature Workspace 标准 | docs/standards/feature-workspace.md | GPCF | controlled |

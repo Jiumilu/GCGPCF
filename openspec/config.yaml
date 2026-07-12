@@ -1,5 +1,19 @@
 schema: spec-driven
 
+context: |
+  GlobalCloud uses Program to set direction, Project to manage cadence, Feature to deliver, Loop to serve execution, and Evidence to retain results.
+  Every implementation change must bind to a GPCF Feature under features/active/F-xxx and preserve traceability through journal.md and evidence/.
+  OpenSpec completion or archive does not imply accepted, integrated, production_ready, or customer_accepted; Harness Governance owns final status decisions and human confirmation remains mandatory.
+
+rules:
+  proposal:
+    - Identify affected Program, Project, Feature, repositories, dependencies, non-goals, and rollback boundary.
+  design:
+    - Describe Feature binding, evidence production, document control, and Harness handoff.
+  tasks:
+    - Include applicable implementation, test, build, lint, evidence, document gate, spec sync, and rollback tasks.
+    - Do not treat task checkbox completion as delivery or acceptance evidence.
+
 # Project context (optional)
 # This is shown to AI when creating artifacts.
 # Add your tech stack, conventions, style guides, domain knowledge, etc.

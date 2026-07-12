@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-RECEIPT-RECORDING-PROCEDURE-20260627
 title: GlobalCloud 项目群下一阶段授权回执录入流程 2026-06-27
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
