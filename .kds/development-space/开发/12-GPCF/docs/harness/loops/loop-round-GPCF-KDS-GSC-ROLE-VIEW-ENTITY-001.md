@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md
 source_path: docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-01
+last_reviewed: 2026-07-13
 supersedes: []
 superseded_by: []
 ---
@@ -31,6 +31,9 @@ superseded_by: []
 | no-write API 契约来源 | `03-data-ai-knowledge/GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md` |
 | KDS 对象模型 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/_schemas/object-model.yaml` |
 | KDS 全局对象注册表 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/_registries/global-object-registry.yaml` |
+| DKS 已合流前置基线 | `GPCF-KDS-DKS-054` 至 `GPCF-KDS-DKS-060`，状态 `merged_precondition_controlled` |
+| GCKF 接管证据 | `docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.json` |
+| GCKF 当前授权停点 | `docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.json` |
 
 ## 2. 本轮产物
 
@@ -45,7 +48,7 @@ superseded_by: []
 
 ### run
 
-执行本地实体化：读取受控方案，把角色、ACL、11 池、no-write 边界和知识工程挂接固化为 KDS 实体页与注册表入口。
+执行本地实体化：读取受控方案，把角色、ACL、11 池、no-write 边界和知识工程挂接固化为 KDS 实体页与注册表入口；同时登记 DKS-054 至 DKS-060 已合流前置基线、D185 接管状态和 D190 授权停点。
 
 ### stop
 
@@ -54,6 +57,7 @@ superseded_by: []
 1. 缺少人工授权或 WAES 规则记录。
 2. 实体页出现真实账号创建、真实 KDS API 写入、生产权限配置或业务验收完成声明。
 3. 出现 `accepted`、`integrated`、`production_ready`、`customer_accepted` 等未经人工确认的状态提升。
+4. 将角色视图实体误写为 D190 的恢复触发器，或在四项外部信号未满足时生成新的 GCKF 执行轮次。
 
 ### verify
 
@@ -77,7 +81,8 @@ superseded_by: []
 2. KDS 实体页缺少 `entity_id`、`source_refs`、`acl_scope_tags`、`pool_bindings` 或禁止升级口径。
 3. 注册表入口与实体页 ID 不一致。
 4. 文档污染或 KDS token 门禁异常。
+5. 实体、注册表或受控说明缺少 DKS-054 至 DKS-060、D185、D190 来源链。
 
 ## 4. 真实边界
 
-本轮只完成本地受控实体登记和知识工程挂接证据，不代表 KDS API 已真实同步，不代表合作单位账号、权限、积分、收益、额度或悬赏已完成配置。
+本轮只完成本地受控实体登记和知识工程挂接证据，不代表 KDS API 已真实同步，不代表合作单位账号、权限、积分、收益、额度或悬赏已完成配置。GCKF 仍停在 D190 `authorization_boundary`，`nextExecutableRounds=0`。

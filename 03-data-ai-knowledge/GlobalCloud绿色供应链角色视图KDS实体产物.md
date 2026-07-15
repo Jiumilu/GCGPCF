@@ -71,7 +71,17 @@ superseded_by: []
 
 所有角色必须保留授权来源、授权范围、生效日期、复核日期和撤销条件。缺少人工授权或 WAES 规则记录时，只能保持 `candidate`、`repair_required` 或 `blocked`。
 
-## 5. 知识工程挂接
+## 5. 受控来源链
+
+| 来源 | 当前状态 | 本实体继承边界 |
+|---|---|---|
+| `GPCF-KDS-DKS-054` 至 `GPCF-KDS-DKS-060` | `merged_precondition_controlled` | 仅作为分布式知识系统已合流前置基础，不据此声明业务完成 |
+| `GPCF-GCKF-P0-D185-001` | `session_mainline_takeover_with_hold` | 接管 GCKF/Knowledge Fabric 受控主线，最高状态保持 `review_ready_with_hold` |
+| `GPCF-GCKF-P0-D190-001` | `authorization_boundary_stop_condition_with_resume_trigger` | `satisfiedResumeTriggers=0`、`nextExecutableRounds=0`、`resumeAllowed=false` |
+
+本实体是 D190 下游的 `controlled_candidate`，不是恢复触发器，不授权响应接收、外部通知、运行态写回或真实 KDS API 写入。
+
+## 6. 知识工程挂接
 
 | 知识工程层 | 挂接方式 | 边界 |
 |---|---|---|
@@ -82,7 +92,7 @@ superseded_by: []
 | ACL | 使用 `own_unit`、`invited`、`finance_private`、`gfis_operator`、`waes_boundary`、`kds_operator` 等范围标签 | 不配置生产权限 |
 | LOOP | 通过 `GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001` 形成 evidence | 不代表合作单位接入验收完成 |
 
-## 6. 禁止升级口径
+## 7. 禁止升级口径
 
 1. 角色视图实体存在，不等于真实账号已创建。
 2. KDS 注册表存在，不等于 KDS API 已真实同步。
@@ -90,7 +100,7 @@ superseded_by: []
 4. 11 池挂接存在，不等于业务事实、积分、收益、额度或悬赏已确认。
 5. 缺少人工确认或委员会备案时，禁止声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
 
-## 7. 当前下一步
+## 8. 当前下一步
 
 1. 由 KDS 记录人复核实体字段和注册表入口。
 2. 由 WAES 对接人复核 ACL、DSR-L2 / DSR-L3 和禁止升级口径。

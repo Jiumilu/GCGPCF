@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-12
+last_reviewed: 2026-07-14
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-07-12
+日期：2026-07-14
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 58 | 50 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 171 | 24 | 已建空间 |
-| KDS | 05-KDS | 740 | 737 | 已建空间 |
+| KDS | 05-KDS | 742 | 739 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1994 | 1852 | 已建空间 |
+| GPCF | 12-GPCF | 1995 | 1852 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
@@ -49,7 +49,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 191 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 192 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3128,6 +3128,7 @@ superseded_by: []
 | GPCF-DOC-F011-STUDIO-WORKBENCH-RUNTIME-UI-20260712 | Studio 工作台运行态 UI 证据 | features/active/F-011-studio-workbench-ui-runtime-closure/evidence/runtime-ui.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/evidence/runtime-ui.md |
 | GPCF-DOC-F011-STUDIO-WORKBENCH-SUMMARY-20260712 | 证据摘要 | features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md |
 | GPCF-DOC-F011-STUDIO-WORKBENCH-JOURNAL-20260712 | F-011 studio-workbench-ui-runtime-closure | features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/journal.md |
+| GPCF-DOC-39D57E2071 | F-012 icp-sop-foundation-coupling | features/active/F-012-icp-sop-foundation-coupling/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-012-icp-sop-foundation-coupling/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |
 | GPCF-DOC-87C12A1121 | 证据摘要 | features/done/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md |
@@ -3188,6 +3189,8 @@ superseded_by: []
 | GPCF-DOC-FB59167101 | project-group-icp-registration | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md | KDS | GPC, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md |
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md |
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | GPCF | WAES, GPCF, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/register-globalcloud-icp/tasks.md |
+| GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md |
+| GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | KDS | GPC, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/specs/README.md |
 | GPCF-DOC-60B2E3BD94 | AAAS 风险 | projects/aaas/RISK.md | AAAS | AAAS | governance | controlled | 开发/91-治理与验收/projects/aaas/RISK.md |
 | GPCF-DOC-FB24610A83 | AAAS 路线图 | projects/aaas/ROADMAP.md | AAAS | AAAS | governance | controlled | 开发/91-治理与验收/projects/aaas/ROADMAP.md |

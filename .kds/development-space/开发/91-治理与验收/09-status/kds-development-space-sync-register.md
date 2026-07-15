@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-12
+last_reviewed: 2026-07-14
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-07-12
+日期：2026-07-14
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 58 | 50 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 171 | 24 | 已建空间 |
-| KDS | 05-KDS | 740 | 737 | 已建空间 |
+| KDS | 05-KDS | 742 | 739 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1994 | 1852 | 已建空间 |
+| GPCF | 12-GPCF | 1995 | 1852 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
@@ -53,7 +53,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 191 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 192 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3132,6 +3132,7 @@ superseded_by: []
 | GPCF-DOC-F011-STUDIO-WORKBENCH-RUNTIME-UI-20260712 | features/active/F-011-studio-workbench-ui-runtime-closure/evidence/runtime-ui.md | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/evidence/runtime-ui.md | bidirectional | pending_api |
 | GPCF-DOC-F011-STUDIO-WORKBENCH-SUMMARY-20260712 | features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-F011-STUDIO-WORKBENCH-JOURNAL-20260712 | features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | bidirectional | pending_api |
+| GPCF-DOC-39D57E2071 | features/active/F-012-icp-sop-foundation-coupling/journal.md | 开发/91-治理与验收/features/active/F-012-icp-sop-foundation-coupling/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
@@ -3192,6 +3193,8 @@ superseded_by: []
 | GPCF-DOC-FB59167101 | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md | 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md | bidirectional | pending_api |
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | bidirectional | pending_api |
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | openspec/changes/register-globalcloud-icp/tasks.md | 开发/12-GPCF/openspec/changes/register-globalcloud-icp/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-DA59B18707 | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | bidirectional | pending_api |
+| GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | bidirectional | pending_api |
 | GPCF-DOC-89FBFF25D3 | openspec/specs/README.md | 开发/05-KDS/openspec/specs/README.md | bidirectional | pending_api |
 | GPCF-DOC-60B2E3BD94 | projects/aaas/RISK.md | 开发/91-治理与验收/projects/aaas/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-FB24610A83 | projects/aaas/ROADMAP.md | 开发/91-治理与验收/projects/aaas/ROADMAP.md | bidirectional | pending_api |

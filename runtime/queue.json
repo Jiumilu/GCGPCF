@@ -79,6 +79,17 @@
       "updated_at": "2026-07-12T10:01:53+00:00"
     },
     {
+      "id": "F-012",
+      "name": "icp-sop-foundation-coupling",
+      "project": "sop",
+      "priority": "P0",
+      "status": "queued",
+      "current_role": "Dispatcher",
+      "workspace": "features/active/F-012-icp-sop-foundation-coupling",
+      "created_at": "2026-07-13T01:26:49+00:00",
+      "updated_at": "2026-07-13T01:26:49+00:00"
+    },
+    {
       "id": "F-004",
       "name": "loop-governance-slimming",
       "project": "gpcf",

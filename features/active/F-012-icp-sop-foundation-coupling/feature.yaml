@@ -1,0 +1,23 @@
+id: F-012
+name: icp-sop-foundation-coupling
+project: sop
+status: active
+goal: 建立 ICP→SOP 单向强依赖：SOP 矩阵必须消费版本化 ICP 规则、产业模型、场景模板与约束清单，且不得复制或弱化 ICP 基线。
+owner: SOP
+priority: P0
+scope:
+  in:
+  out:
+acceptance:
+loop:
+  current_step: plan
+  iteration: 0
+evidence:
+  tests: pending
+  build: pending
+  screenshots: pending
+  api: pending
+  summary: pending
+blockers:
+created_at: "2026-07-13T01:26:49+00:00"
+updated_at: "2026-07-13T01:26:49+00:00"

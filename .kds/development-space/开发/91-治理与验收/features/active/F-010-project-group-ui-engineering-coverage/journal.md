@@ -32,3 +32,29 @@ superseded_by: []
    - none
 5. 是否可以提交？
    - 否，Evidence Gate 仍待验证。
+
+### Iteration 1
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - UI evidence required；summary evidence failed
+5. 是否可以提交？
+   - 否。
+
+### Iteration 2
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - 未发现阻塞项。
+5. 是否可以提交？
+   - 是，前提是 close gate 通过。

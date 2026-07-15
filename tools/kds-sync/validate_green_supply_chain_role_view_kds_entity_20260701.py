@@ -62,6 +62,11 @@ def main() -> None:
             "candidate_only",
             "KDS 11 池",
             "知识工程",
+            "GPCF-KDS-DKS-054",
+            "GPCF-KDS-DKS-060",
+            "merged_precondition_controlled",
+            "GPCF-GCKF-P0-D190-001",
+            "nextExecutableRounds=0",
             "禁止声明 `accepted`",
             "不等于 KDS API 已真实同步",
         ],
@@ -94,6 +99,12 @@ def main() -> None:
             "kds_operator",
             "Promotion Blockers",
             "Forbidden Claims",
+            "GPCF-KDS-DKS-054",
+            "GPCF-KDS-DKS-060",
+            "GPCF-GCKF-P0-D185-001",
+            "GPCF-GCKF-P0-D190-001",
+            "nextExecutableRounds=0",
+            "resumeAllowed=false",
         ],
     )
     require_tokens(
@@ -108,6 +119,9 @@ def main() -> None:
             "### recover",
             "### debug",
             "validate_green_supply_chain_role_view_kds_entity_20260701.py",
+            "merged_precondition_controlled",
+            "authorization_boundary",
+            "nextExecutableRounds=0",
         ],
     )
     require_tokens(
@@ -119,6 +133,9 @@ def main() -> None:
             "kds_role_view",
             "governance_index_only",
             "no_write",
+            "merged_precondition_status: merged_precondition_controlled",
+            "mainline_stop_type: authorization_boundary",
+            "next_executable_rounds: 0",
         ],
     )
 
