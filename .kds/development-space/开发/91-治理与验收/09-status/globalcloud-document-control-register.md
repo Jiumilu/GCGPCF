@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-14
+last_reviewed: 2026-07-16
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-07-14
+日期：2026-07-16
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -417,7 +417,7 @@ superseded_by: []
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md |
 | GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | GFIS, GPC, WAES, KDS, XiaoG, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md |
-| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/README.md |
 | GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAES | GFIS, GPC, WAES, KDS, PKC, XiaoG, MMC, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md |
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/README.md |

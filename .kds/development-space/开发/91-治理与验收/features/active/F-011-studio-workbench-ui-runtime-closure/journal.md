@@ -58,3 +58,16 @@ superseded_by: []
    - 未发现阻塞项。
 5. 是否可以提交？
    - 是，前提是 close gate 通过。
+
+### Control Update 2026-07-16
+
+1. 这轮做什么？
+   - 将 Studio 工作台运行闭环升级为多用户、人类可操作的产品优先控制。
+2. 改了什么？
+   - 明确 Studio 低频、高频、审计、移动和键盘用户，以及 Playwright/内部状态机分层；未改变 Runtime 角色与业务状态。
+3. 怎么验证？
+   - `validate_loop_ui_product_first_control.py` 动态检查全部 active Feature。
+4. 发现什么问题？
+   - 既有 E2E 后续路径存在失败，且移动端、键盘/焦点、错误恢复未形成完整证据，状态上限保持 `partial`。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。

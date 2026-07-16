@@ -177,6 +177,8 @@ UI evidence is not UI structure.
 Governance evidence must be traceable, not dominant.
 Debug details must not become default product copy.
 A test-visible element is not automatically user-visible.
+Human-operable is required; machine-operable alone is not product-ready.
+Functional completeness and quality are prerequisites, not substitutes for usability.
 ```
 
 UI Quality Gate 需要额外判断：
@@ -188,8 +190,12 @@ UI Quality Gate 需要额外判断：
 | `debug_details_visibility` | 技术细节是否默认隐藏并进入调试或治理详情 |
 | `task_flow_e2e_status` | E2E 是否验证用户任务流，而不是只验证治理条存在 |
 | `audit_traceability_gate` | 审计、权限、回执、边界是否仍可追溯 |
+| `multi_user_usability_gate` | 是否覆盖首次/低频、高频专业、治理/审计及适用的移动或无障碍用户 |
+| `human_operable_gate` | 人类是否能发现入口、理解状态、完成任务、识别后果并从错误中恢复，而不依赖内部机器术语 |
 
 任一核心 gate 失败时，UI gate 不得高于 `ui_rework_required`。
+
+功能完整和质量基线是易用性评估的前置条件，不是易用性的替代证据。机器接口、自动化脚本、测试选择器或截图可运行，均不能单独证明人类用户可用。每个 UI 目标必须声明适用用户群、主任务和机器接口分层边界；运行中 Feature 按 `LOOP_UI_PRODUCT_FIRST_CONTROL.md` 的 `ui_product_first_control` 字段继承本规则。
 
 ## 7. 评估基线
 

@@ -28,5 +28,19 @@ evidence:
   api: waived
   summary: pass
 blockers:
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups: [Feature 开发者, Loop 编排者, 治理审计者]
+  primary_human_task: 快速理解 Feature 当前状态、下一动作和证据入口，不被历史治理材料淹没
+  machine_interface_boundary: validator 与运行日志保留机器字段；默认 Feature 工作区只呈现目标、状态、风险和下一步
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pass
+  status_ceiling: partial
 created_at: "2026-07-07T23:24:58+00:00"
-updated_at: "2026-07-08T00:02:28+00:00"
+updated_at: "2026-07-16T00:00:00+08:00"

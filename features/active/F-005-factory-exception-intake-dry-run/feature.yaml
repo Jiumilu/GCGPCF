@@ -28,5 +28,19 @@ evidence:
   api: waived
   summary: pass
 blockers:
+ui_product_first_control:
+  version: v1.1
+  applicability: indirect
+  user_groups: [工厂异常上报人员, 处置人员, 复核与审计人员]
+  primary_human_task: 看懂异常来源、责任、当前状态和下一处置动作，并能识别 dry-run 与真实业务的边界
+  machine_interface_boundary: Runtime 角色链与原始载荷进入调试证据；人类入口使用业务字段、明确状态和恢复指引
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: waived
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
 created_at: "2026-07-08T02:41:12+00:00"
-updated_at: "2026-07-08T02:44:08+00:00"
+updated_at: "2026-07-16T00:00:00+08:00"

@@ -19,5 +19,19 @@ evidence:
   api: waived
   summary: pass
 blockers:
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups: [Studio 首次或低频用户, Studio 高频运营用户, 管理与治理审计用户, 移动端与键盘用户]
+  primary_human_task: 从 Studio 工作台进入目标空间、理解当前状态、完成核心操作并在失败时恢复
+  machine_interface_boundary: Playwright、data-testid 与内部状态机仅作为验证和调试入口；默认工作台展示业务任务与必要反馈
+  gates:
+    functional_completeness: pass
+    quality_baseline: pass
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: pending
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
 created_at: "2026-07-12T09:57:45+00:00"
-updated_at: "2026-07-12T10:01:53+00:00"
+updated_at: "2026-07-16T00:00:00+08:00"

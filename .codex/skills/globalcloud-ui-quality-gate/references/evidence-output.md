@@ -49,6 +49,8 @@ Status ceiling:
 | G8 Runtime Verification | | | |
 | G9 Scope Control | | | |
 
+For product/workbench surfaces, append a second table for `product_first_ui_gate`, `evidence_overexposure_gate`, `debug_details_visibility`, `task_flow_e2e_status`, `audit_traceability_gate`, `multi_user_usability_gate`, `human_operable_gate`, `functional_completeness`, and `quality_baseline`.
+
 ## Required Caveats
 
 - If no browser/runtime was launched, say `runtime_not_verified`.

@@ -83,3 +83,13 @@ Score each required gate as `pass`, `partial`, `fail`, or `not_applicable`. Atta
 - Changes are limited to the requested surface and required shared tokens/components.
 - Existing local style and framework are preserved unless they violate a gate.
 - No unrelated refactor, dependency installation, hook enablement, or generated churn.
+
+## Product-first Human Operability Extension
+
+For every human-facing or human-assisted surface, also record:
+
+- `multi_user_usability_gate`: cover first-time/low-frequency users, frequent professional users, governance/audit users, and any explicitly applicable mobile or accessibility users.
+- `human_operable_gate`: a person can discover the entry, understand state and consequences, complete the primary task, and recover from an error without knowing internal API, script, test-selector, or state-machine names.
+- `functional_completeness`: required behavior works before usability is marked ready.
+- `quality_baseline`: relevant build, test, data-integrity, security, and error-handling checks pass before usability is marked ready.
+- Machine interfaces remain available through API/CLI/developer or governance details, but raw payloads, hashes, idempotency keys, and internal state are not default product copy.

@@ -110,3 +110,16 @@ superseded_by: []
    - 未发现调度阻塞项。
 5. 是否可以提交？
    - 否，commit/push 仍需明确授权。
+
+### Control Update 2026-07-16
+
+1. 这轮做什么？
+   - 继承 `LOOP_UI_PRODUCT_FIRST_CONTROL` v1.1 的多用户易用性控制。
+2. 改了什么？
+   - 声明人类任务、机器接口分层和易用性 gate；未改变 Runtime 角色与业务状态。
+3. 怎么验证？
+   - `validate_loop_ui_product_first_control.py` 动态检查全部 active Feature。
+4. 发现什么问题？
+   - 多用户任务流仍待验证，状态上限保持 `partial`。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
