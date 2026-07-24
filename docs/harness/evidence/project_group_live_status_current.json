@@ -1,30 +1,39 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-17T00:14:22.963119+08:00",
+  "generated_at": "2026-07-25T00:10:33.978859+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
-    "GlobalCloud Studio"
+    "GlobalCloud Brain",
+    "GlobalCloud Studio",
+    "GlobalCloud KDS"
   ],
   "observed_ahead": [
-    "GlobalCloud Brain",
-    "GlobalCloud Studio"
+    "GlobalCloud Studio",
+    "GlobalCloud MMC",
+    "GlobalCloud KDS"
   ],
   "stable_dirty": [
+    "GlobalCloud Brain",
+    "GlobalCloud KDS",
     "GlobalCloud Studio"
   ],
   "stable_ahead": [
+    "GlobalCloud KDS",
+    "GlobalCloud MMC",
     "GlobalCloud Studio"
   ],
   "volatile_dirty": [],
   "review_boundary": [
+    "GlobalCloud Brain",
+    "GlobalCloud KDS",
     "GlobalCloud Studio"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 15,
+  "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-17T00:14:03.627463+08:00",
+  "previous_generated_at": "2026-07-25T00:10:17.663964+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -34,10 +43,15 @@
       "sensitive_paths": []
     },
     "GlobalCloud Brain": {
-      "dirty_count": 0,
-      "ahead": 1,
+      "dirty_count": 4,
+      "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "docs/harness/evidence/mock-boundaries-20260619.json",
+        "docs/harness/evidence/settings-write-boundary-20260623.json",
+        "src/app/components/SettingsWritebackSection.test.tsx",
+        "src/app/components/SettingsWritebackSection.tsx"
+      ],
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
@@ -69,12 +83,14 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 2,
-      "ahead": 120,
+      "dirty_count": 4,
+      "ahead": 192,
       "behind": 0,
       "paths": [
-        "packages/client/src/views/hermes/ChatView.vue",
-        "tests/e2e/project-session-mvp.spec.ts"
+        "packages/server/src/db/index.ts",
+        "tests/setup.ts",
+        "docs/harness/evidence/codegraph/GPCF-STUDIO-LR-642.json",
+        "tests/server/db-test-runtime-isolation.test.ts"
       ],
       "sensitive_paths": []
     },
@@ -101,16 +117,23 @@
     },
     "GlobalCloud MMC": {
       "dirty_count": 0,
-      "ahead": 0,
+      "ahead": 18,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 0,
-      "ahead": 0,
+      "dirty_count": 6,
+      "ahead": 1,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.json",
+        "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260717-073103/report.md",
+        "_governance/kds-daily-reports/kds-daily-2026-07-24.md",
+        "_governance/sync-runs/feishu-xiaog-closure-20260717-071228/macmini-evidence.json",
+        "_governance/sync-runs/macmini-workwiki-20260717-064101/remote-identity.txt"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XiaoG": {
