@@ -1,12 +1,11 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-25T00:10:33.978859+08:00",
+  "generated_at": "2026-07-25T22:11:12.891956+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "GlobalCloud Brain",
-    "GlobalCloud Studio",
     "GlobalCloud KDS"
   ],
   "observed_ahead": [
@@ -16,8 +15,7 @@
   ],
   "stable_dirty": [
     "GlobalCloud Brain",
-    "GlobalCloud KDS",
-    "GlobalCloud Studio"
+    "GlobalCloud KDS"
   ],
   "stable_ahead": [
     "GlobalCloud KDS",
@@ -27,13 +25,12 @@
   "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud Brain",
-    "GlobalCloud KDS",
-    "GlobalCloud Studio"
+    "GlobalCloud KDS"
   ],
   "sensitive_repos": [],
   "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-25T00:10:17.663964+08:00",
+  "previous_generated_at": "2026-07-25T21:49:39.236121+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -83,15 +80,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 4,
-      "ahead": 192,
+      "dirty_count": 0,
+      "ahead": 27,
       "behind": 0,
-      "paths": [
-        "packages/server/src/db/index.ts",
-        "tests/setup.ts",
-        "docs/harness/evidence/codegraph/GPCF-STUDIO-LR-642.json",
-        "tests/server/db-test-runtime-isolation.test.ts"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
@@ -117,22 +109,31 @@
     },
     "GlobalCloud MMC": {
       "dirty_count": 0,
-      "ahead": 18,
+      "ahead": 3,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 6,
+      "dirty_count": 15,
       "ahead": 1,
       "behind": 0,
       "paths": [
         "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.json",
         "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.md",
+        "automations/kds/memory.md",
         "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260717-073103/report.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260725-001037/report.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260725-073214/report.md",
         "_governance/kds-daily-reports/kds-daily-2026-07-24.md",
+        "_governance/kds-daily-reports/kds-daily-2026-07-25.md",
+        "_governance/runtime-reports/kds-runtime-report-20260725-001011.json",
+        "_governance/runtime-reports/kds-runtime-report-20260725-001011.md",
         "_governance/sync-runs/feishu-xiaog-closure-20260717-071228/macmini-evidence.json",
-        "_governance/sync-runs/macmini-workwiki-20260717-064101/remote-identity.txt"
+        "_governance/sync-runs/feishu-xiaog-closure-20260725-001037/macmini-evidence.json",
+        "_governance/sync-runs/feishu-xiaog-closure-20260725-071042/macmini-evidence.json",
+        "_governance/sync-runs/macmini-workwiki-20260717-064101/remote-identity.txt",
+        "_governance/sync-runs/macmini-workwiki-20260725-064054/remote-identity.txt"
       ],
       "sensitive_paths": []
     },
