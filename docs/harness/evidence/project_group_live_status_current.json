@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-07-31T00:03:18.791318+08:00",
+  "generated_at": "2026-08-01T06:09:50.655358+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
@@ -8,26 +8,22 @@
     "GlobalCloud KDS"
   ],
   "observed_ahead": [
-    "GlobalCloud Studio",
-    "GlobalCloud MMC",
     "GlobalCloud KDS"
   ],
   "stable_dirty": [
     "GlobalCloud KDS"
   ],
   "stable_ahead": [
-    "GlobalCloud KDS",
-    "GlobalCloud MMC",
-    "GlobalCloud Studio"
+    "GlobalCloud KDS"
   ],
   "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud KDS"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 14,
+  "pass_repo_count": 16,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-07-30T23:57:48.619684+08:00",
+  "previous_generated_at": "2026-08-01T06:08:22.514767+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -73,7 +69,7 @@
     },
     "GlobalCloud Studio": {
       "dirty_count": 0,
-      "ahead": 49,
+      "ahead": 0,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
@@ -101,25 +97,22 @@
     },
     "GlobalCloud MMC": {
       "dirty_count": 0,
-      "ahead": 9,
+      "ahead": 0,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 9,
-      "ahead": 18,
+      "dirty_count": 6,
+      "ahead": 7,
       "behind": 0,
       "paths": [
-        "_governance/graph-health/kds-graph-health-current.json",
-        "_governance/graph-health/kds-graph-health-current.md",
-        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260729-073054/report.md",
-        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260730-073124/report.md",
-        "_governance/kds-daily-reports/kds-daily-2026-07-30.md",
-        "_governance/sync-runs/feishu-xiaog-closure-20260729-071156/macmini-evidence.json",
-        "_governance/sync-runs/feishu-xiaog-closure-20260730-071219/macmini-evidence.json",
-        "_governance/sync-runs/macmini-workwiki-20260729-064107/remote-identity.txt",
-        "_governance/sync-runs/macmini-workwiki-20260730-064222/remote-identity.txt"
+        "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.json",
+        "_governance/sync-failure-backlog/kds-sync-failure-backlog-current.md",
+        "_governance/distributed-knowledge-runs/distributed-knowledge-governance-20260731-073236/report.md",
+        "_governance/kds-daily-reports/kds-daily-2026-08-01.md",
+        "_governance/sync-runs/feishu-xiaog-closure-20260731-071145/macmini-evidence.json",
+        "_governance/sync-runs/macmini-workwiki-20260731-064130/remote-identity.txt"
       ],
       "sensitive_paths": []
     },
