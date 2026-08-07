@@ -15,6 +15,8 @@ FIXTURE = ROOT / "fixtures/api/gckf-p0-stop-condition-resume-trigger-current-sta
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md"
 LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md"
+D186_FIXTURE = ROOT / "fixtures/api/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.json"
+D186_EVIDENCE_JSON = ROOT / "docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.json"
 
 
 def fail(message: str) -> None:
@@ -63,6 +65,8 @@ def run_delegated_loop_gate() -> dict:
 def main() -> None:
     fixture = load_json(FIXTURE)
     evidence = load_json(EVIDENCE_JSON)
+    arrival_fixture = load_json(D186_FIXTURE)
+    arrival_evidence = load_json(D186_EVIDENCE_JSON)
     require(EVIDENCE_MD.exists(), "missing_evidence_md")
     require(LOOP_MD.exists(), "missing_loop_md")
 
@@ -104,6 +108,27 @@ def main() -> None:
         require(trigger.get("satisfied") is False, f"resume_trigger_satisfied:{trigger_id}")
         require(bool(trigger.get("requiredEvidence")), f"missing_required_evidence:{trigger_id}")
         require(trigger.get("arrivalScanRefreshRequired") is True, f"arrival_scan_refresh_not_required:{trigger_id}")
+
+    arrival_summary = arrival_fixture.get("arrivalScanSummary", {})
+    require(arrival_summary.get("requiredSignals") == 4, "arrival_required_signal_count_mismatch")
+    require(arrival_summary.get("foundSignals") == 0, "arrival_found_signal_count_mismatch")
+    require(arrival_summary.get("missingSignals") == 4, "arrival_missing_signal_count_mismatch")
+    require(arrival_evidence.get("arrivalScanSummary") == arrival_summary, "arrival_evidence_summary_mismatch")
+    arrival_aliases = {
+        "real_repair_owner_response": "controlled_repair_owner_response",
+        "signed_response_package": "signed_response_package",
+        "waes_review_note": "waes_review_note",
+        "human_confirmation_record": "human_confirmation_record",
+    }
+    arrival_signals = arrival_fixture.get("arrivalSignals", [])
+    require(len(arrival_signals) == 4, "arrival_signal_count_mismatch")
+    require({signal.get("signalId") for signal in arrival_signals} == set(arrival_aliases), "arrival_signal_ids_mismatch")
+    trigger_by_id = {trigger.get("triggerId"): trigger for trigger in triggers}
+    for signal in arrival_signals:
+        signal_id = signal.get("signalId")
+        trigger_id = arrival_aliases[signal_id]
+        require(signal.get("found") is False, f"arrival_signal_found:{signal_id}")
+        require(trigger_by_id[trigger_id].get("satisfied") is False, f"arrival_trigger_state_mismatch:{trigger_id}")
 
     for key in (
         "stopConditionIsActualResponse",
@@ -149,6 +174,8 @@ def main() -> None:
     print(f"resume_allowed={summary.get('resumeAllowed')}")
     print(f"hold_required={fixture.get('holdRequired')}")
     print(f"execution_mode={fixture.get('executionMode')}")
+    print(f"arrival_signal_aliases={len(arrival_aliases)}")
+    print(f"arrival_scan_found_signals={arrival_summary.get('foundSignals')}")
 
 
 if __name__ == "__main__":

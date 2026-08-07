@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "v0.1",
+  "assetId": "ka://example/feishu-minutes-001",
+  "tenantId": "tenant://example",
+  "knowledgeObjectRef": "ko://example/feishu-minutes-001",
+  "accessScope": {
+    "primarySpace": {
+      "spaceType": "team",
+      "spaceRef": "space://team/globalcloud-product",
+      "aclPolicyRef": "policy://example/team-default"
+    },
+    "projections": [
+      {
+        "target": {
+          "spaceType": "partner",
+          "spaceRef": "space://partner/example-delivery",
+          "aclPolicyRef": "policy://example/partner-redacted",
+          "approvalEvidenceRefs": ["approval://example/partner-share-001"]
+        },
+        "mode": "redacted_projection",
+        "policyRef": "policy://example/cross-space-redaction",
+        "projectionLineageRefs": ["lineage://example/partner-redaction-001"]
+      }
+    ]
+  },
+  "contexts": {
+    "platformGroupRefs": ["platform-group://globalcloud"],
+    "systemRefs": ["system://feishu", "system://kds", "system://brain"],
+    "engineeringProjectRefs": ["engineering-project://globalcloud/brain"],
+    "businessPortfolioRefs": ["business-portfolio://example/green-supply-chain"],
+    "businessProjectRefs": ["business-project://example/delivery-pilot"],
+    "organizationRefs": ["organization://example/internal-team"],
+    "workstreamRefs": ["workstream://example/knowledge-governance"],
+    "domainRefs": ["domain://example/supply-chain"],
+    "geographyRefs": ["geography://cn-hb"],
+    "productRefs": [],
+    "processRefs": ["process://example/meeting-to-decision"]
+  },
+  "classification": {
+    "assetType": "meeting_minutes",
+    "confidentiality": "restricted",
+    "lifecycleStage": "reviewing",
+    "language": "zh-CN",
+    "audienceCodes": ["knowledge_operator", "project_owner"]
+  },
+  "governance": {
+    "ownerRef": "team://example/globalcloud-product",
+    "stewardRefs": ["role://example/knowledge-steward"],
+    "vocabularyVersion": "globalcloud.knowledge_asset@v0.1",
+    "metadataStatus": "human_required",
+    "authorizationBoundary": "read_only",
+    "writeMode": "no_write",
+    "retentionPolicyRef": "policy://example/meeting-minutes-retention"
+  },
+  "provenance": {
+    "sourceRefs": ["feishu-minutes://example/meeting-001"],
+    "evidenceRefs": ["evidence://example/transcript-001"],
+    "lineageRefs": ["lineage://example/import-001"]
+  },
+  "relations": [
+    {
+      "relationType": "minutes_records_decision",
+      "targetRef": "ko://example/decision-001",
+      "direction": "outbound"
+    },
+    {
+      "relationType": "decision_creates_action_item",
+      "targetRef": "ko://example/action-item-001",
+      "direction": "outbound"
+    }
+  ],
+  "tags": {
+    "controlled": [
+      {
+        "scheme": "domain",
+        "code": "supply_chain",
+        "label": "供应链"
+      },
+      {
+        "scheme": "workstream",
+        "code": "knowledge_governance",
+        "label": "知识治理"
+      }
+    ],
+    "free": ["会议纪要示例"]
+  },
+  "createdAt": "2026-08-02T00:00:00+08:00",
+  "updatedAt": "2026-08-02T00:00:00+08:00"
+}

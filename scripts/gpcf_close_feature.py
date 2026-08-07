@@ -20,6 +20,8 @@ def main() -> int:
     if not evidence_complete(data):
         pending = ", ".join(f"{key}={value}" for key, value in data["evidence"].items())
         raise SystemExit(f"FAIL: evidence gate not complete: {pending}")
+    if data.get("blockers"):
+        raise SystemExit(f"FAIL: feature has unresolved blockers: {', '.join(str(item) for item in data['blockers'])}")
 
     data["status"] = "done"
     data["loop"]["current_step"] = "commit"

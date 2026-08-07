@@ -179,7 +179,9 @@ def main() -> int:
     )
     require(
         "LOOP 会话总账" in session_registry
-        and "repo_recorded_loop_sessions_only" in session_registry,
+        and "repo_recorded_loop_sessions_and_authorized_gke001_three_lane" in session_registry
+        and "live_codex_threads_covered | gke001_three_lane_only" in session_registry
+        and "auto_takeover_allowed | false" in session_registry,
         "session registry missing governance markers",
     )
     require("loop_session_registry=pass" in session_registry_validator, "session registry validator missing pass marker")

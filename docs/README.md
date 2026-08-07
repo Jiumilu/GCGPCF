@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/README.md
 source_path: docs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-12
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
@@ -1537,6 +1537,9 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-102699F74F | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001.md | GPCF | controlled |
 | GPCF-DOC-4B02CBD3AC | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001.md | GPCF | controlled |
 | GPCF-DOC-40D4E57CE7 | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-001 | Loop Round GPCF-GKE-001-001 | docs/harness/loops/loop-round-GPCF-GKE-001-001.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-003 | Loop Round GPCF-GKE-001-COORDINATION-003 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-003.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-ENGINEERING-002 | Loop Round GPCF-GKE-001-LOOP-ENGINEERING-002 | docs/harness/loops/loop-round-GPCF-GKE-001-LOOP-ENGINEERING-002.md | GPCF | controlled |
 | GPCF-DOC-8E2A7EAEF0 | Loop Round GPCF-HEADROOM-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-ADMISSION-001.md | GPCF | controlled |
 | GPCF-DOC-69EFF16571 | LOOP Round GPCF Headroom Controlled Metric Pilot 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-CONTROLLED-METRIC-PILOT-001.md | GPCF | controlled |
 | GPCF-DOC-951520EA69 | LOOP Round GPCF Headroom Cost Measurement Output 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-COST-MEASUREMENT-OUTPUT-001.md | GPCF | controlled |

@@ -36,8 +36,14 @@ owner_review_required=1
 project_group_git_gate = partial
 current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
 current_live_sensitive_repos = none
-current_live_kds_blocker = resolved_not_in_git_status
-current_live_kds_status = clean / ahead=0 / behind=0 / diff_check=pass
+current_live_kds_blocker = stage_b_review_verified_waiting_studio_intake
+current_live_kds_status = dirty / changed_entries=18_including_external_exclusions / staged=0 / ahead=0 / behind=0 / diff_check=pass / opsx_lock=absent
+gke_engineering_domain = GKE-001
+gke_project_scope = 18/18
+gke_canonical_feature = F-013
+gke_governance_status = controlled
+gke_cross_project_status = partial
+gke_completion_status = not_complete
 development_queue_ready = true
 trigger_layer_binding_count = 17
 dependency_edge_binding_count = 17
@@ -69,6 +75,71 @@ integrated = false
 production_ready = false
 customer_accepted = false
 ```
+
+## GKE-001 Knowledge Engineering Control
+
+```yaml
+engineering_domain: GKE-001
+classification: project_group_first_level_engineering
+project_scope:
+  source: config/project-group-projects.yaml
+  expected: 18
+  bound: 18
+control_plane: GPCF
+knowledge_source_of_truth: KDS
+access_governance: MMC
+analysis_plane: Brain
+user_workbench: Studio
+canonical_feature: F-013
+loop_binding:
+  governance_loop: contract_authorization_handoff_acceptance
+  delivery_loop: implementation_test_dry_run_task_flow
+  collaboration: owner_file_lock_opsx_harness
+current_state:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+pending_runtime_evidence:
+  - KDS handoff final governance acceptance
+  - Brain authorized consumption validation
+  - Studio browser task flow validation
+  - MMC delegated authorization validation
+forbidden_without_specific_authorization:
+  - real_kds_write
+  - long_term_memory_write
+  - relationship_confirmation
+  - business_state_change
+  - deployment
+  - status_promotion
+```
+
+该控制块证明 `GKE-001` 已进入项目群 LOOP 控制面，不证明 18 个项目均已完成运行态接入。任何项目的知识工程实现仍须以独立 Feature、项目仓证据和接收方 handoff 逐项闭合。
+
+## GKE-001 Three-Lane Coordination
+
+```yaml
+coordination_id: GKE-001-COORDINATION-20260803-001
+coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+coordination_envelope: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-three-lane-coordination-envelope.yaml
+coordination_envelope_sha256: e95307a21c4197798d692a7efe18be22f7d305c145942ce47a1afc24f06ceeff
+studio_intake_amendment: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-intake-amendment-a4.yaml
+studio_intake_amendment_sha256: c1c7963b0f66e5c66d471817c0f25219fe1653182362c5b4b3fe01010bfc6f3a
+dispatch_status: studio_intake_a4_phase1_authorized_phase2_waiting_mmc_prepare_retry_policy
+status_ceiling: partial
+completion_status: not_complete
+```
+
+| lane | thread_id | change_id | owner | coordination lock | file lock / allowlist | dependency | handoff status |
+|---|---|---|---|---|---|---|---|
+| Studio | `019ee242-2575-73f1-b5bb-d43e7e49468e` | `integrate-studio-kds-knowledge-intake` | Studio | `gke001-studio-kds-intake-a4-lock` | A4 Phase 1 精确 allowlist；允许本地 TDD、契约与 UI，禁止共享 KDS 写入 | Phase 2 等 MMC prepare/retry 策略独立复核 | a4_phase1_authorized_phase2_blocked |
+| KDS | `019fc4e3-bce5-7541-85e3-8885c7e78aea` | `extend-kds-document-extraction` | KDS | `gke001-kds-stage-b-extraction-lock` | Stage B allowlist + A2 测试 + A3 execution-only lock；继续排除角色视图 | 保持当前 handoff，等待 Studio intake 精确 amendment | f013_technical_review_verified_waiting_studio_intake |
+| Brain | `019edfb4-21ef-77e1-afdb-891df25c4068` | `brain-studio-readonly-kds-bridge` | Brain | `gke001-brain-readonly-bridge-freeze-lock` | 冻结当前 5 个桥接文件，不新增文件 | 等 Studio intake/login | freeze_receipt_received_waiting_studio_intake |
+
+下发回执：v0.1、Studio A1/v0.2 `restore-studio-backend-runtime`、KDS A2/v0.3、F-013 rework A3/v0.4 均已回收；Studio intake A4 已形成。A4 Phase 1 允许指定 Studio 文件内的本地 TDD、契约和 UI 实现；Phase 2 隔离写入回放仍等待 MMC 对 `POST /api/v1/knowledge-assets/intake` 与 `POST /api/v1/knowledge-assets/*/retry` 的策略准入及 F-013 独立复核。共享或生产 KDS 写入未授权，Brain 继续等待 Studio intake/login。
+
+固定串行依赖：`KDS implementation/tests -> F-013 review -> Studio intake/review integration -> Brain Search/WikiPreview/Chat read-only E2E -> MMC delegation/human confirmation`。跨仓只通过 canonical contract 与 `knowledge_engineering_handoff`；不得复制源码或事实，不得把 Studio ahead 20、KDS 外部角色视图改动或 Brain 未提交桥接盲目合并。
+
+每个 handoff 必须包含：exact changed files、tests、ACL read/count、audit、lineage、mirror SHA-256、migration dry-run、rollback、authorization status 和 unresolved risks。任一项缺失时保持 `active / partial / not_complete`。
 
 ## Current Execution Compression Pack
 

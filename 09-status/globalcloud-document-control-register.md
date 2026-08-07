@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-16
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-07-16
+日期：2026-08-03
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -29,7 +29,7 @@ superseded_by: []
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
 | GFIS | 01-GFIS | 117 | 114 | 已建空间 |
-| GPC | 02-GPC | 58 | 50 | 已建空间 |
+| GPC | 02-GPC | 60 | 52 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 171 | 24 | 已建空间 |
 | KDS | 05-KDS | 742 | 739 | 已建空间 |
@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1995 | 1852 | 已建空间 |
+| GPCF | 12-GPCF | 2006 | 1855 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
@@ -48,8 +48,8 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 192 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 64 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 198 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -57,6 +57,8 @@ superseded_by: []
 
 | doc_id | title | source_path | project | related_projects | domain | status | kds_path |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| GPCF-DOC-285E77EC87 | globalcloud-17 | $CODEX_HOME/automations/globalcloud-17/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md |
+| GPCF-DOC-9BC6636D29 | globalcloud-17 运行记忆 | $CODEX_HOME/automations/globalcloud-17/memory.md | GPC | GPC, KDS, MMC, GPCF, Studio | general | controlled | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/README.md |
 | GPCF-DOC-B6A5C4D3E2 | SKILL | .agents/skills/impeccable/SKILL.md | GPCF | GPCF | general | controlled | 开发/12-GPCF/.agents/skills/impeccable/SKILL.md |
 | GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | GPC | GPC, WAES, KDS, GPCF | general | controlled | 开发/02-GPC/.agents/skills/impeccable/reference/README.md |
@@ -416,8 +418,8 @@ superseded_by: []
 | GPCF-DOC-0A2D9C6B81 | LOOP Multi-Agent Execution Policy | 02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md | WAES | GFIS, WAES, KDS | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_MULTI_AGENT_EXECUTION_POLICY.md |
 | GPCF-DOC-8D5147AC17 | Loop Risk Gate | 02-governance/loop/LOOP_RISK_GATE.md | WAES | WAES | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_RISK_GATE.md |
 | GPCF-DOC-6C7A1E9D2B | LOOP 会话主线控制包 | 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md | WAES | GPC, WAES, KDS, GPCF | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md |
-| GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | GFIS, GPC, WAES, KDS, XiaoG, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md |
-| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
+| GPCF-DOC-4E83A9C210 | LOOP 会话总账 | 02-governance/loop/LOOP_SESSION_REGISTRY.md | WAES | GFIS, GPC, WAES, KDS, Brain, XiaoG, MMC, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md |
+| GPCF-DOC-LOOP-UI-PRODUCT-FIRST-CONTROL | LOOP UI Product First Control | 02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md | WAES | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP | governance | controlled | 开发/91-治理与验收/02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md |
 | GPCF-DOC-0AD0A529B5 | loop | 02-governance/loop/README.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/README.md |
 | GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAES | GFIS, GPC, WAES, KDS, PKC, XiaoG, MMC, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md |
 | GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | GPC, WAES, KDS, GPCF, Studio | governance | controlled | 开发/91-治理与验收/02-governance/loop/studio/README.md |
@@ -468,6 +470,7 @@ superseded_by: []
 | GPCF-DOC-BA9F35E2AA | GlobalCloud 湖北磷材首批知识对象运行空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | KDS | GFIS, GPC, WAES, KDS, Brain, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | KDS | GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md |
 | GPCF-DOC-C60ECF8A71 | GlobalCloud知识缺口悬赏与真实资料回收跟踪台账 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | KDS | KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md |
+| GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | GlobalCloud 知识资产模型体系综合方案 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | GPCF | WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP | data-ai-knowledge | draft | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md |
 | GPCF-DOC-742C5EA186 | GlobalCloud 积分收益额度悬赏争议联动规则 | 03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | KDS | GFIS, GPC, WAES, KDS, MMC, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md |
 | GPCF-DOC-69CFFD4C82 | GlobalCloud统一模型配置体系方案 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | GPCF | GPCF | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md |
 | GPCF-DOC-05774FB8AD | GlobalCloud 绿色供应链体系 AI 服务模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md |
@@ -517,6 +520,7 @@ superseded_by: []
 | GPCF-DOC-A948E73BB3 | GlobalCloud 辽宁远航链路证据缺口请求包与知识悬赏草案 | 03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md | KDS | GFIS, GPC, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md |
 | GPCF-DOC-09065C5D7F | GlobalCloud项目模型引用与用户模型偏好方案 | 03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md | GPCF | GPCF | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md |
 | GPCF-DOC-5A7F6D81F0 | GlobalCloud 项目群与分布式 KDS 关系总图 | 03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md |
+| GPCF-DOC-GKE-001-20260803 | GlobalCloud 项目群知识工程规范 | 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md |
 | GPCF-DOC-B49150CE25 | GlobalCloud 首批资料回收包字段验收与候选 SOP 写回建议 | 03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md |
 | GPCF-DOC-A7C38B4EA7 | 数据、AI 与知识 | 03-data-ai-knowledge/README.md | KDS | GFIS, GPC, WAES, KDS, Brain, PKC, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/README.md |
 | GPCF-DOC-56BC03A70C | GlobalCloud 绿色供应链体系 P0 最小闭环界面实施清单 | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | GPC | GFIS, GPC, PVAOS, WAES | ui-delivery | controlled | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md |
@@ -1418,7 +1422,7 @@ superseded_by: []
 | GPCF-DOC-GCKFP0REPAIRPATHWORKPACKCURRENTSTATED12820260622 | GCKF P0 Repair Path Workpack 当前态证据 D128 | docs/harness/evidence/gckf-p0-repair-path-workpack-current-state-d128-20260622.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/gckf-p0-repair-path-workpack-current-state-d128-20260622.md |
 | GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627 | GCKF P0 会话主线接管当前态 D185 | docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md |
-| GPCF-DOC-GCKFP0STOPRESUMED19020260627 | GCKF P0 停止条件与恢复触发器当前态 D190 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | GPCF | GPCF, GFIS, GPC, WAES, KDS | docs | controlled | 开发/12-GPCF/docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md |
+| GPCF-DOC-GCKFP0STOPRESUMED19020260627 | GCKF P0 停止条件与恢复触发器当前态 D190 | docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md |
 | GPCF-DOC-GFIS-DEV-READY-DIRTY-REVIEW-20260628 | GFIS development_ready confirmation and dirty evidence review 2026-06-28 | docs/harness/evidence/gfis-development-ready-confirmation-and-dirty-review-20260628.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/gfis-development-ready-confirmation-and-dirty-review-20260628.md |
 | GPCF-DOC-GFIS-DEV-READY-AUTH-20260628 | GFIS development_ready_for_real_business_validation 授权确认请求 2026-06-28 | docs/harness/evidence/gfis-development-ready-for-real-business-validation-authorization-request-20260628.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/gfis-development-ready-for-real-business-validation-authorization-request-20260628.md |
 | GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628 | GFIS dirty evidence stage commit authorization request 2026-06-28 | docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/gfis-dirty-evidence-stage-commit-authorization-request-20260628.md |
@@ -2250,6 +2254,9 @@ superseded_by: []
 | GPCF-DOC-102699F74F | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001.md |
 | GPCF-DOC-4B02CBD3AC | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001.md |
 | GPCF-DOC-40D4E57CE7 | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md |
+| GPCF-DOC-LOOP-GKE-001-001 | Loop Round GPCF-GKE-001-001 | docs/harness/loops/loop-round-GPCF-GKE-001-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GKE-001-001.md |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-003 | Loop Round GPCF-GKE-001-COORDINATION-003 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-003.md | GPCF | GPC, WAES, KDS, Brain, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-003.md |
+| GPCF-DOC-LOOP-GKE-001-ENGINEERING-002 | Loop Round GPCF-GKE-001-LOOP-ENGINEERING-002 | docs/harness/loops/loop-round-GPCF-GKE-001-LOOP-ENGINEERING-002.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GKE-001-LOOP-ENGINEERING-002.md |
 | GPCF-DOC-8E2A7EAEF0 | Loop Round GPCF-HEADROOM-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-ADMISSION-001.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-ADMISSION-001.md |
 | GPCF-DOC-69EFF16571 | LOOP Round GPCF Headroom Controlled Metric Pilot 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-CONTROLLED-METRIC-PILOT-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-CONTROLLED-METRIC-PILOT-001.md |
 | GPCF-DOC-951520EA69 | LOOP Round GPCF Headroom Cost Measurement Output 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-COST-MEASUREMENT-OUTPUT-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-COST-MEASUREMENT-OUTPUT-001.md |
@@ -3129,6 +3136,12 @@ superseded_by: []
 | GPCF-DOC-F011-STUDIO-WORKBENCH-SUMMARY-20260712 | 证据摘要 | features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md |
 | GPCF-DOC-F011-STUDIO-WORKBENCH-JOURNAL-20260712 | F-011 studio-workbench-ui-runtime-closure | features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/journal.md |
 | GPCF-DOC-39D57E2071 | F-012 icp-sop-foundation-coupling | features/active/F-012-icp-sop-foundation-coupling/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-012-icp-sop-foundation-coupling/journal.md |
+| GPCF-DOC-F013-KDS-P1-HANDOFF-20260802 | F-013 KDS P1 实施交接 | features/active/F-013-knowledge-asset-model-system/artifacts/kds-p1-handoff.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/artifacts/kds-p1-handoff.md |
+| GPCF-F013-EVIDENCE-KDS-STAGE-B-REVIEW-20260803 | KDS Stage B 独立只读复核 | features/active/F-013-knowledge-asset-model-system/evidence/kds-stage-b-independent-review-20260803.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/kds-stage-b-independent-review-20260803.md |
+| GPCF-DOC-F013-KNOWLEDGE-ASSET-VALIDATION-20260802 | F-013 知识资产模型验证证据 | features/active/F-013-knowledge-asset-model-system/evidence/knowledge-asset-model-validation.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/knowledge-asset-model-validation.md |
+| GPCF-F013-EVIDENCE-STUDIO-INTAKE-TRANSPORT-20260803 | Studio Intake 传输协议只读复核 | features/active/F-013-knowledge-asset-model-system/evidence/studio-intake-transport-review-20260803.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/studio-intake-transport-review-20260803.md |
+| GPCF-DOC-F013-KNOWLEDGE-ASSET-EVIDENCE-SUMMARY-20260802 | 证据摘要 | features/active/F-013-knowledge-asset-model-system/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/summary.md |
+| GPCF-DOC-F013-KNOWLEDGE-ASSET-MODEL-JOURNAL-20260802 | F-013 knowledge-asset-model-system | features/active/F-013-knowledge-asset-model-system/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |
 | GPCF-DOC-87C12A1121 | 证据摘要 | features/done/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md |
@@ -3189,7 +3202,7 @@ superseded_by: []
 | GPCF-DOC-FB59167101 | project-group-icp-registration | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md | KDS | GPC, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md |
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md |
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | GPCF | WAES, GPCF, ICP | openspec | draft | 开发/12-GPCF/openspec/changes/register-globalcloud-icp/tasks.md |
-| GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md |
+| GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | KDS | GPC, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | KDS | GPC, WAES, KDS, GPCF, ICP | openspec | draft | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | KDS | GPC, WAES, KDS, GPCF | openspec | controlled | 开发/05-KDS/openspec/specs/README.md |
 | GPCF-DOC-60B2E3BD94 | AAAS 风险 | projects/aaas/RISK.md | AAAS | AAAS | governance | controlled | 开发/91-治理与验收/projects/aaas/RISK.md |

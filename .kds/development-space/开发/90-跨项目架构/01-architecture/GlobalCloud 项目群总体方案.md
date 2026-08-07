@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md
 source_path: 01-architecture/GlobalCloud 项目群总体方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-28
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
@@ -94,6 +94,28 @@ ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、AP
 | 真实证据驱动 | 运行、集成、交付和验收必须绑定命令、证据、门禁和回滚边界 |
 | 双向传导 | 项目群主方案变化传导到项目；项目方案变化回传项目群主方案并影响关联项目 |
 | 不越权升级 | 未经人工确认，不得声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted` |
+
+## 3.1 GlobalCloud Knowledge Engineering（GKE-001）
+
+项目群将资料、会议、证据、关系、决策和长期记忆统一纳入一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`）。GPCF 是控制面，KDS 是知识事实主存，MMC 负责可信身份与跨服务授权，Brain 负责受控分析和候选生成，Studio 负责用户任务与人工复核，WAES、GFIS、GPC、PVAOS 等继续持有项目、订单、生产和资产等权威业务主数据。
+
+`03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` 是 GKE-001 的项目群上位规范。任何系统不得建立平行资料、证据、审计或长期记忆主账；任何 AI 结果在确认前只能是 `candidate`；任何业务状态改变必须由业务对象 owner 独立授权。当前工程状态固定为 `active / partial / not_complete`，不得由文档、fixture、mock、组件测试或本地镜像提升。
+
+### 3.1.1 知识资产模型体系
+
+项目群知识资产模型采用“GPCF 定义、KDS 主存、Brain 消费、MMC 调用、WAES/人工授权”的单一责任链。GPCF 在 `03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md` 中维护项目群级模型、词表和兼容规则；KDS 的 OKF `KnowledgeObject` 保持知识正本，`KnowledgeAssetEnvelope` 只增加空间、业务/研发上下文、受控分类、治理责任和跨空间投影，不建立第二主账。
+
+以下概念必须使用独立字段：
+
+| 概念 | 控制边界 |
+|---|---|
+| Brain/KDS Space | 用户入口、可见范围和 ACL；不是知识域 |
+| OKF Knowledge Domain | 知识治理规则；不是 UI Space |
+| GlobalCloud Platform Group | 研发项目群与系统归属；不是业务项目群 |
+| Business Portfolio/Project | 客户、交付、区域或运营项目；不是代码仓库 |
+| Controlled/Free Tags | 检索和聚类补充；不得单独改变权限、密级或状态 |
+
+跨空间默认使用引用或脱敏投影。任何公开、伙伴共享、敏感数据、状态提升或写回仍需对应策略与人工授权，Schema 校验或 AI 分类不能生成授权。
 
 ## 4. 方案传导机制
 

@@ -50,6 +50,51 @@ project_coverage:
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
     - slug: icp
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance]
+engineering_domains:
+  - id: GKE-001
+    name: GlobalCloud Knowledge Engineering
+    level: project_group_first_level_engineering
+    control_plane: gpcf
+    canonical_contract_source: gpcf
+    knowledge_source_of_truth: kds
+    access_governance: mmc
+    analysis_plane: brain
+    user_workbench: studio
+    canonical_feature: F-013
+    session_family: GPCF-GKE
+    project_scope:
+      - aaas
+      - brain
+      - was
+      - xiaoc
+      - waes
+      - gpc
+      - studio
+      - gpcf
+      - xwail
+      - gfis
+      - mmc
+      - kds
+      - xiaog
+      - pvaos
+      - sop
+      - pkc
+      - xgd
+      - icp
+    required_skills:
+      - globalcloud-loop-orchestrator
+      - globalcloud-document-governance
+      - globalcloud-collaborative-dev
+      - opsx-full-cycle
+      - globalcloud-harness-governance
+    gates:
+      - loop_document_gate
+      - project_group_skill_chain
+      - feature_evidence
+      - acl_and_audit
+      - handoff_and_rollback
+    status_ceiling: partial
+    completion_status: not_complete
 skills:
   - name: globalcloud-loop-orchestrator
     path: .codex/skills/globalcloud-loop-orchestrator

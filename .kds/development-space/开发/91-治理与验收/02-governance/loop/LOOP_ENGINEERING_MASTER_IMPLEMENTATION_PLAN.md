@@ -94,6 +94,7 @@ GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 | L2 治理视图 | `LOOP_GOVERNANCE_DASHBOARD.md` | 聚合质量、效率、自我纠错、边界和状态上限信号 | 是 |
 | L2 交付效率控制 | `LOOP_DELIVERY_EFFICIENCY_CONTROL.md` | 防止高合规低进展，要求 Delivery Loop 显式记录产品增量、用户可见增量、治理成本和实质轮次 | 是 |
 | L2 UI 产品优先控制 | `LOOP_UI_PRODUCT_FIRST_CONTROL.md` | 控制 UI evidence 反噬产品界面，约束 Studio 等项目继续快速开发时不得偏离用户任务流 | 是 |
+| L2 一级知识工程域 | `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` | 定义 `GKE-001` 的 18 项目知识工程边界、唯一事实主存、LOOP 绑定、协同开发与验收规则 | 是 |
 | L2 专项实施链路 | `GlobalCloud 项目群实施方案.md`、`04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`、`04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md` | 定义项目群总实施主线与界面工程/UI/工作台专项实施链路 | 是 |
 | L3 状态记录 | `docs/harness/loop-state.md` | 记录项目群轮次状态和最近事实 | 是 |
 | L3 轮次证据 | `docs/harness/loops/loop-round-*.md` | 记录单轮输入、动作、输出、检查和反馈 | 是 |
@@ -229,6 +230,32 @@ GPCF 2.0 门禁由以下脚本检查：
 python tools/kds-sync/validate_gpcf_2_feature_workspace.py
 ```
 
+## 6.2 GKE-001 一级知识工程域
+
+`GlobalCloud Knowledge Engineering`（`GKE-001`）作为项目群一级工程域全量纳入 LOOP，覆盖项目清单权威源 `config/project-group-projects.yaml` 中的全部 18 个项目。其控制关系为：
+
+```text
+GPCF canonical 与验收控制
+→ KDS 知识事实主存
+→ MMC 身份与授权
+→ Brain 受控候选分析
+→ Studio 用户任务、复核与恢复
+→ 业务项目保持各自主数据权威
+```
+
+`GKE-001` 在 LOOP 中采用统一交付模型：
+
+| 控制单元 | 必须承担的知识工程职责 |
+|---|---|
+| Program | 冻结一级工程方向、唯一主账和跨项目状态上限 |
+| Project | 声明知识关联范围、业务权威源、owner、依赖和禁止写入边界 |
+| Feature | 承载可验收的契约、实现或接入增量；当前 canonical 工作包为 `F-013` |
+| Governance Loop | 管理契约、授权、handoff、独立验收和状态裁决 |
+| Delivery Loop | 推进实现、测试、controlled sample、dry-run 和用户任务验证 |
+| Evidence | 保存 validator、ACL、审计、迁移 dry-run、浏览器任务与回滚结果 |
+
+凡任务涉及知识资产、资料、证据、候选、关系、审计、长期记忆或知识投影，必须声明 `engineering_domain=GKE-001`，并通过能力注册、项目绑定、Feature、Loop round 和 handoff 形成完整证据链。知识工程治理登记不授权真实 KDS 写入、长期记忆写入、业务状态改变、部署或状态提升。
+
 ## 7. 能力纳入与治理机制
 
 LOOP 工程实施方案必须纳入技能、工具和方法。能力不再只作为临时执行手段，而必须进入受控能力池、接受风险分级、证据升级、降级停用和门禁检查。
@@ -363,6 +390,7 @@ delivery_efficiency_gate
 - 每个项目有 `loop-state`、evidence index、round record 和 validator。
 - GPCF 控制板登记项目状态和阻塞。
 - 技能、工具和方法进入能力注册表，且默认启用受风险分级约束。
+- `GKE-001` 项目范围必须与项目群权威清单保持 18/18 一致，每个项目均声明知识工程职责、事实权威和协同边界。
 - 未接入真实项目仓时必须标记为 GPCF 总控侧初始化，不得写成真实项目完成。
 
 ### P4：真实业务闭环候选

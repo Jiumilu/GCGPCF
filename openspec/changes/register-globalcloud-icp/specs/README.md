@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/register-globalcloud-icp/specs/README.md
 source_path: openspec/changes/register-globalcloud-icp/specs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-12
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---

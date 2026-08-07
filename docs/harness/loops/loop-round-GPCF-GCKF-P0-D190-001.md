@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md
 source_path: docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
@@ -32,6 +32,7 @@ superseded_by: []
 - 四项 resume triggers 均未满足。
 - 当前 `nextExecutableRounds=0`。
 - 恢复前必须先新增 arrival scan refresh。
+- D186 的 `real_repair_owner_response` 在 D190 规范化为 `controlled_repair_owner_response`；其余三项 ID 保持一致。该别名只统一门禁语义，不表示响应已到达。
 
 本轮不发送通知，不执行 action queue，不执行 response intake，不确认责任，不打开 committee case，不写 formal evidence，不写 KDS API。
 
@@ -60,6 +61,7 @@ superseded_by: []
 ### verify
 
 - D190 专项 validator 必须通过。
+- D190 专项 validator 必须证明 D186 四项 arrival signals 与 D190 四项 resume triggers 一一映射，且 `found=0` 与 `satisfied=0` 一致。
 - 中文化门禁必须通过。
 - 文档污染检查必须通过。
 - KDS TOKEN 检查必须通过且 TOKEN 不入库。
@@ -74,6 +76,10 @@ superseded_by: []
 
 - D190 只证明当前应停在 authorization boundary。
 - stop condition 不能替代真实 response、WAES review note、人工确认或业务完成证明。
+
+## 当前态复放
+
+2026-08-03 回放 D185-D190 六个专项 validator、DKS 基线镜像、Loop 文档门禁和项目群 readiness：专项链全部通过，readiness 为 `17/17`，但四项 resume triggers 仍为 `0/4`。F-013 Evidence Gate 已修复为保留治理字段和 blocker，证据通过时仍输出 `close_candidate=false`；本轮不创建 D191。
 
 ## 边界
 

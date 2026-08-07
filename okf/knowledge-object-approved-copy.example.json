@@ -1,0 +1,25 @@
+{
+  "id": "FEISHU-MINUTE-example-meeting-001-PARTNER-COPY",
+  "uri": "ko://example/feishu-minutes-001-partner-copy",
+  "tenantId": "tenant://example",
+  "domain": "project",
+  "objectType": "event",
+  "poolRefs": ["DATA"],
+  "projectId": "business-project://example/delivery-pilot",
+  "businessSystemRef": "system://feishu",
+  "ownerType": "team",
+  "ownerId": "team://example/globalcloud-product",
+  "visibility": "external_shared",
+  "lifecycle": "reviewing",
+  "trustLevel": "T2",
+  "ragAdmission": "limited",
+  "confirmationStatus": "human_confirmed",
+  "sourceRefs": ["feishu-minutes://example/meeting-001"],
+  "evidenceRefs": ["evidence://example/transcript-001"],
+  "lineageRefs": [
+    "lineage://example/import-001",
+    "lineage://example/approved-copy-001"
+  ],
+  "createdAt": "2026-08-03T00:00:00+08:00",
+  "updatedAt": "2026-08-03T00:00:00+08:00"
+}

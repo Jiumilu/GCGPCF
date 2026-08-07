@@ -1,0 +1,78 @@
+contract_id: globalcloud.knowledge_asset
+contract_version: v0.1
+status: draft
+owner: GPCF
+source_of_truth: GPCF
+updated_at: "2026-08-02"
+
+compatibility:
+  mode: additive_envelope
+  extends_contract: okf/knowledge-object.schema.json
+  domain_policy: okf/domain-policy.yaml
+  rule: KnowledgeAssetEnvelope 增加项目群上下文，不替代 KDS canonical KnowledgeObject。
+  canonical_linkage:
+    reference_match: id_or_uri
+    invariant_fields: [tenantId, sourceRefs, evidenceRefs, lineageRefs]
+    object_type_mapping: okf/knowledge-asset-vocabulary.yaml#asset_type_compatibility
+    space_domain_mapping: okf/knowledge-asset-vocabulary.yaml#dimensions.access_space
+  projection_contract:
+    modes: [reference_only, redacted_projection, approved_copy]
+    redacted_requires: [projectionLineageRefs]
+    approved_copy_requires: [projectionLineageRefs, approvalEvidenceRefs, derivedKnowledgeObjectRef]
+    derived_ref_must_differ_from_canonical: true
+    derived_object_must_resolve_to: id_or_uri
+    derived_invariants: [tenantId, sourceRefs, projectionLineageRefs, confirmationStatus=human_confirmed]
+
+artifacts:
+  - role: model_plan
+    path: 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md
+    media_type: text/markdown
+    sha256: 9c126bdfa9e7f8b2c294ce77b263b3beb7849fcd8324ef0e62976fe1e5ce084d
+  - role: schema
+    path: okf/knowledge-asset-envelope.schema.json
+    media_type: application/schema+json
+    sha256: 5d05c54d7861d8ab04c2d17d1b564e9e4dcf595ff7d2396e2b6d58be9fc604a8
+  - role: vocabulary
+    path: okf/knowledge-asset-vocabulary.yaml
+    media_type: application/yaml
+    sha256: b35c544fd1275f8ae594ebf0a76befd357b784de0c152bf4e90bef5d5153d95a
+  - role: canonical_example
+    path: okf/knowledge-object.example.json
+    media_type: application/json
+    sha256: 294b73bcf1dd3c7c437051183cd6c524f468ea1da46366d07f68eca7d08d0030
+  - role: approved_copy_example
+    path: okf/knowledge-object-approved-copy.example.json
+    media_type: application/json
+    sha256: 32eeba9f52a7a49ee16cf37c936a7a823e50c821a79205a83cf775ea233f1992
+  - role: example
+    path: okf/knowledge-asset-envelope.example.json
+    media_type: application/json
+    sha256: 37864e6b0bbf74b13eb3ab6d7fc1ed98c520e5fb702bf588d493fa9ac6f6a96c
+  - role: validator
+    path: tools/kds-sync/validate_knowledge_asset_model_system.py
+    media_type: text/x-python
+    sha256: 4fab3717d660622e9d0bc148ef695882aa80aa54dbd3442e52c3ccc25882b5bd
+
+dependencies:
+  - role: knowledge_object
+    path: okf/knowledge-object.schema.json
+    sha256: e6b9185518cc29b91d1e8cf1feccdcbc35a655e745e6f38b0f4da2404ffdaff5
+  - role: domain_policy
+    path: okf/domain-policy.yaml
+    sha256: 91fa983110c3cabf74d2693b5dd551bd8d88d1082311834ac4602e6511105937
+
+consumer_boundaries:
+  kds: versioned_mirror_and_canonical_metadata_owner
+  brain: authorized_read_model_consumer
+  mmc: authorized_model_invocation_only
+  waes: authorization_and_status_gate
+  gpcf: contract_and_compatibility_owner
+
+status_boundary:
+  completion_status: not_complete
+  accepted: false
+  integrated: false
+  production_ready: false
+  customer_accepted: false
+  kds_write_authorized: false
+  deployment_authorized: false

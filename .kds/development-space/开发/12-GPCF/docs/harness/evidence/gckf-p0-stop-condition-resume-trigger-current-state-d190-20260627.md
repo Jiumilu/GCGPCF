@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0STOPRESUMED19020260627
 title: GCKF P0 停止条件与恢复触发器当前态 D190
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAES, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md
 source_path: docs/harness/evidence/gckf-p0-stop-condition-resume-trigger-current-state-d190-20260627.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
@@ -39,6 +39,8 @@ D190 承接 D189 no-write 连续性门禁，把当前停止条件与未来恢复
 
 ## 恢复触发器
 
+D186 使用 `real_repair_owner_response` 表示真实责任方响应信号；D190 将其规范化为 `controlled_repair_owner_response`，强调响应必须以受控文档进入。两者是一项触发器的阶段别名，不是两项独立证据；其余三项 ID 原样继承。
+
 | trigger | 必需证据 | 当前状态 | 恢复前置 |
 |---|---|---|---|
 | controlled_repair_owner_response | controlled repair owner response document | missing | arrival scan refresh required |
@@ -59,3 +61,14 @@ D190 承接 D189 no-write 连续性门禁，把当前停止条件与未来恢复
 ## 恢复规则
 
 仅当四项 resume triggers 全部满足时，才允许新增 arrival scan refresh；当前 `nextExecutableRounds=0`。
+
+当前校验器同时回放 D186 arrival scan 与 D190 stop condition，确认别名映射为 `4/4`、`foundSignals=0`、`satisfiedResumeTriggers=0`，因此本次复核不形成 D191。
+
+## 2026-08-03 当前态复放
+
+- D185-D190 六个专项 validator 全部通过；D185 确认两个源会话、10 项 DKS 受控基线和 `merged_precondition_controlled`。
+- DKS-054 至 DKS-060 的 8 份 LOOP 记录与 KDS 本地镜像逐字节一致。
+- `loop_document_gate.py --check-only` 为 pass，`missing_metadata=0`、`missing_readme_dirs=0`。
+- 项目群 readiness 为 `17/17` pass，同时 GFIS 真实事实状态上限保持 `repair_required`。
+- F-013 Evidence Gate 为 pass，但保留 7 项治理 blocker，`close_candidate=false`；close gate 对未解决 blocker 正确拒绝。
+- 四项 resume triggers 仍为 `0/4`，没有 response intake、KDS API write、runtime writeback、lifecycle promotion 或 D191。

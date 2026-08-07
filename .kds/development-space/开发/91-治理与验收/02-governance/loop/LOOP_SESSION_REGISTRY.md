@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4E83A9C210
 title: LOOP 会话总账
 project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, XiaoG, GPCF, Studio]
+related_projects: [GFIS, GPC, WAES, KDS, Brain, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
@@ -11,28 +11,28 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_REGISTRY.md
 source_path: 02-governance/loop/LOOP_SESSION_REGISTRY.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-26
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
 
 # LOOP 会话总账
 
-本总账用于把仓库内已记录的 LOOP 会话、会话族和跨会话交接状态纳入统一治理。它只覆盖当前 GPCF 仓库内的 `docs/harness/loops/loop-round-*.md`、`docs/harness/evidence/*session*`、`docs/harness/evidence/*mainline*` 和相关 validator，不自动读取、接管、关闭或修改 Codex 侧其它真实线程。
+本总账用于把仓库内已记录的 LOOP 会话、会话族和跨会话交接状态纳入统一治理。除用户已明确授权的 `GKE-001` 三线协同外，它只覆盖当前 GPCF 仓库内的 `docs/harness/loops/loop-round-*.md`、`docs/harness/evidence/*session*`、`docs/harness/evidence/*mainline*` 和相关 validator，不自动接管、关闭或修改其它 Codex 真实线程。
 
 ## 1. 覆盖边界
 
 | 边界 | 当前值 |
 |---|---|
-| registry_scope | repo_recorded_loop_sessions_only |
-| live_codex_threads_covered | false |
-| cross_repo_sessions_covered | false |
+| registry_scope | repo_recorded_loop_sessions_and_authorized_gke001_three_lane |
+| live_codex_threads_covered | gke001_three_lane_only |
+| cross_repo_sessions_covered | gke001_three_lane_only |
 | auto_takeover_allowed | false |
 | write_without_handoff_allowed | false |
 | status_promotion_allowed | false |
 | validator | `python3 tools/kds-sync/validate_loop_session_registry.py` |
 
-如需治理真实 Codex 其它线程，必须由用户单独确认，并先生成 handoff evidence。没有确认时，本总账只能登记仓库内已有记录和风险。
+`GKE-001` 三线覆盖来自用户本轮明确授权，范围仅限 Studio、KDS、Brain 三个固定 thread 和 coordination envelope。其它真实 Codex 线程仍须单独确认并先生成 handoff evidence。
 
 ## 2. 当前主会话
 
@@ -54,6 +54,7 @@ superseded_by: []
 |---|---|---|---|---|---|
 | GFIS L4 repair and test sync | `GPCF-L4-GFIS*`, `GPCF-GFIS*` | GPCF/GFIS | real_business_lane remains repair_required | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | KDS / DKS governance | `GPCF-KDS-*`, `GPCF-GCKF*` | KDS/GPCF | KDS remains source of record | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
+| Knowledge engineering governance | `GPCF-GKE*` | GPCF/KDS/Studio | GKE-001 remains `active / partial / not_complete` | handoff_required_for_cross_repo_implementation | read_only_registry_or_user_confirmed_handoff |
 | Ontology / WAS governance | `GPCF-ONTOLOGY-WAS*`, `GPCF-WAS*` | WAES/GPCF | semantic contract only, no business completion | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | CodeGraph governance | `GPCF-CODEGRAPH*` | GPCF | sync/readiness work remains evidence bounded | handoff_required_for_cross_repo_execution | read_only_registry_or_user_confirmed_handoff |
 | COGNEE pilot / writeback | `GPCF-COGNEE*` | GPCF | COGNEE P1-P4 remains controlled pilot / writeback boundary | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
@@ -68,6 +69,16 @@ superseded_by: []
 | UI governance and validation | `GPCF-UI*`, `GPCF-IMPLEMENTATION*` | GPCF/Studio | UI gate evidence only, no acceptance promotion | handoff_required_for_page_refactor | read_only_registry_or_user_confirmed_handoff |
 | Session declaration and mainline | `GPCF-SESSION*` | GPCF | declaration boundary and mainline control | active_controlled | continue_current_mainline_only |
 
+## 3.1 GKE-001 授权真实线程登记
+
+| lane | thread_id | change_id | coordinator | lock_id | handoff_status | allowed_next_action |
+|---|---|---|---|---|---|---|
+| Studio | `019ee242-2575-73f1-b5bb-d43e7e49468e` | `integrate-studio-kds-knowledge-intake` | `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5` | `gke001-studio-kds-intake-a4-lock` | a4_phase1_authorized_phase2_blocked | execute_A4_phase1_only_wait_for_MMC_prepare_retry_review_before_phase2 |
+| KDS | `019fc4e3-bce5-7541-85e3-8885c7e78aea` | `extend-kds-document-extraction` | `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5` | `gke001-kds-stage-b-extraction-lock` | f013_technical_review_verified_waiting_studio_intake | freeze_handoff_and_wait_for_studio_intake_amendment |
+| Brain | `019edfb4-21ef-77e1-afdb-891df25c4068` | `brain-studio-readonly-kds-bridge` | `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5` | `gke001-brain-readonly-bridge-freeze-lock` | freeze_receipt_received_waiting_studio_intake | freeze_current_diff_and_wait_for_studio_intake_login |
+
+权威执行范围由 `features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-three-lane-coordination-envelope.yaml` 与 Studio A4 `features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-intake-amendment-a4.yaml` 共同限定。登记真实 thread 不等于允许跨仓写入；各 lane 只能修改对应 allowlist 文件，并须把 handoff 返回当前 coordinator。
+
 ## 4. 其它会话处理规则
 
 - 未在本总账中归类的 `loop-round-*` 必须输出 `orphan_session_family`。
@@ -80,7 +91,7 @@ superseded_by: []
 
 | 风险 | 状态 | 处理 |
 |---|---|---|
-| live_codex_threads_not_indexed | accepted_boundary | 需要用户单独授权后才能读取或治理真实 Codex 其它线程 |
+| live_codex_threads_outside_gke001_not_indexed | accepted_boundary | 仅 GKE-001 三个授权 thread 纳入；其它线程仍需用户单独授权 |
 | repo_dirty_large_existing_work | controlled_boundary | 本总账只做 scoped 文档和 validator，不清理无关 dirty 文件 |
 | localization_debt | rework_required | `loop_document_gate.py --check-only` 继续保持 `rework_required` |
 | historical_rounds_without_explicit_session_mainline | governed_by_family_registry | 通过会话族总账约束，不批量改写历史 round |

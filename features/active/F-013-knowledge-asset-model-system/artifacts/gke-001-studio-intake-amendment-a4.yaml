@@ -1,0 +1,225 @@
+studio_intake_amendment:
+  id: GKE-001-COORDINATION-20260803-001-A4
+  engineering_domain: GKE-001
+  canonical_feature: F-013
+  issued_at: "2026-08-03T08:36:06+00:00"
+  parent_envelope:
+    id: GKE-001-COORDINATION-20260803-001
+    version: v0.4
+    sha256: e95307a21c4197798d692a7efe18be22f7d305c145942ce47a1afc24f06ceeff
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  lane:
+    name: studio
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    repository: GlobalCloud Studio
+    owner: Studio
+    change_id: integrate-studio-kds-knowledge-intake
+    coordination_lock_id: gke001-studio-kds-intake-a4-lock
+  status:
+    phase_1: authorized_local_tdd_contract_and_ui
+    phase_2: blocked_by_mmc_prepare_retry_delegated_operation_review
+    shared_or_persistent_kds_write: forbidden
+    status_ceiling: partial
+    completion: not_complete
+  canonical_contract:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    source_of_truth: KDS
+    endpoints:
+      stage_a_write:
+        - method: POST
+          path: /api/v1/knowledge-assets/intake
+          purpose: prepare immutable asset version and upload token
+          mmc_admission: blocked_not_seeded
+        - method: POST
+          path: /api/v1/knowledge-assets/{asset_id}/complete-upload
+          purpose: restricted raw octet-stream upload
+          mmc_transport_path: /api/mmc/v1/connectors/kds_llm_wiki_api/knowledge-assets/{asset_id}/complete-upload
+          mmc_admission: technical_review_verified_governance_partial
+        - method: POST
+          path: /api/v1/knowledge-assets/{asset_id}/retry
+          purpose: retry failed processing without replacing immutable history
+          mmc_admission: blocked_not_seeded
+      stage_a_read:
+        - GET /api/v1/knowledge-assets/search
+        - GET /api/v1/knowledge-assets/{asset_id}
+        - GET /api/v1/knowledge-assets/{asset_id}/content
+        - GET /api/v1/knowledge-assets/{asset_id}/versions
+      stage_b_read:
+        - GET /api/v1/knowledge-assets/{asset_id}/extractions
+        - GET /api/v1/knowledge-assets/{asset_id}/extractions/{extraction_id}
+        - GET /api/v1/knowledge-assets/{asset_id}/extractions/{extraction_id}/content
+        - GET /api/v1/knowledge-assets/{asset_id}/evidence-links
+      unavailable:
+        - candidate_approval
+        - candidate_rejection
+        - review_decision_write
+        - relationship_confirmation
+  execution_phases:
+    phase_1:
+      authorized_now: true
+      allowed:
+        - OpenSpec proposal, design, spec and tasks for the bounded intake task
+        - Studio server contract types and MMC/KDS client methods
+        - a separate KDS-backed project intake route and workbench panel
+        - focused unit, route, component and mocked browser tests
+        - explicit capability handling for blocked prepare and retry operations
+      must_not:
+        - call a real or shared KDS instance
+        - treat mocked browser evidence as real integration
+        - alter or reuse hermes_local_draft as the KDS fact ledger
+    phase_2:
+      authorized_now: false
+      entry_conditions:
+        - MMC seed and active registry admit POST /api/v1/knowledge-assets/intake
+        - MMC seed and active registry admit POST /api/v1/knowledge-assets/*/retry
+        - F-013 independent read-only review verifies both delegated operations
+        - Studio receives a coordinator continuation receipt for this amendment
+      allowed_after_entry:
+        - isolated disposable KDS database and storage only
+        - synthetic non-sensitive text or markdown asset only
+        - prepare, complete-upload, read status, versions, extraction and evidence links
+        - retry only for a controlled failed disposable job
+      cleanup_required:
+        - disposable database removed and absence verified
+        - disposable object storage removed and absence verified
+        - no credentials or generated assets retained in the repository
+  file_allowlist:
+    - .harness/opsx.lock
+    - packages/server/src/services/core/mmc-client.ts
+    - packages/server/src/services/core/kds-client.ts
+    - packages/server/src/services/governance/knowledge-intake.ts
+    - packages/server/src/routes/governance/knowledge-intake.ts
+    - packages/server/src/routes/index.ts
+    - packages/client/src/components/studio/ProjectKnowledgeIntakePanel.vue
+    - packages/client/src/components/studio/SessionObjectPanel.vue
+    - tests/server/mmc-kds-knowledge-intake.test.ts
+    - tests/server/project-knowledge-intake-route.test.ts
+    - tests/client/project-knowledge-intake-panel.test.ts
+    - tests/e2e/project-session-knowledge-intake.spec.ts
+    - openspec/changes/integrate-studio-kds-knowledge-intake/**
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-873.json
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-873.md
+  ephemeral_files:
+    - path: .harness/opsx.lock
+      handling: execution_only_never_stage_commit_or_handoff
+  trusted_identity_inputs:
+    service_identity:
+      source: server_side_MMC_TOKEN_environment
+      browser_supplied: false
+    user_identity:
+      source: authenticated_Studio_server_session
+      subject: studio-user:{trusted_user_id}
+      allowed_roles: [admin, super_admin]
+    delegation:
+      version: 1
+      ttl_seconds: 30
+      nonce: required
+      signing: MMC_service_token_derived_HMAC
+      browser_supplied: false
+    tenant_and_business_role:
+      source: persisted_trusted_user_mapping
+      required: [tenant_id, business_role, max_sensitivity]
+      personal_tenant_forbidden: true
+    project_session_binding:
+      source: server_side_governance_session_binding
+      requirements:
+        - type_id_is_st-project
+        - bound_object_type_is_project_or_operating_project
+        - permission_result_is_allowed
+        - tenant_and_org_match_authenticated_context
+        - target_object_ref_is_authoritative_and_present
+  human_gates:
+    phase_1_mocked_flow:
+      - explicit file selection
+      - confirmation displays file name, size and authoritative project target
+    phase_2_disposable_flow:
+      - explicit confirmation before prepare and upload
+      - retry is a separate explicit action after a visible failed state
+    shared_real_write:
+      required: separate_human_authorization_not_granted
+    candidate_or_relationship_confirmation:
+      required: true
+      available_in_contract: false
+  browser_task_flow:
+    actor: authenticated_local_Studio_user_with_trusted_business_identity
+    binding: authorized_synthetic_project_in_disposable_environment
+    test_asset:
+      format: text_or_markdown
+      sensitivity: synthetic_non_sensitive
+      deterministic_sha256: required
+    scenarios:
+      - success_prepare_upload_status_versions_extraction_evidence_read
+      - duplicate_same_idempotency_key_does_not_create_duplicate_asset_or_version
+      - upload_conflict_409_is_visible_and_recoverable
+      - rate_or_gateway_failure_429_502_503_504_preserves_retry_guidance
+      - failed_processing_exposes_retry_only_when_MMC_policy_is_admitted
+      - unauthorized_or_scope_mismatch_403_or_404_leaks_no_count_detail_or_content
+      - cancellation_or_navigation_creates_no_Studio_local_fact_ledger
+    classification_before_phase_2: simulated_only
+    classification_after_disposable_replay: real_partial
+  forbidden_scope:
+    - direct_Studio_to_KDS_connection
+    - hermes_local_draft_modification_or_promotion
+    - project_material_draft_route_service_or_panel_changes
+    - project_order_or_production_state_change
+    - long_term_memory_write
+    - meeting_document_evidence_or_business_relation_write
+    - candidate_approval_rejection_or_review_decision_write
+    - local_knowledge_fact_ledger
+    - browser_supplied_identity_tenant_role_or_delegation
+    - real_corpus_or_shared_persistent_KDS_write
+    - production_or_shared_MMC_KDS_configuration_write
+    - credential_creation_disclosure_or_persistence
+    - commit
+    - push
+    - deployment
+    - accepted_integrated_production_ready_or_customer_accepted_promotion
+    - KDS_MMC_Brain_GPCF_or_business_system_product_source_change
+  rollback:
+    phase_1:
+      - remove or disable the new Studio route, service, client methods and panel
+      - remove the A4 OpenSpec and LR-873 evidence artifacts
+      - preserve existing runtime A1 and hermes_local_draft files unchanged
+    phase_2:
+      - delete isolated disposable database and storage
+      - verify no disposable database, object or temporary credential remains
+    external_data_rollback: not_applicable_until_separately_authorized_shared_write
+  audit_sources:
+    KDS: authoritative_for_intake_version_job_extraction_evidence_and_fact_audit
+    MMC: authoritative_for_service_delegation_connector_admission_rate_circuit_and_proxy_status
+    Studio: correlation_and_UI_task_trace_only_no_fact_ledger
+  handoff_requirements:
+    required:
+      - exact_changed_files
+      - focused_and_full_tests
+      - build
+      - openspec_strict
+      - codegraph_LR_873
+      - browser_task_trace_and_screenshots
+      - endpoint_and_contract_revision
+      - MMC_delegated_operation_admission
+      - ACL_read_and_count
+      - audit_sources_and_correlation
+      - lineage_and_evidence_locator
+      - canonical_mirror_sha256
+      - disposable_migration_setup_and_cleanup
+      - rollback
+      - authorization_status
+      - real_simulated_classification
+      - unresolved_risks
+  authorization:
+    phase_1_local_product_edits: true
+    phase_1_mocked_tests: true
+    phase_2_disposable_kds_write: false
+    shared_or_persistent_kds_write: false
+    real_business_asset: false
+    relationship_confirmation: false
+    long_term_memory_write: false
+    business_state_change: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false

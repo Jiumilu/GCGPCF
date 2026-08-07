@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-07-12
+生成日期：2026-08-03
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -742,4 +742,6 @@
 | GPCF-DOC-8742549A10 | specs | openspec/changes/register-globalcloud-icp/specs/README.md | draft |
 | GPCF-DOC-FB59167101 | project-group-icp-registration | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/README.md | draft |
 | GPCF-OS-ICP-REGISTRATION-SPEC-20260712 | spec | openspec/changes/register-globalcloud-icp/specs/project-group-icp-registration/spec.md | draft |
+| GPCF-DOC-DA59B18707 | sop-bind-matrix-to-icp-foundation | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | draft |
+| GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | proposal | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | draft |
 | GPCF-DOC-89FBFF25D3 | OpenSpec 主规格 | openspec/specs/README.md | controlled |

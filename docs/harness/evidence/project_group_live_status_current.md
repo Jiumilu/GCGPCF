@@ -18,28 +18,28 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-08-02 00:05:38 +0800
+generated_at: 2026-08-08 00:02:33 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-08-02T00:05:38.525711+08:00`
+- generated_at: `2026-08-08T00:02:33.017838+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `17`
+- pass_repo_count: `13`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `none`
-- observed_ahead: `none`
-- stable_dirty: `none`
-- stable_ahead: `none`
-- volatile_dirty: `none`
-- sensitive_repos: `none`
-- review_boundary: `none`
+- observed_dirty: `GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud MMC, GlobalCloud KDS`
+- observed_ahead: `GlobalCloud Studio, GlobalCloud MMC`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud MMC, GlobalCloud Studio, GlobalCoud GPCF`
+- stable_ahead: `GlobalCloud MMC, GlobalCloud Studio`
+- volatile_dirty: `GlobalCoud GPCF`
+- sensitive_repos: `GlobalCoud GPCF, GlobalCloud KDS`
+- review_boundary: `GlobalCloud KDS, GlobalCloud MMC, GlobalCloud Studio, GlobalCoud GPCF`
 
 ## Repo details
 
@@ -51,12 +51,12 @@ generated_at: 2026-08-02 00:05:38 +0800
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 0 | 0 | 0 | `none` |
-| `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 27 | 20 | 0 | `none` |
+| `GlobalCoud GPCF` | 395 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
-| `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 0 | 0 | 0 | `none` |
+| `GlobalCloud MMC` | 9 | 1 | 0 | `none` |
+| `GlobalCloud KDS` | 255 | 0 | 0 | `"PVA\344\273\267\345\200\274\350\201\224\347\233\237/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\344\270\226\347\225\214\350\265\204\344\272\247/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\345\267\245\344\270\232\347\273\277\351\223\276/\344\274\232\350\256\256\347\272\252\350\246\201/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "entities/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md"` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |

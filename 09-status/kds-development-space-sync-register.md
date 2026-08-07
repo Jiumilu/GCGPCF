@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-16
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-07-16
+日期：2026-08-03
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -33,7 +33,7 @@ superseded_by: []
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
 | GFIS | 01-GFIS | 117 | 114 | 已建空间 |
-| GPC | 02-GPC | 58 | 50 | 已建空间 |
+| GPC | 02-GPC | 60 | 52 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 171 | 24 | 已建空间 |
 | KDS | 05-KDS | 742 | 739 | 已建空间 |
@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 1995 | 1852 | 已建空间 |
+| GPCF | 12-GPCF | 2006 | 1855 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
@@ -52,8 +52,8 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 62 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 192 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 64 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 198 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -61,6 +61,8 @@ superseded_by: []
 
 | doc_id | git_source | kds_path | sync_direction | kds_api_status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-285E77EC87 | $CODEX_HOME/automations/globalcloud-17/README.md | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/README.md | bidirectional | pending_api |
+| GPCF-DOC-9BC6636D29 | $CODEX_HOME/automations/globalcloud-17/memory.md | 开发/02-GPC/$CODEX_HOME/automations/globalcloud-17/memory.md | bidirectional | pending_api |
 | GPCF-DOC-C1D2E3F4A5 | .agents/skills/impeccable/README.md | 开发/02-GPC/.agents/skills/impeccable/README.md | bidirectional | pending_api |
 | GPCF-DOC-B6A5C4D3E2 | .agents/skills/impeccable/SKILL.md | 开发/12-GPCF/.agents/skills/impeccable/SKILL.md | bidirectional | pending_api |
 | GPCF-DOC-D4E5F6A7B8 | .agents/skills/impeccable/reference/README.md | 开发/02-GPC/.agents/skills/impeccable/reference/README.md | bidirectional | pending_api |
@@ -472,6 +474,7 @@ superseded_by: []
 | GPCF-DOC-BA9F35E2AA | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | bidirectional | pending_api |
 | GPCF-DOC-9B5D646E38 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | bidirectional | pending_api |
 | GPCF-DOC-C60ECF8A71 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | bidirectional | pending_api |
+| GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | bidirectional | pending_api |
 | GPCF-DOC-742C5EA186 | 03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | bidirectional | pending_api |
 | GPCF-DOC-69CFFD4C82 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | bidirectional | pending_api |
 | GPCF-DOC-05774FB8AD | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | bidirectional | pending_api |
@@ -521,6 +524,7 @@ superseded_by: []
 | GPCF-DOC-A948E73BB3 | 03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud辽宁远航链路证据缺口请求包与知识悬赏草案.md | bidirectional | pending_api |
 | GPCF-DOC-09065C5D7F | 03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目模型引用与用户模型偏好方案.md | bidirectional | pending_api |
 | GPCF-DOC-5A7F6D81F0 | 03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud项目群与分布式KDS关系总图.md | bidirectional | pending_api |
+| GPCF-DOC-GKE-001-20260803 | 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md | bidirectional | pending_api |
 | GPCF-DOC-B49150CE25 | 03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud首批资料回收包字段验收与候选SOP写回建议.md | bidirectional | pending_api |
 | GPCF-DOC-A7C38B4EA7 | 03-data-ai-knowledge/README.md | 开发/05-KDS/03-data-ai-knowledge/README.md | bidirectional | pending_api |
 | GPCF-DOC-56BC03A70C | 04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | 开发/02-GPC/04-ui-delivery/GlobalCloud绿色供应链体系P0最小闭环界面实施清单.md | bidirectional | pending_api |
@@ -2254,6 +2258,9 @@ superseded_by: []
 | GPCF-DOC-102699F74F | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-GATE-001.md | bidirectional | pending_api |
 | GPCF-DOC-4B02CBD3AC | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001.md | bidirectional | pending_api |
 | GPCF-DOC-40D4E57CE7 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-GKE-001-001 | docs/harness/loops/loop-round-GPCF-GKE-001-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GKE-001-001.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-003 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-003.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-003.md | bidirectional | pending_api |
+| GPCF-DOC-LOOP-GKE-001-ENGINEERING-002 | docs/harness/loops/loop-round-GPCF-GKE-001-LOOP-ENGINEERING-002.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GKE-001-LOOP-ENGINEERING-002.md | bidirectional | pending_api |
 | GPCF-DOC-8E2A7EAEF0 | docs/harness/loops/loop-round-GPCF-HEADROOM-ADMISSION-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-ADMISSION-001.md | bidirectional | pending_api |
 | GPCF-DOC-69EFF16571 | docs/harness/loops/loop-round-GPCF-HEADROOM-CONTROLLED-METRIC-PILOT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-CONTROLLED-METRIC-PILOT-001.md | bidirectional | pending_api |
 | GPCF-DOC-951520EA69 | docs/harness/loops/loop-round-GPCF-HEADROOM-COST-MEASUREMENT-OUTPUT-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-COST-MEASUREMENT-OUTPUT-001.md | bidirectional | pending_api |
@@ -3133,6 +3140,12 @@ superseded_by: []
 | GPCF-DOC-F011-STUDIO-WORKBENCH-SUMMARY-20260712 | features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-F011-STUDIO-WORKBENCH-JOURNAL-20260712 | features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | bidirectional | pending_api |
 | GPCF-DOC-39D57E2071 | features/active/F-012-icp-sop-foundation-coupling/journal.md | 开发/91-治理与验收/features/active/F-012-icp-sop-foundation-coupling/journal.md | bidirectional | pending_api |
+| GPCF-DOC-F013-KDS-P1-HANDOFF-20260802 | features/active/F-013-knowledge-asset-model-system/artifacts/kds-p1-handoff.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/artifacts/kds-p1-handoff.md | bidirectional | pending_api |
+| GPCF-F013-EVIDENCE-KDS-STAGE-B-REVIEW-20260803 | features/active/F-013-knowledge-asset-model-system/evidence/kds-stage-b-independent-review-20260803.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/kds-stage-b-independent-review-20260803.md | bidirectional | pending_api |
+| GPCF-DOC-F013-KNOWLEDGE-ASSET-VALIDATION-20260802 | features/active/F-013-knowledge-asset-model-system/evidence/knowledge-asset-model-validation.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/knowledge-asset-model-validation.md | bidirectional | pending_api |
+| GPCF-F013-EVIDENCE-STUDIO-INTAKE-TRANSPORT-20260803 | features/active/F-013-knowledge-asset-model-system/evidence/studio-intake-transport-review-20260803.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/studio-intake-transport-review-20260803.md | bidirectional | pending_api |
+| GPCF-DOC-F013-KNOWLEDGE-ASSET-EVIDENCE-SUMMARY-20260802 | features/active/F-013-knowledge-asset-model-system/evidence/summary.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/summary.md | bidirectional | pending_api |
+| GPCF-DOC-F013-KNOWLEDGE-ASSET-MODEL-JOURNAL-20260802 | features/active/F-013-knowledge-asset-model-system/journal.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |

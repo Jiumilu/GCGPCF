@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+import yaml
+
 from gfis_real_fact_entry_guard import require_gfis_real_fact_entry
 
 
@@ -18,6 +20,7 @@ HANDOFF_REQUEST_GATE_VALIDATOR = ROOT / "tools/kds-sync/validate_session_mainlin
 LOOP_DOCUMENT_GATE = ROOT / "tools/kds-sync/loop_document_gate.py"
 LOOPS_DIR = ROOT / "docs/harness/loops"
 README = ROOT / "02-governance/loop/README.md"
+GKE_COORDINATION_ENVELOPE = ROOT / "features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-three-lane-coordination-envelope.yaml"
 
 
 def require(condition: bool, message: str) -> None:
@@ -35,6 +38,8 @@ def classify(round_id: str) -> str | None:
         return "GFIS L4 repair and test sync"
     if round_id.startswith(("GPCF-KDS-", "GPCF-GCKF")):
         return "KDS / DKS governance"
+    if round_id.startswith("GPCF-GKE"):
+        return "Knowledge engineering governance"
     if round_id.startswith(("GPCF-ONTOLOGY-WAS", "GPCF-WAS")):
         return "Ontology / WAS governance"
     if round_id.startswith("GPCF-CODEGRAPH"):
@@ -89,8 +94,9 @@ def main() -> int:
         "source_path: 02-governance/loop/LOOP_SESSION_REGISTRY.md",
         "sync_direction: bidirectional",
         "LOOP 会话总账",
-        "repo_recorded_loop_sessions_only",
-        "live_codex_threads_covered | false",
+        "repo_recorded_loop_sessions_and_authorized_gke001_three_lane",
+        "live_codex_threads_covered | gke001_three_lane_only",
+        "cross_repo_sessions_covered | gke001_three_lane_only",
         "auto_takeover_allowed | false",
         "write_without_handoff_allowed | false",
         "status_promotion_allowed | false",
@@ -99,12 +105,16 @@ def main() -> int:
         "orphan_session_family",
         "handoff_required_for_execution",
         "validate_loop_session_registry.py",
+        "019ee242-2575-73f1-b5bb-d43e7e49468e",
+        "019fc4e3-bce5-7541-85e3-8885c7e78aea",
+        "019edfb4-21ef-77e1-afdb-891df25c4068",
     ]:
         require(phrase in registry, f"registry missing phrase: {phrase}")
 
     families = [
         "GFIS L4 repair and test sync",
         "KDS / DKS governance",
+        "Knowledge engineering governance",
         "Ontology / WAS governance",
         "CodeGraph governance",
         "COGNEE pilot / writeback",
@@ -142,6 +152,12 @@ def main() -> int:
             counts[family] += 1
     require(not unknown, "orphan_session_family: " + ", ".join(unknown[:20]))
     require(sum(counts.values()) == len(iter_round_ids()), "session family count mismatch")
+
+    envelope = yaml.safe_load(read(GKE_COORDINATION_ENVELOPE)).get("coordination_envelope", {})
+    require(envelope.get("coordinator", {}).get("role") == "sole_gke001_coordinator", "GKE coordinator role mismatch")
+    lanes = envelope.get("lanes", {})
+    require(set(lanes) == {"studio", "kds", "brain"}, "GKE live lane set mismatch")
+    require(len({lane.get("thread_id") for lane in lanes.values()}) == 3, "GKE live thread ids not unique")
 
     require("current_session_mainline_declaration=pass" in current_validator, "current declaration validator missing pass marker")
     require(
@@ -189,7 +205,8 @@ def main() -> int:
         "loop_session_registry=pass "
         f"repo_recorded_loop_rounds={len(iter_round_ids())} "
         "orphan_session_family=0 "
-        "live_codex_threads_covered=false "
+        "live_codex_threads_covered=gke001_three_lane_only "
+        "live_codex_thread_count=3 "
         "auto_takeover_allowed=false "
         f"{counts_text} "
         f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"

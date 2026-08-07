@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
 source_path: GlobalCloud 项目群实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-28
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
@@ -299,6 +299,7 @@ declared -> contracted -> mocked -> tested -> verified -> accepted
 | 服务运营链路 | XWAIL、WAES、AaaS、PVAOS | ServicePackage、计量、SLA、订阅状态 |
 | 业务事实链路 | GFIS、GPC、PVAOS、KDS | 事实源、证据源、审计和回滚 |
 | 场景运营 SOP 链路 | SOP、KDS、GFIS、GPC、GPCF、WAES | 订单池、G0-G8 闸门、红黄灯、周评分、补证队列和授权审查 |
+| GKE-001 知识工程链路 | GPCF、KDS、MMC、Brain、Studio、WAES、GFIS、GPC、PVAOS | canonical 契约、单一知识主存、业务主数据引用、受控候选、人工复核、审计、回滚和长期记忆 |
 | 知识智能链路 | KDS、Brain、XiaoC、PKC、XGD、XiaoG | 知识、提示、智能体输出和候选边界 |
 | 工程治理链路 | GPCF、MMC、SOP、Studio | Harness、LOOP、SOP、模板、配置和证据 |
 | 界面工程链路 | WAES、Studio、PKC、XGD、GPC、GFIS、GPCF | 统一体验骨架、设计令牌、工作台母框架、UI 工具链、UI gate 和页面/组件三方案机制 |
@@ -325,6 +326,20 @@ declared -> contracted -> mocked -> tested -> verified -> accepted
 | 验收证据 | 验收场景、验收人、验收结果、签收或退回 |
 
 核心链路真实证据由 `09-status/globalcloud-core-chain-real-evidence-register.md` 控制，单条证据记录使用 `templates/real-evidence-record-template.md`。历史 evidence、mock、dry-run 或专项样例不能自动升级为当前真实运行证据，必须经台账登记和验证脚本确认。
+
+## 13.1 GKE-001 知识资产模型实施链路与知识工程实施顺序
+
+GKE-001 按以下固定顺序实施，不允许任何仓库并行定义冲突字段或形成平行知识主账；其中 `知识资产模型实施链路` 以 `KnowledgeObject / KnowledgeAssetEnvelope` 的 canonical 契约和 KDS 单一正本为前置：
+
+1. GPCF 冻结 `KnowledgeObject / KnowledgeAsset` canonical Schema、词表、fixtures、manifest、SHA-256、投影语义、兼容规则和验收门；F-013 承担该工作包和独立验收。
+2. KDS 通过 OpenSpec 实现对象存储、不可变版本、解析/OCR/转写任务、证据定位、ACL、候选、审计、outbox、回滚、API 和迁移 dry-run。
+3. GPCF 按 canonical manifest、实现变更、API 契约、ACL/审计测试、迁移 dry-run 和回滚边界执行只读独立验收。
+4. Studio 只接入已验收 API，完成业务对象绑定、资料接入、处理状态、证据浏览、候选复核、失败恢复和审计任务流；`hermes_local_draft` 只允许作为临时交互草案。
+5. Brain 在 KDS ACL、outbox 和候选写回契约稳定后执行受控分析，只生成 `candidate`，不保存业务事实或自动确认。
+6. MMC 为 KDS、Studio 和 Brain 提供可信身份、签名委托与跨服务授权，不保存知识资产正本，授权不得跨调用隐式继承。
+7. 只有人工确认和业务对象 owner 独立授权完成后，KDS 才能保存确认结果或长期记忆；项目、订单、生产等业务状态仍由权威业务系统独立写入。
+
+跨仓交接必须遵循 `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` 的 `knowledge_engineering_handoff` 协议。当前工程状态上限为 `active / partial / not_complete`；KDS 阶段 A、GPCF 独立验收、Studio 浏览器任务流和人工确认任一缺失，均不得声明真实闭环、稳定生产 API、项目群集成或生产就绪。
 
 ## 14. LOOP 接入
 

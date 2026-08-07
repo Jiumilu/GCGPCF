@@ -1,11 +1,13 @@
 # GPC 开发文档空间
 
-生成日期：2026-07-12
+生成日期：2026-08-03
 
 用途：KDS `开发` 空间中 `GPC` 项目的受控文档入口。
 
 | doc_id | title | source_path | status |
 | --- | --- | --- | --- |
+| GPCF-DOC-285E77EC87 | globalcloud-17 | $CODEX_HOME/automations/globalcloud-17/README.md | controlled |
+| GPCF-DOC-9BC6636D29 | globalcloud-17 运行记忆 | $CODEX_HOME/automations/globalcloud-17/memory.md | controlled |
 | GPCF-DOC-C1D2E3F4A5 | impeccable | .agents/skills/impeccable/README.md | controlled |
 | GPCF-DOC-D4E5F6A7B8 | reference | .agents/skills/impeccable/reference/README.md | controlled |
 | GPCF-DOC-3B548BE016 | f423b226-0141-4aac-8df6-728f615aa3a1 | .kunsdd/draft/f423b226-0141-4aac-8df6-728f615aa3a1/README.md | controlled |

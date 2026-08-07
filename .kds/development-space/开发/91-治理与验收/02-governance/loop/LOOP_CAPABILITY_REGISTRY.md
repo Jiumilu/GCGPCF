@@ -45,6 +45,14 @@ superseded_by: []
 
 `loop_document_gate.py`、`check_document_pollution.py`、`validate_kds_token.py`、`check_chinese_localization_gate.py`、`validate_loop_engineering_master_plan.py`、`validate_loop_capability_registry.py`、`validate_loop_baseline_sync_readiness.py`、`validate_loop_engineering_five_direction_implementation.py`、`validate_loop_round_efficiency_audit.py`、`validate_continuous_round_substance.py`、`validate_l3_continuation_guard.py`、`validate_loop_v11_delivery_boundary.py`、`parse_loop_task_interface.py`、`build_loop_multi_agent_execution_plan.py`、`git status`、`git diff`、`git diff --check`、`document_control.py`。
 
+## 一级工程域
+
+| capability_id | type | status | risk_level | owner | project_scope | validator_or_gate | forbidden_contexts |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `domain.gke-001` | `engineering_domain` | `controlled` | `medium/high by operation` | `GPCF` | `18/18` | `loop_document_gate.py`; `validate_project_group_skill_chain.py`; F-013/Harness evidence | `parallel_knowledge_ledger,unauthorized_kds_write,business_state_change,status_promotion` |
+
+`domain.gke-001` 的默认治理能力链为 `globalcloud-loop-orchestrator`、`globalcloud-document-governance`、`globalcloud-collaborative-dev`、`opsx-full-cycle` 和 `globalcloud-harness-governance`。能力登记只建立治理入口；真实写回、跨仓修改、生产接口和状态提升仍按子能力风险与专项授权裁决。
+
 ## 任务界面执行工具
 
 | capability_id | type | status | risk_level | owner | allowed_contexts | forbidden_contexts | validator_or_gate | rollback_or_disable |
@@ -75,6 +83,7 @@ superseded_by: []
 | `family.lcx` | governance method family | candidate/pilot | medium/high by sub-capability | `validate_headroom_lcx_*`; LCX authorization evidence |
 | `family.waes_kds_rag_writeback` | gate/writeback method | candidate/pilot | medium/high by sub-capability | `validate_was_waes_kds_rag_writeback_gate_pack.py`; RAG index evidence; writeback evidence |
 | `family.multi_agent_execution` | execution method family | controlled/pilot/candidate by sub-capability | medium/high by sub-capability | `LOOP_MULTI_AGENT_EXECUTION_POLICY.md`; agent output evidence; LOOP gates |
+| `family.gke_knowledge_engineering` | first-level engineering domain | controlled governance / partial runtime | medium/high by operation | `GlobalCloud项目群知识工程规范.md`; F-013 evidence; KDS/Studio/Brain/MMC handoff; LOOP gates |
 
 ## 能力族升级规则
 

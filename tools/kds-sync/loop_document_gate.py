@@ -318,6 +318,7 @@ def main() -> int:
         "loop_session_mainline_control": run([sys.executable, "tools/kds-sync/validate_loop_session_mainline_control.py"]),
         "current_session_mainline_declaration": run([sys.executable, "tools/kds-sync/validate_current_session_mainline_declaration.py"]),
         "loop_session_registry": run([sys.executable, "tools/kds-sync/validate_loop_session_registry.py"]),
+        "gke001_three_lane_coordination": run([sys.executable, "tools/kds-sync/validate_gke001_three_lane_coordination.py"]),
         "session_mainline_preflight_enforcement": run([sys.executable, "tools/kds-sync/validate_session_mainline_preflight_enforcement.py"]),
         "session_mainline_drift_watch": run([sys.executable, "tools/kds-sync/validate_session_mainline_drift_watch.py"]),
         "session_mainline_handoff_request_gate": run([sys.executable, "tools/kds-sync/validate_session_mainline_handoff_request_gate.py"]),

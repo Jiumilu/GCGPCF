@@ -23,6 +23,13 @@ SCRIPT_CHECKS = [
 UI_EVIDENCE_IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp"}
 UI_EVIDENCE_TEXT_SUFFIXES = {".md", ".txt", ".json"}
 UI_EVIDENCE_NAME_HINTS = ("ui", "visual", "screenshot", "browser", "playwright", "runtime")
+EVIDENCE_BLOCKERS = {
+    "tests evidence failed",
+    "build or lint evidence failed",
+    "UI evidence required",
+    "API evidence required",
+    "summary evidence failed",
+}
 
 
 def feature_requires(data: dict[str, object], keywords: set[str]) -> bool:
@@ -58,15 +65,20 @@ def write_result(path: Path, title: str, results: list[tuple[str, str, str]]) ->
     return status
 
 
-def write_markdown_preserving_frontmatter(path: Path, body: str) -> None:
-    if path.exists():
-        text = path.read_text(encoding="utf-8", errors="ignore")
-        if text.startswith("---\n"):
-            end = text.find("\n---\n", 4)
-            if end != -1:
-                path.write_text(text[: end + 5] + "\n" + body, encoding="utf-8")
-                return
-    path.write_text(body, encoding="utf-8")
+def write_markdown_managed_section(path: Path, body: str) -> None:
+    start = "<!-- GPCF_EVIDENCE_GATE_START -->"
+    end = "<!-- GPCF_EVIDENCE_GATE_END -->"
+    managed = f"{start}\n{body.rstrip()}\n{end}"
+    if not path.exists():
+        path.write_text(managed + "\n", encoding="utf-8")
+        return
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    if start in text and end in text:
+        prefix, remainder = text.split(start, 1)
+        _, suffix = remainder.split(end, 1)
+        path.write_text(prefix.rstrip() + "\n\n" + managed + suffix, encoding="utf-8")
+        return
+    path.write_text(text.rstrip() + "\n\n" + managed + "\n", encoding="utf-8")
 
 
 def detect_ui_evidence(feature_dir: Path, evidence_dir: Path) -> tuple[str, str]:
@@ -154,11 +166,11 @@ def main() -> int:
     (evidence_dir / "screenshots.txt").write_text(screenshots_text + "\n", encoding="utf-8")
     (evidence_dir / "api.txt").write_text(api_text + "\n", encoding="utf-8")
     summary_status = "pass" if all(status in {"pass", "waived"} for status in [tests_status, build_status, screenshots_status, api_status]) else "fail"
-    write_markdown_preserving_frontmatter(
+    write_markdown_managed_section(
         evidence_dir / "summary.md",
         "\n".join(
             [
-                "# 证据摘要",
+                "## Evidence Gate 快照",
                 "",
                 "本文件记录当前 Feature 的本地可回放证据结果，仅用于关闭候选判断，不代表提交、推送、部署、真实接口调用或项目状态提升。",
                 "",
@@ -191,11 +203,17 @@ def main() -> int:
         blockers.append("API evidence required")
     if summary_status != "pass":
         blockers.append("summary evidence failed")
-    data["blockers"] = blockers
+    governance_blockers = [
+        str(item)
+        for item in data.get("blockers", [])
+        if str(item) not in EVIDENCE_BLOCKERS
+    ]
+    all_blockers = governance_blockers + blockers
+    data["blockers"] = all_blockers
     data["loop"]["current_step"] = "evaluate"
     data["loop"]["iteration"] = int(data["loop"].get("iteration", 0)) + 1
     write_feature(feature_file(feature_dir), data)
-    update_queue_entry(data["id"], status="evaluated" if not blockers else "blocked", role="Evaluator")
+    update_queue_entry(data["id"], status="evaluated" if not all_blockers else "blocked", role="Evaluator")
     append_journal(
         feature_dir,
         iteration=data["loop"]["iteration"],
@@ -203,15 +221,24 @@ def main() -> int:
             "采集本地可回放证据。",
             "更新 evidence 文件和 feature.yaml 证据状态。",
             "运行工作区 validator、py_compile、git diff --check 和范围证据门禁。",
-            "未发现阻塞项。" if not blockers else "；".join(blockers),
-            "是，前提是 close gate 通过。" if not blockers else "否。",
+            (
+                "；".join(blockers)
+                if blockers
+                else (
+                    "Evidence checks passed；保留治理阻塞：" + "；".join(governance_blockers)
+                    if governance_blockers
+                    else "未发现阻塞项。"
+                )
+            ),
+            "是，前提是 close gate 通过。" if not all_blockers else "否。",
         ],
     )
 
     print(
         "gpcf_feature_evidence "
         f"feature={data['id']} tests={tests_status} build={build_status} "
-        f"screenshots={screenshots_status} api={api_status} summary={summary_status}"
+        f"screenshots={screenshots_status} api={api_status} summary={summary_status} "
+        f"governance_blockers={len(governance_blockers)} close_candidate={str(not all_blockers).lower()}"
     )
     return 0 if not blockers else 1
 

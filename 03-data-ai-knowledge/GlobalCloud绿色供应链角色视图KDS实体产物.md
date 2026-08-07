@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md
 source_path: 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md
 sync_direction: bidirectional
-last_reviewed: 2026-07-01
+last_reviewed: 2026-08-03
 supersedes: []
 superseded_by: []
 ---
@@ -38,6 +38,7 @@ superseded_by: []
 | KDS 注册表入口 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/_registries/global-object-registry.yaml` |
 | GPCF 受控说明 | `03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md` |
 | LOOP 证据 | `docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md` |
+| 知识工程域 | `GKE-001 / GlobalCloud Knowledge Engineering` |
 | 写入边界 | `no_write / candidate_only / controlled_document` |
 
 ## 3. 来源继承
@@ -46,6 +47,7 @@ superseded_by: []
 
 | 来源 | 继承内容 |
 |---|---|
+| `GlobalCloud项目群知识工程规范.md` | `GKE-001` 上位工程、KDS 单一知识主存、跨仓交接、人工确认和状态上限 |
 | `GlobalCloud绿色供应链合作单位接入与组织空间初始化清单.md` | 角色初始化、组织空间、权限矩阵、接入状态和 LOOP 证据要求 |
 | `GlobalCloud绿色供应链分布式知识系统对象字段与11池映射清单.md` | 统一编号、通用必填字段、KDS 11 池、状态机和禁止升级口径 |
 | `GlobalCloud绿色供应链分布式知识系统数据对象最小落库与API契约草案.md` | P0 no-write、candidate_only、metadata_only 和 API 响应边界 |
@@ -75,6 +77,7 @@ superseded_by: []
 
 | 来源 | 当前状态 | 本实体继承边界 |
 |---|---|---|
+| `GKE-001` | `active / partial / not_complete` | 本实体作为受控投影候选纳入项目群一级知识工程，不据此产生运行态授权 |
 | `GPCF-KDS-DKS-054` 至 `GPCF-KDS-DKS-060` | `merged_precondition_controlled` | 仅作为分布式知识系统已合流前置基础，不据此声明业务完成 |
 | `GPCF-GCKF-P0-D185-001` | `session_mainline_takeover_with_hold` | 接管 GCKF/Knowledge Fabric 受控主线，最高状态保持 `review_ready_with_hold` |
 | `GPCF-GCKF-P0-D190-001` | `authorization_boundary_stop_condition_with_resume_trigger` | `satisfiedResumeTriggers=0`、`nextExecutableRounds=0`、`resumeAllowed=false` |
@@ -85,6 +88,7 @@ superseded_by: []
 
 | 知识工程层 | 挂接方式 | 边界 |
 |---|---|---|
+| 工程域 | `engineering_domain=GKE-001`，继承 GPCF canonical 契约与 KDS 单一知识主存规则 | 不形成平行知识主账，不解除 D190 |
 | 对象模型 | 注册为 `Entity / kds_role_view`，主键 `entity_id` | 不替代真实账号或 IAM |
 | 全局对象注册表 | 以 `KDS-GSC-ROLE-VIEW-20260701` 建立对象入口 | 只做跨空间治理索引 |
 | 11 池 | 角色映射到人才池、数据池、场景池，并按业务角色挂接资金、订单、运力、政策等池 | 不确认业务事实 |

@@ -1,0 +1,217 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260803-001
+  version: v0.4
+  engineering_domain: GKE-001
+  canonical_feature: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    owner: GPCF
+    role: sole_gke001_coordinator
+  canonical_contract:
+    manifest_path: okf/knowledge-asset-contract-manifest.yaml
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    source_of_truth: KDS
+    contract_control_plane: GPCF
+  observed_at: "2026-08-03T14:20:00+08:00"
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial
+  parallel_policy:
+    allowed:
+      - kds_stage_b_implementation_and_studio_backend_restore
+    forbidden:
+      - brain_code_expansion_before_studio_login
+      - direct_cross_repo_source_copy
+      - direct_cross_repo_fact_copy
+      - same_file_parallel_write
+  serial_order:
+    - kds_stage_b_implementation_and_tests
+    - f013_independent_readonly_review
+    - studio_intake_evidence_review_task_integration
+    - brain_search_wikipreview_chat_readonly_e2e
+    - mmc_delegation_and_human_confirmation_validation
+  lanes:
+    studio:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      host_id: local
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+      change_id: restore-studio-backend-runtime
+      owner: Studio
+      coordination_lock_id: gke001-studio-restore-runtime-lock
+      local_lock_requirement: opsx_lock_required_before_next_write
+      execution_mode: implementation_and_test
+      observed_state:
+        branch: main
+        ahead: 20
+        behind: 0
+        handoff_status: runtime_handoff_received_waiting_kds_review
+      file_allowlist:
+        - .harness/opsx.lock
+        - scripts/run-dev-server.mjs
+        - tests/server/dev-server-kds-env.test.ts
+        - openspec/changes/restore-studio-backend-runtime/**
+        - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-872.json
+        - docs/harness/loops/loop-round-GPCF-STUDIO-LR-872.md
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+      forbidden_scope:
+        - local_knowledge_ledger
+        - hermes_local_draft_as_kds_replacement
+        - kds_contract_or_kds_repository_changes
+        - brain_repository_changes
+        - commit_or_push_without_separate_authorization
+        - deployment_or_status_promotion
+      dependency_in:
+        - none_for_backend_restore
+      dependency_out:
+        - authenticated_studio_runtime_on_8647
+        - login_state_for_brain_readonly_e2e
+      next_action: restore_8647_and_return_runtime_handoff
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      host_id: local
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+      change_id: extend-kds-document-extraction
+      owner: KDS
+      coordination_lock_id: gke001-kds-stage-b-extraction-lock
+      local_lock_requirement: opsx_lock_required_before_next_write
+      execution_mode: authorized_local_stage_b_tdd
+      observed_state:
+        branch: main
+        ahead: 0
+        behind: 0
+        handoff_status: f013_independent_review_rework_required
+      file_allowlist:
+        - .harness/opsx.lock
+        - knowledge_intake/api.py
+        - knowledge_intake/postgres.py
+        - knowledge_intake/repository.py
+        - knowledge_intake/service.py
+        - knowledge_intake/extraction.py
+        - knowledge_intake/extraction_service.py
+        - knowledge_intake/sql/002_document_extraction.sql
+        - requirements.txt
+        - tests/test_document_extraction_*.py
+        - tests/test_knowledge_intake_api.py
+        - tests/test_knowledge_intake_postgres.py
+        - openspec/changes/extend-kds-document-extraction/**
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/**
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+      forbidden_scope:
+        - _registries/global-object-registry.yaml
+        - entities/green-supply-chain-role-view-entity.md
+        - real_corpus_processing
+        - real_kds_api_write
+        - production_or_shared_configuration
+        - brain_or_studio_repository_changes
+        - commit_or_push_without_separate_authorization
+        - deployment_or_status_promotion
+      dependency_in:
+        - gpcf_f013_canonical_contract_v0_1
+        - stage_a_clean_baseline_f28edb51
+      dependency_out:
+        - stage_b_knowledge_engineering_handoff
+        - f013_independent_review_input
+      next_action: correct_f013_review_findings_and_return_revised_handoff
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      host_id: local
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain
+      change_id: brain-studio-readonly-kds-bridge
+      owner: Brain
+      coordination_lock_id: gke001-brain-readonly-bridge-freeze-lock
+      local_lock_requirement: freeze_current_change_set_no_new_write
+      execution_mode: freeze_and_wait
+      observed_state:
+        branch: main
+        ahead: 0
+        behind: 0
+        handoff_status: freeze_receipt_received_waiting_f013_review
+      file_allowlist:
+        - openspec/changes/brain-studio-readonly-kds-bridge/design.md
+        - src/app/hooks/studioKdsBridge.ts
+        - src/app/hooks/studioKdsBridge.test.ts
+        - src/app/hooks/useKdsApi.ts
+        - src/app/hooks/useKdsApi.test.ts
+      allowed_kds_operations:
+        - search
+        - graph
+        - page-content
+      forbidden_scope:
+        - new_code_or_file_expansion_before_studio_login
+        - kds_mutation
+        - local_knowledge_ledger
+        - analysis_fact_persistence
+        - kds_or_studio_repository_changes
+        - commit_or_push_without_separate_authorization
+        - deployment_or_status_promotion
+      dependency_in:
+        - studio_authenticated_login_state
+        - f013_reviewed_kds_read_contract
+      dependency_out:
+        - brain_search_wikipreview_chat_readonly_e2e
+      next_action: freeze_current_diff_and_wait_for_studio_login_handoff
+  handoff_requirements:
+    required:
+      - exact_changed_files
+      - tests
+      - acl_read
+      - acl_count
+      - audit
+      - lineage
+      - mirror_sha256
+      - migration_dry_run
+      - rollback
+      - authorization_status
+      - unresolved_risks
+    transport: canonical_contract_and_knowledge_engineering_handoff_only
+    receiving_control: GPCF_F013_independent_readonly_review
+  authorization:
+    kds_stage_b_local_development: true
+    real_kds_write: false
+    long_term_memory_write: false
+    relationship_confirmation: false
+    business_state_change: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+    human_confirmation_completed: false
+  gckf_boundary:
+    source_round: GPCF-GCKF-P0-D190-001
+    required_resume_triggers: 4
+    satisfied_resume_triggers: 0
+    resume_allowed: false
+    creates_d191: false
+  scope_amendments:
+    - id: GKE-001-COORDINATION-20260803-001-A1
+      lane: studio
+      reason: seal_codegraph_and_harness_evidence_after_runtime_validation
+      added_scope:
+        - .harness/opsx.lock
+        - docs/harness/loops/loop-round-GPCF-STUDIO-LR-872.md
+      authorization_boundary: temporary_lock_not_staged_committed_or_returned_as_product_change
+    - id: GKE-001-COORDINATION-20260803-001-A2
+      lane: kds
+      reason: stage_b_api_acl_and_disposable_postgresql_regression_coverage
+      added_scope:
+        - tests/test_knowledge_intake_api.py
+        - tests/test_knowledge_intake_postgres.py
+      authorization_boundary: exact_test_files_only_after_coordinator_hold_and_readonly_diff_review
+    - id: GKE-001-COORDINATION-20260803-001-A3
+      lane: kds
+      reason: reconcile_required_opsx_lock_and_f013_independent_review_rework
+      added_scope:
+        - .harness/opsx.lock
+      review_findings:
+        - retryable_failed_run_short_circuits_reprocessing_and_leaves_job_leased
+        - extracted_search_reads_historical_runs_instead_of_active_projection
+        - rejected_evidence_link_missing_failed_audit
+        - exact_asset_version_extraction_lineage_requires_composite_enforcement
+        - empty_terminal_content_page_loses_authorized_total
+      authorization_boundary: existing_stage_b_files_and_tests_only_lock_is_ephemeral_no_commit_push_deploy_or_status_promotion

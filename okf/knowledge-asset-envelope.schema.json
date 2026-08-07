@@ -1,0 +1,504 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.local/okf/knowledge-asset-envelope.schema.json",
+  "title": "GlobalCloud KnowledgeAssetEnvelope",
+  "description": "Project-group metadata envelope for an existing OKF KnowledgeObject. It separates access space, business context, engineering context, classification, stewardship, and lineage without creating a second knowledge master record.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "assetId",
+    "tenantId",
+    "knowledgeObjectRef",
+    "accessScope",
+    "contexts",
+    "classification",
+    "governance",
+    "provenance",
+    "relations",
+    "tags",
+    "createdAt",
+    "updatedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "v0.1"
+    },
+    "assetId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tenantId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "knowledgeObjectRef": {
+      "type": "string",
+      "minLength": 1,
+      "description": "ID or URI of the canonical OKF KnowledgeObject stored by KDS."
+    },
+    "accessScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primarySpace", "projections"],
+      "properties": {
+        "primarySpace": {
+          "$ref": "#/$defs/spaceBinding"
+        },
+        "projections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/spaceProjection"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "contexts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["platformGroupRefs", "systemRefs"],
+      "properties": {
+        "platformGroupRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^platform-group://[^\\s]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "systemRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^system://[^\\s]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "engineeringProjectRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^engineering-project://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "businessPortfolioRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^business-portfolio://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "businessProjectRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^business-project://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "organizationRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^organization://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "workstreamRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^workstream://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "domainRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^domain://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "geographyRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^geography://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "productRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^product://[^\\s]+$"
+          },
+          "uniqueItems": true
+        },
+        "processRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^process://[^\\s]+$"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetType", "confidentiality", "lifecycleStage", "language"],
+      "properties": {
+        "assetType": {
+          "type": "string",
+          "enum": [
+            "source",
+            "meeting_minutes",
+            "decision",
+            "action_item",
+            "requirement",
+            "design",
+            "policy",
+            "sop",
+            "report",
+            "evidence",
+            "fact_candidate",
+            "knowledge_page",
+            "code_change",
+            "test_evidence",
+            "incident"
+          ]
+        },
+        "confidentiality": {
+          "type": "string",
+          "enum": ["public", "internal", "restricted", "confidential", "secret"]
+        },
+        "lifecycleStage": {
+          "type": "string",
+          "enum": ["draft", "active", "reviewing", "superseded", "archived"]
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Z]{2})?$"
+        },
+        "audienceCodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/code"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ownerRef",
+        "stewardRefs",
+        "vocabularyVersion",
+        "metadataStatus",
+        "authorizationBoundary",
+        "writeMode"
+      ],
+      "properties": {
+        "ownerRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stewardRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        },
+        "vocabularyVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "metadataStatus": {
+          "type": "string",
+          "enum": ["unclassified", "machine_suggested", "human_required", "human_confirmed", "rejected"]
+        },
+        "authorizationBoundary": {
+          "type": "string",
+          "enum": ["read_only", "human_required", "waes_gated", "authorized"]
+        },
+        "writeMode": {
+          "type": "string",
+          "enum": ["no_write", "sandbox", "authorized_write"]
+        },
+        "authorizationEvidenceRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        },
+        "retentionPolicyRef": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "writeMode": {
+                "const": "authorized_write"
+              }
+            },
+            "required": ["writeMode"]
+          },
+          "then": {
+            "required": ["authorizationEvidenceRefs"],
+            "properties": {
+              "metadataStatus": {
+                "const": "human_confirmed"
+              },
+              "authorizationBoundary": {
+                "const": "authorized"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceRefs", "evidenceRefs", "lineageRefs"],
+      "properties": {
+        "sourceRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        },
+        "evidenceRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        },
+        "lineageRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relation"
+      }
+    },
+    "tags": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["controlled", "free"],
+      "properties": {
+        "controlled": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/conceptRef"
+          },
+          "uniqueItems": true
+        },
+        "free": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "maxItems": 20,
+          "uniqueItems": true
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$defs": {
+    "code": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{0,63}$"
+    },
+    "nonEmptyRefArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "spaceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["spaceType", "spaceRef"],
+      "properties": {
+        "spaceType": {
+          "type": "string",
+          "enum": ["private", "personal", "family", "team", "partner", "public", "ops"]
+        },
+        "spaceRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aclPolicyRef": {
+          "type": "string"
+        },
+        "publicationPolicyRef": {
+          "type": "string"
+        },
+        "approvalEvidenceRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "spaceType": {
+                "const": "partner"
+              }
+            },
+            "required": ["spaceType"]
+          },
+          "then": {
+            "required": ["aclPolicyRef", "approvalEvidenceRefs"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "spaceType": {
+                "const": "public"
+              }
+            },
+            "required": ["spaceType"]
+          },
+          "then": {
+            "required": ["publicationPolicyRef", "approvalEvidenceRefs"]
+          }
+        }
+      ]
+    },
+    "spaceProjection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target", "mode", "policyRef"],
+      "properties": {
+        "target": {
+          "$ref": "#/$defs/spaceBinding"
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["reference_only", "redacted_projection", "approved_copy"]
+        },
+        "policyRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectionLineageRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        },
+        "approvalEvidenceRefs": {
+          "$ref": "#/$defs/nonEmptyRefArray"
+        },
+        "derivedKnowledgeObjectRef": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "redacted_projection"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["projectionLineageRefs"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "approved_copy"
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "required": ["projectionLineageRefs", "approvalEvidenceRefs", "derivedKnowledgeObjectRef"]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "enum": ["reference_only", "redacted_projection"]
+              }
+            },
+            "required": ["mode"]
+          },
+          "then": {
+            "not": {
+              "required": ["derivedKnowledgeObjectRef"]
+            }
+          }
+        }
+      ]
+    },
+    "conceptRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scheme", "code"],
+      "properties": {
+        "scheme": {
+          "$ref": "#/$defs/code"
+        },
+        "code": {
+          "$ref": "#/$defs/code"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relationType", "targetRef", "direction"],
+      "properties": {
+        "relationType": {
+          "type": "string",
+          "enum": [
+            "source_derived_from",
+            "minutes_records_decision",
+            "decision_creates_action_item",
+            "action_item_implemented_by",
+            "implementation_verified_by",
+            "asset_related_to",
+            "asset_supersedes",
+            "asset_projects_to_space"
+          ]
+        },
+        "targetRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "enum": ["outbound", "inbound", "bidirectional"]
+        }
+      }
+    }
+  }
+}

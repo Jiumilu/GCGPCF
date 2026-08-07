@@ -1,0 +1,86 @@
+id: F-013
+name: knowledge-asset-model-system
+project: gpcf
+status: active
+goal: 作为 GKE-001 的 canonical 契约与独立验收工作包，建立兼容 OKF、KDS、Brain、MMC、Studio 与业务主数据边界的知识资产模型体系
+owner: agent-dev-01
+priority: P1
+scope:
+  in:
+    - GKE-001 项目群一级知识工程上位规范及跨仓职责、生命周期、交接和验收边界
+    - GKE-001 与 LOOP Program、Project、Feature、Governance Loop、Delivery Loop、Evidence 和 Handoff 的全量绑定
+    - AAAS、Brain、WAS、XiaoC、WAES、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD、ICP 的知识工程职责与权威边界
+    - GPCF 项目群知识资产术语、职责、机器 Schema、受控词表和综合方案
+    - canonical contract manifest、依赖哈希和确定性只读 validator
+    - OKF KnowledgeObject 与 KnowledgeAssetEnvelope 配对示例及对象类型兼容映射
+    - 七空间与 OKF 知识域兼容映射
+    - 研发项目群与业务项目群的独立维度
+    - 飞书妙记会议纪要的无真实数据示例和后续实施路径
+  out:
+    - KDS 数据库、API、ACL 或真实资料写入
+    - Brain、MMC、WAES 或其他项目源码修改
+    - 部署、状态提升、客户验收或生产声明
+    - Studio 本地资料主链、Brain 业务事实持久化或业务系统状态写入
+acceptance:
+  - JSON、YAML 和 Markdown 产物可解析
+  - 示例通过 KnowledgeAssetEnvelope JSON Schema 校验
+  - manifest 中核心产物与 OKF 依赖哈希通过确定性校验
+  - OKF KnowledgeObject 与 Envelope 配对示例通过 Schema 和 canonical linkage 校验
+  - 七空间与 OKF knowledge domain 映射通过词表、domain policy 和配对负例校验
+  - reference_only、redacted_projection、approved_copy 三种投影模式通过正负例和唯一正本语义校验
+  - approved_copy 派生对象通过 OKF Schema，解析、tenant/source/lineage 与人工确认边界均可回放
+  - KDS vendored 契约镜像以 GPCF manifest 和 KDS-consumable 文件哈希进行只读准入复核
+  - 项目群总体方案、实施方案、目录和文控台账完成最小传导
+  - GKE-001 上位规范、F-013 工作包定位和固定跨仓交接顺序完成受控传导
+  - GKE-001 项目范围与项目群权威清单保持 18/18 一致，并进入 LOOP 总纲、能力注册表、控制看板和机器技能链
+  - 现有 OKF KnowledgeObject 保持 canonical，不产生第二知识主账
+  - 文档门禁结果和未闭合边界被显式记录
+loop:
+  current_step: evaluate
+  iteration: 64
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+  - gke001_three_lane_execution_handoffs_pending
+  - kds_p1_apply_blocked_by_dirty_worktree
+  - kds_stage_b_review_verified_waiting_studio_intake
+  - studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review
+  - unexpected_external_kds_local_mirror_write_requires_review
+  - brain_readonly_e2e_waiting_studio_intake
+  - mmc_delegation_and_human_confirmation_pending
+coordination:
+  id: GKE-001-COORDINATION-20260803-001
+  envelope: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-three-lane-coordination-envelope.yaml
+  envelope_sha256: e95307a21c4197798d692a7efe18be22f7d305c145942ce47a1afc24f06ceeff
+  studio_intake_amendment: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-intake-amendment-a4.yaml
+  studio_intake_amendment_sha256: c1c7963b0f66e5c66d471817c0f25219fe1653182362c5b4b3fe01010bfc6f3a
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  dispatch_status: studio_intake_a4_phase1_authorized_phase2_waiting_mmc_prepare_retry_policy
+  lanes:
+    studio: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    kds: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    brain: 019edfb4-21ef-77e1-afdb-891df25c4068
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups:
+  - Studio 知识工作台用户
+  - KDS 资料治理人员
+  - Brain 分析复核人员
+  - 项目与审计用户
+  primary_human_task: 在有权业务对象下接入资料、查看可定位证据、复核分析候选并追溯审计与失败恢复
+  machine_interface_boundary: canonical contract、ACL、解析任务、候选与 outbox 属于机器接口；人类工作台只展示业务任务、证据、裁决和恢复操作，不形成本地知识主账
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: pending
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-08-02T10:41:40+00:00"
+updated_at: "2026-08-03T08:38:31+00:00"

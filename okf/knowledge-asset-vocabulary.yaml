@@ -1,0 +1,173 @@
+vocabulary_id: globalcloud.knowledge_asset
+version: v0.1
+status: draft
+owner: GPCF
+canonical_store: KDS
+updated_at: "2026-08-02"
+compatibility:
+  extends_schema: okf/knowledge-object.schema.json
+  envelope_schema: okf/knowledge-asset-envelope.schema.json
+  rule: KnowledgeAssetEnvelope 只增加项目群上下文，不替代或复制 KnowledgeObject 主记录。
+
+dimensions:
+  access_space:
+    purpose: 交互入口、可见范围和 ACL 边界
+    cardinality: one_primary_many_controlled_projections
+    values:
+      - code: private
+        okf_domain_mapping: [private]
+      - code: personal
+        okf_domain_mapping: [workspace]
+      - code: family
+        okf_domain_mapping: [collection_only]
+      - code: team
+        okf_domain_mapping: [project, org]
+      - code: partner
+        okf_domain_mapping: [supply_chain]
+        requirements: [acl_policy_ref, external_account_check]
+      - code: public
+        okf_domain_mapping: [public]
+        requirements: [publication_policy_ref, publication_approval]
+      - code: ops
+        okf_domain_mapping: [content_domain_plus_ops_tag]
+        requirements: [restricted_visibility]
+
+  knowledge_domain:
+    purpose: OKF 知识治理域，不等同于 Brain/KDS 空间
+    values: [private, workspace, project, org, supply_chain, public, governance]
+
+  platform_group:
+    purpose: 研发和平台治理归属
+    values:
+      - code: globalcloud
+        label: GlobalCloud
+
+  system:
+    purpose: 产生、持有、消费或处理知识资产的系统
+    values:
+      - was
+      - xwail
+      - aaas
+      - waes
+      - gfis
+      - gpc
+      - pvaos
+      - kds
+      - brain
+      - studio
+      - mmc
+      - pkc
+      - xgd
+      - xiaoc
+      - xiaog
+      - sop
+      - gpcf
+      - icp
+      - feishu
+
+  asset_type:
+    purpose: 知识资产的业务语义类型
+    values:
+      - source
+      - meeting_minutes
+      - decision
+      - action_item
+      - requirement
+      - design
+      - policy
+      - sop
+      - report
+      - evidence
+      - fact_candidate
+      - knowledge_page
+      - code_change
+      - test_evidence
+      - incident
+
+  confidentiality:
+    values: [public, internal, restricted, confidential, secret]
+
+  lifecycle_stage:
+    values: [draft, active, reviewing, superseded, archived]
+
+  metadata_status:
+    values: [unclassified, machine_suggested, human_required, human_confirmed, rejected]
+
+  authorization_boundary:
+    values: [read_only, human_required, waes_gated, authorized]
+
+  write_mode:
+    values: [no_write, sandbox, authorized_write]
+
+asset_type_compatibility:
+  source:
+    default_okf_object_type: source
+    compatible_okf_object_types: [source]
+  meeting_minutes:
+    default_okf_object_type: event
+    compatible_okf_object_types: [event, source, view]
+  decision:
+    default_okf_object_type: decision
+    compatible_okf_object_types: [decision]
+  action_item:
+    default_okf_object_type: claim
+    compatible_okf_object_types: [claim, event]
+  requirement:
+    default_okf_object_type: claim
+    compatible_okf_object_types: [claim]
+  design:
+    default_okf_object_type: view
+    compatible_okf_object_types: [view]
+  policy:
+    default_okf_object_type: policy
+    compatible_okf_object_types: [policy]
+  sop:
+    default_okf_object_type: sop_candidate
+    compatible_okf_object_types: [sop_candidate, policy]
+  report:
+    default_okf_object_type: view
+    compatible_okf_object_types: [view, evidence]
+  evidence:
+    default_okf_object_type: evidence
+    compatible_okf_object_types: [evidence]
+  fact_candidate:
+    default_okf_object_type: fact_candidate
+    compatible_okf_object_types: [fact_candidate]
+  knowledge_page:
+    default_okf_object_type: view
+    compatible_okf_object_types: [view]
+  code_change:
+    default_okf_object_type: event
+    compatible_okf_object_types: [event, evidence]
+  test_evidence:
+    default_okf_object_type: evidence
+    compatible_okf_object_types: [evidence]
+  incident:
+    default_okf_object_type: event
+    compatible_okf_object_types: [event, fact]
+
+relation_types:
+  - source_derived_from
+  - minutes_records_decision
+  - decision_creates_action_item
+  - action_item_implemented_by
+  - implementation_verified_by
+  - asset_related_to
+  - asset_supersedes
+  - asset_projects_to_space
+
+governance_rules:
+  - id: KAM-001
+    rule: 空间、知识域、业务项目、研发项目和标签必须使用独立字段，禁止复用同一个 tag 表达。
+  - id: KAM-002
+    rule: 每个资产只有一个 primarySpace；跨空间使用受控投影，不默认复制正文。
+  - id: KAM-003
+    rule: controlled tags 必须引用版本化词表；free tags 仅用于发现，不参与授权、密级或状态晋升。
+  - id: KAM-004
+    rule: 机器分类默认 machine_suggested；低置信、跨组织、伙伴或公开资产必须进入 human_required。
+  - id: KAM-005
+    rule: KDS 保存 canonical KnowledgeObject、ACL、lineage 和 envelope；Brain 只消费授权后的读模型。
+  - id: KAM-006
+    rule: MMC 只承担模型调用和授权审计，不拥有知识资产主模型。
+  - id: KAM-007
+    rule: authorized_write 只能由外部授权证据产生，Schema 校验或 AI 推断不得生成授权。

@@ -7,6 +7,7 @@ import re
 import shutil
 import subprocess
 import json
+import yaml
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -333,6 +334,22 @@ def render_feature(data: dict[str, Any]) -> str:
     )
     for item in data["blockers"]:
         lines.append(f"  - {quote_yaml(item)}")
+    core_keys = {
+        "id", "name", "project", "status", "goal", "owner", "priority",
+        "scope", "acceptance", "loop", "evidence", "blockers",
+        "created_at", "updated_at",
+    }
+    for key, value in data.items():
+        if key in core_keys:
+            continue
+        lines.extend(
+            yaml.safe_dump(
+                {key: value},
+                allow_unicode=True,
+                sort_keys=False,
+                default_flow_style=False,
+            ).rstrip().splitlines()
+        )
     lines.extend(
         [
             f"created_at: {quote_yaml(data['created_at'])}",
@@ -351,45 +368,17 @@ def unquote(value: str) -> str:
 
 
 def read_feature(path: Path) -> dict[str, Any]:
-    data: dict[str, Any] = {
-        "scope": {"in": [], "out": []},
-        "acceptance": [],
-        "loop": {},
-        "evidence": {},
-        "blockers": [],
-    }
-    current: str | None = None
-    nested_list: str | None = None
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        if not raw.strip() or raw.strip().startswith("#"):
-            continue
-        if not raw.startswith(" "):
-            key, _, value = raw.partition(":")
-            current = key.strip()
-            nested_list = None
-            if value.strip():
-                data[current] = unquote(value)
-            elif current not in data:
-                data[current] = []
-            continue
-        if current in {"acceptance", "blockers"} and raw.startswith("  - "):
-            data[current].append(unquote(raw[4:]))
-            continue
-        if current in {"scope", "loop", "evidence"} and raw.startswith("  "):
-            item = raw[2:]
-            if item.strip().startswith("- ") and nested_list:
-                data[current][nested_list].append(unquote(item.strip()[2:]))
-                continue
-            key, _, value = item.partition(":")
-            key = key.strip()
-            if value.strip():
-                data[current][key] = unquote(value)
-                if key == "iteration":
-                    data[current][key] = int(str(data[current][key]))
-                nested_list = None
-            else:
-                data[current][key] = []
-                nested_list = key
+    loaded = yaml.safe_load(path.read_text(encoding="utf-8"))
+    if not isinstance(loaded, dict):
+        raise SystemExit(f"FAIL: invalid feature.yaml mapping: {path.relative_to(ROOT)}")
+    data: dict[str, Any] = loaded
+    data.setdefault("scope", {"in": [], "out": []})
+    data["scope"].setdefault("in", [])
+    data["scope"].setdefault("out", [])
+    data.setdefault("acceptance", [])
+    data.setdefault("loop", {})
+    data.setdefault("evidence", {})
+    data.setdefault("blockers", [])
     return data
 
 

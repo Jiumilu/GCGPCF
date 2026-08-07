@@ -189,6 +189,63 @@ GENERATED_REGISTERS = {
 }
 PROJECT_GROUP_IMPLEMENTATION_PLAN = "GlobalCloud 项目群实施方案.md"
 
+DOCUMENT_METADATA_OVERRIDES = {
+    "03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md": {
+        "project": "GPCF",
+        "related_projects": [
+            "AAAS",
+            "Brain",
+            "WAS",
+            "XiaoC",
+            "WAES",
+            "GPC",
+            "Studio",
+            "GPCF",
+            "XWAIL",
+            "GFIS",
+            "MMC",
+            "KDS",
+            "XiaoG",
+            "PVAOS",
+            "SOP",
+            "PKC",
+            "XGD",
+            "ICP",
+        ],
+        "status": "controlled",
+        "version": "v0.1",
+        "owner": "GPCF",
+        "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md",
+    },
+    "03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md": {
+        "project": "GPCF",
+        "related_projects": [
+            "WAS",
+            "XWAIL",
+            "AAAS",
+            "WAES",
+            "GFIS",
+            "GPC",
+            "PVAOS",
+            "KDS",
+            "Brain",
+            "Studio",
+            "MMC",
+            "PKC",
+            "XGD",
+            "XiaoC",
+            "XiaoG",
+            "SOP",
+            "GPCF",
+            "ICP",
+        ],
+        "status": "draft",
+        "version": "v0.1",
+        "owner": "GPCF",
+        "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md",
+    },
+}
+
 SCOPE_ENV = "DOCUMENT_CONTROL_SCOPE"
 
 
@@ -475,6 +532,7 @@ def build_records(paths: list[Path]) -> list[dict[str, object]]:
             "superseded_by": [],
             "frontmatter_managed": frontmatter_managed_for(source_path),
         }
+        record.update(DOCUMENT_METADATA_OVERRIDES.get(source_path, {}))
         records.append(record)
     return records
 

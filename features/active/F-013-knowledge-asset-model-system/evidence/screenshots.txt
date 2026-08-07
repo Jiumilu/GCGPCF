@@ -1,0 +1,4 @@
+UI evidence detected from Feature artifacts.
+notes:
+- evidence/build.txt
+- evidence/screenshots.txt
