@@ -37,7 +37,7 @@ acceptance:
   - 文档门禁结果和未闭合边界被显式记录
 loop:
   current_step: evaluate
-  iteration: 275
+  iteration: 281
 evidence:
   tests: pass
   build: pass
@@ -45,12 +45,12 @@ evidence:
   api: waived
   summary: pass
 blockers:
-  - gpcf_loop_governance_5_local_commit_pending_separate_human_authorization
-  - kds_dirty_worktree_188_440_blocks_admission_and_owner_disposition
+  - gpcf_a10r22_current_truth_reconciliation_4_local_commit_pending_separate_human_authorization
+  - kds_dirty_worktree_195_447_blocks_admission_and_owner_disposition
   - kds_release0_run_handoff_15_local_commit_pending_separate_human_authorization
   - kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization
-  - brain_release0_fallback_isolation_4_local_commit_pending_separate_human_authorization
-  - studio_authoritative_fixture_8_local_commit_pending_separate_human_authorization
+  - brain_release0_external_daily_sync_post_sync_governance_disposition_pending
+  - studio_release0_external_daily_sync_post_sync_governance_disposition_pending
   - kds_release0_runtime_current_code_and_configured_facade_readiness_not_verified
   - mmc_direct_admin_or_super_admin_principal_not_verified_and_credential_use_unauthorized
   - mmc_runtime_policy_17_to_19_apply_pending_separate_high_risk_human_authorization
@@ -66,8 +66,8 @@ blockers:
   - mmc_delegation_and_human_confirmation_pending
 coordination:
   id: GKE-001-COORDINATION-20260803-001
-  current_truthfulness_reconciliation_id: GKE-001-COORDINATION-20260814-049-A10R19
-  current_truthfulness_reconciliation_sha256: ab2d3b6a3bd6ff17b8e7576f81daf389b63a01b6fde8ad414cedf54bd7bda422
+  current_truthfulness_reconciliation_id: GKE-001-COORDINATION-20260815-002-A10R22
+  current_truthfulness_reconciliation_sha256: 627b07c02be73717f4745cbb02d6fee014a6616aaa683f0101bbb38918330eb4
   current_blocker_model: 11_canonical_plus_8_validator_compatibility_aliases
   envelope: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-three-lane-coordination-envelope.yaml
   envelope_sha256: e95307a21c4197798d692a7efe18be22f7d305c145942ce47a1afc24f06ceeff
@@ -413,4 +413,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-08-02T10:41:40+00:00"
-updated_at: "2026-08-14T02:26:55+00:00"
+updated_at: "2026-08-14T22:27:24+00:00"

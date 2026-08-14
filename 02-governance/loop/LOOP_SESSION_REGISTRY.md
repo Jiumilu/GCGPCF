@@ -320,6 +320,19 @@ MMC 锁口径：`.harness/opsx.lock` 当前不存在；`runtime/.state.json.lock
 - forbidden: 跨仓写入、凭据访问、MMC runtime policy apply、真实/共享 KDS 或 MMC、commit、push、deploy、状态提升。
 - status: `active / partial / not_complete`
 
+### GKE-001 A10R22 当前消费者与 KDS 基线真值修订
+
+- control: `GKE-001-COORDINATION-20260815-002-A10R22`
+- control_sha256: `627b07c02be73717f4745cbb02d6fee014a6616aaa683f0101bbb38918330eb4`
+- owner_session: `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5`
+- independent_review_session: `019fc228-2403-7123-9cae-fb9028850b84`
+- scope: F-013 blocker、Iteration 280、LOOP 当前控制与会话登记；历史记录不改写。
+- kds: `410e71c1`，dirty `195/447`；run_handoff15 等待绑定当前基线的新专项本地提交授权。
+- brain: `ab9573c7`，clean；四路径 external daily-sync 与复核候选逐字节一致，分类为 `brain_release0_external_daily_sync_post_sync_technical_revalidation_passed_governance_pending`。
+- studio: `81d0f3e7`，clean；八路径 external daily-sync 与复核候选逐字节一致，分类为 `studio_release0_external_daily_sync_post_sync_technical_revalidation_passed_governance_pending`。
+- forbidden: 追认外部 commit/push 授权、跨仓写入、凭据访问、MMC runtime policy apply、真实/共享 KDS 或 MMC、commit、push、deploy、状态提升。
+- status: `active / partial / not_complete`
+
 ## 4. 其它会话处理规则
 
 - 未在本总账中归类的 `loop-round-*` 必须输出 `orphan_session_family`。

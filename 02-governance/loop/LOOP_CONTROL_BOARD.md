@@ -835,3 +835,11 @@ A10R19 `GKE-001-COORDINATION-20260814-049-A10R19`（SHA-256 `ab2d3b6a3bd6ff17b8e
 当前串行门为：GPCF 五文件、KDS run/handoff 十五文件、Brain 四文件、Studio 八文件分别完成独立提交/推送治理；随后验证 KDS 当前代码进程与配置 readiness，完成 MMC 既有 direct admin/super_admin 身份核验和单独的 17→19 高风险策略授权，再执行 Studio fixture 生命周期，最后才可单独授权认证 Search→WikiPreview→Chat E2E。角色视图和其他 KDS dirty 继续阻塞总体 admission，但不扩大为 Release 0 无关能力的全线冻结。状态保持 `active / partial / not_complete`。
 
 机器兼容说明：F-013 当前采用 A10R18 复核确认的 11 个规范 blocker；为兼容现有 model、admission 与三线协调 validator，同时保留 8 个仍映射到相同未闭合风险的历史标识。兼容标识不是额外完成条件，不得据此恢复已失效的 KDS product/OpenSpec 或 MMC source/H1 待提交状态。
+
+## GKE-001 A10R22 当前消费者与 KDS 基线真值修订
+
+A10R22 `GKE-001-COORDINATION-20260815-002-A10R22`（SHA-256 `627b07c02be73717f4745cbb02d6fee014a6616aaa683f0101bbb38918330eb4`）依据当前 Git 门禁与 F-013 独立复核更新 Release 0 真值。KDS 当前 admission 基线为 `195/447`，`run_handoff15` 指纹保持不变，但旧 `194/446` 提交授权已因日报漂移失效，必须绑定新基线重新专项授权。
+
+Brain `ab9573c7` 的四路径和 Studio `81d0f3e7` 的八路径已由外部 daily clean sync 提交并进入各自 `origin/main`；两个仓库均 clean、ahead/behind `0/0`。F-013 证明提交字节与此前复核候选完全一致，因此无需技术重做；但 external sync 未遵循原定独立人工本地提交拓扑，只能登记为 `post_sync_technical_revalidation_passed_governance_pending`，不得追认原授权、集成或生产状态。
+
+当前串行门更新为：KDS run/handoff15 专项本地提交治理 -> KDS 当前进程与配置 readiness -> MMC 直接 admin/super_admin 身份门及 `17 -> 19` runtime policy 专项授权 -> Studio 临时 fixture 创建/读取/删除回执 -> 真实认证 Search -> WikiPreview -> Chat E2E -> F-013 最终复核。角色视图及其他 KDS dirty 继续阻塞总体 admission，但不扩大为无关能力全线冻结。状态保持 `active / partial / not_complete`。
