@@ -333,6 +333,34 @@ MMC 锁口径：`.harness/opsx.lock` 当前不存在；`runtime/.state.json.lock
 - forbidden: 追认外部 commit/push 授权、跨仓写入、凭据访问、MMC runtime policy apply、真实/共享 KDS 或 MMC、commit、push、deploy、状态提升。
 - status: `active / partial / not_complete`
 
+### GKE-001 A10R26 当前本地提交与运行门槛真值修订
+
+- control: `GKE-001-COORDINATION-20260815-096-A10R26`
+- control_sha256: `acc6732d8314b20b7ab45cb816d38a5eb9122cf7944eb6a06765caf4d3146246`
+- owner_session: `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5`
+- independent_review_session: `019fc228-2403-7123-9cae-fb9028850b84`
+- kds: local `6f114f26` over `origin/main=410e71c1`，ahead/behind/staged `1/0/0`，dirty `197/435`；postcommit 与本地无网络 pre-push 审计通过，下一步仅可申请远端 main 核验和 non-force dry-run 授权。
+- brain: `ab9573c7`，clean；四文件 external daily-sync 已纳入，当前静态只读边界复核通过，技术测试仍为继承证据。
+- mmc: `c93463ff`；source/runtime `19/17`，直接 `admin/super_admin` 主体未在无凭据读取条件下得到证明，policy apply 未授权。
+- studio: external daily-sync 治理仍 pending；authoritative fixture 生命周期和真实认证 E2E 未执行。
+- gpcf: local `a1f5414b` over `origin/main=71c13d22`，ahead `1`，dirty `735/752`；本轮四治理文件真值追加保持未提交。
+- forbidden: 凭据读取或创建、MMC policy apply、真实/shared KDS 写入、真实 E2E、push、deploy、状态提升。
+- status: `active / partial / not_complete`
+
+### GKE-001 A10R27 当前四仓技术重放与运行授权边界
+
+- control: `GKE-001-COORDINATION-20260815-102-A10R27`
+- control_sha256: `b9062e5cde46be63415649dded1bb2c0284ef453dda27fe7de683c98668253b7`
+- owner_session: `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5`
+- independent_review_session: `019fc228-2403-7123-9cae-fb9028850b84`
+- kds_owner_handoff: `GKE-001-COORDINATION-20260815-098-A10R27-KDS`，`41/101/29`，disposable DB cleanup `0`；本地 `6f114f26` 仍待独立远端 pre-push 与后续真实 push 授权。
+- studio_owner_handoff: `GKE-001-COORDINATION-20260815-099-A10R27-STUDIO`，聚焦 `130`、全量/build/strict/Harness/CodeGraph 通过；缺少已存在且权威绑定的认证项目会话运行证据。
+- mmc_owner_handoff: `GKE-001-COORDINATION-20260815-100-A10R27-MMC`，`2/23/160` 通过，source/runtime `19/17`；凭据核验与 guarded CAS 均需单独高风险授权。
+- brain_owner_handoff: `GKE-001-COORDINATION-20260815-101-A10R27-BRAIN`，`125/393`、typecheck/build/alignment/strict 通过；未执行真实浏览器或跨服务调用。
+- governance_note: `validate_gke001_three_lane_coordination.py` 当前仍输出 A10C12 快照，只能证明历史协调结构有效，不能替代 A10R27 owner handoff 当前性。
+- forbidden: repository product write、commit、push、凭据读取、MMC policy apply、fixture 写入、真实 E2E、deploy、状态提升。
+- status: `active / partial / not_complete`
+
 ## 4. 其它会话处理规则
 
 - 未在本总账中归类的 `loop-round-*` 必须输出 `orphan_session_family`。

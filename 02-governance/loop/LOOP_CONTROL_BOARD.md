@@ -34,10 +34,10 @@ partial_verified=1
 repair_required=3
 owner_review_required=1
 project_group_git_gate = partial
-current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud Brain, GlobalCloud SOP
+current_live_dirty_repos = GlobalCoud GPCF, GlobalCloud MMC, GlobalCloud KDS
 current_live_sensitive_repos = none
-current_live_kds_blocker = stage_b_review_verified_waiting_studio_intake
-current_live_kds_status = dirty / latest_admission_changed_entries=191 / stage_b_partial_rereview_pending / opsx_lock=absent
+current_live_kds_blocker = release0_local_commit_remote_and_runtime_readiness_pending
+current_live_kds_status = dirty / latest_admission_changed_entries=197 / local_head_ahead_1_at_6f114f26 / stage_b_and_release0_governance_partial / opsx_lock=absent
 gke_engineering_domain = GKE-001
 gke_project_scope = 18/18
 gke_canonical_feature = F-013
@@ -843,3 +843,21 @@ A10R22 `GKE-001-COORDINATION-20260815-002-A10R22`（SHA-256 `627b07c02be73717f47
 Brain `ab9573c7` 的四路径和 Studio `81d0f3e7` 的八路径已由外部 daily clean sync 提交并进入各自 `origin/main`；两个仓库均 clean、ahead/behind `0/0`。F-013 证明提交字节与此前复核候选完全一致，因此无需技术重做；但 external sync 未遵循原定独立人工本地提交拓扑，只能登记为 `post_sync_technical_revalidation_passed_governance_pending`，不得追认原授权、集成或生产状态。
 
 当前串行门更新为：KDS run/handoff15 专项本地提交治理 -> KDS 当前进程与配置 readiness -> MMC 直接 admin/super_admin 身份门及 `17 -> 19` runtime policy 专项授权 -> Studio 临时 fixture 创建/读取/删除回执 -> 真实认证 Search -> WikiPreview -> Chat E2E -> F-013 最终复核。角色视图及其他 KDS dirty 继续阻塞总体 admission，但不扩大为无关能力全线冻结。状态保持 `active / partial / not_complete`。
+
+## GKE-001 A10R26 当前本地提交与运行门槛真值修订
+
+A10R26 `GKE-001-COORDINATION-20260815-096-A10R26`（SHA-256 `acc6732d8314b20b7ab45cb816d38a5eb9122cf7944eb6a06765caf4d3146246`）依据当前 GPCF 门禁、KDS A10R25 提交与 F-013 postcommit 复核、Brain 当前提交字节以及 MMC 非敏感策略回放修订控制面真值。
+
+KDS `run_handoff15` 已形成唯一的本地提交 `6f114f26`，父提交为 `410e71c1`；F-013 postcommit 与 A10R26 无网络本地 pre-push 审计均通过。KDS 当前为 ahead/behind/staged `1/0/0`、dirty `197/435`，admission 仍为 `blocked_dirty_worktree`。下一步只能先取得独立远端查询和 non-force dry-run 授权，真实 push 仍需后续单独授权。
+
+Brain 当前 `HEAD=origin/main=ab9573c7` 且 clean，四文件候选已由 external daily sync 纳入，当前源码仍保持 Search/Graph/WikiPreview 走 Studio bridge、Release 0 页面不挂载 review/lint；历史 `393/393`、typecheck 与 build 仍标记为继承证据。MMC 当前源策略 `19`、运行时策略 `17`；未访问凭据内容，因此直接 `admin/super_admin` 主体仍未验证，`17 -> 19` apply 继续属于单独高风险人工授权。Studio fixture 生命周期与真实认证 E2E 均未执行。
+
+当前 GPCF 本地 `a1f5414b` 相对 `origin/main=71c13d22` ahead `1`，工作树 `735/752` dirty；本轮只在同四个既有治理文件上追加当前真值，不提交、不推送。状态保持 `active / partial / not_complete`。
+
+## GKE-001 A10R27 当前四仓技术重放与运行授权边界
+
+A10R27 `GKE-001-COORDINATION-20260815-102-A10R27`（SHA-256 `b9062e5cde46be63415649dded1bb2c0284ef453dda27fe7de683c98668253b7`）在空产品写入 allowlist 下完成 KDS、MMC、Studio、Brain 当前技术重放。KDS 当前 `41/101/29` 通过、一次性 PostgreSQL 清理计数为 `0`、canonical mirror `8/8` 与 CodeGraph 通过；这关闭了“当前代码未重放”，但没有证明当前运行进程或配置后的 facade 已被真实调用。
+
+MMC 当前 source/runtime 仍为 `19/17`，聚焦 `2/23` 与 tracked 全量 `160` 通过；精确差异仍仅是 Release 0 `search/read` 两个 POST。Studio 聚焦 `130`、全量测试、build、strict、Harness 与 CodeGraph 通过；Brain 聚焦 `125`、全量 `393`、typecheck、build、alignment 与 strict 通过。Studio 与 Brain 结果仍是静态及 mocked transport 证据，不是认证运行态。
+
+Release 0 当前串行门收敛为：KDS 独立远端查询与 non-force dry-run -> 另行真实 push 授权；MMC 非披露 direct `admin/super_admin` 主体核验 -> 另行 `17 -> 19` guarded CAS；Studio 已存在、非敏感且权威绑定的认证项目会话 -> 单独授权真实 Search -> WikiPreview -> Chat E2E -> F-013 最终复核。任何真实凭据使用、policy apply、fixture 写入、E2E、push、deploy 或状态提升均未由本轮授权。
