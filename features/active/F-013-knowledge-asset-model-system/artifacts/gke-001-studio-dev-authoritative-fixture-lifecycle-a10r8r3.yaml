@@ -1,0 +1,67 @@
+coordination_amendment:
+  id: GKE-001-COORDINATION-20260814-036-A10R8R3-STUDIO
+  amends: GKE-001-COORDINATION-20260814-035-A10R8R2-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  change_id: reconcile-studio-lr879-eof-a10r8r3
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    existing_delta: exact_a10r8r2_eight_paths_uncommitted
+  review_basis:
+    classification: a10r8r2_original_p1_findings_closed_precommit_rework_required_single_lr879_eof_newline
+    closed_findings:
+      - disposable SQLite symlink containment
+      - canonical bridge fixture authority consumption
+    remaining_finding:
+      severity: P2
+      path: docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+      issue: one extra final LF causes full eight-path cached diff-check to fail
+  mode: one_byte_governance_rework_no_commit_no_push
+  file_allowlist:
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+  sealed_candidate_scope:
+    - packages/server/src/db/index.ts
+    - packages/server/src/routes/governance/dev-authoritative-fixtures.ts
+    - packages/server/src/routes/index.ts
+    - tests/server/dev-authoritative-fixtures-route.test.ts
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+    - packages/server/src/routes/brain-kds-bridge.ts
+    - tests/server/brain-kds-bridge-route.test.ts
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+  required_action:
+    - Remove exactly one trailing LF from LR-879 so the file ends with exactly one LF.
+    - Do not alter any other byte in the eight-path candidate.
+    - Regenerate exact eight-path pathset, content manifest and full-index patch fingerprints.
+    - Run the complete eight-path cached diff-check through an external temporary index.
+    - Revalidate Studio LOOP, Harness, OpenSpec strict and repository diff-check.
+    - Technical tests, build and CodeGraph sync are inherited from A10R8R2 and must not be relabeled as current A10R8R3 evidence.
+  forbidden_scope:
+    - any product or test content change
+    - any ninth repository path
+    - test, build, database, API, network, browser or runtime execution
+    - default Studio database, Hermes session, KDS or MMC access
+    - stage, commit, push, deploy or status promotion
+  authorization:
+    repository_write: exactly_one_trailing_lf_in_lr879
+    stage: false
+    commit: false
+    push: false
+    external_access: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    repository: restore only the LR-879 preimage byte if the correction or any sealed fingerprint gate fails
+    external: not_applicable
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

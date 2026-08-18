@@ -1,0 +1,207 @@
+a10i3h1r2_mmc_shared_registry_state_rework:
+  id: GKE-001-COORDINATION-20260811-019-A10I3H1R2
+  issued_at: 2026-08-11
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-018-A10I3H1R1
+    sha256: 8a5470cfa1adfdab1ff18307aad3739bc3af6fbd32b10c3353ff8e8545875850
+  coordinator_replay:
+    classification: technical_rework_required
+    findings:
+      unresolved_recovery_connector_exposes_target: P0_blocker
+      guarded_api_policy_patch_overwrites_concurrent_llm_registry_update: P0_blocker
+    exact_receipts:
+      unresolved_recovery_registry_api: blocked_503
+      unresolved_recovery_connector_exposes_target: true
+      guarded_status: 200
+      concurrent_llm_patch_reported_rpm: 2
+      final_llm_rpm: 1
+      llm_update_lost: true
+    root_cause: runtime_state_json_has_readers_and_writers_outside_the_H1R1_lock_and_recovery_boundary
+  frozen_policy_lineage:
+    current_operation_count: 17
+    current_delegated_operations_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    isolated_two_operation_sha256: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    future_target_operation_count: 19
+    future_target_delegated_operations_sha256: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    policy_delta_authorized: false
+  lane:
+    owner: MMC
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: rework-mmc-shared-registry-state-a10i3h1r2
+    openspec_change: openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2
+    lock: gke001-a10i3h1r2-mmc-shared-registry-state-lock
+    execution_mode: local_opsx_tdd_temporary_state_only_no_policy_delta
+    baseline:
+      branch: main
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      ahead: 0
+      behind: 0
+      dirty_entries: 15
+      staged_entries: 0
+      opsx_lock: absent
+    product_test_file_allowlist:
+      - runtime/app/api/v1/registry_apis.py
+      - runtime/app/api/v1/registry_llms.py
+      - runtime/app/api/v1/connectors.py
+      - runtime/app/api/v1/health.py
+      - runtime/app/gateway/registry_state.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_registry_policy_audit.py
+      - runtime/tests/test_llm_registry.py
+    product_test_file_count: 8
+    baseline_sha256:
+      runtime/app/api/v1/registry_apis.py: ac5fe015289e3d19f669d6ec6f06e1bc91a30dc3e4592b13ed7a1d4da70cc525
+      runtime/app/api/v1/registry_llms.py: 8b86b4f0359dad975145895d3275f348c903b80c15e31fbc6bae4599d1fc36e2
+      runtime/app/api/v1/connectors.py: 8f1bc9149b8bf6f4a3ed30eb119bc0473f1bf081f5969ec7dc3b48bdbd2168c0
+      runtime/app/api/v1/health.py: 48f09f57a276920dad700e6353535ae909633fdd2c463835715c746e607c562e
+      runtime/app/gateway/registry_state.py: absent
+      runtime/tests/test_api.py: db53af8b2d0b645be3a16b68f08df0cc7b1e7327505d47c8cdd67cc98a1c45cd
+      runtime/tests/test_registry_policy_audit.py: 26848da6c885958c51fb26fd91b5071654d6a31a8a853e52fe0e4ae5f23ea01f
+      runtime/tests/test_llm_registry.py: 654af606853f66de857cffbb17a0b1a5cd2109e88fadffa99848608415bfb206
+    hunk_ownership:
+      runtime/app/api/v1/registry_apis.py: consume_shared_state_transaction_without_changing_policy_semantics
+      runtime/app/api/v1/registry_llms.py: serialize_all_shared_state_reads_and_writes
+      runtime/app/api/v1/connectors.py: recovery_aware_fail_closed_shared_state_read
+      runtime/app/api/v1/health.py: recovery_aware_readiness_shared_state_read
+      runtime/app/gateway/registry_state.py: shared_path_lock_atomic_replace_and_recovery_primitive_only
+      runtime/tests/test_api.py: connector_health_and_cross_registry_recovery_regressions_only
+      runtime/tests/test_registry_policy_audit.py: preserve_H1R1_and_shared_state_interleaving_regressions_only
+      runtime/tests/test_llm_registry.py: shared_state_lock_atomicity_and_recovery_regressions_only
+    governance_file_allowlist:
+      - .harness/opsx.lock
+      - .harness/runs/*-rework-mmc-shared-registry-state-a10i3h1r2/**
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/**
+      - .codegraph/**
+  required_design:
+    shared_state_boundary:
+      path: runtime/state.json
+      single_primitive_owner: runtime/app/gateway/registry_state.py
+      exact_path_identity: resolved_STATE_PATH
+      stable_lock: process_local_coordination_plus_OS_advisory_exclusive_lock
+      recovery_before_read_or_write: true
+      unresolved_recovery: fail_closed_for_every_runtime_reader_and_writer
+    required_readers:
+      - api_registry_list_and_detail
+      - llm_registry_list_and_detail
+      - connector_list_and_invoke_policy_lookup
+      - readiness_registry_lookup
+    required_writers:
+      - api_registry_create
+      - api_registry_ordinary_patch
+      - api_registry_guarded_policy_patch
+      - api_registry_delete
+      - llm_registry_create
+      - llm_registry_patch
+      - llm_registry_delete
+    write_semantics:
+      load_modify_save: one_shared_lock_cycle
+      save: atomic_replace_fsync_file_and_parent
+      guarded_policy_recovery_intent: durable_before_target_replace
+      successful_policy_cleanup: only_after_commit_audit_is_durable
+      unrelated_api_or_llm_fields: never_lost
+    compatibility:
+      response_shapes: unchanged
+      delegated_operation_fingerprints: unchanged
+      H1R1_policy_audit_complete_or_zero: preserved
+      credentials_or_authority: unchanged
+  required_tests:
+    - unresolved_recovery_blocks_connector_policy_lookup_and_does_not_expose_target
+    - unresolved_recovery_makes_readiness_unready_with_bounded_registry_error
+    - unresolved_recovery_blocks_llm_registry_reads_and_writes
+    - guarded_api_policy_patch_serializes_with_llm_create_patch_and_delete_without_lost_update
+    - llm_writer_paused_after_load_blocks_guarded_api_patch_then_preserves_both_updates
+    - independent_process_api_and_llm_writers_share_the_same_lock_identity
+    - all_runtime_state_writers_use_atomic_replace_and_leave_no_partial_file
+    - H1R1_66_focused_and_139_full_baseline_regressions_remain_green_or_new_superset_is_reported
+    - exact_seed_runtime_state_and_17_operation_policy_hashes_remain_unchanged
+  verification:
+    - focused_pytest_for_all_eight_allowlisted_product_test_files
+    - MMC_TEST_MODE=true_python3_-m_pytest_runtime/tests_-q
+    - bash_runtime/scripts/contract_test.sh
+    - openspec_validate_rework-mmc-shared-registry-state-a10i3h1r2_--strict
+    - python3_scripts/validate_mmc_loop_harness.py
+    - codegraph_sync_status_and_bounded_queries
+    - git_diff_--check
+    - exact_baseline_and_final_hashes
+    - temporary_state_lock_recovery_files_cleanup
+    - opsx_lock_absent_at_handoff
+  handoff_required:
+    - standard_evidence_index
+    - acceptance_matrix
+    - isolated_replayable_H1R2_patch
+    - exact_changed_files_and_hashes
+    - two_coordinator_reproductions_red_then_green
+    - all_runtime_state_reader_writer_inventory
+    - cross_process_lock_and_recovery_boundary
+    - H1R1_regression_receipts
+    - tests_contract_openspec_harness_codegraph
+    - runtime_state_seed_and_policy_hashes_unchanged
+    - rollback
+    - authorization
+    - unresolved_risks
+    - status_ceiling
+  forbidden_scope:
+    - runtime/scripts/seed.sh
+    - runtime/state.json
+    - runtime/audit.log
+    - runtime/policy-audit.log
+    - runtime/app/core/delegation.py
+    - runtime/app/core/kds_delegation.py
+    - llm-wiki-openapi-schema.yaml
+    - runtime/tests/test_contract.py
+    - any_file_outside_the_allowlists
+    - any_seed_or_runtime_policy_delta
+    - execute_seed_force
+    - real_shared_or_production_MMC_or_KDS_access
+    - credentials_or_secret_creation_disclosure_or_persistence
+    - KDS_fact_or_business_state_write
+    - commit_push_restart_deploy_customer_release_or_status_promotion
+  serial_gate:
+    requires_H1R2_OpsX_handoff: true
+    requires_F013_independent_read_only_review: true
+    H2_seed_delta: false
+    H3_runtime_policy_apply: false
+    live_read: false
+    brain_change: false
+    real_authenticated_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_allowlisted_product_test_openspec_and_evidence_write: true
+    temporary_file_mode_and_subprocess_tests: true
+    source_policy_change: false
+    runtime_registry_or_policy_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  rollback:
+    repository: revert_only_the_H1R2_delta_to_the_exact_baseline_hashes_and_remove_new_H1R2_governance
+    runtime: no_runtime_or_policy_change_authorized
+    data: no_external_data_change_authorized
+    audit: temporary_test_audit_only_remove_with_the_test_directory
+    codegraph: remove_only_ignored_local_index_if_needed
+  unresolved_risks:
+    - H1R2_is_not_accepted_until_OpsX_handoff_and_independent_review
+    - H2_and_H3_remain_human_authorization_required
+    - current_policy_remains_17_operations
+    - no_live_read_or_real_E2E_is_authorized
+    - kds_admission_remains_blocked_dirty_worktree
+    - localization_debt_keeps_project_group_readiness_at_watch_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

@@ -1,0 +1,89 @@
+gke001_mmc_release0_policy_convergence:
+  id: GKE-001-COORDINATION-20260813-057-A10C6
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: implement-release0-canonical-read-relay-a10i2
+  owner: MMC
+  thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  mode: report_only
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind: 0/0
+    staged: 0
+    ordinary_dirty: 14
+    expanded_dirty: 75
+    ordinary_nul_sha256: 4aa3dbdeb92bc3d7538cc48898245fe049437d32b406c658a63abdff75244fde
+    expanded_nul_sha256: ddba5938cbae9cdd870f0820aa93ff29db02af308cdbb2f6c1fd8bc421cfef16
+    expanded_dirty_pathset_sha256: 08cfdf158be37c472d521be4547d6c70672ec44182fa8ddbfaef31d2069f5b52
+    opsx_lock: absent
+  repository_allowlist: []
+  authorization:
+    source_or_policy_write: false
+    runtime_state_write: false
+    service_restart: false
+    live_or_shared_request: false
+    credential_access: false
+    commit_or_push: false
+    deploy_or_status_promotion: false
+  canonical:
+    contract_id: globalcloud.kds.canonical-read
+    contract_revision: release0.v1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    operations:
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/search
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/read
+    isolated_two_operation_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+  current_policy:
+    connector_id: kds_llm_wiki_api
+    operation_count: 17
+    fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    contains_release0_operations: false
+    tracked_seed_sha256: 161884e885fc03ade8d26b87bea745203455a177889b4ef57612b22344554a33
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    runtime_state_contains_same_17_operations: true
+  static_candidate_append:
+    operation_count: 19
+    fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    authorization_status: not_authorized
+  implementation_evidence:
+    relay_allowlist_in_committed_code: true
+    signed_closed_read_authority: true
+    tenant_org_project_session_equality: true
+    bounded_error_projection: true
+    no_generic_bypass: true
+    focused_release0_tests: 20/20
+    full_runtime_tests: 158/158
+    openspec_strict: pass
+    source_diff_check: pass
+  required_report:
+    - compare appending two operations to the existing broad connector against a dedicated two-operation connector
+    - trace the exact Studio server connector selection and configuration impact for each option
+    - prove whether either option changes delegation signing, audit, rate limit, circuit breaker, or rollback behavior
+    - identify exact minimal future source and test allowlist without editing files
+    - seal current, candidate, and restore fingerprints and exact policy-application boundary
+    - state whether a policy change expands privilege and therefore requires separate human authorization
+  forbidden_scope:
+    - seed_or_runtime_state_modification
+    - delegated_operations_application
+    - connector_creation
+    - KDS_or_Studio_or_Brain_write
+    - real_network_read_or_write
+    - restart_or_deployment
+    - commit_or_push
+    - accepted_integrated_or_production_ready
+  rollback:
+    repository: not_applicable_report_only
+    runtime_policy: retain_current_17_operation_fingerprint
+    data: none_accessed
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

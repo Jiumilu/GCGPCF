@@ -1,0 +1,86 @@
+---
+doc_id: GPCF-DOC-GKE001-OPENSPEC-PROGRAM-BINDING-V1
+title: GKE-001 OpenSpec Program Binding
+project: GPCF
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+domain: openspec-governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/governance/openspec/gke001-program-binding.yaml
+source_path: governance/openspec/gke001-program-binding.yaml
+sync_direction: bidirectional
+last_reviewed: 2026-08-11
+supersedes: []
+superseded_by: []
+---
+
+gke001_program_binding:
+  id: GKE-001
+  name: GlobalCloud Knowledge Engineering
+  representation: cross_repository_engineering_domain
+  control_plane: GPCF
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  canonical_governance:
+    review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    feature_ref: F-013
+    contract_revision: v0.1
+    manifest_path: okf/knowledge-asset-contract-manifest.yaml
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  application_roadmap:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml
+    sha256: 32f00e131b0dab667fa7403dbd6d6a79c865f517959c5d6b227f82340534ad9f
+  openspec_change:
+    id: integrate-gke001-openspec-codegraph
+    path: openspec/changes/integrate-gke001-openspec-codegraph
+    capabilities:
+      - gke001-program-governance
+      - gke001-codegraph-binding
+  releases:
+    - id: release_0
+      name: customer_readonly_pilot
+      status: active_partial_not_complete
+    - id: release_1
+      name: customer_intake_pilot
+      status: blocked_by_release_0
+    - id: release_2
+      name: evidence_and_candidate_review
+      status: blocked_by_release_1
+    - id: release_3
+      name: governed_long_term_memory_and_business_collaboration
+      status: blocked_by_release_2
+  required_change_declaration:
+    - program_ref
+    - release_ref
+    - feature_ref
+    - repository
+    - owner
+    - thread_id
+    - baseline
+    - file_allowlist
+    - forbidden_scope
+    - codegraph_impact
+    - authorization
+    - rollback
+  project_scope:
+    count: 18
+    projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+  governance:
+    repository_opsx_handoff_required: true
+    independent_harness_review_required: true
+    f013_acceptance_required: true
+    openspec_completion_is_delivery_acceptance: false
+    codegraph_index_is_runtime_integration: false
+  authorization:
+    product_repository_write: false
+    real_kds_or_mmc_write: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

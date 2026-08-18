@@ -1,0 +1,113 @@
+gke001_mmc_release0_source_policy_push_request:
+  id: GKE-001-COORDINATION-20260814-015-A10C21
+  issued_at: 2026-08-14
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  mode: human_authorization_request_current_baseline_only
+  lane:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: push-release0-source-policy-6-current-baseline-a10c21
+    owner: MMC
+  supersedes:
+    id: GKE-001-COORDINATION-20260814-002-A10C7R5
+    reason: nonoverlapping_H1_launcher_and_governance_dirty_scope_changed_from_16_93_to_20_111
+  independent_postcommit_review:
+    authority: F-013
+    classification: mmc_a10c7r4_exact_6_path_source_only_local_commit_postcommit_independent_review_passed_runtime_policy_unchanged
+  required_execution_baseline:
+    branch: main
+    local_head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    local_origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    remote_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    parent: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 1/0/0
+    commit_count: 1
+    ordinary_dirty: 20
+    ordinary_nul_sha256: 3db5b2ada086a6a440a2b10c2635853ccbe0f0e88351d99c76c13f3aad296e59
+    expanded_dirty: 111
+    expanded_nul_sha256: 0722496fa4e8043a93e7ccf62378d01749d94e4f6b17e9d7fe94d5bdce5a90cc
+    staged_nul_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    opsx_lock: absent
+  exact_commit:
+    sha: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    parent: b06f58a78ac7713197deed47d1125bec7a260e8c
+    tree: 6c9d832cbc643d872f118f0843be9f16f0d003e5
+    subject: "feat(mmc): admit release 0 canonical read policy source"
+    path_count: 6
+    pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+    ordered_content_manifest_sha256: 8c525f2a608d918fa6eab60ec49733474cae77d8d3331493d754027428304795
+    patch_bytes: 9830
+    patch_sha256: 66ddc6b2dab14f3db807c66426fdb9ab5eb44d3605d913d865dda0608f8fec77
+  dirty_isolation:
+    overlap_with_exact_commit_paths: 0
+    current_owner_groups:
+      - H1_shared_registry_state
+      - runtime_launcher
+      - OpenSpec_and_OpsX_governance
+      - excluded_runtime_sidecar
+    runtime_sidecar:
+      path: runtime/.state.json.lock
+      size: 0
+      sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      lsof_holder: none
+      disposition: preserve_untouched
+  runtime_boundary:
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    active_pid: 881
+    active_process_started_at: 2026-08-08T06:35:17+08:00
+    active_process_loaded_current_H1_or_launcher: false
+    runtime_policy_applied: false
+  current_push_preflight:
+    remote_query_before: b06f58a78ac7713197deed47d1125bec7a260e8c
+    no_fetch: true
+    dry_run_command: git push --dry-run origin 9f38048a83ae8d1945fd01f5085744bf3376646e:refs/heads/main
+    dry_run_result: fast_forward_b06f58a7_to_9f38048a
+    remote_query_after: b06f58a78ac7713197deed47d1125bec7a260e8c
+    repository_and_runtime_state_unchanged: true
+  requested_human_decision:
+    decision: pending
+    exact_request: authorize_or_decline_one_non_force_push
+    exact_command: git push origin 9f38048a83ae8d1945fd01f5085744bf3376646e:refs/heads/main
+    runtime_policy_apply: false
+  execution_only_if_human_authorized:
+    - requery_remote_main_without_fetch
+    - reverify_exact_local_head_parent_single_commit_ahead_behind_staged_dirty_hashes_and_lock
+    - reverify_runtime_state_and_sidecar_hashes
+    - require_zero_overlap_between_current_dirty_and_commit_paths
+    - execute_exactly_one_non_force_push
+    - requery_remote_and_verify_HEAD_origin_remote_equal_9f38048a
+    - verify_runtime_state_sidecar_and_PID_unchanged
+    - freeze_for_F013_postpush_review
+  abort_on_any_mismatch:
+    - perform_no_push
+    - preserve_all_repository_runtime_and_worktree_content
+    - return_exact_drift_report
+  forbidden:
+    - runtime_policy_apply
+    - runtime_state_or_sidecar_write
+    - process_restart_or_reload
+    - fetch
+    - force_push
+    - merge
+    - rebase
+    - reset
+    - revert
+    - content_edit
+    - stage_or_commit
+    - H1_launcher_or_other_dirty_disposition
+    - deployment
+    - live_e2e
+    - status_promotion
+  rollback:
+    before_push: no_repository_action
+    after_push: separately_reviewed_forward_compensation_or_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: human_push_authorization_required
+    runtime_policy: not_applied

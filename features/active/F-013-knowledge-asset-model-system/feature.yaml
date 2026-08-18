@@ -37,7 +37,7 @@ acceptance:
   - 文档门禁结果和未闭合边界被显式记录
 loop:
   current_step: evaluate
-  iteration: 289
+  iteration: 300
 evidence:
   tests: pass
   build: pass
@@ -46,14 +46,12 @@ evidence:
   summary: pass
 blockers:
   - gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition
-  - kds_dirty_worktree_197_435_blocks_admission_and_owner_disposition
-  - kds_release0_run_handoff_15_local_commit_postreview_passed_remote_preflight_and_push_pending
+  - kds_dirty_worktree_264_changed_entries_blocks_admission_and_owner_disposition
   - kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization
   - brain_release0_external_daily_sync_post_sync_governance_disposition_pending
   - studio_release0_external_daily_sync_post_sync_governance_disposition_pending
-  - kds_release0_current_code_replay_passed_running_process_and_configured_facade_not_verified
-  - mmc_direct_admin_or_super_admin_principal_not_verified_and_credential_use_unauthorized
-  - mmc_runtime_policy_17_to_19_apply_pending_separate_high_risk_human_authorization
+  - kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation
+  - kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required
   - studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed
   - release0_authenticated_search_wikipreview_chat_e2e_not_authorized_and_current_browser_audit_missing
   - kds_p1_apply_blocked_by_dirty_worktree
@@ -413,4 +411,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-08-02T10:41:40+00:00"
-updated_at: "2026-08-15T02:57:53+00:00"
+updated_at: "2026-08-16T22:58:15+00:00"

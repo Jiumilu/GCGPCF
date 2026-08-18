@@ -1,0 +1,89 @@
+conditional_authorization_request:
+  id: GKE-001-COORDINATION-20260814-013-A10C19R2
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  change_id: commit-release0-run-handoff-current-baseline-a10c19r2
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-012-A10C19R1
+    sha256: 85a1825b7d02cc562df8b1c2201103426e49ab5b16a9fa480301c648f4584507
+    review_classification: release0_run_handoff_15_current_baseline_reconciliation_passed_conditional_future_commit_candidate
+  candidate_baseline:
+    head: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    current_origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    current_ahead_behind_staged: 1/0/0
+    ordinary_dirty: 180
+    ordinary_nul_sha256: d8b1b52a8a85b87a17384f5b6b3503afdc441e15fd77635fd973872c2149615a
+    expanded_dirty: 439
+    expanded_nul_sha256: c7349d85d1aeaea509b7e033f816bfe4f71bb00c60fdd1430aeb903fd52d1db5
+  exact_scope:
+    root: .harness/runs/20260811-193752-implement-release0-canonical-read-facade
+    path_count: 15
+  sealed_fingerprints:
+    pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+    content_manifest_sha256: 09179ebc75115a42a62e9fd49ba3a889cb4bd80c2b7b997ba78d566584af7fa4
+    patch_bytes: 44423
+    patch_sha256: ad1fd7e706e54c24a1bf30395a6a4c6b88409ef1972326f21408a86993238718
+  evidence_accounting:
+    total: 8
+    current: 6
+    inherited: 2
+    stale: 0
+    missing: 0
+  current_verification:
+    focused: 41_passed
+    non_database: 101_passed
+    postgresql_migration: 29_passed
+    disposable_database_cleanup: 0
+    openspec_strict: pass
+    openspec_tasks: 23/23
+    kds_document_gate: pass
+    localization_debt: false
+    codegraph: pass
+    canonical_mirror: 8/8_pass
+  commit_candidate:
+    count: 1
+    subject: "chore(kds): record release 0 canonical read handoff"
+    local_only: true
+  presentable_only_after:
+    - exact_non_force_push_of_a544f67e_is_human_authorized_and_succeeds
+    - F013_postpush_review_confirms_HEAD_origin_remote_equal_a544f67e
+    - release0_openspec_8_local_commit_is_separately_human_authorized_and_succeeds
+    - F013_postcommit_review_accepts_the_exact_openspec_8_commit
+    - current_fifteen_path_bytes_and_fingerprints_remain_exact
+    - dirty_scope_is_rebaselined_and_staged_is_zero
+    - official_opsx_lock_is_absent
+  current_authorization:
+    present_to_human_as_executable_request: false
+    stage: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  obsolete_authorizations:
+    - GKE-001-A10C11R2
+  abort_rule:
+    condition: any_dependency_baseline_scope_fingerprint_or_gate_mismatch
+    actions:
+      - do_not_stage
+      - do_not_commit
+      - preserve_all_worktree_bytes
+      - return_exact_reconciliation
+  forbidden_scope:
+    - product_test_12
+    - release0_openspec_8
+    - stage_b
+    - role_view
+    - other_dirty_owner_groups
+    - real_or_shared_KDS_or_MMC_access
+  rollback:
+    current: not_applicable_no_execution
+    future_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

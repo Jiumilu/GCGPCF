@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[4]
 STATUS_MATRIX = ROOT / "09-status/gpcf-project-status-matrix.md"
 HEALTH_REPORT = ROOT / "09-status/globalcloud-document-health-report.md"
+DOCUMENT_GATE = ROOT / "tools/kds-sync/loop_document_gate.py"
 GIT_GATE = ROOT / ".codex/skills/globalcloud-loop-orchestrator/scripts/loop_git_gate.py"
 OPERATIONAL_GATES = ROOT / ".codex/skills/globalcloud-loop-orchestrator/scripts/loop_operational_gates.py"
 LOOP_STATE = ROOT / "docs/harness/loop-state.md"
@@ -31,6 +32,25 @@ def parse_gate(text: str) -> str:
     if "gate=blocked" in text or '"gate": "blocked"' in text:
         return "blocked"
     return "unknown"
+
+
+def document_gate_status() -> str:
+    if DOCUMENT_GATE.exists():
+        proc = subprocess.run(
+            [sys.executable, str(DOCUMENT_GATE), "--check-only"],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        try:
+            data = json.loads(proc.stdout or "{}")
+        except json.JSONDecodeError:
+            data = {}
+        gate = data.get("gate")
+        if isinstance(gate, str):
+            return gate
+    return parse_gate(read(HEALTH_REPORT))
 
 
 def parse_projects(matrix: str) -> list[dict[str, str]]:
@@ -403,9 +423,8 @@ def operational_gates() -> dict[str, object]:
 
 def main() -> int:
     matrix = read(STATUS_MATRIX)
-    health = read(HEALTH_REPORT)
     projects = parse_projects(matrix)
-    gate = parse_gate(health)
+    gate = document_gate_status()
     result = {
         "document_gate": gate,
         "loop_governance_docs": loop_governance_docs_status(),

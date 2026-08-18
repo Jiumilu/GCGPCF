@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md
 source_path: docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-10
 supersedes: []
 superseded_by: []
 ---
@@ -49,6 +49,8 @@ DKS-054 至 DKS-060 已作为 Knowledge Fabric 的前置受控基础使用，范
 
 D185 不重跑这些历史轮次，不把这些 no-write 文档写成业务完成，也不把 KDS 本地镜像写成真实 KDS API 已同步。
 
+2026-08-10 当前态复放增加逐项镜像一致性校验：10 项基线均具备受控 frontmatter、准确 `source_path` 与 `kds_path`，源文档和 KDS 开发空间本地镜像逐字节一致，结果为 `dks_baseline_mirror_matches=10`。该结果只证明受控前置基础未漂移，不代表真实 KDS API 同步或业务完成。
+
 ## 当前阻塞
 
 - 尚未收到真实 repair owner response。
@@ -63,6 +65,7 @@ D185 不重跑这些历史轮次，不把这些 no-write 文档写成业务完�
 | 检查 | 结果 | 说明 |
 |---|---|---|
 | D185 专项 validator | pass | `gckf_p0_session_mainline_takeover_current_state_d185=pass` |
+| DKS 基线镜像一致性 | pass | `dks_baseline_mirror_matches=10` |
 | 中文化门禁 | pass | `docs_checked=847`、`software_files_checked=240`、`findings=0` |
 | 文档污染检查 | pass | `document_pollution=pass` |
 | KDS TOKEN 检查 | pass | `fingerprint=bfd9553d` |

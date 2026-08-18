@@ -1,0 +1,119 @@
+kds_dirty_ownership_isolation:
+  id: GKE-001-COORDINATION-20260812-010-A10I1D1
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  change_id: audit-kds-dirty-ownership-isolation-a10i1d1
+  mode: report_only_read_only
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  owner: GPCF
+  reviewer:
+    role: GPCF-F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  inspected_lane:
+    owner: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  parent_controls:
+    a10i1:
+      id: GKE-001-COORDINATION-20260811-011-A10I1
+      sha256: 8f4087ca09a4695a0cdec021d0d22270c4866ec9903dc86c0c8cbff8069d37c3
+    a10i1r1:
+      id: GKE-001-COORDINATION-20260811-012-A10I1R1
+      sha256: 4c4a164e7e30186789d4f518ffeede6465dab28e10cc0206bb3c151b16958e7e
+    contract_freeze:
+      id: GKE-001-CONTRACT-FREEZE-20260811-001
+      sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+      canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  repository_baseline:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    ordinary_dirty_entries: 190
+    expanded_dirty_entries: 462
+    ordinary_status_sha256: 51c8985e3eba86cc115cd58fd6cfb1f809857198a8d4ed2b822afb9a31afc905
+    expanded_status_sha256: 0055f30e91654a23252292f956f665a97242962aff6442964755519c7e7a1b9b
+  ownership_partition:
+    ordinary:
+      release0_a10i1: 14
+      stageb_extraction: 16
+      external_role_view: 2
+      business_projection_content: 59
+      feishu_runtime_facts: 60
+      kds_governance_generated: 30
+      kds_audit_read_views: 5
+      disposable_local_outputs: 3
+      automation_memory: 1
+      unclassified: 0
+      total: 190
+    expanded:
+      release0_a10i1: 35
+      stageb_extraction: 36
+      external_role_view: 2
+      business_projection_content: 61
+      feishu_runtime_facts: 171
+      kds_governance_generated: 30
+      kds_audit_read_views: 5
+      disposable_local_outputs: 121
+      automation_memory: 1
+      unclassified: 0
+      total: 462
+  isolation_decision:
+    - Release_0_A10I1_and_Stage_B_are_two_distinct_technical_change_sets
+    - external_green_supply_chain_role_view_is_a_third_independent_owner_scope
+    - operational_content_runtime_facts_governance_outputs_and_disposable_outputs_are_not_technical_commit_scope
+    - dirty_190_must_not_be_staged_committed_cleaned_reverted_or_promoted_as_one_unit
+    - KDS_admission_remains_blocked_dirty_worktree_until_owner_specific_dispositions_exist
+  KDS_repository_allowlist: []
+  GPCF_repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-dirty-ownership-isolation-a10i1d1.yaml
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-dirty-ownership-isolation-and-review-dispatch-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    - features/active/F-013-knowledge-asset-model-system/journal.md
+    - 02-governance/loop/LOOP_CONTROL_BOARD.md
+    - 02-governance/loop/LOOP_SESSION_REGISTRY.md
+  independent_review_required:
+    - replay_ordinary_and_expanded_porcelain_counts_and_hashes
+    - confirm_all_entries_are_classified_and_unclassified_is_zero
+    - confirm_A10I1_12_product_test_hashes_match_the_sealed_run
+    - confirm_Stage_B_14_product_test_hashes_match_the_current_handoff_scope
+    - confirm_role_view_two_file_hashes_and_separate_ownership
+    - confirm_no_KDS_file_database_API_network_or_runtime_write_occurred
+    - decide_whether_partition_is_sufficient_for_future_owner_specific_disposition_controls
+  forbidden_scope:
+    - any_KDS_repository_write
+    - any_role_view_or_registry_write
+    - any_delete_clean_reset_revert_stage_commit_or_push
+    - any_live_shared_or_production_KDS_MMC_database_API_or_corpus_action
+    - any_credential_access
+    - any_migration_restart_deploy_or_policy_apply
+    - any_acceptance_integration_production_or_customer_status_promotion
+  authorization:
+    KDS_read_only_git_and_hash_inspection: true
+    GPCF_allowlisted_governance_write: true
+    KDS_write: false
+    database_or_API_access: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  handoff:
+    source: GKE-001_coordinator
+    target: GPCF_F-013_independent_review
+    status: dispatched_review_pending
+    KDS_product_handoff_unchanged: true
+  rollback:
+    boundary: Withdraw only this GPCF report-only control, its evidence, and the corresponding Feature and LOOP references.
+    KDS_restore: not_applicable_zero_KDS_mutation
+    external_data: none
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

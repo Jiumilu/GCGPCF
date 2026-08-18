@@ -1,0 +1,67 @@
+gke001_brain_chat_context_wiring:
+  id: GKE-001-COORDINATION-20260813-050-A10C4
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: bounded_local_tdd_uncommitted
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-047-A10C3
+    sha256: db6a44268892f24d59c542708ce98288981d0c322fe5f9c40d47e04bc12e174d
+  independent_review:
+    authority: F-013
+    result: brain_a10c3_bounded_8_file_technical_review_passed_chat_context_wiring_pending
+  lane:
+    repository: Brain
+    thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+    change_id: wire-canonical-evidence-to-chat-context-a10c4
+    owner: Brain
+  baseline:
+    branch: main
+    head: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+    origin_main: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+    ahead_behind_staged: 0/0/0
+    existing_a10c3_dirty_paths: 8
+    opsx_lock: absent
+  repository_allowlist:
+    - src/app/App.tsx
+    - src/app/App.test.tsx
+    - src/app/components/ChatPanel.tsx
+    - src/app/components/ChatPanel.test.tsx
+  requirements:
+    - add_citations_and_bounded_correlation_as_separate_structured_chat_context_fields
+    - preserve_exact_page_and_space_readback_binding
+    - do_not_embed_citations_or_correlation_into_prompt_text_or_logs
+    - clear_context_on_page_or_space_change
+    - preserve_explicit_per_prompt_authorization_and_post_send_reset
+    - no_automatic_send
+    - no_kds_mmc_write_invocation_or_local_fact_ledger
+  acceptance:
+    - focused_app_chat_and_a10c3_tests
+    - full_tests
+    - typecheck
+    - build
+    - kds_read_model_alignment
+    - openspec_strict_existing_change
+    - codegraph_sync_status_query
+    - exact_12_path_combined_scope
+    - diff_check
+    - opsx_lock_released
+  forbidden:
+    - modify_existing_a10c3_eight_paths
+    - studio_kds_or_mmc_change
+    - live_network_or_browser_e2e
+    - prompt_or_llm_send
+    - data_write
+    - commit
+    - push
+    - deployment
+    - status_promotion
+  rollback:
+    repository: remove_only_a10c4_four_path_delta_while_preserving_a10c3
+    external_data: not_applicable
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

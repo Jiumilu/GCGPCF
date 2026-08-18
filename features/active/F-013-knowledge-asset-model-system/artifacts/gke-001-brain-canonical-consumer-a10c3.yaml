@@ -1,0 +1,77 @@
+gke001_brain_canonical_consumer:
+  id: GKE-001-COORDINATION-20260813-047-A10C3
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessors:
+    a10c2:
+      id: GKE-001-COORDINATION-20260813-045-A10C2
+      sha256: 6136ffe9fb507b3c1eb2b7341391f7f7c34312277993280f05b884224b89a1db
+    studio_uncommitted_handoff:
+      product_sha256: a02e3435f9485eb541bd800adeb8384a375e6e8a5a83f21d60069d2518e0b9fb
+      test_sha256: 941d24d061c7a8b164dacc97851125a1730515ff17e916890aefbb3fee99f5d7
+      coordinator_tests: 40_passed
+      build: pass
+      opsx_lock: absent
+      independent_review: in_progress
+  lane:
+    repository: Brain
+    thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+    change_id: consume-session-bound-canonical-read-a10c3
+    owner: Brain
+    mode: local_tdd_uncommitted
+    baseline:
+      head: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+      origin_main: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+      ordinary_dirty: 0
+    repository_allowlist:
+      - src/app/hooks/studioKdsBridge.ts
+      - src/app/hooks/studioKdsBridge.test.ts
+      - src/app/hooks/useKdsApi.ts
+      - src/app/hooks/useKdsApi.test.ts
+      - src/app/components/SearchPanel.tsx
+      - src/app/components/SearchPanel.test.tsx
+      - src/app/components/WikiPreview.tsx
+      - src/app/components/WikiPreview.test.tsx
+      - src/app/components/ChatPanel.tsx
+      - src/app/components/ChatPanel.test.tsx
+  requirements:
+    - remove_personal_direct_legacy_kds_fallback_for_release0_read_path
+    - bridge_operations_match_studio_search_graph_wiki_preview_contract
+    - no_brain_supplied_session_id_or_authority_fields
+    - consume_only_studio_session_bound_canonical_search_and_read
+    - map_search_and_wiki_evidence_to_nonempty_citations_when_present
+    - carry_bounded_correlation_id_from_canonical_response_to_preview_and_chat_context
+    - keep_explicit_per_prompt_chat_authorization_and_clear_after_send
+    - expose_no_write_method_to_the_release0_read_consumer_path
+    - preserve_no_local_fact_ledger_and_no_second_ledger
+  acceptance:
+    - focused_tests
+    - full_typecheck
+    - full_tests
+    - build
+    - kds_read_model_alignment
+    - strict_existing_openspec
+    - codegraph_sync_status_query
+    - diff_check
+    - opsx_lock_released
+    - uncommitted_handoff
+  forbidden:
+    - studio_or_kds_or_mmc_repository_change
+    - live_network_or_api_call
+    - real_or_shared_data_read_or_write
+    - kds_write_method_invocation
+    - local_fact_or_graph_ledger
+    - commit
+    - push
+    - deploy
+    - status_promotion
+  rollback:
+    repository: restore_only_exact_10_uncommitted_paths_to_clean_baseline_after_separate_review
+    external_data: not_applicable
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

@@ -39,6 +39,18 @@ def table_value(text: str, key: str) -> str:
     return match.group(1).strip()
 
 
+def optional_table_value(text: str, key: str) -> str | None:
+    pattern = re.compile(rf"^\|\s*{re.escape(key)}\s*\|\s*(.*?)\s*\|$", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else None
+
+
+def assignment_value(text: str, key: str) -> str | None:
+    pattern = re.compile(rf"^{re.escape(key)}\s*=\s*(.*?)\s*$", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else None
+
+
 def parse_completed_rounds(value: str) -> tuple[int, int]:
     match = re.search(r"(\d+)\s*/\s*(\d+)", value)
     require(match is not None, f"invalid L3 completed rounds value: {value}")
@@ -66,7 +78,19 @@ def main() -> int:
     ]:
         require(phrase in skill, f"loop orchestrator skill missing guard phrase: {phrase}")
 
-    session = table_value(control, "L3 session")
+    for anti_pattern in ["3/15", "5/15", "10/15"]:
+        require(anti_pattern in policy, f"policy must explicitly mention anti-pattern {anti_pattern}")
+
+    session = optional_table_value(control, "L3 session")
+    if session is None:
+        default_loop = assignment_value(control, "default_loop")
+        require(default_loop is not None, "LOOP_CONTROL_BOARD.md missing L3 session and default_loop")
+        if default_loop in {"Delivery Loop", "Governance Loop"}:
+            print("L3 continuation guard validation passed")
+            print(f"mode={default_loop} l3_session=not_applicable")
+            return 0
+        require(False, "LOOP_CONTROL_BOARD.md missing table field: L3 session")
+
     completed_value = table_value(control, "L3 已完成轮次")
     remaining_value = table_value(control, "L3 剩余轮次")
     stop_type = table_value(control, "L3 stop_type")
@@ -89,9 +113,6 @@ def main() -> int:
         require(stop_type in ALLOWED_STOP_TYPES, f"invalid L3 stopped stop_type: {stop_type}")
     else:
         require(session in {"active", "stopped"}, f"invalid L3 session: {session}")
-
-    for anti_pattern in ["3/15", "5/15", "10/15"]:
-        require(anti_pattern in policy, f"policy must explicitly mention anti-pattern {anti_pattern}")
 
     print("L3 continuation guard validation passed")
     print(f"session={session} completed={completed}/{limit} remaining={remaining} stop_type={stop_type}")

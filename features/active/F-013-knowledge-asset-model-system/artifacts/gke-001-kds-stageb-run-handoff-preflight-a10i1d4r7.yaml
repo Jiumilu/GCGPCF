@@ -1,0 +1,108 @@
+kds_stageb_run_handoff_preflight:
+  id: GKE-001-COORDINATION-20260812-029-A10I1D4R7
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: preflight-stageb-run-handoff-13-a10i1d4r7
+  dependency:
+    accepted_local_core_commit: 7fb477030f5278faf55d6d16ff3874469704610d
+    accepted_local_regression_commit: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    accepted_local_openspec_commit: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    openspec_commit_review: local_openspec9_commit_independent_review_passed
+  baseline:
+    head: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 3
+    behind: 0
+    staged: 0
+    ordinary_dirty: 178
+    ordinary_porcelain_sha256: 7717a65c9a311de5ce7423877a87cb5b7dad7ab2d1fa6aa6b9c934d1ffc61a7a
+    expanded_dirty: 442
+    expanded_porcelain_sha256: 14a6710511c0d0383431291c42f0c5e3c5d3d6a00472fde42f6a644b239660c9
+    opsx_lock: absent
+  candidate_unit:
+    name: stageb_run_handoff_13
+    repository_write_allowlist: []
+    source_paths:
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/authorization.yaml
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/changed-files.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-a3-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fifth-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fourth-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-second-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-third-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/final-verification.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/f013-handoff.md
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/handoff.yaml
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/knowledge-engineering-handoff.yaml
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/run.yaml
+    frozen_manifest_sha256: 9505cf98726d0148b0124022f4dca502837b82ec74e10a262daed29f15881e47
+    future_commit_subject: "chore(kds): record document extraction handoff"
+  authorization:
+    mode: report_only_disposable_preflight
+    read_kds_git_objects_and_candidate_files: true
+    deterministic_external_patch_generation: true
+    selective_clean_copy_overlay: true
+    parse_handoff_yaml_and_evidence: true
+    kds_repository_write: false
+    opsx_lock: false
+    content_edit: false
+    stage: false
+    commit: false
+    push: false
+    tests_or_database: false
+    api_or_network: false
+    live_or_shared_access: false
+    deploy: false
+    status_promotion: false
+  required_verification:
+    - Recompute the exact thirteen-path ordered manifest and require SHA-256 9505cf98726d0148b0124022f4dca502837b82ec74e10a262daed29f15881e47.
+    - Prove all thirteen paths are absent from commit a7ec87412f03fb18a9f52e11f07980e6911f22a1 and are current new mode 100644 candidates.
+    - Generate the thirteen-path patch twice outside KDS and prove byte identity, exact paths and diff-check pass.
+    - Apply the patch to a disposable selective clean copy of commit a7ec87412f03fb18a9f52e11f07980e6911f22a1, verify byte identity, then reverse it and prove all thirteen paths return to absent.
+    - Parse authorization.yaml, run.yaml, handoff.yaml and knowledge-engineering-handoff.yaml and verify the recorded partial/not_complete, no-live-write, ACL, audit, lineage, migration and rollback boundaries remain internally consistent.
+    - Verify the final sequence from f28edb5113e0493ed60fec423cb6c7e1a6252de8 contains exactly the frozen 12 core, 2 regression, 9 OpenSpec and 13 handoff paths with no role-view or A10I1 path.
+    - Reconfirm before and after Git state, no lock, no staged files and unchanged role-view hashes.
+  inherited_machine_evidence:
+    stageb_non_database: 66_passed
+    stageb_postgresql_migration: 23_passed
+    disposable_database_cleanup: 0
+    acl_read_search_count: passed_controlled_fixtures
+    active_extraction_only: passed_controlled_fixtures
+    exact_lineage: passed_controlled_fixtures
+    audit_outbox_atomicity: passed_controlled_fixtures
+    migration_and_compensating_rollback: passed_controlled_fixtures
+    qualification: inherited_not_rerun_not_live_customer_evidence
+  exclusions:
+    - stageb_core_12_already_committed
+    - stageb_regression_2_already_committed
+    - stageb_openspec_9_already_committed
+    - release0_a10i1_paths
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+    - all_business_projection_content
+    - any_other_dirty_scope
+  codegraph:
+    impact: none_report_only_no_repository_write
+    sync_required: false
+  rollback:
+    repository: not_applicable
+    disposable_copy: remove_exact_task_root
+    future_commit: separately_reviewed_compensating_git_revert_only
+  handoff:
+    kind: report_only_task_receipt
+    independent_reviewer: F-013
+    future_commit_authorization_after_review: human_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    execution: report_only_preflight_authorized

@@ -1,0 +1,95 @@
+---
+doc_id: GPCF-DOC-GKE001-CODEGRAPH-DOMAIN-BINDING-V1
+title: GKE-001 CodeGraph Engineering Domain Binding
+project: GPCF
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+domain: codegraph-governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/12-GPCF/governance/codegraph/gke001-engineering-domain-binding.yaml
+source_path: governance/codegraph/gke001-engineering-domain-binding.yaml
+sync_direction: bidirectional
+last_reviewed: 2026-08-11
+supersedes: []
+superseded_by: []
+---
+
+gke001_codegraph_binding:
+  id: gke001
+  engineering_domain: GKE-001
+  name: GlobalCloud Knowledge Engineering
+  representation: engineering_domain_not_repository
+  repository_registry: governance/codegraph/repo-codegraph-registry.yaml
+  indexed_repository_count: 14
+  governed_project_count: 18
+  indexed_repositories: [gfis, gpc, pvaos, waes, kds, brain, pkc, xiaoc, xgd, xiaog, mmc, gpcf, studio, was]
+  governed_projects_without_repository_index: [AAAS, XWAIL, SOP, ICP]
+  program_binding: governance/openspec/gke001-program-binding.yaml
+  nodes:
+    coordinator:
+      id: gke001-coordinator
+      thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    canonical_feature:
+      id: F-013
+      path: features/active/F-013-knowledge-asset-model-system
+    canonical_contract:
+      revision: v0.1
+      manifest_path: okf/knowledge-asset-contract-manifest.yaml
+      manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    application_roadmap:
+      path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml
+      sha256: 32f00e131b0dab667fa7403dbd6d6a79c865f517959c5d6b227f82340534ad9f
+    releases: [release_0, release_1, release_2, release_3]
+    systems: [GPCF, MMC, KDS, Brain, Studio, business_systems]
+    openspec_change: openspec/changes/integrate-gke001-openspec-codegraph
+    implementation_plan: 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md
+    coordinator_prompt: 02-governance/loop/GKE-001长期实施调度提示词.md
+    evidence:
+      feature: features/active/F-013-knowledge-asset-model-system/evidence/gke-001-openspec-codegraph-binding-20260811.md
+      machine: docs/harness/evidence/gke001-openspec-codegraph-binding-20260811.json
+  edges:
+    - from: GKE-001
+      relation: governed_by
+      to: GPCF/F-013
+    - from: GKE-001
+      relation: specified_by
+      to: openspec/changes/integrate-gke001-openspec-codegraph
+    - from: GKE-001
+      relation: indexed_as
+      to: engineering_domain_not_repository
+    - from: Studio
+      relation: authorized_through
+      to: MMC
+    - from: MMC
+      relation: delegates_to
+      to: KDS
+    - from: KDS
+      relation: read_by
+      to: Brain
+    - from: Brain
+      relation: presented_in
+      to: Studio
+  query_anchors:
+    - GKE-001
+    - F-013
+    - customer_readonly_pilot
+    - customer_intake_pilot
+    - KnowledgeObject
+    - KnowledgeAsset
+    - knowledge_engineering_handoff
+  evidence_boundary:
+    indexed_governance_artifacts_only: true
+    proves_cross_repository_runtime_integration: false
+    proves_real_kds_read_or_write: false
+    proves_customer_test_ready: false
+  authorization:
+    product_repository_write: false
+    real_kds_or_mmc_write: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

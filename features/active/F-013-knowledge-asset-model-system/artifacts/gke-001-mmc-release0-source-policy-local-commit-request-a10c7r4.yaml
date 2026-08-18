@@ -1,0 +1,73 @@
+gke001_mmc_release0_source_policy_local_commit_request:
+  id: GKE-001-COORDINATION-20260813-087-A10C7R4
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  predecessors:
+    - {id: GKE-001-COORDINATION-20260813-083-A10C7R3, sha256: 438a44f105765eb0092ce51d4c6efcc475ad43a2855a5461df9e25454f4f9807}
+    - {id: GKE-001-COORDINATION-20260813-086-A10R1, classification: mmc_release0_source_policy_6_path_preflight_passed_eligible_for_separate_human_local_commit_authorization_request}
+  lane:
+    repository: MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: commit-release0-source-policy-6-a10c7r4
+    owner: MMC
+  required_baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 19
+    ordinary_nul_sha256: b74f2851a75941cc566c4d4c6ee8719dfeb22d69fa0fc6f5cc4294d8e49decd2
+    expanded_dirty: 99
+    expanded_nul_sha256: efc815827e4f88fa22b6a2bbd352a857960d0f81bc301a330e38cc2056ac2047
+    opsx_lock: absent
+  exact_paths_and_sha256:
+    runtime/scripts/seed.sh: 62dc07c4828d5563588de79dcdcaa728f2c319ff2a504f2e8105656647b2b777
+    runtime/tests/test_release0_policy_seed.py: 2e0e4c5bd44161c94bcab7f79fa91f1443d1664945ab577706e7116de24a8586
+    openspec/changes/admit-release0-canonical-read-policy-a10c7/proposal.md: 04dcf629b50916066a05a8c43fec0eb04171c8b3693b8cf4527f68a7bac874a8
+    openspec/changes/admit-release0-canonical-read-policy-a10c7/design.md: c607f1bf773f5a6ff6cd556105ecb8f93141303fafebcb394b34e0ac8d602fd3
+    openspec/changes/admit-release0-canonical-read-policy-a10c7/tasks.md: cba8a8d287af62858aac64efa4bb533aef1b25307e3dd61554e9be5670f6e9a6
+    openspec/changes/admit-release0-canonical-read-policy-a10c7/specs/mmc-release0-policy-admission/spec.md: 7ac9a0db4c1d3ad4ba7c29bb994cf584583a3e0ac684767b7166b33049c553c7
+  sealed_candidate:
+    path_count: 6
+    pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+    ordered_content_manifest_sha256: 8c525f2a608d918fa6eab60ec49733474cae77d8d3331493d754027428304795
+    patch_bytes: 9830
+    patch_sha256: 66ddc6b2dab14f3db807c66426fdb9ab5eb44d3605d913d865dda0608f8fec77
+    diff_check: pass
+  requested_human_decision:
+    decision: pending
+    exact_request: authorize_or_decline_one_local_commit
+    commit_count: 1
+    commit_subject: "feat(mmc): admit release 0 canonical read policy source"
+    push: false
+    runtime_policy_apply: false
+  execution_only_if_human_authorized:
+    - reverify_baseline_all_path_hashes_and_candidate_fingerprints
+    - verify_runtime_state_and_sidecar_unchanged
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_six_paths_only
+    - verify_cached_scope_patch_and_diff_check
+    - create_exactly_one_local_commit_with_frozen_subject
+    - verify_parent_scope_patch_and_commit_diff_check
+    - release_lock_and_freeze_for_f013_postcommit_review
+  abort_on_any_mismatch:
+    - unstage_exact_six_paths_only
+    - preserve_all_working_file_content
+    - release_opsx_lock
+    - create_no_commit
+  forbidden:
+    - runtime_state_or_sidecar_write
+    - runtime_policy_apply
+    - preexisting_h1r2_h1r3_or_other_dirty
+    - kds_studio_brain
+    - content_edit
+    - push
+    - live_request_or_credential_action
+    - deployment_or_later_unit_or_status_promotion
+  rollback:
+    before_commit: unstage_exact_six_paths_only
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status: {engineering: active, cross_project: partial, completion: not_complete, authorization: human_local_commit_authorization_required}

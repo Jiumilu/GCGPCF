@@ -1,0 +1,64 @@
+coordination_amendment:
+  id: GKE-001-COORDINATION-20260814-038-A10R8R5-STUDIO
+  amends: GKE-001-COORDINATION-20260814-037-A10R8R4-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  change_id: reseal-studio-lr879-after-lock-release-a10r8r5
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    existing_delta: exact_a10r8r2_eight_paths_restored
+  review_basis:
+    original_p1_findings: closed
+    a10r8r3_cached_diff_check_after_one_byte_fix: pass
+    a10r8r4_blocker: evidence generator treats the active OpsX lock as an out-of-scope ninth path
+    a10r8r4_rollback: both governance preimages restored
+  mode: ordered_lock_then_unlocked_machine_reseal_no_commit_no_push
+  file_allowlist:
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+  required_order:
+    - Verify the restored A10R8R2 baseline and both governance preimages.
+    - Acquire the official OpsX lock.
+    - Remove exactly one trailing LF from LR-879 and verify the one-byte delta.
+    - Release the official OpsX lock and verify it is absent.
+    - Only after lock absence, run the official CodeGraph evidence select/complete mechanism to refresh the existing A10R8 JSON.
+    - Verify the evidence tool changed only the allowlisted JSON and retained discovery, impact, test-selection, unresolved-relation and risk semantics.
+    - Run the complete eight-path external-index cached diff-check and regenerate exact fingerprints.
+    - Run Studio LOOP, Harness, OpenSpec strict, CodeGraph status/query and repository diff-check.
+  evidence_rule:
+    unlocked_machine_evidence_write: authorized_only_after_official_lock_release
+    opsx_lock_is_execution_only: true
+    opsx_lock_must_be_absent_from_changed_scope: true
+    technical_tests_and_build: inherited_from_a10r8r2_not_current
+  forbidden_scope:
+    - any product or test content change
+    - any ninth repository path
+    - technical test, build, database, API, network, browser or runtime execution
+    - stage, commit, push, deploy or status promotion
+    - adding the OpsX lock to evidence scope or repository state
+  authorization:
+    repository_write: exact_two_governance_files_in_required_order
+    unlocked_machine_evidence_write: true
+    stage: false
+    commit: false
+    push: false
+    external_access: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    repository: restore both files to A10R8R2 preimages if any post-release reseal or gate fails
+    lock: release through official script on every exit
+    external: not_applicable
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

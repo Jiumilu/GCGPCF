@@ -1,0 +1,127 @@
+a10i3h1r2_secondary_review_scope_correction:
+  id: GKE-001-COORDINATION-20260812-003-A10I3H1R2R2
+  issued_at: 2026-08-12
+  mode: secondary_independent_readonly_review_and_scope_correction
+  program_ref: GKE-001
+  release_ref: release_0
+  feature_ref: F-013
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  parent_control:
+    id: GKE-001-COORDINATION-20260812-001-A10I3H1R2R1
+    sha256: 3699642fde266e74a797d1515abd9d791da0526b7eef8c278f7cc2e098a35a3f
+  reviewer:
+    type: secondary_independent_technical_reviewer_not_canonical_f013_authority
+    agent_id: 019ff1d9-c13e-7841-999d-30c0d098f69d
+  canonical_reviewer:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    review_required: true
+    decision_received: false
+  repository:
+    name: GlobalCloud MMC
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    owner_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    baseline: b06f58a78ac7713197deed47d1125bec7a260e8c
+    head_equals_origin_main: true
+    ahead: 0
+    behind: 0
+    staged: 0
+    dirty_entries: 10
+    opsx_lock: absent
+    repository_allowlist: []
+  confirmed_findings:
+    - id: H1R2-P0-RESOLVED-PATH-IDENTITY
+      severity: P0
+      result: failed
+      evidence: resolved_state_equal_true_lock_and_recovery_paths_unequal_alias_process_acquired
+      impact: alias_processes_can_bypass_serialization_replace_a_symlink_and_lose_committed_registry_updates
+    - id: H1R2-P1-STARTUP-COUNT-HYDRATION
+      severity: P1
+      result: failed
+      evidence: runtime_app_db_session_directly_reads_target_state_without_shared_recovery
+      impact: health_can_publish_uncommitted_or_stale_registry_counts
+    - id: H1R2-P2-DEPENDENCY-DRY-RUN-CONSUMER
+      severity: P2
+      result: scope_gap
+      evidence: scripts_dry_run_mmc_dependencies_directly_reads_runtime_state
+      impact: operational_dry_run_can_validate_uncommitted_target_state_during_pending_recovery
+    - id: H1R2-P2-SEED-CONTRACT-AMBIGUITY
+      severity: P2
+      result: specification_clarification_required
+      evidence: spec_says_every_writer_while_seed_writer_is_explicitly_forbidden
+      impact: implementation_cannot_truthfully_claim_all_writer_convergence
+  superseded_proposal:
+    product_test_file_count: 4
+    reason: omitted_dependency_dry_run_reader_and_test_and_did_not_close_specification_ambiguity
+  corrected_future_h1r3_scope:
+    implementation_authorized: false
+    change_id: rework-mmc-shared-registry-state-a10i3h1r3
+    run_id: 20260812-rework-mmc-resolved-path-and-consumers-a10i3h1r3
+    product_test_file_count: 6
+    product_test_file_allowlist:
+      - runtime/app/gateway/registry_state.py
+      - runtime/app/db/session.py
+      - scripts/dry_run_mmc_dependencies.py
+      - runtime/tests/test_registry_policy_audit.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_dependency_dry_run.py
+    specification_file_count: 3
+    specification_file_allowlist:
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/design.md
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/specs/shared-registry-state/spec.md
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/tasks.md
+    total_implementation_and_specification_paths: 9
+    governance_allowlist:
+      - .harness/evidence-index.yaml
+      - .harness/opsx.lock
+      - .harness/runs/20260812-rework-mmc-resolved-path-and-consumers-a10i3h1r3/**
+    required_contract_decision: scope_every_consumer_and_writer_to_online_runtime_and_operational_dry_run_while_seed_remains_deferred_to_h2
+    required_tests:
+      - real_file_and_parent_symlink_aliases_share_state_recovery_and_advisory_lock_identity
+      - independent_alias_writer_waits_and_api_plus_llm_updates_survive
+      - alias_save_and_recovery_preserve_the_symlink_and_update_the_canonical_target
+      - startup_hydration_restores_pending_recovery_or_fails_closed_without_stale_counts
+      - dependency_dry_run_restores_recoverable_intent_and_rejects_unresolved_recovery_without_target_validation
+      - existing_75_focused_and_146_full_runtime_regressions_remain_green
+  codegraph_impact:
+    expected_nodes:
+      - registry_state.locked_state
+      - registry_state.lock_path
+      - registry_state.recovery_path
+      - app.db.session.init_db
+      - dry_run_mmc_dependencies.load_state
+    sync_status_query_required_after_future_implementation: true
+    proves_runtime_acceptance: false
+  authorization:
+    gpcf_governance_record_write: true
+    mmc_product_test_or_openspec_write: false
+    mmc_runtime_policy_change: false
+    live_kds_mmc_or_dependency_access: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - runtime/scripts/seed.sh
+    - runtime/state.json
+    - H2_seed_delta
+    - H3_runtime_policy_apply
+    - live_read
+    - real_authenticated_e2e
+    - KDS_Studio_Brain_product_change
+  serial_gate:
+    h1r2_acceptance: blocked_by_confirmed_p0_p1_and_scope_gap
+    f013_independent_confirmation_required: true
+    h1r3_implementation_may_start: false
+    brain_tranche3_dependency: none_but_separate_dispatch_receipt_required
+  rollback:
+    current_review: no_mmc_mutation_to_reverse
+    future_h1r3: revert_only_the_separately_authorized_nine_path_delta_and_new_run_package_to_the_frozen_h1r2_state
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    classification: technical_rework_required_scope_corrected_pending_f013_confirmation

@@ -1,0 +1,69 @@
+kds_stageb_openspec_local_commit_authorization:
+  id: GKE-001-COORDINATION-20260812-027-A10I1D4R6A1
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  parent_request:
+    id: GKE-001-COORDINATION-20260812-026-A10I1D4R6
+    sha256: 6695349d631cf1084486456dd47e95d6f2f0f20381548757d1c163cfdff7b021
+  human_authorization_receipt:
+    decision: granted
+    exact_text: "授权按 A10I1D4R6 在 KDS 60957dd9 基线上，将 stageb_openspec_9 九个文件创建为一个本地提交；不推送、不执行 run/handoff 13 或其他后续单元。"
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: commit-stageb-openspec-9-a10i1d4r6a1
+  hard_stop_baseline:
+    head: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 2
+    behind: 0
+    staged: 0
+    ordinary_dirty: 179
+    ordinary_porcelain_sha256: 3117b6b20fe7de267955e8ea6142ccb3fb5b213f7c3d3139f157844dec24b7ad
+    expanded_dirty: 451
+    expanded_porcelain_sha256: 08649640d16373ecccd906fcf43617192abb4206b7d479e5e5ca17d2e1dee023
+    opsx_lock: absent
+  authorized_execution:
+    unit: stageb_openspec_9
+    commit_count: 1
+    exact_subject: "docs(kds): specify document extraction stage b"
+    exact_path_count: 9
+    exact_paths:
+      - openspec/changes/extend-kds-document-extraction/.openspec.yaml
+      - openspec/changes/extend-kds-document-extraction/design.md
+      - openspec/changes/extend-kds-document-extraction/proposal.md
+      - openspec/changes/extend-kds-document-extraction/specs/document-extraction-pipeline/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extracted-content-evidence/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extraction-access-projection/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extraction-evidence-links/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extraction-job-orchestration/spec.md
+      - openspec/changes/extend-kds-document-extraction/tasks.md
+    expected_mode: "100644"
+    manifest_sha256: 7acdd640e47a6892af715d57038b57de5747f84061cbf3f0034d5bef52dfdeed
+    canonical_patch_bytes: 54462
+    canonical_patch_sha256: 7754cef4b7fd12218069c106276841a59594f53cb5162cd5ab152c35faf9994c
+    required_cached_diff_check: pass
+    official_execution_lock: gke001-kds-stageb-openspec-local-commit-r6-lock
+  forbidden:
+    - file_content_edit
+    - any_other_stage_or_commit
+    - push
+    - stageb_run_handoff_13
+    - A10I1_or_any_later_unit
+    - tests_database_or_API
+    - role_view_or_registry_change
+    - live_shared_or_production_access
+    - deploy
+    - status_promotion
+  abort_and_rollback:
+    mismatch_before_commit: unstage_only_the_nine_paths_release_lock_no_commit
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: granted_for_exact_local_commit_only

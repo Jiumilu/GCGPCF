@@ -1,0 +1,75 @@
+kds_stageb_four_commit_push_receipt:
+  id: GKE-001-COORDINATION-20260813-043-A10I1D4R11A2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  parent_authorization:
+    id: GKE-001-COORDINATION-20260813-042-A10I1D4R11A1
+    sha256: 29c54680a9c78dbc63e0abb9b3502482e1b50d119bc4250f12b5128d8f2d0abc
+  pre_push:
+    remote_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    local_origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 4
+    behind: 0
+    staged: 0
+    commit_count: 4
+    additional_commits: 0
+    sequence_oldest_to_newest:
+      - 7fb477030f5278faf55d6d16ff3874469704610d
+      - 60957dd92380bfeb6049ec552658dad22d5d90dc
+      - a7ec87412f03fb18a9f52e11f07980e6911f22a1
+      - 690ea04abf5485563b760d1bc1620493db017662
+    ordinary_dirty: 190
+    ordinary_porcelain_nul_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    ordinary_porcelain_newline_diagnostic_sha256: e125e7460095da50863ead1487a0ce398cec0f54e7d148fffcfd11261949e450
+    expanded_dirty: 449
+    expanded_porcelain_nul_sha256: 631473d7122cebec505283a9476bf9a29053dae7da53c27635296d5ca7cb58b1
+    expanded_porcelain_newline_diagnostic_sha256: 6aa9ec0b3bbebb4ffce8dd741a8362ab2519d5dc287ccf15aaa1b3f66761109a
+    authoritative_hash_algorithm: git_status_porcelain_z_raw_bytes_sha256
+    opsx_lock: absent
+  execution:
+    push_count: 1
+    exact_command: git push origin 690ea04abf5485563b760d1bc1620493db017662:refs/heads/main
+    force: false
+    result: pass
+    output: f28edb51..690ea04a_fast_forward_to_main
+  post_push:
+    remote_main: 690ea04abf5485563b760d1bc1620493db017662
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    local_origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    branch: main
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_dirty: 190
+    ordinary_porcelain_nul_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    ordinary_porcelain_newline_diagnostic_sha256: e125e7460095da50863ead1487a0ce398cec0f54e7d148fffcfd11261949e450
+    expanded_dirty: 449
+    expanded_porcelain_nul_sha256: 631473d7122cebec505283a9476bf9a29053dae7da53c27635296d5ca7cb58b1
+    expanded_porcelain_newline_diagnostic_sha256: 6aa9ec0b3bbebb4ffce8dd741a8362ab2519d5dc287ccf15aaa1b3f66761109a
+    authoritative_hash_algorithm: git_status_porcelain_z_raw_bytes_sha256
+    opsx_lock: absent
+    dirty_state_unchanged: true
+  authorization_boundary_receipt:
+    fetch: false
+    force_push: false
+    merge: false
+    rebase: false
+    reset_or_revert: false
+    content_edit: false
+    stage_or_commit: false
+    deploy: false
+    later_unit: false
+    status_promotion: false
+  rollback:
+    post_push: separately_reviewed_forward_compensating_commit_only_no_force_push
+  review:
+    f013: kds_stageb_four_commit_exact_non_force_push_independent_postpush_review_passed
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

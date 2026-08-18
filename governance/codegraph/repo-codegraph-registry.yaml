@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-REGISTRY-V1
 title: CodeGraph Project Group Repository Registry
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: codegraph-governance
 status: controlled
 version: v1.0
@@ -27,6 +27,15 @@ registry:
   accepted: false
   integrated: false
   production_ready: false
+
+engineering_domains:
+  - id: gke001
+    name: GlobalCloud Knowledge Engineering
+    representation: engineering_domain_not_repository
+    binding: governance/codegraph/gke001-engineering-domain-binding.yaml
+    indexed_repository_count: 14
+    governed_project_count: 18
+    status: active_partial_not_complete
 
 defaults:
   codegraph_enabled: true

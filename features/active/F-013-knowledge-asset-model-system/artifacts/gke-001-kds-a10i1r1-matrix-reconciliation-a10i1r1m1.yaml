@@ -1,0 +1,80 @@
+a10i1r1_matrix_reconciliation:
+  id: GKE-001-COORDINATION-20260812-005-A10I1R1M1
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  owner: KDS
+  reviewer: GPCF-F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-012-A10I1R1
+    sha256: 4c4a164e7e30186789d4f518ffeede6465dab28e10cc0206bb3c151b16958e7e
+  contract_freeze:
+    id: GKE-001-CONTRACT-FREEZE-20260811-001
+    sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  baseline:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 0
+    behind: 0
+    staged: 0
+    current_dirty_entries_observed: 190
+    preexisting_dirty_scope_must_be_preserved: true
+  change_id: reconcile-kds-a10i1r1-acceptance-matrix
+  run_id: 20260811-193752-implement-release0-canonical-read-facade
+  lock: gke001-kds-a10i1r1-matrix-reconciliation-lock
+  repository_allowlist:
+    - .harness/opsx.lock
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/acceptance-matrix.md
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/acceptance-matrix-a10i1r1m1.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence-index.yaml
+  required_change:
+    - replace_the_stale_CodeGraph_not_run_statement_with_the_verified_A10I1R1_CodeGraph_pass
+    - remove_unrun_CodeGraph_as_a_Harness_decision_blocker
+    - retain_localization_debt_dirty_worktree_and_partial_not_complete_ceiling
+    - add_run_scoped_machine_evidence_for_the_matrix_reconciliation
+    - register_that_evidence_in_the_existing_evidence_index
+  verification:
+    - control_sha256_exact
+    - codegraph_status_index_up_to_date
+    - bounded_route_and_read_module_queries
+    - product_test_hashes_12_of_12_unchanged
+    - shared_excluded_hashes_4_of_4_unchanged
+    - acceptance_matrix_contains_no_CodeGraph_not_run_or_unrun_CodeGraph_text
+    - git_diff_check
+    - opsx_lock_released_and_absent
+  forbidden_scope:
+    - any_product_test_or_OpenSpec_change
+    - any_other_KDS_handoff_or_evidence_file
+    - knowledge_intake/repository.py
+    - knowledge_intake/postgres.py
+    - migrations/**
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+    - live_shared_or_production_API_database_corpus_or_credentials
+    - commit_push_restart_deploy_or_status_promotion
+  authorization:
+    local_allowlisted_governance_reconciliation: true
+    product_or_test_write: false
+    live_read_or_write: false
+    database_or_migration: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    boundary: Revert only the three persistent run-scoped governance files to their pre-A10I1R1M1 bytes and remove the execution-only lock.
+    external_data: none
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md
 source_path: docs/harness/loops/loop-round-GPCF-GCKF-P0-D185-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-10
 supersedes: []
 superseded_by: []
 ---
@@ -58,6 +58,7 @@ superseded_by: []
 ### verify
 
 - D185 专项 validator 必须通过。
+- DKS-054 至 DKS-060 的 10 项受控前置基础必须具备准确源路径与镜像路径，且与 KDS 开发空间本地镜像逐字节一致。
 - 中文化门禁必须通过。
 - 文档污染检查必须通过。
 - KDS TOKEN 检查必须通过且 TOKEN 不入库。
@@ -72,6 +73,7 @@ superseded_by: []
 
 - D185 只证明当前会话主线已接管，且 DKS-054 至 DKS-060 已作为前置受控基础。
 - DKS no-write 产物不能替代真实 response、WAES review note、人工确认、业务完成证明或真实 KDS API 写入。
+- 2026-08-10 当前态复放结果为 `dks_baseline_mirror_matches=10`，仅证明已合流前置基础未漂移。
 
 ## 边界
 

@@ -402,6 +402,18 @@ GPCF 建立或更新 Feature 与 canonical 契约
 - handoff 缺字段、validator 未通过、ACL/审计未验证或接收方未复核时，必须返回 `rework_required` 或保持 `partial`。
 - fixture、mock、文档、组件测试和候选产物只能证明开发能力，不能证明真实业务闭环。
 
+## 13.1 应用体系与长期调度基线
+
+GKE-001 的客户应用实施统一继承以下受控产物：
+
+| 产物 | 作用 |
+|---|---|
+| `03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md` | 定义客户产品能力、Release 0 至 Release 3、实施波次、验收与回滚 |
+| `features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml` | 提供机器可读依赖、状态、派工、handoff 和授权边界 |
+| `02-governance/loop/GKE-001长期实施调度提示词.md` | 供唯一总体调度器持续执行跨项目群扫描、选择、派工、复核和状态控制 |
+
+Release 0 先形成真实认证、授权 KDS 只读、Brain Search/WikiPreview/Chat 和引用审计闭环；Release 1 再开放受控 text/markdown intake；Release 2 增加 PDF/OCR、转写和候选复核；Release 3 才进入确认后长期记忆和业务协同。后续 Release 的真实门禁不得阻塞前一 Release 内可并行的本地工程修复，但任一 Release 未独立验收时不得跨级声明客户可用。
+
 ## 14. 当前项目群状态
 
 ```text

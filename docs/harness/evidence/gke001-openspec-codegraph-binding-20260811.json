@@ -1,0 +1,57 @@
+{
+  "evidence_id": "GKE001-OPENSPEC-CODEGRAPH-BINDING-20260811",
+  "engineering_domain": "GKE-001",
+  "change_id": "integrate-gke001-openspec-codegraph",
+  "feature_ref": "F-013",
+  "recorded_at": "2026-08-11T08:20:55.733Z",
+  "classification": "governance_binding_verified",
+  "scope": {
+    "governed_projects": 18,
+    "indexed_repositories": 14,
+    "representation": "engineering_domain_not_repository"
+  },
+  "contract": {
+    "revision": "v0.1",
+    "manifest_path": "okf/knowledge-asset-contract-manifest.yaml",
+    "manifest_sha256": "8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de",
+    "roadmap_sha256": "32f00e131b0dab667fa7403dbd6d6a79c865f517959c5d6b227f82340534ad9f"
+  },
+  "verification": {
+    "openspec_strict": "pass",
+    "binding_validator": "pass",
+    "binding_drift_self_test": "pass",
+    "project_group_openspec_coverage": "pass_18_of_18",
+    "knowledge_asset_model": "pass",
+    "feature_workspace": "pass",
+    "f013_evidence_gate": "pass_with_11_open_governance_blockers",
+    "f013_kds_apply_admission": "pass_blocked_dirty_worktree_changed_entries_166",
+    "document_control": "pass_scoped_local_mirror_only",
+    "document_pollution": "pass",
+    "kds_token": "pass",
+    "loop_document_gate": "rework_required_existing_localization_debt",
+    "project_group_gate_readiness": "watch_required_0_of_17_existing_localization_debt",
+    "codegraph_sync": "pass",
+    "codegraph_pending_after_recorded_sync": 0,
+    "codegraph_program_binding_query": "pass",
+    "codegraph_binding_file_nodes": "pass",
+    "project_group_codegraph_full_coverage": "fail_existing_kds_pending_13"
+  },
+  "codegraph_snapshot": {
+    "version": "1.0.1",
+    "file_count": 1745,
+    "node_count": 23836,
+    "edge_count": 60979,
+    "worktree_mismatch": null
+  },
+  "authorization": {
+    "product_repository_write": false,
+    "real_kds_or_mmc_write": false,
+    "deployment": false,
+    "status_promotion": false
+  },
+  "status": {
+    "engineering": "active",
+    "cross_project": "partial",
+    "completion": "not_complete"
+  }
+}

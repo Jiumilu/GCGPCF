@@ -1,0 +1,105 @@
+gke001_release0_consumer_current_baseline_replay:
+  id: GKE-001-COORDINATION-20260814-014-A10C20
+  issued_at: 2026-08-14
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  mode: report_only_current_consumer_source_and_gate_replay
+  repository_allowlist: []
+  lanes:
+    studio:
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      owner: Studio
+      baseline:
+        branch: main
+        head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+        origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+        ahead_behind_staged: 0/0/0
+        dirty: 0
+        opsx_lock: absent
+      current_commit:
+        canonical_bridge_commit: ec1ff4d6a35844d499334caac74d99d46691034c
+        current_daily_sync_head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+      current_verification:
+        focused_release0: 5_files_44_passed
+        build: pass
+        openspec_strict: pass
+        loop_control: pass_LR_878
+        harness: pass
+        codegraph: 991_files_18340_nodes_62626_edges_up_to_date
+        diff_check: pass
+      classification: technical_consumer_baseline_current_mocked_transport_not_live_e2e
+    brain:
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      owner: Brain
+      baseline:
+        branch: main
+        head: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+        origin_main: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+        ahead_behind_staged: 0/0/0
+        dirty: 0
+        opsx_lock: absent
+      current_verification:
+        vitest: 45_files_390_passed
+        typecheck: pass
+        kds_read_model_alignment: pass
+        openspec_strict_repair_brain_read_baseline_a7: pass
+        codegraph: 240_files_5355_nodes_13594_edges_up_to_date
+        diff_check: pass
+      current_failure:
+        gate: validate_read_closure_matrix
+        reason: 11_runtime_and_browser_evidence_files_older_than_48_hours
+        product_or_type_regression: false
+        generated_summary_side_effect_reverted: true
+      classification: technical_consumer_baseline_current_runtime_evidence_stale
+  verified_boundaries:
+    studio_server_derived_authority: passed_focused_tests
+    studio_exact_canonical_routes: passed_focused_tests
+    studio_bounded_errors: passed_focused_tests
+    brain_session_read_consumption: passed_component_and_hook_tests
+    brain_type_contract: pass
+    automatic_prompt_send: false
+    local_or_second_knowledge_ledger: false
+    authenticated_canonical_network_read: not_run
+  runtime_observation:
+    brain_dev_5175: not_listening
+    mmc_health_8000: http_200
+    kds_health_8080: http_200
+    qualification: health_does_not_prove_release0_canonical_read_integration
+  serial_dependencies_before_live_e2e:
+    - kds_a544f67e_exact_non_force_push_and_F013_postpush_review
+    - mmc_9f38048a_exact_non_force_push_and_F013_postpush_review
+    - mmc_H1_owner_commit_push_postpush_review
+    - mmc_launcher_commit_review_and_active_process_code_freshness
+    - separately_human_authorized_runtime_policy_17_to_19_apply
+    - studio_authenticated_authoritative_target_preflight
+    - fresh_browser_capture_against_the_canonical_release0_routes
+  evidence_freshness_decision:
+    old_browser_evidence_must_not_be_timestamp_only_refreshed: true
+    fresh_capture_before_real_verified_claim: required
+    current_classification_ceiling: partial_not_complete
+  authorization:
+    repository_write: false
+    commit_or_push: false
+    live_kds_or_mmc_read_write: false
+    browser_authenticated_e2e: false
+    prompt_send: false
+    deployment_or_promotion: false
+  rollback:
+    studio: not_applicable_zero_write
+    brain: generated_read_closure_timestamp_restored_to_pre_run_value
+    external_data: none
+  requested_independent_review:
+    authority: F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    requested_classification: release0_consumer_current_baseline_replay_passed_runtime_evidence_stale
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    real_verified: false
+    promotion: false

@@ -1,0 +1,47 @@
+gke001_mmc_release0_source_policy_admission_review_closure:
+  id: GKE-001-COORDINATION-20260813-062-A10C7R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: admit-release0-canonical-read-policy-a10c7
+  mode: independent_review_closure
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-061-A10C7R1
+    sha256: e2531e7e5dd5de54648d331c166a7c30398cd1eb17288dfa689570a594b741b5
+  independent_review:
+    authority: F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    result: authorization_request_review_passed_human_source_only_local_tdd_authorization_required
+    repository_write: false
+  verified:
+    mmc_baseline: b06f58a78ac7713197deed47d1125bec7a260e8c
+    raw_dirty: 15/76
+    staged: 0
+    opsx_lock: absent
+    sidecar: zero_byte_unheld_and_untouched
+    product_and_openspec_paths: 6
+    product_and_openspec_pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+    run_scoped_governance_paths: 17
+    codegraph_local_index_ignored: true
+    seed_preimage_sha256: 161884e885fc03ade8d26b87bea745203455a177889b4ef57612b22344554a33
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    current_policy_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    candidate_policy_fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+  authorization_gate:
+    source_only_local_tdd: human_authorization_required
+    implementation_started: false
+    runtime_policy_application: separate_high_risk_human_authorization_required
+    commit_or_push: false
+    live_request: false
+    deploy_or_status_promotion: false
+  rollback:
+    seed_sh: restore_exact_preimage
+    new_product_and_openspec_paths: delete_only_five_new_paths
+    run_scoped_governance: remove_only_exact_new_run_directory_on_abort
+    existing_dirty_and_sidecar: preserve_byte_for_byte
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

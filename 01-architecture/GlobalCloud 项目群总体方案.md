@@ -101,6 +101,8 @@ ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、AP
 
 `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` 是 GKE-001 的项目群上位规范。任何系统不得建立平行资料、证据、审计或长期记忆主账；任何 AI 结果在确认前只能是 `candidate`；任何业务状态改变必须由业务对象 owner 独立授权。当前工程状态固定为 `active / partial / not_complete`，不得由文档、fixture、mock、组件测试或本地镜像提升。
 
+`03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md` 是 GKE-001 的应用实施基线，负责把上位规范传导为 KDS、MMC、Studio、Brain 和 18 项目的分级产品交付、客户测试、运行证据与回滚路线；机器依赖由 `features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml` 控制，长期调度入口为 `02-governance/loop/GKE-001长期实施调度提示词.md`。客户只读试用、受控资料接入、候选复核和长期记忆必须按 Release 0 至 Release 3 逐级验收，不得跨级声明客户可用或生产就绪。
+
 ### 3.1.1 知识资产模型体系
 
 项目群知识资产模型采用“GPCF 定义、KDS 主存、Brain 消费、MMC 调用、WAES/人工授权”的单一责任链。GPCF 在 `03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md` 中维护项目群级模型、词表和兼容规则；KDS 的 OKF `KnowledgeObject` 保持知识正本，`KnowledgeAssetEnvelope` 只增加空间、业务/研发上下文、受控分类、治理责任和跨空间投影，不建立第二主账。

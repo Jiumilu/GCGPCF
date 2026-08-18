@@ -1,0 +1,119 @@
+kds_stageb_run_handoff_local_commit_authorization_request:
+  id: GKE-001-COORDINATION-20260813-036-A10I1D4R9
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  openspec_change: extend-kds-document-extraction
+  change_id: authorize-stageb-run-handoff-13-local-commit-a10i1d4r9
+  mode: human_authorization_request_only
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer:
+    role: GPCF-F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  dependencies:
+    local_core_commit: 7fb477030f5278faf55d6d16ff3874469704610d
+    local_regression_commit: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    local_openspec_commit: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    eof_rework_receipt:
+      id: GKE-001-COORDINATION-20260813-035-A10I1D4R8A2
+      sha256: 8f1aaa99ed58c4c26b79c53b5cac50c7a1f4fda9475a47ac9e58253c0a48038a
+      review: one_byte_rework_and_corrected_report_only_preflight_independent_review_passed
+  hard_stop_baseline:
+    head: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 3
+    behind: 0
+    staged: 0
+    ordinary_dirty: 191
+    ordinary_porcelain_sha256: 3836731e7f188c687fe5567a4c91828c73126c218077861b506606c2f7d2b9b0
+    expanded_dirty: 462
+    expanded_porcelain_sha256: be5b196b000358e6734f0e300452ca0b7f21117b04bd448b160c871c96c09ec5
+    opsx_lock: absent
+    role_view_registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_view_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+  exact_unit:
+    name: stageb_run_handoff_13
+    kind: governance_handoff_commit
+    path_count: 13
+    sorted_nul_pathset_sha256: dee9d08e3189096993c3cc6769bc650f9e1849cbab114ce51af22ed00ed2a525
+    ordered_manifest_sha256: 11a373670ba3a9d01c12fdd5aab7ca7aabb3accd1008e98f7c11a269bac666bc
+    canonical_patch_bytes: 37907
+    canonical_patch_sha256: 00a37e1e7a1d480896aa904257deaa35f685e052fbc16ace132c708c9c3dac83
+    target_corrected_file_sha256: 4fa7ea7c7d46b7f392f50dd1f702dba4b8da93f024c8480ea1ef38b902f6bd67
+    proposed_commit_subject: "chore(kds): record document extraction handoff"
+    paths:
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/authorization.yaml
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/changed-files.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-a3-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fifth-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fourth-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-second-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-third-review-rework.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/final-verification.txt
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/f013-handoff.md
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/handoff.yaml
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/knowledge-engineering-handoff.yaml
+      - .harness/runs/20260803-132949-extend-kds-document-extraction/run.yaml
+  requested_execution_after_human_authorization:
+    - Recheck the complete hard-stop baseline, 13-file hashes, corrected target hash, role-view hashes and absent OpsX lock before acquiring the execution lock.
+    - Acquire execution-only lock gke001-kds-stageb-run-handoff-commit-r9-lock.
+    - Stage exactly the 13 listed paths using explicit pathspecs; never use git add dot or git add all.
+    - Require cached path count 13, sorted NUL pathset SHA and canonical full-index binary patch bytes/SHA to match this control.
+    - Require git diff --cached --check to pass.
+    - Create one local commit with exact subject chore(kds): record document extraction handoff and parent a7ec87412f03fb18a9f52e11f07980e6911f22a1.
+    - Verify commit paths, modes, subject, parent, patch, complete 36-path partition, ahead/behind, staged zero, unchanged exclusions and released lock.
+    - Return a report-only receipt and freeze for F-013 postcommit independent review.
+  verification_after_commit:
+    product_tests: not_rerun_for_governance_handoff_commit
+    inherited_non_database_tests: 66_passed_not_live
+    inherited_postgresql_migration_tests: 23_passed_not_live
+    strict_openspec: require_current_change_valid
+    canonical_mirror: require_8_of_8_hash_pass_from_handoff
+    acl_audit_lineage_rollback: require_handoff_fields_and_existing_controlled_fixture_evidence
+    codegraph:
+      impact: handoff_evidence_only
+      sync_required: false_for_commit_execution
+      reason: no_product_or_contract_structure_change
+    final_independent_review: required_before_any_next_unit
+  authorization:
+    current_read_hash_and_review: true
+    GPCF_governance_record_write: true
+    KDS_stage: false_pending_human_authorization
+    KDS_local_commit: false_pending_human_authorization
+    push: false
+    tests_database_api_network: false
+    live_shared_or_production_access: false
+    deploy: false
+    status_promotion: false
+    required_human_decision: authorize_or_reject_exact_stageb_run_handoff_13_single_local_commit
+  forbidden_scope:
+    - any_KDS_stage_or_commit_before_explicit_human_authorization
+    - any_path_outside_exact_13_path_unit
+    - modify_any_candidate_content_or_hash
+    - A10I1_or_role_view_or_other_dirty_scope
+    - push_or_later_unit
+    - tests_database_api_network_live_shared_production_access
+    - clean_reset_restore_checkout_rebase_or_history_rewrite
+    - deploy_or_status_promotion
+  rollback:
+    before_authorization: withdraw_this_request_only
+    precommit_failure: unstage_only_exact_13_paths_preserve_worktree_and_release_lock
+    after_commit: separately_reviewed_compensating_git_revert_commit_only
+    external_data: not_applicable
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization_state: human_local_commit_authorization_pending
+    status_ceiling: partial

@@ -1,0 +1,200 @@
+a9_read_admission_amendment:
+  id: GKE-001-COORDINATION-20260811-003-A9
+  type: bounded_kds_stage_b_and_mmc_read_admission_replay
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature: F-013
+  openspec_change: integrate-gke001-openspec-codegraph
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-002-A8
+    sha256: 1e8fcdd04dade89a76a27647189a374d70d67267ff19817a6d5e7ff6cce30a89
+  entry_gate:
+    reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    result: a8_brain_governance_and_studio_cleanup_conditions_closed
+    brain_handoff: independently_verified
+    studio_cleanup_and_network_proof: independently_verified
+    real_authenticated_e2e_authorized: false
+    status_promotion: false
+  canonical_contract:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    source_of_truth: GPCF_F013
+    knowledge_fact_store: KDS
+    authorization_plane: MMC
+  parallel_replay:
+    enabled: true
+    active_lanes: 2
+    requires_both_handoffs_before_exit_gate: true
+    product_file_changes_authorized: false
+  lanes:
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      repository: GlobalCloud KDS
+      owner: KDS
+      change_id: verify-kds-stage-b-read-admission-a9
+      execution_mode: read_only_replay_existing_stage_b_handoff
+      repository_file_allowlist: []
+      coordination_lock_id: none_readonly_replay
+      baseline:
+        head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        branch: main
+        ahead: 0
+        behind: 0
+        observed_dirty_entries: 166
+        staged_entries: 0
+        admission: blocked_dirty_worktree
+      existing_handoff:
+        run_id: 20260803-132949-extend-kds-document-extraction
+        handoff: .harness/runs/20260803-132949-extend-kds-document-extraction/handoff.yaml
+        knowledge_engineering_handoff: .harness/runs/20260803-132949-extend-kds-document-extraction/knowledge-engineering-handoff.yaml
+        final_verification: .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/final-verification.txt
+        independent_f013_result: technical_review_verified_governance_partial
+      allowed_replay:
+        - existing_66_test_non_database_stage_b_suite
+        - existing_23_test_disposable_postgresql_and_migration_suite_with_unique_database_and_verified_cleanup
+        - openspec_strict_extend_kds_document_extraction
+        - canonical_mirror_8_of_8_sha256
+        - kds_document_gate
+        - gpcf_model_and_f013_admission_validators
+        - git_diff_check
+      required_evidence:
+        - acl_before_read_search_and_count_in_memory_and_postgresql
+        - active_extraction_only_search_and_authorized_terminal_totals
+        - extraction_evidence_and_table_cell_scoped_cursor_boundaries
+        - exact_asset_source_version_job_attempt_run_block_locator_lineage
+        - transactional_start_recovery_completion_failure_audit_and_deduplicable_outbox
+        - stale_and_expired_claim_zero_mutation_regressions
+        - stage_a_plus_stage_b_repeatable_migration_dry_run
+        - disposable_database_cleanup_count_zero
+        - append_only_compensating_active_selection_rollback
+        - canonical_manifest_and_mirror_sha
+        - exact_current_git_dirty_and_authorization_state
+      handoff_requirements:
+        - existing_run_package_paths_and_hashes
+        - exact_commands_and_results
+        - acl_read_and_count
+        - audit_outbox_and_lineage
+        - migration_dry_run_and_cleanup
+        - rollback_boundary
+        - authorization_state
+        - unresolved_risks
+        - status_partial_not_complete
+      forbidden_scope:
+        - any_repository_file_change
+        - any_new_stage_b_implementation_or_rework
+        - any_real_shared_or_production_kds_read_or_write
+        - any_production_or_shared_database_migration
+        - any_role_view_registry_or_green_supply_chain_entity_change
+        - any_canonical_gpcf_studio_brain_or_mmc_change
+        - commit
+        - push
+        - deployment
+        - status_promotion
+    mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      repository: GlobalCloud MMC
+      owner: MMC
+      change_id: verify-mmc-kds-read-admission-a9
+      execution_mode: read_only_policy_contract_and_in_process_test_replay
+      repository_file_allowlist: []
+      coordination_lock_id: none_readonly_replay
+      baseline:
+        head: 8bb60fcffb8de14e839de0631e646c8c73418092
+        origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+        branch: main
+        worktree: clean
+        ahead: 0
+        behind: 0
+      governed_read_subset:
+        connector: kds_llm_wiki_api
+        require_delegation: true
+        operations:
+          - method: GET
+            path_pattern: "*"
+            classification: explicitly_read_only_get
+          - method: POST
+            path_pattern: /api/v1/projects/*/search
+            classification: explicitly_registered_read_only_search
+        note: other_registered_operations_are_outside_A9_and_must_not_be_invoked
+      allowed_replay:
+        - in_process_permission_gateway_and_api_tests
+        - seed_policy_parse_and_exact_operation_assertions
+        - contract_test_for_kds_and_mmc_openapi
+        - mmc_loop_harness
+        - codegraph_sync_status_only
+        - git_diff_check
+      required_evidence:
+        - validated_service_identity_and_signed_user_delegation
+        - tenant_role_sensitivity_and_registry_permission_checks
+        - exact_method_and_segment_aware_path_matching
+        - traversal_nested_path_and_unregistered_operation_denial
+        - admission_before_proxy_and_status_only_denial_audit
+        - rate_circuit_and_upstream_non_success_projection
+        - exact_seed_and_active_policy_comparison_without_configuration_write
+        - no_generic_write_operation_added_or_invoked_by_A9
+        - rollback_boundary_for_only_the_governed_read_subset
+        - exact_current_git_and_authorization_state
+      handoff_requirements:
+        - exact_commands_and_results
+        - static_seed_and_runtime_policy_comparison
+        - allowed_and_denied_operation_matrix
+        - audit_and_failure_projection
+        - credential_and_identity_redaction
+        - rollback_boundary
+        - authorization_state
+        - unresolved_risks
+        - status_partial_not_complete
+      forbidden_scope:
+        - any_repository_file_change
+        - any_seed_registry_runtime_state_or_permission_change
+        - any_live_kds_or_mmc_request
+        - any_studio_brain_gpcf_or_business_system_change
+        - any_intake_upload_retry_complete_upload_or_other_write_invocation
+        - any_credential_creation_disclosure_or_persistence
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+  serial_exit_gate:
+    order:
+      - collect_kds_read_admission_handoff
+      - collect_mmc_read_admission_handoff
+      - f013_independent_read_only_review_of_both
+      - coordinator_decision_on_A10_real_readonly_application_amendment
+    exit_requirements:
+      - acl_read_and_count_verified
+      - audit_and_lineage_verified
+      - migration_dry_run_and_cleanup_verified
+      - rollback_boundaries_verified
+      - mmc_signed_delegated_read_subset_verified
+    A10_automatic_authorization: false
+    real_authenticated_search_wikipreview_chat_e2e: false
+  authorization:
+    local_read_only_repository_and_evidence_inspection: true
+    local_in_process_tests: true
+    disposable_postgresql_test_database_with_cleanup: true
+    product_test_openspec_or_evidence_file_write: false
+    live_kds_or_mmc_read: false
+    any_kds_or_mmc_write: false
+    production_or_shared_migration: false
+    studio_or_brain_execution: false
+    long_term_memory_write: false
+    relationship_or_candidate_confirmation: false
+    business_state_change: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

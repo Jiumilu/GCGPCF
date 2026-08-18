@@ -1,0 +1,104 @@
+a10i3h1r2_coordinator_review_blocker:
+  id: GKE-001-COORDINATION-20260812-001-A10I3H1R2R1
+  issued_at: 2026-08-12
+  mode: coordinator_readonly_replay_and_review_amendment
+  program_ref: GKE-001
+  release_ref: release_0
+  feature_ref: F-013
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  parent_controls:
+    implementation:
+      id: GKE-001-COORDINATION-20260811-019-A10I3H1R2
+      sha256: 880980dbd38462c58fa8da34ea67fca593c3e2bae2958e3410a6a74b1222c731
+    baseline_reconciliation:
+      id: GKE-001-COORDINATION-20260811-020-A10I3H1R2R0
+      sha256: a40e54f14ff5bd1e7b9474097e466f6ac0f6dea854ac3c35f0c34f59d4e62152
+  repository:
+    name: GlobalCloud MMC
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    baseline: b06f58a78ac7713197deed47d1125bec7a260e8c
+    head_equals_origin_main: true
+    ahead: 0
+    behind: 0
+    staged: 0
+    current_dirty_entries: 10
+    opsx_lock: absent
+    repository_allowlist: []
+  finding:
+    id: H1R2-COORDINATOR-P0-RESOLVED-PATH-LOCK-IDENTITY
+    severity: P0
+    contract_requirement: same_resolved_state_path_uses_same_advisory_lock_identity
+    result: failed
+    observed:
+      resolved_state_equal: true
+      lock_path_equal: false
+      second_process_acquired_while_first_held: true
+    root_cause: registry_state._state_lock uses path.resolve while lock_path and recovery_path derive from the unresolved caller path
+    impact: independent processes using file aliases can bypass serialization and can diverge state or lose committed API/LLM updates
+  second_review_item:
+    id: H1R2-ALL-CONSUMERS-DB-SESSION
+    severity: P1
+    result: unresolved
+    observed: runtime/app/db/session.py still reads runtime/state.json directly during file-mode startup count hydration
+    contract_requirement: all_file_mode_registry_consumers_share_one_state_transaction
+    impact: the H1R2 all-consumer claim is not exact and requires F-013 disposition
+  evidence:
+    path: features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i3h1r2-coordinator-readonly-replay-20260812.md
+    reproduction_type: disposable_tempfile_independent_process
+    shared_or_live_state_access: false
+  proposed_h1r3_scope:
+    implementation_authorized: false
+    product_test_file_count: 4
+    product_test_file_allowlist:
+      - runtime/app/gateway/registry_state.py
+      - runtime/app/db/session.py
+      - runtime/tests/test_registry_policy_audit.py
+      - runtime/tests/test_api.py
+    required_tests:
+      - file_symlink_aliases_resolve_to_one_advisory_lock_identity
+      - independent_process_alias_writer_waits_for_current_holder
+      - state_and_recovery_io_use_one_canonical_resolved_path
+      - startup_health_count_hydration_fails_closed_or_uses_shared_recovery_boundary
+      - existing_75_focused_and_146_full_runtime_regressions_remain_green
+  codegraph_impact:
+    expected_nodes:
+      - registry_state.locked_state
+      - registry_state.lock_path
+      - registry_state.recovery_path
+      - app.db.session.init_db
+    sync_required_after_future_implementation: true
+    current_index_proves_runtime_acceptance: false
+  authorization:
+    gpcf_governance_record_write: true
+    mmc_product_or_test_write: false
+    mmc_runtime_policy_change: false
+    real_kds_or_mmc_access: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - H2_seed_delta
+    - H3_runtime_policy_apply
+    - runtime/scripts/seed.sh
+    - runtime/state.json
+    - live_read
+    - real_authenticated_e2e
+    - KDS_Studio_Brain_product_change
+  serial_gate:
+    h1r2_acceptance: blocked_by_reproduced_p0
+    f013_independent_confirmation_required: true
+    h1r3_implementation_may_start: false
+  rollback:
+    current_replay: no_mmc_mutation_to_reverse
+    future_h1r3: revert_only_the_separately_authorized_four_file_delta_to_the_frozen_h1r2_handoff
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    classification: technical_rework_required_pending_f013_confirmation

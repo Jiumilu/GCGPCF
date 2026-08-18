@@ -1,0 +1,93 @@
+gke001_kds_release0_product_test_commit_readiness_replay:
+  id: GKE-001-COORDINATION-20260813-081-A10C15
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: report_only_no_stage_no_commit
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-079-A10C13
+    sha256: 88a6c2b201c9e3e949f955908831920fea89adf301ac0a380b559df6deb56001
+  lane:
+    repository: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: replay-release0-product-test-12-commit-readiness-a10c15
+    owner: KDS
+    repository_allowlist: []
+  baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+  candidate:
+    path_count: 12
+    pathset_sha256: 1cedf0a22ee41b419c4d4d18016f32c3f786c37c30ffed22fa021000cdca171a
+    ordered_content_manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+    patch_bytes: 137406
+    patch_sha256: 1ef8ee7b5553defd5d94ccb4d7f95f60729a608f0d9700bc3c1821a4c7b56fc4
+    diff_check: pass
+    real_repository_staged_after_replay: 0
+  current_verification:
+    relevant_non_database: 101_passed
+    postgresql_and_migration: 29_passed
+    disposable_database: kds_a10c15_20260813_081
+    disposable_database_cleanup_count: 0
+    kds_openspec_strict: pass
+    gpcf_openspec_strict: pass
+    openspec_codegraph_binding_self_test: pass
+    canonical_model: pass
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    f013_admission: blocked_dirty_worktree
+    f013_changed_entries: 191
+    evidence_gate: pass_with_15_governance_blockers
+    loop_document_gate: pass
+    project_group_readiness: 17_of_17_passed
+    localization_findings: 0
+    document_pollution: pass
+    kds_token: pass
+    gpcf_codegraph: {files: 1849, nodes: 24163, edges: 62440, status: up_to_date}
+    kds_codegraph: {files: 632, nodes: 5326, edges: 13240, status: up_to_date}
+    kds_codegraph_queries:
+      create_knowledge_read_router: found
+      ReadAuthority: found
+      read_postgres_search_and_graph: found
+      KnowledgeReadPostgresRepository_literal_label: no_symbol_with_that_exact_name
+  preserved_product_baselines:
+    mmc: {head_origin: b06f58a78ac7713197deed47d1125bec7a260e8c, dirty: 15, staged: 0, opsx_lock: absent, runtime_sidecar_lock: present}
+    studio: {head_origin: ec1ff4d6a35844d499334caac74d99d46691034c, dirty: 0, staged: 0, opsx_lock: absent}
+    brain: {head_origin: a22d190a487bd6da5b6fd8e02850901c8d4fe485, dirty: 0, staged: 0, opsx_lock: absent}
+  decision:
+    technical_readiness: replay_passed
+    human_local_commit_authorization: pending
+    a10c13_request_remains_authoritative: true
+    commit_executed: false
+    push_executed: false
+  forbidden:
+    - stage
+    - commit
+    - push
+    - content_edit_in_kds
+    - openspec_8
+    - run_handoff_15
+    - role_view
+    - self_link
+    - other_dirty
+    - mmc_policy_write
+    - authenticated_live_e2e
+    - deployment
+    - status_promotion
+  rollback:
+    repository: not_applicable_no_product_repository_write
+    disposable_database: dropped_cleanup_count_zero
+    temporary_index: moved_to_recoverable_system_trash
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: human_local_commit_authorization_required
+    promotion: false

@@ -1,0 +1,156 @@
+kds_stageb_core_authorization_request:
+  id: GKE-001-COORDINATION-20260812-014-A10I1D4R1
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  openspec_change: extend-kds-document-extraction
+  change_id: authorize-kds-stageb-core-disposition-a10i1d4r1
+  mode: human_authorization_request_only
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  owner: KDS
+  target_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer:
+    role: GPCF-F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  parent_request:
+    id: GKE-001-COORDINATION-20260812-013-A10I1D4
+    sha256: 01685904e46c63e3997f6080716f8bb5ddddfe6ebe7588641870c905f9b23f76
+    review: rework_required
+    findings_closed:
+      - Replace standard KDS handoff with a task receipt mirrored into GPCF report-only evidence.
+      - Authorize only the first unit; later units require their actual reviewed parent commit SHA.
+      - Freeze the NUL-delimited sorted cached-path comparison algorithm.
+      - Require reverse-order compensating reverts for any future multi-unit rollback.
+  parent_preflight:
+    id: GKE-001-COORDINATION-20260812-012-A10I1D3
+    sha256: 44952b52497325a936deb68a6a2a986f4d6d287805818b8a8fce4cd5f5a13142
+    review: preflight_verified_sufficient_for_separately_controlled_stageb_owner_disposition
+  required_pre_execution_baseline:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_dirty_entries: 190
+    expanded_dirty_entries: 462
+    ordinary_status_algorithm: git_status_porcelain_v1_z_untracked_files_normal_raw_stdout_sha256
+    ordinary_status_sha256: 51c8985e3eba86cc115cd58fd6cfb1f809857198a8d4ed2b822afb9a31afc905
+    expanded_status_algorithm: git_status_porcelain_v1_z_untracked_files_all_raw_stdout_sha256
+    expanded_status_sha256: 0055f30e91654a23252292f956f665a97242962aff6442964755519c7e7a1b9b
+    opsx_lock: absent
+  requested_unit:
+    order: 1
+    unit: stageb_core_12
+    kind: product_test_local_commit
+    paths:
+      - requirements.txt
+      - knowledge_intake/api.py
+      - knowledge_intake/postgres.py
+      - knowledge_intake/repository.py
+      - knowledge_intake/service.py
+      - knowledge_intake/extraction.py
+      - knowledge_intake/extraction_service.py
+      - knowledge_intake/sql/002_document_extraction.sql
+      - tests/test_document_extraction_domain.py
+      - tests/test_document_extraction_parsers.py
+      - tests/test_document_extraction_service.py
+      - tests/test_document_extraction_migration.py
+    path_count: 12
+    sorted_nul_pathset_sha256: ca5d5931bd2d41619cd83c0347ba72c73cde41534d8dd078bfc5fc908514a0bb
+    canonical_patch_bytes: 175642
+    canonical_patch_sha256: 7fe83224e36ffb504e79ecf67579256d1d956ee4a8b99def35c627811dc872dc
+    known_apply_warning: new_blank_line_at_eof_non_blocking_diff_check_passed
+    proposed_commit_subject: "feat(kds): add document extraction stage b core"
+  requested_human_decision:
+    prompt: authorize_or_reject_one_local_stage_and_commit_for_stageb_core_12_only
+    if_authorized:
+      stage_exact_12_paths: true
+      create_one_local_commit: true
+      acquire_temporary_opsx_lock: true
+      push: false
+      later_units: false
+    if_rejected:
+      KDS_repository_write: false
+      withdraw_request: true
+  execution_sequence_if_authorized:
+    - Recheck exact HEAD, origin/main, branch, ahead/behind, empty index, both dirty-status hashes and absent OpsX lock.
+    - Reconstruct the A10I1D3 canonical core patch and require byte count and SHA-256 to match before staging.
+    - Acquire the temporary lock gke001-kds-stageb-core-disposition-a10i1d4r1-lock; never stage the lock.
+    - Stage only the exact requested_unit.paths pathspec; never use git add dot or git add all.
+    - Compare git diff --cached --name-only -z --diff-filter=ACMRTUXB after LC_ALL=C sort -z with the frozen sorted NUL pathset SHA-256.
+    - Reconstruct the staged canonical binary patch using the A10I1D3 patch algorithm and require exact SHA-256 7fe83224e36ffb504e79ecf67579256d1d956ee4a8b99def35c627811dc872dc.
+    - Run git diff --cached --check and abort before commit on any mismatch.
+    - Create exactly one local commit with the frozen subject and parent f28edb5113e0493ed60fec423cb6c7e1a6252de8.
+    - Release the temporary lock and verify index empty, ahead=1, behind=0, push absent and excluded paths unchanged.
+    - Produce a task receipt only; the coordinator mirrors it into GPCF report-only evidence. This is not an OpsX standard handoff.
+  post_commit_report_only_receipt:
+    required:
+      - actual_commit_sha_and_parent_sha
+      - exact_commit_name_status_and_sorted_nul_pathset_sha256
+      - commit_binary_patch_sha256
+      - clean_archive_core_only_test_command_and_result
+      - git_diff_check_result
+      - final_head_origin_ahead_behind_staged_and_lock_state
+      - before_after_hashes_for_all_excluded_role_view_and_A10I1_paths
+      - zero_push_deploy_live_database_API_credential_and_status_promotion_statement
+    repository_write_allowlist: []
+    KDS_handoff_or_evidence_write: false
+    standard_opsx_handoff_claim: false
+    independent_review_required_before_next_unit: true
+  clean_archive_verification:
+    parent_or_commit_source: resulting_local_core_commit
+    non_database_command: PYTHONDONTWRITEBYTECODE=1 PYTEST_ADDOPTS='-p no:cacheprovider' python3 -m pytest -q tests/test_document_extraction_domain.py tests/test_document_extraction_parsers.py tests/test_document_extraction_service.py tests/test_knowledge_intake_api.py tests/test_knowledge_intake_security.py tests/test_knowledge_intake_jobs_audit.py tests/test_knowledge_asset_model_bridge.py
+    expected: exit_0_core_only_independent_review_baseline
+    disposable_root_cleanup_required: true
+    shared_or_production_database_access: false
+  deferred_units_not_authorized:
+    - stageb_regression_2
+    - stageb_openspec_9
+    - stageb_run_handoff_13
+    - A10I1_release0
+    - external_green_supply_chain_role_view
+    - every_other_dirty_KDS_scope
+  later_unit_rule:
+    - A later unit receives a new sealed control only after the actual previous commit SHA and F-013 receipt review are recorded.
+    - No control may pre-authorize all four commits.
+    - The run/handoff unit may commit only its frozen existing 13 paths; any new standard OpsX run requires a separate scope and manifest.
+  rollback:
+    before_authorization: withdraw_A10I1D4R1_and_keep_KDS_unchanged
+    after_authorized_core_commit: separately_review_and_authorize_one_compensating_git_revert_of_the_latest_core_commit
+    future_multiple_units: revert_only_in_reverse_dependency_order_4_to_3_to_2_to_1
+    prohibited: reset_clean_restore_checkout_rebase_force_push_or_history_rewrite
+    KDS_immutable_data: not_applicable_no_runtime_or_database_write
+    external_data: none
+  GPCF_repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-stageb-core-authorization-request-a10i1d4r1.yaml
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-stageb-core-authorization-request-and-review-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-stageb-owner-disposition-authorization-request-and-review-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    - features/active/F-013-knowledge-asset-model-system/journal.md
+    - 02-governance/loop/LOOP_CONTROL_BOARD.md
+    - 02-governance/loop/LOOP_SESSION_REGISTRY.md
+    - tools/kds-sync/validate_gke001_three_lane_coordination.py
+  current_authorization:
+    GPCF_governance_record_write: true
+    independent_read_only_review: true
+    KDS_repository_write: false
+    stage: false
+    commit: false
+    push: false
+    live_shared_or_production_access: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    review_state: f013_review_pending
+    authorization_state: human_core_commit_authorization_pending
+    status_ceiling: partial

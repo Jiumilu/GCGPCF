@@ -1,0 +1,107 @@
+coordination:
+  id: GKE-001-COORDINATION-20260814-030-A10R6-KDS
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: reconcile-kds-release0-run-handoff-truth-a10r6
+  mode: governance_write_no_commit_no_push
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-029-A10R5-KDS
+    sha256: 2936c249f0f1acd350f615b58fe4c907c656e7a5743bc5c928e1fd13493cc8cd
+  status_ceiling: active_partial_not_complete
+
+baseline:
+  branch: main
+  head: 410e71c1391f88423ccaf79ed6e5c69d655907f4
+  origin_main: 410e71c1391f88423ccaf79ed6e5c69d655907f4
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_dirty: 188
+  ordinary_nul_sha256: 0947f9d6e0ebde101084845a7ed879fcedca2198c4fb364b812d0208be1c02be
+  expanded_dirty: 440
+  expanded_nul_sha256: df5f003cf513bca4337a70979ae9eb3c55bf0cdf9974e2dad930149156ee4810
+  opsx_lock: absent
+  remote_main: inherited_410e71c1_not_requeried
+
+repository_allowlist:
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/run.yaml
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/handoff.yaml
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/knowledge-engineering-handoff.yaml
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/f013-handoff.md
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence-index.yaml
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/acceptance-matrix.md
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/status-audit.yaml
+
+required_reconciliation:
+  run_yaml:
+    - update current governance disposition to HEAD and origin/main 410e71c1391f88423ccaf79ed6e5c69d655907f4
+    - record ahead behind staged as 0 0 0 and dirty counts as 188 ordinary and 440 expanded
+  handoff_yaml:
+    - update current disposition baseline
+    - record Release0 product_test_12 and OpenSpec_8 as pushed and independently reviewed
+    - leave only run_handoff_15 as the Release0 governance disposition still open
+  knowledge_engineering_handoff_yaml:
+    - correct only current unresolved risks and authorization disposition
+  f013_handoff_md:
+    - correct only the current blocker and disposition paragraphs
+  evidence_index_yaml:
+    - remove stale product_test push and OpenSpec uncommitted blockers
+    - state explicitly that A10R5 and A10R6 did not rerun tests or databases
+  acceptance_matrix_md:
+    - correct only the final Harness decision and current blocker summary
+  status_audit_yaml:
+    - correct current status reason conflicts and blockers
+    - append reconciliation metadata without overwriting the historical audit timestamp
+
+immutable_history:
+  paths:
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/**
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/patches/api-server.patch
+  facts:
+    - focused_41_passed
+    - non_database_101_passed
+    - postgresql_migration_29_passed
+    - disposable_cleanup_0
+    - historical_commands_and_codegraph
+    - historical_review_records
+    - historical_commit_push_false_authorization_facts
+  rule: preserve_bytes_and_do_not_relabel_as_current_replay
+
+forbidden_scope:
+  - KDS product test OpenSpec StageB or canonical contract changes
+  - external role-view files
+  - governance automation corpus domain temporary output or self-link owner groups
+  - tests database API network credential runtime or live access
+  - stage commit push deploy cleanup deletion or status promotion
+
+verification:
+  - verify baseline and seven-file preimages before write
+  - acquire and release the official OpsX lock without staging it
+  - parse all changed YAML files
+  - run git diff --check
+  - prove only the seven allowlisted files changed from their preimages
+  - recompute the complete run_handoff_15 pathset and content manifest
+  - preserve all other dirty owner-group status records and role-view hashes
+  - submit the result to F-013 for independent read-only review
+
+authorization:
+  local_governance_truthfulness_write: authorized
+  commit: false
+  push: false
+  real_kds_or_mmc_access: false
+  deployment: false
+  status_promotion: false
+
+rollback:
+  repository: restore only the seven allowlisted files to their recorded preimages
+  external_data: not_applicable
+
+expected_result:
+  admission: blocked_dirty_worktree
+  dirty_counts_expected_to_remain: 188_ordinary_440_expanded
+  classification: governance_truthfulness_reconciled_pending_independent_review
+  status: active_partial_not_complete

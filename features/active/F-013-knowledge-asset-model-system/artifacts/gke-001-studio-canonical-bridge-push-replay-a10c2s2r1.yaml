@@ -1,0 +1,22 @@
+gke001_studio_canonical_bridge_push_replay:
+  id: GKE-001-COORDINATION-20260813-055-A10C2S2R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-053-A10C2S2
+    sha256: ddaa1037c7276ad5edecbc4775e9ad7c69fda9b5c68fb97f5aaee7b466172219
+    result: stopped_before_push_due_to_ambiguous_remote_query_pattern
+  correction_type: exact_remote_ref_query_only
+  exact_remote_query: git ls-remote origin refs/heads/main
+  expected_remote_line: 89697af0ddc90214f14f661c88218052fea57c34 refs/heads/main
+  inherit_all_commit_baseline_forbidden_and_postconditions_from_a10c2s2: true
+  authorized_command: git push origin ec1ff4d6a35844d499334caac74d99d46691034c:refs/heads/main
+  execute_exactly_once_after_all_rechecks: true
+  stop_on_any_mismatch: true
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

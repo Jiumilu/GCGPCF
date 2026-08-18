@@ -1,0 +1,122 @@
+kds_stageb_core_baseline_reconciliation:
+  id: GKE-001-COORDINATION-20260812-015-A10I1D4R1B1
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  openspec_change: extend-kds-document-extraction
+  change_id: reconcile-kds-stageb-core-preexecution-baseline-a10i1d4r1b1
+  mode: governance_only_report_only_baseline_reconciliation
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  owner: GPCF
+  inspected_repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  target_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  parent_authorization_request:
+    id: GKE-001-COORDINATION-20260812-014-A10I1D4R1
+    sha256: d9dbe8ba24518beec10d4e5eefbcfddebeb22669d4195b084ae150ba6a433b3a
+    review: authorization_request_review_passed_human_core_commit_authorization_required
+    authorized_action_unchanged: stage_exact_12_core_paths_and_create_one_local_commit
+  human_authorization_receipt:
+    source: current_coordinator_thread_user_message
+    text: 授权仅按 D4R1 在 KDS f28edb51 基线上创建 stageb_core_12 本地提交。
+    decision: granted
+    scope_expansion: false
+    push: false
+    later_units: false
+  original_precondition_snapshot:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_dirty_entries: 190
+    expanded_dirty_entries: 462
+    ordinary_status_sha256: 51c8985e3eba86cc115cd58fd6cfb1f809857198a8d4ed2b822afb9a31afc905
+    expanded_status_sha256: 0055f30e91654a23252292f956f665a97242962aff6442964755519c7e7a1b9b
+    opsx_lock: absent
+  observed_preexecution_snapshot:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_dirty_entries: 193
+    expanded_dirty_entries: 465
+    ordinary_status_algorithm: git_status_porcelain_v1_z_untracked_files_normal_raw_stdout_sha256
+    ordinary_status_sha256: b31adbbafecf1b7298d67c1b3cbbce9284d47e30df91968ee36f5dd6191207fd
+    expanded_status_algorithm: git_status_porcelain_v1_z_untracked_files_all_raw_stdout_sha256
+    expanded_status_sha256: c9f558c32db56ed3a885d73056325b225df4ce536a1d15ce76419cbb7a1be01b
+    opsx_lock: absent
+  exact_new_external_entries:
+    - path: _governance/sync-runs/macmini-workwiki-20260812-064238/remote-identity.txt
+      sha256: 04b9ee8d7ce159e1b00cda33283633c5281323b484acea470855a181a88227de
+      owner_scope: automated_governance_output
+    - path: _governance/sync-runs/feishu-xiaog-closure-20260812-071103/macmini-evidence.json
+      sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      owner_scope: automated_governance_output
+    - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260812-073133/report.md
+      sha256: 8fb1046314b51790418f5ecdbd7631ae1009cfb7bb7747e851db80df59c18d30
+      owner_scope: automated_governance_output
+  reconciliation_findings:
+    - Exactly three ordinary and three expanded entries were added after the D4R1 review snapshot.
+    - All three are untracked single-file automated governance outputs outside the core 12 paths.
+    - HEAD, origin/main, branch, ahead/behind, index and OpsX lock did not change.
+    - The two green-supply-chain role-view file hashes remain unchanged and excluded.
+    - No D4R1 core path, A10I1 path, OpenSpec path or existing handoff path is added by this drift.
+  requested_unit_unchanged:
+    unit: stageb_core_12
+    path_count: 12
+    sorted_nul_pathset_sha256: ca5d5931bd2d41619cd83c0347ba72c73cde41534d8dd078bfc5fc908514a0bb
+    canonical_patch_bytes: 175642
+    canonical_patch_sha256: 7fe83224e36ffb504e79ecf67579256d1d956ee4a8b99def35c627811dc872dc
+    parent_commit: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    commit_subject: "feat(kds): add document extraction stage b core"
+  execution_rule_after_review:
+    - Require the observed 193/465 snapshot and both observed status SHA-256 values immediately before staging.
+    - Require all three external entries to retain their exact hashes and remain unstaged.
+    - Stage only the unchanged D4R1 exact core 12 pathspec.
+    - Abort on any further status, path, mode, patch, index, lock or excluded-file drift.
+    - Preserve the D4R1 task/GPCF report-only receipt and post-commit F-013 review boundary.
+  KDS_repository_allowlist_for_this_reconciliation: []
+  GPCF_repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-stageb-core-baseline-reconciliation-a10i1d4r1b1.yaml
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-stageb-core-baseline-reconciliation-and-review-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    - features/active/F-013-knowledge-asset-model-system/journal.md
+    - 02-governance/loop/LOOP_CONTROL_BOARD.md
+    - 02-governance/loop/LOOP_SESSION_REGISTRY.md
+    - tools/kds-sync/validate_gke001_three_lane_coordination.py
+  authorization:
+    read_and_hash_KDS: true
+    GPCF_governance_write: true
+    stage_core_after_independent_review: human_authorized_but_review_hold
+    commit_core_after_independent_review: human_authorized_but_review_hold
+    KDS_write_during_reconciliation: false
+    push: false
+    later_units: false
+    live_shared_or_production_access: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - stage_commit_or_modify_KDS_before_this_reconciliation_is_independently_reviewed
+    - stage_modify_or_delete_the_three_external_entries
+    - any_A10I1_role_view_OpenSpec_run_handoff_or_other_dirty_scope
+    - push_deploy_live_write_credential_or_status_promotion
+    - clean_reset_restore_checkout_rebase_or_history_rewrite
+  rollback:
+    before_execution: withdraw_only_this_GPCF_reconciliation_and_keep_KDS_unchanged
+    after_authorized_core_commit: use_D4R1_separately_reviewed_compensating_revert_boundary
+    external_entries: preserve_unchanged_no_cleanup_or_deletion
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    review_state: f013_review_pending
+    execution_state: human_authorized_baseline_reconciliation_hold
+    status_ceiling: partial

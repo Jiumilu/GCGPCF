@@ -1,0 +1,116 @@
+a10p3r2_metadata_only_contract_reconciliation:
+  id: GKE-001-COORDINATION-20260811-010-A10P3R2
+  type: metadata_only_contract_reconciliation_hash_only_review
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-009-A10P3R1
+    sha256: c8b76dcde4ffdee835fe426edbd44c33c975b6bcbd25dd60ad0dd827134f6060
+    independent_review: field_schema_freeze_ready_single_MMC_fingerprint_placeholder_blocker
+  reconciled_schema:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-openapi-candidate-a10p3r2.yaml
+    raw_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+    canonical_json_bytes: 34563
+    canonical_json_sha256: a6fe1197ab9bfae4a1919c903b296b13a52f7db9d276212aaabd48ae854a2d37
+    status: candidate_not_frozen_not_implemented
+  exact_single_field_delta:
+    path: x-mmc-policy.candidate_isolated_fingerprint
+    before: pending_joint_recomputation
+    after: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    changed_schema_lines: 1
+  preserved_evidence:
+    normalizer_path: tools/kds-sync/normalize_gke001_release0_read_contract.py
+    normalizer_sha256: d820e8103b2af74aab06381fe4034c9cec525acc8c7e1efdb074bd8a4a3aa4e4
+    operation_matrix_bytes: 826
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+    MMC_candidate_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    MMC_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    A10P3R1_instance_results: unchanged
+    future_file_lists:
+      Studio: 10
+      MMC: 8
+      KDS: 12
+  future_implementation_control_split:
+    kds_product_test:
+      file_count: 12
+      separate_control_required: true
+    studio_mmc_connector_product_test:
+      Studio_file_count: 10
+      MMC_non_policy_file_count: 6
+      separate_control_required: true
+    mmc_policy_configuration:
+      paths:
+        - runtime/scripts/seed.sh
+        - runtime/state.json
+      high_risk_human_authorization_required: true
+      separate_control_required: true
+    live_read:
+      separate_human_authorization_required: true
+    real_authenticated_e2e:
+      separate_human_authorization_required: true
+  parallel_lanes:
+    studio_mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      change_id: verify-a10p3r2-single-field-reconciliation
+      execution_mode: hash_only_report
+      repository_file_allowlist: []
+      required_report:
+        - exact_control_schema_canonical_normalizer_matrix_and_fingerprints
+        - exact_one_line_schema_diff
+        - unchanged_Studio_10_MMC_8_file_lists
+        - zero_action_statement
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      change_id: verify-a10p3r2-single-field-reconciliation
+      execution_mode: hash_only_report
+      repository_file_allowlist: []
+      required_report:
+        - exact_control_schema_canonical_normalizer_matrix_and_fingerprints
+        - exact_one_line_schema_diff
+        - unchanged_KDS_12_file_list_and_instance_results
+        - zero_action_statement
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      change_id: frozen-after-a10p1-tranche-2
+      execution_mode: freeze_and_wait
+      repository_file_allowlist: []
+  serial_gate:
+    order:
+      - collect_two_hash_only_receipts
+      - F013_final_byte_review
+      - coordinator_may_mark_contract_frozen_for_future_implementation_only
+    automatic_contract_freeze: false
+    implementation_authorized: false
+    policy_change_authorized: false
+    live_read_authorized: false
+    real_e2e_authorized: false
+  authorization:
+    GPCF_single_field_schema_and_control_write: true
+    lane_hash_only_static_read: true
+    lane_repository_file_write: false
+    runtime_policy_or_configuration_change: false
+    database_or_external_data_access: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    Brain_tranche_3: false
+    real_authenticated_e2e: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    control: withdraw_A10P3R2_and_retain_A10P2_decision_baseline
+    repositories: not_applicable_no_lane_change_authorized
+    external_data: not_applicable_no_access_authorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

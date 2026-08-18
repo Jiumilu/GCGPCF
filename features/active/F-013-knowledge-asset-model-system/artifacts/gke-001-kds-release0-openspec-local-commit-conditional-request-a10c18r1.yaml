@@ -1,0 +1,71 @@
+conditional_authorization_request:
+  id: GKE-001-COORDINATION-20260814-009-A10C18R1
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  change_id: commit-release0-openspec-current-baseline-a10c18r1
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-008-A10C18
+    sha256: dc46d23cda339578c1ef228adaef0f8d3ef5bb4e39b3307263b71813c26875b2
+    review_classification: release0_openspec_8_current_baseline_preflight_passed_eligible_for_new_separate_human_local_commit_request
+  candidate_baseline:
+    head: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    current_origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    current_ahead_behind_staged: 1/0/0
+  exact_paths:
+    - openspec/changes/implement-release0-canonical-read-facade/.openspec.yaml
+    - openspec/changes/implement-release0-canonical-read-facade/design.md
+    - openspec/changes/implement-release0-canonical-read-facade/proposal.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-audit/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-authorization/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-contract/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-projections/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/tasks.md
+  sealed_fingerprints:
+    path_count: 8
+    pathset_sha256: 5fd19a7e466521ece8ec190fe23a4dfee26748f551fc6c05718f86f71b24c7a5
+    content_manifest_sha256: 472472a6f4a66701094a44210795b6ae722f322e8f9f787ab9c7c2fc24559fce
+    patch_bytes: 25737
+    patch_sha256: 76331dd9a24cda8bad2da25691e9ff8d19b6f62ec5654b6fca9df5148613ce5c
+  commit_candidate:
+    count: 1
+    subject: "docs(kds): govern release 0 canonical read facade"
+    local_only: true
+  presentable_only_after:
+    - exact_non_force_push_of_a544f67e_is_human_authorized_and_succeeds
+    - F013_postpush_review_confirms_HEAD_origin_remote_equal_a544f67e
+    - current_eight_path_bytes_and_fingerprints_remain_exact
+    - dirty_scope_is_rebaselined_and_staged_is_zero
+    - official_opsx_lock_is_absent
+  current_authorization:
+    present_to_human_as_executable_request: false
+    stage: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  abort_rule:
+    condition: any_dependency_baseline_scope_fingerprint_or_gate_mismatch
+    actions:
+      - do_not_stage
+      - do_not_commit
+      - preserve_all_worktree_bytes
+      - return_exact_reconciliation
+  forbidden_scope:
+    - product_test_12
+    - run_handoff_15
+    - stage_b
+    - role_view
+    - other_dirty_owner_groups
+    - real_or_shared_KDS_or_MMC_access
+  rollback:
+    current: not_applicable_no_execution
+    future_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

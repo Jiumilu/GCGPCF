@@ -1,0 +1,91 @@
+kds_stageb_run_handoff_eof_rework_receipt:
+  id: GKE-001-COORDINATION-20260813-035-A10I1D4R8A2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  mode: execution_receipt_and_independent_review_closure
+  parent_controls:
+    authorization_request:
+      id: GKE-001-COORDINATION-20260812-031-A10I1D4R8
+      sha256: 46f65f9216a983cb559be87ca4779ca1b1d99d1ebeec34dbc13e3310b2bd3725
+    hash_hardening:
+      id: GKE-001-COORDINATION-20260812-032-A10I1D4R8R1
+      sha256: 68a680653e44f0701c8cfb7811ab06f82a2fcd6b16b6138e06e27f43909ed63a
+    baseline_reconciliation:
+      id: GKE-001-COORDINATION-20260813-033-A10I1D4R8B1
+      sha256: 41ea87a447d40b17fae124cff74cbc1198882e89112e81b7178abc098118bbd6
+    execution:
+      id: GKE-001-COORDINATION-20260813-034-A10I1D4R8A1
+      sha256: 7ea77e17fc0a72b433bc244903efcc633ddd992e7ff7823b50dbff3909f2f999
+  KDS:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    baseline_head: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 3
+    behind: 0
+    staged: 0
+    ordinary_dirty: 191
+    ordinary_porcelain_sha256: 3836731e7f188c687fe5567a4c91828c73126c218077861b506606c2f7d2b9b0
+    expanded_dirty: 462
+    expanded_porcelain_sha256: be5b196b000358e6734f0e300452ca0b7f21117b04bd448b160c871c96c09ec5
+    opsx_lock: absent
+  exact_edit:
+    path: .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+    before_bytes: 1175
+    before_sha256: a90228ec94735c60c0834f47c40a96b2bb6365fba88b616a362e8d6060955478
+    before_suffix_hex: 61676520422e0a0a
+    operation: remove_exactly_one_final_newline_byte
+    after_bytes: 1174
+    after_sha256: 4fa7ea7c7d46b7f392f50dd1f702dba4b8da93f024c8480ea1ef38b902f6bd67
+    after_suffix_hex: 61676520422e0a
+  corrected_preflight:
+    exact_path_count: 13
+    ordered_manifest_sha256: 11a373670ba3a9d01c12fdd5aab7ca7aabb3accd1008e98f7c11a269bac666bc
+    deterministic_patch_bytes: 37907
+    deterministic_patch_sha256: 00a37e1e7a1d480896aa904257deaa35f685e052fbc16ace132c708c9c3dac83
+    repeated_generation: byte_identical
+    diff_check: pass
+    disposable_apply_identity: 13_of_13
+    disposable_reverse_remaining_paths: 0
+    disposable_cleanup_count: 0
+    yaml_governance_checks: pass
+    partition: exact_pairwise_disjoint_12_core_plus_2_regression_plus_9_openspec_plus_13_handoff
+    inherited_evidence:
+      non_database_tests: 66
+      postgresql_and_migration_tests: 23
+      classification: inherited_not_rerun_not_live
+  exclusions:
+    role_view_registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_view_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+    a10i1_and_role_view_intersection: empty
+  independent_review:
+    reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    baseline_reconciliation: baseline_drift_reconciled_original_human_authorization_remains_valid
+    execution_and_preflight: one_byte_rework_and_corrected_report_only_preflight_independent_review_passed
+  authorization_boundary:
+    one_byte_edit: consumed
+    report_only_preflight: consumed
+    stage: false
+    commit: false
+    push: false
+    tests_database_api_network: false
+    later_units: false
+    live_shared_or_production_access: false
+    deployment: false
+    status_promotion: false
+    future_13_file_local_commit_requires_separate_human_authorization: true
+  rollback:
+    one_byte_edit: separately_reviewed_one_byte_compensating_edit_only
+    future_commit: not_applicable_not_authorized
+    unrelated_dirty_state: preserve_unchanged
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    preflight: independently_verified
+    next_gate: separate_human_authorization_for_13_file_local_commit
+    status_ceiling: partial

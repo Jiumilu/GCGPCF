@@ -1,0 +1,89 @@
+kds_stageb_openspec_preflight:
+  id: GKE-001-COORDINATION-20260812-024-A10I1D4R5
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: preflight-stageb-openspec-9-a10i1d4r5
+  dependency:
+    accepted_local_core_commit: 7fb477030f5278faf55d6d16ff3874469704610d
+    accepted_local_regression_commit: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    regression_review: local_regression_commit_independent_review_passed
+    run_handoff_13: frozen_not_authorized
+  baseline:
+    head: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 2
+    behind: 0
+    staged: 0
+    ordinary_dirty: 179
+    ordinary_porcelain_sha256: 3117b6b20fe7de267955e8ea6142ccb3fb5b213f7c3d3139f157844dec24b7ad
+    expanded_dirty: 451
+    expanded_porcelain_sha256: 08649640d16373ecccd906fcf43617192abb4206b7d479e5e5ca17d2e1dee023
+    opsx_lock: absent
+  candidate_unit:
+    name: stageb_openspec_9
+    repository_write_allowlist: []
+    source_paths:
+      - openspec/changes/extend-kds-document-extraction/.openspec.yaml
+      - openspec/changes/extend-kds-document-extraction/design.md
+      - openspec/changes/extend-kds-document-extraction/proposal.md
+      - openspec/changes/extend-kds-document-extraction/specs/document-extraction-pipeline/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extracted-content-evidence/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extraction-access-projection/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extraction-evidence-links/spec.md
+      - openspec/changes/extend-kds-document-extraction/specs/extraction-job-orchestration/spec.md
+      - openspec/changes/extend-kds-document-extraction/tasks.md
+    frozen_manifest_sha256: 7acdd640e47a6892af715d57038b57de5747f84061cbf3f0034d5bef52dfdeed
+    future_commit_subject: "docs(kds): specify document extraction stage b"
+  authorization:
+    mode: report_only_disposable_preflight
+    read_kds_git_objects_and_candidate_files: true
+    deterministic_external_patch_generation: true
+    selective_clean_copy_overlay: true
+    strict_openspec_validation: true
+    kds_repository_write: false
+    opsx_lock: false
+    stage: false
+    commit: false
+    push: false
+    tests_or_database: false
+    live_or_shared_access: false
+    deploy: false
+    status_promotion: false
+  required_verification:
+    - Recompute the exact nine-path ordered manifest and prove SHA-256 7acdd640e47a6892af715d57038b57de5747f84061cbf3f0034d5bef52dfdeed.
+    - Generate the nine-path patch twice outside KDS and prove byte identity, exact paths and diff-check pass.
+    - Overlay the candidate on a disposable selective clean copy of commit 60957dd92380bfeb6049ec552658dad22d5d90dc.
+    - Run openspec validate extend-kds-document-extraction --strict in that copy and require pass.
+    - Reverse the overlay and prove all nine paths return to absent at the commit baseline.
+    - Reconfirm before and after Git state, no lock and excluded role-view hashes.
+  exclusions:
+    - stageb_core_12_already_committed
+    - stageb_regression_2_already_committed
+    - stageb_run_handoff_13
+    - release0_a10i1_paths
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+    - any_other_dirty_scope
+  codegraph:
+    impact: none_report_only_no_repository_write
+    sync_required: false
+  rollback:
+    repository: not_applicable
+    disposable_copy: remove_exact_task_root
+  handoff:
+    kind: report_only_task_receipt
+    independent_reviewer: F-013
+    future_commit_authorization_after_review: human_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    execution: report_only_preflight_authorized

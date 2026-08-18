@@ -1,0 +1,93 @@
+gke001_kds_release0_run_handoff_local_commit_authorization_request:
+  id: GKE-001-COORDINATION-20260813-075-A10C11R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: implement-release0-canonical-read-facade
+  mode: human_authorization_request_only
+  owner: KDS_release0_run_governance
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-074-A10C11R1
+    sha256: 90b746fcfc4f33b56ef1d74655e71175953eeaad95feea54c4f86bbaa1762da5
+    independent_review: release0_run_handoff_15_governance_reconciliation_passed_eligible_for_future_separate_human_local_commit_authorization_request
+  required_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent_before_execution
+  exact_root: .harness/runs/20260811-193752-implement-release0-canonical-read-facade
+  exact_path_count: 15
+  sealed_fingerprints:
+    sorted_nul_pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+    ordered_content_manifest_sha256: 38b7e110b728f7cef0617a080e3fb3e9fe273886d346f5ee744b45f32e5c814d
+    full_index_patch_bytes: 42315
+    full_index_patch_sha256: ea484c7f976a08aa770b7867f9556f5b98785f3f9d58991b3639b5ee9e1f3cd8
+  verified_evidence:
+    yaml_parse: pass
+    openspec_strict: pass
+    tasks_checked: 23/23
+    diff_check: pass
+    f013_first_batch_serial_gate: closed
+    matrix_reconciliation_review: technical_governance_reconciliation_verified_f013_independent_review_passed
+    codegraph_files_nodes_edges: 632/5326/13240
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    focused_tests: inherited_41_passed_not_rerun_under_A10C11
+    relevant_non_database_tests: inherited_101_passed_not_rerun_under_A10C11
+    disposable_postgresql_migration: inherited_29_passed_cleanup_zero_not_rerun_under_A10C11
+  commit:
+    count: 1
+    subject: "chore(kds): reconcile release 0 read facade handoff"
+    local_only: true
+  mandatory_execution_gates:
+    - reverify_exact_baseline_counts_and_nul_hashes
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_15_paths_under_exact_root_only
+    - recompute_all_sealed_fingerprints
+    - require_yaml_openspec_and_cached_diff_checks
+    - create_exactly_one_local_commit_with_frozen_subject
+    - verify_commit_parent_scope_patch_and_diff_check
+    - release_lock_and_return_report_only_receipt
+  abort_rule:
+    condition: any_baseline_scope_fingerprint_or_gate_mismatch
+    actions:
+      - unstage_only_the_exact_15_paths
+      - require_staged_count_zero
+      - preserve_all_15_worktree_bytes
+      - preserve_all_other_dirty_and_self_link
+      - release_lock
+      - create_no_commit
+  forbidden:
+    - release0_product_test_12
+    - release0_openspec_8
+    - stage_b
+    - role_view
+    - other_dirty_owner_groups
+    - GlobalCloud_KDS_self_link_modification_or_deletion
+    - content_rework_beyond_sealed_patch
+    - push
+    - real_kds_or_mmc_write
+    - credentials
+    - deployment
+    - status_promotion
+  dependency:
+    same_repository_serial_only: true
+    must_not_execute_concurrently_with_other_kds_commit_units: true
+    if_any_prior_kds_commit_occurs: rebaseline_and_reseal_before_execution
+  rollback:
+    before_commit: abort_rule_above
+    after_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_human_authorization: pending
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

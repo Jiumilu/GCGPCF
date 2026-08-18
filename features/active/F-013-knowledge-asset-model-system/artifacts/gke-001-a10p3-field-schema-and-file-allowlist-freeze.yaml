@@ -1,0 +1,171 @@
+a10p3_field_schema_and_file_allowlist_freeze:
+  id: GKE-001-COORDINATION-20260811-008-A10P3
+  type: field_schema_and_exact_file_allowlist_freeze_report_only
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-007-A10P2
+    sha256: e2a0cb491bcb626bb29507be5e51612e4cb26ddf1427b94e70f7bd3f1b7f249e
+    independent_review: operation_identity_decision_baseline_accepted_field_schema_rework_required
+  operation_identity_decision_baseline:
+    status: accepted_decision_baseline_not_implementation_contract
+    operations:
+      - POST /api/v1/knowledge-read/release-0/search
+      - POST /api/v1/knowledge-read/release-0/read
+    read_views: [graph, wiki_preview]
+    required_semantics:
+      - browser_authority_fields_are_server_derived
+      - singular_KnowledgeObject_canonical_identity
+      - active_extraction_only
+      - exact_session_scope_and_session_ownership
+      - ACL_before_query_rank_count_and_projection
+      - persistent_success_denied_not_found_read_audit
+      - audit_failure_is_fail_closed_before_response
+      - no_second_knowledge_or_graph_ledger
+  field_schema_candidate:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-openapi-candidate-a10p3.yaml
+    format: OpenAPI_3_1
+    raw_sha256: 48dfcb0967a894ee2bd760311d7f84023054b0bcc2bc578292d826e73fbc7c18
+    canonical_json_sha256: 19d58977c044bd6e6942a79964cdeb28e7bc1b6affccdd46427537ea32bc60f9
+    operation_matrix_normalization: json_sort_keys_ascii_compact_over_method_path_request_response
+    operation_matrix_bytes: 826
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+    status: candidate_not_frozen_not_implemented
+  mmc_policy:
+    exact_operations:
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/search
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/read
+    candidate_isolated_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    current_and_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    policy_change_authorized: false
+  parallel_lanes:
+    studio_mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      repositories: [GlobalCloud Studio, GlobalCloud MMC]
+      owner: Studio_MMC
+      change_id: verify-release0-field-schema-and-exact-files-a10p3
+      execution_mode: report_only_static_schema_and_repository_reads
+      repository_file_allowlist: []
+      coordination_lock_id: none_report_only
+      required_report:
+        - exact_control_and_schema_hashes
+        - byte_identical_operation_matrix_and_MMC_fingerprints
+        - field_by_field_Studio_BFF_and_MMC_transport_compatibility_matrix
+        - exact_401_403_404_503_mapping_and_zero_KDS_call_local_denial_boundary
+        - exact_Studio_repository_relative_product_and_test_file_paths_with_count
+        - exact_MMC_repository_relative_product_test_policy_seed_and_contract_file_paths_with_count
+        - proof_each_requested_file_is_clean_or_baseline_hash_patch_symbol_and_owner_if_dirty
+        - nonoverlap_and_independent_rollback_statement
+        - zero_write_network_runtime_credential_statement
+      forbidden_scope:
+        - any_repository_file_change
+        - any_runtime_policy_seed_state_or_binding_change
+        - any_live_KDS_MMC_request
+        - any_credential_action
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      repository: GlobalCloud KDS
+      owner: KDS
+      change_id: verify-release0-field-schema-and-dirty-isolation-a10p3
+      execution_mode: report_only_static_schema_repository_and_existing_evidence_reads
+      repository_file_allowlist: []
+      coordination_lock_id: none_report_only
+      required_report:
+        - exact_control_and_schema_hashes
+        - byte_identical_operation_matrix_and_MMC_fingerprints
+        - field_by_field_request_response_projection_cursor_order_error_compatibility_matrix
+        - exact_target_project_session_resolver_and_transactional_read_audit_design_gaps
+        - exact_future_product_and_test_file_paths_max_12
+        - choose_new_independent_read_repository_files_or_seal_dirty_file_SHA_patch_symbols_and_owner
+        - proof_requested_files_do_not_overlap_external_role_view_changes
+        - migration_required_or_not_required_with_reason
+        - nonoverlap_and_independent_rollback_statement
+        - zero_write_database_API_runtime_credential_statement
+      forbidden_scope:
+        - any_repository_handoff_evidence_openspec_or_product_test_file_change
+        - any_database_API_runtime_fixture_role_view_registry_or_corpus_change
+        - any_live_KDS_MMC_request
+        - any_credential_action
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      repository: GlobalCloud Brain
+      owner: Brain
+      change_id: frozen-after-a10p1-tranche-2
+      execution_mode: freeze_and_wait
+      repository_file_allowlist: []
+      coordination_lock_id: none_frozen
+      forbidden_scope:
+        - any_product_test_governance_or_evidence_change
+        - tranche_3
+        - network_browser_LLM_KDS_MMC_or_prompt_send
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+  serial_gate:
+    order:
+      - collect_two_byte_identical_A10P3_reports
+      - F013_independent_read_only_field_schema_freeze_review
+      - coordinator_may_freeze_full_contract_only_after_exact_match
+      - separate_nonoverlapping_KDS_and_Studio_MMC_implementation_controls
+      - separate_human_authorized_live_read_control
+      - separate_real_authenticated_Search_WikiPreview_Chat_E2E_control
+    automatic_contract_freeze: false
+    implementation_authorized: false
+    policy_change_authorized: false
+    live_read_authorized: false
+    real_e2e_authorized: false
+  acceptance_requirements:
+    - OpenAPI_3_1_parse_and_validation_pass
+    - exact_type_required_enum_bounds_nullability_and_additionalProperties_false
+    - exact_projection_field_whitelists
+    - exact_total_returned_count_cursor_order_and_graph_page_unit
+    - exact_stable_error_codes_and_Studio_KDS_status_mapping
+    - exact_repository_relative_future_file_allowlists
+    - dirty_file_isolation_or_symbol_level_baseline_control
+    - exact_hash_and_fingerprint_match_across_both_reports
+    - independent_F013_byte_level_review
+  authorization:
+    GPCF_candidate_schema_and_control_write: true
+    static_repository_and_existing_evidence_read: true
+    report_only_thread_handoff: true
+    lane_repository_file_write: false
+    runtime_policy_or_configuration_change: false
+    database_or_external_data_access: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    Brain_tranche_3: false
+    real_authenticated_e2e: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    control: withdraw_A10P3_and_retain_only_A10P2_operation_identity_decision_baseline
+    repositories: not_applicable_no_lane_change_authorized
+    external_data: not_applicable_no_access_authorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

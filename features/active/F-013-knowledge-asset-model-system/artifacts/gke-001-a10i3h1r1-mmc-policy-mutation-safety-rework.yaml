@@ -1,0 +1,199 @@
+a10i3h1r1_mmc_policy_mutation_safety_rework:
+  id: GKE-001-COORDINATION-20260811-018-A10I3H1R1
+  issued_at: 2026-08-11
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-017-A10I3H1
+    sha256: a3fc12a42b47e23d39a867719bcde0da10ec452751378d5a0128f38bb54cdbff
+  independent_review:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    classification: technical_rework_required
+    findings:
+      rollback_restore_failure_suppressed: P0_blocker
+      ordinary_patch_lost_update: P0_blocker
+      process_local_lock: P1_blocker_without_single_process_topology_freeze
+      unchecked_audit_short_write: P1_blocker
+    next_control: same_four_file_local_tdd_rework_allowed_without_additional_human_authorization
+  frozen_policy_lineage:
+    current_operation_count: 17
+    current_delegated_operations_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    isolated_two_operation_sha256: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    future_target_operation_count: 19
+    future_target_delegated_operations_sha256: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    policy_delta_authorized: false
+  lane:
+    owner: MMC
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: rework-mmc-delegated-operation-policy-a10i3h1r1
+    openspec_change: openspec/changes/rework-mmc-delegated-operation-policy-a10i3h1r1
+    lock: gke001-a10i3h1r1-mmc-policy-safety-rework-lock
+    execution_mode: local_opsx_tdd_temporary_state_only_no_policy_delta
+    baseline:
+      branch: main
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      ahead: 0
+      behind: 0
+      dirty_entries: 13
+      staged_entries: 0
+      opsx_lock: absent
+    product_test_file_allowlist:
+      - runtime/app/api/v1/registry_apis.py
+      - runtime/app/gateway/policy_audit.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_registry_policy_audit.py
+    product_test_file_count: 4
+    baseline_sha256:
+      runtime/app/api/v1/registry_apis.py: 49e3fed8858cbabc88659cc76a928df6de64c09bdbeec3e197ebb8e2a829a961
+      runtime/app/gateway/policy_audit.py: e62b12b3bbca5b429cca26f5b3aacbe036745195d6365a0cf9a31b10b616e814
+      runtime/tests/test_api.py: 26769bcbe9a276b1504282ff3abf799b2746fe2c9ce46b241c5d2e9e289125d8
+      runtime/tests/test_registry_policy_audit.py: 0a7afa7def60975b4e073b525d77f49f67f8f7e77aabc5e9909e25ae23d4e52a
+    hunk_ownership:
+      runtime/app/api/v1/registry_apis.py: cross_process_state_transaction_recovery_and_all_writer_serialization_only
+      runtime/app/gateway/policy_audit.py: complete_or_rollback_jsonl_append_with_cross_process_serialization_only
+      runtime/tests/test_api.py: create_patch_delete_interleaving_regressions_only
+      runtime/tests/test_registry_policy_audit.py: rollback_process_lock_short_write_and_cancellation_regressions_only
+    governance_file_allowlist:
+      - .harness/opsx.lock
+      - .harness/runs/*-rework-mmc-delegated-operation-policy-a10i3h1r1/**
+      - openspec/changes/rework-mmc-delegated-operation-policy-a10i3h1r1/**
+      - .codegraph/**
+    ephemeral_files:
+      - path: .harness/opsx.lock
+        handling: execution_only_never_stage_commit_or_handoff
+      - path: .codegraph/**
+        handling: ignored_local_index_execution_only_never_stage_commit_or_handoff
+      - path: temporary_test_state_lock_recovery_and_audit_files
+        handling: temporary_directory_only_removed_before_handoff
+  required_design:
+    state_lock:
+      requirement: stable_cross_process_lock_for_exact_STATE_PATH
+      minimum: OS_advisory_exclusive_lock_plus_process_local_coordination
+      lock_cycle: acquire_before_load_compare_prepare_replace_commit_or_recovery_and_release_after_terminal_cleanup
+      all_writers:
+        - create_api
+        - ordinary_patch_api
+        - delegated_operations_patch_api
+        - delete_api
+      reads_when_recovery_pending: recover_previous_state_or_fail_closed_never_publish_target
+    durable_recovery:
+      requirement: persist_and_fsync_previous_state_recovery_intent_before_target_replace
+      rollback_first_replace_failure: retry_from_durable_recovery_intent_before_return
+      repeated_restore_failure: retain_recovery_intent_and_make_all_registry_reads_and_writes_fail_closed
+      success_cleanup: remove_recovery_intent_and_fsync_parent_only_after_commit_audit_is_durable
+      forbidden: swallow_restore_failure_or_return_503_while_target_is_readable_as_effective
+    audit_append:
+      requirement: one_complete_valid_JSONL_record_or_zero_new_bytes
+      lock: stable_cross_process_lock_for_exact_policy_audit_path
+      write_loop: retry_InterruptedError_and_continue_until_all_bytes_written
+      zero_write: fail_closed
+      partial_then_error: truncate_to_pre_append_size_fsync_and_fail_closed
+      short_write_success: continue_until_complete_then_fsync
+      safe_fields: unchanged_from_parent_H1
+    cancellation:
+      requirement: release_locks_cleanup_temporary_files_and_recover_previous_state_before_propagation
+      target_policy_visibility_after_cancel: forbidden
+  required_tests:
+    - commit_audit_failure_then_first_rollback_replace_failure_returns_503_only_after_old_bytes_are_restored
+    - subsequent_registry_load_after_recovery_reads_only_old_fingerprint
+    - repeated_recovery_failure_keeps_durable_intent_and_all_reads_and_writes_fail_closed
+    - guarded_update_paused_after_prepare_blocks_ordinary_status_patch_then_preserves_both_updates
+    - guarded_update_serializes_with_create_and_delete_without_lost_update
+    - two_independent_processes_same_STATE_PATH_same_ETag_produce_one_200_and_one_409
+    - audit_short_write_is_completed_as_exactly_one_valid_JSONL_record
+    - audit_InterruptedError_is_retried_without_duplicate_or_truncated_record
+    - audit_zero_write_or_partial_then_error_restores_original_length_and_fails_closed
+    - existing_audit_records_remain_parseable_after_injected_append_failure
+    - cancel_after_target_replace_before_commit_recovers_old_state_before_propagation
+    - cancel_during_rollback_recovery_does_not_leave_target_effective
+    - temporary_state_audit_lock_and_recovery_files_are_cleaned_or_retained_only_as_required_for_fail_closed_recovery
+    - parent_H1_role_CAS_ETag_safe_field_and_regression_tests_remain_green
+  verification:
+    - focused_pytest_for_the_four_allowlisted_files
+    - MMC_TEST_MODE=true_python3_-m_pytest_runtime/tests_-q
+    - bash_runtime/scripts/contract_test.sh
+    - openspec_validate_rework-mmc-delegated-operation-policy-a10i3h1r1_--strict
+    - python3_scripts/validate_mmc_loop_harness.py
+    - codegraph_sync_status_and_bounded_queries
+    - git_diff_--check
+    - isolated_patch_from_exact_H1_handoff_baseline_and_reverse_check
+    - exact_runtime_state_seed_and_17_operation_policy_hashes_unchanged
+    - opsx_lock_absent_at_handoff
+  handoff_required:
+    - standard_evidence_index
+    - acceptance_matrix
+    - isolated_replayable_H1R1_patch
+    - exact_changed_files_and_hashes
+    - exact_interleaving_receipts_for_all_required_tests
+    - cross_process_lock_and_recovery_boundary
+    - short_write_and_audit_rollback_boundary
+    - tests_contract_openspec_harness_codegraph
+    - runtime_state_seed_and_policy_hashes_unchanged
+    - rollback
+    - authorization
+    - unresolved_risks
+    - status_ceiling
+  forbidden_scope:
+    - runtime/scripts/seed.sh
+    - runtime/state.json
+    - runtime/audit.log
+    - runtime/policy-audit.log
+    - runtime/app/core/delegation.py
+    - runtime/app/core/kds_delegation.py
+    - runtime/app/api/v1/connectors.py
+    - llm-wiki-openapi-schema.yaml
+    - runtime/tests/test_contract.py
+    - any_file_outside_the_allowlists
+    - any_seed_or_runtime_policy_delta
+    - execute_seed_force
+    - real_shared_or_production_MMC_or_KDS_access
+    - credentials_or_secret_creation_disclosure_or_persistence
+    - KDS_fact_or_business_state_write
+    - commit_push_restart_deploy_customer_release_or_status_promotion
+  serial_gate:
+    requires_H1R1_OpsX_handoff: true
+    requires_F013_independent_read_only_review: true
+    H2_seed_delta: false
+    H3_runtime_policy_apply: false
+    live_read: false
+    brain_change: false
+    real_authenticated_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_allowlisted_product_test_openspec_and_evidence_write: true
+    temporary_file_mode_and_subprocess_tests: true
+    source_policy_change: false
+    runtime_registry_or_policy_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  rollback:
+    repository: revert_only_the_H1R1_delta_to_the_exact_H1_handoff_hashes_and_remove_new_H1R1_governance
+    runtime: no_runtime_or_policy_change_authorized
+    data: no_external_data_change_authorized
+    audit: temporary_test_audit_only_remove_with_the_test_directory
+    codegraph: remove_only_ignored_local_index_if_needed
+  unresolved_risks:
+    - H1R1_is_not_accepted_until_independent_review
+    - H2_and_H3_remain_human_authorization_required
+    - current_policy_remains_17_operations
+    - no_live_read_or_real_E2E_is_authorized
+    - kds_admission_remains_blocked_dirty_worktree
+    - localization_debt_keeps_project_group_readiness_at_watch_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

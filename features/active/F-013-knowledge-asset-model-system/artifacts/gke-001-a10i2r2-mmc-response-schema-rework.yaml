@@ -1,0 +1,101 @@
+a10i2r2_mmc_response_schema_rework:
+  id: GKE-001-COORDINATION-20260811-015-A10I2R2
+  issued_at: 2026-08-11
+  program: GKE-001
+  feature_ref: F-013
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-014-A10I2R1
+    sha256: ef4065c374f5f2be480c170b3a4e60bef54a72b0d8ee40c3bd3c7fb5e12cbd2e
+  contract_freeze:
+    id: GKE-001-CONTRACT-FREEZE-20260811-001
+    sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    schema_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+  independent_review:
+    reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    classification: targeted_rework_partial_technical_rework_required_handoff_not_accepted
+    closed_findings:
+      - KDS_delegation_verifier_compatibility
+      - closed_Search_Graph_WikiPreview_request_models
+      - reachable_search_graph_wiki_transport_tests
+      - bounded_bypass_denied_audit
+    remaining_finding: nested_canonical_response_projections_and_status_specific_errors_are_not_frozen
+  lane:
+    owner: MMC
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: rework-release0-response-schema-a10i2r2
+    lock: gke001-a10i2r2-mmc-response-schema-lock
+    execution_mode: local_opsx_tdd_schema_and_contract_tests_only
+    baseline:
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      ahead: 0
+      behind: 0
+      staged_entries: 0
+      opsx_lock: absent
+      existing_a10i2r1_delta_frozen: true
+    product_test_file_allowlist:
+      - llm-wiki-openapi-schema.yaml
+      - runtime/tests/test_contract.py
+    product_test_file_count: 2
+    rework_start_sha256:
+      llm-wiki-openapi-schema.yaml: f66ad9d50947f4433a8fccb6d29ef7ad54e0fef0cb7f6cc57d8772aff1e2c35e
+      runtime/tests/test_contract.py: 04045c4b6685323bd9df21e099e1b7f65fda08bdc07925c2938d1ffd4687c00d
+    governance_file_allowlist:
+      - .harness/opsx.lock
+      - .harness/runs/*-rework-release0-response-schema-a10i2r2/**
+      - openspec/changes/implement-release0-canonical-read-relay-a10i2/**
+      - .codegraph/**
+    required_rework:
+      - mirror_the_frozen_field_level_SearchProjection
+      - mirror_the_frozen_field_level_GraphNodeProjection_and_GraphEdgeProjection
+      - mirror_the_frozen_field_level_Asset_Extraction_Block_Cell_and_EvidenceProjection
+      - reject_empty_or_additional_nested_projection_objects
+      - freeze_400_403_404_503_status_specific_error_code_and_retryable_combinations
+      - replace_empty_object_positive_fixtures_with_complete_frozen_valid_instances
+      - add_negative_tests_for_empty_nested_objects_and_status_code_error_mismatch
+      - preserve_all_A10I2R1_runtime_and_request_contract_behavior_without_product_runtime_changes
+    required_evidence:
+      - focused_field_level_response_and_error_schema_tests
+      - full_MMC_runtime_suite
+      - frozen_schema_cross_validation_for_positive_and_negative_instances
+      - contract_OpenSpec_Harness_CodeGraph_diff_and_patch_replay
+      - exact_two_file_hashes_and_high_risk_unchanged_receipt
+    forbidden_scope:
+      - runtime/app/api/v1/connectors.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_gateway.py
+      - runtime/tests/test_permission.py
+      - runtime/scripts/contract_test.py
+      - runtime/scripts/seed.sh
+      - runtime/state.json
+      - runtime/app/core/delegation.py
+      - runtime/app/core/kds_delegation.py
+      - any_file_outside_the_allowlists
+      - runtime_registry_or_policy_mutation
+      - live_shared_or_production_access
+      - credentials_KDS_facts_business_state_commit_push_restart_deploy_or_promotion
+    rollback:
+      repository: revert_only_the_A10I2R2_two_file_delta_and_run_scoped_artifacts
+      runtime: no_runtime_or_policy_change_authorized
+      data: no_external_data_change_authorized
+  serial_gate:
+    requires_corrected_handoff: true
+    requires_F013_targeted_re_review: true
+    policy_configuration: false
+    live_read: false
+    brain_studio_real_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_two_file_schema_test_rework: true
+    local_tests_and_governance_evidence: true
+    policy_or_runtime_change: false
+    live_access_or_write: false
+    credentials: false
+    commit_push_restart_deploy_or_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

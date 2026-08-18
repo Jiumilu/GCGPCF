@@ -1,0 +1,125 @@
+gke001_continuous_execution_tranche:
+  id: GKE-001-COORDINATION-20260813-044-A10C1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: continuous_execution
+  objective: authenticated_project_to_search_wikipreview_chat_with_citations
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    source_of_truth: KDS
+    coordinator: GPCF
+  human_authorization:
+    decision: granted_for_continuous_local_engineering
+    production_or_shared_write: false
+    deployment: false
+    status_promotion: false
+  reconciled_baselines:
+    kds:
+      head: 690ea04abf5485563b760d1bc1620493db017662
+      origin_main: 690ea04abf5485563b760d1bc1620493db017662
+      ahead: 0
+      behind: 0
+      ordinary_dirty: 190
+      ordinary_porcelain_nul_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    studio:
+      head: 89697af0ddc90214f14f661c88218052fea57c34
+      origin_main: 89697af0ddc90214f14f661c88218052fea57c34
+      ahead: 0
+      behind: 0
+      ordinary_dirty: 0
+      note: external_daily_clean_sync_after_88769078_reconciled_read_only
+    brain:
+      head: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+      origin_main: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+      ahead: 0
+      behind: 0
+      ordinary_dirty: 0
+      note: external_daily_clean_sync_reconciled_read_only
+    mmc:
+      head: b06f58a78ac7713197deed47d1125bec7a260e8c
+      origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+      ahead: 0
+      behind: 0
+      ordinary_dirty: 14
+  authorization_matrix:
+    release0_facade_local_commit:
+      separate_authorization_required: true
+      stage_b_mixing_forbidden: true
+    role_view_disposition:
+      separate_authorization_required: true
+      excluded_paths:
+        - _registries/global-object-registry.yaml
+        - entities/green-supply-chain-role-view-entity.md
+    other_dirty_disposition:
+      owner_grouping_required: true
+      bulk_cleanup_forbidden: true
+    real_kds_mmc_write:
+      separate_authorization_required: true
+      fixture_delegation_audit_compensating_rollback_required: true
+    deployment_or_status_promotion:
+      separate_human_confirmation_required: true
+  lanes:
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      change_id: audit-kds-dirty-and-release0-admission-a10c1
+      owner: KDS
+      mode: report_only
+      repository_allowlist: []
+      tasks:
+        - classify_all_190_dirty_entries_by_owner_and_capability
+        - prove_release0_12_path_isolation_from_stage_b_role_view_and_other_dirty
+        - replay_stage_b_and_release0_read_tests_without_repository_write
+        - report_commit_ready_units_and_required_separate_authorizations
+    studio_mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      change_id: preflight-studio-mmc-release0-live-read-a10c1
+      owner: Studio_MMC
+      mode: report_only
+      repository_allowlist: []
+      tasks:
+        - reconcile_studio_89697af0_release0_bff_and_authenticated_entry
+        - reconcile_mmc_b06f58a_dirty_relay_and_policy_hardening
+        - prove_server_trusted_target_project_session_binding_contract
+        - produce_non_write_live_preflight_and_exact_minimal_rework_allowlists
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      change_id: revalidate-brain-release0-read-consumer-a10c1
+      owner: Brain
+      mode: report_only
+      repository_allowlist: []
+      tasks:
+        - reconcile_clean_1c0992ed_baseline
+        - run_typecheck_tests_build_and_read_model_alignment
+        - trace_search_wikipreview_chat_client_to_studio_bff_without_network_write
+        - report_exact_runtime_and_evidence_gaps
+  serial_gate:
+    - tranche1_three_handoffs
+    - f013_independent_read_only_review
+    - minimal_non_overlapping_rework_controls
+    - authenticated_non_production_read_e2e
+  forbidden:
+    - production_or_shared_kds_mmc_write
+    - real_customer_corpus
+    - credential_creation_disclosure_or_persistence
+    - acl_or_delegation_relaxation
+    - role_view_or_registry_edit
+    - bulk_dirty_cleanup
+    - deployment
+    - accepted_integrated_production_ready_customer_accepted
+  handoff_required:
+    - exact_baseline_and_dirty_hash
+    - exact_paths_and_owner_partition
+    - tests_typecheck_build
+    - contract_and_authorization_boundary
+    - acl_read_count_audit_lineage
+    - cleanup_and_rollback
+    - unresolved_risks
+    - status_classification
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

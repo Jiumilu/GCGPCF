@@ -1,0 +1,51 @@
+review_rework:
+  id: GKE-001-COORDINATION-20260814-012-A10C19R1
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-011-A10C19
+    sha256: 479273f0c5bc8ba66b802692116b1ac95f409c8d45bd5520304601d8acf1d2dd
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  mode: governance_only_single_file_counter_correction_and_report_only_reseal
+  finding:
+    file: .harness/runs/20260811-193752-implement-release0-canonical-read-facade/status-audit.yaml
+    issue: acceptance_matrix_has_8_evidence_rows_6_current_2_inherited_but_summary_said_7_5_2
+  correction:
+    total: 8
+    current: 6
+    inherited: 2
+    stale: 0
+    missing: 0
+    product_test_openspec_bytes_changed: false
+    tests_or_database_rerun: false
+  resealed_candidate:
+    path_count: 15
+    pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+    content_manifest_sha256: 09179ebc75115a42a62e9fd49ba3a889cb4bd80c2b7b997ba78d566584af7fa4
+    patch_bytes: 44423
+    patch_sha256: ad1fd7e706e54c24a1bf30395a6a4c6b88409ef1972326f21408a86993238718
+    deterministic_generation: 2_of_2
+    diff_check: pass
+    yaml_parse: pass
+    isolated_apply_identity: 15/15
+    reverse_remaining: 0
+  inherited_current_run_evidence:
+    focused: 41_passed
+    non_database: 101_passed
+    postgresql_migration: 29_passed
+    disposable_cleanup: 0
+    document_gate: pass
+    codegraph: pass
+  authorization:
+    local_governance_correction: consumed
+    stage_commit_push: false
+    live_access: false
+    deployment_or_promotion: false
+  dependency:
+    conditional_future_commit_only_after_product_push_postpush_and_openspec_commit_review: true
+  rollback:
+    repository: restore_only_three_status_audit_counter_values
+    external_data: none
+  status: active_partial_not_complete

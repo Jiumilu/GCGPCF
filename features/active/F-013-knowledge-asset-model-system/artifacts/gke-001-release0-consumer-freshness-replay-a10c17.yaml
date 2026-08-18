@@ -1,0 +1,125 @@
+gke001_release0_consumer_freshness_replay:
+  id: GKE-001-COORDINATION-20260813-083-A10C17
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  mode: current_consumer_freshness_and_bounded_studio_governance_repair
+  lanes:
+    studio:
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      change_id: repair-studio-codegraph-historical-fixture-a10c17
+      owner: Studio
+      product_source_allowlist: []
+      governance_allowlist:
+        - tests/server/studio-loop-control.test.ts
+        - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-878.json
+        - docs/harness/loops/loop-round-GPCF-STUDIO-LR-878.md
+      visible_git_paths:
+        - tests/server/studio-loop-control.test.ts
+        - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-878.json
+      local_excluded_control_record: docs/harness/loops/loop-round-GPCF-STUDIO-LR-878.md
+    brain:
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      change_id: replay-brain-release0-consumer-freshness-a10c17
+      owner: Brain
+      repository_allowlist: []
+  baselines:
+    studio:
+      branch: main
+      head: ec1ff4d6a35844d499334caac74d99d46691034c
+      origin_main: ec1ff4d6a35844d499334caac74d99d46691034c
+      ahead_behind_staged: 0/0/0
+      final_visible_dirty_count: 2
+      final_visible_dirty_nul_sha256: 3f6b03f17e7128ce8ab910a4cbf58675699e198fce2cd32ab0374f4147cdb5c8
+      opsx_lock: absent
+    brain:
+      branch: main
+      head: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+      origin_main: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+      ahead_behind_staged: 0/0/0
+      dirty_count: 0
+      dirty_nul_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      opsx_lock: absent
+  current_verification:
+    studio:
+      release0_focused: 5_files_44_passed
+      full_vitest: 313_files_2759_passed_1_file_and_3_tests_skipped
+      build: pass
+      openapi_check: pass
+      openspec_strict: pass
+      codegraph_benchmark: 2_passed
+      codegraph_status: 991_files_18340_nodes_62626_edges_up_to_date
+      local_loop_control: pass_LR_878_test_only
+      harness: pass
+      git_diff_check: pass
+    brain:
+      release0_focused: 6_files_122_passed
+      full_vitest: 45_files_390_passed
+      typecheck: pass
+      build: pass
+      kds_read_model_alignment: pass
+      openspec_strict: pass
+      codegraph_status: 240_files_5355_nodes_13594_edges_up_to_date
+      git_diff_check: pass
+  studio_governance_repair:
+    finding: machineEvidenceV4_test_fixture_used_current_HEAD_for_a_historical_reconciliation_commit
+    effect_before_repair: five_studio_loop_control_tests_failed_after_later_ordinary_commits
+    exact_fix: resolve_the_commit_that_introduced_the_source_evidence_path
+    production_validator_changed: false
+    production_release0_code_changed: false
+    test_patch_bytes: 981
+    test_patch_sha256: 404e3a3fee81457664f9dbfbba459cf2a4b0e852c6abff551dcf050ba3d37ff1
+    test_file_sha256: 0488efa66e0c1e1364d967a6d513e814067ce2e4400709535ddc321a60c2ba92
+    machine_evidence_sha256: dcaddafc797b87f3217ccb75ebccb42f7ad3a1749a0f146ddbfaff5503acddab
+    loop_record_sha256: cff85812f4222a4dcd0cdab4cb72830c957fe27a0574b5160f66a6046a204e18
+    classification: governance_test_fixture_repair_only
+  verified_consumer_boundaries:
+    studio_derives_authority_server_side: passed_mocked_tests
+    browser_authority_input_rejected: passed_mocked_tests
+    exact_two_canonical_post_routes: passed_mocked_tests
+    bounded_400_403_404_503_projection: passed_mocked_tests
+    brain_search_to_wiki_preview_to_chat_context: passed_component_and_hook_tests
+    automatic_prompt_send: false
+    local_or_second_knowledge_ledger: false
+    real_authenticated_network_read: not_run_not_authorized
+  dependencies:
+    serial_blockers_before_live_e2e:
+      - kds_release0_product_test_12_human_local_commit_authorization_pending
+      - mmc_release0_source_policy_19_operation_tdd_human_authorization_pending
+      - mmc_runtime_policy_application_separate_high_risk_human_authorization_pending
+      - f013_independent_review_of_a10c16_and_a10c17_pending
+    parallel_work_completed:
+      - studio_current_consumer_and_full_suite_freshness
+      - brain_current_consumer_full_suite_typecheck_build_and_alignment_freshness
+  authorization:
+    studio_governance_local_commit: false
+    studio_product_commit_or_push: false
+    brain_write_commit_or_push: false
+    kds_or_mmc_live_access_or_write: false
+    authenticated_live_e2e: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    studio: remove_only_the_test_helper_delta_LR_878_machine_evidence_and_local_LOOP_record
+    brain: not_applicable_zero_write
+    external_data: not_applicable_zero_access
+  requested_independent_review:
+    authority: F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    requested_classification: technical_consumer_freshness_passed_studio_governance_fixture_repair_pending_review
+  unresolved_risks:
+    - studio_a10c17_governance_delta_is_uncommitted
+    - no_authenticated_nonproduction_network_e2e
+    - kds_facade_and_mmc_policy_serial_gates_remain_open
+    - current_tests_do_not_authorize_real_or_shared_data_access
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    real_verified: false
+    promotion: false

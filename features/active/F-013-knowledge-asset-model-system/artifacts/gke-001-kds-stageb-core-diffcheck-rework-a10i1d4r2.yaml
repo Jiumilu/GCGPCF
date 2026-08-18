@@ -1,0 +1,106 @@
+kds_stageb_core_diffcheck_rework:
+  id: GKE-001-COORDINATION-20260812-016-A10I1D4R2
+  issued_at: 2026-08-12
+  program: GKE-001
+  feature_ref: F-013
+  change_id: authorize-kds-stageb-core-diffcheck-rework-a10i1d4r2
+  mode: human_authorization_request_only
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  kds_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  parent_controls:
+    d4r1_id: GKE-001-COORDINATION-20260812-014-A10I1D4R1
+    d4r1_sha256: d9dbe8ba24518beec10d4e5eefbcfddebeb22669d4195b084ae150ba6a433b3a
+    b1_id: GKE-001-COORDINATION-20260812-015-A10I1D4R1B1
+    b1_sha256: 989e77472642fdc7000799243bb5b68fd79e736c6b7bbb3e5e33ddd9dbe6e4e7
+    b1_review: baseline_drift_reconciled_original_human_authorization_remains_valid
+  aborted_execution_receipt:
+    result: aborted_before_commit
+    reason: cached_diff_check_new_blank_line_at_eof
+    path: tests/test_document_extraction_domain.py
+    line: 119
+    exact_message: "tests/test_document_extraction_domain.py:119: new blank line at EOF."
+    staged_scope_before_abort: exact_stageb_core_12
+    pathset_sha256: ca5d5931bd2d41619cd83c0347ba72c73cde41534d8dd078bfc5fc908514a0bb
+    patch_bytes: 175642
+    patch_sha256: 7fe83224e36ffb504e79ecf67579256d1d956ee4a8b99def35c627811dc872dc
+    final_index: empty
+    final_lock: absent
+    commit_created: false
+    push: false
+  contradiction:
+    - D4R1 freezes the 175642-byte patch and requires an exact patch SHA.
+    - The same control requires git diff --cached --check to exit zero.
+    - The frozen patch contains one terminal blank line that makes the mandatory check exit nonzero.
+    - Neither requirement may be bypassed; the patch must be revised under a new authorization.
+  proposed_minimal_source_rework:
+    path: tests/test_document_extraction_domain.py
+    operation: remove_exactly_one_final_newline_byte
+    before_suffix_hex: 290a0a
+    after_suffix_hex: 290a
+    corrected_file_sha256: 05c637cbd86fc65c0d8db5ce621fea85576a3fc37107dcd506d16b61ab0c9ea3
+    no_semantic_test_change: true
+  revised_core_unit:
+    paths:
+      - requirements.txt
+      - knowledge_intake/api.py
+      - knowledge_intake/postgres.py
+      - knowledge_intake/repository.py
+      - knowledge_intake/service.py
+      - knowledge_intake/extraction.py
+      - knowledge_intake/extraction_service.py
+      - knowledge_intake/sql/002_document_extraction.sql
+      - tests/test_document_extraction_domain.py
+      - tests/test_document_extraction_parsers.py
+      - tests/test_document_extraction_service.py
+      - tests/test_document_extraction_migration.py
+    path_count: 12
+    sorted_nul_pathset_sha256: ca5d5931bd2d41619cd83c0347ba72c73cde41534d8dd078bfc5fc908514a0bb
+    canonical_patch_algorithm: git_diff_cached_binary_full_index_no_ext_diff_exact_12_paths
+    canonical_patch_bytes: 175640
+    canonical_patch_sha256: c9692a48019a3d6ccc2949a9452ff26bd2bfd0785ec69be728a13552ce977fad
+    cached_diff_check: pass
+    proposed_commit_subject: "feat(kds): add document extraction stage b core"
+    parent_commit: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+  disposable_preflight:
+    repository_write: false
+    source: clean_f28edb51_plus_current_core_12_minus_one_final_newline
+    original_full_index_patch_reproduced:
+      bytes: 175642
+      sha256: 7fe83224e36ffb504e79ecf67579256d1d956ee4a8b99def35c627811dc872dc
+    corrected_full_index_patch:
+      bytes: 175640
+      sha256: c9692a48019a3d6ccc2949a9452ff26bd2bfd0785ec69be728a13552ce977fad
+    git_diff_cached_check: pass
+    core_only_non_database_tests: pass
+    test_count: 64
+  requested_human_decision:
+    source_edit_one_byte: pending
+    stage_exact_12_paths: pending
+    create_one_local_commit: pending
+    push: false
+    later_units: false
+  execution_if_authorized:
+    - Recheck the exact B1 repository snapshot and all excluded hashes.
+    - Acquire the same execution-only temporary OpsX lock.
+    - Remove exactly one final newline byte from tests/test_document_extraction_domain.py.
+    - Stage only the exact 12 paths.
+    - Require the unchanged sorted NUL pathset SHA and revised canonical patch SHA.
+    - Require git diff --cached --check to pass.
+    - Create exactly one local commit with the frozen subject and parent.
+    - Release the lock and return a report-only task receipt; do not push.
+  forbidden:
+    - bypass_or_waive_git_diff_cached_check
+    - alter_any_other_source_byte_or_path
+    - stage_or_commit_regression_openspec_run_handoff_a10i1_role_view_or_other_dirty_scope
+    - push_deploy_live_access_credential_or_status_promotion
+    - clean_reset_restore_checkout_rebase_or_history_rewrite
+  rollback:
+    before_commit: restore_only_the_removed_terminal_newline_and_unstage_exact_12_paths
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    review_state: f013_review_pending
+    authorization_state: human_reauthorization_required

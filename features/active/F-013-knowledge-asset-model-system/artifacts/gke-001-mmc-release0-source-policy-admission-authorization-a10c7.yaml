@@ -1,0 +1,114 @@
+gke001_mmc_release0_source_policy_admission_authorization_request:
+  id: GKE-001-COORDINATION-20260813-060-A10C7
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: admit-release0-canonical-read-policy-a10c7
+  mode: human_authorization_request_only
+  predecessors:
+    - id: GKE-001-COORDINATION-20260813-059-A10C6R2
+      sha256: 9be4d763b08573cb0b2fa08b12e27fe0e545a0124e01cd1f4b5e83c65eba8b18
+  lane:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: admit-release0-canonical-read-policy-a10c7
+    owner: MMC
+  required_baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    raw_ordinary_dirty: 15
+    raw_expanded_dirty: 76
+    ordinary_nul_sha256: 4aa3dbdeb92bc3d7538cc48898245fe049437d32b406c658a63abdff75244fde
+    expanded_nul_sha256: ddba5938cbae9cdd870f0820aa93ff29db02af308cdbb2f6c1fd8bc421cfef16
+    active_owned_dirty_excluding_runtime_sidecar: 14/75
+    runtime_sidecar:
+      path: runtime/.state.json.lock
+      required_state: zero_byte_unheld_and_untouched
+    opsx_lock: absent
+  exact_allowlist:
+    - runtime/scripts/seed.sh
+    - runtime/tests/test_release0_policy_seed.py
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/proposal.md
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/design.md
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/tasks.md
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/specs/mmc-release0-policy-admission/spec.md
+  path_count: 6
+  sorted_nul_pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+  preimage:
+    seed_path: runtime/scripts/seed.sh
+    seed_sha256: 161884e885fc03ade8d26b87bea745203455a177889b4ef57612b22344554a33
+    existing_operation_count: 17
+    existing_operation_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    other_five_paths: absent
+  exact_source_delta:
+    connector_id: kds_llm_wiki_api
+    preserve_existing_17_operations_in_order: true
+    append_exactly:
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/search
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/read
+    final_operation_count: 19
+    final_operation_fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+  tdd_requirements:
+    - tracked seed contains the original ordered 17 operations followed by the two frozen Release 0 POST operations
+    - duplicate method and path entries are rejected by the test contract
+    - noncanonical method or path remains absent from policy
+    - runtime state and runtime sidecar are byte-unchanged
+    - relay delegation audit rate limit and circuit breaker code are byte-unchanged
+    - focused policy test passes
+    - existing Release 0 focused tests pass
+    - full runtime suite passes
+    - contract test passes
+    - strict OpenSpec validation passes
+    - MMC Harness CodeGraph and diff-check pass
+  execution_if_human_authorized:
+    authorization_scope: source_only_local_tdd
+    commit_or_push: false
+    steps:
+      - reverify_baseline_raw_dirty_hashes_sidecar_and_six_path_isolation
+      - acquire_official_temporary_opsx_lock
+      - create_or_edit_only_the_six_allowlisted_paths
+      - run_focused_full_contract_openspec_harness_codegraph_and_diff_checks
+      - prove_runtime_state_and_all_excluded_dirty_paths_unchanged
+      - release_opsx_lock
+      - freeze_standard_handoff_for_f013_independent_review
+  forbidden:
+    - runtime/state.json
+    - runtime/.state.json.lock
+    - seed.sh --force
+    - runtime_policy_application
+    - connector_creation
+    - relay_delegation_audit_rate_or_circuit_change
+    - existing_14_75_dirty
+    - KDS_Studio_or_Brain_change
+    - real_or_shared_request
+    - credential_creation_disclosure_persistence_or_expansion
+    - commit_or_push
+    - deployment
+    - accepted_integrated_production_ready_or_customer_accepted
+  abort_on_any_mismatch:
+    - stop_before_edit_if_baseline_or_isolation_differs
+    - preserve_all_existing_dirty_content
+    - release_opsx_lock_if_acquired
+    - report_exact_drift_and_no_implementation_claim
+  separate_future_authorizations:
+    local_commit: required_after_f013_technical_review
+    push: required_after_f013_postcommit_review
+    runtime_policy_application: high_risk_human_authorization_required
+    controlled_fixture_and_live_read: separate_human_authorization_required
+  rollback:
+    before_commit: remove_only_the_six_path_delta_and_preserve_all_other_dirty
+    after_commit: separately_reviewed_forward_compensation_or_git_revert_only
+    runtime: not_applicable_runtime_application_forbidden
+  requested_action:
+    human_authorization_granted: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: human_source_only_tdd_authorization_required
+    ceiling: partial

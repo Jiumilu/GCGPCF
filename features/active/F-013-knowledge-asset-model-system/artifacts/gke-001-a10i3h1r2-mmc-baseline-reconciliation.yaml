@@ -1,0 +1,88 @@
+a10i3h1r2_mmc_baseline_reconciliation:
+  id: GKE-001-COORDINATION-20260811-020-A10I3H1R2R0
+  issued_at: 2026-08-11
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-019-A10I3H1R2
+    sha256: 880980dbd38462c58fa8da34ea67fca593c3e2bae2958e3410a6a74b1222c731
+  external_git_fact:
+    detected_at: 2026-08-11T16:03:49+00:00
+    commit: b06f58a78ac7713197deed47d1125bec7a260e8c
+    subject: "loop(mmc): daily clean sync 2026-08-11"
+    head_equals_origin_main: true
+    ahead: 0
+    behind: 0
+    dirty_entries: 0
+    staged_entries: 0
+    opsx_lock: absent
+    committed_paths: 40
+    insertions: 7929
+    deletions: 40
+    authorization_disposition: external_fact_recorded_not_ratified
+    coordinator_commit_or_push_authorization: false
+  content_continuity:
+    product_test_allowlist_count: 8
+    all_existing_allowlist_hashes_equal_parent_baseline: true
+    new_shared_module_still_absent: true
+    sha256:
+      runtime/app/api/v1/registry_apis.py: ac5fe015289e3d19f669d6ec6f06e1bc91a30dc3e4592b13ed7a1d4da70cc525
+      runtime/app/api/v1/registry_llms.py: 8b86b4f0359dad975145895d3275f348c903b80c15e31fbc6bae4599d1fc36e2
+      runtime/app/api/v1/connectors.py: 8f1bc9149b8bf6f4a3ed30eb119bc0473f1bf081f5969ec7dc3b48bdbd2168c0
+      runtime/app/api/v1/health.py: 48f09f57a276920dad700e6353535ae909633fdd2c463835715c746e607c562e
+      runtime/app/gateway/registry_state.py: absent
+      runtime/tests/test_api.py: db53af8b2d0b645be3a16b68f08df0cc7b1e7327505d47c8cdd67cc98a1c45cd
+      runtime/tests/test_registry_policy_audit.py: 26848da6c885958c51fb26fd91b5071654d6a31a8a853e52fe0e4ae5f23ea01f
+      runtime/tests/test_llm_registry.py: 654af606853f66de857cffbb17a0b1a5cd2109e88fadffa99848608415bfb206
+  amended_baseline:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead: 0
+    behind: 0
+    dirty_entries: 0
+    staged_entries: 0
+    opsx_lock: absent
+  inherited_execution:
+    control: GKE-001-COORDINATION-20260811-019-A10I3H1R2
+    change_id: rework-mmc-shared-registry-state-a10i3h1r2
+    exact_eight_file_allowlist_unchanged: true
+    requirements_tests_verification_handoff_unchanged: true
+    forbidden_scope_unchanged: true
+    rollback_baseline: b06f58a78ac7713197deed47d1125bec7a260e8c
+    old_baseline_execution_forbidden: true
+  authorization:
+    local_allowlisted_product_test_openspec_and_evidence_write: true
+    temporary_file_mode_and_subprocess_tests: true
+    accept_or_ratify_external_commit_push: false
+    additional_commit_or_push: false
+    source_policy_change: false
+    runtime_registry_or_policy_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  serial_gate:
+    H1R2_handoff_required: true
+    F013_independent_review_required: true
+    H2_seed_delta: false
+    H3_runtime_policy_apply: false
+    live_read: false
+    real_authenticated_e2e: false
+  rollback:
+    repository: revert_only_future_H1R2_delta_to_b06f58a_content_without_rewriting_external_history
+    external_commit: do_not_revert_without_separate_authorization
+    runtime_and_data: no_external_change_authorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

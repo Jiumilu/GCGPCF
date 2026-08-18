@@ -1,0 +1,94 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260814-008-A10C18
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  lane: kds
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: preflight-release0-openspec-current-baseline-a10c18
+  openspec_change: implement-release0-canonical-read-facade
+  mode: report_only
+  status_ceiling: partial_not_complete
+  baseline:
+    branch: main
+    head: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty: 180
+    ordinary_nul_sha256: d8b1b52a8a85b87a17384f5b6b3503afdc441e15fd77635fd973872c2149615a
+    expanded_dirty: 439
+    expanded_nul_sha256: c7349d85d1aeaea509b7e033f816bfe4f71bb00c60fdd1430aeb903fd52d1db5
+    opsx_lock: absent
+  exact_paths:
+    - openspec/changes/implement-release0-canonical-read-facade/.openspec.yaml
+    - openspec/changes/implement-release0-canonical-read-facade/design.md
+    - openspec/changes/implement-release0-canonical-read-facade/proposal.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-audit/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-authorization/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-contract/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-projections/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/tasks.md
+  sealed_candidate:
+    path_count: 8
+    sorted_nul_pathset_sha256: 5fd19a7e466521ece8ec190fe23a4dfee26748f551fc6c05718f86f71b24c7a5
+    ordered_content_manifest_sha256: 472472a6f4a66701094a44210795b6ae722f322e8f9f787ab9c7c2fc24559fce
+    full_index_patch_bytes: 25737
+    full_index_patch_sha256: 76331dd9a24cda8bad2da25691e9ff8d19b6f62ec5654b6fca9df5148613ce5c
+    deterministic_generation: 2_of_2_byte_identical
+    diff_check: pass
+    isolated_apply_source_identity: 8/8
+    reverse_remaining_files: 0
+  verification:
+    openspec_strict: pass
+    tasks_checked: 23/23
+    codegraph_sync_status: pass_up_to_date
+    codegraph_files_nodes_edges: 632/5326/13240
+    codegraph_router_query: pass
+    codegraph_contract_query: pass
+    product_test_replay: not_applicable_specification_only_bytes_unchanged
+    migration_dry_run: not_applicable_no_schema_or_database_change
+    acl_audit_lineage: specification_boundary_only_current_product_test_evidence_not_reclaimed
+    disposable_cleanup: pending_final_temp_cleanup
+  isolation:
+    overlaps_release0_product_test_12: false
+    overlaps_release0_run_handoff_15: false
+    overlaps_stage_b: false
+    overlaps_role_view: false
+    overlaps_other_dirty: false
+  prior_authorization_disposition:
+    prior_control: GKE-001-COORDINATION-20260813-072-A10C10R2
+    prior_control_sha256: 3d113aa232f8785fd3a70d5c0ad16269970c63c8a3bc56e277ae0da776272850
+    disposition: obsolete_baseline_must_not_execute
+    reason: KDS_HEAD_changed_from_690ea04a_to_a544f67e_after_product_test_commit
+  authorization:
+    repository_allowlist: empty
+    stage: false
+    commit: false
+    push: false
+    real_kds_or_mmc_access: false
+    credentials: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - release0_product_test_12
+    - release0_run_handoff_15
+    - stage_b
+    - role_view
+    - other_dirty_owner_groups
+    - active_process_or_runtime_policy
+    - any_stage_commit_push_deployment_or_status_promotion
+  rollback:
+    repository: not_applicable_no_write
+    disposable_copy: remove_after_review_input_sealed
+    external_data: none_accessed
+  requested_review:
+    authority: F-013
+    mode: independent_read_only
+    question: whether_exact_eight_path_openspec_unit_remains_freeze_ready_on_current_a544f67e_baseline_and_may_later_receive_a_new_separate_human_local_commit_request
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

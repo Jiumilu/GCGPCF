@@ -9,8 +9,11 @@ import subprocess
 import sys
 from pathlib import Path
 
+import yaml
+
 
 ROOT = Path(__file__).resolve().parents[2]
+KDS_MIRROR_ROOT = ROOT / ".kds/development-space"
 FIXTURE = ROOT / "fixtures/api/gckf-p0-session-mainline-takeover-current-state-d185-20260627.json"
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/gckf-p0-session-mainline-takeover-current-state-d185-20260627.md"
@@ -55,10 +58,23 @@ def run_delegated_loop_gate() -> dict:
     return json.loads(result.stdout.strip())
 
 
-def require_controlled_markdown(path: Path) -> None:
+def require_controlled_markdown(path: Path) -> Path:
     require(path.exists(), f"missing_dks_baseline:{path.relative_to(ROOT)}")
     text = path.read_text(encoding="utf-8")
-    require("status: controlled" in text, f"dks_baseline_not_controlled:{path.relative_to(ROOT)}")
+    require(text.startswith("---\n"), f"dks_baseline_frontmatter_missing:{path.relative_to(ROOT)}")
+    frontmatter_end = text.find("\n---\n", 4)
+    require(frontmatter_end > 4, f"dks_baseline_frontmatter_invalid:{path.relative_to(ROOT)}")
+    metadata = yaml.safe_load(text[4:frontmatter_end])
+    require(isinstance(metadata, dict), f"dks_baseline_metadata_invalid:{path.relative_to(ROOT)}")
+    source_path = path.relative_to(ROOT).as_posix()
+    require(metadata.get("status") == "controlled", f"dks_baseline_not_controlled:{source_path}")
+    require(metadata.get("source_path") == source_path, f"dks_baseline_source_path_mismatch:{source_path}")
+    kds_path = metadata.get("kds_path")
+    require(isinstance(kds_path, str) and kds_path.startswith("开发/"), f"dks_baseline_kds_path_invalid:{source_path}")
+    mirror_path = KDS_MIRROR_ROOT / kds_path
+    require(mirror_path.exists(), f"dks_baseline_mirror_missing:{source_path}")
+    require(mirror_path.read_bytes() == path.read_bytes(), f"dks_baseline_mirror_drift:{source_path}")
+    return mirror_path
 
 
 def main() -> None:
@@ -88,8 +104,10 @@ def main() -> None:
 
     dks_baseline = fixture.get("mergedDksBaseline", [])
     require(len(dks_baseline) == 10, "dks_baseline_count_mismatch")
+    mirror_matches = 0
     for item in dks_baseline:
         require_controlled_markdown(ROOT / item)
+        mirror_matches += 1
 
     for key in (
         "dksBaselineIsBusinessCompletion",
@@ -127,6 +145,7 @@ def main() -> None:
     print(f"dks_baseline_status={fixture.get('dksBaselineStatus')}")
     print(f"maximum_state={fixture.get('maximumState')}")
     print(f"dks_baseline_items={len(dks_baseline)}")
+    print(f"dks_baseline_mirror_matches={mirror_matches}")
     print(f"hold_required={fixture.get('holdRequired')}")
     print(f"execution_mode={fixture.get('executionMode')}")
 

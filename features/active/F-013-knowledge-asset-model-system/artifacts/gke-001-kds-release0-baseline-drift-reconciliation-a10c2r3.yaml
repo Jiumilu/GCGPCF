@@ -1,0 +1,75 @@
+gke001_kds_release0_baseline_drift_reconciliation:
+  id: GKE-001-COORDINATION-20260813-067-A10C2R3
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: governance_only_baseline_reconciliation
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-048-A10C2R2
+    sha256: 694ef85b4c5261a3a66be7643ad54002713323505c6aa1c4e8991a9e39b98155
+    status: human_local_commit_authorization_required_but_baseline_drifted
+  lane:
+    repository: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: reconcile-release0-product-test-12-baseline-a10c2r3
+    owner: KDS
+  current_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+  exact_drift:
+    status_entry: "?? GlobalCloud KDS"
+    path: GlobalCloud KDS
+    object_type: symbolic_link
+    target: ../GlobalCloud KDS
+    size_bytes: 18
+    owner_group: other_dirty_self_link
+    status_manifest_sha256: ceff948ba2fdedb6f9feb32cd96aec918fb3e098eac489c24141478d7e56c0f9
+    overlap_release0_product_test_12: false
+    overlap_release0_governance: false
+    overlap_stage_b: false
+    overlap_role_view: false
+    disposition: preserve_untouched_and_exclude
+  unchanged_release0_candidate:
+    path_count: 12
+    pathset_sha256: 1cedf0a22ee41b419c4d4d18016f32c3f786c37c30ffed22fa021000cdca171a
+    ordered_content_manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+    patch_bytes: 137406
+    patch_sha256: 1ef8ee7b5553defd5d94ccb4d7f95f60729a608f0d9700bc3c1821a4c7b56fc4
+    diff_check: pass
+    technical_test_replay_required: false
+    reason: exact_12_contents_pathset_and_patch_are_byte_identical_and_drift_is_disjoint
+  authorization_effect:
+    original_human_authorization_granted: false
+    amendment_only: true
+    may_present_reconciled_A10C2R2_request_after_f013_review: true
+    stage_commit_or_push: false
+  forbidden:
+    - modify_delete_stage_or_commit_self_link
+    - role_view_disposition
+    - other_dirty_disposition
+    - openspec_8
+    - run_handoff_15
+    - stage_b
+    - content_edit
+    - push
+    - live_or_shared_api_or_database_access
+    - deployment_or_status_promotion
+  rollback:
+    repository: not_applicable_governance_only
+    drift_object: preserve_untouched
+  requested_review:
+    authority: F-013
+    question: whether_A10C2R2_may_be_presented_with_the_reconciled_191_450_baseline_without_technical_retest
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

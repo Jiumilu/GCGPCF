@@ -1,0 +1,99 @@
+gke001_mmc_h1_owner_local_commit_authorization_request:
+  id: GKE-001-COORDINATION-20260813-066-A10C8R3
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: rework-mmc-shared-registry-state-a10i3h1r2
+  mode: human_authorization_request_only
+  owner: MMC_H1_mutation_boundary
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  predecessors:
+    - id: GKE-001-COORDINATION-20260813-063-A10C8
+      sha256: 1bb76d38f24c965a5f3d4dd91ffe91f047690b5c05cf6e8fa726af543ec2daf3
+      result: stable_reproducible_H1_owner_unit
+    - id: GKE-001-COORDINATION-20260813-064-A10C8R1
+      sha256: 41b69e27ba18b79193cd244be28806fa62851763a863fe52e6af3b235dd564af
+      result: stable_reproducible_h1_owner_unit_eligible_for_separate_human_owner_disposition_authorization_request
+    - id: GKE-001-COORDINATION-20260813-065-A10C8R2
+      sha256: acf34c713ab532fb288c615bec20893a9fb3115ef694b7a5d5ff170e77f3d7e5
+      result: rework_required_authorization_provenance_and_hash_algorithm_binding
+  required_baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    raw_ordinary_dirty: 15
+    raw_expanded_dirty: 76
+    ordinary_nul_sha256: 4aa3dbdeb92bc3d7538cc48898245fe049437d32b406c658a63abdff75244fde
+    expanded_nul_sha256: ddba5938cbae9cdd870f0820aa93ff29db02af308cdbb2f6c1fd8bc421cfef16
+    opsx_lock: absent_before_execution
+  exact_paths:
+    - runtime/app/gateway/registry_state.py
+    - runtime/app/api/v1/registry_apis.py
+    - runtime/app/api/v1/registry_llms.py
+    - runtime/app/api/v1/connectors.py
+    - runtime/app/api/v1/health.py
+    - runtime/app/db/session.py
+    - scripts/dry_run_mmc_dependencies.py
+    - runtime/tests/test_registry_policy_audit.py
+    - runtime/tests/test_api.py
+    - runtime/tests/test_llm_registry.py
+    - runtime/tests/test_dependency_dry_run.py
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/proposal.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/design.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/specs/shared-registry-state/spec.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/tasks.md
+  sealed_fingerprints:
+    path_count: 15
+    sorted_nul_pathset_sha256: 7544700e1f12d9bcdd02c9b2b8ac01dd36a46ea11ee2843c1342ca23c723eb50
+    ordered_content_manifest_sha256: 955fae675854623920241286094edb8d1e2694de8a6993f6b85c238e16461c90
+    full_index_patch_bytes: 59487
+    full_index_patch_sha256: b4c728d6f6a5bc6527db905453a1557fdb90283bc1bd784c1c2b2f472096daab
+  authoritative_algorithms:
+    pathset: stage_exact_paths_then_git_diff_cached_name_only_z_then_nul_sort_then_sha256_raw_bytes
+    ordered_content_manifest: for_each_exact_paths_in_control_order_read_index_blob_then_emit_lowercase_sha256_two_spaces_path_lf_then_sha256_manifest_bytes
+    patch: git_diff_cached_binary_full_index_raw_bytes_then_byte_count_and_sha256
+    dirty_baseline: git_status_porcelain_v1_z_for_ordinary_and_git_status_porcelain_v1_z_untracked_files_all_for_expanded_then_sha256_raw_bytes
+  commit:
+    count: 1
+    subject: "fix(mmc): harden shared registry state boundary"
+    local_only: true
+  mandatory_execution_gates:
+    - reverify_exact_baseline_counts_and_nul_hashes
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_15_paths_only
+    - recompute_fingerprints_using_authoritative_algorithms
+    - git_diff_cached_check_pass
+    - create_exactly_one_local_commit_with_frozen_subject
+    - release_lock_and_return_report_only_receipt
+  abort_rule:
+    condition: any_baseline_scope_fingerprint_or_gate_mismatch
+    actions:
+      - unstage_only_the_exact_15_paths
+      - require_staged_count_zero
+      - require_exact_15_worktree_content_hashes_unchanged
+      - require_other_dirty_and_runtime_sidecar_unchanged
+      - release_lock
+      - create_no_commit
+  forbidden:
+    - evidence_run_directories
+    - runtime/.state.json.lock_cleanup_or_commit
+    - A10C7_source_policy
+    - any_other_dirty_path
+    - content_rework_beyond_sealed_patch
+    - push
+    - runtime_policy_application
+    - live_request_or_credentials
+    - deploy_or_status_promotion
+  rollback:
+    before_commit: abort_rule_above
+    after_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_human_authorization: pending
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

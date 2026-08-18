@@ -1,0 +1,66 @@
+gke001_mmc_release0_source_policy_independent_review:
+  id: GKE-001-COORDINATION-20260813-082-A10C7R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: governance_only_independent_review_receipt
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-061-A10C7R1
+    artifact_sha256: e2531e7e5dd5de54648d331c166a7c30398cd1eb17288dfa689570a594b741b5
+  independent_review:
+    authority: F-013
+    classification: a10c7r1_source_only_policy_implementation_independent_review_passed_runtime_policy_unchanged
+    repository_write: false
+  lane:
+    repository: MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: admit-release0-canonical-read-policy-a10c7
+    owner: MMC
+  baseline:
+    head_equals_origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    dirty_ordinary_expanded: 19/99
+    opsx_lock: absent
+  source_candidate:
+    exact_product_openspec_paths: 6
+    pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+    ordered_content_manifest_sha256: 8c525f2a608d918fa6eab60ec49733474cae77d8d3331493d754027428304795
+    patch_bytes: 9830
+    patch_sha256: 66ddc6b2dab14f3db807c66426fdb9ab5eb44d3605d913d865dda0608f8fec77
+    final_operation_count: 19
+    final_fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    exact_appended_operations:
+      - "POST /api/v1/knowledge-read/release-0/search"
+      - "POST /api/v1/knowledge-read/release-0/read"
+    wildcard_added: false
+  independent_verification:
+    focused: 23_passed
+    full_runtime: 160_passed
+    contract: pass
+    openspec_strict: pass
+    mmc_harness: pass
+    codegraph: 114_files_1108_nodes_2435_edges
+    diff_check: pass
+  runtime_boundary:
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    runtime_operation_count: 17
+    runtime_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    runtime_contains_release0_routes: false
+    sidecar_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    runtime_policy_applied: false
+  authorization_effect:
+    source_technical_review: passed
+    local_commit: not_authorized
+    runtime_policy_apply: not_authorized
+    push: not_authorized
+    live_e2e: not_authorized
+    deployment_or_promotion: not_authorized
+  rollback:
+    runtime: not_applicable_unchanged
+    source_before_commit: remove_only_a10c7_allowlisted_delta
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

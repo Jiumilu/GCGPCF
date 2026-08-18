@@ -1,0 +1,161 @@
+a10p3r1_field_schema_rework:
+  id: GKE-001-COORDINATION-20260811-009-A10P3R1
+  type: corrected_field_schema_and_executable_normalizer_report_only
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-008-A10P3
+    sha256: 9a3fe20c87d269263e442b5a6899f6f75581319adc7a8800a27e0669abcd22e4
+    result: two_reports_received_schema_rework_required
+  preserved_decision_baseline:
+    source: A10P2
+    operations:
+      - POST /api/v1/knowledge-read/release-0/search
+      - POST /api/v1/knowledge-read/release-0/read
+    read_views: [graph, wiki_preview]
+    status: accepted_decision_baseline_not_implementation_contract
+  corrected_schema_candidate:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-openapi-candidate-a10p3r1.yaml
+    format: OpenAPI_3_1
+    raw_sha256: 74b51affabf79d2ba4a908d2d9397671bdd0b07bc80814a0c36dd8d83faa7e14
+    canonical_json_bytes: 34526
+    canonical_json_sha256: 766ca647e894c09520bcb8ce0e70386aa233bcf727fcaf140e521f6127b1a09b
+    status: candidate_not_frozen_not_implemented
+  executable_normalizer:
+    path: tools/kds-sync/normalize_gke001_release0_read_contract.py
+    raw_sha256: d820e8103b2af74aab06381fe4034c9cec525acc8c7e1efdb074bd8a4a3aa4e4
+    exact_command: python3 tools/kds-sync/normalize_gke001_release0_read_contract.py SCHEMA --sha256
+    operation_matrix_bytes: 826
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+    operation_field_included: false
+    ref_expansion: false
+    row_fields_in_order: [method, path, request, response]
+    serialization: json_ensure_ascii_true_sort_keys_true_compact_no_trailing_newline
+  corrected_findings:
+    - SearchRequest_is_single_closed_object_and_valid_instance_passes
+    - signed_read_authority_claim_exactly_binds_target_project_session
+    - AssetProjection_includes_parsing_for_succeeded_Stage_B_active_extraction
+    - graph_label_is_nullable_when_no_canonical_label_exists
+    - digest_ocr_kind_and_confidence_adapter_rules_are_explicit
+    - block_and_cell_text_truncation_is_bounded_explicit_and_digest_backed
+    - PDF_DOCX_XLSX_image_text_and_time_locators_preserve_typed_coordinates
+  frozen_future_file_requests:
+    studio:
+      baseline: 88769078f5c230ae9ed973815de4861cc6317a5c
+      paths:
+        - packages/server/src/routes/brain-kds-bridge.ts
+        - packages/server/src/services/core/kds-client.ts
+        - packages/server/src/services/core/mmc-client.ts
+        - packages/server/src/services/core/mmc-delegation-context.ts
+        - packages/server/src/middleware/user-auth.ts
+        - tests/server/brain-kds-bridge-route.test.ts
+        - tests/server/kds-client-runtime.test.ts
+        - tests/server/mmc-client.test.ts
+        - tests/server/mmc-delegation-context.test.ts
+        - tests/server/user-auth.test.ts
+      count: 10
+    mmc:
+      baseline: 8bb60fcffb8de14e839de0631e646c8c73418092
+      paths:
+        - runtime/app/api/v1/connectors.py
+        - runtime/tests/test_api.py
+        - runtime/tests/test_gateway.py
+        - runtime/tests/test_permission.py
+        - runtime/tests/test_contract.py
+        - runtime/scripts/seed.sh
+        - runtime/state.json
+        - llm-wiki-openapi-schema.yaml
+      count: 8
+      policy_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    kds:
+      baseline: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+      paths:
+        - api_server.py
+        - knowledge_intake/read_api.py
+        - knowledge_intake/read_contract.py
+        - knowledge_intake/read_authorization.py
+        - knowledge_intake/read_service.py
+        - knowledge_intake/read_repository.py
+        - knowledge_intake/read_postgres.py
+        - tests/test_knowledge_read_contract.py
+        - tests/test_knowledge_read_api.py
+        - tests/test_knowledge_read_authorization.py
+        - tests/test_knowledge_read_projection.py
+        - tests/test_knowledge_read_postgres_audit.py
+      count: 12
+      dirty_shared_files_excluded:
+        - knowledge_intake/repository.py
+        - knowledge_intake/postgres.py
+      migration_required: false_for_isolated_first_implementation
+  parallel_lanes:
+    studio_mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      change_id: verify-corrected-release0-schema-a10p3r1
+      execution_mode: report_only_static_reads
+      repository_file_allowlist: []
+      required_report:
+        - exact_schema_control_normalizer_and_matrix_hashes
+        - run_executable_normalizer_without_alternative_algorithm
+        - validate_BFF_request_error_and_MMC_transport_shapes_against_corrected_schema
+        - verify_frozen_Studio_and_MMC_path_lists_counts_baselines_and_nonoverlap
+        - remaining_schema_blockers_or_freeze_ready_statement
+        - zero_write_network_runtime_credential_statement
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      change_id: verify-corrected-release0-schema-a10p3r1
+      execution_mode: report_only_static_schema_repository_and_existing_evidence_reads
+      repository_file_allowlist: []
+      required_report:
+        - exact_schema_control_normalizer_and_matrix_hashes
+        - run_executable_normalizer_without_alternative_algorithm
+        - valid_instance_checks_for_search_graph_wiki_and_all_locator_variants
+        - verify_lossless_Stage_B_adapter_and_signed_authority_rules
+        - verify_frozen_KDS_path_list_count_dirty_exclusions_and_migration_decision
+        - remaining_schema_blockers_or_freeze_ready_statement
+        - zero_write_database_API_runtime_credential_statement
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      change_id: frozen-after-a10p1-tranche-2
+      execution_mode: freeze_and_wait
+      repository_file_allowlist: []
+  serial_gate:
+    order:
+      - collect_two_A10P3R1_reports
+      - F013_independent_byte_and_instance_level_freeze_review
+      - coordinator_may_freeze_full_contract_only_after_review
+      - separate_nonoverlapping_implementation_controls
+    automatic_contract_freeze: false
+    implementation_authorized: false
+    policy_change_authorized: false
+    live_read_authorized: false
+    real_e2e_authorized: false
+  authorization:
+    GPCF_corrected_schema_normalizer_and_control_write: true
+    lane_static_read_and_report: true
+    lane_repository_file_write: false
+    runtime_policy_or_configuration_change: false
+    database_or_external_data_access: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    Brain_tranche_3: false
+    real_authenticated_e2e: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    control: withdraw_A10P3R1_and_retain_A10P2_decision_baseline
+    repositories: not_applicable_no_lane_change_authorized
+    external_data: not_applicable_no_access_authorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

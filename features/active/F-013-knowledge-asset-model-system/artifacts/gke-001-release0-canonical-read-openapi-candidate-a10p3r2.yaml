@@ -1,0 +1,1451 @@
+openapi: 3.1.0
+info:
+  title: GlobalCloud KDS Canonical Read Release 0 Candidate
+  version: release0.v1-schema-candidate-a10p3r1
+  description: >-
+    Field-level candidate only. This document is not frozen, implemented, or authorized
+    for live use. Responses are read projections and never become a KnowledgeObject,
+    approved copy, graph ledger, long-term memory, or business fact.
+x-contract-id: globalcloud.kds.canonical-read
+x-contract-revision: release0.v1-candidate
+x-status: candidate_not_frozen_not_implemented
+x-canonical-dependency:
+  contract_id: globalcloud.knowledge_asset
+  revision: v0.1
+  manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+x-mmc-delegation-authority-binding:
+  claim: read_authority
+  signed: true
+  additionalProperties: false
+  required: [binding_revision, target_object_ref, project_ref, session_ref]
+  properties:
+    binding_revision:
+      const: release0.v1
+    target_object_ref:
+      type: string
+      minLength: 1
+      maxLength: 255
+    project_ref:
+      type: string
+      minLength: 1
+      maxLength: 255
+    session_ref:
+      type: string
+      minLength: 1
+      maxLength: 255
+  equality_rule: request authority fields must exactly equal the signed claim
+  persistence: request authorization evidence only; never a project master-data ledger
+x-stage-b-adapter-mapping:
+  asset_ref: knowledge_assets.asset_id
+  digest_wire_format: prefix persisted lowercase 64-hex digest with sha256 colon
+  block_kind: map persisted ocr to image_ocr; all other allowed kinds remain identical
+  confidence: divide persisted integer 0..100 by 100 to emit number 0..1
+  bounded_text: >-
+    text is the first schema maxLength Unicode code points; text_truncated states whether
+    source_text_length exceeds the emitted length; source_text_digest is SHA-256 over the
+    complete original UTF-8 text. No silent truncation is permitted.
+  evidence_locator: preserve every typed coordinate; page-only lossy conversion is forbidden
+x-kds-canonical-operations:
+  - method: POST
+    path: /api/v1/knowledge-read/release-0/search
+  - method: POST
+    path: /api/v1/knowledge-read/release-0/read
+x-mmc-policy:
+  candidate_isolated_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+  current_and_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+  policy_change_authorized: false
+x-ordering:
+  search: score DESC, knowledge_object_ref ASC, asset_ref ASC
+  graph_edges: source_node_ref ASC, target_node_ref ASC, relation_type ASC, edge_ref ASC
+  blocks: ordinal ASC, block_ref ASC
+  cells: parent_block_ref ASC, row ASC, column ASC, cell_ref ASC
+  evidence: created_at ASC, evidence_ref ASC
+x-pagination:
+  total_semantics: authorized rows after all ACL and filters and before page slicing
+  returned_count_semantics: number of items in the current response page
+  cursor_encoding: opaque, versioned, integrity-protected, and server-generated
+  cursor_binding:
+    - contract_revision
+    - operation_and_view
+    - tenant_id_and_org_id
+    - target_object_ref
+    - project_ref
+    - session_ref
+    - query_and_filter_digest
+    - deterministic_last_sort_key
+  mismatch_error: KDS_KNOWLEDGE_READ_CURSOR_INVALID
+  graph_page_unit: edges
+  graph_node_rule: >-
+    Each graph page includes the root and both endpoint nodes for every returned edge.
+    Nodes may repeat across pages. A zero-edge page contains the authorized root only.
+x-audit:
+  outcomes: [success, denied, not_found]
+  commit_before_response: true
+  audit_failure_error: KDS_KNOWLEDGE_READ_AUDIT_UNAVAILABLE
+  outbox_required: false
+  forbidden_detail:
+    - raw_delegation_or_signature
+    - raw_query_or_snippet
+    - source_content_or_filename_or_path
+    - inaccessible_guessed_identity
+x-studio-bff-error-mapping:
+  local_unauthenticated:
+    status: 401
+    code: STUDIO_AUTH_REQUIRED
+    kds_call_allowed: false
+  local_session_or_binding_denied:
+    status: 403
+    code: STUDIO_KNOWLEDGE_READ_FORBIDDEN
+    kds_call_allowed: false
+  upstream_400: preserve_status_and_bounded_kds_code
+  upstream_403: preserve_status_and_bounded_kds_code
+  upstream_404: preserve_status_and_KDS_KNOWLEDGE_READ_NOT_FOUND
+  upstream_503: preserve_status_and_bounded_kds_code
+servers:
+  - url: /
+paths:
+  /api/v1/knowledge-read/release-0/search:
+    post:
+      operationId: kdsCanonicalKnowledgeSearch
+      parameters:
+        - $ref: '#/components/parameters/KdsDelegation'
+        - $ref: '#/components/parameters/KdsDelegationSignature'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SearchRequest'
+      responses:
+        '200':
+          description: Authorized search projection; zero results are successful.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          $ref: '#/components/responses/InvalidRequest'
+        '403':
+          $ref: '#/components/responses/AuthDenied'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '503':
+          $ref: '#/components/responses/Unavailable'
+  /api/v1/knowledge-read/release-0/read:
+    post:
+      operationId: kdsCanonicalKnowledgeRead
+      parameters:
+        - $ref: '#/components/parameters/KdsDelegation'
+        - $ref: '#/components/parameters/KdsDelegationSignature'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/GraphReadRequest'
+                - $ref: '#/components/schemas/WikiPreviewReadRequest'
+              discriminator:
+                propertyName: view
+                mapping:
+                  graph: '#/components/schemas/GraphReadRequest'
+                  wiki_preview: '#/components/schemas/WikiPreviewReadRequest'
+      responses:
+        '200':
+          description: Authorized graph or wiki preview projection.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/GraphReadResponse'
+                  - $ref: '#/components/schemas/WikiPreviewReadResponse'
+                discriminator:
+                  propertyName: view
+                  mapping:
+                    graph: '#/components/schemas/GraphReadResponse'
+                    wiki_preview: '#/components/schemas/WikiPreviewReadResponse'
+        '400':
+          $ref: '#/components/responses/InvalidRequest'
+        '403':
+          $ref: '#/components/responses/AuthDenied'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '503':
+          $ref: '#/components/responses/Unavailable'
+  /api/brain/kds/sessions/{sessionId}/search:
+    post:
+      operationId: studioSessionKnowledgeSearch
+      x-boundary: studio_bff
+      x-authority: derive tenant, org, project, target, and delegation from authenticated server state
+      parameters:
+        - $ref: '#/components/parameters/SessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BrowserSearchRequest'
+      responses:
+        '200':
+          description: Trusted projection of the KDS search response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SearchResponse'
+        '400':
+          $ref: '#/components/responses/InvalidRequest'
+        '401':
+          $ref: '#/components/responses/StudioAuthRequired'
+        '403':
+          $ref: '#/components/responses/StudioForbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '503':
+          $ref: '#/components/responses/Unavailable'
+  /api/brain/kds/sessions/{sessionId}/read:
+    post:
+      operationId: studioSessionKnowledgeRead
+      x-boundary: studio_bff
+      x-authority: derive tenant, org, project, target, and delegation from authenticated server state
+      parameters:
+        - $ref: '#/components/parameters/SessionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/BrowserGraphReadRequest'
+                - $ref: '#/components/schemas/BrowserWikiPreviewReadRequest'
+              discriminator:
+                propertyName: view
+      responses:
+        '200':
+          description: Trusted projection of the KDS read response.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/GraphReadResponse'
+                  - $ref: '#/components/schemas/WikiPreviewReadResponse'
+                discriminator:
+                  propertyName: view
+        '400':
+          $ref: '#/components/responses/InvalidRequest'
+        '401':
+          $ref: '#/components/responses/StudioAuthRequired'
+        '403':
+          $ref: '#/components/responses/StudioForbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '503':
+          $ref: '#/components/responses/Unavailable'
+components:
+  parameters:
+    KdsDelegation:
+      name: X-KDS-Delegation
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 8192
+    KdsDelegationSignature:
+      name: X-KDS-Delegation-Signature
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 1
+        maxLength: 1024
+    CorrelationId:
+      name: X-Correlation-ID
+      in: header
+      required: true
+      schema:
+        $ref: '#/components/schemas/BoundedRef'
+    SessionId:
+      name: sessionId
+      in: path
+      required: true
+      schema:
+        $ref: '#/components/schemas/BoundedRef'
+  responses:
+    InvalidRequest:
+      description: Invalid request, bounds, revision, or cursor.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InvalidRequestError'
+    AuthDenied:
+      description: Missing, invalid, expired, replayed, or insufficient delegation.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AuthDeniedError'
+    NotFound:
+      description: Target or content is absent or outside ACL; no distinction is exposed.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NotFoundError'
+    Unavailable:
+      description: Audit or controlled read service is unavailable; no payload is released.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UnavailableError'
+    StudioAuthRequired:
+      description: Studio authentication is required; no KDS call occurs.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StudioAuthRequiredError'
+    StudioForbidden:
+      description: Session ownership or authoritative binding failed; no KDS call occurs.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StudioForbiddenError'
+  schemas:
+    BoundedRef:
+      type: string
+      minLength: 1
+      maxLength: 255
+    NullableCursor:
+      oneOf:
+        - type: string
+          minLength: 1
+          maxLength: 2048
+        - type: 'null'
+    CommonAuthority:
+      type: object
+      additionalProperties: false
+      required: [target_object_ref, project_ref, session_ref]
+      properties:
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+    SearchRequest:
+      type: object
+      additionalProperties: false
+      required: [target_object_ref, project_ref, session_ref, query, search_scope, limit]
+      properties:
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        query:
+          type: string
+          minLength: 1
+          maxLength: 512
+        search_scope:
+          type: string
+          enum: [metadata, extracted, all]
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+        cursor:
+          $ref: '#/components/schemas/NullableCursor'
+    BrowserSearchRequest:
+      type: object
+      additionalProperties: false
+      required: [query, search_scope, limit]
+      properties:
+        query:
+          type: string
+          minLength: 1
+          maxLength: 512
+        search_scope:
+          type: string
+          enum: [metadata, extracted, all]
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+        cursor:
+          $ref: '#/components/schemas/NullableCursor'
+    GraphOptions:
+      type: object
+      additionalProperties: false
+      required: [root_object_ref, max_depth, limit, verification_states]
+      properties:
+        root_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        max_depth:
+          type: integer
+          minimum: 1
+          maximum: 3
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 200
+        cursor:
+          $ref: '#/components/schemas/NullableCursor'
+        verification_states:
+          type: array
+          minItems: 1
+          maxItems: 2
+          uniqueItems: true
+          items:
+            type: string
+            enum: [machine_derived, human_required]
+    WikiPreviewOptions:
+      type: object
+      additionalProperties: false
+      required: [asset_ref, extraction_ref, block_limit, cell_limit, evidence_limit]
+      properties:
+        asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        extraction_ref:
+          type: string
+          const: active
+        block_limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+        block_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+        cell_limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+        cell_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+        evidence_limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+        evidence_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+    GraphReadRequest:
+      type: object
+      additionalProperties: false
+      required: [target_object_ref, project_ref, session_ref, view, graph]
+      properties:
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        view:
+          type: string
+          const: graph
+        graph:
+          $ref: '#/components/schemas/GraphOptions'
+    WikiPreviewReadRequest:
+      type: object
+      additionalProperties: false
+      required: [target_object_ref, project_ref, session_ref, view, wiki_preview]
+      properties:
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        view:
+          type: string
+          const: wiki_preview
+        wiki_preview:
+          $ref: '#/components/schemas/WikiPreviewOptions'
+    BrowserGraphReadRequest:
+      type: object
+      additionalProperties: false
+      required: [view, graph]
+      properties:
+        view:
+          type: string
+          const: graph
+        graph:
+          type: object
+          additionalProperties: false
+          required: [max_depth, limit, verification_states]
+          properties:
+            max_depth:
+              type: integer
+              minimum: 1
+              maximum: 3
+            limit:
+              type: integer
+              minimum: 1
+              maximum: 200
+            cursor:
+              $ref: '#/components/schemas/NullableCursor'
+            verification_states:
+              type: array
+              minItems: 1
+              maxItems: 2
+              uniqueItems: true
+              items:
+                type: string
+                enum: [machine_derived, human_required]
+    BrowserWikiPreviewReadRequest:
+      type: object
+      additionalProperties: false
+      required: [view, wiki_preview]
+      properties:
+        view:
+          type: string
+          const: wiki_preview
+        wiki_preview:
+          $ref: '#/components/schemas/WikiPreviewOptions'
+    ResponseBase:
+      type: object
+      additionalProperties: false
+      required:
+        - contract_id
+        - contract_revision
+        - correlation_id
+        - projection_only
+        - target_object_ref
+        - project_ref
+        - session_ref
+      properties:
+        contract_id:
+          type: string
+          const: globalcloud.kds.canonical-read
+        contract_revision:
+          type: string
+          const: release0.v1
+        correlation_id:
+          $ref: '#/components/schemas/BoundedRef'
+        projection_only:
+          type: boolean
+          const: true
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+    SearchResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - contract_id
+        - contract_revision
+        - correlation_id
+        - projection_only
+        - target_object_ref
+        - project_ref
+        - session_ref
+        - total
+        - returned_count
+        - items
+        - next_cursor
+      properties:
+        contract_id:
+          type: string
+          const: globalcloud.kds.canonical-read
+        contract_revision:
+          type: string
+          const: release0.v1
+        correlation_id:
+          $ref: '#/components/schemas/BoundedRef'
+        projection_only:
+          type: boolean
+          const: true
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        total:
+          type: integer
+          minimum: 0
+        returned_count:
+          type: integer
+          minimum: 0
+        items:
+          type: array
+          maxItems: 100
+          items:
+            $ref: '#/components/schemas/SearchProjection'
+        next_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+    SearchProjection:
+      type: object
+      additionalProperties: false
+      required:
+        - knowledge_object_ref
+        - asset_ref
+        - source_version_ref
+        - active_extraction_ref
+        - title
+        - mime_type
+        - source_kind
+        - lifecycle_state
+        - project_refs
+        - session_ref
+        - score
+        - matched_blocks
+      properties:
+        knowledge_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_version_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        active_extraction_ref:
+          oneOf:
+            - $ref: '#/components/schemas/BoundedRef'
+            - type: 'null'
+        title:
+          type: string
+          minLength: 1
+          maxLength: 512
+        mime_type:
+          type: string
+          minLength: 1
+          maxLength: 255
+        source_kind:
+          type: string
+          minLength: 1
+          maxLength: 64
+        lifecycle_state:
+          type: string
+          enum: [received, validated, stored, parsing, transcribing, analyzed, review_required, approved, rejected, superseded, failed]
+        project_refs:
+          type: array
+          minItems: 1
+          maxItems: 100
+          uniqueItems: true
+          items:
+            $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          oneOf:
+            - $ref: '#/components/schemas/BoundedRef'
+            - type: 'null'
+        score:
+          type: number
+          minimum: 0
+        matched_blocks:
+          type: array
+          maxItems: 20
+          items:
+            $ref: '#/components/schemas/MatchedBlockProjection'
+    MatchedBlockProjection:
+      type: object
+      additionalProperties: false
+      required: [block_ref, snippet, evidence_locator]
+      properties:
+        block_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        snippet:
+          type: string
+          minLength: 1
+          maxLength: 512
+        evidence_locator:
+          $ref: '#/components/schemas/EvidenceLocator'
+    GraphReadResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - contract_id
+        - contract_revision
+        - correlation_id
+        - projection_only
+        - target_object_ref
+        - project_ref
+        - session_ref
+        - view
+        - root_object_ref
+        - projection_revision
+        - total_nodes
+        - total_edges
+        - returned_node_count
+        - returned_edge_count
+        - nodes
+        - edges
+        - next_cursor
+      properties:
+        contract_id:
+          type: string
+          const: globalcloud.kds.canonical-read
+        contract_revision:
+          type: string
+          const: release0.v1
+        correlation_id:
+          $ref: '#/components/schemas/BoundedRef'
+        projection_only:
+          type: boolean
+          const: true
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        view:
+          type: string
+          const: graph
+        root_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        projection_revision:
+          type: string
+          pattern: '^sha256:[0-9a-f]{64}$'
+        total_nodes:
+          type: integer
+          minimum: 1
+        total_edges:
+          type: integer
+          minimum: 0
+        returned_node_count:
+          type: integer
+          minimum: 1
+        returned_edge_count:
+          type: integer
+          minimum: 0
+          maximum: 200
+        nodes:
+          type: array
+          minItems: 1
+          maxItems: 401
+          items:
+            $ref: '#/components/schemas/GraphNodeProjection'
+        edges:
+          type: array
+          maxItems: 200
+          items:
+            $ref: '#/components/schemas/GraphEdgeProjection'
+        next_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+    GraphNodeProjection:
+      type: object
+      additionalProperties: false
+      required: [node_ref, node_kind, canonical_ref, label, verification_state]
+      properties:
+        node_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        node_kind:
+          type: string
+          enum: [canonical_knowledge_object, source_asset, source_version, extraction_projection, content_block_projection]
+        canonical_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        label:
+          oneOf:
+            - type: string
+              minLength: 1
+              maxLength: 512
+            - type: 'null'
+        verification_state:
+          type: string
+          enum: [structural, machine_derived, human_required]
+    GraphEdgeProjection:
+      type: object
+      additionalProperties: false
+      required:
+        - edge_ref
+        - source_node_ref
+        - target_node_ref
+        - relation_type
+        - verification_state
+        - structural_projection
+        - candidate
+        - evidence_ref
+      properties:
+        edge_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_node_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        target_node_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        relation_type:
+          type: string
+          minLength: 1
+          maxLength: 128
+        verification_state:
+          type: string
+          enum: [structural, machine_derived, human_required]
+        structural_projection:
+          type: boolean
+        candidate:
+          type: boolean
+        evidence_ref:
+          oneOf:
+            - $ref: '#/components/schemas/BoundedRef'
+            - type: 'null'
+    WikiPreviewReadResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - contract_id
+        - contract_revision
+        - correlation_id
+        - projection_only
+        - target_object_ref
+        - project_ref
+        - session_ref
+        - view
+        - asset
+        - extraction
+        - block_total
+        - cell_total
+        - evidence_total
+        - returned_block_count
+        - returned_cell_count
+        - returned_evidence_count
+        - blocks
+        - cells
+        - evidence_links
+        - next_block_cursor
+        - next_cell_cursor
+        - next_evidence_cursor
+      properties:
+        contract_id:
+          type: string
+          const: globalcloud.kds.canonical-read
+        contract_revision:
+          type: string
+          const: release0.v1
+        correlation_id:
+          $ref: '#/components/schemas/BoundedRef'
+        projection_only:
+          type: boolean
+          const: true
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        project_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        view:
+          type: string
+          const: wiki_preview
+        asset:
+          $ref: '#/components/schemas/AssetProjection'
+        extraction:
+          $ref: '#/components/schemas/ExtractionProjection'
+        block_total:
+          type: integer
+          minimum: 0
+        cell_total:
+          type: integer
+          minimum: 0
+          description: Authorized cells for blocks in the current block page.
+        evidence_total:
+          type: integer
+          minimum: 0
+        returned_block_count:
+          type: integer
+          minimum: 0
+          maximum: 100
+        returned_cell_count:
+          type: integer
+          minimum: 0
+          maximum: 100
+        returned_evidence_count:
+          type: integer
+          minimum: 0
+          maximum: 100
+        blocks:
+          type: array
+          maxItems: 100
+          items:
+            $ref: '#/components/schemas/BlockProjection'
+        cells:
+          type: array
+          maxItems: 100
+          items:
+            $ref: '#/components/schemas/CellProjection'
+        evidence_links:
+          type: array
+          maxItems: 100
+          items:
+            $ref: '#/components/schemas/EvidenceProjection'
+        next_block_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+        next_cell_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+        next_evidence_cursor:
+          $ref: '#/components/schemas/NullableCursor'
+    AssetProjection:
+      type: object
+      additionalProperties: false
+      required:
+        - asset_ref
+        - knowledge_object_ref
+        - source_version_ref
+        - active_extraction_ref
+        - title
+        - mime_type
+        - source_kind
+        - project_refs
+        - session_ref
+        - lifecycle_state
+      properties:
+        asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        knowledge_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_version_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        active_extraction_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        title:
+          type: string
+          minLength: 1
+          maxLength: 512
+        mime_type:
+          type: string
+          minLength: 1
+          maxLength: 255
+        source_kind:
+          type: string
+          minLength: 1
+          maxLength: 64
+        project_refs:
+          type: array
+          minItems: 1
+          maxItems: 100
+          uniqueItems: true
+          items:
+            $ref: '#/components/schemas/BoundedRef'
+        session_ref:
+          oneOf:
+            - $ref: '#/components/schemas/BoundedRef'
+            - type: 'null'
+        lifecycle_state:
+          type: string
+          enum: [parsing, analyzed, review_required, approved]
+    ExtractionProjection:
+      type: object
+      additionalProperties: false
+      required:
+        - extraction_ref
+        - asset_ref
+        - source_version_ref
+        - extraction_version
+        - parser_name
+        - parser_version
+        - profile_digest
+        - state
+        - content_digest
+        - block_count
+        - cell_count
+      properties:
+        extraction_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_version_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        extraction_version:
+          type: integer
+          minimum: 1
+        parser_name:
+          type: string
+          minLength: 1
+          maxLength: 128
+        parser_version:
+          type: string
+          minLength: 1
+          maxLength: 128
+        profile_digest:
+          type: string
+          pattern: '^sha256:[0-9a-f]{64}$'
+        state:
+          type: string
+          const: succeeded
+        content_digest:
+          type: string
+          pattern: '^sha256:[0-9a-f]{64}$'
+        block_count:
+          type: integer
+          minimum: 0
+        cell_count:
+          type: integer
+          minimum: 0
+    BlockProjection:
+      type: object
+      additionalProperties: false
+      required: [block_ref, asset_ref, source_version_ref, extraction_ref, ordinal, kind, text, text_truncated, source_text_length, source_text_digest, evidence_locator, confidence, metadata]
+      properties:
+        block_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_version_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        extraction_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        ordinal:
+          type: integer
+          minimum: 1
+        kind:
+          type: string
+          enum: [heading, paragraph, list, table, image_ocr, transcript, code, other]
+        text:
+          type: string
+          maxLength: 20000
+        text_truncated:
+          type: boolean
+        source_text_length:
+          type: integer
+          minimum: 0
+        source_text_digest:
+          type: string
+          pattern: '^sha256:[0-9a-f]{64}$'
+        evidence_locator:
+          $ref: '#/components/schemas/EvidenceLocator'
+        confidence:
+          oneOf:
+            - type: number
+              minimum: 0
+              maximum: 1
+            - type: 'null'
+        metadata:
+          type: object
+          additionalProperties: false
+          properties:
+            language:
+              type: string
+              minLength: 1
+              maxLength: 32
+            heading_level:
+              type: integer
+              minimum: 1
+              maximum: 6
+            ocr_engine:
+              type: string
+              minLength: 1
+              maxLength: 128
+            ocr_version:
+              type: string
+              minLength: 1
+              maxLength: 128
+    CellProjection:
+      type: object
+      additionalProperties: false
+      required: [cell_ref, parent_block_ref, asset_ref, source_version_ref, extraction_ref, row, column, text, text_truncated, source_text_length, source_text_digest, evidence_locator]
+      properties:
+        cell_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        parent_block_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_version_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        extraction_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        row:
+          type: integer
+          minimum: 1
+        column:
+          type: integer
+          minimum: 1
+        text:
+          type: string
+          maxLength: 10000
+        text_truncated:
+          type: boolean
+        source_text_length:
+          type: integer
+          minimum: 0
+        source_text_digest:
+          type: string
+          pattern: '^sha256:[0-9a-f]{64}$'
+        evidence_locator:
+          $ref: '#/components/schemas/EvidenceLocator'
+    EvidenceProjection:
+      type: object
+      additionalProperties: false
+      required:
+        - evidence_ref
+        - source_asset_ref
+        - source_version_ref
+        - extraction_ref
+        - block_ref
+        - evidence_locator
+        - relation_type
+        - verification_state
+        - supersedes_ref
+        - target
+        - created_at
+      properties:
+        evidence_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_asset_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        source_version_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        extraction_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        block_ref:
+          $ref: '#/components/schemas/BoundedRef'
+        evidence_locator:
+          $ref: '#/components/schemas/EvidenceLocator'
+        relation_type:
+          type: string
+          minLength: 1
+          maxLength: 128
+        verification_state:
+          type: string
+          enum: [machine_derived, human_required]
+        supersedes_ref:
+          oneOf:
+            - $ref: '#/components/schemas/BoundedRef'
+            - type: 'null'
+        target:
+          oneOf:
+            - $ref: '#/components/schemas/ResolvedEvidenceTarget'
+            - $ref: '#/components/schemas/UnresolvedEvidenceTarget'
+        created_at:
+          type: string
+          format: date-time
+    ResolvedEvidenceTarget:
+      type: object
+      additionalProperties: false
+      required: [kind, target_object_ref]
+      properties:
+        kind:
+          type: string
+          const: resolved
+        target_object_ref:
+          $ref: '#/components/schemas/BoundedRef'
+    UnresolvedEvidenceTarget:
+      type: object
+      additionalProperties: false
+      required: [kind, label, ref_type, reason]
+      properties:
+        kind:
+          type: string
+          const: unresolved
+        label:
+          type: string
+          minLength: 1
+          maxLength: 255
+        ref_type:
+          type: string
+          minLength: 1
+          maxLength: 64
+        reason:
+          type: string
+          minLength: 1
+          maxLength: 255
+    EvidenceLocator:
+      oneOf:
+        - $ref: '#/components/schemas/PdfLocator'
+        - $ref: '#/components/schemas/DocxLocator'
+        - $ref: '#/components/schemas/XlsxLocator'
+        - $ref: '#/components/schemas/ImageLocator'
+        - $ref: '#/components/schemas/TextLocator'
+        - $ref: '#/components/schemas/TimeLocator'
+    BoundingBox:
+      type: array
+      minItems: 4
+      maxItems: 4
+      items:
+        type: number
+    NullableBoundingBox:
+      oneOf:
+        - $ref: '#/components/schemas/BoundingBox'
+        - type: 'null'
+    PdfLocator:
+      type: object
+      additionalProperties: false
+      required: [kind, page, coordinate, bbox]
+      properties:
+        kind:
+          type: string
+          const: pdf
+        page:
+          type: integer
+          minimum: 1
+        coordinate:
+          oneOf:
+            - $ref: '#/components/schemas/ParagraphCoordinate'
+            - $ref: '#/components/schemas/TableCoordinate'
+            - $ref: '#/components/schemas/OcrBlockCoordinate'
+        bbox:
+          $ref: '#/components/schemas/NullableBoundingBox'
+    ParagraphCoordinate:
+      type: object
+      additionalProperties: false
+      required: [kind, paragraph]
+      properties:
+        kind:
+          type: string
+          const: paragraph
+        paragraph:
+          type: integer
+          minimum: 1
+    TableCoordinate:
+      type: object
+      additionalProperties: false
+      required: [kind, table, row, column]
+      properties:
+        kind:
+          type: string
+          const: table
+        table:
+          type: integer
+          minimum: 1
+        row:
+          oneOf:
+            - type: integer
+              minimum: 1
+            - type: 'null'
+        column:
+          oneOf:
+            - type: integer
+              minimum: 1
+            - type: 'null'
+    OcrBlockCoordinate:
+      type: object
+      additionalProperties: false
+      required: [kind, ocr_block]
+      properties:
+        kind:
+          type: string
+          const: ocr_block
+        ocr_block:
+          type: integer
+          minimum: 1
+    DocxLocator:
+      type: object
+      additionalProperties: false
+      required: [kind, section, coordinate]
+      properties:
+        kind:
+          type: string
+          const: docx
+        section:
+          type: integer
+          minimum: 1
+        coordinate:
+          oneOf:
+            - $ref: '#/components/schemas/ParagraphCoordinate'
+            - $ref: '#/components/schemas/TableCoordinate'
+    XlsxLocator:
+      type: object
+      additionalProperties: false
+      required: [kind, sheet, coordinate]
+      properties:
+        kind:
+          type: string
+          const: xlsx
+        sheet:
+          type: string
+          minLength: 1
+          maxLength: 255
+        coordinate:
+          oneOf:
+            - $ref: '#/components/schemas/SpreadsheetCellCoordinate'
+            - $ref: '#/components/schemas/SpreadsheetRangeCoordinate'
+    SpreadsheetCellCoordinate:
+      type: object
+      additionalProperties: false
+      required: [kind, cell]
+      properties:
+        kind:
+          type: string
+          const: cell
+        cell:
+          type: string
+          pattern: '^[A-Z]+[1-9][0-9]*$'
+    SpreadsheetRangeCoordinate:
+      type: object
+      additionalProperties: false
+      required: [kind, range]
+      properties:
+        kind:
+          type: string
+          const: range
+        range:
+          type: string
+          pattern: '^[A-Z]+[1-9][0-9]*:[A-Z]+[1-9][0-9]*$'
+    ImageLocator:
+      type: object
+      additionalProperties: false
+      required: [kind, page, ocr_block, bbox]
+      properties:
+        kind:
+          type: string
+          const: image
+        page:
+          type: integer
+          minimum: 1
+        ocr_block:
+          type: integer
+          minimum: 1
+        bbox:
+          $ref: '#/components/schemas/BoundingBox'
+    TextLocator:
+      type: object
+      additionalProperties: false
+      required: [kind, line_start, line_end, paragraph, character_start, character_end]
+      properties:
+        kind:
+          type: string
+          const: text
+        line_start:
+          type: integer
+          minimum: 1
+        line_end:
+          type: integer
+          minimum: 1
+        paragraph:
+          type: integer
+          minimum: 1
+        character_start:
+          type: integer
+          minimum: 0
+        character_end:
+          type: integer
+          minimum: 0
+    TimeLocator:
+      type: object
+      additionalProperties: false
+      required: [kind, start_ms, end_ms]
+      properties:
+        kind:
+          type: string
+          const: time
+        start_ms:
+          type: integer
+          minimum: 0
+        end_ms:
+          type: integer
+          minimum: 0
+    ErrorBody:
+      type: object
+      additionalProperties: false
+      required: [code, message, correlation_id, retryable]
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+          minLength: 1
+          maxLength: 255
+        correlation_id:
+          $ref: '#/components/schemas/BoundedRef'
+        retryable:
+          type: boolean
+    InvalidRequestError:
+      allOf:
+        - $ref: '#/components/schemas/ErrorBody'
+        - type: object
+          additionalProperties: false
+          required: [code, message, correlation_id, retryable]
+          properties:
+            code:
+              type: string
+              enum: [KDS_KNOWLEDGE_READ_INVALID_REQUEST, KDS_KNOWLEDGE_READ_CURSOR_INVALID]
+            message:
+              type: string
+              minLength: 1
+              maxLength: 255
+            correlation_id:
+              $ref: '#/components/schemas/BoundedRef'
+            retryable:
+              type: boolean
+              const: false
+    AuthDeniedError:
+      allOf:
+        - $ref: '#/components/schemas/ErrorBody'
+        - type: object
+          additionalProperties: false
+          required: [code, message, correlation_id, retryable]
+          properties:
+            code:
+              type: string
+              const: KDS_KNOWLEDGE_READ_AUTH_DENIED
+            message:
+              type: string
+              minLength: 1
+              maxLength: 255
+            correlation_id:
+              $ref: '#/components/schemas/BoundedRef'
+            retryable:
+              type: boolean
+              const: false
+    NotFoundError:
+      allOf:
+        - $ref: '#/components/schemas/ErrorBody'
+        - type: object
+          additionalProperties: false
+          required: [code, message, correlation_id, retryable]
+          properties:
+            code:
+              type: string
+              const: KDS_KNOWLEDGE_READ_NOT_FOUND
+            message:
+              type: string
+              minLength: 1
+              maxLength: 255
+            correlation_id:
+              $ref: '#/components/schemas/BoundedRef'
+            retryable:
+              type: boolean
+              const: false
+    UnavailableError:
+      allOf:
+        - $ref: '#/components/schemas/ErrorBody'
+        - type: object
+          additionalProperties: false
+          required: [code, message, correlation_id, retryable]
+          properties:
+            code:
+              type: string
+              enum: [KDS_KNOWLEDGE_READ_AUDIT_UNAVAILABLE, KDS_KNOWLEDGE_READ_UNAVAILABLE]
+            message:
+              type: string
+              minLength: 1
+              maxLength: 255
+            correlation_id:
+              $ref: '#/components/schemas/BoundedRef'
+            retryable:
+              type: boolean
+              const: true
+    StudioAuthRequiredError:
+      allOf:
+        - $ref: '#/components/schemas/ErrorBody'
+        - type: object
+          additionalProperties: false
+          required: [code, message, correlation_id, retryable]
+          properties:
+            code:
+              type: string
+              const: STUDIO_AUTH_REQUIRED
+            message:
+              type: string
+              minLength: 1
+              maxLength: 255
+            correlation_id:
+              $ref: '#/components/schemas/BoundedRef'
+            retryable:
+              type: boolean
+              const: false
+    StudioForbiddenError:
+      allOf:
+        - $ref: '#/components/schemas/ErrorBody'
+        - type: object
+          additionalProperties: false
+          required: [code, message, correlation_id, retryable]
+          properties:
+            code:
+              type: string
+              const: STUDIO_KNOWLEDGE_READ_FORBIDDEN
+            message:
+              type: string
+              minLength: 1
+              maxLength: 255
+            correlation_id:
+              $ref: '#/components/schemas/BoundedRef'
+            retryable:
+              type: boolean
+              const: false

@@ -1,0 +1,73 @@
+kds_stageb_regression_preflight_receipt:
+  id: GKE-001-COORDINATION-20260812-020-A10I1D4R3R1
+  parent_control:
+    id: GKE-001-COORDINATION-20260812-019-A10I1D4R3
+    sha256: 22c50de2ea3e5fbe2ed1d2a1e35efda1c44cdeb507abfb76abc1843db2f47d99
+  lane: kds
+  change_id: extend-kds-document-extraction
+  mode: report_only_receipt
+  status: partial
+  completion_status: not_complete
+  baseline:
+    head: 7fb477030f5278faf55d6d16ff3874469704610d
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 1
+    behind: 0
+    staged: 0
+    ordinary_dirty: 181
+    ordinary_status_sha256: ff8d2f7e7260e53a6b4f3ce8dff8c38e85f04e2bd8ab81dd4802e796900a73ff
+    expanded_dirty: 453
+    expanded_status_sha256: 6dd4a589fbf948b060cb38c369b3d1cc4e352feca73106eccec283600f55921b
+    opsx_lock: absent
+  candidate:
+    paths:
+      - tests/test_knowledge_intake_api.py
+      - tests/test_knowledge_intake_postgres.py
+    sorted_nul_pathset_sha256: ffeab20c1c54610428c2da48d4dc6b83275affdaa5a69a1b969b005af008b66f
+    patch_bytes: 38511
+    patch_sha256: 1e7ecd30fbb740fcf2217224de107adb0c960d5babfc71aaaee036b9fae90f7e
+    deterministic_generations: 2
+    byte_identical: true
+    diff_check: pass
+  verification:
+    selective_clean_parent: 7fb477030f5278faf55d6d16ff3874469704610d
+    apply: pass
+    reverse_apply: pass
+    restored_byte_and_mode_identity: pass
+    non_db_tests:
+      passed: 66
+      failed: 0
+    postgresql_and_migration_tests:
+      passed: 23
+      failed: 0
+    disposable_database:
+      name: kds_stageb_reg_r3_a8aumx_20260812
+      before_count: 0
+      cleanup_count: 0
+    disposable_root_count_after: 0
+    coverage:
+      acl_before_read_search_count: pass
+      active_extraction_only: pass
+      exact_lineage: pass
+      transactional_audit_outbox: pass
+      stale_and_expired_lease_zero_mutation: pass
+      append_only_compensating_rollback: pass
+  exclusions:
+    role_view_registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_view_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+  authorization_boundary:
+    kds_repository_write: false
+    stage: false
+    commit: false
+    push: false
+    deploy: false
+    live_shared_production_access: false
+    status_promotion: false
+    future_commit_requires_human_authorization: true
+    future_subject: "test(kds): cover stage b intake integration"
+  conclusion: technical_preflight_passed_independent_review_pending
+  rollback:
+    repository: not_applicable_no_kds_write
+    database: disposable_database_dropped_and_absence_verified
+    governance: withdraw_this_receipt_and_keep_commit_unauthorized

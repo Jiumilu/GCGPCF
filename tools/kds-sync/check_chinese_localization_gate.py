@@ -36,6 +36,12 @@ DOC_SKIP_FILES = {
     "09-status/globalcloud-chinese-localization-governance-report.md",
 }
 
+FEATURE_EVIDENCE_STATES = {
+    "active",
+    "archived",
+    "done",
+}
+
 REQUIRED_MAIN_DOCUMENT_GROUPS = {
     "project_group_master_plan": [
         "GlobalCloud 项目群总体方案.md",
@@ -166,6 +172,21 @@ def is_excluded(path: Path) -> bool:
     return bool(set(path.relative_to(ROOT).parts) & EXCLUDE_PARTS)
 
 
+def is_doc_skipped(source_path: str) -> bool:
+    if source_path in DOC_SKIP_FILES:
+        return True
+    if any(source_path.startswith(prefix) for prefix in DOC_SKIP_PREFIXES):
+        return True
+
+    parts = source_path.split("/")
+    return (
+        len(parts) >= 5
+        and parts[0] == "features"
+        and parts[1] in FEATURE_EVIDENCE_STATES
+        and parts[3] == "evidence"
+    )
+
+
 def strip_code_and_frontmatter(text: str) -> list[tuple[int, str]]:
     lines: list[tuple[int, str]] = []
     in_fence = False
@@ -244,9 +265,7 @@ def is_main_document(path: Path) -> bool:
     source_path = rel(path)
     if source_path.startswith("."):
         return False
-    if source_path in DOC_SKIP_FILES:
-        return False
-    if any(source_path.startswith(prefix) for prefix in DOC_SKIP_PREFIXES):
+    if is_doc_skipped(source_path):
         return False
     if "/" not in source_path:
         return any(keyword in path.name for keyword in MAIN_DOCUMENT_NAME_KEYWORDS)
@@ -383,9 +402,7 @@ def iter_docs() -> list[Path]:
         if is_excluded(path):
             continue
         source_path = rel(path)
-        if source_path in DOC_SKIP_FILES:
-            continue
-        if any(source_path.startswith(prefix) for prefix in DOC_SKIP_PREFIXES):
+        if is_doc_skipped(source_path):
             continue
         paths.append(path)
     return sorted(paths, key=rel)

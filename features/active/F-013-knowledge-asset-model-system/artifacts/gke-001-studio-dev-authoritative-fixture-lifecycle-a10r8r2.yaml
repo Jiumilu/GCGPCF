@@ -1,0 +1,101 @@
+coordination_amendment:
+  id: GKE-001-COORDINATION-20260814-035-A10R8R2-STUDIO
+  amends: GKE-001-COORDINATION-20260814-034-A10R8R1-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  openspec_change: integrate-studio-kds-knowledge-intake
+  change_id: rework-studio-dev-authoritative-fixture-lifecycle-a10r8r2
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    existing_delta: exact_a10r8r1_five_paths_uncommitted
+  review_basis:
+    classification: rework_required
+    findings:
+      - severity: P1
+        issue: disposable SQLite containment uses lexical prefix only and permits symlink escape
+      - severity: P1
+        issue: fixture table is not consumed by the canonical Brain-KDS bridge authority resolver
+      - severity: P2
+        issue: latest LOOP LR-878 is test_only and cannot cover current source changes
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  mode: local_tdd_security_and_authority_rework_no_commit_no_push
+  file_allowlist:
+    - packages/server/src/db/index.ts
+    - packages/server/src/routes/governance/dev-authoritative-fixtures.ts
+    - packages/server/src/routes/index.ts
+    - tests/server/dev-authoritative-fixtures-route.test.ts
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+    - packages/server/src/routes/brain-kds-bridge.ts
+    - tests/server/brain-kds-bridge-route.test.ts
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+  requirements:
+    - Preserve all A10R8 and A10R8R1 security, authorization, evidence and rollback requirements unless this amendment is stricter.
+    - Resolve the disposable database path through real filesystem containment and reject a database file or any existing parent path whose symbolic-link resolution escapes the operating-system temporary root.
+    - Reject any path resolving to the default Studio database or JSON fallback; do not open or mutate the rejected target.
+    - Add reachable regressions for a symlinked database file and a symlinked parent directory, proving the outside target and default database remain byte-identical.
+    - Under the same explicit dev/test fixture switch only, allow the canonical Brain-KDS bridge authority resolver to consume the exact active disposable fixture binding.
+    - The fixture authority path must still require the already authenticated admin or super_admin at tenant gehua, exact owned session_ref, exact project_ref and target_object_ref, and permissionResult=allowed.
+    - The browser cannot supply tenant, org, project, target, delegation, permission or fixture database path as authority.
+    - Deleting the fixture must immediately make canonical Search and Read authority resolution fail closed before any KDS or MMC call.
+    - Normal production and switch-disabled canonical bridge behavior must remain unchanged and must never consult the fixture database.
+    - LR-879 must reference the source-changing A10R8 CodeGraph evidence and make Studio LOOP and Harness select source-capable evidence.
+    - No real KDS, MMC, Hermes, browser, external network, default Studio database, knowledge intake or business-state write is permitted.
+  acceptance_commands:
+    - npm test -- --run tests/server/dev-authoritative-fixtures-route.test.ts tests/server/brain-kds-bridge-route.test.ts
+    - npm test -- --run tests/server/project-knowledge-intake-route.test.ts tests/server/mmc-kds-knowledge-intake.test.ts
+    - npm run build
+    - npx openspec validate integrate-studio-kds-knowledge-intake --strict
+    - python3 tools/kds-sync/validate_studio_loop_control.py
+    - npm run harness:check
+    - codegraph sync
+    - codegraph status
+    - codegraph query dev-authoritative-fixtures
+    - codegraph query brain-kds-bridge
+    - git diff --check
+  evidence_requirements:
+    - exact eight-path final delta, file hashes, pathset and patch SHA-256
+    - independent proof of lexical and realpath containment including both symlink attacks
+    - create then canonical Search/Read authority success using a mocked downstream transport with exact server-derived binding
+    - delete then canonical Search/Read rejection with zero downstream calls
+    - role, tenant, session, project and target mismatch no-leak failures before downstream calls
+    - default database and outside symlink targets byte-identical before and after
+    - disposable SQLite and temporary root cleanup count zero
+    - CodeGraph evidence and LR-879 source-change linkage
+    - current focused tests, build, OpenSpec, LOOP, Harness, CodeGraph and diff-check results
+  forbidden_scope:
+    - any ninth repository path
+    - default Studio database, JSON fallback, existing Hermes sessions or production state
+    - real KDS or MMC API, policy, state, database, fixture or credential access
+    - browser E2E, real canonical read, upload, intake, relation, memory or business-state write
+    - commit, push, deployment, service restart or status promotion
+    - weakening role, tenant, project, session, target or delegated authority checks
+  authorization:
+    repository_write: exact_eight_path_local_tdd_and_evidence_only
+    disposable_sqlite_write: authorized
+    local_mock_transport: authorized
+    default_database_write: false
+    hermes_session_write: false
+    external_api_or_network: false
+    commit: false
+    push: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    repository: restore only the exact eight uncommitted paths after independent authorization
+    data: remove disposable SQLite and temporary roots and prove absence; preserve outside and default targets byte-identical
+    external: not_applicable_zero_external_access
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

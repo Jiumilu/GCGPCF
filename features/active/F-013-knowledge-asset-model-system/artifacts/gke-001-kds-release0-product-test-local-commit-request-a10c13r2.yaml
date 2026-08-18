@@ -1,0 +1,110 @@
+gke001_kds_release0_product_test_local_commit_request:
+  id: GKE-001-COORDINATION-20260813-081-A10C13R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  predecessors:
+    - id: GKE-001-COORDINATION-20260813-079-A10C13
+      disposition: authorization_consumed_by_controlled_baseline_abort
+    - id: GKE-001-COORDINATION-20260813-080-A10C13R1
+      sha256: 5ac970d48932fe1a12a036f70469b32d9b544f095268224ce7b73c5ae125cd7c
+  independent_review:
+    authority: F-013
+    classification: baseline_drift_reconciled_new_human_local_commit_authorization_request_may_bind_192_451
+    repository_write: false
+  lane:
+    repository: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: commit-release0-product-test-12-a10c13r2
+    owner: KDS
+  required_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 192
+    ordinary_nul_sha256: a8bb61750eb04ef11c62710b105e492c84c750d7c324efb5df78883ccde4dc06
+    expanded_dirty: 451
+    expanded_nul_sha256: 435afb6f8abb8057f084be3a46932fd173eaf1505a0efd3c3c0964e6579ba025
+    opsx_lock: absent
+  newly_excluded_external_drift:
+    path: _governance/kds-daily-reports/kds-daily-2026-08-13.md
+    status_entry: "?? _governance/kds-daily-reports/kds-daily-2026-08-13.md"
+    sha256: 3e6a5c916f63b921b5bb054bf83df13ea501d137e23507ad7bb8734628241f88
+    disposition: preserve_untouched_and_exclude
+  exact_paths:
+    - api_server.py
+    - knowledge_intake/read_api.py
+    - knowledge_intake/read_contract.py
+    - knowledge_intake/read_authorization.py
+    - knowledge_intake/read_service.py
+    - knowledge_intake/read_repository.py
+    - knowledge_intake/read_postgres.py
+    - tests/test_knowledge_read_contract.py
+    - tests/test_knowledge_read_api.py
+    - tests/test_knowledge_read_authorization.py
+    - tests/test_knowledge_read_projection.py
+    - tests/test_knowledge_read_postgres_audit.py
+  sealed_candidate:
+    path_count: 12
+    pathset_sha256: 1cedf0a22ee41b419c4d4d18016f32c3f786c37c30ffed22fa021000cdca171a
+    ordered_content_manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+    patch_bytes: 137406
+    patch_sha256: 1ef8ee7b5553defd5d94ccb4d7f95f60729a608f0d9700bc3c1821a4c7b56fc4
+    diff_check: pass
+  current_evidence:
+    focused_non_database: 35_passed
+    relevant_non_database: 101_passed
+    focused_with_postgresql: 41_passed
+    postgresql_and_migration: 29_passed
+    disposable_database_cleanup_count: 0
+    canonical_mirror: 8_of_8_passed
+    acl_session_active_extraction_lineage_audit: passed_controlled_tests
+  requested_human_decision:
+    decision: pending
+    exact_request: authorize_or_decline_one_local_commit
+    commit_count: 1
+    commit_subject: "feat(kds): add release 0 canonical read facade"
+    push: false
+  execution_only_if_human_authorized:
+    - reverify_required_baseline_external_drift_sha_and_all_candidate_fingerprints
+    - require_no_extra_or_missing_candidate_path
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_paths_only
+    - verify_cached_path_count_pathset_content_manifest_patch_and_diff_check
+    - create_exactly_one_local_commit_with_frozen_subject
+    - verify_parent_scope_patch_and_commit_diff_check
+    - release_opsx_lock_and_return_report_only_receipt
+    - freeze_for_f013_postcommit_review
+  abort_on_any_mismatch:
+    - unstage_exact_paths_only
+    - preserve_all_working_file_content
+    - release_opsx_lock
+    - create_no_commit
+  forbidden:
+    - modify_delete_stage_or_commit_external_daily_report
+    - openspec_8
+    - run_handoff_15
+    - stage_b
+    - role_view
+    - self_link
+    - other_dirty
+    - content_edit
+    - push
+    - mmc_source_or_runtime_policy_write
+    - live_or_shared_api_or_database_access
+    - authenticated_live_e2e
+    - deployment
+    - later_unit
+    - status_promotion
+  rollback:
+    before_commit: unstage_exact_paths_only
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: human_local_commit_authorization_required
+    ceiling: partial

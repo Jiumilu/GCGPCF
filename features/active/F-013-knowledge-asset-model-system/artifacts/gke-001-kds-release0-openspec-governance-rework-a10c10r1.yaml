@@ -1,0 +1,101 @@
+gke001_kds_release0_openspec_governance_rework:
+  id: GKE-001-COORDINATION-20260813-071-A10C10R1
+  issued_at: 2026-08-13
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-070-A10C10
+    sha256: 461293c1c5510fbe6579cbddb6c44ad61d9b83f1681e6dcbbbc42d9346c838ee
+    review_classification: rework_required_single_governance_metadata_mismatch_tasks_23_of_23_not_25_of_25
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: implement-release0-canonical-read-facade
+  mode: report_only_metadata_correction
+  lane:
+    repository: KDS
+    repository_path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    change_id: correct-release0-openspec-task-count-a10c10r1
+    owner: GKE001_coordinator
+  correction:
+    field: verification.tasks_checked
+    before: 25/25
+    after: 23/23
+    basis: tasks_md_and_official_openspec_parser
+    kds_eight_path_bytes_changed: false
+    technical_test_replay_required: false
+  baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+  exact_paths:
+    - openspec/changes/implement-release0-canonical-read-facade/.openspec.yaml
+    - openspec/changes/implement-release0-canonical-read-facade/design.md
+    - openspec/changes/implement-release0-canonical-read-facade/proposal.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-audit/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-authorization/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-contract/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-projections/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/tasks.md
+  sealed_candidate:
+    path_count: 8
+    sorted_nul_pathset_sha256: 5fd19a7e466521ece8ec190fe23a4dfee26748f551fc6c05718f86f71b24c7a5
+    ordered_content_manifest_sha256: 472472a6f4a66701094a44210795b6ae722f322e8f9f787ab9c7c2fc24559fce
+    full_index_patch_bytes: 25737
+    full_index_patch_sha256: 76331dd9a24cda8bad2da25691e9ff8d19b6f62ec5654b6fca9df5148613ce5c
+    diff_check: pass
+    deterministic_generation: 2_of_2_byte_identical
+    apply_source_identity: 8/8
+    reverse_absent: 8/8
+  verification:
+    openspec_strict: pass
+    tasks_checked: 23/23
+    codegraph_status: up_to_date
+    codegraph_files_nodes_edges: 632/5326/13240
+    codegraph_router_query: pass
+    codegraph_contract_file_query: pass
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    product_tests: inherited_unchanged_not_rerun_for_governance_only_rework
+    migration: not_applicable_specification_only
+    disposable_cleanup_count: 0
+  isolation:
+    overlaps_release0_product_test_12: false
+    overlaps_release0_run_handoff_15: false
+    overlaps_stage_b: false
+    overlaps_role_view: false
+    overlaps_other_dirty_or_self_link: false
+  authorization:
+    metadata_correction: consumed_under_continuous_local_engineering
+    kds_write: false
+    stage_or_commit: false
+    push: false
+    real_kds_or_mmc_write: false
+    deployment: false
+    status_promotion: false
+  forbidden:
+    - release0_product_test_12
+    - release0_run_handoff_15
+    - stage_b
+    - role_view
+    - other_dirty_or_self_link
+    - real_or_shared_api_database_or_credentials
+    - stage_commit_push_deploy_or_status_promotion
+  rollback:
+    gpcf_artifact: remove_only_this_correction_artifact
+    kds: not_applicable_no_write
+    audit_or_history_deletion: forbidden
+  requested_review:
+    authority: F-013
+    mode: independent_read_only_metadata_recheck
+    question: whether_the_corrected_23_of_23_metadata_clears_the_only_A10C10_finding_and_the_eight_path_unit_is_eligible_for_a_future_separate_human_local_commit_authorization_request
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

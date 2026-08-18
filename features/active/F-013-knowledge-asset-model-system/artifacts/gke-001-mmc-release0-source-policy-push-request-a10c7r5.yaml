@@ -1,0 +1,87 @@
+gke001_mmc_release0_source_policy_push_request:
+  id: GKE-001-COORDINATION-20260814-002-A10C7R5
+  issued_at: 2026-08-14
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  lane:
+    repository: MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: push-release0-source-policy-6-a10c7r5
+    owner: MMC
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  independent_postcommit_review:
+    authority: F-013
+    classification: mmc_a10c7r4_exact_6_path_source_only_local_commit_postcommit_independent_review_passed_runtime_policy_unchanged
+  required_execution_baseline:
+    branch: main
+    local_head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    local_origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    remote_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    parent: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 1/0/0
+    commit_count: 1
+    ordinary_dirty: 16
+    ordinary_nul_sha256: 35b24d22cb0dc2979c28a8f3ee76d27421953e8ff0c32c2fbb3c6f72c925ca55
+    expanded_dirty: 93
+    expanded_nul_sha256: db6ed85ac372538a7a1d8008d3927d5f2ad98fb6569574efe56d29a601ece207
+    opsx_lock: absent
+  runtime_boundary:
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    runtime_sidecar_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    runtime_policy_applied: false
+  exact_commit:
+    sha: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    subject: "feat(mmc): admit release 0 canonical read policy source"
+    path_count: 6
+    pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+    ordered_content_manifest_sha256: 8c525f2a608d918fa6eab60ec49733474cae77d8d3331493d754027428304795
+    patch_bytes: 9830
+    patch_sha256: 66ddc6b2dab14f3db807c66426fdb9ab5eb44d3605d913d865dda0608f8fec77
+    diff_check: pass
+  push_preflight:
+    remote_query: pass
+    no_fetch: true
+    dry_run_command: git push --dry-run origin 9f38048a83ae8d1945fd01f5085744bf3376646e:refs/heads/main
+    dry_run_result: fast_forward_b06f58a7_to_9f38048a
+    remote_unchanged_after_dry_run: true
+    repository_state_unchanged: true
+  requested_human_decision:
+    decision: pending
+    exact_request: authorize_or_decline_one_non_force_push
+    exact_command: git push origin 9f38048a83ae8d1945fd01f5085744bf3376646e:refs/heads/main
+    runtime_policy_apply: false
+  execution_only_if_human_authorized:
+    - requery_remote_main_without_fetch
+    - reverify_local_head_parent_ahead_behind_staged_dirty_hashes_lock_and_runtime_hashes
+    - require_exact_single_commit_and_no_additional_commit
+    - execute_exactly_one_non_force_push
+    - requery_remote_and_verify_local_origin_tracking_head
+    - verify_runtime_state_and_sidecar_unchanged
+    - return_report_only_receipt_and_freeze_for_f013_postpush_review
+  abort_on_any_mismatch:
+    - perform_no_push
+    - preserve_all_repository_runtime_and_worktree_content
+    - return_exact_drift_report
+  forbidden:
+    - runtime_policy_apply
+    - runtime_state_or_sidecar_write
+    - fetch
+    - force_push
+    - merge
+    - rebase
+    - reset
+    - revert
+    - content_edit
+    - stage_or_commit
+    - preexisting_h1_or_other_dirty
+    - deployment
+    - live_e2e
+    - status_promotion
+  rollback:
+    before_push: no_repository_action
+    after_push: separately_reviewed_forward_compensation_or_git_revert_only
+  status: {engineering: active, cross_project: partial, completion: not_complete, authorization: human_push_authorization_required, runtime_policy: not_applied}

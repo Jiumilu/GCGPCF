@@ -1,0 +1,69 @@
+kds_stageb_regression_local_commit_receipt:
+  id: GKE-001-COORDINATION-20260812-023-A10I1D4R4A2
+  authorization:
+    id: GKE-001-COORDINATION-20260812-022-A10I1D4R4A1
+    sha256: 859e6eac3a4a792f6977d3dba87a3810439354410517704af9f88450ce2935a7
+  lane: kds
+  change_id: extend-kds-document-extraction
+  status: partial
+  completion_status: not_complete
+  commit:
+    sha: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    parent: 7fb477030f5278faf55d6d16ff3874469704610d
+    tree: c9a802dabc61c97beab2d2c506e2d74aee63fb9f
+    subject: "test(kds): cover stage b intake integration"
+    path_count: 2
+    paths:
+      - path: tests/test_knowledge_intake_api.py
+        status: M
+        mode: "100644"
+      - path: tests/test_knowledge_intake_postgres.py
+        status: M
+        mode: "100644"
+    insertions: 425
+    deletions: 4
+    sorted_nul_pathset_sha256: ffeab20c1c54610428c2da48d4dc6b83275affdaa5a69a1b969b005af008b66f
+    canonical_patch_bytes: 38511
+    canonical_patch_sha256: 1e7ecd30fbb740fcf2217224de107adb0c960d5babfc71aaaee036b9fae90f7e
+    cached_diff_check: pass
+    commit_diff_check: pass
+  preflight_verification_inherited:
+    control_id: GKE-001-COORDINATION-20260812-019-A10I1D4R3
+    receipt_id: GKE-001-COORDINATION-20260812-020-A10I1D4R3R1
+    non_db_tests_passed: 66
+    postgresql_and_migration_tests_passed: 23
+    disposable_database_cleanup_count: 0
+    disposable_root_cleanup_count: 0
+  final_repository_state:
+    head: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 2
+    behind: 0
+    staged: 0
+    ordinary_dirty: 179
+    ordinary_status_sha256: 3117b6b20fe7de267955e8ea6142ccb3fb5b213f7c3d3139f157844dec24b7ad
+    expanded_dirty: 451
+    expanded_status_sha256: 08649640d16373ecccd906fcf43617192abb4206b7d479e5e5ca17d2e1dee023
+    opsx_lock: absent
+  exclusions:
+    role_view_registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_view_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+    unrelated_dirty_preserved: true
+  prohibited_actions_not_performed:
+    file_content_edit: true
+    tests_or_database_in_execution: true
+    push: true
+    later_unit: true
+    kds_openspec_run_handoff_evidence_write: true
+    api_live_shared_production_access: true
+    deploy: true
+    status_promotion: true
+  authorization_boundary:
+    push: false
+    later_unit: false
+    postcommit_review: f013_independent_read_only_required
+  rollback:
+    method: separately_reviewed_compensating_git_revert_only
+    destructive_history_rewrite: forbidden
+  conclusion: local_regression_commit_created_postcommit_independent_review_pending

@@ -1,0 +1,65 @@
+kds_stageb_run_handoff_eof_rework_hash_hardening:
+  id: GKE-001-COORDINATION-20260812-032-A10I1D4R8R1
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  mode: human_authorization_request_metadata_hardening_only
+  parent_request:
+    id: GKE-001-COORDINATION-20260812-031-A10I1D4R8
+    sha256: 46f65f9216a983cb559be87ca4779ca1b1d99d1ebeec34dbc13e3310b2bd3725
+    independent_review: authorization_request_review_passed_human_one_byte_rework_authorization_required
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: rework-stageb-run-handoff-eof-a10i1d4r8
+  exact_target:
+    path: .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+    before_bytes: 1175
+    before_sha256: a90228ec94735c60c0834f47c40a96b2bb6365fba88b616a362e8d6060955478
+    before_suffix_hex: 61676520422e0a0a
+    operation: remove_exactly_one_final_newline_byte
+    after_bytes: 1174
+    after_sha256: 4fa7ea7c7d46b7f392f50dd1f702dba4b8da93f024c8480ea1ef38b902f6bd67
+    after_suffix_hex: 61676520422e0a
+  hard_stop_baseline:
+    head: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 3
+    behind: 0
+    staged: 0
+    ordinary_dirty: 178
+    ordinary_porcelain_sha256: 7717a65c9a311de5ce7423877a87cb5b7dad7ab2d1fa6aa6b9c934d1ffc61a7a
+    expanded_dirty: 442
+    expanded_porcelain_sha256: 14a6710511c0d0383431291c42f0c5e3c5d3d6a00472fde42f6a644b239660c9
+    opsx_lock: absent
+    role_view_registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_view_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+  execution_if_human_authorized:
+    - Require every hard-stop baseline and complete preimage hash to match before acquiring the execution-only lock.
+    - Remove exactly the last LF and require the complete postimage byte count, SHA-256 and suffix to match.
+    - Release the lock after the corrected report-only preflight and return a receipt; do not stage or commit.
+    - Recompute the corrected 13-file manifest and patch; do not reuse the superseded R7 candidate hashes.
+    - Freeze for a new F-013 independent read-only review before any separate commit request.
+  authorization_boundary:
+    one_byte_edit: pending_human_decision
+    corrected_report_only_preflight: pending_human_decision
+    stage: false
+    commit: false
+    push: false
+    tests_database_api_network: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    failed_preflight: restore_exact_preimage_bytes_and_sha256_then_release_lock
+    successful_handoff: separately_reviewed_one_byte_compensating_edit_only
+    external_data: not_applicable
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    review: parent_request_review_passed_hash_hardening_sealed
+    authorization: human_one_byte_rework_decision_required

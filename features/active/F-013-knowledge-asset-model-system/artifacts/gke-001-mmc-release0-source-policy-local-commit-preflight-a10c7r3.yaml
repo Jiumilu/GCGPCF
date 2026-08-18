@@ -1,0 +1,71 @@
+gke001_mmc_release0_source_policy_local_commit_preflight:
+  id: GKE-001-COORDINATION-20260813-083-A10C7R3
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: report_only_local_commit_preflight
+  lane:
+    repository: MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: preflight-release0-source-policy-local-commit-a10c7r3
+    owner: MMC
+    repository_allowlist: []
+  baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 19
+    ordinary_nul_sha256: b74f2851a75941cc566c4d4c6ee8719dfeb22d69fa0fc6f5cc4294d8e49decd2
+    expanded_dirty: 99
+    expanded_nul_sha256: efc815827e4f88fa22b6a2bbd352a857960d0f81bc301a330e38cc2056ac2047
+    opsx_lock: absent
+    before_after_identical: true
+  exact_future_commit_paths:
+    - runtime/scripts/seed.sh
+    - runtime/tests/test_release0_policy_seed.py
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/proposal.md
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/design.md
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/tasks.md
+    - openspec/changes/admit-release0-canonical-read-policy-a10c7/specs/mmc-release0-policy-admission/spec.md
+  sealed_candidate:
+    path_count: 6
+    pathset_sha256: e172bcc9102989b5a3fbe970406c71b3d01e02062b8d1a54f9e63a4e93bc68fc
+    ordered_content_manifest_sha256: 8c525f2a608d918fa6eab60ec49733474cae77d8d3331493d754027428304795
+    patch_bytes: 9830
+    patch_sha256: 66ddc6b2dab14f3db807c66426fdb9ab5eb44d3605d913d865dda0608f8fec77
+    diff_check: pass
+  verification:
+    source_seed_tests: 2_passed
+    focused_runtime_tests: 23_passed
+    full_runtime_tests: 160_passed
+    contract: pass
+    openspec_strict: pass
+    mmc_harness: pass
+    codegraph: pass
+  runtime_boundary:
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    runtime_operation_count: 17
+    runtime_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    source_operation_count: 19
+    source_fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    runtime_policy_applied: false
+    runtime_sidecar_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  exclusions:
+    - preexisting_h1r2_h1r3_runs
+    - all_other_dirty
+    - runtime_state_and_sidecar
+    - studio_brain_kds
+  requested_review:
+    authority: F-013
+    question: whether_a_separate_human_local_commit_authorization_request_may_be_presented
+  authorization:
+    stage_commit_push: false
+    runtime_policy_apply: false
+    live_request: false
+    deployment_or_promotion: false
+  rollback:
+    repository: not_applicable_report_only
+    runtime: unchanged
+  status: {engineering: active, cross_project: partial, completion: not_complete, ceiling: partial}

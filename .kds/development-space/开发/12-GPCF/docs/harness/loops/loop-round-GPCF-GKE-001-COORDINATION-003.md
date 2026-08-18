@@ -37,6 +37,11 @@ superseded_by: []
 - MMC cancellation 返工以 BaseException 与 shielded close 修复首次 request/upstream 取消，独立复跑 93/93 与 API+gateway 41/41 通过；但清理中的第二次取消仍在 close 完成前传播，违背 OpenSpec 顺序保证，故继续 `rework_required`。
 - MMC deferred-cancellation 第五次复审独立通过 94/94、API+gateway 42/42 与真实重复取消回放；close worker 完成前外层保持 pending，文件关闭后才传播取消。restricted relay 达到 `technical_review_verified_governance_partial`，但不构成 accepted/integrated/production_ready 或 Studio intake 授权。
 - Studio intake A4 已建立，SHA-256 为 `c1c7963b0f66e5c66d471817c0f25219fe1653182362c5b4b3fe01010bfc6f3a`。Phase 1 允许精确 allowlist 内的本地 TDD、契约与 UI；Phase 2 仍等待 MMC prepare/retry delegated-operation 准入及 F-013 独立复核，共享 KDS 写入继续禁止。
+- A5 reconciliation 发现 A1+A4 已由 Studio 外部 daily sync 提交并推送为 `1f63a464`，LR-874 已提交并推送为 `755f7b5d`；当前 Studio clean、`main == origin/main`、Loop/Harness 通过。A5 不追认 A4 禁止的 commit/push，冻结 Studio 新写入并把 committed A4 转入 F-013 只读复核。
+- Studio 已确认 A5 ID/SHA 与冻结边界；Stage 7 只读验收进行中，只能返回报告，禁止任何仓库或外部写入。
+- F-013 已独立重放 A4 committed scope：focused Vitest 101/101、mocked Playwright 3/3、build、OpenSpec 与 Studio Harness 通过；但允许角色、org 认证绑定、canonical 只读合同、浏览器场景、deterministic SHA 与文件边界存在缺口，判定 `rework_required`，A5 冻结继续生效。
+- A6 精确返工 amendment 已下发，SHA-256 为 `bba9f2f33a1c43066df551ba8b086bcaa5f3c2d655b2ca6af831aefb40ee8f3c`；仅允许 allowlist 内本地 TDD、合同、UI、七类模拟浏览器场景和单一 LR-875 证据轮次，handoff 后再次冻结。
+- A6 未提交 handoff 已返回并再次冻结。14 个最终路径均在 allowlist；F-013 与 coordinator 独立复核确认 focused 10/10、全量 Vitest 2740 passed/3 skipped、Playwright 7/7、build、OpenSpec、Loop validator、Harness 与 diff-check 通过，结论为 `technical_revalidation_passed_governance_pending`。
 - 登记 Studio `019ee242-2575-73f1-b5bb-d43e7e49468e`、KDS `019fc4e3-bce5-7541-85e3-8885c7e78aea`、Brain `019edfb4-21ef-77e1-afdb-891df25c4068`。
 - 只向各线程下发其本仓 lane，不复制源码、事实或未审查 Git 改动。
 
@@ -56,6 +61,10 @@ superseded_by: []
 - `python3 tools/kds-sync/validate_knowledge_asset_model_system.py`
 - `python3 tools/kds-sync/loop_document_gate.py --check-only`
 - Studio 必须确认 A4 ID 与 SHA，只执行 Phase 1 allowlist；在 MMC prepare/retry delegated operations 独立复核通过并收到 coordinator 继续回执前，不得进入 Phase 2 disposable E2E。Brain 继续冻结。
+- A5 后不得创建新的 LR-874、修改 Studio validator、重写或回滚已发布历史；只允许读取 `1f63a464` 与 `755f7b5d` 并执行 F-013 独立复核。
+- A4 返工只能按 A6 allowlist 与 `gke001-studio-kds-intake-a6-rework-lock` 执行；不得修改 user auth/user store/schema、越过 LR-875、提交或推送。
+- A6 handoff 后 Studio 再次冻结；技术复核通过不授权 Phase 2、真实 KDS/MMC、Brain E2E 或状态提升。
+- MMC H1R3 在 canonical F-013 十路径批准下完成：canonical state identity、alias/symlink 锁与恢复、startup hydration 和 operational dependency dry-run 纳入同一边界。F-013 首轮发现 missing-target recovery 被提前 existence check 阻断，原两文件返工后三种缺失目标场景、dependency 8/8、focused 86/86、full runtime 158/158 及静态门禁通过；最终结论为 `technical_revalidation_passed / governance_reconciled`。该关闭仅适用于 H1R3 本地范围，不授权 H2/H3 或真实策略应用。
 
 ### recover
 
@@ -80,9 +89,9 @@ changed:
   - LOOP control board
   - LOOP session registry
   - F-013 evidence and validator
-verified: studio_runtime_handoff_pass_kds_stage_b_and_mmc_relay_technical_review_verified_studio_a4_phase1_authorized_brain_frozen
-risk: KDS remains dirty; MMC prepare/retry policy, Studio phase2 E2E, Brain read-only E2E and human confirmation are not complete
-next: execute Studio A4 phase1 and independently review MMC prepare/retry delegated-operation policy before phase2
+verified: brain_a10p1t4_passed_and_mmc_h1r3_technical_governance_reconciled
+risk: KDS dirty admission, MMC H2/H3 policy apply, Studio Phase2, real Studio/KDS replay, Brain read-only E2E and human confirmation remain incomplete
+next: keep Studio and real E2E frozen; require separate human authorization before MMC H2/H3 or any live read/write
 product_delta: none_governance_coordination_only
 user_visible_delta: none
 task_flow_e2e_status: not_complete

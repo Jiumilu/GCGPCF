@@ -1,0 +1,61 @@
+kds_stageb_run_handoff_local_commit_receipt:
+  id: GKE-001-COORDINATION-20260813-038-A10I1D4R9A2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  parent_authorization:
+    id: GKE-001-COORDINATION-20260813-037-A10I1D4R9A1
+    sha256: 39c17b96c6ef9834bed15a8876a7734a253c37ede86733781cb5e33b7da42419
+  commit:
+    sha: 690ea04abf5485563b760d1bc1620493db017662
+    parent: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    tree: 1c327c2c57a43e09d57d455821d244516387b1ec
+    subject: "chore(kds): record document extraction handoff"
+    path_count: 13
+    all_added_mode: "100644"
+    insertions: 502
+    deletions: 0
+    sorted_nul_pathset_sha256: dee9d08e3189096993c3cc6769bc650f9e1849cbab114ce51af22ed00ed2a525
+    ordered_manifest_sha256: 11a373670ba3a9d01c12fdd5aab7ca7aabb3accd1008e98f7c11a269bac666bc
+    canonical_patch_bytes: 37907
+    canonical_patch_sha256: 00a37e1e7a1d480896aa904257deaa35f685e052fbc16ace132c708c9c3dac83
+  verification:
+    cached_diff_check: pass
+    commit_diff_check: pass
+    exact_scope: pass
+    f013_review: local_stageb_run_handoff_13_commit_independent_review_passed
+    inherited_tests: 66_non_db_plus_23_postgresql_not_rerun_not_live
+    unrelated_dirty_pre_nul_stream: not_independently_reproduced
+  final_repository_state:
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 4
+    behind: 0
+    staged: 0
+    ordinary_dirty: 190
+    ordinary_porcelain_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    expanded_dirty: 449
+    expanded_porcelain_sha256: 631473d7122cebec505283a9476bf9a29053dae7da53c27635296d5ca7cb58b1
+    opsx_lock: absent
+  exclusions:
+    registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+  authorization_boundary:
+    content_edit: false
+    other_stage_or_commit: false
+    push: false
+    tests_database_api_network_or_credentials: false
+    later_unit: false
+    role_view_edit: false
+    deploy: false
+    live_shared_or_production_access: false
+    status_promotion: false
+  rollback:
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    review: local_stageb_run_handoff_13_commit_independent_review_passed

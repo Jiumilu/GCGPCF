@@ -1,0 +1,236 @@
+release0_first_implementation_amendment:
+  id: GKE-001-COORDINATION-20260811-011-A10I1
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_contract_freeze:
+    id: GKE-001-CONTRACT-FREEZE-20260811-001
+    sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    contract_status: contract_frozen_for_future_implementation_not_integrated
+    schema_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    source_of_truth: KDS
+  parallel_lanes:
+    kds:
+      owner: KDS runtime maintainer
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      baseline:
+        branch: main
+        head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        ahead: 0
+        behind: 0
+        preexisting_dirty_entries: 166
+        staged_entries: 0
+        opsx_lock: absent
+      change_id: implement-release0-canonical-read-facade
+      openspec_change: openspec/changes/implement-release0-canonical-read-facade
+      execution_mode: local_opsx_tdd_no_live_services
+      product_test_file_allowlist:
+        - api_server.py
+        - knowledge_intake/read_api.py
+        - knowledge_intake/read_contract.py
+        - knowledge_intake/read_authorization.py
+        - knowledge_intake/read_service.py
+        - knowledge_intake/read_repository.py
+        - knowledge_intake/read_postgres.py
+        - tests/test_knowledge_read_contract.py
+        - tests/test_knowledge_read_api.py
+        - tests/test_knowledge_read_authorization.py
+        - tests/test_knowledge_read_projection.py
+        - tests/test_knowledge_read_postgres_audit.py
+      product_test_file_count: 12
+      governance_file_allowlist:
+        - .harness/opsx.lock
+        - .harness/runs/*-implement-release0-canonical-read-facade/**
+        - openspec/changes/implement-release0-canonical-read-facade/**
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+      forbidden_scope:
+        - knowledge_intake/repository.py
+        - knowledge_intake/postgres.py
+        - knowledge_intake/api.py
+        - knowledge_intake/service.py
+        - migrations/**
+        - _registries/global-object-registry.yaml
+        - entities/green-supply-chain-role-view-entity.md
+        - existing_Stage_B_handoff_or_evidence_rewrite
+        - shared_or_production_database
+        - real_corpus_or_fixture_persistence
+      codegraph_impact:
+        symbols: [release0_read_router, read_contract, read_authorization, read_service, read_repository, read_postgres]
+        downstream: [MMC, Studio, Brain]
+        requires_sync_status_query: true
+      required_behavior:
+        - exact_two_POST_routes_and_frozen_request_response_schema
+        - signed_read_authority_exact_target_project_session_binding
+        - tenant_org_project_session_ACL_before_read_search_rank_count
+        - active_extraction_only_and_no_second_ledger_projections
+        - bounded_integrity_protected_context_cursors
+        - transactional_append_only_per_read_audit_before_payload_release
+        - fail_closed_503_on_audit_failure_with_zero_payload
+        - no_leak_403_404_and_bounded_error_projection
+        - memory_and_disposable_PostgreSQL_parity
+      acceptance_commands:
+        - python3 -m pytest -q tests/test_knowledge_read_contract.py tests/test_knowledge_read_api.py tests/test_knowledge_read_authorization.py tests/test_knowledge_read_projection.py
+        - KDS_INTAKE_TEST_DATABASE_URL=DISPOSABLE python3 -m pytest -q tests/test_knowledge_read_postgres_audit.py
+        - openspec validate implement-release0-canonical-read-facade --strict
+        - python3 tools/kds-sync/loop_document_gate.py --check-only
+        - codegraph sync
+        - codegraph status
+        - git diff --check
+      rollback:
+        implementation: remove_or_revert_only_the_clean_api_server_registration_hunk_and_11_new_files
+        database: drop_disposable_database_and_verify_absence
+        audit: preserve_append_only_test_evidence
+        preexisting_dirty_scope: untouched
+    studio:
+      owner: Studio backend maintainer
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      baseline:
+        branch: main
+        head: 88769078f5c230ae9ed973815de4861cc6317a5c
+        origin_main: 88769078f5c230ae9ed973815de4861cc6317a5c
+        ahead: 0
+        behind: 0
+        preexisting_dirty_entries: 0
+        staged_entries: 0
+        opsx_lock: absent
+      change_id: integrate-release0-canonical-read-bff
+      openspec_change: openspec/changes/integrate-release0-canonical-read-bff
+      execution_mode: local_opsx_tdd_mocked_transport_only
+      product_test_file_allowlist:
+        - packages/server/src/routes/brain-kds-bridge.ts
+        - packages/server/src/services/core/kds-client.ts
+        - packages/server/src/services/core/mmc-client.ts
+        - packages/server/src/services/core/mmc-delegation-context.ts
+        - packages/server/src/middleware/user-auth.ts
+        - tests/server/brain-kds-bridge-route.test.ts
+        - tests/server/kds-client-runtime.test.ts
+        - tests/server/mmc-client.test.ts
+        - tests/server/mmc-delegation-context.test.ts
+        - tests/server/user-auth.test.ts
+      product_test_file_count: 10
+      governance_file_allowlist:
+        - .harness/opsx.lock
+        - .harness/runs/*-integrate-release0-canonical-read-bff/**
+        - openspec/changes/integrate-release0-canonical-read-bff/**
+        - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-876.json
+        - docs/harness/loops/loop-round-GPCF-STUDIO-LR-876.md
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+      forbidden_scope:
+        - packages/client/**
+        - packages/server/src/routes/governance/knowledge-intake.ts
+        - packages/server/src/services/governance/knowledge-intake.ts
+        - database_schema_or_migration
+        - local_knowledge_fact_ledger
+        - KDS_or_MMC_runtime_policy
+        - real_authenticated_browser_flow
+        - live_KDS_or_MMC_request
+      codegraph_impact:
+        symbols: [brain_kds_bridge, kds_client, mmc_client, mmc_delegation_context, user_auth]
+        downstream: [Brain, Studio_workbench]
+        requires_sync_status_query: true
+      required_behavior:
+        - expose_only_the_frozen_search_and_read_BFF_contract
+        - derive_target_project_session_authority_from_trusted_server_context
+        - never_accept_browser_selected_tenant_org_or_authority_claims
+        - forward_only_bounded_required_headers_and_JSON_fields_to_MMC
+        - preserve_identical_bounded_400_403_404_503_error_semantics
+        - no_direct_KDS_call_and_no_local_knowledge_ledger
+        - mocked_transport_proves_search_graph_wiki_preview_and_failure_mapping
+      acceptance_commands:
+        - npm run test -- tests/server/brain-kds-bridge-route.test.ts tests/server/kds-client-runtime.test.ts tests/server/mmc-client.test.ts tests/server/mmc-delegation-context.test.ts tests/server/user-auth.test.ts
+        - npm run test
+        - npm run build
+        - npx openspec validate integrate-release0-canonical-read-bff --strict
+        - python3 tools/kds-sync/validate_studio_loop_control.py
+        - npm run harness:check
+        - codegraph sync
+        - codegraph status
+        - git diff --check
+      rollback:
+        implementation: revert_only_the_10_allowlisted_product_test_paths_and_new_governance_artifacts
+        runtime_external_data: not_applicable_no_live_call_or_write
+  frozen_waiting_lanes:
+    mmc_standard:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      reason: same_thread_as_Studio_and_serial_F013_gate_required
+      future_product_test_file_count: 6
+      implementation_authorized: false
+    mmc_high_risk_policy_configuration:
+      paths: [runtime/scripts/seed.sh, runtime/state.json]
+      human_authorization_required: true
+      implementation_authorized: false
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      observed_preexisting_dirty_entries: 15
+      implementation_authorized: false
+      real_e2e_authorized: false
+  serial_gate:
+    order:
+      - KDS_and_Studio_local_OpsX_implementation_and_handoffs
+      - F013_independent_review_of_both_handoffs
+      - MMC_six_file_standard_implementation_control
+      - F013_independent_MMC_review
+      - separately_authorized_MMC_policy_configuration
+      - controlled_live_read_preflight
+      - real_authenticated_Search_WikiPreview_Chat_E2E
+    requires_both_first_batch_handoffs: true
+    automatic_next_lane_start: false
+    automatic_live_read_authorization: false
+    automatic_status_promotion: false
+  handoff_contract:
+    required:
+      - program_release_feature_openspec_binding
+      - exact_changed_files_and_baseline_preservation
+      - frozen_schema_normalizer_and_manifest_hashes
+      - tests_typecheck_build_as_applicable
+      - ACL_read_count_search_rank_before_projection
+      - audit_transaction_and_fail_closed_evidence
+      - exact_lineage_and_no_second_ledger
+      - migration_dry_run_or_explicit_not_required
+      - CodeGraph_sync_status_query
+      - OpsX_evidence_index_acceptance_matrix_and_patch
+      - rollback_boundary
+      - authorization_and_zero_live_action_statement
+      - unresolved_risks_and_status_ceiling
+  authorization:
+    GPCF_control_and_governance_record_write: true
+    KDS_allowlisted_local_product_test_openspec_and_evidence_write: true
+    Studio_allowlisted_local_product_test_openspec_and_evidence_write: true
+    MMC_standard_implementation: false
+    MMC_policy_or_configuration_change: false
+    Brain_product_or_evidence_write: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    real_authenticated_e2e: false
+    credential_creation_disclosure_or_persistence: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  rollback:
+    control: withdraw_A10I1_and_keep_all_business_lanes_frozen_at_the_R2_contract
+    repositories: each_lane_reverts_only_its_allowlisted_uncommitted_delta
+    external_data: not_applicable_no_live_access_authorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

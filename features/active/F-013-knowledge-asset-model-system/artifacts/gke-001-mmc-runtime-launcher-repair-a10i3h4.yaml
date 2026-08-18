@@ -1,0 +1,46 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260814-006-A10I3H4
+  program: GKE-001
+  feature: F-013-knowledge-asset-model-system
+  lane: mmc
+  owner_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: restore-mmc-runtime-launcher
+  mode: local_source_test_openspec_and_handoff
+  status_ceiling: partial_not_complete
+  baseline:
+    head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind: 1/0
+    active_process_pid: 881
+    active_process_started_at: 2026-08-08T06:35:17+08:00
+  allowlist:
+    - runtime/scripts/start.sh
+    - runtime/tests/test_runtime_launcher.py
+    - openspec/changes/restore-mmc-runtime-launcher/**
+    - .harness/runs/20260813-201349-restore-mmc-runtime-launcher/**
+  required_behavior:
+    - resolve app.main from the runtime application directory while retaining repository-root runtime paths
+    - prove public health and OpenAPI on one disposable loopback port
+    - terminate the disposable process and preserve runtime state and sidecar bytes
+    - preserve the existing port-8000 process without restart or replacement
+  verification:
+    - focused launcher regression
+    - full MMC runtime test suite
+    - contract test
+    - strict OpenSpec validation
+    - MMC Harness
+    - CodeGraph sync and bounded query
+    - git diff check
+  forbidden_scope:
+    - active port-8000 process restart or replacement
+    - runtime delegated-operation policy mutation
+    - KDS or MMC protected request
+    - credential creation, read, persistence, disclosure, or scope expansion
+    - stage, commit, push, deployment, release, or status promotion
+    - H1 owner delta, Release 0 policy source delta, role view, or unrelated dirty files
+  rollback:
+    repository: remove only the uncommitted launcher, regression, OpenSpec, and run handoff delta
+    runtime: stop only the disposable-port subprocess
+    external_data: not_applicable
+  acceptance_owner: F-013 independent read-only reviewer

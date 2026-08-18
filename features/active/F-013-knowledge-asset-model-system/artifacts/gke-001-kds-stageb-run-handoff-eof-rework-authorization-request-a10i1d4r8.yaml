@@ -1,0 +1,77 @@
+kds_stageb_run_handoff_eof_rework_authorization_request:
+  id: GKE-001-COORDINATION-20260812-031-A10I1D4R8
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  mode: human_authorization_request_only
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: rework-stageb-run-handoff-eof-a10i1d4r8
+  reviewed_evidence:
+    preflight_id: GKE-001-COORDINATION-20260812-029-A10I1D4R7
+    preflight_sha256: d04069ae437b0a2defcbad81b8f5c6feb3760c207675a44f8baac187dd9ea02d
+    receipt_id: GKE-001-COORDINATION-20260812-030-A10I1D4R7R1
+    receipt_sha256: 88c7b131aef332f6004ece1c1191932f0e93bbc05dab0e1f0674786dd80f0440
+    independent_review: stageb_run_handoff_13_preflight_rework_required_single_eof_newline
+  hard_stop_baseline:
+    head: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 3
+    behind: 0
+    staged: 0
+    ordinary_dirty: 178
+    ordinary_porcelain_sha256: 7717a65c9a311de5ce7423877a87cb5b7dad7ab2d1fa6aa6b9c934d1ffc61a7a
+    expanded_dirty: 442
+    expanded_porcelain_sha256: 14a6710511c0d0383431291c42f0c5e3c5d3d6a00472fde42f6a644b239660c9
+    opsx_lock: absent
+  requested_execution:
+    unit: stageb_run_handoff_13_eof_rework_only
+    exact_path: .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+    operation: remove_exactly_one_final_newline_byte
+    before_suffix_hex: 61676520422e0a0a
+    after_suffix_hex: 61676520422e0a
+    semantic_content_change: false
+    repository_write_path_count: 1
+    stage: false
+    commit: false
+    push: false
+  required_post_edit_preflight:
+    - Recompute and seal the corrected thirteen-path ordered manifest; the R7 manifest becomes superseded candidate evidence.
+    - Generate the corrected thirteen-path patch twice outside KDS and require byte identity, exact paths and diff-check pass.
+    - Apply and reverse the corrected patch in a disposable selective copy and prove all thirteen paths return to absent.
+    - Re-parse the four YAML files and recheck governance consistency plus the exact 12+2+9+13 partition.
+    - Return a report-only receipt and freeze for a new F-013 independent read-only review.
+  execution_rules:
+    - Abort before edit if any hard-stop baseline, role-view hash or target-file suffix differs.
+    - Acquire an execution-only temporary OpsX lock immediately before the one-byte edit and release it before handoff.
+    - Modify only the exact authorized path and only the final extra LF byte.
+    - Do not stage or commit any file.
+    - Preserve every unrelated dirty entry and excluded role-view file.
+  forbidden:
+    - stage_or_commit_stageb_run_handoff_13
+    - modify_any_other_byte_or_path
+    - bypass_or_waive_diff_check
+    - run_tests_database_api_network_or_live_access
+    - push_deploy_or_status_promotion
+    - clean_reset_restore_checkout_rebase_or_history_rewrite
+    - execute_release0_or_any_later_unit
+  rollback:
+    before_handoff: restore_only_the_removed_terminal_newline_if_any_required_check_fails
+    after_handoff: separately_reviewed_one_byte_compensating_edit_only
+    external_data: not_applicable
+  human_decision:
+    one_byte_source_edit: pending
+    corrected_report_only_preflight: pending
+    thirteen_file_local_commit: false
+    push: false
+    later_units: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: human_one_byte_rework_decision_required

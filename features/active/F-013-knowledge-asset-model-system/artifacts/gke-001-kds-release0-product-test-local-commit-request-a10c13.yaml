@@ -1,0 +1,103 @@
+gke001_kds_release0_product_test_local_commit_request:
+  id: GKE-001-COORDINATION-20260813-079-A10C13
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-078-A10C12R2
+    sha256: 5fef27d8c380a0eb48d76f0e70e09108172c432dc7861442097a6d9a6f4c9fb1
+  independent_review:
+    authority: F-013
+    classification: kds_local_commit_request_eligible_only
+    repository_write: false
+  lane:
+    repository: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: commit-release0-product-test-12-a10c13
+    owner: KDS
+  required_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+    preserved_excluded_self_link: "?? GlobalCloud KDS"
+  exact_paths:
+    - api_server.py
+    - knowledge_intake/read_api.py
+    - knowledge_intake/read_contract.py
+    - knowledge_intake/read_authorization.py
+    - knowledge_intake/read_service.py
+    - knowledge_intake/read_repository.py
+    - knowledge_intake/read_postgres.py
+    - tests/test_knowledge_read_contract.py
+    - tests/test_knowledge_read_api.py
+    - tests/test_knowledge_read_authorization.py
+    - tests/test_knowledge_read_projection.py
+    - tests/test_knowledge_read_postgres_audit.py
+  sealed_candidate:
+    path_count: 12
+    pathset_sha256: 1cedf0a22ee41b419c4d4d18016f32c3f786c37c30ffed22fa021000cdca171a
+    ordered_content_manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+    patch_bytes: 137406
+    patch_sha256: 1ef8ee7b5553defd5d94ccb4d7f95f60729a608f0d9700bc3c1821a4c7b56fc4
+  current_evidence:
+    focused_non_database: 35_passed
+    relevant_non_database: 101_passed
+    focused_with_postgresql: 41_passed
+    postgresql_and_migration: 29_passed
+    disposable_database_cleanup_count: 0
+    canonical_mirror: 8_of_8_passed
+    diff_check: pass
+    acl_session_active_extraction_lineage_audit: passed_controlled_tests
+  requested_human_decision:
+    decision: pending
+    exact_request: authorize_or_decline_one_local_commit
+    commit_count: 1
+    commit_subject: "feat(kds): add release 0 canonical read facade"
+    push: false
+  execution_only_if_human_authorized:
+    - reverify_required_baseline_and_all_sealed_candidate_fingerprints
+    - require_no_extra_or_missing_candidate_path
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_paths_only
+    - verify_cached_path_count_pathset_content_manifest_patch_and_diff_check
+    - create_exactly_one_local_commit_with_frozen_subject
+    - verify_parent_scope_patch_and_commit_diff_check
+    - release_opsx_lock_and_return_report_only_receipt
+    - freeze_for_f013_postcommit_review
+  abort_on_any_mismatch:
+    - unstage_exact_paths_only
+    - preserve_all_working_file_content
+    - release_opsx_lock
+    - create_no_commit
+  forbidden:
+    - openspec_8
+    - run_handoff_15
+    - stage_b
+    - role_view
+    - self_link
+    - other_dirty
+    - content_edit
+    - push
+    - mmc_source_or_runtime_policy_write
+    - live_or_shared_api_or_database_access
+    - authenticated_live_e2e
+    - deployment
+    - later_unit
+    - status_promotion
+  rollback:
+    before_commit: unstage_exact_paths_only
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: human_local_commit_authorization_required
+    ceiling: partial

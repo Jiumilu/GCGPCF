@@ -1,0 +1,104 @@
+control:
+  id: GKE-001-COORDINATION-20260817-052-A10R34P17R5R1
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  change_id: diagnose-kds-local-schema-stop-a10r34p17r5r1
+  mode: report_only_no_connection_preflight
+  owner: gke001_coordinator
+  review_owner: f013_independent_reviewer
+  status: active_partial_not_complete
+  execute_authorization_required: true
+
+predecessor:
+  control: GKE-001-COORDINATION-20260817-050-A10R34P17R4R1
+  controller_sha256: 756d7d88e3959cd1b8eea1d0f62c7f8e9bc682a817c414c18c418867e38c4d51
+  invocation_count: 1
+  terminal_status: stopped_no_change
+  terminal_code: schema_not_absent_or_xid_assigned
+  connection_count: 1
+  commit_attempted: false
+  commit_confirmed: false
+  postverify_confirmed: false
+  opsx_lock_released: true
+  f013_classification: independently_reviewed_stopped_no_change_fail_closed_diagnostic_required
+
+rework:
+  predecessor_control: GKE-001-COORDINATION-20260817-051-A10R34P17R5
+  predecessor_review: rework_required_two_fail_closed_lifecycle_gaps
+  corrections:
+    - terminal result is constructed only after rollback and connection close are verified
+    - rollback or close failure returns diagnostic_cleanup_unresolved with failed_fail_closed
+    - R5-owned subprocess lock helper restores timeout and partial-state cleanup
+    - both opsx.lock and opsx.atomic-guard must be absent before release is reported
+  reconciled_external_drift:
+    ordinary_entry: _governance/sync-runs/macmini-workwiki-20260817-064211/
+    expanded_file: _governance/sync-runs/macmini-workwiki-20260817-064211/remote-identity.txt
+    bytes: 92
+    sha256: 04b9ee8d7ce159e1b00cda33283633c5281323b484acea470855a181a88227de
+    ordinary_subtraction_restores: {count: 277, sha256: 449b5bb746c6584a49d103c576841e502671ec3b59d6320b4f6f978583195f8e}
+    expanded_subtraction_restores: {count: 567, sha256: a20dcf7dfcadf972725364227d71269a48d0c2acb6517e5f26628015ec53ad99}
+    combined_external_content_manifest: {records: 13, bytes: 1522, sha256: 13cdc6cb4348d1700311084b680caac89fd82d47830526744717b643b45733ec}
+    disposition: preserved_unmodified_external_governance_output
+
+diagnostic:
+  target: {scheme: postgresql, host: loopback, port: 5432, database: gbrain}
+  connection_count: 1
+  transaction_count: 1
+  transaction_mode: repeatable_read_read_only
+  relation_allowlist:
+    - schema_versions
+    - knowledge_objects
+    - knowledge_assets
+    - knowledge_asset_versions
+    - upload_intents
+    - knowledge_intake_jobs
+    - job_attempts
+    - audit_events
+    - outbox_events
+    - extraction_runs
+    - extracted_contents
+    - extracted_table_cells
+    - evidence_links
+    - extraction_active_selections
+  output_allowlist:
+    - relation_presence booleans for the fourteen allowlisted names
+    - xid_before_is_null
+    - xid_after_is_null
+    - other_client_sessions exact count
+    - rollback_confirmed
+    - connection_count
+    - opsx_lock_released
+  forbidden:
+    - migration or migration retry
+    - fixture create, update or delete
+    - business, audit, outbox, content or row read
+    - schema_versions value read
+    - audit or outbox append
+    - API or MMC request
+    - second connection
+    - service operation
+    - commit, push, deploy or status promotion
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-schema-diagnostic-controller-a10r34p17r5.py
+  sha256: 7e2299ef2f057d43b6c66bad1e1b4fc7608cc2fb44ecef33ef23ade673d856f2
+  self_test: pass
+  no_connection_preflight: pass
+  execute: not_authorized
+
+baselines:
+  gpcf: {head: 11d022b818332d2271a78b427c326eb454507a5a, origin_main: 11d022b818332d2271a78b427c326eb454507a5a, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 741, ordinary_dirty_sha256: 0df976d5b7ada5c40e4046ecd0af99c057ce6915477b9e85ba0abceed693f7e0, expanded_dirty_count: 758, expanded_dirty_sha256: 715b56d816b392270d80b53a8c82638c1936620413f22313aa6a616c452d9bd5, opsx_lock: absent}
+  kds: {head: 2ac85c55163b7acf0ede699184ac360579ccefaa, origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 278, ordinary_dirty_sha256: c4fd8c5602363bde8328e05301b9a38085b7bc22418fca55e4975deb8a5761b7, expanded_dirty_count: 568, expanded_dirty_sha256: 5c2b90cb8ec51975795a524bcd55c72fe81e9110671ceb75d709d7948c7040b3, opsx_lock: absent}
+  mmc: {head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 10, ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9, expanded_dirty_count: 98, expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451, opsx_lock: absent}
+
+rollback:
+  controller_execution: mandatory_read_only_rollback_and_connection_close
+  repository: restore_only_these_two_uncommitted_artifacts_if_separately_authorized
+  external_data: none
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/03-data-ai-knowledge/README.md
 source_path: 03-data-ai-knowledge/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-13
 supersedes: []
 superseded_by: []
 ---
@@ -78,6 +78,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-8454CB5BDD | GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练 | 03-data-ai-knowledge/GlobalCloud湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练.md | KDS | controlled |
 | GPCF-DOC-C8062E9E2A | GlobalCloud 湖北磷材评测运行记录首批空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材评测运行记录首批空白台账.md | KDS | controlled |
 | GPCF-DOC-BA9F35E2AA | GlobalCloud 湖北磷材首批知识对象运行空白台账 | 03-data-ai-knowledge/GlobalCloud湖北磷材首批知识对象运行空白台账.md | KDS | controlled |
+| GPCF-DOC-GKE-001-APPLICATION-IMPLEMENTATION-20260811 | GlobalCloud 知识工程应用体系实施方案 | 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md | GPCF | controlled |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | KDS | controlled |
 | GPCF-DOC-C60ECF8A71 | GlobalCloud知识缺口悬赏与真实资料回收跟踪台账 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | KDS | controlled |
 | GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | GlobalCloud 知识资产模型体系综合方案 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | GPCF | draft |

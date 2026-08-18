@@ -1,0 +1,110 @@
+a10i1_joint_review_rework:
+  id: GKE-001-COORDINATION-20260811-012-A10I1R1
+  issued_at: 2026-08-11
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-011-A10I1
+    sha256: 8f4087ca09a4695a0cdec021d0d22270c4866ec9903dc86c0c8cbff8069d37c3
+  contract_freeze:
+    id: GKE-001-CONTRACT-FREEZE-20260811-001
+    sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    schema_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+  review_decision: A10I1_serial_gate_not_closed
+  parallel_rework_lanes:
+    studio:
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      baseline_head: 88769078f5c230ae9ed973815de4861cc6317a5c
+      change_id: rework-release0-canonical-read-bff-a10i1r1
+      lock: gke001-a10i1r1-studio-contract-handoff-lock
+      product_test_file_allowlist:
+        - packages/server/src/routes/brain-kds-bridge.ts
+        - tests/server/brain-kds-bridge-route.test.ts
+      product_test_file_count: 2
+      governance_file_allowlist:
+        - .harness/opsx.lock
+        - .harness/runs/20260811-195500-integrate-release0-canonical-read-bff/**
+        - openspec/changes/integrate-release0-canonical-read-bff/**
+        - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-876.json
+        - docs/harness/loops/loop-round-GPCF-STUDIO-LR-876.md
+      required_rework:
+        - enforce_search_limit_1_to_100
+        - enforce_search_query_length_1_to_512
+        - map_upstream_errors_to_frozen_error_code_enums
+        - bound_or_replace_upstream_correlation_id_to_1_to_255
+        - add_100_101_512_513_and_malformed_upstream_error_tests
+        - add_run_scoped_evidence_index_acceptance_matrix_patch_and_build_result
+        - rerun_focused_full_build_openspec_loop_harness_codegraph_diff
+      forbidden_scope:
+        - all_other_product_or_test_paths
+        - live_KDS_or_MMC_request
+        - KDS_or_MMC_write
+        - local_knowledge_ledger
+        - database_or_migration
+        - commit_push_restart_deploy_or_promotion
+      rollback: revert_only_the_two_rework_files_and_new_or_updated_run_scoped_governance_evidence
+    kds:
+      repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      baseline_head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+      change_id: verify-release0-read-codegraph-a10i1r1
+      lock: gke001-a10i1r1-kds-codegraph-lock
+      product_test_file_allowlist: []
+      product_test_file_count: 0
+      governance_file_allowlist:
+        - .harness/opsx.lock
+        - .codegraph/**
+        - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/**
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+        - path: .codegraph/**
+          handling: ignored_local_index_execution_only_never_stage_commit_or_handoff
+      required_rework:
+        - run_codegraph_sync
+        - run_codegraph_status_and_prove_index_up_to_date
+        - query_release0_read_symbols
+        - record_results_in_existing_run_scoped_evidence_and_handoff
+        - prove_zero_product_test_OpenSpec_or_external_role_view_changes
+      forbidden_scope:
+        - any_product_test_or_OpenSpec_change
+        - knowledge_intake/repository.py
+        - knowledge_intake/postgres.py
+        - migrations/**
+        - _registries/global-object-registry.yaml
+        - entities/green-supply-chain-role-view-entity.md
+        - live_shared_or_production_API_database_or_corpus
+        - credentials
+        - commit_push_restart_deploy_or_promotion
+      rollback: remove_only_ignored_local_codegraph_index_if_needed_and_restore_existing_run_evidence_to_pre_rework_bytes
+  serial_gate:
+    requires_both_rework_handoffs: true
+    requires_targeted_F013_read_only_re_review: true
+    MMC_standard_implementation: false
+    MMC_policy_configuration: false
+    Brain_change: false
+    live_read: false
+    real_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_allowlisted_rework: true
+    disposable_or_live_database: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

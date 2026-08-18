@@ -1,0 +1,99 @@
+gke001_kds_release0_openspec_local_commit_authorization_request:
+  id: GKE-001-COORDINATION-20260813-072-A10C10R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  owner: KDS_release0_specification
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-071-A10C10R1
+    sha256: 3b153968aa83ab3280cf107f96d1ebeb55d0fc9c5ef44ab7daad273ad6565328
+    independent_review: release0_openspec_8_governance_rework_passed_eligible_for_future_separate_human_local_commit_authorization_request
+  required_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent_before_execution
+  exact_paths:
+    - openspec/changes/implement-release0-canonical-read-facade/.openspec.yaml
+    - openspec/changes/implement-release0-canonical-read-facade/design.md
+    - openspec/changes/implement-release0-canonical-read-facade/proposal.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-audit/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-authorization/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-contract/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-projections/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/tasks.md
+  sealed_fingerprints:
+    path_count: 8
+    sorted_nul_pathset_sha256: 5fd19a7e466521ece8ec190fe23a4dfee26748f551fc6c05718f86f71b24c7a5
+    ordered_content_manifest_sha256: 472472a6f4a66701094a44210795b6ae722f322e8f9f787ab9c7c2fc24559fce
+    full_index_patch_bytes: 25737
+    full_index_patch_sha256: 76331dd9a24cda8bad2da25691e9ff8d19b6f62ec5654b6fca9df5148613ce5c
+  verified_evidence:
+    openspec_strict: pass
+    tasks_checked: 23/23
+    codegraph_status: up_to_date
+    codegraph_files_nodes_edges: 632/5326/13240
+    codegraph_router_and_contract_queries: pass
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    diff_check: pass
+    deterministic_generation: 2_of_2_byte_identical
+    apply_source_identity: 8/8
+    reverse_absent: 8/8
+  commit:
+    count: 1
+    subject: "docs(kds): govern release 0 canonical read facade"
+    local_only: true
+  mandatory_execution_gates:
+    - reverify_exact_baseline_counts_and_nul_hashes
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_eight_paths_only
+    - recompute_all_sealed_fingerprints
+    - require_openspec_strict_and_23_of_23_tasks
+    - require_git_diff_cached_check_pass
+    - create_exactly_one_local_commit_with_frozen_subject
+    - verify_commit_parent_scope_patch_and_diff_check
+    - release_lock_and_return_report_only_receipt
+  abort_rule:
+    condition: any_baseline_scope_fingerprint_or_gate_mismatch
+    actions:
+      - unstage_only_the_exact_eight_paths
+      - require_staged_count_zero
+      - preserve_all_eight_worktree_bytes
+      - preserve_all_other_dirty_and_self_link
+      - release_lock
+      - create_no_commit
+  forbidden:
+    - release0_product_test_12
+    - release0_run_handoff_15
+    - stage_b
+    - role_view
+    - other_dirty_owner_groups
+    - GlobalCloud_KDS_self_link_modification_or_deletion
+    - content_rework_beyond_sealed_patch
+    - push
+    - real_kds_or_mmc_write
+    - deployment
+    - status_promotion
+  dependency:
+    same_repository_serial_only: true
+    must_not_execute_concurrently_with_release0_product_test_12_or_role_view_commit: true
+    if_any_prior_kds_commit_occurs: rebaseline_and_reseal_before_execution
+  rollback:
+    before_commit: abort_rule_above
+    after_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_human_authorization: pending
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

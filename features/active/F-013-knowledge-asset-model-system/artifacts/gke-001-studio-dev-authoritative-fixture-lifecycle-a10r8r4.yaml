@@ -1,0 +1,66 @@
+coordination_amendment:
+  id: GKE-001-COORDINATION-20260814-037-A10R8R4-STUDIO
+  amends: GKE-001-COORDINATION-20260814-036-A10R8R3-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  change_id: reseal-studio-lr879-codegraph-a10r8r4
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    existing_delta: exact_a10r8r2_eight_paths_restored
+  review_basis:
+    original_p1_findings: closed
+    a10r8r3_cached_diff_check_after_one_byte_fix: pass
+    a10r8r3_blocker: CodeGraph machine evidence worktree hash becomes stale after the one-byte LR-879 correction
+    a10r8r3_rollback: exact_preimage_restored
+  mode: two_file_governance_reseal_no_commit_no_push
+  file_allowlist:
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+  sealed_candidate_scope:
+    - packages/server/src/db/index.ts
+    - packages/server/src/routes/governance/dev-authoritative-fixtures.ts
+    - packages/server/src/routes/index.ts
+    - tests/server/dev-authoritative-fixtures-route.test.ts
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+    - packages/server/src/routes/brain-kds-bridge.ts
+    - tests/server/brain-kds-bridge-route.test.ts
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+  required_action:
+    - Remove exactly one trailing LF from LR-879 so it ends with exactly one LF.
+    - Refresh only the existing A10R8 CodeGraph JSON fields required to seal the corrected exact eight-path worktree hash and evidence integrity.
+    - Preserve all discovery, impact, test selection, unresolved-relation and risk semantics unless deterministic resealing requires a derived hash update.
+    - Run the complete eight-path external-index cached diff-check and regenerate exact pathset, content-manifest and full-index patch fingerprints.
+    - Run validate_studio_loop_control, harness:check, OpenSpec strict, CodeGraph status/query validation and repository git diff --check.
+    - Do not run CodeGraph sync if status is already up to date; if deterministic evidence generation requires it, it may write only ignored CodeGraph index data and the allowlisted JSON.
+    - A10R8R2 technical tests and build remain inherited and must not be relabeled current.
+  forbidden_scope:
+    - any product or test content change
+    - any ninth repository path
+    - technical test, build, database, API, network, browser or runtime execution
+    - default Studio database, Hermes session, KDS or MMC access
+    - stage, commit, push, deploy or status promotion
+  authorization:
+    repository_write: exact_two_governance_files_only
+    ignored_codegraph_index_refresh: conditional_if_required
+    stage: false
+    commit: false
+    push: false
+    external_access: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    repository: restore both allowlisted files to their A10R8R2 preimages if any reseal gate fails
+    external: not_applicable
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

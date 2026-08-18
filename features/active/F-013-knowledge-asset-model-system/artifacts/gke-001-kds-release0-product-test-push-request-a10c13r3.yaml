@@ -1,0 +1,80 @@
+gke001_kds_release0_product_test_push_request:
+  id: GKE-001-COORDINATION-20260814-001-A10C13R3
+  issued_at: 2026-08-14
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  lane:
+    repository: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: push-release0-product-test-12-a10c13r3
+    owner: KDS
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  independent_postcommit_review:
+    authority: F-013
+    classification: kds_a10c13r2_exact_12_path_local_commit_postcommit_independent_review_passed
+  required_execution_baseline:
+    branch: main
+    local_head: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    local_origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    remote_main: 690ea04abf5485563b760d1bc1620493db017662
+    parent: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 1/0/0
+    commit_count: 1
+    ordinary_dirty: 180
+    ordinary_nul_sha256: d8b1b52a8a85b87a17384f5b6b3503afdc441e15fd77635fd973872c2149615a
+    expanded_dirty: 439
+    expanded_nul_sha256: c7349d85d1aeaea509b7e033f816bfe4f71bb00c60fdd1430aeb903fd52d1db5
+    opsx_lock: absent
+  exact_commit:
+    sha: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    subject: "feat(kds): add release 0 canonical read facade"
+    path_count: 12
+    pathset_sha256: 1cedf0a22ee41b419c4d4d18016f32c3f786c37c30ffed22fa021000cdca171a
+    ordered_content_manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+    patch_bytes: 137406
+    patch_sha256: 1ef8ee7b5553defd5d94ccb4d7f95f60729a608f0d9700bc3c1821a4c7b56fc4
+    diff_check: pass
+  push_preflight:
+    remote_query: pass
+    no_fetch: true
+    dry_run_command: git push --dry-run origin a544f67e4c0ea30e7ff016723a17c0ae111fb131:refs/heads/main
+    dry_run_result: fast_forward_690ea04a_to_a544f67e
+    remote_unchanged_after_dry_run: true
+    repository_state_unchanged: true
+  requested_human_decision:
+    decision: pending
+    exact_request: authorize_or_decline_one_non_force_push
+    exact_command: git push origin a544f67e4c0ea30e7ff016723a17c0ae111fb131:refs/heads/main
+  execution_only_if_human_authorized:
+    - requery_remote_main_without_fetch
+    - reverify_local_head_parent_ahead_behind_staged_dirty_hashes_and_lock
+    - require_exact_single_commit_and_no_additional_commit
+    - execute_exactly_one_non_force_push
+    - requery_remote_and_verify_local_origin_tracking_head
+    - return_report_only_receipt_and_freeze_for_f013_postpush_review
+  abort_on_any_mismatch:
+    - perform_no_push
+    - preserve_all_repository_and_worktree_content
+    - return_exact_drift_report
+  forbidden:
+    - fetch
+    - force_push
+    - merge
+    - rebase
+    - reset
+    - revert
+    - content_edit
+    - stage_or_commit
+    - openspec_8_or_run_handoff_15
+    - role_view_or_other_dirty
+    - deployment
+    - runtime_or_live_e2e
+    - status_promotion
+  rollback:
+    before_push: no_repository_action
+    after_push: separately_reviewed_forward_compensation_or_git_revert_only
+  status: {engineering: active, cross_project: partial, completion: not_complete, authorization: human_push_authorization_required}

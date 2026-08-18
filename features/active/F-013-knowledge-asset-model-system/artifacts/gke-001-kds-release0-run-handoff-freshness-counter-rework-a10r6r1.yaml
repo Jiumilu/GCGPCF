@@ -1,0 +1,78 @@
+coordination:
+  id: GKE-001-COORDINATION-20260814-031-A10R6R1-KDS
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: correct-kds-release0-freshness-accounting-a10r6r1
+  mode: governance_write_single_file_no_commit_no_push
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-030-A10R6-KDS
+    sha256: b9c9d0ddeedd424874a4478de2fd57134cc9cdd62936086dd789bc217314f833
+  review_classification: rework_required_single_evidence_freshness_accounting_conflict
+  status_ceiling: active_partial_not_complete
+
+baseline:
+  branch: main
+  head: 410e71c1391f88423ccaf79ed6e5c69d655907f4
+  origin_main: 410e71c1391f88423ccaf79ed6e5c69d655907f4
+  ahead_behind_staged: 0_0_0
+  ordinary_dirty: 188
+  ordinary_nul_sha256: 0947f9d6e0ebde101084845a7ed879fcedca2198c4fb364b812d0208be1c02be
+  expanded_dirty: 440
+  expanded_nul_sha256: df5f003cf513bca4337a70979ae9eb3c55bf0cdf9974e2dad930149156ee4810
+  opsx_lock: absent
+
+repository_allowlist:
+  - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/status-audit.yaml
+
+required_change:
+  historical_snapshot:
+    audit_timestamp: 2026-08-11T12:29:39Z
+    evidence_total: 8
+    current: 6
+    inherited: 2
+    rule: retain_and_label_as_A10C19_historical_snapshot
+  current_reconciliation:
+    control: GKE-001-COORDINATION-20260814-031-A10R6R1-KDS
+    evidence_total: 8
+    current: 0
+    inherited: 8
+    stale: 0
+    missing: 0
+    rule: append_under_reconciliation_without_overwriting_historical_snapshot
+
+immutable_scope:
+  - the other six A10R6 governance files
+  - evidence/**
+  - patches/api-server.patch
+  - all 41 101 29 cleanup_0 technical facts
+  - product test OpenSpec StageB role-view and other owner groups
+
+verification:
+  - verify exact baseline and status-audit preimage SHA 32222c2eaa81cc6abffa9628f17cb4a186e07bce58c0649a67d83c81a8ee06d2
+  - use official OpsX lock and release it before handoff
+  - parse status-audit.yaml
+  - run git diff --check
+  - prove only status-audit.yaml changed relative to A10R6 postimages
+  - recompute complete run_handoff_15 content manifest
+  - preserve 15-path pathset and status-manifest SHA
+  - request F-013 independent read-only review
+
+authorization:
+  local_single_file_governance_write: authorized
+  tests_or_database_rerun: false
+  stage_commit_push: false
+  network_api_runtime_credentials: false
+  deployment_or_promotion: false
+
+rollback:
+  repository: restore only status-audit.yaml to preimage SHA 32222c2eaa81cc6abffa9628f17cb4a186e07bce58c0649a67d83c81a8ee06d2
+  external_data: not_applicable
+
+expected_result:
+  classification: governance_truthfulness_reconciled_pending_final_independent_review
+  admission: blocked_dirty_worktree
+  status: active_partial_not_complete

@@ -1,0 +1,58 @@
+kds_stageb_openspec_local_commit_receipt:
+  id: GKE-001-COORDINATION-20260812-028-A10I1D4R6A2
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  parent_authorization:
+    id: GKE-001-COORDINATION-20260812-027-A10I1D4R6A1
+    sha256: 9f518d538a6471337fcfd390091baf14aecae39a20b0f852b8a6890bc9a20a0b
+  commit:
+    sha: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    parent: 60957dd92380bfeb6049ec552658dad22d5d90dc
+    tree: 6e2ee905e330e919af3ae3e02097c4e612f4e254
+    subject: "docs(kds): specify document extraction stage b"
+    path_count: 9
+    all_added_mode: "100644"
+    insertions: 563
+    deletions: 0
+    manifest_sha256: 7acdd640e47a6892af715d57038b57de5747f84061cbf3f0034d5bef52dfdeed
+    canonical_patch_bytes: 54462
+    canonical_patch_sha256: 7754cef4b7fd12218069c106276841a59594f53cb5162cd5ab152c35faf9994c
+  verification:
+    cached_diff_check: pass
+    commit_diff_check: pass
+    openspec_strict: pass
+  final_repository_state:
+    head: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 3
+    behind: 0
+    staged: 0
+    ordinary_dirty: 178
+    ordinary_porcelain_sha256: 7717a65c9a311de5ce7423877a87cb5b7dad7ab2d1fa6aa6b9c934d1ffc61a7a
+    expanded_dirty: 442
+    expanded_porcelain_sha256: 14a6710511c0d0383431291c42f0c5e3c5d3d6a00472fde42f6a644b239660c9
+    opsx_lock: absent
+    unrelated_dirty_preserved: true
+  exclusions:
+    registry_sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+    role_entity_sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+  authorization_boundary:
+    content_edit: false
+    push: false
+    tests_database_or_API: false
+    run_handoff_13: false
+    A10I1_or_later_unit: false
+    role_view_edit: false
+    deploy: false
+    live_shared_or_production_access: false
+    status_promotion: false
+  rollback:
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    review: independent_postcommit_review_pending

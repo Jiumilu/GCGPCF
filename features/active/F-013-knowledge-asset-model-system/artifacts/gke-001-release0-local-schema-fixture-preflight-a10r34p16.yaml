@@ -1,0 +1,253 @@
+control:
+  id: GKE-001-COORDINATION-20260816-042-A10R34P16
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  owner: gke001_coordinator
+  review_owner: f013_independent_reviewer
+  thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: preflight-kds-release0-local-schema-fixture-a10r34p16
+  openspec_change: implement-release0-canonical-read-facade
+  mode: report_only_after_single_readonly_probe
+  repository_allowlist: []
+  status: active_partial_not_complete
+
+baselines:
+  gpcf:
+    head: 11d022b818332d2271a78b427c326eb454507a5a
+    origin_main: 11d022b818332d2271a78b427c326eb454507a5a
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty_count: 734
+    ordinary_dirty_sha256: 95b32308a0f567107dbe575e5a0bf5433230c4a7e8c69ececb1e0dab9e0095f3
+    expanded_dirty_count: 751
+    expanded_dirty_sha256: 9a3dcd09e97bd212a1e7f5331e0010bc6a9304ee2a262c35849f66ed5d0eba77
+    opsx_lock: absent
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty_count: 264
+    ordinary_dirty_sha256: a0174d93cf2407f274f3806a50caa99444981c9918061c5619f3ef8cc2dab299
+    expanded_dirty_count: 554
+    expanded_dirty_sha256: 1528fb303c7112f05ac2a7d7ee05d156f3e55bed7cf9c4f2a38117c220240dd2
+    opsx_lock: absent
+  mmc:
+    head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d
+    origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty_count: 10
+    ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9
+    expanded_dirty_count: 98
+    expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451
+    opsx_lock: absent
+
+controlled_entry_hashes:
+  knowledge_engineering_spec: 01018556e7bdd83f432537fdd866dfe836d6c29e0695810261968a32780b2746
+  application_implementation_plan: 990b2db334928e821dd796d44703cf6efce9d3558add5001f164188c2072edd8
+  openspec_program_binding: 796306ca8aef8247c8d74dbcf5a85c18bf2ad9e7a99ebc04b94724c267ce306b
+  codegraph_domain_binding: 1aac07c78deff8d42dda05226ca57cb79a5adaf98b51a4205576dc1d1825272f
+  codegraph_registry: d0dcf156af58df8c0047797b46661b5b4a562a542f30e5cf2bb963714977d190
+  feature: 416959f35ed543e4d798a4b8dbccc05f05ee07f23897e5eb3dfe574c4e4e2bc6
+  application_roadmap: 32f00e131b0dab667fa7403dbd6d6a79c865f517959c5d6b227f82340534ad9f
+  loop_control_board: 1b4d26854984e7962c3bd54fb89ff3e6ae7744edf41f997392c8b705c91257c2
+  loop_session_registry: 02e390fd78950ad42ee6a4401db44a754cc66e2ec8a1996c3978b9fe1c2e1499
+
+runtime_activation:
+  classification: release0_runtime_activation_independently_verified
+  controller_control: GKE-001-COORDINATION-20260816-040-A10R34P15R6R5R2
+  outer_control: GKE-001-COORDINATION-20260816-041-A10R34P15R6R6
+  controller_sha256: 5b08ef09a51da3bc066d2ed239675ceee30ae70830d5eb51c927b4abee49e904
+  result_code: release0_runtime_activated
+  fresh_pid: 90660
+  listener_18080: sole_owner_90660
+  listener_18081: free
+  launchagent: active_single_run_pid_90660
+  readiness_samples: 2
+  database_connections_at_activation: 0
+  f013_findings: {p0: 0, p1: 0, p2: 0}
+
+mmc_runtime_policy:
+  source: local_runtime_state_read_only
+  space: personal
+  status: active
+  delegated_operation_count: 19
+  fingerprint: sha256:e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+  release0_search_present: true
+  release0_read_present: true
+  runtime_state_bytes: 11978
+  runtime_state_sha256: c38c14005f7a128f81c33d30ef701e4c95aad1a858619e6757a7dca85bd955ea
+  mutation_performed_by_this_control: false
+
+kds_database_probe:
+  prior_authorization: GKE-001_A10R34P1
+  authorization_consumed: true
+  connection_count: 1
+  api_requests: 0
+  binding_report:
+    scheme: postgresql
+    host_classification: loopback
+    port: 5432
+    database: gbrain
+    nonproduction_proven_by_activation_controller: true
+    credentials_disclosed_or_persisted: false
+  transaction:
+    requested_mode: repeatable_read_read_only
+    modifying_statements: 0
+    migration_or_fixture_write: false
+    closed_after_failure: true
+  exact_failure:
+    postgres_log_timestamp: 2026-08-16T20:58:59.466+08:00
+    backend_pid: 92316
+    sqlstate_classification: undefined_relation
+    relation: knowledge_intake.audit_events
+    message: relation_does_not_exist
+    failed_statement_class: bounded_audit_count_only
+  query_reachability:
+    fixture_candidate_query_started: false
+    content_or_filename_or_storage_path_read: false
+    audit_append_attempted: false
+  conclusion: runtime_database_schema_state_requires_readonly_inventory_before_any_live_read
+
+feature_evidence_gate:
+  feature_iteration: 295
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+  governance_blockers: 17
+  close_candidate: false
+  classification: governance_gate_only_not_live_read_evidence
+
+sealed_kds_sources:
+  migrations:
+    - path: knowledge_intake/sql/001_knowledge_intake.sql
+      sha256: 539b19dd563812aae6ac2c047f98c49a8c2bf55eb80bced8fa6b41b9d138c77c
+    - path: knowledge_intake/sql/002_document_extraction.sql
+      sha256: f4673975ae385680571cb2db9f81bf80a6e9ad6731988f7e41b774ea6b2ad2d5
+  release0_runtime:
+    api_server.py: 599c001ff246242ae08368cde93d85fef97fa68296d1d5014555d1d0629c63d4
+    knowledge_intake/read_api.py: 3be2bde10e151b4c5440182449b33964d227fdc2aa593cd65798bb2c800ba60c
+    knowledge_intake/read_contract.py: 8a15c9d41338bc1b2eda662663941dc58cbeb69436bd48a135cc6e85b20b4a53
+    knowledge_intake/read_authorization.py: 7f7bee17cb55bed01ad576fab6888880b9df8f53b89777066f01009d633e8231
+    knowledge_intake/read_service.py: e89cb39c556dd7920fa43ce4dfef5359f5624f72d1c13377ad2a9da77bfced2b
+    knowledge_intake/read_repository.py: 23a125076e94202b249bb81524f51172b78716cc7b7b608574d547f96686cca9
+    knowledge_intake/read_postgres.py: 33c98c680a693225ce44eff0bc7eafd5ec88c5671b543f10a970ea48ba2071bd
+
+next_control_request:
+  id: GKE-001-COORDINATION-20260816-044-A10R34P16R1R1
+  supersedes: GKE-001-COORDINATION-20260816-043-A10R34P16R1
+  purpose: inventory_local_gbrain_schema_before_migration_or_fixture_decision
+  authorization_required: true
+  expected_baselines:
+    gpcf:
+      head: 11d022b818332d2271a78b427c326eb454507a5a
+      origin_main: 11d022b818332d2271a78b427c326eb454507a5a
+      ahead_behind_staged: 0/0/0
+      ordinary_dirty_count: 735
+      ordinary_dirty_sha256: 42f0ebb2701ca42de3b41ed221e0339362c9d29b72ec26b04c73ed4f9127f4c8
+      expanded_dirty_count: 752
+      expanded_dirty_sha256: 3f04d904a445e7113ee8eec8fc4ec7cc5e35af1e65044a431ed9c69e7c00397f
+      opsx_lock: absent
+    kds: {head: 2ac85c55163b7acf0ede699184ac360579ccefaa, origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 264, ordinary_dirty_sha256: a0174d93cf2407f274f3806a50caa99444981c9918061c5619f3ef8cc2dab299, expanded_dirty_count: 554, expanded_dirty_sha256: 1528fb303c7112f05ac2a7d7ee05d156f3e55bed7cf9c4f2a38117c220240dd2, opsx_lock: absent}
+    mmc: {head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 10, ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9, expanded_dirty_count: 98, expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451, opsx_lock: absent}
+  allowed_actions:
+    - revalidate the exact three-repository Git and lock baselines
+    - read the already configured KDS DSN in memory and immediately redact it
+    - establish exactly one new connection to the proven loopback gbrain database
+    - start exactly one repeatable-read READ ONLY transaction
+    - execute only the six entries in the sealed SQL manifest below
+    - query to_regclass for exactly the fourteen named knowledge_intake relations
+    - read at most sixteen ordered schema_versions.version values only if that relation exists
+    - close the transaction and verify no xid was assigned
+  relation_allowlist:
+    - schema_versions
+    - knowledge_objects
+    - knowledge_assets
+    - knowledge_asset_versions
+    - upload_intents
+    - knowledge_intake_jobs
+    - job_attempts
+    - audit_events
+    - outbox_events
+    - extraction_runs
+    - extracted_contents
+    - extracted_table_cells
+    - evidence_links
+    - extraction_active_selections
+  sql_manifest:
+    canonicalization: json.dumps(manifest,ensure_ascii=true,sort_keys=true,separators_comma_colon)
+    canonical_bytes: 1327
+    canonical_sha256: a636eb91f30e10c18c55291fe805318cd8775d71db270d43ca7673d3adec9b80
+    connection_count: 1
+    database: gbrain
+    host_class: loopback
+    transaction_count: 1
+    statements:
+      - ordinal: 1
+        sql: BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY
+      - ordinal: 2
+        sql: SELECT current_database() AS database_name, current_setting('transaction_read_only') AS transaction_read_only, txid_current_if_assigned() AS xid_before
+      - ordinal: 3
+        sql: SELECT relation_name, to_regclass('knowledge_intake.' || relation_name)::text AS qualified_relation FROM (VALUES ('schema_versions',1),('knowledge_objects',2),('knowledge_assets',3),('knowledge_asset_versions',4),('upload_intents',5),('knowledge_intake_jobs',6),('job_attempts',7),('audit_events',8),('outbox_events',9),('extraction_runs',10),('extracted_contents',11),('extracted_table_cells',12),('evidence_links',13),('extraction_active_selections',14)) AS sealed(relation_name, ordinal) ORDER BY ordinal
+      - ordinal: 4
+        condition: only_if_ordinal_3_schema_versions_qualified_relation_is_non_null
+        sql: SELECT version FROM knowledge_intake.schema_versions ORDER BY version ASC LIMIT 16
+      - ordinal: 5
+        sql: SELECT txid_current_if_assigned() AS xid_after
+      - ordinal: 6
+        sql: ROLLBACK
+    forbidden:
+      - all_other_sql
+      - second_connection
+      - api_or_mmc_request
+      - content_or_business_row_read
+      - migration
+      - fixture_write
+      - audit_or_outbox_write
+  forbidden_actions:
+    - API or MMC request
+    - migration or schema write
+    - fixture create, update or delete
+    - audit or outbox append
+    - content, snippet, filename, storage path or customer-data read
+    - aggregate or row count against any business or audit relation
+    - credential output, copy or persistence
+    - service restart
+    - commit, push, deploy or status promotion
+  fail_stop:
+    - any baseline or lock drift
+    - non-loopback or non-gbrain binding
+    - any transaction_read_only value other than on
+    - any attempt to execute a modifying statement
+
+future_write_boundary:
+  local_schema_migration: separately_authorized_after_inventory_only
+  synthetic_fixture_creation: separately_authorized_after_schema_and_lineage_plan_only
+  authenticated_live_read: blocked_until_schema_and_fixture_are_sealed
+  expected_read_audit_write: separately_authorized_append_only
+  customer_or_shared_data: forbidden
+
+codegraph_impact:
+  capability: release0_runtime_readiness_and_fixture_prerequisite
+  repository_edges: [GPCF, KDS, MMC, Studio, Brain]
+  product_source_change: false
+  sync_status_query_required_after_governance_artifact: true
+
+rollback:
+  repository: remove_only_this_uncommitted_report_artifact
+  database: not_applicable_zero_write
+  runtime: not_applicable_zero_runtime_change
+  mmc_policy: not_applicable_zero_policy_change
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  real_verified: false
+  accepted: false
+  integrated: false
+  production_ready: false

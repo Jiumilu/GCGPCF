@@ -1,0 +1,84 @@
+gke001_brain_canonical_consumer_local_commit:
+  id: GKE-001-COORDINATION-20260813-051-A10C5
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-050-A10C4
+    sha256: 1fe1c4545ada2f397a32fb73895c93849522d1fb713dcb9806970194e5971491
+  independent_review:
+    authority: F-013
+    result: brain_a10c3_a10c4_combined_12_path_technical_serial_gate_closed_separate_local_commit_control_eligible
+  lane:
+    repository: Brain
+    thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+    change_id: commit-brain-canonical-consumer-a10c5
+    owner: Brain
+  required_baseline:
+    branch: main
+    head: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+    origin_main: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+    ahead_behind_staged: 0/0/0
+    opsx_lock: absent
+  exact_paths:
+    - src/app/App.test.tsx
+    - src/app/App.tsx
+    - src/app/components/ChatPanel.test.tsx
+    - src/app/components/ChatPanel.tsx
+    - src/app/components/SearchPanel.test.tsx
+    - src/app/components/SearchPanel.tsx
+    - src/app/components/WikiPreview.test.tsx
+    - src/app/components/WikiPreview.tsx
+    - src/app/hooks/studioKdsBridge.test.ts
+    - src/app/hooks/studioKdsBridge.ts
+    - src/app/hooks/useKdsApi.test.ts
+    - src/app/hooks/useKdsApi.ts
+  sealed_candidate:
+    path_count: 12
+    pathset_sha256: 823f21f34b341122a029843c1fc798204eed7fa30f2831511601ef10a7393b84
+    ordered_content_manifest_sha256: 9a7db55ecfeb5f1ad3d63bb3c5381fad23fa1f4e8d5b527ef2e3c6d76b77d876
+    patch_bytes: 40715
+    patch_sha256: dbe143811486d89bd73b03084ff384910e6757a0a3585f2a29da0ea1dee8c158
+  verified_evidence:
+    focused_tests: 122_passed
+    full_tests: 390_passed
+    typecheck: pass
+    build: pass
+    kds_read_model_alignment: pass
+    openspec_strict: pass
+    codegraph: current
+    diff_check: pass
+  execution:
+    - reverify_baseline_all_path_hashes_pathset_manifest_patch_and_lock_absent
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_12_paths_only
+    - verify_cached_scope_fingerprints_and_diff_check
+    - create_exactly_one_local_commit
+    - verify_parent_subject_scope_patch_and_commit_diff_check
+    - release_opsx_lock_and_return_report_only_receipt
+  commit:
+    count: 1
+    subject: "feat(brain): consume canonical session reads"
+    push: false
+  abort_on_any_mismatch:
+    - unstage_exact_12_paths_only
+    - preserve_working_file_content
+    - release_opsx_lock
+    - create_no_commit
+  forbidden:
+    - content_edit
+    - studio_kds_or_mmc_change
+    - live_network_browser_or_prompt_send
+    - data_write
+    - push
+    - deployment
+    - later_unit
+    - status_promotion
+  rollback:
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

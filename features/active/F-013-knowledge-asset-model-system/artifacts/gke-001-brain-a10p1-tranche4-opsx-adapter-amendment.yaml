@@ -1,0 +1,53 @@
+a10p1_brain_tranche4_opsx_adapter_amendment:
+  id: GKE-001-COORDINATION-20260812-009-A10P1T4R1
+  amends: GKE-001-COORDINATION-20260812-008-A10P1T4
+  engineering_domain: GKE-001
+  release: Release-0
+  feature_ref: F-013
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  lane_thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+  change_id: repair-brain-read-baseline-a10p1-tranche-4
+  reason: OpsX_v2_3_adapter_config_hard_gate_requires_a_project_local_config_before_product_edits
+  authorization_delta:
+    temporary_execution_file:
+      path: .harness/config.yaml
+      source: /Users/lujunxiang/.codex/skills/opsx-full-cycle/templates/harness-config.yaml
+      allowed_overrides:
+        execution.mode: local
+        git.require_clean_worktree: false
+        git.branch_strategy: manual
+        git.commit_strategy: manual_by_default
+        git.allow_agent_commit: false
+        git.allow_agent_push: false
+        tdd.enabled: true
+        tdd.red_green_required: true
+        acceptance.require_human_signoff: true
+      lifecycle: create_before_gate_check_and_remove_before_final_handoff
+      handoff_status_requirement: absent
+      repository_effect: ignored_execution_only
+  unchanged_boundaries:
+    product_test_file_allowlist: inherited_exactly_from_GKE_001_COORDINATION_20260812_008_A10P1T4
+    run_package_allowlist: .harness/runs/20260812-repair-brain-read-baseline-a10p1-tranche-4/**
+    evidence_index: .harness/evidence-index.yaml
+    opsx_lock: execution_only_and_absent_at_handoff
+    openspec_write: false
+    network_or_live_service_access: false
+    credential_access: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+    tranche5_authorized: false
+  acceptance:
+    - gate_check_adapter_config_passes_before_product_edits
+    - temporary_config_is_absent_before_handoff
+    - final_git_status_has_no_config_entry
+    - original_eight_file_scope_and_all_acceptance_checks_remain_unchanged
+  rollback:
+    execution_file: remove_only_.harness/config.yaml
+    product_test: use_original_tranche4_recorded_baseline_hashes
+    predecessor_delta: preserve_tranche3_frozen_nine_path_delta
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

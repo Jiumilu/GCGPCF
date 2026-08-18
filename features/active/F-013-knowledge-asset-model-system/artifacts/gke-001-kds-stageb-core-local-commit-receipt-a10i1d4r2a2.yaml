@@ -1,0 +1,56 @@
+kds_stageb_core_local_commit_receipt:
+  id: GKE-001-COORDINATION-20260812-018-A10I1D4R2A2
+  issued_at: 2026-08-12
+  program: GKE-001
+  feature_ref: F-013
+  authorization:
+    id: GKE-001-COORDINATION-20260812-017-A10I1D4R2A1
+    sha256: c3bc86e0ae4aea6b2920d49daaf403bbec64cace11f3d8e93d2a615b5c659237
+  commit:
+    sha: 7fb477030f5278faf55d6d16ff3874469704610d
+    parent: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    tree: b1c8bf1bd0e6f3b0f67726844065732ce5f8602c
+    subject: "feat(kds): add document extraction stage b core"
+    path_count: 12
+    insertions: 2602
+    deletions: 17
+    modes: 100644_only
+    sorted_nul_pathset_sha256: ca5d5931bd2d41619cd83c0347ba72c73cde41534d8dd078bfc5fc908514a0bb
+    canonical_patch_bytes: 175640
+    canonical_patch_sha256: c9692a48019a3d6ccc2949a9452ff26bd2bfd0785ec69be728a13552ce977fad
+    diff_check: pass
+  one_byte_correction:
+    path: tests/test_document_extraction_domain.py
+    suffix_before: 290a0a
+    suffix_after: 290a
+    corrected_sha256: 05c637cbd86fc65c0d8db5ce621fea85576a3fc37107dcd506d16b61ab0c9ea3
+  verification:
+    clean_selective_archive_bytes: 393216
+    core_non_db_tests: 64
+    result: pass
+    disposable_roots_remaining: 0
+  final_repository_state:
+    head: 7fb477030f5278faf55d6d16ff3874469704610d
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 1
+    behind: 0
+    staged: 0
+    ordinary_dirty: 181
+    expanded_dirty: 453
+    opsx_lock: absent
+  authorization_boundary:
+    push: false
+    later_unit: false
+    database_or_api_access: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    method: separately_reviewed_compensating_git_revert_only
+  review:
+    owner: F-013
+    mode: independent_read_only
+    status: pending
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

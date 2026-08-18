@@ -1,0 +1,108 @@
+gke001_mmc_release0_policy_freshness_replay:
+  id: GKE-001-COORDINATION-20260813-082-A10C16
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: admit-release0-canonical-read-policy-a10c7
+  mode: report_only_no_repository_or_runtime_policy_write
+  predecessors:
+    - id: GKE-001-COORDINATION-20260813-059-A10C6R2
+      result: technical_policy_convergence_verified_governance_metadata_rework_closed
+    - id: GKE-001-COORDINATION-20260813-062-A10C7R2
+      result: authorization_request_review_passed_human_source_only_local_tdd_authorization_required
+  lane:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: replay-mmc-release0-policy-freshness-a10c16
+    owner: MMC
+    repository_allowlist: []
+  baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    raw_ordinary_dirty: 15
+    ordinary_nul_sha256: 4aa3dbdeb92bc3d7538cc48898245fe049437d32b406c658a63abdff75244fde
+    raw_expanded_dirty: 76
+    expanded_nul_sha256: ddba5938cbae9cdd870f0820aa93ff29db02af308cdbb2f6c1fd8bc421cfef16
+    opsx_lock: absent
+    runtime_sidecar:
+      path: runtime/.state.json.lock
+      state: present_zero_byte_excluded_untouched
+      sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  current_policy:
+    connector_id: kds_llm_wiki_api
+    tracked_seed_sha256: 161884e885fc03ade8d26b87bea745203455a177889b4ef57612b22344554a33
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    seed_operation_count: 17
+    runtime_operation_count: 17
+    current_and_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    contains_release0_operations: false
+  sealed_candidate:
+    append_exactly:
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/search
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/read
+    isolated_two_operation_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    candidate_operation_count: 19
+    candidate_fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    implementation_status: not_started_human_source_only_tdd_authorization_required
+    runtime_application_status: separate_high_risk_human_authorization_required
+  current_verification:
+    focused_release0_api_and_contract: 20_passed_37_deselected
+    full_runtime: 158_passed
+    contract_script: pass
+    openspec_strict: pass
+    mmc_harness: pass
+    git_diff_check: pass
+    codegraph:
+      files: 113
+      nodes: 1094
+      edges: 2414
+      status: up_to_date
+      release0_relay_symbol: _is_release0_canonical_read_found
+      authority_decode_symbol: _decode_verified_delegation_scope_found
+      delegated_policy_symbols: found
+      canonical_read_scope_literal: no_index_symbol_with_that_exact_literal
+  verified_boundaries:
+    relay_accepts_only_two_canonical_post_paths: true
+    signed_closed_authority_and_request_equality_tests: pass
+    replay_extra_claim_bypass_and_registry_denial_fail_closed: pass
+    graph_and_wiki_preview_authority_projection: pass
+    bounded_error_projection: pass
+    source_seed_still_denies_release0: true
+    runtime_policy_still_denies_release0: true
+    no_runtime_or_shared_request_executed: true
+  unchanged_authorization_gates:
+    source_only_local_tdd: human_authorization_required
+    local_commit: not_authorized
+    push: not_authorized
+    runtime_policy_application: high_risk_human_authorization_required
+    controlled_fixture_and_live_read: separate_human_authorization_required
+    deployment_or_status_promotion: not_authorized
+  forbidden:
+    - source_or_openspec_edit_in_mmc
+    - runtime_state_or_sidecar_write
+    - seed_execution_or_seed_force
+    - delegated_operations_application
+    - connector_creation
+    - credential_access_or_expansion
+    - real_or_shared_request
+    - stage_commit_or_push
+    - deployment_or_status_promotion
+  rollback:
+    repository: not_applicable_no_mmc_repository_write
+    runtime_policy: retain_exact_17_operation_fingerprint
+    sidecar: preserved_untouched
+    external_data: none_accessed
+  requested_independent_review:
+    authority: F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    requested_classification: freshness_replay_only_no_authorization_change
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    promotion: false

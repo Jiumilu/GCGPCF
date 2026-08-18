@@ -17,6 +17,21 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/gckf-p0-stop-condition-resume-trigge
 LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md"
 D186_FIXTURE = ROOT / "fixtures/api/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.json"
 D186_EVIDENCE_JSON = ROOT / "docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.json"
+ROLE_VIEW_VALIDATOR = "tools/kds-sync/validate_green_supply_chain_role_view_kds_entity_20260701.py"
+PRIOR_VALIDATORS = {
+    "D185": "tools/kds-sync/validate_gckf_p0_session_mainline_takeover_current_state_d185.py",
+    "D186": "tools/kds-sync/validate_gckf_p0_repair_owner_response_arrival_scan_current_state_d186.py",
+    "D187": "tools/kds-sync/validate_gckf_p0_repair_owner_response_missing_signal_action_queue_current_state_d187.py",
+    "D188": "tools/kds-sync/validate_gckf_p0_repair_owner_response_authorization_boundary_precheck_current_state_d188.py",
+    "D189": "tools/kds-sync/validate_gckf_p0_no_write_continuity_guard_current_state_d189.py",
+}
+PRIOR_PASS_KEYS = {
+    "D185": "gckf_p0_session_mainline_takeover_current_state_d185",
+    "D186": "gckf_p0_repair_owner_response_arrival_scan_current_state_d186",
+    "D187": "gckf_p0_repair_owner_response_missing_signal_action_queue_current_state_d187",
+    "D188": "gckf_p0_repair_owner_response_authorization_boundary_precheck_current_state_d188",
+    "D189": "gckf_p0_no_write_continuity_guard_current_state_d189",
+}
 
 
 def fail(message: str) -> None:
@@ -62,6 +77,34 @@ def run_delegated_loop_gate() -> dict:
     fail(f"delegated_loop_document_gate_failed:{last_output}")
 
 
+def parse_key_value_output(output: str) -> dict[str, str]:
+    values: dict[str, str] = {}
+    for line in output.splitlines():
+        if "=" in line:
+            key, value = line.split("=", 1)
+            values[key] = value
+    return values
+
+
+def run_prior_chain() -> dict[str, dict[str, str]]:
+    outputs: dict[str, dict[str, str]] = {}
+    for round_id, validator in PRIOR_VALIDATORS.items():
+        values = parse_key_value_output(run_command("python3", validator))
+        require(values.get(PRIOR_PASS_KEYS[round_id]) == "pass", f"prior_validator_not_pass:{round_id}")
+        outputs[round_id] = values
+    require(outputs["D185"].get("dks_baseline_mirror_matches") == "10", "d185_mirror_matches_not_ten")
+    require(outputs["D186"].get("true_trigger_claims") == "0", "d186_true_trigger_claims_not_zero")
+    require(outputs["D187"].get("ready_for_execution") == "0", "d187_ready_for_execution_not_zero")
+    require(outputs["D187"].get("executed_actions") == "0", "d187_executed_actions_not_zero")
+    require(outputs["D188"].get("satisfied_authorization_signals") == "0", "d188_satisfied_authorization_signals_not_zero")
+    require(outputs["D188"].get("queue_items_executable") == "0", "d188_queue_items_executable_not_zero")
+    require(outputs["D189"].get("positive_no_write_claims") == "0", "d189_positive_no_write_claims_not_zero")
+    require(outputs["D189"].get("kds_api_writes") == "0", "d189_kds_api_writes_not_zero")
+    require(outputs["D189"].get("runtime_writebacks") == "0", "d189_runtime_writebacks_not_zero")
+    require(outputs["D189"].get("lifecycle_promotions") == "0", "d189_lifecycle_promotions_not_zero")
+    return outputs
+
+
 def main() -> None:
     fixture = load_json(FIXTURE)
     evidence = load_json(EVIDENCE_JSON)
@@ -69,6 +112,15 @@ def main() -> None:
     arrival_evidence = load_json(D186_EVIDENCE_JSON)
     require(EVIDENCE_MD.exists(), "missing_evidence_md")
     require(LOOP_MD.exists(), "missing_loop_md")
+
+    prior_chain = run_prior_chain()
+    arrival_scan = prior_chain["D186"]
+    require(int(arrival_scan.get("arrival_claim_files_scanned", "0")) > 0, "arrival_scan_file_count_not_positive")
+    role_view = parse_key_value_output(run_command("python3", ROLE_VIEW_VALIDATOR))
+    require(role_view.get("green_supply_chain_role_view_entity_gate") == "pass", "role_view_entity_gate_not_pass")
+    require(role_view.get("entity_id") == "KDS-GSC-ROLE-VIEW-20260701", "role_view_entity_id_mismatch")
+    require(role_view.get("engineering_domain") == "GKE-001", "role_view_engineering_domain_mismatch")
+    require(role_view.get("gckf_resume_triggers") == "0/4", "role_view_resume_triggers_not_zero")
 
     source = load_json(ROOT / fixture["sourceEvidence"])
     source_summary = source.get("continuitySummary", {})
@@ -151,9 +203,28 @@ def main() -> None:
     require("authorization_boundary_stop_condition_with_resume_trigger" in evidence_md, "evidence_md_missing_status")
     require("nextExecutableRounds=0" in evidence_md, "evidence_md_missing_zero_next_rounds")
     require("resumeAllowed=false" in evidence_md, "evidence_md_missing_resume_boundary")
+    for marker in (
+        "2026-08-10 GKE-001 A6 后置复放",
+        "technical_revalidation_passed_governance_pending",
+        "gckf_resume_triggers=0/4",
+        "角色视图 KDS 实体门禁",
+        "9 项治理 blocker",
+        "D185-D189 五个前置 validator",
+        "本次不创建 D191",
+    ):
+        require(marker in evidence_md, f"evidence_md_missing_current_replay:{marker}")
     for marker in ("## LOOP 运行控制闭环", "### run", "### stop", "### verify", "### recover", "### debug"):
         require(marker in loop_md, f"loop_control_marker_missing:{marker}")
     require("authorization_boundary" in loop_md, "loop_md_missing_authorization_boundary")
+    for marker in (
+        "technical_revalidation_passed_governance_pending",
+        "四项 resume triggers 仍为 `0/4`",
+        "`nextExecutableRounds=0`",
+        "D185-D189 五个前置 validator",
+        "角色视图实体门禁",
+        "不创建 D191",
+    ):
+        require(marker in loop_md, f"loop_md_missing_current_replay:{marker}")
 
     localization = json.loads(run_command("python3", "tools/kds-sync/check_chinese_localization_gate.py", "--json", "--max-findings", "10000"))
     require(localization.get("localization_gate") == "pass", "localization_gate_not_pass")
@@ -176,6 +247,12 @@ def main() -> None:
     print(f"execution_mode={fixture.get('executionMode')}")
     print(f"arrival_signal_aliases={len(arrival_aliases)}")
     print(f"arrival_scan_found_signals={arrival_summary.get('foundSignals')}")
+    print(f"arrival_claim_files_scanned={arrival_scan.get('arrival_claim_files_scanned')}")
+    print(f"true_trigger_claims={arrival_scan.get('true_trigger_claims')}")
+    print(f"prior_chain_validators={len(prior_chain)}")
+    print(f"positive_no_write_claims={prior_chain['D189'].get('positive_no_write_claims')}")
+    print(f"role_view_entity_gate={role_view.get('green_supply_chain_role_view_entity_gate')}")
+    print(f"role_view_resume_triggers={role_view.get('gckf_resume_triggers')}")
 
 
 if __name__ == "__main__":

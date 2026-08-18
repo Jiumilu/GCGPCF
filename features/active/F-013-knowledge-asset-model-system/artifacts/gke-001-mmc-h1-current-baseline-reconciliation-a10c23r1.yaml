@@ -1,0 +1,93 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260814-015-A10C23R1
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: mmc
+  change_id: reconcile-current-h1-owner15-drift-a10c23r1
+  owner_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  predecessors:
+    conditional_request:
+      id: GKE-001-COORDINATION-20260814-005-A10C8R4
+      artifact_sha256: 77c4518844464ed8628a76a794ff6a8b3b752ac96bd4bbfc6b1baf961ab4f8ed
+    failed_revalidation:
+      id: GKE-001-COORDINATION-20260814-014-A10C23
+      message_payload_sha256: 77d1d70a840b7ebd25142052caf8998de54ca9d7fcd8c1973beeb26d02de462a
+      result: sealed_patch_drift_detected
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  required_baseline:
+    branch: main
+    head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    origin_main: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    remote_main: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 20
+    ordinary_nul_sha256: 3db5b2ada086a6a440a2b10c2635853ccbe0f0e88351d99c76c13f3aad296e59
+    expanded_dirty: 111
+    expanded_nul_sha256: 0722496fa4e8043a93e7ccf62378d01749d94e4f6b17e9d7fe94d5bdce5a90cc
+    opsx_lock: absent
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    runtime_sidecar_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  exact_paths:
+    - runtime/app/gateway/registry_state.py
+    - runtime/app/api/v1/registry_apis.py
+    - runtime/app/api/v1/registry_llms.py
+    - runtime/app/api/v1/connectors.py
+    - runtime/app/api/v1/health.py
+    - runtime/app/db/session.py
+    - scripts/dry_run_mmc_dependencies.py
+    - runtime/tests/test_registry_policy_audit.py
+    - runtime/tests/test_api.py
+    - runtime/tests/test_llm_registry.py
+    - runtime/tests/test_dependency_dry_run.py
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/proposal.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/design.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/specs/shared-registry-state/spec.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/tasks.md
+  old_sealed_candidate:
+    sorted_nul_pathset_sha256: 7544700e1f12d9bcdd02c9b2b8ac01dd36a46ea11ee2843c1342ca23c723eb50
+    full_index_patch_bytes: 59487
+    full_index_patch_sha256: b4c728d6f6a5bc6527db905453a1557fdb90283bc1bd784c1c2b2f472096daab
+  observed_drift:
+    current_deterministic_patch_bytes: 58497
+    current_deterministic_patch_sha256: 359ce0_pending_full_digest_from_owner_handoff
+    classification: exact_candidate_content_drift_reconciliation_required
+  authorization:
+    mode: report_only_owner_and_content_reconciliation
+    repository_allowlist: []
+    stage: false
+    commit: false
+    push: false
+    runtime_policy_apply: false
+    process_restart_or_reload: false
+    live_request: false
+    deployment: false
+    status_promotion: false
+  required_checks:
+    - exact_file_by_file_old_and_current_sha256
+    - semantic_delta_and_owner_attribution
+    - owner_pure_current_candidate_or_exact_blocker
+    - deterministic_current_patch_two_pass
+    - focused_and_full_runtime_tests_if_owner_pure
+    - contract_openspec_harness_if_owner_pure
+    - disposable_apply_reverse_cleanup_if_owner_pure
+  forbidden_scope:
+    - release0_source_policy_paths
+    - runtime_state_or_sidecar
+    - launcher_owner_paths
+    - other_dirty_owner_groups
+    - real_or_shared_kds_or_mmc_access
+  rollback:
+    control_artifact: remove_only_this_uncommitted_control_artifact_if_withdrawn
+    mmc_repository: not_applicable_no_mmc_write
+    future_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    runtime_policy: not_applied
+    promotion: false

@@ -1,0 +1,137 @@
+kds_stageb_release0_dependency_order:
+  id: GKE-001-COORDINATION-20260812-011-A10I1D2
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  change_id: verify-kds-stageb-release0-dependency-order-a10i1d2
+  mode: report_only_disposable_baseline_replay
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  owner: GPCF
+  reviewer:
+    role: GPCF-F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  inspected_lane:
+    owner: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  parent_controls:
+    dirty_partition:
+      id: GKE-001-COORDINATION-20260812-010-A10I1D1
+      sha256: d14ef30b401284c833e16bc1f1add845fba7e34cb2f31a29cf85c52e6eec2840
+    a10i1:
+      id: GKE-001-COORDINATION-20260811-011-A10I1
+      sha256: 8f4087ca09a4695a0cdec021d0d22270c4866ec9903dc86c0c8cbff8069d37c3
+    stage_b_change_id: extend-kds-document-extraction
+  repository_baseline:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    ordinary_dirty_entries: 190
+    expanded_dirty_entries: 462
+  technical_sets:
+    stage_b:
+      product_test_paths: 14
+      manifest_sha256: 139238548b83a92d4244f300f31fdee127b19960434cc987b67e39f77a3bc370
+      independently_replayable_on_clean_head: true
+    release0_a10i1:
+      product_test_paths: 12
+      manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+      independently_replayable_on_clean_head: false
+  dependency_facts:
+    - A10I1 read modules import Stage_B extraction domain types.
+    - A10I1 read_repository imports the Stage_B MemoryKnowledgeIntakeRepository.
+    - A10I1 read_postgres imports Stage_B repository and extraction types.
+    - Path-set disjointness is an ownership property and does not imply runtime independence.
+    - api_server import tests also require the pre-existing repository sibling shared runtime package.
+  disposable_replays:
+    a10i1_only:
+      overlay: clean_HEAD_plus_12_A10I1_product_test_paths
+      result: collection_failed
+      errors: 4
+      reason: missing_knowledge_intake_extraction
+    stage_b_only:
+      overlay: clean_HEAD_plus_14_Stage_B_product_test_paths
+      result: passed
+      passed: 66
+      failed: 0
+    stage_b_then_a10i1:
+      overlay: clean_HEAD_plus_14_Stage_B_plus_12_A10I1_product_test_paths_plus_preexisting_shared_runtime_dependency
+      result: passed
+      tests: 107
+      passed: 101
+      skipped: 6
+      failed: 0
+      errors: 0
+    temporary_cleanup:
+      all_final_replay_roots_absent: true
+      initial_interrupted_root_recovered_and_removed: true
+  disposition_decision:
+    - Preserve Stage_B and A10I1 as two separately owned technical change sets.
+    - Do not combine the 26 product and test paths into one commit or handoff.
+    - Stage_B owner-specific disposition must occur before A10I1 disposition.
+    - A10I1 must be rebased or replayed onto a clean baseline that already contains the accepted Stage_B dependency.
+    - F-013 must independently confirm the replay matrix before any owner-specific Git action is authorized.
+  serial_order:
+    - Stage_B_owner_specific_disposition_control
+    - clean_Stage_B_baseline_and_independent_replay
+    - A10I1_rebase_or_replay_on_Stage_B_baseline
+    - F013_independent_joint_revalidation
+    - separately_authorized_commit_or_integration_decision
+  KDS_repository_allowlist: []
+  disposable_workspace_allowlist:
+    - /tmp/gke001-stageb-a10-*
+  GPCF_repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-stageb-release0-dependency-order-a10i1d2.yaml
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-stageb-release0-dependency-order-and-review-dispatch-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    - features/active/F-013-knowledge-asset-model-system/journal.md
+    - 02-governance/loop/LOOP_CONTROL_BOARD.md
+    - 02-governance/loop/LOOP_SESSION_REGISTRY.md
+    - tools/kds-sync/validate_gke001_three_lane_coordination.py
+  independent_review_required:
+    - confirm_A10I1_imports_Stage_B_domain_and_repository_symbols
+    - replay_A10I1_only_collection_failure_on_clean_HEAD
+    - replay_Stage_B_only_66_pass
+    - replay_combined_101_pass_6_skip_with_existing_shared_runtime_dependency
+    - confirm_all_disposable_roots_are_absent
+    - confirm_no_KDS_repository_or_runtime_mutation
+    - confirm_serial_order_without_combining_technical_ownership
+  forbidden_scope:
+    - any_KDS_repository_write
+    - any_stage_clean_reset_revert_commit_push_or_history_rewrite
+    - any_role_view_registry_business_projection_or_runtime_fact_write
+    - any_live_shared_or_production_KDS_MMC_database_API_or_corpus_action
+    - any_credential_access
+    - any_migration_restart_deploy_or_policy_apply
+    - any_acceptance_integration_production_or_customer_status_promotion
+  authorization:
+    KDS_read_only_git_source_and_hash_inspection: true
+    disposable_local_baseline_replay: true
+    GPCF_allowlisted_governance_write: true
+    KDS_write: false
+    database_or_API_access: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  handoff:
+    source: GKE-001_coordinator
+    target: GPCF_F-013_independent_review
+    status: dispatched_review_pending
+    KDS_product_handoffs_unchanged: true
+  rollback:
+    boundary: Withdraw only this GPCF report-only control, its evidence, and the corresponding Feature and LOOP references.
+    disposable_workspace: removed_after_each_replay
+    KDS_restore: not_applicable_zero_KDS_mutation
+    external_data: none
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

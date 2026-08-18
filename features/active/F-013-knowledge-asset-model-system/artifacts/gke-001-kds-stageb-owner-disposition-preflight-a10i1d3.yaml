@@ -1,0 +1,168 @@
+kds_stageb_owner_disposition_preflight:
+  id: GKE-001-COORDINATION-20260812-012-A10I1D3
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  change_id: prepare-kds-stageb-owner-disposition-a10i1d3
+  mode: report_only_patch_and_clean_baseline_preflight
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  owner: KDS
+  target_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer:
+    role: GPCF-F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  baseline:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_dirty_entries: 190
+    expanded_dirty_entries: 462
+    opsx_lock: absent
+  parent_controls:
+    ownership_partition:
+      id: GKE-001-COORDINATION-20260812-010-A10I1D1
+      sha256: d14ef30b401284c833e16bc1f1add845fba7e34cb2f31a29cf85c52e6eec2840
+      review: ownership_partition_verified_for_owner_specific_disposition_controls
+    dependency_order:
+      id: GKE-001-COORDINATION-20260812-011-A10I1D2
+      sha256: a226a75e1d839678b79ea941def964b69e0e2876b7c49510b256882017ac6e5d
+      review: dependency_order_verified_owner_sets_must_remain_separate
+  frozen_manifests:
+    product_test_14_sha256: 139238548b83a92d4244f300f31fdee127b19960434cc987b67e39f77a3bc370
+    openspec_9_sha256: 7acdd640e47a6892af715d57038b57de5747f84061cbf3f0034d5bef52dfdeed
+    run_handoff_13_sha256: 9505cf98726d0148b0124022f4dca502837b82ec74e10a262daed29f15881e47
+  disposition_units:
+    stageb_core_12:
+      kind: product_test_patch
+      paths:
+        - requirements.txt
+        - knowledge_intake/api.py
+        - knowledge_intake/postgres.py
+        - knowledge_intake/repository.py
+        - knowledge_intake/service.py
+        - knowledge_intake/extraction.py
+        - knowledge_intake/extraction_service.py
+        - knowledge_intake/sql/002_document_extraction.sql
+        - tests/test_document_extraction_domain.py
+        - tests/test_document_extraction_parsers.py
+        - tests/test_document_extraction_service.py
+        - tests/test_document_extraction_migration.py
+      max_product_test_paths_respected: true
+    stageb_regression_2:
+      kind: product_test_patch
+      paths:
+        - tests/test_knowledge_intake_api.py
+        - tests/test_knowledge_intake_postgres.py
+      max_product_test_paths_respected: true
+    stageb_openspec_9:
+      kind: governance_contract
+      paths:
+        - openspec/changes/extend-kds-document-extraction/.openspec.yaml
+        - openspec/changes/extend-kds-document-extraction/design.md
+        - openspec/changes/extend-kds-document-extraction/proposal.md
+        - openspec/changes/extend-kds-document-extraction/specs/document-extraction-pipeline/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extracted-content-evidence/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extraction-access-projection/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extraction-evidence-links/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extraction-job-orchestration/spec.md
+        - openspec/changes/extend-kds-document-extraction/tasks.md
+    stageb_run_handoff_13:
+      kind: governance_evidence
+      paths:
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/authorization.yaml
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/changed-files.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-a3-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fifth-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fourth-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-second-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-third-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/final-verification.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/f013-handoff.md
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/handoff.yaml
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/knowledge-engineering-handoff.yaml
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/run.yaml
+  preflight_tasks:
+    - Generate deterministic patch bytes and SHA-256 for stageb_core_12 and stageb_regression_2 without writing KDS.
+    - Prove both patches apply in order to a disposable clean f28edb51 baseline and reverse cleanly.
+    - Overlay the nine OpenSpec files and prove strict validation.
+    - Verify all thirteen run/handoff files and the three frozen manifests are byte-stable.
+    - Run the 66-test non-database suite after both technical patches are present.
+    - Run the 23-test PostgreSQL/migration suite against one uniquely named disposable database and prove cleanup count zero.
+    - Prove ACL-before-read/search/count, active-extraction filtering, lineage, transactional audit/outbox, stale-lease safety and append-only rollback remain covered by the named tests.
+    - Return a report-only handoff with exact patch hashes, commands, results, before/after Git state and exclusions.
+  acceptance_commands:
+    - PYTHONDONTWRITEBYTECODE=1 PYTEST_ADDOPTS='-p no:cacheprovider' python3 -m pytest -q tests/test_document_extraction_domain.py tests/test_document_extraction_parsers.py tests/test_document_extraction_service.py tests/test_knowledge_intake_api.py tests/test_knowledge_intake_security.py tests/test_knowledge_intake_jobs_audit.py tests/test_knowledge_asset_model_bridge.py
+    - KDS_INTAKE_TEST_DATABASE_URL='<unique-disposable-url>' PYTHONDONTWRITEBYTECODE=1 PYTEST_ADDOPTS='-p no:cacheprovider' python3 -m pytest -q tests/test_knowledge_intake_postgres.py tests/test_document_extraction_migration.py tests/test_knowledge_intake_migration.py
+    - openspec validate extend-kds-document-extraction --strict
+    - git diff --check
+  repository_allowlist: []
+  disposable_workspace_allowlist:
+    - /tmp/gke001-stageb-disposition-*
+    - one_uniquely_named_local_disposable_postgresql_database
+  explicit_exclusions:
+    - all_A10I1_Release0_paths
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+    - all_business_projection_content
+    - all_Feishu_runtime_facts
+    - all_KDS_governance_generated_outputs_outside_the_13_frozen_run_paths
+    - all_KDS_audit_read_views
+    - all_disposable_local_outputs_outside_the_authorized_preflight_roots
+    - automation_memory
+  GPCF_repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-stageb-owner-disposition-preflight-a10i1d3.yaml
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-stageb-owner-disposition-preflight-and-dispatch-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    - features/active/F-013-knowledge-asset-model-system/journal.md
+    - 02-governance/loop/LOOP_CONTROL_BOARD.md
+    - 02-governance/loop/LOOP_SESSION_REGISTRY.md
+    - tools/kds-sync/validate_gke001_three_lane_coordination.py
+  handoff_contract:
+    format: knowledge_engineering_handoff_v0.1_report_only
+    required:
+      - exact_disposition_unit_paths
+      - exact_patch_sha256_per_technical_unit
+      - clean_apply_and_reverse_evidence
+      - non_db_and_postgresql_test_results
+      - acl_audit_lineage_rollback_coverage
+      - openspec_and_manifest_results
+      - disposable_database_cleanup_receipt
+      - before_after_git_and_lock_state
+      - exclusions_and_unresolved_risks
+  authorization:
+    local_read_and_hash: true
+    disposable_patch_generation_and_clean_baseline_replay: true
+    uniquely_named_disposable_postgresql_database: true
+    KDS_repository_write: false
+    stage_or_commit: false
+    push: false
+    live_shared_or_production_access: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - any_KDS_worktree_file_write_or_handoff_revision
+    - any_stage_commit_push_clean_reset_revert_or_history_rewrite
+    - any_A10I1_role_view_business_projection_runtime_fact_or_other_owner_scope_action
+    - any_shared_live_or_production_database_API_corpus_or_credential_access
+    - any_migration_against_non_disposable_data
+    - any_restart_deploy_policy_apply_or_status_promotion
+  rollback:
+    disposable_workspace: remove_every_preflight_root_after_capture
+    disposable_database: drop_and_verify_absent
+    KDS_repository: not_applicable_zero_write
+    GPCF_control: withdraw_this_control_and_its_references
+    external_data: none
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

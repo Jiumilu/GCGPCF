@@ -1,0 +1,58 @@
+coordination_control:
+  id: GKE-001-COORDINATION-20260814-039-A10R9-STUDIO
+  predecessor: GKE-001-COORDINATION-20260814-038-A10R8R5-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  change_id: preflight-studio-dev-authoritative-fixture-local-commit-a10r9
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  mode: report_only_precommit
+  repository_allowlist: []
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+  candidate_paths:
+    - packages/server/src/db/index.ts
+    - packages/server/src/routes/governance/dev-authoritative-fixtures.ts
+    - packages/server/src/routes/index.ts
+    - tests/server/dev-authoritative-fixtures-route.test.ts
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+    - packages/server/src/routes/brain-kds-bridge.ts
+    - tests/server/brain-kds-bridge-route.test.ts
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-879.md
+  sealed_fingerprints:
+    pathset_sha256_prefix: d720b816
+    content_manifest_sha256_prefix: ee2234d7
+    patch_bytes: 136720
+    patch_sha256_prefix: c68bdb7e
+  proposed_subject: "feat(studio): add disposable authoritative read fixture"
+  required_checks:
+    - exact baseline and no remote drift using read-only remote query
+    - exact eight-path scope and no additional commit
+    - deterministic full-index patch generated twice byte-identically
+    - full candidate cached diff-check
+    - current Studio LOOP, Harness, OpenSpec strict, CodeGraph status/query and repository diff-check
+    - confirm product and test hashes remain identical to the independently reviewed A10R8R2 bytes
+    - label 21 plus 7 tests, build and CodeGraph selection as inherited evidence
+    - confirm no lock, temporary index or disposable fixture residue
+  forbidden_scope:
+    - repository or evidence write
+    - OpsX lock
+    - stage, commit or push
+    - technical tests, build or CodeGraph sync
+    - database, API, network other than read-only remote baseline query, browser or runtime action
+    - KDS, MMC or Hermes access
+    - deployment or status promotion
+  rollback:
+    repository: not_applicable_report_only
+    external: not_applicable
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

@@ -1,0 +1,70 @@
+gke001_brain_release0_canonical_consumer_audit:
+  id: GKE-001-COORDINATION-20260813-085-A10B1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: report_only_static_and_test_replay
+  lane:
+    repository: Brain
+    thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+    change_id: audit-brain-release0-canonical-consumer-a10b1
+    owner: Brain
+    repository_allowlist: []
+  baseline:
+    branch: main
+    head: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+    origin_main: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+    ahead_behind_staged: 0/0/0
+    ordinary_expanded_dirty: 0/0
+    opsx_lock: absent
+    before_after_identical: true
+  canonical_consumer:
+    search: "POST /api/v1/projects/{space}/search -> Studio canonical search bridge"
+    wiki_preview: "GET /api/v1/projects/{space}/files/content -> Studio canonical wiki_preview bridge"
+    graph: auxiliary_read_operation_not_release0_primary_route
+    read_surface: useKdsReadApi_has_no_write_method
+    direct_legacy_fallback_on_primary_routes: false
+    residual_generic_fallback:
+      symbol: viaGateway
+      behavior: unrecognized_paths_may_use_mmc_connector
+      disposition: prove_unreachable_or_isolate_before_real_e2e
+  chat_boundary:
+    preserves_verified_page_and_space_citation_context: true
+    llm_context_fields: [page_id, title]
+    explicit_single_use_authorization: true
+    reset_after_send: true
+    automatic_send: false
+    second_local_fact_ledger_detected: false
+  verification:
+    focused_tests: 122_passed
+    typecheck: pass
+    build: pass
+    read_model_alignment: pass
+    openspec_strict: pass
+    codegraph: 240_files_5355_nodes_13594_edges_up_to_date
+    browser_runtime_evidence: stale
+    authenticated_live_e2e: missing
+  future_product_test_allowlist:
+    count: 12
+    pathset_sha256: 823f21f34b341122a029843c1fc798204eed7fa30f2831511601ef10a7393b84
+    paths:
+      - src/app/hooks/useKdsApi.ts
+      - src/app/hooks/useKdsApi.test.ts
+      - src/app/hooks/studioKdsBridge.ts
+      - src/app/hooks/studioKdsBridge.test.ts
+      - src/app/components/SearchPanel.tsx
+      - src/app/components/SearchPanel.test.tsx
+      - src/app/components/WikiPreview.tsx
+      - src/app/components/WikiPreview.test.tsx
+      - src/app/App.tsx
+      - src/app/App.test.tsx
+      - src/app/components/ChatPanel.tsx
+      - src/app/components/ChatPanel.test.tsx
+  authorization:
+    future_product_write: false
+    network_or_live_e2e: false
+    kds_mmc_llm_call: false
+    commit_push_deploy_promotion: false
+  rollback: {repository: not_applicable_report_only, runtime: unchanged}
+  status: {engineering: active, cross_project: partial, completion: not_complete, classification: real_partial}

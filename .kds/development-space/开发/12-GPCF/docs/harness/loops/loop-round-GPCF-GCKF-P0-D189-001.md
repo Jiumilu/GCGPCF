@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md
 source_path: docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-10
 supersedes: []
 superseded_by: []
 ---
@@ -60,6 +60,7 @@ superseded_by: []
 ### verify
 
 - D189 专项 validator 必须通过。
+- D189 必须扫描当前 GCKF P0 JSON/Markdown 的肯定写入声明与正数执行计数，结果保持 `positive_no_write_claims=0`。
 - 中文化门禁必须通过。
 - 文档污染检查必须通过。
 - KDS TOKEN 检查必须通过且 TOKEN 不入库。
@@ -74,6 +75,7 @@ superseded_by: []
 
 - D189 只证明 D185-D188 no-write chain 的连续性。
 - continuity guard 不能替代真实 response、WAES review note、人工确认或业务完成证明。
+- 2026-08-10 当前树扫描覆盖 289 个文件，未发现肯定写入、response intake、runtime writeback 或状态提升声明。
 
 ## 边界
 

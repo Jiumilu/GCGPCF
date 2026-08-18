@@ -1,0 +1,157 @@
+release0_mmc_standard_implementation_amendment:
+  id: GKE-001-COORDINATION-20260811-013-A10I2
+  issued_at: 2026-08-11
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_controls:
+    first_implementation:
+      id: GKE-001-COORDINATION-20260811-011-A10I1
+      sha256: 8f4087ca09a4695a0cdec021d0d22270c4866ec9903dc86c0c8cbff8069d37c3
+    rework:
+      id: GKE-001-COORDINATION-20260811-012-A10I1R1
+      sha256: 4c4a164e7e30186789d4f518ffeede6465dab28e10cc0206bb3c151b16958e7e
+    serial_gate: closed
+  contract_freeze:
+    id: GKE-001-CONTRACT-FREEZE-20260811-001
+    sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    schema_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+    mmc_candidate_policy_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    mmc_restore_policy_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+  lane:
+    owner: MMC
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: implement-release0-canonical-read-relay-a10i2
+    openspec_change: openspec/changes/implement-release0-canonical-read-relay-a10i2
+    lock: gke001-a10i2-mmc-standard-read-relay-lock
+    execution_mode: local_opsx_tdd_mocked_transport_no_policy_write
+    baseline:
+      branch: main
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      ahead: 0
+      behind: 0
+      dirty_entries: 0
+      staged_entries: 0
+      opsx_lock: absent
+    product_test_file_allowlist:
+      - runtime/app/api/v1/connectors.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_gateway.py
+      - runtime/tests/test_permission.py
+      - runtime/tests/test_contract.py
+      - llm-wiki-openapi-schema.yaml
+    product_test_file_count: 6
+    baseline_sha256:
+      runtime/app/api/v1/connectors.py: 7b7c5ffdfe0d7ee6fa39509e931fb3cb03fdac809454caa6ec9df8742afb8eb6
+      runtime/tests/test_api.py: a8f4194387dced7c90774daf2e81ad825eb1273711a8c877869058a2486744a7
+      runtime/tests/test_gateway.py: 0fb66a5d1f1a5e8c77eb9ef96d809ee3b37d2b1e44e443023227f8bd107ce3ed
+      runtime/tests/test_permission.py: d49afeead8135c84939bb936d2be492f7734b2a1043f097d194e7a82f90d4961
+      runtime/tests/test_contract.py: c08324257dd69e9158ca438f3b8e1ff15dbae302b1b9754244cb82b483fe58b1
+      llm-wiki-openapi-schema.yaml: 22eac1af623e8752fbde8eafa6dae275878e9750164433f53c2e1b0b6886ae64
+    governance_file_allowlist:
+      - .harness/opsx.lock
+      - .harness/runs/*-implement-release0-canonical-read-relay-a10i2/**
+      - openspec/changes/implement-release0-canonical-read-relay-a10i2/**
+      - .codegraph/**
+    ephemeral_files:
+      - path: .harness/opsx.lock
+        handling: execution_only_never_stage_commit_or_handoff
+      - path: .codegraph/**
+        handling: ignored_local_index_execution_only_never_stage_commit_or_handoff
+    required_implementation:
+      - preserve_generic_invoke_behavior_outside_the_two_frozen_release0_operations
+      - accept_only_POST_/api/v1/knowledge-read/release-0/search_and_POST_/api/v1/knowledge-read/release-0/read_for_this_boundary
+      - verify_service_identity_and_existing_short_lived_Studio_delegation_before_reading_authority
+      - parse_canonical_read_scope_only_after_signature_verification_and_require_closed_org_session_project_target_shape
+      - require_exact_request_target_project_session_equality_with_verified_canonical_read_scope
+      - derive_KDS_v1_delegation_with_kid_iss_aud_subject_tenant_org_knowledge_read_project_and_session_scopes_and_closed_read_authority
+      - use_fresh_nonce_and_at_most_60_second_lifetime_and_fail_closed_when_signing_configuration_is_missing
+      - strip_caller_KDS_identity_headers_and_never_forward_the_raw_Studio_delegation
+      - enforce_exact_registry_delegated_operation_before_proxying_and_keep_runtime_policy_unchanged
+      - preserve_frozen_KDS_400_403_404_503_ErrorBody_and_bounded_correlation_semantics_for_the_two_operations
+      - emit_bounded_MMC_audit_for_success_denied_policy_block_and_upstream_failure_without_raw_delegation_query_content_or_guessed_identity
+      - keep_all_responses_projection_only_and_create_no_MMC_knowledge_ledger
+    required_tests:
+      - exact_two_operation_method_path_and_schema_contract
+      - valid_search_graph_and_wiki_preview_relay
+      - target_project_session_and_org_mismatch_denied_before_upstream
+      - missing_malformed_expired_replayed_or_extra_authority_claim_denied
+      - spoofed_KDS_headers_removed
+      - registry_policy_denial_before_upstream
+      - missing_KDS_signing_configuration_fail_closed
+      - signed_KDS_claim_fields_lifetime_nonce_and_signature
+      - KDS_400_403_404_503_and_correlation_projection
+      - audit_redaction_and_rate_circuit_proxy_controls
+      - generic_non_release0_invoke_regression
+    verification:
+      - focused_pytest_for_all_changed_tests
+      - MMC_TEST_MODE=true_python3_-m_pytest_runtime/tests_-q
+      - bash_runtime/scripts/contract_test.sh
+      - openspec_validate_implement-release0-canonical-read-relay-a10i2_--strict
+      - python3_scripts/validate_mmc_loop_harness.py
+      - codegraph_sync_status_and_bounded_queries
+      - git_diff_--check
+      - exact_scope_hash_and_lock_absence
+    handoff_required:
+      - standard_evidence_index
+      - acceptance_matrix
+      - replayable_patch
+      - exact_changed_files_and_hashes
+      - tests_contract_openspec_harness_codegraph
+      - identity_and_authorization_boundary
+      - audit_and_error_projection
+      - ACL_read_count_not_applicable_explanation
+      - lineage_not_applicable_explanation
+      - migration_dry_run_not_applicable_explanation
+      - rollback
+      - authorization
+      - unresolved_risks
+      - status_ceiling
+    forbidden_scope:
+      - runtime/scripts/seed.sh
+      - runtime/state.json
+      - runtime/app/core/delegation.py
+      - runtime/app/core/kds_delegation.py
+      - any_file_outside_the_allowlists
+      - runtime_registry_or_policy_mutation
+      - real_shared_or_production_KDS_or_MMC_access
+      - credentials_or_secret_creation_disclosure_or_persistence
+      - KDS_fact_or_business_state_write
+      - commit_push_restart_deploy_customer_release_or_status_promotion
+    rollback:
+      repository: revert_only_the_six_uncommitted_product_test_files_and_new_run_scoped_governance_evidence
+      runtime: no_runtime_or_policy_change_authorized
+      data: no_external_data_change_authorized
+      codegraph: remove_only_ignored_local_index_if_needed
+  serial_gate:
+    requires_MMC_standard_handoff: true
+    requires_F013_independent_read_only_review: true
+    mmc_high_risk_policy_configuration: false
+    live_read: false
+    brain_change: false
+    real_authenticated_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_allowlisted_product_test_openspec_and_evidence_write: true
+    local_tests_and_mocked_transport: true
+    runtime_registry_or_policy_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

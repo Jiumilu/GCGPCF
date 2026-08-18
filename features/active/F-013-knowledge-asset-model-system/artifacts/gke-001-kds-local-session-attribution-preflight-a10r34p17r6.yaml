@@ -1,0 +1,135 @@
+control:
+  id: GKE-001-COORDINATION-20260817-054-A10R34P17R6R1
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  openspec_change_ref: integrate-gke001-openspec-codegraph
+  change_id: attribute-kds-local-schema-sessions-a10r34p17r6r1
+  mode: report_only_no_connection_preflight
+  owner: gke001_coordinator
+  review_owner: f013_independent_reviewer
+  status: active_partial_not_complete
+  execute_authorization_required: true
+
+predecessor:
+  control: GKE-001-COORDINATION-20260817-052-A10R34P17R5R1
+  controller_sha256: 7e2299ef2f057d43b6c66bad1e1b4fc7608cc2fb44ecef33ef23ade673d856f2
+  invocation_count: 1
+  terminal_status: completed_read_only
+  terminal_code: diagnostic_complete
+  connection_count: 1
+  relation_presence_false: 14
+  xid_before_is_null: true
+  xid_after_is_null: true
+  other_client_sessions: 2
+  rollback_confirmed: true
+  connection_close_confirmed: true
+  opsx_lock_released: true
+  f013_classification: independently_reviewed_completed_read_only_zero_migration_controller_write_attributable
+
+review_rework:
+  initial_controller_sha256: 84abd514949fd209244bfbbedb0b2e67b0a9b6ac7279faa621d144b7f1d80f29
+  initial_f013_result: rework_required_single_p2_not_freeze_ready
+  finding: detail rows were fetched before the expected count was checked
+  correction:
+    - count is read first in the same repeatable-read snapshot
+    - count drift stops before the detail query
+    - detail query is limited to two rows
+    - upward-drift regression proves the detail query was not executed
+  final_f013_result: independently_reviewed_technical_freeze_ready_governance_baseline_reseal_required_before_execute_authorization
+
+authorization_attempt:
+  authorized_control: GKE-001-COORDINATION-20260817-053-A10R34P17R6
+  authorized_controller_sha256: 1ea45ec256556929a5cedb19cdb8e200aa020d7af17b4f964106f9cbc9dcaa3f
+  result: stopped_before_lock_no_execution
+  reason: kds_dirty_baseline_drift
+  connection_count: 0
+  transaction_count: 0
+  authorization_consumed: false
+
+reconciled_external_drift:
+  ordinary_entry: _governance/sync-runs/feishu-xiaog-closure-20260817-071057/
+  expanded_file: _governance/sync-runs/feishu-xiaog-closure-20260817-071057/macmini-evidence.json
+  bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  ordinary_subtraction_restores: {count: 278, sha256: c4fd8c5602363bde8328e05301b9a38085b7bc22418fca55e4975deb8a5761b7}
+  expanded_subtraction_restores: {count: 568, sha256: 5c2b90cb8ec51975795a524bcd55c72fe81e9110671ceb75d709d7948c7040b3}
+  disposition: preserved_unmodified_external_governance_output
+
+reconciled_external_drift_r1:
+  ordinary_entry: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260817-073051/
+  expanded_file: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260817-073051/report.md
+  bytes: 15893
+  mode: '0644'
+  sha256: 0eb40eb45b586b2ba8f096f5ae457e3098e2212020e5f1699339c2cdd705c9fd
+  ordinary_subtraction_restores: {count: 279, sha256: 061f4418a86d2eca95300a2d0fdbe4ccbb400b051ef7db57b25bc9dd4974101c}
+  expanded_subtraction_restores: {count: 569, sha256: 88c74da180178f8216377ee7f45b041912d9c8251721014aca34c042eba53e7b}
+  disposition: preserved_unmodified_external_governance_output
+
+os_side_corroboration:
+  mode: read_only_process_and_socket_metadata
+  postgres_tcp_client_connections: 6
+  unique_client_process: {pid: 1299, command: bun, parent_pid: 859}
+  parent_launch_agent: com.gbrain.autopilot
+  parent_program: /Users/lujunxiang/.gbrain/autopilot-run.sh
+  kds_listener: {address: 127.0.0.1, port: 18080, pid: 90660, command: Python}
+  studio_listener: {port: 8649, pid: 49680, command: node}
+  postgres_unix_socket_client_observed: false
+  inference: the two gbrain sessions are likely owned by gbrain autopilot, but the OS view does not bind database names to individual client ports
+  authority: corroborating_only_does_not_replace_r6_database_snapshot
+  sensitive_data_read: false
+
+diagnostic:
+  target: {scheme: postgresql, host: loopback, port: 5432, database: gbrain}
+  expected_other_client_sessions: 2
+  connection_count: 1
+  transaction_count: 1
+  transaction_mode: repeatable_read_read_only
+  source: pg_stat_activity
+  bounded_read_sequence:
+    - count matching sessions without reading detail fields
+    - stop without detail query unless count is exactly two
+    - fetch at most two redacted detail projections from the same repeatable-read snapshot
+  output_allowlist:
+    - pid
+    - bounded application_class, never raw application_name
+    - backend_type and state
+    - wait_event_type and wait_event
+    - client_location classification, never raw address
+    - client_port
+    - xid_before_is_null and xid_after_is_null
+    - rollback_confirmed and connection_close_confirmed
+    - opsx_lock_released
+  forbidden:
+    - raw application_name, username, client address or hostname output
+    - query text or query timing read
+    - business, content, fixture, audit or outbox row read
+    - session termination or service operation
+    - migration or retry
+    - fixture create, update or delete
+    - API or MMC request
+    - second connection
+    - commit, push, deploy or status promotion
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-attribution-controller-a10r34p17r6.py
+  sha256: 8e3ec95cb9e61b33b02dd1ee671a8d2739e71f35423b975093b05cd07a61a5d0
+  self_test: pass
+  no_connection_preflight: pass
+  execute: not_authorized
+
+baselines:
+  gpcf: {head: 11d022b818332d2271a78b427c326eb454507a5a, origin_main: 11d022b818332d2271a78b427c326eb454507a5a, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 743, ordinary_dirty_sha256: 498e897531c830e40df6ba5d4e55579f6dc776233ff93b09d986c2b976560c3e, expanded_dirty_count: 760, expanded_dirty_sha256: a4e89ee4c0134769dce240cc7ced7baa444cebc3f91aa5cb8f1356294679fae5, opsx_lock: absent}
+  kds: {head: 2ac85c55163b7acf0ede699184ac360579ccefaa, origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 280, ordinary_dirty_sha256: 5673e55d796a4affe1aa33c077e4b758a2da71362afd2946fcc86616c2c0b770, expanded_dirty_count: 570, expanded_dirty_sha256: 171aa1df9eb9558b1c1dcd296609bf9d3267704846ca72243371826ee2be13b9, opsx_lock: absent}
+  mmc: {head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 10, ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9, expanded_dirty_count: 98, expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451, opsx_lock: absent}
+
+rollback:
+  controller_execution: mandatory_read_only_rollback_and_connection_close
+  repository: restore_only_these_two_uncommitted_artifacts_if_separately_authorized
+  external_data: none
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false

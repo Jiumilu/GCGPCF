@@ -1,0 +1,71 @@
+gke001_localization_feature_evidence_boundary_repair:
+  id: GKE-001-COORDINATION-20260813-080-A10C14
+  issued_at: 2026-08-13
+  program: GKE-001
+  feature_ref: F-013
+  mode: governance_local_repair_and_verification
+  owner: GPCF
+  change_id: repair-localization-feature-evidence-boundary-a10c14
+  finding:
+    before_findings: 174
+    before_files: 58
+    exact_scope: features/active/F-013-knowledge-asset-model-system/evidence
+    cause: immutable_feature_evidence_was_scanned_as_current_user_documentation
+  changed_scope:
+    - tools/kds-sync/check_chinese_localization_gate.py
+    - tools/kds-sync/validate_chinese_localization_feature_evidence_boundary.py
+    - 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md
+    - openspec/changes/integrate-gke001-openspec-codegraph/tasks.md
+    - openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/spec.md
+    - openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/spec.md
+  boundary:
+    immutable_feature_evidence_scanned: false
+    feature_journal_scanned: true
+    feature_artifacts_scanned: true
+    current_governance_docs_scanned: true
+    evidence_content_rewritten: false
+  verification:
+    boundary_regression: pass
+    localization_gate:
+      result: pass
+      docs_checked: 976
+      main_docs_checked: 67
+      software_files_checked: 240
+      findings: 0
+    loop_document_gate:
+      result: pass
+      localization_debt: false
+      missing_metadata: 0
+      missing_readme_dirs: 0
+    project_group_gate_readiness:
+      result: pass
+      checked_repos: 17
+      passed: 17
+      failed: 0
+      gfis_status_ceiling: repair_required
+    openspec_strict: pass
+    openspec_codegraph_binding: pass
+    three_lane_coordination: pass
+    loop_session_registry: pass
+    py_compile: pass
+    diff_check: pass
+  authorization:
+    kds_stage_or_commit: false
+    kds_push: false
+    mmc_policy_write: false
+    real_kds_or_mmc_write: false
+    authenticated_live_e2e: false
+    deployment: false
+    status_promotion: false
+  preserved_gate:
+    a10c13_human_local_commit_authorization: pending
+    exact_request: authorize_or_decline_one_kds_release0_product_test_12_local_commit
+  rollback:
+    - restore_the_previous_localization_scan_boundary
+    - restore_only_the_chinese_first_wording_changes_in_the_listed_current_docs
+    - do_not_modify_feature_evidence_content
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    promotion: false

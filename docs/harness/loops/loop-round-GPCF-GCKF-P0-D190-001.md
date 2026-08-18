@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D190-001
 title: Loop Round GPCF-GCKF-P0-D190-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAES, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md
 source_path: docs/harness/loops/loop-round-GPCF-GCKF-P0-D190-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-11
 supersedes: []
 superseded_by: []
 ---
@@ -61,6 +61,9 @@ superseded_by: []
 ### verify
 
 - D190 专项 validator 必须通过。
+- D190 必须独立执行 D186 当前树到达声明扫描，并确认 `true_trigger_claims=0`，不得只读取历史 JSON 快照。
+- D190 必须独立复跑 D185-D189 五个前置 validator，确认 DKS 镜像、action queue、授权与 no-write 连续性没有漂移。
+- D190 必须执行绿色供应链角色视图实体门禁，并确认该实体仍为 GKE-001 投影、`gckf_resume_triggers=0/4`，不能把角色视图当作恢复证据。
 - D190 专项 validator 必须证明 D186 四项 arrival signals 与 D190 四项 resume triggers 一一映射，且 `found=0` 与 `satisfied=0` 一致。
 - 中文化门禁必须通过。
 - 文档污染检查必须通过。
@@ -80,6 +83,8 @@ superseded_by: []
 ## 当前态复放
 
 2026-08-03 回放 D185-D190 六个专项 validator、DKS 基线镜像、Loop 文档门禁和项目群 readiness：专项链全部通过，readiness 为 `17/17`，但四项 resume triggers 仍为 `0/4`。F-013 Evidence Gate 已修复为保留治理字段和 blocker，证据通过时仍输出 `close_candidate=false`；本轮不创建 D191。
+
+2026-08-10 在 Studio A6 技术复核后再次回放 D185-D190 与绿色供应链角色视图实体门禁：专项链和实体门禁通过；D190 独立复跑 D185-D189 五个前置 validator，D186 与 D189 均扫描当前树 289 个 GCKF JSON/Markdown 文件，精确肯定触发声明和肯定写入声明均为 0。A6 仅为 `technical_revalidation_passed_governance_pending`，不满足 D190 的任何恢复触发器。项目群 readiness 为 `17/17`，F-013 保留 9 项 blocker，四项 resume triggers 仍为 `0/4`，`nextExecutableRounds=0`；继续保持 no-write hold，不创建 D191。
 
 ## 边界
 

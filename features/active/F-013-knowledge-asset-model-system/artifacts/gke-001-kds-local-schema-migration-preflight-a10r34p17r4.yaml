@@ -1,0 +1,226 @@
+control:
+  id: GKE-001-COORDINATION-20260817-050-A10R34P17R4R1
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  change_id: migrate-kds-local-release0-schema-a10r34p17r4r1
+  mode: controller_bounded_terminal_migration_baseline_reseal_preflight_only
+  owner: gke001_coordinator
+  review_owner: f013_independent_reviewer
+  status: active_partial_not_complete
+  authorization_required_for_execute: true
+
+predecessor:
+  control: GKE-001-COORDINATION-20260816-048-A10R34P17R3
+  controller_sha256: 5835aa0ee624510745a0a2eec5ba17db24345c80303b6861b45a892963952da3
+  result: execution_aborted_before_controller_start_due_to_kds_dirty_baseline_drift
+  database_connections: 0
+  controller_started: false
+  authorization_consumed: false
+  preserved_schema_inventory:
+    source_control: GKE-001-COORDINATION-20260816-044-A10R34P16R1R1
+    transaction_mode: repeatable_read_read_only
+    relation_allowlist_count: 14
+    relations_present: 0
+    schema_versions: []
+    xid_before: null
+    xid_after: null
+    rollback: complete
+
+supersedes:
+  control: GKE-001-COORDINATION-20260816-048-A10R34P17R3
+  classification: baseline_reseal_only_after_disjoint_external_owner_drift
+  technical_controller_delta: control_identity_gpcf_own_artifact_baseline_and_kds_dirty_baseline_only
+  execute_authorization: requires_new_separate_human_authorization
+
+scope:
+  target:
+    scheme: postgresql
+    host_class: loopback
+    port: 5432
+    database: gbrain
+    nonproduction: true
+  migration_only: true
+  fixture_creation: false
+  api_or_mmc_requests: 0
+  audit_or_outbox_append: false
+  service_restart: false
+  repository_commit_or_push: false
+
+sealed_migrations:
+  execution_order: [001_knowledge_intake, 002_document_extraction]
+  transaction_strategy: strip_only_the_verified_outer_BEGIN_COMMIT_envelopes_and_execute_both_verified_bodies_in_one_SERIALIZABLE_READ_WRITE_transaction
+  files:
+    - path: knowledge_intake/sql/001_knowledge_intake.sql
+      sha256: 539b19dd563812aae6ac2c047f98c49a8c2bf55eb80bced8fa6b41b9d138c77c
+    - path: knowledge_intake/sql/002_document_extraction.sql
+      sha256: f4673975ae385680571cb2db9f81bf80a6e9ad6731988f7e41b774ea6b2ad2d5
+
+expected_success:
+  connection_count: 1
+  migration_transaction_count: 1
+  schema_versions: [1, 2]
+  relations_present: 14
+  business_rows: 0
+  audit_rows: 0
+  outbox_rows: 0
+  row_count_semantics: postcommit_snapshot
+  other_client_sessions_snapshot: 0
+  lock_timeout_ms: 5000
+  statement_timeout_ms: 30000
+  idle_transaction_timeout_ms: 30000
+  fixture_created: false
+  api_requests: 0
+  response_code: local_release0_schema_migrated
+
+recovery:
+  before_commit: transaction_rollback_restores_exact_schema_absence
+  after_commit: no_automatic_compensation_on_success
+  commit_response_loss: commit_outcome_ambiguous_reconciliation_required
+  postcommit_verify_failure: schema_committed_postverify_failed_reconciliation_required
+  release_lock_failure: database_terminal_state_is_preserved_and_lock_unresolved_is_reported_separately
+  ambiguous_commit_or_external_rows: fail_closed_and_require_independent_reconciliation
+  fixture_or_business_data_deletion: forbidden
+  retry: forbidden
+
+lock_boundary:
+  path: .harness/opsx.lock
+  format: opsx_compatible
+  acquisition: atomic_O_EXCL_with_controller_guard
+  guard: .harness/opsx.atomic-guard
+  protection: immutable_UF_IMMUTABLE_during_critical_section
+  helper_process_timeout_seconds: 5
+  partial_acquire_timeout: cleanup_exact_same_fd_attested_self_owned_state_or_fail_closed_lock_unresolved
+  identity_attestation: same_fd_fstat_complete_read_post_lstat_inode_device_check
+  full_baseline_recheck_inside_owned_lock: true
+  official_helpers:
+    acquire_sha256: d0678fc5f261b1bf9363e945dc96a478c4b5e0483acffacc0854ed0a28ce1fe6
+    release_sha256: 4310529f86ec4e0e899c986751a531454e6a1c751253dd7d34bf4e9d747a4191
+    execution: prohibited_due_to_non_atomic_check_then_write_and_macos_date_incompatibility
+  release_failure: preserves_database_terminal_state_and_reports_lock_unresolved
+
+forbidden:
+  - fixture create, update or delete
+  - KDS or MMC API request
+  - content, snippet, filename, storage path or customer-data read
+  - audit or outbox append beyond migration DDL itself
+  - second database connection
+  - service restart or runtime configuration change
+  - commit, push, deploy or status promotion
+  - migration retry or hotfix
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-schema-migration-controller-a10r34p17r4.py
+  sha256: 756d7d88e3959cd1b8eea1d0f62c7f8e9bc682a817c414c18c418867e38c4d51
+  self_test: pass
+  preflight: eligible_for_separate_migration_authorization
+  execute: not_authorized
+
+validation:
+  controller_ast_parse: pass
+  controller_self_test: pass
+  no_connection_preflight: pass
+  f013_content_seal_rework: per_file_sha256_and_reproducible_manifest_enforced_before_connection
+  r3_disposable_and_fault_evidence: inherited_not_rerun
+  disposable_rehearsal:
+    target_class: disposable_loopback_nonproduction
+    first_harness_import_attempt: stopped_before_database_creation
+    failure_injection_after_001: transaction_rollback_restored_schema_absence
+    r1_controller_success_terminal: pass
+    r1_real_precommit_failure_rollback: pass
+    success_relations_present: 14
+    success_schema_versions: [1, 2]
+    success_business_rows: 0
+    postverify_xid: null
+    cleanup_database_count: 0
+  local_gbrain_access_by_this_control: 0
+  rework_fault_tests:
+    full_baseline_rechecked_inside_owned_lock: pass
+    official_lock_acquire_release_without_database_connection: pass
+    commit_response_loss_terminal: pass
+    postcommit_verify_failure_terminal: pass
+    precommit_failure_rollback_terminal: pass
+    release_lock_failure_terminal: pass
+    env_hardlink_rejection: pass
+    env_symlink_rejection: pass
+    env_path_replacement_rejection: pass
+    atomic_guard_and_immutable_lock: pass
+    flawed_official_competitor_blocked_by_immutable_lock: pass
+    acquire_timeout_terminal: pass
+    bounded_release_preserves_database_terminal: pass
+    runtime_other_client_sessions_precommit_and_postcommit_snapshot: pass
+    r2_disposable_controller_success_terminal: pass
+    r2_disposable_cleanup_database_count: 0
+    r3_partial_acquire_timeout_cleanup: pass
+    r3_lock_and_owner_same_fd_attestation: pass
+    r3_lock_identity_path_replacement_rejection: pass
+    r3_database_timeout_options: pass
+    r3_atomic_lock_lifecycle_and_competitor_block: pass
+    r3_disposable_controller_success_terminal: pass
+    r3_disposable_cleanup_database_count: 0
+
+baselines:
+  gpcf:
+    head: 11d022b818332d2271a78b427c326eb454507a5a
+    origin_main: 11d022b818332d2271a78b427c326eb454507a5a
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty_count: 739
+    ordinary_dirty_sha256: b0920d526ec802b0f78c5542b83b50b4f64ee79c6c40f049ea22de3f950bdb64
+    expanded_dirty_count: 756
+    expanded_dirty_sha256: f2dc7d9b8219096f1c3809a925140d4669b322b175d0069525242f4b065b891b
+    opsx_lock: absent
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty_count: 277
+    ordinary_dirty_sha256: 449b5bb746c6584a49d103c576841e502671ec3b59d6320b4f6f978583195f8e
+    expanded_dirty_count: 567
+    expanded_dirty_sha256: a20dcf7dfcadf972725364227d71269a48d0c2acb6517e5f26628015ec53ad99
+    opsx_lock: absent
+    prior_reconciled_external_drift:
+      path: _governance/kds-daily-reports/kds-daily-2026-08-16.md
+      bytes: 20349
+      sha256: 1cde0e534ec7bc1bccbbc460ff718006b21eba19f860fa8d62e27fbb7fdd85e0
+      disposition: preserved_unmodified_external_governance_output
+    r3_to_r4_reconciled_external_drift:
+      count: 12
+      pathset_sha256: cc5254f3d02ad2e42379ed58d68e21516f50ca6326fa9dabdb3009749440d9e2
+      status_manifest_sha256: afa1e3fd68564bc63805f1f88ca76490b594120d49bfe0efa3dfc1de7e8a62b1
+      content_manifest_algorithm: 'for each path below in listed order: lowercase SHA-256, two ASCII spaces, UTF-8 path, LF; SHA-256 over the concatenated 1381 bytes'
+      content_manifest_sha256: bd054bbee318a385c00fa723022eca6c299ae563073ce167c36ea683d916b3db
+      subtraction_proof:
+        ordinary_count: 265
+        ordinary_sha256: 911a67918cd3ff1c7408d753227b971b3e9e1d6e076468d315627182b338468d
+        expanded_count: 555
+        expanded_sha256: 02fa253e41a910b499fd3dcf802be65c2c19609e70da14518bec64f29e274526
+      owner: external_industrial_green_chain_reporting_and_quality_automation
+      disposition: preserved_unmodified_excluded_from_migration_scope
+      files:
+        - {path: 工业绿链/reports/Hermes质量周报.md, sha256: 241016b0cca22b64c1cb69cf51902a6695d739712a9901b45a5df58c86508e4c}
+        - {path: 工业绿链/reports/项目复盘知识归档报告.md, sha256: b062727cd3bc294e2e0ad11b75c44eab94a1e07003446afd632fc2abe5fd36a0}
+        - {path: 工业绿链/reports/项目监控仪表盘.md, sha256: 977848b6fed3e953a31d6e065e27f70ae809f4cae231ef3881ac2755e460868b}
+        - {path: 工业绿链/体系/W01-W20第二阶段任务清单.md, sha256: 08040c809ced18708e349a626cb295840f3369192125cc287f49b36f21f63812}
+        - {path: 工业绿链/体系/W01-W20覆盖率报告.md, sha256: 8b5931029aee668b70ed2efc95706069021593c23ac6c82f585de1008d91f69a}
+        - {path: 工业绿链/体系/meeting-quality-gate_2026-08-16.json, sha256: 900fafe508c27804d531077afba34f132b667ed5edff024b2eec591687521391}
+        - {path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-16.md, sha256: 8f5c47d808f9d72e5bfeb8d4e4c2c44057060ce969cdb5711d025870f0344ec2}
+        - {path: 工业绿链/体系/老卢工作体系健康检查_2026-08-16.md, sha256: 2a9dc8a937436696f1de7a8c0b53b65a78bd223ebac547bab0167b1eca4036fa}
+        - {path: 工业绿链/变更告警_2026-08-16.md, sha256: e7127e492342d34ebacd5686bfe5b7d089db9c60bf1d9d10e1a226e2ac557b3a}
+        - {path: 工业绿链/周报/周报_2026W33.md, sha256: 40aa36b89767043f9482f7c081518fd26d1a629d514993326b09d49fdcd28409}
+        - {path: 工业绿链/日报/晨报-2026-08-16.md, sha256: 17878591de8bf528d422fbeb49bc59129f2d75661c908d3d3fe1df2187d3b63e}
+        - {path: 工业绿链/月报/月报_2026-08.md, sha256: df7ed71bc783111da72f2c84f8da6923f841ec1965d0f8122b22db08fe47daff}
+  mmc:
+    head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d
+    origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty_count: 10
+    ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9
+    expanded_dirty_count: 98
+    expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451
+    opsx_lock: absent
+
+next_boundaries:
+  schema_migration: pending_f013_independent_review_and_new_separate_human_authorization
+  synthetic_fixture: blocked_until_schema_migration_independently_verified
+  authenticated_read: blocked_until_fixture_separately_sealed
+  status_promotion: forbidden

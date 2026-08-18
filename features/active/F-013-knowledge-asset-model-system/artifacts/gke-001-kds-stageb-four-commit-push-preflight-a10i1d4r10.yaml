@@ -1,0 +1,102 @@
+kds_stageb_four_commit_push_preflight:
+  id: GKE-001-COORDINATION-20260813-039-A10I1D4R10
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  human_authorization_receipt:
+    decision: granted_for_read_only_preflight_only
+    exact_text: "授权 GKE-001 签发 KDS 四提交推送前只读预检；仅当远端仍为 f28edb51、本地精确 ahead/behind 4/0、提交序列为 7fb47703、60957dd9、a7ec8741、690ea04a 且无额外提交时，再返回一次精确 push 授权请求。当前不授权 push、force push、merge、rebase、部署、后续单元或状态提升。"
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: preflight-stageb-four-commit-push-a10i1d4r10
+    mode: report_only_read_only
+    repository_allowlist: []
+    coordination_lock: none
+  expected_remote:
+    remote: origin
+    url: https://github.com/Jiumilu/GCKDS.git
+    ref: refs/heads/main
+    sha: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    verification: git_ls_remote_heads_only
+    fetch: forbidden
+  expected_local:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    local_origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 4
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    no_additional_commits: required
+  exact_commit_sequence_oldest_to_newest:
+    - sha: 7fb477030f5278faf55d6d16ff3874469704610d
+      parent: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+      subject: "feat(kds): add document extraction stage b core"
+    - sha: 60957dd92380bfeb6049ec552658dad22d5d90dc
+      parent: 7fb477030f5278faf55d6d16ff3874469704610d
+      subject: "test(kds): cover stage b intake integration"
+    - sha: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+      parent: 60957dd92380bfeb6049ec552658dad22d5d90dc
+      subject: "docs(kds): specify document extraction stage b"
+    - sha: 690ea04abf5485563b760d1bc1620493db017662
+      parent: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+      subject: "chore(kds): record document extraction handoff"
+  required_read_only_checks:
+    - verify_this_control_sha256
+    - verify_remote_origin_url
+    - query_remote_main_with_git_ls_remote_without_fetch
+    - verify_branch_head_local_origin_main_ahead_behind
+    - verify_exact_four_commit_sequence_parents_and_subjects
+    - verify_rev_list_contains_exactly_four_commits_and_no_additional_commit
+    - verify_remote_main_is_ancestor_of_local_head
+    - verify_staged_zero_and_opsx_lock_absent
+    - record_dirty_counts_and_hashes_without_modification
+    - run_exact_non_mutating_push_dry_run_to_origin_main
+    - verify_all_repository_facts_unchanged_after_dry_run
+    - return_report_only_receipt
+  exact_dry_run:
+    command: git push --dry-run origin 690ea04abf5485563b760d1bc1620493db017662:refs/heads/main
+    expected_result: fast_forward_f28edb51_to_690ea04a_without_remote_or_local_write
+    authority: dry_run_only
+  success_condition:
+    all_required_checks: pass
+    remote_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    local_ahead_behind: 4/0
+    exact_commit_sequence: pass
+    additional_commits: 0
+    dry_run: pass
+    result: eligible_to_request_separate_exact_push_authorization
+  hard_stop:
+    any_mismatch:
+      - do_not_push
+      - do_not_modify_repository
+      - report_exact_mismatch
+      - do_not_issue_push_authorization_request
+  forbidden:
+    - repository_write
+    - fetch
+    - push
+    - force_push
+    - merge
+    - rebase
+    - reset
+    - revert
+    - stage
+    - commit
+    - deploy
+    - execute_any_later_unit
+    - database_api_or_live_data_access
+    - status_promotion
+  rollback:
+    repository_or_remote: not_applicable_report_only
+    governance: withdraw_this_preflight_and_keep_push_unauthorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization: read_only_preflight_only
+    push: unauthorized
+    status_ceiling: partial

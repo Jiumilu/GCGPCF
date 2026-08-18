@@ -1,0 +1,140 @@
+gke001_mmc_h1_owner_local_commit_conditional_request:
+  id: GKE-001-COORDINATION-20260814-005-A10C8R4
+  issued_at: 2026-08-14
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: rework-mmc-shared-registry-state-a10i3h1r2
+  mode: conditional_human_authorization_request_only
+  owner: MMC_H1_mutation_boundary
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  predecessors:
+    owner_isolation:
+      id: GKE-001-COORDINATION-20260813-063-A10C8
+      sha256: 1bb76d38f24c965a5f3d4dd91ffe91f047690b5c05cf6e8fa726af543ec2daf3
+    independent_review:
+      id: GKE-001-COORDINATION-20260813-064-A10C8R1
+      sha256: 41b69e27ba18b79193cd244be28806fa62851763a863fe52e6af3b235dd564af
+      result: stable_reproducible_h1_owner_unit_eligible_for_separate_human_owner_disposition_authorization_request
+    prior_request:
+      id: GKE-001-COORDINATION-20260813-066-A10C8R3
+      sha256: d39063be21c00e1dbbcd0d339e3612f485c96dfe9841e11c65ff017a1605178b
+      disposition: superseded_by_new_mmc_source_commit_baseline
+    runtime_policy_review:
+      id: GKE-001-COORDINATION-20260814-004-A10I3H3P1R1
+      sha256: 8a8ece8a4a00e4144daf7de5ff9dd539e3932b43ab13526d2dee394833d8af77
+      result: h1_commit_push_and_active_process_code_identity_required_before_policy_apply
+  current_observed_baseline:
+    branch: main
+    head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty: 16
+    ordinary_nul_sha256: 35b24d22cb0dc2979c28a8f3ee76d27421953e8ff0c32c2fbb3c6f72c925ca55
+    expanded_dirty: 93
+    expanded_nul_sha256: db6ed85ac372538a7a1d8008d3927d5f2ad98fb6569574efe56d29a601ece207
+    opsx_lock: absent
+  mandatory_dependency_before_human_decision_or_execution:
+    source_push_control: GKE-001-COORDINATION-20260814-002-A10C7R5
+    source_push_artifact_sha256: b43be7343f876aa77a8ff5e9e7ab20fbb8e55d4cbc54d9bbd77b2a7941288de9
+    required_remote_main: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    required_local_origin_main: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    required_local_head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    required_ahead_behind_staged: 0/0/0
+    required_f013_result: exact_mmc_source_policy_push_postpush_review_passed_runtime_policy_unchanged
+    current_dependency_state: not_met_push_human_authorization_pending
+  exact_paths:
+    - runtime/app/gateway/registry_state.py
+    - runtime/app/api/v1/registry_apis.py
+    - runtime/app/api/v1/registry_llms.py
+    - runtime/app/api/v1/connectors.py
+    - runtime/app/api/v1/health.py
+    - runtime/app/db/session.py
+    - scripts/dry_run_mmc_dependencies.py
+    - runtime/tests/test_registry_policy_audit.py
+    - runtime/tests/test_api.py
+    - runtime/tests/test_llm_registry.py
+    - runtime/tests/test_dependency_dry_run.py
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/proposal.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/design.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/specs/shared-registry-state/spec.md
+    - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/tasks.md
+  sealed_candidate:
+    path_count: 15
+    sorted_nul_pathset_sha256: 7544700e1f12d9bcdd02c9b2b8ac01dd36a46ea11ee2843c1342ca23c723eb50
+    ordered_content_manifest_sha256: 955fae675854623920241286094edb8d1e2694de8a6993f6b85c238e16461c90
+    full_index_patch_bytes: 59487
+    full_index_patch_sha256: b4c728d6f6a5bc6527db905453a1557fdb90283bc1bd784c1c2b2f472096daab
+    diff_check: pass
+    overlap_with_release0_source_commit: false
+    repository_staged_after_preflight: 0
+  current_baseline_replay:
+    source_commit: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    environment: disposable_sibling_copy_under_project_group_root
+    overlay_manifest_sha256: 955fae675854623920241286094edb8d1e2694de8a6993f6b85c238e16461c90
+    focused_tests: 86_passed
+    full_runtime_tests: 160_passed
+    contract_test: pass
+    openspec_strict: pass
+    mmc_harness: pass
+    disposable_root_cleanup_count: 0
+    main_repository_before_after_unchanged: true
+    migration_dry_run: not_applicable_no_database_or_schema_change
+    acl_read_count: not_applicable_no_kds_acl_or_fact_read_change
+    evidence_lineage: not_applicable_no_knowledge_asset_projection
+    policy_state_change: false
+  proposed_commit_only_after_dependency_and_separate_human_authorization:
+    count: 1
+    subject: "fix(mmc): harden shared registry state boundary"
+    local_only: true
+    content_edit: false
+    official_temporary_opsx_lock: required
+    exact_stage_scope: exact_15_paths_only
+  mandatory_execution_gates:
+    - reverify_remote_main_local_head_origin_main_ahead_behind_staged_and_dirty_hashes
+    - require_source_push_postpush_dependency_exactly_met
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_15_paths_only
+    - recompute_pathset_manifest_patch_and_diff_check
+    - require_all_sealed_fingerprints_exactly_match
+    - create_exactly_one_local_commit_with_frozen_subject
+    - release_lock_and_return_report_only_receipt
+    - freeze_for_f013_postcommit_review
+  abort_on_any_mismatch:
+    - unstage_only_the_exact_15_paths
+    - require_staged_count_zero
+    - preserve_all_worktree_runtime_and_other_dirty_content
+    - release_opsx_lock
+    - create_no_commit
+    - return_exact_drift_report
+  forbidden:
+    - execute_before_source_push_and_postpush_review
+    - evidence_run_directories
+    - runtime_state_or_runtime_sidecar
+    - release0_source_policy_paths
+    - any_other_dirty_path
+    - content_edit_or_rework
+    - push
+    - runtime_policy_apply
+    - process_restart_or_reload
+    - live_request_or_credentials
+    - deploy_or_status_promotion
+  rollback:
+    before_commit: exact_unstage_and_preserve_rule_above
+    after_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_f013_decision:
+    - verify_candidate_remains_exact_on_9f38048a_baseline
+    - verify_request_is_only_conditionally_presentable_after_source_push_postpush_dependency
+    - do_not_authorize_or_execute_stage_commit_push_restart_or_policy_apply
+  requested_human_authorization: not_yet_presentable_dependency_pending
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    runtime_policy: not_applied
+    promotion: false

@@ -1,0 +1,124 @@
+a10p1_brain_tranche4_baseline_repair:
+  id: GKE-001-COORDINATION-20260812-008-A10P1T4
+  engineering_domain: GKE-001
+  release: Release-0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  independent_reviewer:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    role: F-013_Harness
+  lane:
+    owner: Brain
+    repository: GlobalCloud Brain
+    thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+    change_id: repair-brain-read-baseline-a10p1-tranche-4
+    openspec_change: repair-brain-read-baseline-a7
+    execution_mode: local_opsx_tdd_no_network
+    coordination_lock_id: gke001-brain-a10p1-tranche4-lock
+    run_id: 20260812-repair-brain-read-baseline-a10p1-tranche-4
+  baseline:
+    branch: main
+    head: 925659b0144a5fb858a78cf32c1d8ddf6967c19b
+    origin_main: 925659b0144a5fb858a78cf32c1d8ddf6967c19b
+    ahead: 0
+    behind: 0
+    staged_entries: 0
+    dirty_product_test_entries: 9
+    dirty_scope_owner: a10p1_tranche3_frozen_delta
+    opsx_lock: absent
+    typecheck_errors: 13
+    typecheck_error_files: 8
+    independent_tranche3_result: technical_tranche_revalidation_passed_governance_handoff_passed
+  product_test_file_count: 8
+  product_test_file_allowlist:
+    - src/app/components/AgentRunsPanel.test.tsx
+    - src/app/components/Dashboard.tsx
+    - src/app/components/ProjectsPanel.test.tsx
+    - src/app/components/ReportsPanel.test.tsx
+    - src/app/components/ReportsPanel.tsx
+    - src/app/components/ReviewPanel.test.tsx
+    - src/app/components/SettingsPanel.tsx
+    - src/app/components/SourcesPanel.test.tsx
+  product_test_baseline_sha256:
+    src/app/components/AgentRunsPanel.test.tsx: d109c72c9209878e64a4010355926daae8c5424f04901f5dbe4590c52b09e72a
+    src/app/components/Dashboard.tsx: fc8f8889aae5ca255ec2bba4e996097a20ae6e2ae34fd027001e4f7641ea659e
+    src/app/components/ProjectsPanel.test.tsx: be63a848568df5cf066a0e56a1dc67347754761a836b02230e735cf931e5e624
+    src/app/components/ReportsPanel.test.tsx: 027bfdd8ffe9ecc3d9b317ba72a49c56f93a9cc5a721c070b69e2f243b2c8312
+    src/app/components/ReportsPanel.tsx: 32e2325f3c63db2c50437b8b87672b54c3ea3d15925490c873f3efe1304be8cf
+    src/app/components/ReviewPanel.test.tsx: 6252b1feec649b3b2b743a7e08c635fd633640ca2d67f5dfccc45704efccc24e
+    src/app/components/SettingsPanel.tsx: c26fb492bb21b0aaf6c82db286c3c3e76d40df5e2f97ece93de3aadb68edd9b8
+    src/app/components/SourcesPanel.test.tsx: e5c49604c1ff3abcef3740362a64120257c611d7f68ab7e1d9da36ecc683fb5e
+  governance_file_allowlist:
+    - .harness/evidence-index.yaml
+    - .harness/opsx.lock
+    - .harness/runs/20260812-repair-brain-read-baseline-a10p1-tranche-4/**
+  required_work:
+    - replace_only_invalid_enterprise_test_spaces_with_an_existing_Space_value_and_update_matching_copy
+    - remove_unused_dashboard_lint_severity_state_without_changing_the_lint_total_or_read_flow
+    - narrow_report_feedback_to_non_null_strings_before_error_classification
+    - remove_only_the_four_unused_SettingsPanel_derived_values_without_weakening_write_or_readback_guards
+    - preserve_all_user_initiated_mutation_authorization_readback_and_local_draft_boundaries
+    - produce_standard_run_scoped_OpsX_handoff_evidence_index_acceptance_matrix_patch_and_agent_result
+  acceptance:
+    - all_8_allowlisted_files_have_zero_typecheck_errors
+    - global_pnpm_typecheck_passes_with_zero_errors
+    - focused_tests_cover_the_five_changed_test_files_and_the_three_changed_components
+    - pnpm_build_passes
+    - pnpm_check_kds_read_model_alignment_passes
+    - existing_OpenSpec_strict_validation_passes_without_OpenSpec_write
+    - CodeGraph_sync_status_and_queries_cover_Dashboard_ReportsPanel_and_SettingsPanel
+    - no_network_KDS_MMC_LLM_browser_or_prompt_send_occurs
+    - tranche3_product_test_hashes_outside_this_allowlist_remain_unchanged
+    - git_diff_check_passes
+    - OpsX_lock_is_absent_after_handoff
+  codegraph_impact:
+    expected_nodes:
+      - Dashboard
+      - ReportsPanel
+      - SettingsPanel
+      - getAgentRunsFlowHint
+      - getProjectsFlowHint
+      - getReportsFlowHint
+      - getReviewFlowHint
+      - getSourcesFlowHint
+    runtime_integration_claim: false
+  forbidden_scope:
+    - any_product_or_test_file_outside_product_test_file_allowlist
+    - any_OpenSpec_or_existing_governance_evidence_edit_outside_governance_file_allowlist
+    - direct_KDS_or_MMC_client_change
+    - network_browser_live_KDS_MMC_or_LLM_execution
+    - automatic_prompt_send
+    - knowledge_fact_candidate_relation_memory_or_business_state_write
+    - credential_creation_disclosure_or_persistence
+    - commit
+    - push
+    - restart
+    - deployment
+    - status_promotion
+  authorization:
+    local_product_test_edits: true
+    local_tests_typecheck_build: true
+    OpsX_evidence_write: true
+    real_or_shared_KDS_MMC_access: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    repository: revert_only_the_8_uncommitted_allowlisted_paths_to_the_recorded_baseline_hashes
+    governance: remove_only_the_new_tranche4_run_package_after_coordinator_direction
+    tranche3: preserve_the_frozen_nine_path_tranche3_delta_and_run_package
+    external_data: not_applicable
+  serial_gate:
+    standard_handoff_required: true
+    f013_independent_review_required: true
+    release0_real_e2e_authorized: false
+    tranche5_authorized: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

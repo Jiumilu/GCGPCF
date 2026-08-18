@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/README.md
 source_path: 02-governance/loop/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-13
 supersedes: []
 superseded_by: []
 ---
@@ -36,6 +36,7 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
+| GPCF-DOC-GKE-001-LONG-TERM-COORDINATION-PROMPT-20260811 | GKE-001 长期实施调度提示词 | 02-governance/loop/GKE-001长期实施调度提示词.md | GPCF | controlled |
 | GPCF-DOC-A882F89F6C | Loop Agent-Reach Exa授权包 | 02-governance/loop/LOOP_AGENT_REACH_EXA_AUTH_PACK.md | WAES | controlled |
 | GPCF-DOC-95CB463CBF | Loop Agent-Reach L3候选搜索流水线目标 | 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md | WAES | controlled |
 | GPCF-DOC-29E5B0AC17 | LOOP_AUTONOMY_POLICY | 02-governance/loop/LOOP_AUTONOMY_POLICY.md | WAES | controlled |

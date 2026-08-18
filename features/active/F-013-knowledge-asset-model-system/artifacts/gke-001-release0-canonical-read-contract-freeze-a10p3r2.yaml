@@ -1,0 +1,100 @@
+release0_canonical_read_contract_freeze:
+  id: GKE-001-CONTRACT-FREEZE-20260811-001
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  feature: F-013
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  source_control:
+    id: GKE-001-COORDINATION-20260811-010-A10P3R2
+    sha256: d4b21c2ccfbc9d2878ce5c020c232f26c53b704b51313a92da6d8345748b12bc
+  contract:
+    contract_id: globalcloud.kds.canonical-read
+    contract_revision: release0.v1
+    status: contract_frozen_for_future_implementation_not_integrated
+    schema: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-openapi-candidate-a10p3r2.yaml
+    raw_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+    canonical_json_bytes: 34563
+    canonical_json_sha256: a6fe1197ab9bfae4a1919c903b296b13a52f7db9d276212aaabd48ae854a2d37
+    normalizer: tools/kds-sync/normalize_gke001_release0_read_contract.py
+    normalizer_sha256: d820e8103b2af74aab06381fe4034c9cec525acc8c7e1efdb074bd8a4a3aa4e4
+    operation_matrix_bytes: 826
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+    mmc_candidate_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    mmc_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+  independent_review:
+    reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    classification: byte_freeze_passed
+    schema_freeze_blockers: []
+    verified:
+      - exact_R1_to_R2_one_line_fingerprint_delta
+      - unchanged_components_subtree_sha256_9b6751c82512b15438bdf8dd84bc019d7cbd5876ea2025196da4dcb502bfd673
+      - unchanged_paths_subtree_sha256_197b7e058e56b54930eb64bd713e54b893422d5fa773d78bba351ef43a65a40e
+      - A10P3R1_valid_instance_evidence_remains_applicable
+      - future_file_boundaries_unchanged
+  future_implementation_boundaries:
+    kds:
+      count: 12
+      paths:
+        - api_server.py
+        - knowledge_intake/read_api.py
+        - knowledge_intake/read_contract.py
+        - knowledge_intake/read_authorization.py
+        - knowledge_intake/read_service.py
+        - knowledge_intake/read_repository.py
+        - knowledge_intake/read_postgres.py
+        - tests/test_knowledge_read_contract.py
+        - tests/test_knowledge_read_api.py
+        - tests/test_knowledge_read_authorization.py
+        - tests/test_knowledge_read_projection.py
+        - tests/test_knowledge_read_postgres_audit.py
+      separate_implementation_control_required: true
+    studio:
+      count: 10
+      paths:
+        - packages/server/src/routes/brain-kds-bridge.ts
+        - packages/server/src/services/core/kds-client.ts
+        - packages/server/src/services/core/mmc-client.ts
+        - packages/server/src/services/core/mmc-delegation-context.ts
+        - packages/server/src/middleware/user-auth.ts
+        - tests/server/brain-kds-bridge-route.test.ts
+        - tests/server/kds-client-runtime.test.ts
+        - tests/server/mmc-client.test.ts
+        - tests/server/mmc-delegation-context.test.ts
+        - tests/server/user-auth.test.ts
+      separate_implementation_control_required: true
+    mmc_standard:
+      count: 6
+      paths:
+        - runtime/app/api/v1/connectors.py
+        - runtime/tests/test_api.py
+        - runtime/tests/test_gateway.py
+        - runtime/tests/test_permission.py
+        - runtime/tests/test_contract.py
+        - llm-wiki-openapi-schema.yaml
+      separate_implementation_control_required: true
+    mmc_high_risk_policy_configuration:
+      count: 2
+      paths:
+        - runtime/scripts/seed.sh
+        - runtime/state.json
+      separate_human_authorization_required: true
+  authorization:
+    contract_freeze_record: true
+    product_or_test_implementation: false
+    mmc_policy_or_configuration_change: false
+    live_kds_or_mmc_read: false
+    any_kds_or_mmc_write: false
+    real_authenticated_e2e: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    governance: withdraw_this_freeze_record_and_retain_A10P2_decision_baseline
+    repository_runtime_external_data: not_applicable_no_business_lane_action
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

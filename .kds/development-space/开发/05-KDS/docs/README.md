@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/README.md
 source_path: docs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-13
 supersedes: []
 superseded_by: []
 ---
@@ -1539,6 +1539,44 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-40D4E57CE7 | Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001 | docs/harness/loops/loop-round-GPCF-GFIS-WAS-SOURCE-RECORD-PRECHECK-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-GKE-001-001 | Loop Round GPCF-GKE-001-001 | docs/harness/loops/loop-round-GPCF-GKE-001-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-GKE-001-COORDINATION-003 | Loop Round GPCF-GKE-001-COORDINATION-003 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-003.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-004 | Loop Round GPCF-GKE-001-COORDINATION-004 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-004.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-005 | Loop Round GPCF-GKE-001-COORDINATION-005 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-005.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-006 | Loop Round GPCF-GKE-001-COORDINATION-006 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-006.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-007 | Loop Round GPCF-GKE-001-COORDINATION-007 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-007.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-008 | Loop Round GPCF-GKE-001-COORDINATION-008 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-008.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-009 | Loop Round GPCF-GKE-001-COORDINATION-009 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-009.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-010 | Loop Round GPCF-GKE-001-COORDINATION-010 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-010.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-011 | Loop Round GPCF-GKE-001-COORDINATION-011 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-011.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-012 | Loop Round GPCF-GKE-001-COORDINATION-012 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-012.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-013 | Loop Round GPCF-GKE-001-COORDINATION-013 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-013.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-014 | Loop Round GPCF-GKE-001-COORDINATION-014 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-014.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-015 | Loop Round GPCF-GKE-001-COORDINATION-015 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-015.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-016 | Loop Round GPCF-GKE-001-COORDINATION-016 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-016.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-017 | Loop Round GPCF-GKE-001-COORDINATION-017 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-017.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-018 | Loop Round GPCF-GKE-001-COORDINATION-018 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-018.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-019 | Loop Round GPCF-GKE-001-COORDINATION-019 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-019.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-020 | Loop Round GPCF-GKE-001-COORDINATION-020 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-020.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-021 | Loop Round GPCF-GKE-001-COORDINATION-021 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-021.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-022 | Loop Round GPCF-GKE-001-COORDINATION-022 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-022.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-023 | Loop Round GPCF-GKE-001-COORDINATION-023 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-023.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-024 | Loop Round GPCF-GKE-001-COORDINATION-024 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-024.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-025 | Loop Round GPCF-GKE-001-COORDINATION-025 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-025.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-026 | Loop Round GPCF-GKE-001-COORDINATION-026 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-026.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-027 | Loop Round GPCF-GKE-001-COORDINATION-027 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-027.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-028 | Loop Round GPCF-GKE-001-COORDINATION-028 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-028.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-029 | Loop Round GPCF-GKE-001-COORDINATION-029 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-029.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-030 | Loop Round GPCF-GKE-001-COORDINATION-030 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-030.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-031 | Loop Round GPCF-GKE-001-COORDINATION-031 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-031.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-032 | Loop Round GPCF-GKE-001-COORDINATION-032 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-032.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE-001-COORDINATION-033 | Loop Round GPCF-GKE-001-COORDINATION-033 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-033.md | GPCF | controlled |
+| GPCF-DOC-1BE02F4502 | GPCF GKE-001 Coordination Loop 034 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-034.md | GPCF | controlled |
+| GPCF-DOC-9AA06B59D7 | GPCF GKE-001 Coordination Loop 035 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-035.md | GPCF | controlled |
+| GPCF-DOC-2E91C47AB8 | GPCF GKE-001 Coordination Loop 036 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-036.md | GPCF | controlled |
+| GPCF-DOC-8C761D04E2 | GPCF GKE-001 Coordination Loop 037 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-037.md | GPCF | controlled |
+| GPCF-DOC-GKE001-COORDINATION-038 | GPCF GKE-001 Coordination Loop 038 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-038.md | GPCF | controlled |
+| GPCF-DOC-GKE001-COORDINATION-039 | GPCF GKE-001 Coordination Loop 039 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-039.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE001-COORDINATION-040 | GKE-001 Coordination Round 040 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-040.md | GPCF | controlled |
+| GPCF-DOC-LOOP-GKE001-COORDINATION-041 | GKE-001 Coordination Round 041 | docs/harness/loops/loop-round-GPCF-GKE-001-COORDINATION-041.md | GPCF | controlled |
 | GPCF-DOC-LOOP-GKE-001-ENGINEERING-002 | Loop Round GPCF-GKE-001-LOOP-ENGINEERING-002 | docs/harness/loops/loop-round-GPCF-GKE-001-LOOP-ENGINEERING-002.md | GPCF | controlled |
 | GPCF-DOC-8E2A7EAEF0 | Loop Round GPCF-HEADROOM-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-ADMISSION-001.md | GPCF | controlled |
 | GPCF-DOC-69EFF16571 | LOOP Round GPCF Headroom Controlled Metric Pilot 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-CONTROLLED-METRIC-PILOT-001.md | GPCF | controlled |

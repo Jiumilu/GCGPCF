@@ -1,0 +1,46 @@
+gke001_release0_three_lane_independent_review:
+  id: GKE-001-COORDINATION-20260813-086-A10R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: governance_only_joint_independent_review_receipt
+  independent_authority:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    role: F-013_Harness
+    repository_write: false
+  reviewed_artifacts:
+    - {id: GKE-001-COORDINATION-20260813-083-A10C7R3, sha256: 438a44f105765eb0092ce51d4c6efcc475ad43a2855a5461df9e25454f4f9807}
+    - {id: GKE-001-COORDINATION-20260813-084-A10S1, sha256: dc2f0d6b8d0c49445e36e77703dc3afb10bd703a8d47710857797cffae6e3236}
+    - {id: GKE-001-COORDINATION-20260813-085-A10B1, sha256: 969d2973f0a6fce232148c2b72723b6885cb4d5f251c50a076a0255548540f34}
+  lane_results:
+    mmc:
+      classification: mmc_release0_source_policy_6_path_preflight_passed_eligible_for_separate_human_local_commit_authorization_request
+      source_tests: 2_23_160_passed
+      runtime_policy: unchanged_17_operations
+    studio:
+      classification: studio_release0_authenticated_entry_static_authority_audit_passed_runtime_entry_blocked
+      registered_routes: true
+      authority_boundary: server_derived_and_checked
+      qualification: project_session_type_means_authoritative_binding_type_not_hermes_session_type_field
+      authenticated_live_read: missing
+    brain:
+      classification: brain_release0_canonical_consumer_audit_passed_with_generic_gateway_residual_blocker
+      focused_tests: 122_passed
+      typecheck_and_alignment: pass
+      build: current_same_day_evidence_not_rerun_by_reviewer
+      primary_direct_legacy_fallback: false
+      generic_via_gateway_residual: open
+  serial_dependency:
+    - kds_release0_facade_owner_disposition
+    - mmc_source_policy_local_commit_human_authorization
+    - mmc_runtime_policy_17_to_19_separate_high_risk_human_authorization
+    - studio_authenticated_nonproduction_bff_read
+    - brain_generic_gateway_prove_unreachable_or_fail_closed
+    - separately_authorized_search_wiki_preview_chat_real_e2e
+  authorization:
+    stage_commit_push: false
+    runtime_policy_apply: false
+    live_e2e: false
+    deployment_or_promotion: false
+  status: {engineering: active, cross_project: partial, completion: not_complete, ceiling: partial}

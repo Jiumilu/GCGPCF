@@ -1,0 +1,284 @@
+minimal_parallel_unfreeze_amendment:
+  id: GKE-001-COORDINATION-20260811-001-A7
+  type: bounded_parallel_baseline_repair_and_authenticated_entry_preflight
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  canonical_feature: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  parent_controls:
+    envelope:
+      id: GKE-001-COORDINATION-20260803-001
+      sha256: e95307a21c4197798d692a7efe18be22f7d305c145942ce47a1afc24f06ceeff
+    studio_a6:
+      id: GKE-001-COORDINATION-20260810-002-A6
+      sha256: bba9f2f33a1c43066df551ba8b086bcaa5f3c2d655b2ca6af831aefb40ee8f3c
+  canonical_contract:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  correction:
+    global_freeze: false
+    parallel_actions:
+      - brain_local_baseline_repair
+      - studio_authenticated_entry_readonly_preflight
+    deferred_independent_gate: brain_search_wikipreview_chat_authenticated_readonly_e2e
+    deferred_gate_blocks_parallel_actions: false
+    studio_a6_record:
+      observed_head: 88769078f5c230ae9ed973815de4861cc6317a5c
+      observed_origin_main: 88769078f5c230ae9ed973815de4861cc6317a5c
+      observed_commit_subject: "loop(studio): daily clean sync 2026-08-10"
+      observed_scope_count: 14
+      observed_worktree: clean
+      governance_disposition: external_commit_push_recorded_without_retroactive_authorization
+      technical_classification: simulated_only
+      authenticated_real_runtime_e2e: false
+      observed_authenticated_session:
+        role: super_admin
+        tenant: gehua
+        Studio_entry_visible: true
+      observed_demo_project:
+        tenant: tenant-demo
+        org: org-demo
+      only_authenticity_gap: missing_authoritative_project_target_or_disposable_fixture_matching_authenticated_gehua_tenant_and_org
+    brain_record:
+      observed_head: 28d0eed530bce17c79651509973807e34e6205f4
+      observed_dirty_paths:
+        - docs/harness/evidence/read-closure-matrix-20260622.json
+      dirty_path_classification: validator_generated_failed_freshness_snapshot_preserve_until_lane_owner_reconciles
+      internal_blockers:
+        - typecheck_deterministic_failures
+        - kds_read_model_alignment_missing_searchpanel_token
+        - live_browser_and_read_closure_evidence_older_than_48_hours
+      external_only_blocker_claim: false
+    kds_record:
+      admission: blocked_dirty_worktree
+      audit_snapshot_changed_entries: 164
+      stage_b_status: partial_rereview_pending
+      technical_evidence: 66_non_db_plus_23_disposable_postgresql
+  lanes:
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      repository: GlobalCloud Brain
+      owner: Brain
+      change_id: repair-brain-read-baseline-a7
+      execution_mode: local_tdd_no_live_kds
+      coordination_lock_id: gke001-brain-baseline-repair-a7-lock
+      tranche_control:
+        mode: sequential
+        max_product_or_test_files_per_tranche: 12
+        require_opsx_handoff_between_tranches: true
+      file_allowlist:
+        - .harness/opsx.lock
+        - src/app/App.tsx
+        - src/app/components/AgentRunsPanel.test.tsx
+        - src/app/components/BulkFixPanel.test.tsx
+        - src/app/components/BulkFixPanel.tsx
+        - src/app/components/BulkFixTaskFlowStatus.test.tsx
+        - src/app/components/BulkFixTaskFlowStatus.tsx
+        - src/app/components/ChatPanel.test.tsx
+        - src/app/components/ChatPanel.tsx
+        - src/app/components/Dashboard.tsx
+        - src/app/components/DoctorPanel.test.tsx
+        - src/app/components/DoctorPanel.tsx
+        - src/app/components/DoctorTaskFlowStatus.test.tsx
+        - src/app/components/DoctorTaskFlowStatus.tsx
+        - src/app/components/KnowledgeGraph.test.tsx
+        - src/app/components/KnowledgeTree.tsx
+        - src/app/components/LintPanel.test.tsx
+        - src/app/components/LintTaskFlowStatus.test.tsx
+        - src/app/components/LintTaskFlowStatus.tsx
+        - src/app/components/ProjectsPanel.test.tsx
+        - src/app/components/PromptAuthorizationComposer.test.tsx
+        - src/app/components/PromptAuthorizationComposer.tsx
+        - src/app/components/ReportsPanel.test.tsx
+        - src/app/components/ReportsPanel.tsx
+        - src/app/components/ReviewPanel.test.tsx
+        - src/app/components/SearchPanel.test.tsx
+        - src/app/components/SearchPanel.tsx
+        - src/app/components/SearchTaskFlowStatus.test.tsx
+        - src/app/components/SettingsPanel.tsx
+        - src/app/components/SourcesPanel.test.tsx
+        - src/app/components/WikiPreview.tsx
+        - src/components/SpaceSelector.test.tsx
+        - src/components/SpaceSelector.tsx
+        - openspec/changes/repair-brain-read-baseline-a7/**
+        - docs/harness/evidence/target-panel-functional-matrix-20260619.json
+        - docs/harness/evidence/target-panel-runtime-matrix-20260619.json
+        - docs/harness/evidence/target-panel-data-quality-20260619.json
+        - docs/harness/evidence/panel-contracts-20260619.json
+        - docs/harness/evidence/non-personal-authorization-matrix-20260619.json
+        - docs/harness/evidence/graph-schema-boundary-20260619.json
+        - docs/harness/evidence/mock-boundaries-20260619.json
+        - docs/harness/evidence/local-action-boundaries-20260619.json
+        - docs/harness/evidence/search-vector-boundary-20260622.json
+        - docs/harness/evidence/read-closure-matrix-20260622.json
+        - docs/harness/evidence/codegraph/GKE-001-BRAIN-A7.json
+        - docs/harness/loops/loop-round-GKE-001-BRAIN-A7.md
+        - .harness/runs/*repair-brain-read-baseline-a7*/**
+      immutable_deferred_e2e_evidence:
+        - docs/harness/evidence/browser-runtime-smoke-20260619.json
+        - docs/harness/evidence/browser-user-flow-20260619.json
+      required_work:
+        - preserve_and_reconcile_the_preexisting_read_closure_evidence_delta
+        - make_typecheck_pass_with_minimal_changes_only
+        - restore_the_exact_SearchPanel_contract_token_KDS_search_graph
+        - refresh_only_deterministic_local_or_mock_evidence_generated_by_authorized_validators
+        - report_live_browser_freshness_as_deferred_not_as_baseline_success
+      acceptance:
+        required_pass:
+          - pnpm check:kds-read-model-alignment
+          - pnpm typecheck
+          - focused_tests_for_each_changed_product_file
+          - pnpm test
+          - pnpm build
+          - pnpm validate:panel-contracts
+          - pnpm validate:mock-boundaries
+          - pnpm validate:local-action-boundaries
+          - pnpm validate:non-personal-authorization-matrix
+          - pnpm validate:graph-schema-boundary
+          - pnpm validate:search-vector-boundary
+          - pnpm validate:target-panel-data-quality
+          - pnpm validate:target-panel-runtime-matrix
+          - pnpm validate:target-panel-functional-matrix
+          - git diff --check
+        required_report_without_pass_claim:
+          - pnpm validate:browser-runtime-smoke
+          - pnpm validate:browser-user-flow
+          - pnpm validate:read-closure-matrix
+        completion_rule: internal_code_type_contract_and_deterministic_evidence_pass_with_live_e2e_freshness_explicitly_deferred
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+      forbidden_scope:
+        - any_live_KDS_or_MMC_network_call
+        - any_KDS_MMC_or_business_fact_write
+        - browser_runtime_smoke_evidence_modification
+        - browser_user_flow_evidence_modification
+        - dependency_or_lockfile_change
+        - database_or_schema_change
+        - local_fact_ledger
+        - commit
+        - push
+        - deployment
+        - status_promotion
+    studio:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      repository: GlobalCloud Studio
+      owner: Studio
+      change_id: verify-studio-authenticated-entry-a7
+      execution_mode: existing_authenticated_session_readonly_preflight_with_bounded_local_fixture_fallback
+      coordination_lock_id: none_readonly
+      repository_file_allowlist: []
+      baseline:
+        head: 88769078f5c230ae9ed973815de4861cc6317a5c
+        origin_main: 88769078f5c230ae9ed973815de4861cc6317a5c
+        worktree: clean
+      authoritative_target_resolution:
+        required_tenant: gehua
+        required_org: gehua
+        preferred: select_existing_authorized_gehua_project_readonly
+        fallback: create_disposable_local_Studio_test_fixture_using_existing_fixture_or_binding_mechanism
+        fallback_constraints:
+          - no_repository_file_change
+          - local_test_or_development_store_only
+          - target_ref_prefix_must_equal_kds/tenants/gehua/orgs/gehua/
+          - no_KDS_or_MMC_request
+          - no_real_business_project
+          - record_creation_method_and_cleanup_result
+          - remove_fixture_after_preflight
+      allowed_actions:
+        - verify_existing_Studio_runtime_and_authenticated_workbench_without_restart_or_config_write
+        - verify_current_trusted_role_is_admin_or_super_admin_with_sensitive_identity_redacted
+        - select_or_open_an_existing_authorized_gehua_project_session_readonly
+        - only_if_no_matching_project_exists_create_a_disposable_local_gehua_project_fixture_through_an_existing_Studio_fixture_or_binding_mechanism
+        - verify_authoritative_project_target_ref_and_tenant_org_binding_readonly_with_values_redacted
+        - capture_a_transient_network_trace_showing_no_intake_upload_retry_complete_upload_or_direct_KDS_MMC_request
+        - report_results_in_the_existing_thread_only
+      browser_task:
+        start: existing_authenticated_Studio_workbench
+        steps:
+          - reject_the_preloaded_tenant_demo_org_demo_project_as_non_matching
+          - select_an_existing_authorized_gehua_project_or_create_the_bounded_disposable_local_gehua_fixture
+          - open_the_matching_authorized_project_session
+          - verify_trusted_admin_or_super_admin_context
+          - verify_authoritative_project_target_binding
+          - observe_knowledge_intake_entry_without_selecting_or_confirming_a_file
+          - inspect_network_activity_for_absence_of_write_requests
+        success:
+          - authenticated_workbench_visible
+          - trusted_role_boundary_visible_or_server_verified
+          - authoritative_project_target_resolves_without_mutation
+          - no_KDS_MMC_intake_upload_retry_or_complete_upload_request
+          - repository_remains_clean_at_exact_baseline
+      acceptance:
+        - git_status_clean
+        - head_and_origin_main_equal_exact_baseline
+        - authenticated_role_is_admin_or_super_admin
+        - authoritative_project_target_and_tenant_org_binding_readonly_verified
+        - network_trace_contains_zero_intake_upload_retry_complete_upload_and_direct_KDS_MMC_requests
+        - no_repository_or_persistent_external_fact_write
+        - any_disposable_local_fixture_is_removed_and_cleanup_is_reported
+      forbidden_scope:
+        - any_repository_file_change
+        - any_OpenSpec_LOOP_or_evidence_file_change
+        - file_selection_or_upload_confirmation
+        - intake_prepare_upload_retry_or_complete_upload
+        - direct_KDS_or_MMC_call
+        - tenant_demo_or_org_demo_used_as_authenticated_success_evidence
+        - any_fixture_outside_the_local_test_or_development_store
+        - any_fixture_not_removed_after_preflight
+        - local_fact_ledger
+        - project_order_production_state_change
+        - candidate_relationship_evidence_or_long_term_memory_write
+        - commit
+        - push
+        - deployment
+        - status_promotion
+  serial_gate_after_parallel_actions:
+    order:
+      - f013_review_brain_baseline_handoff
+      - f013_review_studio_authenticated_entry_preflight_report
+      - authorize_separate_authenticated_readonly_e2e_amendment
+      - brain_search_wikipreview_chat_authenticated_readonly_e2e
+      - mmc_delegation_and_human_confirmation_validation
+    no_automatic_transition: true
+  handoff_requirements:
+    brain:
+      - exact_changed_files_and_tranches
+      - tests_typecheck_build_and_contract_results
+      - deterministic_evidence_timestamps_and_generators
+      - deferred_live_e2e_freshness_failures
+      - no_network_and_no_write_assertion
+      - rollback
+      - authorization_status
+      - unresolved_risks
+    studio:
+      - exact_baseline_and_clean_status
+      - authenticated_role_result_with_redaction
+      - authoritative_project_target_binding_result_with_redaction
+      - selected_existing_project_or_disposable_fixture_method_and_cleanup
+      - zero_write_network_trace_summary
+      - no_repository_and_no_external_write_assertion
+      - authorization_status
+      - unresolved_risks
+  authorization:
+    brain_local_tdd_within_allowlist: true
+    brain_deterministic_local_evidence_refresh: true
+    studio_readonly_authenticated_preflight: true
+    studio_disposable_local_gehua_project_fixture_if_no_existing_match: true
+    live_kds_or_mmc_read: false
+    any_kds_or_mmc_write: false
+    studio_intake_action: false
+    business_fact_or_state_write: false
+    long_term_memory_write: false
+    relationship_or_candidate_confirmation: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

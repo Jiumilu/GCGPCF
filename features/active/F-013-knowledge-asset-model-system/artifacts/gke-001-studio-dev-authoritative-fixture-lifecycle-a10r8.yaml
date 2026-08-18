@@ -1,0 +1,93 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260814-033-A10R8-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  openspec_change: integrate-studio-kds-knowledge-intake
+  change_id: implement-studio-dev-authoritative-fixture-lifecycle-a10r8
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    dirty: 0
+    opsx_lock: absent
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  mode: local_tdd_dev_fixture_only_no_commit_no_push
+  file_allowlist:
+    - packages/server/src/routes/governance/dev-authoritative-fixtures.ts
+    - packages/server/src/routes/index.ts
+    - packages/server/src/db/index.ts
+    - tests/server/dev-authoritative-fixtures-route.test.ts
+  requirements:
+    - Route is enabled only by an explicit development/test environment switch and fails closed otherwise.
+    - Only an already authenticated admin or super_admin with tenant_id=gehua may create, read, or delete the fixture.
+    - The server, not the browser, fixes tenant_id=gehua, org_id=gehua, project_ref, session_ref, target_object_ref and permissionResult=allowed.
+    - The target_object_ref begins with kds/tenants/gehua/orgs/gehua/ and remains a projection reference, not a KDS fact or business master record.
+    - Fixture data uses an explicitly supplied disposable SQLite database path and must never fall back to the default Studio database.
+    - Create returns a bounded redacted receipt; read proves exact binding; delete returns a deletion receipt and a later read proves absence.
+    - No route or cleanup path calls KDS, MMC, Hermes deletion, intake, search, read, upload, or any external service.
+    - Duplicate create, unauthorized role, wrong tenant, disabled environment, missing disposable database, and post-delete read are covered by tests.
+  acceptance_commands:
+    - npm test -- --run tests/server/dev-authoritative-fixtures-route.test.ts
+    - npm test -- --run tests/server/project-knowledge-intake-route.test.ts tests/server/mmc-kds-knowledge-intake.test.ts
+    - npm run build
+    - npx openspec validate integrate-studio-kds-knowledge-intake --strict
+    - python3 tools/kds-sync/validate_studio_loop_control.py
+    - npm run harness:check
+    - codegraph sync
+    - codegraph status
+    - codegraph query dev-authoritative-fixtures
+    - git diff --check
+  evidence_requirements:
+    - exact baseline and final Git status
+    - exact four-file patch and SHA-256
+    - disposable database path and before/after absence proof
+    - zero KDS/MMC/Hermes/network call proof
+    - authorization and no-leak negative tests
+    - create/read/delete receipts with sensitive values redacted
+    - CodeGraph impact and unresolved relations
+    - rollback and unresolved risks
+  forbidden_scope:
+    - default Studio database or existing local sessions
+    - KDS or MMC API, state, policy, database, fixture, or credential access
+    - Hermes session deletion
+    - browser E2E or Release 0 real-read execution
+    - knowledge intake, upload, candidate, relation, memory, or business-state writes
+    - OpenSpec task completion or status promotion
+    - commit, push, deployment, or service restart outside isolated local tests
+    - any path outside the exact four-file allowlist
+  authorization:
+    repository_write: exact_four_file_local_tdd_only
+    disposable_sqlite_write: authorized
+    default_database_write: false
+    external_api_or_network: false
+    commit: false
+    push: false
+    deploy: false
+    status_promotion: false
+  codegraph_impact:
+    domain: GKE-001
+    expected_symbols:
+      - dev authoritative fixture route
+      - disposable fixture persistence boundary
+      - create/read/delete lifecycle tests
+    index_proof_only: true
+  rollback:
+    repository: restore only the four allowlisted uncommitted paths after independent authorization
+    data: delete the disposable SQLite file and prove absence; never touch the default database
+    external: not_applicable_zero_external_access
+  unresolved_risks:
+    - This mechanism proves only a dev-only authoritative entry fixture, not a real KDS read.
+    - MMC runtime Release 0 policy remains 17 operations until separately authorized 17-to-19 apply.
+    - Brain A10R4 remains uncommitted pending separate human authorization.
+    - Real authenticated Search to WikiPreview to Chat remains separately gated.
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

@@ -1,0 +1,79 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260814-016-A10C22R1
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  change_id: review-release0-openspec8-postpush-a10c22r1
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  predecessors:
+    conditional_request:
+      id: GKE-001-COORDINATION-20260814-009-A10C18R1
+      artifact_sha256: b9e17bbd1c78236b822728c821f21dd94ed9a6b2da14e2a860214d73807b2995
+    report_only_revalidation:
+      id: GKE-001-COORDINATION-20260814-013-A10C22
+      message_payload_sha256: 11c14aae528a13eae63e91c7dc3efae6f38f387f80c04d7d2e2c7a799fd89e1a
+      qualification: message_hash_not_artifact_hash
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  required_baseline:
+    branch: main
+    head: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    origin_main: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    remote_main: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 180
+    ordinary_nul_sha256: d8b1b52a8a85b87a17384f5b6b3503afdc441e15fd77635fd973872c2149615a
+    expanded_dirty: 439
+    expanded_nul_sha256: c7349d85d1aeaea509b7e033f816bfe4f71bb00c60fdd1430aeb903fd52d1db5
+    opsx_lock: absent
+  exact_paths:
+    - openspec/changes/implement-release0-canonical-read-facade/.openspec.yaml
+    - openspec/changes/implement-release0-canonical-read-facade/design.md
+    - openspec/changes/implement-release0-canonical-read-facade/proposal.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-audit/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-authorization/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-contract/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/specs/canonical-read-projections/spec.md
+    - openspec/changes/implement-release0-canonical-read-facade/tasks.md
+  sealed_candidate:
+    path_count: 8
+    sorted_nul_pathset_sha256: 5fd19a7e466521ece8ec190fe23a4dfee26748f551fc6c05718f86f71b24c7a5
+    ordered_content_manifest_sha256: 472472a6f4a66701094a44210795b6ae722f322e8f9f787ab9c7c2fc24559fce
+    full_index_patch_bytes: 25737
+    full_index_patch_sha256: 76331dd9a24cda8bad2da25691e9ff8d19b6f62ec5654b6fca9df5148613ce5c
+    deterministic_generation: 2_of_2_byte_identical
+    diff_check: pass
+    openspec_strict: pass
+    disposable_apply_reverse_cleanup: pass
+  authorization:
+    mode: independent_read_only_review
+    repository_allowlist: []
+    stage: false
+    commit: false
+    push: false
+    real_or_shared_access: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - release0_product_test_12
+    - release0_run_handoff_15
+    - stage_b
+    - role_view
+    - other_dirty_owner_groups
+  rollback:
+    control_artifact: remove_only_this_uncommitted_control_artifact_if_withdrawn
+    kds_repository: not_applicable_no_kds_write
+    future_commit: separately_reviewed_compensating_git_revert_only
+  requested_review:
+    - verify_artifact_bytes_and_current_kds_baseline
+    - verify_exact_candidate_fingerprints_and_disjointness
+    - decide_eligibility_for_separate_human_local_commit_authorization
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    promotion: false

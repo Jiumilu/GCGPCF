@@ -1,0 +1,119 @@
+a10p1_brain_tranche3_baseline_repair:
+  id: GKE-001-COORDINATION-20260812-002-A10P1T3
+  engineering_domain: GKE-001
+  release: Release-0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  independent_reviewer:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    role: F-013_Harness
+  lane:
+    owner: Brain
+    repository: GlobalCloud Brain
+    thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+    change_id: repair-brain-read-baseline-a10p1-tranche-3
+    openspec_change: repair-brain-read-baseline-a7
+    execution_mode: local_opsx_tdd_no_network
+    coordination_lock_id: gke001-brain-a10p1-tranche3-lock
+    run_id: 20260812-repair-brain-read-baseline-a10p1-tranche-3
+  baseline:
+    branch: main
+    head: 925659b0144a5fb858a78cf32c1d8ddf6967c19b
+    origin_main: 925659b0144a5fb858a78cf32c1d8ddf6967c19b
+    ahead: 0
+    behind: 0
+    dirty_entries: 0
+    staged_entries: 0
+    opsx_lock: absent
+    typecheck_errors: 49
+    typecheck_error_files: 19
+    independent_tranche2_result: accepted_locally_29_of_29
+  product_test_file_count: 11
+  product_test_file_allowlist:
+    - src/app/components/BulkFixPanel.test.tsx
+    - src/app/components/BulkFixPanel.tsx
+    - src/app/components/BulkFixTaskFlowStatus.test.tsx
+    - src/app/components/BulkFixTaskFlowStatus.tsx
+    - src/app/components/DoctorPanel.test.tsx
+    - src/app/components/DoctorPanel.tsx
+    - src/app/components/DoctorTaskFlowStatus.test.tsx
+    - src/app/components/DoctorTaskFlowStatus.tsx
+    - src/app/components/LintPanel.test.tsx
+    - src/app/components/LintTaskFlowStatus.test.tsx
+    - src/app/components/LintTaskFlowStatus.tsx
+  governance_file_allowlist:
+    - .harness/evidence-index.yaml
+    - .harness/opsx.lock
+    - .harness/runs/20260812-repair-brain-read-baseline-a10p1-tranche-3/**
+  error_partition:
+    selected_errors: 36
+    selected_files: 11
+    expected_remaining_errors_ceiling: 13
+    expected_remaining_files_ceiling: 8
+    remaining_scope_is_future_separate_tranche: true
+  required_work:
+    - preserve_required_execution_and_run_scope_labels_on_the_rendered_components
+    - narrow_task_flow_state_derivation_inputs_to_fields_actually_used_without_weakening_component_props
+    - replace_invalid_enterprise_test_space_with_an_existing_authorized_Space_value_and_update_only_corresponding_expected_copy
+    - remove_only_unused_panel_imports_without_deleting_exported_boundary_guards_or_changing_write_authorization_semantics
+    - keep_all_BulkFix_Doctor_and_Lint_mutations_user_initiated_and_existing_readback_checks_intact
+    - produce_standard_run_scoped_OpsX_handoff_evidence_index_acceptance_matrix_patch_and_agent_result
+  acceptance:
+    - all_11_allowlisted_files_have_zero_typecheck_errors
+    - global_typecheck_is_at_most_13_errors_across_at_most_8_non_allowlisted_files
+    - focused_tests_for_all_11_files_pass
+    - pnpm_build_passes
+    - pnpm_check_kds_read_model_alignment_passes
+    - existing_OpenSpec_strict_validation_passes_without_OpenSpec_write
+    - CodeGraph_sync_status_and_queries_cover_the_three_task_flow_pairs
+    - no_network_KDS_MMC_LLM_browser_or_prompt_send_occurs
+    - git_diff_check_passes
+    - OpsX_lock_is_absent_after_handoff
+  codegraph_impact:
+    expected_nodes:
+      - BulkFixPanel
+      - BulkFixTaskFlowStatus
+      - DoctorPanel
+      - DoctorTaskFlowStatus
+      - LintPanel
+      - LintTaskFlowStatus
+    runtime_integration_claim: false
+  forbidden_scope:
+    - any_product_or_test_file_outside_product_test_file_allowlist
+    - any_OpenSpec_or_existing_governance_evidence_edit_outside_governance_file_allowlist
+    - direct_KDS_or_MMC_client_change
+    - network_browser_live_KDS_MMC_or_LLM_execution
+    - automatic_prompt_send
+    - knowledge_fact_candidate_relation_memory_or_business_state_write
+    - credential_creation_disclosure_or_persistence
+    - commit
+    - push
+    - restart
+    - deployment
+    - status_promotion
+  authorization:
+    local_product_test_edits: true
+    local_tests_typecheck_build: true
+    OpsX_evidence_write: true
+    real_or_shared_KDS_MMC_access: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    repository: revert_only_the_11_uncommitted_allowlisted_paths_to_925659b0144a5fb858a78cf32c1d8ddf6967c19b
+    governance: remove_only_the_new_tranche3_run_package_after_coordinator_direction
+    external_data: not_applicable
+  serial_gate:
+    standard_handoff_required: true
+    f013_independent_review_required: true
+    tranche4_authorized: false
+    real_authenticated_e2e_authorized: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

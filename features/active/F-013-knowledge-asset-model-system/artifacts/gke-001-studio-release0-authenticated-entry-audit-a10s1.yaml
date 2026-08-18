@@ -1,0 +1,71 @@
+gke001_studio_release0_authenticated_entry_audit:
+  id: GKE-001-COORDINATION-20260813-084-A10S1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: report_only_static_and_existing_evidence_audit
+  lane:
+    repository: Studio
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: audit-studio-release0-authenticated-entry-a10s1
+    owner: Studio
+    repository_allowlist: []
+  baseline:
+    branch: main
+    head: ec1ff4d6a35844d499334caac74d99d46691034c
+    origin_main: ec1ff4d6a35844d499334caac74d99d46691034c
+    ahead_behind_staged: 0/0/0
+    ordinary_expanded_dirty: 2/2
+    status_nul_sha256: 3f6b03f17e7128ce8ab910a4cbf58675699e198fce2cd32ab0374f4147cdb5c8
+    opsx_lock: absent
+    before_after_identical: true
+  preserved_existing_dirty:
+    tests/server/studio-loop-control.test.ts: 0488efa66e0c1e1364d967a6d513e814067ce2e4400709535ddc321a60c2ba92
+    docs/harness/evidence/codegraph/GPCF-STUDIO-LR-878.json: dcaddafc797b87f3217ccb75ebccb42f7ad3a1749a0f146ddbfaff5503acddab
+  current_implementation:
+    registered_routes:
+      - "POST /api/brain/kds/sessions/:sessionId/search"
+      - "POST /api/brain/kds/sessions/:sessionId/read"
+    server_authority_checks:
+      - authenticated_user
+      - session_ownership
+      - project_session_type
+      - permission_result_allowed
+      - tenant_org_prefix
+      - authoritative_target_object_ref
+    ui_scope_source: studio_local_active_session_identifier
+    declaration_only: false
+    executable_bff_route: true
+  evidence_boundary:
+    current_static_and_codegraph: pass
+    codegraph: 991_files_18340_nodes_62626_edges_up_to_date
+    inherited_unit_component_tests: pass
+    authenticated_live_browser: missing
+    live_kds_or_mmc_request: not_run
+    real_verified: false
+  exact_blocker:
+    capability: authenticated_release0_entry
+    reason: mmc_runtime_policy_does_not_admit_the_two_release0_posts
+    expected_runtime_behavior: fail_closed_at_mmc
+  future_product_test_allowlist:
+    count: 10
+    pathset_sha256: 93b039d8cff57b9ba542ab6a8a309d25d0b7ae9db19b7a2cb07d7dca5e148549
+    paths:
+      - packages/client/src/views/BrainKdsBridgeView.vue
+      - packages/server/src/routes/brain-kds-bridge.ts
+      - packages/server/src/services/core/kds-client.ts
+      - packages/server/src/services/core/mmc-client.ts
+      - packages/client/src/api/hermes/chat.ts
+      - packages/server/src/routes/governance/session-bindings.ts
+      - tests/client/brain-kds-bridge-view.test.ts
+      - tests/server/brain-kds-bridge-route.test.ts
+      - tests/server/kds-client-runtime.test.ts
+      - tests/server/mmc-client.test.ts
+  authorization:
+    future_product_write: false
+    browser_or_session_mutation: false
+    kds_or_mmc_request: false
+    commit_push_deploy_promotion: false
+  rollback: {repository: not_applicable_report_only, runtime: unchanged}
+  status: {engineering: active, cross_project: partial, completion: not_complete, classification: real_partial}

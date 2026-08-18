@@ -1,0 +1,177 @@
+kds_stageb_owner_disposition_authorization_request:
+  id: GKE-001-COORDINATION-20260812-013-A10I1D4
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  openspec_change: extend-kds-document-extraction
+  change_id: authorize-kds-stageb-owner-disposition-a10i1d4
+  mode: human_authorization_request_only
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  owner: KDS
+  target_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer:
+    role: GPCF-F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  baseline:
+    head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_dirty_entries: 190
+    expanded_dirty_entries: 462
+    ordinary_status_sha256: 51c8985e3eba86cc115cd58fd6cfb1f809857198a8d4ed2b822afb9a31afc905
+    expanded_status_sha256: 0055f30e91654a23252292f956f665a97242962aff6442964755519c7e7a1b9b
+    opsx_lock: absent
+  parent_preflight:
+    id: GKE-001-COORDINATION-20260812-012-A10I1D3
+    sha256: 44952b52497325a936deb68a6a2a986f4d6d287805818b8a8fce4cd5f5a13142
+    review: preflight_verified_sufficient_for_separately_controlled_stageb_owner_disposition
+  frozen_manifests:
+    product_test_14_sha256: 139238548b83a92d4244f300f31fdee127b19960434cc987b67e39f77a3bc370
+    openspec_9_sha256: 7acdd640e47a6892af715d57038b57de5747f84061cbf3f0034d5bef52dfdeed
+    run_handoff_13_sha256: 9505cf98726d0148b0124022f4dca502837b82ec74e10a262daed29f15881e47
+  frozen_patches:
+    stageb_core_12:
+      bytes: 175642
+      sha256: 7fe83224e36ffb504e79ecf67579256d1d956ee4a8b99def35c627811dc872dc
+      known_apply_warning: new_blank_line_at_eof_non_blocking_diff_check_passed
+    stageb_regression_2:
+      bytes: 38511
+      sha256: 1e7ecd30fbb740fcf2217224de107adb0c960d5babfc71aaaee036b9fae90f7e
+  proposed_topology:
+    - order: 1
+      unit: stageb_core_12
+      kind: product_test_commit
+      paths:
+        - requirements.txt
+        - knowledge_intake/api.py
+        - knowledge_intake/postgres.py
+        - knowledge_intake/repository.py
+        - knowledge_intake/service.py
+        - knowledge_intake/extraction.py
+        - knowledge_intake/extraction_service.py
+        - knowledge_intake/sql/002_document_extraction.sql
+        - tests/test_document_extraction_domain.py
+        - tests/test_document_extraction_parsers.py
+        - tests/test_document_extraction_service.py
+        - tests/test_document_extraction_migration.py
+      proposed_commit_subject: "feat(kds): add document extraction stage b core"
+      authorization_required: human_commit_authorization
+      gate_after_unit: clean_commit_archive_tests_and_f013_independent_review
+    - order: 2
+      unit: stageb_regression_2
+      kind: product_test_commit
+      paths:
+        - tests/test_knowledge_intake_api.py
+        - tests/test_knowledge_intake_postgres.py
+      proposed_commit_subject: "test(kds): cover stage b intake integration"
+      authorization_required: human_commit_authorization
+      gate_after_unit: clean_two_commit_replay_66_plus_23_and_f013_independent_review
+    - order: 3
+      unit: stageb_openspec_9
+      kind: governance_contract_commit
+      paths:
+        - openspec/changes/extend-kds-document-extraction/.openspec.yaml
+        - openspec/changes/extend-kds-document-extraction/design.md
+        - openspec/changes/extend-kds-document-extraction/proposal.md
+        - openspec/changes/extend-kds-document-extraction/specs/document-extraction-pipeline/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extracted-content-evidence/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extraction-access-projection/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extraction-evidence-links/spec.md
+        - openspec/changes/extend-kds-document-extraction/specs/extraction-job-orchestration/spec.md
+        - openspec/changes/extend-kds-document-extraction/tasks.md
+      proposed_commit_subject: "docs(kds): specify document extraction stage b"
+      authorization_required: human_commit_authorization
+      gate_after_unit: strict_openspec_and_manifest_review
+    - order: 4
+      unit: stageb_run_handoff_13
+      kind: governance_handoff_commit
+      paths:
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/authorization.yaml
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/canonical-mirror-sha256.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/changed-files.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-a3-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fifth-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-fourth-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-second-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/f013-third-review-rework.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/evidence/final-verification.txt
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/f013-handoff.md
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/handoff.yaml
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/knowledge-engineering-handoff.yaml
+        - .harness/runs/20260803-132949-extend-kds-document-extraction/run.yaml
+      proposed_commit_subject: "chore(kds): record document extraction handoff"
+      authorization_required: human_commit_authorization
+      gate_after_unit: complete_36_path_manifest_and_f013_stageb_baseline_review
+  execution_invariants:
+    - Recompute the applicable frozen patch or manifest before every unit.
+    - Stage only the exact unit pathspec and require the cached path list to equal the unit list.
+    - Abort on any path hash, mode, baseline, staged-scope or OpsX-lock mismatch.
+    - Never use git add dot, git add all, reset, clean, checkout, restore or history rewrite.
+    - Do not start a later unit until the preceding unit has a standard handoff and F-013 independent review.
+    - Do not push any resulting commit under this request.
+  verification_after_authorized_unit:
+    - Verify commit parent and commit diff contain only the exact unit pathspec.
+    - Rebuild a clean disposable archive from the resulting commit sequence.
+    - Run the unit-specific focused tests and the applicable migration dry-run.
+    - At the two-product-commit boundary, replay non-database 66 and PostgreSQL/migration 23 with database cleanup count zero.
+    - Verify ACL-before-read/search/count, active extraction, lineage, audit/outbox atomicity, lease safety and append-only rollback evidence.
+    - Run strict OpenSpec when the contract unit is present.
+    - Verify canonical mirror 8/8, diff-check, ahead/behind, staged scope and OpsX lock release.
+  explicit_exclusions:
+    - all_A10I1_Release0_paths
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+    - all_other_dirty_KDS_paths
+    - all_business_projection_content
+    - all_Feishu_runtime_facts
+    - all_live_shared_or_production_data
+    - automation_memory
+  GPCF_repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-stageb-owner-disposition-authorization-request-a10i1d4.yaml
+    - features/active/F-013-knowledge-asset-model-system/evidence/gke-001-kds-stageb-owner-disposition-authorization-request-and-review-20260812.md
+    - features/active/F-013-knowledge-asset-model-system/feature.yaml
+    - features/active/F-013-knowledge-asset-model-system/journal.md
+    - 02-governance/loop/LOOP_CONTROL_BOARD.md
+    - 02-governance/loop/LOOP_SESSION_REGISTRY.md
+    - tools/kds-sync/validate_gke001_three_lane_coordination.py
+  CodeGraph_impact:
+    current: GPCF_governance_only
+    future_if_authorized: KDS_stageb_extraction_api_repository_postgres_service_tests_openspec_handoff
+    proof_boundary: structural_query_only_not_runtime_integration
+  authorization:
+    local_read_hash_and_independent_review: true
+    GPCF_governance_record_write: true
+    KDS_repository_write: false
+    stage: false
+    commit: false
+    push: false
+    live_shared_or_production_access: false
+    deployment: false
+    status_promotion: false
+    required_human_decision: authorize_or_reject_the_four_unit_local_commit_topology
+  forbidden_scope:
+    - any_KDS_worktree_stage_commit_or_handoff_revision_before_human_authorization
+    - any_combined_36_path_single_commit
+    - any_cross_owner_A10I1_role_view_or_other_dirty_scope_commit
+    - any_push_deploy_live_write_credential_or_status_promotion
+    - any_destructive_cleanup_reset_restore_checkout_or_history_rewrite
+  rollback:
+    before_authorization: withdraw_this_request_and_GPCF_references
+    after_each_local_commit_if_later_authorized: create_a_separately_reviewed_compensating_git_revert_commit
+    KDS_immutable_data: not_applicable_no_runtime_or_database_write
+    external_data: none
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    authorization_state: human_commit_authorization_pending
+    status_ceiling: partial

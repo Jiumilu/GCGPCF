@@ -1,0 +1,61 @@
+coordination:
+  id: GKE-001-COORDINATION-20260814-032-A10R7-KDS
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: kds
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: preflight-kds-release0-run-handoff-local-commit-a10r7
+  mode: report_only_precommit
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-031-A10R6R1-KDS
+    sha256: c3ede0ea5ccf220754d46856162c21be796d1b3bbd0a590b89a99d90a81214ea
+  review_classification: run_handoff_15_governance_truthfulness_reconciled_eligible_for_separate_human_local_commit_authorization_request
+  status_ceiling: active_partial_not_complete
+
+baseline:
+  branch: main
+  head: 410e71c1391f88423ccaf79ed6e5c69d655907f4
+  origin_main: 410e71c1391f88423ccaf79ed6e5c69d655907f4
+  ahead_behind_staged: 0_0_0
+  ordinary_dirty: 188
+  ordinary_nul_sha256: 0947f9d6e0ebde101084845a7ed879fcedca2198c4fb364b812d0208be1c02be
+  expanded_dirty: 440
+  expanded_nul_sha256: df5f003cf513bca4337a70979ae9eb3c55bf0cdf9974e2dad930149156ee4810
+  opsx_lock: absent
+
+candidate:
+  root: .harness/runs/20260811-193752-implement-release0-canonical-read-facade
+  path_count: 15
+  pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+  status_manifest_sha256: b41bcccf5ed1cea4108b093e7b8875acf7f211090ff2176119d28d0662d5fce6
+  content_manifest_sha256: 94de1afddd00611443ae23676a6cc792b630bbd52afbff7a3e9f1058cd2a5d0b
+  proposed_subject: "chore(kds): record release 0 canonical read handoff"
+
+requirements:
+  - verify exact baseline and all 15 current content hashes
+  - generate the exact full-index binary candidate patch twice outside KDS and prove byte identity
+  - report patch bytes and SHA-256
+  - run candidate diff-check
+  - use a selective disposable copy from HEAD to prove apply identity and reverse to absent baseline
+  - parse the four YAML files and validate governance consistency
+  - prove evidence and patch files remain historical and current freshness is 8_0_8_0_0
+  - preserve role-view and all non-candidate owner groups
+  - request no lock because this is report-only
+
+forbidden:
+  - repository content write
+  - stage commit push or lock
+  - tests database API network runtime credential
+  - product test OpenSpec StageB role-view or other owner changes
+  - cleanup deletion deployment or status promotion
+
+rollback:
+  repository: not_applicable_zero_write
+  disposable_copy: remove_after_reverse_verification
+  external_data: not_applicable
+
+expected_result:
+  classification: eligible_for_exact_human_local_commit_authorization_request
+  status: active_partial_not_complete

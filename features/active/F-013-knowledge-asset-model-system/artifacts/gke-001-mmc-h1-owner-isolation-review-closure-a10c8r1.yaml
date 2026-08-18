@@ -1,0 +1,45 @@
+gke001_mmc_h1_owner_isolation_review_closure:
+  id: GKE-001-COORDINATION-20260813-064-A10C8R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: independent_review_closure
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-063-A10C8
+    sha256: 1bb76d38f24c965a5f3d4dd91ffe91f047690b5c05cf6e8fa726af543ec2daf3
+  independent_review:
+    authority: F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    result: stable_reproducible_h1_owner_unit_eligible_for_separate_human_owner_disposition_authorization_request
+    repository_write: false
+  verified_owner_unit:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    baseline: b06f58a78ac7713197deed47d1125bec7a260e8c
+    path_count: 15
+    sorted_nul_pathset_sha256: 7544700e1f12d9bcdd02c9b2b8ac01dd36a46ea11ee2843c1342ca23c723eb50
+    ordered_content_manifest_sha256: 955fae675854623920241286094edb8d1e2694de8a6993f6b85c238e16461c90
+    full_index_patch_bytes: 59487
+    full_index_patch_sha256: b4c728d6f6a5bc6527db905453a1557fdb90283bc1bd784c1c2b2f472096daab
+    focused_tests: 86_passed
+    full_runtime_tests: 158_passed
+    diff_check: pass
+    disposable_apply_reverse: pass
+  exclusions:
+    - .harness/runs/20260812-002227-rework-mmc-shared-registry-state-a10i3h1r2
+    - .harness/runs/20260812-042626-rework-mmc-resolved-path-and-consumers-a10i3h1r3
+    - runtime/.state.json.lock
+    - A10C7_source_policy
+    - all_other_dirty_paths
+  authorization_gate:
+    local_owner_commit: separate_human_authorization_required
+    stage_or_commit_started: false
+    push: false
+    runtime_policy_application: false
+    live_request: false
+    deployment_or_status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

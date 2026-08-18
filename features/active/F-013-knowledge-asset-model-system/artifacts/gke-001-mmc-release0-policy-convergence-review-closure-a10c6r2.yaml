@@ -1,0 +1,85 @@
+gke001_mmc_release0_policy_convergence_review_closure:
+  id: GKE-001-COORDINATION-20260813-059-A10C6R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: governance_metadata_reconciliation
+  predecessors:
+    - id: GKE-001-COORDINATION-20260813-057-A10C6
+      sha256: 786111e3ad6987c5ad095d4bd581429b1386da5f69b2e7e3ae36cbbcfd9722da
+    - id: GKE-001-COORDINATION-20260813-058-A10C6R1
+      sha256: 2d8dc4c25d85577a41b7db73397af9bc09d4e1bf6c174edea374639752b36f9f
+  independent_review:
+    authority: F-013
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    classification: technical_policy_convergence_verified_governance_metadata_rework_closed
+  corrected_repository_facts:
+    head_origin: b06f58a78ac7713197deed47d1125bec7a260e8c
+    raw_ordinary_dirty: 15
+    raw_expanded_dirty: 76
+    ordinary_nul_sha256: 4aa3dbdeb92bc3d7538cc48898245fe049437d32b406c658a63abdff75244fde
+    expanded_nul_sha256: ddba5938cbae9cdd870f0820aa93ff29db02af308cdbb2f6c1fd8bc421cfef16
+    active_owned_dirty_excluding_runtime_sidecar: 14/75
+    runtime_sidecar:
+      path: runtime/.state.json.lock
+      size_bytes: 0
+      holder: none_observed
+      disposition: excluded_unowned_runtime_sidecar_no_cleanup_authorized
+    staged: 0
+    opsx_lock: absent
+  technical_verdict:
+    relay_exact_release0_operations: 2
+    focused_tests: 20_passed_37_deselected
+    full_runtime_tests: 158_passed
+    current_policy_operation_count: 17
+    current_restore_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    isolated_release0_fingerprint: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    append_candidate_operation_count: 19
+    append_candidate_fingerprint: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    current_policy_contains_release0: false
+  source_only_candidate:
+    status: human_authorization_required_before_edit
+    exact_allowlist:
+      - runtime/scripts/seed.sh
+      - runtime/tests/test_release0_policy_seed.py
+      - openspec/changes/admit-release0-canonical-read-policy-a10c7/proposal.md
+      - openspec/changes/admit-release0-canonical-read-policy-a10c7/design.md
+      - openspec/changes/admit-release0-canonical-read-policy-a10c7/tasks.md
+      - openspec/changes/admit-release0-canonical-read-policy-a10c7/specs/mmc-release0-policy-admission/spec.md
+    forbidden:
+      - runtime/state.json
+      - runtime/.state.json.lock
+      - seed_force
+      - live_policy_application
+      - connector_creation
+      - relay_or_delegation_change
+      - unrelated_14_75_dirty
+      - commit_or_push
+      - live_request
+      - deployment_or_status_promotion
+  runtime_policy_application:
+    status: separate_high_risk_human_authorization_required
+    prerequisites:
+      - stable_reviewed_mmc_mutation_boundary_h1_baseline
+      - exact_connector_compare_and_swap
+      - management_permission_gate
+      - atomic_replacement
+      - append_only_audit
+      - restore_baseline_fingerprint_40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    prohibited_command: seed.sh --force
+  rollback:
+    current: not_applicable_governance_only
+    source_if_later_authorized: remove_only_six_path_delta_before_commit_or_separately_reviewed_forward_revert_after_commit
+    runtime_if_later_authorized: compare_and_swap_restore_17_operation_fingerprint_with_append_only_audit
+  authorization:
+    source_write: false
+    runtime_policy_write: false
+    live_read_or_write: false
+    commit_or_push: false
+    deploy_or_status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

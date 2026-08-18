@@ -1,0 +1,205 @@
+a10p1_coordination:
+  id: GKE-001-COORDINATION-20260811-006-A10P1
+  type: canonical_read_contract_convergence_and_independent_brain_baseline_tranche
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature: F-013
+  openspec_change: integrate-gke001-openspec-codegraph
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-005-A10P0
+    sha256: b9d4acdef872289afd5a2194a1430daf977bab028f9fc76ce6e937f39e8ecc96
+    independent_review: report_preflight_passed_live_read_entry_not_satisfied
+  canonical_contract:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    compatibility_decision:
+      stage_b_and_legacy_projects_reads_are_compatible: false
+      explicit_canonical_facade_or_adapter_required: true
+      second_knowledge_ledger_allowed: false
+  parallel_lanes:
+    studio_mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      repositories: [GlobalCloud Studio, GlobalCloud MMC]
+      owner: Studio_MMC_authoritative_binding_and_transport_boundary
+      change_id: converge-studio-mmc-read-boundary-a10p1
+      execution_mode: report_only_static_no_write
+      repository_file_allowlist: []
+      coordination_lock_id: none_report_only
+      baseline:
+        studio_head: 88769078f5c230ae9ed973815de4861cc6317a5c
+        studio_origin_main: 88769078f5c230ae9ed973815de4861cc6317a5c
+        studio_worktree: clean
+        mmc_head: 8bb60fcffb8de14e839de0631e646c8c73418092
+        mmc_origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+        mmc_worktree: clean
+      required_report:
+        - exact_server_trusted_session_to_targetObjectRef_to_project_to_tenant_org_binding_inputs
+        - reject_and_no_leak_matrix_for_missing_mismatched_or_unauthorized_project_targets
+        - exact_release_0_search_graph_content_request_and_response_adapter_contract
+        - exact_two_operation_MMC_isolation_policy_with_before_after_and_restore_fingerprints
+        - end_to_end_actor_delegation_correlation_and_persistent_KDS_read_audit_mapping
+        - zero_live_KDS_MMC_network_statement_and_rollback_boundary
+      allowed_checks:
+        - read_current_source_tests_openspec_seed_and_A10P0_handoff
+        - run_existing_focused_unit_tests_only_if_repositories_remain_byte_for_byte_unchanged
+        - calculate_policy_fingerprints_without_state_change
+      forbidden_scope:
+        - any_repository_or_runtime_configuration_change
+        - any_live_KDS_or_MMC_request
+        - any_session_project_fixture_or_binding_write
+        - any_policy_seed_or_state_change
+        - any_intake_or_business_write
+        - credential_creation_disclosure_or_persistence
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      repository: GlobalCloud KDS
+      owner: KDS_canonical_read_and_audit_boundary
+      change_id: converge-kds-canonical-read-contract-a10p1
+      execution_mode: report_only_static_and_existing_evidence_reads
+      repository_file_allowlist: []
+      coordination_lock_id: none_report_only
+      baseline:
+        head: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        worktree: dirty_preexisting
+        ordinary_dirty_entries: 166
+        staged_entries: 0
+        opsx_lock: absent
+      required_report:
+        - one_proposed_canonical_release_0_API_revision_for_search_graph_and_wikipreview_content
+        - exact_adapter_mapping_from_knowledge_asset_extraction_blocks_cells_evidence_to_Brain_read_projections
+        - graph_projection_semantics_and_identity_without_second_ledger
+        - session_ref_and_session_scopes_visibility_decision
+        - per_read_audit_matrix_for_success_denied_not_found_with_actor_delegation_correlation_target
+        - existing_controlled_asset_and_inaccessible_object_requirements_for_future_separate_live_read
+        - zero_live_shared_KDS_access_and_rollback_boundary
+      allowed_checks:
+        - read_current_source_tests_openspec_A9_A10P0_handoffs_and_runtime_registration
+        - hash_existing_evidence_without_revision
+        - run_deterministic_static_parsing_without_cache_or_repository_write
+      forbidden_scope:
+        - any_repository_handoff_evidence_or_openspec_file_change
+        - any_live_shared_or_production_KDS_read_or_write
+        - any_database_creation_or_migration
+        - _registries/global-object-registry.yaml
+        - entities/green-supply-chain-role-view-entity.md
+        - any_role_view_registry_corpus_or_fixture_change
+        - credential_creation_disclosure_or_persistence
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      repository: GlobalCloud Brain
+      owner: Brain
+      change_id: repair-brain-read-baseline-a10p1-tranche-2
+      execution_mode: local_tdd_no_network_no_live_kds_mmc
+      coordination_lock_id: gke001-brain-a10p1-tranche2-lock
+      baseline:
+        head: 28d0eed530bce17c79651509973807e34e6205f4
+        origin_main: 28d0eed530bce17c79651509973807e34e6205f4
+        worktree: dirty_a7_frozen_delta
+        dirty_entries: 9
+        typecheck_errors: 86
+        typecheck_error_files: 25
+        opsx_lock: absent
+      product_test_file_allowlist:
+        - src/components/SpaceSelector.tsx
+        - src/components/SpaceSelector.test.tsx
+        - src/app/components/PromptAuthorizationComposer.tsx
+        - src/app/components/PromptAuthorizationComposer.test.tsx
+        - src/app/components/SearchTaskFlowStatus.test.tsx
+        - src/app/components/KnowledgeTree.tsx
+      governance_artifact_allowlist:
+        - .harness/opsx.lock
+        - .harness/runs/repair-brain-read-baseline-a10p1-tranche-2/**
+      product_test_file_limit: 12
+      required_work:
+        - preserve_all_nine_A7_baseline_entries_and_do_not_rewrite_unrelated_delta
+        - fix_only_type_and_interaction_baseline_errors_reachable_from_the_six_allowed_files
+        - keep_space_selection_as_local_UI_state_not_proof_of_authoritative_project_authorization
+        - keep_prompt_send_user_initiated_and_never_automatic
+        - keep_WikiPreview_AI_write_sidebar_outside_the_readonly_flow
+        - produce_standard_run_scoped_OpsX_handoff_evidence_index_acceptance_matrix_and_patch_record
+      validation:
+        - pnpm_typecheck_with_exact_remaining_error_count_and_files
+        - focused_tests_for_all_changed_product_and_test_files
+        - pnpm_check_kds_read_model_alignment
+        - existing_OpenSpec_strict_validation_without_spec_write
+        - CodeGraph_sync_status_and_run_scoped_evidence
+        - git_diff_check
+        - prove_no_network_LLM_KDS_MMC_or_prompt_send
+      ephemeral_files:
+        - path: .harness/opsx.lock
+          handling: execution_only_never_stage_commit_or_handoff
+      forbidden_scope:
+        - every_product_or_test_file_outside_product_test_file_allowlist
+        - openspec_or_docs_harness_evidence_timestamp_change
+        - tranche_3_or_global_typecheck_cleanup
+        - network_browser_or_live_KDS_MMC_execution
+        - prompt_send_or_LLM_call
+        - direct_KDS_or_MMC_client_change
+        - credential_creation_disclosure_or_persistence
+        - commit
+        - push
+        - restart
+        - deployment
+        - status_promotion
+  serial_gate:
+    order:
+      - collect_studio_mmc_and_kds_contract_convergence_reports_and_brain_tranche_handoff
+      - F013_independent_read_only_review_of_all_three_handoffs
+      - coordinator_freezes_exact_canonical_release_0_read_contract
+      - separate_live_read_control_requires_human_authorization_and_exact_controlled_objects
+      - real_search_wikipreview_chat_e2e_requires_later_separate_control
+    requires_all_three_handoffs: true
+    A10_live_read_automatic_authorization: false
+    real_authenticated_search_wikipreview_chat_e2e: false
+    Brain_tranche_completion_unlocks_live_read: false
+  handoff_requirements:
+    - exact_baseline_and_changed_scope
+    - contract_or_type_error_matrix
+    - authorization_and_identity_boundary
+    - audit_fact_source
+    - tests_and_validation_results
+    - CodeGraph_and_OpsX_evidence_when_applicable
+    - zero_network_or_live_data_statement
+    - rollback_boundary
+    - unresolved_risks
+    - status_partial_not_complete
+  authorization:
+    static_repository_and_control_read: true
+    report_only_contract_convergence: true
+    brain_six_file_local_tdd: true
+    brain_run_scoped_governance_evidence: true
+    Studio_MMC_or_KDS_repository_file_write: false
+    runtime_or_configuration_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    real_authenticated_e2e: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    report_lanes: withdraw_A10P1_report_scope_and_keep_live_read_unauthorized
+    brain_lane: revert_only_the_uncommitted_six_file_tranche_to_the_recorded_A7_baseline_and_release_lock
+    external_data: not_applicable_no_external_access_authorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

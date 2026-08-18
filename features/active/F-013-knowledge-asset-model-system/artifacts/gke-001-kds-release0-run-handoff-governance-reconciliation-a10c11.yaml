@@ -1,0 +1,113 @@
+gke001_kds_release0_run_handoff_governance_reconciliation:
+  id: GKE-001-COORDINATION-20260813-073-A10C11
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: implement-release0-canonical-read-facade
+  mode: local_governance_reconciliation_and_report_only_preflight
+  lane:
+    repository: KDS
+    repository_path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    change_id: reconcile-release0-run-handoff-15-a10c11
+    owner: KDS_release0_run_governance
+  baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+  run_root: .harness/runs/20260811-193752-implement-release0-canonical-read-facade
+  exact_paths:
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/acceptance-matrix.md
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence-index.yaml
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/acceptance-matrix-a10i1r1m1.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/changed-files.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/codegraph-a10i1r1.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/gates-and-hashes.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/review-results.md
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/source-hashes.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/evidence/test-results.txt
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/f013-handoff.md
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/handoff.yaml
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/knowledge-engineering-handoff.yaml
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/patches/api-server.patch
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/run.yaml
+    - .harness/runs/20260811-193752-implement-release0-canonical-read-facade/status-audit.yaml
+  reconciliation:
+    stale_before:
+      - run_status_in_progress_despite_archive_handoff_prepared
+      - f013_independent_review_pending_after_review_passed
+      - codegraph_targeted_review_pending_after_review_passed
+      - evidence_index_22_of_23_after_openspec_23_of_23
+      - api_server_patch_line_9_trailing_whitespace
+    corrected:
+      - run_status_partial_and_completion_not_complete
+      - explicit_program_release_feature_owner_repository_thread_and_current_baseline
+      - f013_and_matrix_reconciliation_review_passed
+      - evidence_index_23_of_23
+      - current_remaining_blockers_only
+      - one_nonsemantic_space_removed_from_patch
+    product_test_or_openspec_bytes_changed: false
+  sealed_candidate:
+    path_count: 15
+    sorted_nul_pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+    ordered_content_manifest_sha256: 78da3a8318b75e5b09af03255c645f7b44b3320f2aaf60d4873fe9f5dcb404a6
+    full_index_patch_bytes: 42237
+    full_index_patch_sha256: c5922a78eb14cd026149d4e766246230be51f135bd01fef807f4634fbadea935
+    deterministic_generation: 2_of_2_byte_identical
+    diff_check: pass
+    yaml_parse: pass
+  verification:
+    openspec_strict: pass
+    tasks_checked: 23/23
+    f013_first_batch_serial_gate: closed
+    matrix_reconciliation_review: technical_governance_reconciliation_verified_f013_independent_review_passed
+    codegraph_status: up_to_date
+    codegraph_files_nodes_edges: 632/5326/13240
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    focused_tests: inherited_41_passed_not_rerun_governance_only
+    relevant_non_database_tests: inherited_101_passed_not_rerun_governance_only
+    disposable_postgresql_migration: inherited_29_passed_cleanup_zero_not_rerun
+    migration: not_applicable_governance_only
+  isolation:
+    overlaps_release0_product_test_12: false
+    overlaps_release0_openspec_8: false
+    overlaps_stage_b: false
+    overlaps_role_view: false
+    overlaps_other_dirty_or_self_link: false
+  authorization:
+    local_run_governance_reconciliation: consumed_under_continuous_local_engineering
+    stage_or_commit: false
+    push: false
+    real_kds_or_mmc_write: false
+    credentials: false
+    deployment: false
+    status_promotion: false
+  forbidden:
+    - release0_product_test_12
+    - release0_openspec_8
+    - stage_b
+    - role_view
+    - other_dirty_or_self_link
+    - live_shared_or_production_api_database_corpus_or_credentials
+    - stage_commit_push_deploy_or_status_promotion
+  rollback:
+    uncommitted: restore_only_the_reconciled_run_package_files_to_their_pre_a10c11_bytes
+    future_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_review:
+    authority: F-013
+    mode: independent_read_only
+    question: whether_the_exact_15_path_release0_run_handoff_governance_unit_is_truthful_reproducible_isolated_and_eligible_for_a_future_separate_human_local_commit_authorization_request
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

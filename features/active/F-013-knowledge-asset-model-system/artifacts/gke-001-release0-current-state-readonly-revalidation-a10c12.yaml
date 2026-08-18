@@ -1,0 +1,58 @@
+gke001_release0_current_state_readonly_revalidation:
+  id: GKE-001-COORDINATION-20260813-076-A10C12
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  independent_review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  mode: report_only_current_state_revalidation
+  status_ceiling: partial
+  baselines:
+    kds: {head: 690ea04abf5485563b760d1bc1620493db017662, origin_main: 690ea04abf5485563b760d1bc1620493db017662, ahead_behind_staged: 0/0/0, ordinary_dirty: 191, opsx_lock: absent}
+    mmc: {head: b06f58a78ac7713197deed47d1125bec7a260e8c, origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c, ahead_behind_staged: 0/0/0, ordinary_dirty: 15, opsx_lock: absent}
+    studio: {head: ec1ff4d6a35844d499334caac74d99d46691034c, origin_main: ec1ff4d6a35844d499334caac74d99d46691034c, ahead_behind_staged: 0/0/0, ordinary_dirty: 0, opsx_lock: absent}
+    brain: {head: a22d190a487bd6da5b6fd8e02850901c8d4fe485, origin_main: a22d190a487bd6da5b6fd8e02850901c8d4fe485, ahead_behind_staged: 0/0/0, ordinary_dirty: 0, opsx_lock: absent}
+  lanes:
+    - lane: kds
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      owner: KDS
+      change_id: revalidate-release0-kds-current-state-a10c12
+      repository_allowlist: []
+      objective: [verify_two_route_contract, distinguish_committed_and_uncommitted_state, replay_safe_tests, report_acl_session_lineage_audit]
+    - lane: studio_mmc
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      owner: Studio_MMC
+      change_id: revalidate-release0-studio-mmc-current-state-a10c12
+      repository_allowlist: []
+      objective: [verify_committed_studio_bridge, verify_authoritative_project_session_entry, verify_mmc_relay_and_policy_gap]
+    - lane: brain
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      owner: Brain
+      change_id: revalidate-release0-brain-consumer-current-state-a10c12
+      repository_allowlist: []
+      objective: [verify_committed_consumer_contract, replay_safe_tests_typecheck_build, report_live_e2e_dependencies]
+  common_acceptance:
+    - exact_git_baseline_dirty_staged_and_opsx_lock
+    - exact_method_path_request_response_matrix
+    - canonical_manifest_hash
+    - no_second_ledger
+    - acl_before_read_search_count
+    - tenant_org_project_session_no_leak
+    - persistent_read_audit_fail_closed
+    - current_vs_inherited_evidence
+    - rollback_and_unresolved_risks
+  forbidden: [repository_write, stage, commit, push, fetch, merge, rebase, reset, revert, real_or_shared_kds_or_mmc_write, credential_change, production_migration, deploy, live_prompt_send, status_promotion]
+  authorization:
+    release0_product_test_12_local_commit: false
+    release0_openspec_8_local_commit: false
+    release0_run_handoff_15_local_commit: false
+    role_view_local_commit: false
+    mmc_source_or_policy_write: false
+    real_e2e: false
+  rollback:
+    repository: not_applicable_report_only
+    disposable_database: drop_and_verify_zero_remaining
+  status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}

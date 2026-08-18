@@ -1,0 +1,165 @@
+gke001_mmc_release0_runtime_policy_apply_preflight:
+  id: GKE-001-COORDINATION-20260814-003-A10I3H3P1
+  issued_at: 2026-08-14
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: report_only_human_authorization_preflight
+  authorization:
+    runtime_policy_apply: false
+    repository_write: false
+    push: false
+    live_kds_read_or_write: false
+    status_promotion: false
+  lane:
+    repository: MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: apply-release0-runtime-policy-a10i3h3
+    owner: MMC
+    independent_reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  source_policy_dependency:
+    local_commit: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    independent_postcommit_review: mmc_a10c7r4_exact_6_path_source_only_local_commit_postcommit_independent_review_passed_runtime_policy_unchanged
+    push_request_control: GKE-001-COORDINATION-20260814-002-A10C7R5
+    push_request_sha256: b43be7343f876aa77a8ff5e9e7ab20fbb8e55d4cbc54d9bbd77b2a7941288de9
+    required_before_runtime_apply:
+      - exact_source_commit_is_non_force_pushed_and_remote_main_equals_9f38048a83ae8d1945fd01f5085744bf3376646e
+      - f013_postpush_review_passes
+  kds_facade_dependency:
+    local_commit: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    independent_postcommit_review: kds_a10c13r2_exact_12_path_local_commit_postcommit_independent_review_passed
+    push_request_control: GKE-001-COORDINATION-20260814-001-A10C13R3
+    push_request_sha256: b572add39b94a64dde8a3ef78c7687d28c6f888332d23d446181ef3f0a49298a
+    required_before_runtime_apply:
+      - exact_facade_commit_is_non_force_pushed_and_remote_main_equals_a544f67e4c0ea30e7ff016723a17c0ae111fb131
+      - f013_postpush_review_passes
+  exact_current_mmc_baseline:
+    branch: main
+    head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty: 16
+    ordinary_nul_sha256: 35b24d22cb0dc2979c28a8f3ee76d27421953e8ff0c32c2fbb3c6f72c925ca55
+    expanded_dirty: 93
+    expanded_nul_sha256: db6ed85ac372538a7a1d8008d3927d5f2ad98fb6569574efe56d29a601ece207
+    opsx_lock: absent
+  exact_current_runtime_baseline:
+    health_http_status: 200
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    state_lock_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    api_count: 11
+    llm_count: 8
+    connector_id: kds_llm_wiki_api
+    connector_space: personal
+    delegated_operation_count: 17
+    delegated_operations_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    policy_audit_file: absent
+    policy_audit_lock: absent
+    recovery_intent: absent
+  exact_policy_delta:
+    ordering: preserve_the_existing_17_operations_then_append_in_this_order
+    append:
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/search
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/read
+    isolated_two_operation_sha256: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    target_operation_count: 19
+    target_delegated_operations_sha256: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    uniqueness_required: true
+  proposed_exact_runtime_action_if_separately_authorized:
+    transport: existing_local_mmc_control_plane
+    method: PATCH
+    path: /api/mmc/v1/registry/apis/kds_llm_wiki_api?space=personal
+    principal: existing_approved_admin_or_super_admin_identity_only
+    headers:
+      X-Correlation-ID: separately_sealed_unique_value
+      If-Match: '"sha256:40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e"'
+      Authorization: existing_approved_identity_without_disclosure_or_persistence
+    body: exact_19_operation_delegated_operations_array_defined_above
+    repository_allowlist: []
+    runtime_write_allowlist:
+      - runtime/state.json_via_guarded_registry_api_only
+      - runtime/policy-audit.jsonl_append_only
+      - runtime/.state.json.lock_coordination_sidecar
+      - runtime/.policy-audit.jsonl.lock_coordination_sidecar
+      - runtime/.state.json.recovery_ephemeral_and_absent_after_success
+    process_restart_required: false
+  acceptance_after_separately_authorized_action:
+    - response_http_200_and_etag_equals_target_fingerprint
+    - authenticated_registry_reread_returns_exact_19_operations_and_target_fingerprint
+    - api_count_remains_11_and_llm_count_remains_8
+    - every_non_target_registry_field_is_byte_or_semantically_unchanged
+    - exactly_one_prepare_and_one_commit_audit_are_appended_for_the_apply
+    - audit_contains_actor_correlation_previous_and_target_fingerprints_but_no_raw_policy_path_token_signature_or_credential
+    - recovery_intent_is_absent_after_success
+    - connector_policy_loader_observes_the_target_without_restart
+    - no_kds_studio_brain_or_other_shared_service_request_is_made
+  automatic_compensating_rollback_if_separately_authorized_action_fails_acceptance:
+    method: PATCH
+    path: /api/mmc/v1/registry/apis/kds_llm_wiki_api?space=personal
+    if_match: '"sha256:e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2"'
+    target_operation_count: 17
+    target_delegated_operations_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    preserve_audit_append_only: true
+    require_rollback_prepare_and_commit_or_bounded_failure_receipt: true
+    forbid_manual_state_edit: true
+  report_only_verification:
+    disposable_apply_and_rollback:
+      result: pass
+      operations: 17_to_19_to_17
+      api_count: 11
+      llm_count: 8
+      non_policy_state_unchanged: true
+      audit_actions: [prepare, commit, prepare, commit]
+      audit_raw_sensitive_leak: false
+      recovery_intent_after_completion: absent
+      disposable_root_cleanup: pass
+    focused_tests: 48_passed_32_deselected
+    full_runtime_tests: 160_passed
+    contract_test: pass
+    openspec_strict: pass
+    mmc_harness: pass
+    codegraph:
+      files: 119
+      nodes: 1108
+      edges: 2435
+      index: up_to_date
+      bounded_symbols: [_patch_delegated_operations, append_policy_audit, locked_state]
+    git_diff_check: pass
+    real_runtime_state_unchanged: true
+  forbidden:
+    - execute_runtime_policy_apply_without_separate_human_authorization
+    - execute_seed_force
+    - modify_runtime_state_by_hand
+    - create_disclose_persist_or_expand_credentials
+    - weaken_admin_role_if_match_audit_or_acl_boundaries
+    - call_kds_studio_brain_or_shared_services
+    - real_or_customer_data_write
+    - repository_content_edit_stage_commit_or_push
+    - force_push_merge_rebase_reset_or_revert
+    - restart_deploy_release_or_status_promotion
+  rollback:
+    report_only_preflight: withdraw_this_control_artifact
+    future_runtime_apply: exact_guarded_19_to_17_compensating_patch_above
+    audit: preserve_all_prepare_commit_rollback_and_failure_receipts_append_only
+  unresolved_risks:
+    - both_exact_source_commits_remain_local_and_require_separate_human_push_authorization
+    - runtime_policy_apply_remains_a_separate_high_risk_human_authorization_gate
+    - no_authenticated_nonproduction_live_kds_read_e2e_has_run
+    - kds_and_mmc_worktrees_remain_dirty_with_excluded_external_changes
+    - accepted_integrated_and_production_ready_statuses_remain_unauthorized
+  requested_f013_decision:
+    - verify_this_preflight_is_technically_and_governance_sufficient_for_a_later_exact_human_runtime_policy_apply_request
+    - do_not_authorize_or_execute_the_runtime_policy_apply
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    policy_applied: false
+    promotion: false

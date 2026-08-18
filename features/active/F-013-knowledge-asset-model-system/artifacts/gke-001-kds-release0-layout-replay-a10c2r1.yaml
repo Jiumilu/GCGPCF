@@ -1,0 +1,70 @@
+gke001_kds_release0_layout_replay:
+  id: GKE-001-COORDINATION-20260813-046-A10C2R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-045-A10C2
+    sha256: 6136ffe9fb507b3c1eb2b7341391f7f7c34312277993280f05b884224b89a1db
+  lane:
+    repository: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: replay-release0-product-test-12-sibling-layout-a10c2r1
+    owner: KDS
+    mode: report_only_precommit
+    repository_allowlist: []
+  baseline:
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 190
+    ordinary_nul_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    expanded_dirty: 449
+    expanded_nul_sha256: 631473d7122cebec505283a9476bf9a29053dae7da53c27635296d5ca7cb58b1
+  candidate:
+    path_count: 12
+    pathset_sha256: 1cedf0a22ee41b419c4d4d18016f32c3f786c37c30ffed22fa021000cdca171a
+    ordered_content_manifest_sha256: 2a551b9c66a37ca15372ffd0046e74fe03dd26cc602be83fe85483b97b18d969
+    patch_bytes: 137406
+    patch_sha256: 1ef8ee7b5553defd5d94ccb4d7f95f60729a608f0d9700bc3c1821a4c7b56fc4
+  sibling_runtime:
+    disposable_root_parent: /Users/lujunxiang/Projects/GlobalCloud V0.0.1
+    committed_symlink: shared
+    symlink_target: ../shared
+    expected_realpath: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/shared
+    sealed_files:
+      shared/python_utils/__init__.py: 61add96d11767f2bb58f14e3a819683579792682598690832c0976aa78a10b17
+      shared/python_utils/envelope.py: 4e4883b62ad3300d73658adcbf0c8a9500ae0676c1487686cc7845e91a2962e4
+    mutation_allowed: false
+  execution:
+    - verify_hard_baseline_and_lock_absent
+    - create_disposable_detached_copy_under_sibling_parent
+    - verify_shared_realpath_and_hashes
+    - regenerate_and_match_sealed_candidate_patch
+    - apply_exact_12_paths
+    - run_focused_41
+    - run_non_database_101
+    - run_disposable_postgresql_29
+    - reverse_candidate_and_verify_clean_baseline
+    - drop_disposable_database_and_remove_disposable_root
+    - verify_shared_hashes_and_main_worktree_unchanged
+  forbidden:
+    - kds_repository_write
+    - shared_runtime_write
+    - stage
+    - commit
+    - push
+    - role_view_or_other_dirty_change
+    - openspec_or_handoff_change
+    - live_or_shared_api_or_database_access
+    - deployment
+    - status_promotion
+  disposition:
+    all_pass: return_separate_human_local_commit_authorization_request
+    any_fail: no_commit_request_and_exact_cleanup_report
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

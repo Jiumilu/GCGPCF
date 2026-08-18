@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.md
 source_path: docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-10
 supersedes: []
 superseded_by: []
 ---
@@ -36,6 +36,12 @@ D189 承接 D188 授权边界预检查，对 D185 至 D188 的 no-write 证据�
 - `lifecyclePromotions=0`
 - `holdRequired=true`
 - `maximumState=review_ready_with_hold`
+
+## 2026-08-10 当前树写入声明扫描
+
+D189 现扫描 `fixtures/api`、`docs/harness/evidence` 与 `docs/harness/loops` 中全部 GCKF P0 JSON/Markdown，检查写入、response intake、action execution、runtime writeback、lifecycle promotion、P1 admission 与状态提升的肯定布尔声明及正数计数。当前共扫描 289 个文件，结果为 `positive_no_write_claims=0`。
+
+该扫描证明当前受控 GCKF 文档树没有自相矛盾的肯定执行声明；它不替代真实外部系统审计，也不把本地镜像写成真实 KDS API 事实。
 
 ## 连续性链路
 

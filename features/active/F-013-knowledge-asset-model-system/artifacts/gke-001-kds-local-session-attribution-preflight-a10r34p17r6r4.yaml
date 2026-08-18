@@ -1,0 +1,58 @@
+control:
+  id: GKE-001-COORDINATION-20260817-057-A10R34P17R6R4
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  change_id: attribute-kds-local-schema-sessions-a10r34p17r6r4
+  mode: report_only_no_connection_reseal_preflight
+  status: active_partial_not_complete
+  execute_authorized_by_current_round: true
+
+predecessor:
+  control: GKE-001-COORDINATION-20260817-056-A10R34P17R6R3
+  controller_sha256: 7344d8ef21c36da6fa1dc2730a64144a0d44d374200f3b40d6a89a9d6ae440ca
+  f013_result: independently_reviewed_technical_freeze_ready_for_new_exact_one_shot_authorization
+  prior_execution_attempt: stopped_before_controller_invocation_due_kds_dirty_drift
+
+kds_drift_reconciliation:
+  current_ordinary: {count: 287, sha256: 8b06b9c3777d8ccc7940e229bc93f674d38ff5b81011b1562ab07776ae1098c7}
+  current_expanded: {count: 577, sha256: 322d38cb205db114c0c0954ecb3c602320db13b862c5c9522c4188582986020c}
+  seven_status_pathset_sha256: 9e1dac3f8a6e51908a2a8adffdaac5336ff49869e55c05a2a48fb93af0e49a1a
+  seven_status_manifest_sha256: ab409184b04473738e7a4c01c0790e6c0cbaedae20ece2baf49a9547e3fa3f1d
+  subtraction_restores_prior_seal: true
+  overlap_with_controller_or_kds_product_scope: false
+  disposition: preserve_unmodified_external_domain_outputs
+
+external_content_reseal:
+  manifest_sha256: 33608acef60d121106cadad941254256055bfae4950f52d2eb770bf89ab2cfa9
+  changed_existing_files:
+    - {path: 工业绿链/reports/Hermes质量周报.md, sha256: 1c241db81a98765106c2b6bd838d0a1085a07ef70e125c95d2549ca68e567ebd}
+    - {path: 工业绿链/reports/项目监控仪表盘.md, sha256: 0fd7841204c24f5a0408a327f02b12506225faa94ab4b623c5c62b4f000280e2}
+    - {path: 工业绿链/体系/W01-W20覆盖率报告.md, sha256: 7bcee42c2316eed4adab01e9962e36556c29bc11dcf263eb1e50e0154a591552}
+    - {path: 工业绿链/月报/月报_2026-08.md, sha256: 10ef0a8f7f887481911535fe1794bd6af7885e61d17392e8e422dd3f0cabcd46}
+  disposition: preserve_unmodified_external_domain_outputs
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-attribution-controller-a10r34p17r6r4.py
+  sha256: e2f57b46e64a020ad5a966db5dd928ce7b888a0811bd49daa70ebb4ccf257280
+  self_test: pass
+  no_connection_preflight: pass
+  execute: authorized_pending_f013_freeze_review
+
+baselines:
+  gpcf: {head: 11d022b818332d2271a78b427c326eb454507a5a, origin_main: 11d022b818332d2271a78b427c326eb454507a5a, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 749, ordinary_dirty_sha256: d96982fe7f45c6d3835a15fbf125956755dfb75d0a966033200fba0afb048132, expanded_dirty_count: 766, expanded_dirty_sha256: 0423da61addd089fa1f20eca99d87e0ac351935d50e0a603099edcee96384aab, opsx_lock: absent}
+  kds: {head: 2ac85c55163b7acf0ede699184ac360579ccefaa, origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 287, ordinary_dirty_sha256: 8b06b9c3777d8ccc7940e229bc93f674d38ff5b81011b1562ab07776ae1098c7, expanded_dirty_count: 577, expanded_dirty_sha256: 322d38cb205db114c0c0954ecb3c602320db13b862c5c9522c4188582986020c, opsx_lock: absent}
+  mmc: {head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 10, ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9, expanded_dirty_count: 98, expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451, opsx_lock: absent}
+
+execution_boundaries:
+  connection_count_max: 1
+  transaction_count_max: 1
+  transaction: repeatable_read_read_only
+  retries: 0
+  forbidden: [migration, fixture, API, MMC, second_connection, session_termination, service_operation, commit, push, deploy, status_promotion]
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false

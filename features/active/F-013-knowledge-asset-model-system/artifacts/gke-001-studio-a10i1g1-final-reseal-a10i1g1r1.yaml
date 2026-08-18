@@ -1,0 +1,64 @@
+studio_a10i1g1_final_reseal:
+  id: GKE-001-COORDINATION-20260812-007-A10I1G1R1
+  issued_at: 2026-08-12
+  program_ref: GKE-001
+  feature_ref: F-013
+  parent_control:
+    id: GKE-001-COORDINATION-20260812-004-A10I1G1
+    sha256: f6f3ceeacda0fd8d6f969c164d9e9c481ddb87b8be0788c357f2b2734b79b8b9
+  repository:
+    name: GlobalCloud Studio
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+    baseline: 953d4d1baea201cc0fc822074bc74cad9299d0dd
+  change_id: reconcile-studio-committed-codegraph-evidence-a10i1g1
+  mode: governance_only_final_reseal
+  finding:
+    classification: sealed_round_changed_after_required_run_evidence_finalization
+    observed_gate_result: loop_and_harness_fail_on_lr877_persistent_scope_hash
+    product_test_diff_sha256: b01c524f6c122bb676e7b1a4d24c63ae341280cad6054dcbebc1b60a2f27d8d3
+  authorization:
+    reseal_existing_lr877_once: true
+    create_new_loop_round: false
+    modify_product_or_test: false
+    modify_openspec: false
+    modify_run_evidence_after_reseal: false
+    modify_root_evidence_index_after_reseal: false
+    live_kds_or_mmc_access: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  exact_write_allowlist:
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-877.json
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-877.md
+  required_sequence:
+    - verify_run_and_root_evidence_are_final_before_reseal
+    - capture_pre_reseal_hashes
+    - reseal_lr877_exactly_once
+    - do_not_modify_run_or_root_evidence_after_reseal
+    - run_validate_studio_loop_control
+    - run_harness_check
+    - run_openspec_strict
+    - run_focused_tests
+    - run_codegraph_status
+    - run_git_diff_check
+    - verify_product_test_diff_hash_unchanged
+    - verify_opsx_lock_absent
+  acceptance:
+    - lr877_is_sealed_and_valid
+    - studio_loop_control_passes
+    - harness_check_passes
+    - run_evidence_remains_8_of_8_with_four_machine_query_receipts
+    - independent_review_status_remains_pending_re_review
+    - product_test_diff_hash_is_unchanged
+  rollback:
+    restore_only_lr877_json_and_loop_document_to_their_pre_reseal_hashes
+  serial_gate:
+    f013_independent_readonly_rereview_required: true
+    real_e2e_authorized: false
+    next_product_lane_authorized: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

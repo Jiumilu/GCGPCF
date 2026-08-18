@@ -1,0 +1,109 @@
+gke001_continuous_execution_tranche:
+  id: GKE-001-COORDINATION-20260813-045-A10C2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: bounded_local_engineering
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-044-A10C1
+    sha256: c55c4dbdd9611eb2c310fdebb2e7f66c5f9e74ebf895856314eba20766055710
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    source_of_truth: KDS
+    coordinator: GPCF
+  authorization:
+    local_code_and_tests: true
+    release0_kds_commit: false
+    commit_or_push: false
+    real_kds_mmc_write: false
+    deployment_or_status_promotion: false
+  reconciled_baselines:
+    kds:
+      head: 690ea04abf5485563b760d1bc1620493db017662
+      origin_main: 690ea04abf5485563b760d1bc1620493db017662
+      ordinary_dirty: 190
+      ordinary_porcelain_nul_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    studio:
+      head: 89697af0ddc90214f14f661c88218052fea57c34
+      origin_main: 89697af0ddc90214f14f661c88218052fea57c34
+      ordinary_dirty: 0
+    brain:
+      head: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+      origin_main: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+      ordinary_dirty: 0
+    mmc:
+      head: b06f58a78ac7713197deed47d1125bec7a260e8c
+      origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+      ordinary_dirty: 14
+  lanes:
+    kds:
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      change_id: precommit-release0-product-test-12-a10c2
+      owner: KDS
+      mode: report_only_precommit
+      repository_allowlist: []
+      candidate_path_count: 12
+      forbidden:
+        - stage
+        - commit
+        - push
+        - stage_b_or_role_view_or_other_dirty_change
+      acceptance:
+        - exact_baseline_and_candidate_pathset
+        - deterministic_patch_twice
+        - patch_and_diff_check
+        - selective_clean_copy_apply_test_reverse
+        - no_repository_write
+    studio:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      change_id: bind-brain-iframe-to-canonical-session-read-a10c2
+      owner: Studio
+      mode: local_tdd_uncommitted
+      repository_allowlist:
+        - packages/client/src/views/BrainKdsBridgeView.vue
+        - tests/client/brain-kds-bridge-view.test.ts
+      forbidden:
+        - legacy_route_expansion
+        - kds_or_mmc_call
+        - session_or_binding_fixture_write
+        - commit
+        - push
+      acceptance:
+        - bridge_requires_exact_trusted_studio_session_id
+        - search_uses_sessions_sessionId_search
+        - graph_and_wiki_preview_use_sessions_sessionId_read
+        - no_page_content_legacy_fallback
+        - bounded_error_and_no_credential_disclosure
+        - focused_tests_build_diff_check
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      change_id: wait-for-studio-canonical-bridge-a10c2
+      owner: Brain
+      mode: frozen_report_only
+      repository_allowlist: []
+      dependency: studio_handoff_passed
+    mmc:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      change_id: preserve-mmc-dirty-baseline-a10c2
+      owner: MMC
+      mode: frozen_report_only
+      repository_allowlist: []
+  serial_gate:
+    - studio_canonical_iframe_handoff
+    - brain_session_bound_consumer_tdd
+    - f013_independent_review
+    - separate_kds_release0_commit_authorization
+    - separate_controlled_fixture_write_authorization
+    - authenticated_non_production_read_e2e
+  exclusions:
+    role_view_disposition: separate_authorization_required
+    other_dirty_disposition: owner_grouped_only
+    real_fixture_write: separate_authorization_required
+    deployment_or_promotion: separate_human_confirmation_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

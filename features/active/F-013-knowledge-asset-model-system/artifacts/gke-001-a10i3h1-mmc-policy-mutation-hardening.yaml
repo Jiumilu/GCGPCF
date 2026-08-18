@@ -1,0 +1,235 @@
+a10i3h1_mmc_policy_mutation_hardening:
+  id: GKE-001-COORDINATION-20260811-017-A10I3H1
+  issued_at: 2026-08-11
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-016-A10I3P0
+    sha256: 4a7de8561f2882940caea5b9ed55a790e53f9c44ea5cfb3c359e5ff9791b73df
+  independent_review:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    classification: a10i3p0_safety_preflight_verified_h1_local_tdd_allowed
+    findings:
+      fingerprints: verified
+      seed_force: forbidden
+      current_mutation_boundary: unsafe_for_policy_apply
+      h1: coordinator_may_authorize_local_tdd
+      h2: human_authorization_required
+      h3: human_authorization_required
+  frozen_policy_lineage:
+    current_operation_count: 17
+    current_delegated_operations_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    isolated_two_operation_sha256: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    future_target_operation_count: 19
+    future_target_delegated_operations_sha256: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    policy_delta_authorized: false
+  lane:
+    owner: MMC
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: harden-mmc-delegated-operation-policy-a10i3h1
+    openspec_change: openspec/changes/harden-mmc-delegated-operation-policy-a10i3h1
+    lock: gke001-a10i3h1-mmc-policy-hardening-lock
+    execution_mode: local_opsx_tdd_temporary_state_only_no_policy_delta
+    baseline:
+      branch: main
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      ahead: 0
+      behind: 0
+      dirty_entries: 8
+      staged_entries: 0
+      opsx_lock: absent
+    product_test_file_allowlist:
+      - runtime/app/api/v1/registry_apis.py
+      - runtime/app/gateway/policy_audit.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_registry_policy_audit.py
+    product_test_file_count: 4
+    baseline_sha256:
+      runtime/app/api/v1/registry_apis.py: 00c31afa1c06e6db016d956fb4b41fd07073ab4fcb9ba4e15a4c75a7c624db4f
+      runtime/app/gateway/policy_audit.py: absent
+      runtime/tests/test_api.py: 26769bcbe9a276b1504282ff3abf799b2746fe2c9ce46b241c5d2e9e289125d8
+      runtime/tests/test_registry_policy_audit.py: absent
+    hunk_ownership:
+      runtime/app/api/v1/registry_apis.py: delegated_operations_patch_guard_atomic_save_and_policy_audit_only
+      runtime/app/gateway/policy_audit.py: new_bounded_fail_closed_append_only_policy_audit_only
+      runtime/tests/test_api.py: registry_api_patch_tests_only_preserve_existing_a10i2_changes_byte_for_byte
+      runtime/tests/test_registry_policy_audit.py: new_policy_audit_and_failure_injection_tests_only
+    governance_file_allowlist:
+      - .harness/opsx.lock
+      - .harness/runs/*-harden-mmc-delegated-operation-policy-a10i3h1/**
+      - openspec/changes/harden-mmc-delegated-operation-policy-a10i3h1/**
+      - .codegraph/**
+    ephemeral_files:
+      - path: .harness/opsx.lock
+        handling: execution_only_never_stage_commit_or_handoff
+      - path: .codegraph/**
+        handling: ignored_local_index_execution_only_never_stage_commit_or_handoff
+  mutation_boundary:
+    applies_when: ApiPatch.delegated_operations_is_present
+    endpoint: PATCH_/api/mmc/v1/registry/apis/{api_id}?space={space}
+    principal_source: request.state.mmc_principal
+    allowed_direct_roles:
+      - admin
+      - super_admin
+    correlation_header:
+      name: X-Correlation-ID
+      required: true
+      minimum_length: 1
+      maximum_length: 255
+    compare_and_swap:
+      header: If-Match
+      exact_format: '"sha256:<64-lowercase-hex>"'
+      fingerprint_algorithm: sha256_of_json_dumps_delegated_operations_ensure_ascii_true_sort_keys_true_compact_separators_preserve_array_order
+      evaluate_inside_serialized_mutation_boundary: true
+      success_response_etag: '"sha256:<target-64-lowercase-hex>"'
+    deterministic_failures:
+      non_admin_role: 403_MMC_POLICY_MUTATION_FORBIDDEN
+      missing_if_match: 428_MMC_POLICY_PRECONDITION_REQUIRED
+      malformed_if_match: 400_MMC_POLICY_PRECONDITION_INVALID
+      stale_or_concurrent_if_match: 409_MMC_POLICY_CONFLICT
+      audit_or_storage_failure: 503_MMC_POLICY_MUTATION_UNAVAILABLE
+    serialization:
+      requirement: serialize_load_compare_audit_replace_and_recovery_across_concurrent_file_mode_mutations
+      lock_scope: exact_STATE_PATH
+      compare_must_happen_after_lock_acquisition: true
+    atomic_state_write:
+      requirement: same_directory_temporary_file_fsync_atomic_replace_and_parent_directory_fsync
+      direct_Path_write_text: forbidden
+      temporary_file_cleanup_on_every_failure: required
+    audit_protocol:
+      storage: dedicated_append_only_JSONL_test_redirectable_path
+      events:
+        - prepare
+        - commit
+        - rollback
+      sequence: prepare_then_atomic_replace_then_commit
+      commit_failure: atomically_restore_previous_state_then_append_rollback_then_return_503
+      prepare_failure: leave_previous_state_effective_and_return_503
+      replace_failure: leave_or_restore_previous_state_append_rollback_and_return_503
+      safe_fields:
+        - event
+        - timestamp
+        - correlation_id
+        - service_key_id
+        - role
+        - api_id
+        - space
+        - expected_fingerprint
+        - previous_fingerprint
+        - target_fingerprint
+        - outcome
+        - bounded_error_code
+      forbidden_fields:
+        - delegated_operations
+        - path_patterns
+        - raw_request_body
+        - authorization
+        - token
+        - signature
+        - credential
+  required_tests:
+    - admin_and_super_admin_can_reach_temporary_file_mode_mutation_guard
+    - every_other_direct_role_is_denied_before_state_load_or_write
+    - missing_malformed_stale_and_concurrent_If_Match_have_frozen_codes_and_zero_mutation
+    - fingerprint_uses_exact_canonical_algorithm_and_preserves_array_order
+    - successful_temporary_state_mutation_returns_exact_target_ETag
+    - prepare_replace_commit_sequence_is_deterministic
+    - prepare_audit_failure_leaves_previous_state_effective
+    - atomic_replace_failure_leaves_or_restores_previous_state_effective
+    - commit_audit_failure_restores_previous_state_before_503
+    - rollback_audit_failure_does_not_expose_raw_policy_and_previous_state_remains_effective
+    - temporary_files_and_locks_are_cleaned_after_success_failure_and_cancellation
+    - two_concurrent_updates_with_the_same_If_Match_produce_one_success_and_one_409
+    - non_delegated_operations_patch_behavior_is_preserved
+    - create_get_delete_and_release0_relay_regressions_remain_green
+    - policy_audit_contains_only_the_frozen_safe_fields
+  verification:
+    - focused_pytest_for_the_four_allowlisted_files
+    - MMC_TEST_MODE=true_python3_-m_pytest_runtime/tests_-q
+    - bash_runtime/scripts/contract_test.sh
+    - openspec_validate_harden-mmc-delegated-operation-policy-a10i3h1_--strict
+    - python3_scripts/validate_mmc_loop_harness.py
+    - codegraph_sync_status_and_bounded_queries
+    - git_diff_--check
+    - exact_pre_and_post_hashes_and_isolated_H1_patch
+    - exact_runtime_state_hash_unchanged
+    - exact_seed_hash_unchanged
+    - opsx_lock_absent_at_handoff
+  handoff_required:
+    - standard_evidence_index
+    - acceptance_matrix
+    - isolated_replayable_H1_patch_from_the_sealed_dirty_baseline
+    - exact_changed_files_and_hashes
+    - tests_contract_openspec_harness_codegraph
+    - principal_CAS_atomicity_and_audit_boundaries
+    - failure_injection_and_concurrency_evidence
+    - current_and_target_policy_fingerprints_unchanged
+    - runtime_state_and_seed_hashes_unchanged
+    - rollback
+    - authorization
+    - unresolved_risks
+    - status_ceiling
+  forbidden_scope:
+    - runtime/scripts/seed.sh
+    - runtime/state.json
+    - runtime/audit.log
+    - runtime/policy-audit.log
+    - runtime/app/core/delegation.py
+    - runtime/app/core/kds_delegation.py
+    - runtime/app/api/v1/connectors.py
+    - llm-wiki-openapi-schema.yaml
+    - runtime/tests/test_contract.py
+    - any_file_outside_the_allowlists
+    - any_seed_or_runtime_policy_delta
+    - execute_seed_force
+    - real_shared_or_production_MMC_or_KDS_access
+    - credentials_or_secret_creation_disclosure_or_persistence
+    - KDS_fact_or_business_state_write
+    - commit_push_restart_deploy_customer_release_or_status_promotion
+  serial_gate:
+    requires_H1_OpsX_handoff: true
+    requires_F013_independent_read_only_review: true
+    H2_seed_delta: false
+    H3_runtime_policy_apply: false
+    live_read: false
+    brain_change: false
+    real_authenticated_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_allowlisted_product_test_openspec_and_evidence_write: true
+    temporary_file_mode_tests: true
+    source_policy_change: false
+    runtime_registry_or_policy_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  rollback:
+    repository: revert_only_the_H1_delta_from_the_sealed_dirty_baseline_and_remove_new_H1_files_and_run_scoped_governance
+    runtime: no_runtime_or_policy_change_authorized
+    data: no_external_data_change_authorized
+    audit: temporary_test_audit_only_remove_with_the_test_directory
+    codegraph: remove_only_ignored_local_index_if_needed
+  unresolved_risks:
+    - H1_is_not_accepted_until_independent_review
+    - H2_and_H3_remain_human_authorization_required
+    - current_policy_remains_17_operations
+    - no_live_read_or_real_E2E_is_authorized
+    - kds_admission_remains_blocked_dirty_worktree
+    - localization_debt_keeps_project_group_readiness_at_watch_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

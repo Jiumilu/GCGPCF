@@ -1,0 +1,195 @@
+studio_intake_rework_amendment:
+  id: GKE-001-COORDINATION-20260810-002-A6
+  type: bounded_phase_1_rework_after_f013_readonly_review
+  engineering_domain: GKE-001
+  canonical_feature: F-013
+  issued_at: "2026-08-10T02:03:00+00:00"
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  lane:
+    name: studio
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    repository: GlobalCloud Studio
+    owner: Studio
+    change_id: integrate-studio-kds-knowledge-intake
+    coordination_lock_id: gke001-studio-kds-intake-a6-rework-lock
+  parent_controls:
+    a4:
+      id: GKE-001-COORDINATION-20260803-001-A4
+      path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-intake-amendment-a4.yaml
+      sha256: c1c7963b0f66e5c66d471817c0f25219fe1653182362c5b4b3fe01010bfc6f3a
+    a5:
+      id: GKE-001-COORDINATION-20260810-001-A5
+      path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-intake-reconciliation-a5.yaml
+      sha256: 8709a81b994eac6b91216d11cffb0e70115e450c776ac1081e5ac7972160a344
+    f013_review:
+      path: features/active/F-013-knowledge-asset-model-system/evidence/studio-a4-independent-review-20260810.md
+      decision: rework_required
+  baseline:
+    branch: main
+    head: 755f7b5d3583601418fc51abc828837d4dc1df30
+    upstream: origin/main
+    worktree: clean
+    opsx_lock: absent
+  status:
+    phase_1_rework: authorized_local_tdd_contract_ui_and_simulated_browser_only
+    phase_2: blocked
+    real_or_shared_kds_mmc_write: forbidden
+    brain_e2e: blocked
+    status_ceiling: partial
+    completion: not_complete
+  contract_correction:
+    supersedes_a4_requirement: tenant_and_org_match_authenticated_context
+    replacement:
+      - authenticated_user_tenant_matches_binding_tenant
+      - binding_tenant_and_org_match_authoritative_target_ref
+      - binding_permission_result_is_allowed
+      - authoritative_target_ref_is_present_and_project_scoped
+    reason: authenticated_user_mapping_has_no_org_membership_claim_and_must_not_invent_one
+    forbidden_interpretation:
+      - browser_supplied_org
+      - implicit_default_org
+      - new_local_org_ledger
+      - user_database_or_schema_expansion_in_this_rework
+  required_rework:
+    trusted_role:
+      requirement: explicitly_allow_only_admin_and_super_admin
+      negative_test: reject_out_of_contract_role_without_project_detail_leak
+    authoritative_scope:
+      requirement: parse_tenant_and_org_from_target_object_ref_and_match_binding_plus_authenticated_tenant
+      negative_tests:
+        - binding_org_mismatch_target_ref
+        - binding_tenant_mismatch_target_ref
+        - authenticated_tenant_mismatch_binding
+    canonical_read_contract:
+      revision: v0.1
+      manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+      typed_endpoint_descriptors:
+        - GET /api/v1/knowledge-assets/search
+        - GET /api/v1/knowledge-assets/{asset_id}
+        - GET /api/v1/knowledge-assets/{asset_id}/content
+        - GET /api/v1/knowledge-assets/{asset_id}/versions
+        - GET /api/v1/knowledge-assets/{asset_id}/extractions
+        - GET /api/v1/knowledge-assets/{asset_id}/extractions/{extraction_id}
+        - GET /api/v1/knowledge-assets/{asset_id}/extractions/{extraction_id}/content
+        - GET /api/v1/knowledge-assets/{asset_id}/evidence-links
+      projection_types:
+        - asset_status
+        - immutable_version
+        - extraction_run_and_content
+        - evidence_link_and_locator
+      execution_boundary: declarations_and_tests_only_no_network_call
+    deterministic_descriptor:
+      content_sha256: required_browser_computed_lowercase_hex
+      idempotency_key: must_include_content_sha256_and_authoritative_project_scope
+      server_validation: reject_missing_or_noncanonical_sha256
+    phase_1_file_boundary:
+      allowed_content_types: [text/plain, text/markdown]
+      max_bytes: 1048576
+      reject_before_prepare:
+        - empty_file
+        - unsupported_content_type
+        - oversize_file
+    simulated_browser_scenarios:
+      classification: simulated_only
+      required:
+        - success
+        - duplicate_same_idempotency_key
+        - conflict_409_visible_and_recoverable
+        - failures_429_502_503_504_preserve_guidance
+        - failed_processing_retry_remains_blocked_until_policy_admission
+        - unauthorized_403_and_missing_404_no_detail_leak
+        - cancellation_or_navigation_no_local_fact_ledger
+      assertion: test_titles_and_actual_mock_statuses_must_match
+  file_allowlist:
+    - .harness/opsx.lock
+    - packages/server/src/services/core/kds-client.ts
+    - packages/server/src/services/governance/knowledge-intake.ts
+    - packages/server/src/routes/governance/knowledge-intake.ts
+    - packages/client/src/components/studio/ProjectKnowledgeIntakePanel.vue
+    - tests/server/mmc-kds-knowledge-intake.test.ts
+    - tests/server/project-knowledge-intake-route.test.ts
+    - tests/client/project-knowledge-intake-panel.test.ts
+    - tests/e2e/project-session-knowledge-intake.spec.ts
+    - openspec/changes/integrate-studio-kds-knowledge-intake/**
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-875.json
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-875.md
+  ephemeral_files:
+    - path: .harness/opsx.lock
+      handling: execution_only_never_stage_commit_or_handoff
+  forbidden_scope:
+    - packages/server/src/middleware/user-auth.ts
+    - packages/server/src/db/hermes/users-store.ts
+    - database_schema_or_migration
+    - packages/client/src/components/studio/SessionObjectPanel.vue
+    - direct_Studio_to_KDS_connection
+    - executable_KDS_or_MMC_network_method_or_call
+    - MMC_or_KDS_configuration_change
+    - hermes_local_draft_modification_or_promotion
+    - local_knowledge_fact_ledger
+    - project_order_or_production_state_change
+    - long_term_memory_write
+    - meeting_document_evidence_candidate_or_relation_write
+    - credential_creation_disclosure_or_persistence
+    - real_corpus_or_disposable_shared_or_persistent_KDS_write
+    - Brain_KDS_MMC_GPCF_or_business_system_product_source_change
+    - LR_872_LR_873_or_LR_874_rewrite
+    - commit
+    - push
+    - deployment
+    - accepted_integrated_production_ready_or_customer_accepted_promotion
+  execution_protocol:
+    - acquire_exact_opsx_lock
+    - verify_clean_baseline_and_head
+    - update_existing_openspec_change_before_product_edits
+    - test_first_for_each_f013_finding
+    - seal_one_source_changing_LR_875_round
+    - release_opsx_lock_and_verify_absent
+    - return_handoff_then_freeze_again
+  verification_required:
+    - focused_unit_route_component_tests
+    - all_required_mocked_playwright_scenarios
+    - full_vitest
+    - npm_run_build
+    - openspec_strict
+    - codegraph_LR_875_sealed_and_valid
+    - validate_studio_loop_control
+    - studio_harness_check
+    - git_diff_check
+    - exact_changed_files_within_allowlist
+    - no_opsx_lock_in_final_scope
+    - no_KDS_MMC_request_or_write
+  handoff_requirements:
+    - amendment_id_and_sha256
+    - exact_changed_files
+    - finding_to_test_to_implementation_matrix
+    - focused_full_and_browser_test_results
+    - contract_revision_manifest_and_read_endpoint_descriptors
+    - trusted_role_and_authoritative_target_scope_evidence
+    - deterministic_sha_and_file_boundary_evidence
+    - simulated_only_classification
+    - no_local_fact_ledger_evidence
+    - rollback
+    - authorization_status
+    - unresolved_risks
+  rollback:
+    product: revert_only_uncommitted_A6_allowlisted_delta_to_clean_755f7b5d_baseline
+    governance: remove_uncommitted_LR_875_and_A6_OpenSpec_delta
+    external_data: not_applicable_no_external_write_authorized
+    published_history: do_not_rewrite_or_revert
+  authorization:
+    GPCF_governance_amendment_write: true
+    Studio_local_product_test_openspec_and_evidence_write: true
+    temporary_opsx_lock: true
+    phase_1_mocked_tests: true
+    phase_2_disposable_kds_write: false
+    real_or_shared_kds_mmc_write: false
+    database_or_storage_migration: false
+    relationship_or_candidate_confirmation: false
+    long_term_memory_write: false
+    business_state_change: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false

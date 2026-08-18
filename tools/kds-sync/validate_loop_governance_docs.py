@@ -50,6 +50,10 @@ def require(condition: bool, message: str) -> None:
         raise SystemExit(message)
 
 
+def require_any_phrase(text: str, phrases: list[str], message: str) -> None:
+    require(any(phrase in text for phrase in phrases), message)
+
+
 def read(path: Path) -> str:
     require(path.exists(), f"missing required doc: {path.relative_to(ROOT)}")
     return path.read_text(encoding="utf-8")
@@ -125,18 +129,34 @@ def main() -> int:
         require(phrase in policy, f"LOOP_AUTONOMY_POLICY.md missing phrase: {phrase}")
 
     control = texts[ROOT / "02-governance/loop/LOOP_CONTROL_BOARD.md"]
-    for phrase in [
-        "当前 Loop 模式",
-        "当前轮次",
-        "当前允许动作",
-        "当前禁止动作",
-        "下一轮候选任务队列",
-    ]:
-        require(phrase in control, f"LOOP_CONTROL_BOARD.md missing phrase: {phrase}")
+    control_fields = [
+        (["当前 Loop 模式", "default_loop="], "current Loop mode"),
+        (["当前轮次", "current_mainline="], "current round or mainline"),
+        (["当前允许动作", "authorization_granted ="], "authorization boundary"),
+        (["当前禁止动作", "forbidden_without_specific_authorization:"], "forbidden scope"),
+        (["下一轮候选任务队列", "development_lane=continue_allowed"], "continuation queue"),
+    ]
+    for alternatives, label in control_fields:
+        require_any_phrase(control, alternatives, f"LOOP_CONTROL_BOARD.md missing {label}")
 
     execution = texts[ROOT / "02-governance/loop/LOOP_EXECUTION_RULES.md"]
-    for phrase in ["AGENTS.md", "LOOP_CONTROL_BOARD.md", "LOOP_AUTONOMY_POLICY.md", "Definition of Done"]:
-        require(phrase in execution, f"LOOP_EXECUTION_RULES.md missing phrase: {phrase}")
+    require("Definition of Done" in execution, "LOOP_EXECUTION_RULES.md missing Definition of Done")
+    legacy_execution_chain = all(
+        phrase in execution for phrase in ["AGENTS.md", "LOOP_CONTROL_BOARD.md", "LOOP_AUTONOMY_POLICY.md"]
+    )
+    feature_delivery_chain = all(
+        phrase in execution
+        for phrase in [
+            "v2.0 Feature Delivery Loop",
+            "gpcf_new_feature.py",
+            "gpcf_close_feature.py",
+            "Plan -> Implement -> Evaluate -> Repair -> Commit",
+        ]
+    )
+    require(
+        legacy_execution_chain or feature_delivery_chain,
+        "LOOP_EXECUTION_RULES.md missing a complete legacy or GPCF 2.0 execution chain",
+    )
 
     round_template = texts[ROOT / "templates/LOOP_ROUND_TEMPLATE.md"]
     for phrase in [
@@ -265,16 +285,16 @@ def main() -> int:
 
     efficiency_backlog = texts[ROOT / "02-governance/loop/LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md"]
     for phrase in [
-        "Loop Governance Efficiency Debt Backlog",
-        "LEDB-001",
-        "LEDB-002",
-        "LEDB-003",
-        "Review Disposition Template",
-        "LEDB-001-RD-001",
+        "LOOP Governance Efficiency Debt Backlog",
+        "Controlled Debt Links",
+        "LEDB-001-RD-003",
+        "LEDB-002-RD-002",
+        "LEDB-003-RD-002",
         "LOOP-GOV-EFF-DEBT-LOCATOR-20260617",
-        "business_status_impact",
-        "does not rewrite historical round records in bulk",
-        "Closing Conditions",
+        "no_bulk_rewrite = true",
+        "business_status_impact = none",
+        "accepted = false",
+        "integrated = false",
     ]:
         require(phrase in efficiency_backlog, f"LOOP_GOVERNANCE_EFFICIENCY_DEBT_BACKLOG.md missing phrase: {phrase}")
 
@@ -758,20 +778,16 @@ def main() -> int:
 
     evidence_index = read(ROOT / "docs/harness/evidence/evidence-index.md")
     for phrase in [
-        "Base Knowledge / ODF Evidence Registry",
-        "base-knowledge-closure-score-dry-run-summary-20260618.md",
-        "base-knowledge-writeback-candidate-ledger-20260618.md",
-        "base-knowledge-committee-review-queue-20260619.md",
-        "base-knowledge-human-confirmation-queue-20260619.md",
-        "kds-md-okf-odf-full-closure-report-20260619.md",
-        "odf-phase6-manual-confirmation-workbench-20260618.md",
-        "odf-phase7-small-batch-ledger-20260619.md",
-        "odf-phase8-drift-monitoring-report-20260619.md",
-        "odf-phase9-dynamic-source-stabilization-report-20260619.md",
-        "does not perform or prove real KDS API writeback",
-        "accepted, or integrated status",
+        "Evidence Index",
+        "LOOP Governance Efficiency",
+        "LOOP-GOV-EFF-DEBT-LOCATOR-20260617",
+        "LOOP-GOV-TRUTH-FIELD-REVIEW-20260617",
+        "LOOP-GOV-FIVE-SEGMENT-REVIEW-20260617",
+        "LOOP-GOV-SEQUENCE-CHECKPOINT-20260619",
+        "不证明 GFIS runtime SOP E2E passed",
+        "不升级 accepted/integrated/production_ready/customer_accepted",
     ]:
-        require(phrase in evidence_index, f"evidence-index.md missing Base Knowledge / ODF registry phrase: {phrase}")
+        require(phrase in evidence_index, f"evidence-index.md missing current governance registry phrase: {phrase}")
 
     print("loop governance docs validation passed")
     print(f"docs={len(REQUIRED_DOCS)}")

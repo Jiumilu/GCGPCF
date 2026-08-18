@@ -1,0 +1,124 @@
+gke001_kds_green_supply_chain_role_view_owner_isolation:
+  id: GKE-001-COORDINATION-20260813-068-A10C9
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: report_only_owner_isolation
+  source_thread_id: 019eede2-75a3-7943-9a77-a210a40a569b
+  lane:
+    repository: KDS
+    repository_path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    implementation_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    change_id: bind-green-supply-chain-role-view-to-gke001-a10c9
+    owner: KDS_role_view_governance
+  objective:
+    statement: 把绿色供应链角色视图作为受控 KDS Entity 投影纳入 GKE-001 知识工程体系
+    source_of_truth: KDS
+    canonical_control_plane: GPCF
+    product_delta: local_controlled_entity_and_registry_binding_only
+  required_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+  exact_paths:
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+  candidate_fingerprints:
+    path_count: 2
+    sorted_nul_pathset_sha256: a0fe0ce238638f66e03c77d3bc8758cc6a9576bcb6c7d444039a4cabe13a6f5c
+    ordered_content_manifest:
+      - path: _registries/global-object-registry.yaml
+        sha256: 76709ef4d98ccdd6f26ffab3bde171df0afec1dad7a8aa31a32756d63db1322f
+      - path: entities/green-supply-chain-role-view-entity.md
+        sha256: ce44a121e5166f93058f5004b4f51684707d431c7c6ef04780261e5c21f8b590
+    ordered_content_manifest_sha256: ff43f17a16e82969fc0c93cd0724423872e94fb82b6e15212ba324cb37b0c5b5
+    full_index_patch_bytes: 5411
+    full_index_patch_sha256: 1856fbd5b34a7315e83d4bc5ebff0120264ac5a2531e193ed36179b5e30d005d
+    diff_check: pass
+    apply_source_identity: 2/2
+    reverse_baseline_identity: 2/2
+  authoritative_algorithms:
+    pathset: temporary_index_stage_exact_paths_then_git_diff_cached_name_only_z_then_nul_sort_then_sha256_raw_bytes
+    ordered_content_manifest: sha256sum_exact_paths_in_control_order_then_sha256_manifest_bytes
+    patch: temporary_index_git_diff_cached_binary_full_index_raw_bytes_then_byte_count_and_sha256
+    dirty_baseline: git_status_porcelain_v1_z_and_git_status_porcelain_v1_z_untracked_files_all_then_sha256_raw_bytes
+  semantic_boundary:
+    entity_id: KDS-GSC-ROLE-VIEW-20260701
+    entity_type: kds_role_view
+    entity_status: controlled_candidate
+    engineering_domain: GKE-001
+    write_boundary: no_write
+    confirmation_status: human_review_pending
+    registry_role: governance_index_only
+    creates_real_account: false
+    configures_production_acl: false
+    confirms_business_fact: false
+    performs_kds_api_sync: false
+    resumes_gckf_d190: false
+    gckf_resume_triggers: 0/4
+  controlled_sources:
+    canonical_spec: 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md
+    controlled_mirror: 03-data-ai-knowledge/GlobalCloud绿色供应链角色视图KDS实体产物.md
+    loop_evidence: docs/harness/loops/loop-round-GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001.md
+    local_validator: tools/kds-sync/validate_green_supply_chain_role_view_kds_entity_20260701.py
+  verification:
+    role_view_entity_gate: pass
+    registry_yaml_parse: pass
+    entity_frontmatter: pass
+    green_supply_chain_24x11_governance: pass
+    green_supply_chain_24x11_tests: 5_passed
+    document_pollution: pass
+    kds_token: pass
+    kds_token_fingerprint: bfd9553d
+    loop_document_gate: rework_required
+    loop_document_gate_sole_reason: localization_debt
+    d190_composite_replay: blocked_by_preexisting_localization_debt
+    d190_role_view_specific_finding: none
+  isolation:
+    overlaps_stage_b_commits: false
+    overlaps_release0_product_test_12: false
+    overlaps_release0_governance: false
+    overlaps_other_dirty_groups: false
+    preserves_self_link: GlobalCloud KDS
+    preserves_all_unrelated_dirty: true
+  forbidden:
+    - stage_or_commit_before_separate_human_authorization
+    - release0_product_test_or_governance_paths
+    - stage_b_paths
+    - other_dirty_owner_groups
+    - self_link_modification_or_deletion
+    - real_account_or_iam_creation
+    - production_acl_or_permission_change
+    - real_kds_mmc_api_or_database_write
+    - business_fact_confirmation
+    - push_or_deployment
+    - accepted_integrated_production_ready_or_customer_accepted_promotion
+  rollback:
+    current_report_only_scope: not_applicable_no_kds_write
+    future_precommit_abort: unstage_only_exact_two_paths_and_preserve_worktree_bytes
+    future_postcommit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_review:
+    authority: F-013
+    mode: independent_read_only
+    question: whether_exact_two_path_role_view_owner_unit_is_eligible_for_a_separate_human_local_commit_authorization_request
+  authorization:
+    local_commit: false
+    push: false
+    real_write: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    classification: controlled_local_entity_candidate
+    ceiling: partial

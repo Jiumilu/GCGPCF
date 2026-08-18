@@ -1,0 +1,185 @@
+gke001_application_program_roadmap:
+  id: GKE-001-APPLICATION-ROADMAP-V1
+  version: v1.0
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  control:
+    coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    coordinator_role: sole_gke001_program_coordinator
+    canonical_review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    canonical_feature: F-013
+    canonical_contract_revision: v0.1
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    knowledge_source_of_truth: KDS
+    authorization_source: MMC
+    customer_workbench: Studio
+    analysis_plane: Brain
+  source_documents:
+    - 01-architecture/GlobalCloud 项目群总体方案.md
+    - GlobalCloud 项目群实施方案.md
+    - 03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md
+    - 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md
+    - 02-governance/loop/GKE-001长期实施调度提示词.md
+  releases:
+    release_0:
+      name: customer_readonly_pilot
+      user_flow: authenticated_project_to_search_wikipreview_chat_with_citations
+      real_kds_write: false
+      exit_state: real_verified_customer_readonly_pilot_ready
+      requires:
+        - exact_authenticated_tenant_org_project_binding
+        - mmc_delegated_read
+        - kds_acl_search_graph_page_content
+        - brain_typecheck_tests_build
+        - studio_real_browser_network_evidence
+        - f013_independent_acceptance
+    release_1:
+      name: customer_intake_pilot
+      user_flow: text_markdown_intake_version_extraction_evidence_retry
+      file_boundary: utf8_text_or_markdown_max_1_mib
+      exit_state: real_verified_customer_intake_pilot_ready
+      requires:
+        - release_0
+        - mmc_intake_complete_upload_retry_admission
+        - kds_asset_version_hash_extraction_audit_outbox
+        - studio_progress_duplicate_failure_recovery
+        - f013_independent_acceptance
+    release_2:
+      name: evidence_and_candidate_review
+      user_flow: pdf_ocr_transcription_candidate_human_review
+      exit_state: real_verified_candidate_review_pilot_ready
+      requires:
+        - release_1
+        - candidate_write_contract
+        - evidence_locator_validation
+        - human_approval_rejection_audit
+    release_3:
+      name: governed_long_term_memory_and_business_collaboration
+      exit_state: controlled_customer_use
+      requires:
+        - release_2
+        - confirmed_candidate_only
+        - citation_scope_expiry_and_supersede
+        - business_object_owner_authorization
+  waves:
+    A8:
+      goal: governance_handoff_lock_session_and_network_evidence_cleanup
+      status: active_partial_not_complete
+      real_e2e_authorized: false
+    A9:
+      goal: kds_stage_b_and_mmc_read_admission
+      entry_gate: A8_f013_review
+      exit_gate: acl_audit_lineage_migration_dry_run_rollback
+    A10:
+      goal: studio_and_brain_real_readonly_application
+      entry_gate: A9_read_admission
+      exit_gate: release_0_real_browser_e2e
+    A11:
+      goal: mmc_intake_complete_upload_retry_admission
+      entry_gate: release_0
+      exit_gate: delegation_rate_circuit_stream_failure_contracts
+    A12:
+      goal: studio_customer_intake_workbench
+      entry_gate: A11
+      exit_gate: release_1_real_browser_e2e
+    A13:
+      goal: brain_candidate_and_studio_human_review
+      entry_gate: release_1
+      exit_gate: release_2_human_review_audit
+    A14:
+      goal: controlled_customer_pilot
+      entry_gate: release_2_or_approved_release_1_scope
+      exit_gate: human_customer_test_approval
+    A15_plus:
+      goal: project_group_expansion_and_long_term_memory
+      entry_gate: customer_pilot_evidence
+      exit_gate: project_specific_real_verified
+  implementation_lanes:
+    gpcf_f013:
+      responsibility: canonical_contract_manifest_status_and_independent_acceptance
+      product_runtime_write: false
+    kds:
+      responsibility: assets_versions_extractions_evidence_candidates_audit_memory
+      forbidden: automatic_business_state_change
+    mmc:
+      responsibility: identity_delegation_acl_gateway_rate_circuit
+      forbidden: knowledge_asset_source_of_truth
+    studio:
+      responsibility: customer_task_workbench_intake_preview_review_recovery
+      forbidden: local_knowledge_fact_ledger
+    brain:
+      responsibility: authorized_search_graph_page_content_chat_candidate_analysis
+      forbidden: business_fact_persistence_or_automatic_confirmation
+    business_systems:
+      responsibility: authoritative_projects_orders_production_customers_suppliers_assets
+      forbidden: replacing_authoritative_data_with_ai_analysis
+  project_scope:
+    - AAAS
+    - Brain
+    - WAS
+    - XiaoC
+    - WAES
+    - GPC
+    - Studio
+    - GPCF
+    - XWAIL
+    - GFIS
+    - MMC
+    - KDS
+    - XiaoG
+    - PVAOS
+    - SOP
+    - PKC
+    - XGD
+    - ICP
+  dispatch_policy:
+    max_parallel_implementation_lanes: 3
+    max_product_test_files_per_lane_tranche: 12
+    opsx_required: true
+    harness_independent_review_required: true
+    overlapping_file_scope_forbidden: true
+    direct_cross_repo_source_copy_forbidden: true
+    local_failure_blocks_only_affected_capability: true
+    global_stop_conditions:
+      - canonical_contract_or_manifest_drift
+      - identity_or_acl_boundary_violation
+      - kds_fact_integrity_or_audit_failure
+      - production_or_sensitive_data_risk
+  handoff_required_fields:
+    - thread_id
+    - change_id
+    - feature_ref
+    - baseline
+    - exact_changed_files
+    - tests_typecheck_build
+    - api_contract
+    - acl_read_and_count
+    - audit_and_lineage
+    - migration_dry_run
+    - rollback
+    - authorization
+    - unresolved_risks
+    - status_ceiling
+  acceptance_labels:
+    - real_verified
+    - real_partial
+    - simulated_only
+    - blocked
+    - not_implemented
+    - not_authorized
+  authorization:
+    local_scoped_development: true
+    local_tests_build_and_dry_run: true
+    disposable_test_fixture_with_cleanup: true
+    production_or_shared_kds_write: false
+    long_term_memory_write: false
+    relationship_confirmation: false
+    business_state_change: false
+    deployment: false
+    customer_release: false
+    accepted_integrated_production_ready_customer_accepted_promotion: false
+  current_status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    baseline_reverification_before_each_dispatch: required

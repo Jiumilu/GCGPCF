@@ -1,0 +1,64 @@
+gke001_studio_canonical_bridge_local_commit:
+  id: GKE-001-COORDINATION-20260813-049-A10C2S1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-045-A10C2
+    sha256: 6136ffe9fb507b3c1eb2b7341391f7f7c34312277993280f05b884224b89a1db
+  independent_review:
+    authority: F-013
+    result: studio_a10c2_canonical_session_bridge_technical_review_passed_uncommitted
+  lane:
+    repository: Studio
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: commit-studio-canonical-bridge-a10c2s1
+    owner: Studio
+  required_baseline:
+    branch: main
+    head: 89697af0ddc90214f14f661c88218052fea57c34
+    origin_main: 89697af0ddc90214f14f661c88218052fea57c34
+    ahead_behind_staged: 0/0/0
+    opsx_lock: absent
+  exact_paths:
+    packages/client/src/views/BrainKdsBridgeView.vue: a02e3435f9485eb541bd800adeb8384a375e6e8a5a83f21d60069d2518e0b9fb
+    tests/client/brain-kds-bridge-view.test.ts: 941d24d061c7a8b164dacc97851125a1730515ff17e916890aefbb3fee99f5d7
+  verified_evidence:
+    focused_combined_tests: 40_passed
+    build: pass
+    diff_check: pass
+    f013_scope_and_authority_review: pass
+  execution:
+    - reverify_baseline_exact_two_paths_hashes_and_lock_absent
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_two_paths_only
+    - verify_cached_scope_and_diff_check
+    - create_exactly_one_local_commit
+    - verify_parent_scope_and_commit_diff_check
+    - release_opsx_lock_and_return_report_only_receipt
+  commit:
+    count: 1
+    subject: "feat(studio): bind Brain to canonical session reads"
+    push: false
+  abort_on_any_mismatch:
+    - unstage_exact_two_paths_only
+    - preserve_working_file_content
+    - release_opsx_lock
+    - create_no_commit
+  forbidden:
+    - content_edit
+    - kds_mmc_or_brain_change
+    - fixture_or_external_data_write
+    - push
+    - deployment
+    - real_e2e
+    - later_unit
+    - status_promotion
+  rollback:
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

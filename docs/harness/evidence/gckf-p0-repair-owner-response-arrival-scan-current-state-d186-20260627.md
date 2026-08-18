@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.md
 source_path: docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-27
+last_reviewed: 2026-08-10
 supersedes: []
 superseded_by: []
 ---
@@ -67,3 +67,10 @@ D186 承接 D185 的会话主线接管证据，只做真实 repair owner respons
 ## 下一轮
 
 若四项 arrival signals 全部到达并通过 WAES 与人工确认，进入 response intake precheck；未到达前继续保持 hold。
+
+## 2026-08-10 到达声明漂移扫描
+
+- D186 validator 已从固定 response 文件名检查扩展为当前 GCKF JSON/Markdown 的精确肯定性声明扫描。
+- 扫描键包括 `actualRepairOwnerResponseReceived`、`responseArrivalConfirmed`、`signedPackagePresent`、`waesReviewNotePresent`、`humanConfirmationPresent` 与 `responseIntakeAllowed`。
+- 当前扫描结果为 `true_trigger_claims=0`；模板、preview、待人工复核声明和布尔值 `false` 不构成到达信号。
+- 后续任一受控 GCKF 文件出现上述键的 `true` 声明时，D186 必须失败并要求新的 arrival scan refresh；旧 `0/4` hold 不得继续沿用。

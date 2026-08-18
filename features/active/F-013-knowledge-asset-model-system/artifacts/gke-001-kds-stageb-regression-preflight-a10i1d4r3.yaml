@@ -1,0 +1,83 @@
+kds_stageb_regression_preflight:
+  id: GKE-001-COORDINATION-20260812-019-A10I1D4R3
+  issued_at: 2026-08-12
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  openspec_change: extend-kds-document-extraction
+  lane:
+    owner: KDS
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    change_id: preflight-stageb-regression-2-a10i1d4r3
+  dependency:
+    accepted_local_core_commit: 7fb477030f5278faf55d6d16ff3874469704610d
+    parent: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    review: local_core_commit_independent_review_passed
+  baseline:
+    head: 7fb477030f5278faf55d6d16ff3874469704610d
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 1
+    behind: 0
+    staged: 0
+    ordinary_dirty: 181
+    ordinary_porcelain_sha256: ff8d2f7e7260e53a6b4f3ce8dff8c38e85f04e2bd8ab81dd4802e796900a73ff
+    expanded_dirty: 453
+    expanded_porcelain_sha256: 6dd4a589fbf948b060cb38c369b3d1cc4e352feca73106eccec283600f55921b
+    opsx_lock: absent
+  candidate_unit:
+    name: stageb_regression_2
+    repository_write_allowlist: []
+    source_paths:
+      - tests/test_knowledge_intake_api.py
+      - tests/test_knowledge_intake_postgres.py
+    sorted_nul_pathset_sha256: ffeab20c1c54610428c2da48d4dc6b83275affdaa5a69a1b969b005af008b66f
+    canonical_patch_bytes: 38511
+    canonical_patch_sha256: 1e7ecd30fbb740fcf2217224de107adb0c960d5babfc71aaaee036b9fae90f7e
+    future_commit_subject: "test(kds): cover stage b intake integration"
+  authorization:
+    mode: report_only_disposable_preflight
+    read_kds_git_objects: true
+    create_external_patch: true
+    selective_clean_copy: true
+    disposable_postgresql_database: true
+    kds_repository_write: false
+    stage: false
+    commit: false
+    push: false
+    live_or_shared_access: false
+    deploy: false
+    status_promotion: false
+  required_verification:
+    - Generate the two-path patch twice and prove byte identity.
+    - Apply it to a selective clean copy of commit 7fb477030f5278faf55d6d16ff3874469704610d.
+    - Run the exact relevant non-database suite and expect 66 passed.
+    - Run the exact PostgreSQL and migration suite in one uniquely named disposable database and expect 23 passed.
+    - Prove database and disposable filesystem cleanup count zero.
+    - Prove ACL-before-read/search/count, active extraction, lineage, audit/outbox, stale lease and append-only rollback tests remain present and green.
+    - Reconfirm the KDS worktree byte-for-byte status snapshot and all exclusions before and after.
+  exclusions:
+    - stageb_core_12_already_committed
+    - stageb_openspec_9
+    - stageb_run_handoff_13
+    - release0_a10i1_paths
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+    - any_other_dirty_scope
+  codegraph:
+    impact: none_report_only_no_repository_write
+    sync_required: false
+  rollback:
+    repository: not_applicable
+    disposable_copy: remove_exact_task_root
+    database: drop_exact_disposable_database_and_verify_absent
+  handoff:
+    kind: report_only_task_receipt
+    independent_reviewer: F-013
+    commit_authorization_after_review: human_required
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    execution: report_only_preflight_authorized

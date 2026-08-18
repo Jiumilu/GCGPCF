@@ -1,0 +1,215 @@
+a7_governance_cleanup_rework_amendment:
+  id: GKE-001-COORDINATION-20260811-002-A8
+  type: governance_handoff_and_disposable_session_cleanup_only
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  canonical_feature: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-001-A7
+    sha256: 04e27fd23e1a3fd32a10bd85aa4f387af56668d938c44943f575340d3b8f8668
+  independent_review:
+    source_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    overall: partial_rework_required
+    real_authenticated_e2e_authorized: false
+    brain:
+      technical_result: tranche_1_revalidation_passed
+      focused_tests: 59_of_59
+      alignment: pass
+      openspec_strict: pass
+      diff_check: pass
+      remaining_type_errors: 86
+      governance_gaps:
+        - missing_standard_run_scoped_opsx_handoff
+        - execution_only_opsx_lock_still_present
+    studio:
+      technical_result: authenticated_entry_reached_but_not_accepted
+      authenticated_context: super_admin_at_gehua
+      target_binding: temporary_gehua_gehua_binding_removed
+      governance_gaps:
+        - disposable_local_Hermes_session_still_present
+        - deletion_receipt_missing
+        - valid_network_capture_missing
+  parallel_rework:
+    enabled: true
+    requires_both_handoffs_before_next_gate: true
+  lanes:
+    brain:
+      thread_id: 019edfb4-21ef-77e1-afdb-891df25c4068
+      repository: GlobalCloud Brain
+      owner: Brain
+      change_id: close-brain-a7-tranche1-opsx-handoff-a8
+      execution_mode: governance_only_no_product_or_openspec_edits
+      coordination_lock_id: gke001-brain-baseline-repair-a7-lock
+      run_id: 20260811-repair-brain-read-baseline-a7-tranche-1
+      preexisting_frozen_delta:
+        product_and_test_files:
+          - src/app/App.tsx
+          - src/app/components/ChatPanel.test.tsx
+          - src/app/components/ChatPanel.tsx
+          - src/app/components/KnowledgeGraph.test.tsx
+          - src/app/components/SearchPanel.test.tsx
+          - src/app/components/SearchPanel.tsx
+          - src/app/components/WikiPreview.tsx
+        generated_evidence:
+          - docs/harness/evidence/read-closure-matrix-20260622.json
+        openspec:
+          - openspec/changes/repair-brain-read-baseline-a7/**
+        handling: preserve_exactly_no_new_edits
+      file_allowlist:
+        - .harness/evidence-index.yaml
+        - .harness/opsx.lock
+        - .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/handoff.yaml
+        - .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/evidence-index.yaml
+        - .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/acceptance-matrix.md
+        - .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/patches/tranche-1.patch
+        - .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/workspaces/brain-tranche-1/agent-result.yaml
+        - .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/evidence/final-verification.txt
+      required_work:
+        - create_nonempty_run_scoped_evidence_index_with_freshness_and_trust_fields
+        - update_root_evidence_index_to_reference_the_run_scoped_package
+        - create_complete_task_requirement_implementation_evidence_acceptance_matrix
+        - create_patch_handoff_covering_the_exact_frozen_tranche_1_delta_without_applying_or_changing_it
+        - create_agent_result_and_handoff_yaml_with_status_claim_partial_not_complete
+        - record_59_of_59_alignment_openspec_diff_check_and_86_remaining_type_errors_without_overclaim
+        - remove_the_execution_only_opsx_lock_only_after_package_validation
+      handoff_contract:
+        root_evidence_index: .harness/evidence-index.yaml
+        run_evidence_index: .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/evidence-index.yaml
+        acceptance_matrix: .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/acceptance-matrix.md
+        patches_dir: .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/patches
+        agent_results: .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/workspaces/brain-tranche-1/agent-result.yaml
+        handoff: .harness/runs/20260811-repair-brain-read-baseline-a7-tranche-1/handoff.yaml
+        status_claim: partial
+        completion: not_complete
+      acceptance:
+        - every_allowlisted_handoff_file_exists_is_nonempty_and_parseable_where_structured
+        - evidence_index_entries_include_source_command_result_location_freshness_trust_status_impact_and_notes
+        - acceptance_matrix_has_no_blank_task_requirement_cells
+        - patch_manifest_matches_the_exact_seven_frozen_product_test_files_and_records_openspec_and_preexisting_evidence_separately
+        - agent_result_and_handoff_reference_the_same_run_id_and_status_claim
+        - no_product_test_openspec_or_existing_evidence_content_changed_during_A8
+        - .harness/opsx.lock_is_absent_after_package_validation
+        - global_typecheck_is_reported_as_fail_with_86_errors_and_no_tranche_2_claim
+        - git_diff_check_pass
+      forbidden_scope:
+        - any_product_or_test_edit
+        - any_OpenSpec_edit
+        - any_existing_evidence_edit_other_than_root_evidence_index
+        - tranche_2_start_or_edit
+        - live_KDS_or_MMC_network
+        - any_fact_write
+        - commit
+        - push
+        - deployment
+        - status_promotion
+    studio:
+      thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+      repository: GlobalCloud Studio
+      owner: Studio
+      change_id: cleanup-studio-a7-disposable-session-a8
+      execution_mode: one_authenticated_local_session_delete_and_network_proof_only
+      coordination_lock_id: none_single_authenticated_runtime_action
+      repository_file_allowlist: []
+      baseline:
+        head: 88769078f5c230ae9ed973815de4861cc6317a5c
+        origin_main: 88769078f5c230ae9ed973815de4861cc6317a5c
+        worktree: clean
+      target:
+        identity: exactly_the_disposable_local_Hermes_session_created_during_A7_preflight
+        authenticated_actor: super_admin_at_gehua
+        allowed_discovery:
+          - GET /api/hermes/sessions
+          - GET /api/hermes/sessions/{a7_temp_session_id}
+        allowed_mutation:
+          method: DELETE
+          path: /api/hermes/sessions/{a7_temp_session_id}
+          maximum_requests: 1
+        forbidden_target:
+          - any_session_not_created_by_A7_preflight
+          - any_project_binding_business_object_or_KDS_asset
+      required_work:
+        - identify_and_record_the_exact_A7_temporary_session_id_before_deletion
+        - capture_the_authenticated_pre_delete_GET_result
+        - issue_exactly_one_authenticated_DELETE_for_that_session
+        - capture_HTTP_status_and_response_body_with_ok_true_deleted_true
+        - if_response_hermes_attempted_is_true_require_hermes_deleted_true
+        - capture_post_delete_GET_404_or_list_absence_for_the_same_id
+        - capture_the_complete_sanitized_request_event_list_for_this_cleanup
+        - prove_zero_requests_to_intake_upload_retry_complete_upload_MMC_and_KDS
+        - verify_repository_remains_clean_at_the_exact_baseline
+      network_proof:
+        required_events:
+          - authenticated_pre_delete_GET_for_exact_session
+          - exactly_one_authenticated_DELETE_for_exact_session
+          - authenticated_post_delete_GET_or_list_for_exact_session
+        forbidden_path_fragments:
+          - /api/v1/knowledge-assets
+          - /api/mmc/
+          - complete-upload
+          - /retry
+          - /intake
+        forbidden_destinations:
+          - 127.0.0.1:8080
+          - 127.0.0.1:18080
+        receipt:
+          delete_status: 200
+          body_requirements:
+            ok: true
+            deleted: true
+          post_condition: exact_session_absent
+      failure_boundary:
+        delete_request_fails_or_target_cannot_be_proven: stop_and_report_no_retry
+        safe_delete_mechanism_absent: return_dev_only_fixture_lifecycle_proposal_and_exact_requested_repository_allowlist_without_implementation
+        network_capture_unavailable: do_not_delete_and_report_blocked_network_capture
+      handoff_requirements:
+        - exact_clean_baseline_before_and_after
+        - redacted_exact_session_identity_and_A7_provenance
+        - sanitized_ordered_network_event_list
+        - DELETE_status_and_response_body
+        - post_delete_absence_proof
+        - zero_KDS_MMC_and_intake_request_assertion
+        - authorization_status
+        - rollback_or_no_retry_boundary
+        - unresolved_risks
+      forbidden_scope:
+        - any_repository_OpenSpec_LOOP_or_evidence_file_change
+        - more_than_one_DELETE_request
+        - any_new_session_fixture_or_binding_creation
+        - any_project_order_production_or_business_object_mutation
+        - any_intake_upload_retry_complete_upload_or_direct_KDS_MMC_call
+        - any_candidate_relationship_evidence_or_long_term_memory_write
+        - commit
+        - push
+        - deployment
+        - status_promotion
+  serial_gate_after_handoffs:
+    order:
+      - f013_independent_review_of_brain_opsx_handoff
+      - f013_independent_review_of_studio_cleanup_and_network_receipt
+      - coordinator_decision_on_separate_real_authenticated_readonly_e2e_amendment
+    real_e2e_automatic_authorization: false
+    both_handoffs_required: true
+  authorization:
+    brain_governance_handoff_files_within_allowlist: true
+    brain_execution_lock_removal_after_package_validation: true
+    brain_product_or_openspec_edit: false
+    brain_tranche_2: false
+    studio_exactly_one_authenticated_A7_temp_session_delete: true
+    studio_pre_and_post_delete_read: true
+    studio_repository_write: false
+    studio_new_fixture_or_binding: false
+    live_authenticated_search_wikipreview_chat_e2e: false
+    any_KDS_or_MMC_call_or_write: false
+    business_fact_or_state_write: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

@@ -1,0 +1,91 @@
+coordination_envelope:
+  id: GKE-001-COORDINATION-20260814-011-A10C19
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  lane: kds
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: reconcile-release0-run-handoff-current-baseline-a10c19
+  openspec_change: implement-release0-canonical-read-facade
+  mode: local_governance_reconciliation_and_report_only_preflight
+  status_ceiling: partial_not_complete
+  baseline:
+    branch: main
+    head: a544f67e4c0ea30e7ff016723a17c0ae111fb131
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty_before_lock: 180
+    ordinary_nul_sha256_before_lock: d8b1b52a8a85b87a17384f5b6b3503afdc441e15fd77635fd973872c2149615a
+    expanded_dirty_before_lock: 439
+    expanded_nul_sha256_before_lock: c7349d85d1aeaea509b7e033f816bfe4f71bb00c60fdd1430aeb903fd52d1db5
+    opsx_lock_before: absent
+  exact_root: .harness/runs/20260811-193752-implement-release0-canonical-read-facade
+  exact_path_count: 15
+  sealed_candidate:
+    sorted_nul_pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+    ordered_content_manifest_sha256: 26dee404bb608454685bf4357469becf9a59a4ebd5f01f610c160e00a0b4fd62
+    full_index_patch_bytes: 44423
+    full_index_patch_sha256: eb31688f0e80336fe3c18f11579141b046aa73fa9ab5447b0ceed4f502837234
+    deterministic_generation: 2_of_2_byte_identical
+    diff_check: pass
+    nonempty_files: 15/15
+    yaml_parse: pass
+    isolated_apply_source_identity: 15/15
+    reverse_remaining_files: 0
+  current_reconciliation:
+    product_test_unit: local_commit_a544f67e_pending_exact_push_authorization
+    openspec_unit: separate_uncommitted_conditional_candidate_A10C18R1
+    run_handoff_unit: exact_15_path_candidate_only
+    document_gate: pass_localization_debt_false
+    evidence_freshness:
+      focused: current_41_passed
+      non_database: current_101_passed
+      postgresql_migration: current_29_passed
+      disposable_database_cleanup: 0
+      historical_review_rows: explicitly_inherited
+    codegraph: pass_632_files_5326_nodes_13240_edges_index_up_to_date
+    canonical_mirror: 8/8_pass
+  cleanup_note:
+    first_postgresql_wrapper: pytest_29_passed_then_zsh_readonly_status_variable_stopped_wrapper_before_drop
+    bounded_followup: exact_disposable_database_found_count_1_dropped_count_0
+    final_two_database_count: 0
+  isolation:
+    overlaps_product_test_12: false
+    overlaps_openspec_8: false
+    overlaps_stage_b: false
+    overlaps_role_view: false
+    overlaps_other_dirty: false
+  prior_authorization_disposition:
+    control: GKE-001-COORDINATION-20260813-075-A10C11R2
+    sha256: d21c71ce7f08150f316cdcb347d827aec41aaa29f5f7afbf59472ba843bc26bd
+    disposition: obsolete_baseline_must_not_execute
+    reason: product_test_commit_changed_HEAD_and_current_run_bytes_are_reconciled
+  authorization:
+    local_governance_reconciliation: consumed_under_continuous_engineering_authorization
+    stage: false
+    commit: false
+    push: false
+    live_or_shared_access: false
+    deployment: false
+    status_promotion: false
+  dependency:
+    order:
+      - exact_product_test_push_and_postpush_review
+      - openspec_8_local_commit_authorization_execution_and_review
+      - run_handoff_15_new_local_commit_authorization
+    presentable_as_commit_request_now: false
+  rollback:
+    repository: restore_only_the_A10C19_reconciled_hunks_in_exact_run_root
+    disposable_database: dropped_count_zero
+    external_data: none_accessed
+  requested_review:
+    authority: F-013
+    mode: independent_read_only
+    question: whether_current_15_path_run_handoff_is_truthful_reproducible_isolated_and_eligible_as_a_conditional_future_local_commit_candidate_after_product_push_and_openspec_commit
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

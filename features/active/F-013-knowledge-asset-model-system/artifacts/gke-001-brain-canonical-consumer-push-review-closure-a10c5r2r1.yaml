@@ -1,0 +1,27 @@
+gke001_brain_canonical_consumer_push_review_closure:
+  id: GKE-001-COORDINATION-20260813-056-A10C5R2R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-054-A10C5R2
+    sha256: f869cf0330e2ca796c4250dd1d2836b6d5c529e7e04c5d0df7c6e9ad2623ff33
+  f013_postcommit_verdict: brain_a10c5r1_local_commit_postcommit_review_passed_non_force_push_preflight_eligible
+  f013_independent_replay:
+    exact_commit_parent_tree_subject: pass
+    exact_12_paths_and_fingerprints: pass
+    focused_tests: 122/122
+    forbidden_boundary_scan: pass
+    repository_write: false
+  exact_remote_query: git ls-remote origin refs/heads/main
+  expected_remote_line: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632 refs/heads/main
+  inherit_all_commit_baseline_forbidden_and_postconditions_from_a10c5r2: true
+  authorized_command: git push origin a22d190a487bd6da5b6fd8e02850901c8d4fe485:refs/heads/main
+  execute_exactly_once_after_all_rechecks: true
+  stop_on_any_mismatch: true
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

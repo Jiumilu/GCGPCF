@@ -1,0 +1,95 @@
+knowledge_engineering_handoff:
+  id: GKE-001-COORDINATION-20260813-077-A10C12R1
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-076-A10C12
+    sha256: ac4c218ea1335b0275196d92af4ea66c62560cf9c53d96615ea0c079f844445c
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  source_of_truth: KDS
+  mode: governance_write_handoff_only
+  implementation_change: none
+  baselines:
+    kds: {head: 690ea04abf5485563b760d1bc1620493db017662, origin_main: 690ea04abf5485563b760d1bc1620493db017662, dirty: 191, staged: 0, lock: absent}
+    studio: {head: ec1ff4d6a35844d499334caac74d99d46691034c, origin_main: ec1ff4d6a35844d499334caac74d99d46691034c, dirty: 0, staged: 0, lock: absent}
+    brain: {head: a22d190a487bd6da5b6fd8e02850901c8d4fe485, origin_main: a22d190a487bd6da5b6fd8e02850901c8d4fe485, dirty: 0, staged: 0, lock: absent}
+    mmc: {head: b06f58a78ac7713197deed47d1125bec7a260e8c, origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c, dirty: 15, staged: 0, lock: absent}
+  current_evidence:
+    kds:
+      exact_routes: [POST_/api/v1/knowledge-read/release-0/search, POST_/api/v1/knowledge-read/release-0/read]
+      committed_state: only_api_server_exists_in_HEAD_among_product_test_12
+      candidate_state: api_server_modified_and_eleven_paths_untracked
+      focused_non_database: 35_passed
+      relevant_non_database: 101_passed
+      focused_with_postgresql: 41_passed
+      postgresql_and_migration: 29_passed
+      database_cleanup_count: 0
+      canonical_mirror: 8_of_8_passed
+      acl_session_active_extraction_lineage_audit: passed_controlled_tests
+    studio:
+      committed_canonical_bridge: true
+      exact_bff_routes: [POST_/api/brain/kds/sessions/:sessionId/search, POST_/api/brain/kds/sessions/:sessionId/read]
+      authoritative_context: authenticated_owner_tenant_allowed_project_binding_required
+      focused_tests: 43_passed
+      worktree_clean: true
+    brain:
+      committed_consumer: true
+      focused_tests: 122_passed
+      full_tests: 390_passed
+      typecheck: pass
+      build: pass
+      read_model_alignment: pass
+      openspec_strict: pass
+      auto_prompt_send: false
+      second_ledger: false
+    mmc:
+      relay_code_exact_operations: [POST_/api/v1/knowledge-read/release-0/search, POST_/api/v1/knowledge-read/release-0/read]
+      focused_contract_tests: 9_passed
+      source_seed_operation_count: 17
+      runtime_policy_operation_count: 17
+      source_seed_has_release0_operations: false
+      runtime_policy_has_release0_operations: false
+      source_runtime_policy_equal: true
+  classification:
+    kds_facade: technical_candidate_verified_uncommitted
+    studio_bridge: committed_technical_verified_no_live_e2e
+    brain_consumer: committed_technical_verified_no_live_e2e
+    mmc_relay: technical_verified_runtime_admission_not_authorized
+    release0_e2e: blocked_by_kds_commit_and_mmc_policy_admission
+  required_serial_order:
+    - separately_authorized_kds_product_test_12_local_commit
+    - f013_postcommit_review
+    - separately_authorized_mmc_source_policy_tdd_and_owner_commit
+    - f013_mmc_postcommit_review
+    - separately_authorized_runtime_policy_apply
+    - authenticated_nonproduction_readonly_e2e
+    - f013_e2e_review
+  migration_dry_run:
+    kds: disposable_postgresql_passed_cleanup_zero
+    studio_brain_mmc: not_applicable_no_schema_change
+  authorization_boundary:
+    commit: false
+    push: false
+    mmc_policy_write: false
+    real_kds_or_mmc_write: false
+    live_e2e: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    current_round: remove_only_this_gpcf_handoff_and_control_board_links
+    kds_disposable_database: already_dropped_cleanup_zero
+    product_repositories: unchanged_by_a10c12
+  unresolved_risks:
+    - kds_release0_product_test_12_not_in_head
+    - mmc_source_and_runtime_policy_missing_two_release0_posts
+    - no_authenticated_nonproduction_network_e2e
+    - kds_and_mmc_mixed_dirty_worktrees
+    - localization_debt_blocks_project_group_readiness
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    real_verified: false
+    promotion: false

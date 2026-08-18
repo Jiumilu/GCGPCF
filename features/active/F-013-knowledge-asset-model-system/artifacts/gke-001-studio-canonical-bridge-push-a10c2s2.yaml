@@ -1,0 +1,46 @@
+gke001_studio_canonical_bridge_push:
+  id: GKE-001-COORDINATION-20260813-053-A10C2S2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: exact_non_force_push
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  remote: origin
+  branch: main
+  expected_remote_main: 89697af0ddc90214f14f661c88218052fea57c34
+  expected_local_head: ec1ff4d6a35844d499334caac74d99d46691034c
+  expected_ahead_behind: 1/0
+  expected_staged: 0
+  expected_dirty: 0
+  expected_opsx_lock: absent
+  commit:
+    parent: 89697af0ddc90214f14f661c88218052fea57c34
+    sha: ec1ff4d6a35844d499334caac74d99d46691034c
+    subject: "feat(studio): bind Brain to canonical session reads"
+    path_count: 2
+    full_index_patch_bytes: 15291
+    full_index_patch_sha256: 220baae80c55a27bc5f066482212d5aaea0a7545c231ad5d15e82365f5ef5472
+  preflight:
+    remote_ls_remote: exact_parent_pass
+    dry_run_fast_forward: pass
+    f013_postcommit_review: studio_a10c2s1_local_commit_governance_handoff_accepted
+  authorized_command: git push origin ec1ff4d6a35844d499334caac74d99d46691034c:refs/heads/main
+  stop_on_any_mismatch: true
+  forbidden:
+    - force_push
+    - fetch
+    - merge
+    - rebase
+    - reset
+    - revert
+    - content_edit
+    - additional_commit
+    - live_kds_or_mmc_write
+    - deployment
+    - status_promotion
+  postcondition:
+    remote_main: ec1ff4d6a35844d499334caac74d99d46691034c
+    local_ahead_behind: 0/0
+    status_ceiling: partial_not_complete
+

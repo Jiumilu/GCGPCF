@@ -1,0 +1,115 @@
+gke001_mmc_h1_owner_isolation:
+  id: GKE-001-COORDINATION-20260813-063-A10C8
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: rework-mmc-shared-registry-state-a10i3h1r2
+  mode: report_only
+  owner: MMC_H1_mutation_boundary
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  change_family:
+    - rework-mmc-shared-registry-state-a10i3h1r2
+    - rework-mmc-resolved-path-and-consumers-a10i3h1r3
+  baseline:
+    branch: main
+    head: b06f58a78ac7713197deed47d1125bec7a260e8c
+    origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    ahead_behind_staged: 0/0/0
+    raw_ordinary_dirty: 15
+    raw_expanded_dirty: 76
+    ordinary_nul_sha256: 4aa3dbdeb92bc3d7538cc48898245fe049437d32b406c658a63abdff75244fde
+    expanded_nul_sha256: ddba5938cbae9cdd870f0820aa93ff29db02af308cdbb2f6c1fd8bc421cfef16
+    opsx_lock: absent
+  owner_partition:
+    product_and_test_paths:
+      - runtime/app/gateway/registry_state.py
+      - runtime/app/api/v1/registry_apis.py
+      - runtime/app/api/v1/registry_llms.py
+      - runtime/app/api/v1/connectors.py
+      - runtime/app/api/v1/health.py
+      - runtime/app/db/session.py
+      - scripts/dry_run_mmc_dependencies.py
+      - runtime/tests/test_registry_policy_audit.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_llm_registry.py
+      - runtime/tests/test_dependency_dry_run.py
+    openspec_paths:
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/proposal.md
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/design.md
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/specs/shared-registry-state/spec.md
+      - openspec/changes/rework-mmc-shared-registry-state-a10i3h1r2/tasks.md
+    product_test_openspec_count: 15
+    sorted_nul_pathset_sha256: 7544700e1f12d9bcdd02c9b2b8ac01dd36a46ea11ee2843c1342ca23c723eb50
+    ordered_content_manifest_sha256: 955fae675854623920241286094edb8d1e2694de8a6993f6b85c238e16461c90
+    full_index_patch:
+      bytes: 59487
+      sha256: b4c728d6f6a5bc6527db905453a1557fdb90283bc1bd784c1c2b2f472096daab
+      includes_untracked_registry_state: true
+      diff_check: pass
+      disposable_apply_identity: 15/15
+      disposable_reverse_status: clean
+    governance_evidence:
+      runs:
+        - path: .harness/runs/20260812-002227-rework-mmc-shared-registry-state-a10i3h1r2
+          leaf_files: 31
+          role: predecessor_H1R2_evidence
+        - path: .harness/runs/20260812-042626-rework-mmc-resolved-path-and-consumers-a10i3h1r3
+          leaf_files: 29
+          role: final_H1R3_evidence
+      product_commit_candidate: false_pending_separate_owner_disposition_and_commit_authorization
+      evidence_must_not_be_mixed_with_product_commit: true
+    excluded_runtime_sidecar:
+      path: runtime/.state.json.lock
+      size_bytes: 0
+      holder: none_observed
+      status: unowned_runtime_sidecar_not_deleted
+  technical_replay:
+    environment: disposable_clean_git_archive_in_real_sibling_project_layout
+    kds_dependency: sibling_GlobalCloud_KDS_read_only
+    ignored_runtime_state: copied_read_only_with_original_sha
+    initial_invalid_tmp_layout:
+      result: invalid_environment_not_technical_failure
+      reason: missing_sibling_KDS_and_ignored_runtime_state
+    focused:
+      command: MMC_TEST_MODE=true PYTHONDONTWRITEBYTECODE=1 PYTEST_ADDOPTS=-p_no_cacheprovider python3 -m pytest -q runtime/tests/test_registry_policy_audit.py runtime/tests/test_api.py runtime/tests/test_dependency_dry_run.py
+      result: 86_passed
+    full_runtime:
+      command: MMC_TEST_MODE=true PYTHONDONTWRITEBYTECODE=1 PYTEST_ADDOPTS=-p_no_cacheprovider python3 -m pytest -q runtime/tests/
+      result: 158_passed
+    contract: pass
+    openspec_strict: pass
+    mmc_harness: pass
+    seed_sha256_unchanged: 161884e885fc03ade8d26b87bea745203455a177889b4ef57612b22344554a33
+    runtime_state_sha256_unchanged: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    delegation_sha256_unchanged: 4cb3d1f2d842b660e1fb93cd95bdb6b3878ed20ba134007c47d575993b596973
+    kds_delegation_sha256_unchanged: 866878f7a1042ad3c28b191b89217ad85718466bdbfe2d4bc82d2798ed85b9ca
+    active_policy_operation_count: 17
+    active_policy_fingerprint: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    disposable_roots_remaining: 0
+  conclusion:
+    technical_boundary: stable_reproducible_H1_owner_unit
+    git_disposition: separate_human_authorization_required_before_any_stage_or_commit
+    relationship_to_A10C7: A10C7_source_policy_must_not_mix_with_H1_owner_unit
+    runtime_policy_application: remains_separate_high_risk_human_authorization
+  forbidden:
+    - MMC_repository_write
+    - stage_commit_or_push
+    - sidecar_cleanup
+    - A10C7_source_policy_mix
+    - runtime_policy_application
+    - live_request_or_credentials
+    - deployment_or_status_promotion
+  rollback:
+    repository: not_applicable_report_only
+    disposable_environment: removed_or_moved_to_recoverable_trash
+    external_data: none_accessed
+  requested_review:
+    authority: F-013
+    question: whether_the_15_path_H1_owner_unit_is_stable_and_eligible_for_a_separate_owner_disposition_authorization_request
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

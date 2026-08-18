@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -15,6 +16,37 @@ FIXTURE = ROOT / "fixtures/api/gckf-p0-no-write-continuity-guard-current-state-d
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/gckf-p0-no-write-continuity-guard-current-state-d189-20260627.md"
 LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-GCKF-P0-D189-001.md"
+FORBIDDEN_TRUE_KEYS = {
+    "acceptedOrIntegratedAllowed",
+    "actionQueueExecutionAllowed",
+    "executionAllowed",
+    "externalNotificationSent",
+    "formalHarnessWriteAllowed",
+    "intakeUnlockAllowed",
+    "kdsApiWriteExecuted",
+    "lifecyclePromotionAllowed",
+    "notificationSent",
+    "p1AdmissionAllowed",
+    "responseIntakeAllowed",
+    "responseIntakeEligible",
+    "runtimeWritebackAllowed",
+    "v1UpgradeRecommended",
+}
+FORBIDDEN_POSITIVE_COUNT_KEYS = {
+    "executedActions",
+    "kdsApiWrites",
+    "lifecyclePromotions",
+    "queueItemsExecutable",
+    "readyForExecution",
+    "responseIntakeArtifacts",
+    "runtimeWritebacks",
+}
+MARKDOWN_TRUE_CLAIM = re.compile(
+    rf"(?mi)(?<![A-Za-z0-9_])({'|'.join(sorted(FORBIDDEN_TRUE_KEYS))})\s*[:=]\s*`?true`?(?![A-Za-z0-9_])"
+)
+MARKDOWN_POSITIVE_COUNT_CLAIM = re.compile(
+    rf"(?mi)(?<![A-Za-z0-9_])({'|'.join(sorted(FORBIDDEN_POSITIVE_COUNT_KEYS))})\s*[:=]\s*`?([1-9][0-9]*)`?(?![A-Za-z0-9_])"
+)
 
 
 def fail(message: str) -> None:
@@ -89,6 +121,60 @@ def assert_no_response_intake_artifacts() -> None:
     )
 
 
+def positive_no_write_claims(value: object, path: str = "$") -> list[str]:
+    claims: list[str] = []
+    if isinstance(value, dict):
+        for key, child in value.items():
+            child_path = f"{path}.{key}"
+            if key in FORBIDDEN_TRUE_KEYS and child is True:
+                claims.append(child_path)
+            if key in FORBIDDEN_POSITIVE_COUNT_KEYS and isinstance(child, int) and not isinstance(child, bool) and child > 0:
+                claims.append(child_path)
+            claims.extend(positive_no_write_claims(child, child_path))
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            claims.extend(positive_no_write_claims(child, f"{path}[{index}]"))
+    return claims
+
+
+def assert_no_positive_no_write_claims() -> int:
+    require(
+        positive_no_write_claims({"nested": {"kdsApiWriteExecuted": True}}) == ["$.nested.kdsApiWriteExecuted"],
+        "no_write_json_boolean_detector_self_test_failed",
+    )
+    require(
+        positive_no_write_claims({"runtimeWritebacks": 1}) == ["$.runtimeWritebacks"],
+        "no_write_json_count_detector_self_test_failed",
+    )
+    require(not positive_no_write_claims({"responseIntakeAllowed": False, "kdsApiWrites": 0}), "no_write_json_zero_detector_self_test_failed")
+    require(MARKDOWN_TRUE_CLAIM.search("kdsApiWriteExecuted=true") is not None, "no_write_markdown_boolean_detector_self_test_failed")
+    require(MARKDOWN_POSITIVE_COUNT_CLAIM.search("runtimeWritebacks=1") is not None, "no_write_markdown_count_detector_self_test_failed")
+    require(MARKDOWN_TRUE_CLAIM.search("kdsApiWriteExecuted=false") is None, "no_write_markdown_false_detector_self_test_failed")
+    require(MARKDOWN_POSITIVE_COUNT_CLAIM.search("runtimeWritebacks=0") is None, "no_write_markdown_zero_detector_self_test_failed")
+
+    roots = (ROOT / "fixtures/api", ROOT / "docs/harness/evidence", ROOT / "docs/harness/loops")
+    files = sorted(
+        path
+        for root in roots
+        for pattern in ("gckf-p0-*.json", "gckf-p0-*.md")
+        for path in root.rglob(pattern)
+    )
+    require(files, "no_gckf_no_write_claim_files_found")
+    findings: list[str] = []
+    for path in files:
+        if path.suffix == ".json":
+            for claim in positive_no_write_claims(load_json(path)):
+                findings.append(f"{path.relative_to(ROOT)}:{claim}")
+        else:
+            text = path.read_text(encoding="utf-8")
+            for match in MARKDOWN_TRUE_CLAIM.finditer(text):
+                findings.append(f"{path.relative_to(ROOT)}:{match.group(1)}=true")
+            for match in MARKDOWN_POSITIVE_COUNT_CLAIM.finditer(text):
+                findings.append(f"{path.relative_to(ROOT)}:{match.group(1)}={match.group(2)}")
+    require(not findings, "positive_no_write_claim:" + ",".join(findings))
+    return len(files)
+
+
 def main() -> None:
     fixture = load_json(FIXTURE)
     evidence = load_json(EVIDENCE_JSON)
@@ -120,6 +206,7 @@ def main() -> None:
     require(len(expected_chain) == 4, "chain_evidence_list_count_mismatch")
     assert_prior_chain_boundaries(expected_chain)
     assert_no_response_intake_artifacts()
+    scanned_claim_files = assert_no_positive_no_write_claims()
 
     for key in (
         "continuityGuardIsActualResponse",
@@ -162,6 +249,8 @@ def main() -> None:
     print(f"kds_api_writes={summary.get('kdsApiWrites')}")
     print(f"runtime_writebacks={summary.get('runtimeWritebacks')}")
     print(f"lifecycle_promotions={summary.get('lifecyclePromotions')}")
+    print(f"no_write_claim_files_scanned={scanned_claim_files}")
+    print("positive_no_write_claims=0")
     print(f"hold_required={fixture.get('holdRequired')}")
     print(f"execution_mode={fixture.get('executionMode')}")
 

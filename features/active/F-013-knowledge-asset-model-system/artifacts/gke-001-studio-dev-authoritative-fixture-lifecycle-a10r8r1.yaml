@@ -1,0 +1,54 @@
+coordination_amendment:
+  id: GKE-001-COORDINATION-20260814-034-A10R8R1-STUDIO
+  amends: GKE-001-COORDINATION-20260814-033-A10R8-STUDIO
+  program: GKE-001
+  release: Release 0
+  feature_ref: F-013
+  openspec_change: integrate-studio-kds-knowledge-intake
+  change_id: implement-studio-dev-authoritative-fixture-lifecycle-a10r8r1
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  owner: Studio
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
+  baseline:
+    head: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    origin_main: 23e7faa95bfe05f254d5b6198e39029203f15b21
+    ahead: 0
+    behind: 0
+    staged: 0
+    dirty: 0
+    opsx_lock: absent
+  scope_change:
+    reason: codegraph_loop_evidence_requires_repository_local_machine_json
+    product_test_allowlist_unchanged:
+      - packages/server/src/routes/governance/dev-authoritative-fixtures.ts
+      - packages/server/src/routes/index.ts
+      - packages/server/src/db/index.ts
+      - tests/server/dev-authoritative-fixtures-route.test.ts
+    governance_evidence_allowlist_added:
+      - docs/harness/evidence/codegraph/GPCF-STUDIO-A10R8.json
+    total_paths: 5
+  unchanged_requirements:
+    - All requirements, acceptance commands, forbidden scope, authorization, rollback and status ceiling from A10R8 remain binding.
+    - The added JSON is machine-generated CodeGraph evidence only and must not contain credentials, fixture values, database paths, session content, or external data.
+    - The JSON may describe only the four product/test paths and their process/risk coverage; .harness/opsx.lock must never enter changed scope, stage, or handoff.
+    - No LOOP round, OpenSpec, product, test, database, runtime, fixture, or evidence path beyond these exact five paths is authorized.
+  acceptance_addendum:
+    - codegraph machine evidence seals successfully at the exact added path
+    - evidence status is valid and process/risk coverage is complete or unresolved relations are explicitly bounded
+    - final repository delta is exactly the four product/test paths plus the one evidence JSON
+  authorization:
+    repository_write: exact_five_path_local_tdd_and_machine_evidence_only
+    disposable_sqlite_write: authorized
+    default_database_write: false
+    external_api_or_network: false
+    commit: false
+    push: false
+    deploy: false
+    status_promotion: false
+  rollback:
+    repository: restore only the exact five uncommitted paths after independent authorization
+    data: remove the disposable SQLite file and prove absence
+    external: not_applicable_zero_external_access
+  handoff_contract: knowledge_engineering_handoff_v0.1
+  status_ceiling: active_partial_not_complete

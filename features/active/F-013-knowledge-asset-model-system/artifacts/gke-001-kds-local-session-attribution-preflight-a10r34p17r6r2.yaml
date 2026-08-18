@@ -1,0 +1,68 @@
+control:
+  id: GKE-001-COORDINATION-20260817-055-A10R34P17R6R2
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  openspec_change_ref: integrate-gke001-openspec-codegraph
+  change_id: attribute-kds-local-schema-sessions-a10r34p17r6r2
+  mode: report_only_no_connection_rework_preflight
+  owner: gke001_coordinator
+  review_owner: f013_independent_reviewer
+  status: active_partial_not_complete
+  execute_authorization_required: true
+
+predecessor_execution:
+  control: GKE-001-COORDINATION-20260817-054-A10R34P17R6R1
+  controller_sha256: 8e3ec95cb9e61b33b02dd1ee671a8d2739e71f35423b975093b05cd07a61a5d0
+  invocation_count: 1
+  terminal_status: failed_fail_closed
+  terminal_code: acquire_failed_lock_unresolved
+  database_connection_entered: false
+  transaction_entered: false
+  opsx_lock_released: true
+  repository_and_runtime_state_changed: false
+  retry_performed: false
+
+root_cause:
+  finding: lock helper returned status success but the R6R1 CLI success set omitted success
+  effects:
+    - successful acquire helper exited 3 and was treated as failed
+    - successful cleanup helper also exited 3 and was treated as unresolved
+    - terminal connection_count incorrectly defaulted to 1 before the database branch
+  correction:
+    - success is an exit-zero CLI status for lock helper actions
+    - pre-database terminal results report connection_count=0 and transaction_count=0
+    - helper JSON code is preserved in bounded failure output
+  historical_bytes_preserved: true
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-attribution-controller-a10r34p17r6r2.py
+  sha256: 1de418bd65b05feaa74f6441ea6b7887e0ba9a697beda60aa278ae5575979b74
+  self_test: pass
+  no_connection_preflight: pass
+  execute: not_authorized
+
+baselines:
+  gpcf: {head: 11d022b818332d2271a78b427c326eb454507a5a, origin_main: 11d022b818332d2271a78b427c326eb454507a5a, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 745, ordinary_dirty_sha256: e3f428f94a02fefd6902aaa7659040ac4dcbb626f24f0deabf5cb3db677f7639, expanded_dirty_count: 762, expanded_dirty_sha256: 4622037b9a06f4d02c95918d44f7b7a5dcafedc1c93524133100e2b4759a3ed8, opsx_lock: absent}
+  kds: {head: 2ac85c55163b7acf0ede699184ac360579ccefaa, origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 280, ordinary_dirty_sha256: 5673e55d796a4affe1aa33c077e4b758a2da71362afd2946fcc86616c2c0b770, expanded_dirty_count: 570, expanded_dirty_sha256: 171aa1df9eb9558b1c1dcd296609bf9d3267704846ca72243371826ee2be13b9, opsx_lock: absent}
+  mmc: {head: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, origin_main: c93463ff5ee40ce66d8e1a09995ca8c66a24c86d, ahead_behind_staged: 0/0/0, ordinary_dirty_count: 10, ordinary_dirty_sha256: 300ef303a5a647e54931171ff5ebf309192671fbf9f52f027acedf40d7ab8ad9, expanded_dirty_count: 98, expanded_dirty_sha256: 2fd6e7fe5409ed79e410ea20e722a84eecb1d141d969153b27c969b3ebf6a451, opsx_lock: absent}
+
+forbidden:
+  - execution or retry without a new exact human authorization
+  - migration or fixture action
+  - query, username, hostname, raw application or address output
+  - business, content or audit row read
+  - API or MMC request
+  - second connection or session termination
+  - service operation, commit, push, deploy or status promotion
+
+rollback:
+  controller_execution: mandatory_read_only_rollback_and_connection_close
+  repository: restore_only_these_two_uncommitted_R6R2_artifacts_if_separately_authorized
+  external_data: none
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false

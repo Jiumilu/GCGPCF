@@ -1,0 +1,54 @@
+gke001_brain_canonical_consumer_local_commit_replay:
+  id: GKE-001-COORDINATION-20260813-052-A10C5R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-051-A10C5
+    sha256: 81d449dc703112a8586b665bcf4ce5bca01c68d1f9187cbd9519041ff4f2d373
+    result: aborted_no_commit_due_to_fingerprint_command_mismatch
+  correction_type: governance_algorithm_clarification_only
+  product_or_test_write: false
+  authoritative_algorithms:
+    pathset:
+      command: git diff --name-only -z | sort -z | shasum -a 256
+      sha256: 823f21f34b341122a029843c1fc798204eed7fa30f2831511601ef10a7393b84
+    ordered_content_manifest:
+      algorithm: sorted paths; each record is lowercase_sha256 + two ASCII spaces + path + LF
+      sha256: 9a7db55ecfeb5f1ad3d63bb3c5381fad23fa1f4e8d5b527ef2e3c6d76b77d876
+    patch:
+      command: git diff --binary --full-index
+      bytes: 40715
+      sha256: dbe143811486d89bd73b03084ff384910e6757a0a3585f2a29da0ea1dee8c158
+  non_authoritative_diagnostic:
+    command: git diff
+    bytes: 39947
+    sha256: 54d7e20c6dcfd3bdfee2a1e69dd701fe53c79546b383a61a272e06b4e0a81a6c
+    use_for_gate: false
+  execution:
+    inherit_exact_baseline_paths_tests_subject_and_forbidden_scope_from_a10c5: true
+    reverify_using_authoritative_algorithms_only: true
+    acquire_official_temporary_opsx_lock: true
+    stage_exact_12_paths_only: true
+    cached_diff_check_required: true
+    create_exactly_one_local_commit: true
+    release_lock_and_return_receipt: true
+  abort_on_any_authoritative_mismatch:
+    - unstage_exact_12_paths_only
+    - preserve_working_file_content
+    - release_opsx_lock
+    - create_no_commit
+  forbidden:
+    - content_edit
+    - push
+    - live_network_browser_or_prompt_send
+    - data_write
+    - deployment
+    - later_unit
+    - status_promotion
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

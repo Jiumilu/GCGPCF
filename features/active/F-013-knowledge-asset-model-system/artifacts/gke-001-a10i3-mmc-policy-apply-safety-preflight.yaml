@@ -1,0 +1,154 @@
+a10i3_mmc_policy_apply_safety_preflight:
+  id: GKE-001-COORDINATION-20260811-016-A10I3P0
+  mode: report_only_authorization_preflight
+  program_ref: GKE-001
+  release_ref: release_0
+  feature_ref: F-013
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  target_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  owner: MMC
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  baseline:
+    head: 8bb60fcffb8de14e839de0631e646c8c73418092
+    origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+    ahead: 0
+    behind: 0
+    staged: 0
+    dirty_entries: 8
+    opsx_lock: absent
+  parent_controls:
+    contract_freeze:
+      id: GKE-001-CONTRACT-FREEZE-20260811-001
+      sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    standard_code_final_review:
+      id: GKE-001-COORDINATION-20260811-015-A10I2R2
+      sha256: bae892222772f306c41999631a5d1bf27cc9ea17f79e88cc42c1e9163a6b2d11
+      classification: independent_technical_rereview_passed_schema_and_mocked_contract_only
+  repository_allowlist: []
+  runtime_write_allowlist: []
+  current_policy:
+    connector_id: kds_llm_wiki_api
+    space: personal
+    operation_count: 17
+    delegated_operations_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    seed_sha256: 161884e885fc03ade8d26b87bea745203455a177889b4ef57612b22344554a33
+    runtime_state_sha256: bac479c3f046481f04f9a04e4a6cd56792813081e26b088a736b1584e01fd79e
+    seed_api_count: 1
+    runtime_state_api_count: 11
+    seed_equals_runtime_state: false
+  proposed_delta:
+    operations:
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/search
+      - method: POST
+        path_pattern: /api/v1/knowledge-read/release-0/read
+    isolated_two_operation_sha256: 3cab2c7eef531c13bc0af32af61836f3947aa23ac8b2461f84a05f47378dbaf2
+    target_operation_count: 19
+    target_delegated_operations_sha256: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+    ordering_rule: preserve_the_existing_17_operations_then_append_search_then_read
+  safety_findings:
+    - code: seed_force_would_overwrite_unrelated_registry_entries
+      evidence: seed_contains_1_api_while_runtime_state_contains_11_apis
+      disposition: forbid_seed_force
+    - code: policy_patch_has_no_admin_role_gate
+      evidence: registry_patch_requires_only_a_valid_control_plane_identity
+      disposition: harden_before_policy_apply
+    - code: policy_patch_has_no_compare_and_swap_precondition
+      evidence: delegated_operations_replacement_does_not_require_the_current_fingerprint
+      disposition: require_expected_current_fingerprint
+    - code: file_state_save_is_not_atomic
+      evidence: runtime_state_is_written_directly_with_Path.write_text
+      disposition: require_same_directory_atomic_replace_and_recovery_tests
+    - code: policy_mutation_has_no_fail_closed_audit
+      evidence: registry_api_patch_does_not_append_a_policy_change_audit
+      disposition: require_prepare_commit_or_rollback_audit_receipts
+  proposed_serial_tranches:
+    - id: A10I3H1
+      goal: harden_the_file_mode_policy_mutation_boundary_without_changing_policy
+      authorization_state: not_authorized
+      product_test_file_allowlist:
+        - runtime/app/api/v1/registry_apis.py
+        - runtime/app/gateway/policy_audit.py
+        - runtime/tests/test_api.py
+        - runtime/tests/test_registry_policy_audit.py
+      requirements:
+        - admin_or_super_admin_control_plane_principal_only
+        - exact_if_match_current_policy_fingerprint
+        - atomic_same_directory_state_replace
+        - bounded_prepare_commit_rollback_audit_without_raw_policy_or_credentials
+        - audit_or_atomic_write_failure_returns_503_and_leaves_the_previous_policy_effective
+        - concurrent_or_stale_update_returns_409_without_mutation
+      forbidden_scope:
+        - runtime/scripts/seed.sh
+        - runtime/state.json
+        - runtime/app/core/delegation.py
+        - runtime/app/core/kds_delegation.py
+        - runtime/app/api/v1/connectors.py
+    - id: A10I3H2
+      goal: add_the_two_operations_to_the_version_controlled_seed_only
+      authorization_state: human_authorization_required
+      product_test_file_allowlist:
+        - runtime/scripts/seed.sh
+        - runtime/tests/test_api.py
+      requirements:
+        - preserve_all_17_existing_operations_in_order
+        - append_only_the_two_frozen_release_0_operations
+        - source_policy_fingerprint_equals_e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+      forbidden_scope:
+        - runtime/state.json
+        - seed_force_execution
+    - id: A10I3H3
+      goal: apply_the_reviewed_policy_to_the_existing_local_file_mode_registry
+      authorization_state: human_authorization_required
+      repository_allowlist: []
+      exact_runtime_action:
+        method: PATCH
+        path: /api/mmc/v1/registry/apis/kds_llm_wiki_api?space=personal
+        if_match_current_policy_sha256: 40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+        target_policy_sha256: e99be2c0ae3c9c3c5544352ef1c679a4dc67fdddc816a5546ffe7bd97370d0c2
+      acceptance:
+        - exact_admin_identity_and_no_credential_disclosure
+        - prepare_and_commit_policy_audit_receipts
+        - post_apply_get_returns_exact_19_operation_fingerprint
+        - no_kds_request_is_made
+        - no_process_restart_or_deployment
+  acceptance_commands_for_future_controls:
+    - MMC_TEST_MODE=true python3 -m pytest -q runtime/tests/test_api.py runtime/tests/test_registry_policy_audit.py
+    - MMC_TEST_MODE=true python3 -m pytest -q runtime/tests
+    - bash runtime/scripts/contract_test.sh
+    - npx openspec validate harden-mmc-delegated-operation-policy-a10i3h1 --strict
+    - python3 scripts/validate_mmc_loop_harness.py
+    - codegraph sync
+    - codegraph status
+    - git diff --check
+  forbidden_actions:
+    - modify_runtime_state_by_hand
+    - execute_seed_force
+    - create_read_or_disclose_credentials
+    - call_kds_or_any_shared_service
+    - commit
+    - push
+    - restart
+    - deploy
+    - live_read
+    - real_e2e
+    - status_promotion
+  rollback:
+    hardening: revert_only_the_future_h1_allowlisted_patch_after_independent_review
+    source_policy: restore_the_17_operation_seed_and_fingerprint_40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e
+    runtime_policy: authenticated_compare_and_swap_back_to_the_exact_17_operation_policy_with_audit
+    audit: preserve_append_only_prepare_commit_and_rollback_receipts
+  unresolved_risks:
+    - current_file_mode_policy_mutation_is_not_safe_for_authorized_apply
+    - no_h1_h2_or_h3_control_has_been_authorized
+    - no_live_kds_read_or_real_browser_e2e_has_been_authorized
+    - kds_admission_remains_blocked_dirty_worktree
+    - localization_debt_keeps_the_project_group_document_gate_in_rework
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    real_verified: false
+    policy_applied: false
+    live_read_authorized: false

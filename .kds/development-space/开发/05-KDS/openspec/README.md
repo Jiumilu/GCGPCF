@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/README.md
 source_path: openspec/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-13
 supersedes: []
 superseded_by: []
 ---
@@ -49,6 +49,15 @@ KDS 路径前缀：`开发/12-GPCF/openspec/`
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | KDS | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | GPCF | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | KDS | draft |
+| GPCF-DOC-95C82DA16B | integrate-gke001-openspec-codegraph | openspec/changes/integrate-gke001-openspec-codegraph/README.md | GPCF | draft |
+| GPCF-DOC-82B83BA05C | design | openspec/changes/integrate-gke001-openspec-codegraph/design.md | GPCF | draft |
+| GPCF-DOC-42FE6A63EF | proposal | openspec/changes/integrate-gke001-openspec-codegraph/proposal.md | GPCF | draft |
+| GPCF-DOC-2202548F6F | specs | openspec/changes/integrate-gke001-openspec-codegraph/specs/README.md | GPCF | draft |
+| GPCF-DOC-64A8C66ABB | gke001-codegraph-binding | openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md | GPCF | draft |
+| GPCF-DOC-12EA88652E | spec | openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/spec.md | GPCF | draft |
+| GPCF-DOC-AFE758BB74 | gke001-program-governance | openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/README.md | GPCF | draft |
+| GPCF-DOC-757C305686 | spec | openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-program-governance/spec.md | GPCF | draft |
+| GPCF-DOC-875CBA8392 | tasks | openspec/changes/integrate-gke001-openspec-codegraph/tasks.md | GPCF | draft |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | KDS | draft |
 | GPCF-DOC-FFFA25C3EF | design | openspec/changes/kds-production-hardening/design.md | GPCF | draft |
 | GPCF-DOC-9630ED7C78 | proposal | openspec/changes/kds-production-hardening/proposal.md | GPCF | draft |

@@ -341,6 +341,10 @@ GKE-001 按以下固定顺序实施，不允许任何仓库并行定义冲突字
 
 跨仓交接必须遵循 `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` 的 `knowledge_engineering_handoff` 协议。当前工程状态上限为 `active / partial / not_complete`；KDS 阶段 A、GPCF 独立验收、Studio 浏览器任务流和人工确认任一缺失，均不得声明真实闭环、稳定生产 API、项目群集成或生产就绪。
 
+GKE-001 的客户应用实施统一使用 `03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md` 与机器路线图 `features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml`。交付顺序分为：Release 0 客户只读试用、Release 1 受控资料接入、Release 2 证据与候选复核、Release 3 长期记忆与业务协同。总体调度会话 `019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5` 使用 `02-governance/loop/GKE-001长期实施调度提示词.md` 统一生成跨仓 coordination envelope；F-013 会话 `019fc228-2403-7123-9cae-fb9028850b84` 继续负责 canonical 和独立验收，不兼任产品实现。
+
+实施时允许非重叠的本地基线修复、UI、测试、契约和 handoff 最多三线并行；canonical、KDS/MMC 准入、Studio 真实接入、Brain 真实 E2E、客户测试和状态提升必须串行。局部失败默认只阻塞对应 capability，不得把真实 E2E 前置条件扩大为全项目群冻结；canonical 漂移、身份/ACL 越界、KDS 事实完整性、审计失败或生产安全风险除外。
+
 ## 14. LOOP 接入
 
 ```yaml

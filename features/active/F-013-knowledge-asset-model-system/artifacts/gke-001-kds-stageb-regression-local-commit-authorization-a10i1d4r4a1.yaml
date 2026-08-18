@@ -1,0 +1,80 @@
+kds_stageb_regression_local_commit_authorization:
+  id: GKE-001-COORDINATION-20260812-022-A10I1D4R4A1
+  parent_request:
+    id: GKE-001-COORDINATION-20260812-021-A10I1D4R4
+    sha256: 7107019c08ba37a61b0531f0dd6102d0b26dd16248365b9499c9b0e69174366e
+  human_authorization:
+    received_at: 2026-08-12
+    exact_text: "授权按 A10I1D4R4 在 KDS 7fb47703 基线上，将 stageb_regression_2 两个测试文件创建为一个本地提交；不推送、不执行后续单元。"
+    decision: authorized
+  lane: kds
+  change_id: extend-kds-document-extraction
+  owner_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  status: partial
+  completion_status: not_complete
+  baseline_hard_stop:
+    head: 7fb477030f5278faf55d6d16ff3874469704610d
+    origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    branch: main
+    ahead: 1
+    behind: 0
+    staged: 0
+    ordinary_dirty: 181
+    ordinary_status_sha256: ff8d2f7e7260e53a6b4f3ce8dff8c38e85f04e2bd8ab81dd4802e796900a73ff
+    expanded_dirty: 453
+    expanded_status_sha256: 6dd4a589fbf948b060cb38c369b3d1cc4e352feca73106eccec283600f55921b
+    opsx_lock: absent
+  authorized_execution:
+    lock_id: gke001-kds-stageb-regression-local-commit-r4-lock
+    exact_paths:
+      - tests/test_knowledge_intake_api.py
+      - tests/test_knowledge_intake_postgres.py
+    sorted_nul_pathset_sha256: ffeab20c1c54610428c2da48d4dc6b83275affdaa5a69a1b969b005af008b66f
+    canonical_patch_bytes: 38511
+    canonical_patch_sha256: 1e7ecd30fbb740fcf2217224de107adb0c960d5babfc71aaaee036b9fae90f7e
+    commit_count: 1
+    commit_subject: "test(kds): cover stage b intake integration"
+    content_edit: false
+    report_only_receipt_after_commit: true
+  mandatory_sequence:
+    - reverify_every_baseline_hard_stop_field
+    - acquire_official_execution_lock
+    - stage_exactly_two_authorized_paths
+    - verify_cached_path_count_and_pathset_sha256
+    - verify_cached_patch_bytes_and_sha256
+    - require_cached_diff_check_pass
+    - create_exactly_one_local_commit
+    - release_lock_and_verify_absent
+    - return_commit_receipt_in_thread_only
+    - freeze_for_f013_postcommit_review
+  abort_boundary:
+    on_any_mismatch: true
+    actions:
+      - unstage_only_the_two_authorized_paths
+      - preserve_working_files
+      - release_lock
+      - create_no_commit
+      - report_exact_mismatch
+  forbidden:
+    - edit_any_file
+    - stage_any_other_path
+    - push
+    - open_or_execute_later_unit
+    - kds_openspec_write
+    - kds_handoff_or_evidence_write
+    - role_view_or_registry_write
+    - database_or_api_access
+    - live_shared_or_production_access
+    - deploy
+    - status_promotion
+  postcommit_verification:
+    - commit_sha_parent_tree_subject
+    - exact_two_paths_and_modes
+    - commit_patch_bytes_and_sha256
+    - commit_diff_check
+    - final_head_origin_ahead_behind_staged_dirty_lock
+    - unrelated_dirty_and_exclusion_hash_preservation
+  rollback:
+    before_commit: unstage_only_two_paths_and_release_lock
+    after_commit: separately_reviewed_compensating_git_revert_only
+  status_ceiling: partial

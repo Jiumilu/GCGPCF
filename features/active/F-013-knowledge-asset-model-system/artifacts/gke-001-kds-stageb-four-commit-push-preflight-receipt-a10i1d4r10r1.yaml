@@ -1,0 +1,85 @@
+kds_stageb_four_commit_push_preflight_receipt:
+  id: GKE-001-COORDINATION-20260813-040-A10I1D4R10R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_1
+  feature_ref: F-013
+  parent_control:
+    id: GKE-001-COORDINATION-20260813-039-A10I1D4R10
+    sha256: 6e25314b88b07cc6ca1bfc4bf589bfd574c0d9d9c4bc47c7cb4479ea9eeb05d8
+  lane:
+    owner: KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    mode: report_only_read_only
+    repository_write: false
+  remote_verification:
+    origin_url: https://github.com/Jiumilu/GCKDS.git
+    method: git_ls_remote_heads_without_fetch
+    before_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    after_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    unchanged: true
+  local_verification:
+    branch: main
+    head_before: 690ea04abf5485563b760d1bc1620493db017662
+    head_after: 690ea04abf5485563b760d1bc1620493db017662
+    local_origin_main: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+    ahead: 4
+    behind: 0
+    staged: 0
+    opsx_lock: absent
+    ordinary_dirty: 190
+    ordinary_porcelain_sha256: d703cec1120da778795cf51ef33f51e66b791c6de9868b3b975a3fb2d6e08be3
+    expanded_dirty: 449
+    expanded_porcelain_sha256: 631473d7122cebec505283a9476bf9a29053dae7da53c27635296d5ca7cb58b1
+    before_after_identical: true
+  commit_topology:
+    rev_list_count: 4
+    additional_commits: 0
+    remote_main_is_ancestor: pass
+    exact_sequence_oldest_to_newest:
+      - sha: 7fb477030f5278faf55d6d16ff3874469704610d
+        parent: f28edb5113e0493ed60fec423cb6c7e1a6252de8
+        subject: "feat(kds): add document extraction stage b core"
+      - sha: 60957dd92380bfeb6049ec552658dad22d5d90dc
+        parent: 7fb477030f5278faf55d6d16ff3874469704610d
+        subject: "test(kds): cover stage b intake integration"
+      - sha: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+        parent: 60957dd92380bfeb6049ec552658dad22d5d90dc
+        subject: "docs(kds): specify document extraction stage b"
+      - sha: 690ea04abf5485563b760d1bc1620493db017662
+        parent: a7ec87412f03fb18a9f52e11f07980e6911f22a1
+        subject: "chore(kds): record document extraction handoff"
+  push_dry_run:
+    command: git push --dry-run origin 690ea04abf5485563b760d1bc1620493db017662:refs/heads/main
+    result: pass
+    output_projection: f28edb51..690ea04a_fast_forward_to_main
+    remote_write: false
+  independent_coordinator_replay:
+    control_sha: pass
+    remote_before_after: pass
+    exact_commit_topology: pass
+    dry_run_fast_forward: pass
+    local_state_before_after: pass
+  forbidden_action_receipt:
+    fetch: false
+    real_push: false
+    force_push: false
+    merge: false
+    rebase: false
+    reset_or_revert: false
+    stage_or_commit: false
+    deploy: false
+    later_unit: false
+    status_promotion: false
+  result:
+    classification: push_preflight_passed_separate_exact_push_authorization_required
+    eligible_to_request_push_authorization: true
+    push_authorized: false
+  rollback:
+    repository_or_remote: not_applicable_no_write
+    governance: withdraw_receipt_and_keep_push_unauthorized
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

@@ -1,0 +1,83 @@
+gke001_kds_release0_run_handoff_evidence_freshness_rework:
+  id: GKE-001-COORDINATION-20260813-074-A10C11R1
+  issued_at: 2026-08-13
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-073-A10C11
+    sha256: 56eea1b70713b247ee8c2bea2abda1b306130cb2b772e2f6b49e3d1c5f9a8873
+    review_classification: rework_required_inherited_test_evidence_still_marked_current
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  openspec_change: implement-release0-canonical-read-facade
+  mode: local_governance_rework_and_report_only_preflight
+  lane:
+    repository: KDS
+    repository_path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    change_id: correct-release0-run-evidence-freshness-a10c11r1
+    owner: KDS_release0_run_governance
+  correction:
+    file: .harness/runs/20260811-193752-implement-release0-canonical-read-facade/acceptance-matrix.md
+    rows: [TEST-FOCUSED, TEST-REGRESSION, TEST-DB]
+    before: current
+    after: inherited
+    note_added: not_rerun_under_A10C11
+    test_or_database_replay: false
+    product_test_or_openspec_bytes_changed: false
+  baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent
+  sealed_candidate:
+    path_count: 15
+    sorted_nul_pathset_sha256: 867cb4a5767d113589310633979318359f7430f97aa991f07a29ac7181bc1d80
+    ordered_content_manifest_sha256: 38b7e110b728f7cef0617a080e3fb3e9fe273886d346f5ee744b45f32e5c814d
+    full_index_patch_bytes: 42315
+    full_index_patch_sha256: ea484c7f976a08aa770b7867f9556f5b98785f3f9d58991b3639b5ee9e1f3cd8
+    diff_check: pass
+    yaml_parse: pass
+  verification:
+    openspec_strict: pass
+    tasks_checked: 23/23
+    inherited_test_rows_corrected: 3/3
+    focused_tests: inherited_41_passed_not_rerun_under_A10C11
+    relevant_non_database_tests: inherited_101_passed_not_rerun_under_A10C11
+    disposable_postgresql_migration: inherited_29_passed_cleanup_zero_not_rerun_under_A10C11
+    f013_first_batch_serial_gate: closed
+    matrix_reconciliation_review: technical_governance_reconciliation_verified_f013_independent_review_passed
+    codegraph_files_nodes_edges: 632/5326/13240
+    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  isolation:
+    overlaps_release0_product_test_12: false
+    overlaps_release0_openspec_8: false
+    overlaps_stage_b: false
+    overlaps_role_view: false
+    overlaps_other_dirty_or_self_link: false
+  authorization:
+    local_evidence_freshness_rework: consumed_under_continuous_local_engineering
+    stage_or_commit: false
+    push: false
+    real_kds_or_mmc_write: false
+    credentials: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    uncommitted: restore_only_the_three_acceptance_matrix_freshness_cells_and_notes
+    future_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_review:
+    authority: F-013
+    mode: independent_read_only
+    question: whether_the_only_A10C11_finding_is_closed_and_the_exact_15_path_run_handoff_unit_is_eligible_for_a_future_separate_human_local_commit_authorization_request
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

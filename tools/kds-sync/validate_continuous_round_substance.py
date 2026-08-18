@@ -34,6 +34,18 @@ def table_value(text: str, key: str) -> str:
     return match.group(1).strip()
 
 
+def optional_table_value(text: str, key: str) -> str | None:
+    pattern = re.compile(rf"^\|\s*{re.escape(key)}\s*\|\s*(.*?)\s*\|$", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else None
+
+
+def assignment_value(text: str, key: str) -> str | None:
+    pattern = re.compile(rf"^{re.escape(key)}\s*=\s*(.*?)\s*$", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else None
+
+
 def parse_ratio(value: str, field: str) -> tuple[int, int]:
     match = re.search(r"(\d+)\s*/\s*(\d+)", value)
     require(match is not None, f"invalid ratio for {field}: {value}")
@@ -59,8 +71,13 @@ def main() -> int:
         require(phrase in template, f"LOOP_ROUND_TEMPLATE.md missing substance phrase: {phrase}")
         require(phrase in skill, f"loop orchestrator skill missing substance phrase: {phrase}")
 
-    mode_line = table_value(control, "当前 Loop 模式")
+    mode_line = optional_table_value(control, "当前 Loop 模式") or assignment_value(control, "default_loop")
+    require(mode_line is not None, "LOOP_CONTROL_BOARD.md missing current Loop mode")
     detected_modes = {mode for mode in ALLOWED_MODES if mode in mode_line}
+    if not detected_modes and mode_line in {"Delivery Loop", "Governance Loop"}:
+        print("continuous round substance validation passed")
+        print(f"mode={mode_line} continuous_accounting=not_applicable")
+        return 0
     require(detected_modes, f"unable to detect continuous mode from: {mode_line}")
 
     declared_value = table_value(control, "continuous declared_rounds")

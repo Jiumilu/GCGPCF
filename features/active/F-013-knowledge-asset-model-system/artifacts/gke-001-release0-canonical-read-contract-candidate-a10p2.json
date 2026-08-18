@@ -1,0 +1,141 @@
+{
+  "contract_id": "globalcloud.kds.canonical-read",
+  "contract_revision": "release0.v1-candidate",
+  "status": "candidate_not_frozen_not_implemented",
+  "canonical_dependency": {
+    "contract_id": "globalcloud.knowledge_asset",
+    "revision": "v0.1",
+    "manifest_sha256": "8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de"
+  },
+  "operations": [
+    {
+      "operation": "search",
+      "method": "POST",
+      "path": "/api/v1/knowledge-read/release-0/search",
+      "request": {
+        "required": ["target_object_ref", "project_ref", "session_ref", "query", "search_scope", "limit"],
+        "properties": {
+          "target_object_ref": "canonical KnowledgeObject ref",
+          "project_ref": "authoritative project ref",
+          "session_ref": "server-trusted Studio session ref",
+          "query": "string 1..512",
+          "search_scope": "metadata|extracted|all",
+          "limit": "integer 1..100",
+          "cursor": "revision/tenant/org/target/project/session/scope-bound opaque cursor or null"
+        }
+      },
+      "response": {
+        "required": ["contract_id", "contract_revision", "correlation_id", "projection_only", "target_object_ref", "project_ref", "session_ref", "total", "items", "next_cursor"],
+        "items": "SearchProjection from authorized assets and active extraction only"
+      }
+    },
+    {
+      "operation": "read",
+      "method": "POST",
+      "path": "/api/v1/knowledge-read/release-0/read",
+      "request": {
+        "required": ["target_object_ref", "project_ref", "session_ref", "view"],
+        "properties": {
+          "target_object_ref": "canonical KnowledgeObject ref",
+          "project_ref": "authoritative project ref",
+          "session_ref": "server-trusted Studio session ref",
+          "view": "graph|wiki_preview",
+          "graph": "root_object_ref, max_depth 1..3, limit 1..200, cursor, verification_states",
+          "wiki_preview": "asset_ref, active extraction only, block/cell/evidence limits 1..100 and scoped cursors"
+        }
+      },
+      "response": {
+        "required": ["contract_id", "contract_revision", "correlation_id", "projection_only", "target_object_ref", "project_ref", "session_ref", "view"],
+        "graph": "bounded authorized GraphNodeProjection and GraphEdgeProjection with totals/cursor",
+        "wiki_preview": "AssetProjection, active ExtractionProjection, blocks, cells, evidence with authorized totals/cursors"
+      }
+    }
+  ],
+  "mandatory_headers": [
+    "Content-Type: application/json",
+    "X-KDS-Delegation",
+    "X-KDS-Delegation-Signature",
+    "X-Correlation-ID"
+  ],
+  "studio_bff": [
+    {
+      "method": "POST",
+      "path": "/api/brain/kds/sessions/{sessionId}/search"
+    },
+    {
+      "method": "POST",
+      "path": "/api/brain/kds/sessions/{sessionId}/read"
+    }
+  ],
+  "browser_forbidden_authority_inputs": [
+    "tenant_id",
+    "org_id",
+    "project_ref",
+    "space",
+    "target_object_ref",
+    "delegation",
+    "delegation_signature"
+  ],
+  "session_ownership": {
+    "required": [
+      "owner_user_id equals authenticated user.id",
+      "owner_tenant_id equals authenticated user.tenantId",
+      "typeId equals st-project",
+      "boundObjectType is project or operating_project",
+      "permissionResult equals allowed",
+      "binding tenant/org/business identity/actor agree with current user",
+      "targetObjectRef resolves to an authoritative canonical project object"
+    ],
+    "implicit_super_admin_bypass": false
+  },
+  "kds_authorization": [
+    "verify signed short-lived MMC delegation",
+    "exact tenant and org",
+    "exact project read scope",
+    "session_scopes contains session_ref@project_ref",
+    "request session/project/target agrees with delegation and canonical object",
+    "ACL applies before query, rank, count and projection",
+    "unassigned assets are excluded",
+    "session-bound assets require exact session_ref"
+  ],
+  "identity_and_projection": [
+    "knowledge_object_ref is the singular canonical identity",
+    "WikiPreview identity is knowledge_object_ref to asset_ref to active_extraction_ref to blocks/cells/evidence",
+    "file path is not a canonical identity",
+    "graph uses existing canonical refs and EvidenceLink identities",
+    "unresolved labels never create nodes",
+    "projection_only responses never become a second ledger or business fact"
+  ],
+  "audit": {
+    "operations": ["search", "graph", "wiki_preview"],
+    "outcomes": ["success", "denied", "not_found"],
+    "required_fields": ["actor_ref", "delegation_ref_or_fingerprint", "correlation_id", "tenant_id", "org_id", "session_ref", "project_ref", "target_object_ref_or_undisclosed", "operation", "outcome", "contract_revision", "visible_result_count_when_authorized"],
+    "persistence": "append-only before response; fail closed with 503",
+    "forbidden_fields": ["raw token", "signature", "raw query", "snippet", "source content", "local path", "filename", "inaccessible guessed identity"],
+    "outbox_required": false
+  },
+  "errors": {
+    "invalid_request_or_cursor": "400 bounded code",
+    "missing_or_invalid_authentication": "403 bounded code with denied audit",
+    "missing_or_inaccessible_target_asset_extraction": "404 identical no-leak response with not_found audit",
+    "audit_unavailable": "503 and no read payload"
+  },
+  "mmc_policy": {
+    "allowed_operations": [
+      "POST /api/v1/knowledge-read/release-0/search",
+      "POST /api/v1/knowledge-read/release-0/read"
+    ],
+    "current_and_restore_fingerprint": "40a674577b73422c98936a69efd1b3a317d1999d5a44dfd0b4635842067c0a5e",
+    "candidate_isolated_fingerprint": "must_be_recomputed_and_reported_by_both_lanes",
+    "policy_change_authorized": false
+  },
+  "forbidden_semantics": [
+    "legacy projects search/graph/files-content reuse",
+    "GET read operation",
+    "path/max_chars raw Markdown identity",
+    "client-selected space as authority",
+    "automatic prompt send",
+    "WikiPreview AI writeback",
+    "intake, candidate confirmation, relationship write, memory write or business-state change"
+  ]
+}

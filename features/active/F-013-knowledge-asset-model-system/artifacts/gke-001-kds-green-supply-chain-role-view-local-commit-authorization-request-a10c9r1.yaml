@@ -1,0 +1,90 @@
+gke001_kds_green_supply_chain_role_view_local_commit_authorization_request:
+  id: GKE-001-COORDINATION-20260813-069-A10C9R1
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: human_authorization_request_only
+  owner: KDS_role_view_governance
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  predecessor:
+    id: GKE-001-COORDINATION-20260813-068-A10C9
+    sha256: 02cfa389ce5b343d8fa1a2ccac99cd7cfa41f7f420208a773b264938b85f5fe9
+    independent_review: exact_two_path_role_view_owner_unit_eligible_for_separate_human_local_commit_authorization_request
+  required_baseline:
+    branch: main
+    head: 690ea04abf5485563b760d1bc1620493db017662
+    origin_main: 690ea04abf5485563b760d1bc1620493db017662
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 191
+    ordinary_nul_sha256: 58679f86af9408542bf109e50b9225a36c0c8f9574479676fa0b647c1cb55b45
+    expanded_dirty: 450
+    expanded_nul_sha256: cb03a57c744b47ecc24fa70d848b73a6e70ccc67e71e7461b129cfa677e59f5c
+    opsx_lock: absent_before_execution
+  exact_paths:
+    - _registries/global-object-registry.yaml
+    - entities/green-supply-chain-role-view-entity.md
+  sealed_fingerprints:
+    path_count: 2
+    sorted_nul_pathset_sha256: a0fe0ce238638f66e03c77d3bc8758cc6a9576bcb6c7d444039a4cabe13a6f5c
+    ordered_content_manifest_sha256: ff43f17a16e82969fc0c93cd0724423872e94fb82b6e15212ba324cb37b0c5b5
+    full_index_patch_bytes: 5411
+    full_index_patch_sha256: 1856fbd5b34a7315e83d4bc5ebff0120264ac5a2531e193ed36179b5e30d005d
+  authoritative_algorithms:
+    pathset: stage_exact_paths_then_git_diff_cached_name_only_z_then_nul_sort_then_sha256_raw_bytes
+    ordered_content_manifest: sha256sum_exact_paths_in_control_order_then_sha256_manifest_bytes
+    patch: git_diff_cached_binary_full_index_raw_bytes_then_byte_count_and_sha256
+    dirty_baseline: git_status_porcelain_v1_z_for_ordinary_and_git_status_porcelain_v1_z_untracked_files_all_for_expanded_then_sha256_raw_bytes
+  commit:
+    count: 1
+    subject: "docs(kds): bind green supply chain role view to gke001"
+    local_only: true
+  mandatory_execution_gates:
+    - reverify_exact_baseline_counts_and_nul_hashes
+    - verify_exact_two_content_hashes
+    - acquire_official_temporary_opsx_lock
+    - stage_exact_two_paths_only
+    - recompute_all_sealed_fingerprints
+    - git_diff_cached_check_pass
+    - create_exactly_one_local_commit_with_frozen_subject
+    - release_lock_and_return_report_only_receipt
+  abort_rule:
+    condition: any_baseline_scope_fingerprint_or_gate_mismatch
+    actions:
+      - unstage_only_the_exact_two_paths
+      - require_staged_count_zero
+      - require_exact_two_worktree_content_hashes_unchanged
+      - preserve_all_other_dirty_and_self_link
+      - release_lock
+      - create_no_commit
+  semantic_assertions:
+    entity_id: KDS-GSC-ROLE-VIEW-20260701
+    entity_type: kds_role_view
+    status: controlled_candidate
+    engineering_domain: GKE-001
+    write_boundary: no_write
+    confirmation_status: human_review_pending
+    registry_role: governance_index_only
+    no_real_account_acl_business_fact_or_api_sync: true
+  forbidden:
+    - release0_product_test_or_governance_paths
+    - stage_b_paths
+    - other_dirty_owner_groups
+    - GlobalCloud_KDS_self_link_modification_or_deletion
+    - content_rework_beyond_sealed_patch
+    - push
+    - real_kds_or_mmc_write
+    - account_or_permission_creation
+    - deployment
+    - status_promotion
+  rollback:
+    before_commit: abort_rule_above
+    after_commit: separately_reviewed_compensating_git_revert_only
+    audit_or_history_deletion: forbidden
+  requested_human_authorization: pending
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    ceiling: partial

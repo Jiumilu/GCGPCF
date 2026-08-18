@@ -1,0 +1,92 @@
+studio_intake_reconciliation:
+  id: GKE-001-COORDINATION-20260810-001-A5
+  type: post_state_reconciliation_without_retroactive_authorization
+  engineering_domain: GKE-001
+  canonical_feature: F-013
+  observed_at: "2026-08-10T01:23:13+00:00"
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  source_request:
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    requested_at: "2026-08-07"
+    original_blocker: LR-872_and_LR-873_uncommitted_rounds_could_not_share_one_latest_worktree_hash
+  parent_amendment:
+    id: GKE-001-COORDINATION-20260803-001-A4
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-studio-intake-amendment-a4.yaml
+    sha256: c1c7963b0f66e5c66d471817c0f25219fe1653182362c5b4b3fe01010bfc6f3a
+    commit_authorized: false
+    push_authorized: false
+  requested_options:
+    A_combined_temporary_LR_874:
+      decision: superseded_not_authorized
+      reason: LR-874_already_exists_as_a_committed_governance_only_round
+    B_authorize_one_sealed_commit:
+      decision: not_retroactively_authorized
+      reason: A1_A4_and_LR_874_were_already_committed_and_pushed_before_current_review
+    C_multi_round_validator_waiver:
+      decision: not_selected
+      reason: current_validator_passes_without_a_multi_round_code_change_or_policy_waiver
+  observed_studio_state:
+    repository: GlobalCloud Studio
+    branch: main
+    upstream: origin/main
+    worktree: clean
+    ahead: 0
+    behind: 0
+    a1_a4_commit:
+      sha: 1f63a464ce017c3394f3733200618f678a016674
+      subject: "loop(studio): daily clean sync 2026-08-08"
+      scope: 27_files_including_LR_872_LR_873_A1_runtime_and_A4_phase_1
+      present_on_origin_main: true
+    lr_874_commit:
+      sha: 755f7b5d3583601418fc51abc828837d4dc1df30
+      subject: "loop(studio): daily clean sync 2026-08-09"
+      scope: governance_only_LR_874
+      present_on_origin_main: true
+    latest_round:
+      id: GPCF-STUDIO-LR-874
+      codegraph: waived_no_indexed_source_change
+      status: partial
+    current_gates:
+      validate_studio_loop_control: pass_LR_874_waived
+      harness_check: pass
+  evidence_classification:
+    current_gate_state: real_verified
+    A4_phase_1_product_tests: inherited_from_Studio_handoff_not_independently_replayed_in_this_reconciliation
+    A4_phase_1_task_flow: simulated_only
+    phase_2: not_authorized_not_executed
+    real_kds_write: not_executed
+    authorization_compliance: conflict_requires_governance_review
+  decision:
+    issue_new_LR_874: false
+    change_Studio_validator: false
+    authorize_or_repeat_commit: false
+    authorize_or_repeat_push: false
+    retroactively_accept_external_commit_push: false
+    freeze_Studio_product_and_evidence_writes: true
+    proceed_to_F013_readonly_review_of_committed_A4: true
+  authorization:
+    GPCF_governance_reconciliation_write: true
+    Studio_readonly_review: true
+    Studio_product_write: false
+    Studio_evidence_write: false
+    Studio_commit: false
+    Studio_push: false
+    phase_2_disposable_kds_write: false
+    shared_or_persistent_kds_write: false
+    deployment: false
+    status_promotion: false
+  remaining_gates:
+    - F013_independent_readonly_review_of_A4_at_commit_1f63a464
+    - human_or_governance_owner_disposition_of_unapproved_commit_push_boundary
+    - MMC_prepare_and_retry_delegated_operation_admission_review
+    - coordinator_continuation_receipt_before_phase_2
+  rollback:
+    repository_rewrite: forbidden
+    published_history_revert: not_authorized
+    current_action: preserve_observed_history_and_freeze_new_writes
+  status:
+    engineering: active
+    status_ceiling: partial
+    completion: not_complete

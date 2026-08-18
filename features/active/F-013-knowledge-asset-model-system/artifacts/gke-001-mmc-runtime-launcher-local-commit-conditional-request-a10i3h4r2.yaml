@@ -1,0 +1,66 @@
+conditional_authorization_request:
+  id: GKE-001-COORDINATION-20260814-010-A10I3H4R2
+  program: GKE-001
+  release: Release_0
+  feature: F-013-knowledge-asset-model-system
+  lane: mmc
+  change_id: commit-mmc-runtime-launcher-repair-a10i3h4r2
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+  owner_thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  predecessor:
+    id: GKE-001-COORDINATION-20260814-007-A10I3H4R1
+    sha256: 1c52b4a826ad8af62bde156110c3c78b56684ed7750b20031787914646bb9ab3
+    review_classification: mmc_runtime_launcher_repair_independent_review_passed_governance_partial
+  candidate_baseline:
+    head: 9f38048a83ae8d1945fd01f5085744bf3376646e
+    current_origin_main: b06f58a78ac7713197deed47d1125bec7a260e8c
+    current_ahead_behind_staged: 1/0/0
+  exact_paths:
+    product_test_openspec:
+      - runtime/scripts/start.sh
+      - runtime/tests/test_runtime_launcher.py
+      - openspec/changes/restore-mmc-runtime-launcher/.openspec.yaml
+      - openspec/changes/restore-mmc-runtime-launcher/design.md
+      - openspec/changes/restore-mmc-runtime-launcher/proposal.md
+      - openspec/changes/restore-mmc-runtime-launcher/specs/mmc-control-plane-runtime/spec.md
+      - openspec/changes/restore-mmc-runtime-launcher/tasks.md
+    run_handoff: .harness/runs/20260813-201349-restore-mmc-runtime-launcher/**
+  sealed_product_test_openspec:
+    path_count: 7
+    pathset_sha256: 014fbfec5236172a7d3da4b916cf5fc42b98d5cca426b7202d3bf0b01d0bdaef
+    content_manifest_sha256: c83cd9a6bc1a5f9549ec532234ae84b95120018cc6508b76aec0be2f8b5473a0
+    patch_bytes: 12376
+    patch_sha256: cd567df3c1d17eb9fd3c462dd7a94d5a502c83239cf95404285cfc5a6a82ea35
+  evidence:
+    focused_launcher: 1_passed
+    full_runtime: 161_passed
+    contract_openspec_harness_codegraph_diff: pass
+    independent_review: pass_governance_partial
+  presentable_only_after:
+    - exact_non_force_push_of_9f38048a_is_human_authorized_and_succeeds
+    - F013_postpush_review_confirms_HEAD_origin_remote_equal_9f38048a
+    - current_launcher_candidate_and_run_handoff_bytes_are_resealed
+    - H1_owner_and_launcher_commit_order_is_reconciled_without_path_overlap_or_runtime_restart
+  current_authorization:
+    present_to_human_as_executable_request: false
+    stage: false
+    commit: false
+    active_process_restart: false
+    runtime_policy_application: false
+    push: false
+    deployment: false
+    status_promotion: false
+  forbidden_scope:
+    - H1_owner_15_without_separate_authorization
+    - Release0_runtime_policy_write
+    - credentials_or_protected_requests
+    - active_port_8000_restart
+    - unrelated_dirty
+  rollback:
+    current: not_applicable_no_execution
+    future_commit: separately_reviewed_compensating_git_revert_only
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

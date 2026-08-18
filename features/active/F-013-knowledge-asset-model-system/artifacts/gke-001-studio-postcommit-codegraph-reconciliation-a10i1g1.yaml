@@ -1,0 +1,154 @@
+studio_postcommit_codegraph_reconciliation:
+  id: GKE-001-COORDINATION-20260812-004-A10I1G1
+  issued_at: 2026-08-12
+  program_ref: GKE-001
+  release_ref: release_0
+  feature_ref: F-013
+  mode: local_governance_protocol_repair
+  canonical:
+    revision: v0.1
+    manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_coordinator
+  independent_reviewer:
+    thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    role: F-013_Harness
+  lane:
+    owner: Studio
+    repository: GlobalCloud Studio
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: reconcile-studio-committed-codegraph-evidence-a10i1g1
+    openspec_change: reconcile-studio-committed-codegraph-evidence-a10i1g1
+    run_id: 20260812-reconcile-studio-committed-codegraph-evidence-a10i1g1
+    execution_mode: local_opsx_tdd_no_network
+    coordination_lock_id: gke001-studio-a10i1g1-codegraph-reconciliation-lock
+  baseline:
+    branch: main
+    head: 953d4d1baea201cc0fc822074bc74cad9299d0dd
+    origin_main: 953d4d1baea201cc0fc822074bc74cad9299d0dd
+    parent: 88769078f5c230ae9ed973815de4861cc6317a5c
+    ahead: 0
+    behind: 0
+    dirty_entries: 0
+    staged_entries: 0
+    opsx_lock: absent
+    current_gate_result: fail_committed_scope_content_differs_from_precommit_evidence
+  observed_root_cause:
+    source_round: GPCF-STUDIO-LR-876
+    source_machine_evidence: docs/harness/evidence/codegraph/GPCF-STUDIO-LR-876.json
+    source_schema_version: 3
+    source_git_head_after: 88769078f5c230ae9ed973815de4861cc6317a5c
+    committed_head: 953d4d1baea201cc0fc822074bc74cad9299d0dd
+    direct_parent_relation: true
+    execution_only_scope_path: .harness/opsx.lock
+    execution_only_path_in_scope_files: true
+    execution_only_path_in_changed_files_after: false
+    source_aggregate_contains_unrecoverable_execution_state: true
+    direct_lock_exemption_is_sound: false
+  product_test_file_count: 3
+  product_test_file_allowlist:
+    - tools/codegraph_loop_evidence.py
+    - tools/kds-sync/validate_studio_loop_control.py
+    - tests/server/studio-loop-control.test.ts
+  governance_file_allowlist:
+    - .harness/evidence-index.yaml
+    - .harness/opsx.lock
+    - .harness/runs/20260812-reconcile-studio-committed-codegraph-evidence-a10i1g1/**
+    - openspec/changes/reconcile-studio-committed-codegraph-evidence-a10i1g1/**
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-877.json
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-877.md
+  required_protocol:
+    schema_change: additive_schema_v4
+    schema_v1_v2_v3_behavior_unchanged: true
+    execution_only_scope_allowlist:
+      - .harness/opsx.lock
+    persistent_scope_hash_excludes_execution_only_paths: true
+    persistent_scope_file_sha256_map_required: true
+    ancestor_validation_uses_persistent_hash_and_file_map: true
+    postcommit_reconciliation:
+      required: true
+      source_evidence_hash_must_validate: true
+      exact_source_round: GPCF-STUDIO-LR-876
+      exact_source_git_head_after: 88769078f5c230ae9ed973815de4861cc6317a5c
+      exact_reconciled_commit: 953d4d1baea201cc0fc822074bc74cad9299d0dd
+      reconciled_commit_parent_must_equal_source_git_head_after: true
+      committed_path_set_must_equal_source_changed_files_plus_source_machine_evidence: true
+      source_changed_files_must_exclude_execution_only_paths: true
+      current_persistent_file_hashes_must_match_reconciliation_receipt: true
+      historical_aggregate_comparability_must_be_explicitly_false: true
+      independent_review_reference_required: features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1r1-targeted-review-and-serial-gate-closure-20260811.md
+    no_waiver_or_silent_hash_rewrite: true
+  required_negative_tests:
+    - legacy_schema_v3_ancestor_validation_remains_strict
+    - unapproved_execution_only_path_is_rejected
+    - source_evidence_hash_mismatch_is_rejected
+    - non_direct_commit_or_extra_committed_path_is_rejected
+    - persistent_source_file_drift_is_rejected
+    - reconciliation_receipt_file_hash_tamper_is_rejected
+    - historical_aggregate_match_cannot_be_claimed
+  acceptance_commands:
+    - npx vitest run tests/server/studio-loop-control.test.ts
+    - PYTHONDONTWRITEBYTECODE=1 python3 tools/kds-sync/validate_studio_loop_control.py
+    - npm run harness:check
+    - npx openspec validate reconcile-studio-committed-codegraph-evidence-a10i1g1 --strict
+    - npm run build
+    - codegraph sync
+    - codegraph status
+    - codegraph query -l 10 -j validate_machine_evidence
+    - codegraph query -l 10 -j scope_content_hash
+    - git diff --check
+  codegraph_impact:
+    expected_nodes:
+      - validate_machine_evidence
+      - validate_payload
+      - scope_content_hash
+      - postcommit_reconciliation
+    proves_runtime_integration: false
+  forbidden_scope:
+    - docs/harness/evidence/codegraph/GPCF-STUDIO-LR-876.json
+    - docs/harness/loops/loop-round-GPCF-STUDIO-LR-876.md
+    - packages/server/**
+    - packages/client/**
+    - any_test_except_tests/server/studio-loop-control.test.ts
+    - KDS_MMC_Brain_product_or_policy_change
+    - live_KDS_MMC_Brain_or_browser_execution
+    - credential_creation_disclosure_or_persistence
+    - commit
+    - push
+    - restart
+    - deployment
+    - status_promotion
+  authorization:
+    local_three_file_protocol_and_test_edits: true
+    local_governance_evidence_write: true
+    local_tests_build_and_codegraph: true
+    real_or_shared_KDS_MMC_access: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  handoff_required:
+    - exact_changed_files
+    - source_and_reconciliation_evidence_hashes
+    - direct_parent_and_exact_commit_path_proof
+    - persistent_scope_hash_and_file_sha256_map
+    - positive_and_negative_tests
+    - openspec_strict_build_harness_codegraph_diff_check
+    - opsx_lock_release
+    - rollback
+    - unresolved_risks
+  rollback:
+    repository: revert_only_the_three_uncommitted_product_test_paths_to_953d4d1baea201cc0fc822074bc74cad9299d0dd
+    governance: remove_only_the_new_A10I1G1_OpenSpec_LR877_and_run_package
+    external_data: not_applicable
+  serial_gate:
+    standard_opsx_handoff_required: true
+    f013_independent_review_required: true
+    release0_live_e2e_authorized: false
+    next_studio_product_lane_authorized: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    classification: authorized_dispatch_pending_receipt

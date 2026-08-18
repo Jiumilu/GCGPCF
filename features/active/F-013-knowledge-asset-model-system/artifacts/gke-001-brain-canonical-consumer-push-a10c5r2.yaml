@@ -1,0 +1,46 @@
+gke001_brain_canonical_consumer_push:
+  id: GKE-001-COORDINATION-20260813-054-A10C5R2
+  issued_at: 2026-08-13
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: exact_non_force_push
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain
+  remote: origin
+  branch: main
+  expected_remote_main: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+  expected_local_head: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+  expected_ahead_behind: 1/0
+  expected_staged: 0
+  expected_dirty: 0
+  expected_opsx_lock: absent
+  commit:
+    parent: 1c0992edb3afa737f7a5a7f5bf64cbbd44cf5632
+    sha: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+    tree: 432afec04cbb052009d1c4331256332f5cccc579
+    subject: "feat(brain): consume canonical session reads"
+    path_count: 12
+    full_index_patch_bytes: 40715
+    full_index_patch_sha256: dbe143811486d89bd73b03084ff384910e6757a0a3585f2a29da0ea1dee8c158
+  preflight:
+    remote_ls_remote: exact_parent_pass
+    dry_run_fast_forward: pass
+    f013_postcommit_review: pending
+  authorized_command: git push origin a22d190a487bd6da5b6fd8e02850901c8d4fe485:refs/heads/main
+  stop_on_any_mismatch: true
+  forbidden:
+    - force_push
+    - fetch
+    - merge
+    - rebase
+    - reset
+    - revert
+    - content_edit
+    - additional_commit
+    - live_kds_or_mmc_write
+    - deployment
+    - status_promotion
+  postcondition:
+    remote_main: a22d190a487bd6da5b6fd8e02850901c8d4fe485
+    local_ahead_behind: 0/0
+    status_ceiling: partial_not_complete

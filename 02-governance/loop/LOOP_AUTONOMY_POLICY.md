@@ -60,5 +60,6 @@ LOOP 运行控制闭环常驻能力要求：
 - L3 采用 3/15 机制，最多 15 轮或 2 小时未达 `substance_gate` 则触发降级。
 - stop_type=none 时仅允许最小收敛动作；缺少 `substantive_rounds` 不可收口 accepted。
 - 允许 `generated_items` 和 `batch_generated` 的候选证据并行推进，但 `substance` 门控必须持续评估。
+- 批量生成不得按文件数量虚增实质轮次；3 轮不是停止条件，`3/15`、`5/15`、`10/15` 的阶段性汇报只能是 progress update。仍有下一轮且未触发硬停止时必须保持 `stop_type=none`；仅在达到真实人工授权边界时使用 `authorization_boundary`。
 - 仅当状态允许时才允许 `Git push`。
 - 真实 API 写入与真实 KDS TOKEN 写入不得在 `accepted` 或 `integrated` 前触发。

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -15,6 +16,17 @@ FIXTURE = ROOT / "fixtures/api/gckf-p0-repair-owner-response-arrival-scan-curren
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/gckf-p0-repair-owner-response-arrival-scan-current-state-d186-20260627.md"
 LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-GCKF-P0-D186-001.md"
+TRIGGER_CLAIM_KEYS = {
+    "actualRepairOwnerResponseReceived",
+    "responseArrivalConfirmed",
+    "signedPackagePresent",
+    "waesReviewNotePresent",
+    "humanConfirmationPresent",
+    "responseIntakeAllowed",
+}
+MARKDOWN_TRUE_CLAIM = re.compile(
+    rf"(?mi)(?<![A-Za-z0-9_])({'|'.join(sorted(TRIGGER_CLAIM_KEYS))})\s*[:=]\s*`?true`?(?![A-Za-z0-9_])"
+)
 
 
 def fail(message: str) -> None:
@@ -79,6 +91,49 @@ def assert_no_prior_actual_response() -> None:
     require(not forbidden_intake, "unexpected_gckf_response_intake_artifact:" + ",".join(path.relative_to(ROOT).as_posix() for path in forbidden_intake))
 
 
+def true_trigger_claims(value: object, path: str = "$") -> list[str]:
+    claims: list[str] = []
+    if isinstance(value, dict):
+        for key, child in value.items():
+            child_path = f"{path}.{key}"
+            if key in TRIGGER_CLAIM_KEYS and child is True:
+                claims.append(child_path)
+            claims.extend(true_trigger_claims(child, child_path))
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            claims.extend(true_trigger_claims(child, f"{path}[{index}]"))
+    return claims
+
+
+def assert_no_unscanned_arrival_claims() -> int:
+    require(
+        true_trigger_claims({"nested": {"signedPackagePresent": True}}) == ["$.nested.signedPackagePresent"],
+        "arrival_json_claim_detector_self_test_failed",
+    )
+    require(not true_trigger_claims({"humanConfirmationPresent": False}), "arrival_json_false_detector_self_test_failed")
+    require(MARKDOWN_TRUE_CLAIM.search("humanConfirmationPresent=true") is not None, "arrival_markdown_claim_detector_self_test_failed")
+    require(MARKDOWN_TRUE_CLAIM.search("humanConfirmationPresent=false") is None, "arrival_markdown_false_detector_self_test_failed")
+
+    roots = (ROOT / "fixtures/api", ROOT / "docs/harness/evidence", ROOT / "docs/harness/loops")
+    files = sorted(
+        path
+        for root in roots
+        for pattern in ("gckf-p0-*.json", "gckf-p0-*.md")
+        for path in root.rglob(pattern)
+    )
+    require(files, "no_gckf_arrival_claim_files_found")
+    findings: list[str] = []
+    for path in files:
+        if path.suffix == ".json":
+            for claim in true_trigger_claims(load_json(path)):
+                findings.append(f"{path.relative_to(ROOT)}:{claim}")
+        else:
+            for match in MARKDOWN_TRUE_CLAIM.finditer(path.read_text(encoding="utf-8")):
+                findings.append(f"{path.relative_to(ROOT)}:{match.group(1)}")
+    require(not findings, "unscanned_arrival_claim:" + ",".join(findings))
+    return len(files)
+
+
 def main() -> None:
     fixture = load_json(FIXTURE)
     evidence = load_json(EVIDENCE_JSON)
@@ -134,6 +189,7 @@ def main() -> None:
         require(evidence.get("gateAssertions", {}).get(key) is False, f"evidence_gate_not_false:{key}")
 
     assert_no_prior_actual_response()
+    scanned_claim_files = assert_no_unscanned_arrival_claims()
 
     evidence_md = EVIDENCE_MD.read_text(encoding="utf-8")
     loop_md = LOOP_MD.read_text(encoding="utf-8")
@@ -159,6 +215,8 @@ def main() -> None:
     print(f"missing_signals={summary.get('missingSignals')}")
     print(f"hold_required={fixture.get('holdRequired')}")
     print(f"execution_mode={fixture.get('executionMode')}")
+    print(f"arrival_claim_files_scanned={scanned_claim_files}")
+    print("true_trigger_claims=0")
 
 
 if __name__ == "__main__":

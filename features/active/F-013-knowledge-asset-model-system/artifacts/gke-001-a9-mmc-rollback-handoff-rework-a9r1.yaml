@@ -1,0 +1,96 @@
+a9_mmc_rollback_handoff_rework:
+  id: GKE-001-COORDINATION-20260811-004-A9R1
+  type: report_only_mmc_bounded_read_subset_rollback_addendum
+  issued_at: 2026-08-11
+  engineering_domain: GKE-001
+  program: GKE-001
+  release: release_0_customer_readonly_pilot
+  feature: F-013
+  openspec_change: integrate-gke001-openspec-codegraph
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-003-A9
+    sha256: a3918471b8cde1eeb965c3ff5120be99944ee8fd24d0ffe1e87fe3b724435fc7
+  independent_review:
+    reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    result: a9_serial_exit_rework_required_4_of_5
+    kds_classification: kds_a9_technical_read_admission_verified_governance_blocked
+    mmc_classification: mmc_a9_bounded_read_subset_technical_verified_handoff_rework_required
+    only_rework_gap: explicit_mmc_rollback_boundary_for_governed_read_subset
+    a10_authorized: false
+  lane:
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    repository: GlobalCloud MMC
+    owner: MMC
+    change_id: close-mmc-a9-rollback-handoff-a9r1
+    execution_mode: report_only_no_repository_or_runtime_action
+    repository_file_allowlist: []
+    coordination_lock_id: none_report_only
+    baseline:
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      branch: main
+      worktree: clean
+      ahead: 0
+      behind: 0
+    required_addendum:
+      - state_that_A9_changed_no_seed_state_permission_configuration_or_code
+      - state_that_A9_rollback_is_stop_or_withdraw_the_two_operation_governed_use_scope_with_no_configuration_restore
+      - state_that_all_17_active_operations_remain_unchanged
+      - state_that_the_other_15_operations_are_outside_A9_and_receive_no_authorization_from_A9_or_A9R1
+      - state_that_future_A10_policy_isolation_or_narrowing_requires_a_new_control_with_exact_configuration_allowlist_before_and_after_fingerprints_and_restore_baseline
+      - preserve_partial_not_complete_and_no_A10_authorization
+    allowed_checks:
+      - verify_parent_and_current_control_sha256
+      - verify_head_origin_main_clean_ahead_behind_and_lock_absence
+      - read_existing_A9_report_and_policy_count_only
+    handoff:
+      medium: thread_report_only_addendum
+      repository_artifact_required: false
+      requires_f013_independent_read_only_re_review: true
+  forbidden_scope:
+    - any_repository_file_change
+    - any_seed_state_registry_permission_configuration_or_code_change
+    - any_test_or_harness_rework
+    - any_live_kds_or_mmc_request
+    - any_studio_brain_or_kds_execution
+    - any_policy_isolation_narrowing_or_reclassification
+    - any_intake_upload_retry_complete_upload_or_other_write_invocation
+    - any_credential_creation_disclosure_or_persistence
+    - commit
+    - push
+    - restart
+    - deployment
+    - a10_authorization
+    - real_authenticated_e2e
+    - status_promotion
+  serial_exit_gate:
+    order:
+      - collect_mmc_report_only_rollback_addendum
+      - f013_independent_read_only_re_review_of_addendum
+      - coordinator_decision_on_future_A10_control
+    A10_automatic_authorization: false
+    real_authenticated_search_wikipreview_chat_e2e: false
+  authorization:
+    local_read_only_repository_and_control_inspection: true
+    report_only_thread_response: true
+    repository_file_write: false
+    runtime_or_configuration_change: false
+    live_kds_or_mmc_read: false
+    any_kds_or_mmc_write: false
+    studio_or_brain_execution: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    this_control: withdraw_A9R1_report_scope_and_keep_A9_serial_exit_open
+    external_data_rollback: not_applicable_no_external_write
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

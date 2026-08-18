@@ -1,0 +1,122 @@
+a10i2_mmc_targeted_rework:
+  id: GKE-001-COORDINATION-20260811-014-A10I2R1
+  issued_at: 2026-08-11
+  program: GKE-001
+  feature_ref: F-013
+  coordinator:
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    role: sole_gke001_program_coordinator
+  parent_control:
+    id: GKE-001-COORDINATION-20260811-013-A10I2
+    sha256: 8ab2dd88b45c33669a4d3a14dc8065765738e113ff1728965b1defaa3776aacf
+  contract_freeze:
+    id: GKE-001-CONTRACT-FREEZE-20260811-001
+    sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+    schema_sha256: cc5865ac5f76e82d7ea86891f020e196073a0a23cd5a4f6bb44a3a279b0b0de0
+    operation_matrix_sha256: 2a80d362fe0d25d078874f919b911150122ca4f3c2faa3d9a25401f6e792a65c
+  independent_review:
+    reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+    classification: technical_rework_required_handoff_not_accepted
+    findings:
+      - kds_delegation_audience_and_permission_scope_claims_incompatible_with_frozen_KDS_verifier
+      - MMC_OpenAPI_allOf_closed_object_rejects_valid_requests_and_success_responses_are_not_field_frozen
+      - read_graph_and_wiki_preview_behavior_not_covered_by_reachable_tests
+      - release0_bypass_denial_does_not_emit_required_bounded_MMC_denied_audit
+  lane:
+    owner: MMC
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
+    thread_id: 019ee242-2575-73f1-b5bb-d43e7e49468e
+    change_id: rework-release0-canonical-read-relay-a10i2r1
+    lock: gke001-a10i2r1-mmc-targeted-rework-lock
+    execution_mode: local_opsx_tdd_mocked_transport_no_policy_write
+    baseline:
+      branch: main
+      head: 8bb60fcffb8de14e839de0631e646c8c73418092
+      origin_main: 8bb60fcffb8de14e839de0631e646c8c73418092
+      ahead: 0
+      behind: 0
+      staged_entries: 0
+      opsx_lock: absent
+      existing_a10i2_delta_frozen: true
+    product_test_file_allowlist:
+      - runtime/app/api/v1/connectors.py
+      - runtime/tests/test_api.py
+      - runtime/tests/test_gateway.py
+      - runtime/tests/test_permission.py
+      - runtime/tests/test_contract.py
+      - llm-wiki-openapi-schema.yaml
+    product_test_file_count: 6
+    rework_start_sha256:
+      runtime/app/api/v1/connectors.py: b089ab33180c02ee3f3d51cae53f3ce0597d0bbba6387759718e56c281269c8a
+      runtime/tests/test_api.py: 0dd78a4f659ae9a2030dcbd13eaa4c9edb33d5148702e80ef59f7b51da57aadd
+      runtime/tests/test_gateway.py: 0fb66a5d1f1a5e8c77eb9ef96d809ee3b37d2b1e44e443023227f8bd107ce3ed
+      runtime/tests/test_permission.py: d49afeead8135c84939bb936d2be492f7734b2a1043f097d194e7a82f90d4961
+      runtime/tests/test_contract.py: c83276e88ed78913bad97c61d5453e3795f0deb7a98829d6921be5c02be6d5e2
+      llm-wiki-openapi-schema.yaml: 6685c171b8c782afcc687f046c63f098e208a3a8cc2abb0d98904848baa51622
+    governance_file_allowlist:
+      - .harness/opsx.lock
+      - .harness/runs/*-rework-release0-canonical-read-relay-a10i2r1/**
+      - openspec/changes/implement-release0-canonical-read-relay-a10i2/**
+      - .codegraph/**
+    required_rework:
+      - derive_KDS_delegation_with_aud_kds-knowledge-intake_permissions_knowledge-read_exact_project_scopes_and_session_scopes
+      - remove_unrecognized_knowledge_read_substitute_and_prove_current_KDS_DelegationVerifier_accepts_the_signed_claim
+      - preserve_kid_iss_subject_tenant_org_read_authority_fresh_nonce_signature_and_at_most_60_second_lifetime
+      - replace_invalid_allOf_closed_authority_composition_with_instance_valid_frozen_Search_Graph_and_WikiPreview_models
+      - match_frozen_nullable_cursor_2048_and_delegation_signature_header_bounds_8192_1024
+      - freeze_success_response_identity_projection_total_cursor_graph_and_wiki_preview_fields_and_reject_incomplete_response
+      - add_reachable_search_read_graph_and_wiki_preview_transport_tests
+      - add_field_level_OpenAPI_valid_and_invalid_instance_tests_not_string_presence_only
+      - emit_bounded_denied_audit_for_release0_bypass_without_reading_or_storing_raw_authority_query_or_identity
+      - preserve_previous_scope_signature_header_registry_error_rate_circuit_generic_invoke_and_no_second_ledger_guarantees
+    required_evidence:
+      - focused_release0_tests_with_separate_search_graph_and_wiki_preview_counts
+      - full_MMC_runtime_suite
+      - frozen_OpenAPI_valid_instance_and_incomplete_response_negative_tests
+      - direct_current_KDS_DelegationVerifier_compatibility_replay_or_equivalent_imported_fixture
+      - contract_test_OpenSpec_strict_MMC_Harness_CodeGraph_and_diff_check
+      - standard_run_scoped_evidence_index_acceptance_matrix_replayable_patch_and_handoff
+      - exact_changed_paths_hashes_high_risk_unchanged_hashes_and_lock_absence
+    forbidden_scope:
+      - runtime/scripts/contract_test.py
+      - runtime/scripts/seed.sh
+      - runtime/state.json
+      - runtime/app/core/delegation.py
+      - runtime/app/core/kds_delegation.py
+      - any_file_outside_the_allowlists
+      - runtime_registry_or_policy_mutation
+      - real_shared_or_production_KDS_or_MMC_access
+      - credentials_or_secret_creation_disclosure_or_persistence
+      - KDS_fact_or_business_state_write
+      - commit_push_restart_deploy_customer_release_or_status_promotion
+    rollback:
+      repository: revert_only_the_uncommitted_A10I2_and_A10I2R1_allowlisted_delta_and_run_scoped_governance_artifacts
+      runtime: no_runtime_or_policy_change_authorized
+      data: no_external_data_change_authorized
+  serial_gate:
+    requires_corrected_MMC_handoff: true
+    requires_F013_independent_targeted_re_review: true
+    mmc_high_risk_policy_configuration: false
+    live_read: false
+    brain_change: false
+    studio_change: false
+    real_authenticated_e2e: false
+    automatic_next_lane_start: false
+  authorization:
+    local_allowlisted_product_test_openspec_and_evidence_rework: true
+    local_tests_and_mocked_transport: true
+    runtime_registry_or_policy_change: false
+    live_KDS_or_MMC_read: false
+    any_KDS_or_MMC_write: false
+    credentials: false
+    commit: false
+    push: false
+    restart: false
+    deployment: false
+    customer_release: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    status_ceiling: partial

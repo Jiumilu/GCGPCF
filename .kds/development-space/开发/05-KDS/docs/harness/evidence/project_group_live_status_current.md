@@ -20,38 +20,38 @@ superseded_by: []
 
 ## Summary
 
-- generated_at: `2026-08-03T16:31:51.483009+08:00`
+- generated_at: `2026-08-13T16:12:00.757384+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `12`
+- pass_repo_count: `14`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Brain, GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud MMC, GlobalCloud KDS`
-- observed_ahead: `GlobalCloud Studio, GlobalCloud MMC`
-- stable_dirty: `GlobalCloud Brain, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud Studio, GlobalCoud GPCF`
-- stable_ahead: `GlobalCloud MMC, GlobalCloud Studio`
+- observed_dirty: `GlobalCoud GPCF, GlobalCloud MMC, GlobalCloud KDS`
+- observed_ahead: `none`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud MMC, GlobalCoud GPCF`
+- stable_ahead: `none`
 - volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCoud GPCF`
-- review_boundary: `GlobalCloud Brain, GlobalCloud KDS, GlobalCloud MMC, GlobalCloud Studio, GlobalCoud GPCF`
+- sensitive_repos: `GlobalCoud GPCF, GlobalCloud KDS`
+- review_boundary: `GlobalCloud KDS, GlobalCloud MMC, GlobalCoud GPCF`
 
 ## Repo details
 
 | Repo | dirty_count | ahead | behind | sensitive_paths |
 |---|---:|---:|---:|---|
 | `GlobalCloud AAAS` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Brain` | 5 | 0 | 0 | `none` |
+| `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 9 | 20 | 0 | `none` |
-| `GlobalCoud GPCF` | 394 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
+| `GlobalCloud Studio` | 0 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 708 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
-| `GlobalCloud MMC` | 9 | 1 | 0 | `none` |
-| `GlobalCloud KDS` | 39 | 0 | 0 | `none` |
+| `GlobalCloud MMC` | 76 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 450 | 0 | 0 | `"PVA\344\273\267\345\200\274\350\201\224\347\233\237/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\344\270\226\347\225\214\350\265\204\344\272\247/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\345\267\245\344\270\232\347\273\277\351\223\276/\344\274\232\350\256\256\347\272\252\350\246\201/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "entities/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md"` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |
