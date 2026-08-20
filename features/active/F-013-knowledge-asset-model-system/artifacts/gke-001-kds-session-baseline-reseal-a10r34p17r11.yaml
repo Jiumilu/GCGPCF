@@ -1,0 +1,51 @@
+control:
+  id: GKE-001-COORDINATION-20260820-005-A10R34P17R11
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: reseal-kds-session-aggregate-baseline-a10r34p17r11
+  owner: GPCF
+  repository: GlobalCoud GPCF
+  mode: static_baseline_reseal_only
+  file_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-baseline-reseal-a10r34p17r11.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-baseline-reseal-a10r34p17r11.yaml
+  forbidden_scope:
+    - controller_execution
+    - database_or_credential_access
+    - fixture_or_migration
+    - API_or_MMC_request
+    - KDS_owner_content_mutation
+    - commit_or_push
+    - deployment_or_promotion
+
+baseline:
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: {count: 381, sha256: 7545feb29bc340c848751b9f6c01733ce08f62c3d1f6edb7d36b7100ed75e3e1}
+    expanded_dirty: {count: 711, sha256: 2dcda5a6d957e2ded61fb72d1b156861f7fb74604d76b3a787d7dd56d58b6b8f}
+    stability_observation: two_read_only_snapshots_over_20_seconds
+    partition: observed_only_not_owner_approval
+    committed_stage_b_overlap: 0
+    committed_release0_overlap: 0
+  r10_controller:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r10.py
+    sha256: 98a0bdedeafa31686e35d98872d3ea49f41ae512160b8ff47f112b4c0283cdd6
+    external_manifest_sha256: c00c3c96320bb78f0ca626ea92a5f14b50d6028cbcef6d545a5456ea03ca148b
+
+verification:
+  controller_sha256: eb996079e452cc6ffc3202329630fcc871e3e87162ce731515110b01f75e0991
+  execution_authorized: false
+  codegraph_impact: static_governance_artifact_only
+
+rollback:
+  repository: remove_only_the_two_uncommitted_r11_artifacts
+  runtime_data: not_applicable
+
+status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}

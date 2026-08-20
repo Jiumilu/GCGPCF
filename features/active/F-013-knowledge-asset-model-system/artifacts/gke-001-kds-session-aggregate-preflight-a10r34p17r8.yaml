@@ -1,0 +1,131 @@
+control:
+  id: GKE-001-COORDINATION-20260820-002-A10R34P17R8
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  change_id: classify-kds-local-session-ownership-a10r34p17r8
+  owner: gke001_coordinator
+  repository: GlobalCoud GPCF
+  thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  independent_review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  mode: controller_static_preflight_no_connection
+  repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r8.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-aggregate-preflight-a10r34p17r8.yaml
+  forbidden_scope:
+    - database_connection
+    - database_query
+    - credential_read
+    - runtime_config_read
+    - fixture
+    - migration
+    - API
+    - MMC
+    - service_operation
+    - opsx_lock_or_atomic_guard_write
+    - stage
+    - commit
+    - push
+    - deploy
+    - status_promotion
+
+authorization:
+  artifact_write: authorized_for_current_round
+  controller_execution: false
+  database_connection: false
+  credential_or_runtime_config_read: false
+  real_or_shared_kds_mmc_write: false
+  commit_push_deploy_promotion: false
+
+codegraph_impact:
+  changed_symbols:
+    - aggregate_sessions
+    - safe_groups
+  sync_status: current_round_pass
+  structural_evidence_only: true
+
+predecessor:
+  control: GKE-001-COORDINATION-20260820-001-A10R34P17R7
+  disposition: independent_read_only_pass
+  r6r4_result: stopped_no_change_session_count_drift
+  r6r4_details_read: false
+  r6r4_reexecution_authorized: false
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r8.py
+  sha256: 9246748605d46f90260d685ee001f44bb842f4dabc0799bfec6958492b97f3c4
+  self_test: pass
+  execution_authorized: false
+  preflight_executed: false
+
+aggregate_boundary:
+  connection_limit: 1
+  transaction_limit: 1
+  transaction_mode: repeatable_read_read_only
+  output:
+    allowed:
+      - application_class
+      - client_location_category
+      - state_class
+      - session_count
+    forbidden:
+      - pid
+      - username
+      - hostname
+      - raw_application_name
+      - raw_network_address
+      - port
+      - query_text
+      - audit_rows
+      - business_rows
+  fail_closed:
+    - unclassified_application
+    - non_loopback_client_location
+    - non_read_only_transaction
+    - cleanup_failure
+  no_fixed_session_count_assumption: true
+
+baseline_accounting:
+  gpcf:
+    head: a317eeaab451920bc4bbbea904ca1c2bc774a497
+    origin_main: 8deda915579b915d7496f20b2e4ecb5475491c40
+    ahead_behind_staged: 1/0/0
+  pre_write_gpcf_status_including_r7:
+    ordinary_dirty: {count: 8, sha256: 9203075d704421c0bc9a370980792e400fcf0bf5846f120ceb909f68e5bf354c}
+    expanded_dirty: {count: 8, sha256: 9203075d704421c0bc9a370980792e400fcf0bf5846f120ceb909f68e5bf354c}
+  r8_paths_are_self_referential_candidate_scope: true
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ordinary_dirty: {count: 373, sha256: 4677fcccdf92696d134e276bc19692403f57f5151c3026670950b8f2ded7760b}
+    expanded_dirty: {count: 703, sha256: 5a7325cd54c9eed1c89fcc9e5540065b68cc61ed7c2399fdddbe761534b46f77}
+  mmc:
+    head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7
+    origin_main: 2dd7954fa4826120d68d42bd8f3c30e8d9ead99b
+    ordinary_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+    expanded_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+  opsx_lock: absent
+
+next_gate:
+  required_before_execution:
+    - independent_f013_read_only_review
+    - new_one_shot_human_authorization
+    - resealed_controller_sha256
+    - resealed_cross_repository_baselines
+  prohibited_until_then:
+    - controller_execute
+    - database_connection
+    - fixture_or_migration
+    - authenticated_live_read_e2e
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false
+
+rollback:
+  repository: remove_only_the_two_uncommitted_r8_artifacts
+  runtime_data: not_applicable

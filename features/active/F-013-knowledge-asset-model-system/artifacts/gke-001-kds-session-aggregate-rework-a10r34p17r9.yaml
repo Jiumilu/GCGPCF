@@ -1,0 +1,71 @@
+control:
+  id: GKE-001-COORDINATION-20260820-003-A10R34P17R9
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  change_id: repair-kds-session-aggregate-baseline-contract-a10r34p17r9
+  mode: controller_rework_static_only
+  repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r9.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-aggregate-rework-a10r34p17r9.yaml
+
+predecessor:
+  control: GKE-001-COORDINATION-20260820-002-A10R34P17R8
+  result: stopped_no_change_before_database_connection
+  defect: inherited_baseline_checker_required_zero_divergence_for_explicit_gpcf_ahead_one_baseline
+  r8_reexecution_authorized: false
+
+baseline_contract:
+  gpcf:
+    head: a317eeaab451920bc4bbbea904ca1c2bc774a497
+    origin_main: 8deda915579b915d7496f20b2e4ecb5475491c40
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty: {count: 11, sha256: 3db8f38e40ff5681009459c83f5d9e6f6b0502ecad093b142e9d06d64f455a0f}
+    expanded_dirty: {count: 11, sha256: 3db8f38e40ff5681009459c83f5d9e6f6b0502ecad093b142e9d06d64f455a0f}
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: {count: 373, sha256: 4677fcccdf92696d134e276bc19692403f57f5151c3026670950b8f2ded7760b}
+    expanded_dirty: {count: 703, sha256: 5a7325cd54c9eed1c89fcc9e5540065b68cc61ed7c2399fdddbe761534b46f77}
+  mmc:
+    head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7
+    origin_main: 2dd7954fa4826120d68d42bd8f3c30e8d9ead99b
+    ahead_behind_staged: 3/0/0
+    ordinary_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+    expanded_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+  opsx_lock: absent
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r9.py
+  sha256: 2ee3c779cd4e55571ed091e2180f7374e8cc71ae17e916808e6a985a9c9761fa
+  r8_controller_sha256: 9246748605d46f90260d685ee001f44bb842f4dabc0799bfec6958492b97f3c4
+  execution_authorized: false
+  static_checks:
+    - explicit_gpcf_ahead_one_baseline
+    - explicit_mmc_ahead_three_baseline
+    - divergence_mismatch_fail_closed
+    - inherited_aggregate_selftest
+
+forbidden_until_new_authorization:
+  - controller_execute
+  - database_connection
+  - database_query
+  - credential_or_runtime_config_read
+  - fixture_or_migration
+  - API_or_MMC
+  - service_operation
+  - commit_or_push
+  - deploy_or_promotion
+
+rollback:
+  repository: remove_only_the_two_uncommitted_r9_artifacts
+  runtime_data: not_applicable
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false

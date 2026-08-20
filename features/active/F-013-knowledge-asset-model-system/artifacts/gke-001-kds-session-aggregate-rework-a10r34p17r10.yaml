@@ -1,0 +1,51 @@
+control:
+  id: GKE-001-COORDINATION-20260820-004-A10R34P17R10
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  change_id: repair-kds-session-aggregate-external-lock-contract-a10r34p17r10
+  mode: controller_rework_static_only_p2_toctou_closed_with_postread_metadata_check
+  repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r10.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-aggregate-rework-a10r34p17r10.yaml
+
+predecessors:
+  r8: consumed_stopped_before_database_connection_due_gpcf_zero_divergence_inheritance
+  r9: consumed_stopped_before_database_connection_due_stale_external_file_seals
+
+baseline_contract:
+  gpcf: {head: a317eeaab451920bc4bbbea904ca1c2bc774a497, origin_main: 8deda915579b915d7496f20b2e4ecb5475491c40, ahead_behind_staged: 1/0/0, ordinary_dirty: {count: 13, sha256: c55927f86f0e7effe6de03428631b02713c09a1329035a890a47f355f98e61e9}, expanded_dirty: {count: 13, sha256: c55927f86f0e7effe6de03428631b02713c09a1329035a890a47f355f98e61e9}}
+  kds: {head: 2ac85c55163b7acf0ede699184ac360579ccefaa, origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa, ahead_behind_staged: 0/0/0, ordinary_dirty: {count: 373, sha256: 4677fcccdf92696d134e276bc19692403f57f5151c3026670950b8f2ded7760b}, expanded_dirty: {count: 703, sha256: 5a7325cd54c9eed1c89fcc9e5540065b68cc61ed7c2399fdddbe761534b46f77}}
+  mmc: {head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7, origin_main: 2dd7954fa4826120d68d42bd8f3c30e8d9ead99b, ahead_behind_staged: 3/0/0, ordinary_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}, expanded_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}}
+
+external_owner_boundary:
+  repository: GlobalCloud KDS
+  files: 12
+  current_content_manifest_sha256: c00c3c96320bb78f0ca626ea92a5f14b50d6028cbcef6d545a5456ea03ca148b
+  disposition: read_only_byte_seal_no_owner_content_mutation
+
+controller:
+  path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r10.py
+  sha256: 98a0bdedeafa31686e35d98872d3ea49f41ae512160b8ff47f112b4c0283cdd6
+  r9_controller_sha256: 2ee3c779cd4e55571ed091e2180f7374e8cc71ae17e916808e6a985a9c9761fa
+  execution_authorized: false
+  no_r8_r9_reexecution: true
+
+forbidden_until_new_authorization:
+  - controller_execute
+  - database_connection
+  - database_query
+  - credential_or_runtime_config_read
+  - fixture_or_migration
+  - API_or_MMC
+  - service_operation
+  - commit_or_push
+  - deploy_or_promotion
+
+rollback:
+  repository: remove_only_the_two_uncommitted_r10_artifacts
+  runtime_data: not_applicable
+
+status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}

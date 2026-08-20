@@ -1,0 +1,104 @@
+control:
+  id: GKE-001-COORDINATION-20260820-001-A10R34P17R7
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  change_id: design-kds-local-session-drift-disposition-a10r34p17r7
+  mode: report_only_no_connection
+  repository_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-drift-disposition-preflight-a10r34p17r7.yaml
+  forbidden_scope:
+    - database_connection
+    - database_query
+    - fixture
+    - migration
+    - API
+    - MMC
+    - service_operation
+    - commit
+    - push
+    - deploy
+    - status_promotion
+
+predecessor:
+  control: GKE-001-COORDINATION-20260817-057-A10R34P17R6R4
+  controller_sha256: e2f57b46e64a020ad5a966db5dd928ce7b888a0811bd49daa70ebb4ccf257280
+  result: stopped_no_change_session_count_drift
+  observed_session_count: 13
+  expected_session_count: 2
+  details_read: false
+  connection_count: 1
+  transaction_count: 1
+  transaction_mode: repeatable_read_read_only
+  xid_before_after_null: true
+  rollback_confirmed: true
+  connection_close_confirmed: true
+  retry_authorized: false
+  reexecution_authorized: false
+
+current_baseline:
+  gpcf:
+    head: a317eeaab451920bc4bbbea904ca1c2bc774a497
+    origin_main: 8deda915579b915d7496f20b2e4ecb5475491c40
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty: {count: 6, sha256: 88355436dab2b59a31952a889a2f7ddfd37bf141fa1af2379b54f73f746a1e23}
+    expanded_dirty: {count: 6, sha256: 88355436dab2b59a31952a889a2f7ddfd37bf141fa1af2379b54f73f746a1e23}
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: {count: 373, sha256: 4677fcccdf92696d134e276bc19692403f57f5151c3026670950b8f2ded7760b}
+    expanded_dirty: {count: 703, sha256: 5a7325cd54c9eed1c89fcc9e5540065b68cc61ed7c2399fdddbe761534b46f77}
+  mmc:
+    head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7
+    origin_main: 2dd7954fa4826120d68d42bd8f3c30e8d9ead99b
+    ahead_behind_staged: 3/0/0
+    ordinary_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+    expanded_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+  opsx_lock: absent
+
+self_reference_accounting:
+  candidate_path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-session-drift-disposition-preflight-a10r34p17r7.yaml
+  pre_write_baseline: current_baseline.gpcf
+  excluded_from_pre_write_baseline: true
+  current_worktree_including_candidate:
+    ordinary_dirty: {count: 7, sha256: 15122d47d7a4c17aaf6102c3d04e5d11796f058f880927896530d6a9c9e992bc}
+    expanded_dirty: {count: 7, sha256: 15122d47d7a4c17aaf6102c3d04e5d11796f058f880927896530d6a9c9e992bc}
+
+next_controller_requirements:
+  - Do not use a fixed total session count as proof of local ownership.
+  - Define an approved bounded classification before any detail projection.
+  - Keep one connection and one REPEATABLE READ READ ONLY transaction.
+  - Reject non-loopback or unclassifiable sessions before returning any detail.
+  - Return only aggregate category counts unless a separate authority freezes a detail schema.
+  - Use a newly sealed local disposable PostgreSQL target for migration replay.
+  - Verify cleanup by exact database-name absence after replay.
+  - Require F-013 independent review before a new one-shot execution authorization.
+
+evidence:
+  current:
+    - openspec_strict_pass
+    - gke001_binding_self_test_pass
+    - document_gate_pass
+    - document_pollution_pass
+    - kds_token_pass
+    - codegraph_sync_status_query_pass
+    - kds_release0_non_database_35_passed
+    - kds_stage_b_non_database_66_passed
+    - mmc_runtime_165_passed
+    - brain_read_model_typecheck_build_vitest_393_passed
+  inherited:
+    - r6r4_post_execution_f013_review_p0_p1_p2_zero
+  not_run:
+    - disposable_postgresql_migration_replay
+    - authenticated_studio_kds_brain_read_e2e
+
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  promotion: false
+
+rollback:
+  repository: remove_only_this_uncommitted_preflight_file
+  runtime_data: not_applicable

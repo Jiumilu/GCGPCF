@@ -1,0 +1,62 @@
+control:
+  id: GKE-001-COORDINATION-20260820-006-A10R34P17R12
+  predecessor_control_id: GKE-001-COORDINATION-20260820-005-A10R34P17R11
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: execute-kds-session-aggregate-from-owner-stable-baseline-a10r34p17r12
+  owner: GPCF
+  repository: GlobalCoud GPCF
+  mode: local_nonproduction_read_only_controller_review_only
+  file_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r12.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r12.yaml
+  forbidden_scope:
+    - controller_execution
+    - database_or_credential_access
+    - fixture_or_migration
+    - API_or_MMC_request
+    - KDS_owner_content_mutation
+    - service_operation
+    - commit_or_push
+    - deployment_or_promotion
+
+baseline:
+  gpcf:
+    head: a317eeaab451920bc4bbbea904ca1c2bc774a497
+    origin_main: 8deda915579b915d7496f20b2e4ecb5475491c40
+    ahead_behind_staged: 1/0/0
+    ordinary_dirty: {count: 17, sha256: f0f54e4a96bd2c9338c532349215097ff0ebe0c6f5dd18e4c08ff8c0f87e06da}
+    expanded_dirty: {count: 17, sha256: f0f54e4a96bd2c9338c532349215097ff0ebe0c6f5dd18e4c08ff8c0f87e06da}
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: {count: 384, sha256: 20e3118b5cccd7ab1b7f00dd3a142aee36e319e1bb3c0e89e898fdc45ed17809}
+    expanded_dirty: {count: 714, sha256: 5ad716a5a9cb636475d9f319b6e098d79e821e218ef8f0462e938d7bc2fa0b72}
+    stable_window: {audit_view_count: 367, manifest_sha256: 50758610cddd84fd7291e310aa57a87de9a5180dfda62db3459f3a5bf410d6a7, observation_seconds: 15}
+  mmc: {head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7, origin_main: 2dd7954fa4826120d68d42bd8f3c30e8d9ead99b, ahead_behind_staged: 3/0/0, dirty: 0}
+
+dependencies:
+  r10_controller:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r10.py
+    sha256: 98a0bdedeafa31686e35d98872d3ea49f41ae512160b8ff47f112b4c0283cdd6
+  controller_sha256: 47e6040ead35c76397a3c68742a49d11f4505bf7f4c65e6de94d6d1c3f766d37
+
+verification:
+  current_batch: static_self_test_only
+  database_connections: 0
+  api_requests: 0
+  codegraph_impact: static_governance_artifact_only
+  independent_review_required_before_execution: true
+  fresh_human_execution_authorization_required: true
+
+rollback:
+  repository: remove_only_the_two_uncommitted_r12_artifacts
+  runtime_data: not_applicable
+
+status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}

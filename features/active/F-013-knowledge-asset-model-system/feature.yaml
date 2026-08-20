@@ -37,7 +37,7 @@ acceptance:
   - 文档门禁结果和未闭合边界被显式记录
 loop:
   current_step: evaluate
-  iteration: 300
+  iteration: 308
 evidence:
   tests: pass
   build: pass
@@ -411,4 +411,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-08-02T10:41:40+00:00"
-updated_at: "2026-08-16T22:58:15+00:00"
+updated_at: "2026-08-20T13:23:07+00:00"
