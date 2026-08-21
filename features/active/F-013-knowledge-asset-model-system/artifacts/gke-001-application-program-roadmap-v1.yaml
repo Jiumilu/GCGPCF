@@ -9,7 +9,7 @@ gke001_application_program_roadmap:
     canonical_review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
     canonical_feature: F-013
     canonical_contract_revision: v0.1
-    canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    canonical_manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
     knowledge_source_of_truth: KDS
     authorization_source: MMC
     customer_workbench: Studio

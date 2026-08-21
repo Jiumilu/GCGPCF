@@ -26,15 +26,15 @@
     },
     "assetId": {
       "type": "string",
-      "minLength": 1
+      "pattern": "^ka://[^\\s]+$"
     },
     "tenantId": {
       "type": "string",
-      "minLength": 1
+      "pattern": "^tenant://[^\\s]+$"
     },
     "knowledgeObjectRef": {
       "type": "string",
-      "minLength": 1,
+      "pattern": "^(ko|https?)://[^\\s]+$",
       "description": "ID or URI of the canonical OKF KnowledgeObject stored by KDS."
     },
     "accessScope": {
@@ -211,14 +211,13 @@
       "properties": {
         "ownerRef": {
           "type": "string",
-          "minLength": 1
+          "pattern": "^[a-z][a-z0-9+.-]*://[^\\s]+$"
         },
         "stewardRefs": {
           "$ref": "#/$defs/nonEmptyRefArray"
         },
         "vocabularyVersion": {
-          "type": "string",
-          "minLength": 1
+          "const": "globalcloud.knowledge_asset@v0.1"
         },
         "metadataStatus": {
           "type": "string",
@@ -236,7 +235,8 @@
           "$ref": "#/$defs/nonEmptyRefArray"
         },
         "retentionPolicyRef": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9+.-]*://[^\\s]+$"
         }
       },
       "allOf": [
@@ -318,6 +318,41 @@
       "format": "date-time"
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "accessScope": {
+            "properties": {
+              "primarySpace": {
+                "properties": {
+                  "spaceType": {
+                    "const": "public"
+                  }
+                },
+                "required": ["spaceType"]
+              }
+            },
+            "required": ["primarySpace"]
+          }
+        },
+        "required": ["accessScope"]
+      },
+      "then": {
+        "properties": {
+          "classification": {
+            "properties": {
+              "confidentiality": {
+                "const": "public"
+              }
+            },
+            "required": ["confidentiality"]
+          }
+        },
+        "required": ["classification"]
+      }
+    }
+  ],
   "$defs": {
     "code": {
       "type": "string",
@@ -327,7 +362,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "minLength": 1
+        "pattern": "^[a-z][a-z0-9+.-]*://[^\\s]+$"
       },
       "minItems": 1,
       "uniqueItems": true
@@ -343,13 +378,15 @@
         },
         "spaceRef": {
           "type": "string",
-          "minLength": 1
+          "pattern": "^space://[^\\s]+$"
         },
         "aclPolicyRef": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^policy://[^\\s]+$"
         },
         "publicationPolicyRef": {
-          "type": "string"
+          "type": "string",
+          "pattern": "^policy://[^\\s]+$"
         },
         "approvalEvidenceRefs": {
           "$ref": "#/$defs/nonEmptyRefArray"
@@ -398,7 +435,7 @@
         },
         "policyRef": {
           "type": "string",
-          "minLength": 1
+          "pattern": "^policy://[^\\s]+$"
         },
         "projectionLineageRefs": {
           "$ref": "#/$defs/nonEmptyRefArray"
@@ -408,7 +445,7 @@
         },
         "derivedKnowledgeObjectRef": {
           "type": "string",
-          "minLength": 1
+          "pattern": "^(ko|https?)://[^\\s]+$"
         }
       },
       "allOf": [
@@ -492,7 +529,7 @@
         },
         "targetRef": {
           "type": "string",
-          "minLength": 1
+          "pattern": "^[a-z][a-z0-9+.-]*://[^\\s]+$"
         },
         "direction": {
           "type": "string",

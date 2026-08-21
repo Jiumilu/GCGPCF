@@ -81,7 +81,8 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-GKE-001-APPLICATION-IMPLEMENTATION-20260811 | GlobalCloud 知识工程应用体系实施方案 | 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md | GPCF | controlled |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | KDS | controlled |
 | GPCF-DOC-C60ECF8A71 | GlobalCloud知识缺口悬赏与真实资料回收跟踪台账 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | KDS | controlled |
-| GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | GlobalCloud 知识资产模型体系综合方案 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | GPCF | draft |
+| GPCF-DOC-KNOWLEDGE-ASSET-WHITEPAPER-20260821 | GlobalCloud 知识资产概念模型白皮书 | 03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md | GPCF | controlled |
+| GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | GlobalCloud 知识资产模型体系综合方案 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | GPCF | controlled |
 | GPCF-DOC-742C5EA186 | GlobalCloud 积分收益额度悬赏争议联动规则 | 03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | KDS | controlled |
 | GPCF-DOC-69CFFD4C82 | GlobalCloud统一模型配置体系方案 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | GPCF | controlled |
 | GPCF-DOC-05774FB8AD | GlobalCloud 绿色供应链体系 AI 服务模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | KDS | controlled |

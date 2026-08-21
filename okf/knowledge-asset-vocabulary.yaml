@@ -3,7 +3,7 @@ version: v0.1
 status: draft
 owner: GPCF
 canonical_store: KDS
-updated_at: "2026-08-02"
+updated_at: "2026-08-21"
 compatibility:
   extends_schema: okf/knowledge-object.schema.json
   envelope_schema: okf/knowledge-asset-envelope.schema.json
@@ -156,6 +156,12 @@ relation_types:
   - asset_supersedes
   - asset_projects_to_space
 
+controlled_concepts:
+  domain:
+    values: [private, workspace, project, org, supply_chain, public, governance]
+  workstream:
+    values: [knowledge_governance]
+
 governance_rules:
   - id: KAM-001
     rule: 空间、知识域、业务项目、研发项目和标签必须使用独立字段，禁止复用同一个 tag 表达。
@@ -171,3 +177,11 @@ governance_rules:
     rule: MMC 只承担模型调用和授权审计，不拥有知识资产主模型。
   - id: KAM-007
     rule: authorized_write 只能由外部授权证据产生，Schema 校验或 AI 推断不得生成授权。
+  - id: KAM-008
+    rule: primarySpace 为 public 时，资产密级必须为 public；敏感内容只能通过受控脱敏投影或独立 approved_copy 进入公开空间。
+  - id: KAM-009
+    rule: assetId、KnowledgeObject、空间、策略、证据和 lineage 引用必须使用契约规定的 URI 形式，禁止裸字符串身份。
+  - id: KAM-010
+    rule: updatedAt 不得早于 createdAt；关系不得指向自身；投影不得重复目标或回投 primarySpace。
+  - id: KAM-011
+    rule: controlled tags 的 scheme 与 code 必须在当前 vocabularyVersion 对应的 controlled_concepts 中解析成功。

@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/globalcloud-document-control-register.md
 source_path: 09-status/globalcloud-document-control-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-21
 supersedes: []
 superseded_by: []
 ---
 
 # GlobalCloud 文档控制总台账
 
-日期：2026-08-13
+日期：2026-08-21
 
 用途：登记 GPCF 仓库内所有 Markdown 文档的受控身份、项目归属、状态、源路径与 KDS 开发空间路径。
 
@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2121 | 1903 | 已建空间 |
+| GPCF | 12-GPCF | 2122 | 1903 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
@@ -48,7 +48,7 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 65 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
 | 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 264 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
@@ -472,7 +472,8 @@ superseded_by: []
 | GPCF-DOC-GKE-001-APPLICATION-IMPLEMENTATION-20260811 | GlobalCloud 知识工程应用体系实施方案 | 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md |
 | GPCF-DOC-9B5D646E38 | GlobalCloud 知识收益治理委员会 DecisionRecord 与争议处理模板 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | KDS | GPC, PVAOS, WAES, KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md |
 | GPCF-DOC-C60ECF8A71 | GlobalCloud知识缺口悬赏与真实资料回收跟踪台账 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | KDS | KDS, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md |
-| GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | GlobalCloud 知识资产模型体系综合方案 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | GPCF | WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP | data-ai-knowledge | draft | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md |
+| GPCF-DOC-KNOWLEDGE-ASSET-WHITEPAPER-20260821 | GlobalCloud 知识资产概念模型白皮书 | 03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md | GPCF | WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md |
+| GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | GlobalCloud 知识资产模型体系综合方案 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | GPCF | WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md |
 | GPCF-DOC-742C5EA186 | GlobalCloud 积分收益额度悬赏争议联动规则 | 03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | KDS | GFIS, GPC, WAES, KDS, MMC, GPCF | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md |
 | GPCF-DOC-69CFFD4C82 | GlobalCloud统一模型配置体系方案 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | GPCF | GPCF | data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md |
 | GPCF-DOC-05774FB8AD | GlobalCloud 绿色供应链体系 AI 服务模型 | 03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio | data-ai-knowledge | controlled | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud绿色供应链体系AI服务模型.md |

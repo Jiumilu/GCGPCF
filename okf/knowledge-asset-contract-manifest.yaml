@@ -1,9 +1,9 @@
 contract_id: globalcloud.knowledge_asset
 contract_version: v0.1
-status: draft
+status: controlled
 owner: GPCF
 source_of_truth: GPCF
-updated_at: "2026-08-02"
+updated_at: "2026-08-21"
 
 compatibility:
   mode: additive_envelope
@@ -22,20 +22,30 @@ compatibility:
     derived_ref_must_differ_from_canonical: true
     derived_object_must_resolve_to: id_or_uri
     derived_invariants: [tenantId, sourceRefs, projectionLineageRefs, confirmationStatus=human_confirmed]
+  semantic_invariants:
+    public_primary_confidentiality: public
+    timestamps: updated_at_not_before_created_at
+    relations: no_self_reference
+    projections: [not_primary_space, unique_target]
+    controlled_tags: resolve_in_declared_vocabulary_version
 
 artifacts:
   - role: model_plan
     path: 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md
     media_type: text/markdown
-    sha256: 9c126bdfa9e7f8b2c294ce77b263b3beb7849fcd8324ef0e62976fe1e5ce084d
+    sha256: 428031d9253189da8182d7f6c1e7b9cb7a7bc10e51dfad78cd14ffde2fa452b4
+  - role: whitepaper
+    path: 03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md
+    media_type: text/markdown
+    sha256: 27d954c695ad582fa16173f8a0af759dd09f1599dd03516d469bc30ab74d9fc1
   - role: schema
     path: okf/knowledge-asset-envelope.schema.json
     media_type: application/schema+json
-    sha256: 5d05c54d7861d8ab04c2d17d1b564e9e4dcf595ff7d2396e2b6d58be9fc604a8
+    sha256: 4a4f35d86bbe8c65c88574d3cc30c783c86a6ea24f2136032c772363da1f9716
   - role: vocabulary
     path: okf/knowledge-asset-vocabulary.yaml
     media_type: application/yaml
-    sha256: b35c544fd1275f8ae594ebf0a76befd357b784de0c152bf4e90bef5d5153d95a
+    sha256: baa324c60c7cc8784a729d96c5f57941b0ecb564e7ffeea6fe7c8b4054521ccd
   - role: canonical_example
     path: okf/knowledge-object.example.json
     media_type: application/json
@@ -51,7 +61,7 @@ artifacts:
   - role: validator
     path: tools/kds-sync/validate_knowledge_asset_model_system.py
     media_type: text/x-python
-    sha256: 4fab3717d660622e9d0bc148ef695882aa80aa54dbd3442e52c3ccc25882b5bd
+    sha256: 23ef584473d804d3e79aff3b3eab0e2e4f73412d8f31bc41dd5d536b5816800f
 
 dependencies:
   - role: knowledge_object

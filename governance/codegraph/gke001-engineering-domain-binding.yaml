@@ -37,10 +37,10 @@ gke001_codegraph_binding:
     canonical_contract:
       revision: v0.1
       manifest_path: okf/knowledge-asset-contract-manifest.yaml
-      manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+      manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
     application_roadmap:
       path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml
-      sha256: 32f00e131b0dab667fa7403dbd6d6a79c865f517959c5d6b227f82340534ad9f
+      sha256: 688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab
     releases: [release_0, release_1, release_2, release_3]
     systems: [GPCF, MMC, KDS, Brain, Studio, business_systems]
     openspec_change: openspec/changes/integrate-gke001-openspec-codegraph

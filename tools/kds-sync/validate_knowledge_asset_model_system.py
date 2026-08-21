@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
@@ -16,6 +17,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parents[2]
 MANIFEST_PATH = ROOT / "okf/knowledge-asset-contract-manifest.yaml"
 MODEL_DOC = ROOT / "03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md"
+WHITEPAPER = ROOT / "03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md"
 KNOWLEDGE_README = ROOT / "03-data-ai-knowledge/README.md"
 DOCUMENT_REGISTER = ROOT / "09-status/globalcloud-document-control-register.md"
 MASTER_PLAN = ROOT / "01-architecture/GlobalCloud 项目群总体方案.md"
@@ -26,6 +28,7 @@ DOCUMENT_CONTROL = ROOT / "tools/kds-sync/document_control.py"
 
 EXPECTED_ARTIFACT_ROLES = {
     "model_plan",
+    "whitepaper",
     "schema",
     "vocabulary",
     "canonical_example",
@@ -55,7 +58,7 @@ EXPECTED_LEGACY_SPACE_MAPPINGS = {
     "ops": "domain_tag_ops",
 }
 SPACE_DOMAIN_MARKERS = {"collection_only", "content_domain_plus_ops_tag"}
-EXPECTED_GOVERNANCE_RULES = {f"KAM-{index:03d}" for index in range(1, 8)}
+EXPECTED_GOVERNANCE_RULES = {f"KAM-{index:03d}" for index in range(1, 12)}
 EXPECTED_CONTEXT_REF_PREFIXES = {
     "platformGroupRefs": "platform-group://",
     "systemRefs": "system://",
@@ -98,8 +101,8 @@ EXPECTED_MODEL_DOCUMENT_CONTROL = {
         "GPCF",
         "ICP",
     ],
-    "status": "draft",
-    "version": "v0.1",
+    "status": "controlled",
+    "version": "v1.0",
     "owner": "GPCF",
     "kds_path": "开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md",
 }
@@ -177,15 +180,43 @@ def validate_document_control_metadata() -> None:
     namespace = runpy.run_path(str(DOCUMENT_CONTROL))
     build_records = namespace.get("build_records")
     require(callable(build_records), "document_control_build_records_missing")
-    records = build_records([MODEL_DOC])
-    require(len(records) == 1, "document_control_model_record_count_mismatch")
-    record = records[0]
+    records = build_records([MODEL_DOC, WHITEPAPER])
+    require(len(records) == 2, "document_control_model_record_count_mismatch")
+    record = next((item for item in records if item.get("source_path") == rel(MODEL_DOC)), None)
+    require(isinstance(record, dict), "document_control_model_record_missing")
     for key, expected in EXPECTED_MODEL_DOCUMENT_CONTROL.items():
         require(record.get(key) == expected, f"document_control_model_metadata_mismatch:{key}")
+    whitepaper = next((item for item in records if item.get("source_path") == rel(WHITEPAPER)), None)
+    require(isinstance(whitepaper, dict), "document_control_whitepaper_record_missing")
+    require(whitepaper.get("project") == "GPCF", "document_control_whitepaper_project_mismatch")
+    require(whitepaper.get("status") == "controlled", "document_control_whitepaper_status_mismatch")
+    require(whitepaper.get("version") == "v1.0", "document_control_whitepaper_version_mismatch")
 
 
 def validate_negative_examples(validator: Draft202012Validator, example: dict) -> int:
     cases: list[tuple[str, dict]] = []
+
+    invalid_asset_id = deepcopy(example)
+    invalid_asset_id["assetId"] = "bare-asset-id"
+    cases.append(("invalid_asset_id", invalid_asset_id))
+
+    invalid_knowledge_object_ref = deepcopy(example)
+    invalid_knowledge_object_ref["knowledgeObjectRef"] = "bare-knowledge-object-ref"
+    cases.append(("invalid_knowledge_object_ref", invalid_knowledge_object_ref))
+
+    unknown_vocabulary_version = deepcopy(example)
+    unknown_vocabulary_version["governance"]["vocabularyVersion"] = "unregistered@v9"
+    cases.append(("unknown_vocabulary_version", unknown_vocabulary_version))
+
+    secret_public_primary = deepcopy(example)
+    secret_public_primary["accessScope"]["primarySpace"] = {
+        "spaceType": "public",
+        "spaceRef": "space://public/example",
+        "publicationPolicyRef": "policy://example/publication",
+        "approvalEvidenceRefs": ["approval://example/publication-001"],
+    }
+    secret_public_primary["classification"]["confidentiality"] = "secret"
+    cases.append(("secret_asset_in_public_primary_space", secret_public_primary))
 
     second_master = deepcopy(example)
     second_master["canonicalBody"] = {"text": "must stay in the canonical KnowledgeObject"}
@@ -287,19 +318,51 @@ def validate_negative_examples(validator: Draft202012Validator, example: dict) -
     return len(cases)
 
 
-def projection_semantic_violations(envelope: dict) -> list[str]:
+def envelope_semantic_violations(envelope: dict, vocabulary: dict) -> list[str]:
     violations: list[str] = []
     canonical_ref = envelope.get("knowledgeObjectRef")
+    primary_space = envelope.get("accessScope", {}).get("primarySpace", {})
+    primary_key = (primary_space.get("spaceType"), primary_space.get("spaceRef"))
     projections = envelope.get("accessScope", {}).get("projections", [])
+    projection_targets: set[tuple[object, object]] = set()
     for index, projection in enumerate(projections):
-        if projection.get("mode") != "approved_copy":
-            continue
-        if projection.get("derivedKnowledgeObjectRef") == canonical_ref:
+        target = projection.get("target") or {}
+        target_key = (target.get("spaceType"), target.get("spaceRef"))
+        if target_key == primary_key:
+            violations.append(f"projection_targets_primary_space:{index}")
+        if target_key in projection_targets:
+            violations.append(f"duplicate_projection_target:{index}")
+        projection_targets.add(target_key)
+        if projection.get("mode") == "approved_copy" and projection.get("derivedKnowledgeObjectRef") == canonical_ref:
             violations.append(f"approved_copy_reuses_canonical_ref:{index}")
+
+    for index, relation in enumerate(envelope.get("relations") or []):
+        if relation.get("targetRef") == canonical_ref:
+            violations.append(f"self_relation:{index}")
+
+    try:
+        created_at = datetime.fromisoformat(str(envelope.get("createdAt")).replace("Z", "+00:00"))
+        updated_at = datetime.fromisoformat(str(envelope.get("updatedAt")).replace("Z", "+00:00"))
+        if updated_at < created_at:
+            violations.append("updated_before_created")
+    except ValueError:
+        violations.append("invalid_timestamp_semantics")
+
+    controlled_concepts = vocabulary.get("controlled_concepts") or {}
+    for index, concept in enumerate((envelope.get("tags") or {}).get("controlled") or []):
+        scheme = concept.get("scheme")
+        code = concept.get("code")
+        allowed = (controlled_concepts.get(scheme) or {}).get("values") or []
+        if code not in allowed:
+            violations.append(f"unresolved_controlled_concept:{index}")
     return violations
 
 
-def validate_projection_positive_examples(validator: Draft202012Validator, example: dict) -> int:
+def validate_projection_positive_examples(
+    validator: Draft202012Validator,
+    example: dict,
+    vocabulary: dict,
+) -> int:
     cases: list[tuple[str, dict]] = [("redacted_projection", deepcopy(example))]
 
     reference_only = deepcopy(example)
@@ -320,21 +383,58 @@ def validate_projection_positive_examples(validator: Draft202012Validator, examp
             validator.validate(payload)
         except Exception as exc:
             fail(f"projection_positive_case_failed:{name}:{type(exc).__name__}:{exc}")
-        require(not projection_semantic_violations(payload), f"projection_positive_semantics_failed:{name}")
+        require(not envelope_semantic_violations(payload, vocabulary), f"projection_positive_semantics_failed:{name}")
     return len(cases)
 
 
-def validate_projection_semantic_negative_examples(example: dict) -> int:
+def validate_envelope_semantic_negative_examples(example: dict, vocabulary: dict) -> int:
+    cases: list[tuple[str, dict]] = []
+
     approved_copy_reusing_canonical = deepcopy(example)
     projection = approved_copy_reusing_canonical["accessScope"]["projections"][0]
     projection["mode"] = "approved_copy"
     projection["approvalEvidenceRefs"] = ["approval://example/approved-copy-001"]
     projection["derivedKnowledgeObjectRef"] = approved_copy_reusing_canonical["knowledgeObjectRef"]
-    require(
-        bool(projection_semantic_violations(approved_copy_reusing_canonical)),
-        "projection_semantic_negative_case_unexpectedly_valid:approved_copy_reuses_canonical_ref",
-    )
-    return 1
+    cases.append(("approved_copy_reuses_canonical_ref", approved_copy_reusing_canonical))
+
+    primary_space_projection = deepcopy(example)
+    projection = primary_space_projection["accessScope"]["projections"][0]
+    projection["target"] = deepcopy(primary_space_projection["accessScope"]["primarySpace"])
+    projection["mode"] = "reference_only"
+    projection.pop("projectionLineageRefs", None)
+    cases.append(("projection_targets_primary_space", primary_space_projection))
+
+    duplicate_projection_target = deepcopy(example)
+    duplicate = deepcopy(duplicate_projection_target["accessScope"]["projections"][0])
+    duplicate["policyRef"] = "policy://example/second-policy"
+    duplicate_projection_target["accessScope"]["projections"].append(duplicate)
+    cases.append(("duplicate_projection_target", duplicate_projection_target))
+
+    self_relation = deepcopy(example)
+    self_relation["relations"] = [
+        {
+            "relationType": "asset_related_to",
+            "targetRef": self_relation["knowledgeObjectRef"],
+            "direction": "outbound",
+        }
+    ]
+    cases.append(("self_relation", self_relation))
+
+    reversed_timestamps = deepcopy(example)
+    reversed_timestamps["createdAt"] = "2026-08-21T12:00:00Z"
+    reversed_timestamps["updatedAt"] = "2026-08-20T12:00:00Z"
+    cases.append(("updated_before_created", reversed_timestamps))
+
+    unknown_controlled_concept = deepcopy(example)
+    unknown_controlled_concept["tags"]["controlled"][0]["code"] = "unknown_concept"
+    cases.append(("unresolved_controlled_concept", unknown_controlled_concept))
+
+    for name, payload in cases:
+        require(
+            bool(envelope_semantic_violations(payload, vocabulary)),
+            f"envelope_semantic_negative_case_unexpectedly_valid:{name}",
+        )
+    return len(cases)
 
 
 def approved_copy_linkage_violations(envelope: dict, canonical_object: dict, derived_object: dict) -> list[str]:
@@ -492,7 +592,7 @@ def main() -> int:
     manifest = load_yaml(MANIFEST_PATH)
     require(manifest.get("contract_id") == "globalcloud.knowledge_asset", "invalid_contract_id")
     require(manifest.get("contract_version") == "v0.1", "invalid_contract_version")
-    require(manifest.get("status") == "draft", "contract_status_must_be_draft")
+    require(manifest.get("status") == "controlled", "contract_status_must_be_controlled")
     require(manifest.get("owner") == "GPCF", "invalid_contract_owner")
     require(manifest.get("source_of_truth") == "GPCF", "invalid_source_of_truth")
 
@@ -525,6 +625,17 @@ def main() -> int:
             "derived_invariants": ["tenantId", "sourceRefs", "projectionLineageRefs", "confirmationStatus=human_confirmed"],
         },
         "invalid_projection_contract",
+    )
+    require(
+        compatibility.get("semantic_invariants")
+        == {
+            "public_primary_confidentiality": "public",
+            "timestamps": "updated_at_not_before_created_at",
+            "relations": "no_self_reference",
+            "projections": ["not_primary_space", "unique_target"],
+            "controlled_tags": "resolve_in_declared_vocabulary_version",
+        },
+        "invalid_semantic_invariants",
     )
 
     artifacts = keyed_entries(manifest.get("artifacts"), "artifacts")
@@ -659,6 +770,18 @@ def main() -> int:
         == f"{vocabulary.get('vocabulary_id')}@{vocabulary.get('version')}",
         "example_vocabulary_version_mismatch",
     )
+    require(
+        schema_governance.get("vocabularyVersion", {}).get("const")
+        == example.get("governance", {}).get("vocabularyVersion"),
+        "schema_vocabulary_version_mismatch",
+    )
+    controlled_concepts = vocabulary.get("controlled_concepts") or {}
+    require(isinstance(controlled_concepts, dict) and controlled_concepts, "controlled_concepts_missing")
+    for scheme, definition in controlled_concepts.items():
+        require(isinstance(definition, dict), f"controlled_concept_definition_not_mapping:{scheme}")
+        values = definition.get("values")
+        require(isinstance(values, list) and values, f"controlled_concept_values_missing:{scheme}")
+        require(len(values) == len(set(values)), f"controlled_concept_values_duplicate:{scheme}")
     system_values = set(dimensions.get("system", {}).get("values", []))
     for system_ref in example.get("contexts", {}).get("systemRefs", []):
         require(str(system_ref).startswith("system://"), f"example_invalid_system_ref:{system_ref}")
@@ -676,8 +799,9 @@ def main() -> int:
         fail(f"authorized_write_positive_case_failed:{type(exc).__name__}:{exc}")
 
     negative_case_count = validate_negative_examples(validator, example)
-    projection_positive_case_count = validate_projection_positive_examples(validator, example)
-    projection_semantic_negative_case_count = validate_projection_semantic_negative_examples(example)
+    projection_positive_case_count = validate_projection_positive_examples(validator, example, vocabulary)
+    envelope_semantic_negative_case_count = validate_envelope_semantic_negative_examples(example, vocabulary)
+    require(not envelope_semantic_violations(example, vocabulary), "example_semantic_validation_failed")
     approved_copy_linkage_negative_case_count = validate_approved_copy_linkage(
         validator,
         knowledge_object_validator,
@@ -716,8 +840,8 @@ def main() -> int:
         [
             doc_id,
             "project: GPCF",
-            "status: draft",
-            "version: v0.1",
+            "status: controlled",
+            "version: v1.0",
             "owner: GPCF",
             "kds_path: 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md",
             "okf/knowledge-asset-envelope.schema.json",
@@ -727,16 +851,33 @@ def main() -> int:
         ],
     )
     require_text(
+        WHITEPAPER,
+        [
+            "GPCF-DOC-KNOWLEDGE-ASSET-WHITEPAPER-20260821",
+            "GlobalCloud 知识资产概念模型白皮书",
+            "一个知识正本、一个资产身份、多个受控投影",
+            "模型设计完成不等于运行集成完成",
+            "active / partial / not_complete",
+        ],
+    )
+    require_text(
         KNOWLEDGE_README,
-        [doc_id, "GlobalCloud 知识资产模型体系综合方案", "| GPCF | draft |"],
+        [
+            doc_id,
+            "GlobalCloud 知识资产模型体系综合方案",
+            "GPCF-DOC-KNOWLEDGE-ASSET-WHITEPAPER-20260821",
+            "GlobalCloud 知识资产概念模型白皮书",
+            "| GPCF | controlled |",
+        ],
     )
     require_text(
         DOCUMENT_REGISTER,
         [
             doc_id,
             "GlobalCloud知识资产模型体系综合方案.md",
+            "GlobalCloud知识资产概念模型白皮书.md",
             "| GPCF | WAS, XWAIL, AAAS",
-            "| data-ai-knowledge | draft | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md |",
+            "| data-ai-knowledge | controlled | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md |",
         ],
     )
     require_text(MASTER_PLAN, ["KnowledgeAssetEnvelope", "GPCF 定义、KDS 主存、Brain 消费、MMC 调用"])
@@ -775,7 +916,7 @@ def main() -> int:
 
     print(
         "knowledge_asset_model_gate=pass "
-        "contract_id=globalcloud.knowledge_asset contract_version=v0.1 contract_status=draft "
+        "contract_id=globalcloud.knowledge_asset contract_version=v0.1 contract_status=controlled "
         f"artifacts={len(artifacts)} dependencies={len(dependencies)} "
         f"access_spaces={len(schema_spaces)} knowledge_domains={len(knowledge_domains)} "
         f"space_domain_mappings={len(space_domain_mappings)} "
@@ -783,7 +924,7 @@ def main() -> int:
         f"okf_object_type_mappings={len(asset_type_compatibility)} "
         f"controlled_vocabularies=8 governance_rules={len(governance_rule_ids)} "
         f"example_validation=pass projection_modes_positive_cases={projection_positive_case_count} "
-        f"projection_semantic_negative_cases={projection_semantic_negative_case_count} "
+        f"envelope_semantic_negative_cases={envelope_semantic_negative_case_count} "
         f"approved_copy_linkage_positive_case=pass "
         f"approved_copy_linkage_negative_cases={approved_copy_linkage_negative_case_count} "
         f"canonical_link_positive_case=pass "
