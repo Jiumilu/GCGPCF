@@ -1,0 +1,35 @@
+canonical_v01_precommit_reseal:
+  id: GKE-001-CANONICAL-PRECOMMIT-RESEAL-20260821-001
+  feature: F-013
+  revision: v0.1
+  purpose: reproduce_the_isolated_controlled_source_patch_before_local_commit
+  base:
+    head: 9e580d5aedb83e8f4fd4d941a88fc31dedba35d5
+    canonical_manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
+    historical_anchor_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  candidate:
+    path_count: 12
+    sorted_nul_pathset_sha256: 230d5d29260f62c0458404e4c3ee59b5a4e2d877e3e236b684aa5dc441432b08
+    ordered_content_manifest_sha256: 892e7aa738699bdc17dc788f81348d993b3a021300e5abb950293abc502681d0
+    patch_algorithm:
+      index: temporary_index_initialized_from_HEAD
+      add: exact_candidate_path_list
+      command: git -c core.quotePath=false diff --cached --binary --full-index --no-ext-diff --no-renames
+      git_version: 2.48.1
+    full_index_patch:
+      bytes: 59033
+      sha256: 5b6f0972e575299a8332c3e6f7df2274a1c5cbbb89f398dd0700ae844eca5a02
+      repeated_generation: identical
+  correction:
+    supersedes_unreproducible_patch_sha256: a02ec915c7feefacff4e1c07c2a02032d80ebd7ee28370d9ed473767e69e7664
+    reason: Unicode_path_quoting_was_not_fixed_in_the_prior_patch_serialization
+    independent_review_required: true
+  boundaries:
+    commit: false
+    push: false
+    real_kds_or_mmc_access: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete

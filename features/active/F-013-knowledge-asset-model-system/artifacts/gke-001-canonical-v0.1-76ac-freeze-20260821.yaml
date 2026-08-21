@@ -1,0 +1,67 @@
+canonical_v01_candidate_freeze:
+  id: GKE-001-CANONICAL-FREEZE-20260821-001
+  issued_at: 2026-08-21
+  engineering_domain: GKE-001
+  feature: F-013
+  canonical_owner: F-013 canonical owner
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  reviewer_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  decision:
+    revision: v0.1
+    selected_candidate_manifest_sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
+    status: controlled_candidate_pending_independent_review
+    preserves_historical_anchor_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+    release_unblocked: false
+  current_control_plane:
+    - path: okf/knowledge-asset-contract-manifest.yaml
+      sha256: 76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf
+    - path: 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md
+      sha256: ed7714b15472da83ac81db9db7e50b13f0993e66d2af41ce2e24cd1b4a3c7ca9
+    - path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-application-program-roadmap-v1.yaml
+      sha256: 688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab
+    - path: governance/openspec/gke001-program-binding.yaml
+      sha256: 0536e458d7510796426d3045cc0f4cceb2014f9f6c0fd219fdb5aa9a0c83f3c9
+    - path: governance/codegraph/gke001-engineering-domain-binding.yaml
+      sha256: a2c85a877e51bd03d854f207cbe3a537f1a290f869177bb336596533f91a5104
+    - path: openspec/changes/integrate-gke001-openspec-codegraph/proposal.md
+      sha256: 66bbcbe2b88f3e62c6dac24df1317f2257405f5cb678beb6567335c8f54a1b88
+    - path: tools/kds-sync/validate_gke001_openspec_codegraph_binding.py
+      sha256: b6532807ac6455d486b22212a759ff266a8be0daaac42e344d02142e87abef1e
+  historical_anchors:
+    - path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-canonical-read-openapi-candidate-a10p3.yaml
+      sha256: 48dfcb0967a894ee2bd760311d7f84023054b0bcc2bc578292d826e73fbc7c18
+    - path: 02-governance/loop/GKE-001长期实施调度提示词.md
+      sha256: 763bfad7abd9514e664ef7044b6f7b16544404071f5d03211a7265e4c7ab1d3e
+    - path: features/active/F-013-knowledge-asset-model-system/evidence/gke-001-openspec-codegraph-binding-20260811.md
+      sha256: 68a8684f509d8c60c0c1da9fcb771782802b6fc95c7b6de31de2a0a796396c19
+  independent_review:
+    required: true
+    status: independently_reviewed
+    reviewed_at: 2026-08-21
+    review_turn_id: 01a021c3-27f5-7681-9649-e2e27fd23f97
+    classification: canonical_v01_76ac_controlled_candidate_freeze_independently_reviewed_release_still_blocked
+    required_scope:
+      - manifest
+      - envelope_schema
+      - vocabulary
+      - current_control_plane
+      - historical_anchor_preservation
+      - non_self_referential_validation
+  authorization:
+    canonical_candidate_freeze_record: true
+    product_repository_write: false
+    real_kds_or_mmc_write: false
+    fixture_or_migration: false
+    authenticated_read_or_e2e: false
+    commit: false
+    push: false
+    deployment: false
+    status_promotion: false
+  rollback:
+    scope: remove_only_this_freeze_record_and_its_validator
+    do_not_rewrite_historical_anchors: true
+    do_not_modify_preexisting_candidate_delta: true
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
