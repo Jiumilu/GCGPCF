@@ -45,6 +45,6 @@ GKE-001 已具有受控知识工程规范、应用实施方案、F-013 canonical
 - Project：GPCF、KDS、MMC、Studio、Brain 以及 AAAS、WAS、XiaoC、WAES、GPC、XWAIL、GFIS、XiaoG、PVAOS、SOP、PKC、XGD、ICP。
 - Feature：`F-013-knowledge-asset-model-system`。
 - 仓库：仅修改 GPCF 的 OpenSpec、CodeGraph 治理映射、validator、文档和 evidence；不修改外部产品仓源码。
-- 依赖：canonical manifest SHA-256 `8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de`、应用路线图 SHA-256 `32f00e131b0dab667fa7403dbd6d6a79c865f517959c5d6b227f82340534ad9f`、现有 CodeGraph CLI 和 14 仓 registry。
+- 依赖：canonical manifest SHA-256 `76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf`、应用路线图 SHA-256 `688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab`、现有 CodeGraph CLI 和 14 仓 registry。
 - 非目标：不新增虚构仓库，不执行真实 KDS/MMC 写入，不启动客户 E2E，不提交、推送、部署或提升状态。
 - 回滚：删除本 change、GKE-001 CodeGraph binding、registry 工程域引用、validator 和本轮 evidence；不影响现有 14 仓 CodeGraph 数据或产品运行时。

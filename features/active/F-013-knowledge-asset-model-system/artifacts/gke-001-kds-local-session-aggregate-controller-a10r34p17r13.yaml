@@ -1,0 +1,80 @@
+control:
+  id: GKE-001-COORDINATION-20260821-001-A10R34P17R13
+  predecessor_control_id: GKE-001-COORDINATION-20260820-006-A10R34P17R12
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: replace-r12-session-aggregate-lock-contract-a10r34p17r13
+  owner: GPCF
+  repository: GlobalCoud GPCF
+  mode: static_controller_rework_only
+  file_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r13.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r13.yaml
+  forbidden_scope:
+    - controller_execution
+    - database_or_credential_access
+    - fixture_or_migration
+    - API_or_MMC_request
+    - KDS_owner_content_mutation
+    - service_operation
+    - commit_or_push
+    - deployment_or_promotion
+
+baseline:
+  gpcf:
+    head: 9e580d5aedb83e8f4fd4d941a88fc31dedba35d5
+    origin_main: 9e580d5aedb83e8f4fd4d941a88fc31dedba35d5
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: {count: 4, sha256: 24dd1f9e5fd5ce80866b94b0cea78b311e4cbc9830fb8a676d6217e9718adf97}
+    expanded_dirty: {count: 4, sha256: 24dd1f9e5fd5ce80866b94b0cea78b311e4cbc9830fb8a676d6217e9718adf97}
+  kds:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ahead_behind_staged: 0/0/0
+    filtered_status:
+      ordinary: {count: 369, sha256: bd251e57d313f46bcdd4cf8913cfa7e18f8da806286c99f46479bb0546d5e4e6}
+      expanded: {count: 699, sha256: 5f1a24800bbee248dc5301c4b6b75b6f9cc4f22f559c2c7a4b35aa34d5757739}
+      excluded_only: "?? concepts/开发/kds/tenants/gehua/orgs/gehua/governance/audits_审计/kds-audit-read-view-*.md"
+    stable_window: {excluded_audit_count: 17, excluded_audit_manifest_sha256: ad10f211f02d8cd3e629165156d942bcaa0ffbb112d038b90d450b8bbfaaea53, observation_seconds: 20}
+  mmc:
+    head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7
+    origin_main: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+    expanded_dirty: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}
+
+dependencies:
+  controller_sha256: 59f0f6af1802f6d395ae537570d07bc9e8ee2b976d4df8437d72fb1d26413ee5
+  r5_controller:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-schema-diagnostic-controller-a10r34p17r5.py
+    sha256: 7e2299ef2f057d43b6c66bad1e1b4fc7608cc2fb44ecef33ef23ade673d856f2
+  r8_controller:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r8.py
+    sha256: 9246748605d46f90260d685ee001f44bb842f4dabc0799bfec6958492b97f3c4
+  r10_external_file_checker:
+    path: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-local-session-aggregate-controller-a10r34p17r10.py
+    sha256: 98a0bdedeafa31686e35d98872d3ea49f41ae512160b8ff47f112b4c0283cdd6
+  official_lock:
+    acquire: /Users/lujunxiang/.codex/skills/opsx-full-cycle/scripts/acquire-lock.sh
+    release: /Users/lujunxiang/.codex/skills/opsx-full-cycle/scripts/release-lock.sh
+    acquire_sha256: fb6d2133e2f5b8402439ef6df2151cfb915803fe0eb327d79c98a4cae0786f36
+    release_sha256: 26c1256057df419f8212093fdec8483481dba6d04a89112129c077f5bbb8aa8c
+
+verification:
+  current_batch: static_self_test_only
+  database_connections: 0
+  api_requests: 0
+  independent_review_required_before_execution: true
+  fresh_human_execution_authorization_required: true
+  r12_execution: consumed_stopped_no_change_no_retry
+
+rollback:
+  repository: remove_only_the_two_uncommitted_r13_artifacts
+  runtime_data: not_applicable
+
+status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}

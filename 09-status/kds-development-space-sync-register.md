@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-21
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-08-13
+日期：2026-08-21
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2121 | 1903 | 已建空间 |
+| GPCF | 12-GPCF | 2122 | 1903 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
@@ -52,7 +52,7 @@ superseded_by: []
 | kds_public_folder | meaning | document_count |
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
-| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 65 |
+| 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
 | 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 264 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
@@ -476,6 +476,7 @@ superseded_by: []
 | GPCF-DOC-GKE-001-APPLICATION-IMPLEMENTATION-20260811 | 03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识工程应用体系实施方案.md | bidirectional | pending_api |
 | GPCF-DOC-9B5D646E38 | 03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识收益治理委员会DecisionRecord与争议处理模板.md | bidirectional | pending_api |
 | GPCF-DOC-C60ECF8A71 | 03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud知识缺口悬赏与真实资料回收跟踪台账.md | bidirectional | pending_api |
+| GPCF-DOC-KNOWLEDGE-ASSET-WHITEPAPER-20260821 | 03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md | bidirectional | pending_api |
 | GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802 | 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md | bidirectional | pending_api |
 | GPCF-DOC-742C5EA186 | 03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | 开发/05-KDS/03-data-ai-knowledge/GlobalCloud积分收益额度悬赏争议联动规则.md | bidirectional | pending_api |
 | GPCF-DOC-69CFFD4C82 | 03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud统一模型配置体系方案.md | bidirectional | pending_api |

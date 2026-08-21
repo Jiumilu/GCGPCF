@@ -1,0 +1,46 @@
+control:
+  id: GKE-001-COORDINATION-20260821-002-A10R34P17R14
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: verify-kds-autopilot-quiescence-and-restore-a10r34p17r14
+  mode: static_controller_review_only
+  file_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-autopilot-quiescence-controller-a10r34p17r14.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-autopilot-quiescence-controller-a10r34p17r14.yaml
+  forbidden_scope:
+    - database_or_credential_access
+    - KDS_or_MMC_API
+    - fixture_or_migration
+    - R13_aggregate_execution
+    - repository_write_or_commit
+    - deployment_or_promotion
+
+service:
+  label: com.gbrain.autopilot
+  target_domain: gui/501
+  plist: /Users/lujunxiang/Library/LaunchAgents/com.gbrain.autopilot.plist
+  plist_sha256: d2b92752345e157592b2e1fb6e7b1e1c9f81896f1949e79d4528d757628f60e1
+  required_mode: "0644"
+  exact_operations:
+    - launchctl bootout gui/501/com.gbrain.autopilot
+    - verify_launchctl_absent_and_no_target_autopilot_or_worker_for_20_seconds
+    - launchctl bootstrap gui/501 /Users/lujunxiang/Library/LaunchAgents/com.gbrain.autopilot.plist
+    - verify_running_service_and_target_processes_within_30_seconds
+
+verification:
+  controller_sha256: 8d0850442fed6fc08ccc2251bf9ca222d5af6dbcb929c85f8675a08c5df75084
+  database_connections: 0
+  api_requests: 0
+  independent_review_required_before_execution: true
+  fresh_human_execution_authorization_required: true
+
+rollback:
+  before_bootout: not_applicable
+  after_bootout: bootstrap_exact_sealed_plist_once
+  repository: remove_only_the_two_uncommitted_r14_artifacts
+
+status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}

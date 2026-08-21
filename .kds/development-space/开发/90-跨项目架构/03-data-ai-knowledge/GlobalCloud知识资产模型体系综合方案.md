@@ -4,14 +4,14 @@ title: GlobalCloud 知识资产模型体系综合方案
 project: GPCF
 related_projects: [WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP]
 domain: data-ai-knowledge
-status: draft
-version: v0.1
+status: controlled
+version: v1.0
 owner: GPCF
 kds_space: 开发
 kds_path: 开发/90-跨项目架构/03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md
 source_path: 03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-08-21
 supersedes: []
 superseded_by: []
 ---
@@ -22,7 +22,7 @@ superseded_by: []
 
 本方案是项目群一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`）下的 canonical 知识资产模型子方案，继承 `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md`。本方案负责 `KnowledgeObject / KnowledgeAssetEnvelope` 模型、词表、Schema、fixtures、manifest、哈希、投影和兼容规则，不替代 KDS 事实能力、Studio 用户任务闭环、Brain 分析候选、MMC 身份授权或业务系统主数据治理。
 
-当前状态上限为 `active / partial / not_complete`。本方案及其机器契约通过，只能证明 GPCF canonical 控制面可回放，不表示 KDS 阶段 A 已验收、Studio 已接入稳定 API、真实资料已写入或项目群知识工程闭环完成。
+当前状态上限为 `active / partial / not_complete`。概念模型设计和 GPCF canonical 机器契约已经受控收口；这不表示 KDS 阶段 A 已验收、Studio 已接入稳定 API、真实资料已写入或项目群知识工程闭环完成。
 
 ## 1. 定位与结论
 
@@ -34,7 +34,7 @@ GlobalCloud 知识资产模型采用“一个知识正本、多个正交维度�
 4. MMC 只承担模型调用、路由和授权审计，不拥有知识资产主模型。
 5. WAES 与人工确认控制跨组织、公开、敏感和写回状态，不由标签、Schema 校验或 AI 自动授权。
 
-本方案建立项目群级模型和机器契约，不表示 KDS 数据迁移、Brain 页面、真实 API、真实权限或生产部署已经完成。
+本方案建立项目群级模型和机器契约；配套白皮书为 `03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md`。模型设计完成不表示 KDS 数据迁移、Brain 页面、真实 API、真实权限或生产部署已经完成。
 
 ## 2. 设计原则
 
@@ -72,6 +72,7 @@ flowchart LR
 机器产物：
 
 - `okf/knowledge-object.schema.json`：现有知识对象正本契约。
+- `03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md`：概念、聚合、关系、生命周期、治理与验收边界的受控说明。
 - `okf/knowledge-object.example.json`：与 Envelope 配对的 canonical KnowledgeObject 无真实数据示例。
 - `okf/knowledge-object-approved-copy.example.json`：具有独立 identity、原始来源和批准投影 lineage 的无真实数据派生对象示例。
 - `okf/knowledge-asset-envelope.schema.json`：项目群多维资产封装契约。
@@ -261,7 +262,7 @@ Envelope `assetType` 描述项目群消费语义；OKF `objectType` 描述 canon
 
 | 阶段 | 交付 | 状态上限 | 验证 |
 |---|---|---|---|
-| P0 模型基线 | 本方案、Envelope Schema、词表、示例 | `draft/partial` | JSON/YAML 解析、Schema 示例校验、文档门禁 |
+| P0 模型基线 | 本方案、白皮书、Envelope Schema、词表、示例 | `controlled/partial` | JSON/YAML 解析、Schema 与语义负例、文档门禁 |
 | P1 KDS 主存适配 | Envelope 存储、旧对象映射、词表版本、ACL 和查询投影 | `ready_for_review` | 迁移 dry-run、负例权限、lineage、回滚 |
 | P2 Brain 消费 | Space 过滤、维度筛选、WikiPreview、Chat 上下文确认 | `ready_for_review` | Vitest、Browser user-flow、真实权限样本 |
 | P3 项目群接入 | 业务系统主键、跨项目读模型、WAES 写回候选 | `authorization_boundary` | 契约测试、真实 source record、人工确认 |
@@ -306,7 +307,7 @@ Envelope `assetType` 描述项目群消费语义；OKF `objectType` 描述 canon
 ## 16. 当前边界
 
 ```yaml
-model_contract: draft
+model_contract: controlled_v0.1
 feature: F-013
 completion_status: not_complete
 runtime_integration: not_verified
@@ -317,5 +318,32 @@ integrated: false
 production_ready: false
 customer_accepted: false
 ```
+
+其中 `model_contract` 表示工程合同版本为已受控的 `v0.1`，不表示运行集成完成；本方案与白皮书的文档状态为 `controlled/v1.0`。
+
+## 17. 概念模型 v1.0 语义收口
+
+### 17.1 身份与词表
+
+- `assetId` 使用 `ka://` URI。
+- `knowledgeObjectRef` 使用 `ko://` 或受控 HTTPS URI。
+- 空间、策略、证据和 lineage 使用带 scheme 的稳定引用。
+- `vocabularyVersion` 必须精确为 `globalcloud.knowledge_asset@v0.1`。
+- controlled tag 的 `scheme/code` 必须在该版本词表中解析成功。
+
+### 17.2 空间与密级
+
+- `primarySpace=public` 时，`confidentiality` 必须为 `public`。
+- 非公开资产进入公开空间时，必须使用带批准证据和 lineage 的脱敏投影或独立 `approved_copy`。
+- Schema、标签或 AI 分类不能降低密级，也不能生成授权。
+
+### 17.3 时间、关系与投影
+
+- `updatedAt` 不得早于 `createdAt`。
+- 资产关系不得指向自身。
+- 投影不得回投 primary space，也不得对同一目标空间重复定义。
+- `approved_copy` 必须使用不同于 canonical 的派生对象身份。
+
+这些跨字段不变量由 `tools/kds-sync/validate_knowledge_asset_model_system.py` 与 JSON Schema 共同验证；KDS 运行态仍须在 P1 阶段实现相同的 fail-closed 约束。
 
 KDS `adopt-knowledge-asset-envelope` OpenSpec 已完成规划；下一实施入口是在获得明确授权和隔离干净基线后执行 apply，验证 Envelope 存储、七空间 ACL 映射和飞书妙记 dry-run。Brain 仅在 KDS 读模型稳定后建立消费侧 change，不并行发明第二套字段。

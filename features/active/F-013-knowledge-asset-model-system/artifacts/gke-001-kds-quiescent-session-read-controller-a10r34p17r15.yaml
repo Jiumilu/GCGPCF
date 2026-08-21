@@ -1,0 +1,75 @@
+control:
+  id: GKE-001-COORDINATION-20260821-003-A10R34P17R15
+  program_ref: GKE-001
+  release: release_0
+  feature_ref: F-013
+  canonical_revision: v0.1
+  canonical_manifest_sha256: 8537f3acda011610c1cb67ec13ea690d42a16b5d5ace030ab31762da8969a1de
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  change_id: read-kds-session-aggregate-during-sealed-autopilot-quiescence-a10r34p17r15
+  owner: GPCF
+  repository: GlobalCoud GPCF
+  mode: static_composite_controller_only
+  file_allowlist:
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-quiescent-session-read-controller-a10r34p17r15.py
+    - features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-kds-quiescent-session-read-controller-a10r34p17r15.yaml
+  forbidden_scope:
+    - API_or_MMC_request
+    - fixture_or_migration
+    - business_or_audit_content_read
+    - commit_or_push
+    - deployment_or_promotion
+
+verification:
+  controller_sha256: f004b8cdbe95d61dc7838195e9e63834d1adf17177d306e8b416b234ae38cca7
+  database_connections: 0
+  api_requests: 0
+  independent_review_required_before_execution: true
+  fresh_human_execution_authorization_required: true
+
+execution_contract:
+  service: gui/501/com.gbrain.autopilot
+  service_quiet_seconds: 20
+  database: gbrain
+  database_connections: 1
+  transaction: repeatable_read_read_only
+  aggregate: local_session_ownership_only
+  restoration: bootstrap_sealed_plist_once
+  runtime_config_read:
+    path: ~/.globalcloud/kds.env
+    access: one_bounded_in_memory_read
+    file_contract: regular_0600_owner_only_exact_742_bytes
+    retained_value: KDS_INTAKE_DATABASE_URL_only
+    accepted_target: postgres_or_postgresql_loopback_5432_gbrain
+    disclosure: forbidden
+    failure: fail_closed_before_connection
+  repository_bytecode: forbidden_and_checked_before_and_after_dynamic_imports
+  official_lock: regular_0600_exact_run_change_branch_ttl_contract
+
+baseline:
+  gpcf: {head: 9e580d5aedb83e8f4fd4d941a88fc31dedba35d5, origin_main: 9e580d5aedb83e8f4fd4d941a88fc31dedba35d5, ordinary: {count: 38, sha256: 2bdb226540a3d2ed5b68fc42f95c9d2108d9a662f7c9fd4c45259d7725474408}, expanded: {count: 38, sha256: 2bdb226540a3d2ed5b68fc42f95c9d2108d9a662f7c9fd4c45259d7725474408}}
+  kds_filtered:
+    head: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+    ordinary: {count: 376, sha256: 74e6c11e778363b2e050aad0eb9a2257d6d275548e6e4b72f6d11ddeb2027dbc}
+    expanded: {count: 706, sha256: 4ff7681a41bd675aa49d8935b1d98caef5e60bfc9cded886ed115d232443caa3}
+    excluded_audit_count: 17
+    retained_governance_report:
+      path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260821-073153/report.md
+      owner: distributed_knowledge_governance_automation
+      type: regular_file_0644_non_symlink_nlink_1
+      size: 15946
+      sha256: 6bb9acef6d234d542133106c74cdafc7b8d663aadb2e247e31bf37da1d24c330
+      pathset_sha256: bab7eb6c1d1a21c1f661abfad9ca7786ccc5f06d3321eecd26393862d27902c9
+      status_manifest_sha256: d44c5b8acebdcc100121abb94af469c9422162868a46deb2ca28a54f8103b350
+      content_manifest_sha256: 4836b9d11f0b12cabbe9769d298fd21ef3c69958c86f54932ea39f083c2c1ad2
+      overlap_stage_b_release0_r15: false
+  mmc: {head: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7, origin_main: 8f1e7cba20bada78fbc2e4c922f53be7b38606d7, ordinary: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}, expanded: {count: 0, sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855}}
+
+rollback:
+  database: rollback_and_close_only
+  service: bootstrap_sealed_plist_once
+  repository: remove_only_the_two_uncommitted_r15_artifacts
+
+status: {engineering: active, cross_project: partial, completion: not_complete, promotion: false}
