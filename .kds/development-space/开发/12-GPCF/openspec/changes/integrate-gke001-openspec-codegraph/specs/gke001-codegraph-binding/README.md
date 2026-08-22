@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md
 source_path: openspec/changes/integrate-gke001-openspec-codegraph/specs/gke001-codegraph-binding/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-22
 supersedes: []
 superseded_by: []
 ---

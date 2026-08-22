@@ -1,0 +1,33 @@
+run_id: "20260822-235654-gcworld-evidence-twin-foundation"
+change_id: "gcworld-evidence-twin-foundation"
+entrypoint: /opsx:full-cycle
+requested_by: human
+started_at: "2026-08-22T15:56:54Z"
+updated_at: "2026-08-22T16:01:14Z"
+current_step: 6
+current_step_name: code-execute
+status: partial
+risk:
+  level: medium
+  dimensions:
+    governance: human_source_scope_and_identity_steward_confirmation_required
+    repository: kds_blocked_dirty_worktree
+  requires_human_review: true
+mode: local
+degraded: true
+degraded_gates:
+  - kds_blocked_dirty_worktree
+  - kds_source_allowlist_not_approved
+  - identity_normalization_steward_not_confirmed
+steps:
+  - { step: 0, name: gate-check, status: complete, started_at: "2026-08-22T15:56:54Z" }
+  - { step: 1, name: preflight, status: complete }
+  - { step: 2, name: propose, status: complete }
+  - { step: 3, name: design-review, status: complete }
+  - { step: 4, name: task-breakdown, status: complete }
+  - { step: 5, name: tdd-execute, status: not_applicable }
+  - { step: 6, name: code-execute, status: blocked }
+  - { step: 7, name: evidence-collect, status: pending }
+  - { step: 8, name: review, status: pending }
+  - { step: 9, name: acceptance-verify, status: pending }
+  - { step: 10, name: archive-handoff, status: pending }

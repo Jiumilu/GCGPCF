@@ -37,7 +37,7 @@ acceptance:
   - 文档门禁结果和未闭合边界被显式记录
 loop:
   current_step: evaluate
-  iteration: 319
+  iteration: 322
 evidence:
   tests: pass
   build: pass
@@ -64,6 +64,10 @@ blockers:
   - mmc_delegation_and_human_confirmation_pending
 coordination:
   id: GKE-001-COORDINATION-20260803-001
+  gcworld_change: openspec/changes/gcworld-evidence-twin-foundation
+  gcworld_binding_status: planning_and_readonly_evidence_bound_no_status_promotion
+  gcworld_binding_evidence: features/active/F-013-knowledge-asset-model-system/evidence/gcworld-evidence-twin-foundation-binding-20260822.md
+  gcworld_binding_evidence_sha256: 8aa61ab4b9c48eb4cdb965e35374683f990cfe7f39bda1108275b8d714fe14b8
   current_truthfulness_reconciliation_id: GKE-001-COORDINATION-20260815-102-A10R27
   current_truthfulness_reconciliation_sha256: b9062e5cde46be63415649dded1bb2c0284ef453dda27fe7de683c98668253b7
   current_blocker_model: 11_canonical_plus_8_validator_compatibility_aliases
@@ -411,4 +415,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-08-02T10:41:40+00:00"
-updated_at: "2026-08-21T13:08:44+00:00"
+updated_at: "2026-08-22T16:01:43+00:00"

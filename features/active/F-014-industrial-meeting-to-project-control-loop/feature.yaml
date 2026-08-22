@@ -1,0 +1,52 @@
+id: F-014
+name: industrial-meeting-to-project-control-loop
+project: gpcf
+status: active
+goal: "Establish the phased Industrial Green Chain meeting-to-project-control loop: KDS canonical evidence-linked candidates, MMC delegation, Studio review, human/object-owner approval, and authoritative project ledger handoff without automatic business-state changes."
+owner: GPCF
+priority: P1
+scope:
+  in:
+    - GPCF coordination of the Industrial Green Chain meeting-to-project-control contract and phased delivery gates
+    - Studio OpenSpec change industrial-meeting-to-project-control-loop and its Phase 0 fixture-only review contract
+    - KDS canonical candidate, MMC delegation, Studio review, Brain cited-analysis, and authoritative-ledger handoff boundaries
+  out:
+    - Real meeting-data import, real KDS or business-ledger writes, credential creation/use, permission changes, deployment, and production migration
+    - Automatic business-state changes, acceptance, integration, production-ready, or customer-accepted status claims
+acceptance:
+  - Studio OpenSpec proposal, design, delta specifications, and task plan validate strictly
+  - GPCF and Studio documentation gates pass with no new metadata debt
+  - Phase 0 remains fixture-only and demonstrates no automatic ledger write
+  - Real-data pilot, authoritative receiving ledger, retention policy, permission/configuration change, deployment, and status promotion remain separately authorized
+loop:
+  current_step: evaluate
+  iteration: 12
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+  - real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups:
+  - 项目负责人
+  - 会议复核人员
+  - 业务对象 owner
+  - 审计与治理人员
+  primary_human_task: 在授权项目上下文中复核会议证据所支持的行动、决策、风险和承诺候选，并在需要时明确提交受控写入意图
+  machine_interface_boundary: KDS 保存会议事实、候选和审计；MMC 派生授权；Studio 仅呈现业务复核与显式意图；接收台账和对象
+    owner 独立决定是否写入
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: pending
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+created_at: "2026-08-22T03:44:32+00:00"
+updated_at: "2026-08-22T05:35:42+00:00"

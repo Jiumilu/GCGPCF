@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-08-13
+生成日期：2026-08-22
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -730,6 +730,18 @@
 | GPCF-DOC-E61CE550C4 | specs | openspec/changes/enable-project-group-openspec-coverage/specs/README.md | draft |
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | draft |
+| GPCF-DOC-CE01ACF096 | gcworld-evidence-twin-foundation | openspec/changes/gcworld-evidence-twin-foundation/README.md | draft |
+| GPCF-DOC-CACBA085BD | design | openspec/changes/gcworld-evidence-twin-foundation/design.md | draft |
+| GPCF-DOC-A4F29144C7 | proposal | openspec/changes/gcworld-evidence-twin-foundation/proposal.md | draft |
+| GPCF-DOC-5195FBCF8B | specs | openspec/changes/gcworld-evidence-twin-foundation/specs/README.md | draft |
+| GPCF-DOC-769D47FC63 | gcworld-coverage-assessment | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md | draft |
+| GPCF-DOC-8F0920DB54 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | draft |
+| GPCF-DOC-C6D2E06ACB | gcworld-evidence-twin | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md | draft |
+| GPCF-DOC-A861AD5583 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | draft |
+| GPCF-DOC-860812960B | gcworld-role-agent-governance | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md | draft |
+| GPCF-DOC-F5BD85B415 | gcworld-runtime-boundary | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md | draft |
+| GPCF-DOC-E9F567EAFF | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | draft |
+| GPCF-DOC-EE19C93D00 | tasks | openspec/changes/gcworld-evidence-twin-foundation/tasks.md | draft |
 | GPCF-DOC-87769A72B8 | kds-production-hardening | openspec/changes/kds-production-hardening/README.md | draft |
 | GPCF-DOC-D17599C829 | specs | openspec/changes/kds-production-hardening/specs/README.md | draft |
 | GPCF-DOC-23E999A394 | agent-safety-matrix | openspec/changes/kds-production-hardening/specs/agent-safety-matrix/README.md | draft |

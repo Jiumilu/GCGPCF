@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-855B715B04
 title: OpenSpec 变更集
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF, ICP]
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/README.md
 source_path: openspec/changes/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-13
+last_reviewed: 2026-08-22
 supersedes: []
 superseded_by: []
 ---
@@ -45,6 +45,19 @@ KDS 空间：`开发`
 | GPCF-DOC-5419DA34A8 | project-group-openspec-coverage | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | KDS | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | GPCF | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | tasks | openspec/changes/enable-project-group-openspec-coverage/tasks.md | KDS | draft |
+| GPCF-DOC-CE01ACF096 | gcworld-evidence-twin-foundation | openspec/changes/gcworld-evidence-twin-foundation/README.md | KDS | draft |
+| GPCF-DOC-CACBA085BD | design | openspec/changes/gcworld-evidence-twin-foundation/design.md | KDS | draft |
+| GPCF-DOC-A4F29144C7 | proposal | openspec/changes/gcworld-evidence-twin-foundation/proposal.md | KDS | draft |
+| GPCF-DOC-5195FBCF8B | specs | openspec/changes/gcworld-evidence-twin-foundation/specs/README.md | KDS | draft |
+| GPCF-DOC-769D47FC63 | gcworld-coverage-assessment | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md | KDS | draft |
+| GPCF-DOC-8F0920DB54 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | KDS | draft |
+| GPCF-DOC-C6D2E06ACB | gcworld-evidence-twin | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md | KDS | draft |
+| GPCF-DOC-A861AD5583 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | KDS | draft |
+| GPCF-DOC-860812960B | gcworld-role-agent-governance | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md | KDS | draft |
+| GPCF-DOC-7608F9E00C | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | GPCF | draft |
+| GPCF-DOC-F5BD85B415 | gcworld-runtime-boundary | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md | KDS | draft |
+| GPCF-DOC-E9F567EAFF | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | KDS | draft |
+| GPCF-DOC-EE19C93D00 | tasks | openspec/changes/gcworld-evidence-twin-foundation/tasks.md | KDS | draft |
 | GPCF-DOC-95C82DA16B | integrate-gke001-openspec-codegraph | openspec/changes/integrate-gke001-openspec-codegraph/README.md | GPCF | draft |
 | GPCF-DOC-82B83BA05C | design | openspec/changes/integrate-gke001-openspec-codegraph/design.md | GPCF | draft |
 | GPCF-DOC-42FE6A63EF | proposal | openspec/changes/integrate-gke001-openspec-codegraph/proposal.md | GPCF | draft |

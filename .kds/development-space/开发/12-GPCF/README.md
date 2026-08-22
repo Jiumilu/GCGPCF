@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-08-13
+生成日期：2026-08-22
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -1875,6 +1875,7 @@
 | GPCF-DOC-00463F9971 | Headroom LCX 许可证与 OSS 合规 | loop/context/headroom/docs/license.md | controlled |
 | GPCF-OS-OPEN-SPEC-COVERAGE-DESIGN-20260712 | design | openspec/changes/enable-project-group-openspec-coverage/design.md | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | draft |
+| GPCF-DOC-7608F9E00C | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | draft |
 | GPCF-DOC-95C82DA16B | integrate-gke001-openspec-codegraph | openspec/changes/integrate-gke001-openspec-codegraph/README.md | draft |
 | GPCF-DOC-82B83BA05C | design | openspec/changes/integrate-gke001-openspec-codegraph/design.md | draft |
 | GPCF-DOC-42FE6A63EF | proposal | openspec/changes/integrate-gke001-openspec-codegraph/proposal.md | draft |
