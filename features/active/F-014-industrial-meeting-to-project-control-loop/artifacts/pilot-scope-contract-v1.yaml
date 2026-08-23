@@ -1,0 +1,79 @@
+contract_id: GPCF-PILOT-SCOPE-V1
+title: Candidate PilotScope Contract for Real-Business AI Entry
+status: candidate
+owner: GPCF
+related_projects: [WAS, XWAIL, WAES, KDS, MMC, Studio, GFIS]
+
+purpose: >-
+  Define the minimum governed boundary for a future real-business AI pilot.
+  This contract is a candidate semantic and admission model, not an active
+  PilotScope instance and not authorization to access or write business data.
+
+pilot_scope:
+  required_fields:
+    - pilot_scope_id
+    - project_ref
+    - meeting_policy_ref
+    - data_scope_ref
+    - evidence_policy_ref
+    - approval_policy_ref
+    - receiving_ledger_ref
+    - authorized_actor_refs
+    - allowed_actions
+    - start_at
+    - end_at
+    - exit_criteria
+  lifecycle: [draft, candidate, reviewing, authorized, active, closed, archived, blocked]
+  allowed_actions:
+    - admit_meeting_asset
+    - derive_minutes_candidate
+    - derive_project_control_candidate
+    - review_minutes_candidate
+    - confirm_project_control_item
+    - submit_write_intent
+    - receive_ledger_receipt
+  prohibited_without_separate_authorization:
+    - real_data_intake
+    - kds_or_mmc_runtime_configuration
+    - permission_change
+    - authoritative_ledger_write
+    - deployment
+    - status_promotion
+
+governance_invariants:
+  - source_claim_candidate_confirmed_fact_operational_state_are_distinct
+  - minutes_approval_does_not_confirm_project_control_item
+  - project_control_confirmation_does_not_imply_receiving_ledger_write
+  - every_confirmable_item_has_authorized_evidence_refs
+  - receiving_owner_receipt_is_required_for_authoritative_ledger_outcome
+  - original_media_is_an_evidence_asset_with_policy_bound_retention
+
+compatibility_note:
+  was_baseline_version: v1.0_candidate_extension
+  was_contract: WAS PilotScope schema v1 candidate; semantic fixture validation passed
+  ontology_terms:
+    - PilotScope as rule_asset and scenario admission object
+    - Meeting as event
+    - ProjectControlItem as evidence-bound candidate or confirmed fact
+  xwail_impact: >-
+    candidate profile, schema, and validator implemented as
+    industrial-green-chain.meeting-project-control; WAES authorization is
+    still required before activation
+  aaas_impact: service_package_and_evidence_requirement_not_yet_defined
+  waes_status: >-
+    candidate local activation gate implemented and verified; real WAES
+    authorization and publication remain separately required
+  migration_decision: candidate
+
+promotion_blockers:
+  - no_named_project_or_project_ref
+  - no_meeting_policy_or_data_scope
+  - no_retention_or_evidence_policy
+  - no_receiving_ledger_owner
+  - no_authorized_actor_mapping
+  - no_waes_gate_or_xwail_conformance
+  - no_real_pilot_evidence
+
+next_action: >-
+  Define the WAS/XWAIL schema and WAES authorization profile, then create a
+  separately authorized PilotScope instance for one named project.
