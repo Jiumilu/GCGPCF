@@ -61,7 +61,7 @@ def run_delegated_project_localization() -> tuple[int, str]:
 def iter_repo_md() -> list[Path]:
     paths = []
     for path in ROOT.rglob("*.md"):
-        if ".git" in path.parts or ".kds" in path.parts or ".zcode" in path.parts:
+        if ".git" in path.parts or ".kds" in path.parts or ".zcode" in path.parts or ".pytest_cache" in path.parts:
             continue
         paths.append(path)
     return sorted(paths)

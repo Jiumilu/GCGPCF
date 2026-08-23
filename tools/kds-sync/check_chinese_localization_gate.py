@@ -16,6 +16,7 @@ REPORT = ROOT / "09-status/globalcloud-chinese-localization-governance-report.md
 EXCLUDE_PARTS = {
     ".git",
     ".kds",
+    ".pytest_cache",
     "__pycache__",
     "node_modules",
 }
