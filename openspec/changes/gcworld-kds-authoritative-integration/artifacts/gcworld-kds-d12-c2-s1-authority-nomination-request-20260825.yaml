@@ -1,0 +1,70 @@
+request_id: GCWORLD-KDS-D12-C2-S1-AUTHORITY-NOMINATION-REQUEST-20260825-040
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-25T11:23:28Z"
+status: dispatched_for_zero_content_authority_nomination
+authorization:
+  source_request_sha256: d586527ec6b5df84b85b7db780e01f52ccd4b5e4b3e671dec5ec57b7eba43a3e
+  approval_receipt_sha256: dc8417b6c7062c6060e79332e9804481a46fb19a7160e8d7150f5c5e3b2e2768
+  approved_decisions: [D12-C2-S1-A, D12-C2-S1-C]
+  not_approved_decisions: [D12-C2-S1-B]
+purpose: 仅确认六类真实内容权威主体及其授权依据，不请求、不传递、不读取目标内容
+authority_groups:
+  distributed_governance:
+    target_ids: [D12-C1-EXC-001, D12-C1-EXC-002]
+    producer_candidate: automation-5
+  feishu_xiaog_closure:
+    target_ids: [D12-C1-EXC-003, D12-C1-EXC-004]
+    producer_candidate: workwiki-kds
+  macmini_workwiki:
+    target_ids: [D12-C1-EXC-005, D12-C1-EXC-006]
+    producer_candidate: macmini-workwiki
+  hermes_evolution_reports:
+    target_ids: [D12-C1-EXC-007, D12-C1-EXC-008]
+    producer_candidate: 111e8983641a
+  industrial_greenchain:
+    target_ids: [D12-C1-EXC-009, D12-C1-EXC-010, D12-C1-EXC-011, D12-C1-EXC-012, D12-C1-EXC-013, D12-C1-EXC-014, D12-C1-EXC-015]
+    producer_candidates: [43652c3c9b4d, 99683d54df08, 2f3355dec02f, 155b3671abdd, 87c8214c0e57, dbce6d580114]
+  ecosystem_health:
+    target_ids: [D12-C1-EXC-016]
+    producer_candidate: wiki-ecosystem-health-3d
+nomination_channels:
+  - role: KDS知识资料与证据服务责任方
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    requested_groups: [distributed_governance, feishu_xiaog_closure, macmini_workwiki, ecosystem_health]
+    function: 确认KDS侧真实组织或角色权威主体，或明确无法提名
+  - role: 项目群知识工程与内容权威协调责任方
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    requested_groups: [hermes_evolution_reports, industrial_greenchain, ecosystem_health]
+    function: 确认项目群或业务域真实组织或角色权威主体，或明确无法提名
+required_nomination_fields:
+  - nomination_id
+  - authority_group
+  - authority_subject_name_or_asset_id
+  - authority_role
+  - authority_basis
+  - nominator_identity
+  - signed_thread_or_identity
+  - target_ids
+  - scope
+  - valid_from
+  - valid_until
+  - target_audience
+  - business_sensitivity_boundary
+  - distribution_constraints
+  - revocation_or_expiry_condition
+  - conflict_of_interest_statement
+response_rules:
+  - 仅能依据既有组织、人员、任务、线程或授权元数据作答
+  - 不得读取、引用、概述或传回任何目标正文、frontmatter、字段、片段、字符串、关键词、语义或差异
+  - 生产任务、调度器和脚本只能作为生产者候选，不能自行成为内容权威
+  - 无法验证全部必填字段时必须返回authority_unverified，不得推断或代签
+  - 回执只完成S1-A提名核验，不构成reviewer_b替换、分类登记或后续处置授权
+strict_prohibitions:
+  - 自动替换reviewer_b或由执行智能体代签
+  - 执行D12-R2、D12-N、D12-D或任何文件处置
+  - 测试、服务变更、生产者恢复、提交、推送、部署或状态提升
+effect:
+  unknown_content_disclosed: false
+  classification_performed: false
+  supplemental_s1_c_request_allowed_only_for_verified_authority: true

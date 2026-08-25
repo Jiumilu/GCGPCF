@@ -1,0 +1,35 @@
+receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-001
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-001
+language: zh-CN
+confirmed_at: "2026-08-25T00:55:34Z"
+human_decision_owner: 老卢
+confirmation_text: 批准将D4处置范围从14项扩展为17项，并交付KDS责任方。
+decision:
+  d4_scope_expansion_approved: true
+  previous_scope: 14
+  approved_scope: 17
+  delivery_target_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  delivery_target_title: KDS-知识资料与证据服务
+delivery_boundary:
+  read_only_owner_intake_authorized: true
+  per_path_owner_attribution_requested: true
+  disposition_plan_requested: true
+  generator_containment_plan_requested: true
+  kds_mutation_authorized: false
+  service_pause_restart_authorized: false
+  cleanup_stage_revert_commit_push_authorized: false
+  database_api_access_authorized: false
+  deployment_or_status_promotion_authorized: false
+current_baseline:
+  kds_changed_entries: 17
+  kds_staged_entries: 0
+  kds_ahead: 0
+  kds_behind: 0
+  kds_status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  f013_admission: blocked_dirty_worktree
+effect:
+  owner_request_may_dispatch: true
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

@@ -1,0 +1,144 @@
+manifest_id: GCWORLD-KDS-D12-R1-CLASSIFICATION-MANIFEST-20260825-016
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+generated_at: "2026-08-25T07:02:52Z"
+source:
+  type: 独立于KDS正文的既有受控分级台账
+  path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-source-classification-ledger-20260823.jsonl
+  sha256: 50505bce8958b9a2cf62ce476c5aeebdfa60b1c72be7162ee455e2823dbf34e6
+  matching_key: sourcePath精确全路径
+policy:
+  matched_s1_or_s2: 仅在责任方和审阅目的匹配时允许正文加载
+  matched_s3: 禁止正文加载
+  no_exact_match: 归类为未知并禁止正文加载
+  multiple_conflicting_matches: 归类为冲突并禁止正文加载
+summary:
+  total_paths: 29
+  s1: 5
+  s2: 8
+  s3: 0
+  unknown: 16
+  conflict: 0
+  content_read_eligible: 13
+  metadata_only: 16
+items:
+  - path: 工业绿链/reports/项目监控仪表盘.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260823-073039/report.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260823-071040/macmini-evidence.json
+    classification: S1
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: _governance/sync-runs/macmini-workwiki-20260823-064123/remote-identity.txt
+    classification: S1
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+    classification: S1
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_04.md
+    classification: S1
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_08.md
+    classification: S1
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/变更告警_2026-08-23.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 工业绿链/日报/晨报-2026-08-23.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 工业绿链/reports/Hermes质量周报.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 工业绿链/体系/W01-W20第二阶段任务清单.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 工业绿链/体系/W01-W20覆盖率报告.md
+    classification: S2
+    exact_matches: 1
+    content_decision: responsible_read_allowed
+  - path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/变更告警_2026-08-25.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/周报/周报_2026W35.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/日报/晨报-2026-08-25.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 工业绿链/月报/月报_2026-08.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+  - path: 99_Reports/ecosystem-health-2026-08-25.md
+    classification: UNKNOWN
+    exact_matches: 0
+    content_decision: metadata_only
+integrity:
+  exact_path_duplicates: 0
+  classification_conflicts: 0
+  kds_content_read_to_build_manifest: false

@@ -1,0 +1,27 @@
+receipt_id: GCWORLD-KDS-REQUEST-RESEAL-RECEIPT-20260825-004
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-004
+language: zh-CN
+sealed_at: "2026-08-25T05:38:51Z"
+reason: 责任方发现交付摘要与交付后请求文件哈希不一致，GPCF需解释状态更新并重封最终请求
+hash_history:
+  delivered_request_sha256: fe2069ecedd17a4bafa26fc0069ebaa40a74005be62c17fc09866e39e9474028
+  post_dispatch_mutable_sha256: 36b66b563606e6af1d7da63a25b89545bcbec8d18e251b0fb22d9908dd4c5a1c
+  final_resealed_sha256: c473ab29c558724e3f101e4a30840f8f0488cf9064f63e8ec7a2d9721af60d1a
+mutation_explanation:
+  - 交付后将请求状态更新为责任方已确认并正在分析
+  - 收到最终回执后将请求状态更新为分析完成
+  - 增加交付后等待说明和本完整性解释
+unchanged_controls:
+  scope_entries: 31
+  supplemental_entries: 3
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  approval_receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-004
+  file_or_diff_content_read_authorized: false
+  file_mutation_authorized: false
+  automation_or_service_operation_authorized: false
+result:
+  governance_hash_rework_closed: true
+  final_request_hash_is_current: true
+  kds_or_service_mutation_performed: false

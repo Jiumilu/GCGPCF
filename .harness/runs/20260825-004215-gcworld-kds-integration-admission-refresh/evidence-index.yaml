@@ -1,0 +1,377 @@
+schema_version: harness-evidence-index/v1
+run_id: 20260825-004215-gcworld-kds-integration-admission-refresh
+change_id: gcworld-kds-authoritative-integration
+generated_at: "2026-08-25T12:01:37Z"
+language: zh-CN
+status_claim: partial_d12_c2_s2_stopped_by_post_gate_drift
+evidence:
+  - id: expanded-d4-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-17-change-scope-approval-receipt-20260825.yaml
+    description: D4处置范围由14项扩展为17项并允许交付的人工批准回执
+    freshness: historical_17_item_scope_approval
+    trust_level: human_confirmed
+  - id: kds-owner-dispatch-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-17-change-owner-dispatch-receipt-20260825.yaml
+    description: 17项只读处置请求已送达KDS责任线程的交付回执
+    freshness: historical_17_item_dispatch
+    trust_level: machine_generated
+  - id: kds-owner-handoff-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-receipt-20260825.yaml
+    description: KDS责任方17项归属、保留和处置建议的只读回执
+    freshness: historical_17_item_handoff
+    trust_level: agent_generated
+  - id: stabilization-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-stabilization-authorization-request-20260825.yaml
+    description: 三个自动化、运行产物改道、17项处置和Hermes窗口的D5至D8授权请求
+    freshness: invalidated_by_post_handoff_drift
+    trust_level: agent_generated
+  - id: owner-handoff-assessment
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md
+    description: 责任方回执、持续生成源和推荐执行顺序评估
+    freshness: superseded_by_post_handoff_drift_assessment
+    trust_level: agent_generated
+  - id: post-handoff-drift
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-handoff-drift-20260825.yaml
+    description: KDS责任方零写入回执后由17项增至28项的只读漂移证据
+    freshness: current
+    trust_level: machine_generated
+  - id: expanded-28-owner-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-28-change-owner-disposition-request-20260825.yaml
+    description: 已获人工批准、待交付的28项只读责任方补充分析请求
+    freshness: current
+    trust_level: human_confirmed
+  - id: expanded-28-scope-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-28-change-scope-approval-receipt-20260825.yaml
+    description: D4只读责任方范围由17项扩展至28项的人工批准回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: expanded-28-owner-dispatch-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-28-change-owner-dispatch-receipt-20260825.yaml
+    description: 新增11项只读补充分析已送达KDS责任线程的交付回执
+    freshness: current
+    trust_level: machine_generated
+  - id: expanded-28-owner-handoff-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-28-change-owner-handoff-receipt-20260825.yaml
+    description: KDS责任方对新增11项直接生成源、调度、保留及28项稳定窗口的只读补充回执
+    freshness: current
+    trust_level: agent_generated
+  - id: refreshed-28-stabilization-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-28-stabilization-authorization-request-20260825.yaml
+    description: 二十八项生产者控制、逐路径处置、恢复和F-013重新准入的待独立批准请求
+    freshness: invalidated_by_post_d4_drift
+    trust_level: agent_generated
+  - id: post-d4-drift-29
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-d4-drift-20260825.yaml
+    description: 二十八项只读责任方分析完成后新增第29项的只读Git元数据证据
+    freshness: current
+    trust_level: machine_generated
+  - id: expanded-29-owner-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-29-change-owner-disposition-request-20260825.yaml
+    description: 已获批准但因交付前漂移而未交付的第29项只读归属请求
+    freshness: invalidated_before_dispatch
+    trust_level: agent_generated
+  - id: expanded-29-scope-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-29-change-scope-approval-receipt-20260825.yaml
+    description: 二十九项扩围获批但因交付前漂移未生效的人工批准回执
+    freshness: invalidated_before_dispatch
+    trust_level: human_confirmed
+  - id: post-29-approval-drift-31
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-29-approval-drift-20260825.yaml
+    description: 二十九项批准后、责任方交付前新增两个代码变化的只读Git元数据证据
+    freshness: current
+    trust_level: machine_generated
+  - id: expanded-31-owner-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-change-owner-disposition-request-20260825.yaml
+    description: 已获人工批准并送达KDS责任方的三十一项只读归属请求
+    freshness: current
+    trust_level: agent_generated
+  - id: expanded-31-scope-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-change-scope-approval-receipt-20260825.yaml
+    description: 三十一项只读范围和三项责任方交付边界的人工批准回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: expanded-31-owner-dispatch-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-change-owner-dispatch-receipt-20260825.yaml
+    description: 三项只读补充分析已送达KDS责任线程并完成消息回读的交付回执
+    freshness: current
+    trust_level: machine_generated
+  - id: expanded-31-request-reseal-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-request-reseal-receipt-20260825.yaml
+    description: 请求文件交付后状态变化的哈希解释和最终重封回执
+    freshness: current
+    trust_level: machine_generated
+  - id: expanded-31-owner-handoff-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-change-owner-handoff-receipt-20260825.yaml
+    description: KDS责任方对三项来源、运行关系、处置建议和稳定窗口的只读最终回执
+    freshness: current
+    trust_level: agent_generated
+  - id: refreshed-31-stabilization-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-stabilization-authorization-request-20260825.yaml
+    description: 三十一项生产者控制、代码审阅、逐路径处置、恢复和重新准入的待独立批准请求
+    freshness: invalidated_during_partial_execution
+    trust_level: agent_generated
+  - id: d5-d9-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d5-d9-approval-receipt-20260825.yaml
+    description: D5至D9范围及禁止边界的人工批准回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: d5-d9-partial-execution-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d5-d9-partial-execution-receipt-20260825.yaml
+    description: D5至D7完成、D8与D9因漂移停止的逐项执行回执
+    freshness: current
+    trust_level: machine_generated
+  - id: post-d5-d7-drift
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-d5-d7-drift-20260825.yaml
+    description: KDS由31项增至32项及本轮Python字节码副作用的只读证据
+    freshness: current
+    trust_level: machine_generated
+  - id: followup-32-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-32-followup-authorization-request-20260825.yaml
+    description: 单一路径恢复与D8、D9重新授权的D16、D17待决请求
+    freshness: executed
+    trust_level: agent_generated
+  - id: d16-d17-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d16-d17-approval-receipt-20260825.yaml
+    description: 单一路径恢复与D8、D9剩余动作的人工批准回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: d16-d17-execution-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d16-d17-execution-receipt-20260825.yaml
+    description: 精确恢复31项基线、两侧冻结确认与纯元数据来源调查回执
+    freshness: current
+    trust_level: machine_generated
+  - id: stable-window-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-31-stable-window-receipt-20260825.yaml
+    description: 31项路径、状态和严格元数据在超过10分钟窗口内保持一致的只读回执
+    freshness: current
+    trust_level: machine_generated
+  - id: post-stable-window-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-stable-window-authorization-request-20260825.yaml
+    description: 两个代码路径受控正文与差异审阅的D10独立授权请求
+    freshness: current
+    trust_level: agent_generated
+  - id: d10-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d10-approval-receipt-20260825.yaml
+    description: 两个代码路径受控正文与差异审阅的D10人工批准回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: d10-owner-review-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d10-owner-review-request-20260825.yaml
+    description: 经密封并送达KDS源码与测试责任方的D10两文件只读审阅请求
+    freshness: executed
+    trust_level: agent_generated
+  - id: d10-owner-review-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d10-owner-review-receipt-20260825.yaml
+    description: 需求来源、变化目的、代码测试对应、风险和推荐处置的D10只读审阅回执
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-r1-readonly-review-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-readonly-review-authorization-request-20260825.yaml
+    description: D12第一阶段剩余二十九项分级先行、逐路径受控只读审阅的待决授权请求
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-r1-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-r1-approval-receipt-20260825.yaml
+    description: 剩余二十九项分级先行逐路径只读审阅的人工批准回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: d12-r1-classification-manifest
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-r1-classification-manifest-20260825.yaml
+    description: 独立分级台账对二十九项的精确匹配、未知项和正文加载决定
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-r1-owner-review-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-r1-owner-review-request-20260825.yaml
+    description: 经密封并分配至KDS和知识工程责任方的二十九项只读任务
+    freshness: executed
+    trust_level: agent_generated
+  - id: d12-r1-owner-review-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-r1-owner-review-receipt-20260825.yaml
+    description: 二十九项逐路径分级、内容或元数据事实、风险和唯一推荐处置总回执
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-c1-classification-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-classification-governance-authorization-request-20260825.yaml
+    description: 十六项UNKNOWN零正文、双责任方一致或从严保留UNKNOWN的待决分级治理请求
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-c1-request-validation-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-request-validation-receipt-20260825.yaml
+    description: D12-C1请求结构、三十一项基线、生产者冻结和十七仓项目群门禁的密封验证回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c1-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-approval-receipt-20260825.yaml
+    description: 十六项零正文双责任方分级裁决的D12-C1人工批准回执
+    freshness: executed
+    trust_level: human_confirmed
+  - id: d12-c1-reviewer-declaration-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-reviewer-declaration-request-20260825.yaml
+    description: 分别交付KDS安全责任方和项目群内容权威责任方的密封声明请求
+    freshness: executed
+    trust_level: agent_generated
+  - id: d12-c1-reviewer-a-declaration
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-reviewer-a-declaration-20260825.yaml
+    description: KDS数据分级与安全责任方对十六项全部保持UNKNOWN的独立签名式声明
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-c1-reviewer-b-declaration
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-reviewer-b-declaration-20260825.yaml
+    description: 项目群知识工程与内容权威责任方对十六项全部保持UNKNOWN的独立签名式声明
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-c1-classification-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c1-classification-receipt-20260825.yaml
+    description: 两方均为UNKNOWN、十六项进入例外队列且后续阶段未授权的D12-C1总回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-authority-attestation-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-authority-attestation-authorization-request-20260825.yaml
+    description: 十六项UNKNOWN逐项补齐实际内容权威主体、受众、敏感边界、scope和valid_until的待决D12-C2独立授权请求
+    freshness: invalidated_before_human_decision
+    trust_level: agent_generated
+  - id: post-d12-c2-request-drift
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-d12-c2-request-drift-20260825.yaml
+    description: D12-C2请求生成后KDS由31项变为32项、同一Python字节码路径再次变化并使请求失效的只读回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-reseal-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-reseal-approval-receipt-20260825.yaml
+    description: 仅恢复指定单一pyc路径、重建31项基线并重新密封请求的人工批准回执
+    freshness: executed
+    trust_level: human_confirmed
+  - id: d12-c2-reseal-execution-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-reseal-execution-receipt-20260825.yaml
+    description: 单路径恢复、31项三类指纹复核与生产者冻结复核的执行回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-new-authority-attestation-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-authority-attestation-authorization-request-r1-20260825.yaml
+    description: 首次重新密封后因同一目标路径再次漂移而在人工决定前失效的R1请求
+    freshness: invalidated_before_human_decision
+    trust_level: agent_generated
+  - id: post-d12-c2-r1-validation-drift
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-d12-c2-r1-validation-drift-20260825.yaml
+    description: R1请求生成后的校验阶段同一pyc路径再次变化、非目标31项仍精确匹配的漂移回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-final-recovery-execution-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-final-recovery-execution-receipt-20260825.yaml
+    description: 第二次仅恢复同一获批目标路径、重建31项并复核生产者冻结的最终执行回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-r2-authority-attestation-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-authority-attestation-authorization-request-r2-20260825.yaml
+    description: 最终重新密封并已获人工批准执行的十六项UNKNOWN内容权威主体声明补全请求
+    freshness: approved_and_executed_partial
+    trust_level: agent_generated
+  - id: d12-c2-r2-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-r2-approval-receipt-20260825.yaml
+    description: D12-C2 R2零正文权威声明治理的人工批准回执
+    freshness: executed
+    trust_level: human_confirmed
+  - id: d12-c2-r2-authority-declaration-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-r2-authority-declaration-request-20260825.yaml
+    description: 向两类独立责任角色交付的16项逐路径零正文权威声明请求
+    freshness: executed_partial
+    trust_level: agent_generated
+  - id: d12-c2-r2-reviewer-a-declaration
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-r2-reviewer-a-declaration-20260825.yaml
+    description: KDS责任方对16项均判定权威未验证、证据不足和UNKNOWN的签名声明
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-c2-r2-reviewer-b-nonresponse
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-r2-reviewer-b-nonresponse-receipt-20260825.yaml
+    description: 项目群知识工程与内容权威协调责任方未在受控窗口返回逐项声明的回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-r2-classification-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-r2-classification-receipt-20260825.yaml
+    description: 16项全部保持UNKNOWN、无可登记分类且D12-C2仍为partial的总回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-s1-authority-nomination-authorization-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s1-authority-nomination-authorization-request-20260825.yaml
+    description: 六类真实内容权威主体提名、可选替代复核方与逐路径零正文补充声明的待决独立授权请求
+    freshness: approved_a_and_c_b_not_approved
+    trust_level: agent_generated
+  - id: d12-c2-s1-approval-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s1-approval-receipt-20260825.yaml
+    description: S1-A与S1-C获批、S1-B未批准的人工决定回执
+    freshness: executed_with_partial_result
+    trust_level: human_confirmed
+  - id: d12-c2-s1-authority-nomination-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s1-authority-nomination-request-20260825.yaml
+    description: 向两个既有责任线程交付的六类零内容权威主体提名请求
+    freshness: executed
+    trust_level: agent_generated
+  - id: d12-c2-s1-kds-authority-nomination-declaration
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s1-kds-authority-nomination-declaration-20260825.yaml
+    description: KDS责任线程对四组均无法验证真实内容权威主体的签名声明
+    freshness: current
+    trust_level: agent_generated
+  - id: d12-c2-s1-knowledge-authority-nonresponse
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s1-knowledge-authority-nonresponse-receipt-20260825.yaml
+    description: 项目群知识工程责任线程未返回三组提名声明且未启用替代方的从严回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-s1-execution-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s1-execution-receipt-20260825.yaml
+    description: 六组零权威主体通过、S1-C无合法收件人且十六项继续UNKNOWN的执行总回执
+    freshness: current
+    trust_level: machine_generated
+  - id: d12-c2-s2-human-authority-designation-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-human-authority-designation-request-20260825.yaml
+    description: 六组真实内容权威主体逐组人工指定或明确保持UNKNOWN的待决独立请求
+    freshness: executed_with_incomplete_human_input
+    trust_level: agent_generated
+  - id: d12-c2-s2-approval-input-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-approval-input-receipt-20260825.yaml
+    description: S2获准执行但六组仍为未单选占位符、权威字段为空的人工输入回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: d12-c2-s2-execution-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-execution-receipt-20260825.yaml
+    description: 六组决定均不完整、零权威指定且十六项继续UNKNOWN的从严执行回执
+    freshness: superseded_by_supplemental_human_decision
+    trust_level: machine_generated
+  - id: d12-c2-s2-supplemental-decision-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-supplemental-decision-receipt-20260825.yaml
+    description: 老卢以“A”明确六个分组全部选择keep_unknown的人工补充决定回执
+    freshness: current
+    trust_level: human_confirmed
+  - id: d12-c2-s2-closure-receipt
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-closure-receipt-20260825.yaml
+    description: 六组决定已明确、但最终31项基线漂移后按规则停止且尚未生效完成的收口回执
+    freshness: current
+    trust_level: machine_generated
+  - id: post-d12-c2-s2-closure-drift
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-d12-c2-s2-closure-drift-20260825.yaml
+    description: S2收口最终复核时KDS由31项变为32项、非目标31项仍精确一致的只读漂移回执
+    freshness: current
+    trust_level: machine_generated
+  - id: post-handoff-drift-assessment
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-handoff-drift-assessment-20260825.md
+    description: 新增11项、D5至D8请求失效和下一门禁评估
+    freshness: current
+    trust_level: agent_generated
+  - id: authorization-invalidation
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-authorization-invalidation-20260825.yaml
+    description: D1—D4历史批准对应基线在激活前失效的事实记录
+    freshness: current
+    trust_level: machine_generated
+  - id: refreshed-owner-disposition-request
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-17-change-owner-disposition-request-20260825.yaml
+    description: 已完成责任方只读分析、后被28项请求取代的17项处置请求
+    freshness: superseded_by_28_item_request
+    trust_level: agent_generated
+  - id: refreshed-admission-assessment
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-refresh-20260825.md
+    description: KDS持续变化、F-013阻塞和授权失效评估
+    freshness: historical_17_item_snapshot
+    trust_level: machine_generated
+  - id: validation-summary
+    path: validation-summary.yaml
+    description: OpenSpec、文档门禁、项目群门禁、28项当前范围和F-013结果汇总
+    freshness: current
+    trust_level: machine_generated

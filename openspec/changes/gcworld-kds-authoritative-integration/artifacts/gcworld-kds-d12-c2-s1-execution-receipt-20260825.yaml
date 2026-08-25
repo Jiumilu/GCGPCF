@@ -1,0 +1,58 @@
+receipt_id: GCWORLD-KDS-D12-C2-S1-EXECUTION-RECEIPT-20260825-043
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T11:25:47Z"
+authorization:
+  source_request_sha256: d586527ec6b5df84b85b7db780e01f52ccd4b5e4b3e671dec5ec57b7eba43a3e
+  approval_receipt_sha256: dc8417b6c7062c6060e79332e9804481a46fb19a7160e8d7150f5c5e3b2e2768
+  approved: [D12-C2-S1-A, D12-C2-S1-C]
+  not_approved: [D12-C2-S1-B]
+nomination_request_sha256: 838458aab13431e7802f02d28a7a9a4f1713e07f7f6110d9fa338c8b88eb48f9
+result: partial_no_verified_content_authority
+group_results:
+  distributed_governance: authority_unverified_by_kds_responsibility_thread
+  feishu_xiaog_closure: authority_unverified_by_kds_responsibility_thread
+  macmini_workwiki: authority_unverified_by_kds_responsibility_thread
+  hermes_evolution_reports: primary_knowledge_authority_response_missing
+  industrial_greenchain: primary_knowledge_authority_response_missing
+  ecosystem_health: authority_unverified_and_cross_check_missing
+statistics:
+  authority_groups: 6
+  target_ids: 16
+  verified_authority_groups: 0
+  verified_authority_target_ids: 0
+  authority_unverified_groups: 6
+  final_unknown_target_ids: 16
+  s1_c_supplemental_requests_dispatched: 0
+  registrable_classifications: 0
+decision:
+  s1_a_status: completed_partial_no_verified_authority
+  s1_b_status: not_approved_not_executed
+  s1_c_status: not_executed_no_verified_recipient
+  d12_c2_status: active_partial_not_complete
+  d12_r2_n_d_eligible_target_ids: 0
+  next_requirement: 由老卢逐组明确真实内容权威主体、授权依据、scope、valid_from、valid_until、目标受众和业务敏感边界后重新核验
+final_gate:
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: 3_of_3
+    hermes_jobs_disabled: 11_of_11
+    gbrain_autopilot_absent: true
+    matching_import_or_gbrain_processes: 0
+  exact_match: true
+scope_compliance:
+  unknown_content_read: 0
+  unknown_content_disclosed: 0
+  reviewer_b_replaced_or_agent_signed: 0
+  kds_write: 0
+  test_or_service_operation: 0
+  producer_restore: 0
+  file_disposition: 0
+  commit_push_deploy_or_status_promotion: 0

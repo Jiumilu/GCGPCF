@@ -37,7 +37,7 @@ acceptance:
   - 文档门禁结果和未闭合边界被显式记录
 loop:
   current_step: evaluate
-  iteration: 322
+  iteration: 330
 evidence:
   tests: pass
   build: pass
@@ -45,21 +45,19 @@ evidence:
   api: waived
   summary: pass
 blockers:
+  - kds_p1_apply_blocked_by_dirty_worktree
   - gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition
-  - kds_dirty_worktree_current_changed_entries_blocks_admission_and_owner_disposition
   - kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization
-  - brain_release0_external_daily_sync_post_sync_governance_disposition_pending
+  - brain_browser_r2_postpush_revalidated_chat_send_not_executed_mobile_ui_rework_required
+  - brain_authenticated_readonly_e2e_deferred_pending_a10_control
   - studio_release0_external_daily_sync_post_sync_governance_disposition_pending
   - kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation
   - kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required
   - studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed
-  - release0_authenticated_search_wikipreview_chat_e2e_not_authorized_and_current_browser_audit_missing
-  - kds_p1_apply_blocked_by_dirty_worktree
   - kds_stage_b_read_admission_technical_verified_governance_blocked
   - studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review
   - studio_a6_external_daily_sync_commit_push_requires_governance_disposition
   - unexpected_external_kds_local_mirror_write_requires_review
-  - brain_authenticated_readonly_e2e_deferred_pending_a10_control
   - mmc_a9_bounded_read_subset_technical_verified_global_policy_not_narrowed
   - mmc_delegation_and_human_confirmation_pending
 coordination:
@@ -390,6 +388,9 @@ coordination:
   release0_consumer_freshness_replay: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-release0-consumer-freshness-replay-a10c17.yaml
   release0_consumer_freshness_replay_sha256: faac8e0e5840b3abcbc702d16e7dca5d71e50ba20381f1dcfe66a6ad9490dbd3
   release0_consumer_freshness_replay_status: studio_and_brain_current_tests_passed_studio_governance_fixture_repair_f013_review_pending
+  brain_browser_r2_postpush_governance_reconciliation: features/active/F-013-knowledge-asset-model-system/artifacts/gke-001-brain-browser-r2-postpush-governance-reconciliation-20260825.yaml
+  brain_browser_r2_postpush_governance_reconciliation_sha256: f30370939fb342b2d77ea526523941f5dc14d7a8a9c33ebfdc80e6b332204247
+  brain_browser_r2_postpush_status: technical_revalidation_passed_governance_reconciled_chat_send_and_mobile_ui_pending
   coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
   dispatch_status: studio_frozen_brain_a10p1t4_passed_mmc_h1r3_verified_kds_stageb_four_commits_pushed_postpush_review_passed
   lanes:
@@ -415,4 +416,4 @@ ui_product_first_control:
     evidence_overexposure_gate: pending
   status_ceiling: partial
 created_at: "2026-08-02T10:41:40+00:00"
-updated_at: "2026-08-22T16:01:43+00:00"
+updated_at: "2026-08-25T06:40:50+00:00"

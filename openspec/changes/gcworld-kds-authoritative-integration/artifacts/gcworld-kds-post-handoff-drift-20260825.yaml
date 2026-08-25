@@ -1,0 +1,56 @@
+drift_id: GCWORLD-KDS-POST-HANDOFF-DRIFT-20260825-001
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+detected_at: "2026-08-25T01:20:02Z"
+status: confirmed_read_only
+predecessor_handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-001
+previous_baseline:
+  changed_entries: 17
+  status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+current_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  changed_entries: 28
+  status_sha256: 800ba7bafc9d3616bfc48dce34de891ba8df19899dd8e8f0646f7390125c85e8
+  f013_admission: blocked_dirty_worktree
+delta:
+  added_entries: 11
+  removed_entries: 0
+  prior_entries_changed_again: 0
+  new_paths:
+    - status: modified
+      path: 工业绿链/reports/Hermes质量周报.md
+    - status: modified
+      path: 工业绿链/体系/W01-W20第二阶段任务清单.md
+    - status: modified
+      path: 工业绿链/体系/W01-W20覆盖率报告.md
+    - status: untracked
+      path: 99_Reports/ecosystem-health-2026-08-25.md
+    - status: untracked
+      path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+    - status: untracked
+      path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+    - status: untracked
+      path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+    - status: untracked
+      path: 工业绿链/变更告警_2026-08-25.md
+    - status: untracked
+      path: 工业绿链/周报/周报_2026W35.md
+    - status: untracked
+      path: 工业绿链/日报/晨报-2026-08-25.md
+    - status: untracked
+      path: 工业绿链/月报/月报_2026-08.md
+observation_boundary:
+  file_contents_read: false
+  owner_attribution_inferred: false
+  kds_or_service_mutation: false
+  conclusion: 新增11项必须由KDS责任方在扩展D4授权下只读归属，不得从文件名直接推定责任人或处置动作
+effect:
+  d5_to_d8_request_valid: false
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

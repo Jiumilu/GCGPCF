@@ -1,0 +1,86 @@
+declaration_id: GCWORLD-CODEGRAPH-IMPACT-20260823-001
+version: v1.0
+status: validated_with_legacy_document_compatibility_debt
+change_id: gcworld-evidence-twin-foundation
+
+program_binding:
+  program: GKE-001
+  release: release_0
+  feature: F-013
+  repository: GPCF
+  owner: GPCF
+  program_binding_path: governance/openspec/gke001-program-binding.yaml
+  program_binding_sha256: 0536e458d7510796426d3045cc0f4cceb2014f9f6c0fd219fdb5aa9a0c83f3c9
+  engineering_domain_binding_path: governance/codegraph/gke001-engineering-domain-binding.yaml
+  engineering_domain_binding_sha256: a2c85a877e51bd03d854f207cbe3a537f1a290f869177bb336596533f91a5104
+  repository_registry_path: governance/codegraph/repo-codegraph-registry.yaml
+  repository_registry_sha256: d0dcf156af58df8c0047797b46661b5b4a562a542f30e5cf2bb963714977d190
+  governed_project_count: 18
+  indexed_repository_count: 14
+  repository_count_changed: false
+
+validation:
+  gke001_openspec_codegraph_binding:
+    result: pass
+    releases: 4
+    projects: 18
+    repositories: 14
+    status_ceiling: active_partial_not_complete
+  gke001_binding_openspec_strict:
+    result: pass
+  codegraph_development_execution_admission:
+    result: pass
+    scope: 仅证明开发准入契约存在
+  loop_codegraph_project_group_coverage:
+    result: pass
+    repository_count: 14
+    codegraph_version: 1.0.1
+    codegraph_git_status_entries: 0
+  legacy_full_coverage_validator:
+    result: fail
+    reason: 历史Loop轮次文档缺少“输入”字样
+    classification: 既有文档兼容性债务，不属于GCWORLD变更新增的绑定缺失
+    remediation_authorized: false
+
+changed_governance_relations:
+  - subject: GKE-001
+    relation: contains_planning_work_package
+    object: gcworld-evidence-twin-foundation
+    evidence: openspec/changes/gcworld-evidence-twin-foundation/proposal.md
+  - subject: F-013
+    relation: governs_planning_and_readonly_evidence
+    object: gcworld-evidence-twin-foundation
+    evidence: features/active/F-013-knowledge-asset-model-system/evidence/gcworld-evidence-twin-foundation-binding-20260822.md
+  - subject: gcworld-evidence-twin-foundation
+    relation: reads_from_when_admitted
+    object: GlobalCloud-KDS
+    constraints: 本地只读、F-013已ready_for_authorization、未分级来源仅登记元数据、不得写入
+  - subject: gcworld-evidence-twin-foundation
+    relation: conforms_to
+    object: WAS权威语义注册表
+    constraints: 不建立竞争本体
+  - subject: gcworld-evidence-twin-foundation
+    relation: requires_governed_authorization_context
+    object: WAES
+    constraints: GCWORLD不作最终授权裁决
+
+codegraph_mutation:
+  binding_files_changed: false
+  registry_changed: false
+  index_changed: false
+  source_nodes_added: 0
+  source_edges_added: 0
+  source_nodes_removed: 0
+  source_edges_removed: 0
+  statement: 本轮只新增OpenSpec和F-013规划证据关系，没有修改CodeGraph绑定、注册表、索引或产品源码依赖
+
+authorization:
+  product_repository_write: false
+  codegraph_sync: false
+  kds_or_mmc_write: false
+  deployment: false
+  status_promotion: false
+
+rollback:
+  scope: 仅移除尚未提交的GCWORLD OpenSpec、F-013绑定和本声明
+  external_repositories_affected: false

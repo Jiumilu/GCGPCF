@@ -1,0 +1,169 @@
+request_id: GCWORLD-KDS-D12-C2-S2-HUMAN-AUTHORITY-DESIGNATION-REQUEST-20260825-044
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-25T11:39:49Z"
+status: pending_independent_human_designation
+title: D12-C2-S2——六类真实内容权威主体逐组人工指定请求
+source_evidence:
+  s1_execution_receipt_sha256: ea9097bb41d1936bb06acbcd55d94423ec9baab57c7bb7c0fbf65236973ad6ad
+  s1_result: partial_no_verified_content_authority
+  verified_authority_groups: 0
+  final_unknown_target_ids: 16
+purpose:
+  - 由老卢逐组明确真实内容权威主体及其授权依据
+  - 对每个指定主体明确责任范围、有效期、目标受众和业务敏感边界
+  - 对无法指定或证据不足的分组明确保持UNKNOWN
+activation_preconditions:
+  kds_repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: 3_of_3
+    hermes_jobs_disabled: 11_of_11
+    gbrain_autopilot_absent: true
+    matching_import_or_gbrain_processes: 0
+requested_human_decisions:
+  d12_c2_s2_a:
+    title: 对可确认分组逐组指定真实内容权威主体
+    status: pending
+  d12_c2_s2_b:
+    title: 对无法确认分组明确继续保持UNKNOWN
+    status: pending
+authority_designations:
+  distributed_governance:
+    target_ids: [D12-C1-EXC-001, D12-C1-EXC-002]
+    current_state: UNKNOWN
+    authority_subject_name_or_asset_id: null
+    authority_role: null
+    authority_basis: null
+    nominator_identity: 老卢
+    signed_thread_or_identity: null
+    scope: null
+    valid_from: null
+    valid_until: null
+    target_audience: null
+    business_sensitivity_boundary: null
+    distribution_constraints: null
+    revocation_or_expiry_condition: null
+    conflict_of_interest_statement: null
+    human_decision: null
+  feishu_xiaog_closure:
+    target_ids: [D12-C1-EXC-003, D12-C1-EXC-004]
+    current_state: UNKNOWN
+    authority_subject_name_or_asset_id: null
+    authority_role: null
+    authority_basis: null
+    nominator_identity: 老卢
+    signed_thread_or_identity: null
+    scope: null
+    valid_from: null
+    valid_until: null
+    target_audience: null
+    business_sensitivity_boundary: null
+    distribution_constraints: null
+    revocation_or_expiry_condition: null
+    conflict_of_interest_statement: null
+    human_decision: null
+  macmini_workwiki:
+    target_ids: [D12-C1-EXC-005, D12-C1-EXC-006]
+    current_state: UNKNOWN
+    authority_subject_name_or_asset_id: null
+    authority_role: null
+    authority_basis: null
+    nominator_identity: 老卢
+    signed_thread_or_identity: null
+    scope: null
+    valid_from: null
+    valid_until: null
+    target_audience: null
+    business_sensitivity_boundary: null
+    distribution_constraints: null
+    revocation_or_expiry_condition: null
+    conflict_of_interest_statement: null
+    human_decision: null
+  hermes_evolution_reports:
+    target_ids: [D12-C1-EXC-007, D12-C1-EXC-008]
+    current_state: UNKNOWN
+    authority_subject_name_or_asset_id: null
+    authority_role: null
+    authority_basis: null
+    nominator_identity: 老卢
+    signed_thread_or_identity: null
+    scope: null
+    valid_from: null
+    valid_until: null
+    target_audience: null
+    business_sensitivity_boundary: null
+    distribution_constraints: null
+    revocation_or_expiry_condition: null
+    conflict_of_interest_statement: null
+    human_decision: null
+  industrial_greenchain:
+    target_ids: [D12-C1-EXC-009, D12-C1-EXC-010, D12-C1-EXC-011, D12-C1-EXC-012, D12-C1-EXC-013, D12-C1-EXC-014, D12-C1-EXC-015]
+    current_state: UNKNOWN
+    authority_subject_name_or_asset_id: null
+    authority_role: null
+    authority_basis: null
+    nominator_identity: 老卢
+    signed_thread_or_identity: null
+    scope: null
+    valid_from: null
+    valid_until: null
+    target_audience: null
+    business_sensitivity_boundary: null
+    distribution_constraints: null
+    revocation_or_expiry_condition: null
+    conflict_of_interest_statement: null
+    human_decision: null
+  ecosystem_health:
+    target_ids: [D12-C1-EXC-016]
+    current_state: UNKNOWN
+    authority_subject_name_or_asset_id: null
+    authority_role: null
+    authority_basis: null
+    nominator_identity: 老卢
+    signed_thread_or_identity: null
+    scope: null
+    valid_from: null
+    valid_until: null
+    target_audience: null
+    business_sensitivity_boundary: null
+    distribution_constraints: null
+    revocation_or_expiry_condition: null
+    conflict_of_interest_statement: null
+    human_decision: null
+completion_rules:
+  - human_decision只能为designate_authority或keep_unknown
+  - 选择designate_authority时，除current_state和target_ids外的全部指定字段必须非空
+  - valid_from与valid_until必须为明确时间，且valid_until晚于valid_from
+  - signed_thread_or_identity必须能够绑定被指定主体或其正式代表
+  - 同一主体覆盖多个分组时仍须逐组明确scope、受众、敏感边界和有效期
+  - 选择keep_unknown时不得填写虚构权威主体，该组继续进入例外队列
+  - 任一字段缺失、相互冲突或依据不可验证时，该组保持UNKNOWN
+next_action_if_later_completed:
+  - 仅对完整且可验证的指定生成独立核验回执
+  - 仅向通过核验的主体发送S1-C零正文补充声明请求
+  - 未通过分组不得进入S1-C、D12-R2、D12-N或D12-D
+strict_prohibitions:
+  - 读取、搜索、提取或解析十六项UNKNOWN正文、frontmatter、字段、片段、字符串、关键词、语义或差异
+  - 依据生产任务、调度器、脚本名称或执行智能体自行推断权威主体
+  - 自动替换reviewer_b或由执行智能体代签
+  - 执行S2人工指定、S1-C补充声明、D12-R2、D12-N或D12-D
+  - 运行测试、变更服务、恢复生产者、访问数据库、API、凭据或外部写接口
+  - 处置文件、暂存、提交、推送、部署、归档、验收或状态提升
+effect:
+  human_designations_recorded: 0
+  authority_groups_verified: 0
+  s1_c_executed: false
+  final_unknown_target_ids: 16
+  d12_c2_complete: false
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null

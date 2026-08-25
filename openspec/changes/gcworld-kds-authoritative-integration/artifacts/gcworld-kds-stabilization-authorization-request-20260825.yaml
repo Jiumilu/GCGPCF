@@ -1,0 +1,92 @@
+request_id: GCWORLD-KDS-STABILIZATION-AUTH-REQUEST-20260825-001
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T01:15:08Z"
+status: invalidated_before_human_decision
+source_handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-001
+current_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  changed_entries: 17
+  status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  f013_admission: blocked_dirty_worktree
+decisions:
+  - id: D5
+    title: 三个Codex自动化暂停授权
+    decision: pending
+    proposed_scope:
+      automations: [macmini-workwiki, workwiki-kds, automation-5]
+      allowed_action: 仅从ACTIVE切换为PAUSED并等待已启动任务自然结束
+      stability_check: 连续两次、间隔5分钟核对Git NUL状态与三个运行目录，形成至少10分钟稳定窗口
+      resume_included: false
+    prohibited:
+      - 修改自动化提示词、命令、调度或历史运行
+      - 强杀任务或进程
+      - 自动恢复或推导其他授权
+  - id: D6
+    title: 运行产物改道提案授权
+    decision: pending
+    proposed_scope:
+      allowed_action: 仅创建独立OpenSpec提案、设计与任务，不实施
+      target: 将三个运行源输出参数化并改至仓库外不可变运行产物目录
+      required_tests: 路径、权限、幂等、失败恢复与摘要回填
+    prohibited:
+      - 修改脚本或自动化配置
+      - 使用.gitignore隐藏运行变化
+      - 部署或状态提升
+  - id: D7
+    title: 十七项逐路径处置执行授权
+    decision: pending
+    proposed_scope:
+      tracked_projection: 审阅后形成独立提交候选，不混入清理提交
+      runtime_outputs_2_to_10: 仓库外不可变归档、生成摘要清单后移出工作树；零字节占位和重复副本删除须保留清单
+      source_candidates_11_and_15: 保留原字节，待来源、版本、权限核验后独立摄取
+      hermes_outputs_12_to_14_16_17: 独立审阅后归档或形成独立提交候选，不自动提升事实
+      execution_owner: KDS责任方及对应内容责任方
+    prohibited:
+      - GCWORLD或GPCF执行方直接操作KDS文件
+      - 将全部17项混成单一清理提交
+      - 未保全摘要和责任回执即删除
+      - 推送、部署或状态提升
+  - id: D8
+    title: 四个Hermes任务维护窗口控制授权
+    decision: pending
+    proposed_scope:
+      jobs: [f06e9f563967, 2f3355dec02f, 87c8214c0e57, 111e8983641a]
+      activation_condition: 仅当D7处置窗口覆盖对应调度时间时启用
+      allowed_action: 按任务责任方确认的安全方式暂停；恢复必须另行确认
+    prohibited:
+      - 修改任务定义、脚本、调度或历史输出
+      - 强杀运行中任务
+      - 从D8推导D5、D7或恢复授权
+recommended_sequence:
+  - 先独立决定D5，建立停止新增变化的条件
+  - D6可并行批准为提案准备，但不影响当前清理
+  - D5稳定窗口成立后重新密封17项或最新清单，再决定D7
+  - 仅在窗口时间冲突时决定D8
+  - 所有处置完成后重新运行F-013；ready_for_authorization前不得勾选任务1.2
+global_prohibitions:
+  - 读取KDS正文、数据库、API或凭据
+  - 自动清理、暂存、提交、推送、部署或状态提升
+  - 启动Stage A或任务2.1
+validity:
+  request_expires_after_hours: 24
+  invalidated_by:
+    - 自动化、Hermes任务、KDS路径集、HEAD、远端关系或责任方变化
+    - 用户撤销或治理证据冲突
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null
+invalidation:
+  invalidated_at: "2026-08-25T01:20:02Z"
+  reason: KDS工作树由17项增至28项，状态摘要变化，四项决定不得沿用旧基线签发
+  previous_changed_entries: 17
+  current_changed_entries: 28
+  previous_status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  current_status_sha256: 800ba7bafc9d3616bfc48dce34de891ba8df19899dd8e8f0646f7390125c85e8
+  decisions_effect: D5至D8全部保持未批准，须在新范围归属完成后重新提出

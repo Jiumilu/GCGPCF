@@ -1,0 +1,201 @@
+request_id: GCWORLD-KDS-D12-C1-CLASSIFICATION-AUTH-REQUEST-20260825-019
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T07:22:00Z"
+status: pending_independent_human_decision
+title: D12-C1——十六项未知资料零正文双责任方分级治理授权
+source_evidence:
+  d12_r1_receipt: GCWORLD-KDS-D12-R1-OWNER-REVIEW-RECEIPT-20260825-018
+  d12_r1_receipt_sha256: 020ea31a048374182a2c0b399836ca079b8c8537528552f1ffa428fe67e20bae
+  d12_r1_classification_manifest: GCWORLD-KDS-D12-R1-CLASSIFICATION-MANIFEST-20260825-016
+  d12_r1_classification_manifest_sha256: 3aeba909aa803249a2cff1c96b95a56cad665fcaa0d42492cb6397b81346f928
+decision_rationale:
+  - D12-R1已完成二十九项逐路径只读审阅，其中十六项因外部分级台账无精确记录而保持UNKNOWN
+  - UNKNOWN不能直接进入正文审阅、提交、移动、归档或删除
+  - 本阶段先以已密封元数据和独立责任声明进行双人分级；不以文件名、相似度或智能体推断替代责任确认
+  - 无法达成同级确认的项目继续保持UNKNOWN，不默认降为S1或S2
+activation_preconditions:
+  baseline:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    branch: main
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+    strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: [macmini-workwiki, workwiki-kds, automation-5]
+    hermes_jobs_disabled_and_paused: 11
+    gbrain_autopilot_and_worker: quiet
+    gcworld_or_waes_manual_import_process: none_observed
+  stop_if:
+    - 任一基线字段、路径类型、字节数、摘要或严格元数据不匹配
+    - 任一生产者恢复或出现冻结范围内写入活动
+    - 完成判定被要求读取任一UNKNOWN正文
+decision:
+  id: D12-C1
+  parent_decision: D12
+  requested_status: pending
+  target_paths: 16
+  purpose: 在不读取KDS正文的条件下建立可审计数据等级决定或继续UNKNOWN
+  responsible_reviewers:
+    reviewer_a:
+      role: KDS数据分级与安全责任方
+      responsibility: 根据既有访问空间、生成责任、元数据和保留义务独立提出S1、S2、S3或UNKNOWN
+    reviewer_b:
+      role: 对应内容权威方或项目群知识工程责任方
+      responsibility: 根据来源责任、目标受众、业务敏感性和既有治理记录独立提出S1、S2、S3或UNKNOWN
+  allowed_evidence:
+    - D12-R1已密封的路径、Git状态、文件类型、权限模式、字节数、纳秒时间、inode和SHA256
+    - 已完成责任归属回执中的生成责任、运行关系、保留义务和历史风险结论
+    - 同一字节摘要与已分级对象的一致性关系，但只能作为辅助证据
+    - 两位责任方新增的签名式分类声明、理由码、适用范围和有效期
+  prohibited_evidence:
+    - 任一目标文件正文、frontmatter、结构化字段、局部片段、字符串、关键词或语义摘要
+    - 通过先读取正文再删除输出的方式生成分类
+    - 仅凭文件名、目录名、扩展名、相似度或智能体猜测形成较低等级
+  decision_rule:
+    - 两位责任方均给出相同S1或S2且理由、范围和有效期完整时，形成待登记分类
+    - 任一责任方判定S3时从严记录为S3，并仅保存不透明标识、受控指针和审计信息
+    - 两位责任方分类不同、证据不足或任一方UNKNOWN时，结果保持UNKNOWN并进入例外队列
+    - 相同SHA只能证明字节一致；未经责任方确认不得自动继承已分级对象等级
+    - 分类结果只更新GPCF治理附录和候选分级清单，不写入KDS
+  required_output:
+    - 每条路径的reviewer_a决定、reviewer_b决定、理由码、有效期和最终裁决
+    - 每条路径是否仍需D12-C2高风险分类授权
+    - S3项目仅输出不透明标识和最小审计字段，不输出可推断正文的摘要
+    - 审阅前后31项基线、严格元数据和冻结状态
+    - 中文回执及零KDS正文读取、零KDS写入、零测试、零服务操作声明
+targets:
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+    git_state: untracked
+    byte_size: 15937
+    mode: existing_metadata
+    sha256: d7f493a10e23910d04f15bc81e43fd8ebf94fdc9f26424f389dbfa4c9eff49b9
+    current_classification: UNKNOWN
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+    git_state: untracked
+    byte_size: 15937
+    mode: existing_metadata
+    sha256: dc0c94fd684b65a0d0ed4c98f05f38cd671b1a846c7053b7647b53ab24edf59c
+    current_classification: UNKNOWN
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+    git_state: untracked
+    byte_size: 0
+    mode: existing_metadata
+    sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    current_classification: UNKNOWN
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+    git_state: untracked
+    byte_size: 0
+    mode: existing_metadata
+    sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    current_classification: UNKNOWN
+  - path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+    git_state: untracked
+    byte_size: 92
+    mode: existing_metadata
+    sha256: 04b9ee8d7ce159e1b00cda33283633c5281323b484acea470855a181a88227de
+    current_classification: UNKNOWN
+  - path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+    git_state: untracked
+    byte_size: 92
+    mode: existing_metadata
+    sha256: 04b9ee8d7ce159e1b00cda33283633c5281323b484acea470855a181a88227de
+    current_classification: UNKNOWN
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+    git_state: untracked
+    byte_size: 5126
+    mode: "600"
+    sha256: 2c11ac8022773600c5d734cdd66a9846839ad48213f98555cf8df6d29b7fa679
+    current_classification: UNKNOWN
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    git_state: untracked
+    byte_size: 7870
+    mode: existing_metadata
+    sha256: 5e6d7559f2a54eadb67f73b1335d60fe5169485a2b5b6b2a34e7dfe3a14ec2b8
+    current_classification: UNKNOWN
+  - path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+    git_state: untracked
+    byte_size: 53671
+    mode: "600"
+    sha256: e383ca1d018214b3c327e242d32105d6677dcd8f3c7e59f0bd29e5fbd03ae283
+    current_classification: UNKNOWN
+  - path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+    git_state: untracked
+    byte_size: 28091
+    mode: "600"
+    sha256: c3f09b67b46f4c909417edccf53ba1e28fde94be9b1ca39a7697e9f82bdb62ea
+    current_classification: UNKNOWN
+  - path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+    git_state: untracked
+    byte_size: 8344
+    mode: "600"
+    sha256: 01b2bd05275ed133ab86e7db92552b43c5022d7f5002fc29e686678bba642773
+    current_classification: UNKNOWN
+  - path: 工业绿链/变更告警_2026-08-25.md
+    git_state: untracked
+    byte_size: 2944
+    mode: "600"
+    sha256: 3dd7ca5885613cec24b4c167cadb672ed5b353439feac6dbdc284919f6566ba0
+    current_classification: UNKNOWN
+  - path: 工业绿链/周报/周报_2026W35.md
+    git_state: untracked
+    byte_size: 6682
+    mode: "600"
+    sha256: 8b720019e56a89631f2a92e6a2fe2c742f857f7c33844c2bf41d382adfd970d1
+    current_classification: UNKNOWN
+  - path: 工业绿链/日报/晨报-2026-08-25.md
+    git_state: untracked
+    byte_size: 1320
+    mode: "600"
+    sha256: b45bf6346039002f9b686deb6a371ae40f2ed5a33042175ef06ccded533206c1
+    current_classification: UNKNOWN
+  - path: 工业绿链/月报/月报_2026-08.md
+    git_state: untracked
+    byte_size: 9777
+    mode: "600"
+    sha256: 1e9c22fcc8bdb4de27bb0fce0d29d15759fa5b916de03701eafa0667e3b7f816
+    current_classification: UNKNOWN
+  - path: 99_Reports/ecosystem-health-2026-08-25.md
+    git_state: untracked
+    byte_size: 3742
+    mode: "600"
+    sha256: 208816d872cdf3634daaa9c0e8a95e4bd033367f5f5d0c7c4c238c0cec08e902
+    current_classification: UNKNOWN
+future_independent_decisions:
+  d12_c2:
+    status: not_requested
+    condition: 仅对D12-C1后仍UNKNOWN且确需分类的项目另行申请受控高风险分类，不得由本决定推导正文读取
+  d12_r2:
+    status: not_requested
+    condition: 仅对D12-C1形成的S1或S2结果另行申请逐路径内容审阅
+  d12_n:
+    status: not_requested
+  d12_d:
+    status: not_requested
+  d13_d14_d15:
+    status: not_requested_or_deferred
+strict_prohibitions:
+  - 读取十六项UNKNOWN的任何正文、frontmatter、字段、片段、字符串、关键词或语义摘要
+  - 读取授权范围外任何KDS正文或代码差异
+  - 编辑、创建、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 运行测试、构建、格式化或会生成KDS缓存的验证器
+  - 停止、重启或变更KDS服务
+  - 恢复任何生产者
+  - 访问数据库、API、凭据或外部写接口
+  - 执行D12-C2、D12-R2、D12-N、D12-D、D13、D14、D15、部署、验收、归档或状态提升
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  implementation_authorized: false
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null

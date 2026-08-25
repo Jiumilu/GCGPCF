@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.example/schema/gcworld-engineering-governance-v1.json",
+  "title": "GCWORLD 工程与治理底座契约",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "generatedAt", "environment", "dataLayers", "promotionRules",
+    "storageResponsibilities", "projectionRebuilds", "worldObjects", "domainInterfaces",
+    "reliableEvents", "securityControls", "observabilityMetrics", "deliveryPhases",
+    "acceptanceEvidence", "statusBoundaries"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "gcworld-engineering-governance/v1"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "environment": {"const": "fixture_only"},
+    "dataLayers": {"type": "array", "items": {"$ref": "#/$defs/dataLayer"}},
+    "promotionRules": {"type": "array", "items": {"$ref": "#/$defs/promotionRule"}},
+    "storageResponsibilities": {"type": "array", "items": {"$ref": "#/$defs/storageResponsibility"}},
+    "projectionRebuilds": {"type": "array", "items": {"$ref": "#/$defs/projectionRebuild"}},
+    "worldObjects": {"type": "array", "items": {"$ref": "#/$defs/worldObject"}},
+    "domainInterfaces": {"type": "array", "items": {"$ref": "#/$defs/domainInterface"}},
+    "reliableEvents": {"type": "array", "items": {"$ref": "#/$defs/reliableEvent"}},
+    "securityControls": {"$ref": "#/$defs/securityControls"},
+    "observabilityMetrics": {"type": "array", "items": {"$ref": "#/$defs/observabilityMetric"}},
+    "deliveryPhases": {"type": "array", "items": {"$ref": "#/$defs/deliveryPhase"}},
+    "acceptanceEvidence": {"$ref": "#/$defs/acceptanceEvidence"},
+    "statusBoundaries": {"$ref": "#/$defs/statusBoundaries"}
+  },
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "refArray": {"type": "array", "items": {"$ref": "#/$defs/nonEmptyString"}},
+    "layerType": {
+      "enum": ["source", "candidate", "kds_fact", "world_projection", "runtime_state", "simulation_branch", "evidence_audit"]
+    },
+    "dataLayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layerId", "layerType", "authoritySource", "lifecycle", "authoritativeFactSource", "allowedPromotionTargets", "sourceRefs", "evidenceRefs"],
+      "properties": {
+        "layerId": {"$ref": "#/$defs/nonEmptyString"},
+        "layerType": {"$ref": "#/$defs/layerType"},
+        "authoritySource": {"$ref": "#/$defs/nonEmptyString"},
+        "lifecycle": {"enum": ["ingested", "pending_review", "confirmed", "derived", "active", "isolated", "immutable"]},
+        "authoritativeFactSource": {"type": "boolean"},
+        "allowedPromotionTargets": {"type": "array", "items": {"$ref": "#/$defs/layerType"}},
+        "sourceRefs": {"$ref": "#/$defs/refArray"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "promotionRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ruleId", "fromLayer", "toLayer", "requiredGates", "directAuthorityWriteAllowed", "evidenceRefs"],
+      "properties": {
+        "ruleId": {"$ref": "#/$defs/nonEmptyString"},
+        "fromLayer": {"$ref": "#/$defs/layerType"},
+        "toLayer": {"$ref": "#/$defs/layerType"},
+        "requiredGates": {"$ref": "#/$defs/refArray"},
+        "directAuthorityWriteAllowed": {"type": "boolean"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "storageResponsibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["storageId", "storageType", "responsibility", "authorityMode", "reconstructible", "storesAuthoritativeFacts", "retentionPolicyRef"],
+      "properties": {
+        "storageId": {"$ref": "#/$defs/nonEmptyString"},
+        "storageType": {"enum": ["kds", "graph", "relational", "event", "object", "retrieval_index", "cache"]},
+        "responsibility": {"$ref": "#/$defs/nonEmptyString"},
+        "authorityMode": {"enum": ["fact_authority", "transaction_authority", "receipt_authority", "source_material", "derived_projection", "derived_index", "ephemeral"]},
+        "reconstructible": {"type": "boolean"},
+        "storesAuthoritativeFacts": {"type": "boolean"},
+        "retentionPolicyRef": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "projectionRebuild": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rebuildId", "targetStorageType", "kdsFactSetVersion", "ontologyVersion", "ruleVersion", "projectionVersion", "expectedDigest", "actualDigest", "differenceCount", "differenceRefs", "status", "promotionBlocked"],
+      "properties": {
+        "rebuildId": {"$ref": "#/$defs/nonEmptyString"},
+        "targetStorageType": {"enum": ["graph", "retrieval_index", "cache"]},
+        "kdsFactSetVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "ontologyVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "ruleVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "projectionVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "expectedDigest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "actualDigest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "differenceCount": {"type": "integer", "minimum": 0},
+        "differenceRefs": {"$ref": "#/$defs/refArray"},
+        "status": {"enum": ["match", "difference"]},
+        "promotionBlocked": {"type": "boolean"}
+      }
+    },
+    "worldObject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["worldAssetId", "sourceSystemId", "sourceRecordId", "tenantId", "assetDimension", "ontologyVersion", "schemaVersion", "validFrom", "validUntil", "recordedAt", "evidenceRefs", "identityHistory"],
+      "properties": {
+        "worldAssetId": {"$ref": "#/$defs/nonEmptyString"},
+        "sourceSystemId": {"$ref": "#/$defs/nonEmptyString"},
+        "sourceRecordId": {"$ref": "#/$defs/nonEmptyString"},
+        "tenantId": {"$ref": "#/$defs/nonEmptyString"},
+        "assetDimension": {"$ref": "#/$defs/nonEmptyString"},
+        "ontologyVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "schemaVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "validFrom": {"type": "string", "format": "date-time"},
+        "validUntil": {"type": ["string", "null"], "format": "date-time"},
+        "recordedAt": {"type": "string", "format": "date-time"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"},
+        "identityHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["changeType", "priorAssetRefs", "approvedByRef", "effectiveAt", "auditRef"],
+            "properties": {
+              "changeType": {"enum": ["merge", "split", "alias"]},
+              "priorAssetRefs": {"$ref": "#/$defs/refArray"},
+              "approvedByRef": {"$ref": "#/$defs/nonEmptyString"},
+              "effectiveAt": {"type": "string", "format": "date-time"},
+              "auditRef": {"$ref": "#/$defs/nonEmptyString"}
+            }
+          }
+        }
+      }
+    },
+    "domainInterface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["interfaceId", "interfaceType", "contractVersion", "ownerSystem", "readOnly", "evidenceRefs"],
+      "properties": {
+        "interfaceId": {"$ref": "#/$defs/nonEmptyString"},
+        "interfaceType": {"enum": ["world_query", "context", "identity", "agent", "action", "simulation", "governance", "event_stream"]},
+        "contractVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "ownerSystem": {"$ref": "#/$defs/nonEmptyString"},
+        "readOnly": {"type": "boolean"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "reliableEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eventId", "commandId", "idempotencyKey", "causationId", "correlationId", "schemaVersion", "eventType", "deliveryState", "attempts", "maxRetries", "inboxDeduplicated", "outboxPersisted", "sideEffectCount", "compensationRef", "evidenceRefs"],
+      "properties": {
+        "eventId": {"$ref": "#/$defs/nonEmptyString"},
+        "commandId": {"$ref": "#/$defs/nonEmptyString"},
+        "idempotencyKey": {"$ref": "#/$defs/nonEmptyString"},
+        "causationId": {"$ref": "#/$defs/nonEmptyString"},
+        "correlationId": {"$ref": "#/$defs/nonEmptyString"},
+        "schemaVersion": {"$ref": "#/$defs/nonEmptyString"},
+        "eventType": {"$ref": "#/$defs/nonEmptyString"},
+        "deliveryState": {"enum": ["pending", "delivered", "dead_letter", "compensated"]},
+        "attempts": {"type": "integer", "minimum": 0},
+        "maxRetries": {"type": "integer", "minimum": 0},
+        "inboxDeduplicated": {"type": "boolean"},
+        "outboxPersisted": {"type": "boolean"},
+        "sideEffectCount": {"type": "integer", "minimum": 0},
+        "compensationRef": {"type": ["string", "null"]},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "securityControls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tenantIsolation", "leastPrivilege", "runtimeIdentityRef", "shortLivedCredentialRef", "transportEncryption", "atRestEncryption", "auditEnabled", "promptInjectionDefense", "connectorWhitelist", "secretHandling", "secretPlaintextLocations"],
+      "properties": {
+        "tenantIsolation": {"type": "boolean"},
+        "leastPrivilege": {"type": "boolean"},
+        "runtimeIdentityRef": {"$ref": "#/$defs/nonEmptyString"},
+        "shortLivedCredentialRef": {"$ref": "#/$defs/nonEmptyString"},
+        "transportEncryption": {"type": "boolean"},
+        "atRestEncryption": {"type": "boolean"},
+        "auditEnabled": {"type": "boolean"},
+        "promptInjectionDefense": {"type": "boolean"},
+        "connectorWhitelist": {"$ref": "#/$defs/refArray"},
+        "secretHandling": {"enum": ["reference_only", "plaintext"]},
+        "secretPlaintextLocations": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "observabilityMetric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["metricId", "metricType", "unit", "threshold", "currentValue", "meetsThreshold", "evidenceRefs"],
+      "properties": {
+        "metricId": {"$ref": "#/$defs/nonEmptyString"},
+        "metricType": {"enum": ["source_coverage_rate", "unresolved_identity_rate", "fact_conflict_rate", "projection_latency", "snapshot_build_duration", "adjudication_latency", "action_success_rate", "compensation_rate", "overreach_block_rate", "agent_candidate_acceptance_rate", "evidence_completeness_rate"]},
+        "unit": {"enum": ["percent", "milliseconds"]},
+        "threshold": {"type": "number"},
+        "currentValue": {"type": "number"},
+        "meetsThreshold": {"type": "boolean"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "deliveryPhase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phaseId", "name", "prerequisitePhase", "exitMetricRefs", "exitCriteriaMet", "riskReviewed", "independentAuthorizationRef", "authorizationGranted", "nextPhaseAuthorized", "status"],
+      "properties": {
+        "phaseId": {"enum": ["P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7"]},
+        "name": {"$ref": "#/$defs/nonEmptyString"},
+        "prerequisitePhase": {"type": ["string", "null"], "enum": [null, "P0", "P1", "P2", "P3", "P4", "P5", "P6"]},
+        "exitMetricRefs": {"$ref": "#/$defs/refArray"},
+        "exitCriteriaMet": {"type": "boolean"},
+        "riskReviewed": {"type": "boolean"},
+        "independentAuthorizationRef": {"type": ["string", "null"]},
+        "authorizationGranted": {"type": "boolean"},
+        "nextPhaseAuthorized": {"type": "boolean"},
+        "status": {"enum": ["not_started", "structural_compliance", "validation_readiness", "ready_for_human_acceptance", "complete", "rework_required"]}
+      }
+    },
+    "acceptanceEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidenceType", "claimedStatus", "independentValidation", "humanConfirmation", "realRuntimeEvidence"],
+      "properties": {
+        "evidenceType": {"enum": ["fixture", "demonstration", "runtime"]},
+        "claimedStatus": {"enum": ["structural_compliance", "validation_readiness", "ready_for_human_acceptance", "complete"]},
+        "independentValidation": {"type": "boolean"},
+        "humanConfirmation": {"type": "boolean"},
+        "realRuntimeEvidence": {"type": "boolean"}
+      }
+    },
+    "statusBoundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["realEventExecutionAuthorized", "kdsWriteAuthorized", "businessWriteAuthorized", "externalActionAuthorized", "deploymentAuthorized", "statusPromotionAuthorized"],
+      "properties": {
+        "realEventExecutionAuthorized": {"const": false},
+        "kdsWriteAuthorized": {"const": false},
+        "businessWriteAuthorized": {"const": false},
+        "externalActionAuthorized": {"const": false},
+        "deploymentAuthorized": {"const": false},
+        "statusPromotionAuthorized": {"const": false}
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+invalidation_id: GCWORLD-KDS-INTEGRATION-AUTH-INVALIDATION-20260825-001
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+detected_at: "2026-08-25T00:35:48Z"
+status: confirmed_by_machine_evidence
+authorization_request_id: GCWORLD-KDS-INTEGRATION-AUTH-REQUEST-20260824-001
+authorization_receipt_id: GCWORLD-KDS-INTEGRATION-AUTH-RECEIPT-20260824-001
+historical_human_decision:
+  decisions_approved: [D1, D2, D3, D4]
+  remains_auditable: true
+  activation_had_occurred: false
+invalidation_triggers:
+  - trigger: kds_worktree_baseline_changed
+    previous_changed_entries: 14
+    current_changed_entries: 17
+    previous_status_sha256: bb1b1c46ef5eac28ca0c4b66d75239794ce8968e2a88dbd5a8780201ec2dd457
+    current_status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  - trigger: gpcf_worktree_baseline_changed
+    previous_changed_entries: 36
+    current_changed_entries: 35
+    previous_status_sha256: b1570a4a49b1e5d8c90dd47ce69329b525d7ec2c56e1b0289a5a58d4da9404e5
+    current_status_sha256: f957bce33f6364ab4a3e7a8c6d29a75b6f44e5e268ad48b5a58e499607dccce3
+current_repository_state:
+  gpcf:
+    head: 884f3759f186ca2f83e1c0cfbe9c400af823fb14
+    origin_main: 884f3759f186ca2f83e1c0cfbe9c400af823fb14
+    ahead: 0
+    behind: 0
+  kds:
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged_entries: 0
+    changed_entries: 17
+    f013_admission: blocked_dirty_worktree
+effect:
+  governance_approval_historical_record_retained: true
+  stage_a_implementation_active: false
+  kds_read_active: false
+  kds_write_active: false
+  credentials_issued: false
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  reauthorization_required_before_activation: true
+required_next_actions:
+  - 人工确认D4处置范围由14项扩展为17项
+  - 将确认后的17项处置请求交付KDS责任方
+  - KDS责任方控制持续生成变化的运行源并逐项处置
+  - 重新取得F-013的ready_for_authorization证据
+  - 基于新的稳定基线重新签发Stage A激活授权

@@ -1,0 +1,478 @@
+{
+  "baseDocument": {
+    "schemaVersion": "gcworld-role-agent-governance/v1",
+    "generatedAt": "2026-08-23T10:50:00+08:00",
+    "environment": "fixture_only",
+    "registrations": [
+      {
+        "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a",
+        "stableKey": "tenant:globalcloud|agent|project-mirror",
+        "displayName": "项目事实镜像职能智能体",
+        "agentClass": "organization_function_agent",
+        "boundAssetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "roleAssignmentRef": "gcw:role-assignment:project-observer",
+        "contextRefs": ["gcw:context:project-fixture"],
+        "ownerAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+        "supervisorAssetId": "gcw:asset:111111111111111111111111",
+        "sourceScopeRefs": ["kds-scope:project-metadata"],
+        "mode": "mirror",
+        "capabilities": ["读取经授权的事实投影"],
+        "knowledgeScopeRefs": ["gcw:knowledge-scope:project-facts"],
+        "memoryPolicy": {
+          "session": "ephemeral",
+          "task": "disabled",
+          "role": "freeze_on_role_revocation",
+          "asset": "kds_fact_refs_only",
+          "learning": "disabled"
+        },
+        "toolScope": [],
+        "connectorScope": [],
+        "authorizationRefs": [],
+        "allowedActions": ["observation"],
+        "prohibitedActions": ["advice", "draft", "internal_write", "external_communication", "funds", "contract", "identity_change", "permission_change", "government_communication", "business_state_change"],
+        "riskCeiling": "R0",
+        "delegationPolicy": "none",
+        "validFrom": "2026-08-23T00:00:00+08:00",
+        "expiresAt": "2026-09-23T00:00:00+08:00",
+        "revocationPolicy": "immediate_session_and_memory_freeze",
+        "identityDisclosure": "我是项目事实镜像职能智能体，不是真实人员。",
+        "humanImpersonationProhibited": true
+      },
+      {
+        "agentId": "gcw:agent:39913a52f15137b8cb940404",
+        "stableKey": "tenant:globalcloud|agent|project-assist",
+        "displayName": "项目协调辅助职能智能体",
+        "agentClass": "organization_function_agent",
+        "boundAssetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "roleAssignmentRef": "gcw:role-assignment:project-coordinator",
+        "contextRefs": ["gcw:context:project-fixture"],
+        "ownerAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+        "supervisorAssetId": "gcw:asset:111111111111111111111111",
+        "sourceScopeRefs": ["kds-scope:project-approved-s1-s2"],
+        "mode": "assist",
+        "capabilities": ["形成建议", "生成草稿"],
+        "knowledgeScopeRefs": ["gcw:knowledge-scope:project-facts"],
+        "memoryPolicy": {
+          "session": "ephemeral",
+          "task": "archive_on_close",
+          "role": "freeze_on_role_revocation",
+          "asset": "kds_fact_refs_only",
+          "learning": "candidate_only"
+        },
+        "toolScope": ["gcw:tool:draft-only"],
+        "connectorScope": [],
+        "authorizationRefs": [],
+        "allowedActions": ["observation", "advice", "draft"],
+        "prohibitedActions": ["internal_write", "external_communication", "funds", "contract", "identity_change", "permission_change", "government_communication", "business_state_change"],
+        "riskCeiling": "R1",
+        "delegationPolicy": "none",
+        "validFrom": "2026-08-23T00:00:00+08:00",
+        "expiresAt": "2026-09-23T00:00:00+08:00",
+        "revocationPolicy": "immediate_session_and_memory_freeze",
+        "identityDisclosure": "我是项目协调辅助职能智能体，不是真实人员。",
+        "humanImpersonationProhibited": true
+      },
+      {
+        "agentId": "gcw:agent:661af0c5a41be3a39070905b",
+        "stableKey": "tenant:globalcloud|agent|project-delegated",
+        "displayName": "项目执行委托职能智能体",
+        "agentClass": "organization_function_agent",
+        "boundAssetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "roleAssignmentRef": "gcw:role-assignment:project-operator",
+        "contextRefs": ["gcw:context:project-fixture"],
+        "ownerAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+        "supervisorAssetId": "gcw:asset:111111111111111111111111",
+        "sourceScopeRefs": ["kds-scope:project-approved-s1-s2"],
+        "mode": "delegated",
+        "capabilities": ["形成建议", "生成草稿", "执行可补偿内部动作", "提出对外动作"],
+        "knowledgeScopeRefs": ["gcw:knowledge-scope:project-facts"],
+        "memoryPolicy": {
+          "session": "ephemeral",
+          "task": "archive_on_close",
+          "role": "freeze_on_role_revocation",
+          "asset": "kds_fact_refs_only",
+          "learning": "candidate_only"
+        },
+        "toolScope": ["gcw:tool:internal-fixture"],
+        "connectorScope": ["gcw:connector:fixture-only"],
+        "authorizationRefs": ["gcw:authorization:delegated-fixture"],
+        "allowedActions": ["observation", "advice", "draft", "internal_write", "external_communication"],
+        "prohibitedActions": ["funds", "contract", "identity_change", "permission_change", "government_communication", "business_state_change"],
+        "riskCeiling": "R3",
+        "delegationPolicy": "explicit_authorization_only",
+        "delegationRef": "gcw:delegation:project-fixture",
+        "validFrom": "2026-08-23T00:00:00+08:00",
+        "expiresAt": "2026-09-23T00:00:00+08:00",
+        "revocationPolicy": "immediate_session_and_memory_freeze",
+        "identityDisclosure": "我是项目执行委托职能智能体，不是真实人员。",
+        "humanImpersonationProhibited": true
+      },
+      {
+        "agentId": "gcw:agent:0f705616fadfd950d218592b",
+        "stableKey": "tenant:globalcloud|agent|project-autonomous",
+        "displayName": "项目内部自治职能智能体",
+        "agentClass": "organization_function_agent",
+        "boundAssetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "roleAssignmentRef": "gcw:role-assignment:project-internal-automation",
+        "contextRefs": ["gcw:context:project-fixture"],
+        "ownerAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+        "supervisorAssetId": "gcw:asset:111111111111111111111111",
+        "sourceScopeRefs": ["kds-scope:project-approved-s1"],
+        "mode": "autonomous",
+        "capabilities": ["形成建议", "生成草稿", "执行批准场景内的可补偿内部动作"],
+        "knowledgeScopeRefs": ["gcw:knowledge-scope:project-facts"],
+        "memoryPolicy": {
+          "session": "ephemeral",
+          "task": "archive_on_close",
+          "role": "freeze_on_role_revocation",
+          "asset": "kds_fact_refs_only",
+          "learning": "candidate_only"
+        },
+        "toolScope": ["gcw:tool:internal-fixture"],
+        "connectorScope": ["gcw:connector:fixture-only"],
+        "authorizationRefs": ["gcw:authorization:autonomous-fixture"],
+        "allowedActions": ["observation", "advice", "draft", "internal_write"],
+        "prohibitedActions": ["external_communication", "funds", "contract", "identity_change", "permission_change", "government_communication", "business_state_change"],
+        "riskCeiling": "R2",
+        "delegationPolicy": "approved_scenario_only",
+        "autonomousScenarioRef": "gcw:autonomous-scenario:project-internal-fixture",
+        "validFrom": "2026-08-23T00:00:00+08:00",
+        "expiresAt": "2026-09-23T00:00:00+08:00",
+        "revocationPolicy": "immediate_session_and_memory_freeze",
+        "identityDisclosure": "我是项目内部自治职能智能体，不是真实人员。",
+        "humanImpersonationProhibited": true
+      }
+    ],
+    "actionEnvelopes": [],
+    "executionLedger": [],
+    "statusBoundaries": {
+      "kdsWriteAuthorized": false,
+      "mmcWriteAuthorized": false,
+      "businessWriteAuthorized": false,
+      "externalActionAuthorized": false,
+      "deploymentAuthorized": false,
+      "statusPromotionAuthorized": false
+    }
+  },
+  "positiveCases": [
+    {
+      "name": "镜像模式越界请求被阻断",
+      "append": {
+        "actionEnvelopes": [{
+          "envelopeId": "gcw:envelope:318096100cc0957b3e40f961",
+          "stableKey": "tenant:globalcloud|envelope|mirror-blocked-internal",
+          "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a",
+          "actionRole": "项目事实观察",
+          "targetRef": "gcw:fixture-target:internal-task",
+          "actionType": "internal_write",
+          "riskLevel": "R2",
+          "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+          "authorizationStatus": "not_required",
+          "confirmationStatus": "not_required",
+          "decision": "blocked",
+          "expectedResult": "不执行并记录镜像模式越界",
+          "requestedAt": "2026-08-23T10:51:00+08:00",
+          "zeroWrite": true
+        }],
+        "executionLedger": [{
+          "ledgerEntryId": "gcw:ledger:bb8d9420b378f91a1e0e94bf",
+          "stableKey": "tenant:globalcloud|ledger|mirror-blocked-internal",
+          "envelopeId": "gcw:envelope:318096100cc0957b3e40f961",
+          "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a",
+          "outcome": "blocked",
+          "reasonCodes": ["mirror_mode_observation_only"],
+          "externalSideEffect": false,
+          "occurredAt": "2026-08-23T10:51:01+08:00",
+          "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+          "appendOnly": true
+        }]
+      }
+    },
+    {
+      "name": "辅助模式建议和草稿",
+      "append": {
+        "actionEnvelopes": [
+          {
+            "envelopeId": "gcw:envelope:7f45b727a36cf4a30ae3b72d",
+            "stableKey": "tenant:globalcloud|envelope|assist-advice",
+            "agentId": "gcw:agent:39913a52f15137b8cb940404",
+            "actionRole": "项目协调辅助",
+            "targetRef": "gcw:fixture-target:project-advice",
+            "actionType": "advice",
+            "riskLevel": "R1",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "authorizationStatus": "not_required",
+            "confirmationStatus": "not_required",
+            "decision": "allowed",
+            "expectedResult": "生成带来源的内部建议",
+            "requestedAt": "2026-08-23T10:52:00+08:00",
+            "zeroWrite": true
+          },
+          {
+            "envelopeId": "gcw:envelope:33fcb819846a1abc62681661",
+            "stableKey": "tenant:globalcloud|envelope|assist-draft",
+            "agentId": "gcw:agent:39913a52f15137b8cb940404",
+            "actionRole": "项目协调辅助",
+            "targetRef": "gcw:fixture-target:internal-draft",
+            "actionType": "draft",
+            "riskLevel": "R1",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "authorizationStatus": "not_required",
+            "confirmationStatus": "not_required",
+            "decision": "allowed",
+            "expectedResult": "生成但不发送草稿",
+            "requestedAt": "2026-08-23T10:52:10+08:00",
+            "zeroWrite": true
+          }
+        ],
+        "executionLedger": [
+          {
+            "ledgerEntryId": "gcw:ledger:045b789d3af8a24fba82f173",
+            "stableKey": "tenant:globalcloud|ledger|assist-advice",
+            "envelopeId": "gcw:envelope:7f45b727a36cf4a30ae3b72d",
+            "agentId": "gcw:agent:39913a52f15137b8cb940404",
+            "outcome": "advised",
+            "reasonCodes": ["evidence_linked_advice"],
+            "externalSideEffect": false,
+            "occurredAt": "2026-08-23T10:52:01+08:00",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "appendOnly": true
+          },
+          {
+            "ledgerEntryId": "gcw:ledger:b9987dc4962af55c97a99efa",
+            "stableKey": "tenant:globalcloud|ledger|assist-draft",
+            "envelopeId": "gcw:envelope:33fcb819846a1abc62681661",
+            "agentId": "gcw:agent:39913a52f15137b8cb940404",
+            "outcome": "drafted",
+            "reasonCodes": ["draft_only_no_send"],
+            "externalSideEffect": false,
+            "occurredAt": "2026-08-23T10:52:11+08:00",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "appendOnly": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "委托模式内部执行与对外拒绝",
+      "append": {
+        "actionEnvelopes": [
+          {
+            "envelopeId": "gcw:envelope:8c56a2cdd63f6643de283bdf",
+            "stableKey": "tenant:globalcloud|envelope|delegated-approved-internal",
+            "agentId": "gcw:agent:661af0c5a41be3a39070905b",
+            "actionRole": "项目内部执行",
+            "targetRef": "gcw:fixture-target:internal-reversible",
+            "actionType": "internal_write",
+            "riskLevel": "R2",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "authorizationStatus": "granted",
+            "authorizationDecisionRef": "gcw:authorization-decision:internal-fixture",
+            "confirmationStatus": "not_required",
+            "decision": "allowed",
+            "expectedResult": "执行夹具环境可补偿内部动作",
+            "requestedAt": "2026-08-23T10:53:00+08:00",
+            "zeroWrite": false
+          },
+          {
+            "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d",
+            "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+            "agentId": "gcw:agent:661af0c5a41be3a39070905b",
+            "actionRole": "项目对外联络",
+            "targetRef": "gcw:fixture-target:partner-message",
+            "actionType": "external_communication",
+            "riskLevel": "R3",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "authorizationStatus": "denied",
+            "confirmationStatus": "rejected",
+            "decision": "blocked",
+            "expectedResult": "拒绝发送并保留原因",
+            "requestedAt": "2026-08-23T10:53:10+08:00",
+            "zeroWrite": true
+          }
+        ],
+        "executionLedger": [
+          {
+            "ledgerEntryId": "gcw:ledger:02cf7b8a1ee23cd5c6fc1690",
+            "stableKey": "tenant:globalcloud|ledger|delegated-approved-internal",
+            "envelopeId": "gcw:envelope:8c56a2cdd63f6643de283bdf",
+            "agentId": "gcw:agent:661af0c5a41be3a39070905b",
+            "outcome": "approved_executed",
+            "reasonCodes": ["fixture_internal_authorized"],
+            "externalSideEffect": false,
+            "executionReceiptRef": "gcw:execution-receipt:internal-fixture",
+            "occurredAt": "2026-08-23T10:53:01+08:00",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "appendOnly": true
+          },
+          {
+            "ledgerEntryId": "gcw:ledger:63e93e6035015227016d05a2",
+            "stableKey": "tenant:globalcloud|ledger|delegated-rejected-external",
+            "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d",
+            "agentId": "gcw:agent:661af0c5a41be3a39070905b",
+            "outcome": "rejected",
+            "reasonCodes": ["authorization_denied", "human_confirmation_rejected"],
+            "externalSideEffect": false,
+            "occurredAt": "2026-08-23T10:53:11+08:00",
+            "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+            "appendOnly": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "自治模式批准场景内执行失败",
+      "append": {
+        "actionEnvelopes": [{
+          "envelopeId": "gcw:envelope:cd709008532f325660234a63",
+          "stableKey": "tenant:globalcloud|envelope|autonomous-failed-internal",
+          "agentId": "gcw:agent:0f705616fadfd950d218592b",
+          "actionRole": "项目内部自动化",
+          "targetRef": "gcw:fixture-target:internal-reversible",
+          "actionType": "internal_write",
+          "riskLevel": "R2",
+          "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+          "authorizationStatus": "granted",
+          "authorizationDecisionRef": "gcw:authorization-decision:autonomous-fixture",
+          "confirmationStatus": "not_required",
+          "decision": "allowed",
+          "expectedResult": "执行批准场景内的夹具动作",
+          "requestedAt": "2026-08-23T10:54:00+08:00",
+          "zeroWrite": false
+        }],
+        "executionLedger": [{
+          "ledgerEntryId": "gcw:ledger:fa13a23354e2409c832a4902",
+          "stableKey": "tenant:globalcloud|ledger|autonomous-failed-internal",
+          "envelopeId": "gcw:envelope:cd709008532f325660234a63",
+          "agentId": "gcw:agent:0f705616fadfd950d218592b",
+          "outcome": "failed",
+          "reasonCodes": ["fixture_execution_failed"],
+          "externalSideEffect": false,
+          "errorCode": "fixture_failure",
+          "occurredAt": "2026-08-23T10:54:01+08:00",
+          "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+          "appendOnly": true
+        }]
+      }
+    }
+  ],
+  "negativeCases": [
+    {"name": "注册缺少责任人", "remove": ["registrations.0.ownerAssetId"], "expectedReasons": ["schema_error"]},
+    {"name": "智能体允许冒充真人", "replace": {"registrations.0.humanImpersonationProhibited": false}, "expectedReasons": ["schema_error"]},
+    {
+      "name": "对外动作无授权确认却放行",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d", "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+        "agentId": "gcw:agent:661af0c5a41be3a39070905b", "actionRole": "项目对外联络", "targetRef": "gcw:fixture-target:partner-message",
+        "actionType": "external_communication", "riskLevel": "R3", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "pending", "confirmationStatus": "pending", "decision": "allowed", "expectedResult": "错误放行",
+        "requestedAt": "2026-08-23T11:01:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["high_impact_default_deny_broken"]
+    },
+    {
+      "name": "资金动作缺少人工确认却放行",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d", "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+        "agentId": "gcw:agent:661af0c5a41be3a39070905b", "actionRole": "资金申请", "targetRef": "gcw:fixture-target:funds",
+        "actionType": "funds", "riskLevel": "R4", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "granted", "authorizationDecisionRef": "gcw:authorization-decision:funds-fixture",
+        "confirmationStatus": "pending", "decision": "allowed", "expectedResult": "错误放行",
+        "requestedAt": "2026-08-23T11:02:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["high_impact_default_deny_broken", "prohibited_action_requested"]
+    },
+    {
+      "name": "合同动作风险等级过低",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d", "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+        "agentId": "gcw:agent:661af0c5a41be3a39070905b", "actionRole": "合同处理", "targetRef": "gcw:fixture-target:contract",
+        "actionType": "contract", "riskLevel": "R1", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "granted", "authorizationDecisionRef": "gcw:authorization-decision:contract-fixture",
+        "confirmationStatus": "confirmed", "humanConfirmationRef": "gcw:human-confirmation:contract-fixture",
+        "decision": "allowed", "expectedResult": "错误放行",
+        "requestedAt": "2026-08-23T11:03:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["high_impact_risk_too_low", "prohibited_action_requested"]
+    },
+    {
+      "name": "权限动作违反注册禁止项",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d", "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+        "agentId": "gcw:agent:661af0c5a41be3a39070905b", "actionRole": "权限变更", "targetRef": "gcw:fixture-target:permission",
+        "actionType": "permission_change", "riskLevel": "R4", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "granted", "authorizationDecisionRef": "gcw:authorization-decision:permission-fixture",
+        "confirmationStatus": "confirmed", "humanConfirmationRef": "gcw:human-confirmation:permission-fixture",
+        "decision": "allowed", "expectedResult": "错误放行",
+        "requestedAt": "2026-08-23T11:04:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["prohibited_action_requested"]
+    },
+    {
+      "name": "镜像模式执行内部写入",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:318096100cc0957b3e40f961", "stableKey": "tenant:globalcloud|envelope|mirror-blocked-internal",
+        "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a", "actionRole": "错误执行", "targetRef": "gcw:fixture-target:internal-task",
+        "actionType": "internal_write", "riskLevel": "R2", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "granted", "authorizationDecisionRef": "gcw:authorization-decision:bad",
+        "confirmationStatus": "not_required", "decision": "allowed", "expectedResult": "错误写入",
+        "requestedAt": "2026-08-23T11:05:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["mode_boundary_broken", "risk_ceiling_exceeded", "prohibited_action_requested"]
+    },
+    {
+      "name": "辅助模式执行对外动作",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d", "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+        "agentId": "gcw:agent:39913a52f15137b8cb940404", "actionRole": "错误外联", "targetRef": "gcw:fixture-target:partner-message",
+        "actionType": "external_communication", "riskLevel": "R3", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "granted", "authorizationDecisionRef": "gcw:authorization-decision:bad",
+        "confirmationStatus": "confirmed", "humanConfirmationRef": "gcw:human-confirmation:bad",
+        "decision": "allowed", "expectedResult": "错误发送", "requestedAt": "2026-08-23T11:06:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["mode_boundary_broken", "risk_ceiling_exceeded", "prohibited_action_requested"]
+    },
+    {"name": "自治模式缺少批准场景", "remove": ["registrations.3.autonomousScenarioRef"], "expectedReasons": ["schema_error"]},
+    {
+      "name": "自治模式尝试高风险外部动作",
+      "append": {"actionEnvelopes": [{
+        "envelopeId": "gcw:envelope:4693e39ea093bab3577c709d", "stableKey": "tenant:globalcloud|envelope|delegated-rejected-external",
+        "agentId": "gcw:agent:0f705616fadfd950d218592b", "actionRole": "错误自治外联", "targetRef": "gcw:fixture-target:partner-message",
+        "actionType": "external_communication", "riskLevel": "R3", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+        "authorizationStatus": "granted", "authorizationDecisionRef": "gcw:authorization-decision:bad",
+        "confirmationStatus": "confirmed", "humanConfirmationRef": "gcw:human-confirmation:bad",
+        "decision": "allowed", "expectedResult": "错误发送", "requestedAt": "2026-08-23T11:07:00+08:00", "zeroWrite": false
+      }]},
+      "expectedReasons": ["autonomous_high_risk_action", "mode_boundary_broken", "risk_ceiling_exceeded", "prohibited_action_requested"]
+    },
+    {
+      "name": "阻断账本却声明外部副作用",
+      "append": {
+        "actionEnvelopes": [{
+          "envelopeId": "gcw:envelope:318096100cc0957b3e40f961", "stableKey": "tenant:globalcloud|envelope|mirror-blocked-internal",
+          "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a", "actionRole": "项目事实观察", "targetRef": "gcw:fixture-target:internal-task",
+          "actionType": "internal_write", "riskLevel": "R2", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"],
+          "authorizationStatus": "not_required", "confirmationStatus": "not_required", "decision": "blocked", "expectedResult": "阻断",
+          "requestedAt": "2026-08-23T11:08:00+08:00", "zeroWrite": true
+        }],
+        "executionLedger": [{
+          "ledgerEntryId": "gcw:ledger:bb8d9420b378f91a1e0e94bf", "stableKey": "tenant:globalcloud|ledger|mirror-blocked-internal",
+          "envelopeId": "gcw:envelope:318096100cc0957b3e40f961", "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a",
+          "outcome": "blocked", "reasonCodes": ["blocked"], "externalSideEffect": true,
+          "occurredAt": "2026-08-23T11:08:01+08:00", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"], "appendOnly": true
+        }]
+      },
+      "expectedReasons": ["blocked_side_effect"]
+    },
+    {
+      "name": "执行账本引用悬空信封",
+      "append": {"executionLedger": [{
+        "ledgerEntryId": "gcw:ledger:bb8d9420b378f91a1e0e94bf", "stableKey": "tenant:globalcloud|ledger|mirror-blocked-internal",
+        "envelopeId": "gcw:envelope:ffffffffffffffffffffffff", "agentId": "gcw:agent:a7a279b9f5dea57fc9c5609a",
+        "outcome": "blocked", "reasonCodes": ["missing_envelope"], "externalSideEffect": false,
+        "occurredAt": "2026-08-23T11:09:00+08:00", "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"], "appendOnly": true
+      }]},
+      "expectedReasons": ["dangling_envelope_ref"]
+    }
+  ]
+}

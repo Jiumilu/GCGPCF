@@ -1,0 +1,56 @@
+receipt_id: GCWORLD-KDS-D12-C1-REQUEST-VALIDATION-RECEIPT-20260825-020
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+validated_at: "2026-08-25T07:29:24Z"
+source_request:
+  request_id: GCWORLD-KDS-D12-C1-CLASSIFICATION-AUTH-REQUEST-20260825-019
+  path: gcworld-kds-d12-c1-classification-governance-authorization-request-20260825.yaml
+  sha256: 364c2d00c6d980708f23875750f5940ebe8e4de16bc2da5eee382e07c98d6d15
+request_contract:
+  target_paths: 16
+  unique_target_paths: 16
+  current_classification: UNKNOWN
+  unknown_body_read_authorized: false
+  classification_decision_started: false
+  d12_c2_authorized: false
+  d12_r2_authorized: false
+  d12_n_authorized: false
+  d12_d_authorized: false
+baseline_recheck:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+producer_freeze_recheck:
+  codex_automations_paused: 3
+  hermes_jobs_disabled_and_paused: 11
+  gbrain_autopilot_launch_agent: absent
+  frozen_scope_matching_processes: 0
+validation:
+  yaml_unique_keys: pass_4_files
+  openspec_strict: pass
+  document_gate: pass
+  document_gate_missing_metadata: 0
+  document_gate_missing_readme_dirs: 0
+  project_group_gate: pass_17_of_17
+  git_diff_check: pass
+boundary_receipt:
+  unknown_body_or_field_read: false
+  kds_file_mutation: false
+  test_run: false
+  service_change: false
+  producer_restore: false
+  commit_or_push: false
+  deploy_or_status_promotion: false
+result:
+  request_seal: pass
+  authorization_status: pending_independent_human_decision
+  implementation_may_start: false
+  disposition: pause_for_independent_d12_c1_classification_authorization

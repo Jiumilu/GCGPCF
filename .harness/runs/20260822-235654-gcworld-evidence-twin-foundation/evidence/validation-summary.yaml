@@ -1,0 +1,73 @@
+schema_version: gcworld-validation-summary/v1
+run_id: 20260822-235654-gcworld-evidence-twin-foundation
+change_id: gcworld-evidence-twin-foundation
+recorded_at: "2026-08-24T09:16:37Z"
+language: zh-CN
+scope:
+  kind: GPCF本地结构契约与只读评估
+  real_runtime_in_scope: false
+  kds_write_authorized: false
+  api_execution_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+unit_regression:
+  command: python3 -m unittest discover -s tests -p 'test_gcworld*.py' -v
+  result: pass
+  tests_run: 28
+  failures: 0
+  errors: 0
+  duration_seconds: 1.417
+contract_validators:
+  - { name: 世界模型, result: pass, positive: 3, negative: 4, determinism_runs: 3, matrix_sha256: 3fa82e2eb23bdaec01fabde5c35e27a3035acb6c0ef2b3e93ef2505e0faf7a97 }
+  - { name: 职能智能体治理, result: pass, positive: 4, negative: 12, determinism_runs: 3, matrix_sha256: fa702d6a56d797bceb53d6bc0406ae8346a9c2bf1c522000f6a65fafcaf7b2c5 }
+  - { name: 世界权限, result: pass, positive: 5, negative: 14, determinism_runs: 3, matrix_sha256: 27bf7fe514014ff6afa701886c00f761e26f9b7958c29ff8ac68993c57b8fa8d }
+  - { name: 世界运行时, result: pass, positive: 6, negative: 15, determinism_runs: 3, matrix_sha256: 27425f56265f860259199419bc8950f30013045d0e5dbcfe82d248a814b49ff7 }
+  - { name: 工作台, result: pass, positive: 6, negative: 16, determinism_runs: 3, matrix_sha256: b321bc986b05e6b297bef54c298c1f57cb63941d086ee1e8c949a7afe42abf45 }
+  - { name: 工程治理, result: pass, positive: 7, negative: 21, determinism_runs: 3, matrix_sha256: d169a74c60e286c2769ccb81de029298561169b48e33893504a365aba84177f3 }
+zero_write_proof:
+  kds_status_before: { changed_entries: 14, sha256: bb1b1c46ef5eac28ca0c4b66d75239794ce8968e2a88dbd5a8780201ec2dd457 }
+  kds_status_after: { changed_entries: 14, sha256: bb1b1c46ef5eac28ca0c4b66d75239794ce8968e2a88dbd5a8780201ec2dd457 }
+  unchanged: true
+  validator_declared_writes:
+    kds: 0
+    mmc: 0
+    business_system: 0
+    external: 0
+    fact: 0
+    real_authorizations: 0
+    real_executions: 0
+    deployments: 0
+    status_promotions: 0
+governance_gates:
+  openspec_strict: { result: pass, change: gcworld-evidence-twin-foundation }
+  loop_document_gate: { result: pass, missing_metadata: 0, missing_readme_dirs: 0, localization_debt: false }
+  project_group_readiness: { result: pass, checked_repos: 17, passed: 17, failed: 0, gfis_status_ceiling: repair_required }
+  knowledge_asset_model: { result: pass, completion_status: not_complete, accepted: false, integrated: false, production_ready: false }
+  feature_workspace: { result: pass, status_promotion_allowed: false }
+  f013_admission:
+    gate_script_result: pass
+    admission: blocked_dirty_worktree
+    changed_entries: 14
+    ahead: 0
+    behind: 0
+    kds_write_authorized: false
+    deployment_authorized: false
+  gke001_coordination: { result: pass, status: active/partial/not_complete, active_product_lanes: 0, report_only_lanes: 3 }
+waivers:
+  build:
+    result: not_applicable
+    reason: 本变更仅新增规格、JSON Schema、固定样例、Python校验器及只读评估证据，不包含可构建产品或发布制品
+  api:
+    result: not_applicable
+    reason: 本轮未实现或变更真实API，且授权明确禁止KDS/MMC写接口与运行时集成
+  ui:
+    result: not_applicable
+    reason: 本轮仅定义工作台结构契约，没有界面实现或真实浏览器运行证据
+  chinese_search:
+    result: not_applicable
+    reason: 本轮没有搜索产品实现；所有新增人工可读文档均使用中文
+runtime_evidence:
+  result: missing_by_scope
+  consequence: 不得宣称已验收、已集成、生产就绪、完整运行或全量覆盖
+overall_evidence_result: structural_validation_passed_runtime_and_human_review_blocked
+

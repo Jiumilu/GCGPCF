@@ -1,0 +1,93 @@
+request_id: GCWORLD-KDS-STABILIZATION-AUTH-REQUEST-20260825-003
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T05:38:51Z"
+status: pending_independent_human_decisions
+source_handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-003
+current_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  changed_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  f013_admission: blocked_dirty_worktree
+approval_rule: 每项决定必须独立确认；任何一项批准不得推导其他决定、文件处置、恢复、测试或状态提升
+decisions:
+  - id: D5
+    title: 三个Codex自动化维护窗口暂停授权
+    decision: pending
+    targets: [macmini-workwiki, workwiki-kds, automation-5]
+    restore_included: false
+  - id: D6
+    title: 十一个Hermes任务维护窗口暂停授权
+    decision: pending
+    targets: [f06e9f563967, 2f3355dec02f, 87c8214c0e57, 111e8983641a, d1875abfb9df, 2784e0317db6, wiki-ecosystem-health-3d, 43652c3c9b4d, 99683d54df08, 155b3671abdd, dbce6d580114]
+    restore_included: false
+  - id: D7
+    title: GBrain运行源安全静默授权
+    decision: pending
+    target: GBrain autopilot及worker
+    restore_included: false
+  - id: D8
+    title: GCWORLD与WAES人工资料导入冻结授权
+    decision: pending
+    restore_included: false
+  - id: D9
+    title: 两个代码路径编辑源冻结与来源调查授权
+    decision: pending
+    targets: [api_server.py, tests/test_api_smoke.py]
+    allowed_action: 仅冻结相关编辑活动，并通过任务、进程和版本元数据确认真实来源
+    file_or_diff_content_read_included: false
+  - id: D10
+    title: 两个代码路径内容与差异审阅授权
+    decision: pending
+    targets: [api_server.py, tests/test_api_smoke.py]
+    allowed_action: 由KDS源码和测试责任方在受控审阅中读取内容与差异，确认需求、来源和风险
+    cleanup_commit_test_included: false
+  - id: D11
+    title: KDS服务维护窗口授权
+    decision: pending
+    activation_condition: 仅当稳定窗口必须静默或重启KDS服务时使用
+    allowed_action: 另行评估影响后按KDS责任方方案执行，禁止强杀
+    restore_included: false
+  - id: D12
+    title: 三十一项逐路径处置授权
+    decision: pending
+    allowed_action: 由KDS及内容责任方逐项决定保留、独立提交、不可变归档、移动或删除；删除须逐路径明示
+    prerequisite: 对应生产者稳定窗口和来源审阅已成立
+  - id: D13
+    title: 运行产物改道OpenSpec提案授权
+    decision: pending
+    allowed_action: 仅创建独立提案、设计和任务，将运行产物迁往仓库外不可变目录
+    implementation_included: false
+  - id: D14
+    title: 暂停源与KDS服务恢复授权
+    decision: deferred_until_post_disposition
+    allowed_action: 处置复核后按目标逐项确认恢复并核验单实例
+  - id: D15
+    title: F-013重新准入授权
+    decision: pending
+    allowed_action: 稳定窗口和获批处置完成后，仅重新执行只读准入与证据收集
+global_prohibitions:
+  - 未获相应决定批准前暂停、停止、恢复或修改任何自动化、Hermes任务或服务
+  - 未获D10批准前读取两个代码文件或其差异正文
+  - 未获D12逐路径批准前编辑、移动、删除、暂存、还原、提交或推送KDS文件
+  - 访问数据库、API或凭据
+  - 未获独立授权执行测试、部署、验收、归档或状态提升
+  - 启动Stage A或任务2.1
+validity:
+  invalidated_by:
+    - KDS路径集、状态摘要、HEAD、远端关系、生产者或责任方变化
+    - 用户撤销或治理证据冲突
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

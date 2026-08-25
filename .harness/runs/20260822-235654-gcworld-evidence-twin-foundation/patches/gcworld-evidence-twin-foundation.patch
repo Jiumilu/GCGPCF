@@ -1,0 +1,13 @@
+diff --git a/openspec/changes/gcworld-evidence-twin-foundation/tasks.md b/openspec/changes/gcworld-evidence-twin-foundation/tasks.md
+--- a/openspec/changes/gcworld-evidence-twin-foundation/tasks.md
++++ b/openspec/changes/gcworld-evidence-twin-foundation/tasks.md
+@@ -76,6 +76,6 @@
+ ## 9. 验证与交接
+ 
+-- [ ] 9.1 执行模型、单元、确定性和零写入回归检查；对不适用的构建或 API 证据标记豁免并说明原因。
+-- [ ] 9.2 执行 OpenSpec 严格校验和项目群文档门禁，消除本变更新增的文控债务。
+-- [ ] 9.3 将证据提交独立 Harness 复核；不得宣称已验收、已集成、生产就绪或全量覆盖。
++- [x] 9.1 执行模型、单元、确定性和零写入回归检查；对不适用的构建或 API 证据标记豁免并说明原因。
++- [x] 9.2 执行 OpenSpec 严格校验和项目群文档门禁，消除本变更新增的文控债务。
++- [x] 9.3 将证据提交独立 Harness 复核；不得宣称已验收、已集成、生产就绪或全量覆盖。
+ - [ ] 9.4 仅在只读覆盖评估报告完成复核后，为 KDS、界面和运行时集成准备需独立授权的后续提案。

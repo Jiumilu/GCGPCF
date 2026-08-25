@@ -1,0 +1,59 @@
+receipt_id: GCWORLD-KDS-D12-C2-S2-APPROVAL-INPUT-RECEIPT-20260825-045
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T11:43:55Z"
+source_request:
+  request_id: GCWORLD-KDS-D12-C2-S2-HUMAN-AUTHORITY-DESIGNATION-REQUEST-20260825-044
+  request_sha256: 7f7d6ecd38333fdb15f3427117f605793a23b7a9bd99db0b99ccc63d8106cdb6
+human_decision_owner: 老卢
+execution_approval_received: true
+input_validation: incomplete
+group_inputs:
+  distributed_governance:
+    provided_value: 〔designate_authority / keep_unknown〕
+    normalized_value: null
+    validation: invalid_unselected_choice
+  feishu_xiaog_closure:
+    provided_value: 〔designate_authority / keep_unknown〕
+    normalized_value: null
+    validation: invalid_unselected_choice
+  macmini_workwiki:
+    provided_value: 〔designate_authority / keep_unknown〕
+    normalized_value: null
+    validation: invalid_unselected_choice
+  hermes_evolution_reports:
+    provided_value: 〔designate_authority / keep_unknown〕
+    normalized_value: null
+    validation: invalid_unselected_choice
+  industrial_greenchain:
+    provided_value: 〔designate_authority / keep_unknown〕
+    normalized_value: null
+    validation: invalid_unselected_choice
+  ecosystem_health:
+    provided_value: 〔designate_authority / keep_unknown〕
+    normalized_value: null
+    validation: invalid_unselected_choice
+designation_fields:
+  authority_subject_name_or_asset_id: null
+  authority_role: null
+  authority_basis: null
+  signed_thread_or_identity: null
+  scope: null
+  valid_from: null
+  valid_until: null
+  target_audience: null
+  business_sensitivity_boundary: null
+  distribution_constraints: null
+  revocation_or_expiry_condition: null
+  conflict_of_interest_statement: null
+governance_interpretation:
+  valid_group_decisions: 0
+  invalid_or_missing_group_decisions: 6
+  complete_authority_designations: 0
+  inference_performed: false
+  rule: 未明确单选或字段不完整的分组继续保持UNKNOWN
+hard_boundaries:
+  unknown_content_read: prohibited
+  reviewer_b_replacement: not_authorized
+  s1_c_d12_r2_n_d: not_authorized
+  file_disposition_test_service_restore_or_status_promotion: not_authorized

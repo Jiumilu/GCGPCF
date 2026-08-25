@@ -1,0 +1,81 @@
+receipt_id: GCWORLD-KDS-D12-C2-S2-CLOSURE-RECEIPT-20260825-048
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T11:58:33Z"
+title: D12-C2-S2——六组决定已明确但因最终基线漂移停止的收口回执
+source_evidence:
+  s2_request_sha256: 7f7d6ecd38333fdb15f3427117f605793a23b7a9bd99db0b99ccc63d8106cdb6
+  prior_partial_execution_receipt_sha256: 9797659abb0aecc3b78b5d8624cdad0f27c59d90f14158a8ee89fdfcb3d31cde
+  supplemental_decision_receipt: GCWORLD-KDS-D12-C2-S2-SUPPLEMENTAL-DECISION-RECEIPT-20260825-047
+  supplemental_decision_receipt_sha256: 0d7d888f4f66b0c3dd2e32920b13e92d1f2c2a25665c203471be1aca626a50d2
+  post_gate_drift_receipt: GCWORLD-KDS-POST-D12-C2-S2-CLOSURE-DRIFT-20260825-049
+  post_gate_drift_receipt_sha256: 9671fc888608b0882bc38fd4334f8acf0dcc7c06110267348d904c31a48c5c33
+result: stopped_by_post_gate_drift_before_effective_closure
+group_results:
+  - group: distributed_governance
+    target_ids: [D12-C1-EXC-001, D12-C1-EXC-002]
+    decision: keep_unknown
+    final_state: UNKNOWN
+  - group: feishu_xiaog_closure
+    target_ids: [D12-C1-EXC-003, D12-C1-EXC-004]
+    decision: keep_unknown
+    final_state: UNKNOWN
+  - group: macmini_workwiki
+    target_ids: [D12-C1-EXC-005, D12-C1-EXC-006]
+    decision: keep_unknown
+    final_state: UNKNOWN
+  - group: hermes_evolution_reports
+    target_ids: [D12-C1-EXC-007, D12-C1-EXC-008]
+    decision: keep_unknown
+    final_state: UNKNOWN
+  - group: industrial_greenchain
+    target_ids: [D12-C1-EXC-009, D12-C1-EXC-010, D12-C1-EXC-011, D12-C1-EXC-012, D12-C1-EXC-013, D12-C1-EXC-014, D12-C1-EXC-015]
+    decision: keep_unknown
+    final_state: UNKNOWN
+  - group: ecosystem_health
+    target_ids: [D12-C1-EXC-016]
+    decision: keep_unknown
+    final_state: UNKNOWN
+statistics:
+  authority_groups: 6
+  explicit_group_decisions: 6
+  invalid_or_missing_group_decisions: 0
+  keep_unknown_groups: 6
+  designated_authority_groups: 0
+  final_unknown_target_ids: 16
+  exception_queue_entries: 16
+  s1_c_requests_dispatched: 0
+  d12_r2_n_d_eligible_target_ids: 0
+decision:
+  supplemental_group_decisions_recorded: true
+  effective_closure: false
+  d12_c2_s2_status: stopped_post_gate_drift
+  d12_c2_status: active_partial_not_complete
+  downstream_status: not_authorized_and_zero_eligible_targets
+  implementation_status: not_started
+  openspec_progress: 3_of_17
+final_gate:
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 32
+  ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+  expanded_entries: 32
+  expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+  strict_path_metadata_sha256: 95fe59ebb7bfe4f43f4c2c319820c2d3a06bad9e7a576670c6c19f60596c136b
+  drift_path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+  producer_freeze:
+    codex_automations_paused: 3_of_3
+    hermes_jobs_disabled: 11_of_11
+    gbrain_autopilot_absent: true
+    matching_import_or_gbrain_processes: 0
+  exact_match: false
+scope_compliance:
+  unknown_content_read: 0
+  authority_inferred_or_agent_signed: 0
+  reviewer_b_replaced: 0
+  s1_c_or_downstream_execution: 0
+  kds_write: 0
+  test_or_service_operation: 0
+  producer_restore: 0
+  file_disposition_or_status_promotion: 0

@@ -1,0 +1,29 @@
+contract_id: globalcloud.gcworld.engineering_governance
+contract_version: v1.0
+title: GCWORLD工程与治理底座契约清单
+status: draft
+scope: 本地夹具与确定性校验，不创建真实存储、接口、事件、凭据或阶段授权，不执行任何写入
+artifacts:
+  - name: 工程与治理底座Schema
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-engineering-governance.schema.json
+    sha256: cd478ba95fdfc588a9bac85842e78107da96c0df0a226192ead571898a0c0b7c
+  - name: 工程与治理底座正反例
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-engineering-governance-fixtures.json
+    sha256: b0c3f8c5e17731759f52ade1f736caa888494875f2f8148eea8ac924c1fd6f65
+  - name: 工程与治理底座校验器
+    path: tools/kds-sync/validate_gcworld_engineering_governance.py
+    sha256: e51d388feef607d7ba84aa2c23e8e807cac731376dee036d348243e6dc43a3fe
+  - name: 工程与治理底座回归测试
+    path: tests/test_gcworld_engineering_governance.py
+    sha256: 34b247b75e2bd6f87ccff2a38af05baab6259f58ecb12290240cf92c4643e249
+status_boundary:
+  real_storage_created: false
+  real_interface_created: false
+  real_event_execution_authorized: false
+  credential_change_authorized: false
+  kds_write_authorized: false
+  business_write_authorized: false
+  external_action_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+  completion_status: not_complete

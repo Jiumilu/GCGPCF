@@ -1,0 +1,95 @@
+gke001_brain_browser_r2_postpush_governance_reconciliation:
+  id: GKE-001-COORDINATION-20260825-008-BROWSER-R2-GOVERNANCE
+  issued_at: 2026-08-25
+  program: GKE-001
+  release: Release_0
+  feature_ref: F-013
+  mode: governance_evidence_reconciliation
+  source_controls:
+    implementation:
+      id: GKE-001-COORDINATION-20260825-002-BROWSER-R2
+      sha256: 013700e02db867240f38de2a896a450ee828dceb8c98698f7d7c82bb80c9d5ed
+    independent_review:
+      id: GKE-001-COORDINATION-20260825-003-BROWSER-R2-REVIEW
+      sha256: 7a133620229424cedb7cce784ee6bb787d193bc7767cf0623e3632970a06a48b
+    postcommit_review:
+      id: GKE-001-COORDINATION-20260825-004-BROWSER-R2-POSTCOMMIT
+      sha256: 4c918030670e9f019ec6f3db86980d7205e44c673027cdfb4bc84c13fcbc6bde
+    prepush:
+      id: GKE-001-COORDINATION-20260825-005-BROWSER-R2-PREPUSH
+      sha256: d22d4af2d4771092dece8752507a25243a4377c8c581a39a0dbde3dc8dd9beee
+    push:
+      id: GKE-001-COORDINATION-20260825-006-BROWSER-R2-PUSH
+      sha256: d781de463182f0392db8a6e66ff4b728e81210d34b416520f005851c9cee5d5e
+    postpush_review:
+      id: GKE-001-COORDINATION-20260825-007-BROWSER-R2-F013-POSTPUSH
+      sha256: 056d743de96c279bdceb778197a2760310549fd9d0872a39fb13a762fddeecfa
+  brain_repository:
+    branch: main
+    head: 9a16c360618db1af6bead46f55fcaf9d433eb40c
+    origin_main: 9a16c360618db1af6bead46f55fcaf9d433eb40c
+    remote_main: 9a16c360618db1af6bead46f55fcaf9d433eb40c
+    ahead_behind_staged: 0/0/0
+    worktree: clean
+    commits:
+      - sha: 3a0f29be52dc51ceda57b91f29dc3b64db859035
+        subject: "test(brain): allow isolated studio bridge origin"
+      - sha: 9a16c360618db1af6bead46f55fcaf9d433eb40c
+        subject: "fix(brain): unwrap Studio canonical read response"
+  exact_change:
+    paths:
+      - src/app/hooks/studioKdsBridge.test.ts
+      - src/app/hooks/studioKdsBridge.ts
+    pathset_sha256: 4726167b44c6284fc8a6408b5d75c7974215973acec51be9be5fdf8cfffdd9a0
+    response_contract: Studio places the canonical API JSON directly in the bridge envelope data field
+    fix: Brain resolves payload.data without a second data unwrap
+  current_replay:
+    focused_standalone: 1/1_passed
+    focused_combined: 30/30_passed
+    typecheck: pass
+    eslint_exact_two_paths: pass
+    diff_check: pass
+    findings: 0
+  controlled_browser_evidence:
+    classification: inherited_from_Browser_R2_execution_not_rerun_by_postpush_review
+    environment: local_nonproduction_synthetic_fixture
+    browser_flow: pass
+    search_results: 1
+    active_session_requests: 2
+    search_requests: 4
+    read_requests: 3
+    chat_post_requests: 0
+    prompt_applied: true
+    authorization_checked: false
+    send_disabled: true
+    append_only_kds_audit_delta: 7
+    customer_or_production_data: false
+  disposition:
+    resolved:
+      - brain_release0_external_daily_sync_post_sync_governance_disposition_pending
+      - release0_authenticated_search_wikipreview_chat_e2e_not_authorized_and_current_browser_audit_missing
+    compatibility_alias_retained:
+      - brain_authenticated_readonly_e2e_deferred_pending_a10_control
+    remaining:
+      - authenticated_chat_send_not_executed
+      - mobile_three_column_layout_rework_required
+    classification: browser_r2_postpush_technical_revalidation_passed_governance_reconciled_partial
+  d17_freeze:
+    accepted: true
+    gcworld_or_waes_manual_material_import_to_kds: prohibited
+    kds_api_server_edit: prohibited
+    kds_test_api_smoke_edit: prohibited
+    frozen_paths_touched: false
+  boundaries:
+    kds_import: false
+    kds_repository_write: false
+    mmc_policy_write: false
+    deployment: false
+    status_promotion: false
+  status:
+    engineering: active
+    cross_project: partial
+    completion: not_complete
+    accepted: false
+    integrated: false
+    production_ready: false

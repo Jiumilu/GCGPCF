@@ -1,0 +1,100 @@
+evidence_id: GCWORLD-KDS-PRESERVATION-RESULT-20260823-001
+status: 已完成保全与恢复演练
+recorded_at: "2026-08-23T01:15:45+08:00"
+authorization_ref: GCWORLD-KDS-PRESERVATION-20260823-001
+
+scope:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  content_modified: false
+  push_performed: false
+  deployment_performed: false
+  kds_or_mmc_write_performed: false
+
+preservation_result:
+  original_head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+  original_ahead_commits: 4
+  original_behind_commits: 0
+  preserved_file_entries: 773
+  modified_tracked_files: 85
+  untracked_files: 688
+  original_status_sha256: ba9e5be785b3e0127ef537fba129fef636d13850af68798d61ba05b3d4475337
+  preserved_path_set_sha256: 82be6aa8fd4c08de8e63d00cff5d66ead4ad66a96da0ebefbfa3f8d5e468c5e5
+  recovery_fingerprint_sha256: 8988698f352cc60aece153c7a55e0ed1febc7ca45b588878dd762b94ec55752d
+  symlink_entries: 5
+  local_physical_clone: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/.gcworld-preservation/kds-20260823-0105
+  ahead_commit_bundle: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/.gcworld-preservation/kds-20260823-0105.ahead-main.bundle
+  tracked_binary_patch: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/.gcworld-preservation/kds-20260823-0105.tracked-worktree.patch
+  tracked_binary_patch_sha256: 345b227c37b4b160fbf599e78667629f64450db1a279498638c3dc5133a1bd7f
+  head_backup_branch: backup/gcworld-kds-head-20260823-0105
+  head_backup_branch_target: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  worktree_backup_branch: backup/gcworld-kds-wip-20260823-0105
+  worktree_backup_branch_target: 5843f1028cbec8842de0e1b5ca51c121f2681af7
+  stash_object: 5843f1028cbec8842de0e1b5ca51c121f2681af7
+  stash_parent_count: 3
+  stash_head_parent: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  stash_index_parent: d2f0d4e29788850d93b3fb3799b889e1f906a00f
+  stash_untracked_parent: a73e3f9c85c6c51dd6202271e16a88b26d50614c
+
+verification:
+  source_git_fsck: 通过
+  source_git_lfs_fsck: 通过
+  physical_clone_git_fsck: 通过
+  physical_clone_git_lfs_fsck: 通过
+  restore_rehearsal_apply_with_index: 通过
+  restored_path_set_equal: true
+  restored_content_type_size_hash_equal: true
+  missing_entries: 0
+  extra_entries: 0
+  mismatched_entries: 0
+  temporary_restore_worktree_removed: true
+  gcworld_tests: 7项通过
+  gcworld_world_model_validator: 通过
+  openspec_strict_validation: 通过
+  project_group_document_gate: 需观察
+  project_group_document_gate_reasons:
+    - 既有文档缺少元数据1项
+    - 既有本地化债务
+  ahead_commit_scope_reviewed: true
+  ahead_commit_count: 4
+  ahead_commit_regression_tests: 23项通过
+  worktree_after_ahead_commit_tests_entries: 0
+
+clean_snapshot:
+  head_unchanged: true
+  current_head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  changed_entries: 0
+  ahead_commits: 4
+  behind_commits: 0
+  f013_validator_result: 通过
+  pre_push_f013_admission: blocked_unreviewed_ahead
+  pre_push_readonly_census_result: 已阻断
+  pre_push_readonly_census_reason: 本地4个领先提交尚未完成审查或进入上游
+  paused_local_services_restored: true
+  status_after_service_restore_entries: 0
+  status_after_service_restore_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  push_authorized_at: "2026-08-23T02:33:25+08:00"
+  push_result: 已以普通快进方式推送
+  pushed_range: 2ac85c55163b7acf0ede699184ac360579ccefaa..cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  remote_head_after_push: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_after_push: 0
+  behind_after_push: 0
+  f013_admission_after_push: ready_for_authorization
+  metadata_census_after_push: 已完成
+  content_census_after_push: 因逐路径权威分级缺失而保持阻断
+
+recovery_boundary:
+  automatic_restore_authorized: false
+  recovery_command_for_human_review: git stash apply --index 5843f1028cbec8842de0e1b5ca51c121f2681af7
+  note: 恢复前须再次核对目标工作树、HEAD和备份对象；不得自动执行或覆盖后续变更
+
+status_boundary:
+  preservation_complete: true
+  kds_content_census_complete: false
+  authoritative_path_classification_complete: false
+  kds_write_authorized: false
+  push_authorized: true
+  authorized_push_completed: true
+  deployment_authorized: false
+  opsx_execution_lock_released: true
+  completion_status: partial

@@ -1,0 +1,94 @@
+request_id: GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T10:41:26Z"
+status: dispatched_to_two_independent_responsibility_roles
+sealed_request_sha256: ec2c0a25ca576e7d0404a2739dc8666cf8335f80aedf827aa52639854e9797b5
+approval_receipt_sha256: e8c4e2f33ff41f884f72f1c2869cc269d3eff060de8917f2fb3e2af8b69fc46e
+review_roles:
+  - role_id: reviewer_a
+    responsibility: KDS知识资料与证据服务责任方
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  - role_id: reviewer_b
+    responsibility: 项目群知识工程与内容权威协调责任方
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+allowed_evidence:
+  - 本请求内的路径标识、责任域和生产任务标识
+  - 已密封的D12-C1、D12-C2治理回执及其不可逆摘要
+  - Codex自动化与Hermes任务的名称、ID、启停状态、调度和职责提示元数据
+  - 组织责任、线程身份和既有授权元数据
+prohibited_evidence:
+  - 十六项UNKNOWN正文、frontmatter、字段值、片段、字符串、关键词或语义内容
+  - 目标文件的可逆提取、预览、搜索结果或差异正文
+  - 基于文件名、扩展名、权限、大小、时间或摘要作出的降级推断
+authority_groups:
+  distributed_governance:
+    producer_id: automation-5
+    producer_name: 分步式知识库统一治理巡检
+    paths: [D12-C1-EXC-001, D12-C1-EXC-002]
+  feishu_xiaog_closure:
+    producer_id: workwiki-kds
+    producer_name: 飞书小即-WorkWiki-KDS闭环监控
+    paths: [D12-C1-EXC-003, D12-C1-EXC-004]
+  macmini_workwiki:
+    producer_id: macmini-workwiki
+    producer_name: Macmini WorkWiki全量分析同步
+    paths: [D12-C1-EXC-005, D12-C1-EXC-006]
+  hermes_evolution_reports:
+    producer_id: 111e8983641a
+    producer_name: GlobalCloud自进化事件扫描
+    paths: [D12-C1-EXC-007, D12-C1-EXC-008]
+  industrial_greenchain:
+    producer_ids: [43652c3c9b4d, 99683d54df08, 2f3355dec02f, 155b3671abdd, 87c8214c0e57, dbce6d580114]
+    producer_names: [W02会议质量门禁, 老卢工作体系专项健康检查, W18项目变更告警, 工业绿链周报, 工业绿链晨报, W17工业绿链月度慢变量监控]
+    paths: [D12-C1-EXC-009, D12-C1-EXC-010, D12-C1-EXC-011, D12-C1-EXC-012, D12-C1-EXC-013, D12-C1-EXC-014, D12-C1-EXC-015]
+  ecosystem_health:
+    producer_id: wiki-ecosystem-health-3d
+    producer_name: Wiki生态一致性健康检查
+    paths: [D12-C1-EXC-016]
+targets:
+  - {id: D12-C1-EXC-001, group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md}
+  - {id: D12-C1-EXC-002, group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md}
+  - {id: D12-C1-EXC-003, group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json}
+  - {id: D12-C1-EXC-004, group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json}
+  - {id: D12-C1-EXC-005, group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt}
+  - {id: D12-C1-EXC-006, group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt}
+  - {id: D12-C1-EXC-007, group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md}
+  - {id: D12-C1-EXC-008, group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md}
+  - {id: D12-C1-EXC-009, group: industrial_greenchain, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json}
+  - {id: D12-C1-EXC-010, group: industrial_greenchain, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md}
+  - {id: D12-C1-EXC-011, group: industrial_greenchain, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md}
+  - {id: D12-C1-EXC-012, group: industrial_greenchain, path: 工业绿链/变更告警_2026-08-25.md}
+  - {id: D12-C1-EXC-013, group: industrial_greenchain, path: 工业绿链/周报/周报_2026W35.md}
+  - {id: D12-C1-EXC-014, group: industrial_greenchain, path: 工业绿链/日报/晨报-2026-08-25.md}
+  - {id: D12-C1-EXC-015, group: industrial_greenchain, path: 工业绿链/月报/月报_2026-08.md}
+  - {id: D12-C1-EXC-016, group: ecosystem_health, path: 99_Reports/ecosystem-health-2026-08-25.md}
+required_per_path_declaration:
+  - statement_id
+  - target_id
+  - target_path
+  - authority_subject_name_or_asset_id
+  - authority_role
+  - authority_basis
+  - signed_thread_or_identity
+  - proposed_classification
+  - target_audience
+  - business_sensitivity_boundary
+  - scope
+  - valid_from
+  - valid_until
+  - distribution_constraints
+  - revocation_or_expiry_condition
+  - source_governance_refs
+  - zero_target_body_read_statement
+  - evidence_sufficiency
+rules:
+  - 每个角色必须对16项逐项声明，不能用组级结论替代逐项结果
+  - 无法确认自身是内容权威主体时，authority_basis必须填unverified且分类为UNKNOWN
+  - 任一必填项缺失、valid_until缺失或证据不足时保持UNKNOWN
+  - 两角色结果不一致或任一结果为UNKNOWN时，最终保持UNKNOWN
+  - 回复必须全中文并包含执行前后零正文、零KDS写入、零测试、零服务操作声明
+prohibited_actions:
+  - 运行任何KDS命令、读取目标内容或写入KDS
+  - 测试、服务操作、生产者恢复、文件处置
+  - 提交、推送、部署、归档或状态提升

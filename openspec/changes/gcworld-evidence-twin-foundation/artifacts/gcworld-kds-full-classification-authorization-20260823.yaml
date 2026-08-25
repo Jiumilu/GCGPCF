@@ -1,0 +1,63 @@
+authorization_id: GCWORLD-KDS-FULL-CLASSIFICATION-20260823-001
+status: 已批准一次性全量受控分级扫描
+confirmed_at: "2026-08-23T10:04:13+08:00"
+confirmation:
+  source: 当前GCWORLD任务用户确认
+  user_response: 全量允许
+  approved_interpretation: 允许对当前KDS稳定快照执行全来源本地分级扫描，并生成逐路径分级清单、来源到资产候选台账和例外队列
+
+snapshot_scope:
+  source_repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  isolated_snapshot: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/.gcworld-preservation/kds-census-20260823-1006
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  worktree_entries: 10
+  worktree_status_sha256: 67e20664ee229add0bd5c7ca9b84fde2bab73933847b946db06682f08a843a29
+  snapshot_git_fsck: 通过
+  snapshot_git_lfs_fsck: 通过
+
+allowed_actions:
+  - 在隔离快照内读取所有可发现来源，仅用于敏感等级判定、组织资产候选提取和关系证据定位
+  - 对文本、PDF、Word、PPT和Excel执行本地解析
+  - 对不支持、损坏、加密、过大或无法可靠解析的来源登记明确例外
+  - 在GPCF受控产物目录生成中文摘要、机器可读分级台账、候选台账和例外队列
+  - 对来源计算哈希并验证扫描前后快照未变化
+
+sensitive_content_boundary:
+  s3_plaintext_output_allowed: false
+  s3_preview_allowed: false
+  s3_snippet_allowed: false
+  s3_agent_memory_allowed: false
+  s3_embedding_allowed: false
+  s3_raw_path_in_ordinary_artifact_allowed: false
+  s3_allowed_output_fields:
+    - opaqueSourceId
+    - pathSha256
+    - sourceSha256
+    - mediaType
+    - byteSize
+    - classification
+    - classificationReasonCodes
+    - reviewStatus
+    - exceptionId
+    - exceptionReasonCode
+
+identity_boundary:
+  automatic_identity_merge_allowed: false
+  world_asset_promotion_allowed: false
+  extracted_mentions_status: 未决候选
+  human_review_owner: 老卢
+
+prohibited_actions:
+  - 修改、移动、删除或重新分类KDS来源文件
+  - 调用KDS、MMC或业务系统写接口
+  - 对外发送来源内容或扫描结果
+  - 把候选身份、关系、目标或模拟状态提升为正式事实
+  - 部署、验收、生产声明或状态提升
+
+status_boundary:
+  kds_write_authorized: false
+  mmc_write_authorized: false
+  business_system_write_authorized: false
+  deployment_authorized: false
+  acceptance_authorized: false
+  completion_status: not_complete

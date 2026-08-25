@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.example/schemas/gcworld-world-runtime-v1.json",
+  "title": "GCWORLD 世界运行时契约",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "environment",
+    "serviceRegistry",
+    "runtimeRuns",
+    "tasks",
+    "commitments",
+    "actionReceipts",
+    "compensationReceipts",
+    "commandLedger",
+    "simulationBranches",
+    "promotionCandidates",
+    "statusBoundaries"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "gcworld-world-runtime/v1"},
+    "generatedAt": {"$ref": "#/$defs/dateTime"},
+    "environment": {"const": "fixture_only"},
+    "serviceRegistry": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/service"}},
+    "runtimeRuns": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/runtimeRun"}},
+    "tasks": {"type": "array", "items": {"$ref": "#/$defs/task"}},
+    "commitments": {"type": "array", "items": {"$ref": "#/$defs/commitment"}},
+    "actionReceipts": {"type": "array", "items": {"$ref": "#/$defs/actionReceipt"}},
+    "compensationReceipts": {"type": "array", "items": {"$ref": "#/$defs/compensationReceipt"}},
+    "commandLedger": {"type": "array", "items": {"$ref": "#/$defs/commandEntry"}},
+    "simulationBranches": {"type": "array", "items": {"$ref": "#/$defs/simulationBranch"}},
+    "promotionCandidates": {"type": "array", "items": {"$ref": "#/$defs/promotionCandidate"}},
+    "statusBoundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["realExecutionAuthorized", "factWriteAuthorized", "kdsWriteAuthorized", "businessWriteAuthorized", "externalActionAuthorized", "deploymentAuthorized", "statusPromotionAuthorized"],
+      "properties": {
+        "realExecutionAuthorized": {"const": false},
+        "factWriteAuthorized": {"const": false},
+        "kdsWriteAuthorized": {"const": false},
+        "businessWriteAuthorized": {"const": false},
+        "externalActionAuthorized": {"const": false},
+        "deploymentAuthorized": {"const": false},
+        "statusPromotionAuthorized": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "nonEmpty": {"type": "string", "minLength": 1},
+    "dateTime": {"type": "string", "format": "date-time"},
+    "evidenceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^gcw:evidence:"}
+    },
+    "riskLevel": {"enum": ["R0", "R1", "R2", "R3", "R4"]},
+    "serviceType": {
+      "enum": ["world_registry", "identity_resolution", "world_projection", "context_builder", "event_engine", "action_runtime", "agent_runtime", "simulation_engine", "governance_adapter", "query_view"]
+    },
+    "service": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["serviceId", "stableKey", "serviceType", "name", "ownerSystem", "authoritySource", "authorityMode", "contractVersion", "stableIdentifiersRequired", "evidenceRefs", "writesAuthoritativeFacts", "executesBusinessSideEffects"],
+      "properties": {
+        "serviceId": {"type": "string", "pattern": "^gcw:service:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "serviceType": {"$ref": "#/$defs/serviceType"},
+        "name": {"$ref": "#/$defs/nonEmpty"},
+        "ownerSystem": {"$ref": "#/$defs/nonEmpty"},
+        "authoritySource": {"enum": ["WAS", "KDS", "GCWORLD", "XWAIL", "WAES", "KWE", "MMC", "business_system"]},
+        "authorityMode": {"enum": ["reference_only", "derived_projection", "runtime_orchestration", "governance_adapter", "query_projection", "authority_owner"]},
+        "contractVersion": {"$ref": "#/$defs/nonEmpty"},
+        "stableIdentifiersRequired": {"const": true},
+        "evidenceRefs": {"$ref": "#/$defs/evidenceRefs"},
+        "writesAuthoritativeFacts": {"type": "boolean"},
+        "executesBusinessSideEffects": {"type": "boolean"}
+      }
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "status", "occurredAt", "evidenceRefs"],
+      "properties": {
+        "name": {"enum": ["observe", "resolve", "snapshot", "reason", "adjudicate", "confirm", "execute", "evidence", "promote", "learn"]},
+        "status": {"enum": ["completed", "pending", "blocked", "failed", "skipped"]},
+        "occurredAt": {"$ref": "#/$defs/dateTime"},
+        "evidenceRefs": {"$ref": "#/$defs/evidenceRefs"}
+      }
+    },
+    "runtimeRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runId", "stableKey", "worldSnapshotRef", "tenantId", "projectRef", "riskLevel", "requestedImpact", "state", "stages", "actionReceiptRefs", "realExecution", "externalSideEffect"],
+      "properties": {
+        "runId": {"type": "string", "pattern": "^gcw:runtime-run:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "worldSnapshotRef": {"type": "string", "pattern": "^gcw:world-snapshot:"},
+        "tenantId": {"$ref": "#/$defs/nonEmpty"},
+        "projectRef": {"type": "string", "pattern": "^gcw:project:"},
+        "riskLevel": {"$ref": "#/$defs/riskLevel"},
+        "requestedImpact": {"enum": ["none", "internal_write", "external"]},
+        "state": {"enum": ["completed", "awaiting_confirmation", "blocked", "failed", "compensated", "simulation_only"]},
+        "stages": {"type": "array", "minItems": 1, "maxItems": 10, "items": {"$ref": "#/$defs/stage"}},
+        "decisionRef": {"type": "string", "pattern": "^gcw:decision:"},
+        "confirmationRef": {"type": "string", "pattern": "^gcw:confirmation:"},
+        "actionReceiptRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:action-receipt:"}},
+        "realExecution": {"const": false},
+        "externalSideEffect": {"const": false}
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["taskId", "stableKey", "responsibleAssetId", "proposerAssetId", "beneficiaryAssetId", "goal", "scope", "dueAt", "dependencyRefs", "status", "acceptanceCriteria", "sourceEvidenceRefs", "resultEvidenceRefs", "acceptanceEvidenceRefs", "actionRefs"],
+      "properties": {
+        "taskId": {"type": "string", "pattern": "^gcw:task:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "responsibleAssetId": {"type": "string", "pattern": "^gcw:asset:"},
+        "proposerAssetId": {"type": "string", "pattern": "^gcw:asset:"},
+        "beneficiaryAssetId": {"type": "string", "pattern": "^gcw:asset:"},
+        "goal": {"$ref": "#/$defs/nonEmpty"},
+        "scope": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "dueAt": {"$ref": "#/$defs/dateTime"},
+        "dependencyRefs": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "status": {"enum": ["open", "in_progress", "awaiting_verification", "closed", "cancelled"]},
+        "acceptanceCriteria": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "sourceEvidenceRefs": {"$ref": "#/$defs/evidenceRefs"},
+        "resultEvidenceRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:evidence:"}},
+        "acceptanceEvidenceRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:evidence:"}},
+        "actionRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:action-receipt:"}}
+      }
+    },
+    "commitment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["commitmentId", "stableKey", "committerAssetId", "beneficiaryAssetId", "scope", "dueAt", "status", "acceptanceCriteria", "sourceEvidenceRefs", "resultEvidenceRefs", "acceptanceEvidenceRefs", "actionRefs"],
+      "properties": {
+        "commitmentId": {"type": "string", "pattern": "^gcw:commitment:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "committerAssetId": {"type": "string", "pattern": "^gcw:asset:"},
+        "beneficiaryAssetId": {"type": "string", "pattern": "^gcw:asset:"},
+        "scope": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "dueAt": {"$ref": "#/$defs/dateTime"},
+        "status": {"enum": ["open", "in_progress", "awaiting_verification", "closed", "cancelled"]},
+        "acceptanceCriteria": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "sourceEvidenceRefs": {"$ref": "#/$defs/evidenceRefs"},
+        "resultEvidenceRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:evidence:"}},
+        "acceptanceEvidenceRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:evidence:"}},
+        "actionRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:action-receipt:"}}
+      }
+    },
+    "actionReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["receiptId", "stableKey", "runId", "commandId", "idempotencyKey", "riskLevel", "actionType", "executorRef", "targetSystemRef", "inputDigest", "outputDigest", "result", "executedAt", "evidenceRefs", "externalSideEffect", "appendOnly"],
+      "properties": {
+        "receiptId": {"type": "string", "pattern": "^gcw:action-receipt:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "runId": {"type": "string", "pattern": "^gcw:runtime-run:"},
+        "commandId": {"type": "string", "pattern": "^gcw:command:"},
+        "idempotencyKey": {"$ref": "#/$defs/nonEmpty"},
+        "riskLevel": {"$ref": "#/$defs/riskLevel"},
+        "actionType": {"enum": ["observation", "draft", "internal_write", "external_action", "simulation"]},
+        "decisionRef": {"type": "string", "pattern": "^gcw:decision:"},
+        "confirmationRef": {"type": "string", "pattern": "^gcw:confirmation:"},
+        "executorRef": {"$ref": "#/$defs/nonEmpty"},
+        "targetSystemRef": {"$ref": "#/$defs/nonEmpty"},
+        "inputDigest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "outputDigest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "result": {"enum": ["succeeded", "partial", "failed", "blocked"]},
+        "executedAt": {"$ref": "#/$defs/dateTime"},
+        "errorCode": {"$ref": "#/$defs/nonEmpty"},
+        "evidenceRefs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:evidence:"}},
+        "compensationPolicyRef": {"type": "string", "pattern": "^gcw:compensation-policy:"},
+        "externalSideEffect": {"const": false},
+        "appendOnly": {"const": true}
+      }
+    },
+    "compensationReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["compensationReceiptId", "stableKey", "actionReceiptId", "policyRef", "result", "executedAt", "evidenceRefs", "appendOnly"],
+      "properties": {
+        "compensationReceiptId": {"type": "string", "pattern": "^gcw:compensation-receipt:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "actionReceiptId": {"type": "string", "pattern": "^gcw:action-receipt:"},
+        "policyRef": {"type": "string", "pattern": "^gcw:compensation-policy:"},
+        "result": {"enum": ["completed", "failed", "blocked"]},
+        "executedAt": {"$ref": "#/$defs/dateTime"},
+        "evidenceRefs": {"$ref": "#/$defs/evidenceRefs"},
+        "appendOnly": {"const": true}
+      }
+    },
+    "commandEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entryId", "stableKey", "commandId", "idempotencyKey", "causationId", "correlationId", "schemaVersion", "actionReceiptRef", "duplicate", "effectApplied", "recordedAt"],
+      "properties": {
+        "entryId": {"type": "string", "pattern": "^gcw:command-entry:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "commandId": {"type": "string", "pattern": "^gcw:command:"},
+        "idempotencyKey": {"$ref": "#/$defs/nonEmpty"},
+        "causationId": {"$ref": "#/$defs/nonEmpty"},
+        "correlationId": {"$ref": "#/$defs/nonEmpty"},
+        "schemaVersion": {"$ref": "#/$defs/nonEmpty"},
+        "actionReceiptRef": {"type": "string", "pattern": "^gcw:action-receipt:"},
+        "duplicate": {"type": "boolean"},
+        "effectApplied": {"type": "boolean"},
+        "recordedAt": {"$ref": "#/$defs/dateTime"}
+      }
+    },
+    "simulationBranch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["branchId", "stableKey", "worldType", "baselineSnapshotRef", "assumptionRefs", "executionRefs", "evaluationResults", "writesFactWorld", "grantsRealAuthorization", "evidenceRefs"],
+      "properties": {
+        "branchId": {"type": "string", "pattern": "^gcw:simulation-branch:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "worldType": {"const": "simulation"},
+        "baselineSnapshotRef": {"type": "string", "pattern": "^gcw:world-snapshot:"},
+        "assumptionRefs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^gcw:assumption:"}},
+        "executionRefs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "evaluationResults": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "writesFactWorld": {"type": "boolean"},
+        "grantsRealAuthorization": {"type": "boolean"},
+        "evidenceRefs": {"$ref": "#/$defs/evidenceRefs"}
+      }
+    },
+    "promotionCandidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidateId", "stableKey", "simulationBranchId", "status", "evidenceComplete", "ruleValidationPassed", "impactAssessmentCompleted", "factWriteAuthorized", "formalWriteReceiptRefs", "evidenceRefs"],
+      "properties": {
+        "candidateId": {"type": "string", "pattern": "^gcw:promotion-candidate:[0-9a-f]{24}$"},
+        "stableKey": {"$ref": "#/$defs/nonEmpty"},
+        "simulationBranchId": {"type": "string", "pattern": "^gcw:simulation-branch:"},
+        "status": {"enum": ["candidate_only", "ready_for_review", "promoted"]},
+        "evidenceComplete": {"type": "boolean"},
+        "ruleValidationPassed": {"type": "boolean"},
+        "impactAssessmentCompleted": {"type": "boolean"},
+        "humanConfirmationRef": {"type": "string", "pattern": "^gcw:confirmation:"},
+        "factWriteAuthorized": {"type": "boolean"},
+        "formalWriteReceiptRefs": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "evidenceRefs": {"$ref": "#/$defs/evidenceRefs"}
+      }
+    }
+  }
+}

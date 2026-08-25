@@ -1,0 +1,39 @@
+receipt_id: GCWORLD-KDS-D5-D9-APPROVAL-RECEIPT-20260825-005
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T06:02:54Z"
+decision_owner: 老卢
+confirmation_text: 批准
+confirmation_context: 紧接上一轮逐项列明D5至D9范围、禁止边界和推荐批准文本之后，解释为仅批准D5至D9
+approved_decisions:
+  - id: D5
+    scope: 暂停macmini-workwiki、workwiki-kds、automation-5三个Codex自动化，并等待已开始任务自然结束
+  - id: D6
+    scope: 暂停授权单列明的十一个Hermes任务，并等待已开始任务自然结束
+  - id: D7
+    scope: 按GBrain责任方安全方式静默GBrain autopilot及worker，禁止强杀
+  - id: D8
+    scope: 冻结GCWORLD与WAES人工资料导入
+  - id: D9
+    scope: 冻结api_server.py与tests/test_api_smoke.py相关编辑活动，仅通过任务、进程和版本元数据调查来源
+explicitly_not_approved:
+  - 读取KDS文件或代码差异正文
+  - KDS文件清理、移动、删除、暂存、还原、提交或推送
+  - KDS服务停止、重启或恢复
+  - 测试、部署、验收、归档或状态提升
+  - D10至D15
+baseline_at_activation:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

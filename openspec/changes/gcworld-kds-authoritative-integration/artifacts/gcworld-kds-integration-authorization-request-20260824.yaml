@@ -1,0 +1,134 @@
+request_id: GCWORLD-KDS-INTEGRATION-AUTH-REQUEST-20260824-001
+change_id: gcworld-kds-authoritative-integration
+requested_at: "2026-08-24T09:47:17Z"
+status: invalidated_before_activation
+language: zh-CN
+requester:
+  project: GPCF
+  role: GKE-001协调执行方
+program_binding:
+  program_ref: GKE-001
+  release_ref: release_0
+  release_name: customer_readonly_pilot
+  feature_ref: F-013
+  feature_name: knowledge-asset-model-system
+  coordinator_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  independent_review_thread_id: 019fc228-2403-7123-9cae-fb9028850b84
+  kds_lane_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+baseline:
+  gpcf:
+    head: 884f3759f186ca2f83e1c0cfbe9c400af823fb14
+    origin_main: 884f3759f186ca2f83e1c0cfbe9c400af823fb14
+    ahead: 0
+    behind: 0
+    preexisting_changed_entries: 36
+    status_sha256: b1570a4a49b1e5d8c90dd47ce69329b525d7ec2c56e1b0289a5a58d4da9404e5
+  kds:
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged_entries: 0
+    changed_entries: 14
+    status_sha256: bb1b1c46ef5eac28ca0c4b66d75239794ce8968e2a88dbd5a8780201ec2dd457
+    stability_checks: 3
+    stability_result: stable_but_dirty
+    f013_admission: blocked_dirty_worktree
+contract:
+  id: globalcloud.kds.canonical-read
+  revision: release0.v1
+  freeze_id: GKE-001-CONTRACT-FREEZE-20260811-001
+  freeze_sha256: a7dbdcf6a64a4f9b6c6cd11e4ae2fe02405624b29e4ad009a317510de557a23f
+  allowed_operations:
+    - POST /api/v1/knowledge-read/release-0/search
+    - POST /api/v1/knowledge-read/release-0/read
+requested_stage:
+  id: stage_a_gpcf_tdd_and_readonly_contract
+  purpose: 仅在F-013明确放行后，于GPCF实现准入失败测试和只读适配契约，不调用真实KDS接口
+  implementation_owner: agent-dev-01
+  accountable_human: 老卢
+  target_repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF
+  repository_write_allowed: true
+  file_allowlist:
+    - openspec/changes/gcworld-kds-authoritative-integration/**
+    - tools/kds-sync/gcworld_kds_authoritative_integration.py
+    - tools/kds-sync/validate_gcworld_kds_authoritative_integration.py
+    - tests/test_gcworld_kds_authoritative_integration.py
+    - .harness/runs/*-gcworld-kds-integration-*/**
+  feature_journal_write_allowed: false
+  codegraph_binding_write_allowed: false
+kds_boundary:
+  repository_root: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  git_and_hash_inspection_allowed: true
+  file_content_read_allowed_now: false
+  live_api_read_allowed_now: false
+  repository_write_allowed: false
+  database_write_allowed: false
+  api_write_allowed: false
+  cleanup_stage_revert_commit_push_allowed: false
+  dirty_worktree_override_allowed: false
+  admission_requirement: F-013必须返回ready_for_authorization
+future_read_scope_after_separate_activation:
+  tenant_scope: 当前登录主体经授权的单一租户
+  project_scope: 单一明确项目与服务器可信会话
+  operations: [search, graph, wiki_preview]
+  sensitivity:
+    s0: 允许返回授权投影字段
+    s1: 允许返回授权投影字段
+    s2: 仅在精确项目、用途和字段裁剪下返回
+    s3: 只返回不透明存在性与受控指针，禁止正文、预览、片段、嵌入和长期记忆
+  raw_source_path_allowed: false
+  raw_query_audit_allowed: false
+  canonical_identity: KnowledgeObject引用
+  unresolved_identity_behavior: 保持候选，不创建正式节点
+credential_policy:
+  issuance_requested_now: false
+  future_type: MMC签发的短期项目与会话绑定委托
+  storage: 只保存受控凭据引用，不进入KDS正文、提示词、日志或回执
+  maximum_lifetime_minutes: 15
+  revocation: 撤销会话、项目授权或阶段开关时立即失效
+review_governance:
+  identity_and_relation_final_decision_owner: 老卢
+  independent_second_review_role: F-013独立复核线程
+  proposed_review_sla_business_days: 5
+  overdue_behavior: 保持候选或例外并升级报告，禁止自动合并或扩大读取
+  s3_review: 必须由老卢和F-013独立复核共同确认；未确认时只保留不透明元数据
+  dispute_escalation: 提交GKE-001协调线程，保持原状态直至形成可追溯决定
+requested_decisions:
+  - id: D1
+    question: 是否批准将本变更绑定release_0、F-013、所列线程和GPCF有界文件范围？
+    decision: approved
+  - id: D2
+    question: 是否批准所列最小读取范围、S0至S3边界和短期凭据策略，且仅在F-013放行后另行激活？
+    decision: approved
+  - id: D3
+    question: 是否批准老卢为最终裁决人、F-013复核线程为第二复核角色及五个工作日SLA？
+    decision: approved
+  - id: D4
+    question: 是否要求KDS责任方另行处置14项既存变化并重新提交F-013准入证据？
+    decision: approved
+prohibited_actions:
+  - 绕过F-013准入或使用替代快照伪装规范工作树已放行
+  - 清理、暂存、还原、提交、推送或修改KDS的14项既存变化
+  - 读取S3正文、秘密、凭据或未授权租户与项目内容
+  - 自动合并身份、提升事实、创建真实权限或调用写接口
+  - 修改KDS、MMC、WAES、XWAIL或产品仓库
+  - 部署、重启、对外执行、验收、归档或状态提升
+validity:
+  starts_when: D1至D4全部由人工明确批准且F-013准入放行
+  expires_after_days: 7
+  invalidated_by:
+    - 任一仓库基线、契约摘要、数据范围或责任人变化
+    - F-013准入重新阻塞
+    - 用户撤销或Harness发现证据冲突
+rollback:
+  before_implementation: 删除未提交的本变更实现产物和运行证据
+  after_stage_a: 仅移除GPCF有界实现和固定夹具，不修改KDS或外部系统
+approval:
+  human_decision_owner: 老卢
+  decision: approved
+  confirmed_at: "2026-08-24T09:51:38Z"
+  confirmation_text: 批准D1—D4
+  confirmation_source: 当前GCWORLD任务用户
+  activation: invalidated_by_baseline_change
+  invalidation_ref: GCWORLD-KDS-INTEGRATION-AUTH-INVALIDATION-20260825-001

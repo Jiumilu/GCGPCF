@@ -1,0 +1,91 @@
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-001
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-25T00:42:15Z"
+status: owner_acknowledged_disposition_analysis_in_progress
+supersedes: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260824-001
+recipient:
+  responsible_party: KDS责任方
+  coordination_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+authorization_boundary:
+  historical_decision: D4已批准处置昨日14项变化
+  scope_expansion: 今日新增3项，合计17项
+  human_confirmation_required: false
+  human_confirmation: approved
+  confirmed_at: "2026-08-25T00:55:34Z"
+  confirmation_text: 批准将D4处置范围从14项扩展为17项，并交付KDS责任方。
+  delivery_authorized: true
+baseline:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged_entries: 0
+  changed_entries: 17
+  status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  f013_admission: blocked_dirty_worktree
+continuous_change_observation:
+  new_entries_since_previous_request: 3
+  pattern: 2026-08-25新增分布式知识治理、飞书小G闭环和Mac mini工作Wiki同步运行产物
+  requested_owner_action: 在处置工作树前先暂停、隔离或改道对应生成源，避免清理期间再次产生变化
+requested_disposition:
+  instruction: 由KDS责任方逐项确认所有者、形成原因、保留期限和规范处置；不得由GCWORLD/GPCF执行方代替判断
+  allowed_owner_decisions:
+    - 作为独立正式变更保留并按KDS流程提交
+    - 归入经批准的运行产物或归档位置
+    - 明确保留为未跟踪运行产物并说明为何不影响规范准入
+    - 仅在拥有者明确授权后删除
+    - 延后处置并保持F-013阻塞
+changed_paths:
+  - status: modified
+    path: 工业绿链/reports/项目监控仪表盘.md
+  - status: untracked
+    path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260823-073039/report.md
+  - status: untracked
+    path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+  - status: untracked
+    path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+  - status: untracked
+    path: _governance/sync-runs/feishu-xiaog-closure-20260823-071040/macmini-evidence.json
+  - status: untracked
+    path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+  - status: untracked
+    path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+  - status: untracked
+    path: _governance/sync-runs/macmini-workwiki-20260823-064123/remote-identity.txt
+  - status: untracked
+    path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+  - status: untracked
+    path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+  - status: untracked
+    path: raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+  - status: untracked
+    path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_04.md
+  - status: untracked
+    path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_08.md
+  - status: untracked
+    path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+  - status: untracked
+    path: 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+  - status: untracked
+    path: 工业绿链/变更告警_2026-08-23.md
+  - status: untracked
+    path: 工业绿链/日报/晨报-2026-08-23.md
+forbidden_for_gcworld_gpcf_executor:
+  - 清理、暂存、还原、提交、推送、删除或移动上述路径
+  - 暂停或修改KDS运行源
+  - 读取未获内容级授权的正文
+  - 以替代快照或忽略规则伪装规范工作树已干净
+acceptance_evidence_required:
+  - KDS责任方逐项处置决定与责任人回执
+  - 持续生成变化的运行源处置说明
+  - canonical KDS工作树变化项和暂存项均为0
+  - HEAD与origin/main一致且领先与落后均为0
+  - 新的NUL安全状态清单摘要
+  - F-013门禁明确返回ready_for_authorization
+next_effect:
+  after_human_confirmation: 允许向指定KDS责任线程交付只读接收与处置方案请求
+  after_dispatch: 等待KDS责任方返回knowledge_engineering_handoff，不得提前执行其建议动作
+  before_acceptance: 任务1.2保持未完成且禁止开始2.1
+  after_acceptance: 重新核对授权有效期与基线并取得新激活授权后，才可开始Stage A

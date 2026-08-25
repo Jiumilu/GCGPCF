@@ -1,0 +1,64 @@
+request_id: GCWORLD-KDS-D12-R1-OWNER-REVIEW-REQUEST-20260825-017
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+issued_at: "2026-08-25T07:02:52Z"
+approval_receipt_ref: GCWORLD-KDS-D12-R1-APPROVAL-RECEIPT-20260825-015
+classification_manifest_ref: GCWORLD-KDS-D12-R1-CLASSIFICATION-MANIFEST-20260825-016
+classification_source_sha256: 50505bce8958b9a2cf62ce476c5aeebdfa60b1c72be7162ee455e2823dbf34e6
+baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+classification_summary:
+  total: 29
+  content_read_eligible: 13
+  metadata_only_unknown: 16
+  s3: 0
+  conflict: 0
+partitions:
+  kds_and_operational_content:
+    responsible_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    responsible_thread_title: KDS-知识资料与证据服务
+    total_paths: 27
+    body_read_paths: 11
+    metadata_only_paths: 16
+    excluded_paths:
+      - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+  gcworld_waes_content:
+    responsible_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    responsible_thread_title: LOOP工程-知识工程
+    total_paths: 2
+    body_read_paths: 2
+    paths:
+      - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+execution_rules:
+  - 先独立复核31项基线、分级清单哈希和生产者冻结；任一不符立即停止
+  - 只能按分级清单对responsible_read_allowed路径加载正文
+  - UNKNOWN、S3或冲突路径不得调用正文加载器，只可读取lstat、Git状态、字节数、时间和不可逆摘要
+  - 不得读取api_server.py、tests/test_api_smoke.py或其他KDS文件正文
+  - 每条路径必须返回分级、是否读取正文、内容性质或元数据结论、事实状态、保留义务、风险和唯一推荐处置类别
+  - 推荐处置只能是保留原位、独立提交候选、仓库外不可变归档候选、移动候选或删除候选，不得执行
+  - 审阅后重新复核31项基线和冻结控制，并声明零KDS写入、零测试、零服务操作
+strict_prohibitions:
+  - 编辑、创建、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 运行测试、构建、格式化或会生成KDS缓存的验证器
+  - 停止、重启或变更KDS服务
+  - 恢复任何生产者
+  - 访问数据库、API、凭据或外部写接口
+  - 执行D12-N、D12-D、D13、D14、D15、部署、验收、归档或状态提升
+required_receipt:
+  language: 中文
+  path_level_rows: 29
+  pre_and_post_baseline: required
+  pre_and_post_freeze: required
+  zero_mutation_statement: required

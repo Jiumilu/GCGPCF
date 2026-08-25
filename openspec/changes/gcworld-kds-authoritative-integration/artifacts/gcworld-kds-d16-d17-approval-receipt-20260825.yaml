@@ -1,0 +1,29 @@
+receipt_id: GCWORLD-KDS-D16-D17-APPROVAL-RECEIPT-20260825-008
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T06:16:59Z"
+decision_owner: 老卢
+confirmation_text: |-
+  批准D16与D17：
+
+  1. 仅将 `_governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc` 恢复为当前HEAD版本，不得触碰其他KDS路径；
+  2. 恢复后必须先验证KDS精确回到原31项密封基线；
+  3. 仅在31项基线精确恢复后，继续执行D8与D9：冻结GCWORLD、WAES人工资料导入及两个代码路径的编辑活动，并仅通过任务、进程和版本元数据继续来源调查。
+
+  该批准不授权读取文件或代码差异正文，不授权其他文件清理、移动、删除、暂存、还原、提交或推送，不授权KDS服务停止、重启或恢复，不授权测试、部署或状态提升。
+approved_decisions: [D16, D17]
+activation_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 32
+  ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+  expanded_entries: 32
+  expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

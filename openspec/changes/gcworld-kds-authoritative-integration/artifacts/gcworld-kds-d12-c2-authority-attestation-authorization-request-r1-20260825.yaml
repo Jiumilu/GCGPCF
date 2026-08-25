@@ -1,0 +1,164 @@
+request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-R1-20260825-029
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T08:13:55Z"
+status: pending_independent_human_decision
+title: D12-C2——十六项UNKNOWN逐项内容权威主体声明补全授权（重新密封版）
+supersession:
+  invalid_request_sha256: 0eb9ed26aea2010bd5011f6f7e20f956bd0d55f49fc407b3912aa604a3c62907
+  invalid_request_lifecycle: invalidated_before_human_decision
+  reuse_allowed: false
+  this_request_is_new_independent_seal: true
+source_evidence:
+  d12_c1_classification_receipt: GCWORLD-KDS-D12-C1-CLASSIFICATION-RECEIPT-20260825-024
+  d12_c1_classification_receipt_sha256: 0974b4e789cc64a3033f12c2ee200ab800e1ab4fb81e8e8235566e223c69d4ba
+  reviewer_a_declaration_sha256: 08ccd86f65c18c32675fd143cb2566556f01cd4d61387bb0a4b9959ffb4c0545
+  reviewer_b_declaration_sha256: 17a8b4a60746d8443e648aeef6908e4f10f7f825a0bea89049236efc18953575
+  post_request_drift_receipt_sha256: a47806a0279274770b99bfab11ec567c8d20df08933d546f8814c1d956c05775
+  reseal_approval_receipt_sha256: 4f062c577ab99a7823e4c0fe3f1cd665e4c5167cc5f90c145b58475c197355b9
+  reseal_execution_receipt_sha256: 47253af3ff97317f4c4c8be1886decb1e37e0b0a6a47b6962e8f85d491fd5490
+decision_rationale:
+  - D12-C1中两类独立责任方对十六项均判定UNKNOWN，未形成任何可登记S1、S2或S3分类
+  - 缺失项集中为实际内容权威主体、目标受众、业务敏感边界、适用范围、有效期和责任归属
+  - 下一治理节点只能向逐项真实内容权威主体取得明确声明，不能通过读取正文或智能体推断补齐
+  - 声明不完整、责任权威无法验证、双方意见不一致或任何责任方仍判定UNKNOWN时，路径继续保持UNKNOWN并留在例外队列
+activation_preconditions:
+  baseline:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    branch: main
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+    strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: [macmini-workwiki, workwiki-kds, automation-5]
+    hermes_jobs_disabled_and_paused: 11
+    gbrain_autopilot_and_worker: quiet
+    gcworld_or_waes_manual_import_process: none_observed
+  stop_if:
+    - 任一基线字段、路径类型、数量、状态摘要或严格元数据摘要不匹配
+    - 任一生产者恢复或冻结范围内出现写入活动
+    - D12-C1总回执、双责任方声明或本次恢复回执摘要不匹配
+    - 任一路径需要读取正文、frontmatter、字段、片段、字符串、关键词或语义信息才能取得声明
+decision:
+  id: D12-C2
+  parent_decision: D12
+  requested_status: pending
+  target_paths: 16
+  purpose: 仅从逐项真实内容权威主体取得可审计的分类责任声明，不读取UNKNOWN内容
+  authorized_if_approved:
+    - 仅通过既有任务、责任域和身份元数据解析并核验每条路径的真实生成责任与内容权威主体
+    - 向已核验权威主体发送逐路径、零正文的责任声明请求
+    - 接收并密封逐路径声明中的责任主体、授权依据、目标受众、业务敏感边界、scope、valid_from、valid_until和分类建议
+    - 由KDS数据分级与安全责任方仅核验声明完整性、权威依据和范围一致性，不读取目标文件内容
+    - 按从严规则形成分类候选或继续UNKNOWN的D12-C2回执
+  not_authorized_by_this_request:
+    - 本请求在人工批准前不得执行D12-C2
+    - 读取或解析任何UNKNOWN正文及可逆内容
+    - D12-R2、D12-N、D12-D或任何文件处置
+required_authority_statement:
+  per_path: true
+  required_fields:
+    - statement_id
+    - target_path
+    - authority_subject_name_or_asset_id
+    - authority_role
+    - authority_basis
+    - signed_thread_or_identity
+    - proposed_classification
+    - target_audience
+    - business_sensitivity_boundary
+    - scope
+    - valid_from
+    - valid_until
+    - distribution_constraints
+    - revocation_or_expiry_condition
+    - source_governance_refs
+    - zero_target_body_read_statement
+  allowed_classifications: [S1, S2, S3, UNKNOWN]
+  missing_field_policy: 保持UNKNOWN并进入例外队列
+  unverified_authority_policy: 保持UNKNOWN并进入例外队列
+  disagreement_policy: 保持UNKNOWN并进入例外队列
+  no_default_validity: true
+authority_groups:
+  distributed_governance:
+    proposed_authority_role: KDS分布式知识治理与automation-5内容权威方
+    exact_authority_subject: 待D12-C2获批执行后仅用责任元数据解析并验证
+    paths: 2
+  feishu_xiaog_closure:
+    proposed_authority_role: KDS飞书同步与XiaoG闭环内容权威方
+    exact_authority_subject: 待D12-C2获批执行后仅用责任元数据解析并验证
+    paths: 2
+  macmini_workwiki:
+    proposed_authority_role: KDS同步与macmini-workwiki内容权威方
+    exact_authority_subject: 待D12-C2获批执行后仅用责任元数据解析并验证
+    paths: 2
+  hermes_evolution_reports:
+    proposed_authority_role: Hermes运行与自进化报告内容权威方
+    exact_authority_subject: 待D12-C2获批执行后仅用责任元数据解析并验证
+    paths: 2
+  industrial_greenchain:
+    proposed_authority_role: 工业绿链项目内容权威方
+    exact_authority_subject: 待D12-C2获批执行后仅用责任元数据解析并验证
+    paths: 7
+  ecosystem_health:
+    proposed_authority_role: KDS生态健康与wiki-ecosystem-health内容权威方
+    exact_authority_subject: 待D12-C2获批执行后仅用责任元数据解析并验证
+    paths: 1
+targets:
+  - {exception_id: D12-C1-EXC-001, authority_group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-002, authority_group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-003, authority_group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-004, authority_group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-005, authority_group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-006, authority_group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-007, authority_group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-008, authority_group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-009, authority_group: industrial_greenchain, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-010, authority_group: industrial_greenchain, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-011, authority_group: industrial_greenchain, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-012, authority_group: industrial_greenchain, path: 工业绿链/变更告警_2026-08-25.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-013, authority_group: industrial_greenchain, path: 工业绿链/周报/周报_2026W35.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-014, authority_group: industrial_greenchain, path: 工业绿链/日报/晨报-2026-08-25.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-015, authority_group: industrial_greenchain, path: 工业绿链/月报/月报_2026-08.md, current_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-016, authority_group: ecosystem_health, path: 99_Reports/ecosystem-health-2026-08-25.md, current_classification: UNKNOWN}
+decision_rule:
+  - 只有逐项权威主体身份与授权依据可验证且全部必填字段完整时，才能形成待登记分类候选
+  - 权威主体提出UNKNOWN、拒绝声明、未回应、声明过期、scope不清或valid_until缺失时，最终继续UNKNOWN
+  - KDS安全责任方只验证声明治理完整性，不以路径、模式、大小、摘要或智能体判断替代内容权威主体
+  - 任一S3建议从严记录为S3候选，但只能保留不透明标识、受控指针和最小审计字段
+  - D12-C2分类候选仍不得触发正文读取、D12-R2或任何文件处置；后续必须另行申请
+required_output_if_later_approved:
+  - 十六项逐路径权威声明、完整性核验和最终候选分类或继续UNKNOWN结果
+  - 六类责任域实际权威主体、线程、授权依据和未解析项清单
+  - 继续UNKNOWN例外队列及原因
+  - 执行前后31项密封基线、严格元数据摘要和生产者冻结状态
+  - 中文回执及零UNKNOWN正文读取、零KDS写入、零测试、零服务操作声明
+future_independent_decisions:
+  d12_r2: {status: not_requested, condition: 仅对D12-C2后形成并经登记的S1或S2路径另行申请逐路径内容审阅}
+  d12_n: {status: not_requested}
+  d12_d: {status: not_requested}
+  d13_d14_d15: {status: deferred_or_not_requested}
+strict_prohibitions:
+  - 读取、搜索、提取或解析十六项UNKNOWN正文、frontmatter、字段、片段、字符串、关键词或语义信息
+  - 根据文件名、目录、扩展名、权限模式、大小、相同SHA或智能体推断降低等级
+  - 编辑、创建、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 运行测试、构建、格式化或会生成KDS缓存的验证器
+  - 停止、重启或变更KDS服务，或恢复任何生产者
+  - 访问数据库、API、凭据或外部写接口
+  - 执行D12-C2实际裁决、D12-R2、D12-N、D12-D、部署、验收、归档或状态提升
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  implementation_authorized: false
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null

@@ -1,0 +1,287 @@
+{
+  "baseDocument": {
+    "schemaVersion": "gcworld-world-model/v1",
+    "ontologyVersion": "was-canonical-registry@unresolved",
+    "wasSchemaRefs": ["was-schema://canonical-registry/current"],
+    "tenantId": "globalcloud",
+    "snapshotId": "gcw:snapshot:fixture-20260823",
+    "generatedAt": "2026-08-23T00:00:00+08:00",
+    "sourceMode": "local_readonly",
+    "assets": [
+      {
+        "assetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "stableKey": "tenant:globalcloud|organization|kds:org:globalcloud",
+        "dimensionRef": "was-dimension://organization_asset",
+        "identityStatus": "confirmed",
+        "displayName": "GlobalCloud",
+        "authorityRef": "kds://ENTITIES/organization/globalcloud",
+        "evidenceRefs": ["gcw:evidence:739bced25892f06dcd3675c2"]
+      },
+      {
+        "assetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+        "stableKey": "tenant:globalcloud|person|kds:person:lu",
+        "dimensionRef": "was-dimension://organization_asset",
+        "identityStatus": "confirmed",
+        "displayName": "老卢",
+        "authorityRef": "kds://CONTACTS/person/lu",
+        "evidenceRefs": ["gcw:evidence:1c3bd077b6e4a57ad4c30bf2"]
+      }
+    ],
+    "aliases": [
+      {
+        "aliasId": "gcw:alias:8c54057d236acd9ea54ee458",
+        "stableKey": "tenant:globalcloud|alias|globalcloud-cn",
+        "value": "环球云",
+        "resolutionStatus": "resolved",
+        "targetAssetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "candidateAssetRefs": [],
+        "evidenceRefs": ["gcw:evidence:739bced25892f06dcd3675c2"]
+      }
+    ],
+    "relationships": [
+      {
+        "relationshipId": "gcw:relation:138193cb604a9758309b6e53",
+        "stableKey": "tenant:globalcloud|relation|lu-member-globalcloud",
+        "typeRef": "was-relation://organization/member_of",
+        "subjectAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+        "objectAssetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "worldType": "fact",
+        "validTime": {"from": "2025-01-01T00:00:00+08:00"},
+        "recordTime": {"from": "2026-08-23T00:00:00+08:00"},
+        "evidenceRefs": ["gcw:evidence:1c3bd077b6e4a57ad4c30bf2"]
+      }
+    ],
+    "evidence": [
+      {
+        "evidenceId": "gcw:evidence:739bced25892f06dcd3675c2",
+        "stableKey": "tenant:globalcloud|kds|document:globalcloud-org",
+        "tenantId": "globalcloud",
+        "sourceSystem": "KDS",
+        "sourceRef": "kds://ENTITIES/organization/globalcloud",
+        "sourceSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "classification": "S1",
+        "contentAccess": "read_only"
+      },
+      {
+        "evidenceId": "gcw:evidence:1c3bd077b6e4a57ad4c30bf2",
+        "stableKey": "tenant:globalcloud|kds|meeting:gcworld-confirmation",
+        "tenantId": "globalcloud",
+        "sourceSystem": "KDS",
+        "sourceRef": "kds://GLOBAL/meeting/gcworld-confirmation",
+        "sourceSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "classification": "S2",
+        "contentAccess": "read_only"
+      }
+    ],
+    "worldStates": [
+      {
+        "stateId": "gcw:state:1ff242a7a67cfe917951ce15",
+        "stableKey": "tenant:globalcloud|state|globalcloud-fact",
+        "assetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+        "worldType": "fact",
+        "observedAt": "2026-08-23T00:00:00+08:00",
+        "factAuthorityRef": "kds://ENTITIES/organization/globalcloud",
+        "writebackRequested": false,
+        "evidenceRefs": ["gcw:evidence:739bced25892f06dcd3675c2"]
+      }
+    ],
+    "statusBoundaries": {
+      "kdsWriteAuthorized": false,
+      "businessWriteAuthorized": false,
+      "statusPromotionAuthorized": false
+    }
+  },
+  "positiveCases": [
+    {
+      "name": "已确认资产与稳定标识",
+      "reverseArrays": ["assets", "evidence"]
+    },
+    {
+      "name": "角色关系双时间切换",
+      "append": {
+        "assets": [
+          {
+            "assetId": "gcw:asset:475af7ee2f21ba60caa52753",
+            "stableKey": "tenant:globalcloud|role|kds:role:project-owner-v1",
+            "dimensionRef": "was-dimension://organization_asset",
+            "identityStatus": "confirmed",
+            "displayName": "项目负责人（原任）",
+            "authorityRef": "kds://ENTITIES/role/project-owner-v1",
+            "evidenceRefs": ["gcw:evidence:5a31f469066145a0813a7130"]
+          },
+          {
+            "assetId": "gcw:asset:de23145375b595a73e84a02a",
+            "stableKey": "tenant:globalcloud|role|kds:role:project-owner-v2",
+            "dimensionRef": "was-dimension://organization_asset",
+            "identityStatus": "confirmed",
+            "displayName": "项目负责人（新任）",
+            "authorityRef": "kds://ENTITIES/role/project-owner-v2",
+            "evidenceRefs": ["gcw:evidence:5a31f469066145a0813a7130"]
+          }
+        ],
+        "evidence": [
+          {
+            "evidenceId": "gcw:evidence:5a31f469066145a0813a7130",
+            "stableKey": "tenant:globalcloud|kds|document:role-transition",
+            "tenantId": "globalcloud",
+            "sourceSystem": "KDS",
+            "sourceRef": "kds://GLOBAL/document/role-transition",
+            "sourceSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "classification": "S1",
+            "contentAccess": "read_only"
+          }
+        ],
+        "relationships": [
+          {
+            "relationshipId": "gcw:relation:86ed51c37a01aef006351e31",
+            "stableKey": "tenant:globalcloud|relation|lu-role-old",
+            "typeRef": "was-relation://organization/assigned_role",
+            "subjectAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+            "objectAssetId": "gcw:asset:475af7ee2f21ba60caa52753",
+            "worldType": "fact",
+            "validTime": {"from": "2025-01-01T00:00:00+08:00", "to": "2026-07-31T23:59:59+08:00"},
+            "recordTime": {"from": "2026-08-01T09:00:00+08:00"},
+            "evidenceRefs": ["gcw:evidence:5a31f469066145a0813a7130"]
+          },
+          {
+            "relationshipId": "gcw:relation:14fdae7c8642dac8daa1bd13",
+            "stableKey": "tenant:globalcloud|relation|lu-role-new",
+            "typeRef": "was-relation://organization/assigned_role",
+            "subjectAssetId": "gcw:asset:4b4a7af204c4bfef911dd7d7",
+            "objectAssetId": "gcw:asset:de23145375b595a73e84a02a",
+            "worldType": "fact",
+            "validTime": {"from": "2026-08-01T00:00:00+08:00"},
+            "recordTime": {"from": "2026-08-01T09:00:00+08:00"},
+            "supersedesRelationId": "gcw:relation:86ed51c37a01aef006351e31",
+            "evidenceRefs": ["gcw:evidence:5a31f469066145a0813a7130"]
+          }
+        ]
+      }
+    },
+    {
+      "name": "未决身份与模拟分支隔离",
+      "append": {
+        "assets": [
+          {
+            "assetId": "gcw:asset:1a7fe0445af1e56a81977f31",
+            "stableKey": "tenant:globalcloud|person|candidate:kds:contact:zhangsan-a",
+            "dimensionRef": "was-dimension://organization_asset",
+            "identityStatus": "pending",
+            "displayName": "张三（候选一）",
+            "candidateSourceRef": "kds-candidate://CONTACTS/zhangsan-a",
+            "evidenceRefs": ["gcw:evidence:5457b9dbafe69f14e1792630"]
+          },
+          {
+            "assetId": "gcw:asset:dd20f78eb64c7171edd40a8c",
+            "stableKey": "tenant:globalcloud|person|candidate:kds:contact:zhangsan-b",
+            "dimensionRef": "was-dimension://organization_asset",
+            "identityStatus": "pending",
+            "displayName": "张三（候选二）",
+            "candidateSourceRef": "kds-candidate://CONTACTS/zhangsan-b",
+            "evidenceRefs": ["gcw:evidence:76d8185651c45caabd9e732d"]
+          }
+        ],
+        "aliases": [
+          {
+            "aliasId": "gcw:alias:d92bb2116857eb6f2c8dd08f",
+            "stableKey": "tenant:globalcloud|alias|zhangsan-pending",
+            "value": "张三",
+            "resolutionStatus": "pending",
+            "candidateAssetRefs": ["gcw:asset:1a7fe0445af1e56a81977f31", "gcw:asset:dd20f78eb64c7171edd40a8c"],
+            "evidenceRefs": ["gcw:evidence:5457b9dbafe69f14e1792630", "gcw:evidence:76d8185651c45caabd9e732d"]
+          }
+        ],
+        "evidence": [
+          {
+            "evidenceId": "gcw:evidence:5457b9dbafe69f14e1792630",
+            "stableKey": "tenant:globalcloud|kds|contact:zhangsan-a",
+            "tenantId": "globalcloud",
+            "sourceSystem": "KDS",
+            "sourceRef": "kds://CONTACTS/contact/zhangsan-a",
+            "sourceSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "classification": "S3",
+            "contentAccess": "metadata_only"
+          },
+          {
+            "evidenceId": "gcw:evidence:76d8185651c45caabd9e732d",
+            "stableKey": "tenant:globalcloud|kds|contact:zhangsan-b",
+            "tenantId": "globalcloud",
+            "sourceSystem": "KDS",
+            "sourceRef": "kds://CONTACTS/contact/zhangsan-b",
+            "sourceSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "classification": "S3",
+            "contentAccess": "metadata_only"
+          }
+        ],
+        "worldStates": [
+          {
+            "stateId": "gcw:state:b27065b7773de82cd872d0d8",
+            "stableKey": "tenant:globalcloud|state|globalcloud-operational",
+            "assetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+            "worldType": "operational",
+            "observedAt": "2026-08-23T00:05:00+08:00",
+            "writebackRequested": false,
+            "evidenceRefs": ["gcw:evidence:739bced25892f06dcd3675c2"]
+          },
+          {
+            "stateId": "gcw:state:bacea7177b964c1342c08817",
+            "stableKey": "tenant:globalcloud|state|globalcloud-target",
+            "assetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+            "worldType": "target",
+            "observedAt": "2026-08-23T00:10:00+08:00",
+            "writebackRequested": false,
+            "evidenceRefs": ["gcw:evidence:1c3bd077b6e4a57ad4c30bf2"]
+          },
+          {
+            "stateId": "gcw:state:fe253fba28afde955b250d52",
+            "stableKey": "tenant:globalcloud|state|globalcloud-simulation",
+            "assetId": "gcw:asset:7968138ba2ccb3ca064ad209",
+            "worldType": "simulation",
+            "observedAt": "2026-08-23T00:15:00+08:00",
+            "simulationContext": {
+              "branchId": "gcw:simulation-branch:fixture-001",
+              "baselineSnapshotRef": "gcw:snapshot:fixture-20260823",
+              "assumptionRefs": ["gcw:assumption:organization-growth"]
+            },
+            "factPromotionCandidate": true,
+            "writebackRequested": false,
+            "evidenceRefs": ["gcw:evidence:1c3bd077b6e4a57ad4c30bf2"]
+          }
+        ]
+      }
+    }
+  ],
+  "negativeCases": [
+    {
+      "name": "悬空证据引用",
+      "replace": {"relationships.0.evidenceRefs.0": "gcw:evidence:000000000000000000000000"},
+      "expectedReasons": ["dangling_evidence_ref"]
+    },
+    {
+      "name": "关系有效时间倒置",
+      "replace": {"relationships.0.validTime.to": "2024-12-31T23:59:59+08:00"},
+      "expectedReasons": ["valid_time_reversed"]
+    },
+    {
+      "name": "未决身份进入事实关系",
+      "replace": {
+        "assets.1.identityStatus": "pending",
+        "assets.1.candidateSourceRef": "kds-candidate://CONTACTS/person/lu"
+      },
+      "expectedReasons": ["pending_identity_used_in_fact"]
+    },
+    {
+      "name": "模拟状态请求事实回写",
+      "replace": {
+        "worldStates.0.worldType": "simulation",
+        "worldStates.0.simulationContext": {
+          "branchId": "gcw:simulation-branch:invalid-001",
+          "baselineSnapshotRef": "gcw:snapshot:fixture-20260823",
+          "assumptionRefs": ["gcw:assumption:invalid-writeback"]
+        },
+        "worldStates.0.writebackRequested": true
+      },
+      "expectedReasons": ["simulation_fact_isolation_broken"]
+    }
+  ]
+}

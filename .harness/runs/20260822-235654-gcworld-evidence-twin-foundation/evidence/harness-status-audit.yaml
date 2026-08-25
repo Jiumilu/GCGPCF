@@ -1,0 +1,102 @@
+schema_version: harness-status-audit/v1
+audit_id: HARNESS-GCWORLD-20260824-001
+run_id: 20260822-235654-gcworld-evidence-twin-foundation
+change_id: gcworld-evidence-twin-foundation
+audited_at: "2026-08-24T09:16:37Z"
+auditor: globalcloud-harness-governance
+mode: audit_only
+language: zh-CN
+project: GPCF
+workspace: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF
+branch_remote: main / origin/main
+pre_existing_dirty_state: true
+handoff_validation:
+  result: pass
+  evidence_index_present: true
+  evidence_index_parseable: true
+  evidence_index_nonempty: true
+  acceptance_matrix_present: true
+  acceptance_matrix_rows: 12
+  blank_task_requirement_cells: 0
+  patches_directory_present: true
+  patch_files: 1
+  patch_apply_check: pass
+  agent_results: not_applicable_no_agents_dispatched
+files_created_or_modified_by_closeout:
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md
+  - .harness/evidence-index.yaml
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence-index.yaml
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/validation-summary.yaml
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/handoff.yaml
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/gcworld-evidence-twin-foundation.patch
+  - .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/harness-status-audit.yaml
+commands_audited:
+  - openspec validate gcworld-evidence-twin-foundation --strict
+  - python3 -m unittest discover -s tests -p 'test_gcworld*.py' -v
+  - python3 tools/kds-sync/loop_document_gate.py --check-only
+  - python3 tools/kds-sync/validate_loop_project_group_gate_readiness.py
+  - python3 tools/kds-sync/validate_knowledge_asset_model_system.py
+  - python3 tools/kds-sync/validate_gpcf_2_feature_workspace.py
+  - python3 tools/kds-sync/validate_f013_kds_apply_admission.py
+  - python3 tools/kds-sync/validate_gke001_three_lane_coordination.py
+  - 六个GCWORLD机器契约校验器
+not_run:
+  - 产品构建：本变更无可构建产品或发布制品
+  - 真实API：未实现且运行时集成未授权
+  - 浏览器与界面：未实现真实界面
+  - 中文搜索：未实现搜索产品
+  - 真实KDS、MMC或业务系统写入：明确禁止
+  - 部署、提交、推送、归档、状态提升：未获授权
+validation_result:
+  structural_contracts: pass
+  unit_tests: pass_28_of_28
+  deterministic_validators: pass_6_of_6
+  zero_write: pass_kds_status_digest_unchanged
+  openspec_strict: pass
+  document_gate: pass
+  project_group_gate: pass_17_of_17
+  f013_gate_script: pass
+  f013_actual_admission: blocked_dirty_worktree
+chinese_gate_results:
+  human_readable_documents: pass_chinese
+  document_localization_debt: false
+  ui_chinese: not_applicable_no_ui
+  search_chinese: not_applicable_no_search_runtime
+conflict_result:
+  result: scoped_paths_no_detected_conflict
+  limitation: 工作区存在预先及并行变更，审计未把整个脏工作树归因于本变更
+evidence_locations:
+  canonical_index: .harness/evidence-index.yaml
+  run_index: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence-index.yaml
+  acceptance_matrix: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
+  validation_summary: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/validation-summary.yaml
+  handoff: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/handoff.yaml
+current_status: pass_with_runtime_blockers
+why_not_higher:
+  - 结构样例与校验器不是产品运行证据
+  - 覆盖评估仍有身份候选和S3例外，尚缺人工最终复核
+  - KDS工作树有14项变化，F-013实际准入仍被阻断
+  - 没有真实API、工作台界面、运行时、授权、跨租户共享或业务执行证据
+  - OpenSpec任务9.4的前置条件未满足
+blockers:
+  - id: GCWORLD-BLK-001
+    owner: KDS及F-013责任方
+    condition: KDS工作树恢复可复核准入状态并重新执行F-013门禁
+  - id: GCWORLD-BLK-002
+    owner: 老卢
+    condition: 完成身份候选、S3例外及覆盖评估最终人工复核
+  - id: GCWORLD-BLK-003
+    owner: 各后续责任系统
+    condition: 对KDS、界面和运行时集成分别签发独立授权并形成新OpenSpec提案
+human_confirmations_required:
+  - 覆盖评估最终复核结论
+  - 身份合并与关系争议处置
+  - 后续KDS、界面、运行时各自授权
+  - 最终验收与任何状态提升
+next:
+  action: 等待覆盖评估人工复核与F-013准入恢复；满足后再提出独立授权的后续变更
+  archive_allowed: false
+  status_promotion_allowed: false
+  commit_push_deploy_allowed: false
+final_status: pass_with_runtime_blockers

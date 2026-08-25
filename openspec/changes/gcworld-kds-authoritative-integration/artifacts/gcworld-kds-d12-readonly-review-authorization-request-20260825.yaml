@@ -1,0 +1,151 @@
+request_id: GCWORLD-KDS-D12-READONLY-REVIEW-AUTH-REQUEST-20260825-014
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T06:55:58Z"
+status: pending_independent_human_decision
+title: D12第一阶段——剩余二十九项逐路径受控只读审阅授权
+source_evidence:
+  stable_window_receipt: GCWORLD-KDS-31-STABLE-WINDOW-RECEIPT-20260825-010
+  d10_review_receipt: GCWORLD-KDS-D10-OWNER-REVIEW-RECEIPT-20260825-013
+  owner_handoff_17: GCWORLD-KDS-OWNER-HANDOFF-20260825-001
+  owner_handoff_28: GCWORLD-KDS-OWNER-HANDOFF-20260825-002
+  owner_handoff_31: GCWORLD-KDS-OWNER-HANDOFF-20260825-003
+decision_rationale:
+  - D10只读审阅发现高风险权限边界和测试覆盖缺口，不能将内容审阅直接推导为文件处置授权
+  - 其余二十九项目前只有来源、生成器、保留期和路径元数据分析，尚未取得正文审阅授权
+  - 提交、移动、归档或删除前必须先由对应内容责任方逐路径确认内容性质、数据等级、事实状态和处置建议
+  - 删除必须从D12中单独拆出并逐路径明示，不能由本决定推导
+activation_preconditions:
+  baseline:
+    repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+    branch: main
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+    strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: [macmini-workwiki, workwiki-kds, automation-5]
+    hermes_jobs_disabled_and_paused: 11
+    gbrain_autopilot_and_worker: quiet
+    gcworld_or_waes_manual_import_process: none_observed
+  stop_if:
+    - 任一基线字段、路径类型或严格元数据摘要不匹配
+    - 任一生产者恢复、出现写入活动或责任边界变化
+    - 无法在打开正文前取得独立的路径到数据等级清单
+decision:
+  id: D12-R1
+  parent_decision: D12
+  requested_status: pending
+  requested_action:
+    - 由KDS及对应内容责任方逐路径进行受控只读正文审阅
+    - 仅确认内容性质、事实或候选状态、数据等级、保留义务、重复关系、风险和推荐处置
+    - 对每条路径给出保留原位、独立提交候选、仓库外不可变归档候选、移动候选或删除候选之一
+    - 返回中文逐路径审阅回执，但不执行任何推荐处置
+  classification_gate:
+    - 必须先使用独立于正文的权威路径分级清单判定S1、S2、S3或未知
+    - S1与S2仅在责任方和目的匹配时允许读取正文
+    - S3、未知或分级冲突项只允许读取文件元数据和不透明摘要，正文加载器不得调用
+    - 不得通过先读取正文或frontmatter再判断数据等级
+  excluded_paths_already_reviewed_under_d10:
+    - api_server.py
+    - tests/test_api_smoke.py
+  paths_by_responsibility:
+    tracked_projection:
+      owner: 工业绿链W17与Hermes任务f06e9f563967
+      paths:
+        - 工业绿链/reports/项目监控仪表盘.md
+    distributed_governance_reports:
+      owner: KDS治理与automation-5
+      paths:
+        - _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260823-073039/report.md
+        - _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+        - _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+    feishu_closure_empty_evidence:
+      owner: KDS闭环监控与workwiki-kds
+      paths:
+        - _governance/sync-runs/feishu-xiaog-closure-20260823-071040/macmini-evidence.json
+        - _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+        - _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+      special_rule: 已知为零字节失败占位；只确认保留义务和删除候选资格，不得在本阶段删除
+    workwiki_remote_identity:
+      owner: KDS同步与macmini-workwiki
+      paths:
+        - _governance/sync-runs/macmini-workwiki-20260823-064123/remote-identity.txt
+        - _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+        - _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+    source_ingestion_candidates:
+      owner: GCWORLD与WAES内容权威方
+      paths:
+        - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+        - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+      special_rule: 必须先确认来源、版本、授权和数据等级；任何S3或未知项禁止读取正文
+    hermes_evolution_reports:
+      owner: Hermes任务111e8983641a与相应内容责任方
+      paths:
+        - 世界资产/Hermes/reports/自进化事件报告_2026-08-23_04.md
+        - 世界资产/Hermes/reports/自进化事件报告_2026-08-23_08.md
+        - 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+        - 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    industrial_green_chain_reports:
+      owner: 工业绿链内容责任方与对应Hermes任务
+      paths:
+        - 工业绿链/变更告警_2026-08-23.md
+        - 工业绿链/日报/晨报-2026-08-23.md
+        - 工业绿链/reports/Hermes质量周报.md
+        - 工业绿链/体系/W01-W20第二阶段任务清单.md
+        - 工业绿链/体系/W01-W20覆盖率报告.md
+        - 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+        - 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+        - 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+        - 工业绿链/变更告警_2026-08-25.md
+        - 工业绿链/周报/周报_2026W35.md
+        - 工业绿链/日报/晨报-2026-08-25.md
+        - 工业绿链/月报/月报_2026-08.md
+    ecosystem_health_report:
+      owner: KDS知识生态责任方与Hermes任务wiki-ecosystem-health-3d
+      paths:
+        - 99_Reports/ecosystem-health-2026-08-25.md
+  expected_path_count: 29
+required_receipt:
+  - 审阅前和审阅后31项基线、严格元数据及生产者冻结状态
+  - 每条路径的外部分级结果、是否允许正文加载及依据
+  - 每条路径的内容性质、事实状态、保留期、风险和唯一推荐处置类别
+  - 重复或同批文件的内容摘要关系，但不得输出S3正文
+  - 明确的零KDS写入、零测试、零服务操作声明
+future_independent_decisions:
+  d12_nondestructive:
+    id: D12-N
+    status: not_requested_until_d12_r1_complete
+    scope: 独立提交、保留原位、仓库外不可变归档或移动等非删除处置
+  d12_delete:
+    id: D12-D
+    status: not_requested_until_d12_r1_complete
+    scope: 仅对逐路径明示且已验证恢复链的删除候选申请
+  d13:
+    status: still_requires_independent_approval
+  d14:
+    status: deferred_until_all_disposition_checks_complete
+  d15:
+    status: deferred_until_approved_disposition_complete
+strict_prohibitions:
+  - 编辑、创建、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 运行测试、格式化、构建或会生成KDS缓存的验证器
+  - 停止、重启或变更KDS服务
+  - 恢复任何Codex自动化、Hermes任务、GBrain或人工导入活动
+  - 访问数据库、API、凭据或外部写接口
+  - 执行D12-N、D12-D、D13、D14、D15、部署、验收、归档或状态提升
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  implementation_authorized: false
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null

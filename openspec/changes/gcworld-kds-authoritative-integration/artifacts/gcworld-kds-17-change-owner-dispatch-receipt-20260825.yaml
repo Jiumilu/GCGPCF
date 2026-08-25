@@ -1,0 +1,49 @@
+receipt_id: GCWORLD-KDS-OWNER-DISPATCH-RECEIPT-20260825-001
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-001
+approval_receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-001
+language: zh-CN
+dispatched_at: "2026-08-25T00:56:00Z"
+verified_at: "2026-08-25T00:57:27Z"
+source:
+  thread_id: 01a029fa-79b9-7fa3-92a7-57ad6c080a32
+  project: GlobalCloud World
+target:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  title: KDS-知识资料与证据服务
+  host_id: local
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+delivery:
+  channel: Codex线程后台消息
+  send_result: accepted
+  readback_verified: true
+  target_turn_id: 01a0366b-c617-7e31-bc84-f6e5290f3014
+  target_turn_status: in_progress
+  requested_output: knowledge_engineering_handoff
+owner_acknowledgement:
+  verified_at: "2026-08-25T01:00:06Z"
+  latest_assistant_message_id: item-4
+  baseline_exactly_matched: true
+  changed_entries_exactly_matched: 17
+  branch_head_remote_and_zero_divergence_matched: true
+  next_action: 逐项只读归属分析与生成器配置核对
+  kds_or_service_mutation_performed: false
+delivered_scope:
+  changed_entries: 17
+  status_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  owner_attribution: requested
+  per_path_disposition_plan: requested
+  continuous_generator_containment_plan: requested
+boundary:
+  read_only_owner_intake: true
+  kds_mutation_authorized: false
+  service_operation_authorized: false
+  database_api_access_authorized: false
+  commit_push_deploy_authorized: false
+  task_1_2_complete: false
+  stage_a_active: false
+result:
+  delivery_complete: true
+  owner_response_pending: true
+  owner_acknowledgement_received: true
+  implementation_may_start: false

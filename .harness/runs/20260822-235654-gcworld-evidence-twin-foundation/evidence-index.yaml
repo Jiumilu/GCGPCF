@@ -1,0 +1,39 @@
+schema_version: harness-evidence-index/v1
+run_id: 20260822-235654-gcworld-evidence-twin-foundation
+change_id: gcworld-evidence-twin-foundation
+generated_at: "2026-08-24T09:16:37Z"
+language: zh-CN
+status_claim: pass_with_runtime_blockers
+agent_dispatch: not_applicable_no_agents_dispatched
+evidence:
+  - id: validation-summary
+    path: evidence/validation-summary.yaml
+    description: 当前机器重放的结构、确定性、零写入和治理门禁结果
+    freshness: current
+    trust_level: machine_generated
+  - id: acceptance-matrix
+    path: acceptance-matrix.md
+    description: 任务、需求、实现与证据的非空映射
+    freshness: current
+    trust_level: agent_generated
+  - id: handoff
+    path: handoff.yaml
+    description: OpsX交接声明与状态上限
+    freshness: current
+    trust_level: agent_generated
+  - id: harness-audit
+    path: evidence/harness-status-audit.yaml
+    description: Harness独立审计报告
+    freshness: current
+    trust_level: agent_generated
+  - id: final-task-patch
+    path: patches/gcworld-evidence-twin-foundation.patch
+    description: 第9节任务状态收口的有效统一补丁
+    freshness: current
+    trust_level: agent_generated
+  - id: coverage-result
+    path: ../../../openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-controlled-classification-summary-20260823.json
+    description: 全来源受控分级结果，状态为部分完成并保留人工复核队列
+    freshness: inherited
+    trust_level: machine_generated
+

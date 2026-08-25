@@ -1,0 +1,35 @@
+request_id: GCWORLD-KDS-POST-STABLE-WINDOW-AUTH-REQUEST-20260825-005
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T06:32:43Z"
+status: pending_independent_human_decision
+source_stable_window_receipt: GCWORLD-KDS-31-STABLE-WINDOW-RECEIPT-20260825-010
+activation_precondition:
+  - D5至D9及D16、D17控制状态保持不变
+  - 执行前31项路径、状态和严格元数据摘要重新匹配
+decision:
+  id: D10
+  title: 两个代码路径受控正文与差异审阅授权
+  status: pending
+  targets: [api_server.py, tests/test_api_smoke.py]
+  responsible_parties: [KDS源码责任方, KDS测试责任方]
+  allowed_action:
+    - 读取两个目标文件正文及其相对当前HEAD的差异
+    - 确认需求来源、变化目的、代码与测试对应关系、风险和推荐处置
+    - 返回只读审阅回执，不执行建议
+  explicitly_not_included:
+    - 编辑、移动、删除、暂存、还原、提交或推送任何KDS文件
+    - 运行测试、停止或重启KDS服务
+    - D12逐路径处置
+    - D14生产者恢复
+    - 部署、验收、归档或状态提升
+other_decisions:
+  d11: 仍待独立批准
+  d12: 在D10审阅结论后逐路径请求
+  d13: 仍待独立批准
+  d14: 仍未批准恢复
+  d15: 仍待独立批准
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

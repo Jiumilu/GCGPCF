@@ -1,0 +1,38 @@
+run_id: 20260824-092905-gcworld-integration-proposals
+parent_run_id: 20260822-235654-gcworld-evidence-twin-foundation
+parent_change_id: gcworld-evidence-twin-foundation
+entrypoint: /opsx:full-cycle
+requested_by: human
+started_at: "2026-08-24T09:29:05Z"
+updated_at: "2026-08-24T09:43:47Z"
+current_step: 4
+current_step_name: planning-validate
+status: complete
+language: zh-CN
+scope: 仅创建三份需独立授权的后续OpenSpec提案，不执行实现
+authorization_interpretation:
+  partial_coverage_acknowledged: true
+  proposal_preparation_authorized: true
+  implementation_authorized: false
+  kds_write_authorized: false
+  runtime_integration_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+preflight:
+  document_gate: pass
+  feature_entry: enabled
+  f013_admission: blocked_dirty_worktree
+  kds_changed_entries: 14
+  gke001_mode: report_only
+proposed_changes:
+  - gcworld-kds-authoritative-integration
+  - gcworld-workbench-ui-foundation
+  - gcworld-controlled-runtime-integration
+results:
+  planning_artifacts_complete: 3
+  openspec_strict_passed: 3
+  implementation_tasks_started: 0
+  document_gate: pass
+  project_group_gate: pass_17_of_17
+  final_status: planning_complete_implementation_not_authorized
+evidence_index: .harness/runs/20260824-092905-gcworld-integration-proposals/evidence-index.yaml

@@ -1,0 +1,67 @@
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-003
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-25T05:00:12Z"
+status: approved_but_invalidated_before_dispatch
+supersedes: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-002
+scope:
+  previous_approved_entries: 28
+  current_entries: 29
+  newly_added_entries: 1
+  previous_scope_read_only_analysis_complete: true
+  new_scope_requires_human_confirmation: true
+target:
+  responsible_party: KDS责任方
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+baseline:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  changed_entries: 29
+  ordinary_status_sha256: 6660ce71d53e04a34bddecefdf351e666a36842d23f11db58e418f61374174c2
+  expanded_status_sha256: 40701212477c4378d726e3e4facb37801641a5bb31346ada059821cd7cd09ad0
+  f013_admission: blocked_dirty_worktree
+inherited_scope:
+  handoff_ref: GCWORLD-KDS-OWNER-HANDOFF-20260825-002
+  entries: 28
+new_scope:
+  entries: 1
+  path:
+    status: untracked
+    value: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    byte_size: 7870
+    mtime_ns: 1787631202709449277
+requested_owner_action:
+  mode: read_only_attribution_and_disposition_plan
+  requirements:
+    - 先验证29项基线；如有漂移立即停止
+    - 仅通过Git元数据、生成器配置和调度记录确认新增1项的责任方、直接生成源与调度状态
+    - 给出保留期和建议处置，不得仅凭文件名推断
+    - 重新形成覆盖全部29项的稳定窗口与独立授权清单
+    - 返回标准knowledge_engineering_handoff并保持F-013与任务1.2阻塞
+prohibited:
+  - 读取新增文件正文或输出其内容摘要
+  - 编辑、移动、删除、暂存、还原、提交或推送KDS文件
+  - 暂停、停止、恢复或修改自动化、Hermes任务或其他服务
+  - 访问数据库、API或凭据
+  - 部署、验收、归档或状态提升
+effect:
+  before_human_confirmation: 不得向KDS责任方交付新增1项范围
+  after_confirmation: 仅允许交付只读责任归属请求，不授权执行任何处置建议
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+approval:
+  human_decision_owner: 老卢
+  decision: approved
+  confirmed_at: "2026-08-25T05:27:15Z"
+  confirmation_text: 批准将D4只读责任方分析范围从28项扩展为29项，并交付KDS责任方补充分析新增1项。该确认不授权文件清理、自动化暂停或服务变更。
+invalidation:
+  invalidated_at: "2026-08-25T05:27:15Z"
+  reason: 交付前复核发现KDS已由29项增至31项，批准基线失效
+  dispatched_to_owner: false

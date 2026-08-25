@@ -1,0 +1,39 @@
+request_id: GCWORLD-KDS-D12-C1-REVIEWER-DECLARATION-REQUEST-20260825-022
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+issued_at: "2026-08-25T07:41:12Z"
+approval_receipt_ref: GCWORLD-KDS-D12-C1-APPROVAL-RECEIPT-20260825-021
+sealed_classification_request:
+  request_id: GCWORLD-KDS-D12-C1-CLASSIFICATION-AUTH-REQUEST-20260825-019
+  path: gcworld-kds-d12-c1-classification-governance-authorization-request-20260825.yaml
+  sha256: 364c2d00c6d980708f23875750f5940ebe8e4de16bc2da5eee382e07c98d6d15
+reviewers:
+  reviewer_a:
+    role: KDS数据分级与安全责任方
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    thread_title: KDS-知识资料与证据服务
+  reviewer_b:
+    role: 项目群知识工程与内容权威责任方
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    thread_title: LOOP工程-知识工程
+independence_rule:
+  - 两位责任方必须独立作出声明，不得以另一方结果代替自身判断
+  - 仅可读取本请求、密封D12-C1请求、D12-R1总回执与既有责任归属治理记录
+  - 不得读取、搜索、提取或解析十六项UNKNOWN文件的正文、frontmatter、字段、片段或语义信息
+required_declaration:
+  language: 中文
+  signed_identity: [声明编号, 责任角色, 线程ID, 回执时间, 密封请求SHA256]
+  path_rows: 16
+  row_fields: [path, proposed_classification, reason_codes, scope, valid_until, evidence_sufficiency]
+  allowed_classifications: [S1, S2, S3, UNKNOWN]
+  zero_body_read_statement: required
+  baseline_and_freeze_recheck: required
+decision_constraints:
+  - 文件名、目录、扩展名、权限模式或相同摘要只能作为辅助信息，不能单独支持降低等级
+  - 没有责任主体明确声明资料受众、敏感边界和有效期时必须返回UNKNOWN
+  - 任一S3判断必须仅返回不透明标识和最小审计信息
+  - 不得提出文件处置或后续读取授权
+strict_prohibitions:
+  - 读取十六项UNKNOWN正文或任何可逆内容
+  - 修改任何KDS文件或运行测试、服务操作、生产者恢复
+  - 执行D12-C2、D12-R2、D12-N、D12-D或状态提升

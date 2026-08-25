@@ -1,0 +1,63 @@
+schema_version: harness-evidence-index/v1
+run_id: 20260822-235654-gcworld-evidence-twin-foundation
+change_id: gcworld-evidence-twin-foundation
+generated_at: "2026-08-24T09:16:37Z"
+language: zh-CN
+status_claim: pass_with_runtime_blockers
+canonical_run_index: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence-index.yaml
+evidence:
+  - id: GCWORLD-EV-001
+    path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/validation-summary.yaml
+    description: 中文结构验证、确定性、零写入与项目群门禁汇总
+    freshness: current
+    trust_level: machine_generated
+  - id: GCWORLD-EV-002
+    path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
+    description: OpenSpec任务与需求、实现及证据映射矩阵；任务9.4状态已由后续运行补充
+    freshness: superseded_for_task_9_4
+    trust_level: agent_generated
+  - id: GCWORLD-EV-003
+    path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/handoff.yaml
+    description: OpsX向Harness提交的受限状态交接包
+    freshness: current
+    trust_level: agent_generated
+  - id: GCWORLD-EV-004
+    path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/harness-status-audit.yaml
+    description: Harness独立只读审计结论
+    freshness: current
+    trust_level: agent_generated
+  - id: GCWORLD-EV-005
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-controlled-classification-summary-20260823.json
+    description: KDS受控分级与候选提取结果；仍需身份和S3例外人工复核
+    freshness: inherited
+    trust_level: machine_generated
+  - id: GCWORLD-EV-006
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-readonly-census-summary-20260823.yaml
+    description: KDS元数据只读普查历史快照；不可代表当前工作树准入
+    freshness: stale_for_current_admission
+    trust_level: machine_generated
+  - id: GCWORLD-EV-007
+    path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/gcworld-evidence-twin-foundation.patch
+    description: 第9节任务状态收口补丁；完整实现以文件清单和摘要证据为准
+    freshness: current
+    trust_level: agent_generated
+  - id: GCWORLD-EV-008
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-coverage-review-disposition-20260824.yaml
+    description: 覆盖评估partial结论确认及后续提案准备授权边界
+    freshness: current
+    trust_level: human_confirmed
+  - id: GCWORLD-EV-009
+    path: .harness/runs/20260824-092905-gcworld-integration-proposals/evidence/proposal-validation.yaml
+    description: KDS、工作台与运行时三项独立授权提案验证结果
+    freshness: current
+    trust_level: machine_generated
+  - id: GCWORLD-EV-010
+    path: .harness/runs/20260824-094555-gcworld-kds-integration-admission/evidence-index.yaml
+    description: KDS权威事实集成授权请求与F-013准入证据
+    freshness: superseded_by_gcworld_ev_011
+    trust_level: agent_generated
+  - id: GCWORLD-EV-011
+    path: .harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/evidence-index.yaml
+    description: 授权基线失效、KDS 17项变化和扩展D4范围待确认的证据
+    freshness: current
+    trust_level: agent_generated

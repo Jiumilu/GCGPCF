@@ -1,0 +1,44 @@
+drift_id: GCWORLD-KDS-POST-D5-D7-DRIFT-20260825-007
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+detected_at: "2026-08-25T06:00:47Z"
+previous_baseline:
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+current_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 32
+  ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+  expanded_entries: 32
+  expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+added_entry:
+  status: modified
+  path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+  byte_size: 5387
+  mtime: "2026-08-25T14:00:47+0800"
+  content_read: false
+attribution:
+  assessment: 高可信度归因于本轮项目群门禁复核的Python字节码副作用
+  evidence:
+    - 本轮执行了validate_loop_project_group_gate_readiness.py
+    - 该验证器会在各仓库执行tools/kds-sync/loop_document_gate.py --check-only
+    - 新增变化是对应Python缓存文件，修改时间与门禁进程窗口一致
+  limitation: 未读取KDS脚本或缓存正文，未进行进程级写调用追踪，因此不宣称法证级唯一归因
+response:
+  authorization_invalidated: true
+  execution_stopped_after_observation: true
+  file_restore_or_cleanup_performed: false
+  d5_d7_restored: false
+  reason_d5_d7_not_restored: D14恢复未获批准
+  prevention_for_followup: 后续跨仓Python门禁必须设置PYTHONDONTWRITEBYTECODE=1并在执行前后复核KDS摘要
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

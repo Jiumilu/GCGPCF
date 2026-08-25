@@ -1,0 +1,51 @@
+receipt_id: GCWORLD-KDS-D12-C2-RESEAL-APPROVAL-RECEIPT-20260825-027
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T08:12:10Z"
+authorization_state: confirmed
+authorization_source:
+  source_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  authorized_by: 人工明确授权
+  authorized_action: 仅将KDS中指定的单一pyc路径恢复为当前HEAD工作树版本
+authorized_target:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+  source: HEAD
+  index_mutation_allowed: false
+pre_execution_gate:
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  observed_entries: 32
+  target_status: tracked_modified
+  non_target_reconstruction:
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+    strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+    exact_sealed_baseline_reconstructed: true
+  producer_freeze:
+    codex_automations_paused: 3_of_3
+    hermes_jobs_disabled: 11_of_11
+    gbrain_autopilot_absent: true
+    matching_import_or_gbrain_processes: 0
+  opsx_lock_run_id: GCWORLD-KDS-D12-C2-RESEAL-20260825
+  result: pass
+mandatory_postconditions:
+  - KDS必须精确恢复为原31项密封基线
+  - 生产者冻结状态必须完全匹配
+  - 仅在上述条件通过后生成全新的D12-C2独立人工授权请求
+invalid_request:
+  sha256: 0eb9ed26aea2010bd5011f6f7e20f956bd0d55f49fc407b3912aa604a3c62907
+  lifecycle: invalidated_and_must_not_be_reused
+prohibited_actions:
+  - 触碰其他KDS路径
+  - 读取任何UNKNOWN正文、frontmatter、字段、片段或语义
+  - 执行D12-C2、D12-R2、D12-N或D12-D
+  - 运行测试或变更服务
+  - 恢复生产者
+  - 暂存、提交、推送、部署或状态提升
+task_state:
+  task_1_2_complete: false
+  task_2_1_allowed: false

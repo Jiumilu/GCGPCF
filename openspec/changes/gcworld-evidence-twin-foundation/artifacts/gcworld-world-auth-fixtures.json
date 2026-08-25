@@ -1,0 +1,459 @@
+{
+  "baseDocument": {
+    "schemaVersion": "gcworld-world-auth/v1",
+    "generatedAt": "2026-08-23T12:00:00+08:00",
+    "environment": "fixture_only",
+    "systemState": {
+      "waesAvailable": true,
+      "contextComplete": true,
+      "factVersionsVerified": true
+    },
+    "worldSnapshots": [{
+      "snapshotId": "gcw:world-snapshot:0acbc1ed06bf6b4ff4ba82e7",
+      "stableKey": "tenant:globalcloud|world-snapshot|auth-fixture",
+      "tenantId": "tenant:globalcloud",
+      "projectRef": "gcw:project:gcworld-fixture",
+      "factSetVersion": "fact-v1",
+      "versions": {
+        "identityVersion": "identity-v1",
+        "authorizationVersion": "authorization-v1",
+        "resourceVersion": "resource-v1",
+        "policyVersion": "policy-v1"
+      },
+      "issuedAt": "2026-08-23T11:50:00+08:00",
+      "expiresAt": "2026-08-23T12:30:00+08:00",
+      "snapshotHash": "1111111111111111111111111111111111111111111111111111111111111111"
+    }],
+    "identities": [
+      {
+        "identityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+        "stableKey": "tenant:globalcloud|identity|principal",
+        "subjectType": "human",
+        "worldAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+        "tenantId": "tenant:globalcloud",
+        "identityVersion": "identity-v1",
+        "status": "confirmed",
+        "ultimateControllerAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+        "evidenceRefs": ["gcw:evidence:aaaaaaaaaaaaaaaaaaaaaaaa"]
+      },
+      {
+        "identityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+        "stableKey": "tenant:globalcloud|identity|agent",
+        "subjectType": "agent",
+        "worldAssetId": "gcw:asset:bbbbbbbbbbbbbbbbbbbbbbbb",
+        "tenantId": "tenant:globalcloud",
+        "identityVersion": "identity-v1",
+        "status": "confirmed",
+        "ultimateControllerAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+        "agentActionScope": ["observation", "draft"],
+        "evidenceRefs": ["gcw:evidence:bbbbbbbbbbbbbbbbbbbbbbbb"]
+      },
+      {
+        "identityId": "gcw:identity:8ebe27e55b41b08a98aac17b",
+        "stableKey": "tenant:globalcloud|identity|approver",
+        "subjectType": "human",
+        "worldAssetId": "gcw:asset:cccccccccccccccccccccccc",
+        "tenantId": "tenant:globalcloud",
+        "identityVersion": "identity-v1",
+        "status": "confirmed",
+        "ultimateControllerAssetId": "gcw:asset:cccccccccccccccccccccccc",
+        "evidenceRefs": ["gcw:evidence:cccccccccccccccccccccccc"]
+      }
+    ],
+    "roleDefinitions": [{
+      "roleDefinitionId": "gcw:role-definition:3ed179a3e09e8cdd9f04504f",
+      "stableKey": "tenant:globalcloud|role-definition|project-coordinator",
+      "name": "项目协调角色",
+      "responsibilityScope": ["项目事实核对", "内部草稿形成"],
+      "allowedActions": ["observation", "draft", "internal_write"],
+      "prohibitedActions": ["funds", "permission_change"],
+      "riskCeiling": "R2",
+      "roleVersion": "role-v1"
+    }],
+    "roleAssignments": [{
+      "roleAssignmentId": "gcw:role-assignment:17340acfe35e087432289e02",
+      "stableKey": "tenant:globalcloud|role-assignment|principal-project-coordinator",
+      "subjectIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+      "roleDefinitionId": "gcw:role-definition:3ed179a3e09e8cdd9f04504f",
+      "organizationAssetId": "gcw:asset:dddddddddddddddddddddddd",
+      "projectRefs": ["gcw:project:gcworld-fixture"],
+      "status": "active",
+      "worldType": "fact",
+      "factAuthorityRef": "kds://fixture/role-assignment",
+      "validFrom": "2026-08-23T00:00:00+08:00",
+      "expiresAt": "2026-08-24T00:00:00+08:00",
+      "assignmentVersion": "assignment-v1",
+      "evidenceRefs": ["gcw:evidence:dddddddddddddddddddddddd"]
+    }],
+    "authorizationGrants": [{
+      "grantId": "gcw:authorization-grant:c87909a1d38d3514b5f0f881",
+      "stableKey": "tenant:globalcloud|authorization-grant|project-fixture",
+      "grantorIdentityId": "gcw:identity:8ebe27e55b41b08a98aac17b",
+      "granteeIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+      "roleAssignmentId": "gcw:role-assignment:17340acfe35e087432289e02",
+      "resourceScope": ["gcw:resource:project-fixture"],
+      "actionScope": ["observation", "draft", "internal_write"],
+      "purposeScope": ["项目内部协作"],
+      "projectScope": ["gcw:project:gcworld-fixture"],
+      "validFrom": "2026-08-23T00:00:00+08:00",
+      "expiresAt": "2026-08-24T00:00:00+08:00",
+      "riskCeiling": "R2",
+      "approvalRequirements": ["gcw:identity:8ebe27e55b41b08a98aac17b"],
+      "evidenceRequirements": ["正式角色任用", "项目范围"],
+      "prohibitedActions": ["funds", "permission_change"],
+      "canRedelegate": true,
+      "maxDelegationDepth": 1,
+      "status": "active",
+      "authorizationVersion": "authorization-v1",
+      "worldType": "fact",
+      "factAuthorityRef": "kds://fixture/authorization-grant",
+      "emergency": false,
+      "evidenceRefs": ["gcw:evidence:eeeeeeeeeeeeeeeeeeeeeeee"]
+    }],
+    "delegations": [{
+      "delegationId": "gcw:delegation:a77b7eaf1656e79b8d1e3780",
+      "stableKey": "tenant:globalcloud|delegation|project-agent",
+      "parentGrantId": "gcw:authorization-grant:c87909a1d38d3514b5f0f881",
+      "delegatorIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+      "delegateeIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+      "actionScope": ["observation", "draft"],
+      "depth": 1,
+      "status": "active",
+      "validFrom": "2026-08-23T00:00:00+08:00",
+      "expiresAt": "2026-08-24T00:00:00+08:00",
+      "evidenceRefs": ["gcw:evidence:ffffffffffffffffffffffff"]
+    }],
+    "runtimeDecisions": [{
+      "decisionId": "gcw:decision:f468d59510bc5a2408e56888",
+      "stableKey": "tenant:globalcloud|decision|base-draft",
+      "requestId": "gcw:request:base-draft",
+      "principalIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+      "actorIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+      "actingAgentIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+      "roleAssignmentId": "gcw:role-assignment:17340acfe35e087432289e02",
+      "grantRefs": ["gcw:authorization-grant:c87909a1d38d3514b5f0f881"],
+      "delegationRefs": ["gcw:delegation:a77b7eaf1656e79b8d1e3780"],
+      "resourceRef": "gcw:resource:project-fixture",
+      "requestedAction": "draft",
+      "purpose": "项目内部协作",
+      "projectRef": "gcw:project:gcworld-fixture",
+      "riskLevel": "R1",
+      "worldSnapshotId": "gcw:world-snapshot:0acbc1ed06bf6b4ff4ba82e7",
+      "evaluatedVersions": {
+        "identityVersion": "identity-v1",
+        "authorizationVersion": "authorization-v1",
+        "resourceVersion": "resource-v1",
+        "policyVersion": "policy-v1"
+      },
+      "decision": "allow",
+      "effectiveActionScope": ["observation", "draft"],
+      "obligations": [],
+      "reasonCodes": ["intersection_scope_satisfied"],
+      "controlChain": [
+        {
+          "stage": "propose",
+          "actorIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+          "ultimateControllerAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        {
+          "stage": "approve",
+          "actorIdentityId": "gcw:identity:8ebe27e55b41b08a98aac17b",
+          "ultimateControllerAssetId": "gcw:asset:cccccccccccccccccccccccc"
+        }
+      ],
+      "issuedAt": "2026-08-23T12:00:00+08:00",
+      "expiresAt": "2026-08-23T12:10:00+08:00",
+      "decisionHash": "2222222222222222222222222222222222222222222222222222222222222222",
+      "precommitRevalidationRequired": true
+    }],
+    "executionReceipts": [],
+    "revocations": [],
+    "derivedArtifacts": [{
+      "artifactId": "gcw:derived-artifact:09374f5cee3b80a0972225bd",
+      "stableKey": "tenant:globalcloud|derived-artifact|project-summary",
+      "sourceAuthorizationRefs": ["gcw:authorization-grant:c87909a1d38d3514b5f0f881"],
+      "sourceClassifications": ["S2"],
+      "classification": "S2",
+      "sourceRestrictions": ["no_export", "no_long_term_memory"],
+      "effectiveRestrictions": ["no_export", "no_long_term_memory"],
+      "revocationStatus": "active",
+      "memoryAllowed": false
+    }],
+    "statusBoundaries": {
+      "realAuthorizationAuthorized": false,
+      "kdsWriteAuthorized": false,
+      "businessWriteAuthorized": false,
+      "externalActionAuthorized": false,
+      "deploymentAuthorized": false,
+      "statusPromotionAuthorized": false
+    }
+  },
+  "positiveCases": [
+    {
+      "name": "正式事实与交集原则允许内部草稿",
+      "replace": {}
+    },
+    {
+      "name": "附义务允许并形成不可变责任回执",
+      "replace": {
+        "runtimeDecisions.0.decisionId": "gcw:decision:68788abdd83c8804c4db203f",
+        "runtimeDecisions.0.stableKey": "tenant:globalcloud|decision|obligation-draft",
+        "runtimeDecisions.0.decision": "allow_with_obligations",
+        "runtimeDecisions.0.obligations": [
+          {"obligationId": "gcw:obligation:record-reason", "type": "record_reason"},
+          {"obligationId": "gcw:obligation:no-memory", "type": "no_long_term_memory"}
+        ],
+        "runtimeDecisions.0.reasonCodes": ["intersection_scope_satisfied", "obligations_attached"]
+      },
+      "append": {
+        "executionReceipts": [{
+          "receiptId": "gcw:execution-receipt:4d744527c0ff9302263ff2a8",
+          "stableKey": "tenant:globalcloud|execution-receipt|obligation-draft",
+          "decisionId": "gcw:decision:68788abdd83c8804c4db203f",
+          "executorIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+          "executionSystemRef": "gcw:execution-system:fixture-only",
+          "result": "succeeded",
+          "performedAction": "draft",
+          "resourceRef": "gcw:resource:project-fixture",
+          "executedAt": "2026-08-23T12:01:00+08:00",
+          "precommitRevalidated": true,
+          "revalidatedVersions": {
+            "identityVersion": "identity-v1",
+            "authorizationVersion": "authorization-v1",
+            "resourceVersion": "resource-v1",
+            "policyVersion": "policy-v1"
+          },
+          "obligationEvidence": [
+            {"obligationId": "gcw:obligation:record-reason", "evidenceRef": "gcw:evidence:111111111111111111111111"},
+            {"obligationId": "gcw:obligation:no-memory", "evidenceRef": "gcw:evidence:222222222222222222222222"}
+          ],
+          "responsibilityAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+          "evidenceRefs": ["gcw:evidence:333333333333333333333333"],
+          "externalSideEffect": false,
+          "appendOnly": true
+        }]
+      }
+    },
+    {
+      "name": "角色撤销后级联冻结授权委托与派生资产",
+      "replace": {
+        "roleAssignments.0.status": "revoked",
+        "authorizationGrants.0.status": "revoked",
+        "delegations.0.status": "revoked",
+        "runtimeDecisions.0.decisionId": "gcw:decision:6d0fbb1283644f8aac12c81d",
+        "runtimeDecisions.0.stableKey": "tenant:globalcloud|decision|revoked-role",
+        "runtimeDecisions.0.decision": "deny",
+        "runtimeDecisions.0.effectiveActionScope": [],
+        "runtimeDecisions.0.reasonCodes": ["role_revoked", "cascade_revocation_applied"],
+        "derivedArtifacts.0.revocationStatus": "frozen"
+      },
+      "append": {
+        "revocations": [{
+          "revocationId": "gcw:revocation:9b4c40cb5310cd9621b7536b",
+          "stableKey": "tenant:globalcloud|revocation|role-revoked",
+          "targetType": "role_assignment",
+          "targetId": "gcw:role-assignment:17340acfe35e087432289e02",
+          "revokedAt": "2026-08-23T11:59:00+08:00",
+          "reason": "角色任用已撤销",
+          "cascadeTargets": [
+            "gcw:authorization-grant:c87909a1d38d3514b5f0f881",
+            "gcw:delegation:a77b7eaf1656e79b8d1e3780",
+            "gcw:derived-artifact:09374f5cee3b80a0972225bd"
+          ],
+          "emergencyFreeze": false,
+          "evidenceRefs": ["gcw:evidence:444444444444444444444444"],
+          "appendOnly": true
+        }]
+      }
+    },
+    {
+      "name": "短时双人批准紧急授权",
+      "replace": {
+        "authorizationGrants.0.emergency": true,
+        "authorizationGrants.0.emergencyJustification": "限时恢复关键内部协作",
+        "authorizationGrants.0.postReviewRequired": true,
+        "authorizationGrants.0.approvalRequirements": ["gcw:identity:6071f1b5205455f723ffb3c9", "gcw:identity:8ebe27e55b41b08a98aac17b"],
+        "authorizationGrants.0.canRedelegate": false,
+        "authorizationGrants.0.maxDelegationDepth": 0,
+        "authorizationGrants.0.validFrom": "2026-08-23T11:55:00+08:00",
+        "authorizationGrants.0.expiresAt": "2026-08-23T15:55:00+08:00",
+        "delegations": [],
+        "runtimeDecisions.0.decisionId": "gcw:decision:b3cf9f4f41dfa1dfa41a259c",
+        "runtimeDecisions.0.stableKey": "tenant:globalcloud|decision|emergency",
+        "runtimeDecisions.0.actorIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+        "runtimeDecisions.0.delegationRefs": [],
+        "runtimeDecisions.0.controlChain.0.actorIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+        "runtimeDecisions.0.reasonCodes": ["emergency_grant_valid", "intersection_scope_satisfied"]
+      }
+    },
+    {
+      "name": "授权引擎不可用时仅降级只读",
+      "replace": {
+        "systemState.waesAvailable": false,
+        "runtimeDecisions.0.decisionId": "gcw:decision:421de8e6b24b3bfc44eb2435",
+        "runtimeDecisions.0.stableKey": "tenant:globalcloud|decision|degraded",
+        "runtimeDecisions.0.requestedAction": "observation",
+        "runtimeDecisions.0.decision": "degraded_readonly",
+        "runtimeDecisions.0.effectiveActionScope": ["observation"],
+        "runtimeDecisions.0.reasonCodes": ["waes_unavailable_readonly"]
+      }
+    }
+  ],
+  "negativeCases": [
+    {
+      "name": "未决身份静默扩权",
+      "replace": {"identities.0.status": "pending"},
+      "expected_reasons": ["identity_not_confirmed"]
+    },
+    {
+      "name": "已撤销角色仍被允许",
+      "replace": {"roleAssignments.0.status": "revoked"},
+      "expected_reasons": ["inactive_role_allowed"]
+    },
+    {
+      "name": "职能智能体超出自身动作范围",
+      "replace": {
+        "runtimeDecisions.0.requestedAction": "internal_write",
+        "runtimeDecisions.0.effectiveActionScope": ["internal_write"]
+      },
+      "expected_reasons": ["agent_scope_exceeded"]
+    },
+    {
+      "name": "裁决使用不一致世界版本",
+      "replace": {"runtimeDecisions.0.evaluatedVersions.authorizationVersion": "authorization-v2"},
+      "expected_reasons": ["snapshot_version_mismatch"]
+    },
+    {
+      "name": "裁决使用已过期世界快照",
+      "replace": {"worldSnapshots.0.expiresAt": "2026-08-23T11:59:00+08:00"},
+      "expected_reasons": ["snapshot_expired"]
+    },
+    {
+      "name": "同一最终控制主体自提自批",
+      "replace": {
+        "runtimeDecisions.0.controlChain.1.actorIdentityId": "gcw:identity:6071f1b5205455f723ffb3c9",
+        "runtimeDecisions.0.controlChain.1.ultimateControllerAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "expected_reasons": ["separation_of_duties_broken"]
+    },
+    {
+      "name": "提交前未再次验证仍声明成功",
+      "append": {
+        "executionReceipts": [{
+          "receiptId": "gcw:execution-receipt:4d744527c0ff9302263ff2a8",
+          "stableKey": "tenant:globalcloud|execution-receipt|obligation-draft",
+          "decisionId": "gcw:decision:f468d59510bc5a2408e56888",
+          "executorIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+          "executionSystemRef": "gcw:execution-system:fixture-only",
+          "result": "succeeded",
+          "performedAction": "draft",
+          "resourceRef": "gcw:resource:project-fixture",
+          "executedAt": "2026-08-23T12:01:00+08:00",
+          "precommitRevalidated": false,
+          "revalidatedVersions": {"identityVersion": "identity-v1", "authorizationVersion": "authorization-v1", "resourceVersion": "resource-v1", "policyVersion": "policy-v1"},
+          "obligationEvidence": [],
+          "responsibilityAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+          "evidenceRefs": ["gcw:evidence:333333333333333333333333"],
+          "externalSideEffect": false,
+          "appendOnly": true
+        }]
+      },
+      "expected_reasons": ["precommit_revalidation_missing"]
+    },
+    {
+      "name": "附义务允许缺少义务履行证据",
+      "replace": {
+        "runtimeDecisions.0.decision": "allow_with_obligations",
+        "runtimeDecisions.0.obligations": [{"obligationId": "gcw:obligation:record-reason", "type": "record_reason"}]
+      },
+      "append": {
+        "executionReceipts": [{
+          "receiptId": "gcw:execution-receipt:4d744527c0ff9302263ff2a8",
+          "stableKey": "tenant:globalcloud|execution-receipt|obligation-draft",
+          "decisionId": "gcw:decision:f468d59510bc5a2408e56888",
+          "executorIdentityId": "gcw:identity:c5a5581d69e1ab1e13bc5bac",
+          "executionSystemRef": "gcw:execution-system:fixture-only",
+          "result": "succeeded",
+          "performedAction": "draft",
+          "resourceRef": "gcw:resource:project-fixture",
+          "executedAt": "2026-08-23T12:01:00+08:00",
+          "precommitRevalidated": true,
+          "revalidatedVersions": {"identityVersion": "identity-v1", "authorizationVersion": "authorization-v1", "resourceVersion": "resource-v1", "policyVersion": "policy-v1"},
+          "obligationEvidence": [],
+          "responsibilityAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+          "evidenceRefs": ["gcw:evidence:333333333333333333333333"],
+          "externalSideEffect": false,
+          "appendOnly": true
+        }]
+      },
+      "expected_reasons": ["obligation_evidence_missing"]
+    },
+    {
+      "name": "委托动作范围超过父授权",
+      "replace": {"delegations.0.actionScope": ["contract"]},
+      "expected_reasons": ["delegation_scope_exceeded"]
+    },
+    {
+      "name": "委托深度超过父授权上限",
+      "replace": {"delegations.0.depth": 2},
+      "expected_reasons": ["delegation_depth_exceeded"]
+    },
+    {
+      "name": "紧急授权期限和双人批准不合规",
+      "replace": {
+        "authorizationGrants.0.emergency": true,
+        "authorizationGrants.0.emergencyJustification": "紧急测试",
+        "authorizationGrants.0.postReviewRequired": false,
+        "authorizationGrants.0.approvalRequirements": ["gcw:identity:8ebe27e55b41b08a98aac17b"],
+        "authorizationGrants.0.canRedelegate": true,
+        "authorizationGrants.0.expiresAt": "2026-08-25T00:00:00+08:00"
+      },
+      "expected_reasons": ["emergency_grant_invalid"]
+    },
+    {
+      "name": "角色撤销未覆盖完整依赖链",
+      "replace": {
+        "roleAssignments.0.status": "revoked",
+        "authorizationGrants.0.status": "revoked",
+        "delegations.0.status": "revoked",
+        "runtimeDecisions.0.decision": "deny",
+        "runtimeDecisions.0.effectiveActionScope": []
+      },
+      "append": {
+        "revocations": [{
+          "revocationId": "gcw:revocation:9b4c40cb5310cd9621b7536b",
+          "stableKey": "tenant:globalcloud|revocation|role-revoked",
+          "targetType": "role_assignment",
+          "targetId": "gcw:role-assignment:17340acfe35e087432289e02",
+          "revokedAt": "2026-08-23T11:59:00+08:00",
+          "reason": "角色任用已撤销",
+          "cascadeTargets": ["gcw:authorization-grant:c87909a1d38d3514b5f0f881"],
+          "emergencyFreeze": false,
+          "evidenceRefs": ["gcw:evidence:444444444444444444444444"],
+          "appendOnly": true
+        }]
+      },
+      "expected_reasons": ["cascade_revocation_incomplete"]
+    },
+    {
+      "name": "派生数据降级分类并丢失来源限制",
+      "replace": {
+        "derivedArtifacts.0.sourceClassifications": ["S3"],
+        "derivedArtifacts.0.classification": "S1",
+        "derivedArtifacts.0.effectiveRestrictions": ["no_export"],
+        "derivedArtifacts.0.memoryAllowed": true
+      },
+      "expected_reasons": ["derived_restriction_downgrade"]
+    },
+    {
+      "name": "授权引擎不可用仍允许高风险动作",
+      "replace": {
+        "systemState.waesAvailable": false,
+        "runtimeDecisions.0.requestedAction": "contract",
+        "runtimeDecisions.0.riskLevel": "R3",
+        "runtimeDecisions.0.effectiveActionScope": ["contract"]
+      },
+      "expected_reasons": ["degraded_high_risk_allowed"]
+    }
+  ]
+}

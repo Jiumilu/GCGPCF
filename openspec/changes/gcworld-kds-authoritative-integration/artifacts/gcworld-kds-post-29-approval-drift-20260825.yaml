@@ -1,0 +1,51 @@
+drift_id: GCWORLD-KDS-POST-29-APPROVAL-DRIFT-20260825-003
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+detected_at: "2026-08-25T05:27:15Z"
+status: confirmed_read_only
+invalidated_approval_receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-003
+previous_baseline:
+  changed_entries: 29
+  ordinary_status_sha256: 6660ce71d53e04a34bddecefdf351e666a36842d23f11db58e418f61374174c2
+  expanded_status_sha256: 40701212477c4378d726e3e4facb37801641a5bb31346ada059821cd7cd09ad0
+current_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  f013_admission: blocked_dirty_worktree
+delta:
+  added_entries: 2
+  removed_entries: 0
+  prior_entries_changed_again: 0
+  new_paths:
+    - status: modified
+      path: api_server.py
+      file_type: regular
+      byte_size: 178398
+      mtime_ns: 1787634540128606134
+    - status: modified
+      path: tests/test_api_smoke.py
+      file_type: regular
+      byte_size: 55342
+      mtime_ns: 1787634540129136275
+observation_boundary:
+  git_status_and_lstat_metadata_only: true
+  file_content_read: false
+  diff_content_read: false
+  content_hash_calculated: false
+  owner_or_generator_inferred: false
+  kds_or_service_mutation: false
+effect:
+  approval_29_effective: false
+  owner_dispatch_performed: false
+  new_d4_scope_confirmation_required: true
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

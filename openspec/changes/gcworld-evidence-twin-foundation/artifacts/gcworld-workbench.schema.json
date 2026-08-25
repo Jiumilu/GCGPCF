@@ -1,0 +1,262 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.example/schema/gcworld-workbench-v1.json",
+  "title": "GCWORLD 工作台产品契约",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion", "generatedAt", "environment", "workCenters",
+    "navigationTransitions", "assetProfiles", "projectionPolicies",
+    "collaborationSpaces", "sharingContracts", "shareAccessChecks",
+    "explanationRecords", "statusBoundaries"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "gcworld-workbench/v1"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "environment": {"const": "fixture_only"},
+    "workCenters": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/workCenter"}
+    },
+    "navigationTransitions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/navigationTransition"}
+    },
+    "assetProfiles": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/assetProfile"}
+    },
+    "projectionPolicies": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/projectionPolicy"}
+    },
+    "collaborationSpaces": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/collaborationSpace"}
+    },
+    "sharingContracts": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sharingContract"}
+    },
+    "shareAccessChecks": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/shareAccessCheck"}
+    },
+    "explanationRecords": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/explanationRecord"}
+    },
+    "statusBoundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "realCrossTenantSharingAuthorized", "kdsWriteAuthorized",
+        "businessWriteAuthorized", "externalActionAuthorized",
+        "deploymentAuthorized", "statusPromotionAuthorized"
+      ],
+      "properties": {
+        "realCrossTenantSharingAuthorized": {"const": false},
+        "kdsWriteAuthorized": {"const": false},
+        "businessWriteAuthorized": {"const": false},
+        "externalActionAuthorized": {"const": false},
+        "deploymentAuthorized": {"const": false},
+        "statusPromotionAuthorized": {"const": false}
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {"type": "string", "minLength": 1},
+    "refArray": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/nonEmptyString"}
+    },
+    "workCenter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "centerId", "centerType", "name", "assetIdSemantics",
+        "worldSnapshotRef", "permissionContextRef", "evidenceRefs"
+      ],
+      "properties": {
+        "centerId": {"$ref": "#/$defs/nonEmptyString"},
+        "centerType": {
+          "enum": [
+            "world_overview", "organization_assets", "relation_network",
+            "project_world", "time_events", "agents", "actions_collaboration",
+            "permissions_identity", "simulation_lab", "fact_governance",
+            "governance_audit", "development_operations"
+          ]
+        },
+        "name": {"$ref": "#/$defs/nonEmptyString"},
+        "assetIdSemantics": {"const": "worldAssetId"},
+        "worldSnapshotRef": {"$ref": "#/$defs/nonEmptyString"},
+        "permissionContextRef": {"$ref": "#/$defs/nonEmptyString"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "navigationTransition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "transitionId", "fromCenter", "toCenter", "assetIdBefore",
+        "assetIdAfter", "worldSnapshotBefore", "worldSnapshotAfter",
+        "permissionContextBefore", "permissionContextAfter"
+      ],
+      "properties": {
+        "transitionId": {"$ref": "#/$defs/nonEmptyString"},
+        "fromCenter": {"$ref": "#/$defs/nonEmptyString"},
+        "toCenter": {"$ref": "#/$defs/nonEmptyString"},
+        "assetIdBefore": {"$ref": "#/$defs/nonEmptyString"},
+        "assetIdAfter": {"$ref": "#/$defs/nonEmptyString"},
+        "worldSnapshotBefore": {"$ref": "#/$defs/nonEmptyString"},
+        "worldSnapshotAfter": {"$ref": "#/$defs/nonEmptyString"},
+        "permissionContextBefore": {"$ref": "#/$defs/nonEmptyString"},
+        "permissionContextAfter": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "assetProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profileId", "worldAssetId", "assetType", "tenantId", "sections",
+        "unresolvedIdentityCandidates", "mergedCandidateRefs", "evidenceRefs"
+      ],
+      "properties": {
+        "profileId": {"$ref": "#/$defs/nonEmptyString"},
+        "worldAssetId": {"$ref": "#/$defs/nonEmptyString"},
+        "assetType": {"enum": ["person", "organization", "team", "role", "agent", "project", "system"]},
+        "tenantId": {"$ref": "#/$defs/nonEmptyString"},
+        "sections": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "facts", "history", "aliases", "relationships", "roles",
+              "capabilities", "permissions", "tasks", "actions", "results",
+              "feedback", "evidence", "conflicts"
+            ]
+          }
+        },
+        "unresolvedIdentityCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["candidateRef", "disposition", "sourceEvidenceRefs"],
+            "properties": {
+              "candidateRef": {"$ref": "#/$defs/nonEmptyString"},
+              "disposition": {"const": "pending_review"},
+              "sourceEvidenceRefs": {"$ref": "#/$defs/refArray"}
+            }
+          }
+        },
+        "mergedCandidateRefs": {"$ref": "#/$defs/refArray"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "projectionDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["surface", "decision", "dataVisible", "countDisclosed", "auditReasonRef"],
+      "properties": {
+        "surface": {"enum": ["field", "paragraph", "graph", "search", "timeline", "aggregate", "export", "agent_answer"]},
+        "decision": {"enum": ["allow", "redact", "deny"]},
+        "dataVisible": {"type": "boolean"},
+        "countDisclosed": {"type": "boolean"},
+        "auditReasonRef": {"$ref": "#/$defs/nonEmptyString"}
+      }
+    },
+    "projectionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "policyId", "subjectRef", "resourceRef", "tenantId", "classification",
+        "expectedDecision", "decisions", "shareContractRef"
+      ],
+      "properties": {
+        "policyId": {"$ref": "#/$defs/nonEmptyString"},
+        "subjectRef": {"$ref": "#/$defs/nonEmptyString"},
+        "resourceRef": {"$ref": "#/$defs/nonEmptyString"},
+        "tenantId": {"$ref": "#/$defs/nonEmptyString"},
+        "classification": {"enum": ["S0", "S1", "S2", "S3"]},
+        "expectedDecision": {"enum": ["allow", "redact", "deny"]},
+        "decisions": {"type": "array", "items": {"$ref": "#/$defs/projectionDecision"}},
+        "shareContractRef": {"type": ["string", "null"]}
+      }
+    },
+    "collaborationSpace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["spaceId", "ownerTenantId", "organizationRefs", "projectRefs", "memberTenantIds", "isolationEnforced"],
+      "properties": {
+        "spaceId": {"$ref": "#/$defs/nonEmptyString"},
+        "ownerTenantId": {"$ref": "#/$defs/nonEmptyString"},
+        "organizationRefs": {"$ref": "#/$defs/refArray"},
+        "projectRefs": {"$ref": "#/$defs/refArray"},
+        "memberTenantIds": {"$ref": "#/$defs/refArray"},
+        "isolationEnforced": {"type": "boolean"}
+      }
+    },
+    "sharingContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shareId", "sourceTenantId", "targetTenantId", "spaceId", "objectRefs",
+        "fieldScope", "purposeScope", "validFrom", "validUntil", "canReshare",
+        "revocationMethod", "status", "revokedAt", "usageEvidenceRefs"
+      ],
+      "properties": {
+        "shareId": {"$ref": "#/$defs/nonEmptyString"},
+        "sourceTenantId": {"$ref": "#/$defs/nonEmptyString"},
+        "targetTenantId": {"$ref": "#/$defs/nonEmptyString"},
+        "spaceId": {"$ref": "#/$defs/nonEmptyString"},
+        "objectRefs": {"$ref": "#/$defs/refArray"},
+        "fieldScope": {"$ref": "#/$defs/refArray"},
+        "purposeScope": {"$ref": "#/$defs/refArray"},
+        "validFrom": {"type": "string", "format": "date-time"},
+        "validUntil": {"type": "string", "format": "date-time"},
+        "canReshare": {"type": "boolean"},
+        "revocationMethod": {"$ref": "#/$defs/nonEmptyString"},
+        "status": {"enum": ["active", "revoked", "expired"]},
+        "revokedAt": {"type": ["string", "null"], "format": "date-time"},
+        "usageEvidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "shareAccessCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checkId", "shareId", "checkedAt", "surface", "decision", "dataReturned", "aggregateDisclosed", "evidenceRefs"],
+      "properties": {
+        "checkId": {"$ref": "#/$defs/nonEmptyString"},
+        "shareId": {"$ref": "#/$defs/nonEmptyString"},
+        "checkedAt": {"type": "string", "format": "date-time"},
+        "surface": {"enum": ["field", "paragraph", "graph", "search", "timeline", "aggregate", "export", "agent_answer"]},
+        "decision": {"enum": ["allow", "deny"]},
+        "dataReturned": {"type": "boolean"},
+        "aggregateDisclosed": {"type": "boolean"},
+        "evidenceRefs": {"$ref": "#/$defs/refArray"}
+      }
+    },
+    "explanationRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "explanationId", "objectRef", "sourceEvidenceRefs", "versionRef",
+        "worldState", "trustLevel", "conflictStatus", "responsibilityRef",
+        "confirmationStatus", "receiptRefs", "traceAllowed"
+      ],
+      "properties": {
+        "explanationId": {"$ref": "#/$defs/nonEmptyString"},
+        "objectRef": {"$ref": "#/$defs/nonEmptyString"},
+        "sourceEvidenceRefs": {"$ref": "#/$defs/refArray"},
+        "versionRef": {"$ref": "#/$defs/nonEmptyString"},
+        "worldState": {"enum": ["fact", "operational", "target", "simulation"]},
+        "trustLevel": {"enum": ["low", "medium", "high"]},
+        "conflictStatus": {"enum": ["none", "open", "resolved"]},
+        "responsibilityRef": {"$ref": "#/$defs/nonEmptyString"},
+        "confirmationStatus": {"enum": ["not_required", "pending", "confirmed", "rejected"]},
+        "receiptRefs": {"$ref": "#/$defs/refArray"},
+        "traceAllowed": {"type": "boolean"}
+      }
+    }
+  }
+}

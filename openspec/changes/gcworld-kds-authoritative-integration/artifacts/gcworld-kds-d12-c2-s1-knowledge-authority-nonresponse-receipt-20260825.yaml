@@ -1,0 +1,23 @@
+receipt_id: GCWORLD-KDS-D12-C2-S1-KNOWLEDGE-NONRESPONSE-RECEIPT-20260825-042
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T11:25:47Z"
+request_sha256: 838458aab13431e7802f02d28a7a9a4f1713e07f7f6110d9fa338c8b88eb48f9
+target:
+  role: 项目群知识工程与内容权威协调责任方
+  thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  groups: [hermes_evolution_reports, industrial_greenchain, ecosystem_health]
+delivery: delivered_to_existing_primary_responsibility_thread
+response: not_received_in_controlled_execution_window
+thread_state: active_with_preexisting_incomplete_turn
+governance_effect:
+  replacement_reviewer_b_authorized: false
+  thread_interrupt_performed: false
+  alternate_responsibility_subject_selected: false
+  authority_groups_verified: 0
+  affected_groups_remain_unknown: true
+scope_compliance:
+  target_content_read: false
+  target_content_disclosed_in_request: false
+  test_service_or_producer_operation: false
+  file_disposition_or_status_promotion: false

@@ -1,0 +1,64 @@
+receipt_id: GCWORLD-KDS-D12-C2-S2-SUPPLEMENTAL-DECISION-RECEIPT-20260825-047
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T11:58:33Z"
+title: D12-C2-S2——六组全部保持UNKNOWN的人工补充决定回执
+authorization:
+  source_request_sha256: 7f7d6ecd38333fdb15f3427117f605793a23b7a9bd99db0b99ccc63d8106cdb6
+  previous_execution_receipt_sha256: 9797659abb0aecc3b78b5d8624cdad0f27c59d90f14158a8ee89fdfcb3d31cde
+  human_decision_owner: 老卢
+  supplemental_human_input: A
+  normalized_meaning: 六个分组全部选择keep_unknown
+  interpretation_basis: 紧接上一轮明确给出的A选项，A表示六个分组全部keep_unknown
+decision_results:
+  distributed_governance:
+    target_ids: [D12-C1-EXC-001, D12-C1-EXC-002]
+    human_decision: keep_unknown
+    authority_designated: false
+    final_state: UNKNOWN
+  feishu_xiaog_closure:
+    target_ids: [D12-C1-EXC-003, D12-C1-EXC-004]
+    human_decision: keep_unknown
+    authority_designated: false
+    final_state: UNKNOWN
+  macmini_workwiki:
+    target_ids: [D12-C1-EXC-005, D12-C1-EXC-006]
+    human_decision: keep_unknown
+    authority_designated: false
+    final_state: UNKNOWN
+  hermes_evolution_reports:
+    target_ids: [D12-C1-EXC-007, D12-C1-EXC-008]
+    human_decision: keep_unknown
+    authority_designated: false
+    final_state: UNKNOWN
+  industrial_greenchain:
+    target_ids: [D12-C1-EXC-009, D12-C1-EXC-010, D12-C1-EXC-011, D12-C1-EXC-012, D12-C1-EXC-013, D12-C1-EXC-014, D12-C1-EXC-015]
+    human_decision: keep_unknown
+    authority_designated: false
+    final_state: UNKNOWN
+  ecosystem_health:
+    target_ids: [D12-C1-EXC-016]
+    human_decision: keep_unknown
+    authority_designated: false
+    final_state: UNKNOWN
+statistics:
+  authority_groups: 6
+  explicit_group_decisions: 6
+  keep_unknown_groups: 6
+  designated_authority_groups: 0
+  final_unknown_target_ids: 16
+effect:
+  d12_c2_s2_may_close: true
+  authority_verification_or_s1_c_required: false
+  s1_c_requests_dispatched: 0
+  d12_r2_n_d_eligible_target_ids: 0
+  exception_queue_entries: 16
+scope_compliance:
+  unknown_content_read: 0
+  authority_inferred_or_agent_signed: 0
+  reviewer_b_replaced: 0
+  s1_c_or_downstream_execution: 0
+  kds_write: 0
+  test_or_service_operation: 0
+  producer_restore: 0
+  file_disposition_or_status_promotion: 0

@@ -1,0 +1,47 @@
+[   12452ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions:0
+[   12469ms] [ERROR] Failed to refresh session list: Error: Unauthorized [ref: 93af1945-2a03-44ff-afdb-dfc326689e1e]
+    at request (http://127.0.0.1:8650/src/api/client.ts:236:17)
+    at async requestSessionList (http://127.0.0.1:8650/src/api/hermes/sessions.ts:16:11)
+    at async fetchSessions (http://127.0.0.1:8650/src/api/hermes/sessions.ts:30:14)
+    at async Promise.all (index 0)
+    at async fetchRuntimeSessions (http://127.0.0.1:8650/src/stores/hermes/chat.ts:488:43)
+    at async refreshSessionListOnly (http://127.0.0.1:8650/src/stores/hermes/chat.ts:667:17) @ http://127.0.0.1:8650/@vite/client:524
+[   12473ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions?source=global_agent:0
+[   24440ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions:0
+[   24443ms] [ERROR] Failed to refresh session list: Error: Unauthorized [ref: e9eb0923-53fd-4925-bc3b-d73dda8eb011]
+    at request (http://127.0.0.1:8650/src/api/client.ts:236:17)
+    at async requestSessionList (http://127.0.0.1:8650/src/api/hermes/sessions.ts:16:11)
+    at async fetchSessions (http://127.0.0.1:8650/src/api/hermes/sessions.ts:30:14)
+    at async Promise.all (index 0)
+    at async fetchRuntimeSessions (http://127.0.0.1:8650/src/stores/hermes/chat.ts:488:43)
+    at async refreshSessionListOnly (http://127.0.0.1:8650/src/stores/hermes/chat.ts:667:17) @ http://127.0.0.1:8650/@vite/client:524
+[   24443ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions?source=global_agent:0
+[   29237ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/auth/login:0
+[   36440ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions:0
+[   36444ms] [ERROR] Failed to refresh session list: Error: Unauthorized [ref: 484be8be-bc52-4afc-88da-92ab3ff15c05]
+    at request (http://127.0.0.1:8650/src/api/client.ts:236:17)
+    at async requestSessionList (http://127.0.0.1:8650/src/api/hermes/sessions.ts:16:11)
+    at async fetchSessions (http://127.0.0.1:8650/src/api/hermes/sessions.ts:30:14)
+    at async Promise.all (index 0)
+    at async fetchRuntimeSessions (http://127.0.0.1:8650/src/stores/hermes/chat.ts:488:43)
+    at async refreshSessionListOnly (http://127.0.0.1:8650/src/stores/hermes/chat.ts:667:17) @ http://127.0.0.1:8650/@vite/client:524
+[   36446ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions?source=global_agent:0
+[   48443ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions:0
+[   48448ms] [ERROR] Failed to refresh session list: Error: Unauthorized [ref: cd567792-2e37-4e07-87ac-985a3e8a919e]
+    at request (http://127.0.0.1:8650/src/api/client.ts:236:17)
+    at async requestSessionList (http://127.0.0.1:8650/src/api/hermes/sessions.ts:16:11)
+    at async fetchSessions (http://127.0.0.1:8650/src/api/hermes/sessions.ts:30:14)
+    at async Promise.all (index 0)
+    at async fetchRuntimeSessions (http://127.0.0.1:8650/src/stores/hermes/chat.ts:488:43)
+    at async refreshSessionListOnly (http://127.0.0.1:8650/src/stores/hermes/chat.ts:667:17) @ http://127.0.0.1:8650/@vite/client:524
+[   48450ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8650/api/hermes/sessions?source=global_agent:0
+[   52680ms] [LOG] [vite] server connection lost. Polling for restart... @ http://127.0.0.1:8650/@vite/client:992
+[   60435ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:8650/api/hermes/sessions:0
+[   60435ms] [ERROR] Failed to refresh session list: TypeError: Failed to fetch
+    at request (http://127.0.0.1:8650/src/api/client.ts:224:20)
+    at requestSessionList (http://127.0.0.1:8650/src/api/hermes/sessions.ts:16:17)
+    at fetchSessions (http://127.0.0.1:8650/src/api/hermes/sessions.ts:30:20)
+    at fetchRuntimeSessions (http://127.0.0.1:8650/src/stores/hermes/chat.ts:488:62)
+    at refreshSessionListOnly (http://127.0.0.1:8650/src/stores/hermes/chat.ts:667:23)
+    at http://127.0.0.1:8650/src/stores/hermes/chat.ts:3091:9 @ http://127.0.0.1:8650/@vite/client:524
+[   60436ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:8650/api/hermes/sessions?source=global_agent:0

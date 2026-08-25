@@ -1,0 +1,47 @@
+receipt_id: GCWORLD-KDS-D12-C2-S1-APPROVAL-RECEIPT-20260825-039
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T11:22:09Z"
+source_request:
+  request_id: GCWORLD-KDS-D12-C2-S1-AUTHORITY-NOMINATION-AUTH-REQUEST-20260825-038
+  request_sha256: d586527ec6b5df84b85b7db780e01f52ccd4b5e4b3e671dec5ec57b7eba43a3e
+human_decision_owner: 老卢
+decisions:
+  d12_c2_s1_a:
+    status: approved
+    scope: 仅使用既有任务、组织、人员、线程和授权元数据，对六类真实内容权威主体进行提名与核验
+  d12_c2_s1_b:
+    status: not_approved
+    effect: 不得自动替换reviewer_b，不得由执行智能体代签或自行指定替代责任方
+  d12_c2_s1_c:
+    status: approved
+    scope: 仅向S1-A核验通过的权威主体发出十六项逐路径零正文补充声明请求
+confirmation_text: >-
+  批准D12-C2-S1-A与D12-C2-S1-C；D12-C2-S1-B暂不批准。仅允许严格按照密封请求，使用既有任务、组织、人员、线程和授权元数据，对六类真实内容权威主体进行提名与核验；仅向核验通过的权威主体发出十六项逐路径零正文补充声明请求。不得读取任何UNKNOWN正文、frontmatter、字段、片段、字符串、关键词、语义或差异。任一提名或声明字段缺失、权威依据不可验证、两方意见不一致、证据不足或仍判定UNKNOWN时，必须继续保持UNKNOWN并进入例外队列。不得自动替换reviewer_b，不得执行D12-R2、D12-N、D12-D、文件处置、测试、服务变更、生产者恢复、提交、推送、部署或状态提升。任一三十一项基线指纹或生产者冻结状态不匹配时立即停止。
+activation_baseline:
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: 3_of_3
+    hermes_jobs_disabled: 11_of_11
+    gbrain_autopilot_absent: true
+    matching_import_or_gbrain_processes: 0
+hard_boundaries:
+  unknown_content_read: prohibited
+  reviewer_b_replacement: not_authorized
+  d12_r2_n_d: not_authorized
+  file_disposition: not_authorized
+  tests_or_service_changes: not_authorized
+  producer_restore: not_authorized
+  commit_push_deploy_or_status_promotion: not_authorized
+effect:
+  s1_a_may_execute: true
+  s1_b_may_execute: false
+  s1_c_may_execute_only_after_s1_a_verification: true
+  d12_c2_complete: false

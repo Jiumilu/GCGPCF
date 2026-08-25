@@ -1,0 +1,65 @@
+receipt_id: GCWORLD-KDS-OWNER-DISPATCH-RECEIPT-20260825-004
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-004
+approval_receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-004
+language: zh-CN
+dispatched_at: "2026-08-25T05:32:24Z"
+verified_at: "2026-08-25T05:32:24Z"
+source_thread_id: 01a029fa-79b9-7fa3-92a7-57ad6c080a32
+target:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+  host_id: local
+  turn_id: 01a03768-950b-71e0-8a6b-6432d0ffee43
+delivery:
+  channel: Codex线程后台消息
+  send_result: accepted
+  readback_verified: true
+  target_turn_status: completed
+  requested_output: knowledge_engineering_handoff
+input_integrity:
+  delivered_request_sha256: fe2069ecedd17a4bafa26fc0069ebaa40a74005be62c17fc09866e39e9474028
+  current_mutable_request_sha256: 36b66b563606e6af1d7da63a25b89545bcbec8d18e251b0fb22d9908dd4c5a1c
+  approval_receipt_sha256: 075c2e17ea4316f0745620e7a8ab3c81272aabed52a634303fac7d2d261c86df
+  drift_record_sha256: 55ad2309eddf3b015c0dc4888593a22f62e6d78a8b456f048eb053afb304b865
+  mutation_explanation: 交付后仅将请求状态由待交付更新为责任方分析进行中并增加交付后等待说明；31项范围、基线和禁止边界未改变
+owner_acknowledgement:
+  verified_at: "2026-08-25T05:35:27Z"
+  latest_assistant_message_id: item-9
+  baseline_exactly_matched: true
+  changed_entries_exactly_matched: 31
+  request_hash_difference_identified: true
+  request_hash_difference_explained_by_post_dispatch_status_update: true
+  metadata_script_first_attempt_stopped_before_target_read: true
+  metadata_script_corrected_and_continued: true
+  file_or_diff_content_read: false
+  kds_or_service_mutation_performed: false
+owner_final_handoff:
+  received_at: "2026-08-25T05:38:51Z"
+  final_message_id: item-823
+  handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-003
+  classification: read_only_analysis_completed_with_governance_hash_rework
+  supplemental_entries_analyzed: 3
+  baseline_before_after_match: true
+  file_or_diff_content_read: false
+  kds_or_service_mutation_performed: false
+scope:
+  total_entries: 31
+  previously_analyzed_entries: 28
+  supplemental_entries: 3
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+boundary:
+  git_status_metadata_generator_process_and_schedule_config_read_only: true
+  file_or_diff_content_read_authorized: false
+  file_mutation_authorized: false
+  automation_or_service_operation_authorized: false
+  database_api_credentials_authorized: false
+  test_commit_push_deploy_authorized: false
+result:
+  delivery_complete: true
+  owner_response_pending: false
+  owner_acknowledgement_received: true
+  owner_handoff_received: true
+  task_1_2_complete: false
+  implementation_may_start: false

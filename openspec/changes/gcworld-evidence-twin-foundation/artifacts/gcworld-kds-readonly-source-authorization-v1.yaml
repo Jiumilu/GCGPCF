@@ -1,0 +1,176 @@
+authorization_id: GCWORLD-KDS-READONLY-SOURCE-AUTH-20260823-001
+version: v1.0
+status: approved_for_local_readonly_census
+confirmed_at: "2026-08-23T00:00:00+08:00"
+confirmation:
+  source: 当前GCWORLD任务用户确认
+  user_response: 确认
+  approved_statement: 全KDS空间进行元数据普查，S0至S2内容只读分析，S3仅登记存在性并进入人工复核队列
+
+authority:
+  human_decision_owner_display_name: 老卢
+  human_decision_owner_ref: human://globalcloud/project-sponsor/current-user
+  responsibility: 身份归一、身份合并和关系争议的最终人工裁决
+  temporary_assignment: true
+  delegation_allowed: false
+  evidence_basis:
+    - 当前用户于2026-08-23明确确认暂任最终人工裁决人
+    - KDS的SPACE_REGISTRY.yaml将老卢登记为全部知识空间责任人
+
+purpose:
+  - 对KDS中的人员、组织、团队、项目、角色、关系、事件、行动、承诺和证据进行无遗漏来源普查
+  - 为GCWORLD世界初始化形成来源闭环、身份例外队列和覆盖率基线
+  - 不建立第二事实主账，不把候选或模拟结果提升为事实
+
+repository_scope:
+  repository_id: GlobalCloud-KDS
+  local_root: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  discovery_policy: 默认纳入所有事实与知识来源；每个文件必须获得明确处置状态，不允许静默跳过
+  execution_mode: 本地文件系统只读
+  kds_api_allowed: false
+  external_network_allowed: false
+  write_allowed: false
+
+registered_knowledge_spaces:
+  source_registry: SPACE_REGISTRY.yaml
+  spaces:
+    - { id: GLOBAL, name: 全局, source_pattern: "全局/**" }
+    - { id: INDUSTRIAL_GREEN_CHAIN, name: 工业绿链, source_pattern: "工业绿链/**" }
+    - { id: PVA_VALUE_ALLIANCE, name: PVA价值联盟, source_pattern: "PVA价值联盟/**" }
+    - { id: WORLD_ASSETS, name: 世界资产, source_pattern: "世界资产/**" }
+    - { id: FUTURE_VENTURE, name: 未来事业, source_pattern: "未来事业/**" }
+    - { id: AI_LEARNING, name: AI学习, source_pattern: "AI学习/**" }
+    - { id: CONCEPTS, name: 通用概念, source_pattern: "concepts/**" }
+    - { id: ENTITIES, name: 实体, source_pattern: "entities/**" }
+    - { id: CONTACTS, name: 联系人, source_pattern: "contacts/**" }
+    - { id: META, name: 元数据, source_pattern: "_meta/**" }
+
+registered_access_spaces:
+  source_registry: SPACE_REGISTRY.yaml
+  spaces:
+    - { id: family, name: 家庭空间, source_patterns: ["concepts/family/**", "source_files/family/**"] }
+    - { id: personal, name: 个人空间, source_patterns: ["concepts/personal/**", "source_files/personal/**", "personal/**"] }
+    - { id: team, name: 团队空间, source_patterns: ["concepts/team/**", "source_files/team/**"] }
+    - { id: partner, name: 合作伙伴空间, source_patterns: ["concepts/partner/**", "source_files/partner/**"] }
+    - { id: private, name: 私有空间, source_patterns: ["concepts/private/**", "source_files/private/**"] }
+    - { id: public, name: 公共空间, source_patterns: ["concepts/public/**", "source_files/public/**"] }
+    - { id: ops, name: 运维空间, source_patterns: ["concepts/ops/**", "source_files/ops/**"] }
+
+additional_fact_source_roots:
+  - raw/**
+  - source_files/**
+  - kds_minutes/**
+  - knowledge_intake/**
+  - 体系/**
+  - 其他/**
+  - 投资研究/**
+  - 微信桥/**
+  - 📥收件箱/**
+  - 99_Reports/**
+  - docs/**
+  - openspec/**
+  - _governance/**
+  - _registries/**
+  - _rules/**
+  - _schemas/**
+  - journal/**
+  - views/**
+  - wiki/**
+  - hermes-wiki/**
+  - hermes-work-system/**
+  - archive/**
+  - _legacy/**
+  - _oversized/**
+  - _qmd_backup/**
+
+source_disposition:
+  required_statuses:
+    - content_readonly_included
+    - s3_metadata_only
+    - derived_or_mirror
+    - duplicate_by_hash
+    - technical_exclusion
+    - unclassified_exception
+    - parse_failed
+  default_for_unregistered_root: unclassified_exception
+  omission_rule: 所有可发现文件必须进入处置台账；解析失败、未注册目录和未知类型也不得丢弃
+  entity_coverage_rule: 每个人员和组织提及必须进入已归一、未决、重复候选、排除或需人工裁决之一
+
+classification_boundary:
+  canonical_model: KDS多租户知识库权限体系v3.1.1
+  readable_content_levels: [S0, S1, S2]
+  unclassified_document_default: S1
+  unclassified_default_basis: KDS权限模型中未标级文档默认按S1处理；若路径、字段或规则提示更高敏感性则从严
+  level_mapping:
+    L0: S0
+    L1: S1
+    L2: S2
+    L3: S3
+  field_level_rule: 文档可读不代表S3字段可读；S3字段、段落、表列和附件必须遮蔽并进入人工复核
+  conflict_rule: 多个标级冲突时采用最严格等级
+
+s3_handling:
+  content_read_allowed: false
+  extraction_allowed: false
+  preview_allowed: false
+  embedding_allowed: false
+  agent_memory_allowed: false
+  existence_register_fields:
+    - opaque_source_id
+    - registered_space_id
+    - media_type
+    - byte_size
+    - modified_time
+    - classification
+    - review_status
+  path_visibility: 原始路径仅保留为受控本地指针，不进入普通报告、智能体提示词或导出物
+  review_queue_owner: 老卢
+  review_outcome_required_before_content_access: true
+
+technical_exclusions:
+  content_read_forbidden_patterns:
+    - .git/**
+    - node_modules/**
+    - "**/__pycache__/**"
+    - .pytest_cache/**
+    - .ruff_cache/**
+    - .tmp/**
+    - tmp/**
+    - "**/*.pyc"
+    - "**/*.sqlite"
+    - "**/*.sqlite3"
+    - "**/*.db"
+    - .llm-wiki/lancedb/**
+    - "**/.env"
+    - "**/.env.*"
+    - "**/*credential*"
+    - "**/*secret*"
+    - "**/*private-key*"
+    - "**/*auth-key*"
+  rule: 技术缓存、索引、数据库和秘密不作为组织事实来源；仅记录排除类别和数量，不读取或输出秘密值
+
+execution_gates:
+  current_admission: ready_for_authorization
+  observed_changed_entries: 0
+  observed_ahead_commits: 0
+  may_execute_content_census_now: true
+  release_conditions:
+    - KDS工作树已完成保全式整理并形成可复放的稳定只读快照
+    - F-013读取准入返回ready_for_authorization
+    - 未取得权威逐路径分级的来源仅登记元数据，不读取正文
+    - 每次运行仍须核验本授权未被撤销且范围未扩大
+  dirty_snapshot_override_allowed: false
+
+prohibited_actions:
+  - 修改、移动、重命名或删除任何KDS文件
+  - 调用KDS或MMC写接口
+  - 自动合并人员或组织身份
+  - 将候选、目标或模拟状态提升为正式事实
+  - 读取或传播S3正文及秘密
+  - 对外发送、业务系统执行、部署、提交、推送或状态提升
+
+lifecycle:
+  valid_from: "2026-08-23"
+  valid_until: P1只读覆盖评估完成或用户撤销，以先发生者为准
+  revocation_effect: 立即停止后续读取；保留已生成证据的受控索引并按最严格来源限制治理
+  authorization_ceiling: 只读普查授权，不是验收、集成或生产授权

@@ -1,0 +1,307 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.example/schemas/gcworld-role-agent-governance-v1.json",
+  "title": "GCWORLD 职能智能体治理契约",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "environment",
+    "registrations",
+    "actionEnvelopes",
+    "executionLedger",
+    "statusBoundaries"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "gcworld-role-agent-governance/v1" },
+    "generatedAt": { "$ref": "#/$defs/dateTime" },
+    "environment": { "const": "fixture_only" },
+    "registrations": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/registration" }
+    },
+    "actionEnvelopes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/actionEnvelope" }
+    },
+    "executionLedger": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/ledgerEntry" }
+    },
+    "statusBoundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kdsWriteAuthorized",
+        "mmcWriteAuthorized",
+        "businessWriteAuthorized",
+        "externalActionAuthorized",
+        "deploymentAuthorized",
+        "statusPromotionAuthorized"
+      ],
+      "properties": {
+        "kdsWriteAuthorized": { "const": false },
+        "mmcWriteAuthorized": { "const": false },
+        "businessWriteAuthorized": { "const": false },
+        "externalActionAuthorized": { "const": false },
+        "deploymentAuthorized": { "const": false },
+        "statusPromotionAuthorized": { "const": false }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmpty": { "type": "string", "minLength": 1 },
+    "dateTime": { "type": "string", "format": "date-time" },
+    "assetRef": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+    "evidenceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^gcw:evidence:[0-9a-f]{24}$" }
+    },
+    "riskLevel": { "enum": ["R0", "R1", "R2", "R3", "R4"] },
+    "mode": { "enum": ["mirror", "assist", "delegated", "autonomous"] },
+    "actionType": {
+      "enum": [
+        "observation",
+        "advice",
+        "draft",
+        "internal_write",
+        "external_communication",
+        "funds",
+        "contract",
+        "identity_change",
+        "permission_change",
+        "government_communication",
+        "business_state_change"
+      ]
+    },
+    "memoryPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["session", "task", "role", "asset", "learning"],
+      "properties": {
+        "session": { "enum": ["ephemeral", "disabled"] },
+        "task": { "enum": ["archive_on_close", "disabled"] },
+        "role": { "enum": ["freeze_on_role_revocation", "disabled"] },
+        "asset": { "enum": ["kds_fact_refs_only", "disabled"] },
+        "learning": { "enum": ["candidate_only", "disabled"] }
+      }
+    },
+    "registration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agentId",
+        "stableKey",
+        "displayName",
+        "agentClass",
+        "boundAssetId",
+        "roleAssignmentRef",
+        "contextRefs",
+        "ownerAssetId",
+        "supervisorAssetId",
+        "sourceScopeRefs",
+        "mode",
+        "capabilities",
+        "knowledgeScopeRefs",
+        "memoryPolicy",
+        "toolScope",
+        "connectorScope",
+        "authorizationRefs",
+        "allowedActions",
+        "prohibitedActions",
+        "riskCeiling",
+        "delegationPolicy",
+        "validFrom",
+        "expiresAt",
+        "revocationPolicy",
+        "identityDisclosure",
+        "humanImpersonationProhibited"
+      ],
+      "properties": {
+        "agentId": { "type": "string", "pattern": "^gcw:agent:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "displayName": { "$ref": "#/$defs/nonEmpty" },
+        "agentClass": {
+          "enum": ["organization_function_agent", "system_agent", "external_partner_agent"]
+        },
+        "boundAssetId": { "$ref": "#/$defs/assetRef" },
+        "roleAssignmentRef": { "type": "string", "pattern": "^gcw:role-assignment:" },
+        "contextRefs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:context:" }
+        },
+        "ownerAssetId": { "$ref": "#/$defs/assetRef" },
+        "supervisorAssetId": { "$ref": "#/$defs/assetRef" },
+        "sourceScopeRefs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^kds-scope:" }
+        },
+        "mode": { "$ref": "#/$defs/mode" },
+        "capabilities": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/nonEmpty" }
+        },
+        "knowledgeScopeRefs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:knowledge-scope:" }
+        },
+        "memoryPolicy": { "$ref": "#/$defs/memoryPolicy" },
+        "toolScope": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:tool:" }
+        },
+        "connectorScope": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:connector:" }
+        },
+        "authorizationRefs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:authorization:" }
+        },
+        "allowedActions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/actionType" }
+        },
+        "prohibitedActions": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/actionType" }
+        },
+        "riskCeiling": { "$ref": "#/$defs/riskLevel" },
+        "delegationPolicy": {
+          "enum": ["none", "explicit_authorization_only", "approved_scenario_only"]
+        },
+        "delegationRef": { "type": "string", "pattern": "^gcw:delegation:" },
+        "autonomousScenarioRef": { "type": "string", "pattern": "^gcw:autonomous-scenario:" },
+        "validFrom": { "$ref": "#/$defs/dateTime" },
+        "expiresAt": { "$ref": "#/$defs/dateTime" },
+        "revocationPolicy": { "const": "immediate_session_and_memory_freeze" },
+        "identityDisclosure": { "type": "string", "pattern": "职能智能体" },
+        "humanImpersonationProhibited": { "const": true }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "mode": { "const": "delegated" } }, "required": ["mode"] },
+          "then": { "required": ["delegationRef"] }
+        },
+        {
+          "if": { "properties": { "mode": { "const": "autonomous" } }, "required": ["mode"] },
+          "then": { "required": ["autonomousScenarioRef"] }
+        }
+      ]
+    },
+    "actionEnvelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "envelopeId",
+        "stableKey",
+        "agentId",
+        "actionRole",
+        "targetRef",
+        "actionType",
+        "riskLevel",
+        "evidenceRefs",
+        "authorizationStatus",
+        "confirmationStatus",
+        "decision",
+        "expectedResult",
+        "requestedAt",
+        "zeroWrite"
+      ],
+      "properties": {
+        "envelopeId": { "type": "string", "pattern": "^gcw:envelope:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "agentId": { "type": "string", "pattern": "^gcw:agent:[0-9a-f]{24}$" },
+        "actionRole": { "$ref": "#/$defs/nonEmpty" },
+        "targetRef": { "$ref": "#/$defs/nonEmpty" },
+        "actionType": { "$ref": "#/$defs/actionType" },
+        "riskLevel": { "$ref": "#/$defs/riskLevel" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "authorizationStatus": { "enum": ["not_required", "pending", "granted", "denied"] },
+        "authorizationDecisionRef": { "type": "string", "pattern": "^gcw:authorization-decision:" },
+        "confirmationStatus": { "enum": ["not_required", "pending", "confirmed", "rejected"] },
+        "humanConfirmationRef": { "type": "string", "pattern": "^gcw:human-confirmation:" },
+        "decision": { "enum": ["allowed", "blocked"] },
+        "expectedResult": { "$ref": "#/$defs/nonEmpty" },
+        "requestedAt": { "$ref": "#/$defs/dateTime" },
+        "zeroWrite": { "type": "boolean" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "authorizationStatus": { "const": "granted" } }, "required": ["authorizationStatus"] },
+          "then": { "required": ["authorizationDecisionRef"] }
+        },
+        {
+          "if": { "properties": { "confirmationStatus": { "const": "confirmed" } }, "required": ["confirmationStatus"] },
+          "then": { "required": ["humanConfirmationRef"] }
+        }
+      ]
+    },
+    "ledgerEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ledgerEntryId",
+        "stableKey",
+        "envelopeId",
+        "agentId",
+        "outcome",
+        "reasonCodes",
+        "externalSideEffect",
+        "occurredAt",
+        "evidenceRefs",
+        "appendOnly"
+      ],
+      "properties": {
+        "ledgerEntryId": { "type": "string", "pattern": "^gcw:ledger:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "envelopeId": { "type": "string", "pattern": "^gcw:envelope:[0-9a-f]{24}$" },
+        "agentId": { "type": "string", "pattern": "^gcw:agent:[0-9a-f]{24}$" },
+        "outcome": {
+          "enum": ["advised", "drafted", "approved_executed", "rejected", "failed", "blocked"]
+        },
+        "reasonCodes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/nonEmpty" }
+        },
+        "externalSideEffect": { "type": "boolean" },
+        "executionReceiptRef": { "type": "string", "pattern": "^gcw:execution-receipt:" },
+        "errorCode": { "$ref": "#/$defs/nonEmpty" },
+        "occurredAt": { "$ref": "#/$defs/dateTime" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "appendOnly": { "const": true }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "outcome": { "const": "approved_executed" } }, "required": ["outcome"] },
+          "then": { "required": ["executionReceiptRef"] }
+        },
+        {
+          "if": { "properties": { "outcome": { "const": "failed" } }, "required": ["outcome"] },
+          "then": { "required": ["errorCode"] }
+        }
+      ]
+    }
+  }
+}

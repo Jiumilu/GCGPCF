@@ -1,0 +1,93 @@
+receipt_id: GCWORLD-KDS-D12-C1-CLASSIFICATION-RECEIPT-20260825-024
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T07:45:17Z"
+authorization:
+  request_id: GCWORLD-KDS-D12-C1-CLASSIFICATION-AUTH-REQUEST-20260825-019
+  request_sha256: 364c2d00c6d980708f23875750f5940ebe8e4de16bc2da5eee382e07c98d6d15
+  approval_receipt: GCWORLD-KDS-D12-C1-APPROVAL-RECEIPT-20260825-021
+  approval_receipt_sha256: 6690ba96180550a50c37be22b704f3b0e8644d64c94dbdc61d452e18a992e995
+  declaration_request: GCWORLD-KDS-D12-C1-REVIEWER-DECLARATION-REQUEST-20260825-022
+  declaration_request_sha256: cfb1eb2f00470aee5e89a0e2a3dc4f923331d96b0ec8d86660e22467e9ee8331
+responsibility_declarations:
+  reviewer_a:
+    declaration_id: GCWORLD-KDS-D12-C1-REVIEWER-A-DECLARATION-20260825-001
+    role: KDS数据分级与安全责任方
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    turn_id: 01a037de-9460-7960-b1d0-e6c11c862521
+    final_message_id: item-857
+    artifact_sha256: 08ccd86f65c18c32675fd143cb2566556f01cd4d61387bb0a4b9959ffb4c0545
+    summary: {s1: 0, s2: 0, s3: 0, unknown: 16}
+  reviewer_b:
+    declaration_id: GCWORLD-KDS-D12-C1-REVIEWER-B-DECLARATION-20260825-023
+    role: 项目群知识工程与内容权威责任方
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    turn_id: 01a037dc-2365-7273-83eb-e8360334e596
+    final_message_id: item-5100
+    artifact_sha256: 17a8b4a60746d8443e648aeef6908e4f10f7f825a0bea89049236efc18953575
+    summary: {s1: 0, s2: 0, s3: 0, unknown: 16}
+decision_rule_applied:
+  - 任一责任方为UNKNOWN时最终结果保持UNKNOWN
+  - 元数据、路径、权限、零字节或相同SHA不得单独支持降低等级
+  - UNKNOWN进入例外队列，不进入D12-R2或文件处置
+common_final_reason_codes:
+  - authority_owner_confirmation_missing
+  - target_audience_unconfirmed
+  - sensitivity_boundary_unconfirmed
+  - classification_validity_unconfirmed
+  - metadata_insufficient_for_s1_s2_s3
+common_scope: sealed_path_only_classification_governance
+common_valid_until: null
+path_decisions:
+  - {exception_id: D12-C1-EXC-001, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-002, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-003, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-004, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-005, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-006, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-007, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-008, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-009, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-010, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-011, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-012, path: 工业绿链/变更告警_2026-08-25.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-013, path: 工业绿链/周报/周报_2026W35.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-014, path: 工业绿链/日报/晨报-2026-08-25.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-015, path: 工业绿链/月报/月报_2026-08.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+  - {exception_id: D12-C1-EXC-016, path: 99_Reports/ecosystem-health-2026-08-25.md, reviewer_a: UNKNOWN, reviewer_b: UNKNOWN, final_classification: UNKNOWN}
+summary:
+  total: 16
+  reviewer_agreement_unknown: 16
+  disagreement: 0
+  final_s1: 0
+  final_s2: 0
+  final_s3: 0
+  final_unknown: 16
+  exception_queue_entries: 16
+  registrable_classifications: 0
+  d12_r2_eligible_paths: 0
+future_route:
+  further_classification_requires_separate_d12_c2_request: true
+  d12_c2_authorized: false
+  d12_r2_authorized: false
+  d12_n_authorized: false
+  d12_d_authorized: false
+gate_receipt:
+  pre_and_reviewer_post_baseline: pass_31_of_31
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze: pass
+zero_operation_statement:
+  unknown_body_frontmatter_field_fragment_string_keyword_or_semantic_reads: 0
+  kds_file_mutations: 0
+  tests_builds_or_formatters: 0
+  service_operations_or_producer_restores: 0
+  staging_commits_pushes_deployments_or_status_promotions: 0
+effect:
+  d12_c1: completed_all_unknown_exception_queue
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  overall_status: partial_d12_c1_complete_d12_c2_not_authorized

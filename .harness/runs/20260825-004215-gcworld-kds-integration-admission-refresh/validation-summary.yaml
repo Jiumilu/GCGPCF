@@ -1,0 +1,395 @@
+run_id: 20260825-004215-gcworld-kds-integration-admission-refresh
+change_id: gcworld-kds-authoritative-integration
+generated_at: "2026-08-25T12:01:37Z"
+language: zh-CN
+result: partial_d12_c2_s2_stopped_by_post_gate_drift
+checks:
+  authorization_invalidation_contract:
+    result: pass
+    detail: 旧授权已标记为激活前失效，所有实现和KDS权限均为关闭
+  refreshed_owner_disposition_scope:
+    result: pass
+    expected_paths: 17
+    actual_paths: 17
+    detail: 17个叶子路径与KDS只读状态逐项一致
+  openspec_strict:
+    result: pass
+    progress: 3/17
+  document_gate:
+    result: pass
+    missing_metadata: 0
+    missing_readme_dirs: 0
+  project_group_gate:
+    result: pass
+    checked_repositories: 17
+    passed_repositories: 17
+    failed_repositories: 0
+    gfis_status_ceiling: repair_required
+  f013_admission:
+    validator_result: pass
+    admission: blocked_dirty_worktree
+    kds_changed_entries: 17
+    kds_staged_entries: 0
+    kds_ahead: 0
+    kds_behind: 0
+    kds_write_authorized: false
+    deployment_authorized: false
+  owner_handoff:
+    result: pass
+    disposition_groups: 7
+    disposition_paths: 17
+    zero_kds_mutation: true
+    delivered_request_hash_reconstructed: true
+  next_authorization_request:
+    result: invalidated_by_post_handoff_drift
+    decisions: [D5, D6, D7, D8]
+    all_decisions: deferred_unapproved
+  post_handoff_drift:
+    result: detected
+    previous_entries: 17
+    current_entries: 28
+    newly_added_entries: 11
+    current_status_sha256: 800ba7bafc9d3616bfc48dce34de891ba8df19899dd8e8f0646f7390125c85e8
+    owner_scope_expansion_confirmation: approved
+    owner_scope_request_dispatched: true
+    owner_scope_acknowledgement: pass_28_of_28
+    owner_supplemental_response_pending: false
+  expanded_28_owner_handoff:
+    result: pass
+    total_entries: 28
+    supplemental_entries: 11
+    supplemental_entries_attributed: 11
+    previous_four_hermes_jobs_outputs: 2
+    additional_hermes_jobs_outputs: 9
+    additional_hermes_jobs: 7
+    baseline_before_after_match: true
+    kds_file_content_read: false
+    kds_or_service_mutation: false
+  refreshed_stabilization_authorization:
+    result: invalidated_before_human_decision
+    request_id: GCWORLD-KDS-STABILIZATION-AUTH-REQUEST-20260825-002
+    decisions: [D5, D6, D7, D8, D9, D10, D11, D12]
+    any_execution_authorized: false
+  post_d4_drift:
+    result: detected
+    previous_entries: 28
+    current_entries: 29
+    added_entries: 1
+    added_path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    current_status_sha256: 6660ce71d53e04a34bddecefdf351e666a36842d23f11db58e418f61374174c2
+    file_content_read: false
+    owner_attribution_inferred: false
+    owner_scope_expansion_confirmation: pending
+    owner_scope_request_dispatched: false
+  post_29_approval_drift:
+    result: detected
+    approval_recorded: true
+    approval_effective: false
+    previous_entries: 29
+    current_entries: 31
+    added_entries: 2
+    added_paths: [api_server.py, tests/test_api_smoke.py]
+    current_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    file_or_diff_content_read: false
+    owner_attribution_inferred: false
+    owner_dispatch_performed: false
+    owner_scope_expansion_confirmation: approved
+  expanded_31_owner_dispatch:
+    result: pass
+    total_entries: 31
+    supplemental_entries: 3
+    approval_receipt: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-004
+    dispatch_receipt: GCWORLD-KDS-OWNER-DISPATCH-RECEIPT-20260825-004
+    target_turn_status: completed
+    owner_acknowledgement: pass_31_of_31
+    request_hash_difference: explained_by_post_dispatch_status_update
+    file_or_diff_content_read_authorized: false
+    kds_or_service_mutation_authorized: false
+  expanded_31_owner_handoff:
+    result: pass_with_governance_hash_rework_closed
+    supplemental_entries: 3
+    directly_attributed_entries: 1
+    entries_with_unconfirmed_specific_editor_or_task: 2
+    baseline_before_after_match: true
+    file_or_diff_content_read: false
+    kds_or_service_mutation: false
+    governance_hash_reseal_receipt: GCWORLD-KDS-REQUEST-RESEAL-RECEIPT-20260825-004
+  refreshed_31_stabilization_authorization:
+    result: partially_executed_then_invalidated
+    request_id: GCWORLD-KDS-STABILIZATION-AUTH-REQUEST-20260825-003
+    decisions: [D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15]
+    any_execution_authorized: true_for_d5_to_d9_only
+  d5_d7_execution:
+    result: pass
+    codex_automations_paused: 3
+    hermes_jobs_paused: 11
+    gbrain_autopilot_and_worker_quiet: true
+    force_kill: false
+    restore_performed: false
+  d8_d9_execution:
+    result: stopped_by_drift
+    d8_freeze_established: false
+    d9_metadata_probe_only: true
+    d9_edit_freeze_established: false
+    file_or_diff_content_read: false
+  post_d5_d7_drift:
+    result: detected
+    previous_entries: 31
+    current_entries: 32
+    added_path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+    ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+    expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+    likely_current_turn_python_bytecode_side_effect: true
+    cleanup_or_restore_performed: false
+  followup_authorization:
+    result: executed
+    request_id: GCWORLD-KDS-32-FOLLOWUP-AUTH-REQUEST-20260825-004
+    decisions: [D16, D17]
+  d16_single_path_restore:
+    result: pass
+    target: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+    other_kds_paths_touched: false
+    restored_ordinary_entries: 31
+    restored_ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    restored_expanded_entries: 31
+    restored_expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  d17_freeze_and_metadata_investigation:
+    result: pass_with_specific_source_unconfirmed
+    kds_responsibility_acknowledged: true
+    gpcf_coordination_acknowledged: true
+    known_inflight_activity: none_known_in_freeze_scope
+    matching_import_process: none_observed
+    file_or_diff_content_read: false
+    specific_editor_or_task: unconfirmed
+  stable_window:
+    result: pass
+    t0: "2026-08-25T06:16:59Z"
+    final_checkpoint: "2026-08-25T06:32:42.983103Z"
+    duration_seconds: 944
+    strict_checkpoint_interval_seconds: 330
+    metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+    minimum_observation_complete: true
+    drift_detected: false
+  d10_authorization:
+    result: approved_and_executed_read_only
+    request_id: GCWORLD-KDS-POST-STABLE-WINDOW-AUTH-REQUEST-20260825-005
+    approval_receipt: GCWORLD-KDS-D10-APPROVAL-RECEIPT-20260825-011
+    owner_review_receipt: GCWORLD-KDS-D10-OWNER-REVIEW-RECEIPT-20260825-013
+    code_content_or_diff_read: true_for_two_authorized_paths_only
+    reviewed_paths: [api_server.py, tests/test_api_smoke.py]
+    requirement_domain: confirmed_notion_readonly_mirror
+    specific_requirement_or_editor: unconfirmed
+    high_risk_finding: 详情读取的授权空间与文档路径未绑定
+    baseline_before_after_match: true
+    producer_freeze_before_after_match: true
+    kds_write: false
+    test_run: false
+    service_operation: false
+  d12_r1_authorization:
+    result: approved_and_executed_read_only
+    request_id: GCWORLD-KDS-D12-READONLY-REVIEW-AUTH-REQUEST-20260825-014
+    request_sha256: 361b5846f92451cdd10b5808333ac081faeabf158ccc5d103d3697f75f067870
+    target_paths: 29
+    classification_before_content: required
+    s3_or_unknown_content_read: prohibited
+    content_read_performed: true_for_13_s1_s2_paths_only
+    classification_result:
+      s1: 5
+      s2: 8
+      unknown: 16
+      s3: 0
+      conflicts: 0
+    body_read_paths: 13
+    metadata_only_paths: 16
+    independent_commit_candidates: 6
+    immutable_external_archive_candidates: 23
+    delete_candidates: 0
+    owner_review_receipt: GCWORLD-KDS-D12-R1-OWNER-REVIEW-RECEIPT-20260825-018
+    baseline_before_after_match: true
+    producer_freeze_before_after_match: true
+    zero_kds_mutation: true
+  d12_c1_authorization:
+    result: approved_and_executed_zero_body
+    request_id: GCWORLD-KDS-D12-C1-CLASSIFICATION-AUTH-REQUEST-20260825-019
+    request_sha256: 364c2d00c6d980708f23875750f5940ebe8e4de16bc2da5eee382e07c98d6d15
+    validation_receipt: GCWORLD-KDS-D12-C1-REQUEST-VALIDATION-RECEIPT-20260825-020
+    validation_receipt_sha256: d6b050f389241c15f1a639bc383154c3d02621c62c8b5affe1996553405afe6e
+    request_seal: pass
+    approval_receipt: GCWORLD-KDS-D12-C1-APPROVAL-RECEIPT-20260825-021
+    dual_declarations: pass_two_independent_responsibility_statements
+    classification_receipt: GCWORLD-KDS-D12-C1-CLASSIFICATION-RECEIPT-20260825-024
+    classification_receipt_sha256: 0974b4e789cc64a3033f12c2ee200ab800e1ab4fb81e8e8235566e223c69d4ba
+    target_paths: 16
+    classification_method: 双责任方基于既有元数据与签名式责任声明独立判定
+    unknown_content_read: prohibited
+    unresolved_policy: 保持UNKNOWN并进入例外队列
+    reviewer_a_unknown: 16
+    reviewer_b_unknown: 16
+    final_unknown: 16
+    exception_queue_entries: 16
+    registrable_classifications: 0
+    d12_r2_eligible_paths: 0
+    kds_mutation_authorized: false
+    test_service_restore_authorized: false
+    test_or_service_operation_authorized: false
+  d12_c2_authorization:
+    result: invalidated_before_human_decision_by_post_gate_drift
+    request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-20260825-025
+    request_sha256: 0eb9ed26aea2010bd5011f6f7e20f956bd0d55f49fc407b3912aa604a3c62907
+    source_d12_c1_receipt_sha256: 0974b4e789cc64a3033f12c2ee200ab800e1ab4fb81e8e8235566e223c69d4ba
+    target_paths: 16
+    authority_groups: 6
+    required_fields: [责任主体, 授权依据, 目标受众, 业务敏感边界, scope, valid_until]
+    unknown_body_read: prohibited
+    insufficient_evidence_policy: 保持UNKNOWN
+    execution_started: false
+    post_request_drift_receipt: GCWORLD-KDS-POST-D12-C2-REQUEST-DRIFT-20260825-026
+    post_request_drift_receipt_sha256: a47806a0279274770b99bfab11ec567c8d20df08933d546f8814c1d956c05775
+    post_request_kds_entries: 32
+    drift_path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+    d12_r2_n_d_authorized: false
+    kds_mutation_test_service_restore_authorized: false
+  d12_c2_reseal:
+    result: pass_single_path_restore_and_new_request_seal
+    approval_receipt: GCWORLD-KDS-D12-C2-RESEAL-APPROVAL-RECEIPT-20260825-027
+    approval_receipt_sha256: 4f062c577ab99a7823e4c0fe3f1cd665e4c5167cc5f90c145b58475c197355b9
+    execution_receipt: GCWORLD-KDS-D12-C2-RESEAL-EXECUTION-RECEIPT-20260825-028
+    execution_receipt_sha256: 47253af3ff97317f4c4c8be1886decb1e37e0b0a6a47b6962e8f85d491fd5490
+    restored_target: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+    other_kds_paths_touched: false
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+    strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+    producer_freeze: pass
+    r1_request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-R1-20260825-029
+    r1_request_sha256: 236d352a3fe665553ef40627e3d80c93391c203e282e762e5c37196b85c10799
+    r1_request_status: invalidated_before_human_decision
+    r1_validation_drift_receipt_sha256: 3a164d21751c03387449e773f13f5ab716126778f1e44500f000f1dbc7bc5c90
+    final_recovery_execution_receipt_sha256: bbeb87683182bf30c04e871709a292431303950ad5707e2bb944351caf4e7862
+    new_request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-R2-20260825-032
+    new_request_sha256: ec2c0a25ca576e7d0404a2739dc8666cf8335f80aedf827aa52639854e9797b5
+    new_request_status: approved_and_executed_partial
+    old_request_reused: false
+    d12_c2_execution_started: true
+    unknown_content_read: false
+  d12_c2_r2_execution:
+    result: partial_all_unknown_authority_evidence_incomplete
+    approval_receipt_sha256: e8c4e2f33ff41f884f72f1c2869cc269d3eff060de8917f2fb3e2af8b69fc46e
+    declaration_request_sha256: 71aa89b040fa162b447712eeec69cba976fa704cfd4917ae31b89a25b8121557
+    reviewer_a_declaration_sha256: 70fe346bdf65a3327798428078d829fa0cda15a5bb2fe3ef78cc4cbd208956f5
+    reviewer_a_declaration_received: true
+    reviewer_a_authority_verified: 0
+    reviewer_a_unknown: 16
+    reviewer_b_declaration_received: false
+    reviewer_b_nonresponse_receipt_sha256: dabe226c95ad9f5c157c390ee2a6dc56044a1a2627a4a488f2d7eaae573e4dc5
+    classification_receipt_sha256: a47027483bb3990c9e17f8df2c9a398d4a5de922b52cd7cec3332ddca35f44f8
+    final_s1: 0
+    final_s2: 0
+    final_s3: 0
+    final_unknown: 16
+    exception_queue_entries: 16
+    registrable_classifications: 0
+    d12_r2_eligible_paths: 0
+    unknown_content_read: false
+    kds_write_test_service_restore: false
+  d12_c2_s1_request:
+    result: pass_sealed_pending_independent_human_decision
+    request_id: GCWORLD-KDS-D12-C2-S1-AUTHORITY-NOMINATION-AUTH-REQUEST-20260825-038
+    request_sha256: d586527ec6b5df84b85b7db780e01f52ccd4b5e4b3e671dec5ec57b7eba43a3e
+    source_d12_c2_r2_receipt_sha256: a47027483bb3990c9e17f8df2c9a398d4a5de922b52cd7cec3332ddca35f44f8
+    decisions: [D12-C2-S1-A, D12-C2-S1-B, D12-C2-S1-C]
+    authority_groups: 6
+    target_paths: 16
+    reviewer_b_replacement_requires_explicit_subject_thread_and_validity: true
+    unknown_content_read: false
+    execution_started: false
+    d12_r2_n_d_authorized: false
+    kds_write_test_service_restore_authorized: false
+  d12_c2_s1_execution:
+    result: partial_no_verified_content_authority
+    approval_receipt_sha256: dc8417b6c7062c6060e79332e9804481a46fb19a7160e8d7150f5c5e3b2e2768
+    nomination_request_sha256: 838458aab13431e7802f02d28a7a9a4f1713e07f7f6110d9fa338c8b88eb48f9
+    kds_nomination_declaration_sha256: f85e6de278652397197573c43484f40e6807183a3caa6af09ca91ec02625f5f5
+    knowledge_nonresponse_receipt_sha256: 2af94e954a5e470d01be416c06553091f932e56874185a880e96dec8f218314c
+    execution_receipt_sha256: ea9097bb41d1936bb06acbcd55d94423ec9baab57c7bb7c0fbf65236973ad6ad
+    authority_groups: 6
+    verified_authority_groups: 0
+    target_ids: 16
+    final_unknown: 16
+    s1_a_status: completed_partial_no_verified_authority
+    s1_b_status: not_approved_not_executed
+    s1_c_status: not_executed_no_verified_recipient
+    supplemental_requests_dispatched: 0
+    reviewer_b_replaced: false
+    unknown_content_read: false
+    kds_write_test_service_restore: false
+  d12_c2_s2_request:
+    result: pass_sealed_pending_independent_human_designation
+    request_id: GCWORLD-KDS-D12-C2-S2-HUMAN-AUTHORITY-DESIGNATION-REQUEST-20260825-044
+    request_sha256: 7f7d6ecd38333fdb15f3427117f605793a23b7a9bd99db0b99ccc63d8106cdb6
+    source_s1_execution_receipt_sha256: ea9097bb41d1936bb06acbcd55d94423ec9baab57c7bb7c0fbf65236973ad6ad
+    authority_groups: 6
+    target_ids: 16
+    human_designations_recorded: 0
+    unknown_content_read: false
+    execution_started: false
+    s1_c_d12_r2_n_d_authorized: false
+    kds_write_test_service_restore_authorized: false
+  d12_c2_s2_execution:
+    result: partial_all_group_decisions_incomplete
+    approval_input_receipt_sha256: d54d33b8281d6a10bb3d1fc2e039e18ecacc94af500499ba8a965f5fa924b1d5
+    execution_receipt_sha256: 9797659abb0aecc3b78b5d8624cdad0f27c59d90f14158a8ee89fdfcb3d31cde
+    authority_groups: 6
+    valid_group_decisions: 0
+    invalid_or_missing_group_decisions: 6
+    designated_authority_groups: 0
+    keep_unknown_explicit_groups: 0
+    final_unknown_target_ids: 16
+    s1_c_requests_dispatched: 0
+    d12_r2_n_d_eligible_target_ids: 0
+    authority_inferred: false
+    unknown_content_read: false
+    kds_write_test_service_restore: false
+  d12_c2_s2_supplemental_closure:
+    result: stopped_post_gate_drift_before_effective_closure
+    source_request_sha256: 7f7d6ecd38333fdb15f3427117f605793a23b7a9bd99db0b99ccc63d8106cdb6
+    prior_partial_execution_receipt_sha256: 9797659abb0aecc3b78b5d8624cdad0f27c59d90f14158a8ee89fdfcb3d31cde
+    supplemental_decision_receipt_sha256: 0d7d888f4f66b0c3dd2e32920b13e92d1f2c2a25665c203471be1aca626a50d2
+    closure_receipt_sha256: 08cf99ff8e6c63599790fda841e813b558a6fc3dc2fad464e9234d85c6f9c17b
+    post_gate_drift_receipt_sha256: 9671fc888608b0882bc38fd4334f8acf0dcc7c06110267348d904c31a48c5c33
+    human_supplemental_input: A
+    normalized_decision: 六个分组全部keep_unknown
+    authority_groups: 6
+    explicit_group_decisions: 6
+    keep_unknown_groups: 6
+    designated_authority_groups: 0
+    final_unknown_target_ids: 16
+    exception_queue_entries: 16
+    s1_c_requests_dispatched: 0
+    d12_r2_n_d_eligible_target_ids: 0
+    pre_gate_entries: 31
+    post_gate_entries: 32
+    drift_path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+    non_target_31_item_baseline_match: true
+    effective_closure: false
+    unknown_content_read: false
+    kds_write_test_service_restore: false
+conclusion:
+  implementation_may_start: false
+  task_1_2_may_complete: false
+  owner_request_may_dispatch: true
+  owner_request_dispatched: true
+  owner_acknowledgement_received: true
+  owner_baseline_revalidation: pass_31_of_31
+  owner_response_pending: false
+  owner_handoff_received: true
+  d4_previous_28_read_only_owner_analysis_complete: true
+  d4_current_29_read_only_owner_analysis_complete: false
+  d4_current_31_read_only_owner_analysis_complete: true
+  governance_hash_rework_closed: true
+  decisions_completed: [D5, D6, D7, D8, D9, D10, D16, D17]
+  decisions_stopped_by_drift: []
+  decisions_deferred: [D11, D12, D13, D14, D15]
+  pause_reason: 老卢已明确六组全部keep_unknown，但最终复核时KDS由31项漂移至32项；按硬门禁立即停止，等待重新授权仅恢复该单一路径后再完成S2收口

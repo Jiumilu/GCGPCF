@@ -1,0 +1,163 @@
+request_id: GCWORLD-KDS-D12-C2-S1-AUTHORITY-NOMINATION-AUTH-REQUEST-20260825-038
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T11:04:07Z"
+status: pending_independent_human_decision
+title: D12-C2-S1——六类真实内容权威主体提名、核验与补充声明授权
+source_evidence:
+  d12_c2_r2_classification_receipt_sha256: a47027483bb3990c9e17f8df2c9a398d4a5de922b52cd7cec3332ddca35f44f8
+  d12_c2_r2_result: active_partial_not_complete
+  final_unknown_paths: 16
+  registrable_classifications: 0
+  reviewer_a_result: 16项权威未验证且证据不足
+  reviewer_b_result: 未在受控窗口返回声明
+purpose:
+  - 仅通过既有任务、组织、线程与授权元数据，为六类路径确认真实内容权威主体
+  - 对经明确提名并核验的权威主体发出逐路径零正文声明请求
+  - 补齐目标受众、业务敏感边界、scope、valid_from、valid_until、分发约束和撤销条件
+  - 在原reviewer_b不可用时，仅依据人工明确指定决定是否启用独立替代复核方
+activation_preconditions:
+  kds_repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze:
+    codex_automations_paused: 3_of_3
+    hermes_jobs_disabled: 11_of_11
+    gbrain_autopilot_absent: true
+    matching_import_or_gbrain_processes: 0
+  stop_if:
+    - 任一31项基线字段或摘要不匹配
+    - 任一生产者恢复或出现冻结范围内写入活动
+    - 需要读取UNKNOWN内容才能判断权威主体或分类
+requested_decisions:
+  d12_c2_s1_a:
+    title: 六类真实内容权威主体提名与核验
+    status: pending
+    authorized_if_approved:
+      - 仅用既有任务、组织、人员、线程和授权元数据寻找每类责任主体
+      - 向候选责任主体发送不含目标内容的权威资格确认请求
+      - 要求提名者与被提名主体分别确认authority_basis、scope、valid_from和valid_until
+      - 无法确认真实权威主体时保持该组全部UNKNOWN
+  d12_c2_s1_b:
+    title: 原reviewer_b不可用时的独立替代复核方指定
+    status: pending
+    authorized_if_approved:
+      - 仅在老卢明确指定具体责任主体、线程和有效期后启用替代复核方
+      - 替代复核方必须独立于KDS reviewer_a且不得是目标生产任务自身
+      - 未取得明确指定时不得自动替换、转派或以当前执行智能体代签
+  d12_c2_s1_c:
+    title: 经验证权威主体的逐路径零正文补充声明
+    status: pending
+    authorized_if_approved:
+      - 仅向已完成S1-A核验的权威主体发送16项逐路径声明请求
+      - 仅核验声明字段完整性与权威依据，不读取目标内容
+      - 两类独立声明均完整且一致时才形成分类候选；否则继续UNKNOWN
+authority_groups:
+  distributed_governance:
+    paths: 2
+    producer_candidate: automation-5（分步式知识库统一治理巡检）
+    verified_content_authority: null
+  feishu_xiaog_closure:
+    paths: 2
+    producer_candidate: workwiki-kds（飞书小即-WorkWiki-KDS闭环监控）
+    verified_content_authority: null
+  macmini_workwiki:
+    paths: 2
+    producer_candidate: macmini-workwiki（Macmini WorkWiki全量分析同步）
+    verified_content_authority: null
+  hermes_evolution_reports:
+    paths: 2
+    producer_candidate: 111e8983641a（GlobalCloud自进化事件扫描）
+    verified_content_authority: null
+  industrial_greenchain:
+    paths: 7
+    producer_candidates: [43652c3c9b4d, 99683d54df08, 2f3355dec02f, 155b3671abdd, 87c8214c0e57, dbce6d580114]
+    possible_domain_owner: 老卢或工业绿链项目责任主体，必须由人工明确确认，不得推断
+    verified_content_authority: null
+  ecosystem_health:
+    paths: 1
+    producer_candidate: wiki-ecosystem-health-3d（Wiki生态一致性健康检查）
+    verified_content_authority: null
+targets:
+  - {id: D12-C1-EXC-001, group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md}
+  - {id: D12-C1-EXC-002, group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md}
+  - {id: D12-C1-EXC-003, group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json}
+  - {id: D12-C1-EXC-004, group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json}
+  - {id: D12-C1-EXC-005, group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt}
+  - {id: D12-C1-EXC-006, group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt}
+  - {id: D12-C1-EXC-007, group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md}
+  - {id: D12-C1-EXC-008, group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md}
+  - {id: D12-C1-EXC-009, group: industrial_greenchain, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json}
+  - {id: D12-C1-EXC-010, group: industrial_greenchain, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md}
+  - {id: D12-C1-EXC-011, group: industrial_greenchain, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md}
+  - {id: D12-C1-EXC-012, group: industrial_greenchain, path: 工业绿链/变更告警_2026-08-25.md}
+  - {id: D12-C1-EXC-013, group: industrial_greenchain, path: 工业绿链/周报/周报_2026W35.md}
+  - {id: D12-C1-EXC-014, group: industrial_greenchain, path: 工业绿链/日报/晨报-2026-08-25.md}
+  - {id: D12-C1-EXC-015, group: industrial_greenchain, path: 工业绿链/月报/月报_2026-08.md}
+  - {id: D12-C1-EXC-016, group: ecosystem_health, path: 99_Reports/ecosystem-health-2026-08-25.md}
+required_authority_nomination_fields:
+  - nomination_id
+  - authority_group
+  - authority_subject_name_or_asset_id
+  - authority_role
+  - authority_basis
+  - nominator_identity
+  - signed_thread_or_identity
+  - target_ids
+  - scope
+  - valid_from
+  - valid_until
+  - target_audience
+  - business_sensitivity_boundary
+  - distribution_constraints
+  - revocation_or_expiry_condition
+  - conflict_of_interest_statement
+required_supplemental_declaration_fields:
+  - statement_id
+  - target_id
+  - authority_subject_name_or_asset_id
+  - authority_basis
+  - proposed_classification
+  - target_audience
+  - business_sensitivity_boundary
+  - scope
+  - valid_from
+  - valid_until
+  - distribution_constraints
+  - revocation_or_expiry_condition
+  - zero_target_body_read_statement
+  - evidence_sufficiency
+decision_rules:
+  - 生产任务、调度器、生成脚本或自动化名称只能作为责任候选，不能自行成为内容权威
+  - 任一提名字段缺失、权威依据不可验证、scope不清或valid_until缺失时，该组保持UNKNOWN
+  - 替代reviewer_b未经老卢明确指定时不得启用
+  - 任一独立声明缺失、不一致、证据不足或仍为UNKNOWN时，最终保持UNKNOWN
+  - D12-C2-S1最多形成分类候选，不得登记分类、打开正文或触发后续处置
+strict_prohibitions:
+  - 读取、搜索、提取或解析16项UNKNOWN正文、frontmatter、字段、片段、字符串、关键词、语义或差异
+  - 启动、恢复或运行任何生产自动化、Hermes任务、GBrain、导入、同步或KDS命令
+  - 自动指定内容权威主体、自动替换reviewer_b或由执行智能体代签
+  - 执行D12-R2、D12-N、D12-D或任何文件处置
+  - 运行测试、停止或重启服务、访问数据库、API、凭据或外部写接口
+  - 暂存、提交、推送、部署、归档、验收或状态提升
+required_output_if_later_approved:
+  - 六类逐组权威主体提名、核验依据、有效范围和未解析项
+  - 经人工指定的替代reviewer_b身份或继续缺席结论
+  - 16项逐路径补充声明及完整性检查
+  - 更新后的UNKNOWN例外队列和分类候选统计
+  - 执行前后31项密封基线与生产者冻结复核
+effect:
+  d12_c2_s1_executed: false
+  d12_c2_complete: false
+  d12_r2_n_d_authorized: false
+  implementation_or_status_promotion_authorized: false
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null

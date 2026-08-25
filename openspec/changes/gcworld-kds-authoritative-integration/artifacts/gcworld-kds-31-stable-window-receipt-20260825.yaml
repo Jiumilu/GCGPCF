@@ -1,0 +1,68 @@
+receipt_id: GCWORLD-KDS-31-STABLE-WINDOW-RECEIPT-20260825-010
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T06:32:43Z"
+source_execution_receipt: GCWORLD-KDS-D16-D17-EXECUTION-RECEIPT-20260825-009
+baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+observations:
+  - id: T0
+    observed_at: "2026-08-25T06:16:59Z"
+    result: original_31_item_seal_restored
+  - id: metadata_checkpoint_1
+    observed_at: "2026-08-25T06:27:13.423522Z"
+    expanded_entries: 31
+    metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  - id: metadata_checkpoint_2
+    observed_at: "2026-08-25T06:32:42.983103Z"
+    expanded_entries: 31
+    metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+duration:
+  t0_to_final_seconds: 944
+  strict_checkpoint_interval_seconds: 330
+  minimum_ten_minutes_met: true
+  minimum_five_minute_checkpoint_interval_met: true
+metadata_contract:
+  included_fields: [Git状态, 路径, 文件类型, 字节大小, 纳秒修改时间, 纳秒状态变化时间, inode]
+  file_content_read: false
+producer_controls:
+  codex_automations:
+    expected_paused: 3
+    actual_paused: 3
+  hermes_jobs:
+    expected_paused: 11
+    actual_paused: 11
+  gbrain_autopilot_and_worker:
+    expected: quiet
+    actual: quiet
+  gcworld_or_waes_manual_import_process:
+    expected: none
+    actual: none_observed
+  responsibility_freeze_acknowledgements: 2
+result:
+  stable_window: pass
+  drift_detected: false
+  disposition_authorized: false
+  code_content_review_authorized: false
+post_gate_validation:
+  observed_at: "2026-08-25T06:36:06.624213Z"
+  expanded_entries: 31
+  metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  openspec_strict: pass
+  document_gate: pass
+  project_group_gate: pass_17_of_17
+  python_bytecode_write_disabled: true
+effect:
+  task_1_2_complete: false
+  f013_admission: blocked_dirty_worktree
+  task_2_1_allowed: false
+  stage_a_active: false

@@ -1,0 +1,78 @@
+handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-003
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+received_at: "2026-08-25T05:38:51Z"
+source:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+  turn_id: 01a03768-950b-71e0-8a6b-6432d0ffee43
+  final_message_id: item-823
+  classification: read_only_analysis_completed_with_governance_hash_rework
+input_integrity:
+  delivered_request_sha256: fe2069ecedd17a4bafa26fc0069ebaa40a74005be62c17fc09866e39e9474028
+  owner_observed_request_sha256: 36b66b563606e6af1d7da63a25b89545bcbec8d18e251b0fb22d9908dd4c5a1c
+  final_resealed_request_sha256: c473ab29c558724e3f101e4a30840f8f0488cf9064f63e8ec7a2d9721af60d1a
+  approval_receipt_sha256: 075c2e17ea4316f0745620e7a8ab3c81272aabed52a634303fac7d2d261c86df
+  drift_record_sha256: 55ad2309eddf3b015c0dc4888593a22f62e6d78a8b456f048eb053afb304b865
+  reseal_receipt_id: GCWORLD-KDS-REQUEST-RESEAL-RECEIPT-20260825-004
+baseline_before_and_after:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_nul_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_nul_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  opsx_lock: absent
+  f013_admission: blocked_dirty_worktree
+supplemental_attribution:
+  entries: 3
+  items:
+    - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+      owner: Hermes任务111e8983641a与相应内容责任方
+      direct_source: GlobalCloud自进化事件扫描任务的精确输出模板
+      schedule_and_runtime: 任务已启用，每4小时第10分钟运行；最近成功运行时间与文件生成时间形成直接证据链
+      disposition: 保留为运行候选证据，至少至D4和F-013阻断关闭；不得自动提升为权威事实
+    - path: api_server.py
+      owner: KDS源码责任方
+      direct_source: 具体编辑任务或编辑者未能从授权证据确认
+      runtime_relation: 当前KDS进程运行该路径，仅证明运行消费，不证明服务生成源码
+      disposition: 从D4清理范围隔离并作为独立KDS代码变更审阅；来源、需求、测试和授权闭合前保持原样
+    - path: tests/test_api_smoke.py
+      owner: KDS测试责任方
+      direct_source: 具体编辑任务或编辑者未能从授权证据确认
+      runtime_relation: 与api_server.py修改时间完全一致且inode连续，仅支持同批改动推断，不能证明来源
+      disposition: 与api_server.py作为代码和测试候选单元隔离审阅；不得单独清理、提交或回滚
+stable_window_scope:
+  inherited_producers:
+    codex_automations: [macmini-workwiki, workwiki-kds, automation-5]
+    hermes_jobs: 11
+    other: [GBrain autopilot及worker, GCWORLD与WAES人工导入活动]
+  added_producers_or_risks:
+    - api_server.py与tests/test_api_smoke.py的开发编辑源
+    - KDS运行进程在窗口内重启、替换源码或执行未授权测试的风险
+  protocol:
+    - 分别取得生产者控制授权并等待已启动任务自然结束
+    - 无活跃生产者后记录T0完整NUL状态
+    - 间隔5分钟复核两次路径、大小、修改时间和状态摘要
+    - 连续稳定至少10分钟，单次处置窗口建议不超过30分钟
+    - 任一漂移立即作废窗口并重新密封
+    - 文件处置、生产者恢复和F-013重验分别授权
+zero_mutation_statement:
+  file_or_diff_content_read: 0
+  kds_files_created_modified_moved_deleted: 0
+  staging_commit_push: 0
+  automation_or_service_operations: 0
+  database_api_credentials: 0
+  tests_deployment_acceptance_archive_promotion: 0
+result:
+  d4_read_only_owner_analysis_complete: true
+  governance_hash_rework_closed_by_gpcf: true
+  stable_window_established: false
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  status: active_partial_not_complete

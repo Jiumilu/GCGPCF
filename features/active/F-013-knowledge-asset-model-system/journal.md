@@ -5388,3 +5388,107 @@ loop_cost_level: medium
    - Evidence checks passed；保留治理阻塞：gpcf_a10r27_current_truth_4file_delta_pending_independent_review_and_separate_commit_push_disposition；kds_dirty_worktree_current_changed_entries_blocks_admission_and_owner_disposition；kds_green_supply_chain_role_view_local_commit_pending_separate_human_authorization；brain_release0_external_daily_sync_post_sync_governance_disposition_pending；studio_release0_external_daily_sync_post_sync_governance_disposition_pending；kds_release0_runtime_activation_independently_verified_local_gbrain_missing_knowledge_intake_audit_relation；kds_local_gbrain_schema_inventory_and_separate_migration_fixture_authorization_required；studio_gehua_authoritative_project_session_target_fixture_lifecycle_not_executed；release0_authenticated_search_wikipreview_chat_e2e_not_authorized_and_current_browser_audit_missing；kds_p1_apply_blocked_by_dirty_worktree；kds_stage_b_read_admission_technical_verified_governance_blocked；studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review；studio_a6_external_daily_sync_commit_push_requires_governance_disposition；unexpected_external_kds_local_mirror_write_requires_review；brain_authenticated_readonly_e2e_deferred_pending_a10_control；mmc_a9_bounded_read_subset_technical_verified_global_policy_not_narrowed；mmc_delegation_and_human_confirmation_pending
 5. 是否可以提交？
    - 否。
+
+### Iteration 323
+
+1. 这轮做什么？
+   - 按用户明确授权，将KDS本地领先的4个受控提交以普通快进方式推送至远端主分支，并复核F-013只读准入事实。
+2. 改了什么？
+   - KDS远端主分支由 `2ac85c55163b7acf0ede699184ac360579ccefaa` 快进到 `cbeeddc86e6c08a3be7357971a5bc430a10c0027`；本地与远端变为0落后、0领先，工作树保持0项变更。移除两条已被当前事实否定的KDS脏工作树阻塞，不改变F-013的 `active/evaluate/not_complete` 状态。
+3. 怎么验证？
+   - 推送前重新获取远端并核对精确4个提交；推送后再次获取远端，确认本地HEAD与远端主分支完全一致。此前相关KDS回归测试23项通过，GCWORLD回归测试7项通过。
+4. 发现什么问题？
+   - F-013旧阻塞记录与干净工作树事实发生漂移，已作最小事实校正。KDS写入、部署、验收和状态提升仍未授权；GCWORLD内容普查还必须通过独立逐路径分级门禁。
+5. 是否可以提交？
+   - 仅KDS上述4个既有提交已按本轮授权推送；GPCF当前工作区仍包含其他并行变更，本轮不执行GPCF提交或推送。
+
+### Iteration 324
+
+1. 这轮做什么？
+   - 按用户“全量允许”确认，对KDS隔离稳定快照执行GCWORLD全来源受控分级和组织资产候选覆盖评估。
+2. 改了什么？
+   - 仅在GPCF形成授权、分级台账、未决候选台账、关系证据、例外队列、中文覆盖报告和世界初始化规范；未修改KDS来源，也未调用KDS、MMC或业务系统写接口。因本地服务在推送后形成10项新变化，恢复 `kds_p1_apply_blocked_by_dirty_worktree` 当前事实阻塞。
+3. 怎么验证？
+   - 两次扫描对42,971个来源生成完全一致的总账和四份输出摘要；13项GCWORLD回归通过，OpenSpec严格校验通过；来源修改数、KDS写入数、MMC写入数和业务系统写入数均为0。
+4. 发现什么问题？
+   - 87,043个人员或组织提及全部是未决候选，身份归一率为0%；17,338个S3或例外项仍需人工复核。实时KDS保留扫描前既有10项变化，F-013准入应为 `blocked_dirty_worktree`。
+5. 是否可以提交？
+   - 否。本轮只完成来源层全量处置，不授权身份合并、事实提升、KDS写入、部署、验收或状态提升。
+
+### Iteration 325
+
+1. 这轮做什么？
+   - 继续GCWORLD变更第4节，建立职能智能体注册、行动信封、执行账本和四级运行模式治理契约。
+2. 改了什么？
+   - 在GPCF新增职能智能体治理Schema、四组正例、十二组负例、契约摘要清单、确定性校验器和回归测试；没有创建或运行真实智能体，也没有调用外部连接器。
+3. 怎么验证？
+   - 先以缺失产物证明3项测试失败，再实现契约使测试通过；校验覆盖镜像、辅助、委托、自治四种模式，以及建议、草稿、批准执行、拒绝、失败和阻断六种账本结果。
+4. 发现什么问题？
+   - 现阶段只能证明治理契约结构和确定性规则成立，不能证明真实运行安全。对外、资金、合同、身份、权限、政府沟通和业务状态变更保持默认禁止；KDS现有10项变化继续阻断写入准入。
+5. 是否可以提交？
+   - 否。真实智能体注册、运行时接入、外部动作、KDS/MMC写入、部署、验收和状态提升均未授权。
+
+### Iteration 326
+
+1. 这轮做什么？
+   - 继续GCWORLD变更第5节，建立世界原生身份、角色、授权、委托、裁决、责任回执、撤销和派生限制传播契约。
+2. 改了什么？
+   - 在GPCF新增世界原生权限与责任Schema、五组正例、十四组负例、契约摘要清单、确定性校验器和回归测试；没有签发真实授权，也没有修改KDS、MMC或业务系统。
+3. 怎么验证？
+   - 先以缺失产物证明3项测试失败，再实现契约使测试通过；确定性复算覆盖十类对象、授权范围交集、版本化世界快照、提交前再次验证、附义务允许、最终控制主体职责分离、八小时内双人紧急授权、级联撤销、派生数据限制继承及授权引擎故障降级只读。
+4. 发现什么问题？
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明WAES真实裁决、业务执行点强制落实或生产责任链已接入。KDS现有10项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
+5. 是否可以提交？
+   - 否。真实授权、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
+
+### Iteration 327
+
+1. 这轮做什么？
+   - 继续GCWORLD变更第6节，建立世界运行服务、十阶段闭环、任务承诺、行动回执、幂等补偿、模拟分支和事实提升候选契约。
+2. 改了什么？
+   - 在GPCF新增世界运行时Schema、六组正例、十五组负例、契约摘要清单、确定性校验器和回归测试；没有启动真实运行时，也没有执行真实动作或写入事实、KDS、MMC及业务系统。
+3. 怎么验证？
+   - 先以缺失产物证明3项测试失败，再实现契约使测试通过；校验覆盖十类职责分离服务、观察至学习十阶段不可跳步、高风险待确认停止、任务与承诺凭结果及验收证据关闭、部分失败补偿、重复命令幂等、补偿失败显式保留，以及模拟基线、假设、结果和提升候选隔离。
+4. 发现什么问题？
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明GCWORLD运行服务、WAES裁决、KWE确认、MMC连接器或业务执行点已经真实接入。KDS当前14项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
+5. 是否可以提交？
+   - 否。真实执行、事实提升、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
+
+### Iteration 328
+
+1. 这轮做什么？
+   - 继续GCWORLD变更第7节，建立十二个工作中心、单一资产档案、全链路权限裁剪、多租户协作与显式共享契约。
+2. 改了什么？
+   - 在GPCF新增工作台产品Schema、六组正例、十六组负例、契约摘要清单、确定性校验器和回归测试；没有建设真实界面、连接生产数据或执行真实跨租户共享。
+3. 怎么验证？
+   - 先以缺失产物证明3项测试失败，再实现契约使测试通过；确定性校验覆盖十二中心统一导航、十三类资产档案区段、八类投影面的裁剪一致性、统计不可推断、共享对象/字段/目的/期限/再共享/撤销约束，以及撤销后访问拒绝和使用证据保留。
+4. 发现什么问题？
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明真实工作台、WAES权限裁剪或跨租户共享已经接入。KDS当前14项变化继续阻断写入准入；项目群总门禁另因Studio校验器读取缺失的`unresolvedQueue`字段而返回`rework_required`，本轮不越界修改Studio。
+5. 是否可以提交？
+   - 否。真实界面、生产数据连接、跨租户共享、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
+
+### Iteration 329
+
+1. 这轮做什么？
+   - 继续GCWORLD变更第8节，建立七层数据、存储职责、投影重建、统一标识、可靠事件、安全可观测性和P0—P7阶段治理契约。
+2. 改了什么？
+   - 在GPCF新增工程与治理底座Schema、七组正例、二十一组负例、契约摘要清单、确定性校验器和回归测试；没有创建真实存储、接口、事件、凭据或阶段授权。上一轮Studio门禁异常经只读复核确认为证据生成期间的短暂半成品，当前LR-914证据完整且Studio、GPCF及17仓项目群门禁均已恢复通过，未修改Studio。
+3. 怎么验证？
+   - 先以缺失产物证明3项测试失败，再实现契约使测试通过；校验覆盖七层提升边界、七类存储权威、图/索引/缓存可重建、投影差异阻断、统一标识与身份审计、八类接口、事件幂等去重重试死信补偿、秘密与租户隔离、十一项指标及P0—P7独立退出授权。
+4. 发现什么问题？
+   - 当前只证明本地夹具中的结构和语义规则成立，不能证明真实基础设施、事件总线、秘密管理、监控指标或阶段执行已经接入。KDS当前14项变化继续阻断写入准入，身份归一和S3例外人工复核仍未完成。
+5. 是否可以提交？
+   - 否。真实基础设施、事件执行、凭据变更、KDS/MMC/业务写入、外部动作、部署、验收、集成和状态提升均未授权；F-013继续保持 `active / evaluate / not_complete`。
+
+### Iteration 330
+
+1. 这轮做什么？
+   - 对账 Brain BROWSER-R2 单层 canonical response 解包修复的实现、独立复核、本地提交、普通非 force 推送和 F-013 推送后复核证据。
+2. 改了什么？
+   - 新增一份 GPCF 治理工件；确认 Brain `HEAD=origin/main=remote main=9a16c360618db1af6bead46f55fcaf9d433eb40c`、工作树干净，并将两条已过期 Brain/E2E 阻塞替换为当前真实剩余项：Chat 未发送和移动端三栏布局返工。验证器仍要求的 `brain_authenticated_readonly_e2e_deferred_pending_a10_control` 仅作为 compatibility alias 保留。
+3. 怎么验证？
+   - 推送后独立回放单测 1/1、组合回归 30/30、typecheck、精确两文件 ESLint 和 diff-check 均通过；Studio 单层 `data` 响应契约与 Brain 两文件补丁指纹保持一致。受控浏览器证据继承自 BROWSER-R2 执行，本轮未重启服务或重跑浏览器。
+4. 发现什么问题？
+   - 技术修复与推送后复核通过，但 Chat 请求次数仍为 0，移动端三栏虽无横向溢出但可用性需返工；不得据此声明完整真实 E2E、accepted、integrated 或 production_ready。D17 冻结继续生效，未向 KDS 导入资料，未修改 KDS `api_server.py` 或 `tests/test_api_smoke.py`。
+5. 是否可以提交？
+   - 否。本轮仅形成 GPCF 三文件治理对账增量；项目群 operational quality/dependency 门禁及其他并行脏工作树仍未闭合，不提交、不推送、不部署、不提升状态。

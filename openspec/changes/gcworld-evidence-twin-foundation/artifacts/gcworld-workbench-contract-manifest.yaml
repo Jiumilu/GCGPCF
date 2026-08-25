@@ -1,0 +1,28 @@
+contract_id: globalcloud.gcworld.workbench
+contract_version: v1.0
+title: GCWORLD工作台产品契约清单
+status: draft
+scope: 本地夹具与确定性校验，不建设真实界面，不连接生产数据，不执行真实跨租户共享或任何写入
+artifacts:
+  - name: 工作台产品Schema
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-workbench.schema.json
+    sha256: f20b797d24452c487862c2da10adf39c4c921c0d13ab49ef1067117d900b200d
+  - name: 工作台产品正反例
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-workbench-fixtures.json
+    sha256: 29b1026581e5ef769640ad73768c29267298d295570e518b23558cd0e7aa88cf
+  - name: 工作台产品校验器
+    path: tools/kds-sync/validate_gcworld_workbench.py
+    sha256: e7273e7092cc2a548bb429d01ac19bd971125a2a4ed395abe3daed28ca482e3b
+  - name: 工作台产品回归测试
+    path: tests/test_gcworld_workbench.py
+    sha256: 3e45a39c2b5b472d5671d465f4b2c0a259bdffc0abede1e3f9cccabaec406fc8
+status_boundary:
+  real_interface_built: false
+  production_data_connected: false
+  real_cross_tenant_sharing_authorized: false
+  kds_write_authorized: false
+  business_write_authorized: false
+  external_action_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+  completion_status: not_complete

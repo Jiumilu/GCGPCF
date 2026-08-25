@@ -1,0 +1,58 @@
+request_id: GCWORLD-KDS-D10-OWNER-REVIEW-REQUEST-20260825-012
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+issued_at: "2026-08-25T06:41:00Z"
+approval_receipt_ref: GCWORLD-KDS-D10-APPROVAL-RECEIPT-20260825-011
+recipient:
+  responsibility: KDS源码责任方与测试责任方
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+activation_preconditions:
+  required_baseline:
+    branch: main
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+    strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  required_freeze:
+    codex_automations_paused: 3
+    hermes_jobs_disabled: 11
+    gbrain_autopilot_and_worker: quiet
+    gcworld_or_waes_manual_import_process: none_observed
+authorized_read_scope:
+  - api_server.py
+  - tests/test_api_smoke.py
+authorized_operations:
+  - 读取两个文件正文
+  - 读取两个文件相对当前HEAD的差异
+required_findings:
+  - 需求来源及证据强度，无法确认时必须明确标注未确认
+  - 每项变化的目的
+  - api_server.py实现与tests/test_api_smoke.py测试的对应关系
+  - 功能、兼容性、安全、数据和运行风险
+  - 逐文件推荐处置，但不得执行处置
+required_receipt:
+  language: 中文
+  fields:
+    - 审阅前基线与冻结状态
+    - 正文与差异只读审阅结论
+    - 需求来源、目的、代码与测试对应关系、风险及推荐处置
+    - 审阅后基线与冻结状态
+    - 零KDS写入、零测试运行、零服务操作声明
+strict_prohibitions:
+  - 不得读取授权范围外的KDS文件正文或差异
+  - 不得编辑、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 不得运行任何测试
+  - 不得停止或重启KDS服务
+  - 不得执行D12逐路径处置
+  - 不得恢复生产者、部署或提升状态
+stop_conditions:
+  - 31项基线任一字段不匹配
+  - 生产者冻结状态任一项不匹配
+  - 发现完成审阅必须扩大读取范围

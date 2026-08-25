@@ -1,0 +1,35 @@
+receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-003
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-003
+language: zh-CN
+confirmed_at: "2026-08-25T05:27:15Z"
+human_decision_owner: 老卢
+decision: approved
+confirmation_text: 批准将D4只读责任方分析范围从28项扩展为29项，并交付KDS责任方补充分析新增1项。该确认不授权文件清理、自动化暂停或服务变更。
+approved_scope:
+  previous_entries: 28
+  approved_entries: 29
+  added_entries: 1
+  added_path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+approved_actions:
+  - 在29项密封基线精确匹配时向KDS责任线程交付新增1项只读归属分析
+  - 允许责任方读取Git元数据、生成器配置和调度记录
+prohibited_actions:
+  - 读取新增文件正文或输出其内容摘要
+  - 清理、编辑、移动、删除、暂存、还原、提交或推送KDS文件
+  - 暂停、停止、恢复或修改自动化、Hermes任务或服务
+  - 访问数据库、API或凭据
+  - 部署、验收、归档或状态提升
+pre_dispatch_revalidation:
+  result: failed_baseline_drift
+  observed_entries: 31
+  observed_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  added_after_approval_scope: [api_server.py, tests/test_api_smoke.py]
+effect:
+  approval_recorded: true
+  authorization_effective: false
+  invalidated_before_dispatch: true
+  dispatched_to_owner: false
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

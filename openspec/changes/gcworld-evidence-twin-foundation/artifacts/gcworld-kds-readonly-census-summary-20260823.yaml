@@ -1,0 +1,57 @@
+evidence_id: GCWORLD-KDS-READONLY-CENSUS-20260823-001
+status: 元数据普查完成_内容普查受阻
+recorded_at: "2026-08-23T02:36:02+08:00"
+authorization_id: GCWORLD-KDS-READONLY-SOURCE-AUTH-20260823-001
+authorization_sha256: 3869c1a6f015c8a957827170f35cf9d28feccd0f5accf3ed03e1df3fd558aba2
+
+snapshot:
+  repository: GlobalCloud-KDS
+  revision: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_commits: 0
+  behind_commits: 0
+  changed_entries: 0
+  f013_admission: ready_for_authorization
+
+census_result:
+  inventory_sha256: 65427d4e30a679648bfd89d1955a0ce6ff5f30be16ac9c10380c83d4a3c15319
+  deterministic_runs: 2
+  deterministic_result_equal: true
+  discovered_source_files: 42962
+  content_readonly_included: 0
+  s3_metadata_only: 0
+  technical_exclusions: 10915
+  unclassified_exceptions: 32047
+  source_files_modified: 0
+  kds_writes: 0
+  mmc_writes: 0
+  business_system_writes: 0
+
+interpretation:
+  source_discovery_complete_for_snapshot: true
+  content_census_complete: false
+  person_and_organization_extraction_started: false
+  completeness_claim_allowed: false
+  reason: 32047个来源尚无独立权威逐路径分级；读取器按先判级后开文件原则仅登记元数据，未读取正文
+
+next_gate:
+  required_artifact: KDS权威逐路径分级清单
+  current_authority_search_result: 未发现可在打开文件前覆盖全部来源的独立路径分级索引
+  insufficient_sources:
+    - 文档自身frontmatter需要先打开文件，不能证明先判级后开文件
+    - SPACE_REGISTRY仅登记空间与责任关系，未覆盖每个来源的S0至S3等级
+    - 默认S1规则不能排除文档内部存在S3字段、段落或附件
+  required_decisions:
+    - 每个可发现来源的S0、S1、S2或S3等级
+    - 标级冲突时采用最严格等级
+    - S3仅保留不透明来源标识和受控指针
+    - 未决项继续保持例外状态，不得读取正文
+  human_review_owner: 老卢
+
+status_boundary:
+  task_3_1_reader_implemented: true
+  task_3_2_source_to_asset_ledger_complete: false
+  kds_write_authorized: false
+  deployment_authorized: false
+  acceptance_or_status_promotion_authorized: false
+  completion_status: partial

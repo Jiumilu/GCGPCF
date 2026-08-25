@@ -1,0 +1,112 @@
+{
+  "baseDocument": {
+    "schemaVersion": "gcworld-engineering-governance/v1",
+    "generatedAt": "2026-08-24T16:50:00+08:00",
+    "environment": "fixture_only",
+    "dataLayers": [
+      {"layerId": "gcw:layer:source", "layerType": "source", "authoritySource": "原始来源系统", "lifecycle": "ingested", "authoritativeFactSource": false, "allowedPromotionTargets": ["candidate"], "sourceRefs": ["gcw:source:fixture"], "evidenceRefs": ["gcw:evidence:layer-source"]},
+      {"layerId": "gcw:layer:candidate", "layerType": "candidate", "authoritySource": "GCWORLD候选池", "lifecycle": "pending_review", "authoritativeFactSource": false, "allowedPromotionTargets": ["kds_fact"], "sourceRefs": ["gcw:source:fixture"], "evidenceRefs": ["gcw:evidence:layer-candidate"]},
+      {"layerId": "gcw:layer:kds-fact", "layerType": "kds_fact", "authoritySource": "KDS", "lifecycle": "confirmed", "authoritativeFactSource": true, "allowedPromotionTargets": ["world_projection"], "sourceRefs": ["gcw:kds-fact:fixture"], "evidenceRefs": ["gcw:evidence:kds-fact"]},
+      {"layerId": "gcw:layer:world-projection", "layerType": "world_projection", "authoritySource": "GCWORLD派生投影", "lifecycle": "derived", "authoritativeFactSource": false, "allowedPromotionTargets": ["runtime_state"], "sourceRefs": ["gcw:kds-fact:fixture"], "evidenceRefs": ["gcw:evidence:projection"]},
+      {"layerId": "gcw:layer:runtime-state", "layerType": "runtime_state", "authoritySource": "GCWORLD运行时", "lifecycle": "active", "authoritativeFactSource": false, "allowedPromotionTargets": ["evidence_audit"], "sourceRefs": ["gcw:projection:fixture"], "evidenceRefs": ["gcw:evidence:runtime"]},
+      {"layerId": "gcw:layer:simulation-branch", "layerType": "simulation_branch", "authoritySource": "GCWORLD模拟分支", "lifecycle": "isolated", "authoritativeFactSource": false, "allowedPromotionTargets": ["candidate"], "sourceRefs": ["gcw:snapshot:fixture"], "evidenceRefs": ["gcw:evidence:simulation"]},
+      {"layerId": "gcw:layer:evidence-audit", "layerType": "evidence_audit", "authoritySource": "LOOP与Harness", "lifecycle": "immutable", "authoritativeFactSource": false, "allowedPromotionTargets": [], "sourceRefs": ["gcw:receipt:fixture"], "evidenceRefs": ["gcw:evidence:audit"]}
+    ],
+    "promotionRules": [
+      {"ruleId": "gcw:promotion-rule:source-candidate", "fromLayer": "source", "toLayer": "candidate", "requiredGates": ["对象提取完成", "来源证据已关联"], "directAuthorityWriteAllowed": false, "evidenceRefs": ["gcw:evidence:rule-source-candidate"]},
+      {"ruleId": "gcw:promotion-rule:candidate-fact", "fromLayer": "candidate", "toLayer": "kds_fact", "requiredGates": ["证据完整", "规则校验通过", "影响评估完成", "人工确认完成", "正式写入回执"], "directAuthorityWriteAllowed": false, "evidenceRefs": ["gcw:evidence:rule-candidate-fact"]},
+      {"ruleId": "gcw:promotion-rule:fact-projection", "fromLayer": "kds_fact", "toLayer": "world_projection", "requiredGates": ["事实版本锁定", "本体版本锁定", "投影规则锁定"], "directAuthorityWriteAllowed": false, "evidenceRefs": ["gcw:evidence:rule-fact-projection"]},
+      {"ruleId": "gcw:promotion-rule:simulation-candidate", "fromLayer": "simulation_branch", "toLayer": "candidate", "requiredGates": ["假设已披露", "评估结果已固化", "不得直接写事实"], "directAuthorityWriteAllowed": false, "evidenceRefs": ["gcw:evidence:rule-simulation-candidate"]}
+    ],
+    "storageResponsibilities": [
+      {"storageId": "gcw:storage:kds", "storageType": "kds", "responsibility": "保存正式事实与证据索引", "authorityMode": "fact_authority", "reconstructible": false, "storesAuthoritativeFacts": true, "retentionPolicyRef": "gcw:retention:kds"},
+      {"storageId": "gcw:storage:graph", "storageType": "graph", "responsibility": "承载可重建关系投影", "authorityMode": "derived_projection", "reconstructible": true, "storesAuthoritativeFacts": false, "retentionPolicyRef": "gcw:retention:derived"},
+      {"storageId": "gcw:storage:relational", "storageType": "relational", "responsibility": "承载事务状态与授权对象", "authorityMode": "transaction_authority", "reconstructible": false, "storesAuthoritativeFacts": false, "retentionPolicyRef": "gcw:retention:transaction"},
+      {"storageId": "gcw:storage:event", "storageType": "event", "responsibility": "承载不可变事件与执行回执", "authorityMode": "receipt_authority", "reconstructible": false, "storesAuthoritativeFacts": false, "retentionPolicyRef": "gcw:retention:event"},
+      {"storageId": "gcw:storage:object", "storageType": "object", "responsibility": "承载原始材料", "authorityMode": "source_material", "reconstructible": false, "storesAuthoritativeFacts": false, "retentionPolicyRef": "gcw:retention:object"},
+      {"storageId": "gcw:storage:retrieval-index", "storageType": "retrieval_index", "responsibility": "承载可重建语义索引", "authorityMode": "derived_index", "reconstructible": true, "storesAuthoritativeFacts": false, "retentionPolicyRef": "gcw:retention:derived"},
+      {"storageId": "gcw:storage:cache", "storageType": "cache", "responsibility": "承载短期派生结果", "authorityMode": "ephemeral", "reconstructible": true, "storesAuthoritativeFacts": false, "retentionPolicyRef": "gcw:retention:ephemeral"}
+    ],
+    "projectionRebuilds": [
+      {"rebuildId": "gcw:rebuild:graph-match", "targetStorageType": "graph", "kdsFactSetVersion": "kds-facts-v1", "ontologyVersion": "was-v1", "ruleVersion": "rules-v1", "projectionVersion": "projection-v1", "expectedDigest": "1111111111111111111111111111111111111111111111111111111111111111", "actualDigest": "1111111111111111111111111111111111111111111111111111111111111111", "differenceCount": 0, "differenceRefs": [], "status": "match", "promotionBlocked": false},
+      {"rebuildId": "gcw:rebuild:index-difference", "targetStorageType": "retrieval_index", "kdsFactSetVersion": "kds-facts-v1", "ontologyVersion": "was-v1", "ruleVersion": "rules-v1", "projectionVersion": "projection-v1", "expectedDigest": "2222222222222222222222222222222222222222222222222222222222222222", "actualDigest": "3333333333333333333333333333333333333333333333333333333333333333", "differenceCount": 1, "differenceRefs": ["gcw:difference:index-summary-stale"], "status": "difference", "promotionBlocked": true}
+    ],
+    "worldObjects": [
+      {"worldAssetId": "gcw:asset:engineering-fixture", "sourceSystemId": "kds", "sourceRecordId": "fixture-record-1", "tenantId": "tenant:globalcloud", "assetDimension": "organization_asset", "ontologyVersion": "was-v1", "schemaVersion": "gcworld-v1", "validFrom": "2026-08-01T00:00:00+08:00", "validUntil": null, "recordedAt": "2026-08-24T16:00:00+08:00", "evidenceRefs": ["gcw:evidence:world-object"], "identityHistory": [{"changeType": "alias", "priorAssetRefs": ["gcw:candidate:alias-fixture"], "approvedByRef": "gcw:steward:identity", "effectiveAt": "2026-08-20T10:00:00+08:00", "auditRef": "gcw:audit:identity-alias"}]}
+    ],
+    "domainInterfaces": [
+      {"interfaceId": "gcw:interface:world-query", "interfaceType": "world_query", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:context", "interfaceType": "context", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:identity", "interfaceType": "identity", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:agent", "interfaceType": "agent", "contractVersion": "v1", "ownerSystem": "XWAIL", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:action", "interfaceType": "action", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:simulation", "interfaceType": "simulation", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:governance", "interfaceType": "governance", "contractVersion": "v1", "ownerSystem": "WAES", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:event-stream", "interfaceType": "event_stream", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]}
+    ],
+    "reliableEvents": [
+      {"eventId": "gcw:event:original", "commandId": "gcw:command:one", "idempotencyKey": "fixture-key-one", "causationId": "gcw:cause:one", "correlationId": "gcw:correlation:one", "schemaVersion": "event-v1", "eventType": "fixture.delivery", "deliveryState": "delivered", "attempts": 1, "maxRetries": 3, "inboxDeduplicated": false, "outboxPersisted": true, "sideEffectCount": 1, "compensationRef": null, "evidenceRefs": ["gcw:evidence:event-original"]},
+      {"eventId": "gcw:event:duplicate", "commandId": "gcw:command:one", "idempotencyKey": "fixture-key-one", "causationId": "gcw:cause:one", "correlationId": "gcw:correlation:one", "schemaVersion": "event-v1", "eventType": "fixture.delivery", "deliveryState": "delivered", "attempts": 1, "maxRetries": 3, "inboxDeduplicated": true, "outboxPersisted": true, "sideEffectCount": 0, "compensationRef": null, "evidenceRefs": ["gcw:evidence:event-duplicate"]},
+      {"eventId": "gcw:event:dead-letter", "commandId": "gcw:command:two", "idempotencyKey": "fixture-key-two", "causationId": "gcw:cause:two", "correlationId": "gcw:correlation:two", "schemaVersion": "event-v1", "eventType": "fixture.failure", "deliveryState": "dead_letter", "attempts": 3, "maxRetries": 3, "inboxDeduplicated": false, "outboxPersisted": true, "sideEffectCount": 0, "compensationRef": "gcw:compensation:dead-letter", "evidenceRefs": ["gcw:evidence:event-dead-letter"]},
+      {"eventId": "gcw:event:compensated", "commandId": "gcw:command:three", "idempotencyKey": "fixture-key-three", "causationId": "gcw:cause:three", "correlationId": "gcw:correlation:three", "schemaVersion": "event-v1", "eventType": "fixture.compensation", "deliveryState": "compensated", "attempts": 2, "maxRetries": 3, "inboxDeduplicated": false, "outboxPersisted": true, "sideEffectCount": 0, "compensationRef": "gcw:compensation:completed", "evidenceRefs": ["gcw:evidence:event-compensated"]}
+    ],
+    "securityControls": {"tenantIsolation": true, "leastPrivilege": true, "runtimeIdentityRef": "gcw:runtime-identity:fixture", "shortLivedCredentialRef": "secret-manager:fixture-reference", "transportEncryption": true, "atRestEncryption": true, "auditEnabled": true, "promptInjectionDefense": true, "connectorWhitelist": ["gcw:connector:fixture-readonly"], "secretHandling": "reference_only", "secretPlaintextLocations": []},
+    "observabilityMetrics": [
+      {"metricId": "gcw:metric:source-coverage", "metricType": "source_coverage_rate", "unit": "percent", "threshold": 95, "currentValue": 90, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:unresolved-identity", "metricType": "unresolved_identity_rate", "unit": "percent", "threshold": 5, "currentValue": 100, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:fact-conflict", "metricType": "fact_conflict_rate", "unit": "percent", "threshold": 2, "currentValue": 3, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:projection-latency", "metricType": "projection_latency", "unit": "milliseconds", "threshold": 1000, "currentValue": 0, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:snapshot-duration", "metricType": "snapshot_build_duration", "unit": "milliseconds", "threshold": 2000, "currentValue": 0, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:adjudication-latency", "metricType": "adjudication_latency", "unit": "milliseconds", "threshold": 500, "currentValue": 0, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:action-success", "metricType": "action_success_rate", "unit": "percent", "threshold": 99, "currentValue": 0, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:compensation", "metricType": "compensation_rate", "unit": "percent", "threshold": 99, "currentValue": 0, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:overreach-block", "metricType": "overreach_block_rate", "unit": "percent", "threshold": 100, "currentValue": 100, "meetsThreshold": true, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:agent-candidate-acceptance", "metricType": "agent_candidate_acceptance_rate", "unit": "percent", "threshold": 50, "currentValue": 0, "meetsThreshold": false, "evidenceRefs": ["gcw:evidence:metric"]},
+      {"metricId": "gcw:metric:evidence-completeness", "metricType": "evidence_completeness_rate", "unit": "percent", "threshold": 100, "currentValue": 100, "meetsThreshold": true, "evidenceRefs": ["gcw:evidence:metric"]}
+    ],
+    "deliveryPhases": [
+      {"phaseId": "P0", "name": "架构冻结与契约", "prerequisitePhase": null, "exitMetricRefs": ["gcw:metric:evidence-completeness"], "exitCriteriaMet": true, "riskReviewed": true, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "structural_compliance"},
+      {"phaseId": "P1", "name": "组织资产普查", "prerequisitePhase": "P0", "exitMetricRefs": ["gcw:metric:source-coverage", "gcw:metric:unresolved-identity"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"},
+      {"phaseId": "P2", "name": "只读世界运行时", "prerequisitePhase": "P1", "exitMetricRefs": ["gcw:metric:projection-latency", "gcw:metric:evidence-completeness"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"},
+      {"phaseId": "P3", "name": "内部辅助智能体", "prerequisitePhase": "P2", "exitMetricRefs": ["gcw:metric:agent-candidate-acceptance"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"},
+      {"phaseId": "P4", "name": "GCWORLD-AUTH", "prerequisitePhase": "P3", "exitMetricRefs": ["gcw:metric:adjudication-latency", "gcw:metric:overreach-block"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"},
+      {"phaseId": "P5", "name": "模拟实验室", "prerequisitePhase": "P4", "exitMetricRefs": ["gcw:metric:fact-conflict"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"},
+      {"phaseId": "P6", "name": "受控真实执行", "prerequisitePhase": "P5", "exitMetricRefs": ["gcw:metric:action-success", "gcw:metric:compensation"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"},
+      {"phaseId": "P7", "name": "有限自治与扩域", "prerequisitePhase": "P6", "exitMetricRefs": ["gcw:metric:action-success", "gcw:metric:overreach-block"], "exitCriteriaMet": false, "riskReviewed": false, "independentAuthorizationRef": null, "authorizationGranted": false, "nextPhaseAuthorized": false, "status": "not_started"}
+    ],
+    "acceptanceEvidence": {"evidenceType": "fixture", "claimedStatus": "structural_compliance", "independentValidation": false, "humanConfirmation": false, "realRuntimeEvidence": false},
+    "statusBoundaries": {"realEventExecutionAuthorized": false, "kdsWriteAuthorized": false, "businessWriteAuthorized": false, "externalActionAuthorized": false, "deploymentAuthorized": false, "statusPromotionAuthorized": false}
+  },
+  "positiveCases": [
+    {"name": "七层数据与提升规则边界", "replace": {}},
+    {"name": "七类存储职责不形成第二事实主账", "replace": {}},
+    {"name": "投影一致重建", "replace": {}},
+    {"name": "投影差异被定位并阻断", "replace": {}},
+    {"name": "可靠事件去重重试死信补偿", "replace": {}},
+    {"name": "秘密租户与运行身份隔离", "replace": {}},
+    {"name": "十一指标与P0至P7独立退出门禁", "replace": {}}
+  ],
+  "negativeCases": [
+    {"name": "七层数据缺失且重复", "replace": {"dataLayers.6.layerType": "source"}, "expected_reasons": ["data_layers_incomplete", "data_layer_duplicate"]},
+    {"name": "候选层冒充事实权威", "replace": {"dataLayers.1.authoritativeFactSource": true}, "expected_reasons": ["non_kds_layer_claims_fact_authority"]},
+    {"name": "模拟分支直接提升事实", "replace": {"promotionRules.3.toLayer": "kds_fact"}, "expected_reasons": ["simulation_direct_fact_promotion"]},
+    {"name": "候选事实提升缺少正式写入回执门", "remove": ["promotionRules.1.requiredGates.4"], "expected_reasons": ["fact_promotion_gates_incomplete"]},
+    {"name": "图存储冒充事实主账", "replace": {"storageResponsibilities.1.storesAuthoritativeFacts": true}, "expected_reasons": ["derived_storage_claims_fact_authority"]},
+    {"name": "缓存不可重建", "replace": {"storageResponsibilities.6.reconstructible": false}, "expected_reasons": ["derived_storage_not_reconstructible"]},
+    {"name": "投影差异未阻断提升", "replace": {"projectionRebuilds.1.promotionBlocked": false}, "expected_reasons": ["projection_difference_not_blocked"]},
+    {"name": "摘要不同却标记一致", "replace": {"projectionRebuilds.0.actualDigest": "4444444444444444444444444444444444444444444444444444444444444444"}, "expected_reasons": ["projection_match_digest_mismatch"]},
+    {"name": "统一标识缺少来源系统", "replace": {"worldObjects.0.sourceSystemId": ""}, "expected_reasons": ["schema_error"]},
+    {"name": "身份合并缺少前序标识", "replace": {"worldObjects.0.identityHistory.0.changeType": "merge", "worldObjects.0.identityHistory.0.priorAssetRefs": []}, "expected_reasons": ["identity_change_audit_incomplete"]},
+    {"name": "领域接口缺失且重复", "replace": {"domainInterfaces.7.interfaceType": "world_query"}, "expected_reasons": ["domain_interfaces_incomplete", "domain_interface_duplicate"]},
+    {"name": "可靠事件缺少幂等键", "replace": {"reliableEvents.0.idempotencyKey": ""}, "expected_reasons": ["schema_error"]},
+    {"name": "重复命令产生重复副作用", "replace": {"reliableEvents.1.sideEffectCount": 1}, "expected_reasons": ["idempotency_side_effect_duplicated"]},
+    {"name": "未耗尽重试即进入死信", "replace": {"reliableEvents.2.attempts": 2}, "expected_reasons": ["premature_dead_letter"]},
+    {"name": "死信缺少补偿引用", "replace": {"reliableEvents.2.compensationRef": null}, "expected_reasons": ["dead_letter_compensation_missing"]},
+    {"name": "秘密明文传播", "replace": {"securityControls.secretHandling": "plaintext", "securityControls.secretPlaintextLocations": ["世界投影"]}, "expected_reasons": ["plaintext_secret_propagation"]},
+    {"name": "租户隔离关闭", "replace": {"securityControls.tenantIsolation": false}, "expected_reasons": ["tenant_isolation_disabled"]},
+    {"name": "可观测指标缺失且重复", "replace": {"observabilityMetrics.10.metricType": "source_coverage_rate"}, "expected_reasons": ["observability_metrics_incomplete", "observability_metric_duplicate"]},
+    {"name": "阶段跳过前置阶段", "replace": {"deliveryPhases.3.prerequisitePhase": "P1"}, "expected_reasons": ["phase_prerequisite_skipped"]},
+    {"name": "退出条件未满足却授权下一阶段", "replace": {"deliveryPhases.2.nextPhaseAuthorized": true}, "expected_reasons": ["phase_authorization_bypassed"]},
+    {"name": "固定夹具冒充完整验收", "replace": {"acceptanceEvidence.claimedStatus": "complete"}, "expected_reasons": ["evidence_status_overclaimed"]}
+  ]
+}

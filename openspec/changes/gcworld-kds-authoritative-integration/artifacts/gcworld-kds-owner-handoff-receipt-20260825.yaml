@@ -1,0 +1,120 @@
+handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-001
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+received_at: "2026-08-25T01:15:08Z"
+source:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+  turn_id: 01a0366b-c617-7e31-bc84-f6e5290f3014
+  final_message_id: item-800
+  result: pass_read_only_disposition_plan
+input_integrity:
+  delivered_request_sha256_reported_by_owner: ac5de57f84060153432105c97b7008bd46acef7238ec0f1d67360319c0632f48
+  approval_receipt_sha256: 4fb24d78ce652ec4c018f536b3cc17202df59e3e782c6b331b4afa6a3c60bef4
+  current_mutable_request_sha256: 3c3f2984bde4a11a7162e2148edcccc19fdae377953159806575619c30c303a8
+  mutation_explanation: 责任方读取后仅更新请求状态并增加交付后等待说明，17项范围、基线和授权边界未改变
+  delivered_hash_reconstruction:
+    - 将当前status恢复为approved_pending_kds_owner_dispatch
+    - 移除after_dispatch状态说明行
+    - 重算SHA-256后精确得到责任方报告摘要
+baseline_before_and_after:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 17
+  ordinary_nul_sha256: c1696b0a08befa60b640deadf757472b583246e47ed20ea85aeed013befc6d44
+  expanded_entries: 17
+  expanded_nul_sha256: 9f467569982c313dde6db79793e4a4b76f7651c7f450cf6e9036b719b4b96f03
+  opsx_lock: absent
+  f013_admission: blocked_dirty_worktree
+continuous_generators:
+  - id: macmini-workwiki
+    type: Codex自动化
+    state: ACTIVE
+    schedule: 每日06:40
+    path_pattern: _governance/sync-runs/macmini-workwiki-*
+    config_sha256: 7b5a1a196ff6ca36fb2a38a9ddef43f3523095bca17b4a69bc26f03670e95cfb
+  - id: workwiki-kds
+    type: Codex自动化
+    state: ACTIVE
+    schedule: 每日07:10
+    path_pattern: _governance/sync-runs/feishu-xiaog-closure-*
+    config_sha256: 0451d3f2589f931a45619d1caeb26b0612044a715ba5c11f9d764d8e2ac0a2aa
+  - id: automation-5
+    type: Codex自动化
+    state: ACTIVE
+    schedule: 每日07:30
+    path_pattern: _governance/distributed-knowledge-runs/distributed-knowledge-governance-*
+    config_sha256: 6a7e06ca70bad2c73bdfe43adc51e1cc9d6f98cf9cdbbdedb53e1578f9dca166
+disposition_groups:
+  - group: tracked_projection
+    paths:
+      - 工业绿链/reports/项目监控仪表盘.md
+    owner: 工业绿链W17与Hermes任务f06e9f563967
+    retention: 长期，历史由Git保留
+    recommendation: 单独审阅事实来源后形成独立投影变更，不混入清理提交
+  - group: distributed_governance_reports
+    paths:
+      - _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260823-073039/report.md
+      - _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+      - _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+    owner: KDS治理与automation-5
+    retention: 仓库外不可变保存180天
+    recommendation: 建立摘要清单后移出工作树运行区
+  - group: feishu_closure_empty_evidence
+    paths:
+      - _governance/sync-runs/feishu-xiaog-closure-20260823-071040/macmini-evidence.json
+      - _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+      - _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+    owner: KDS闭环监控与workwiki-kds
+    retention: 失败闭环完成后30天
+    recommendation: 作为零字节失败占位外部保留，不提交为正式证据，删除需专项授权
+  - group: workwiki_remote_identity
+    paths:
+      - _governance/sync-runs/macmini-workwiki-20260823-064123/remote-identity.txt
+      - _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+      - _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+    owner: KDS同步与macmini-workwiki
+    retention: 30天
+    recommendation: 仓库外归档并按内容摘要去重，不提交重复副本
+  - group: source_ingestion_candidates
+    paths:
+      - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+    owner: GCWORLD与WAES内容权威方
+    retention: 长期
+    recommendation: 保留并先完成来源、版本和权限核验，再形成独立资料摄取变更
+  - group: hermes_evolution_reports
+    paths:
+      - 世界资产/Hermes/reports/自进化事件报告_2026-08-23_04.md
+      - 世界资产/Hermes/reports/自进化事件报告_2026-08-23_08.md
+      - 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+    owner: Hermes任务111e8983641a
+    retention: 至少1年
+    recommendation: 独立审阅后归档或提交，不混入KDS核心代码变更
+  - group: industrial_green_chain_derived_reports
+    paths:
+      - 工业绿链/变更告警_2026-08-23.md
+      - 工业绿链/日报/晨报-2026-08-23.md
+    owner: 工业绿链与Hermes任务2f3355dec02f、87c8214c0e57
+    retention: 180天或项目周期结束
+    recommendation: 审阅后月度汇总归档，不自动提升为项目事实
+required_independent_authorizations:
+  - D5 三个Codex自动化暂停授权
+  - D6 三个运行产物生成源改道的独立OpenSpec提案授权
+  - D7 十七项按路径提交、移动归档或删除授权
+  - D8 四个Hermes任务在维护窗口内的暂停与恢复授权
+zero_mutation_statement:
+  files_created_modified_moved_deleted: 0
+  staging_commit_push: 0
+  service_pause_restart_change: 0
+  database_api_credentials: 0
+  deployment_acceptance_archive_promotion: 0
+result:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  status: active_partial_not_complete

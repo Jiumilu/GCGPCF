@@ -1,0 +1,49 @@
+schema_version: gcworld-proposal-validation/v1
+run_id: 20260824-092905-gcworld-integration-proposals
+recorded_at: "2026-08-24T09:40:50Z"
+language: zh-CN
+changes:
+  - name: gcworld-kds-authoritative-integration
+    planning_status: complete
+    openspec_strict: pass
+    artifacts: [proposal, design, specs, tasks]
+    implementation_tasks_complete: 0
+    implementation_tasks_total: 17
+    spec_sha256: f3d9407b5d8b09546e4619d3bad1fade8b6926bad6cde688c4d7321e470d3b2a
+    tasks_sha256: f6b235f7e539aa9d2976a17dc7452692e5259ac91f765451b763282296cb55c2
+  - name: gcworld-workbench-ui-foundation
+    planning_status: complete
+    openspec_strict: pass
+    artifacts: [proposal, design, specs, tasks]
+    implementation_tasks_complete: 0
+    implementation_tasks_total: 21
+    spec_sha256: fbfd5bf335ab0234dc677b277ed0fe631f3b3e852c62eb7092fd5f47223d783a
+    tasks_sha256: 0abe0c1dc30523dddd37983a9b0f930233e90fe9e9007b9ddbb3e73e494b18d8
+  - name: gcworld-controlled-runtime-integration
+    planning_status: complete
+    openspec_strict: pass
+    artifacts: [proposal, design, specs, tasks]
+    implementation_tasks_complete: 0
+    implementation_tasks_total: 21
+    spec_sha256: 3798821cfc55a75efa78594efdda106c4cbfd8367ace1c7f4ba865e710c44f83
+    tasks_sha256: 0df8aeb03d64aeeb20c9b103d12e738960beca0800adaa6f26f249d9082ed317
+gates:
+  loop_document_gate: { result: pass, missing_metadata: 0, missing_readme_dirs: 0, localization_debt: false }
+  project_group_readiness: { result: pass, checked_repos: 17, passed: 17, failed: 0 }
+  f013_gate_script: pass
+  f013_actual_admission: blocked_dirty_worktree
+  kds_changed_entries: 14
+  feature_entry: enabled
+boundaries:
+  all_documents_chinese: true
+  code_implemented: false
+  target_repositories_modified: false
+  real_api_called: false
+  kds_writes: 0
+  external_writes: 0
+  deployments: 0
+  commits: 0
+  pushes: 0
+  status_promotions: 0
+result: planning_complete_implementation_not_authorized
+

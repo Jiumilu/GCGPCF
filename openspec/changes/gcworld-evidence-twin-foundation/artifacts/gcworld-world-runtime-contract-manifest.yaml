@@ -1,0 +1,27 @@
+contract_id: globalcloud.gcworld.world_runtime
+contract_version: v1.0
+title: GCWORLD世界运行时契约清单
+status: draft
+scope: 本地夹具与确定性校验，不执行真实动作，不写入事实、KDS或业务系统
+artifacts:
+  - name: 世界运行时Schema
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-world-runtime.schema.json
+    sha256: 55418744f5bd701533e43407757ba6392fb38fc1328f703f8df7ff3c1cb5f66d
+  - name: 世界运行时正反例
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-world-runtime-fixtures.json
+    sha256: b14ed8aabe82ad320d564d8d00a3d0da45a06986e02cd174199ba9aeae1fd954
+  - name: 世界运行时校验器
+    path: tools/kds-sync/validate_gcworld_world_runtime.py
+    sha256: 3f649a66fd9e6d8a168e0f943a0cbd598a7b458d383a96e9d5f7ae6a735e0277
+  - name: 世界运行时回归测试
+    path: tests/test_gcworld_world_runtime.py
+    sha256: 8a7471fb3b4a9cb57b8f15cddb45be65593bf908c392a1e001d1ddfd11564177
+status_boundary:
+  real_execution_authorized: false
+  fact_write_authorized: false
+  kds_write_authorized: false
+  business_write_authorized: false
+  external_action_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+  completion_status: not_complete

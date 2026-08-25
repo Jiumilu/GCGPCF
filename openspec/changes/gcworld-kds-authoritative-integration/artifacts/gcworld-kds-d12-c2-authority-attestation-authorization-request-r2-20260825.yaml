@@ -1,0 +1,112 @@
+request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-R2-20260825-032
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T10:27:15Z"
+status: pending_independent_human_decision
+title: D12-C2——十六项UNKNOWN逐项内容权威主体声明补全授权（最终重新密封版）
+supersession:
+  invalid_requests:
+    - sha256: 0eb9ed26aea2010bd5011f6f7e20f956bd0d55f49fc407b3912aa604a3c62907
+      reason: 首次请求生成后31项漂移为32项
+    - sha256: 236d352a3fe665553ef40627e3d80c93391c203e282e762e5c37196b85c10799
+      reason: R1请求生成后的校验阶段同一目标路径再次漂移
+  reuse_allowed: false
+source_evidence:
+  d12_c1_receipt_sha256: 0974b4e789cc64a3033f12c2ee200ab800e1ab4fb81e8e8235566e223c69d4ba
+  reseal_approval_receipt_sha256: 4f062c577ab99a7823e4c0fe3f1cd665e4c5167cc5f90c145b58475c197355b9
+  r1_validation_drift_receipt_sha256: 3a164d21751c03387449e773f13f5ab716126778f1e44500f000f1dbc7bc5c90
+  final_recovery_execution_receipt_sha256: bbeb87683182bf30c04e871709a292431303950ad5707e2bb944351caf4e7862
+sealed_baseline:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+producer_freeze:
+  codex_automations_paused: 3_of_3
+  hermes_jobs_disabled: 11_of_11
+  gbrain_autopilot_absent: true
+  matching_import_or_gbrain_processes: 0
+decision:
+  id: D12-C2
+  requested_status: pending
+  target_paths: 16
+  authority_groups: 6
+  purpose: 仅向逐项真实内容权威主体取得明确、可审计的分级责任声明，不读取UNKNOWN内容
+  authorized_if_approved:
+    - 仅用既有任务、组织责任和身份元数据核验每条路径的真实内容权威主体
+    - 向已核验主体发送逐路径零正文声明请求
+    - 接收并密封逐路径声明及责任主体、授权依据、受众、敏感边界、scope和有效期
+    - KDS分级与安全责任方仅核验声明完整性、权威依据和范围一致性
+required_per_path_fields:
+  - statement_id
+  - target_path
+  - authority_subject_name_or_asset_id
+  - authority_role
+  - authority_basis
+  - signed_thread_or_identity
+  - proposed_classification
+  - target_audience
+  - business_sensitivity_boundary
+  - scope
+  - valid_from
+  - valid_until
+  - distribution_constraints
+  - revocation_or_expiry_condition
+  - source_governance_refs
+  - zero_target_body_read_statement
+authority_groups:
+  distributed_governance: 2
+  feishu_xiaog_closure: 2
+  macmini_workwiki: 2
+  hermes_evolution_reports: 2
+  industrial_greenchain: 7
+  ecosystem_health: 1
+targets:
+  - {id: D12-C1-EXC-001, group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-002, group: distributed_governance, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-003, group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json, classification: UNKNOWN}
+  - {id: D12-C1-EXC-004, group: feishu_xiaog_closure, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json, classification: UNKNOWN}
+  - {id: D12-C1-EXC-005, group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt, classification: UNKNOWN}
+  - {id: D12-C1-EXC-006, group: macmini_workwiki, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt, classification: UNKNOWN}
+  - {id: D12-C1-EXC-007, group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-008, group: hermes_evolution_reports, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-009, group: industrial_greenchain, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json, classification: UNKNOWN}
+  - {id: D12-C1-EXC-010, group: industrial_greenchain, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-011, group: industrial_greenchain, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-012, group: industrial_greenchain, path: 工业绿链/变更告警_2026-08-25.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-013, group: industrial_greenchain, path: 工业绿链/周报/周报_2026W35.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-014, group: industrial_greenchain, path: 工业绿链/日报/晨报-2026-08-25.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-015, group: industrial_greenchain, path: 工业绿链/月报/月报_2026-08.md, classification: UNKNOWN}
+  - {id: D12-C1-EXC-016, group: ecosystem_health, path: 99_Reports/ecosystem-health-2026-08-25.md, classification: UNKNOWN}
+decision_rules:
+  - 只有权威主体身份与授权依据可验证且逐项必填字段完整时，才能形成待登记分类候选
+  - 双方意见不一致、证据不足、任一方仍判定UNKNOWN、未回应、scope不清或valid_until缺失时，继续保持UNKNOWN并进入例外队列
+  - 不得以路径、扩展名、权限、大小、摘要、时间或智能体判断推断降级
+  - S3仅形成从严候选并保留不透明标识、受控指针和最小审计字段
+stop_if:
+  - 31项任一基线字段、状态摘要或严格元数据摘要不匹配
+  - 任一生产者恢复或出现冻结范围内写入活动
+  - 任一路径需要读取正文、frontmatter、字段、片段、字符串、关键词或语义信息
+strict_prohibitions:
+  - 本请求获批前执行D12-C2
+  - 读取、搜索、提取或解析十六项UNKNOWN的任何内容
+  - 执行D12-R2、D12-N、D12-D或任何文件处置
+  - 编辑、创建、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 运行测试、构建、格式化或会生成KDS缓存的验证器
+  - 停止、重启或变更KDS服务，恢复生产者，访问数据库、API、凭据或外部写接口
+  - 部署、验收、归档或状态提升
+effect:
+  d12_c2_execution_started: false
+  d12_r2_n_d_authorized: false
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  implementation_authorized: false
+approval:
+  human_decision_owner: 老卢
+  confirmed_at: null
+  confirmation_text: null

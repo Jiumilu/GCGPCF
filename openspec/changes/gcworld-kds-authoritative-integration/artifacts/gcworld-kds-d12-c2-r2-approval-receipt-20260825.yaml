@@ -1,0 +1,44 @@
+receipt_id: GCWORLD-KDS-D12-C2-R2-APPROVAL-RECEIPT-20260825-033
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T10:40:21Z"
+authorization_state: confirmed
+authorization_source:
+  source_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  authorized_by: 老卢
+sealed_request:
+  request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-R2-20260825-032
+  sha256: ec2c0a25ca576e7d0404a2739dc8666cf8335f80aedf827aa52639854e9797b5
+authorized_scope:
+  target_paths: 16
+  authority_groups: 6
+  actions:
+    - 仅用既有任务、责任域、组织与身份元数据核验真实内容权威主体
+    - 向已核验权威主体发送逐路径零正文声明请求
+    - 接收责任归属、授权依据、目标受众、业务敏感边界、scope、valid_from、valid_until及分类建议声明
+    - 按从严规则形成分类候选或继续UNKNOWN例外队列
+hard_preconditions:
+  kds_head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  producer_freeze: exact_match
+decision_rules:
+  - 双方意见不一致、证据不足、声明不完整、权威主体无法验证或任一方仍判定UNKNOWN时，保持UNKNOWN并进入例外队列
+  - 不得从路径、类型、模式、大小、时间或摘要推断降低等级
+strict_prohibitions:
+  - 读取任何UNKNOWN正文、frontmatter、字段、片段、字符串、关键词或语义
+  - 执行D12-R2、D12-N或D12-D
+  - 文件处置、测试、服务变更、生产者恢复
+  - 暂存、提交、推送、部署或状态提升
+opsx_lock:
+  run_id: GCWORLD-KDS-D12-C2-R2-EXEC-20260825
+  state: owned
+effect:
+  d12_c2_execution_authorized: true
+  d12_r2_n_d_authorized: false
+  task_1_2_complete: false
+  task_2_1_allowed: false

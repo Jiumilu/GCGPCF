@@ -1,0 +1,61 @@
+receipt_id: GCWORLD-KDS-D5-D9-PARTIAL-EXECUTION-RECEIPT-20260825-006
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T06:02:54Z"
+approval_receipt_ref: GCWORLD-KDS-D5-D9-APPROVAL-RECEIPT-20260825-005
+activation_baseline_match: pass_31_of_31
+execution:
+  - id: D5
+    result: executed_and_verified
+    targets:
+      macmini-workwiki: paused
+      workwiki-kds: paused
+      automation-5: paused
+    in_flight_task_forced_stop: false
+    restore_performed: false
+  - id: D6
+    result: executed_and_verified
+    targets:
+      f06e9f563967: paused
+      2f3355dec02f: paused
+      87c8214c0e57: paused
+      111e8983641a: paused
+      d1875abfb9df: paused
+      2784e0317db6: paused
+      wiki-ecosystem-health-3d: paused
+      43652c3c9b4d: paused
+      99683d54df08: paused
+      155b3671abdd: paused
+      dbce6d580114: paused
+    in_flight_task_forced_stop: false
+    restore_performed: false
+  - id: D7
+    result: executed_and_verified
+    target: GBrain autopilot及其worker
+    method: 通过macOS服务管理正常卸载com.gbrain.autopilot
+    force_kill: false
+    service_configuration_deleted: false
+    restore_performed: false
+  - id: D8
+    result: not_completed_due_to_baseline_drift
+    read_only_observation: 当时未观察到匹配的GCWORLD或WAES人工导入进程
+    freeze_coordination_established: false
+  - id: D9
+    result: metadata_probe_only_then_stopped_due_to_baseline_drift
+    observations:
+      - api_server.py与tests/test_api_smoke.py均为已跟踪但本地修改状态
+      - 当前KDS服务消费api_server.py只能证明运行使用，不能证明变化来源
+      - 文件修改时间一致仍只支持同批变化推断
+      - 具体编辑任务或编辑者仍未确认
+    file_or_diff_content_read: false
+    edit_freeze_coordination_established: false
+drift_ref: GCWORLD-KDS-POST-D5-D7-DRIFT-20260825-007
+current_status: partial_after_d5_d7_with_d8_d9_stopped
+prohibitions_preserved:
+  kds_file_restore_cleanup_commit_push: false
+  kds_service_stop_restart: false
+  test_deploy_accept_archive_promote: false
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

@@ -1,0 +1,275 @@
+receipt_id: GCWORLD-KDS-D12-R1-OWNER-REVIEW-RECEIPT-20260825-018
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T07:09:26Z"
+approval_receipt_ref: GCWORLD-KDS-D12-R1-APPROVAL-RECEIPT-20260825-015
+classification_manifest_ref: GCWORLD-KDS-D12-R1-CLASSIFICATION-MANIFEST-20260825-016
+owner_request_ref: GCWORLD-KDS-D12-R1-OWNER-REVIEW-REQUEST-20260825-017
+responsibility_receipts:
+  - partition: kds_and_operational_content
+    thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    thread_title: KDS-知识资料与证据服务
+    turn_id: 01a037bc-26c5-72f2-8c0b-f32365f8fd6f
+    final_message_id: item-849
+    paths: 27
+    body_read: 11
+    metadata_only: 16
+    result: completed_read_only
+  - partition: gcworld_waes_content
+    thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+    thread_title: LOOP工程-知识工程
+    turn_id: 01a037b8-fbb6-7271-9b34-76110d1884c4
+    final_message_id: item-5080
+    paths: 2
+    body_read: 2
+    metadata_only: 0
+    result: completed_read_only_with_provenance_rework_required
+integrity:
+  owner_request_sha256: e52738e3940a84874979ba69bdfd8ab43196ee69ea30193c8fd114268e7b8e9d
+  classification_manifest_sha256: 3aeba909aa803249a2cff1c96b95a56cad665fcaa0d42492cb6397b81346f928
+  classification_source_sha256: 50505bce8958b9a2cf62ce476c5aeebdfa60b1c72be7162ee455e2823dbf34e6
+  total_paths: 29
+  unique_paths: 29
+  classification_conflicts: 0
+review_summary:
+  s1: 5
+  s2: 8
+  unknown: 16
+  s3: 0
+  body_read: 13
+  metadata_only: 16
+  independent_commit_candidates: 6
+  immutable_external_archive_candidates: 23
+  keep_in_place_candidates: 0
+  move_candidates: 0
+  delete_candidates: 0
+  executed_dispositions: 0
+path_reviews:
+  - path: 工业绿链/reports/项目监控仪表盘.md
+    classification: S2
+    body_read: true
+    content_nature: 项目到期、决策及阻塞的派生投影
+    fact_state: 候选投影，不是自动确认的业务事实
+    retention_and_risk: 内部受控保留并核对来源；存在时效过期及候选决策被误当正式事实风险
+    recommendation: 独立提交候选
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260823-073039/report.md
+    classification: S2
+    body_read: true
+    content_nature: 历史治理巡检及当时pass状态记录
+    fact_state: 时间点治理证据，不代表当前状态
+    retention_and_risk: 包含环境路径和历史统计，应保留不可变时间语义
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，15937字节，SHA256为d7f493a10e23910d04f15bc81e43fd8ebf94fdc9f26424f389dbfa4c9eff49b9
+    retention_and_risk: 正文未分级，原位保全至重新分级，禁止直接提交
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，15937字节，SHA256为dc0c94fd684b65a0d0ed4c98f05f38cd671b1a846c7053b7647b53ab24edf59c
+    retention_and_risk: 与前项大小相同但摘要不同，不得推断内容
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260823-071040/macmini-evidence.json
+    classification: S1
+    body_read: true
+    content_nature: 零字节失败或缺失证据占位
+    fact_state: 只能证明空文件存在，不能证明同步成功
+    retention_and_risk: 保留失败生成事实，禁止作为有效证据提升
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，0字节，空文件摘要
+    retention_and_risk: 未分级且无内容，只能保留生成事实
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，0字节，空文件摘要
+    retention_and_risk: 未分级且无内容，禁止宣称有效证据
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/sync-runs/macmini-workwiki-20260823-064123/remote-identity.txt
+    classification: S1
+    body_read: true
+    content_nature: 远端连接超时故障证据
+    fact_state: 基础设施运行证据
+    retention_and_risk: 含基础设施端点信息，不宜进入普通知识正文
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，92字节，SHA256为04b9ee8d7ce159e1b00cda33283633c5281323b484acea470855a181a88227de
+    retention_and_risk: 与已审项摘要相同仅证明字节相同，正文仍未分级
+    recommendation: 仓库外不可变归档候选
+  - path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，92字节，与前项SHA256相同
+    retention_and_risk: 未分级，禁止根据重复摘要推断正文授权
+    recommendation: 仓库外不可变归档候选
+  - path: raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
+    classification: S1
+    body_read: true
+    content_nature: DOCX派生引用记录，含文件名、大小、时间、桌面来源及摘要
+    fact_state: 来源候选，不是正式业务事实
+    retention_and_risk: 缺少原始DOCX SHA、不可变来源ID、提取器版本、owner、批准人和授权回执
+    recommendation: 独立提交候选
+  - path: 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+    classification: S2
+    body_read: true
+    content_nature: V1.0架构与实施方案的textutil全文提取版
+    fact_state: 规范性架构决策、目标设计和实施候选，不代表系统已实现
+    retention_and_risk: canonical为文档自我标注，缺少签署、批准记录和原始DOCX SHA；格式提取存在损失
+    recommendation: 独立提交候选
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_04.md
+    classification: S1
+    body_read: true
+    content_nature: 历史自动化事件报告，记录RAG、网关及落盘异常
+    fact_state: 候选事故证据，命令建议未获执行授权
+    retention_and_risk: 受限保留且不得以历史状态替代当前验证
+    recommendation: 仓库外不可变归档候选
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_08.md
+    classification: S1
+    body_read: true
+    content_nature: 后续自动化事件快照，包含修复及持续异常判断
+    fact_state: 候选时间序列证据
+    retention_and_risk: 不得用历史P0或P1判断替代当前事实
+    recommendation: 仓库外不可变归档候选
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，5126字节，模式600，SHA256为2c11ac8022773600c5d734cdd66a9846839ad48213f98555cf8df6d29b7fa679
+    retention_and_risk: 按潜在敏感运行记录原位保全
+    recommendation: 仓库外不可变归档候选
+  - path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，7870字节，SHA256为5e6d7559f2a54eadb67f73b1335d60fe5169485a2b5b6b2a34e7dfe3a14ec2b8
+    retention_and_risk: 正文未读，保持冻结，禁止作为当前事实提升
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/变更告警_2026-08-23.md
+    classification: S2
+    body_read: true
+    content_nature: 项目阶段、状态、预算和合作方候选告警
+    fact_state: 正文明确不自动修改业务状态
+    retention_and_risk: 需业务责任方逐项确认，存在误报和过期风险
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/日报/晨报-2026-08-23.md
+    classification: S2
+    body_read: true
+    content_nature: no-agent基线晨报，明确存在数据覆盖限制
+    fact_state: 历史运营投影
+    retention_and_risk: 不得据此自动形成行动或决策
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/reports/Hermes质量周报.md
+    classification: S2
+    body_read: true
+    content_nature: 质量70/100、会议阻断212项及结构覆盖20/20的质量投影
+    fact_state: 质量候选结论
+    retention_and_risk: 结构覆盖不能替代真实闭环，须与覆盖率报告配套审阅
+    recommendation: 独立提交候选
+  - path: 工业绿链/体系/W01-W20第二阶段任务清单.md
+    classification: S2
+    body_read: true
+    content_nature: 声明无结构性缺口并进入连续运行验证的任务投影
+    fact_state: 结构判断，不代表运行或业务完成
+    retention_and_risk: 需要业务证据验证
+    recommendation: 独立提交候选
+  - path: 工业绿链/体系/W01-W20覆盖率报告.md
+    classification: S2
+    body_read: true
+    content_nature: 六维结构覆盖20/20，正文注明业务数据仍需确认
+    fact_state: 结构覆盖候选
+    retention_and_risk: 百分之百结构覆盖可能被误读为业务完成
+    recommendation: 独立提交候选
+  - path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，53671字节，模式600，SHA256为e383ca1d018214b3c327e242d32105d6677dcd8f3c7e59f0bd29e5fbd03ae283
+    retention_and_risk: 潜在敏感机器结果，须与阻断清单共同保全
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，28091字节，模式600，SHA256为c3f09b67b46f4c909417edccf53ba1e28fde94be9b1ca39a7697e9f82bdb62ea
+    retention_and_risk: 未分级，不得拆离配对JSON或据其自动改变会议状态
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，8344字节，模式600，SHA256为01b2bd05275ed133ab86e7db92552b43c5022d7f5002fc29e686678bba642773
+    retention_and_risk: 可能含个人或运行信息，未分级前禁止正文读取与提交
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/变更告警_2026-08-25.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，2944字节，模式600，SHA256为3dd7ca5885613cec24b4c167cadb672ed5b353439feac6dbdc284919f6566ba0
+    retention_and_risk: 当前候选告警但正文未分级，不得自动形成事实
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/周报/周报_2026W35.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，6682字节，模式600，SHA256为8b720019e56a89631f2a92e6a2fe2c742f857f7c33844c2bf41d382adfd970d1
+    retention_and_risk: 未分级运营汇总，需保持访问控制和版本摘要
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/日报/晨报-2026-08-25.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，1320字节，模式600，SHA256为b45bf6346039002f9b686deb6a371ae40f2ed5a33042175ef06ccded533206c1
+    retention_and_risk: 未分级日度投影，时效短且可能不完整
+    recommendation: 仓库外不可变归档候选
+  - path: 工业绿链/月报/月报_2026-08.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，9777字节，模式600，SHA256为1e9c22fcc8bdb4de27bb0fce0d29d15759fa5b916de03701eafa0667e3b7f816
+    retention_and_risk: 未分级月度投影，不得直接进入长期记忆或业务事实
+    recommendation: 仓库外不可变归档候选
+  - path: 99_Reports/ecosystem-health-2026-08-25.md
+    classification: UNKNOWN
+    body_read: false
+    metadata_fact: 未跟踪，3742字节，模式600，SHA256为208816d872cdf3634daaa9c0e8a95e4bd033367f5f5d0c7c4c238c0cec08e902
+    retention_and_risk: 未分级健康报告，状态可能短期失效，须保持来源和时间语义
+    recommendation: 仓库外不可变归档候选
+cross_path_findings:
+  - 十三项已审正文均为规范性方案、派生投影、告警、运行报告或治理证据，不应自动提升为正式业务事实
+  - W01-W20结构覆盖百分之百不代表业务完成，同批质量周报仍报告二百一十二个会议阻断项
+  - 三个零字节JSON只能证明文件存在，不能证明同步成功
+  - 两个GCWORLD与WAES文档必须原子处置，并补齐原始DOCX哈希、来源标识、提取器版本、owner和批准证据
+  - 十六项UNKNOWN中多项权限模式为600，应按潜在敏感内容继续原位保全并禁止正文读取
+  - 本轮没有形成删除候选；所有归档和提交建议仍需独立授权
+pre_and_post_gate:
+  baseline_unchanged: true
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  codex_automations_paused: 3
+  hermes_jobs_disabled_and_paused: 11
+  gbrain_autopilot_and_worker: quiet
+  matching_gcworld_or_waes_import_process: none_observed
+zero_mutation_statement:
+  kds_files_created_modified_moved_deleted: 0
+  staging_commit_push: 0
+  tests_build_format: 0
+  service_operations: 0
+  database_api_credentials: 0
+  producer_restore: 0
+  d12_n_d12_d_or_later_decisions: 0
+  deployment_acceptance_archive_promotion: 0
+effect:
+  d12_r1: completed_with_16_unknown_metadata_only
+  d12_n_authorized: false
+  d12_d_authorized: false
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  overall_status: partial_classification_rework_required_before_disposition

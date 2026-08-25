@@ -1,0 +1,113 @@
+receipt_id: GCWORLD-KDS-D10-OWNER-REVIEW-RECEIPT-20260825-013
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T06:48:16Z"
+approval_receipt_ref: GCWORLD-KDS-D10-APPROVAL-RECEIPT-20260825-011
+request_ref: GCWORLD-KDS-D10-OWNER-REVIEW-REQUEST-20260825-012
+request_sha256: b782a1f667d54dd69958c4dd00fc67dd5559bf6361fade58d1c216570c881b7d
+responsible_party:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+  turn_id: 01a037a7-8294-7dd2-8db8-901750263d8f
+  result: completed_read_only_review
+review_scope:
+  files: [api_server.py, tests/test_api_smoke.py]
+  compared_to: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  diff_summary:
+    total_insertions: 10
+    total_deletions: 3
+    api_server: 4_insertions_2_deletions
+    test_api_smoke: 6_insertions_1_deletion
+  other_kds_file_content_read: false
+source_assessment:
+  confirmed:
+    - 当前变化属于既有Notion只读镜像功能域
+    - 变化目的为让Notion同步读取KDS根目录顶层Markdown
+    - 继续使用KDS_NOTION_SYNC_TOKEN及显式空间白名单
+  historical_support:
+    - commit: 00619dea
+      subject: 限制Notion镜像只读访问
+    - commit: cbeeddc8
+      subject: 覆盖Notion镜像读取边界
+  unconfirmed:
+    - 当前_root扩展的具体需求单
+    - 当前变化的编辑者或直接开发任务
+  prohibited_inference_preserved: true
+change_purpose_and_mapping:
+  - implementation: 新增_root虚拟空间常量
+    test: 将_root加入Notion令牌允许空间
+    coverage: corresponding
+  - implementation: 将_root映射至DATA_DIR并仅枚举顶层Markdown
+    test: 请求根空间列表并断言返回路径不含斜杠
+    coverage: partial_due_to_possible_empty_collection
+  - implementation: 返回包含正文、哈希和元数据的完整文档载荷
+    test: 未验证允许文档范围、内容分级、大小或已知文档存在
+    coverage: missing
+  - implementation: 新虚拟空间的详情、拒绝、写入和审计边界
+    test: 无相应根空间负向测试
+    coverage: missing
+risks:
+  - severity: high
+    category: 安全与权限
+    finding: 详情读取路径解析没有对非开发空间建立URL空间与文档路径绑定；已获某个允许空间的令牌可能按已知根目录文件名读取详情
+    scope_note: 问题在当前HEAD中已存在，但_root扩展会放大其影响，后续变更必须一并评估
+  - severity: medium_high
+    category: 数据暴露
+    finding: _root进入白名单后会返回所有根目录顶层Markdown的完整正文、哈希和元数据，未见对象级ACL、内容分级、分页或读取审计
+  - severity: medium
+    category: 测试充分性
+    finding: all断言可在空集合时通过，且没有受控顶层与嵌套文档夹具
+  - severity: medium
+    category: 兼容性
+    finding: _root成为保留虚拟空间名，但尚未形成正式契约与冲突策略
+  - severity: medium
+    category: 运行一致性
+    finding: 不同KDS进程启动时点可能对应不同工作树版本；本次因禁止测试和服务操作未验证运行行为
+recommendations:
+  api_server.py:
+    disposition: 保留并隔离为独立Notion根目录读取候选，暂不执行D12处置
+    prerequisites:
+      - 明确_root正式契约和允许文档清单
+      - 修复或明确详情路由的空间与路径绑定
+      - 评估对象级权限、读取审计、分页和内容大小上限
+      - 决定虚拟空间名冲突策略
+      - 后续经独立授权后以TDD验证
+  tests/test_api_smoke.py:
+    disposition: 与实现作为同一原子候选保留，暂不执行D12处置
+    required_coverage:
+      - 受控顶层及嵌套Markdown夹具
+      - 未配置_root时拒绝
+      - 根目录详情读取及跨空间隔离
+      - Notion令牌对根空间写入拒绝
+      - 空结果、分页、大小和审计边界
+pre_and_post_gate:
+  baseline_unchanged: true
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  codex_automations_paused: 3
+  hermes_jobs_disabled_and_paused: 11
+  gbrain_autopilot_and_worker: quiet
+  matching_gcworld_or_waes_import_process: none_observed
+boundary_receipt:
+  kds_write: false
+  test_run: false
+  kds_service_operation: false
+  staging_commit_push: false
+  d12_disposition: false
+  producer_restore: false
+  deploy_or_status_promotion: false
+effect:
+  d10: completed
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  overall_status: partial_d10_complete_d12_not_authorized

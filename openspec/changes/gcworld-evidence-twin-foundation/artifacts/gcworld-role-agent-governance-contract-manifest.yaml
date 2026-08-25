@@ -1,0 +1,26 @@
+contract_id: globalcloud.gcworld.role_agent_governance
+contract_version: v1.0
+title: GCWORLD职能智能体治理契约清单
+status: draft
+scope: 本地夹具与确定性校验，不授权真实智能体运行或外部动作
+artifacts:
+  - name: 职能智能体治理Schema
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-role-agent-governance.schema.json
+    sha256: 2e08e0d94cf33c0913be3f46b4d4c45e397d6c8e428d964a6af1cba72f611636
+  - name: 职能智能体治理正反例
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-role-agent-governance-fixtures.json
+    sha256: 08e7a6b103f8a4773a09b7689e8ee0b80b7d7b1b027393bec83f46211830adf1
+  - name: 职能智能体治理校验器
+    path: tools/kds-sync/validate_gcworld_role_agent_governance.py
+    sha256: 2721b85efbe131eb35ab4714a9131a2d944a5f405bc951f1bcb42dee2c75b580
+  - name: 职能智能体治理回归测试
+    path: tests/test_gcworld_role_agent_governance.py
+    sha256: 3a941ac7352a0a5e6fc559ff19091ff37be75d96f833022a3b0a152b25703e36
+status_boundary:
+  kds_write_authorized: false
+  mmc_write_authorized: false
+  business_write_authorized: false
+  external_action_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+  completion_status: not_complete

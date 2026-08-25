@@ -1,0 +1,11 @@
+- main [ref=e9]:
+  - generic [ref=e11]:
+    - img "GlobalCloud Studio" [ref=e13]
+    - heading "GlobalCloud Studio" [level=1] [ref=e14]
+    - paragraph [ref=e15]: 输入用户名和密码以继续。
+    - paragraph [ref=e16]: 默认登录名：admin，默认密码：123456
+    - generic [ref=e17]:
+      - textbox "用户名" [ref=e18]: gke001-browser-admin
+      - textbox "密码" [ref=e19]: AiwqD7jAyVrgTxV4zrh4HBOQhnBcGmsCU9!
+      - alert [ref=e21]: 用户名或密码错误
+      - button "登录" [ref=e20] [cursor=pointer]

@@ -1,0 +1,42 @@
+receipt_id: GCWORLD-KDS-INTEGRATION-AUTH-RECEIPT-20260824-001
+request_id: GCWORLD-KDS-INTEGRATION-AUTH-REQUEST-20260824-001
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+confirmed_at: "2026-08-24T09:51:38Z"
+human_decision_owner: 老卢
+confirmation_text: 批准D1—D4
+decisions:
+  D1:
+    decision: approved
+    effect: 批准绑定release_0、F-013、指定线程、GPCF仓库和有界文件范围
+  D2:
+    decision: approved
+    effect: 批准最小读取范围、S0至S3边界和短期凭据策略，但不立即签发凭据或激活读取
+  D3:
+    decision: approved
+    effect: 批准最终裁决人、第二复核角色、五个工作日SLA和争议升级路径
+  D4:
+    decision: approved
+    effect: 要求KDS责任方独立处置14项既存变化并重新提交F-013准入证据
+authorization_effect:
+  governance_approval_signed: true
+  stage_a_implementation_active: false
+  activation_condition: F-013必须明确返回ready_for_authorization
+  task_effect:
+    completed: ["1.1", "1.3", "1.4"]
+    blocked: ["1.2"]
+    implementation_not_started: ["2.1至4.5"]
+boundaries:
+  kds_content_read_authorized_now: false
+  kds_write_authorized: false
+  kds_cleanup_stage_revert_commit_push_authorized: false
+  credential_issued_now: false
+  deployment_or_status_promotion_authorized: false
+current_admission_fact:
+  kds_changed_entries: 14
+  kds_staged_entries: 0
+  kds_ahead: 0
+  kds_behind: 0
+  kds_status_sha256: bb1b1c46ef5eac28ca0c4b66d75239794ce8968e2a88dbd5a8780201ec2dd457
+  f013_admission: blocked_dirty_worktree
+  observation: 人工批准不覆盖或改写F-013的规范准入事实

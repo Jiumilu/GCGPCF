@@ -1,0 +1,33 @@
+schema_version: harness-evidence-index/v1
+run_id: 20260824-092905-gcworld-integration-proposals
+parent_run_id: 20260822-235654-gcworld-evidence-twin-foundation
+generated_at: "2026-08-24T09:40:50Z"
+language: zh-CN
+status_claim: planning_complete_implementation_not_authorized
+evidence:
+  - id: proposal-validation
+    path: evidence/proposal-validation.yaml
+    description: 三项OpenSpec规划完整性、严格校验和文档门禁证据
+    freshness: current
+    trust_level: machine_generated
+  - id: coverage-review-disposition
+    path: ../../../openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-coverage-review-disposition-20260824.yaml
+    description: partial结论确认与仅准备提案的授权边界
+    freshness: current
+    trust_level: human_confirmed
+  - id: kds-proposal
+    path: ../../../openspec/changes/gcworld-kds-authoritative-integration/proposal.md
+    description: GCWORLD与KDS权威事实集成变更提案
+    freshness: current
+    trust_level: agent_generated
+  - id: workbench-proposal
+    path: ../../../openspec/changes/gcworld-workbench-ui-foundation/proposal.md
+    description: GCWORLD工作台界面基础变更提案
+    freshness: current
+    trust_level: agent_generated
+  - id: runtime-proposal
+    path: ../../../openspec/changes/gcworld-controlled-runtime-integration/proposal.md
+    description: GCWORLD受控运行时集成变更提案
+    freshness: current
+    trust_level: agent_generated
+

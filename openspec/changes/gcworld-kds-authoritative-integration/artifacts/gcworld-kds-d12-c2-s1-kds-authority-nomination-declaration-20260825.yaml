@@ -1,0 +1,87 @@
+declaration_id: GCWORLD-KDS-D12-C2-S1-KDS-NOMINATION-DECLARATION-20260825-041
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+declared_at: "2026-08-25T11:24:42Z"
+request_sha256: 838458aab13431e7802f02d28a7a9a4f1713e07f7f6110d9fa338c8b88eb48f9
+declarant:
+  role: KDS知识资料与证据服务责任方
+  signed_thread: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+result: four_groups_authority_unverified
+nominations:
+  - nomination_id: D12-C2-S1-A-NOM-001
+    authority_group: distributed_governance
+    authority_subject_name_or_asset_id: null
+    authority_role: unconfirmed
+    authority_basis: authority_unverified
+    nominator_identity: KDS知识资料与证据服务责任方
+    signed_thread_or_identity: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    target_ids: [D12-C1-EXC-001, D12-C1-EXC-002]
+    scope: 仅核验该组真实内容权威主体，未形成提名
+    valid_from: null
+    valid_until: null
+    target_audience: unconfirmed
+    business_sensitivity_boundary: unconfirmed
+    distribution_constraints: unconfirmed
+    revocation_or_expiry_condition: unconfirmed
+    conflict_of_interest_statement: 无法验证候选权威主体，因而无法完成利益冲突声明
+    result: authority_unverified
+    reason: automation-5仅被验证为生产任务，不能自行成为内容权威
+  - nomination_id: D12-C2-S1-A-NOM-002
+    authority_group: feishu_xiaog_closure
+    authority_subject_name_or_asset_id: null
+    authority_role: unconfirmed
+    authority_basis: authority_unverified
+    nominator_identity: KDS知识资料与证据服务责任方
+    signed_thread_or_identity: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    target_ids: [D12-C1-EXC-003, D12-C1-EXC-004]
+    scope: 仅核验该组真实内容权威主体，未形成提名
+    valid_from: null
+    valid_until: null
+    target_audience: unconfirmed
+    business_sensitivity_boundary: unconfirmed
+    distribution_constraints: unconfirmed
+    revocation_or_expiry_condition: unconfirmed
+    conflict_of_interest_statement: 无法验证候选权威主体，因而无法完成利益冲突声明
+    result: authority_unverified
+    reason: workwiki-kds仅被验证为生产任务，不能自行成为内容权威
+  - nomination_id: D12-C2-S1-A-NOM-003
+    authority_group: macmini_workwiki
+    authority_subject_name_or_asset_id: null
+    authority_role: unconfirmed
+    authority_basis: authority_unverified
+    nominator_identity: KDS知识资料与证据服务责任方
+    signed_thread_or_identity: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    target_ids: [D12-C1-EXC-005, D12-C1-EXC-006]
+    scope: 仅核验该组真实内容权威主体，未形成提名
+    valid_from: null
+    valid_until: null
+    target_audience: unconfirmed
+    business_sensitivity_boundary: unconfirmed
+    distribution_constraints: unconfirmed
+    revocation_or_expiry_condition: unconfirmed
+    conflict_of_interest_statement: 无法验证候选权威主体，因而无法完成利益冲突声明
+    result: authority_unverified
+    reason: macmini-workwiki仅被验证为生产任务，不能自行成为内容权威
+  - nomination_id: D12-C2-S1-A-NOM-004
+    authority_group: ecosystem_health
+    authority_subject_name_or_asset_id: null
+    authority_role: unconfirmed
+    authority_basis: authority_unverified
+    nominator_identity: KDS知识资料与证据服务责任方
+    signed_thread_or_identity: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+    target_ids: [D12-C1-EXC-016]
+    scope: 仅核验该组真实内容权威主体，未形成提名
+    valid_from: null
+    valid_until: null
+    target_audience: unconfirmed
+    business_sensitivity_boundary: unconfirmed
+    distribution_constraints: unconfirmed
+    revocation_or_expiry_condition: unconfirmed
+    conflict_of_interest_statement: 无法验证候选权威主体，因而无法完成利益冲突声明
+    result: authority_unverified
+    reason: wiki-ecosystem-health-3d仅被验证为生产任务，不能自行成为内容权威
+scope_compliance:
+  target_content_read: false
+  authority_inferred_or_agent_signed: false
+  reviewer_b_replaced: false
+  kds_write_or_test_service_operation: false

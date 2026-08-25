@@ -1,0 +1,54 @@
+receipt_id: GCWORLD-KDS-OWNER-DISPATCH-RECEIPT-20260825-002
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-002
+approval_receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-002
+language: zh-CN
+dispatched_at: "2026-08-25T02:18:30Z"
+verified_at: "2026-08-25T02:19:08Z"
+source_thread_id: 01a029fa-79b9-7fa3-92a7-57ad6c080a32
+target:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+  host_id: local
+  turn_id: 01a036b6-9b42-7983-a5f6-b3aabc69b3d1
+delivery:
+  channel: Codex线程后台消息
+  send_result: accepted
+  readback_verified: true
+  target_turn_status: completed
+  requested_output: knowledge_engineering_handoff
+owner_acknowledgement:
+  verified_at: "2026-08-25T02:21:02Z"
+  latest_assistant_message_id: item-4
+  baseline_exactly_matched: true
+  changed_entries_exactly_matched: 28
+  next_action: 仅比对新增11项文件元数据、脚本输出路径和Hermes本地任务配置
+  file_content_read: false
+  kds_or_service_mutation_performed: false
+owner_final_handoff:
+  received_at: "2026-08-25T04:01:16Z"
+  final_message_id: item-808
+  handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-002
+  result: pass_read_only_supplemental_attribution
+  newly_analyzed_entries: 11
+  baseline_exactly_matched: true
+  kds_or_service_mutation_performed: false
+scope:
+  total_entries: 28
+  previously_analyzed_entries: 17
+  newly_delivered_entries: 11
+  status_sha256: 800ba7bafc9d3616bfc48dce34de891ba8df19899dd8e8f0646f7390125c85e8
+boundary:
+  git_status_metadata_and_generator_config_read_only: true
+  file_content_read_authorized: false
+  file_mutation_authorized: false
+  automation_or_service_operation_authorized: false
+  database_api_credentials_authorized: false
+  commit_push_deploy_authorized: false
+result:
+  delivery_complete: true
+  owner_response_pending: false
+  owner_acknowledgement_received: true
+  owner_handoff_received: true
+  task_1_2_complete: false
+  implementation_may_start: false

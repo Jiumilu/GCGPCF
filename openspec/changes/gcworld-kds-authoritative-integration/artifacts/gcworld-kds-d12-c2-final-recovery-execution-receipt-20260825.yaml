@@ -1,0 +1,38 @@
+receipt_id: GCWORLD-KDS-D12-C2-FINAL-RECOVERY-EXECUTION-RECEIPT-20260825-031
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T10:26:26Z"
+authorization_receipt_sha256: 4f062c577ab99a7823e4c0fe3f1cd665e4c5167cc5f90c145b58475c197355b9
+intermediate_drift_receipt_sha256: 3a164d21751c03387449e773f13f5ab716126778f1e44500f000f1dbc7bc5c90
+opsx_lock_run_id: GCWORLD-KDS-D12-C2-RESEAL-20260825
+action:
+  target: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+  source: HEAD
+  worktree_only: true
+  target_clean_after_restore: true
+  other_kds_paths_touched: false
+restored_baseline:
+  branch: main
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  exact_31_item_seal: true
+producer_freeze:
+  codex_automations_paused: 3_of_3
+  hermes_jobs_disabled: 11_of_11
+  gbrain_autopilot_absent: true
+  matching_import_or_gbrain_processes: 0
+  exact_match: true
+scope_compliance:
+  unknown_content_read: 0
+  non_target_kds_mutation: 0
+  tests_or_service_operations: 0
+  producer_restore: 0
+  commit_push_deploy_or_status_promotion: 0
+next_gate:
+  new_r2_request_generation_allowed: true
+  d12_c2_execution_allowed: false

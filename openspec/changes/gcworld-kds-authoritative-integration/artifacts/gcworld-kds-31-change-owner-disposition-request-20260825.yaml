@@ -1,0 +1,76 @@
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-004
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-25T05:27:15Z"
+status: owner_analysis_completed_with_governance_hash_rework
+supersedes: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-003
+scope:
+  previous_approved_entries: 29
+  current_entries: 31
+  newly_added_entries: 2
+  previous_29_scope_not_dispatched_due_to_drift: true
+  new_scope_requires_human_confirmation: true
+target:
+  responsible_party: KDS责任方
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+baseline:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  changed_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  f013_admission: blocked_dirty_worktree
+inherited_scope:
+  analyzed_28_handoff_ref: GCWORLD-KDS-OWNER-HANDOFF-20260825-002
+  unprocessed_29_request_ref: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-003
+  entries: 29
+new_scope:
+  entries: 2
+  paths:
+    - status: modified
+      value: api_server.py
+      byte_size: 178398
+      mtime_ns: 1787634540128606134
+    - status: modified
+      value: tests/test_api_smoke.py
+      byte_size: 55342
+      mtime_ns: 1787634540129136275
+requested_owner_action:
+  mode: read_only_attribution_and_disposition_plan
+  requirements:
+    - 先验证31项基线；如有漂移立即停止
+    - 补充分析第29项，并仅通过Git元数据、生成器或进程配置确认新增2项的责任方和直接变化来源
+    - 判断两个代码文件是否来自运行中服务、开发任务或其他来源，不得读取文件或差异正文进行推断
+    - 给出保留、独立变更或延后处置建议，不得执行任何建议
+    - 重新形成覆盖全部31项的稳定窗口与独立授权清单
+    - 返回标准knowledge_engineering_handoff并保持F-013与任务1.2阻塞
+prohibited:
+  - 读取三个新增文件或代码差异正文
+  - 编辑、移动、删除、暂存、还原、提交或推送KDS文件
+  - 暂停、停止、恢复或修改自动化、Hermes任务、KDS服务或其他服务
+  - 访问数据库、API或凭据
+  - 测试、部署、验收、归档或状态提升
+effect:
+  before_human_confirmation: 不得向KDS责任方交付31项范围
+  after_confirmation: 仅允许交付三项只读责任归属请求，不授权执行任何处置建议
+  after_dispatch: 责任方补充回执已收到；任何建议处置仍须独立授权
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+approval:
+  human_decision_owner: 老卢
+  decision: approved
+  confirmed_at: "2026-08-25T05:32:24Z"
+  confirmation_text: 批准将D4只读责任方分析范围从29项扩展为31项，并交付KDS责任方补充分析新增3项。该确认不授权读取文件或代码差异正文、文件清理、自动化暂停或服务变更。
+integrity:
+  delivered_request_sha256: fe2069ecedd17a4bafa26fc0069ebaa40a74005be62c17fc09866e39e9474028
+  post_dispatch_mutable_sha256: 36b66b563606e6af1d7da63a25b89545bcbec8d18e251b0fb22d9908dd4c5a1c
+  mutation_explanation: 交付后仅更新请求状态和交付后等待说明；31项范围、密封基线、人工确认与禁止边界未改变
+  owner_observation: 责任方已报告交付摘要与交付后文件哈希不一致，要求GPCF重封并解释
+  reseal_receipt_ref: GCWORLD-KDS-REQUEST-RESEAL-RECEIPT-20260825-004

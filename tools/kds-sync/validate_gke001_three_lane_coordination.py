@@ -1075,7 +1075,6 @@ def main() -> int:
     require(feature.get("ui_product_first_control", {}).get("status_ceiling") == "partial", "feature_status_ceiling_mismatch")
     blockers = set(feature.get("blockers") or ())
     for blocker in (
-        "kds_p1_apply_blocked_by_dirty_worktree",
         "kds_stage_b_read_admission_technical_verified_governance_blocked",
         "studio_intake_phase1_authorized_phase2_blocked_by_mmc_prepare_retry_policy_review",
         "studio_a6_external_daily_sync_commit_push_requires_governance_disposition",

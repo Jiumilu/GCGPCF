@@ -1,0 +1,51 @@
+run_id: 20260824-094555-gcworld-kds-integration-admission
+change_id: gcworld-kds-authoritative-integration
+entrypoint: /opsx:resume
+requested_by: human
+started_at: "2026-08-24T09:45:55Z"
+updated_at: "2026-08-24T09:52:41Z"
+current_step: 2
+current_step_name: authorization-request
+status: partial
+language: zh-CN
+scope: 仅准备1.1至1.4授权与准入材料；F-013未放行时不进入2.1
+authorization:
+  authorization_request_preparation: true
+  governance_approval_signed: true
+  human_confirmation: 批准D1—D4
+  activation: pending_f013_admission
+  implementation_authorized: false
+  kds_read_authorized: false
+  kds_write_authorized: false
+  repository_cleanup_authorized: false
+  commit_push_deploy_authorized: false
+preflight:
+  kds_head_matches_origin_main: true
+  kds_ahead: 0
+  kds_behind: 0
+  kds_changed_entries: 14
+  kds_status_sha256: bb1b1c46ef5eac28ca0c4b66d75239794ce8968e2a88dbd5a8780201ec2dd457
+  kds_stability_checks: 3
+  f013_admission: blocked_dirty_worktree
+  openspec_strict: pass
+result:
+  authorization_request_created: true
+  authorization_receipt_created: true
+  decisions_approved: [D1, D2, D3, D4]
+  kds_owner_disposition_request_created: true
+  kds_owner_disposition_status: prepared_pending_kds_owner_dispatch
+  openspec_tasks_complete: 3
+  openspec_tasks_total: 17
+  implementation_started: false
+  next_task_allowed: false
+  reason: 治理授权已签发，但F-013准入仍被KDS 14项既存变化阻塞
+evidence_index: .harness/runs/20260824-094555-gcworld-kds-integration-admission/evidence-index.yaml
+final_validation:
+  authorization_request_gate: pass_human_confirmed
+  authorization_evidence_gate: pass
+  kds_owner_disposition_request_gate: pass_14_of_14
+  openspec_strict: pass
+  document_gate: pass
+  project_group_gate: pass_17_of_17
+  kds_status_unchanged: true
+  opsx_disposition: pause_before_implementation

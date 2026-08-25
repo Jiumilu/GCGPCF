@@ -1,0 +1,30 @@
+receipt_id: GCWORLD-KDS-D4-SCOPE-APPROVAL-RECEIPT-20260825-002
+change_id: gcworld-kds-authoritative-integration
+request_id: GCWORLD-KDS-OWNER-DISPOSITION-REQUEST-20260825-002
+language: zh-CN
+confirmed_at: "2026-08-25T02:17:49Z"
+human_decision_owner: 老卢
+confirmation_text: 批准将D4只读责任方分析范围从17项扩展为28项，并交付KDS责任方补充分析新增11项。该确认不授权文件清理、自动化暂停或服务变更。
+decision:
+  d4_read_only_scope_expansion_approved: true
+  previous_scope: 17
+  approved_scope: 28
+  newly_approved_scope: 11
+  delivery_target_thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+boundary:
+  owner_read_only_attribution_authorized: true
+  file_content_read_authorized: false
+  file_cleanup_or_mutation_authorized: false
+  automation_pause_or_change_authorized: false
+  hermes_or_service_operation_authorized: false
+  database_api_credentials_authorized: false
+  staging_commit_push_deploy_authorized: false
+  task_1_2_complete: false
+  stage_a_active: false
+baseline:
+  changed_entries: 28
+  status_sha256: 800ba7bafc9d3616bfc48dce34de891ba8df19899dd8e8f0646f7390125c85e8
+  f013_admission: blocked_dirty_worktree
+effect:
+  owner_request_may_dispatch: true
+  implementation_may_start: false

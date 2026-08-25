@@ -3,31 +3,59 @@ change_id: "gcworld-evidence-twin-foundation"
 entrypoint: /opsx:full-cycle
 requested_by: human
 started_at: "2026-08-22T15:56:54Z"
-updated_at: "2026-08-22T16:01:14Z"
-current_step: 6
-current_step_name: code-execute
+updated_at: "2026-08-24T09:16:37Z"
+current_step: 10
+current_step_name: archive-handoff
 status: partial
 risk:
   level: medium
   dimensions:
-    governance: human_source_scope_and_identity_steward_confirmation_required
-    repository: kds_blocked_dirty_worktree
+    governance: confirmed_readonly_scope_and_human_identity_steward
+    repository: isolated_kds_snapshot_two_pass_deterministic_live_kds_14_changes_block_new_apply
+    data_classification: all_sources_disposed_identity_normalization_and_s3_exception_review_pending
+    agent_governance: structural_contract_complete_runtime_execution_not_authorized
+    world_auth: structural_contract_complete_real_authorization_not_authorized
+    world_runtime: structural_contract_complete_real_execution_not_authorized
+    workbench: structural_contract_complete_real_product_and_sharing_not_authorized
+    engineering_governance: structural_contract_complete_real_infrastructure_and_event_execution_not_authorized
   requires_human_review: true
 mode: local
 degraded: true
 degraded_gates:
-  - kds_blocked_dirty_worktree
-  - kds_source_allowlist_not_approved
-  - identity_normalization_steward_not_confirmed
+  - live_kds_dirty_worktree_blocks_new_apply
+  - identity_normalization_and_s3_exception_review_pending
 steps:
   - { step: 0, name: gate-check, status: complete, started_at: "2026-08-22T15:56:54Z" }
   - { step: 1, name: preflight, status: complete }
   - { step: 2, name: propose, status: complete }
   - { step: 3, name: design-review, status: complete }
   - { step: 4, name: task-breakdown, status: complete }
-  - { step: 5, name: tdd-execute, status: not_applicable }
-  - { step: 6, name: code-execute, status: blocked }
-  - { step: 7, name: evidence-collect, status: pending }
-  - { step: 8, name: review, status: pending }
-  - { step: 9, name: acceptance-verify, status: pending }
-  - { step: 10, name: archive-handoff, status: pending }
+  - { step: 5, name: tdd-execute, status: complete }
+  - { step: 6, name: code-execute, status: complete }
+  - { step: 7, name: evidence-collect, status: complete }
+  - { step: 8, name: review, status: complete }
+  - { step: 9, name: acceptance-verify, status: complete }
+  - { step: 10, name: archive-handoff, status: partial }
+final_status: pass_with_runtime_blockers
+archive_allowed: false
+status_promotion_allowed: false
+handoff:
+  submitted: true
+  mode: audit_only
+  result: pass_with_runtime_blockers
+  evidence_index: .harness/evidence-index.yaml
+  acceptance_matrix: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
+  audit_report: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/harness-status-audit.yaml
+openspec_progress:
+  complete: 37
+  total: 37
+  remaining: 0
+  pending_task: null
+followup_proposal_planning:
+  completed: true
+  review_disposition: partial_acknowledged_proposal_preparation_authorized
+  implementation_authorized: false
+  changes:
+    - gcworld-kds-authoritative-integration
+    - gcworld-workbench-ui-foundation
+    - gcworld-controlled-runtime-integration

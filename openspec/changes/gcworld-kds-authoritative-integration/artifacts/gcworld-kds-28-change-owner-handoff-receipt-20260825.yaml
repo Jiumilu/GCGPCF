@@ -1,0 +1,154 @@
+handoff_id: GCWORLD-KDS-OWNER-HANDOFF-20260825-002
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+received_at: "2026-08-25T04:01:16Z"
+source:
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  thread_title: KDS-知识资料与证据服务
+  turn_id: 01a036b6-9b42-7983-a5f6-b3aabc69b3d1
+  final_message_id: item-808
+  result: pass_read_only_supplemental_attribution
+input_integrity:
+  delivered_request_sha256_reported_by_owner: 14aec6d7ad4b7ca075c16791293de858484fb5ad60bd184c0afd906055289101
+  approval_receipt_sha256: f90a49e1cb91a319d246599664caa49710505309242b99d63cecd0d47f1ed940
+  drift_record_sha256: d48ea8ed19cc93586a446781cd09bfb8b428afbe14b12451b6d6bf725beb13a7
+  current_mutable_request_sha256_before_closeout: acc62ee02c45634d1be8ea1db3054c52bd6f169211898aa5d58fe3f37178935e
+  mutation_explanation: 交付后仅更新请求状态、责任方确认和等待说明；28项范围、KDS密封基线与禁止边界未改变
+baseline_before_and_after:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 28
+  ordinary_nul_sha256: 800ba7bafc9d3616bfc48dce34de891ba8df19899dd8e8f0646f7390125c85e8
+  expanded_entries: 28
+  expanded_nul_sha256: ce864dde2a38584cfc6b2c1be4c23fef3dd727ca6e533a783b46a96494872987
+  opsx_lock: absent
+  f013_admission: blocked_dirty_worktree
+supplemental_attribution:
+  entries: 11
+  provenance_basis:
+    - Hermes任务清单中的任务标识、脚本、工作目录、调度状态和最近运行时间
+    - 直接生成脚本中的精确输出路径
+    - 文件修改时间与任务最近运行时间的对齐关系
+    - 仅计算不可逆内容摘要，不解析或输出文件正文
+  items:
+    - path: 工业绿链/reports/Hermes质量周报.md
+      producer: Hermes任务d1875abfb9df
+      script: .hermes/scripts/w_quality_gate.py
+      schedule: 每周一09:25
+      state: enabled_scheduled_last_run_error
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 受控版本替代前保留；与覆盖率报告组成独立质量门禁变更
+    - path: 工业绿链/体系/W01-W20第二阶段任务清单.md
+      producer: Hermes任务2784e0317db6
+      script: .hermes/scripts/w01_w20_coverage_gate.py
+      schedule: 每周一09:15
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 长期保留；与覆盖率报告作为同一投影变更审阅
+    - path: 工业绿链/体系/W01-W20覆盖率报告.md
+      producer: Hermes任务2784e0317db6
+      script: .hermes/scripts/w01_w20_coverage_gate.py
+      schedule: 每周一09:15
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 长期保留；不得与业务事实或其他运行报告混交
+    - path: 99_Reports/ecosystem-health-2026-08-25.md
+      producer: Hermes任务wiki-ecosystem-health-3d
+      script: .hermes/scripts/wiki_ecosystem_health_check.py
+      schedule: 每3天09:00
+      state: enabled_scheduled_last_run_error
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 建议仓库外不可变保存180天；不得自动成为权威事实
+    - path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+      producer: Hermes任务43652c3c9b4d
+      script: .hermes/scripts/meeting_quality_gate.py
+      schedule: 每日21:45
+      state: enabled_scheduled_last_run_blocked_error
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 与会议质量门禁阻断清单组成受限审计包，至少保留至阻断关闭后一年
+    - path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+      producer: Hermes任务43652c3c9b4d
+      script: .hermes/scripts/meeting_quality_gate.py
+      schedule: 每日21:45
+      state: enabled_scheduled_last_run_blocked_error
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 与同批JSON共同受控保留，不得作为普通日报删除或直接提升事实
+    - path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+      producer: Hermes任务99683d54df08
+      script: .hermes/scripts/laolu_work_system_health_check.py
+      schedule: 每周一09:00
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 建议保存180天或形成月度汇总；使用独立治理变更
+    - path: 工业绿链/变更告警_2026-08-25.md
+      producer: Hermes任务2f3355dec02f
+      script: .hermes/scripts/w18_change_alert.py
+      schedule: 每日08:10
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 来自前序四任务之一
+      retention_and_disposition: 建议保存180天；仅作为候选告警
+    - path: 工业绿链/周报/周报_2026W35.md
+      producer: Hermes任务155b3671abdd
+      script: .hermes/scripts/laolu_weekly_report.py
+      schedule: 每周一10:00
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 建议至少保存一年或至项目周期结束；独立审阅归档
+    - path: 工业绿链/日报/晨报-2026-08-25.md
+      producer: Hermes任务87c8214c0e57
+      script: .hermes/scripts/laolu_daily_briefing.py
+      schedule: 每日08:30
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 来自前序四任务之一
+      retention_and_disposition: 建议保存180天后按月压缩归档；不得自动写入业务事实
+    - path: 工业绿链/月报/月报_2026-08.md
+      producer: Hermes任务dbce6d580114
+      script: .hermes/scripts/w17_monthly_monitor.py
+      schedule: 每周一09:30
+      state: enabled_scheduled_last_run_ok
+      relation_to_previous_four_jobs: 新增来源
+      retention_and_disposition: 建议保存至项目结束后至少一年；独立月报变更并人工核对来源
+producer_coverage_for_28_entries:
+  codex_automations:
+    - macmini-workwiki
+    - workwiki-kds
+    - automation-5
+  hermes_jobs:
+    - f06e9f563967
+    - 2f3355dec02f
+    - 87c8214c0e57
+    - 111e8983641a
+    - d1875abfb9df
+    - 2784e0317db6
+    - wiki-ecosystem-health-3d
+    - 43652c3c9b4d
+    - 99683d54df08
+    - 155b3671abdd
+    - dbce6d580114
+  other_write_risks:
+    - GBrain autopilot及其worker仍在运行
+    - 两项GCWORLD与WAES资料的唯一生成器未确认，需冻结人工导入活动
+stable_window_recommendation:
+  - 分别取得Codex自动化、Hermes任务、GBrain服务和人工导入的专项控制授权
+  - 等待已开始任务自然结束，不直接杀进程
+  - 在零活跃生产者时记录T0完整NUL状态
+  - 连续两次、间隔5分钟复核路径、修改时间、大小和NUL摘要
+  - 至少形成10分钟稳定窗口，单次处置窗口建议不超过30分钟
+  - 文件处置和恢复生产者必须另行授权
+zero_mutation_statement:
+  kds_file_content_read: 0
+  kds_files_created_modified_moved_deleted: 0
+  staging_commit_push: 0
+  automation_hermes_service_operations: 0
+  database_api_credentials: 0
+  deployment_acceptance_archive_promotion: 0
+result:
+  d4_read_only_owner_analysis_complete: true
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  status: active_partial_not_complete

@@ -1,0 +1,26 @@
+contract_id: globalcloud.gcworld.world_auth
+contract_version: v1.0
+title: GCWORLD世界原生权限与责任契约清单
+status: draft
+scope: 本地夹具与确定性校验，不授予真实权限，不执行任何内外部写入
+artifacts:
+  - name: 世界原生权限与责任Schema
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-world-auth.schema.json
+    sha256: 6ac1a6ea08e925dd7eb895ad622cdb6b74009677fb35a65ad32275b765529dbc
+  - name: 世界原生权限与责任正反例
+    path: openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-world-auth-fixtures.json
+    sha256: b1d36e2cbaa69eba5ccf5e4120ed83f1d7d0044f8074ea61c887eb6fad6ca3de
+  - name: 世界原生权限与责任校验器
+    path: tools/kds-sync/validate_gcworld_world_auth.py
+    sha256: 21563c0dec431409259fdfa5009adfc55ebcd141b19fe34143c04180388eef75
+  - name: 世界原生权限与责任回归测试
+    path: tests/test_gcworld_world_auth.py
+    sha256: 7283ad0621d485cdc7cffa4880bb1599e717110ecdeb82739e7e495795ec8e43
+status_boundary:
+  real_authorization_authorized: false
+  kds_write_authorized: false
+  business_write_authorized: false
+  external_action_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+  completion_status: not_complete

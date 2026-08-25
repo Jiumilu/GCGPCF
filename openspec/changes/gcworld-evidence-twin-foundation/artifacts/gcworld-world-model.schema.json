@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.example/schemas/gcworld-world-model-v1.json",
+  "title": "GCWORLD 证据数字孪生世界模型",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "ontologyVersion",
+    "wasSchemaRefs",
+    "tenantId",
+    "snapshotId",
+    "generatedAt",
+    "sourceMode",
+    "assets",
+    "aliases",
+    "relationships",
+    "evidence",
+    "worldStates",
+    "statusBoundaries"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "gcworld-world-model/v1" },
+    "ontologyVersion": { "type": "string", "minLength": 1 },
+    "wasSchemaRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^was-schema://" }
+    },
+    "tenantId": { "$ref": "#/$defs/nonEmpty" },
+    "snapshotId": { "type": "string", "pattern": "^gcw:snapshot:[a-zA-Z0-9._-]+$" },
+    "generatedAt": { "$ref": "#/$defs/dateTime" },
+    "sourceMode": { "const": "local_readonly" },
+    "assets": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/asset" }
+    },
+    "aliases": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/alias" }
+    },
+    "relationships": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/relationship" }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "worldStates": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/worldState" }
+    },
+    "statusBoundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kdsWriteAuthorized", "businessWriteAuthorized", "statusPromotionAuthorized"],
+      "properties": {
+        "kdsWriteAuthorized": { "const": false },
+        "businessWriteAuthorized": { "const": false },
+        "statusPromotionAuthorized": { "const": false }
+      }
+    },
+    "expectedReasons": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/nonEmpty" }
+    }
+  },
+  "$defs": {
+    "nonEmpty": { "type": "string", "minLength": 1 },
+    "dateTime": { "type": "string", "format": "date-time" },
+    "evidenceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^gcw:evidence:[0-9a-f]{24}$" }
+    },
+    "timeRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from"],
+      "properties": {
+        "from": { "$ref": "#/$defs/dateTime" },
+        "to": { "$ref": "#/$defs/dateTime" }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assetId", "stableKey", "dimensionRef", "identityStatus", "displayName", "evidenceRefs"],
+      "properties": {
+        "assetId": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "dimensionRef": { "type": "string", "pattern": "^was-dimension://" },
+        "identityStatus": { "enum": ["confirmed", "pending"] },
+        "displayName": { "$ref": "#/$defs/nonEmpty" },
+        "authorityRef": { "type": "string", "pattern": "^kds://" },
+        "candidateSourceRef": { "type": "string", "pattern": "^kds-candidate://" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "identityStatus": { "const": "confirmed" } }, "required": ["identityStatus"] },
+          "then": { "required": ["authorityRef"] }
+        },
+        {
+          "if": { "properties": { "identityStatus": { "const": "pending" } }, "required": ["identityStatus"] },
+          "then": { "required": ["candidateSourceRef"] }
+        }
+      ]
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["aliasId", "stableKey", "value", "resolutionStatus", "candidateAssetRefs", "evidenceRefs"],
+      "properties": {
+        "aliasId": { "type": "string", "pattern": "^gcw:alias:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "value": { "$ref": "#/$defs/nonEmpty" },
+        "resolutionStatus": { "enum": ["resolved", "pending"] },
+        "targetAssetId": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+        "candidateAssetRefs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" }
+        },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "resolutionStatus": { "const": "resolved" } }, "required": ["resolutionStatus"] },
+          "then": { "required": ["targetAssetId"] }
+        }
+      ]
+    },
+    "relationship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relationshipId", "stableKey", "typeRef", "subjectAssetId", "objectAssetId", "worldType", "validTime", "recordTime", "evidenceRefs"],
+      "properties": {
+        "relationshipId": { "type": "string", "pattern": "^gcw:relation:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "typeRef": { "type": "string", "pattern": "^was-relation://" },
+        "subjectAssetId": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+        "objectAssetId": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+        "worldType": { "$ref": "#/$defs/worldType" },
+        "validTime": { "$ref": "#/$defs/timeRange" },
+        "recordTime": { "$ref": "#/$defs/timeRange" },
+        "supersedesRelationId": { "type": "string", "pattern": "^gcw:relation:[0-9a-f]{24}$" },
+        "simulationContext": { "$ref": "#/$defs/simulationContext" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidenceId", "stableKey", "tenantId", "sourceSystem", "sourceRef", "sourceSha256", "classification", "contentAccess"],
+      "properties": {
+        "evidenceId": { "type": "string", "pattern": "^gcw:evidence:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "tenantId": { "$ref": "#/$defs/nonEmpty" },
+        "sourceSystem": { "const": "KDS" },
+        "sourceRef": { "type": "string", "pattern": "^kds://" },
+        "sourceSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "classification": { "enum": ["S0", "S1", "S2", "S3"] },
+        "contentAccess": { "enum": ["read_only", "metadata_only"] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "classification": { "const": "S3" } }, "required": ["classification"] },
+          "then": { "properties": { "contentAccess": { "const": "metadata_only" } } }
+        }
+      ]
+    },
+    "worldState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stateId", "stableKey", "assetId", "worldType", "observedAt", "evidenceRefs"],
+      "properties": {
+        "stateId": { "type": "string", "pattern": "^gcw:state:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "assetId": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+        "worldType": { "$ref": "#/$defs/worldType" },
+        "observedAt": { "$ref": "#/$defs/dateTime" },
+        "simulationContext": { "$ref": "#/$defs/simulationContext" },
+        "factPromotionCandidate": { "type": "boolean" },
+        "factAuthorityRef": { "type": "string", "pattern": "^kds://" },
+        "writebackRequested": { "type": "boolean" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
+    "worldType": { "enum": ["fact", "operational", "target", "simulation"] },
+    "simulationContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["branchId", "baselineSnapshotRef", "assumptionRefs"],
+      "properties": {
+        "branchId": { "type": "string", "pattern": "^gcw:simulation-branch:" },
+        "baselineSnapshotRef": { "type": "string", "pattern": "^gcw:snapshot:" },
+        "assumptionRefs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^gcw:assumption:" }
+        }
+      }
+    }
+  }
+}

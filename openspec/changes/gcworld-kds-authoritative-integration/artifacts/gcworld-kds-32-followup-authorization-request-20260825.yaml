@@ -1,0 +1,49 @@
+request_id: GCWORLD-KDS-32-FOLLOWUP-AUTH-REQUEST-20260825-004
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+requested_at: "2026-08-25T06:02:54Z"
+status: pending_independent_human_decisions
+source_execution_receipt: GCWORLD-KDS-D5-D9-PARTIAL-EXECUTION-RECEIPT-20260825-006
+current_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 32
+  ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+  expanded_entries: 32
+  expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+decisions:
+  - id: D16
+    title: 单一路径缓存副作用恢复授权
+    decision: pending
+    target: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+    allowed_action: 仅将该已跟踪缓存文件恢复为当前HEAD版本，并立即复核是否精确回到原31项基线
+    other_kds_paths_included: false
+  - id: D17
+    title: D8与D9剩余动作重新授权
+    decision: pending
+    prerequisite: D16执行后精确恢复31项密封基线，或另行明确接受32项为新基线
+    allowed_action:
+      - 冻结GCWORLD与WAES人工资料导入
+      - 冻结api_server.py与tests/test_api_smoke.py相关编辑活动
+      - 仅通过任务、进程和版本元数据继续来源调查
+    file_or_diff_content_read_included: false
+unchanged_decisions:
+  d5: 已执行并保持暂停
+  d6: 已执行并保持暂停
+  d7: 已执行并保持静默
+  d10_d13_d15: 仍待独立批准
+  d14: 仍未批准恢复
+global_prohibitions:
+  - 除D16目标外编辑、移动、删除、暂存、还原、提交或推送任何KDS路径
+  - 读取KDS文件或代码差异正文
+  - KDS服务停止、重启或恢复
+  - 测试、部署、验收、归档或状态提升
+  - 启动Stage A或任务2.1
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

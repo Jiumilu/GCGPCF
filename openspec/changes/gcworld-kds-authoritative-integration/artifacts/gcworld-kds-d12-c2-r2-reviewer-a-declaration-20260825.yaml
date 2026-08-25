@@ -1,0 +1,145 @@
+declaration_id: GCWORLD-KDS-D12-C2-R2-REVIEWER-A-DECLARATION-20260825-035
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T10:56:50Z"
+source:
+  responsibility: KDS知识资料与证据服务责任方
+  thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  turn_id: 01a03888-1839-73f1-98f3-08c206ca5979
+  message_id: item-863
+  source_declaration_id: GCWORLD-KDS-D12-C2-R2-REVIEWER-A-DECLARATION-20260825-001
+request:
+  id: GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034
+  sha256: 71aa89b040fa162b447712eeec69cba976fa704cfd4917ae31b89a25b8121557
+  hash_verified_by_reviewer: true
+normalization:
+  method: 将责任方逐项中文签名回复原义规范化为结构化声明；未补写未知事实
+  target_count: 16
+common_fields: &common_fields
+  authority_role: KDS知识资料与证据服务责任方；未验证为目标的真实内容权威
+  authority_basis: unverified
+  signed_thread_or_identity: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+  proposed_classification: UNKNOWN
+  target_audience: null
+  business_sensitivity_boundary: unconfirmed
+  scope: 仅限对应目标路径的治理声明
+  valid_from: null
+  valid_until: null
+  distribution_constraints: unconfirmed
+  revocation_or_expiry_condition: 内容权威、受众、敏感边界或有效期被正式确认前不得解除UNKNOWN
+  zero_target_body_read_statement: 未读取目标正文、frontmatter、字段、片段、字符串、关键词、语义或差异
+  evidence_sufficiency: insufficient
+items:
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-001
+    target_id: D12-C1-EXC-001
+    target_path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md
+    authority_subject_name_or_asset_id: automation-5（分步式知识库统一治理巡检）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, automation-5]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-002
+    target_id: D12-C1-EXC-002
+    target_path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md
+    authority_subject_name_or_asset_id: automation-5（分步式知识库统一治理巡检）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, automation-5]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-003
+    target_id: D12-C1-EXC-003
+    target_path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json
+    authority_subject_name_or_asset_id: workwiki-kds（飞书小即-WorkWiki-KDS闭环监控）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, workwiki-kds]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-004
+    target_id: D12-C1-EXC-004
+    target_path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json
+    authority_subject_name_or_asset_id: workwiki-kds（飞书小即-WorkWiki-KDS闭环监控）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, workwiki-kds]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-005
+    target_id: D12-C1-EXC-005
+    target_path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
+    authority_subject_name_or_asset_id: macmini-workwiki（Macmini WorkWiki全量分析同步）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, macmini-workwiki]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-006
+    target_id: D12-C1-EXC-006
+    target_path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
+    authority_subject_name_or_asset_id: macmini-workwiki（Macmini WorkWiki全量分析同步）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, macmini-workwiki]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-007
+    target_id: D12-C1-EXC-007
+    target_path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md
+    authority_subject_name_or_asset_id: 111e8983641a（GlobalCloud自进化事件扫描）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 111e8983641a]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-008
+    target_id: D12-C1-EXC-008
+    target_path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md
+    authority_subject_name_or_asset_id: 111e8983641a（GlobalCloud自进化事件扫描）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 111e8983641a]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-009
+    target_id: D12-C1-EXC-009
+    target_path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json
+    authority_subject_name_or_asset_id: 43652c3c9b4d（W02会议质量门禁）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 43652c3c9b4d]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-010
+    target_id: D12-C1-EXC-010
+    target_path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md
+    authority_subject_name_or_asset_id: 43652c3c9b4d（W02会议质量门禁）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 43652c3c9b4d]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-011
+    target_id: D12-C1-EXC-011
+    target_path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md
+    authority_subject_name_or_asset_id: 99683d54df08（老卢工作体系专项健康检查）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 99683d54df08]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-012
+    target_id: D12-C1-EXC-012
+    target_path: 工业绿链/变更告警_2026-08-25.md
+    authority_subject_name_or_asset_id: 2f3355dec02f（W18项目变更告警）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 2f3355dec02f]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-013
+    target_id: D12-C1-EXC-013
+    target_path: 工业绿链/周报/周报_2026W35.md
+    authority_subject_name_or_asset_id: 155b3671abdd（工业绿链周报）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 155b3671abdd]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-014
+    target_id: D12-C1-EXC-014
+    target_path: 工业绿链/日报/晨报-2026-08-25.md
+    authority_subject_name_or_asset_id: 87c8214c0e57（工业绿链晨报）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, 87c8214c0e57]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-015
+    target_id: D12-C1-EXC-015
+    target_path: 工业绿链/月报/月报_2026-08.md
+    authority_subject_name_or_asset_id: dbce6d580114（W17工业绿链月度慢变量监控）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, dbce6d580114]
+  - <<: *common_fields
+    statement_id: D12-C2-R2-REVIEWER-A-016
+    target_id: D12-C1-EXC-016
+    target_path: 99_Reports/ecosystem-health-2026-08-25.md
+    authority_subject_name_or_asset_id: wiki-ecosystem-health-3d（Wiki生态一致性健康检查）
+    source_governance_refs: [GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034, wiki-ecosystem-health-3d]
+summary:
+  s1: 0
+  s2: 0
+  s3: 0
+  unknown: 16
+  authority_evidence_sufficient: 0
+  authority_evidence_insufficient: 16
+  conclusion: 生产任务标识和责任域映射可确认，但真实内容权威、受众、敏感边界、分发限制和有效期均不能确认
+scope_compliance:
+  unknown_content_read: 0
+  kds_commands: 0
+  kds_writes: 0
+  tests: 0
+  service_operations: 0
+  producer_restore: 0
+  file_disposition: 0
+  commit_push_deploy_archive_or_status_promotion: 0

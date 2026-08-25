@@ -1,0 +1,102 @@
+receipt_id: GCWORLD-KDS-D16-D17-EXECUTION-RECEIPT-20260825-009
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T06:16:59Z"
+approval_receipt_ref: GCWORLD-KDS-D16-D17-APPROVAL-RECEIPT-20260825-008
+d16:
+  result: executed_and_verified
+  target: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+  target_precondition: tracked_regular_file_modified
+  action: 仅从当前HEAD恢复工作树版本，未修改索引
+  other_kds_paths_touched: false
+  before:
+    ordinary_entries: 32
+    ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+    expanded_entries: 32
+    expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+  after:
+    branch: main
+    head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    ahead: 0
+    behind: 0
+    staged: 0
+    ordinary_entries: 31
+    ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+    expanded_entries: 31
+    expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  exact_original_baseline_restored: true
+d17:
+  result: executed_and_verified_with_source_unconfirmed
+  freeze_scope:
+    - GCWORLD与WAES向KDS的人工资料导入
+    - KDS仓库api_server.py编辑活动
+    - KDS仓库tests/test_api_smoke.py编辑活动
+  acknowledgements:
+    - responsibility: KDS责任任务
+      thread_id: 019fc4e3-bce5-7541-85e3-8885c7e78aea
+      thread_title: KDS-知识资料与证据服务
+      turn_id: 01a0378c-c92b-71f3-9480-e403751f7902
+      message_id: item-826
+      accepted: true
+      known_inflight_import: 未确认
+      known_inflight_edit: 未确认
+      prohibited_actions_preserved: true
+    - responsibility: 项目群知识工程协调任务
+      thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+      thread_title: LOOP工程-知识工程
+      turn_id: 01a0378e-10f5-7680-929e-7a43dd3fdcec
+      message_id: item-5002
+      accepted: true
+      known_inflight_activity: 冻结范围内暂无已知在途活动
+      prohibited_actions_preserved: true
+  runtime_metadata:
+    matching_gcworld_or_waes_import_process: none_observed
+    main_kds_api_process:
+      pid: 878
+      relation: 运行消费api_server.py，不证明文件变化来源
+    open_handle_on_two_code_paths: none_observed
+  version_metadata:
+    api_server:
+      worktree_blob_oid: f043980f0e5e7a701b6270111212bb87513eb65d
+      head_blob_oid: cbe71e1348c8a87b00c65e6f01af85db37ce2552
+      release0_commit_blob_oid: cbe71e1348c8a87b00c65e6f01af85db37ce2552
+    test_api_smoke:
+      worktree_blob_oid: 14f0fea78941469068ea36be40df96684c9b8197
+      head_blob_oid: 2139348b9f0550cb92f190e61e0f8acb291dd033
+      release0_commit_blob_oid: 591d04a0e8e72dc04f67971b7c4bad2342b9a85d
+    compared_branch: codex/kds-release0-functional
+    compared_commit: 03fb7ab9d18c2d955eb751c15dde7cf411cb2666
+    comparison_result: 两个主工作树变化均不等于该提交对应文件版本，不能将该提交认定为直接来源
+  file_metadata:
+    api_server:
+      inode: 443374981
+      byte_size: 178398
+      mtime: "2026-08-25T13:09:00+0800"
+    test_api_smoke:
+      inode: 443374982
+      byte_size: 55342
+      mtime: "2026-08-25T13:09:00+0800"
+    inference: 相同修改时间和相邻inode仅支持同批变化推断
+  source_conclusion:
+    specific_editor_or_task: 未确认
+    direct_source: 未确认
+    content_or_diff_read: false
+    prohibited_inference: 不根据相邻inode、进程消费或近时提交猜测责任方
+stable_window:
+  t0_recorded_at: "2026-08-25T06:16:59Z"
+  baseline: restored_31_item_seal
+  producer_controls_active: true
+  minimum_observation_complete: false
+  disposition_authorized: false
+prohibitions_preserved:
+  file_or_diff_content_read: false
+  other_kds_file_mutation: false
+  staging_commit_push: false
+  kds_service_operation: false
+  test_deploy_accept_archive_promote: false
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false
+  status: active_partial_stable_window_t0

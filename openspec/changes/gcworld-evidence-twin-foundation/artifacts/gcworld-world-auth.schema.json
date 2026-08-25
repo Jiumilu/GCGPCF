@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://globalcloud.example/schemas/gcworld-world-auth-v1.json",
+  "title": "GCWORLD 世界原生权限与责任契约",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "environment",
+    "systemState",
+    "worldSnapshots",
+    "identities",
+    "roleDefinitions",
+    "roleAssignments",
+    "authorizationGrants",
+    "delegations",
+    "runtimeDecisions",
+    "executionReceipts",
+    "revocations",
+    "derivedArtifacts",
+    "statusBoundaries"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "gcworld-world-auth/v1" },
+    "generatedAt": { "$ref": "#/$defs/dateTime" },
+    "environment": { "const": "fixture_only" },
+    "systemState": { "$ref": "#/$defs/systemState" },
+    "worldSnapshots": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/worldSnapshot" } },
+    "identities": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/identity" } },
+    "roleDefinitions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/roleDefinition" } },
+    "roleAssignments": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/roleAssignment" } },
+    "authorizationGrants": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/authorizationGrant" } },
+    "delegations": { "type": "array", "items": { "$ref": "#/$defs/delegation" } },
+    "runtimeDecisions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/runtimeDecision" } },
+    "executionReceipts": { "type": "array", "items": { "$ref": "#/$defs/executionReceipt" } },
+    "revocations": { "type": "array", "items": { "$ref": "#/$defs/revocation" } },
+    "derivedArtifacts": { "type": "array", "items": { "$ref": "#/$defs/derivedArtifact" } },
+    "statusBoundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["realAuthorizationAuthorized", "kdsWriteAuthorized", "businessWriteAuthorized", "externalActionAuthorized", "deploymentAuthorized", "statusPromotionAuthorized"],
+      "properties": {
+        "realAuthorizationAuthorized": { "const": false },
+        "kdsWriteAuthorized": { "const": false },
+        "businessWriteAuthorized": { "const": false },
+        "externalActionAuthorized": { "const": false },
+        "deploymentAuthorized": { "const": false },
+        "statusPromotionAuthorized": { "const": false }
+      }
+    }
+  },
+  "$defs": {
+    "nonEmpty": { "type": "string", "minLength": 1 },
+    "dateTime": { "type": "string", "format": "date-time" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "assetRef": { "type": "string", "pattern": "^gcw:asset:[0-9a-f]{24}$" },
+    "evidenceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^gcw:evidence:[0-9a-f]{24}$" }
+    },
+    "riskLevel": { "enum": ["R0", "R1", "R2", "R3", "R4"] },
+    "action": { "enum": ["observation", "advice", "draft", "internal_write", "external_communication", "funds", "contract", "identity_change", "permission_change", "government_communication", "business_state_change"] },
+    "versionSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identityVersion", "authorizationVersion", "resourceVersion", "policyVersion"],
+      "properties": {
+        "identityVersion": { "$ref": "#/$defs/nonEmpty" },
+        "authorizationVersion": { "$ref": "#/$defs/nonEmpty" },
+        "resourceVersion": { "$ref": "#/$defs/nonEmpty" },
+        "policyVersion": { "$ref": "#/$defs/nonEmpty" }
+      }
+    },
+    "systemState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["waesAvailable", "contextComplete", "factVersionsVerified"],
+      "properties": {
+        "waesAvailable": { "type": "boolean" },
+        "contextComplete": { "type": "boolean" },
+        "factVersionsVerified": { "type": "boolean" }
+      }
+    },
+    "worldSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["snapshotId", "stableKey", "tenantId", "projectRef", "factSetVersion", "versions", "issuedAt", "expiresAt", "snapshotHash"],
+      "properties": {
+        "snapshotId": { "type": "string", "pattern": "^gcw:world-snapshot:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "tenantId": { "$ref": "#/$defs/nonEmpty" },
+        "projectRef": { "type": "string", "pattern": "^gcw:project:" },
+        "factSetVersion": { "$ref": "#/$defs/nonEmpty" },
+        "versions": { "$ref": "#/$defs/versionSet" },
+        "issuedAt": { "$ref": "#/$defs/dateTime" },
+        "expiresAt": { "$ref": "#/$defs/dateTime" },
+        "snapshotHash": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identityId", "stableKey", "subjectType", "worldAssetId", "tenantId", "identityVersion", "status", "ultimateControllerAssetId", "evidenceRefs"],
+      "properties": {
+        "identityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "subjectType": { "enum": ["human", "organization", "agent", "service", "device"] },
+        "worldAssetId": { "$ref": "#/$defs/assetRef" },
+        "tenantId": { "$ref": "#/$defs/nonEmpty" },
+        "identityVersion": { "$ref": "#/$defs/nonEmpty" },
+        "status": { "enum": ["confirmed", "pending", "revoked"] },
+        "ultimateControllerAssetId": { "$ref": "#/$defs/assetRef" },
+        "agentActionScope": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/action" }
+        },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      },
+      "allOf": [{
+        "if": { "properties": { "subjectType": { "const": "agent" } }, "required": ["subjectType"] },
+        "then": { "required": ["agentActionScope"] }
+      }]
+    },
+    "roleDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["roleDefinitionId", "stableKey", "name", "responsibilityScope", "allowedActions", "prohibitedActions", "riskCeiling", "roleVersion"],
+      "properties": {
+        "roleDefinitionId": { "type": "string", "pattern": "^gcw:role-definition:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "name": { "$ref": "#/$defs/nonEmpty" },
+        "responsibilityScope": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "allowedActions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/action" } },
+        "prohibitedActions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/action" } },
+        "riskCeiling": { "$ref": "#/$defs/riskLevel" },
+        "roleVersion": { "$ref": "#/$defs/nonEmpty" }
+      }
+    },
+    "roleAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["roleAssignmentId", "stableKey", "subjectIdentityId", "roleDefinitionId", "organizationAssetId", "projectRefs", "status", "worldType", "factAuthorityRef", "validFrom", "expiresAt", "assignmentVersion", "evidenceRefs"],
+      "properties": {
+        "roleAssignmentId": { "type": "string", "pattern": "^gcw:role-assignment:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "subjectIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "roleDefinitionId": { "type": "string", "pattern": "^gcw:role-definition:[0-9a-f]{24}$" },
+        "organizationAssetId": { "$ref": "#/$defs/assetRef" },
+        "projectRefs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^gcw:project:" } },
+        "status": { "enum": ["active", "pending", "revoked"] },
+        "worldType": { "enum": ["fact", "operational", "target", "simulation"] },
+        "factAuthorityRef": { "type": "string", "pattern": "^kds://" },
+        "validFrom": { "$ref": "#/$defs/dateTime" },
+        "expiresAt": { "$ref": "#/$defs/dateTime" },
+        "assignmentVersion": { "$ref": "#/$defs/nonEmpty" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
+    "authorizationGrant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grantId", "stableKey", "grantorIdentityId", "granteeIdentityId", "roleAssignmentId", "resourceScope", "actionScope", "purposeScope", "projectScope", "validFrom", "expiresAt", "riskCeiling", "approvalRequirements", "evidenceRequirements", "prohibitedActions", "canRedelegate", "maxDelegationDepth", "status", "authorizationVersion", "worldType", "factAuthorityRef", "emergency", "evidenceRefs"],
+      "properties": {
+        "grantId": { "type": "string", "pattern": "^gcw:authorization-grant:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "grantorIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "granteeIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "roleAssignmentId": { "type": "string", "pattern": "^gcw:role-assignment:[0-9a-f]{24}$" },
+        "resourceScope": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "actionScope": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/action" } },
+        "purposeScope": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "projectScope": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^gcw:project:" } },
+        "validFrom": { "$ref": "#/$defs/dateTime" },
+        "expiresAt": { "$ref": "#/$defs/dateTime" },
+        "riskCeiling": { "$ref": "#/$defs/riskLevel" },
+        "approvalRequirements": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^gcw:identity:" } },
+        "evidenceRequirements": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "prohibitedActions": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/action" } },
+        "canRedelegate": { "type": "boolean" },
+        "maxDelegationDepth": { "type": "integer", "minimum": 0, "maximum": 8 },
+        "status": { "enum": ["active", "revoked", "expired", "frozen"] },
+        "authorizationVersion": { "$ref": "#/$defs/nonEmpty" },
+        "worldType": { "const": "fact" },
+        "factAuthorityRef": { "type": "string", "pattern": "^kds://" },
+        "emergency": { "type": "boolean" },
+        "emergencyJustification": { "$ref": "#/$defs/nonEmpty" },
+        "postReviewRequired": { "type": "boolean" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      },
+      "allOf": [{
+        "if": { "properties": { "emergency": { "const": true } }, "required": ["emergency"] },
+        "then": { "required": ["emergencyJustification", "postReviewRequired"] }
+      }]
+    },
+    "delegation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["delegationId", "stableKey", "parentGrantId", "delegatorIdentityId", "delegateeIdentityId", "actionScope", "depth", "status", "validFrom", "expiresAt", "evidenceRefs"],
+      "properties": {
+        "delegationId": { "type": "string", "pattern": "^gcw:delegation:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "parentGrantId": { "type": "string", "pattern": "^gcw:authorization-grant:[0-9a-f]{24}$" },
+        "delegatorIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "delegateeIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "actionScope": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/action" } },
+        "depth": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "status": { "enum": ["active", "revoked", "expired", "frozen"] },
+        "validFrom": { "$ref": "#/$defs/dateTime" },
+        "expiresAt": { "$ref": "#/$defs/dateTime" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
+    "obligation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["obligationId", "type"],
+      "properties": {
+        "obligationId": { "type": "string", "pattern": "^gcw:obligation:" },
+        "type": { "enum": ["redaction", "watermark", "record_reason", "purpose_limit", "dual_approval", "export_restriction", "delete_on_expiry", "notify_owner", "additional_evidence", "no_long_term_memory"] }
+      }
+    },
+    "controlStage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage", "actorIdentityId", "ultimateControllerAssetId"],
+      "properties": {
+        "stage": { "enum": ["propose", "review", "approve", "execute", "accept"] },
+        "actorIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "ultimateControllerAssetId": { "$ref": "#/$defs/assetRef" }
+      }
+    },
+    "runtimeDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["decisionId", "stableKey", "requestId", "principalIdentityId", "actorIdentityId", "roleAssignmentId", "grantRefs", "delegationRefs", "resourceRef", "requestedAction", "purpose", "projectRef", "riskLevel", "worldSnapshotId", "evaluatedVersions", "decision", "effectiveActionScope", "obligations", "reasonCodes", "controlChain", "issuedAt", "expiresAt", "decisionHash", "precommitRevalidationRequired"],
+      "properties": {
+        "decisionId": { "type": "string", "pattern": "^gcw:decision:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "requestId": { "type": "string", "pattern": "^gcw:request:" },
+        "principalIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "actorIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "actingAgentIdentityId": { "type": "string", "pattern": "^gcw:identity:[0-9a-f]{24}$" },
+        "roleAssignmentId": { "type": "string", "pattern": "^gcw:role-assignment:[0-9a-f]{24}$" },
+        "grantRefs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^gcw:authorization-grant:" } },
+        "delegationRefs": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^gcw:delegation:" } },
+        "resourceRef": { "$ref": "#/$defs/nonEmpty" },
+        "requestedAction": { "$ref": "#/$defs/action" },
+        "purpose": { "$ref": "#/$defs/nonEmpty" },
+        "projectRef": { "type": "string", "pattern": "^gcw:project:" },
+        "riskLevel": { "$ref": "#/$defs/riskLevel" },
+        "worldSnapshotId": { "type": "string", "pattern": "^gcw:world-snapshot:" },
+        "evaluatedVersions": { "$ref": "#/$defs/versionSet" },
+        "decision": { "enum": ["allow", "allow_with_obligations", "read_only", "require_approval", "require_human_confirmation", "deny", "freeze", "degraded_readonly"] },
+        "effectiveActionScope": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/action" } },
+        "obligations": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/obligation" } },
+        "reasonCodes": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "controlChain": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/controlStage" } },
+        "issuedAt": { "$ref": "#/$defs/dateTime" },
+        "expiresAt": { "$ref": "#/$defs/dateTime" },
+        "decisionHash": { "$ref": "#/$defs/sha256" },
+        "precommitRevalidationRequired": { "type": "boolean" }
+      }
+    },
+    "obligationEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["obligationId", "evidenceRef"],
+      "properties": {
+        "obligationId": { "type": "string", "pattern": "^gcw:obligation:" },
+        "evidenceRef": { "type": "string", "pattern": "^gcw:evidence:" }
+      }
+    },
+    "executionReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["receiptId", "stableKey", "decisionId", "executorIdentityId", "executionSystemRef", "result", "performedAction", "resourceRef", "executedAt", "precommitRevalidated", "revalidatedVersions", "obligationEvidence", "responsibilityAssetId", "evidenceRefs", "externalSideEffect", "appendOnly"],
+      "properties": {
+        "receiptId": { "type": "string", "pattern": "^gcw:execution-receipt:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "decisionId": { "type": "string", "pattern": "^gcw:decision:" },
+        "executorIdentityId": { "type": "string", "pattern": "^gcw:identity:" },
+        "executionSystemRef": { "type": "string", "pattern": "^gcw:execution-system:" },
+        "result": { "enum": ["succeeded", "rejected", "failed", "blocked"] },
+        "performedAction": { "$ref": "#/$defs/action" },
+        "resourceRef": { "$ref": "#/$defs/nonEmpty" },
+        "executedAt": { "$ref": "#/$defs/dateTime" },
+        "precommitRevalidated": { "type": "boolean" },
+        "revalidatedVersions": { "$ref": "#/$defs/versionSet" },
+        "obligationEvidence": { "type": "array", "items": { "$ref": "#/$defs/obligationEvidence" } },
+        "responsibilityAssetId": { "$ref": "#/$defs/assetRef" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "externalSideEffect": { "type": "boolean" },
+        "appendOnly": { "const": true }
+      }
+    },
+    "revocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["revocationId", "stableKey", "targetType", "targetId", "revokedAt", "reason", "cascadeTargets", "emergencyFreeze", "evidenceRefs", "appendOnly"],
+      "properties": {
+        "revocationId": { "type": "string", "pattern": "^gcw:revocation:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "targetType": { "enum": ["identity", "role_assignment", "authorization_grant", "delegation"] },
+        "targetId": { "$ref": "#/$defs/nonEmpty" },
+        "revokedAt": { "$ref": "#/$defs/dateTime" },
+        "reason": { "$ref": "#/$defs/nonEmpty" },
+        "cascadeTargets": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "emergencyFreeze": { "type": "boolean" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "appendOnly": { "const": true }
+      }
+    },
+    "derivedArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifactId", "stableKey", "sourceAuthorizationRefs", "sourceClassifications", "classification", "sourceRestrictions", "effectiveRestrictions", "revocationStatus", "memoryAllowed"],
+      "properties": {
+        "artifactId": { "type": "string", "pattern": "^gcw:derived-artifact:[0-9a-f]{24}$" },
+        "stableKey": { "$ref": "#/$defs/nonEmpty" },
+        "sourceAuthorizationRefs": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "pattern": "^gcw:authorization-grant:" } },
+        "sourceClassifications": { "type": "array", "minItems": 1, "items": { "enum": ["S0", "S1", "S2", "S3"] } },
+        "classification": { "enum": ["S0", "S1", "S2", "S3"] },
+        "sourceRestrictions": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "effectiveRestrictions": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonEmpty" } },
+        "revocationStatus": { "enum": ["active", "frozen", "deleted"] },
+        "memoryAllowed": { "type": "boolean" }
+      }
+    }
+  }
+}

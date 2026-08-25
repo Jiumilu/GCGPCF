@@ -1,0 +1,45 @@
+receipt_id: GCWORLD-KDS-POST-D12-C2-R1-VALIDATION-DRIFT-20260825-030
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+observed_at: "2026-08-25T10:25:57Z"
+affected_request:
+  request_id: GCWORLD-KDS-D12-C2-AUTHORITY-ATTESTATION-AUTH-REQUEST-R1-20260825-029
+  request_sha256: 236d352a3fe665553ef40627e3d80c93391c203e282e762e5c37196b85c10799
+  lifecycle: generated_then_invalidated_before_human_decision
+observation:
+  head_and_origin: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 32
+  ordinary_status_sha256: 58b035456cbb4f42413ed7cdc36bc780cd983ff65838059c5a01ed40abf77f76
+  expanded_entries: 32
+  expanded_status_sha256: 2daf51c8c0dee8464f295161d148488f10f66e066a8ce4595664a18fec4267da
+  strict_path_metadata_sha256: 745afd69e60948d1c8b57823e05dadda61f161cde4bac7c780dc70a6d492fad1
+drift_path:
+  path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc
+  git_status: tracked_modified
+  mode: "0644"
+  byte_size: 5387
+  mtime_ns: 1787652031213850917
+  ctime_ns: 1787652031213944832
+  inode: 467180588
+non_target_reconstruction:
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  exact_only_target_drift: true
+causality:
+  temporal_context: R1生成后执行了YAML结构校验、OpenSpec严格校验与最终KDS元数据复核
+  exact_producer: unconfirmed
+  prohibited_inference_preserved: true
+effect:
+  r1_request_usable: false
+  d12_c2_execution_started: false
+  d12_r2_n_d_authorized: false
+scope_compliance:
+  unknown_content_read: 0
+  non_target_kds_mutation: 0
+  test_or_service_operation: 0
+  producer_restore: 0
+  commit_push_deploy_or_status_promotion: 0

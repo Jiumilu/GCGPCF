@@ -1,0 +1,46 @@
+schema_version: opsx-harness-handoff/v1
+run_id: 20260822-235654-gcworld-evidence-twin-foundation
+change_id: gcworld-evidence-twin-foundation
+submitted_at: "2026-08-24T09:16:37Z"
+submitted_by: opsx-full-cycle
+review_mode: audit_only
+language: zh-CN
+project: GPCF
+workspace: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF
+branch: main
+remote: origin/main
+pre_existing_dirty_state: true
+status_claim: pass_with_runtime_blockers
+claim_boundaries:
+  accepted: false
+  integrated: false
+  production_ready: false
+  complete: false
+  full_coverage: false
+  kds_write_authorized: false
+  deployment_authorized: false
+  status_promotion_authorized: false
+required_inputs:
+  evidence_index: .harness/evidence-index.yaml
+  run_evidence_index: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence-index.yaml
+  acceptance_matrix: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
+  patches_dir: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches
+  agent_results: []
+  agent_dispatch: not_applicable_no_agents_dispatched
+patch_scope:
+  file: patches/gcworld-evidence-twin-foundation.patch
+  coverage: 第9节任务状态收口
+  limitation: 完整实现包含未跟踪Schema、样例、校验器和报告；其路径与验证结果由证据索引和工作树清单承载，补丁不冒充完整仓库快照
+waivers:
+  - { gate: build, result: not_applicable, reason: 无产品构建目标或发布制品 }
+  - { gate: api, result: not_applicable, reason: 无真实API实现且运行时集成未授权 }
+  - { gate: ui, result: not_applicable, reason: 无界面实现或浏览器运行证据 }
+  - { gate: chinese_search, result: not_applicable, reason: 无搜索产品实现 }
+known_blockers:
+  - KDS工作树14项变化导致F-013准入为blocked_dirty_worktree
+  - 覆盖评估仍有身份候选与S3例外需要人工复核
+  - 没有真实API、界面、运行时、跨租户共享、授权或业务执行证据
+  - OpenSpec任务9.4的人工作业前置条件尚未满足
+requested_harness_action: 独立核验交接完整性、证据真实性、状态声明一致性和不得提升边界
+archive_requested: false
+

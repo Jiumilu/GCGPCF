@@ -1,0 +1,70 @@
+receipt_id: GCWORLD-KDS-D12-C2-R2-CLASSIFICATION-RECEIPT-20260825-037
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T10:56:50Z"
+status: active_partial_not_complete
+source:
+  sealed_request_sha256: ec2c0a25ca576e7d0404a2739dc8666cf8335f80aedf827aa52639854e9797b5
+  approval_receipt_sha256: e8c4e2f33ff41f884f72f1c2869cc269d3eff060de8917f2fb3e2af8b69fc46e
+  declaration_request_sha256: 71aa89b040fa162b447712eeec69cba976fa704cfd4917ae31b89a25b8121557
+  reviewer_a_declaration_sha256: 70fe346bdf65a3327798428078d829fa0cda15a5bb2fe3ef78cc4cbd208956f5
+  reviewer_b_nonresponse_receipt_sha256: dabe226c95ad9f5c157c390ee2a6dc56044a1a2627a4a488f2d7eaae573e4dc5
+review_results:
+  reviewer_a:
+    declaration_received: true
+    paths: 16
+    authority_verified: 0
+    evidence_insufficient: 16
+    proposed_unknown: 16
+  reviewer_b:
+    declaration_received: false
+    paths_with_complete_declaration: 0
+    evidence_insufficient_by_nonresponse: 16
+final_classification:
+  s1: 0
+  s2: 0
+  s3: 0
+  unknown: 16
+  registrable_classifications: 0
+  d12_r2_eligible_paths: 0
+  exception_queue_entries: 16
+decision_basis:
+  - reviewer_a明确未验证自身或生产任务为真实内容权威，逐项证据均不足
+  - reviewer_b未在受控执行窗口返回逐项完整声明
+  - 根据R2规则，任一方为UNKNOWN、未回应、证据不足或字段缺失时均必须保持UNKNOWN
+  - 生产任务标识仅证明生成责任候选，不证明内容权威、目标受众、敏感边界或有效期
+exception_queue:
+  - {id: D12-C1-EXC-001, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-002, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-003, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-004, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-005, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-006, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-007, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-008, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-009, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-010, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-011, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-012, path: 工业绿链/变更告警_2026-08-25.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-013, path: 工业绿链/周报/周报_2026W35.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-014, path: 工业绿链/日报/晨报-2026-08-25.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-015, path: 工业绿链/月报/月报_2026-08.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+  - {id: D12-C1-EXC-016, path: 99_Reports/ecosystem-health-2026-08-25.md, classification: UNKNOWN, reason: authority_unverified_and_second_declaration_missing}
+gate_effect:
+  d12_c2_complete: false
+  d12_r2_authorized: false
+  d12_n_authorized: false
+  d12_d_authorized: false
+  file_disposition_authorized: false
+  implementation_or_status_promotion_authorized: false
+scope_compliance:
+  unknown_body_frontmatter_field_fragment_or_semantics_read: 0
+  kds_writes: 0
+  tests: 0
+  service_operations: 0
+  producer_restore: 0
+  commit_push_deploy_or_status_promotion: 0
+next_required_evidence:
+  - reviewer_b逐项完整签名声明
+  - 每条路径可验证的真实内容权威主体及authority_basis
+  - 目标受众、业务敏感边界、scope、valid_from和valid_until完整字段

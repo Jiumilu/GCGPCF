@@ -1,0 +1,203 @@
+{
+  "baseDocument": {
+    "schemaVersion": "gcworld-workbench/v1",
+    "generatedAt": "2026-08-24T16:10:00+08:00",
+    "environment": "fixture_only",
+    "workCenters": [
+      {"centerId": "gcw:center:world-overview", "centerType": "world_overview", "name": "世界总览", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:organization-assets", "centerType": "organization_assets", "name": "组织资产", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:relation-network", "centerType": "relation_network", "name": "关系网络", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:project-world", "centerType": "project_world", "name": "项目世界", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:time-events", "centerType": "time_events", "name": "时间与事件", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:agents", "centerType": "agents", "name": "智能体", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:actions-collaboration", "centerType": "actions_collaboration", "name": "行动与协同", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:permissions-identity", "centerType": "permissions_identity", "name": "权限与身份", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:simulation-lab", "centerType": "simulation_lab", "name": "模拟实验室", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:fact-governance", "centerType": "fact_governance", "name": "事实治理", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:governance-audit", "centerType": "governance_audit", "name": "治理与审计", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]},
+      {"centerId": "gcw:center:development-operations", "centerType": "development_operations", "name": "开发与运维", "assetIdSemantics": "worldAssetId", "worldSnapshotRef": "gcw:snapshot:workbench-fixture", "permissionContextRef": "gcw:permission-context:workbench-fixture", "evidenceRefs": ["gcw:evidence:workbench-contract"]}
+    ],
+    "navigationTransitions": [
+      {
+        "transitionId": "gcw:navigation:overview-to-project",
+        "fromCenter": "gcw:center:world-overview",
+        "toCenter": "gcw:center:project-world",
+        "assetIdBefore": "gcw:asset:project-gcworld-fixture",
+        "assetIdAfter": "gcw:asset:project-gcworld-fixture",
+        "worldSnapshotBefore": "gcw:snapshot:workbench-fixture",
+        "worldSnapshotAfter": "gcw:snapshot:workbench-fixture",
+        "permissionContextBefore": "gcw:permission-context:workbench-fixture",
+        "permissionContextAfter": "gcw:permission-context:workbench-fixture"
+      }
+    ],
+    "assetProfiles": [
+      {
+        "profileId": "gcw:profile:person-pending-alias",
+        "worldAssetId": "gcw:asset:person-fixture",
+        "assetType": "person",
+        "tenantId": "tenant:globalcloud",
+        "sections": ["facts", "history", "aliases", "relationships", "roles", "capabilities", "permissions", "tasks", "actions", "results", "feedback", "evidence", "conflicts"],
+        "unresolvedIdentityCandidates": [
+          {"candidateRef": "gcw:candidate:person-alias-a", "disposition": "pending_review", "sourceEvidenceRefs": ["gcw:evidence:alias-source-a"]}
+        ],
+        "mergedCandidateRefs": [],
+        "evidenceRefs": ["gcw:evidence:profile-source"]
+      }
+    ],
+    "projectionPolicies": [
+      {
+        "policyId": "gcw:projection-policy:public-allow",
+        "subjectRef": "gcw:subject:internal-user",
+        "resourceRef": "gcw:asset:public-fixture",
+        "tenantId": "tenant:globalcloud",
+        "classification": "S1",
+        "expectedDecision": "allow",
+        "decisions": [
+          {"surface": "field", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "paragraph", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "graph", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "search", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "timeline", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "aggregate", "decision": "allow", "dataVisible": true, "countDisclosed": true, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "export", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"},
+          {"surface": "agent_answer", "decision": "allow", "dataVisible": true, "countDisclosed": false, "auditReasonRef": "gcw:audit:allow"}
+        ],
+        "shareContractRef": null
+      },
+      {
+        "policyId": "gcw:projection-policy:sensitive-deny",
+        "subjectRef": "gcw:subject:partner-user",
+        "resourceRef": "gcw:asset:sensitive-relation",
+        "tenantId": "tenant:globalcloud",
+        "classification": "S3",
+        "expectedDecision": "deny",
+        "decisions": [
+          {"surface": "field", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "paragraph", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "graph", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "search", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "timeline", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "aggregate", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "export", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"},
+          {"surface": "agent_answer", "decision": "deny", "dataVisible": false, "countDisclosed": false, "auditReasonRef": "gcw:audit:deny"}
+        ],
+        "shareContractRef": null
+      }
+    ],
+    "collaborationSpaces": [
+      {
+        "spaceId": "gcw:space:joint-project",
+        "ownerTenantId": "tenant:globalcloud",
+        "organizationRefs": ["gcw:asset:org-globalcloud", "gcw:asset:org-partner"],
+        "projectRefs": ["gcw:asset:project-joint-fixture"],
+        "memberTenantIds": ["tenant:globalcloud", "tenant:partner"],
+        "isolationEnforced": true
+      }
+    ],
+    "sharingContracts": [
+      {
+        "shareId": "gcw:share:active-partner",
+        "sourceTenantId": "tenant:globalcloud",
+        "targetTenantId": "tenant:partner",
+        "spaceId": "gcw:space:joint-project",
+        "objectRefs": ["gcw:asset:project-joint-fixture"],
+        "fieldScope": ["项目名称", "里程碑状态"],
+        "purposeScope": ["联合项目交付"],
+        "validFrom": "2026-08-24T15:00:00+08:00",
+        "validUntil": "2026-09-24T15:00:00+08:00",
+        "canReshare": false,
+        "revocationMethod": "授权方即时撤销并级联清理缓存",
+        "status": "active",
+        "revokedAt": null,
+        "usageEvidenceRefs": ["gcw:evidence:share-active-created"]
+      },
+      {
+        "shareId": "gcw:share:revoked-partner",
+        "sourceTenantId": "tenant:globalcloud",
+        "targetTenantId": "tenant:partner",
+        "spaceId": "gcw:space:joint-project",
+        "objectRefs": ["gcw:asset:project-joint-fixture"],
+        "fieldScope": ["项目名称"],
+        "purposeScope": ["联合项目交付"],
+        "validFrom": "2026-08-20T15:00:00+08:00",
+        "validUntil": "2026-09-20T15:00:00+08:00",
+        "canReshare": false,
+        "revocationMethod": "授权方即时撤销并级联清理缓存",
+        "status": "revoked",
+        "revokedAt": "2026-08-23T15:00:00+08:00",
+        "usageEvidenceRefs": ["gcw:evidence:share-revoked", "gcw:evidence:share-prior-use"]
+      }
+    ],
+    "shareAccessChecks": [
+      {
+        "checkId": "gcw:share-check:active-field",
+        "shareId": "gcw:share:active-partner",
+        "checkedAt": "2026-08-24T16:00:00+08:00",
+        "surface": "field",
+        "decision": "allow",
+        "dataReturned": true,
+        "aggregateDisclosed": false,
+        "evidenceRefs": ["gcw:evidence:active-access-check"]
+      },
+      {
+        "checkId": "gcw:share-check:revoked-aggregate",
+        "shareId": "gcw:share:revoked-partner",
+        "checkedAt": "2026-08-24T16:00:00+08:00",
+        "surface": "aggregate",
+        "decision": "deny",
+        "dataReturned": false,
+        "aggregateDisclosed": false,
+        "evidenceRefs": ["gcw:evidence:revoked-access-denied"]
+      }
+    ],
+    "explanationRecords": [
+      {
+        "explanationId": "gcw:explanation:workbench-fixture",
+        "objectRef": "gcw:asset:project-gcworld-fixture",
+        "sourceEvidenceRefs": ["gcw:evidence:project-source"],
+        "versionRef": "gcw:version:project-v1",
+        "worldState": "fact",
+        "trustLevel": "high",
+        "conflictStatus": "none",
+        "responsibilityRef": "gcw:asset:project-owner",
+        "confirmationStatus": "confirmed",
+        "receiptRefs": ["gcw:receipt:fact-confirmation"],
+        "traceAllowed": true
+      }
+    ],
+    "statusBoundaries": {
+      "realCrossTenantSharingAuthorized": false,
+      "kdsWriteAuthorized": false,
+      "businessWriteAuthorized": false,
+      "externalActionAuthorized": false,
+      "deploymentAuthorized": false,
+      "statusPromotionAuthorized": false
+    }
+  },
+  "positiveCases": [
+    {"name": "十二中心统一导航", "replace": {}},
+    {"name": "单一资产档案保留未决身份", "replace": {}},
+    {"name": "八类投影面一致允许", "replace": {}},
+    {"name": "八类投影面一致拒绝且不可统计推断", "replace": {}},
+    {"name": "显式跨租户共享契约", "replace": {}},
+    {"name": "共享撤销后拒绝访问并保留使用证据", "replace": {}}
+  ],
+  "negativeCases": [
+    {"name": "工作中心重复且缺失", "replace": {"workCenters.11.centerType": "world_overview"}, "expected_reasons": ["work_centers_incomplete", "work_center_duplicate"]},
+    {"name": "导航改变资产标识", "replace": {"navigationTransitions.0.assetIdAfter": "gcw:asset:other-project"}, "expected_reasons": ["navigation_asset_context_changed"]},
+    {"name": "导航改变世界快照", "replace": {"navigationTransitions.0.worldSnapshotAfter": "gcw:snapshot:other"}, "expected_reasons": ["navigation_snapshot_context_changed"]},
+    {"name": "导航改变权限上下文", "replace": {"navigationTransitions.0.permissionContextAfter": "gcw:permission-context:other"}, "expected_reasons": ["navigation_permission_context_changed"]},
+    {"name": "资产档案缺少冲突区", "remove": ["assetProfiles.0.sections.12"], "expected_reasons": ["profile_sections_incomplete"]},
+    {"name": "未决身份被静默合并", "replace": {"assetProfiles.0.mergedCandidateRefs": ["gcw:candidate:person-alias-a"]}, "expected_reasons": ["unresolved_identity_silently_merged"]},
+    {"name": "字段泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.0.decision": "allow", "projectionPolicies.1.decisions.0.dataVisible": true}, "expected_reasons": ["field_projection_leak"]},
+    {"name": "段落泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.1.decision": "allow", "projectionPolicies.1.decisions.1.dataVisible": true}, "expected_reasons": ["paragraph_projection_leak"]},
+    {"name": "关系图泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.2.decision": "allow", "projectionPolicies.1.decisions.2.dataVisible": true}, "expected_reasons": ["graph_projection_leak"]},
+    {"name": "搜索泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.3.decision": "allow", "projectionPolicies.1.decisions.3.dataVisible": true}, "expected_reasons": ["search_projection_leak"]},
+    {"name": "时间线泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.4.decision": "allow", "projectionPolicies.1.decisions.4.dataVisible": true}, "expected_reasons": ["timeline_projection_leak"]},
+    {"name": "聚合计数可推断敏感信息", "replace": {"projectionPolicies.1.decisions.5.countDisclosed": true}, "expected_reasons": ["aggregate_inference_leak"]},
+    {"name": "导出泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.6.decision": "allow", "projectionPolicies.1.decisions.6.dataVisible": true}, "expected_reasons": ["export_projection_leak"]},
+    {"name": "智能体回答泄漏敏感数据", "replace": {"projectionPolicies.1.decisions.7.decision": "allow", "projectionPolicies.1.decisions.7.dataVisible": true}, "expected_reasons": ["agent_answer_projection_leak"]},
+    {"name": "跨租户共享缺少目的范围", "replace": {"sharingContracts.0.purposeScope": []}, "expected_reasons": ["sharing_contract_scope_incomplete"]},
+    {"name": "撤销后继续访问且丢失使用证据", "replace": {"sharingContracts.1.usageEvidenceRefs": [], "shareAccessChecks.1.decision": "allow", "shareAccessChecks.1.dataReturned": true, "shareAccessChecks.1.aggregateDisclosed": true}, "expected_reasons": ["revoked_share_access_continues", "revoked_share_usage_evidence_missing"]}
+  ]
+}

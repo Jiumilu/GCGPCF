@@ -1,0 +1,590 @@
+{
+  "baseDocument": {
+    "schemaVersion": "gcworld-world-runtime/v1",
+    "generatedAt": "2026-08-24T15:30:00+08:00",
+    "environment": "fixture_only",
+    "serviceRegistry": [
+      {
+        "serviceId": "gcw:service:ddaccf1d08fc864cf2f246ab",
+        "stableKey": "tenant:globalcloud|service|world-registry",
+        "serviceType": "world_registry",
+        "name": "世界注册服务",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "WAS",
+        "authorityMode": "reference_only",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:6f6a94287a0dc38d8f93146b",
+        "stableKey": "tenant:globalcloud|service|identity-resolution",
+        "serviceType": "identity_resolution",
+        "name": "身份解析服务",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "KDS",
+        "authorityMode": "reference_only",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:ee2a3b6e1d573308bf08c00c",
+        "stableKey": "tenant:globalcloud|service|world-projection",
+        "serviceType": "world_projection",
+        "name": "世界投影服务",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "KDS",
+        "authorityMode": "derived_projection",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:6f7d340cc792a8195bda53c9",
+        "stableKey": "tenant:globalcloud|service|context-builder",
+        "serviceType": "context_builder",
+        "name": "上下文构造服务",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "GCWORLD",
+        "authorityMode": "runtime_orchestration",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:3cda7b9fdca3c9f7c945e072",
+        "stableKey": "tenant:globalcloud|service|event-engine",
+        "serviceType": "event_engine",
+        "name": "事件引擎",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "GCWORLD",
+        "authorityMode": "runtime_orchestration",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:0779650bc111957e81acd191",
+        "stableKey": "tenant:globalcloud|service|action-runtime",
+        "serviceType": "action_runtime",
+        "name": "行动运行时",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "business_system",
+        "authorityMode": "runtime_orchestration",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:1d0754112c247f9718751198",
+        "stableKey": "tenant:globalcloud|service|agent-runtime",
+        "serviceType": "agent_runtime",
+        "name": "智能体运行时",
+        "ownerSystem": "XWAIL",
+        "authoritySource": "XWAIL",
+        "authorityMode": "runtime_orchestration",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:572632b9cb4f2e3ed2b4bf90",
+        "stableKey": "tenant:globalcloud|service|simulation-engine",
+        "serviceType": "simulation_engine",
+        "name": "模拟引擎",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "GCWORLD",
+        "authorityMode": "runtime_orchestration",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:8ce8fea46da512942a4cd73c",
+        "stableKey": "tenant:globalcloud|service|governance-adapter",
+        "serviceType": "governance_adapter",
+        "name": "治理适配服务",
+        "ownerSystem": "WAES",
+        "authoritySource": "WAES",
+        "authorityMode": "governance_adapter",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      },
+      {
+        "serviceId": "gcw:service:b52cdf4403d5d8c072f5d23d",
+        "stableKey": "tenant:globalcloud|service|query-view",
+        "serviceType": "query_view",
+        "name": "查询与视图服务",
+        "ownerSystem": "GCWORLD",
+        "authoritySource": "GCWORLD",
+        "authorityMode": "query_projection",
+        "contractVersion": "v1",
+        "stableIdentifiersRequired": true,
+        "evidenceRefs": ["gcw:evidence:runtime-contract"],
+        "writesAuthoritativeFacts": false,
+        "executesBusinessSideEffects": false
+      }
+    ],
+    "runtimeRuns": [{
+      "runId": "gcw:runtime-run:830f13b6492c994c94053d40",
+      "stableKey": "tenant:globalcloud|runtime-run|full-loop",
+      "worldSnapshotRef": "gcw:world-snapshot:runtime-fixture",
+      "tenantId": "tenant:globalcloud",
+      "projectRef": "gcw:project:gcworld-fixture",
+      "riskLevel": "R0",
+      "requestedImpact": "none",
+      "state": "completed",
+      "stages": [
+        {"name": "observe", "status": "completed", "occurredAt": "2026-08-24T15:20:00+08:00", "evidenceRefs": ["gcw:evidence:stage-observe"]},
+        {"name": "resolve", "status": "completed", "occurredAt": "2026-08-24T15:20:01+08:00", "evidenceRefs": ["gcw:evidence:stage-resolve"]},
+        {"name": "snapshot", "status": "completed", "occurredAt": "2026-08-24T15:20:02+08:00", "evidenceRefs": ["gcw:evidence:stage-snapshot"]},
+        {"name": "reason", "status": "completed", "occurredAt": "2026-08-24T15:20:03+08:00", "evidenceRefs": ["gcw:evidence:stage-reason"]},
+        {"name": "adjudicate", "status": "completed", "occurredAt": "2026-08-24T15:20:04+08:00", "evidenceRefs": ["gcw:evidence:stage-adjudicate"]},
+        {"name": "confirm", "status": "completed", "occurredAt": "2026-08-24T15:20:05+08:00", "evidenceRefs": ["gcw:evidence:stage-confirm-not-required"]},
+        {"name": "execute", "status": "completed", "occurredAt": "2026-08-24T15:20:06+08:00", "evidenceRefs": ["gcw:evidence:stage-execute-fixture"]},
+        {"name": "evidence", "status": "completed", "occurredAt": "2026-08-24T15:20:07+08:00", "evidenceRefs": ["gcw:evidence:stage-evidence"]},
+        {"name": "promote", "status": "completed", "occurredAt": "2026-08-24T15:20:08+08:00", "evidenceRefs": ["gcw:evidence:stage-promote-candidate-only"]},
+        {"name": "learn", "status": "completed", "occurredAt": "2026-08-24T15:20:09+08:00", "evidenceRefs": ["gcw:evidence:stage-learn-candidate-only"]}
+      ],
+      "decisionRef": "gcw:decision:runtime-fixture",
+      "actionReceiptRefs": ["gcw:action-receipt:9d5df4d9fecc07aa0473fd4a"],
+      "realExecution": false,
+      "externalSideEffect": false
+    }],
+    "tasks": [{
+      "taskId": "gcw:task:0ce19aed5b2c899e7d8b282f",
+      "stableKey": "tenant:globalcloud|task|project-report",
+      "responsibleAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+      "proposerAssetId": "gcw:asset:bbbbbbbbbbbbbbbbbbbbbbbb",
+      "beneficiaryAssetId": "gcw:asset:cccccccccccccccccccccccc",
+      "goal": "形成项目事实报告",
+      "scope": ["项目事实核对", "报告草稿"],
+      "dueAt": "2026-08-25T18:00:00+08:00",
+      "dependencyRefs": [],
+      "status": "open",
+      "acceptanceCriteria": ["来源可追溯", "结论经复核"],
+      "sourceEvidenceRefs": ["gcw:evidence:task-source"],
+      "resultEvidenceRefs": [],
+      "acceptanceEvidenceRefs": [],
+      "actionRefs": []
+    }],
+    "commitments": [{
+      "commitmentId": "gcw:commitment:8fa4de8ee296bd39301dd3f0",
+      "stableKey": "tenant:globalcloud|commitment|deliver-project-report",
+      "committerAssetId": "gcw:asset:aaaaaaaaaaaaaaaaaaaaaaaa",
+      "beneficiaryAssetId": "gcw:asset:cccccccccccccccccccccccc",
+      "scope": ["交付项目事实报告"],
+      "dueAt": "2026-08-25T18:00:00+08:00",
+      "status": "open",
+      "acceptanceCriteria": ["报告通过受益方核验"],
+      "sourceEvidenceRefs": ["gcw:evidence:commitment-source"],
+      "resultEvidenceRefs": [],
+      "acceptanceEvidenceRefs": [],
+      "actionRefs": []
+    }],
+    "actionReceipts": [{
+      "receiptId": "gcw:action-receipt:9d5df4d9fecc07aa0473fd4a",
+      "stableKey": "tenant:globalcloud|action-receipt|base-observation",
+      "runId": "gcw:runtime-run:830f13b6492c994c94053d40",
+      "commandId": "gcw:command:base-observation",
+      "idempotencyKey": "runtime-fixture-observation-v1",
+      "riskLevel": "R0",
+      "actionType": "observation",
+      "decisionRef": "gcw:decision:runtime-fixture",
+      "executorRef": "gcw:executor:fixture-only",
+      "targetSystemRef": "gcw:target:fixture-only",
+      "inputDigest": "1111111111111111111111111111111111111111111111111111111111111111",
+      "outputDigest": "2222222222222222222222222222222222222222222222222222222222222222",
+      "result": "succeeded",
+      "executedAt": "2026-08-24T15:20:06+08:00",
+      "evidenceRefs": ["gcw:evidence:action-result"],
+      "externalSideEffect": false,
+      "appendOnly": true
+    }],
+    "compensationReceipts": [],
+    "commandLedger": [{
+      "entryId": "gcw:command-entry:60a63768de4671534f1b997f",
+      "stableKey": "tenant:globalcloud|command-entry|base",
+      "commandId": "gcw:command:base-observation",
+      "idempotencyKey": "runtime-fixture-observation-v1",
+      "causationId": "gcw:causation:runtime-fixture",
+      "correlationId": "gcw:correlation:runtime-fixture",
+      "schemaVersion": "v1",
+      "actionReceiptRef": "gcw:action-receipt:9d5df4d9fecc07aa0473fd4a",
+      "duplicate": false,
+      "effectApplied": true,
+      "recordedAt": "2026-08-24T15:20:06+08:00"
+    }],
+    "simulationBranches": [],
+    "promotionCandidates": [],
+    "statusBoundaries": {
+      "realExecutionAuthorized": false,
+      "factWriteAuthorized": false,
+      "kdsWriteAuthorized": false,
+      "businessWriteAuthorized": false,
+      "externalActionAuthorized": false,
+      "deploymentAuthorized": false,
+      "statusPromotionAuthorized": false
+    }
+  },
+  "positiveCases": [
+    {
+      "name": "十阶段只读闭环完整运行",
+      "replace": {}
+    },
+    {
+      "name": "高风险动作缺确认时停留待确认",
+      "replace": {
+        "runtimeRuns.0.runId": "gcw:runtime-run:70ce0d4de00d33ab7295ba55",
+        "runtimeRuns.0.stableKey": "tenant:globalcloud|runtime-run|awaiting-confirmation",
+        "runtimeRuns.0.riskLevel": "R3",
+        "runtimeRuns.0.requestedImpact": "external",
+        "runtimeRuns.0.state": "awaiting_confirmation",
+        "runtimeRuns.0.stages": [
+          {"name": "observe", "status": "completed", "occurredAt": "2026-08-24T15:20:00+08:00", "evidenceRefs": ["gcw:evidence:stage-observe"]},
+          {"name": "resolve", "status": "completed", "occurredAt": "2026-08-24T15:20:01+08:00", "evidenceRefs": ["gcw:evidence:stage-resolve"]},
+          {"name": "snapshot", "status": "completed", "occurredAt": "2026-08-24T15:20:02+08:00", "evidenceRefs": ["gcw:evidence:stage-snapshot"]},
+          {"name": "reason", "status": "completed", "occurredAt": "2026-08-24T15:20:03+08:00", "evidenceRefs": ["gcw:evidence:stage-reason"]},
+          {"name": "adjudicate", "status": "completed", "occurredAt": "2026-08-24T15:20:04+08:00", "evidenceRefs": ["gcw:evidence:stage-adjudicate"]},
+          {"name": "confirm", "status": "pending", "occurredAt": "2026-08-24T15:20:05+08:00", "evidenceRefs": ["gcw:evidence:confirmation-pending"]}
+        ],
+        "runtimeRuns.0.actionReceiptRefs": [],
+        "actionReceipts": [],
+        "commandLedger": []
+      }
+    },
+    {
+      "name": "任务与承诺凭结果和验收证据关闭",
+      "replace": {
+        "runtimeRuns.0.runId": "gcw:runtime-run:00f3e1cbceff9afa0445860f",
+        "runtimeRuns.0.stableKey": "tenant:globalcloud|runtime-run|task-commitment",
+        "actionReceipts.0.runId": "gcw:runtime-run:00f3e1cbceff9afa0445860f",
+        "tasks.0.status": "closed",
+        "tasks.0.resultEvidenceRefs": ["gcw:evidence:task-result"],
+        "tasks.0.acceptanceEvidenceRefs": ["gcw:evidence:task-acceptance"],
+        "tasks.0.actionRefs": ["gcw:action-receipt:9d5df4d9fecc07aa0473fd4a"],
+        "commitments.0.status": "closed",
+        "commitments.0.resultEvidenceRefs": ["gcw:evidence:commitment-result"],
+        "commitments.0.acceptanceEvidenceRefs": ["gcw:evidence:commitment-acceptance"],
+        "commitments.0.actionRefs": ["gcw:action-receipt:9d5df4d9fecc07aa0473fd4a"]
+      }
+    },
+    {
+      "name": "部分失败完成补偿并保留回执",
+      "replace": {
+        "runtimeRuns.0.runId": "gcw:runtime-run:a41978112ad7bc6c5ce9faa0",
+        "runtimeRuns.0.stableKey": "tenant:globalcloud|runtime-run|partial-compensated",
+        "runtimeRuns.0.riskLevel": "R2",
+        "runtimeRuns.0.requestedImpact": "internal_write",
+        "runtimeRuns.0.state": "compensated",
+        "runtimeRuns.0.actionReceiptRefs": ["gcw:action-receipt:f36a418c26a5a3caf8eab510"],
+        "actionReceipts.0.receiptId": "gcw:action-receipt:f36a418c26a5a3caf8eab510",
+        "actionReceipts.0.stableKey": "tenant:globalcloud|action-receipt|partial-internal",
+        "actionReceipts.0.runId": "gcw:runtime-run:a41978112ad7bc6c5ce9faa0",
+        "actionReceipts.0.commandId": "gcw:command:partial-internal",
+        "actionReceipts.0.idempotencyKey": "runtime-fixture-partial-v1",
+        "actionReceipts.0.riskLevel": "R2",
+        "actionReceipts.0.actionType": "internal_write",
+        "actionReceipts.0.result": "partial",
+        "actionReceipts.0.errorCode": "TARGET_PARTIAL_FAILURE",
+        "actionReceipts.0.compensationPolicyRef": "gcw:compensation-policy:rollback-fixture",
+        "commandLedger.0.commandId": "gcw:command:partial-internal",
+        "commandLedger.0.idempotencyKey": "runtime-fixture-partial-v1",
+        "commandLedger.0.actionReceiptRef": "gcw:action-receipt:f36a418c26a5a3caf8eab510"
+      },
+      "append": {
+        "compensationReceipts": [{
+          "compensationReceiptId": "gcw:compensation-receipt:3c79f31040316410cfd42222",
+          "stableKey": "tenant:globalcloud|compensation-receipt|partial-internal",
+          "actionReceiptId": "gcw:action-receipt:f36a418c26a5a3caf8eab510",
+          "policyRef": "gcw:compensation-policy:rollback-fixture",
+          "result": "completed",
+          "executedAt": "2026-08-24T15:20:10+08:00",
+          "evidenceRefs": ["gcw:evidence:compensation-result"],
+          "appendOnly": true
+        }]
+      }
+    },
+    {
+      "name": "重复命令返回同一回执且不重复副作用",
+      "replace": {
+        "runtimeRuns.0.runId": "gcw:runtime-run:e34b44c22830a0b2e9b0f442",
+        "runtimeRuns.0.stableKey": "tenant:globalcloud|runtime-run|idempotent-retry",
+        "runtimeRuns.0.riskLevel": "R2",
+        "runtimeRuns.0.requestedImpact": "internal_write",
+        "runtimeRuns.0.confirmationRef": "gcw:confirmation:fixture",
+        "runtimeRuns.0.actionReceiptRefs": ["gcw:action-receipt:54ea1bf2384eb6bceef83c25"],
+        "actionReceipts.0.receiptId": "gcw:action-receipt:54ea1bf2384eb6bceef83c25",
+        "actionReceipts.0.stableKey": "tenant:globalcloud|action-receipt|duplicate-internal",
+        "actionReceipts.0.runId": "gcw:runtime-run:e34b44c22830a0b2e9b0f442",
+        "actionReceipts.0.commandId": "gcw:command:idempotent-internal",
+        "actionReceipts.0.idempotencyKey": "runtime-fixture-idempotent-v1",
+        "actionReceipts.0.riskLevel": "R2",
+        "actionReceipts.0.actionType": "internal_write",
+        "actionReceipts.0.confirmationRef": "gcw:confirmation:fixture",
+        "commandLedger": [
+          {
+            "entryId": "gcw:command-entry:60a63768de4671534f1b997f",
+            "stableKey": "tenant:globalcloud|command-entry|base",
+            "commandId": "gcw:command:idempotent-internal",
+            "idempotencyKey": "runtime-fixture-idempotent-v1",
+            "causationId": "gcw:causation:idempotent-fixture",
+            "correlationId": "gcw:correlation:idempotent-fixture",
+            "schemaVersion": "v1",
+            "actionReceiptRef": "gcw:action-receipt:54ea1bf2384eb6bceef83c25",
+            "duplicate": false,
+            "effectApplied": true,
+            "recordedAt": "2026-08-24T15:20:06+08:00"
+          },
+          {
+            "entryId": "gcw:command-entry:b530239606fb4c5579fc0c87",
+            "stableKey": "tenant:globalcloud|command-entry|retry",
+            "commandId": "gcw:command:idempotent-internal-retry",
+            "idempotencyKey": "runtime-fixture-idempotent-v1",
+            "causationId": "gcw:causation:idempotent-fixture",
+            "correlationId": "gcw:correlation:idempotent-fixture",
+            "schemaVersion": "v1",
+            "actionReceiptRef": "gcw:action-receipt:54ea1bf2384eb6bceef83c25",
+            "duplicate": true,
+            "effectApplied": false,
+            "recordedAt": "2026-08-24T15:20:07+08:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "模拟分支隔离并仅形成事实提升复核候选",
+      "replace": {
+        "runtimeRuns.0.runId": "gcw:runtime-run:29913ec9385bf7af3e26ce94",
+        "runtimeRuns.0.stableKey": "tenant:globalcloud|runtime-run|simulation-isolated",
+        "runtimeRuns.0.state": "simulation_only",
+        "runtimeRuns.0.actionReceiptRefs": ["gcw:action-receipt:9d5df4d9fecc07aa0473fd4a"],
+        "actionReceipts.0.runId": "gcw:runtime-run:29913ec9385bf7af3e26ce94",
+        "actionReceipts.0.actionType": "simulation"
+      },
+      "append": {
+        "simulationBranches": [{
+          "branchId": "gcw:simulation-branch:069050574892f8934f2a6a6a",
+          "stableKey": "tenant:globalcloud|simulation-branch|org-adjustment",
+          "worldType": "simulation",
+          "baselineSnapshotRef": "gcw:world-snapshot:runtime-fixture",
+          "assumptionRefs": ["gcw:assumption:organization-adjustment"],
+          "executionRefs": ["gcw:simulation-execution:organization-adjustment"],
+          "evaluationResults": ["方案评分仅用于模拟比较"],
+          "writesFactWorld": false,
+          "grantsRealAuthorization": false,
+          "evidenceRefs": ["gcw:evidence:simulation-result"]
+        }],
+        "promotionCandidates": [{
+          "candidateId": "gcw:promotion-candidate:b618ebef914cecb3f4c6e4d5",
+          "stableKey": "tenant:globalcloud|promotion-candidate|org-adjustment",
+          "simulationBranchId": "gcw:simulation-branch:069050574892f8934f2a6a6a",
+          "status": "ready_for_review",
+          "evidenceComplete": true,
+          "ruleValidationPassed": true,
+          "impactAssessmentCompleted": true,
+          "humanConfirmationRef": "gcw:confirmation:simulation-review",
+          "factWriteAuthorized": false,
+          "formalWriteReceiptRefs": [],
+          "evidenceRefs": ["gcw:evidence:promotion-review-candidate"]
+        }]
+      }
+    }
+  ],
+  "negativeCases": [
+    {
+      "name": "十类世界服务注册不完整",
+      "remove": ["serviceRegistry.9"],
+      "expected_reasons": ["service_registry_incomplete"]
+    },
+    {
+      "name": "运行服务声明自己是外部权威主账",
+      "replace": {"serviceRegistry.2.authorityMode": "authority_owner"},
+      "expected_reasons": ["authority_boundary_broken"]
+    },
+    {
+      "name": "闭环跳过裁决直接进入确认和执行",
+      "remove": ["runtimeRuns.0.stages.4"],
+      "expected_reasons": ["stage_sequence_broken"]
+    },
+    {
+      "name": "高风险动作未确认即执行",
+      "replace": {
+        "runtimeRuns.0.riskLevel": "R3",
+        "runtimeRuns.0.requestedImpact": "external",
+        "runtimeRuns.0.confirmationRef": null
+      },
+      "remove": ["runtimeRuns.0.confirmationRef"],
+      "expected_reasons": ["confirmation_bypassed"]
+    },
+    {
+      "name": "成功回执没有结果证据",
+      "replace": {"actionReceipts.0.evidenceRefs": []},
+      "expected_reasons": ["successful_receipt_without_evidence"]
+    },
+    {
+      "name": "证据阶段未完成却完成状态提升",
+      "replace": {
+        "runtimeRuns.0.stages.7.status": "pending",
+        "runtimeRuns.0.stages.8.status": "completed"
+      },
+      "expected_reasons": ["status_promotion_bypassed"]
+    },
+    {
+      "name": "任务无结果证据即关闭",
+      "replace": {
+        "tasks.0.status": "closed",
+        "tasks.0.acceptanceEvidenceRefs": ["gcw:evidence:task-acceptance"]
+      },
+      "expected_reasons": ["task_close_evidence_missing"]
+    },
+    {
+      "name": "承诺无验收证据即关闭",
+      "replace": {
+        "commitments.0.status": "closed",
+        "commitments.0.resultEvidenceRefs": ["gcw:evidence:commitment-result"]
+      },
+      "expected_reasons": ["commitment_close_evidence_missing"]
+    },
+    {
+      "name": "R3成功回执缺少裁决与确认引用",
+      "replace": {
+        "actionReceipts.0.riskLevel": "R3",
+        "actionReceipts.0.actionType": "external_action"
+      },
+      "remove": ["actionReceipts.0.decisionRef"],
+      "expected_reasons": ["high_risk_receipt_incomplete"]
+    },
+    {
+      "name": "部分失败缺少补偿策略和回执",
+      "replace": {"actionReceipts.0.result": "partial"},
+      "expected_reasons": ["partial_failure_uncompensated"]
+    },
+    {
+      "name": "重复幂等键产生第二次副作用",
+      "append": {
+        "commandLedger": [{
+          "entryId": "gcw:command-entry:b530239606fb4c5579fc0c87",
+          "stableKey": "tenant:globalcloud|command-entry|retry",
+          "commandId": "gcw:command:base-observation-retry",
+          "idempotencyKey": "runtime-fixture-observation-v1",
+          "causationId": "gcw:causation:runtime-fixture",
+          "correlationId": "gcw:correlation:runtime-fixture",
+          "schemaVersion": "v1",
+          "actionReceiptRef": "gcw:action-receipt:9d5df4d9fecc07aa0473fd4a",
+          "duplicate": true,
+          "effectApplied": true,
+          "recordedAt": "2026-08-24T15:20:07+08:00"
+        }]
+      },
+      "expected_reasons": ["idempotency_broken"]
+    },
+    {
+      "name": "补偿失败但运行仍标记完成",
+      "replace": {
+        "runtimeRuns.0.state": "completed",
+        "actionReceipts.0.result": "partial",
+        "actionReceipts.0.compensationPolicyRef": "gcw:compensation-policy:rollback-fixture"
+      },
+      "append": {
+        "compensationReceipts": [{
+          "compensationReceiptId": "gcw:compensation-receipt:3c79f31040316410cfd42222",
+          "stableKey": "tenant:globalcloud|compensation-receipt|partial-internal",
+          "actionReceiptId": "gcw:action-receipt:9d5df4d9fecc07aa0473fd4a",
+          "policyRef": "gcw:compensation-policy:rollback-fixture",
+          "result": "failed",
+          "executedAt": "2026-08-24T15:20:10+08:00",
+          "evidenceRefs": ["gcw:evidence:compensation-failed"],
+          "appendOnly": true
+        }]
+      },
+      "expected_reasons": ["compensation_failure_hidden"]
+    },
+    {
+      "name": "模拟分支引用不存在的基线快照",
+      "append": {
+        "simulationBranches": [{
+          "branchId": "gcw:simulation-branch:069050574892f8934f2a6a6a",
+          "stableKey": "tenant:globalcloud|simulation-branch|org-adjustment",
+          "worldType": "simulation",
+          "baselineSnapshotRef": "gcw:world-snapshot:missing",
+          "assumptionRefs": ["gcw:assumption:organization-adjustment"],
+          "executionRefs": ["gcw:simulation-execution:organization-adjustment"],
+          "evaluationResults": ["模拟结果"],
+          "writesFactWorld": false,
+          "grantsRealAuthorization": false,
+          "evidenceRefs": ["gcw:evidence:simulation-result"]
+        }]
+      },
+      "expected_reasons": ["simulation_baseline_missing"]
+    },
+    {
+      "name": "模拟分支直接写事实并授予真实权限",
+      "append": {
+        "simulationBranches": [{
+          "branchId": "gcw:simulation-branch:069050574892f8934f2a6a6a",
+          "stableKey": "tenant:globalcloud|simulation-branch|org-adjustment",
+          "worldType": "simulation",
+          "baselineSnapshotRef": "gcw:world-snapshot:runtime-fixture",
+          "assumptionRefs": ["gcw:assumption:organization-adjustment"],
+          "executionRefs": ["gcw:simulation-execution:organization-adjustment"],
+          "evaluationResults": ["模拟结果"],
+          "writesFactWorld": true,
+          "grantsRealAuthorization": true,
+          "evidenceRefs": ["gcw:evidence:simulation-result"]
+        }]
+      },
+      "expected_reasons": ["simulation_isolation_broken"]
+    },
+    {
+      "name": "模拟结果绕过提升门禁直接标记事实写入",
+      "append": {
+        "simulationBranches": [{
+          "branchId": "gcw:simulation-branch:069050574892f8934f2a6a6a",
+          "stableKey": "tenant:globalcloud|simulation-branch|org-adjustment",
+          "worldType": "simulation",
+          "baselineSnapshotRef": "gcw:world-snapshot:runtime-fixture",
+          "assumptionRefs": ["gcw:assumption:organization-adjustment"],
+          "executionRefs": ["gcw:simulation-execution:organization-adjustment"],
+          "evaluationResults": ["模拟结果"],
+          "writesFactWorld": false,
+          "grantsRealAuthorization": false,
+          "evidenceRefs": ["gcw:evidence:simulation-result"]
+        }],
+        "promotionCandidates": [{
+          "candidateId": "gcw:promotion-candidate:b618ebef914cecb3f4c6e4d5",
+          "stableKey": "tenant:globalcloud|promotion-candidate|org-adjustment",
+          "simulationBranchId": "gcw:simulation-branch:069050574892f8934f2a6a6a",
+          "status": "promoted",
+          "evidenceComplete": false,
+          "ruleValidationPassed": false,
+          "impactAssessmentCompleted": false,
+          "factWriteAuthorized": true,
+          "formalWriteReceiptRefs": ["gcw:write-receipt:forbidden"],
+          "evidenceRefs": ["gcw:evidence:promotion-invalid"]
+        }]
+      },
+      "expected_reasons": ["direct_fact_promotion"]
+    }
+  ]
+}

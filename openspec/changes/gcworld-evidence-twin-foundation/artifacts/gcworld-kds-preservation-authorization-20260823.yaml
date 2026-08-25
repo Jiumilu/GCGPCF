@@ -1,0 +1,51 @@
+authorization_id: GCWORLD-KDS-PRESERVATION-20260823-001
+status: approved
+confirmed_at: "2026-08-23T01:05:51+08:00"
+confirmation:
+  source: 当前GCWORLD任务用户确认
+  user_response: 确认
+  approved_statement: 对KDS执行保全式整理，创建本地备份分支和补丁证据，分类整理并形成干净快照，但不推送、不删除、不部署
+
+scope:
+  repository: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
+  allowed_actions:
+    - 对当前工作树和未跟踪文件建立可恢复的Git保全对象
+    - 为保全对象创建独立本地备份分支
+    - 记录保全对象、父提交、状态摘要和恢复命令
+    - 在可恢复性验证通过后形成干净工作树
+    - 在GPCF受控产物目录建立逐路径分级清单
+  prohibited_actions:
+    - 删除或丢弃任何已跟踪、未跟踪或保全对象
+    - 删除已有stash或备份分支
+    - 推送、部署、重置、变基或强制覆盖
+    - 修改KDS正文、调用KDS或MMC写接口
+    - 将整理结果声明为验收、集成、生产就绪或全量覆盖
+
+preflight_observation:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: 2ac85c55163b7acf0ede699184ac360579ccefaa
+  ahead_commits: 4
+  behind_commits: 0
+  summarized_changed_entries: 418
+  expanded_file_entries: 773
+  modified_tracked_files: 85
+  untracked_files: 688
+  merge_conflicts: 0
+  submodules: 0
+  expanded_status_sha256: ba9e5be785b3e0127ef537fba129fef636d13850af68798d61ba05b3d4475337
+  newest_observed_mtime_utc: "2026-08-22T16:18:37.062264+00:00"
+
+preservation_requirements:
+  - 执行前再次取得相同的完整状态摘要，出现漂移立即停止
+  - 保全对象必须同时覆盖85个已修改文件和688个未跟踪文件
+  - 保全对象必须能够解析为Git提交，并由独立本地备份分支持有
+  - 清洁后必须验证工作树为空、HEAD不变、本地领先提交仍为4
+  - 正式内容读取仍须通过F-013准入和独立逐路径分级门禁
+
+status_boundary:
+  kds_content_census_authorized_after_preservation: false
+  kds_write_authorized: false
+  push_authorized: false
+  deployment_authorized: false
+  completion_status: not_complete

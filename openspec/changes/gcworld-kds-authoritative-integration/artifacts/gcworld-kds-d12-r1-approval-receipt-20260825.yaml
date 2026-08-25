@@ -1,0 +1,45 @@
+receipt_id: GCWORLD-KDS-D12-R1-APPROVAL-RECEIPT-20260825-015
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T07:02:52Z"
+source_request: GCWORLD-KDS-D12-READONLY-REVIEW-AUTH-REQUEST-20260825-014
+decision:
+  id: D12-R1
+  status: approved
+  confirmation: >-
+    批准D12-R1。仅允许对剩余29项执行分级先行的逐路径只读审阅，并返回中文回执；不授权任何文件处置、测试、服务变更、生产者恢复或状态提升。
+activation_precondition:
+  observed_at: "2026-08-25T07:01:55Z"
+  baseline_match: pass_31_of_31
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  origin_main: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ahead: 0
+  behind: 0
+  staged: 0
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+  codex_automations_paused: 3
+  hermes_jobs_disabled_and_paused: 11
+  gbrain_autopilot_and_worker: quiet
+  matching_gcworld_or_waes_import_process: none_observed
+authorized_scope:
+  target_paths: 29
+  classification_before_content: required
+  s1_s2_content_read: allowed_only_for_responsible_review
+  s3_unknown_or_conflict_content_read: prohibited
+  required_output: 中文逐路径只读审阅回执
+prohibitions:
+  - 编辑、创建、移动、删除、暂存、还原、提交或推送任何KDS文件
+  - 运行测试、构建、格式化或会生成KDS缓存的验证器
+  - 停止、重启或变更KDS服务
+  - 恢复生产者
+  - 访问数据库、API、凭据或外部写接口
+  - 执行D12-N、D12-D、D13、D14、D15、部署、验收、归档或状态提升
+effect:
+  task_1_2_complete: false
+  task_2_1_allowed: false
+  stage_a_active: false

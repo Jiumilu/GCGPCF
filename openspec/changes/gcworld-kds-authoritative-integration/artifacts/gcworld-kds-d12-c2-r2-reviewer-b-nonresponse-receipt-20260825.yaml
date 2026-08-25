@@ -1,0 +1,32 @@
+receipt_id: GCWORLD-KDS-D12-C2-R2-REVIEWER-B-NONRESPONSE-20260825-036
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-25T10:56:50Z"
+request:
+  id: GCWORLD-KDS-D12-C2-R2-AUTHORITY-DECLARATION-REQUEST-20260825-034
+  sha256: 71aa89b040fa162b447712eeec69cba976fa704cfd4917ae31b89a25b8121557
+reviewer:
+  responsibility: 项目群知识工程与内容权威协调责任方
+  thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+dispatch:
+  delivered: true
+  declaration_received: false
+  observed_thread_state: active_with_preexisting_incomplete_turn
+  controlled_wait_result: timeout_without_new_revision
+  reviewer_replacement_performed: false
+governance_effect:
+  response_status: not_received
+  evidence_sufficiency: insufficient
+  per_path_effect: 十六项全部保持UNKNOWN并进入例外队列
+  classification_inference_allowed: false
+  reason: 未收到逐项权威声明，按密封规则不得以缺席或生产任务元数据推断分类
+scope_compliance:
+  unknown_content_read: 0
+  kds_commands_or_writes: 0
+  tests_or_service_operations: 0
+  producer_restore: 0
+  file_disposition: 0
+  commit_push_deploy_or_status_promotion: 0
+next_condition:
+  - 如原责任方后续返回完整签名声明，须在新基线复核下作为补充证据另行密封
+  - 未取得完整声明前不得进入D12-R2、D12-N或D12-D
