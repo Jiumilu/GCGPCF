@@ -1,0 +1,25 @@
+request_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-RB3R1-CORRECTED-REPLAY-AUTH-REQUEST-20260826-001
+generated_at: "2026-08-26T00:25:59Z"
+status: pending_human_decision
+purpose: 纠正RB3路径分类器后完成零日志正文的配置归属只读核对
+hard_preconditions:
+  kds_head_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  kds_tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  ahead_behind_staged: 0/0/0
+  ordinary_expanded_dirty: 0/0
+  opsx_lock_absent: true
+requested_actions:
+  - 仅重新解析五个已密封LaunchAgent plist的安全结构字段
+  - ProgramArguments仅保留第一个解释器路径和扩展名为.sh或.py的既存入口路径
+  - 在任何文件打开前硬排除StandardOutPath、StandardErrorPath以及扩展名.log、.out、.err的路径
+  - 仅对plist、解释器和.sh或.py入口执行路径元数据与SHA-256
+  - 复核配置重复关系、唯一同步归属和最小恢复顺序
+forbidden:
+  - 读取或哈希日志、query、UNKNOWN正文、业务数据、环境变量值或凭据
+  - 服务、生产者、API、数据库、测试或KDS操作
+  - 提交、推送、部署或状态提升
+failure_rule: 任一候选路径不在显式允许类型内即停止，不读取该路径并返回差异
+rollback: not_applicable_read_only
+human_decision: pending
+status_ceiling: active_partial_not_complete
+

@@ -1,0 +1,36 @@
+request_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-FOLLOWUP-AUTH-REQUEST-20260826-001
+generated_at: "2026-08-26T00:20:29Z"
+language: zh-CN
+status: pending_human_decision
+dependency:
+  control_sha256: f07d600c1b4e5ec116b14db162d4b7576a2c6692bac8b8f09cfbd4e3f2c6f631
+  component_matrix_sha256: bdc99eefe062733e04c79f0be7525a5e060d73f00d1cebb1c7564d446f160f35
+  kds_head: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+problem:
+  search_mainline: human_confirmed_available
+  background_health: degraded
+  inconsistencies:
+    - com.gbrain.autopilot运行但最近退出码为1
+    - com.globalcloud.gbrain无活动进程且最近退出为EX_CONFIG
+    - com.globalcloud.notion-kds-sync已登记但运行次数为0
+    - ai.hermes.gateway-gcbrain运行但历史退出码为137
+    - com.globalcloud.gbrain-audit-proxy无活动进程且最近退出码为2
+requested_authorization:
+  phase: RB3_read_only_configuration_ownership_reconciliation
+  actions:
+    - 仅解析五个相关LaunchAgent配置的Label、Program、ProgramArguments可执行文件路径、KeepAlive、RunAtLoad、StartInterval、WorkingDirectory及环境变量键名
+    - 环境变量值、凭据、完整命令参数、query、日志正文和业务数据必须在读取前过滤且不得输出或持久化
+    - 仅核对相关可执行文件和包装脚本的路径、模式、大小、mtime、inode与SHA-256，不执行脚本
+    - 形成唯一监督者、同步任务归属、待停用旧标签和最小恢复顺序的只读建议
+  forbidden:
+    - 启动、停止、卸载、重启或修改任何服务
+    - API、数据库、检索请求或同步任务执行
+    - 读取KDS正文、UNKNOWN正文、日志正文、凭据值或业务数据
+    - 文件处置、测试、提交、推送、部署或状态提升
+  success_gate:
+    - 明确两个GBrain标签是否重复或分工
+    - 明确每个同步任务的唯一责任标签和当前登记偏差
+    - 封存后续单次服务恢复控制及失败回滚边界
+  rollback: not_applicable_read_only
+human_decision: pending
+status_ceiling: active_partial_not_complete

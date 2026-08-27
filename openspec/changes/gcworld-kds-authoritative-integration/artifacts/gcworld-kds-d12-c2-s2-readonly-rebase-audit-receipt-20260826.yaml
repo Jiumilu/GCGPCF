@@ -1,0 +1,87 @@
+receipt_id: GCWORLD-KDS-D12-C2-S2-READONLY-REBASE-AUDIT-RECEIPT-20260826-051
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+recorded_at: "2026-08-26T00:10:01Z"
+title: D12-C2-S2——KDS新旧HEAD只读重新基线审计回执
+authorization:
+  source_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  old_head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  new_head: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  allowed_evidence: 提交、远端、路径清单、作者、时间、提交说明和Git状态元数据
+  prohibited_evidence: UNKNOWN正文、代码差异正文和文件语义
+evidence:
+  rebaseline_manifest: GCWORLD-KDS-D12-C2-S2-REBASELINE-MANIFEST-20260826-050
+  rebaseline_manifest_sha256: 378363aefe03b8103d4df827bf0bd3b72a1f483860d77ca812de30891734753b
+  prior_s2_supplemental_decision_sha256: 0d7d888f4f66b0c3dd2e32920b13e92d1f2c2a25665c203471be1aca626a50d2
+  prior_post_gate_drift_sha256: 9671fc888608b0882bc38fd4334f8acf0dcc7c06110267348d904c31a48c5c33
+commit_audit:
+  result: pass_single_direct_descendant_commit_exactly_33_paths
+  commit_count: 1
+  commit: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  parent: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  author_and_committer: Jiumilu
+  author_and_commit_time: "2026-08-26T07:59:30+08:00"
+  subject: "loop(kds): daily clean sync 2026-08-25"
+  signature_status: unsigned
+  commit_paths: 33
+  audited_paths: 33
+  outside_scope_paths: 0
+path_disposition:
+  added_to_new_head: 25
+  modified_in_new_head: 8
+  present_in_new_head: 33
+  absent_from_new_head: 0
+  synchronized_to_origin_main: 33
+  git_disposition_result: complete
+governance_classification:
+  previously_reviewed_s1: 5
+  previously_reviewed_s2: 8
+  previously_unknown: 16
+  d10_code_paths: 2
+  post_baseline_pyc_path: 1
+  post_baseline_unclassified_live_fixture_path: 1
+  independent_commit_candidates_bundled: 6
+  external_archive_candidates_committed_to_repository: 23
+  paths_with_governance_validity_proven_by_git_metadata: 0
+  result: git_disposition_complete_governance_not_established
+governance_findings:
+  - 新提交已经成为本地main和origin/main共同HEAD，33项Git处置去向明确
+  - 提交未签名；Git作者、提交说明和远端同步不能替代对应处置授权或内容治理批准
+  - 十六项UNKNOWN继续保持UNKNOWN；其被提交到main形成独立治理例外，不得视为完成分级
+  - 六项独立提交候选未独立提交，二十三项外部归档候选进入仓库，均需要责任方补充授权或纠偏结论
+  - 两项D10代码、pyc及live-fixture均缺少可由本次Git元数据证明的最终治理有效性
+new_observed_baseline:
+  head_and_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 0
+  ordinary_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  expanded_entries: 0
+  expanded_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  strict_path_metadata_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  seal_status: observed_clean_baseline_not_yet_human_accepted_for_s2
+producer_state:
+  codex_automations_paused: 3_of_3
+  hermes_jobs_disabled: 11_of_11
+  gbrain_pre_audit_state: present_spawn_scheduled
+  gbrain_pre_audit_active_count: 0
+  gbrain_pre_audit_runs: 14
+  gbrain_final_state: present_running
+  gbrain_final_active_count: 1
+  gbrain_final_runs: 15
+  gbrain_last_exit_code_before_final_run: 1
+  gbrain_state_changed_during_audit: true
+  matching_import_or_gbrain_processes: 0
+decision:
+  audit_status: complete
+  s2_closure_status: not_completed_pending_new_baseline_acceptance
+  f013_status: not_promoted_by_this_audit
+  openspec_progress: 3_of_17
+  next_action: 请求独立人工决定是否接受新基线用于S2、保持十六项UNKNOWN并登记提交例外、重新冻结GBrain及完成S2收口
+scope_compliance:
+  kds_file_or_diff_content_read: 0
+  unknown_content_read: 0
+  kds_write_or_restore: 0
+  service_operation: 0
+  test_or_build: 0
+  commit_push_deploy_or_status_promotion: 0

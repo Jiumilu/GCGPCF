@@ -1,0 +1,87 @@
+control:
+  id: GKE-001-COORDINATION-20260826-001-CURRENT-AUTH-ENTRY
+  program_ref: GKE-001
+  feature_ref: F-013
+  change_id: verify-current-studio-authenticated-entry-before-release0-e2e
+  generated_at: "2026-08-26T00:35:00Z"
+  mode: local_nonproduction_browser_entry_preflight
+  status: active_partial_not_complete
+baselines:
+  gpcf:
+    head: 77bb9b317f7c7181662f11bf9d610525f2a3316f
+    origin_main: 77bb9b317f7c7181662f11bf9d610525f2a3316f
+    ahead_behind_staged: 0/0/0
+    preflight_ordinary_entries: 16
+  brain:
+    head: 9a16c360618db1af6bead46f55fcaf9d433eb40c
+    origin_main: 9a16c360618db1af6bead46f55fcaf9d433eb40c
+    ahead_behind_staged: 0/0/0
+    worktree: clean
+  studio:
+    head: 3f2aefe4a01bb024e15cc078fb1b54ae04428745
+    origin_main: 3f2aefe4a01bb024e15cc078fb1b54ae04428745
+    ahead_behind_staged: 0/0/0
+    worktree: clean
+  kds:
+    head: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    origin_main: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+    ahead_behind_staged: 0/0/0
+    worktree: clean
+runtime:
+  studio_frontend: http://localhost:8649/
+  studio_frontend_listener: running
+  studio_backend_listener: running_on_8647
+  repository_content_change_from_startup: false
+browser_preflight:
+  page: http://localhost:8649/#/hermes/chat
+  title: GlobalCloud Studio
+  user_opened_page: true
+  agent_claimed_existing_tab: true
+  authenticated_signals:
+    current_user_indicator: present_redacted_to_initial
+    logout_control: present
+    admin_scope_text: visible_but_not_treated_as_authoritative_role_proof
+  session:
+    raw_session_id_persisted: false
+    session_id_sha256: 0fe546c32e031ed97fa0a1449de6714e38c293d4966872975b46e4444686f87a
+    bound_object_summary: visible
+  release0_entry:
+    kds_workspace_button: visible
+    search_clicked: false
+    wiki_preview_clicked: false
+    chat_posted: false
+    send_button: disabled
+  network_capture: not_collected
+  browser_automation_note: direct_local_navigation_was_blocked_by_browser_url_policy_user_opened_page_manually
+classification:
+  authenticated_entry: pass_current_visible_session
+  authoritative_role: not_independently_verified
+  current_release0_read_e2e: not_executed
+  current_chat_send: not_executed
+  existing_browser_r2_evidence: inherited_not_replayed
+boundaries:
+  kds_import: false
+  kds_canonical_read_request: 0_by_agent
+  kds_audit_append: 0_by_agent
+  chat_post_request: 0_by_agent
+  api_or_database_probe: false
+  frozen_kds_paths_modified: false
+  repository_commit_or_push: false
+  deployment_or_status_promotion: false
+next_gate:
+  action: one_bounded_authenticated_search_then_one_wiki_preview_no_chat_post
+  prerequisites:
+    - seal_existing_synthetic_fixture_identifier_or_fail_closed_if_absent
+    - seal_exact_authority_context_and_request_count
+    - authorize_expected_append_only_KDS_read_audits
+    - collect_network_receipts_without_tokens_or_content
+  authorization_required: true
+status:
+  engineering: active
+  cross_project: partial
+  completion: not_complete
+  accepted: false
+  integrated: false
+  production_ready: false
+

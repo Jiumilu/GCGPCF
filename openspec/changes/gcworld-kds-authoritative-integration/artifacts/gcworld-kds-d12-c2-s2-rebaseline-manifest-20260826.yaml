@@ -1,0 +1,110 @@
+manifest_id: GCWORLD-KDS-D12-C2-S2-REBASELINE-MANIFEST-20260826-050
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+sealed_at: "2026-08-26T00:05:53Z"
+title: D12-C2-S2——KDS旧HEAD至新HEAD的33项只读重新基线清单
+authorization_scope:
+  source_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  git_metadata_only: true
+  file_or_diff_content_read: false
+old_baseline:
+  branch: main
+  head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  ordinary_entries: 31
+  ordinary_status_sha256: a26dc8329ad32a30d34511ba5cb568673e9cd8d1f5c5e4f72f66ba01657283ca
+  expanded_entries: 31
+  expanded_status_sha256: 9523e3e0dcfc16e105d17886e064eb3e797d8bd979f044f86302b730c40f5d71
+  strict_path_metadata_sha256: 66ac099e98c613ae8ae19de00de3269d8e88bbdcdd44532dc396d032d366c4a7
+new_observed_baseline:
+  branch: main
+  head: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  origin_main: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  upstream: origin/main
+  origin_url: https://github.com/Jiumilu/GCKDS.git
+  tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  ahead: 0
+  behind: 0
+  staged_entries: 0
+  ordinary_entries: 0
+  ordinary_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  expanded_entries: 0
+  expanded_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  strict_path_metadata_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  observation_status: sealed_as_observed_not_governance_accepted
+commit_sequence:
+  count: 1
+  old_is_ancestor_of_new: true
+  commits:
+    - commit: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+      parent: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+      author: Jiumilu
+      author_identity: jxlu@outlook.com
+      author_time: "2026-08-26T07:59:30+08:00"
+      committer: Jiumilu
+      committer_identity: jxlu@outlook.com
+      commit_time: "2026-08-26T07:59:30+08:00"
+      subject: "loop(kds): daily clean sync 2026-08-25"
+      signature_status: unsigned
+      changed_paths: 33
+disposition_summary:
+  audited_paths: 33
+  commit_added: 25
+  commit_modified: 8
+  present_in_new_head: 33
+  paths_outside_audit_scope_in_commit: 0
+  prior_s1: 5
+  prior_s2: 8
+  prior_unknown: 16
+  prior_d10_code_review: 2
+  post_baseline_pyc: 1
+  post_baseline_live_fixture: 1
+  git_disposition_complete: true
+  governance_validity_established: false
+governance_rules:
+  - Git提交及远端同步只能证明路径已进入新HEAD，不能倒推出分级、归档、代码处置或提交授权有效
+  - 十六项UNKNOWN即使已提交仍保持UNKNOWN，不因进入main自动降级或转为正式事实
+  - 六项独立提交候选被合并进单一33项提交，原子处置与批准证据未由Git元数据证明
+  - 二十三项仓库外不可变归档候选被提交进仓库，匹配处置授权未在本审计证据中出现
+  - 两项代码仍受D10安全返工结论约束；提交本身不等于安全门禁通过
+  - pyc和live-fixture仅能认定为Git处置完成，不能认定其治理来源或内容有效
+entries:
+  - {id: RB-001, path: 工业绿链/reports/项目监控仪表盘.md, prior_state: S2, prior_recommendation: 独立提交候选, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: bundled_commit_authorization_unverified}
+  - {id: RB-002, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260823-073039/report.md, prior_state: S2, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-003, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260824-152729/report.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-004, path: _governance/distributed-knowledge-runs/distributed-knowledge-governance-20260825-083409/report.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-005, path: _governance/sync-runs/feishu-xiaog-closure-20260823-071040/macmini-evidence.json, prior_state: S1, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-006, path: _governance/sync-runs/feishu-xiaog-closure-20260824-152742/macmini-evidence.json, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-007, path: _governance/sync-runs/feishu-xiaog-closure-20260825-083417/macmini-evidence.json, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-008, path: _governance/sync-runs/macmini-workwiki-20260823-064123/remote-identity.txt, prior_state: S1, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-009, path: _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-010, path: _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-011, path: raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md, prior_state: S1, prior_recommendation: 独立提交候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: bundled_commit_authorization_unverified}
+  - {id: RB-012, path: 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md, prior_state: S2, prior_recommendation: 独立提交候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: bundled_commit_authorization_unverified}
+  - {id: RB-013, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_04.md, prior_state: S1, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-014, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_08.md, prior_state: S1, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-015, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-23_12.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-016, path: 世界资产/Hermes/reports/自进化事件报告_2026-08-25_12.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-017, path: 工业绿链/变更告警_2026-08-23.md, prior_state: S2, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-018, path: 工业绿链/日报/晨报-2026-08-23.md, prior_state: S2, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: repository_commit_disposition_unverified}
+  - {id: RB-019, path: 工业绿链/reports/Hermes质量周报.md, prior_state: S2, prior_recommendation: 独立提交候选, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: bundled_commit_authorization_unverified}
+  - {id: RB-020, path: 工业绿链/体系/W01-W20第二阶段任务清单.md, prior_state: S2, prior_recommendation: 独立提交候选, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: bundled_commit_authorization_unverified}
+  - {id: RB-021, path: 工业绿链/体系/W01-W20覆盖率报告.md, prior_state: S2, prior_recommendation: 独立提交候选, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: bundled_commit_authorization_unverified}
+  - {id: RB-022, path: 工业绿链/体系/meeting-quality-gate_2026-08-25.json, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-023, path: 工业绿链/体系/会议质量门禁阻断清单_2026-08-25.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-024, path: 工业绿链/体系/老卢工作体系健康检查_2026-08-25.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-025, path: 工业绿链/变更告警_2026-08-25.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-026, path: 工业绿链/周报/周报_2026W35.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-027, path: 工业绿链/日报/晨报-2026-08-25.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-028, path: 工业绿链/月报/月报_2026-08.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-029, path: 99_Reports/ecosystem-health-2026-08-25.md, prior_state: UNKNOWN, prior_recommendation: 仓库外不可变归档候选, old_presence: untracked, commit_status: A, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unknown_committed_without_classification_evidence}
+  - {id: RB-030, path: api_server.py, prior_state: D10代码只读审阅, prior_recommendation: 安全返工后再处置, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: security_rework_and_commit_authorization_unverified}
+  - {id: RB-031, path: tests/test_api_smoke.py, prior_state: D10代码只读审阅, prior_recommendation: 与源码安全返工原子处置, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: security_rework_and_commit_authorization_unverified}
+  - {id: RB-032, path: _governance/scripts/__pycache__/rag_admission_policy.cpython-311.pyc, prior_state: 基线后pyc漂移, prior_recommendation: 仅恢复为HEAD, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: restore_only_scope_and_commit_authorization_unverified}
+  - {id: RB-033, path: raw/feishu-minutes-runtime/scheduled/live-fixture.json, prior_state: 基线后未分级漂移, prior_recommendation: 未形成, old_presence: tracked, commit_status: M, new_presence: true, git_disposition: committed_to_main_and_origin, governance_status: unclassified_unreviewed_commit}
+scope_compliance:
+  kds_file_or_diff_content_read: 0
+  unknown_content_read: 0
+  kds_write_or_restore: 0
+  service_operation: 0
+  test_or_build: 0
+  commit_push_deploy_or_status_promotion: 0

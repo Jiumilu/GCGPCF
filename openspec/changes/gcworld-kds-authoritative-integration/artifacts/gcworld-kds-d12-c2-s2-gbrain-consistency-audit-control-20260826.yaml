@@ -1,0 +1,64 @@
+control_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-CONSISTENCY-AUDIT-CONTROL-20260826-053
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-26T00:21:09Z"
+status: sealed_read_only_control
+title: D12-C2-S2——GBrain主链路与后台同步只读一致性审计控制
+authorization:
+  source_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
+  scope: 仅核对LaunchAgent、Supervisor、进程、调度、退出码、运行计数与时间戳元数据
+  current_human_fact: GBrain检索主链路已恢复，但后台Supervisor与同步任务状态不一致，尚未完全健康
+hard_kds_baseline:
+  branch: main
+  head_and_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 0
+  ordinary_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  expanded_entries: 0
+  expanded_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  strict_path_metadata_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+known_loop_gates:
+  document_gate: pass
+  skill_chain_gate: pass
+  gpcf_git_gate: partial_dirty
+  gpcf_observed_changed_entries: 10
+  gpcf_observed_status_sha256: 811f4199b71c1c768558dc540f0980eae2ff9ed255ae8f9592946aa48c42f0b4
+  operational_quality_gate: blocked
+  dependency_gate: blocked
+  status_ceiling: partial
+  evidence_source: 当前人工授权提供及本轮只读Git复核
+observation_scope:
+  launch_labels:
+    - com.gbrain.autopilot
+    - com.globalcloud.gbrain
+    - com.globalcloud.gbrain-audit-proxy
+    - com.globalcloud.notion-kds-sync
+    - com.globalcloud.kds
+    - com.globalcloud.kds-api-18080
+    - com.globalcloud.notion-kds-proxy
+  process_classes: [gbrain_autopilot, gbrain_jobs_worker, named_gbrain_supervisor, kds_listener_processes]
+  codex_sync_automations: [macmini-workwiki, workwiki-kds, automation-5]
+  hermes_registered_jobs: [f06e9f563967, 2f3355dec02f, 87c8214c0e57, 111e8983641a, d1875abfb9df, 2784e0317db6, wiki-ecosystem-health-3d, 43652c3c9b4d, 99683d54df08, 155b3671abdd, dbce6d580114]
+  metadata_files: [LaunchAgent文件类型大小时间摘要, GBrain状态与审计文件路径大小时间]
+classification_vocabulary:
+  healthy: 可观察运行状态与登记预期一致，且无已知失败信号
+  degraded: 核心进程存在或组件已登记，但存在失败退出、错误增长或层间矛盾
+  stale: 登记存在但未运行、被暂停，或下一运行信息与实际禁用状态不一致
+  unknown: 仅凭允许的元数据不能确定组件归属、重复关系或业务成功
+strict_prohibitions:
+  - 发起query、检索请求、API或数据库访问
+  - 读取日志正文、UNKNOWN内容、代码差异正文、凭据或业务数据
+  - 启动、停止、卸载、重启或恢复任何服务或生产者
+  - 编辑、移动、删除、恢复、暂存或提交任何KDS文件
+  - 运行测试、构建、提交、推送、部署或状态提升
+opsx_lock:
+  run_id: gcworld-kds-d12-c2-s2-gbrain-consistency-audit-20260826
+  change_id: gcworld-kds-authoritative-integration
+  locked_at: "2026-08-26T00:19:40Z"
+  ttl_hours: 4
+expected_outputs:
+  - 中文逐组件状态矩阵
+  - 中文只读一致性审计回执
+  - 精确后续授权请求
+  - 前后KDS硬基线与锁释放证据

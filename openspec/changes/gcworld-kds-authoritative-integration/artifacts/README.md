@@ -96,6 +96,16 @@ superseded_by: []
 | `gcworld-kds-d12-c2-s2-supplemental-decision-receipt-20260825.yaml` | 老卢以“A”明确六个分组全部选择keep_unknown的人工补充决定回执 |
 | `gcworld-kds-d12-c2-s2-closure-receipt-20260825.yaml` | 六组决定已明确、但最终31项基线漂移后按规则停止且尚未生效完成的收口回执 |
 | `gcworld-kds-post-d12-c2-s2-closure-drift-20260825.yaml` | S2收口最终复核时31项变为32项、非目标31项仍精确一致并按规则停止的漂移回执 |
+| `gcworld-kds-d12-c2-s2-rebaseline-manifest-20260826.yaml` | 旧HEAD至新HEAD单提交、33项Git处置和新干净快照的只读重新基线清单 |
+| `gcworld-kds-d12-c2-s2-readonly-rebase-audit-receipt-20260826.yaml` | 33项已进入main但治理有效性不能由Git元数据证明的只读审计总回执 |
+| `gcworld-kds-d12-c2-s2-new-baseline-followup-authorization-request-20260826.yaml` | 接受新基线、保持16项UNKNOWN、冻结GBrain和完成S2收口的后续独立授权请求 |
+| `gcworld-kds-d12-c2-s2-gbrain-consistency-audit-control-20260826.yaml` | GBrain检索主链路与后台Supervisor、同步任务元数据一致性的只读审计控制 |
+| `gcworld-kds-d12-c2-s2-gbrain-component-status-matrix-20260826.yaml` | GBrain、KDS、Hermes与同步任务逐组件健康分级矩阵 |
+| `gcworld-kds-d12-c2-s2-gbrain-consistency-audit-receipt-20260826.yaml` | 检索可用但后台仍降级、不一致的受控只读审计回执 |
+| `gcworld-kds-d12-c2-s2-gbrain-consistency-followup-authorization-request-20260826.yaml` | RB3配置归属零凭据只读核对的后续独立授权请求 |
+| `gcworld-kds-d12-c2-s2-gbrain-rb3-config-ownership-partial-matrix-20260826.yaml` | RB3安全结构字段、暂定归属与范围偏差的部分矩阵 |
+| `gcworld-kds-d12-c2-s2-gbrain-rb3-config-ownership-audit-receipt-20260826.yaml` | RB3因日志路径误哈希而停止、零正文输出和零运行变更的偏差回执 |
+| `gcworld-kds-d12-c2-s2-gbrain-rb3r1-corrected-replay-authorization-request-20260826.yaml` | 硬排除日志路径后的RB3R1纠正只读重放请求 |
 | `gcworld-kds-post-handoff-drift-assessment-20260825.md` | 新增11项范围、授权失效与下一门禁评估 |
 | `gcworld-kds-integration-admission-assessment-20260824.md` | 昨日准入事实与阻塞判断 |
 | `gcworld-kds-integration-admission-refresh-20260825.md` | 今日基线失效与准入刷新判断 |

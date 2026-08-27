@@ -1,0 +1,144 @@
+matrix_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-COMPONENT-STATUS-MATRIX-20260826-054
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+observed_at: "2026-08-26T00:21:09Z"
+title: D12-C2-S2——GBrain检索主链路、Supervisor与同步调度逐组件状态矩阵
+control_ref:
+  control_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-CONSISTENCY-AUDIT-CONTROL-20260826-053
+  control_sha256: f07d600c1b4e5ec116b14db162d4b7576a2c6692bac8b8f09cfbd4e3f2c6f631
+overall:
+  retrieval_main_chain: healthy_human_confirmed_process_metadata_supporting
+  background_autopilot: degraded
+  supervisor_consistency: unknown_with_possible_registration_overlap
+  sync_scheduler: stale_and_degraded
+  overall_status: active_partial_not_complete
+components:
+  - id: retrieval-main-chain
+    role: GBrain检索主链路
+    status: healthy
+    evidence: 当前人工事实确认主链路已恢复；本轮仅观察到相关KDS与代理监听元数据，未发起query或API测试
+    confidence: human_confirmed_not_independently_queried
+  - id: com-globalcloud-kds
+    role: KDS主服务
+    status: healthy
+    evidence: LaunchAgent运行中，PID 1072，runs=1，未退出；监听TCP 8080
+    confidence: process_and_listener_metadata
+  - id: com-globalcloud-kds-api-18080
+    role: KDS本地API侧链
+    status: healthy
+    evidence: LaunchAgent运行中，PID 1082，runs=1，未退出；监听127.0.0.1:18080
+    confidence: process_and_listener_metadata
+  - id: com-globalcloud-notion-kds-proxy
+    role: Notion-KDS代理链路
+    status: healthy
+    evidence: LaunchAgent运行中，PID 1037，runs=1，未退出；监听127.0.0.1:8090
+    confidence: process_and_listener_metadata
+  - id: com-gbrain-autopilot-launchagent
+    role: GBrain后台Autopilot控制器
+    status: degraded
+    evidence: state=running、active_count=1、PID 14889、runs=15，但last_exit_code=1；错误文件在观察窗口内持续更新
+    timestamps:
+      process_started: "2026-08-26T08:06:53+08:00"
+      error_file_mtime: "2026-08-26T00:21:08Z"
+    confidence: launchctl_process_and_file_metadata
+  - id: gbrain-autopilot-process
+    role: 当前Autopilot进程
+    status: healthy
+    evidence: 仅观察到1个gbrain autopilot进程，父进程为launchd；运行时长约13分钟
+    confidence: process_presence_only
+  - id: gbrain-jobs-worker
+    role: GBrain后台任务工作进程
+    status: unknown
+    evidence: 仅观察到1个jobs work子进程，父PID为Autopilot；未读取任务队列、数据库或业务结果，无法证明同步成功
+    confidence: process_presence_without_job_outcome
+  - id: com-globalcloud-gbrain
+    role: 旧或并行GBrain LaunchAgent登记
+    status: degraded
+    evidence: state=spawn_scheduled、active_count=0、runs=170、last_exit_code=78 EX_CONFIG
+    confidence: launchctl_metadata
+  - id: com-globalcloud-gbrain-audit-proxy
+    role: GBrain审计代理登记
+    status: degraded
+    evidence: state=spawn_scheduled、active_count=0、runs=165、last_exit_code=2
+    confidence: launchctl_metadata
+  - id: com-globalcloud-notion-kds-sync
+    role: Notion-KDS同步LaunchAgent
+    status: stale
+    evidence: 已登记但state=not_running、active_count=0、runs=0、从未退出，未观察到实际同步进程
+    confidence: launchctl_metadata
+  - id: gbrain-supervisor-registration
+    role: GBrain Supervisor归属
+    status: unknown
+    evidence: 未观察到名称含gbrain supervisor的独立进程；存在近期supervisor审计文件，但未读取其正文，无法证明由哪个登记主体负责
+    timestamps:
+      latest_supervisor_audit_mtime: "2026-08-26T00:07:21Z"
+    confidence: process_and_file_path_metadata_only
+  - id: codex-sync-automations
+    role: 三项KDS同步与治理自动化
+    status: stale
+    evidence: macmini-workwiki、workwiki-kds、automation-5均保留每日RRULE但状态为PAUSED；登记与冻结一致，但不支持“后台同步健康”结论
+    schedules:
+      macmini-workwiki: 每日06:40
+      workwiki-kds: 每日07:10
+      automation-5: 每日07:30
+    confidence: registered_automation_metadata
+  - id: hermes-registered-sync-jobs
+    role: 十一项Hermes项目与知识同步调度
+    status: degraded
+    evidence: 11/11均enabled=false且state=paused，但11/11仍保留future next_run_at；其中3项last_status=error、failure_streak=1
+    error_job_ids: [43652c3c9b4d, d1875abfb9df, wiki-ecosystem-health-3d]
+    paused_at_range: "2026-08-25T14:00:01+08:00至2026-08-25T14:00:03+08:00"
+    confidence: registered_scheduler_metadata
+  - id: supervisor-duplication-check
+    role: 重复Supervisor或控制器检查
+    status: unknown
+    evidence: 实际Autopilot进程仅1个，未发现实际重复进程；但com.gbrain.autopilot与com.globalcloud.gbrain两个GBrain相关LaunchAgent并存，后者持续EX_CONFIG，是否为重复或旧登记需责任方确认
+    actual_duplicate_autopilot_processes: false
+    possible_overlapping_launch_registrations: true
+    confidence: metadata_cannot_prove_role_equivalence
+  - id: task-registry-runtime-consistency
+    role: 任务登记与实际状态一致性
+    status: degraded
+    evidence: GBrain worker实际运行，而三项Codex自动化和十一项Hermes任务均暂停；Hermes暂停任务仍保留未来运行时间，Notion同步登记从未运行
+    mismatch_confirmed: true
+    confidence: cross_registry_and_process_metadata
+inconsistencies:
+  - id: INC-001
+    severity: high
+    finding: com.globalcloud.gbrain反复以EX_CONFIG退出，同时com.gbrain.autopilot正在运行，控制面角色边界未确认
+  - id: INC-002
+    severity: high
+    finding: Autopilot当前运行但最近退出码为1，且错误文件持续增长，不能判定后台健康
+  - id: INC-003
+    severity: medium
+    finding: 十一项Hermes任务已禁用暂停但仍保留未来next_run_at，登记状态存在陈旧字段
+  - id: INC-004
+    severity: medium
+    finding: 三项Codex同步自动化暂停、Notion同步从未运行，但GBrain jobs worker运行，后台同步控制面不一致
+  - id: INC-005
+    severity: medium
+    finding: 未观察到独立GBrain Supervisor进程，近期supervisor审计文件的实际生产者与权威责任方未知
+minimum_recovery_boundary:
+  preserve_unchanged:
+    - 三个已运行的主链路监听服务
+    - KDS新干净Git基线
+    - 三项Codex自动化和十一项Hermes任务的暂停状态，直至逐项批准恢复
+  proposed_first_action_after_separate_approval:
+    - 仅暂停并卸载com.gbrain.autopilot，验证Autopilot及jobs worker均消失
+    - 不操作com.globalcloud.gbrain、审计代理、KDS服务或其他任务登记
+    - 验证三个主链路监听进程仍在且KDS Git基线零漂移
+  deferred_actions:
+    - 由责任方确认com.globalcloud.gbrain与com.gbrain.autopilot是否重复或代际替代关系
+    - 逐项清理Hermes暂停任务的陈旧next_run_at及三项错误状态
+    - 选择一个同步任务作为后续独立授权的单一金丝雀，不批量恢复
+rollback:
+  trigger: 卸载Autopilot后任一主链路监听消失、KDS基线变化或出现非授权服务影响
+  action: 仅使用原未修改plist重新加载com.gbrain.autopilot并恢复到执行前观察状态，随后立即停止后续动作
+  forbidden: 修改plist、脚本、任务内容或同时操作其他服务
+scope_compliance:
+  query_or_api_call: 0
+  log_or_business_content_read: 0
+  unknown_or_code_diff_read: 0
+  service_or_producer_operation: 0
+  file_disposition_or_test: 0
+  commit_push_deploy_or_status_promotion: 0

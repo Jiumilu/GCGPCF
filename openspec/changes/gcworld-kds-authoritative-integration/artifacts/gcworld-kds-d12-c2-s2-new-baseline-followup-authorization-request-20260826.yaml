@@ -1,0 +1,69 @@
+request_id: GCWORLD-KDS-D12-C2-S2-NEW-BASELINE-FOLLOWUP-AUTH-REQUEST-20260826-052
+change_id: gcworld-kds-authoritative-integration
+language: zh-CN
+created_at: "2026-08-26T00:05:53Z"
+status: pending_independent_human_decision
+title: D12-C2-S2——新干净基线接受、GBrain冻结与治理收口独立授权请求
+source_evidence:
+  rebaseline_manifest_sha256: 378363aefe03b8103d4df827bf0bd3b72a1f483860d77ca812de30891734753b
+  readonly_rebase_audit_receipt_sha256: 653e9d60849b7d0919ae9959ba3f816f91b357116529a3f72cdfeca0bcc66233
+  sealed_six_group_keep_unknown_decision_sha256: 0d7d888f4f66b0c3dd2e32920b13e92d1f2c2a25665c203471be1aca626a50d2
+activation_baseline:
+  branch: main
+  head_and_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  ahead_behind_staged: 0_0_0
+  ordinary_entries: 0
+  ordinary_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  expanded_entries: 0
+  expanded_status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  strict_path_metadata_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  gbrain_state: present_running_active_1
+requested_decisions:
+  d12_c2_s2_rb2_a:
+    title: 接受新HEAD作为S2后续治理运行基线
+    boundary: 仅承认Git快照和干净工作树，不追认33项内容、分级、归档、代码安全或提交授权有效
+    status: pending
+  d12_c2_s2_rb2_b:
+    title: 保持原十六项UNKNOWN并登记其已提交到main的治理例外
+    boundary: 不读取正文、不降级、不提升为事实，继续保留独立例外队列
+    status: pending
+  d12_c2_s2_rb2_c:
+    title: 通过官方机制暂停并卸载本地com.gbrain.autopilot
+    boundary: 不删除或修改plist、脚本及配置，不操作其他服务；卸载后验证标签缺席和匹配进程为零
+    status: pending
+  d12_c2_s2_rb2_d:
+    title: 在新基线与冻结门禁全部匹配后完成S2收口
+    boundary: 依据已密封的六组全部keep_unknown决定收口；不执行S1-C、D12-R2、D12-N或D12-D
+    status: pending
+  d12_c2_s2_rb2_e:
+    title: 将其余十七项登记为独立治理有效性例外
+    boundary: 十三项S1/S2、两项D10代码、一项pyc和一项live-fixture只记录Git处置与待补证状态，不自动纠偏
+    status: pending
+execution_order:
+  - 复核新HEAD、tree、远端、零工作树和本请求摘要
+  - 获取官方OpsX锁
+  - 仅通过官方服务管理机制卸载com.gbrain.autopilot并验证缺席
+  - 再次复核KDS新基线和其余生产者冻结
+  - 依据六组keep_unknown决定完成S2治理收口并登记两类例外队列
+  - 完成末次零漂移复核并释放官方锁
+hard_stop_conditions:
+  - HEAD、tree、origin/main或任一工作树摘要变化
+  - GBrain卸载需要删除或修改配置、强制终止其他服务或扩大范围
+  - 十六项UNKNOWN需要读取正文、frontmatter、字段、片段、字符串、关键词或语义
+  - 任一操作需要测试、提交、推送、部署或状态提升
+strict_prohibitions:
+  - 追认33项内容或提交治理有效性
+  - 读取UNKNOWN正文、代码差异正文或文件语义
+  - 恢复、移动、删除、编辑、暂存或提交任何KDS文件
+  - 执行S1-C、D12-R2、D12-N或D12-D
+  - 测试、构建、数据库、API、凭据、生产者恢复、推送、部署或状态提升
+expected_effect_if_approved_and_all_gates_pass:
+  s2_status: completed_all_six_groups_keep_unknown_on_new_accepted_baseline
+  original_unknown_exception_entries: 16
+  separate_governance_validity_exception_entries: 17
+  designated_authority_groups: 0
+  downstream_eligible_targets: 0
+  openspec_tasks_completed_this_node: 0
+exact_human_approval_text: >-
+  批准D12-C2-S2-RB2-A至RB2-E：接受HEAD 341264982d47c2b7cabe92c5a107ad0d8cad653c作为S2后续治理运行基线，但不追认33项内容或提交治理有效性；原16项继续保持UNKNOWN并登记已提交例外，其余17项进入独立治理有效性例外。允许仅通过官方机制暂停并卸载com.gbrain.autopilot，不得修改或删除服务配置或操作其他服务。仅在新基线、远端、零工作树和全部生产者冻结精确匹配后，依据已密封的六组全部keep_unknown决定完成S2收口。不得读取UNKNOWN正文或代码差异正文，不授权S1-C、D12-R2/N/D、KDS文件处置、测试、生产者恢复、提交、推送、部署或状态提升。

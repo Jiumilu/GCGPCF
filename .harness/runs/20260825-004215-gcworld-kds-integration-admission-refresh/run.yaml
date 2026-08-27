@@ -3,12 +3,12 @@ change_id: gcworld-kds-authoritative-integration
 entrypoint: /opsx:resume
 requested_by: human
 started_at: "2026-08-25T00:42:15Z"
-updated_at: "2026-08-25T12:01:37Z"
+updated_at: "2026-08-26T00:10:01Z"
 current_step: 2
-current_step_name: d12-c2-s2-stopped-by-post-gate-drift
+current_step_name: d12-c2-s2-rebaseline-audit-complete-pending-new-baseline-approval
 status: partial
 language: zh-CN
-scope: 记录老卢补充输入“A”对应的六组keep_unknown决定；最终基线由31项漂移至32项后立即停止，S2尚未生效收口
+scope: 只读审计KDS旧HEAD到新HEAD的单提交及33项路径元数据，密封新干净快照并生成后续独立授权请求
 authorization:
   historical_decisions_approved: [D1, D2, D3, D4]
   stabilization_decisions_approved: [D5, D6, D7, D8, D9]
@@ -276,7 +276,24 @@ result:
   d12_c2_s2_keep_unknown_explicit_groups: 6
   d12_c2_s2_final_unknown_target_ids: 16
   d12_c2_s2_execution_started: true
-  d12_c2_s2_status: stopped_post_gate_drift
+  d12_c2_s2_rebaseline_manifest: GCWORLD-KDS-D12-C2-S2-REBASELINE-MANIFEST-20260826-050
+  d12_c2_s2_rebaseline_manifest_sha256: 378363aefe03b8103d4df827bf0bd3b72a1f483860d77ca812de30891734753b
+  d12_c2_s2_rebase_audit_receipt: GCWORLD-KDS-D12-C2-S2-READONLY-REBASE-AUDIT-RECEIPT-20260826-051
+  d12_c2_s2_rebase_audit_receipt_sha256: 653e9d60849b7d0919ae9959ba3f816f91b357116529a3f72cdfeca0bcc66233
+  d12_c2_s2_new_baseline_followup_request: GCWORLD-KDS-D12-C2-S2-NEW-BASELINE-FOLLOWUP-AUTH-REQUEST-20260826-052
+  d12_c2_s2_new_baseline_followup_request_sha256: c8bdd2fe863fe2aab18f8a39ce41a99f09ab2968443ff738e0c3e77949ec23e4
+  d12_c2_s2_old_head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+  d12_c2_s2_new_head_and_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  d12_c2_s2_new_tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  d12_c2_s2_rebaseline_commit_count: 1
+  d12_c2_s2_rebaseline_paths: 33
+  d12_c2_s2_commit_added: 25
+  d12_c2_s2_commit_modified: 8
+  d12_c2_s2_governance_valid_paths: 0
+  d12_c2_s2_new_worktree_entries: 0
+  d12_c2_s2_new_worktree_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  d12_c2_s2_gbrain_state: present_running_active_1
+  d12_c2_s2_status: rebaseline_audit_complete_pending_new_baseline_acceptance
   d12_nondestructive_status: not_requested
   d12_delete_status: not_requested
   openspec_tasks_complete: 3
@@ -284,10 +301,10 @@ result:
   tasks_completed_this_run: 0
   implementation_started: false
   next_task_allowed: false
-  reason: 老卢以“A”明确六组全部keep_unknown，但最终复核时同一pyc路径再次变化并使KDS由31项增至32项；按硬门禁立即停止，十六项仍为UNKNOWN且零下游合格项
+  reason: 新HEAD以一个未签名提交精确覆盖33项并同步至origin/main，工作树为零；Git处置已明确但治理有效性未被证明，等待独立接受新基线、登记例外、冻结GBrain和完成S2收口
 evidence_index: .harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/evidence-index.yaml
 final_validation:
-  status: partial_d12_c2_s2_stopped_by_post_gate_drift
+  status: partial_d12_c2_s2_rebaseline_audit_complete_pending_new_baseline_approval
   admission_refresh_contract_gate: pass
   openspec_strict: pass
   document_gate: pass
@@ -344,9 +361,13 @@ final_validation:
   d12_c2_s2_input_gate: pass_six_of_six_explicit_keep_unknown
   d12_c2_s2_execution_gate: stopped_post_gate_31_to_32
   d12_c2_s2_closure_gate: blocked_pending_exact_31_item_baseline_restore
+  d12_c2_s2_rebaseline_audit_gate: pass_one_commit_exactly_33_paths_clean_origin_synced
+  d12_c2_s2_governance_validity_gate: rework_required_zero_of_33_proven
+  d12_c2_s2_new_baseline_acceptance_gate: pending_independent_human_decision
+  d12_c2_s2_gbrain_freeze_gate: blocked_present_spawn_scheduled
   d12_nondestructive_gate: not_requested
   d12_delete_gate: not_requested
   f013_admission: blocked_dirty_worktree
   kds_write_authorized: false
   implementation_started: false
-  opsx_disposition: stop_for_explicit_single_path_restore_authorization
+  opsx_disposition: stop_for_new_baseline_followup_approval

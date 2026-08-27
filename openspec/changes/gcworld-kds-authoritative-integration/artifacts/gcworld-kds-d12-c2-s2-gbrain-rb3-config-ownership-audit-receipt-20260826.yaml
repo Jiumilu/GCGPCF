@@ -1,0 +1,42 @@
+receipt_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-RB3-CONFIG-OWNERSHIP-AUDIT-RECEIPT-20260826-001
+generated_at: "2026-08-26T00:25:59Z"
+result: aborted_rework_required_after_scope_exception
+status: active_partial_not_complete
+authorization:
+  approved: true
+  request_sha256: 6104a5a4a4531b74280bd7a227589ae473a385c46ebdbe9b769e501e13b33f5a
+preconditions:
+  kds_head_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+  kds_tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+  ahead_behind_staged: 0/0/0
+  ordinary_expanded_dirty: 0/0
+  opsx_lock: acquired
+completed_safe_scope:
+  plist_structural_parses: 5
+  environment_variable_values_read_or_emitted: 0
+  credentials_read_or_emitted: 0
+  service_operations: 0
+  api_database_or_query_operations: 0
+  kds_writes: 0
+  tests: 0
+  commits_or_pushes: 0
+scope_exception:
+  parser_error: existing_absolute_path_filter_was_too_broad
+  affected_class: one_log_file_path_in_ProgramArguments
+  operation: byte_read_for_sha256_only
+  log_content_output: false
+  log_content_persisted: false
+  log_hash_recorded_in_governance_artifacts: false
+  containment: no_further_runtime_file_reads
+provisional_conclusion:
+  exact_configuration_duplicate: false
+  semantic_overlap: unknown
+  notion_kds_sync_owner: com.globalcloud.notion-kds-sync
+  minimum_recovery_order_frozen: false
+  reason: RB3完整成功门禁因范围偏差未通过
+rollback:
+  runtime: not_applicable_zero_runtime_change
+  kds: not_applicable_zero_write
+  governance: 本回执保留为追加式偏差证据，不删除或改写
+next_gate: corrected_RB3R1_metadata_replay_requires_human_authorization
+

@@ -1,0 +1,75 @@
+matrix_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-RB3-CONFIG-OWNERSHIP-PARTIAL-MATRIX-20260826-001
+generated_at: "2026-08-26T00:25:59Z"
+status: partial_rework_required
+authorization_ref:
+  request_sha256: 6104a5a4a4531b74280bd7a227589ae473a385c46ebdbe9b769e501e13b33f5a
+safe_observations:
+  - label: com.gbrain.autopilot
+    plist_sha256: d2b92752345e157592b2e1fb6e7b1e1c9f81896f1949e79d4528d757628f60e1
+    run_at_load: true
+    keep_alive: true
+    working_directory: null
+    environment_variable_keys: []
+    entrypoint_path: /Users/lujunxiang/.gbrain/autopilot-run.sh
+    entrypoint_sha256: d5b8b387529d6867e113a8e7017188d2df3ea1d22cd31ad993dc7f6b9e392155
+    ownership_class: gbrain_autopilot_control
+  - label: com.globalcloud.gbrain
+    plist_sha256: b79e852d7f0db00fa0bacafab4508bac04f5622b87c4f1cd956f8038a6ee2bcc
+    run_at_load: true
+    keep_alive: true
+    working_directory: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/gbrain-platform/server
+    environment_variable_keys: [PYTHONPATH]
+    entrypoint_path: not_safely_resolved_in_this_run
+    entrypoint_sha256: null
+    ownership_class: gbrain_platform_server
+  - label: com.globalcloud.notion-kds-sync
+    plist_sha256: 1d3c4f4d78458115796eb724373f08e4110e3aad3104fcfd48d3f2be91a37434
+    run_at_load: false
+    keep_alive: absent
+    working_directory: null
+    environment_variable_keys: []
+    interpreter_path: /bin/zsh
+    entrypoint_path: /Users/lujunxiang/.globalcloud/run-notion-kds-sync.sh
+    entrypoint_sha256: f9cfec645895393e8adfea3a617c7ed69c096773d127ba37a4ca02740bdc3119
+    ownership_class: notion_to_kds_sync
+  - label: ai.hermes.gateway-gcbrain
+    plist_sha256: 75e103c4b473465584d06f58b52671f831c91a0688ad577e1bd9ab0a3123c917
+    run_at_load: true
+    keep_alive: true
+    working_directory: /Users/lujunxiang/.hermes/profiles/gcbrain
+    environment_variable_keys: [HERMES_HOME, PATH, VIRTUAL_ENV]
+    interpreter_path: /Users/lujunxiang/.hermes/hermes-agent/venv/bin/python
+    interpreter_sha256: 7e470bc0e4889177f9acb5f62208fae2825aba9ccd6a67b7c3378f522aa8f148
+    ownership_class: hermes_gbrain_gateway
+  - label: com.globalcloud.gbrain-audit-proxy
+    plist_sha256: 32ad656fc4fdf905b47b2a2364e488e79dc862a3372cccca6b9cc25fb20cd83a
+    run_at_load: true
+    keep_alive: true
+    working_directory: null
+    environment_variable_keys: [GBRAIN_URL, PROXY_PORT]
+    interpreter_path: /usr/bin/python3
+    interpreter_sha256: 44a68ddc1983d6cff3fd35ba3f9ba5f82004216f1dcde69892b3d1b06e408698
+    ownership_class: gbrain_audit_proxy
+provisional_findings:
+  exact_duplicate_configuration:
+    result: false
+    reason: com.gbrain.autopilot与com.globalcloud.gbrain的配置摘要、工作目录和入口形态不同
+  semantic_supervisor_overlap:
+    result: unknown
+    reason: 未读取入口源码，不能证明两者功能是否重复或为代际替代
+  unique_notion_kds_sync_registration:
+    result: confirmed_at_launchagent_level
+    owner_label: com.globalcloud.notion-kds-sync
+    reason: 唯一观察到的Notion-KDS同步包装入口属于该标签
+  runtime_sync_success:
+    result: unknown
+    reason: 未执行任务、API、数据库或读取日志正文
+scope_exception:
+  occurred: true
+  class: unintended_log_file_hash_read
+  detail: 结构化解析器将ProgramArguments中的一个日志路径误判为入口文件并读取其字节以计算SHA-256
+  content_emitted: false
+  content_persisted: false
+  hash_persisted: false
+  response: 立即停止后续采集并进入纠正重放门禁
+

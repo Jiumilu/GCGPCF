@@ -1,0 +1,73 @@
+receipt_id: GCWORLD-KDS-D12-C2-S2-GBRAIN-CONSISTENCY-AUDIT-RECEIPT-20260826-001
+generated_at: "2026-08-26T00:20:29Z"
+language: zh-CN
+result: pass_with_degraded_background_and_followup_required
+classification: search_mainline_available_background_not_fully_healthy
+status: active_partial_not_complete
+sealed_inputs:
+  control:
+    path: openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-gbrain-consistency-audit-control-20260826.yaml
+    sha256: f07d600c1b4e5ec116b14db162d4b7576a2c6692bac8b8f09cfbd4e3f2c6f631
+  component_matrix:
+    path: openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-gbrain-component-status-matrix-20260826.yaml
+    sha256: bdc99eefe062733e04c79f0be7525a5e060d73f00d1cebb1c7564d446f160f35
+  followup_authorization_request:
+    path: openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-d12-c2-s2-gbrain-consistency-followup-authorization-request-20260826.yaml
+    sha256: 6104a5a4a4531b74280bd7a227589ae473a385c46ebdbe9b769e501e13b33f5a
+kds_baseline:
+  before:
+    branch: main
+    head: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    origin_main: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 0
+    expanded_dirty: 0
+    status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  after:
+    branch: main
+    head: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    origin_main: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+    ahead_behind_staged: 0/0/0
+    ordinary_dirty: 0
+    expanded_dirty: 0
+    status_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+loop_gates:
+  skill_chain: pass
+  document_gate: pass
+  gpcf_git_gate: partial_dirty
+  operational_quality: blocked
+  dependency_gate: blocked
+  status_ceiling: partial
+findings:
+  search_mainline:
+    classification: healthy_by_human_confirmation_only
+    live_request_performed: false
+  background:
+    classification: degraded
+    potential_duplicate_supervisor: true
+    duplicate_proven: false
+    registered_sync_state_consistent: false
+  blockers:
+    - 旧GBrain supervisor处于EX_CONFIG调度循环
+    - Notion-KDS同步任务已登记但从未运行
+    - autopilot与Hermes GBrain网关均有非零历史退出码
+    - 审计代理无活动进程且最近退出失败
+  conclusion: 检索主链路可用不等于后台同步健康，当前不能声明完全健康
+actions:
+  official_opsx_lock: acquired_and_released
+  kds_write: false
+  unknown_body_read: false
+  query_or_log_body_read: false
+  credentials_read: false
+  api_or_database_access: false
+  service_operation: false
+  test: false
+  commit_or_push: false
+  deploy_or_promotion: false
+rollback:
+  runtime: not_applicable_no_runtime_change
+  kds: not_applicable_zero_write
+  governance: 可删除本轮新增四个产物并恢复README新增行
+next_gate: pending_independent_RB3_read_only_configuration_ownership_authorization

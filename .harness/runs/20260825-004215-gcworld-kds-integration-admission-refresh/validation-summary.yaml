@@ -1,8 +1,8 @@
 run_id: 20260825-004215-gcworld-kds-integration-admission-refresh
 change_id: gcworld-kds-authoritative-integration
-generated_at: "2026-08-25T12:01:37Z"
+generated_at: "2026-08-26T00:10:01Z"
 language: zh-CN
-result: partial_d12_c2_s2_stopped_by_post_gate_drift
+result: partial_d12_c2_s2_rebaseline_audit_complete_pending_new_baseline_approval
 checks:
   authorization_invalidation_contract:
     result: pass
@@ -376,6 +376,34 @@ checks:
     effective_closure: false
     unknown_content_read: false
     kds_write_test_service_restore: false
+  d12_c2_s2_rebaseline_audit:
+    result: pass_git_disposition_complete_governance_not_established
+    old_head: cbeeddc86e6c08a3be7357971a5bc430a10c0027
+    new_head_and_origin: 341264982d47c2b7cabe92c5a107ad0d8cad653c
+    new_tree: 946fdf51cd7f25b7c566e79843d0351236ff2231
+    commit_count: 1
+    commit_signature: unsigned
+    commit_paths: 33
+    audited_paths: 33
+    added: 25
+    modified: 8
+    prior_s1: 5
+    prior_s2: 8
+    prior_unknown: 16
+    d10_code: 2
+    post_baseline_pyc: 1
+    post_baseline_live_fixture: 1
+    governance_validity_proven: 0
+    new_worktree_entries: 0
+    new_worktree_sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    gbrain_pre_audit_state: present_spawn_scheduled_active_0
+    gbrain_final_state: present_running_active_1
+    gbrain_state_changed_during_audit: true
+    manifest_sha256: 378363aefe03b8103d4df827bf0bd3b72a1f483860d77ca812de30891734753b
+    audit_receipt_sha256: 653e9d60849b7d0919ae9959ba3f816f91b357116529a3f72cdfeca0bcc66233
+    followup_request_sha256: c8bdd2fe863fe2aab18f8a39ce41a99f09ab2968443ff738e0c3e77949ec23e4
+    file_or_diff_content_read: false
+    kds_write_service_test_commit_push: false
 conclusion:
   implementation_may_start: false
   task_1_2_may_complete: false
@@ -392,4 +420,4 @@ conclusion:
   decisions_completed: [D5, D6, D7, D8, D9, D10, D16, D17]
   decisions_stopped_by_drift: []
   decisions_deferred: [D11, D12, D13, D14, D15]
-  pause_reason: 老卢已明确六组全部keep_unknown，但最终复核时KDS由31项漂移至32项；按硬门禁立即停止，等待重新授权仅恢复该单一路径后再完成S2收口
+  pause_reason: 新HEAD已将33项一次性提交并同步到origin/main，但Git元数据不能证明分级、归档、代码安全或提交授权有效；等待独立接受新基线、保持16项UNKNOWN、登记17项治理例外、冻结GBrain和完成S2收口
