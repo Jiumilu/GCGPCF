@@ -1,35 +1,27 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-08-28T23:09:51.650721+08:00",
+  "generated_at": "2026-09-03T08:35:47.505479+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF",
     "GlobalCloud KDS"
   ],
   "observed_ahead": [],
   "stable_dirty": [
-    "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud KDS"
   ],
   "stable_ahead": [],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
-  ],
+  "volatile_dirty": [],
   "review_boundary": [
-    "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud KDS"
   ],
   "sensitive_repos": [
     "GlobalCloud KDS"
   ],
-  "pass_repo_count": 14,
+  "pass_repo_count": 16,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-08-28T23:08:12.361846+08:00",
+  "previous_generated_at": "2026-08-28T23:09:51.650721+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -74,41 +66,17 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 3,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "outputs/reimbursement_20260828/preview.png",
-        "\"outputs/reimbursement_20260828/\\345\\267\\256\\346\\227\\205\\346\\212\\245\\351\\224\\200\\346\\270\\205\\345\\215\\225\\357\\274\\21020260828\\345\\215\\242\\345\\206\\233\\347\\277\\224\\357\\274\\211.xlsx\"",
-        "\"outputs/reimbursement_20260828/\\345\\267\\256\\346\\227\\205\\346\\212\\245\\351\\224\\200\\346\\270\\205\\345\\215\\225\\357\\274\\21020260828\\345\\215\\242\\345\\206\\233\\347\\277\\224\\357\\274\\211.xlsx.inspect.ndjson\""
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 19,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\344\\270\\264\\346\\227\\266\\350\\264\\243\\344\\273\\273\\350\\267\\257\\347\\224\\261\\346\\250\\241\\345\\236\\213\\346\\211\\271\\345\\207\\206\\345\\233\\236\\346\\211\\247_20260828.md\"",
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\344\\274\\230\\345\\205\\210\\344\\272\\272\\345\\267\\245\\345\\244\\215\\346\\240\\270\\345\\214\\205\\347\\224\\237\\346\\210\\220\\345\\233\\236\\346\\211\\247_20260828.md\"",
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\344\\274\\230\\345\\205\\210\\344\\272\\272\\345\\267\\245\\345\\244\\215\\346\\240\\270\\345\\214\\205\\350\\264\\243\\344\\273\\273\\344\\270\\273\\344\\275\\223\\346\\216\\245\\345\\217\\227\\346\\216\\210\\346\\235\\203\\350\\257\\267\\346\\261\\202_20260828.md\"",
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\344\\274\\230\\345\\205\\210\\344\\272\\272\\345\\267\\245\\345\\244\\215\\346\\240\\270\\345\\214\\205\\350\\264\\243\\344\\273\\273\\344\\270\\273\\344\\275\\223\\346\\240\\270\\351\\252\\214\\346\\211\\247\\350\\241\\214\\345\\233\\236\\346\\211\\247_20260828.md\"",
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\344\\274\\230\\345\\205\\210\\344\\272\\272\\345\\267\\245\\345\\244\\215\\346\\240\\270\\350\\264\\243\\344\\273\\273\\345\\270\\255\\344\\275\\215\\347\\231\\273\\350\\256\\260\\350\\257\\267\\346\\261\\202_20260828.md\"",
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\346\\234\\272\\345\\231\\250\\345\\275\\222\\344\\270\\200\\345\\207\\206\\345\\244\\207\\350\\212\\202\\347\\202\\271\\345\\233\\236\\346\\211\\247_20260828.md\"",
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\346\\234\\272\\345\\231\\250\\345\\275\\222\\344\\270\\200\\345\\273\\272\\350\\256\\256\\350\\277\\220\\350\\241\\214\\345\\233\\236\\346\\211\\247_20260828.md\"",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-machine-normalization-exceptions-20260828.jsonl",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-machine-normalization-preparation-20260828.yaml",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-machine-normalization-suggestions-20260828.jsonl",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-priority-human-review-packages-20260828.jsonl",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-responsibility-identification-verification-20260828.jsonl",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-temporary-responsibility-routing-20260828.jsonl",
-        "tests/test_gcworld_identity_machine_suggestions.py",
-        "tests/test_gcworld_identity_priority_human_review_packages.py",
-        "tests/test_gcworld_identity_responsibility_verification.py",
-        "tools/kds-sync/build_gcworld_identity_machine_suggestions.py",
-        "tools/kds-sync/build_gcworld_identity_priority_human_review_packages.py",
-        "tools/kds-sync/build_gcworld_identity_responsibility_verification.py"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
@@ -133,7 +101,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 316,
+      "dirty_count": 318,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -163,6 +131,7 @@
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\274\\232\\350\\256\\256\\346\\212\\225\\345\\275\\261/2026-08-24_\\347\\273\\277\\350\\211\\262\\345\\214\\205\\350\\243\\205\\346\\235\\220\\346\\226\\231\\351\\241\\271\\347\\233\\256\\350\\220\\275\\345\\234\\260\\347\\240\\224\\350\\256\\250_KDS\\345\\210\\206\\346\\236\\220.md\"",
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\274\\232\\350\\256\\256\\347\\272\\252\\350\\246\\201/2026-08-09_soundcore_Work_08-07_13_19_\\345\\210\\206\\346\\256\\2651_KDS\\345\\210\\206\\346\\236\\220.md\"",
         "_governance/kds-daily-reports/kds-daily-2026-08-28.md",
+        "_governance/kds-daily-reports/kds-daily-2026-09-03.md",
         "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/gehua/orgs/gehua/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-read-view-4fab99f1-564d-40f9-adee-80d857476f0d.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/gehua/orgs/gehua/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-read-view-958319cd-bc07-4be3-b8cf-8aac0ab56b5c.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/kds/tenants/gehua/orgs/gehua/governance/audits_\\345\\256\\241\\350\\256\\241/kds-audit-read-view-b9bf2848-e6bc-4dec-9450-e9ddab6fb20c.md\"",
@@ -429,6 +398,7 @@
         "raw/feishu-minutes-runtime/runs/runtime-f74803c5dedc40f7/report.md",
         "raw/feishu-minutes-runtime/runs/runtime-fe0ad705e4058729/report.json",
         "raw/feishu-minutes-runtime/runs/runtime-fe0ad705e4058729/report.md",
+        "raw/feishu-minutes-runtime/scheduled/live-fixture.json.partial",
         "\"\\344\\270\\226\\347\\225\\214\\350\\265\\204\\344\\272\\247/\\344\\274\\232\\350\\256\\256\\346\\212\\225\\345\\275\\261/2026-08-04_\\344\\272\\221\\344\\270\\232\\345\\212\\241\\347\\273\\223\\347\\256\\227\\345\\217\\212token\\344\\270\\232\\345\\212\\241\\347\\233\\270\\345\\205\\263\\350\\256\\250\\350\\256\\272_KDS\\345\\210\\206\\346\\236\\220.md\"",
         "\"\\344\\270\\226\\347\\225\\214\\350\\265\\204\\344\\272\\247/\\344\\274\\232\\350\\256\\256\\346\\212\\225\\345\\275\\261/2026-08-04_\\347\\243\\267\\347\\237\\263\\350\\206\\217\\345\\214\\205\\346\\235\\220\\351\\241\\271\\347\\233\\256\\345\\217\\212\\345\\220\\210\\344\\275\\234\\344\\272\\213\\345\\256\\234\\350\\256\\250\\350\\256\\272_KDS\\345\\210\\206\\346\\236\\220.md\"",
         "\"\\344\\270\\226\\347\\225\\214\\350\\265\\204\\344\\272\\247/\\344\\274\\232\\350\\256\\256\\346\\212\\225\\345\\275\\261/2026-08-09_soundcore_Work_08-07_13_19_\\345\\210\\206\\346\\256\\2651_KDS\\345\\210\\206\\346\\236\\220.md\"",
