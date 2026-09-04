@@ -1,16 +1,18 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-03T22:12:01.142748+08:00",
+  "generated_at": "2026-09-05T00:01:53.361293+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
+    "GlobalCloud Studio",
     "GlobalCoud GPCF",
     "GlobalCloud KDS"
   ],
   "observed_ahead": [],
   "stable_dirty": [
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "GlobalCoud GPCF"
   ],
   "stable_ahead": [],
@@ -19,14 +21,15 @@
   ],
   "review_boundary": [
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "GlobalCoud GPCF"
   ],
   "sensitive_repos": [
     "GlobalCloud KDS"
   ],
-  "pass_repo_count": 15,
+  "pass_repo_count": 14,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-09-03T08:40:00.556680+08:00",
+  "previous_generated_at": "2026-09-04T22:21:11.879211+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -71,19 +74,56 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 0,
-      "ahead": 0,
-      "behind": 0,
-      "paths": [],
-      "sensitive_paths": []
-    },
-    "GlobalCoud GPCF": {
-      "dirty_count": 2,
+      "dirty_count": 11,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\344\\274\\230\\345\\205\\210\\344\\272\\272\\345\\267\\245\\345\\244\\215\\346\\240\\270\\350\\264\\243\\344\\273\\273\\345\\270\\255\\344\\275\\215\\347\\231\\273\\350\\256\\260\\345\\233\\236\\346\\211\\247_20260903.md\"",
-        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-responsibility-seat-registry-20260903.yaml"
+        "packages/client/src/App.vue",
+        "packages/client/src/components/layout/AppSidebar.vue",
+        "packages/client/src/router/index.ts",
+        "docs/harness/evidence/codegraph/gcworld-organization-readonly-mvp-20260904.json",
+        "docs/harness/evidence/gcworld-organization-readonly-mvp-20260904.md",
+        "packages/client/src/features/gcworld/data/gcworld-organization-snapshot-20260904.json",
+        "packages/client/src/features/gcworld/organization-world.ts",
+        "packages/client/src/views/gcworld/OrganizationWorldView.vue",
+        "scripts/generate-gcworld-organization-snapshot.mjs",
+        "tests/client/gcworld-organization-world.test.ts",
+        "tests/e2e/gcworld-organization-world.spec.ts"
+      ],
+      "sensitive_paths": []
+    },
+    "GlobalCoud GPCF": {
+      "dirty_count": 27,
+      "ahead": 0,
+      "behind": 0,
+      "paths": [
+        "openspec/changes/gcworld-workbench-ui-foundation/tasks.md",
+        "runtime/queue.json",
+        "runtime/state.json",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/artifacts/.gitkeep",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/.gitkeep",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/api.txt",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/build.txt",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/screenshots.txt",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/summary.md",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/tests.txt",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/feature.yaml",
+        "features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md",
+        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\346\\234\\272\\345\\231\\250\\350\\275\\246\\351\\201\\223\\345\\244\\204\\347\\220\\206\\344\\274\\230\\345\\205\\210\\347\\272\\247\\345\\210\\206\\345\\261\\202\\345\\233\\236\\346\\211\\247_20260904.md\"",
+        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\350\\272\\253\\344\\273\\275\\345\\244\\215\\346\\240\\270\\344\\270\\211\\350\\275\\246\\351\\201\\223\\344\\270\\216\\350\\257\\201\\346\\215\\256\\345\\216\\213\\347\\274\\251\\345\\233\\236\\346\\211\\247_20260904.md\"",
+        "\"openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD\\347\\254\\254\\344\\270\\200\\346\\211\\271\\351\\253\\230\\344\\274\\230\\345\\205\\210\\347\\272\\247\\346\\235\\203\\345\\250\\201\\351\\224\\232\\347\\202\\271\\351\\234\\200\\346\\261\\202\\345\\214\\205\\345\\233\\236\\346\\211\\247_20260904.md\"",
+        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-high-priority-anchor-demand-packages-20260904.jsonl",
+        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-machine-evidence-compression-20260904.jsonl",
+        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-machine-priority-strata-20260904.jsonl",
+        "openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-identity-review-batch-1-three-lane-partition-20260904.jsonl",
+        "runtime/logs/F-015.jsonl",
+        "tests/test_gcworld_identity_high_priority_anchor_packages.py",
+        "tests/test_gcworld_identity_machine_priority_strata.py",
+        "tests/test_gcworld_identity_three_lane_compression.py",
+        "tools/kds-sync/build_gcworld_identity_high_priority_anchor_packages.py",
+        "tools/kds-sync/build_gcworld_identity_machine_priority_strata.py",
+        "tools/kds-sync/build_gcworld_identity_three_lane_compression.py"
       ],
       "sensitive_paths": []
     },

@@ -1,0 +1,38 @@
+id: F-015
+name: gcworld-organization-readonly-vertical-slice
+project: studio
+status: active
+goal: 基于版本化KDS快照交付GCWORLD组织资产总览、资产详情、关系图谱和项目运行事项只读闭环
+owner: Studio
+priority: P0
+scope:
+  in:
+    - Studio内新增GCWORLD组织资产总览、资产详情与关系图谱只读路由
+    - 使用已密封的938项候选分层清单生成版本化前端快照
+    - 候选、正式与模拟状态的可见隔离及中文解释
+    - 搜索、主体类型筛选、资产选择与来源摘要查看
+    - 从KDS不可变HEAD读取项目注册表并展示项目状态、负责人、截止日期、下一行动与最近会议
+  out:
+    - KDS文件、数据库、API或业务系统写入
+    - 身份自动合并、正式事实生成、事实提升或权限授予
+    - 生产部署、对外发布、提交、推送或状态提升
+acceptance:
+  - 用户可以搜索和筛选938项组织资产候选
+  - 用户可以查看资产画像、状态、来源摘要和待确认原因
+  - 用户可以查看不冒充正式业务关系的可追溯候选关系图
+  - 用户可以在同一页面查找28项项目登记并核对下一行动，且登记状态不冒充当前事实
+  - 单元测试、构建、浏览器任务流和Studio Harness门禁形成证据
+loop:
+  current_step: evaluate
+  iteration: 8
+evidence:
+  tests: pass
+  build: pass
+  screenshots: pass
+  api: waived
+  summary: pass
+blockers:
+  - Studio全仓回归在本轮未修改的SessionObjectPanel测试中存在17项既有失败
+  - Studio本地LOOP门禁仍引用LR-918的无源码变更豁免，与当前源码变更不匹配
+created_at: "2026-09-04T04:13:45+00:00"
+updated_at: "2026-09-04T14:21:08+00:00"
