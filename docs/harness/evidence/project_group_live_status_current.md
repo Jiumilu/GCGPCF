@@ -18,45 +18,45 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-09-05 00:01:53 +0800
+generated_at: 2026-09-06 22:11:35 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-09-05T00:01:53.361293+08:00`
+- generated_at: `2026-09-06T22:11:35.491111+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `14`
+- pass_repo_count: `13`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS`
+- observed_dirty: `GlobalCloud Brain, GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS`
 - observed_ahead: `none`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- stable_dirty: `GlobalCloud Brain, GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
 - stable_ahead: `none`
 - volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCloud KDS`
-- review_boundary: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- sensitive_repos: `GlobalCloud Studio, GlobalCloud KDS`
+- review_boundary: `GlobalCloud Brain, GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
 
 ## Repo details
 
 | Repo | dirty_count | ahead | behind | sensitive_paths |
 |---|---:|---:|---:|---|
 | `GlobalCloud AAAS` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
+| `GlobalCloud Brain` | 41 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 11 | 0 | 0 | `none` |
-| `GlobalCoud GPCF` | 27 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 152 | 0 | 0 | `tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
+| `GlobalCoud GPCF` | 11 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 318 | 0 | 0 | `"PVA\344\273\267\345\200\274\350\201\224\347\233\237/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\344\270\226\347\225\214\350\265\204\344\272\247/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\345\267\245\344\270\232\347\273\277\351\223\276/\344\274\232\350\256\256\347\272\252\350\246\201/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "entities/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md"` |
+| `GlobalCloud KDS` | 320 | 0 | 0 | `"PVA\344\273\267\345\200\274\350\201\224\347\233\237/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\344\270\226\347\225\214\350\265\204\344\272\247/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "\345\267\245\344\270\232\347\273\277\351\223\276/\344\274\232\350\256\256\347\272\252\350\246\201/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md", "entities/\344\274\232\350\256\256\346\212\225\345\275\261/2026-08-04_\344\272\221\344\270\232\345\212\241\347\273\223\347\256\227\345\217\212token\344\270\232\345\212\241\347\233\270\345\205\263\350\256\250\350\256\272_KDS\345\210\206\346\236\220.md"` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |
