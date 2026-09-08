@@ -1,39 +1,31 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-06T22:11:35.491111+08:00",
+  "generated_at": "2026-09-08T11:31:00.442832+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
-    "GlobalCloud Brain",
     "GlobalCloud Studio",
-    "GlobalCoud GPCF",
     "GlobalCloud KDS"
   ],
   "observed_ahead": [],
   "stable_dirty": [
-    "GlobalCloud Brain",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud Studio"
   ],
   "stable_ahead": [],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
-  ],
+  "volatile_dirty": [],
   "review_boundary": [
-    "GlobalCloud Brain",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
-    "GlobalCoud GPCF"
+    "GlobalCloud Studio"
   ],
   "sensitive_repos": [
     "GlobalCloud Studio",
     "GlobalCloud KDS"
   ],
-  "pass_repo_count": 13,
+  "pass_repo_count": 15,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-09-05T22:11:52.717041+08:00",
+  "previous_generated_at": "2026-09-07T08:26:06.737695+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -43,52 +35,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud Brain": {
-      "dirty_count": 41,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "openspec/changes/space-kds-chat-task-flow/design.md",
-        "openspec/changes/space-kds-chat-task-flow/proposal.md",
-        "openspec/changes/space-kds-chat-task-flow/specs/space-kds-chat-task-flow/spec.md",
-        "openspec/changes/space-kds-chat-task-flow/tasks.md",
-        "scripts/check_brain_kds_read_model_alignment.mjs",
-        "src/app/App.test.tsx",
-        "src/app/App.tsx",
-        "src/app/appChatContextGuards.ts",
-        "src/app/components/ChatPanel.test.tsx",
-        "src/app/components/ChatPanel.tsx",
-        "src/app/components/CommandPalette.test.tsx",
-        "src/app/components/CommandPalette.tsx",
-        "src/app/components/GraphSchemaCanvas.test.tsx",
-        "src/app/components/GraphSchemaCanvas.tsx",
-        "src/app/components/KnowledgeGraph.test.tsx",
-        "src/app/components/KnowledgeGraph.tsx",
-        "src/app/components/KnowledgeTree.test.tsx",
-        "src/app/components/KnowledgeTree.tsx",
-        "src/app/components/PromptAuthorizationComposer.test.tsx",
-        "src/app/components/PromptAuthorizationComposer.tsx",
-        "src/app/components/SearchPanel.test.tsx",
-        "src/app/components/SearchPanel.tsx",
-        "src/app/components/SettingsPanel.test.tsx",
-        "src/app/components/SettingsPanel.tsx",
-        "src/app/components/SettingsWritebackSection.test.tsx",
-        "src/app/components/SettingsWritebackSection.tsx",
-        "src/app/components/WikiPreview.test.tsx",
-        "src/app/components/WikiPreview.tsx",
-        "src/app/components/chatPanelGuards.ts",
-        "src/app/components/commandPaletteGuards.ts",
-        "src/app/components/knowledgeGraphGuards.ts",
-        "src/app/components/knowledgeTreeGuards.ts",
-        "src/app/components/searchPanelGuards.ts",
-        "src/app/components/wikiPreviewGuards.ts",
-        "src/app/hooks/useKdsApi.test.ts",
-        "src/app/hooks/useKdsApi.ts",
-        "src/app/hooks/useLlmApi.test.ts",
-        "src/app/hooks/useLlmApi.ts",
-        "src/app/types/brain.ts",
-        "src/components/SpaceSelector.test.tsx",
-        "src/components/SpaceSelector.tsx"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
@@ -283,22 +233,10 @@
       ]
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 11,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/api.txt",
-        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/screenshots.txt",
-        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/summary.md",
-        "features/active/F-015-gcworld-organization-readonly-vertical-slice/feature.yaml",
-        "features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md",
-        "openspec/changes/gcworld-workbench-ui-foundation/proposal.md",
-        "openspec/changes/gcworld-workbench-ui-foundation/tasks.md",
-        "runtime/queue.json",
-        "runtime/state.json",
-        ".harness/opsx.lock",
-        "features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/admin-trial-runtime-20260905.md"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {

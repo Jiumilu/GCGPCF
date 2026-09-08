@@ -18,41 +18,41 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-09-06 22:11:35 +0800
+generated_at: 2026-09-08 11:31:00 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-09-06T22:11:35.491111+08:00`
+- generated_at: `2026-09-08T11:31:00.442832+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `13`
+- pass_repo_count: `15`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Brain, GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS`
+- observed_dirty: `GlobalCloud Studio, GlobalCloud KDS`
 - observed_ahead: `none`
-- stable_dirty: `GlobalCloud Brain, GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud Studio`
 - stable_ahead: `none`
-- volatile_dirty: `GlobalCoud GPCF`
+- volatile_dirty: `none`
 - sensitive_repos: `GlobalCloud Studio, GlobalCloud KDS`
-- review_boundary: `GlobalCloud Brain, GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- review_boundary: `GlobalCloud KDS, GlobalCloud Studio`
 
 ## Repo details
 
 | Repo | dirty_count | ahead | behind | sensitive_paths |
 |---|---:|---:|---:|---|
 | `GlobalCloud AAAS` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Brain` | 41 | 0 | 0 | `none` |
+| `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 152 | 0 | 0 | `tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
-| `GlobalCoud GPCF` | 11 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
