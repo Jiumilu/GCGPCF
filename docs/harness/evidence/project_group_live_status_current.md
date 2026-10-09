@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-08 22:12:25 +0800
+generated_at: 2026-10-09 23:58:45 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-08T22:12:25.993171+08:00`
+- generated_at: `2026-10-09T23:58:45.587881+08:00`
 - freshness_ok: `true`
 - project_count: `17`
 - pass_repo_count: `15`
@@ -56,7 +56,7 @@ generated_at: 2026-10-08 22:12:25 +0800
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 17 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 9 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |
