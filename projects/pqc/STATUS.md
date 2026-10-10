@@ -2,15 +2,15 @@
 doc_id: GPCF-PQC-STATUS-20261010
 title: PQC 状态
 project: GPCF
-related_projects: [PQC, GPCF, PVAOS, KDS]
+related_projects: [GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: 老卢
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/PQC/projects/pqc/STATUS.md
+kds_path: 开发/91-治理与验收/projects/pqc/STATUS.md
 source_path: projects/pqc/STATUS.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []

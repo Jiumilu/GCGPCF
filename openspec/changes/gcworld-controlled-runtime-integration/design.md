@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-041
-title: GCWORLD受控运行时集成设计
+title: design
 project: GPCF
-related_projects: [XWAIL, WAES, KWE, MMC, KDS, GFIS]
+related_projects: [GPCF, WAES, MMC]
 domain: openspec
 status: draft
 version: v1.0

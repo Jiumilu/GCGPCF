@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-F5BD85B415 | gcworld-runtime-boundary | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md | KDS | draft |
-| GPCF-DOC-E9F567EAFF | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | KDS | draft |
+| GPCF-DOC-GCWORLD-007 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | KDS | draft |

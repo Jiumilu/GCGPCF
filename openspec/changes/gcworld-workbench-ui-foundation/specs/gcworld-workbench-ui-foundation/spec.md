@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-046
-title: GCWORLD工作台界面基础能力规格
-project: GPCF
-related_projects: [Studio, Brain, KDS, WAS, WAES, XWAIL]
+title: spec
+project: KDS
+related_projects: [KDS, PVAOS, WAES, Brain, Studio]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md
 source_path: openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24
@@ -66,4 +66,3 @@ Harness SHALL 分别记录静态设计、固定数据原型、只读集成、权
 #### Scenario: 规划文档通过严格校验
 - **WHEN** 本变更的规划产物全部通过OpenSpec校验但产品授权尚未签发
 - **THEN** 系统不修改Studio、Brain或其他产品仓库，也不启动界面实现
-

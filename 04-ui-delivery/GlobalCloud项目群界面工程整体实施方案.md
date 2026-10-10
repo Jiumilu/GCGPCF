@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4E2A91B7C6
 title: GlobalCloud项目群界面工程整体实施方案
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
 domain: ui-delivery
 status: controlled
 version: v1.0

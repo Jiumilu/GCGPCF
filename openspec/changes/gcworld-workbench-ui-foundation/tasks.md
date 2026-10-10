@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-036
-title: GCWORLD工作台界面基础任务清单
-project: GPCF
-related_projects: [Studio, Brain, KDS, WAS, WAES, XWAIL]
+title: tasks
+project: KDS
+related_projects: [PVAOS, WAES, KDS, MMC, GPCF, Studio]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-workbench-ui-foundation/tasks.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/tasks.md
 source_path: openspec/changes/gcworld-workbench-ui-foundation/tasks.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24

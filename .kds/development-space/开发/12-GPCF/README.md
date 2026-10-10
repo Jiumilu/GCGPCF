@@ -1,6 +1,6 @@
 # GPCF 开发文档空间
 
-生成日期：2026-08-22
+生成日期：2026-10-10
 
 用途：KDS `开发` 空间中 `GPCF` 项目的受控文档入口。
 
@@ -1875,7 +1875,9 @@
 | GPCF-DOC-00463F9971 | Headroom LCX 许可证与 OSS 合规 | loop/context/headroom/docs/license.md | controlled |
 | GPCF-OS-OPEN-SPEC-COVERAGE-DESIGN-20260712 | design | openspec/changes/enable-project-group-openspec-coverage/design.md | draft |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | spec | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | draft |
-| GPCF-DOC-7608F9E00C | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | draft |
+| GPCF-DOC-GCWORLD-041 | design | openspec/changes/gcworld-controlled-runtime-integration/design.md | draft |
+| GPCF-DOC-GCWORLD-047 | spec | openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/spec.md | draft |
+| GPCF-DOC-GCWORLD-019 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/spec.md | draft |
 | GPCF-DOC-95C82DA16B | integrate-gke001-openspec-codegraph | openspec/changes/integrate-gke001-openspec-codegraph/README.md | draft |
 | GPCF-DOC-82B83BA05C | design | openspec/changes/integrate-gke001-openspec-codegraph/design.md | draft |
 | GPCF-DOC-42FE6A63EF | proposal | openspec/changes/integrate-gke001-openspec-codegraph/proposal.md | draft |
@@ -1891,6 +1893,7 @@
 | GPCF-DOC-18A2F48E80 | spec | openspec/changes/kds-production-hardening/specs/session-auth/spec.md | draft |
 | GPCF-DOC-D067D700F1 | spec | openspec/changes/kds-production-hardening/specs/unified-permission-middleware/spec.md | draft |
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | tasks | openspec/changes/register-globalcloud-icp/tasks.md | draft |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | spec | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | draft |
 | GPCF-DOC-4C34AF960B | Loop CodeGraph Goal Optimization Record Template | templates/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_RECORD_TEMPLATE.md | controlled |
 | GPCF-DOC-0F4B8E6C2A | LOOP 跨会话交接模板 | templates/LOOP_CROSS_SESSION_HANDOFF_TEMPLATE.md | controlled |
 | GPCF-DOC-LOOP-DELIVERY-ROUND-TEMPLATE | LOOP Delivery Round Template | templates/LOOP_DELIVERY_ROUND_TEMPLATE.md | controlled |

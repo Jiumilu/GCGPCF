@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-017
-title: GCWORLD 世界运行时规格
-project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, KWE, MMC, GFIS, Brain]
+title: spec
+project: KDS
+related_projects: [PVAOS, WAES, KDS]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-22

@@ -2,8 +2,18 @@
 doc_id: GPCF-F-015-EVIDENCE-GCWORLD-ORGANIZATION-READONLY-MVP-20260904
 title: F-015 GCWORLD组织资产与项目运行只读纵切交付回执
 project: GPCF
-status: partial
-date: 2026-09-04
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+domain: governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md
+source_path: features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-10
+supersedes: []
+superseded_by: []
 ---
 
 # F-015 GCWORLD组织资产与项目运行只读纵切交付回执

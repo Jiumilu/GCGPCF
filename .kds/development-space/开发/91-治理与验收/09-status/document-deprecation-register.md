@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/document-deprecation-register.md
 source_path: 09-status/document-deprecation-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
 # 文档过期与归档台账
 
-日期：2026-08-22
+日期：2026-10-10
 
 用途：登记历史、过期、被替代和运行类文档，避免误用为当前项目完成状态或当前业务口径。
 
@@ -57,6 +57,16 @@ superseded_by: []
 | GPCF-DOC-268058F0F6 | UI/UX 技能 | .codex/skills/ui-ux-pro-max/README.md | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/README.md |
 | GPCF-DOC-8025BD5C10 | ui-ux-pro-max | .codex/skills/ui-ux-pro-max/SKILL.md | operational_controlled | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md |
 | GPCF-DOC-D1E79591EA | Harness 运行证据 | .harness/README.md | archive | 开发/92-证据与会话归档/.harness/README.md |
+| GPCF-DOC-3889EF2277 | 20260822-235654-gcworld-evidence-twin-foundation | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md |
+| GPCF-DOC-GCWORLD-025 | GCWORLD证据数字孪生底座验收矩阵 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md |
+| GPCF-DOC-BE1716674D | evidence | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md |
+| GPCF-DOC-A593265369 | logs | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md |
+| GPCF-DOC-F0685BF39E | patches | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md |
+| GPCF-DOC-9A0E4C7895 | 20260824-092905-gcworld-integration-proposals | .harness/runs/20260824-092905-gcworld-integration-proposals/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/README.md |
+| GPCF-DOC-22D16F73A7 | evidence | .harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md |
+| GPCF-DOC-2F8842ACA3 | 20260824-094555-gcworld-kds-integration-admission | .harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md |
+| GPCF-DOC-D8331A937B | 20260825-004215-gcworld-kds-integration-admission-refresh | .harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md |
+| GPCF-DOC-AB1A5D2515 | 20261010-075917-spaceai-studio-multiplatform-refactor | .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md | archive | 开发/92-证据与会话归档/.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md |
 | GPCF-DOC-32ED2727B9 | Harness 运行记录 | .harness/runs/README.md | archive | 开发/92-证据与会话归档/.harness/runs/README.md |
 | GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md |
 | GPCF-DOC-9AF8C291EB | acceptance-matrix | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | archive | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md |

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：KDS, GPCF
+关联项目：KDS
 
 受控规则：
 
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-860812960B | gcworld-role-agent-governance | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md | KDS | draft |
-| GPCF-DOC-7608F9E00C | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | GPCF | draft |
+| GPCF-DOC-GCWORLD-006 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | KDS | draft |

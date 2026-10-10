@@ -313,3 +313,198 @@ superseded_by: []
    - 验证只证明本机脱敏夹具；真实试点、接收台账、保留策略、MMC/KDS 配置和部署仍须独立授权。
 5. 是否可以提交？
    - 可以提交 Studio 的证据与任务状态；不推送、不部署，不执行任何真实数据、凭证、配置、权限或台账写入。
+
+### Iteration 13
+
+1. 这轮做什么？
+   - Planner 执行 runtime 调度。
+2. 改了什么？
+   - Planner -> Builder；status=implement
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 14
+
+1. 这轮做什么？
+   - Builder 执行 runtime 调度。
+2. 改了什么？
+   - Builder -> Evaluator；status=evaluate
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 15
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 16
+
+1. 这轮做什么？
+   - Evaluator 执行 runtime 调度。
+2. 改了什么？
+   - Evaluator -> Recorder；status=commit
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 17
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 18
+
+1. 这轮做什么？
+   - Recorder 执行 runtime 调度。
+2. 改了什么？
+   - Recorder -> Recorder；status=commit
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 19
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 20
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 21
+
+1. 这轮做什么？
+   - Evaluator 执行 runtime 调度。
+2. 改了什么？
+   - Evaluator -> Recorder；status=commit
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 22
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 23
+
+1. 这轮做什么？
+   - Evaluator 执行 runtime 调度。
+2. 改了什么？
+   - Evaluator -> Recorder；status=commit
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 24
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 25
+
+1. 这轮做什么？
+   - Recorder 执行 runtime 调度。
+2. 改了什么？
+   - Recorder -> Recorder；status=commit
+3. 怎么验证？
+   - runtime/queue.json 与 runtime/state.json。
+4. 发现什么问题？
+   - 未发现调度阻塞项。
+5. 是否可以提交？
+   - 否，commit/push 仍需明确授权。
+
+### Iteration 26
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。
+
+### Iteration 27
+
+1. 这轮做什么？
+   - 采集本地可回放证据。
+2. 改了什么？
+   - 更新 evidence 文件和 feature.yaml 证据状态。
+3. 怎么验证？
+   - 运行工作区 validator、py_compile、git diff --check 和范围证据门禁。
+4. 发现什么问题？
+   - Evidence checks passed；保留治理阻塞：real-data pilot, authoritative receiving ledger owner, retention policy, and KDS/MMC runtime configuration boundary remain outside the local fixture authorization
+5. 是否可以提交？
+   - 否。

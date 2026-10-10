@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-769D47FC63 | gcworld-coverage-assessment | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md | KDS | draft |
-| GPCF-DOC-8F0920DB54 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | KDS | draft |
+| GPCF-DOC-GCWORLD-005 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | KDS | draft |

@@ -2,17 +2,15 @@
 doc_id: GPCF-SPACEAI-STATUS-20261010
 title: SpaceAI 状态
 project: GPCF
-related_projects:
-- SpaceAI
-- GPCF
+related_projects: [GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: 老卢
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/SpaceAI/projects/spaceai/STATUS.md
+kds_path: 开发/91-治理与验收/projects/spaceai/STATUS.md
 source_path: projects/spaceai/STATUS.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: '2026-10-10'
 supersedes: []
 superseded_by: []

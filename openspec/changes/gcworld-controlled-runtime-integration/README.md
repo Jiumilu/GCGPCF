@@ -1,29 +1,45 @@
 ---
-doc_id: GPCF-DOC-GCWORLD-039
-title: GCWORLD受控运行时集成提案
-project: GPCF
-related_projects: [XWAIL, WAES, KWE, MMC, KDS, GFIS]
+doc_id: GPCF-DOC-07DC110521
+title: gcworld-controlled-runtime-integration
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/README.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/README.md
 source_path: openspec/changes/gcworld-controlled-runtime-integration/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-24
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# GCWORLD受控运行时集成提案
+# gcworld-controlled-runtime-integration
 
-本目录仅保存GCWORLD受控运行时集成的规划产物。当前不授权启动服务、调用外部连接器、执行真实动作或写入业务系统。
+目录：`openspec/changes/gcworld-controlled-runtime-integration`
 
-| 文档 | 用途 |
-| --- | --- |
-| `proposal.md` | 运行目标、能力和边界 |
-| `design.md` | 服务协作、裁决、回执与故障降级设计 |
-| `tasks.md` | 获得独立授权后方可执行的任务清单 |
-| `specs/` | 可验证的受控运行行为要求 |
+用途：保存本目录下的受控文档、证据或规格材料。
 
+KDS 空间：`开发`
+
+关联项目：KDS, GPCF
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-07DC110521 | gcworld-controlled-runtime-integration | openspec/changes/gcworld-controlled-runtime-integration/README.md | KDS | draft |
+| GPCF-DOC-GCWORLD-041 | design | openspec/changes/gcworld-controlled-runtime-integration/design.md | GPCF | draft |
+| GPCF-DOC-GCWORLD-040 | proposal | openspec/changes/gcworld-controlled-runtime-integration/proposal.md | KDS | draft |
+| GPCF-DOC-F303786957 | specs | openspec/changes/gcworld-controlled-runtime-integration/specs/README.md | KDS | draft |
+| GPCF-DOC-F7A617A19B | gcworld-controlled-runtime-integration | openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/README.md | KDS | draft |
+| GPCF-DOC-GCWORLD-047 | spec | openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/spec.md | GPCF | draft |
+| GPCF-DOC-GCWORLD-042 | tasks | openspec/changes/gcworld-controlled-runtime-integration/tasks.md | KDS | draft |

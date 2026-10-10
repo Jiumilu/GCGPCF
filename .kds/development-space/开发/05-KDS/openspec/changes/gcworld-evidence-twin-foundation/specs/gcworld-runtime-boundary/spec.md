@@ -1,8 +1,8 @@
 ---
-doc_id: GPCF-DOC-E9F567EAFF
+doc_id: GPCF-DOC-GCWORLD-007
 title: spec
 project: KDS
-related_projects: [WAES, KDS, MMC]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, MMC]
 domain: openspec
 status: draft
 version: v1.0
@@ -18,23 +18,23 @@ superseded_by: []
 
 ## ADDED Requirements
 
-### Requirement: GCWORLD system boundaries
-The system SHALL preserve distinct responsibilities: KDS for evidence and facts; WAS-Ontology for world semantics; GCWORLD for derived world instances and workbench views; XWAIL for agent cognition and coordination; WAES for rules, permissions, and gates; MMC for capability connections; business systems for real-world execution; and LOOP/Harness for result evidence and validation. GCWORLD MUST NOT bypass a responsible system's authorization boundary.
+### Requirement: GCWORLD 系统边界
+系统 SHALL 保持以下职责分离：WAS-Ontology 负责世界语义；KDS 负责来源、主张、事实、证据和事实生命周期；GCWORLD 负责世界投影、运行上下文与工作台视图；XWAIL 负责智能体认知和协同；WAES 负责规则、风险、权限和状态门禁裁决；KWE 负责编排工单、确认包和人工流转；MMC 负责模型、API、MCP 和连接器能力；GFIS、GPC、ERP 等业务系统负责现实执行和业务主账；Brain/PKC 提供知识与个人团队入口；LOOP/Harness 负责证据、验收、审计和持续治理。GCWORLD MUST NOT 绕过或复制任何责任系统的权威职责。
 
-#### Scenario: An agent proposes a contract action
-- **WHEN** an agent proposes a contract-related action in GCWORLD
-- **THEN** GCWORLD records the proposal and required authorization but does not execute or write the action into a business system without the responsible system's gate
+#### Scenario: 智能体提出合同相关动作
+- **WHEN** 智能体在 GCWORLD 中提出合同相关动作
+- **THEN** GCWORLD 记录提案和所需授权；在责任系统门禁未通过前，不执行动作，也不写入业务系统
 
-### Requirement: First-stage read-only workbench centers
-The system SHALL define first-stage read-only views for world overview, organization assets, relationship network, project world, time and events, agent registry, action and collaboration, simulation laboratory, and governance and audit. Each view MUST expose evidence status and world-state type for displayed derived records.
+### Requirement: 十二个受控工作中心
+系统 SHALL 定义世界总览、组织资产、关系网络、项目世界、时间与事件、智能体、行动与协同、权限与身份、模拟实验室、事实治理、治理与审计、开发与运维十二个工作中心。第一阶段以只读视图为主，每个视图 MUST 显示派生记录的证据状态、世界状态类型、版本和权限裁剪依据。
 
-#### Scenario: A user opens a relationship network view
-- **WHEN** a user opens a relationship between two organization assets
-- **THEN** the view displays relation type, direction, valid-time range, evidence references, confidence, conflict status, visibility scope, and allowed agent-use scope
+#### Scenario: 用户打开关系网络视图
+- **WHEN** 用户查看两个组织资产之间的关系
+- **THEN** 视图显示关系类型、方向、有效时间范围、证据引用、可信度、冲突状态、可见范围和允许智能体使用的范围
 
-### Requirement: Staged controlled progression
-The system SHALL sequence delivery as KDS census, world-kernel contract, read-only workbench, internal assist-mode agents, project simulation, and separately authorized real-world execution. Completion of an earlier stage MUST NOT authorize the next stage automatically.
+### Requirement: 分阶段受控演进
+系统 SHALL 按 P0 架构冻结与契约、P1 组织资产普查、P2 只读世界运行时、P3 内部辅助智能体、P4 GCWORLD-AUTH、P5 模拟实验室、P6 受控真实执行、P7 有限自治与扩域的顺序交付。每一阶段 MUST 具有独立退出条件，前一阶段完成 MUST NOT 自动授权下一阶段。
 
-#### Scenario: Census assessment completes with exceptions
-- **WHEN** a census assessment completes while unresolved references remain
-- **THEN** the result is eligible for review as a partial assessment and does not authorize a write-enabled workbench or agent execution
+#### Scenario: 普查评估完成但仍有例外
+- **WHEN** 普查评估完成时仍存在未决引用
+- **THEN** 结果仅能以部分完成评估进入复核，不授权可写工作台或智能体执行

@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-042
-title: GCWORLD受控运行时集成任务清单
-project: GPCF
-related_projects: [XWAIL, WAES, KWE, MMC, KDS, GFIS]
+title: tasks
+project: KDS
+related_projects: [GFIS, WAES, KDS, MMC, GPCF]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/tasks.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/tasks.md
 source_path: openspec/changes/gcworld-controlled-runtime-integration/tasks.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/README.md
 source_path: .harness/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -40,6 +40,16 @@ KDS 路径前缀：`开发/92-证据与会话归档/.harness/`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-D1E79591EA | Harness 运行证据 | .harness/README.md | WAES | archive |
+| GPCF-DOC-3889EF2277 | 20260822-235654-gcworld-evidence-twin-foundation | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | WAES | archive |
+| GPCF-DOC-GCWORLD-025 | GCWORLD证据数字孪生底座验收矩阵 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | WAES | archive |
+| GPCF-DOC-BE1716674D | evidence | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | WAES | archive |
+| GPCF-DOC-A593265369 | logs | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | WAES | archive |
+| GPCF-DOC-F0685BF39E | patches | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | WAES | archive |
+| GPCF-DOC-9A0E4C7895 | 20260824-092905-gcworld-integration-proposals | .harness/runs/20260824-092905-gcworld-integration-proposals/README.md | WAES | archive |
+| GPCF-DOC-22D16F73A7 | evidence | .harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md | WAES | archive |
+| GPCF-DOC-2F8842ACA3 | 20260824-094555-gcworld-kds-integration-admission | .harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md | WAES | archive |
+| GPCF-DOC-D8331A937B | 20260825-004215-gcworld-kds-integration-admission-refresh | .harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md | WAES | archive |
+| GPCF-DOC-AB1A5D2515 | 20261010-075917-spaceai-studio-multiplatform-refactor | .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md | WAES | archive |
 | GPCF-DOC-32ED2727B9 | Harness 运行记录 | .harness/runs/README.md | WAES | archive |
 | GPCF-DOC-C311AFC61A | gbrain-admin-console-v1-20260610-201442 | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | WAES | archive |
 | GPCF-DOC-9AF8C291EB | acceptance-matrix | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | WAES | archive |

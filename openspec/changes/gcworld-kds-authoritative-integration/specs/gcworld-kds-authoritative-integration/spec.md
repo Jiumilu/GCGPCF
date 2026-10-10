@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-045
-title: GCWORLD与KDS权威事实集成能力规格
-project: GPCF
-related_projects: [KDS, WAS, WAES, XWAIL]
+title: spec
+project: KDS
+related_projects: [WAES, KDS]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md
 source_path: openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24
@@ -59,4 +59,3 @@ KDS责任系统执行受控写入后 SHALL 返回不可变回执，记录实际�
 #### Scenario: OpenSpec规划产物全部完成
 - **WHEN** 本变更的提案、设计、规格和任务均通过结构校验但独立授权尚未签发
 - **THEN** 系统只记录规划就绪，不开始KDS集成实现，也不改变F‑013或GCWORLD状态
-

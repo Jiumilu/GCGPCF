@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4E2A91B7C6
 title: GlobalCloud项目群界面工程整体实施方案
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -131,6 +131,9 @@ superseded_by: []
 | SOP | 系统配置与治理类 | 专业工作台类 | 场景方案、流程约束与操作规程支撑界面 |
 | WAS | 系统配置与治理类 | 分析决策类 | 语义契约、资产语义骨架、治理支撑源 |
 | ICP | 门户与展示类 | 系统配置与治理类 | 对外备案、资质与项目信息展示入口 |
+| SpaceAI | 专业工作台类 | 高风险页面类 | 既有 Windows 桌面地图与视频设备工程；独立纳管，真实运行待验证 |
+| SpaceAIStudio | 专业工作台类 | 高风险页面类 | Windows 安防监控桌面客户端；设备与报警操作需真实验证，当前 partial |
+| PQC | 业务操作类 | 系统配置与治理类 | 包装成本、报价、审批与订单回款；客户报价视图必须脱敏 |
 
 ## 6. 统一与差异边界
 

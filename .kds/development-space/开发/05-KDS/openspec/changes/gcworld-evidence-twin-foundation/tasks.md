@@ -1,8 +1,8 @@
 ---
-doc_id: GPCF-DOC-EE19C93D00
+doc_id: GPCF-DOC-GCWORLD-003
 title: tasks
 project: KDS
-related_projects: [WAES, KDS, MMC]
+related_projects: [PVAOS, WAES, KDS, MMC, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -11,43 +11,71 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/tasks.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/tasks.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-08-23
 supersedes: []
 superseded_by: []
 ---
 
-## 1. Governance and admission
+## 1. 治理与准入
 
-- [ ] 1.1 Bind the approved GCWORLD change to F-013 journal and evidence records without changing F-013 status or scope ceiling.
-- [ ] 1.2 Obtain an approved, read-only KDS source manifest, data-classification boundary, and human owner for identity-resolution disputes.
-- [ ] 1.3 Verify the KDS worktree and GKE-001 read-admission constraints required for the approved manifest; record blockers without modifying KDS.
-- [ ] 1.4 Validate GKE-001 Program and CodeGraph bindings and declare any changed relationship before implementation begins.
+- [x] 1.1 将经批准的 GCWORLD 变更绑定到 F-013 日志与证据记录，同时保持 F-013 状态和范围上限不变。
+- [x] 1.2 取得经批准的 KDS 只读来源清单、数据分级边界，以及负责身份归一争议的人工责任人。
+- [x] 1.3 核验批准清单所需的 KDS 工作树与 GKE-001 读取准入约束；仅记录阻塞，不修改 KDS。
+- [x] 1.4 在实施前验证 GKE-001 项目群与 CodeGraph 绑定，并声明所有发生变化的关系。
 
-## 2. Evidence-twin contract
+## 2. 证据数字孪生契约
 
-- [ ] 2.1 Define machine-readable GCWORLD asset, alias, relationship, evidence, and state-plane schemas in the authorized target repository.
-- [ ] 2.2 Add deterministic validation for stable identifiers, evidence references, four-state separation, and temporal relationship ranges.
-- [ ] 2.3 Add positive and negative fixtures for unresolved identities, role changes, and simulation-to-fact isolation.
-- [ ] 2.4 Produce the GCWORLD overall architecture and capability plan with KDS, WAS-Ontology, XWAIL, WAES, MMC, business-system, LOOP, and Harness boundaries.
+- [x] 2.1 在获准的目标仓库中定义机器可读的 GCWORLD 资产、别名、关系、证据和世界状态模型。
+- [x] 2.2 为稳定标识、证据引用、四类状态隔离和关系有效时间范围增加确定性校验。
+- [x] 2.3 为未决身份、角色变化以及模拟与事实隔离增加正向和负向样例。
+- [x] 2.4 形成《GCWORLD 总体架构与能力规划》，明确 KDS、WAS-Ontology、XWAIL、WAES、MMC、业务系统、LOOP 和 Harness 的边界。
 
-## 3. Read-only coverage assessment
+## 3. 只读覆盖评估
 
-- [ ] 3.1 Implement a deterministic reader for the approved source manifest that performs no KDS, MMC, or business-system write.
-- [ ] 3.2 Generate a source-to-asset ledger and exception queue with source hashes, identity disposition, and relationship evidence links.
-- [ ] 3.3 Generate the coverage report with resolved, unresolved, duplicate-candidate, excluded, and data-quality metrics.
-- [ ] 3.4 Add regression tests proving deterministic output and zero source-file modifications.
-- [ ] 3.5 Produce the KDS full organization-asset census and world-initialization specification, including source closure and exception disposition criteria.
+- [x] 3.1 为经批准的来源清单实现确定性读取器，确保不写入 KDS、MMC 或任何业务系统。
+- [x] 3.2 生成来源到资产的映射台账和例外队列，包含来源哈希、身份处置状态和关系证据链接。
+- [x] 3.3 生成覆盖评估报告，包含已归一、未决、重复候选、排除项和数据质量指标。
+- [x] 3.4 增加回归测试，证明输出具有确定性且来源文件修改数为零。
+- [x] 3.5 形成《KDS 全量组织资产普查与世界初始化规范》，包含来源闭环和例外处置标准。
 
-## 4. Role-agent governance
+## 4. 职能智能体治理
 
-- [ ] 4.1 Define the role-agent registration and action-envelope schemas, including owner, scope, risk, authorization, confirmation, and prohibition fields.
-- [ ] 4.2 Implement deny-by-default validation for external, financial, contractual, identity, permission, and business-state actions.
-- [ ] 4.3 Add execution-ledger fixtures for recommendation, draft, approved, rejected, failed, and blocked outcomes.
-- [ ] 4.4 Add fixtures and validation for mirror, assist, delegated, and autonomous modes.
+- [x] 4.1 定义职能智能体注册和行动信封模型，包含责任人、范围、风险、授权、确认和禁止项字段。
+- [x] 4.2 为对外、资金、合同、身份、权限和业务状态动作实现默认禁止校验。
+- [x] 4.3 为建议、草稿、批准、拒绝、失败和阻断结果增加执行账本样例。
+- [x] 4.4 为镜像、辅助、委托和自治模式增加样例及校验。
 
-## 5. Verification and handoff
+## 5. 世界原生权限与责任
 
-- [ ] 5.1 Run schema, unit, determinism, and no-write regression checks; record non-applicable build/API evidence as waived with reasons.
-- [ ] 5.2 Run OpenSpec strict validation and the project-group document gate; resolve any new document-control debt.
-- [ ] 5.3 Submit evidence for independent Harness review; do not claim acceptance, integration, production readiness, or full coverage.
-- [ ] 5.4 Prepare a separately authorized follow-on proposal for KDS/UI/runtime integration only after the read-only coverage report is reviewed.
+- [x] 5.1 定义身份、角色定义、角色任用、授权契约、委托链、运行裁决和执行回执模型。
+- [x] 5.2 实现基于版本化世界快照的确定性裁决，以及交集原则、默认拒绝和提交前再次验证。
+- [x] 5.3 实现附义务允许、职责分离、紧急授权、级联撤销和派生数据限制传播规则。
+- [x] 5.4 增加角色撤销、同一控制主体自我审批、智能体越权和系统降级运行的正负向样例。
+
+## 6. 世界运行时
+
+- [x] 6.1 定义世界注册、身份解析、世界投影、上下文构造、事件、行动、智能体、模拟、治理适配和查询视图服务契约。
+- [x] 6.2 为观察至学习的标准闭环建立状态机，验证裁决、确认、执行、证据和状态提升不能被跳过。
+- [x] 6.3 定义任务、承诺、行动回执和补偿模型，并增加部分失败、重复命令和补偿失败样例。
+- [x] 6.4 为模拟分支、基线快照、假设集、评估结果和事实提升候选增加隔离与提升校验。
+
+## 7. GCWORLD 工作台
+
+- [x] 7.1 形成十二个工作中心的信息架构与统一导航，确保各中心复用同一资产标识、世界快照和权限上下文。
+- [x] 7.2 定义单一资产档案，覆盖事实、历史、别名、关系、角色、权限、任务、行动、结果、反馈、证据和冲突。
+- [x] 7.3 为字段、段落、图、搜索、时间线、聚合、导出和智能体回答实现一致的权限裁剪测试。
+- [x] 7.4 定义多租户协作空间和显式共享契约，并验证撤销后不可继续访问或通过统计推断受限信息。
+
+## 8. 工程与治理底座
+
+- [x] 8.1 定义来源、候选、KDS 事实、世界投影、运行状态、模拟分支、证据与审计七层数据契约和提升规则。
+- [x] 8.2 建立投影重建与差异检测验证，证明图、索引、缓存等派生存储不会成为第二事实账本。
+- [x] 8.3 定义统一标识、领域接口和可靠事件契约，验证幂等、去重、重试、死信和补偿语义。
+- [x] 8.4 定义秘密隔离、租户隔离、运行身份、可观测指标及 P0—P7 阶段退出门禁。
+
+## 9. 验证与交接
+
+- [x] 9.1 执行模型、单元、确定性和零写入回归检查；对不适用的构建或 API 证据标记豁免并说明原因。
+- [x] 9.2 执行 OpenSpec 严格校验和项目群文档门禁，消除本变更新增的文控债务。
+- [x] 9.3 将证据提交独立 Harness 复核；不得宣称已验收、已集成、生产就绪或全量覆盖。
+- [x] 9.4 仅在只读覆盖评估报告完成复核后，为 KDS、界面和运行时集成准备需独立授权的后续提案。

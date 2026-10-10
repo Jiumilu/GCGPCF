@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010
 title: proposal
-project: SpaceAIStudio
-related_projects: [SpaceAIStudio, SpaceAI, Studio, GPCF, KDS]
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0
-owner: 老卢
+owner: KDS
 kds_space: 开发
-kds_path: 开发/14-SpaceAIStudio/openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md
+kds_path: 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md
 source_path: openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-10
@@ -49,6 +49,6 @@ GlobalCloud SpaceAI Studio（`UNISECManage` 遗留安防监控客户端）于 20
 ## Impact
 
 - 受影响仓库：`GlobalCloud SpaceAI Studio`（项目仓库）、`GlobalCoud GPCF`（治理与规格）、`GlobalCloud KDS`（知识沉淀）。
-- 受影响文档：新增本 change 目录；`projects/spaceai-studio/STATUS.md` 追加重构路线；KDS 新增 `开发/14-SpaceAIStudio/`。
+- 受影响文档：新增本 change 目录；`projects/spaceai-studio/STATUS.md` 追加重构路线；KDS 新增 `开发/15-SpaceAIStudio/`。
 - 受影响自动化：需把 `SpaceAIStudio` 加入 `tools/kds-sync/document_control.py` 的 `PROJECTS` 映射，使 KDS 镜像可归类。
 - 回滚边界：本变更只新增文档与规格，不改业务源码；回滚使用 `git revert`，禁止 `reset`/`clean`/`force push`。

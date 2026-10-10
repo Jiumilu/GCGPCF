@@ -1,24 +1,24 @@
 ---
-doc_id: GPCF-DOC-449C9F0E56
-title: evidence
+doc_id: GPCF-DOC-AB1A5D2515
+title: 20261010-075917-spaceai-studio-multiplatform-refactor
 project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
 owner: WAES
 kds_space: 开发
-kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md
-source_path: .harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md
+kds_path: 开发/92-证据与会话归档/.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md
+source_path: .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# evidence
+# 20261010-075917-spaceai-studio-multiplatform-refactor
 
-目录：`.harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence`
+目录：`.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor`
 
 用途：保存本目录下的受控文档、证据或规格材料。
 
@@ -36,4 +36,4 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-449C9F0E56 | evidence | .harness/runs/gbrain-v3.2-fix-tabs-20260611-010336/evidence/README.md | WAES | archive |
+| GPCF-DOC-AB1A5D2515 | 20261010-075917-spaceai-studio-multiplatform-refactor | .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md | WAES | archive |

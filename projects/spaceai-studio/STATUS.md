@@ -1,16 +1,16 @@
 ---
 doc_id: GPCF-SpaceAIStudio-STATUS-20261010
-title: SpaceAIStudio 状态
+title: SpaceAI Studio 状态
 project: GPCF
-related_projects: [SpaceAIStudio, GPCF]
+related_projects: [GPCF]
 domain: governance
 status: controlled
-version: v1.1
-owner: 老卢
+version: v1.0
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/SpaceAIStudio/projects/spaceai-studio/STATUS.md
+kds_path: 开发/91-治理与验收/projects/spaceai-studio/STATUS.md
 source_path: projects/spaceai-studio/STATUS.md
-sync_direction: local_only
+sync_direction: bidirectional
 last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
@@ -43,7 +43,7 @@ superseded_by: []
 - 变更：`openspec/changes/spaceai-studio-multiplatform-refactor/`（2026-10-10 建立，status: draft）
 - 目标：重定位为空间智能工作台；技术路线 Vue 3 + Naive UI + Tauri 2，目标端 Windows/macOS/Linux 桌面。
 - 分期：P0 协议与素材固证 → P1 契约与领域层 → P2 通讯层 → P3 壳与插件宿主 → P4 首模块试点 → P5 三平台打包 → P6 桥接扩展。
-- 方案文档：`../GlobalCloud SpaceAI Studio/docs/architecture/multiplatform-refactor-plan.md`；KDS `开发/14-SpaceAIStudio/`。
+- 方案文档：`../GlobalCloud SpaceAI Studio/docs/architecture/multiplatform-refactor-plan.md`；KDS `开发/15-SpaceAIStudio/`。
 - 素材来源：非设备类接入组件均为我方资产——`RestFUL`（客户端 SDK，非后端）/`Unisec.Contracts`/`Unisec.Common`/`Utility`/`UNISEC_UserControls` 在姊妹项目 `GlobalCloud SpaceAI`（MB3000，1,313 cs）**有源码可复用**；`FlyUI`/`FlyUtil`/`SecSpeak` 无源码但可 **ilspycmd 逆向**（工具链已实测）；设备类为第三方，不逆向。仅功能模块 DLL（`Unisec_Video` 等 12 个）确实缺失，MB3000 单体实现可作业务参照。不宣称「功能等价迁移」。
 
 ## P0–P5 执行结果（2026-10-10）
@@ -57,7 +57,7 @@ superseded_by: []
 | P4 | `plugins/patrol` 端到端试点（8 测试） | `docs/specs/P4-01-patrol-pilot.md` |
 | P5 | Rust 平台抽象（5 测试）+ 三平台 CI + macOS `.app` 8.17 MiB | `docs/specs/P5-01-platform-and-packaging.md` |
 
-- 任务进度：**29/37**（`tasks.md`）；`openspec validate --strict` 通过；文档门禁 pass（missing_metadata=0）。
+- 任务进度：**37/37**（`tasks.md`）；`openspec validate --strict` 通过；**文档门禁 pass**（missing_metadata=0, missing_readme_dirs=0）。
 - 遗留 C# 业务源码本轮**零修改**。
 - 凭据安全：7 个含口令/连接串的文件在 `.gitignore` 排除列表内，**未跟踪、未入库、未进历史**。
 - 关键警示：**`MB3000/Func/FrmPatrolControl.cs` 是无人机（UAV）巡更控制**（`pbxFollow`/`pbxShowLine`/`pbxReturn`），与 Studio 的「巡更点/违规记录」**语义不同**——后续模块不得当作等价参照。
@@ -66,8 +66,12 @@ superseded_by: []
 
 `openspec archive` **暂不执行**：
 
-1. **任务未全部完成**（29/37；P6 与收口未闭合）→ 不满足归档的完整性前提；
+1. ~~任务未全部完成~~ → **已解除**：2026-10-10 达到 37/37；
 2. `.harness/config.yaml` 要求 `archive.require_acceptance_first: true` 与 `require_confirmation: true` → 需**人工验收 + 人工确认**；
 3. **运行态证据缺失**（未实际启动 GUI；三平台产物待 CI 落地）。
 
-→ 维持 `partial`；待 P6 决策、CI 产物落地与人工验收后再议归档。
+→ 维持 `partial`。条件②（人工验收 + 人工确认）与条件③（运行态启动证据、三平台产物落地）**仍未满足**，故 `openspec archive` 不执行。
+
+### CI 状态（2026-10-10）
+
+`.github/workflows/build.yml` 首次运行因 pnpm 版本双指定失败（测试未开始）；修复后第二轮：**测试（TS 51 + Rust 5）通过**，三平台打包已启动（macOS arm64 与 Linux 已产出，Windows 与 macOS x64 进行中）。

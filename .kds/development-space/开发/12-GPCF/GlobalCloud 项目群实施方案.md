@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
 source_path: GlobalCloud 项目群实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -73,6 +73,15 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 16. GlobalCloud XiaoG
 17. GlobalCoud GPCF
 18. GlobalCloud ICP
+19. GlobalCloud PQC
+20. GlobalCloud SpaceAI
+21. GlobalCloud SpaceAI Studio
+
+`GlobalCloud SpaceAI Studio` 于 2026-10-10 授权纳管，独立私有仓库 GCSpaceAIStudio；状态入口 `projects/spaceai-studio/STATUS.md`。authorization=用户授权纳管与Git建立，且确认敏感文件仅保留本地；confirmation=业务验收与生产发布未确认；overall_status=partial。Windows 构建、设备运行和外部依赖尚未验证，远端受限源码不可独立构建，不提升业务状态。
+
+`GlobalCloud SpaceAI` 于 2026-10-10 经用户授权纳管与建立独立私有 Git。状态入口 `projects/spaceai/STATUS.md`；authorization=已授权纳管及 Git，confirmation=业务验收和生产发布未确认，overall_status=partial。Git 初始基线仅纳管文件；历史源码凭据清理及 Windows 构建待完成，历史项目群证据不重算。
+
+`GlobalCloud PQC` 于 2026-10-10 经用户授权纳入项目群管控及独立私有 Git 仓库。状态入口 `projects/pqc/STATUS.md`；authorization=用户授权纳管与 Git 建立，confirmation=业务验收与生产发布未确认，overall_status=partial。历史 17/18 项目证据不重写，本次不声明真实集成或生产就绪。
 
 `GlobalCloud ICP` 自 2026-07-12 起作为第18个候选项目登记。此前17项目的 trigger、dependency、dirty repo 和完成证据均为历史基线，不因本次登记自动重算；ICP 的项目群触发层和依赖边需在后续受控变更中单独建立。
 
@@ -708,3 +717,11 @@ Implementation Change Proposal
 本实施方案继承 `GlobalCloud宪法`，并将其原则转化为任务、命令、证据、门禁、回滚和验收约束。宪法修订按以下责任链执行：ICP 生成产业模型驱动的修订候选，SOP 形成程序审计回执，GPCF 执行 G00 继承与方案传导门禁，WAES 与人工形成授权和状态裁决回执，KDS 在回执齐备后保管并发布 canonical 正本。
 
 G00 验证命令为 `python3 tools/kds-sync/validate_constitution_inheritance_gate.py`。门禁通过只说明责任结构和双主方案继承关系可回读；缺少人工授权或 KDS 发布回执时，状态仍保持 `candidate/partial/human_required`。
+
+## 工业绿链底座SOP池设计回传（2026-10-10）
+
+本轮已形成[工业绿链底座SOP池](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/底座/SOP池.md>)及[工作覆盖与建设清单](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/底座/SOP池工作覆盖与建设清单.md>)，并接入KDS底座主方案与导航。authorization=设计与文档纳入；confirmation=具体SOP生效、业务执行和验收待各自确认。现阶段仅完成规划映射和文档登记，未实施运行连接器、SOP发布、自动派单或定时执行。
+
+规划覆盖W01—W20、组织规划55项制度和30类表单、24业务节点、九类经营模式及既有平台SOP模板；条目之间有重叠，不累加为已发布SOP数量。建设顺序为版本/来源基线、工作与报价闭环、原料打样、订单交付、投产交接、证据权限与恢复，再扩展回收及区域复制。
+
+后续实施须在适用项目Feature中形成具体任务、负责人、适用版本、证据及回滚计划，并验证草稿拒绝、版本锁定、权限、变更影响、例外、重复执行与失败恢复。正文检查或文档门禁通过不能作为真实SOP执行证据。既有accepted、integrated、production_ready和customer_accepted人工边界保持不变。

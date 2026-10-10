@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -37,4 +37,4 @@ KDS 空间：`开发`
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
 | GPCF-DOC-C6D2E06ACB | gcworld-evidence-twin | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md | KDS | draft |
-| GPCF-DOC-A861AD5583 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | KDS | draft |
+| GPCF-DOC-GCWORLD-004 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | KDS | draft |

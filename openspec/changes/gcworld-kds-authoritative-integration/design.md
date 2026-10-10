@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-029
-title: GCWORLD与KDS权威事实集成设计
-project: GPCF
-related_projects: [KDS, WAS, WAES, XWAIL]
+title: design
+project: KDS
+related_projects: [PVAOS, WAES, KDS]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-kds-authoritative-integration/design.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/design.md
 source_path: openspec/changes/gcworld-kds-authoritative-integration/design.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-25

@@ -2,7 +2,7 @@
 doc_id: GPCF-F013-GCWORLD-BINDING-20260822
 title: GCWORLD 证据数字孪生底座与 F-013 绑定证据
 project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, KWE, MMC, GFIS, Brain, Studio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

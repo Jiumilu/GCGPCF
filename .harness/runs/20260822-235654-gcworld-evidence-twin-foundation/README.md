@@ -1,33 +1,43 @@
 ---
-doc_id: GPCF-DOC-GCWORLD-026
-title: GCWORLD证据数字孪生底座Harness运行证据
-project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, MMC, GFIS, Brain, Studio]
+doc_id: GPCF-DOC-3889EF2277
+title: 20260822-235654-gcworld-evidence-twin-foundation
+project: WAES
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: harness-evidence
-status: draft
+status: archive
 version: v1.0
-owner: GPCF
+owner: WAES
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md
 source_path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-24
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# GCWORLD证据数字孪生底座Harness运行证据
+# 20260822-235654-gcworld-evidence-twin-foundation
 
-本目录保存 `gcworld-evidence-twin-foundation` 变更的OpsX执行记录与Harness独立审计证据。
+目录：`.harness/runs/20260822-235654-gcworld-evidence-twin-foundation`
 
-| 产物 | 用途 |
-| --- | --- |
-| `run.yaml` | 执行阶段与状态上限 |
-| `evidence-index.yaml` | 本轮证据索引 |
-| `acceptance-matrix.md` | 任务、需求、实现与证据映射 |
-| `handoff.yaml` | OpsX交接声明 |
-| `evidence/` | 机器验证汇总和Harness审计结论 |
-| `patches/` | 第9节任务状态收口补丁 |
+用途：保存本目录下的受控文档、证据或规格材料。
 
-当前Harness结论为 `pass_with_runtime_blockers`。该结论不代表已验收、已集成、生产就绪、完整运行或全量覆盖，也不授权归档、部署、提交、推送、KDS写入或状态提升。
+KDS 空间：`开发`
 
+关联项目：WAES
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-3889EF2277 | 20260822-235654-gcworld-evidence-twin-foundation | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | WAES | archive |
+| GPCF-DOC-GCWORLD-025 | GCWORLD证据数字孪生底座验收矩阵 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | WAES | archive |
+| GPCF-DOC-BE1716674D | evidence | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | WAES | archive |
+| GPCF-DOC-A593265369 | logs | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | WAES | archive |
+| GPCF-DOC-F0685BF39E | patches | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | WAES | archive |

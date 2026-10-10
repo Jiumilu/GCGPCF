@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-035
-title: GCWORLD工作台界面基础设计
-project: GPCF
-related_projects: [Studio, Brain, KDS, WAS, WAES, XWAIL]
+title: design
+project: KDS
+related_projects: [PVAOS, WAES, KDS, Brain, Studio]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-workbench-ui-foundation/design.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/design.md
 source_path: openspec/changes/gcworld-workbench-ui-foundation/design.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24

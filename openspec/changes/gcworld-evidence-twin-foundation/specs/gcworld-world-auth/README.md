@@ -1,21 +1,40 @@
 ---
-doc_id: GPCF-DOC-GCWORLD-014
-title: GCWORLD 世界原生权限与责任
-project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, MMC, GFIS]
+doc_id: GPCF-DOC-AF66DA63C1
+title: gcworld-world-auth
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# GCWORLD 世界原生权限与责任
+# gcworld-world-auth
 
-定义身份、角色任用、授权委托、运行裁决、执行义务、级联撤销和责任证据闭环。详见 [能力规格](spec.md)。
+目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth`
+
+用途：保存本目录下的受控文档、证据或规格材料。
+
+KDS 空间：`开发`
+
+关联项目：KDS
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-AF66DA63C1 | gcworld-world-auth | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md | KDS | draft |
+| GPCF-DOC-GCWORLD-015 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/spec.md | KDS | draft |

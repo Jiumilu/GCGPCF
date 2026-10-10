@@ -34,6 +34,8 @@ PROJECTS = {
     "GPCF": ("12-GPCF", ["GPCF", "GlobalCoud GPCF", "项目群", "总控"]),
     "Studio": ("13-Studio", ["Studio", "GlobalCloud Studio", "Hermes", "Agent 工作台"]),
     "ICP": ("14-ICP", ["ICP", "GlobalCloud ICP", "Industry Control Plane", "产业控制", "产业模型", "产业控制平面"]),
+    "SpaceAIStudio": ("15-SpaceAIStudio", ["SpaceAIStudio", "SpaceAI Studio", "空间智能工作台", "UNISECManage"]),
+    "SpaceAI": ("16-SpaceAI", ["MB3000", "UNISEC 平台"]),
 }
 
 WAS_ONTOLOGY_GOVERNANCE_DOCS = {

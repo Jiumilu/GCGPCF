@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA63F9BF32
 title: KDS 开发空间同步台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
 domain: status
 status: controlled
 version: v1.0
@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-08-22
+日期：2026-10-10
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -33,19 +33,21 @@ superseded_by: []
 | project | kds_project_folder | project 字段文档数 | KDS 项目空间文档数 | 说明 |
 | --- | --- | --- | --- | --- |
 | GFIS | 01-GFIS | 117 | 114 | 已建空间 |
-| GPC | 02-GPC | 60 | 52 | 已建空间 |
+| GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
-| WAES | 04-WAES | 171 | 24 | 已建空间 |
-| KDS | 05-KDS | 754 | 751 | 已建空间 |
+| WAES | 04-WAES | 181 | 24 | 已建空间 |
+| KDS | 05-KDS | 813 | 810 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2126 | 1904 | 已建空间 |
+| GPCF | 12-GPCF | 2137 | 1907 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
+| SpaceAI | 16-SpaceAI | 0 | 0 | 已建空间，暂无直接镜像文档 |
 
 ## KDS 公共空间文档统计
 
@@ -53,8 +55,8 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 267 |
-| 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 85 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 275 |
+| 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
 ## 全量同步清单
@@ -127,6 +129,16 @@ superseded_by: []
 | GPCF-DOC-268058F0F6 | .codex/skills/ui-ux-pro-max/README.md | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/README.md | register_and_mirror | pending_api |
 | GPCF-DOC-8025BD5C10 | .codex/skills/ui-ux-pro-max/SKILL.md | 开发/12-GPCF/.codex/skills/ui-ux-pro-max/SKILL.md | register_and_mirror | pending_api |
 | GPCF-DOC-D1E79591EA | .harness/README.md | 开发/92-证据与会话归档/.harness/README.md | bidirectional | pending_api |
+| GPCF-DOC-3889EF2277 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-025 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | bidirectional | pending_api |
+| GPCF-DOC-BE1716674D | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-A593265369 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | bidirectional | pending_api |
+| GPCF-DOC-F0685BF39E | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | bidirectional | pending_api |
+| GPCF-DOC-9A0E4C7895 | .harness/runs/20260824-092905-gcworld-integration-proposals/README.md | 开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/README.md | bidirectional | pending_api |
+| GPCF-DOC-22D16F73A7 | .harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md | 开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-2F8842ACA3 | .harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md | 开发/92-证据与会话归档/.harness/runs/20260824-094555-gcworld-kds-integration-admission/README.md | bidirectional | pending_api |
+| GPCF-DOC-D8331A937B | .harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md | 开发/92-证据与会话归档/.harness/runs/20260825-004215-gcworld-kds-integration-admission-refresh/README.md | bidirectional | pending_api |
+| GPCF-DOC-AB1A5D2515 | .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md | 开发/92-证据与会话归档/.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/README.md | bidirectional | pending_api |
 | GPCF-DOC-32ED2727B9 | .harness/runs/README.md | 开发/92-证据与会话归档/.harness/runs/README.md | bidirectional | pending_api |
 | GPCF-DOC-C311AFC61A | .harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/README.md | bidirectional | pending_api |
 | GPCF-DOC-9AF8C291EB | .harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | 开发/92-证据与会话归档/.harness/runs/gbrain-admin-console-v1-20260610-201442/acceptance-matrix.md | bidirectional | pending_api |
@@ -313,6 +325,7 @@ superseded_by: []
 | GPCF-DOC-323D4F2AA4 | .okf/index.md | 开发/12-GPCF/.okf/index.md | bidirectional | pending_api |
 | GPCF-DOC-73009C52E2 | .okf/kds/README.md | 开发/12-GPCF/.okf/kds/README.md | bidirectional | pending_api |
 | GPCF-DOC-40F2D45CE1 | .okf/kds/index.md | 开发/12-GPCF/.okf/kds/index.md | bidirectional | pending_api |
+| GPCF-DOC-4B5717387C | .pytest_cache/README.md | 开发/02-GPC/.pytest_cache/README.md | bidirectional | pending_api |
 | GPCF-DOC-FAD086E548 | .zcode/commands/README.md | 开发/02-GPC/.zcode/commands/README.md | bidirectional | pending_api |
 | GPCF-ZCODE-COMMAND-EVIDENCE-20260712 | .zcode/commands/evidence.md | 开发/02-GPC/.zcode/commands/evidence.md | bidirectional | pending_api |
 | GPCF-ZCODE-COMMAND-LOOP-20260712 | .zcode/commands/loop.md | 开发/02-GPC/.zcode/commands/loop.md | bidirectional | pending_api |
@@ -3182,6 +3195,7 @@ superseded_by: []
 | GPCF-DOC-F011-STUDIO-WORKBENCH-JOURNAL-20260712 | features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | 开发/91-治理与验收/features/active/F-011-studio-workbench-ui-runtime-closure/journal.md | bidirectional | pending_api |
 | GPCF-DOC-39D57E2071 | features/active/F-012-icp-sop-foundation-coupling/journal.md | 开发/91-治理与验收/features/active/F-012-icp-sop-foundation-coupling/journal.md | bidirectional | pending_api |
 | GPCF-DOC-F013-KDS-P1-HANDOFF-20260802 | features/active/F-013-knowledge-asset-model-system/artifacts/kds-p1-handoff.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/artifacts/kds-p1-handoff.md | bidirectional | pending_api |
+| GPCF-F013-GCWORLD-BINDING-20260822 | features/active/F-013-knowledge-asset-model-system/evidence/gcworld-evidence-twin-foundation-binding-20260822.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/gcworld-evidence-twin-foundation-binding-20260822.md | bidirectional | pending_api |
 | GPCF-DOC-F013-GKE001-A10I1-DUAL-HANDOFFS-F013-REVIEW-20260811 | features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1-dual-handoffs-and-f013-review-dispatch-20260811.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1-dual-handoffs-and-f013-review-dispatch-20260811.md | bidirectional | pending_api |
 | GPCF-DOC-F013-GKE001-A10I1-FIRST-IMPLEMENTATION-DISPATCH-20260811 | features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1-first-implementation-dispatch-20260811.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1-first-implementation-dispatch-20260811.md | bidirectional | pending_api |
 | GPCF-DOC-F013-GKE001-A10I1-REVIEW-A10I1R1-DISPATCH-20260811 | features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1-independent-review-and-a10i1r1-dispatch-20260811.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/evidence/gke-001-a10i1-independent-review-and-a10i1r1-dispatch-20260811.md | bidirectional | pending_api |
@@ -3256,6 +3270,10 @@ superseded_by: []
 | GPCF-DOC-F013-KNOWLEDGE-ASSET-MODEL-JOURNAL-20260802 | features/active/F-013-knowledge-asset-model-system/journal.md | 开发/91-治理与验收/features/active/F-013-knowledge-asset-model-system/journal.md | bidirectional | pending_api |
 | GPCF-DOC-F014-INDUSTRIAL-MEETING-PROJECT-CONTROL-EVIDENCE-20260822 | features/active/F-014-industrial-meeting-to-project-control-loop/evidence/summary.md | 开发/91-治理与验收/features/active/F-014-industrial-meeting-to-project-control-loop/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-F014-INDUSTRIAL-MEETING-PROJECT-CONTROL-JOURNAL-20260822 | features/active/F-014-industrial-meeting-to-project-control-loop/journal.md | 开发/91-治理与验收/features/active/F-014-industrial-meeting-to-project-control-loop/journal.md | bidirectional | pending_api |
+| GPCF-F-015-ADMIN-TRIAL-20260905 | features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/admin-trial-runtime-20260905.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/admin-trial-runtime-20260905.md | bidirectional | pending_api |
+| GPCF-F-015-EVIDENCE-GCWORLD-ORGANIZATION-READONLY-MVP-20260904 | features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md | bidirectional | pending_api |
+| GPCF-F-015-EVIDENCE-SUMMARY-GCWORLD-ORGANIZATION-READONLY | features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/summary.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/summary.md | bidirectional | pending_api |
+| GPCF-F-015-JOURNAL-GCWORLD-ORGANIZATION-READONLY | features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
@@ -3298,19 +3316,74 @@ superseded_by: []
 | GPCF-DOC-5419DA34A8 | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | 开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/README.md | bidirectional | pending_api |
 | GPCF-OS-OPEN-SPEC-COVERAGE-SPEC-20260712 | openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | 开发/12-GPCF/openspec/changes/enable-project-group-openspec-coverage/specs/project-group-openspec-coverage/spec.md | bidirectional | pending_api |
 | GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712 | openspec/changes/enable-project-group-openspec-coverage/tasks.md | 开发/05-KDS/openspec/changes/enable-project-group-openspec-coverage/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-07DC110521 | openspec/changes/gcworld-controlled-runtime-integration/README.md | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-041 | openspec/changes/gcworld-controlled-runtime-integration/design.md | 开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/design.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-040 | openspec/changes/gcworld-controlled-runtime-integration/proposal.md | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-F303786957 | openspec/changes/gcworld-controlled-runtime-integration/specs/README.md | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-F7A617A19B | openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/README.md | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-047 | openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/spec.md | 开发/12-GPCF/openspec/changes/gcworld-controlled-runtime-integration/specs/gcworld-controlled-runtime-integration/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-042 | openspec/changes/gcworld-controlled-runtime-integration/tasks.md | 开发/05-KDS/openspec/changes/gcworld-controlled-runtime-integration/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-CE01ACF096 | openspec/changes/gcworld-evidence-twin-foundation/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/README.md | bidirectional | pending_api |
-| GPCF-DOC-CACBA085BD | openspec/changes/gcworld-evidence-twin-foundation/design.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/design.md | bidirectional | pending_api |
-| GPCF-DOC-A4F29144C7 | openspec/changes/gcworld-evidence-twin-foundation/proposal.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-025 | openspec/changes/gcworld-evidence-twin-foundation/artifacts/GCWORLD总体架构与能力规划_v1.0.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/GCWORLD总体架构与能力规划_v1.0.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-027 | openspec/changes/gcworld-evidence-twin-foundation/artifacts/KDS全量组织资产普查与世界初始化规范_v1.0.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/KDS全量组织资产普查与世界初始化规范_v1.0.md | bidirectional | pending_api |
+| GPCF-DOC-CF0FA92FE8 | openspec/changes/gcworld-evidence-twin-foundation/artifacts/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-026 | openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-controlled-classification-report-20260823.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-controlled-classification-report-20260823.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-024 | openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-readonly-admission-assessment-20260823.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/artifacts/gcworld-kds-readonly-admission-assessment-20260823.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-002 | openspec/changes/gcworld-evidence-twin-foundation/design.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/design.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-001 | openspec/changes/gcworld-evidence-twin-foundation/proposal.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/proposal.md | bidirectional | pending_api |
 | GPCF-DOC-5195FBCF8B | openspec/changes/gcworld-evidence-twin-foundation/specs/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/README.md | bidirectional | pending_api |
 | GPCF-DOC-769D47FC63 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/README.md | bidirectional | pending_api |
-| GPCF-DOC-8F0920DB54 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-005 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-coverage-assessment/spec.md | bidirectional | pending_api |
+| GPCF-DOC-4CBD5FE00A | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-021 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-engineering-governance/spec.md | bidirectional | pending_api |
 | GPCF-DOC-C6D2E06ACB | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/README.md | bidirectional | pending_api |
-| GPCF-DOC-A861AD5583 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-004 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-evidence-twin/spec.md | bidirectional | pending_api |
 | GPCF-DOC-860812960B | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/README.md | bidirectional | pending_api |
-| GPCF-DOC-7608F9E00C | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | 开发/12-GPCF/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-006 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-role-agent-governance/spec.md | bidirectional | pending_api |
 | GPCF-DOC-F5BD85B415 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/README.md | bidirectional | pending_api |
-| GPCF-DOC-E9F567EAFF | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | bidirectional | pending_api |
-| GPCF-DOC-EE19C93D00 | openspec/changes/gcworld-evidence-twin-foundation/tasks.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-007 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-runtime-boundary/spec.md | bidirectional | pending_api |
+| GPCF-DOC-89B377074C | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-019 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/spec.md | 开发/12-GPCF/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-workbench-product/spec.md | bidirectional | pending_api |
+| GPCF-DOC-AF66DA63C1 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-015 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-auth/spec.md | bidirectional | pending_api |
+| GPCF-DOC-A0782193CA | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-017 | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-003 | openspec/changes/gcworld-evidence-twin-foundation/tasks.md | 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-464DF48684 | openspec/changes/gcworld-kds-authoritative-integration/README.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-059 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批临时责任路由模型批准回执_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批临时责任路由模型批准回执_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-056 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批主体类型与权威锚点建议说明_20260826.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批主体类型与权威锚点建议说明_20260826.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-057 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批人工责任分派与最低证据需求矩阵说明_20260826.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批人工责任分派与最低证据需求矩阵说明_20260826.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-062 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包生成回执_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包生成回执_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-063 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体接受授权请求_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体接受授权请求_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-064 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体核验执行回执_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核包责任主体核验执行回执_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-066 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记回执_20260903.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记回执_20260903.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-065 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记请求_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批优先人工复核责任席位登记请求_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-060 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一准备节点回执_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一准备节点回执_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-061 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一建议运行回执_20260828.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器归一建议运行回执_20260828.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-068 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器车道处理优先级分层回执_20260904.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批机器车道处理优先级分层回执_20260904.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-058 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批责任主体提名与接受请求_20260826.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批责任主体提名与接受请求_20260826.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-067 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批身份复核三车道与证据压缩回执_20260904.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批身份复核三车道与证据压缩回执_20260904.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-069 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高优先级权威锚点需求包回执_20260904.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高优先级权威锚点需求包回执_20260904.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-055 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高频身份复核视图说明_20260826.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD第一批高频身份复核视图说明_20260826.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-054 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD组织资产身份复核队列基线_20260826.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/GCWORLD组织资产身份复核队列基线_20260826.md | bidirectional | pending_api |
+| GPCF-DOC-CE9BCDDD6A | openspec/changes/gcworld-kds-authoritative-integration/artifacts/README.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-050 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-051 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-refresh-20260825.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-refresh-20260825.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-052 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-053 | openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-handoff-drift-assessment-20260825.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-post-handoff-drift-assessment-20260825.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-029 | openspec/changes/gcworld-kds-authoritative-integration/design.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/design.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-028 | openspec/changes/gcworld-kds-authoritative-integration/proposal.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-8F29EB24F6 | openspec/changes/gcworld-kds-authoritative-integration/specs/README.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-10EFDF4F93 | openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-045 | openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-030 | openspec/changes/gcworld-kds-authoritative-integration/tasks.md | 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/tasks.md | bidirectional | pending_api |
+| GPCF-DOC-7B52F4FBEB | openspec/changes/gcworld-workbench-ui-foundation/README.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-035 | openspec/changes/gcworld-workbench-ui-foundation/design.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/design.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-034 | openspec/changes/gcworld-workbench-ui-foundation/proposal.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-6C71C59C11 | openspec/changes/gcworld-workbench-ui-foundation/specs/README.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-EBAA7DB2E8 | openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/README.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/README.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-046 | openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/specs/gcworld-workbench-ui-foundation/spec.md | bidirectional | pending_api |
+| GPCF-DOC-GCWORLD-036 | openspec/changes/gcworld-workbench-ui-foundation/tasks.md | 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-95C82DA16B | openspec/changes/integrate-gke001-openspec-codegraph/README.md | 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/README.md | bidirectional | pending_api |
 | GPCF-DOC-82B83BA05C | openspec/changes/integrate-gke001-openspec-codegraph/design.md | 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/design.md | bidirectional | pending_api |
 | GPCF-DOC-42FE6A63EF | openspec/changes/integrate-gke001-openspec-codegraph/proposal.md | 开发/12-GPCF/openspec/changes/integrate-gke001-openspec-codegraph/proposal.md | bidirectional | pending_api |
@@ -3340,6 +3413,13 @@ superseded_by: []
 | GPCF-OS-ICP-REGISTRATION-TASKS-20260712 | openspec/changes/register-globalcloud-icp/tasks.md | 开发/12-GPCF/openspec/changes/register-globalcloud-icp/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-DA59B18707 | openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/README.md | bidirectional | pending_api |
 | GPCF-OS-ICP-SOP-COUPLING-PROPOSAL-20260713 | openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | 开发/05-KDS/openspec/changes/sop-bind-matrix-to-icp-foundation/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-477C45A148 | openspec/changes/spaceai-studio-multiplatform-refactor/README.md | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/README.md | bidirectional | pending_api |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010 | openspec/changes/spaceai-studio-multiplatform-refactor/design.md | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/design.md | bidirectional | pending_api |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010 | openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md | bidirectional | pending_api |
+| GPCF-DOC-8B83B1A79A | openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md | bidirectional | pending_api |
+| GPCF-DOC-D53A9468CA | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md | bidirectional | pending_api |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010 | openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | 开发/12-GPCF/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md | bidirectional | pending_api |
+| GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010 | openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md | bidirectional | pending_api |
 | GPCF-DOC-89FBFF25D3 | openspec/specs/README.md | 开发/05-KDS/openspec/specs/README.md | bidirectional | pending_api |
 | GPCF-DOC-60B2E3BD94 | projects/aaas/RISK.md | 开发/91-治理与验收/projects/aaas/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-FB24610A83 | projects/aaas/ROADMAP.md | 开发/91-治理与验收/projects/aaas/ROADMAP.md | bidirectional | pending_api |
@@ -3368,12 +3448,15 @@ superseded_by: []
 | GPCF-DOC-857E6A9307 | projects/pkc/RISK.md | 开发/91-治理与验收/projects/pkc/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-950A22AC4D | projects/pkc/ROADMAP.md | 开发/91-治理与验收/projects/pkc/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-88EC26FE57 | projects/pkc/STATUS.md | 开发/91-治理与验收/projects/pkc/STATUS.md | bidirectional | pending_api |
+| GPCF-PQC-STATUS-20261010 | projects/pqc/STATUS.md | 开发/91-治理与验收/projects/pqc/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-73296C1685 | projects/pvaos/RISK.md | 开发/91-治理与验收/projects/pvaos/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-00153CD8B3 | projects/pvaos/ROADMAP.md | 开发/91-治理与验收/projects/pvaos/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-FBDF40CE54 | projects/pvaos/STATUS.md | 开发/91-治理与验收/projects/pvaos/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-068AE09B46 | projects/sop/RISK.md | 开发/91-治理与验收/projects/sop/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-86C94554EC | projects/sop/ROADMAP.md | 开发/91-治理与验收/projects/sop/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-5F3201F8C9 | projects/sop/STATUS.md | 开发/91-治理与验收/projects/sop/STATUS.md | bidirectional | pending_api |
+| GPCF-SpaceAIStudio-STATUS-20261010 | projects/spaceai-studio/STATUS.md | 开发/91-治理与验收/projects/spaceai-studio/STATUS.md | bidirectional | pending_api |
+| GPCF-SPACEAI-STATUS-20261010 | projects/spaceai/STATUS.md | 开发/91-治理与验收/projects/spaceai/STATUS.md | bidirectional | pending_api |
 | GPCF-DOC-EBFFF7C374 | projects/studio/RISK.md | 开发/91-治理与验收/projects/studio/RISK.md | bidirectional | pending_api |
 | GPCF-DOC-46D1584AC5 | projects/studio/ROADMAP.md | 开发/91-治理与验收/projects/studio/ROADMAP.md | bidirectional | pending_api |
 | GPCF-DOC-D67FFAE452 | projects/studio/STATUS.md | 开发/91-治理与验收/projects/studio/STATUS.md | bidirectional | pending_api |

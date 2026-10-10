@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-TASKS-20261010
 title: tasks
-project: SpaceAIStudio
-related_projects: [SpaceAIStudio, Studio, GPCF, KDS]
+project: KDS
+related_projects: [WAES, KDS, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0
-owner: 老卢
+owner: KDS
 kds_space: 开发
-kds_path: 开发/14-SpaceAIStudio/openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md
+kds_path: 开发/05-KDS/openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md
 source_path: openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-10
@@ -23,10 +23,10 @@ superseded_by: []
 - [x] 1.1 建立本 OpenSpec 变更目录与四件套（proposal/design/tasks/spec）。
 - [x] 1.2 把 SpaceAIStudio 的重定位（空间智能工作台，与 Studio 平行）写入 proposal 与 design。
 - [x] 1.3 固定技术路线（Vue 3 + Naive UI + Tauri 2，三平台桌面）与资产处置结论。
-- [ ] 1.4 在 `projects/spaceai-studio/STATUS.md` 追加重构路线与本期证据指针。
-- [ ] 1.5 把 `SpaceAIStudio` 加入 `tools/kds-sync/document_control.py` 的 `PROJECTS` 映射，使 KDS 镜像可归类。
-- [ ] 1.6 运行 `python3 tools/kds-sync/loop_document_gate.py --check-only` 并留存证据。
-- [ ] 1.7 运行 `python3 tools/kds-sync/validate_project_group_openspec_coverage.py` 并留存证据。
+- [x] 1.4 `projects/spaceai-studio/STATUS.md` 已含「重构路线」与证据指针（2026-10-10 升至 v1.1 复核）。
+- [x] 1.5 已将 `SpaceAIStudio` 加入 `tools/kds-sync/document_control.py` 的 `PROJECTS` 映射（`15-SpaceAIStudio`；同时登记 `SpaceAI` → `16-SpaceAI`）。**并修正一处自引入错误**：KDS 目录初建误用 `14-` 前缀（与映射中的 `14-ICP` 冲突），已整体改为 `15-SpaceAIStudio`（31 个引用同步）。
+- [x] 1.6 `loop_document_gate.py --check-only` 已运行并留存：**gate pass**（missing_metadata=0, missing_readme_dirs=0）。**期间发现并修复存量债务**：项目群扩至 21 项目后，37 份治理文档的 `related_projects` 未同步（config=21 vs 文档 18/14），门禁处于 `rework_required`；已批量同步 → 恢复 `pass`。
+- [x] 1.7 `validate_project_group_openspec_coverage.py` 已运行：**status pass** —— 21 个项目，policy `required 9 / conditional 12 / waived 0`，`failures: []`。
 
 ## 2. P0 素材与协议固证（不改业务代码）
 
@@ -36,7 +36,7 @@ superseded_by: []
 - [x] 2.2 《REST 协议规格书》→ `docs/specs/P0-01-rest-protocol.md`（20 端点、`ResultDS` 信封、Cookie 会话、`:8082` 回调）。**修正：`RestFUL` 是客户端 SDK，后端 `SqlService` 不在手 → 规格为客户端视角。**
 - [x] 2.3 《Socket 协议规格书》→ `docs/specs/P0-02-socket-protocol.md`（UDP/TCP `:8888`、UTF-8 裸文本、80 字节缓冲、事件回调）。注：依据源码，报文格式待抓包补证。
 - [x] 2.4 《领域模型规格》→ `docs/specs/P0-03-domain-model.md`（Studio 16 + SpaceAI 33 → 13 领域）。
-- [ ] 2.5 《迁移面清单》：245 个业务 cs 文件逐项三分类（可迁移 / 需重写 / 不可用）—— **未完成**（并入 P1）。
+- [x] 2.5 《迁移面清单》：245 个业务 cs 文件三分类完成 → **A 可迁移 66 / B 需重写 149 / C 不可用 30**（证据 `docs/specs/P0-06-migration-surface.md`）。
 - [x] 2.6 技术债已登记（硬编码测试 IP、`Class/`+`Classes/` 重复目录、`.baiduyun` 残留）。
 - [x] 2.7 《插件契约规格》→ `docs/specs/P0-04-plugin-contract.md`（`AbstractMng` + 6 扩展接口 → `plugin-sdk` 草案，含装配清单与 TS 草案）。
 

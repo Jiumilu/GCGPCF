@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-047
-title: GCWORLD受控运行时集成能力规格
+title: spec
 project: GPCF
-related_projects: [XWAIL, WAES, KWE, MMC, KDS, GFIS]
+related_projects: [GPCF, WAES]
 domain: openspec
 status: draft
 version: v1.0

@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-019
-title: GCWORLD 工作台产品规格
+title: spec
 project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, KWE, MMC, GFIS, Brain, Studio]
+related_projects: [GPCF, PVAOS, WAES]
 domain: openspec
 status: draft
 version: v1.0

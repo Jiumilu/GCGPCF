@@ -1,22 +1,40 @@
 ---
-doc_id: GPCF-DOC-GCWORLD-032
-title: GCWORLD与KDS权威事实集成能力
-project: GPCF
-related_projects: [KDS, WAS, WAES, XWAIL]
+doc_id: GPCF-DOC-10EFDF4F93
+title: gcworld-kds-authoritative-integration
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md
 source_path: openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-24
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# GCWORLD与KDS权威事实集成能力
+# gcworld-kds-authoritative-integration
 
-定义不复制KDS主账的只读投影和需独立授权的事实提升协议。详见[能力规格](spec.md)。
+目录：`openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration`
 
+用途：保存本目录下的受控文档、证据或规格材料。
+
+KDS 空间：`开发`
+
+关联项目：KDS
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-10EFDF4F93 | gcworld-kds-authoritative-integration | openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/README.md | KDS | draft |
+| GPCF-DOC-GCWORLD-045 | spec | openspec/changes/gcworld-kds-authoritative-integration/specs/gcworld-kds-authoritative-integration/spec.md | KDS | draft |

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-025
 title: GCWORLD证据数字孪生底座验收矩阵
-project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, MMC, GFIS, Brain, Studio]
+project: WAES
+related_projects: [PVAOS, WAES, KDS, GPCF]
 domain: harness-evidence
-status: draft
+status: archive
 version: v1.0
-owner: GPCF
+owner: WAES
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
 source_path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
@@ -34,4 +34,3 @@ superseded_by: []
 | 9.4 后续独立授权提案 | 分阶段演进；前一阶段不得自动授权下一阶段 | 未生成KDS、界面或运行时集成提案 | 覆盖报告尚无人工作出最终复核，F-013仍阻塞 | 阻塞，保持未完成 |
 
 构建、真实API、真实界面和中文搜索不在本轮授权与实现范围，均按“不适用”记录；这不是运行通过证据。
-

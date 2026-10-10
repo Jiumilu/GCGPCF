@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-052
 title: GCWORLD与KDS责任方处置回执评估
-project: GPCF
-related_projects: [KDS, WAS, WAES, XWAIL]
+project: KDS
+related_projects: [WAES, KDS, XGD, Studio]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md
 source_path: openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-owner-handoff-assessment-20260825.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-25

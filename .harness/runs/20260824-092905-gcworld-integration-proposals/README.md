@@ -1,28 +1,40 @@
 ---
-doc_id: GPCF-DOC-GCWORLD-048
-title: GCWORLD三项后续独立授权提案运行记录
-project: GPCF
-related_projects: [KDS, Studio, Brain, WAS, XWAIL, WAES, KWE, MMC, GFIS]
+doc_id: GPCF-DOC-9A0E4C7895
+title: 20260824-092905-gcworld-integration-proposals
+project: WAES
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: harness-evidence
-status: draft
+status: archive
 version: v1.0
-owner: GPCF
+owner: WAES
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/20260824-092905-gcworld-integration-proposals/README.md
 source_path: .harness/runs/20260824-092905-gcworld-integration-proposals/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-24
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# GCWORLD三项后续独立授权提案运行记录
+# 20260824-092905-gcworld-integration-proposals
 
-本轮只完成KDS权威事实集成、GCWORLD工作台界面和受控运行时集成三份OpenSpec规划产物。所有实施任务均保持未开始，真实仓库、数据、接口、凭据、部署和状态提升均未授权。
+目录：`.harness/runs/20260824-092905-gcworld-integration-proposals`
 
-| 产物 | 用途 |
-| --- | --- |
-| `run.yaml` | 执行范围和授权边界 |
-| `evidence-index.yaml` | 本轮证据索引 |
-| `evidence/proposal-validation.yaml` | 三项提案与门禁验证结果 |
+用途：保存本目录下的受控文档、证据或规格材料。
 
+KDS 空间：`开发`
+
+关联项目：WAES
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-9A0E4C7895 | 20260824-092905-gcworld-integration-proposals | .harness/runs/20260824-092905-gcworld-integration-proposals/README.md | WAES | archive |
+| GPCF-DOC-22D16F73A7 | evidence | .harness/runs/20260824-092905-gcworld-integration-proposals/evidence/README.md | WAES | archive |

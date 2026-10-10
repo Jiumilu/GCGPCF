@@ -1,21 +1,40 @@
 ---
-doc_id: GPCF-DOC-GCWORLD-016
-title: GCWORLD 世界运行时
-project: GPCF
-related_projects: [KDS, WAS, XWAIL, WAES, KWE, MMC, GFIS, Brain]
+doc_id: GPCF-DOC-A0782193CA
+title: gcworld-world-runtime
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md
 source_path: openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-22
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
 
-# GCWORLD 世界运行时
+# gcworld-world-runtime
 
-定义世界运行服务、标准闭环、任务与承诺、行动风险、执行回执、补偿机制、模拟分支及事实提升协议。详见 [能力规格](spec.md)。
+目录：`openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime`
+
+用途：保存本目录下的受控文档、证据或规格材料。
+
+KDS 空间：`开发`
+
+关联项目：KDS
+
+受控规则：
+
+- 本目录新增 Markdown 文档必须重新运行 `python3 tools/kds-sync/document_control.py`。
+- 当前有效文档使用 `controlled`；草案使用 `draft`；历史证据使用 `archive`。
+- 过期或被替代文档不得删除，必须进入归档台账或保留替代关系。
+
+## 文档清单
+
+| doc_id | title | source_path | project | status |
+| --- | --- | --- | --- | --- |
+| GPCF-DOC-A0782193CA | gcworld-world-runtime | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/README.md | KDS | draft |
+| GPCF-DOC-GCWORLD-017 | spec | openspec/changes/gcworld-evidence-twin-foundation/specs/gcworld-world-runtime/spec.md | KDS | draft |

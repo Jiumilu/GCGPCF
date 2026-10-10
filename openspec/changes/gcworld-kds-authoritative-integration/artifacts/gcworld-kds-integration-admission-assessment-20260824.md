@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-050
 title: GCWORLD与KDS权威事实集成准入评估
-project: GPCF
-related_projects: [KDS, WAS, WAES, XWAIL]
+project: KDS
+related_projects: [GPC, WAES, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md
 source_path: openspec/changes/gcworld-kds-authoritative-integration/artifacts/gcworld-kds-integration-admission-assessment-20260824.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24

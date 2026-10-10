@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-034
-title: GCWORLD工作台界面基础变更提案
-project: GPCF
-related_projects: [Studio, Brain, KDS, WAS, WAES, XWAIL]
+title: proposal
+project: KDS
+related_projects: [GPC, PVAOS, WAES, KDS, Brain, GPCF, Studio]
 domain: openspec
 status: draft
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/openspec/changes/gcworld-workbench-ui-foundation/proposal.md
+kds_path: 开发/05-KDS/openspec/changes/gcworld-workbench-ui-foundation/proposal.md
 source_path: openspec/changes/gcworld-workbench-ui-foundation/proposal.md
 sync_direction: bidirectional
 last_reviewed: 2026-08-24

@@ -1,14 +1,14 @@
 ---
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010
 title: spec
-project: SpaceAIStudio
-related_projects: [SpaceAIStudio, SpaceAI, Studio, GPCF, KDS]
+project: GPCF
+related_projects: [WAES, GPCF, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0
-owner: 老卢
+owner: GPCF
 kds_space: 开发
-kds_path: 开发/14-SpaceAIStudio/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md
+kds_path: 开发/12-GPCF/openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md
 source_path: openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md
 sync_direction: bidirectional
 last_reviewed: 2026-10-10
