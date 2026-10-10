@@ -1,5 +1,5 @@
 schema_version: 1
-current_project_count: 18
+current_project_count: 19
 historical_baselines:
   - count: 17
     through: 2026-06-27
@@ -23,3 +23,4 @@ projects:
   - {id: PKC, slug: pkc}
   - {id: XGD, slug: xgd}
   - {id: ICP, slug: icp}
+  - {id: PQC, slug: pqc}

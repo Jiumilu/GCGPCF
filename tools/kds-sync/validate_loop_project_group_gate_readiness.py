@@ -27,6 +27,7 @@ REPOS = [
     ("GlobalCloud KDS", PROJECT_GROUP_ROOT / "GlobalCloud KDS"),
     ("GlobalCloud MMC", PROJECT_GROUP_ROOT / "GlobalCloud MMC"),
     ("GlobalCloud PKC", PROJECT_GROUP_ROOT / "GlobalCloud PKC"),
+    ("GlobalCloud PQC", PROJECT_GROUP_ROOT / "GlobalCloud PQC"),
     ("GlobalCloud PVAOS", PROJECT_GROUP_ROOT / "GlobalCloud PVAOS"),
     ("GlobalCloud SOP", PROJECT_GROUP_ROOT / "GlobalCloud SOP"),
     ("GlobalCloud Studio", PROJECT_GROUP_ROOT / "GlobalCloud Studio"),

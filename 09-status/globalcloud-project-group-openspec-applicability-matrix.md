@@ -41,9 +41,11 @@ superseded_by: []
 | XGD | xgd | conditional | `openspec/changes/xgd-<change>/` | `gpcf_new_feature --project xgd` | Delivery | required | required |
 | ICP | icp | required | `openspec/changes/icp-<change>/` | `gpcf_new_feature --project icp` | Governance | required | required |
 
+| PQC | pqc | required | `openspec/changes/pqc-<change>/` | `gpcf_new_feature --project pqc` | Governance | required | required |
+
 ## 状态边界
 
-- 当前 18 项目均有中央入口，`waived=0`；因此无豁免债务。
+- 当前 19 项目均有中央入口，`waived=0`；因此无豁免债务。
 - 中央入口不表示已向各独立项目仓安装 OpenSpec。
 - apply 前必须创建或绑定 Feature；归档前必须通过 Evidence 与文档门禁。
 - Harness 保留最终裁决权；未经人工确认不得提升验收或生产状态。

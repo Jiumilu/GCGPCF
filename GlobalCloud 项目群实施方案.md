@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/GlobalCloud 项目群实施方案.md
 source_path: GlobalCloud 项目群实施方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -73,6 +73,9 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 16. GlobalCloud XiaoG
 17. GlobalCoud GPCF
 18. GlobalCloud ICP
+19. GlobalCloud PQC
+
+`GlobalCloud PQC` 于 2026-10-10 经用户授权纳入项目群管控及独立私有 Git 仓库。状态入口 `projects/pqc/STATUS.md`；authorization=用户授权纳管与 Git 建立，confirmation=业务验收与生产发布未确认，overall_status=partial。历史 17/18 项目证据不重写，本次不声明真实集成或生产就绪。
 
 `GlobalCloud ICP` 自 2026-07-12 起作为第18个候选项目登记。此前17项目的 trigger、dependency、dirty repo 和完成证据均为历史基线，不因本次登记自动重算；ICP 的项目群触发层和依赖边需在后续受控变更中单独建立。
 

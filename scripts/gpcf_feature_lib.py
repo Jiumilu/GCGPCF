@@ -40,6 +40,7 @@ PROJECTS = {
     "pkc",
     "xgd",
     "icp",
+    "pqc",
 }
 PRIORITIES = {"P0", "P1", "P2", "P3"}
 STEPS = ["plan", "implement", "evaluate", "repair", "commit"]

@@ -40,7 +40,7 @@ def main() -> int:
     ]:
         read(path)
 
-    require("项目群当前纳入 18 个项目" in master, "master plan must declare 18 projects")
+    require("项目群当前纳入 19 个项目" in master, "master plan must declare 19 projects")
     require("| ICP | 24字产业模型" in master, "master plan missing ICP responsibility")
     require("18. GlobalCloud ICP" in implementation, "implementation plan missing project 18")
     require("17项目" in implementation, "historical 17-project baseline must be preserved")
@@ -54,7 +54,7 @@ def main() -> int:
         require(forbidden not in combined, f"forbidden promotion found: {forbidden}")
 
     print("icp_project_registration=pass")
-    print("project_count=18 icp_status=candidate overall_status=partial confirmation_status=human_required")
+    print("project_count=19 icp_status=candidate overall_status=partial confirmation_status=human_required")
     print("historical_project_count=17 historical_evidence_rewrite=false")
     return 0
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626
 title: GlobalCloud 项目群总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/GlobalCloud 项目群总体方案.md
 source_path: 01-architecture/GlobalCloud 项目群总体方案.md
 sync_direction: bidirectional
-last_reviewed: 2026-08-03
+last_reviewed: 2026-10-10
 supersedes: []
 superseded_by: []
 ---
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 2. 项目群范围
 
-项目群当前纳入 18 个项目。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
+项目群当前纳入 19 个项目（2026-10-10 新增 PQC）。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
 
 | 项目 | 主职责 |
 |---|---|
@@ -53,6 +53,8 @@ superseded_by: []
 | SOP | 绿色供应链场景 SOP 和对外材料候选 |
 | GPCF | 项目群治理、文档、证据、门禁、状态传导和 LOOP 编排 |
 | ICP | 24字产业模型、十一池只读资源投影、场景编排、产业匹配和控制决策候选 |
+
+| PQC | PVA 价值联盟运营侧包装成本、报价审批、采购及订单回款业务系统；不替代 KDS 主存、GFIS 工厂执行或 WAES 治理 |
 
 ## 2.2 GC-ICP 产业控制平面边界
 
