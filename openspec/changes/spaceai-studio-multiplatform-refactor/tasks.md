@@ -89,3 +89,11 @@ superseded_by: []
 - [x] 9.6 **业务链路（三段打通）**：`apps/desktop/src/api.ts`（前端 `RestClient` 经 BFF `/api/*` 访问上游，**不直连**）+ **6 测试** + **真实三段验证**（desktop → BFF → 上游，上游确收 `/ServerDateTime`）；UI 加「业务通道自检」按钮 → `pnpm test` **78/78**。
 - [x] 9.7 **桌面实际启动验证**：`open -g` 启动 `.app` → **System Events 报告 1 个窗口**（界面真实渲染）→ 运行健康（CPU 0.1% / 内存 0.4% / STAT=S）→ **优雅退出**（响应 `quit` 事件）→ **无残留**。**「能构建」升级为「能启动、有界面、能正常退出」**。
 - [ ] 9.8 余项（按需）：真实遗留后端的**字段级适配**、旧 DLL 兼容桥（Windows 专用）、移动端适配。
+
+## 10. UI 还原（老卢 2026-10-10 方向：「重构后应还原原有 UI 和功能；外部连接可本机模拟」）
+
+- [x] 10.1 **素材与依据盘点**：`menustruct.xml`（**12 个可见模块**：首页/视频/报警/对讲/大屏/车辆/设备/门禁/地图/巡更/配置/报警弹窗）+ `FrmLogin/FrmMain/FrmMenu` Designer（原始坐标）+ `Resources/`**430 个界面 PNG（21MB）**。
+- [x] 10.2 **登录页还原**（`FrmLogin`）：按原坐标还原（`login_bg` 背景 / 双标题 / 双输入框 430×64 + `user`/`mima` 图标 / 记住用户名 / 登录按钮 / 右上角窗口按钮）；**33 个素材**入 `public/ui/`。
+- [x] 10.3 **主界面壳还原**（`FrmMain`+`FrmMenu`）：左导航 **100px**（`NavBG` + `logooo` Logo + **12 模块** `ucMenu` 94×62）+ 顶部 **45px**（`TopBG`）+ 内容区 + 底部状态栏（`bg_screen_bottom`，红字状态）；窗口改**无边框最大化**（还原 `FormBorderStyle=None`+`Maximized`）。
+- [x] 10.4 **验收**：`pnpm test` **78/78**；`vite build` 85.55 kB；**实机启动 + 截图核对**（登录页、主界面各一张，元素齐全、无破图无错位）。证据 `docs/specs/UI-R1-login-and-shell.md`。
+- [ ] 10.5 待修：① 窗口位置偏差（-60,39，左导航被屏幕裁切）；② 巡更 `Xg`/设置 active 图标缺失（fallback）；③ 模块内容区（R3+ 补齐）；④ 登录未真调 `/User/Login`（本机模拟登录为下一批）。
