@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-10T15:52:40.785659+08:00",
+  "generated_at": "2026-10-10T16:00:16.728665+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
@@ -9,19 +9,13 @@
     "GlobalCoud GPCF",
     "GlobalCloud KDS"
   ],
-  "observed_ahead": [
-    "GlobalCoud GPCF",
-    "GlobalCloud KDS"
-  ],
+  "observed_ahead": [],
   "stable_dirty": [
     "GlobalCloud KDS",
     "GlobalCloud Studio",
     "GlobalCoud GPCF"
   ],
-  "stable_ahead": [
-    "GlobalCloud KDS",
-    "GlobalCoud GPCF"
-  ],
+  "stable_ahead": [],
   "volatile_dirty": [
     "GlobalCoud GPCF"
   ],
@@ -35,7 +29,7 @@
   ],
   "pass_repo_count": 14,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-10T15:49:55.980253+08:00",
+  "previous_generated_at": "2026-10-10T15:59:35.607752+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -243,66 +237,15 @@
       ]
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 56,
-      "ahead": 1,
+      "dirty_count": 5,
+      "ahead": 0,
       "behind": 0,
       "paths": [
-        "\"01-architecture/GlobalCloud \\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
-        "\"02-governance/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210\\346\\262\\273\\347\\220\\206\\344\\270\\223\\351\\241\\271\\347\\233\\256\\346\\240\\207\\344\\270\\216\\350\\267\\257\\347\\272\\277\\345\\233\\276.md\"",
-        "02-governance/loop/LOOP_CONTROL_BOARD.md",
-        "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
-        "02-governance/loop/LOOP_UI_PRODUCT_FIRST_CONTROL.md",
-        "\"04-ui-delivery/GlobalCloud\\351\\241\\271\\347\\233\\256\\347\\276\\244\\347\\225\\214\\351\\235\\242\\345\\267\\245\\347\\250\\213\\346\\225\\264\\344\\275\\223\\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "09-status/globalcloud-document-health-report.md",
-        "09-status/globalcloud-project-group-openspec-applicability-matrix.md",
-        "09-status/globalcloud-project-group-real-execution-governance-board.md",
-        "09-status/gpcf-project-status-matrix.md",
-        "09-status/project-group-master-plan-governance-status-report.md",
-        "\"GlobalCloud \\351\\241\\271\\347\\233\\256\\347\\276\\244\\345\\256\\236\\346\\226\\275\\346\\226\\271\\346\\241\\210.md\"",
-        "config/project-group-projects.yaml",
-        "config/project-group-skill-chain.yaml",
-        "docs/harness/evidence/globalcloud-project-group-authorization-layer-matrix-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-authorization-routing-20260625.md",
-        "docs/harness/evidence/globalcloud-project-group-authorization-to-pre-execution-total-bridge-audit-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-dependency-execution-matrix-20260625.md",
-        "docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-execution-receipt-pre-execution-bridge-audit-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-full-project-baseline-20260625.md",
-        "docs/harness/evidence/globalcloud-project-group-human-confirmation-request-20260625.md",
-        "docs/harness/evidence/globalcloud-project-group-next-executable-task-packs-20260625.md",
-        "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-chain-consistency-audit-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-decision-board-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-human-fill-request-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-package-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-example-pack-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-next-stage-authorization-receipt-recording-procedure-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-ready-for-review-advancement-queue-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-ready-for-review-trigger-map-20260627.md",
-        "docs/harness/evidence/globalcloud-project-group-real-execution-completion-gap-matrix-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-real-execution-governance-progress-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-real-execution-objective-coverage-audit-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-status-advancement-matrix-20260625.md",
-        "docs/harness/evidence/globalcloud-project-group-wave1-authorization-receipt-ledger-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-wave1-authorization-request-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-wave1-execution-command-pack-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-wave1-pre-execution-environment-readiness-20260626.md",
-        "docs/harness/evidence/globalcloud-project-group-wave1-receipt-pre-execution-bridge-audit-20260627.md",
-        "docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-CHAIN-001.md",
-        "scripts/gpcf_feature_lib.py",
-        "tools/kds-sync/validate_icp_project_registration.py",
-        "tools/kds-sync/validate_loop_project_group_gate_readiness.py",
-        "tools/kds-sync/validate_project_group_openspec_coverage.py",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/.openspec.yaml",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/README.md",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/design.md",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/proposal.md",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/specs/README.md",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/README.md",
-        "openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md",
         "openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md",
         "projects/spaceai-studio/STATUS.md",
-        "projects/spaceai/STATUS.md"
+        ".harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/evidence-index.yaml",
+        ".harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/run.yaml",
+        ".harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/validation-summary.yaml"
       ],
       "sensitive_paths": []
     },
@@ -328,8 +271,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 16,
-      "ahead": 1,
+      "dirty_count": 8,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\272\\225\\345\\272\\247/00_\\345\\237\\272\\347\\241\\200\\346\\224\\257\\346\\222\\221\\345\\272\\225\\345\\272\\247\\346\\200\\273\\344\\275\\223\\346\\226\\271\\346\\241\\210.md\"",
@@ -338,14 +281,6 @@
         "\"_governance/2026-10-10_KDS\\344\\274\\230\\345\\214\\226\\345\\267\\245\\344\\275\\234\\346\\212\\245\\345\\221\\212\\345\\244\\215\\350\\257\\204\\344\\270\\216\\350\\256\\241\\345\\210\\222\\344\\277\\256\\350\\256\\242\\345\\273\\272\\350\\256\\256.md\"",
         "\"_governance/2026-10-10_KDS\\344\\274\\230\\345\\214\\226\\346\\212\\245\\345\\221\\212\\345\\244\\215\\350\\257\\204\\350\\257\\201\\346\\215\\256.json\"",
         "\"_governance/2026-10-10_\\346\\261\\240\\350\\201\\232\\345\\220\\210\\345\\231\\250\\346\\226\\271\\346\\241\\210\\350\\257\\204\\344\\274\\260\\344\\270\\216\\344\\277\\256\\350\\256\\242\\345\\273\\272\\350\\256\\256.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/README.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/multiplatform-refactor-plan.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/specs/P0-\\346\\261\\207\\346\\200\\273.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/specs/P1-\\346\\261\\207\\346\\200\\273.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/specs/P2-\\346\\261\\207\\346\\200\\273.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/specs/P3-\\346\\261\\207\\346\\200\\273.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/specs/P4-\\346\\261\\207\\346\\200\\273.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/14-SpaceAIStudio/specs/P5-\\346\\261\\207\\346\\200\\273.md\"",
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\272\\225\\345\\272\\247/SOP\\346\\261\\240.md\"",
         "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\272\\225\\345\\272\\247/SOP\\346\\261\\240\\345\\267\\245\\344\\275\\234\\350\\246\\206\\347\\233\\226\\344\\270\\216\\345\\273\\272\\350\\256\\276\\346\\270\\205\\345\\215\\225.md\""
       ],

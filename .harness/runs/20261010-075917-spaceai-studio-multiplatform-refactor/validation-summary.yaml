@@ -1,0 +1,57 @@
+run_id: 20261010-075917-spaceai-studio-multiplatform-refactor
+change_id: spaceai-studio-multiplatform-refactor
+generated_at: "2026-10-10T07:59:17Z"
+language: zh-CN
+result: partial_p0_to_p5_complete_p6_pending
+checks:
+  ts_tests:
+    result: pass
+    command: pnpm test
+    total: 51
+    failed: 0
+    detail: P1 14 + P2 19 + P3 10 + P4 8
+  rust_tests:
+    result: pass
+    command: cargo test
+    total: 5
+    failed: 0
+    detail: apps/desktop/src-tauri/src/platform.rs 设备探测平台抽象
+  vite_build:
+    result: pass
+    modules: 2667
+    size: 140.01 kB
+  tauri_cargo_check:
+    result: pass
+  macos_bundle:
+    result: pass
+    path: apps/desktop/src-tauri/target/release/bundle/macos/SpaceAI Studio.app
+    size: 8.17 MiB
+    bundled_executable_bytes: 8246160
+    self_contained: true
+    detail: otool -L 检出 0 处指向 target/ 的本地路径
+    launch_verified: false
+  openspec_strict:
+    result: pass
+    command: openspec validate spaceai-studio-multiplatform-refactor --strict
+  document_gate:
+    result: pass
+    missing_metadata: 0
+    missing_readme_dirs: 0
+  credential_exclusion:
+    result: pass
+    staged_files_checked: 73
+    secrets_found: 0
+    detail: 7 个含口令/连接串的敏感文件在 .gitignore 排除列表内，未跟踪未入库
+  legacy_sources_untouched:
+    result: pass
+    detail: 遗留 C# 业务源码本轮零修改
+  ci_multiplatform:
+    result: pending
+    run_id_1: 38036132634
+    run_id_2: 38036252399
+    detail: 首轮因 packageManager 与 action version 双指定 pnpm 版本而失败（测试未开始）；已修复并重跑
+conclusion:
+  p0_to_p5_deliverables_present: true
+  runtime_launch_evidence_present: false
+  multiplatform_artifacts_present: false
+  human_acceptance_required: true

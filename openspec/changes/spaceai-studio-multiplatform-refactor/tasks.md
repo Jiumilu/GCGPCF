@@ -75,6 +75,6 @@ superseded_by: []
 
 ## 8. 收口与归档
 
-- [ ] 8.1 证据归档到 `.harness/runs/`。
-- [ ] 8.2 状态复核：维持 `partial`，人工确认后再议提升。
-- [ ] 8.3 变更归档（`openspec archive`）前置条件核对。
+- [x] 8.1 证据归档到 `.harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/`（`run.yaml` + `validation-summary.yaml` + `evidence-index.yaml`）；**YAML 语法校验通过**，文档门禁 pass。
+- [x] 8.2 状态复核：`projects/spaceai-studio/STATUS.md` 升 **v1.1**，**维持 `overall_status: partial`**；补录 P0–P5 执行结果、凭据安全结论、UAV 巡更语义警示与证据指针。
+- [x] 8.3 归档前置条件核对：**不满足** → ① 任务 29/37 未闭合；② `.harness/config.yaml` 要求 `archive.require_acceptance_first` 与 `require_confirmation`（需人工验收+确认）；③ 缺运行态与三平台产物证据。**`openspec archive` 暂不执行**，维持 `partial`。

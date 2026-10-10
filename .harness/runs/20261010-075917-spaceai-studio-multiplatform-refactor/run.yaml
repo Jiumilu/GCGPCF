@@ -1,0 +1,34 @@
+run_id: 20261010-075917-spaceai-studio-multiplatform-refactor
+change_id: spaceai-studio-multiplatform-refactor
+entrypoint: /opsx:apply
+requested_by: human
+started_at: "2026-10-10T07:59:17Z"
+updated_at: "2026-10-10T07:59:17Z"
+status: partial
+language: zh-CN
+scope: 遗留 Windows 安防客户端（UNISECManage）重构为多平台 GlobalCloud 空间智能工作台；执行 P0–P5，全程不改遗留业务代码
+repository:
+  canonical: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud SpaceAI Studio
+  remote: https://github.com/Jiumilu/GCSpaceAIStudio
+  branch: main
+  head: 9d4cc4e402471cd4080a220ff434145c2ed00a45
+authorization:
+  onboarding_and_git_establishment: approved_2026-10-10
+  implementation_authorized: true
+  kds_write_authorized: true
+  commit_push_authorized: true
+  note: 提交与推送经老卢 2026-10-10 明确确认（clarify）后执行
+result:
+  p0_specs: complete
+  p1_contract_domain: complete
+  p2_transport: complete
+  p3_shell_plugin_host: complete
+  p4_patrol_pilot: complete
+  p5_platform_packaging: complete_macos_plus_ci
+  ts_tests: 51
+  rust_tests: 5
+  openspec_tasks: 29/37
+  macos_bundle: "SpaceAI Studio.app (8.17 MiB)"
+  ci_run_1: failure_pnpm_version_conflict_before_any_test
+  ci_run_2: pending
+evidence_index: .harness/runs/20261010-075917-spaceai-studio-multiplatform-refactor/evidence-index.yaml

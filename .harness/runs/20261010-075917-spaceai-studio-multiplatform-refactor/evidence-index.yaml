@@ -1,0 +1,52 @@
+schema_version: harness-evidence-index/v1
+run_id: 20261010-075917-spaceai-studio-multiplatform-refactor
+change_id: spaceai-studio-multiplatform-refactor
+generated_at: "2026-10-10T07:59:17Z"
+language: zh-CN
+status_claim: partial_p0_to_p5_complete_p6_pending
+evidence:
+  - id: openspec-tasks
+    path: ../../../openspec/changes/spaceai-studio-multiplatform-refactor/tasks.md
+    description: OpenSpec 任务清单与勾选状态（29/37）
+    freshness: current
+    trust_level: agent_generated
+  - id: openspec-spec
+    path: ../../../openspec/changes/spaceai-studio-multiplatform-refactor/specs/spaceai-studio-multiplatform-platform/spec.md
+    description: 平台级需求 delta（ADDED Requirements）
+    freshness: current
+    trust_level: agent_generated
+  - id: project-status
+    path: ../../../projects/spaceai-studio/STATUS.md
+    description: "项目登记与状态（overall_status: partial）"
+    freshness: current
+    trust_level: agent_generated
+  - id: p0-rest-protocol
+    path: ../../../../GlobalCloud SpaceAI Studio/docs/specs/P0-01-rest-protocol.md
+    description: 20 个 REST 端点固证
+    freshness: current
+    trust_level: agent_generated
+  - id: p0-dependency-disposition
+    path: ../../../../GlobalCloud SpaceAI Studio/docs/specs/P0-05-dependency-disposition.md
+    description: 依赖处置（源码复用 7 / 逆向 7 / 设备类第三方 / 替换 5+ / 模块缺失 12）
+    freshness: current
+    trust_level: agent_generated
+  - id: p0-migration-surface
+    path: ../../../../GlobalCloud SpaceAI Studio/docs/specs/P0-06-migration-surface.md
+    description: 迁移面清单 245 文件 → A 可迁移 66 / B 需重写 149 / C 不可用 30
+    freshness: current
+    trust_level: machine_generated
+  - id: p4-patrol-pilot
+    path: ../../../../GlobalCloud SpaceAI Studio/docs/specs/P4-01-patrol-pilot.md
+    description: 首模块试点报告与遗留行为比对、MB3000 巡更语义警示
+    freshness: current
+    trust_level: agent_generated
+  - id: p5-platform-packaging
+    path: ../../../../GlobalCloud SpaceAI Studio/docs/specs/P5-01-platform-and-packaging.md
+    description: Rust 平台抽象、三平台 CI、macOS 打包与自包含校验
+    freshness: current
+    trust_level: agent_generated
+  - id: ci-workflow
+    path: ../../../../GlobalCloud SpaceAI Studio/.github/workflows/build.yml
+    description: 三平台构建工作流（test + bundle matrix）
+    freshness: current
+    trust_level: machine_generated
