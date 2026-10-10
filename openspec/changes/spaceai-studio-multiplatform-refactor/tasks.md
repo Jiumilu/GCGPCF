@@ -84,4 +84,5 @@ superseded_by: []
 - [x] 9.1 **前端平台桥** `apps/desktop/src/platform.ts`：Tauri 环境检测（`__TAURI_INTERNALS__`）+ `invokeTauri`（**非 Tauri 环境安全降级、不抛错**）+ `probeDevice` / `commonDevicePorts` 封装；依赖 `@tauri-apps/api ^2.12.2`（**动态 import** → 独立分包 `core-*.js` 2.49 kB，Web 场景不加载）。
 - [x] 9.2 **设备探测面板** `apps/desktop/src/views/DeviceProbeView.vue`（主机/端口输入、可达性与延迟显示、常见安防端口表），挂载于 `ShellView` 的「平台能力（Tauri）」区。
 - [x] 9.3 **测试与构建**：新增 **6 个测试**（降级行为 / 接口形状 / 环境恢复）→ `pnpm test` **57/57**；`vite build` 2673 模块 → 143.45 kB（gzip 52.55 kB）。证据 `docs/specs/P6-01-frontend-platform-bridge.md`。
-- [ ] 9.4 余项（按需）：旧 DLL 兼容桥（Windows 专用）、移动端适配、BFF↔Tauri 联调、桌面环境实际点击验证。
+- [x] 9.4 **BFF 连通性联调**：`apps/desktop/src/bff.ts`（`checkBff`）+ `BffStatusView.vue` + **6 测试**；**真实端到端验证**（启动 `apps/server` → `checkBff` → `{ok:true, endpoints:20, version:"0.1.0"}`，验证后已停止服务）→ `pnpm test` **63/63**。
+- [ ] 9.5 余项（按需）：REST 业务端点经 BFF 代理转发、旧 DLL 兼容桥（Windows 专用）、移动端适配、桌面环境实际点击验证。
