@@ -21,8 +21,8 @@ def main() -> int:
     registry = yaml.safe_load(REGISTRY.read_text(encoding="utf-8"))
     projects = registry.get("projects", [])
     expected = {item["id"]: item["slug"] for item in projects}
-    if registry.get("current_project_count") != 19 or len(expected) != 19:
-        failures.append("project registry must contain exactly 19 unique current projects")
+    if registry.get("current_project_count") != 21 or len(expected) != 21:
+        failures.append("project registry must contain exactly 21 unique current projects")
 
     text = MATRIX.read_text(encoding="utf-8")
     rows: dict[str, list[str]] = {}

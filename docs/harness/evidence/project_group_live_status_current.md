@@ -18,28 +18,28 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-09 23:58:45 +0800
+generated_at: 2026-10-10 15:52:40 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-09T23:58:45.587881+08:00`
+- generated_at: `2026-10-10T15:52:40.785659+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `15`
+- pass_repo_count: `14`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Studio, GlobalCloud KDS`
-- observed_ahead: `none`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud Studio`
-- stable_ahead: `none`
-- volatile_dirty: `none`
+- observed_dirty: `GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS`
+- observed_ahead: `GlobalCoud GPCF, GlobalCloud KDS`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- stable_ahead: `GlobalCloud KDS, GlobalCoud GPCF`
+- volatile_dirty: `GlobalCoud GPCF`
 - sensitive_repos: `GlobalCloud Studio`
-- review_boundary: `GlobalCloud KDS, GlobalCloud Studio`
+- review_boundary: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
 
 ## Repo details
 
@@ -52,11 +52,11 @@ generated_at: 2026-10-09 23:58:45 +0800
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 152 | 0 | 0 | `tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
-| `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 56 | 1 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 9 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 16 | 1 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626
 title: GlobalCloud 项目群总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, PQC, SpaceAI, SpaceAIStudio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 2. 项目群范围
 
-项目群当前纳入 19 个项目（2026-10-10 新增 PQC）。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
+项目群当前纳入 21 个项目（2026-10-10 新增 PQC、SpaceAI、SpaceAIStudio）。18 项目及更早证据保持历史范围，不因纳管重算。2026-06-28 以前形成的17项目证据继续作为历史基线，不因新增 ICP 回写或重算：
 
 | 项目 | 主职责 |
 |---|---|
@@ -55,6 +55,9 @@ superseded_by: []
 | ICP | 24字产业模型、十一池只读资源投影、场景编排、产业匹配和控制决策候选 |
 
 | PQC | PVA 价值联盟运营侧包装成本、报价审批、采购及订单回款业务系统；不替代 KDS 主存、GFIS 工厂执行或 WAES 治理 |
+
+| SpaceAIStudio | 独立 Windows 安防监控桌面客户端；保留与 Studio、SpaceAI 的项目边界；敏感文件仅留本地，overall_status=partial |
+| SpaceAI | 既有 Windows/.NET 桌面工程，含地图与视频设备组件；独立纳管，业务定位及跨系统边界待验证，不授予生产或业务事实写入权 |
 
 ## 2.2 GC-ICP 产业控制平面边界
 
@@ -149,3 +152,11 @@ customer_accepted = false
 本方案继承 `GlobalCloud宪法`。宪法是产业模型的具体实践总纲和项目群最高规范性权威文件；本方案是其授权下的最高总体执行控制文件，不得反向覆盖宪法的产业模型、根本原则、体系边界和权威关系。
 
 宪法治理的产业领域主责归 ICP，canonical 正本与版本保管归 KDS。SOP 负责修订程序与审计，GPCF 负责方案传导、冲突检测和 G00 继承门禁，WAES 与人工负责授权和状态裁决。任何单一项目不得完成自提、自审、自批、自发布闭环。
+
+## 工业绿链底座SOP池设计回传（2026-10-10）
+
+用户要求新增SOP池并根据全部工作规划纳入工业绿链底座。本轮回传[工业绿链底座SOP池](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/底座/SOP池.md>)及[工作覆盖与建设清单](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/底座/SOP池工作覆盖与建设清单.md>)，状态为设计登记/partial，未发布新业务SOP或提升运行状态。底座使用可扩展池目录，不以池数命名；历史十一池架构和证据保留原阶段口径。
+
+SOP-POOL聚合工作程序、适用版本、步骤、证据要求和执行引用；场景池选择编排SOP版本，生态池提供主体与角色，人才池提供能力和授权引用。原SOP正文、既有SOP账本、GlobalCloud SOP项目及业务系统的职责保留；业务确认与WAES/Harness治理确认分开，不新增业务主账或审批权。
+
+传导对象为KDS、SOP、WAES、ICP、Studio及按业务适用的GPC/GFIS/PVAOS/PQC：后续在各自变更包核对SOP身份/版本、任务步骤、证据与权限契约。此登记不表示这些系统已接入SOP池，不自动将候选标准提升为生效标准。

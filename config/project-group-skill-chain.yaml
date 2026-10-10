@@ -1,7 +1,7 @@
 schema_version: 1
 default_entry: globalcloud-loop-orchestrator
 project_coverage:
-  current_project_count: 19
+  current_project_count: 21
   default_required_skills:
     - globalcloud-loop-orchestrator
     - globalcloud-document-governance
@@ -51,6 +51,10 @@ project_coverage:
     - slug: icp
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance]
     - slug: pqc
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance, globalcloud-ui-quality-gate]
+    - slug: spaceai
+      required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance, globalcloud-ui-quality-gate]
+    - slug: spaceai-studio
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean, globalcloud-openspec-governance, globalcloud-ui-quality-gate]
 engineering_domains:
   - id: GKE-001

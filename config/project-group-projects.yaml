@@ -1,5 +1,5 @@
 schema_version: 1
-current_project_count: 19
+current_project_count: 21
 historical_baselines:
   - count: 17
     through: 2026-06-27
@@ -24,3 +24,5 @@ projects:
   - {id: XGD, slug: xgd}
   - {id: ICP, slug: icp}
   - {id: PQC, slug: pqc}
+  - {id: SpaceAI, slug: spaceai}
+  - {id: SpaceAIStudio, slug: spaceai-studio}

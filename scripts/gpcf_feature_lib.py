@@ -41,6 +41,7 @@ PROJECTS = {
     "xgd",
     "icp",
     "pqc",
+    "spaceai-studio",
 }
 PRIORITIES = {"P0", "P1", "P2", "P3"}
 STEPS = ["plan", "implement", "evaluate", "repair", "commit"]
