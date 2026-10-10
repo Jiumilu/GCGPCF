@@ -87,4 +87,5 @@ superseded_by: []
 - [x] 9.4 **BFF 连通性联调**：`apps/desktop/src/bff.ts`（`checkBff`）+ `BffStatusView.vue` + **6 测试**；**真实端到端验证**（启动 `apps/server` → `checkBff` → `{ok:true, endpoints:20, version:"0.1.0"}`，验证后已停止服务）→ `pnpm test` **63/63**。
 - [x] 9.5 **REST 代理** `apps/server/src/proxy.ts`：`/api/*` → 上游（`UPSTREAM_BASE`，未配置不挂载），含前缀剥离、查询串/请求体/**`Set-Cookie` 会话透传**、逐跳头过滤、**不静默失败**（上游不可达 → `502` + 统一信封）、超时保护；**9 个测试** + **真实集成验证**（起 BFF+上游，`curl /api/User/Info?x=1` → 上游收到 `/User/Info?x=1`）→ `pnpm test` **72/72**。
 - [x] 9.6 **业务链路（三段打通）**：`apps/desktop/src/api.ts`（前端 `RestClient` 经 BFF `/api/*` 访问上游，**不直连**）+ **6 测试** + **真实三段验证**（desktop → BFF → 上游，上游确收 `/ServerDateTime`）；UI 加「业务通道自检」按钮 → `pnpm test` **78/78**。
-- [ ] 9.7 余项（按需）：真实遗留后端的**字段级适配**、旧 DLL 兼容桥（Windows 专用）、移动端适配、桌面环境实际点击验证。
+- [x] 9.7 **桌面实际启动验证**：`open -g` 启动 `.app` → **System Events 报告 1 个窗口**（界面真实渲染）→ 运行健康（CPU 0.1% / 内存 0.4% / STAT=S）→ **优雅退出**（响应 `quit` 事件）→ **无残留**。**「能构建」升级为「能启动、有界面、能正常退出」**。
+- [ ] 9.8 余项（按需）：真实遗留后端的**字段级适配**、旧 DLL 兼容桥（Windows 专用）、移动端适配。
