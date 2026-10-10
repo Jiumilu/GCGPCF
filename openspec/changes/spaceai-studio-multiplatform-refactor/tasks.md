@@ -96,4 +96,7 @@ superseded_by: []
 - [x] 10.2 **登录页还原**（`FrmLogin`）：按原坐标还原（`login_bg` 背景 / 双标题 / 双输入框 430×64 + `user`/`mima` 图标 / 记住用户名 / 登录按钮 / 右上角窗口按钮）；**33 个素材**入 `public/ui/`。
 - [x] 10.3 **主界面壳还原**（`FrmMain`+`FrmMenu`）：左导航 **100px**（`NavBG` + `logooo` Logo + **12 模块** `ucMenu` 94×62）+ 顶部 **45px**（`TopBG`）+ 内容区 + 底部状态栏（`bg_screen_bottom`，红字状态）；窗口改**无边框最大化**（还原 `FormBorderStyle=None`+`Maximized`）。
 - [x] 10.4 **验收**：`pnpm test` **78/78**；`vite build` 85.55 kB；**实机启动 + 截图核对**（登录页、主界面各一张，元素齐全、无破图无错位）。证据 `docs/specs/UI-R1-login-and-shell.md`。
-- [ ] 10.5 待修：① 窗口位置偏差（-60,39，左导航被屏幕裁切）；② 巡更 `Xg`/设置 active 图标缺失（fallback）；③ 模块内容区（R3+ 补齐）；④ 登录未真调 `/User/Login`（本机模拟登录为下一批）。
+- [ ] 10.5 待修：① 窗口位置偏差（-60,39，左导航被屏幕裁切——无边框窗口初始位置，待调）；② 巡更 `Xg`/设置 active 图标缺失（fallback）；③ 模块内容区——报警（10.6）、设备（10.7）已补，余：首页/视频/对讲/大屏/车辆/门禁/地图/巡更；④ 登录未真调 `/User/Login`（本机模拟登录为下一批）。
+- [x] 10.6 **R3 报警模块还原**（`ucAlarmInfo` + `FrmAlarmNoticeList`）：按原 Designer 还原 4 列行（时间 128 / 级别 60 / 名称 75 / 资产 88，底 `RGB(37,47,93)`，1px 分隔线）+ 级别配色（紧急红/重要黄/一般蓝）+ 「更多」链接；数据经 BFF `/api/Alarm/Info/Page`（**内置模拟上游**，无需真实后端）。**实机截图验证**：5 条报警、「共 5 条 · 未处理 3」、无错误。
+- [x] 10.7 **R4 设备模块还原**（`menustruct no=19`）：字段沿用遗留 `Model/DataAssert.cs`（`AssetID`/`AssetName`/`AssetTypeID`/`AssetBrand`/`AssetOwner`/`address`/`StatusID`/`CanControl` + 环境温湿度光照）；列表 + 详情面板（`/DeviceAccess`、`/Asset/AssetInfo/AssetID/{id}`）。**实机截图验证**：5 台设备、「共 5 台 · 在线 4 · 离线 1」、无错误。
+- [x] 10.8 **真机验证暴露并修复两处深链缺陷**（Node 测试盲区）：① `packages/protocol/src/rest.ts` 默认 `fetch` 未绑定 `globalThis` → WebView 抛 `Can only call Window.fetch on instances of Window`（已绑定 + 新增「浏览器严格 this」回归测试）；② BFF 缺 CORS → WebView（origin `tauri://localhost`）跨源请求报 `Load failed`（已加 CORS 中间件：回显 Origin + OPTIONS 204 + credentials）。`pnpm test` **79/79**。证据：实机截图 2 张（报警 / 设备）。
