@@ -111,3 +111,8 @@ superseded_by: []
 - O-1 产出：`图谱/ontology/mapping.yaml` v0.1（13 术语引用＋11 对象类型/8 谓词映射＋8 条登记请求）；schema v0.3（objects）/v0.2（claims）增 ontologyRef 等 5 可选字段；校验 **+C18-C20（→20 项）**；版本矩阵行（含 P0-0 口径注）。
 - 验收：正例 **20/20**（含 C18-C20）；负例B（剔除 risk）→C20 检出；负例A（注入未登记术语）→C18 检出＋C01 连带；首轮 C20 **自检出** supports 条目缺注→即时修复。摘要 c6484468 不变。证据：`图谱/evidence/2026-10-11_O-1语义锚定验收（N01-N03）.md`
 - 另：《整体方案实施·项目群影响与开发范围确认表 v0.1》产出——项目群变更＝6 项新增/追加（仅 1 项受控文档修订）；开发范围＝图谱派生区文件级增量。
+
+## 2026-10-11 · O-2 契约出口执行
+- 产出：`scripts/xwail_export.py` v0.1（快照→XWAIL JSON；确定性；排除报告）＋`ontology/xwail_mapping_spec.md` v0.1＋`ontology/exports/`（focus-b01／focus-e01／focus-huangmei-01-6／all=49 assets·8 relations·43 显式排除）。
+- 验收 N04—N06：XWAIL 校验库**只读导入 pass**（4 模型 0 问题；回指字段完整）；双跑**逐字节一致**（total `ad548e4881de…`）；候选边界保持（provisionalCategory＋boundary；inference 不导出；waesStatus=Draft）。
+- 说明：其 CLI 对仓外路径不兼容（relative_to）→ 只读导入校验库执行同一逻辑；**未修改 XWAIL 仓**（改进建议留其流程）。提案 3 处修正（XML→JSON／维度 notApplicable／EvidenceRecord→sourceRefs）记录于规范 §9。图谱 20 项校验回归通过。
