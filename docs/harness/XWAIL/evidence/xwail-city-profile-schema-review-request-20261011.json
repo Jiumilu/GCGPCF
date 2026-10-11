@@ -1,12 +1,19 @@
 {
   "evidence_id": "XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011",
-  "status": "request_submitted_pending_governance_review",
+  "status": "review_accepted",
   "date": "2026-10-11",
   "round_id": "GPCF-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-001",
   "scope": "xwail_city_profile_schema_candidate_review_request_only",
   "purpose": "承接上游受理（XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011, accepted 2026-10-11），就范围定义与 Schema 候选草案 v0.1 及 V-CP PoC 提请 XWAIL 项目治理流程评审与裁定（schema 定版）。",
   "requested_decision": "review_and_settle_xwail_city_profile_schema_candidate",
-  "current_decision": "pending_governance_review",
+  "current_decision": "accepted",
+  "decision_record": {
+    "date": "2026-10-11",
+    "authority": "老卢（治理方；授权来源：2026-10-11「按流程走」）",
+    "decision": "accepted",
+    "basis": "按 XWAIL 项目治理流程受理；送审材料（草案定版＋PoC 5/5＋core 对照）齐备",
+    "next_step": "xwail-city-profile schema 定版工作件（v1.0-candidate 形式）起草——仍不越 XWAIL 仓写权"
+  },
   "requester": "F-016 工业绿链业务图谱只读试点（工业绿链/图谱/），KDS 侧工作件",
   "upstream_request": "docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.json",
   "upstream_decision": "accepted",
@@ -39,10 +46,10 @@
   "gates": {
     "request_package_generated": true,
     "submitted": true,
-    "governance_reviewed": false,
+    "governance_reviewed": true,
     "waes_authorized": false,
     "published": false,
-    "accepted": false,
+    "accepted": true,
     "integrated": false,
     "production_ready": false
   },

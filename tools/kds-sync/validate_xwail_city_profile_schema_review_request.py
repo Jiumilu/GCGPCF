@@ -59,13 +59,18 @@ def main() -> int:
 
     require(evidence.get("evidence_id") == "XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011",
             "invalid evidence id")
-    require(evidence.get("status") == "request_submitted_pending_governance_review", "invalid status")
+    require(evidence.get("status") in ("request_submitted_pending_governance_review", "review_accepted"),
+            "invalid status")
     require(evidence.get("scope") == "xwail_city_profile_schema_candidate_review_request_only",
             "invalid scope")
     require(evidence.get("requested_decision") == "review_and_settle_xwail_city_profile_schema_candidate",
             "requested decision mismatch")
-    require(evidence.get("current_decision") == "pending_governance_review",
-            "current decision must stay pending")
+    decision = evidence.get("current_decision")
+    require(decision in ("pending_governance_review", "accepted"), f"unknown decision state: {decision}")
+    if decision == "accepted":
+        record = evidence.get("decision_record", {})
+        require(record.get("decision") == "accepted" and record.get("date") and record.get("authority"),
+                "accepted 状态需 decision_record（decision/date/authority）")
     require(evidence.get("upstream_decision") == "accepted", "upstream decision must be accepted")
 
     pre = evidence.get("admission_preconditions", {})
@@ -92,20 +97,30 @@ def main() -> int:
     gates = evidence.get("gates", {})
     require(gates.get("request_package_generated") is True, "request package gate must be true")
     require(gates.get("submitted") is True, "submitted gate must be true")
-    for key in ["governance_reviewed", "waes_authorized", "published", "accepted",
-                "integrated", "production_ready"]:
-        require(gates.get(key) is False, f"gate must be false: {key}")
+    if decision == "accepted":
+        require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
+        require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
+        for key in ["waes_authorized", "published", "integrated", "production_ready"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
+    else:
+        for key in ["governance_reviewed", "waes_authorized", "published", "accepted",
+                    "integrated", "production_ready"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
 
-    for phrase in [
+    phrases = [
         "XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011",
         "review_and_settle_xwail_city_profile_schema_candidate",
-        "pending_governance_review",
         "request_package_generated | true",
         "submitted | true",
         "waes_authorized | false",
         "production_ready | false",
         "定版送审",
-    ]:
+    ]
+    if decision == "accepted":
+        phrases += ["governance_reviewed | true", "accepted | true", "受理记录"]
+    else:
+        phrases += ["pending_governance_review", "governance_reviewed | false", "accepted | false"]
+    for phrase in phrases:
         require(phrase in md, f"evidence md missing phrase: {phrase}")
     require("validate_xwail_city_profile_schema_review_request.py" in loop_round,
             "loop round missing validator")
@@ -125,8 +140,9 @@ def main() -> int:
     print(
         "xwail_city_profile_schema_review_request=pass "
         "requested_decision=review_and_settle_xwail_city_profile_schema_candidate "
-        "current_decision=pending_governance_review submitted=true "
-        "governance_reviewed=false accepted=false integrated=false production_ready=false "
+        f"current_decision={decision} submitted=true "
+        f"governance_reviewed={'true' if decision == 'accepted' else 'false'} "
+        f"accepted={'true' if decision == 'accepted' else 'false'} integrated=false production_ready=false "
         f"kds_attachments_checked={len(KDS_ATTACHMENTS)}"
     )
     return 0

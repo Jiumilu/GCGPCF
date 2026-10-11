@@ -29,7 +29,7 @@ superseded_by: []
 | 项 | 值 |
 |---|---|
 | requested_decision | review_and_settle_xwail_city_profile_schema_candidate |
-| current_decision | pending_governance_review |
+| current_decision | accepted（2026-10-11 按流程受理；见 §8） |
 | requester | F-016 工业绿链业务图谱只读试点（`工业绿链/图谱/`）；KDS 侧工作件 |
 | 上游 | `XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011`（accepted 2026-10-11） |
 
@@ -52,10 +52,10 @@ superseded_by: []
 |---|---|
 | request_package_generated | true |
 | submitted | true |
-| governance_reviewed | false |
+| governance_reviewed | true |
 | waes_authorized | false |
 | published | false |
-| accepted | false |
+| accepted | true |
 | integrated | false |
 | production_ready | false |
 
@@ -68,3 +68,8 @@ superseded_by: []
 ## 7. 下一步
 
 XWAIL 治理流程评审本请求；裁定后按结论执行 schema 定版或退回修订（均不越 XWAIL 仓写权）。
+
+## 8. 受理记录（2026-10-11）
+
+- **受理并通过（accepted）**：授权来源＝老卢「按流程走」（2026-10-11）；送审材料复核齐备（草案定版＋PoC 5/5＋core 对照矩阵）。
+- 后续动作：`xwail-city-profile` schema **定版工作件**（v1.0-candidate 形式）起草——仍不越 XWAIL 仓写权、不声明 WAES 发布。
