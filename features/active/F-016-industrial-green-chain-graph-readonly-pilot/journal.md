@@ -147,3 +147,7 @@ superseded_by: []
 - **定版送审**：草案 v0.1 冻结（`status→submitted_pending_xwail_settlement`）；提交件 `XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011`（requested=`review_and_settle_xwail_city_profile_schema_candidate`；**pending_governance_review**，四件套入 GPCF）。
 - **词表评审材料**：`图谱/ontology/registry_vocab_review_request_v0.1.md`（`state-request:rejected`＋term×8；含影响评估双栏与不通过零损失说明）。
 - 回归：图谱校验 **C01—C20 全 PASS**（hard_fail=0）。
+
+## 2026-10-11 · Profile 定版候选 v1.0 工作件（受理后·按流程）
+- 产出：`图谱/ontology/xwail-city-profile-candidate/`——**schema 契约化定版候选**（JSON Schema 2020-12：cityProfileRef/回指/scopeClasses 硬约束）＋validator v1（schema＋补充检查）＋5 样例＋实跑记录。
+- 验证：**5/5**（负例拒因归类 V-CP-01..04）；core 对照矩阵保持。定版稿**待 XWAIL 流程终裁**；零写回。
