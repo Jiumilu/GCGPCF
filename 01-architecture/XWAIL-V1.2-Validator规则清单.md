@@ -78,6 +78,7 @@ superseded_by: []
 | V1.2-03 Profile 白名单 | high | 模型 `profile` 必须位于登记白名单 | 规范 §3.2；登记载体待定；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（profilecheck.py ＋ profiles-registry.yaml 载体提案，6/6 实证，2026-10-11） |
 | V1.2-04 pilotScope 口径对齐 | high | `admissionStatus` 大小写统一（**以 WAS 契约为准：小写 7 值** draft/candidate/authorized/active/closed/archived/blocked）；wasLayer 枚举对齐（三层 world/industry/scenario） | **WAS 侧已完成（2026-10-11）**；GCXWAIL 侧待其流程（现值=大写 7 值；落点：`xwail-pilot-scope.schema.json` ＋ `xwail_common.py` PILOT_ADMISSION_STATUSES） |
 | V1.2-05 WAES 边界扩展 | high | WAES 边界检查扩展到 Profile / XAP 全族（部分已实现：XWAIL-5001 / XAP-5001） | 规范 §6；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（waescheck.py 三族四规则统一截面，7/7 实证，2026-10-11） |
+| V1.2-06 导入模式检查 | medium | 三种导入模式包侧预检：M1 `packageId` 唯一性／M2 对象级比对（新增/跳过/**冲突挂起不自动合并**）／M3 只读零写断言 | **PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（modecheck.py ＋ 目标状态样本，5/5 实证，2026-10-11）；接口语境＝WAS《接入点_WAES包登记_v0.1》§二 |
 
 ## 4. 严重度与阻断策略
 
