@@ -3,11 +3,17 @@
   "task_id": "GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001",
   "loop_round_id": "GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001",
   "date": "2026-10-11",
-  "status": "request_submitted_pending_governance_review",
+  "status": "request_accepted",
   "scope": "business_domain_registration_request_only",
   "requester": "F-016 工业绿链业务图谱只读试点（工业绿链/图谱/）",
   "requested_decision": "admit_readonly_business_domain_slice_candidate",
-  "current_decision": "pending_governance_review",
+  "current_decision": "accepted",
+  "decision_record": {
+    "date": "2026-10-11",
+    "authority": "老卢（治理方；授权来源：2026-10-11「按推荐执行」）",
+    "decision": "accepted",
+    "next_step": "按六类目登记（登记动作待执行；不修改 registry 既有条目）"
+  },
   "domain": {
     "name": "GreenChainGraphBusinessDomain",
     "alias": "工业绿链业务域（图谱只读投影）",
@@ -44,9 +50,9 @@
     "request_package_generated": true,
     "submitted": true,
     "registry_entry_added": false,
-    "governance_reviewed": false,
+    "governance_reviewed": true,
     "waes_authorized": false,
-    "accepted": false,
+    "accepted": true,
     "integrated": false,
     "production_ready": false
   }

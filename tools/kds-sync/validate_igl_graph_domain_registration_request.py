@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Validate the Industrial Green Chain graph business-domain registration request package."""
+"""Validate the Industrial Green Chain graph business-domain registration request package（支持 pending/accepted 两态）。"""
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.json"
@@ -52,10 +51,13 @@ def main() -> int:
     require_frontmatter(LOOP_ROUND, loop_round)
 
     require(evidence.get("evidence_id") == "IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011", "invalid evidence id")
-    require(evidence.get("status") == "request_submitted_pending_governance_review", "invalid status")
+    require(evidence.get("status") in ("request_submitted_pending_governance_review", "request_accepted"),
+            "invalid status")
     require(evidence.get("scope") == "business_domain_registration_request_only", "invalid scope")
-    require(evidence.get("requested_decision") == "admit_readonly_business_domain_slice_candidate", "requested decision mismatch")
-    require(evidence.get("current_decision") == "pending_governance_review", "current decision must stay pending")
+    require(evidence.get("requested_decision") == "admit_readonly_business_domain_slice_candidate",
+            "requested decision mismatch")
+    decision = evidence.get("current_decision")
+    require(decision in ("pending_governance_review", "accepted"), f"unknown decision state: {decision}")
 
     pre = evidence.get("admission_preconditions", {})
     for key in [
@@ -80,28 +82,41 @@ def main() -> int:
     gates = evidence.get("gates", {})
     require(gates.get("request_package_generated") is True, "request package gate must be true")
     require(gates.get("submitted") is True, "submitted gate must be true")
-    for key in ["registry_entry_added", "governance_reviewed", "waes_authorized", "accepted", "integrated", "production_ready"]:
-        require(gates.get(key) is False, f"gate must be false: {key}")
+    if decision == "accepted":
+        record = evidence.get("decision_record", {})
+        require(record.get("decision") == "accepted" and record.get("date") and record.get("authority"),
+                "accepted 状态需 decision_record（decision/date/authority）")
+        require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
+        require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
+        for key in ["registry_entry_added", "waes_authorized", "integrated", "production_ready"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
+    else:
+        for key in ["registry_entry_added", "governance_reviewed", "waes_authorized", "accepted",
+                    "integrated", "production_ready"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
 
-    for phrase in [
+    phrases = [
         "IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011",
         "request_package_generated | true",
         "submitted | true",
-        "registry_entry_added | false",
-        "governance_reviewed | false",
         "waes_authorized | false",
-        "accepted | false",
         "production_ready | false",
-        "pending_governance_review",
         "state-request:rejected",
-    ]:
+    ]
+    if decision == "accepted":
+        phrases += ["governance_reviewed | true", "accepted | true", "受理记录"]
+    else:
+        phrases += ["registry_entry_added | false", "governance_reviewed | false",
+                    "accepted | false", "pending_governance_review"]
+    for phrase in phrases:
         require(phrase in md, f"evidence md missing phrase: {phrase}")
     require("validate_igl_graph_domain_registration_request.py" in loop_round, "loop round missing validator")
     print(
         "igl_graph_domain_registration_request=pass "
         "requested_decision=admit_readonly_business_domain_slice_candidate "
-        "current_decision=pending_governance_review submitted=true registry_entry_added=false "
-        "accepted=false integrated=false production_ready=false"
+        f"current_decision={decision} submitted=true "
+        f"governance_reviewed={'true' if decision == 'accepted' else 'false'} "
+        f"accepted={'true' if decision == 'accepted' else 'false'} integrated=false production_ready=false"
     )
     return 0
 

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Validate the XWAIL City/Spatial Profile initiation request package."""
+"""Validate the XWAIL City/Spatial Profile initiation request package（支持 pending/accepted 两态）。"""
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.json"
 EVIDENCE_MD = ROOT / "docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md"
+KEEP_FALSE_AFTER_ACCEPT = ["waes_authorized", "published", "integrated", "production_ready"]
 
 
 def require(condition: bool, message: str) -> None:
@@ -52,10 +52,12 @@ def main() -> int:
     require_frontmatter(LOOP_ROUND, loop_round)
 
     require(evidence.get("evidence_id") == "XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011", "invalid evidence id")
-    require(evidence.get("status") == "request_submitted_pending_governance_review", "invalid status")
+    require(evidence.get("status") in ("request_submitted_pending_governance_review", "request_accepted"),
+            "invalid status")
     require(evidence.get("scope") == "xwail_city_spatial_profile_initiation_request_only", "invalid scope")
     require(evidence.get("requested_decision") == "initiate_xwail_city_spatial_profile", "requested decision mismatch")
-    require(evidence.get("current_decision") == "pending_governance_review", "current decision must stay pending")
+    decision = evidence.get("current_decision")
+    require(decision in ("pending_governance_review", "accepted"), f"unknown decision state: {decision}")
 
     pre = evidence.get("admission_preconditions", {})
     for key in [
@@ -80,26 +82,38 @@ def main() -> int:
     gates = evidence.get("gates", {})
     require(gates.get("request_package_generated") is True, "request package gate must be true")
     require(gates.get("submitted") is True, "submitted gate must be true")
-    for key in ["governance_reviewed", "waes_authorized", "published", "accepted", "integrated", "production_ready"]:
-        require(gates.get(key) is False, f"gate must be false: {key}")
+    if decision == "accepted":
+        record = evidence.get("decision_record", {})
+        require(record.get("decision") == "accepted" and record.get("date") and record.get("authority"),
+                "accepted 状态需 decision_record（decision/date/authority）")
+        require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
+        require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
+        for key in KEEP_FALSE_AFTER_ACCEPT:
+            require(gates.get(key) is False, f"gate must be false: {key}")
+    else:
+        for key in ["governance_reviewed"] + KEEP_FALSE_AFTER_ACCEPT + ["accepted"]:
+            require(gates.get(key) is False, f"gate must be false: {key}")
 
-    for phrase in [
+    phrases = [
         "XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011",
         "request_package_generated | true",
         "submitted | true",
-        "governance_reviewed | false",
         "waes_authorized | false",
-        "accepted | false",
         "production_ready | false",
-        "pending_governance_review",
-    ]:
+    ]
+    if decision == "accepted":
+        phrases += ["governance_reviewed | true", "accepted | true", "受理记录"]
+    else:
+        phrases += ["governance_reviewed | false", "accepted | false", "pending_governance_review"]
+    for phrase in phrases:
         require(phrase in md, f"evidence md missing phrase: {phrase}")
     require("validate_xwail_city_spatial_profile_request.py" in loop_round, "loop round missing validator")
     print(
         "xwail_city_spatial_profile_request=pass "
-        "requested_decision=initiate_xwail_city_spatial_profile current_decision=pending_governance_review "
-        "submitted=true governance_reviewed=false waes_authorized=false "
-        "accepted=false integrated=false production_ready=false"
+        "requested_decision=initiate_xwail_city_spatial_profile "
+        f"current_decision={decision} submitted=true "
+        f"governance_reviewed={'true' if decision == 'accepted' else 'false'} "
+        f"accepted={'true' if decision == 'accepted' else 'false'} integrated=false production_ready=false"
     )
     return 0
 

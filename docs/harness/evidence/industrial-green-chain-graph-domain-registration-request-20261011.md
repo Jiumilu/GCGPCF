@@ -29,7 +29,7 @@ superseded_by: []
 | 项 | 值 |
 |---|---|
 | requested_decision | admit_readonly_business_domain_slice_candidate |
-| current_decision | pending_governance_review |
+| current_decision | accepted（2026-10-11 受理；见 §8） |
 | 域名称（建议） | `GreenChainGraphBusinessDomain`（工业绿链业务域 · 图谱只读投影） |
 | 载体 | `工业绿链/图谱/`（F-016 工作区：快照＋回执＋校验＋XWAIL 导出物） |
 | 并列对象 | F-015（GCWORLD 组织域只读切片） |
@@ -67,12 +67,17 @@ superseded_by: []
 | request_package_generated | true |
 | submitted | true |
 | registry_entry_added | false |
-| governance_reviewed | false |
+| governance_reviewed | true |
 | waes_authorized | false |
-| accepted | false |
+| accepted | true |
 | integrated | false |
 | production_ready | false |
 
 ## 7. 下一步
 
 registry admission 流程裁定；受理后按六类目登记（不修改既有条目、不触碰 registry 既有 43 项）。
+
+## 8. 受理记录（2026-10-11）
+
+- **已受理（accepted）**：授权来源＝老卢「按推荐执行」（2026-10-11）；材料复核通过（六类目映射/政策遵循齐备）。
+- 后续动作：按六类目登记（**登记动作待执行**；不修改 registry 既有条目）。

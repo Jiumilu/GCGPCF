@@ -132,3 +132,8 @@ superseded_by: []
 - ③ **矩阵按流程**：语义契约 §5＋三主矩阵 §5 加"实发基线说明"（0.2.x=规划值；实发 0.1.0／1.1.0），version→v1.1，last_reviewed→2026-10-11，走 document_control。
 - ④ **CWME 启动**：立项 **F-017**（`features/active/F-017-cwme-city-world-model-engine`）＋启动记录（KDS `世界资产/世界模型引擎/`）；D4=已执行 2026-10-11。
 - ⑤ **继续**：SOP 首版接入与 B3 实测运行手册＋复核队列 39 项类型化处理建议（KDS 方案与规划）。
+
+## 2026-10-11 · 两登记请求受理（老卢：按推荐执行）
+- **XWAIL City/Spatial Profile 立项请求 → 已受理（accepted）**：json/md/validator 同步（`current_decision=accepted`；governance_reviewed/accepted 门=true；`decision_record` 留档）；后续＝Profile 范围定义与 schema 候选起草（仍不写 XWAIL 仓）。
+- **绿链图谱只读业务域注册请求 → 已受理（accepted）**：同上；后续＝按六类目登记（**登记动作待执行**；registry 既有条目未动）。
+- validator 双回归 pass（支持 pending/accepted 两态）；受理记录见两份 request 文末 §8。

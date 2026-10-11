@@ -3,11 +3,17 @@
   "task_id": "GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001",
   "loop_round_id": "GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001",
   "date": "2026-10-11",
-  "status": "request_submitted_pending_governance_review",
+  "status": "request_accepted",
   "scope": "xwail_city_spatial_profile_initiation_request_only",
   "requester": "F-016 工业绿链业务图谱只读试点（工业绿链/图谱/）",
   "requested_decision": "initiate_xwail_city_spatial_profile",
-  "current_decision": "pending_governance_review",
+  "current_decision": "accepted",
+  "decision_record": {
+    "date": "2026-10-11",
+    "authority": "老卢（治理方；授权来源：2026-10-11「按推荐执行」）",
+    "decision": "accepted",
+    "next_step": "Profile 范围定义 → xwail-city-profile schema 候选起草（不越治理流程、不写 XWAIL 仓）"
+  },
   "baseline": {
     "was": "WAS semantic contract",
     "ontology": "0.1.0",
@@ -49,10 +55,10 @@
   "gates": {
     "request_package_generated": true,
     "submitted": true,
-    "governance_reviewed": false,
+    "governance_reviewed": true,
     "waes_authorized": false,
     "published": false,
-    "accepted": false,
+    "accepted": true,
     "integrated": false,
     "production_ready": false
   }

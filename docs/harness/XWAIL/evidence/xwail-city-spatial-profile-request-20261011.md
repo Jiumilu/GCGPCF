@@ -29,7 +29,7 @@ superseded_by: []
 | 项 | 值 |
 |---|---|
 | requested_decision | initiate_xwail_city_spatial_profile |
-| current_decision | pending_governance_review |
+| current_decision | accepted（2026-10-11 受理；见 §8） |
 | requester | F-016 工业绿链业务图谱只读试点（`工业绿链/图谱/`） |
 | 基线 | WAS semantic contract ／ Ontology `0.1.0` ／ XWAIL `1.1.0`（样例基线） |
 | 同源申请 | 《域包登记申请草案》申请一（CWME 城市空间域扩展包 → WAS-Ontology 登记）另行独立推进 |
@@ -55,10 +55,10 @@ superseded_by: []
 |---|---|
 | request_package_generated | true |
 | submitted | true |
-| governance_reviewed | false |
+| governance_reviewed | true |
 | waes_authorized | false |
 | published | false |
-| accepted | false |
+| accepted | true |
 | integrated | false |
 | production_ready | false |
 
@@ -71,3 +71,8 @@ superseded_by: []
 ## 7. 下一步
 
 XWAIL 治理流程裁定本请求；获准后进入 `xwail-city-profile` schema 候选起草，与 CWME B4-1/B4-2 初版件协同推进（CWME 编号 F-017，2026-10-11 已启动）。
+
+## 8. 受理记录（2026-10-11）
+
+- **已受理（accepted）**：授权来源＝老卢「按推荐执行」（2026-10-11）；材料复核通过（前置/边界齐备，见 §6）。
+- 后续动作：`xwail-city-profile` schema 候选起草（仍不写 XWAIL 仓、不声明 WAES 发布，见 §4 边界）。
