@@ -116,3 +116,8 @@ superseded_by: []
 - 产出：`scripts/xwail_export.py` v0.1（快照→XWAIL JSON；确定性；排除报告）＋`ontology/xwail_mapping_spec.md` v0.1＋`ontology/exports/`（focus-b01／focus-e01／focus-huangmei-01-6／all=49 assets·8 relations·43 显式排除）。
 - 验收 N04—N06：XWAIL 校验库**只读导入 pass**（4 模型 0 问题；回指字段完整）；双跑**逐字节一致**（total `ad548e4881de…`）；候选边界保持（provisionalCategory＋boundary；inference 不导出；waesStatus=Draft）。
 - 说明：其 CLI 对仓外路径不兼容（relative_to）→ 只读导入校验库执行同一逻辑；**未修改 XWAIL 仓**（改进建议留其流程）。提案 3 处修正（XML→JSON／维度 notApplicable／EvidenceRecord→sourceRefs）记录于规范 §9。图谱 20 项校验回归通过。
+
+## 2026-10-11 · O-3 治理衔接（文档级）＋P0-0 口径核对
+- 产出：《世界快照与只读消费接口契约 v0.1》（快照=世界版本口径；三类只读消费接口：人类审阅/知识检索/世界素材）＋《状态生命周期映射表 v0.1》（4 态映射＋`rejected` 缺口 state-request；Trusted 永不自行产生）＋《业务域注册请求草案 v0.1》（六类目映射声明；待批准提交）。
+- P0-0 核对完成：`0.2.x`＝目标规划值（非实发，矩阵示例列）；实发 `0.1.0` 为唯一实仓；八流以 `was-flows.yaml`（snake_case 8 流）为准，V1.2 迁移表待建（不猜对齐）；`GPCF/okf/ontology.yaml` 与 WAS 仓**同名不同物**（KDS OKF 治理策略）已辨析。记录：《P0-0 口径核对记录》。
+- 说明：正式提交（域注册/矩阵更新）待老卢批准与流程；本批全为文档级产出。
