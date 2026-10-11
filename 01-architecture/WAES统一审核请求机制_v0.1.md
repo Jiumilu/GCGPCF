@@ -78,7 +78,7 @@ XAPRequestEnvelope v0.1（最小必填）：
 |---|---|---|---|
 | **S1 规范与工具**（本轮） | 规范 §2.3＋V1.2-07 规则；`requestcheck.py`；两样本改造（既有请求→请求包） | WAS/XWAIL（我们） | ✅ 本轮完成 |
 | **S2 试点** | 既有请求分批改造为标准请求包：①IGL 域登记（追溯）②CWME 空间域（在审）③registry 词表 ④GCKF repair 链（d174-d181 段）——**4 件齐**（KDS `工业绿链/图谱/ontology/requests/`，requestcheck 4/4 过）；覆盖 3 种 requestType（domain_registration×2／term_request／repair_request） | 提交方＋我们 | **✅ S2 完成（2026-10-11）** |
-| **S3 各系统接入** | 分批：KDS/CWME → PVAOS/Studio → GFIS/Brain/GPC → 其余（26 成员目录） | 各系统（用我们工具） | 待启动 |
+| **S3 各系统接入** | 分批：KDS/CWME → PVAOS/Studio → GFIS/Brain/GPC → 其余（26 成员目录） | 各系统（用我们工具） | **🔧 工具包就绪（2026-10-11）**：《请求包制作指南》＋`mkrequest.py`（制作→自检闭环实证）；待各系统陆续使用 |
 | **S4 受理器实现** | WAES 侧统一受理器（识别/分流/回执） | **WAES 项目**（其流程） | 未实现（如实） |
 
 ## 五、边界与不声明
