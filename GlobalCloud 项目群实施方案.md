@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP, PQC, SpaceAI, SpaceAIStudio]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: architecture
 status: controlled
 version: v1.0
@@ -725,3 +725,11 @@ G00 验证命令为 `python3 tools/kds-sync/validate_constitution_inheritance_ga
 规划覆盖W01—W20、组织规划55项制度和30类表单、24业务节点、九类经营模式及既有平台SOP模板；条目之间有重叠，不累加为已发布SOP数量。建设顺序为版本/来源基线、工作与报价闭环、原料打样、订单交付、投产交接、证据权限与恢复，再扩展回收及区域复制。
 
 后续实施须在适用项目Feature中形成具体任务、负责人、适用版本、证据及回滚计划，并验证草稿拒绝、版本锁定、权限、变更影响、例外、重复执行与失败恢复。正文检查或文档门禁通过不能作为真实SOP执行证据。既有accepted、integrated、production_ready和customer_accepted人工边界保持不变。
+
+## 工业绿链业务图谱修订设计回传（2026-10-11）
+
+用户要求在Hermes方案基础上深入分析形成新方案，登记[业务图谱与执行核验一体化方案 v2.0](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱与执行核验一体化方案_v2.0.md>)。拟按D01—D08建设任务组织三链只读试点，将来源对账、权限、增量维护、SOP适用性和执行核验纳入首期；T01—T20是待执行验收项。后续实施进入现有Feature流程，业务规则、人员责任和运行证据需另行落实。
+
+authorization=design_revision_and_document_registration；confirmation=business_rules_and_runtime_acceptance_pending；status=partial。本轮仅文档登记，不代表图谱实现、业务确认、跨系统集成或生产验收。关联KDS、SOP、WAES及适用的GFIS、GPC、PVAOS、PQC后续按影响范围传导。
+
+补充实施计划登记（2026-10-11）：同版方案第十三章已合并GKE-001下的三链应用定位、F-012/F-013/F-014依赖衔接、各项目交付分工、B1—B5分批计划、责任落实及技术/业务语义/业务结果三层验收。下一步拟形成来源与责任、接口与依赖两份实施清单；本轮未创建新Feature、未启动业务系统接入或扩大既有授权。

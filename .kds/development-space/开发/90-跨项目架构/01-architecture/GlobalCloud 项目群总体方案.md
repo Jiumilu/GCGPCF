@@ -160,3 +160,11 @@ customer_accepted = false
 SOP-POOL聚合工作程序、适用版本、步骤、证据要求和执行引用；场景池选择编排SOP版本，生态池提供主体与角色，人才池提供能力和授权引用。原SOP正文、既有SOP账本、GlobalCloud SOP项目及业务系统的职责保留；业务确认与WAES/Harness治理确认分开，不新增业务主账或审批权。
 
 传导对象为KDS、SOP、WAES、ICP、Studio及按业务适用的GPC/GFIS/PVAOS/PQC：后续在各自变更包核对SOP身份/版本、任务步骤、证据与权限契约。此登记不表示这些系统已接入SOP池，不自动将候选标准提升为生效标准。
+
+## 工业绿链业务图谱修订设计回传（2026-10-11）
+
+用户要求在Hermes方案基础上深入分析形成新方案，登记[业务图谱与执行核验一体化方案 v2.0](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱与执行核验一体化方案_v2.0.md>)。设计采用可扩展池目录、稳定主体身份、带证据的关系声明、SOP版本与任务执行关联，继承现有生态池、SOP池及业务系统职责。KDS保存知识来源，图谱为只读派生视图；不新增主账或审批权。
+
+authorization=design_revision_and_document_registration；confirmation=business_rules_and_runtime_acceptance_pending；status=partial。本轮仅文档登记，不代表图谱实现、业务确认、跨系统集成或生产验收。关联KDS、SOP、WAES及适用的GFIS、GPC、PVAOS、PQC后续按影响范围传导。
+
+补充实施计划登记（2026-10-11）：同版方案第十三章已合并GKE-001下的三链应用定位、F-012/F-013/F-014依赖衔接、各项目交付分工、B1—B5分批计划、责任落实及技术/业务语义/业务结果三层验收。下一步拟形成来源与责任、接口与依赖两份实施清单；本轮未创建新Feature、未启动业务系统接入或扩大既有授权。

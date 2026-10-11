@@ -39,7 +39,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2140 | 1907 | 已建空间 |
+| GPCF | 12-GPCF | 2141 | 1907 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -51,7 +51,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 278 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 279 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3272,6 +3272,7 @@ superseded_by: []
 | GPCF-F-015-JOURNAL-GCWORLD-ORGANIZATION-READONLY | F-015 GCWORLD组织资产只读纵切LOOP日志 | features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md |
 | GPCF-DOC-391FB036D6 | B1 · 三链来源与责任清单（草案 v0.1） | features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-三链来源与责任清单.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-三链来源与责任清单.md |
 | GPCF-DOC-2EEBA62214 | B1 · 现有接口与依赖可用性清单（草案 v0.1） | features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-接口与依赖可用性清单.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-接口与依赖可用性清单.md |
+| GPCF-DOC-F016-GRAPH-READONLY-PILOT-EVIDENCE-20261011 | F-016 证据摘要（B1 交付 + B2 预览） | features/active/F-016-industrial-green-chain-graph-readonly-pilot/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/evidence/summary.md |
 | GPCF-DOC-8E14AF7D07 | F-016 journal | features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |

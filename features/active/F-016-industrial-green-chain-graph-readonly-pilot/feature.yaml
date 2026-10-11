@@ -21,14 +21,14 @@ acceptance:
   - 校验器全过：内容幂等、命名空间隔离、参数费用零任务化、计划与事实分离
   - 图谱生成前后源文件无非授权变化（不改变来源）
 loop:
-  current_step: b1
+  current_step: b1_review_pending
   iteration: 1
 evidence:
   tests: pass
-  build: pending
+  build: pass
   screenshots: waived
   api: waived
-  summary: pending
+  summary: pass
 blockers:
   - 业务确认人、来源读取权限、正式 SOP 版本、试点验收人待落实（不虚构任命）
   - B2—B5 放行依赖 B1 完成与各自授权流程
