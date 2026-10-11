@@ -88,7 +88,12 @@ def main() -> int:
                 "accepted 状态需 decision_record（decision/date/authority）")
         require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
         require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
-        for key in ["registry_entry_added", "waes_authorized", "integrated", "production_ready"]:
+        if gates.get("registry_entry_added") is True:
+            require("business-domain-slice-registry" in str(evidence.get("registry_entry_ref", "")),
+                    "registry_entry_added=true 需 registry_entry_ref 指向登记件")
+        else:
+            require(gates.get("registry_entry_added") is False, "registry_entry_added 非真时须为 false")
+        for key in ["waes_authorized", "integrated", "production_ready"]:
             require(gates.get(key) is False, f"gate must be false: {key}")
     else:
         for key in ["registry_entry_added", "governance_reviewed", "waes_authorized", "accepted",
@@ -105,6 +110,8 @@ def main() -> int:
     ]
     if decision == "accepted":
         phrases += ["governance_reviewed | true", "accepted | true", "受理记录"]
+        if gates.get("registry_entry_added") is True:
+            phrases += ["registry_entry_added | true"]
     else:
         phrases += ["registry_entry_added | false", "governance_reviewed | false",
                     "accepted | false", "pending_governance_review"]

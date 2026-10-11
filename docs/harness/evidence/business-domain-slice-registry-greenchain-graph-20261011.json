@@ -1,0 +1,49 @@
+{
+  "evidence_id": "GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011",
+  "status": "business_domain_slice_registered_candidate",
+  "date": "2026-10-11",
+  "round_id": "GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-001",
+  "purpose": "按 WAS 项目群 registry future_project_policy（admission_required／scope binding／六类目映射／不绕 KDS-WAES loop），将工业绿链业务域（图谱只读投影，GreenChainGraphBusinessDomain）登记为域切片条目（候选），与 F-015（GCWORLD 组织域只读切片）并列。",
+  "registry_base": {
+    "source_registry": "docs/harness/evidence/was-project-group-ontology-registry-20260621.json",
+    "existing_entries_untouched": 43,
+    "policy": "future_project_policy",
+    "source_request": "docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.json",
+    "request_decision": "accepted"
+  },
+  "domain_slice": {
+    "name": "GreenChainGraphBusinessDomain",
+    "alias": "工业绿链业务域（图谱只读投影）",
+    "carrier": "工业绿链/图谱/",
+    "peer": "F-015（GCWORLD 组织域只读切片）",
+    "scope_binding": ["工业绿链(IGL)", "KDS(F-016)"]
+  },
+  "six_category_mapping": {
+    "object": "快照 objects.yaml（85 对象/10 类型；术语回指 sc:*/was_registry:*）",
+    "relationship": "声明快照 claims.yaml（51 条；claim-rules-0.1；inference 显式候选）",
+    "event": "event 类对象（term-request:BusinessEvent 另行登记）",
+    "evidence": "source_refs+revision；快照回执；导出包（manifest+receipt+digest 实跑核验）",
+    "state": "《状态生命周期映射表 v0.1》（4 态映射；state-request:rejected 缺口）",
+    "interface": "《世界快照与只读消费接口契约 v0.1》《查询与导出契约 v0.1》；XWAIL 导出物（O-2）"
+  },
+  "attached_requests_status": {
+    "state_request": ["rejected（registry state 词表扩展，待评审）"],
+    "term_requests": ["Project", "Person", "Equipment", "BusinessEvent", "Risk", "Decision", "DependsOn", "Blocks"]
+  },
+  "boundary": {
+    "real_source_records": 0,
+    "runtime_primary_key_ready": 0,
+    "waes_review": 0,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false,
+    "runtime_write": false,
+    "kds_api_write": false
+  },
+  "validator": "python3 tools/kds-sync/validate_business_domain_slice_registry_greenchain_graph.py",
+  "non_claims": [
+    "本登记为域切片注册条目（候选），不是运行授权、不是知识库、不替代 KDS source-of-record",
+    "不修改 20260621 registry 既有 43 条",
+    "零写回、零运行状态提升"
+  ]
+}

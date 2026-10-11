@@ -66,7 +66,7 @@ superseded_by: []
 |---|---|
 | request_package_generated | true |
 | submitted | true |
-| registry_entry_added | false |
+| registry_entry_added | true（登记件见 §8） |
 | governance_reviewed | true |
 | waes_authorized | false |
 | accepted | true |
@@ -80,4 +80,4 @@ registry admission 流程裁定；受理后按六类目登记（不修改既有�
 ## 8. 受理记录（2026-10-11）
 
 - **已受理（accepted）**：授权来源＝老卢「按推荐执行」（2026-10-11）；材料复核通过（六类目映射/政策遵循齐备）。
-- 后续动作：按六类目登记（**登记动作待执行**；不修改 registry 既有条目）。
+- 后续动作：登记动作**已完成**（2026-10-11）——域切片登记件 `business-domain-slice-registry-greenchain-graph-20261011`（候选边界保持；不修改 registry 既有条目）。
