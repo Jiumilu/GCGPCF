@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 181 | 24 | 已建空间 |
-| KDS | 05-KDS | 813 | 810 | 已建空间 |
+| KDS | 05-KDS | 815 | 812 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2143 | 1907 | 已建空间 |
+| GPCF | 12-GPCF | 2146 | 1909 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -51,7 +51,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 281 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 282 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -362,7 +362,7 @@ superseded_by: []
 | GPCF-DOC-7B5E3B05D7 | GlobalCloud项目群最小闭环L4实施方案 | 01-architecture/GlobalCloud项目群最小闭环L4实施方案.md | GPCF | GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/GlobalCloud项目群最小闭环L4实施方案.md |
 | GPCF-DOC-75A25DFFB1 | 架构方案 | 01-architecture/README.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/README.md |
 | GPCF-DOC-WAS-ONTOLOGY-XWAIL-MAPPING-20260623 | WAS-Ontology-XWAIL 语义契约与映射机制 | 01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md | GPCF | GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, Studio | architecture | controlled | 开发/90-跨项目架构/01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md |
-| GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624 | WAS-XWAIL-AaaS 三主项目方案协同矩阵与门禁 | 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | GPCF | GFIS, GPC, PVAOS, WAES, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md |
+| GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624 | WAS-XWAIL-AaaS 三主项目方案协同矩阵与门禁 | 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md |
 | GPCF-DOC-WAS-MASTER-PLAN-20260624 | WAS世界资产体系总体方案 | 01-architecture/WAS世界资产体系总体方案.md | GPCF | GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/WAS世界资产体系总体方案.md |
 | GPCF-DOC-XWAIL-V12-VALIDATOR-RULES-20260623 | XWAIL-V1.2-Validator规则清单 | 01-architecture/XWAIL-V1.2-Validator规则清单.md | GPCF | GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/XWAIL-V1.2-Validator规则清单.md |
 | GPCF-DOC-XWAIL-V12-DRAFT-20260623 | XWAIL可扩展世界资产信息建模语言规范V1.2草案 | 01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md | GPCF | GPCF | architecture | controlled | 开发/90-跨项目架构/01-architecture/XWAIL可扩展世界资产信息建模语言规范V1.2草案.md |
@@ -1163,6 +1163,7 @@ superseded_by: []
 | GPCF-DOC-4CBD09FE9B | Loop Round GPCF-XD-LR-001 | docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | XGD | GPC, WAES, KDS, XGD, XiaoG, GPCF | docs | controlled | 开发/09-XGD/docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/XWAIL/README.md |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/XWAIL/evidence/README.md |
+| GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | XWAIL City/Spatial Profile 立项请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md |
 | GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md |
 | GPCF-DOC-XWAIL-WAES-AAAS-CONTRACT-PRECHECK-20260625 | XWAIL-WAES-AaaS 契约预检证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md |
@@ -1596,6 +1597,7 @@ superseded_by: []
 | GPCF-DOC-EB9209D502 | Headroom Runtime Adapter Dry-run Evidence | docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md |
 | GPCF-DOC-A5BB39D841 | Headroom Runtime Probe Evidence | docs/harness/evidence/headroom-runtime-probe-20260621.md | KDS | KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/headroom-runtime-probe-20260621.md |
 | GPCF-DOC-9BB94B0126 | Headroom Runtime Scenario Matrix Evidence | docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md | KDS | GFIS, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md |
+| GPCF-DOC-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011 | 工业绿链业务域（图谱只读投影）注册请求 2026-10-11 | docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.md | KDS | PVAOS, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.md |
 | GPCF-DOC-0F583D13A7 | KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告 | docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md |
 | GPCF-DOC-931CDE09CE | KDS OKF v0.1 Agent 消费 smoke 测试证据 | docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md | KDS | WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md |
 | GPCF-DOC-431C7A5400 | KDS OKF v0.1 Derived Bundle Report | docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md | KDS | WAES, KDS, Brain, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md |
@@ -2392,6 +2394,7 @@ superseded_by: []
 | GPCF-DOC-AAD319F327 | LOOP Round GPCF Headroom Runtime Adapter Dry-run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-ADAPTER-DRY-RUN-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-ADAPTER-DRY-RUN-001.md |
 | GPCF-DOC-D2DDB9FD6E | Loop Round GPCF-HEADROOM-RUNTIME-PROBE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-PROBE-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-PROBE-001.md |
 | GPCF-DOC-9DE430683F | LOOP Round GPCF Headroom Runtime Scenario Matrix 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-SCENARIO-MATRIX-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-SCENARIO-MATRIX-001.md |
+| GPCF-DOC-B1F7C2100B | Loop Round GPCF IGL Graph Domain Registration Request 001 | docs/harness/loops/loop-round-GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001.md |
 | GPCF-LOOP-IMPLEMENTATION-UI-LOOP-INTEGRATION-001 | loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001 | docs/harness/loops/loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001.md | GPCF | GPC, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001.md |
 | GPCF-DOC-9E9D7072F4 | loop-round-GPCF-KDS-DKS-001 | docs/harness/loops/loop-round-GPCF-KDS-DKS-001.md | GPCF | GPC, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-001.md |
 | GPCF-DOC-1953C27985 | GPCF-KDS-DKS-002 对象字段与11池映射清单 Loop 记录 | docs/harness/loops/loop-round-GPCF-KDS-DKS-002.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-KDS-DKS-002.md |
@@ -3165,6 +3168,7 @@ superseded_by: []
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-023 | Loop Round GPCF-UI-STUDIO-WORKBENCH-023 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md | GPCF | GPC, WAES, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md |
 | GPCF-LOOP-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | Loop Round GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md |
+| GPCF-DOC-165FB00EF6 | Loop Round GPCF XWAIL City Spatial Profile Request 001 | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md |
 | GPCF-DOC-9886BDB110 | L4 Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | GFIS, GPC, PVAOS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md |
 | GPCF-DOC-4C33B5D2B6 | Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF | docs | controlled | 开发/05-KDS/docs/harness/minimum-closed-loop/evidence-index.md |
@@ -3276,6 +3280,7 @@ superseded_by: []
 | GPCF-DOC-88F0926FFF | B3 · 首批 SOP 化工作单（报签） | features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b3-首批SOP化工作单.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b3-首批SOP化工作单.md |
 | GPCF-DOC-F016-GRAPH-READONLY-PILOT-EVIDENCE-20261011 | F-016 证据摘要（B1 交付 + B2 预览） | features/active/F-016-industrial-green-chain-graph-readonly-pilot/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/evidence/summary.md |
 | GPCF-DOC-8E14AF7D07 | F-016 journal | features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md |
+| GPCF-F-017-JOURNAL-CWME-CITY-WORLD-MODEL-ENGINE | journal | features/active/F-017-cwme-city-world-model-engine/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/active/F-017-cwme-city-world-model-engine/journal.md |
 | GPCF-DOC-01B2179D97 | 证据摘要 | features/done/F-001-supplier-onboarding/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md |
 | GPCF-DOC-1CB646B985 | F-001 supplier-onboarding | features/done/F-001-supplier-onboarding/journal.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md |
 | GPCF-DOC-87C12A1121 | 证据摘要 | features/done/F-002-project-group-feature-queue/evidence/summary.md | GPCF | AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP | governance | controlled | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md |

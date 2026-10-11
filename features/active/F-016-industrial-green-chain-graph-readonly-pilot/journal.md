@@ -125,3 +125,10 @@ superseded_by: []
 ## 2026-10-11 · 收口：证据包实跑＋一页纸清单
 - 证据包实跑（O-3 产出4 实证）：15 文件打包，`--verify` ok（0 bad），manifest+receipt+digest 三要素齐备；包：`图谱/evidence/2026-10-11_b2-preview_export-pack.tgz`（可重打复验）。
 - 产出：《图谱 v3.0 收口与待决事项清单（一页纸）》（方案与规划）——O 系列全景＋N 状态（N01-N06✅/N07-N08🟡/N09-N10⚪）＋待决 5 项（提交门①②／矩阵流程／CWME 启动／队列·SOP）。
+
+## 2026-10-11 · 五项决策执行（老卢点名："1、提交，2、提交，3、按流程，4、启动，5、继续"）
+- ① **域包登记申请提交**：XWAIL City/Spatial Profile 立项请求入 GPCF（`docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.*`＋loop＋validator；`current_decision=pending_governance_review`）。
+- ② **业务域注册请求提交**：入 GPCF（`docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.*`＋loop＋validator；**registry 本体未动**）。
+- ③ **矩阵按流程**：语义契约 §5＋三主矩阵 §5 加"实发基线说明"（0.2.x=规划值；实发 0.1.0／1.1.0），version→v1.1，last_reviewed→2026-10-11，走 document_control。
+- ④ **CWME 启动**：立项 **F-017**（`features/active/F-017-cwme-city-world-model-engine`）＋启动记录（KDS `世界资产/世界模型引擎/`）；D4=已执行 2026-10-11。
+- ⑤ **继续**：SOP 首版接入与 B3 实测运行手册＋复核队列 39 项类型化处理建议（KDS 方案与规划）。

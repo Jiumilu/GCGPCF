@@ -1,0 +1,53 @@
+{
+  "evidence_id": "IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011",
+  "task_id": "GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001",
+  "loop_round_id": "GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001",
+  "date": "2026-10-11",
+  "status": "request_submitted_pending_governance_review",
+  "scope": "business_domain_registration_request_only",
+  "requester": "F-016 工业绿链业务图谱只读试点（工业绿链/图谱/）",
+  "requested_decision": "admit_readonly_business_domain_slice_candidate",
+  "current_decision": "pending_governance_review",
+  "domain": {
+    "name": "GreenChainGraphBusinessDomain",
+    "alias": "工业绿链业务域（图谱只读投影）",
+    "peer": "F-015（GCWORLD 组织域只读切片）",
+    "carrier": "工业绿链/图谱/"
+  },
+  "scope_binding": ["工业绿链(IGL)", "KDS(F-016)"],
+  "policy_compliance": {
+    "admission_required": true,
+    "must_bind_project_group_scope": true,
+    "must_map_to_registry_categories": true,
+    "must_not_bypass_kds_waes_loop": true
+  },
+  "six_category_mapping": {
+    "object": "快照 objects.yaml（85 对象/10 类型；术语回指 sc:*/was_registry:*）",
+    "relationship": "声明快照 claims.yaml（51 条；claim-rules-0.1；inference 显式候选）",
+    "event": "event 类对象（term-request:BusinessEvent 另行登记）",
+    "evidence": "source_refs+revision；快照回执；导出包（manifest+receipt+digest 实跑核验）",
+    "state": "《状态生命周期映射表 v0.1》（4 态映射；state-request:rejected 缺口）",
+    "interface": "《世界快照与只读消费接口契约 v0.1》《查询与导出契约 v0.1》；XWAIL 导出物（O-2）"
+  },
+  "attached_requests": {
+    "state_request": ["rejected"],
+    "term_requests": ["Project", "Person", "Equipment", "BusinessEvent", "Risk", "Decision", "DependsOn", "Blocks"]
+  },
+  "admission_preconditions": {
+    "mapped_to_six_categories": true,
+    "binds_project_group_scope": true,
+    "no_kds_waes_loop_bypass": true,
+    "registry_body_unmodified": true,
+    "candidate_boundary_retained": true
+  },
+  "gates": {
+    "request_package_generated": true,
+    "submitted": true,
+    "registry_entry_added": false,
+    "governance_reviewed": false,
+    "waes_authorized": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}

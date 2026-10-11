@@ -1,0 +1,26 @@
+---
+doc_id: GPCF-F-017-JOURNAL-CWME-CITY-WORLD-MODEL-ENGINE
+title: journal
+project: GPCF
+related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+domain: governance
+status: controlled
+version: v1.0
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/91-治理与验收/features/active/F-017-cwme-city-world-model-engine/journal.md
+source_path: features/active/F-017-cwme-city-world-model-engine/journal.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-11
+supersedes: []
+superseded_by: []
+---
+
+## 2026-10-11 · 立项与启动（老卢点名）
+
+- 老卢拍板「启动」（原话："4、启动"）：立项编号 **F-017**；启动时间＝**2026-10-11**（决策清单 D4 执行）。
+- 决策清单快照（v2.1 §九）：D1 产品命名「万象引擎」**待确认**；D2 图存储 **Neo4j**（推荐已定）；D3 样板体系（城市级旗舰=光谷真实城市；行业=黄梅/当阳/校园群，按节奏）；D4 启动时间＝**已执行（2026-10-11）**；D5 团队**最小启动**（1 核心＋AI 打底）；D6 首个演示对象**待确认**（内部跑通→对外普适）。
+- 协同：本项目 B4-1/B4-2 初版件＝《域包登记申请》申请一（CWME 空间域扩展包登记）前置；与 F-016（WAM）经 `crosswalk-工业绿链×CWME v0.1` 对接（**不交叉写账**）。
+- 语义契约：本体工具链与 WAS 侧共用基线（Protégé＋pySHACL，见《WAS×CWME 协同方案》R6/M1）。
+- 边界：无生产/发布/接受声明；`accepted=false / integrated=false / production_ready=false`。
+- 启动记录（KDS）：`世界资产/世界模型引擎/2026-10-11_CWME项目启动记录.md`

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md
 source_path: 01-architecture/WAS-Ontology-XWAIL语义契约与映射机制.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
@@ -94,6 +94,8 @@ ontologyRef / termVersion / ontologyNamespace / semanticRelation / mappingConfid
 | 1.1.0 | 0.2.x | 1.2.0-20260623 | 1.0 | compatible | 需要补充 `ontologyRef` 和 EvidenceRecord 语义来源字段 |
 
 版本矩阵用于判断模型、Profile、验证器、推理规则和运行时绑定是否可共同发布。若 Ontology 术语或推理规则发生破坏性变更，相关 XWAIL Profile 必须触发 Migration。
+
+> **实发基线说明（2026-10-11）**：表中 `0.2.x` 为规划示意值；Ontology 实际发布基线为 **`0.1.0`**（来源 `WAS世界资产体系/okf/ontology.yaml`）；XWAIL 实际样例基线为 **`1.1.0`**（`1.2.0-20260623` 为目标草案）。差异核对记录：KDS《P0-0 口径核对记录》（2026-10-11）。
 
 ## 6. Ontology-aware Validator
 

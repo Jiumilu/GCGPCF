@@ -1,0 +1,56 @@
+id: F-017
+name: cwme-city-world-model-engine
+project: kds
+status: active
+goal: "城市级世界模型引擎（CWME，WCM 世界城市模型的引擎实现）：以 SpaceAI+Cesium 为孪生基座、Neo4j 为图存储、Protégé/pySHACL 为本体工具链，先交付内核化最小闭环与城市/园区样板；与 WAS 语义底座及绿链图谱（WAM）协同，遵守 GCWORLD 四世界隔离与 WAES 治理边界。"
+owner: GPCF
+priority: P1
+scope:
+  in:
+    - 引擎内核（联动总线/数据解耦）与 Cesium 最小可视化闭环
+    - B4-1 本体映射与 B4-2 cwme-ext.ttl 初版件（XWAIL City Profile 申请前置）
+    - 光谷城市级旗舰样板 + 黄梅园区等行业样板（按客户与数据节奏）
+    - 本体工具链（Protégé + pySHACL + GraphRAG 溯源问答）与最小验证环境
+  out:
+    - 生产环境承诺、跨项目写权限、WAES 发布
+    - 未确认的命名与品牌件（D1 待确认）
+    - 与绿链图谱（F-016）交叉写账（分账互引，crosswalk v0.1）
+acceptance:
+  - 内核联动延迟 ≤2s（M2）
+  - 本体链路：改本体→全仓同步→CI 绿（M3）
+  - 数据合规：5 类非法数据全拦（M3）
+  - 问答防幻觉：20 条抽检无事实错误（M4）
+  - 应用独立性：校园包零引擎改动（M6）
+loop:
+  current_step: started
+  iteration: 1
+evidence:
+  tests: pending
+  build: pending
+  screenshots: waived
+  api: waived
+  summary: pending
+blockers:
+  - 决策清单 D1（产品命名）/ D6（首个演示对象）待老卢确认（不阻塞启动）
+  - GPU 验证环境与光谷/黄梅数据场地接触待排期
+  - B4-1/B4-2 产出为《域包登记申请》申请一前置（CWME 首月任务）
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups:
+    - 城市运营方
+    - 园区管理者
+    - 招商与政府客户
+    - 引擎团队
+  primary_human_task: 在城市级场景中查看/查询/演示资产与运行态势（只读→辅助）
+  machine_interface_boundary: CWME 为运行时引擎；语义契约与治理在 WAS/XWAIL/WAES 层
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: pending
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+registration_note: "编号 F-017；老卢拍板启动（2026-10-11，原话「4、启动」）；D4 启动时间=已执行。"
+source_plan: 世界资产/世界模型引擎/CWME_完整实施方案_v2.1.md

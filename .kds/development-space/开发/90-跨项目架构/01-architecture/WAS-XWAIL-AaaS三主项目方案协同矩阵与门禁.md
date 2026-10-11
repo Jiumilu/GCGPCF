@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-WAS-XWAIL-AAAS-PLAN-ALIGNMENT-20260624
 title: WAS-XWAIL-AaaS 三主项目方案协同矩阵与门禁
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
 domain: architecture
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/90-跨项目架构/01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md
 source_path: 01-architecture/WAS-XWAIL-AaaS三主项目方案协同矩阵与门禁.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
@@ -77,6 +77,8 @@ AaaS 负责服务包、订阅、计量、SLA 和商业运营。
 | decision | 兼容结论 | `compatible / migration_required / deprecated / blocked` |
 
 没有版本兼容矩阵的方案，不得进入 `Published`、`Trusted`、`production_ready` 或商业订阅状态。
+
+> **实发基线说明（2026-10-11）**：本表为示例口径；Ontology 实发基线 **`0.1.0`**、XWAIL 实发基线 **`1.1.0`**（样例基线；V1.2 草案为目标）。核对记录：KDS《P0-0 口径核对记录》。
 
 ## 6. 冲突判定规则
 

@@ -1,0 +1,59 @@
+{
+  "evidence_id": "XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011",
+  "task_id": "GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001",
+  "loop_round_id": "GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001",
+  "date": "2026-10-11",
+  "status": "request_submitted_pending_governance_review",
+  "scope": "xwail_city_spatial_profile_initiation_request_only",
+  "requester": "F-016 工业绿链业务图谱只读试点（工业绿链/图谱/）",
+  "requested_decision": "initiate_xwail_city_spatial_profile",
+  "current_decision": "pending_governance_review",
+  "baseline": {
+    "was": "WAS semantic contract",
+    "ontology": "0.1.0",
+    "xwail": "1.1.0",
+    "profile_target": "xwail-city-profile（候选）"
+  },
+  "profile_scope": {
+    "spatial_classes": ["Site", "Building", "Floor", "Space", "Zone", "Link"],
+    "device_classes": ["Asset", "Device", "Camera", "Door", "Sensor"],
+    "event_classes": ["Event", "Observation", "Alarm", "Actuation", "Command"],
+    "mapping_targets": ["AssetGroup", "AssetUnit", "Relations", "FlowRelations"],
+    "required_ref_fields": ["wasBaseline", "ontologyVersion", "profile", "ontologyRef", "termVersion"]
+  },
+  "admission_preconditions": {
+    "was_ontology_registry_pass": true,
+    "xwail_mapping_candidate_exists": true,
+    "no_xwail_repo_modification": true,
+    "no_waes_bypass": true,
+    "candidate_boundary_retained": true
+  },
+  "requested_boundary": {
+    "allowed_after_admission": [
+      "profile_scope_definition",
+      "schema_candidate_drafting",
+      "validator_extension_planning"
+    ],
+    "forbidden": [
+      "xwail_repo_direct_modification_outside_governance",
+      "waes_publication_claim",
+      "production_ready_claim",
+      "customer_acceptance_claim"
+    ]
+  },
+  "source_materials": [
+    "工业绿链/管理文件/方案与规划/2026-10-11_域包登记申请草案_CWME城市空间域扩展包与XWAIL_CityProfile_v0.1.md",
+    "工业绿链/管理文件/方案与规划/2026-10-11_WAS语义基座与CWME及工业绿链应用协同关系与分工方案（提案）.md",
+    "世界资产/世界模型引擎/CWME_本体设计专题_Ontology设计与工具选型_v1.0.md"
+  ],
+  "gates": {
+    "request_package_generated": true,
+    "submitted": true,
+    "governance_reviewed": false,
+    "waes_authorized": false,
+    "published": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}
