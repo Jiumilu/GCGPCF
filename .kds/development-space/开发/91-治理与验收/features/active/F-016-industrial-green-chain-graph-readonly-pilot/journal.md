@@ -89,3 +89,7 @@ superseded_by: []
 - 提案：图谱 →「WAS 语义体系下的业务证据世界投影」（Ontology 锚定／XWAIL 可导出／GCWORLD 可消费）；三个升级包 O-1 语义锚定、O-2 契约出口、O-3 治理衔接；N01—N10 验收提案。
 - 定位：与 F-015（组织域）并列的**业务域**只读切片；不建第二本体、不建图数据库、不写主账（遵守 GCWORLD 十项冻结决策与 registry promotion_policy）。
 - 文档：KDS `工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱v3.0升级方案_WAS-Ontology-XWAIL对齐（提案）.md`（未实施）
+
+## 2026-10-11 · 开源本体工具链引入（PoC）
+- 选型件：《开源本体项目与工具引入方案（图谱 v3.0）》——Protégé 5.6.9／LinkML（可选）／**pySHACL 0.40.1＋rdflib 7.6.0**／pyoxigraph／IOF 202603（999类含供应链模块）／GS1 EPCIS 2.0；与 CWME 打通共用基线（Protégé+pySHACL 同一套）。
+- **PoC 实测**：权威快照只读 → 85对象/51声明=**988 triples**；正向 conforms=True；负例检出（≈C08）；SPARQL 分布与校验报告一致。原型：`工业绿链/图谱/proto/ontology-poc/`（未纳入正式管线）。
