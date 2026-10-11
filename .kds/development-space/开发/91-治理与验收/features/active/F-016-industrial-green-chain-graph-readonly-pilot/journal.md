@@ -137,3 +137,8 @@ superseded_by: []
 - **XWAIL City/Spatial Profile 立项请求 → 已受理（accepted）**：json/md/validator 同步（`current_decision=accepted`；governance_reviewed/accepted 门=true；`decision_record` 留档）；后续＝Profile 范围定义与 schema 候选起草（仍不写 XWAIL 仓）。
 - **绿链图谱只读业务域注册请求 → 已受理（accepted）**：同上；后续＝按六类目登记（**登记动作待执行**；registry 既有条目未动）。
 - validator 双回归 pass（支持 pending/accepted 两态）；受理记录见两份 request 文末 §8。
+
+## 2026-10-11 · 受理后续动作（续：登记＋Profile 草案）
+- **域切片登记完成**：`GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011` 登记件四件套（json／md／loop／validator）；`GreenChainGraphBusinessDomain`（工业绿链业务域只读投影候选）与 F-015（GCWORLD 组织域）并列；**既有 registry 43 条未动**（validator 在位校验）；request `registry_entry_added=true`＋`registry_entry_ref` 回指。
+- **XWAIL Profile 工作件**：KDS《XWAIL City/Spatial Profile 范围定义与 Schema 候选草案 v0.1》（范围表／schema 候选块／Validator 扩展规划 V-CP-01—05；不写 XWAIL 仓、不声明 WAES）。
+- validator×2 PASS；提交 GPCF `7312f3ed6`／KDS `99f3e5a6`。
