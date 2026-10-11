@@ -66,3 +66,13 @@ python3 tools/kds-sync/validate_cwme_ontology_chain.py --deep    # → pass（de
 - GPCF 提交链（本阶段）：`8e890ec35` → `62074e546` → `4f729b39a` → `bb6591bb2`
 - journal：`features/active/F-017-cwme-city-world-model-engine/journal.md`（B4 四节记录）
 - 边界：以上为**本地可回放证据**；不构成治理结论或状态提升。
+
+## 六、B4 深化追加（2026-10-11）
+- `sync_graph.py`：31 张受管表全量 + 行级哈希增量 + check；`full-load.cypher` + `sync-state.json`。
+- 全量：**1503 节点 / 1960 关系 / 0 错误**；增量实证（副本、零删除）：改/增/幻影删三类漂移全检出 → 增量脚本 4 语句 → 复查 in_sync。
+- ci-gate 升级 **6 步**（+full 防漂移、+源-基线一致性）→ 6/6 PASS。
+- 复核命令更新：
+```bash
+./ci-gate.sh                     # 六步门禁 → 期望 PASS=6 SKIP=0 FAIL=0
+python3 tools/kds-sync/validate_cwme_ontology_chain.py --deep    # → pass
+```
