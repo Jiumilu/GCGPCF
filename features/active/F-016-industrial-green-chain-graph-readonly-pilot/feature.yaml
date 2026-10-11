@@ -21,7 +21,7 @@ acceptance:
   - 校验器全过：内容幂等、命名空间隔离、参数费用零任务化、计划与事实分离
   - 图谱生成前后源文件无非授权变化（不改变来源）
 loop:
-  current_step: b1_review_pending
+  current_step: b2_sampling_pending
   iteration: 1
 evidence:
   tests: pass
@@ -50,5 +50,5 @@ ui_product_first_control:
     accessibility_status: pending
     evidence_overexposure_gate: pending
   status_ceiling: partial
-registration_note: 编号 F-016 为按序暂定；正式编号以项目群入口分配为准（承 v2.0 §13.2）。
+registration_note: 编号 F-016 已由老卢确认（2026-10-11）；项目群入口登记完成（承 v2.0 §13.2）。
 source_plan: 工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱与执行核验一体化方案_v2.0.md
