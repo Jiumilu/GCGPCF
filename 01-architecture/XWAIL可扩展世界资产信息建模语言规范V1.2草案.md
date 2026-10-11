@@ -27,9 +27,11 @@ superseded_by: []
 
 1.1 XWAIL（eXtensible World Asset Information Language）是 WAS 的**机器可读契约层**（Machine Contract）。
 
-1.2 职责范围：把 WAS/Ontology 语义表达为**可验证**（Validator）、**可打包**（XAP）、**可治理**（版本兼容矩阵 + WAES 边界）的机器契约；提供 Schema、Profile、模板、迁移与一致性测试。
+1.2 职责范围：把 WAS/Ontology 语义表达为**可验证**（Validator）、**可打包**（XAP）、**可治理**（版本兼容矩阵 + WAES 边界）的机器契约；提供 Schema、Profile、模板、迁移与一致性测试；配套**工具链：解析器 / 校验器 / 编辑器**（工程化实现=GCXWAIL；编辑器=建模工作台，见《XWAIL实施方案.md》阶段 2A）。
 
 1.3 不承担：浏览器/市场/孪生平台/数据库实现（产品层）；注册、授权、发布（WAES）；服务包、订阅、计量、SLA、商业运营（AaaS）。
+
+> 口径注：「工具处理文件，WAES 管状态」——解析器/校验器/编辑器为 XWAIL 侧工具链（处理 XWAIL 规范文件与数据源）；其在平台内的运行场景、以及数据（联网／数据库／规范文件）的调取与编辑治理，随 WAES 平台实现承载（与《WAS-Ontology-XWAIL 语义契约与映射机制》§1/§2 一致）。
 
 ## 2. 模型结构（JSON 形态）
 
