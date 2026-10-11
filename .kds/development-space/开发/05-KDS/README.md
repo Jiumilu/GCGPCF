@@ -307,6 +307,7 @@
 | GPCF-DOC-SOP-SCENARIO-OWNER-REVIEW-20260625 | SOP 场景生成物 Owner Review 证据 2026-06-25 | docs/harness/SOP/evidence/sop-scenario-owner-review-20260625.md | controlled |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | controlled |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | controlled |
+| GPCF-DOC-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011 | XWAIL City/Spatial Profile Schema 候选评审请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-profile-schema-review-request-20261011.md | controlled |
 | GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | XWAIL City/Spatial Profile 立项请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | controlled |
 | GPCF-DOC-33DE44F307 | Agent-Reach Authoritative Source Verification 20260621 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | controlled |
@@ -387,6 +388,7 @@
 | GPCF-DOC-9C22552EEE | 基础知识人工确认模式 | docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | controlled |
 | GPCF-DOC-7797BB4F55 | 基础知识人工确认模板 | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | controlled |
 | GPCF-DOC-C13F879695 | 基础知识回写候选账本 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | controlled |
+| GPCF-DOC-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011 | 业务域切片登记（GreenChainGraphBusinessDomain）· 2026-10-11 | docs/harness/evidence/business-domain-slice-registry-greenchain-graph-20261011.md | controlled |
 | GPCF-DOC-4E29A86D95 | CodeGraph Brain/GFIS 授权边界复核 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-20260626 | CodeGraph 开发执行层收益证明 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-benefit-proof-20260626.md | controlled |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-20260626 | CodeGraph 开发执行层收益回归监控 2026-06-26 | docs/harness/evidence/codegraph-dev-execution-benefit-regression-watch-20260626.md | controlled |
@@ -418,6 +420,7 @@
 | GPCF-DOC-61F5839244 | CodeGraph watchlist post-Studio 监控证据 | docs/harness/evidence/codegraph-watchlist-post-studio-monitor-20260622.md | controlled |
 | GPCF-DOC-5558944E2C | CodeGraph Watchlist Sync-only Closure Authorized Evidence | docs/harness/evidence/codegraph-watchlist-sync-only-closure-authorized-20260622.md | controlled |
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | controlled |
+| GPCF-DOC-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011 | CWME 城市空间域扩展包登记请求 2026-10-11 | docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.md | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622 | GCKF P0 收口包候选证据 D124 | docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | controlled |
 | GPCF-DOC-GCKFP0CLOSUREPACKETPRECHECKD12320260622 | GCKF P0 收口包预检查证据 D123 | docs/harness/evidence/gckf-p0-closure-packet-precheck-d123-20260622.md | controlled |
 | GPCF-DOC-GCKFP0SKELETONBASELINED12220260622 | GCKF P0 骨架基线证据 D122 | docs/harness/evidence/gckf-p0-skeleton-baseline-d122-20260622.md | controlled |

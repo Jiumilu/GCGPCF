@@ -771,6 +771,8 @@
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-RESPONSIBILITY-ASSIGNMENT-001 | Loop Round - GPCF Cognee 真实外部执行回执责任分配 001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-RESPONSIBILITY-ASSIGNMENT-001.md | controlled |
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001 | Loop Round - GPCF Cognee 真实外部执行回执提交请求包 001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001.md | controlled |
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001 | Loop Round - GPCF Cognee 真实外部执行回执更新补丁计划 001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001.md | controlled |
+| GPCF-DOC-D5E62C7C1E | Loop Round GPCF CWME Space Domain Extension Registration Request 001 | docs/harness/loops/loop-round-GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001.md | controlled |
+| GPCF-DOC-BCA1A28962 | Loop Round GPCF Domain Slice Registry GreenChain Graph 001 | docs/harness/loops/loop-round-GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-001.md | controlled |
 | GPCF-DOC-B0BFD5B1FB | GC-Knowledge Fabric P0-D1 启动与规则冻结 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | controlled |
 | GPCF-DOC-4F7DC277C5 | GC-Knowledge Fabric P0-D10 Repository / Service Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | controlled |
 | GPCF-LOOP-GCKF-P0-D100-001 | Loop Round GPCF-GCKF-P0-D100-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | controlled |
@@ -1861,6 +1863,7 @@
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-023 | Loop Round GPCF-UI-STUDIO-WORKBENCH-023 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md | controlled |
 | GPCF-LOOP-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | Loop Round GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | controlled |
+| GPCF-DOC-AB4172336C | Loop Round GPCF XWAIL City Profile Schema Review 001 | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-001.md | controlled |
 | GPCF-DOC-165FB00EF6 | Loop Round GPCF XWAIL City Spatial Profile Request 001 | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md | controlled |
 | GPCF-DOC-27101F3BEB | multi-tenant-permission-design | docs/harness/multi-tenant-permission-design.md | controlled |
 | GPCF-DOC-40F0A4CB83 | status-audit-2026-06-10 | docs/harness/status-audit-2026-06-10.md | controlled |
