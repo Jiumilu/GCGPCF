@@ -41,3 +41,9 @@ superseded_by: []
 - 产出：`ontology/neo4j/`——`sync_sample.py`（spaceai.db 只读→加载脚本）＋`sample-load.cypher`＋`verify_queries.cypher`＋`verify-output.txt`＋README。
 - **实跑：888 节点 / 914 关系 / 36 约束 / 0 错误**；场景抽检全真实返回（居住区报警链、文波楼 40 设备、5 条巡更线、门禁事件、相机 40）。
 - 生成↔落库差异 10 条均为语义正确（8 无效引用＋2 去重）；约束内联本体生成物（设计层→运行层联动）。
+
+## 2026-10-11 · B4-5 CI 门禁（**F-017 首月件收口**）
+- `ontology/ci-gate.sh`（五步门禁：本体/SHACL → 防漂移 → 生成物回验 → 加载脚本 → Neo4j 在线）＋`ontology/.venv`（持久化，验证环境脱离临时目录）＋GPCF `tools/kds-sync/validate_cwme_ontology_chain.py`（静态轻检 + `--deep`）。
+- 实跑：ci-gate **5/5 PASS**；validator 轻检 + deep **pass**。
+- **反例实证**：改本体不重生成 → 双重拦截（validator `source drift` FAIL；ci-gate 防漂移步 FAIL=1→EXIT 2）；恢复后全绿——"改本体→必须重生成→CI 才绿"链路闭环。
+- **F-017 首月件 B4-1—B4-5 全部完成**（映射表/扩展本体/SHACL/生成器/Neo4j/CI 门禁）。
