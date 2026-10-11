@@ -99,12 +99,12 @@ XAPRequestEnvelope v0.1（最小必填）：
 | **S1 规范与工具**（本轮） | 规范 §2.3＋V1.2-07 规则；`requestcheck.py`；两样本改造（既有请求→请求包） | WAS/XWAIL（我们） | ✅ 本轮完成 |
 | **S2 试点** | 既有请求分批改造为标准请求包：①IGL 域登记（追溯）②CWME 空间域（在审）③registry 词表 ④GCKF repair 链（d174-d181 段）——**4 件齐**（KDS `工业绿链/图谱/ontology/requests/`，requestcheck 4/4 过）；覆盖 3 种 requestType（domain_registration×2／term_request／repair_request） | 提交方＋我们 | **✅ S2 完成（2026-10-11）** |
 | **S3 各系统接入** | 分批：KDS/CWME → PVAOS/Studio → GFIS/Brain/GPC → 其余（26 成员目录） | 各系统（用我们工具） | **🔧 工具包就绪（2026-10-11）**：《请求包制作指南》＋`mkrequest.py`（制作→自检闭环实证）；待各系统陆续使用 |
-| **S4 受理器实现** | WAES 侧统一受理器（识别/分流/回执） | **WAES 项目**（其流程） | 未实现（如实） |
+| **S4 受理器实现** | WAES 侧统一受理器（识别/分流/裁定/回执/发布） | **WAES 项目**（其流程） | **✅ 参考实现可用（2026-10-11）**：`server/xap-intake`（受理器＋33 项验收＋WAE 内「受理台账」UI）；生产化随 WAES 上线流程 |
 
 ## 五、边界与不声明
 
 - 本机制**不改 WAES/PVAOS/GCXWAIL 仓**；为提交侧机制设计＋规范建议；
-- **不声明** WAES 受理器已实现；**不声明**任何请求已受理/裁定（decision 留白纪律）；
+- 受理器**参考实现**已可用（`GlobalCloud WAES/server/xap-intake`：P1 受理闭环＋P2 资产交付闭环＋WAE 受理台账 UI；33 项验收全过）——**不声明**已生产化、已由任何真实系统上线治理；**不声明**任何请求已裁定（decision 留白纪律在受理器中代码级强制）；
 - 「所有系统」范围以项目群成员目录为准（26 项——**分批接入**，不搞一刀切）；
 - 轻量请求（term/state）允许**最小请求包**（无 models，仅信封＋请求体）——**均符合 XAP 规范**（「均应」的落地口径）。
 
@@ -115,4 +115,5 @@ XAPRequestEnvelope v0.1（最小必填）：
 | 规范增量 §2.3（打包 XAP：asset／request 两类） | GPCF `01-architecture/XWAIL…规范V1.2草案.md` |
 | V1.2-07 规则行（请求包检查） | GPCF `01-architecture/XWAIL-V1.2-Validator规则清单.md` |
 | `requestcheck.py`（信封检查器）＋两样本 | KDS `工业绿链/图谱/ontology/xwail-v12-poc/` |
+| XAP 受理器（参考实现）＋WAE 受理台账 UI | WAES `server/xap-intake/`（分支 `waes/world-asset-studio`） |
 | 本机制文件 | GPCF `01-architecture/WAES统一审核请求机制_v0.1.md` |
