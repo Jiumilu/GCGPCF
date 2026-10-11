@@ -30,3 +30,8 @@ superseded_by: []
 - 验证（rdflib 7.6.0＋pyshacl 0.40.1 实跑）：合规样例 conforms=True；违规样例 **5 项全检出**。
 - **申请一（CWME 城市空间域扩展包 → WAS-Ontology 登记）已提交** GPCF（`docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.*`＋loop＋validator；`current_decision=pending`）。
 - 至此随老卢"1、提交／4、启动"的三个登记请求（XWAIL Profile／业务域／CWME 域包）**全部入库**。
+
+## 2026-10-11 · B4-3 生成器 PoC（单一事实源链路）
+- 产出：`ontology/cwme_gen.py`（本体→4 类产物）＋`verify_generated.py`（CI 门禁雏形）＋`generated/`（ts/sql/cypher/vocab＋manifest）。
+- 验收（"改本体一个字段→全仓生成物同步"）：① 确定性双跑**逐字节一致**；② `tsc --noEmit` OK；③ SQLite 执行 **33 表** OK；④ **演示**：副本本体加 `Camera.resolution` → 重生成后 TS/SQL 同步出现该字段（基线 0 处）✓。
+- 细节：`DeviceHasStatus` 枚举由 SHACL `sh:in` 派生进 TS 类型；SQL 对设备链自动加 CHECK；锚类通用关系不进表结构（走关系层）。
