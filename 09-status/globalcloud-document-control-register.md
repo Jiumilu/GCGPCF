@@ -32,14 +32,14 @@ superseded_by: []
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 181 | 24 | 已建空间 |
-| KDS | 05-KDS | 815 | 812 | 已建空间 |
+| KDS | 05-KDS | 816 | 813 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2146 | 1909 | 已建空间 |
+| GPCF | 12-GPCF | 2147 | 1910 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -1369,6 +1369,7 @@ superseded_by: []
 | GPCF-DOC-8F9F2F5A0D | Cognee 真实外部执行回执提交请求包 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/cognee-real-external-execution-receipt-submission-request-20260626.md |
 | GPCF-DOC-9EBCF7DB43 | Cognee 真实外部执行回执更新补丁计划 2026-06-26 | docs/harness/evidence/cognee-real-external-execution-receipt-update-patch-plan-20260626.md | GPCF | GPCF, WAES | docs | controlled | 开发/12-GPCF/docs/harness/evidence/cognee-real-external-execution-receipt-update-patch-plan-20260626.md |
 | GPCF-DOC-7B2E61A9D4 | Current Session Mainline Declaration 20260622 | docs/harness/evidence/current-session-mainline-declaration-20260622.md | KDS | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/05-KDS/docs/harness/evidence/current-session-mainline-declaration-20260622.md |
+| GPCF-DOC-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011 | CWME 城市空间域扩展包登记请求 2026-10-11 | docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.md | KDS | WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.md |
 | GPCF-DOC-5D0159ED7D | Evidence Index | docs/harness/evidence/evidence-index.md | GPCF | GPCF, GFIS | docs | controlled | 开发/12-GPCF/docs/harness/evidence/evidence-index.md |
 | GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622 | GCKF P0 收口包候选证据 D124 | docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md | KDS | GFIS, GPC, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/gckf-p0-closure-packet-candidate-d124-20260622.md |
 | GPCF-DOC-GCKFP0CLOSUREPACKETPRECHECKD12320260622 | GCKF P0 收口包预检查证据 D123 | docs/harness/evidence/gckf-p0-closure-packet-precheck-d123-20260622.md | KDS | GFIS, WAES, KDS | docs | controlled | 开发/05-KDS/docs/harness/evidence/gckf-p0-closure-packet-precheck-d123-20260622.md |
@@ -2077,6 +2078,7 @@ superseded_by: []
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-RESPONSIBILITY-ASSIGNMENT-001 | Loop Round - GPCF Cognee 真实外部执行回执责任分配 001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-RESPONSIBILITY-ASSIGNMENT-001.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-RESPONSIBILITY-ASSIGNMENT-001.md |
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001 | Loop Round - GPCF Cognee 真实外部执行回执提交请求包 001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001.md |
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001 | Loop Round - GPCF Cognee 真实外部执行回执更新补丁计划 001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001.md | GPCF | GPC, WAES, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001.md |
+| GPCF-DOC-D5E62C7C1E | Loop Round GPCF CWME Space Domain Extension Registration Request 001 | docs/harness/loops/loop-round-GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001.md | GPCF | GPC, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001.md |
 | GPCF-DOC-B0BFD5B1FB | GC-Knowledge Fabric P0-D1 启动与规则冻结 LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | GPCF | GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md |
 | GPCF-DOC-4F7DC277C5 | GC-Knowledge Fabric P0-D10 Repository / Service Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | GPCF | GFIS, GPC, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md |
 | GPCF-LOOP-GCKF-P0-D100-001 | Loop Round GPCF-GCKF-P0-D100-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | GPCF | GFIS, GPC, WAES, KDS, GPCF | docs | controlled | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md |

@@ -24,3 +24,9 @@ superseded_by: []
 - 语义契约：本体工具链与 WAS 侧共用基线（Protégé＋pySHACL，见《WAS×CWME 协同方案》R6/M1）。
 - 边界：无生产/发布/接受声明；`accepted=false / integrated=false / production_ready=false`。
 - 启动记录（KDS）：`世界资产/世界模型引擎/2026-10-11_CWME项目启动记录.md`
+
+## 2026-10-11 · B4-1/B4-2 初版件产出 + 申请一提交
+- B4 初版件（KDS `世界资产/世界模型引擎/ontology/`）：`cwme-ext.ttl`（**199 triples/33 类/22 对象属性**）＋`cwme-mapping-v1.yaml`（spaceai.db **40 表**全量处置＋关系数据线索）＋`cwme-shapes-min.ttl`（4 形状）＋样例×2＋`verify_ontology.py`。
+- 验证（rdflib 7.6.0＋pyshacl 0.40.1 实跑）：合规样例 conforms=True；违规样例 **5 项全检出**。
+- **申请一（CWME 城市空间域扩展包 → WAS-Ontology 登记）已提交** GPCF（`docs/harness/evidence/cwme-space-domain-extension-registration-request-20261011.*`＋loop＋validator；`current_decision=pending`）。
+- 至此随老卢"1、提交／4、启动"的三个登记请求（XWAIL Profile／业务域／CWME 域包）**全部入库**。

@@ -1,0 +1,56 @@
+{
+  "evidence_id": "CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011",
+  "task_id": "GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001",
+  "loop_round_id": "GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001",
+  "date": "2026-10-11",
+  "status": "request_submitted_pending_governance_review",
+  "scope": "cwme_city_space_domain_extension_registration_request_only",
+  "requester": "F-017 CWME 城市级世界模型引擎（世界资产域）",
+  "requested_decision": "register_cwme_city_space_domain_extension_pack",
+  "current_decision": "pending_governance_review",
+  "extension_pack": {
+    "name": "CWME 城市空间域扩展包",
+    "ontology_file": "世界资产/世界模型引擎/ontology/cwme-ext.ttl",
+    "mapping_file": "世界资产/世界模型引擎/ontology/cwme-mapping-v1.yaml",
+    "shapes_file": "世界资产/世界模型引擎/ontology/cwme-shapes-min.ttl",
+    "verified": {
+      "tool": "rdflib 7.6.0 + pyshacl 0.40.1",
+      "triples": 199,
+      "classes": 33,
+      "object_properties": 22,
+      "positive_sample_conforms": true,
+      "negative_sample_violations": 5
+    }
+  },
+  "crosswalk_peer_check": {
+    "gc_side_mapping_listed": true,
+    "joint_review_record": "pending（不阻塞受理）"
+  },
+  "admission_preconditions": {
+    "cwme_ext_ttl_initial_exists": true,
+    "mapping_v1_exists": true,
+    "local_verification_pass": true,
+    "no_was_repo_modification": true,
+    "no_xwail_repo_modification": true,
+    "candidate_boundary_retained": true
+  },
+  "requested_boundary": {
+    "forbidden": [
+      "was_main_terms_modification",
+      "xwail_repo_modification_outside_governance",
+      "registry_existing_entries_modification",
+      "waes_publication_claim",
+      "production_ready_claim"
+    ]
+  },
+  "gates": {
+    "request_package_generated": true,
+    "submitted": true,
+    "registry_entry_added": false,
+    "governance_reviewed": false,
+    "waes_authorized": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}
