@@ -93,3 +93,7 @@ superseded_by: []
 ## 2026-10-11 · 开源本体工具链引入（PoC）
 - 选型件：《开源本体项目与工具引入方案（图谱 v3.0）》——Protégé 5.6.9／LinkML（可选）／**pySHACL 0.40.1＋rdflib 7.6.0**／pyoxigraph／IOF 202603（999类含供应链模块）／GS1 EPCIS 2.0；与 CWME 打通共用基线（Protégé+pySHACL 同一套）。
 - **PoC 实测**：权威快照只读 → 85对象/51声明=**988 triples**；正向 conforms=True；负例检出（≈C08）；SPARQL 分布与校验报告一致。原型：`工业绿链/图谱/proto/ontology-poc/`（未纳入正式管线）。
+
+## 2026-10-11 · WAS×CWME 协同关系方案（提案）
+- 《WAS语义基座与CWME及工业绿链应用协同关系与分工方案（提案）》：定调"一个基座（WAS/Ontology/XWAIL）、两种投影（CWME=城市空间运行域；绿链图谱=行业业务证据域）、分账治理"；六关系 R1-R6＋共享概念表＋三机制（登记联动/crosswalk/园区样板）；CWME 旗舰样板＝工业绿链园区，双试点建议（葛化设备＋黄梅园区）；4 个待决点。
+- 关键缝隙已标注：CWME 本体计划（cwme-ext.ttl）尚未挂接 WAS-Ontology 链——按 R1 以"域扩展包登记制"解决。
