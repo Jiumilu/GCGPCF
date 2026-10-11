@@ -1,6 +1,6 @@
 # KDS 开发文档空间
 
-生成日期：2026-10-10
+生成日期：2026-10-11
 
 用途：KDS `开发` 空间中 `KDS` 项目的受控文档入口。
 
@@ -307,6 +307,7 @@
 | GPCF-DOC-SOP-SCENARIO-OWNER-REVIEW-20260625 | SOP 场景生成物 Owner Review 证据 2026-06-25 | docs/harness/SOP/evidence/sop-scenario-owner-review-20260625.md | controlled |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | controlled |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | controlled |
+| GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | XWAIL City/Spatial Profile 立项请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | controlled |
 | GPCF-DOC-D190529EF4 | Harness 证据说明 | docs/harness/evidence/README.md | controlled |
 | GPCF-DOC-33DE44F307 | Agent-Reach Authoritative Source Verification 20260621 | docs/harness/evidence/agent-reach-authoritative-source-verification-20260621.md | controlled |
 | GPCF-DOC-AGENT-REACH-QUALITY-REGRESSION-20260622 | Agent-Reach Candidate Quality Regression Gate 2026-06-22 | docs/harness/evidence/agent-reach-candidate-quality-regression-gate-20260622.md | controlled |
@@ -516,6 +517,7 @@
 | GPCF-DOC-EB9209D502 | Headroom Runtime Adapter Dry-run Evidence | docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md | controlled |
 | GPCF-DOC-A5BB39D841 | Headroom Runtime Probe Evidence | docs/harness/evidence/headroom-runtime-probe-20260621.md | controlled |
 | GPCF-DOC-9BB94B0126 | Headroom Runtime Scenario Matrix Evidence | docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md | controlled |
+| GPCF-DOC-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011 | 工业绿链业务域（图谱只读投影）注册请求 2026-10-11 | docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.md | controlled |
 | GPCF-DOC-0F583D13A7 | KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告 | docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | controlled |
 | GPCF-DOC-931CDE09CE | KDS OKF v0.1 Agent 消费 smoke 测试证据 | docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md | controlled |
 | GPCF-DOC-431C7A5400 | KDS OKF v0.1 Derived Bundle Report | docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md | controlled |

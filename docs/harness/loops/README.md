@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/README.md
 source_path: docs/harness/loops/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
@@ -527,6 +527,7 @@ KDS 空间：`开发`
 | GPCF-DOC-AAD319F327 | LOOP Round GPCF Headroom Runtime Adapter Dry-run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-ADAPTER-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-D2DDB9FD6E | Loop Round GPCF-HEADROOM-RUNTIME-PROBE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-PROBE-001.md | GPCF | controlled |
 | GPCF-DOC-9DE430683F | LOOP Round GPCF Headroom Runtime Scenario Matrix 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-SCENARIO-MATRIX-001.md | GPCF | controlled |
+| GPCF-DOC-B1F7C2100B | Loop Round GPCF IGL Graph Domain Registration Request 001 | docs/harness/loops/loop-round-GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001.md | GPCF | controlled |
 | GPCF-LOOP-IMPLEMENTATION-UI-LOOP-INTEGRATION-001 | loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001 | docs/harness/loops/loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001.md | GPCF | controlled |
 | GPCF-DOC-9E9D7072F4 | loop-round-GPCF-KDS-DKS-001 | docs/harness/loops/loop-round-GPCF-KDS-DKS-001.md | GPCF | controlled |
 | GPCF-DOC-1953C27985 | GPCF-KDS-DKS-002 对象字段与11池映射清单 Loop 记录 | docs/harness/loops/loop-round-GPCF-KDS-DKS-002.md | GPCF | controlled |
@@ -1300,3 +1301,4 @@ KDS 空间：`开发`
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-023 | Loop Round GPCF-UI-STUDIO-WORKBENCH-023 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md | GPCF | controlled |
 | GPCF-LOOP-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | Loop Round GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md | GPCF | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | controlled |
+| GPCF-DOC-165FB00EF6 | Loop Round GPCF XWAIL City Spatial Profile Request 001 | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md | GPCF | controlled |

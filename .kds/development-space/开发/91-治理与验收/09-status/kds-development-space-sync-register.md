@@ -36,14 +36,14 @@ superseded_by: []
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
 | WAES | 04-WAES | 181 | 24 | 已建空间 |
-| KDS | 05-KDS | 816 | 813 | 已建空间 |
+| KDS | 05-KDS | 818 | 815 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |
 | XiaoC | 08-XiaoC | 46 | 43 | 已建空间 |
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2147 | 1910 | 已建空间 |
+| GPCF | 12-GPCF | 2150 | 1912 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -55,7 +55,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 282 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 283 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -1167,6 +1167,7 @@ superseded_by: []
 | GPCF-DOC-4CBD09FE9B | docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | 开发/09-XGD/docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | bidirectional | pending_api |
 | GPCF-DOC-0CE26414BA | docs/harness/XWAIL/README.md | 开发/05-KDS/docs/harness/XWAIL/README.md | bidirectional | pending_api |
 | GPCF-DOC-5770D36F5C | docs/harness/XWAIL/evidence/README.md | 开发/05-KDS/docs/harness/XWAIL/evidence/README.md | bidirectional | pending_api |
+| GPCF-DOC-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011 | docs/harness/XWAIL/evidence/xwail-city-profile-schema-review-request-20261011.md | 开发/05-KDS/docs/harness/XWAIL/evidence/xwail-city-profile-schema-review-request-20261011.md | bidirectional | pending_api |
 | GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | 开发/05-KDS/docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | bidirectional | pending_api |
 | GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | bidirectional | pending_api |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | 开发/12-GPCF/docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | bidirectional | pending_api |
@@ -1287,6 +1288,7 @@ superseded_by: []
 | GPCF-DOC-9C22552EEE | docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | 开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-schema-20260619.md | bidirectional | pending_api |
 | GPCF-DOC-7797BB4F55 | docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | 开发/05-KDS/docs/harness/evidence/base-knowledge-human-confirmation-template-20260619.md | bidirectional | pending_api |
 | GPCF-DOC-C13F879695 | docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | 开发/05-KDS/docs/harness/evidence/base-knowledge-writeback-candidate-ledger-20260618.md | bidirectional | pending_api |
+| GPCF-DOC-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011 | docs/harness/evidence/business-domain-slice-registry-greenchain-graph-20261011.md | 开发/05-KDS/docs/harness/evidence/business-domain-slice-registry-greenchain-graph-20261011.md | bidirectional | pending_api |
 | GPCF-DOC-4E29A86D95 | docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | 开发/05-KDS/docs/harness/evidence/codegraph-brain-gfis-authorization-boundary-20260623.md | bidirectional | pending_api |
 | GPCF-DOC-A1E6C5C544 | docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-admission-20260621.md | bidirectional | pending_api |
 | GPCF-DOC-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-BLOCKED-HOLD-20260626 | docs/harness/evidence/codegraph-dev-execution-authorization-blocked-hold-20260626.md | 开发/12-GPCF/docs/harness/evidence/codegraph-dev-execution-authorization-blocked-hold-20260626.md | bidirectional | pending_api |
@@ -2083,6 +2085,7 @@ superseded_by: []
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-SUBMISSION-REQUEST-001.md | bidirectional | pending_api |
 | GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001 | docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001.md | bidirectional | pending_api |
 | GPCF-DOC-D5E62C7C1E | docs/harness/loops/loop-round-GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-001.md | bidirectional | pending_api |
+| GPCF-DOC-BCA1A28962 | docs/harness/loops/loop-round-GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-001.md | bidirectional | pending_api |
 | GPCF-DOC-B0BFD5B1FB | docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D1-001.md | bidirectional | pending_api |
 | GPCF-DOC-4F7DC277C5 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D10-001.md | bidirectional | pending_api |
 | GPCF-LOOP-GCKF-P0-D100-001 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-GCKF-P0-D100-001.md | bidirectional | pending_api |
@@ -3174,6 +3177,7 @@ superseded_by: []
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-023 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md | bidirectional | pending_api |
 | GPCF-LOOP-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md | bidirectional | pending_api |
 | GPCF-DOC-F4C5AF2694 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | bidirectional | pending_api |
+| GPCF-DOC-AB4172336C | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-001.md | bidirectional | pending_api |
 | GPCF-DOC-165FB00EF6 | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md | 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md | bidirectional | pending_api |
 | GPCF-DOC-DF19BA9F40 | docs/harness/minimum-closed-loop/README.md | 开发/05-KDS/docs/harness/minimum-closed-loop/README.md | bidirectional | pending_api |
 | GPCF-DOC-9886BDB110 | docs/harness/minimum-closed-loop/control-plane.md | 开发/05-KDS/docs/harness/minimum-closed-loop/control-plane.md | bidirectional | pending_api |
@@ -3286,6 +3290,7 @@ superseded_by: []
 | GPCF-DOC-88F0926FFF | features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b3-首批SOP化工作单.md | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b3-首批SOP化工作单.md | bidirectional | pending_api |
 | GPCF-DOC-F016-GRAPH-READONLY-PILOT-EVIDENCE-20261011 | features/active/F-016-industrial-green-chain-graph-readonly-pilot/evidence/summary.md | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-8E14AF7D07 | features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md | bidirectional | pending_api |
+| GPCF-DOC-F017-CWME-EVIDENCE-20261011 | features/active/F-017-cwme-city-world-model-engine/evidence/summary.md | 开发/91-治理与验收/features/active/F-017-cwme-city-world-model-engine/evidence/summary.md | bidirectional | pending_api |
 | GPCF-F-017-JOURNAL-CWME-CITY-WORLD-MODEL-ENGINE | features/active/F-017-cwme-city-world-model-engine/journal.md | 开发/91-治理与验收/features/active/F-017-cwme-city-world-model-engine/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |

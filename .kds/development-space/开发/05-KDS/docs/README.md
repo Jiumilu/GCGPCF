@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/README.md
 source_path: docs/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
@@ -430,6 +430,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-4CBD09FE9B | Loop Round GPCF-XD-LR-001 | docs/harness/XGD/loops/loop-round-GPCF-XD-LR-001.md | XGD | controlled |
 | GPCF-DOC-0CE26414BA | XWAIL | docs/harness/XWAIL/README.md | KDS | controlled |
 | GPCF-DOC-5770D36F5C | evidence | docs/harness/XWAIL/evidence/README.md | KDS | controlled |
+| GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | XWAIL City/Spatial Profile 立项请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | KDS | controlled |
 | GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-WAES-AAAS-CONTRACT-PRECHECK-20260625 | XWAIL-WAES-AaaS 契约预检证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md | GPCF | controlled |
@@ -863,6 +864,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-EB9209D502 | Headroom Runtime Adapter Dry-run Evidence | docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md | KDS | controlled |
 | GPCF-DOC-A5BB39D841 | Headroom Runtime Probe Evidence | docs/harness/evidence/headroom-runtime-probe-20260621.md | KDS | controlled |
 | GPCF-DOC-9BB94B0126 | Headroom Runtime Scenario Matrix Evidence | docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md | KDS | controlled |
+| GPCF-DOC-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011 | 工业绿链业务域（图谱只读投影）注册请求 2026-10-11 | docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.md | KDS | controlled |
 | GPCF-DOC-0F583D13A7 | KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告 | docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | KDS | controlled |
 | GPCF-DOC-931CDE09CE | KDS OKF v0.1 Agent 消费 smoke 测试证据 | docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md | KDS | controlled |
 | GPCF-DOC-431C7A5400 | KDS OKF v0.1 Derived Bundle Report | docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md | KDS | controlled |
@@ -1659,6 +1661,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-AAD319F327 | LOOP Round GPCF Headroom Runtime Adapter Dry-run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-ADAPTER-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-D2DDB9FD6E | Loop Round GPCF-HEADROOM-RUNTIME-PROBE-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-PROBE-001.md | GPCF | controlled |
 | GPCF-DOC-9DE430683F | LOOP Round GPCF Headroom Runtime Scenario Matrix 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-RUNTIME-SCENARIO-MATRIX-001.md | GPCF | controlled |
+| GPCF-DOC-B1F7C2100B | Loop Round GPCF IGL Graph Domain Registration Request 001 | docs/harness/loops/loop-round-GPCF-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-001.md | GPCF | controlled |
 | GPCF-LOOP-IMPLEMENTATION-UI-LOOP-INTEGRATION-001 | loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001 | docs/harness/loops/loop-round-GPCF-IMPLEMENTATION-UI-LOOP-INTEGRATION-001.md | GPCF | controlled |
 | GPCF-DOC-9E9D7072F4 | loop-round-GPCF-KDS-DKS-001 | docs/harness/loops/loop-round-GPCF-KDS-DKS-001.md | GPCF | controlled |
 | GPCF-DOC-1953C27985 | GPCF-KDS-DKS-002 对象字段与11池映射清单 Loop 记录 | docs/harness/loops/loop-round-GPCF-KDS-DKS-002.md | GPCF | controlled |
@@ -2432,6 +2435,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-LOOP-UI-STUDIO-WORKBENCH-023 | Loop Round GPCF-UI-STUDIO-WORKBENCH-023 | docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md | GPCF | controlled |
 | GPCF-LOOP-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | Loop Round GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001 | docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md | GPCF | controlled |
 | GPCF-DOC-F4C5AF2694 | Loop Round GPCF-WAS-ADMISSION-001 | docs/harness/loops/loop-round-GPCF-WAS-ADMISSION-001.md | GPCF | controlled |
+| GPCF-DOC-165FB00EF6 | Loop Round GPCF XWAIL City Spatial Profile Request 001 | docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md | GPCF | controlled |
 | GPCF-DOC-DF19BA9F40 | minimum-closed-loop | docs/harness/minimum-closed-loop/README.md | KDS | controlled |
 | GPCF-DOC-9886BDB110 | L4 Control Plane | docs/harness/minimum-closed-loop/control-plane.md | KDS | controlled |
 | GPCF-DOC-4C33B5D2B6 | Minimum Closed Loop Evidence Index | docs/harness/minimum-closed-loop/evidence-index.md | KDS | controlled |

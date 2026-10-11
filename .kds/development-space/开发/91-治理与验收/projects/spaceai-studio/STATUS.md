@@ -57,7 +57,7 @@ superseded_by: []
 | P4 | `plugins/patrol` 端到端试点（8 测试） | `docs/specs/P4-01-patrol-pilot.md` |
 | P5 | Rust 平台抽象（5 测试）+ 三平台 CI + macOS `.app` 8.17 MiB | `docs/specs/P5-01-platform-and-packaging.md` |
 
-- 任务进度：**29/37**（`tasks.md`）；`openspec validate --strict` 通过；文档门禁 pass（missing_metadata=0）。
+- 任务进度：**37/37**（`tasks.md`）；`openspec validate --strict` 通过；**文档门禁 pass**（missing_metadata=0, missing_readme_dirs=0）。
 - 遗留 C# 业务源码本轮**零修改**。
 - 凭据安全：7 个含口令/连接串的文件在 `.gitignore` 排除列表内，**未跟踪、未入库、未进历史**。
 - 关键警示：**`MB3000/Func/FrmPatrolControl.cs` 是无人机（UAV）巡更控制**（`pbxFollow`/`pbxShowLine`/`pbxReturn`），与 Studio 的「巡更点/违规记录」**语义不同**——后续模块不得当作等价参照。
@@ -66,8 +66,12 @@ superseded_by: []
 
 `openspec archive` **暂不执行**：
 
-1. **任务未全部完成**（29/37；P6 与收口未闭合）→ 不满足归档的完整性前提；
+1. ~~任务未全部完成~~ → **已解除**：2026-10-10 达到 37/37；
 2. `.harness/config.yaml` 要求 `archive.require_acceptance_first: true` 与 `require_confirmation: true` → 需**人工验收 + 人工确认**；
 3. **运行态证据缺失**（未实际启动 GUI；三平台产物待 CI 落地）。
 
-→ 维持 `partial`；待 P6 决策、CI 产物落地与人工验收后再议归档。
+→ 维持 `partial`。条件②（人工验收 + 人工确认）与条件③（运行态启动证据、三平台产物落地）**仍未满足**，故 `openspec archive` 不执行。
+
+### CI 状态（2026-10-10）
+
+`.github/workflows/build.yml` 首次运行因 pnpm 版本双指定失败（测试未开始）；修复后第二轮：**测试（TS 51 + Rust 5）通过**，三平台打包已启动（macOS arm64 与 Linux 已产出，Windows 与 macOS x64 进行中）。

@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/02-GPC/.pytest_cache/README.md
 source_path: .pytest_cache/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---

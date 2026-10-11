@@ -31,7 +31,7 @@ evidence:
   api: waived
   summary: features/active/F-017-cwme-city-world-model-engine/evidence/summary.md
 blockers:
-  - 决策清单 D1（产品命名）/ D6（首个演示对象）待老卢确认（不阻塞启动）
+  - D1 命名已确认「万象引擎」；D6 首个演示对象＝光谷（2026-10-11 按建议；如调整请指出）
   - GPU 验证环境与光谷/黄梅数据场地接触待排期
   - B4-1—B4-5 首月件已完成（2026-10-11；见 evidence/summary.md）；申请一（域包登记）已提交，decision 待治理方
 ui_product_first_control:

@@ -20,7 +20,7 @@ superseded_by: []
 
 ## Summary
 
-- generated_at: `2026-10-10T16:00:16.728665+08:00`
+- generated_at: `2026-10-11T10:54:40.299320+08:00`
 - freshness_ok: `true`
 - project_count: `17`
 - pass_repo_count: `14`
@@ -33,7 +33,7 @@ superseded_by: []
 - stable_dirty: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
 - stable_ahead: `none`
 - volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCloud Studio`
+- sensitive_repos: `GlobalCloud Studio, GlobalCoud GPCF`
 - review_boundary: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
 
 ## Repo details
@@ -47,11 +47,11 @@ superseded_by: []
 | `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 152 | 0 | 0 | `tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
-| `GlobalCoud GPCF` | 5 | 0 | 0 | `none` |
+| `GlobalCoud GPCF` | 430 | 0 | 0 | `".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/patches/README.md", ".kds/development-space/\345\274\200\345\217\221/92-\350\257\201\346\215\256\344\270\216\344\274\232\350\257\235\345\275\222\346\241\243/.harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md", .harness/runs/kds-real-token-sync-20260613-062146/README.md, .harness/runs/kds-real-token-sync-20260613-062146/evidence/README.md, .harness/runs/kds-real-token-sync-20260613-062146/patches/README.md, .harness/runs/kds-real-token-sync-20260613-062146/workspaces/README.md` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 8 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 3 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |

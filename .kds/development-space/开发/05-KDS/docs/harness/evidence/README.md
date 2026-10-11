@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/README.md
 source_path: docs/harness/evidence/README.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
@@ -450,6 +450,7 @@ KDS 空间：`开发`
 | GPCF-DOC-EB9209D502 | Headroom Runtime Adapter Dry-run Evidence | docs/harness/evidence/headroom-runtime-adapter-dry-run-20260621.md | KDS | controlled |
 | GPCF-DOC-A5BB39D841 | Headroom Runtime Probe Evidence | docs/harness/evidence/headroom-runtime-probe-20260621.md | KDS | controlled |
 | GPCF-DOC-9BB94B0126 | Headroom Runtime Scenario Matrix Evidence | docs/harness/evidence/headroom-runtime-scenario-matrix-20260621.md | KDS | controlled |
+| GPCF-DOC-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011 | 工业绿链业务域（图谱只读投影）注册请求 2026-10-11 | docs/harness/evidence/industrial-green-chain-graph-domain-registration-request-20261011.md | KDS | controlled |
 | GPCF-DOC-0F583D13A7 | KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告 | docs/harness/evidence/kds-md-okf-odf-full-closure-report-20260619.md | KDS | controlled |
 | GPCF-DOC-931CDE09CE | KDS OKF v0.1 Agent 消费 smoke 测试证据 | docs/harness/evidence/kds-okf-v01-agent-consumption-smoke-20260620.md | KDS | controlled |
 | GPCF-DOC-431C7A5400 | KDS OKF v0.1 Derived Bundle Report | docs/harness/evidence/kds-okf-v01-phase1-bundle-report-20260619.md | KDS | controlled |
