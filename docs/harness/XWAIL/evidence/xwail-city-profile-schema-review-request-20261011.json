@@ -1,0 +1,55 @@
+{
+  "evidence_id": "XWAIL-CITY-PROFILE-SCHEMA-REVIEW-REQUEST-20261011",
+  "status": "request_submitted_pending_governance_review",
+  "date": "2026-10-11",
+  "round_id": "GPCF-XWAIL-CITY-PROFILE-SCHEMA-REVIEW-001",
+  "scope": "xwail_city_profile_schema_candidate_review_request_only",
+  "purpose": "承接上游受理（XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011, accepted 2026-10-11），就范围定义与 Schema 候选草案 v0.1 及 V-CP PoC 提请 XWAIL 项目治理流程评审与裁定（schema 定版）。",
+  "requested_decision": "review_and_settle_xwail_city_profile_schema_candidate",
+  "current_decision": "pending_governance_review",
+  "requester": "F-016 工业绿链业务图谱只读试点（工业绿链/图谱/），KDS 侧工作件",
+  "upstream_request": "docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.json",
+  "upstream_decision": "accepted",
+  "attachments": {
+    "range_and_schema_candidate": "工业绿链/管理文件/方案与规划/2026-10-11_XWAIL_CityProfile范围定义与Schema候选草案_v0.1.md",
+    "vcp_poc": "工业绿链/图谱/ontology/city-profile-poc/",
+    "vcp_verification": "工业绿链/图谱/ontology/city-profile-poc/verify_output.txt",
+    "vocab_review_material": "工业绿链/图谱/ontology/registry_vocab_review_request_v0.1.md"
+  },
+  "admission_preconditions": {
+    "upstream_request_accepted": true,
+    "draft_final_for_submission": true,
+    "poc_verified_5_of_5": true,
+    "core_readside_alignment_done": true,
+    "no_xwail_repo_modification": true,
+    "candidate_boundary_retained": true
+  },
+  "requested_boundary": {
+    "allowed_after_settlement": [
+      "xwail_city_profile_schema_finalization_under_governance",
+      "validator_extension_finalization"
+    ],
+    "forbidden": [
+      "xwail_repo_direct_modification_outside_governance",
+      "waes_publication_claim",
+      "production_ready_claim",
+      "customer_acceptance_claim"
+    ]
+  },
+  "gates": {
+    "request_package_generated": true,
+    "submitted": true,
+    "governance_reviewed": false,
+    "waes_authorized": false,
+    "published": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "validator": "python3 tools/kds-sync/validate_xwail_city_profile_schema_review_request.py",
+  "non_claims": [
+    "本请求为送审输入，不是裁定结果；current_decision 保持 pending",
+    "不写 XWAIL 仓、不声明 WAES 授权/发布、不声明 production_ready",
+    "裁定权属 XWAIL 项目治理流程"
+  ]
+}
