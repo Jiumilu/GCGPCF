@@ -75,7 +75,7 @@ superseded_by: []
 |---|---|---|---|
 | V1.2-01 回指完整性 | high | `wasBaseline / ontologyVersion / profile / ontologyRef / termVersion` 五件回指齐全 | 规范 §5.1；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（2026-10-11，5/5 实证） |
 | V1.2-02 兼容矩阵前置 | high | 发布候选附六维版本兼容矩阵（WAS × Ontology × XWAIL × Profile × ServicePackage × WAES status） | 规范 §5.2；矩阵格式待定 |
-| V1.2-03 Profile 白名单 | high | 模型 `profile` 必须位于登记白名单 | 规范 §3.2；登记载体待定 |
+| V1.2-03 Profile 白名单 | high | 模型 `profile` 必须位于登记白名单 | 规范 §3.2；登记载体待定；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（profilecheck.py ＋ profiles-registry.yaml 载体提案，6/6 实证，2026-10-11） |
 | V1.2-04 pilotScope 口径对齐 | high | `admissionStatus` 大小写统一（以 WAS 契约为准）；wasLayer 枚举对齐 | 跨仓待评审（WAS 侧同项） |
 | V1.2-05 WAES 边界扩展 | high | WAES 边界检查扩展到 Profile / XAP 全族（部分已实现：XWAIL-5001 / XAP-5001） | 规范 §6 |
 
