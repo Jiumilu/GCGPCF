@@ -483,3 +483,16 @@ superseded_by: []
    - API evidence required；summary evidence failed
 5. 是否可以提交？
    - 否。
+### Stage-1 冻结记录（2026-10-11）
+
+1. 这轮做什么？
+   - 依据老卢 2026-10-11「D-2 执行」决定：F-015 stage-1 冻结（标记暂停）。
+2. 改了什么？
+   - feature.yaml：status active→blocked（与 runtime queue 条目一致）；evidence api/summary fail→pending（转 stage-2 前置条件项，待真实接入就绪后重采）；blockers 两条改写为 stage-2 前置；updated_at 更新。
+3. 怎么验证？
+   - 运行 validate_gpcf_2_feature_workspace.py（本次冻结提交时输出为证）；iteration 33—35 证据矩阵在案（tests/build/screenshots/task_flow_e2e=pass）。
+4. 发现什么问题？
+   - iteration 34、35 连续两轮「采集本地可回放证据」无实质进展；api/summary 两类均依赖真实接入，本地隔离不可能满足；本地纵切（33 项 scope 主体、e2e）已达成。
+5. 是否可以提交？
+   - 是（stage-1 冻结记录）。恢复条件＝真实接入就绪（stage-2 启动时重采 API/summary 证据）。
+
