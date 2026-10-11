@@ -1,0 +1,58 @@
+{
+  "evidence_id": "XAP-IMPORT-INTERFACE-REGISTRATION-REQUEST-20261011",
+  "task_id": "GPCF-XAP-IMPORT-INTERFACE-REGISTRATION-REQUEST-001",
+  "loop_round_id": "GPCF-XAP-IMPORT-INTERFACE-REGISTRATION-REQUEST-001",
+  "date": "2026-10-11",
+  "status": "draft_pending_approval_and_submission",
+  "scope": "xap_import_interface_registration_request_only",
+  "requester": "WAS/XWAIL 契约线（KDS 图谱 ontology/xap-poc ＋ WAS《接入点_WAES包登记_v0.1》）",
+  "requested_decision": "admit_xap_import_interface_candidate",
+  "current_decision": "pending_governance_review",
+  "decision_record": null,
+  "registry_entry_ref": null,
+  "interface": {
+    "name": "XAPImportInterface",
+    "alias": "XAP 包导入接口（WAES 登记 / PVAOS 运行两段）",
+    "carrier": "KDS 工业绿链/图谱/ontology/xap-poc/（生成器＋演练器）＋ xwail-v12-poc/modecheck.py（预检）＋ WAS docs/接入点_WAES包登记_v0.1.md",
+    "mechanics": [
+      "XAP 包族 5 包生成（全部 0 issues）",
+      "导入三模式 M1 独立 / M2 合并（冲突挂起不自动合并）/ M3 只读",
+      "生命周期五机制：三段流程 / 三层检验＋对账 / 回退三策略 / 单向派生同步 / 导出对称链",
+      "预检层 V1.2-06（modecheck；M2 守恒断言：预检=执行）",
+      "9 步演练 9/9 PASS（4 工作包登记；全库 L3 对账）"
+    ]
+  },
+  "scope_binding": ["工业绿链(IGL)", "KDS(F-016)", "WAS/XWAIL（架构层）"],
+  "policy_compliance": {
+    "admission_required": true,
+    "must_bind_project_group_scope": true,
+    "must_map_to_registry_categories": true,
+    "must_not_bypass_kds_waes_loop": true
+  },
+  "six_category_mapping": {
+    "object": "XAP 模型内对象（本次 5 包：葛化 E01/全链、光谷、黄梅、宝马——均为既有图谱对象）",
+    "relationship": "模型 relations（deliveredBy／playsRoleIn；来源=图谱声明快照）",
+    "event": "（本次无新增事件对象）",
+    "evidence": "manifest sha256 ＋ 包校验报告（0 issues）＋ 演练实录 ＋ 预检输出",
+    "state": "包 lifecycle 枚举（Draft→Registered→Authorized→Published→Deprecated/Archived）＋ 导入状态机（登记≠激活）",
+    "interface": "接入点 8 接口：register／authorize／publish（治理段）＋ import／activate／rollback／export（运行段）＋ 浏览（M3）"
+  },
+  "attached_requests": {},
+  "admission_preconditions": {
+    "mapped_to_six_categories": true,
+    "binds_project_group_scope": true,
+    "no_kds_waes_loop_bypass": true,
+    "registry_body_unmodified": true,
+    "candidate_boundary_retained": true
+  },
+  "gates": {
+    "request_package_generated": true,
+    "submitted": false,
+    "registry_entry_added": false,
+    "governance_reviewed": false,
+    "waes_authorized": false,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  }
+}
