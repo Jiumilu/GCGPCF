@@ -1,0 +1,54 @@
+id: F-016
+name: industrial-green-chain-graph-readonly-pilot
+project: gpcf
+status: active
+goal: "以三链（宝马包装/葛化建设/黄梅枢纽）只读试点贯通『来源—主体—业务对象—SOP—执行—验收』声明链：确定性生成、逐条对账、缺口显式；不自动变更任何业务状态。"
+owner: GPCF
+priority: P1
+scope:
+  in:
+    - 三链关键业务对象的 claim 级只读图谱快照（工业绿链/图谱/）
+    - B1 三链来源与责任清单、现有接口与依赖可用性清单
+    - 确定性生成器与校验器（内容幂等/命名空间隔离/零任务化/映射对账）
+    - KDS 本地表格与局部 Mermaid 视图、独立运行回执
+  out:
+    - 真实业务写入、SOP 发布、跨系统集成、定时调度
+    - 自动派单/报价/付款/排产/对外发送
+    - 状态提升（accepted/integrated/production_ready/customer_accepted）
+acceptance:
+  - B1 两份清单可审阅：每来源有负责人/范围/权限，未知项有处置
+  - 三链快照逐条对账：已审分母、剩余项、误声明列明
+  - 校验器全过：内容幂等、命名空间隔离、参数费用零任务化、计划与事实分离
+  - 图谱生成前后源文件无非授权变化（不改变来源）
+loop:
+  current_step: b1
+  iteration: 1
+evidence:
+  tests: pass
+  build: pending
+  screenshots: waived
+  api: waived
+  summary: pending
+blockers:
+  - 业务确认人、来源读取权限、正式 SOP 版本、试点验收人待落实（不虚构任命）
+  - B2—B5 放行依赖 B1 完成与各自授权流程
+ui_product_first_control:
+  version: v1.1
+  applicability: direct
+  user_groups:
+    - 项目负责人
+    - 业务对象 owner
+    - SOP 负责人
+    - 审计与治理人员
+  primary_human_task: 从视图回到来源，对三链关键对象逐条核对角色/依据/缺口并给出复核决定
+  machine_interface_boundary: KDS 保存来源、claim 与快照；图谱只读呈现；权威处理发生在各来源系统
+  gates:
+    functional_completeness: pending
+    quality_baseline: pending
+    multi_user_usability: pending
+    task_flow_e2e_status: pending
+    accessibility_status: pending
+    evidence_overexposure_gate: pending
+  status_ceiling: partial
+registration_note: 编号 F-016 为按序暂定；正式编号以项目群入口分配为准（承 v2.0 §13.2）。
+source_plan: 工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱与执行核验一体化方案_v2.0.md

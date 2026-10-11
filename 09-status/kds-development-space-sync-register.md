@@ -11,14 +11,14 @@ kds_space: 开发
 kds_path: 开发/91-治理与验收/09-status/kds-development-space-sync-register.md
 source_path: 09-status/kds-development-space-sync-register.md
 sync_direction: bidirectional
-last_reviewed: 2026-10-10
+last_reviewed: 2026-10-11
 supersedes: []
 superseded_by: []
 ---
 
 # KDS 开发空间同步台账
 
-日期：2026-10-10
+日期：2026-10-11
 
 用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。
 
@@ -43,7 +43,7 @@ superseded_by: []
 | XGD | 09-XGD | 10 | 7 | 已建空间 |
 | XiaoG | 10-XiaoG | 11 | 8 | 已建空间 |
 | MMC | 11-MMC | 12 | 9 | 已建空间 |
-| GPCF | 12-GPCF | 2137 | 1907 | 已建空间 |
+| GPCF | 12-GPCF | 2140 | 1907 | 已建空间 |
 | Studio | 13-Studio | 5 | 2 | 已建空间 |
 | ICP | 14-ICP | 0 | 0 | 已建空间，暂无直接镜像文档 |
 | SpaceAIStudio | 15-SpaceAIStudio | 0 | 0 | 已建空间，暂无直接镜像文档 |
@@ -55,7 +55,7 @@ superseded_by: []
 | --- | --- | --- |
 | 00-项目群总控 | 项目群总入口与根 README | 1 |
 | 90-跨项目架构 | 跨项目架构、主线、数据/知识跨域文档 | 66 |
-| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 275 |
+| 91-治理与验收 | 治理、验收、状态、台账与门禁文档 | 278 |
 | 92-证据与会话归档 | Harness、证据样本、历史会话与归档文档 | 95 |
 | 99-过期文档 | deprecated / superseded 文档 | 0 |
 
@@ -3274,6 +3274,9 @@ superseded_by: []
 | GPCF-F-015-EVIDENCE-GCWORLD-ORGANIZATION-READONLY-MVP-20260904 | features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/gcworld-organization-readonly-mvp-20260904.md | bidirectional | pending_api |
 | GPCF-F-015-EVIDENCE-SUMMARY-GCWORLD-ORGANIZATION-READONLY | features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/summary.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/evidence/summary.md | bidirectional | pending_api |
 | GPCF-F-015-JOURNAL-GCWORLD-ORGANIZATION-READONLY | features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md | 开发/91-治理与验收/features/active/F-015-gcworld-organization-readonly-vertical-slice/journal.md | bidirectional | pending_api |
+| GPCF-DOC-391FB036D6 | features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-三链来源与责任清单.md | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-三链来源与责任清单.md | bidirectional | pending_api |
+| GPCF-DOC-2EEBA62214 | features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-接口与依赖可用性清单.md | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/artifacts/b1-接口与依赖可用性清单.md | bidirectional | pending_api |
+| GPCF-DOC-8E14AF7D07 | features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md | 开发/91-治理与验收/features/active/F-016-industrial-green-chain-graph-readonly-pilot/journal.md | bidirectional | pending_api |
 | GPCF-DOC-01B2179D97 | features/done/F-001-supplier-onboarding/evidence/summary.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/evidence/summary.md | bidirectional | pending_api |
 | GPCF-DOC-1CB646B985 | features/done/F-001-supplier-onboarding/journal.md | 开发/91-治理与验收/features/done/F-001-supplier-onboarding/journal.md | bidirectional | pending_api |
 | GPCF-DOC-87C12A1121 | features/done/F-002-project-group-feature-queue/evidence/summary.md | 开发/91-治理与验收/features/done/F-002-project-group-feature-queue/evidence/summary.md | bidirectional | pending_api |
