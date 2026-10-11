@@ -1,3 +1,21 @@
+---
+doc_id: GPCF-DOC-WAES-UNIFIED-REQUEST-MECHANISM-20261011
+title: GlobalCloud 项目群 · WAES 统一审核请求机制
+project: GPCF
+related_projects: [GPCF, WAS, XWAIL, WAES, PVAOS, KDS]
+domain: architecture
+status: controlled
+version: v0.1
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/90-跨项目架构/01-architecture/WAES统一审核请求机制_v0.1.md
+source_path: 01-architecture/WAES统一审核请求机制_v0.1.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-11
+supersedes: []
+superseded_by: []
+---
+
 # GlobalCloud 项目群 · WAES 统一审核请求机制 v0.1
 
 - 日期：2026-10-11 ｜ 性质：**机制设计件**（项目群级）——提交侧（WAS/XWAIL）产出；WAES/PVAOS 实现随其流程
@@ -70,7 +88,7 @@ XAPRequestEnvelope v0.1（最小必填）：
 → 分流（登记/词表/授权/修复各归其道）→ 治理裁定 → 回执回写（requestId 关联）→ 归档
 ```
 
-**四级检验实现分工**：①③④ 提交侧工具已就绪（本次：`requestcheck.py`＋`modecheck.py`＋校验链）；②复用 XAP 校验（`validate_xap_manifest`）；**WAES 受理器**＝其实现侧（本机制给规范与工具，实现随其立项）。
+**四级检验实现分工**：①③④ 提交侧工具已就绪（本次：`requestcheck.py`＋`modecheck.py`＋校验链）；②**按 `packageKind` 分流**——**纯请求包**（无 models）：资产包字段（version／三维基线／models 等）**不适用**（分流 N/A）；**混合包**（含 models）追加 `validate_xap_manifest` 校验——已实证（requestcheck v2 R08；**修复 2026-10-11 Codex 审计 P0**：「旧 XAP 校验器对请求包报 9 项」的串联断裂）；**WAES 受理器**＝其实现侧（本机制给规范与工具，实现随其立项）。
 
 ## 四、实施规划（四阶段）
 

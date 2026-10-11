@@ -1,3 +1,21 @@
+---
+doc_id: GPCF-DOC-WAES-REQUEST-PACK-GUIDE-20261011
+title: WAES 请求包制作指南
+project: GPCF
+related_projects: [GPCF, WAS, XWAIL, WAES, KDS]
+domain: architecture
+status: controlled
+version: v0.1
+owner: GPCF
+kds_space: 开发
+kds_path: 开发/90-跨项目架构/01-architecture/WAES请求包制作指南_v0.1.md
+source_path: 01-architecture/WAES请求包制作指南_v0.1.md
+sync_direction: bidirectional
+last_reviewed: 2026-10-11
+supersedes: []
+superseded_by: []
+---
+
 # WAES 请求包制作指南 v0.1（S3 接入工具包）
 
 - 日期：2026-10-11 ｜ 依据：《WAES统一审核请求机制_v0.1》（GPCF 01-architecture）
