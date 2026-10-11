@@ -3,7 +3,7 @@
   "task_id": "GPCF-XAP-IMPORT-INTERFACE-REGISTRATION-REQUEST-001",
   "loop_round_id": "GPCF-XAP-IMPORT-INTERFACE-REGISTRATION-REQUEST-001",
   "date": "2026-10-11",
-  "status": "draft_pending_approval_and_submission",
+  "status": "submitted_pending_governance_review",
   "scope": "xap_import_interface_registration_request_only",
   "requester": "WAS/XWAIL 契约线（KDS 图谱 ontology/xap-poc ＋ WAS《接入点_WAES包登记_v0.1》）",
   "requested_decision": "admit_xap_import_interface_candidate",
@@ -47,7 +47,7 @@
   },
   "gates": {
     "request_package_generated": true,
-    "submitted": false,
+    "submitted": true,
     "registry_entry_added": false,
     "governance_reviewed": false,
     "waes_authorized": false,
