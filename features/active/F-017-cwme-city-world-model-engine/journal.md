@@ -57,3 +57,17 @@ superseded_by: []
 
 ## 2026-10-11 · D1/D6 确认（按建议）
 - D1 命名「万象引擎」、D6 首个演示对象「光谷」——按老卢「按建议执行」确认（启动记录＋feature.yaml 已更新）。
+
+## 首月件收口五问（2026-10-11 · 格式对齐）
+
+1. 这轮做什么？
+   - F-017 立项与首月件：B4-1—B4-5（映射/扩展本体/SHACL/生成器/Neo4j/CI 门禁）＋深化（31 受管表全量、增量机制、ci-gate 6 步）。
+2. 改了什么？
+   - KDS `世界资产/世界模型引擎/ontology/`：cwme-ext.ttl、cwme-mapping-v1.yaml、cwme-shapes-min.ttl、cwme_gen.py、neo4j/（sync_sample/sync_graph/full-load.cypher）、ci-gate.sh；GPCF validator `validate_cwme_ontology_chain.py`；feature.yaml。
+3. 怎么验证？
+   - ci-gate 6/6 PASS；validator 轻检+deep pass；反例实证（改本体不重生成→防漂移双拦截）；Neo4j 1503 节点/1960 关系/0 错误；增量三类漂移全检出。
+4. 发现什么问题？
+   - 两段式语句顺序缺陷（已修）；生成↔落库差异 10 条（语义正确）；GPU 环境与光谷/黄梅数据场地待排期；域包登记 decision 待治理方。
+5. 是否可以提交？
+   - 是（首月件阶段；不触发布/接受声明）。
+

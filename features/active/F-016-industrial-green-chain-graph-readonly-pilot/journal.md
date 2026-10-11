@@ -151,3 +151,17 @@ superseded_by: []
 ## 2026-10-11 · Profile 定版候选 v1.0 工作件（受理后·按流程）
 - 产出：`图谱/ontology/xwail-city-profile-candidate/`——**schema 契约化定版候选**（JSON Schema 2020-12：cityProfileRef/回指/scopeClasses 硬约束）＋validator v1（schema＋补充检查）＋5 样例＋实跑记录。
 - 验证：**5/5**（负例拒因归类 V-CP-01..04）；core 对照矩阵保持。定版稿**待 XWAIL 流程终裁**；零写回。
+
+## 首月件收口五问（2026-10-11 · 格式对齐）
+
+1. 这轮做什么？
+   - F-016 工业绿链图谱只读试点：B1 基线 → B2 预览与放行（b2_released） → B3 机制预置 → v3.0（O-1/O-2/O-3）与两项登记受理。
+2. 改了什么？
+   - KDS `工业绿链/图谱/`（生成器/校验器→20 项/快照/视图/导出/ontology 映射）；GPCF feature 工作区与本 journal；XWAIL Profile 与业务域两登记请求＋域切片登记件。
+3. 怎么验证？
+   - 校验 C01—C20 全 PASS（hard_fail=0）；B2 抽样核对 8/8；五连演练（恢复/变更/阻断）；导出包 --verify ok；O-1 正例 20/20；O-2 双跑逐字节一致。
+4. 发现什么问题？
+   - 责任/权限/SOP 版本/验收人待业务落实（不虚构）；B3 依赖 SOP 首版触发（SOP-01 建议 10-25、SOP-02 建议 11-07）；registry 词表 `rejected` 缺口待评审。
+5. 是否可以提交？
+   - 是（b2_released 阶段；零写回、不触发布/接受声明）。
+

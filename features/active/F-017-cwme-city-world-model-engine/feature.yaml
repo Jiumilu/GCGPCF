@@ -24,12 +24,14 @@ acceptance:
 loop:
   current_step: b4_first_month_completed
   iteration: 1
+created_at: "2026-10-11T05:41:00+00:00"   # F-017 创建（2026-10-11 13:41 CST）
+updated_at: "2026-10-11T07:19:54+00:00"
 evidence:
-  tests: pass（B4-1—B4-5 首月件 ci-gate 5/5；2026-10-11）
-  build: pass（生成器/加载器/门禁实跑）
+  tests: pass
+  build: pass
   screenshots: waived
   api: waived
-  summary: features/active/F-017-cwme-city-world-model-engine/evidence/summary.md
+  summary: pass
 blockers:
   - D1 命名已确认「万象引擎」；D6 首个演示对象＝光谷（2026-10-11 按建议；如调整请指出）
   - GPU 验证环境与光谷/黄梅数据场地接触待排期

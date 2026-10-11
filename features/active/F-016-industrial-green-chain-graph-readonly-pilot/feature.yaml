@@ -23,6 +23,8 @@ acceptance:
 loop:
   current_step: b2_released
   iteration: 1
+created_at: "2026-10-11T10:36:10+08:00"
+updated_at: "2026-10-11T07:20:58+00:00"
 evidence:
   tests: pass
   build: pass

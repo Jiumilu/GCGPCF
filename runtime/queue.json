@@ -154,6 +154,28 @@
       "workspace": "features/active/F-014-industrial-meeting-to-project-control-loop",
       "created_at": "2026-08-22T03:44:32+00:00",
       "updated_at": "2026-08-23T02:03:35+00:00"
+    },
+    {
+      "id": "F-016",
+      "name": "industrial-green-chain-graph-readonly-pilot",
+      "project": "gpcf",
+      "priority": "P1",
+      "status": "evaluated",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-016-industrial-green-chain-graph-readonly-pilot",
+      "created_at": "2026-10-11T10:36:10+08:00",
+      "updated_at": "2026-10-11T07:20:58+00:00"
+    },
+    {
+      "id": "F-017",
+      "name": "cwme-city-world-model-engine",
+      "project": "kds",
+      "priority": "P1",
+      "status": "evaluated",
+      "current_role": "Evaluator",
+      "workspace": "features/active/F-017-cwme-city-world-model-engine",
+      "created_at": "2026-10-11T05:41:00+00:00",
+      "updated_at": "2026-10-11T07:20:58+00:00"
     }
   ]
 }
