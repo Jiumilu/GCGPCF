@@ -18,7 +18,7 @@ superseded_by: []
 
 # XWAIL可扩展世界资产信息建模语言规范V1.2草案
 
-> **文档状态**：draft（正文填充 2026-10-11；此前为占位框架）
+> **文档状态**：draft（正文填充 2026-10-11，含 §2.1/§2.2 资产·群组·关系建模模式；此前为占位框架）
 > **规范版本**：1.2.0-draft ｜ **工程化基线**：GCXWAIL 1.1（《XWAIL实施方案.md》）
 > **固定关系（GPCF V1.2 口径）**：WAS 定义体系 · Ontology 定义语义 · **XWAIL 定义契约** · WAES 注册/授权/发布 · AaaS 服务包与运营
 > **边界声明**：本草案不重定义 WAS 三层资产、八维、八流、生命周期与治理状态；不声明任何发布状态；任何 Schema、Profile、Validator、XAP、错误码或 CI 门禁进入正式发布前，必须补充版本兼容矩阵并通过 WAES 注册、授权与发布边界检查。
@@ -49,6 +49,24 @@ XWAIL 模型为 JSON 文档，根对象 `kind = "XWAILModel"`。字段规范：
 | flowRelations[] | ○ | `flowType ∈ 八流`；`source`/`target` 存在（权威=WAS `was-flows.yaml`：LogisticsFlow / InformationFlow / FinancialFlow / EnergyFlow / ServiceFlow / ControlFlow / ValueFlow / CreditFlow） |
 | lifecycle.states | ✓ | 状态机状态列表 |
 | pilotScope | ○ | 试点范围契约（见 §4） |
+
+### 2.1 资产与群组（AssetUnit / AssetGroup 模式）
+
+- **单个资产**以 `assets[]` 条目表达（AssetUnit 模式）；**群组资产**（AssetGroup 模式）同为 `assets[]` 条目——**群组本身也是资产**。例：工厂、虚拟工厂等即以 AssetGroup 承载（《语义契约》§3 映射）；容器类对象（如项目，术语在审 T-1）同属此模式。
+- 群组与其成员之间**不新增容器字段**：成员/组成统一经**关系**表达（见 2.2），保持「资产是资产、关系是关系」的正交结构。
+- 群组可被更大群组包含（资产树）；成员可为任意资产类型（AssetGroup / AssetUnit）。
+
+### 2.2 关系两分：结构关系与流关系（对齐 WAS V1.2「静态关系 + 八流行为」口径）
+
+| 类 | 载体 | 表达 | 典型用途 |
+|---|---|---|---|
+| **结构关系**（静态） | `relations[]` | `type`（如 `composition`）＋ `source`/`target` | 组成/包含/层级（群组→成员、父→子） |
+| **流关系**（行为） | `flowRelations[]` | `flowType ∈ 八流` ＋ `source`/`target`（＋动作/触发） | 物流/资金/信息等资产间作用 |
+
+**建模约束**（校验项见规则清单）：
+- `source`/`target` 必须引用存在资产（悬空引用禁；XWAIL-3004）；
+- 禁自环（XWAIL-3001）；禁 composition 循环（XWAIL-3002，1.2 待实现）；嵌套层级限（XWAIL-6001，1.2 待实现）；
+- 治理性绑定（池链等）与发布治理属 WAS/WAES 层，由 WAS 契约承载——XWAIL 只表达结构与行为的机器契约，不在核心内重复定义。
 
 ## 3. Profile 机制
 
