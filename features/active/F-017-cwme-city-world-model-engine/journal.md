@@ -35,3 +35,9 @@ superseded_by: []
 - 产出：`ontology/cwme_gen.py`（本体→4 类产物）＋`verify_generated.py`（CI 门禁雏形）＋`generated/`（ts/sql/cypher/vocab＋manifest）。
 - 验收（"改本体一个字段→全仓生成物同步"）：① 确定性双跑**逐字节一致**；② `tsc --noEmit` OK；③ SQLite 执行 **33 表** OK；④ **演示**：副本本体加 `Camera.resolution` → 重生成后 TS/SQL 同步出现该字段（基线 0 处）✓。
 - 细节：`DeviceHasStatus` 枚举由 SHACL `sh:in` 派生进 TS 类型；SQL 对设备链自动加 CHECK；锚类通用关系不进表结构（走关系层）。
+
+## 2026-10-11 · B4-4 Neo4j 落地 PoC（端到端）
+- 本机容器 `cwme-neo4j`（neo4j:5 / 5.26.31 community；:7474/:7687）。
+- 产出：`ontology/neo4j/`——`sync_sample.py`（spaceai.db 只读→加载脚本）＋`sample-load.cypher`＋`verify_queries.cypher`＋`verify-output.txt`＋README。
+- **实跑：888 节点 / 914 关系 / 36 约束 / 0 错误**；场景抽检全真实返回（居住区报警链、文波楼 40 设备、5 条巡更线、门禁事件、相机 40）。
+- 生成↔落库差异 10 条均为语义正确（8 无效引用＋2 去重）；约束内联本体生成物（设计层→运行层联动）。
