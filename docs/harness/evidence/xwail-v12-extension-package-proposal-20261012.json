@@ -1,0 +1,26 @@
+{
+  "evidenceId": "GPCF-XWAIL-V12-EXTENSION-PROPOSAL-20261012",
+  "title": "XWAIL V1.2 扩展包提案 v0.1（语义内核十件对象）",
+  "date": "2026-10-12",
+  "status": "proposed",
+  "submittedBy": "was-xwail-workline（Hermes）",
+  "requestedDecision": "批准十件对象进入 V1.2 扩展包（打包评审）",
+  "currentDecision": "pending_governance_review",
+  "artifacts": [
+    "XWAIL:docs/XWAIL-V1.2扩展包提案_v0.1.md",
+    "XWAIL:docs/XWAIL扩展议题_was-theory_v0.1.md（v0.4）",
+    "XWAIL:schemas-json/（10 草案 schema）",
+    "XWAIL:schemas-json/testcases/（正负样例 20）",
+    "XWAIL:scripts/check_object_schemas.py",
+    "XWAIL:scripts/slice_check.py（v2）",
+    "KDS:世界资产/样例_*_v0.1.json（13 条）",
+    "WAS:docs/WAS语义内核契约化升级方案_v1.0.md"
+  ],
+  "verification": {
+    "schema自检": "10/10",
+    "样例": "20/20",
+    "切片实存": "3/3",
+    "对象实存": "13/13"
+  },
+  "terms": "提案人=Hermes工作线；裁定权归治理议程。"
+}
