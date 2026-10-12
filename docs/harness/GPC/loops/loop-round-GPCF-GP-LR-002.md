@@ -44,3 +44,4 @@ superseded_by: []
 | GFIS/GPC 边界 | pending-human-review | 订单/交付/POD/回款事实边界确认 |
 
 当前状态保持 `partial`；本轮不写入 GPC 蓝图，不改变架构结论，也不标记 accepted/integrated。
+Current state remains `partial`

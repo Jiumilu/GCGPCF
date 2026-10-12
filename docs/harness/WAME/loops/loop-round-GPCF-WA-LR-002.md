@@ -44,3 +44,4 @@ superseded_by: []
 | 状态裁决 | pending-human-review | partial/ready/accepted/integrated 判定证据 |
 
 当前状态保持 `partial`；本轮不改变 WAME 权限、accepted/integrated 状态、生产配置或真实项目仓。
+Current state remains `partial`

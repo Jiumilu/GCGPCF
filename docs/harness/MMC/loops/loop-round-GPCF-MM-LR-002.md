@@ -47,3 +47,4 @@ superseded_by: []
 | customer_feedback | 客户满意/反馈 | no | draft-controlled |
 
 当前状态保持 `partial`；本轮只建立受控治理字典，不标记任何项目 accepted/integrated。
+Current state remains `partial`

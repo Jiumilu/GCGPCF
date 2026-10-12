@@ -44,3 +44,4 @@ superseded_by: []
 | GFIS/WAME 依赖 | pending | 触发事件、门禁事件、回滚路径 |
 
 当前状态保持 `partial`；本轮不触碰设备、生产、真实外部 API，也不标记 accepted/integrated。
+Current state remains `partial`

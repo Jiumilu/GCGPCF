@@ -975,3 +975,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 | GPCF 校验器 | `validate_brain_review_handoff.py` |
 | 当前建议状态 | `brain_review_handoff = ready_for_human_review`，`brain_status = ready_for_review / authorization_boundary` |
 | 边界 | 不声明 `accepted`，不声明 `integrated`，不声明 `production_ready`，不声明客户验收通过 |
+typecheck/test/build/check:wasm
+xwail-real-runtime-baseline-20260624.md
+xwail_runtime_evidence = repair_required
+xwail_repair_required = validator_commands_missing

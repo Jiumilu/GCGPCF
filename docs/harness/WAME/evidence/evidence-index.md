@@ -15,3 +15,4 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+accepted / integrated 状态边界：本仓不声明 accepted 或 integrated（accepted=false、integrated=false）

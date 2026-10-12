@@ -783,3 +783,7 @@ customer_accepted=false
 | 2026-06-17 | v3.98：完成 `GPCF-L4-GFIS-REPAIR-229` / `GFIS-RUNTIME-SOP-E2E-219`，在 GFIS 真项目仓接入 pending business verification manual completion schema；`schema_files=1`、`required_completion_fields=12`、`manual_business_verification_completion_files_found=0`、`manual_business_verification_completed=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0`，完整 SOP E2E 继续 `repair_required`；不升级 accepted/integrated |
 | 2026-06-17 | v3.99：完成 `GPCF-L4-GFIS-REPAIR-230` / `GFIS-RUNTIME-SOP-E2E-220`，在 GFIS 真项目仓接入 pending business verification manual completion file empty scan；`manual_business_verification_completion_files_found=0`、`schema_valid_manual_completion_files=0`、`manual_business_verification_completed=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0`，完整 SOP E2E 继续 `repair_required`；不升级 accepted/integrated |
 | 2026-06-17 | v4.00：完成 `GPCF-L4-GFIS-REPAIR-231` / `GFIS-RUNTIME-SOP-E2E-221`，在 GFIS 真项目仓接入 pending business verification manual completion negative fixture guard；`negative_completion_fixture_count=6`、`rejected_completion_fixture_count=6`、`accepted_completion_fixture_count=0`、`manual_business_verification_completion_files_found=0`、`schema_valid_manual_completion_files=0`、`manual_business_verification_completed=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0`，完整 SOP E2E 继续 `repair_required`；不升级 accepted/integrated |
+状态：v5.75
+当前 17 项目范围 | `17-project scope`
+项目群状态矩阵补齐为 17 项目口径
+WAS-Ontology monitor 100 仍保持 hold

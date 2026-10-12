@@ -44,3 +44,4 @@ superseded_by: []
 | GPC 依赖 | pending | GPC 平台边界确认 |
 
 当前状态保持 `partial`；本轮不部署 PVAOS，不写真实项目仓，也不标记 accepted/integrated。
+Current state remains `partial`

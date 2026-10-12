@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T14:09:00.964691+08:00",
+  "generated_at": "2026-10-12T14:21:42.631324+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
@@ -45,7 +45,7 @@
   "sensitive_repos": [],
   "pass_repo_count": 10,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T14:07:33.413694+08:00",
+  "previous_generated_at": "2026-10-12T14:21:32.096559+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -107,29 +107,23 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 1,
-      "ahead": 9,
+      "dirty_count": 2,
+      "ahead": 10,
       "behind": 0,
       "paths": [
-        "packages/client/src/views/hermes/ChatView.vue"
+        "scripts/meeting-source-registration.py",
+        "docs/harness/evidence/codegraph/studio-meeting-source-endpoint-20261012.json"
       ],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 10,
+      "dirty_count": 3,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
+        "docs/harness/evidence/loop-codegraph-project-group-graphized-20260621.json",
+        "docs/harness/evidence/loop-codegraph-project-group-monitor-20260621.json",
+        "tools/kds-sync/validate_loop_codegraph_project_group_graphized.py"
       ],
       "sensitive_paths": []
     },
@@ -208,7 +202,7 @@
     },
     "GlobalCloud KDS": {
       "dirty_count": 15,
-      "ahead": 2,
+      "ahead": 4,
       "behind": 0,
       "paths": [
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\345\\233\\236\\345\\206\\231/01_\\346\\212\\245\\344\\273\\267\\345\\217\\260\\350\\264\\246.md\"",

@@ -82,7 +82,7 @@ GFIS 原生字段 12 个，WAS/Ontology 字段 12 个。候选必须同时通过
 - `lifecycle` 必须等于 `pending_business_verification`
 - `trustLevel` 必须等于 `T4`
 - `kdsBacklink` 必须等于 `source_of_record_backlink`
-- `wameGateRefs` 必须包含 `waes://gate/customer-order-source-record-review`
+- `wameGateRefs` 必须包含 `wame://gate/customer-order-source-record-review`
 - `promotionBlockers` 必须包含 `valid_source_record_missing` 和 `customer_confirmation_missing`
 
 ## 夹具结果

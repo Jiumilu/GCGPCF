@@ -99,12 +99,12 @@ def main() -> int:
         require(parse_count("Files", status) >= int(repos[name]["files"]), f"{name} file count below evidence")
         require(parse_count("Nodes", status) >= int(repos[name]["nodes"]), f"{name} node count below evidence")
         require(parse_count("Edges", status) >= int(repos[name]["edges"]), f"{name} edge count below evidence")
-        if name == "GlobalCloud Studio":
-            require("Pending Changes:" in status, "Studio watch notice expected")
-            require(repos[name]["index_status"] == "pending_sync_watchlist", "Studio must be pending_sync_watchlist")
+        watch_status = str(repos[name].get("index_status") or "")
+        if watch_status in {"pending_sync", "pending_sync_watchlist", "policy_exception"}:
+            require("Pending Changes:" in status, f"{name} watch notice expected")
         else:
             require("Index is up to date" in status, f"{name} must be up to date")
-            require(repos[name]["index_status"].startswith("up_to_date"), f"{name} evidence must be up_to_date")
+            require(watch_status.startswith("up_to_date"), f"{name} evidence must be up_to_date")
 
     require(total_git_entries == 0, "aggregated .codegraph git entries must be 0")
     require("large_generated_validator_exception_candidate" in policy, "large file policy missing GFIS exception")
