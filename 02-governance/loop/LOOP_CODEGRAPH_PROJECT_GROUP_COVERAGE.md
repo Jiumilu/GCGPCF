@@ -52,7 +52,7 @@ superseded_by: []
 | 6 | GlobalCloud PKC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC` | 110 | 1,034 | 2,685 | 2.41 MB | up_to_date | `.codegraph` 未进入 Git |
 | 7 | GlobalCloud PVAOS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS` | 604 | 8,899 | 28,838 | 25.67 MB | up_to_date | `.codegraph` 未进入 Git |
 | 8 | GlobalCloud Studio | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio` | 778 | 14,202 | 46,489 | 43.00 MB | up_to_date | `.codegraph` 未进入 Git |
-| 9 | GlobalCloud WAME | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME` | 281 | 3,511 | 11,298 | 10.38 MB | up_to_date | `.codegraph` 未进入 Git |
+| 9 | GlobalCloud WAME | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES` | 281 | 3,511 | 11,298 | 10.38 MB | up_to_date | `.codegraph` 未进入 Git |
 | 10 | GlobalCloud XGD | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD` | 181 | 3,645 | 9,914 | 8.57 MB | up_to_date | `.codegraph` 未进入 Git |
 | 11 | GlobalCloud XiaoC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC` | 1,176 | 15,520 | 64,515 | 57.11 MB | up_to_date | `.codegraph` 未进入 Git |
 | 12 | GlobalCloud XiaoG | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG` | 752 | 13,943 | 45,987 | 42.53 MB | up_to_date | `.codegraph` 未进入 Git |

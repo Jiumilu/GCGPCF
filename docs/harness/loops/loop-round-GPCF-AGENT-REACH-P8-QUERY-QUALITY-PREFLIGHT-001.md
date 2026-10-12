@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-001
 title: Agent-Reach P8 查询质量预检 Loop 001
 project: GPCF
-related_projects: [GPC, WAME, GPCF]
-domain: docs
+related_projects: [GPCF, KDS]
+domain: governance
 status: controlled
 version: v1.0
 owner: GPCF

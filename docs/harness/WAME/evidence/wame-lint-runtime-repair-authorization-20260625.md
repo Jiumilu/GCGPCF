@@ -29,7 +29,7 @@ superseded_by: []
 执行仓库：
 
 ```text
-/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME
+/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES
 ```
 
 当前分支：
@@ -92,7 +92,7 @@ Codex 只能实现包含任务元数据的任务
 如需执行修复，请用户明确确认：
 
 ```text
-我确认执行 WAME-LINT-RUNTIME-001，允许在 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME 的 waes/integration-release 分支上进行 local dev 范围内最小修复；允许修改 src/app/components/AppLazyImports.ts 或重命名为 AppLazyImports.tsx、更新其引用，以及修复 src/app/plugin/PluginManager.tsx 的 import type 解析错误；允许运行 npm run lint、npm run check、npm run typecheck、npm run test、npm run build、npm run check:wasm；不允许提交、推送、部署、权限变更、生产写入或删除无关文件。
+我确认执行 WAME-LINT-RUNTIME-001，允许在 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES 的 waes/integration-release 分支上进行 local dev 范围内最小修复；允许修改 src/app/components/AppLazyImports.ts 或重命名为 AppLazyImports.tsx、更新其引用，以及修复 src/app/plugin/PluginManager.tsx 的 import type 解析错误；允许运行 npm run lint、npm run check、npm run typecheck、npm run test、npm run build、npm run check:wasm；不允许提交、推送、部署、权限变更、生产写入或删除无关文件。
 ```
 
 ## 6. 授权后允许范围

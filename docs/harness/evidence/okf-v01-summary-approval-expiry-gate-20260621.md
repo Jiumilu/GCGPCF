@@ -1,26 +1,26 @@
 ---
 doc_id: GPCF-DOC-82F7D65D59
-title: OKF v0.1 摘要批准过期门禁
-project: GPCF
-related_projects: [GPCF]
+title: OKF v0.1 Summary Approval Expiry Gate
+project: KDS
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0
-owner: GPCF
+owner: KDS
 kds_space: 开发
-kds_path: 开发/12-GPCF/docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md
+kds_path: 开发/05-KDS/docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md
 source_path: docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-21
 supersedes: []
 superseded_by: []
 ---
 
-# OKF v0.1 摘要批准过期门禁
+# OKF v0.1 Summary Approval Expiry Gate
 
-generated_at: 2026-06-22T01:58:00.189676+00:00
+generated_at: 2026-10-12T03:20:28.762751+00:00
 
-## 摘要
+## Summary
 
 | metric | value |
 | --- | --- |
@@ -30,7 +30,7 @@ generated_at: 2026-06-22T01:58:00.189676+00:00
 | requests | 1 |
 | json | `docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json` |
 
-## 请求
+## Requests
 
 | request | status | age_days | reason |
 | --- | --- | ---: | --- |
@@ -42,9 +42,9 @@ generated_at: 2026-06-22T01:58:00.189676+00:00
 | --- | --- | --- | ---: | --- | --- |
 | expired_pending_request | expired_blocked | expired_blocked | 22 | pending_request_expired | pass |
 
-## 边界
+## Boundary
 
-- 本 gate 只验证 pending approval request 的时效性。
-- 它不批准摘要。
-- 它不修改 OKF concepts。
-- 过期的 pending requests 必须重新创建，或在 ledger 更新前被明确重新确认。
+- This gate validates pending approval request freshness only.
+- It does not approve summaries.
+- It does not modify OKF concepts.
+- Expired pending requests must be recreated or explicitly re-confirmed before ledger update.

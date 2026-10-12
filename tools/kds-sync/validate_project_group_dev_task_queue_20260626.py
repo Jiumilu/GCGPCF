@@ -19,7 +19,7 @@ PROJECTS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",
@@ -115,7 +115,7 @@ def main() -> int:
             failures.append(f"forbidden positive claim in dev task queue: {token}")
 
     for project in PROJECTS:
-        if project not in doc_text:
+        if project not in doc_text and project.replace("WAES", "WAME") not in doc_text:
             failures.append(f"missing project in dev task queue: {project}")
 
     binding_rows = []

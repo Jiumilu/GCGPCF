@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-CLOSURE-RUNNER-20260626
 title: Agent-Reach P9S Source Direct Live Closure Runner 2026-06-26
 project: KDS
-related_projects: [GFIS, KDS]
+related_projects: [GFIS, WAS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,22 +18,15 @@ superseded_by: []
 
 # Agent-Reach P9S Source Direct Live Closure Runner 2026-06-26
 
-- status: `p9_source_direct_live_closure_completed`
+- status: `blocked_pending_p9_source_direct_authorization`
 - execution_requested: `True`
-- authorization_valid: `True`
-- live_external_fetch_invoked: `True`
+- authorization_valid: `False`
+- live_external_fetch_invoked: `False`
 - completion_claim_allowed: `False`
 
 ## Steps
 
 - `authorization_intake`: `True`
-- `live_run`: `True`
-- `output_quality_gate`: `True`
-- `review_queue_bridge_preview`: `True`
-- `document_control`: `True`
-- `document_pollution`: `True`
-- `kds_token`: `True`
-- `loop_document_gate`: `True`
 
 ## Boundary
 

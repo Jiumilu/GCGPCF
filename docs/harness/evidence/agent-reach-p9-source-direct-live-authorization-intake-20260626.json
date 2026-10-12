@@ -7,8 +7,10 @@
     "target_url"
   ],
   "authorization_path": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.local.json",
-  "authorization_reasons": [],
-  "authorization_valid": true,
+  "authorization_reasons": [
+    "authorization_expired"
+  ],
+  "authorization_valid": false,
   "authorized_at": "2026-06-27T07:37:18+08:00",
   "authorized_by_present": true,
   "current_admission": "limited_candidate_only",
@@ -28,7 +30,7 @@
     "not_production_ready"
   ],
   "planned_target_count": 13,
-  "ready_for_live_execution": true,
+  "ready_for_live_execution": false,
   "security_controls": {
     "browser_cookie_extraction_invoked": false,
     "credential_written": false,
@@ -38,5 +40,5 @@
     "production_config_write_allowed": false,
     "production_integration_allowed": false
   },
-  "status": "p9_source_direct_live_authorization_intake_ready"
+  "status": "blocked_invalid_p9_source_direct_authorization"
 }

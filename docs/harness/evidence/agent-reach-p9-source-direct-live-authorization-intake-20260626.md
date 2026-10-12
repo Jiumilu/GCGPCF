@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-LIVE-AUTHORIZATION-INTAKE-20260626
 title: Agent-Reach P9S Source Direct Live Authorization Intake 2026-06-26
 project: KDS
-related_projects: [GFIS, KDS]
+related_projects: [GFIS, WAS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,9 +18,9 @@ superseded_by: []
 
 # Agent-Reach P9S Source Direct Live Authorization Intake 2026-06-26
 
-- status: `p9_source_direct_live_authorization_intake_ready`
-- authorization_valid: `True`
-- ready_for_live_execution: `True`
+- status: `blocked_invalid_p9_source_direct_authorization`
+- authorization_valid: `False`
+- ready_for_live_execution: `False`
 - planned_target_count: `13`
 - live_external_fetch_invoked: `False`
 

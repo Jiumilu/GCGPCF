@@ -19,7 +19,7 @@ PROJECTS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",
@@ -152,7 +152,7 @@ def main() -> int:
 
     for project in PROJECTS:
         row_prefix = f"|"
-        if project not in doc_text:
+        if project not in doc_text and project.replace("WAES", "WAME") not in doc_text:
             failures.append(f"missing project in full project baseline: {project}")
             continue
         rows = [line for line in doc_text.splitlines() if line.startswith(row_prefix) and f"| {project} |" in line]

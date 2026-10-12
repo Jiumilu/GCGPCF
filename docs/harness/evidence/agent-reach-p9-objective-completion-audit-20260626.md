@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-OBJECTIVE-COMPLETION-AUDIT-20260626
 title: Agent-Reach P9 Objective Completion Audit 2026-06-26
 project: KDS
-related_projects: [GFIS, WAME, KDS]
+related_projects: [GFIS, WAS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -29,7 +29,7 @@ superseded_by: []
 | 项 | 内容 |
 |---|---|
 | 执行日期 | 2026-06-24 |
-| 执行仓库 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME` |
+| 执行仓库 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES` |
 | 当前分支 | `waes/integration-release` |
 | 工作区状态 | dirty，存在未跟踪治理文档和 `tools/` 目录 |
 | 依赖状态 | `node_modules_present` |

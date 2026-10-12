@@ -40,8 +40,8 @@
   "template_authorization_valid": false,
   "template_file": "fixtures/agent-reach/p9-source-direct-hit-rate-authorization.template.json",
   "template_file_present": true,
-  "template_file_tracked": false,
-  "template_git_status": "?? fixtures/agent-reach/p9-source-direct-hit-rate-authorization.template.json",
+  "template_file_tracked": true,
+  "template_git_status": "",
   "template_placeholder_fields": {
     "authorized_at": true,
     "authorized_by": true,

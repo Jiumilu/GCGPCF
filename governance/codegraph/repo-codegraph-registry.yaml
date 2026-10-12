@@ -95,7 +95,7 @@ repositories:
   - id: wame
     name: GlobalCloud WAME
     code: WA
-    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES
     role: governance_evidence_gate
     risk_level: critical
     wame_gate_required: true

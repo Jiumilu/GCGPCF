@@ -87,7 +87,7 @@ REQUIRED_PROJECTS = [
     "WAS世界资产体系",
     "GlobalCloud XWAIL",
     "GlobalCloud AaaS / AAAS",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GFIS",
     "GlobalCloud GPC",
     "GlobalCloud PVAOS",

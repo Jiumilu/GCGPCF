@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-22T01:57:59.854415+00:00",
+  "generated_at": "2026-10-12T03:20:28.769014+00:00",
   "status": "pass",
   "admission_state": "metadata_only_locked",
-  "concepts": 81,
+  "concepts": 80,
   "approved_summaries": 0,
   "sensitive_hits": 0,
   "ledger": "docs/harness/evidence/okf-v01-summary-admission-ledger-20260620.md",

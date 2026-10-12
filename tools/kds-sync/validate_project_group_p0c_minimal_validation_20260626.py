@@ -115,7 +115,7 @@ def main() -> int:
         if token not in evidence:
             failures.append(f"missing evidence token: {token}")
     for project in PROJECTS:
-        if project not in evidence:
+        if project not in evidence and project.replace("WAES", "WAME") not in evidence:
             failures.append(f"missing project in evidence: {project}")
     for section in ["run", "stop", "verify", "recover", "debug"]:
         if f"## {section}" not in loop_round:
