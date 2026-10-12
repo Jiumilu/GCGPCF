@@ -88,7 +88,9 @@ def main() -> int:
         if repo_id in {"brain", "studio"}:
             require(total > 0, f"{name} active drift must remain visible")
         elif repo_id == "gfis":
-            require(total == 1, "GFIS policy exception pending must remain one")
+            # GFIS 的策略例外（large_generated_validator_residual）在 pending 中最多占 1 项；
+            # 索引同步后可为 0。断言的是「不得出现例外之外的漂移」。
+            require(total in {0, 1}, "GFIS pending must stay within the single policy exception")
         elif repo_id == "gpcf":
             require(total == 0, "GPCF pending must be zero after self-sync")
 
