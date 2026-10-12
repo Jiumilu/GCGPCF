@@ -1,0 +1,135 @@
+{
+  "evidenceId": "GPCF-WAS-UPGRADE-AUDIT-REMEDIATION-20261012",
+  "title": "WAS 升级逐字句审计整改记录（D01–D24）",
+  "date": "2026-10-12",
+  "trigger": "《2026-10-12_新WAS理论内容_体系升级评估意见_v0.2_逐字句审计版》",
+  "status": "remediated",
+  "items": [
+    {
+      "id": "D01",
+      "desc": "worldLayer 适用面正式化（对象/记录/产物）",
+      "artifact": "WAS:docs/WAS理论篇_v0.1.md §2.1；WAS:docs/WAS引用键与数据出口字段规范_v0.1.md §B1"
+    },
+    {
+      "id": "D02",
+      "desc": "构元定义态模板（六问＋arche 命名）",
+      "artifact": "理论篇 附录C"
+    },
+    {
+      "id": "D03",
+      "desc": "EA 输出物化模式示例",
+      "artifact": "理论篇 §4.1"
+    },
+    {
+      "id": "D04",
+      "desc": "包外切片文档过渡规范",
+      "artifact": "切片规范 v0.2 §5"
+    },
+    {
+      "id": "D05",
+      "desc": "worldLayer 资产级登记；worldModel 从示例包移除",
+      "artifact": "引用键规范 §B1；KDS 印刷厂包（新 sha 9d60b53e…）"
+    },
+    {
+      "id": "D06",
+      "desc": "category↔okf 命名映射表",
+      "artifact": "引用键规范 §A6"
+    },
+    {
+      "id": "D07",
+      "desc": "ontologyRef 斜杠段口径（段=细化标签）",
+      "artifact": "引用键规范 §A2"
+    },
+    {
+      "id": "D08",
+      "desc": "软校验（worldLayer/ontologyRef/arche；warning 级）",
+      "artifact": "XWAIL:scripts/xwail_common.py soft_check_model"
+    },
+    {
+      "id": "D09",
+      "desc": "印刷厂包入链（示例库）",
+      "artifact": "req-05898c7f33ba / rcpt-b4943da58ec7；KDS:XAP示例库索引.md"
+    },
+    {
+      "id": "D10",
+      "desc": "XWAIL 议题扩 9 件（+网络关系/规则版本/验证记录/推演记录/视图引用）",
+      "artifact": "XWAIL:docs/XWAIL扩展议题_was-theory_v0.1.md v0.2"
+    },
+    {
+      "id": "D11",
+      "desc": "优先问题台账 15 行全量对账（表一）",
+      "artifact": "WAS:docs/WAS升级对账专项_v1.0.md"
+    },
+    {
+      "id": "D12",
+      "desc": "禁断言补 3 条（全息分形/代数结构/文明时间表）",
+      "artifact": "理论篇 §9"
+    },
+    {
+      "id": "D13",
+      "desc": "附录 C.1–C.8 规范目录映射（表三）",
+      "artifact": "对账专项"
+    },
+    {
+      "id": "D14",
+      "desc": "阶段 A–F 能力门槛映射（表四）",
+      "artifact": "对账专项"
+    },
+    {
+      "id": "D15",
+      "desc": "验收问题 7 条→测试集 VQ-1..VQ-7（表五）",
+      "artifact": "对账专项"
+    },
+    {
+      "id": "D16",
+      "desc": "时空因果审计链设计（时间四分/多来源/去重/勘误/边版本）",
+      "artifact": "WAS:docs/WAS时空因果审计链设计_v0.1.md"
+    },
+    {
+      "id": "D17",
+      "desc": "工程审计对账（15.1 构件 12 件 ＋15.2 不一致 7 条；表六）",
+      "artifact": "对账专项"
+    },
+    {
+      "id": "D18",
+      "desc": "十类元素价值载体表收录",
+      "artifact": "理论篇 §6.2"
+    },
+    {
+      "id": "D19",
+      "desc": "五行业方向明细表收录",
+      "artifact": "理论篇 §6.3"
+    },
+    {
+      "id": "D20",
+      "desc": "（核销）演化六要素经复核已在 §2.1——v0.2 台账误判，本记录修正",
+      "artifact": "理论篇 §2.1"
+    },
+    {
+      "id": "D21",
+      "desc": "锁定对象交互纪律",
+      "artifact": "理论篇 §5.1"
+    },
+    {
+      "id": "D22",
+      "desc": "多场景应用线收录",
+      "artifact": "理论篇 §5.2"
+    },
+    {
+      "id": "D23",
+      "desc": "历史命名纪律（不用宏大命名）",
+      "artifact": "理论篇 §2.4"
+    },
+    {
+      "id": "D24",
+      "desc": "制图四关系纪律",
+      "artifact": "理论篇 §5.1"
+    }
+  ],
+  "summary": {
+    "total": 24,
+    "remediated": 23,
+    "closed_by_review": 1
+  },
+  "terms": "整改=落点到位；‘已对/已落’不代表实装或验证完成。"
+}
