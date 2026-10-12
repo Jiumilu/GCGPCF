@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-001
 title: Agent-Reach P8 授权文本摄取 Loop 001
 project: GPCF
-related_projects: [GPC, WAME, GPCF]
-domain: docs
+related_projects: [GPCF, KDS]
+domain: governance
 status: controlled
 version: v1.0
 owner: GPCF
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-001.md
 source_path: docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-AUTHORIZATION-TEXT-INTAKE-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---

@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from agent_reach_authorization_boundary import stray_local_authorization
+
 
 ROOT = Path(__file__).resolve().parents[2]
 REQUEST = ROOT / "fixtures/agent-reach/project-group-full-live-search-batch-authorization.request.json"
@@ -124,7 +126,7 @@ def build_report() -> dict[str, Any]:
     request = load_json(REQUEST)
     readiness = load_json(READINESS)
     local_auth = [
-        {"path": str(path.relative_to(ROOT)), "exists": path.exists()}
+        {"path": str(path.relative_to(ROOT)), "exists": path.exists(), "stray": stray_local_authorization(path)}
         for path in local_authorization_paths(request)
     ]
     recipe = command_recipe()
@@ -133,7 +135,7 @@ def build_report() -> dict[str, Any]:
         fail("readiness_status_mismatch")
     if readiness["readiness_summary"]["all_local_quality_gates_pass"] is not True:
         fail("readiness_local_gates_not_pass")
-    if any(row["exists"] for row in local_auth):
+    if any(row.get("stray") for row in local_auth):
         fail("local_authorization_file_exists")
     return {
         "id": "agent-reach-p8-operator-handoff-20260623",

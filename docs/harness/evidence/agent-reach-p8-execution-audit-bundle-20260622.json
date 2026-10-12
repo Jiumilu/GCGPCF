@@ -4,26 +4,28 @@
     "generated_local_authorization_files": false,
     "local_authorization_files": [
       {
+        "authorized": true,
         "batch_id": "p8-batch-1",
-        "exists": false,
-        "path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json"
+        "exists": true,
+        "path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json",
+        "stray": false
       },
       {
+        "authorized": true,
         "batch_id": "p8-batch-2",
-        "exists": false,
-        "path": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json"
+        "exists": true,
+        "path": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json",
+        "stray": false
       },
       {
+        "authorized": true,
         "batch_id": "p8-batch-3",
-        "exists": false,
-        "path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json"
+        "exists": true,
+        "path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json",
+        "stray": false
       }
     ],
-    "missing_authorization_batches": [
-      "p8-batch-1",
-      "p8-batch-2",
-      "p8-batch-3"
-    ],
+    "missing_authorization_batches": [],
     "request_package": "fixtures/agent-reach/project-group-full-live-search-batch-authorization.request.json",
     "request_status": "pending_human_authorization",
     "required_authorization_texts": [
@@ -50,23 +52,15 @@
     "status": "full_project_group_live_coverage_output_quality_gate_ready"
   },
   "pipeline_state": {
-    "missing_authorization_batches": [
-      "p8-batch-1",
-      "p8-batch-2",
-      "p8-batch-3"
-    ],
-    "next_required_authorizations": [
-      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 1",
-      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 2",
-      "授权执行 Agent-Reach P8 Project Group Full Live Search Batch 3"
-    ],
+    "missing_authorization_batches": [],
+    "next_required_authorizations": [],
     "quality_preflight": {
       "output_quality_gate_reasons": [],
       "output_quality_gate_status": "full_project_group_live_coverage_output_quality_gate_ready",
       "query_quality_failing_count": 0,
       "query_quality_status": "p8_query_quality_preflight_pass"
     },
-    "status": "blocked_pending_batch_authorization"
+    "status": "authorized_execution_not_requested"
   },
   "query_preflight": {
     "channel_coverage": 1.0,

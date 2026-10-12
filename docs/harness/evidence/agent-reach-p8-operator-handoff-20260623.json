@@ -41,16 +41,19 @@
   "id": "agent-reach-p8-operator-handoff-20260623",
   "local_authorization_files": [
     {
-      "exists": false,
-      "path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json"
+      "exists": true,
+      "path": "fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json",
+      "stray": false
     },
     {
-      "exists": false,
-      "path": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json"
+      "exists": true,
+      "path": "fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json",
+      "stray": false
     },
     {
-      "exists": false,
-      "path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json"
+      "exists": true,
+      "path": "fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json",
+      "stray": false
     }
   ],
   "next_round": "GPCF-AGENT-REACH-P8-PROJECT-GROUP-FULL-LIVE-BATCH-001",

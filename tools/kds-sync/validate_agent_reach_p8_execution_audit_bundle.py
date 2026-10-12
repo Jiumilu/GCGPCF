@@ -8,6 +8,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from agent_reach_authorization_boundary import authorization_is_valid, stray_local_authorization
+
 
 ROOT = Path(__file__).resolve().parents[2]
 QUERY_PREFLIGHT = ROOT / "tools/kds-sync/validate_agent_reach_p8_query_quality_preflight.py"
@@ -75,6 +77,8 @@ def local_authorization_files(request: dict[str, Any]) -> list[dict[str, Any]]:
                 "batch_id": item["batch_id"],
                 "path": display_path(path),
                 "exists": path.exists(),
+                "authorized": authorization_is_valid(path),
+                "stray": stray_local_authorization(path),
             }
         )
     return rows
@@ -106,15 +110,26 @@ def build_report() -> dict[str, Any]:
         for row in auth_files
         if row["exists"] is False
     ]
+    pending_auth_batches = [
+        row["batch_id"]
+        for row in auth_files
+        if not row.get("authorized")
+    ]
+    stray_auth_batches = [row["batch_id"] for row in auth_files if row.get("stray")]
     required_texts = [
         item["required_text"]
         for item in request.get("batch_authorization_requests", [])
     ]
+    pipeline_status = pipeline_report.get("status")
+    authorized_batches = [row["batch_id"] for row in auth_files if row.get("authorized")]
     ready_for_human_authorization = (
         query_report.get("status") == "p8_query_quality_preflight_pass"
         and output_status == "full_project_group_live_coverage_output_quality_gate_ready"
-        and pipeline_report.get("status") == "blocked_pending_batch_authorization"
-        and sorted(missing_auth_batches) == ["p8-batch-1", "p8-batch-2", "p8-batch-3"]
+        and pipeline_status in {
+            "blocked_pending_batch_authorization",
+            "authorized_execution_not_requested",
+        }
+        and stray_auth_batches == []
     )
     return {
         "id": "agent-reach-p8-execution-audit-bundle-20260622",
@@ -308,17 +323,19 @@ def validate_report(report: dict[str, Any]) -> None:
         fail("query_preflight_has_failures")
     if report.get("output_quality_gate", {}).get("status") != "full_project_group_live_coverage_output_quality_gate_ready":
         fail("output_quality_gate_not_ready")
-    if report.get("pipeline_state", {}).get("status") != "blocked_pending_batch_authorization":
+    if report.get("pipeline_state", {}).get("status") not in {
+        "blocked_pending_batch_authorization",
+        "authorized_execution_not_requested",
+    }:
         fail("pipeline_not_blocked_on_authorization")
-    if sorted(report.get("authorization_state", {}).get("missing_authorization_batches", [])) != [
-        "p8-batch-1",
-        "p8-batch-2",
-        "p8-batch-3",
-    ]:
+    auth_rows = report.get("authorization_state", {}).get("local_authorization_files", [])
+    if sorted(row.get("batch_id") for row in auth_rows) != ["p8-batch-1", "p8-batch-2", "p8-batch-3"]:
         fail("missing_authorization_batches_mismatch")
+    if any(row.get("exists") and not row.get("authorized") for row in auth_rows):
+        fail("unauthorized_local_authorization_file")
     if len(report.get("authorization_state", {}).get("required_authorization_texts", [])) != 3:
         fail("required_authorization_text_count_mismatch")
-    if any(row.get("exists") for row in report.get("authorization_state", {}).get("local_authorization_files", [])):
+    if any(row.get("stray") for row in report.get("authorization_state", {}).get("local_authorization_files", [])):
         fail("local_authorization_file_exists")
     controls = report.get("security_controls", {})
     for field in SECURITY_FALSE_FIELDS:

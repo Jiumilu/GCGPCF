@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-001
 title: Agent-Reach P8 执行审计包 Loop 001
 project: GPCF
-related_projects: [GPC, WAME, GPCF]
-domain: docs
+related_projects: [GPCF, KDS]
+domain: governance
 status: controlled
 version: v1.0
 owner: GPCF
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/12-GPCF/docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-001.md
 source_path: docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-001.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## verify
 
-pipeline 状态 `authorization_boundary_pending_human_approval`；缺失授权批次 `p8-batch-1, p8-batch-2, p8-batch-3`。
+pipeline 状态 `authorization_boundary_pending_human_approval`；缺失授权批次 ``。
 
 ## recover
 

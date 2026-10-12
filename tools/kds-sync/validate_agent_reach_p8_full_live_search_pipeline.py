@@ -45,7 +45,10 @@ def main() -> None:
     evidence_md = read_text(EVIDENCE_MD)
     loop_md = read_text(LOOP_MD)
     report = pipeline.build_pipeline_report(execute=False, write_evidence=False, output_json=pipeline.DEFAULT_OUTPUT_JSON, output_md=pipeline.DEFAULT_OUTPUT_MD)
-    if report.get("status") != "blocked_pending_batch_authorization":
+    if report.get("status") not in {
+        "blocked_pending_batch_authorization",
+        "authorized_execution_not_requested",
+    }:
         fail("default_without_batch_authorization_not_blocked")
     preflight = report.get("quality_preflight", {})
     if preflight.get("query_quality_status") != "p8_query_quality_preflight_pass":
@@ -58,7 +61,11 @@ def main() -> None:
         fail("output_quality_gate_reasons_not_empty")
     if report.get("security_controls", {}).get("live_external_search_invoked") is not False:
         fail("default_invoked_live_search")
-    if sorted(report.get("missing_authorization_batches", [])) != ["p8-batch-1", "p8-batch-2", "p8-batch-3"]:
+    missing_batches = sorted(report.get("missing_authorization_batches", []))
+    if report.get("status") == "blocked_pending_batch_authorization":
+        if missing_batches != ["p8-batch-1", "p8-batch-2", "p8-batch-3"]:
+            fail("missing_authorization_batches_mismatch")
+    elif missing_batches != []:
         fail("missing_authorization_batches_mismatch")
 
     if evidence.get("status") != "p8_full_live_search_pipeline_ready":

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-20260622
 title: Agent-Reach P8 执行审计包 2026-06-22
 project: KDS
-related_projects: [GFIS, WAME, KDS]
+related_projects: [GPCF, KDS, WAME, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/agent-reach-p8-execution-audit-bundle-20260622.md
 source_path: docs/harness/evidence/agent-reach-p8-execution-audit-bundle-20260622.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-22
 supersedes: []
 superseded_by: []
 ---
@@ -23,7 +23,7 @@ superseded_by: []
 - query_preflight_status: `p8_query_quality_preflight_pass`
 - output_quality_gate_status: `full_project_group_live_coverage_output_quality_gate_ready`
 - pipeline_status: `authorization_boundary_pending_human_approval`
-- missing_authorization_batches: `p8-batch-1, p8-batch-2, p8-batch-3`
+- missing_authorization_batches: ``
 - live_external_search_invoked: `False`
 
 ## run

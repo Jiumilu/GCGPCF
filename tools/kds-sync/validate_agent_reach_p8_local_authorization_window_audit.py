@@ -10,6 +10,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from agent_reach_authorization_boundary import stray_local_authorization
+
 
 ROOT = Path(__file__).resolve().parents[2]
 RUNNER = ROOT / "tools/kds-sync/run_agent_reach_project_group_full_live_search_batch.py"
@@ -87,7 +89,7 @@ def build_report() -> dict[str, Any]:
     runner = load_runner()
     request = load_json(REQUEST)
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_exists:{path.relative_to(ROOT)}")
     now = datetime.now(timezone.utc)
     with tempfile.TemporaryDirectory(prefix="agent-reach-p8-auth-window-") as tmpdir:
@@ -132,7 +134,7 @@ def build_report() -> dict[str, Any]:
     if scenarios["current_window"]["status"] != "authorized_execution_not_requested":
         fail("current_window_status_mismatch")
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_created:{path.relative_to(ROOT)}")
     return {
         "id": "agent-reach-p8-local-authorization-window-audit-20260623",

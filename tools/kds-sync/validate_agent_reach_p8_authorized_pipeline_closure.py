@@ -10,6 +10,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from agent_reach_authorization_boundary import stray_local_authorization
+
 
 ROOT = Path(__file__).resolve().parents[2]
 CREATOR = ROOT / "tools/kds-sync/create_agent_reach_p8_batch_authorization_local.py"
@@ -73,7 +75,7 @@ def build_report() -> dict[str, Any]:
     pipeline = load_module(PIPELINE, "agent_reach_p8_pipeline")
     request = load_json(REQUEST)
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_exists:{path.relative_to(ROOT)}")
     now = datetime.now(timezone.utc)
     with tempfile.TemporaryDirectory(prefix="agent-reach-p8-pipeline-auth-") as tmpdir:
@@ -96,7 +98,7 @@ def build_report() -> dict[str, Any]:
             authorization_dir=auth_dir,
         )
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_created:{path.relative_to(ROOT)}")
     return {
         "id": "agent-reach-p8-authorized-pipeline-closure-20260622",

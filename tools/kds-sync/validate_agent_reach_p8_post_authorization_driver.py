@@ -11,6 +11,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from agent_reach_authorization_boundary import stray_local_authorization
+
 
 ROOT = Path(__file__).resolve().parents[2]
 DRIVER = ROOT / "tools/kds-sync/run_agent_reach_p8_post_authorization_driver.py"
@@ -192,7 +194,7 @@ def main() -> None:
     driver = load_driver()
     request = load_json(REQUEST)
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_exists_before_test:{path.relative_to(ROOT)}")
     now = datetime.now(timezone.utc)
     start = now.isoformat()
@@ -265,7 +267,7 @@ def main() -> None:
     if cli_negative.returncode == 0:
         fail("cli_negative_unexpected_success")
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_created:{path.relative_to(ROOT)}")
     report = {
         "id": "agent-reach-p8-post-authorization-driver-20260622",

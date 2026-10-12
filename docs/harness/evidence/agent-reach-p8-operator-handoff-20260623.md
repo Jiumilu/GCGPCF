@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-OPERATOR-HANDOFF-20260623
 title: Agent-Reach P8 Operator Handoff 2026-06-23
 project: KDS
-related_projects: [GFIS, GPC, WAME, KDS, GPCF]
+related_projects: [GPCF, KDS, WAME, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -11,7 +11,7 @@ kds_space: 开发
 kds_path: 开发/05-KDS/docs/harness/evidence/agent-reach-p8-operator-handoff-20260623.md
 source_path: docs/harness/evidence/agent-reach-p8-operator-handoff-20260623.md
 sync_direction: bidirectional
-last_reviewed: 2026-06-24
+last_reviewed: 2026-06-23
 supersedes: []
 superseded_by: []
 ---
@@ -47,9 +47,9 @@ superseded_by: []
 
 ### Local Authorization Files
 
-- `fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json` exists=`False`
-- `fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json` exists=`False`
-- `fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json` exists=`False`
+- `fixtures/agent-reach/project-group-full-live-search-batch-1-authorization.local.json` exists=`True`
+- `fixtures/agent-reach/project-group-full-live-search-batch-2-authorization.local.json` exists=`True`
+- `fixtures/agent-reach/project-group-full-live-search-batch-3-authorization.local.json` exists=`True`
 
 ### Command Recipe
 

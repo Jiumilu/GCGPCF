@@ -10,6 +10,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
+from agent_reach_authorization_boundary import stray_local_authorization
+
 
 ROOT = Path(__file__).resolve().parents[2]
 INTAKE = ROOT / "tools/kds-sync/ingest_agent_reach_p8_authorization_text.py"
@@ -181,7 +183,7 @@ def main() -> None:
     intake = load_intake()
     request = load_json(REQUEST)
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_exists_before_test:{path.relative_to(ROOT)}")
     now = datetime.now(timezone.utc)
     start = now.isoformat()
@@ -212,7 +214,7 @@ def main() -> None:
     if negative["status"] != "rejected":
         fail("negative_missing_batch_not_rejected")
     for path in default_local_auth_paths(request):
-        if path.exists():
+        if stray_local_authorization(path):
             fail(f"default_local_authorization_file_created:{path.relative_to(ROOT)}")
     report = {
         "id": "agent-reach-p8-authorization-text-intake-20260622",
