@@ -1,0 +1,12 @@
+{
+  "id": "GPCF-XAP-SIGNATURE-PROPOSAL-20261012",
+  "type": "proposal",
+  "title": "XAP 签名机制提案 v0.1（PoC 验证版）",
+  "submittedAt": "2026-10-12",
+  "source": "KDS:世界资产/2026-10-12_XAP签名机制提案_v0.1.md",
+  "poc": ["XWAIL:scripts/xap_sign.py", "XWAIL:scripts/xap_verify.py"],
+  "evidence": "四场景对抗测试全闭环（正常✅／篡改①②检出／换钥重签+锚定拒绝／双条目拒绝）",
+  "currentDecision": "pending_governance_review",
+  "decisionOwner": null,
+  "note": "留白纪律：裁定由治理方作出；PoC 不构成已批准机制"
+}
