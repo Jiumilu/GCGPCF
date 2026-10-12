@@ -1,30 +1,31 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T10:00:07.745908+08:00",
+  "generated_at": "2026-10-12T11:07:57.285426+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
+    "WAS世界资产体系",
     "GlobalCloud WAES",
-    "GlobalCloud KDS"
+    "GlobalCoud GPCF",
+    "GlobalCloud XGD"
   ],
-  "observed_ahead": [
-    "GlobalCloud Studio"
-  ],
+  "observed_ahead": [],
   "stable_dirty": [
-    "GlobalCloud KDS",
     "GlobalCloud WAES"
   ],
   "stable_ahead": [],
-  "volatile_dirty": [],
+  "volatile_dirty": [
+    "GlobalCoud GPCF"
+  ],
   "review_boundary": [
-    "GlobalCloud KDS",
-    "GlobalCloud WAES"
+    "GlobalCloud WAES",
+    "GlobalCoud GPCF"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 14,
+  "pass_repo_count": 13,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T08:58:45.133329+08:00",
+  "previous_generated_at": "2026-10-12T10:00:07.745908+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -41,10 +42,12 @@
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "\"docs/\\346\\216\\245\\345\\205\\245\\347\\202\\271_WAME\\345\\214\\205\\347\\231\\273\\350\\256\\260_v0.1.md\""
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XiaoC": {
@@ -55,40 +58,25 @@
       "sensitive_paths": []
     },
     "GlobalCloud WAES": {
-      "dirty_count": 30,
+      "dirty_count": 15,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        ".github/workflows/quality.yml",
-        "server/xap-intake/intake_core.py",
-        "server/xap-intake/intake_server.py",
-        "server/xap-intake/tests/test_intake.py",
-        "src/app/components/AIWorkbench.tsx",
-        "src/app/components/AppOverlays.tsx",
-        "src/app/components/AppRouter.tsx",
-        "src/app/components/GlobalSearchModal.tsx",
-        "src/app/components/MainContent.tsx",
-        "src/app/components/ProjectManager.tsx",
-        "src/app/components/SmartRecommendations.tsx",
-        "src/app/components/SystemSettings.tsx",
-        "src/app/components/TitleBar.tsx",
-        "src/app/components/TopTabs.tsx",
-        "src/app/components/VirtualizedTemplateGrid.tsx",
-        "src/app/components/WaeEditor.tsx",
-        "src/app/components/ai-workbench/OptimizedAIWorkbench.tsx",
-        "src/app/components/ai-workbench/types.ts",
-        "src/app/components/figma/ImageWithFallback.tsx",
-        "src/app/components/hooks/usePerformanceOptimization.ts",
-        "src/app/components/optimization/ComponentCacheManager.tsx",
-        "src/app/components/ui/context-menu.tsx",
-        "src/app/components/wasm/WasmBuildStatus.tsx",
-        "src/app/hooks/useAppContent.ts",
-        "src/app/plugin/PluginConfigStore.ts",
-        "src/app/plugin/PluginRegistry.ts",
-        "src/app/test-main-content.tsx",
-        "src/app/types/projects.ts",
-        "tests/agent-workbench-bridge.test.ts",
-        "vitest.config.ts"
+        "AGENTS.md",
+        "PROJECT_HARNESS_MANIFEST.md",
+        "RELEASE_NOTES.md",
+        "docs/current/AGENT_DESKTOP_HANDOFF_GATE.md",
+        "docs/current/AGENT_DESKTOP_IMPLEMENTATION_PLAN.md",
+        "docs/current/BRANCH_CONVERGENCE_PLAN.md",
+        "docs/current/PM_CONTROL_TOWER.md",
+        "docs/current/PM_WORKBENCH.md",
+        "docs/harness/acceptance.md",
+        "docs/harness/evidence/evidence-index.md",
+        "docs/harness/loops/loop-round-WAME-LINT-RUNTIME-001.md",
+        "docs/harness/loops/loop-round-WAME-LR-001.md",
+        "docs/harness/status-audit-2026-06-10.md",
+        "scripts/validate_wame_l3_harness.py",
+        "server/xap-intake/README.md"
       ],
       "sensitive_paths": []
     },
@@ -101,16 +89,19 @@
     },
     "GlobalCloud Studio": {
       "dirty_count": 0,
-      "ahead": 4,
+      "ahead": 0,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 0,
+      "dirty_count": 2,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "tools/kds-sync/validate_project_implementation_uniqueness.py",
+        "tools/kds-sync/validate_project_master_plan_uniqueness.py"
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
@@ -135,37 +126,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 26,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        ".hermes-health.json",
-        ".hermes-last-sync",
-        "raw/feishu-minutes-runtime/scheduled/api-corpus-baseline.json",
-        "raw/feishu-minutes-runtime/scheduled/api-fixture.json",
-        "\"\\344\\275\\223\\347\\263\\273/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266\\350\\277\\275\\350\\270\\252.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/reports/Hermes\\350\\264\\250\\351\\207\\217\\345\\221\\250\\346\\212\\245.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/reports/\\345\\220\\210\\345\\220\\214\\350\\265\\204\\351\\207\\221\\350\\277\\275\\350\\270\\252\\346\\212\\245\\345\\221\\212.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/reports/\\351\\241\\271\\347\\233\\256\\347\\233\\221\\346\\216\\247\\344\\273\\252\\350\\241\\250\\347\\233\\230.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/W01-W20\\350\\246\\206\\347\\233\\226\\347\\216\\207\\346\\212\\245\\345\\221\\212.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\272\\225\\345\\272\\247/99_\\345\\272\\225\\345\\272\\247\\350\\277\\220\\350\\241\\214\\346\\212\\245\\345\\221\\212.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\234\\210\\346\\212\\245/\\346\\234\\210\\346\\212\\245_2026-10.md\"",
-        "99_Reports/health-2026-10-12.md",
-        "_meta/hermes-run-log/2026-10-12.md",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_GlobalCloud-Studio\\345\\205\\250\\351\\235\\242\\350\\257\\204\\344\\274\\260\\346\\212\\245\\345\\221\\212_v2.0.md\"",
-        "\"\\344\\270\\226\\347\\225\\214\\350\\265\\204\\344\\272\\247/Hermes/reports/\\350\\207\\252\\350\\277\\233\\345\\214\\226\\345\\221\\250\\346\\212\\245_2026-W42.md\"",
-        "\"\\344\\275\\223\\347\\263\\273/reports/\\344\\275\\223\\347\\263\\273\\346\\262\\273\\347\\220\\206\\346\\227\\245\\346\\212\\245_2026-10-12.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/reports/\\345\\276\\256\\344\\277\\241\\345\\225\\206\\346\\234\\272\\345\\233\\236\\346\\272\\257_2026-10-12.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\344\\275\\223\\347\\263\\273/\\350\\200\\201\\345\\215\\242\\345\\267\\245\\344\\275\\234\\344\\275\\223\\347\\263\\273\\345\\201\\245\\345\\272\\267\\346\\243\\200\\346\\237\\245_2026-10-12.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\345\\217\\230\\346\\233\\264\\345\\221\\212\\350\\255\\246_2026-10-12.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266/2026/W42/\\345\\220\\204\\345\\234\\260\\345\\270\\202\\346\\224\\277\\347\\255\\226\\345\\210\\206\\346\\236\\220-W42.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266/2026/W42/\\345\\233\\275\\345\\256\\266\\346\\224\\277\\347\\255\\226\\346\\261\\207\\347\\274\\226-W42.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266/2026/W42/\\346\\224\\277\\347\\255\\226\\345\\221\\250\\346\\212\\245-2026-10-12.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266/2026/W42/\\346\\224\\277\\347\\255\\226\\345\\221\\250\\346\\212\\245-2026-W42.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266/2026/W42/\\346\\224\\277\\347\\255\\226\\345\\275\\261\\345\\223\\215\\347\\237\\251\\351\\230\\265-W42.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\224\\277\\347\\255\\226\\347\\240\\224\\347\\251\\266/2026/W42/\\346\\271\\226\\345\\214\\227\\347\\234\\201\\346\\224\\277\\347\\255\\226\\345\\210\\206\\346\\236\\220-W42.md\"",
-        "\"\\345\\267\\245\\344\\270\\232\\347\\273\\277\\351\\223\\276/\\346\\227\\245\\346\\212\\245/\\346\\231\\250\\346\\212\\245-2026-10-12.md\""
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XiaoG": {
@@ -197,10 +161,12 @@
       "sensitive_paths": []
     },
     "GlobalCloud XGD": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "l4_analysis/gpcf_l4_013_wame_http_audit_api.fixture.json"
+      ],
       "sensitive_paths": []
     }
   }
