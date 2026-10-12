@@ -4,7 +4,7 @@ title: 世界资产浏览器（WAE）统一界面框架总体设计 v0.2
 project: WAE
 related_projects: [GPCF, WAME, WAS, PVAOS, PKC, Brain, GFIS, GPC, Studio, XiaoG, XGD, XiaoC, MMC, ICP, AAAS, SOP, PQC, SpaceAI]
 domain: ui-delivery
-status: draft
+status: controlled
 version: v0.2
 owner: WAE
 kds_space: 开发
@@ -21,7 +21,7 @@ last_reviewed: 2026-10-12
 # 世界资产浏览器（WAE）统一界面框架总体设计 v0.2
 
 日期：2026-10-12（周一）
-状态：**draft（待老卢确认后转 controlled）**
+状态：**controlled（2026-10-12 老卢「全部」授权转正；§5 两项已按建议裁定，见下）**
 相对 v0.1 的定位：**v0.1 建立设计基线；v0.2 补齐「实盘数据」与「可施工契约」**——v0.1 的现状盘点是技术栈表，v0.2 把它换成实测数据，并把目标架构从"分层名词"落到"接口契约"。
 
 > **本版不含任何"已接入/已集成/已验收"声明。** 所有实测数据均标注取得方式与日期；所有契约均为设计意图，未经实现验证。
@@ -365,8 +365,8 @@ GPCF 序：`Studio → PKC → XGD → GPC → GFIS`（面向"专业工作台类
 | 1 | 立项载体 | ✅ **已裁定** | KDS registry `WAS-WAE-BROWSER` + GPCF 清单 + 台账（已执行） |
 | 2 | 命名冲突 | ✅ **已裁定** | WAE 沿用；WAES→WAME；WAES 缩写停用（已全链传导） |
 | 3 | 技术形态 | ✅ **已裁定** | 方案 C 分步路线（微前端留第三步） |
-| 4 | 扩散序 | ⚠️ **待裁定** | 本版给出对齐方案（见 §4），请 GPCF/老卢确认 |
-| 5 | WAME 本体处置 | ⚠️ **待裁定** | 建议：WAME **同时**作为"框架母本"与"首个档次 A 应用"——框架抽走后 WAME 仍保留 `FunctionPanel`/`RightAIAssistantPanel`/WASM 等专属能力作为插件；**建议纳入，不保留独立壳**（否则"统一"不成立） |
+| 4 | 扩散序 | ✅ **已裁定（2026-10-12）** | **采纳对齐方案**：`B0/B1 打基础 → GPCF 序的 Studio 例外演练（并入 B6 首位）→ 回到同构序 B2/B3/B4 → 余下按 GPCF 序`。复核入口：GPCF 可在月度评审中提出异议。 |
+| 5 | WAME 本体处置 | ✅ **已裁定（2026-10-12）** | **WAME 纳入为首个档次 A 应用**（同时是框架母本）；`FunctionPanel`/`RightAIAssistantPanel`/WASM/性能监控等专属能力**下沉为插件**（由 `ShellProps.capabilities` 显式开启，默认全关）。**不保留独立壳**——否则"统一界面框架"不成立。 |
 
 ---
 
@@ -409,3 +409,32 @@ wc -l <WAME>/src/app/layout/*.tsx <WAME>/src/app/components/TitleBar.tsx
 # 注册表契约（§2.5）
 sed -n '1,30p' <WAME>/src/app/domain/platform.ts
 ```
+
+
+---
+
+## 附录 A：P0 第一步 工程进展（2026-10-12 落地）
+
+框架仓已建立并**实测通过**：`GlobalCloud WAE/`（monorepo，4 包 + 1 应用，50 文件，首提交 `ab3da35`）。
+
+| 包 | 落地内容 |
+|---|---|
+| `@globalcloud/ui-tokens` | 令牌单一来源（基线＝三仓字节相同的 `default_shadcn_theme.css`，SHA-256 前 12 位 `54729cdf634f`）+ 语义层（状态/证据/AI 边界）|
+| `@globalcloud/ui-kit` | 组件收敛**首批 10 件** + `CONVERGENCE.md`（含实测矩阵、决策规则、待裁定清单、母本缺失 25 件）|
+| `@globalcloud/app-registry` | `AppModule`/`AppStatus`/`AppRegistry` 契约 + `decideMountMode` 机械判定 |
+| `@globalcloud/app-shell` | `Shell`（slots + capabilities + mountMode）/ `AppSwitcher` 泛化 / `StatusPill` |
+| `apps/wae-console` | **独立运行入口**（Vite+React，五类母模板实例 + 自检页）|
+
+**实测验证**（证据见该仓 `VERIFICATION.md`）：`tsc --noEmit` exit 0（4 包 + 1 应用全图）｜`vitest` 4/4 通过｜`vite build` 1694 模块 → 265KB JS + 4.5KB CSS｜`vite dev` 启动后 `localhost:4300` **HTTP 200**。
+
+**诚实标注**：本仓**未触达任何现有项目**（WAME/PKC/Brain/PVAOS 一行未改）；`npm/pnpm install` 与 E2E 的执行状态见 `VERIFICATION.md`。
+
+## 附录 B：命名卫生待决（新仓与旧目录易混）
+
+新仓目录 `GlobalCloud WAE` 与现有目录 `GlobalCloud WAES`（其实已正名为 WAME）**只差一个字母**且同处一个父目录。
+
+| 选项 | 说明 | 状态 |
+|---|---|---|
+| A | 新仓保留 `GlobalCloud WAE`；旧目录 `GlobalCloud WAES` **择机**改为 `GlobalCloud WAME` | 新仓已按此命名；旧目录改名**待影响评估**（涉及 5 个 Codex 工作树的 gitdir 绝对路径引用） |
+| B | 新仓改叫 `GlobalCloud WAE-Browser` | 未采纳 |
+| C | 维持现状，靠文档区分 | 当前实际状态 |
