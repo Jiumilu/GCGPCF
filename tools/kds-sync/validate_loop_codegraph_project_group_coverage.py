@@ -43,7 +43,7 @@ EXPECTED_PROJECTS = [
     "GlobalCloud PKC",
     "GlobalCloud PVAOS",
     "GlobalCloud Studio",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud XGD",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",

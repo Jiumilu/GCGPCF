@@ -15,3 +15,8 @@ last_reviewed: 2026-06-24
 supersedes: []
 superseded_by: []
 ---
+GPCF-CF-LR-020
+Current state remains `partial`
+项目准备度队列
+真实 KDS TOKEN 写入
+accepted/integrated

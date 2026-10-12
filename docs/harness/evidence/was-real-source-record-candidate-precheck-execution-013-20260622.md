@@ -28,3 +28,5 @@ superseded_by: []
 accepted | `false`
 integrated | `false`
 production_ready | `false`
+GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-096
+GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-097

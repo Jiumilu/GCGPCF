@@ -149,3 +149,5 @@ Plan -> Implement -> Evaluate -> Repair -> Commit
 ```
 
 单个 Feature 不得扩张 progress、review、task、status、log、notes 或 decision 文档；Evidence 只保留结果。
+
+policy_version: v1.1

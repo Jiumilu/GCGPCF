@@ -1,29 +1,33 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T13:45:21.438161+08:00",
+  "generated_at": "2026-10-12T13:57:16.174719+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "WAS世界资产体系",
     "GlobalCloud WAES",
+    "GlobalCloud Studio",
     "GlobalCoud GPCF",
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud XGD"
   ],
   "observed_ahead": [
-    "GlobalCloud Studio"
+    "GlobalCloud Studio",
+    "GlobalCloud KDS"
   ],
   "stable_dirty": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
   "stable_ahead": [
+    "GlobalCloud KDS",
     "GlobalCloud Studio"
   ],
   "volatile_dirty": [
@@ -32,6 +36,7 @@
   "review_boundary": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCoud GPCF",
@@ -40,7 +45,7 @@
   "sensitive_repos": [],
   "pass_repo_count": 10,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T13:44:37.970758+08:00",
+  "previous_generated_at": "2026-10-12T13:57:01.475818+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -102,20 +107,30 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 0,
-      "ahead": 7,
+      "dirty_count": 1,
+      "ahead": 9,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "packages/client/src/views/hermes/ChatView.vue"
+      ],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 3,
+      "dirty_count": 11,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "tools/kds-sync/validate_project_group_loop_session_registry_rework_20260626.py",
-        "tools/kds-sync/validate_was_xwail_aaas_plan_alignment.py",
-        "tools/kds-sync/validate_was_xwail_ontology_mapping.py"
+        "tools/kds-sync/validate_codegraph_project_group_steady_state_recheck.py",
+        "tools/kds-sync/validate_codegraph_project_group_steady_state_recheck_20260622.py",
+        "tools/kds-sync/validate_codegraph_watchlist_steady_monitor_20260623.py",
+        "tools/kds-sync/validate_loop_codegraph_integration_closure.py",
+        "tools/kds-sync/validate_loop_codegraph_project_group_coverage.py",
+        "tools/kds-sync/validate_loop_codegraph_project_group_graphized.py",
+        "tools/kds-sync/validate_loop_codegraph_project_group_monitor.py",
+        "tools/kds-sync/validate_loop_codegraph_sync_drift.py",
+        "tools/kds-sync/validate_loop_project_group_gate_readiness.py",
+        "tools/kds-sync/validate_project_group_dirty_classification_p0a_20260626.py",
+        "tools/kds-sync/validate_project_group_p0c_minimal_validation_20260626.py"
       ],
       "sensitive_paths": []
     },
@@ -193,8 +208,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 12,
-      "ahead": 0,
+      "dirty_count": 13,
+      "ahead": 2,
       "behind": 0,
       "paths": [
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\345\\233\\236\\345\\206\\231/01_\\346\\212\\245\\344\\273\\267\\345\\217\\260\\350\\264\\246.md\"",
@@ -208,6 +223,7 @@
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_R3\\347\\234\\237\\345\\256\\236\\346\\225\\260\\346\\215\\256\\345\\206\\231\\345\\205\\245\\346\\270\\205\\345\\215\\225_\\347\\224\\237\\344\\272\\247KDS_v1.0.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_48\\346\\235\\241\\347\\272\\242\\347\\201\\257\\345\\210\\206\\347\\273\\204\\344\\270\\216\\345\\273\\272\\350\\256\\256\\345\\217\\243\\345\\276\\204_v1.3.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_48\\346\\235\\241\\347\\272\\242\\347\\201\\257\\346\\211\\247\\350\\241\\214\\346\\270\\205\\345\\215\\225_v1.4.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_D\\347\\273\\204\\345\\217\\243\\345\\276\\204\\345\\267\\256\\345\\274\\202\\350\\241\\250_v1.5.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\347\\247\\273\\345\\212\\250\\347\\252\\204\\345\\261\\217\\345\\205\\203\\347\\264\\240\\345\\217\\243\\345\\276\\204\\346\\242\\263\\347\\220\\206_v1.0.md\""
       ],
       "sensitive_paths": []
