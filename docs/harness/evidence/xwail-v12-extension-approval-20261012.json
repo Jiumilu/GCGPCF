@@ -1,0 +1,22 @@
+{
+  "evidenceId": "GPCF-XWAIL-V12-EXT-APPROVAL-20261012",
+  "title": "XWAIL V1.2 扩展包批准记录（语义内核十件对象）",
+  "date": "2026-10-12",
+  "decision": "approved",
+  "authority": "治理方（经 2026-10-12 确认）",
+  "scope": [
+    "十件对象进入 V1.2 扩展包",
+    "字段基线确认（议题 v0.4 口径）",
+    "对象1/2/5 映射待定状态认可",
+    "工程建议立项（受理链请求类型/ WAME 注册族）"
+  ],
+  "conditions": [
+    "schema 转正完成（controlled，x-approval-ref 本记录）",
+    "发布记录于提案文档"
+  ],
+  "refs": {
+    "proposalEvidence": "GPCF-XWAIL-V12-EXTENSION-PROPOSAL-20261012",
+    "proposalDoc": "XWAIL:docs/XWAIL-V1.2扩展包提案_v0.1.md"
+  },
+  "note": "批准后自动后续已执行：schema 转正＋议案状态 approved＋议题转附录。工程建议项待跟进（不在本包范围）。"
+}
