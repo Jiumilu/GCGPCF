@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T11:54:12.808369+08:00",
+  "generated_at": "2026-10-12T11:55:14.485772+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
@@ -8,7 +8,6 @@
     "WAS世界资产体系",
     "GlobalCloud WAES",
     "GlobalCloud Studio",
-    "GlobalCoud GPCF",
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud XGD"
@@ -22,28 +21,24 @@
     "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
-    "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
   "stable_ahead": [
     "GlobalCloud Studio"
   ],
-  "volatile_dirty": [
-    "GlobalCoud GPCF"
-  ],
+  "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
-    "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 10,
+  "pass_repo_count": 11,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T11:53:40.106256+08:00",
+  "previous_generated_at": "2026-10-12T11:54:12.808369+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -115,21 +110,10 @@
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 10,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud XWAIL": {
