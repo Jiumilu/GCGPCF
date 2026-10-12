@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T15:08:25.027603+08:00",
+  "generated_at": "2026-10-12T15:36:15.042802+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
+    "WAS世界资产体系",
     "GlobalCloud WAES",
     "GlobalCoud GPCF",
-    "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud XGD"
   ],
@@ -15,11 +15,9 @@
     "GlobalCloud Studio"
   ],
   "stable_dirty": [
-    "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud WAES",
-    "GlobalCloud XGD",
-    "GlobalCoud GPCF"
+    "GlobalCloud XGD"
   ],
   "stable_ahead": [
     "GlobalCloud Studio"
@@ -28,7 +26,6 @@
     "GlobalCoud GPCF"
   ],
   "review_boundary": [
-    "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
@@ -37,7 +34,7 @@
   "sensitive_repos": [],
   "pass_repo_count": 11,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T15:07:08.577654+08:00",
+  "previous_generated_at": "2026-10-12T15:35:20.752645+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -54,10 +51,12 @@
       "sensitive_paths": []
     },
     "WAS世界资产体系": {
-      "dirty_count": 0,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "\"docs/WAS\\350\\257\\255\\344\\271\\211\\345\\206\\205\\346\\240\\270\\345\\245\\221\\347\\272\\246\\345\\214\\226\\345\\215\\207\\347\\272\\247\\346\\226\\271\\346\\241\\210_v1.0.md\""
+      ],
       "sensitive_paths": []
     },
     "GlobalCloud XiaoC": {
@@ -98,26 +97,17 @@
     },
     "GlobalCloud Studio": {
       "dirty_count": 0,
-      "ahead": 14,
+      "ahead": 20,
       "behind": 0,
       "paths": [],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 10,
+      "dirty_count": 1,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
+        "docs/harness/evidence/xwail-v12-extension-package-proposal-20261012.json"
       ],
       "sensitive_paths": []
     },
@@ -129,62 +119,10 @@
       "sensitive_paths": []
     },
     "GlobalCloud GFIS": {
-      "dirty_count": 51,
+      "dirty_count": 0,
       "ahead": 0,
       "behind": 0,
-      "paths": [
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-kds-candidate-source-record-mapping-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-preflight.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-receiving-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-runtime-primary-key-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-runtime-primary-key-negative-pollution-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-owner-response-release-remediation-evidence-intake-scanner.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-file-quarantine-precheck.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-file-empty-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-hold-release-precheck.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-empty-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-hold-release-precheck.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-receiving-hold-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-attempt-hard-stop-audit.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-intake-empty-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-authorization-preflight.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-gap-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-owner-response-reopen-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-post-scan-hold-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-release-attempt-hard-stop-audit.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-hard-stop-remediation-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-remediation-reopen-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-reopen-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-attempt-hard-stop-audit.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-precheck.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-intake-scanner.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-post-scan-hold-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-remediation-action-hold-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-remediation-action-recheck.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-reopen-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-package.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-negative-fixture-guard.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-schema.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-schema.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-review-queue-preblock.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-eligibility-gate.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-change-listener.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-owner-reminder-escalation-action-package.json",
-        "docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-valid-source-record-index-receiving-scan.json",
-        "docs/harness/sop-e2e/evidence/gfis-runtime-12-stage-input-gap-convergence-queue.json",
-        "docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dev-dry-run-result.json"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCloud MMC": {
@@ -195,7 +133,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 20,
+      "dirty_count": 21,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -213,6 +151,7 @@
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_48\\346\\235\\241\\347\\272\\242\\347\\201\\257\\345\\210\\206\\347\\273\\204\\344\\270\\216\\345\\273\\272\\350\\256\\256\\345\\217\\243\\345\\276\\204_v1.3.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_48\\346\\235\\241\\347\\272\\242\\347\\201\\257\\346\\211\\247\\350\\241\\214\\346\\270\\205\\345\\215\\225_v1.4.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_D\\347\\273\\204\\345\\217\\243\\345\\276\\204\\345\\267\\256\\345\\274\\202\\350\\241\\250_v1.5.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_P0-4\\345\\217\\243\\345\\276\\204\\350\\243\\201\\345\\256\\232\\346\\270\\205\\345\\215\\225_v1.0.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\344\\270\\232\\345\\212\\241\\345\\212\\237\\350\\203\\275\\345\\256\\236\\347\\216\\260\\345\\211\\215\\347\\233\\256\\346\\240\\207\\346\\217\\220\\347\\244\\272\\350\\257\\215\\351\\233\\206_v1.0.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\344\\270\\232\\345\\212\\241\\350\\272\\253\\344\\273\\275\\351\\205\\215\\347\\275\\256_P0-1_v1.0.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\346\\255\\243\\345\\274\\217\\345\\220\\257\\345\\212\\250\\345\\211\\215\\345\\277\\205\\345\\201\\232\\346\\270\\205\\345\\215\\225_v1.0.md\"",
