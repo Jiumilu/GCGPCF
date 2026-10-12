@@ -872,3 +872,4 @@ current_round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100
 当前轮次 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`
 was_real_source_record_monitor_100=pass
 下一轮应进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`
+# 完成度审计入口：docs/harness/evidence/was-completion-audit-20260621.json

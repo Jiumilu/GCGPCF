@@ -1,33 +1,29 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T14:21:42.631324+08:00",
+  "generated_at": "2026-10-12T14:36:23.903522+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "WAS世界资产体系",
     "GlobalCloud WAES",
-    "GlobalCloud Studio",
     "GlobalCoud GPCF",
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud XGD"
   ],
   "observed_ahead": [
-    "GlobalCloud Studio",
-    "GlobalCloud KDS"
+    "GlobalCloud Studio"
   ],
   "stable_dirty": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
   "stable_ahead": [
-    "GlobalCloud KDS",
     "GlobalCloud Studio"
   ],
   "volatile_dirty": [
@@ -36,7 +32,6 @@
   "review_boundary": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
-    "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCoud GPCF",
@@ -45,7 +40,7 @@
   "sensitive_repos": [],
   "pass_repo_count": 10,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T14:21:32.096559+08:00",
+  "previous_generated_at": "2026-10-12T14:35:09.647324+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -107,23 +102,27 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 2,
-      "ahead": 10,
+      "dirty_count": 0,
+      "ahead": 13,
       "behind": 0,
-      "paths": [
-        "scripts/meeting-source-registration.py",
-        "docs/harness/evidence/codegraph/studio-meeting-source-endpoint-20261012.json"
-      ],
+      "paths": [],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 3,
+      "dirty_count": 10,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "docs/harness/evidence/loop-codegraph-project-group-graphized-20260621.json",
-        "docs/harness/evidence/loop-codegraph-project-group-monitor-20260621.json",
-        "tools/kds-sync/validate_loop_codegraph_project_group_graphized.py"
+        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
+        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
+        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
+        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
       ],
       "sensitive_paths": []
     },
@@ -201,8 +200,8 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 15,
-      "ahead": 4,
+      "dirty_count": 17,
+      "ahead": 0,
       "behind": 0,
       "paths": [
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\345\\233\\236\\345\\206\\231/01_\\346\\212\\245\\344\\273\\267\\345\\217\\260\\350\\264\\246.md\"",
@@ -219,7 +218,9 @@
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_D\\347\\273\\204\\345\\217\\243\\345\\276\\204\\345\\267\\256\\345\\274\\202\\350\\241\\250_v1.5.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\344\\270\\232\\345\\212\\241\\345\\212\\237\\350\\203\\275\\345\\256\\236\\347\\216\\260\\345\\211\\215\\347\\233\\256\\346\\240\\207\\346\\217\\220\\347\\244\\272\\350\\257\\215\\351\\233\\206_v1.0.md\"",
         "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\346\\255\\243\\345\\274\\217\\345\\220\\257\\345\\212\\250\\345\\211\\215\\345\\277\\205\\345\\201\\232\\346\\270\\205\\345\\215\\225_v1.0.md\"",
-        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\347\\247\\273\\345\\212\\250\\347\\252\\204\\345\\261\\217\\345\\205\\203\\347\\264\\240\\345\\217\\243\\345\\276\\204\\346\\242\\263\\347\\220\\206_v1.0.md\""
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\347\\247\\273\\345\\212\\250\\347\\252\\204\\345\\261\\217\\345\\205\\203\\347\\264\\240\\345\\217\\243\\345\\276\\204\\346\\242\\263\\347\\220\\206_v1.0.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\351\\203\\250\\347\\275\\262\\344\\270\\216\\346\\211\\223\\345\\214\\205\\350\\267\\257\\345\\276\\204\\351\\252\\214\\350\\257\\201\\346\\212\\245\\345\\221\\212_P0-9_v1.0.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio\\351\\203\\250\\347\\275\\262\\351\\252\\214\\350\\257\\201\\350\\241\\245\\345\\205\\205_Desktop\\346\\211\\223\\345\\214\\205_v1.1.md\""
       ],
       "sensitive_paths": []
     },

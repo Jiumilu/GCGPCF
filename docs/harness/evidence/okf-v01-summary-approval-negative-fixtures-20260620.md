@@ -18,7 +18,7 @@ superseded_by: []
 
 # OKF v0.1 Summary Approval Negative Fixtures
 
-generated_at: 2026-10-12T06:04:56.870172+00:00
+generated_at: 2026-10-12T06:31:26.532973+00:00
 
 ## Summary
 
