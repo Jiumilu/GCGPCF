@@ -13,7 +13,7 @@ TYPE_FILE = ROOT / "packages" / "shared" / "src" / "knowledge" / f"{SLUG}.ts"
 FIXTURE = ROOT / "fixtures" / "gfis" / f"{SLUG}-dry-run.json"
 UPSTREAM = ROOT / "fixtures" / "gfis" / "gfis-assistant-dks-265-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-preview-dry-run.json"
 TYPE_PREFIX = "GfisAssistantDks266AckEscalationSlaBreachReviewResolutionOptionApprovalPacketRoutingQueueNotificationAckEscalationDigestDeliveryAcknowledgementPreview"
-NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesDeliveryAcknowledgement', 'writesDigestDelivery', 'writesDelivery', 'writesDigest', 'writesEscalation', 'writesTimeoutEvent', 'writesKweWorkItem', 'writesNotification', 'writesAcknowledgement', 'writesReceipt', 'writesReadReceipt', 'writesDeliveryStatus', 'writesApprovalAssignment', 'writesApprovalLock', 'writesApprovalPacket', 'writesApprovalRequest', 'writesApprovalDecision', 'writesCommitteeDecision', 'writesFreezeAction', 'writesWaesGateResult', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
+NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesDeliveryAcknowledgement', 'writesDigestDelivery', 'writesDelivery', 'writesDigest', 'writesEscalation', 'writesTimeoutEvent', 'writesKweWorkItem', 'writesNotification', 'writesAcknowledgement', 'writesReceipt', 'writesReadReceipt', 'writesDeliveryStatus', 'writesApprovalAssignment', 'writesApprovalLock', 'writesApprovalPacket', 'writesApprovalRequest', 'writesApprovalDecision', 'writesCommitteeDecision', 'writesFreezeAction', 'writesWameGateResult', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
 
 def camel_to_snake(value: str) -> str:
     return re.sub(r"(?<!^)(?=[A-Z])", "_", value).lower()
@@ -82,14 +82,14 @@ def main() -> int:
         "createsCommitteeDecisions": 0,
         "createsFreezeActions": 0,
         "createsHarnessEvidence": 0,
-        "createsWaesGateResults": 0,
+        "createsWameGateResults": 0,
         "persistsEvidence": 0,
         "approvesBusinessWrite": 0,
         "promotesLifecycle": 0,
         "completesCommitteeDecision": 0,
     }
     surface_keys = {"brain": "brainSurface", "pkc": "pkcSurface", "gfis_assistant": "gfisAssistantSurface"}
-    false_flags = ('createsDeliveryAcknowledgement', 'createsDigestDelivery', 'createsDelivery', 'createsDigest', 'createsEscalation', 'createsTimeoutEvent', 'createsKweWorkItem', 'createsNotification', 'createsAcknowledgement', 'createsReceipt', 'createsReadReceipt', 'updatesDeliveryStatus', 'sendsExternalNotification', 'createsApprovalAssignment', 'locksApprover', 'createsApprovalPacket', 'createsApprovalRequest', 'createsApprovalDecision', 'createsCommitteeDecision', 'createsFreezeAction', 'createsHarnessEvidence', 'createsWaesGateResult', 'persistsEvidence', 'approvesBusinessWrite', 'promotesLifecycle', 'completesCommitteeDecision')
+    false_flags = ('createsDeliveryAcknowledgement', 'createsDigestDelivery', 'createsDelivery', 'createsDigest', 'createsEscalation', 'createsTimeoutEvent', 'createsKweWorkItem', 'createsNotification', 'createsAcknowledgement', 'createsReceipt', 'createsReadReceipt', 'updatesDeliveryStatus', 'sendsExternalNotification', 'createsApprovalAssignment', 'locksApprover', 'createsApprovalPacket', 'createsApprovalRequest', 'createsApprovalDecision', 'createsCommitteeDecision', 'createsFreezeAction', 'createsHarnessEvidence', 'createsWameGateResult', 'persistsEvidence', 'approvesBusinessWrite', 'promotesLifecycle', 'completesCommitteeDecision')
     flag_count_keys = {
         "createsDeliveryAcknowledgement": "createsDeliveryAcknowledgements",
         "createsDigestDelivery": "createsDigestDeliveries",
@@ -112,7 +112,7 @@ def main() -> int:
         "createsCommitteeDecision": "createsCommitteeDecisions",
         "createsFreezeAction": "createsFreezeActions",
         "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults",
+        "createsWameGateResult": "createsWameGateResults",
         "persistsEvidence": "persistsEvidence",
         "approvesBusinessWrite": "approvesBusinessWrite",
         "promotesLifecycle": "promotesLifecycle",

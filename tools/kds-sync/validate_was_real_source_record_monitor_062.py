@@ -17,8 +17,8 @@ SOURCE_JSON = ROOT / "docs/harness/evidence/was-real-source-record-monitor-061-2
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 USE_PHASE_KEYS = [
     "use_phase_energy_performance_record_gaps",
@@ -173,7 +173,7 @@ def main() -> int:
         require(boundary.get(key) is False, f"boundary.{key} must remain false")
 
     joined_output = "\n".join(run(command) for command in REQUIRED_COMMANDS)
-    for phrase in ["accepted_for_next_gate=0", "hold_required=1", "real_source_records=0", "valid_source_records=0", "runtime_primary_key_ready=0", "waes_review=0", "accepted=false", "integrated=false", "production_ready=false"]:
+    for phrase in ["accepted_for_next_gate=0", "hold_required=1", "real_source_records=0", "valid_source_records=0", "runtime_primary_key_ready=0", "wame_review=0", "accepted=false", "integrated=false", "production_ready=false"]:
         require(phrase in joined_output, f"required command output missing phrase: {phrase}")
 
     for phrase in MD_PHRASES:
@@ -190,7 +190,7 @@ def main() -> int:
         "software_or_firmware_efficiency_update_record_gaps=0 end_user_environmental_claim_substantiation_gaps=0 "
         "accepted_for_use_phase_environmental_profile=0 accepted_for_next_gate=0 "
         "hold_required=1 real_source_records=0 valid_source_records=0 "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-063"
     )

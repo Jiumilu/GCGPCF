@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6744A9045B
 title: GPCF-KDS-DKS-004 葛化订单运行母版字段与单据映射 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,7 +46,7 @@ Loop 编排脚本显示当前 KDS token 和文档门禁可用，但全仓 Git/�
 1. 建立受控专项清单：
    `03-data-ai-knowledge/GlobalCloud葛化订单运行母版字段与单据映射专项清单.md`
 2. 将预运营阶段拆成 DemandSourceRecord、AISuggestion、PreOperationOrder、OEMProductionEvidencePackage、QualityEvidenceGate、ShipmentAndPODGate、FinanceEvidenceGate 和 OperatingOrderConversionDecision。
-3. 将 P0 SOP 映射到 GFIS 标准单据、自定义对象、GPC/PVAOS 客户协同引用、WAES/KDS 门禁。
+3. 将 P0 SOP 映射到 GFIS 标准单据、自定义对象、GPC/PVAOS 客户协同引用、WAME/KDS 门禁。
 4. 建立辽宁远航链路证据缺口清单。
 5. 明确本轮不触发业务主账写入、不确认真实证据、不升级验收状态。
 

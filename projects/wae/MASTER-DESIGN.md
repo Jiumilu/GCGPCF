@@ -14,8 +14,8 @@ sync_direction: bidirectional
 inherits:
   - GPCF:01-architecture/GlobalCloud 项目群总体方案.md
   - GPCF:04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md
-  - GPCF:04-ui-delivery/WAES专业工作台母框架差距评估.md
-  - GPCF:04-ui-delivery/WAES专业工作台母框架升级方案.md
+  - GPCF:04-ui-delivery/WAME专业工作台母框架差距评估.md
+  - GPCF:04-ui-delivery/WAME专业工作台母框架升级方案.md
 last_reviewed: 2026-10-12
 supersedes: []
 superseded_by: []
@@ -27,7 +27,7 @@ superseded_by: []
 > 1. 项目名：沿用「世界资产浏览器 / WAE」；原 WAME/WAES 系统合并为 **WAME（世界资产模型引擎）**。
 > 2. **技术形态：已裁定为分步路线 C** —— ① 共享包 monorepo 打底 → ② 统一入口注册 + 异构项目受控 iframe 嵌入 → ③ 按需微前端试点。详见 `projects/wae/技术形态对比分析_v0.1.md`。
 > 3. **命名：已裁定** —— `WAE` = World Asset Explorer·世界资产浏览器（本项目）；原「WAE/世界资产引擎」与「原 WAES」**合并为 WAME（World Asset Model Engine·世界资产模型引擎）**，`WAES` 缩写停用。
->    ⚠️ **本项反转了 WAS 总体方案 V1.2 的命名口径**（V1.2 曾定 WAE=引擎、WAES=浏览器）；WAS 仓已按本裁定同步修订。
+>    ⚠️ **本项反转了 WAS 总体方案 V1.2 的命名口径**（V1.2 曾定 WAE=引擎、WAME=浏览器）；WAS 仓已按本裁定同步修订。
 > 4. 立项登记已执行：KDS `_meta/project-registry.yaml`（`WAS-WAE-BROWSER`）+ GPCF 项目群总体方案项目清单 + GPCF 文档控制台账。
 
 
@@ -52,7 +52,7 @@ superseded_by: []
 | 英文名 | WAE（World Asset Explorer） |
 | 对外副标题 | Global Cloud AI 工作台 |
 | 项目归属 | GlobalCloud 项目群 / `世界资产` 空间 |
-| 现有登记 | KDS `_meta/project-registry.yaml` → `WAS-WAES-DEMO`（世界资产模型引擎/WAME，原 WAES 演示版开发；现称「世界资产模型引擎」） |
+| 现有登记 | KDS `_meta/project-registry.yaml` → `WAS-WAME-DEMO`（世界资产模型引擎/WAME，原 WAES 演示版开发；现称「世界资产模型引擎」） |
 | 既有定义 | 《WAME 产品需求文档 v2.2》：WAE 世界资产浏览器 = WASOS / PVAOS / ISAOS 三层结构的全景仪表盘与 AI 规则编排工作台 |
 
 ### 1.2 本项目的重新定位（老卢 2026-10-12 指令）
@@ -203,7 +203,7 @@ L1 令牌层   设计令牌——颜色 / 间距 / 字体 / 圆角 / 阴影 / �
 | # | 优化项 | 现状 | 目标 | 优先级 |
 |---|---|---|---|---|
 | O1 | 外壳解耦 | GlobalCloudShell 仅局部路由可用，内嵌 WAME 专属能力 | 抽出纯壳，WAME 专属能力下沉为可选插件 | P0 |
-| O2 | 令牌收口 | WAES/PKC/Brain 令牌未验证同源 | 单一份 `ui-tokens`，各项目引用 | P0 |
+| O2 | 令牌收口 | WAME/PKC/Brain 令牌未验证同源 | 单一份 `ui-tokens`，各项目引用 | P0 |
 | O3 | 侧栏统一 | 三套侧栏并存（FunctionPanel / Sidebar / GlobalCloudSidebar） | 保留一套，其余下线 | P0 |
 | O4 | 状态语义层 | 代码中无统一状态字典 | 建立并接入骨架 | P0 |
 | O5 | 证据/审计组件组 | 有零散实现（IntakeLedger 等） | 抽为统一组件组 | P1 |
@@ -270,7 +270,7 @@ L1 令牌层   设计令牌——颜色 / 间距 / 字体 / 圆角 / 阴影 / �
 
 ## 九、待确认项（请老卢 / GPCF 裁定）
 
-1. **立项载体**：是在 GPCF 项目群（`01-architecture/GlobalCloud 项目群总体方案.md` 项目清单 + KDS registry）新增独立项目，还是在现有 `WAS-WAES-DEMO` 上重新定位？是否建飞书项目群、是否新建独立仓？
+1. **立项载体**：是在 GPCF 项目群（`01-architecture/GlobalCloud 项目群总体方案.md` 项目清单 + KDS registry）新增独立项目，还是在现有 `WAS-WAME-DEMO` 上重新定位？是否建飞书项目群、是否新建独立仓？
 2. **命名冲突**：`世界资产浏览器 = WAE = WAME 对外产品名`，与现有 WAME 项目同名。新项目是否沿用 WAE 名（与 WAME 同源但分工），还是另立名（如"GlobalCloud 统一界面框架 / GC-UI-Frame"）？
 3. **技术形态**：确认采用"共享包 monorepo（推荐）"还是"微前端容器"？
 4. **扩散序**：与 GPCF 既定序（Studio→PKC→XGD→GPC→GFIS）如何对齐——按同构度（本设计）还是按 GPCF 序？

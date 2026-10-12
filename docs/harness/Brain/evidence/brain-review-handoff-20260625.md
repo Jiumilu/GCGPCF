@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BRAIN-REVIEW-HANDOFF-20260625
 title: Brain 人工审查移交包 2026-06-25
 project: Brain
-related_projects: [WAES, KDS, Brain, GPCF]
+related_projects: [WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

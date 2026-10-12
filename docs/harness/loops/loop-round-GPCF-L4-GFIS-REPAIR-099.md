@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E0EDA2BBAD
 title: Loop Round GPCF-L4-GFIS-REPAIR-099
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -80,9 +80,9 @@ validator_exit=2
 - 用户口述、KDS 候选、报价 PDF、行动台账、沟通纪要、GFIS Demo、Loop 记录和 placeholder 不得替代正式责任方回执。
 - owner response、artifact_owner_confirmation 和正式业务字段仍必须由责任方提交。
 - 未接收真实原始凭证。
-- 未进入 manual/WAES/KDS review。
+- 未进入 manual/WAME/KDS review。
 - 未进入 runtime intake。
-- 未执行生产写入、真实外部 API 写入、bench migrate、schema sync、真实 KDS/WAES 写入、权限变更、部署、推送或合并。
+- 未执行生产写入、真实外部 API 写入、bench migrate、schema sync、真实 KDS/WAME 写入、权限变更、部署、推送或合并。
 - 未把 Demo、KDS 候选、placeholder 或用户口述升级为 accepted/integrated。
 
 ## 下一轮建议

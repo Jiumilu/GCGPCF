@@ -13,7 +13,7 @@ BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-bo
 CORE_REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 
 BLOCKER_IDS = [
-    "DEP-WAES-XWAIL-AAAS-001",
+    "DEP-WAME-XWAIL-AAAS-001",
     "DEP-KDS-BRAIN-001",
     "DEP-GFIS-GPC-PVAOS-SCAAS-001",
     "DEP-GPCF-ALL-PROJECTS-001",
@@ -30,7 +30,7 @@ REQUIRED_TOKENS = [
     "authorization_granted_count = 0",
     "action_executed_count = 0",
     "operational_gate_after_this_doc = blocked",
-    "WAES lint/runtime",
+    "WAME lint/runtime",
     "XWAIL/AaaS",
     "KDS RAG",
     "Brain review",

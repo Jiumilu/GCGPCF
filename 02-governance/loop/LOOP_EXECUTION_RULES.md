@@ -92,7 +92,7 @@ real_business_lane=repair_required
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 ```
 

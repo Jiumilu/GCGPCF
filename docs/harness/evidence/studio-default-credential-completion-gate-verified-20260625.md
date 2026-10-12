@@ -2,7 +2,7 @@
 doc_id: GPCF-EVIDENCE-6C4D2A91F8
 title: Studio 默认凭据整改完成态门禁复验
 project: GPCF
-related_projects: [GPCF, WAES, Studio]
+related_projects: [GPCF, WAME, Studio]
 domain: docs
 status: controlled
 version: v1.0

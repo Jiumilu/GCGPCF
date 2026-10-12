@@ -82,7 +82,7 @@ def main() -> int:
 
     require(completed_template.get("telemetry") == "off", "telemetry must stay off")
     require("REQUIRED" in completed_template.get("execution_operator", ""), "operator must remain a required placeholder")
-    require("REQUIRED" in completed_template.get("waes_harness_receipt_decision", ""), "WAES/Harness receipt decision must remain required")
+    require("REQUIRED" in completed_template.get("wame_harness_receipt_decision", ""), "WAME/Harness receipt decision must remain required")
     for field in FALSE_FIELDS:
         require(completed_template.get(field) is False, f"completed template must keep {field}=false")
     if AUTHORIZED_COMPLETED_RECEIPT.exists():

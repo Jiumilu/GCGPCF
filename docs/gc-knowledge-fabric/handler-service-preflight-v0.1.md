@@ -29,7 +29,7 @@ D11 只建立 route handler 到 service 方法的静态映射，目标是保证 
 | 分组 | Endpoint 数 | Route | Service | Handler map |
 |---|---:|---|---|---|
 | KDS v2 | 11 | `packages/api/src/kds/v2/routes.ts` | `packages/api/src/kds/v2/service.ts` | `packages/api/src/handler-map.ts` |
-| WAME | 7 | `packages/api/src/waes/routes.ts` | `packages/api/src/waes/service.ts` | `packages/api/src/handler-map.ts` |
+| WAME | 7 | `packages/api/src/wame/routes.ts` | `packages/api/src/wame/service.ts` | `packages/api/src/handler-map.ts` |
 | KWE | 10 | `packages/api/src/kwe/routes.ts` | `packages/api/src/kwe/service.ts` | `packages/api/src/handler-map.ts` |
 | GFIS Assistant | 4 | `packages/api/src/gfis/routes.ts` | `packages/api/src/gfis/service.ts` | `packages/api/src/handler-map.ts` |
 | Governance LOOP | 8 | `packages/api/src/governance/routes.ts` | `packages/api/src/governance/service.ts` | `packages/api/src/handler-map.ts` |

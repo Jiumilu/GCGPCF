@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0EFDA19AF2
 title: OKF v0.1 消费基准证据
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

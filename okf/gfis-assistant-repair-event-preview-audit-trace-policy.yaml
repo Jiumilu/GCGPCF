@@ -8,7 +8,7 @@ purpose: >
   Assistant repair event previews. Audit trace previews explain how a local
   preview can be interpreted in an audit context. They do not create audit
   trace records, event records, action receipts, read receipts, Harness
-  evidence, WAES gate results, KWE work items, lifecycle changes, business
+  evidence, WAME gate results, KWE work items, lifecycle changes, business
   writes, revenue or score confirmations, quota transfers, bounty settlements,
   or external API calls.
 
@@ -33,7 +33,7 @@ required_fields:
   - creates_action_receipt
   - creates_read_receipt
   - creates_harness_evidence
-  - creates_waes_gate_result
+  - creates_wame_gate_result
   - creates_kwe_work_item
   - persists_evidence
   - approves_business_write
@@ -71,7 +71,7 @@ blocked_actions:
   - create_action_receipt
   - create_read_receipt
   - create_harness_evidence
-  - create_waes_gate_result
+  - create_wame_gate_result
   - create_kwe_work_item
   - persist_evidence
   - approve_business_write
@@ -85,7 +85,7 @@ hard_boundaries:
   audit_trace_preview_is_not_action_receipt: true
   audit_trace_preview_is_not_read_receipt: true
   audit_trace_preview_is_not_harness_evidence: true
-  audit_trace_preview_is_not_waes_result: true
+  audit_trace_preview_is_not_wame_result: true
   audit_trace_preview_is_not_kwe_work_item: true
   audit_trace_preview_is_not_lifecycle_change: true
   audit_trace_preview_is_not_business_writeback: true
@@ -94,7 +94,7 @@ hard_boundaries:
   creates_action_receipt_must_be_false: true
   creates_read_receipt_must_be_false: true
   creates_harness_evidence_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   creates_kwe_work_item_must_be_false: true
   persists_evidence_must_be_false: true
   approves_business_write_must_be_false: true
@@ -106,7 +106,7 @@ no_write_guards:
   writes_gpc: 0
   writes_erp: 0
   writes_mes: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_audit_trace_record: 0
   writes_event_record: 0

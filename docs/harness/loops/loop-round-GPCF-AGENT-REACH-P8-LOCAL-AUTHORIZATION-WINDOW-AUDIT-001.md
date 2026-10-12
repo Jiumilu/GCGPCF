@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P8-LOCAL-AUTHORIZATION-WINDOW-AUDIT-001
 title: Agent-Reach P8 Local Authorization Window Audit Loop 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -61,7 +61,7 @@ def main() -> int:
     require(state["external_notifications_sent"] == 0, "external notifications must be zero")
     require(state["external_api_write"] is False, "external API write must be false")
     require(state["real_kds_write"] is False, "real KDS write must be false")
-    require(state["real_waes_write"] is False, "real WAES write must be false")
+    require(state["real_wame_write"] is False, "real WAME write must be false")
 
     questions = evidence["authorization_questions"]
     require(len(questions) == 1, "must contain exactly one authorization question")
@@ -89,7 +89,7 @@ def main() -> int:
         "external notification dispatch",
         "external API write",
         "real KDS write",
-        "real WAES write",
+        "real WAME write",
         "git commit",
         "git push",
         "accepted/integrated/production_ready/customer_accepted status upgrade",

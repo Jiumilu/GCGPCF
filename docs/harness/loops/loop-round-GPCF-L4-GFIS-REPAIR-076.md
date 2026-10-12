@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C840587D68
 title: GPCF-L4-GFIS-REPAIR-076 GFIS 辽宁远航报价客户确认原件 preflight
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -77,4 +77,4 @@ git diff --check -- . => pass
 
 ## 下一步
 
-继续采集辽宁远航客户确认函、客户盖章/签字确认或等效正式确认原件脱敏索引；若取得原件，再创建第一条 real submission 候选并保持人工/WAES/KDS 复核边界。
+继续采集辽宁远航客户确认函、客户盖章/签字确认或等效正式确认原件脱敏索引；若取得原件，再创建第一条 real submission 候选并保持人工/WAME/KDS 复核边界。

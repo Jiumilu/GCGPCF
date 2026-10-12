@@ -21,7 +21,7 @@ PROJECTS = [
     "Brain",
     "WAS",
     "XiaoC",
-    "WAES",
+    "WAME",
     "GPC",
     "Studio",
     "GPCF",

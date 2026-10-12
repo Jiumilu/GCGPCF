@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7E39DE14EA
 title: GPCF-L4-GFIS-REPAIR-010 GFIS Runtime Evidence Candidate Calls
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,7 +50,7 @@ superseded_by: []
 
 - 未使用 GFIS Demo 作为业务主体。
 - 未将 mock、fixture、文档或候选证据冒充业务完成。
-- 未确认 POD、资金事实、WAES 最终裁决或 KDS 真实写入。
+- 未确认 POD、资金事实、WAME 最终裁决或 KDS 真实写入。
 - 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、Docker/bench 重启、部署或服务重载。
 - 未升级 accepted、integrated、complete 或 L4 closed。
 

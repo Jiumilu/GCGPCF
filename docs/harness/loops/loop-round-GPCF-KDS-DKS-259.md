@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0C269B1F30
 title: LOOP Round GPCF KDS DKS-259
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,9 +36,9 @@ superseded_by: []
 - `scripts/gfis/validate_gfis_assistant_dks_259_ack_escalation_sla_breach_review_resolution_option_approval_packet_preview.py`
 - `docs/gc-knowledge-fabric/gfis-assistant-dks-259-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.md`
 
-## WAES / KWE / Harness 边界
+## WAME / KWE / Harness 边界
 
-本轮只生成候选预览，不创建 approval packet、approval request、approval decision、committee decision、freeze action、WAES、KWE、Harness、KDS lifecycle 或业务写回。
+本轮只生成候选预览，不创建 approval packet、approval request、approval decision、committee decision、freeze action、WAME、KWE、Harness、KDS lifecycle 或业务写回。
 
 ## 下一轮建议
 

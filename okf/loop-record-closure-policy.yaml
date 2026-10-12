@@ -12,7 +12,7 @@ minimum_loop_record_fields:
   - new_gap_refs
   - candidate_fact_refs
   - candidate_sop_refs
-  - waes_result_refs
+  - wame_result_refs
   - confirmation_refs
   - committee_refs
   - risk_refs

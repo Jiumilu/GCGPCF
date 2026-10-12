@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-37415F477C
 title: GPCF-L4-GFIS-REPAIR-127
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 - GFIS `GFIS-RUNTIME-SOP-E2E-119` 已建立辽宁远航客户/采购商业补证请求包。
 - 3 项请求均处于 open：客户确认函、采购订单/合同、商业责任方回执。
 - 正式报价 PDF 已作为报价来源锚点受控，但不能替代客户确认函、采购订单或合同。
-- GFIS 运行层仍缺真实客户确认、采购订单、合同、owner response、完整 authorization envelope、review queue、runtime intake、WAES review 和 verified artifact。
+- GFIS 运行层仍缺真实客户确认、采购订单、合同、owner response、完整 authorization envelope、review queue、runtime intake、WAME review 和 verified artifact。
 
 ## 动作
 
@@ -67,9 +67,9 @@ superseded_by: []
 ## 真实性边界
 
 - 本轮没有执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、ECS/Caddy/隧道/Docker 配置修改或 accepted/integrated 状态升级。
-- 提交预检只扫描 3 项预期提交 slot；不创建客户确认函、采购订单、合同、owner response、authorization envelope、review queue、runtime intake、WAES review 或 verified artifact。
+- 提交预检只扫描 3 项预期提交 slot；不创建客户确认函、采购订单、合同、owner response、authorization envelope、review queue、runtime intake、WAME review 或 verified artifact。
 - GFIS Demo E2E 26 passed 只作为展示层回归，不作为运行层 SOP E2E 完成证明。
 
 ## 下一轮
 
-GFIS-RUNTIME-SOP-E2E-121：在不创建真实凭证的前提下，建立客户商业凭证提交目录的拒收/隔离边界或 owner response 授权 envelope 对接检查；继续保持 review/runtime/WAES 队列阻断，直到真实凭证和授权 envelope 出现。
+GFIS-RUNTIME-SOP-E2E-121：在不创建真实凭证的前提下，建立客户商业凭证提交目录的拒收/隔离边界或 owner response 授权 envelope 对接检查；继续保持 review/runtime/WAME 队列阻断，直到真实凭证和授权 envelope 出现。

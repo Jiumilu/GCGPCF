@@ -198,7 +198,7 @@ for (const testCase of successCases) {{
     response.group !== mapping.group ||
     response.method !== mapping.method ||
     response.path !== mapping.path ||
-    response.gateRequired !== mapping.requiresWaesGate ||
+    response.gateRequired !== mapping.requiresWameGate ||
     response.kweRequired !== mapping.requiresKweFlow ||
     response.humanOrCommitteeRequired !== mapping.requiresHumanOrCommitteeForFinality
   ) {{
@@ -222,7 +222,7 @@ for (const testCase of failureCases) {{
       serviceName: testCase.serviceName,
       serviceMethod: testCase.serviceMethod,
       writeBoundary: testCase.writeBoundary,
-      requiresWaesGate: false,
+      requiresWameGate: false,
       requiresKweFlow: false,
       requiresHumanOrCommitteeForFinality: false,
       directBusinessWrite: false,

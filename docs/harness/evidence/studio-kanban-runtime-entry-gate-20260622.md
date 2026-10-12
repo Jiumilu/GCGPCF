@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A9D73C1E4
 title: Studio Kanban 运行入口门禁证据
 project: GPCF
-related_projects: [GPC, WAES, XGD, GPCF, Studio]
+related_projects: [GPC, WAME, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

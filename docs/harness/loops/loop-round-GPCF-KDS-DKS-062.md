@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-36AB0DCB58
 title: LOOP Round GPCF-KDS-DKS-062 - GC-Knowledge Fabric Shared Types骨架落地
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 本轮目标
 
-把 DKS-061 的 OKF 契约转成第一批 `packages/shared/src/knowledge` TypeScript 类型骨架，为后续 KDS v2 API、WAES Gate、KWE WorkItem、GFIS Assistant 与治理台账实现提供一致的类型边界。
+把 DKS-061 的 OKF 契约转成第一批 `packages/shared/src/knowledge` TypeScript 类型骨架，为后续 KDS v2 API、WAME Gate、KWE WorkItem、GFIS Assistant 与治理台账实现提供一致的类型边界。
 
 本轮只建立可编译类型契约，不声明数据库迁移、API 上线、RAG 上线、GFIS 写回、收益确认或委员会裁决完成。
 
@@ -30,7 +30,7 @@ superseded_by: []
 - `okf/knowledge-object.schema.json`
 - `okf/pool-binding-policy.yaml`
 - `okf/rag-admission-policy.yaml`
-- `okf/waes-gate-policy.yaml`
+- `okf/wame-gate-policy.yaml`
 - `okf/contribution-policy.yaml`
 - `okf/revenue-policy.yaml`
 - `okf/quota-policy.yaml`
@@ -59,7 +59,7 @@ superseded_by: []
 - `packages/shared/src/knowledge/dispute.ts`
 - `packages/shared/src/knowledge/pool.ts`
 - `packages/shared/src/knowledge/rag-admission.ts`
-- `packages/shared/src/knowledge/waes-gate.ts`
+- `packages/shared/src/knowledge/wame-gate.ts`
 - `packages/shared/src/knowledge/loop.ts`
 
 ## 4. 本轮门禁口径
@@ -101,5 +101,5 @@ superseded_by: []
 ## 8. 下一轮建议
 
 - `GPCF-KDS-DKS-063`：建立 KDS v2 最小表结构与 API 契约任务清单。
-- `GPCF-KDS-DKS-064`：建立 WAES 最小门禁 dry-run validator。
+- `GPCF-KDS-DKS-064`：建立 WAME 最小门禁 dry-run validator。
 - `GPCF-KDS-DKS-065`：生成 KWE WorkItem 最小流程 dry-run。

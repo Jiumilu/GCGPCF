@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-885119D994
 title: Loop Round GPCF-L4-GFIS-REPAIR-086
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ superseded_by: []
 ## 输入
 
 - 用户补充辽宁远航业务事实：2026 年 1 月 23 个样箱测试、江西工厂委托生产、2026 年 5 月采购计划/项目报价单、2026 年 6 月现代精工产线量产计划。
-- GFIS 上轮已将报价正式原件 KDS 候选推进到人工/WAES/KDS 复核前隔离。
+- GFIS 上轮已将报价正式原件 KDS 候选推进到人工/WAME/KDS 复核前隔离。
 - 当前缺口仍是客户确认函或等效正式确认原件，不是报价字段缺口。
 
 ## 本轮动作
@@ -96,12 +96,12 @@ git diff --check -- .
 
 - 指向 GPC/KDS 补收正式确认原件或等效脱敏索引。
 - 保持 `candidate_only`。
-- 为 WAES/GPC 后续人工复核提供输入。
+- 为 WAME/GPC 后续人工复核提供输入。
 
 补证包当前禁止：
 
 - 写 KDS。
-- 触发 WAES 终审。
+- 触发 WAME 终审。
 - 进入 GFIS runtime intake。
 - 把用户陈述、KDS context、报价 PDF、弱确认、Loop 文档或补证包本身升级为 verified live artifact。
 

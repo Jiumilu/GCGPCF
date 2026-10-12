@@ -2,7 +2,7 @@
 """Validate LOOP record schema and next-action closure gate.
 
 This validator reads local OKF, shared type and fixture files only. It does not
-write LOOP state, Harness evidence, KDS, WAES, KWE, business systems, ledgers,
+write LOOP state, Harness evidence, KDS, WAME, KWE, business systems, ledgers,
 committee records, or external APIs.
 """
 

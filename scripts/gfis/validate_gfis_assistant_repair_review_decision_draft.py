@@ -21,7 +21,7 @@ NO_WRITE_KEYS = (
     "writesGpc",
     "writesErp",
     "writesMes",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesReviewQueueItem",
     "writesConfirmationRecord",
@@ -104,7 +104,7 @@ def main() -> int:
         "createsGapRecords": 0,
         "createsBountyRecords": 0,
         "createsKweWorkItems": 0,
-        "createsWaesGateResults": 0,
+        "createsWameGateResults": 0,
         "routesToHumanQueue": 0,
         "approvesBusinessWrite": 0,
         "promotesLifecycle": 0,
@@ -173,7 +173,7 @@ def main() -> int:
         counts["createsGapRecords"] += int(draft["createsGapRecord"] is True)
         counts["createsBountyRecords"] += int(draft["createsBountyRecord"] is True)
         counts["createsKweWorkItems"] += int(draft["createsKweWorkItem"] is True)
-        counts["createsWaesGateResults"] += int(draft["createsWaesGateResult"] is True)
+        counts["createsWameGateResults"] += int(draft["createsWameGateResult"] is True)
         counts["routesToHumanQueue"] += int(draft["routesToHumanQueue"] is True)
         counts["approvesBusinessWrite"] += int(draft["approvesBusinessWrite"] is True)
         counts["promotesLifecycle"] += int(draft["promotesLifecycle"] is True)
@@ -189,7 +189,7 @@ def main() -> int:
             "createsGapRecord",
             "createsBountyRecord",
             "createsKweWorkItem",
-            "createsWaesGateResult",
+            "createsWameGateResult",
             "routesToHumanQueue",
             "approvesBusinessWrite",
             "promotesLifecycle",
@@ -253,10 +253,10 @@ def main() -> int:
         f"persists_evidence={actual['persistsEvidence']} creates_review_queue_items={actual['createsReviewQueueItems']} "
         f"creates_confirmation_records={actual['createsConfirmationRecords']} creates_decision_records={actual['createsDecisionRecords']} "
         f"creates_gap_records={actual['createsGapRecords']} creates_bounty_records={actual['createsBountyRecords']} "
-        f"creates_kwe_work_items={actual['createsKweWorkItems']} creates_waes_gate_results={actual['createsWaesGateResults']} "
+        f"creates_kwe_work_items={actual['createsKweWorkItems']} creates_wame_gate_results={actual['createsWameGateResults']} "
         f"routes_to_human_queue={actual['routesToHumanQueue']} approves_business_write={actual['approvesBusinessWrite']} "
         f"promotes_lifecycle={actual['promotesLifecycle']} completes_committee_decision={actual['completesCommitteeDecision']} "
-        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 "
+        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_review_queue_item=0 writes_confirmation_record=0 writes_decision_record=0 "
         "writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 "
         "writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 "

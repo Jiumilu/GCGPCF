@@ -47,7 +47,7 @@ WAS_FIELDS = {
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink",
@@ -67,7 +67,7 @@ ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 
@@ -224,7 +224,7 @@ def main() -> int:
         f"negative_fixture_count={len(fixtures)} rejected_fixture_count={rejected} "
         f"accepted_fixture_count={accepted} gfis_directory_writes=0 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

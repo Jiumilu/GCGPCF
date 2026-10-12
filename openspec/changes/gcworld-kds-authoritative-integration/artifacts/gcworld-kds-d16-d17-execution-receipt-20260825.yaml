@@ -29,7 +29,7 @@ d16:
 d17:
   result: executed_and_verified_with_source_unconfirmed
   freeze_scope:
-    - GCWORLD与WAES向KDS的人工资料导入
+    - GCWORLD与WAME向KDS的人工资料导入
     - KDS仓库api_server.py编辑活动
     - KDS仓库tests/test_api_smoke.py编辑活动
   acknowledgements:
@@ -51,7 +51,7 @@ d17:
       known_inflight_activity: 冻结范围内暂无已知在途活动
       prohibited_actions_preserved: true
   runtime_metadata:
-    matching_gcworld_or_waes_import_process: none_observed
+    matching_gcworld_or_wame_import_process: none_observed
     main_kds_api_process:
       pid: 878
       relation: 运行消费api_server.py，不证明文件变化来源

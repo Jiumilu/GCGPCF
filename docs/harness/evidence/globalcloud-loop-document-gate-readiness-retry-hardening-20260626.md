@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-DOCUMENT-GATE-READINESS-RETRY-HARDENING-20260626
 title: GlobalCloud Loop Document Gate Readiness 重试硬化证据 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

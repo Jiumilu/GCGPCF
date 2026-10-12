@@ -1,7 +1,7 @@
 {
   "authorized_mode": "agent-reach-exa-local-pilot",
   "authorized_scope": "local_tmp_or_user_tooling",
-  "authorized_projects": ["GPCF", "KDS", "Brain", "PKC", "XiaoC", "XGD", "WAES"],
+  "authorized_projects": ["GPCF", "KDS", "Brain", "PKC", "XiaoC", "XGD", "WAME"],
   "allow_network_download": true,
   "allow_npm_package_install": true,
   "allow_global_npm_install": false,

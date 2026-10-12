@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AC51B4A6F1
 title: Loop Round - CodeGraph 开发执行层中文化文档债务收口
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

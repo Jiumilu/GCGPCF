@@ -7,7 +7,7 @@
   "related_projects": [
     "GFIS",
     "WAS",
-    "WAES",
+    "WAME",
     "KDS",
     "GPCF"
   ],
@@ -73,7 +73,7 @@
         "site:std.samr.gov.cn 绿色供应链",
         "site:std.samr.gov.cn 产品碳足迹 标准"
       ],
-      "reason": "标准、认证、产品碳足迹与绿色供应链规范检索入口，适合 WAES/KDS 对搜索结果做标准依据追溯。"
+      "reason": "标准、认证、产品碳足迹与绿色供应链规范检索入口，适合 WAME/KDS 对搜索结果做标准依据追溯。"
     },
     {
       "target_id": "gsc-p1-mee",

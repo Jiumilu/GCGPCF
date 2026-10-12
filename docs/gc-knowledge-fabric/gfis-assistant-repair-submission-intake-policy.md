@@ -77,7 +77,7 @@ Intake 只能作为提交前候选，不得直接执行以下动作：
 - create_gap_record；
 - create_bounty_record；
 - create_kwe_work_item；
-- create_waes_gate_result；
+- create_wame_gate_result；
 - approve_business_write；
 - promote_lifecycle；
 - complete_committee_decision。

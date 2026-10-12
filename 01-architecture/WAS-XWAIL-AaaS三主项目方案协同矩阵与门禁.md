@@ -45,7 +45,7 @@ AaaS 负责服务包、订阅、计量、SLA 和商业运营。
 
 | 主项目 | 权威职责 | 核心交付物 | 不得承担 |
 |---|---|---|---|
-| WAS世界资产体系 | WAS 顶层语义、三层资产、八维、八流、生命周期、治理原则 | WAS 术语表、语义基线、Ontology 映射要求、WAE/WAME 边界、硬停止规则 | 不直接实现业务系统，不替代 GFIS/GPC/PVAOS 事实源，不替代 XWAIL Schema，不替代 AaaS 商业包 |
+| WAS世界资产体系 | WAS 顶层语义、三层资产、八维、八流、生命周期、治理原则 | WAS 术语表、语义基线、Ontology 映射要求、WAME/WAE 边界、硬停止规则 | 不直接实现业务系统，不替代 GFIS/GPC/PVAOS 事实源，不替代 XWAIL Schema，不替代 AaaS 商业包 |
 | GlobalCloud XWAIL | WAS 的机器契约、Schema、Profile、Validator、模板、示例、迁移、一致性测试 | XWAIL Schema、JSON Schema、Parser、Validator、Profile、XAP、错误码、CI 门禁、迁移规则 | 不重定义 WAS 语义，不承担 WAME 浏览器和发布治理，不承担 AaaS 定价、计量和商业状态 |
 | GlobalCloud AaaS | 服务包、订阅、计量、SLA、商业交付、运营治理 | ServicePackage、服务目录、Metering、SLA、EvidenceRequirement、订阅状态、退出迁移条款 | 不私建资产模型，不绕过 XWAIL 契约，不绕过 WAME 发布，不把商业叙事替代事实和证据 |
 

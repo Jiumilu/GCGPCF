@@ -95,7 +95,7 @@ def main() -> int:
 
     required_spreads = {
         "kds_v2": "...KDS_V2_ENDPOINTS.map(mapKdsEndpoint)",
-        "waes": "...WAES_ENDPOINTS.map(mapWaesEndpoint)",
+        "wame": "...WAME_ENDPOINTS.map(mapWameEndpoint)",
         "kwe": "...KWE_ENDPOINTS.map(mapKweEndpoint)",
         "gfis_assistant": "...GFIS_ENDPOINTS.map(mapGfisEndpoint)",
         "governance_loop": "...GOVERNANCE_ENDPOINTS.map(mapGovernanceEndpoint)",

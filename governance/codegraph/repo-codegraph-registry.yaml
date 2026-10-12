@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-REGISTRY-V1
 title: CodeGraph Project Group Repository Registry
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: codegraph-governance
 status: controlled
 version: v1.0
@@ -67,10 +67,10 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS
     role: factory_execution_system
     risk_level: critical
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: true
     policy_exception: gfis_large_generated_validator_residual
-    restricted_domains: [finance, settlement, tenant, runtime_source_record, waes_review]
+    restricted_domains: [finance, settlement, tenant, runtime_source_record, wame_review]
 
   - id: gpc
     name: GlobalCloud GPC
@@ -78,7 +78,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC
     role: green_supply_chain_platform
     risk_level: high
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [api_contract, permission, tenant]
 
@@ -88,17 +88,17 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS
     role: platform_operations_portal
     risk_level: high
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [portal_auth, workflow, user_experience]
 
-  - id: waes
-    name: GlobalCloud WAES
+  - id: wame
+    name: GlobalCloud WAME
     code: WA
-    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME
     role: governance_evidence_gate
     risk_level: critical
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [gate_rule, approval, state_machine, override_control]
 
@@ -108,7 +108,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS
     role: knowledge_data_store
     risk_level: critical
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [knowledge_fact, token, index, candidate_promotion]
 
@@ -118,7 +118,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain
     role: knowledge_ui_and_engine
     risk_level: medium
-    waes_gate_required: false
+    wame_gate_required: false
     policy_exception_allowed: false
     restricted_domains: [kds_api, llm_api, agent_context]
 
@@ -128,7 +128,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC
     role: personal_knowledge_console
     risk_level: medium
-    waes_gate_required: false
+    wame_gate_required: false
     policy_exception_allowed: false
     restricted_domains: [personal_knowledge, report_export, kds_dependency]
 
@@ -138,7 +138,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC
     role: ai_capability_production_router
     risk_level: high
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [model_route, capability_dispatch, cloudflare_worker]
 
@@ -148,7 +148,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD
     role: long_running_agent_and_analysis
     risk_level: high
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [agent_task, voice, multi_device, tick_loop]
 
@@ -158,9 +158,9 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG
     role: lightweight_execution_entry
     risk_level: medium
-    waes_gate_required: false
+    wame_gate_required: false
     policy_exception_allowed: false
-    restricted_domains: [readonly_query, pkc_notification, waes_audit_mock]
+    restricted_domains: [readonly_query, pkc_notification, wame_audit_mock]
 
   - id: mmc
     name: GlobalCloud MMC
@@ -168,7 +168,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud MMC
     role: management_configuration_center
     risk_level: high
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [governance_template, config_baseline, admission]
 
@@ -178,7 +178,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF
     role: project_group_governance_control
     risk_level: critical
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [loop_policy, harness_evidence, kds_mirror, document_control]
 
@@ -188,7 +188,7 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio
     role: studio_hermes_agent_workspace
     risk_level: high
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [hermes, agent_workspace, release_workflow, governance_extension]
 
@@ -198,6 +198,6 @@ repositories:
     path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系
     role: semantic_foundation_project
     risk_level: critical
-    waes_gate_required: true
+    wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [ontology_schema, okf_collection, semantic_contract, source_record_gate]

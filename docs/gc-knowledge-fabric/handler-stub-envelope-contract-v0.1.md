@@ -58,7 +58,7 @@ D16 在 D13-D15 的 handler stub 之上增加统一 envelope 包装层，用于�
 | `method` | handler preflight mapping |
 | `path` | handler preflight mapping |
 | `writeBoundary` | handler preflight mapping |
-| `gateRequired` | `requiresWaesGate` |
+| `gateRequired` | `requiresWameGate` |
 | `kweRequired` | `requiresKweFlow` |
 | `humanOrCommitteeRequired` | `requiresHumanOrCommitteeForFinality` |
 | `candidateOnly` | `writeBoundary === "candidate_request"` |

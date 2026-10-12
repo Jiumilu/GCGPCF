@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7A8497F896
 title: GPCF-L4-GFIS-REPAIR-055 GFIS 辽宁远航四项凭证检索分类账
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -54,7 +54,7 @@ superseded_by: []
 
 ## Self Correction
 
-本轮首次扫描发现 3 个子项被治理文档里的 `verified_live_artifact` 术语误触发为 verified。已修正为：子凭证 verified 必须依赖原始业务记录字段和 proof anchors，例如测试记录编号、签收/反馈附件、委托生产单号、报价附件 URI、转量产批准单号、WAES evidence ref、source hash 和 KDS backlink。治理文档、Loop 追踪、fixture/mock/local_mirror 只能作为候选或拒绝原因，不得作为 live proof。
+本轮首次扫描发现 3 个子项被治理文档里的 `verified_live_artifact` 术语误触发为 verified。已修正为：子凭证 verified 必须依赖原始业务记录字段和 proof anchors，例如测试记录编号、签收/反馈附件、委托生产单号、报价附件 URI、转量产批准单号、WAME evidence ref、source hash 和 KDS backlink。治理文档、Loop 追踪、fixture/mock/local_mirror 只能作为候选或拒绝原因，不得作为 live proof。
 
 ## Current State
 
@@ -82,4 +82,4 @@ GFIS/GPCF 仍为 `repair_required` / `partial_repair`。
 
 ## Next
 
-继续收集 4 项原始凭证 proof anchors：测试记录或客户反馈附件、江西代工委托生产/完工记录、辽宁远航项目报价单原件、现代精工转量产批准或 WAES release evidence。
+继续收集 4 项原始凭证 proof anchors：测试记录或客户反馈附件、江西代工委托生产/完工记录、辽宁远航项目报价单原件、现代精工转量产批准或 WAME release evidence。

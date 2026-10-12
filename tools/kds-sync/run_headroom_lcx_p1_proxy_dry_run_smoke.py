@@ -26,7 +26,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -208,7 +208,7 @@ def main() -> int:
 doc_id: GPCF-DOC-22C297756A
 title: Headroom LCX P1 Proxy Dry-run Smoke Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0

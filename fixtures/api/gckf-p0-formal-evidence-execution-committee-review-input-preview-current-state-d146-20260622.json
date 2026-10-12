@@ -25,7 +25,7 @@
     "dryRunOnly": true,
     "intakeRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -43,7 +43,7 @@
       "freeze_retention_statement",
       "revenue_contribution_impact_questions",
       "formal_write_risk_questions",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_review_constraints",
       "no_write_attestation"
     ],
@@ -67,7 +67,7 @@
       "no_revenue_distribution",
       "no_contribution_score",
       "no_harness_evidence_write",
-      "waes_gate_not_overridden"
+      "wame_gate_not_overridden"
     ],
     "reviewChecks": [
       "source_committee_trigger_package_preview_status_is_candidate_preview_with_hold",
@@ -90,7 +90,7 @@
       "freeze_retention_statement_present",
       "revenue_contribution_impact_questions_present",
       "formal_write_risk_questions_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_review_constraints_present",
       "no_write_attestation_present",
       "preview_hold_context_refs",
@@ -113,10 +113,10 @@
       "freezeRetentionStatementRef",
       "revenueContributionImpactQuestionRefs",
       "formalWriteRiskQuestionRefs",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessReviewConstraintRefs",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -142,7 +142,7 @@
       "missing_freeze_retention_statement_ref",
       "missing_revenue_contribution_impact_question_refs",
       "missing_formal_write_risk_question_refs",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_harness_review_constraint_refs",
       "missing_required_intake_role",
       "missing_no_write_attestation_ref",
@@ -177,7 +177,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_committee_review_input_preview_to_submission",
-      "override_waes_gate",
+      "override_wame_gate",
       "grant_p1_admission",
       "approve_v1_upgrade"
     ]
@@ -230,7 +230,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "committee_review_input_preview_converted_to_submission",
     "p1_admission_granted",
     "v1_upgrade_approved"

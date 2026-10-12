@@ -20,7 +20,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 PLACEHOLDER = "REQUIRED_USER_INPUT"
 

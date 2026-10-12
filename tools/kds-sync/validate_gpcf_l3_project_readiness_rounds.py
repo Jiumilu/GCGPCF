@@ -24,7 +24,7 @@ def main() -> int:
     expected_ids = [f"GPCF-CF-LR-{number:03d}" for number in range(17, 32)]
     require([item.get("round_id") for item in rounds] == expected_ids, "round ids must be CF-LR-017 through CF-LR-031")
 
-    expected_projects = ["PVAOS", "PKC", "XGD", "XiaoG", "MMC", "KDS", "Brain", "WAES", "GPC", "XiaoC"]
+    expected_projects = ["PVAOS", "PKC", "XGD", "XiaoG", "MMC", "KDS", "Brain", "WAME", "GPC", "XiaoC"]
     queue = data.get("project_queue", [])
     require([item.get("project") for item in queue] == expected_projects, "project readiness queue order mismatch")
     require(all(item.get("missing") for item in queue), "each queued project must have missing items")

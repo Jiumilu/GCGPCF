@@ -15,7 +15,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -62,7 +62,7 @@
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink"
@@ -73,7 +73,7 @@
     "flowType": "commerce_flow",
     "lifecycle": "pending_business_verification",
     "trustLevel": "T4",
-    "waesGateRef": "waes://gate/customer-order-source-record-review",
+    "wameGateRef": "wame://gate/customer-order-source-record-review",
     "nextAction": "collect_customer_order_or_platform_receipt"
   },
   "fixture_gate": {
@@ -95,7 +95,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -117,12 +117,12 @@
     "python3 tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py",
     "python3 tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py"
   ],
-  "next_round": "GPCF-ONTOLOGY-WAS-WAES-GATE-INPUT-CANDIDATE-001",
+  "next_round": "GPCF-ONTOLOGY-WAS-WAME-GATE-INPUT-CANDIDATE-001",
   "next_round_condition": "only_after_accepted_for_next_gate_greater_than_zero",
   "non_claims": [
     "does not create a real source-of-record",
     "does not create runtime primary key",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not write GFIS or KWE runtime",
     "does not mark accepted or integrated",
     "does not mark production ready"

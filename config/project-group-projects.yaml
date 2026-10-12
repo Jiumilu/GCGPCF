@@ -9,7 +9,7 @@ projects:
   - {id: Brain, slug: brain}
   - {id: WAS, slug: was}
   - {id: XiaoC, slug: xiaoc}
-  - {id: WAES, slug: waes}
+  - {id: WAME, slug: wame}
   - {id: GPC, slug: gpc}
   - {id: Studio, slug: studio}
   - {id: GPCF, slug: gpcf}

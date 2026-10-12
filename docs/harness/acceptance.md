@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-975562EE9E
 title: Harness 项目验收清单 — GPCF
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

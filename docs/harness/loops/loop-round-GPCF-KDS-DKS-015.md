@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7D1EBAE684
 title: Loop Round GPCF-KDS-DKS-015
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17
 状态：v0.1 受控 Loop 记录
 主题：Brain-KDS 知识编制与知识 UI 边界清单
-项目群范围：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC 个人知识、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
+项目群范围：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC 个人知识、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
 
 ## 1. 输入
 
@@ -72,7 +72,7 @@ python3 tools/kds-sync/loop_document_gate.py
 
 ## 5. 反馈
 
-本轮把 Brain 从“可能泛化的知识层”收口为受 KDS、WAES、MMC 和 GPCF 约束的知识编制与知识 UI 层。
+本轮把 Brain 从“可能泛化的知识层”收口为受 KDS、WAME、MMC 和 GPCF 约束的知识编制与知识 UI 层。
 
 本轮不创建真实账号、不写生产系统、不开放真实资料、不启动真实 AI 服务计费、不确认订单、质量、POD、到账、收益、积分或业务完成。
 

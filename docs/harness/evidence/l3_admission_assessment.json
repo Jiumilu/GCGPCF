@@ -148,7 +148,7 @@
       }
     },
     {
-      "project": "WAES",
+      "project": "WAME",
       "code": "WA",
       "governance_hub": false,
       "score": 100,
@@ -171,10 +171,10 @@
       "gaps": [],
       "l3_tasks": [],
       "facts": {
-        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME",
         "repo_exists": true,
         "git_exists": true,
-        "git_status": "## waes/integration-release...origin/waes/integration-release",
+        "git_status": "## wame/integration-release...origin/wame/integration-release",
         "dirty_count": 0,
         "sensitive_dirty_count": 0,
         "has_code": true,

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E312B4E9B7
 title: ODF Phase 6 人工确认工作台闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

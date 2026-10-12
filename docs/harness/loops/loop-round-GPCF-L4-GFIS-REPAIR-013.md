@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-255B06AF2A
 title: GPCF-L4-GFIS-REPAIR-013 GFIS 运行层重载与 WorkOrder BOM 收口
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ GFIS 运行层已经从“服务未加载新 API”推进为“合同已加载�
 
 - 5 项 KDS 葛化真实业务输入仍为 missing_input。
 - `GCFIS SOP Runtime Sample Candidate`、`GCFIS SOP Runtime Evidence Candidate`、`GCFIS SOP Runtime Handoff Candidate` 当前均为 schema gap，需要明确授权后执行 schema sync / migrate。
-- POD、WAES/KDS 回执和真实 UAT evidence 仍未闭合。
+- POD、WAME/KDS 回执和真实 UAT evidence 仍未闭合。
 
 ## 禁止与边界
 

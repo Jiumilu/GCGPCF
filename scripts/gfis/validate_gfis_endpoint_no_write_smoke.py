@@ -2,7 +2,7 @@
 """Validate GFIS Assistant endpoint skeleton against no-write route fixture.
 
 This script inspects local TypeScript route declarations. It does not start a
-server and does not write GFIS, KDS, WAES, KWE, ledgers, or external APIs.
+server and does not write GFIS, KDS, WAME, KWE, ledgers, or external APIs.
 """
 
 from __future__ import annotations
@@ -29,7 +29,7 @@ def parse_routes() -> list[dict[str, Any]]:
                 "path": path,
                 "routeMode": re.search(r"routeMode: \"([^\"]+)\"", body).group(1),
                 "requiresKdsSearch": re.search(r"requiresKdsSearch: (true|false)", body).group(1) == "true",
-                "requiresWaesGate": re.search(r"requiresWaesGate: (true|false)", body).group(1) == "true",
+                "requiresWameGate": re.search(r"requiresWameGate: (true|false)", body).group(1) == "true",
                 "requiresKweFlowForFinality": re.search(
                     r"requiresKweFlowForFinality: (true|false)", body
                 ).group(1)
@@ -68,7 +68,7 @@ def main() -> int:
         ),
         "writebackCandidateCount": sum(1 for route in routes if route["routeMode"] == "writeback_candidate"),
         "routesRequiringKdsSearch": sum(1 for route in routes if route["requiresKdsSearch"]),
-        "routesRequiringWaesGate": sum(1 for route in routes if route["requiresWaesGate"]),
+        "routesRequiringWameGate": sum(1 for route in routes if route["requiresWameGate"]),
         "routesRequiringKweFinality": sum(1 for route in routes if route["requiresKweFlowForFinality"]),
         "writesFact": sum(1 for route in routes if route["writesFact"]),
         "writesBusinessSystem": sum(1 for route in routes if route["writesBusinessSystem"]),
@@ -96,7 +96,7 @@ def main() -> int:
         f"document_acceptance_check={actual['documentAcceptanceCheckCount']} "
         f"writeback_candidate={actual['writebackCandidateCount']} "
         f"kds_search_required={actual['routesRequiringKdsSearch']} "
-        f"waes_gate_required={actual['routesRequiringWaesGate']} "
+        f"wame_gate_required={actual['routesRequiringWameGate']} "
         f"kwe_finality_required={actual['routesRequiringKweFinality']} "
         "writes_fact=0 writes_business_system=0 writes_accepted_fact=0 "
         "writes_revenue_distribution=0 writes_external_api=0 no_write=covered"

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate GFIS document acceptance candidate-fact E2E dry-run.
 
-This script uses local fixtures only. It does not write GFIS, KDS, WAES,
+This script uses local fixtures only. It does not write GFIS, KDS, WAME,
 GPC, ERP, MES, or any external API.
 """
 
@@ -48,7 +48,7 @@ def evaluate(source: dict[str, Any]) -> dict[str, Any]:
         "factCandidates": 1,
         "factTypes": [infer_fact_type(source)],
         "gaps": gaps,
-        "waesGateStatuses": [gate_status],
+        "wameGateStatuses": [gate_status],
         "requiresHumanConfirmation": gate_status != "passed",
         "requiresCommittee": False,
         "writebackStatuses": ["candidate"],

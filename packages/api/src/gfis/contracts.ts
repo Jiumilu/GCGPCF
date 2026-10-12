@@ -5,7 +5,7 @@ import type {
   FactCandidate,
   GapRecord,
   RagAdmissionDecision,
-  WaesGateResult,
+  WameGateResult,
   WritebackCandidate,
 } from "../../../shared/src/knowledge";
 
@@ -35,7 +35,7 @@ export interface GfisDocumentAcceptanceRequest {
 export interface GfisDocumentAcceptanceResponse {
   factCandidates: FactCandidate[];
   gaps: GapRecord[];
-  gateResults: WaesGateResult[];
+  gateResults: WameGateResult[];
   requiresHumanConfirmation: boolean;
   requiresCommittee: boolean;
   noWrite: true;
@@ -49,7 +49,7 @@ export interface GfisWritebackCandidateRequest {
 
 export interface GfisWritebackCandidateResponse {
   candidate: WritebackCandidate;
-  gateResults: WaesGateResult[];
+  gateResults: WameGateResult[];
   approvedForBusinessWrite: boolean;
   noWrite: true;
   businessWrites: 0;

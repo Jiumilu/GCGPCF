@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-738AD106B6
 title: LOOP Round GPCF KDS DKS-146
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-145 digest delivery preview，但只展示候选确认人、候选确认方式、阻断确认数量、边界引用和下一步建议，不创建真实 delivery acknowledgement、digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAES 结果、KDS 状态提升或业务写回。
+建立 approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-145 digest delivery preview，但只展示候选确认人、候选确认方式、阻断确认数量、边界引用和下一步建议，不创建真实 delivery acknowledgement、digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
@@ -28,7 +28,7 @@ superseded_by: []
 - DKS-144 acknowledgement escalation digest preview 边界。
 - DKS-143 acknowledgement escalation preview 边界。
 - `okf/committee-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 - GFIS / Brain / PKC no-write contract 覆盖清单。
 
 ## 动作
@@ -56,4 +56,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-146 仍是本地预览与候选展示能力，不代表 delivery acknowledgement、digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-147：approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation preview no-write，用于展示候选投递确认升级预览，但仍不得写入真实审批、裁决、冻结、通知、确认、升级、摘要投递或 evidence。
+DKS-146 仍是本地预览与候选展示能力，不代表 delivery acknowledgement、digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-147：approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation preview no-write，用于展示候选投递确认升级预览，但仍不得写入真实审批、裁决、冻结、通知、确认、升级、摘要投递或 evidence。

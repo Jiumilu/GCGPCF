@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C74468101A
 title: LOOP Round GPCF-KDS-DKS-086 - GC-Knowledge Fabric Four-pool P0 Ledger Boundary
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,9 +67,9 @@ superseded_by: []
 | 四池 P0 台账 smoke | pass | `four_pool_ledger_p0_policy_smoke=pass pools=4 formal_revenue_requires_cash=true potential_no_auto_promote=covered self_purchased_quota_excluded=covered bounty_dispute_window_required=covered writes_score_confirmation=0 writes_revenue_distribution=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0` |
 | 覆盖矩阵 | pass | `okf_types_api_validator_coverage=pass coverage_items=14 okf_files=21 type_files=23 api_files=15 validator_files=21 fixture_files=21 missing_files=0 no_write=covered business_writes=0 external_api_writes=0` |
 | TypeScript 类型检查 | pass | `tsc -p packages/shared/tsconfig.json --noEmit` 与 `tsc -p packages/api/tsconfig.json --noEmit` 均无报错 |
-| 状态机、对象关系、WAES IO、RAG 强度、GFIS 沙箱回归 | pass | `status_machine_policy_smoke=pass`；`object_relationship_policy_smoke=pass`；`waes_gate_io_policy_smoke=pass`；`rag_citation_strength_policy_smoke=pass`；`gfis_writeback_sandbox_policy_smoke=pass` |
-| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAES、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
-| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAES minimum gates、KWE minimum workflow 全部 pass |
+| 状态机、对象关系、WAME IO、RAG 强度、GFIS 沙箱回归 | pass | `status_machine_policy_smoke=pass`；`object_relationship_policy_smoke=pass`；`wame_gate_io_policy_smoke=pass`；`rag_citation_strength_policy_smoke=pass`；`gfis_writeback_sandbox_policy_smoke=pass` |
+| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAME、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
+| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAME minimum gates、KWE minimum workflow 全部 pass |
 | OKF parse | pass | `okf_parse=pass yaml_files=20 json_files=1` |
 | 文档治理门禁 | pass | `document_pollution=pass`；`kds_token=pass fingerprint=bfd9553d`；`loop_document_gate.py` 输出 `gate=pass`、`missing_metadata=0`、`missing_readme_dirs=0` |
 | LOOP 文档门禁残留项 | known gap | `status_counts.missing=1`、`project_counts.missing=1` 为既有仓库元数据缺口，本轮未扩大该缺口 |

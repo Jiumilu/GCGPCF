@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ACB3F3F597
 title: evidence
 project: Studio
-related_projects: [GPC, WAES, KDS, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

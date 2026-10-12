@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-016
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-REGRESSION-WATCH-016
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：`GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015` 已通过。
 - 目标：把 CodeGraph 开发态收益变成可回放 regression watch。
 - 动作：建立收益阈值，读取 benefit proof，确认 manual scan reduction、scope control、fallback test selection、missed impact、review rework 和状态边界未退化。
-- 边界：不进入新的业务代码开发，不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAES 写入。
+- 边界：不进入新的业务代码开发，不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAME 写入。
 
 ## stop
 
@@ -44,7 +44,7 @@ python3 tools/kds-sync/validate_codegraph_dev_execution_benefit_regression_watch
 
 - 最后安全状态：`GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015`
 - 可重试动作：刷新 benefit proof sample 并重跑 regression watch。
-- 不可重试动作：未授权 commit、push、deploy、production write、external API write、real KDS write、real WAES write。
+- 不可重试动作：未授权 commit、push、deploy、production write、external API write、real KDS write、real WAME write。
 
 ## debug
 

@@ -98,7 +98,7 @@ def main() -> int:
     require(evidence_json.get("evidence_id") == "LOOP-GOV-PHASE-20260617", "invalid evidence_id")
     require(evidence_json.get("status") == "active_governance", "invalid phase status")
     require(evidence_json.get("current_status_ceiling", {}).get("accepted_integrated_allowed") is False, "accepted/integrated must be forbidden")
-    for key in ["runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]:
         require(evidence_json.get("current_status_ceiling", {}).get(key) == 0, f"status ceiling must keep {key}=0")
 
     for phrase in [
@@ -113,7 +113,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
     ]:
         require(phrase in combined_status, f"current status missing ceiling marker: {phrase}")
@@ -139,7 +139,7 @@ def main() -> int:
         "phase=LOOP-GOV-PHASE-20260617 status=active_governance "
         "quality_target=present efficiency_target=present self_correction_target=present "
         "boundary_safety=present evidence=present accepted_integrated_allowed=false "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0"
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0"
     )
     return 0
 

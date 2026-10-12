@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2E5C5639B8
 title: LOOP Round GPCF-KDS-DKS-037 - 湖北磷材 Brain 知识页评审样例到 SOP 候选写回规则
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,7 +29,7 @@ superseded_by: []
 
 1. SOP 候选控制点。
 2. 候选 KDS 字段写回规则。
-3. 候选 WAES 规则写回记录。
+3. 候选 WAME 规则写回记录。
 4. Brain 页面候选状态规则。
 5. 禁止写回清单。
 6. 人工确认清单和回撤规则。
@@ -59,18 +59,18 @@ superseded_by: []
 | 抽取 DKS-036 三类样例 | 拓厂、行业资料、订单线索均被转成候选控制点 |
 | 建立 SOPCandidateControlPoint | 已覆盖拓厂项目评审前、行业资料可信来源补证、订单线索收益边界 |
 | 建立 CandidateKdsFieldWriteback | 已明确候选字段和禁止升级字段 |
-| 建立 CandidateWaesRuleWriteback | 已明确发布边界、可信来源和收益边界规则候选 |
+| 建立 CandidateWameRuleWriteback | 已明确发布边界、可信来源和收益边界规则候选 |
 | 建立 BrainPageStatusCandidate | 已明确页面候选状态和可见范围 |
-| 建立 ForbiddenWritebackList | 已禁止真实 KDS API 写入、WAES 放行、GFIS 主账、正式订单和收入等误写 |
-| 建立 HumanConfirmationChecklist | 已明确来源、脱敏、KDS 池、WAES 规则、积分收益、权限等人工确认项 |
-| 建立回撤与重评规则 | 已明确来源、脱敏、收益边界和 WAES 规则不适用时的回退动作 |
+| 建立 ForbiddenWritebackList | 已禁止真实 KDS API 写入、WAME 放行、GFIS 主账、正式订单和收入等误写 |
+| 建立 HumanConfirmationChecklist | 已明确来源、脱敏、KDS 池、WAME 规则、积分收益、权限等人工确认项 |
+| 建立回撤与重评规则 | 已明确来源、脱敏、收益边界和 WAME 规则不适用时的回退动作 |
 
 ## 5. 明确不做范围
 
 本轮不做：
 
 - 真实 KDS API 写入；
-- WAES 规则正式生效或放行；
+- WAME 规则正式生效或放行；
 - GFIS 主账、订单、生产、质量、发货、POD 或金融凭证写入；
 - Brain 页面正式发布；
 - 正式 SOP 生效；

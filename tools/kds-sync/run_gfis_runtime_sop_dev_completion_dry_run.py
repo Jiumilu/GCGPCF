@@ -53,7 +53,7 @@ def main() -> int:
     require(candidate_counts.get("runtime_primary_key_candidates") == 1, "runtime primary key candidate count mismatch")
     require(candidate_counts.get("review_queue_candidates") == 1, "review queue candidate count mismatch")
     require(candidate_counts.get("runtime_intake_candidates") == 1, "runtime intake candidate count mismatch")
-    require(candidate_counts.get("waes_review_candidates") == 1, "WAES candidate count mismatch")
+    require(candidate_counts.get("wame_review_candidates") == 1, "WAME candidate count mismatch")
     require(candidate_counts.get("verified_artifact_candidates") == 1, "verified artifact candidate count mismatch")
     require(candidate.get("status_boundary", {}).get("status_promotion_allowed") is False, "status promotion must stay false")
 
@@ -63,9 +63,9 @@ def main() -> int:
         "synthetic_stage_count=12 synthetic_closed_loop_passed=1 "
         "source_record_candidates=1 runtime_primary_key_candidates=1 "
         "review_queue_candidates=1 runtime_intake_candidates=1 "
-        "waes_review_candidates=1 verified_artifact_candidates=1 "
+        "wame_review_candidates=1 verified_artifact_candidates=1 "
         "real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 "
-        "real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 "
+        "real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0 "
         "status_promotion_allowed=false"
     )
     return 0

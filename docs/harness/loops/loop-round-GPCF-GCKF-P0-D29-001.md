@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C189C3A6E9
 title: GC-Knowledge Fabric P0-D29 正式 evidence 候选包组装 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

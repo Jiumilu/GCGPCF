@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6057F8A869
 title: Evidence Index — XGD
 project: XGD
-related_projects: [GPC, WAES, XGD, GPCF]
+related_projects: [GPC, WAME, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0

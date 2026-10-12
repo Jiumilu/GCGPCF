@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F8461F5919
 title: Loop 治理 truth-field 审查证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,12 +55,12 @@ loop_round_efficiency_audit=pass total_rounds=314 audit_checked=30 hard_checked=
 - 5 个已审查的 shell records 继续保持 index-level exceptions，直到单独、明确的 historical migration plan 获得授权。
 - `GPCF-L4-GFIS-REPAIR-218` 现在已有 historical annotation body 与 truth-count fields，因此不再需要 shell exception treatment。
 - 最新 hard window 的 truth fields 仍保持 clean。
-- 所有已审查事项均不改变 GFIS runtime status、source-of-record status、runtime primary key readiness、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 所有已审查事项均不改变 GFIS runtime status、source-of-record status、runtime primary key readiness、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
 
 ## 非声明事项
 
 - 本 evidence 不改写 historical round records。
 - 本 evidence 不证明 GFIS runtime SOP E2E 已通过。
 - 本 evidence 不为 historical shell records 重建 truth fields。
-- 本 evidence 不创建或验证 customer orders、platform order receipts、owner submissions、KDS write receipts、WAES confirmations、UAT acceptance、source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本 evidence 不创建或验证 customer orders、platform order receipts、owner submissions、KDS write receipts、WAME confirmations、UAT acceptance、source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
 - 本 evidence 不授权 production write、external API write、schema sync、bench migrate、deployment、permission change、commit 或 push。

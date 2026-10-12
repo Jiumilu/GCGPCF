@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 COGNEE P3 write-preview rollback 演练脚本。
-用于专门验证授权缺失/WAES 阻断的反例是否被稳定拦截。
+用于专门验证授权缺失/WAME 阻断的反例是否被稳定拦截。
 """
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ REQUIRED_CASE_FIELDS = [
     "payload_tier",
     "harness_evidence_ref",
     "owner_authorization_present",
-    "waes_decision",
+    "wame_decision",
     "marker_gate",
     "reason_for_request",
     "retrieval_query_hash",
@@ -90,7 +90,7 @@ def case_to_record(case: dict) -> dict:
         "harness_evidence_ref": case["harness_evidence_ref"],
         "retrieval_query_hash": case["retrieval_query_hash"],
         "marker_gate": case["marker_gate"],
-        "waes_decision": case["waes_decision"],
+        "wame_decision": case["wame_decision"],
         "answer_equivalence": case["answer_equivalence"],
         "write_requested": bool(case.get("write_requested", False)),
         "write_allowed": bool(case.get("write_allowed", False)),
@@ -118,20 +118,20 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
     owner_absent_rate = sum(
         1 for r in requested_records if not r["owner_authorization_present"]
     ) / max(1, len(requested_records))
-    waes_block_rate = sum(
-        1 for r in requested_records if r["waes_decision"] == "block"
+    wame_block_rate = sum(
+        1 for r in requested_records if r["wame_decision"] == "block"
     ) / max(1, len(requested_records))
     preview_tier_rate = sum(
         1 for r in requested_records if is_preview_mode(r["payload_tier"])
     ) / max(1, len(requested_records))
 
     expected_reason_rate = sum(
-        1 for r in requested_records if r["expected_blocked_reason"] in {"authorization_absent", "waes_block"}
+        1 for r in requested_records if r["expected_blocked_reason"] in {"authorization_absent", "wame_block"}
     ) / max(1, len(requested_records))
     rollback_gate_pass = (
         preview_block_rate >= gate_rules.get("rollback_block_rate_min", 1.0)
         and owner_absent_rate >= gate_rules.get("owner_authorization_absence_min", 0.4)
-        and waes_block_rate >= gate_rules.get("waes_block_rate_min", 0.4)
+        and wame_block_rate >= gate_rules.get("wame_block_rate_min", 0.4)
         and preview_tier_rate >= gate_rules.get("preview_tier_rate_min", 1.0)
         and expected_reason_rate >= 1.0
         and marker_pass_rate >= 0.95
@@ -142,7 +142,7 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
         "requested_write_count": len(requested_records),
         "rollback_block_rate": round(preview_block_rate, 6),
         "owner_authorization_absence_rate": round(owner_absent_rate, 6),
-        "waes_block_rate": round(waes_block_rate, 6),
+        "wame_block_rate": round(wame_block_rate, 6),
         "preview_tier_rate": round(preview_tier_rate, 6),
         "marker_coverage": round(marker_pass_rate, 6),
         "expected_blocked_reason_rate": round(expected_reason_rate, 6),

@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D86-001
 title: Loop Round GPCF-GCKF-P0-D86-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

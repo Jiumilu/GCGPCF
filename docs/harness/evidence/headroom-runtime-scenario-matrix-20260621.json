@@ -13,7 +13,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -100,7 +100,7 @@
       ],
       "missing_markers": [
         "Brain",
-        "WAES",
+        "WAME",
         "Edge",
         "PKC",
         "XiaoC",

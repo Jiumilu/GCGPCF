@@ -49,7 +49,7 @@ def main() -> int:
         "candidate_required_material_checklist",
         "candidate_missing_material_matrix",
         "candidate_submitter_identity_boundary",
-        "waes_negative_gate_snapshot",
+        "wame_negative_gate_snapshot",
         "harness_no_write_guard",
         "no_write_attestation",
     }

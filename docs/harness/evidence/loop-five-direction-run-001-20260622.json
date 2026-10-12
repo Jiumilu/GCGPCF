@@ -63,14 +63,14 @@
         "runtime_primary_key_ready": 0,
         "review_queue": 0,
         "runtime_intake": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "verified": 0
       },
       "write_counts": {
         "production_writes": 0,
         "real_external_api_writes": 0,
         "kds_fact_writes": 0,
-        "waes_gate_result_writes": 0
+        "wame_gate_result_writes": 0
       }
     }
   },
@@ -90,7 +90,7 @@
     "no_production_write": true,
     "no_external_api_write": true,
     "no_kds_fact_write": true,
-    "no_waes_gate_result_write": true,
+    "no_wame_gate_result_write": true,
     "no_accepted_integrated_upgrade": true,
     "real_business_lane": "repair_required",
     "accepted": false,

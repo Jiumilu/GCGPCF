@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A584BC19A5
 title: KDS Phase 10 Backlog 分诊报告
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, WAME, KDS, Brain]
 domain: docs
 status: controlled
 version: v1.0

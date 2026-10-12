@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-773AFA7F28
 title: Loop Round — GPCF-L4-GFIS-REPAIR-222
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 
 ## 本轮目标
 
-同步 GFIS `GFIS-RUNTIME-SOP-E2E-212`：在无真实原件条件下，把 source-of-record 缺口转成责任方动作和等效 source-of-record 判定规则。该轮不释放 hold，不进入 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+同步 GFIS `GFIS-RUNTIME-SOP-E2E-212`：在无真实原件条件下，把 source-of-record 缺口转成责任方动作和等效 source-of-record 判定规则。该轮不释放 hold，不进入 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## 输入
 
@@ -44,7 +44,7 @@ superseded_by: []
 ## 执行动作
 
 - 同步 GFIS controlled original gap action package 到 GPCF 总控事实链。
-- 保持 source-of-record、runtime primary key、review queue、runtime intake、WAES review 和 verified 指标为 0。
+- 保持 source-of-record、runtime primary key、review queue、runtime intake、WAME review 和 verified 指标为 0。
 - 将等效 source-of-record 规则限定为 `pending_business_verification_allowed=1` 和 `auto_promote_to_valid_source_record=0`。
 
 ## 输出摘要
@@ -66,7 +66,7 @@ superseded_by: []
 | runtime_primary_key_missing | 1 |
 | review_queue | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | runtime_sop_e2e | repair_required |
 
@@ -83,7 +83,7 @@ superseded_by: []
 - 本轮不表示存在有效 source-of-record。
 - 本轮不把等效材料自动转为 valid_source_record。
 - 本轮不释放 source-record open hold。
-- 本轮不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮不执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、部署或 accepted/integrated 状态升级。
 
 ## 真实性计数

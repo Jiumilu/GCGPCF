@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CD0C4E3CF7
 title: GPCF-KDS-DKS-010 葛化 GFIS AI 助手内测运行记录模板 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
    `03-data-ai-knowledge/GlobalCloud葛化GFISAI助手内测运行记录模板.md`
 2. 定义 `PilotSession`、`QuestionSample`、`DocumentSample`、`AssistantOutputRecord`、`EvalRecord`、`DefectRecord`、`KnowledgeGapRequestCandidate`、`WritebackCandidate`、`ContributionEventCandidate`。
 3. 定义内测运行节奏、通过条件和首批样本建议。
-4. 明确本轮不启动真实内测，不写真实 GFIS / KDS / WAES API，不确认业务事实。
+4. 明确本轮不启动真实内测，不写真实 GFIS / KDS / WAME API，不确认业务事实。
 
 ## 3. 输出
 
@@ -67,7 +67,7 @@ superseded_by: []
 本轮结论：
 
 1. 葛化 GFIS AI 助手内测运行记录模板已形成。
-2. 内测数据可按对象流回写为 KDS / WAES 候选记录、知识缺口、缺陷和贡献事件。
+2. 内测数据可按对象流回写为 KDS / WAME 候选记录、知识缺口、缺陷和贡献事件。
 3. 当前状态仍为 `loop_ready / manual_confirmation_required`。
 
 下一轮建议：

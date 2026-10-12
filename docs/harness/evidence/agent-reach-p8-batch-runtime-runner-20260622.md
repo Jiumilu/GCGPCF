@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-BATCH-RUNTIME-RUNNER-20260622
 title: Agent-Reach P8 批次真实搜索运行器证据 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

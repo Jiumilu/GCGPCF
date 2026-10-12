@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-06249F6A3C
 title: GPCF-L4-GFIS-REPAIR-229
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -65,8 +65,8 @@ superseded_by: []
 - 不创建人工业务核验完成文件。
 - 不创建有效 source-of-record。
 - 不创建 runtime primary key。
-- 不创建 review queue、runtime intake、WAES review 或 verified artifact。
-- 不执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入、`bench migrate`、schema sync、权限变更、部署、提交或推送。
+- 不创建 review queue、runtime intake、WAME review 或 verified artifact。
+- 不执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入、`bench migrate`、schema sync、权限变更、部署、提交或推送。
 - 不升级 accepted/integrated。
 
 ## 真实性计数
@@ -80,4 +80,4 @@ superseded_by: []
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-220`：建立未来 manual business verification completion 文件空扫描；未收到真实人工核验完成文件时继续阻断 review queue、runtime intake、WAES review 和 verified artifact。
+`GFIS-RUNTIME-SOP-E2E-220`：建立未来 manual business verification completion 文件空扫描；未收到真实人工核验完成文件时继续阻断 review queue、runtime intake、WAME review 和 verified artifact。

@@ -9,7 +9,7 @@ import type {
   SopCandidate,
   SourceRecord,
   TrustLevel,
-  WaesGateResult,
+  WameGateResult,
   WritebackCandidate,
 } from "../../../../shared/src/knowledge";
 
@@ -42,7 +42,7 @@ export interface KnowledgeSearchContext {
     | "supply_chain"
     | "audit"
     | "gfis"
-    | "waes"
+    | "wame"
     | "all_accessible"
     | "public";
   domain?: KnowledgeDomain;
@@ -60,7 +60,7 @@ export interface KnowledgeSearchContext {
 export interface KnowledgeSearchResult {
   object: KnowledgeObject;
   poolBindings: PoolBinding[];
-  latestGateResults: WaesGateResult[];
+  latestGateResults: WameGateResult[];
   canShare: boolean;
   canPromote: boolean;
   canUseForRag: boolean;
@@ -110,7 +110,7 @@ export interface GetObjectResponse {
   sources: SourceRecord[];
   evidence: EvidenceRecord[];
   poolBindings: PoolBinding[];
-  gateResults: WaesGateResult[];
+  gateResults: WameGateResult[];
 }
 
 export interface GraphQueryRequest {

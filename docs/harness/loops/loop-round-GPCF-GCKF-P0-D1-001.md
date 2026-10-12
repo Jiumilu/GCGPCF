@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B0BFD5B1FB
 title: GC-Knowledge Fabric P0-D1 启动与规则冻结 LOOP evidence
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

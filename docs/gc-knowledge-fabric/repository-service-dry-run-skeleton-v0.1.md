@@ -37,7 +37,7 @@ D10 只建立 API 层到后续数据访问层的最小 no-write 边界：
 | 分组 | Repository | Service | 边界 |
 |---|---|---|---|
 | KDS v2 | `packages/api/src/kds/v2/repository.ts` | `packages/api/src/kds/v2/service.ts` | search 为 read_only，source/fact/sop/writeback 只进入 candidate request |
-| WAME | `packages/api/src/waes/repository.ts` | `packages/api/src/waes/service.ts` | gate/freeze 只生成 gate_check 预览，不写 gate result |
+| WAME | `packages/api/src/wame/repository.ts` | `packages/api/src/wame/service.ts` | gate/freeze 只生成 gate_check 预览，不写 gate result |
 | KWE | `packages/api/src/kwe/repository.ts` | `packages/api/src/kwe/service.ts` | work/gap/confirmation/writeback 只生成 work_request 预览 |
 | GFIS Assistant | `packages/api/src/gfis/repository.ts` | `packages/api/src/gfis/service.ts` | query 为 read_only，document/writeback 只生成 candidate request |
 | Governance LOOP | `packages/api/src/governance/repository.ts` | `packages/api/src/governance/service.ts` | LOOP/evidence 为 governance_evidence_request，ledger 为 read |
@@ -69,4 +69,4 @@ P0-D11 建议进入 service handler dry-run：
 
 - 把 route handler 名称与 service 方法建立静态映射。
 - 继续不启动 server、不接数据库、不做真实写入。
-- 明确哪些 handler 只返回 preview，哪些必须等待 WAES/KWE/Harness 后才能进入实现。
+- 明确哪些 handler 只返回 preview，哪些必须等待 WAME/KWE/Harness 后才能进入实现。

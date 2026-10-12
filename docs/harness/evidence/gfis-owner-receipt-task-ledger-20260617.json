@@ -12,7 +12,7 @@
   "completed_task_count": 0,
   "review_queue": 0,
   "runtime_intake": 0,
-  "waes_review": 0,
+  "wame_review": 0,
   "verified": 0,
   "runtime_sop_e2e": "repair_required",
   "tasks": [
@@ -64,7 +64,7 @@
         "runtime_primary_key_missing": 1,
         "review_queue": 0,
         "runtime_intake": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "verified": 0
       },
       "state": "open_missing_real_source_of_record",
@@ -72,7 +72,7 @@
         "runtime_primary_key",
         "review_queue",
         "runtime_intake",
-        "waes_review",
+        "wame_review",
         "verified_artifact"
       ]
     },
@@ -103,7 +103,7 @@
         "source_record_uri",
         "source_record_hash",
         "kds_backlink_path",
-        "waes_evidence_candidate"
+        "wame_evidence_candidate"
       ],
       "kds_candidate": {
         "candidate_status": "not_a_substitute_for_dispatch_confirmation",
@@ -147,7 +147,7 @@
         "review_queue_ready": 0,
         "review_queue": 0,
         "manual_review": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "runtime_intake": 0,
         "verified": 0,
         "runtime_primary_key_ready": 0,
@@ -164,14 +164,14 @@
     },
     {
       "task_id": "GFIS-OWNER-RECEIPT-TASK-003",
-      "task_key": "waes_confirmation",
+      "task_key": "wame_confirmation",
       "priority": 3,
       "object_family": "CustomerRequirementOrPlatformOrder",
-      "owner": "WAES_owner",
-      "required_receipt": "waes_evidence_confirmation",
-      "expected_submission_path": "docs/harness/sop-e2e/intake-submissions/contract-chain/waes-confirmation/",
+      "owner": "WAME_owner",
+      "required_receipt": "wame_evidence_confirmation",
+      "expected_submission_path": "docs/harness/sop-e2e/intake-submissions/contract-chain/wame-confirmation/",
       "required_fields": [
-        "waes_decision_id",
+        "wame_decision_id",
         "evidence_ref",
         "confirmed_categories",
         "confirmed_at",
@@ -180,7 +180,7 @@
       ],
       "kds_candidate": {
         "candidate_status": "controlled_reference_only",
-        "reason": "WAES confirmation must come from WAES decision/evidence owner, not from KDS mirror text."
+        "reason": "WAME confirmation must come from WAME decision/evidence owner, not from KDS mirror text."
       },
       "source_evidence": [
         "GFIS:docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-receiving-directory-structure.json"
@@ -190,9 +190,9 @@
         "owner_response_count": 0,
         "structure_valid": 0
       },
-      "state": "open_missing_waes_confirmation",
+      "state": "open_missing_wame_confirmation",
       "blocks": [
-        "waes_review",
+        "wame_review",
         "verified_artifact",
         "runtime_intake"
       ]
@@ -237,7 +237,7 @@
       "task_key": "runtime_primary_key",
       "priority": 5,
       "object_family": "CustomerRequirementOrPlatformOrder",
-      "owner": "GFIS_runtime_owner_after_source_dispatch_waes_kds_receipts",
+      "owner": "GFIS_runtime_owner_after_source_dispatch_wame_kds_receipts",
       "required_receipt": "GFIS customer requirement / platform order id",
       "expected_submission_path": "GFIS runtime read-only primary key evidence after authorized intake",
       "required_fields": [
@@ -246,12 +246,12 @@
         "runtime_primary_key_value",
         "source_of_record_task_id",
         "dispatch_confirmation_task_id",
-        "waes_confirmation_task_id",
+        "wame_confirmation_task_id",
         "kds_write_receipt_task_id"
       ],
       "kds_candidate": {
         "candidate_status": "blocked_until_upstream_receipts_valid",
-        "reason": "Primary key evidence cannot exist until source-of-record, dispatch, WAES and KDS receipts pass."
+        "reason": "Primary key evidence cannot exist until source-of-record, dispatch, WAME and KDS receipts pass."
       },
       "source_evidence": [
         "GFIS:docs/harness/sop-e2e/evidence/gfis-kds-to-runtime-primary-key-readiness-gate.json"
@@ -261,7 +261,7 @@
         "runtime_primary_key_ready": 0,
         "review_queue": 0,
         "runtime_intake": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "verified": 0
       },
       "state": "blocked_missing_upstream_receipts",
@@ -275,13 +275,13 @@
     "task_ledger_is_owner_receipt": false,
     "source_of_record_received": false,
     "dispatch_confirmation_received": false,
-    "waes_confirmation_received": false,
+    "wame_confirmation_received": false,
     "kds_write_receipt_received": false,
     "runtime_primary_key_created": false,
     "production_write": false,
     "real_external_api_write": false,
     "real_kds_write": false,
-    "real_waes_write": false,
+    "real_wame_write": false,
     "bench_migrate": false,
     "schema_sync": false,
     "permission_change": false,

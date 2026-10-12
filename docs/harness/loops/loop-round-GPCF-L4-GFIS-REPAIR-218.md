@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-97B5604219
 title: GPCF-L4-GFIS-REPAIR-218
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,7 +41,7 @@ superseded_by: []
 - `blocked_actions=5`
 - `owner_submit_actions=2`
 - `gfis_operator_actions=3`
-- `waes_actions=1`
+- `wame_actions=1`
 - `kds_actions=1`
 - `owner_responses=0`
 - `source_record_files_found=0`
@@ -53,7 +53,7 @@ superseded_by: []
 - `runtime_primary_key_missing=1`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -72,4 +72,4 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只把 open hold 转成责任方补证动作包，不生成客户订单、平台订单、source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只把 open hold 转成责任方补证动作包，不生成客户订单、平台订单、source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。

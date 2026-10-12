@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9BF6A3D875
 title: evidence
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -42,7 +42,7 @@
     "actual dispatch",
     "external API write",
     "real KDS write",
-    "real WAES write",
+    "real WAME write",
     "production write",
     "deployment",
     "git commit",
@@ -64,8 +64,8 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "real_kds_write_performed": false,
-    "real_waes_write_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "real_wame_write_performed": false,
+    "codegraph_as_final_wame_decision": false
   },
   "required_commands": [
     "python3 tools/kds-sync/validate_codegraph_dev_execution_dispatch_precheck_detail_intake.py",

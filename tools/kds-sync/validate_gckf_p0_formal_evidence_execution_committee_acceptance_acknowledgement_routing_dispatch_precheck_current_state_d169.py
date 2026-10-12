@@ -176,7 +176,7 @@ def main() -> None:
             "routing_dispatch_precheck_owner",
             "committee_secretariat",
             "committee_representative",
-            "waes_gate_owner",
+            "wame_gate_owner",
             "acl_owner",
             "evidence_controller",
             "harness_reviewer"

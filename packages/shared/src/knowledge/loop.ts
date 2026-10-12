@@ -9,7 +9,7 @@ export interface LoopRecord {
   newGapRefs: string[];
   candidateFactRefs: string[];
   candidateSopRefs: string[];
-  waesResultRefs: string[];
+  wameResultRefs: string[];
   confirmationRefs: string[];
   committeeRefs: string[];
   risks: Array<Record<string, unknown>>;

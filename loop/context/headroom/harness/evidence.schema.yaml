@@ -14,7 +14,7 @@ required:
   - ccr_enabled
   - ccr_retrieve_count
   - policy_profile
-  - waes_decision
+  - wame_decision
   - answer_equivalence
   - marker_gate
   - sensitive_redaction_gate
@@ -27,7 +27,7 @@ properties:
     enum: [proxy, sdk, mcp, wrap]
   content_type:
     enum: [tool_output, log, rag_chunk, file, conversation, metric_output, validation_output]
-  waes_decision:
+  wame_decision:
     enum: [pass, warn, block]
   answer_equivalence:
     enum: [pass, partial, fail, unknown]

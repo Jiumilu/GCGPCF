@@ -21,7 +21,7 @@ NO_WRITE_KEYS = (
     "writesGpc",
     "writesErp",
     "writesMes",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesAuditTraceRecord",
     "writesEventRecord",
@@ -109,7 +109,7 @@ def main() -> int:
         "createsActionReceipts": 0,
         "createsReadReceipts": 0,
         "createsHarnessEvidence": 0,
-        "createsWaesGateResults": 0,
+        "createsWameGateResults": 0,
         "createsKweWorkItems": 0,
         "persistsEvidence": 0,
         "approvesBusinessWrite": 0,
@@ -169,7 +169,7 @@ def main() -> int:
             "createsActionReceipt",
             "createsReadReceipt",
             "createsHarnessEvidence",
-            "createsWaesGateResult",
+            "createsWameGateResult",
             "createsKweWorkItem",
             "persistsEvidence",
             "approvesBusinessWrite",
@@ -184,7 +184,7 @@ def main() -> int:
         counts["createsActionReceipts"] += int(trace["createsActionReceipt"] is True)
         counts["createsReadReceipts"] += int(trace["createsReadReceipt"] is True)
         counts["createsHarnessEvidence"] += int(trace["createsHarnessEvidence"] is True)
-        counts["createsWaesGateResults"] += int(trace["createsWaesGateResult"] is True)
+        counts["createsWameGateResults"] += int(trace["createsWameGateResult"] is True)
         counts["createsKweWorkItems"] += int(trace["createsKweWorkItem"] is True)
         counts["persistsEvidence"] += int(trace["persistsEvidence"] is True)
         counts["approvesBusinessWrite"] += int(trace["approvesBusinessWrite"] is True)
@@ -233,10 +233,10 @@ def main() -> int:
         f"blocked_write_audit_trace={actual['blockedWriteAuditTrace']} creates_audit_trace_records={actual['createsAuditTraceRecords']} "
         f"creates_event_records={actual['createsEventRecords']} creates_action_receipts={actual['createsActionReceipts']} "
         f"creates_read_receipts={actual['createsReadReceipts']} creates_harness_evidence={actual['createsHarnessEvidence']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         f"persists_evidence={actual['persistsEvidence']} approves_business_write={actual['approvesBusinessWrite']} "
         f"promotes_lifecycle={actual['promotesLifecycle']} completes_committee_decision={actual['completesCommitteeDecision']} "
-        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 "
+        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_audit_trace_record=0 writes_event_record=0 "
         "writes_action_receipt=0 writes_read_receipt=0 writes_harness_evidence=0 "
         "writes_admission_record=0 writes_review_queue_item=0 writes_confirmation_record=0 "

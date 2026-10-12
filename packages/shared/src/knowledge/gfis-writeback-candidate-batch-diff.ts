@@ -1,7 +1,7 @@
 import type { TargetSystem, WritebackStatus } from "./fact-candidate";
 import type { KweConfirmationSensitiveHandling } from "./kwe-confirmation-workpack";
 import type { WritebackTargetEntityType } from "./writeback-candidate";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type GfisWritebackBatchDiffAction =
   | "candidate_only"
@@ -38,7 +38,7 @@ export interface GfisWritebackCandidateBatchNoWrite {
   writesErp: 0;
   writesMes: 0;
   writesKdsAcceptedFact: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesRevenueOrScoreConfirmation: 0;
   writesExternalApi: 0;
@@ -52,8 +52,8 @@ export interface GfisWritebackCandidateBatchDiffItem {
   basedOnObjectRefs: string[];
   evidenceRefs: string[];
   poolRefs: string[];
-  waesGateStatus: Extract<
-    WaesGateStatus,
+  wameGateStatus: Extract<
+    WameGateStatus,
     "pending" | "passed" | "blocked" | "human_required" | "committee_required"
   >;
   writebackStatus: Exclude<WritebackStatus, "not_applicable">;
@@ -88,7 +88,7 @@ export interface GfisWritebackCandidateBatchDiffPolicy {
     approvedForBusinessWriteMustBeFalse: boolean;
     targetReceiptsForbidden: boolean;
     writtenBackStatusForbidden: boolean;
-    waesPassedIsCandidateOnly: boolean;
+    wamePassedIsCandidateOnly: boolean;
     sensitiveRawContentForbidden: boolean;
     missingEvidenceBlocksOrRepairs: boolean;
     podFinanceQualityDisputeRequiresMetadataOrControlledOriginal: boolean;

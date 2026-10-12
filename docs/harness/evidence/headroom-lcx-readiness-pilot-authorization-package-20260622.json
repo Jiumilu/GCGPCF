@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -138,7 +138,7 @@
     {
       "path": "docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json",
       "evidence_id": "HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622",
-      "status": "approval_instance_fields_complete_waes_harness_admitted_for_precheck",
+      "status": "approval_instance_fields_complete_wame_harness_admitted_for_precheck",
       "missing": false,
       "production_admission_gate": false,
       "accepted": false,
@@ -146,8 +146,8 @@
       "production_ready": false
     },
     {
-      "path": "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.json",
-      "evidence_id": "HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-20260622",
+      "path": "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.json",
+      "evidence_id": "HEADROOM-LCX-WAME-HARNESS-ADMISSION-DECISION-CHECKLIST-20260622",
       "status": "decision_checklist_generated_current_decision_blocked",
       "missing": false,
       "production_admission_gate": false,
@@ -156,8 +156,8 @@
       "production_ready": false
     },
     {
-      "path": "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.json",
-      "evidence_id": "HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-ADMITTED-20260622",
+      "path": "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.json",
+      "evidence_id": "HEADROOM-LCX-WAME-HARNESS-ADMISSION-DECISION-ADMITTED-20260622",
       "status": null,
       "missing": false,
       "production_admission_gate": false,
@@ -281,7 +281,7 @@
     "allow_local_headroom_dry_run": true,
     "allow_sanitized_fixture_replay": true,
     "allow_harness_evidence_generation": true,
-    "allow_waes_gate_check": true,
+    "allow_wame_gate_check": true,
     "allow_raw_prompt_or_completion": false,
     "allow_unredacted_sensitive_material": false,
     "allow_production_proxy": false,
@@ -295,7 +295,7 @@
   "blocked_until": [
     "explicit_l3_5_pilot_window_id",
     "human_approver_identity_and_timestamp",
-    "waes_harness_l3_5_pilot_decision",
+    "wame_harness_l3_5_pilot_decision",
     "rollback_plan_id_for_pilot",
     "telemetry_off_confirmation",
     "negative_gate_pass_for_l3_5_inputs"

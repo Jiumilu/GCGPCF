@@ -25,5 +25,5 @@ visibility:
   contributor_default_view: own_contribution_only
   external_account_default_view: authorized_project_view_only
 rules:
-  committee_does_not_replace_waes_gate: true
+  committee_does_not_replace_wame_gate: true
   platform_retains_rule_governance_right: true

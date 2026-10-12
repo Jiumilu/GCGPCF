@@ -21,7 +21,7 @@ export interface KweQueueActionIntakeNoWrite {
   writesKdsLifecycle: 0;
   writesKdsFact: 0;
   writesKdsAcceptedFact: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesBusinessSystem: 0;
   writesTargetReceipt: 0;
   writesCommitteeDecisionCompletion: 0;

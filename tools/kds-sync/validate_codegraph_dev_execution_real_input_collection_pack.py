@@ -58,7 +58,7 @@ def main() -> int:
     require(status["external_notifications_sent"] == 0, "external notifications must be zero")
     require(status["external_api_write"] is False, "external API write must be false")
     require(status["real_kds_write"] is False, "real KDS write must be false")
-    require(status["real_waes_write"] is False, "real WAES write must be false")
+    require(status["real_wame_write"] is False, "real WAME write must be false")
 
     request = evidence["primary_owner_request"]
     require(request["owner"] == "GPC_or_Liaoning_Yuanhang_order_owner", "invalid owner")
@@ -71,7 +71,7 @@ def main() -> int:
 
     twelve = evidence["twelve_stage_real_input_request"]
     require(twelve["runtime_object_family_count"] == 12, "runtime object family count must be 12")
-    for phrase in ["WAES confirmation", "KDS write receipt", "POD", "quality inspection record"]:
+    for phrase in ["WAME confirmation", "KDS write receipt", "POD", "quality inspection record"]:
         require(phrase in twelve["required_inputs"], f"missing required input: {phrase}")
     for key, value in twelve["current_ready_counts"].items():
         require(value == 0, f"{key} must remain zero")

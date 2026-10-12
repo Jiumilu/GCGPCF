@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-647E394AF0
 title: GPCF-L4-GFIS-REPAIR-008 GFIS KDS Gehua Controlled Data Coverage
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 ## 真实性边界
 
 - KDS 受控资料覆盖不等于真实业务完成。
-- 真实订单、签样、原料批次、运行态主键、POD、WAES confirmation、KDS write receipt 仍为 `missing_live_business_inputs=5`。
+- 真实订单、签样、原料批次、运行态主键、POD、WAME confirmation、KDS write receipt 仍为 `missing_live_business_inputs=5`。
 - 未使用 GFIS Demo 作为业务主体。
 - 未执行生产写入、真实外部 API 写入、`bench migrate`、schema sync、数据库迁移、权限变更、部署或 accepted/integrated 升级。
 

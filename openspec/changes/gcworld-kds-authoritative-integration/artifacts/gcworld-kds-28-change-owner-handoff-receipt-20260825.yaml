@@ -131,7 +131,7 @@ producer_coverage_for_28_entries:
     - dbce6d580114
   other_write_risks:
     - GBrain autopilot及其worker仍在运行
-    - 两项GCWORLD与WAES资料的唯一生成器未确认，需冻结人工导入活动
+    - 两项GCWORLD与WAME资料的唯一生成器未确认，需冻结人工导入活动
 stable_window_recommendation:
   - 分别取得Codex自动化、Hermes任务、GBrain服务和人工导入的专项控制授权
   - 等待已开始任务自然结束，不直接杀进程

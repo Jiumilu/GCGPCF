@@ -114,7 +114,7 @@
     "This evidence does not rewrite historical round records.",
     "This evidence does not prove GFIS runtime SOP E2E passed.",
     "This evidence does not close LEDB-001, LEDB-002, or LEDB-003 globally.",
-    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status.",
+    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, or integrated status.",
     "This evidence does not authorize production write, external API write, schema sync, bench migrate, deployment, commit, or push."
   ]
 }

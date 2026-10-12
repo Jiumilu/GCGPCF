@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6D28F6D4CE
 title: codegraph-dev-execution-document-localization-debt-closure-20260622
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

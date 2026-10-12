@@ -37,14 +37,14 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0
   },
   "write_counts": {
     "production_writes": 0,
     "real_external_api_writes": 0,
     "kds_fact_writes": 0,
-    "waes_gate_result_writes": 0
+    "wame_gate_result_writes": 0
   },
   "completion_guards": {
     "accepted": false,

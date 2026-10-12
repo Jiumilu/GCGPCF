@@ -14,10 +14,10 @@
       "expectedEndpointCount": 11
     },
     {
-      "group": "waes",
-      "routeFile": "packages/api/src/waes/routes.ts",
-      "serviceFile": "packages/api/src/waes/service.ts",
-      "serviceName": "waesService",
+      "group": "wame",
+      "routeFile": "packages/api/src/wame/routes.ts",
+      "serviceFile": "packages/api/src/wame/service.ts",
+      "serviceName": "wameService",
       "expectedEndpointCount": 7
     },
     {

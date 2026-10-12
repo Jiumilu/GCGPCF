@@ -63,7 +63,7 @@ def main() -> int:
         "`affected_tests=[]` 时必须带 `fallback_tests` 和 `fallback_reason`。",
         "缺少 `codegraph_evidence` 的任务，直接阻断进入实现。",
         "每个业务变更的 evidence 固定包含 `codegraph_evidence`。",
-        "Harness / WAES 不把 CodeGraph 当参考材料，而是当验收输入之一。",
+        "Harness / WAME 不把 CodeGraph 当参考材料，而是当验收输入之一。",
         "每轮 Loop 都要看 14 仓 `codegraph status`。",
         "`.codegraph/` 始终保持 Git 隔离。",
         "有 drift 先 watch，不直接 sync。",

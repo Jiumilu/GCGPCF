@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B30625918B
 title: 基础知识委员会评审队列
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ This queue contains hard-stop writeback candidates that require committee review
 | boundary | value |
 | --- | --- |
 | realKdsApiWrite | false |
-| waesWrite | false |
+| wameWrite | false |
 | businessLedgerWrite | false |
 | settlementWrite | false |
 | ragAdmission | false |
@@ -66,5 +66,5 @@ This queue contains hard-stop writeback candidates that require committee review
 
 - Queue rows are candidate-only and do not confirm facts, close gaps, or write any system.
 - No score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger write is performed.
-- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, or production write is performed.
+- No real KDS API, WAME, GFIS, GPC, PVAOS, finance, settlement, or production write is performed.
 - Committee rows are review candidates only; committee decision is not completed in this evidence.

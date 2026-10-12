@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -54,15 +54,15 @@ def main() -> int:
         for field in required_fields
         if not instance_fields.get(field) or instance_fields.get(field) == "REQUIRED_USER_INPUT"
     ]
-    waes_harness_admission_decision = instance_fields.get("waes_harness_admission_decision")
+    wame_harness_admission_decision = instance_fields.get("wame_harness_admission_decision")
     authorization_signal_present = auth_review.get("gates", {}).get("authorization_signal_present") is True
     authorization_complete = authorization_signal_present and not missing_fields
-    waes_harness_admitted = waes_harness_admission_decision == "admitted_for_sanitized_measurement_precheck"
-    measurement_precheck_gate = authorization_complete and waes_harness_admitted
+    wame_harness_admitted = wame_harness_admission_decision == "admitted_for_sanitized_measurement_precheck"
+    measurement_precheck_gate = authorization_complete and wame_harness_admitted
     status = (
         "authorized_measurement_precheck_admitted_for_sanitized_dry_run_only"
         if measurement_precheck_gate
-        else "authorized_measurement_precheck_blocked_by_waes_harness_decision"
+        else "authorized_measurement_precheck_blocked_by_wame_harness_decision"
     )
 
     result = {
@@ -76,14 +76,14 @@ def main() -> int:
         "projects": PROJECTS,
         "source_authorization_review": auth_review.get("evidence_id"),
         "source_approval_instance": approval_instance.get("instance_id"),
-        "waes_harness_admission_decision": waes_harness_admission_decision,
+        "wame_harness_admission_decision": wame_harness_admission_decision,
         "missing_fields": missing_fields,
         "precheck": {
             "authorization_signal_present": authorization_signal_present,
             "authorization_complete": authorization_complete,
             "missing_required_field_count": len(missing_fields),
             "authorized_measurement_precheck_gate": measurement_precheck_gate,
-            "waes_harness_admitted": waes_harness_admitted,
+            "wame_harness_admitted": wame_harness_admitted,
             "production_token_measurement_allowed": False,
             "production_admission_gate": False,
         },
@@ -92,7 +92,7 @@ def main() -> int:
             "authorization_signal_present": authorization_signal_present,
             "authorization_complete": authorization_complete,
             "missing_required_field_count_zero": not missing_fields,
-            "waes_harness_admitted": waes_harness_admitted,
+            "wame_harness_admitted": wame_harness_admitted,
             "production_token_measurement_allowed": False,
             "production_proxy_started": False,
             "production_sdk_enabled": False,
@@ -109,7 +109,7 @@ def main() -> int:
             "not_authorized_production_measurement": True,
             "not_production_entry": True,
             "not_sanitized_production_token_measurement": True,
-            "not_waes_harness_admitted": True,
+            "not_wame_harness_admitted": True,
             "not_real_kds_write": True,
             "not_external_api_write": True,
             "not_sensitive_material_processing": True,
@@ -130,7 +130,7 @@ def main() -> int:
 doc_id: GPCF-DOC-E92337280E
 title: Headroom LCX Authorized Measurement Precheck Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -152,7 +152,7 @@ superseded_by: []
 
 ## 结论
 
-已执行授权测量前置检查。授权意向存在，6 个授权字段已补齐；WAES/Harness 准入裁决为 `{waes_harness_admission_decision}`。本裁决只允许进入脱敏测量 dry-run 预备阶段，不允许采集未脱敏生产 token、不允许启动生产代理、不允许写入真实 KDS API。
+已执行授权测量前置检查。授权意向存在，6 个授权字段已补齐；WAME/Harness 准入裁决为 `{wame_harness_admission_decision}`。本裁决只允许进入脱敏测量 dry-run 预备阶段，不允许采集未脱敏生产 token、不允许启动生产代理、不允许写入真实 KDS API。
 
 ## 阻断字段
 
@@ -169,7 +169,7 @@ superseded_by: []
 | authorization_signal_present | {str(authorization_signal_present).lower()} |
 | authorization_complete | {str(authorization_complete).lower()} |
 | missing_required_field_count | {len(missing_fields)} |
-| waes_harness_admitted | {str(waes_harness_admitted).lower()} |
+| wame_harness_admitted | {str(wame_harness_admitted).lower()} |
 | production_token_measurement_allowed | false |
 | measured_production_tokens | false |
 | production_admission_gate | false |
@@ -190,7 +190,7 @@ superseded_by: []
     print(
         f"headroom_lcx_authorized_measurement_precheck={output_status} "
         f"project_count=15 authorization_signal_present=true authorization_complete={str(authorization_complete).lower()} "
-        f"missing_required_field_count={len(missing_fields)} waes_harness_admission_decision={waes_harness_admission_decision} "
+        f"missing_required_field_count={len(missing_fields)} wame_harness_admission_decision={wame_harness_admission_decision} "
         "production_token_measurement_allowed=false "
         "production_admission_gate=false accepted=false integrated=false production_ready=false"
     )

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-65C3B89F08
 title: GPCF-L4-GFIS-REPAIR-150 GFIS 合同链真实回执接收目录结构
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ GFIS 新增：
   - `docs/harness/sop-e2e/intake-submissions/contract-chain/customer-confirmation/README.md`
   - `docs/harness/sop-e2e/intake-submissions/contract-chain/purchase-order-or-contract/README.md`
   - `docs/harness/sop-e2e/intake-submissions/contract-chain/kds-write-receipt/README.md`
-  - `docs/harness/sop-e2e/intake-submissions/contract-chain/waes-confirmation/README.md`
+  - `docs/harness/sop-e2e/intake-submissions/contract-chain/wame-confirmation/README.md`
 - `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure.py`
 - `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure.py`
 - `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-receiving-directory-structure.json`
@@ -64,13 +64,13 @@ GFIS 新增：
 核心输出：
 
 ```text
-liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure=pass handoff_items=5 receiving_directories_expected=5 receiving_directories_existing=5 directory_readmes=5 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=receiving_directory_structure_ready_no_real_receipts runtime_sop_e2e=repair_required
+liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure=pass handoff_items=5 receiving_directories_expected=5 receiving_directories_existing=5 directory_readmes=5 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=receiving_directory_structure_ready_no_real_receipts runtime_sop_e2e=repair_required
 ```
 
 主 runtime SOP validator expected exit 2：
 
 ```text
-runtime_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure=receiving_directory_structure_ready_no_real_receipts:handoff_items=5:receiving_directories_expected=5:receiving_directories_existing=5:directory_readmes=5:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure=receiving_directory_structure_ready_no_real_receipts:handoff_items=5:receiving_directories_expected=5:receiving_directories_existing=5:directory_readmes=5:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 RUNTIME_EXIT_CODE:2
 ```
 
@@ -102,11 +102,11 @@ RUNTIME_EXIT_CODE:2
 - structure_valid: 0
 - review_queue: 0
 - runtime_intake: 0
-- waes_review: 0
+- wame_review: 0
 - verified: 0
 - runtime_sop_e2e: repair_required
 
-本轮未写真实 KDS、WAES、生产系统或外部 API，未创建真实业务回执，未执行 bench migrate、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更，未升级 accepted 或 integrated。
+本轮未写真实 KDS、WAME、生产系统或外部 API，未创建真实业务回执，未执行 bench migrate、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更，未升级 accepted 或 integrated。
 
 ## 下一轮
 

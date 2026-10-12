@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-QUALITY-TREND-20260622
 title: Agent-Reach Candidate Quality Trend Baseline 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 | duplicate_rate | `0.0` |
 | latency_p50_seconds | `3.889` |
 | latency_p95_seconds | `4.633` |
-| review_status | `pending_waes_kds_review` |
+| review_status | `pending_wame_kds_review` |
 
 ## 候选摄取 dry-run 基线
 
@@ -70,7 +70,7 @@ superseded_by: []
 - 任何质量趋势升级前，必须重复 fixed-query replay 或经过授权的 Agent-Reach benchmark。
 - source provenance rate 必须保持 `1.0`。
 - canonical 和 production write count 未经单独授权必须保持 `0`。
-- human 或 WAES/KDS review decision 必须独立记录，不能由 search success 自动替代。
+- human 或 WAME/KDS review decision 必须独立记录，不能由 search success 自动替代。
 - `accept_limited` 只代表候选元数据，不代表强 RAG 或 canonical knowledge。
 
 ## 下一轮

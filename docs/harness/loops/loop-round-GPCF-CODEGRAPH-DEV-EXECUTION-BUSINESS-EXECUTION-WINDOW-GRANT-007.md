@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007
 title: Loop Round - CodeGraph 业务开发执行窗口授予
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 用户授权：`全部授权`
 - 项目群范围：14 仓 CodeGraph 全量覆盖证据
-- 当前约束：commit、push、deployment、production write、external API write、real KDS write、real WAES write 仍保持关闭
+- 当前约束：commit、push、deployment、production write、external API write、real KDS write、real WAME write 仍保持关闭
 
 ## 动作
 

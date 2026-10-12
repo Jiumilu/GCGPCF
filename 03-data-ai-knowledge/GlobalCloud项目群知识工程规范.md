@@ -86,7 +86,7 @@ flowchart TB
 | KDS | 知识资产、版本、证据、候选、确认、审计、长期记忆 | 不擅自改变业务状态 |
 | Brain | 在授权范围分析资料并生成候选 | 不持久化业务事实，不直接确认或写业务对象 |
 | Studio | 用户任务、会话、资料接入、复核、反馈、恢复 | 不形成本地知识主账 |
-| WAES/GFIS/GPC/PVAOS 等 | 项目、订单、生产等权威业务事实 | 不以知识分析替代业务主数据治理 |
+| WAME/GFIS/GPC/PVAOS 等 | 项目、订单、生产等权威业务事实 | 不以知识分析替代业务主数据治理 |
 | 治理与审计 | 固化证据、回滚、授权和状态边界 | 不替代人工确认或业务 owner 裁决 |
 
 ## 3. 统一对象模型
@@ -314,7 +314,7 @@ gke_project_binding:
   engineering_status_ceiling: partial
 ```
 
-该绑定只把既有 no-write 主线纳入 GKE-001，不重跑 DKS 历史轮次，不改写 D185/D190，不形成新的 GCKF 执行轮次。仅当 `controlled_repair_owner_response`、`signed_response_package`、`waes_review_note`、`human_confirmation_record` 四项证据全部到达并通过 arrival scan refresh，才允许重新计算后续可执行轮次。
+该绑定只把既有 no-write 主线纳入 GKE-001，不重跑 DKS 历史轮次，不改写 D185/D190，不形成新的 GCKF 执行轮次。仅当 `controlled_repair_owner_response`、`signed_response_package`、`wame_review_note`、`human_confirmation_record` 四项证据全部到达并通过 arrival scan refresh，才允许重新计算后续可执行轮次。
 
 ## 11. LOOP 工程体系绑定
 

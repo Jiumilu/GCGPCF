@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ED57C64A4C
 title: Cognee 全量场景矩阵模板 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

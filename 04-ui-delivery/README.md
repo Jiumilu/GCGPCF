@@ -63,5 +63,5 @@ KDS 路径前缀：`开发/12-GPCF/04-ui-delivery/`
 | GPCF-DOC-4E2A91B7C6 | GlobalCloud项目群界面工程整体实施方案 | 04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md | GPC | controlled |
 | GPCF-DOC-C4D724E837 | 界面与交付体验 | 04-ui-delivery/README.md | GPC | controlled |
 | GPCF-DOC-7E5C41A9B3 | Studio操作工作台验证方案 | 04-ui-delivery/Studio操作工作台验证方案.md | GPCF | controlled |
-| GPCF-DOC-4B8F20D6A1 | WAME专业工作台母框架升级方案 | 04-ui-delivery/WAES专业工作台母框架升级方案.md | GPC | controlled |
-| GPCF-DOC-91A6D0F4C2 | WAME专业工作台母框架差距评估 | 04-ui-delivery/WAES专业工作台母框架差距评估.md | GPC | controlled |
+| GPCF-DOC-4B8F20D6A1 | WAME专业工作台母框架升级方案 | 04-ui-delivery/WAME专业工作台母框架升级方案.md | GPC | controlled |
+| GPCF-DOC-91A6D0F4C2 | WAME专业工作台母框架差距评估 | 04-ui-delivery/WAME专业工作台母框架差距评估.md | GPC | controlled |

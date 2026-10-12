@@ -73,7 +73,7 @@ superseded_by: []
 ## 6. 检查项
 
 - 输出是否能追溯到 PDF 原文页/章节。
-- 是否区分 GFIS 主责和 GPC/WAES/KDS/Brain 协同职责。
+- 是否区分 GFIS 主责和 GPC/WAME/KDS/Brain 协同职责。
 - 是否避免把培训材料当成实现完成证据。
 - 是否更新 GPCF 状态矩阵和 KDS 文档台账。
 

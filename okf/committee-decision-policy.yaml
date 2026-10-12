@@ -62,7 +62,7 @@ voting_methods:
   - authorized_owner_decision
 hard_boundaries:
   decision_domain: governance
-  committee_does_not_replace_waes_gate: true
+  committee_does_not_replace_wame_gate: true
   committee_cannot_write_business_system: true
   committee_cannot_directly_distribute_revenue: true
   committee_cannot_directly_confirm_score: true

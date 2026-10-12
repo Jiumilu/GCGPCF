@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-84D9CA1AA2
 title: GCKF P0 正式 evidence 委员会受理确认 notification receipt 预览当前态证据 D171
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

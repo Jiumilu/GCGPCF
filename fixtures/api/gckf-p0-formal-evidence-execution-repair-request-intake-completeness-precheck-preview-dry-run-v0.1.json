@@ -29,7 +29,7 @@
       "candidate_acl_boundary_snapshot",
       "candidate_precheck_hold_conditions",
       "candidate_precheck_blocker_codes",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -49,7 +49,7 @@
       "write_contribution_score",
       "promote_lifecycle",
       "mark_p0_accepted",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

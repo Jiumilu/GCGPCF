@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-716F05C368
 title: GPCF-L4-004 Brain SOP 案例检索证据接收
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -78,8 +78,8 @@ superseded_by: []
 | P0 主线业务链路贯通度 | 5/20 | 样品/签样/转量产知识侧路径建立，业务运行链路未贯通 |
 | 真实仓代码/配置/测试闭环率 | 7/20 | MMC、KDS、Brain 有真实仓变更和 validator |
 | KDS 检索与知识回指完整度 | 6/10 | KDS 与 Brain 回指路径存在，live API 待补 |
-| Evidence 与审计完整度 | 6/15 | 项目级 evidence 与总控 evidence 已建立，WAES 审计运行态待补 |
-| 跨项目契约一致性 | 5/10 | Brain/KDS 边界清楚，PKC/GPC/GFIS/WAES 待补 |
+| Evidence 与审计完整度 | 6/15 | 项目级 evidence 与总控 evidence 已建立，WAME 审计运行态待补 |
+| 跨项目契约一致性 | 5/10 | Brain/KDS 边界清楚，PKC/GPC/GFIS/WAME 待补 |
 | 用户可复现与 L5 准备度 | 3/10 | 本地 fixture/build 可复现，客户场景未贯通 |
 | 项目群阶段累计评分 | 37/100 | L4 Repair；继续 L4 补齐，不进入 L5 |
 

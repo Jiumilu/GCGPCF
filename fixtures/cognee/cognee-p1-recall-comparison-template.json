@@ -30,7 +30,7 @@
       "token_after": 1180,
       "latency_ms_p95": 132,
       "marker_gate": "pass",
-      "waes_decision": "pass",
+      "wame_decision": "pass",
       "answer_equivalence": "unknown",
       "write_requested": false,
       "write_allowed": false
@@ -56,7 +56,7 @@
       "token_after": 980,
       "latency_ms_p95": 118,
       "marker_gate": "pass",
-      "waes_decision": "pass",
+      "wame_decision": "pass",
       "answer_equivalence": "partial",
       "write_requested": true,
       "write_allowed": false
@@ -82,7 +82,7 @@
       "token_after": 1175,
       "latency_ms_p95": 125,
       "marker_gate": "pass",
-      "waes_decision": "pass",
+      "wame_decision": "pass",
       "answer_equivalence": "partial",
       "write_requested": true,
       "write_allowed": false
@@ -108,7 +108,7 @@
       "token_after": 1035,
       "latency_ms_p95": 110,
       "marker_gate": "pass",
-      "waes_decision": "pass",
+      "wame_decision": "pass",
       "answer_equivalence": "partial",
       "write_requested": false,
       "write_allowed": false
@@ -134,7 +134,7 @@
       "token_after": 1198,
       "latency_ms_p95": 97,
       "marker_gate": "pass",
-      "waes_decision": "pass",
+      "wame_decision": "pass",
       "answer_equivalence": "partial",
       "write_requested": true,
       "write_allowed": false

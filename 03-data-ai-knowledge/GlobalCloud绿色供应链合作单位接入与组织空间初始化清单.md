@@ -80,7 +80,7 @@ superseded_by: []
 | 财务联系人 | 收益相关必设 | finance_private + own_unit | 开票、到账、收益相关最小范围 |
 | 质量 / POD 联系人 | 葛化必设 | own_unit + invited | 质量、发货、POD 证据 |
 | GFIS 操作人 | 葛化必设 | gfis_operator | GFIS 使用助手和文档验收助手场景 |
-| WAME 对接人 | 是 | waes_boundary | 规则、边界、密级和阻断记录 |
+| WAME 对接人 | 是 | wame_boundary | 规则、边界、密级和阻断记录 |
 | KDS 记录人 | 是 | kds_operator | 知识对象、编号、镜像和台账 |
 
 所有角色必须保留授权来源、授权范围、生效日期、复核日期和撤销条件。

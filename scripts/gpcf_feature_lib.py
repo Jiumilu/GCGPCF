@@ -26,7 +26,7 @@ PROJECTS = {
     "brain",
     "was",
     "xiaoc",
-    "waes",
+    "wame",
     "gpc",
     "studio",
     "gpcf",

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-55DF78FBC6
 title: LOOP Round GPCF-KDS-DKS-060-GH-AI-AUTH - 葛化三助手 NoWrite 与授权补证执行包
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -51,7 +51,7 @@ superseded_by: []
 |---|---|---|
 | Raman | 葛化三助手、订单母版、候选事实/SOP | DKS-060 主线为 AOR / EVR / DEF / WBC no-write 评测包 |
 | Herschel | 辽宁远航、现代精工 OEM、质量/POD/金融、人工发送授权 | 补充 MSP 授权包字段、DSR-L2/L3 和 OEM 责任矩阵 |
-| Chandrasekhar | 湖北磷材、积分收益、委员会、WAES/RAG | DKS-060 不重复总方案，补 RAG/WAES 最小样本 |
+| Chandrasekhar | 湖北磷材、积分收益、委员会、WAME/RAG | DKS-060 不重复总方案，补 RAG/WAME 最小样本 |
 
 三个 explorer 均只读，未改文件；主 Agent 串行新增受控文档并运行门禁。
 
@@ -76,7 +76,7 @@ superseded_by: []
 | 现代精工 OEM | OEM / 目标工厂责任矩阵 | candidate；非生产事实 |
 | 质量 / 发货 / POD / 金融凭证 | DSR-L2/L3 资料接收门禁 | metadata/hash/seal/custodian only |
 | 知识缺口悬赏 | 发布前置门禁 | not_published / not_frozen |
-| RAG / WAES | 5 类最小分级样本 | safe / limited / repair_required / blocked / sensitive_metadata_only |
+| RAG / WAME | 5 类最小分级样本 | safe / limited / repair_required / blocked / sensitive_metadata_only |
 
 ## 6. 本轮证据结果
 
@@ -97,7 +97,7 @@ superseded_by: []
 - 部署 GFIS 三助手或真实内测；
 - 创建真实人工发送授权、发送记录、外部通知或回执；
 - 接收真实客户确认、PO/合同、POD、质量、金融凭证、开票或到账；
-- 写 GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统；
+- 写 GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统；
 - 发布、冻结、验收或结算知识缺口悬赏；
 - 确认积分、收益、额度、扣罚或争议；
 - 建立委员会裁决；
@@ -123,7 +123,7 @@ superseded_by: []
 1. 本地 validator 或等价校验说明。
 2. AOR / EVR / DEF / WBC / MSP 编号完整性检查。
 3. `businessFactCreated=false`、`productionWriteExecuted=false`、`sendAllowed=false` 断言。
-4. RAG / WAES 五类样本分级断言。
+4. RAG / WAME 五类样本分级断言。
 5. 红线负例 hard_fail 断言。
 
-边界：仍不写真实 GFIS、WAES、KDS API 或生产系统。
+边界：仍不写真实 GFIS、WAME、KDS API 或生产系统。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F0BFC4BAF8
 title: LOOP Round GPCF-KDS-DKS-123 - GFIS Assistant 修复通知延后队列预览无写入
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 把 DKS-122 的 GFIS Assistant Repair Notification Snooze Preview 推进为本地 snooze queue preview，说明多条延后提醒候选在 Brain / PKC / GFIS Assistant 中如何被本地排序、分组和展示。
 
-本轮不创建真实 QueueItem、SnoozeRecord、ScheduledReminder、DismissalRecord、Notification、Harness Evidence、WAES Gate Result、KWE WorkItem，不修改真实 Notification 状态，不提升 KDS lifecycle，不写 GFIS / GPC / ERP / MES，不确认收益、积分、额度或悬赏。
+本轮不创建真实 QueueItem、SnoozeRecord、ScheduledReminder、DismissalRecord、Notification、Harness Evidence、WAME Gate Result、KWE WorkItem，不修改真实 Notification 状态，不提升 KDS lifecycle，不写 GFIS / GPC / ERP / MES，不确认收益、积分、额度或悬赏。
 
 ## 输入
 
@@ -61,7 +61,7 @@ superseded_by: []
 ### DKS-123 专用校验
 
 ```text
-gfis_assistant_repair_notification_snooze_queue_preview=pass queues=3 brain=1 pkc=1 gfis_assistant=1 brain_queue=1 pkc_queue=1 gfis_assistant_queue=1 creates_queue_items=0 creates_snooze_records=0 creates_scheduled_reminders=0 creates_notifications=0 modifies_notifications=0 creates_harness_evidence=0 creates_waes_gate_results=0 creates_kwe_work_items=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_queue_item=0 writes_snooze_record=0 writes_scheduled_reminder=0 writes_dismissal_record=0 writes_notification=0 modifies_notification=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0
+gfis_assistant_repair_notification_snooze_queue_preview=pass queues=3 brain=1 pkc=1 gfis_assistant=1 brain_queue=1 pkc_queue=1 gfis_assistant_queue=1 creates_queue_items=0 creates_snooze_records=0 creates_scheduled_reminders=0 creates_notifications=0 modifies_notifications=0 creates_harness_evidence=0 creates_wame_gate_results=0 creates_kwe_work_items=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_queue_item=0 writes_snooze_record=0 writes_scheduled_reminder=0 writes_dismissal_record=0 writes_notification=0 modifies_notification=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0
 ```
 
 ### 覆盖率校验
@@ -101,7 +101,7 @@ full_no_write_regression=pass validators=58
 - `writes_dismissal_record=0`
 - `writes_notification=0`
 - `modifies_notification=0`
-- `writes_waes_gate_result=0`
+- `writes_wame_gate_result=0`
 - `writes_kwe_work_item=0`
 - `writes_harness_evidence=0`
 - `writes_kds_lifecycle=0`
@@ -117,7 +117,7 @@ full_no_write_regression=pass validators=58
 | queue preview 被误认为真实 SnoozeRecord | 明确 `createsSnoozeRecord=false`、`writes_snooze_record=0` |
 | queue preview 被误认为真实定时提醒 | 明确 `createsScheduledReminder=false`、`writes_scheduled_reminder=0` |
 | queue preview 被误认为真实 Notification 状态变更 | 明确 `modifiesNotification=false`、`modifies_notification=0` |
-| queue preview 触发 WAES/KWE/KDS | 明确 `createsWaesGateResult=false`、`createsKweWorkItem=false`、lifecycle writes 为 0 |
+| queue preview 触发 WAME/KWE/KDS | 明确 `createsWameGateResult=false`、`createsKweWorkItem=false`、lifecycle writes 为 0 |
 
 ## 反馈
 
@@ -138,7 +138,7 @@ tsc -p packages/api/tsconfig.json --noEmit
 
 客户满意度未在本轮收集；原因是本轮为受控 no-write 契约推进，尚未进入真实 UI 交互验收。
 
-跨项目依赖无新增未登记阻塞；GFIS、WAES、KWE、KDS、Brain、PKC 均保持候选和只读边界。
+跨项目依赖无新增未登记阻塞；GFIS、WAME、KWE、KDS、Brain、PKC 均保持候选和只读边界。
 
 回滚方式：移除本轮新增 DKS-123 文件，并撤销 README、shared index、coverage fixture、coverage validator 中 DKS-123 条目。
 
@@ -148,4 +148,4 @@ DKS-124 建议进入 `GFIS Assistant Repair Notification Snooze Queue Filter Pre
 
 - 输入 DKS-123 snooze queue preview。
 - 定义本地筛选预览，用于按 surface、blocked/retained、metadata-only、committee、freeze 等条件过滤队列候选。
-- 仍不创建真实 QueueItem、FilterState、SnoozeRecord、ScheduledReminder、Notification、Harness Evidence、WAES Gate Result、KWE WorkItem 或业务写回。
+- 仍不创建真实 QueueItem、FilterState、SnoozeRecord、ScheduledReminder、Notification、Harness Evidence、WAME Gate Result、KWE WorkItem 或业务写回。

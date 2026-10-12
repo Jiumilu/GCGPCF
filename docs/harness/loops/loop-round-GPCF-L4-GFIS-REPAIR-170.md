@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C0B73DD925
 title: Loop Round — GPCF-L4-GFIS-REPAIR-170
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -59,7 +59,7 @@ valid_submission_packages=0
 release_allowed=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```

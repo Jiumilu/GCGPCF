@@ -2,7 +2,7 @@
 """Validate GC-Knowledge Fabric KWE minimum workflow dry-run.
 
 This script uses local fixtures only. It does not create real KDS facts,
-KWE work items, WAES gate results, or GFIS writebacks.
+KWE work items, WAME gate results, or GFIS writebacks.
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ def has_refs(candidate: dict[str, Any], key: str) -> bool:
 
 
 def evaluate(candidate: dict[str, Any]) -> dict[str, Any]:
-    if candidate.get("waesGateStatus") == "committee_required":
+    if candidate.get("wameGateStatus") == "committee_required":
         return {
             "workItemStatus": "open",
             "workType": "committee_review",
@@ -49,7 +49,7 @@ def evaluate(candidate: dict[str, Any]) -> dict[str, Any]:
             "realWrites": 0,
         }
 
-    if candidate.get("waesGateStatus") == "passed":
+    if candidate.get("wameGateStatus") == "passed":
         return {
             "workItemStatus": "approved",
             "workType": "fact_confirmation",
@@ -62,7 +62,7 @@ def evaluate(candidate: dict[str, Any]) -> dict[str, Any]:
         "workItemStatus": "open",
         "workType": "evidence_gap",
         "canCreateFact": False,
-        "requiredActions": ["repair_waes_gate"],
+        "requiredActions": ["repair_wame_gate"],
         "realWrites": 0,
     }
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C4A16F2DE
 title: Studio 默认凭据后端强制门禁落地证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -79,7 +79,7 @@ git diff --check -- packages/server/src/middleware/user-auth.ts packages/server/
 |---|---|---|---|
 | G1 Surface Structure | pass | 聊天主入口与账户整改入口已由后端门禁串成固定治理路径 | 后续可再补路由级前置守卫 |
 | G2 Design Tokens | pass | 本轮未改视觉令牌，只补治理行为 | 无 |
-| G3 Component Consistency | pass | 登录分流、账户整改、403 跳转仍复用现有 WAES/Studio 框架 | 无 |
+| G3 Component Consistency | pass | 登录分流、账户整改、403 跳转仍复用现有 WAME/Studio 框架 | 无 |
 | G4 Evidence And Governance | pass | 默认凭据整改已从提示升级为真实后端阻断，且证据与状态边界清晰 | 后续补运行态截图或录屏 |
 | G5 AI Fact Separation | not_applicable | 本轮不涉及 AI 建议展示 | 无 |
 | G6 Accessibility | partial | 未新增键盘/读屏验证 | 后续补 a11y 证据 |

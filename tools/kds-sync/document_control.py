@@ -23,7 +23,7 @@ PROJECTS = {
     "GFIS": ("01-GFIS", ["GFIS", "工厂", "厂行", "Edge"]),
     "GPC": ("02-GPC", ["GPC", "绿色供应链公共服务平台", "供应链", "平台订单", "链同"]),
     "PVAOS": ("03-PVAOS", ["PVAOS", "门户", "租户", "伙伴", "组织"]),
-    "WAES": ("04-WAES", ["WAES", "宪衡", "治理", "证据", "审计", "状态", "验收"]),
+    "WAME": ("04-WAME", ["WAME", "宪衡", "治理", "证据", "审计", "状态", "验收"]),
     "KDS": ("05-KDS", ["KDS", "知识主存", "知源", "Knowledge"]),
     "Brain": ("06-Brain", ["Brain", "LLM Wiki", "知识引擎", "GCBrain", "gbrain"]),
     "PKC": ("07-PKC", ["PKC", "个人知识"]),
@@ -49,7 +49,7 @@ WAS_ONTOLOGY_PROJECT_GROUP = [
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -107,7 +107,7 @@ PROJECT_GROUP_FULL_SCOPE = [
     "Brain",
     "WAS",
     "XiaoC",
-    "WAES",
+    "WAME",
     "GPC",
     "Studio",
     "GPCF",
@@ -192,7 +192,7 @@ GENERATED_REGISTERS = {
 PROJECT_GROUP_IMPLEMENTATION_PLAN = "GlobalCloud 项目群实施方案.md"
 
 GKE001_PROJECT_SCOPE = [
-    "AAAS", "Brain", "WAS", "XiaoC", "WAES", "GPC", "Studio", "GPCF", "XWAIL",
+    "AAAS", "Brain", "WAS", "XiaoC", "WAME", "GPC", "Studio", "GPCF", "XWAIL",
     "GFIS", "MMC", "KDS", "XiaoG", "PVAOS", "SOP", "PKC", "XGD", "ICP",
 ]
 
@@ -204,7 +204,7 @@ DOCUMENT_METADATA_OVERRIDES = {
             "Brain",
             "WAS",
             "XiaoC",
-            "WAES",
+            "WAME",
             "GPC",
             "Studio",
             "GPCF",
@@ -231,7 +231,7 @@ DOCUMENT_METADATA_OVERRIDES = {
             "Brain",
             "WAS",
             "XiaoC",
-            "WAES",
+            "WAME",
             "GPC",
             "Studio",
             "GPCF",
@@ -258,7 +258,7 @@ DOCUMENT_METADATA_OVERRIDES = {
             "Brain",
             "WAS",
             "XiaoC",
-            "WAES",
+            "WAME",
             "GPC",
             "Studio",
             "GPCF",
@@ -284,7 +284,7 @@ DOCUMENT_METADATA_OVERRIDES = {
             "WAS",
             "XWAIL",
             "AAAS",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -311,7 +311,7 @@ DOCUMENT_METADATA_OVERRIDES = {
             "WAS",
             "XWAIL",
             "AAAS",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -501,13 +501,13 @@ def frontmatter_managed_for(source_path: str) -> bool:
 
 def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]]:
     if source_path == "AGENTS.md":
-        return "WAES", ["WAES", "GPCF"]
+        return "WAME", ["WAME", "GPCF"]
     project_dir_map = {
         "aaas": "AAAS",
         "brain": "Brain",
         "was": "WAS",
         "xiaoc": "XiaoC",
-        "waes": "WAES",
+        "wame": "WAME",
         "gpc": "GPC",
         "studio": "Studio",
         "gpcf": "GPCF",
@@ -534,9 +534,9 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
         return "GPCF", PROJECT_GROUP_FULL_SCOPE
     if source_path in PROJECT_GROUP_REAL_EXECUTION_CORE_DOCS:
         if source_path.startswith("02-governance/loop/"):
-            return "WAES", PROJECT_GROUP_FULL_SCOPE
+            return "WAME", PROJECT_GROUP_FULL_SCOPE
         if source_path.startswith("02-governance/"):
-            return "WAES", PROJECT_GROUP_FULL_SCOPE
+            return "WAME", PROJECT_GROUP_FULL_SCOPE
         if source_path.startswith("09-status/"):
             return "GPCF", PROJECT_GROUP_FULL_SCOPE
         haystack = f"{source_path}\n{title}\n{text[:5000]}"
@@ -550,9 +550,9 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
         "02-governance/loop/LOOP_ENGINEERING_MASTER_IMPLEMENTATION_PLAN.md",
         "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md",
     }:
-        return "WAES", ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+        return "WAME", ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
     if source_path.startswith(".okf/"):
-        return "GPCF", ["GPCF", "GPC", "WAES", "KDS"]
+        return "GPCF", ["GPCF", "GPC", "WAME", "KDS"]
     haystack = f"{source_path}\n{title}\n{text[:5000]}"
     hits: list[str] = []
     for project, (_, keys) in PROJECTS.items():
@@ -580,7 +580,7 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
     elif source_path.startswith("01-architecture/") or source_path.startswith("09-status/"):
         primary = "GPCF"
     elif source_path.startswith("02-governance/"):
-        primary = "WAES" if "WAES" in hits or "治理" in haystack or "证据" in haystack else "GPCF"
+        primary = "WAME" if "WAME" in hits or "治理" in haystack or "证据" in haystack else "GPCF"
     elif source_path.startswith("03-data-ai-knowledge/"):
         primary = "KDS" if "KDS" in hits or "知识" in haystack else "GPCF"
     elif source_path.startswith("04-ui-delivery/"):
@@ -588,7 +588,7 @@ def project_for(source_path: str, title: str, text: str) -> tuple[str, list[str]
     elif source_path.startswith("05-agent-team/") or source_path.startswith("06-workstreams/"):
         primary = "XiaoC" if "XiaoC" in hits or "小即" in haystack else "GPCF"
     elif source_path.startswith("07-acceptance/") or source_path.startswith("08-evidence-samples/") or source_path.startswith(".harness/"):
-        primary = "WAES"
+        primary = "WAME"
     elif source_path.startswith("docs/harness/evidence/gckf-p0-") and "current-state" in source_path:
         primary = "GPCF"
     elif source_path.startswith(("docs/harness/loop-state.md", "docs/harness/loops/", "docs/harness/evidence/evidence-index.md")):
@@ -802,7 +802,7 @@ def write_registers(records: list[dict[str, object]]) -> None:
     sync += "用途：登记 Git 文档与 KDS `开发` 空间的双向同步映射。当前实现包含仓库内 `.kds/development-space/开发` 本地镜像与真实 KDS API 同步工具链；单文档 API 状态以 `kds_api_status` 和真实同步审计流水为准。\n\n"
     sync += "## 范围说明\n\n"
     sync += "当前台账覆盖的是 **GPCF 仓库中已经纳入 KDS `开发` 空间的文档镜像**。其它项目的真实项目仓库文档，只有在后续从对应项目仓导入或同步到本仓/KDS 后，才会出现在本台账中。\n\n"
-    sync += "其它项目当前在 KDS 中的位置如下：`开发/01-GFIS`、`开发/02-GPC`、`开发/03-PVAOS`、`开发/04-WAES`、`开发/05-KDS`、`开发/06-Brain`、`开发/07-PKC`、`开发/08-XiaoC`、`开发/09-XGD`、`开发/10-XiaoG`、`开发/11-MMC`、`开发/12-GPCF`。跨项目文档主要在 `开发/90-跨项目架构`、`开发/91-治理与验收`、`开发/92-证据与会话归档`。\n\n"
+    sync += "其它项目当前在 KDS 中的位置如下：`开发/01-GFIS`、`开发/02-GPC`、`开发/03-PVAOS`、`开发/04-WAME`、`开发/05-KDS`、`开发/06-Brain`、`开发/07-PKC`、`开发/08-XiaoC`、`开发/09-XGD`、`开发/10-XiaoG`、`开发/11-MMC`、`开发/12-GPCF`。跨项目文档主要在 `开发/90-跨项目架构`、`开发/91-治理与验收`、`开发/92-证据与会话归档`。\n\n"
     sync += "## 12 项目文档总量统计\n\n"
     sync += markdown_table(["project", "kds_project_folder", "project 字段文档数", "KDS 项目空间文档数", "说明"], project_summary_rows(records))
     sync += "\n\n"

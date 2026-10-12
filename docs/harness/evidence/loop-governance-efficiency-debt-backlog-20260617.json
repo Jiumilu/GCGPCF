@@ -170,6 +170,6 @@
   "non_claims": [
     "This backlog does not rewrite historical round records in bulk.",
     "This backlog does not prove GFIS runtime SOP E2E passed.",
-    "This backlog does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status."
+    "This backlog does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, or integrated status."
   ]
 }

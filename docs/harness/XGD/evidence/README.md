@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ADB6828C57
 title: evidence
 project: XGD
-related_projects: [GPC, WAES, KDS, Brain, XGD, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0

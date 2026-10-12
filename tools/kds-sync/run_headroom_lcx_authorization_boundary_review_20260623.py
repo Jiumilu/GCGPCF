@@ -18,7 +18,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -51,7 +51,7 @@ def build_md(result: dict) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623
 title: Headroom LCX Authorization Boundary Review Evidence 20260623
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -119,7 +119,7 @@ def main() -> int:
         "authorized_at",
         "sanitized_production_token_ledger",
         "rollback_plan_id",
-        "waes_harness_admission_decision",
+        "wame_harness_admission_decision",
     ]
     authorization_signal_present = True
     authorization_complete = True
@@ -161,7 +161,7 @@ def main() -> int:
             "authorized_at_present": True,
             "sanitized_production_token_ledger_present": True,
             "rollback_plan_present": True,
-            "waes_harness_admission_decision_present": True,
+            "wame_harness_admission_decision_present": True,
             "production_proxy_started": False,
             "production_sdk_enabled": False,
             "production_external_api_write": False,
@@ -178,7 +178,7 @@ def main() -> int:
             "not_full_production_authorization": True,
             "not_production_entry": True,
             "not_sanitized_production_token_measurement": True,
-            "not_waes_harness_admitted_for_production": True,
+            "not_wame_harness_admitted_for_production": True,
             "not_real_kds_write": True,
             "not_external_api_write": True,
             "not_sensitive_material_processing": True,
@@ -194,7 +194,7 @@ def main() -> int:
 doc_id: GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623
 title: Loop Round GPCF Headroom LCX Authorization Boundary Review 20260623
 project: GPCF
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -241,7 +241,7 @@ python3 tools/kds-sync/validate_headroom_lcx_authorization_boundary_review_20260
 
 ## 下一轮
 
-等待 WAES/Harness 的生产准入裁决；未裁决前不得进入生产。
+等待 WAME/Harness 的生产准入裁决；未裁决前不得进入生产。
 """,
         encoding="utf-8",
     )

@@ -10,7 +10,7 @@
       "GFIS",
       "GPC",
       "PVAOS",
-      "WAES",
+      "WAME",
       "KDS",
       "Brain",
       "PKC",
@@ -30,7 +30,7 @@
       "related_events",
       "source_refs",
       "evidence_refs",
-      "waes_gate_refs",
+      "wame_gate_refs",
       "kds_backlinks",
       "promotion_blockers",
       "next_action",
@@ -47,8 +47,8 @@
     "related_objects": [
       "CustomerRequirementOrPlatformOrder"
     ],
-    "waes_gate_refs": [
-      "waes://gate/customer-order-source-record-review"
+    "wame_gate_refs": [
+      "wame://gate/customer-order-source-record-review"
     ],
     "kds_backlinks": [
       "pending_real_source_record"
@@ -73,7 +73,7 @@
     "real_source_records": 0,
     "valid_source_records": 0,
     "runtime_primary_key_ready": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "accepted": false,
     "integrated": false,
     "production_ready": false
@@ -83,7 +83,7 @@
   "non_claims": [
     "does not create real source-of-record",
     "does not create runtime primary key",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not mark accepted or integrated",
     "does not mark production ready"
   ]

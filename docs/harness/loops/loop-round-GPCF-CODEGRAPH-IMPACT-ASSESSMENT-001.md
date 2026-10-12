@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-44DA9A4D2E
 title: GPCF CodeGraph Impact Assessment
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

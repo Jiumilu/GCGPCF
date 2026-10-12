@@ -41,9 +41,9 @@ superseded_by: []
 
 | 字段 | 可选值 | 含义 |
 |---|---|---|
-| `executionState` | planned / assigned_candidate / source_submitted_candidate / waes_rule_recorded / human_review_pending / committee_if_needed / returned / withdrawn / closed | 任务执行状态 |
+| `executionState` | planned / assigned_candidate / source_submitted_candidate / wame_rule_recorded / human_review_pending / committee_if_needed / returned / withdrawn / closed | 任务执行状态 |
 | `sourceReceiptStatus` | blank / waiting_source / metadata_received / redacted_source_received / returned / blocked | 资料接收状态 |
-| `waesRecordStatus` | blank / planned / recorded / returned / blocked | WAME 规则记录状态 |
+| `wameRecordStatus` | blank / planned / recorded / returned / blocked | WAME 规则记录状态 |
 | `humanReviewStatus` | blank / pending / pass / partial / returned / blocked | 人工确认状态 |
 | `committeeStatus` | none / filing_planned / decision_planned / filed / decided / not_required | 委员会备案或裁决状态 |
 | `bountyStatus` | candidate_only / ready_for_sponsor / resource_pending_freeze / published_if_confirmed / withdrawn / closed | 悬赏状态 |
@@ -53,7 +53,7 @@ superseded_by: []
 
 ## 4. ManualConfirmationExecutionRegister
 
-| registerId | taskId | linkedControlPointId | executionState | sourceReceiptStatus | waesRecordStatus | humanReviewStatus | committeeStatus | kdsPoolRefs | enhancedLedgerRefs | evidenceSlot | nextAction |
+| registerId | taskId | linkedControlPointId | executionState | sourceReceiptStatus | wameRecordStatus | humanReviewStatus | committeeStatus | kdsPoolRefs | enhancedLedgerRefs | evidenceSlot | nextAction |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `MER-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | `SCP-HBLC-FEA-202606-0001` | planned | blank | planned | blank | none | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 | 待填来源索引、脱敏摘要、负责人确认 | 等待湖北磷材项目组确认拓厂来源接收口径 |
 | `MER-HBLC-FEA-202606-0002` | `MCT-HBLC-FEA-202606-0002` | `SCP-HBLC-FEA-202606-0001` | planned | blank | planned | blank | none | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 / 争议池 | 待填 KDS 池挂接与增强账本挂接表 | 等待 KDS 记录人复核挂接关系 |

@@ -27,7 +27,7 @@ REQUIRED_DOC_TOKENS = [
     "逐步把各项目状态从 candidate/partial_verified/repair_required 推进到 ready_for_review",
     "只有经过人工确认，才允许进入 accepted、integrated 或客户验收状态",
     "确保项目群内所有会话识别项目群总体方案体系和实施方案体系",
-    "WAES -> XWAIL -> AaaS",
+    "WAME -> XWAIL -> AaaS",
     "KDS -> Brain",
     "GFIS/GPC/PVAOS -> SCaaS",
     "WAS -> Ontology -> XWAIL",

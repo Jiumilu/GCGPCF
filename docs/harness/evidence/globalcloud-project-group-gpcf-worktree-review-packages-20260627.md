@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GPCF-WORKTREE-REVIEW-PACKAGES-20260627
 title: GlobalCloud 项目群 GPCF 本仓工作区 Review 包拆分证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

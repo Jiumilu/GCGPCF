@@ -7,7 +7,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -26,7 +26,7 @@
     "authorized_at": "REQUIRED_USER_INPUT",
     "sanitized_production_token_ledger": "REQUIRED_USER_INPUT",
     "rollback_plan_id": "REQUIRED_USER_INPUT",
-    "waes_harness_admission_decision": "REQUIRED_USER_INPUT"
+    "wame_harness_admission_decision": "REQUIRED_USER_INPUT"
   },
   "human_attestations": {
     "telemetry_off_confirmed": "REQUIRED_USER_INPUT",
@@ -35,7 +35,7 @@
     "no_real_kds_write": "REQUIRED_USER_INPUT",
     "no_external_api_write": "REQUIRED_USER_INPUT",
     "rollback_plan_reviewed": "REQUIRED_USER_INPUT",
-    "waes_harness_evidence_attached": "REQUIRED_USER_INPUT"
+    "wame_harness_evidence_attached": "REQUIRED_USER_INPUT"
   },
   "required_false_until_completed": {
     "authorization_complete": false,

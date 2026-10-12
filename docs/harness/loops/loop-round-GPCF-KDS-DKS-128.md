@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CF2EC50BDC
 title: LOOP Round GPCF KDS DKS-128
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant repair notification snooze queue approval route preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-127 share approval preview，但只生成审批路由候选展示，不创建真实审批路线、审批步骤、审批人分配、审批请求、审批决定、ACL、外部共享、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 GFIS Assistant repair notification snooze queue approval route preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-127 share approval preview，但只生成审批路由候选展示，不创建真实审批路线、审批步骤、审批人分配、审批请求、审批决定、ACL、外部共享、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 

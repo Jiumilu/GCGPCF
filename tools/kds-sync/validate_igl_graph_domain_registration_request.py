@@ -63,7 +63,7 @@ def main() -> int:
     for key in [
         "mapped_to_six_categories",
         "binds_project_group_scope",
-        "no_kds_waes_loop_bypass",
+        "no_kds_wame_loop_bypass",
         "registry_body_unmodified",
         "candidate_boundary_retained",
     ]:
@@ -93,10 +93,10 @@ def main() -> int:
                     "registry_entry_added=true 需 registry_entry_ref 指向登记件")
         else:
             require(gates.get("registry_entry_added") is False, "registry_entry_added 非真时须为 false")
-        for key in ["waes_authorized", "integrated", "production_ready"]:
+        for key in ["wame_authorized", "integrated", "production_ready"]:
             require(gates.get(key) is False, f"gate must be false: {key}")
     else:
-        for key in ["registry_entry_added", "governance_reviewed", "waes_authorized", "accepted",
+        for key in ["registry_entry_added", "governance_reviewed", "wame_authorized", "accepted",
                     "integrated", "production_ready"]:
             require(gates.get(key) is False, f"gate must be false: {key}")
 
@@ -104,7 +104,7 @@ def main() -> int:
         "IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011",
         "request_package_generated | true",
         "submitted | true",
-        "waes_authorized | false",
+        "wame_authorized | false",
         "production_ready | false",
         "state-request:rejected",
     ]

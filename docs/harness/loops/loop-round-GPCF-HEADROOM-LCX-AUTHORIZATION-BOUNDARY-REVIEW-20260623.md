@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623
 title: Loop Round GPCF Headroom LCX Authorization Boundary Review 20260623
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,4 +49,4 @@ python3 tools/kds-sync/validate_headroom_lcx_authorization_boundary_review_20260
 
 ## 下一轮
 
-等待 WAES/Harness 的生产准入裁决；未裁决前不得进入生产。
+等待 WAME/Harness 的生产准入裁决；未裁决前不得进入生产。

@@ -14,7 +14,7 @@ PLAN_PATHS = [
     PROJECT_ROOT / "GlobalCloud XWAIL/GlobalCloud XWAIL 总体方案.md",
     PROJECT_ROOT / "GlobalCloud AAAS/docs/GlobalCloud AaaS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud GPC/GlobalCloud GPC 总体方案.md",
-    PROJECT_ROOT / "GlobalCloud WAES/GlobalCloud WAES 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud WAME/GlobalCloud WAME 总体方案.md",
     PROJECT_ROOT / "GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud KDS/GlobalCloud KDS 总体方案.md",
@@ -34,15 +34,15 @@ REQUIRED_TERMS = [
     "Ontology",
     "XWAIL",
     "WAE",
-    "WAES",
+    "WAME",
     "AaaS",
 ]
 
 FORBIDDEN_TERMS = [
     "GPC-Native",
-    "WAES 是业务主账",
+    "WAME 是业务主账",
     "WAE = 浏览器",
-    "WAES = 主账",
+    "WAME = 主账",
     "协同中台",
 ]
 

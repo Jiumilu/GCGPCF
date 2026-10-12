@@ -3,7 +3,7 @@
 
 This validator checks local policies, type declarations, and fixtures only. It
 does not approve writeback, write GFIS/GPC/ERP/MES, mutate KDS lifecycle, create
-WAES gate results, create KWE work items, confirm revenue or scores, or call
+WAME gate results, create KWE work items, confirm revenue or scores, or call
 external APIs.
 """
 
@@ -29,7 +29,7 @@ NO_WRITE_KEYS = (
     "writesMes",
     "writesKdsAcceptedFact",
     "writesKdsLifecycle",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesTargetReceipt",
     "writesRevenueOrScoreConfirmation",
@@ -98,7 +98,7 @@ def main() -> int:
         "businessWriteAllowed": 0,
         "targetReceipts": 0,
         "itemsWithLifecycleAudit": 0,
-        "itemsWithWaesGateRefs": 0,
+        "itemsWithWameGateRefs": 0,
         "metadataOnlyItems": 0,
         "controlledOriginalItems": 0,
     }
@@ -107,7 +107,7 @@ def main() -> int:
     for item in items:
         item_id = item["preflightId"]
         status = item["preflightStatus"]
-        waes_status = item["waesGateStatus"]
+        wame_status = item["wameGateStatus"]
         lifecycle_status = item["lifecycleAuditStatus"]
         sensitive = item["sensitiveHandling"]
 
@@ -132,18 +132,18 @@ def main() -> int:
         elif status not in {"repair_required", "blocked"}:
             fail(failures, f"{item_id}: missing lifecycleAuditRefs must repair or block")
 
-        if item["waesGateRefs"]:
-            counts["itemsWithWaesGateRefs"] += 1
+        if item["wameGateRefs"]:
+            counts["itemsWithWameGateRefs"] += 1
 
         if not item["evidenceRefs"] and status not in {"repair_required", "blocked"}:
             fail(failures, f"{item_id}: missing evidence must repair or block")
 
-        if waes_status == "blocked" and status != "blocked":
-            fail(failures, f"{item_id}: blocked WAES gate must block preflight")
-        if waes_status == "committee_required" and status != "committee_required":
-            fail(failures, f"{item_id}: committee WAES gate must require committee")
-        if waes_status == "human_required" and sensitive != "metadata_only" and status != "human_required":
-            fail(failures, f"{item_id}: human WAES gate must require human when not metadata-only")
+        if wame_status == "blocked" and status != "blocked":
+            fail(failures, f"{item_id}: blocked WAME gate must block preflight")
+        if wame_status == "committee_required" and status != "committee_required":
+            fail(failures, f"{item_id}: committee WAME gate must require committee")
+        if wame_status == "human_required" and sensitive != "metadata_only" and status != "human_required":
+            fail(failures, f"{item_id}: human WAME gate must require human when not metadata-only")
         if sensitive == "metadata_only":
             counts["metadataOnlyItems"] += 1
             if status not in {"metadata_only_required", "blocked"}:
@@ -180,7 +180,7 @@ def main() -> int:
         "writesMes": totals["writesMes"],
         "writesKdsAcceptedFact": totals["writesKdsAcceptedFact"],
         "writesKdsLifecycle": totals["writesKdsLifecycle"],
-        "writesWaesGateResult": totals["writesWaesGateResult"],
+        "writesWameGateResult": totals["writesWameGateResult"],
         "writesKweWorkItem": totals["writesKweWorkItem"],
         "writesTargetReceipt": totals["writesTargetReceipt"],
         "writesRevenueOrScoreConfirmation": totals["writesRevenueOrScoreConfirmation"],
@@ -209,7 +209,7 @@ def main() -> int:
         f"business_write_allowed={actual['businessWriteAllowed']} "
         f"target_receipts={actual['targetReceipts']} "
         f"items_with_lifecycle_audit={actual['itemsWithLifecycleAudit']} "
-        f"items_with_waes_gate_refs={actual['itemsWithWaesGateRefs']} "
+        f"items_with_wame_gate_refs={actual['itemsWithWameGateRefs']} "
         f"metadata_only_items={actual['metadataOnlyItems']} "
         f"controlled_original_items={actual['controlledOriginalItems']} "
         f"writes_gfis={actual['writesGfis']} "
@@ -218,7 +218,7 @@ def main() -> int:
         f"writes_mes={actual['writesMes']} "
         f"writes_kds_accepted_fact={actual['writesKdsAcceptedFact']} "
         f"writes_kds_lifecycle={actual['writesKdsLifecycle']} "
-        f"writes_waes_gate_result={actual['writesWaesGateResult']} "
+        f"writes_wame_gate_result={actual['writesWameGateResult']} "
         f"writes_kwe_work_item={actual['writesKweWorkItem']} "
         f"writes_target_receipt={actual['writesTargetReceipt']} "
         f"writes_revenue_or_score_confirmation={actual['writesRevenueOrScoreConfirmation']} "

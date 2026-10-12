@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7FB5D5F117
 title: Loop 治理效率债务定位器证据
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,4 +41,4 @@ Evidence ID: `LOOP-GOV-EFF-DEBT-LOCATOR-20260617`
 
 - 本定位器不重写历史轮次记录。
 - 本定位器不证明 GFIS runtime SOP E2E 已通过。
-- 本定位器不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本定位器不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。

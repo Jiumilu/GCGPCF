@@ -52,7 +52,7 @@ record_schema:
     - runtime_dependency_ok
     - rollback_plan_verified
     - owner_authorization_present
-    - waes_decision
+    - wame_decision
     - answer_equivalence
     - write_requested
     - write_allowed
@@ -77,12 +77,12 @@ record_schema:
       enum: [writeback_live, preview]
     tenant_id:
       enum: [project_group]
-    waes_decision:
+    wame_decision:
       enum: [pass, warn, block]
     answer_equivalence:
       enum: [pass, partial, fail, unknown]
     expected_blocked_reason:
-      enum: [none, authorization_absent, runtime_dependency_missing, waes_block, token_missing, rollback_not_verified, operation_invalid]
+      enum: [none, authorization_absent, runtime_dependency_missing, wame_block, token_missing, rollback_not_verified, operation_invalid]
     owner_authorization_present:
       enum: [true, false]
     write_requested:

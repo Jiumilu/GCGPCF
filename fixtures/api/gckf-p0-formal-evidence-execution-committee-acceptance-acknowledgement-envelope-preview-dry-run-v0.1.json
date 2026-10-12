@@ -28,7 +28,7 @@
       "routing_package_owner",
       "committee_secretariat",
       "committee_representative",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "acl_owner",
@@ -46,7 +46,7 @@
       "candidate_conflict_of_interest_snapshot",
       "candidate_blocker_and_hold_snapshot",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "envelope_integrity_check",
       "no_write_attestation"
@@ -108,7 +108,7 @@
       "candidate_conflict_of_interest_snapshot_present",
       "candidate_blocker_and_hold_snapshot_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "envelope_integrity_check_present",
       "no_write_attestation_present",
@@ -128,14 +128,14 @@
       "candidateConflictOfInterestSnapshotRef",
       "candidateBlockerAndHoldSnapshotRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "envelopeIntegrityCheckRef",
       "requestOwnerRef",
       "routingPackageOwnerRef",
       "committeeSecretariatRef",
       "committeeRepresentativeRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "aclOwnerRef",
@@ -166,7 +166,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_envelope_preview_to_formal_acknowledgement",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

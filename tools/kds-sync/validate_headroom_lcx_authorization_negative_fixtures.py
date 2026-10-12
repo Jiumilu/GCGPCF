@@ -18,7 +18,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -38,7 +38,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 
@@ -82,10 +82,10 @@ def reject_reason(candidate: dict) -> str | None:
     values = {field: fields[field].get("value") for field in REQUIRED_FIELDS}
     if any(value == "REQUIRED_USER_INPUT" for value in values.values()):
         return "placeholder_not_replaced"
-    if not values["waes_harness_admission_decision"]:
-        return "waes_harness_decision_required"
-    if values["waes_harness_admission_decision"] not in {"admitted_for_sanitized_measurement_precheck", "blocked"}:
-        return "waes_harness_decision_required"
+    if not values["wame_harness_admission_decision"]:
+        return "wame_harness_decision_required"
+    if values["wame_harness_admission_decision"] not in {"admitted_for_sanitized_measurement_precheck", "blocked"}:
+        return "wame_harness_decision_required"
     ledger_value = values["sanitized_production_token_ledger"]
     if not isinstance(ledger_value, str):
         return "sanitized_ledger_must_be_reference_only"

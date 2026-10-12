@@ -14,7 +14,7 @@
     "collectionChannels": [
       "controlled_document_submission",
       "signed_response_package",
-      "waes_review_note",
+      "wame_review_note",
       "kds_backlink_candidate"
     ],
     "requiredResponseFields": [
@@ -26,7 +26,7 @@
       "responsibility_boundary",
       "next_action_owner",
       "no_write_boundary_confirmation",
-      "waes_review_requirement",
+      "wame_review_requirement",
       "harness_evidence_candidate_ref",
       "kds_backlink_candidate_ref",
       "human_confirmation_requirement"
@@ -36,13 +36,13 @@
       "repair_owner_identity_matched",
       "hold_context_refs_preserved",
       "no_write_boundary_preserved",
-      "waes_review_pending",
+      "wame_review_pending",
       "human_confirmation_pending"
     ],
     "blockingConditions": [
       "missing_actual_repair_owner_response",
       "missing_signed_response_package",
-      "missing_waes_review_note",
+      "missing_wame_review_note",
       "missing_human_confirmation"
     ],
     "forbiddenActions": [

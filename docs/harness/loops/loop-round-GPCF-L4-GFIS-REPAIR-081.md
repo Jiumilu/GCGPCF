@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-83CA73C4BE
 title: GPCF-L4-GFIS-REPAIR-081 GFIS 辽宁远航四项原始凭证正式来源总门禁
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -106,4 +106,4 @@ pass
 
 ## 下一步
 
-优先接收 4 项原始凭证中任一项的正式原件脱敏索引，再在 GFIS 提交 formal source type real submission 候选，并保持人工/WAES/KDS 复核。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。
+优先接收 4 项原始凭证中任一项的正式原件脱敏索引，再在 GFIS 提交 formal source type real submission 候选，并保持人工/WAME/KDS 复核。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。

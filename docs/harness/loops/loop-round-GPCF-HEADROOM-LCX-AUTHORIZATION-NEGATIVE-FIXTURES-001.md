@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F59787B942
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -51,7 +51,7 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 反馈
 
-负向 fixtures 必须全部 rejected；任何字段缺失、占位符未替换、敏感原文混入、WAES/Harness 裁决缺失、生产门禁误置 true 或项目范围不足都不得进入测量。
+负向 fixtures 必须全部 rejected；任何字段缺失、占位符未替换、敏感原文混入、WAME/Harness 裁决缺失、生产门禁误置 true 或项目范围不足都不得进入测量。
 
 ## 下一轮
 

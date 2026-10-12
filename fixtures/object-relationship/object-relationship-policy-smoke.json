@@ -18,7 +18,7 @@
     ],
     "sourceRequiredForFormalFact": true,
     "evidenceRequiredForEvidenceReady": true,
-    "waesGateRequiredForCandidates": true,
+    "wameGateRequiredForCandidates": true,
     "confirmationRequiredForWritebackCandidate": true,
     "aiCannotCreateFormalWritebackRelation": true,
     "loopCannotPromoteBusinessStatus": true,

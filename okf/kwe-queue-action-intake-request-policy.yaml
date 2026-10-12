@@ -7,7 +7,7 @@ purpose: >
   Define local dry-run contract for KWE queue action intake requests from
   Brain, PKC, and GFIS Assistant queue read models. Requests capture user
   intent only. They do not create KWE work items, mutate KDS lifecycle, create
-  WAES gate results, write business systems, complete approvals, confirm
+  WAME gate results, write business systems, complete approvals, confirm
   revenue or scores, or call external APIs.
 
 required_fields:
@@ -63,7 +63,7 @@ no_write_guards:
   writes_kds_lifecycle: 0
   writes_kds_fact: 0
   writes_kds_accepted_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_business_system: 0
   writes_target_receipt: 0
   writes_committee_decision_completion: 0

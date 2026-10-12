@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5FD034A1C2
 title: Headroom Project Application Coverage Matrix
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 | GPCF | 02-governance/loop/LOOP_CONTROL_BOARD.md | 3 | 3 | 0.9659 | false |
 | KDS | docs/harness/KDS/loop-state.md | 3 | 3 | 0.777273 | false |
 | Brain | 09-status/gpcf-project-status-matrix.md | 3 | 3 | 0.994427 | false |
-| WAES | 09-status/gpcf-project-status-matrix.md | 3 | 3 | 0.99473 | false |
+| WAME | 09-status/gpcf-project-status-matrix.md | 3 | 3 | 0.99473 | false |
 | GFIS | 08-evidence-samples/GFIS/loop-state.md | 3 | 3 | 0.998611 | false |
 | GPC | 09-status/gpcf-project-status-matrix.md | 3 | 3 | 0.996846 | false |
 | PVAOS | docs/harness/PVAOS/loop-state.md | 3 | 3 | 0.734615 | false |

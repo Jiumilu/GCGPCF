@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-001
 title: GPCF PROJECT GROUP REVIEW AUTH GPCF WORKTREE CONFIRMATION 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

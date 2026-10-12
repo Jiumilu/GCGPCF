@@ -21,7 +21,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -94,11 +94,11 @@
       "raw_text_stored": false
     },
     {
-      "project": "WAES",
-      "scenario": "waes_status_matrix_summary",
+      "project": "WAME",
+      "scenario": "wame_status_matrix_summary",
       "source_path": "09-status/gpcf-project-status-matrix.md",
       "required_markers": [
-        "GlobalCloud WAES",
+        "GlobalCloud WAME",
         "governance",
         "ready_for_review"
       ],

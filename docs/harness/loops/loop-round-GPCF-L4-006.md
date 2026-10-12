@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-18774733CF
 title: GPCF-L4-006 最小闭环历史校准
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 ## 动作
 
 - 校验 PVAOS 只提供租户、组织、伙伴、项目空间和权限边界输入。
-- 保持 GPC / GFIS / WAES / KDS 的事实边界，不把门户配置当成业务完成。
+- 保持 GPC / GFIS / WAME / KDS 的事实边界，不把门户配置当成业务完成。
 
 ## 输出
 

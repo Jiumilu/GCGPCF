@@ -87,7 +87,7 @@ def main() -> int:
     require(record_ids == ACCEPTED_IDS, "candidate record ids mismatch")
     for record in records:
         require(record.get("decision") == "accept_limited", f"candidate decision mismatch: {record.get('id')}")
-        require(record.get("target_queue") == "waes_kds_limited_candidate_queue", f"target queue mismatch: {record.get('id')}")
+        require(record.get("target_queue") == "wame_kds_limited_candidate_queue", f"target queue mismatch: {record.get('id')}")
         required_fields = record.get("required_fields", [])
         for field in ["candidate_id", "accepted_scope", "verification_reason", "rag_admission", "kds_admission", "provenance_evidence_path", "review_status"]:
             require(field in required_fields, f"missing required field {field}: {record.get('id')}")

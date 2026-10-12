@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0B2F2742DA
 title: LOOP Round GPCF-KDS-DKS-028 - 葛化 GFIS AI 助手首批问答与文档验收评测集实化
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 - 本轮只补齐评测集，不执行真实评测。
 - 不创建真实账号、不配置生产权限、不写生产数据、不调用真实外部 API。
 - 不写真实 GFIS 主账，不创建运行层主键。
-- 不写真实 KDS API，不写真实 WAES API。
+- 不写真实 KDS API，不写真实 WAME API。
 - 不确认正式积分、收益、产值、到账、POD、订单或 SOP 生效。
 - 不升级 accepted 或 integrated。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-REVIEW-PACKAGES-20260625
 title: GlobalCloud 项目群提交前 Review 分组证据 2026-06-25
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

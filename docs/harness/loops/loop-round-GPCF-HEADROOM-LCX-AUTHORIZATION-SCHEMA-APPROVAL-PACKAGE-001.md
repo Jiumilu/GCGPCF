@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1320B915AE
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 反馈
 
-schema 与人工审批包模板只提供结构化授权入口，不构成授权完成。生产测量仍需 6 个字段和 WAES/Harness evidence。
+schema 与人工审批包模板只提供结构化授权入口，不构成授权完成。生产测量仍需 6 个字段和 WAME/Harness evidence。
 
 ## 下一轮
 

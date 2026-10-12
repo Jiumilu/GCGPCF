@@ -90,7 +90,7 @@ def main() -> int:
     require(summary.get("search_success_rate") == 1.0, "search success rate must be 1.0")
     require(summary.get("source_provenance_rate") == 1.0, "source provenance must be 1.0")
     require(summary.get("duplicate_rate") == 0.0, "duplicate rate must be 0.0")
-    require(summary.get("review_status") == "pending_waes_kds_review", "review status mismatch")
+    require(summary.get("review_status") == "pending_wame_kds_review", "review status mismatch")
 
     entries = evidence.get("entries", [])
     require(isinstance(entries, list), "entries must be a list")
@@ -102,7 +102,7 @@ def main() -> int:
         require(entry.get("result_url_count", 0) >= 1, f"entry missing URL count: {entry.get('id')}")
         require(entry.get("source_provenance_present") is True, f"entry missing provenance: {entry.get('id')}")
         require(entry.get("rag_admission") == "limited", f"entry admission must be limited: {entry.get('id')}")
-        require(entry.get("review_status") == "pending_waes_kds_review", f"entry review status mismatch: {entry.get('id')}")
+        require(entry.get("review_status") == "pending_wame_kds_review", f"entry review status mismatch: {entry.get('id')}")
         url = entry.get("first_url")
         require(isinstance(url, str) and url.startswith("https://"), f"entry first_url invalid: {entry.get('id')}")
         require(url not in seen_urls, f"duplicate first_url: {url}")
@@ -111,7 +111,7 @@ def main() -> int:
     decision = evidence.get("admission_decision", {})
     require(decision.get("kds_admission") == "limited_candidate_only", "KDS admission must remain limited")
     require(decision.get("rag_admission") == "limited", "RAG admission must remain limited")
-    require(decision.get("waes_review_status") == "pending_waes_kds_review", "WAES review status mismatch")
+    require(decision.get("wame_review_status") == "pending_wame_kds_review", "WAME review status mismatch")
     require(decision.get("status_upgrade_allowed") is False, "status upgrade must be false")
     require(decision.get("production_integration_allowed") is False, "production integration must be false")
     require(decision.get("accepted_or_integrated_claim_allowed") is False, "accepted/integrated claim must be false")
@@ -124,7 +124,7 @@ def main() -> int:
 
     for phrase in [
         "external_search_invoked=false",
-        "pending_waes_kds_review",
+        "pending_wame_kds_review",
         "limited_candidate_only",
         "不写 KDS canonical",
         "不证明 Agent-Reach 已生产集成",
@@ -146,7 +146,7 @@ def main() -> int:
     print(
         "agent_reach_candidate_search_replay_ledger=pass "
         "entry_count=5 search_success_rate=1.0 source_provenance_rate=1.0 "
-        "duplicate_rate=0.0 review_status=pending_waes_kds_review "
+        "duplicate_rate=0.0 review_status=pending_wame_kds_review "
         "external_search_invoked=false status_upgrade_allowed=false"
     )
     return 0

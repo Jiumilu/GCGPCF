@@ -9,19 +9,19 @@
       "evidence": "GPC platform order → GFIS factory order mapping defined in object-contracts.md",
       "gate": "FactoryOrder requires release gate; direct creation blocked"
     },
-    "CON-GPC-WAES-001": {
+    "CON-GPC-WAME-001": {
       "from": "GPC (supply-chain platform)",
-      "to": "WAES (governance gate)",
+      "to": "WAME (governance gate)",
       "verification": "pass",
-      "evidence": "SampleApproval and ProductionRelease gates use WAES for decision and confirmation",
-      "gate": "WAES reads GPC intent, does not modify platform records"
+      "evidence": "SampleApproval and ProductionRelease gates use WAME for decision and confirmation",
+      "gate": "WAME reads GPC intent, does not modify platform records"
     },
-    "CON-GFIS-WAES-001": {
+    "CON-GFIS-WAME-001": {
       "from": "GFIS (factory execution)",
-      "to": "WAES (governance gate)",
+      "to": "WAME (governance gate)",
       "verification": "pass",
-      "evidence": "REAL-001 through REAL-007 validate GFIS→WAES evidence flow",
-      "gate": "WAES confirmation required before verified artifact"
+      "evidence": "REAL-001 through REAL-007 validate GFIS→WAME evidence flow",
+      "gate": "WAME confirmation required before verified artifact"
     },
     "CON-EDGE-GFIS-001": {
       "from": "Edge (field collection)",
@@ -30,11 +30,11 @@
       "evidence": "Edge field collection feeds raw data to GFIS; integration pending real hardware",
       "gate": "Edge data must pass validation before entering GFIS runtime"
     },
-    "CON-EDGE-WAES-001": {
+    "CON-EDGE-WAME-001": {
       "from": "Edge (field collection)",
-      "to": "WAES (governance gate)",
+      "to": "WAME (governance gate)",
       "verification": "defined_only",
-      "evidence": "Edge field audit trail feeds WAES evidence ledger; integration pending",
+      "evidence": "Edge field audit trail feeds WAME evidence ledger; integration pending",
       "gate": "Edge evidence follows same admission rules as other sources"
     }
   },

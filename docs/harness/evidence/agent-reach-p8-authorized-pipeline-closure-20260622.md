@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-AUTHORIZED-PIPELINE-CLOSURE-20260622
 title: Agent-Reach P8 授权后 Pipeline 闭包证据 2026-06-22
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

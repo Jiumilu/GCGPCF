@@ -22,7 +22,7 @@ superseded_by: []
 
 本文件定义委员会处理积分确认、收益分配争议、重大违规、悬赏结算、潜在产值转正式产值、跨单位贡献争议、第三方池子分配、项目组内部争议、重大 RAG 强引用争议和收益池规则争议时的 DecisionRecord 输入输出契约。
 
-委员会只生成治理域 DecisionRecord、冻结建议和后续动作，不直接写 GFIS/GPC/ERP/MES，不直接分配收益，不直接确认积分，不绕过 WAES/KWE/Harness。
+委员会只生成治理域 DecisionRecord、冻结建议和后续动作，不直接写 GFIS/GPC/ERP/MES，不直接分配收益，不直接确认积分，不绕过 WAME/KWE/Harness。
 
 ## 2. Decision 输入契约
 

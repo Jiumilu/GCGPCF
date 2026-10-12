@@ -35,7 +35,7 @@ export type GfisAssistantRepairActionGuardEventPreviewBlockedAction =
   | "create_kwe_work_item"
   | "create_confirmation_record"
   | "create_decision_record"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "persist_evidence"
   | "approve_business_write"
   | "promote_lifecycle"
@@ -46,7 +46,7 @@ export interface GfisAssistantRepairActionGuardEventPreviewNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesEventRecord: 0;
   writesActionReceipt: 0;
@@ -91,7 +91,7 @@ export interface GfisAssistantRepairActionGuardEventPreview {
   createsKweWorkItem: false;
   createsConfirmationRecord: false;
   createsDecisionRecord: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;
   promotesLifecycle: false;
@@ -116,7 +116,7 @@ export interface GfisAssistantRepairActionGuardEventPreviewPolicy {
     eventPreviewIsNotKweWorkItem: boolean;
     eventPreviewIsNotConfirmation: boolean;
     eventPreviewIsNotDecisionRecord: boolean;
-    eventPreviewIsNotWaesResult: boolean;
+    eventPreviewIsNotWameResult: boolean;
     eventPreviewIsNotBusinessWriteback: boolean;
     createsEventRecordMustBeFalse: boolean;
     createsActionReceiptMustBeFalse: boolean;
@@ -126,7 +126,7 @@ export interface GfisAssistantRepairActionGuardEventPreviewPolicy {
     createsKweWorkItemMustBeFalse: boolean;
     createsConfirmationRecordMustBeFalse: boolean;
     createsDecisionRecordMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     persistsEvidenceMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;
     promotesLifecycleMustBeFalse: boolean;

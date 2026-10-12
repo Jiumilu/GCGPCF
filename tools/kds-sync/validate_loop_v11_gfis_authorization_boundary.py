@@ -47,14 +47,14 @@ def run_gfis_validator(path: Path, marker: str) -> str:
             "real_runtime_primary_keys",
             "real_review_queue_items",
             "real_runtime_intake_items",
-            "real_waes_reviews",
+            "real_wame_reviews",
             "real_verified_artifacts",
         ]:
             require(counts.get(key) == 0, f"GFIS real count must remain 0: {key}")
         return (
             "gfis_runtime_sop_e2e_real=repair_required real_source_records=0 "
             "real_runtime_primary_keys=0 real_review_queue_items=0 "
-            "real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0"
+            "real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0"
         )
     raise SystemExit(f"FAIL validate_loop_v11_gfis_authorization_boundary: unsupported validator: {path}")
 
@@ -71,7 +71,7 @@ def require_false_flags(payload: dict[str, Any], context: str) -> None:
         "runtime_primary_key_created",
         "review_queue_created",
         "runtime_intake_created",
-        "waes_review_created",
+        "wame_review_created",
         "verified_artifact_created",
         "accepted",
         "integrated",
@@ -80,7 +80,7 @@ def require_false_flags(payload: dict[str, Any], context: str) -> None:
         "production_write",
         "real_external_api_write",
         "real_kds_write",
-        "real_waes_write",
+        "real_wame_write",
         "schema_migrate",
         "bench_migrate",
         "commit",
@@ -138,7 +138,7 @@ def main() -> int:
         "real_runtime_primary_keys=0",
         "real_review_queue_items=0",
         "real_runtime_intake_items=0",
-        "real_waes_reviews=0",
+        "real_wame_reviews=0",
         "real_verified_artifacts=0",
     ]:
         require(phrase in gfis_real_output, f"GFIS real output missing phrase: {phrase}")
@@ -151,7 +151,7 @@ def main() -> int:
         "post_submit_verification_plan_commands=7 "
         "manual_submission_executed=false real_target_files=0 "
         "valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 "
-        "runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false customer_accepted=false"
     )
     return 0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-05FF4E3871
 title: LOOP Round GPCF KDS DKS-141
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,14 +20,14 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 approval packet routing queue notification preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-140 routing queue preview，但只展示候选通知、候选通知渠道、候选收件人、通知优先级、阻断通知数量和下一步建议，不创建真实 notification、notification delivery、message、inbox item、routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 approval packet routing queue notification preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-140 routing queue preview，但只展示候选通知、候选通知渠道、候选收件人、通知优先级、阻断通知数量和下一步建议，不创建真实 notification、notification delivery、message、inbox item、routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
 - DKS-140 routing queue preview 边界。
 - DKS-139 approval packet preview 边界。
 - `okf/committee-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 - GFIS / Brain / PKC no-write contract 覆盖清单。
 
 ## 动作
@@ -54,4 +54,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-141 仍是本地预览与候选展示能力，不代表 notification、notification delivery、message、inbox item、routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、KWE 工单、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-142：approval packet routing queue notification acknowledgement preview no-write，用于展示候选通知确认状态，但仍不得写入真实审批、裁决、冻结、通知或 evidence。
+DKS-141 仍是本地预览与候选展示能力，不代表 notification、notification delivery、message、inbox item、routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、KWE 工单、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-142：approval packet routing queue notification acknowledgement preview no-write，用于展示候选通知确认状态，但仍不得写入真实审批、裁决、冻结、通知或 evidence。

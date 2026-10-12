@@ -49,7 +49,7 @@ superseded_by: []
 GFIS 264 validator：
 
 ```text
-gfis_customer_requirement_platform_order_valid_source_record_index_change_listener=pass source_261_receiving_directory_exists=1 source_261_valid_source_records=0 source_263_weak_primary_key_open_attempts=6 source_263_rejected_primary_key_open_attempts=6 listener_items=1 receiving_directory_exists=1 receiving_readme_exists=1 expected_index_files=1 source_record_index_files_found=0 new_source_record_index_files=0 changed_source_record_index_files=0 unexpected_files=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_recheck_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_valid_source_record_index_change_listener_no_new_records runtime_sop_e2e=repair_required
+gfis_customer_requirement_platform_order_valid_source_record_index_change_listener=pass source_261_receiving_directory_exists=1 source_261_valid_source_records=0 source_263_weak_primary_key_open_attempts=6 source_263_rejected_primary_key_open_attempts=6 listener_items=1 receiving_directory_exists=1 receiving_readme_exists=1 expected_index_files=1 source_record_index_files_found=0 new_source_record_index_files=0 changed_source_record_index_files=0 unexpected_files=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_recheck_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_valid_source_record_index_change_listener_no_new_records runtime_sop_e2e=repair_required
 ```
 
 GFIS runtime SOP validator：
@@ -85,7 +85,7 @@ GFIS 真项目仓已经建立 source-record index 变更监听，但当前没有
 - runtime_primary_key_ready=0
 - review_queue=0
 - runtime_intake=0
-- waes_review=0
+- wame_review=0
 - verified=0
 
 因此 GPCF 总控继续保持 `partial_repair` / `repair_required`。不得把 Demo E2E、KDS candidate、报价单、Loop 文档或空目录监听写成业务完成。

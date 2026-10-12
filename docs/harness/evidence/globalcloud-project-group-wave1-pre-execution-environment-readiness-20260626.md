@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-WAVE1-PRE-EXECUTION-ENVIRONMENT-READINESS-20260626
 title: GlobalCloud 项目群 Wave 1 执行前环境就绪检查 2026-06-26
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ customer_accepted = false
 
 | pack_id | 项目 | 检查对象 | 检查结果 | 说明 |
 |---|---|---|---|---|
-| `WAVE1-WAES-LINT-RUNTIME-001` | WAES | repo path、`package.json` scripts: `lint`、`check`、`typecheck`、`test`、`build`、`check:wasm` | `pass` | 仅确认 scripts 存在，未执行命令，未修复源码 |
+| `WAVE1-WAME-LINT-RUNTIME-001` | WAME | repo path、`package.json` scripts: `lint`、`check`、`typecheck`、`test`、`build`、`check:wasm` | `pass` | 仅确认 scripts 存在，未执行命令，未修复源码 |
 | `WAVE1-GFIS-REAL-SOR-001` | GFIS | repo path、GFIS package scripts、GPCF validator `validate_gfis_was_source_record_submission_precheck.py`、GFIS source-record 相关脚本 | `pass` | 仅确认接收/预检入口存在，未读取或接收真实 source-of-record |
 | `WAVE1-GPC-EXTERNAL-RUNTIME-001` | GPC | repo path、`package.json` scripts: `quality:100`、`quality:ops`、`test:e2e`、GPCF validator `validate_gpc_evidence_browser_repair.py` | `pass` | 仅确认脚本存在，未执行生产确认、外部联调或 runtime surface 检查 |
 | `WAVE1-BRAIN-HUMAN-REVIEW-001` | Brain | repo path、Brain package scripts: `lint`、`test`、`typecheck`、`validate:harness-evidence`、`validate:loop-harness`、GPCF validator `validate_brain_review_handoff.py` | `pass` | 仅确认人工审查前本地检查入口存在，未升级 accepted/integrated |
@@ -74,7 +74,7 @@ noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
 
 | 检查 | 命令 |
 |---|---|
-| WAES scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/package.json'); ..."` |
+| WAME scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/package.json'); ..."` |
 | GPC scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/package.json'); ..."` |
 | GPCF validators | `test -f tools/kds-sync/<validator>.py` |
 | Brain scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/package.json'); ..."` |
@@ -111,7 +111,7 @@ customer_accepted = false
 
 ```text
 wave1_current_preflight_replay_20260626 = pass
-waes_script_check = pass
+wame_script_check = pass
 gpc_script_check = pass
 brain_script_check = pass
 gpcf_validator_check = pass
@@ -122,7 +122,7 @@ action_executed = false
 
 | pack_id | 当前复核 | 结果 | 边界 |
 |---|---|---|---|
-| `WAVE1-WAES-LINT-RUNTIME-001` | 检查 WAES `package.json` 中 `lint`、`check`、`typecheck`、`test`、`build`、`check:wasm` 是否存在 | `pass` | 仅确认脚本存在，未运行 WAES 修复或质量命令 |
+| `WAVE1-WAME-LINT-RUNTIME-001` | 检查 WAME `package.json` 中 `lint`、`check`、`typecheck`、`test`、`build`、`check:wasm` 是否存在 | `pass` | 仅确认脚本存在，未运行 WAME 修复或质量命令 |
 | `WAVE1-GFIS-REAL-SOR-001` | 检查 GFIS 仓库、`package.json`、source-record / SOR / intake 相关本地入口 | `pass` | 仅发现入口，未接收、读取或登记真实 source-of-record |
 | `WAVE1-GPC-EXTERNAL-RUNTIME-001` | 检查 GPC `package.json` 中 `quality:100`、`quality:ops`、`test:e2e` 是否存在 | `pass` | 仅确认脚本存在，未执行生产确认、外部联调或 runtime surface 检查 |
 | `WAVE1-BRAIN-HUMAN-REVIEW-001` | 检查 Brain `package.json` 中 `lint`、`test`、`typecheck`、`validate:harness-evidence`、`validate:loop-harness` 是否存在 | `pass` | 仅确认人工审查前本地检查入口存在，未升级 accepted/integrated |

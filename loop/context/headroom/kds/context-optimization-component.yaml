@@ -17,7 +17,7 @@ fact_authority: false
 evidence_authority: false
 source_of_record_policy: Headroom memory must not become KDS source of record
 memory_status: working_memory_candidate_only
-policy_controlled_by: WAES
+policy_controlled_by: WAME
 evidence_recorded_by: Harness
 kds_status: candidate_component
 production_admission_gate: false

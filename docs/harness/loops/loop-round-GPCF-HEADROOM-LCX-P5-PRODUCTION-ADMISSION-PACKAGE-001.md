@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FA44EE9146
 title: Loop Round GPCF-HEADROOM-LCX-P5-PRODUCTION-ADMISSION-PACKAGE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 1. 汇总 P0-P4 LCX evidence chain。
 2. 纳入 production token authorization package 和 action queue。
-3. 登记缺失授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划和 WAES/Harness 准入裁决。
+3. 登记缺失授权窗口、审批人、审批时间、脱敏生产 token 台账、回滚计划和 WAME/Harness 准入裁决。
 4. 生成 P5 evidence 和 validator。
 
 ## 输出
@@ -54,4 +54,4 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 下一轮
 
-`GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001`：等待人工授权窗口与 WAES/Harness 裁决；未授权前不得进入生产。
+`GPCF-HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-001`：等待人工授权窗口与 WAME/Harness 裁决；未授权前不得进入生产。

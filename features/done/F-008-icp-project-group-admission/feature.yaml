@@ -14,7 +14,7 @@ scope:
   out:
     - 真实业务集成
     - 生产部署
-    - 真实 KDS、GPC、GFIS、PVAOS 或 WAES 写入
+    - 真实 KDS、GPC、GFIS、PVAOS 或 WAME 写入
     - accepted、integrated、production_ready 或 customer_accepted 状态提升
 acceptance:
   - validate_icp_project_registration.py 通过

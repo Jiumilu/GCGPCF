@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0F583D13A7
 title: KDS Markdown 化 OKF 兼容层与 ODF 治理全量治理闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

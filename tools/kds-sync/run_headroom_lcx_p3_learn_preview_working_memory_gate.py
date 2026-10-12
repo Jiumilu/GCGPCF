@@ -18,7 +18,7 @@ HEADROOM_BIN = HEADROOM_VENV / "bin/headroom"
 LEARN_PREVIEW = ROOT / "loop/context/headroom/scripts/learn-preview.sh"
 APPLY_APPROVED_MEMORY = ROOT / "loop/context/headroom/scripts/apply-approved-memory.sh"
 POLICY = ROOT / "loop/context/headroom/policy.yaml"
-WAES_POLICY = ROOT / "loop/context/headroom/waes/headroom-policy.yaml"
+WAME_POLICY = ROOT / "loop/context/headroom/wame/headroom-policy.yaml"
 KDS_COMPONENT = ROOT / "loop/context/headroom/kds/context-optimization-component.yaml"
 OUTPUT_JSON = ROOT / "docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.json"
 OUTPUT_MD = ROOT / "docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md"
@@ -27,7 +27,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -73,7 +73,7 @@ def main() -> int:
     require(os.environ.get("HEADROOM_TELEMETRY") == "off", "HEADROOM_TELEMETRY must be off")
     require(HEADROOM_BIN.exists(), f"missing headroom binary: {HEADROOM_BIN}")
     policy = read(POLICY)
-    waes_policy = read(WAES_POLICY)
+    wame_policy = read(WAME_POLICY)
     kds_component = read(KDS_COMPONENT)
     learn_preview = read(LEARN_PREVIEW)
     apply_script = read(APPLY_APPROVED_MEMORY)
@@ -82,7 +82,7 @@ def main() -> int:
     require("--apply" not in learn_preview, "learn-preview wrapper must not pass --apply")
     require("learn_apply_auto" in policy, "policy must block automatic learn apply")
     require("cross_project_memory_as_fact" in policy, "policy must block cross-project memory as fact")
-    require("human_approval" in waes_policy, "WAES policy must require human approval")
+    require("human_approval" in wame_policy, "WAME policy must require human approval")
     require("Headroom memory must not become KDS source of record" in kds_component, "KDS component must block memory as source of record")
 
     tmpdir = Path(tempfile.mkdtemp(prefix="gpcf-headroom-learn-preview-"))
@@ -95,7 +95,7 @@ def main() -> int:
                 "target": "preview-only-memory-candidate",
                 "proposed_rule": "Synthetic memory candidate must remain preview only.",
                 "harness_evidence": "HEADROOM-LCX-P3-LEARN-PREVIEW-WORKING-MEMORY-GATE-20260621",
-                "waes_decision": "pass",
+                "wame_decision": "pass",
             },
             ensure_ascii=False,
             indent=2,
@@ -123,7 +123,7 @@ def main() -> int:
         and "approved_memory_candidate=validated apply_manually=true" in apply_valid.stdout
     )
     memory_governance_gate = all(
-        marker in policy + waes_policy + kds_component
+        marker in policy + wame_policy + kds_component
         for marker in [
             "learn_apply_auto",
             "cross_project_memory_as_fact",
@@ -211,7 +211,7 @@ def main() -> int:
 doc_id: GPCF-DOC-7F7C0539A3
 title: Headroom LCX P3 Learn Preview Working Memory Gate Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0

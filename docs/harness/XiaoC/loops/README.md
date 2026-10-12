@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-857DCECF45
 title: loops
 project: XiaoC
-related_projects: [GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -204,7 +204,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "doc_id: GPCF-DOC-AGENT-REACH-P9-RERUN-AUTHORIZATION-REQUEST-20260626",
             "title: Agent-Reach P9R Live Rerun 授权请求 2026-06-26",
             "project: KDS",
-            "related_projects: [GFIS, WAES, KDS, GPCF]",
+            "related_projects: [GFIS, WAME, KDS, GPCF]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",

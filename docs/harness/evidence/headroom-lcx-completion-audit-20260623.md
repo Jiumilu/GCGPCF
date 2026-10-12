@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623
 title: Headroom LCX Completion Audit Evidence
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -34,7 +34,7 @@ Headroom 的项目群图谱已完成受控化收口，但当前仍处于 `contro
 | route_graph_coverage | proven | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json ; docs/harness/evidence/headroom-project-group-application-router-20260621.md ; docs/harness/evidence/headroom-project-application-coverage-matrix-20260621.md |
 | cost_graph | proven_controlled_only | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json ; docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json ; docs/harness/evidence/headroom-loop-cost-observation-20260621.json ; docs/harness/evidence/headroom-lcx-cost-bridge-20260623.json |
 | rollback_graph | proven_controlled_only | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json ; docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md |
-| authorization_measurement | precheck_only | docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json ; docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json ; docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json ; docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json |
+| authorization_measurement | precheck_only | docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json ; docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json ; docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json ; docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json |
 | real_business_equivalence_measurement | blocked | docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json ; docs/harness/evidence/headroom-lcx-l35-answer-equivalence-synthetic-gate-20260622.json ; docs/harness/evidence/headroom-lcx-remaining-blocker-inventory-20260623.json |
 | production_runtime_graph | proven_controlled_only | docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.json ; docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.json |
 | accepted_integrated_production_ready | false | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json ; docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md |
@@ -67,7 +67,7 @@ Headroom 的项目群图谱已完成受控化收口，但当前仍处于 `contro
 | accepted | `false` |
 | integrated | `false` |
 | production_ready | `false` |
-| waes_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
+| wame_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
 | authorization_window_id | `LCX-MEASURE-20260622-001` |
 | authorization_window_request_status | `real_measurement_authorization_window_requested_not_granted` |
 | next_stage_authorization_package_status | `next_stage_authorization_package_granted_precheck_only` |
@@ -87,4 +87,4 @@ Headroom 的项目群图谱已完成受控化收口，但当前仍处于 `contro
 
 ## 下一步
 
-只有在 WAES/Harness 另行裁决并补齐真实测量授权后，才可以把 completion audit 从 partial 推进到真实测量执行。
+只有在 WAME/Harness 另行裁决并补齐真实测量授权后，才可以把 completion audit 从 partial 推进到真实测量执行。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DE30AB91D7
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -1,7 +1,7 @@
 {
   "fixture_id": "WAS-SCENARIO-PROFILE-MATRIX-NEGATIVE-MISSING-PROJECT-001",
   "expected_result": "rejected",
-  "project_group_scope": ["GFIS", "GPC", "WAES", "KDS", "GPCF", "WAS"],
+  "project_group_scope": ["GFIS", "GPC", "WAME", "KDS", "GPCF", "WAS"],
   "required_green_supply_chain_links": ["customer_order", "supplier_procurement", "production_work_order", "quality_inspection", "logistics_delivery", "energy_consumption", "carbon_footprint", "settlement_profit", "knowledge_reference", "recycling_circular"],
   "profiles": [],
   "boundary": {

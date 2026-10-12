@@ -4,7 +4,7 @@
     "generatedAt": "2026-08-23T12:00:00+08:00",
     "environment": "fixture_only",
     "systemState": {
-      "waesAvailable": true,
+      "wameAvailable": true,
       "contextComplete": true,
       "factVersionsVerified": true
     },
@@ -289,13 +289,13 @@
     {
       "name": "授权引擎不可用时仅降级只读",
       "replace": {
-        "systemState.waesAvailable": false,
+        "systemState.wameAvailable": false,
         "runtimeDecisions.0.decisionId": "gcw:decision:421de8e6b24b3bfc44eb2435",
         "runtimeDecisions.0.stableKey": "tenant:globalcloud|decision|degraded",
         "runtimeDecisions.0.requestedAction": "observation",
         "runtimeDecisions.0.decision": "degraded_readonly",
         "runtimeDecisions.0.effectiveActionScope": ["observation"],
-        "runtimeDecisions.0.reasonCodes": ["waes_unavailable_readonly"]
+        "runtimeDecisions.0.reasonCodes": ["wame_unavailable_readonly"]
       }
     }
   ],
@@ -448,7 +448,7 @@
     {
       "name": "授权引擎不可用仍允许高风险动作",
       "replace": {
-        "systemState.waesAvailable": false,
+        "systemState.wameAvailable": false,
         "runtimeDecisions.0.requestedAction": "contract",
         "runtimeDecisions.0.riskLevel": "R3",
         "runtimeDecisions.0.effectiveActionScope": ["contract"]

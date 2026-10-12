@@ -24,10 +24,10 @@
       "responseIntakeAllowed": false
     },
     {
-      "signalId": "waes_review_note",
-      "requiredChannel": "waes_review_note",
+      "signalId": "wame_review_note",
+      "requiredChannel": "wame_review_note",
       "found": false,
-      "missingReason": "missing_waes_review_note",
+      "missingReason": "missing_wame_review_note",
       "responseIntakeAllowed": false
     },
     {
@@ -46,7 +46,7 @@
   "gateAssertions": {
     "responseArrivalConfirmed": false,
     "signedPackagePresent": false,
-    "waesReviewNotePresent": false,
+    "wameReviewNotePresent": false,
     "humanConfirmationPresent": false,
     "responseIntakeAllowed": false,
     "formalHarnessWriteAllowed": false,
@@ -57,5 +57,5 @@
     "p1AdmissionAllowed": false,
     "v1UpgradeRecommended": false
   },
-  "nextRoundCandidate": "若四项 arrival signals 全部到达并通过 WAES 与人工确认，进入 response intake precheck；未到达前继续保持 hold。"
+  "nextRoundCandidate": "若四项 arrival signals 全部到达并通过 WAME 与人工确认，进入 response intake precheck；未到达前继续保持 hold。"
 }

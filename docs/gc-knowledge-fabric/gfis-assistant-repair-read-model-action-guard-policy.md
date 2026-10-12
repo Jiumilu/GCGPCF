@@ -71,7 +71,7 @@ GFIS Assistant Repair Read Model Action Guard 是 DKS-115 `Repair Admission Read
 - create_kwe_work_item；
 - create_confirmation_record；
 - create_decision_record；
-- create_waes_gate_result；
+- create_wame_gate_result；
 - persist_evidence；
 - approve_business_write；
 - promote_lifecycle；

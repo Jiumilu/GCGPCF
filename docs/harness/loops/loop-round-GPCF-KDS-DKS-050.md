@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A3C98C02DA
 title: LOOP Round GPCF-KDS-DKS-050 - 葛化 GFIS AI 助手三件套首批 dry-run 评测
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -100,7 +100,7 @@ superseded_by: []
 - 真实助手部署；
 - 真实内测签认；
 - 真实 KDS API 写入；
-- WAES 写入、放行或裁决；
+- WAME 写入、放行或裁决；
 - GFIS / GPC / PVAOS / Finance 主账写入；
 - 真实订单、客户确认、质量放行、POD、到账、收益、积分或悬赏确认；
 - 资料填报、人工确认或委员会裁决；

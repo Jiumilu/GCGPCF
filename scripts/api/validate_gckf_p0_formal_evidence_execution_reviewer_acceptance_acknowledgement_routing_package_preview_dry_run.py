@@ -100,7 +100,7 @@ def main() -> int:
 
     if len(set(package.get("routingPackageRoles", []))) != expected["routingPackageRoleCount"]:
         failures.append("routingPackageRoleCount mismatch")
-    if not {"reviewer_acceptance_acknowledgement_owner", "routing_package_owner", "waes_gate_owner"}.issubset(
+    if not {"reviewer_acceptance_acknowledgement_owner", "routing_package_owner", "wame_gate_owner"}.issubset(
         set(package.get("routingPackageRoles", []))
     ):
         failures.append("routingPackageRoles must include required D65 owners")

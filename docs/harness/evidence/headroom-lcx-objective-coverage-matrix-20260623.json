@@ -7,7 +7,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -35,7 +35,7 @@
         "docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json",
         "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json"
       ],
-      "blocking_reason": "real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only"
+      "blocking_reason": "real_measurement_authorization_window_and_wame_harness_decision_remain_precheck_only"
     },
     {
       "objective_item": "production_runtime_graph",
@@ -114,7 +114,7 @@
     "accepted": false,
     "integrated": false,
     "production_ready": false,
-    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+    "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
     "authorization_window_id": "LCX-MEASURE-20260622-001",
     "next_stage_authorization_package_status": "next_stage_authorization_package_granted_precheck_only",
     "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"

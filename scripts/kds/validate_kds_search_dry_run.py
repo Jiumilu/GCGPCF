@@ -2,7 +2,7 @@
 """Validate KDS v2 search/filter dry-run semantics.
 
 This script uses local fixtures only. It does not query KDS, vector indexes,
-graph stores, GFIS, WAES, or external APIs.
+graph stores, GFIS, WAME, or external APIs.
 """
 
 from __future__ import annotations

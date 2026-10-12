@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -116,7 +116,7 @@
     "allowed_context_count": 5,
     "allowed_context_pass_count": 5,
     "schema_forbidden_context_gate": true,
-    "waes_disable_output_shaper_gate": true,
+    "wame_disable_output_shaper_gate": true,
     "output_shaper_profile_gate": true
   },
   "gates": {

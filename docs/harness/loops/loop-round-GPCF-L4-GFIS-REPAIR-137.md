@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-443F656B15
 title: Loop Round GPCF-L4-GFIS-REPAIR-137
 project: GPCF
-related_projects: [GFIS, GPC, WAES, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 ## 本轮动作
 
 1. 在 GFIS 仓新增 release submission intake gate builder，读取 3 个 action package 的 12 个目标文件路径。
-2. 在 GFIS 仓新增 validator，断言 12 个目标文件当前均未落地，不能进入 release、review queue、runtime ready 或 WAES review。
+2. 在 GFIS 仓新增 validator，断言 12 个目标文件当前均未落地，不能进入 release、review queue、runtime ready 或 WAME review。
 3. 将新 validator 接入 `scripts/validate_gfis_runtime_sop_e2e.py` 主门禁。
 4. 生成 GFIS JSON/Markdown evidence 和 GFIS loop round。
 5. 回写 GPCF 总控状态、状态矩阵、证据索引和本轮记录。
@@ -43,13 +43,13 @@ superseded_by: []
 ## GFIS 输出
 
 ```text
-liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate=pass packages=3 open=3 ready_packages=0 scanned_target_files=12 existing_target_files=0 missing_target_files=12 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_release_submission_intake_blocked_no_target_files runtime_sop_e2e=repair_required
+liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate=pass packages=3 open=3 ready_packages=0 scanned_target_files=12 existing_target_files=0 missing_target_files=12 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 wame_review=0 verified=0 state=customer_commercial_proof_release_submission_intake_blocked_no_target_files runtime_sop_e2e=repair_required
 ```
 
 主 validator 运行结论：
 
 ```text
-runtime_liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate=customer_commercial_proof_release_submission_intake_blocked_no_target_files:packages=3:open=3:ready_packages=0:scanned_target_files=12:existing_target_files=0:missing_target_files=12:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate=customer_commercial_proof_release_submission_intake_blocked_no_target_files:packages=3:open=3:ready_packages=0:scanned_target_files=12:existing_target_files=0:missing_target_files=12:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:wame_review=0:verified=0
 ```
 
 ## 验证
@@ -66,7 +66,7 @@ runtime_liaoning_yuanhang_customer_commercial_proof_release_submission_intake_ga
 ## 边界
 
 - 本轮未创建或伪造任何客户确认函、采购订单、合同、真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment 或 owner response。
-- 本轮未放行 release、review queue、runtime ready、WAES review 或 verified artifact。
+- 本轮未放行 release、review queue、runtime ready、WAME review 或 verified artifact。
 - 本轮未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、生产配置修改、部署、ECS/Caddy/隧道/Docker 变更。
 - 本轮未标记 `accepted` 或 `integrated`。
 
@@ -83,4 +83,4 @@ stop_type=authorization_boundary
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-131` 应等待或接收 12 个目标文件中的真实业务文件后，继续做结构校验、授权校验、接收确认、release gate 和 WAES review candidate。未取得真实文件前，只能继续保持 `repair_required`，不得升级完整 SOP E2E。
+`GFIS-RUNTIME-SOP-E2E-131` 应等待或接收 12 个目标文件中的真实业务文件后，继续做结构校验、授权校验、接收确认、release gate 和 WAME review candidate。未取得真实文件前，只能继续保持 `repair_required`，不得升级完整 SOP E2E。

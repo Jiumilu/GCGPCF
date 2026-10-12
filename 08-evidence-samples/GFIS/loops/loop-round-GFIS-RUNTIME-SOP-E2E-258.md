@@ -39,7 +39,7 @@ superseded_by: []
 - `runtime_primary_key_ready_stages=0`
 - `review_queue_ready_stages=0`
 - `runtime_intake_ready_stages=0`
-- `waes_review_ready_stages=0`
+- `wame_review_ready_stages=0`
 - `verified_stages=0`
 - `blocked_stages=12`
 - `convergence_queue_items=12`

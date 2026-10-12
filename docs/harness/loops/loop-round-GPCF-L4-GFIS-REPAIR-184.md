@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-514115E964
 title: GPCF-L4-GFIS-REPAIR-184 GFIS 运行层定位源文档门禁扩展
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ current_runtime_sites=1
 future_runtime_sites=1
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 state=runtime_positioning_consistency_guard_passed_no_release
 runtime_sop_e2e=repair_required
@@ -72,7 +72,7 @@ runtime_sop_e2e=repair_required
 
 ## Non-Claims
 
-- 本轮不证明派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 已成立。
+- 本轮不证明派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 已成立。
 - 本轮不执行 Git push、生产写入、真实外部 API 写入、数据库迁移、schema sync、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 变更。
 - GFIS Demo 继续只作为展示、培训、追溯说明和前端回归，不作为 SOP 实现主体、业务验收主体或运行层证据。
 

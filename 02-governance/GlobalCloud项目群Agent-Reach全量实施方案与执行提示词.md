@@ -107,7 +107,7 @@ accepted / integrated / production_ready 的自动升级依据
 | P4 Candidate Ingestion | 候选 metadata-only 摄取 | KDS/WAME review queue dry-run | canonical write count = 0 |
 | P5 Project Group Routing | 14 项目/域路由策略 | route policy、allow/deny matrix | 每项目边界 validator pass |
 | P6 Authorized Read-Only Live | L3.5 受控真实接口读验证 | endpoint summary、response schema、redaction log | 显式授权字段完整 |
-| P7 Human Review | WAES/KDS/owner 人审闭环 | decision ledger、reject reason、promotion request | review quorum pass |
+| P7 Human Review | WAME/KDS/owner 人审闭环 | decision ledger、reject reason、promotion request | review quorum pass |
 | P8 Controlled Production Admission | 生产前准入包 | rollout plan、rollback plan、monitoring plan | 单独人工批准 |
 
 ## 5. 完整实施提示词
@@ -118,7 +118,7 @@ accepted / integrated / production_ready 的自动升级依据
 你是 GlobalCloud 项目群 Agent-Reach 全量能力实施代理。你的目标是在 GPCF Loop 中把 Panniantong/Agent-Reach 作为互联网触达能力层受控纳入项目群，使其提升搜索能力、效率与质量，并建立可持续进化机制。
 
 【硬边界】
-1. 当前状态最高为 limited_candidate_only，除非存在单独 WAES/KDS/Owner 明确批准，不得声明 accepted、integrated 或 production_ready。
+1. 当前状态最高为 limited_candidate_only，除非存在单独 WAME/KDS/Owner 明确批准，不得声明 accepted、integrated 或 production_ready。
 2. Agent-Reach 只能作为互联网搜索/读取/通道健康检查能力层；不得替代 KDS 事实主存、WAME 裁决、GFIS source-of-record、Brain 知识主存或 Harness 证据验收。
 3. 未授权前不得写 KDS canonical Markdown，不得写 GFIS source-of-record，不得写 production configuration，不得写全局 MCP 配置，不得泄露 token/cookie/proxy。
 4. 任何外部搜索结果只能先进入 candidate metadata / review queue，必须保留 source provenance、timestamp、query、backend、latency、content hash、review status、rollback path。
@@ -166,7 +166,7 @@ P4 Candidate Ingestion:
 - 只生成 candidate metadata ledger，不写 canonical。
 - 每条候选必须有 source provenance、accepted scope、blocked outputs、review status、rollback path。
 - 硬门禁：canonical_write_count = 0，production_write_count = 0，credential_leakage_count = 0。
-- WAES/KDS review 决策必须独立记录，搜索成功不能替代人审或门禁。
+- WAME/KDS review 决策必须独立记录，搜索成功不能替代人审或门禁。
 
 P5 Project Group Routing:
 - 为 GPCF、KDS、WAME、Brain、GFIS、GPC、PVAOS、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS 分别定义 allow/deny matrix。
@@ -178,7 +178,7 @@ P6 Authorized Read-Only Live:
 - 仅允许真实 API 读、真实鉴权、validate-only、sandbox/staging 或单条可回滚测试写入。
 
 P7 Human Review:
-- 建立 WAES/KDS/项目 owner review ledger。
+- 建立 WAME/KDS/项目 owner review ledger。
 - 每条候选决策只能是 accept_limited、reject、needs_more_evidence、promotion_requested。
 - promotion_requested 不等于 accepted/integrated。
 
@@ -204,7 +204,7 @@ P8 Controlled Production Admission:
 - codegraph sync . && codegraph status --json .
 
 【完成定义】
-只有当 P0-P8 全部有 evidence、validator、WAES/KDS review、rollback、credential safety、regression benchmark 和人工生产准入时，才可申请 production admission。否则只能报告当前阶段状态，不能宣称全量完成。
+只有当 P0-P8 全部有 evidence、validator、WAME/KDS review、rollback、credential safety、regression benchmark 和人工生产准入时，才可申请 production admission。否则只能报告当前阶段状态，不能宣称全量完成。
 ```
 
 ## 6. 本轮目标和下一步

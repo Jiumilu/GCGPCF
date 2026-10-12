@@ -6,7 +6,7 @@ import type {
   QuotaRecord,
   RagAdmission,
   RevenueRecord,
-  WaesGateResult,
+  WameGateResult,
 } from "../../../shared/src/knowledge";
 import type { KweWorkItem } from "../kwe/contracts";
 
@@ -17,7 +17,7 @@ export type BrainWorkbenchModule =
   | "gfis_usage_assistant"
   | "gfis_document_acceptance_assistant"
   | "kds_object_center"
-  | "waes_gate_center"
+  | "wame_gate_center"
   | "kwe_work_queue"
   | "supply_chain_graph"
   | "governance_center"
@@ -33,7 +33,7 @@ export type BrainBlockedAction =
   | "direct_gfis_writeback"
   | "direct_revenue_distribution"
   | "direct_contribution_confirmation"
-  | "direct_waes_gate_override"
+  | "direct_wame_gate_override"
   | "direct_committee_decision";
 
 export interface BrainCommandCenterRequest {
@@ -79,7 +79,7 @@ export interface BrainLoopDashboardAuxiliaryMetrics {
   ragSafeRate: number;
   blockedKnowledgeRate: number;
   repairRequiredGapCount: number;
-  waesInterceptionCount: number;
+  wameInterceptionCount: number;
   humanConfirmationCompletionRate: number;
   committeeClosureRate: number;
   revenueCandidateToFormalRate: number;
@@ -95,10 +95,10 @@ export interface BrainLoopDashboardResponse {
   knowledgeClosureMetric: BrainKnowledgeClosureMetric;
   auxiliaryMetrics: BrainLoopDashboardAuxiliaryMetrics;
   loopRecords: LoopRecord[];
-  gateResults: WaesGateResult[];
+  gateResults: WameGateResult[];
   noWrite: true;
   kdsWrites: 0;
-  waesWrites: 0;
+  wameWrites: 0;
   kweWrites: 0;
   businessWrites: 0;
   externalApiWrites: 0;
@@ -109,7 +109,7 @@ export interface BrainCommandCenterResponse {
   modules: BrainWorkbenchModule[];
   visibleObjects: KnowledgeObject[];
   workItems: KweWorkItem[];
-  gateResults: WaesGateResult[];
+  gateResults: WameGateResult[];
   ragAdmissionSummary: BrainRagDashboardSummary;
   contributionRecords: ContributionRecord[];
   revenueRecords: RevenueRecord[];
@@ -119,7 +119,7 @@ export interface BrainCommandCenterResponse {
   blockedActions: BrainBlockedAction[];
   noWrite: true;
   kdsWrites: 0;
-  waesWrites: 0;
+  wameWrites: 0;
   kweWrites: 0;
   businessWrites: 0;
   externalApiWrites: 0;

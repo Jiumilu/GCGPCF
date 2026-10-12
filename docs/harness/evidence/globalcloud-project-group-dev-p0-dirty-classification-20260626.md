@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DEV-P0-DIRTY-CLASSIFICATION-20260626
 title: GlobalCloud 项目群开发态 P0-A Dirty 分类证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 | production_ready | false |
 | customer_accepted | false |
 
-结论：WAES 授权不再是本轮开发态的唯一最大硬阻点；2026-06-28 当前最大剩余阻点已具体化为 7 仓 dirty、`GlobalCloud KDS/.env.production.example` sensitive_path，以及 `WAS世界资产体系/.DS_Store` / `GlobalCloud SOP/output/.DS_Store` 等本地产物隔离边界。该阻点限制提交、推送和验收，不限制开发态启动。
+结论：WAME 授权不再是本轮开发态的唯一最大硬阻点；2026-06-28 当前最大剩余阻点已具体化为 7 仓 dirty、`GlobalCloud KDS/.env.production.example` sensitive_path，以及 `WAS世界资产体系/.DS_Store` / `GlobalCloud SOP/output/.DS_Store` 等本地产物隔离边界。该阻点限制提交、推送和验收，不限制开发态启动。
 
 ## 分类规则
 
@@ -69,7 +69,7 @@ superseded_by: []
 | GlobalCloud Brain | codex/brain-l4-retrieval | 3 | 0 | governance_doc:3 | M AGENTS.md; M GlobalCloud Brain 实施方案.md; M GlobalCloud Brain 总体方案.md | keep_as_dev_candidate_after_owner_review |
 | WAS世界资产体系 | main | 4 | 1 | governance_doc:3, other:1 | M AGENTS.md; M docs/GlobalCloud WAS 实施方案.md; M docs/GlobalCloud WAS 总体方案.md; ?? .DS_Store | keep_as_dev_candidate_after_owner_review |
 | GlobalCloud XiaoC | main | 3 | 0 | governance_doc:3 | M AGENTS.md; M GlobalCloud XiaoC 实施方案.md; M GlobalCloud XiaoC 总体方案.md | keep_as_dev_candidate_after_owner_review |
-| GlobalCloud WAES | waes/integration-release | 3 | 0 | governance_doc:3 | M AGENTS.md; M GlobalCloud WAES 实施方案.md; M GlobalCloud WAES 总体方案.md | keep_as_dev_candidate_after_owner_review |
+| GlobalCloud WAME | wame/integration-release | 3 | 0 | governance_doc:3 | M AGENTS.md; M GlobalCloud WAME 实施方案.md; M GlobalCloud WAME 总体方案.md | keep_as_dev_candidate_after_owner_review |
 | GlobalCloud GPC | main | 6 | 0 | governance_doc:5, test:1 | M AGENTS.md; M GlobalCloud GPC 实施方案.md; M GlobalCloud GPC 总体方案.md; M README.md; M docs/26-gcfis-100-external-evidence-register.md | dev_candidate_requires_project_test |
 | GlobalCloud Studio | main | 12 | 4 | governance_doc:6, evidence_or_fixture:3, harness_tooling:3 | M AGENTS.md; M GlobalCloud Studio 实施方案.md; M GlobalCloud Studio 总体方案.md; M docs/harness/evidence/evidence-index.md; M docs/harness/loop-state.md | keep_as_dev_candidate_after_owner_review |
 | GlobalCoud GPCF | codex/kds-token-sync-gpcf | 940 | 488 | kds_mirror_or_wiki:364, evidence_or_fixture:305, harness_tooling:150, governance_doc:119 | M .codex/skills/globalcloud-loop-orchestrator/SKILL.md; M .codex/skills/globalcloud-loop-orchestrator/references/git-version-gates.md; M .codex/skills/globalcloud-ui-quality-gate/SKILL.md; M .codex/skills/globalcloud-ui-quality-gate/references/tool-routing.md; M .harness/README.md | keep_as_dev_candidate_after_owner_review |
@@ -87,7 +87,7 @@ superseded_by: []
 
 | 类别 | 项目 | 开发态动作 | 提交/验收边界 |
 |---|---|---|---|
-| 治理文档候选 | AAAS, Brain, WAS, XiaoC, WAES, XWAIL, GFIS, MMC, XiaoG, XGD | 可继续开发，先做 owner review 与文档门禁 | 不 owner review 不进入提交候选 |
+| 治理文档候选 | AAAS, Brain, WAS, XiaoC, WAME, XWAIL, GFIS, MMC, XiaoG, XGD | 可继续开发，先做 owner review 与文档门禁 | 不 owner review 不进入提交候选 |
 | 需项目测试 | GPC | 跑最小 GPC E2E/相关测试后再进入提交候选 | 测试失败则保持 partial |
 | 发布/配置边界 | PVAOS | 允许本地开发检查，发布动作 blocked | 不触发 release/deploy |
 | 工作台治理候选 | Studio | 继续 release review readiness 和 harness check | 不发布、不改 GitHub release metadata |

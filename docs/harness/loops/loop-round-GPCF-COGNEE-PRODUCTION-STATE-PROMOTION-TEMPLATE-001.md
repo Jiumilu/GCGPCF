@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-PRODUCTION-STATE-PROMOTION-TEMPLATE-001
 title: Loop Round - GPCF Cognee 生产状态提升证据模板 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,13 +28,13 @@ superseded_by: []
 ## run
 
 - 为 `COGNEE-FULL-RUN-GAP-004` 建立生产状态提升证据模板。
-- 固化 promotion request、WAES decision、Harness decision、rollback plan 和状态边界字段。
+- 固化 promotion request、WAME decision、Harness decision、rollback plan 和状态边界字段。
 - 增加生产状态提升 validator，用于区分 `template_only` 与真实状态提升。
 
 ## stop
 
 - 停止类型：`authorization_boundary`
-- 停止原因：生产状态提升模板已建立，但仍缺真实外部执行回执、真实账本、真实覆盖、真实场景矩阵和 WAES/Harness 决策。
+- 停止原因：生产状态提升模板已建立，但仍缺真实外部执行回执、真实账本、真实覆盖、真实场景矩阵和 WAME/Harness 决策。
 - 当前状态：`cognee_production_state_promotion_template=prepared`，`full_run_claim=false`。
 
 ## verify
@@ -52,7 +52,7 @@ superseded_by: []
 
 ## recover
 
-- 若后续状态提升缺少 WAES/Harness 决策或回退入口，必须退回本模板补齐，不得直接升级 full-run。
+- 若后续状态提升缺少 WAME/Harness 决策或回退入口，必须退回本模板补齐，不得直接升级 full-run。
 
 ## debug
 

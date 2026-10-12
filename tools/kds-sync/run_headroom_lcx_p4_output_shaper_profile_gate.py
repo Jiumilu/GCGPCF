@@ -12,7 +12,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 PROFILES_FILE = ROOT / "loop/context/headroom/compression-profiles.yaml"
 CONFIG_SCHEMA = ROOT / "loop/context/headroom/config.schema.yaml"
-WAES_POLICY = ROOT / "loop/context/headroom/waes/headroom-policy.yaml"
+WAME_POLICY = ROOT / "loop/context/headroom/wame/headroom-policy.yaml"
 OUTPUT_JSON = ROOT / "docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.json"
 OUTPUT_MD = ROOT / "docs/harness/evidence/headroom-lcx-p4-output-shaper-profile-gate-20260621.md"
 
@@ -20,7 +20,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -72,7 +72,7 @@ def select_profile(profiles: dict, context: str) -> tuple[str | None, dict | Non
 def main() -> int:
     profiles_doc = read_yaml(PROFILES_FILE)
     schema_doc = read_yaml(CONFIG_SCHEMA)
-    waes_doc = read_yaml(WAES_POLICY)
+    wame_doc = read_yaml(WAME_POLICY)
     profiles = profiles_doc.get("profiles", {})
     require(isinstance(profiles, dict), "profiles must be a mapping")
 
@@ -111,13 +111,13 @@ def main() -> int:
 
     schema_forbidden = schema_doc.get("output_shaper", {}).get("forbidden_contexts", [])
     schema_gate = all(context in schema_forbidden for context in FORBIDDEN_CONTEXTS)
-    waes_rules = waes_doc.get("rules", [])
-    waes_gate = any(
+    wame_rules = wame_doc.get("rules", [])
+    wame_gate = any(
         rule.get("action") == "disable_output_shaper"
         and all(word in rule.get("description", "") for word in ["acceptance", "compliance", "contract", "finance"])
-        for rule in waes_rules
+        for rule in wame_rules
     )
-    p4_gate = forbidden_pass == len(FORBIDDEN_CONTEXTS) and allowed_pass == len(ALLOWED_SHAPER_CONTEXTS) and schema_gate and waes_gate
+    p4_gate = forbidden_pass == len(FORBIDDEN_CONTEXTS) and allowed_pass == len(ALLOWED_SHAPER_CONTEXTS) and schema_gate and wame_gate
 
     result = {
         "evidence_id": "HEADROOM-LCX-P4-OUTPUT-SHAPER-PROFILE-GATE-20260621",
@@ -137,7 +137,7 @@ def main() -> int:
             "allowed_context_count": len(ALLOWED_SHAPER_CONTEXTS),
             "allowed_context_pass_count": allowed_pass,
             "schema_forbidden_context_gate": schema_gate,
-            "waes_disable_output_shaper_gate": waes_gate,
+            "wame_disable_output_shaper_gate": wame_gate,
             "output_shaper_profile_gate": p4_gate,
         },
         "gates": {
@@ -184,7 +184,7 @@ def main() -> int:
 doc_id: GPCF-DOC-4C080E6145
 title: Headroom LCX P4 Output Shaper Profile Gate Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -223,7 +223,7 @@ P4 LCX-Output-Shaper profile gate 已完成本地 dry-run。正式验收、合�
 | forbidden_context_pass_count | {forbidden_pass}/{len(FORBIDDEN_CONTEXTS)} |
 | allowed_context_pass_count | {allowed_pass}/{len(ALLOWED_SHAPER_CONTEXTS)} |
 | schema_forbidden_context_gate | {str(schema_gate).lower()} |
-| waes_disable_output_shaper_gate | {str(waes_gate).lower()} |
+| wame_disable_output_shaper_gate | {str(wame_gate).lower()} |
 | official_acceptance_output_shaper_disabled | true |
 | compliance_review_output_shaper_disabled | true |
 | legal_contract_output_shaper_disabled | true |

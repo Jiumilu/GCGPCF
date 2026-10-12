@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-09D60E9D8E
 title: Cognee 真实外部执行回执等待阻断 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B1974D0061
 title: "Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-061"
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -56,7 +56,7 @@ loop_was_context:
     - GFIS
     - GPC
     - PVAOS
-    - WAES
+    - WAME
     - KDS
     - Brain
     - PKC
@@ -81,7 +81,7 @@ loop_was_context:
     - material_efficiency_calculation
     - substitute_material_assessment
     - design_change_environmental_review
-  waes_gate: blocked_until_real_source_record_and_eco_design_proofs_exist
+  wame_gate: blocked_until_real_source_record_and_eco_design_proofs_exist
   loop_role: evidence_closure
   llm_role: candidate_generation_only
   rag_role: controlled_reference_only
@@ -100,7 +100,7 @@ loop_was_context:
     runtime_primary_key_ready: 0
     review_queue: 0
     runtime_intake: 0
-    waes_review: 0
+    wame_review: 0
     verified: 0
     accepted: false
     integrated: false

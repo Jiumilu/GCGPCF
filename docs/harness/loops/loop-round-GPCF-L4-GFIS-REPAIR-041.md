@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-830CB0D405
 title: GPCF L4 GFIS Repair 041 Loop Engineering Redefinition
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

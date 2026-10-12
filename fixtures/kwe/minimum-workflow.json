@@ -8,7 +8,7 @@
         "generatedBy": "ai",
         "sourceRefs": [],
         "evidenceRefs": [],
-        "waesGateStatus": "repair_required",
+        "wameGateStatus": "repair_required",
         "confirmationStatus": "ai_checked"
       },
       "expected": {
@@ -26,7 +26,7 @@
         "generatedBy": "partner",
         "sourceRefs": ["src-partner-001"],
         "evidenceRefs": ["ev-partner-001"],
-        "waesGateStatus": "human_required",
+        "wameGateStatus": "human_required",
         "confirmationStatus": "human_required"
       },
       "expected": {
@@ -44,7 +44,7 @@
         "generatedBy": "partner",
         "sourceRefs": ["src-order-001"],
         "evidenceRefs": ["ev-order-001"],
-        "waesGateStatus": "passed",
+        "wameGateStatus": "passed",
         "confirmationStatus": "human_confirmed"
       },
       "expected": {
@@ -63,7 +63,7 @@
         "generatedBy": "system",
         "sourceRefs": ["src-revenue-001"],
         "evidenceRefs": ["ev-revenue-001"],
-        "waesGateStatus": "committee_required",
+        "wameGateStatus": "committee_required",
         "confirmationStatus": "committee_required"
       },
       "expected": {

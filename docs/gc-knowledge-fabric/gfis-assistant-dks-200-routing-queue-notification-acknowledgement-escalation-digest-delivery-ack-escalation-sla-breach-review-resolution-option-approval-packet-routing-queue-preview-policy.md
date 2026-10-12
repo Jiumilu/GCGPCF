@@ -27,7 +27,7 @@ superseded_by: []
 - DKS-199 approval packet preview fixture。
 - DKS-198 resolution option preview 引用。
 - DKS-197 SLA breach review preview 引用。
-- WAES/KWE/GFIS no-write 契约。
+- WAME/KWE/GFIS no-write 契约。
 
 ## 输出
 

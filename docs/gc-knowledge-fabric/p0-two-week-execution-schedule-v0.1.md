@@ -39,7 +39,7 @@ P0 不以业务上线作为验收口径。
 | D1 | 规则冻结 | 锁定 Q1-Q40 需求口径、AI 边界、no-write 边界、P0/P1/P2 范围 | 需求锁定稿、管理层摘要、工程计划、试点清单 | 文档门禁 |
 | D2 | 目录与编号 | 固化对象编号、KDS 十一池挂接、Domain + Pool 双维模型 | 编号规则、挂池规则、对象目录清单 | pool binding validator |
 | D3 | OKF 契约 | 建立 ontology、knowledge object schema、domain/pool/trust/flow policy | OKF v0.1 契约包 | YAML/JSON parse |
-| D4 | WAES/RAG 规则 | 建立 Source/Evidence/RAG/Writeback/Contribution/Revenue gate 规则 | WAME gate policy、RAG admission policy | gate validator |
+| D4 | WAME/RAG 规则 | 建立 Source/Evidence/RAG/Writeback/Contribution/Revenue gate 规则 | WAME gate policy、RAG admission policy | gate validator |
 | D5 | 敏感资料与四池 | 建立 metadata-only、blocked、Contribution/Revenue/Quota/Bounty ledger 边界 | 敏感资料规则、四池台账规则 | no-write + ledger validator |
 | D6 | Shared Types | 建立 KnowledgeObject、Source、Evidence、Candidate、GateResult、WorkItem、Ledger 类型 | shared types v0.1 | TypeScript 编译 |
 | D7 | Fixtures | 建立候选事实、候选 SOP、候选写回、metadata-only、WAME gate、ledger dry-run 样例 | fixtures v0.1 | fixture validator |

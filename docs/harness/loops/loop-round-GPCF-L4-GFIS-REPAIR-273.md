@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DB3EB9E54C
 title: GPCF-L4-GFIS-REPAIR-273
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ runtime_primary_key_created=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 blocked=1
 runtime_sop_e2e=repair_required
@@ -81,8 +81,8 @@ GPCF 已同步 GFIS 263。当前仍不得降低 GFIS/GPCF 阻塞级别：
 - runtime_primary_key_ready=0
 - review_queue=0
 - runtime_intake=0
-- waes_review=0
+- wame_review=0
 - verified=0
 - runtime_sop_e2e=repair_required
 
-真正最小闭环仍未形成。只有至少一个阶段打通 `source record -> runtime primary key -> review queue -> runtime intake -> WAES review -> verified artifact`，才可进入闭环判定。
+真正最小闭环仍未形成。只有至少一个阶段打通 `source record -> runtime primary key -> review queue -> runtime intake -> WAME review -> verified artifact`，才可进入闭环判定。

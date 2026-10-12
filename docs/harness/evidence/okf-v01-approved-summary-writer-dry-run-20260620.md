@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-88076261D5
 title: OKF v0.1 已批准摘要写入器 dry-run 证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

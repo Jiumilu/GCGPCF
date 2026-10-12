@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9F2A7D61B3
 title: Studio 默认凭据登录分流验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

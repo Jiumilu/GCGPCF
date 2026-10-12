@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Dry-run scorer for base knowledge closure candidates.
 
-This tool validates local fixtures only. It does not call KDS, WAES, GFIS,
+This tool validates local fixtures only. It does not call KDS, WAME, GFIS,
 GPC, PVAOS, settlement services, RAG indexes, or any external API.
 """
 
@@ -50,7 +50,7 @@ ALLOWED_FIELDS = {
     *OPTIONAL_ARRAY_FIELDS,
     "evidenceLevel",
     "humanReviewStatus",
-    "waesRecordStatus",
+    "wameRecordStatus",
     "settlementStatus",
     "ragInclude",
 }
@@ -226,7 +226,7 @@ def score_item(item: dict[str, Any]) -> dict[str, Any]:
         "forbiddenUse": forbidden,
         "writebackCandidates": writeback_candidates(item, reasons),
         "auditMessages": [
-            "dry-run only; no real KDS, WAES, GFIS, GPC, PVAOS, RAG, settlement, or business ledger write",
+            "dry-run only; no real KDS, WAME, GFIS, GPC, PVAOS, RAG, settlement, or business ledger write",
             "hard-stop rules take precedence over score bands",
         ],
     }
@@ -276,7 +276,7 @@ def validate_fixture_suite(path: Path) -> dict[str, Any]:
         "results": results,
         "boundary": {
             "realKdsApiWrite": False,
-            "waesWrite": False,
+            "wameWrite": False,
             "businessLedgerWrite": False,
             "settlementWrite": False,
             "ragAdmission": False,

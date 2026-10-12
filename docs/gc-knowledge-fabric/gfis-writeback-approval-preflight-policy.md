@@ -44,10 +44,10 @@ GFIS Writeback Approval Preflight Checklist 是 GFIS 候选写回进入人工或
 - lifecycleAuditRefs
 - fieldPaths
 - evidenceRefs
-- waesGateRefs
+- wameGateRefs
 - harnessEvidenceRefs
 - sensitiveHandling
-- waesGateStatus
+- wameGateStatus
 - lifecycleAuditStatus
 - reviewerRequirement
 
@@ -79,9 +79,9 @@ Preflight Checklist 不得：
 
 ## 5. 强制规则
 
-1. `waesGateStatus=blocked` 必须输出 `blocked`。
-2. `waesGateStatus=committee_required` 必须输出 `committee_required`。
-3. `waesGateStatus=human_required` 且非敏感 metadata-only 场景，必须输出 `human_required`。
+1. `wameGateStatus=blocked` 必须输出 `blocked`。
+2. `wameGateStatus=committee_required` 必须输出 `committee_required`。
+3. `wameGateStatus=human_required` 且非敏感 metadata-only 场景，必须输出 `human_required`。
 4. `sensitiveHandling=metadata_only` 必须输出 `metadata_only_required` 或 blocked。
 5. `sensitiveHandling=controlled_original` 必须有 evidenceRefs，不得暴露原文。
 6. lifecycle audit 为 `blocked` 时必须输出 `blocked`。

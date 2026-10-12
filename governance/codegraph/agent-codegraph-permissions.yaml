@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-PERMISSIONS-V1
 title: CodeGraph Agent Permission Model
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: codegraph-governance
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ tool_authorization:
       - access_env_files
       - access_production_data
       - promote_kds_accepted_fact
-      - approve_waes_gate
+      - approve_wame_gate
 
 repo_authorization:
   default_indexing_scope:
@@ -73,7 +73,7 @@ repo_authorization:
       - '**/payment/**'
       - '**/settlement/**'
       - '**/wallet/**'
-      - '**/waes/**'
+      - '**/wame/**'
       - '**/ontology/**'
       - '**/okf/**'
 
@@ -95,7 +95,7 @@ agent_authorization:
     codegraph: [module_summary, api_mapping, mermaid_generation]
     write_docs: candidate_only
     promote_docs: denied
-  waes_agent:
+  wame_agent:
     codegraph: [risk_path, rule_impact, permission_impact]
     recommend_gate: allowed
     approve: denied
@@ -129,14 +129,14 @@ kds_authorization:
       - production_evidence
     promotion_requires:
       - harness_evidence
-      - waes_gate
+      - wame_gate
       - human_review
 
 human_roles:
   project_owner: [approve_repo_enablement, approve_high_risk_codegraph_scope]
   tech_lead: [approve_architecture_rule, approve_impact_analysis_baseline, approve_generated_architecture_docs]
   security_owner: [approve_sensitive_path_policy, approve_secret_exclusion_policy, audit_agent_access]
-  waes_admin: [configure_gate_rules, block_high_risk_loop]
+  wame_admin: [configure_gate_rules, block_high_risk_loop]
   kds_curator: [promote_candidate_fact, reject_candidate_fact, attach_lineage]
   developer: [query_own_repo_codegraph, submit_patch, view_impact_report]
   ai_agent: [readonly_graph_query, candidate_generation]

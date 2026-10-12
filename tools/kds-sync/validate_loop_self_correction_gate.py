@@ -94,7 +94,7 @@ def run_gfis_evidence_backed_validator(script_name: str):
         token = f"{key}={expected}"
         if token not in status_line:
             status_line += f" {token}"
-    status_line += " valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    status_line += " valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     return {"status": "pass", "exit_code": 0, "output": [status_line]}
 
 
@@ -230,7 +230,7 @@ def main() -> int:
     runtime_primary_key_gate = run_gfis_named_validator("validate_gfis_runtime_primary_key_gate.py")
     review_queue_admission_gate = run_gfis_named_validator("validate_gfis_review_queue_admission_gate.py")
     runtime_intake_gate = run_gfis_named_validator("validate_gfis_runtime_intake_gate.py")
-    waes_review_gate = run_gfis_named_validator("validate_gfis_waes_review_gate.py")
+    wame_review_gate = run_gfis_named_validator("validate_gfis_wame_review_gate.py")
     verified_artifact_gate = run_gfis_named_validator("validate_gfis_verified_artifact_gate.py")
     development_ready_goal = run_gfis_named_validator("validate_gfis_development_ready_goal.py")
     test_source_record_submission_gate = run_gfis_named_validator("validate_gfis_customer_requirement_test_source_record_submission.py")
@@ -287,8 +287,8 @@ def main() -> int:
         blockers.append("gfis_review_queue_admission_gate_failed")
     if runtime_intake_gate["exit_code"] != 0:
         blockers.append("gfis_runtime_intake_gate_failed")
-    if waes_review_gate["exit_code"] != 0:
-        blockers.append("gfis_waes_review_gate_failed")
+    if wame_review_gate["exit_code"] != 0:
+        blockers.append("gfis_wame_review_gate_failed")
     if verified_artifact_gate["exit_code"] != 0:
         blockers.append("gfis_verified_artifact_gate_failed")
     if development_ready_goal["exit_code"] != 0:
@@ -372,9 +372,9 @@ def main() -> int:
             "runtime_intake_gate_status": runtime_intake_gate["status"],
             "runtime_intake_gate_exit_code": runtime_intake_gate["exit_code"],
             "runtime_intake_gate_output": runtime_intake_gate["output"],
-            "waes_review_gate_status": waes_review_gate["status"],
-            "waes_review_gate_exit_code": waes_review_gate["exit_code"],
-            "waes_review_gate_output": waes_review_gate["output"],
+            "wame_review_gate_status": wame_review_gate["status"],
+            "wame_review_gate_exit_code": wame_review_gate["exit_code"],
+            "wame_review_gate_output": wame_review_gate["output"],
             "verified_artifact_gate_status": verified_artifact_gate["status"],
             "verified_artifact_gate_exit_code": verified_artifact_gate["exit_code"],
             "verified_artifact_gate_output": verified_artifact_gate["output"],
@@ -428,10 +428,10 @@ def main() -> int:
             "Keep runtime primary key creation blocked until valid_source_record and manual business verification both pass.",
             "Keep review queue admission blocked until a verified runtime primary key exists.",
             "Keep runtime intake blocked until a verified review queue item exists.",
-            "Keep WAES review blocked until a verified runtime intake item exists.",
-            "Keep verified artifact blocked until a real WAES review result exists.",
+            "Keep WAME review blocked until a verified runtime intake item exists.",
+            "Keep verified artifact blocked until a real WAME review result exists.",
             "Keep development_ready separate from production_ready and accepted/integrated; development_ready only means synthetic dev lane and local E2E/display regression are auditable.",
-            "Keep test_data_lane separate from real_business_lane; TEST-GFIS records must not unlock runtime primary key, review queue, runtime intake, WAES review, verified artifact, or production_ready.",
+            "Keep test_data_lane separate from real_business_lane; TEST-GFIS records must not unlock runtime primary key, review queue, runtime intake, WAME review, verified artifact, or production_ready.",
             "Keep test_data_minimum_sop_e2e separate from real SOP acceptance; it proves test-chain shape and pollution guard only.",
             "Keep test_data_12_stage_sop_e2e separate from real SOP acceptance; it proves 12-stage test-data shape and pollution guard only.",
             "Keep test_data_12_stage_transition_gate separate from real SOP acceptance; it proves test-stage transition boundaries, POD/finance manual gates, and pollution guard only.",
@@ -474,7 +474,7 @@ def main() -> int:
         f"runtime_primary_key_gate={runtime_primary_key_gate['status']} "
         f"review_queue_gate={review_queue_admission_gate['status']} "
         f"runtime_intake_gate={runtime_intake_gate['status']} "
-        f"waes_review_gate={waes_review_gate['status']} "
+        f"wame_review_gate={wame_review_gate['status']} "
         f"verified_artifact_gate={verified_artifact_gate['status']} "
         f"development_ready_goal={development_ready_goal['status']} "
         f"test_source_record_submission_gate={test_source_record_submission_gate['status']} "

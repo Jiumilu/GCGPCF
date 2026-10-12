@@ -41,7 +41,7 @@ REQUIRED_RECORD_FIELDS = {
     "runtime_dependency_ok",
     "rollback_plan_verified",
     "owner_authorization_present",
-    "waes_decision",
+    "wame_decision",
     "answer_equivalence",
     "write_requested",
     "write_allowed",

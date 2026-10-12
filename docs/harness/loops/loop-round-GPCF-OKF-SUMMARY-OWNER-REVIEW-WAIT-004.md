@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9C2D2A6F10
 title: Loop Round GPCF-OKF-SUMMARY-OWNER-REVIEW-WAIT-004
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

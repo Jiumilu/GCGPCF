@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C59F035323
 title: Headroom Independent Loop Round Replay Evidence
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

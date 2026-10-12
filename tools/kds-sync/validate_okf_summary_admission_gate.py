@@ -231,7 +231,7 @@ def write_markdown(report: dict) -> None:
 doc_id: {doc_id_for(MD_OUT)}
 title: OKF v0.1 Summary Admission Gate Evidence
 project: GPCF
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

@@ -6,7 +6,7 @@ last_reviewed: "2026-06-20"
 purpose: >
   Define local dry-run contract for GFIS Writeback Candidate Batch Diff. Batch
   diff records are candidate display and review material only; they do not write
-  GFIS/GPC/ERP/MES, KDS accepted facts, WAES gate results, KWE work items,
+  GFIS/GPC/ERP/MES, KDS accepted facts, WAME gate results, KWE work items,
   revenue, scores, or external APIs.
 
 required_batch_fields:
@@ -27,7 +27,7 @@ required_item_fields:
   - based_on_object_refs
   - evidence_refs
   - pool_refs
-  - waes_gate_status
+  - wame_gate_status
   - writeback_status
   - diff_action
   - sensitive_handling
@@ -75,7 +75,7 @@ hard_boundaries:
   approved_for_business_write_must_be_false: true
   target_receipts_forbidden: true
   written_back_status_forbidden: true
-  waes_passed_is_candidate_only: true
+  wame_passed_is_candidate_only: true
   sensitive_raw_content_forbidden: true
   missing_evidence_blocks_or_repairs: true
   pod_finance_quality_dispute_requires_metadata_or_controlled_original: true
@@ -86,7 +86,7 @@ no_write_assertions:
   writes_erp: 0
   writes_mes: 0
   writes_kds_accepted_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_revenue_or_score_confirmation: 0
   writes_external_api: 0

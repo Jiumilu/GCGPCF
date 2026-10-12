@@ -141,7 +141,7 @@ superseded_by: []
 | factStatus | candidate / needs_evidence / pending_human_confirmation / rejected |
 | kdsPoolRefs | 至少一个 KDS 11 底座池 |
 | enhancedLedgerRefs | 积分池、收益池、额度池、悬赏池、争议池、潜在产值池、SOP 账本或贡献账本候选 |
-| gateAction | none / KDS_candidate / WAES_record / human_review / committee_review / returned_for_evidence / governance_blocked |
+| gateAction | none / KDS_candidate / WAME_record / human_review / committee_review / returned_for_evidence / governance_blocked |
 | nextAction | 明确下一步、责任主体和资料字段 |
 | forbiddenOutputCheck | true / false |
 | writebackCandidate | no_write / candidate_only / pending_confirmation |

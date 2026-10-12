@@ -15,8 +15,8 @@ STATUS_MATRIX = ROOT / "09-status/gpcf-project-status-matrix.md"
 REQUIRED_PROJECT_ROWS = {
     "GlobalCloud GFIS": ["repair_required", "真实 source-of-record", "均未完成/未授权"],
     "GlobalCloud GPC": ["partial_verified", "external_runtime_evidence_required", "不得声明外部联调完成"],
-    "GlobalCloud PVAOS": ["ready_for_review", "L3 Ready", "WAES/GPC dependency dry-run"],
-    "GlobalCloud WAES": ["repair_required", "authorization_required", "不得声明治理运行闭环"],
+    "GlobalCloud PVAOS": ["ready_for_review", "L3 Ready", "WAME/GPC dependency dry-run"],
+    "GlobalCloud WAME": ["repair_required", "authorization_required", "不得声明治理运行闭环"],
     "GlobalCloud KDS": ["ready_for_review", "KDS Token", "只允许本机私有文件"],
     "GlobalCloud Brain": ["ready_for_review", "L3 Ready", "lint"],
     "GlobalCloud PKC": ["ready_for_review", "KDS/Brain", "体验验证"],
@@ -27,8 +27,8 @@ REQUIRED_PROJECT_ROWS = {
     "GlobalCoud GPCF": ["repair_required", "partial_repair", "current_state_baseline_refresh_controlled", "development_queue_ready", "不恢复 100/100"],
     "GlobalCloud Studio": ["ready_for_review", "review_required_before_commit", "不发布、不推送"],
     "WAS 世界资产体系": ["ready_for_review", "semantic_foundation_candidate / not_accepted", "MONITOR-101"],
-    "GlobalCloud XWAIL": ["ready_for_review", "XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001", "不证明完整 XWAIL 工具链", "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要"],
-    "GlobalCloud AaaS / AAAS": ["ready_for_review", "AAAS-WAES-BINDING-PRECHECK-001", "不证明真实计费", "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要"],
+    "GlobalCloud XWAIL": ["ready_for_review", "XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001", "不证明完整 XWAIL 工具链", "5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要"],
+    "GlobalCloud AaaS / AAAS": ["ready_for_review", "AAAS-WAME-BINDING-PRECHECK-001", "不证明真实计费", "5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要"],
     "GlobalCloud SOP": ["owner_review_required", "SOP-SCENARIO-OWNER-REVIEW-001", "不证明场景方案已确认", "5.5.3 SOP delegated wrapper 单仓核对卡 / 5.6.3 SOP delegated wrapper 确认后状态传导摘要"],
 }
 
@@ -37,7 +37,7 @@ REQUIRED_SUMMARY_TOKENS = [
     "17 项目口径保持受控",
     "| ready_for_review | 12 |",
     "| partial_verified | 1 | GPC |",
-    "| repair_required | 3 | GFIS、WAES、GPCF |",
+    "| repair_required | 3 | GFIS、WAME、GPCF |",
     "| owner_review_required | 1 | SOP |",
     "Ready for Review Trigger Map",
     "globalcloud-project-group-ready-for-review-trigger-map-20260627.md",
@@ -66,7 +66,7 @@ GFIS_ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 

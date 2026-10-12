@@ -63,7 +63,7 @@ required_fields:
   - creates_committee_decision
   - creates_freeze_action
   - creates_harness_evidence
-  - creates_waes_gate_result
+  - creates_wame_gate_result
   - persists_evidence
   - approves_business_write
   - promotes_lifecycle
@@ -132,7 +132,7 @@ blocked_actions:
   - create_committee_decision
   - create_freeze_action
   - create_harness_evidence
-  - create_waes_gate_result
+  - create_wame_gate_result
   - persist_evidence
   - approve_business_write
   - promote_lifecycle
@@ -160,7 +160,7 @@ hard_boundaries:
   escalation_is_not_committee_decision: true
   escalation_is_not_freeze_action: true
   escalation_is_not_harness_evidence: true
-  escalation_is_not_waes_result: true
+  escalation_is_not_wame_result: true
   escalation_is_not_lifecycle_change: true
   escalation_is_not_business_writeback: true
   creates_escalation_must_be_false: true
@@ -184,7 +184,7 @@ hard_boundaries:
   creates_committee_decision_must_be_false: true
   creates_freeze_action_must_be_false: true
   creates_harness_evidence_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   persists_evidence_must_be_false: true
   approves_business_write_must_be_false: true
   promotes_lifecycle_must_be_false: true
@@ -214,7 +214,7 @@ no_write_guards:
   writes_approval_decision: 0
   writes_committee_decision: 0
   writes_freeze_action: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_harness_evidence: 0
   writes_kds_lifecycle: 0
   writes_kds_fact: 0

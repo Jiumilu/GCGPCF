@@ -2,7 +2,7 @@
 """Validate KDS lifecycle transition audit packet dry-run boundary.
 
 The validator checks local policy, shared type text, and fixture declarations
-only. It does not mutate KDS lifecycle, WAES gate results, KWE work items,
+only. It does not mutate KDS lifecycle, WAME gate results, KWE work items,
 business systems, revenue, scores, or external APIs.
 """
 
@@ -25,7 +25,7 @@ NO_WRITE_KEYS = (
     "writesKdsLifecycle",
     "writesAcceptedFact",
     "writesPublishedObject",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesBusinessSystem",
     "writesRevenueOrScoreConfirmation",
@@ -90,7 +90,7 @@ def main() -> int:
     status_counts = {
         "readyForReview": 0,
         "repairRequired": 0,
-        "waesRequired": 0,
+        "wameRequired": 0,
         "humanRequired": 0,
         "publicationRequired": 0,
         "freezeRequired": 0,
@@ -99,7 +99,7 @@ def main() -> int:
     status_key = {
         "ready_for_review": "readyForReview",
         "repair_required": "repairRequired",
-        "waes_required": "waesRequired",
+        "wame_required": "wameRequired",
         "human_required": "humanRequired",
         "publication_required": "publicationRequired",
         "freeze_required": "freezeRequired",
@@ -174,7 +174,7 @@ def main() -> int:
         "lifecycleMutations": totals["writesKdsLifecycle"],
         "acceptedFactWrites": totals["writesAcceptedFact"],
         "publishedObjectWrites": totals["writesPublishedObject"],
-        "waesGateResultWrites": totals["writesWaesGateResult"],
+        "wameGateResultWrites": totals["writesWameGateResult"],
         "kweWorkItemWrites": totals["writesKweWorkItem"],
         "businessWrites": totals["writesBusinessSystem"],
         "revenueOrScoreConfirmations": totals["writesRevenueOrScoreConfirmation"],
@@ -196,7 +196,7 @@ def main() -> int:
         f"audits={actual['auditCount']} "
         f"ready_for_review={actual['readyForReview']} "
         f"repair_required={actual['repairRequired']} "
-        f"waes_required={actual['waesRequired']} "
+        f"wame_required={actual['wameRequired']} "
         f"human_required={actual['humanRequired']} "
         f"publication_required={actual['publicationRequired']} "
         f"freeze_required={actual['freezeRequired']} "
@@ -207,7 +207,7 @@ def main() -> int:
         f"lifecycle_mutations={actual['lifecycleMutations']} "
         f"accepted_fact_writes={actual['acceptedFactWrites']} "
         f"published_object_writes={actual['publishedObjectWrites']} "
-        f"waes_gate_result_writes={actual['waesGateResultWrites']} "
+        f"wame_gate_result_writes={actual['wameGateResultWrites']} "
         f"kwe_work_item_writes={actual['kweWorkItemWrites']} "
         f"business_writes={actual['businessWrites']} "
         f"revenue_or_score_confirmations={actual['revenueOrScoreConfirmations']} "

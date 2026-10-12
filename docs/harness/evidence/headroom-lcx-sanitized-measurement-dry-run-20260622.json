@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -25,7 +25,7 @@
   ],
   "ledger_id": "HEADROOM-LCX-SANITIZED-PRODUCTION-TOKEN-LEDGER-PRECHECK-20260622",
   "source_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
-  "source_admission_decision": "HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-ADMITTED-20260622",
+  "source_admission_decision": "HEADROOM-LCX-WAME-HARNESS-ADMISSION-DECISION-ADMITTED-20260622",
   "source_authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
   "entry_count": 1,
   "missing_entry_fields": [],
@@ -39,7 +39,7 @@
     "contains_authorization_header": true,
     "ledger_production_measurement_allowed": true,
     "ledger_measured_production_tokens": true,
-    "waes_harness_admitted": true,
+    "wame_harness_admitted": true,
     "authorized_precheck_gate": true
   },
   "calculation": {
@@ -50,7 +50,7 @@
   "gates": {
     "sanitized_measurement_dry_run_gate": true,
     "check_only": true,
-    "waes_harness_admitted": true,
+    "wame_harness_admitted": true,
     "authorized_precheck_gate": true,
     "production_token_measurement_allowed": false,
     "measured_production_tokens": false,

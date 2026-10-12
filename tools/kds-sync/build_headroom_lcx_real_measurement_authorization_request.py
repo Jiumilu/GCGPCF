@@ -23,7 +23,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -53,7 +53,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 
@@ -79,7 +79,7 @@ def frontmatter(title: str, source_path: str, kds_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -119,7 +119,7 @@ def build_package() -> dict:
         "evidence_chain_count": len(EVIDENCE_CHAIN),
         "evidence_chain": EVIDENCE_CHAIN,
         "requested_future_decision": "open_real_measurement_window",
-        "current_waes_harness_admission_decision": binding_map["waes_harness_admission_decision"].get("current_value"),
+        "current_wame_harness_admission_decision": binding_map["wame_harness_admission_decision"].get("current_value"),
         "field_bindings": [
             {
                 "field": field,
@@ -149,7 +149,7 @@ def build_package() -> dict:
         "execution_guard": {
             "executable_now": False,
             "requires_real_measurement_authorization_window": True,
-            "requires_waes_harness_decision": True,
+            "requires_wame_harness_decision": True,
             "requires_sanitized_token_ledger_metadata_only": True,
             "requires_rollback_plan_id": True,
             "requires_no_production_proxy": True,
@@ -194,7 +194,7 @@ def write_md(request: dict, source_path: str, kds_path: str) -> str:
         "| 项 | 当前值 |",
         "|---|---|",
         f"| requested_future_decision | {request['requested_future_decision']} |",
-        f"| current_waes_harness_admission_decision | {request['current_waes_harness_admission_decision']} |",
+        f"| current_wame_harness_admission_decision | {request['current_wame_harness_admission_decision']} |",
         f"| project_count | {request['project_count']} |",
         f"| real_measurement_gap_present | {str(request['current_state']['real_measurement_gap_present']).lower()} |",
         f"| production_branch_blocked | {str(request['current_state']['production_branch_blocked']).lower()} |",
@@ -247,7 +247,7 @@ def write_md(request: dict, source_path: str, kds_path: str) -> str:
             "",
             "## 下一步",
             "",
-            "等待 WAES/Harness 对真实测量窗口作出新的授权裁决；在此之前仅保持 precheck-only 和 blocked 状态。",
+            "等待 WAME/Harness 对真实测量窗口作出新的授权裁决；在此之前仅保持 precheck-only 和 blocked 状态。",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -258,7 +258,7 @@ def write_loop_round(source_path: str, kds_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623
 title: Loop Round GPCF Headroom LCX Real Measurement Authorization Request 001
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -302,7 +302,7 @@ superseded_by: []
 
 ## 下一轮
 
-等待 WAES/Harness 对真实测量窗口作出新的授权裁决。
+等待 WAME/Harness 对真实测量窗口作出新的授权裁决。
 """
 
 

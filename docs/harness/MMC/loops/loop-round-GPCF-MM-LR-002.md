@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-36599EF2A8
 title: Loop Round GPCF-MM-LR-002：MMC 治理模板字段字典
 project: MMC
-related_projects: [GPC, WAES, MMC, GPCF]
+related_projects: [GPC, WAME, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

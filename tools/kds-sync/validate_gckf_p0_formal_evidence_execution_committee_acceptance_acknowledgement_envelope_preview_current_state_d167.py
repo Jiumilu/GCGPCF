@@ -184,7 +184,7 @@ def main() -> None:
         {
             "committee_secretariat",
             "committee_representative",
-            "waes_gate_owner",
+            "wame_gate_owner",
             "harness_reviewer",
             "acl_owner",
             "evidence_controller",

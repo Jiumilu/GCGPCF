@@ -68,7 +68,7 @@ def main() -> int:
     require(evidence.get("real_business_lane") == "repair_required", "real business lane must remain repair_required")
     for key in ["accepted", "integrated", "production_ready"]:
         require(evidence.get(key) is False, f"{key} must remain false")
-    for key in ["production_writes", "real_external_api_writes", "kds_fact_writes", "waes_gate_result_writes"]:
+    for key in ["production_writes", "real_external_api_writes", "kds_fact_writes", "wame_gate_result_writes"]:
         require(evidence.get(key) == 0, f"{key} must remain zero")
     require(evidence.get("no_write_boundary_enforced") is True, "no-write boundary must be enforced")
 

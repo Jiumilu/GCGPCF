@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-48474E7AEE
 title: Governance OKF v0.1 Derived Bundle Report
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

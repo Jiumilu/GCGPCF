@@ -84,7 +84,7 @@
     "kds_sync_only_closure_completed": false,
     "kds_real_api_write_performed": false,
     "kds_mirror_overwrite_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-BRAIN-GFIS-AUTHORIZATION-BOUNDARY-018"
 }

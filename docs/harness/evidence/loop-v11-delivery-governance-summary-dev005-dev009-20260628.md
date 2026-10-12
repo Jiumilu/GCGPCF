@@ -43,11 +43,11 @@ status_promotion_allowed = false
 ## Validation Results
 
 ```text
-gfis_dev_005_source_record_owner_submission_handoff_readiness=pass handoff_steps=5 package_preview_supported=true receiving_scan_hold_gate_ready=true real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
-gfis_dev_006_external_candidate_handoff_dry_run=pass external_candidate_handoff_dry_run_supported=true dry_run_pipeline_steps=4 temp_valid_external_candidates=1 temp_invalid_external_candidates=1 valid_candidate_handoff_ready=1 invalid_candidate_rejected=1 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
-gfis_dev_007_external_candidate_dir_handoff_dry_run=pass external_candidate_dir_handoff_dry_run_supported=true temp_valid_candidate_dirs=1 temp_invalid_candidate_dirs=1 valid_dir_candidate_count=2 valid_dir_handoff_ready=1 invalid_dir_candidate_count=2 invalid_dir_rejected=1 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
-gfis_dev_008_external_candidate_dir_remediation_summary=pass external_candidate_dir_remediation_summary_supported=true temp_valid_candidate_dirs=1 temp_invalid_candidate_dirs=1 valid_dir_candidate_count=2 valid_dir_rejected_count=0 invalid_dir_candidate_count=2 invalid_dir_rejected_count=1 invalid_dir_error_code_count=4 remediation_actions=4 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
-gfis_dev_009_external_candidate_dir_manual_submission_manifest=pass external_candidate_dir_manual_submission_manifest_supported=true temp_valid_candidate_dirs=1 temp_collision_candidate_dirs=1 temp_invalid_candidate_dirs=1 valid_dir_candidate_count=1 valid_dir_manifest_ready=1 valid_dir_manifest_item_count=1 collision_dir_candidate_count=2 collision_dir_manifest_ready=0 collision_dir_target_filename_conflicts=1 invalid_dir_candidate_count=2 invalid_dir_manifest_ready=0 invalid_dir_rejected_count=1 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_dev_005_source_record_owner_submission_handoff_readiness=pass handoff_steps=5 package_preview_supported=true receiving_scan_hold_gate_ready=true real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_dev_006_external_candidate_handoff_dry_run=pass external_candidate_handoff_dry_run_supported=true dry_run_pipeline_steps=4 temp_valid_external_candidates=1 temp_invalid_external_candidates=1 valid_candidate_handoff_ready=1 invalid_candidate_rejected=1 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_dev_007_external_candidate_dir_handoff_dry_run=pass external_candidate_dir_handoff_dry_run_supported=true temp_valid_candidate_dirs=1 temp_invalid_candidate_dirs=1 valid_dir_candidate_count=2 valid_dir_handoff_ready=1 invalid_dir_candidate_count=2 invalid_dir_rejected=1 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_dev_008_external_candidate_dir_remediation_summary=pass external_candidate_dir_remediation_summary_supported=true temp_valid_candidate_dirs=1 temp_invalid_candidate_dirs=1 valid_dir_candidate_count=2 valid_dir_rejected_count=0 invalid_dir_candidate_count=2 invalid_dir_rejected_count=1 invalid_dir_error_code_count=4 remediation_actions=4 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_dev_009_external_candidate_dir_manual_submission_manifest=pass external_candidate_dir_manual_submission_manifest_supported=true temp_valid_candidate_dirs=1 temp_collision_candidate_dirs=1 temp_invalid_candidate_dirs=1 valid_dir_candidate_count=1 valid_dir_manifest_ready=1 valid_dir_manifest_item_count=1 collision_dir_candidate_count=2 collision_dir_manifest_ready=0 collision_dir_target_filename_conflicts=1 invalid_dir_candidate_count=2 invalid_dir_manifest_ready=0 invalid_dir_rejected_count=1 real_target_files=0 source_record_files_found=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false customer_accepted=false
 ```
 
 ## Remaining Risks
@@ -57,7 +57,7 @@ gfis_dev_009_external_candidate_dir_manual_submission_manifest=pass external_can
 | GFIS real business lane | `repair_required` | Blocks L3.5/L4 evaluation and status promotion |
 | GFIS source-of-record | `valid_source_records=0` | No runtime primary key may be released |
 | GFIS manual submission | `source_record_files_found=0` | DEV-009 manifest does not equal a real submission |
-| GFIS review chain | `review_queue=0 runtime_intake=0 waes_review=0 verified=0` | No accepted, integrated, production_ready or customer_accepted claim allowed |
+| GFIS review chain | `review_queue=0 runtime_intake=0 wame_review=0 verified=0` | No accepted, integrated, production_ready or customer_accepted claim allowed |
 | Project group Git gate | GPCF, GFIS, KDS and SOP dirty | Blocks project-group commit/push candidate |
 | KDS sensitive path | `.env.production.example` remains sensitive-template-candidate | Blocks stage/commit/push until owner review |
 
@@ -74,7 +74,7 @@ deploy_executed=false
 commit_executed=false
 push_executed=false
 real_kds_api_write_executed=false
-waes_write_executed=false
+wame_write_executed=false
 status_promotion_requested=false
 accepted=false
 integrated=false
@@ -102,4 +102,4 @@ The following evidence should remain in the KDS development mirror or evidence i
 
 The GFIS DEV-005 to DEV-009 Delivery Loop batch is ready for governance summary closure. It proves that source owner pre-submission work can proceed under reduced governance friction while preserving hard boundaries.
 
-It does not create GFIS source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, real KDS writeback, accepted, integrated, production_ready or customer_accepted status.
+It does not create GFIS source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, real KDS writeback, accepted, integrated, production_ready or customer_accepted status.

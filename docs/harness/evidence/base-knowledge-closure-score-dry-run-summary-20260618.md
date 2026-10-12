@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CF3A246F25
 title: 基础知识闭环评分试运行汇总
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
 | boundary | value |
 | --- | --- |
 | realKdsApiWrite | false |
-| waesWrite | false |
+| wameWrite | false |
 | businessLedgerWrite | false |
 | settlementWrite | false |
 | ragAdmission | false |
@@ -71,5 +71,5 @@ superseded_by: []
 
 - This evidence is generated from local fixtures only.
 - All writeback rows are candidate-only and require manual or committee confirmation.
-- No real KDS API, WAES write, GFIS/GPC/PVAOS business ledger write, RAG admission, settlement, bounty release, revenue allocation, or AI quota allocation is performed.
+- No real KDS API, WAME write, GFIS/GPC/PVAOS business ledger write, RAG admission, settlement, bounty release, revenue allocation, or AI quota allocation is performed.
 - Hard-stop rows remain blocked even when the calculated score is above a lower decision band.

@@ -36,7 +36,7 @@
       "precheck_owner",
       "aggregation_owner",
       "committee_secretariat",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "acl_owner",
@@ -54,7 +54,7 @@
       "candidate_hold_reason_snapshot",
       "candidate_hold_context_refs_snapshot",
       "candidate_routing_blocker_codes",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -127,7 +127,7 @@
       "candidate_hold_reason_snapshot_present",
       "candidate_hold_context_refs_snapshot_present",
       "candidate_routing_blocker_codes_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "preview_hold_context_refs",
@@ -150,7 +150,7 @@
       "candidateHoldReasonSnapshotRef",
       "candidateHoldContextRefsSnapshotRef",
       "candidateRoutingBlockerCodesRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "repairIntakeOwnerRef",
       "acknowledgementOwnerRef",
@@ -158,7 +158,7 @@
       "precheckOwnerRef",
       "aggregationOwnerRef",
       "committeeSecretariatRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "aclOwnerRef",
@@ -202,7 +202,7 @@
       "write_revenue_distribution",
       "write_contribution_score",
       "mark_p0_accepted",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "holdContextRefs": [

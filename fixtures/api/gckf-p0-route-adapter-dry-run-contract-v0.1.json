@@ -25,9 +25,9 @@
       "expectedCandidateOnly": true
     },
     {
-      "id": "route-waes-rag-gate",
+      "id": "route-wame-rag-gate",
       "method": "POST",
-      "path": "/api/v2/waes/rag-admission/check",
+      "path": "/api/v2/wame/rag-admission/check",
       "expectedHandler": "checkRagAdmission",
       "expectedStatusCode": 200,
       "expectedCandidateOnly": false

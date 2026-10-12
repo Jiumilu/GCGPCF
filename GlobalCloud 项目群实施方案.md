@@ -215,7 +215,7 @@ GFIS:
   current_development_mainline: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 ```
 
-`real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 只阻断真实业务验证、accepted、integrated、production_ready、customer_accepted、生产发布和客户交付声明；不阻断本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAME review candidate development、verified artifact candidate development 或 `development_ready_for_real_business_validation`。
+`real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`wame_review = 0`、`verified = 0` 只阻断真实业务验证、accepted、integrated、production_ready、customer_accepted、生产发布和客户交付声明；不阻断本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAME review candidate development、verified artifact candidate development 或 `development_ready_for_real_business_validation`。
 
 ## 5. 真实进度管理
 
@@ -616,10 +616,10 @@ WAS/LOOP 实施链路的最低推进规则：
 | 方案控制 | 确认 WAS 总体方案、项目群实施方案和专项全量实施方案一致 | `validate_project_group_implementation_plan.py` pass |
 | Source Record 准备 | 定义并监控真实 P4 candidate 输入 | 无真实输入时 `hold_required=1` |
 | 语义与契约 replay | 复跑 profile mapping、crosswalk、negative fixtures 和 WAS validator | 不提升真实业务计数 |
-| WAME 审查前置 | 只有真实 source-record 和授权齐备后才允许进入 review/runtime | 缺输入时 `review_queue=0`、`runtime_intake=0`、`waes_review=0` |
+| WAME 审查前置 | 只有真实 source-record 和授权齐备后才允许进入 review/runtime | 缺输入时 `review_queue=0`、`runtime_intake=0`、`wame_review=0` |
 | 证据与下一轮 | 形成 Loop round、Harness evidence、validator output 和下一轮输入 | 必须包含 `run -> stop -> verify -> recover -> debug` |
 
-当前 WAS/LOOP 状态固定为：`latest_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`，`next_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`，`real_source_records=0`，`valid_source_records=0`，`runtime_primary_key_ready=0`，`review_queue=0`，`runtime_intake=0`，`waes_review=0`，`verified=0`，`accepted=false`，`integrated=false`，`production_ready=false`。
+当前 WAS/LOOP 状态固定为：`latest_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`，`next_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`，`real_source_records=0`，`valid_source_records=0`，`runtime_primary_key_ready=0`，`review_queue=0`，`runtime_intake=0`，`wame_review=0`，`verified=0`，`accepted=false`，`integrated=false`，`production_ready=false`。
 
 WAS/LOOP 实施链路不得把文档、模板、测试数据、mock、KDS 候选、用户口述、报价材料、合同审阅稿或治理 validator 写成真实 source-of-record、业务事实、客户验收或生产完成。
 

@@ -68,7 +68,7 @@ superseded_by: []
 
 - 语义漂移导致误召回、误导性建议
 - 与 WAME 门禁边界不一致导致越权记忆写入
-- 与现网 Headroom/Waes 检索链路冲突
+- 与现网 Headroom/Wame 检索链路冲突
 - 运营成本与 token 变化不透明
 
 ### 3.3 风险缓解

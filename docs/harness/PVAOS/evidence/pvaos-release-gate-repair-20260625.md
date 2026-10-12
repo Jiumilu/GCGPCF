@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PVAOS-RELEASE-GATE-REPAIR-20260625
 title: PVAOS Release Gate 修复与本地发布准入证据 2026-06-25
 project: PVAOS
-related_projects: [GFIS, GPC, PVAOS, WAES]
+related_projects: [GFIS, GPC, PVAOS, WAME]
 domain: docs
 status: controlled
 version: v1.0

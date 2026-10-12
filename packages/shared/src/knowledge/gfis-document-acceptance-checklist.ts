@@ -1,5 +1,5 @@
 import type { RagAdmission } from "./object";
-import type { WaesGateStatus, WaesGateType } from "./waes-gate";
+import type { WameGateStatus, WameGateType } from "./wame-gate";
 
 export type GfisDocumentPackageType =
   | "construction_package"
@@ -17,7 +17,7 @@ export type GfisDocumentChecklistItem =
   | "trust_level_assigned"
   | "rag_admission_assessed"
   | "sensitive_handling_assessed"
-  | "waes_gate_suggested"
+  | "wame_gate_suggested"
   | "kwe_workpack_suggested"
   | "writeback_candidate_only";
 
@@ -48,9 +48,9 @@ export interface GfisDocumentAcceptanceChecklistRecord {
   gapRefs: string[];
   factCandidateRefs: string[];
   writebackCandidateRefs: string[];
-  waesGateSuggestions: Array<{
-    gateType: WaesGateType;
-    gateStatus: WaesGateStatus;
+  wameGateSuggestions: Array<{
+    gateType: WameGateType;
+    gateStatus: WameGateStatus;
   }>;
   ragAdmission: RagAdmission;
   sensitiveHandling: GfisDocumentSensitiveHandling;
@@ -83,7 +83,7 @@ export interface GfisDocumentAcceptanceChecklistPolicy {
     writesErp: 0;
     writesMes: 0;
     writesKdsFact: 0;
-    writesWaesGateResult: 0;
+    writesWameGateResult: 0;
     writesKweWorkItem: 0;
     writesRevenueOrScoreConfirmation: 0;
     writesExternalApi: 0;

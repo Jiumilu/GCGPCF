@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 ROUNDS = [
-    ("GPCF-WA-LR-002", "WAES", "docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md", "11/15"),
+    ("GPCF-WA-LR-002", "WAME", "docs/harness/WAME/loops/loop-round-GPCF-WA-LR-002.md", "11/15"),
     ("GPCF-GP-LR-002", "GPC", "docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md", "12/15"),
     ("GPCF-PV-LR-002", "PVAOS", "docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md", "13/15"),
     ("GPCF-XG-LR-002", "XiaoG", "docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md", "14/15"),

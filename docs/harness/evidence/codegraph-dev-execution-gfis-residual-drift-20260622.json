@@ -53,7 +53,7 @@
     "production write",
     "external API write",
     "real KDS write",
-    "real WAES write"
+    "real WAME write"
   ],
   "status_boundaries": {
     "business_implementation_completed": false,
@@ -66,7 +66,7 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "codegraph_sync_only_closure": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-LOCATOR-008"
 }

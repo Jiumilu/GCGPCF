@@ -65,7 +65,7 @@ Loop 文档门禁：`rework_required`
 ### loop_engineering_five_direction
 
 ```text
-loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false gfis_status_ceiling=repair_required
+loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false gfis_status_ceiling=repair_required
 ```
 
 ### loop_v11_slimming_delivery_recovery
@@ -77,13 +77,13 @@ loop_v11_slimming_delivery_recovery=pass delivery_loop=enabled governance_loop=s
 ### loop_engineering_master_plan
 
 ```text
-loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 gfis_status_ceiling=repair_required
+loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 gfis_status_ceiling=repair_required
 ```
 
 ### loop_capability_registry
 
 ```text
-loop_capability_registry=pass pools=skill,tool,method statuses=fast_admitted,candidate,pilot,controlled,default_enabled,downgraded,disabled,deprecated,superseded default_enable=risk_tiered pilot_plus_evidence=required core_methods=CodeGraph,external_search,RAG,multi_agent_parallel capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAES_KDS_RAG_writeback gfis_status_ceiling=repair_required
+loop_capability_registry=pass pools=skill,tool,method statuses=fast_admitted,candidate,pilot,controlled,default_enabled,downgraded,disabled,deprecated,superseded default_enable=risk_tiered pilot_plus_evidence=required core_methods=CodeGraph,external_search,RAG,multi_agent_parallel capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAME_KDS_RAG_writeback gfis_status_ceiling=repair_required
 ```
 
 ### codegraph_loop_schema
@@ -137,13 +137,13 @@ session_mainline_handoff_request_gate=pass gate_mode=explicit_user_confirmation_
 ### gfis_real_fact_entry_gate
 
 ```text
-gfis_real_fact_entry_gate=pass strong_block=true read_only_verified=true development_lane=continue_allowed real_business_validation_lane=pending_source_of_record real_source_records_zero_is_not_dev_blocker=true real_business_validation_block=true status_promotion_block=true real_source_records=0 valid_source_records=0 formal_confirmation_files=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 manual_business_verification_pending=true real_business_lane=repair_required status_ceiling=repair_required next_required_input=real_source_record_or_equivalent_formal_confirmation accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_real_fact_entry_gate=pass strong_block=true read_only_verified=true development_lane=continue_allowed real_business_validation_lane=pending_source_of_record real_source_records_zero_is_not_dev_blocker=true real_business_validation_block=true status_promotion_block=true real_source_records=0 valid_source_records=0 formal_confirmation_files=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 manual_business_verification_pending=true real_business_lane=repair_required status_ceiling=repair_required next_required_input=real_source_record_or_equivalent_formal_confirmation accepted=false integrated=false production_ready=false customer_accepted=false
 ```
 
 ### gfis_real_fact_entry_coverage
 
 ```text
-gfis_real_fact_entry_coverage=pass covered_entries=8 real_source_record=0 equivalent_formal_confirmation_file=0 manual_business_verification=pending runtime_primary_key=0 review_queue=0 runtime_intake=0 waes_review=0 verified_artifact=0 status_ceiling=repair_required accepted=false integrated=false production_ready=false customer_accepted=false
+gfis_real_fact_entry_coverage=pass covered_entries=8 real_source_record=0 equivalent_formal_confirmation_file=0 manual_business_verification=pending runtime_primary_key=0 review_queue=0 runtime_intake=0 wame_review=0 verified_artifact=0 status_ceiling=repair_required accepted=false integrated=false production_ready=false customer_accepted=false
 ```
 
 ### gfis_real_fact_no_status_promotion
@@ -186,7 +186,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -226,7 +226,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -267,7 +267,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -307,7 +307,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -348,7 +348,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -389,7 +389,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -463,7 +463,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -508,7 +508,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -548,7 +548,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -589,7 +589,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -632,7 +632,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -681,7 +681,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -721,7 +721,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -761,7 +761,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -801,7 +801,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",
@@ -841,7 +841,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "runtime_primary_key_ready": "0",
     "review_queue": "0",
     "runtime_intake": "0",
-    "waes_review": "0",
+    "wame_review": "0",
     "verified": "0",
     "manual_business_verification_pending": "true",
     "real_business_lane": "repair_required",

@@ -27,7 +27,7 @@ minimum_packet_fields:
   - highest_citation_strength
   - boundary_notices
   - missing_evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - acl_decision_refs
   - generated_at
   - no_write
@@ -66,7 +66,7 @@ hard_boundaries:
   packet_pass_is_formal_fact: false
 no_write_assertions:
   writes_kds_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_business_system: 0
   writes_revenue_or_score_confirmation: 0

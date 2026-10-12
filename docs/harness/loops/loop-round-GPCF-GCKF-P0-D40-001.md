@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0FA44D3CF3
 title: GC-Knowledge Fabric P0-D40 正式 evidence 执行事件升级预览 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

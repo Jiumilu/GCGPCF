@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C1E4A92D7
 title: Studio Kanban 操作工作台 UI Gate 证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 Evidence ID: `STUDIO-KANBAN-UI-GATE-20260622`
 
-本证据用于把 `WAES -> Studio` 首条正式实施主线第一次真正落到页面级审计对象。
+本证据用于把 `WAME -> Studio` 首条正式实施主线第一次真正落到页面级审计对象。
 
 本轮目标页固定为：
 
@@ -39,7 +39,7 @@ Evidence ID: `STUDIO-KANBAN-UI-GATE-20260622`
 
 本证据不证明：
 
-1. `WAES -> Studio` 已完成继承改造。
+1. `WAME -> Studio` 已完成继承改造。
 2. `Studio` 已完成真实浏览器验收或移动端验收。
 3. `Studio` 已达到 `accepted`、`integrated` 或 `production_ready`。
 
@@ -62,7 +62,7 @@ Status ceiling: ui_evidence_candidate
 |---|---|---|---|
 | G1 Surface Structure | pass | `KanbanView.vue:236-370` 具备页头、主操作、过滤、状态条、按状态分栏和任务抽屉；`KanbanTaskDrawer.vue:368-557` 形成详情侧抽屉 | 下一轮补浏览器截图，验证视觉骨架是否与代码一致 |
 | G2 Design Tokens | partial | `theme.ts:3-79`、`variables.scss:7-56` 有 Studio 自身令牌；但 `KanbanTaskCard.vue:78-86`、`KanbanView.vue:410-428`、`KanbanTaskDrawer.vue:741-779` 仍直接写入状态色 | 将状态、治理、AI 语义映射到项目群统一令牌层，减少硬编码状态色 |
-| G3 Component Consistency | pass | `KanbanView.vue:239-280` 统一使用 `NSelect/NButton`；`KanbanTaskCard.vue:68-158` 与 `KanbanTaskDrawer.vue:694-964` 复用同一视觉词汇和边框/标签风格 | 后续再对比 WAES 母框架组件词汇表 |
+| G3 Component Consistency | pass | `KanbanView.vue:239-280` 统一使用 `NSelect/NButton`；`KanbanTaskCard.vue:68-158` 与 `KanbanTaskDrawer.vue:694-964` 复用同一视觉词汇和边框/标签风格 | 后续再对比 WAME 母框架组件词汇表 |
 | G4 Evidence And Governance | partial | `KanbanTaskDrawer.vue:374-419`、`470-546`、`529-536` 已展示状态、父子关系、runs、comments、events、log、diagnostics | 仍缺 source record、evidence backlink、audit receipt、confirmer、confirmation time 的显式区块 |
 | G5 AI Fact Separation | partial | `KanbanTaskDrawer.vue:121-142`、`470-487`、`552-557` 能回看 session 与结果摘要，但 AI 输出与业务事实还没有显式分区 | 增加 AI 建议标签、来源、可驳回/人工接管状态，不与系统事实混写 |
 | G6 Accessibility | partial | `KanbanView.vue:286-304`、`457-460` 的状态 chip 有 `aria-pressed` 与 `focus-visible`；文本区 `KanbanTaskCard.vue:94-99`、`153-157`、`KanbanTaskDrawer.vue:782-788` 具备长文本换行 | `KanbanTaskCard.vue:40-62`、`KanbanTaskDrawer.vue:477-485` 仍是点击型 `div`，缺少键盘语义和可聚焦交互 |
@@ -83,11 +83,11 @@ Status ceiling: ui_evidence_candidate
 
 1. `Studio/KanbanView` 已可被认定为 `Studio` 首个真实 `操作工作台页` 验证对象。
 2. 当前最强结论只能到 `ui_partial`。
-3. 本页已经具备工作台骨架、状态分层、任务详情与运行上下文入口，适合承接 `WAES -> Studio` 的下一轮母框架继承评估。
+3. 本页已经具备工作台骨架、状态分层、任务详情与运行上下文入口，适合承接 `WAME -> Studio` 的下一轮母框架继承评估。
 4. 当前主要缺口集中在统一令牌映射、证据/审计语义补齐、AI 建议与事实隔离、浏览器运行验证。
 
 ## 下一轮建议
 
 1. 启动 `Studio/KanbanView` 浏览器级验证，补齐桌面与移动端截图证据。
-2. 基于 `WAES专业工作台母框架升级方案` 为本页建立“母框架映射清单”。
+2. 基于 `WAME专业工作台母框架升级方案` 为本页建立“母框架映射清单”。
 3. 只在完成浏览器验证后，才进入首轮页面级优化设计或改造清单。

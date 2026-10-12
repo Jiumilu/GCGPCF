@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-EXTERNAL-EXECUTION-INTEGRATION-002
 title: Loop Round - GPCF Cognee 外部执行层接入 Intake 收口 002
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,7 +41,7 @@ superseded_by: []
 - 必须保持：
   - `authorization_complete=true`
   - `owner_decision=approve_live_write`
-  - `waes_decision=pass`
+  - `wame_decision=pass`
   - `production_write=false`
   - `accepted=false`
   - `integrated=false`

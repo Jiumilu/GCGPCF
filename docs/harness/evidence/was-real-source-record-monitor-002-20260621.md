@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9B3297DFDC
 title: WAS Real Source Record Monitor 002 Evidence
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-002` 已建立第二次真实 P4 输入 monitor。
 
-当前仍没有真实 P4 source-record 输入。P4 输入、候选文件和下一门禁提升均保持 hold，不创建 runtime primary key、review queue、runtime intake、WAES review、verified artifact，也不升级 accepted、integrated 或 production_ready。
+当前仍没有真实 P4 source-record 输入。P4 输入、候选文件和下一门禁提升均保持 hold，不创建 runtime primary key、review queue、runtime intake、WAME review、verified artifact，也不升级 accepted、integrated 或 production_ready。
 
 ## 监控指标
 
@@ -40,7 +40,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -65,4 +65,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_002.py
 
 ## 边界
 
-本 evidence 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不标记 accepted、integrated 或 production_ready。
+本 evidence 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不标记 accepted、integrated 或 production_ready。

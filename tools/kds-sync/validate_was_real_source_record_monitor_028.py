@@ -17,8 +17,8 @@ SOURCE_JSON = ROOT / "docs/harness/evidence/was-real-source-record-candidate-pre
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 SUPPLIER_ESG_KEYS = [
     "supplier_esg_audit_report_gaps",
@@ -164,7 +164,7 @@ def main() -> int:
         "real_source_records=0",
         "valid_source_records=0",
         "runtime_primary_key_ready=0",
-        "waes_review=0",
+        "wame_review=0",
         "accepted=false",
         "integrated=false",
         "production_ready=false",
@@ -203,7 +203,7 @@ def main() -> int:
         "anti_bribery_conflict_declaration_gaps=0 corrective_action_plan_closure_gaps=0 "
         "supplier_tier_traceability_gaps=0 accepted_for_supplier_esg_profile=0 "
         "accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-029"
     )

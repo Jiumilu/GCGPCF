@@ -5,7 +5,7 @@
   "authorized_at": "2026-06-23T14:30:00+08:00",
   "sanitized_production_usage_ledger": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
   "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
-  "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+  "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
   "execution_operator": "lujunxiang / 总架构师",
   "execution_started_at": "2026-06-23T14:31:00+08:00",
   "execution_finished_at": "2026-06-23T14:32:00+08:00",
@@ -21,7 +21,7 @@
   "production_token_measurement_allowed": false,
   "measured_production_tokens": false,
   "answer_equivalence": "not_measured_precheck_only",
-  "waes_harness_receipt_decision": "receipt_valid_for_precheck_only_no_measurement_opened",
+  "wame_harness_receipt_decision": "receipt_valid_for_precheck_only_no_measurement_opened",
   "rollback_exercised": false,
   "evidence_refs": [
     "docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json",

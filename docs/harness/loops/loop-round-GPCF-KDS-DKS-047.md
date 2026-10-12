@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E324E197A2
 title: LOOP Round GPCF-KDS-DKS-047 - 底座知识人工确认与委员会复核空白实例模板
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,7 +67,7 @@ superseded_by: []
 - AI 额度发放；
 - RAG 准入；
 - 指挥舱强引用；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS、Finance 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。
@@ -94,7 +94,7 @@ superseded_by: []
 | Python 语法检查 | pass | `python3 -m py_compile tools/kds-sync/build_base_knowledge_blank_review_templates.py` 无输出 |
 | 空白字段校验 | pass | 两个模板除 `queueItemId`、`sourceCandidateId`、`baseKnowledgeId` 身份字段外，其余字段均为空字符串、空数组或 null |
 | 文档控制 | pass | 人工确认模板 doc_id=`GPCF-DOC-7797BB4F55`，委员会复核模板 doc_id=`GPCF-DOC-8066745911`，本轮 LOOP 记录 doc_id=`GPCF-DOC-E324E197A2` |
-| 本轮边界 | pass | 两个模板均显示 `blankTemplateOnly=true`、`createsConfirmationFact=false`、`createsCommitteeDecision=false`、`realKdsApiWrite=false`、`waesWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
+| 本轮边界 | pass | 两个模板均显示 `blankTemplateOnly=true`、`createsConfirmationFact=false`、`createsCommitteeDecision=false`、`realKdsApiWrite=false`、`wameWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
 | 文档污染 | pass | `document_pollution=pass` |
 | KDS TOKEN | pass | `kds_token=pass fingerprint=bfd9553d`；Token 未写入文档或 evidence |
 | LOOP 文档门禁 | pass | `repo_md=995`; `kds_md=1008`; `local_mirror_ledger_lines=995`; `missing_metadata=0`; `missing_readme_dirs=0` |

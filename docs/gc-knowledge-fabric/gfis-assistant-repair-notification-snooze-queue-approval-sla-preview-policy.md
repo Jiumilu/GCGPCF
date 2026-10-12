@@ -71,7 +71,7 @@ superseded_by: []
 - createsApprovalRequest = false。
 - createsApprovalDecision = false。
 - createsHarnessEvidence = false。
-- createsWaesGateResult = false。
+- createsWameGateResult = false。
 - createsKweWorkItem = false。
 - persistsEvidence = false。
 - approvesBusinessWrite = false。
@@ -85,7 +85,7 @@ superseded_by: []
 - writesGfis / writesGpc / writesErp / writesMes。
 - writesSlaTimer / writesReminder / writesEscalationSchedule / writesEscalationOwner。
 - writesApprovalRoute / writesApprovalRequest / writesApprovalDecision。
-- writesWaesGateResult / writesKweWorkItem / writesHarnessEvidence。
+- writesWameGateResult / writesKweWorkItem / writesHarnessEvidence。
 - writesKdsLifecycle / writesKdsFact / writesKdsAcceptedFact。
 - writesExternalApi。
 

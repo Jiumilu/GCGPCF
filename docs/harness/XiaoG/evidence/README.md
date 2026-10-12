@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F8A19C3159
 title: evidence
 project: XiaoG
-related_projects: [GPC, WAES, KDS, XiaoG, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0

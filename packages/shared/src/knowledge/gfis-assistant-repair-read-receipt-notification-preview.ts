@@ -33,7 +33,7 @@ export type GfisAssistantRepairReadReceiptNotificationPreviewBlockedAction =
   | "create_event_record"
   | "create_action_receipt"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "create_kwe_work_item"
   | "persist_evidence"
   | "approve_business_write"
@@ -45,7 +45,7 @@ export interface GfisAssistantRepairReadReceiptNotificationPreviewNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesNotification: 0;
   writesReadReceipt: 0;
@@ -96,7 +96,7 @@ export interface GfisAssistantRepairReadReceiptNotificationPreview {
   createsEventRecord: false;
   createsActionReceipt: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   createsKweWorkItem: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;
@@ -120,7 +120,7 @@ export interface GfisAssistantRepairReadReceiptNotificationPreviewPolicy {
     notificationPreviewIsNotEventRecord: boolean;
     notificationPreviewIsNotActionReceipt: boolean;
     notificationPreviewIsNotHarnessEvidence: boolean;
-    notificationPreviewIsNotWaesResult: boolean;
+    notificationPreviewIsNotWameResult: boolean;
     notificationPreviewIsNotKweWorkItem: boolean;
     notificationPreviewIsNotLifecycleChange: boolean;
     notificationPreviewIsNotBusinessWriteback: boolean;
@@ -130,7 +130,7 @@ export interface GfisAssistantRepairReadReceiptNotificationPreviewPolicy {
     createsEventRecordMustBeFalse: boolean;
     createsActionReceiptMustBeFalse: boolean;
     createsHarnessEvidenceMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
     persistsEvidenceMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D34897E9C1
 title: Loop Round — GPCF-L4-GFIS-REPAIR-226
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,7 +64,7 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 state=pending_business_verification_quarantine_schema_precheck_ready
@@ -95,8 +95,8 @@ npm run test:e2e
 - 未创建 quarantine item。
 - 未创建有效 source-of-record。
 - 未创建运行层主键。
-- 未创建 review queue、runtime intake、WAES review 或 verified artifact。
-- 未执行生产写入、真实外部 API 写入、真实 KDS 写入、真实 WAES 写入、bench migrate、schema sync、权限变更、部署、推送或 accepted/integrated 状态升级。
+- 未创建 review queue、runtime intake、WAME review 或 verified artifact。
+- 未执行生产写入、真实外部 API 写入、真实 KDS 写入、真实 WAME 写入、bench migrate、schema sync、权限变更、部署、推送或 accepted/integrated 状态升级。
 
 ## Loop 真实性计数
 

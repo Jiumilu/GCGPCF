@@ -40,7 +40,7 @@ REQUIRED_EVIDENCE_TOKENS = [
     "high_count=0",
     "xwail_min_validator = verified_with_local_dev_boundary",
     "xwail_status_candidate = ready_for_review",
-    "waes_status = Draft",
+    "wame_status = Draft",
     "accepted = false",
     "integrated = false",
     "production_ready = false",
@@ -51,13 +51,13 @@ REQUIRED_REFERENCE_TOKENS = [
     "xwail-min-validator-runtime-20260625.md",
     "XWAIL-MIN-VALIDATOR-001",
     "verified_with_local_dev_boundary",
-    "WAES -> XWAIL -> AaaS",
+    "WAME -> XWAIL -> AaaS",
     "ready_for_review",
 ]
 
 FORBIDDEN_POSITIVE_CLAIMS = [
     "完整 XWAIL 工具链完成",
-    "WAES 发布完成",
+    "WAME 发布完成",
     "AaaS 绑定完成",
     "accepted = true",
     "integrated = true",
@@ -113,7 +113,7 @@ def main() -> int:
         "runtime_status": "verified_with_local_dev_boundary",
         "failures": failures,
         "warnings": [
-            "This validates minimum local validator evidence only; it does not prove full XWAIL tooling, WAES publication, AaaS binding, or customer acceptance.",
+            "This validates minimum local validator evidence only; it does not prove full XWAIL tooling, WAME publication, AaaS binding, or customer acceptance.",
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

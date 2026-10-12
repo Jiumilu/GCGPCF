@@ -25,7 +25,7 @@ export type PkcConsoleSection =
 export type PkcBlockedAction =
   | "final_fact_confirmation"
   | "committee_decision"
-  | "waes_gate_override"
+  | "wame_gate_override"
   | "force_kds_lifecycle_change"
   | "formal_revenue_distribution"
   | "business_system_writeback";
@@ -53,7 +53,7 @@ export interface PkcConsoleResponse {
   blockedActions: PkcBlockedAction[];
   noWrite: true;
   kdsWrites: 0;
-  waesWrites: 0;
+  wameWrites: 0;
   kweWrites: 0;
   businessWrites: 0;
   externalApiWrites: 0;

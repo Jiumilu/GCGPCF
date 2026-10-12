@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E864D51E4D
 title: GPCF-L4-GFIS-REAL-SYNC-007
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,8 +46,8 @@ superseded_by: []
 ## 输出
 
 - `gfis_verified_artifact_gate=pass`
-- `waes_review_created=0`
-- `waes_review=0`
+- `wame_review_created=0`
+- `wame_review=0`
 - `verified_artifact_created=0`
 - `verified=0`
 - `synthetic_dev_lane=dev_closed`
@@ -57,7 +57,7 @@ superseded_by: []
 
 ## 边界
 
-本轮不创建真实 source record、运行层主键、review queue、runtime intake、WAES review、verified artifact，不执行真实 KDS/WAES 写入、生产写入、真实外部 API 写入、bench migrate、schema sync、权限变更、部署、提交、推送或 accepted/integrated 状态升级。
+本轮不创建真实 source record、运行层主键、review queue、runtime intake、WAME review、verified artifact，不执行真实 KDS/WAME 写入、生产写入、真实外部 API 写入、bench migrate、schema sync、权限变更、部署、提交、推送或 accepted/integrated 状态升级。
 
 ## 真实性计数
 

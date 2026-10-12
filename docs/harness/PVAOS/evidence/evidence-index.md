@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5266DDB981
 title: Evidence Index — PVAOS
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, GPCF]
+related_projects: [GPC, PVAOS, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

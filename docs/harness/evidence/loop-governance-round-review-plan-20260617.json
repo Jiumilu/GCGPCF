@@ -58,6 +58,6 @@
   "non_claims": [
     "This plan does not rewrite historical round records in bulk.",
     "This plan does not prove GFIS runtime SOP E2E passed.",
-    "This plan does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status."
+    "This plan does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, or integrated status."
   ]
 }

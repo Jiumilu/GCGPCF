@@ -4,7 +4,7 @@ import type {
   RagAdmission,
 } from "./object";
 import type { KdsPoolCode } from "./pool";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type KdsAclSubjectType =
   | "user"
@@ -51,7 +51,7 @@ export interface KdsExternalShareView {
   redactedFields: string[];
   metadataOnly: boolean;
   ragAdmission: Extract<RagAdmission, "safe" | "limited" | "sensitive_metadata_only">;
-  waesGateStatus: Extract<WaesGateStatus, "passed" | "metadata_only" | "redaction_required">;
+  wameGateStatus: Extract<WameGateStatus, "passed" | "metadata_only" | "redaction_required">;
   publicationApprovalRef?: string;
   evidenceRefs: string[];
   expiresAt?: string;
@@ -73,7 +73,7 @@ export interface KdsAclExternalSharePolicy {
     sensitiveMetadataOnlyRawContentDenied: boolean;
     blockedRagExternalShareDenied: boolean;
     t5AiOnlyExternalFactDenied: boolean;
-    externalShareRequiresWaesGate: boolean;
+    externalShareRequiresWameGate: boolean;
     publicVisibilityRequiresPublicationApproval: boolean;
     aclPassIsNotRagStrongReference: boolean;
     aclPassIsNotBusinessWriteback: boolean;

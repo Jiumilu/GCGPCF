@@ -44,7 +44,7 @@
       "runtime_primary_key_ready": 0,
       "review_queue": 0,
       "runtime_intake": 0,
-      "waes_review": 0,
+      "wame_review": 0,
       "verified": 0
     },
     "synthetic_lane_counts": {
@@ -55,7 +55,7 @@
       "production_writes": 0,
       "real_external_api_writes": 0,
       "kds_fact_writes": 0,
-      "waes_gate_result_writes": 0
+      "wame_gate_result_writes": 0
     },
     "next_authorization": "real source-of-record or equivalent formal confirmation is required before real lane promotion"
   },
@@ -76,7 +76,7 @@
     "required_inputs": [
       "real customer order or platform order receipt",
       "manual business verification",
-      "WAES review result",
+      "WAME review result",
       "KDS backlink receipt"
     ],
     "resume_round": "GPCF-LOOP-FIVE-DIRECTION-RECOVERY-001"

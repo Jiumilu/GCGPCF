@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FA60AE3B37
 title: Cognee 全量运行 readiness 汇总门禁 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 | `COGNEE-FULL-RUN-GAP-001` | `prepared` | `missing_real_execution_receipt` | `false` |
 | `COGNEE-FULL-RUN-GAP-002` | `template_prepared` | `missing_real_object_inventory_and_coverage` | `false` |
 | `COGNEE-FULL-RUN-GAP-003` | `template_prepared` | `missing_real_scenario_inventory_and_execution_records` | `false` |
-| `COGNEE-FULL-RUN-GAP-004` | `template_prepared` | `missing_waes_harness_decision_and_real_promotion_evidence` | `false` |
+| `COGNEE-FULL-RUN-GAP-004` | `template_prepared` | `missing_wame_harness_decision_and_real_promotion_evidence` | `false` |
 | `COGNEE-FULL-RUN-GAP-005` | `template_prepared` | `missing_real_full_run_ledger` | `false` |
 
 ## 4. readiness gate

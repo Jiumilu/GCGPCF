@@ -7,7 +7,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -43,7 +43,7 @@
       "value": "REQUIRED_USER_INPUT",
       "required": true,
       "format": "human_approver_or_governance_role",
-      "example": "GPCF/WAES named approver"
+      "example": "GPCF/WAME named approver"
     },
     "authorized_at": {
       "value": "REQUIRED_USER_INPUT",
@@ -76,10 +76,10 @@
         "restore blocked state"
       ]
     },
-    "waes_harness_admission_decision": {
+    "wame_harness_admission_decision": {
       "value": "REQUIRED_USER_INPUT",
       "required": true,
-      "format": "WAES/Harness decision evidence id",
+      "format": "WAME/Harness decision evidence id",
       "allowed_values": [
         "admitted_for_sanitized_measurement_precheck",
         "blocked"

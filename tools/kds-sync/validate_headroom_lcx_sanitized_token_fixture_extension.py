@@ -14,7 +14,7 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/headroom-lcx-sanitized-token-fixture
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md"
 RUNNER = ROOT / "tools/kds-sync/build_headroom_lcx_sanitized_token_fixture_extension.py"
 
-PROJECTS = ["GPCF", "KDS", "Brain", "WAES", "GFIS"]
+PROJECTS = ["GPCF", "KDS", "Brain", "WAME", "GFIS"]
 SCENARIOS = ["loop_gate_metadata", "retrieval_context_metadata", "tool_output_metadata"]
 
 

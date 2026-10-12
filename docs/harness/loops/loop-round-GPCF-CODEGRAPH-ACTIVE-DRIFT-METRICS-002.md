@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A1A8006738
 title: GPCF CodeGraph Active Drift Metrics 002
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

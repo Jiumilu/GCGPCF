@@ -17,7 +17,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -35,7 +35,7 @@
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+          "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "confirmed",
@@ -44,7 +44,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,
@@ -69,7 +69,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -84,11 +84,11 @@
         ],
         "authorization_fields": {
           "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-          "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+          "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+          "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "REQUIRED_USER_INPUT",
@@ -97,7 +97,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,
@@ -122,7 +122,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -137,11 +137,11 @@
         ],
         "authorization_fields": {
           "authorized_window_id": "MEASURE-20260622",
-          "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+          "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+          "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "confirmed",
@@ -150,7 +150,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,
@@ -175,7 +175,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -190,13 +190,13 @@
         ],
         "authorization_fields": {
           "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-          "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+          "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": {
             "raw_prompt": "do not store raw prompt"
           },
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+          "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "confirmed",
@@ -205,7 +205,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,
@@ -219,8 +219,8 @@
       }
     },
     {
-      "case_id": "bad_waes_decision",
-      "expected_rejection_reason": "waes_harness_decision_required",
+      "case_id": "bad_wame_decision",
+      "expected_rejection_reason": "wame_harness_decision_required",
       "candidate": {
         "package_id": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-TEMPLATE-20260622",
         "schema_id": "HEADROOM-LCX-AUTHORIZATION-SCHEMA-20260622",
@@ -230,7 +230,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -245,11 +245,11 @@
         ],
         "authorization_fields": {
           "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-          "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+          "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "approved"
+          "wame_harness_admission_decision": "approved"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "confirmed",
@@ -258,7 +258,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,
@@ -283,7 +283,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -298,11 +298,11 @@
         ],
         "authorization_fields": {
           "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-          "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+          "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+          "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "confirmed",
@@ -311,7 +311,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,
@@ -336,7 +336,7 @@
           "GPCF",
           "KDS",
           "Brain",
-          "WAES",
+          "WAME",
           "GFIS",
           "GPC",
           "PVAOS",
@@ -350,11 +350,11 @@
         ],
         "authorization_fields": {
           "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-          "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+          "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
           "authorized_at": "2026-06-22T00:00:00+08:00",
           "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-          "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+          "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
         },
         "human_attestations": {
           "telemetry_off_confirmed": "confirmed",
@@ -363,7 +363,7 @@
           "no_real_kds_write": "confirmed",
           "no_external_api_write": "confirmed",
           "rollback_plan_reviewed": "confirmed",
-          "waes_harness_evidence_attached": "confirmed"
+          "wame_harness_evidence_attached": "confirmed"
         },
         "required_false_until_completed": {
           "authorization_complete": false,

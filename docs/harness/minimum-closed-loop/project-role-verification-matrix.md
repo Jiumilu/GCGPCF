@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9096ABA44D
 title: 项目角色验证矩阵
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 | GFIS | 工厂执行运行层 | 工厂事实主账、运行层 SOP、生产执行、质检、库存、发货、POD 事实接收 | repair_required |
 | GPC | 供应链平台 | 项目初始化、组织/伙伴接入、平台订单、客户协同主线 | ready_for_review |
 | PVAOS | 门户与运营底座 | 门户、平台运营、用户入口和运营支撑 | ready_for_review |
-| WAES | 治理与证据门禁 | WAES confirmation、状态门控、越权控制和证据审计 | ready_for_review |
+| WAME | 治理与证据门禁 | WAME confirmation、状态门控、越权控制和证据审计 | ready_for_review |
 | KDS | 知识主存事实层 | 知识主存、KDS source backlink、write receipt 和本地镜像 | ready_for_review |
 | Brain | 知识编排层 | 知识编制、检索、推理和 UI 知识呈现 | ready_for_review |
 | PKC | 个人知识驾驶舱 | 个人知识工作台与端到端用户闭环 | ready_for_review |

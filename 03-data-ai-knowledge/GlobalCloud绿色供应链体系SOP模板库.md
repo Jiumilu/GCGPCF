@@ -49,7 +49,7 @@ SOP 在本体系中不是静态文档，而是可配置、可版本化、可执�
 | outputObjects | 输出对象 |
 | triggerEvents | 触发事件 |
 | businessConfirmationPoints | 业务确认点，仅由主责业务系统承办 |
-| governanceCheckpoints | WAES/Harness 治理确认点 |
+| governanceCheckpoints | WAME/Harness 治理确认点 |
 | evidenceRequirements | 来源记录、事件、日志、截图、回执、BusinessApprovalReference |
 | aiAllowedActions | 查询、摘要、预警、建议、复盘草案 |
 | aiForbiddenActions | 写业务事实、审批事务、关闭异常、质量放行、库存调整、签收确认 |
@@ -72,7 +72,7 @@ published -> superseded -> retired
 |---|---|
 | draft | 草案，不可执行 |
 | review | 业务和治理评审中 |
-| governance_authorized | WAES/Harness 治理授权通过 |
+| governance_authorized | WAME/Harness 治理授权通过 |
 | published | 可用于试运营或正式运营 |
 | frozen | 暂停修改，用于审计或问题排查 |
 | rollback_pending | 回滚待确认 |

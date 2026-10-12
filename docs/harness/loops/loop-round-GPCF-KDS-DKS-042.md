@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6EAE781FDF
 title: LOOP Round GPCF-KDS-DKS-042 - 底座可用知识闭环率评分脚本 dry-run 规格
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -69,7 +69,7 @@ superseded_by: []
 - RAG 准入；
 - 指挥舱强引用；
 - 委员会真实裁决；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。

@@ -12,7 +12,7 @@ export interface GfisEndpointDefinition {
   handler: string;
   routeMode: GfisRouteMode;
   requiresKdsSearch: boolean;
-  requiresWaesGate: boolean;
+  requiresWameGate: boolean;
   requiresKweFlowForFinality: boolean;
   writesFact: false;
   writesBusinessSystem: false;
@@ -28,7 +28,7 @@ export const GFIS_ENDPOINTS: GfisEndpointDefinition[] = [
     handler: "queryGfisKnowledgeAssistant",
     routeMode: "assistant_query",
     requiresKdsSearch: true,
-    requiresWaesGate: true,
+    requiresWameGate: true,
     requiresKweFlowForFinality: true,
     writesFact: false,
     writesBusinessSystem: false,
@@ -42,7 +42,7 @@ export const GFIS_ENDPOINTS: GfisEndpointDefinition[] = [
     handler: "queryGfisUsageAssistant",
     routeMode: "usage_guidance",
     requiresKdsSearch: true,
-    requiresWaesGate: true,
+    requiresWameGate: true,
     requiresKweFlowForFinality: true,
     writesFact: false,
     writesBusinessSystem: false,
@@ -56,7 +56,7 @@ export const GFIS_ENDPOINTS: GfisEndpointDefinition[] = [
     handler: "checkGfisDocumentAcceptance",
     routeMode: "document_acceptance_check",
     requiresKdsSearch: true,
-    requiresWaesGate: true,
+    requiresWameGate: true,
     requiresKweFlowForFinality: true,
     writesFact: false,
     writesBusinessSystem: false,
@@ -70,7 +70,7 @@ export const GFIS_ENDPOINTS: GfisEndpointDefinition[] = [
     handler: "createGfisWritebackCandidate",
     routeMode: "writeback_candidate",
     requiresKdsSearch: true,
-    requiresWaesGate: true,
+    requiresWameGate: true,
     requiresKweFlowForFinality: true,
     writesFact: false,
     writesBusinessSystem: false,

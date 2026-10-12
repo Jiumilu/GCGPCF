@@ -8,7 +8,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -33,7 +33,7 @@
     {
       "layer_id": "authorization_layer",
       "status": "admitted_for_sanitized_measurement_precheck",
-      "purpose": "authorized_measurement_window_and_waes_harness_decision",
+      "purpose": "authorized_measurement_window_and_wame_harness_decision",
       "source_paths": [
         "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
         "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json",
@@ -117,7 +117,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -148,7 +148,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -179,7 +179,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -202,7 +202,7 @@
       "current_gate": "dry_run_only"
     },
     {
-      "project_id": "WAES",
+      "project_id": "WAME",
       "source_path": "09-status/gpcf-project-status-matrix.md",
       "allowed_modes": [
         "sdk_dry_run",
@@ -211,7 +211,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -225,11 +225,11 @@
         "gate_trace_tokens_after"
       ],
       "sensitive_boundaries": [
-        "waes_decision",
+        "wame_decision",
         "policy_rule",
         "risk_verdict"
       ],
-      "owner": "WAES",
+      "owner": "WAME",
       "current_gate": "dry_run_only"
     },
     {
@@ -242,7 +242,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -276,7 +276,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -307,7 +307,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -338,7 +338,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -369,7 +369,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -402,7 +402,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -435,7 +435,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -466,7 +466,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -497,7 +497,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -530,7 +530,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -561,7 +561,7 @@
       ],
       "blocked_modes": [
         "production_proxy",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "cross_project_memory_as_fact",
         "learn_apply_auto",
         "output_shaper_acceptance",
@@ -602,7 +602,7 @@
     "independent_replay_status": "independent_production_token_free_loop_replay_ready",
     "precheck_evidence_id": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
     "precheck_status": "authorized_measurement_precheck_admitted_for_sanitized_dry_run_only",
-    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+    "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
     "authorized_window_id": "LCX-MEASURE-20260622-001",
     "authorized_by": "lujunxiang / GPCF owner",
     "authorized_at": "2026-06-22T08:42:06+08:00",

@@ -2,7 +2,7 @@
 """Validate Brain and PKC entry contracts as read-only dry-run surfaces.
 
 This script uses local fixtures only. It does not write Brain, PKC, KDS,
-WAES, KWE, GFIS, GPC, or any external API.
+WAME, KWE, GFIS, GPC, or any external API.
 """
 
 from __future__ import annotations
@@ -20,7 +20,7 @@ REQUIRED_BLOCKED_ACTIONS = {
     "brain": {
         "direct_accept_fact",
         "direct_gfis_writeback",
-        "direct_waes_gate_override",
+        "direct_wame_gate_override",
     },
     "pkc": {
         "final_fact_confirmation",
@@ -43,7 +43,7 @@ def evaluate(case: dict[str, Any]) -> dict[str, Any]:
         "blockedActions": expected["blockedActions"],
         "noWrite": True,
         "kdsWrites": 0,
-        "waesWrites": 0,
+        "wameWrites": 0,
         "kweWrites": 0,
         "businessWrites": 0,
         "externalApiWrites": 0,
@@ -98,7 +98,7 @@ def main() -> int:
         f"surfaces={','.join(sorted(surfaces))} "
         f"covered_views={total_views} "
         f"blocked_actions={total_blocked_actions} "
-        "no_write=covered kds_writes=0 waes_writes=0 kwe_writes=0 "
+        "no_write=covered kds_writes=0 wame_writes=0 kwe_writes=0 "
         "business_writes=0 external_api_writes=0"
     )
     return 0

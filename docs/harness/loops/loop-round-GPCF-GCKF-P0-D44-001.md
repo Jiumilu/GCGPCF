@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-305395AA04
 title: Loop Round GPCF-GCKF-P0-D44-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ superseded_by: []
 
 - 签署回执升级摘要预览 SOP 候选：D43 signer receipt preview → D44 escalation digest preview → 后续人工确认包或委员会触发包预览。
 
-## 本轮 WAES 门禁结果
+## 本轮 WAME 门禁结果
 
 - 当前仅为 dry-run preview。
 - 不允许自动发送升级摘要、重发通知或执行升级。

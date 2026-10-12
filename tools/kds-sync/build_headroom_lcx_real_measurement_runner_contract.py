@@ -53,7 +53,7 @@ def build_contract() -> dict[str, Any]:
         "authorized_at",
         "sanitized_production_token_ledger",
         "rollback_plan_id",
-        "waes_harness_admission_decision",
+        "wame_harness_admission_decision",
     ]
 
     forbidden_inputs = [
@@ -110,7 +110,7 @@ def build_contract() -> dict[str, Any]:
             ],
             "required_preconditions": [
                 "real_measurement_authorization_window",
-                "waes_harness_admission_decision",
+                "wame_harness_admission_decision",
                 "sanitized_token_ledger_metadata_only",
                 "rollback_plan_id",
                 "no_production_proxy",
@@ -139,7 +139,7 @@ def build_contract() -> dict[str, Any]:
             "rollback_runbook_written": "Headroom LCX Rollback Plan 20260622-001" in rollback_text,
         },
         "precheck_anchor": {
-            "waes_harness_admission_decision": precheck["waes_harness_admission_decision"],
+            "wame_harness_admission_decision": precheck["wame_harness_admission_decision"],
             "authorization_complete": precheck["precheck"]["authorization_complete"],
             "missing_required_field_count_zero": precheck["precheck"]["missing_required_field_count"] == 0,
         },
@@ -156,7 +156,7 @@ def build_contract() -> dict[str, Any]:
         "notes": [
             "This contract only defines the precheck-only runner boundary.",
             "It does not authorize execution, production measurement, or real business equivalence measurement.",
-            "It can be wired to a runner only after a future WAES/Harness decision opens a real measurement window.",
+            "It can be wired to a runner only after a future WAME/Harness decision opens a real measurement window.",
         ],
     }
 
@@ -174,7 +174,7 @@ def write_outputs(contract: dict[str, Any]) -> None:
                 "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-20260623",
                 "title: Headroom LCX Real Measurement Runner Contract Evidence",
                 "project: GPCF",
-                "related_projects: [GPCF, KDS, WAES, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+                "related_projects: [GPCF, KDS, WAME, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
                 "domain: docs",
                 "status: controlled",
                 "version: v1.0",
@@ -201,7 +201,7 @@ def write_outputs(contract: dict[str, Any]) -> None:
                 "",
                 "## 允许输入",
                 "",
-                "`authorized_window_id`, `authorized_by`, `authorized_at`, `sanitized_production_token_ledger`, `rollback_plan_id`, `waes_harness_admission_decision`",
+                "`authorized_window_id`, `authorized_by`, `authorized_at`, `sanitized_production_token_ledger`, `rollback_plan_id`, `wame_harness_admission_decision`",
                 "",
                 "## 禁止输入",
                 "",
@@ -255,7 +255,7 @@ def write_outputs(contract: dict[str, Any]) -> None:
                 "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-RUNNER-CONTRACT-LOOP-001",
                 "title: Loop Round GPCF Headroom LCX Real Measurement Runner Contract 001",
                 "project: GPCF",
-                "related_projects: [GPCF, KDS, WAES, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+                "related_projects: [GPCF, KDS, WAME, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
                 "domain: docs",
                 "status: controlled",
                 "version: v1.0",

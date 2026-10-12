@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-BENEFIT-PROOF-015
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：CodeGraph business execution window 已授予，business task intake 008 已存在。
 - 目标：证明 CodeGraph 对真实业务候选开发态任务已经产生可量化收益。
 - 动作：读取 business task intake、首个授权最小候选、task intake gate 和 authorized candidate validator，生成收益证明 evidence 与 validator。
-- 边界：不进入新的业务代码开发，不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAES 写入。
+- 边界：不进入新的业务代码开发，不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAME 写入。
 
 ## stop
 
@@ -45,7 +45,7 @@ python3 tools/kds-sync/validate_codegraph_dev_execution_benefit_proof.py
 
 - 最后安全状态：`GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008`
 - 可重试动作：刷新 business task intake 的 CodeGraph query / node / affected，并重跑收益证明 validator。
-- 不可重试动作：未授权 commit、push、deploy、production write、external API write、real KDS write、real WAES write。
+- 不可重试动作：未授权 commit、push、deploy、production write、external API write、real KDS write、real WAME write。
 
 ## debug
 

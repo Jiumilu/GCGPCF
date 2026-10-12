@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-78D34088CD
 title: OKF v0.1 摘要批准请求 OKF-SUM-20260620-001
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

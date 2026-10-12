@@ -19,7 +19,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -39,7 +39,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 PLACEHOLDER = "REQUIRED_USER_INPUT"
@@ -96,7 +96,7 @@ def main() -> int:
                 "value": PLACEHOLDER,
                 "required": True,
                 "format": "human_approver_or_governance_role",
-                "example": "GPCF/WAES named approver",
+                "example": "GPCF/WAME named approver",
             },
             "authorized_at": {
                 "value": PLACEHOLDER,
@@ -116,10 +116,10 @@ def main() -> int:
                 "format": "controlled_rollback_plan_or_runbook_id",
                 "minimum_contents": ["disable proxy", "disable SDK", "delete temporary cache", "retain evidence"],
             },
-            "waes_harness_admission_decision": {
+            "wame_harness_admission_decision": {
                 "value": PLACEHOLDER,
                 "required": True,
-                "format": "WAES/Harness decision evidence id",
+                "format": "WAME/Harness decision evidence id",
                 "allowed_values": ["admitted_for_sanitized_measurement_precheck", "blocked"],
             },
         },
@@ -184,7 +184,7 @@ def main() -> int:
 doc_id: GPCF-DOC-09531740E7
 title: Headroom LCX Authorized Measurement Authorization Template Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -238,7 +238,7 @@ superseded_by: []
 
 ## 下一步
 
-由授权人补齐模板字段，并附 WAES/Harness 准入裁决后，重新运行授权测量前置检查。
+由授权人补齐模板字段，并附 WAME/Harness 准入裁决后，重新运行授权测量前置检查。
 """,
         encoding="utf-8",
     )
@@ -248,7 +248,7 @@ superseded_by: []
 doc_id: GPCF-DOC-40025385F7
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -301,7 +301,7 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 下一轮
 
-若用户提供完整字段和 WAES/Harness 准入裁决，则重新运行 authorized measurement precheck；否则只能继续完善负向 fixtures 和审计口径。
+若用户提供完整字段和 WAME/Harness 准入裁决，则重新运行 authorized measurement precheck；否则只能继续完善负向 fixtures 和审计口径。
 """,
         encoding="utf-8",
     )

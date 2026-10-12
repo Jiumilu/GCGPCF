@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-90AB2CEFD0
 title: Headroom LCX Authorization Boundary Review Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 | authorized_at | missing | required |
 | sanitized_production_token_ledger | missing | required |
 | rollback_plan_id | missing | required |
-| waes_harness_admission_decision | missing | required |
+| wame_harness_admission_decision | missing | required |
 
 ## 门禁
 
@@ -51,7 +51,7 @@ superseded_by: []
 | authorized_at_present | false |
 | sanitized_production_token_ledger_present | false |
 | rollback_plan_present | false |
-| waes_harness_admission_decision_present | false |
+| wame_harness_admission_decision_present | false |
 | production_proxy_started | false |
 | production_sdk_enabled | false |
 | production_external_api_write | false |
@@ -65,7 +65,7 @@ superseded_by: []
 
 ## 15 项目范围
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 下一步
 

@@ -856,11 +856,11 @@
     },
     {
       "bundle": "architecture",
-      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
-      "title": "GlobalCloud绿色供应链体系WAES控制塔治理架构图",
+      "okf_path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
+      "title": "GlobalCloud绿色供应链体系WAME控制塔治理架构图",
       "type": "Architecture Document",
-      "source_path": "01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
-      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "source_path": "01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
+      "kds_path": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "source_hash": "720ec92a8c1b2305fe522e1b420d1fb327cdef2874e87838ba84d2573992ebfd",
       "source_of_record": "kds",
       "derivation_policy": "metadata_only_no_body_copy"
@@ -1925,21 +1925,21 @@
       "label": "开发/90-跨项目架构/01-architecture/GlobalCloud体系最小闭环与三阶段激活深度总表.md"
     },
     {
-      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "kind": "concept",
-      "label": "GlobalCloud绿色供应链体系WAES控制塔治理架构图",
-      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "label": "GlobalCloud绿色供应链体系WAME控制塔治理架构图",
+      "path": ".okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "type": "Architecture Document"
     },
     {
-      "id": "source:01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "id": "source:01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "kind": "source_document",
-      "label": "01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md"
+      "label": "01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md"
     },
     {
-      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "id": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "kind": "kds_path",
-      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md"
+      "label": "开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md"
     },
     {
       "id": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系总架构.md",
@@ -3151,17 +3151,17 @@
     },
     {
       "from": "bundle:architecture",
-      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "to": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "type": "bundle_contains_concept"
     },
     {
-      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
-      "to": "source:01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
+      "to": "source:01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "type": "concept_derives_from_source"
     },
     {
-      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
-      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAES控制塔治理架构图.md",
+      "from": "concept:.okf/bundles/architecture-v0.1/concepts/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
+      "to": "kds:开发/90-跨项目架构/01-architecture/GlobalCloud绿色供应链体系WAME控制塔治理架构图.md",
       "type": "concept_targets_kds_path"
     },
     {

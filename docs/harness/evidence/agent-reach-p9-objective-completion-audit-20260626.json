@@ -31,7 +31,7 @@
     "gfis_was_business_mapping": {
       "evidence": "docs/harness/evidence/agent-reach-p9-source-direct-review-queue-bridge-readiness-20260626.json",
       "status": "complete",
-      "summary": "P9S source-direct target 已映射到 GFIS/WAS/WAES/KDS review lanes，且仅 preview-only。"
+      "summary": "P9S source-direct target 已映射到 GFIS/WAS/WAME/KDS review lanes，且仅 preview-only。"
     },
     "markdown_drift_monitor": {
       "evidence": "docs/harness/evidence/agent-reach-full-coverage-markdown-drift-monitor-20260626.json",

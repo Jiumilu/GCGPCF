@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8D6E4A1F29
 title: GPCF Session Mainline Drift Watch 003
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

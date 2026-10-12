@@ -19,7 +19,7 @@ LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-PROJECT-GROU
 PROJECTS = {
     "GPCF",
     "KDS",
-    "WAES",
+    "WAME",
     "Brain",
     "GFIS",
     "GPC",

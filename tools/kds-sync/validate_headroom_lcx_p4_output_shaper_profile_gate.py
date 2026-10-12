@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -87,7 +87,7 @@ def main() -> int:
     require(profile_gate.get("forbidden_context_pass_count") == 4, "all forbidden contexts must pass")
     require(profile_gate.get("allowed_context_pass_count") == 5, "all allowed shaper contexts must pass")
     require(profile_gate.get("schema_forbidden_context_gate") is True, "schema forbidden context gate must pass")
-    require(profile_gate.get("waes_disable_output_shaper_gate") is True, "WAES output shaper gate must pass")
+    require(profile_gate.get("wame_disable_output_shaper_gate") is True, "WAME output shaper gate must pass")
     scenarios = evidence.get("scenario_results", [])
     forbidden_seen = set()
     for item in scenarios:

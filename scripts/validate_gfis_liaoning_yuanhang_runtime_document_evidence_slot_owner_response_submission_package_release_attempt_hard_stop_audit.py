@@ -88,7 +88,7 @@ def main() -> None:
         "release_allowed": 0,
         "review_queue": 0,
         "runtime_intake": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "verified": 0,
     }
     require(audit.get("subject") == "GFIS运行层", "subject must be GFIS runtime layer")
@@ -117,14 +117,14 @@ def main() -> None:
         require(item.get("attempted_release") is True, "attempted_release must be true")
         require(item.get("attempted_review_queue") is True, "attempted_review_queue must be true")
         require(item.get("attempted_runtime_intake") is True, "attempted_runtime_intake must be true")
-        require(item.get("attempted_waes_review") is True, "attempted_waes_review must be true")
+        require(item.get("attempted_wame_review") is True, "attempted_wame_review must be true")
         require(item.get("hard_stop") is True, "hard_stop must be true")
         require(item.get("blocker_count") == 6, "blocker count mismatch")
         require(set(item.get("blockers", [])) == EXPECTED_BLOCKERS, "blockers mismatch")
         require(item.get("release_allowed") is False, "release must not be allowed")
         require(item.get("review_queue_allowed") is False, "review queue must not be allowed")
         require(item.get("runtime_intake_allowed") is False, "runtime intake must not be allowed")
-        require(item.get("waes_review_allowed") is False, "WAES review must not be allowed")
+        require(item.get("wame_review_allowed") is False, "WAME review must not be allowed")
         require(item.get("verified_artifact_allowed") is False, "verified artifact must not be allowed")
         require(item.get("state") == "release_attempt_hard_stopped_no_submission_package", "item state mismatch")
     require(len(objects) == 12, "audit must cover 12 runtime objects")
@@ -169,7 +169,7 @@ def main() -> None:
         "objects=12 proof_slots=62 expected_submission_packages=62 attempted_release=62 "
         "hard_stops=62 blockers=372 submission_packages_found=0 structure_valid_submission_packages=0 "
         "quarantine_candidates=0 quarantined_packages=0 accepted_packages=0 rejected_packages=0 "
-        "release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "state=owner_response_submission_package_release_attempt_hard_stopped_no_submission_packages runtime_sop_e2e=repair_required"
     )
 

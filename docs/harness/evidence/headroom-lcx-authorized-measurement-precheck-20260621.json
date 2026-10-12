@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -25,14 +25,14 @@
   ],
   "source_authorization_review": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260621",
   "source_approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
-  "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+  "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
   "missing_fields": [],
   "precheck": {
     "authorization_signal_present": true,
     "authorization_complete": true,
     "missing_required_field_count": 0,
     "authorized_measurement_precheck_gate": true,
-    "waes_harness_admitted": true,
+    "wame_harness_admitted": true,
     "production_token_measurement_allowed": false,
     "production_admission_gate": false
   },
@@ -41,7 +41,7 @@
     "authorization_signal_present": true,
     "authorization_complete": true,
     "missing_required_field_count_zero": true,
-    "waes_harness_admitted": true,
+    "wame_harness_admitted": true,
     "production_token_measurement_allowed": false,
     "production_proxy_started": false,
     "production_sdk_enabled": false,
@@ -58,7 +58,7 @@
     "not_authorized_production_measurement": true,
     "not_production_entry": true,
     "not_sanitized_production_token_measurement": true,
-    "not_waes_harness_admitted": true,
+    "not_wame_harness_admitted": true,
     "not_real_kds_write": true,
     "not_external_api_write": true,
     "not_sensitive_material_processing": true,
@@ -72,6 +72,6 @@
     "authorized_at": "required",
     "sanitized_production_token_ledger": "required",
     "rollback_plan_id": "required",
-    "waes_harness_admission_decision": "required"
+    "wame_harness_admission_decision": "required"
   }
 }

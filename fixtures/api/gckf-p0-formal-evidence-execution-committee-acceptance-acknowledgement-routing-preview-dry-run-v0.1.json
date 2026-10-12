@@ -29,7 +29,7 @@
       "committee_secretariat",
       "committee_representative",
       "acknowledgement_routing_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "acl_owner",
@@ -48,7 +48,7 @@
       "candidate_conflict_of_interest_snapshot",
       "candidate_blocker_and_hold_snapshot",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -112,7 +112,7 @@
       "candidate_conflict_of_interest_snapshot_present",
       "candidate_blocker_and_hold_snapshot_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_routing_not_formal_acknowledgement",
@@ -133,13 +133,13 @@
       "candidateConflictOfInterestSnapshotRef",
       "candidateBlockerAndHoldSnapshotRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
       "committeeSecretariatRef",
       "committeeRepresentativeRef",
       "acknowledgementRoutingOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "aclOwnerRef",
@@ -170,7 +170,7 @@
       "write_contribution_score",
       "promote_lifecycle",
       "mark_p0_accepted",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

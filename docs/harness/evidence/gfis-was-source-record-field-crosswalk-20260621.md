@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2C3EE1AAC6
 title: GFIS WAS Source Record Field Crosswalk Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,10 +49,10 @@ GPCF 已建立 GFIS 原生 source-record 字段与 WAS/Ontology 字段的提交 
 | `assetDimension` | 固定为 WAS S01 的 `data_asset` |
 | `flowType` | 固定为 WAS S01 的 `commerce_flow` |
 | `lifecycle` | 人工核验前固定为 `pending_business_verification` |
-| `trustLevel` | WAES review 前固定为 `T4` |
+| `trustLevel` | WAME review 前固定为 `T4` |
 | `sourceRefs` | 必须包含 WAS S01 source ref |
 | `evidenceRefs` | 必须包含 GFIS REAL-001 source-record intake gate |
-| `waesGateRefs` | 必须包含 WAES customer-order source-record review gate |
+| `wameGateRefs` | 必须包含 WAME customer-order source-record review gate |
 | `promotionBlockers` | 必须保留 `valid_source_record_missing` 和 `customer_confirmation_missing` |
 | `nextAction` | 固定为 `collect_customer_order_or_platform_receipt` |
 | `kdsBacklink` | 必须等于 GFIS `source_of_record_backlink`，且以 `开发/` 开头 |
@@ -61,7 +61,7 @@ GPCF 已建立 GFIS 原生 source-record 字段与 WAS/Ontology 字段的提交 
 
 - 本 evidence 不向 GFIS 接收目录写入文件。
 - 本 evidence 不创建真实 source-of-record。
-- 本 evidence 不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本 evidence 不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本 evidence 不证明 GFIS 真实业务 SOP E2E 完成。
 - 本 evidence 不升级 accepted、integrated 或 production_ready。
 

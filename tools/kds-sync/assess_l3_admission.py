@@ -24,7 +24,7 @@ PROJECTS = [
     Project("GFIS", "GF", ROOT / "GlobalCloud GFIS"),
     Project("GPC", "GP", ROOT / "GlobalCloud GPC"),
     Project("PVAOS", "PV", ROOT / "GlobalCloud PVAOS"),
-    Project("WAES", "WA", ROOT / "GlobalCloud WAES"),
+    Project("WAME", "WA", ROOT / "GlobalCloud WAME"),
     Project("KDS", "KD", ROOT / "GlobalCloud KDS"),
     Project("Brain", "BR", ROOT / "GlobalCloud Brain"),
     Project("PKC", "PK", ROOT / "GlobalCloud PKC"),
@@ -270,7 +270,7 @@ def score_project(project: Project) -> dict:
     else:
         gaps.append("缺回滚方案")
 
-    dep_hits = sum(token in joined_docs for token in ["KDS", "Brain", "PKC", "MMC", "WAES", "GFIS", "XiaoC", "XGD", "GPC"])
+    dep_hits = sum(token in joined_docs for token in ["KDS", "Brain", "PKC", "MMC", "WAME", "GFIS", "XiaoC", "XGD", "GPC"])
     if dep_hits >= 3:
         scores["dependencies"] = WEIGHTS["dependencies"]
     elif dep_hits:

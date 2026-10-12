@@ -659,58 +659,58 @@
       "production_ready": false
     },
     {
-      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAES-answer_summary",
-      "project_id": "WAES",
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAME-answer_summary",
+      "project_id": "WAME",
       "scenario": "answer_summary",
       "input_kind": "synthetic_sanitized_answer_fixture",
       "before_answer": {
-        "project_id": "WAES",
+        "project_id": "WAME",
         "scenario": "answer_summary",
         "answer_shape": "synthetic_structured_answer",
         "claims": [
           {
-            "claim_id": "WAES-answer_summary-claim-01",
+            "claim_id": "WAME-answer_summary-claim-01",
             "text": "synthetic_governance_claim_placeholder",
             "status": "candidate_only"
           }
         ],
         "citations": [
           {
-            "citation_id": "WAES-answer_summary-citation-01",
-            "source_path": "synthetic://headroom-lcx/WAES/answer_summary",
+            "citation_id": "WAME-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAME/answer_summary",
             "source_kind": "synthetic_sanitized_fixture",
-            "project_id": "WAES"
+            "project_id": "WAME"
           }
         ],
         "markers": [
-          "LCX_SYNTH_EQ::WAES::answer_summary",
-          "PROJECT::WAES",
+          "LCX_SYNTH_EQ::WAME::answer_summary",
+          "PROJECT::WAME",
           "LCX_SYNTHETIC_ONLY"
         ],
         "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
       },
       "after_answer": {
-        "project_id": "WAES",
+        "project_id": "WAME",
         "scenario": "answer_summary",
         "answer_shape": "synthetic_structured_answer",
         "claims": [
           {
-            "claim_id": "WAES-answer_summary-claim-01",
+            "claim_id": "WAME-answer_summary-claim-01",
             "text": "synthetic_governance_claim_placeholder",
             "status": "candidate_only"
           }
         ],
         "citations": [
           {
-            "citation_id": "WAES-answer_summary-citation-01",
-            "source_path": "synthetic://headroom-lcx/WAES/answer_summary",
+            "citation_id": "WAME-answer_summary-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAME/answer_summary",
             "source_kind": "synthetic_sanitized_fixture",
-            "project_id": "WAES"
+            "project_id": "WAME"
           }
         ],
         "markers": [
-          "LCX_SYNTH_EQ::WAES::answer_summary",
-          "PROJECT::WAES",
+          "LCX_SYNTH_EQ::WAME::answer_summary",
+          "PROJECT::WAME",
           "LCX_SYNTHETIC_ONLY"
         ],
         "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
@@ -731,58 +731,58 @@
       "production_ready": false
     },
     {
-      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAES-citation_preservation",
-      "project_id": "WAES",
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAME-citation_preservation",
+      "project_id": "WAME",
       "scenario": "citation_preservation",
       "input_kind": "synthetic_sanitized_answer_fixture",
       "before_answer": {
-        "project_id": "WAES",
+        "project_id": "WAME",
         "scenario": "citation_preservation",
         "answer_shape": "synthetic_structured_answer",
         "claims": [
           {
-            "claim_id": "WAES-citation_preservation-claim-01",
+            "claim_id": "WAME-citation_preservation-claim-01",
             "text": "synthetic_governance_claim_placeholder",
             "status": "candidate_only"
           }
         ],
         "citations": [
           {
-            "citation_id": "WAES-citation_preservation-citation-01",
-            "source_path": "synthetic://headroom-lcx/WAES/citation_preservation",
+            "citation_id": "WAME-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAME/citation_preservation",
             "source_kind": "synthetic_sanitized_fixture",
-            "project_id": "WAES"
+            "project_id": "WAME"
           }
         ],
         "markers": [
-          "LCX_SYNTH_EQ::WAES::citation_preservation",
-          "PROJECT::WAES",
+          "LCX_SYNTH_EQ::WAME::citation_preservation",
+          "PROJECT::WAME",
           "LCX_SYNTHETIC_ONLY"
         ],
         "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
       },
       "after_answer": {
-        "project_id": "WAES",
+        "project_id": "WAME",
         "scenario": "citation_preservation",
         "answer_shape": "synthetic_structured_answer",
         "claims": [
           {
-            "claim_id": "WAES-citation_preservation-claim-01",
+            "claim_id": "WAME-citation_preservation-claim-01",
             "text": "synthetic_governance_claim_placeholder",
             "status": "candidate_only"
           }
         ],
         "citations": [
           {
-            "citation_id": "WAES-citation_preservation-citation-01",
-            "source_path": "synthetic://headroom-lcx/WAES/citation_preservation",
+            "citation_id": "WAME-citation_preservation-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAME/citation_preservation",
             "source_kind": "synthetic_sanitized_fixture",
-            "project_id": "WAES"
+            "project_id": "WAME"
           }
         ],
         "markers": [
-          "LCX_SYNTH_EQ::WAES::citation_preservation",
-          "PROJECT::WAES",
+          "LCX_SYNTH_EQ::WAME::citation_preservation",
+          "PROJECT::WAME",
           "LCX_SYNTHETIC_ONLY"
         ],
         "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
@@ -803,58 +803,58 @@
       "production_ready": false
     },
     {
-      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAES-project_boundary_marker",
-      "project_id": "WAES",
+      "sample_id": "HEADROOM-LCX-L35-SYNTH-EQ-WAME-project_boundary_marker",
+      "project_id": "WAME",
       "scenario": "project_boundary_marker",
       "input_kind": "synthetic_sanitized_answer_fixture",
       "before_answer": {
-        "project_id": "WAES",
+        "project_id": "WAME",
         "scenario": "project_boundary_marker",
         "answer_shape": "synthetic_structured_answer",
         "claims": [
           {
-            "claim_id": "WAES-project_boundary_marker-claim-01",
+            "claim_id": "WAME-project_boundary_marker-claim-01",
             "text": "synthetic_governance_claim_placeholder",
             "status": "candidate_only"
           }
         ],
         "citations": [
           {
-            "citation_id": "WAES-project_boundary_marker-citation-01",
-            "source_path": "synthetic://headroom-lcx/WAES/project_boundary_marker",
+            "citation_id": "WAME-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAME/project_boundary_marker",
             "source_kind": "synthetic_sanitized_fixture",
-            "project_id": "WAES"
+            "project_id": "WAME"
           }
         ],
         "markers": [
-          "LCX_SYNTH_EQ::WAES::project_boundary_marker",
-          "PROJECT::WAES",
+          "LCX_SYNTH_EQ::WAME::project_boundary_marker",
+          "PROJECT::WAME",
           "LCX_SYNTHETIC_ONLY"
         ],
         "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"
       },
       "after_answer": {
-        "project_id": "WAES",
+        "project_id": "WAME",
         "scenario": "project_boundary_marker",
         "answer_shape": "synthetic_structured_answer",
         "claims": [
           {
-            "claim_id": "WAES-project_boundary_marker-claim-01",
+            "claim_id": "WAME-project_boundary_marker-claim-01",
             "text": "synthetic_governance_claim_placeholder",
             "status": "candidate_only"
           }
         ],
         "citations": [
           {
-            "citation_id": "WAES-project_boundary_marker-citation-01",
-            "source_path": "synthetic://headroom-lcx/WAES/project_boundary_marker",
+            "citation_id": "WAME-project_boundary_marker-citation-01",
+            "source_path": "synthetic://headroom-lcx/WAME/project_boundary_marker",
             "source_kind": "synthetic_sanitized_fixture",
-            "project_id": "WAES"
+            "project_id": "WAME"
           }
         ],
         "markers": [
-          "LCX_SYNTH_EQ::WAES::project_boundary_marker",
-          "PROJECT::WAES",
+          "LCX_SYNTH_EQ::WAME::project_boundary_marker",
+          "PROJECT::WAME",
           "LCX_SYNTHETIC_ONLY"
         ],
         "sensitive_boundary": "synthetic_no_raw_customer_or_production_material"

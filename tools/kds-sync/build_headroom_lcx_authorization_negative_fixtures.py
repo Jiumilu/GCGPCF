@@ -19,7 +19,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -39,7 +39,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 
@@ -64,11 +64,11 @@ def completed_candidate(template: dict) -> dict:
     candidate = deepcopy(template)
     values = {
         "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-        "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+        "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
         "authorized_at": "2026-06-22T00:00:00+08:00",
         "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
         "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-        "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+        "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
     }
     for field, value in values.items():
         candidate["authorization_fields"][field]["value"] = value
@@ -117,13 +117,13 @@ def main() -> int:
         }
     )
 
-    missing_waes_decision = deepcopy(base)
-    missing_waes_decision["authorization_fields"]["waes_harness_admission_decision"]["value"] = ""
+    missing_wame_decision = deepcopy(base)
+    missing_wame_decision["authorization_fields"]["wame_harness_admission_decision"]["value"] = ""
     cases.append(
         {
-            "case_id": "missing_waes_harness_decision",
-            "expected_rejection_reason": "waes_harness_decision_required",
-            "candidate": missing_waes_decision,
+            "case_id": "missing_wame_harness_decision",
+            "expected_rejection_reason": "wame_harness_decision_required",
+            "candidate": missing_wame_decision,
         }
     )
 
@@ -222,7 +222,7 @@ def main() -> int:
 doc_id: GPCF-DOC-8C2733418D
 title: Headroom LCX Authorization Negative Fixtures Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, Edge, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, Edge, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -279,7 +279,7 @@ superseded_by: []
 doc_id: GPCF-DOC-8917CE2B70
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-NEGATIVE-FIXTURES-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -328,7 +328,7 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 反馈
 
-负向 fixtures 必须全部 rejected；任何字段缺失、占位符未替换、敏感原文混入、WAES/Harness 裁决缺失、生产门禁误置 true 或项目范围不足都不得进入测量。
+负向 fixtures 必须全部 rejected；任何字段缺失、占位符未替换、敏感原文混入、WAME/Harness 裁决缺失、生产门禁误置 true 或项目范围不足都不得进入测量。
 
 ## 下一轮
 

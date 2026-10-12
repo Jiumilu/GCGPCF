@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-041D40338E
 title: GPCF-L4-GFIS-REPAIR-142
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,8 +41,8 @@ superseded_by: []
 ## 关键结果
 
 ```text
-liaoning_yuanhang_contract_chain_completion_gate=pass source_files=8 signed_completion_files=0 present_kds_backlinks=0 missing_kds_backlinks=8 waes_confirmations=0 runtime_ready=0 verified=0 state=contract_chain_completion_gate_blocked_unsigned_no_kds_receipt runtime_sop_e2e=repair_required
-runtime_liaoning_yuanhang_contract_chain_completion_gate=contract_chain_completion_gate_blocked_unsigned_no_kds_receipt:source_files=8:signed_completion_files=0:present_kds_backlinks=0:missing_kds_backlinks=8:waes_confirmations=0:runtime_ready=0:verified=0
+liaoning_yuanhang_contract_chain_completion_gate=pass source_files=8 signed_completion_files=0 present_kds_backlinks=0 missing_kds_backlinks=8 wame_confirmations=0 runtime_ready=0 verified=0 state=contract_chain_completion_gate_blocked_unsigned_no_kds_receipt runtime_sop_e2e=repair_required
+runtime_liaoning_yuanhang_contract_chain_completion_gate=contract_chain_completion_gate_blocked_unsigned_no_kds_receipt:source_files=8:signed_completion_files=0:present_kds_backlinks=0:missing_kds_backlinks=8:wame_confirmations=0:runtime_ready=0:verified=0
 RUNTIME_EXIT_CODE:2
 ```
 
@@ -53,7 +53,7 @@ RUNTIME_EXIT_CODE:2
 - 现代精工 OEM 是当前 GFIS 运行层。
 - 葛化自建工厂投产后是未来 GFIS 运行层。
 - 合同链 8 个源文件仍为审阅/修订稿，不是签章完成件。
-- `signed_completion_files=0`、`present_kds_backlinks=0`、`waes_confirmations=0`。
+- `signed_completion_files=0`、`present_kds_backlinks=0`、`wame_confirmations=0`。
 
 ## 真实计数
 

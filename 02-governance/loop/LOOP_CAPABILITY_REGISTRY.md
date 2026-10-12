@@ -62,7 +62,7 @@ superseded_by: []
 
 ## 核心方法
 
-六段式、任务包、evidence、no-write、test_data_lane、candidate_lane、real_business_lane、owner、WAME、Harness、三层评分、分层裁决、受控工程修改、按任务授权、CodeGraph、外部搜索/检索、RAG/语义索引、多智能体并行开发、Codex 内置 sub-agent、gstack 专家审计、OMX 候选 worker runtime、Agents SDK + Codex MCP 候选编排平台、Agent-Reach、Ontology、Headroom、WAS / Ontology-WAS、OKF/ODF、LCX、WAES-KDS RAG writeback、只读索引、依赖分析、调用图分析、公开资料核验、受控文档召回、分离文件分析、Superpowers LOOP execution discipline、method.superpowers.loop_execution_discipline。
+六段式、任务包、evidence、no-write、test_data_lane、candidate_lane、real_business_lane、owner、WAME、Harness、三层评分、分层裁决、受控工程修改、按任务授权、CodeGraph、外部搜索/检索、RAG/语义索引、多智能体并行开发、Codex 内置 sub-agent、gstack 专家审计、OMX 候选 worker runtime、Agents SDK + Codex MCP 候选编排平台、Agent-Reach、Ontology、Headroom、WAS / Ontology-WAS、OKF/ODF、LCX、WAME-KDS RAG writeback、只读索引、依赖分析、调用图分析、公开资料核验、受控文档召回、分离文件分析、Superpowers LOOP execution discipline、method.superpowers.loop_execution_discipline。
 
 ## 候选方法能力
 
@@ -81,7 +81,7 @@ superseded_by: []
 | `family.headroom` | cost/runtime measurement method | candidate/pilot | medium/high by sub-capability | `validate_headroom_*`; Headroom dry-run/proxy/runtime evidence |
 | `family.okf_odf` | governance method family | controlled with restrictions | medium/high by sub-capability | `validate_okf_*`; ODF gate evidence |
 | `family.lcx` | governance method family | candidate/pilot | medium/high by sub-capability | `validate_headroom_lcx_*`; LCX authorization evidence |
-| `family.waes_kds_rag_writeback` | gate/writeback method | candidate/pilot | medium/high by sub-capability | `validate_was_waes_kds_rag_writeback_gate_pack.py`; RAG index evidence; writeback evidence |
+| `family.wame_kds_rag_writeback` | gate/writeback method | candidate/pilot | medium/high by sub-capability | `validate_was_wame_kds_rag_writeback_gate_pack.py`; RAG index evidence; writeback evidence |
 | `family.multi_agent_execution` | execution method family | controlled/pilot/candidate by sub-capability | medium/high by sub-capability | `LOOP_MULTI_AGENT_EXECUTION_POLICY.md`; agent output evidence; LOOP gates |
 | `family.gke_knowledge_engineering` | first-level engineering domain | controlled governance / partial runtime | medium/high by operation | `GlobalCloud项目群知识工程规范.md`; F-013 evidence; KDS/Studio/Brain/MMC handoff; LOOP gates |
 

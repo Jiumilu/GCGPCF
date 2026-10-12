@@ -15,8 +15,8 @@ LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE
 SOURCE_JSON = ROOT / "docs/harness/evidence/was-real-source-record-monitor-072-20260622.json"
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
-PROJECT_GROUP = ["GFIS","GPC","PVAOS","WAES","KDS","Brain","PKC","XiaoC","XGD","XiaoG","MMC","GPCF","Studio","WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS","GPC","PVAOS","WAME","KDS","Brain","PKC","XiaoC","XGD","XiaoG","MMC","GPCF","Studio","WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 PRODUCT_COMPLIANCE_KEYS = ["product_safety_conformity_certificate_gaps","restricted_substance_test_report_gaps","regulatory_labeling_claim_review_gaps","traceability_batch_recall_plan_gaps","customer_complaint_corrective_action_record_gaps","quality_management_system_certificate_gaps","market_surveillance_nonconformance_record_gaps","accepted_for_product_compliance_profile"]
 REQUIREMENTS = ["product_safety_conformity_certificate","restricted_substance_test_report","regulatory_labeling_claim_review","traceability_batch_recall_plan","customer_complaint_corrective_action_record","quality_management_system_certificate","market_surveillance_nonconformance_record"]
@@ -113,14 +113,14 @@ def main() -> int:
     for key in FALSE_KEYS:
         require(boundary.get(key) is False, f"boundary.{key} must remain false")
     joined_output = "\n".join(run(command) for command in REQUIRED_COMMANDS)
-    for phrase in ["accepted_for_next_gate=0", "hold_required=1", "real_source_records=0", "valid_source_records=0", "runtime_primary_key_ready=0", "waes_review=0", "accepted=false", "integrated=false", "production_ready=false"]:
+    for phrase in ["accepted_for_next_gate=0", "hold_required=1", "real_source_records=0", "valid_source_records=0", "runtime_primary_key_ready=0", "wame_review=0", "accepted=false", "integrated=false", "production_ready=false"]:
         require(phrase in joined_output, f"required command output missing phrase: {phrase}")
     for phrase in MD_PHRASES:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
     require("真实 P4 输入 monitor 073 已建立" in loop_round, "loop round feedback missing")
     for phrase in LOOP_CASES:
         require(phrase in loop_round, f"loop round missing product compliance case: {phrase}")
-    print("was_real_source_record_monitor_073=pass submitted_real_candidate_files=0 product_safety_conformity_certificate_gaps=0 restricted_substance_test_report_gaps=0 regulatory_labeling_claim_review_gaps=0 traceability_batch_recall_plan_gaps=0 customer_complaint_corrective_action_record_gaps=0 quality_management_system_certificate_gaps=0 market_surveillance_nonconformance_record_gaps=0 accepted_for_product_compliance_profile=0 accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-074")
+    print("was_real_source_record_monitor_073=pass submitted_real_candidate_files=0 product_safety_conformity_certificate_gaps=0 restricted_substance_test_report_gaps=0 regulatory_labeling_claim_review_gaps=0 traceability_batch_recall_plan_gaps=0 customer_complaint_corrective_action_record_gaps=0 quality_management_system_certificate_gaps=0 market_surveillance_nonconformance_record_gaps=0 accepted_for_product_compliance_profile=0 accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-074")
     return 0
 
 if __name__ == "__main__":

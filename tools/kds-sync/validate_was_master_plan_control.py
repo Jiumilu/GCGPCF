@@ -18,7 +18,7 @@ REQUIRED_TOKENS = [
     "WAS 定义体系",
     "Ontology 定义语义",
     "XWAIL 定义契约",
-    "WAES 负责注册、授权、发布",
+    "WAME 负责注册、授权、发布",
     "项目群分层架构",
     "项目总体架构矩阵",
     "项目间协同架构",
@@ -52,7 +52,7 @@ REQUIRED_TOKENS = [
 REQUIRED_PROJECTS = [
     "WAS世界资产体系",
     "GlobalCloud XWAIL",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud AaaS",
     "GlobalCloud AAAS",
     "GFIS",
@@ -73,7 +73,7 @@ REQUIRED_PROJECTS = [
 FORBIDDEN_TOKENS = [
     "GPC-Native",
     "协同中台",
-    "WAES 是业务主账",
+    "WAME 是业务主账",
     "文档完成等于业务完成",
 ]
 

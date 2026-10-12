@@ -104,10 +104,10 @@
       "reindex_recommended": false
     },
     {
-      "id": "waes",
-      "project": "GlobalCloud WAES",
+      "id": "wame",
+      "project": "GlobalCloud WAME",
       "code": "WA",
-      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME",
       "risk_level": "critical",
       "codegraph_initialized": true,
       "version": "1.0.1",
@@ -393,12 +393,12 @@
   "governance_artifacts": [
     "governance/codegraph/repo-codegraph-registry.yaml",
     "governance/codegraph/agent-codegraph-permissions.yaml",
-    "governance/codegraph/waes-codegraph-gates.yaml",
+    "governance/codegraph/wame-codegraph-gates.yaml",
     "governance/codegraph/kds-codegraph-mapping.yaml",
     "docs/codegraph/codegraph-positioning.md",
     "docs/codegraph/codegraph-authorization-model.md",
     "docs/codegraph/codegraph-loop-integration.md",
-    "docs/codegraph/codegraph-waes-gate.md",
+    "docs/codegraph/codegraph-wame-gate.md",
     "docs/codegraph/codegraph-kds-okf-mapping.md",
     "harness/templates/codegraph-impact-report.yaml",
     "harness/templates/codegraph-evidence-bundle.yaml",
@@ -410,7 +410,7 @@
     "tools/kds-sync/validate_codegraph_project_group_full_coverage.py",
     "tools/kds-sync/validate_codegraph_authorization_model.py",
     "tools/kds-sync/validate_codegraph_loop_schema.py",
-    "tools/kds-sync/validate_codegraph_waes_gate_policy.py",
+    "tools/kds-sync/validate_codegraph_wame_gate_policy.py",
     "tools/kds-sync/validate_codegraph_kds_candidate_policy.py"
   ],
   "status_boundaries": {

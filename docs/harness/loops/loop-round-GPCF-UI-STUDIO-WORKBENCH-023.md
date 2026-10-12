@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-023
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-023
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,32 +28,32 @@ superseded_by: []
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/AppSidebar.vue`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/ChatView.vue`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue`
-- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/current/PM_WORKBENCH.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/docs/current/PM_WORKBENCH.md`
 
 ## run
 
 1. 复核上一轮 `GPCF-UI-STUDIO-WORKBENCH-022`，确认默认凭据整改链路已经收口，不再继续围绕该链路扩散。
-2. 切回 `WAES -> Studio` 专业工作台主线，读取 Studio app shell、sidebar、chat、kanban 和 WAES PM 工作台文档。
+2. 切回 `WAME -> Studio` 专业工作台主线，读取 Studio app shell、sidebar、chat、kanban 和 WAME PM 工作台文档。
 3. 真实运行 `ui-ux-pro-max` 设计系统搜索，记录其输出偏品牌/强动效，不直接采用为控制塔/工作台默认视觉。
 4. 运行 Impeccable context 探测，记录 `NO_PRODUCT_MD`，不越权初始化 Studio `PRODUCT.md`。
 5. 查找 `@product-design` 可调用接口，未发现可用工具；按项目群强制协议形成 `get-context -> ideate -> select option` 三方案设计 evidence。
-6. 选择 `Option 1: WAES Shell-first Workbench` 作为下一轮候选方向。
+6. 选择 `Option 1: WAME Shell-first Workbench` 作为下一轮候选方向。
 
 ## stop
 
 | 字段 | 值 |
 |---|---|
 | stop_type | evidence_candidate_ready |
-| stop_reason | Studio 操作工作台已形成 WAES 母框架三方案设计候选和 UI gate evidence，未触碰 Studio / WAES dirty 工作区 |
+| stop_reason | Studio 操作工作台已形成 WAME 母框架三方案设计候选和 UI gate evidence，未触碰 Studio / WAME dirty 工作区 |
 
 ## verify
 
 本轮执行并通过或取得结果：
 
 ```bash
-python3 .codex/skills/ui-ux-pro-max/scripts/search.py "GlobalCloud Studio WAES professional workbench governance evidence AI chat kanban" --design-system -p "GlobalCloud Studio WAES Workbench" -f markdown
+python3 .codex/skills/ui-ux-pro-max/scripts/search.py "GlobalCloud Studio WAME professional workbench governance evidence AI chat kanban" --design-system -p "GlobalCloud Studio WAME Workbench" -f markdown
 node .agents/skills/impeccable/scripts/context.mjs
-rg / sed 读取 Studio app shell、sidebar、chat、kanban 与 WAES PM_WORKBENCH
+rg / sed 读取 Studio app shell、sidebar、chat、kanban 与 WAME PM_WORKBENCH
 ```
 
 验证结论：
@@ -61,7 +61,7 @@ rg / sed 读取 Studio app shell、sidebar、chat、kanban 与 WAES PM_WORKBENCH
 1. `ui-ux-pro-max` 已真实运行，但输出更接近品牌/沉浸式设计，已按 GlobalCloud 产品界面寄存器降噪处理。
 2. Impeccable 已真实探测，结果为 `NO_PRODUCT_MD`；本轮不初始化 Studio 产品上下文，避免越过当前最小目标。
 3. `@product-design` 未暴露可调用工具接口；本轮只记录强制三方案协议产物，不伪装成插件已执行。
-4. Studio / WAES 仓均存在 dirty 状态；本轮不改项目仓代码。
+4. Studio / WAME 仓均存在 dirty 状态；本轮不改项目仓代码。
 
 ## recover
 
@@ -81,10 +81,10 @@ rg / sed 读取 Studio app shell、sidebar、chat、kanban 与 WAES PM_WORKBENCH
 
 ## 输出
 
-- `docs/harness/evidence/studio-waes-workbench-three-option-design-20260626.md`
-- `docs/harness/evidence/studio-waes-workbench-three-option-design-20260626.json`
+- `docs/harness/evidence/studio-wame-workbench-three-option-design-20260626.md`
+- `docs/harness/evidence/studio-wame-workbench-three-option-design-20260626.json`
 - `docs/harness/loops/loop-round-GPCF-UI-STUDIO-WORKBENCH-023.md`
-- `tools/kds-sync/validate_studio_waes_workbench_three_option_design_20260626.py`
+- `tools/kds-sync/validate_studio_wame_workbench_three_option_design_20260626.py`
 
 ## 连续运行真实性记录
 
@@ -102,16 +102,16 @@ rg / sed 读取 Studio app shell、sidebar、chat、kanban 与 WAES PM_WORKBENCH
 | 字段 | 值 |
 |---|---|
 | UI scope | true |
-| Tool route | `@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` |
+| Tool route | `@product-design -> WAME -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` |
 | Context package | completed |
 | Prompt profile | functional-accuracy / visual-quality / usability-experience / governance-evidence / scope-control |
 | Design options | 3 |
 | Selected option | 1 |
-| WAES baseline reuse | shell / page-skeleton / core-components |
+| WAME baseline reuse | shell / page-skeleton / core-components |
 | Surface | operation workbench |
 | Repository/path | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/ChatView.vue` |
-| Scope | `WAES -> Studio` 专业工作台三方案设计候选，不改代码 |
-| Tools used | `ui-ux-pro-max` / local code inspection / WAES baseline docs / GPCF UI Quality Gate |
+| Scope | `WAME -> Studio` 专业工作台三方案设计候选，不改代码 |
+| Tools used | `ui-ux-pro-max` / local code inspection / WAME baseline docs / GPCF UI Quality Gate |
 | Tools unavailable | `product_design_tool_not_exposed` / `impeccable_blocked_by_NO_PRODUCT_MD` / `figma_not_verified` / `runtime_not_verified` |
 | Verification | design_evidence_only; validator pending |
 | Status ceiling | `ui_evidence_candidate` |
@@ -120,8 +120,8 @@ rg / sed 读取 Studio app shell、sidebar、chat、kanban 与 WAES PM_WORKBENCH
 UI gate status: ui_partial
 Surface: operation workbench
 Repository/path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/ChatView.vue
-Scope: WAES -> Studio 专业工作台三方案设计候选，不改代码
-Tools used: ui-ux-pro-max, local code inspection, WAES baseline docs, GPCF UI Quality Gate
+Scope: WAME -> Studio 专业工作台三方案设计候选，不改代码
+Tools used: ui-ux-pro-max, local code inspection, WAME baseline docs, GPCF UI Quality Gate
 Tools unavailable: product_design_tool_not_exposed, impeccable_blocked_by_NO_PRODUCT_MD, figma_not_verified, runtime_not_verified
 Verification: design_evidence_only; runtime_not_verified; mobile_not_verified; a11y_manual_only
 Status ceiling: ui_evidence_candidate
@@ -137,7 +137,7 @@ Status ceiling: ui_evidence_candidate
 | G6 Accessibility | partial | 已列为 prompt profile 和 gate 要求 | 未跑键盘路径和 contrast |
 | G7 Responsive And Text Robustness | partial | 已保留移动降级要求 | mobile_not_verified |
 | G8 Runtime Verification | partial | 本轮只做文档候选，未启动 runtime | runtime_not_verified |
-| G9 Scope Control | pass | 未改 Studio / WAES 业务代码；仅产 GPCF evidence candidate | 无 |
+| G9 Scope Control | pass | 未改 Studio / WAME 业务代码；仅产 GPCF evidence candidate | 无 |
 
 ## 状态判定
 

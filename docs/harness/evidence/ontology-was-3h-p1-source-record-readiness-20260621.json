@@ -74,7 +74,7 @@
         "trustLevel",
         "sourceRefs",
         "evidenceRefs",
-        "waesGateRefs",
+        "wameGateRefs",
         "promotionBlockers",
         "nextAction",
         "kdsBacklink"
@@ -84,11 +84,11 @@
     {
       "check_id": "P1-C05",
       "category": "promotion_safety",
-      "requirement": "Keep lifecycle at pending_business_verification until manual business verification and WAES review exist.",
+      "requirement": "Keep lifecycle at pending_business_verification until manual business verification and WAME review exist.",
       "required_fields": [
         "lifecycle",
         "promotionBlockers",
-        "waesGateRefs"
+        "wameGateRefs"
       ],
       "reject_if_promoted": true
     }
@@ -148,8 +148,8 @@
       "missing_input": false
     },
     {
-      "was_field": "waesGateRefs",
-      "gfis_source": "WAES source record review gate",
+      "was_field": "wameGateRefs",
+      "gfis_source": "WAME source record review gate",
       "completion_state": "ready_by_rule",
       "missing_input": false
     },
@@ -187,7 +187,7 @@
     "owner_confirmation_missing",
     "runtime_site_context_missing",
     "was_required_fields_missing",
-    "waes_gate_ref_missing",
+    "wame_gate_ref_missing",
     "kds_backlink_mismatch",
     "lifecycle_promoted_before_manual_verification"
   ],
@@ -225,7 +225,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not create verified artifact",
     "does not mark accepted or integrated",
     "does not mark production ready"

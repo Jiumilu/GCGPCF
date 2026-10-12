@@ -35,12 +35,12 @@ superseded_by: []
 | XWAIL-2201 | high | 资产 `dimensions` 为空 |
 | XWAIL-3001 | high | 关系自环（source = target） |
 | XWAIL-3004 | high | 悬空引用（relations / flowRelations 的 source / target 不存在；结构非法） |
-| XWAIL-5001 | high | `Authorized/Published` 缺 WAME 门证据（`waesEvidenceRef`）；pilotScope：授权对象/动作缺失或越权、promotionBlockers 规则、Active 前置条件（WAME 状态 / blockers 清零 / 非 candidate 引用） |
-| XWAIL-6002 | high | `waesStatus` 非 WAME 生命周期枚举；pilotScope `admissionStatus` 非法 |
+| XWAIL-5001 | high | `Authorized/Published` 缺 WAME 门证据（`wameEvidenceRef`）；pilotScope：授权对象/动作缺失或越权、promotionBlockers 规则、Active 前置条件（WAME 状态 / blockers 清零 / 非 candidate 引用） |
+| XWAIL-6002 | high | `wameStatus` 非 WAME 生命周期枚举；pilotScope `admissionStatus` 非法 |
 | XWAIL-7001 | high | `wasBaseline` / `ontologyVersion` 缺失；资产 `ontologyRef` 缺失；八维缺失；`lifecycle.states` 缺失；pilotScope 必填字段缺失 / `ontologyRef` 非 `was:` 前缀 |
 | XWAIL-9001 | high | `flowType` 非八流枚举；`flowRelations` 结构非法 |
-| XAP-1001 | high | manifest 必填字段（packageId / version / wasBaseline / ontologyVersion / xwailVersion / waesStatus / decision） |
-| XAP-1002 | high | manifest `waesStatus` 非枚举 |
+| XAP-1001 | high | manifest 必填字段（packageId / version / wasBaseline / ontologyVersion / xwailVersion / wameStatus / decision） |
+| XAP-1002 | high | manifest `wameStatus` 非枚举 |
 | XAP-1003 | high | manifest `decision` 非枚举（compatible / migration_required / deprecated / blocked） |
 | XAP-2001 | high | manifest `models` 为空或非列表 |
 | XAP-2002 | high | 模型项缺 `path` |
@@ -77,8 +77,8 @@ superseded_by: []
 | V1.2-02 兼容矩阵前置 | high | 发布候选附六维版本兼容矩阵（WAS × Ontology × XWAIL × Profile × ServicePackage × WAME status） | 规范 §5.2；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（compatcheck.py ＋ compat-matrix.yaml 格式提案，6/6 实证，2026-10-11） |
 | V1.2-03 Profile 白名单 | high | 模型 `profile` 必须位于登记白名单 | 规范 §3.2；登记载体待定；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（profilecheck.py ＋ profiles-registry.yaml 载体提案，6/6 实证，2026-10-11） |
 | V1.2-04 pilotScope 口径对齐 | high | `admissionStatus` 大小写统一（**以 WAS 契约为准：小写 7 值** draft/candidate/authorized/active/closed/archived/blocked）；wasLayer 枚举对齐（三层 world/industry/scenario） | **WAS 侧已完成（2026-10-11）**；GCXWAIL 侧待其流程（现值=大写 7 值；落点：`xwail-pilot-scope.schema.json` ＋ `xwail_common.py` PILOT_ADMISSION_STATUSES） |
-| V1.2-05 WAME 边界扩展 | high | WAME 边界检查扩展到 Profile / XAP 全族（部分已实现：XWAIL-5001 / XAP-5001） | 规范 §6；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（waescheck.py 三族四规则统一截面，7/7 实证，2026-10-11） |
-| V1.2-06 导入模式检查 | medium | 三种导入模式包侧预检：M1 `packageId` 唯一性／M2 对象级比对（新增/跳过/**冲突挂起不自动合并**）／M3 只读零写断言 | **PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（modecheck.py ＋ 目标状态样本，5/5 实证，2026-10-11）；接口语境＝WAS《接入点_WAES包登记_v0.1》§二 |
+| V1.2-05 WAME 边界扩展 | high | WAME 边界检查扩展到 Profile / XAP 全族（部分已实现：XWAIL-5001 / XAP-5001） | 规范 §6；**PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（wamecheck.py 三族四规则统一截面，7/7 实证，2026-10-11） |
+| V1.2-06 导入模式检查 | medium | 三种导入模式包侧预检：M1 `packageId` 唯一性／M2 对象级比对（新增/跳过/**冲突挂起不自动合并**）／M3 只读零写断言 | **PoC 参考实现**：KDS `工业绿链/图谱/ontology/xwail-v12-poc/`（modecheck.py ＋ 目标状态样本，5/5 实证，2026-10-11）；接口语境＝WAS《接入点_WAME包登记_v0.1》§二 |
 | V1.2-07 请求包检查 | medium | 请求包（`packageKind=request`）：信封 6 规则（含**留白纪律全字段扫描**——跳过 traceability 引述区）＋**R07 引用格式/存在性**＋**R08 包级分流**（纯请求包：资产包字段 N/A；混合包：追加资产包校验） | **PoC 参考实现 v2**：KDS `xwail-v12-poc/requestcheck.py`（12/12 实证含 2 新负例，2026-10-11；含 Codex 审计 P0/P1 修复）；机制＝GPCF《WAME统一审核请求机制_v0.1》§三；规范 §2.3 |
 
 ## 4. 严重度与阻断策略

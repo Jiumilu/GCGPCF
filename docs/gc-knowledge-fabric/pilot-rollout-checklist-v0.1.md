@@ -80,7 +80,7 @@ P1 验收前必须确认：
 -> 原料/行业/订单知识包
 -> 新工厂复制模板
 -> 潜在收益/渠道贡献台账
--> WAES/RAG/LOOP evidence
+-> WAME/RAG/LOOP evidence
 ```
 
 P2 禁止事项：

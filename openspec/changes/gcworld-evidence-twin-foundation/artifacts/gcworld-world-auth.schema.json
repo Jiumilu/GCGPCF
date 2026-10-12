@@ -77,9 +77,9 @@
     "systemState": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["waesAvailable", "contextComplete", "factVersionsVerified"],
+      "required": ["wameAvailable", "contextComplete", "factVersionsVerified"],
       "properties": {
-        "waesAvailable": { "type": "boolean" },
+        "wameAvailable": { "type": "boolean" },
         "contextComplete": { "type": "boolean" },
         "factVersionsVerified": { "type": "boolean" }
       }

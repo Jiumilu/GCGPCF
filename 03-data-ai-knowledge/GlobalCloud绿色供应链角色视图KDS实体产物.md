@@ -68,7 +68,7 @@ superseded_by: []
 | `GSC-ROLE-FINANCE-CONTACT` | 财务联系人 | `finance_private + own_unit` | 资金池、数据池 | `candidate` |
 | `GSC-ROLE-QUALITY-POD-CONTACT` | 质量 / POD 联系人 | `own_unit + invited` | 订单池、运力池、数据池 | `candidate` |
 | `GSC-ROLE-GFIS-OPERATOR` | GFIS 操作人 | `gfis_operator` | 订单池、产能池、数据池、场景池 | `candidate` |
-| `GSC-ROLE-WAES-LIAISON` | WAME 对接人 | `waes_boundary` | 数据池、人才池、政策池 | `candidate` |
+| `GSC-ROLE-WAME-LIAISON` | WAME 对接人 | `wame_boundary` | 数据池、人才池、政策池 | `candidate` |
 | `GSC-ROLE-KDS-RECORDER` | KDS 记录人 | `kds_operator` | 数据池、人才池、场景池 | `candidate` |
 
 所有角色必须保留授权来源、授权范围、生效日期、复核日期和撤销条件。缺少人工授权或 WAME 规则记录时，只能保持 `candidate`、`repair_required` 或 `blocked`。
@@ -93,7 +93,7 @@ superseded_by: []
 | 全局对象注册表 | 以 `KDS-GSC-ROLE-VIEW-20260701` 建立对象入口 | 只做跨空间治理索引 |
 | 11 池 | 角色映射到人才池、数据池、场景池，并按业务角色挂接资金、订单、运力、政策等池 | 不确认业务事实 |
 | RAG 准入 | 默认 `limited / repair_required`，敏感角色和 DSR-L3 仅元数据 | 不把 LLM 输出写成事实 |
-| ACL | 使用 `own_unit`、`invited`、`finance_private`、`gfis_operator`、`waes_boundary`、`kds_operator` 等范围标签 | 不配置生产权限 |
+| ACL | 使用 `own_unit`、`invited`、`finance_private`、`gfis_operator`、`wame_boundary`、`kds_operator` 等范围标签 | 不配置生产权限 |
 | LOOP | 通过 `GPCF-KDS-GSC-ROLE-VIEW-ENTITY-001` 形成 evidence | 不代表合作单位接入验收完成 |
 
 ## 7. 禁止升级口径

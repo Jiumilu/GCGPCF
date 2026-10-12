@@ -5,9 +5,9 @@ status: draft
 last_reviewed: "2026-06-20"
 purpose: >
   Define read-only revenue attribution view models for Brain and PKC. The model
-  presents attribution packet refs, revenue refs, contribution refs, WAES/KWE
+  presents attribution packet refs, revenue refs, contribution refs, WAME/KWE
   refs, committee/freeze state, visibility, and blocked actions without writing
-  ledgers, KDS lifecycle, WAES results, KWE work items, business systems, or
+  ledgers, KDS lifecycle, WAME results, KWE work items, business systems, or
   external APIs.
 
 required_fields:
@@ -21,7 +21,7 @@ required_fields:
   - visible_revenue_refs
   - visible_contribution_refs
   - masked_contribution_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - kwe_workpack_refs
   - committee_refs
   - freeze_refs
@@ -57,7 +57,7 @@ blocked_actions:
   - confirm_score
   - distribute_revenue
   - promote_potential_revenue
-  - override_waes_gate
+  - override_wame_gate
   - complete_committee_decision
   - write_business_system
   - mutate_kds_lifecycle
@@ -74,7 +74,7 @@ hard_boundaries:
 
 no_write_assertions:
   writes_kds_lifecycle: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_score_confirmation: 0
   writes_revenue_distribution: 0

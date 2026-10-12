@@ -29,7 +29,7 @@ projects:
     delivery_priority: medium
     daily_loop_template: governance
     priority: KDS blocker 已解除；保持 hold review、dry-run 和真实 KDS API 未授权边界
-  WAES:
+  WAME:
     lifecycle: governance
     loop_mode: audit
     autonomy_level: L1/L2

@@ -21,7 +21,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -52,7 +52,7 @@ def frontmatter(title: str, source_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-L35-CONTROLLED-SANITIZED-PILOT-WINDOW-20260622
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: governance
 status: controlled
 version: v1.0
@@ -94,7 +94,7 @@ def build_smoke_records(fixture: dict) -> list[dict[str, object]]:
                 "ccr_enabled": entry["scenario"] == "retrieval_context_metadata",
                 "ccr_retrieve_count": int(entry["retrieval_miss_count"]),
                 "policy_profile": "l3_5_sanitized_fixture_replay_no_raw_text",
-                "waes_decision": "admitted_for_l3_5_sanitized_pilot_only",
+                "wame_decision": "admitted_for_l3_5_sanitized_pilot_only",
                 "answer_equivalence": "not_measured",
                 "marker_gate": entry["project_marker_gate"],
                 "sensitive_redaction_gate": entry["sensitive_redaction_gate"],
@@ -151,7 +151,7 @@ def build_evidence() -> dict:
             "authorization_scope": "L3.5_controlled_sanitized_pilot_only",
             "sanitized_production_token_ledger": FIXTURE_JSON.relative_to(ROOT).as_posix(),
             "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
-            "waes_harness_admission_decision": "admitted_for_l3_5_sanitized_pilot_only",
+            "wame_harness_admission_decision": "admitted_for_l3_5_sanitized_pilot_only",
             "authorization_complete_for_l3_5": True,
             "authorization_complete_for_l4_l5_or_production": False,
         },

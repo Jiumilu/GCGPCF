@@ -83,8 +83,8 @@ disposition_groups:
   - group: source_ingestion_candidates
     paths:
       - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
-      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
-    owner: GCWORLD与WAES内容权威方
+      - 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
+    owner: GCWORLD与WAME内容权威方
     retention: 长期
     recommendation: 保留并先完成来源、版本和权限核验，再形成独立资料摄取变更
   - group: hermes_evolution_reports

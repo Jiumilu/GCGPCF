@@ -37,7 +37,7 @@ superseded_by: []
 | `missing_authorized_by` | `missing_required_field` | reject |
 | `unresolved_placeholder` | `placeholder_not_replaced` | reject |
 | `ledger_inline_sensitive_material` | `sanitized_ledger_must_be_reference_only` | reject |
-| `missing_waes_harness_decision` | `waes_harness_decision_required` | reject |
+| `missing_wame_harness_decision` | `wame_harness_decision_required` | reject |
 | `production_gate_true_attempt` | `template_cannot_grant_production` | reject |
 | `incomplete_project_scope` | `project_group_scope_must_be_15` | reject |
 | `cross_project_memory_business_fact_claim` | `memory_cannot_be_business_fact_source` | reject |

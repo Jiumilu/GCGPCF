@@ -28,7 +28,7 @@ REQUIRED_CASE_FIELDS = [
     "harness_evidence_ref",
     "retrieval_query_hash",
     "marker_gate",
-    "waes_decision",
+    "wame_decision",
     "answer_equivalence",
     "write_requested",
     "write_allowed",
@@ -88,7 +88,7 @@ def case_to_record(case: dict) -> dict:
         "harness_evidence_ref": case["harness_evidence_ref"],
         "retrieval_query_hash": case["retrieval_query_hash"],
         "marker_gate": case["marker_gate"],
-        "waes_decision": case["waes_decision"],
+        "wame_decision": case["wame_decision"],
         "answer_equivalence": case["answer_equivalence"],
         "write_requested": bool(case.get("write_requested", False)),
         "write_allowed": bool(case.get("write_allowed", False)),
@@ -115,8 +115,8 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
     auth_rate = sum(
         1 for r in requested_records if r["owner_authorization_present"]
     ) / max(1, len(requested_records))
-    waes_pass_rate = sum(
-        1 for r in requested_records if r["waes_decision"] == "pass"
+    wame_pass_rate = sum(
+        1 for r in requested_records if r["wame_decision"] == "pass"
     ) / max(1, len(requested_records))
     preview_tier_rate = sum(
         1 for r in requested_records if is_preview_mode(r["payload_tier"])
@@ -126,7 +126,7 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
     gate_pass = (
         block_rate >= gate_rules.get("preview_block_rate_min", 1.0)
         and auth_rate >= gate_rules.get("owner_authorization_presence_min", 1.0)
-        and waes_pass_rate >= gate_rules.get("waes_pass_rate_min", 1.0)
+        and wame_pass_rate >= gate_rules.get("wame_pass_rate_min", 1.0)
         and preview_tier_rate >= gate_rules.get("payload_tier_preview_min", 1.0)
         and marker_pass_rate >= 0.95
     )
@@ -136,7 +136,7 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
         "requested_write_count": len(requested_records),
         "preview_block_rate": round(block_rate, 6),
         "owner_authorization_presence_rate": round(auth_rate, 6),
-        "waes_pass_rate": round(waes_pass_rate, 6),
+        "wame_pass_rate": round(wame_pass_rate, 6),
         "preview_tier_rate": round(preview_tier_rate, 6),
         "marker_coverage": round(marker_pass_rate, 6),
         "mean_saving_rate": round(mean_saving, 6),

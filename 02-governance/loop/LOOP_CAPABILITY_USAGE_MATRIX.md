@@ -87,7 +87,7 @@ capability_usage_matrix:
     guarded_tools:
       - headroom_real_measurement
       - lcx_production_token_gate
-      - waes_final_receipt_decision
+      - wame_final_receipt_decision
     requires:
       - explicit_human_authorization
       - rollback_plan
@@ -140,7 +140,7 @@ push
 production_token_tools
 headroom_real_measurement
 agent_reach_live_closure
-waes_final_receipt_decision
+wame_final_receipt_decision
 automatic_status_promotion
 ```
 

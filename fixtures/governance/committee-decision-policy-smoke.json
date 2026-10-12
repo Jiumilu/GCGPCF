@@ -9,7 +9,7 @@
     "reasonCodeCount": 8,
     "votingMethodCount": 3,
     "decisionDomain": "governance",
-    "committeeDoesNotReplaceWaesGate": true,
+    "committeeDoesNotReplaceWameGate": true,
     "committeeCannotWriteBusinessSystem": true,
     "committeeCannotDirectlyDistributeRevenue": true,
     "committeeCannotDirectlyConfirmScore": true,

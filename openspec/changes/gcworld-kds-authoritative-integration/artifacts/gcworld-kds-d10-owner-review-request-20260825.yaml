@@ -24,7 +24,7 @@ activation_preconditions:
     codex_automations_paused: 3
     hermes_jobs_disabled: 11
     gbrain_autopilot_and_worker: quiet
-    gcworld_or_waes_manual_import_process: none_observed
+    gcworld_or_wame_manual_import_process: none_observed
 authorized_read_scope:
   - api_server.py
   - tests/test_api_smoke.py

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0CE26414BA
 title: XWAIL
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,4 +42,4 @@ KDS 空间：`开发`
 | GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | XWAIL City/Spatial Profile 立项请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | KDS | controlled |
 | GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | GPCF | controlled |
-| GPCF-DOC-XWAIL-WAES-AAAS-CONTRACT-PRECHECK-20260625 | XWAIL-WAES-AaaS 契约预检证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md | GPCF | controlled |
+| GPCF-DOC-XWAIL-WAME-AAAS-CONTRACT-PRECHECK-20260625 | XWAIL-WAME-AaaS 契约预检证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-wame-aaas-contract-precheck-20260625.md | GPCF | controlled |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D910A1EAEB
 title: GPCF Session Declaration Control Boundary 001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

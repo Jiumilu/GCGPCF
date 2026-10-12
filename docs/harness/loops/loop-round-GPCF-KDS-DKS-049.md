@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-79DFDC9D79
 title: LOOP Round GPCF-KDS-DKS-049 - 葛化订单运行母版字段与单据映射
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -95,7 +95,7 @@ superseded_by: []
 本轮不做：
 
 - 真实 KDS API 写入；
-- WAES 写入、放行或裁决；
+- WAME 写入、放行或裁决；
 - GFIS / GPC / PVAOS / Finance 主账写入；
 - 真实订单、客户确认、质量放行、POD、到账、收益、积分或悬赏确认；
 - 资料填报、人工确认或委员会裁决；
@@ -117,4 +117,4 @@ superseded_by: []
 
 本轮把 DKS-048 识别出的关键缺口从“只有 frontmatter 的入口文件”推进为可引用的受控母版。母版已经能支撑下一轮三件套评测、辽宁远航链路补证、现代精工 OEM 责任拆分和湖北磷材新工厂复制差异分析。
 
-本轮仍不证明真实资料已收到、真实评测已通过、GFIS 主账可写、WAES 已放行、RAG 可强引用或收益积分可结算。
+本轮仍不证明真实资料已收到、真实评测已通过、GFIS 主账可写、WAME 已放行、RAG 可强引用或收益积分可结算。

@@ -16,7 +16,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -37,7 +37,7 @@ BLOCKED_CLAIMS = [
     "production token savings have been measured",
     "production proxy is authorized or running",
     "real KDS API write has occurred",
-    "WAES/Harness has admitted production measurement",
+    "WAME/Harness has admitted production measurement",
     "Headroom memory is a KDS fact source",
 ]
 
@@ -92,7 +92,7 @@ def main() -> int:
     require(gates.get("authorization_complete") is True, "authorization fields must be complete")
     require(evidence.get("open_authorization_fields") == [], "open authorization fields must be empty")
     require(evidence.get("current_blocker") == "production_token_measurement_allowed=false", "current blocker mismatch")
-    require(gates.get("waes_harness_admitted") is True, "WAES/Harness admission must be true for sanitized precheck")
+    require(gates.get("wame_harness_admitted") is True, "WAME/Harness admission must be true for sanitized precheck")
     for key in [
         "production_token_measurement_allowed",
         "production_proxy_started",
@@ -111,7 +111,7 @@ def main() -> int:
         "HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-20260622",
         "declaration_boundary_gate | true",
         "authorization_complete | true",
-        "waes_harness_admitted | true",
+        "wame_harness_admitted | true",
         "production_token_measurement_allowed | false",
         "production_admission_gate | false",
         "accepted | false",
@@ -123,7 +123,7 @@ def main() -> int:
     print(
         "headroom_lcx_session_summary_declaration_boundary=pass "
         "project_count=15 declaration_boundary_gate=true authorization_complete=true "
-        "waes_harness_admitted=true production_token_measurement_allowed=false production_admission_gate=false "
+        "wame_harness_admitted=true production_token_measurement_allowed=false production_admission_gate=false "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

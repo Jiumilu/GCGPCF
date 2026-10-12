@@ -112,7 +112,7 @@ prohibited_actions:
   - 清理、暂存、还原、提交、推送或修改KDS的14项既存变化
   - 读取S3正文、秘密、凭据或未授权租户与项目内容
   - 自动合并身份、提升事实、创建真实权限或调用写接口
-  - 修改KDS、MMC、WAES、XWAIL或产品仓库
+  - 修改KDS、MMC、WAME、XWAIL或产品仓库
   - 部署、重启、对外执行、验收、归档或状态提升
 validity:
   starts_when: D1至D4全部由人工明确批准且F-013准入放行

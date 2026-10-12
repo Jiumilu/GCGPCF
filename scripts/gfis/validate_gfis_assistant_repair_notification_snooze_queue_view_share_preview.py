@@ -20,7 +20,7 @@ NO_WRITE_KEYS = (
     "writesGfis", "writesGpc", "writesErp", "writesMes", "writesShareLink",
     "writesAclGrant", "writesExternalSharePermission", "writesPublicationApproval",
     "writesSavedView", "writesViewPreference", "writesFilterState",
-    "writesNotification", "modifiesNotification", "writesWaesGateResult",
+    "writesNotification", "modifiesNotification", "writesWameGateResult",
     "writesKweWorkItem", "writesHarnessEvidence", "writesKdsLifecycle",
     "writesKdsFact", "writesKdsAcceptedFact", "writesExternalApi",
 )
@@ -74,7 +74,7 @@ def main() -> int:
         "createsPublicationApprovals": 0, "createsSavedViews": 0,
         "createsViewPreferences": 0, "createsFilterStates": 0,
         "createsNotifications": 0, "modifiesNotifications": 0,
-        "createsHarnessEvidence": 0, "createsWaesGateResults": 0,
+        "createsHarnessEvidence": 0, "createsWameGateResults": 0,
         "createsKweWorkItems": 0, "persistsEvidence": 0,
         "approvesBusinessWrite": 0, "promotesLifecycle": 0,
         "completesCommitteeDecision": 0,
@@ -107,7 +107,7 @@ def main() -> int:
         "createsShareLink", "createsAclGrant", "createsExternalSharePermission",
         "createsPublicationApproval", "createsSavedView", "createsViewPreference",
         "createsFilterState", "createsNotification", "modifiesNotification",
-        "createsHarnessEvidence", "createsWaesGateResult", "createsKweWorkItem",
+        "createsHarnessEvidence", "createsWameGateResult", "createsKweWorkItem",
         "persistsEvidence", "approvesBusinessWrite", "promotesLifecycle",
         "completesCommitteeDecision",
     )
@@ -122,7 +122,7 @@ def main() -> int:
         "createsNotification": "createsNotifications",
         "modifiesNotification": "modifiesNotifications",
         "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults",
+        "createsWameGateResult": "createsWameGateResults",
         "createsKweWorkItem": "createsKweWorkItems",
         "persistsEvidence": "persistsEvidence",
         "approvesBusinessWrite": "approvesBusinessWrite",
@@ -187,11 +187,11 @@ def main() -> int:
         f"creates_saved_views={actual['createsSavedViews']} creates_view_preferences={actual['createsViewPreferences']} "
         f"creates_filter_states={actual['createsFilterStates']} creates_notifications={actual['createsNotifications']} "
         f"modifies_notifications={actual['modifiesNotifications']} creates_harness_evidence={actual['createsHarnessEvidence']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_share_link=0 writes_acl_grant=0 "
         "writes_external_share_permission=0 writes_publication_approval=0 writes_saved_view=0 "
         "writes_view_preference=0 writes_filter_state=0 writes_notification=0 modifies_notification=0 "
-        "writes_waes_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 "
+        "writes_wame_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 "
         "writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0"
     )
     return 0

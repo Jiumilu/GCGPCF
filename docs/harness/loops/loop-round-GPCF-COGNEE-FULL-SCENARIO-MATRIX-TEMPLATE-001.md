@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-FULL-SCENARIO-MATRIX-TEMPLATE-001
 title: Loop Round - GPCF Cognee 全量场景矩阵模板 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

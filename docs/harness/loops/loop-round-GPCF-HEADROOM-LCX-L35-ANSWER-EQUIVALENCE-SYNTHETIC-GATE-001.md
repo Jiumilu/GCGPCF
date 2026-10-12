@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622
 title: Loop Round GPCF Headroom LCX L3.5 Answer Equivalence Synthetic Gate 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

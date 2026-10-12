@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B6DF5BB059
 title: GC-Knowledge Fabric P0-D6 KDS 状态候选更新 Dry-run LOOP evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-完成 P0-D6：建立候选事实到人工确认包再到 KDS 状态候选更新的 dry-run，并锁死 `verified`、`accepted`、`published`、`written_back` 不可由 AI、WAES dry-run、KWE dry-run 或 LOOP 直接写入。
+完成 P0-D6：建立候选事实到人工确认包再到 KDS 状态候选更新的 dry-run，并锁死 `verified`、`accepted`、`published`、`written_back` 不可由 AI、WAME dry-run、KWE dry-run 或 LOOP 直接写入。
 
 ## 本轮输入资料
 
@@ -62,5 +62,5 @@ superseded_by: []
 
 进入 P0-D7：
 
-- 建立 API 骨架输入清单：KDS v2、WAES、KWE、GFIS Assistant、Governance/LOOP。
+- 建立 API 骨架输入清单：KDS v2、WAME、KWE、GFIS Assistant、Governance/LOOP。
 - 将 P0-D2 至 P0-D6 的 fixtures 归并为 API dry-run 输入矩阵。

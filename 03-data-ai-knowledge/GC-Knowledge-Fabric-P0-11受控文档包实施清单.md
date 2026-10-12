@@ -27,7 +27,7 @@ superseded_by: []
 | 序号 | 文件 | 用途 | 当前状态 |
 |---|---|---|---|
 | 1 | `GC-Knowledge-Fabric-KDS十一池挂接规则.md` | 定义十一池、默认挂接、复合挂接和例外处理 | draft |
-| 2 | `GC-Knowledge-Fabric-WAES门禁规则.md` | 定义 Source / Evidence / RAG / Writeback / Revenue 等门禁口径 | draft |
+| 2 | `GC-Knowledge-Fabric-WAME门禁规则.md` | 定义 Source / Evidence / RAG / Writeback / Revenue 等门禁口径 | draft |
 | 3 | `GC-Knowledge-Fabric-RAG准入与引用强度规则.md` | 定义 safe / limited / repair_required / blocked / metadata-only | draft |
 | 4 | `GC-Knowledge-Fabric-葛化GFIS知识库目录.md` | 定义葛化 GFIS P1 母版知识目录 | draft |
 | 5 | `GC-Knowledge-Fabric-湖北磷材知识库目录.md` | 定义湖北磷材拓厂、原料、行业、订单目录 | draft |

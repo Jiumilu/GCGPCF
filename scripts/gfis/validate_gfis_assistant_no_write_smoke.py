@@ -2,7 +2,7 @@
 """Validate GFIS Assistant no-write contract smoke fixtures.
 
 This script verifies local response contracts only. It does not call GFIS,
-KDS, WAES, GPC, ERP, MES, or any external API.
+KDS, WAME, GPC, ERP, MES, or any external API.
 """
 
 from __future__ import annotations

@@ -23,7 +23,7 @@
       "reasonRefs": ["personal-to-team-share-candidate"],
       "shareNoteRefs": ["share-note-preview-only"],
       "nextStepCandidateRefs": ["candidate-show-personal-team-share-preview"],
-      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
       "createsShareLink": false,
       "createsAclGrant": false,
       "createsExternalSharePermission": false,
@@ -34,13 +34,13 @@
       "createsNotification": false,
       "modifiesNotification": false,
       "createsHarnessEvidence": false,
-      "createsWaesGateResult": false,
+      "createsWameGateResult": false,
       "createsKweWorkItem": false,
       "persistsEvidence": false,
       "approvesBusinessWrite": false,
       "promotesLifecycle": false,
       "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "sharePreviewId": "gfis-snooze-view-share-preview-team-project-pkc-001",
@@ -63,7 +63,7 @@
       "reasonRefs": ["team-to-project-share-candidate"],
       "shareNoteRefs": ["share-note-retained-items-preview"],
       "nextStepCandidateRefs": ["candidate-show-team-project-share-preview"],
-      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
       "createsShareLink": false,
       "createsAclGrant": false,
       "createsExternalSharePermission": false,
@@ -74,13 +74,13 @@
       "createsNotification": false,
       "modifiesNotification": false,
       "createsHarnessEvidence": false,
-      "createsWaesGateResult": false,
+      "createsWameGateResult": false,
       "createsKweWorkItem": false,
       "persistsEvidence": false,
       "approvesBusinessWrite": false,
       "promotesLifecycle": false,
       "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "sharePreviewId": "gfis-snooze-view-share-preview-surface-default-gfis-001",
@@ -103,7 +103,7 @@
       "reasonRefs": ["surface-default-share-candidate"],
       "shareNoteRefs": ["share-note-blocked-items-preview"],
       "nextStepCandidateRefs": ["candidate-show-surface-default-share-preview"],
-      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
       "createsShareLink": false,
       "createsAclGrant": false,
       "createsExternalSharePermission": false,
@@ -114,13 +114,13 @@
       "createsNotification": false,
       "modifiesNotification": false,
       "createsHarnessEvidence": false,
-      "createsWaesGateResult": false,
+      "createsWameGateResult": false,
       "createsKweWorkItem": false,
       "persistsEvidence": false,
       "approvesBusinessWrite": false,
       "promotesLifecycle": false,
       "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "sharePreviewId": "gfis-snooze-view-share-preview-governance-gfis-001",
@@ -143,7 +143,7 @@
       "reasonRefs": ["governance-review-share-candidate"],
       "shareNoteRefs": ["share-note-metadata-boundary-preview"],
       "nextStepCandidateRefs": ["candidate-show-governance-review-share-preview"],
-      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
       "createsShareLink": false,
       "createsAclGrant": false,
       "createsExternalSharePermission": false,
@@ -154,13 +154,13 @@
       "createsNotification": false,
       "modifiesNotification": false,
       "createsHarnessEvidence": false,
-      "createsWaesGateResult": false,
+      "createsWameGateResult": false,
       "createsKweWorkItem": false,
       "persistsEvidence": false,
       "approvesBusinessWrite": false,
       "promotesLifecycle": false,
       "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "sharePreviewId": "gfis-snooze-view-share-preview-external-blocked-gfis-001",
@@ -183,7 +183,7 @@
       "reasonRefs": ["external-share-blocked-candidate"],
       "shareNoteRefs": ["share-note-external-share-blocked"],
       "nextStepCandidateRefs": ["candidate-show-external-blocked-share-preview"],
-      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
       "createsShareLink": false,
       "createsAclGrant": false,
       "createsExternalSharePermission": false,
@@ -194,13 +194,13 @@
       "createsNotification": false,
       "modifiesNotification": false,
       "createsHarnessEvidence": false,
-      "createsWaesGateResult": false,
+      "createsWameGateResult": false,
       "createsKweWorkItem": false,
       "persistsEvidence": false,
       "approvesBusinessWrite": false,
       "promotesLifecycle": false,
       "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "sharePreviewId": "gfis-snooze-view-share-preview-committee-brain-001",
@@ -223,7 +223,7 @@
       "reasonRefs": ["committee-share-candidate"],
       "shareNoteRefs": ["share-note-committee-preview"],
       "nextStepCandidateRefs": ["candidate-show-committee-share-preview"],
-      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "blockedActions": ["create_share_link", "create_acl_grant", "create_external_share_permission", "create_publication_approval", "create_saved_view", "create_view_preference", "create_filter_state", "create_notification", "modify_notification", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
       "createsShareLink": false,
       "createsAclGrant": false,
       "createsExternalSharePermission": false,
@@ -234,13 +234,13 @@
       "createsNotification": false,
       "modifiesNotification": false,
       "createsHarnessEvidence": false,
-      "createsWaesGateResult": false,
+      "createsWameGateResult": false,
       "createsKweWorkItem": false,
       "persistsEvidence": false,
       "approvesBusinessWrite": false,
       "promotesLifecycle": false,
       "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesShareLink": 0, "writesAclGrant": 0, "writesExternalSharePermission": 0, "writesPublicationApproval": 0, "writesSavedView": 0, "writesViewPreference": 0, "writesFilterState": 0, "writesNotification": 0, "modifiesNotification": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     }
   ],
   "expected": {
@@ -275,7 +275,7 @@
     "createsNotifications": 0,
     "modifiesNotifications": 0,
     "createsHarnessEvidence": 0,
-    "createsWaesGateResults": 0,
+    "createsWameGateResults": 0,
     "createsKweWorkItems": 0,
     "persistsEvidence": 0,
     "approvesBusinessWrite": 0,
@@ -294,7 +294,7 @@
     "writesFilterState": 0,
     "writesNotification": 0,
     "modifiesNotification": 0,
-    "writesWaesGateResult": 0,
+    "writesWameGateResult": 0,
     "writesKweWorkItem": 0,
     "writesHarnessEvidence": 0,
     "writesKdsLifecycle": 0,

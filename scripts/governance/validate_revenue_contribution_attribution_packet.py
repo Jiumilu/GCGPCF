@@ -79,8 +79,8 @@ def main() -> int:
         if is_distribution_candidate:
             if packet["revenueType"] != "formal_revenue" or packet["revenueBasis"] != "cash_received":
                 failures.append(f"{packet['id']} distribution candidate without formal cash received")
-            if not packet["evidenceRefs"] or not packet["waesGateRefs"]:
-                failures.append(f"{packet['id']} distribution candidate missing evidence or WAES gate")
+            if not packet["evidenceRefs"] or not packet["wameGateRefs"]:
+                failures.append(f"{packet['id']} distribution candidate missing evidence or WAME gate")
             if not has_confirmed_contribution(packet):
                 failures.append(f"{packet['id']} distribution candidate without confirmed contribution")
             if packet["freezeRecommended"]:

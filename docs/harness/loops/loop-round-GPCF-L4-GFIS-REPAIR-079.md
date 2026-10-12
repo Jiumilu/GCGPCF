@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B7094AF548
 title: GPCF-L4-GFIS-REPAIR-079 GFIS 辽宁远航客户确认 submission 运行层隔离
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -98,4 +98,4 @@ pass
 
 ## 下一步
 
-优先接收辽宁远航客户确认函、客户盖章/签字确认或等效正式确认原件脱敏索引；取得后再在 GFIS 提交 formal source type real submission 候选，并保持人工/WAES/KDS 复核。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。
+优先接收辽宁远航客户确认函、客户盖章/签字确认或等效正式确认原件脱敏索引；取得后再在 GFIS 提交 formal source type real submission 候选，并保持人工/WAME/KDS 复核。GPCF 在这些原件进入复核前继续保持 GFIS/GPCF `repair_required`。

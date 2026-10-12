@@ -108,7 +108,7 @@
     "createsConfirmationFact": false,
     "createsCommitteeDecision": false,
     "realKdsApiWrite": false,
-    "waesWrite": false,
+    "wameWrite": false,
     "businessLedgerWrite": false,
     "settlementWrite": false,
     "ragAdmission": false,

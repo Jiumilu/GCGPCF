@@ -13,7 +13,7 @@ INSTANCE_JSON = ROOT / "fixtures/headroom/headroom-lcx-human-approval-package-in
 NEGATIVE_JSON = ROOT / "fixtures/headroom/headroom-lcx-human-approval-package-instance-negative-fixtures.json"
 LEDGER_JSON = ROOT / "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json"
 ROLLBACK_PLAN = ROOT / "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md"
-WAES_DECISION = ROOT / "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md"
+WAME_DECISION = ROOT / "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.md"
 EVIDENCE_JSON = ROOT / "docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json"
 EVIDENCE_MD = ROOT / "docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001.md"
@@ -23,7 +23,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -43,7 +43,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 REQUIRED_ATTESTATIONS = [
@@ -53,7 +53,7 @@ REQUIRED_ATTESTATIONS = [
     "no_real_kds_write",
     "no_external_api_write",
     "rollback_plan_reviewed",
-    "waes_harness_evidence_attached",
+    "wame_harness_evidence_attached",
 ]
 
 
@@ -105,8 +105,8 @@ def reject_reason(candidate: dict) -> str | None:
         return "sanitized_ledger_must_be_reference_only"
     if "raw" in ledger.lower() or "inline" in ledger.lower():
         return "sanitized_ledger_must_be_reference_only"
-    if fields.get("waes_harness_admission_decision") not in {"admitted_for_sanitized_measurement_precheck", "blocked"}:
-        return "waes_harness_decision_required"
+    if fields.get("wame_harness_admission_decision") not in {"admitted_for_sanitized_measurement_precheck", "blocked"}:
+        return "wame_harness_decision_required"
 
     attestations = candidate.get("human_attestations", {})
     if set(attestations) != set(REQUIRED_ATTESTATIONS):
@@ -123,9 +123,9 @@ def reject_reason(candidate: dict) -> str | None:
 
 def require_instance_complete(instance: dict) -> None:
     require(reject_reason(instance) is None, "approval instance must pass schema-level field validation")
-    require(instance.get("instance_status") == "precheck_only_authorization_fields_complete_waes_harness_admitted", "instance status mismatch")
+    require(instance.get("instance_status") == "precheck_only_authorization_fields_complete_wame_harness_admitted", "instance status mismatch")
     require(
-        instance.get("schema_validation_expected") == "pass_fields_complete_waes_harness_admitted_for_sanitized_precheck_no_measurement",
+        instance.get("schema_validation_expected") == "pass_fields_complete_wame_harness_admitted_for_sanitized_precheck_no_measurement",
         "instance schema expectation mismatch",
     )
     fields = instance.get("authorization_fields", {})
@@ -135,8 +135,8 @@ def require_instance_complete(instance: dict) -> None:
     require(fields.get("sanitized_production_token_ledger") == LEDGER_JSON.relative_to(ROOT).as_posix(), "ledger reference mismatch")
     require(fields.get("rollback_plan_id") == "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001", "rollback plan id mismatch")
     require(
-        fields.get("waes_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
-        "WAES/Harness decision must admit sanitized precheck",
+        fields.get("wame_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
+        "WAME/Harness decision must admit sanitized precheck",
     )
 
 
@@ -150,7 +150,7 @@ def main() -> int:
     loop_round = read(LOOP_ROUND)
     runner = read(RUNNER)
     rollback_plan = read(ROLLBACK_PLAN)
-    waes_decision = read(WAES_DECISION)
+    wame_decision = read(WAME_DECISION)
 
     require_frontmatter(EVIDENCE_MD, md)
     require_frontmatter(LOOP_ROUND, loop_round)
@@ -164,8 +164,8 @@ def main() -> int:
     require(ledger.get("production_token_measurement_allowed") is False, "ledger must block production token measurement")
     require("HEADROOM-LCX-ROLLBACK-PLAN-20260622-001" in rollback_plan, "rollback plan id missing")
     require(
-        "waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck" in waes_decision,
-        "WAES/Harness decision evidence must admit sanitized precheck",
+        "wame_harness_admission_decision | admitted_for_sanitized_measurement_precheck" in wame_decision,
+        "WAME/Harness decision evidence must admit sanitized precheck",
     )
 
     cases = negative.get("cases", [])
@@ -219,7 +219,7 @@ def main() -> int:
     print(
         "headroom_lcx_approval_instance_precheck=pass_precheck_only "
         f"project_count=15 negative_case_count={rejected} rejected={rejected} "
-        "approval_instance_precheck_gate=true authorization_complete=true waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck "
+        "approval_instance_precheck_gate=true authorization_complete=true wame_harness_admission_decision=admitted_for_sanitized_measurement_precheck "
         "production_token_measurement_allowed=false production_admission_gate=false "
         "accepted=false integrated=false production_ready=false"
     )

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D660B405EE
 title: GPCF L3 第三轮最终检查点
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

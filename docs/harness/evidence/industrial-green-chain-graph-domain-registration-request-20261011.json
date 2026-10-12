@@ -26,7 +26,7 @@
     "admission_required": true,
     "must_bind_project_group_scope": true,
     "must_map_to_registry_categories": true,
-    "must_not_bypass_kds_waes_loop": true
+    "must_not_bypass_kds_wame_loop": true
   },
   "six_category_mapping": {
     "object": "快照 objects.yaml（85 对象/10 类型；术语回指 sc:*/was_registry:*）",
@@ -43,7 +43,7 @@
   "admission_preconditions": {
     "mapped_to_six_categories": true,
     "binds_project_group_scope": true,
-    "no_kds_waes_loop_bypass": true,
+    "no_kds_wame_loop_bypass": true,
     "registry_body_unmodified": true,
     "candidate_boundary_retained": true
   },
@@ -52,7 +52,7 @@
     "submitted": true,
     "registry_entry_added": true,
     "governance_reviewed": true,
-    "waes_authorized": false,
+    "wame_authorized": false,
     "accepted": true,
     "integrated": false,
     "production_ready": false

@@ -96,7 +96,7 @@ KnowledgeGapRequest
 | sourceAuthenticityStatement | 是 | 提交人对来源真实性的声明 |
 | aiAssisted | 是 | 是否使用 AI 辅助整理 |
 | businessFactClaimed | 是 | 默认 false；不得由提交包直接确认业务事实 |
-| waesGateStatus | 是 | pending、governance_recorded、governance_blocked、governance_rejected |
+| wameGateStatus | 是 | pending、governance_recorded、governance_blocked、governance_rejected |
 | settlementCandidate | 否 | 候选积分或潜在产值建议 |
 
 ## 6. 验收规则

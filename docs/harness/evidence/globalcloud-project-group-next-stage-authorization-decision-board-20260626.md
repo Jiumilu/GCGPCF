@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-NEXT-STAGE-AUTHORIZATION-DECISION-BOARD-20260626
 title: GlobalCloud 项目群下一阶段授权决策板 2026-06-26
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -78,7 +78,7 @@ customer_accepted = false
 | 1 | A | GPCF 当前治理 review 是 3 仓边界与总控证据回放的中心入口 |
 | 2 | B | GFIS repair boundary 需在进入真实 SOR intake 前先收口 review 边界 |
 | 3 | C | SOP delegated wrapper 是当前项目群 Git partial 的活动 review 边界之一 |
-| 4 | A-C 全部完成后 | 才进入 `AUTH-WAVE1-WAES-LINT-RUNTIME-20260626`、`AUTH-WAVE1-GFIS-REAL-SOR-20260626`、`AUTH-WAVE1-GPC-EXTERNAL-RUNTIME-20260626`、`AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626` 或 `AUTH-WAVE1-GPCF-POST-SCHEME-REVIEW-20260626` 的 Wave 1 授权讨论 |
+| 4 | A-C 全部完成后 | 才进入 `AUTH-WAVE1-WAME-LINT-RUNTIME-20260626`、`AUTH-WAVE1-GFIS-REAL-SOR-20260626`、`AUTH-WAVE1-GPC-EXTERNAL-RUNTIME-20260626`、`AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626` 或 `AUTH-WAVE1-GPCF-POST-SCHEME-REVIEW-20260626` 的 Wave 1 授权讨论 |
 
 ## 5. 用户确认格式
 

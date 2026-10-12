@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KDS-REAL-RUNTIME-BASELINE-20260624
 title: KDS 真实运行基线证据 2026-06-24
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 证据范围
 
-本证据记录 KDS 在核心链路 `WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain` 中的真实命令、索引、检索和治理边界。
+本证据记录 KDS 在核心链路 `WAME -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain` 中的真实命令、索引、检索和治理边界。
 
 本记录不把 KDS 声明为真实交付完成，不把 GBrain 检索可用声明为 KDS 全量数据治理完成，不把 `ready_for_review` 声明为客户验收通过。
 

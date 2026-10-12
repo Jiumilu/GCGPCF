@@ -30,7 +30,7 @@ superseded_by: []
 | 2 | GlobalCloud GFIS | 工厂执行系统 | [GCGFIS](https://github.com/Jiumilu/GCGFIS) | ready_for_human_acceptance | 96/100 |
 | 3 | GlobalCloud GPC | 供应链公共服务平台 | [GCGPC](https://github.com/Jiumilu/GCGPC) | not_started | - |
 | 4 | GlobalCloud PVAOS | 运营与门户底座 | [GCPVAOS](https://github.com/Jiumilu/GCPVAOS) | not_started | - |
-| 5 | GlobalCloud WAME | 治理/证据/AI越权控制 | [GCWAES](https://github.com/Jiumilu/GCWAES) | not_started | - |
+| 5 | GlobalCloud WAME | 治理/证据/AI越权控制 | [GCWAME](https://github.com/Jiumilu/GCWAME) | not_started | - |
 | 6 | GlobalCloud KDS | 知识中心（LLM Wiki） | [GCKDS](https://github.com/Jiumilu/GCKDS) | 基础 Manifest | - |
 | 7 | GlobalCloud PKC | 个人知识工作台 | [GCPKC](https://github.com/Jiumilu/GCPKC) | 无 Manifest | - |
 | 8 | GlobalCloud XGD | 大象：长程 Agent、重分析、多端交互与运行承载 | [GCXGD](https://github.com/Jiumilu/GCXGD) | 无 Manifest | - |
@@ -142,4 +142,4 @@ PKC(个人工作台) ─── 个人仪表盘 ──────────┤
 | 知识层 | GCBrain（智能平台）、GCKDS（知识中心）、GCPKC（个人工作台） |
 | 供应链层 | GCGFIS（工厂信息化）、GCGPC（绿色公链）、GCPVAOS（价值联盟） |
 | AI 能力层 | GCXiaoC（蚁后：AI 能力生产与编排路由）、GCXGD（大象：长程 Agent 与重分析承载）、GCXiaoG（蚂蚁：轻量执行入口/语音助手） |
-| 视窗层 | GCWAES（世界浏览器） |
+| 视窗层 | GCWAME（世界浏览器） |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9886BDB110
 title: L4 Control Plane
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,4 +30,4 @@ superseded_by: []
 
 - GFIS 当前承载现代精工 OEM 代加工生产，葛化自建工厂投产后继续使用同一 GFIS 运行时系统。
 - GFIS Demo 只能作为展示、培训和前端回归，不得替代运行层事实。
-- 未取得真实 customer requirement/platform order source-of-record、dispatch confirmation、WAES confirmation、KDS write receipt 和 runtime primary key 前，完整 SOP E2E 必须保持 `repair_required`。
+- 未取得真实 customer requirement/platform order source-of-record、dispatch confirmation、WAME confirmation、KDS write receipt 和 runtime primary key 前，完整 SOP E2E 必须保持 `repair_required`。

@@ -31,4 +31,4 @@ settlement_modes:
 rules:
   bounty_must_bind_gap_record: true
   ai_review_is_advisory_only: true
-  settlement_requires: [waes_gate, human_acceptance, dispute_window_closed]
+  settlement_requires: [wame_gate, human_acceptance, dispute_window_closed]

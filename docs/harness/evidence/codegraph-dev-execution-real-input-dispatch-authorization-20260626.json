@@ -20,7 +20,7 @@
     "external_notifications_sent": 0,
     "external_api_write": false,
     "real_kds_write": false,
-    "real_waes_write": false
+    "real_wame_write": false
   },
   "authorization_questions": [
     {
@@ -67,7 +67,7 @@
     "external notification dispatch",
     "external API write",
     "real KDS write",
-    "real WAES write",
+    "real WAME write",
     "production write",
     "deployment",
     "git commit",
@@ -100,8 +100,8 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "real_kds_write_performed": false,
-    "real_waes_write_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "real_wame_write_performed": false,
+    "codegraph_as_final_wame_decision": false
   },
   "next_round_if_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-PRECHECK-020",
   "next_round_if_not_authorized": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-020"

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GFIS-REAL-RUNTIME-BASELINE-20260624
 title: GFIS 真实运行基线证据 2026-06-24
 project: GFIS
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -82,11 +82,11 @@ apis=5 write_apis=3 read_apis=2 auth=bearer idempotency=covered forbidden_writes
 gfis work-order API contract validation passed
 created_docs=19 commits=19
 
-gfis WAES gate event validation passed
+gfis WAME gate event validation passed
 cases=3 gate_results=allowed,blocked,waived
 ```
 
-结论：GFIS 的接口契约、核心业务流、外部契约 smoke、工单 API 契约和 WAES gate event 存在本轮真实验证通过证据。
+结论：GFIS 的接口契约、核心业务流、外部契约 smoke、工单 API 契约和 WAME gate event 存在本轮真实验证通过证据。
 
 ### 4.3 业务事实与 UAT 边界
 

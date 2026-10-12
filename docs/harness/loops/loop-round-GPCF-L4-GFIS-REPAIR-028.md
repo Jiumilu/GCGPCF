@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-384E1076F7
 title: GPCF-L4-GFIS-REPAIR-028 GFIS 运行时生产执行修复候选
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -78,7 +78,7 @@ status=pass_demo_only
 
 - 不进行生产写入。
 - 不进行真实外部 API 写入。
-- 不执行数据库迁移、schema sync、权限变更、TOKEN 变更、部署、git push、accepted/integrated 升级或 WAES/KDS 最终写入。
+- 不执行数据库迁移、schema sync、权限变更、TOKEN 变更、部署、git push、accepted/integrated 升级或 WAME/KDS 最终写入。
 - Demo 仍仅作为显示回归验证。
 - `GFISActionableRepairCandidate` 不是已完成的生产执行事实。
 

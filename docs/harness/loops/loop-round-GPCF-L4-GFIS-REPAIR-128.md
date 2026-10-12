@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BD80E1585F
 title: GPCF-L4-GFIS-REPAIR-128
 project: GPCF
-related_projects: [GFIS, GPC, WAES, XGD, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, XGD, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -93,4 +93,4 @@ runtime_liaoning_yuanhang_customer_commercial_proof_submission_quarantine_bounda
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-122`：建立客户商业凭证提交后的授权 envelope 对接检查或真实提交文件接收清单；继续保持 review/runtime/WAES 队列阻断，直到真实凭证和 authorization envelope 出现。
+`GFIS-RUNTIME-SOP-E2E-122`：建立客户商业凭证提交后的授权 envelope 对接检查或真实提交文件接收清单；继续保持 review/runtime/WAME 队列阻断，直到真实凭证和 authorization envelope 出现。

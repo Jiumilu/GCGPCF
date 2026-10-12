@@ -1,7 +1,7 @@
 policy_id: okf.rag_citation_strength_policy
 version: v0.1
 status: draft
-owner: WAES
+owner: WAME
 updated_at: "2026-06-20"
 levels:
   - code: L0
@@ -66,7 +66,7 @@ hard_boundaries:
   repair_required_must_not_be_conclusion: true
 no_write_assertions:
   writes_kds_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_business_system: 0
   writes_revenue_distribution: 0
   writes_external_api: 0

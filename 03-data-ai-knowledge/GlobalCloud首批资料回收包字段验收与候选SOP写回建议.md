@@ -63,7 +63,7 @@ superseded_by: []
 | blockedFields | 禁止入库或禁止 AI 处理字段 | 条件必填 | 涉隐私、合同、金融或未授权资料时必填 |
 | kdsBasePools | KDS 11 底座资源池挂接 | 必填 | 至少一个 |
 | enhancedLedgerLinks | 增强治理账本挂接 | 必填 | 至少一个 |
-| waesRuleRecordId | WAME 规则记录编号 | 条件必填 | 提交验收前必填或说明 pending |
+| wameRuleRecordId | WAME 规则记录编号 | 条件必填 | 提交验收前必填或说明 pending |
 | humanReviewDecisionId | 人工审核决策编号 | 条件必填 | 提交验收前必填 |
 | committeeFilingId | 委员会备案或裁决编号 | 条件必填 | 涉及积分、收益、悬赏、争议或重大违规时必填 |
 | candidateSopRefs | 候选 SOP 建议编号 | 可选 | 必须保持 candidate |
@@ -83,7 +83,7 @@ superseded_by: []
 | requiredSourceRefs | 需求来源索引、来源责任主体、目标工厂、OEM 承接方、责任拆分、预运营期订单阶段说明 |
 | kdsBasePools | 订单池、资金池、产能池、数据池、场景池 |
 | enhancedLedgerLinks | 潜在产值池、贡献账本、SOP 账本、悬赏池、争议池 |
-| waesRuleScope | evidence / classification / boundary |
+| wameRuleScope | evidence / classification / boundary |
 | humanReviewScope | 来源、责任主体、目标工厂、OEM 承接方和责任拆分 |
 | candidateSopRefs | `SOPC-GH-ORD-202606-0001` |
 | forbiddenClaims | 正式订单、到账、收益、质量放行、GFIS 主账写入、SOP 生效 |
@@ -100,7 +100,7 @@ superseded_by: []
 | requiredSourceRefs | 拓厂项目来源索引、区域资料、政策来源、第三方来源、装备或产能线索、项目负责人确认 |
 | kdsBasePools | 装备池、产能池、政策池、数据池、场景池 |
 | enhancedLedgerLinks | 贡献账本、积分池、悬赏池、SOP 账本、争议池 |
-| waesRuleScope | evidence / classification / authority / boundary |
+| wameRuleScope | evidence / classification / authority / boundary |
 | humanReviewScope | 项目来源、政策来源、第三方来源和项目负责人确认 |
 | candidateSopRefs | `SOPC-HBLC-FEA-202606-0001` |
 | forbiddenClaims | 投资通过、合作确认、收益确认、GFIS 接入完成、新工厂模板正式生效 |
@@ -117,7 +117,7 @@ superseded_by: []
 | requiredSourceRefs | 客户确认、样箱签收或反馈、POD、真实回执、KDS 回执、WAME confirmation、现代精工过渡责任材料 |
 | kdsBasePools | 订单池、运力池、资金池、数据池、场景池 |
 | enhancedLedgerLinks | 潜在产值池、贡献账本、悬赏池、争议池、SOP 账本 |
-| waesRuleScope | evidence / real_receipt / classification / boundary |
+| wameRuleScope | evidence / real_receipt / classification / boundary |
 | humanReviewScope | 客户链路、样箱链路、承接方链路和回执链路 |
 | candidateSopRefs | `SOPC-GH-LY-202606-0001` |
 | forbiddenClaims | 客户确认已取得、POD 已取得、KDS 回执已取得、WAME confirmation 已取得、GFIS verified artifact 已形成 |
@@ -168,7 +168,7 @@ targetObject:
 candidateType:
 candidateSummary:
 requiredHumanConfirmation:
-requiredWaesRecord:
+requiredWameRecord:
 requiredCommitteeRecord:
 kdsBasePools:
 enhancedLedgerLinks:
@@ -208,7 +208,7 @@ gapClosureRecord:
   closeType: full / partial / returned / blocked / disputed / withdrawn
   acceptedSourceRefs:
   rejectedSourceRefs:
-  waesRuleRecordId:
+  wameRuleRecordId:
   humanReviewDecisionId:
   committeeFilingId:
   candidateSopRefs:

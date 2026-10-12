@@ -16,7 +16,7 @@ PROJECT_ORDER = [
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -31,7 +31,7 @@ PROJECT_FOLDERS = {
     "GFIS": "01-GFIS",
     "GPC": "02-GPC",
     "PVAOS": "03-PVAOS",
-    "WAES": "04-WAES",
+    "WAME": "04-WAME",
     "KDS": "05-KDS",
     "Brain": "06-Brain",
     "PKC": "07-PKC",
@@ -204,7 +204,7 @@ def build_report() -> str:
         "doc_id: GPCF-DOC-PROJECT-LOOP-MATURITY",
         "title: GlobalCloud 项目文档完整度与 Loop 成熟度量化矩阵",
         "project: GPCF",
-        "related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]",
+        "related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]",
         "domain: status",
         "status: controlled",
         "version: v1.0",
@@ -305,7 +305,7 @@ def build_report() -> str:
             "2. GPCF：继续补 command log、Git clean evidence 与 KDS TOKEN 上线同步门禁。",
             "3. MMC、KDS、Brain、PKC：作为试点项目补齐 Manifest、loop-state、evidence-index。",
             "4. XiaoC：从 partial 推进到 loop_ready，补齐测试、部署和模型路由证据。",
-            "5. GPC、PVAOS、WAES、XGD、XiaoG：补 Manifest 和首轮输入，防止主线空转。",
+            "5. GPC、PVAOS、WAME、XGD、XiaoG：补 Manifest 和首轮输入，防止主线空转。",
         ]
     )
     return "\n".join(lines) + "\n"

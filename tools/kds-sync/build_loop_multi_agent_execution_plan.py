@@ -16,7 +16,7 @@ AGENT_STAGE_MAP = {
     "runtime_intake": "Runtime Intake Agent",
     "primary_key_validation": "Primary Key / Source Validation Agent",
     "review_queue": "Review Queue Agent",
-    "waes_artifact": "WAES Candidate / Artifact Agent",
+    "wame_artifact": "WAME Candidate / Artifact Agent",
     "boundary_validation": "Boundary Validator Agent",
     "orchestrator_summary": "LOOP Orchestrator",
 }

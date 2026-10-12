@@ -17,7 +17,7 @@
       "routing_owner",
       "recipient_acl_owner",
       "sla_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "harness_reviewer",
       "governance_owner"
     ],
@@ -27,7 +27,7 @@
       "response_due_window_declared",
       "acknowledgement_receipt_batch_ref_declared",
       "hold_context_refs_preserved",
-      "waes_negative_gate_preserved",
+      "wame_negative_gate_preserved",
       "no_write_boundary_acknowledged",
       "formal_execution_forbidden_until_response_received",
       "committee_case_forbidden_until_response_received",

@@ -71,7 +71,7 @@ def main() -> int:
     records = evidence.get("replay_records", [])
     comparisons = evidence.get("comparisons", [])
     require(len(records) == 15 and len(comparisons) == 15, "record/comparison count mismatch")
-    require({record.get("project_id") for record in records} == {"GPCF", "KDS", "Brain", "WAES", "GFIS"}, "project coverage mismatch")
+    require({record.get("project_id") for record in records} == {"GPCF", "KDS", "Brain", "WAME", "GFIS"}, "project coverage mismatch")
     require({record.get("content_type") for record in records} == {"loop_gate_metadata", "retrieval_context_metadata", "tool_output_metadata"}, "scenario coverage mismatch")
     for record in records:
         require(record.get("marker_gate") == "fixture_marker_preserved", "marker gate mismatch")

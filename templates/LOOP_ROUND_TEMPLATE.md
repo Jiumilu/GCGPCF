@@ -90,7 +90,7 @@ L3、L3.5、L4、L5 必填。每轮至少满足 4/5，才可计为 `substantive_
 
 ## 3.1 KDS 关联数据检索
 
-涉及真实开发、契约、mock、dry-run 或 evidence 时必填。KDS 只提供受控语义、字段口径、SOP、案例和 evidence 回指，不替代 GPC/GFIS/WAES/PVAOS 的当前业务事实。
+涉及真实开发、契约、mock、dry-run 或 evidence 时必填。KDS 只提供受控语义、字段口径、SOP、案例和 evidence 回指，不替代 GPC/GFIS/WAME/PVAOS 的当前业务事实。
 
 | 字段 | 值 |
 |---|---|

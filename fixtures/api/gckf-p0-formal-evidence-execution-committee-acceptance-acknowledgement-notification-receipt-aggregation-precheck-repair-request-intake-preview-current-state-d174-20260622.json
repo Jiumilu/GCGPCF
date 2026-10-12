@@ -55,7 +55,7 @@
       "repair_intake_owner",
       "receipt_owner",
       "committee_secretariat",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "acl_owner",
@@ -74,7 +74,7 @@
       "candidate_intake_hold_conditions",
       "candidate_intake_blocker_codes",
       "candidate_hold_context_refs_snapshot",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -169,7 +169,7 @@
       "candidate_intake_hold_conditions_present",
       "candidate_intake_blocker_codes_present",
       "candidate_hold_context_refs_snapshot_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "preview_hold_context_refs",
@@ -191,14 +191,14 @@
       "candidateIntakeHoldConditionsRef",
       "candidateIntakeBlockerCodesRef",
       "candidateHoldContextRefsSnapshotRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "aggregationOwnerRef",
       "precheckOwnerRef",
       "repairIntakeOwnerRef",
       "receiptOwnerRef",
       "committeeSecretariatRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "aclOwnerRef",
@@ -254,7 +254,7 @@
       "write_contribution_score",
       "promote_lifecycle",
       "mark_p0_accepted",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "holdContextRefs": [

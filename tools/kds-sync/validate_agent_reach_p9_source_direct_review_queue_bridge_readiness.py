@@ -22,24 +22,24 @@ REQUIRED_OBJECTIVE_FIELDS = {
     "zero_waste_city_indicator",
     "green_financing_purpose",
 }
-REQUIRED_PROJECTS = {"GFIS", "WAS", "WAES", "KDS"}
+REQUIRED_PROJECTS = {"GFIS", "WAS", "WAME", "KDS"}
 FIELD_PROJECT_ROUTES = {
-    "supplier_esg": ["GFIS", "WAES", "KDS"],
-    "green_supply_chain_registry": ["GFIS", "WAES", "KDS"],
-    "product_carbon_footprint": ["GFIS", "WAS", "WAES", "KDS"],
+    "supplier_esg": ["GFIS", "WAME", "KDS"],
+    "green_supply_chain_registry": ["GFIS", "WAME", "KDS"],
+    "product_carbon_footprint": ["GFIS", "WAS", "WAME", "KDS"],
     "carbon_traceability": ["GFIS", "WAS", "KDS"],
     "solid_waste_disposal_receipt": ["GFIS", "WAS", "KDS"],
-    "solid_waste_resource_utilization": ["GFIS", "WAS", "WAES", "KDS"],
-    "resource_utilization_product": ["GFIS", "WAS", "WAES", "KDS"],
-    "pollution_control_standard": ["WAES", "KDS"],
-    "industrial_solid_waste_policy": ["GFIS", "WAES", "KDS"],
-    "zero_waste_city_indicator": ["GFIS", "WAS", "WAES", "KDS"],
+    "solid_waste_resource_utilization": ["GFIS", "WAS", "WAME", "KDS"],
+    "resource_utilization_product": ["GFIS", "WAS", "WAME", "KDS"],
+    "pollution_control_standard": ["WAME", "KDS"],
+    "industrial_solid_waste_policy": ["GFIS", "WAME", "KDS"],
+    "zero_waste_city_indicator": ["GFIS", "WAS", "WAME", "KDS"],
     "zero_waste_city_case": ["GFIS", "WAS", "KDS"],
     "green_financing_purpose": ["GFIS", "WAS", "KDS"],
     "use_of_proceeds_tracking": ["GFIS", "WAS", "KDS"],
-    "policy_evidence": ["WAES", "KDS"],
-    "evidence_standard_reference": ["WAES", "KDS"],
-    "scope3_emissions": ["GFIS", "WAS", "WAES", "KDS"],
+    "policy_evidence": ["WAME", "KDS"],
+    "evidence_standard_reference": ["WAME", "KDS"],
+    "scope3_emissions": ["GFIS", "WAS", "WAME", "KDS"],
 }
 REQUIRED_ITEM_FIELDS = {
     "preview_item_id",
@@ -84,8 +84,8 @@ def review_lanes_for(projects: list[str]) -> list[str]:
         lanes.append("gfis_business_owner_review")
     if "WAS" in projects:
         lanes.append("was_asset_evidence_review")
-    if "WAES" in projects:
-        lanes.append("waes_policy_and_compliance_review")
+    if "WAME" in projects:
+        lanes.append("wame_policy_and_compliance_review")
     if "KDS" in projects:
         lanes.append("kds_traceability_review")
     return lanes
@@ -138,7 +138,7 @@ def build_preview_items(precheck: dict[str, Any]) -> list[dict[str, Any]]:
                     "candidate_only",
                     "not_review_queue_created",
                     "not_runtime_intake_created",
-                    "not_waes_review_created",
+                    "not_wame_review_created",
                     "not_verified",
                     "not_source_of_record",
                     "not_accepted",
@@ -190,7 +190,7 @@ def validate_items(items: list[dict[str, Any]], precheck: dict[str, Any]) -> dic
         for claim in [
             "not_review_queue_created",
             "not_runtime_intake_created",
-            "not_waes_review_created",
+            "not_wame_review_created",
             "not_verified",
             "not_source_of_record",
             "not_accepted",
@@ -224,7 +224,7 @@ def build_report() -> dict[str, Any]:
         "live_external_fetch_invoked": False,
         "review_queue_created": False,
         "runtime_intake_created": False,
-        "waes_review_created": False,
+        "wame_review_created": False,
         "verified_artifact_created": False,
         "source_record_promotion_allowed": False,
         "precheck_source": PRECHECK.relative_to(ROOT).as_posix(),
@@ -236,7 +236,7 @@ def build_report() -> dict[str, Any]:
             "requires_four_topic_coverage": coverage["topic_coverage"] == 1.0,
             "requires_p0_topic_coverage": coverage["p0_topic_coverage"] == 1.0,
             "requires_objective_business_fields": set(coverage["objective_business_field_coverage"]) == REQUIRED_OBJECTIVE_FIELDS,
-            "requires_gfis_was_waes_kds_routes": REQUIRED_PROJECTS <= set(coverage["route_project_coverage"]),
+            "requires_gfis_was_wame_kds_routes": REQUIRED_PROJECTS <= set(coverage["route_project_coverage"]),
             "requires_candidate_only_admission": True,
             "blocks_source_record_promotion": True,
             "blocks_real_review_queue_creation": True,
@@ -247,7 +247,7 @@ def build_report() -> dict[str, Any]:
             "not_live_fetch_invoked",
             "not_review_queue_created",
             "not_runtime_intake_created",
-            "not_waes_review_created",
+            "not_wame_review_created",
             "not_verified",
             "not_kds_canonical_written",
             "not_gfis_source_of_record_written",
@@ -265,7 +265,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-REVIEW-QUEUE-BRIDGE-READINESS-20260626",
         "title: Agent-Reach P9S Source Direct Review Queue Bridge 就绪证据 2026-06-26",
         "project: KDS",
-        "related_projects: [GFIS, WAS, WAES, KDS, GPCF]",
+        "related_projects: [GFIS, WAS, WAME, KDS, GPCF]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",
@@ -305,7 +305,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "## 边界",
             "",
             "- 本证据只证明 P9S source-direct candidate 到人工 review queue 的字段和路由已准备。",
-            "- 本证据不创建真实 review queue、runtime intake、WAES review 或 verified artifact。",
+            "- 本证据不创建真实 review queue、runtime intake、WAME review 或 verified artifact。",
             "- 本证据不写 KDS canonical Markdown。",
             "- 本证据不写 GFIS source-of-record。",
             "- 本证据不声明 accepted / integrated / production_ready。",

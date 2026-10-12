@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A9F2D1C7E
 title: Studio 默认凭据移动端运行链路验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

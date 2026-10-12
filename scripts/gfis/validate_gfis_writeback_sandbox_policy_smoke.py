@@ -2,7 +2,7 @@
 """Validate GFIS Writeback Sandbox policy.
 
 This validator reads local OKF, shared type and fixture files only. It does not
-write GFIS, GPC, ERP, MES, KDS, WAES, or external APIs.
+write GFIS, GPC, ERP, MES, KDS, WAME, or external APIs.
 """
 
 from __future__ import annotations
@@ -59,7 +59,7 @@ def main() -> int:
         "sandboxCannotEmitTargetReceipt": hard["sandbox_cannot_emit_target_receipt"],
         "finalActionAcceptedIsNotWritebackReceipt": hard["final_action_accepted_is_not_writeback_receipt"],
         "missingEvidenceBlocks": hard["missing_evidence_blocks"],
-        "missingWaesResultBlocks": hard["missing_waes_result_blocks"],
+        "missingWameResultBlocks": hard["missing_wame_result_blocks"],
         "missingBusinessOwnerBlocks": hard["missing_business_owner_blocks"],
         "writesGfis": no_write["writes_gfis"],
         "writesGpc": no_write["writes_gpc"],

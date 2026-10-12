@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A7F2AE6ACC
 title: evidence
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

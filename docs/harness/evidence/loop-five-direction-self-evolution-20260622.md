@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FIVE-DIRECTION-SELF-EVOLUTION-001
 title: LOOP 运行控制闭环自我进化证据 20260622
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -71,7 +71,7 @@ debug
 | production_writes | `0` |
 | real_external_api_writes | `0` |
 | kds_fact_writes | `0` |
-| waes_gate_result_writes | `0` |
+| wame_gate_result_writes | `0` |
 
 ## 结论
 

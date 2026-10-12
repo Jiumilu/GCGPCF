@@ -2,7 +2,7 @@
 """Validate RAG citation strength L0-L5 policy.
 
 This validator reads local OKF, shared type and fixture files only. It does not
-write KDS facts, WAES gate results, business systems, revenue ledgers, or
+write KDS facts, WAME gate results, business systems, revenue ledgers, or
 external APIs.
 """
 
@@ -66,7 +66,7 @@ def main() -> int:
         "limitedRequiresBoundaryNotice": hard["limited_requires_boundary_notice"],
         "repairRequiredMustNotBeConclusion": hard["repair_required_must_not_be_conclusion"],
         "writesKdsFact": no_write["writes_kds_fact"],
-        "writesWaesGateResult": no_write["writes_waes_gate_result"],
+        "writesWameGateResult": no_write["writes_wame_gate_result"],
         "writesBusinessSystem": no_write["writes_business_system"],
         "writesRevenueDistribution": no_write["writes_revenue_distribution"],
         "writesExternalApi": no_write["writes_external_api"],
@@ -90,7 +90,7 @@ def main() -> int:
         "l5_conditions=T0,T1+confirmed+evidence "
         "l5_no_auto_writeback=covered "
         "sensitive_metadata_boundary=covered "
-        "writes_kds_fact=0 writes_waes_gate_result=0 "
+        "writes_kds_fact=0 writes_wame_gate_result=0 "
         "writes_business_system=0 writes_revenue_distribution=0 "
         "writes_external_api=0"
     )

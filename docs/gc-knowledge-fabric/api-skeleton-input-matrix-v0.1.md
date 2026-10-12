@@ -58,7 +58,7 @@ P0 API 骨架禁止：
 | API 分组 | 输入 fixture | 依赖 P0 evidence |
 |---|---|---|
 | KDS v2 | `fixtures/kds/v2-endpoint-no-write-smoke.json` | P0-D2、P0-D3、P0-D6 |
-| WAME | `fixtures/waes/endpoint-no-write-smoke.json` | P0-D4 |
+| WAME | `fixtures/wame/endpoint-no-write-smoke.json` | P0-D4 |
 | KWE | `fixtures/kwe/endpoint-no-write-smoke.json` | P0-D5 |
 | GFIS Assistant | `fixtures/gfis/endpoint-no-write-smoke.json` | P0-D4、P0-D5、P0-D6 |
 | Governance LOOP | `fixtures/governance/endpoint-no-write-smoke.json` | P0-D1 至 P0-D6 |

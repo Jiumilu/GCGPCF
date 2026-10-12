@@ -44,7 +44,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-4F2AB18D49
 title: Headroom Project Application Coverage Matrix
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0

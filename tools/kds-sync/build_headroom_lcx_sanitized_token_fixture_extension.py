@@ -14,7 +14,7 @@ EVIDENCE_JSON = ROOT / "docs/harness/evidence/headroom-lcx-sanitized-token-fixtu
 EVIDENCE_MD = ROOT / "docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md"
 
-PROJECTS = ["GPCF", "KDS", "Brain", "WAES", "GFIS"]
+PROJECTS = ["GPCF", "KDS", "Brain", "WAME", "GFIS"]
 SCENARIOS = [
     "loop_gate_metadata",
     "retrieval_context_metadata",
@@ -32,7 +32,7 @@ def frontmatter(title: str, source_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS, KDS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS, KDS]
 domain: governance
 status: controlled
 version: v1.0

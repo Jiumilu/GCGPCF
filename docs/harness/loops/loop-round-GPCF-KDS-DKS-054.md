@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F5B42EB9A1
 title: LOOP Round GPCF-KDS-DKS-054 - 葛化 DKS-053 dry-run 结果可填写执行包与责任方说明
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,7 +47,7 @@ superseded_by: []
 | 只读核查线 | 范围 | 结果 |
 |---|---|---|
 | 字段与责任方 | 辽宁远航、现代精工 OEM、质量、发货、POD、金融索引 | completed；已并入执行包分组、最低字段、退回/阻断和脱敏索引边界 |
-| WAES/RAG/积分收益 | DSR-L2/L3、RAG safe/limited/blocked、人工/委员会、积分收益悬赏 | completed；已并入 RAG、WAES、积分收益和不得升级章节 |
+| WAME/RAG/积分收益 | DSR-L2/L3、RAG safe/limited/blocked、人工/委员会、积分收益悬赏 | completed；已并入 RAG、WAME、积分收益和不得升级章节 |
 | GFIS 三件套与 SOP | AI 输出、候选写回、候选 SOP、GFIS no_write | not_found；未作为 agent 证据采用，主 agent 使用已读取的 GFIS AI 运行记录模板和 DKS-053 字段完成 |
 
 ## 3. 本轮目标
@@ -59,14 +59,14 @@ superseded_by: []
 3. 人工确认准备清单。
 4. 委员会准备清单。
 5. AI 输出、候选写回和候选 SOP 的 no_write / suggestion_only 口径。
-6. RAG、WAES、DSR、积分、收益、AI 额度和悬赏边界。
+6. RAG、WAME、DSR、积分、收益、AI 额度和悬赏边界。
 
 ## 4. 本轮动作
 
 1. 读取 AGENTS、LOOP 控制板、自治策略、状态矩阵、DKS-052、DKS-053、订单母版、GFIS AI 运行记录模板、积分收益规则、知识缺口台账和文档治理规则。
 2. 判断本轮多 agent 适用性，限制 explorer 只读。
 3. 新增 `GlobalCloud葛化DKS053dry-run结果可填写执行包与责任方说明.md`。
-4. 定义 7 个责任方执行包：客户确认/订单、质量/发货/POD、OEM、金融、WAES、AI、知识缺口/悬赏。
+4. 定义 7 个责任方执行包：客户确认/订单、质量/发货/POD、OEM、金融、WAME、AI、知识缺口/悬赏。
 5. 定义 DKS-054 人工确认准备清单和委员会准备清单。
 6. 明确所有对象保持候选、待来源、待人工、待委员会、no_write 或 suggestion_only。
 7. 明确本轮不派发、不接收、不写主账、不升级状态。
@@ -111,7 +111,7 @@ superseded_by: []
 - 派发真实补证请求；
 - 接收真实客户确认、采购订单、合同、POD、质量、开票、到账或金融凭证；
 - 保存金融凭证原文、账户、金额明细、银行流水或合同全文；
-- GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统写入；
+- GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统写入；
 - 发布悬赏、冻结资源、确认积分、发放额度或分配收益；
 - 人工签认或委员会裁决；
 - 关闭 GFIS `real_business_lane=repair_required`；

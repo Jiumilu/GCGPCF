@@ -8,7 +8,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -86,7 +86,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -99,7 +99,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not mark accepted, integrated, or production ready"
   ]
 }

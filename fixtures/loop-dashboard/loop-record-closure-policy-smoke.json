@@ -12,7 +12,7 @@
     "newGapRefs": [],
     "candidateFactRefs": [],
     "candidateSopRefs": [],
-    "waesResultRefs": [],
+    "wameResultRefs": [],
     "confirmationRefs": [],
     "committeeRefs": [],
     "riskRefs": ["loop-issue-no-business-completion"],

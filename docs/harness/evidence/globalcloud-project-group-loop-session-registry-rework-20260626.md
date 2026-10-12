@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-LOOP-SESSION-REGISTRY-REWORK-20260626
 title: GlobalCloud 项目群 Loop Session Registry Rework 包 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -59,7 +59,7 @@ reason = hard_failure:loop_session_registry
 | `GlobalCloud PKC` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
 | `GlobalCloud PVAOS` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
 | `GlobalCloud Studio` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
-| `GlobalCloud WAES` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
+| `GlobalCloud WAME` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
 | `GlobalCloud XGD` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
 | `GlobalCloud XiaoC` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
 | `GlobalCloud XiaoG` | loop gate `hard_failure:loop_session_registry` | `rework_required` | 同上 |
@@ -69,7 +69,7 @@ reason = hard_failure:loop_session_registry
 
 | 项目 | `tools/kds-sync/loop_document_gate.py` | `02-governance/loop/LOOP_SESSION_REGISTRY.md` | `02-governance/loop/README.md` |
 |---|---|---|---|
-| `GlobalCloud WAES` | exists | missing | missing |
+| `GlobalCloud WAME` | exists | missing | missing |
 | `GlobalCloud KDS` | exists | missing | missing |
 | `GlobalCloud SOP` | missing | missing | missing |
 

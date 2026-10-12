@@ -8,7 +8,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -29,9 +29,9 @@
     },
     {
       "item": 2,
-      "requirement": "Establish WAS dimensions, flows, object, relationship, event, Loop, WAES, RAG, Pool, and writeback contracts.",
+      "requirement": "Establish WAS dimensions, flows, object, relationship, event, Loop, WAME, RAG, Pool, and writeback contracts.",
       "status": "verified_governance_complete",
-      "evidence": ["WAS okf schemas and validators", "tools/kds-sync/validate_was_waes_kds_rag_writeback_gate_pack.py", "tools/kds-sync/validate_was_project_group_ontology_registry.py"]
+      "evidence": ["WAS okf schemas and validators", "tools/kds-sync/validate_was_wame_kds_rag_writeback_gate_pack.py", "tools/kds-sync/validate_was_project_group_ontology_registry.py"]
     },
     {
       "item": 3,
@@ -54,9 +54,9 @@
     },
     {
       "item": 6,
-      "requirement": "Build WAES gate input, KDS binding, RAG strong reference, GFIS/KWE writeback, and 11 Pools phased gates.",
+      "requirement": "Build WAME gate input, KDS binding, RAG strong reference, GFIS/KWE writeback, and 11 Pools phased gates.",
       "status": "verified_governance_complete",
-      "evidence": ["tools/kds-sync/validate_was_waes_kds_rag_writeback_gate_pack.py"]
+      "evidence": ["tools/kds-sync/validate_was_wame_kds_rag_writeback_gate_pack.py"]
     },
     {
       "item": 7,
@@ -75,7 +75,7 @@
     "python3 tools/kds-sync/validate_was_status_matrix_control_board_refresh.py",
     "python3 tools/kds-sync/validate_was_loop_context_coverage_refresh.py",
     "python3 tools/kds-sync/validate_was_project_group_ontology_registry.py",
-    "python3 tools/kds-sync/validate_was_waes_kds_rag_writeback_gate_pack.py",
+    "python3 tools/kds-sync/validate_was_wame_kds_rag_writeback_gate_pack.py",
     "python3 tools/kds-sync/validate_was_scenario_profile_matrix.py",
     "python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
     "python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
@@ -109,7 +109,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -123,7 +123,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not mark accepted, integrated, or production ready"
   ]
 }

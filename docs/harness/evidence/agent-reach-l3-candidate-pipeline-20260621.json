@@ -21,7 +21,7 @@
       "P3 Admit",
       "P4 Review"
     ],
-    "output": "waes_kds_review_queue_item",
+    "output": "wame_kds_review_queue_item",
     "admission": "limited_candidate_only"
   },
   "quality_targets": {
@@ -44,7 +44,7 @@
     "rollback_verified": true
   },
   "admission_decision": {
-    "waes_review_status": "ready_for_review",
+    "wame_review_status": "ready_for_review",
     "kds_admission": "limited_candidate_only",
     "rag_admission": "limited",
     "status_upgrade_allowed": false,

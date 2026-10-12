@@ -22,7 +22,7 @@ required:
   - write_allowed
   - unauthorized_write_blocked
   - marker_gate
-  - waes_decision
+  - wame_decision
   - answer_equivalence
   - token_before
   - token_after
@@ -44,7 +44,7 @@ properties:
     enum: [preview, non_business_only]
   tenant_id:
     enum: [project_group]
-  waes_decision:
+  wame_decision:
     enum: [pass, warn, block]
   marker_gate:
     enum: [pass, fail]

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-07058116B0
 title: XGD
 project: XGD
-related_projects: [GPC, WAES, KDS, Brain, XGD, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0

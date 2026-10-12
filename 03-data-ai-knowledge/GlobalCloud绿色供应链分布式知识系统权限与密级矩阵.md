@@ -91,7 +91,7 @@ DSR-L3 默认只允许记录编号、摘要、哈希、保管人、密级、原�
 | T5 LLM 分析 | `blocked` |
 | DSR-L3 原件 | `sensitive_metadata_only` 或 `blocked` |
 | committee_review_required | `blocked` 至裁决完成 |
-| waes_blocked | `blocked` |
+| wame_blocked | `blocked` |
 
 ## 7. 跨单位权限
 

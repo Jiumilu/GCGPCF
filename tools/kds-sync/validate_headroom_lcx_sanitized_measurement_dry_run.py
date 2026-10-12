@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -94,7 +94,7 @@ def main() -> int:
         "contains_authorization_header",
         "ledger_production_measurement_allowed",
         "ledger_measured_production_tokens",
-        "waes_harness_admitted",
+        "wame_harness_admitted",
         "authorized_precheck_gate",
     ]:
         require(boundary.get(key) is True, f"boundary check must be true: {key}")
@@ -102,7 +102,7 @@ def main() -> int:
     gates = evidence.get("gates", {})
     require(gates.get("sanitized_measurement_dry_run_gate") is True, "dry-run gate must be true")
     require(gates.get("check_only") is True, "check_only gate must be true")
-    require(gates.get("waes_harness_admitted") is True, "WAES/Harness admission must be true")
+    require(gates.get("wame_harness_admitted") is True, "WAME/Harness admission must be true")
     require(gates.get("authorized_precheck_gate") is True, "authorized precheck must be true")
     for key in [
         "production_token_measurement_allowed",
@@ -123,7 +123,7 @@ def main() -> int:
         "HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-20260622",
         "sanitized_measurement_dry_run_gate | true",
         "check_only | true",
-        "waes_harness_admitted | true",
+        "wame_harness_admitted | true",
         "authorized_precheck_gate | true",
         "saving_rate | not_calculated",
         "tokens_saved | not_calculated",

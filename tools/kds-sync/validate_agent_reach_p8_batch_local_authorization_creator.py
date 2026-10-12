@@ -56,7 +56,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "doc_id: GPCF-DOC-AGENT-REACH-P8-BATCH-LOCAL-AUTHORIZATION-CREATOR-20260622",
             "title: Agent-Reach P8 批次本地授权创建器证据 2026-06-22",
             "project: KDS",
-            "related_projects: [GPCF, KDS, WAES, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, WAME, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",

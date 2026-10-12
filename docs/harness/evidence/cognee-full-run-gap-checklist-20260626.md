@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2F6004
 title: Cognee 全量运行差距清单 2026-06-26
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

@@ -60,8 +60,8 @@ def validate_receipt(receipt: dict[str, Any], template: dict[str, Any]) -> dict[
         invalid_fields.append("sensitive_material_attestation")
     if "REQUIRED" in str(receipt.get("execution_operator", "")):
         invalid_fields.append("execution_operator")
-    if "REQUIRED" in str(receipt.get("waes_harness_receipt_decision", "")):
-        invalid_fields.append("waes_harness_receipt_decision")
+    if "REQUIRED" in str(receipt.get("wame_harness_receipt_decision", "")):
+        invalid_fields.append("wame_harness_receipt_decision")
     valid = not missing_fields and not invalid_false_fields and not invalid_fields
     return {
         "receipt_instance_valid": valid,
@@ -148,7 +148,7 @@ def write_outputs(intake: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-INTAKE-20260623",
             "title: Headroom LCX Real Measurement External Receipt Intake Evidence",
             "project: KDS",
-            "related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]",
+            "related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -202,7 +202,7 @@ def write_outputs(intake: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-EXTERNAL-RECEIPT-INTAKE-001",
             "title: Loop Round GPCF Headroom LCX Real Measurement External Receipt Intake 001",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",

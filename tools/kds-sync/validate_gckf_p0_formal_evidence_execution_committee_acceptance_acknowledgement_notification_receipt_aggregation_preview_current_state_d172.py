@@ -189,7 +189,7 @@ def main() -> None:
             "receipt_aggregation_owner",
             "committee_secretariat",
             "committee_representative",
-            "waes_gate_owner",
+            "wame_gate_owner",
             "harness_reviewer",
             "acl_owner",
         },

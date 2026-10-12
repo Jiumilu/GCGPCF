@@ -18,7 +18,7 @@ codegraph_impact_report:
   risk:
     level:
     reasons: []
-    waes_required:
+    wame_required:
     committee_required:
   evidence:
     status_json:

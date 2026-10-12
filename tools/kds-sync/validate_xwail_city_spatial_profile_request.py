@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE_JSON = ROOT / "docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.json"
 EVIDENCE_MD = ROOT / "docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-001.md"
-KEEP_FALSE_AFTER_ACCEPT = ["waes_authorized", "published", "integrated", "production_ready"]
+KEEP_FALSE_AFTER_ACCEPT = ["wame_authorized", "published", "integrated", "production_ready"]
 
 
 def require(condition: bool, message: str) -> None:
@@ -64,7 +64,7 @@ def main() -> int:
         "was_ontology_registry_pass",
         "xwail_mapping_candidate_exists",
         "no_xwail_repo_modification",
-        "no_waes_bypass",
+        "no_wame_bypass",
         "candidate_boundary_retained",
     ]:
         require(pre.get(key) is True, f"precondition must be true: {key}")
@@ -73,7 +73,7 @@ def main() -> int:
     forbidden = set(boundary.get("forbidden", []))
     for item in [
         "xwail_repo_direct_modification_outside_governance",
-        "waes_publication_claim",
+        "wame_publication_claim",
         "production_ready_claim",
         "customer_acceptance_claim",
     ]:
@@ -98,7 +98,7 @@ def main() -> int:
         "XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011",
         "request_package_generated | true",
         "submitted | true",
-        "waes_authorized | false",
+        "wame_authorized | false",
         "production_ready | false",
     ]
     if decision == "accepted":

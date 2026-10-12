@@ -28,7 +28,7 @@ ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 

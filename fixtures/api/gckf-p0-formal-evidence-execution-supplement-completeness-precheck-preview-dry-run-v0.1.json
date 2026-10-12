@@ -31,7 +31,7 @@
     "dryRunOnly": true,
     "precheckRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -50,7 +50,7 @@
       "candidate_reentry_eligibility_snapshot",
       "authority_and_recusal_boundary",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -113,7 +113,7 @@
       "candidate_reentry_eligibility_snapshot_present",
       "authority_and_recusal_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_precheck_preview_not_formal_completeness_check",
@@ -133,10 +133,10 @@
       "candidateReentryEligibilitySnapshotRef",
       "authorityAndRecusalBoundaryRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -164,7 +164,7 @@
       "missing_candidate_reentry_eligibility_snapshot_ref",
       "missing_authority_and_recusal_boundary_ref",
       "missing_freeze_retention_statement_ref",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_harness_no_write_guard_ref",
       "missing_required_precheck_role",
       "missing_no_write_attestation_ref",
@@ -203,7 +203,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_precheck_preview_to_formal_completeness_check",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [
@@ -239,7 +239,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "precheck_preview_converted_to_formal_completeness_check"
   ],
   "expectedSummary": {

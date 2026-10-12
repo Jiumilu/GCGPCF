@@ -85,7 +85,7 @@ def main() -> None:
     expected_signals = {
         "real_repair_owner_response",
         "signed_response_package",
-        "waes_review_note",
+        "wame_review_note",
         "human_confirmation_record",
     }
     require(len(items) == 4, "action_item_count_mismatch")

@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D189-001
 title: Loop Round GPCF-GCKF-P0-D189-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -54,7 +54,7 @@ superseded_by: []
 ### stop
 
 - stop_type: `authorization_boundary`
-- 停止证据：真实 repair owner response、签署响应包、WAES review note 与人工确认均未到达，当前不具备 response intake 条件。
+- 停止证据：真实 repair owner response、签署响应包、WAME review note 与人工确认均未到达，当前不具备 response intake 条件。
 - 状态上限：`review_ready_with_hold`。
 
 ### verify
@@ -74,7 +74,7 @@ superseded_by: []
 ### debug
 
 - D189 只证明 D185-D188 no-write chain 的连续性。
-- continuity guard 不能替代真实 response、WAES review note、人工确认或业务完成证明。
+- continuity guard 不能替代真实 response、WAME review note、人工确认或业务完成证明。
 - 2026-08-10 当前树扫描覆盖 289 个文件，未发现肯定写入、response intake、runtime writeback 或状态提升声明。
 
 ## 边界
@@ -89,4 +89,4 @@ superseded_by: []
 
 ## 下一轮
 
-若收到真实 repair owner response、签署响应包、WAES review note 与人工确认，应新增 arrival scan refresh；未收到前保持 `no_write_continuity_guard_with_hold`。
+若收到真实 repair owner response、签署响应包、WAME review note 与人工确认，应新增 arrival scan refresh；未收到前保持 `no_write_continuity_guard_with_hold`。

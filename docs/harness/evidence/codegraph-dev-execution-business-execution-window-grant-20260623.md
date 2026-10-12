@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-20260623
 title: CodeGraph 业务开发执行窗口授予证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 
 ## 结论
 
-GlobalCloud 项目群的 CodeGraph 业务开发执行窗口已授予。这个窗口只打开业务实现与任务级 CodeGraph 分析，不打开 production、commit、push、deploy、real KDS write 或 real WAES write。
+GlobalCloud 项目群的 CodeGraph 业务开发执行窗口已授予。这个窗口只打开业务实现与任务级 CodeGraph 分析，不打开 production、commit、push、deploy、real KDS write 或 real WAME write。
 status: business_execution_window_granted_project_group
 
 ## 授权状态
@@ -49,7 +49,7 @@ status: business_execution_window_granted_project_group
 | production_write_authorized | `false` |
 | external_api_write_authorized | `false` |
 | real_kds_write_authorized | `false` |
-| real_waes_write_authorized | `false` |
+| real_wame_write_authorized | `false` |
 | clean_reindex_authorized | `false` |
 
 ## 项目群范围
@@ -92,7 +92,7 @@ status: business_execution_window_granted_project_group
 - 本证据不表示 business implementation completed。
 - 本证据不表示 accepted、integrated 或 production_ready。
 - 本证据不表示 commit、push 或 deployment 已授权。
-- 本证据不表示 production_write、external_api_write、real KDS write 或 real WAES write 已开放。
+- 本证据不表示 production_write、external_api_write、real KDS write 或 real WAME write 已开放。
 - 本证据不表示 clean reindex 已授权。
 
 ## 下一轮

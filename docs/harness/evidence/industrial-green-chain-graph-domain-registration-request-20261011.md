@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011
 title: 工业绿链业务域（图谱只读投影）注册请求 2026-10-11
 project: KDS
-related_projects: [PVAOS, WAES, KDS, GPCF]
+related_projects: [PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文登记 `IGL-GRAPH-DOMAIN-REGISTRATION-REQUEST-20261011`：**向项目群 registry 申报新增域切片注册条目**——工业绿链业务域（图谱只读投影），与 F-015（GCWORLD 组织域只读切片）并列。
 
-本文只提交注册请求：不改 registry 本体、不声明受理/通过；不声明 WAES 授权或发布；不声明生产就绪或客户验收。
+本文只提交注册请求：不改 registry 本体、不声明受理/通过；不声明 WAME 授权或发布；不声明生产就绪或客户验收。
 
 ## 2. 请求内容
 
@@ -42,7 +42,7 @@ superseded_by: []
 | admission_required | 遵循（本请求即 admission 输入） |
 | must_bind_project_group_scope | 工业绿链（IGL）＋ KDS（F-016） |
 | must_map_to_registry_categories | 六类目映射见 §4 |
-| must_not_bypass_kds_waes_loop | 遵循；只读派生、零写回、`Trusted` 永不自行产生 |
+| must_not_bypass_kds_wame_loop | 遵循；只读派生、零写回、`Trusted` 永不自行产生 |
 
 ## 4. 六类目映射（首期）
 
@@ -68,7 +68,7 @@ superseded_by: []
 | submitted | true |
 | registry_entry_added | true（登记件见 §8） |
 | governance_reviewed | true |
-| waes_authorized | false |
+| wame_authorized | false |
 | accepted | true |
 | integrated | false |
 | production_ready | false |

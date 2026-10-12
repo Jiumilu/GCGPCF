@@ -22,7 +22,7 @@ ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 
@@ -46,7 +46,7 @@ REQUIRED_OKF_VALIDATORS = [
     "validate_was_event_contract",
     "validate_was_loop_record",
     "validate_was_rag_admission",
-    "validate_was_waes_gate_input",
+    "validate_was_wame_gate_input",
     "validate_was_pool_link",
     "validate_no_illegal_promotion",
     "validate_no_stale_bundle",
@@ -150,7 +150,7 @@ def main() -> int:
         "phase=P2-gate-execution-and-replay gate_groups_executed=9 gate_groups_passed=9 "
         "failed_gate_groups=0 was_okf_validator_count=12 was_okf_validator_passed=12 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

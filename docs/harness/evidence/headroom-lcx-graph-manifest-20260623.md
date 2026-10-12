@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-20260623
 title: Headroom LCX Graph Manifest Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -60,7 +60,7 @@ signed approval bundle 与 authorization boundary review 已作为受控支撑�
 
 ## 15 项目域
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 门禁
 
@@ -86,4 +86,4 @@ GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Stu
 
 ## 下一步
 
-只有在 WAES/Harness 另行裁决并补齐真实测量授权后，才可以把 production branch 从 blocked 推进到受控测量执行。
+只有在 WAME/Harness 另行裁决并补齐真实测量授权后，才可以把 production branch 从 blocked 推进到受控测量执行。

@@ -3,7 +3,7 @@
   "status": "business_domain_slice_registered_candidate",
   "date": "2026-10-11",
   "round_id": "GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-001",
-  "purpose": "按 WAS 项目群 registry future_project_policy（admission_required／scope binding／六类目映射／不绕 KDS-WAES loop），将工业绿链业务域（图谱只读投影，GreenChainGraphBusinessDomain）登记为域切片条目（候选），与 F-015（GCWORLD 组织域只读切片）并列。",
+  "purpose": "按 WAS 项目群 registry future_project_policy（admission_required／scope binding／六类目映射／不绕 KDS-WAME loop），将工业绿链业务域（图谱只读投影，GreenChainGraphBusinessDomain）登记为域切片条目（候选），与 F-015（GCWORLD 组织域只读切片）并列。",
   "registry_base": {
     "source_registry": "docs/harness/evidence/was-project-group-ontology-registry-20260621.json",
     "existing_entries_untouched": 43,
@@ -33,7 +33,7 @@
   "boundary": {
     "real_source_records": 0,
     "runtime_primary_key_ready": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "accepted": false,
     "integrated": false,
     "production_ready": false,

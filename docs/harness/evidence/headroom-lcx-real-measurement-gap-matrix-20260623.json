@@ -8,7 +8,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -59,10 +59,10 @@
       "blocking_evidence": "real_measurement_window_granted_but_open_remains_false"
     },
     {
-      "requirement_id": "real_measurement_waes_harness_decision",
+      "requirement_id": "real_measurement_wame_harness_decision",
       "needed_for": "open_production_branch_for_measurement",
       "current_status": "blocked",
-      "blocking_evidence": "waes_harness_admission_decision_is_precheck_only"
+      "blocking_evidence": "wame_harness_admission_decision_is_precheck_only"
     },
     {
       "requirement_id": "real_measurement_token_ledger",
@@ -101,7 +101,7 @@
     "real_measurement_gap_present": true,
     "production_branch_blocked": true,
     "rollback_plan_present": true,
-    "waes_precheck_only": true,
+    "wame_precheck_only": true,
     "production_token_measurement_allowed": false,
     "measured_production_tokens": false,
     "production_admission_gate": false

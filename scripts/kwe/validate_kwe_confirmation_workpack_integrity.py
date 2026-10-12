@@ -2,7 +2,7 @@
 """Validate KWE confirmation workpack reference integrity dry-run.
 
 This script uses local fixtures only. It does not create KWE work items, KDS
-facts, WAES gate results, business writebacks, ledger confirmations, or
+facts, WAME gate results, business writebacks, ledger confirmations, or
 external API calls.
 """
 
@@ -44,7 +44,7 @@ def main() -> int:
         "acceptOnlyWithMissingEvidence": 0,
         "writesKweWorkItem": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesQuotaTransfer": 0,
@@ -79,7 +79,7 @@ def main() -> int:
         if workpack["reviewerType"] == "committee" and not workpack.get("committeeTriggerReason"):
             counts["committeeMissingTriggerReason"] += 1
 
-        if workpack["reviewerType"] == "human" and workpack["waesGateStatus"] in {"blocked", "committee_required", "freeze_required"}:
+        if workpack["reviewerType"] == "human" and workpack["wameGateStatus"] in {"blocked", "committee_required", "freeze_required"}:
             if "allow_accept" in as_list(workpack["decisionOptions"]):
                 counts["humanAcceptsBlockedOrCommitteeRequired"] += 1
 
@@ -89,7 +89,7 @@ def main() -> int:
         if not workpack["noWrite"]:
             failures.append(f"{workpack['id']} noWrite must be true")
 
-        for key in ("poolRefs", "waesGateRefs"):
+        for key in ("poolRefs", "wameGateRefs"):
             if not as_list(workpack[key]):
                 failures.append(f"{workpack['id']} {key} must not be empty")
 
@@ -122,7 +122,7 @@ def main() -> int:
         "human_accepts_blocked_or_committee=0 "
         "committee_missing_trigger=0 "
         "accept_only_with_missing_evidence=0 "
-        "writes_kwe_work_item=0 writes_kds_fact=0 writes_waes_gate_result=0 "
+        "writes_kwe_work_item=0 writes_kds_fact=0 writes_wame_gate_result=0 "
         "writes_business_system=0 writes_revenue_or_score_confirmation=0 "
         "writes_quota_transfer=0 writes_bounty_settlement=0 "
         "writes_committee_decision_completion=0 writes_external_api=0"

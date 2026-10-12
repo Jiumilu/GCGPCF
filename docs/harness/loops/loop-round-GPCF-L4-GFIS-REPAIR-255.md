@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-552EF8C631
 title: GPCF-L4-GFIS-REPAIR-255
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
   - `blocked_remediation_actions=8`
   - `owner_action_required=3`
   - `gfis_action_required=2`
-  - `waes_action_required=1`
+  - `wame_action_required=1`
   - `kds_action_required=1`
   - `gpcf_control_action_required=1`
   - `remediation_complete=0`
@@ -58,7 +58,7 @@ superseded_by: []
   - `runtime_primary_key_ready=0`
   - `review_queue=0`
   - `runtime_intake=0`
-  - `waes_review=0`
+  - `wame_review=0`
   - `verified=0`
   - `runtime_sop_e2e=repair_required`
 
@@ -78,5 +78,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只同步 hard-stop remediation scan，不完成 remediation、不释放或重开 submission package、不派发、不确认、不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只同步 hard-stop remediation scan，不完成 remediation、不释放或重开 submission package、不派发、不确认、不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-246`，建立 submission package owner-response and release guard。

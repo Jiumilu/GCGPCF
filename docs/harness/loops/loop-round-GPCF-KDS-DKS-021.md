@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-00E5F89359
 title: Loop Round GPCF-KDS-DKS-021
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17  
 状态：controlled  
 主题：葛化、湖北磷材试点样本表与 MMC 参数基线落地包  
-项目群范围：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
+项目群范围：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC、XiaoC / 小即、XGD、XiaoG、MMC、GPCF。
 
 ## 1. 输入
 
@@ -37,7 +37,7 @@ superseded_by: []
 2. 定义葛化七类资料包样本表和三类 GFIS AI 输出评分记录样本位。
 3. 定义湖北磷材拓厂评估样本表、原料 / 行业 / 订单知识源目录和新工厂复制模板记录。
 4. 定义 MMC 权重、兑换系数、额度、冻结、扣减、可见范围和阈值参数基线。
-5. 继续保留候选态、WAES 门禁、人工确认、委员会裁决和用户治理权边界。
+5. 继续保留候选态、WAME 门禁、人工确认、委员会裁决和用户治理权边界。
 
 ## 3. 输出
 
@@ -73,5 +73,5 @@ superseded_by: []
 | 湖北磷材拓厂评估、知识源目录和复制模板 | done |
 | MMC 参数基线 | done |
 | KDS 11 池和增强账本挂接 | done |
-| WAES / 人工 / 委员会 / 用户治理边界 | done |
+| WAME / 人工 / 委员会 / 用户治理边界 | done |
 | 文档治理和 KDS 镜像 | done |

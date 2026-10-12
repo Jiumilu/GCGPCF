@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-004
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-004
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -100,7 +100,7 @@ Status ceiling: ui_evidence_candidate
 | G2 Design Tokens | partial | 本轮不处理令牌统一 | 后续补项目群令牌映射 |
 | G3 Component Consistency | partial | `AppSidebar` 与 `PageSidebarNav` 导航拓扑不对称 | 统一聊天与工作台入口体系 |
 | G4 Evidence And Governance | partial | 本轮仅复核导航，不覆盖业务证据链 | 需补任务数据场景 |
-| G5 AI Fact Separation | partial | 聊天主界面与工作台入口边界未统一 | 需建立 WAES 母框架入口规范 |
+| G5 AI Fact Separation | partial | 聊天主界面与工作台入口边界未统一 | 需建立 WAME 母框架入口规范 |
 | G6 Accessibility | partial | 本轮未补完整键盘导航 | 后续补键盘路径 |
 | G7 Responsive And Text Robustness | pass | 第 003 轮响应式证据仍有效 | 后续补长文本场景 |
 | G8 Runtime Verification | pass | 应用内 `Kanban -> chat` 导航已验证，`reload` 观察被纠偏为直跳伪缺陷 | 继续复验双向入口 |

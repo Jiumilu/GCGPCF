@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-76ADC59141
 title: Loop Round GPCF-KDS-DKS-024
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17  
 状态：controlled  
 主题：葛化、湖北磷材真实脱敏资料接收任务包与首批人工审核演练  
-项目群范围：GFIS、GPC、WAES、KDS、MMC、GPCF。
+项目群范围：GFIS、GPC、WAME、KDS、MMC、GPCF。
 
 ## 1. 输入
 
@@ -38,7 +38,7 @@ superseded_by: []
 3. 定义葛化预运营期订单接收任务 `RTP-GH-ORD-202606-0001`。
 4. 定义湖北磷材拓厂来源接收任务 `RTP-HBLC-FEA-202606-0001`。
 5. 建立两条 `synthetic_redacted_rehearsal` 人工审核演练记录。
-6. 输出 WAESRuleRecord、HumanReviewDecision 和 CommitteeFilingRecord 演练样例。
+6. 输出 WAMERuleRecord、HumanReviewDecision 和 CommitteeFilingRecord 演练样例。
 7. 明确转正式接收条件和本轮不处理范围。
 
 ## 3. 输出
@@ -76,6 +76,6 @@ superseded_by: []
 | 湖北磷材拓厂来源接收任务 | done |
 | 接收任务包字段与状态机 | done |
 | 首批人工审核演练 | done |
-| WAES / 人工审核 / 委员会样例记录 | done |
+| WAME / 人工审核 / 委员会样例记录 | done |
 | 转正式接收条件和不处理范围 | done |
 | 文档治理和 KDS 镜像 | done |

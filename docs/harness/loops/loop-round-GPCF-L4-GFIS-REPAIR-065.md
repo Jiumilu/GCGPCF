@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AC3918C014
 title: GPCF-L4-GFIS-REPAIR-065 GFIS 辽宁远航 submission validator
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -82,4 +82,4 @@ git diff --check -- .: pass
 
 ## 下一步
 
-把 GFIS submission validator 接入完整 runtime SOP E2E validator，或接收首个脱敏原始凭证索引后校验结构。仍需保持 GFIS/GPCF `repair_required`，直到 5 类 live proof、WAES/KDS/GPC/POD 回执和运行层 SOP Master 均通过。
+把 GFIS submission validator 接入完整 runtime SOP E2E validator，或接收首个脱敏原始凭证索引后校验结构。仍需保持 GFIS/GPCF `repair_required`，直到 5 类 live proof、WAME/KDS/GPC/POD 回执和运行层 SOP Master 均通过。

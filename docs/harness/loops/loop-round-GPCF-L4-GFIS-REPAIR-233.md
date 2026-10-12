@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BEA6755E09
 title: GPCF-L4-GFIS-REPAIR-233
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -80,7 +80,7 @@ runtime_primary_key_ready=0
 runtime_primary_key_missing=1
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -94,7 +94,7 @@ runtime_sop_e2e=repair_required
 
 ## 非声明
 
-本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## 真实性计数
 

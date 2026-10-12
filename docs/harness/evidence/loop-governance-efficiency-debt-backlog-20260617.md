@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FF3BC7037F
 title: Loop 治理效率债务积压证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -98,5 +98,5 @@ Shell 记录保持受控例外，除非另行授权历史迁移计划。
 ## 非声明事项
 
 - 本积压记录不证明 GFIS runtime SOP E2E 已通过。
-- 本积压记录不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本积压记录不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
 - 本积压记录不授权生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、commit 或 push。

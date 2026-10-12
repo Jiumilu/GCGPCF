@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622
 title: Headroom LCX L3.5 脱敏答案等价样例门禁
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

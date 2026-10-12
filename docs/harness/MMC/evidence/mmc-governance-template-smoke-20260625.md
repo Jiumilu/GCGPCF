@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-MMC-GOVERNANCE-TEMPLATE-SMOKE-20260625
 title: MMC 治理模板 Smoke 证据 2026-06-25
 project: MMC
-related_projects: [GPC, WAES, KDS, Brain, MMC, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, Brain, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -61,7 +61,7 @@ production_ready = false
 | 真实进度 | `candidate`，MMC 实施方案和 AGENTS 已存在，可进入专项任务包 |
 | 真实研发 | `not_verified_this_round`，未修改 MMC 源码 |
 | 真实运行 | `not_verified_this_round`，未执行 MMC runtime pytest、contract test 或 Gateway health check |
-| 真实集成 | `not_verified_this_round`，未验证 MMC 与 GPCF/WAES/KDS/Brain/Studio 真实接口 |
+| 真实集成 | `not_verified_this_round`，未验证 MMC 与 GPCF/WAME/KDS/Brain/Studio 真实接口 |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 
@@ -78,7 +78,7 @@ production_ready = false
 
 - 不声明 MMC runtime 已通过；
 - 不声明 MMC Gateway、Registry、PermissionGuard 已真实运行；
-- 不声明 MMC 已与 WAES/GPCF/KDS/Brain/Studio 完成集成；
+- 不声明 MMC 已与 WAME/GPCF/KDS/Brain/Studio 完成集成；
 - 不声明下游项目已接入 MMC 模板；
 - 不声明客户交付完成；
 - 不声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。

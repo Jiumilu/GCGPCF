@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-77DCFC8152
 title: GPCF-L4-GFIS-REAL-SYNC-003
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,7 +50,7 @@ runtime_primary_key_created=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 real_business_lane=repair_required
 business_verification_pending=true
@@ -62,8 +62,8 @@ GFIS real lane 仍为 `repair_required`，且 GFIS runtime SOP 总 validator 仍
 
 - 未创建真实 source-of-record。
 - 未创建真实运行层主键。
-- 未创建 review queue、runtime intake、WAES review 或 verified artifact。
-- 未写入真实 KDS/WAES。
+- 未创建 review queue、runtime intake、WAME review 或 verified artifact。
+- 未写入真实 KDS/WAME。
 - 未执行生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、提交或推送。
 - 未升级 accepted/integrated。
 

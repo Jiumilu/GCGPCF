@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-436DD56BCE
 title: GC-Knowledge Fabric P0-D23 Harness evidence 候选记录 dry-run LOOP 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

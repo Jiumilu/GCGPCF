@@ -24,9 +24,9 @@
       "reasonRefs": ["reason-team-sla-breach-review-preview"],
       "breachNoteRefs": ["note-breach-review-preview-only"],
       "nextStepCandidateRefs": ["next-step-team-breach-review"],
-      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
-      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWaesGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWameGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "breachReviewPreviewId": "gfis-sla-breach-review-project-pkc-001",
@@ -52,9 +52,9 @@
       "reasonRefs": ["reason-project-sla-breach-review-gap"],
       "breachNoteRefs": ["note-project-breach-review-no-write"],
       "nextStepCandidateRefs": ["next-step-project-breach-review"],
-      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
-      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWaesGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWameGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "breachReviewPreviewId": "gfis-sla-breach-review-governance-gfis-001",
@@ -80,9 +80,9 @@
       "reasonRefs": ["reason-governance-sla-breach-review-boundary"],
       "breachNoteRefs": ["note-governance-breach-review-no-evidence"],
       "nextStepCandidateRefs": ["next-step-governance-breach-review"],
-      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
-      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWaesGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWameGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "breachReviewPreviewId": "gfis-sla-breach-review-external-gfis-001",
@@ -108,9 +108,9 @@
       "reasonRefs": ["reason-external-sla-breach-review-blocked"],
       "breachNoteRefs": ["note-external-breach-review-blocked"],
       "nextStepCandidateRefs": ["next-step-external-breach-review"],
-      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
-      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWaesGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWameGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "breachReviewPreviewId": "gfis-sla-breach-review-committee-brain-001",
@@ -136,9 +136,9 @@
       "reasonRefs": ["reason-committee-sla-breach-review"],
       "breachNoteRefs": ["note-committee-breach-review-no-case"],
       "nextStepCandidateRefs": ["next-step-committee-breach-review"],
-      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
-      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWaesGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWameGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     },
     {
       "breachReviewPreviewId": "gfis-sla-breach-review-freeze-gfis-001",
@@ -164,9 +164,9 @@
       "reasonRefs": ["reason-freeze-sla-breach-review"],
       "breachNoteRefs": ["note-freeze-breach-review-no-freeze"],
       "nextStepCandidateRefs": ["next-step-freeze-breach-review"],
-      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_waes_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
-      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWaesGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
-      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWaesGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
+      "blockedActions": ["create_breach_record", "create_dispute", "create_committee_case", "create_freeze_request", "create_reminder", "create_approval_request", "create_approval_decision", "create_harness_evidence", "create_wame_gate_result", "create_kwe_work_item", "persist_evidence", "approve_business_write", "promote_lifecycle", "complete_committee_decision"],
+      "createsBreachRecord": false, "createsDispute": false, "createsCommitteeCase": false, "createsFreezeRequest": false, "createsReminder": false, "createsApprovalRequest": false, "createsApprovalDecision": false, "createsHarnessEvidence": false, "createsWameGateResult": false, "createsKweWorkItem": false, "persistsEvidence": false, "approvesBusinessWrite": false, "promotesLifecycle": false, "completesCommitteeDecision": false,
+      "noWrite": {"writesGfis": 0, "writesGpc": 0, "writesErp": 0, "writesMes": 0, "writesBreachRecord": 0, "writesDispute": 0, "writesCommitteeCase": 0, "writesFreezeRequest": 0, "writesReminder": 0, "writesApprovalRequest": 0, "writesApprovalDecision": 0, "writesWameGateResult": 0, "writesKweWorkItem": 0, "writesHarnessEvidence": 0, "writesKdsLifecycle": 0, "writesKdsFact": 0, "writesKdsAcceptedFact": 0, "writesExternalApi": 0}
     }
   ],
   "expected": {
@@ -187,7 +187,7 @@
     "createsApprovalRequests": 0,
     "createsApprovalDecisions": 0,
     "createsHarnessEvidence": 0,
-    "createsWaesGateResults": 0,
+    "createsWameGateResults": 0,
     "createsKweWorkItems": 0,
     "persistsEvidence": 0,
     "approvesBusinessWrite": 0,
@@ -204,7 +204,7 @@
     "writesReminder": 0,
     "writesApprovalRequest": 0,
     "writesApprovalDecision": 0,
-    "writesWaesGateResult": 0,
+    "writesWameGateResult": 0,
     "writesKweWorkItem": 0,
     "writesHarnessEvidence": 0,
     "writesKdsLifecycle": 0,

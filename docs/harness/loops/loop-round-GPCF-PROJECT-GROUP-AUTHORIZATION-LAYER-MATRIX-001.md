@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001
 title: GPCF PROJECT GROUP AUTHORIZATION LAYER MATRIX 001
 project: GPCF
-related_projects: [GPC, WAES, PKC, GPCF]
+related_projects: [GPC, WAME, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

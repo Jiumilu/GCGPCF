@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-09D622EB71
 title: GPCF-L4-GFIS-REPAIR-158
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 doc_id: GPCF-DOC-LOOP-GFIS-REPAIR-158
 title: GPCF-L4-GFIS-REPAIR-158
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: loop-governance
 status: controlled
 version: v1.0
@@ -68,16 +68,16 @@ superseded_by: []
 ## 输出
 
 ```text
-gfis_kds_sop_stage_coverage_matrix=pass sop_stages=12 kds_controlled_stages=12 live_proof_stages=0 missing_live_business_inputs=5 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=kds_sop_stage_coverage_ready_live_proof_missing runtime_sop_e2e=repair_required
-runtime_kds_sop_stage_coverage_matrix=kds_sop_stage_coverage_ready_live_proof_missing:sop_stages=12:kds_controlled_stages=12:live_proof_stages=0:missing_live_business_inputs=5:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+gfis_kds_sop_stage_coverage_matrix=pass sop_stages=12 kds_controlled_stages=12 live_proof_stages=0 missing_live_business_inputs=5 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=kds_sop_stage_coverage_ready_live_proof_missing runtime_sop_e2e=repair_required
+runtime_kds_sop_stage_coverage_matrix=kds_sop_stage_coverage_ready_live_proof_missing:sop_stages=12:kds_controlled_stages=12:live_proof_stages=0:missing_live_business_inputs=5:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 ```
 
 ## 边界
 
-- 未写真实 KDS、WAES、生产系统或外部 API。
+- 未写真实 KDS、WAME、生产系统或外部 API。
 - 未执行 `bench migrate`、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更。
-- 未创建 review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated。
-- KDS 受控引用只作为检索和采集输入，不替代客户订单、签样、原料批次、生产记录、POD、WAES confirmation 或 KDS write receipt。
+- 未创建 review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated。
+- KDS 受控引用只作为检索和采集输入，不替代客户订单、签样、原料批次、生产记录、POD、WAME confirmation 或 KDS write receipt。
 
 ## 本轮真实计数
 

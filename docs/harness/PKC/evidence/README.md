@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5A01A3E358
 title: evidence
 project: PKC
-related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

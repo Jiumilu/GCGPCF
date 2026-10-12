@@ -82,7 +82,7 @@ def main() -> int:
     for phrase in [
         "GlobalCloud项目群界面工程整体实施方案.md",
         "GlobalCloud项目群UI设计开发治理与评估统一规范.md",
-        "WAES baseline reuse",
+        "WAME baseline reuse",
         "Tool route",
         "Design options",
     ]:

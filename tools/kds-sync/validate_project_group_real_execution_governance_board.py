@@ -18,7 +18,7 @@ REQUIRED_PROJECTS = [
     "Brain",
     "WAS",
     "XiaoC",
-    "WAES",
+    "WAME",
     "GPC",
     "Studio",
     "GPCF",
@@ -35,14 +35,14 @@ REQUIRED_PROJECTS = [
 
 REQUIRED_TASKS = [
     "GFIS-REAL-SOR-001",
-    "WAES-LINT-RUNTIME-001",
+    "WAME-LINT-RUNTIME-001",
     "KDS-RAG-EXPORT-001",
     "AAAS-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
     "XWAIL-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
     "SOP-LOOP-GATE-DELEGATE-REVIEW-REPLAY-20260627-001",
     "XWAIL-MIN-VALIDATOR-001",
     "AAAS-SERVICE-RUNTIME-001",
-    "AAAS-WAES-BINDING-PRECHECK-001",
+    "AAAS-WAME-BINDING-PRECHECK-001",
     "PVAOS-RELEASE-GATE-001",
     "PVAOS-RELEASE-REVIEW-001",
     "GPC-EVIDENCE-BROWSER-001",
@@ -102,7 +102,7 @@ REQUIRED_FIELDS = [
 ]
 
 REQUIRED_DEPENDENCIES = [
-    "WAES -> XWAIL -> AaaS",
+    "WAME -> XWAIL -> AaaS",
     "KDS -> Brain",
     "GFIS/GPC/PVAOS -> SCaaS",
     "WAS -> Ontology -> XWAIL",
@@ -155,18 +155,18 @@ REQUIRED_FULL_BASELINE_TOKENS = {
     ],
     "GlobalCloud XWAIL": [
         "ready_for_review / local_dev_boundary / integration_precheck_candidate / not_accepted",
-        "XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001",
+        "XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001",
         "不声明完整工具链闭环",
     ],
     "GlobalCloud AaaS / AAAS": [
         "ready_for_review / local_dev_boundary / integration_precheck_candidate / not_accepted",
         "AAAS-SERVICE-RUNTIME-001",
-        "AAAS-WAES-BINDING-PRECHECK-001",
+        "AAAS-WAME-BINDING-PRECHECK-001",
         "不声明真实计费",
     ],
-    "GlobalCloud WAES": [
+    "GlobalCloud WAME": [
         "repair_required / authorization_required",
-        "WAES-LINT-RUNTIME-001",
+        "WAME-LINT-RUNTIME-001",
         "不声明治理运行闭环",
     ],
     "GlobalCloud GFIS": [
@@ -240,16 +240,16 @@ REQUIRED_TASK_DETAIL_TOKENS = {
     "GFIS-REAL-SOR-001": [
         "validate_gfis_was_source_record_submission_precheck.py",
         "gfis-real-source-record-intake-*",
-        "WAES review gate",
+        "WAME review gate",
         "保持 `repair_required`",
         "是，需要订单 owner",
     ],
-    "WAES-LINT-RUNTIME-001": [
+    "WAME-LINT-RUNTIME-001": [
         "npm run check",
-        "waes-lint-runtime-repair-*",
-        "WAES quality gate",
+        "wame-lint-runtime-repair-*",
+        "WAME quality gate",
         "回滚 lint 修复相关文件",
-        "不声明 WAES 治理运行闭环完成",
+        "不声明 WAME 治理运行闭环完成",
     ],
     "KDS-RAG-EXPORT-001": [
         "validate_rag_export.py",
@@ -277,15 +277,15 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "回滚新增 `scripts/`、`schemas-json/`、`service-packages/`",
         "不声明客户可订阅",
     ],
-    "AAAS-WAES-BINDING-PRECHECK-001": [
-        "validate_aaas_waes_binding_precheck.py",
-        "aaas-waes-binding-precheck-20260625.md",
-        "aaas_waes_binding_precheck = controlled",
+    "AAAS-WAME-BINDING-PRECHECK-001": [
+        "validate_aaas_wame_binding_precheck.py",
+        "aaas-wame-binding-precheck-20260625.md",
+        "aaas_wame_binding_precheck = controlled",
         "integration_precheck_candidate",
-        "WAES status = Draft",
+        "WAME status = Draft",
         "candidate_only_not_published",
         "realCustomerSubscription = false",
-        "不声明 WAES 发布",
+        "不声明 WAME 发布",
         "不声明 AaaS 上架",
     ],
     "PVAOS-RELEASE-GATE-001": [
@@ -573,7 +573,7 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "8/8 flows checked",
         "Ontology `0.1.0`",
         "XWAIL `ontologyRef`",
-        "不声明 WAES 发布",
+        "不声明 WAME 发布",
         "不声明 AaaS 绑定",
     ],
     "XIAOC-MODEL-ROUTING-DRYRUN-001": [
@@ -638,11 +638,11 @@ REQUIRED_TASK_DETAIL_TOKENS = {
         "task_pack_ready / authorization_pack_ready",
         "readonly_queries = 3",
         "pkc_notification_candidates = 1",
-        "waes_audit_mocks = 2",
+        "wame_audit_mocks = 2",
         "network_call_executed = false",
         "production_write_executed = false",
         "不声明 live GFIS/GPC API 已验证",
-        "不声明真实 WAES 审计写入完成",
+        "不声明真实 WAME 审计写入完成",
     ],
     "SOP-SCENARIO-OWNER-REVIEW-001": [
         "validate_sop_scenario_owner_review.py",
@@ -727,7 +727,7 @@ GFIS_ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 

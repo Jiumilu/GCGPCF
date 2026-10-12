@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-31365B7D25
 title: Loop Round - CodeGraph 开发执行授权等待态
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

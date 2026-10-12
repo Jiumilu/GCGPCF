@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4F3B293183
 title: GPCF-L4-GFIS-REPAIR-169
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-在 GFIS 真实项目仓已完成 `GFIS-RUNTIME-SOP-E2E-162` 后，把 owner response submission package release attempt hard-stop audit 回写到 GPCF 总控。目标是确保项目群层面知道：62 个预期提交包的放行尝试全部被 hard-stop，不得被误判为 release、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated。
+在 GFIS 真实项目仓已完成 `GFIS-RUNTIME-SOP-E2E-162` 后，把 owner response submission package release attempt hard-stop audit 回写到 GPCF 总控。目标是确保项目群层面知道：62 个预期提交包的放行尝试全部被 hard-stop，不得被误判为 release、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated。
 
 ## 输入
 

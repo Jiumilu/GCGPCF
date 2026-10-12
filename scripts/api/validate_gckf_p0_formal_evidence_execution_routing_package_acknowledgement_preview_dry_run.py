@@ -100,7 +100,7 @@ def main() -> int:
 
     if len(set(acknowledgement.get("acknowledgementRoles", []))) != expected["acknowledgementRoleCount"]:
         failures.append("acknowledgementRoleCount mismatch")
-    if not {"routing_package_owner", "routing_package_acknowledgement_owner", "waes_gate_owner"}.issubset(
+    if not {"routing_package_owner", "routing_package_acknowledgement_owner", "wame_gate_owner"}.issubset(
         set(acknowledgement.get("acknowledgementRoles", []))
     ):
         failures.append("acknowledgementRoles must include required D66 owners")

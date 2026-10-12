@@ -24,7 +24,7 @@
         },
         {
           "method": "POST",
-          "path": "/api/v2/waes/rag-admission/check"
+          "path": "/api/v2/wame/rag-admission/check"
         }
       ]
     },

@@ -47,5 +47,5 @@
     "passedRepos": 13,
     "failedRepos": 0
   },
-  "nextRoundCandidate": "若收到真实 repair owner response、签署响应包、WAES review note 与人工确认，进入 response intake precheck；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。"
+  "nextRoundCandidate": "若收到真实 repair owner response、签署响应包、WAME review note 与人工确认，进入 response intake precheck；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。"
 }

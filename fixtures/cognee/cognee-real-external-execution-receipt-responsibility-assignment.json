@@ -19,10 +19,10 @@
       "status": "assigned_pending_real_receipt"
     },
     {
-      "role_id": "waes_reviewer",
-      "owner": "WAES",
+      "role_id": "wame_reviewer",
+      "owner": "WAME",
       "responsibility": "review_receipt_boundary_and_reject_sample_receipts",
-      "required_output": "waes_receipt_review_evidence",
+      "required_output": "wame_receipt_review_evidence",
       "status": "assigned_pending_real_receipt"
     },
     {

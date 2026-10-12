@@ -78,48 +78,48 @@
       ]
     },
     {
-      "id": "gfis-assistant-waes-guidance-packet-boundary",
+      "id": "gfis-assistant-wame-guidance-packet-boundary",
       "requiredOkf": [
-        "okf/gfis-assistant-waes-guidance-packet-policy.yaml",
-        "okf/waes-precheck-bundle-read-model-policy.yaml",
+        "okf/gfis-assistant-wame-guidance-packet-policy.yaml",
+        "okf/wame-precheck-bundle-read-model-policy.yaml",
         "okf/gfis-writeback-approval-preflight-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
-        "packages/shared/src/knowledge/gfis-assistant-waes-guidance-packet.ts",
-        "packages/shared/src/knowledge/waes-precheck-bundle-read-model.ts",
+        "packages/shared/src/knowledge/gfis-assistant-wame-guidance-packet.ts",
+        "packages/shared/src/knowledge/wame-precheck-bundle-read-model.ts",
         "packages/shared/src/knowledge/gfis-writeback-approval-preflight.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
-        "scripts/gfis/validate_gfis_assistant_waes_guidance_packet.py"
+        "scripts/gfis/validate_gfis_assistant_wame_guidance_packet.py"
       ],
       "requiredFixtures": [
-        "fixtures/gfis/waes-guidance-packet-dry-run.json"
+        "fixtures/gfis/wame-guidance-packet-dry-run.json"
       ]
     },
     {
       "id": "gfis-assistant-repair-prompt-checklist-boundary",
       "requiredOkf": [
         "okf/gfis-assistant-repair-prompt-checklist-policy.yaml",
-        "okf/gfis-assistant-waes-guidance-packet-policy.yaml",
+        "okf/gfis-assistant-wame-guidance-packet-policy.yaml",
         "okf/gfis-document-acceptance-checklist-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-prompt-checklist.ts",
-        "packages/shared/src/knowledge/gfis-assistant-waes-guidance-packet.ts",
+        "packages/shared/src/knowledge/gfis-assistant-wame-guidance-packet.ts",
         "packages/shared/src/knowledge/gfis-document-acceptance-checklist.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -134,18 +134,18 @@
       "requiredOkf": [
         "okf/gfis-assistant-repair-submission-intake-policy.yaml",
         "okf/gfis-assistant-repair-prompt-checklist-policy.yaml",
-        "okf/gfis-assistant-waes-guidance-packet-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/gfis-assistant-wame-guidance-packet-policy.yaml",
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-submission-intake.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-prompt-checklist.ts",
-        "packages/shared/src/knowledge/gfis-assistant-waes-guidance-packet.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/gfis-assistant-wame-guidance-packet.ts",
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -161,17 +161,17 @@
         "okf/gfis-assistant-repair-intake-review-packet-policy.yaml",
         "okf/gfis-assistant-repair-submission-intake-policy.yaml",
         "okf/gfis-assistant-repair-prompt-checklist-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-intake-review-packet.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-submission-intake.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-prompt-checklist.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -187,17 +187,17 @@
         "okf/gfis-assistant-repair-review-decision-draft-policy.yaml",
         "okf/gfis-assistant-repair-intake-review-packet-policy.yaml",
         "okf/gfis-assistant-repair-submission-intake-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-review-decision-draft.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-intake-review-packet.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-submission-intake.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -213,17 +213,17 @@
         "okf/gfis-assistant-repair-draft-handoff-packet-policy.yaml",
         "okf/gfis-assistant-repair-review-decision-draft-policy.yaml",
         "okf/gfis-assistant-repair-intake-review-packet-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-draft-handoff-packet.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-review-decision-draft.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-intake-review-packet.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -239,17 +239,17 @@
         "okf/gfis-assistant-repair-handoff-review-admission-policy.yaml",
         "okf/gfis-assistant-repair-draft-handoff-packet-policy.yaml",
         "okf/gfis-assistant-repair-review-decision-draft-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-handoff-review-admission.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-draft-handoff-packet.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-review-decision-draft.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -291,13 +291,13 @@
         "okf/gfis-assistant-repair-read-model-action-guard-policy.yaml",
         "okf/gfis-assistant-repair-admission-read-model-policy.yaml",
         "okf/gfis-assistant-repair-handoff-review-admission-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-read-model-action-guard.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-admission-read-model.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-handoff-review-admission.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/brain/contracts.ts",
@@ -317,13 +317,13 @@
         "okf/gfis-assistant-repair-action-guard-event-preview-policy.yaml",
         "okf/gfis-assistant-repair-read-model-action-guard-policy.yaml",
         "okf/gfis-assistant-repair-admission-read-model-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-action-guard-event-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-read-model-action-guard.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-admission-read-model.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/brain/contracts.ts",
@@ -811,17 +811,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -837,17 +837,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -863,17 +863,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -889,17 +889,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -915,17 +915,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -941,17 +941,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -967,17 +967,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -993,17 +993,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1019,17 +1019,17 @@
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1045,17 +1045,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-preview-policy.yaml",
         "okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1071,17 +1071,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1097,17 +1097,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1123,17 +1123,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1149,17 +1149,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1175,17 +1175,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1201,17 +1201,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1227,17 +1227,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1253,17 +1253,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1279,17 +1279,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1305,17 +1305,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1331,17 +1331,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1357,17 +1357,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1383,17 +1383,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1409,17 +1409,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1435,17 +1435,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1461,17 +1461,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-sla-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-acknowledgement-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1487,17 +1487,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-resolution-option-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-resolution-option-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1513,17 +1513,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-approval-packet-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-resolution-option-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-approval-packet-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-resolution-option-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1539,17 +1539,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-routing-queue-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-approval-packet-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-routing-queue-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-approval-packet-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1565,17 +1565,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-notification-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-routing-queue-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-notification-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-routing-queue-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1591,17 +1591,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-notification-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-notification-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1617,17 +1617,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1643,17 +1643,17 @@
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-preview-policy.yaml",
         "okf/committee-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-sla-breach-notification-ack-escalation-preview.ts",
         "packages/shared/src/knowledge/committee-decision.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -1757,13 +1757,13 @@
       "id": "gfis-document-acceptance-checklist-batch-boundary",
       "requiredOkf": [
         "okf/gfis-document-acceptance-checklist-policy.yaml",
-        "okf/waes-gate-policy.yaml",
+        "okf/wame-gate-policy.yaml",
         "okf/rag-admission-policy.yaml",
         "okf/sensitive-metadata-storage-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-document-acceptance-checklist.ts",
-        "packages/shared/src/knowledge/waes-gate.ts",
+        "packages/shared/src/knowledge/wame-gate.ts",
         "packages/shared/src/knowledge/rag-admission.ts",
         "packages/shared/src/knowledge/sensitive-metadata-storage.ts"
       ],
@@ -1805,27 +1805,27 @@
       ]
     },
     {
-      "id": "waes-gates-and-rag-admission",
+      "id": "wame-gates-and-rag-admission",
       "requiredOkf": [
-        "okf/waes-gate-policy.yaml",
+        "okf/wame-gate-policy.yaml",
         "okf/rag-admission-policy.yaml",
         "okf/trust-policy.yaml"
       ],
       "requiredTypes": [
-        "packages/shared/src/knowledge/waes-gate.ts",
+        "packages/shared/src/knowledge/wame-gate.ts",
         "packages/shared/src/knowledge/rag-admission.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
-        "packages/api/src/waes/routes.ts"
+        "packages/api/src/wame/contracts.ts",
+        "packages/api/src/wame/routes.ts"
       ],
       "requiredValidators": [
-        "scripts/waes/validate_waes_minimum_gates.py",
-        "scripts/waes/validate_waes_endpoint_no_write_smoke.py"
+        "scripts/wame/validate_wame_minimum_gates.py",
+        "scripts/wame/validate_wame_endpoint_no_write_smoke.py"
       ],
       "requiredFixtures": [
-        "fixtures/waes/minimum-gates.json",
-        "fixtures/waes/endpoint-no-write-smoke.json"
+        "fixtures/wame/minimum-gates.json",
+        "fixtures/wame/endpoint-no-write-smoke.json"
       ]
     },
     {
@@ -1912,12 +1912,12 @@
       "requiredOkf": [
         "okf/kwe-confirmation-workpack-policy.yaml",
         "okf/flow-policy.yaml",
-        "okf/waes-gate-policy.yaml",
+        "okf/wame-gate-policy.yaml",
         "okf/harness-evidence-integrity-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/kwe-confirmation-workpack.ts",
-        "packages/shared/src/knowledge/waes-gate.ts",
+        "packages/shared/src/knowledge/wame-gate.ts",
         "packages/shared/src/knowledge/evidence.ts",
         "packages/shared/src/knowledge/object.ts"
       ],
@@ -1937,13 +1937,13 @@
       "requiredOkf": [
         "okf/kwe-promotion-request-policy.yaml",
         "okf/status-machine-policy.yaml",
-        "okf/waes-gate-io-policy.yaml",
+        "okf/wame-gate-io-policy.yaml",
         "okf/harness-evidence-integrity-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/kwe-promotion-request.ts",
         "packages/shared/src/knowledge/status-machine.ts",
-        "packages/shared/src/knowledge/waes-gate-io.ts",
+        "packages/shared/src/knowledge/wame-gate-io.ts",
         "packages/shared/src/knowledge/harness-evidence-integrity.ts"
       ],
       "requiredApi": [
@@ -2017,7 +2017,7 @@
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/loop.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/brain/contracts.ts",
@@ -2154,7 +2154,7 @@
       ],
       "requiredApi": [
         "packages/api/src/kds/v2/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2179,7 +2179,7 @@
       ],
       "requiredApi": [
         "packages/api/src/kds/v2/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts",
         "packages/api/src/governance/contracts.ts"
       ],
@@ -2191,79 +2191,79 @@
       ]
     },
     {
-      "id": "waes-precheck-bundle-read-model-boundary",
+      "id": "wame-precheck-bundle-read-model-boundary",
       "requiredOkf": [
-        "okf/waes-precheck-bundle-read-model-policy.yaml",
-        "okf/waes-action-gate-precheck-policy.yaml",
-        "okf/waes-gate-io-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-precheck-bundle-read-model-policy.yaml",
+        "okf/wame-action-gate-precheck-policy.yaml",
+        "okf/wame-gate-io-policy.yaml",
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
-        "packages/shared/src/knowledge/waes-precheck-bundle-read-model.ts",
-        "packages/shared/src/knowledge/waes-action-gate-precheck.ts",
-        "packages/shared/src/knowledge/waes-gate-io.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-precheck-bundle-read-model.ts",
+        "packages/shared/src/knowledge/wame-action-gate-precheck.ts",
+        "packages/shared/src/knowledge/wame-gate-io.ts",
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts",
         "packages/api/src/gfis/contracts.ts",
         "packages/api/src/brain/contracts.ts"
       ],
       "requiredValidators": [
-        "scripts/waes/validate_waes_precheck_bundle_read_model.py"
+        "scripts/wame/validate_wame_precheck_bundle_read_model.py"
       ],
       "requiredFixtures": [
-        "fixtures/waes/precheck-bundle-read-model-dry-run.json"
+        "fixtures/wame/precheck-bundle-read-model-dry-run.json"
       ]
     },
     {
-      "id": "waes-action-gate-precheck-boundary",
+      "id": "wame-action-gate-precheck-boundary",
       "requiredOkf": [
-        "okf/waes-action-gate-precheck-policy.yaml",
+        "okf/wame-action-gate-precheck-policy.yaml",
         "okf/kwe-action-validation-workpack-policy.yaml",
-        "okf/waes-gate-io-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-io-policy.yaml",
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
-        "packages/shared/src/knowledge/waes-action-gate-precheck.ts",
+        "packages/shared/src/knowledge/wame-action-gate-precheck.ts",
         "packages/shared/src/knowledge/kwe-action-validation-workpack.ts",
-        "packages/shared/src/knowledge/waes-gate-io.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate-io.ts",
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts",
         "packages/api/src/governance/contracts.ts"
       ],
       "requiredValidators": [
-        "scripts/waes/validate_waes_action_gate_precheck.py"
+        "scripts/wame/validate_wame_action_gate_precheck.py"
       ],
       "requiredFixtures": [
-        "fixtures/waes/action-gate-precheck-dry-run.json"
+        "fixtures/wame/action-gate-precheck-dry-run.json"
       ]
     },
     {
-      "id": "waes-gate-io-hard-stop-contract",
+      "id": "wame-gate-io-hard-stop-contract",
       "requiredOkf": [
-        "okf/waes-gate-io-policy.yaml",
-        "okf/waes-gate-policy.yaml",
+        "okf/wame-gate-io-policy.yaml",
+        "okf/wame-gate-policy.yaml",
         "okf/status-machine-policy.yaml"
       ],
       "requiredTypes": [
-        "packages/shared/src/knowledge/waes-gate-io.ts",
-        "packages/shared/src/knowledge/waes-gate.ts",
+        "packages/shared/src/knowledge/wame-gate-io.ts",
+        "packages/shared/src/knowledge/wame-gate.ts",
         "packages/shared/src/knowledge/object.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
-        "packages/api/src/waes/routes.ts"
+        "packages/api/src/wame/contracts.ts",
+        "packages/api/src/wame/routes.ts"
       ],
       "requiredValidators": [
-        "scripts/waes/validate_waes_gate_io_policy_smoke.py"
+        "scripts/wame/validate_wame_gate_io_policy_smoke.py"
       ],
       "requiredFixtures": [
-        "fixtures/waes/gate-io-policy-smoke.json"
+        "fixtures/wame/gate-io-policy-smoke.json"
       ]
     },
     {
@@ -2279,7 +2279,7 @@
         "packages/shared/src/knowledge/object.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kds/v2/contracts.ts"
       ],
       "requiredValidators": [
@@ -2294,12 +2294,12 @@
       "requiredOkf": [
         "okf/gfis-writeback-sandbox-policy.yaml",
         "okf/writeback-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-writeback-sandbox.ts",
         "packages/shared/src/knowledge/writeback-candidate.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
@@ -2318,13 +2318,13 @@
         "okf/gfis-writeback-candidate-batch-diff-policy.yaml",
         "okf/gfis-writeback-sandbox-policy.yaml",
         "okf/writeback-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-writeback-candidate-batch-diff.ts",
         "packages/shared/src/knowledge/gfis-writeback-sandbox.ts",
         "packages/shared/src/knowledge/writeback-candidate.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
@@ -2393,30 +2393,30 @@
         "okf/sensitive-metadata-storage-policy.yaml",
         "okf/redaction-policy.yaml",
         "okf/rag-admission-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/sensitive-metadata-storage.ts",
         "packages/shared/src/knowledge/evidence.ts",
         "packages/shared/src/knowledge/source.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kds/v2/contracts.ts"
       ],
       "requiredValidators": [
-        "scripts/waes/validate_sensitive_metadata_storage_policy_smoke.py"
+        "scripts/wame/validate_sensitive_metadata_storage_policy_smoke.py"
       ],
       "requiredFixtures": [
-        "fixtures/waes/sensitive-metadata-storage-policy-smoke.json"
+        "fixtures/wame/sensitive-metadata-storage-policy-smoke.json"
       ]
     },
     {
       "id": "mmc-agent-used-knowledge-boundary",
       "requiredOkf": [
         "okf/agent-used-knowledge-policy.yaml",
-        "okf/waes-gate-policy.yaml",
+        "okf/wame-gate-policy.yaml",
         "okf/rag-admission-policy.yaml",
         "okf/sensitive-metadata-storage-policy.yaml"
       ],
@@ -2424,10 +2424,10 @@
         "packages/shared/src/knowledge/agent-used-knowledge.ts",
         "packages/shared/src/knowledge/evidence.ts",
         "packages/shared/src/knowledge/object.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kds/v2/contracts.ts"
       ],
       "requiredValidators": [
@@ -2449,7 +2449,7 @@
         "packages/shared/src/knowledge/loop-record-closure.ts",
         "packages/shared/src/knowledge/loop.ts",
         "packages/shared/src/knowledge/evidence.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/governance/contracts.ts",
@@ -2493,13 +2493,13 @@
         "okf/kds-acl-external-share-policy.yaml",
         "okf/domain-policy.yaml",
         "okf/redaction-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/kds-acl-external-share.ts",
         "packages/shared/src/knowledge/object.ts",
         "packages/shared/src/knowledge/pool.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/kds/v2/contracts.ts",
@@ -2554,7 +2554,7 @@
       ],
       "requiredApi": [
         "packages/api/src/kds/v2/contracts.ts",
-        "packages/api/src/waes/contracts.ts"
+        "packages/api/src/wame/contracts.ts"
       ],
       "requiredValidators": [
         "scripts/rag/validate_rag_response_citation_packet_dry_run.py"
@@ -2568,16 +2568,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-174-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-174-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2592,16 +2592,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-175-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-175-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2616,16 +2616,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-176-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-176-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2640,16 +2640,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-177-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-177-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2664,16 +2664,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-178-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-178-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-approval-route-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2688,16 +2688,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-dks-178-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-178-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2712,16 +2712,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-180-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-180-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-179-routing-queue-notification-ack-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2736,16 +2736,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-181-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.yaml",
         "okf/gfis-assistant-dks-180-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-181-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-180-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2760,16 +2760,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-182-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview-policy.yaml",
         "okf/gfis-assistant-dks-181-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-182-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-181-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2784,16 +2784,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-183-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview-policy.yaml",
         "okf/gfis-assistant-dks-182-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-183-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-182-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2808,16 +2808,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-184-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview-policy.yaml",
         "okf/gfis-assistant-dks-183-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-184-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-183-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2832,16 +2832,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-185-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
         "okf/gfis-assistant-dks-184-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-185-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-184-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2856,16 +2856,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-186-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/gfis-assistant-dks-185-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-186-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-185-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2880,16 +2880,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-187-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/gfis-assistant-dks-186-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-187-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-186-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2904,16 +2904,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-188-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/gfis-assistant-dks-187-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-188-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-187-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2928,16 +2928,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-189-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/gfis-assistant-dks-188-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-189-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-188-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2952,16 +2952,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-190-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/gfis-assistant-dks-189-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-190-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-189-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -2976,16 +2976,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-191-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-dks-190-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-191-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-190-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3000,16 +3000,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-192-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/gfis-assistant-dks-191-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-192-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-191-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3024,16 +3024,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-193-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.yaml",
         "okf/gfis-assistant-dks-192-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-193-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-192-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3048,16 +3048,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-194-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview-policy.yaml",
         "okf/gfis-assistant-dks-193-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-194-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-193-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-delivery-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3072,16 +3072,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-195-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview-policy.yaml",
         "okf/gfis-assistant-dks-194-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-195-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-194-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3096,16 +3096,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-196-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview-policy.yaml",
         "okf/gfis-assistant-dks-195-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-196-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-195-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3120,16 +3120,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-197-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
         "okf/gfis-assistant-dks-196-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-197-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-196-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3144,16 +3144,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-198-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
         "okf/gfis-assistant-dks-197-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-198-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-197-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3168,16 +3168,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-199-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
         "okf/gfis-assistant-dks-198-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-199-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-198-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3192,16 +3192,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-200-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
         "okf/gfis-assistant-dks-199-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-200-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-199-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3216,16 +3216,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-201-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
         "okf/gfis-assistant-dks-200-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-201-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-200-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3240,16 +3240,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-202-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
         "okf/gfis-assistant-dks-201-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-202-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-201-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3264,16 +3264,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-203-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
         "okf/gfis-assistant-dks-202-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-203-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-202-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -3288,16 +3288,16 @@
       "requiredOkf": [
         "okf/gfis-assistant-dks-204-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview-policy.yaml",
         "okf/gfis-assistant-dks-203-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview-policy.yaml",
-        "okf/waes-gate-policy.yaml"
+        "okf/wame-gate-policy.yaml"
       ],
       "requiredTypes": [
         "packages/shared/src/knowledge/gfis-assistant-dks-204-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-digest-preview.ts",
         "packages/shared/src/knowledge/gfis-assistant-dks-203-routing-queue-notification-acknowledgement-escalation-digest-delivery-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-acknowledgement-escalation-preview.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4001,7 +4001,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4021,7 +4021,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4041,7 +4041,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4061,7 +4061,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4081,7 +4081,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4101,7 +4101,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4121,7 +4121,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4141,7 +4141,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4161,7 +4161,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4181,7 +4181,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4201,7 +4201,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4221,7 +4221,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4241,7 +4241,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4261,7 +4261,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4281,7 +4281,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4301,7 +4301,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4321,7 +4321,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4341,7 +4341,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4361,7 +4361,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4381,7 +4381,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4401,7 +4401,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4421,7 +4421,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4441,7 +4441,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4461,7 +4461,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4481,7 +4481,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4501,7 +4501,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4521,7 +4521,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4541,7 +4541,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4561,7 +4561,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4581,7 +4581,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [
@@ -4601,7 +4601,7 @@
       ],
       "requiredApi": [
         "packages/api/src/gfis/contracts.ts",
-        "packages/api/src/waes/contracts.ts",
+        "packages/api/src/wame/contracts.ts",
         "packages/api/src/kwe/contracts.ts"
       ],
       "requiredValidators": [

@@ -14,7 +14,7 @@
     "was_role": "semantic_foundation_project",
     "gfis_role": "runtime_sop_subject",
     "kds_role": "source_of_record_and_controlled_reference",
-    "waes_role": "gate_and_governance",
+    "wame_role": "gate_and_governance",
     "loop_role": "evidence_closure_and_stop_condition"
   },
   "current_baseline": {
@@ -25,7 +25,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted_integrated": 0,
     "production_ready": 0
@@ -34,7 +34,7 @@
     {
       "phase_id": "P0-startup-calibration",
       "time_window_minutes": "0-30",
-      "goal": "Reconfirm governance boundary and latest WAS/GFIS/KDS/WAES evidence chain before any implementation step.",
+      "goal": "Reconfirm governance boundary and latest WAS/GFIS/KDS/WAME evidence chain before any implementation step.",
       "inputs": [
         "LOOP_CONTROL_BOARD.md",
         "gpcf-project-status-matrix.md",
@@ -132,7 +132,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not create verified artifact",
     "does not mark accepted or integrated",
     "does not mark production ready"

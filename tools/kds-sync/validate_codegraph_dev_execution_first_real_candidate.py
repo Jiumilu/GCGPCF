@@ -84,7 +84,7 @@ def main() -> int:
 
     observation = evidence["candidate_runtime_observation"]
     require(observation["runtime_sop_e2e"] == "repair_required", "GFIS runtime SOP must remain repair_required")
-    for key in ["review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["review_queue", "runtime_intake", "wame_review", "verified"]:
         require(observation[key] == 0, f"{key} must remain zero")
 
     metrics = evidence["efficiency_metrics"]

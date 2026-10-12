@@ -140,7 +140,7 @@ def main() -> int:
 doc_id: GPCF-DOC-88076261D5
 title: OKF v0.1 Approved Summary Writer Dry Run
 project: KDS
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

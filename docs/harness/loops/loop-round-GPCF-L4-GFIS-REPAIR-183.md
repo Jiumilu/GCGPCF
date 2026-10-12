@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-893166CEF8
 title: GPCF-L4-GFIS-REPAIR-183 GFIS Dispatch Confirmation Negative Fixture Guard
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -65,7 +65,7 @@ submission_package_allowed=0
 release_allowed=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -84,9 +84,9 @@ runtime_sop_e2e=repair_required
 ## Non-Claims
 
 - 本轮不证明请求已派发、已确认、已审批、已提交或已完成。
-- 本轮不证明真实人工批准文件、派发授权信封、接收确认、交接确认、owner response、submission package、签章完成件、客户确认函、采购订单/合同、KDS write receipt、WAES confirmation、GFIS 发货/POD 或运行层单据事实已经成立。
+- 本轮不证明真实人工批准文件、派发授权信封、接收确认、交接确认、owner response、submission package、签章完成件、客户确认函、采购订单/合同、KDS write receipt、WAME confirmation、GFIS 发货/POD 或运行层单据事实已经成立。
 - 本轮不执行 Git push、生产写入、真实外部 API 写入、数据库迁移、schema sync、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 变更。
-- 不得升级为 review_queue、runtime_intake、WAES review、verified artifact、accepted 或 integrated。
+- 不得升级为 review_queue、runtime_intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## Loop Truthfulness Counters
 

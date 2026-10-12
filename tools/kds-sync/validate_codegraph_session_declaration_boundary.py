@@ -55,7 +55,7 @@ def main() -> int:
         "禁止声明",
         "不得声明业务功能已完成",
         "不得声明任何项目已 `accepted` 或 `integrated`",
-        "不得声明 CodeGraph 可替代 WAES、Harness 或人工验收裁决",
+        "不得声明 CodeGraph 可替代 WAME、Harness 或人工验收裁决",
         "GPCF-CODEGRAPH-DEV-EXECUTION-HARNESS-GATE-003",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
@@ -64,7 +64,7 @@ def main() -> int:
         "业务功能已完成",
         "项目已 accepted 或 integrated",
         "生产环境已就绪",
-        "CodeGraph 可替代 WAES/Harness/人工验收裁决",
+        "CodeGraph 可替代 WAME/Harness/人工验收裁决",
     ]:
         require(phrase in evidence["forbidden_claims"], f"forbidden claim missing: {phrase}")
 

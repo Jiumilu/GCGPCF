@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-07988FA674
 title: CodeGraph 业务执行首个真实候选
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

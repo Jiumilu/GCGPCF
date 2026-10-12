@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-P0D-REVIEW-QUEUE-20260626
 title: GlobalCloud 项目群 P0-D 开发态 Review Queue 拆分证据
 project: KDS
-related_projects: [GPC, WAES, KDS, PKC, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, PKC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,7 +47,7 @@ superseded_by: []
 | P0-D-Q4 | SOP operations/output/data indexes | SOP | P0-C diff-check pass；owner review 可执行 | 草案、模板、输出、索引分别确认归属 | 不把草案/output 写成生产指令 |
 | P0-D-Q5 | WAS `.DS_Store` 本地产物隔离 | WAS | P0-C diff-check pass；`.DS_Store` 已识别 | 人工确认删除或忽略策略；本轮不自动删除 | 不提交 `.DS_Store` |
 | P0-D-Q6 | Studio release review readiness | Studio/GPCF | P0-B harness pass；release review checklist 存在 | 人工复核 release/write workflows 后再决定提交候选 | 不触发 release workflow、不发布 |
-| P0-D-Q7 | 方案传导小队列 | WAES/各项目 owner | AGENTS + 总体/实施方案传导 dirty | 与项目群总控方案一致后进入提交候选 | 不提交未确认方案传导 |
+| P0-D-Q7 | 方案传导小队列 | WAME/各项目 owner | AGENTS + 总体/实施方案传导 dirty | 与项目群总控方案一致后进入提交候选 | 不提交未确认方案传导 |
 
 ## 当前状态
 

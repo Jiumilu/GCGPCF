@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KDS-SENSITIVE-BLOCKER-CLASSIFICATION-20260628
 title: GlobalCloud 项目群 KDS Sensitive Blocker 分类证据 2026-06-28
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

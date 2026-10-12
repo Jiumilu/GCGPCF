@@ -23,7 +23,7 @@ export type BrainPkcRevenueAttributionBlockedAction =
   | "confirm_score"
   | "distribute_revenue"
   | "promote_potential_revenue"
-  | "override_waes_gate"
+  | "override_wame_gate"
   | "complete_committee_decision"
   | "write_business_system"
   | "mutate_kds_lifecycle"
@@ -31,7 +31,7 @@ export type BrainPkcRevenueAttributionBlockedAction =
 
 export interface BrainPkcRevenueAttributionNoWrite {
   writesKdsLifecycle: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesScoreConfirmation: 0;
   writesRevenueDistribution: 0;
@@ -50,7 +50,7 @@ export interface BrainPkcRevenueAttributionReadModel {
   visibleRevenueRefs: string[];
   visibleContributionRefs: string[];
   maskedContributionRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   kweWorkpackRefs: string[];
   committeeRefs: string[];
   freezeRefs: string[];

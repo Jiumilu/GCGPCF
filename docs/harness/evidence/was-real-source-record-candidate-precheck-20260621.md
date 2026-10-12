@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A1C8A72190
 title: was-real-source-record-candidate-precheck-20260621
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: ontology-governance
 status: controlled
 version: v1.0

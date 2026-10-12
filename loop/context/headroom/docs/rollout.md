@@ -8,7 +8,7 @@ status: controlled
 version: v1.0
 owner: WAME
 kds_space: 开发
-kds_path: 开发/04-WAES/loop/context/headroom/docs/rollout.md
+kds_path: 开发/04-WAME/loop/context/headroom/docs/rollout.md
 source_path: loop/context/headroom/docs/rollout.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-21
@@ -40,5 +40,5 @@ superseded_by: []
 
 ## P5：生产准入申请包
 
-只生成申请包，不自动进入生产。P5 需要授权窗口、脱敏生产 token 账本、真实价格输入、连续观测 evidence 和 WAES/Harness 裁决。
-当前 `headroom-lcx-real-measurement-authorization-window-request-20260623` 仍是 `requested_not_granted`，且 `headroom-lcx-remaining-blocker-inventory-20260623` 显示授权窗口、WAES/Harness 决策、token ledger、proxy / SDK enablement 和真实业务等价测量仍未闭合，因此不得把 P5 视为生产准入。
+只生成申请包，不自动进入生产。P5 需要授权窗口、脱敏生产 token 账本、真实价格输入、连续观测 evidence 和 WAME/Harness 裁决。
+当前 `headroom-lcx-real-measurement-authorization-window-request-20260623` 仍是 `requested_not_granted`，且 `headroom-lcx-remaining-blocker-inventory-20260623` 显示授权窗口、WAME/Harness 决策、token ledger、proxy / SDK enablement 和真实业务等价测量仍未闭合，因此不得把 P5 视为生产准入。

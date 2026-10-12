@@ -74,7 +74,7 @@ def build_tasks() -> dict[str, Any]:
 
     customer_readiness = customer_requirement_readiness(primary_key_gate)
     kds_entry = directory_entry_for(receipt_structure, "kds_write_receipt")
-    waes_entry = directory_entry_for(receipt_structure, "waes_confirmation")
+    wame_entry = directory_entry_for(receipt_structure, "wame_confirmation")
 
     source_required = source_readiness.get("expected_submission", {}).get("required_fields", [])
     source_receiving_dir = source_scan.get("sources", {}).get("receiving_directory")
@@ -101,7 +101,7 @@ def build_tasks() -> dict[str, Any]:
                 "runtime_primary_key",
                 "review_queue",
                 "runtime_intake",
-                "waes_review",
+                "wame_review",
                 "verified_artifact",
             ],
         },
@@ -133,27 +133,27 @@ def build_tasks() -> dict[str, Any]:
         },
         {
             "task_id": "GFIS-OWNER-RECEIPT-TASK-003",
-            "task_key": "waes_confirmation",
+            "task_key": "wame_confirmation",
             "priority": 3,
             "object_family": "CustomerRequirementOrPlatformOrder",
-            "owner": waes_entry.get("handoff_owner"),
-            "required_receipt": waes_entry.get("required_file"),
-            "expected_submission_path": waes_entry.get("collection_path"),
-            "required_fields": waes_entry.get("required_fields", []),
+            "owner": wame_entry.get("handoff_owner"),
+            "required_receipt": wame_entry.get("required_file"),
+            "expected_submission_path": wame_entry.get("collection_path"),
+            "required_fields": wame_entry.get("required_fields", []),
             "kds_candidate": {
                 "candidate_status": "controlled_reference_only",
-                "reason": "WAES confirmation must come from WAES decision/evidence owner, not from KDS mirror text.",
+                "reason": "WAME confirmation must come from WAME decision/evidence owner, not from KDS mirror text.",
             },
             "source_evidence": [
                 "GFIS:docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-receiving-directory-structure.json",
             ],
             "current_counts": {
-                "submitted_file_count": waes_entry.get("submitted_file_count", 0),
-                "owner_response_count": waes_entry.get("owner_response_count", 0),
-                "structure_valid": waes_entry.get("structure_valid", 0),
+                "submitted_file_count": wame_entry.get("submitted_file_count", 0),
+                "owner_response_count": wame_entry.get("owner_response_count", 0),
+                "structure_valid": wame_entry.get("structure_valid", 0),
             },
-            "state": "open_missing_waes_confirmation",
-            "blocks": ["waes_review", "verified_artifact", "runtime_intake"],
+            "state": "open_missing_wame_confirmation",
+            "blocks": ["wame_review", "verified_artifact", "runtime_intake"],
         },
         {
             "task_id": "GFIS-OWNER-RECEIPT-TASK-004",
@@ -184,7 +184,7 @@ def build_tasks() -> dict[str, Any]:
             "task_key": "runtime_primary_key",
             "priority": 5,
             "object_family": "CustomerRequirementOrPlatformOrder",
-            "owner": "GFIS_runtime_owner_after_source_dispatch_waes_kds_receipts",
+            "owner": "GFIS_runtime_owner_after_source_dispatch_wame_kds_receipts",
             "required_receipt": customer_readiness.get("required_runtime_primary_key"),
             "expected_submission_path": "GFIS runtime read-only primary key evidence after authorized intake",
             "required_fields": [
@@ -193,12 +193,12 @@ def build_tasks() -> dict[str, Any]:
                 "runtime_primary_key_value",
                 "source_of_record_task_id",
                 "dispatch_confirmation_task_id",
-                "waes_confirmation_task_id",
+                "wame_confirmation_task_id",
                 "kds_write_receipt_task_id",
             ],
             "kds_candidate": {
                 "candidate_status": "blocked_until_upstream_receipts_valid",
-                "reason": "Primary key evidence cannot exist until source-of-record, dispatch, WAES and KDS receipts pass.",
+                "reason": "Primary key evidence cannot exist until source-of-record, dispatch, WAME and KDS receipts pass.",
             },
             "source_evidence": [
                 "GFIS:docs/harness/sop-e2e/evidence/gfis-kds-to-runtime-primary-key-readiness-gate.json",
@@ -208,7 +208,7 @@ def build_tasks() -> dict[str, Any]:
                 "runtime_primary_key_ready": customer_readiness.get("runtime_primary_key_ready", 0),
                 "review_queue": customer_readiness.get("review_queue", 0),
                 "runtime_intake": customer_readiness.get("runtime_intake", 0),
-                "waes_review": customer_readiness.get("waes_review", 0),
+                "wame_review": customer_readiness.get("wame_review", 0),
                 "verified": customer_readiness.get("verified", 0),
             },
             "state": "blocked_missing_upstream_receipts",
@@ -230,7 +230,7 @@ def build_tasks() -> dict[str, Any]:
         "completed_task_count": 0,
         "review_queue": 0,
         "runtime_intake": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "verified": 0,
         "runtime_sop_e2e": "repair_required",
         "tasks": tasks,
@@ -239,13 +239,13 @@ def build_tasks() -> dict[str, Any]:
             "task_ledger_is_owner_receipt": False,
             "source_of_record_received": False,
             "dispatch_confirmation_received": False,
-            "waes_confirmation_received": False,
+            "wame_confirmation_received": False,
             "kds_write_receipt_received": False,
             "runtime_primary_key_created": False,
             "production_write": False,
             "real_external_api_write": False,
             "real_kds_write": False,
-            "real_waes_write": False,
+            "real_wame_write": False,
             "bench_migrate": False,
             "schema_sync": False,
             "permission_change": False,
@@ -261,7 +261,7 @@ def render_markdown(ledger: dict[str, Any]) -> str:
         "doc_id: GPCF-DOC-DE35E75C5A",
         "title: GFIS owner receipt task ledger",
         "project: KDS",
-        "related_projects: [GFIS, GPC, WAES, KDS, GPCF]",
+        "related_projects: [GFIS, GPC, WAME, KDS, GPCF]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",
@@ -295,7 +295,7 @@ def render_markdown(ledger: dict[str, Any]) -> str:
         f"| completed_task_count | {ledger['completed_task_count']} |",
         f"| review_queue | {ledger['review_queue']} |",
         f"| runtime_intake | {ledger['runtime_intake']} |",
-        f"| waes_review | {ledger['waes_review']} |",
+        f"| wame_review | {ledger['wame_review']} |",
         f"| verified | {ledger['verified']} |",
         "",
         "## Tasks",

@@ -63,7 +63,7 @@ superseded_by: []
 | `redactionMode` | 是 | `metadata_only_if_sensitive` | 敏感对象只留脱敏索引 |
 | `messagePayloadRef` | 是 | 待生成 | 只允许引用草案或脱敏摘要，不写敏感原文 |
 | `kdsBacklinkRef` | 是 | 待确认 | KDS 受控文档或对象回链 |
-| `waesGateRecordRef` | 是 | 待确认 | WAME 规则记录、阻断或人工确认路径 |
+| `wameGateRecordRef` | 是 | 待确认 | WAME 规则记录、阻断或人工确认路径 |
 | `expectedSendRecordRef` | 是 | 待生成 | `SRD-GH-D057-*` |
 | `expectedReceiptTemplateRef` | 是 | 待生成 | `RCT-GH-D057-*` |
 | `expiryOrReviewDate` | 是 | 待确认 | 过期或复核日期 |
@@ -80,7 +80,7 @@ superseded_by: []
 | `SAP-GH-D057-QPOD-001` | `RMD-GH-D056-QPOD-001` | 质量 / 发货 / POD 责任人 | 缺质量、发货、POD 接收字段和回执路径 | waiting_manual_send_authorization |
 | `SAP-GH-D057-OEM-001` | `RMD-GH-D056-OEM-001` | 目标工厂 / OEM 责任方 | 缺 OEM 与目标工厂责任拆分确认 | waiting_manual_send_authorization |
 | `SAP-GH-D057-FIN-001` | `RMD-GH-D056-FIN-001` | 财务责任人 / 资料保管人 | 缺 DSR-L3 metadata_only、保管人、封存索引和财务授权 | waiting_manual_send_authorization |
-| `SAP-GH-D057-WAES-001` | `RMD-GH-D056-WAES-001` | WAME 规则记录人 | 缺 WAME 规则记录、阻断或人工确认路径 | waiting_manual_send_authorization |
+| `SAP-GH-D057-WAME-001` | `RMD-GH-D056-WAME-001` | WAME 规则记录人 | 缺 WAME 规则记录、阻断或人工确认路径 | waiting_manual_send_authorization |
 | `SAP-GH-D057-AI-001` | `RMD-GH-D056-AI-001` | GFIS AI 助手内测负责人 | 缺评测记录、缺陷状态和候选写回边界 | waiting_manual_send_authorization |
 | `SAP-GH-D057-KGB-001` | `RMD-GH-D056-KGB-001` | KDS 记录人 / 缺口发起方 | 缺悬赏候选资源、验收规则、争议规则和委员会候选 | waiting_manual_send_authorization |
 
@@ -100,7 +100,7 @@ superseded_by: []
 | `dispatchChannel` | 是 | 待确认 | 来自授权包 |
 | `messagePayloadHash` | 条件 | 空 | 真实发送前不得伪造 |
 | `kdsBacklinkRef` | 是 | 待确认 | 受控文档或对象回链 |
-| `waesGateRecordRef` | 是 | 待确认 | 规则、阻断或人工确认路径 |
+| `wameGateRecordRef` | 是 | 待确认 | 规则、阻断或人工确认路径 |
 | `deliveryState` | 是 | `not_sent` | 允许值：`not_sent`、`sent_pending_receipt`、`send_blocked`、`revoked`、`correction_required` |
 | `externalNotificationSent` | 是 | `false` | 本轮必须为 false |
 | `businessFactCreated` | 是 | `false` | 发送记录不得创建业务事实 |
@@ -120,7 +120,7 @@ superseded_by: []
 | `classificationLevel` | 是 | 待确认 | DSR-L1/L2/L3 |
 | `manualReviewRequired` | 是 | `true` | 回执不得自动变成确认事实 |
 | `committeeRequired` | 条件 | 待判断 | 收益、重大违规、争议、潜在产值转正式产值时必须为 true |
-| `waesDecisionState` | 是 | `manual_confirmation_required` | 允许 `governance_recorded`、`blocked`、`manual_confirmation_required`、`committee_review_required` |
+| `wameDecisionState` | 是 | `manual_confirmation_required` | 允许 `governance_recorded`、`blocked`、`manual_confirmation_required`、`committee_review_required` |
 | `ragAdmission` | 是 | `false` | 回执未经治理不得入 RAG 强引用 |
 | `businessFactCreated` | 是 | `false` | 回执模板不得创建业务事实 |
 
@@ -177,7 +177,7 @@ sendRecordsCreated=0
 receiptsFound=0
 externalNotificationSent=false
 realKdsApiWrite=false
-waesWrite=false
+wameWrite=false
 gfisWrite=false
 businessLedgerWrite=false
 financeLedgerWrite=false
@@ -195,7 +195,7 @@ statusUpgrade=false
 1. 7 个补证提醒草案已有发送授权包模板。
 2. 7 个发送记录字段模板已形成。
 3. 7 个回执字段模板已形成。
-4. 撤回、纠错、负例拒收、WAES/RAG/积分收益边界已明确。
+4. 撤回、纠错、负例拒收、WAME/RAG/积分收益边界已明确。
 5. 本文纳入 LOOP、文档控制和 KDS 本地镜像。
 
 本文不表示：

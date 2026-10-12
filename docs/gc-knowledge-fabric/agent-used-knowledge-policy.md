@@ -65,7 +65,7 @@ Agent / Connector 请求
 - retrievedObjectRefs
 - sourceRefs
 - evidenceRefs
-- waesGateRefs
+- wameGateRefs
 - outputCandidateRefs
 - overreadSignals
 - outcome

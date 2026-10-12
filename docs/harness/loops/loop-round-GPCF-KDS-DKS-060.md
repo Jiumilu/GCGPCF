@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9CC499A271
 title: LOOP Round GPCF-KDS-DKS-060 - GC-Knowledge Fabric P0 受控文档包启动实施
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
 ### 3.2 P0 缺口文档
 
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md`
-- `03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md`
+- `03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-葛化GFIS知识库目录.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-湖北磷材知识库目录.md`
@@ -60,7 +60,7 @@ superseded_by: []
 ## 4. 门禁口径
 
 - AI 输出只能进入 `candidate` 或辅助建议，不得直接进入 `accepted`、正式写回、收益分配或强引用。
-- GFIS / GPC / ERP / MES 写回必须经过 WAES Writeback Gate 与人工确认。
+- GFIS / GPC / ERP / MES 写回必须经过 WAME Writeback Gate 与人工确认。
 - 敏感资料默认采用 metadata-only 或受控原件引用，不直接开放原文。
 - 收益、积分、额度、悬赏必须保留候选态、确认态、冻结态和证据引用。
 - LOOP 只能记录证据与推动事项，不自动提升业务完成状态。

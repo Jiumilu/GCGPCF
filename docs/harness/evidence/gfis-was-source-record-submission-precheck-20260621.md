@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3674F84C97
 title: GFIS WAS Source Record Submission Precheck Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,13 +47,13 @@ GPCF 已把 WAS/Ontology 字段门禁接入 GFIS 真实 `CustomerRequirementOrPl
 3. `objectFamily=CustomerRequirementOrPlatformOrder`。
 4. `assetDimension=data_asset`、`flowType=commerce_flow`。
 5. `lifecycle=pending_business_verification`、`trustLevel=T4`。
-6. `sourceRefs`、`evidenceRefs`、`waesGateRefs`、`promotionBlockers`、`nextAction`、`kdsBacklink` 不得为空。
+6. `sourceRefs`、`evidenceRefs`、`wameGateRefs`、`promotionBlockers`、`nextAction`、`kdsBacklink` 不得为空。
 
 ## 非声明
 
 - 本 evidence 不修改 GFIS 运行代码。
 - 本 evidence 不向 GFIS 接收目录写入真实业务文件。
-- 本 evidence 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本 evidence 不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本 evidence 不证明 GFIS 真实业务 SOP E2E 完成。
 - 本 evidence 不升级 accepted、integrated 或 production_ready。
 

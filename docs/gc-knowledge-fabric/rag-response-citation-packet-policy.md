@@ -40,7 +40,7 @@ RAG Response Citation Packet 是 Brain、PKC、GFIS Assistant、指挥舱和 Age
 - highestCitationStrength
 - boundaryNotices
 - missingEvidenceRefs
-- waesGateRefs
+- wameGateRefs
 - aclDecisionRefs
 - generatedAt
 - noWrite

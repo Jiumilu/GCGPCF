@@ -70,7 +70,7 @@ def main() -> int:
     require(matrix.get("objective") == "完成完整真实功能图谱：真实业务等价授权测量，以及生产级运行/成本/回滚图谱。", "objective mismatch")
     require(matrix.get("project_count") == 15, "project count mismatch")
     require(matrix.get("project_group_scope") == [
-        "GPCF", "KDS", "Brain", "WAES", "GFIS", "GPC", "PVAOS", "Edge", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "Studio", "WAS"
+        "GPCF", "KDS", "Brain", "WAME", "GFIS", "GPC", "PVAOS", "Edge", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "Studio", "WAS"
     ], "project scope mismatch")
     require(len(matrix.get("rows", [])) == 6, "row count mismatch")
 
@@ -91,7 +91,7 @@ def main() -> int:
     require(current.get("production_ready") is False, "production ready mismatch")
 
     for phrase in [
-        "real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only",
+        "real_measurement_authorization_window_and_wame_harness_decision_remain_precheck_only",
         "headroom-lcx-real-measurement-authorization-window-request-20260623.json",
         "production_runtime_graph_is_controlled_only_and_production_branch_remains_blocked",
         "cost_graph_is_replayable_but_not_production_measured",

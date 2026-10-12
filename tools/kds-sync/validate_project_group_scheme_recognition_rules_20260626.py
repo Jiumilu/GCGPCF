@@ -64,10 +64,10 @@ PROJECT_FILES = {
         "GlobalCloud Studio 总体方案.md",
         "GlobalCloud Studio 实施方案.md",
     ),
-    "GlobalCloud WAES": (
+    "GlobalCloud WAME": (
         "AGENTS.md",
-        "GlobalCloud WAES 总体方案.md",
-        "GlobalCloud WAES 实施方案.md",
+        "GlobalCloud WAME 总体方案.md",
+        "GlobalCloud WAME 实施方案.md",
     ),
     "GlobalCloud XGD": (
         "AGENTS.md",

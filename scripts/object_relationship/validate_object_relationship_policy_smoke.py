@@ -61,7 +61,7 @@ def main() -> int:
         "minimumFieldCount": len(minimum_fields),
         "sourceRequiredForFormalFact": hard["source_required_for_formal_fact"],
         "evidenceRequiredForEvidenceReady": hard["evidence_required_for_evidence_ready"],
-        "waesGateRequiredForCandidates": hard["waes_gate_required_for_candidates"],
+        "wameGateRequiredForCandidates": hard["wame_gate_required_for_candidates"],
         "confirmationRequiredForWritebackCandidate": hard["confirmation_required_for_writeback_candidate"],
         "aiCannotCreateFormalWritebackRelation": hard["ai_cannot_create_formal_writeback_relation"],
         "loopCannotPromoteBusinessStatus": hard["loop_cannot_promote_business_status"],

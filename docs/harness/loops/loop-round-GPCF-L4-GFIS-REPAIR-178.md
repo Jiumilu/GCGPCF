@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BD92C39E68
 title: GPCF-L4-GFIS-REPAIR-178
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,14 +42,14 @@ superseded_by: []
 GFIS validator 输出：
 
 ```text
-liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 release_override_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_override_negative_fixtures_rejected runtime_sop_e2e=repair_required
+liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 release_override_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=dispatch_authorization_envelope_release_override_negative_fixtures_rejected runtime_sop_e2e=repair_required
 ```
 
 GFIS 主 SOP validator expected exit 2，并输出：
 
 ```text
 gfis_runtime_sop_e2e=repair_required
-runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard=dispatch_authorization_envelope_release_override_negative_fixtures_rejected:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:attempted_release=62:hard_stops=62:blockers=434:precheck_items=62:blocked=62:open_holds=62:negative_fixtures=6:rejected=6:accepted=0:release_override_allowed=0:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard=dispatch_authorization_envelope_release_override_negative_fixtures_rejected:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:attempted_release=62:hard_stops=62:blockers=434:precheck_items=62:blocked=62:open_holds=62:negative_fixtures=6:rejected=6:accepted=0:release_override_allowed=0:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 ```
 
 ## 验证命令
@@ -72,7 +72,7 @@ runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submissi
 
 ## 边界
 
-本轮只证明 6 类 release override 负例必须被拒收；不证明 owner response、submission package、真实提交、签章完成、客户确认函、KDS write receipt、WAES confirmation、GFIS 运行层单据事实、review queue、runtime intake、verified artifact、accepted 或 integrated 已取得。
+本轮只证明 6 类 release override 负例必须被拒收；不证明 owner response、submission package、真实提交、签章完成、客户确认函、KDS write receipt、WAME confirmation、GFIS 运行层单据事实、review queue、runtime intake、verified artifact、accepted 或 integrated 已取得。
 
 未执行 Git push、生产写入、真实外部 API 写入、数据库迁移、schema sync、权限变更、生产配置修改、部署或 ECS/阿里云/Caddy/隧道/Docker 变更。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-REVIEW-QUEUE-BRIDGE-READINESS-20260626
 title: Agent-Reach P9S Source Direct Review Queue Bridge 就绪证据 2026-06-26
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,13 +41,13 @@ superseded_by: []
 
 - `GFIS`
 - `KDS`
-- `WAES`
+- `WAME`
 - `WAS`
 
 ## 边界
 
 - 本证据只证明 P9S source-direct candidate 到人工 review queue 的字段和路由已准备。
-- 本证据不创建真实 review queue、runtime intake、WAES review 或 verified artifact。
+- 本证据不创建真实 review queue、runtime intake、WAME review 或 verified artifact。
 - 本证据不写 KDS canonical Markdown。
 - 本证据不写 GFIS source-of-record。
 - 本证据不声明 accepted / integrated / production_ready。

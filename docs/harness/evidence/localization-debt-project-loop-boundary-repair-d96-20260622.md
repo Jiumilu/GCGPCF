@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTPROJECTLOOPBOUNDARYREPAIRD9620260622
 title: 项目 Loop 边界说明 D96 中文化修复证据
 project: GPCF
-related_projects: [GPC, PVAOS, WAES, XiaoG, MMC, GPCF]
+related_projects: [GPC, PVAOS, WAME, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ D96 对 5 个项目 LR-002 Loop 文档进行定点中文化修复。
 - `docs/harness/GPC/loops/loop-round-GPCF-GP-LR-002.md`
 - `docs/harness/MMC/loops/loop-round-GPCF-MM-LR-002.md`
 - `docs/harness/PVAOS/loops/loop-round-GPCF-PV-LR-002.md`
-- `docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md`
+- `docs/harness/WAME/loops/loop-round-GPCF-WA-LR-002.md`
 - `docs/harness/XiaoG/loops/loop-round-GPCF-XG-LR-002.md`
 
 ## 修复内容

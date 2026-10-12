@@ -82,7 +82,7 @@ def main() -> int:
 
     impact = evidence["impact_report"]
     require(impact["risk"]["level"] == "low", "risk level must be low")
-    require(impact["risk"]["waes_required"] is False, "WAES must not be required for this low-risk dry-run")
+    require(impact["risk"]["wame_required"] is False, "WAME must not be required for this low-risk dry-run")
     require(impact["impacted_tests"] == [], "impacted tests must be empty in evidence")
     require("function:main" in impact["impacted_symbols"], "main symbol must be recorded")
 

@@ -18,7 +18,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -51,7 +51,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-ED41C98974
 title: Headroom Production Token Authorization Package
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

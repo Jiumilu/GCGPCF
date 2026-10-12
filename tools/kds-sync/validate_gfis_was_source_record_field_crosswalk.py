@@ -47,7 +47,7 @@ WAS_FIELDS = {
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink",
@@ -154,7 +154,7 @@ def main() -> int:
     require(by_field["nextAction"].get("required_value") == s01.get("nextAction"), "nextAction fixed value mismatch")
     require(by_field["sourceRefs"].get("required_value") == s01.get("sourceRefs"), "sourceRefs mismatch")
     require(by_field["evidenceRefs"].get("required_value") == s01.get("evidenceRefs"), "evidenceRefs mismatch")
-    require(by_field["waesGateRefs"].get("required_value") == s01.get("waesGateRefs"), "waesGateRefs mismatch")
+    require(by_field["wameGateRefs"].get("required_value") == s01.get("wameGateRefs"), "wameGateRefs mismatch")
     require(by_field["promotionBlockers"].get("required_value") == s01.get("promotionBlockers"), "promotionBlockers mismatch")
 
     submitted_files = sorted(RECEIVING_DIR.glob("*.customer-requirement-platform-order.source-record.json"))

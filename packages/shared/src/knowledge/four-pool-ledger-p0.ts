@@ -54,7 +54,7 @@ export interface FourPoolLedgerP0Policy {
     potentialRevenueMustNotAutoPromote: boolean;
     contributionConfirmedScoreRequiresHumanOrCommittee: boolean;
     selfPurchasedQuotaExcludedFromUnifiedRevenuePool: boolean;
-    bountySettlementRequiresWaesHumanAcceptanceAndDisputeWindowClosed: boolean;
+    bountySettlementRequiresWameHumanAcceptanceAndDisputeWindowClosed: boolean;
     majorDisputeCanFreezeAllFourPools: boolean;
   };
   noWriteAssertions: {

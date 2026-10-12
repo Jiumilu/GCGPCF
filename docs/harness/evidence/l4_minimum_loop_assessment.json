@@ -20,7 +20,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -48,7 +48,7 @@
     "required_conditions": [
       "SampleApproval.status in ['approved', 'waived']",
       "ProductionRelease.status == 'approved'",
-      "WAES.gate == 'confirmed'"
+      "WAME.gate == 'confirmed'"
     ]
   },
   "generated_items": 68,
@@ -86,42 +86,42 @@
     "gfis_real_source_record_intake_gate_status": "pass",
     "gfis_real_source_record_intake_gate_exit_code": 0,
     "gfis_real_source_record_intake_gate_output": [
-      "gfis_real_source_record_intake_gate=pass real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_real_source_record_intake_gate=pass real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_pending_business_verification_gate_status": "pass",
     "gfis_pending_business_verification_gate_exit_code": 0,
     "gfis_pending_business_verification_gate_output": [
-      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=466 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_pending_business_verification=pass top_level_schema_ready=1 kds_candidate_sources_found=466 owner_response_files_scanned=0 rejected_example_files_excluded=18 pending_submission_files_found=0 pending_business_verification_submissions=0 weak_proof_rejection_rules=7 real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_runtime_primary_key_gate_status": "pass",
     "gfis_runtime_primary_key_gate_exit_code": 0,
     "gfis_runtime_primary_key_gate_output": [
-      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=466 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_runtime_primary_key_gate=pass kds_candidate_sources_found=466 pending_business_verification_files_found=0 source_record_files_found=0 valid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_gate_items=1 runtime_primary_key_gate_blocked=1 runtime_primary_key_files_found=0 runtime_primary_key_created=0 runtime_primary_key_ready=0 real_runtime_primary_keys=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_review_queue_admission_gate_status": "pass",
     "gfis_review_queue_admission_gate_exit_code": 0,
     "gfis_review_queue_admission_gate_output": [
-      "gfis_review_queue_admission_gate=pass runtime_primary_key_created=0 runtime_primary_key_ready=0 review_queue_gate_items=1 review_queue_gate_blocked=1 review_queue_files_found=0 review_queue_created=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_review_queue_admission_gate=pass runtime_primary_key_created=0 runtime_primary_key_ready=0 review_queue_gate_items=1 review_queue_gate_blocked=1 review_queue_files_found=0 review_queue_created=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_runtime_intake_gate_status": "pass",
     "gfis_runtime_intake_gate_exit_code": 0,
     "gfis_runtime_intake_gate_output": [
-      "gfis_runtime_intake_gate=pass review_queue_created=0 review_queue=0 runtime_intake_gate_items=1 runtime_intake_gate_blocked=1 runtime_intake_files_found=0 runtime_intake_created=0 runtime_intake=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_runtime_intake_gate=pass review_queue_created=0 review_queue=0 runtime_intake_gate_items=1 runtime_intake_gate_blocked=1 runtime_intake_files_found=0 runtime_intake_created=0 runtime_intake=0 wame_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
-    "gfis_waes_review_gate_status": "pass",
-    "gfis_waes_review_gate_exit_code": 0,
-    "gfis_waes_review_gate_output": [
-      "gfis_waes_review_gate=pass runtime_intake_created=0 runtime_intake=0 waes_review_gate_items=1 waes_review_gate_blocked=1 waes_review_files_found=0 waes_review_created=0 waes_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+    "gfis_wame_review_gate_status": "pass",
+    "gfis_wame_review_gate_exit_code": 0,
+    "gfis_wame_review_gate_output": [
+      "gfis_wame_review_gate=pass runtime_intake_created=0 runtime_intake=0 wame_review_gate_items=1 wame_review_gate_blocked=1 wame_review_files_found=0 wame_review_created=0 wame_review=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_verified_artifact_gate_status": "pass",
     "gfis_verified_artifact_gate_exit_code": 0,
     "gfis_verified_artifact_gate_output": [
-      "gfis_verified_artifact_gate=pass waes_review_created=0 waes_review=0 verified_artifact_gate_items=1 verified_artifact_gate_blocked=1 verified_artifact_files_found=0 verified_artifact_created=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
+      "gfis_verified_artifact_gate=pass wame_review_created=0 wame_review=0 verified_artifact_gate_items=1 verified_artifact_gate_blocked=1 verified_artifact_files_found=0 verified_artifact_created=0 verified=0 real_business_lane=repair_required business_verification_pending=true stop_type=completed"
     ],
     "gfis_real_fact_entry_gate_status": "pass",
     "gfis_real_fact_entry_gate_exit_code": 0,
     "gfis_real_fact_entry_gate_output": [
-      "gfis_real_fact_entry_gate=pass strong_block=true read_only_verified=true real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 manual_business_verification_pending=true real_business_lane=repair_required status_ceiling=repair_required next_required_input=real_source_record_or_equivalent_formal_confirmation accepted=false integrated=false production_ready=false"
+      "gfis_real_fact_entry_gate=pass strong_block=true read_only_verified=true real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 manual_business_verification_pending=true real_business_lane=repair_required status_ceiling=repair_required next_required_input=real_source_record_or_equivalent_formal_confirmation accepted=false integrated=false production_ready=false"
     ],
     "gfis_real_fact_entry_gate_values": {
       "gfis_real_fact_entry_gate": "pass",
@@ -132,7 +132,7 @@
       "runtime_primary_key_ready": "0",
       "review_queue": "0",
       "runtime_intake": "0",
-      "waes_review": "0",
+      "wame_review": "0",
       "verified": "0",
       "manual_business_verification_pending": "true",
       "real_business_lane": "repair_required",
@@ -145,42 +145,42 @@
     "gfis_development_ready_goal_status": "pass",
     "gfis_development_ready_goal_exit_code": 0,
     "gfis_development_ready_goal_output": [
-      "gfis_development_ready_goal=pass development_ready=pass synthetic_dev_lane=dev_closed synthetic_e2e_pass=1 synthetic_stage_count=12 synthetic_verified_artifacts=12 runtime_subject=GFIS运行层 demo_e2e=pass_demo_only real_business_lane=repair_required business_verification_pending=true real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_development_ready_goal=pass development_ready=pass synthetic_dev_lane=dev_closed synthetic_e2e_pass=1 synthetic_stage_count=12 synthetic_verified_artifacts=12 runtime_subject=GFIS运行层 demo_e2e=pass_demo_only real_business_lane=repair_required business_verification_pending=true real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_source_record_submission_gate_status": "pass",
     "gfis_test_source_record_submission_gate_exit_code": 0,
     "gfis_test_source_record_submission_gate_output": [
-      "gfis_customer_requirement_test_source_record_submission=pass test_source_records=1 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_customer_requirement_test_source_record_submission=pass test_source_records=1 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_data_minimum_sop_e2e_status": "pass",
     "gfis_test_data_minimum_sop_e2e_exit_code": 0,
     "gfis_test_data_minimum_sop_e2e_output": [
-      "gfis_test_data_minimum_sop_e2e=pass test_source_records=1 test_runtime_primary_keys=1 test_review_queue_items=1 test_runtime_intake_items=1 test_waes_evidence_candidates=1 test_verified_artifacts=1 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_test_data_minimum_sop_e2e=pass test_source_records=1 test_runtime_primary_keys=1 test_review_queue_items=1 test_runtime_intake_items=1 test_wame_evidence_candidates=1 test_verified_artifacts=1 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_data_12_stage_sop_e2e_status": "pass",
     "gfis_test_data_12_stage_sop_e2e_exit_code": 0,
     "gfis_test_data_12_stage_sop_e2e_output": [
-      "gfis_test_data_12_stage_sop_e2e=pass test_stage_count=12 test_runtime_primary_keys=12 test_review_queue_items=12 test_runtime_intake_items=12 test_waes_evidence_candidates=12 test_verified_artifacts=12 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_test_data_12_stage_sop_e2e=pass test_stage_count=12 test_runtime_primary_keys=12 test_review_queue_items=12 test_runtime_intake_items=12 test_wame_evidence_candidates=12 test_verified_artifacts=12 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_data_12_stage_transition_gate_status": "pass",
     "gfis_test_data_12_stage_transition_gate_exit_code": 0,
     "gfis_test_data_12_stage_transition_gate_output": [
-      "gfis_test_data_12_stage_transition_gate=pass test_stage_count=12 transition_count=11 boundary_count=12 manual_gate_count=2 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_test_data_12_stage_transition_gate=pass test_stage_count=12 transition_count=11 boundary_count=12 manual_gate_count=2 test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_data_12_stage_negative_transition_guard_status": "pass",
     "gfis_test_data_12_stage_negative_transition_guard_exit_code": 0,
     "gfis_test_data_12_stage_negative_transition_guard_output": [
-      "gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_data_runtime_replay_harness_status": "pass",
     "gfis_test_data_runtime_replay_harness_exit_code": 0,
     "gfis_test_data_runtime_replay_harness_output": [
-      "gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required runtime_object_count=15 replay_stage_count=12 accepted_attempt_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required runtime_object_count=15 replay_stage_count=12 accepted_attempt_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ],
     "gfis_test_data_scenario_coverage_status": "pass",
     "gfis_test_data_scenario_coverage_exit_code": 0,
     "gfis_test_data_scenario_coverage_output": [
-      "gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+      "gfis_test_data_scenario_coverage=pass test_data_mutation_guard=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass real_business_lane=repair_required runtime_sop_e2e=repair_required positive_scenario_count=12 boundary_scenario_count=6 covered_stage_count=12 runtime_object_count=15 mutation_attempt_count=8 rejected_mutation_count=8 accepted_mutation_count=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     ]
   },
   "l4_closure": {
@@ -276,7 +276,7 @@
       "runtime_primary_key_gate": "pass",
       "review_queue_gate": "pass",
       "runtime_intake_gate": "pass",
-      "waes_review_gate": "pass",
+      "wame_review_gate": "pass",
       "verified_artifact_gate": "pass",
       "real_fact_entry_gate": "pass",
       "real_fact_entry_status_ceiling": "repair_required",
@@ -288,7 +288,7 @@
       "test_runtime_primary_keys": 1,
       "test_review_queue_items": 1,
       "test_runtime_intake_items": 1,
-      "test_waes_evidence_candidates": 1,
+      "test_wame_evidence_candidates": 1,
       "test_verified_artifacts": 1,
       "valid_source_records": 0,
       "runtime_primary_key_created": 0,
@@ -297,8 +297,8 @@
       "review_queue": 0,
       "runtime_intake_created": 0,
       "runtime_intake": 0,
-      "waes_review_created": 0,
-      "waes_review": 0,
+      "wame_review_created": 0,
+      "wame_review": 0,
       "verified_artifact_created": 0,
       "verified": 0,
       "score": 62,

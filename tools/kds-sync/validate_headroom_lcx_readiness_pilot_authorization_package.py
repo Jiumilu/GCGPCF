@@ -17,7 +17,7 @@ PROJECTS = {
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -107,7 +107,7 @@ def main() -> int:
         "allow_local_headroom_dry_run",
         "allow_sanitized_fixture_replay",
         "allow_harness_evidence_generation",
-        "allow_waes_gate_check",
+        "allow_wame_gate_check",
     ]:
         require(permissions.get(key) is True, f"permission must be true: {key}")
     for key in [

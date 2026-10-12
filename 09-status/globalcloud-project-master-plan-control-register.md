@@ -63,9 +63,9 @@ superseded_by: []
 | WAS世界资产体系 | `WAS世界资产体系` | `docs/GlobalCloud WAS 总体方案.md` | `docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md` | `authoritative` | 已建立仓内唯一当前有效总体方案，旧 V1.2 文档作为来源底稿 | 后续补充语义变更回流记录和验证证据 |
 | GlobalCloud XWAIL | `GlobalCloud XWAIL` | `GlobalCloud XWAIL 总体方案.md` | `XWAIL实施方案.md` | `authoritative` | 已建立总体方案，实施方案降级为工程实施底稿 | 后续补齐 Schema/Validator/XAP 实现证据 |
 | GlobalCloud AAAS / AaaS | `GlobalCloud AAAS` | `docs/GlobalCloud AaaS 总体方案.md` | `docs/AaaS总体方案_GPCF对齐版.md` | `authoritative` | 已统一显示名为 GlobalCloud AaaS，AAAS 保留为仓库名 | 后续补齐 ServicePackage/Metering/SLA 验证证据 |
-| GlobalCloud WAME | `GlobalCloud WAME` | `GlobalCloud WAES 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐运行治理和发布证据 |
+| GlobalCloud WAME | `GlobalCloud WAME` | `GlobalCloud WAME 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐运行治理和发布证据 |
 | GlobalCloud GFIS | `GlobalCloud GFIS` | `GlobalCloud GFIS 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐运行事实和集成证据 |
-| GlobalCloud GPC | `GlobalCloud GPC` | `GlobalCloud GPC 总体方案.md` | `GPC-绿色供应链公共服务平台-总体方案.md`, 旧实施规划文件 | `authoritative` | 已建立当前唯一总体方案，旧业务架构文档作为输入来源 | 后续补齐 GFIS/PVAOS/WAES/AaaS 集成证据 |
+| GlobalCloud GPC | `GlobalCloud GPC` | `GlobalCloud GPC 总体方案.md` | `GPC-绿色供应链公共服务平台-总体方案.md`, 旧实施规划文件 | `authoritative` | 已建立当前唯一总体方案，旧业务架构文档作为输入来源 | 后续补齐 GFIS/PVAOS/WAME/AaaS 集成证据 |
 | GlobalCloud PVAOS | `GlobalCloud PVAOS` | `GlobalCloud PVAOS 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐门户/运行平面集成证据 |
 | GlobalCloud KDS | `GlobalCloud KDS` | `GlobalCloud KDS 总体方案.md` | `README.md`, `AGENTS.md`, `concepts/*` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐知识索引和证据准入验证 |
 | GlobalCloud Brain | `GlobalCloud Brain` | `GlobalCloud Brain 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐知识治理和 AI 边界证据 |
@@ -76,7 +76,7 @@ superseded_by: []
 | GlobalCloud XGD | `GlobalCloud XGD` | `GlobalCloud XGD 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐智能体运行、记忆和证据治理 |
 | GlobalCloud XiaoC | `GlobalCloud XiaoC` | `GlobalCloud XiaoC 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐提示资产注册和 MCP 服务治理证据 |
 | GlobalCloud XiaoG | `GlobalCloud XiaoG` | `GlobalCloud XiaoG 总体方案.md` | `README.md`, `AGENTS.md` | `authoritative` | 已建立当前唯一总体方案 | 后续补齐本地智能体运行和 Harness 证据 |
-| GlobalCloud ICP | `GlobalCloud ICP` | `GlobalCloud ICP 总体方案.md` | `README.md`, `AGENTS.md`, `PROJECT_HARNESS_MANIFEST.md` | `candidate` | 已建立独立总体方案、24×11契约和产业控制平面边界；尚未完成人工确认和项目群集成 | 保持 candidate/partial，补 WAES/GPCF 人工确认及后续只读连接器变更 |
+| GlobalCloud ICP | `GlobalCloud ICP` | `GlobalCloud ICP 总体方案.md` | `README.md`, `AGENTS.md`, `PROJECT_HARNESS_MANIFEST.md` | `candidate` | 已建立独立总体方案、24×11契约和产业控制平面边界；尚未完成人工确认和项目群集成 | 保持 candidate/partial，补 WAME/GPCF 人工确认及后续只读连接器变更 |
 | shared/python_utils | `shared` | 不适用 | `shared/python_utils/` | `not_project` | 共享工具目录，不是业务项目 | 保留为共享库，受导入可用性和依赖治理控制 |
 
 ## 5. 当前结论

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-41620945D3
 title: Loop Round GPCF-L4-GFIS-TEST-REPLAY-SYNC-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 ## 验证输出
 
 ```text
-gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass replay_stage_count=12 runtime_object_count=15 replay_transition_count=11 negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_lane=pass real_business_lane=repair_required runtime_sop_e2e=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0
+gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pass test_data_runtime_object_contract=pass replay_stage_count=12 runtime_object_count=15 replay_transition_count=11 negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_lane=pass real_business_lane=repair_required runtime_sop_e2e=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0
 ```
 
 ## 真实性边界
@@ -57,7 +57,7 @@ gfis_test_data_runtime_replay_harness=pass test_data_12_stage_replay_harness=pas
 ## 未完成项
 
 - 真实客户订单、平台订单回执、采购订单、客户确认、客户签样或等效正式确认仍未进入 valid source-of-record。
-- 真实运行层主键、review queue、runtime intake、WAES review、verified artifact 均为 0。
+- 真实运行层主键、review queue、runtime intake、WAME review、verified artifact 均为 0。
 - 本轮未执行生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、Git push 或 accepted/integrated/production_ready 升级。
 
 ## 结论

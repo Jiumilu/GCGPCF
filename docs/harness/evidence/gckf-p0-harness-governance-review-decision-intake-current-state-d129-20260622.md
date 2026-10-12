@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0HARNESSGOVERNANCEREVIEWDECISIONINTAKECURRENTSTATED12920260622
 title: GCKF P0 Harness 治理审阅决策接收当前态证据 D129
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

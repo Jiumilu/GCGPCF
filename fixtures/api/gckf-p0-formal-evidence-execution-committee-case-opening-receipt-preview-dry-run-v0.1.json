@@ -25,7 +25,7 @@
     "dryRunOnly": true,
     "receiptRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -42,7 +42,7 @@
       "reviewer_assignment_acknowledgement",
       "authority_and_recusal_boundary",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "return_to_docket_readiness_path",
       "no_write_attestation"
@@ -100,7 +100,7 @@
       "reviewer_assignment_acknowledgement_present",
       "authority_and_recusal_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "return_to_docket_readiness_path_present",
       "no_write_attestation_present",
@@ -118,11 +118,11 @@
       "reviewerAssignmentAcknowledgementRef",
       "authorityAndRecusalBoundaryRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "returnToDocketReadinessPathRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -148,7 +148,7 @@
       "missing_reviewer_assignment_acknowledgement_ref",
       "missing_authority_and_recusal_boundary_ref",
       "missing_freeze_retention_statement_ref",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_harness_no_write_guard_ref",
       "missing_return_to_docket_readiness_path_ref",
       "missing_required_receipt_role",
@@ -183,7 +183,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_receipt_preview_to_formal_receipt",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [
@@ -217,7 +217,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "receipt_preview_converted_to_formal_receipt"
   ],
   "expectedSummary": {

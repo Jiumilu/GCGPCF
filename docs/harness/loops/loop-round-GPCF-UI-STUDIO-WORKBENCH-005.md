@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-005
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-005
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -99,7 +99,7 @@ Status ceiling: ui_evidence_candidate
 | G2 Design Tokens | partial | 本轮不涉及令牌治理 | 后续继续统一令牌 |
 | G3 Component Consistency | pass | 导航入口对称性已补齐 | 推广到更多专业工作台 |
 | G4 Evidence And Governance | partial | 本轮仅完成入口修复证据 | 继续补业务证据链 |
-| G5 AI Fact Separation | partial | 入口闭环改善，但双域治理尚未全量完成 | 继续按 WAES 母框架推进 |
+| G5 AI Fact Separation | partial | 入口闭环改善，但双域治理尚未全量完成 | 继续按 WAME 母框架推进 |
 | G6 Accessibility | partial | 未补完整键盘导航证据 | 后续补焦点与键盘路径 |
 | G7 Responsive And Text Robustness | pass | 运行态入口可见且未破坏聊天页布局 | 后续补移动端更细复验 |
 | G8 Runtime Verification | pass | 单测通过，真实浏览器双向点击通过 | 维持运行态证据 |

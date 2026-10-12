@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A9DAF1F48B
 title: LOOP Round GPCF-KDS-DKS-087 - GC-Knowledge Fabric 委员会 DecisionRecord IO 与冻结边界
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 建立委员会 DecisionRecord 输入输出契约与争议冻结门禁，覆盖积分确认争议、收益分配争议、重大违规、悬赏结算争议、潜在产值转正式产值、跨单位贡献争议、第三方池子分配、项目内部争议、重大 RAG 强引用争议和收益池规则争议。
 
-本轮只做本地契约、类型和 no-write validator，不写业务系统，不分配收益，不确认积分，不划拨额度，不结算悬赏，不替代 WAES gate。
+本轮只做本地契约、类型和 no-write validator，不写业务系统，不分配收益，不确认积分，不划拨额度，不结算悬赏，不替代 WAME gate。
 
 ## 2. 本轮输入资料
 
@@ -55,19 +55,19 @@ superseded_by: []
 - 输出字段必须覆盖 result、reason、actions、freeze scope、visibility、Harness evidence、effective state 和 no-write flags。
 - 冻结范围必须覆盖 object、RAG admission、贡献积分、收益分配、额度划拨、悬赏结算、外部共享。
 - 决策域必须是 governance。
-- 委员会不得替代 WAES gate，不得直接写业务系统，不得直接分配收益或确认积分。
+- 委员会不得替代 WAME gate，不得直接写业务系统，不得直接分配收益或确认积分。
 - 必须要求 Harness evidence，并限制外部账号只看授权视图。
 
 ## 6. 本轮验证结果
 
 | 检查项 | 结果 | 证据摘要 |
 |---|---|---|
-| Committee Decision policy smoke | pass | `committee_decision_policy_smoke=pass triggers=10 input_fields=11 output_fields=12 freeze_scopes=7 decision_domain=governance waes_not_replaced=covered harness_evidence_required=true writes_business_system=0 writes_revenue_distribution=0 writes_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0` |
+| Committee Decision policy smoke | pass | `committee_decision_policy_smoke=pass triggers=10 input_fields=11 output_fields=12 freeze_scopes=7 decision_domain=governance wame_not_replaced=covered harness_evidence_required=true writes_business_system=0 writes_revenue_distribution=0 writes_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0` |
 | 覆盖矩阵 | pass | `okf_types_api_validator_coverage=pass coverage_items=15 okf_files=22 type_files=24 api_files=15 validator_files=22 fixture_files=22 missing_files=0 no_write=covered business_writes=0 external_api_writes=0` |
 | TypeScript 类型检查 | pass | `tsc -p packages/shared/tsconfig.json --noEmit` 与 `tsc -p packages/api/tsconfig.json --noEmit` 均无报错 |
-| 前序专项回归 | pass | 状态机、对象关系、WAES IO、RAG 强度、GFIS 写回沙箱、四池 P0 台账 smoke 全部 pass |
-| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAES、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
-| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAES minimum gates、KWE minimum workflow 全部 pass |
+| 前序专项回归 | pass | 状态机、对象关系、WAME IO、RAG 强度、GFIS 写回沙箱、四池 P0 台账 smoke 全部 pass |
+| 既有 API route no-write smoke | pass | Brain/PKC、Governance、GFIS、KWE、WAME、KDS v2 endpoint smoke 全部 pass，真实写入计数均为 0 |
+| 既有 dry-run validators | pass | LOOP Dashboard、Brain/PKC entry contract、GFIS document acceptance E2E、GFIS assistant no-write、Governance ledger、KDS search、WAME minimum gates、KWE minimum workflow 全部 pass |
 | OKF parse | pass | `okf_parse=pass yaml_files=21 json_files=1` |
 | 文档治理门禁 | pass | `document_pollution=pass`；`kds_token=pass fingerprint=bfd9553d`；`loop_document_gate.py` 输出 `gate=pass`、`missing_metadata=0`、`missing_readme_dirs=0` |
 | LOOP 文档门禁残留项 | known gap | `status_counts.missing=1`、`project_counts.missing=1` 为既有仓库元数据缺口，本轮未扩大该缺口 |
@@ -78,7 +78,7 @@ superseded_by: []
 
 - 本轮委员会契约不代表任何真实委员会已经召开或形成决议。
 - DecisionRecord 只能作为 governance evidence 和后续动作依据，不能直接写业务系统、收益台账、积分台账、额度台账或悬赏结算。
-- 冻结范围只是治理门禁建议，实际冻结仍需 WAES/KWE/Harness 受控流程。
+- 冻结范围只是治理门禁建议，实际冻结仍需 WAME/KWE/Harness 受控流程。
 - 当前仓库已有大量非本轮脏变更，本轮不回滚、不整理无关文件。
 
 ## 8. 下一轮建议

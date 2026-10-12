@@ -44,7 +44,7 @@ superseded_by: []
 | 知识缺口 | KGR-GH-ORD-202606-0001 | DKS-025 | 表达葛化订单运行母版缺口 | 未经确认不得转事实 |
 | 资料回收任务 | RRT-GH-ORD-202606-0001 | DKS-025 | 形成资料回收动作 | 只代表任务，不代表资料已收齐 |
 | 资料回收包 | RPK-GH-ORD-202606-0001 | DKS-026 | 约束字段、证据、验收口径 | 未验收前不得进入主事实账 |
-| 候选 SOP | SOPC-GH-ORD-202606-0001 | DKS-026 | 形成 SOP 草案与写回建议 | 必须经 KDS/WAES/人工确认 |
+| 候选 SOP | SOPC-GH-ORD-202606-0001 | DKS-026 | 形成 SOP 草案与写回建议 | 必须经 KDS/WAME/人工确认 |
 | 内测问答链路 | AILR-GH-202606-0001 | DKS-027 | 连接问题、资料、缺口、候选 SOP | 只记录候选链路 |
 | 缺口回流记录 | IGR-GH-202606-0001 | DKS-027 | 将内测发现回流到知识缺口或悬赏 | 委员会确认前不计正式积分 |
 
@@ -109,7 +109,7 @@ superseded_by: []
 | missingFields | 客户确认、履约责任、POD、回款凭证 | 缺失字段 |
 | validationResult | partial | pass / partial / returned / blocked |
 | suggestedAction | 补齐客户确认与责任区分后再提交 | 建议动作 |
-| waesRuleImpact | within_rule | within_rule / rule_review_required |
+| wameRuleImpact | within_rule | within_rule / rule_review_required |
 | humanConfirmationRequired | true | 是否人工确认 |
 
 ### 6.4 WritebackCandidateRoutingRecord
@@ -183,7 +183,7 @@ WAME 在规则以内只记录，不替代人工确认。规则外、重大影响
 - 将报价、意向、渠道线索直接计为正式收入；
 - 将自购 AI 额度计入统一收益池；
 - 未经授权引用合作单位不可见资料；
-- 未经 KDS/WAES/人工确认直接写入主事实账；
+- 未经 KDS/WAME/人工确认直接写入主事实账；
 - 未经委员会确认直接确认积分、收益、扣罚或争议结果。
 
 ## 11. DKS-027 完成定义

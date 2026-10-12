@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-REVIEW-AUTH-GPCF-WORKTREE-CONFIRMATION-20260627
 title: GlobalCloud 项目群 REVIEW-AUTH GPCF 工作区逐包确认请求 2026-06-27
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

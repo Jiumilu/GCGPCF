@@ -21,7 +21,7 @@ NO_WRITE_KEYS = (
     "writesGpc",
     "writesErp",
     "writesMes",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesReadReceipt",
     "writesAuditTraceRecord",
@@ -109,7 +109,7 @@ def main() -> int:
         "createsEventRecords": 0,
         "createsActionReceipts": 0,
         "createsHarnessEvidence": 0,
-        "createsWaesGateResults": 0,
+        "createsWameGateResults": 0,
         "createsKweWorkItems": 0,
         "persistsEvidence": 0,
         "approvesBusinessWrite": 0,
@@ -169,7 +169,7 @@ def main() -> int:
             "createsEventRecord",
             "createsActionReceipt",
             "createsHarnessEvidence",
-            "createsWaesGateResult",
+            "createsWameGateResult",
             "createsKweWorkItem",
             "persistsEvidence",
             "approvesBusinessWrite",
@@ -184,7 +184,7 @@ def main() -> int:
         counts["createsEventRecords"] += int(preview["createsEventRecord"] is True)
         counts["createsActionReceipts"] += int(preview["createsActionReceipt"] is True)
         counts["createsHarnessEvidence"] += int(preview["createsHarnessEvidence"] is True)
-        counts["createsWaesGateResults"] += int(preview["createsWaesGateResult"] is True)
+        counts["createsWameGateResults"] += int(preview["createsWameGateResult"] is True)
         counts["createsKweWorkItems"] += int(preview["createsKweWorkItem"] is True)
         counts["persistsEvidence"] += int(preview["persistsEvidence"] is True)
         counts["approvesBusinessWrite"] += int(preview["approvesBusinessWrite"] is True)
@@ -235,11 +235,11 @@ def main() -> int:
         f"blocked_write_read_receipt_preview={actual['blockedWriteReadReceiptPreview']} "
         f"creates_read_receipts={actual['createsReadReceipts']} creates_audit_trace_records={actual['createsAuditTraceRecords']} "
         f"creates_event_records={actual['createsEventRecords']} creates_action_receipts={actual['createsActionReceipts']} "
-        f"creates_harness_evidence={actual['createsHarnessEvidence']} creates_waes_gate_results={actual['createsWaesGateResults']} "
+        f"creates_harness_evidence={actual['createsHarnessEvidence']} creates_wame_gate_results={actual['createsWameGateResults']} "
         f"creates_kwe_work_items={actual['createsKweWorkItems']} persists_evidence={actual['persistsEvidence']} "
         f"approves_business_write={actual['approvesBusinessWrite']} promotes_lifecycle={actual['promotesLifecycle']} "
         f"completes_committee_decision={actual['completesCommitteeDecision']} writes_gfis=0 writes_gpc=0 "
-        "writes_erp=0 writes_mes=0 writes_waes_gate_result=0 writes_kwe_work_item=0 "
+        "writes_erp=0 writes_mes=0 writes_wame_gate_result=0 writes_kwe_work_item=0 "
         "writes_read_receipt=0 writes_audit_trace_record=0 writes_event_record=0 "
         "writes_action_receipt=0 writes_harness_evidence=0 writes_admission_record=0 "
         "writes_review_queue_item=0 writes_confirmation_record=0 writes_decision_record=0 "

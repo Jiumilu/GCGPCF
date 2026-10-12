@@ -13,7 +13,7 @@ TYPE_FILE = ROOT / "packages" / "shared" / "src" / "knowledge" / f"{SLUG}.ts"
 FIXTURE = ROOT / "fixtures" / "gfis" / f"{SLUG}-dry-run.json"
 UPSTREAM = ROOT / "fixtures" / "gfis" / "gfis-assistant-dks-259-ack-escalation-sla-breach-review-resolution-option-approval-packet-preview-dry-run.json"
 TYPE_PREFIX = "GfisAssistantDks260AckEscalationSlaBreachReviewResolutionOptionApprovalPacketRoutingQueuePreview"
-NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesRoutingQueue', 'writesQueueItem', 'writesApprovalAssignment', 'writesApprovalLock', 'writesApprovalPacket', 'writesApprovalRequest', 'writesApprovalDecision', 'writesCommitteeDecision', 'writesFreezeAction', 'writesWaesGateResult', 'writesKweWorkItem', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
+NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesRoutingQueue', 'writesQueueItem', 'writesApprovalAssignment', 'writesApprovalLock', 'writesApprovalPacket', 'writesApprovalRequest', 'writesApprovalDecision', 'writesCommitteeDecision', 'writesFreezeAction', 'writesWameGateResult', 'writesKweWorkItem', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
 
 def camel_to_snake(value: str) -> str:
     return re.sub(r"(?<!^)(?=[A-Z])", "_", value).lower()
@@ -52,10 +52,10 @@ def main() -> int:
     queue_slots = set(policy["routing_queue_slots"])
     queue_priorities = set(policy["routing_queue_priorities"])
     totals = {key: 0 for key in NO_WRITE_KEYS}
-    counts = {"brainSurface":0,"pkcSurface":0,"gfisAssistantSurface":0,"totalQueueSlotCount":0,"totalCandidateAssigneeCount":0,"totalRequiredEvidenceCount":0,"totalQueueReasonCount":0,"totalBlockedRouteCount":0,"createsRoutingQueues":0,"createsQueueItems":0,"createsApprovalAssignments":0,"locksApprovers":0,"createsApprovalPackets":0,"createsApprovalRequests":0,"createsApprovalDecisions":0,"createsCommitteeDecisions":0,"createsFreezeActions":0,"createsHarnessEvidence":0,"createsWaesGateResults":0,"createsKweWorkItems":0,"persistsEvidence":0,"approvesBusinessWrite":0,"promotesLifecycle":0,"completesCommitteeDecision":0}
+    counts = {"brainSurface":0,"pkcSurface":0,"gfisAssistantSurface":0,"totalQueueSlotCount":0,"totalCandidateAssigneeCount":0,"totalRequiredEvidenceCount":0,"totalQueueReasonCount":0,"totalBlockedRouteCount":0,"createsRoutingQueues":0,"createsQueueItems":0,"createsApprovalAssignments":0,"locksApprovers":0,"createsApprovalPackets":0,"createsApprovalRequests":0,"createsApprovalDecisions":0,"createsCommitteeDecisions":0,"createsFreezeActions":0,"createsHarnessEvidence":0,"createsWameGateResults":0,"createsKweWorkItems":0,"persistsEvidence":0,"approvesBusinessWrite":0,"promotesLifecycle":0,"completesCommitteeDecision":0}
     surface_keys = {"brain":"brainSurface","pkc":"pkcSurface","gfis_assistant":"gfisAssistantSurface"}
-    false_flags = ("createsRoutingQueue","createsQueueItem","createsApprovalAssignment","locksApprover","createsApprovalPacket","createsApprovalRequest","createsApprovalDecision","createsCommitteeDecision","createsFreezeAction","createsHarnessEvidence","createsWaesGateResult","createsKweWorkItem","persistsEvidence","approvesBusinessWrite","promotesLifecycle","completesCommitteeDecision")
-    flag_count_keys = {"createsRoutingQueue":"createsRoutingQueues","createsQueueItem":"createsQueueItems","createsApprovalAssignment":"createsApprovalAssignments","locksApprover":"locksApprovers","createsApprovalPacket":"createsApprovalPackets","createsApprovalRequest":"createsApprovalRequests","createsApprovalDecision":"createsApprovalDecisions","createsCommitteeDecision":"createsCommitteeDecisions","createsFreezeAction":"createsFreezeActions","createsHarnessEvidence":"createsHarnessEvidence","createsWaesGateResult":"createsWaesGateResults","createsKweWorkItem":"createsKweWorkItems","persistsEvidence":"persistsEvidence","approvesBusinessWrite":"approvesBusinessWrite","promotesLifecycle":"promotesLifecycle","completesCommitteeDecision":"completesCommitteeDecision"}
+    false_flags = ("createsRoutingQueue","createsQueueItem","createsApprovalAssignment","locksApprover","createsApprovalPacket","createsApprovalRequest","createsApprovalDecision","createsCommitteeDecision","createsFreezeAction","createsHarnessEvidence","createsWameGateResult","createsKweWorkItem","persistsEvidence","approvesBusinessWrite","promotesLifecycle","completesCommitteeDecision")
+    flag_count_keys = {"createsRoutingQueue":"createsRoutingQueues","createsQueueItem":"createsQueueItems","createsApprovalAssignment":"createsApprovalAssignments","locksApprover":"locksApprovers","createsApprovalPacket":"createsApprovalPackets","createsApprovalRequest":"createsApprovalRequests","createsApprovalDecision":"createsApprovalDecisions","createsCommitteeDecision":"createsCommitteeDecisions","createsFreezeAction":"createsFreezeActions","createsHarnessEvidence":"createsHarnessEvidence","createsWameGateResult":"createsWameGateResults","createsKweWorkItem":"createsKweWorkItems","persistsEvidence":"persistsEvidence","approvesBusinessWrite":"approvesBusinessWrite","promotesLifecycle":"promotesLifecycle","completesCommitteeDecision":"completesCommitteeDecision"}
     for preview in previews:
         preview_id = preview["routingQueuePreviewId"]
         missing = sorted(required_fields - {camel_to_snake(key) for key in preview})
@@ -120,10 +120,10 @@ def main() -> int:
         f"total_queue_reasons={actual['totalQueueReasonCount']} total_blocked_routes={actual['totalBlockedRouteCount']} "
         "creates_routing_queues=0 creates_queue_items=0 creates_approval_assignments=0 locks_approvers=0 "
         "creates_approval_packets=0 creates_approval_requests=0 creates_approval_decisions=0 creates_committee_decisions=0 "
-        "creates_freeze_actions=0 creates_harness_evidence=0 creates_waes_gate_results=0 creates_kwe_work_items=0 "
+        "creates_freeze_actions=0 creates_harness_evidence=0 creates_wame_gate_results=0 creates_kwe_work_items=0 "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_routing_queue=0 writes_queue_item=0 "
         "writes_approval_assignment=0 writes_approval_lock=0 writes_approval_packet=0 writes_approval_request=0 "
-        "writes_approval_decision=0 writes_committee_decision=0 writes_freeze_action=0 writes_waes_gate_result=0 "
+        "writes_approval_decision=0 writes_committee_decision=0 writes_freeze_action=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 writes_kds_fact=0 "
         "writes_kds_accepted_fact=0 writes_external_api=0"
     )

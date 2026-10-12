@@ -41,7 +41,7 @@
         "source_owner",
         "project_owner",
         "kds_operator",
-        "waes_reviewer",
+        "wame_reviewer",
         "other_authorized"
       ]
     },
@@ -134,7 +134,7 @@
     "createsConfirmationFact": false,
     "createsCommitteeDecision": false,
     "realKdsApiWrite": false,
-    "waesWrite": false,
+    "wameWrite": false,
     "businessLedgerWrite": false,
     "settlementWrite": false,
     "ragAdmission": false,

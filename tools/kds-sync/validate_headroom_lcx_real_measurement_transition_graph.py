@@ -85,7 +85,7 @@ def main() -> int:
         "rollback_runbook",
         "sanitized_precheck",
         "real_measurement_authorization_window",
-        "waes_harness_decision",
+        "wame_harness_decision",
         "sanitized_token_ledger",
         "production_proxy_enablement",
         "real_business_equivalence_measurement",
@@ -100,7 +100,7 @@ def main() -> int:
 
     blocked_edges = [edge for edge in edges if edge.get("allowed") is False]
     require(len(blocked_edges) >= 4, "blocked edge count too short")
-    require(any(edge.get("relation") == "requires_waes_harness_admission" for edge in blocked_edges), "missing waes decision block")
+    require(any(edge.get("relation") == "requires_wame_harness_admission" for edge in blocked_edges), "missing wame decision block")
     require(any(edge.get("relation") == "production_proxy_remains_blocked_until_future_authorization" for edge in blocked_edges), "missing proxy block")
     require(any(edge.get("relation") == "real_measurement_requires_non_synthetic_equivalence" for edge in blocked_edges), "missing equivalence block")
     require(any(edge.get("relation") == "production_branch_requires_real_business_equivalence_and_authorized_measurement" for edge in blocked_edges), "missing production branch block")
@@ -120,7 +120,7 @@ def main() -> int:
     require(any(req.get("requirement_id") == "authorized_at" and req.get("current_value") != "missing" for req in reqs), "missing authorized_at mapping")
     require(any(req.get("requirement_id") == "sanitized_production_token_ledger" for req in reqs), "missing ledger mapping")
     require(any(req.get("requirement_id") == "rollback_plan_id" for req in reqs), "missing rollback plan mapping")
-    require(any(req.get("requirement_id") == "waes_harness_admission_decision" for req in reqs), "missing waes decision mapping")
+    require(any(req.get("requirement_id") == "wame_harness_admission_decision" for req in reqs), "missing wame decision mapping")
     require(any(req.get("requirement_id") == "real_business_equivalence_measurement" for req in reqs), "missing real equivalence mapping")
 
     require(graph.get("rollback_anchor", {}).get("rollback_plan_present") is True, "rollback anchor must be present")

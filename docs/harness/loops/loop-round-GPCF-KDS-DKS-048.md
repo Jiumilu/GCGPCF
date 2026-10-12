@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8CBF646E25
 title: LOOP Round GPCF-KDS-DKS-048 - 绿色供应链分布式知识系统当前实施分析
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -107,7 +107,7 @@ superseded_by: []
 本轮不做：
 
 - 真实 KDS API 写入；
-- WAES 写入或放行；
+- WAME 写入或放行；
 - GFIS / GPC / PVAOS / Finance 主账写入；
 - RAG 准入；
 - 指挥舱强引用；

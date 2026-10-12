@@ -45,7 +45,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-5F7E0A5C58
 title: Headroom Independent Loop Round Replay Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AB61A7E360
 title: GPCF-L4-GFIS-REPAIR-056 GFIS 辽宁远航原始凭证采集包
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 | `liaoning_yuanhang_sample_test_record` | GPC | original_proof_collection_open | 0 |
 | `jiangxi_subcontract_sample_production_record` | GFIS | original_proof_collection_open | 0 |
 | `liaoning_yuanhang_project_quotation` | GPC | original_proof_collection_open | 0 |
-| `modern_jinggong_mass_production_release` | WAES | original_proof_collection_open | 0 |
+| `modern_jinggong_mass_production_release` | WAME | original_proof_collection_open | 0 |
 
 合计：`request_count=4`、`open_request_count=4`、`verified_proof_item_count=0`、`missing_proof_item_count=4`。
 
@@ -87,4 +87,4 @@ GFIS/GPCF 仍为 `repair_required` / `partial_repair`，项目群评分继续保
 
 ## Next
 
-继续收集 4 项原始凭证 proof anchors：测试记录或客户反馈附件、江西委托工厂生产/完工记录、辽宁远航项目报价单原件、现代精工转量产批准或 WAES release evidence。
+继续收集 4 项原始凭证 proof anchors：测试记录或客户反馈附件、江西委托工厂生产/完工记录、辽宁远航项目报价单原件、现代精工转量产批准或 WAME release evidence。

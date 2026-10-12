@@ -179,7 +179,7 @@ def main() -> None:
             "extract_five_real_proof_owner_receipt_tasks_from_kds_candidates",
             "prioritize_customer_requirement_or_platform_order_source_of_record",
             "prioritize_customer_requirement_or_platform_order_dispatch_confirmation",
-            "then_waes_confirmation_kds_write_receipt_runtime_primary_key",
+            "then_wame_confirmation_kds_write_receipt_runtime_primary_key",
         ],
     }
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)

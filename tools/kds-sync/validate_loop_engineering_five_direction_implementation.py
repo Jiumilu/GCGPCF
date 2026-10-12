@@ -160,11 +160,11 @@ def main() -> int:
 
     snapshot = fixture.get("current_debug_snapshot", {})
     real_counts = snapshot.get("real_lane_counts", {})
-    for key in ["valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]:
         require(real_counts.get(key) == 0, f"real lane count must remain zero: {key}")
 
     write_counts = snapshot.get("write_counts", {})
-    for key in ["production_writes", "real_external_api_writes", "kds_fact_writes", "waes_gate_result_writes"]:
+    for key in ["production_writes", "real_external_api_writes", "kds_fact_writes", "wame_gate_result_writes"]:
         require(write_counts.get(key) == 0, f"write count must remain zero: {key}")
 
     recovery = fixture.get("recovery_checkpoint", {})
@@ -187,7 +187,7 @@ def main() -> int:
         "runtime_primary_key_ready | `0`",
         "review_queue | `0`",
         "runtime_intake | `0`",
-        "waes_review | `0`",
+        "wame_review | `0`",
         "verified | `0`",
         "loop_engineering_five_direction_implementation=pass",
     ]:
@@ -217,7 +217,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
     ]:
         require(phrase in status_text, f"current status missing boundary phrase: {phrase}")
@@ -238,7 +238,7 @@ def main() -> int:
         "loop_engineering_five_direction_implementation=pass "
         "run=implemented stop=implemented verify=implemented recover=implemented debug=implemented "
         "status_ceiling=partial_repair real_business_lane=repair_required "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted_allowed=false integrated_allowed=false production_ready_allowed=false "
         f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )

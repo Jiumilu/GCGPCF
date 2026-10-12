@@ -26,7 +26,7 @@ EXPECTED_REPOS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",
@@ -81,7 +81,7 @@ GFIS_ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 

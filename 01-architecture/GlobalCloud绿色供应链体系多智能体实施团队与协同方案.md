@@ -179,7 +179,7 @@ superseded_by: []
 
 1. 擅自修改跨域主责边界
 2. 擅自将总体状态升级为 `complete`
-3. 擅自改变 WAES/GPC/GFIS/PVAOS/Edge 的核心定位
+3. 擅自改变 WAME/GPC/GFIS/PVAOS/Edge 的核心定位
 4. 将 AI 建议写成业务事实
 
 ## 7. 交付包与团队映射

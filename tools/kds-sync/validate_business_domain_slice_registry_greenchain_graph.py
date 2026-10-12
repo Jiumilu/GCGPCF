@@ -74,7 +74,7 @@ def main() -> int:
         require(bool(mapping.get(category)), f"six-category mapping missing: {category}")
 
     boundary = evidence.get("boundary", {})
-    for key in ["real_source_records", "runtime_primary_key_ready", "waes_review"]:
+    for key in ["real_source_records", "runtime_primary_key_ready", "wame_review"]:
         require(boundary.get(key) == 0, f"boundary {key} must be 0")
     for key in ["accepted", "integrated", "production_ready", "runtime_write", "kds_api_write"]:
         require(boundary.get(key) is False, f"boundary {key} must be false")

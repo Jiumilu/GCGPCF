@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-769242C3DB
 title: CodeGraph Project Group Steady State Recheck Evidence 20260622
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 | GlobalCloud GFIS | added=1 / modified=0 / removed=0 | policy_exception_watch |
 | GlobalCloud GPC | added=0 / modified=0 / removed=0 | steady |
 | GlobalCloud PVAOS | added=0 / modified=0 / removed=0 | steady |
-| GlobalCloud WAES | added=0 / modified=0 / removed=0 | steady |
+| GlobalCloud WAME | added=0 / modified=0 / removed=0 | steady |
 | GlobalCloud KDS | added=0 / modified=1 / removed=0 | active_drift_watch |
 | GlobalCloud Brain | added=0 / modified=4 / removed=0 | active_drift_watch |
 | GlobalCloud PKC | added=0 / modified=0 / removed=0 | steady |

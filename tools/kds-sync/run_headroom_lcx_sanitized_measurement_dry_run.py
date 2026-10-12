@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 LEDGER_JSON = ROOT / "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json"
-ADMISSION_JSON = ROOT / "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.json"
+ADMISSION_JSON = ROOT / "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.json"
 AUTHORIZED_PRECHECK_JSON = ROOT / "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json"
 OUTPUT_JSON = ROOT / "docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.json"
 OUTPUT_MD = ROOT / "docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md"
@@ -25,7 +25,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -103,7 +103,7 @@ def main() -> int:
         "contains_authorization_header": ledger.get("contains_authorization_header") is False,
         "ledger_production_measurement_allowed": ledger.get("production_token_measurement_allowed") is False,
         "ledger_measured_production_tokens": ledger.get("measured_production_tokens") is False,
-        "waes_harness_admitted": admission.get("gates", {}).get("waes_harness_admitted") is True,
+        "wame_harness_admitted": admission.get("gates", {}).get("wame_harness_admitted") is True,
         "authorized_precheck_gate": precheck.get("gates", {}).get("authorized_measurement_precheck_gate") is True,
     }
     dry_run_gate = all(boundary.values()) and not missing_entry_fields
@@ -132,7 +132,7 @@ def main() -> int:
         "gates": {
             "sanitized_measurement_dry_run_gate": dry_run_gate,
             "check_only": True,
-            "waes_harness_admitted": boundary["waes_harness_admitted"],
+            "wame_harness_admitted": boundary["wame_harness_admitted"],
             "authorized_precheck_gate": boundary["authorized_precheck_gate"],
             "production_token_measurement_allowed": False,
             "measured_production_tokens": False,
@@ -153,7 +153,7 @@ def main() -> int:
 doc_id: GPCF-DOC-A1E6CF72D2
 title: Headroom LCX Sanitized Measurement Dry Run Evidence 20260622
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -182,7 +182,7 @@ superseded_by: []
 | artifact | path |
 |---|---|
 | sanitized ledger | `{LEDGER_JSON.relative_to(ROOT).as_posix()}` |
-| WAES/Harness admitted decision | `{ADMISSION_JSON.relative_to(ROOT).as_posix()}` |
+| WAME/Harness admitted decision | `{ADMISSION_JSON.relative_to(ROOT).as_posix()}` |
 | authorized measurement precheck | `{AUTHORIZED_PRECHECK_JSON.relative_to(ROOT).as_posix()}` |
 
 ## 门禁
@@ -191,7 +191,7 @@ superseded_by: []
 |---|---|
 | sanitized_measurement_dry_run_gate | {str(dry_run_gate).lower()} |
 | check_only | true |
-| waes_harness_admitted | {str(boundary["waes_harness_admitted"]).lower()} |
+| wame_harness_admitted | {str(boundary["wame_harness_admitted"]).lower()} |
 | authorized_precheck_gate | {str(boundary["authorized_precheck_gate"]).lower()} |
 | entry_count | {len(entries)} |
 | saving_rate | not_calculated |
@@ -215,7 +215,7 @@ superseded_by: []
 doc_id: GPCF-DOC-D83FE8C1B1
 title: Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -233,7 +233,7 @@ superseded_by: []
 
 ## 输入
 
-- WAES/Harness 已准入 `admitted_for_sanitized_measurement_precheck`。
+- WAME/Harness 已准入 `admitted_for_sanitized_measurement_precheck`。
 - 当前只允许脱敏台账元数据 dry-run。
 
 ## 动作

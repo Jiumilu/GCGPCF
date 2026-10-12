@@ -14,11 +14,11 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/was-scenario-profile-matrix-20260621
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 DIMENSIONS = ["physical_asset", "rule_asset", "intelligence_asset", "data_asset", "economic_asset", "energy_asset", "organization_asset", "spacetime_asset"]
 FLOWS = ["material_flow", "information_flow", "capital_flow", "spacetime_flow", "energy_flow", "commerce_flow", "knowledge_flow", "rule_flow"]
 CHAIN_LINKS = ["customer_order", "supplier_procurement", "production_work_order", "quality_inspection", "logistics_delivery", "energy_consumption", "carbon_footprint", "settlement_profit", "knowledge_reference", "recycling_circular"]
-PROFILE_REQUIRED_KEYS = ["profile_id", "projects", "business_chain_links", "required_asset_dimensions", "required_flows", "source_of_record", "waes_gate", "kds_backlink_policy", "rag_reference_policy", "writeback_policy", "pool_link_policy", "blockers", "closure_policy"]
+PROFILE_REQUIRED_KEYS = ["profile_id", "projects", "business_chain_links", "required_asset_dimensions", "required_flows", "source_of_record", "wame_gate", "kds_backlink_policy", "rag_reference_policy", "writeback_policy", "pool_link_policy", "blockers", "closure_policy"]
 
 
 def require(condition: bool, message: str) -> None:
@@ -86,8 +86,8 @@ def validate_matrix(matrix: dict[str, Any]) -> list[str]:
         covered_links.update(profile.get("business_chain_links", []))
         if profile.get("source_of_record") != "KDS":
             failures.append(f"{profile.get('profile_id')}:source_of_record_not_kds")
-        if not str(profile.get("waes_gate", "")).startswith("waes://gate/"):
-            failures.append(f"{profile.get('profile_id')}:waes_gate_missing")
+        if not str(profile.get("wame_gate", "")).startswith("wame://gate/"):
+            failures.append(f"{profile.get('profile_id')}:wame_gate_missing")
         if "does_not_equal" not in str(profile.get("closure_policy", "")) and "no_business_acceptance" not in str(profile.get("closure_policy", "")) and "not production integration" not in str(profile.get("closure_policy", "")):
             failures.append(f"{profile.get('profile_id')}:closure_policy_must_block_status_overclaim")
 
@@ -138,7 +138,7 @@ def main() -> int:
     require(fixture_gate.get("expected_negative_rejection") == 3, "negative rejection mismatch")
 
     boundary = evidence.get("boundary", {})
-    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]:
         require(boundary.get(key) == 0, f"boundary.{key} must remain 0")
     for key in ["accepted", "integrated", "production_ready"]:
         require(boundary.get(key) is False, f"boundary.{key} must remain false")
@@ -157,9 +157,9 @@ def main() -> int:
         "was_scenario_profile_matrix=pass "
         "project_group_scope=14/14 scenario_profiles=10 asset_dimensions=8/8 flows=8/8 "
         "green_supply_chain_links=10/10 positive_fixtures=1 negative_fixtures=3 "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
-        "next_round=GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001"
+        "next_round=GPCF-ONTOLOGY-WAS-WAME-KDS-RAG-WRITEBACK-GATE-PACK-001"
     )
     return 0
 

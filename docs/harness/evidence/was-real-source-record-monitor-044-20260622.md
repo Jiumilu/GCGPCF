@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7D7BB6C044
 title: WAS 真实源记录监控 044 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_044.py
 
 - 本证据不会创建或推断主数据版本、数据血缘、API 日志、访问授权、数据质量校验、审计轨迹或保留策略证据。
 - This evidence does not write GFIS/KWE runtime.
-- 本证据不会创建 KDS 官方事实、WAES 审核、运行层主键、审核队列、运行接收、已验证制品，或 accepted、integrated、production ready 状态。
+- 本证据不会创建 KDS 官方事实、WAME 审核、运行层主键、审核队列、运行接收、已验证制品，或 accepted、integrated、production ready 状态。
 
 ## Next Round
 

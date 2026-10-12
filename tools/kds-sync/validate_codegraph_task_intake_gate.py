@@ -145,7 +145,7 @@ def validate_static_artifacts() -> None:
         "manual_scan_files",
         "review_rework_count",
         "blocked",
-        "Harness / WAES",
+        "Harness / WAME",
     ]:
         require(phrase in doc, f"task intake doc missing phrase: {phrase}")
 

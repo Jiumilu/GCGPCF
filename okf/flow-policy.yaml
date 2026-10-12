@@ -10,7 +10,7 @@ standard_chain:
   - source_registration
   - evidence_binding
   - ai_analysis
-  - waes_gate_check
+  - wame_gate_check
   - kwe_work_item
   - human_or_committee_confirmation
   - kds_fact_entry
@@ -21,11 +21,11 @@ standard_chain:
   - gap_close_or_bounty_continue
 promotion_rules:
   fact_candidate:
-    requires: [source_refs, evidence_refs, waes_gate_passed, human_or_committee_confirmation]
+    requires: [source_refs, evidence_refs, wame_gate_passed, human_or_committee_confirmation]
   sop_candidate:
     requires: [scope, gate_points, responsibility_boundary, review_record]
   writeback_candidate:
-    requires: [waes_writeback_gate, business_owner_confirmation]
+    requires: [wame_writeback_gate, business_owner_confirmation]
   contribution_record:
     requires: [human_or_committee_confirmation]
   revenue_record:

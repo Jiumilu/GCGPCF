@@ -48,7 +48,7 @@ def frontmatter(path: Path, title: str) -> str:
             f"doc_id: {meta['doc_id']}",
             f"title: {title}",
             f"project: {meta['project']}",
-            "related_projects: [GFIS, GPC, PVAOS, WAES, KDS]",
+            "related_projects: [GFIS, GPC, PVAOS, WAME, KDS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -132,7 +132,7 @@ def build_template(schema: dict[str, Any], queue: dict[str, Any], template_type:
             "createsConfirmationFact": False,
             "createsCommitteeDecision": False,
             "realKdsApiWrite": False,
-            "waesWrite": False,
+            "wameWrite": False,
             "businessLedgerWrite": False,
             "settlementWrite": False,
             "ragAdmission": False,
@@ -179,7 +179,7 @@ def write_md(template: dict[str, Any], path: Path, title: str, purpose: str) -> 
     md += "## 边界\n\n"
     md += "- 空白记录仅作模板，不包含真实的确认或委员会决策。\n"
     md += "- 预填身份字段仅保留与来源候选人的可追溯链路。\n"
-    md += "- 不会执行真实 KDS API、WAES、GFIS、GPC、PVAOS、财务入账、清算、RAG 入场或生产写入。\n"
+    md += "- 不会执行真实 KDS API、WAME、GFIS、GPC、PVAOS、财务入账、清算、RAG 入场或生产写入。\n"
     md += "- 未来填充记录需另行提供受控证据并由人工或委员会处理。\n"
     path.write_text(preserve_frontmatter(path, md, title), encoding="utf-8")
 

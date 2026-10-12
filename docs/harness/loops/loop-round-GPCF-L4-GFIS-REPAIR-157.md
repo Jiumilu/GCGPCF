@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F2DE220F45
 title: GPCF-L4-GFIS-REPAIR-157
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 用户确认葛化工厂仍在建设期，辽宁远航首笔订单当前由现代精工工厂 OEM 代加工承载。
 - 用户确认 GFIS 是现代精工 OEM 代加工阶段和葛化自建工厂投产后的同一运行时系统。
-- GFIS 上一轮仍缺有效人工批准、真实回执、签章完成件、客户确认、KDS write receipt 和 WAES confirmation。
+- GFIS 上一轮仍缺有效人工批准、真实回执、签章完成件、客户确认、KDS write receipt 和 WAME confirmation。
 
 ## 本轮目标
 
@@ -31,7 +31,7 @@ superseded_by: []
 ## 输出
 
 ```text
-liaoning_yuanhang_runtime_positioning_consistency_guard=pass positioning_rules=7 rules_passed=7 wrong_subjects_blocked=4 demo_subject_allowed=0 current_runtime_sites=1 future_runtime_sites=1 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=runtime_positioning_consistency_guard_passed_no_release runtime_sop_e2e=repair_required
+liaoning_yuanhang_runtime_positioning_consistency_guard=pass positioning_rules=7 rules_passed=7 wrong_subjects_blocked=4 demo_subject_allowed=0 current_runtime_sites=1 future_runtime_sites=1 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=runtime_positioning_consistency_guard_passed_no_release runtime_sop_e2e=repair_required
 ```
 
 ## 验证
@@ -43,9 +43,9 @@ liaoning_yuanhang_runtime_positioning_consistency_guard=pass positioning_rules=7
 
 ## 边界
 
-- 未写真实 KDS、WAES、外部 API 或生产数据库。
+- 未写真实 KDS、WAME、外部 API 或生产数据库。
 - 未执行 `bench migrate`、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更。
-- 未创建签章完成件、客户确认函、采购订单/合同、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated。
+- 未创建签章完成件、客户确认函、采购订单/合同、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## 真实计数
 

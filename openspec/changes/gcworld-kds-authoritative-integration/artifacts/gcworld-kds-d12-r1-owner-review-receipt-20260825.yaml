@@ -15,7 +15,7 @@ responsibility_receipts:
     body_read: 11
     metadata_only: 16
     result: completed_read_only
-  - partition: gcworld_waes_content
+  - partition: gcworld_wame_content
     thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
     thread_title: LOOP工程-知识工程
     turn_id: 01a037b8-fbb6-7271-9b34-76110d1884c4
@@ -116,7 +116,7 @@ path_reviews:
     fact_state: 来源候选，不是正式业务事实
     retention_and_risk: 缺少原始DOCX SHA、不可变来源ID、提取器版本、owner、批准人和授权回执
     recommendation: 独立提交候选
-  - path: 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+  - path: 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
     classification: S2
     body_read: true
     content_nature: V1.0架构与实施方案的textutil全文提取版
@@ -236,7 +236,7 @@ cross_path_findings:
   - 十三项已审正文均为规范性方案、派生投影、告警、运行报告或治理证据，不应自动提升为正式业务事实
   - W01-W20结构覆盖百分之百不代表业务完成，同批质量周报仍报告二百一十二个会议阻断项
   - 三个零字节JSON只能证明文件存在，不能证明同步成功
-  - 两个GCWORLD与WAES文档必须原子处置，并补齐原始DOCX哈希、来源标识、提取器版本、owner和批准证据
+  - 两个GCWORLD与WAME文档必须原子处置，并补齐原始DOCX哈希、来源标识、提取器版本、owner和批准证据
   - 十六项UNKNOWN中多项权限模式为600，应按潜在敏感内容继续原位保全并禁止正文读取
   - 本轮没有形成删除候选；所有归档和提交建议仍需独立授权
 pre_and_post_gate:
@@ -255,7 +255,7 @@ pre_and_post_gate:
   codex_automations_paused: 3
   hermes_jobs_disabled_and_paused: 11
   gbrain_autopilot_and_worker: quiet
-  matching_gcworld_or_waes_import_process: none_observed
+  matching_gcworld_or_wame_import_process: none_observed
 zero_mutation_statement:
   kds_files_created_modified_moved_deleted: 0
   staging_commit_push: 0

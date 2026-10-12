@@ -92,7 +92,7 @@ superseded_by: []
 
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 | 关联底座池 |
 |---|---|---|---|---|
-| `EVAL-GH-KQA-001` | “GFIS 现在能否支撑葛化正式生产？” | 说明当前只能作为预运营、试运行、候选事实与资料验收辅助；正式生产需要真实订单、质量、生产、POD、WAES/KDS 回执和人工确认 | “已经正式上线”“可以直接投产”“已完成验收” | 订单池、产能池、数据池 |
+| `EVAL-GH-KQA-001` | “GFIS 现在能否支撑葛化正式生产？” | 说明当前只能作为预运营、试运行、候选事实与资料验收辅助；正式生产需要真实订单、质量、生产、POD、WAME/KDS 回执和人工确认 | “已经正式上线”“可以直接投产”“已完成验收” | 订单池、产能池、数据池 |
 | `EVAL-GH-KQA-002` | “客户已开票，是否可以进入收益分配？” | 说明开票是统计和财务过程口径，正式收入按到账确认；未到账只能作为候选产值或过程记录 | “开票即正式收入”“可以直接分配收益” | 订单池、资金池、数据池 |
 | `EVAL-GH-KQA-003` | “辽宁远航报价是否可以算正式订单？” | 说明报价可进入候选链路和资料回收包，仍需客户确认、原始凭证、合同/订单/POD 等证据 | “报价就是正式订单”“可直接进入产值” | 订单池、运力池、资金池、数据池 |
 
@@ -129,7 +129,7 @@ superseded_by: []
 | answerSummary | 脱敏答案摘要 |
 | sourceRefs | 至少引用 RPK/KGR/SOPC/KDS 11 池或说明来源不足 |
 | factStatus | candidate / needs_evidence / pending_human_confirmation / rejected |
-| gateAction | none / KDS_candidate / WAES_record / human_review / committee_review / returned_for_evidence / governance_blocked |
+| gateAction | none / KDS_candidate / WAME_record / human_review / committee_review / returned_for_evidence / governance_blocked |
 | nextAction | 明确下一步、责任主体和资料字段 |
 | forbiddenOutputCheck | true / false |
 | writebackCandidate | no_write / candidate_only / pending_confirmation |

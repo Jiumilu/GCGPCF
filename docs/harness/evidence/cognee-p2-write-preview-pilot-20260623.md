@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2D6F01
 title: Cognee P2 写入预览 Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,14 +39,14 @@ python3 loop/context/cognee/scripts/validate-cognee-p2-write-preview-output.py \
 - requested_write_count: `5`
 - preview_block_rate: `1.0`
 - owner_authorization_presence_rate: `1.0`
-- waes_pass_rate: `1.0`
+- wame_pass_rate: `1.0`
 - preview_tier_rate: `1.0`
 - marker_coverage: `1.0`
 - mean_saving_rate: `0.049075`
 - pilot_gate_pass: `false`
-- pilot_rule: `preview_block_rate_min=1.0, owner_authorization_presence_min=1.0, waes_pass_rate_min=1.0, payload_tier_preview_min=1.0`
+- pilot_rule: `preview_block_rate_min=1.0, owner_authorization_presence_min=1.0, wame_pass_rate_min=1.0, payload_tier_preview_min=1.0`
 
-> 该轮判定说明：当前 P2 阈值通过，授权与 WAES 放行覆盖达到门禁要求。
+> 该轮判定说明：当前 P2 阈值通过，授权与 WAME 放行覆盖达到门禁要求。
 
 ## 2. 结果字段（摘要）
 
@@ -61,7 +61,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p2-write-preview-output.py \
   - `requested_write_count`
   - `preview_block_rate`
   - `owner_authorization_presence_rate`
-  - `waes_pass_rate`
+  - `wame_pass_rate`
   - `preview_tier_rate`
   - `marker_coverage`
   - `mean_saving_rate`

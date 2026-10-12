@@ -102,7 +102,7 @@ gfis.quality_inspection.accepted
 gfis.inventory_transaction.posted
 gfis.factory_shipment.released
 gpc.pod.signed
-waes.governance_approval.approved
+wame.governance_approval.approved
 ```
 
 ## 7. AI 安全边界

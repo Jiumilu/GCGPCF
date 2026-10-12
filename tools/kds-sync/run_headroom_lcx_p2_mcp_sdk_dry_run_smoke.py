@@ -18,7 +18,7 @@ HEADROOM_VENV = Path(os.environ.get("HEADROOM_LCX_VENV", "/tmp/gpcf-headroom-run
 HEADROOM_BIN = HEADROOM_VENV / "bin/headroom"
 MCP_CONFIG = ROOT / "loop/context/headroom/mcp.json"
 EVIDENCE_SCHEMA = ROOT / "loop/context/headroom/harness/evidence.schema.yaml"
-RETRIEVE_GATE = ROOT / "loop/context/headroom/waes/ccr-retrieve-gate.yaml"
+RETRIEVE_GATE = ROOT / "loop/context/headroom/wame/ccr-retrieve-gate.yaml"
 OUTPUT_JSON = ROOT / "docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.json"
 OUTPUT_MD = ROOT / "docs/harness/evidence/headroom-lcx-p2-mcp-sdk-dry-run-smoke-20260621.md"
 
@@ -26,7 +26,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -71,7 +71,7 @@ def main() -> int:
     retrieve_gate = read(RETRIEVE_GATE)
 
     sanitized_text = (
-        "LCX synthetic dry-run sample for GPCF KDS Brain WAES GFIS GPC PVAOS Edge "
+        "LCX synthetic dry-run sample for GPCF KDS Brain WAME GFIS GPC PVAOS Edge "
         "PKC XiaoC XGD XiaoG MMC Studio WAS. "
         "This contains no token, no customer contract, no POD, no credential, and no production source record. "
         "Required markers: production_admission_gate false, accepted false, integrated false, production_ready false."
@@ -90,7 +90,7 @@ def main() -> int:
         ),
     )
     output_text = response.messages[0].get("content", "") if response.messages else ""
-    sdk_required_markers = ["GPCF", "KDS", "WAES", "production_admission_gate", "accepted", "integrated", "production_ready"]
+    sdk_required_markers = ["GPCF", "KDS", "WAME", "production_admission_gate", "accepted", "integrated", "production_ready"]
     sdk_missing_markers = [marker for marker in sdk_required_markers if marker not in output_text]
     marker_index = "\n\nLCX marker index: " + ", ".join(sdk_required_markers)
     adapted_output_text = output_text + marker_index
@@ -103,7 +103,7 @@ def main() -> int:
     retrieve_tool = mcp_config["tools"]["headroom_retrieve"]
     retrieve_gate_configured = (
         retrieve_tool.get("visibility") == "restricted"
-        and retrieve_tool.get("requires_waes_gate") is True
+        and retrieve_tool.get("requires_wame_gate") is True
         and retrieve_tool.get("requires_reason") is True
         and retrieve_tool.get("requires_harness_evidence") is True
         and "default_action: require_evidence" in retrieve_gate
@@ -117,7 +117,7 @@ def main() -> int:
             "loop_round_id",
             "project_id",
             "ccr_retrieve_count",
-            "waes_decision",
+            "wame_decision",
             "sensitive_redaction_gate",
             "measured_production_tokens",
             "accepted",
@@ -167,7 +167,7 @@ def main() -> int:
         "retrieve_gate": {
             "configured": retrieve_gate_configured,
             "visibility": retrieve_tool.get("visibility"),
-            "requires_waes_gate": retrieve_tool.get("requires_waes_gate"),
+            "requires_wame_gate": retrieve_tool.get("requires_wame_gate"),
             "requires_reason": retrieve_tool.get("requires_reason"),
             "requires_harness_evidence": retrieve_tool.get("requires_harness_evidence"),
             "requires_sensitive_check": retrieve_tool.get("requires_sensitive_check"),
@@ -216,7 +216,7 @@ def main() -> int:
 doc_id: GPCF-DOC-7C93269D31
 title: Headroom LCX P2 MCP SDK Dry-run Smoke Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0

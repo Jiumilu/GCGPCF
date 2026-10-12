@@ -6,7 +6,7 @@
       "requestedModules": [
         "knowledge_command_center",
         "kds_object_center",
-        "waes_gate_center",
+        "wame_gate_center",
         "kwe_work_queue",
         "loop_dashboard"
       ],
@@ -14,7 +14,7 @@
         "coveredViews": [
           "knowledge_command_center",
           "kds_object_center",
-          "waes_gate_center",
+          "wame_gate_center",
           "kwe_work_queue",
           "loop_dashboard"
         ],
@@ -22,11 +22,11 @@
           "direct_accept_fact",
           "direct_publish_object",
           "direct_gfis_writeback",
-          "direct_waes_gate_override"
+          "direct_wame_gate_override"
         ],
         "noWrite": true,
         "kdsWrites": 0,
-        "waesWrites": 0,
+        "wameWrites": 0,
         "kweWrites": 0,
         "businessWrites": 0,
         "externalApiWrites": 0
@@ -51,14 +51,14 @@
         "blockedActions": [
           "direct_accept_fact",
           "direct_gfis_writeback",
-          "direct_waes_gate_override",
+          "direct_wame_gate_override",
           "direct_revenue_distribution",
           "direct_contribution_confirmation",
           "direct_committee_decision"
         ],
         "noWrite": true,
         "kdsWrites": 0,
-        "waesWrites": 0,
+        "wameWrites": 0,
         "kweWrites": 0,
         "businessWrites": 0,
         "externalApiWrites": 0
@@ -89,7 +89,7 @@
         ],
         "noWrite": true,
         "kdsWrites": 0,
-        "waesWrites": 0,
+        "wameWrites": 0,
         "kweWrites": 0,
         "businessWrites": 0,
         "externalApiWrites": 0
@@ -116,12 +116,12 @@
           "force_kds_lifecycle_change",
           "business_system_writeback",
           "committee_decision",
-          "waes_gate_override",
+          "wame_gate_override",
           "formal_revenue_distribution"
         ],
         "noWrite": true,
         "kdsWrites": 0,
-        "waesWrites": 0,
+        "wameWrites": 0,
         "kweWrites": 0,
         "businessWrites": 0,
         "externalApiWrites": 0

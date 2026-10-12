@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F61B890C31
 title: Loop Round GPCF-BR-LR-001
 project: Brain
-related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -18,7 +18,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -50,9 +50,9 @@ REQUIRED_FILES = [
     "adapters/gpc/config.yaml",
     "harness/evidence.schema.yaml",
     "harness/metrics.schema.yaml",
-    "waes/headroom-policy.yaml",
-    "waes/sensitive-pass-through.yaml",
-    "waes/ccr-retrieve-gate.yaml",
+    "wame/headroom-policy.yaml",
+    "wame/sensitive-pass-through.yaml",
+    "wame/ccr-retrieve-gate.yaml",
     "kds/context-optimization-component.yaml",
     "scripts/install-headroom.sh",
     "scripts/start-proxy.sh",
@@ -134,14 +134,14 @@ def main() -> int:
         "accepted: false",
         "integrated: false",
         "production_ready: false",
-        "mcp_retrieve_without_waes_gate",
+        "mcp_retrieve_without_wame_gate",
         "learn_apply_auto",
         "cross_project_memory_as_fact",
     ]:
         require(phrase in policy, f"policy missing phrase: {phrase}")
 
     mcp = load_json(PACKAGE_DIR / "mcp.json")
-    require(mcp["tools"]["headroom_retrieve"]["requires_waes_gate"] is True, "MCP retrieve must require WAES gate")
+    require(mcp["tools"]["headroom_retrieve"]["requires_wame_gate"] is True, "MCP retrieve must require WAME gate")
     require(mcp["production_admission_gate"] is False, "MCP production gate must remain false")
 
     evidence_schema = read(PACKAGE_DIR / "harness/evidence.schema.yaml")
@@ -153,7 +153,7 @@ def main() -> int:
         "tokens_after",
         "saving_rate",
         "ccr_retrieve_count",
-        "waes_decision",
+        "wame_decision",
         "answer_equivalence",
         "marker_gate",
         "sensitive_redaction_gate",
@@ -164,11 +164,11 @@ def main() -> int:
     ]:
         require(field in evidence_schema, f"evidence schema missing field: {field}")
 
-    waes_policy = read(PACKAGE_DIR / "waes/headroom-policy.yaml")
+    wame_policy = read(PACKAGE_DIR / "wame/headroom-policy.yaml")
     for rule in ["LCX-001", "LCX-002", "LCX-003", "LCX-004", "LCX-005"]:
-        require(rule in waes_policy, f"WAES policy missing rule: {rule}")
+        require(rule in wame_policy, f"WAME policy missing rule: {rule}")
 
-    retrieve_gate = read(PACKAGE_DIR / "waes/ccr-retrieve-gate.yaml")
+    retrieve_gate = read(PACKAGE_DIR / "wame/ccr-retrieve-gate.yaml")
     require("default_action: require_evidence" in retrieve_gate, "CCR retrieve must require evidence")
     require("retrieve_reason" in retrieve_gate, "CCR retrieve reason is required")
 
@@ -195,7 +195,7 @@ def main() -> int:
         "agent_wrap_configured",
         "ccr_retrieve_gate_configured",
         "harness_evidence_schema_configured",
-        "waes_policy_configured",
+        "wame_policy_configured",
         "kds_candidate_component_configured",
         "cost_model_replayable",
         "telemetry_default_off",

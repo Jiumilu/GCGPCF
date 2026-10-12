@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B9144A4914
 title: GPCF CodeGraph Impact Report Dry-run 005
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PVAOS-RELEASE-REVIEW-20260625
 title: PVAOS 发布审查候选证据 2026-06-25
 project: PVAOS
-related_projects: [PVAOS, WAES]
+related_projects: [PVAOS, WAME]
 domain: docs
 status: controlled
 version: v1.0

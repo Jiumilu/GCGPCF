@@ -24,7 +24,7 @@ PROJECT_GROUP = [
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -59,14 +59,14 @@ WAS_FIELDS = {
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink",
 }
 ACCEPTED_SOURCE_KINDS = {"customer_order_original", "platform_order_receipt"}
 REQUIRED_PROMOTION_BLOCKERS = {"valid_source_record_missing", "customer_confirmation_missing"}
-REQUIRED_WAES_GATE = "waes://gate/customer-order-source-record-review"
+REQUIRED_WAME_GATE = "wame://gate/customer-order-source-record-review"
 
 
 def require(condition: bool, message: str) -> None:
@@ -159,9 +159,9 @@ def validate_candidate(candidate: dict[str, Any]) -> list[str]:
     if candidate.get("kdsBacklink") != backlink:
         failures.append("kds_backlink_mismatch")
 
-    waes_refs = set(candidate.get("waesGateRefs") or [])
-    if REQUIRED_WAES_GATE not in waes_refs:
-        failures.append("missing_required_waes_gate_ref")
+    wame_refs = set(candidate.get("wameGateRefs") or [])
+    if REQUIRED_WAME_GATE not in wame_refs:
+        failures.append("missing_required_wame_gate_ref")
     blockers = set(candidate.get("promotionBlockers") or [])
     if not REQUIRED_PROMOTION_BLOCKERS.issubset(blockers):
         failures.append("missing_required_promotion_blockers")
@@ -273,7 +273,7 @@ def main() -> int:
         "runtime_primary_key_ready",
         "review_queue",
         "runtime_intake",
-        "waes_review",
+        "wame_review",
         "verified",
     ]:
         require(boundary.get(key) == 0, f"{key} must remain 0")
@@ -281,7 +281,7 @@ def main() -> int:
         require(boundary.get(key) is False, f"{key} must remain false")
     require(boundary.get("gfis_real_business_lane") == "repair_required", "GFIS lane must remain repair_required")
 
-    require(evidence.get("next_round") == "GPCF-ONTOLOGY-WAS-WAES-GATE-INPUT-CANDIDATE-001", "next round mismatch")
+    require(evidence.get("next_round") == "GPCF-ONTOLOGY-WAS-WAME-GATE-INPUT-CANDIDATE-001", "next round mismatch")
     require(evidence.get("next_round_condition") == "only_after_accepted_for_next_gate_greater_than_zero", "next condition mismatch")
 
     for phrase in [
@@ -300,7 +300,7 @@ def main() -> int:
         f"submitted_real_candidate_files={len(submitted)} candidate_files_checked={len(submitted)} "
         f"accepted_for_next_gate={accepted} hold_required={0 if accepted else 1} "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
-        "waes_review=0 accepted=false integrated=false production_ready=false "
+        "wame_review=0 accepted=false integrated=false production_ready=false "
         "next_round_condition=only_after_accepted_for_next_gate_greater_than_zero"
     )
     return 0

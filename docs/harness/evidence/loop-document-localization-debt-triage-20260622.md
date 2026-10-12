@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A90203FCA0
 title: Loop Document Localization Debt Triage 2026-06-22
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -63,7 +63,7 @@ real_source_records_zero_is_not_dev_blocker=true
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 authorization_granted = false
 action_executed = false
@@ -627,7 +627,7 @@ decision:
       - controlled_sample_e2e
       - runtime_intake_development
       - review_queue_development
-      - waes_review_candidate_development
+      - wame_review_candidate_development
       - verified_artifact_candidate_development
       - development_ready_for_real_business_validation
     progress:
@@ -641,7 +641,7 @@ decision:
       - source_owner_confirmation
       - real_runtime_intake
       - real_review_queue
-      - real_waes_review
+      - real_wame_review
       - real_verified_artifact_candidate
   forbidden_claims:
     - real_business_verified
@@ -725,7 +725,7 @@ GFIS:
     primary_key_candidate_generated: true
     source_validation_passed: true
     review_queue_item_generated: true
-    waes_review_candidate_generated: true
+    wame_review_candidate_generated: true
     verified_artifact_candidate_by_fixture: true
     verified_artifact_candidate_by_fixture_generated: true
     local_e2e_dry_run_passed: true
@@ -737,7 +737,7 @@ GFIS:
     valid_source_records: 0
     runtime_intake: 0
     review_queue: 0
-    waes_review: 0
+    wame_review: 0
     verified: 0
     status: pending_source_of_record
 
@@ -788,7 +788,7 @@ still_forbidden:
   - commit_push_deploy_without_authorization
 ```
 
-本裁决不改变 GFIS 真实业务链路门禁：`real_business_lane=repair_required`、`valid_source_records=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0` 仍阻断真实业务验证、状态提升和客户验收。
+本裁决不改变 GFIS 真实业务链路门禁：`real_business_lane=repair_required`、`valid_source_records=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`wame_review=0`、`verified=0` 仍阻断真实业务验证、状态提升和客户验收。
 
 ## GKE-001 A10C12 当前状态只读复核
 

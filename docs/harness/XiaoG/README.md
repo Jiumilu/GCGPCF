@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-39B91D662F
 title: XiaoG
 project: XiaoG
-related_projects: [GPC, WAES, KDS, XiaoG, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0

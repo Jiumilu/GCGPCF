@@ -18,7 +18,7 @@ LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-QUERY-QUALIT
 PROJECTS = {
     "GPCF",
     "KDS",
-    "WAES",
+    "WAME",
     "Brain",
     "GFIS",
     "GPC",
@@ -198,7 +198,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             "doc_id: GPCF-DOC-AGENT-REACH-P8-QUERY-QUALITY-PREFLIGHT-20260622",
             "title: Agent-Reach P8 查询质量预检证据 2026-06-22",
             "project: KDS",
-            "related_projects: [GPCF, KDS, WAES, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, WAME, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",

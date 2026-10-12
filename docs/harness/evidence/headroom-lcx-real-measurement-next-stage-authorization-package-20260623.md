@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623
 title: Headroom LCX Real Measurement Next-Stage Authorization Package Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ status: next_stage_authorization_package_granted_precheck_only
 |---|---|
 | authorization_complete | `true` |
 | missing_required_field_count | `0` |
-| waes_harness_admitted | `true` |
+| wame_harness_admitted | `true` |
 | real_measurement_window_requested | `true` |
 | real_measurement_window_granted | `true` |
 | real_measurement_open | `false` |
@@ -67,7 +67,7 @@ status: next_stage_authorization_package_granted_precheck_only
 | `authorized_at` | required | 绑定带时区的授权时间 |
 | `sanitized_production_token_ledger` | required | 只允许脱敏账本引用 |
 | `rollback_plan_id` | required | 绑定回滚预案或 runbook ID |
-| `waes_harness_admission_decision` | required | 绑定 WAES/Harness 裁决证据 |
+| `wame_harness_admission_decision` | required | 绑定 WAME/Harness 裁决证据 |
 
 ### 运行开闸项
 

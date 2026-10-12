@@ -8,7 +8,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -79,7 +79,7 @@
       "expires_at"
     ],
     "affected_empty_requires_fallback_reason": true,
-    "waes_approval_not_implied": true,
+    "wame_approval_not_implied": true,
     "business_completion_not_implied": true
   },
   "status_boundaries": {

@@ -3,7 +3,7 @@
 
 This validator checks local policy, shared type text, and fixture declarations
 only. It does not create KWE work items, mutate KDS lifecycle, write facts,
-create WAES gate results, write business systems, complete committee decisions,
+create WAME gate results, write business systems, complete committee decisions,
 confirm revenue or scores, or call external APIs.
 """
 
@@ -27,7 +27,7 @@ NO_WRITE_KEYS = (
     "writesKdsLifecycle",
     "writesKdsFact",
     "writesKdsAcceptedFact",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesBusinessSystem",
     "writesTargetReceipt",
     "writesCommitteeDecisionCompletion",
@@ -121,7 +121,7 @@ def main() -> int:
     blocked = 0
     creates_work_items = 0
     items_with_evidence = 0
-    items_with_waes = 0
+    items_with_wame = 0
     items_with_lifecycle = 0
 
     for item in items:
@@ -147,7 +147,7 @@ def main() -> int:
         route_ready += int(item["routeStatus"] == "route_ready")
         blocked += int(item["routeStatus"] == "blocked")
         items_with_evidence += int(bool(item["evidenceRefs"]))
-        items_with_waes += int(bool(item["waesGateRefs"]))
+        items_with_wame += int(bool(item["wameGateRefs"]))
         items_with_lifecycle += int(bool(item["lifecycleAuditRefs"]))
 
         if item["preflightStatus"] == "blocked" and item["routeQueue"] != "blocked_queue":
@@ -166,7 +166,7 @@ def main() -> int:
         "blocked": blocked,
         "createsKweWorkItems": creates_work_items,
         "itemsWithEvidence": items_with_evidence,
-        "itemsWithWaesGateRefs": items_with_waes,
+        "itemsWithWameGateRefs": items_with_wame,
         "itemsWithLifecycleAuditRefs": items_with_lifecycle,
         **totals,
     }
@@ -196,13 +196,13 @@ def main() -> int:
         f"blocked={actual['blocked']} "
         f"creates_kwe_work_items={actual['createsKweWorkItems']} "
         f"items_with_evidence={actual['itemsWithEvidence']} "
-        f"items_with_waes_gate_refs={actual['itemsWithWaesGateRefs']} "
+        f"items_with_wame_gate_refs={actual['itemsWithWameGateRefs']} "
         f"items_with_lifecycle_audit_refs={actual['itemsWithLifecycleAuditRefs']} "
         f"writes_kwe_work_item={actual['writesKweWorkItem']} "
         f"writes_kds_lifecycle={actual['writesKdsLifecycle']} "
         f"writes_kds_fact={actual['writesKdsFact']} "
         f"writes_kds_accepted_fact={actual['writesKdsAcceptedFact']} "
-        f"writes_waes_gate_result={actual['writesWaesGateResult']} "
+        f"writes_wame_gate_result={actual['writesWameGateResult']} "
         f"writes_business_system={actual['writesBusinessSystem']} "
         f"writes_target_receipt={actual['writesTargetReceipt']} "
         f"writes_committee_decision_completion={actual['writesCommitteeDecisionCompletion']} "

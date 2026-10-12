@@ -140,8 +140,8 @@
         "codegraphGitStatus": ""
       },
       {
-        "name": "WAES",
-        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+        "name": "WAME",
+        "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME",
         "fileCount": 281,
         "nodeCount": 3511,
         "edgeCount": 11298,
@@ -281,7 +281,7 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "gfis_clean_reindex_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-WATCHLIST-DRIFT-TRIAGE-013"
 }

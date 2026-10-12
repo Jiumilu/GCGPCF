@@ -106,7 +106,7 @@ def main() -> int:
 
     boundaries = evidence.get("boundaries", {})
     require(boundaries.get("semantic_contract_source") is True, "WAS must be semantic contract source")
-    for key in ["kds_source_of_record", "gfis_runtime", "waes_gate_authority", "production_write", "external_api_write", "kds_write", "waes_write"]:
+    for key in ["kds_source_of_record", "gfis_runtime", "wame_gate_authority", "production_write", "external_api_write", "kds_write", "wame_write"]:
         require(boundaries.get(key) is False, f"boundary must remain false: {key}")
 
     git_status = run(["git", "-C", str(WAS_ROOT), "status", "--short", "--branch", "--ignored"])

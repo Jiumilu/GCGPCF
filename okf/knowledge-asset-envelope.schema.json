@@ -225,7 +225,7 @@
         },
         "authorizationBoundary": {
           "type": "string",
-          "enum": ["read_only", "human_required", "waes_gated", "authorized"]
+          "enum": ["read_only", "human_required", "wame_gated", "authorized"]
         },
         "writeMode": {
           "type": "string",

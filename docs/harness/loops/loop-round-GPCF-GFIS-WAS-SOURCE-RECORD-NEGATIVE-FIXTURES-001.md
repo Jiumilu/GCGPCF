@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4B02CBD3AC
 title: Loop Round GPCF-GFIS-WAS-SOURCE-RECORD-NEGATIVE-FIXTURES-001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,23 +37,23 @@ superseded_by: []
 - rejected_fixture_count=6。
 - accepted_fixture_count=0。
 - GFIS 接收目录写入数为 0。
-- 真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact 均保持 0。
+- 真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 和 verified artifact 均保持 0。
 
 ## loop_was_context
 
 ```yaml
-project_scope: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
 related_flows: [commerce_flow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [gfis_was_source_record_negative_fixture_replay]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]
 evidence_refs: [docs/harness/evidence/gfis-was-source-record-negative-fixtures-20260621.md]
-waes_gate_refs: [waes://gate/customer-order-source-record-review]
+wame_gate_refs: [wame://gate/customer-order-source-record-review]
 kds_backlinks: [pending_real_source_record]
 promotion_blockers: [valid_source_record_missing, customer_confirmation_missing, llm_only_fact_claim]
 next_action: keep_rejecting_invalid_or_llm_only_candidates
-no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready
+no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready
 ```
 
 ## 反馈

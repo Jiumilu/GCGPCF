@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8C7F2F6003
 title: Cognee 全量运行状态判定 2026-06-26
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -41,7 +41,7 @@ superseded_by: []
 - LIVE-002 授权签核校验已通过：
   - `authorization_complete=true`
   - `owner_decision=approve_live_write`
-  - `waes_decision=pass`
+  - `wame_decision=pass`
   - `runtime_dependency_ok=true`
   - `rollback_plan_verified=true`
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-28984FE940
 title: GPCF CodeGraph Integration Closure Audit
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

@@ -14,7 +14,7 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/was-project-group-ontology-registry-
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-001.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 REQUIRED_CATEGORIES = ["object", "relationship", "event", "evidence", "state", "interface"]
 MIN_ENTRY_COUNTS = {
     "object": 10,
@@ -30,7 +30,7 @@ ZERO_BOUNDARY_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 FALSE_BOUNDARY_KEYS = ["accepted", "integrated", "production_ready", "runtime_write", "kds_api_write"]
@@ -103,10 +103,10 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
     promotion = registry.get("promotion_policy", {})
     required_promotion = {
         "kds_source_of_record": "required",
-        "waes_decision": "required_before_promotion",
+        "wame_decision": "required_before_promotion",
         "loop_evidence": "required",
         "llm_candidate": "never_official_fact",
-        "runtime_writeback": "blocked_without_waes_kds_owner_confirmation",
+        "runtime_writeback": "blocked_without_wame_kds_owner_confirmation",
     }
     for key, expected in required_promotion.items():
         if promotion.get(key) != expected:
@@ -119,7 +119,7 @@ def validate_registry(registry: dict[str, Any]) -> list[str]:
         failures.append("future_project_scope_binding_missing")
     if future_policy.get("must_map_to_registry_categories") != REQUIRED_CATEGORIES:
         failures.append("future_project_category_mapping_missing")
-    if future_policy.get("must_not_bypass_kds_waes_loop") is not True:
+    if future_policy.get("must_not_bypass_kds_wame_loop") is not True:
         failures.append("future_project_boundary_missing")
 
     boundary = registry.get("boundary", {})
@@ -154,7 +154,7 @@ def main() -> int:
     require(evidence.get("evidence_id") == "WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-20260621", "invalid evidence id")
     require(evidence.get("status") == "was_project_group_ontology_registry_pass_with_hold", "invalid status")
     require(evidence.get("round_id") == "GPCF-ONTOLOGY-WAS-PROJECT-GROUP-ONTOLOGY-REGISTRY-001", "invalid round id")
-    require(evidence.get("source_gate_pack") == "docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.json", "source gate pack mismatch")
+    require(evidence.get("source_gate_pack") == "docs/harness/evidence/was-wame-kds-rag-writeback-gate-pack-20260621.json", "source gate pack mismatch")
     require(evidence.get("source_scenario_matrix") == "docs/harness/evidence/was-scenario-profile-matrix-20260621.json", "source scenario matrix mismatch")
 
     failures = validate_registry(evidence)
@@ -180,7 +180,7 @@ def main() -> int:
         "project_group_scope | `14/14`",
         "registry_categories | `6/6`",
         "runtime_primary_key_ready | `0`",
-        "waes_review | `0`",
+        "wame_review | `0`",
         "production_ready | `false`",
         "runtime_write | `false`",
         "kds_api_write | `false`",
@@ -194,7 +194,7 @@ def main() -> int:
         "was_project_group_ontology_registry=pass "
         "project_group_scope=14/14 registry_categories=6/6 "
         f"entries={total_entries(evidence)} positive_fixtures=1 negative_fixtures=3 "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false runtime_write=false kds_api_write=false "
         "next_round=GPCF-ONTOLOGY-WAS-LOOP-CONTEXT-COVERAGE-REFRESH-001"
     )

@@ -44,7 +44,7 @@ export type GfisAssistantRepairNotificationSnoozeQueueViewSharePreviewBlockedAct
   | "create_notification"
   | "modify_notification"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "create_kwe_work_item"
   | "persist_evidence"
   | "approve_business_write"
@@ -65,7 +65,7 @@ export interface GfisAssistantRepairNotificationSnoozeQueueViewSharePreviewNoWri
   writesFilterState: 0;
   writesNotification: 0;
   modifiesNotification: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesHarnessEvidence: 0;
   writesKdsLifecycle: 0;
@@ -106,7 +106,7 @@ export interface GfisAssistantRepairNotificationSnoozeQueueViewSharePreview {
   createsNotification: false;
   modifiesNotification: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   createsKweWorkItem: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;

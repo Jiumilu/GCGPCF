@@ -27,7 +27,7 @@ LOOP_MD = ROOT / "docs/harness/loops/loop-round-GPCF-AGENT-REACH-PROJECT-GROUP-S
 EXPECTED_PROJECT_SCOPE = {
     "GPCF",
     "KDS",
-    "WAES",
+    "WAME",
     "Brain",
     "GFIS",
     "GPC",
@@ -40,7 +40,7 @@ EXPECTED_PROJECT_SCOPE = {
     "Studio",
     "WAS",
 }
-EXPECTED_P7_PILOT_PROJECTS = {"GPCF", "GFIS", "KDS", "WAES", "GPC"}
+EXPECTED_P7_PILOT_PROJECTS = {"GPCF", "GFIS", "KDS", "WAME", "GPC"}
 
 
 def fail(message: str) -> None:

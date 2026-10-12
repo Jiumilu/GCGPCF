@@ -6,7 +6,7 @@ last_reviewed: "2026-06-20"
 purpose: >
   Define local dry-run contract for KDS lifecycle transition audit packets.
   Audit packets are read models only and do not mutate KDS lifecycle, accepted
-  facts, published objects, WAES gate results, KWE work items, business systems,
+  facts, published objects, WAME gate results, KWE work items, business systems,
   revenue, scores, or external APIs.
 
 required_fields:
@@ -20,7 +20,7 @@ required_fields:
   - promotion_request_refs
   - source_refs
   - evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - workpack_refs
   - harness_evidence_refs
   - decision_refs
@@ -33,7 +33,7 @@ required_fields:
 audit_statuses:
   - ready_for_review
   - repair_required
-  - waes_required
+  - wame_required
   - human_required
   - committee_required
   - publication_required
@@ -45,7 +45,7 @@ transition_actors:
   - owner
   - system
   - kds
-  - waes
+  - wame
   - kwe
   - human_reviewer
   - committee
@@ -70,12 +70,12 @@ transition_rules:
     from: reviewing
     to: repair_required
     allowed_status: repair_required
-    required_refs: [waes_gate_refs]
+    required_refs: [wame_gate_refs]
   evidence_ready_to_verified:
     from: evidence_ready
     to: verified
-    allowed_status: waes_required
-    required_refs: [waes_gate_refs, harness_evidence_refs]
+    allowed_status: wame_required
+    required_refs: [wame_gate_refs, harness_evidence_refs]
   verified_to_accepted:
     from: verified
     to: accepted
@@ -85,12 +85,12 @@ transition_rules:
     from: accepted
     to: published
     allowed_status: publication_required
-    required_refs: [waes_gate_refs, harness_evidence_refs]
+    required_refs: [wame_gate_refs, harness_evidence_refs]
   any_to_frozen:
     from: any
     to: frozen
     allowed_status: freeze_required
-    required_refs: [waes_gate_refs, harness_evidence_refs]
+    required_refs: [wame_gate_refs, harness_evidence_refs]
   terminal_to_active:
     from: [archived, superseded]
     to: any
@@ -111,7 +111,7 @@ no_write_guards:
   writes_kds_lifecycle: 0
   writes_accepted_fact: 0
   writes_published_object: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_business_system: 0
   writes_revenue_or_score_confirmation: 0

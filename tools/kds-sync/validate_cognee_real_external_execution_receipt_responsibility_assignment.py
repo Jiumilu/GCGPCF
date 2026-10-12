@@ -22,7 +22,7 @@ REQUIRED_FIELDS = [
 REQUIRED_ROLES = {
     "receipt_provider",
     "technical_recorder",
-    "waes_reviewer",
+    "wame_reviewer",
     "readiness_owner",
     "rollback_owner",
 }

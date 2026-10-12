@@ -20,7 +20,7 @@ REQUIRED_EVIDENCE_TOKENS = [
     "gcfis core flow validation passed",
     "gcfis external contract smoke passed",
     "gfis work-order API contract validation passed",
-    "gfis WAES gate event validation passed",
+    "gfis WAME gate event validation passed",
     "npm run quality:100",
     "npm run quality:repo",
     "npm run test:e2e",

@@ -1,5 +1,5 @@
 import type { KnowledgeDomain, RagAdmission } from "./object";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type AgentCapabilityType =
   | "rag_query"
@@ -48,12 +48,12 @@ export interface AgentUsedKnowledgeRecord {
   retrievedObjectRefs: string[];
   sourceRefs: string[];
   evidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   ragAdmissionsUsed: RagAdmission[];
   overreadSignals: AgentOverreadRiskSignal[];
   outputCandidateRefs: string[];
   outcome: AgentKnowledgeUseOutcome;
-  waesGateStatus: WaesGateStatus;
+  wameGateStatus: WameGateStatus;
   harnessEvidenceRef?: string;
   createdAt: string;
   writesAccepted: false;

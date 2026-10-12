@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B637BE22F8
 title: GPC
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

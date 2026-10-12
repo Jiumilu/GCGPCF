@@ -8,11 +8,11 @@ export interface BrainEndpointDefinition {
   handler: string;
   routeMode: BrainRouteMode;
   aggregatesKds: boolean;
-  aggregatesWaes: boolean;
+  aggregatesWame: boolean;
   aggregatesKwe: boolean;
   aggregatesGovernance: boolean;
   writesKds: false;
-  writesWaes: false;
+  writesWame: false;
   writesKwe: false;
   writesBusinessSystem: false;
   writesRevenueDistribution: false;
@@ -26,11 +26,11 @@ export const BRAIN_ENDPOINTS: BrainEndpointDefinition[] = [
     handler: "queryBrainCommandCenter",
     routeMode: "aggregate_read",
     aggregatesKds: true,
-    aggregatesWaes: true,
+    aggregatesWame: true,
     aggregatesKwe: true,
     aggregatesGovernance: true,
     writesKds: false,
-    writesWaes: false,
+    writesWame: false,
     writesKwe: false,
     writesBusinessSystem: false,
     writesRevenueDistribution: false,
@@ -42,11 +42,11 @@ export const BRAIN_ENDPOINTS: BrainEndpointDefinition[] = [
     handler: "getBrainGovernanceView",
     routeMode: "governance_read",
     aggregatesKds: false,
-    aggregatesWaes: true,
+    aggregatesWame: true,
     aggregatesKwe: false,
     aggregatesGovernance: true,
     writesKds: false,
-    writesWaes: false,
+    writesWame: false,
     writesKwe: false,
     writesBusinessSystem: false,
     writesRevenueDistribution: false,
@@ -58,11 +58,11 @@ export const BRAIN_ENDPOINTS: BrainEndpointDefinition[] = [
     handler: "getBrainLoopDashboard",
     routeMode: "dashboard_read",
     aggregatesKds: true,
-    aggregatesWaes: true,
+    aggregatesWame: true,
     aggregatesKwe: true,
     aggregatesGovernance: true,
     writesKds: false,
-    writesWaes: false,
+    writesWame: false,
     writesKwe: false,
     writesBusinessSystem: false,
     writesRevenueDistribution: false,

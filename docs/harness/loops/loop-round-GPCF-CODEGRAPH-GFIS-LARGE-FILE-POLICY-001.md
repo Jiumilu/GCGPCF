@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-794D90A6F1
 title: GPCF CodeGraph GFIS Large File Policy
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

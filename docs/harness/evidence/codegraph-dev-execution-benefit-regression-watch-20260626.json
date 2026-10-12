@@ -53,8 +53,8 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "real_kds_write_performed": false,
-    "real_waes_write_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "real_wame_write_performed": false,
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-READINESS-017"
 }

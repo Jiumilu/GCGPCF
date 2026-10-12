@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-NORMAL-WORK-20260626
 title: CodeGraph 开发态正常工作验证 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -54,8 +54,8 @@ superseded_by: []
 - 不声明运行态正常。
 - 不声明业务功能完成。
 - 不声明 accepted、integrated、production_ready 或 customer_accepted。
-- 不声明 commit、push、deploy、production write、external API write、real KDS write 或 real WAES write。
-- 不把 CodeGraph 当作 WAES、Harness 或人工验收最终裁决。
+- 不声明 commit、push、deploy、production write、external API write、real KDS write 或 real WAME write。
+- 不把 CodeGraph 当作 WAME、Harness 或人工验收最终裁决。
 
 ## 验证命令
 

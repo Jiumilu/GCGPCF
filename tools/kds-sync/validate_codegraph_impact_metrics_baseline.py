@@ -20,7 +20,7 @@ REPOS = [
     Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"),
     Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC"),
     Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS"),
-    Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES"),
+    Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME"),
     Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS"),
     Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain"),
     Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC"),

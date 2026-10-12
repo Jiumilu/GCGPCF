@@ -32,7 +32,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0
   },
   "commands": [
@@ -44,7 +44,7 @@
   ],
   "non_claims": [
     "This dashboard does not prove source-of-record receipt.",
-    "This dashboard does not create runtime primary key, review queue, runtime intake, WAES review, or verified artifact.",
+    "This dashboard does not create runtime primary key, review queue, runtime intake, WAME review, or verified artifact.",
     "This dashboard does not prove UAT, production, customer satisfaction, finance, accepted, or integrated completion.",
     "This dashboard does not authorize production write, external API write, schema sync, bench migrate, deployment, permission change, commit, or push."
   ],

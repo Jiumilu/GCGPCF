@@ -18,10 +18,10 @@ relation_chain:
     required_refs: [object_id, candidate_id, generated_by]
   - relation_type: candidate_checked_by_gate
     from_type: candidate
-    to_type: waes_gate_result
+    to_type: wame_gate_result
     required_refs: [candidate_id, gate_result_id, gate_type]
   - relation_type: gate_opens_work_item
-    from_type: waes_gate_result
+    from_type: wame_gate_result
     to_type: kwe_work_item
     required_refs: [gate_result_id, work_item_id, required_actions]
   - relation_type: work_item_produces_confirmation
@@ -60,7 +60,7 @@ minimum_relation_fields:
 hard_boundaries:
   source_required_for_formal_fact: true
   evidence_required_for_evidence_ready: true
-  waes_gate_required_for_candidates: true
+  wame_gate_required_for_candidates: true
   confirmation_required_for_writeback_candidate: true
   ai_cannot_create_formal_writeback_relation: true
   loop_cannot_promote_business_status: true

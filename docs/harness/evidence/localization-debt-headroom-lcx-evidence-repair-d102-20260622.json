@@ -18,8 +18,8 @@
   "changed_files": [
     "docs/harness/evidence/headroom-lcx-p3-learn-preview-working-memory-gate-20260621.md",
     "docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md",
-    "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md",
-    "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-blocked-20260622.md"
+    "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.md",
+    "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-blocked-20260622.md"
   ],
   "changed_line_items": 66,
   "remaining_target_findings": [],

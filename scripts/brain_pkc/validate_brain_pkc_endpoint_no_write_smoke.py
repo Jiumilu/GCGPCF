@@ -2,7 +2,7 @@
 """Validate Brain and PKC endpoint skeletons against no-write route fixture.
 
 This script inspects local TypeScript route declarations. It does not start a
-server and does not write KDS, WAES, KWE, business systems, ledgers, or external APIs.
+server and does not write KDS, WAME, KWE, business systems, ledgers, or external APIs.
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ def parse_routes(path: Path, mode_key: str) -> list[dict[str, Any]]:
             "aggregatesKwe": re.search(r"aggregatesKwe: (true|false)", body).group(1) == "true",
             "aggregatesGovernance": re.search(r"aggregatesGovernance: (true|false)", body).group(1) == "true",
             "writesKds": re.search(r"writesKds: (true|false)", body).group(1) == "true",
-            "writesWaes": re.search(r"writesWaes: (true|false)", body).group(1) == "true",
+            "writesWame": re.search(r"writesWame: (true|false)", body).group(1) == "true",
             "writesKwe": re.search(r"writesKwe: (true|false)", body).group(1) == "true",
             "writesBusinessSystem": re.search(r"writesBusinessSystem: (true|false)", body).group(1) == "true",
             "writesRevenueDistribution": re.search(r"writesRevenueDistribution: (true|false)", body).group(1)
@@ -40,9 +40,9 @@ def parse_routes(path: Path, mode_key: str) -> list[dict[str, Any]]:
             "writesExternalApi": re.search(r"writesExternalApi: (true|false)", body).group(1) == "true",
         }
         if mode_key == "brain":
-            route["aggregatesWaes"] = re.search(r"aggregatesWaes: (true|false)", body).group(1) == "true"
+            route["aggregatesWame"] = re.search(r"aggregatesWame: (true|false)", body).group(1) == "true"
         else:
-            route["aggregatesWaes"] = False
+            route["aggregatesWame"] = False
         routes.append(route)
     return routes
 
@@ -77,7 +77,7 @@ def main() -> int:
         "routesAggregatingKwe": sum(1 for route in routes if route["aggregatesKwe"]),
         "routesAggregatingGovernance": sum(1 for route in routes if route["aggregatesGovernance"]),
         "writesKds": sum(1 for route in routes if route["writesKds"]),
-        "writesWaes": sum(1 for route in routes if route["writesWaes"]),
+        "writesWame": sum(1 for route in routes if route["writesWame"]),
         "writesKwe": sum(1 for route in routes if route["writesKwe"]),
         "writesBusinessSystem": sum(1 for route in routes if route["writesBusinessSystem"]),
         "writesRevenueDistribution": sum(1 for route in routes if route["writesRevenueDistribution"]),
@@ -108,7 +108,7 @@ def main() -> int:
         f"aggregates_kds={actual['routesAggregatingKds']} "
         f"aggregates_kwe={actual['routesAggregatingKwe']} "
         f"aggregates_governance={actual['routesAggregatingGovernance']} "
-        "writes_kds=0 writes_waes=0 writes_kwe=0 writes_business_system=0 "
+        "writes_kds=0 writes_wame=0 writes_kwe=0 writes_business_system=0 "
         "writes_revenue_distribution=0 writes_external_api=0 no_write=covered"
     )
     return 0

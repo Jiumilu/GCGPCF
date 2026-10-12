@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D186-001
 title: Loop Round GPCF-GCKF-P0-D186-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,7 +30,7 @@ superseded_by: []
 
 - real_repair_owner_response。
 - signed_response_package。
-- waes_review_note。
+- wame_review_note。
 - human_confirmation_record。
 
 扫描结果为四项信号均未到达。本轮不执行 response intake，不发送通知，不确认 repair owner responsibility，不打开 committee case，不写 formal evidence，不写 KDS API。
@@ -54,7 +54,7 @@ superseded_by: []
 ### stop
 
 - stop_type: `hold_required`
-- 停止证据：真实 repair owner response、签署响应包、WAES review note 与人工确认均未到达。
+- 停止证据：真实 repair owner response、签署响应包、WAME review note 与人工确认均未到达。
 - 状态上限：`review_ready_with_hold`。
 - hold_required: true
 
@@ -74,7 +74,7 @@ superseded_by: []
 ### debug
 
 - D186 只证明四项 intake 前置信号当前均未到达。
-- arrival scan 不能替代真实 response、WAES review note、人工确认或业务完成证明。
+- arrival scan 不能替代真实 response、WAME review note、人工确认或业务完成证明。
 
 ## 边界
 
@@ -88,4 +88,4 @@ superseded_by: []
 
 ## 下一轮
 
-若四项 arrival signals 全部到达并通过 WAES 与人工确认，进入 response intake precheck；未到达前继续保持 hold。
+若四项 arrival signals 全部到达并通过 WAME 与人工确认，进入 response intake precheck；未到达前继续保持 hold。

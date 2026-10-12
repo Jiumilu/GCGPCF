@@ -6,7 +6,7 @@ last_reviewed: "2026-06-20"
 purpose: >
   Define local dry-run contract for KWE Promotion Request packages. Promotion
   requests are review material only and do not mutate KDS lifecycle, accepted
-  facts, published objects, WAES gate results, KWE work items, business systems,
+  facts, published objects, WAME gate results, KWE work items, business systems,
   revenue, scores, or external APIs.
 
 required_fields:
@@ -20,7 +20,7 @@ required_fields:
   - request_actor
   - source_refs
   - evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - workpack_refs
   - harness_evidence_refs
   - reviewer_requirement
@@ -33,7 +33,7 @@ promotion_statuses:
   - draft_request
   - ready_for_kwe_review
   - repair_required
-  - waes_required
+  - wame_required
   - human_required
   - committee_required
   - freeze_required
@@ -44,7 +44,7 @@ request_actors:
   - owner
   - system
   - kds
-  - waes
+  - wame
   - kwe
   - human_reviewer
   - committee
@@ -69,7 +69,7 @@ promotion_rules:
     from: reviewing
     to: repair_required
     allowed_status: repair_required
-    required_refs: [waes_gate_refs]
+    required_refs: [wame_gate_refs]
   repair_required_to_evidence_ready:
     from: repair_required
     to: evidence_ready
@@ -78,8 +78,8 @@ promotion_rules:
   evidence_ready_to_verified:
     from: evidence_ready
     to: verified
-    allowed_status: waes_required
-    required_refs: [waes_gate_refs, harness_evidence_refs]
+    allowed_status: wame_required
+    required_refs: [wame_gate_refs, harness_evidence_refs]
   verified_to_accepted:
     from: verified
     to: accepted
@@ -89,12 +89,12 @@ promotion_rules:
     from: accepted
     to: published
     allowed_status: committee_required
-    required_refs: [waes_gate_refs, harness_evidence_refs]
+    required_refs: [wame_gate_refs, harness_evidence_refs]
   any_to_frozen:
     from: any
     to: frozen
     allowed_status: freeze_required
-    required_refs: [waes_gate_refs, harness_evidence_refs]
+    required_refs: [wame_gate_refs, harness_evidence_refs]
 
 hard_boundaries:
   promotion_request_is_not_lifecycle_mutation: true
@@ -109,7 +109,7 @@ no_write_guards:
   writes_kds_lifecycle: 0
   writes_accepted_fact: 0
   writes_published_object: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_business_system: 0
   writes_revenue_or_score_confirmation: 0

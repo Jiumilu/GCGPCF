@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B305BF004A
 title: GPCF-L4-003 KDS 知识索引证据接收
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 | --- | --- |
 | Round ID | GPCF-L4-003 |
 | 对应项目轮次 | KDS-L4-003 |
-| 涉及项目 | KDS, GPC, GFIS, WAES, Brain, PKC, GPCF |
+| 涉及项目 | KDS, GPC, GFIS, WAME, Brain, PKC, GPCF |
 | 本轮业务节点 | 样品规格、签样资料、SOP 与 evidence 回指索引 |
 | 真实项目仓路径 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS` |
 | KDS retrieval | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/docs/harness/evidence/kds-retrieval-KDS-L4-003.json` |

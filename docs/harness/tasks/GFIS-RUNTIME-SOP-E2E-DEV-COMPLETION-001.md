@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-15B317110B
 title: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -74,7 +74,7 @@ task_interface:
       - primary key candidate
       - source validation result
       - review queue item
-      - WAES review candidate
+      - WAME review candidate
       - verified artifact candidate by fixture
       - local E2E dry-run result
       - delivery boundary validator result
@@ -94,7 +94,7 @@ task_interface:
       - Runtime Intake Agent
       - Primary Key / Source Validation Agent
       - Review Queue Agent
-      - WAES Candidate / Artifact Agent
+      - WAME Candidate / Artifact Agent
       - Boundary Validator Agent
     optional:
       - globalcloud-harness-governance
@@ -150,7 +150,7 @@ task_interface:
       - runtime_intake
       - primary_key_validation
       - review_queue
-      - waes_artifact
+      - wame_artifact
       - boundary_validation
       - orchestrator_summary
 
@@ -181,7 +181,7 @@ task_interface:
     - primary_key_candidate_generated
     - source_validation_passed
     - review_queue_item_generated
-    - waes_review_candidate_generated
+    - wame_review_candidate_generated
     - verified_artifact_candidate_by_fixture_generated
     - local_e2e_dry_run_passed
     - delivery_boundary_validator_passed
@@ -208,7 +208,7 @@ controlled_contract_valid_sample
 runtime intake dry-run
 runtime primary key candidate
 review queue item
-WAES review candidate
+WAME review candidate
 verified artifact candidate
 fixture E2E dry-run result
 local validator result
@@ -234,7 +234,7 @@ runtime_intake_module=required
 runtime_primary_key_candidate=required
 source_validation_rules=required
 review_queue_item=required
-waes_review_candidate=required
+wame_review_candidate=required
 verified_artifact_candidate=required
 fixture_e2e_dry_run=required
 local_validator=required
@@ -248,7 +248,7 @@ DEV-COMP-001 contract/schema
 DEV-COMP-002 runtime intake development
 DEV-COMP-003 primary key + source validation
 DEV-COMP-004 review queue item
-DEV-COMP-005 WAES review candidate + verified artifact candidate
+DEV-COMP-005 WAME review candidate + verified artifact candidate
 DEV-COMP-006 delivery boundary validation
 DEV-COMP-007 orchestrator summary
 ```
@@ -266,7 +266,7 @@ goal / changed / verified / risk / next
 ```text
 Phase A=parallel_readonly_design
 Phase B=serial_controlled_implementation
-agents=LOOP Orchestrator, Contract Agent, Runtime Intake Agent, Primary Key / Source Validation Agent, Review Queue Agent, WAES Candidate / Artifact Agent, Boundary Validator Agent
+agents=LOOP Orchestrator, Contract Agent, Runtime Intake Agent, Primary Key / Source Validation Agent, Review Queue Agent, WAME Candidate / Artifact Agent, Boundary Validator Agent
 orchestrator_only_files=LOOP_CONTROL_BOARD.md,gpcf-project-status-matrix.md,GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md,LOOP_GOVERNANCE_SUMMARY_GFIS_RUNTIME_SOP_E2E_DEV_COMPLETION_001.md
 ```
 
@@ -312,7 +312,7 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 accepted=false
 integrated=false
@@ -328,7 +328,7 @@ customer_accepted=false
 GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md
 ```
 
-主 evidence 只记录 contract 摘要、controlled sample 摘要、primary key 生成结果、runtime intake dry-run、review queue item、WAES review candidate、verified artifact candidate、validator 结果，并必须明确：
+主 evidence 只记录 contract 摘要、controlled sample 摘要、primary key 生成结果、runtime intake dry-run、review queue item、WAME review candidate、verified artifact candidate、validator 结果，并必须明确：
 
 ```text
 real_business_source_of_record_verified=false

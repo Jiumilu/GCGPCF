@@ -107,7 +107,7 @@ def write_markdown(path: Path, payload: dict) -> None:
         "doc_id: GPCF-DOC-PHASE10-BACKLOG-TRIAGE",
         "title: KDS Phase 10 Backlog Triage Report",
         "project: KDS",
-        "related_projects: [GPCF, KDS, WAES, GFIS, GPC, Brain, XiaoC, XGD, XiaoG]",
+        "related_projects: [GPCF, KDS, WAME, GFIS, GPC, Brain, XiaoC, XGD, XiaoG]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",

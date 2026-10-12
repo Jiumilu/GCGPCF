@@ -14,7 +14,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -133,8 +133,8 @@
       "admission_gate": true
     },
     {
-      "project": "WAES",
-      "scenario": "waes_status_matrix_summary",
+      "project": "WAME",
+      "scenario": "wame_status_matrix_summary",
       "source_path": "09-status/gpcf-project-status-matrix.md",
       "compressor_mode": "structured_surrogate_no_headroom_runtime",
       "input_tokens_before": 52930,
@@ -150,7 +150,7 @@
       "answer_equivalence": "pass",
       "sensitive_redaction_gate": "pass",
       "required_markers": [
-        "GlobalCloud WAES",
+        "GlobalCloud WAME",
         "governance",
         "ready_for_review"
       ],

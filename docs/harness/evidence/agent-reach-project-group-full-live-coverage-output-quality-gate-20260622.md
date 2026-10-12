@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-OUTPUT-QUALITY-GATE-20260622
 title: Agent-Reach 项目群全量真实搜索覆盖输出质量门禁 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 - 候选 `url` 必须为 `http` 或 `https`，且 `source_domain` 必须与 URL host 一致。
 - 候选 `retrieved_at` 必须为带时区的 ISO 8601 时间。
 - 候选 `snippet_redacted` 不得为空。
-- `project_coverage` 必须为 `1.0`，覆盖 14 项目：GPCF、KDS、WAES、Brain、GFIS、GPC、PVAOS、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS。
+- `project_coverage` 必须为 `1.0`，覆盖 14 项目：GPCF、KDS、WAME、Brain、GFIS、GPC、PVAOS、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS。
 - `query_candidate_coverage` 必须为 `1.0`。
 - `channel_candidate_coverage` 必须为 `1.0`，覆盖 `web`、`rss`、`bilibili`。
 - `query_error_count` 必须为 `0`。

@@ -98,7 +98,7 @@ def main() -> int:
         "candidate_receipt_deduplication_key_completeness",
         "candidate_receipt_status_matrix_completeness",
         "candidate_receipt_blocker_code_completeness",
-        "waes_negative_gate_completeness",
+        "wame_negative_gate_completeness",
         "harness_no_write_guard_completeness",
         "no_write_attestation",
     }, "completeness section", failures)

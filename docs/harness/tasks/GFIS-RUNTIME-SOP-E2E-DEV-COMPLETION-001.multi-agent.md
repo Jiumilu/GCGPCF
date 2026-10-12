@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4ED15E157A
 title: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001 多智能体执行包
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -59,7 +59,7 @@ Contract Agent
 Runtime Intake Agent
 Primary Key / Source Validation Agent
 Review Queue Agent
-WAES Candidate / Artifact Agent
+WAME Candidate / Artifact Agent
 Boundary Validator Agent
 ```
 
@@ -143,17 +143,17 @@ Boundary Validator Agent
 
 - review_queue_item_generated
 
-### 智能体 5：WAES 候选与产物候选
+### 智能体 5：WAME 候选与产物候选
 
 范围：
 
-- WAES review candidate
+- WAME review candidate
 - verified artifact candidate by fixture
 - 本地 E2E dry-run
 
 输出：
 
-- waes_review_candidate_generated
+- wame_review_candidate_generated
 - verified_artifact_candidate_by_fixture_generated
 - local_e2e_dry_run_passed
 
@@ -191,7 +191,7 @@ Boundary Validator Agent
 2. 运行接入智能体
 3. 主键与来源校验智能体
 4. Review Queue 智能体
-5. WAES 候选与产物候选智能体
+5. WAME 候选与产物候选智能体
 6. 边界校验智能体
 7. LOOP 编排摘要
 
@@ -260,7 +260,7 @@ GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001-evidence.md
 - primary key 结果
 - source validation 结果
 - review queue 结果
-- WAES candidate 结果
+- WAME candidate 结果
 - verified artifact candidate by fixture 结果
 - boundary validator 结果
 - 显式非声明
@@ -357,7 +357,7 @@ success_criteria:
   primary_key_candidate_generated: true
   source_validation_passed: true
   review_queue_item_generated: true
-  waes_review_candidate_generated: true
+  wame_review_candidate_generated: true
   verified_artifact_candidate_by_fixture_generated: true
   local_e2e_dry_run_passed: true
   delivery_boundary_validator_passed: true

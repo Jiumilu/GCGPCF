@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FIVE-DIRECTION-RUN-EVID-001
 title: Loop 五方向 RUN-001 运行证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -66,7 +66,7 @@ loop_document_gate=rework_required localization_debt=true
 - 生产写入
 - 真实外部 API 写入
 - KDS fact / accepted fact 写入
-- WAES Gate Result 写入
+- WAME Gate Result 写入
 - Git commit / push
 - `accepted` / `integrated` / `production_ready` 升级
 

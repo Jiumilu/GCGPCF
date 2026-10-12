@@ -79,7 +79,7 @@ def main() -> int:
     require("requires explicit authorization" in allowed["codegraph_sync"], "GFIS codegraph sync must require explicit authorization")
 
     forbidden = evidence["forbidden_without_further_authorization"]
-    for command in ["bench migrate", "schema sync", "production write", "real KDS write", "real WAES write", "external API write", "deployment", "git commit", "git push"]:
+    for command in ["bench migrate", "schema sync", "production write", "real KDS write", "real WAME write", "external API write", "deployment", "git commit", "git push"]:
         require(command in forbidden["commands"], f"forbidden command missing: {command}")
     require("docs/harness/sop-e2e/intake-submissions/contract-chain/**" in forbidden["paths"], "real receipt intake path must be forbidden")
 

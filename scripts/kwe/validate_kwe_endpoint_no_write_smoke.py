@@ -2,7 +2,7 @@
 """Validate KWE endpoint skeleton against the no-write route fixture.
 
 This script inspects local TypeScript route declarations. It does not start a
-server and does not write KWE, KDS, WAES, GFIS, GPC, ledgers, or external APIs.
+server and does not write KWE, KDS, WAME, GFIS, GPC, ledgers, or external APIs.
 """
 
 from __future__ import annotations
@@ -28,7 +28,7 @@ def parse_routes() -> list[dict[str, Any]]:
                 "method": method,
                 "path": path,
                 "routeMode": re.search(r"routeMode: \"([^\"]+)\"", body).group(1),
-                "requiresWaesGate": re.search(r"requiresWaesGate: (true|false)", body).group(1) == "true",
+                "requiresWameGate": re.search(r"requiresWameGate: (true|false)", body).group(1) == "true",
                 "requiresHumanOrCommitteeForFinality": re.search(
                     r"requiresHumanOrCommitteeForFinality: (true|false)", body
                 ).group(1)
@@ -61,7 +61,7 @@ def main() -> int:
         "endpointCount": len(routes),
         "readOnlyCount": sum(1 for route in routes if route["routeMode"] == "read_only"),
         "workRequestCount": sum(1 for route in routes if route["routeMode"] == "work_request"),
-        "waesGatedRequestCount": sum(1 for route in routes if route["requiresWaesGate"]),
+        "wameGatedRequestCount": sum(1 for route in routes if route["requiresWameGate"]),
         "humanOrCommitteeFinalityCount": sum(1 for route in routes if route["requiresHumanOrCommitteeForFinality"]),
         "writesAcceptedFact": sum(1 for route in routes if route["writesAcceptedFact"]),
         "writesBusinessSystem": sum(1 for route in routes if route["writesBusinessSystem"]),
@@ -85,7 +85,7 @@ def main() -> int:
         f"endpoints={actual['endpointCount']} "
         f"read_only={actual['readOnlyCount']} "
         f"work_request={actual['workRequestCount']} "
-        f"waes_gated_requests={actual['waesGatedRequestCount']} "
+        f"wame_gated_requests={actual['wameGatedRequestCount']} "
         f"human_or_committee_finality={actual['humanOrCommitteeFinalityCount']} "
         "writes_accepted_fact=0 writes_business_system=0 "
         "writes_revenue_distribution=0 writes_external_api=0 no_write=covered"

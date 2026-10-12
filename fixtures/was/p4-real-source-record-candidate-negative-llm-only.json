@@ -22,7 +22,7 @@
   "trustLevel": "T4",
   "sourceRefs": [],
   "evidenceRefs": [],
-  "waesGateRefs": [],
+  "wameGateRefs": [],
   "promotionBlockers": [],
   "nextAction": "collect_customer_order_or_platform_receipt",
   "kdsBacklink": ""

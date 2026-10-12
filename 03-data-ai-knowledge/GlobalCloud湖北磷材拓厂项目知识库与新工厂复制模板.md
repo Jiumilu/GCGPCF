@@ -76,9 +76,9 @@ superseded_by: []
 | enhancedLedgerLinks | 积分池、悬赏池、潜在产值池、收益池、贡献账本、SOP 账本、争议池等增强账本 |
 | classificationLevel | DSR-L0 / DSR-L1 / DSR-L2 / DSR-L3 |
 | trustLevel | T0 线索、T1 合作单位提交、T2 受控记录、T3 权威政策/标准 |
-| confirmationStatus | candidate / submitted / waes_checked / human_review_pending / confirmed / frozen / disputed / withdrawn / rejected |
+| confirmationStatus | candidate / submitted / wame_checked / human_review_pending / confirmed / frozen / disputed / withdrawn / rejected |
 | responsibleSubject | 责任主体，可为人员、单位、项目组或委员会 |
-| waesGateRefs | WAME 规则、权限、例外和阻断记录 |
+| wameGateRefs | WAME 规则、权限、例外和阻断记录 |
 | loopEvidenceRefs | 本轮或后续 LOOP evidence |
 | reuseFromGH | 是否复用葛化母版及对应版本 |
 | gfisDepthStatus | not_applicable / readiness_only / future_candidate |
@@ -133,7 +133,7 @@ superseded_by: []
 | gfisReadiness | enum | 5 | 第一阶段只评估未来接入条件，不做深度运行 |
 | revenuePotential | enum | 10 | 知识收益、系统收益、业务收益潜力 |
 | evidenceCompleteness | enum | gate | 证据不足时不得进入 ready_for_human_review |
-| waesGateStatus | enum | gate | pending / rule_recorded / blocked |
+| wameGateStatus | enum | gate | pending / rule_recorded / blocked |
 
 初始总分只用于拓厂机会排序和资源投入参考，不作为自动投资、合作、接入、积分确认或收益分配依据。已有预运营期订单是高权重加分项，不是一票通过项。
 

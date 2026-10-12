@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-62444E2231
 title: OKF v0.1 已批准摘要写入器正向 fixture 证据
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

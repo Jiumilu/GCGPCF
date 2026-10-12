@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D091AC39DE
 title: Evidence Index — PKC
 project: PKC
-related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

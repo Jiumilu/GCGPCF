@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F1A4B89C2D
 title: Studio 默认凭据后端门禁真实运行复验证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

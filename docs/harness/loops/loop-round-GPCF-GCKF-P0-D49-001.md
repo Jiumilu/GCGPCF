@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-28D1EF5192
 title: Loop Round GPCF-GCKF-P0-D49-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,11 +52,11 @@ superseded_by: []
 
 - 委员会 intake acceptance precheck 预览 SOP 候选：D48 committee case review packet preview → D49 intake acceptance precheck preview → 后续 intake routing precheck / case opening guard preview。
 
-## 本轮 WAES 门禁结果
+## 本轮 WAME 门禁结果
 
 - 当前仅为 dry-run preview。
 - 不允许自动执行 intake acceptance、自动提交 case packet、自动提交 review input、自动立案、自动裁决、自动确认、自动释放冻结、自动写收益/贡献或自动写 evidence。
-- 不允许由 AI 或脚本绕过 WAES、KWE、Harness 或委员会路径。
+- 不允许由 AI 或脚本绕过 WAME、KWE、Harness 或委员会路径。
 
 ## 本轮人工确认事项
 

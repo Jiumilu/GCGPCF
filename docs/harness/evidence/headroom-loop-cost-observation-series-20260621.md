@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C82995EACD
 title: Headroom Loop Cost Observation Series Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

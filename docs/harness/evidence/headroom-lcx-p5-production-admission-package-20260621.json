@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -71,7 +71,7 @@
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision"
+    "wame_harness_admission_decision"
   ],
   "pending_action_count": 6,
   "pending_actions": [
@@ -105,7 +105,7 @@
     {
       "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-004",
       "title": "attach rollback plan id",
-      "owner": "WAES",
+      "owner": "WAME",
       "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
       "required_evidence": "rollback_plan_id",
       "status": "pending_rollback_plan",
@@ -142,7 +142,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -168,7 +168,7 @@
     "authorization_window_present": false,
     "sanitized_production_token_ledger_present": false,
     "rollback_plan_present": false,
-    "waes_harness_admission_decision_present": false,
+    "wame_harness_admission_decision_present": false,
     "p5_request_package_gate": true,
     "production_admission_gate": false
   },
@@ -180,7 +180,7 @@
     "authorization_window_present": false,
     "sanitized_production_token_ledger_present": false,
     "rollback_plan_present": false,
-    "waes_harness_admission_decision_present": false,
+    "wame_harness_admission_decision_present": false,
     "production_proxy_started": false,
     "production_sdk_enabled": false,
     "production_external_api_write": false,
@@ -196,7 +196,7 @@
     "not_production_entry": true,
     "not_authorized_window": true,
     "not_sanitized_production_token_measurement": true,
-    "not_waes_harness_admitted": true,
+    "not_wame_harness_admitted": true,
     "not_real_kds_write": true,
     "not_external_api_write": true,
     "not_sensitive_material_processing": true,

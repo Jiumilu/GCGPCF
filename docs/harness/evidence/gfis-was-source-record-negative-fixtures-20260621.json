@@ -25,7 +25,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0
   },
   "negative_fixtures": [
@@ -76,7 +76,7 @@
         "trustLevel": "T4",
         "sourceRefs": ["kds://开发/01-GFIS/source-records/customer-requirement-or-platform-order"],
         "evidenceRefs": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"],
-        "waesGateRefs": ["waes://gate/customer-order-source-record-review"],
+        "wameGateRefs": ["wame://gate/customer-order-source-record-review"],
         "promotionBlockers": ["valid_source_record_missing", "customer_confirmation_missing"],
         "nextAction": "collect_customer_order_or_platform_receipt",
         "kdsBacklink": "开发/01-GFIS/source-records/fixture-only"
@@ -110,7 +110,7 @@
         "trustLevel": "T4",
         "sourceRefs": ["kds://开发/01-GFIS/source-records/customer-requirement-or-platform-order"],
         "evidenceRefs": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"],
-        "waesGateRefs": ["waes://gate/customer-order-source-record-review"],
+        "wameGateRefs": ["wame://gate/customer-order-source-record-review"],
         "promotionBlockers": ["valid_source_record_missing", "customer_confirmation_missing"],
         "nextAction": "collect_customer_order_or_platform_receipt",
         "kdsBacklink": "开发/01-GFIS/source-records/fixture-only"
@@ -141,7 +141,7 @@
         "trustLevel": "T4",
         "sourceRefs": ["kds://开发/01-GFIS/source-records/customer-requirement-or-platform-order"],
         "evidenceRefs": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"],
-        "waesGateRefs": ["waes://gate/customer-order-source-record-review"],
+        "wameGateRefs": ["wame://gate/customer-order-source-record-review"],
         "promotionBlockers": ["valid_source_record_missing", "customer_confirmation_missing"],
         "nextAction": "collect_customer_order_or_platform_receipt",
         "kdsBacklink": "开发/01-GFIS/source-records/other-fixture"
@@ -172,7 +172,7 @@
         "trustLevel": "T4",
         "sourceRefs": ["kds://开发/01-GFIS/source-records/customer-requirement-or-platform-order"],
         "evidenceRefs": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"],
-        "waesGateRefs": ["waes://gate/customer-order-source-record-review"],
+        "wameGateRefs": ["wame://gate/customer-order-source-record-review"],
         "promotionBlockers": ["valid_source_record_missing", "customer_confirmation_missing"],
         "nextAction": "collect_customer_order_or_platform_receipt",
         "kdsBacklink": "开发/01-GFIS/source-records/fixture-only"
@@ -203,7 +203,7 @@
         "trustLevel": "T4",
         "sourceRefs": ["kds://开发/01-GFIS/source-records/customer-requirement-or-platform-order"],
         "evidenceRefs": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"],
-        "waesGateRefs": ["waes://gate/customer-order-source-record-review"],
+        "wameGateRefs": ["wame://gate/customer-order-source-record-review"],
         "promotionBlockers": ["valid_source_record_missing", "customer_confirmation_missing"],
         "nextAction": "collect_customer_order_or_platform_receipt",
         "kdsBacklink": "开发/01-GFIS/source-records/fixture-only"
@@ -217,7 +217,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not create verified artifact",
     "does not mark accepted or integrated",
     "does not mark production ready"

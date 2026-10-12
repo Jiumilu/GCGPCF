@@ -22,7 +22,7 @@ proxy:
 mcp:
   tools_allowed: [headroom_compress, headroom_stats]
   tools_restricted: [headroom_retrieve]
-  retrieve_requires_waes_gate: true
+  retrieve_requires_wame_gate: true
 ccr:
   enabled_default: true
   original_cache_scope: local_or_controlled

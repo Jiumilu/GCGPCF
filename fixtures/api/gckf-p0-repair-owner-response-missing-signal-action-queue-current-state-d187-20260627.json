@@ -29,8 +29,8 @@
     },
     {
       "actionItemId": "D187-AQ-003",
-      "missingSignalId": "waes_review_note",
-      "requiredNextInput": "WAES review note",
+      "missingSignalId": "wame_review_note",
+      "requiredNextInput": "WAME review note",
       "actionStatus": "blocked_waiting_external_input",
       "executionAllowed": false,
       "notificationSent": false,

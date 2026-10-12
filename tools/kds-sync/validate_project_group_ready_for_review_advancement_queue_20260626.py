@@ -21,7 +21,7 @@ PROJECTS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",
@@ -54,7 +54,7 @@ REQUIRED_QUEUE_TOKENS = [
     "integrated=false",
     "production_ready=false",
     "customer_accepted=false",
-    "WAES-LINT-RUNTIME-001",
+    "WAME-LINT-RUNTIME-001",
     "GFIS-REAL-SOR-001",
     "GPC-EXTERNAL-RUNTIME-EVIDENCE-001",
     "BRAIN-HUMAN-REVIEW-DECISION-001",
@@ -102,7 +102,7 @@ GFIS_ZERO_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 

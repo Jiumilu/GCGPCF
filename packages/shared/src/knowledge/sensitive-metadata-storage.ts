@@ -1,5 +1,5 @@
 import type { RagAdmission } from "./object";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type SensitiveDataClass =
   | "contract_sensitive_terms"
@@ -29,7 +29,7 @@ export interface SensitiveMetadataRecord {
   aclRef: string;
   citationScope: string;
   ragAdmission: Extract<RagAdmission, "sensitive_metadata_only" | "blocked" | "limited">;
-  sensitiveDataGateResult: Extract<WaesGateStatus, "metadata_only" | "blocked" | "redaction_required">;
+  sensitiveDataGateResult: Extract<WameGateStatus, "metadata_only" | "blocked" | "redaction_required">;
   summary: string;
   rawContentStored: false;
 }

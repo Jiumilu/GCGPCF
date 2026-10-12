@@ -14,7 +14,7 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/was-real-source-record-waiting-room-
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 REQUIRED_INPUTS = [
     "customer_order_original_or_platform_receipt",
     "customer_confirmed_product_specification",
@@ -29,7 +29,7 @@ ZERO_BOUNDARY_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 FALSE_BOUNDARY_KEYS = ["accepted", "integrated", "production_ready"]
@@ -137,7 +137,7 @@ def main() -> int:
     print(
         "was_real_source_record_waiting_room=pass "
         "required_p4_inputs=6 submitted_real_inputs=0 accepted_for_next_gate=0 hold_required=1 "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-001"
     )

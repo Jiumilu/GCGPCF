@@ -252,7 +252,7 @@ def write_report(report_path: Path, bundle: Path, concepts: list[tuple[Path, dic
 doc_id: {doc_id_for(report_path)}
 title: {bundle_title} Report
 project: GPCF
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

@@ -69,7 +69,7 @@ def main() -> int:
         "production write",
         "external API write",
         "real KDS write",
-        "real WAES write",
+        "real WAME write",
         "deployment",
         "git commit",
         "git push",

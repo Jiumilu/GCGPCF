@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9F13EECD98
 title: GPCF-L4-GFIS-REPAIR-156
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,13 +29,13 @@ superseded_by: []
 ## GFIS 真实结果
 
 ```text
-liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan=pass items=5 approval_slots=5 approval_files_found=0 valid_approvals=0 approved=0 recipients=0 channels=0 sent=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=authorization_approval_intake_scan_no_valid_approvals runtime_sop_e2e=repair_required
+liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan=pass items=5 approval_slots=5 approval_files_found=0 valid_approvals=0 approved=0 recipients=0 channels=0 sent=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=authorization_approval_intake_scan_no_valid_approvals runtime_sop_e2e=repair_required
 ```
 
 主 runtime SOP validator 继续 expected exit 2：
 
 ```text
-runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan=authorization_approval_intake_scan_no_valid_approvals:items=5:approval_slots=5:approval_files_found=0:valid_approvals=0:approved=0:recipients=0:channels=0:sent=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan=authorization_approval_intake_scan_no_valid_approvals:items=5:approval_slots=5:approval_files_found=0:valid_approvals=0:approved=0:recipients=0:channels=0:sent=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:release_allowed=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 ```
 
 Demo E2E 回归：
@@ -56,7 +56,7 @@ Demo E2E 回归：
 
 ## 边界
 
-本轮没有发现有效人工批准文件，没有真实授权，没有真实发送提醒，没有写真实 KDS、WAES、生产系统或外部 API，没有执行 `bench migrate`、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更，没有关闭 hold，没有创建签章完成件、客户确认函、采购订单/合同、review queue、runtime intake、verified artifact、accepted 或 integrated。
+本轮没有发现有效人工批准文件，没有真实授权，没有真实发送提醒，没有写真实 KDS、WAME、生产系统或外部 API，没有执行 `bench migrate`、schema sync、权限变更、部署、ECS/阿里云/Caddy/隧道/Docker 变更，没有关闭 hold，没有创建签章完成件、客户确认函、采购订单/合同、review queue、runtime intake、verified artifact、accepted 或 integrated。
 
 ## 真实计数
 

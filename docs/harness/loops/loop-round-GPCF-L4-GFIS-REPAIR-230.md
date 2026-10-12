@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-37D36F220B
 title: GPCF-L4-GFIS-REPAIR-230
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,7 +49,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -66,8 +66,8 @@ superseded_by: []
 - 不创建人工业务核验完成文件。
 - 不创建有效 source-of-record。
 - 不创建 runtime primary key。
-- 不创建 review queue、runtime intake、WAES review 或 verified artifact。
-- 不执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入、`bench migrate`、schema sync、权限变更、部署、提交或推送。
+- 不创建 review queue、runtime intake、WAME review 或 verified artifact。
+- 不执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入、`bench migrate`、schema sync、权限变更、部署、提交或推送。
 - 不升级 accepted/integrated。
 
 ## 真实性计数
@@ -81,4 +81,4 @@ superseded_by: []
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-221`：建立人工核验完成文件负例拒收门禁，防止缺 hash、缺 KDS backlink、缺责任人、缺 release authorization 或结论不合规的文件进入 review/runtime/WAES。
+`GFIS-RUNTIME-SOP-E2E-221`：建立人工核验完成文件负例拒收门禁，防止缺 hash、缺 KDS backlink、缺责任人、缺 release authorization 或结论不合规的文件进入 review/runtime/WAME。

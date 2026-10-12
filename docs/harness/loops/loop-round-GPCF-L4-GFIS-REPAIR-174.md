@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-739EEE536C
 title: GPCF-L4-GFIS-REPAIR-174 — GFIS 派发授权信封接收目录真实扫描
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,7 +64,7 @@ superseded_by: []
 | release_allowed | 0 |
 | review_queue | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | runtime_sop_e2e | repair_required |
 
@@ -93,7 +93,7 @@ git diff --check -- .
 - 未创建真实授权信封。
 - 未创建 handoff acknowledgement。
 - 未创建 owner response、submission package 或 live proof。
-- 未执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入。
+- 未执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入。
 - 未执行 bench migrate、schema sync、数据库迁移、权限变更、部署、push。
 - 未将状态升级为 accepted 或 integrated。
 

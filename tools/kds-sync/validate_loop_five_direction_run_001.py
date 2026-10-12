@@ -98,7 +98,7 @@ def main() -> int:
         "no_production_write",
         "no_external_api_write",
         "no_kds_fact_write",
-        "no_waes_gate_result_write",
+        "no_wame_gate_result_write",
         "no_accepted_integrated_upgrade",
     ]:
         require(boundaries.get(key) is True, f"boundary must be true: {key}")
@@ -120,7 +120,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
         "accepted=false",
         "integrated=false",

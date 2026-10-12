@@ -3,7 +3,7 @@ import type { GfisWritebackCandidateBatchNoWrite } from "./gfis-writeback-candid
 import type { KdsLifecycleTransitionAuditStatus } from "./kds-lifecycle-transition-audit-packet";
 import type { KweConfirmationSensitiveHandling } from "./kwe-confirmation-workpack";
 import type { KwePromotionReviewerRequirement } from "./kwe-promotion-request";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 import type { WritebackTargetEntityType } from "./writeback-candidate";
 
 export type GfisWritebackApprovalPreflightStatus =
@@ -30,11 +30,11 @@ export interface GfisWritebackApprovalPreflightItem {
   lifecycleAuditRefs: string[];
   fieldPaths: string[];
   evidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   harnessEvidenceRefs: string[];
   sensitiveHandling: KweConfirmationSensitiveHandling;
-  waesGateStatus: Extract<
-    WaesGateStatus,
+  wameGateStatus: Extract<
+    WameGateStatus,
     "pending" | "passed" | "blocked" | "human_required" | "committee_required"
   >;
   lifecycleAuditStatus: KdsLifecycleTransitionAuditStatus;

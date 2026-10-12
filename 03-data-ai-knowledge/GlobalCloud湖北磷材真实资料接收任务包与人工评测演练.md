@@ -81,9 +81,9 @@ superseded_by: []
 | `MED-HBLC-ORD-202606-0001` | `RTP-HBLC-ORD-202606-0001` | 人工评测人 / 销售责任方 | 需求来源、客户匿名编号、潜在产值边界 | `ERR-HBLC-ORD-202606-0001` | `RED-HBLC-004` | 评分、潜在产值候选、补证动作 | planned |
 | `MED-HBLC-TPL-202606-0001` | `RTP-HBLC-TPL-202606-0001` | 人工评测人 / Brain 编制责任方 | 结构复用、差异项、候选 SOP 控制点 | `ERR-HBLC-TPL-202606-0001` | `RED-HBLC-005` | 评分、模板候选、知识页候选 | planned |
 
-## 6. WAESGateRecordCandidate 台账
+## 6. WAMEGateRecordCandidate 台账
 
-| waesGateCandidateId | linkedTaskId | gateType | ruleToConfirm | evidenceRequired | allowedOutcome | currentStatus |
+| wameGateCandidateId | linkedTaskId | gateType | ruleToConfirm | evidenceRequired | allowedOutcome | currentStatus |
 |---|---|---|---|---|---|---|
 | `WGR-HBLC-FEA-202606-0001` | `RTP-HBLC-FEA-202606-0001` | source_boundary | 拓厂候选不得等同投资通过 | 来源索引、责任主体、人工评分 | record / return / block | planned |
 | `WGR-HBLC-RAW-202606-0001` | `RTP-HBLC-RAW-202606-0001` | purchase_boundary | 原料线索不得等同采购事实 | 脱敏来源、质量指标、价格边界 | record / return / block | planned |

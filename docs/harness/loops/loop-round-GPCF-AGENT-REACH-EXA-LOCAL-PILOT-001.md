@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C7BD30A8E1
 title: GPCF-AGENT-REACH-EXA-LOCAL-PILOT-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

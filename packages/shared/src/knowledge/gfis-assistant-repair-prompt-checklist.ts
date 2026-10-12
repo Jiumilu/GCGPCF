@@ -1,7 +1,7 @@
 import type {
-  GfisAssistantWaesBlockedAction,
-  GfisAssistantWaesGuidanceSurface,
-} from "./gfis-assistant-waes-guidance-packet";
+  GfisAssistantWameBlockedAction,
+  GfisAssistantWameGuidanceSurface,
+} from "./gfis-assistant-wame-guidance-packet";
 
 export type GfisAssistantRepairPromptItemType =
   | "source_repair"
@@ -34,14 +34,14 @@ export type GfisAssistantRepairPromptBlockedAction =
   | "submit_evidence"
   | "create_gap_record"
   | "create_bounty_record"
-  | GfisAssistantWaesBlockedAction;
+  | GfisAssistantWameBlockedAction;
 
 export interface GfisAssistantRepairPromptChecklistNoWrite {
   writesGfis: 0;
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesGapRecord: 0;
   writesBountyRecord: 0;
@@ -71,7 +71,7 @@ export interface GfisAssistantRepairPromptChecklist {
   guidancePacketRef: string;
   tenantId: string;
   projectId: string;
-  assistantSurface: GfisAssistantWaesGuidanceSurface;
+  assistantSurface: GfisAssistantWameGuidanceSurface;
   checklistStatus: GfisAssistantRepairPromptChecklistStatus;
   items: GfisAssistantRepairPromptChecklistItem[];
   blockedActions: GfisAssistantRepairPromptBlockedAction[];
@@ -80,7 +80,7 @@ export interface GfisAssistantRepairPromptChecklist {
   createsGapRecord: false;
   createsBountyRecord: false;
   createsKweWorkItem: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   approvesBusinessWrite: false;
   promotesLifecycle: false;
   noWrite: GfisAssistantRepairPromptChecklistNoWrite;
@@ -100,7 +100,7 @@ export interface GfisAssistantRepairPromptChecklistPolicy {
     createsGapRecordMustBeFalse: boolean;
     createsBountyRecordMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;
     promotesLifecycleMustBeFalse: boolean;
     checklistIsNotSubmission: boolean;

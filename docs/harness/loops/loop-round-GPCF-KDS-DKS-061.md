@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B472C3B047
 title: LOOP Round GPCF-KDS-DKS-061 - GC-Knowledge Fabric OKF契约骨架落地
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 本轮目标
 
-把 GC-Knowledge Fabric P0 受控文档包中的核心规则转成第一批 OKF 契约文件，形成后续 KDS v2、WAES、KWE、GFIS Assistant 和治理台账实现可引用的规则源。
+把 GC-Knowledge Fabric P0 受控文档包中的核心规则转成第一批 OKF 契约文件，形成后续 KDS v2、WAME、KWE、GFIS Assistant 和治理台账实现可引用的规则源。
 
 本轮只建立契约骨架，不声明数据库迁移、API 上线、RAG 上线、GFIS 写回、收益确认或委员会裁决完成。
 
@@ -28,7 +28,7 @@ superseded_by: []
 
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-KDS十一池挂接规则.md`
-- `03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md`
+- `03-data-ai-knowledge/GC-Knowledge-Fabric-WAME门禁规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-统一编号规则.md`
 - `03-data-ai-knowledge/GC-Knowledge-Fabric-统一状态机与状态提升规则.md`
@@ -44,7 +44,7 @@ superseded_by: []
 - `okf/trust-policy.yaml`
 - `okf/flow-policy.yaml`
 - `okf/rag-admission-policy.yaml`
-- `okf/waes-gate-policy.yaml`
+- `okf/wame-gate-policy.yaml`
 - `okf/contribution-policy.yaml`
 - `okf/revenue-policy.yaml`
 - `okf/quota-policy.yaml`
@@ -57,7 +57,7 @@ superseded_by: []
 
 - OKF 文件只表达规则，不替代 KDS 事实存储。
 - `ai` 生成内容默认只能进入候选态，不得直接升级正式事实。
-- `writeback` 必须经过 WAES 与人工确认。
+- `writeback` 必须经过 WAME 与人工确认。
 - 敏感资料默认 metadata-only 或受控原件引用。
 - 收益必须区分到账、开票、机会和知识潜在价值。
 
@@ -96,4 +96,4 @@ superseded_by: []
 
 - `GPCF-KDS-DKS-062`：从 OKF 契约生成 Shared Types 草案。
 - `GPCF-KDS-DKS-063`：建立 KDS v2 最小表结构与 API 契约任务清单。
-- `GPCF-KDS-DKS-064`：建立 WAES 最小门禁 dry-run validator。
+- `GPCF-KDS-DKS-064`：建立 WAME 最小门禁 dry-run validator。

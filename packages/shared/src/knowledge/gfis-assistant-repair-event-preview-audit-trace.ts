@@ -32,7 +32,7 @@ export type GfisAssistantRepairEventPreviewAuditTraceBlockedAction =
   | "create_action_receipt"
   | "create_read_receipt"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "create_kwe_work_item"
   | "persist_evidence"
   | "approve_business_write"
@@ -44,7 +44,7 @@ export interface GfisAssistantRepairEventPreviewAuditTraceNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesAuditTraceRecord: 0;
   writesEventRecord: 0;
@@ -90,7 +90,7 @@ export interface GfisAssistantRepairEventPreviewAuditTrace {
   createsActionReceipt: false;
   createsReadReceipt: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   createsKweWorkItem: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;
@@ -113,7 +113,7 @@ export interface GfisAssistantRepairEventPreviewAuditTracePolicy {
     auditTracePreviewIsNotActionReceipt: boolean;
     auditTracePreviewIsNotReadReceipt: boolean;
     auditTracePreviewIsNotHarnessEvidence: boolean;
-    auditTracePreviewIsNotWaesResult: boolean;
+    auditTracePreviewIsNotWameResult: boolean;
     auditTracePreviewIsNotKweWorkItem: boolean;
     auditTracePreviewIsNotLifecycleChange: boolean;
     auditTracePreviewIsNotBusinessWriteback: boolean;
@@ -122,7 +122,7 @@ export interface GfisAssistantRepairEventPreviewAuditTracePolicy {
     createsActionReceiptMustBeFalse: boolean;
     createsReadReceiptMustBeFalse: boolean;
     createsHarnessEvidenceMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
     persistsEvidenceMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-242D4457BB
 title: LOOP Round GPCF-KDS-DKS-100 - GC-Knowledge Fabric KDS 生命周期流转审计包
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 建立 KDS 对象生命周期流转的只读审计包，使 candidate、reviewing、repair_required、evidence_ready、verified、accepted、published、frozen、archived、superseded 等状态流转可以被本地审计、被 OKF 约束、被共享类型表达、被 fixture 复现、被 validator 验证。
 
-本轮不执行 KDS lifecycle 变更，不生成 WAES Gate Result，不新增 KWE 工单，不写 GFIS/GPC/ERP/MES，不确认收益或积分，不调用外部 API。
+本轮不执行 KDS lifecycle 变更，不生成 WAME Gate Result，不新增 KWE 工单，不写 GFIS/GPC/ERP/MES，不确认收益或积分，不调用外部 API。
 
 ## 2. 本轮输入
 
@@ -53,7 +53,7 @@ superseded_by: []
 ### 4.1 DKS-100 专项检查
 
 ```text
-kds_lifecycle_transition_audit_packet=pass audits=8 ready_for_review=1 repair_required=1 waes_required=1 human_required=1 publication_required=1 freeze_required=1 blocked=2 high_trust_audits=3 terminal_blocked=1 ai_blocked_high_trust=1 lifecycle_mutations=0 accepted_fact_writes=0 published_object_writes=0 waes_gate_result_writes=0 kwe_work_item_writes=0 business_writes=0 revenue_or_score_confirmations=0 external_api_writes=0
+kds_lifecycle_transition_audit_packet=pass audits=8 ready_for_review=1 repair_required=1 wame_required=1 human_required=1 publication_required=1 freeze_required=1 blocked=2 high_trust_audits=3 terminal_blocked=1 ai_blocked_high_trust=1 lifecycle_mutations=0 accepted_fact_writes=0 published_object_writes=0 wame_gate_result_writes=0 kwe_work_item_writes=0 business_writes=0 revenue_or_score_confirmations=0 external_api_writes=0
 ```
 
 ### 4.2 覆盖矩阵
@@ -72,7 +72,7 @@ tsc -p packages/api/tsconfig.json --noEmit: pass
 
 ### 4.4 回归链
 
-本轮回归链覆盖 DKS-096 至 DKS-100，以及既有 KDS、WAES、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
+本轮回归链覆盖 DKS-096 至 DKS-100，以及既有 KDS、WAME、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
 
 ```text
 regression=pass
@@ -90,7 +90,7 @@ api_tsc=pass
 - lifecycle_mutations
 - accepted_fact_writes
 - published_object_writes
-- waes_gate_result_writes
+- wame_gate_result_writes
 - kwe_work_item_writes
 - business_writes
 - revenue_or_score_confirmations
@@ -115,7 +115,7 @@ DKS-101 建议进入 GFIS Writeback Approval Preflight No-write Checklist：
 - 叠加 DKS-100 lifecycle audit packet；
 - 生成写回前置审批清单；
 - 保持 no-write，只输出 `preflight_required`、`human_required`、`committee_required`、`blocked` 等审计状态；
-- 不写 GFIS/GPC/ERP/MES，不写 KDS accepted fact，不生成真实 WAES Gate Result。
+- 不写 GFIS/GPC/ERP/MES，不写 KDS accepted fact，不生成真实 WAME Gate Result。
 
 ## 8. LOOP 结论
 

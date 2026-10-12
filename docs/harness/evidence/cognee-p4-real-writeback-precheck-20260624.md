@@ -40,7 +40,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-precheck.p
 - requested_write_count: `5`
 - precheck_pass_rate: `1.0`
 - owner_authorization_presence_rate: `1.0`
-- waes_pass_rate: `1.0`
+- wame_pass_rate: `1.0`
 - runtime_dependency_ok_rate: `1.0`
 - rollback_readiness_rate: `1.0`
 - authorization_token_source_coverage: `1.0`
@@ -48,7 +48,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-precheck.p
 - marker_coverage: `1.0`
 - mean_saving_rate: `0.051312`
 - pilot_gate_pass: `true`
-- pilot_rule: `precheck_pass_rate_min=0.8, owner_authorization_presence_min=0.8, waes_pass_rate_min=0.8, runtime_dependency_ok_rate_min=0.8, rollback_readiness_rate_min=0.8, authorization_token_source_coverage_min=0.8, marker_pass_rate_min=0.95, expected_blocked_reason_rate_min=1.0`
+- pilot_rule: `precheck_pass_rate_min=0.8, owner_authorization_presence_min=0.8, wame_pass_rate_min=0.8, runtime_dependency_ok_rate_min=0.8, rollback_readiness_rate_min=0.8, authorization_token_source_coverage_min=0.8, marker_pass_rate_min=0.95, expected_blocked_reason_rate_min=1.0`
 
 > 该轮判定说明：目前 P4 预检可闭合真实写入前置门禁基线，该轮阻断样例已复测修复：`runtime_dependency_ok` 与 `owner_authorization_present` 已全部为 true；本轮保留受控预检语义，未进入生产写入闭环。
 
@@ -65,7 +65,7 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-precheck.p
   - `requested_write_count`
   - `precheck_pass_rate`
   - `owner_authorization_presence_rate`
-  - `waes_pass_rate`
+  - `wame_pass_rate`
   - `runtime_dependency_ok_rate`
   - `rollback_readiness_rate`
   - `authorization_token_source_coverage`

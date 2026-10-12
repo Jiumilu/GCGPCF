@@ -20,7 +20,7 @@
         "sourceRefs": ["virtual://hblc/fea/source-summary"],
         "evidenceLevel": "E2_candidate",
         "humanReviewStatus": "pending",
-        "waesRecordStatus": "planned",
+        "wameRecordStatus": "planned",
         "settlementStatus": "prohibited_before_acceptance",
         "ragInclude": false
       },
@@ -47,7 +47,7 @@
         "sourceRefs": ["virtual://hblc/industry/source-summary"],
         "evidenceLevel": "E3_limited",
         "humanReviewStatus": "pending",
-        "waesRecordStatus": "planned",
+        "wameRecordStatus": "planned",
         "settlementStatus": "prohibited_before_acceptance",
         "ragInclude": false
       },
@@ -74,7 +74,7 @@
         "sourceRefs": [],
         "evidenceLevel": "E1_candidate",
         "humanReviewStatus": "pending",
-        "waesRecordStatus": "planned",
+        "wameRecordStatus": "planned",
         "settlementStatus": "prohibited_before_acceptance",
         "ragInclude": false
       },
@@ -102,7 +102,7 @@
         "sourceRefs": ["virtual://hblc/order/unbooked-revenue-candidate"],
         "evidenceLevel": "E1_candidate",
         "humanReviewStatus": "pending",
-        "waesRecordStatus": "planned",
+        "wameRecordStatus": "planned",
         "settlementStatus": "prohibited_before_acceptance",
         "ragInclude": false
       },
@@ -130,7 +130,7 @@
         "sourceRefs": ["virtual://hblc/fea/source-summary"],
         "evidenceLevel": "E2_candidate",
         "humanReviewStatus": "pending",
-        "waesRecordStatus": "planned",
+        "wameRecordStatus": "planned",
         "settlementStatus": "prohibited_before_acceptance",
         "ragInclude": true
       },
@@ -158,7 +158,7 @@
         "sourceRefs": ["virtual://hblc/orphan-ledger/source-summary"],
         "evidenceLevel": "E1_candidate",
         "humanReviewStatus": "pending",
-        "waesRecordStatus": "planned",
+        "wameRecordStatus": "planned",
         "settlementStatus": "prohibited_before_acceptance",
         "ragInclude": false
       },

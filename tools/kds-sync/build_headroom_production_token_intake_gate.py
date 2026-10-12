@@ -42,7 +42,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-8D2B6B6946
 title: Headroom Production Token Intake Gate Evidence
 project: KDS
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

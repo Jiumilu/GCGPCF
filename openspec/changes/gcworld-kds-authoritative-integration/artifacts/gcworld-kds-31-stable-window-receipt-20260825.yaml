@@ -44,7 +44,7 @@ producer_controls:
   gbrain_autopilot_and_worker:
     expected: quiet
     actual: quiet
-  gcworld_or_waes_manual_import_process:
+  gcworld_or_wame_manual_import_process:
     expected: none
     actual: none_observed
   responsibility_freeze_acknowledgements: 2

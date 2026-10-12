@@ -23,13 +23,13 @@ OWNER_FIELDS = [
     "owner_decision_evidence",
 ]
 
-WAES_FIELDS = [
-    "waes_signer_name",
-    "waes_signer_role",
-    "waes_signed_at",
-    "waes_decision",
-    "waes_runtime_dependency_ok",
-    "waes_rollback_plan_verified",
+WAME_FIELDS = [
+    "wame_signer_name",
+    "wame_signer_role",
+    "wame_signed_at",
+    "wame_decision",
+    "wame_runtime_dependency_ok",
+    "wame_rollback_plan_verified",
 ]
 
 WINDOW_FIELDS = [
@@ -113,7 +113,7 @@ def as_bool(value: str) -> bool | None:
 def flatten_signoff_payload(payload: dict) -> dict[str, str | bool]:
     rows: dict[str, str | bool] = {}
     rows.update(payload.get("owner_signoff", {}))
-    rows.update(payload.get("waes_signoff", {}))
+    rows.update(payload.get("wame_signoff", {}))
     rows.update(payload.get("signoff_window", {}))
     rows.update(payload.get("required_false_until_completed", {}))
     return rows
@@ -158,43 +158,43 @@ def main() -> int:
         require(as_bool(rows.get(field, "")) is False, f"{field} must remain false")
         require(as_bool(payload_rows.get(field, False)) is False, f"{field} must remain false in signoff payload")
 
-    for field in OWNER_FIELDS + WAES_FIELDS + WINDOW_FIELDS + ["authorization_complete"]:
+    for field in OWNER_FIELDS + WAME_FIELDS + WINDOW_FIELDS + ["authorization_complete"]:
         md_value = rows.get(field, "")
         payload_value = payload_rows.get(field, "")
         if isinstance(payload_value, bool):
-            require(as_bool(md_value) == payload_value or field in OWNER_FIELDS + WAES_FIELDS + WINDOW_FIELDS, f"markdown/payload mismatch: {field}")
+            require(as_bool(md_value) == payload_value or field in OWNER_FIELDS + WAME_FIELDS + WINDOW_FIELDS, f"markdown/payload mismatch: {field}")
         else:
             normalized_payload = str(payload_value)
             require(md_value == normalized_payload, f"markdown/payload mismatch: {field}")
 
-    all_required = OWNER_FIELDS + WAES_FIELDS + WINDOW_FIELDS
+    all_required = OWNER_FIELDS + WAME_FIELDS + WINDOW_FIELDS
     placeholders = [field for field in all_required if rows.get(field, "") == "REQUIRED_USER_INPUT"]
 
     if args.require_complete_signoff:
         require(not placeholders, f"required fields still unresolved: {','.join(placeholders)}")
         require(rows.get("owner_decision") == "approve_live_write", "owner_decision must be approve_live_write")
-        require(rows.get("waes_decision") == "pass", "waes_decision must be pass")
-        require(as_bool(rows.get("waes_runtime_dependency_ok", "")) is True, "waes_runtime_dependency_ok must be true")
-        require(as_bool(rows.get("waes_rollback_plan_verified", "")) is True, "waes_rollback_plan_verified must be true")
+        require(rows.get("wame_decision") == "pass", "wame_decision must be pass")
+        require(as_bool(rows.get("wame_runtime_dependency_ok", "")) is True, "wame_runtime_dependency_ok must be true")
+        require(as_bool(rows.get("wame_rollback_plan_verified", "")) is True, "wame_rollback_plan_verified must be true")
         require(as_bool(rows.get("authorization_complete", "")) is True, "authorization_complete must be true after signoff")
         require(signoff_payload.get("instance_status") == "signoff_complete_ready_for_fixed_command_pack", "instance_status must indicate completed signoff")
 
         window_start = parse_iso8601(rows.get("signoff_window_start_at", ""))
         window_end = parse_iso8601(rows.get("signoff_window_expires_at", ""))
         owner_signed_at = parse_iso8601(rows.get("owner_signed_at", ""))
-        waes_signed_at = parse_iso8601(rows.get("waes_signed_at", ""))
+        wame_signed_at = parse_iso8601(rows.get("wame_signed_at", ""))
 
         require(window_start is not None, "signoff_window_start_at must be valid iso8601")
         require(window_end is not None, "signoff_window_expires_at must be valid iso8601")
         require(owner_signed_at is not None, "owner_signed_at must be valid iso8601")
-        require(waes_signed_at is not None, "waes_signed_at must be valid iso8601")
+        require(wame_signed_at is not None, "wame_signed_at must be valid iso8601")
         require(window_end > window_start, "signoff_window_expires_at must be after signoff_window_start_at")
         require(window_start <= owner_signed_at <= window_end, "owner_signed_at must be within signoff window")
-        require(window_start <= waes_signed_at <= window_end, "waes_signed_at must be within signoff window")
+        require(window_start <= wame_signed_at <= window_end, "wame_signed_at must be within signoff window")
 
         print(
             "cognee_p4_live_authorization_signoff=pass_complete "
-            "authorization_complete=true owner_decision=approve_live_write waes_decision=pass "
+            "authorization_complete=true owner_decision=approve_live_write wame_decision=pass "
             "runtime_dependency_ok=true rollback_plan_verified=true "
             "production_write=false accepted=false integrated=false production_ready=false"
         )

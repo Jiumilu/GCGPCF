@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-16D1014A00
 title: LOOP Round GPCF-KDS-DKS-043 - 底座可用知识闭环率评分脚本最小 dry-run
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -66,7 +66,7 @@ superseded_by: []
 - RAG 准入；
 - 指挥舱强引用；
 - 委员会真实裁决；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。
@@ -88,7 +88,7 @@ superseded_by: []
 
 | 门禁 | 结果 | 证据 |
 |---|---|---|
-| dry-run fixture suite | pass | `fixtures=6`; `expectedHardStops=4`; `boundary.realKdsApiWrite=false`; `boundary.waesWrite=false`; `boundary.businessLedgerWrite=false`; `boundary.settlementWrite=false`; `boundary.ragAdmission=false` |
+| dry-run fixture suite | pass | `fixtures=6`; `expectedHardStops=4`; `boundary.realKdsApiWrite=false`; `boundary.wameWrite=false`; `boundary.businessLedgerWrite=false`; `boundary.settlementWrite=false`; `boundary.ragAdmission=false` |
 | Python 语法检查 | pass | `python3 -m py_compile tools/kds-sync/validate_base_knowledge_closure_score_dry_run.py` 无输出 |
 | 文档控制 | pass | `tools/kds-sync/document_control.py` 已执行完成；本轮 LOOP 记录 doc_id=`GPCF-DOC-16D1014A00` |
 | 文档污染 | pass | `document_pollution=pass` |

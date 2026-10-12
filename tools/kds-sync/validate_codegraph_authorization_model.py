@@ -42,7 +42,7 @@ def main() -> int:
         "push_code",
         "access_secrets",
         "promote_kds_accepted_fact",
-        "approve_waes_gate",
+        "approve_wame_gate",
         "accepted_status_upgrade",
         "integrated_status_upgrade",
         "production_ready_status_upgrade",
@@ -50,16 +50,16 @@ def main() -> int:
     for denial in required_denials:
         require(denial in permissions, f"permissions missing denial: {denial}")
 
-    for agent in ["codex_agent", "review_agent", "test_agent", "doc_agent", "waes_agent", "loop_agent"]:
+    for agent in ["codex_agent", "review_agent", "test_agent", "doc_agent", "wame_agent", "loop_agent"]:
         require(f"  {agent}:" in permissions, f"permissions missing agent: {agent}")
 
-    for role in ["project_owner", "tech_lead", "security_owner", "waes_admin", "kds_curator", "developer", "ai_agent"]:
+    for role in ["project_owner", "tech_lead", "security_owner", "wame_admin", "kds_curator", "developer", "ai_agent"]:
         require(f"  {role}:" in permissions, f"permissions missing human role: {role}")
 
     require("default_status: candidate" in permissions, "KDS default status must be candidate")
     require("codegraph_may_promote_to_accepted" not in permissions, "accepted promotion belongs in KDS mapping policy")
 
-    for phrase in ["六层授权", "工具级", "仓库级", "Agent 级", "Loop 阶段级", "KDS/OKF 级", "WAES/人员级"]:
+    for phrase in ["六层授权", "工具级", "仓库级", "Agent 级", "Loop 阶段级", "KDS/OKF 级", "WAME/人员级"]:
         require(phrase in doc, f"authorization doc missing phrase: {phrase}")
 
     print("codegraph_authorization_model=pass layers=6 agents=6 candidate_only=true ai_final_approval=false")

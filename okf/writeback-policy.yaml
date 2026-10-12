@@ -1,7 +1,7 @@
 policy_id: okf.writeback_policy
 version: v0.1
 status: draft
-owner: WAES
+owner: WAME
 updated_at: "2026-06-20"
 target_systems:
   - GFIS
@@ -9,7 +9,7 @@ target_systems:
   - ERP
   - MES
   - KDS
-  - WAES
+  - WAME
 target_entity_types:
   - order
   - factory
@@ -30,7 +30,7 @@ writeback_statuses:
   - rolled_back
 rules:
   ai_or_agent_max_status: candidate
-  approved_requires: [waes_writeback_gate_passed, business_owner_confirmation, evidence_refs]
+  approved_requires: [wame_writeback_gate_passed, business_owner_confirmation, evidence_refs]
   written_back_requires: [approved, target_system_receipt, harness_evidence]
   rollback_requires: [rollback_reason, target_system_receipt_or_manual_record]
 blocked_without:

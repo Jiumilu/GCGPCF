@@ -17,7 +17,7 @@ GIT_GATE = ROOT / ".codex/skills/globalcloud-project-group-git-clean/scripts/pro
 PROJECTS = [
     "GlobalCloud AAAS",
     "WAS世界资产体系",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
     "GlobalCloud PVAOS",
     "GlobalCloud XiaoC",

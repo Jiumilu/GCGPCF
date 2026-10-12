@@ -2,7 +2,7 @@
 """Validate OKF / Types / API / Validator coverage for GC-Knowledge Fabric.
 
 This script checks local files and fixture declarations only. It does not write
-KDS, WAES, KWE, GFIS, Brain, PKC, governance ledgers, or any external API.
+KDS, WAME, KWE, GFIS, Brain, PKC, governance ledgers, or any external API.
 """
 
 from __future__ import annotations
@@ -188,7 +188,7 @@ EXPECTED_OKF = {
     "okf/gfis-assistant-repair-read-model-action-guard-policy.yaml",
     "okf/gfis-assistant-repair-review-decision-draft-policy.yaml",
     "okf/gfis-assistant-repair-submission-intake-policy.yaml",
-    "okf/gfis-assistant-waes-guidance-packet-policy.yaml",
+    "okf/gfis-assistant-wame-guidance-packet-policy.yaml",
     "okf/gfis-document-acceptance-checklist-policy.yaml",
     "okf/gfis-writeback-approval-preflight-policy.yaml",
     "okf/gfis-writeback-candidate-batch-diff-policy.yaml",
@@ -216,10 +216,10 @@ EXPECTED_OKF = {
     "okf/sensitive-metadata-storage-policy.yaml",
     "okf/status-machine-policy.yaml",
     "okf/trust-policy.yaml",
-    "okf/waes-action-gate-precheck-policy.yaml",
-    "okf/waes-gate-io-policy.yaml",
-    "okf/waes-gate-policy.yaml",
-    "okf/waes-precheck-bundle-read-model-policy.yaml",
+    "okf/wame-action-gate-precheck-policy.yaml",
+    "okf/wame-gate-io-policy.yaml",
+    "okf/wame-gate-policy.yaml",
+    "okf/wame-precheck-bundle-read-model-policy.yaml",
     "okf/writeback-policy.yaml",
 }
 
@@ -398,7 +398,7 @@ EXPECTED_TYPES = {
     "packages/shared/src/knowledge/gfis-assistant-repair-read-model-action-guard.ts",
     "packages/shared/src/knowledge/gfis-assistant-repair-review-decision-draft.ts",
     "packages/shared/src/knowledge/gfis-assistant-repair-submission-intake.ts",
-    "packages/shared/src/knowledge/gfis-assistant-waes-guidance-packet.ts",
+    "packages/shared/src/knowledge/gfis-assistant-wame-guidance-packet.ts",
     "packages/shared/src/knowledge/gfis-document-acceptance-checklist.ts",
     "packages/shared/src/knowledge/gfis-writeback-approval-preflight.ts",
     "packages/shared/src/knowledge/gfis-writeback-candidate-batch-diff.ts",
@@ -426,10 +426,10 @@ EXPECTED_TYPES = {
     "packages/shared/src/knowledge/source.ts",
     "packages/shared/src/knowledge/sensitive-metadata-storage.ts",
     "packages/shared/src/knowledge/status-machine.ts",
-    "packages/shared/src/knowledge/waes-action-gate-precheck.ts",
-    "packages/shared/src/knowledge/waes-gate-io.ts",
-    "packages/shared/src/knowledge/waes-gate.ts",
-    "packages/shared/src/knowledge/waes-precheck-bundle-read-model.ts",
+    "packages/shared/src/knowledge/wame-action-gate-precheck.ts",
+    "packages/shared/src/knowledge/wame-gate-io.ts",
+    "packages/shared/src/knowledge/wame-gate.ts",
+    "packages/shared/src/knowledge/wame-precheck-bundle-read-model.ts",
     "packages/shared/src/knowledge/writeback-candidate.ts",
 }
 
@@ -447,8 +447,8 @@ EXPECTED_API = {
     "packages/api/src/kwe/routes.ts",
     "packages/api/src/pkc/contracts.ts",
     "packages/api/src/pkc/routes.ts",
-    "packages/api/src/waes/contracts.ts",
-    "packages/api/src/waes/routes.ts",
+    "packages/api/src/wame/contracts.ts",
+    "packages/api/src/wame/routes.ts",
 }
 
 EXPECTED_VALIDATORS = {
@@ -615,7 +615,7 @@ EXPECTED_VALIDATORS = {
     "scripts/gfis/validate_gfis_assistant_repair_read_model_action_guard.py",
     "scripts/gfis/validate_gfis_assistant_repair_review_decision_draft.py",
     "scripts/gfis/validate_gfis_assistant_repair_submission_intake.py",
-    "scripts/gfis/validate_gfis_assistant_waes_guidance_packet.py",
+    "scripts/gfis/validate_gfis_assistant_wame_guidance_packet.py",
     "scripts/gfis/validate_gfis_assistant_no_write_smoke.py",
     "scripts/gfis/validate_gfis_document_acceptance_e2e.py",
     "scripts/gfis/validate_gfis_document_acceptance_checklist_batch.py",
@@ -646,12 +646,12 @@ EXPECTED_VALIDATORS = {
     "scripts/rag/validate_rag_citation_strength_policy_smoke.py",
     "scripts/rag/validate_rag_response_citation_packet_dry_run.py",
     "scripts/status_machine/validate_status_machine_policy_smoke.py",
-    "scripts/waes/validate_sensitive_metadata_storage_policy_smoke.py",
-    "scripts/waes/validate_waes_action_gate_precheck.py",
-    "scripts/waes/validate_waes_gate_io_policy_smoke.py",
-    "scripts/waes/validate_waes_minimum_gates.py",
-    "scripts/waes/validate_waes_endpoint_no_write_smoke.py",
-    "scripts/waes/validate_waes_precheck_bundle_read_model.py",
+    "scripts/wame/validate_sensitive_metadata_storage_policy_smoke.py",
+    "scripts/wame/validate_wame_action_gate_precheck.py",
+    "scripts/wame/validate_wame_gate_io_policy_smoke.py",
+    "scripts/wame/validate_wame_minimum_gates.py",
+    "scripts/wame/validate_wame_endpoint_no_write_smoke.py",
+    "scripts/wame/validate_wame_precheck_bundle_read_model.py",
 }
 
 EXPECTED_FIXTURES = {
@@ -823,7 +823,7 @@ EXPECTED_FIXTURES = {
     "fixtures/gfis/repair-read-model-action-guard-dry-run.json",
     "fixtures/gfis/repair-review-decision-draft-dry-run.json",
     "fixtures/gfis/repair-submission-intake-dry-run.json",
-    "fixtures/gfis/waes-guidance-packet-dry-run.json",
+    "fixtures/gfis/wame-guidance-packet-dry-run.json",
     "fixtures/gfis/assistant-no-write-smoke.json",
     "fixtures/gfis/document-acceptance-e2e.json",
     "fixtures/gfis/document-acceptance-checklist-batch.json",
@@ -854,12 +854,12 @@ EXPECTED_FIXTURES = {
     "fixtures/rag/citation-strength-policy-smoke.json",
     "fixtures/rag/response-citation-packet-dry-run.json",
     "fixtures/status-machine/status-machine-policy-smoke.json",
-    "fixtures/waes/action-gate-precheck-dry-run.json",
-    "fixtures/waes/gate-io-policy-smoke.json",
-    "fixtures/waes/minimum-gates.json",
-    "fixtures/waes/sensitive-metadata-storage-policy-smoke.json",
-    "fixtures/waes/endpoint-no-write-smoke.json",
-    "fixtures/waes/precheck-bundle-read-model-dry-run.json",
+    "fixtures/wame/action-gate-precheck-dry-run.json",
+    "fixtures/wame/gate-io-policy-smoke.json",
+    "fixtures/wame/minimum-gates.json",
+    "fixtures/wame/sensitive-metadata-storage-policy-smoke.json",
+    "fixtures/wame/endpoint-no-write-smoke.json",
+    "fixtures/wame/precheck-bundle-read-model-dry-run.json",
 }
 
 

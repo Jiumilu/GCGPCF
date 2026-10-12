@@ -7,7 +7,7 @@ import type {
 export type KdsLifecycleTransitionAuditStatus =
   | "ready_for_review"
   | "repair_required"
-  | "waes_required"
+  | "wame_required"
   | "human_required"
   | "committee_required"
   | "publication_required"
@@ -18,7 +18,7 @@ export interface KdsLifecycleTransitionAuditNoWrite {
   writesKdsLifecycle: 0;
   writesAcceptedFact: 0;
   writesPublishedObject: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesBusinessSystem: 0;
   writesRevenueOrScoreConfirmation: 0;
@@ -36,7 +36,7 @@ export interface KdsLifecycleTransitionAuditPacket {
   promotionRequestRefs: string[];
   sourceRefs: string[];
   evidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   workpackRefs: string[];
   harnessEvidenceRefs: string[];
   decisionRefs: string[];

@@ -205,10 +205,10 @@ def build_report() -> dict[str, Any]:
         "gfis_was_business_mapping": requirement(
             "complete"
             if REQUIRED_OBJECTIVE_FIELDS <= mapped_fields
-            and review.get("coverage", {}).get("route_project_coverage") == ["GFIS", "KDS", "WAES", "WAS"]
+            and review.get("coverage", {}).get("route_project_coverage") == ["GFIS", "KDS", "WAME", "WAS"]
             else "incomplete",
             P9S_REVIEW_BRIDGE.relative_to(ROOT).as_posix(),
-            "P9S source-direct target 已映射到 GFIS/WAS/WAES/KDS review lanes，且仅 preview-only。",
+            "P9S source-direct target 已映射到 GFIS/WAS/WAME/KDS review lanes，且仅 preview-only。",
         ),
         "source_direct_readiness": requirement(
             "complete"
@@ -300,7 +300,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "doc_id: GPCF-DOC-AGENT-REACH-P9-OBJECTIVE-COMPLETION-AUDIT-20260626",
         "title: Agent-Reach P9 Objective Completion Audit 2026-06-26",
         "project: KDS",
-        "related_projects: [GFIS, WAS, WAES, KDS, GPCF]",
+        "related_projects: [GFIS, WAS, WAME, KDS, GPCF]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",

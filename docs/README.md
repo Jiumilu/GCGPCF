@@ -50,7 +50,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-F7ADE9DF11 | CodeGraph Loop 集成规范 | docs/codegraph/codegraph-loop-integration.md | KDS | controlled |
 | GPCF-DOC-016C584865 | CodeGraph 定位说明 | docs/codegraph/codegraph-positioning.md | KDS | controlled |
 | GPCF-DOC-7C6A2D0D31 | CodeGraph 任务 Intake 门禁 | docs/codegraph/codegraph-task-intake-gate.md | GPCF | controlled |
-| GPCF-DOC-8C267BC542 | CodeGraph WAME 门禁说明 | docs/codegraph/codegraph-waes-gate.md | KDS | controlled |
+| GPCF-DOC-8C267BC542 | CodeGraph WAME 门禁说明 | docs/codegraph/codegraph-wame-gate.md | KDS | controlled |
 | GPCF-DOC-B27F8FD59C | gc-knowledge-fabric | docs/gc-knowledge-fabric/README.md | KDS | controlled |
 | GPCF-DOC-F59EC32059 | GC-Knowledge Fabric Acceptance Packet Dry-run v0.1 | docs/gc-knowledge-fabric/acceptance-packet-dry-run-v0.1.md | KDS | controlled |
 | GPCF-DOC-039865B508 | GC-Knowledge Fabric Acceptance Packet Ledger Dry-run v0.1 | docs/gc-knowledge-fabric/acceptance-packet-ledger-dry-run-v0.1.md | KDS | controlled |
@@ -289,7 +289,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-044F1AC606 | GFIS Assistant Repair Read Receipt Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-read-receipt-notification-preview-policy.md | KDS | controlled |
 | GPCF-DOC-A705FE83D1 | GFIS Assistant Repair Review Decision Draft No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-review-decision-draft-policy.md | KDS | controlled |
 | GPCF-DOC-0214F1962A | GFIS Assistant Repair Submission Intake No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-submission-intake-policy.md | KDS | controlled |
-| GPCF-DOC-79B503879D | GFIS Assistant WAME Guidance Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md | KDS | controlled |
+| GPCF-DOC-79B503879D | GFIS Assistant WAME Guidance Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-wame-guidance-packet-policy.md | KDS | controlled |
 | GPCF-DOC-AFAB25CFB3 | GC-Knowledge Fabric GFIS Document Acceptance Checklist 批量验收规则 | docs/gc-knowledge-fabric/gfis-document-acceptance-checklist-policy.md | KDS | controlled |
 | GPCF-DOC-6CE82BFD9A | GFIS Writeback Approval Preflight No-write Checklist 规则 | docs/gc-knowledge-fabric/gfis-writeback-approval-preflight-policy.md | KDS | controlled |
 | GPCF-DOC-23F8320542 | GFIS Writeback Candidate Batch Diff No-write 规则 | docs/gc-knowledge-fabric/gfis-writeback-candidate-batch-diff-policy.md | KDS | controlled |
@@ -337,10 +337,10 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-71DA0641E8 | GC-Knowledge Fabric 敏感资料 Metadata-only 存储契约 | docs/gc-knowledge-fabric/sensitive-metadata-storage-policy.md | KDS | controlled |
 | GPCF-DOC-C994E78BC6 | shared-types-api-contract-alignment-v0.1 | docs/gc-knowledge-fabric/shared-types-api-contract-alignment-v0.1.md | GPCF | controlled |
 | GPCF-DOC-E716105009 | status-machine-policy | docs/gc-knowledge-fabric/status-machine-policy.md | GPCF | controlled |
-| GPCF-DOC-56866C0959 | WAME Action Gate Precheck No-write 规则 | docs/gc-knowledge-fabric/waes-action-gate-precheck-policy.md | KDS | controlled |
-| GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAME Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | KDS | controlled |
-| GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAME 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | KDS | controlled |
-| GPCF-DOC-1946E4144B | WAME Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | KDS | controlled |
+| GPCF-DOC-56866C0959 | WAME Action Gate Precheck No-write 规则 | docs/gc-knowledge-fabric/wame-action-gate-precheck-policy.md | KDS | controlled |
+| GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAME Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/wame-gate-io-policy.md | KDS | controlled |
+| GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAME 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/wame-minimum-dry-run-cases-v0.1.md | KDS | controlled |
+| GPCF-DOC-1946E4144B | WAME Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/wame-precheck-bundle-read-model-policy.md | KDS | controlled |
 | GPCF-DOC-CC2C02D1FB | governance | docs/governance/README.md | KDS | controlled |
 | GPCF-DOC-94532311B5 | GPCF 2.0 治理文件收敛清单 | docs/governance/gpcf-2-governance-file-inventory.md | KDS | controlled |
 | GPCF-DOC-12C308D619 | GPCF 2.0 实施基线 | docs/governance/gpcf-2-implementation.md | KDS | controlled |
@@ -348,7 +348,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | controlled |
 | GPCF-DOC-AAAS-SERVICE-RUNTIME-20260625 | AaaS 最小 ServicePackage/Metering/SLA/EvidenceRequirement 运行证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md | GPCF | controlled |
-| GPCF-DOC-AAAS-WAES-BINDING-PRECHECK-20260625 | AaaS-WAES 绑定前置预检证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md | GPCF | controlled |
+| GPCF-DOC-AAAS-WAME-BINDING-PRECHECK-20260625 | AaaS-WAME 绑定前置预检证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-wame-binding-precheck-20260625.md | GPCF | controlled |
 | GPCF-DOC-0857798863 | Brain | docs/harness/Brain/README.md | Brain | controlled |
 | GPCF-DOC-4A654203DE | evidence | docs/harness/Brain/evidence/README.md | Brain | controlled |
 | GPCF-DOC-BRAIN-AUTHORIZED-CLOSURE-REFRESH-EXECUTION-20260625 | Brain 授权型闭包证据刷新执行结果 2026-06-25 | docs/harness/Brain/evidence/brain-authorized-closure-refresh-execution-20260625.md | Brain | controlled |
@@ -412,15 +412,15 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-SOP-SCENARIO-OWNER-REVIEW-20260625 | SOP 场景生成物 Owner Review 证据 2026-06-25 | docs/harness/SOP/evidence/sop-scenario-owner-review-20260625.md | KDS | controlled |
 | GPCF-DOC-ACB3F3F597 | evidence | docs/harness/Studio/evidence/README.md | Studio | controlled |
 | GPCF-DOC-STUDIO-WORKFLOW-PERMISSIONS-RECHECK-20260625 | Studio Workflow Permissions Recheck 证据 2026-06-25 | docs/harness/Studio/evidence/studio-workflow-permissions-recheck-20260625.md | Studio | controlled |
-| GPCF-DOC-04C744A2DC | WAME | docs/harness/WAES/README.md | WAME | controlled |
-| GPCF-DOC-144B2195C3 | evidence | docs/harness/WAES/evidence/README.md | WAME | controlled |
-| GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAES/evidence/evidence-index.md | WAME | controlled |
-| GPCF-DOC-WAES-LINT-RUNTIME-REPAIR-AUTHORIZATION-20260625 | WAME lint runtime 修复授权包 2026-06-25 | docs/harness/WAES/evidence/waes-lint-runtime-repair-authorization-20260625.md | WAME | controlled |
-| GPCF-DOC-WAES-REAL-RUNTIME-BASELINE-20260624 | WAME 真实运行基线证据 2026-06-24 | docs/harness/WAES/evidence/waes-real-runtime-baseline-20260624.md | WAME | controlled |
-| GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAES/loop-state.md | WAME | controlled |
-| GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAES/loops/README.md | WAME | controlled |
-| GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-001.md | WAME | controlled |
-| GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAME 门禁语义验证清单 | docs/harness/WAES/loops/loop-round-GPCF-WA-LR-002.md | WAME | controlled |
+| GPCF-DOC-04C744A2DC | WAME | docs/harness/WAME/README.md | WAME | controlled |
+| GPCF-DOC-144B2195C3 | evidence | docs/harness/WAME/evidence/README.md | WAME | controlled |
+| GPCF-DOC-460215ED8F | evidence-index | docs/harness/WAME/evidence/evidence-index.md | WAME | controlled |
+| GPCF-DOC-WAME-LINT-RUNTIME-REPAIR-AUTHORIZATION-20260625 | WAME lint runtime 修复授权包 2026-06-25 | docs/harness/WAME/evidence/wame-lint-runtime-repair-authorization-20260625.md | WAME | controlled |
+| GPCF-DOC-WAME-REAL-RUNTIME-BASELINE-20260624 | WAME 真实运行基线证据 2026-06-24 | docs/harness/WAME/evidence/wame-real-runtime-baseline-20260624.md | WAME | controlled |
+| GPCF-DOC-FFA52ED4FF | loop-state | docs/harness/WAME/loop-state.md | WAME | controlled |
+| GPCF-DOC-4F7B5760F0 | loops | docs/harness/WAME/loops/README.md | WAME | controlled |
+| GPCF-DOC-5F557A77DA | Loop Round GPCF-WA-LR-001 | docs/harness/WAME/loops/loop-round-GPCF-WA-LR-001.md | WAME | controlled |
+| GPCF-DOC-C378E21CCF | Loop Round GPCF-WA-LR-002：WAME 门禁语义验证清单 | docs/harness/WAME/loops/loop-round-GPCF-WA-LR-002.md | WAME | controlled |
 | GPCF-DOC-07058116B0 | XGD | docs/harness/XGD/README.md | XGD | controlled |
 | GPCF-DOC-ADB6828C57 | evidence | docs/harness/XGD/evidence/README.md | XGD | controlled |
 | GPCF-DOC-6057F8A869 | Evidence Index — XGD | docs/harness/XGD/evidence/evidence-index.md | XGD | controlled |
@@ -434,7 +434,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011 | XWAIL City/Spatial Profile 立项请求 2026-10-11 | docs/harness/XWAIL/evidence/xwail-city-spatial-profile-request-20261011.md | KDS | controlled |
 | GPCF-DOC-XWAIL-MIN-VALIDATOR-RUNTIME-20260625 | XWAIL 最小 Validator/XAP 运行证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-min-validator-runtime-20260625.md | GPCF | controlled |
 | GPCF-DOC-XWAIL-REAL-RUNTIME-BASELINE-20260624 | XWAIL 真实运行基线证据 2026-06-24 | docs/harness/XWAIL/evidence/xwail-real-runtime-baseline-20260624.md | GPCF | controlled |
-| GPCF-DOC-XWAIL-WAES-AAAS-CONTRACT-PRECHECK-20260625 | XWAIL-WAES-AaaS 契约预检证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-waes-aaas-contract-precheck-20260625.md | GPCF | controlled |
+| GPCF-DOC-XWAIL-WAME-AAAS-CONTRACT-PRECHECK-20260625 | XWAIL-WAME-AaaS 契约预检证据 2026-06-25 | docs/harness/XWAIL/evidence/xwail-wame-aaas-contract-precheck-20260625.md | GPCF | controlled |
 | GPCF-DOC-86DB4AB0BA | XiaoC | docs/harness/XiaoC/README.md | XiaoC | controlled |
 | GPCF-DOC-7C2E2BCB61 | evidence | docs/harness/XiaoC/evidence/README.md | XiaoC | controlled |
 | GPCF-DOC-63536E3201 | Evidence Index — XiaoC | docs/harness/XiaoC/evidence/evidence-index.md | XiaoC | controlled |
@@ -540,7 +540,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-20260622 | Agent-Reach Project Group Full Live Coverage Plan 2026-06-22 | docs/harness/evidence/agent-reach-project-group-full-live-coverage-plan-20260622.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-20260622 | Agent-Reach Project Group Search Readiness Audit 2026-06-22 | docs/harness/evidence/agent-reach-project-group-search-readiness-audit-20260622.md | KDS | controlled |
 | GPCF-DOC-AGENT-REACH-RECENTER-20260622 | Agent-Reach Recenter Evidence 2026-06-22 | docs/harness/evidence/agent-reach-recenter-20260622.md | KDS | controlled |
-| GPCF-DOC-06F87D27BD | Agent-Reach WAME KDS Candidate Review Queue 20260621 | docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.md | KDS | controlled |
+| GPCF-DOC-06F87D27BD | Agent-Reach WAME KDS Candidate Review Queue 20260621 | docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.md | KDS | controlled |
 | GPCF-DOC-B2FEDB1128 | Agent-Reach零配置渠道修复验证 evidence | docs/harness/evidence/agent-reach-zero-config-repair-20260620.md | KDS | controlled |
 | GPCF-DOC-C2604C8E02 | Architecture OKF v0.1 Derived Bundle Report | docs/harness/evidence/architecture-okf-v01-bundle-report-20260620.md | KDS | controlled |
 | GPCF-DOC-CF3A246F25 | 基础知识闭环评分试运行汇总 | docs/harness/evidence/base-knowledge-closure-score-dry-run-summary-20260618.md | KDS | controlled |
@@ -845,15 +845,15 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-A1E6CF72D2 | Headroom LCX Sanitized Measurement Dry Run Evidence 20260622 | docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.md | KDS | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Headroom LCX Sanitized Token Fixture Extension Evidence | docs/harness/evidence/headroom-lcx-sanitized-token-fixture-extension-20260622.md | KDS | controlled |
 | GPCF-DOC-0EF0B535FC | Headroom LCX Session Summary Declaration Boundary Evidence | docs/harness/evidence/headroom-lcx-session-summary-declaration-boundary-20260622.md | KDS | controlled |
-| GPCF-DOC-A9483B7541 | Headroom LCX WAME Harness 准入决定 admitted 20260622 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.md | GPCF | controlled |
-| GPCF-DOC-3AA4B2B9B0 | Headroom LCX WAME Harness 准入决定 blocked 20260622 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-blocked-20260622.md | GPCF | controlled |
-| GPCF-DOC-EE2D84B879 | Headroom LCX WAME Harness Admission Decision Checklist 20260622 | docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Draft Candidate | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-draft-candidate-20260623.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-20260623 | Headroom LCX WAME Harness Final Receipt Decision Fill Recommendation | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-fill-recommendation-20260623.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-20260623 | Headroom LCX WAME Harness Final Receipt Decision Human Fill Request | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-human-fill-request-20260623.md | KDS | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623 | Headroom LCX WAME Harness Final Receipt Decision Request | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-request-20260623.md | KDS | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Response Intake | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-response-intake-20260623.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Response Template | docs/harness/evidence/headroom-lcx-waes-harness-final-receipt-decision-response-template-20260623.md | KDS | controlled |
+| GPCF-DOC-A9483B7541 | Headroom LCX WAME Harness 准入决定 admitted 20260622 | docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.md | GPCF | controlled |
+| GPCF-DOC-3AA4B2B9B0 | Headroom LCX WAME Harness 准入决定 blocked 20260622 | docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-blocked-20260622.md | GPCF | controlled |
+| GPCF-DOC-EE2D84B879 | Headroom LCX WAME Harness Admission Decision Checklist 20260622 | docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Draft Candidate | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-draft-candidate-20260623.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-20260623 | Headroom LCX WAME Harness Final Receipt Decision Fill Recommendation | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-fill-recommendation-20260623.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-20260623 | Headroom LCX WAME Harness Final Receipt Decision Human Fill Request | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-human-fill-request-20260623.md | KDS | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-20260623 | Headroom LCX WAME Harness Final Receipt Decision Request | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-request-20260623.md | KDS | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Response Intake | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-response-intake-20260623.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-20260623 | Headroom LCX WAME Harness Final Receipt Decision Response Template | docs/harness/evidence/headroom-lcx-wame-harness-final-receipt-decision-response-template-20260623.md | KDS | controlled |
 | GPCF-DOC-0058E113EE | Headroom Loop Cost Observation Evidence | docs/harness/evidence/headroom-loop-cost-observation-20260621.md | KDS | controlled |
 | GPCF-DOC-C82995EACD | Headroom Loop Cost Observation Series Evidence | docs/harness/evidence/headroom-loop-cost-observation-series-20260621.md | KDS | controlled |
 | GPCF-DOC-BEAC22ACA5 | Headroom Marker Preservation Policy Evidence | docs/harness/evidence/headroom-marker-preservation-policy-20260621.md | KDS | controlled |
@@ -1012,7 +1012,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-5A9D73C1E4 | Studio Kanban 运行入口门禁证据 | docs/harness/evidence/studio-kanban-runtime-entry-gate-20260622.md | GPCF | controlled |
 | GPCF-DOC-2F6C9B14A8 | Studio Kanban 运行态验证证据 | docs/harness/evidence/studio-kanban-runtime-verified-20260622.md | GPCF | controlled |
 | GPCF-DOC-8C1E4A92D7 | Studio Kanban 操作工作台 UI Gate 证据 | docs/harness/evidence/studio-kanban-workbench-ui-gate-20260622.md | GPCF | controlled |
-| GPCF-EVIDENCE-STUDIO-WAES-WORKBENCH-THREE-OPTION-DESIGN-20260626 | Studio WAME Workbench Three Option Design Evidence | docs/harness/evidence/studio-waes-workbench-three-option-design-20260626.md | KDS | controlled |
+| GPCF-EVIDENCE-STUDIO-WAME-WORKBENCH-THREE-OPTION-DESIGN-20260626 | Studio WAME Workbench Three Option Design Evidence | docs/harness/evidence/studio-wame-workbench-three-option-design-20260626.md | KDS | controlled |
 | GPCF-DOC-6D92B5F4E7 | Studio 工作台入口拓扑矩阵证据 | docs/harness/evidence/studio-workbench-entry-matrix-20260622.md | GPCF | controlled |
 | GPCF-DOC-35411435D9 | WAS Completion Audit Evidence | docs/harness/evidence/was-completion-audit-20260621.md | KDS | controlled |
 | GPCF-DOC-E581D6E5F0 | was-loop-context-coverage-20260621 | docs/harness/evidence/was-loop-context-coverage-20260621.md | GPCF | controlled |
@@ -1138,7 +1138,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-87EE29147B | WAS Real Source Record Waiting Room Evidence | docs/harness/evidence/was-real-source-record-waiting-room-20260621.md | KDS | controlled |
 | GPCF-DOC-1F7DEFD3F1 | WAS Scenario Profile Matrix Evidence | docs/harness/evidence/was-scenario-profile-matrix-20260621.md | KDS | controlled |
 | GPCF-DOC-2B1B5A8C55 | WAS Status Matrix Control Board Refresh Evidence | docs/harness/evidence/was-status-matrix-control-board-refresh-20260621.md | KDS | controlled |
-| GPCF-DOC-A1617A5806 | WAS-Ontology WAES/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md | KDS | controlled |
+| GPCF-DOC-A1617A5806 | WAS-Ontology WAME/KDS/RAG/Writeback Gate Pack Evidence | docs/harness/evidence/was-wame-kds-rag-writeback-gate-pack-20260621.md | KDS | controlled |
 | GPCF-DOC-WAS-XWAIL-ONTOLOGY-MAPPING-20260625 | WAS-XWAIL-Ontology 映射证据 2026-06-25 | docs/harness/evidence/was-xwail-ontology-mapping-20260625.md | KDS | controlled |
 | GPCF-DOC-ZCODE-COLLAB-20260709 | GlobalCloud 项目群 ZCode + Codex 协同工作方案 | docs/harness/globalcloud-zcode-codex-collaboration-scheme.md | KDS | controlled |
 | GPCF-DOC-E60D35F595 | gpcf-12-project-document-control-queue-lr013 | docs/harness/gpcf-12-project-document-control-queue-lr013.md | GPCF | controlled |
@@ -1168,7 +1168,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-9C749DC30E | gpcf-project-document-maturity-gap-backlog-lr005 | docs/harness/gpcf-project-document-maturity-gap-backlog-lr005.md | GPCF | controlled |
 | GPCF-DOC-A9D9A54A31 | gpcf-project-startup-template-hardening-lr029 | docs/harness/gpcf-project-startup-template-hardening-lr029.md | GPCF | controlled |
 | GPCF-DOC-9BDA4F0BC3 | gpcf-pvaos-project-startup-pack-lr018 | docs/harness/gpcf-pvaos-project-startup-pack-lr018.md | GPCF | controlled |
-| GPCF-DOC-CC30FEEA9C | WAME Manifest 与 loop-state 补齐包 | docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md | KDS | controlled |
+| GPCF-DOC-CC30FEEA9C | WAME Manifest 与 loop-state 补齐包 | docs/harness/gpcf-wame-manifest-loopstate-pack-lr025.md | KDS | controlled |
 | GPCF-DOC-5839431FBC | gpcf-xgd-project-startup-pack-lr020 | docs/harness/gpcf-xgd-project-startup-pack-lr020.md | GPCF | controlled |
 | GPCF-DOC-8A81B62CEF | gpcf-xiaoc-loopstate-completion-pack-lr027 | docs/harness/gpcf-xiaoc-loopstate-completion-pack-lr027.md | GPCF | controlled |
 | GPCF-DOC-0E90353E48 | gpcf-xiaog-project-startup-pack-lr021 | docs/harness/gpcf-xiaog-project-startup-pack-lr021.md | GPCF | controlled |
@@ -1222,7 +1222,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-LOOP-AGENT-REACH-P8-REWORK-QUEUE-001 | Agent-Reach P8 返工队列 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-REWORK-QUEUE-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001 | LOOP Round GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-RECENTER-001 | GPCF-AGENT-REACH-RECENTER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-RECENTER-001.md | GPCF | controlled |
-| GPCF-DOC-5C7F800184 | GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001.md | GPCF | controlled |
+| GPCF-DOC-5C7F800184 | GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001.md | GPCF | controlled |
 | GPCF-DOC-7CD4D9DE05 | loop-round-GPCF-CF-LR-001 | docs/harness/loops/loop-round-GPCF-CF-LR-001.md | GPCF | controlled |
 | GPCF-DOC-263315555E | loop-round-GPCF-CF-LR-002 | docs/harness/loops/loop-round-GPCF-CF-LR-002.md | GPCF | controlled |
 | GPCF-DOC-CA61033026 | loop-round-GPCF-CF-LR-003 | docs/harness/loops/loop-round-GPCF-CF-LR-003.md | GPCF | controlled |
@@ -1645,13 +1645,13 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-D83FE8C1B1 | Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Loop Round GPCF Headroom LCX Sanitized Token Fixture Extension 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | GPCF | controlled |
 | GPCF-DOC-82B704BBFF | Loop Round GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | GPCF | controlled |
-| GPCF-DOC-B36D4C856B | Loop Round GPCF Headroom LCX WAME Harness Admission Decision Checklist 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Draft Candidate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Fill Recommendation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Human Fill Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Response Intake 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Response Template 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001.md | GPCF | controlled |
+| GPCF-DOC-B36D4C856B | Loop Round GPCF Headroom LCX WAME Harness Admission Decision Checklist 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Draft Candidate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Fill Recommendation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Human Fill Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Response Intake 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Response Template 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001.md | GPCF | controlled |
 | GPCF-DOC-F9C0CBE512 | LOOP Round GPCF Headroom Loop Cost Observation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LOOP-COST-OBSERVATION-001.md | GPCF | controlled |
 | GPCF-DOC-1AA365A16D | LOOP Round GPCF Headroom Loop Cost Observation Series 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LOOP-COST-OBSERVATION-SERIES-001.md | GPCF | controlled |
 | GPCF-DOC-2F2B13445C | LOOP Round GPCF Headroom Marker Preservation Policy 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-MARKER-PRESERVATION-POLICY-001.md | GPCF | controlled |
@@ -2385,7 +2385,7 @@ KDS 路径前缀：`开发/12-GPCF/docs/`
 | GPCF-DOC-CF42DB87F1 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001.md | GPCF | controlled |
 | GPCF-DOC-DEB7C6D159 | Loop Round GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-7682DAC0E5 | Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md | GPCF | controlled |
-| GPCF-DOC-01A5916499 | Loop Round: GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001.md | GPCF | controlled |
+| GPCF-DOC-01A5916499 | Loop Round: GPCF-ONTOLOGY-WAS-WAME-KDS-RAG-WRITEBACK-GATE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-WAME-KDS-RAG-WRITEBACK-GATE-PACK-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001 | GPCF PROJECT GROUP AUTHORIZATION LAYER MATRIX 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-FIRST-KDS-BLOCKER-001 | LOOP Round: Project Group Dev First KDS Blocker | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-FIRST-KDS-BLOCKER-001.md | GPCF | controlled |

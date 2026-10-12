@@ -61,7 +61,7 @@ changed_governance_relations:
     constraints: 不建立竞争本体
   - subject: gcworld-evidence-twin-foundation
     relation: requires_governed_authorization_context
-    object: WAES
+    object: WAME
     constraints: GCWORLD不作最终授权裁决
 
 codegraph_mutation:

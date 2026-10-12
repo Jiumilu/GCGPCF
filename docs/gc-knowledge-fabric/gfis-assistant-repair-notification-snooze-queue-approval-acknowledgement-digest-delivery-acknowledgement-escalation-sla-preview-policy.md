@@ -31,7 +31,7 @@ superseded_by: []
 - DKS-133 acknowledgement digest delivery preview。
 - `okf/gfis-assistant-repair-notification-snooze-queue-approval-acknowledgement-digest-delivery-acknowledgement-escalation-preview-policy.yaml`。
 - `okf/kwe-approval-route-packet-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 
 ## 输出字段
 
@@ -83,7 +83,7 @@ superseded_by: []
 - `createsDeliveryAcknowledgement = false`
 - `createsApprovalRequest = false`
 - `createsApprovalDecision = false`
-- `createsWaesGateResult = false`
+- `createsWameGateResult = false`
 - `createsKweWorkItem = false`
 - `createsHarnessEvidence = false`
 - `promotesLifecycle = false`

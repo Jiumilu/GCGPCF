@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8E2A7EAEF0
 title: Loop Round GPCF-HEADROOM-ADMISSION-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

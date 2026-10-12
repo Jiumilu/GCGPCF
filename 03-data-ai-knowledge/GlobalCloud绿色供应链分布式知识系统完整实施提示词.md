@@ -302,7 +302,7 @@ run -> stop -> verify -> recover -> debug
 - committee_decided。
 - rag_strong_reference_approved。
 - gfis_writeback_executed。
-- waes_gate_passed。
+- wame_gate_passed。
 - kds_api_synced。
 
 十八、当前优先推进队列

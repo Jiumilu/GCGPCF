@@ -59,8 +59,8 @@
     },
     {
       "round_id": "GPCF-CF-LR-025",
-      "title": "WAES Manifest 与 loop-state 补齐包",
-      "doc": "docs/harness/gpcf-waes-manifest-loopstate-pack-lr025.md",
+      "title": "WAME Manifest 与 loop-state 补齐包",
+      "doc": "docs/harness/gpcf-wame-manifest-loopstate-pack-lr025.md",
       "status": "project_readiness_rules_only",
       "next_round": "GPCF-CF-LR-026"
     },
@@ -197,7 +197,7 @@
       "state_cap": "partial"
     },
     {
-      "project": "WAES",
+      "project": "WAME",
       "code": "WA",
       "priority": "P2",
       "missing": [
@@ -247,7 +247,7 @@
     "stop_evidence": "GPCF fourth L3 session reached 15/15 rounds",
     "next_backlog": [
       "initialize PVAOS/PKC/XGD/XiaoG/MMC project docs under explicit project-write boundary",
-      "complete KDS/Brain/WAES/GPC/XiaoC loop-state packages",
+      "complete KDS/Brain/WAME/GPC/XiaoC loop-state packages",
       "collect real field samples and UAT signoffs",
       "configure KDS token only when user approves"
     ]

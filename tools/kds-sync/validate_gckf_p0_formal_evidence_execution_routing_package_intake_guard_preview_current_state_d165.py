@@ -165,7 +165,7 @@ def main() -> None:
             "routing_owner",
             "routing_package_owner",
             "intake_guard_owner",
-            "waes_gate_owner",
+            "wame_gate_owner",
             "harness_reviewer",
             "committee_representative"
         },

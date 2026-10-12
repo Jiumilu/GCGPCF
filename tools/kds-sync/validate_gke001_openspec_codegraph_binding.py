@@ -28,11 +28,11 @@ REVIEW_THREAD = "019fc228-2403-7123-9cae-fb9028850b84"
 CANONICAL_SHA256 = "76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf"
 ROADMAP_SHA256 = "688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab"
 PROJECTS = {
-    "AAAS", "Brain", "WAS", "XiaoC", "WAES", "GPC", "Studio", "GPCF", "XWAIL",
+    "AAAS", "Brain", "WAS", "XiaoC", "WAME", "GPC", "Studio", "GPCF", "XWAIL",
     "GFIS", "MMC", "KDS", "XiaoG", "PVAOS", "SOP", "PKC", "XGD", "ICP",
 }
 REPOSITORIES = {
-    "gfis", "gpc", "pvaos", "waes", "kds", "brain", "pkc", "xiaoc", "xgd",
+    "gfis", "gpc", "pvaos", "wame", "kds", "brain", "pkc", "xiaoc", "xgd",
     "xiaog", "mmc", "gpcf", "studio", "was",
 }
 UNINDEXED_PROJECTS = {"AAAS", "XWAIL", "SOP", "ICP"}

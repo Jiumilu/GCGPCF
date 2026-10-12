@@ -16,7 +16,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -43,8 +43,8 @@ EVIDENCE_CHAIN = [
     "docs/harness/evidence/headroom-lcx-authorization-negative-fixtures-20260622.json",
     "docs/harness/evidence/headroom-lcx-authorization-schema-approval-package-20260622.json",
     "docs/harness/evidence/headroom-lcx-approval-instance-precheck-20260622.json",
-    "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.json",
-    "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.json",
+    "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.json",
+    "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.json",
     "docs/harness/evidence/headroom-lcx-sanitized-measurement-dry-run-20260622.json",
     "docs/harness/evidence/headroom-lcx-metadata-replay-check-20260622.json",
     "docs/harness/evidence/headroom-lcx-marker-retrieval-miss-comparison-gate-20260622.json",
@@ -77,7 +77,7 @@ def frontmatter(title: str, source_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: governance
 status: controlled
 version: v1.0
@@ -168,7 +168,7 @@ def build_evidence() -> dict:
             "allow_local_headroom_dry_run": True,
             "allow_sanitized_fixture_replay": True,
             "allow_harness_evidence_generation": True,
-            "allow_waes_gate_check": True,
+            "allow_wame_gate_check": True,
             "allow_raw_prompt_or_completion": False,
             "allow_unredacted_sensitive_material": False,
             "allow_production_proxy": False,
@@ -182,7 +182,7 @@ def build_evidence() -> dict:
         "blocked_until": [
             "explicit_l3_5_pilot_window_id",
             "human_approver_identity_and_timestamp",
-            "waes_harness_l3_5_pilot_decision",
+            "wame_harness_l3_5_pilot_decision",
             "rollback_plan_id_for_pilot",
             "telemetry_off_confirmation",
             "negative_gate_pass_for_l3_5_inputs",
@@ -250,7 +250,7 @@ def write_md(evidence: dict) -> None:
             "## Requested L3.5 Pilot Boundary",
             "",
             "- Allow local Headroom dry-run and sanitized fixture replay only.",
-            "- Allow Harness evidence generation and WAES gate checks only.",
+            "- Allow Harness evidence generation and WAME gate checks only.",
             "- Do not allow production proxy, production SDK enablement, KDS API write, external API write, database migration, permission change, raw prompt/completion storage, unredacted sensitive material, or `headroom learn --apply`.",
             "- Do not promote `accepted`, `integrated`, or `production_ready`.",
             "",

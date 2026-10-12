@@ -23,7 +23,7 @@ loop_review_with_codegraph:
       - criterion:
         verified:
         evidence:
-  waes:
+  wame:
     required:
     result:
     reviewer:

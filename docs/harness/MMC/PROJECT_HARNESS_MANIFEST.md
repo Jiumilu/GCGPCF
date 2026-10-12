@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-26AF30C1B1
 title: GlobalCloud MMC Project Harness Manifest
 project: MMC
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ MMC 是 GlobalCloud 项目群的管理配置中心与治理模板基线，负责
 - MMC 不承接 GFIS 工厂事实主账。
 - MMC 不承接 GPC 客户协同、合同、回款或 POD 主责。
 - MMC 不承接 KDS 知识主存和真实 Token 存储。
-- MMC 不承接 WAES 的最终验收裁决权。
+- MMC 不承接 WAME 的最终验收裁决权。
 - MMC 只沉淀配置、模板、治理字段和准入标准。
 
 ## 当前门禁

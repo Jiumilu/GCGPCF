@@ -25,7 +25,7 @@
     "dryRunOnly": true,
     "casePacketRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -44,7 +44,7 @@
       "freeze_retention_statement",
       "revenue_contribution_impact_summary",
       "formal_write_risk_summary",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "no_write_attestation"
     ],
     "casePacketQuestionGroups": [
@@ -92,7 +92,7 @@
       "freeze_retention_statement_present",
       "revenue_contribution_impact_summary_present",
       "formal_write_risk_summary_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "no_write_attestation_present",
       "preview_hold_context_refs",
       "assert_case_packet_not_submitted",
@@ -115,9 +115,9 @@
       "freezeRetentionStatementRef",
       "revenueContributionImpactSummaryRef",
       "formalWriteRiskSummaryRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -145,7 +145,7 @@
       "missing_freeze_retention_statement_ref",
       "missing_revenue_contribution_impact_summary_ref",
       "missing_formal_write_risk_summary_ref",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_required_case_packet_role",
       "missing_no_write_attestation_ref",
       "missing_hold_context_refs",
@@ -178,7 +178,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_case_packet_preview_to_case",
-      "override_waes_gate",
+      "override_wame_gate",
       "grant_p1_admission",
       "approve_v1_upgrade"
     ]
@@ -231,7 +231,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "case_packet_preview_converted_to_case",
     "p1_admission_granted",
     "v1_upgrade_approved"

@@ -80,7 +80,7 @@ superseded_by: []
 | linkedTask | `MCT-HBLC-FEA-202606-0001` |
 | executionState | `source_submitted_candidate` |
 | sourceReceiptStatus | `metadata_received` |
-| waesRecordStatus | `planned` |
+| wameRecordStatus | `planned` |
 | humanReviewStatus | `pending` |
 | committeeStatus | `none` |
 | bountyStatus | `candidate_only` |
@@ -102,7 +102,7 @@ superseded_by: []
 | linkedTask | `MCT-HBLC-IND-202606-0001` |
 | executionState | `source_submitted_candidate` |
 | sourceReceiptStatus | `metadata_received` |
-| waesRecordStatus | `planned` |
+| wameRecordStatus | `planned` |
 | humanReviewStatus | `pending` |
 | committeeStatus | `not_required` |
 | bountyStatus | `candidate_only` |
@@ -124,7 +124,7 @@ superseded_by: []
 | linkedTask | `MCT-HBLC-ORD-202606-0001` |
 | executionState | `returned` |
 | sourceReceiptStatus | `returned` |
-| waesRecordStatus | `blocked` |
+| wameRecordStatus | `blocked` |
 | humanReviewStatus | `returned` |
 | committeeStatus | `none` |
 | bountyStatus | `candidate_only` |
@@ -146,7 +146,7 @@ superseded_by: []
 | linkedTask | `MCT-HBLC-ORD-202606-0002` |
 | executionState | `blocked` |
 | sourceReceiptStatus | `blocked` |
-| waesRecordStatus | `blocked` |
+| wameRecordStatus | `blocked` |
 | humanReviewStatus | `blocked` |
 | committeeStatus | `decision_planned` |
 | bountyStatus | `withdrawn` |

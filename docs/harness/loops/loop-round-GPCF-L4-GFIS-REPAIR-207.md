@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6B36CAE0C5
 title: GPCF-L4-GFIS-REPAIR-207 GFIS 客户需求或平台订单派发确认接收文件扫描
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -63,7 +63,7 @@ GPCF 更新本控制记录、loop-state、evidence index、项目状态矩阵、
 GFIS 200 输出：
 
 ```text
-request_package_items=1 prepared_requests=1 dispatch_preflight_items=1 dispatch_preflight_blocked=1 dispatch_authorizations=0 recipients_confirmed=0 manual_channels_confirmed=0 external_api_writes_required=0 dispatch_allowed=0 dispatched_requests=0 confirmation_slots=1 receiving_directory_exists=1 receiving_readme_exists=1 expected_confirmation_files=1 confirmation_files_found=0 structure_valid_confirmations=0 valid_confirmations=0 invalid_confirmations=0 missing_confirmations=1 unexpected_files=0 acknowledgement_allowed=0 acknowledged_requests=0 owner_manual_responses=0 owner_response_allowed=0 submitted_envelopes=0 valid_envelopes=0 submission_package_allowed=0 complete_submission_ready=0 release_allowed=0 collection_open=0 quarantine_allowed=0 review_queue_ready=0 review_queue=0 manual_review=0 waes_review=0 runtime_intake=0 verified=0 runtime_primary_key_ready=0 runtime_primary_key_missing=1 runtime_sop_e2e=repair_required
+request_package_items=1 prepared_requests=1 dispatch_preflight_items=1 dispatch_preflight_blocked=1 dispatch_authorizations=0 recipients_confirmed=0 manual_channels_confirmed=0 external_api_writes_required=0 dispatch_allowed=0 dispatched_requests=0 confirmation_slots=1 receiving_directory_exists=1 receiving_readme_exists=1 expected_confirmation_files=1 confirmation_files_found=0 structure_valid_confirmations=0 valid_confirmations=0 invalid_confirmations=0 missing_confirmations=1 unexpected_files=0 acknowledgement_allowed=0 acknowledged_requests=0 owner_manual_responses=0 owner_response_allowed=0 submitted_envelopes=0 valid_envelopes=0 submission_package_allowed=0 complete_submission_ready=0 release_allowed=0 collection_open=0 quarantine_allowed=0 review_queue_ready=0 review_queue=0 manual_review=0 wame_review=0 runtime_intake=0 verified=0 runtime_primary_key_ready=0 runtime_primary_key_missing=1 runtime_sop_e2e=repair_required
 ```
 
 状态：
@@ -72,7 +72,7 @@ request_package_items=1 prepared_requests=1 dispatch_preflight_items=1 dispatch_
 customer_requirement_platform_order_review_authorization_envelope_owner_manual_request_dispatch_confirmation_receiving_file_scan_no_real_confirmations
 ```
 
-这只证明已扫描真实接收目录，且未发现有效派发确认文件。它不证明客户订单、平台订单、授权信封提交、派发、确认、运行时主键、review queue、runtime intake、WAES review、verified 工件、accepted 或 integrated 完成。
+这只证明已扫描真实接收目录，且未发现有效派发确认文件。它不证明客户订单、平台订单、授权信封提交、派发、确认、运行时主键、review queue、runtime intake、WAME review、verified 工件、accepted 或 integrated 完成。
 
 ## 验证
 
@@ -90,7 +90,7 @@ customer_requirement_platform_order_review_authorization_envelope_owner_manual_r
 - 不执行 Git push。
 - 不进行生产写入。
 - 不进行真实外部 API 写入。
-- 不进行真实 KDS 或 WAES 写入。
+- 不进行真实 KDS 或 WAME 写入。
 - 不执行数据库迁移。
 - 不执行 `bench migrate`。
 - 不执行 schema sync。

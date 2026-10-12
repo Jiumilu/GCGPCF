@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D0C235455B
 title: WAS Real Source Record Monitor 025 Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -71,4 +71,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_025.py
 
 ## 边界
 
-本 evidence 不接受无真实 source record 的用地/生态/环评画像，不推断用地许可、环境影响评价、生态基线、保护区筛查、土壤/地下水评估或修复缓解方案，不创建 runtime intake、review queue、WAES review、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不接受无真实 source record 的用地/生态/环评画像，不推断用地许可、环境影响评价、生态基线、保护区筛查、土壤/地下水评估或修复缓解方案，不创建 runtime intake、review queue、WAME review、verified artifact、accepted、integrated 或 production_ready。

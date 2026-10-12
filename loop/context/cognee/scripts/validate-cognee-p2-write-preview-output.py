@@ -34,7 +34,7 @@ REQUIRED_RECORD_FIELDS = {
     "harness_evidence_ref",
     "retrieval_query_hash",
     "marker_gate",
-    "waes_decision",
+    "wame_decision",
     "answer_equivalence",
     "write_requested",
     "owner_authorization_present",

@@ -14,10 +14,10 @@
       "expectedOperationCount": 12
     },
     {
-      "group": "waes",
-      "repository": "packages/api/src/waes/repository.ts",
-      "service": "packages/api/src/waes/service.ts",
-      "requiredExports": ["./waes/repository", "./waes/service"],
+      "group": "wame",
+      "repository": "packages/api/src/wame/repository.ts",
+      "service": "packages/api/src/wame/service.ts",
+      "requiredExports": ["./wame/repository", "./wame/service"],
       "expectedOperationCount": 9
     },
     {

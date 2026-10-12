@@ -83,7 +83,7 @@ def main() -> int:
     ]:
         require(decision.get(key) is False, f"decision must keep {key}=false")
     require(decision.get("blocked") is (not expected_recorded), "precheck blocked flag mismatch")
-    expected_blocker = "waes_harness_final_receipt_decision_required" if expected_recorded else "blocked_missing_external_receipt_instance"
+    expected_blocker = "wame_harness_final_receipt_decision_required" if expected_recorded else "blocked_missing_external_receipt_instance"
     require(decision.get("blocker") == expected_blocker, "wrong blocker")
 
     for phrase in [

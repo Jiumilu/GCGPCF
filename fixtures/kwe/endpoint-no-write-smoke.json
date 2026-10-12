@@ -16,7 +16,7 @@
     "endpointCount": 10,
     "readOnlyCount": 1,
     "workRequestCount": 3,
-    "waesGatedRequestCount": 6,
+    "wameGatedRequestCount": 6,
     "humanOrCommitteeFinalityCount": 9,
     "writesAcceptedFact": 0,
     "writesBusinessSystem": 0,

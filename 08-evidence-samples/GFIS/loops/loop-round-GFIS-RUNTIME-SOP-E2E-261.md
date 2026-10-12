@@ -44,7 +44,7 @@ superseded_by: []
 `python3 scripts/validate_gfis_sop_e2e_261.py`：
 
 ```text
-gfis_customer_requirement_platform_order_valid_source_record_index_receiving_scan=pass receiving_directory_exists=1 receiving_readme_exists=1 expected_index_files=1 source_record_index_files_found=0 unexpected_files=0 structure_valid_records=0 valid_source_records=0 invalid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_valid_source_record_index_empty_scan runtime_sop_e2e=repair_required
+gfis_customer_requirement_platform_order_valid_source_record_index_receiving_scan=pass receiving_directory_exists=1 receiving_readme_exists=1 expected_index_files=1 source_record_index_files_found=0 unexpected_files=0 structure_valid_records=0 valid_source_records=0 invalid_source_records=0 source_record_to_runtime_primary_key_ready=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_valid_source_record_index_empty_scan runtime_sop_e2e=repair_required
 ```
 
 ## 真实性计数
@@ -67,7 +67,7 @@ gfis_customer_requirement_platform_order_valid_source_record_index_receiving_sca
 - runtime_primary_key_ready=0
 - review_queue=0
 - runtime_intake=0
-- waes_review=0
+- wame_review=0
 - verified=0
 - runtime_sop_e2e=repair_required
 

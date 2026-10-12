@@ -32,7 +32,7 @@
         "score_observed": 32.108545941646085
       },
       {
-        "filePath": "tools/kds-sync/validate_codegraph_waes_gate_policy.py",
+        "filePath": "tools/kds-sync/validate_codegraph_wame_gate_policy.py",
         "kind": "variable",
         "name": "EVIDENCE_TEMPLATE",
         "score_observed": 27.021130637142058
@@ -66,7 +66,7 @@
     ],
     "files_allowed_to_change": [],
     "files_not_to_touch": [
-      "business application source files in GFIS/GPC/PVAOS/WAES/KDS/Brain/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS",
+      "business application source files in GFIS/GPC/PVAOS/WAME/KDS/Brain/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS",
       "production configuration files",
       "real KDS token or secret files",
       ".codegraph/**"

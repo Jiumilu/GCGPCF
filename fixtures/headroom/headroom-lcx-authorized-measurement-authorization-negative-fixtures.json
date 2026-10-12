@@ -6,7 +6,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -34,7 +34,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -93,10 +93,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "admitted_for_sanitized_measurement_precheck",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"
@@ -125,7 +125,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -156,10 +156,10 @@
             "example": "LCX-MEASURE-YYYYMMDD-001"
           },
           "authorized_by": {
-            "value": "GPCF-WAES-APPROVER-EXAMPLE",
+            "value": "GPCF-WAME-APPROVER-EXAMPLE",
             "required": true,
             "format": "human_approver_or_governance_role",
-            "example": "GPCF/WAES named approver"
+            "example": "GPCF/WAME named approver"
           },
           "authorized_at": {
             "value": "2026-06-22T00:00:00+08:00",
@@ -190,10 +190,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "admitted_for_sanitized_measurement_precheck",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"
@@ -222,7 +222,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -253,10 +253,10 @@
             "example": "LCX-MEASURE-YYYYMMDD-001"
           },
           "authorized_by": {
-            "value": "GPCF-WAES-APPROVER-EXAMPLE",
+            "value": "GPCF-WAME-APPROVER-EXAMPLE",
             "required": true,
             "format": "human_approver_or_governance_role",
-            "example": "GPCF/WAES named approver"
+            "example": "GPCF/WAME named approver"
           },
           "authorized_at": {
             "value": "2026-06-22T00:00:00+08:00",
@@ -290,10 +290,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "admitted_for_sanitized_measurement_precheck",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"
@@ -311,8 +311,8 @@
       }
     },
     {
-      "case_id": "missing_waes_harness_decision",
-      "expected_rejection_reason": "waes_harness_decision_required",
+      "case_id": "missing_wame_harness_decision",
+      "expected_rejection_reason": "wame_harness_decision_required",
       "candidate": {
         "template_id": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-AUTHORIZATION-TEMPLATE-20260621",
         "purpose": "collect_complete_human_authorization_before_any_sanitized_production_token_measurement",
@@ -322,7 +322,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -353,10 +353,10 @@
             "example": "LCX-MEASURE-YYYYMMDD-001"
           },
           "authorized_by": {
-            "value": "GPCF-WAES-APPROVER-EXAMPLE",
+            "value": "GPCF-WAME-APPROVER-EXAMPLE",
             "required": true,
             "format": "human_approver_or_governance_role",
-            "example": "GPCF/WAES named approver"
+            "example": "GPCF/WAME named approver"
           },
           "authorized_at": {
             "value": "2026-06-22T00:00:00+08:00",
@@ -387,10 +387,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"
@@ -419,7 +419,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -450,10 +450,10 @@
             "example": "LCX-MEASURE-YYYYMMDD-001"
           },
           "authorized_by": {
-            "value": "GPCF-WAES-APPROVER-EXAMPLE",
+            "value": "GPCF-WAME-APPROVER-EXAMPLE",
             "required": true,
             "format": "human_approver_or_governance_role",
-            "example": "GPCF/WAES named approver"
+            "example": "GPCF/WAME named approver"
           },
           "authorized_at": {
             "value": "2026-06-22T00:00:00+08:00",
@@ -484,10 +484,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "admitted_for_sanitized_measurement_precheck",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"
@@ -516,7 +516,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -546,10 +546,10 @@
             "example": "LCX-MEASURE-YYYYMMDD-001"
           },
           "authorized_by": {
-            "value": "GPCF-WAES-APPROVER-EXAMPLE",
+            "value": "GPCF-WAME-APPROVER-EXAMPLE",
             "required": true,
             "format": "human_approver_or_governance_role",
-            "example": "GPCF/WAES named approver"
+            "example": "GPCF/WAME named approver"
           },
           "authorized_at": {
             "value": "2026-06-22T00:00:00+08:00",
@@ -580,10 +580,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "admitted_for_sanitized_measurement_precheck",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"
@@ -612,7 +612,7 @@
             "GPCF",
             "KDS",
             "Brain",
-            "WAES",
+            "WAME",
             "GFIS",
             "GPC",
             "PVAOS",
@@ -643,10 +643,10 @@
             "example": "LCX-MEASURE-YYYYMMDD-001"
           },
           "authorized_by": {
-            "value": "GPCF-WAES-APPROVER-EXAMPLE",
+            "value": "GPCF-WAME-APPROVER-EXAMPLE",
             "required": true,
             "format": "human_approver_or_governance_role",
-            "example": "GPCF/WAES named approver"
+            "example": "GPCF/WAME named approver"
           },
           "authorized_at": {
             "value": "2026-06-22T00:00:00+08:00",
@@ -677,10 +677,10 @@
               "retain evidence"
             ]
           },
-          "waes_harness_admission_decision": {
+          "wame_harness_admission_decision": {
             "value": "admitted_for_sanitized_measurement_precheck",
             "required": true,
-            "format": "WAES/Harness decision evidence id",
+            "format": "WAME/Harness decision evidence id",
             "allowed_values": [
               "admitted_for_sanitized_measurement_precheck",
               "blocked"

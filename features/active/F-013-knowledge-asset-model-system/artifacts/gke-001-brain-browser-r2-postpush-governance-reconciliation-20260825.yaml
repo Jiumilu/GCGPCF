@@ -76,7 +76,7 @@ gke001_brain_browser_r2_postpush_governance_reconciliation:
     classification: browser_r2_postpush_technical_revalidation_passed_governance_reconciled_partial
   d17_freeze:
     accepted: true
-    gcworld_or_waes_manual_material_import_to_kds: prohibited
+    gcworld_or_wame_manual_material_import_to_kds: prohibited
     kds_api_server_edit: prohibited
     kds_test_api_smoke_edit: prohibited
     frozen_paths_touched: false

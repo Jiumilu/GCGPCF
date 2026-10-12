@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-923334C992
 title: Loop Round GPCF-MM-LR-001
 project: MMC
-related_projects: [GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

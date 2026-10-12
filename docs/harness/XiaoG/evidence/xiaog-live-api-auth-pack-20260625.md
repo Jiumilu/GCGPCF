@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XIAOG-LIVE-API-AUTH-PACK-20260625
 title: XiaoG Live API 授权包证据 2026-06-25
 project: XiaoG
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文补齐 `XIAOG-LIVE-API-AUTH-PACK-001`，用于把 XiaoG 从 `baseline_controlled` 推进到 `task_pack_ready / authorization_pack_ready` 候选。
 
-本文只准备 live API、设备验证、真实通知和 WAES 审计写入的授权包输入，不执行 live GFIS/GPC API，不发送真实 PKC 通知，不写入 WAES，不执行 Docker 部署，不执行设备 OTA，不访问 TOKEN，不升级 `accepted`、`integrated`、`production_ready` 或客户验收。
+本文只准备 live API、设备验证、真实通知和 WAME 审计写入的授权包输入，不执行 live GFIS/GPC API，不发送真实 PKC 通知，不写入 WAME，不执行 Docker 部署，不执行设备 OTA，不访问 TOKEN，不升级 `accepted`、`integrated`、`production_ready` 或客户验收。
 
 ## 2. 控制结论
 
@@ -37,12 +37,12 @@ readonly_audit_mock = pass
 round = XiaoG-L4-011
 readonly_queries = 3
 pkc_notification_candidates = 1
-waes_audit_mocks = 2
+wame_audit_mocks = 2
 execution_traces = 1
 network_call_executed = false
 live_gfis_gpc_api_executed = false
 real_pkc_notification_sent = false
-real_waes_audit_write_executed = false
+real_wame_audit_write_executed = false
 device_ota_executed = false
 docker_deployment_executed = false
 token_access_executed = false
@@ -58,7 +58,7 @@ customer_accepted = false
 | 命令 | 结果 | 原始摘要 |
 |---|---|---|
 | `npm run harness:check` | `pass` | `Harness check passed` |
-| `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py` | `pass` | `xiaog_l4_readonly_audit_mock=pass`；`readonly_queries=3`；`pkc_notifications=1`；`waes_audit_mocks=2`；`execution_traces=1`；`network=false device_ota=false docker=false production_write=false token_access=false status_upgrade=false` |
+| `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py` | `pass` | `xiaog_l4_readonly_audit_mock=pass`；`readonly_queries=3`；`pkc_notifications=1`；`wame_audit_mocks=2`；`execution_traces=1`；`network=false device_ota=false docker=false production_write=false token_access=false status_upgrade=false` |
 
 ## 4. 授权包输入
 
@@ -66,7 +66,7 @@ customer_accepted = false
 |---|---|---|---|
 | Live GFIS/GPC read API | `ReadOnlyQueryResult` mock，覆盖 `FactoryOrder`、`WorkOrder`、`Shipment` | 未执行 live API，未写入 GFIS/GPC 事实 | 是 |
 | PKC notification | `PkcNotificationCandidate` queued candidate | 未发送真实消息，未标记任务完成 | 是 |
-| WAES audit write | `WaesAuditWriteMock`，`gate = needs_human_review` | 未写入 WAES，未做最终裁决 | 是 |
+| WAME audit write | `WameAuditWriteMock`，`gate = needs_human_review` | 未写入 WAME，未做最终裁决 | 是 |
 | ExecutionTrace | 本地 trace 记录所有高风险动作均为 false | 未执行网络、设备 OTA、Docker、生产写入、TOKEN 访问 | 是 |
 
 ## 5. 证据边界
@@ -76,7 +76,7 @@ customer_accepted = false
 | 真实进度 | `task_pack_ready / authorization_pack_ready` |
 | 真实研发 | `local_harness_and_mock_validator_verified` |
 | 真实运行 | `not_verified_this_round`，只验证本地 mock payload |
-| 真实集成 | `not_verified_this_round`，未调用真实 GFIS/GPC/PKC/WAES |
+| 真实集成 | `not_verified_this_round`，未调用真实 GFIS/GPC/PKC/WAME |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 
@@ -93,9 +93,9 @@ customer_accepted = false
 
 - 不声明 live GFIS/GPC API 已验证；
 - 不声明真实 PKC 通知已发送；
-- 不声明真实 WAES 审计写入已完成；
+- 不声明真实 WAME 审计写入已完成；
 - 不声明设备 OTA、Docker 部署、生产部署或生产写入完成；
-- 不声明真实 KDS/Brain/XiaoC/XGD/WAES 集成完成；
+- 不声明真实 KDS/Brain/XiaoC/XGD/WAME 集成完成；
 - 不声明客户交付或客户验收；
 - 不声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
 
@@ -103,7 +103,7 @@ customer_accepted = false
 
 ```text
 next_task = XIAOG-LIVE-API-HUMAN-AUTHORIZATION-001
-required_confirmation = live GFIS/GPC read API; PKC notification; WAES audit write; device/Docker/deploy boundary
+required_confirmation = live GFIS/GPC read API; PKC notification; WAME audit write; device/Docker/deploy boundary
 authorization_required = true
 status_boundary = authorization_pack_only
 ```

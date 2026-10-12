@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-62B1AFEC53
 title: GPCF Project Group Phase Goals
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,12 +39,12 @@ superseded_by: []
 
 | 维度 | 当前事实 | 阶段含义 |
 | --- | --- | --- |
-| 项目群范围 | GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS，共 14 仓 | 后续项目群目标必须覆盖 14 仓，不再沿用 12 仓口径 |
+| 项目群范围 | GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS，共 14 仓 | 后续项目群目标必须覆盖 14 仓，不再沿用 12 仓口径 |
 | CodeGraph | 14 仓已纳入项目群代码图谱；13 仓 up-to-date；GFIS 为 controlled_residual | CodeGraph 阶段从部署集成转为持续监控 |
 | 状态矩阵 | 12 个项目 ready_for_review；GFIS、GPCF 为 repair_required | 项目群瓶颈集中在 GFIS 真实业务链路与 GPCF 收口状态 |
 | GFIS | 真实业务链路仍为 repair_required，真实提交文件、有效源记录、可进入下一门禁数量仍未闭合 | 下一阶段优先处理真实源记录准备，而不是扩展功能 |
 | Studio | 已纳入项目群、CodeGraph 与 Loop 体系；发布工作流权限仍需显式审查 | Studio 不进入发布动作，只补齐 release boundary 证据 |
-| WAS | 已纳入项目群、CodeGraph 与 Loop 体系；定位为语义基础工程候选 | WAS 不替代 KDS/GFIS/WAES，只作为语义契约与 crosswalk 基线 |
+| WAS | 已纳入项目群、CodeGraph 与 Loop 体系；定位为语义基础工程候选 | WAS 不替代 KDS/GFIS/WAME，只作为语义契约与 crosswalk 基线 |
 | 接受状态 | 当前不得宣称 accepted、integrated、production_ready | 所有阶段目标都必须以 evidence gate 为准 |
 
 ## 阶段目标总览
@@ -52,10 +52,10 @@ superseded_by: []
 | 阶段 | 名称 | 范围 | 目标 | 完成定义 |
 | --- | --- | --- | --- | --- |
 | Phase A | 项目群治理基线稳定 | 14 仓、GPCF、CodeGraph、Loop | 固化 14 仓覆盖、CodeGraph 监控、文档门禁、GPCF validator 与 Loop 下一轮输入 | CodeGraph monitor 可回放；文档污染、KDS token、Loop document gate 通过；不进入项目内部开发 |
-| Phase B | GFIS 真实源记录准备 | GFIS、GPCF，关联 GPC/KDS/WAES/WAS | 获取或登记真实客户订单、平台回执或等价正式输入，并完成字段级 readiness 包 | `submitted_files_found >= 1`、`valid_source_records >= 1`、`accepted_for_next_gate >= 1`；禁止伪造样例冒充真实业务 |
-| Phase C | GFIS 运行治理路径准备 | GFIS、WAES、GPCF | 在真实源记录通过后，进入 runtime primary key、review queue、runtime intake、WAES review、verified artifact 准备 | `runtime_primary_key_ready >= 1`、`review_queue >= 1`、`runtime_intake >= 1`、`waes_review >= 1`、`verified >= 1`；生产写入需另行授权 |
-| Phase D | ready_for_review 项目群硬化 | GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS | 不做业务功能开发，只补齐治理证据、角色边界、dry-run 证据和发布边界审查 | 每个项目具备当前 loop-state、evidence-index、validator 或等价状态证据；项目角色无陈旧歧义 |
-| Phase E | 接受准备包 | 项目群整体 | 在 GFIS 真实链路闭合且用户明确授权后，整理 acceptance package、回滚计划、监控计划与人工签署材料 | 有 WAES 判定证据、UAT/signoff、rollback/monitor plan 和用户显式授权；不得自动升级状态 |
+| Phase B | GFIS 真实源记录准备 | GFIS、GPCF，关联 GPC/KDS/WAME/WAS | 获取或登记真实客户订单、平台回执或等价正式输入，并完成字段级 readiness 包 | `submitted_files_found >= 1`、`valid_source_records >= 1`、`accepted_for_next_gate >= 1`；禁止伪造样例冒充真实业务 |
+| Phase C | GFIS 运行治理路径准备 | GFIS、WAME、GPCF | 在真实源记录通过后，进入 runtime primary key、review queue、runtime intake、WAME review、verified artifact 准备 | `runtime_primary_key_ready >= 1`、`review_queue >= 1`、`runtime_intake >= 1`、`wame_review >= 1`、`verified >= 1`；生产写入需另行授权 |
+| Phase D | ready_for_review 项目群硬化 | GPC、PVAOS、WAME、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、Studio、WAS | 不做业务功能开发，只补齐治理证据、角色边界、dry-run 证据和发布边界审查 | 每个项目具备当前 loop-state、evidence-index、validator 或等价状态证据；项目角色无陈旧歧义 |
+| Phase E | 接受准备包 | 项目群整体 | 在 GFIS 真实链路闭合且用户明确授权后，整理 acceptance package、回滚计划、监控计划与人工签署材料 | 有 WAME 判定证据、UAT/signoff、rollback/monitor plan 和用户显式授权；不得自动升级状态 |
 
 ## 项目群分工边界
 
@@ -64,9 +64,9 @@ superseded_by: []
 | GFIS | Phase B/C 主瓶颈 | 真实源记录与运行治理链路未闭合 |
 | GPCF | Loop 编排、证据门禁、项目群状态收口 | 不替代项目内部实现，不擅自升级接受状态 |
 | GPC | 合同、订单、平台输入边界协同 | 提供正式输入或字段映射证据 |
-| WAES | 审查与验收治理 | 只基于证据判定，不替代执行层 |
+| WAME | 审查与验收治理 | 只基于证据判定，不替代执行层 |
 | KDS | source of record 与文档受控 | 保护 canonical Markdown 与 token 安全 |
-| WAS | 语义契约与 crosswalk 基线 | 不替代 KDS/GFIS/WAES 层职责 |
+| WAS | 语义契约与 crosswalk 基线 | 不替代 KDS/GFIS/WAME 层职责 |
 | Studio | 项目群新纳入工程与 release boundary 审查 | 不执行发布，只审查权限与证据 |
 | Brain、PKC、XiaoC、XGD、XiaoG、MMC、PVAOS | ready_for_review 项目群硬化 | 补证据、补边界、补 dry-run，不进入内部开发 |
 

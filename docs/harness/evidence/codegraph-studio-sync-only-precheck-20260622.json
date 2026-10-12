@@ -87,7 +87,7 @@
     "gfis_sync_only_closure_completed": false,
     "kds_sync_only_closure_completed": false,
     "studio_business_closure_completed": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-WATCHLIST-POST-STUDIO-MONITOR-016"
 }

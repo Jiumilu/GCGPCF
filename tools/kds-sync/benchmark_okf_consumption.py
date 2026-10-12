@@ -180,7 +180,7 @@ def write_markdown(report: dict, path: Path, json_path: Path) -> None:
 doc_id: GPCF-DOC-C7697CB4E6
 title: OKF v0.1 Consumption Benchmark Evidence
 project: GPCF
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

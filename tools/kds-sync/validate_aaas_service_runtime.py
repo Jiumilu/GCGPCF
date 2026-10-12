@@ -40,7 +40,7 @@ REQUIRED_EVIDENCE_TOKENS = [
     "high_count=0",
     "aaas_service_runtime = verified_with_local_dev_boundary",
     "aaas_status_candidate = ready_for_review",
-    "waes_status = Draft",
+    "wame_status = Draft",
     "commercial_status = draft",
     "real_billing = false",
     "customer_subscription = false",
@@ -54,7 +54,7 @@ REQUIRED_REFERENCE_TOKENS = [
     "aaas-service-runtime-20260625.md",
     "AAAS-SERVICE-RUNTIME-001",
     "verified_with_local_dev_boundary",
-    "WAES -> XWAIL -> AaaS",
+    "WAME -> XWAIL -> AaaS",
     "ready_for_review",
 ]
 
@@ -64,7 +64,7 @@ FORBIDDEN_POSITIVE_CLAIMS = [
     "SLA 强制执行完成",
     "客户订阅完成",
     "客户交付完成",
-    "WAES 发布完成",
+    "WAME 发布完成",
     "accepted = true",
     "integrated = true",
     "production_ready = true",
@@ -119,7 +119,7 @@ def main() -> int:
         "runtime_status": "verified_with_local_dev_boundary",
         "failures": failures,
         "warnings": [
-            "This validates minimum local AaaS service runtime evidence only; it does not prove real billing, settlement, SLA enforcement, WAES publication, customer delivery, or customer acceptance.",
+            "This validates minimum local AaaS service runtime evidence only; it does not prove real billing, settlement, SLA enforcement, WAME publication, customer delivery, or customer acceptance.",
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

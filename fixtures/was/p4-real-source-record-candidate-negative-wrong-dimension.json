@@ -26,8 +26,8 @@
   "evidenceRefs": [
     "evidence://gfis/REAL-001-source-record-intake-gate"
   ],
-  "waesGateRefs": [
-    "waes://gate/customer-order-source-record-review"
+  "wameGateRefs": [
+    "wame://gate/customer-order-source-record-review"
   ],
   "promotionBlockers": [
     "valid_source_record_missing",

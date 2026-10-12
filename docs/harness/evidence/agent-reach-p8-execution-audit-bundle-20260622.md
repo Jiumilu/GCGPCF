@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-EXECUTION-AUDIT-BUNDLE-20260622
 title: Agent-Reach P8 执行审计包 2026-06-22
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

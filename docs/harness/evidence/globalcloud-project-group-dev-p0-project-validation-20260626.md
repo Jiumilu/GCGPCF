@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DEV-P0-PROJECT-VALIDATION-20260626
 title: GlobalCloud 项目群开发态 P0-B 项目级最小验证证据
 project: KDS
-related_projects: [GPC, WAES, KDS, PKC, MMC, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, PKC, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,7 +67,7 @@ superseded_by: []
 - SOP/PKC generated/output/dist 类路径仍需 P0-C 隔离判断。
 - GPCF 大工作区仍需 P0-D 按 KDS mirror、harness evidence、tooling、governance_doc 拆分。
 - 17 仓 Git gate 仍为 partial；限制提交/推送/验收，不限制开发态启动。
-- WAES 授权仍限制发布、状态提升、accepted/integrated/production_ready，不阻断本轮开发态验证。
+- WAME 授权仍限制发布、状态提升、accepted/integrated/production_ready，不阻断本轮开发态验证。
 
 ## 验证命令
 

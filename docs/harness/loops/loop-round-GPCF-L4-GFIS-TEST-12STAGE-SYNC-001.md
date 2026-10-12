@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8CA0834861
 title: GPCF-L4-GFIS-TEST-12STAGE-SYNC-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,6 +47,6 @@ superseded_by: []
 ## 边界
 
 - 不使用真实业务数据。
-- 不创建真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review 或真实 verified artifact。
-- 不写真实 KDS/WAES。
+- 不创建真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAME review 或真实 verified artifact。
+- 不写真实 KDS/WAME。
 - 不生产写入、不真实外部 API 写入、不数据库迁移、不权限变更、不升级 accepted/integrated/production_ready。

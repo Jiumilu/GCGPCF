@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-65B993E81D
 title: GPCF-L4-GFIS-REPAIR-238
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ superseded_by: []
 - GPCF 总控已同步 GFIS 228：真实 release-ready package 接收目录无有效包，open hold 继续有效。
 - GFIS 运行层主 validator 已纳入 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_receiving_hold_gate`。
 - GPCF 状态仍为 `partial_repair`，GFIS runtime SOP E2E 仍为 `repair_required`。
-- 本轮不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮不生成客户订单、平台订单、合规人工核验完成文件、有效 release-ready package、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## 关键计数
 
@@ -78,7 +78,7 @@ valid_source_records=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -93,8 +93,8 @@ runtime_sop_e2e=repair_required
 
 ## 非声明
 
-本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## 下一轮建议
 
-`GFIS-RUNTIME-SOP-E2E-229`：建立 release-ready package hold release precheck；在未出现真实 release-ready package 前继续阻断 hold release、review/runtime/WAES。
+`GFIS-RUNTIME-SOP-E2E-229`：建立 release-ready package hold release precheck；在未出现真实 release-ready package 前继续阻断 hold release、review/runtime/WAME。

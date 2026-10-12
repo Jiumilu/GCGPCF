@@ -77,13 +77,13 @@ def main() -> int:
     require(len(matrix.get("missing_requirements", [])) >= 5, "missing requirements list too short")
     require(any(row.get("requirement_id") == "real_measurement_authorization_window" for row in matrix["missing_requirements"]), "missing authorization window gap")
     require(any(row.get("requirement_id") == "real_measurement_authorization_window" and row.get("current_status") == "granted_precheck_only" for row in matrix["missing_requirements"]), "authorization window must be granted_precheck_only")
-    require(any(row.get("requirement_id") == "real_measurement_waes_harness_decision" for row in matrix["missing_requirements"]), "missing waes decision gap")
+    require(any(row.get("requirement_id") == "real_measurement_wame_harness_decision" for row in matrix["missing_requirements"]), "missing wame decision gap")
     require(any(row.get("requirement_id") == "real_measurement_token_ledger" for row in matrix["missing_requirements"]), "missing token ledger gap")
     require(any(row.get("requirement_id") == "production_proxy_or_sdk_enablement" for row in matrix["missing_requirements"]), "missing proxy/sdk gap")
     require(any(row.get("requirement_id") == "real_business_equivalence_measurement" for row in matrix["missing_requirements"]), "missing equivalence gap")
 
     for key, value in matrix.get("gates", {}).items():
-        if key in {"gap_matrix_defined", "real_measurement_gap_present", "production_branch_blocked", "rollback_plan_present", "waes_precheck_only"}:
+        if key in {"gap_matrix_defined", "real_measurement_gap_present", "production_branch_blocked", "rollback_plan_present", "wame_precheck_only"}:
             require(value is True, f"gate must be true: {key}")
         if key in {"production_token_measurement_allowed", "measured_production_tokens", "production_admission_gate"}:
             require(value is False, f"gate must be false: {key}")

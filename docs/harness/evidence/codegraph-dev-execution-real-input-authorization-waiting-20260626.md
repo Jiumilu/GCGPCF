@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-AUTHORIZATION-WAITING-20260626
 title: CodeGraph 开发执行层真实输入授权等待态 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -57,7 +57,7 @@ superseded_by: []
 
 ## 等待期间禁止
 
-禁止 external notification dispatch、external API write、real KDS write、real WAES write、production write、deployment、git commit、git push 和 business status upgrade。
+禁止 external notification dispatch、external API write、real KDS write、real WAME write、production write、deployment、git commit、git push 和 business status upgrade。
 
 ## 验证命令
 

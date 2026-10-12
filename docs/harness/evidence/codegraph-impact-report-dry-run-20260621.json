@@ -83,7 +83,7 @@
         "No affected tests reported by CodeGraph",
         "No indexed dependents reported by CodeGraph node"
       ],
-      "waes_required": false,
+      "wame_required": false,
       "committee_required": false
     },
     "validation_plan": [

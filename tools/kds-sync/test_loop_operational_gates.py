@@ -46,10 +46,10 @@ class LoopOperationalGatesTest(unittest.TestCase):
                 encoding="utf-8",
             )
             (harness / "was-real-source-record-monitor-049-20260622.md").write_text(
-                "客户投诉和返工处置只有补齐证据后才能绑定到下游 WAES/KDS/runtime 门禁中。\n"
+                "客户投诉和返工处置只有补齐证据后才能绑定到下游 WAME/KDS/runtime 门禁中。\n"
                 "| accepted_for_customer_change_capa_profile | `0` |\n"
                 "| hold_required | `1` |\n"
-                "本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、"
+                "本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、"
                 "runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。\n",
                 encoding="utf-8",
             )

@@ -2,7 +2,7 @@ id: F-017
 name: cwme-city-world-model-engine
 project: kds
 status: active
-goal: "城市级世界模型引擎（CWME，WCM 世界城市模型的引擎实现）：以 SpaceAI+Cesium 为孪生基座、Neo4j 为图存储、Protégé/pySHACL 为本体工具链，先交付内核化最小闭环与城市/园区样板；与 WAS 语义底座及绿链图谱（WAM）协同，遵守 GCWORLD 四世界隔离与 WAES 治理边界。"
+goal: "城市级世界模型引擎（CWME，WCM 世界城市模型的引擎实现）：以 SpaceAI+Cesium 为孪生基座、Neo4j 为图存储、Protégé/pySHACL 为本体工具链，先交付内核化最小闭环与城市/园区样板；与 WAS 语义底座及绿链图谱（WAM）协同，遵守 GCWORLD 四世界隔离与 WAME 治理边界。"
 owner: GPCF
 priority: P1
 scope:
@@ -12,7 +12,7 @@ scope:
     - 光谷城市级旗舰样板 + 黄梅园区等行业样板（按客户与数据节奏）
     - 本体工具链（Protégé + pySHACL + GraphRAG 溯源问答）与最小验证环境
   out:
-    - 生产环境承诺、跨项目写权限、WAES 发布
+    - 生产环境承诺、跨项目写权限、WAME 发布
     - 未确认的命名与品牌件（D1 待确认）
     - 与绿链图谱（F-016）交叉写账（分账互引，crosswalk v0.1）
 acceptance:
@@ -45,7 +45,7 @@ ui_product_first_control:
     - 招商与政府客户
     - 引擎团队
   primary_human_task: 在城市级场景中查看/查询/演示资产与运行态势（只读→辅助）
-  machine_interface_boundary: CWME 为运行时引擎；语义契约与治理在 WAS/XWAIL/WAES 层
+  machine_interface_boundary: CWME 为运行时引擎；语义契约与治理在 WAS/XWAIL/WAME 层
   gates:
     functional_completeness: pending
     quality_baseline: pending

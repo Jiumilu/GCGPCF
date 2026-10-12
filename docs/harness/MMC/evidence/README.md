@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-523635A3FD
 title: evidence
 project: MMC
-related_projects: [GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

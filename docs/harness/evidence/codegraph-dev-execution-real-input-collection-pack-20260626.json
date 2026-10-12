@@ -18,7 +18,7 @@
     "external_notifications_sent": 0,
     "external_api_write": false,
     "real_kds_write": false,
-    "real_waes_write": false
+    "real_wame_write": false
   },
   "primary_owner_request": {
     "owner": "GPC_or_Liaoning_Yuanhang_order_owner",
@@ -52,14 +52,14 @@
       "finished goods batch",
       "delivery record",
       "POD",
-      "WAES confirmation",
+      "WAME confirmation",
       "KDS write receipt"
     ],
     "current_ready_counts": {
       "valid_source_records": 0,
       "runtime_primary_key_ready": 0,
       "runtime_intake": 0,
-      "waes_review": 0,
+      "wame_review": 0,
       "verified": 0
     }
   },
@@ -95,8 +95,8 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "real_kds_write_performed": false,
-    "real_waes_write_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "real_wame_write_performed": false,
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-DISPATCH-AUTHORIZATION-019"
 }

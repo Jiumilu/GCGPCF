@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A9136F68E9
 title: "Loop Round: GPCF-L4-GFIS-TEST-12STAGE-NEGATIVE-SYNC-001"
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 ## 验证输出
 
 ```text
-gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0
+gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10 rejected_attempt_count=10 accepted_attempt_count=0 test_data_12_stage_transition_gate=pass test_data_lane=pass real_business_lane=repair_required valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0
 ```
 
 ## 真实边界
@@ -51,4 +51,4 @@ gfis_test_data_12_stage_negative_transition_guard=pass negative_attempt_count=10
 - substance_gate=pass
 - stop_type=completed
 
-本轮只同步测试数据负例阻断门禁，不使用真实业务数据，不创建真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review、真实 KDS/WAES 写入或真实 verified artifact。
+本轮只同步测试数据负例阻断门禁，不使用真实业务数据，不创建真实 source-of-record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAME review、真实 KDS/WAME 写入或真实 verified artifact。

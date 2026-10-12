@@ -80,7 +80,7 @@ KDSResourceQuery
   -> BrainCompilationDraft
   -> SourceAndTrustAnnotation
   -> KnowledgePageOrMapDraft
-  -> WAESDisplayBoundaryCheck
+  -> WAMEDisplayBoundaryCheck
   -> HumanReviewIfRequired
   -> PublishedKnowledgeView
   -> KDSBacklinkAndLoopEvidence
@@ -113,7 +113,7 @@ Brain 不自行放大权限。权限过滤来自 KDS、MMC、WAME 和合作单�
 
 Brain 可以对上下文进行摘要、归类、重组、图谱化、时间线化、SOP 展示化和知识产品化，但不得删除来源、不得改变确认状态、不得隐去密级和门禁提示。
 
-### 5.4 WAESDisplayBoundaryCheck
+### 5.4 WAMEDisplayBoundaryCheck
 
 Brain 展示页面如涉及规则、证据、权限、边界、例外、争议、收益或重大 SOP，应显示 WAME 门禁状态。WAME 仍只确认规则、证据、权限、边界和例外，不替代业务主账确认。
 
@@ -169,7 +169,7 @@ Brain 在湖北磷材第一阶段提供：
 | 贡献与悬赏页 | 人才池、数据池、场景池 | 积分池、悬赏池、争议池 |
 | 治理审计页 | 数据池、人才池、场景池 | 争议池、贡献账本、SOP 账本 |
 
-所有 Brain 页面必须保留 `sourceRefs`、`baseResourcePools`、`enhancedLedgerLinks`、`classificationLevel`、`trustLevel`、`waesGateRefs`、`loopEvidenceRefs` 和 `publishedVersion`。
+所有 Brain 页面必须保留 `sourceRefs`、`baseResourcePools`、`enhancedLedgerLinks`、`classificationLevel`、`trustLevel`、`wameGateRefs`、`loopEvidenceRefs` 和 `publishedVersion`。
 
 ## 9. 不得越界清单
 
@@ -192,7 +192,7 @@ Brain 在湖北磷材第一阶段提供：
 | enhancedLedgerLinks | 增强治理账本挂接 |
 | classificationLevel | DSR-L0 / DSR-L1 / DSR-L2 / DSR-L3 |
 | trustLevel | T0 / T1 / T2 / T3 |
-| waesGateRefs | WAME 门禁记录引用 |
+| wameGateRefs | WAME 门禁记录引用 |
 | permissionScope | 组织、角色、合作单位、项目组和人员可见范围 |
 | confirmationStatus | draft / candidate / reviewed / published / withdrawn |
 | humanReviewRequired | 是否需要人工复核 |

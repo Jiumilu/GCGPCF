@@ -53,7 +53,7 @@ superseded_by: []
 
 ## 4. ManualConfirmationTask
 
-| taskId | linkedControlPointId | taskName | requiredInput | confirmationOwner | waesRequirement | kdsPoolRefs | enhancedLedgerRefs | outputCandidate | status |
+| taskId | linkedControlPointId | taskName | requiredInput | confirmationOwner | wameRequirement | kdsPoolRefs | enhancedLedgerRefs | outputCandidate | status |
 |---|---|---|---|---|---|---|---|---|---|
 | `MCT-HBLC-FEA-202606-0001` | `SCP-HBLC-FEA-202606-0001` | 拓厂项目来源人工确认 | 拓厂来源索引、区域资料、项目负责人确认、政策或第三方来源摘要 | 湖北磷材项目负责人 / 项目组评审人 | 证据规则、权限规则、发布边界规则 | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 | `project_review_candidate_confirmed_by_human` | planned |
 | `MCT-HBLC-FEA-202606-0002` | `SCP-HBLC-FEA-202606-0001` | 拓厂项目 KDS 池与增强账本挂接确认 | DKS 11 池挂接、贡献账本、SOP 账本、悬赏池挂接关系 | KDS 记录人 / GPCF 治理方 | KDS 挂接规则、账本不得游离规则 | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 / 争议池 | `kds_pool_ledger_mapping_candidate_pass` | planned |
@@ -113,7 +113,7 @@ superseded_by: []
 task_planned
   -> candidate_assigned
   -> source_submitted_candidate
-  -> waes_rule_recorded
+  -> wame_rule_recorded
   -> human_review_pending
   -> committee_if_needed
   -> closed_or_returned

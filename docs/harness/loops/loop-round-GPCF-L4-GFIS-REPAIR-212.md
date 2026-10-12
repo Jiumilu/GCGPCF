@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B64CED7E7D
 title: GPCF-L4-GFIS-REPAIR-212
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -110,4 +110,4 @@ GFIS 高风险项：
 
 ## 下一步
 
-从 KDS 候选中提取 5 类真实凭证的责任方回执任务，优先补 `CustomerRequirementOrPlatformOrder` 的真实 source-of-record 与 dispatch confirmation，再推进 WAES confirmation、KDS write receipt、runtime primary key。
+从 KDS 候选中提取 5 类真实凭证的责任方回执任务，优先补 `CustomerRequirementOrPlatformOrder` 的真实 source-of-record 与 dispatch confirmation，再推进 WAME confirmation、KDS write receipt、runtime primary key。

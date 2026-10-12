@@ -41,7 +41,7 @@ PROJECT_IDS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -133,7 +133,7 @@ def build_completion_audit() -> dict[str, Any]:
             "evidence": [
                 "docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json",
                 "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
-                "docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-checklist-20260622.json",
+                "docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-checklist-20260622.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json",
                 "docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json",
@@ -206,7 +206,7 @@ def build_completion_audit() -> dict[str, Any]:
             "accepted": False,
             "integrated": False,
             "production_ready": False,
-            "waes_harness_admission_decision": graph.get("authorization", {}).get("waes_harness_admission_decision"),
+            "wame_harness_admission_decision": graph.get("authorization", {}).get("wame_harness_admission_decision"),
             "authorization_window_id": graph.get("authorization", {}).get("authorized_window_id"),
             "authorization_window_request_status": graph.get("authorization", {}).get("authorization_window_request_status"),
             "next_stage_authorization_package_status": next_stage_package.get("status"),
@@ -256,7 +256,7 @@ def render_markdown(audit: dict[str, Any]) -> str:
         "doc_id: GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623",
         "title: Headroom LCX Completion Audit Evidence",
         "project: GPCF",
-        "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+        "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",
@@ -299,7 +299,7 @@ def render_markdown(audit: dict[str, Any]) -> str:
         "",
         "## 下一步",
         "",
-        "只有在 WAES/Harness 另行裁决并补齐真实测量授权后，才可以把 completion audit 从 partial 推进到真实测量执行。",
+        "只有在 WAME/Harness 另行裁决并补齐真实测量授权后，才可以把 completion audit 从 partial 推进到真实测量执行。",
     ]
     return "\n".join(parts) + "\n"
 
@@ -311,7 +311,7 @@ def render_loop_round(audit: dict[str, Any]) -> str:
         doc_id: GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-001
         title: "Loop Round: GPCF-HEADROOM-LCX-COMPLETION-AUDIT-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0
@@ -361,7 +361,7 @@ def render_loop_round(audit: dict[str, Any]) -> str:
 
         ## 下一轮
 
-        等待 WAES/Harness 对真实测量授权窗口和 admission decision 做出新的裁决。
+        等待 WAME/Harness 对真实测量授权窗口和 admission decision 做出新的裁决。
 
         ## 审计快照
 

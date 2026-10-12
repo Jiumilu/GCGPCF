@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-820B756EF3
 title: GPCF-KDS-DKS-009 葛化 GFIS AI 助手首批问答与文档验收评测集 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -74,7 +74,7 @@ superseded_by: []
 
 ```text
 GPCF-KDS-DKS-010：
-葛化 GFIS AI 助手内测运行记录模板，定义内测用户、问题采样、助手输出、评分记录、缺陷回流、知识缺口悬赏和 WAES/KDS 回写字段。
+葛化 GFIS AI 助手内测运行记录模板，定义内测用户、问题采样、助手输出、评分记录、缺陷回流、知识缺口悬赏和 WAME/KDS 回写字段。
 ```
 
 待用户回答：

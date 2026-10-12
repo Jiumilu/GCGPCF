@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9286EA7179
 title: GPCF-L4-GFIS-REPAIR-267
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,7 +47,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -60,7 +60,7 @@ superseded_by: []
 ## 反馈
 
 - 本轮只同步真实责任方补证材料接收扫描器。
-- 当前接收目录为空，不能释放 remediation action hold，不能创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 当前接收目录为空，不能释放 remediation action hold，不能创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - GFIS Demo 仍不得作为运行层 SOP 主体或业务证据。
 
 ## 真实性计数

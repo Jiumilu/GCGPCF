@@ -14,7 +14,7 @@
     "production_write_authorized": false,
     "external_api_write_authorized": false,
     "real_kds_write_authorized": false,
-    "real_waes_write_authorized": false
+    "real_wame_write_authorized": false
   },
   "candidate_task": {
     "task_id": "GFIS-LIAONING-YUANHANG-REAL-RECEIPT-HOLD-REGISTER-CANDIDATE",
@@ -107,7 +107,7 @@
     "deployment_performed": false,
     "git_commit_performed": false,
     "git_push_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-GFIS-RESIDUAL-DRIFT-007"
 }

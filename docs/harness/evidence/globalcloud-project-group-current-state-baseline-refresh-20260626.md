@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-CURRENT-STATE-BASELINE-REFRESH-20260626
 title: GlobalCloud Project Group Current State Baseline Refresh
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,16 +64,16 @@ KDS blocker 已解除。`GlobalCloud KDS` 当前为 clean / ahead=0 / behind=0 /
 
 ## Project Scope
 
-17 项目覆盖：GlobalCloud AAAS、GlobalCloud Brain、WAS世界资产体系、GlobalCloud XiaoC、GlobalCloud WAES、GlobalCloud GPC、GlobalCloud Studio、GlobalCoud GPCF、GlobalCloud XWAIL、GlobalCloud GFIS、GlobalCloud MMC、GlobalCloud KDS、GlobalCloud XiaoG、GlobalCloud PVAOS、GlobalCloud SOP、GlobalCloud PKC、GlobalCloud XGD。
+17 项目覆盖：GlobalCloud AAAS、GlobalCloud Brain、WAS世界资产体系、GlobalCloud XiaoC、GlobalCloud WAME、GlobalCloud GPC、GlobalCloud Studio、GlobalCoud GPCF、GlobalCloud XWAIL、GlobalCloud GFIS、GlobalCloud MMC、GlobalCloud KDS、GlobalCloud XiaoG、GlobalCloud PVAOS、GlobalCloud SOP、GlobalCloud PKC、GlobalCloud XGD。
 
 ## Task Anchors
 
-- AAAS-WAES-BINDING-PRECHECK-001
-- XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001
+- AAAS-WAME-BINDING-PRECHECK-001
+- XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001
 - SOP-SCENARIO-OWNER-REVIEW-001
 - WAS-XWAIL-ONTOLOGY-MAPPING-001
 - KDS-BRAIN-REPORT-HOLD-REVIEW-001
-- WAES-LINT-RUNTIME-001
+- WAME-LINT-RUNTIME-001
 - GFIS-REAL-SOR-001
 - GPC-EXTERNAL-RUNTIME-EVIDENCE-001
 - BRAIN-HUMAN-REVIEW-DECISION-001
@@ -97,7 +97,7 @@ formal_confirmation_files=0
 runtime_primary_key_ready=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 ```
 

@@ -17,7 +17,7 @@ SOURCE_VALIDATORS = [
     "tools/kds-sync/validate_agent_reach_candidate_search_review.py",
     "tools/kds-sync/validate_agent_reach_l3_candidate_pipeline.py",
     "tools/kds-sync/validate_agent_reach_candidate_search_replay_ledger.py",
-    "tools/kds-sync/validate_agent_reach_waes_kds_candidate_review_queue.py",
+    "tools/kds-sync/validate_agent_reach_wame_kds_candidate_review_queue.py",
     "tools/kds-sync/validate_agent_reach_human_review_decisions.py",
     "tools/kds-sync/validate_agent_reach_authoritative_source_verification.py",
 ]

@@ -43,7 +43,7 @@ REQUIRED_REGISTER_TOKENS = [
 FORBIDDEN_POSITIVE_CLAIMS = [
     "XWAIL Validator 已实现",
     "XWAIL 工具链闭环完成",
-    "WAES 发布完成",
+    "WAME 发布完成",
     "AaaS 绑定完成",
     "客户验收通过",
 ]

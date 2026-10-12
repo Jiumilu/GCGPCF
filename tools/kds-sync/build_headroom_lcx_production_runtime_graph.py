@@ -36,7 +36,7 @@ PROJECT_IDS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -290,7 +290,7 @@ def write_outputs(graph: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-20260623",
             "title: Headroom LCX Production Runtime Graph Evidence",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -360,7 +360,7 @@ def write_outputs(graph: dict[str, Any]) -> None:
         doc_id: GPCF-DOC-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001
         title: "Loop Round: GPCF-HEADROOM-LCX-PRODUCTION-RUNTIME-GRAPH-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0

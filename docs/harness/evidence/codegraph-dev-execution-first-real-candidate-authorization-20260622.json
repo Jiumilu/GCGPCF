@@ -59,7 +59,7 @@
       "schema sync",
       "production write",
       "real KDS write",
-      "real WAES write",
+      "real WAME write",
       "external API write",
       "deployment",
       "git commit",

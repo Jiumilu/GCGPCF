@@ -17,8 +17,8 @@ PREVIOUS_JSON = ROOT / "docs/harness/evidence/was-real-source-record-monitor-026
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 CHEMICAL_COMPLIANCE_KEYS = [
     "sds_availability_gaps",
@@ -163,7 +163,7 @@ def main() -> int:
         "real_source_records=0",
         "valid_source_records=0",
         "runtime_primary_key_ready=0",
-        "waes_review=0",
+        "wame_review=0",
         "accepted=false",
         "integrated=false",
         "production_ready=false",
@@ -202,7 +202,7 @@ def main() -> int:
         "hazardous_waste_manifest_gaps=0 emergency_incident_response_record_gaps=0 "
         "accepted_for_chemical_compliance_profile=0 accepted_for_next_gate=0 hold_required=1 "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 "
-        "runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false "
+        "runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false "
         "production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-028"
     )
     return 0

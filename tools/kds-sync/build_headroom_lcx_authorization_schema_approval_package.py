@@ -20,7 +20,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -40,7 +40,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 
@@ -108,7 +108,7 @@ def main() -> int:
                 "must_not_equal": "REQUIRED_USER_INPUT",
                 "must_reference_controlled_plan": True,
             },
-            "waes_harness_admission_decision": {
+            "wame_harness_admission_decision": {
                 "required": True,
                 "type": "string",
                 "must_not_equal": "REQUIRED_USER_INPUT",
@@ -116,7 +116,7 @@ def main() -> int:
                 "must_reference_evidence": True,
             },
         },
-        "hard_false_until_waes_harness_admits": [
+        "hard_false_until_wame_harness_admits": [
             "production_token_measurement_allowed",
             "production_proxy_started",
             "production_sdk_enabled",
@@ -147,7 +147,7 @@ def main() -> int:
             "no_real_kds_write": "REQUIRED_USER_INPUT",
             "no_external_api_write": "REQUIRED_USER_INPUT",
             "rollback_plan_reviewed": "REQUIRED_USER_INPUT",
-            "waes_harness_evidence_attached": "REQUIRED_USER_INPUT",
+            "wame_harness_evidence_attached": "REQUIRED_USER_INPUT",
         },
         "required_false_until_completed": {
             "authorization_complete": False,
@@ -201,7 +201,7 @@ def main() -> int:
 doc_id: GPCF-DOC-90DF124EDC
 title: Headroom LCX Authorization Schema Approval Package Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, Edge, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, Edge, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -256,7 +256,7 @@ superseded_by: []
 doc_id: GPCF-DOC-5939F2B7C2
 title: Loop Round GPCF-HEADROOM-LCX-AUTHORIZATION-SCHEMA-APPROVAL-PACKAGE-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -306,7 +306,7 @@ python3 tools/kds-sync/loop_document_gate.py --check-only
 
 ## 反馈
 
-schema 与人工审批包模板只提供结构化授权入口，不构成授权完成。生产测量仍需 6 个字段和 WAES/Harness evidence。
+schema 与人工审批包模板只提供结构化授权入口，不构成授权完成。生产测量仍需 6 个字段和 WAME/Harness evidence。
 
 ## 下一轮
 

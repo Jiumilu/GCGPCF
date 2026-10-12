@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6301C8DAB8
 title: WAS Real Source Record Monitor 008 Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-008` 已建立签发方、责任方、KDS 反链与 runtime site context 一致性监控。
 
-当前仍没有真实 P4 candidate 文件。即使候选字段齐全，缺责任方确认、缺签发方确认、责任方与 runtime site context 不一致、KDS 反链与 runtime site context 不一致，均不得进入 WAES gate 或 GFIS/KWE runtime。
+当前仍没有真实 P4 candidate 文件。即使候选字段齐全，缺责任方确认、缺签发方确认、责任方与 runtime site context 不一致、KDS 反链与 runtime site context 不一致，均不得进入 WAME gate 或 GFIS/KWE runtime。
 
 ## 监控指标
 
@@ -40,7 +40,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -66,4 +66,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_008.py
 
 ## 边界
 
-本 evidence 不创建或标记 WAES review、runtime intake、review queue、runtime primary key、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不创建或标记 WAME review、runtime intake、review queue、runtime primary key、verified artifact、accepted、integrated 或 production_ready。

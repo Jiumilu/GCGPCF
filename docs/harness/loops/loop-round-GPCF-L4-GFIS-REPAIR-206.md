@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-08AA9541AA
 title: Loop Round GPCF-L4-GFIS-REPAIR-206
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -77,7 +77,7 @@ owner_response_allowed=0
 submission_package_allowed=0
 review_queue=0
 manual_review=0
-waes_review=0
+wame_review=0
 runtime_intake=0
 verified=0
 runtime_primary_key_ready=0
@@ -98,10 +98,10 @@ runtime_sop_e2e=repair_required
 
 ## 非声明
 
-本轮不声明客户订单、平台订单、签样、转量产、原料批次、工厂订单、生产工单、质检、库存、发货、POD、WAES confirmation、KDS write receipt、运行层主键、review queue、runtime intake、verified artifact、accepted 或 integrated 已完成。
+本轮不声明客户订单、平台订单、签样、转量产、原料批次、工厂订单、生产工单、质检、库存、发货、POD、WAME confirmation、KDS write receipt、运行层主键、review queue、runtime intake、verified artifact、accepted 或 integrated 已完成。
 
-本轮未执行生产写入、真实外部 API 写入、真实 KDS/WAES 写入、`bench migrate`、schema sync、权限变更、部署、推送或数据库迁移。
+本轮未执行生产写入、真实外部 API 写入、真实 KDS/WAME 写入、`bench migrate`、schema sync、权限变更、部署、推送或数据库迁移。
 
 ## 下一步
 
-`GFIS-RUNTIME-SOP-E2E-200`：围绕同一对象族扫描 dispatch confirmation receiving directory；在人工授权、接收人身份、分发通道、真实提交文件、KDS backlink 与 WAES candidate 均未满足前继续保持 `review_queue=0`、`runtime_intake=0`、`verified=0`。
+`GFIS-RUNTIME-SOP-E2E-200`：围绕同一对象族扫描 dispatch confirmation receiving directory；在人工授权、接收人身份、分发通道、真实提交文件、KDS backlink 与 WAME candidate 均未满足前继续保持 `review_queue=0`、`runtime_intake=0`、`verified=0`。

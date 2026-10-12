@@ -2,7 +2,7 @@
 """Validate GFIS document acceptance checklist batch dry-run.
 
 This script uses local fixtures only. It does not write GFIS, GPC, ERP, MES,
-KDS facts, WAES gate results, KWE work items, ledger confirmations, or external
+KDS facts, WAME gate results, KWE work items, ledger confirmations, or external
 APIs.
 """
 
@@ -49,7 +49,7 @@ def main() -> int:
         "writesErp": 0,
         "writesMes": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesKweWorkItem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesExternalApi": 0,
@@ -97,8 +97,8 @@ def main() -> int:
 
         if not as_list(record["poolRefs"]):
             failures.append(f"{record['id']} poolRefs must not be empty")
-        if not as_list(record["waesGateSuggestions"]):
-            failures.append(f"{record['id']} waesGateSuggestions must not be empty")
+        if not as_list(record["wameGateSuggestions"]):
+            failures.append(f"{record['id']} wameGateSuggestions must not be empty")
         if as_list(record["gapRefs"]) and not as_list(record["kweWorkpackSuggestionRefs"]):
             failures.append(f"{record['id']} gaps require KWE workpack suggestions")
 
@@ -128,7 +128,7 @@ def main() -> int:
         "raw_content_leaks=0 formal_writeback_allowed=0 "
         "committee_human_only_release=0 ai_only_strong_reference=0 "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 "
-        "writes_kds_fact=0 writes_waes_gate_result=0 writes_kwe_work_item=0 "
+        "writes_kds_fact=0 writes_wame_gate_result=0 writes_kwe_work_item=0 "
         "writes_revenue_or_score_confirmation=0 writes_external_api=0"
     )
     return 0

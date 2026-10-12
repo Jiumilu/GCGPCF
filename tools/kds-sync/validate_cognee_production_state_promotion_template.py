@@ -13,7 +13,7 @@ REQUIRED_FIELDS = [
     "source_object_coverage",
     "source_scenario_matrix",
     "promotion_request",
-    "waes_decision",
+    "wame_decision",
     "harness_decision",
     "rollback_plan",
     "promotion_status",
@@ -34,7 +34,7 @@ def main() -> int:
     parser.add_argument(
         "--require-real-promotion",
         action="store_true",
-        help="Require WAES and Harness decisions and a real promotion status.",
+        help="Require WAME and Harness decisions and a real promotion status.",
     )
     args = parser.parse_args()
 
@@ -42,13 +42,13 @@ def main() -> int:
     missing = [field for field in REQUIRED_FIELDS if field not in data]
 
     request = data.get("promotion_request", {})
-    waes = data.get("waes_decision", {})
+    wame = data.get("wame_decision", {})
     harness = data.get("harness_decision", {})
     rollback = data.get("rollback_plan", {})
 
     shape_ok = (
         isinstance(request, dict)
-        and isinstance(waes, dict)
+        and isinstance(wame, dict)
         and isinstance(harness, dict)
         and isinstance(rollback, dict)
         and "requested_state_changes" in request
@@ -64,7 +64,7 @@ def main() -> int:
 
     if args.require_real_promotion:
         status_ok = data.get("promotion_status") == "real_promotion_recorded"
-        decision_ok = waes.get("decision") in {"pass", "approved"} and harness.get("decision") in {
+        decision_ok = wame.get("decision") in {"pass", "approved"} and harness.get("decision") in {
             "pass",
             "approved",
             "accepted",
@@ -82,7 +82,7 @@ def main() -> int:
         "cognee_production_state_promotion_template="
         f"{result} missing_required_field_count={len(missing)} "
         f"promotion_status={data.get('promotion_status')} "
-        f"waes_decision={waes.get('decision')} "
+        f"wame_decision={wame.get('decision')} "
         f"harness_decision={harness.get('decision')} "
         f"production_write={str(data.get('production_write')).lower()} "
         f"accepted={str(data.get('accepted')).lower()} "

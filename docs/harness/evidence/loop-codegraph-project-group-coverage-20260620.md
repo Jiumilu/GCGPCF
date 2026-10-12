@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B487995496
 title: Loop CodeGraph Project Group Coverage Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -97,5 +97,5 @@ superseded_by: []
 ## 非声明
 
 - 本 evidence 不证明 GFIS runtime SOP E2E 已通过。
-- 本 evidence 不创建 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
+- 本 evidence 不创建 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
 - 本 evidence 不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、提交、推送或合并。

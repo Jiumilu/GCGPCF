@@ -70,7 +70,7 @@
       "flow_type": "material_flow"
     },
     {
-      "was_stage_id": "S06-waes-review",
+      "was_stage_id": "S06-wame-review",
       "gfis_stage_id": "TEST-GFIS-STAGE-06-WO",
       "gfis_runtime_object_id": "TEST-GFIS-RO-WO-001",
       "gfis_runtime_object_type": "WorkOrder",
@@ -132,7 +132,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted_integrated": 0,
     "production_ready": 0,
@@ -145,7 +145,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not create verified artifact",
     "does not mark accepted or integrated",
     "does not mark production ready"

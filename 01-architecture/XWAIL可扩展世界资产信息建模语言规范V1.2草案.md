@@ -43,8 +43,8 @@ XWAIL 模型为 JSON 文档，根对象 `kind = "XWAILModel"`。字段规范：
 | xwailVersion | ✓ | 契约语言版本（`1.1.0`=当前样例基线；`1.2.0`=本草案目标版本） |
 | wasBaseline | ✓ | WAS 统一语义基线版本（`1.1.0`） |
 | ontologyVersion | ✓ | Ontology 版本 |
-| waesStatus | ✓ | WAME 生命周期：`Draft / Registered / Authorized / Published / Deprecated / Archived` |
-| waesEvidenceRef | 条件 | `waesStatus ∈ {Authorized, Published}` 时必填（WAME 门证据） |
+| wameStatus | ✓ | WAME 生命周期：`Draft / Registered / Authorized / Published / Deprecated / Archived` |
+| wameEvidenceRef | 条件 | `wameStatus ∈ {Authorized, Published}` 时必填（WAME 门证据） |
 | assets[] | ✓ | 资产列表；每项：`id`（唯一）/`category`/`ontologyRef`（`was:` 前缀）/`dimensions` |
 | dimensions | ✓ | **八维齐全**：Physical / Rule / Intellectual / Data / Economic / Energy / Organization / SpaceTime（权威=WAS `was-dimensions.yaml`） |
 | relations[] | ○ | `source`/`target` 须引用存在资产；禁止自环 |
@@ -94,11 +94,11 @@ XAP＝可扩展资产包——XWAIL 契约的**打包/发布单位**（构建、
 
 ## 4. 试点范围契约（pilotScope）
 
-4.1 必填字段（24）：`pilotScopeId / name / wasLayer / assetDimension / flowType / lifecycle / admissionStatus / projectRef / meetingPolicy / dataScope / evidencePolicy / approvalPolicy / receivingLedger / authorizedActorRefs / allowedActions / startAt / endAt / exitCriteria / sourceRefs / evidenceRefs / waesGateRefs / promotionBlockers / nextAction / staleSourceHash`。
+4.1 必填字段（24）：`pilotScopeId / name / wasLayer / assetDimension / flowType / lifecycle / admissionStatus / projectRef / meetingPolicy / dataScope / evidencePolicy / approvalPolicy / receivingLedger / authorizedActorRefs / allowedActions / startAt / endAt / exitCriteria / sourceRefs / evidenceRefs / wameGateRefs / promotionBlockers / nextAction / staleSourceHash`。
 
 4.2 受控位：`assetDimension = rule_asset`；`flowType = rule_flow`；`admissionStatus` 枚举 7 值；`allowedActions` 白名单 7 项（admit_meeting_asset / derive_minutes_candidate / derive_project_control_candidate / review_minutes_candidate / confirm_project_control_item / submit_write_intent / receive_ledger_receipt）。
 
-4.3 Active 前置条件（校验强制）：`waesStatus ∈ {Authorized, Published}`；`promotionBlockers` 清零；`projectRef` / `receivingLedgerRef` 不得使用 candidate 占位。
+4.3 Active 前置条件（校验强制）：`wameStatus ∈ {Authorized, Published}`；`promotionBlockers` 清零；`projectRef` / `receivingLedgerRef` 不得使用 candidate 占位。
 
 4.4 口径注记（待评审）：WAS 契约侧 pilotScope 与 XWAIL 模型侧 pilotScope 为姐妹件（契约侧 / 模型侧；字段名差异属设计差异）；`admissionStatus` 枚举大小写两处不一致（WAS 小写 / XWAIL 1.1 大写），统一方向：以 WAS 契约为准（见《XWAIL-V1.2-Validator规则清单.md》V1.2-04）。
 

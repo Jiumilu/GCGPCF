@@ -38,7 +38,7 @@
     {
       "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-004",
       "title": "attach rollback plan id",
-      "owner": "WAES",
+      "owner": "WAME",
       "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
       "required_evidence": "rollback_plan_id",
       "status": "pending_rollback_plan",

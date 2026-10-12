@@ -48,7 +48,7 @@
     "git_push_performed": false,
     "gfis_file_cleanup_performed": false,
     "codegraph_sync_only_closure": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "recommended_next_actions": [
     "do not delete or stage GFIS untracked files",

@@ -156,7 +156,7 @@ def write_markdown(report: dict) -> None:
 doc_id: GPCF-DOC-E9D4362ECF
 title: OKF v0.1 Summary Approval Negative Fixtures
 project: KDS
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

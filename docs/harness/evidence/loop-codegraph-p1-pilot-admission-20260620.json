@@ -46,7 +46,7 @@
   "non_claims": [
     "does not prove CodeGraph installed",
     "does not prove GFIS runtime SOP E2E passed",
-    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status",
+    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, or integrated status",
     "does not authorize production write, external API write, database migration, permission change, deployment, commit, push, or merge"
   ]
 }

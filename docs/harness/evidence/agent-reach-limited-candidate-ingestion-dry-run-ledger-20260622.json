@@ -62,7 +62,7 @@
       "source_type": "open_source_repository",
       "decision": "accept_limited",
       "accepted_scope": "open_source_tool_candidate_only",
-      "verification_reason": "The repository is relevant as a tool candidate for governance gates, but it is not WAES policy and still requires legal/security review before use.",
+      "verification_reason": "The repository is relevant as a tool candidate for governance gates, but it is not WAME policy and still requires legal/security review before use.",
       "security_review_required": true,
       "rag_admission": "limited",
       "kds_admission": "limited_candidate_only",
@@ -71,7 +71,7 @@
       "blocked_outputs": [
         "tool_installation",
         "production_config",
-        "waes_policy_replacement"
+        "wame_policy_replacement"
       ]
     },
     {

@@ -30,7 +30,7 @@
       "routing_owner",
       "recipient_acl_owner",
       "sla_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "governance_owner",
@@ -47,7 +47,7 @@
       "candidate_sla_window_snapshot",
       "candidate_response_requirement_snapshot",
       "candidate_receipt_blocker_codes",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -113,7 +113,7 @@
       "candidate_receipt_deduplication_key_present",
       "candidate_receipt_status_matrix_present",
       "candidate_receipt_blocker_codes_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_aggregation_not_formal_receipt_aggregation",
@@ -133,7 +133,7 @@
       "candidateSlaWindowSnapshotRef",
       "candidateResponseRequirementSnapshotRef",
       "candidateReceiptBlockerCodesRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "repairOwnerRef",
       "receiptOwnerRef",
@@ -141,7 +141,7 @@
       "routingOwnerRef",
       "recipientAclOwnerRef",
       "slaOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "governanceOwnerRef",
@@ -171,7 +171,7 @@
       "write_revenue_distribution",
       "write_contribution_score",
       "promote_lifecycle",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

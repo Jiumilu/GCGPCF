@@ -66,7 +66,7 @@ LOOP 必须把 Delivery Loop 与 Governance Loop 的职责分开：
 | Loop | 默认服务对象 | 可推进事项 | 不得释放 |
 |---|---|---|---|
 | Delivery Loop | `development_lane` | 本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAME review candidate development、verified artifact candidate development、`development_ready_for_real_business_validation` | 真实业务验证、accepted、integrated、production_ready、customer_accepted |
-| Governance Loop | `real_business_validation_lane`、`acceptance_lane`、`production_lane` | 真实 source-of-record 验证、owner/WAES/客户验收裁决、生产就绪、交付和状态提升 | 未经人工确认的状态升级 |
+| Governance Loop | `real_business_validation_lane`、`acceptance_lane`、`production_lane` | 真实 source-of-record 验证、owner/WAME/客户验收裁决、生产就绪、交付和状态提升 | 未经人工确认的状态升级 |
 
 P0/P1/P2/P3 门禁必须区分开发阻断与验证阻断。`real_source_records = 0` 可以阻断真实业务验证、生产动作、客户交付声明和状态提升；不得阻断本地开发、fixture E2E、dry-run、contract validator 或开发完成候选。
 

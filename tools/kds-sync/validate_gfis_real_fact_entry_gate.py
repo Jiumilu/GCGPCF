@@ -2,7 +2,7 @@
 """Validate that GFIS real-fact entry remains blocked while real inputs are zero.
 
 This is a GPCF-side aggregation gate. It does not create GFIS facts, KDS facts,
-review items, runtime intake records, WAES reviews, or verified artifacts.
+review items, runtime intake records, WAME reviews, or verified artifacts.
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ GFIS_VALIDATORS = [
     "validate_gfis_runtime_primary_key_gate.py",
     "validate_gfis_review_queue_admission_gate.py",
     "validate_gfis_runtime_intake_gate.py",
-    "validate_gfis_waes_review_gate.py",
+    "validate_gfis_wame_review_gate.py",
     "validate_gfis_verified_artifact_gate.py",
     "validate_gfis_runtime_sop_e2e_real.py",
 ]
@@ -34,7 +34,7 @@ ZERO_KEYS = [
     "real_runtime_primary_keys",
     "real_review_queue_items",
     "real_runtime_intake_items",
-    "real_waes_reviews",
+    "real_wame_reviews",
     "real_verified_artifacts",
 ]
 
@@ -44,7 +44,7 @@ EXPECTED_BY_VALIDATOR = {
         "real_runtime_primary_keys": "0",
         "real_review_queue_items": "0",
         "real_runtime_intake_items": "0",
-        "real_waes_reviews": "0",
+        "real_wame_reviews": "0",
         "real_verified_artifacts": "0",
     },
     "validate_gfis_liaoning_yuanhang_quotation_confirmation_candidates.py": {
@@ -57,7 +57,7 @@ EXPECTED_BY_VALIDATOR = {
         "runtime_primary_key_ready": "0",
         "review_queue": "0",
         "runtime_intake": "0",
-        "waes_review": "0",
+        "wame_review": "0",
         "verified": "0",
     },
     "validate_gfis_runtime_primary_key_gate.py": {
@@ -66,29 +66,29 @@ EXPECTED_BY_VALIDATOR = {
         "real_runtime_primary_keys": "0",
         "review_queue": "0",
         "runtime_intake": "0",
-        "waes_review": "0",
+        "wame_review": "0",
         "verified": "0",
     },
     "validate_gfis_review_queue_admission_gate.py": {
         "runtime_primary_key_ready": "0",
         "review_queue": "0",
         "runtime_intake": "0",
-        "waes_review": "0",
+        "wame_review": "0",
         "verified": "0",
     },
     "validate_gfis_runtime_intake_gate.py": {
         "review_queue": "0",
         "runtime_intake": "0",
-        "waes_review": "0",
+        "wame_review": "0",
         "verified": "0",
     },
-    "validate_gfis_waes_review_gate.py": {
+    "validate_gfis_wame_review_gate.py": {
         "runtime_intake": "0",
-        "waes_review": "0",
+        "wame_review": "0",
         "verified": "0",
     },
     "validate_gfis_verified_artifact_gate.py": {
-        "waes_review": "0",
+        "wame_review": "0",
         "verified": "0",
     },
     "validate_gfis_runtime_sop_e2e_real.py": {
@@ -98,7 +98,7 @@ EXPECTED_BY_VALIDATOR = {
         "real_runtime_primary_keys": "0",
         "real_review_queue_items": "0",
         "real_runtime_intake_items": "0",
-        "real_waes_reviews": "0",
+        "real_wame_reviews": "0",
         "real_verified_artifacts": "0",
     },
 }
@@ -121,7 +121,7 @@ STATUS_BOUNDARY_PHRASES = [
     "runtime_primary_key_ready=0",
     "review_queue=0",
     "runtime_intake=0",
-    "waes_review=0",
+    "wame_review=0",
     "verified=0",
     "accepted=false",
     "integrated=false",
@@ -206,10 +206,10 @@ def validate_runtime_sop_e2e_real_readonly() -> str:
         "real_runtime_primary_keys",
         "real_review_queue_items",
         "real_runtime_intake_items",
-        "real_waes_reviews",
+        "real_wame_reviews",
         "real_verified_artifacts",
         "real_kds_writes",
-        "real_waes_writes",
+        "real_wame_writes",
         "production_writes",
         "real_external_api_writes",
     ]:
@@ -220,7 +220,7 @@ def validate_runtime_sop_e2e_real_readonly() -> str:
         "gfis_runtime_sop_e2e_real=repair_required "
         "synthetic_rejected_by_real_lane=1 synthetic_pollution_files=0 "
         "real_source_records=0 real_runtime_primary_keys=0 real_review_queue_items=0 "
-        "real_runtime_intake_items=0 real_waes_reviews=0 real_verified_artifacts=0"
+        "real_runtime_intake_items=0 real_wame_reviews=0 real_verified_artifacts=0"
     )
 
 
@@ -375,7 +375,7 @@ def main() -> int:
         "real_source_records_zero_is_not_dev_blocker=true "
         "real_business_validation_block=true status_promotion_block=true "
         "real_source_records=0 valid_source_records=0 formal_confirmation_files=0 runtime_primary_key_ready=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "manual_business_verification_pending=true real_business_lane=repair_required "
         "status_ceiling=repair_required "
         "next_required_input=real_source_record_or_equivalent_formal_confirmation "

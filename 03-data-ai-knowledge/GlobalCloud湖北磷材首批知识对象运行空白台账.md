@@ -51,13 +51,13 @@ superseded_by: []
 
 ## 3. PilotSession 台账
 
-| pilotSessionId | pilotScope | pilotPhase | owner | participantRefs | allowedDataScope | restrictedDataScope | defaultStatus | waesGateStatus | kdsWritebackStatus | finalStatus |
+| pilotSessionId | pilotScope | pilotPhase | owner | participantRefs | allowedDataScope | restrictedDataScope | defaultStatus | wameGateStatus | kdsWritebackStatus | finalStatus |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `PILOT-HBLC-KDS-202606-0001` | FEA / RAW / IND / ORD / TPL | knowledge_object_preparation | KDS / GPCF 治理负责人 | 湖北磷材项目组、平台治理、WAME、必要委员会 | 脱敏摘要、来源索引、公开政策标准、候选资料包、葛化母版结构 | DSR-L3 原文、供应商报价原文、客户订单原文、合同原文、未授权跨单位资料 | planned_empty_ledger | pending | candidate / no_write | planned |
 
 ## 4. 首批 KnowledgeObject 空白台账
 
-| objectId | packageId | objectType | sourceType | sourceRefs | sourceParty | baseResourcePools | enhancedLedgerLinks | classificationLevel | trustLevel | confirmationStatus | responsibleSubject | waesGateRefs | reuseFromGH | gfisDepthStatus | revenueStatus |
+| objectId | packageId | objectType | sourceType | sourceRefs | sourceParty | baseResourcePools | enhancedLedgerLinks | classificationLevel | trustLevel | confirmationStatus | responsibleSubject | wameGateRefs | reuseFromGH | gfisDepthStatus | revenueStatus |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | `HBLC-FEA-202606-0001` | `KPK-HBLC-FEA-202606-0001` | expansion_project | factory_expansion | TBD | 湖北磷材项目负责人待确认 | 装备池、产能池、政策池、数据池、场景池 | SOP 账本、贡献账本、积分池、悬赏池 | DSR-L1 / DSR-L2 | T0 | candidate | 待确认 | pending | structure_only | readiness_only | knowledge_only |
 | `HBLC-RAW-202606-0001` | `KPK-HBLC-RAW-202606-0001` | raw_material_source | raw_material | TBD | 原料责任方待确认 | 原料池、数据池、资金池、场景池 | 贡献账本、积分池、悬赏池、争议池 | DSR-L1 / DSR-L2 / DSR-L3 | T0 | candidate | 待确认 | pending | no | not_applicable | knowledge_only |
@@ -67,7 +67,7 @@ superseded_by: []
 
 ## 5. FactoryExpansionAssessment 空白台账
 
-| assessmentId | expansionProjectRef | linkedObjectId | ghTemplateVersion | demandSourceEvidence | rawMaterialCoordination | industryPolicyFit | orderAndCustomerPotential | factoryReplicationFit | logisticsAndRegionFit | gfisReadiness | revenuePotential | evidenceCompleteness | waesGateStatus | assessmentStatus |
+| assessmentId | expansionProjectRef | linkedObjectId | ghTemplateVersion | demandSourceEvidence | rawMaterialCoordination | industryPolicyFit | orderAndCustomerPotential | factoryReplicationFit | logisticsAndRegionFit | gfisReadiness | revenuePotential | evidenceCompleteness | wameGateStatus | assessmentStatus |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|---|
 | `FEA-HBLC-202606-0001` | TBD | `HBLC-FEA-202606-0001` | `GH-DKS-029` structure reference | 待评 | 待评 | 待评 | 待评 | 待评 | 待评 | 待评 | 待评 | pending | pending | planned |
 
@@ -85,7 +85,7 @@ superseded_by: []
 
 ## 7. ReplicationTemplateCandidate 台账
 
-| templateCandidateId | linkedObjectId | sourceTemplate | reuseScope | requiredAdaptation | forbiddenReuse | outputType | waesGateStatus | status |
+| templateCandidateId | linkedObjectId | sourceTemplate | reuseScope | requiredAdaptation | forbiddenReuse | outputType | wameGateStatus | status |
 |---|---|---|---|---|---|---|---|---|
 | `RTC-HBLC-TPL-202606-0001` | `HBLC-TPL-202606-0001` | 葛化母版结构 | 资料包结构、预运营期订单机制、知识缺口、悬赏、SOP 控制点 | 湖北磷材单位边界、原料场景、区域政策、产能和装备条件 | 不复用葛化未确认事实、客户资料、OEM 事实责任、金融凭证原文 | factory_replication_template_candidate | pending | planned |
 

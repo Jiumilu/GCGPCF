@@ -18,7 +18,7 @@ REPOS = [
     ("gfis", "GlobalCloud GFIS", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS")),
     ("gpc", "GlobalCloud GPC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC")),
     ("pvaos", "GlobalCloud PVAOS", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS")),
-    ("waes", "GlobalCloud WAES", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES")),
+    ("wame", "GlobalCloud WAME", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME")),
     ("kds", "GlobalCloud KDS", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS")),
     ("brain", "GlobalCloud Brain", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain")),
     ("pkc", "GlobalCloud PKC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC")),
@@ -102,12 +102,12 @@ def main() -> int:
         "loop_schema",
         "harness_impact_template",
         "harness_evidence_template",
-        "waes_gate_policy",
+        "wame_gate_policy",
         "kds_okf_mapping",
     ]:
         require(key in evidence["integration_evidence"], f"missing integration evidence key: {key}")
 
-    for key in ["coverage_value", "drift_value", "loop_value", "harness_value", "waes_value", "kds_okf_value", "cost_quality_value"]:
+    for key in ["coverage_value", "drift_value", "loop_value", "harness_value", "wame_value", "kds_okf_value", "cost_quality_value"]:
         require(key in evidence["operational_value_assessment"], f"missing operational value key: {key}")
 
     for phrase in ["稳态验证", "实际作用评估", "Brain 活动漂移", "GFIS policy exception", "GPCF-CODEGRAPH-IMPACT-REPORT-DRY-RUN-005"]:

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-READINESS-20260626
 title: CodeGraph 开发执行层真实输入准入验证 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ CodeGraph 开发态工作链可以继续作为前置分析、过程约束、测�
 | runtime_primary_key_ready | 0 |
 | runtime_primary_key_missing | 12 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | kds_coverage_missing_sources | 4 |
 
@@ -52,7 +52,7 @@ CodeGraph 开发态工作链可以继续作为前置分析、过程约束、测�
 
 ## 缺口
 
-仍缺真实客户订单原件或平台订单回执 source-of-record、12 个运行对象族真实运行层主键、样品签收或转量产批准、原料批次、工厂订单、生产工单、作业卡、质检、成品批次、发货、POD、WAES confirmation、KDS write receipt 和运行层单据事实。
+仍缺真实客户订单原件或平台订单回执 source-of-record、12 个运行对象族真实运行层主键、样品签收或转量产批准、原料批次、工厂订单、生产工单、作业卡、质检、成品批次、发货、POD、WAME confirmation、KDS write receipt 和运行层单据事实。
 
 ## 决策
 
@@ -63,7 +63,7 @@ CodeGraph 开发态工作链可以继续作为前置分析、过程约束、测�
 
 ## 禁止声明
 
-不声明业务功能完成，不声明 accepted、integrated、production_ready 或 customer_accepted，不声明运行态正常，不声明生产写入、外部 API 写入、真实 KDS 写入、真实 WAES 写入、commit、push 或 deploy。
+不声明业务功能完成，不声明 accepted、integrated、production_ready 或 customer_accepted，不声明运行态正常，不声明生产写入、外部 API 写入、真实 KDS 写入、真实 WAME 写入、commit、push 或 deploy。
 
 ## 验证命令
 

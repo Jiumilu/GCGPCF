@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-33E55CB86C
 title: Brain 证据索引
 project: Brain
-related_projects: [WAES, Brain]
+related_projects: [WAME, Brain]
 domain: docs
 status: controlled
 version: v1.0

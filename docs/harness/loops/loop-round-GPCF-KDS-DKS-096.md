@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C860998BF2
 title: LOOP Round GPCF-KDS-DKS-096 - GC-Knowledge Fabric 收益贡献归因包
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 本轮目标
 
-建立 Revenue/Contribution attribution packet dry-run，将收益记录、贡献记录、evidence、WAES gate、委员会/冻结触发原因组织成可审查候选归因包。
+建立 Revenue/Contribution attribution packet dry-run，将收益记录、贡献记录、evidence、WAME gate、委员会/冻结触发原因组织成可审查候选归因包。
 
 本轮只做本地 OKF、文档、shared type、fixture 和 validator，不确认积分，不分配收益，不转移 AI 额度，不结算悬赏，不写 GFIS/GPC/ERP/MES，不写 KDS 正式事实，不调用外部 API。
 
@@ -54,7 +54,7 @@ superseded_by: []
 ## 5. 本轮验收口径
 
 - 归因包必须是候选审查材料，不是收益分配结果。
-- 正式收益候选必须满足 `formal_revenue + cash_received + evidence + WAES gate + 已确认贡献`。
+- 正式收益候选必须满足 `formal_revenue + cash_received + evidence + WAME gate + 已确认贡献`。
 - 开票收入只能作为财务统计，不得进入收益分配候选。
 - 潜在收益不得自动转正式收益。
 - 渠道机会只能作为渠道贡献候选或参考，不得直接分配。
@@ -69,7 +69,7 @@ superseded_by: []
 | 覆盖矩阵 | pass | `okf_types_api_validator_coverage=pass coverage_items=24 okf_files=31 type_files=33 api_files=15 validator_files=31 fixture_files=31 missing_files=0 no_write=covered business_writes=0 external_api_writes=0` |
 | OKF parse | pass | `okf_parse=pass yaml_files=30 json_files=1` |
 | TypeScript 类型检查 | pass | `tsc -p packages/shared/tsconfig.json --noEmit` 与 `tsc -p packages/api/tsconfig.json --noEmit` 均无报错 |
-| 前序专项回归 | pass | DKS-095 GFIS checklist、DKS-094 KWE workpack、DKS-093 RAG citation packet、KDS ACL、Harness evidence、LOOP closure、AgentUsedKnowledge、状态机、对象关系、WAES IO、RAG 强度、GFIS 写回沙箱、四池 P0、委员会 DecisionRecord、敏感 metadata storage、Brain/PKC/Governance/GFIS/KWE/WAES/KDS endpoint no-write、LOOP Dashboard、Brain/PKC entry、GFIS acceptance E2E、GFIS assistant、Governance ledger、KDS search、WAES gates、KWE workflow 全部 pass |
+| 前序专项回归 | pass | DKS-095 GFIS checklist、DKS-094 KWE workpack、DKS-093 RAG citation packet、KDS ACL、Harness evidence、LOOP closure、AgentUsedKnowledge、状态机、对象关系、WAME IO、RAG 强度、GFIS 写回沙箱、四池 P0、委员会 DecisionRecord、敏感 metadata storage、Brain/PKC/Governance/GFIS/KWE/WAME/KDS endpoint no-write、LOOP Dashboard、Brain/PKC entry、GFIS acceptance E2E、GFIS assistant、Governance ledger、KDS search、WAME gates、KWE workflow 全部 pass |
 | 文档治理门禁 | pass | `document_pollution=pass`、`kds_token=pass fingerprint=bfd9553d`、`loop_document_gate gate=pass repo_md=1270 kds_md=1232 missing_metadata=0 missing_readme_dirs=0`；既有 `status_counts.missing=1`、`project_counts.missing=1` 为仓库台账残留，本轮未新增 |
 | 差异检查 | pass | `git diff --check -- <DKS-096 touched files>` 无输出 |
 | 敏感/误升级关键词扫描 | pass | 对本轮触达文件扫描 P0 文档误述、正式写回/收益确认误述、生产就绪/验收集成误升级、真实同步误述、TOKEN/密钥模式，均无命中 |

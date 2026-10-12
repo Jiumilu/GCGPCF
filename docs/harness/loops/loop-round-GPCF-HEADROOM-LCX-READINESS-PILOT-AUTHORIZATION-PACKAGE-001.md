@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-READINESS-PILOT-AUTHORIZATION-PACKAGE-20260622
 title: Loop Round GPCF Headroom LCX Readiness Pilot Authorization Package 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

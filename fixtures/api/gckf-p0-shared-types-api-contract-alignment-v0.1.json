@@ -15,7 +15,7 @@
         "packages/shared/src/knowledge/writeback-candidate.ts",
         "packages/shared/src/knowledge/pool.ts",
         "packages/shared/src/knowledge/rag-admission.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApiContracts": ["packages/api/src/kds/v2/contracts.ts"],
       "requiredRoutes": ["packages/api/src/kds/v2/routes.ts"],
@@ -23,11 +23,11 @@
       "expectedEndpointCount": 11
     },
     {
-      "group": "waes",
-      "requiredSharedTypes": ["packages/shared/src/knowledge/waes-gate.ts"],
-      "requiredApiContracts": ["packages/api/src/waes/contracts.ts"],
-      "requiredRoutes": ["packages/api/src/waes/routes.ts"],
-      "requiredValidators": ["scripts/waes/validate_waes_endpoint_no_write_smoke.py"],
+      "group": "wame",
+      "requiredSharedTypes": ["packages/shared/src/knowledge/wame-gate.ts"],
+      "requiredApiContracts": ["packages/api/src/wame/contracts.ts"],
+      "requiredRoutes": ["packages/api/src/wame/routes.ts"],
+      "requiredValidators": ["scripts/wame/validate_wame_endpoint_no_write_smoke.py"],
       "expectedEndpointCount": 7
     },
     {
@@ -36,7 +36,7 @@
         "packages/shared/src/knowledge/gap.ts",
         "packages/shared/src/knowledge/bounty.ts",
         "packages/shared/src/knowledge/writeback-candidate.ts",
-        "packages/shared/src/knowledge/waes-gate.ts"
+        "packages/shared/src/knowledge/wame-gate.ts"
       ],
       "requiredApiContracts": ["packages/api/src/kwe/contracts.ts"],
       "requiredRoutes": ["packages/api/src/kwe/routes.ts"],
@@ -49,7 +49,7 @@
         "packages/shared/src/knowledge/fact-candidate.ts",
         "packages/shared/src/knowledge/gap.ts",
         "packages/shared/src/knowledge/rag-admission.ts",
-        "packages/shared/src/knowledge/waes-gate.ts",
+        "packages/shared/src/knowledge/wame-gate.ts",
         "packages/shared/src/knowledge/writeback-candidate.ts"
       ],
       "requiredApiContracts": ["packages/api/src/gfis/contracts.ts"],

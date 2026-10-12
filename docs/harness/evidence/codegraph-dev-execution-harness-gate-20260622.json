@@ -28,7 +28,7 @@
     "changed_files_outside_allowed_scope",
     "accepted_integrated_or_production_ready_true",
     "production_write_or_external_api_write_true",
-    "codegraph_claimed_as_final_waes_or_harness_decision"
+    "codegraph_claimed_as_final_wame_or_harness_decision"
   ],
   "dry_run_results": {
     "positive_fixture": "pass",

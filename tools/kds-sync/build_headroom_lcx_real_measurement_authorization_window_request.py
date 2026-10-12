@@ -67,7 +67,7 @@ def build_package() -> dict[str, Any]:
         "requested_by": field_map.get("current_state", {}).get("authorized_by", "lujunxiang / GPCF owner"),
         "requested_at": field_map.get("current_state", {}).get("authorized_at", "2026-06-22T08:42:06+08:00"),
         "requested_future_decision": request.get("requested_future_decision"),
-        "current_waes_harness_admission_decision": precheck.get("waes_harness_admission_decision"),
+        "current_wame_harness_admission_decision": precheck.get("wame_harness_admission_decision"),
         "authorization_complete": False,
         "real_measurement_open": False,
         "production_branch_blocked": True,
@@ -120,7 +120,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623",
             "title: Headroom LCX 真实测量授权窗口请求证据",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -153,7 +153,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
             f"| requested_by | `{pkg['requested_by']}` |",
             f"| requested_at | `{pkg['requested_at']}` |",
             f"| requested_future_decision | `{pkg['requested_future_decision']}` |",
-            f"| current_waes_harness_admission_decision | `{pkg['current_waes_harness_admission_decision']}` |",
+            f"| current_wame_harness_admission_decision | `{pkg['current_wame_harness_admission_decision']}` |",
             "",
             "## 当前状态",
             "",
@@ -185,7 +185,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
         doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001
         title: "循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0
@@ -233,7 +233,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
 
         ## 下一轮
 
-        等待 WAES/Harness 对真实授权窗口做出新的裁决，或继续把窗口请求纳入总图谱引用。
+        等待 WAME/Harness 对真实授权窗口做出新的裁决，或继续把窗口请求纳入总图谱引用。
         """
     ).strip() + "\n"
     OUT_LOOP.write_text(loop_text, encoding="utf-8")

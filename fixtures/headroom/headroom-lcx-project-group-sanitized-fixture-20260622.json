@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -211,8 +211,8 @@
       "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
     },
     {
-      "measurement_id": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-01",
-      "project": "WAES",
+      "measurement_id": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-01",
+      "project": "WAME",
       "scenario": "loop_gate_metadata",
       "source_kind": "project_group_sanitized_fixture_metadata_only",
       "input_tokens_before": 1255,
@@ -230,8 +230,8 @@
       "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
     },
     {
-      "measurement_id": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-02",
-      "project": "WAES",
+      "measurement_id": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-02",
+      "project": "WAME",
       "scenario": "retrieval_context_metadata",
       "source_kind": "project_group_sanitized_fixture_metadata_only",
       "input_tokens_before": 1290,
@@ -249,8 +249,8 @@
       "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
     },
     {
-      "measurement_id": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-03",
-      "project": "WAES",
+      "measurement_id": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-03",
+      "project": "WAME",
       "scenario": "tool_output_metadata",
       "source_kind": "project_group_sanitized_fixture_metadata_only",
       "input_tokens_before": 1325,

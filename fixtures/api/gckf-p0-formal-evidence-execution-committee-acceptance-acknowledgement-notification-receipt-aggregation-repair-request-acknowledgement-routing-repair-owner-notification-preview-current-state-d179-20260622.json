@@ -41,7 +41,7 @@
       "delivery_owner",
       "recipient_acl_owner",
       "sla_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "governance_owner",
@@ -58,7 +58,7 @@
       "candidate_notification_blocker_codes",
       "candidate_hold_reason_snapshot",
       "candidate_hold_context_refs_snapshot",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_notification_attestation",
       "no_write_attestation"
@@ -141,7 +141,7 @@
       "candidate_notification_blocker_codes_present",
       "candidate_hold_reason_snapshot_present",
       "candidate_hold_context_refs_snapshot_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_notification_attestation_present",
       "no_write_attestation_present",
@@ -165,14 +165,14 @@
       "candidateNotificationBlockerCodesRef",
       "candidateHoldReasonSnapshotRef",
       "candidateHoldContextRefsSnapshotRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "repairOwnerRef",
       "routingOwnerRef",
       "deliveryOwnerRef",
       "recipientAclOwnerRef",
       "slaOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "governanceOwnerRef",
@@ -218,7 +218,7 @@
       "write_business_system",
       "write_revenue_distribution",
       "write_contribution_score",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "holdContextRefs": [

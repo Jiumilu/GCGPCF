@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-3-20260622
 title: Agent-Reach P8 全量真实搜索批次 3 证据 2026-06-22
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

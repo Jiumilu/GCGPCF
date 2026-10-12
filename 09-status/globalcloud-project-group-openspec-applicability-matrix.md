@@ -26,7 +26,7 @@ superseded_by: []
 | Brain | brain | conditional | `openspec/changes/brain-<change>/` | `gpcf_new_feature --project brain` | Delivery | required | required |
 | WAS | was | conditional | `openspec/changes/was-<change>/` | `gpcf_new_feature --project was` | Governance | required | required |
 | XiaoC | xiaoc | conditional | `openspec/changes/xiaoc-<change>/` | `gpcf_new_feature --project xiaoc` | Delivery | required | required |
-| WAME | waes | required | `openspec/changes/waes-<change>/` | `gpcf_new_feature --project waes` | Governance | required | required |
+| WAME | wame | required | `openspec/changes/wame-<change>/` | `gpcf_new_feature --project wame` | Governance | required | required |
 | GPC | gpc | required | `openspec/changes/gpc-<change>/` | `gpcf_new_feature --project gpc` | Governance | required | required |
 | Studio | studio | conditional | `openspec/changes/studio-<change>/` | `gpcf_new_feature --project studio` | Delivery | required | required |
 | GPCF | gpcf | required | `openspec/changes/gpcf-<change>/` | `gpcf_new_feature --project gpcf` | Governance | required | required |

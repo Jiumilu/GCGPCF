@@ -99,7 +99,7 @@ def main() -> int:
         "candidate_receipt_deduplication_key",
         "candidate_receipt_status_matrix",
         "candidate_receipt_blocker_codes",
-        "waes_negative_gate_snapshot",
+        "wame_negative_gate_snapshot",
         "harness_no_write_guard",
         "no_write_attestation",
     }, "aggregation section", failures)

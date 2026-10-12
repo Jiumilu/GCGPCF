@@ -40,7 +40,7 @@ required_fields:
 - creates_approval_request
 - creates_approval_decision
 - creates_harness_evidence
-- creates_waes_gate_result
+- creates_wame_gate_result
 - creates_kwe_work_item
 - persists_evidence
 - approves_business_write
@@ -100,7 +100,7 @@ blocked_actions:
 - create_approval_request
 - create_approval_decision
 - create_harness_evidence
-- create_waes_gate_result
+- create_wame_gate_result
 - create_kwe_work_item
 - persist_evidence
 - approve_business_write
@@ -116,7 +116,7 @@ hard_boundaries:
   breach_review_is_not_approval_request: true
   breach_review_is_not_approval_decision: true
   breach_review_is_not_harness_evidence: true
-  breach_review_is_not_waes_result: true
+  breach_review_is_not_wame_result: true
   breach_review_is_not_kwe_work_item: true
   breach_review_is_not_lifecycle_change: true
   breach_review_is_not_business_writeback: true
@@ -128,7 +128,7 @@ hard_boundaries:
   creates_approval_request_must_be_false: true
   creates_approval_decision_must_be_false: true
   creates_harness_evidence_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   creates_kwe_work_item_must_be_false: true
   persists_evidence_must_be_false: true
   approves_business_write_must_be_false: true
@@ -146,7 +146,7 @@ no_write_guards:
   writes_reminder: 0
   writes_approval_request: 0
   writes_approval_decision: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_harness_evidence: 0
   writes_kds_lifecycle: 0

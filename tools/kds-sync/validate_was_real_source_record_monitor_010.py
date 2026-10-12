@@ -17,18 +17,18 @@ PREVIOUS_MONITOR_JSON = ROOT / "docs/harness/evidence/was-real-source-record-mon
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
-WAES_KEYS = [
-    "waes_gate_input_bundle",
-    "waes_review_queue_attempts",
-    "premature_waes_review_requests",
+WAME_KEYS = [
+    "wame_gate_input_bundle",
+    "wame_review_queue_attempts",
+    "premature_wame_review_requests",
     "missing_kds_binding_proof",
     "missing_owner_issuer_confirmation",
     "missing_runtime_context_binding",
-    "incomplete_waes_admission_bundle",
-    "accepted_for_waes_review",
+    "incomplete_wame_admission_bundle",
+    "accepted_for_wame_review",
 ]
 REQUIRED_COMMANDS = [
     ["python3", "tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py"],
@@ -84,13 +84,13 @@ def monitor_failures(value: dict[str, Any]) -> list[str]:
     failures: list[str] = []
     if value.get("submitted_real_candidate_files") != 0:
         failures.append("submitted_real_candidate_files_must_be_zero")
-    for key in WAES_KEYS:
+    for key in WAME_KEYS:
         if value.get(key, 0) != 0:
             failures.append(f"{key}_must_be_zero")
     if value.get("hold_required") != 1:
         failures.append("hold_required_must_be_one")
-    if value.get("waes_admission_state") != "blocked_no_real_source_record":
-        failures.append("waes_admission_state_must_remain_blocked")
+    if value.get("wame_admission_state") != "blocked_no_real_source_record":
+        failures.append("wame_admission_state_must_remain_blocked")
     boundary = value.get("boundary", {})
     if not isinstance(boundary, dict):
         return failures + ["boundary_not_object"]
@@ -123,23 +123,23 @@ def main() -> int:
     require(evidence.get("source_round") == previous.get("round_id"), "source round mismatch")
     require(evidence.get("project_group_scope") == PROJECT_GROUP, "project group scope mismatch")
     require(evidence.get("required_commands") == [" ".join(command) for command in REQUIRED_COMMANDS], "required command list mismatch")
-    require(evidence.get("waes_admission_requirements") == [
+    require(evidence.get("wame_admission_requirements") == [
         "real_source_record",
         "valid_source_record",
         "kds_binding_proof",
         "owner_issuer_confirmation",
         "runtime_context_binding",
-        "waes_gate_input_bundle",
-    ], "WAES admission requirements mismatch")
+        "wame_gate_input_bundle",
+    ], "WAME admission requirements mismatch")
 
     submitted = candidate_files()
     checks = evidence.get("monitor_checks", {})
     require(checks.get("submitted_real_candidate_files") == len(submitted) == 0, "submitted candidate count mismatch")
-    for key in WAES_KEYS:
+    for key in WAME_KEYS:
         require(checks.get(key) == 0, f"{key} must be 0")
     require(checks.get("accepted_for_next_gate") == 0, "accepted_for_next_gate must be 0")
     require(checks.get("hold_required") == 1, "hold_required must be 1")
-    require(checks.get("waes_admission_state") == "blocked_no_real_source_record", "WAES admission state mismatch")
+    require(checks.get("wame_admission_state") == "blocked_no_real_source_record", "WAME admission state mismatch")
 
     positive = load_json(FIXTURE_DIR / "real-source-record-monitor-010-positive.json")
     require(not monitor_failures(positive), "positive fixture should pass")
@@ -161,7 +161,7 @@ def main() -> int:
         "real_source_records=0",
         "valid_source_records=0",
         "runtime_primary_key_ready=0",
-        "waes_review=0",
+        "wame_review=0",
         "accepted=false",
         "integrated=false",
         "production_ready=false",
@@ -170,14 +170,14 @@ def main() -> int:
 
     for phrase in [
         "submitted_real_candidate_files | `0`",
-        "waes_gate_input_bundle | `0`",
-        "waes_review_queue_attempts | `0`",
-        "premature_waes_review_requests | `0`",
+        "wame_gate_input_bundle | `0`",
+        "wame_review_queue_attempts | `0`",
+        "premature_wame_review_requests | `0`",
         "missing_kds_binding_proof | `0`",
         "missing_owner_issuer_confirmation | `0`",
         "missing_runtime_context_binding | `0`",
-        "incomplete_waes_admission_bundle | `0`",
-        "accepted_for_waes_review | `0`",
+        "incomplete_wame_admission_bundle | `0`",
+        "accepted_for_wame_review | `0`",
         "accepted_for_next_gate | `0`",
         "hold_required | `1`",
         "production_ready | `false`",
@@ -185,24 +185,24 @@ def main() -> int:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
     require("真实 P4 输入 monitor 010 已建立" in loop_round, "loop round feedback missing")
     for phrase in [
-        "premature_waes_review",
+        "premature_wame_review",
         "missing_kds_binding_proof",
         "missing_owner_issuer_confirmation",
         "missing_runtime_context_binding",
-        "incomplete_waes_admission_bundle",
-        "waes_bundle_without_real_source_record",
+        "incomplete_wame_admission_bundle",
+        "wame_bundle_without_real_source_record",
     ]:
-        require(phrase in loop_round, f"loop round missing WAES case: {phrase}")
+        require(phrase in loop_round, f"loop round missing WAME case: {phrase}")
 
     print(
         "was_real_source_record_monitor_010=pass "
-        "submitted_real_candidate_files=0 waes_gate_input_bundle=0 waes_review_queue_attempts=0 "
-        "premature_waes_review_requests=0 missing_kds_binding_proof=0 "
+        "submitted_real_candidate_files=0 wame_gate_input_bundle=0 wame_review_queue_attempts=0 "
+        "premature_wame_review_requests=0 missing_kds_binding_proof=0 "
         "missing_owner_issuer_confirmation=0 missing_runtime_context_binding=0 "
-        "incomplete_waes_admission_bundle=0 accepted_for_waes_review=0 "
+        "incomplete_wame_admission_bundle=0 accepted_for_wame_review=0 "
         "accepted_for_next_gate=0 "
         "hold_required=1 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false "
         "production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-011"
     )
     return 0

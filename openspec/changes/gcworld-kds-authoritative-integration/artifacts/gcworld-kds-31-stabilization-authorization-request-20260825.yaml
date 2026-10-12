@@ -33,7 +33,7 @@ decisions:
     target: GBrain autopilot及worker
     restore_included: false
   - id: D8
-    title: GCWORLD与WAES人工资料导入冻结授权
+    title: GCWORLD与WAME人工资料导入冻结授权
     decision: pending
     restore_included: false
   - id: D9

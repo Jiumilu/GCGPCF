@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623
 title: Loop Round GPCF Headroom LCX Real Measurement Authorization Request 001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,4 +46,4 @@ superseded_by: []
 
 ## 下一轮
 
-等待 WAES/Harness 对真实测量窗口作出新的授权裁决。
+等待 WAME/Harness 对真实测量窗口作出新的授权裁决。

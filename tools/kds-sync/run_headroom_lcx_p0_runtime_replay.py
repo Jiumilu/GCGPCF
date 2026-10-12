@@ -30,9 +30,9 @@ PACKAGE_FILES = [
     "mcp.json",
     "harness/evidence.schema.yaml",
     "harness/metrics.schema.yaml",
-    "waes/headroom-policy.yaml",
-    "waes/sensitive-pass-through.yaml",
-    "waes/ccr-retrieve-gate.yaml",
+    "wame/headroom-policy.yaml",
+    "wame/sensitive-pass-through.yaml",
+    "wame/ccr-retrieve-gate.yaml",
     "kds/context-optimization-component.yaml",
     "scripts/install-headroom.sh",
     "scripts/start-proxy.sh",
@@ -55,7 +55,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -250,7 +250,7 @@ def main() -> int:
 doc_id: GPCF-DOC-0F02316005
 title: Headroom LCX P0 Runtime Replay Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0

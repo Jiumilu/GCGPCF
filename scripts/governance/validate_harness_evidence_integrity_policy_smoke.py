@@ -2,7 +2,7 @@
 """Validate Harness evidence reference integrity policy.
 
 This validator reads local OKF, shared type and fixture files only. It does not
-write Harness evidence, KDS facts, WAES gate results, KWE work items, ledgers,
+write Harness evidence, KDS facts, WAME gate results, KWE work items, ledgers,
 committee decisions, business systems, external share permissions, or external APIs.
 """
 

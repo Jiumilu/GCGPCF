@@ -127,7 +127,7 @@ def write_report(plan: dict, path: Path) -> None:
         "doc_id: GPCF-DOC-KDS-SYNC-PLAN",
         "title: KDS Development Space Sync Plan",
         "project: GPCF",
-        "related_projects: [GPCF, KDS, WAES]",
+        "related_projects: [GPCF, KDS, WAME]",
         "domain: status",
         "status: controlled",
         "version: v1.0",

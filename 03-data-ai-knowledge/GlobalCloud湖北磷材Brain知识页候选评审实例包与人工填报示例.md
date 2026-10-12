@@ -62,7 +62,7 @@ superseded_by: []
 
 ## 4. ReviewExampleFilledRegister
 
-| reviewId | linkedBrainPageId | pageType | sourceIndexStatus | redactionStatus | kdsPoolCheck | ledgerCheck | waesGateStatus | manualScore | redlineStatus | publishSuggestion | currentStatus |
+| reviewId | linkedBrainPageId | pageType | sourceIndexStatus | redactionStatus | kdsPoolCheck | ledgerCheck | wameGateStatus | manualScore | redlineStatus | publishSuggestion | currentStatus |
 |---|---|---|---|---|---|---|---|---:|---|---|---|
 | `BPR-HBLC-FEA-202606-EX01` | `BKP-HBLC-FEA-202606-0001` | 拓厂项目知识页候选 | complete | pass | pass | pass | record | 88 | pass | project_review | reviewing |
 | `BPR-HBLC-IND-202606-EX01` | `BKP-HBLC-IND-202606-0001` | 行业资料页候选 | partial | pass | pass | not_applicable | return | 76 | return | keep_candidate | returned |
@@ -92,9 +92,9 @@ superseded_by: []
 | `EKM-HBLC-IND-202606-0001` | `BPR-HBLC-IND-202606-EX01` | 政策池 / 数据池 / 场景池 | 贡献账本 | pass | 行业资料必须补权威来源后才可升级可信层级 |
 | `EKM-HBLC-ORD-202606-0001` | `BPR-HBLC-ORD-202606-EX01` | 订单池 / 产能池 / 资金池 / 数据池 | 潜在产值池 / 贡献账本 / 悬赏池 | pass | 潜在产值只能做候选；正式收入按到账确认 |
 
-## 8. ExampleWaesGateRecord
+## 8. ExampleWameGateRecord
 
-| waesExampleId | linkedReviewId | gateType | gateResult | ruleConfirmed | nextStep |
+| wameExampleId | linkedReviewId | gateType | gateResult | ruleConfirmed | nextStep |
 |---|---|---|---|---|---|
 | `EWG-HBLC-FEA-202606-0001` | `BPR-HBLC-FEA-202606-EX01` | publish_boundary | record | 拓厂评审候选不得等同投资、合作或建设启动确认 | 项目组评审候选 |
 | `EWG-HBLC-IND-202606-0001` | `BPR-HBLC-IND-202606-EX01` | trusted_source | return | T3 可信来源升级必须补权威来源、检索时间和适用范围 | 退回补源 |
@@ -117,7 +117,7 @@ superseded_by: []
 | 3 | 做脱敏检查 | 不含原文和敏感字段 | `redactionStatus=pass` | redaction_check |
 | 4 | 做 KDS 挂接 | KDS 11 池至少一个 | `kdsPoolCheck=pass` | kds_pool_check |
 | 5 | 做账本检查 | 增强账本不可游离 | `ledgerCheck` | ledger_check |
-| 6 | 做 WAME 规则记录 | 发布、可信、收益边界 | `waesGateStatus` | waes_check |
+| 6 | 做 WAME 规则记录 | 发布、可信、收益边界 | `wameGateStatus` | wame_check |
 | 7 | 填人工评分和红线 | 评分、红线结论 | `manualScore` / `redlineStatus` | manual_check |
 | 8 | 生成发布建议 | 规则匹配 | `publishSuggestion` | publish_gate |
 | 9 | 生成写回建议 | 候选字段 | `candidateWriteback` | human_confirm_required |

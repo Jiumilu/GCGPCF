@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90070
 title: WAS Real Source Record Monitor 070 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-070` 将绿色供应链覆盖扩展到生物多样性、土地使用与生态影响证据链：生物多样性基线调查、土地使用合规许可、保护地筛查记录、生态影响评估、栖息地恢复计划、利益相关方咨询记录、自然正向 KPI 监测。只有补齐这些证据，Ontology 才能安全地把生态影响、土地合规、保护地风险、恢复承诺、社区参与和自然正向指标绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-070` 将绿色供应链覆盖扩展到生物多样性、土地使用与生态影响证据链：生物多样性基线调查、土地使用合规许可、保护地筛查记录、生态影响评估、栖息地恢复计划、利益相关方咨询记录、自然正向 KPI 监测。只有补齐这些证据，Ontology 才能安全地把生态影响、土地合规、保护地风险、恢复承诺、社区参与和自然正向指标绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_070.py
 
 - 本证据不创建也不推断生物多样性基线调查、土地使用合规许可、保护地筛查记录、生态影响评估、栖息地恢复计划、利益相关方咨询记录或自然正向 KPI 监测。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

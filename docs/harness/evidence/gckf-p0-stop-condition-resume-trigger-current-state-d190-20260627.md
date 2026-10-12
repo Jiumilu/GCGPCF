@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0STOPRESUMED19020260627
 title: GCKF P0 停止条件与恢复触发器当前态 D190
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -45,7 +45,7 @@ D186 使用 `real_repair_owner_response` 表示真实责任方响应信号；D19
 |---|---|---|---|
 | controlled_repair_owner_response | controlled repair owner response document | missing | arrival scan refresh required |
 | signed_response_package | signed response package | missing | arrival scan refresh required |
-| waes_review_note | WAES review note | missing | arrival scan refresh required |
+| wame_review_note | WAME review note | missing | arrival scan refresh required |
 | human_confirmation_record | human confirmation record | missing | arrival scan refresh required |
 
 ## 禁止动作
@@ -80,7 +80,7 @@ D186 使用 `real_repair_owner_response` 表示真实责任方响应信号；D19
 - D190 现在会独立执行 D186 当前树扫描，不再只信任 D186 历史 fixture/evidence；因此单独复跑 D190 也会在新增肯定触发声明时失败。
 - D190 同时独立复跑 D185-D189 五个前置 validator，覆盖 DKS 基线镜像、到达声明、action queue、授权信号与 no-write 肯定声明；任一前置门禁漂移都会阻止 D190 通过。
 - 2026-08-11 起，D190 还直接执行绿色供应链角色视图 KDS 实体门禁，要求实体 `KDS-GSC-ROLE-VIEW-20260701` 保持 `engineering_domain=GKE-001` 且 `gckf_resume_triggers=0/4`；角色投影不得被误当作外部响应或人工确认。
-- 绿色供应链角色视图 KDS 实体门禁通过，输出 `gckf_resume_triggers=0/4`；该实体投影不构成 repair owner response、签署响应包、WAES review note 或人工确认。
+- 绿色供应链角色视图 KDS 实体门禁通过，输出 `gckf_resume_triggers=0/4`；该实体投影不构成 repair owner response、签署响应包、WAME review note 或人工确认。
 - Studio A6 Phase 1 仅达到 `technical_revalidation_passed_governance_pending` 与 `simulated_only`，不属于 D190 四项恢复触发器。
 - F-013 Evidence Gate 为 pass，但保留 9 项治理 blocker，`close_candidate=false`；项目群 readiness 为 `17/17` pass，GFIS 状态上限仍为 `repair_required`。
 - 四项 resume triggers 仍为 `0/4`，`nextExecutableRounds=0`；没有 response intake、action queue execution、KDS API write、runtime writeback、lifecycle promotion 或外部通知，本次不创建 D191。

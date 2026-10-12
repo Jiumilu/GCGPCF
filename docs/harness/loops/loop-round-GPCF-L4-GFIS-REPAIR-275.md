@@ -49,7 +49,7 @@ superseded_by: []
 GFIS 265 validator：
 
 ```text
-gfis_customer_requirement_platform_order_valid_source_record_index_owner_reminder_escalation_action_package=pass source_listener_items=1 source_record_index_files_found=0 valid_source_records=0 owner_action_items=3 owner_reminders_prepared=3 owner_reminders_dispatched=0 dispatch_authorizations_found=0 external_notifications_sent=0 kds_write_receipts=0 waes_evidence_candidates_created=0 runtime_primary_key_recheck_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_valid_source_record_index_owner_reminder_escalation_prepared_not_dispatched runtime_sop_e2e=repair_required
+gfis_customer_requirement_platform_order_valid_source_record_index_owner_reminder_escalation_action_package=pass source_listener_items=1 source_record_index_files_found=0 valid_source_records=0 owner_action_items=3 owner_reminders_prepared=3 owner_reminders_dispatched=0 dispatch_authorizations_found=0 external_notifications_sent=0 kds_write_receipts=0 wame_evidence_candidates_created=0 runtime_primary_key_recheck_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 blocked=1 state=customer_requirement_platform_order_valid_source_record_index_owner_reminder_escalation_prepared_not_dispatched runtime_sop_e2e=repair_required
 ```
 
 GFIS runtime SOP validator：
@@ -90,7 +90,7 @@ GFIS 真项目仓已准备三类责任方补证动作，但未派发：
 - runtime_primary_key_ready=0
 - review_queue=0
 - runtime_intake=0
-- waes_review=0
+- wame_review=0
 - verified=0
 
 因此 GPCF 总控继续保持 `partial_repair` / `repair_required`。不得把本地动作包写成责任方已收到提醒、source record 已提交、业务完成或 accepted/integrated。

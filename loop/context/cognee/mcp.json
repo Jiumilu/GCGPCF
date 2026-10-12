@@ -5,7 +5,7 @@
   "tools": {
     "cognee_recall": {
       "visibility": "restricted",
-      "requires_waes_gate": true,
+      "requires_wame_gate": true,
       "requires_harness_evidence": true,
       "requires_sensitive_check": true,
       "marker_required": true

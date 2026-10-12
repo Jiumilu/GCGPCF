@@ -19,7 +19,7 @@ export interface CreateGovernanceEvidenceRequest {
 
 export interface KnowledgeCiRunRequest {
   tenantId: string;
-  scope: "okf" | "kds" | "waes" | "kwe" | "gfis" | "all";
+  scope: "okf" | "kds" | "wame" | "kwe" | "gfis" | "all";
   dryRun: boolean;
 }
 

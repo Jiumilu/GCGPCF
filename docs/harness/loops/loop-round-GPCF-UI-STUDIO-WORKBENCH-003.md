@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-003
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-003
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -100,8 +100,8 @@ Status ceiling: ui_evidence_candidate
 | Gate | Status | Evidence | Remaining work |
 |---|---|---|---|
 | G1 Surface Structure | pass | 登录后页面标题为 `看板`，板选择、筛选、状态列与 `新建任务` 都已真实出现 | 补有真实任务数据时的结构截图 |
-| G2 Design Tokens | partial | 运行态与 Studio 本地令牌一致，但尚未完成项目群统一令牌映射 | 下一轮形成 WAES 映射清单 |
-| G3 Component Consistency | pass | 页头、按钮、筛选器、列、弹窗运行态一致 | 后续与 WAES 母框架逐项对表 |
+| G2 Design Tokens | partial | 运行态与 Studio 本地令牌一致，但尚未完成项目群统一令牌映射 | 下一轮形成 WAME 映射清单 |
+| G3 Component Consistency | pass | 页头、按钮、筛选器、列、弹窗运行态一致 | 后续与 WAME 母框架逐项对表 |
 | G4 Evidence And Governance | partial | 当前空板状态未能覆盖 receipt / audit / source record | 需用真实任务数据补充 |
 | G5 AI Fact Separation | partial | 当前工作台页本身未混写 AI 事实，但主应用默认落到 chat，边界仍需治理 | 补工作台内 AI 分区验证 |
 | G6 Accessibility | partial | 打开 `新建任务` 后焦点落到 `任务标题` 输入框 | 继续补完整 Tab 顺序与关闭路径 |

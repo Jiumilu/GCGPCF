@@ -17,7 +17,7 @@
     },
     "request_evidence_ref": "REQUIRED_REAL_PROMOTION_REQUEST_EVIDENCE"
   },
-  "waes_decision": {
+  "wame_decision": {
     "decision": "pending",
     "decided_by": "REQUIRED_WHEN_DECIDED",
     "decided_at": "REQUIRED_WHEN_DECIDED",

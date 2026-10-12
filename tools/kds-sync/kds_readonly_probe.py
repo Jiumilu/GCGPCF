@@ -62,7 +62,7 @@ def main() -> int:
         "doc_id: GPCF-DOC-KDS-READONLY-PROBE",
         "title: KDS Readonly Probe Report",
         "project: GPCF",
-        "related_projects: [GPCF, KDS, WAES]",
+        "related_projects: [GPCF, KDS, WAME]",
         "domain: status",
         "status: controlled",
         "version: v1.0",

@@ -30,7 +30,7 @@ export type BrainPkcKweQueueBlockedAction =
   | "complete_committee_decision"
   | "approve_gfis_writeback"
   | "mutate_kds_lifecycle"
-  | "write_waes_gate_result"
+  | "write_wame_gate_result"
   | "write_business_system"
   | "call_external_api";
 
@@ -46,7 +46,7 @@ export interface BrainPkcKweQueueNoWrite {
   writesKdsLifecycle: 0;
   writesKdsFact: 0;
   writesKdsAcceptedFact: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesBusinessSystem: 0;
   writesTargetReceipt: 0;
   writesCommitteeDecisionCompletion: 0;

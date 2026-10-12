@@ -23,7 +23,7 @@
     "endpointCount": 11,
     "candidateOnlyCount": 4,
     "readOnlyCount": 7,
-    "waesGatedCandidateRoutes": 4,
+    "wameGatedCandidateRoutes": 4,
     "kweFlowCandidateRoutes": 4,
     "directBusinessWrites": 0,
     "acceptedLifecycleWrites": 0,

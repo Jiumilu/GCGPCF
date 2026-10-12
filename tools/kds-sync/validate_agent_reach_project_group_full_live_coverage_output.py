@@ -23,7 +23,7 @@ DEFAULT_MARKDOWN = ROOT / "docs/harness/evidence/agent-reach-project-group-full-
 PROJECTS = {
     "GPCF",
     "KDS",
-    "WAES",
+    "WAME",
     "Brain",
     "GFIS",
     "GPC",

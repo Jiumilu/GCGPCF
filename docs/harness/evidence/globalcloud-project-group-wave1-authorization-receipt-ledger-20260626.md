@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-WAVE1-AUTHORIZATION-RECEIPT-LEDGER-20260626
 title: GlobalCloud 项目群 Wave 1 授权回执总账 2026-06-26
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -56,7 +56,7 @@ customer_accepted = false
 
 | receipt_id | auth_id | 对应 pack | 当前状态 | allowed_scope | forbidden_scope | next_gate |
 |---|---|---|---|---|---|---|
-| `RECEIPT-WAVE1-WAES-LINT-RUNTIME-20260626-PENDING` | `AUTH-WAVE1-WAES-LINT-RUNTIME-20260626` | `WAVE1-WAES-LINT-RUNTIME-001` | `pending_user_confirmation` | 无，等待用户明确确认 | stage、commit、push、发布、权限变更、accepted/integrated/customer acceptance | Wave 1 authorization request gate、WAES quality gate、Loop document gate |
+| `RECEIPT-WAVE1-WAME-LINT-RUNTIME-20260626-PENDING` | `AUTH-WAVE1-WAME-LINT-RUNTIME-20260626` | `WAVE1-WAME-LINT-RUNTIME-001` | `pending_user_confirmation` | 无，等待用户明确确认 | stage、commit、push、发布、权限变更、accepted/integrated/customer acceptance | Wave 1 authorization request gate、WAME quality gate、Loop document gate |
 | `RECEIPT-WAVE1-GFIS-REAL-SOR-20260626-PENDING` | `AUTH-WAVE1-GFIS-REAL-SOR-20260626` | `WAVE1-GFIS-REAL-SOR-001` | `pending_user_confirmation` | 无，等待用户明确确认 | 生产写入、客户验收、SCaaS 完整交付、accepted/integrated | Wave 1 authorization request gate、GFIS source-record gate、Loop document gate |
 | `RECEIPT-WAVE1-GPC-EXTERNAL-RUNTIME-20260626-PENDING` | `AUTH-WAVE1-GPC-EXTERNAL-RUNTIME-20260626` | `WAVE1-GPC-EXTERNAL-RUNTIME-001` | `pending_user_confirmation` | 无，等待用户明确确认 | 外部系统写入、生产变更、stage、commit、push、客户验收 | Wave 1 authorization request gate、GPC external runtime gate、Loop document gate |
 | `RECEIPT-WAVE1-BRAIN-HUMAN-REVIEW-20260626-PENDING` | `AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626` | `WAVE1-BRAIN-HUMAN-REVIEW-001` | `pending_user_confirmation` | 无，等待用户明确确认 | accepted、integrated、production_ready、客户验收 | Wave 1 authorization request gate、Brain review handoff gate、Loop document gate |

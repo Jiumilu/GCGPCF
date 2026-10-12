@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2D41AA427
 title: LOOP Round GPCF KDS DKS-161
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 - DKS-160 SLA preview fixture、OKF、类型与 validator。
 - 既有 approval route acknowledgement escalation SLA breach review no-write 模式。
-- GC-Knowledge Fabric AI 候选边界、WAES 门禁、KWE 人工确认与 Harness evidence 规则。
+- GC-Knowledge Fabric AI 候选边界、WAME 门禁、KWE 人工确认与 Harness evidence 规则。
 
 ## 本轮新增对象
 
@@ -45,7 +45,7 @@ superseded_by: []
 
 ## 人工确认事项
 
-如需将 breach review candidate 转为真实违约记录、争议处理、委员会审查、冻结请求、提醒或 KWE task，必须另行进入人工确认、WAES 门禁与 Harness evidence。
+如需将 breach review candidate 转为真实违约记录、争议处理、委员会审查、冻结请求、提醒或 KWE task，必须另行进入人工确认、WAME 门禁与 Harness evidence。
 
 ## 委员会事项
 

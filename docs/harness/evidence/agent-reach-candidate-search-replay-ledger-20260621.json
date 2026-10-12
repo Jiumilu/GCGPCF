@@ -19,7 +19,7 @@
     "latency_p50_seconds": 3.889,
     "latency_p95_seconds": 4.633,
     "review_acceptance_rate": null,
-    "review_status": "pending_waes_kds_review"
+    "review_status": "pending_wame_kds_review"
   },
   "entries": [
     {
@@ -33,7 +33,7 @@
       "source_provenance_present": true,
       "duplicate_group": null,
       "rag_admission": "limited",
-      "review_status": "pending_waes_kds_review"
+      "review_status": "pending_wame_kds_review"
     },
     {
       "id": "green_supply_chain_policy",
@@ -46,7 +46,7 @@
       "source_provenance_present": true,
       "duplicate_group": null,
       "rag_admission": "limited",
-      "review_status": "pending_waes_kds_review"
+      "review_status": "pending_wame_kds_review"
     },
     {
       "id": "factory_execution_traceability",
@@ -59,7 +59,7 @@
       "source_provenance_present": true,
       "duplicate_group": null,
       "rag_admission": "limited",
-      "review_status": "pending_waes_kds_review"
+      "review_status": "pending_wame_kds_review"
     },
     {
       "id": "ai_agent_evidence_gate",
@@ -72,7 +72,7 @@
       "source_provenance_present": true,
       "duplicate_group": null,
       "rag_admission": "limited",
-      "review_status": "pending_waes_kds_review"
+      "review_status": "pending_wame_kds_review"
     },
     {
       "id": "agent_reach_capability",
@@ -85,13 +85,13 @@
       "source_provenance_present": true,
       "duplicate_group": null,
       "rag_admission": "limited",
-      "review_status": "pending_waes_kds_review"
+      "review_status": "pending_wame_kds_review"
     }
   ],
   "admission_decision": {
     "kds_admission": "limited_candidate_only",
     "rag_admission": "limited",
-    "waes_review_status": "pending_waes_kds_review",
+    "wame_review_status": "pending_wame_kds_review",
     "status_upgrade_allowed": false,
     "production_integration_allowed": false,
     "accepted_or_integrated_claim_allowed": false
@@ -103,5 +103,5 @@
     "external_platform_write_count": 0,
     "rollback_required": false
   },
-  "next_gate": "waes_kds_candidate_review_queue"
+  "next_gate": "wame_kds_candidate_review_queue"
 }

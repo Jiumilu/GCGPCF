@@ -23,7 +23,7 @@
     "dryRunOnly": true,
     "guardRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -38,7 +38,7 @@
       "committee_submission_readiness",
       "committee_authority_boundary",
       "freeze_retention_guard",
-      "waes_negative_gate_guard",
+      "wame_negative_gate_guard",
       "harness_no_write_guard",
       "business_system_no_write_guard",
       "revenue_contribution_no_write_guard",
@@ -85,7 +85,7 @@
       "committee_submission_readiness_present",
       "committee_authority_boundary_present",
       "freeze_retention_guard_present",
-      "waes_negative_gate_guard_present",
+      "wame_negative_gate_guard_present",
       "harness_no_write_guard_present",
       "business_system_no_write_guard_present",
       "revenue_contribution_no_write_guard_present",
@@ -104,13 +104,13 @@
       "committeeSubmissionReadinessRef",
       "committeeAuthorityBoundaryRef",
       "freezeRetentionGuardRef",
-      "waesNegativeGateGuardRef",
+      "wameNegativeGateGuardRef",
       "harnessNoWriteGuardRef",
       "businessSystemNoWriteGuardRef",
       "revenueContributionNoWriteGuardRef",
       "returnToIntakePrecheckPathRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -134,7 +134,7 @@
       "missing_committee_submission_readiness_ref",
       "missing_committee_authority_boundary_ref",
       "missing_freeze_retention_guard_ref",
-      "missing_waes_negative_gate_guard_ref",
+      "missing_wame_negative_gate_guard_ref",
       "missing_harness_no_write_guard_ref",
       "missing_business_system_no_write_guard_ref",
       "missing_revenue_contribution_no_write_guard_ref",
@@ -170,7 +170,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_guard_preview_to_case_opening",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [
@@ -201,7 +201,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "guard_preview_converted_to_case_opening"
   ],
   "expectedSummary": {

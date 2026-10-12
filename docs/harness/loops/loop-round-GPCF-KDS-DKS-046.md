@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4DF761BE6B
 title: LOOP Round GPCF-KDS-DKS-046 - 底座知识人工确认与委员会复核字段级 schema
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -74,7 +74,7 @@ superseded_by: []
 - AI 额度发放；
 - RAG 准入；
 - 指挥舱强引用；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS、Finance 或其他业务系统主账写入；
 - `accepted` 或 `integrated` 状态升级。
@@ -102,7 +102,7 @@ superseded_by: []
 | builder frontmatter 保留 | pass | 人工确认 schema、委员会复核 schema 和本轮 LOOP 记录均保留受控 frontmatter |
 | 文档控制 | pass | 人工确认 schema doc_id=`GPCF-DOC-9C22552EEE`，委员会复核 schema doc_id=`GPCF-DOC-F861799E08`，本轮 LOOP 记录 doc_id=`GPCF-DOC-4DF761BE6B` |
 | schema 来源一致性 | pass | 人工确认 schema 来源队列为 `human_confirmation` 4 条；委员会复核 schema 来源队列为 `committee_review` 10 条 |
-| 本轮边界 | pass | 两个 schema 均显示 `createsConfirmationFact=false`、`createsCommitteeDecision=false`、`realKdsApiWrite=false`、`waesWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
+| 本轮边界 | pass | 两个 schema 均显示 `createsConfirmationFact=false`、`createsCommitteeDecision=false`、`realKdsApiWrite=false`、`wameWrite=false`、`businessLedgerWrite=false`、`settlementWrite=false`、`ragAdmission=false` |
 | 文档污染 | pass | `document_pollution=pass` |
 | KDS TOKEN | pass | `kds_token=pass fingerprint=bfd9553d`；Token 未写入文档或 evidence |
 | LOOP 文档门禁 | pass | `repo_md=989`; `kds_md=1002`; `local_mirror_ledger_lines=989`; `missing_metadata=0`; `missing_readme_dirs=0` |

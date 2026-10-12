@@ -14,7 +14,7 @@ PROJECTS = [
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -143,7 +143,7 @@ def run_gfis_evidence_backed_validator(gfis_root: Path, script_name: str):
         token = f"{key}={expected}"
         if token not in status_line:
             status_line += f" {token}"
-    status_line += " valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
+    status_line += " valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_integrated=0 production_ready=0 production_writes=0 real_external_api_writes=0"
     return {"status": "pass", "exit_code": 0, "output": [status_line]}
 
 
@@ -276,7 +276,7 @@ def main() -> int:
         "FactoryOrder requires one of: approved SampleApproval, approved waiver, or approved ProductionRelease",
         "SampleApproval.status in [\"approved\", \"waived\"]",
         "ProductionRelease.status == \"approved\"",
-        "WAES.gate == \"confirmed\"",
+        "WAME.gate == \"confirmed\"",
     ]:
         require(phrase in contracts, f"sample gate rule missing: {phrase}")
 
@@ -450,7 +450,7 @@ def main() -> int:
         "l4OrganizationPartnerBaseline",
         "buildOrganizationPartnerBaselineDryRun",
         "GPC.organization_partner_input",
-        "WAES.permission_boundary_audit",
+        "WAME.permission_boundary_audit",
         "PVAOS只提供租户/组织/伙伴/项目空间/权限边界输入",
         "tenants=1 organizations=2 partners=1 project_spaces=1 permission_boundaries=1",
     ]:
@@ -487,7 +487,7 @@ def main() -> int:
         "ProofOfDelivery cannot be marked delivered without receiver evidence",
         "GPC must not write GFIS factory execution facts",
         "GFIS.factory_order_input_after_release",
-        "WAES.sample_release_gate",
+        "WAME.sample_release_gate",
         "KDS.knowledge_backlink_candidate",
         "orders=1 sample_requests=1 sample_approvals=1 production_releases=1 pod_records=1",
     ]:
@@ -523,9 +523,9 @@ def main() -> int:
         gfis_root,
         "validate_gfis_runtime_intake_gate.py",
     )
-    gfis_waes_review_gate = run_gfis_named_validator(
+    gfis_wame_review_gate = run_gfis_named_validator(
         gfis_root,
-        "validate_gfis_waes_review_gate.py",
+        "validate_gfis_wame_review_gate.py",
     )
     gfis_verified_artifact_gate = run_gfis_named_validator(
         gfis_root,
@@ -587,7 +587,7 @@ def main() -> int:
         or gfis_runtime_primary_key_gate["exit_code"] != 0
         or gfis_review_queue_admission_gate["exit_code"] != 0
         or gfis_runtime_intake_gate["exit_code"] != 0
-        or gfis_waes_review_gate["exit_code"] != 0
+        or gfis_wame_review_gate["exit_code"] != 0
         or gfis_verified_artifact_gate["exit_code"] != 0
         or gfis_development_ready_goal["exit_code"] != 0
         or gfis_test_source_record_submission_gate["exit_code"] != 0
@@ -620,7 +620,7 @@ def main() -> int:
         "\"round_id\": \"GFIS-L4-008\"",
         "GFIS owns formula research",
         "GFIS does not own customer SampleApproval or ProofOfDelivery",
-        "approved SampleApproval, approved ProductionRelease and WAES gate confirmed",
+        "approved SampleApproval, approved ProductionRelease and WAME gate confirmed",
         "must not run bench migrate",
         "formula_research=1 sample_work_orders=1 factory_orders=1 work_orders=1 quality_inventory_batches=1 shipments=1",
     ]:
@@ -656,7 +656,7 @@ def main() -> int:
         "AgentDispatchPlan",
         "AgentResultAggregation",
         "XiaoC does not write business facts",
-        "bypass_waes",
+        "bypass_wame",
         "task_breakdowns=5 model_routes=5 agent_dispatches=5 audit_candidates=1",
     ]:
         require(
@@ -711,7 +711,7 @@ def main() -> int:
         "XiaoG-L4-011",
         "ReadOnlyQueryResult",
         "PkcNotificationCandidate",
-        "WaesAuditWriteMock",
+        "WameAuditWriteMock",
         "ExecutionTrace",
         "95/100",
         "项目群阶段累计评分 | 94/100",
@@ -724,11 +724,11 @@ def main() -> int:
         "\"round_id\": \"XiaoG-L4-011\"",
         "ReadOnlyQueryResult",
         "PkcNotificationCandidate",
-        "WaesAuditWriteMock",
+        "WameAuditWriteMock",
         "ExecutionTrace",
         "XiaoG does not own business facts",
         "send_real_message",
-        "round=XiaoG-L4-011 readonly_queries=3 pkc_notifications=1 waes_audit_mocks=2 execution_traces=1",
+        "round=XiaoG-L4-011 readonly_queries=3 pkc_notifications=1 wame_audit_mocks=2 execution_traces=1",
     ]:
         require(
             phrase in xiaog_retrieval + "\n" + xiaog_fixture + "\n" + xiaog_validator + "\n" + xiaog_round,
@@ -781,7 +781,7 @@ def main() -> int:
             "required_conditions": [
                 "SampleApproval.status in ['approved', 'waived']",
                 "ProductionRelease.status == 'approved'",
-                "WAES.gate == 'confirmed'",
+                "WAME.gate == 'confirmed'",
             ],
         },
         "generated_items": 68,
@@ -816,9 +816,9 @@ def main() -> int:
             "gfis_runtime_intake_gate_status": gfis_runtime_intake_gate["status"],
             "gfis_runtime_intake_gate_exit_code": gfis_runtime_intake_gate["exit_code"],
             "gfis_runtime_intake_gate_output": gfis_runtime_intake_gate["output"],
-            "gfis_waes_review_gate_status": gfis_waes_review_gate["status"],
-            "gfis_waes_review_gate_exit_code": gfis_waes_review_gate["exit_code"],
-            "gfis_waes_review_gate_output": gfis_waes_review_gate["output"],
+            "gfis_wame_review_gate_status": gfis_wame_review_gate["status"],
+            "gfis_wame_review_gate_exit_code": gfis_wame_review_gate["exit_code"],
+            "gfis_wame_review_gate_output": gfis_wame_review_gate["output"],
             "gfis_verified_artifact_gate_status": gfis_verified_artifact_gate["status"],
             "gfis_verified_artifact_gate_exit_code": gfis_verified_artifact_gate["exit_code"],
             "gfis_verified_artifact_gate_output": gfis_verified_artifact_gate["output"],
@@ -944,7 +944,7 @@ def main() -> int:
                 "runtime_primary_key_gate": gfis_runtime_primary_key_gate["status"],
                 "review_queue_gate": gfis_review_queue_admission_gate["status"],
                 "runtime_intake_gate": gfis_runtime_intake_gate["status"],
-                "waes_review_gate": gfis_waes_review_gate["status"],
+                "wame_review_gate": gfis_wame_review_gate["status"],
                 "verified_artifact_gate": gfis_verified_artifact_gate["status"],
                 "real_fact_entry_gate": gfis_real_fact_entry_gate["status"],
                 "real_fact_entry_status_ceiling": gfis_real_fact_entry_values.get("status_ceiling", "unknown"),
@@ -961,7 +961,7 @@ def main() -> int:
                 "test_runtime_primary_keys": 1,
                 "test_review_queue_items": 1,
                 "test_runtime_intake_items": 1,
-                "test_waes_evidence_candidates": 1,
+                "test_wame_evidence_candidates": 1,
                 "test_verified_artifacts": 1,
                 "valid_source_records": 0,
                 "runtime_primary_key_created": 0,
@@ -970,8 +970,8 @@ def main() -> int:
                 "review_queue": 0,
                 "runtime_intake_created": 0,
                 "runtime_intake": 0,
-                "waes_review_created": 0,
-                "waes_review": 0,
+                "wame_review_created": 0,
+                "wame_review": 0,
                 "verified_artifact_created": 0,
                 "verified": 0,
                 "score": 62 if self_correction_blocked else 96,
@@ -1024,7 +1024,7 @@ def main() -> int:
         f"runtime_primary_key_gate={gfis_runtime_primary_key_gate['status']} "
         f"review_queue_gate={gfis_review_queue_admission_gate['status']} "
         f"runtime_intake_gate={gfis_runtime_intake_gate['status']} "
-        f"waes_review_gate={gfis_waes_review_gate['status']} "
+        f"wame_review_gate={gfis_wame_review_gate['status']} "
         f"verified_artifact_gate={gfis_verified_artifact_gate['status']} "
         f"real_fact_entry_gate={gfis_real_fact_entry_gate['status']} "
         f"real_fact_entry_status_ceiling={gfis_real_fact_entry_values.get('status_ceiling', 'unknown')} "

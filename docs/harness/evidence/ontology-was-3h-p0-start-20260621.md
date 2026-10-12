@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B3ABDDC956
 title: Ontology/WAS 3 小时实施 P0 启动校准证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-3H-P0-START-001` 已开始执行 3 小时阶段目标的 P0 启动校准。当前执行模式为 `controlled_local_evidence_run`，只做本地受控 evidence、validator replay 和边界校准。
 
-本 evidence 不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
+本 evidence 不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
 
 ## P0 启动字段
 
@@ -47,7 +47,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |

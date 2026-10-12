@@ -2,11 +2,11 @@ import { GFIS_ENDPOINTS } from "./gfis/routes";
 import { GOVERNANCE_ENDPOINTS } from "./governance/routes";
 import { KDS_V2_ENDPOINTS } from "./kds/v2/routes";
 import { KWE_ENDPOINTS } from "./kwe/routes";
-import { WAES_ENDPOINTS } from "./waes/routes";
+import { WAME_ENDPOINTS } from "./wame/routes";
 
 export type HandlerGroup =
   | "kds_v2"
-  | "waes"
+  | "wame"
   | "kwe"
   | "gfis_assistant"
   | "governance_loop";
@@ -27,7 +27,7 @@ export interface HandlerPreflightMapping {
   serviceName: string;
   serviceMethod: string;
   writeBoundary: HandlerWriteBoundary;
-  requiresWaesGate: boolean;
+  requiresWameGate: boolean;
   requiresKweFlow: boolean;
   requiresHumanOrCommitteeForFinality: boolean;
   directBusinessWrite: false;
@@ -51,7 +51,7 @@ function mapKdsEndpoint(endpoint: (typeof KDS_V2_ENDPOINTS)[number]): HandlerPre
     serviceName: "kdsV2Service",
     serviceMethod: endpoint.handler,
     writeBoundary: candidateHandlers.has(endpoint.handler) ? "candidate_request" : "read_only",
-    requiresWaesGate: endpoint.requiresWaesGate,
+    requiresWameGate: endpoint.requiresWameGate,
     requiresKweFlow: endpoint.requiresKweFlow,
     requiresHumanOrCommitteeForFinality: endpoint.requiresKweFlow,
     directBusinessWrite: false,
@@ -61,16 +61,16 @@ function mapKdsEndpoint(endpoint: (typeof KDS_V2_ENDPOINTS)[number]): HandlerPre
   };
 }
 
-function mapWaesEndpoint(endpoint: (typeof WAES_ENDPOINTS)[number]): HandlerPreflightMapping {
+function mapWameEndpoint(endpoint: (typeof WAME_ENDPOINTS)[number]): HandlerPreflightMapping {
   return {
-    group: "waes",
+    group: "wame",
     method: endpoint.method,
     path: endpoint.path,
     handler: endpoint.handler,
-    serviceName: "waesService",
+    serviceName: "wameService",
     serviceMethod: endpoint.handler,
     writeBoundary: "gate_check",
-    requiresWaesGate: true,
+    requiresWameGate: true,
     requiresKweFlow: false,
     requiresHumanOrCommitteeForFinality: endpoint.requiresHumanOrCommitteeForFinality,
     directBusinessWrite: false,
@@ -89,7 +89,7 @@ function mapKweEndpoint(endpoint: (typeof KWE_ENDPOINTS)[number]): HandlerPrefli
     serviceName: "kweService",
     serviceMethod: endpoint.handler,
     writeBoundary: endpoint.routeMode === "read_only" ? "read_only" : "work_request",
-    requiresWaesGate: endpoint.requiresWaesGate,
+    requiresWameGate: endpoint.requiresWameGate,
     requiresKweFlow: endpoint.routeMode !== "read_only",
     requiresHumanOrCommitteeForFinality: endpoint.requiresHumanOrCommitteeForFinality,
     directBusinessWrite: false,
@@ -111,7 +111,7 @@ function mapGfisEndpoint(endpoint: (typeof GFIS_ENDPOINTS)[number]): HandlerPref
       endpoint.routeMode === "assistant_query" || endpoint.routeMode === "usage_guidance"
         ? "read_only"
         : "candidate_request",
-    requiresWaesGate: endpoint.requiresWaesGate,
+    requiresWameGate: endpoint.requiresWameGate,
     requiresKweFlow: endpoint.requiresKweFlowForFinality,
     requiresHumanOrCommitteeForFinality: endpoint.requiresKweFlowForFinality,
     directBusinessWrite: false,
@@ -140,7 +140,7 @@ function mapGovernanceEndpoint(endpoint: (typeof GOVERNANCE_ENDPOINTS)[number]):
       : endpoint.routeMode === "read_only" || endpoint.routeMode === "knowledge_ci_dry_run"
         ? "read_only"
         : "governance_evidence_request",
-    requiresWaesGate: false,
+    requiresWameGate: false,
     requiresKweFlow: false,
     requiresHumanOrCommitteeForFinality: endpoint.routeMode !== "read_only",
     directBusinessWrite: false,
@@ -152,7 +152,7 @@ function mapGovernanceEndpoint(endpoint: (typeof GOVERNANCE_ENDPOINTS)[number]):
 
 export const HANDLER_PREFLIGHT_MAPPINGS: HandlerPreflightMapping[] = [
   ...KDS_V2_ENDPOINTS.map(mapKdsEndpoint),
-  ...WAES_ENDPOINTS.map(mapWaesEndpoint),
+  ...WAME_ENDPOINTS.map(mapWameEndpoint),
   ...KWE_ENDPOINTS.map(mapKweEndpoint),
   ...GFIS_ENDPOINTS.map(mapGfisEndpoint),
   ...GOVERNANCE_ENDPOINTS.map(mapGovernanceEndpoint),

@@ -18,14 +18,14 @@ TEMPLATE = INTAKE_DIR / "was-real-source-record-candidate-template.yaml"
 POSITIVE = ROOT / "fixtures/was/p4-candidate-precheck-execution-006-positive-hold.json"
 NEGATIVE = ROOT / "fixtures/was/p4-candidate-precheck-execution-006-negative-false-promotion.json"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 BOUNDARY_ZERO_KEYS = [
     "real_source_records",
     "valid_source_records",
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 REQUIRED_COMMANDS = [
@@ -141,7 +141,7 @@ def main() -> int:
         "was_real_source_record_candidate_precheck_execution_006=pass "
         "submitted_real_candidate_files=0 candidate_files_checked=0 accepted_for_next_gate=0 "
         "hold_required=1 real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false "
         "production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-041"
     )
     return 0

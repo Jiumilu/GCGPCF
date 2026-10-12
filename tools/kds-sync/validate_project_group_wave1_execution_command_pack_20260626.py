@@ -12,7 +12,7 @@ DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-wave1-execution-co
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"
 
 PACKS = [
-    "WAVE1-WAES-LINT-RUNTIME-001",
+    "WAVE1-WAME-LINT-RUNTIME-001",
     "WAVE1-GFIS-REAL-SOR-001",
     "WAVE1-GPC-EXTERNAL-RUNTIME-001",
     "WAVE1-BRAIN-HUMAN-REVIEW-001",
@@ -34,7 +34,7 @@ REQUIRED_TOKENS = [
     "globalcloud-project-group-current-state-baseline-refresh-20260626.md",
     "globalcloud-project-group-dev-task-queue-20260626.md",
     "action_executed_count = 0",
-    "WAES -> XWAIL -> AaaS",
+    "WAME -> XWAIL -> AaaS",
     "GFIS/GPC/PVAOS -> SCaaS",
     "KDS -> Brain",
     "GPCF -> all projects",

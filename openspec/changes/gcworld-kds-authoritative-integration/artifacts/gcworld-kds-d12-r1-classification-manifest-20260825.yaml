@@ -66,7 +66,7 @@ items:
     classification: S1
     exact_matches: 1
     content_decision: responsible_read_allowed
-  - path: 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+  - path: 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
     classification: S2
     exact_matches: 1
     content_decision: responsible_read_allowed

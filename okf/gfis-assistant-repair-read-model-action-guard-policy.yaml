@@ -8,7 +8,7 @@ purpose: >
   Assistant repair admission read models. Action guards classify read-model
   buttons and actions as display-only prompts or blocked write actions. They
   do not create action receipts, read receipts, admission records, review
-  queues, KWE work items, confirmation records, decision records, WAES gate
+  queues, KWE work items, confirmation records, decision records, WAME gate
   results, evidence records, lifecycle changes, business writes, revenue or
   score confirmations, or external API calls.
 
@@ -34,7 +34,7 @@ required_fields:
   - creates_kwe_work_item
   - creates_confirmation_record
   - creates_decision_record
-  - creates_waes_gate_result
+  - creates_wame_gate_result
   - persists_evidence
   - approves_business_write
   - promotes_lifecycle
@@ -83,7 +83,7 @@ blocked_actions:
   - create_kwe_work_item
   - create_confirmation_record
   - create_decision_record
-  - create_waes_gate_result
+  - create_wame_gate_result
   - persist_evidence
   - approve_business_write
   - promote_lifecycle
@@ -98,7 +98,7 @@ hard_boundaries:
   action_guard_is_not_kwe_work_item: true
   action_guard_is_not_confirmation: true
   action_guard_is_not_decision_record: true
-  action_guard_is_not_waes_result: true
+  action_guard_is_not_wame_result: true
   action_guard_is_not_business_writeback: true
   creates_action_receipt_must_be_false: true
   creates_read_receipt_must_be_false: true
@@ -107,7 +107,7 @@ hard_boundaries:
   creates_kwe_work_item_must_be_false: true
   creates_confirmation_record_must_be_false: true
   creates_decision_record_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   persists_evidence_must_be_false: true
   approves_business_write_must_be_false: true
   promotes_lifecycle_must_be_false: true
@@ -118,7 +118,7 @@ no_write_guards:
   writes_gpc: 0
   writes_erp: 0
   writes_mes: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_action_receipt: 0
   writes_read_receipt: 0

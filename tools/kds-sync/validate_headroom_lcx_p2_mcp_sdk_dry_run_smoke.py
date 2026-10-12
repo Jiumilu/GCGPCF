@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -91,7 +91,7 @@ def main() -> int:
     retrieve = evidence.get("retrieve_gate", {})
     require(retrieve.get("configured") is True, "retrieve gate must be configured")
     require(retrieve.get("visibility") == "restricted", "retrieve visibility must be restricted")
-    require(retrieve.get("requires_waes_gate") is True, "retrieve must require WAES gate")
+    require(retrieve.get("requires_wame_gate") is True, "retrieve must require WAME gate")
     require(retrieve.get("requires_reason") is True, "retrieve must require reason")
     gates = evidence.get("gates", {})
     for key in [

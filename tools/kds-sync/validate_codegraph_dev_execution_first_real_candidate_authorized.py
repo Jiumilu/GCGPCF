@@ -59,7 +59,7 @@ def main() -> int:
         "production_write_authorized",
         "external_api_write_authorized",
         "real_kds_write_authorized",
-        "real_waes_write_authorized",
+        "real_wame_write_authorized",
     ]:
         require(auth[key] is False, f"{key} must remain false")
 

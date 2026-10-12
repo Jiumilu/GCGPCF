@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0CLOSUREPACKETPRECHECKD12320260622
 title: GCKF P0 收口包预检查证据 D123
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

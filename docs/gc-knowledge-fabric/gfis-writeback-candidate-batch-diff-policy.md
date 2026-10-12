@@ -62,7 +62,7 @@ Batch diff 不做：
 - `basedOnObjectRefs`
 - `evidenceRefs`
 - `poolRefs`
-- `waesGateStatus`
+- `wameGateStatus`
 - `writebackStatus`
 - `diffAction`
 - `sensitiveHandling`
@@ -109,7 +109,7 @@ Batch diff 不做：
 - `approvedForBusinessWrite` 必须为 `false`。
 - `targetReceiptRefs` 必须为空。
 - `writebackStatus=written_back` 在 batch diff 中禁止出现。
-- `waesGateStatus=passed` 也只能进入候选，不代表写回完成。
+- `wameGateStatus=passed` 也只能进入候选，不代表写回完成。
 - 缺 evidence、缺 business owner、敏感原文、POD/金融/质量争议必须阻断或升级。
 - 所有 no-write 计数必须为 0。
 

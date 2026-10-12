@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D67570F9AA
 title: GPCF-L4-GFIS-REAL-SYNC-005
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -63,12 +63,12 @@ REAL-SYNC-005 只证明 GPCF 总控已识别 GFIS REAL-005 runtime intake admiss
 - `review_queue=0`
 - `runtime_intake_created=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `real_business_lane=repair_required`
 - `business_verification_pending=true`
 
-完整真实 SOP E2E 仍未通过。真实 source-of-record、人工业务核验、运行层主键、review queue item、runtime intake、WAES review 和 verified artifact 均未形成。
+完整真实 SOP E2E 仍未通过。真实 source-of-record、人工业务核验、运行层主键、review queue item、runtime intake、WAME review 和 verified artifact 均未形成。
 
 ## 真实性计数
 

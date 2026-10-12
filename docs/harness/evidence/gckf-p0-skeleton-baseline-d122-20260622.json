@@ -31,7 +31,7 @@
         "okf/ontology.yaml",
         "okf/knowledge-object.schema.json",
         "okf/pool-binding-policy.yaml",
-        "okf/waes-gate-policy.yaml",
+        "okf/wame-gate-policy.yaml",
         "okf/rag-admission-policy.yaml"
       ],
       "status": "covered"
@@ -49,11 +49,11 @@
       "status": "covered"
     },
     "T3": {
-      "name": "WAES 最小门禁",
+      "name": "WAME 最小门禁",
       "representative_artifacts": [
-        "docs/gc-knowledge-fabric/waes-gate-io-policy.md",
-        "docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md",
-        "scripts/waes/validate_waes_minimum_gates.py"
+        "docs/gc-knowledge-fabric/wame-gate-io-policy.md",
+        "docs/gc-knowledge-fabric/wame-minimum-dry-run-cases-v0.1.md",
+        "scripts/wame/validate_wame_minimum_gates.py"
       ],
       "status": "covered"
     },
@@ -72,7 +72,7 @@
       "representative_artifacts": [
         "docs/gc-knowledge-fabric/pilot-rollout-checklist-v0.1.md",
         "docs/gc-knowledge-fabric/gfis-document-acceptance-checklist-policy.md",
-        "docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md"
+        "docs/gc-knowledge-fabric/gfis-assistant-wame-guidance-packet-policy.md"
       ],
       "status": "covered_for_p0_baseline"
     },
@@ -89,8 +89,8 @@
   },
   "verification_snapshot": {
     "coverage_validator": "okf_types_api_validator_coverage=pass coverage_items=199 okf_files=205 type_files=207 api_files=15 validator_files=200 fixture_files=205 missing_files=0 no_write=covered business_writes=0 external_api_writes=0",
-    "loop_engineering_master_plan": "loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0",
-    "loop_engineering_five_direction": "loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false",
+    "loop_engineering_master_plan": "loop_engineering_master_plan=pass baseline=v1.0 authority=master_implementation_plan roadmap=P0,P1,P2,P3,P4,P5 status_ceiling=repair_required accepted_allowed=false integrated_allowed=false runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0",
+    "loop_engineering_five_direction": "loop_engineering_five_direction_implementation=pass run=implemented stop=implemented verify=implemented recover=implemented debug=implemented status_ceiling=partial_repair real_business_lane=repair_required runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 accepted_allowed=false integrated_allowed=false production_ready_allowed=false",
     "localization_gate": "pass",
     "localization_findings": 0,
     "document_pollution": "pass",

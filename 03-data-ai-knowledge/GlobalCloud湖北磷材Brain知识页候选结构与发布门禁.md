@@ -65,11 +65,11 @@ superseded_by: []
 | blockId | blockName | required | contentRule | forbiddenContent | gate |
 |---|---|---|---|---|---|
 | `PBS-SOURCE-SUMMARY` | 来源摘要 | yes | 记录脱敏摘要、来源类型、责任主体和时间戳 | 原文全文、未授权附件、个人敏感信息 | redaction_check |
-| `PBS-TRUST-LAYER` | 可信层级 | yes | 标记 T0 / T1 / T2 / T3 / DSR 层级和检索时间 | 未核验结论伪装为权威事实 | waes_trust_check |
+| `PBS-TRUST-LAYER` | 可信层级 | yes | 标记 T0 / T1 / T2 / T3 / DSR 层级和检索时间 | 未核验结论伪装为权威事实 | wame_trust_check |
 | `PBS-FACT-STATUS` | 事实状态 | yes | 标记 candidate / pending_manual / verified / blocked / withdrawn | 候选事实直接写成 confirmed | manual_check |
 | `PBS-KDS-POOL-REFS` | KDS 11 池挂接 | yes | 至少挂接一个 KDS 11 池 | 增强账本脱离 KDS 11 池独立存在 | kds_pool_check |
 | `PBS-LEDGER-REFS` | 增强账本挂接 | conditional | 仅在涉及积分、收益、额度、悬赏、争议、SOP 或潜在产值时出现 | 无委员会或人工确认的正式结论 | committee_check |
-| `PBS-WAES-GATE` | WAME 门禁 | yes | 记录规则、边界、例外和门禁状态 | WAME 被写成业务主账 | waes_boundary_check |
+| `PBS-WAME-GATE` | WAME 门禁 | yes | 记录规则、边界、例外和门禁状态 | WAME 被写成业务主账 | wame_boundary_check |
 | `PBS-MANUAL-SCORE` | 人工评测 | conditional | 记录评测人、评分项、红线项和建议 | AI 自动确认人工评分 | manual_score_check |
 | `PBS-REDLINE` | 红线状态 | yes | 记录 redline_pass / redline_return / redline_block | 红线未检查即发布 | redline_check |
 | `PBS-NEXT-ACTION` | 下一步动作 | yes | 记录补证、悬赏、邀请、退回或发布前动作 | 直接触发生产写入 | action_boundary_check |
@@ -94,7 +94,7 @@ superseded_by: []
 | `PGC-HBLC-002` | 脱敏检查 | 不含未授权 DSR-L3 原文、合同原文、订单原文、报价原文或个人敏感信息 | redaction_pass | not_checked |
 | `PGC-HBLC-003` | KDS 11 池挂接 | 每个页面至少挂接一个 KDS 11 池 | kds_pool_ref_present | not_checked |
 | `PGC-HBLC-004` | 增强账本挂接 | 积分、收益、额度、悬赏、争议、SOP 和潜在产值必须挂接 KDS 11 池 | no_orphan_ledger | not_checked |
-| `PGC-HBLC-005` | WAME 规则记录 | 发布前必须有 WAME 规则候选或门禁记录 | waes_record_present | not_checked |
+| `PGC-HBLC-005` | WAME 规则记录 | 发布前必须有 WAME 规则候选或门禁记录 | wame_record_present | not_checked |
 | `PGC-HBLC-006` | 人工评测 | 发布为项目组可见前建议人工评分不低于 85；低于 85 只能内部草案或退回 | manual_score_ok | not_checked |
 | `PGC-HBLC-007` | 红线状态 | 红线必须 pass；return 或 block 不得发布 | redline_pass | not_checked |
 | `PGC-HBLC-008` | 权限过滤 | 页面必须配置可见范围和不可见字段 | permission_filter_present | not_checked |
@@ -103,9 +103,9 @@ superseded_by: []
 | `PGC-HBLC-011` | 生产写入边界 | 页面发布不得触发真实 KDS API、WAME API、GFIS 写入或外部系统写入 | writeback_blocked | not_checked |
 | `PGC-HBLC-012` | 撤回机制 | 页面必须可撤回、降级、留痕和重评 | withdrawal_ready | not_checked |
 
-## 7. WAESPublicationGateCandidate 台账
+## 7. WAMEPublicationGateCandidate 台账
 
-| waesPublicationGateId | linkedBrainPageId | linkedReceiptOrGateId | gateType | ruleToConfirm | allowedOutcome | currentStatus |
+| wamePublicationGateId | linkedBrainPageId | linkedReceiptOrGateId | gateType | ruleToConfirm | allowedOutcome | currentStatus |
 |---|---|---|---|---|---|---|
 | `WPG-HBLC-FEA-202606-0001` | `BKP-HBLC-FEA-202606-0001` | `WGR-HBLC-FEA-202606-0001` | publish_boundary | 拓厂知识页不得等同投资、合作或建设启动确认 | draft / return / block | planned |
 | `WPG-HBLC-RAW-202606-0001` | `BKP-HBLC-RAW-202606-0001` | `WGR-HBLC-RAW-202606-0001` | purchase_boundary | 原料知识页不得等同采购事实或确认价格 | draft / return / block | planned |
@@ -143,7 +143,7 @@ superseded_by: []
 3. PageBlockSchema 覆盖来源、可信、事实、KDS、账本、WAME、人工、红线、动作和发布门禁。
 4. PermissionFilterMatrix 覆盖公开、本单位、项目组、委员会、治理和邀请合作方。
 5. PublicationGateChecklist 能阻断未脱敏、未授权、未评分、未挂接、未门禁和越权写入。
-6. WAESPublicationGateCandidate 保持 planned 状态，不生成真实放行。
+6. WAMEPublicationGateCandidate 保持 planned 状态，不生成真实放行。
 7. 所有输出只形成候选，不确认真实事实、正式积分、正式收益或正式 SOP。
 8. 本文纳入 LOOP 文档治理、KDS 本地镜像、防污染、TOKEN 与文档门禁检查。
 

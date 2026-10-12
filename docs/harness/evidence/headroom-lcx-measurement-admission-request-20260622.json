@@ -4,13 +4,13 @@
   "loop_round_id": "GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001",
   "date": "2026-06-22",
   "status": "request_package_approved_for_sanitized_precheck_no_measurement",
-  "scope": "waes_harness_admission_request_only_no_measurement",
+  "scope": "wame_harness_admission_request_only_no_measurement",
   "project_count": 15,
   "projects": [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -24,7 +24,7 @@
     "WAS"
   ],
   "requested_decision": "admitted_for_sanitized_measurement_precheck",
-  "current_waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+  "current_wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
   "source_approval_instance": "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-PENDING-20260622",
   "source_authorized_measurement_precheck": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
   "sanitized_production_token_ledger": "fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json",
@@ -36,7 +36,7 @@
     "sanitized_ledger_contains_no_raw_content": true,
     "rollback_plan_exists": true,
     "telemetry_off_required": true,
-    "waes_harness_decision_required": true,
+    "wame_harness_decision_required": true,
     "human_approval_required": true
   },
   "requested_measurement_boundary": {
@@ -68,7 +68,7 @@
   "gates": {
     "request_package_generated": true,
     "authorization_complete": true,
-    "waes_harness_admitted": true,
+    "wame_harness_admitted": true,
     "production_token_measurement_allowed": false,
     "measured_production_tokens": false,
     "production_proxy_started": false,
@@ -82,9 +82,9 @@
     "production_ready": false
   },
   "next_required_decision": {
-    "field": "waes_harness_admission_decision",
+    "field": "wame_harness_admission_decision",
     "current_value": "admitted_for_sanitized_measurement_precheck",
     "required_value_for_next_precheck": "admitted_for_sanitized_measurement_precheck",
-    "decision_owner": "WAES/Harness human approval"
+    "decision_owner": "WAME/Harness human approval"
   }
 }

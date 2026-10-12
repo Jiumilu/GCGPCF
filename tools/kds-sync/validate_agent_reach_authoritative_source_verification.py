@@ -108,7 +108,7 @@ def main() -> int:
         require(len(item.get("verification_sources", [])) >= 1, f"missing verification source: {item.get('id')}")
 
     decision = evidence.get("admission_decision", {})
-    require(decision.get("waes_review_status") == "limited_verification_complete", "WAES status mismatch")
+    require(decision.get("wame_review_status") == "limited_verification_complete", "WAME status mismatch")
     require(decision.get("kds_admission") == "limited_candidate_only", "KDS admission must remain limited")
     require(decision.get("rag_admission") == "limited", "RAG admission must remain limited")
     require(decision.get("status_upgrade_allowed") is False, "status upgrade must be false")
@@ -122,7 +122,7 @@ def main() -> int:
         "accept_limited_count | 4",
         "reject_count | 1",
         "不写 KDS canonical",
-        "不代表 WAES/KDS 已将这些来源写入主知识库",
+        "不代表 WAME/KDS 已将这些来源写入主知识库",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
 

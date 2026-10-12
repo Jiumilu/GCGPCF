@@ -44,7 +44,7 @@ superseded_by: []
 |---|---|
 | can_open_real_measurement | `false` |
 | blocked | `false` |
-| blocker | `waes_harness_final_receipt_decision_required` |
+| blocker | `wame_harness_final_receipt_decision_required` |
 | real_measurement_open | `false` |
 | production_proxy_started | `false` |
 | production_sdk_enabled | `false` |

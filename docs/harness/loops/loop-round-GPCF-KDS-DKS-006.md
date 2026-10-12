@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-788E973803
 title: GPCF-KDS-DKS-006 湖北磷材拓厂项目知识库与新工厂复制模板 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

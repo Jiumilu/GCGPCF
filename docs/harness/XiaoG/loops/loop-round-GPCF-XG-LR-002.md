@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7A5E9D6D56
 title: Loop Round GPCF-XG-LR-002：XiaoG 设备与语音触发验证清单
 project: XiaoG
-related_projects: [GFIS, GPC, WAES, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 | batch_generated | false |
 | substance_gate | pass |
 | stop_type | none |
-| 输入 | XiaoG 已有 loop-state，但设备/语音接入与 GFIS/WAES 触发链路仍未验证 |
+| 输入 | XiaoG 已有 loop-state，但设备/语音接入与 GFIS/WAME 触发链路仍未验证 |
 | 动作 | 建立 XiaoG 轻量执行入口和设备接入验证清单 |
 | 输出 | XiaoG device and voice trigger checklist |
 | 检查 | `validate_l3_second_wave_lr011_lr015.py` |
@@ -41,6 +41,6 @@ superseded_by: []
 | 轻量执行入口 | not-validated | 可运行入口、触发命令、失败回退 |
 | 设备接入 | not-validated | 设备类型、连接方式、mock/真实设备证据 |
 | 语音触发 | not-validated | 语音意图、误触发策略、人工确认点 |
-| GFIS/WAES 依赖 | pending | 触发事件、门禁事件、回滚路径 |
+| GFIS/WAME 依赖 | pending | 触发事件、门禁事件、回滚路径 |
 
 当前状态保持 `partial`；本轮不触碰设备、生产、真实外部 API，也不标记 accepted/integrated。

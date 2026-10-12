@@ -8,7 +8,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -27,7 +27,7 @@
   "source_evidence": [
     "docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md",
     "docs/harness/evidence/was-scenario-profile-matrix-20260621.md",
-    "docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.md",
+    "docs/harness/evidence/was-wame-kds-rag-writeback-gate-pack-20260621.md",
     "docs/harness/evidence/was-project-group-ontology-registry-20260621.md",
     "docs/harness/evidence/was-loop-context-coverage-refresh-20260621.md",
     "docs/harness/evidence/was-real-source-record-monitor-039-20260622.md",
@@ -130,7 +130,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -143,7 +143,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not mark accepted, integrated, or production ready"
   ]
 }

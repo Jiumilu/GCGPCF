@@ -145,7 +145,7 @@ def write_markdown(summary: dict[str, Any]) -> None:
     md += "## 控制边界\n\n"
     md += "- This evidence is generated from local fixtures only.\n"
     md += "- All writeback rows are candidate-only and require manual or committee confirmation.\n"
-    md += "- No real KDS API, WAES write, GFIS/GPC/PVAOS business ledger write, RAG admission, settlement, bounty release, revenue allocation, or AI quota allocation is performed.\n"
+    md += "- No real KDS API, WAME write, GFIS/GPC/PVAOS business ledger write, RAG admission, settlement, bounty release, revenue allocation, or AI quota allocation is performed.\n"
     md += "- Hard-stop rows remain blocked even when the calculated score is above a lower decision band.\n"
     OUTPUT_MD.write_text(preserve_frontmatter(OUTPUT_MD, md), encoding="utf-8")
 
@@ -182,7 +182,7 @@ def write_markdown(summary: dict[str, Any]) -> None:
     ledger += "## 控制边界\n\n"
     ledger += "- Candidate rows do not close gaps.\n"
     ledger += "- Candidate rows do not create score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger writes.\n"
-    ledger += "- Candidate rows must be confirmed by the proper human, KDS, WAES, or committee process before any downstream action.\n"
+    ledger += "- Candidate rows must be confirmed by the proper human, KDS, WAME, or committee process before any downstream action.\n"
     WRITEBACK_MD.write_text(preserve_frontmatter(WRITEBACK_MD, ledger), encoding="utf-8")
 
 

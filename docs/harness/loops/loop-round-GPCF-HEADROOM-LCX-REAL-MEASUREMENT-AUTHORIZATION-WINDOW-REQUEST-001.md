@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001
 title: 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,4 +50,4 @@ authorization window request 已被显式记录，但该请求包只增加窗口
 
 ## 下一轮
 
-等待 WAES/Harness 对真实授权窗口做出新的裁决，或继续把窗口请求纳入总图谱引用。
+等待 WAME/Harness 对真实授权窗口做出新的裁决，或继续把窗口请求纳入总图谱引用。

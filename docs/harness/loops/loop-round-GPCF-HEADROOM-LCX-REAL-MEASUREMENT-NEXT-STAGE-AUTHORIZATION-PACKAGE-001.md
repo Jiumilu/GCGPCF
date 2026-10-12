@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001
 title: 循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -56,4 +56,4 @@ python3 tools/kds-sync/validate_headroom_lcx_real_measurement_next_stage_authori
 
 ## 下一轮
 
-继续等待 WAES/Harness 的真实授权窗口裁决，或在获批后再切到真实测量 runner。
+继续等待 WAME/Harness 的真实授权窗口裁决，或在获批后再切到真实测量 runner。

@@ -26,7 +26,7 @@
     "dryRunOnly": true,
     "repairRequestRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -46,7 +46,7 @@
       "candidate_recheck_path",
       "authority_and_recusal_boundary",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -107,7 +107,7 @@
       "candidate_recheck_path_present",
       "authority_and_recusal_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_repair_request_preview_not_formal_repair_request",
@@ -129,10 +129,10 @@
       "candidateRecheckPathRef",
       "authorityAndRecusalBoundaryRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -161,7 +161,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_repair_request_preview_to_formal_repair_request",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

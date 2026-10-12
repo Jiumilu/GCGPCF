@@ -20,7 +20,7 @@ PROJECTS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",
@@ -45,7 +45,7 @@ REQUIRED_EVIDENCE_TOKENS = [
     "integrated = false",
     "production_ready = false",
     "customer_accepted = false",
-    "WAES 授权不是开发态全面启动的最大阻点",
+    "WAME 授权不是开发态全面启动的最大阻点",
 ]
 
 REQUIRED_CLASSIFICATIONS = [

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0HARNESSREVIEWINPUTCURRENTSTATED12520260622
 title: GCKF P0 Harness 审查输入包当前态证据 D125
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0

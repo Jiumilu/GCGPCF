@@ -5,9 +5,9 @@ status: draft
 last_reviewed: "2026-06-20"
 purpose: >
   Define local dry-run GFIS Assistant repair prompt checklists derived from
-  WAES guidance packets. Checklists display repair requirements only. They do
+  WAME guidance packets. Checklists display repair requirements only. They do
   not submit evidence, create gaps or bounties, create KWE work items, persist
-  WAES gate results, mutate KDS lifecycle, write business systems, complete
+  WAME gate results, mutate KDS lifecycle, write business systems, complete
   approvals, confirm revenue or scores, or call external APIs.
 
 required_fields:
@@ -24,7 +24,7 @@ required_fields:
   - creates_gap_record
   - creates_bounty_record
   - creates_kwe_work_item
-  - creates_waes_gate_result
+  - creates_wame_gate_result
   - approves_business_write
   - promotes_lifecycle
   - no_write
@@ -61,7 +61,7 @@ blocked_actions:
   - create_gap_record
   - create_bounty_record
   - create_kwe_work_item
-  - create_waes_gate_result
+  - create_wame_gate_result
   - approve_business_write
   - promote_lifecycle
 
@@ -71,7 +71,7 @@ hard_boundaries:
   creates_gap_record_must_be_false: true
   creates_bounty_record_must_be_false: true
   creates_kwe_work_item_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   approves_business_write_must_be_false: true
   promotes_lifecycle_must_be_false: true
   checklist_is_not_submission: true
@@ -83,7 +83,7 @@ no_write_guards:
   writes_gpc: 0
   writes_erp: 0
   writes_mes: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_gap_record: 0
   writes_bounty_record: 0

@@ -13,7 +13,7 @@ approved_decisions:
   - id: D7
     scope: 按GBrain责任方安全方式静默GBrain autopilot及worker，禁止强杀
   - id: D8
-    scope: 冻结GCWORLD与WAES人工资料导入
+    scope: 冻结GCWORLD与WAME人工资料导入
   - id: D9
     scope: 冻结api_server.py与tests/test_api_smoke.py相关编辑活动，仅通过任务、进程和版本元数据调查来源
 explicitly_not_approved:

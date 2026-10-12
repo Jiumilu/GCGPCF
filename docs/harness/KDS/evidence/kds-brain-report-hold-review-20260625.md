@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KDS-BRAIN-REPORT-HOLD-REVIEW-20260625
 title: KDS Brain Report Hold Review 证据 2026-06-25
 project: KDS
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ funding_report_owner_confirmed = false
 kds_api_sync_executed = false
 production_index_updated = false
 brain_ingestion_confirmed = false
-waes_evidence_published = false
+wame_evidence_published = false
 accepted = false
 integrated = false
 production_ready = false
@@ -75,7 +75,7 @@ customer_accepted = false
 | 真实进度 | `owner_review_required / kds_report_hold_controlled` |
 | 真实研发 | `not_changed_by_this_task`，本轮只在 GPCF 建立 review 证据 |
 | 真实运行 | `sync_run_evidence_present`，但不等于真实 KDS API 同步或生产索引完成 |
-| 真实集成 | `not_verified_this_round`，未确认 Brain/WAES/GPCF 已消费这些报告 |
+| 真实集成 | `not_verified_this_round`，未确认 Brain/WAME/GPCF 已消费这些报告 |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 
@@ -86,7 +86,7 @@ customer_accepted = false
 | Owner 不确认资金追踪报告 | 保持 `hold_business_report`，不得作为业务事实或对外材料 |
 | sync-run 证据不被接收 | 保持未纳入状态，后续可归档或删除，需人工确认 |
 | 需要真实 KDS API 同步 | 另建授权任务，不得由本 review 包隐式执行 |
-| Brain/WAES 要消费该报告 | 必须先确认报告事实边界和来源引用 |
+| Brain/WAME 要消费该报告 | 必须先确认报告事实边界和来源引用 |
 
 ## 7. 禁止声明
 
@@ -94,7 +94,7 @@ customer_accepted = false
 - 不声明真实 KDS API 已同步；
 - 不声明生产索引已刷新；
 - 不声明 Brain 已正式消费该报告；
-- 不声明 WAES 已发布该证据；
+- 不声明 WAME 已发布该证据；
 - 不声明客户交付或客户验收；
 - 不声明 `accepted`、`integrated`、`production_ready` 或 `customer_accepted`。
 
@@ -102,7 +102,7 @@ customer_accepted = false
 
 ```text
 next_task = KDS-BRAIN-REPORT-OWNER-DECISION-001
-required_confirmation = keep/rework/archive/delete_sync_runs; funding report owner; KDS API sync boundary; Brain/WAES consumption boundary
+required_confirmation = keep/rework/archive/delete_sync_runs; funding report owner; KDS API sync boundary; Brain/WAME consumption boundary
 authorization_required = true
 status_boundary = owner_review_required_only
 ```

@@ -65,7 +65,7 @@ superseded_by: []
 | `targetFactory` | 是 | 葛化目标工厂或未来复制工厂 |
 | `oemCarrier` | 条件必填 | 现代精工或其他预运营期承接方 |
 | `responsibilitySplit` | 是 | 目标工厂负责未来承接和建设运营准备；OEM 承接方负责当前生产、质量、发货等事实责任 |
-| `waesGateRef` | 是 | WAME 规则记录、阻断或人工确认候选 |
+| `wameGateRef` | 是 | WAME 规则记录、阻断或人工确认候选 |
 | `gfisActionMode` | 是 | `no_write` / `candidate_only` / `manual_entry_after_confirmation` / `blocked` |
 | `kdsPoolRefs` | 是 | 订单池、物流池、资金池、数据池、场景池 |
 | `forbiddenClaims` | 是 | 不得声明客户确认已取得、POD 已取得、到账已确认、GFIS verified artifact 已形成 |
@@ -103,7 +103,7 @@ superseded_by: []
 | `sourceHashOrOfflineSeal` | 条件必填 | hash、封存编号或线下保管索引 |
 | `storageLocation` | 是 | 只写受控位置或封存索引，不写敏感原文 |
 | `humanReviewer` | 是 | 财务责任人或授权复核人，未确认时填待确认 |
-| `waesGateRef` | 是 | governance_blocked / manual_confirmation_required / committee_review_required |
+| `wameGateRef` | 是 | governance_blocked / manual_confirmation_required / committee_review_required |
 | `kdsPoolRefs` | 是 | 资金池、订单池、数据池、争议池 |
 | `forbiddenUses` | 是 | 不得进入开放问答，不得确认到账，不得作为收益分配依据 |
 
@@ -113,7 +113,7 @@ superseded_by: []
 index_requested
   -> metadata_received
   -> redaction_checked
-  -> waes_rule_recorded_or_blocked
+  -> wame_rule_recorded_or_blocked
   -> human_review_pending
   -> committee_review_required(optional)
   -> index_usable_for_candidate

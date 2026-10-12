@@ -56,7 +56,7 @@ WAS世界资产体系总体方案
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -97,7 +97,7 @@ recover:
   rollback: 回退本轮 evidence、loop round、validator 和状态台账；不涉及生产回滚
 debug:
   next_round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101
-  boundary: no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready
+  boundary: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready
 ```
 
 ## 6. 全量执行提示词
@@ -109,7 +109,7 @@ debug:
 
 本轮目标只能是推进受控实施链路、真实 source-record 准备度、门禁 replay、证据台账或下一轮输入。不得把文档、模板、mock、测试数据、KDS 候选、用户口述或治理 validator 写成真实业务完成。
 
-如果 docs/harness/intake 没有真实 P4 candidate，则必须保持 hold_required=1、real_source_records=0、valid_source_records=0、runtime_primary_key_ready=0、review_queue=0、runtime_intake=0、waes_review=0、verified=0、accepted=false、integrated=false、production_ready=false。
+如果 docs/harness/intake 没有真实 P4 candidate，则必须保持 hold_required=1、real_source_records=0、valid_source_records=0、runtime_primary_key_ready=0、review_queue=0、runtime_intake=0、wame_review=0、verified=0、accepted=false、integrated=false、production_ready=false。
 
 每轮输出必须包含 run、stop、verify、recover、debug，并说明下一轮是否进入 GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101 或后续 monitor。
 ```
@@ -120,7 +120,7 @@ debug:
 |---|---|---|---|
 | P0 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101` | 继续监控真实 P4 candidate 文件提交，并复核数字产品护照、公开披露、二维码/数据载体、追溯数据集、访问治理和检索回执边界 | 无真实输入时继续 hold |
 | P0 | `WAS-IMPLEMENTATION-CHAIN-GATE-001` | 将 WAS/Ontology 全量实施方案纳入项目群实施方案门禁和台账 | 只做治理门禁，不升级验收状态 |
-| P1 | `WAS-XWAIL-WAES-RUNTIME-CONTRACT-001` | 定义 XWAIL profile 到 WAME runtime contract 的最小验证清单 | 不写生产、不发布 |
+| P1 | `WAS-XWAIL-WAME-RUNTIME-CONTRACT-001` | 定义 XWAIL profile 到 WAME runtime contract 的最小验证清单 | 不写生产、不发布 |
 | P1 | `WAS-KDS-BRAIN-CANDIDATE-EXPLANATION-001` | 建立 KDS/Brain 候选解释不越权规则 | Brain 输出仍为 candidate |
 
 ## 8. 非声明边界

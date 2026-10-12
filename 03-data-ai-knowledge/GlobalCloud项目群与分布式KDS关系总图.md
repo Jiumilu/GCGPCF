@@ -62,7 +62,7 @@ flowchart LR
 |---|---|---|---|---|
 | GPCF | 总控治理、Loop、文档控制、状态矩阵和审计入口 | 用户目标、项目群状态、Loop 记录、门禁结果 | 受控文档、Loop 反馈、风险清单、下一轮队列 | 不替代业务系统确认事实 |
 | KDS | 知识主存、11 个底座资源池、对象注册、索引、可信级别、池间关系 | 候选事实、证据索引、知识对象、规则记录、增强账本对象 | 受控知识事实索引、底座资源池挂接、查询和治理基线 | 不把增强账本当成独立底座，不把候选事实直接写成确认事实 |
-| WAME | 规则确认、证据门禁、密级边界、阻断和放行记录 | 规则、证据、密级、人工确认要求 | WAESBoundaryRecord、EvidenceGateRecord、RuleDecision | 不替代业务主账和财务确认 |
+| WAME | 规则确认、证据门禁、密级边界、阻断和放行记录 | 规则、证据、密级、人工确认要求 | WAMEBoundaryRecord、EvidenceGateRecord、RuleDecision | 不替代业务主账和财务确认 |
 | GFIS | 工厂、订单、生产、质量、发货、POD、金融凭证业务事实主账 | 需求、订单、生产、质检、发货、签收、开票、到账 | 业务事实、业务状态、责任拆分、运行证据 | 不把 AI 建议直接执行为业务写入 |
 | GPC | 公共服务、平台订单、供应链服务和对外服务入口 | 服务请求、平台订单、客户交互、渠道资源 | 服务记录、平台订单候选、外部服务结果 | 不替代 GFIS 工厂事实主账 |
 | PVAOS | 合作单位运营门户、组织空间、项目协同和运营看板 | 合作单位信息、项目任务、运营记录、协同事项 | 组织空间、协同记录、运营状态、用户侧入口 | 不直接裁决积分和收益 |
@@ -112,7 +112,7 @@ KDS 11 池指既有底座资源池：订单池、运力池、产能池、资金�
 SourceEvent
   -> KnowledgeOrFactCandidate
   -> KDSCandidateRegistration
-  -> WAESRuleAndEvidenceGate
+  -> WAMERuleAndEvidenceGate
   -> HumanOrCommitteeDecision
   -> BusinessSystemConfirmation
   -> BaseResourcePoolLink
@@ -145,7 +145,7 @@ AI 可以生成知识摘要、候选事实、SOP 建议、缺口建议、贡献�
 | decisionOwner | 业务负责人、项目组、委员会或用户 |
 | reversible | 是否允许撤销、扣除或回滚 |
 
-### 5.3 WAESRuleAndEvidenceGate
+### 5.3 WAMERuleAndEvidenceGate
 
 WAME 只确认规则、证据、密级和门禁。规则以内的低风险事项可以只记录；超出规则、涉及重大收益、金融凭证、责任争议、敏感资料或跨单位分配时必须进入人工确认或委员会决策。
 

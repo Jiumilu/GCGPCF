@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FFA422347D
 title: Loop Round — GPCF-L4-GFIS-REPAIR-232
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -79,7 +79,7 @@ runtime_primary_key_ready=0
 runtime_primary_key_missing=1
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```
@@ -100,7 +100,7 @@ npm run test:e2e
 
 ## 下一步
 
-本轮只证明真实人工业务核验完成文件接收目录暂无合规文件并形成 open hold，不证明已收到真实客户订单、平台订单回执、合规人工核验完成文件、source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或业务完成。
+本轮只证明真实人工业务核验完成文件接收目录暂无合规文件并形成 open hold，不证明已收到真实客户订单、平台订单回执、合规人工核验完成文件、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或业务完成。
 
 下一轮建议：`GFIS-RUNTIME-SOP-E2E-223`，建立人工核验完成 hold release precheck。
 

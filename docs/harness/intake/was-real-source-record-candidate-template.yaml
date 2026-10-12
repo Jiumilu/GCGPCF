@@ -5,7 +5,7 @@ project_group_scope:
   - GFIS
   - GPC
   - PVAOS
-  - WAES
+  - WAME
   - KDS
   - Brain
   - PKC
@@ -51,8 +51,8 @@ was_fields:
     - was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order
   evidenceRefs:
     - evidence://gfis/REAL-001-source-record-intake-gate
-  waesGateRefs:
-    - waes://gate/customer-order-source-record-review
+  wameGateRefs:
+    - wame://gate/customer-order-source-record-review
   promotionBlockers:
     - valid_source_record_missing
     - customer_confirmation_missing
@@ -61,7 +61,7 @@ was_fields:
 no_write_declaration:
   gfis_runtime_write: false
   runtime_primary_key_ready: false
-  waes_review_created: false
+  wame_review_created: false
   accepted: false
   integrated: false
   production_ready: false

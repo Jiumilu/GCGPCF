@@ -10,7 +10,7 @@
   "project_scope": [
     "GPCF",
     "KDS",
-    "WAES",
+    "WAME",
     "Brain",
     "GFIS",
     "GPC",
@@ -27,7 +27,7 @@
     "GPCF",
     "GFIS",
     "KDS",
-    "WAES",
+    "WAME",
     "GPC"
   ],
   "readiness_checks": {

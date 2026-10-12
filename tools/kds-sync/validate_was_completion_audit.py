@@ -18,14 +18,14 @@ CONTROL_BOARD = ROOT / "02-governance/loop/LOOP_CONTROL_BOARD.md"
 STATUS_MATRIX = ROOT / "09-status/gpcf-project-status-matrix.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 ZERO_BOUNDARY_KEYS = [
     "real_source_records",
     "valid_source_records",
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 FALSE_BOUNDARY_KEYS = ["accepted", "integrated", "production_ready"]
@@ -33,7 +33,7 @@ REQUIRED_LOCAL_VALIDATORS = [
     "tools/kds-sync/validate_was_status_matrix_control_board_refresh.py",
     "tools/kds-sync/validate_was_loop_context_coverage_refresh.py",
     "tools/kds-sync/validate_was_project_group_ontology_registry.py",
-    "tools/kds-sync/validate_was_waes_kds_rag_writeback_gate_pack.py",
+    "tools/kds-sync/validate_was_wame_kds_rag_writeback_gate_pack.py",
     "tools/kds-sync/validate_was_scenario_profile_matrix.py",
     "tools/kds-sync/validate_was_real_source_record_candidate_precheck.py",
     "tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py",
@@ -186,7 +186,7 @@ def main() -> int:
         "objective_items=8 verified_governance_items=8 hold_items=1 project_group_scope=14/14 "
         "required_validators=11 governance_completion=verified_governance_complete "
         "business_completion=hold_waiting_real_source_record "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001"
     )

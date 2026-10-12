@@ -88,7 +88,7 @@ def build_queue(source: dict[str, Any], queue_type: str, hard_stop: bool) -> dic
         "items": items,
         "boundary": {
             "realKdsApiWrite": False,
-            "waesWrite": False,
+            "wameWrite": False,
             "businessLedgerWrite": False,
             "settlementWrite": False,
             "ragAdmission": False,
@@ -159,7 +159,7 @@ def write_queue_md(queue: dict[str, Any], path: Path, title: str, description: s
     md += "## 控制\n\n"
     md += "- Queue rows are candidate-only and do not confirm facts, close gaps, or write any system.\n"
     md += "- No score settlement, revenue allocation, bounty publication, RAG admission, command-center strong reference, or business ledger write is performed.\n"
-    md += "- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, or production write is performed.\n"
+    md += "- No real KDS API, WAME, GFIS, GPC, PVAOS, finance, settlement, or production write is performed.\n"
     md += "- Committee rows are review candidates only; committee decision is not completed in this evidence.\n"
     path.write_text(preserve_frontmatter(path, md), encoding="utf-8")
 

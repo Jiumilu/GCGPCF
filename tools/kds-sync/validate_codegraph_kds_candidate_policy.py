@@ -44,7 +44,7 @@ def main() -> int:
     ]:
         require(phrase in mapping, f"mapping missing guard: {phrase}")
 
-    for required in ["harness_evidence", "waes_gate", "human_review", "lineage_backlink"]:
+    for required in ["harness_evidence", "wame_gate", "human_review", "lineage_backlink"]:
         require(required in mapping, f"mapping missing promotion requirement: {required}")
 
     for rejection in [

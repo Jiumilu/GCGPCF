@@ -9,7 +9,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -71,7 +71,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -81,6 +81,6 @@
   "next_round_condition": "continue_monitoring_until_real_p4_candidate_files_are_submitted_and_prechecked",
   "non_claims": [
     "does not infer AI assisted decision policy, model version registry, prompt template approval, human review decision log, bias and fairness test report, AI output provenance record, or automated decision rollback record",
-    "does not allow LLM, RAG, Brain, PKC, or Loop candidate output to become official KDS fact or runtime writeback without WAES/KDS/runtime evidence"
+    "does not allow LLM, RAG, Brain, PKC, or Loop candidate output to become official KDS fact or runtime writeback without WAME/KDS/runtime evidence"
   ]
 }

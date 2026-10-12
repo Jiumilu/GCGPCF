@@ -57,7 +57,7 @@ flowchart LR
   C --> D["KDS 授权读模型\n搜索/图谱/页面/上下文包"]
   D --> E["Brain 工作台\nSpace/Search/Graph/Wiki/Chat"]
   E --> F["MMC 模型调用\n本次授权 + 审计"]
-  E --> G["候选写回\nWAES/人工确认"]
+  E --> G["候选写回\nWAME/人工确认"]
   G --> B
 ```
 
@@ -229,7 +229,7 @@ Envelope `assetType` 描述项目群消费语义；OKF `objectType` 描述 canon
 4. 进入 Chat 时，Brain 只打包用户已确认的 KDS 页面/片段和 envelope 摘要。
 5. 用户勾选“本次 prompt 授权”后调用 MMC；授权不跨 prompt 继承。
 6. LLM readback 返回引用、回答和不确定项。未经授权不写 KDS，不生成伪成功。
-7. 用户可继续核对 KDS、重新选择上下文或创建写回候选；写回候选经过 WAES/人工确认。
+7. 用户可继续核对 KDS、重新选择上下文或创建写回候选；写回候选经过 WAME/人工确认。
 
 ## 11. 项目职责矩阵
 

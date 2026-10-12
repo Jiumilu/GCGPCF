@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9705D1627A
 title: Loop 指标校准包
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

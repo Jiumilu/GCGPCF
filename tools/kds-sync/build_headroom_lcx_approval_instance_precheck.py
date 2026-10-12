@@ -21,7 +21,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -70,11 +70,11 @@ def main() -> int:
     base_valid["instance_id"] = "HEADROOM-LCX-HUMAN-APPROVAL-PACKAGE-INSTANCE-EXAMPLE"
     base_valid["authorization_fields"] = {
         "authorized_window_id": "LCX-MEASURE-20260622-EXAMPLE",
-        "authorized_by": "GPCF-WAES-APPROVER-EXAMPLE",
+        "authorized_by": "GPCF-WAME-APPROVER-EXAMPLE",
         "authorized_at": "2026-06-22T00:00:00+08:00",
         "sanitized_production_token_ledger": "docs/harness/evidence/example-sanitized-ledger-id-only.json",
         "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-EXAMPLE",
-        "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+        "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
     }
     base_valid["human_attestations"] = {
         key: "confirmed" for key in template.get("human_attestations", {})
@@ -97,9 +97,9 @@ def main() -> int:
     inline_ledger["authorization_fields"]["sanitized_production_token_ledger"] = {"raw_prompt": "do not store raw prompt"}
     negative_cases.append({"case_id": "inline_ledger_object", "expected_rejection_reason": "sanitized_ledger_must_be_reference_only", "candidate": inline_ledger})
 
-    bad_waes = deepcopy(base_valid)
-    bad_waes["authorization_fields"]["waes_harness_admission_decision"] = "approved"
-    negative_cases.append({"case_id": "bad_waes_decision", "expected_rejection_reason": "waes_harness_decision_required", "candidate": bad_waes})
+    bad_wame = deepcopy(base_valid)
+    bad_wame["authorization_fields"]["wame_harness_admission_decision"] = "approved"
+    negative_cases.append({"case_id": "bad_wame_decision", "expected_rejection_reason": "wame_harness_decision_required", "candidate": bad_wame})
 
     production_true = deepcopy(base_valid)
     production_true["required_false_until_completed"]["production_admission_gate"] = True
@@ -161,7 +161,7 @@ def main() -> int:
 doc_id: GPCF-DOC-4D8C5F88C2
 title: Headroom LCX Approval Instance Precheck Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, Edge, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, Edge, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -216,7 +216,7 @@ superseded_by: []
 doc_id: GPCF-DOC-4B6493F4B9
 title: Loop Round GPCF-HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

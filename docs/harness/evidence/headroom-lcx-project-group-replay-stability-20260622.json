@@ -24,7 +24,7 @@
         "GPCF",
         "KDS",
         "Brain",
-        "WAES",
+        "WAME",
         "GFIS",
         "GPC",
         "PVAOS",
@@ -215,8 +215,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-01",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-01",
+          "project_id": "WAME",
           "content_type": "loop_gate_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1255,
@@ -234,8 +234,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-02",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-02",
+          "project_id": "WAME",
           "content_type": "retrieval_context_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1290,
@@ -253,8 +253,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-03",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-03",
+          "project_id": "WAME",
           "content_type": "tool_output_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1325,
@@ -983,7 +983,7 @@
         },
         {
           "record_index": 9,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "loop_gate_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -992,7 +992,7 @@
         },
         {
           "record_index": 10,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "retrieval_context_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -1001,7 +1001,7 @@
         },
         {
           "record_index": 11,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "tool_output_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -1330,7 +1330,7 @@
         "GPCF",
         "KDS",
         "Brain",
-        "WAES",
+        "WAME",
         "GFIS",
         "GPC",
         "PVAOS",
@@ -1521,8 +1521,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-01",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-01",
+          "project_id": "WAME",
           "content_type": "loop_gate_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1255,
@@ -1540,8 +1540,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-02",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-02",
+          "project_id": "WAME",
           "content_type": "retrieval_context_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1290,
@@ -1559,8 +1559,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-03",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-03",
+          "project_id": "WAME",
           "content_type": "tool_output_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1325,
@@ -2289,7 +2289,7 @@
         },
         {
           "record_index": 9,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "loop_gate_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -2298,7 +2298,7 @@
         },
         {
           "record_index": 10,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "retrieval_context_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -2307,7 +2307,7 @@
         },
         {
           "record_index": 11,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "tool_output_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -2636,7 +2636,7 @@
         "GPCF",
         "KDS",
         "Brain",
-        "WAES",
+        "WAME",
         "GFIS",
         "GPC",
         "PVAOS",
@@ -2827,8 +2827,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-01",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-01",
+          "project_id": "WAME",
           "content_type": "loop_gate_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1255,
@@ -2846,8 +2846,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-02",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-02",
+          "project_id": "WAME",
           "content_type": "retrieval_context_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1290,
@@ -2865,8 +2865,8 @@
           "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001"
         },
         {
-          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAES-03",
-          "project_id": "WAES",
+          "task_id_candidate": "HEADROOM-LCX-PROJECT-GROUP-FIXTURE-WAME-03",
+          "project_id": "WAME",
           "content_type": "tool_output_metadata",
           "content_source_kind": "project_group_sanitized_fixture_metadata_only",
           "tokens_before_input": 1325,
@@ -3595,7 +3595,7 @@
         },
         {
           "record_index": 9,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "loop_gate_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -3604,7 +3604,7 @@
         },
         {
           "record_index": 10,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "retrieval_context_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,
@@ -3613,7 +3613,7 @@
         },
         {
           "record_index": 11,
-          "project_id": "WAES",
+          "project_id": "WAME",
           "content_type": "tool_output_metadata",
           "marker_gate_preserved": true,
           "answer_equivalence_unmeasured": true,

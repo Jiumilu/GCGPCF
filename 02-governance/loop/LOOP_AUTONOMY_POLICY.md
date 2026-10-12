@@ -50,7 +50,7 @@ LOOP 自治策略必须遵守以下最高裁决：
 
 - Delivery Loop 默认服务 `development_lane`，允许继续推进本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、候选链路开发和 `development_ready_for_real_business_validation`。
 - Governance Loop 服务真实业务验证、状态提升、生产动作、客户交付声明和阶段收口。
-- `real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 不得单独作为 Delivery Loop 开发阻断。
+- `real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`wame_review = 0`、`verified = 0` 不得单独作为 Delivery Loop 开发阻断。
 - fixture/dry-run/controlled sample 可以证明开发能力，不得证明真实业务验证、accepted、integrated、production_ready 或 customer_accepted。
 - 真实业务验证通过也不得自动释放 accepted、integrated、production_ready 或 customer_accepted；所有状态提升必须有人工、owner、WAME 或最高授权主体裁决。
 

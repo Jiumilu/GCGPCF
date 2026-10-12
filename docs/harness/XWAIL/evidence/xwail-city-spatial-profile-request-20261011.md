@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011
 title: XWAIL City/Spatial Profile 立项请求 2026-10-11
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文登记 `XWAIL-CITY-SPATIAL-PROFILE-REQUEST-20261011`：**工业绿链业务图谱（F-016）向 XWAIL 项目提交 City/Spatial Profile 立项请求**（源起《WAS语义基座与CWME及工业绿链应用协同关系与分工方案》M2，D-2 按推荐确认）。
 
-本文只提交请求，不修改 XWAIL 仓，不声明 XWAIL 通过、不声明 WAES 授权或发布、不声明 AaaS 绑定、不声明业务交付或客户验收。决定权在 XWAIL 项目治理流程（Profile 审批）。
+本文只提交请求，不修改 XWAIL 仓，不声明 XWAIL 通过、不声明 WAME 授权或发布、不声明 AaaS 绑定、不声明业务交付或客户验收。决定权在 XWAIL 项目治理流程（Profile 审批）。
 
 ## 2. 请求内容
 
@@ -47,7 +47,7 @@ superseded_by: []
 ## 4. 请求边界
 
 允许（获准后）：Profile 范围定义、`xwail-city-profile` schema 候选起草、Validator 扩展规划。
-禁止：越过治理流程直接改 XWAIL 仓、WAES 发布声明、生产就绪声明、客户验收声明。
+禁止：越过治理流程直接改 XWAIL 仓、WAME 发布声明、生产就绪声明、客户验收声明。
 
 ## 5. 门禁
 
@@ -56,7 +56,7 @@ superseded_by: []
 | request_package_generated | true |
 | submitted | true |
 | governance_reviewed | true |
-| waes_authorized | false |
+| wame_authorized | false |
 | published | false |
 | accepted | true |
 | integrated | false |
@@ -66,7 +66,7 @@ superseded_by: []
 
 - WAS-Ontology registry pass（43 项，2026-06-21）；XWAIL `mapping_candidate` 映射证据在位（2026-06-25）。
 - 本图谱侧已产出可校验的一致样例（`工业绿链/图谱/ontology/exports/`，XWAIL 校验库只读导入 pass，2026-10-11）。
-- 未修改 XWAIL 仓；候选边界保持（`waesStatus=Draft`）。
+- 未修改 XWAIL 仓；候选边界保持（`wameStatus=Draft`）。
 
 ## 7. 下一步
 
@@ -75,4 +75,4 @@ XWAIL 治理流程裁定本请求；获准后进入 `xwail-city-profile` schema 
 ## 8. 受理记录（2026-10-11）
 
 - **已受理（accepted）**：授权来源＝老卢「按推荐执行」（2026-10-11）；材料复核通过（前置/边界齐备，见 §6）。
-- 后续动作：`xwail-city-profile` schema 候选起草（仍不写 XWAIL 仓、不声明 WAES 发布，见 §4 边界）。
+- 后续动作：`xwail-city-profile` schema 候选起草（仍不写 XWAIL 仓、不声明 WAME 发布，见 §4 边界）。

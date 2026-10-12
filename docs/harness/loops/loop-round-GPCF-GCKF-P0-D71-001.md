@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-381B9F0BC3
 title: Loop Round GPCF-GCKF-P0-D71-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ superseded_by: []
 | D71 notification acknowledgement receipt preview validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_notification_acknowledgement_receipt_preview_dry_run.py` |
 | D71 notification acknowledgement receipt preview doc | `docs/gc-knowledge-fabric/formal-evidence-execution-notification-acknowledgement-receipt-preview-dry-run-v0.1.md` |
 
-## 4. WAES / Harness 边界
+## 4. WAME / Harness 边界
 
 | 项目 | 结果 |
 |---|---|
-| WAES gate override | not_allowed |
+| WAME gate override | not_allowed |
 | Harness evidence write | not_executed |
 | Formal evidence write | not_executed |
 | Notification receipt preview execution | not_executed |
@@ -87,6 +87,6 @@ no_write=covered
 
 ## 6. 结论
 
-D71 只完成 notification acknowledgement receipt preview dry-run。它证明候选通知可以继续被描述为带有候选回执头、收件人确认矩阵、渠道回执矩阵、消息摘要引用、ACL、投递保持、投递阻断、WAES 与 no-write 边界的 receipt preview，但不产生任何正式通知回执、正式通知、投递、acknowledgement routing、委员会受理、正式受理确认、立案、裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
+D71 只完成 notification acknowledgement receipt preview dry-run。它证明候选通知可以继续被描述为带有候选回执头、收件人确认矩阵、渠道回执矩阵、消息摘要引用、ACL、投递保持、投递阻断、WAME 与 no-write 边界的 receipt preview，但不产生任何正式通知回执、正式通知、投递、acknowledgement routing、委员会受理、正式受理确认、立案、裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
 
 下一轮 D72 可继续建立 notification acknowledgement receipt routing acknowledgement preview 或 receipt return path 的 no-write 预演。

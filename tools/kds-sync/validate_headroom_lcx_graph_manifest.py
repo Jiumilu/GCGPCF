@@ -30,7 +30,7 @@ PROJECT_IDS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -138,7 +138,7 @@ def main() -> int:
         require(layer_id in layers, f"missing layer: {layer_id}")
 
     auth = manifest.get("authorization", {})
-    require(auth.get("waes_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck", "invalid admission decision")
+    require(auth.get("wame_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck", "invalid admission decision")
     require(auth.get("production_token_measurement_allowed") is False, "production token measurement must remain false")
     require(auth.get("measured_production_tokens") is False, "measured_production_tokens must remain false")
     require(auth.get("accepted") is False, "accepted must remain false")

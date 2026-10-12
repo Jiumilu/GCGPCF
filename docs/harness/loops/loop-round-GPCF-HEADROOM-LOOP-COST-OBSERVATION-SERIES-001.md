@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1AA365A16D
 title: LOOP Round GPCF Headroom Loop Cost Observation Series 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

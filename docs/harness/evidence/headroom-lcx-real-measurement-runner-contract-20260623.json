@@ -8,7 +8,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -39,7 +39,7 @@
       "authorized_at",
       "sanitized_production_token_ledger",
       "rollback_plan_id",
-      "waes_harness_admission_decision"
+      "wame_harness_admission_decision"
     ],
     "forbidden_inputs": [
       "raw_prompt",
@@ -73,7 +73,7 @@
     ],
     "required_preconditions": [
       "real_measurement_authorization_window",
-      "waes_harness_admission_decision",
+      "wame_harness_admission_decision",
       "sanitized_token_ledger_metadata_only",
       "rollback_plan_id",
       "no_production_proxy",
@@ -114,9 +114,9 @@
       "binding_state": "precheck_only"
     },
     {
-      "field": "waes_harness_admission_decision",
+      "field": "wame_harness_admission_decision",
       "bound_from": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
-      "runner_input": "waes_harness_admission_decision",
+      "runner_input": "wame_harness_admission_decision",
       "binding_state": "precheck_only"
     }
   ],
@@ -131,7 +131,7 @@
     "rollback_runbook_written": true
   },
   "precheck_anchor": {
-    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+    "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
     "authorization_complete": true,
     "missing_required_field_count_zero": true
   },
@@ -148,6 +148,6 @@
   "notes": [
     "This contract only defines the precheck-only runner boundary.",
     "It does not authorize execution, production measurement, or real business equivalence measurement.",
-    "It can be wired to a runner only after a future WAES/Harness decision opens a real measurement window."
+    "It can be wired to a runner only after a future WAME/Harness decision opens a real measurement window."
   ]
 }

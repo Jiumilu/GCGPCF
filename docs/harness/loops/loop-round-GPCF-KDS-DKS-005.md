@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B19F37EBAD
 title: GPCF-KDS-DKS-005 辽宁远航证据缺口请求包与知识悬赏 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

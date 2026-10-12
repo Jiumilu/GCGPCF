@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -37,7 +37,7 @@ AUTH_FIELDS = {
     "authorized_at": "2026-06-23T14:30:00+08:00",
     "sanitized_production_token_ledger": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
     "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
-    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+    "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
 }
 
 SIGNATURE_BLOCK = {

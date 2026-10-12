@@ -79,7 +79,7 @@ def frontmatter(title: str, source_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-FIXTURE-EXTENSION-NEGATIVE-GATE-20260622
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS]
 domain: governance
 status: controlled
 version: v1.0

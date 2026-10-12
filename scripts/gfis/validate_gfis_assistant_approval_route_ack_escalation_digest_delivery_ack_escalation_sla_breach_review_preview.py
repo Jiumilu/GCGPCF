@@ -20,7 +20,7 @@ NO_WRITE_KEYS = (
     "writesGfis", "writesGpc", "writesErp", "writesMes",
     "writesBreachRecord", "writesDispute", "writesCommitteeCase",
     "writesFreezeRequest", "writesReminder", "writesApprovalRequest",
-    "writesApprovalDecision", "writesWaesGateResult", "writesKweWorkItem",
+    "writesApprovalDecision", "writesWameGateResult", "writesKweWorkItem",
     "writesHarnessEvidence", "writesKdsLifecycle", "writesKdsFact",
     "writesKdsAcceptedFact", "writesExternalApi",
 )
@@ -71,7 +71,7 @@ def main() -> int:
         "createsDisputes": 0, "createsCommitteeCases": 0,
         "createsFreezeRequests": 0, "createsReminders": 0,
         "createsApprovalRequests": 0, "createsApprovalDecisions": 0,
-        "createsHarnessEvidence": 0, "createsWaesGateResults": 0,
+        "createsHarnessEvidence": 0, "createsWameGateResults": 0,
         "createsKweWorkItems": 0, "persistsEvidence": 0,
         "approvesBusinessWrite": 0, "promotesLifecycle": 0,
         "completesCommitteeDecision": 0,
@@ -81,7 +81,7 @@ def main() -> int:
         "createsBreachRecord", "createsDispute", "createsCommitteeCase",
         "createsFreezeRequest", "createsReminder", "createsApprovalRequest",
         "createsApprovalDecision", "createsHarnessEvidence",
-        "createsWaesGateResult", "createsKweWorkItem", "persistsEvidence",
+        "createsWameGateResult", "createsKweWorkItem", "persistsEvidence",
         "approvesBusinessWrite", "promotesLifecycle",
         "completesCommitteeDecision",
     )
@@ -94,7 +94,7 @@ def main() -> int:
         "createsApprovalRequest": "createsApprovalRequests",
         "createsApprovalDecision": "createsApprovalDecisions",
         "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults",
+        "createsWameGateResult": "createsWameGateResults",
         "createsKweWorkItem": "createsKweWorkItems",
         "persistsEvidence": "persistsEvidence",
         "approvesBusinessWrite": "approvesBusinessWrite",
@@ -169,10 +169,10 @@ def main() -> int:
         f"creates_committee_cases={actual['createsCommitteeCases']} creates_freeze_requests={actual['createsFreezeRequests']} "
         f"creates_reminders={actual['createsReminders']} creates_approval_requests={actual['createsApprovalRequests']} "
         f"creates_approval_decisions={actual['createsApprovalDecisions']} creates_harness_evidence={actual['createsHarnessEvidence']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_breach_record=0 writes_dispute=0 "
         "writes_committee_case=0 writes_freeze_request=0 writes_reminder=0 writes_approval_request=0 "
-        "writes_approval_decision=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 "
+        "writes_approval_decision=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 "
         "writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0"
     )
     return 0

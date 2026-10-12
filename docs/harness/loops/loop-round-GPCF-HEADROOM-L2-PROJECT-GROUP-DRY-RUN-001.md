@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6AAF1F40B0
 title: Loop Round GPCF-HEADROOM-L2-PROJECT-GROUP-DRY-RUN-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

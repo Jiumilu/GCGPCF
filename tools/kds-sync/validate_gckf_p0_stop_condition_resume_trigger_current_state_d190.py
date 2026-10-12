@@ -150,7 +150,7 @@ def main() -> None:
     expected = {
         "controlled_repair_owner_response",
         "signed_response_package",
-        "waes_review_note",
+        "wame_review_note",
         "human_confirmation_record",
     }
     require(len(triggers) == 4, "resume_trigger_count_mismatch")
@@ -169,7 +169,7 @@ def main() -> None:
     arrival_aliases = {
         "real_repair_owner_response": "controlled_repair_owner_response",
         "signed_response_package": "signed_response_package",
-        "waes_review_note": "waes_review_note",
+        "wame_review_note": "wame_review_note",
         "human_confirmation_record": "human_confirmation_record",
     }
     arrival_signals = arrival_fixture.get("arrivalSignals", [])

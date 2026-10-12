@@ -48,7 +48,7 @@ def main() -> int:
     require_controlled(registry, "02-governance/loop/LOOP_CAPABILITY_REGISTRY.md")
     require_controlled(usage_matrix, "02-governance/loop/LOOP_CAPABILITY_USAGE_MATRIX.md")
     require(
-        "related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]" in registry,
+        "related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]" in registry,
         "registry must keep project-group related_projects",
     )
 
@@ -162,7 +162,7 @@ def main() -> int:
         "candidate_lane",
         "real_business_lane",
         "owner",
-        "WAES",
+        "WAME",
         "Harness",
         "三层评分",
         "分层裁决",
@@ -178,7 +178,7 @@ def main() -> int:
         "WAS / Ontology-WAS",
         "OKF/ODF",
         "LCX",
-        "WAES-KDS RAG writeback",
+        "WAME-KDS RAG writeback",
         "只读索引",
         "依赖分析",
         "调用图分析",
@@ -211,7 +211,7 @@ def main() -> int:
         "family.headroom",
         "family.okf_odf",
         "family.lcx",
-        "family.waes_kds_rag_writeback",
+        "family.wame_kds_rag_writeback",
         "core method family",
         "method/tool family",
         "semantic governance method",
@@ -231,7 +231,7 @@ def main() -> int:
         "`pilot` 以上状态变化必须有 evidence",
         "能力族必须绑定 validator 或 evidence",
         "真实 KDS API 写入",
-        "WAES 写回",
+        "WAME 写回",
         "GFIS 运行层写入",
         "生产 token",
         "生产成本测量",
@@ -256,7 +256,7 @@ def main() -> int:
         "ODF gate evidence",
         "validate_headroom_lcx_*",
         "LCX authorization evidence",
-        "validate_was_waes_kds_rag_writeback_gate_pack.py",
+        "validate_was_wame_kds_rag_writeback_gate_pack.py",
         "writeback evidence",
     ]:
         require(phrase in registry, f"registry missing capability family evidence binding: {phrase}")
@@ -317,7 +317,7 @@ def main() -> int:
         "statuses=fast_admitted,candidate,pilot,controlled,default_enabled,downgraded,disabled,deprecated,superseded "
         "default_enable=risk_tiered pilot_plus_evidence=required "
         "core_methods=CodeGraph,external_search,RAG,multi_agent_parallel "
-        "capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAES_KDS_RAG_writeback "
+        "capability_families=CodeGraph,Agent-Reach,Ontology,WAS,Headroom,OKF_ODF,LCX,WAME_KDS_RAG_writeback "
         f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0

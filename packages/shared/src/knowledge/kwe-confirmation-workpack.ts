@@ -1,4 +1,4 @@
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type KweConfirmationWorkpackTargetType =
   | "fact_candidate"
@@ -37,8 +37,8 @@ export interface KweConfirmationWorkpack {
   poolRefs: string[];
   sourceRefs: string[];
   evidenceRefs: string[];
-  waesGateRefs: string[];
-  waesGateStatus: WaesGateStatus;
+  wameGateRefs: string[];
+  wameGateStatus: WameGateStatus;
   reviewerType: KweConfirmationReviewerType;
   reviewerRefs: string[];
   committeeTriggerReason?: string;
@@ -65,7 +65,7 @@ export interface KweConfirmationWorkpackPolicy {
     workItemAndTargetObjectMustCrossReference: boolean;
     sourceRefsRequired: boolean;
     evidenceRefsRequired: boolean;
-    waesGateRefsRequired: boolean;
+    wameGateRefsRequired: boolean;
     metadataOnlyCannotIncludeRawContent: boolean;
     humanReviewerCannotCompleteCommitteeDecision: boolean;
     committeeReviewerRequiresTriggerReason: boolean;
@@ -78,7 +78,7 @@ export interface KweConfirmationWorkpackPolicy {
   noWriteGuards: {
     writesKweWorkItem: 0;
     writesKdsFact: 0;
-    writesWaesGateResult: 0;
+    writesWameGateResult: 0;
     writesBusinessSystem: 0;
     writesRevenueOrScoreConfirmation: 0;
     writesQuotaTransfer: 0;

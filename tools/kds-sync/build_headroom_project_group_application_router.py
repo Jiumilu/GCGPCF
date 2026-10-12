@@ -73,7 +73,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-8AB5E5E3B6
 title: Headroom Project Group Application Router Evidence
 project: GPCF
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

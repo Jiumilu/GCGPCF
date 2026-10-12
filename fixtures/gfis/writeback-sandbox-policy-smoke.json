@@ -15,7 +15,7 @@
     "sandboxCannotEmitTargetReceipt": true,
     "finalActionAcceptedIsNotWritebackReceipt": true,
     "missingEvidenceBlocks": true,
-    "missingWaesResultBlocks": true,
+    "missingWameResultBlocks": true,
     "missingBusinessOwnerBlocks": true,
     "writesGfis": 0,
     "writesGpc": 0,

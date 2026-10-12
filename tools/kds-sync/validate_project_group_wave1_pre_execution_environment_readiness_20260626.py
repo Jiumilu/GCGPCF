@@ -12,7 +12,7 @@ DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-wave1-pre-executio
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"
 
 PACKS = [
-    "WAVE1-WAES-LINT-RUNTIME-001",
+    "WAVE1-WAME-LINT-RUNTIME-001",
     "WAVE1-GFIS-REAL-SOR-001",
     "WAVE1-GPC-EXTERNAL-RUNTIME-001",
     "WAVE1-BRAIN-HUMAN-REVIEW-001",

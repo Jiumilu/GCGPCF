@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -77,12 +77,12 @@ def main() -> int:
 
     require(evidence.get("evidence_id") == "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622", "invalid evidence id")
     require(evidence.get("status") == "request_package_approved_for_sanitized_precheck_no_measurement", "invalid status")
-    require(evidence.get("scope") == "waes_harness_admission_request_only_no_measurement", "invalid scope")
+    require(evidence.get("scope") == "wame_harness_admission_request_only_no_measurement", "invalid scope")
     require(evidence.get("project_count") == 15, "project count mismatch")
     require(evidence.get("projects") == PROJECTS, "project list mismatch")
     require(evidence.get("requested_decision") == "admitted_for_sanitized_measurement_precheck", "requested decision mismatch")
     require(
-        evidence.get("current_waes_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
+        evidence.get("current_wame_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
         "current decision must be admitted for sanitized precheck",
     )
 
@@ -94,7 +94,7 @@ def main() -> int:
         "sanitized_ledger_contains_no_raw_content",
         "rollback_plan_exists",
         "telemetry_off_required",
-        "waes_harness_decision_required",
+        "wame_harness_decision_required",
         "human_approval_required",
     ]:
         require(preconditions.get(key) is True, f"precondition must be true: {key}")
@@ -124,13 +124,13 @@ def main() -> int:
         "production_ready",
     ]:
         require(gates.get(key) is False, f"gate must be false: {key}")
-    require(gates.get("waes_harness_admitted") is True, "WAES/Harness admission must be true for sanitized precheck")
+    require(gates.get("wame_harness_admitted") is True, "WAME/Harness admission must be true for sanitized precheck")
 
     for phrase in [
         "HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-20260622",
         "request_package_generated | true",
         "authorization_complete | true",
-        "waes_harness_admitted | true",
+        "wame_harness_admitted | true",
         "production_token_measurement_allowed | false",
         "measured_production_tokens | false",
         "production_admission_gate | false",
@@ -144,8 +144,8 @@ def main() -> int:
     require("validate_headroom_lcx_measurement_admission_request.py" in loop_round, "loop round missing validator")
     print(
         "headroom_lcx_measurement_admission_request=pass "
-        "project_count=15 current_waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck "
-        "waes_harness_admitted=true production_token_measurement_allowed=false "
+        "project_count=15 current_wame_harness_admission_decision=admitted_for_sanitized_measurement_precheck "
+        "wame_harness_admitted=true production_token_measurement_allowed=false "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

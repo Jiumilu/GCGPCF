@@ -271,7 +271,7 @@ superseded_by: []
 
 ### 事件
 
-`knowledge.release.effective`、`knowledge.ingest.completed`、`knowledge.access_policy.changed`、`data.read_model_projection.published`、`waes.connector_decision.published`、`waes.ai_authorization_grant.changed`、`waes.acceptance_conclusion.published`
+`knowledge.release.effective`、`knowledge.ingest.completed`、`knowledge.access_policy.changed`、`data.read_model_projection.published`、`wame.connector_decision.published`、`wame.ai_authorization_grant.changed`、`wame.acceptance_conclusion.published`
 
 ### 验收场景
 

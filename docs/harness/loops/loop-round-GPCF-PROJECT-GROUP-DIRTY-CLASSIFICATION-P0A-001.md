@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001
 title: Loop Round GPCF-PROJECT-GROUP-DIRTY-CLASSIFICATION-P0A-001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

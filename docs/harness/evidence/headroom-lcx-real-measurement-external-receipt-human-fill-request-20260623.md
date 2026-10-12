@@ -43,7 +43,7 @@ superseded_by: []
 | `execution_started_at` |
 | `execution_finished_at` |
 | `answer_equivalence` |
-| `waes_harness_receipt_decision` |
+| `wame_harness_receipt_decision` |
 | `rollback_exercised` |
 | `operator_note` |
 

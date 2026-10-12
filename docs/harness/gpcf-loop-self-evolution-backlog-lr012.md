@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0CF4B6EB25
 title: Loop 自我进化 backlog
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

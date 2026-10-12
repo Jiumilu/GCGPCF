@@ -79,7 +79,7 @@ Read model 必须显式阻断：
 - complete_committee_decision
 - approve_gfis_writeback
 - mutate_kds_lifecycle
-- write_waes_gate_result
+- write_wame_gate_result
 - write_business_system
 - call_external_api
 

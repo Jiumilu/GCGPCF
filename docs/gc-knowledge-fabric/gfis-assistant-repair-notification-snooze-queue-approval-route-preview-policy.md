@@ -74,7 +74,7 @@ superseded_by: []
 - createsExternalSharePermission = false。
 - createsPublicationApproval = false。
 - createsHarnessEvidence = false。
-- createsWaesGateResult = false。
+- createsWameGateResult = false。
 - createsKweWorkItem = false。
 - persistsEvidence = false。
 - approvesBusinessWrite = false。
@@ -90,7 +90,7 @@ superseded_by: []
 - writesApprovalRequest / writesApprovalDecision。
 - writesShareLink / writesAclGrant / writesExternalSharePermission。
 - writesPublicationApproval。
-- writesWaesGateResult / writesKweWorkItem / writesHarnessEvidence。
+- writesWameGateResult / writesKweWorkItem / writesHarnessEvidence。
 - writesKdsLifecycle / writesKdsFact / writesKdsAcceptedFact。
 - writesExternalApi。
 

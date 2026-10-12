@@ -59,7 +59,7 @@ loop_task_with_codegraph:
   harness:
     impact_report_ref:
     evidence_bundle_ref:
-  waes:
+  wame:
     gate_required:
     gate_result:
   kds_okf:

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F350ADEC6B
 title: GlobalCloud MMC Loop State
 project: MMC
-related_projects: [GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

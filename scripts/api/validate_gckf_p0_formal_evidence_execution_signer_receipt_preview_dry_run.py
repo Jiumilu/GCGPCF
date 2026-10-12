@@ -91,7 +91,7 @@ def main() -> int:
         {
             "request_owner",
             "repair_reviewer",
-            "waes_gate_owner",
+            "wame_gate_owner",
             "kwe_workflow_owner",
             "harness_reviewer",
             "committee_representative",
@@ -189,7 +189,7 @@ def main() -> int:
             "approvalRoleRosterRef",
             "requestOwnerReceiptRef",
             "repairReviewerReceiptRef",
-            "waesGateOwnerReceiptRef",
+            "wameGateOwnerReceiptRef",
             "kweWorkflowOwnerReceiptRef",
             "harnessReviewerReceiptRef",
             "committeeRepresentativeReceiptRef",

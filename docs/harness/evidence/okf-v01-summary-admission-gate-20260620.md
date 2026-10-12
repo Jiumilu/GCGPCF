@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9E8541129C
 title: OKF v0.1 摘要准入门禁证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

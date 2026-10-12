@@ -2,7 +2,7 @@
 """Validate RAG response citation packet dry-run.
 
 This validator reads local OKF, shared type and fixture files only. It does not
-run retrieval, call model providers, write KDS facts, create WAES gate results,
+run retrieval, call model providers, write KDS facts, create WAME gate results,
 create KWE work items, write business systems, or call external APIs.
 """
 
@@ -93,7 +93,7 @@ def main() -> int:
         "noAclAllowedInPacket": hard["no_acl_allowed_in_packet"],
         "packetPassIsFormalFact": hard["packet_pass_is_formal_fact"],
         "writesKdsFact": no_write["writes_kds_fact"],
-        "writesWaesGateResult": no_write["writes_waes_gate_result"],
+        "writesWameGateResult": no_write["writes_wame_gate_result"],
         "writesKweWorkItem": no_write["writes_kwe_work_item"],
         "writesBusinessSystem": no_write["writes_business_system"],
         "writesRevenueOrScoreConfirmation": no_write["writes_revenue_or_score_confirmation"],
@@ -118,7 +118,7 @@ def main() -> int:
         f"citation_fields={checks['minimumCitationFieldCount']} "
         f"citations={checks['citationCount']} highest={checks['highestCitationStrength']} "
         "l0_citations=0 blocked_rag_citations=0 metadata_only_citations=1 "
-        "missing_evidence=0 writes_kds_fact=0 writes_waes_gate_result=0 "
+        "missing_evidence=0 writes_kds_fact=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_business_system=0 "
         "writes_revenue_or_score_confirmation=0 writes_external_api=0"
     )

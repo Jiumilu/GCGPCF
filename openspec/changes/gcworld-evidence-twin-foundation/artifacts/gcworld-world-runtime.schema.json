@@ -70,7 +70,7 @@
         "serviceType": {"$ref": "#/$defs/serviceType"},
         "name": {"$ref": "#/$defs/nonEmpty"},
         "ownerSystem": {"$ref": "#/$defs/nonEmpty"},
-        "authoritySource": {"enum": ["WAS", "KDS", "GCWORLD", "XWAIL", "WAES", "KWE", "MMC", "business_system"]},
+        "authoritySource": {"enum": ["WAS", "KDS", "GCWORLD", "XWAIL", "WAME", "KWE", "MMC", "business_system"]},
         "authorityMode": {"enum": ["reference_only", "derived_projection", "runtime_orchestration", "governance_adapter", "query_projection", "authority_owner"]},
         "contractVersion": {"$ref": "#/$defs/nonEmpty"},
         "stableIdentifiersRequired": {"const": true},

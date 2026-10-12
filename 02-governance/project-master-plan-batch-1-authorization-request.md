@@ -50,7 +50,7 @@ batch_projects:
 
 | project | 当前状态 | 本批动作 | 是否结构性变化 | 是否需要用户确认 |
 |---|---|---|---|---|
-| GlobalCloud WAME | 缺少唯一总体方案 | 新建 `GlobalCloud WAES 总体方案.md` | 是 | 是 |
+| GlobalCloud WAME | 缺少唯一总体方案 | 新建 `GlobalCloud WAME 总体方案.md` | 是 | 是 |
 | GlobalCloud GFIS | 缺少唯一总体方案 | 新建 `GlobalCloud GFIS 总体方案.md` | 是 | 是 |
 | GlobalCloud PVAOS | 缺少唯一总体方案 | 新建 `GlobalCloud PVAOS 总体方案.md` | 是 | 是 |
 | GlobalCloud KDS | 缺少唯一总体方案 | 新建 `GlobalCloud KDS 总体方案.md` | 是 | 是 |
@@ -62,7 +62,7 @@ batch_projects:
 新增项目方案：
 
 ```text
-/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/GlobalCloud WAES 总体方案.md
+/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/GlobalCloud WAME 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/GlobalCloud KDS 总体方案.md

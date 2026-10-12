@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C4EB23909A
 title: CodeGraph 业务开发执行层 Pilot Pack 证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,7 +53,7 @@ codegraph affected "tools/kds-sync/validate_codegraph_dev_execution_admission.py
 
 禁止触碰：
 
-- GFIS/GPC/PVAOS/WAES/KDS/Brain/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS 的业务源码。
+- GFIS/GPC/PVAOS/WAME/KDS/Brain/PKC/XiaoC/XGD/XiaoG/MMC/Studio/WAS 的业务源码。
 - 生产配置。
 - 真实 KDS TOKEN 或密钥文件。
 - `.codegraph/**` 的 Git 跟踪状态。
@@ -88,7 +88,7 @@ review_rework_count=0
 
 ## 状态边界
 
-本轮不代表业务完成，不代表 WAES 通过，不代表 Harness 最终验收，不授予生产写入或外部 API 写入权限，不升级 accepted/integrated/production_ready。
+本轮不代表业务完成，不代表 WAME 通过，不代表 Harness 最终验收，不授予生产写入或外部 API 写入权限，不升级 accepted/integrated/production_ready。
 
 ## 下一轮输入
 

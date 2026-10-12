@@ -22,7 +22,7 @@ project_coverage:
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
     - slug: xiaoc
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
-    - slug: waes
+    - slug: wame
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
     - slug: gpc
       required_skills: [globalcloud-loop-orchestrator, globalcloud-document-governance, globalcloud-project-group-git-clean]
@@ -73,7 +73,7 @@ engineering_domains:
       - brain
       - was
       - xiaoc
-      - waes
+      - wame
       - gpc
       - studio
       - gpcf

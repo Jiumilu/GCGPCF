@@ -149,7 +149,7 @@ def render_markdown(report: dict[str, Any]) -> str:
         "doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-PRE-LIVE-PREFLIGHT-20260626",
         "title: Agent-Reach P9S Source Direct Pre-Live Preflight 2026-06-26",
         "project: KDS",
-        "related_projects: [GFIS, WAS, WAES, KDS, GPCF]",
+        "related_projects: [GFIS, WAS, WAME, KDS, GPCF]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",

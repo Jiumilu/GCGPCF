@@ -72,7 +72,7 @@ export type GfisAssistantDks219RoutingQueueNotificationAckEscalationDigestDelive
   | "create_committee_decision"
   | "create_freeze_action"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "persist_evidence"
   | "approve_business_write"
   | "promote_lifecycle"
@@ -102,7 +102,7 @@ export interface GfisAssistantDks219RoutingQueueNotificationAckEscalationDigestD
   writesApprovalDecision: 0;
   writesCommitteeDecision: 0;
   writesFreezeAction: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesHarnessEvidence: 0;
   writesKdsLifecycle: 0;
   writesKdsFact: 0;
@@ -162,7 +162,7 @@ export interface GfisAssistantDks219RoutingQueueNotificationAckEscalationDigestD
   createsCommitteeDecision: false;
   createsFreezeAction: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;
   promotesLifecycle: false;

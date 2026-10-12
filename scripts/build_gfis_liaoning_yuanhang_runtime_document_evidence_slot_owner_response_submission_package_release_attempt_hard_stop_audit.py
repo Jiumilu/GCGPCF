@@ -78,14 +78,14 @@ def build_audit() -> dict[str, Any]:
                 "attempted_release": True,
                 "attempted_review_queue": True,
                 "attempted_runtime_intake": True,
-                "attempted_waes_review": True,
+                "attempted_wame_review": True,
                 "hard_stop": True,
                 "blocker_count": len(BLOCKERS),
                 "blockers": BLOCKERS,
                 "release_allowed": False,
                 "review_queue_allowed": False,
                 "runtime_intake_allowed": False,
-                "waes_review_allowed": False,
+                "wame_review_allowed": False,
                 "verified_artifact_allowed": False,
                 "state": "release_attempt_hard_stopped_no_submission_package",
             }
@@ -115,7 +115,7 @@ def build_audit() -> dict[str, Any]:
         "release_allowed": 0,
         "review_queue": 0,
         "runtime_intake": 0,
-        "waes_review": 0,
+        "wame_review": 0,
         "verified": 0,
         "runtime_sop_e2e": "repair_required",
         "state": "owner_response_submission_package_release_attempt_hard_stopped_no_submission_packages",
@@ -133,7 +133,7 @@ def build_audit() -> dict[str, Any]:
             "production_write": False,
             "real_external_api_write": False,
             "real_kds_write": False,
-            "real_waes_write": False,
+            "real_wame_write": False,
             "bench_migrate": False,
             "schema_sync": False,
             "permission_change": False,
@@ -171,7 +171,7 @@ def render_markdown(audit: dict[str, Any]) -> str:
             f"- release_allowed: `{audit['release_allowed']}`",
             f"- review_queue: `{audit['review_queue']}`",
             f"- runtime_intake: `{audit['runtime_intake']}`",
-            f"- waes_review: `{audit['waes_review']}`",
+            f"- wame_review: `{audit['wame_review']}`",
             f"- verified: `{audit['verified']}`",
             f"- runtime_sop_e2e: `{audit['runtime_sop_e2e']}`",
             "",
@@ -184,10 +184,10 @@ def render_markdown(audit: dict[str, Any]) -> str:
             "## Gate Rule",
             "",
             "- 现代精工 OEM 为当前 GFIS 运行层承载，葛化自建工厂投产后继续使用同一 GFIS 运行时系统。",
-            "- 未发现真实 owner response submission package 时，任何 release、review queue、runtime intake 或 WAES review 尝试都必须 hard-stop。",
+            "- 未发现真实 owner response submission package 时，任何 release、review queue、runtime intake 或 WAME review 尝试都必须 hard-stop。",
             "- GFIS Demo、合同审阅稿、KDS 候选、用户口述和 Loop 生成文件都不能替代 source-of-record live proof。",
             "- 本轮未修改 ECS、阿里云、Caddy/Nginx、SSH 隧道、Docker/Compose、systemd/launchd 或任何运行时配置；Hermes 仍为只读边界。",
-            "- 不生产写入、不真实外部 API 写入、不真实 KDS/WAES 写入、不 bench migrate、不 schema sync、不权限变更、不 accepted/integrated。",
+            "- 不生产写入、不真实外部 API 写入、不真实 KDS/WAME 写入、不 bench migrate、不 schema sync、不权限变更、不 accepted/integrated。",
             "",
         ]
     )
@@ -206,7 +206,7 @@ def main() -> None:
         f"blockers={audit['total_blocker_count']} submission_packages_found={audit['submission_packages_found']} "
         f"structure_valid_submission_packages={audit['structure_valid_submission_packages']} "
         f"quarantine_candidates={audit['quarantine_candidates']} release_allowed=0 review_queue=0 "
-        f"runtime_intake=0 waes_review=0 verified=0 state={audit['state']} runtime_sop_e2e=repair_required"
+        f"runtime_intake=0 wame_review=0 verified=0 state={audit['state']} runtime_sop_e2e=repair_required"
     )
 
 

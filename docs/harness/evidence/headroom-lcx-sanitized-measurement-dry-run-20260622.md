@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A1E6CF72D2
 title: Headroom LCX Sanitized Measurement Dry Run Evidence 20260622
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 | artifact | path |
 |---|---|
 | sanitized ledger | `fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json` |
-| WAES/Harness admitted decision | `docs/harness/evidence/headroom-lcx-waes-harness-admission-decision-admitted-20260622.json` |
+| WAME/Harness admitted decision | `docs/harness/evidence/headroom-lcx-wame-harness-admission-decision-admitted-20260622.json` |
 | authorized measurement precheck | `docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json` |
 
 ## 门禁
@@ -40,7 +40,7 @@ superseded_by: []
 |---|---|
 | sanitized_measurement_dry_run_gate | true |
 | check_only | true |
-| waes_harness_admitted | true |
+| wame_harness_admitted | true |
 | authorized_precheck_gate | true |
 | entry_count | 1 |
 | saving_rate | not_calculated |

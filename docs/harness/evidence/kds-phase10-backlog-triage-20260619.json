@@ -2174,7 +2174,7 @@
     {
       "action": "update",
       "source_path": "08-evidence-samples/README.md",
-      "kds_path": "开发/04-WAES/08-evidence-samples/README.md",
+      "kds_path": "开发/04-WAME/08-evidence-samples/README.md",
       "bucket": "generated_readme_surface",
       "disposition": "hold_until_self_refresh_stable",
       "reason": "generated directory index"

@@ -8,7 +8,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -20,7 +20,7 @@
     "Studio",
     "WAS"
   ],
-  "source_gate_pack": "docs/harness/evidence/was-waes-kds-rag-writeback-gate-pack-20260621.json",
+  "source_gate_pack": "docs/harness/evidence/was-wame-kds-rag-writeback-gate-pack-20260621.json",
   "source_scenario_matrix": "docs/harness/evidence/was-scenario-profile-matrix-20260621.json",
   "registry_categories": [
     {
@@ -44,7 +44,7 @@
         "source_record_to_runtime_object",
         "runtime_object_to_evidence",
         "kds_fact_to_ontology_contract",
-        "waes_decision_to_promotion",
+        "wame_decision_to_promotion",
         "rag_reference_to_kds_fact",
         "pool_link_to_business_action"
       ]
@@ -54,7 +54,7 @@
       "entries": [
         "candidate_submitted",
         "precheck_rejected",
-        "waes_gate_input_prepared",
+        "wame_gate_input_prepared",
         "kds_binding_requested",
         "rag_reference_admitted",
         "writeback_precheck_requested",
@@ -67,7 +67,7 @@
         "source_record_original",
         "owner_confirmation",
         "kds_backlink",
-        "waes_gate_input",
+        "wame_gate_input",
         "loop_round",
         "validator_output",
         "negative_fixture_rejection"
@@ -79,7 +79,7 @@
         "candidate_only",
         "hold_required",
         "pending_business_verification",
-        "waes_review_pending",
+        "wame_review_pending",
         "accepted_blocked",
         "integrated_blocked",
         "production_ready_blocked"
@@ -90,7 +90,7 @@
       "entries": [
         "gfis_source_record_intake",
         "kds_source_backlink",
-        "waes_gate_input",
+        "wame_gate_input",
         "rag_controlled_reference",
         "gfis_kwe_writeback_precheck",
         "eleven_pools_link"
@@ -102,21 +102,21 @@
     "relationship": "WAS relationship contract",
     "event": "WAS event contract",
     "evidence": "Loop/KDS evidence contract",
-    "state": "GPCF/WAES state contract",
+    "state": "GPCF/WAME state contract",
     "interface": "GFIS/KWE/RAG/Pool interface contract"
   },
   "promotion_policy": {
     "kds_source_of_record": "required",
-    "waes_decision": "required_before_promotion",
+    "wame_decision": "required_before_promotion",
     "loop_evidence": "required",
     "llm_candidate": "never_official_fact",
-    "runtime_writeback": "blocked_without_waes_kds_owner_confirmation"
+    "runtime_writeback": "blocked_without_wame_kds_owner_confirmation"
   },
   "future_project_policy": {
     "admission_required": true,
     "must_bind_project_group_scope": true,
     "must_map_to_registry_categories": ["object", "relationship", "event", "evidence", "state", "interface"],
-    "must_not_bypass_kds_waes_loop": true
+    "must_not_bypass_kds_wame_loop": true
   },
   "fixture_gate": {
     "positive_fixtures": 1,
@@ -135,7 +135,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -148,7 +148,7 @@
   "non_claims": [
     "registry is a semantic contract index, not a knowledge base",
     "does not replace KDS source-of-record",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not write GFIS or KWE runtime",
     "does not promote RAG output to official fact",
     "does not mark accepted, integrated, or production ready"

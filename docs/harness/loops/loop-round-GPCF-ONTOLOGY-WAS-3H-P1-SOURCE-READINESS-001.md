@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6F29F135DE
 title: Loop Round GPCF-ONTOLOGY-WAS-3H-P1-SOURCE-READINESS-001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -53,18 +53,18 @@ P0 启动校准和 baseline validator replay 已通过。P1 目标是形成未�
 ## loop_was_context
 
 ```yaml
-project_scope: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
 related_flows: [commerce_flow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [ontology_was_p1_source_record_readiness]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]
 evidence_refs: [docs/harness/evidence/ontology-was-3h-p1-source-record-readiness-20260621.md]
-waes_gate_refs: [waes://gate/customer-order-source-record-review]
+wame_gate_refs: [wame://gate/customer-order-source-record-review]
 kds_backlinks: [pending_real_source_record]
 promotion_blockers: [valid_source_record_missing, customer_confirmation_missing]
 next_action: continue_to_p2_gate_replay
-no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready
+no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready
 ```
 
 ## 反馈

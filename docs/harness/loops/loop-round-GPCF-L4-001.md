@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-352145BD54
 title: GPCF-L4-001 Minimum Closed Loop Control Plane
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 | 字段 | 值 |
 |---|---|
 | Round ID | GPCF-L4-001 |
-| 涉及项目 | GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF |
+| 涉及项目 | GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF |
 | 本轮业务节点 | 项目群最小闭环控制面 |
 | 真实项目仓路径 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF` |
 | substantive_round | true for GPCF governance implementation; false for business project runtime |

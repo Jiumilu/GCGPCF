@@ -32,7 +32,7 @@ FUNCTION_DOMAINS = [
     "委员会 DecisionRecord 与争议处理机制",
     "底座 11 池挂接与增强治理账本",
     "RAG 安全准入分级",
-    "KDS / WAES / GFIS / GPCF / WIKI / 小即 / 飞书协同边界",
+    "KDS / WAME / GFIS / GPCF / WIKI / 小即 / 飞书协同边界",
 ]
 
 CONTROL_TOKENS = [
@@ -83,7 +83,7 @@ FORBIDDEN_UPGRADE_TOKENS = [
     "committee_decided。",
     "rag_strong_reference_approved。",
     "gfis_writeback_executed。",
-    "waes_gate_passed。",
+    "wame_gate_passed。",
     "kds_api_synced。",
 ]
 

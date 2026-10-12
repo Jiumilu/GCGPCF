@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-33DE44F307
 title: Agent-Reach Authoritative Source Verification 20260621
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -42,14 +42,14 @@ superseded_by: []
 | knowledge_provenance_rag | accept_limited | RAG governance context only | 与 citation/source-traceability 治理原则一致，但不是 GlobalCloud canonical policy |
 | green_supply_chain_policy | accept_limited | official standard metadata reference | 商业镜像不能 canonical，但 GB/T 39256-2020 已由官方标准公开平台核验 |
 | factory_execution_traceability | reject | GFIS source-of-record or canonical architecture evidence | 厂商 glossary 不能定义 GFIS source-of-record |
-| ai_agent_evidence_gate | accept_limited | open-source tool candidate only | 可作为治理工具候选，但不是 WAES policy，仍需法律/安全评审 |
+| ai_agent_evidence_gate | accept_limited | open-source tool candidate only | 可作为治理工具候选，但不是 WAME policy，仍需法律/安全评审 |
 | agent_reach_capability | accept_limited | Agent-Reach capability metadata only | 官方仓库元数据与 PoC 版本/许可一致，但不证明生产集成 |
 
 ## 准入判定
 
 | 字段 | 判定 |
 |---|---|
-| waes_review_status | `limited_verification_complete` |
+| wame_review_status | `limited_verification_complete` |
 | kds_admission | `limited_candidate_only` |
 | rag_admission | `limited` |
 | status_upgrade_allowed | false |
@@ -65,7 +65,7 @@ superseded_by: []
 - 不创建 GFIS source-of-record。
 - 不升级 GPCF accepted/integrated/production_ready 状态。
 - 不把 Agent-Reach 结果转成强 RAG 引用。
-- 不代表 WAES/KDS 已将这些来源写入主知识库。
+- 不代表 WAME/KDS 已将这些来源写入主知识库。
 
 ## 下一门禁
 

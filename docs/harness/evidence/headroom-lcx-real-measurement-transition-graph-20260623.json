@@ -8,7 +8,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -82,7 +82,7 @@
       "evidence": "HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623"
     },
     {
-      "node_id": "waes_harness_decision",
+      "node_id": "wame_harness_decision",
       "status": "precheck_only",
       "evidence": "admitted_for_sanitized_measurement_precheck"
     },
@@ -140,12 +140,12 @@
     },
     {
       "from": "real_measurement_authorization_window",
-      "to": "waes_harness_decision",
-      "relation": "requires_waes_harness_admission",
+      "to": "wame_harness_decision",
+      "relation": "requires_wame_harness_admission",
       "allowed": false
     },
     {
-      "from": "waes_harness_decision",
+      "from": "wame_harness_decision",
       "to": "sanitized_token_ledger",
       "relation": "may_reference_sanitized_ledger_only",
       "allowed": true
@@ -225,10 +225,10 @@
       "maps_to": "rollback_runbook"
     },
     {
-      "requirement_id": "waes_harness_admission_decision",
+      "requirement_id": "wame_harness_admission_decision",
       "current_value": "admitted_for_sanitized_measurement_precheck",
       "future_value": "future_admitted_for_real_measurement_only_if_authorized",
-      "maps_to": "waes_harness_decision"
+      "maps_to": "wame_harness_decision"
     },
     {
       "requirement_id": "real_business_equivalence_measurement",

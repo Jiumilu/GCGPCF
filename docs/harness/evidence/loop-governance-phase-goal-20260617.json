@@ -42,7 +42,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0
   },
   "execution_checks": [
@@ -55,8 +55,8 @@
   ],
   "non_claims": [
     "This governance phase goal does not mean GFIS implementation is complete.",
-    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, or integrated status.",
-    "This evidence does not replace customer, owner, WAES, KDS, UAT, production, or finance confirmation."
+    "This evidence does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, or integrated status.",
+    "This evidence does not replace customer, owner, WAME, KDS, UAT, production, or finance confirmation."
   ],
   "next_governance_queue": [
     "Integrate phase-goal validation into governance docs validator.",

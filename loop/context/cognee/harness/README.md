@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6BA1B0CCA6
 title: harness
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0

@@ -30,7 +30,7 @@
     "rollback_verified": true
   },
   "admission_decision": {
-    "waes_review_status": "ready_for_review",
+    "wame_review_status": "ready_for_review",
     "kds_admission": "limited_candidate_only",
     "rag_admission": "limited",
     "status_upgrade_allowed": false,
@@ -44,7 +44,7 @@
     "temporary_mcp_configuration_must_be_rollback_verified",
     "cookie_or_login_channels_require_separate_authorization_and_redaction_gate"
   ],
-  "next_gate": "waes_kds_review_or_l3_candidate_pipeline",
+  "next_gate": "wame_kds_review_or_l3_candidate_pipeline",
   "non_claims": [
     "does not prove production integration",
     "does not write KDS canonical Markdown",

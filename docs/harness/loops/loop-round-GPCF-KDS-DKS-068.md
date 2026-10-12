@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F5839F8424
 title: LOOP Round GPCF-KDS-DKS-068 - GC-Knowledge Fabric Governance Ledger Dry-run
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 建立 Contribution、Revenue、Quota、Bounty 四类治理台账 dry-run，验证“有收入才进正式收益”“自购 AI 额度不进统一收益池”“候选贡献不能直接确认”“悬赏结算必须绑定缺口和验收状态”等 P0 底线可以被本地 fixture 机检。
 
-本轮只运行本地 fixture 和 dry-run validator，不触达真实 KDS、GFIS、GPC、WAES、财务系统或外部 API。
+本轮只运行本地 fixture 和 dry-run validator，不触达真实 KDS、GFIS、GPC、WAME、财务系统或外部 API。
 
 ## 2. 本轮输入资料
 
@@ -57,7 +57,7 @@ superseded_by: []
 - `python3 scripts/governance/validate_governance_ledger_dry_run.py`
 - `python3 scripts/kds/validate_kds_search_dry_run.py`
 - `python3 scripts/gfis/validate_gfis_assistant_no_write_smoke.py`
-- `python3 scripts/waes/validate_waes_minimum_gates.py`
+- `python3 scripts/wame/validate_wame_minimum_gates.py`
 - `python3 scripts/kwe/validate_kwe_minimum_workflow.py`
 - `tsc -p packages/shared/tsconfig.json --noEmit`
 - `tsc -p packages/api/tsconfig.json --noEmit`
@@ -74,7 +74,7 @@ superseded_by: []
 | Fixture JSON 解析 | `governance_ledger_fixture_json=pass` |
 | KDS Search dry-run | `kds_search_dry_run=pass objects=5 results=1 tenant_filter=covered acl_filter=covered domain_filter=covered pool_filter=covered project_filter=covered rag_filter=covered keyword_filter=covered result_fields=covered real_kds_reads=0 vector_reads=0 graph_reads=0` |
 | GFIS Assistant no-write smoke | `gfis_assistant_no_write_smoke=pass runs=4 knowledge=covered usage=covered document_acceptance=covered writeback_candidate=covered business_writes=0 external_api_writes=0 kds_writes=0` |
-| WAES dry-run validator | `waes_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
+| WAME dry-run validator | `wame_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
 | KWE dry-run validator | `kwe_minimum_workflow=pass workflows=4 promotable_candidates=1 blocked_or_pending_candidates=3 ai_direct_fact_writes=0 kds_fact_writes=0 gfis_writes=0` |
 | Shared Types 编译检查 | `tsc -p packages/shared/tsconfig.json --noEmit` 通过 |
 | API Contract 编译检查 | `tsc -p packages/api/tsconfig.json --noEmit` 通过 |

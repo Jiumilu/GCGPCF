@@ -27,7 +27,7 @@
     "dryRunOnly": true,
     "committeeRoutingRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -108,7 +108,7 @@
       "harnessReviewInputRef",
       "requiredEvidenceRefs",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -178,7 +178,7 @@
       "mark_p0_accepted",
       "convert_committee_trigger_preview_to_case",
       "convert_committee_trigger_preview_to_decision",
-      "override_waes_gate",
+      "override_wame_gate",
       "grant_p1_admission",
       "approve_v1_upgrade"
     ]
@@ -234,7 +234,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "committee_trigger_preview_converted_to_case",
     "committee_trigger_preview_converted_to_decision",
     "p1_admission_granted",

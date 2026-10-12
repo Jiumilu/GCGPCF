@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P6-LIMITED-LIVE-SEARCH-DRY-RUN-PREPARATION-20260622
 title: Agent-Reach P6 最小真实搜索 Dry-run 准备证据 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 | q1 | GPCF | web | `GlobalCloud GPCF LOOP evidence search integration` |
 | q2 | GFIS | web | `GlobalCloud GFIS source record search evidence` |
 | q3 | KDS | rss | `KDS knowledge fabric controlled document search` |
-| q4 | WAES | web | `WAES governance evidence search quality gate` |
+| q4 | WAME | web | `WAME governance evidence search quality gate` |
 | q5 | GPC | bilibili | `GlobalCloud project governance search quality` |
 
 ## 输出契约

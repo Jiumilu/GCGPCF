@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F4ED12C35F
 title: Loop Round GPCF-L4-GFIS-REPAIR-151
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -58,13 +58,13 @@ superseded_by: []
 GFIS validator：
 
 ```text
-liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan=pass handoff_items=5 formal_receiving_directories_scanned=5 rejected_examples_scanned=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=formal_receipt_submission_file_scan_empty runtime_sop_e2e=repair_required
+liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan=pass handoff_items=5 formal_receiving_directories_scanned=5 rejected_examples_scanned=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=formal_receipt_submission_file_scan_empty runtime_sop_e2e=repair_required
 ```
 
 GFIS 主 runtime SOP validator expected exit 2：
 
 ```text
-runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan=formal_receipt_submission_file_scan_empty:handoff_items=5:formal_receiving_directories_scanned=5:rejected_examples_scanned=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan=formal_receipt_submission_file_scan_empty:handoff_items=5:formal_receiving_directories_scanned=5:rejected_examples_scanned=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 RUNTIME_EXIT_CODE:2
 ```
 
@@ -85,7 +85,7 @@ npm run test:e2e
 - completed_handoffs: 0
 - review_queue: 0
 - runtime_intake: 0
-- WAES_review: 0
+- WAME_review: 0
 - verified: 0
 - accepted/integrated: 0
 

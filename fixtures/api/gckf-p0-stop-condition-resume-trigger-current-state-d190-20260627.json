@@ -23,8 +23,8 @@
       "arrivalScanRefreshRequired": true
     },
     {
-      "triggerId": "waes_review_note",
-      "requiredEvidence": "WAES review note",
+      "triggerId": "wame_review_note",
+      "requiredEvidence": "WAME review note",
       "satisfied": false,
       "arrivalScanRefreshRequired": true
     },

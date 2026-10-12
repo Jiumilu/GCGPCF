@@ -10,7 +10,7 @@
         "query": "葛化预运营订单是否可以进入GFIS正式写回？"
       },
       "response": {
-        "answer": "只能形成候选写回建议，必须经过WAES和人工确认。",
+        "answer": "只能形成候选写回建议，必须经过WAME和人工确认。",
         "citations": ["ko-order-001"],
         "gaps": ["gap-human-confirmation-001"],
         "noWrite": true,
@@ -29,7 +29,7 @@
       },
       "response": {
         "answer": "提示POD缺口并创建候选缺口，不直接改变订单状态。",
-        "manualConfirmationPoints": ["pod_owner_confirm", "waes_writeback_gate"],
+        "manualConfirmationPoints": ["pod_owner_confirm", "wame_writeback_gate"],
         "noWrite": true,
         "businessWrites": 0,
         "externalApiWrites": 0
@@ -47,7 +47,7 @@
       "response": {
         "factCandidates": ["fc-source-backed-001"],
         "gaps": ["gap-pod-001"],
-        "gateResults": ["waes-gate-evidence-001"],
+        "gateResults": ["wame-gate-evidence-001"],
         "requiresHumanConfirmation": true,
         "requiresCommittee": false,
         "noWrite": true,
@@ -65,7 +65,7 @@
       },
       "response": {
         "approvedForBusinessWrite": false,
-        "gateResults": ["waes-gate-writeback-001"],
+        "gateResults": ["wame-gate-writeback-001"],
         "noWrite": true,
         "businessWrites": 0,
         "externalApiWrites": 0

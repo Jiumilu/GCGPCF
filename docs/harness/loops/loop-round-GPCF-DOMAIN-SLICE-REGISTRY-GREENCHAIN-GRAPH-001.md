@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BCA1A28962
 title: Loop Round GPCF Domain Slice Registry GreenChain Graph 001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## 输入
 
 - 业务域注册请求（`industrial-green-chain-graph-domain-registration-request-20261011`）**已受理（accepted，2026-10-11）**。
-- WAS 项目群 registry `future_project_policy`：admission_required／scope binding／六类目映射／不绕 KDS-WAES loop。
+- WAS 项目群 registry `future_project_policy`：admission_required／scope binding／六类目映射／不绕 KDS-WAME loop。
 
 ## 动作
 

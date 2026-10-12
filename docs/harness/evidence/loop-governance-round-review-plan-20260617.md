@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E768727850
 title: Loop 治理轮次审查计划证据
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -58,4 +58,4 @@ loop_round_efficiency_audit=pass total_rounds=335 audit_checked=30 hard_checked=
 - does not rewrite historical Loop round records in bulk.
 - 本 evidence 不批量改写历史 round records。
 - 本 evidence 不证明 GFIS runtime SOP E2E 已通过。
-- 本 evidence 不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本 evidence 不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。

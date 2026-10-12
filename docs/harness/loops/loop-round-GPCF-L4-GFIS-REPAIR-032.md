@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8859BC723B
 title: GPCF L4 GFIS Repair 032 运行时质量检验修复候选
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -34,7 +34,7 @@ superseded_by: []
 
 - GFIS 运行时自诊断仍报告 `runtime_gap_resolution_plan=repair_required`。
 - 上一轮已为 `incoming_quality_inspection` 创建 candidate-only 修复项。
-- `get_runtime_quality_inventory_gate` still reports blocked gates: `quality_inspection`, `waes_quality_evidence`, `waes_inventory_evidence` and `kds_inventory_backlink`.
+- `get_runtime_quality_inventory_gate` still reports blocked gates: `quality_inspection`, `wame_quality_evidence`, `wame_inventory_evidence` and `kds_inventory_backlink`.
 
 ## 动作
 
@@ -82,7 +82,7 @@ status=pass_demo_only
 
 - 不进行生产写入。
 - 不进行真实外部 API 写入。
-- 不提交质量记录、不创建库存、不释放库存批次、不释放交付、不进行 WAES/KDS 最终写入、POD、财务确认、accepted 或 integrated 状态。
+- 不提交质量记录、不创建库存、不释放库存批次、不释放交付、不进行 WAME/KDS 最终写入、POD、财务确认、accepted 或 integrated 状态。
 - Demo 仍仅作为显示回归验证。
 
 ## 结果

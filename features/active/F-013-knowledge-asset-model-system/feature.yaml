@@ -9,7 +9,7 @@ scope:
   in:
     - GKE-001 项目群一级知识工程上位规范及跨仓职责、生命周期、交接和验收边界
     - GKE-001 与 LOOP Program、Project、Feature、Governance Loop、Delivery Loop、Evidence 和 Handoff 的全量绑定
-    - AAAS、Brain、WAS、XiaoC、WAES、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD、ICP 的知识工程职责与权威边界
+    - AAAS、Brain、WAS、XiaoC、WAME、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD、ICP 的知识工程职责与权威边界
     - GPCF 项目群知识资产术语、职责、机器 Schema、受控词表和综合方案
     - canonical contract manifest、依赖哈希和确定性只读 validator
     - OKF KnowledgeObject 与 KnowledgeAssetEnvelope 配对示例及对象类型兼容映射
@@ -18,7 +18,7 @@ scope:
     - 飞书妙记会议纪要的无真实数据示例和后续实施路径
   out:
     - KDS 数据库、API、ACL 或真实资料写入
-    - Brain、MMC、WAES 或其他项目源码修改
+    - Brain、MMC、WAME 或其他项目源码修改
     - 部署、状态提升、客户验收或生产声明
     - Studio 本地资料主链、Brain 业务事实持久化或业务系统状态写入
 acceptance:

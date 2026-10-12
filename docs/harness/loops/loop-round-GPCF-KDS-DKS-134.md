@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-39CF3E7C04
 title: LOOP Round GPCF KDS DKS-134
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-133 acknowledgement digest delivery preview，但只展示候选投递确认人、候选确认方式、阻断确认数量、确认边界和下一步建议，不创建真实 delivery acknowledgement、delivery、notification、digest、acknowledgement、read receipt、提醒、审批请求、审批决定、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-133 acknowledgement digest delivery preview，但只展示候选投递确认人、候选确认方式、阻断确认数量、确认边界和下一步建议，不创建真实 delivery acknowledgement、delivery、notification、digest、acknowledgement、read receipt、提醒、审批请求、审批决定、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
@@ -59,4 +59,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-134 仍是本地预览与候选展示能力，不代表 delivery acknowledgement、delivery、notification、digest、acknowledgement、read receipt、提醒、审批请求、审批决定、KWE 工单、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-135：approval acknowledgement digest delivery acknowledgement escalation preview no-write，用于展示候选接收确认后的升级边界，但仍不得写入真实通知、确认、审批或 evidence。
+DKS-134 仍是本地预览与候选展示能力，不代表 delivery acknowledgement、delivery、notification、digest、acknowledgement、read receipt、提醒、审批请求、审批决定、KWE 工单、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-135：approval acknowledgement digest delivery acknowledgement escalation preview no-write，用于展示候选接收确认后的升级边界，但仍不得写入真实通知、确认、审批或 evidence。

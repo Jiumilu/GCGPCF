@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B32E9CBB6A
 title: CodeGraph GFIS 残余 added Locator 证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

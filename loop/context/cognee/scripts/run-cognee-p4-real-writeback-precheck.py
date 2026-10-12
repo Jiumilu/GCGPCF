@@ -25,7 +25,7 @@ REQUIRED_CASE_FIELDS = [
     "payload_tier",
     "harness_evidence_ref",
     "owner_authorization_present",
-    "waes_decision",
+    "wame_decision",
     "marker_gate",
     "answer_equivalence",
     "write_requested",
@@ -87,7 +87,7 @@ def case_to_record(case: dict) -> dict:
         "harness_evidence_ref": case["harness_evidence_ref"],
         "retrieval_query_hash": case["retrieval_query_hash"],
         "marker_gate": case["marker_gate"],
-        "waes_decision": case["waes_decision"],
+        "wame_decision": case["wame_decision"],
         "answer_equivalence": case["answer_equivalence"],
         "write_requested": write_requested,
         "write_allowed": bool(case.get("write_allowed", False)),
@@ -116,7 +116,7 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
 
     precheck_pass_rate = sum(1 for r in requested_records if r["precheck_passed"]) / max(1, len(requested_records))
     owner_auth_rate = sum(1 for r in requested_records if r["owner_authorization_present"]) / max(1, len(requested_records))
-    waes_pass_rate = sum(1 for r in requested_records if r["waes_decision"] == "pass") / max(1, len(requested_records))
+    wame_pass_rate = sum(1 for r in requested_records if r["wame_decision"] == "pass") / max(1, len(requested_records))
     runtime_dependency_ok_rate = sum(1 for r in requested_records if r["runtime_dependency_ok"]) / max(1, len(requested_records))
     rollback_readiness_rate = sum(1 for r in requested_records if r["rollback_plan_verified"]) / max(1, len(requested_records))
     token_source_coverage = sum(
@@ -134,7 +134,7 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
     gate_pass = (
         precheck_pass_rate >= gate_rules.get("precheck_pass_rate_min", 1.0)
         and owner_auth_rate >= gate_rules.get("owner_authorization_presence_min", 1.0)
-        and waes_pass_rate >= gate_rules.get("waes_pass_rate_min", 1.0)
+        and wame_pass_rate >= gate_rules.get("wame_pass_rate_min", 1.0)
         and runtime_dependency_ok_rate >= gate_rules.get("runtime_dependency_ok_rate_min", 1.0)
         and rollback_readiness_rate >= gate_rules.get("rollback_readiness_rate_min", 1.0)
         and token_source_coverage >= gate_rules.get("authorization_token_source_coverage_min", 1.0)
@@ -147,7 +147,7 @@ def summarize(records: list[dict], gate_rules: dict) -> tuple[bool, dict]:
         "requested_write_count": len(requested_records),
         "precheck_pass_rate": round(precheck_pass_rate, 6),
         "owner_authorization_presence_rate": round(owner_auth_rate, 6),
-        "waes_pass_rate": round(waes_pass_rate, 6),
+        "wame_pass_rate": round(wame_pass_rate, 6),
         "runtime_dependency_ok_rate": round(runtime_dependency_ok_rate, 6),
         "rollback_readiness_rate": round(rollback_readiness_rate, 6),
         "authorization_token_source_coverage": round(token_source_coverage, 6),

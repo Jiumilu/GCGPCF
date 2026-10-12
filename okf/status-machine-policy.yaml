@@ -84,7 +84,7 @@ promotion_rules:
   reviewing_to_repair_required:
     from: reviewing
     to: repair_required
-    allowed_actors: [waes, kwe]
+    allowed_actors: [wame, kwe]
     requires: [reason_codes, required_actions]
   repair_required_to_evidence_ready:
     from: repair_required
@@ -94,8 +94,8 @@ promotion_rules:
   evidence_ready_to_verified:
     from: evidence_ready
     to: verified
-    allowed_actors: [waes, human_reviewer, committee]
-    requires: [waes_gate_passed, harness_evidence]
+    allowed_actors: [wame, human_reviewer, committee]
+    requires: [wame_gate_passed, harness_evidence]
   verified_to_accepted:
     from: verified
     to: accepted
@@ -109,7 +109,7 @@ promotion_rules:
   any_to_frozen:
     from: any
     to: frozen
-    allowed_actors: [waes, committee, governance_owner]
+    allowed_actors: [wame, committee, governance_owner]
     requires: [freeze_reason]
   accepted_to_superseded:
     from: accepted

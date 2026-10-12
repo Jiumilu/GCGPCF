@@ -51,7 +51,7 @@
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink"
@@ -89,7 +89,7 @@
     },
     {
       "was_field": "trustLevel",
-      "rule": "fixed_was_stage_value_until_waes_review",
+      "rule": "fixed_was_stage_value_until_wame_review",
       "gfis_source": "WAS S01",
       "required_value": "T4"
     },
@@ -106,10 +106,10 @@
       "required_value": ["gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"]
     },
     {
-      "was_field": "waesGateRefs",
-      "rule": "must_include_was_stage_waes_gate_ref",
-      "gfis_source": "WAES source record review gate",
-      "required_value": ["waes://gate/customer-order-source-record-review"]
+      "was_field": "wameGateRefs",
+      "rule": "must_include_was_stage_wame_gate_ref",
+      "gfis_source": "WAME source record review gate",
+      "required_value": ["wame://gate/customer-order-source-record-review"]
     },
     {
       "was_field": "promotionBlockers",
@@ -136,7 +136,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not create verified artifact",
     "does not mark accepted or integrated",
     "does not mark production ready"

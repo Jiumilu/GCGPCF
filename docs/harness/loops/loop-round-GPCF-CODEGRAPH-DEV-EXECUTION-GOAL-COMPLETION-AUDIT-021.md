@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-021
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-021
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：020 等待态已确认 `effective_authorization=not_authorized`。
 - 目标：按当前 evidence 审计长期目标是否完成。
 - 动作：逐项检查 CodeGraph 开发态准入、收益证明、回归监控、真实输入 readiness 和派发授权状态。
-- 边界：不派发、不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAES 写入。
+- 边界：不派发、不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAME 写入。
 
 ## stop
 

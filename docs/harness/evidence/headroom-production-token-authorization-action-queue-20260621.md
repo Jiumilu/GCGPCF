@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-86FD052AA9
 title: Headroom Production Token Authorization Action Queue
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-001 | human_approver | pending_human_authorization | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-002 | human_approver | pending_human_authorization | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-003 | KDS | pending_sanitized_ledger | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
-| HEADROOM-PROD-TOKEN-AUTH-ACTION-004 | WAES | pending_rollback_plan | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
+| HEADROOM-PROD-TOKEN-AUTH-ACTION-004 | WAME | pending_rollback_plan | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-005 | GPCF | pending_authorized_ledger | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
 | HEADROOM-PROD-TOKEN-AUTH-ACTION-006 | GPCF | pending_authorized_window | false | GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001 |
 

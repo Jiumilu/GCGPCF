@@ -20,7 +20,7 @@ NO_WRITE_KEYS = (
     "writesGfis", "writesGpc", "writesErp", "writesMes", "writesFilterState",
     "writesQueueItem", "writesSnoozeRecord", "writesScheduledReminder",
     "writesDismissalRecord", "writesNotification", "modifiesNotification",
-    "writesWaesGateResult", "writesKweWorkItem", "writesHarnessEvidence",
+    "writesWameGateResult", "writesKweWorkItem", "writesHarnessEvidence",
     "writesKdsLifecycle", "writesKdsFact", "writesKdsAcceptedFact",
     "writesExternalApi",
 )
@@ -68,7 +68,7 @@ def main() -> int:
         "createsFilterStates": 0, "createsQueueItems": 0, "createsSnoozeRecords": 0,
         "createsScheduledReminders": 0, "createsDismissalRecords": 0,
         "createsNotifications": 0, "modifiesNotifications": 0,
-        "createsHarnessEvidence": 0, "createsWaesGateResults": 0,
+        "createsHarnessEvidence": 0, "createsWameGateResults": 0,
         "createsKweWorkItems": 0, "persistsEvidence": 0,
         "approvesBusinessWrite": 0, "promotesLifecycle": 0,
         "completesCommitteeDecision": 0,
@@ -93,7 +93,7 @@ def main() -> int:
     false_flags = (
         "createsFilterState", "createsQueueItem", "createsSnoozeRecord",
         "createsScheduledReminder", "createsDismissalRecord", "createsNotification",
-        "modifiesNotification", "createsHarnessEvidence", "createsWaesGateResult",
+        "modifiesNotification", "createsHarnessEvidence", "createsWameGateResult",
         "createsKweWorkItem", "persistsEvidence", "approvesBusinessWrite",
         "promotesLifecycle", "completesCommitteeDecision",
     )
@@ -106,7 +106,7 @@ def main() -> int:
         "createsNotification": "createsNotifications",
         "modifiesNotification": "modifiesNotifications",
         "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults",
+        "createsWameGateResult": "createsWameGateResults",
         "createsKweWorkItem": "createsKweWorkItems",
         "persistsEvidence": "persistsEvidence",
         "approvesBusinessWrite": "approvesBusinessWrite",
@@ -165,10 +165,10 @@ def main() -> int:
         f"creates_queue_items={actual['createsQueueItems']} creates_snooze_records={actual['createsSnoozeRecords']} "
         f"creates_scheduled_reminders={actual['createsScheduledReminders']} creates_notifications={actual['createsNotifications']} "
         f"modifies_notifications={actual['modifiesNotifications']} creates_harness_evidence={actual['createsHarnessEvidence']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_filter_state=0 writes_queue_item=0 "
         "writes_snooze_record=0 writes_scheduled_reminder=0 writes_dismissal_record=0 "
-        "writes_notification=0 modifies_notification=0 writes_waes_gate_result=0 writes_kwe_work_item=0 "
+        "writes_notification=0 modifies_notification=0 writes_wame_gate_result=0 writes_kwe_work_item=0 "
         "writes_harness_evidence=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 "
         "writes_external_api=0"
     )

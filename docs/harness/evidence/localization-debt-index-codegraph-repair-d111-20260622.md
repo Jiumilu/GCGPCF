@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTINDEXCODEGRAPHREPAIRD11120260622
 title: 索引与 CodeGraph 文档 D111 中文化修复证据
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

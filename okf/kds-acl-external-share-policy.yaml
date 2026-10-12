@@ -42,7 +42,7 @@ minimum_external_view_fields:
   - redacted_fields
   - metadata_only
   - rag_admission
-  - waes_gate_status
+  - wame_gate_status
   - publication_approval_ref
   - evidence_refs
   - expires_at
@@ -64,7 +64,7 @@ hard_boundaries:
   sensitive_metadata_only_raw_content_denied: true
   blocked_rag_external_share_denied: true
   t5_ai_only_external_fact_denied: true
-  external_share_requires_waes_gate: true
+  external_share_requires_wame_gate: true
   public_visibility_requires_publication_approval: true
   acl_pass_is_not_rag_strong_reference: true
   acl_pass_is_not_business_writeback: true

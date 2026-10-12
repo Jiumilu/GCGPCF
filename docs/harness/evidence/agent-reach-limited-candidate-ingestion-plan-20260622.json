@@ -23,7 +23,7 @@
       "id": "knowledge_provenance_rag",
       "decision": "accept_limited",
       "ingestion_scope": "candidate_reference_metadata_only",
-      "target_queue": "waes_kds_limited_candidate_queue",
+      "target_queue": "wame_kds_limited_candidate_queue",
       "required_fields": [
         "candidate_id",
         "source_url",
@@ -45,7 +45,7 @@
       "id": "green_supply_chain_policy",
       "decision": "accept_limited",
       "ingestion_scope": "official_standard_metadata_reference",
-      "target_queue": "waes_kds_limited_candidate_queue",
+      "target_queue": "wame_kds_limited_candidate_queue",
       "required_fields": [
         "candidate_id",
         "official_standard_url",
@@ -67,7 +67,7 @@
       "id": "ai_agent_evidence_gate",
       "decision": "accept_limited",
       "ingestion_scope": "open_source_tool_candidate_only",
-      "target_queue": "waes_kds_limited_candidate_queue",
+      "target_queue": "wame_kds_limited_candidate_queue",
       "required_fields": [
         "candidate_id",
         "repository_url",
@@ -83,14 +83,14 @@
       "blocked_outputs": [
         "tool_installation",
         "production_config",
-        "waes_policy_replacement"
+        "wame_policy_replacement"
       ]
     },
     {
       "id": "agent_reach_capability",
       "decision": "accept_limited",
       "ingestion_scope": "agent_reach_capability_metadata_only",
-      "target_queue": "waes_kds_limited_candidate_queue",
+      "target_queue": "wame_kds_limited_candidate_queue",
       "required_fields": [
         "candidate_id",
         "repository_url",
@@ -137,7 +137,7 @@
     "promotion_requirements": [
       "all candidate records validate against required fields",
       "source provenance remains explicit",
-      "WAES/KDS review status remains limited",
+      "WAME/KDS review status remains limited",
       "rollback path removes dry-run artifacts without touching canonical data",
       "status_upgrade_allowed remains false"
     ]

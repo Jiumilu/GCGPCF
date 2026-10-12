@@ -15,8 +15,8 @@ LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-EXTERNAL-L
 DELEGATE_VALIDATOR = ROOT / "tools/kds-sync/validate_project_group_external_loop_gate_delegates.py"
 
 REPOS = {
-    "GlobalCloud AAAS": "AAAS-WAES-BINDING-PRECHECK-001",
-    "GlobalCloud XWAIL": "XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001",
+    "GlobalCloud AAAS": "AAAS-WAME-BINDING-PRECHECK-001",
+    "GlobalCloud XWAIL": "XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001",
     "GlobalCloud SOP": "SOP-SCENARIO-OWNER-REVIEW-001",
 }
 

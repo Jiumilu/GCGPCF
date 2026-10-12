@@ -38,7 +38,7 @@
     ],
     "forbidden": [
       "xwail_repo_direct_modification_outside_governance",
-      "waes_publication_claim",
+      "wame_publication_claim",
       "production_ready_claim",
       "customer_acceptance_claim"
     ]
@@ -47,7 +47,7 @@
     "request_package_generated": true,
     "submitted": true,
     "governance_reviewed": true,
-    "waes_authorized": false,
+    "wame_authorized": false,
     "published": false,
     "accepted": true,
     "integrated": false,
@@ -56,7 +56,7 @@
   "validator": "python3 tools/kds-sync/validate_xwail_city_profile_schema_review_request.py",
   "non_claims": [
     "本请求为送审输入，不是裁定结果；current_decision 保持 pending",
-    "不写 XWAIL 仓、不声明 WAES 授权/发布、不声明 production_ready",
+    "不写 XWAIL 仓、不声明 WAME 授权/发布、不声明 production_ready",
     "裁定权属 XWAIL 项目治理流程"
   ]
 }

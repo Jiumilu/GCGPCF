@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-RECENTER-20260622
 title: Agent-Reach Recenter Evidence 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 | candidate_search_review | `ready_for_review` |
 | L3 candidate pipeline | `pass` |
 | candidate_search_replay_ledger | `pass` |
-| WAES/KDS review queue | `ready_for_human_review` |
+| WAME/KDS review queue | `ready_for_human_review` |
 | authoritative source verification | `limited_verification_complete` |
 | KDS admission | `limited_candidate_only` |
 | RAG admission | `limited` |

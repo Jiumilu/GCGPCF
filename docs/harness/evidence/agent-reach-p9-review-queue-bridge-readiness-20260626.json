@@ -13,7 +13,7 @@
     "route_project_coverage": [
       "GFIS",
       "KDS",
-      "WAES",
+      "WAME",
       "WAS"
     ],
     "threshold_pass": true,
@@ -30,7 +30,7 @@
     "not_live_search_invoked",
     "not_review_queue_created",
     "not_runtime_intake_created",
-    "not_waes_review_created",
+    "not_wame_review_created",
     "not_verified",
     "not_kds_canonical_written",
     "not_gfis_source_of_record_written",
@@ -55,7 +55,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -94,7 +94,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -131,7 +131,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -168,7 +168,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -205,7 +205,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -244,7 +244,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -282,7 +282,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -294,13 +294,13 @@
       "review_decision_required": true,
       "review_lanes": [
         "gfis_business_owner_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "GFIS",
         "KDS",
-        "WAES"
+        "WAME"
       ],
       "source_query_id": "p9-pg-q01",
       "source_record_promotion_allowed": false,
@@ -321,7 +321,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -333,12 +333,12 @@
       "review_decision_required": true,
       "review_lanes": [
         "was_asset_evidence_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "KDS",
-        "WAES",
+        "WAME",
         "WAS"
       ],
       "source_query_id": "p9-pg-q02",
@@ -360,7 +360,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -372,13 +372,13 @@
       "review_decision_required": true,
       "review_lanes": [
         "gfis_business_owner_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "GFIS",
         "KDS",
-        "WAES"
+        "WAME"
       ],
       "source_query_id": "p9-pg-q03",
       "source_record_promotion_allowed": false,
@@ -399,7 +399,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -410,12 +410,12 @@
       "queue_status": "review_queue_preview_only",
       "review_decision_required": true,
       "review_lanes": [
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "KDS",
-        "WAES"
+        "WAME"
       ],
       "source_query_id": "p9-pg-q04",
       "source_record_promotion_allowed": false,
@@ -436,7 +436,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -473,7 +473,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -510,7 +510,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -521,12 +521,12 @@
       "queue_status": "review_queue_preview_only",
       "review_decision_required": true,
       "review_lanes": [
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "KDS",
-        "WAES"
+        "WAME"
       ],
       "source_query_id": "p9-isw-q02",
       "source_record_promotion_allowed": false,
@@ -547,7 +547,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -559,13 +559,13 @@
       "review_decision_required": true,
       "review_lanes": [
         "gfis_business_owner_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "GFIS",
         "KDS",
-        "WAES"
+        "WAME"
       ],
       "source_query_id": "p9-isw-q03",
       "source_record_promotion_allowed": false,
@@ -586,7 +586,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -623,7 +623,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -635,12 +635,12 @@
       "review_decision_required": true,
       "review_lanes": [
         "was_asset_evidence_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "KDS",
-        "WAES",
+        "WAME",
         "WAS"
       ],
       "source_query_id": "p9-zwc-q01",
@@ -662,7 +662,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -674,12 +674,12 @@
       "review_decision_required": true,
       "review_lanes": [
         "was_asset_evidence_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "KDS",
-        "WAES",
+        "WAME",
         "WAS"
       ],
       "source_query_id": "p9-zwc-q02",
@@ -701,7 +701,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -740,7 +740,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -752,12 +752,12 @@
       "review_decision_required": true,
       "review_lanes": [
         "was_asset_evidence_review",
-        "waes_policy_and_compliance_review",
+        "wame_policy_and_compliance_review",
         "kds_traceability_review"
       ],
       "route_projects": [
         "KDS",
-        "WAES",
+        "WAME",
         "WAS"
       ],
       "source_query_id": "p9-zwc-q04",
@@ -779,7 +779,7 @@
         "candidate_only",
         "not_review_queue_created",
         "not_runtime_intake_created",
-        "not_waes_review_created",
+        "not_wame_review_created",
         "not_verified",
         "not_source_of_record",
         "not_accepted",
@@ -814,9 +814,9 @@
     "requires_candidate_only_admission": true,
     "requires_four_topic_coverage": true,
     "requires_full_query_coverage": true,
-    "requires_gfis_was_waes_kds_routes": true,
+    "requires_gfis_was_wame_kds_routes": true,
     "requires_objective_business_fields": true
   },
   "verified_artifact_created": false,
-  "waes_review_created": false
+  "wame_review_created": false
 }

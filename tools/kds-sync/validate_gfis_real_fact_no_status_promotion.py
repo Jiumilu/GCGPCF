@@ -56,7 +56,7 @@ REQUIRED_BOUNDARY_TOKENS = [
     "runtime_primary_key",
     "review_queue",
     "runtime_intake",
-    "WAES review",
+    "WAME review",
     "verified",
     "status_ceiling=repair_required",
     "accepted=false",

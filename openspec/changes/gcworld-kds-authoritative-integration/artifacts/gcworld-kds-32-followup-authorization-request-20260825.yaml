@@ -27,7 +27,7 @@ decisions:
     decision: pending
     prerequisite: D16执行后精确恢复31项密封基线，或另行明确接受32项为新基线
     allowed_action:
-      - 冻结GCWORLD与WAES人工资料导入
+      - 冻结GCWORLD与WAME人工资料导入
       - 冻结api_server.py与tests/test_api_smoke.py相关编辑活动
       - 仅通过任务、进程和版本元数据继续来源调查
     file_or_diff_content_read_included: false

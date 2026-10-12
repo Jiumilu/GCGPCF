@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1DB6E9CF48
 title: Loop 治理当前窗口审查证据
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -61,5 +61,5 @@ Validator locator summary: `truth_records=25`, `five_segment_records=0`,
 - does not prove GFIS runtime SOP E2E passed
 - 本证据不重写历史轮次记录。
 - 本证据不证明 GFIS runtime SOP E2E 已通过。
-- 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+- 本证据不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。
 - 本证据不授权生产写入、外部 API 写入、schema sync、bench migrate、部署、权限变更、commit 或 push。

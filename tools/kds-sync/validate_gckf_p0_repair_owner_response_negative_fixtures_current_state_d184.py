@@ -79,7 +79,7 @@ def main() -> None:
     for key in (
         "collectionChecklistIsActualResponse",
         "unsignedPackageAccepted",
-        "waesReviewBypassed",
+        "wameReviewBypassed",
         "humanConfirmationBypassed",
         "responseIntakeAllowed",
         "formalHarnessWriteAllowed",

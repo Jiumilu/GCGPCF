@@ -139,7 +139,7 @@ def main() -> int:
         "`.codegraph/` 必须保持本地缓存",
         "不证明 GFIS runtime SOP E2E 已通过",
         "不授权生产写入",
-        "Harness/WAES",
+        "Harness/WAME",
     ]:
         require(phrase in plan, f"plan missing phrase: {phrase}")
 
@@ -192,7 +192,7 @@ def main() -> int:
     controls = evidence.get("admission_controls", {})
     require(controls.get("codegraph_cache_gitignored") is True, "cache gitignore control must be true")
     require(controls.get("manual_source_check_required") is True, "manual source check must be required")
-    require(controls.get("harness_waes_not_replaced") is True, "Harness/WAES replacement must be blocked")
+    require(controls.get("harness_wame_not_replaced") is True, "Harness/WAME replacement must be blocked")
     require(controls.get("kds_token_not_written") is True, "KDS token must not be written")
     require(controls.get("status_upgrade_allowed") is False, "status upgrade must not be allowed")
 

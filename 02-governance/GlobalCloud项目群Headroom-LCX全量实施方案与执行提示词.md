@@ -143,7 +143,7 @@ loop/context/headroom/
   harness/
     evidence.schema.yaml
     metrics.schema.yaml
-  waes/
+  wame/
     headroom-policy.yaml
     sensitive-pass-through.yaml
     ccr-retrieve-gate.yaml
@@ -248,7 +248,7 @@ MCP retrieve 必须写入恢复原因和调用者
 | MCP config | `loop/context/headroom/mcp.json` |
 | SDK adapter docs | `loop/context/headroom/docs/operating-model.md` |
 | KDS registry object | `loop/context/headroom/kds/context-optimization-component.yaml` |
-| WAME retrieve gate | `loop/context/headroom/waes/ccr-retrieve-gate.yaml` |
+| WAME retrieve gate | `loop/context/headroom/wame/ccr-retrieve-gate.yaml` |
 
 采集字段：
 
@@ -267,7 +267,7 @@ headroom_evidence:
   ccr_retrieve_count: number
   ccr_retrieve_reason: string
   policy_profile: string
-  waes_decision: pass | warn | block
+  wame_decision: pass | warn | block
   answer_equivalence: pass | partial | fail | unknown
   marker_gate: pass | fail
   timestamp: string
@@ -371,7 +371,7 @@ accepted=false/integrated=false/production_ready=false 直到 Harness/WAME 另�
 | LCX_PROXY_RUN | LOOP_AGENT_OPERATOR, DEVOPS_OWNER | dev/test/staging proxy | Harness trace required |
 | LCX_AGENT_WRAP | DEVELOPER, AGENT_OPERATOR | agent wrap | project policy required |
 | LCX_MCP_USE | APPROVED_AGENT, REVIEWER | compress/stats | tool visibility controlled |
-| LCX_CCR_RETRIEVE | PROJECT_OWNER, REVIEWER, WAES_APPROVED_AGENT | retrieve 原文 | reason + evidence + sensitive check |
+| LCX_CCR_RETRIEVE | PROJECT_OWNER, REVIEWER, WAME_APPROVED_AGENT | retrieve 原文 | reason + evidence + sensitive check |
 | LCX_MEMORY_WRITE | PROJECT_OWNER, LOOP_MEMORY_STEWARD | 写工作记忆 | review required |
 | LCX_LEARN_APPLY | PROJECT_OWNER, LOOP_ENGINEERING_LEAD | 应用失败经验 | human approval |
 | LCX_OUTPUT_SHAPER_ENABLE | PROJECT_OWNER, LOOP_PLATFORM_ADMIN | 输出压缩 | 禁止验收/合规/财务/合同 |
@@ -381,7 +381,7 @@ accepted=false/integrated=false/production_ready=false 直到 Harness/WAME 另�
 建议策略文件：
 
 ```text
-loop/context/headroom/waes/headroom-policy.yaml
+loop/context/headroom/wame/headroom-policy.yaml
 ```
 
 核心规则：
@@ -432,7 +432,7 @@ headroom_evidence:
   ccr_retrieve_count:
   ccr_retrieve_reason:
   policy_profile:
-  waes_decision:
+  wame_decision:
   answer_equivalence:
   marker_gate:
   sensitive_redaction_gate:
@@ -564,9 +564,9 @@ P5：只生成生产准入申请包，不得自行进入生产。
 7. `loop/context/headroom/adapters/*`
 8. `loop/context/headroom/harness/evidence.schema.yaml`
 9. `loop/context/headroom/harness/metrics.schema.yaml`
-10. `loop/context/headroom/waes/headroom-policy.yaml`
-11. `loop/context/headroom/waes/sensitive-pass-through.yaml`
-12. `loop/context/headroom/waes/ccr-retrieve-gate.yaml`
+10. `loop/context/headroom/wame/headroom-policy.yaml`
+11. `loop/context/headroom/wame/sensitive-pass-through.yaml`
+12. `loop/context/headroom/wame/ccr-retrieve-gate.yaml`
 13. `loop/context/headroom/kds/context-optimization-component.yaml`
 14. `loop/context/headroom/scripts/install-headroom.sh`
 15. `loop/context/headroom/scripts/start-proxy.sh`
@@ -587,7 +587,7 @@ project_id、source_path、allowed_modes、blocked_modes、requires_authorizatio
 
 Harness evidence 要求：
 每次 Headroom 介入必须记录：
-task_id、loop_round_id、project_id、agent_id、model_id、mode、content_type、tokens_before、tokens_after、tokens_saved、saving_rate、ccr_enabled、ccr_retrieve_count、policy_profile、waes_decision、answer_equivalence、marker_gate、sensitive_redaction_gate、measured_production_tokens、accepted、integrated、production_ready。
+task_id、loop_round_id、project_id、agent_id、model_id、mode、content_type、tokens_before、tokens_after、tokens_saved、saving_rate、ccr_enabled、ccr_retrieve_count、policy_profile、wame_decision、answer_equivalence、marker_gate、sensitive_redaction_gate、measured_production_tokens、accepted、integrated、production_ready。
 
 WAME 门禁要求：
 高敏内容默认 block_or_passthrough。

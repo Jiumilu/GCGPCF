@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-81B958F838
 title: ODF Phase 5 准入变更申请机制闭环报告
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 """Validate Brain LOOP dashboard knowledge-closure metrics dry-run.
 
 This script computes metrics from a local fixture only. It does not write
-Brain, PKC, KDS, WAES, KWE, GFIS, GPC, revenue ledgers, or any external API.
+Brain, PKC, KDS, WAME, KWE, GFIS, GPC, revenue ledgers, or any external API.
 """
 
 from __future__ import annotations
@@ -64,7 +64,7 @@ def evaluate(objects: list[dict[str, Any]]) -> dict[str, Any]:
         "ragSafeRate": rounded(status_rate(objects, "ragAdmission", "safe")),
         "blockedKnowledgeRate": rounded(status_rate(objects, "ragAdmission", "blocked")),
         "repairRequiredGapCount": sum(1 for item in objects if item.get("ragAdmission") == "repair_required"),
-        "waesInterceptionCount": sum(1 for item in objects if item.get("waesBlocked")),
+        "wameInterceptionCount": sum(1 for item in objects if item.get("wameBlocked")),
         "humanConfirmationCompletionRate": rounded(
             conditional_status_rate(objects, "humanConfirmationStatus", "completed")
         ),
@@ -79,7 +79,7 @@ def evaluate(objects: list[dict[str, Any]]) -> dict[str, Any]:
         "sensitiveMetadataOnlyRate": rounded(rate(objects, "sensitiveMetadataOnly")),
         "noWrite": True,
         "kdsWrites": 0,
-        "waesWrites": 0,
+        "wameWrites": 0,
         "kweWrites": 0,
         "businessWrites": 0,
         "externalApiWrites": 0,
@@ -112,7 +112,7 @@ def main() -> int:
         f"rag_safe_rate={actual['ragSafeRate']} "
         f"blocked_knowledge_rate={actual['blockedKnowledgeRate']} "
         f"repair_required_gap_count={actual['repairRequiredGapCount']} "
-        f"waes_interception_count={actual['waesInterceptionCount']} "
+        f"wame_interception_count={actual['wameInterceptionCount']} "
         f"human_confirmation_completion_rate={actual['humanConfirmationCompletionRate']} "
         f"committee_closure_rate={actual['committeeClosureRate']} "
         f"revenue_candidate_to_formal_rate={actual['revenueCandidateToFormalRate']} "
@@ -120,7 +120,7 @@ def main() -> int:
         f"ai_candidate_adoption_rate={actual['aiCandidateAdoptionRate']} "
         f"external_share_violation_count={actual['externalShareViolationCount']} "
         f"sensitive_metadata_only_rate={actual['sensitiveMetadataOnlyRate']} "
-        "no_write=covered kds_writes=0 waes_writes=0 kwe_writes=0 "
+        "no_write=covered kds_writes=0 wame_writes=0 kwe_writes=0 "
         "business_writes=0 external_api_writes=0"
     )
     return 0

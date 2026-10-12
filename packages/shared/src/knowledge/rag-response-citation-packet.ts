@@ -53,12 +53,12 @@ export interface RagResponseCitationPacket {
   highestCitationStrength: Exclude<RagCitationStrength, "L0">;
   boundaryNotices: string[];
   missingEvidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   aclDecisionRefs: string[];
   generatedAt: string;
   noWrite: true;
   writesKdsFact: false;
-  writesWaesGateResult: false;
+  writesWameGateResult: false;
   writesKweWorkItem: false;
   writesBusinessSystem: false;
   writesExternalApi: false;
@@ -86,7 +86,7 @@ export interface RagResponseCitationPacketPolicy {
   };
   noWriteAssertions: {
     writesKdsFact: 0;
-    writesWaesGateResult: 0;
+    writesWameGateResult: 0;
     writesKweWorkItem: 0;
     writesBusinessSystem: 0;
     writesRevenueOrScoreConfirmation: 0;

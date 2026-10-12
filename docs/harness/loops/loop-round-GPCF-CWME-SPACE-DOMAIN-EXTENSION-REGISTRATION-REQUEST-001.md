@@ -42,7 +42,7 @@ superseded_by: []
 
 ## 反馈
 
-- 请求包已提交（submitted=true）；`registry_entry_added=false`、`governance_reviewed=false`、`waes_authorized=false`、`accepted=false`。
+- 请求包已提交（submitted=true）；`registry_entry_added=false`、`governance_reviewed=false`、`wame_authorized=false`、`accepted=false`。
 - 附件核实：cwme-ext.ttl（199 triples/33 类）＋ mapping-v1（40 表）＋ shapes（违规 5 项检出）——均由 F-017 首月件实跑验证。
 
 ## 下一轮

@@ -6,7 +6,7 @@
   "execution_mode": "governance_pre_review_without_external_search",
   "external_search_invoked": false,
   "source_evidence": [
-    "docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.json"
+    "docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.json"
   ],
   "decision_batch_id": "GPCF-AGENT-REACH-HUMAN-REVIEW-DECISIONS-001",
   "decision_policy": {
@@ -36,7 +36,7 @@
       "first_url": "https://gautierdorval.com/en/frameworks/rag-governance-retrieval-and-inference-control/",
       "decision": "defer",
       "reason": "Third-party interpretation may be useful as a candidate, but no primary or official source cross-check is recorded.",
-      "required_next_action": "Cross-check against primary RAG governance sources or internal WAES citation policy before any limited acceptance.",
+      "required_next_action": "Cross-check against primary RAG governance sources or internal WAME citation policy before any limited acceptance.",
       "rag_admission": "limited",
       "kds_admission": "limited_candidate_only"
     },
@@ -53,7 +53,7 @@
       "id": "factory_execution_traceability",
       "first_url": "https://sgsystemsglobal.com/glossary/mes-manufacturing-execution-system/",
       "decision": "defer",
-      "reason": "Vendor glossary content cannot define GFIS source-of-record behavior without internal GFIS evidence and WAES review.",
+      "reason": "Vendor glossary content cannot define GFIS source-of-record behavior without internal GFIS evidence and WAME review.",
       "required_next_action": "Cross-check against internal GFIS execution traceability evidence and keep vendor content as background only.",
       "rag_admission": "limited",
       "kds_admission": "limited_candidate_only"
@@ -63,7 +63,7 @@
       "first_url": "https://github.com/undercurrentai/aegis-mcp",
       "decision": "defer",
       "reason": "Open-source repository candidate requires license, maintenance, security relevance, and fit review before limited acceptance.",
-      "required_next_action": "Verify repository license, maintenance state, commit context, and whether it maps to WAES evidence-gate policy.",
+      "required_next_action": "Verify repository license, maintenance state, commit context, and whether it maps to WAME evidence-gate policy.",
       "rag_admission": "limited",
       "kds_admission": "limited_candidate_only"
     },
@@ -78,7 +78,7 @@
     }
   ],
   "admission_decision": {
-    "waes_review_status": "deferred_pending_authoritative_verification",
+    "wame_review_status": "deferred_pending_authoritative_verification",
     "kds_admission": "limited_candidate_only",
     "rag_admission": "limited",
     "status_upgrade_allowed": false,

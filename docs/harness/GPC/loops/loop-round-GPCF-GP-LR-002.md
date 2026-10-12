@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F7E27E2A98
 title: Loop Round GPCF-GP-LR-002：GPC 蓝图授权前检查清单
 project: GPC
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

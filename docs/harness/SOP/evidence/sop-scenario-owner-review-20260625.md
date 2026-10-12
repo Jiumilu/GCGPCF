@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-SOP-SCENARIO-OWNER-REVIEW-20260625
 title: SOP 场景生成物 Owner Review 证据 2026-06-25
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -76,7 +76,7 @@ customer_accepted = false
 | 真实进度 | `owner_review_required / scenario_candidate_controlled` |
 | 真实研发 | `local_sop_scripts_verified`，仅限 SOP 结构和 smoke |
 | 真实运行 | `not_verified_this_round`，未执行真实 SCaaS/SOP 运营 |
-| 真实集成 | `not_verified_this_round`，未写入 KDS 事实主存、WAES、GPC、GFIS 或 PVAOS |
+| 真实集成 | `not_verified_this_round`，未写入 KDS 事实主存、WAME、GPC、GFIS 或 PVAOS |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 

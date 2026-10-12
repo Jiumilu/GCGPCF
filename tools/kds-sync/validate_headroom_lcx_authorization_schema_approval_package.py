@@ -19,7 +19,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -39,7 +39,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 REQUIRED_ATTESTATIONS = [
@@ -49,7 +49,7 @@ REQUIRED_ATTESTATIONS = [
     "no_real_kds_write",
     "no_external_api_write",
     "rollback_plan_reviewed",
-    "waes_harness_evidence_attached",
+    "wame_harness_evidence_attached",
 ]
 
 
@@ -110,9 +110,9 @@ def main() -> int:
     require(field_rules["sanitized_production_token_ledger"].get("reference_only") is True, "ledger must be reference-only")
     require(field_rules["sanitized_production_token_ledger"].get("forbid_inline_raw_text") is True, "ledger must forbid inline raw text")
     require(field_rules["authorized_by"].get("human_approver_required") is True, "human approver must be required")
-    require("admitted_for_sanitized_measurement_precheck" in field_rules["waes_harness_admission_decision"].get("allowed_values", []), "WAES/Harness admitted value missing")
+    require("admitted_for_sanitized_measurement_precheck" in field_rules["wame_harness_admission_decision"].get("allowed_values", []), "WAME/Harness admitted value missing")
 
-    hard_false = schema.get("hard_false_until_waes_harness_admits", [])
+    hard_false = schema.get("hard_false_until_wame_harness_admits", [])
     for key in [
         "production_token_measurement_allowed",
         "production_proxy_started",

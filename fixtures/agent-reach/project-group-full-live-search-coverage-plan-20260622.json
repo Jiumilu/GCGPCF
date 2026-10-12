@@ -110,7 +110,7 @@
         "p8-q14"
       ],
       "validator": "tools/kds-sync/validate_agent_reach_p9_review_queue_bridge_readiness.py",
-      "non_claim": "review queue bridge readiness maps P9 candidate fields to GFIS/WAS/WAES/KDS review lanes but does not create real review queue items"
+      "non_claim": "review queue bridge readiness maps P9 candidate fields to GFIS/WAS/WAME/KDS review lanes but does not create real review queue items"
     },
     {
       "scope": "p9_live_execution_readiness_closure",
@@ -237,7 +237,7 @@
         "p8-q14"
       ],
       "validator": "tools/kds-sync/validate_agent_reach_p9_source_direct_review_queue_bridge_readiness.py",
-      "non_claim": "source-direct review queue bridge readiness maps P9S target candidates to GFIS/WAS/WAES/KDS review lanes without creating real review queue items"
+      "non_claim": "source-direct review queue bridge readiness maps P9S target candidates to GFIS/WAS/WAME/KDS review lanes without creating real review queue items"
     },
     {
       "scope": "p9_source_direct_live_authorization_intake",
@@ -453,7 +453,7 @@
   "project_scope": [
     "GPCF",
     "KDS",
-    "WAES",
+    "WAME",
     "Brain",
     "GFIS",
     "GPC",
@@ -508,7 +508,7 @@
         },
         {
           "query_id": "p8-q03",
-          "project": "WAES",
+          "project": "WAME",
           "channel": "rss",
                     "query": "quality control process"
         },

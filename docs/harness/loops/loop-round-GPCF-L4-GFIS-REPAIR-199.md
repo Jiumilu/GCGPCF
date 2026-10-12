@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-275DE79A95
 title: GPCF-L4-GFIS-REPAIR-199
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -68,14 +68,14 @@ manual_authorized=0
 recipient_identity_confirmed=0
 dispatch_channel_confirmed=0
 kds_source_backlink_valid=0
-waes_evidence_candidate_ready=0
+wame_evidence_candidate_ready=0
 release_allowed=0
 collection_open=0
 quarantine_allowed=0
 review_queue_ready=0
 review_queue=0
 manual_review=0
-waes_review=0
+wame_review=0
 runtime_intake=0
 verified=0
 runtime_primary_key_ready=0
@@ -88,8 +88,8 @@ runtime_sop_e2e=repair_required
 - 本轮只证明 GFIS 运行层 open hold 不能被 6 类弱放行材料释放。
 - GFIS 是现代精工 OEM 代加工生产阶段与葛化自建工厂投产后的同一运行时系统。
 - GFIS Demo 仅是展示、培训和前端回归证据，不是 SOP E2E 主体。
-- 不创建客户订单、平台订单、授权信封、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
-- 不执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、schema sync、权限变更、生产配置修改、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
+- 不创建客户订单、平台订单、授权信封、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
+- 不执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、schema sync、权限变更、生产配置修改、ECS/阿里云/Caddy/隧道/Docker 变更、部署或 accepted/integrated 状态升级。
 
 ## 下一轮建议
 

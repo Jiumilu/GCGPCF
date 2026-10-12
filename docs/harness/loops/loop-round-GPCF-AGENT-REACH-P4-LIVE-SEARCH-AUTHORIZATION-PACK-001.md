@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P4-LIVE-SEARCH-AUTHORIZATION-PACK-001
 title: LOOP Round GPCF-AGENT-REACH-P4-LIVE-SEARCH-AUTHORIZATION-PACK-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

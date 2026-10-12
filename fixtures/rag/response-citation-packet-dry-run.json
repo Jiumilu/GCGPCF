@@ -53,12 +53,12 @@
       "human_or_committee_finality"
     ],
     "missingEvidenceRefs": [],
-    "waesGateRefs": ["gate-rag-001", "gate-acl-001"],
+    "wameGateRefs": ["gate-rag-001", "gate-acl-001"],
     "aclDecisionRefs": ["acl-gehu-external-metadata-001"],
     "generatedAt": "2026-06-20T00:00:00Z",
     "noWrite": true,
     "writesKdsFact": false,
-    "writesWaesGateResult": false,
+    "writesWameGateResult": false,
     "writesKweWorkItem": false,
     "writesBusinessSystem": false,
     "writesExternalApi": false
@@ -95,7 +95,7 @@
     "noAclAllowedInPacket": false,
     "packetPassIsFormalFact": false,
     "writesKdsFact": 0,
-    "writesWaesGateResult": 0,
+    "writesWameGateResult": 0,
     "writesKweWorkItem": 0,
     "writesBusinessSystem": 0,
     "writesRevenueOrScoreConfirmation": 0,

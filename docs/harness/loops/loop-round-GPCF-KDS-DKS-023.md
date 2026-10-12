@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-84E98967D1
 title: Loop Round GPCF-KDS-DKS-023
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,13 +21,13 @@ superseded_by: []
 日期：2026-06-17  
 状态：controlled  
 主题：葛化、湖北磷材提交前审核清单与人工确认工作台  
-项目群范围：GFIS、GPC、WAES、KDS、MMC、GPCF。
+项目群范围：GFIS、GPC、WAME、KDS、MMC、GPCF。
 
 ## 1. 输入
 
 1. 用户要求绿色供应链分布式知识系统纳入 LOOP 工程治理。
 2. `GPCF-KDS-DKS-022` 已形成葛化、湖北磷材首批候选实例包与提交门禁。
-3. 本轮需要把候选实例推进为提交前审核清单、人工确认工作台、WAES 规则记录、委员会备案和用户急停最小记录模板。
+3. 本轮需要把候选实例推进为提交前审核清单、人工确认工作台、WAME 规则记录、委员会备案和用户急停最小记录模板。
 4. 本轮仍不得创建真实账号、配置生产权限、调用真实外部 API、写生产数据或确认业务收益。
 
 ## 2. 动作
@@ -35,8 +35,8 @@ superseded_by: []
 1. 新增 `03-data-ai-knowledge/GlobalCloud葛化湖北磷材提交前审核清单与人工确认工作台.md`。
 2. 定义 6 类候选实例的人工审核条目。
 3. 定义 3 类 MMC 参数候选的提交前审核条目。
-4. 明确 KDS 记录员、WAES 审核人、项目负责人、GFIS 操作员、财务联系人、委员会和用户治理代表的确认边界。
-5. 建立退回路径、阻断路径、WAESRuleRecord、CommitteeFilingRecord、UserEmergencyStopRecord、HumanReviewDecision 和 `submitted` 状态迁移规则。
+4. 明确 KDS 记录员、WAME 审核人、项目负责人、GFIS 操作员、财务联系人、委员会和用户治理代表的确认边界。
+5. 建立退回路径、阻断路径、WAMERuleRecord、CommitteeFilingRecord、UserEmergencyStopRecord、HumanReviewDecision 和 `submitted` 状态迁移规则。
 
 ## 3. 输出
 
@@ -71,6 +71,6 @@ superseded_by: []
 | 6 类候选实例审核清单 | done |
 | 3 类 MMC 参数候选审核清单 | done |
 | 人工确认角色与边界 | done |
-| WAES / 委员会 / 用户急停 / 人工决策最小记录模板 | done |
+| WAME / 委员会 / 用户急停 / 人工决策最小记录模板 | done |
 | submitted 状态迁移规则 | done |
 | 文档治理和 KDS 镜像 | done |

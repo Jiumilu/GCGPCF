@@ -52,7 +52,7 @@ def preserve_frontmatter(md_text: str) -> tuple[str, str]:
 
 def build_body(payload: dict) -> str:
     owner = payload["owner_signoff"]
-    waes = payload["waes_signoff"]
+    wame = payload["wame_signoff"]
     window = payload["signoff_window"]
     required_false = payload["required_false_until_completed"]
 
@@ -64,13 +64,13 @@ def build_body(payload: dict) -> str:
         ["`owner_decision`", owner["owner_decision"], "`approve_live_write` 或 `reject`"],
         ["`owner_decision_evidence`", owner["owner_decision_evidence"], "与决策一致的审批说明或截图编号"],
     ]
-    waes_rows = [
-        ["`waes_signer_name`", waes["waes_signer_name"], "WAES 签署人"],
-        ["`waes_signer_role`", waes["waes_signer_role"], "WAES 审批角色"],
-        ["`waes_signed_at`", waes["waes_signed_at"], "ISO-8601 时间"],
-        ["`waes_decision`", f"`{waes['waes_decision']}`", "见 P4 precheck/live 证据，`waes_pass_rate=1.0`"],
-        ["`waes_runtime_dependency_ok`", f"`{str(waes['waes_runtime_dependency_ok']).lower()}`", "见 P4 precheck/live 证据，`runtime_dependency_ok_rate=1.0`"],
-        ["`waes_rollback_plan_verified`", f"`{str(waes['waes_rollback_plan_verified']).lower()}`", "见 P4 precheck/live 证据，`rollback_readiness_rate=1.0`"],
+    wame_rows = [
+        ["`wame_signer_name`", wame["wame_signer_name"], "WAME 签署人"],
+        ["`wame_signer_role`", wame["wame_signer_role"], "WAME 审批角色"],
+        ["`wame_signed_at`", wame["wame_signed_at"], "ISO-8601 时间"],
+        ["`wame_decision`", f"`{wame['wame_decision']}`", "见 P4 precheck/live 证据，`wame_pass_rate=1.0`"],
+        ["`wame_runtime_dependency_ok`", f"`{str(wame['wame_runtime_dependency_ok']).lower()}`", "见 P4 precheck/live 证据，`runtime_dependency_ok_rate=1.0`"],
+        ["`wame_rollback_plan_verified`", f"`{str(wame['wame_rollback_plan_verified']).lower()}`", "见 P4 precheck/live 证据，`rollback_readiness_rate=1.0`"],
     ]
     window_rows = [
         ["`signoff_window_start_at`", window["signoff_window_start_at"], "签核窗口起始时间，ISO-8601"],
@@ -85,7 +85,7 @@ def build_body(payload: dict) -> str:
     ]
 
     pending_fields: list[str] = []
-    for section in (owner, waes, window):
+    for section in (owner, wame, window):
         for key, value in section.items():
             if value == "REQUIRED_USER_INPUT":
                 pending_fields.append(f"- `{key}`")
@@ -112,9 +112,9 @@ def build_body(payload: dict) -> str:
 
 {table(["字段", "当前值", "说明"], owner_rows)}
 
-## 4. 需签字段（WAES）
+## 4. 需签字段（WAME）
 
-{table(["字段", "当前值", "说明"], waes_rows)}
+{table(["字段", "当前值", "说明"], wame_rows)}
 
 ## 5. 签核窗口
 
@@ -163,10 +163,10 @@ python3 loop/context/cognee/scripts/validate-cognee-p4-real-writeback-live.py \\
 - `execution_count=5`
 - `pilot_gate_pass=True`
 - `live_execution_ready_rate=1.0`
-- Owner/WAES 两签字段均非 `REQUIRED_USER_INPUT`，且 `owner_decision=approve_live_write`、`waes_decision=pass`。
-- `waes_runtime_dependency_ok=true`、`waes_rollback_plan_verified=true`。
+- Owner/WAME 两签字段均非 `REQUIRED_USER_INPUT`，且 `owner_decision=approve_live_write`、`wame_decision=pass`。
+- `wame_runtime_dependency_ok=true`、`wame_rollback_plan_verified=true`。
 - `signoff_window_start_at` 与 `signoff_window_expires_at` 均为有效 ISO-8601，且 `signoff_window_expires_at > signoff_window_start_at`。
-- `owner_signed_at` 与 `waes_signed_at` 必须位于签核窗口内。
+- `owner_signed_at` 与 `wame_signed_at` 必须位于签核窗口内。
 
 ## 10. 当前仍待人工补录字段
 

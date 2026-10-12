@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9488D71FAC
 title: GPCF-L4-GFIS-REPAIR-268
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 - `runtime_primary_key_ready_stages=0`
 - `review_queue_ready_stages=0`
 - `runtime_intake_ready_stages=0`
-- `waes_review_ready_stages=0`
+- `wame_review_ready_stages=0`
 - `verified_stages=0`
 - `blocked_stages=12`
 - `convergence_queue_items=12`
@@ -53,7 +53,7 @@ superseded_by: []
 ## 反馈
 
 - 本轮只同步 12 阶段缺口收敛队列。
-- 不创建客户订单、平台订单、样品、工单、质检、库存、发货、POD、WAES review、KDS write receipt、运行层主键或 verified artifact。
+- 不创建客户订单、平台订单、样品、工单、质检、库存、发货、POD、WAME review、KDS write receipt、运行层主键或 verified artifact。
 - 下一轮应从 12 阶段队列中选择一个阶段，建立真实输入接收门禁或 owner response handoff。
 
 ## 真实性计数

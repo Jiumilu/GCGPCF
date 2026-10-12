@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F77CE8F66C
 title: CodeGraph 开发执行层稳态监控证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -70,7 +70,7 @@ codegraph affected tools/kds-sync/validate_codegraph_dev_execution_document_loca
 - 不声明 production_ready。
 - 不声明生产写入、外部 API 写入、commit、push 或 deploy。
 - 不声明 GFIS clean reindex 已执行。
-- 不声明 CodeGraph 替代 WAES 或 Harness 最终裁决。
+- 不声明 CodeGraph 替代 WAME 或 Harness 最终裁决。
 
 ## 下一轮
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D83747FB28
 title: Loop CodeGraph Project Group Monitor Evidence
 project: KDS
-related_projects: [KDS, GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [KDS, GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

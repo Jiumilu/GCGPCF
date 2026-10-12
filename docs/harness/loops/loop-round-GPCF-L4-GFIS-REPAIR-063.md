@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-ABC368E7DF
 title: GPCF-L4-GFIS-REPAIR-063 GFIS 辽宁远航 verified artifact intake 前置校验
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 | 辽宁远航 23 个样箱测试签收或测试反馈 | false | `source_record_uri`、`source_record_hash`、`kds_backlink_path`、测试记录编号、测试签收附件、客户反馈原件、客户签收单号 |
 | 江西委托工厂样箱生产记录 | false | `source_record_uri`、`source_record_hash`、`kds_backlink_path`、委托生产单号、完工记录编号、生产批次号、代工签收附件 |
 | 2026-05 辽宁远航项目报价单 | false | `source_record_uri`、`source_record_hash`、`kds_backlink_path`、客户确认函 |
-| 2026-06 现代精工产线量产计划或转量产批准 | false | `source_record_uri`、`source_record_hash`、`kds_backlink_path`、转量产批准单号、放行批准附件、量产计划编号、WAES evidence ref |
+| 2026-06 现代精工产线量产计划或转量产批准 | false | `source_record_uri`、`source_record_hash`、`kds_backlink_path`、转量产批准单号、放行批准附件、量产计划编号、WAME evidence ref |
 
 ## Evidence
 

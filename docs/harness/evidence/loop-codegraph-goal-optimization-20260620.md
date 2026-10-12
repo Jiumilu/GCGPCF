@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1603BD309B
 title: Loop CodeGraph Goal Optimization Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -75,6 +75,6 @@ P0 准入设计已完成：CodeGraph 被定义为本地代码图谱感知和目�
 ## 非声明
 
 - 不证明 GFIS runtime SOP E2E 已通过。
-- 不创建 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
+- 不创建 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
 - 不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、推送或合并。
-- 不把 CodeGraph 查询结果替代源码、测试、文档门禁、KDS TOKEN 门禁、Harness/WAES 判定或人工确认。
+- 不把 CodeGraph 查询结果替代源码、测试、文档门禁、KDS TOKEN 门禁、Harness/WAME 判定或人工确认。

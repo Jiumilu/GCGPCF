@@ -28,7 +28,7 @@
       "gap_id": "COGNEE-FULL-RUN-GAP-004",
       "gap_name": "production_state_promotion",
       "template_or_prework_state": "template_prepared",
-      "real_evidence_state": "missing_waes_harness_decision_and_real_promotion_evidence",
+      "real_evidence_state": "missing_wame_harness_decision_and_real_promotion_evidence",
       "ready": false
     },
     {

@@ -69,9 +69,9 @@ superseded_by: []
 | `CKW-HBLC-IND-202606-0001` | `SCP-HBLC-IND-202606-0001` | KDS / Brain 候选层 | `pageStatus=returned`; `trustedSourceStatus=source_required`; `returnReason=missing_authoritative_source`; `publishSuggestion=keep_candidate` | 人工确认 / WAME 记录 | 不升级为 `trusted_standard_confirmed`、`policy_applicability_confirmed`、`T3_passed` |
 | `CKW-HBLC-ORD-202606-0001` | `SCP-HBLC-ORD-202606-0001` | KDS / Brain 候选层 | `pageStatus=reviewing_candidate`; `sourceType=phone_or_meeting_or_email_lead`; `revenueBoundary=lead_only`; `potentialValueStatus=candidate_only`; `publishSuggestion=keep_candidate` | 人工确认 / 必要时委员会确认 / WAME 记录 | 不升级为 `official_order`、`invoice_revenue`、`cash_received_revenue`、`gfis_runtime_primary_key` |
 
-## 5. CandidateWaesRuleWriteback
+## 5. CandidateWameRuleWriteback
 
-| waesRuleId | linkedControlPointId | gateType | candidateRule | ruleEffect | status |
+| wameRuleId | linkedControlPointId | gateType | candidateRule | ruleEffect | status |
 |---|---|---|---|---|---|
 | `CWR-HBLC-FEA-202606-0001` | `SCP-HBLC-FEA-202606-0001` | publish_boundary | 拓厂项目页达到来源、脱敏、KDS 挂接、人工评分和红线要求时，只能进入项目组评审候选 | 记录规则，不放行投资、合作或建设事实 | candidate |
 | `CWR-HBLC-IND-202606-0001` | `SCP-HBLC-IND-202606-0001` | trusted_source | 行业资料缺权威来源、检索时间或适用范围时，必须退回补源 | 退回规则候选，不形成可信结论 | candidate |

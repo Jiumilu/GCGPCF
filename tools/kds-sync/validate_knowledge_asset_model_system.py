@@ -76,7 +76,7 @@ EXPECTED_CONSUMERS = {
     "kds": "versioned_mirror_and_canonical_metadata_owner",
     "brain": "authorized_read_model_consumer",
     "mmc": "authorized_model_invocation_only",
-    "waes": "authorization_and_status_gate",
+    "wame": "authorization_and_status_gate",
     "gpcf": "contract_and_compatibility_owner",
 }
 EXPECTED_MODEL_DOCUMENT_CONTROL = {
@@ -85,7 +85,7 @@ EXPECTED_MODEL_DOCUMENT_CONTROL = {
         "WAS",
         "XWAIL",
         "AAAS",
-        "WAES",
+        "WAME",
         "GFIS",
         "GPC",
         "PVAOS",

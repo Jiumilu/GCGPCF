@@ -27,7 +27,7 @@
     "dryRunOnly": true,
     "returnRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -46,7 +46,7 @@
       "reentry_path_candidates",
       "authority_and_recusal_boundary",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -106,7 +106,7 @@
       "reentry_path_candidates_present",
       "authority_and_recusal_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_return_preview_not_formal_return",
@@ -125,10 +125,10 @@
       "reentryPathCandidatesRef",
       "authorityAndRecusalBoundaryRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -158,7 +158,7 @@
       "missing_reentry_path_candidates_ref",
       "missing_authority_and_recusal_boundary_ref",
       "missing_freeze_retention_statement_ref",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_harness_no_write_guard_ref",
       "missing_required_return_role",
       "missing_no_write_attestation_ref",
@@ -191,7 +191,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_return_preview_to_formal_return",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [
@@ -227,7 +227,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "return_preview_converted_to_formal_return"
   ],
   "expectedSummary": {

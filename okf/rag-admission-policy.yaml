@@ -1,7 +1,7 @@
 policy_id: okf.rag_admission_policy
 version: v0.1
 status: draft
-owner: WAES
+owner: WAME
 updated_at: "2026-06-20"
 states:
   safe:
@@ -41,7 +41,7 @@ response_fields:
   - visibility
   - sourceRefs
   - evidenceRefs
-  - waesGateStatus
+  - wameGateStatus
   - canShare
   - canPromote
   - canUseForRAG

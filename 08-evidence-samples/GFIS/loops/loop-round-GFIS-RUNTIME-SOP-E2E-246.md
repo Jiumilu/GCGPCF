@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 输入
 
-- 上一轮 `GFIS-RUNTIME-SOP-E2E-245` 已把 submission package hard-stop 转成 8 项 owner/GFIS/WAES/KDS/GPCF 补证动作，且全部仍为 blocked。
+- 上一轮 `GFIS-RUNTIME-SOP-E2E-245` 已把 submission package hard-stop 转成 8 项 owner/GFIS/WAME/KDS/GPCF 补证动作，且全部仍为 blocked。
 - 当前真实缺口仍为：真实派发确认文件 0、有效责任方响应 0、有效 submission package 0、人工派发授权 0、KDS backlink 0、WAME evidence candidate 0、运行层主键 0。
 - 本轮只允许建立 owner response / submission package release guard；不得把 guard 当成补证完成或业务完成。
 
@@ -61,7 +61,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 

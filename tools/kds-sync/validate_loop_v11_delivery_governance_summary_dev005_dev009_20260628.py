@@ -43,7 +43,7 @@ def gfis_dev_readonly_output(index: int, pass_marker: str) -> str:
     return (
         f"{pass_marker} real_target_files=0 source_record_files_found=0 "
         "valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 "
-        "runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false "
+        "runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false "
         "production_ready=false customer_accepted=false"
     )
 
@@ -74,7 +74,7 @@ def main() -> int:
         "commit_executed=false",
         "push_executed=false",
         "real_kds_api_write_executed=false",
-        "waes_write_executed=false",
+        "wame_write_executed=false",
         "accepted=false",
         "integrated=false",
         "production_ready=false",
@@ -98,7 +98,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
         "accepted=false",
         "integrated=false",

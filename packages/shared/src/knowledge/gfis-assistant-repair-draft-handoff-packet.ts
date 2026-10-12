@@ -5,8 +5,8 @@ import type {
   GfisAssistantRepairSubmissionMetadataRefBundle,
 } from "./gfis-assistant-repair-submission-intake";
 import type {
-  GfisAssistantWaesGuidanceSurface,
-} from "./gfis-assistant-waes-guidance-packet";
+  GfisAssistantWameGuidanceSurface,
+} from "./gfis-assistant-wame-guidance-packet";
 
 export type GfisAssistantRepairDraftHandoffPacketType =
   | "human_review_handoff"
@@ -47,7 +47,7 @@ export interface GfisAssistantRepairDraftHandoffPacketNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesHandoffRecord: 0;
   writesReviewQueueItem: 0;
@@ -76,7 +76,7 @@ export interface GfisAssistantRepairDraftHandoffPacket {
   guidancePacketRef: string;
   tenantId: string;
   projectId: string;
-  assistantSurface: GfisAssistantWaesGuidanceSurface;
+  assistantSurface: GfisAssistantWameGuidanceSurface;
   handoffType: GfisAssistantRepairDraftHandoffPacketType;
   handoffStatus: GfisAssistantRepairDraftHandoffPacketStatus;
   targetCandidate: GfisAssistantRepairDraftHandoffTargetCandidate;
@@ -96,7 +96,7 @@ export interface GfisAssistantRepairDraftHandoffPacket {
   createsGapRecord: false;
   createsBountyRecord: false;
   createsKweWorkItem: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   routesToHumanQueue: false;
   approvesBusinessWrite: false;
   promotesLifecycle: false;
@@ -119,7 +119,7 @@ export interface GfisAssistantRepairDraftHandoffPacketPolicy {
     handoffPacketIsNotConfirmation: boolean;
     handoffPacketIsNotCommitteeDecision: boolean;
     handoffPacketIsNotDecisionRecord: boolean;
-    handoffPacketIsNotWaesResult: boolean;
+    handoffPacketIsNotWameResult: boolean;
     handoffPacketIsNotBusinessWriteback: boolean;
     targetCandidateIsRecommendationOnly: boolean;
     submitsEvidenceMustBeFalse: boolean;
@@ -131,7 +131,7 @@ export interface GfisAssistantRepairDraftHandoffPacketPolicy {
     createsGapRecordMustBeFalse: boolean;
     createsBountyRecordMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     routesToHumanQueueMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;
     promotesLifecycleMustBeFalse: boolean;

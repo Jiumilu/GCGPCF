@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90072
 title: WAS Real Source Record Monitor 072 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-072` 将绿色供应链覆盖扩展到商业伦理、反腐败与贸易合规证据链：商业伦理政策确认、反贿赂反腐败尽调、制裁与出口管制筛查、利益冲突披露、举报案件处理记录、负责任采购供应商承诺和第三方审计诚信报告。只有补齐这些证据，Ontology 才能安全地把商业伦理、反腐败、贸易合规、利益冲突、举报处理、负责任采购和第三方审计诚信绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-072` 将绿色供应链覆盖扩展到商业伦理、反腐败与贸易合规证据链：商业伦理政策确认、反贿赂反腐败尽调、制裁与出口管制筛查、利益冲突披露、举报案件处理记录、负责任采购供应商承诺和第三方审计诚信报告。只有补齐这些证据，Ontology 才能安全地把商业伦理、反腐败、贸易合规、利益冲突、举报处理、负责任采购和第三方审计诚信绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_072.py
 
 - 本证据不创建也不推断商业伦理政策确认、反贿赂反腐败尽调、制裁与出口管制筛查、利益冲突披露、举报案件处理记录、负责任采购供应商承诺或第三方审计诚信报告。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

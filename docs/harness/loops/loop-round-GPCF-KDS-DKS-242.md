@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6B2C20DFF9
 title: LOOP Round GPCF KDS DKS-242 Digest Delivery Acknowledgement Preview
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 - 新增 DKS-242 digest delivery acknowledgement preview OKF policy、Shared Type、dry-run fixture、专项 validator 和受控说明文档。
 - 将 DKS-241 delivery preview refs 作为 DKS-242 source delivery preview refs。
-- 保持所有 acknowledgement / delivery / digest / escalation / notification / evidence / WAES / KDS / external API 写入为 0 或 false。
+- 保持所有 acknowledgement / delivery / digest / escalation / notification / evidence / WAME / KDS / external API 写入为 0 或 false。
 
 ## 输出
 

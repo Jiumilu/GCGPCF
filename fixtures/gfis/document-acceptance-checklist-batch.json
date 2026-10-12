@@ -9,7 +9,7 @@
     "trust_level_assigned",
     "rag_admission_assessed",
     "sensitive_handling_assessed",
-    "waes_gate_suggested",
+    "wame_gate_suggested",
     "kwe_workpack_suggested",
     "writeback_candidate_only"
   ],
@@ -28,7 +28,7 @@
         "trust_level_assigned": true,
         "rag_admission_assessed": true,
         "sensitive_handling_assessed": true,
-        "waes_gate_suggested": true,
+        "wame_gate_suggested": true,
         "kwe_workpack_suggested": true,
         "writeback_candidate_only": true
       },
@@ -38,7 +38,7 @@
       "gapRefs": ["gap-pod-001", "gap-finance-proof-001"],
       "factCandidateRefs": ["fc-order-001"],
       "writebackCandidateRefs": ["wb-order-status-001"],
-      "waesGateSuggestions": [
+      "wameGateSuggestions": [
         {"gateType": "source_gate", "gateStatus": "passed"},
         {"gateType": "evidence_gate", "gateStatus": "human_required"},
         {"gateType": "writeback_gate", "gateStatus": "human_required"}
@@ -66,7 +66,7 @@
         "trust_level_assigned": true,
         "rag_admission_assessed": true,
         "sensitive_handling_assessed": true,
-        "waes_gate_suggested": true,
+        "wame_gate_suggested": true,
         "kwe_workpack_suggested": true,
         "writeback_candidate_only": true
       },
@@ -76,7 +76,7 @@
       "gapRefs": [],
       "factCandidateRefs": ["fc-finance-001"],
       "writebackCandidateRefs": ["wb-finance-metadata-001"],
-      "waesGateSuggestions": [
+      "wameGateSuggestions": [
         {"gateType": "sensitive_data_gate", "gateStatus": "metadata_only"},
         {"gateType": "revenue_gate", "gateStatus": "human_required"}
       ],
@@ -103,7 +103,7 @@
         "trust_level_assigned": true,
         "rag_admission_assessed": true,
         "sensitive_handling_assessed": true,
-        "waes_gate_suggested": true,
+        "wame_gate_suggested": true,
         "kwe_workpack_suggested": true,
         "writeback_candidate_only": true
       },
@@ -113,7 +113,7 @@
       "gapRefs": [],
       "factCandidateRefs": ["fc-delivery-001", "fc-quality-001"],
       "writebackCandidateRefs": ["wb-pod-metadata-001"],
-      "waesGateSuggestions": [
+      "wameGateSuggestions": [
         {"gateType": "evidence_gate", "gateStatus": "passed"},
         {"gateType": "sensitive_data_gate", "gateStatus": "metadata_only"}
       ],
@@ -140,7 +140,7 @@
         "trust_level_assigned": true,
         "rag_admission_assessed": true,
         "sensitive_handling_assessed": true,
-        "waes_gate_suggested": true,
+        "wame_gate_suggested": true,
         "kwe_workpack_suggested": true,
         "writeback_candidate_only": true
       },
@@ -150,7 +150,7 @@
       "gapRefs": ["gap-responsibility-boundary-001"],
       "factCandidateRefs": ["fc-oem-transition-001"],
       "writebackCandidateRefs": ["wb-oem-responsibility-001"],
-      "waesGateSuggestions": [
+      "wameGateSuggestions": [
         {"gateType": "evidence_gate", "gateStatus": "repair_required"},
         {"gateType": "committee_gate", "gateStatus": "committee_required"}
       ],
@@ -177,7 +177,7 @@
         "trust_level_assigned": true,
         "rag_admission_assessed": true,
         "sensitive_handling_assessed": true,
-        "waes_gate_suggested": true,
+        "wame_gate_suggested": true,
         "kwe_workpack_suggested": true,
         "writeback_candidate_only": true
       },
@@ -187,7 +187,7 @@
       "gapRefs": ["gap-source-001", "gap-evidence-001"],
       "factCandidateRefs": ["fc-ai-order-001"],
       "writebackCandidateRefs": [],
-      "waesGateSuggestions": [
+      "wameGateSuggestions": [
         {"gateType": "source_gate", "gateStatus": "blocked"},
         {"gateType": "evidence_gate", "gateStatus": "blocked"}
       ],
@@ -221,7 +221,7 @@
     "writesErp": 0,
     "writesMes": 0,
     "writesKdsFact": 0,
-    "writesWaesGateResult": 0,
+    "writesWameGateResult": 0,
     "writesKweWorkItem": 0,
     "writesRevenueOrScoreConfirmation": 0,
     "writesExternalApi": 0

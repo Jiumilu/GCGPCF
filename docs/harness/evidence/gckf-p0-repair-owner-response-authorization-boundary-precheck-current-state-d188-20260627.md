@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0RESPONSEAUTHBOUNDARYD18820260627
 title: GCKF P0 修复负责人响应授权边界预检查当前态 D188
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES, KDS]
+related_projects: [GPCF, GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ D188 承接 D187 的缺失信号补齐队列，检查 response intake 前的授�
 |---|---|---|---|
 | controlled_repair_owner_response | D187-AQ-001 | controlled repair owner response document | missing |
 | signed_response_package | D187-AQ-002 | signed response package | missing |
-| waes_review_note | D187-AQ-003 | WAES review note | missing |
+| wame_review_note | D187-AQ-003 | WAME review note | missing |
 | human_confirmation_record | D187-AQ-004 | human confirmation record | missing |
 
 ## 禁止动作

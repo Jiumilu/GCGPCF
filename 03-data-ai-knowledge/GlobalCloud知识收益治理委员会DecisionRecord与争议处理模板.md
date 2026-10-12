@@ -97,7 +97,7 @@ Committee
 | affectedParties | 是 | 受影响单位或人员 |
 | issueSummary | 是 | 议题摘要 |
 | evidenceRefs | 是 | 证据或脱敏索引 |
-| waesGateStatus | 是 | pending / governance_recorded / governance_blocked / governance_rejected |
+| wameGateStatus | 是 | pending / governance_recorded / governance_blocked / governance_rejected |
 | classificationLevel | 是 | DSR-L0 / DSR-L1 / DSR-L2 / DSR-L3 |
 | proposedDecision | 是 | 候选结论 |
 | voteEligibleMembers | 是 | 有投票资格成员清单 |

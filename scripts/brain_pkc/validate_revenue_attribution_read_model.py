@@ -2,7 +2,7 @@
 """Validate Brain/PKC revenue attribution read model no-write boundaries.
 
 This validator reads local OKF, shared type, and fixture files only. It does
-not confirm scores, distribute revenue, mutate KDS lifecycle, write WAES/KWE,
+not confirm scores, distribute revenue, mutate KDS lifecycle, write WAME/KWE,
 write business systems, or call external APIs.
 """
 
@@ -92,7 +92,7 @@ def main() -> int:
         "blockedActionCount": sum(len(view["blockedActions"]) for view in views),
         "crossUnitLeakCount": cross_unit_leaks,
         "writesKdsLifecycle": sum(view["noWrite"]["writesKdsLifecycle"] for view in views),
-        "writesWaesGateResult": sum(view["noWrite"]["writesWaesGateResult"] for view in views),
+        "writesWameGateResult": sum(view["noWrite"]["writesWameGateResult"] for view in views),
         "writesKweWorkItem": sum(view["noWrite"]["writesKweWorkItem"] for view in views),
         "writesScoreConfirmation": sum(view["noWrite"]["writesScoreConfirmation"] for view in views),
         "writesRevenueDistribution": sum(view["noWrite"]["writesRevenueDistribution"] for view in views),
@@ -121,7 +121,7 @@ def main() -> int:
         f"views={checks['viewCount']} brain_views={checks['brainViews']} pkc_views={checks['pkcViews']} "
         f"masked_views={checks['maskedViews']} committee_authorized_views={checks['committeeAuthorizedViews']} "
         f"own_only_views={checks['ownOnlyViews']} blocked_actions={checks['blockedActionCount']} "
-        "cross_unit_leaks=0 writes_kds_lifecycle=0 writes_waes_gate_result=0 "
+        "cross_unit_leaks=0 writes_kds_lifecycle=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_score_confirmation=0 writes_revenue_distribution=0 "
         "writes_business_system=0 writes_external_api=0"
     )

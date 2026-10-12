@@ -77,7 +77,7 @@ def main() -> int:
     require(evidence.get("execution_mode") == "governance_pre_review_without_external_search", "execution mode mismatch")
     require(evidence.get("external_search_invoked") is False, "external search must not be invoked")
 
-    source = "docs/harness/evidence/agent-reach-waes-kds-candidate-review-queue-20260621.json"
+    source = "docs/harness/evidence/agent-reach-wame-kds-candidate-review-queue-20260621.json"
     require(source in evidence.get("source_evidence", []), "missing review queue source")
     require((ROOT / source).exists(), "review queue source file missing")
 
@@ -111,7 +111,7 @@ def main() -> int:
         )
 
     decision = evidence.get("admission_decision", {})
-    require(decision.get("waes_review_status") == "deferred_pending_authoritative_verification", "WAES status mismatch")
+    require(decision.get("wame_review_status") == "deferred_pending_authoritative_verification", "WAME status mismatch")
     require(decision.get("kds_admission") == "limited_candidate_only", "KDS admission must remain limited")
     require(decision.get("rag_admission") == "limited", "RAG admission must remain limited")
     require(decision.get("status_upgrade_allowed") is False, "status upgrade must be false")
@@ -123,7 +123,7 @@ def main() -> int:
         "5 条候选来源全部保守登记为 `defer`",
         "accept_limited_count | 0",
         "defer_count | 5",
-        "不代表 WAES/KDS 已接受这些候选来源",
+        "不代表 WAME/KDS 已接受这些候选来源",
         "不写 KDS canonical",
     ]:
         require(phrase in evidence_md, f"evidence markdown missing phrase: {phrase}")
@@ -143,7 +143,7 @@ def main() -> int:
     print(
         "agent_reach_human_review_decisions=pass "
         "item_count=5 accept_limited_count=0 reject_count=0 defer_count=5 "
-        "waes_review_status=deferred_pending_authoritative_verification "
+        "wame_review_status=deferred_pending_authoritative_verification "
         "status_upgrade_allowed=false"
     )
     return 0

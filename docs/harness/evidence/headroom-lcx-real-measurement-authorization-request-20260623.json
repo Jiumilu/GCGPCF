@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -34,7 +34,7 @@
     "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json"
   ],
   "requested_future_decision": "open_real_measurement_window",
-  "current_waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
+  "current_wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck",
   "field_bindings": [
     {
       "field": "authorized_window_id",
@@ -72,10 +72,10 @@
       "binding_state": "precheck_only"
     },
     {
-      "field": "waes_harness_admission_decision",
+      "field": "wame_harness_admission_decision",
       "current_value": "admitted_for_sanitized_measurement_precheck",
       "source_evidence": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
-      "future_runner_input": "waes_harness_admission_decision",
+      "future_runner_input": "wame_harness_admission_decision",
       "binding_state": "precheck_only"
     }
   ],
@@ -86,7 +86,7 @@
       "authorized_at",
       "sanitized_production_token_ledger",
       "rollback_plan_id",
-      "waes_harness_admission_decision"
+      "wame_harness_admission_decision"
     ],
     "forbidden_inputs": [
       "raw_prompt",
@@ -130,7 +130,7 @@
   "execution_guard": {
     "executable_now": false,
     "requires_real_measurement_authorization_window": true,
-    "requires_waes_harness_decision": true,
+    "requires_wame_harness_decision": true,
     "requires_sanitized_token_ledger_metadata_only": true,
     "requires_rollback_plan_id": true,
     "requires_no_production_proxy": true,

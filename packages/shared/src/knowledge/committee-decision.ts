@@ -77,7 +77,7 @@ export interface CommitteeDecisionPolicy {
   votingMethods: CommitteeVotingMethod[];
   hardBoundaries: {
     decisionDomain: Extract<KnowledgeDomain, "governance">;
-    committeeDoesNotReplaceWaesGate: boolean;
+    committeeDoesNotReplaceWameGate: boolean;
     committeeCannotWriteBusinessSystem: boolean;
     committeeCannotDirectlyDistributeRevenue: boolean;
     committeeCannotDirectlyConfirmScore: boolean;

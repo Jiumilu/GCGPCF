@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5CCF57D65C
 title: WAS Real Source Record Monitor 010 Evidence
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,23 +20,23 @@ superseded_by: []
 
 ## 结论
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-010` 已建立 WAES 入审包前置约束监控。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-010` 已建立 WAME 入审包前置约束监控。
 
-当前仍没有真实 P4 candidate 文件。没有真实 source record、KDS 绑定证明、owner/issuer 确认和 runtime context binding 时，不得构造 WAES gate input bundle，不得进入 WAES review queue，也不得形成 runtime intake。
+当前仍没有真实 P4 candidate 文件。没有真实 source record、KDS 绑定证明、owner/issuer 确认和 runtime context binding 时，不得构造 WAME gate input bundle，不得进入 WAME review queue，也不得形成 runtime intake。
 
 ## 监控指标
 
 | 指标 | 值 |
 |---|---:|
 | submitted_real_candidate_files | `0` |
-| waes_gate_input_bundle | `0` |
-| waes_review_queue_attempts | `0` |
-| premature_waes_review_requests | `0` |
+| wame_gate_input_bundle | `0` |
+| wame_review_queue_attempts | `0` |
+| premature_wame_review_requests | `0` |
 | missing_kds_binding_proof | `0` |
 | missing_owner_issuer_confirmation | `0` |
 | missing_runtime_context_binding | `0` |
-| incomplete_waes_admission_bundle | `0` |
-| accepted_for_waes_review | `0` |
+| incomplete_wame_admission_bundle | `0` |
+| accepted_for_wame_review | `0` |
 | accepted_for_next_gate | `0` |
 | hold_required | `1` |
 | real_source_records | `0` |
@@ -44,7 +44,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -52,12 +52,12 @@ superseded_by: []
 
 ## 负例
 
-- premature_waes_review：无真实源记录不得提前创建 WAES review。
+- premature_wame_review：无真实源记录不得提前创建 WAME review。
 - missing_kds_binding_proof：缺 KDS source-of-record 绑定证明不得入审。
 - missing_owner_issuer_confirmation：缺 owner/issuer 确认不得入审。
 - missing_runtime_context_binding：缺 runtime context binding 不得入审。
-- incomplete_waes_admission_bundle：WAES 入审包不完整不得入审。
-- waes_bundle_without_real_source_record：无真实 source record 不得构造或接受 WAES bundle。
+- incomplete_wame_admission_bundle：WAME 入审包不完整不得入审。
+- wame_bundle_without_real_source_record：无真实 source record 不得构造或接受 WAME bundle。
 
 ## 必跑命令
 
@@ -72,4 +72,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_010.py
 
 ## 边界
 
-本 evidence 不创建 WAES review package、WAES review queue、runtime intake、review queue、runtime primary key、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不创建 WAME review package、WAME review queue、runtime intake、review queue、runtime primary key、verified artifact、accepted、integrated 或 production_ready。

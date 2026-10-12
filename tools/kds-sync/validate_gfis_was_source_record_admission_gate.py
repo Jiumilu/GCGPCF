@@ -32,7 +32,7 @@ REQUIRED_WAS_FIELDS = {
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink",
@@ -43,7 +43,7 @@ ZERO_COUNT_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
     "accepted_integrated",
     "production_ready",
@@ -118,7 +118,7 @@ def main() -> int:
     require(target.get("trust_level") == s01.get("trustLevel") == "T4", "trust level mismatch")
     require(target.get("source_refs") == s01.get("sourceRefs"), "source refs mismatch")
     require(target.get("evidence_refs") == s01.get("evidenceRefs"), "evidence refs mismatch")
-    require(target.get("waes_gate_refs") == s01.get("waesGateRefs"), "WAES gate refs mismatch")
+    require(target.get("wame_gate_refs") == s01.get("wameGateRefs"), "WAME gate refs mismatch")
     require(target.get("promotion_blockers") == s01.get("promotionBlockers"), "promotion blockers mismatch")
     require(target.get("next_action") == s01.get("nextAction"), "next action mismatch")
 
@@ -131,7 +131,7 @@ def main() -> int:
     for key in [
         "must_reject_without_customer_or_platform_source",
         "must_reject_without_kds_backlink",
-        "must_reject_without_waes_gate_ref",
+        "must_reject_without_wame_gate_ref",
     ]:
         require(policy.get(key) is True, f"{key} must be true")
     for key in [
@@ -139,7 +139,7 @@ def main() -> int:
         "may_create_runtime_primary_key_before_valid_source_record",
         "may_open_review_queue_before_runtime_primary_key",
         "may_open_runtime_intake_before_review_queue",
-        "may_create_verified_artifact_before_waes_review",
+        "may_create_verified_artifact_before_wame_review",
     ]:
         require(policy.get(key) is False, f"{key} must be false")
 
@@ -159,7 +159,7 @@ def main() -> int:
     gfis_real_counts = gfis_real_gate.get("counts", {})
     for key in ZERO_COUNT_KEYS:
         require(blocked_counts.get(key) == 0, f"gfis_current_blocking_counts.{key} must be 0")
-    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]:
         require(gfis_real_counts.get(key) == 0, f"GFIS real gate count {key} must be 0")
 
     for phrase in [
@@ -175,7 +175,7 @@ def main() -> int:
         "required_was_fields=12 object_family=CustomerRequirementOrPlatformOrder "
         "asset_dimension=data_asset flow_type=commerce_flow lifecycle=pending_business_verification "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

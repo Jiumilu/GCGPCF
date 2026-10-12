@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F8EC78E9C2
 title: LOOP Round GPCF-KDS-DKS-104 - KWE 队列动作接入请求无写入
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 在 DKS-103 Brain / PKC / GFIS Assistant KWE 队列只读模型之后，建立 KWE Queue Action Intake Request no-write 契约，使 Brain、PKC、GFIS Assistant 可以把用户动作记录为受控请求候选。
 
-本轮只定义 action request，不创建真实 KWE WorkItem，不完成人工确认或委员会决议，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 WAES Gate Result，不写 GFIS/GPC/ERP/MES，不生成 target receipt，不确认收益、积分、额度或悬赏，不调用外部 API。
+本轮只定义 action request，不创建真实 KWE WorkItem，不完成人工确认或委员会决议，不改变 KDS lifecycle，不写 KDS fact 或 accepted fact，不写 WAME Gate Result，不写 GFIS/GPC/ERP/MES，不生成 target receipt，不确认收益、积分、额度或悬赏，不调用外部 API。
 
 ## 2. 本轮输入
 
@@ -52,7 +52,7 @@ superseded_by: []
 ### 4.1 DKS-104 专项检查
 
 ```text
-kwe_queue_action_intake_request=pass requests=5 submit_evidence=1 metadata_only_review=1 committee_candidates=1 freeze_candidates=1 blocked=1 creates_kwe_work_items=0 requests_with_payload_or_evidence=4 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_waes_gate_result=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+kwe_queue_action_intake_request=pass requests=5 submit_evidence=1 metadata_only_review=1 committee_candidates=1 freeze_candidates=1 blocked=1 creates_kwe_work_items=0 requests_with_payload_or_evidence=4 writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_wame_gate_result=0 writes_business_system=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### 4.2 覆盖矩阵
@@ -71,7 +71,7 @@ tsc -p packages/api/tsconfig.json --noEmit: pass
 
 ### 4.4 回归链
 
-本轮回归链覆盖 DKS-096 至 DKS-104，以及既有 KDS、WAES、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
+本轮回归链覆盖 DKS-096 至 DKS-104，以及既有 KDS、WAME、KWE、GFIS、Brain/PKC、Governance、RAG、MMC、状态机、对象关系 no-write smoke。
 
 ```text
 regression=pass
@@ -91,7 +91,7 @@ api_tsc=pass
 - writes_kds_lifecycle
 - writes_kds_fact
 - writes_kds_accepted_fact
-- writes_waes_gate_result
+- writes_wame_gate_result
 - writes_business_system
 - writes_target_receipt
 - writes_committee_decision_completion

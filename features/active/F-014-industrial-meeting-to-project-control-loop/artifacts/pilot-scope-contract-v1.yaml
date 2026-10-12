@@ -2,7 +2,7 @@ contract_id: GPCF-PILOT-SCOPE-V1
 title: Candidate PilotScope Contract for Real-Business AI Entry
 status: candidate
 owner: GPCF
-related_projects: [WAS, XWAIL, WAES, KDS, MMC, Studio, GFIS]
+related_projects: [WAS, XWAIL, WAME, KDS, MMC, Studio, GFIS]
 
 purpose: >-
   Define the minimum governed boundary for a future real-business AI pilot.
@@ -57,11 +57,11 @@ compatibility_note:
     - ProjectControlItem as evidence-bound candidate or confirmed fact
   xwail_impact: >-
     candidate profile, schema, and validator implemented as
-    industrial-green-chain.meeting-project-control; WAES authorization is
+    industrial-green-chain.meeting-project-control; WAME authorization is
     still required before activation
   aaas_impact: service_package_and_evidence_requirement_not_yet_defined
-  waes_status: >-
-    candidate local activation gate implemented and verified; real WAES
+  wame_status: >-
+    candidate local activation gate implemented and verified; real WAME
     authorization and publication remain separately required
   migration_decision: candidate
 
@@ -71,9 +71,9 @@ promotion_blockers:
   - no_retention_or_evidence_policy
   - no_receiving_ledger_owner
   - no_authorized_actor_mapping
-  - no_waes_gate_or_xwail_conformance
+  - no_wame_gate_or_xwail_conformance
   - no_real_pilot_evidence
 
 next_action: >-
-  Define the WAS/XWAIL schema and WAES authorization profile, then create a
+  Define the WAS/XWAIL schema and WAME authorization profile, then create a
   separately authorized PilotScope instance for one named project.

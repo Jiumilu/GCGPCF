@@ -55,7 +55,7 @@ def main() -> int:
     require(evidence["status"] == "dev_execution_admission_ready", "invalid status")
     require(evidence["next_round"] == "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002", "invalid next round")
 
-    expected_projects = {"GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"}
+    expected_projects = {"GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"}
     require(set(evidence["project_group_scope"]) == expected_projects, "project group scope must cover 14 projects")
 
     required_commands = [
@@ -103,7 +103,7 @@ def main() -> int:
         "dev_execution_admission=blocked",
         "codegraph_unavailable_exception",
         "不代表业务变更完成",
-        "不代表 WAES",
+        "不代表 WAME",
         "GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002",
     ]:
         require(phrase in doc, f"admission doc missing phrase: {phrase}")

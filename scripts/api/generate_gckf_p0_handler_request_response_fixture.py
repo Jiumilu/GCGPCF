@@ -23,9 +23,9 @@ GROUPS = [
         "serviceName": "kdsV2Service",
     },
     {
-        "group": "waes",
-        "routeFile": "packages/api/src/waes/routes.ts",
-        "serviceName": "waesService",
+        "group": "wame",
+        "routeFile": "packages/api/src/wame/routes.ts",
+        "serviceName": "wameService",
     },
     {
         "group": "kwe",
@@ -65,7 +65,7 @@ def parse_endpoint_blocks(route_text: str) -> list[dict[str, str]]:
 
 
 def boundary_for(group: str, handler: str, block: str) -> str:
-    if group == "waes":
+    if group == "wame":
         return "gate_check"
     if group == "kwe":
         return "read_only" if 'routeMode: "read_only"' in block else "work_request"

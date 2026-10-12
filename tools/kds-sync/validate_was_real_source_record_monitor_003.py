@@ -16,8 +16,8 @@ LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE
 PREVIOUS_MONITOR_JSON = ROOT / "docs/harness/evidence/was-real-source-record-monitor-002-20260621.json"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 REQUIRED_COMMANDS = [
     ["python3", "tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py"],
@@ -154,7 +154,7 @@ def main() -> int:
         "required_p4_inputs=6 submitted_real_inputs=0 submitted_files_found=0 candidate_files_checked=0 "
         "accepted_for_next_gate=0 hold_required=1 monitor_state=waiting weak_evidence_promoted=false "
         "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 review_queue=0 "
-        "runtime_intake=0 waes_review=0 verified=0 accepted=false integrated=false production_ready=false "
+        "runtime_intake=0 wame_review=0 verified=0 accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-004"
     )
     return 0

@@ -63,14 +63,14 @@ def main() -> int:
     require(precheck.get("authorization_signal_present") is True, "authorization signal must be present")
     require(precheck.get("authorization_complete") is True, "authorization fields must be complete")
     require(precheck.get("missing_required_field_count") == 0, "missing field count must be 0")
-    require(precheck.get("waes_harness_admitted") is True, "WAES/Harness admission must be true for sanitized precheck")
+    require(precheck.get("wame_harness_admitted") is True, "WAME/Harness admission must be true for sanitized precheck")
     require(precheck.get("authorized_measurement_precheck_gate") is True, "authorized measurement precheck must pass for sanitized dry-run preparation")
     require(precheck.get("production_token_measurement_allowed") is False, "production token measurement must be blocked")
     gates = evidence.get("gates", {})
     require(gates.get("authorization_signal_present") is True, "authorization signal gate must be true")
     require(gates.get("authorization_complete") is True, "authorization_complete gate must be true")
     require(gates.get("missing_required_field_count_zero") is True, "missing field zero gate must be true")
-    require(gates.get("waes_harness_admitted") is True, "WAES/Harness admission gate must be true")
+    require(gates.get("wame_harness_admitted") is True, "WAME/Harness admission gate must be true")
     for key in [
         "production_token_measurement_allowed",
         "production_proxy_started",
@@ -92,7 +92,7 @@ def main() -> int:
         "authorization_signal_present | true",
         "authorization_complete | true",
         "missing_required_field_count | 0",
-        "waes_harness_admitted | true",
+        "wame_harness_admitted | true",
         "production_token_measurement_allowed | false",
         "production_admission_gate | false",
         "accepted | false",
@@ -105,7 +105,7 @@ def main() -> int:
     print(
         "headroom_lcx_authorized_measurement_precheck=pass_precheck_only "
         "project_count=15 authorization_signal_present=true authorization_complete=true "
-        "missing_required_field_count=0 waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck production_token_measurement_allowed=false "
+        "missing_required_field_count=0 wame_harness_admission_decision=admitted_for_sanitized_measurement_precheck production_token_measurement_allowed=false "
         "production_admission_gate=false accepted=false integrated=false production_ready=false"
     )
     return 0

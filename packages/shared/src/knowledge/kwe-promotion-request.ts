@@ -1,6 +1,6 @@
 import type { KnowledgeLifecycle, KnowledgeObjectType } from "./object";
 import type { KnowledgeStateActor } from "./status-machine";
-import type { WaesReviewerRequirement } from "./waes-gate-io";
+import type { WameReviewerRequirement } from "./wame-gate-io";
 
 export type KwePromotionRequestActor = KnowledgeStateActor | "loop";
 
@@ -8,21 +8,21 @@ export type KwePromotionStatus =
   | "draft_request"
   | "ready_for_kwe_review"
   | "repair_required"
-  | "waes_required"
+  | "wame_required"
   | "human_required"
   | "committee_required"
   | "freeze_required"
   | "blocked";
 
 export type KwePromotionReviewerRequirement =
-  | WaesReviewerRequirement
+  | WameReviewerRequirement
   | "publication_owner_required";
 
 export interface KwePromotionNoWrite {
   writesKdsLifecycle: 0;
   writesAcceptedFact: 0;
   writesPublishedObject: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesBusinessSystem: 0;
   writesRevenueOrScoreConfirmation: 0;
@@ -40,7 +40,7 @@ export interface KwePromotionRequest {
   requestActor: KwePromotionRequestActor;
   sourceRefs: string[];
   evidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   workpackRefs: string[];
   harnessEvidenceRefs: string[];
   reviewerRequirement: KwePromotionReviewerRequirement;

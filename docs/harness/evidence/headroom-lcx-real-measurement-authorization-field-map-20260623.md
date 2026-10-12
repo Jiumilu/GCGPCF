@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-FIELD-MAP-20260623
 title: Headroom LCX Real Measurement Authorization Field Map Evidence
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,17 +36,17 @@ status: authorization_field_map_defined_precheck_only
 | authorized_at | 2026-06-22T08:42:06+08:00 | `HEADROOM-LCX-APPROVAL-INSTANCE-PRECHECK-20260622` | `authorized_at` | bind approval timestamp before any execution |
 | sanitized_production_token_ledger | docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json | `HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623` | `sanitized_production_token_ledger` | allow metadata-only ledger reads for cost replay |
 | rollback_plan_id | HEADROOM-LCX-ROLLBACK-PLAN-20260622-001 | `HEADROOM-LCX-ROLLBACK-PLAN-20260622-001` | `rollback_plan_id` | attach rollback runbook identifier before any measurement execution |
-| waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck | `HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621` | `waes_harness_admission_decision` | keep precheck-only until a new WAES/Harness decision is issued |
+| wame_harness_admission_decision | admitted_for_sanitized_measurement_precheck | `HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621` | `wame_harness_admission_decision` | keep precheck-only until a new WAME/Harness decision is issued |
 
 ## 未来 runner 输入
 
-`authorized_window_id`, `authorized_by`, `authorized_at`, `sanitized_production_token_ledger`, `rollback_plan_id`, `waes_harness_admission_decision`
+`authorized_window_id`, `authorized_by`, `authorized_at`, `sanitized_production_token_ledger`, `rollback_plan_id`, `wame_harness_admission_decision`
 
 ## 执行门禁
 
 - executable_now: `false`
 - requires_real_measurement_authorization_window: `true`
-- requires_waes_harness_decision: `true`
+- requires_wame_harness_decision: `true`
 - requires_sanitized_token_ledger_metadata_only: `true`
 - requires_rollback_plan_id: `true`
 - requires_no_production_proxy: `true`

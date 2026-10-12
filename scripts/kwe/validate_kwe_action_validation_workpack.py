@@ -21,7 +21,7 @@ NO_WRITE_KEYS = (
     "writesKdsLifecycle",
     "writesKdsFact",
     "writesKdsAcceptedFact",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesBusinessSystem",
     "writesTargetReceipt",
     "writesCommitteeDecisionCompletion",
@@ -169,7 +169,7 @@ def main() -> int:
         f"creates_kwe_work_items={actual['createsKweWorkItems']} promotes_lifecycle={actual['promotesLifecycle']} "
         f"workpacks_with_followups={actual['workpacksWithFollowups']} "
         "writes_kwe_work_item=0 writes_kds_lifecycle=0 writes_kds_fact=0 "
-        "writes_kds_accepted_fact=0 writes_waes_gate_result=0 writes_business_system=0 "
+        "writes_kds_accepted_fact=0 writes_wame_gate_result=0 writes_business_system=0 "
         "writes_target_receipt=0 writes_committee_decision_completion=0 "
         "writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 "
         "writes_bounty_settlement=0 writes_external_api=0"

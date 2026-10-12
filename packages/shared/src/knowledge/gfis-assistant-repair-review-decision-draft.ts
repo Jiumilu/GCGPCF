@@ -5,8 +5,8 @@ import type {
   GfisAssistantRepairSubmissionMetadataRefBundle,
 } from "./gfis-assistant-repair-submission-intake";
 import type {
-  GfisAssistantWaesGuidanceSurface,
-} from "./gfis-assistant-waes-guidance-packet";
+  GfisAssistantWameGuidanceSurface,
+} from "./gfis-assistant-wame-guidance-packet";
 
 export type GfisAssistantRepairReviewDecisionDraftType =
   | "human_action_draft"
@@ -47,7 +47,7 @@ export interface GfisAssistantRepairReviewDecisionDraftNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesReviewQueueItem: 0;
   writesConfirmationRecord: 0;
@@ -74,7 +74,7 @@ export interface GfisAssistantRepairReviewDecisionDraft {
   guidancePacketRef: string;
   tenantId: string;
   projectId: string;
-  assistantSurface: GfisAssistantWaesGuidanceSurface;
+  assistantSurface: GfisAssistantWameGuidanceSurface;
   draftType: GfisAssistantRepairReviewDecisionDraftType;
   draftStatus: GfisAssistantRepairReviewDecisionDraftStatus;
   suggestedDisposition: GfisAssistantRepairReviewSuggestedDisposition;
@@ -93,7 +93,7 @@ export interface GfisAssistantRepairReviewDecisionDraft {
   createsGapRecord: false;
   createsBountyRecord: false;
   createsKweWorkItem: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   routesToHumanQueue: false;
   approvesBusinessWrite: false;
   promotesLifecycle: false;
@@ -114,7 +114,7 @@ export interface GfisAssistantRepairReviewDecisionDraftPolicy {
     decisionDraftIsNotConfirmation: boolean;
     decisionDraftIsNotCommitteeDecision: boolean;
     decisionDraftIsNotDecisionRecord: boolean;
-    decisionDraftIsNotWaesResult: boolean;
+    decisionDraftIsNotWameResult: boolean;
     decisionDraftIsNotBusinessWriteback: boolean;
     suggestedDispositionIsRecommendationOnly: boolean;
     submitsEvidenceMustBeFalse: boolean;
@@ -125,7 +125,7 @@ export interface GfisAssistantRepairReviewDecisionDraftPolicy {
     createsGapRecordMustBeFalse: boolean;
     createsBountyRecordMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     routesToHumanQueueMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;
     promotesLifecycleMustBeFalse: boolean;

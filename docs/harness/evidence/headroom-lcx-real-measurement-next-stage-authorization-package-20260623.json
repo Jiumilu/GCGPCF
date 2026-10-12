@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -36,7 +36,7 @@
   "bridge_state": {
     "authorization_complete": true,
     "missing_required_field_count": 0,
-    "waes_harness_admitted": true,
+    "wame_harness_admitted": true,
     "real_measurement_window_requested": true,
     "real_measurement_window_granted": true,
     "real_measurement_open": false,
@@ -55,7 +55,7 @@
       "authorized_at",
       "sanitized_production_token_ledger",
       "rollback_plan_id",
-      "waes_harness_admission_decision"
+      "wame_harness_admission_decision"
     ],
     "runtime_switches": [
       "open_real_measurement_window",
@@ -109,6 +109,6 @@
   "notes": [
     "This package bridges the completed sanitized precheck to the missing real measurement window decision.",
     "It is evidence of the next-stage bridge boundary, not evidence of execution.",
-    "It keeps the production branch blocked until WAES/Harness issues a new real-measurement decision."
+    "It keeps the production branch blocked until WAME/Harness issues a new real-measurement decision."
   ]
 }

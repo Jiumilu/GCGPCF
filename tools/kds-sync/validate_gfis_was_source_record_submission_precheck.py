@@ -49,7 +49,7 @@ WAS_FIELDS = {
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink",
@@ -60,7 +60,7 @@ ZERO_RESULT_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
     "accepted_integrated",
     "production_ready",
@@ -228,7 +228,7 @@ def main() -> int:
         f"submitted_files_found={len(files)} candidate_files_checked={len(files)} "
         f"gfis_native_fields=12 was_fields=12 accepted_for_next_gate={accepted} "
         f"hold_required={0 if accepted else 1} real_source_records=0 valid_source_records=0 "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

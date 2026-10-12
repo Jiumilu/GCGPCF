@@ -97,7 +97,7 @@ review_rework_count
 - `changed_files` 超出 `files_allowed_to_change`：blocked。
 - `status_boundaries.accepted=true`、`integrated=true` 或 `production_ready=true`：blocked。
 - 出现 `production_write=true` 或 `external_api_write=true`：blocked。
-- 证据声明 CodeGraph 替代 WAES/Harness/人工验收裁决：blocked。
+- 证据声明 CodeGraph 替代 WAME/Harness/人工验收裁决：blocked。
 
 ## 允许状态
 

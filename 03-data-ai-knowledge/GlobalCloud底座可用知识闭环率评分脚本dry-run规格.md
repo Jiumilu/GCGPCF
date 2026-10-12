@@ -48,7 +48,7 @@ superseded_by: []
   "sourceRefs": ["virtual://hblc/fea/source-summary"],
   "evidenceLevel": "E2_candidate",
   "humanReviewStatus": "pending",
-  "waesRecordStatus": "planned",
+  "wameRecordStatus": "planned",
   "settlementStatus": "prohibited_before_acceptance",
   "ragInclude": false
 }
@@ -99,7 +99,7 @@ superseded_by: []
     },
     "evidenceLevel": {"type": "string"},
     "humanReviewStatus": {"type": "string"},
-    "waesRecordStatus": {"type": "string"},
+    "wameRecordStatus": {"type": "string"},
     "settlementStatus": {"type": "string"},
     "ragInclude": {"type": "boolean"}
   },

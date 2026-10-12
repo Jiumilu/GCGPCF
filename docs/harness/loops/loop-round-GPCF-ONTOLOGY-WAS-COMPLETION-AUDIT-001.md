@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-313A426BA4
 title: "Loop Round: GPCF-ONTOLOGY-WAS-COMPLETION-AUDIT-001"
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ python3 tools/kds-sync/validate_was_completion_audit.py
 期望输出：
 
 ```text
-was_completion_audit=pass objective_items=8 verified_governance_items=8 hold_items=1 project_group_scope=14/14 required_validators=11 governance_completion=verified_governance_complete business_completion=hold_waiting_real_source_record real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001
+was_completion_audit=pass objective_items=8 verified_governance_items=8 hold_items=1 project_group_scope=14/14 required_validators=11 governance_completion=verified_governance_complete business_completion=hold_waiting_real_source_record real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 accepted=false integrated=false production_ready=false next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001
 ```
 
 ## 反馈
@@ -67,7 +67,7 @@ loop_was_context:
     - GFIS
     - GPC
     - PVAOS
-    - WAES
+    - WAME
     - KDS
     - Brain
     - PKC
@@ -83,16 +83,16 @@ loop_was_context:
   object_family: WasCompletionAudit
   source_of_record: KDS
   ontology_role: completion_audit
-  waes_gate: required_before_promotion
+  wame_gate: required_before_promotion
   loop_role: evidence_closure
   llm_role: candidate_generation_only
   rag_role: controlled_reference_only
-  runtime_writeback: blocked_without_waes_kds_owner_confirmation
+  runtime_writeback: blocked_without_wame_kds_owner_confirmation
   promotion_boundary:
     real_source_records: 0
     valid_source_records: 0
     runtime_primary_key_ready: 0
-    waes_review: 0
+    wame_review: 0
     accepted: false
     integrated: false
     production_ready: false

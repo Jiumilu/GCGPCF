@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-REAL-EXECUTION-GOVERNANCE-PROGRESS-20260626
 title: GlobalCloud 项目群真实执行治理推进证据 2026-06-26
 project: GPC
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -129,12 +129,12 @@ noise_cleanup_repo_current = none
 |---|---|---|---|---|---|
 | P0 | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001` | GPCF -> all projects | 当前 `GPCF/GFIS/KDS` 三仓 review 边界已收口为 Wave 1 前置桥接入口 | pre-wave1 review authorization gate、Loop document gate、Git clean gate | 未确认时保持 `review_allowed=false`，Wave 1 不进入执行回执 |
 | P0 | `AUTH-KDS-SCHEME-REVIEW-20260626` | KDS | KDS sensitive_path 是当前 live blocked 主因 | KDS sensitive path gate、Loop document gate、receipt ledger gate | 未确认或门禁失败时保持 blocked |
-| P0 | `WAES-LINT-RUNTIME-001` | WAES -> XWAIL/AaaS | WAES 仍为 `repair_required / authorization_required` | WAES 项目门禁、GPCF dependency gate、Loop document gate、人工授权 | 修复失败则保持 WAES `repair_required`，XWAIL/AaaS 不升级发布绑定 |
+| P0 | `WAME-LINT-RUNTIME-001` | WAME -> XWAIL/AaaS | WAME 仍为 `repair_required / authorization_required` | WAME 项目门禁、GPCF dependency gate、Loop document gate、人工授权 | 修复失败则保持 WAME `repair_required`，XWAIL/AaaS 不升级发布绑定 |
 | P0 | `GFIS-REAL-SOR-001` | GFIS/GPC/PVAOS -> SCaaS | 缺真实 source-of-record | 业务 owner 输入确认、source-record gate、GPC external runtime gate | 输入缺失或证据不合格时保持 GFIS `repair_required` |
 | P1 | `GPC-EXTERNAL-RUNTIME-EVIDENCE-001` | GPC -> PVAOS/SCaaS | GPC 仍缺生产确认、外部联调和 runtime surface 证据 | GPC runtime evidence gate、外部环境/owner 确认 | 外部证据缺失时保持 `external_runtime_evidence_required` |
 | P1 | `BRAIN-HUMAN-REVIEW-DECISION-001` | KDS -> Brain | Brain 到人工审查边界 | KDS RAG export gate、Brain review handoff gate、人工确认 | 未确认时保持 `ready_for_review / authorization_boundary` |
-| P1 | `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` | XWAIL/AaaS | XWAIL 已从当前 dirty 集合剥离，应回到主契约预检入口 | XWAIL validator gate、AaaS service runtime gate、Loop document gate | 若命令失败则保持 `integration_precheck_candidate` |
-| P1 | `AAAS-WAES-BINDING-PRECHECK-001` | AAAS | AAAS 已从当前 dirty 集合剥离，应回到服务包绑定预检入口 | AaaS service runtime gate、WAES binding precheck gate、Loop document gate | 若 validator 失败则保持 `integration_precheck_candidate` |
+| P1 | `XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001` | XWAIL/AaaS | XWAIL 已从当前 dirty 集合剥离，应回到主契约预检入口 | XWAIL validator gate、AaaS service runtime gate、Loop document gate | 若命令失败则保持 `integration_precheck_candidate` |
+| P1 | `AAAS-WAME-BINDING-PRECHECK-001` | AAAS | AAAS 已从当前 dirty 集合剥离，应回到服务包绑定预检入口 | AaaS service runtime gate、WAME binding precheck gate、Loop document gate | 若 validator 失败则保持 `integration_precheck_candidate` |
 | P1 | `SOP-SCENARIO-OWNER-REVIEW-001` | SOP | SOP 已从当前 dirty 集合剥离，应回到场景 owner review 主入口 | SOP owner review gate、Loop document gate | owner 未确认时保持 `owner_review_required` |
 
 ## 7. LOOP 运行控制闭环
@@ -145,7 +145,7 @@ noise_cleanup_repo_current = none
 | stop | 当前停止在 `authorization_boundary`，因为下一步进入真实修复、真实业务输入、review/stage/commit/push 或状态提升都需要人工确认 |
 | verify | 当前状态基线、依赖矩阵、状态推进矩阵、任务包、目标覆盖审计、完成度缺口矩阵、总控板、污染检查、KDS TOKEN 和 Loop 文档门禁均已通过；live Git gate 仍因 3 仓总事实与 KDS sensitive_path 保持 `blocked` |
 | recover | 若后续任务失败，按对应任务回滚边界降级为 `repair_required`、`external_runtime_evidence_required`、`dependency_review_required`、`noise_decision_required` 或继续保持 `authorization_boundary` |
-| debug | 当前最大实际阻塞不是文档结构，而是 `GlobalCoud GPCF / GlobalCloud GFIS / GlobalCloud KDS` 三仓 dirty 事实、KDS sensitive_path、WAES repair、GFIS 真实 source-of-record、GPC 外部 runtime evidence 和 Brain 人工审查确认 |
+| debug | 当前最大实际阻塞不是文档结构，而是 `GlobalCoud GPCF / GlobalCloud GFIS / GlobalCloud KDS` 三仓 dirty 事实、KDS sensitive_path、WAME repair、GFIS 真实 source-of-record、GPC 外部 runtime evidence 和 Brain 人工审查确认 |
 
 ## 8. 禁止声明
 
@@ -192,7 +192,7 @@ release_allowed = false
 | P0 | `AUTH-KDS-SCHEME-REVIEW-20260626`、`AUTH-GPCF-SCHEME-REVIEW-20260626`、`AUTH-GFIS-SCHEME-REVIEW-20260626` | 完成当前 3 仓 Pre-Wave1 review 边界确认；KDS 继续复用 `5.3 KDS 单仓核对卡 / 5.4 KDS 确认后状态传导摘要`，GPCF/GFIS 继续沿现有 pre-wave1 与 review-auth 包登记结论 | 是 |
 | P0 | `GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001` | 将上面 7 项确认转成可直接填写的标准请求，再按 receipt 录入流程落到对应总账 | 是 |
 | P0 | `GPCF-AUTHORIZATION-PACKAGE-ROUTING-001` + next-stage routing supplement | 保持主路由与 next-stage 二级路由同步，避免人工确认后写错 execution ledger / post-scheme ledger | 是 |
-| P0 | `AUTH-WAVE1-WAES-LINT-RUNTIME-20260626` | 修复 WAES lint/runtime，解除 `WAES -> XWAIL -> AaaS` 发布前阻塞 | 是 |
+| P0 | `AUTH-WAVE1-WAME-LINT-RUNTIME-20260626` | 修复 WAME lint/runtime，解除 `WAME -> XWAIL -> AaaS` 发布前阻塞 | 是 |
 | P0 | `AUTH-WAVE1-GFIS-REAL-SOR-20260626` | 接收或校验真实 source-of-record，推进 `GFIS/GPC/PVAOS -> SCaaS` 真实链路 | 是 |
 | P1 | `AUTH-WAVE1-GPC-EXTERNAL-RUNTIME-20260626` | 补 GPC 外部联调、生产确认和 runtime surface 证据 | 是 |
 | P1 | `AUTH-WAVE1-BRAIN-HUMAN-REVIEW-20260626` | 将 Brain review handoff 进入人工审查决策 | 是 |

@@ -252,7 +252,7 @@ def validate_decisions(document: dict[str, Any]) -> set[str]:
 
         if allowed and (not state["contextComplete"] or not state["factVersionsVerified"]):
             reasons.add("default_deny_broken")
-        if not state["waesAvailable"]:
+        if not state["wameAvailable"]:
             if allowed or decision["requestedAction"] in HIGH_RISK_ACTIONS or RISK_RANK[decision["riskLevel"]] >= 3:
                 reasons.add("degraded_high_risk_allowed")
             elif decision["decision"] != "degraded_readonly" or set(decision["effectiveActionScope"]) != {"observation"}:

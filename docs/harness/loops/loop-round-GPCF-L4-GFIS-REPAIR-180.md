@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FB0D4D6851
 title: GPCF-L4-GFIS-REPAIR-180
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 目标
 
-总控回写 GFIS `GFIS-RUNTIME-SOP-E2E-173`：release override approval request package。该轮只允许证明 62 个内部补证请求项已准备；不得证明请求已授权派发、已确认、已收到真实人工批准文件、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated。
+总控回写 GFIS `GFIS-RUNTIME-SOP-E2E-173`：release override approval request package。该轮只允许证明 62 个内部补证请求项已准备；不得证明请求已授权派发、已确认、已收到真实人工批准文件、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## 输入
 
@@ -44,7 +44,7 @@ superseded_by: []
 
 - GFIS builder: pass
 - GFIS py_compile: pass
-- GFIS project validator: `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 approval_slots=62 approval_files_found=0 valid_approval_files=0 invalid_approval_files=0 missing_approval_files=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 request_acknowledgements_found=0 request_owner_responses=0 manual_override_approval_valid=0 release_override_allowed=0 release_override_review_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_override_approval_requests_prepared_not_dispatched runtime_sop_e2e=repair_required`
+- GFIS project validator: `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 approval_slots=62 approval_files_found=0 valid_approval_files=0 invalid_approval_files=0 missing_approval_files=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 request_acknowledgements_found=0 request_owner_responses=0 manual_override_approval_valid=0 release_override_allowed=0 release_override_review_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=dispatch_authorization_envelope_release_override_approval_requests_prepared_not_dispatched runtime_sop_e2e=repair_required`
 - GFIS main SOP validator: expected exit 2；`gfis_runtime_sop_e2e=repair_required`
 - GFIS E2E: 26 passed；`pass_demo_only`
 - GFIS diff check: pass

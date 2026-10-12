@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KDS-RAG-EXPORT-REPAIR-20260625
 title: KDS RAG export 修复证据 2026-06-25
 project: KDS
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

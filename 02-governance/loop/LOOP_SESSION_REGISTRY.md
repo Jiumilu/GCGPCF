@@ -55,11 +55,11 @@ superseded_by: []
 | GFIS L4 repair and test sync | `GPCF-L4-GFIS*`, `GPCF-GFIS*` | GPCF/GFIS | real_business_lane remains repair_required | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | KDS / DKS governance | `GPCF-KDS-*`, `GPCF-GCKF*` | KDS/GPCF | KDS remains source of record | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
 | Knowledge engineering governance | `GPCF-GKE*` | GPCF/KDS/Studio | GKE-001 remains `active / partial / not_complete` | handoff_required_for_cross_repo_implementation | read_only_registry_or_user_confirmed_handoff |
-| Ontology / WAS governance | `GPCF-ONTOLOGY-WAS*`, `GPCF-WAS*` | WAES/GPCF | semantic contract only, no business completion | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
+| Ontology / WAS governance | `GPCF-ONTOLOGY-WAS*`, `GPCF-WAS*` | WAME/GPCF | semantic contract only, no business completion | handoff_required_for_execution | read_only_registry_or_user_confirmed_handoff |
 | CodeGraph governance | `GPCF-CODEGRAPH*` | GPCF | sync/readiness work remains evidence bounded | handoff_required_for_cross_repo_execution | read_only_registry_or_user_confirmed_handoff |
 | COGNEE pilot / writeback | `GPCF-COGNEE*` | GPCF | COGNEE P1-P4 remains controlled pilot / writeback boundary | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
-| Agent-Reach governance | `GPCF-AGENT-REACH*` | WAES/GPCF | candidate/search governance only | handoff_required_for_external_api | read_only_registry_or_user_confirmed_handoff |
-| Headroom / LCX governance | `GPCF-HEADROOM*` | WAES/GPCF | cost/runtime evidence only | handoff_required_for_measurement_or_production_token | read_only_registry_or_user_confirmed_handoff |
+| Agent-Reach governance | `GPCF-AGENT-REACH*` | WAME/GPCF | candidate/search governance only | handoff_required_for_external_api | read_only_registry_or_user_confirmed_handoff |
+| Headroom / LCX governance | `GPCF-HEADROOM*` | WAME/GPCF | cost/runtime evidence only | handoff_required_for_measurement_or_production_token | read_only_registry_or_user_confirmed_handoff |
 | OKF / ODF governance | `GPCF-OKF*` | KDS/GPCF | no-write or candidate gate unless separately authorized | handoff_required_for_writeback | read_only_registry_or_user_confirmed_handoff |
 | GPCF CF / governance rounds | `GPCF-CF*`, `GPCF-L4-[0-9]*`, `GPCF-L4-CORR*`, `GPCF-L4-IMPROVE*` | GPCF | historical governance rounds | handoff_required_for_continuation | read_only_registry_or_user_confirmed_handoff |
 | XiaoG evidence repair | `GPCF-L4-XIAOG*` | GPCF/XiaoG | evidence repair only | handoff_required_for_project_execution | read_only_registry_or_user_confirmed_handoff |

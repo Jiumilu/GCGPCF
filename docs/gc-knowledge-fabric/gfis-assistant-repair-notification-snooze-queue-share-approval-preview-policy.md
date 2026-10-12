@@ -87,4 +87,4 @@ tsc -p packages/shared/tsconfig.json --noEmit
 tsc -p packages/api/tsconfig.json --noEmit
 ```
 
-验收通过不代表真实 ApprovalRequest、ApprovalDecision、ShareLink、ACL 授权、外部共享权限、发布审批、Harness evidence、WAES/KWE/KDS 或业务系统写入已发生。
+验收通过不代表真实 ApprovalRequest、ApprovalDecision、ShareLink、ACL 授权、外部共享权限、发布审批、Harness evidence、WAME/KWE/KDS 或业务系统写入已发生。

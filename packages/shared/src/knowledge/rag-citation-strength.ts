@@ -39,7 +39,7 @@ export interface RagCitationStrengthPolicy {
   };
   noWriteAssertions: {
     writesKdsFact: 0;
-    writesWaesGateResult: 0;
+    writesWameGateResult: 0;
     writesBusinessSystem: 0;
     writesRevenueDistribution: 0;
     writesExternalApi: 0;

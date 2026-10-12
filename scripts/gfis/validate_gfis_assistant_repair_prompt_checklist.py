@@ -21,7 +21,7 @@ NO_WRITE_KEYS = (
     "writesGpc",
     "writesErp",
     "writesMes",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesGapRecord",
     "writesBountyRecord",
@@ -83,7 +83,7 @@ def main() -> int:
         "createsGapRecords": 0,
         "createsBountyRecords": 0,
         "createsKweWorkItems": 0,
-        "createsWaesGateResults": 0,
+        "createsWameGateResults": 0,
         "approvesBusinessWrite": 0,
         "promotesLifecycle": 0,
         "checklistsWithBlockedActions": 0,
@@ -112,7 +112,7 @@ def main() -> int:
         counts["createsGapRecords"] += int(checklist["createsGapRecord"] is True)
         counts["createsBountyRecords"] += int(checklist["createsBountyRecord"] is True)
         counts["createsKweWorkItems"] += int(checklist["createsKweWorkItem"] is True)
-        counts["createsWaesGateResults"] += int(checklist["createsWaesGateResult"] is True)
+        counts["createsWameGateResults"] += int(checklist["createsWameGateResult"] is True)
         counts["approvesBusinessWrite"] += int(checklist["approvesBusinessWrite"] is True)
         counts["promotesLifecycle"] += int(checklist["promotesLifecycle"] is True)
         counts["checklistsWithBlockedActions"] += int(bool(checklist["blockedActions"]))
@@ -122,7 +122,7 @@ def main() -> int:
             "createsGapRecord",
             "createsBountyRecord",
             "createsKweWorkItem",
-            "createsWaesGateResult",
+            "createsWameGateResult",
             "approvesBusinessWrite",
             "promotesLifecycle",
         )
@@ -177,10 +177,10 @@ def main() -> int:
         f"repair_required={actual['repairRequired']} open={actual['open']} blocked={actual['blocked']} "
         f"metadata_only_items={actual['metadataOnlyItems']} submits_evidence={actual['submitsEvidence']} "
         f"creates_gap_records={actual['createsGapRecords']} creates_bounty_records={actual['createsBountyRecords']} "
-        f"creates_kwe_work_items={actual['createsKweWorkItems']} creates_waes_gate_results={actual['createsWaesGateResults']} "
+        f"creates_kwe_work_items={actual['createsKweWorkItems']} creates_wame_gate_results={actual['createsWameGateResults']} "
         f"approves_business_write={actual['approvesBusinessWrite']} promotes_lifecycle={actual['promotesLifecycle']} "
         f"checklists_with_blocked_actions={actual['checklistsWithBlockedActions']} "
-        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 "
+        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_gap_record=0 writes_bounty_record=0 "
         "writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 "
         "writes_target_receipt=0 writes_committee_decision_completion=0 "

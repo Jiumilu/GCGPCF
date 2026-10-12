@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BB2EA6B15E
 title: CodeGraph GFIS 工具状态审计授权阻断证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

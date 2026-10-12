@@ -157,7 +157,7 @@ def main() -> int:
         "demo_e2e=pass_demo_only",
         "P0 事故",
         "subject=GFIS运行层",
-        "单类有效 POD/WAES/KDS 凭证仍必须保持",
+        "单类有效 POD/WAME/KDS 凭证仍必须保持",
         "runtime_verified_artifact_collection_dossier=verified_artifact_collection_dossier_open",
         "source_record_uri",
         "source_record_hash",
@@ -516,11 +516,11 @@ def main() -> int:
         "verified artifact collection priority must report five open requests",
     )
     require(
-        collection_priority.get("top_priority_category") in {"live_pod_waes_kds_receipt", "live_sample_signoff_release"},
+        collection_priority.get("top_priority_category") in {"live_pod_wame_kds_receipt", "live_sample_signoff_release"},
         "verified artifact collection priority top item must be a real proof-anchor gap",
     )
     priority_business_fields = collection_priority.get("top_priority_business_required_fields", [])
-    for field in ["sample_request_id", "customer_signoff_attachment_uri", "production_release_approval_id", "waes_evidence_ref"]:
+    for field in ["sample_request_id", "customer_signoff_attachment_uri", "production_release_approval_id", "wame_evidence_ref"]:
         require(
             field in priority_business_fields,
             f"verified artifact collection priority missing sample signoff business field: {field}",
@@ -594,7 +594,7 @@ def main() -> int:
             "GPC read-only candidate must be disqualified as fixture/mock/local mirror rather than live proof",
         )
     sample_missing_fields = sample_signoff_gate.get("missing_business_fields", [])
-    for field in ["sample_request_id", "customer_signoff_attachment_uri", "production_release_approval_id", "waes_evidence_ref", "kds_backlink_path"]:
+    for field in ["sample_request_id", "customer_signoff_attachment_uri", "production_release_approval_id", "wame_evidence_ref", "kds_backlink_path"]:
         require(
             field in sample_missing_fields,
             f"sample signoff release gate missing business field: {field}",
@@ -730,7 +730,7 @@ def main() -> int:
             f"Liaoning Yuanhang collection request must stay open: {proof_key}",
         )
         require(
-            request_item.get("target_system") in {"GPC", "GFIS", "WAES"},
+            request_item.get("target_system") in {"GPC", "GFIS", "WAME"},
             f"Liaoning Yuanhang collection request target system invalid: {proof_key}",
         )
         require(
@@ -796,7 +796,7 @@ def main() -> int:
                 f"Modern Jinggong release request must expose KDS formal missing reason refs: {request_item}",
             )
             require(
-                set(request_item.get("missing_fields", [])) >= {"转量产批准单号", "放行批准附件", "量产计划编号", "WAES evidence ref"},
+                set(request_item.get("missing_fields", [])) >= {"转量产批准单号", "放行批准附件", "量产计划编号", "WAME evidence ref"},
                 f"Modern Jinggong release must keep all formal release anchors missing: {request_item}",
             )
     require(

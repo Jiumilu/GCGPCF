@@ -47,7 +47,7 @@
     },
     {
       "query_id": "q4",
-      "project": "WAES",
+      "project": "WAME",
       "channel": "web",
       "backend": "duckduckgo_html_via_python_stdlib",
       "binary": "python3",

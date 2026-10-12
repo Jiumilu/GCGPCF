@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-SIGNOFF-TEMPLATE-001
 title: Loop Round GPCF Headroom LCX Real Measurement Authorization Signoff Template 001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -47,8 +47,8 @@ python3 tools/kds-sync/validate_headroom_lcx_real_measurement_authorization_sign
 
 - 该模板只表达“可签字”，不表达“已授权”。
 - `accepted=false`、`integrated=false`、`production_ready=false` 保持不变。
-- 后续仍需 WAES/Harness 的裁决输入，才能讨论真实测量窗口。
+- 后续仍需 WAME/Harness 的裁决输入，才能讨论真实测量窗口。
 
 ## 下一轮
 
-等待人工签字字段填充或 WAES/Harness 裁决更新后，再决定是否进入下一阶段。
+等待人工签字字段填充或 WAME/Harness 裁决更新后，再决定是否进入下一阶段。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A4A81A584E
 title: GPCF-L4-GFIS-REPAIR-247
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -58,7 +58,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -73,7 +73,7 @@ superseded_by: []
 
 ## 真实性边界
 
-本轮只同步未来真实派发确认接收 schema/readiness。它不表示请求已派发、收件方已确认、派发通道已确认、请求已回执、责任方已响应、提交包已允许、open hold 已释放、source-of-record 已创建、运行层主键已创建、review queue/runtime intake/WAES review/verified artifact 已创建，或 accepted/integrated 已达成。
+本轮只同步未来真实派发确认接收 schema/readiness。它不表示请求已派发、收件方已确认、派发通道已确认、请求已回执、责任方已响应、提交包已允许、open hold 已释放、source-of-record 已创建、运行层主键已创建、review queue/runtime intake/WAME review/verified artifact 已创建，或 accepted/integrated 已达成。
 
 ## 下一步
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5649B07956
 title: GPCF CodeGraph Project Group Graphized Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 | GlobalCloud PKC | 110 | 1034 | 2685 | up_to_date |
 | GlobalCloud PVAOS | 604 | 8899 | 28838 | up_to_date |
 | GlobalCloud Studio | 797 | 14457 | 46854 | pending_sync_watchlist |
-| GlobalCloud WAES | 281 | 3511 | 11298 | up_to_date |
+| GlobalCloud WAME | 281 | 3511 | 11298 | up_to_date |
 | GlobalCloud XGD | 181 | 3645 | 9914 | up_to_date |
 | GlobalCloud XiaoC | 1176 | 15520 | 64515 | up_to_date |
 | GlobalCloud XiaoG | 752 | 13943 | 45987 | up_to_date |

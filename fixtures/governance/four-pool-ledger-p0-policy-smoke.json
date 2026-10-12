@@ -9,7 +9,7 @@
     "potentialRevenueMustNotAutoPromote": true,
     "contributionConfirmedScoreRequiresHumanOrCommittee": true,
     "selfPurchasedQuotaExcludedFromUnifiedRevenuePool": true,
-    "bountySettlementRequiresWaesHumanAcceptanceAndDisputeWindowClosed": true,
+    "bountySettlementRequiresWameHumanAcceptanceAndDisputeWindowClosed": true,
     "majorDisputeCanFreezeAllFourPools": true,
     "writesScoreConfirmation": 0,
     "writesRevenueDistribution": 0,

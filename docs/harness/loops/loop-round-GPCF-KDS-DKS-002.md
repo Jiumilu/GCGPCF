@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1953C27985
 title: GPCF-KDS-DKS-002 对象字段与11池映射清单 Loop 记录
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -60,9 +60,9 @@ superseded_by: []
 | 检查项 | 结果 | 说明 |
 |---|---|---|
 | 业务事实边界 | pass | 本轮只新增对象字段和映射清单，不写业务主账 |
-| AI 越权边界 | pass | AISuggestion 必须先进入 KDS / WAES，不得直接写 GFIS/GPC/PVAOS |
+| AI 越权边界 | pass | AISuggestion 必须先进入 KDS / WAME，不得直接写 GFIS/GPC/PVAOS |
 | KDS 11 池口径 | pass | 积分池、收益池、悬赏池和 AI 额度账本均作为资源语义映射纳入 11 池 |
-| WAES 口径 | pass | WAES 只做规则、证据、越权和状态确认；规则内事项可 `governance_recorded` |
+| WAME 口径 | pass | WAME 只做规则、证据、越权和状态确认；规则内事项可 `governance_recorded` |
 | 收入口径 | pass | 开票为统计和财务过程口径，到账才进入正式收益池 |
 | 用户掌控 | pass | 用户不做具体裁决，但保留治理急停权；委员会裁决需备案 |
 | 状态升级 | pass | 本轮不声明 accepted、complete 或 integrated |

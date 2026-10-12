@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A30ABC3B99
 title: GPCF-L4-XIAOG-EVIDENCE-REPAIR-001 XiaoG 外部证据修复
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, PKC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, PKC, XGD, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ The deprecated iCloud XiaoG directory is not used as source.
 | Repository | File | Purpose |
 |---|---|---|
 | XiaoG | `docs/harness/evidence/kds-retrieval-XiaoG-L4-011.json` | Align KDS retrieval evidence with L4 aggregate requirements |
-| XiaoG | `l4_execution/xiaog_l4_readonly_audit_notification_mock.fixture.json` | Provide local read-only query, PKC notification candidate and WAES audit mock payloads |
+| XiaoG | `l4_execution/xiaog_l4_readonly_audit_notification_mock.fixture.json` | Provide local read-only query, PKC notification candidate and WAME audit mock payloads |
 | XiaoG | `scripts/validate_xiaog_l4_readonly_audit_mock.py` | Validate XGD recommendation consumption, object counts and no-write boundaries |
 | XiaoG | `docs/harness/loop-state.md` | Record current L4 state |
 | XiaoG | `docs/harness/evidence/evidence-index.md` | Record XiaoG evidence anchors |
@@ -45,7 +45,7 @@ The deprecated iCloud XiaoG directory is not used as source.
 
 | Command | Result |
 |---|---|
-| XiaoG `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py` | pass; `readonly_queries=3 pkc_notifications=1 waes_audit_mocks=2 execution_traces=1` |
+| XiaoG `python3 scripts/validate_xiaog_l4_readonly_audit_mock.py` | pass; `readonly_queries=3 pkc_notifications=1 wame_audit_mocks=2 execution_traces=1` |
 | XiaoG `git diff --check -- .` | pass |
 | GPCF `python3 tools/kds-sync/validate_l4_minimum_closed_loop.py` | repair; `project_group_score=78` |
 | GPCF `python3 tools/kds-sync/validate_loop_self_correction_gate.py` | blocked; `project_group_score=78` |
@@ -73,4 +73,4 @@ The deprecated iCloud XiaoG directory is not used as source.
 
 XiaoG L4 外部证据已在当前仓库内完成修复。GPCF L4 聚合门禁现在到达预期 repair 状态，不再因 XiaoG 证据缺失而失败。
 
-项目群仍保持 `repair_required` 与 `78/100`，因为 GFIS 真实业务源记录、运行层主键、审核队列、运行接收、WAES 审核、已验证制品以及完整运行层 SOP E2E 仍未闭合。
+项目群仍保持 `repair_required` 与 `78/100`，因为 GFIS 真实业务源记录、运行层主键、审核队列、运行接收、WAME 审核、已验证制品以及完整运行层 SOP E2E 仍未闭合。

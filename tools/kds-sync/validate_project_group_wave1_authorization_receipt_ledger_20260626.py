@@ -12,7 +12,7 @@ DOC = ROOT / "docs/harness/evidence/globalcloud-project-group-wave1-authorizatio
 BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-board.md"
 
 RECEIPTS = [
-    "RECEIPT-WAVE1-WAES-LINT-RUNTIME-20260626-PENDING",
+    "RECEIPT-WAVE1-WAME-LINT-RUNTIME-20260626-PENDING",
     "RECEIPT-WAVE1-GFIS-REAL-SOR-20260626-PENDING",
     "RECEIPT-WAVE1-GPC-EXTERNAL-RUNTIME-20260626-PENDING",
     "RECEIPT-WAVE1-BRAIN-HUMAN-REVIEW-20260626-PENDING",

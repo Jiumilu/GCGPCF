@@ -20,7 +20,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -55,11 +55,11 @@ def main() -> int:
 
     fields = approval.get("authorization_fields", {})
     precheck_gates = precheck.get("gates", {})
-    current_decision = fields.get("waes_harness_admission_decision")
-    waes_harness_admitted = current_decision == "admitted_for_sanitized_measurement_precheck"
+    current_decision = fields.get("wame_harness_admission_decision")
+    wame_harness_admitted = current_decision == "admitted_for_sanitized_measurement_precheck"
     status = (
         "request_package_approved_for_sanitized_precheck_no_measurement"
-        if waes_harness_admitted
+        if wame_harness_admitted
         else "request_package_generated_admission_still_blocked"
     )
     request = {
@@ -68,11 +68,11 @@ def main() -> int:
         "loop_round_id": "GPCF-HEADROOM-LCX-MEASUREMENT-ADMISSION-REQUEST-001",
         "date": "2026-06-22",
         "status": status,
-        "scope": "waes_harness_admission_request_only_no_measurement",
+        "scope": "wame_harness_admission_request_only_no_measurement",
         "project_count": len(PROJECTS),
         "projects": PROJECTS,
         "requested_decision": "admitted_for_sanitized_measurement_precheck",
-        "current_waes_harness_admission_decision": current_decision,
+        "current_wame_harness_admission_decision": current_decision,
         "source_approval_instance": approval.get("instance_id"),
         "source_authorized_measurement_precheck": precheck.get("evidence_id"),
         "sanitized_production_token_ledger": fields.get("sanitized_production_token_ledger"),
@@ -89,7 +89,7 @@ def main() -> int:
             and ledger.get("sensitive_raw_text_stored") is False,
             "rollback_plan_exists": ROLLBACK_PLAN_MD.exists(),
             "telemetry_off_required": True,
-            "waes_harness_decision_required": True,
+            "wame_harness_decision_required": True,
             "human_approval_required": True,
         },
         "requested_measurement_boundary": {
@@ -121,7 +121,7 @@ def main() -> int:
         "gates": {
             "request_package_generated": True,
             "authorization_complete": precheck_gates.get("authorization_complete") is True,
-            "waes_harness_admitted": waes_harness_admitted,
+            "wame_harness_admitted": wame_harness_admitted,
             "production_token_measurement_allowed": False,
             "measured_production_tokens": False,
             "production_proxy_started": False,
@@ -135,10 +135,10 @@ def main() -> int:
             "production_ready": False,
         },
         "next_required_decision": {
-            "field": "waes_harness_admission_decision",
+            "field": "wame_harness_admission_decision",
             "current_value": current_decision,
             "required_value_for_next_precheck": "admitted_for_sanitized_measurement_precheck",
-            "decision_owner": "WAES/Harness human approval",
+            "decision_owner": "WAME/Harness human approval",
         },
     }
     OUTPUT_JSON.write_text(json.dumps(request, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -147,7 +147,7 @@ def main() -> int:
 doc_id: GPCF-DOC-54C01FA442
 title: Headroom LCX Measurement Admission Request 20260622
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -169,14 +169,14 @@ superseded_by: []
 
 ## 结论
 
-本文件记录 WAES/Harness 脱敏测量准入申请包。当前裁决为 `{current_decision}`；这只允许进入脱敏测量 dry-run 预备阶段，不允许采集未脱敏生产 token、不允许启动生产代理、不允许写入真实 KDS API。
+本文件记录 WAME/Harness 脱敏测量准入申请包。当前裁决为 `{current_decision}`；这只允许进入脱敏测量 dry-run 预备阶段，不允许采集未脱敏生产 token、不允许启动生产代理、不允许写入真实 KDS API。
 
 ## 申请内容
 
 | 项 | 当前值 |
 |---|---|
 | requested_decision | admitted_for_sanitized_measurement_precheck |
-| current_waes_harness_admission_decision | {current_decision} |
+| current_wame_harness_admission_decision | {current_decision} |
 | authorization_complete | {str(precheck_gates.get("authorization_complete") is True).lower()} |
 | sanitized_ledger | {fields.get("sanitized_production_token_ledger")} |
 | rollback_plan_id | {fields.get("rollback_plan_id")} |
@@ -192,7 +192,7 @@ superseded_by: []
 |---|---|
 | request_package_generated | true |
 | authorization_complete | {str(precheck_gates.get("authorization_complete") is True).lower()} |
-| waes_harness_admitted | {str(waes_harness_admitted).lower()} |
+| wame_harness_admitted | {str(wame_harness_admitted).lower()} |
 | production_token_measurement_allowed | false |
 | measured_production_tokens | false |
 | production_admission_gate | false |
@@ -206,7 +206,7 @@ superseded_by: []
 
 ## 下一步
 
-WAES/Harness 已批准进入脱敏测量 dry-run 预备阶段；下一轮只能建立 dry-run runner 骨架并验证边界，不得执行真实生产测量。
+WAME/Harness 已批准进入脱敏测量 dry-run 预备阶段；下一轮只能建立 dry-run runner 骨架并验证边界，不得执行真实生产测量。
 """
     OUTPUT_MD.write_text(md, encoding="utf-8")
 
@@ -214,7 +214,7 @@ WAES/Harness 已批准进入脱敏测量 dry-run 预备阶段；下一轮只能�
 doc_id: GPCF-DOC-4F8936D7E5
 title: Loop Round GPCF Headroom LCX Measurement Admission Request 001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -234,12 +234,12 @@ superseded_by: []
 
 - 用户要求进入下一步。
 - 上一轮已补齐 6 个授权字段，`authorization_complete=true`。
-- 当前 `waes_harness_admission_decision=admitted_for_sanitized_measurement_precheck`。
+- 当前 `wame_harness_admission_decision=admitted_for_sanitized_measurement_precheck`。
 
 ## 动作
 
 - 运行 `python3 tools/kds-sync/run_headroom_lcx_measurement_admission_request.py`。
-- 刷新 WAES/Harness 脱敏测量准入申请包。
+- 刷新 WAME/Harness 脱敏测量准入申请包。
 - 明确准入只覆盖脱敏测量 dry-run 预备阶段，不触发生产测量。
 
 ## 输出
@@ -267,8 +267,8 @@ superseded_by: []
 
     print(
         "headroom_lcx_measurement_admission_request=pass "
-        f"project_count=15 current_waes_harness_admission_decision={current_decision} "
-        f"waes_harness_admitted={str(waes_harness_admitted).lower()} production_token_measurement_allowed=false "
+        f"project_count=15 current_wame_harness_admission_decision={current_decision} "
+        f"wame_harness_admitted={str(wame_harness_admitted).lower()} production_token_measurement_allowed=false "
         "accepted=false integrated=false production_ready=false"
     )
     return 0

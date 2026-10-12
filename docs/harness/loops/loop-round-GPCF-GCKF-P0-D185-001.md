@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D185-001
 title: Loop Round GPCF-GCKF-P0-D185-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -51,7 +51,7 @@ superseded_by: []
 ### stop
 
 - stop_type: `hold_required`
-- 停止证据：真实 repair owner response、签署响应包、WAES review note 与人工确认均未到达。
+- 停止证据：真实 repair owner response、签署响应包、WAME review note 与人工确认均未到达。
 - 状态上限：`review_ready_with_hold`。
 - hold_required: true
 
@@ -72,7 +72,7 @@ superseded_by: []
 ### debug
 
 - D185 只证明当前会话主线已接管，且 DKS-054 至 DKS-060 已作为前置受控基础。
-- DKS no-write 产物不能替代真实 response、WAES review note、人工确认、业务完成证明或真实 KDS API 写入。
+- DKS no-write 产物不能替代真实 response、WAME review note、人工确认、业务完成证明或真实 KDS API 写入。
 - 2026-08-10 当前态复放结果为 `dks_baseline_mirror_matches=10`，仅证明已合流前置基础未漂移。
 
 ## 边界
@@ -85,4 +85,4 @@ superseded_by: []
 
 ## 下一轮
 
-若收到真实 repair owner response、签署响应包、WAES review note 与人工确认，进入 arrival scan refresh；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。
+若收到真实 repair owner response、签署响应包、WAME review note 与人工确认，进入 arrival scan refresh；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。

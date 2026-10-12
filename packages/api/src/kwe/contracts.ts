@@ -1,7 +1,7 @@
 import type {
   GapRecord,
   KnowledgeDomain,
-  WaesGateResult,
+  WameGateResult,
   WritebackCandidate,
 } from "../../../shared/src/knowledge";
 
@@ -71,5 +71,5 @@ export interface KweWritebackRequest {
   tenantId: string;
   workItemId: string;
   candidate: WritebackCandidate;
-  gateResult: WaesGateResult;
+  gateResult: WameGateResult;
 }

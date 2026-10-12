@@ -32,15 +32,15 @@ partitions:
     metadata_only_paths: 16
     excluded_paths:
       - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
-      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
-  gcworld_waes_content:
+      - 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
+  gcworld_wame_content:
     responsible_thread_id: 019f0697-c8ce-7110-8ac8-9a7dbc6ba2a5
     responsible_thread_title: LOOP工程-知识工程
     total_paths: 2
     body_read_paths: 2
     paths:
       - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
-      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+      - 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
 execution_rules:
   - 先独立复核31项基线、分级清单哈希和生产者冻结；任一不符立即停止
   - 只能按分级清单对responsible_read_allowed路径加载正文

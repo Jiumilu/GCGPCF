@@ -1,6 +1,6 @@
 import type { ConfirmationStatus } from "./object";
 import type { TargetSystem } from "./fact-candidate";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type GfisWritebackMode =
   | "no_write"
@@ -25,7 +25,7 @@ export interface GfisWritebackSandboxRecord {
   proposedValue: unknown;
   diffReason: string;
   evidenceRefs: string[];
-  waesResult: WaesGateStatus;
+  wameResult: WameGateStatus;
   businessOwner: string;
   confirmationStatus: ConfirmationStatus;
   writebackMode: GfisWritebackMode;
@@ -50,7 +50,7 @@ export interface GfisWritebackSandboxPolicy {
     sandboxCannotEmitTargetReceipt: boolean;
     finalActionAcceptedIsNotWritebackReceipt: boolean;
     missingEvidenceBlocks: boolean;
-    missingWaesResultBlocks: boolean;
+    missingWameResultBlocks: boolean;
     missingBusinessOwnerBlocks: boolean;
   };
   noWriteAssertions: {

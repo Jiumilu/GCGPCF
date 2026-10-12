@@ -118,7 +118,7 @@ FactCandidate:
     - poolRefs
     - ownerId
     - confirmationStatus
-    - waesGateRefs
+    - wameGateRefs
   forbidden:
     - directBusinessWriteback
   default:

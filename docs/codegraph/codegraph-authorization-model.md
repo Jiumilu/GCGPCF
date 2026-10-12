@@ -27,13 +27,13 @@ CodeGraph 采用六层授权：
 | Agent 级 | Codex、Review、Test、Doc、WAME、Loop Agent 权限差异 | 只读查询优先，写入需授权 |
 | Loop 阶段级 | intake、planning、implementation、validation、evidence、closure | 按阶段限定查询能力 |
 | KDS/OKF 级 | CodeGraph 输出事实状态 | 只能 candidate |
-| WAES/人员级 | 高风险变更审批 | AI 不拥有最终批准权 |
+| WAME/人员级 | 高风险变更审批 | AI 不拥有最终批准权 |
 
 权威配置文件：
 
 - `governance/codegraph/agent-codegraph-permissions.yaml`
 - `governance/codegraph/repo-codegraph-registry.yaml`
-- `governance/codegraph/waes-codegraph-gates.yaml`
+- `governance/codegraph/wame-codegraph-gates.yaml`
 - `governance/codegraph/kds-codegraph-mapping.yaml`
 
 任何偏离授权模型的动作必须进入 Harness evidence，并由 WAME 或人工角色确认。

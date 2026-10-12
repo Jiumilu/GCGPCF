@@ -72,7 +72,7 @@ real_source_records_zero:
     - contract_validator
     - runtime_intake_development
     - review_queue_development
-    - waes_review_candidate_development
+    - wame_review_candidate_development
     - verified_artifact_candidate_development
     - development_ready_for_real_business_validation
 ```

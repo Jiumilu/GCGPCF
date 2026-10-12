@@ -8,7 +8,7 @@ status: controlled
 version: v1.0
 owner: WAME
 kds_space: 开发
-kds_path: 开发/04-WAES/third_party/agent-reach/MODIFICATIONS.md
+kds_path: 开发/04-WAME/third_party/agent-reach/MODIFICATIONS.md
 source_path: third_party/agent-reach/MODIFICATIONS.md
 sync_direction: bidirectional
 last_reviewed: 2026-06-24

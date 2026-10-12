@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BEB8F3E134
 title: GPCF CodeGraph Project Group Steady State Recheck 004
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4C19A3B042
 title: WAS Real Source Record Monitor 042 Evidence
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -72,4 +72,4 @@ python3 tools/kds-sync/validate_was_real_source_record_candidate_precheck.py
 
 ## 边界
 
-本 evidence 不接受无真实 source record 的绿色供应链碳足迹、环境合规与循环回收画像，不推断产品碳足迹、能耗证据、排放因子来源、环境合规证书、有害物质声明、循环回收或报废计划、绿色声明佐证事实，不创建 runtime intake、review queue、WAES review、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不接受无真实 source record 的绿色供应链碳足迹、环境合规与循环回收画像，不推断产品碳足迹、能耗证据、排放因子来源、环境合规证书、有害物质声明、循环回收或报废计划、绿色声明佐证事实，不创建 runtime intake、review queue、WAME review、verified artifact、accepted、integrated 或 production_ready。

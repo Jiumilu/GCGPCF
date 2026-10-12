@@ -2,7 +2,7 @@
 """Validate Governance endpoint skeleton against no-write route fixture.
 
 This script inspects local TypeScript route declarations. It does not start a
-server and does not write governance ledgers, KDS, WAES, KWE, GFIS, or external APIs.
+server and does not write governance ledgers, KDS, WAME, KWE, GFIS, or external APIs.
 """
 
 from __future__ import annotations

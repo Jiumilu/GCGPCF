@@ -16,7 +16,7 @@
   "gateAssertions": {
     "collectionChecklistIsActualResponse": false,
     "unsignedPackageAccepted": false,
-    "waesReviewBypassed": false,
+    "wameReviewBypassed": false,
     "humanConfirmationBypassed": false,
     "responseIntakeAllowed": false,
     "formalHarnessWriteAllowed": false,
@@ -32,5 +32,5 @@
     "python3 tools/kds-sync/validate_kds_token.py",
     "python3 tools/kds-sync/loop_document_gate.py --check-only"
   ],
-  "nextRoundCandidate": "收到真实 repair owner response、签署响应包、WAES review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。"
+  "nextRoundCandidate": "收到真实 repair owner response、签署响应包、WAME review note 与人工确认后，进入 response intake precheck；未收到前继续保持 hold。"
 }

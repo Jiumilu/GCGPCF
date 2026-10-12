@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0CLOSUREPACKETCANDIDATED12420260622
 title: GCKF P0 收口包候选证据 D124
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -103,7 +103,7 @@ not_admitted_hold
 原因：
 
 - `C-01` 到 `C-07` 未收口。
-- P1 要求的 `真实资料目录 -> 候选事实样例 -> WAES 判断 -> 人工确认路径 -> GFIS 写回候选 dry-run -> Harness evidence` 尚未形成实链。
+- P1 要求的 `真实资料目录 -> 候选事实样例 -> WAME 判断 -> 人工确认路径 -> GFIS 写回候选 dry-run -> Harness evidence` 尚未形成实链。
 - GFIS `real_business_lane` 仍是 `repair_required`。
 
 ## P2 准备状态
@@ -114,7 +114,7 @@ not_admitted_hold
 parallel_preparation_only
 ```
 
-P2 虽然不依赖 GFIS 深度闭环，但仍不能跳过来源、证据、WAES 和人工确认；共同待办中的 owner、目录、敏感资料标注、WAES gate 样例、潜在收益台账和 LOOP evidence 仍未收口。
+P2 虽然不依赖 GFIS 深度闭环，但仍不能跳过来源、证据、WAME 和人工确认；共同待办中的 owner、目录、敏感资料标注、WAME gate 样例、潜在收益台账和 LOOP evidence 仍未收口。
 
 ## v1.0 升级建议
 

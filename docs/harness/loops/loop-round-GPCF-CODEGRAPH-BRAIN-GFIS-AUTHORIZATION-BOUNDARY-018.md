@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D1B5B8B030
 title: Loop Round - CodeGraph Brain/GFIS 授权边界复核
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

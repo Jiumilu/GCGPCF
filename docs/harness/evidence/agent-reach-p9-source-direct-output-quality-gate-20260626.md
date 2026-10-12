@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-SOURCE-DIRECT-OUTPUT-QUALITY-GATE-20260626
 title: Agent-Reach P9S Source Direct 输出质量门禁 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 - 要求 P9S live 输出状态为 `p9_source_direct_hit_rate_completed`。
 - 要求绿色供应链、磷石膏、工业固废、无废城市 4 个主题全部达到 P0 命中和关键词命中。
 - critical fetch error 作为 target availability warning 保留，不抹除目标可用性风险。
-- 校验 source scoring、GFIS/WAS/WAES/KDS 业务字段映射和 candidate-only non-claim。
+- 校验 source scoring、GFIS/WAS/WAME/KDS 业务字段映射和 candidate-only non-claim。
 - 阻断 raw payload、credential/cookie 泄漏、accepted / integrated / production_ready 声明。
 - 本门禁不执行真实目标站读取，只校验已有输出或离线自测 fixture。
 

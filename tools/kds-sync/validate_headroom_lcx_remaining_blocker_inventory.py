@@ -20,7 +20,7 @@ WINDOW_GRANT = ROOT / "docs/harness/evidence/headroom-lcx-real-measurement-autho
 
 EXPECTED_BLOCKERS = {
     "real_measurement_authorization_window",
-    "real_measurement_waes_harness_decision",
+    "real_measurement_wame_harness_decision",
     "real_measurement_token_ledger",
     "production_proxy_or_sdk_enablement",
     "real_business_equivalence_measurement",

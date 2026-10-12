@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-PROJECT-GROUP-FULL-LIVE-COVERAGE-PLAN-20260622
 title: Agent-Reach Project Group Full Live Coverage Plan 2026-06-22
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 
 | batch | projects |
 | --- | --- |
-| p8-batch-1 | GPCF, KDS, WAES, Brain, GFIS |
+| p8-batch-1 | GPCF, KDS, WAME, Brain, GFIS |
 | p8-batch-2 | GPC, PVAOS, PKC, XiaoC, XGD |
 | p8-batch-3 | XiaoG, MMC, Studio, WAS |
 

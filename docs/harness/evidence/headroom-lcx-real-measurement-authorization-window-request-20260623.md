@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-REQUEST-20260623
 title: Headroom LCX 真实测量授权窗口请求证据
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ status: real_measurement_authorization_window_requested_not_granted
 | requested_by | `lujunxiang / GPCF owner` |
 | requested_at | `2026-06-22T08:42:06+08:00` |
 | requested_future_decision | `open_real_measurement_window` |
-| current_waes_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
+| current_wame_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
 
 ## 当前状态
 

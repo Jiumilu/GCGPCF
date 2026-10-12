@@ -97,7 +97,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
     ]:
         require(phrase in combined_status, f"current status missing governance-safe marker: {phrase}")
@@ -118,7 +118,7 @@ def main() -> int:
         "boundary_doc=controlled governance_process=bounded implementation_process=separate "
         "quality_target=present efficiency_target=present self_improvement_target=present "
         "status_ceiling=repair_or_partial accepted_integrated_claim=0 "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0"
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0"
     )
     return 0
 

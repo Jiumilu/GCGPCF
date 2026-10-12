@@ -210,8 +210,8 @@ gfis.inventory_transaction.posted
 gfis.factory_shipment.released
 gpc.pod.signed
 gpc.external_exception.closed
-waes.governance_approval.approved
-waes.evidence.verified
+wame.governance_approval.approved
+wame.evidence.verified
 ```
 
 ## 9. 验收场景

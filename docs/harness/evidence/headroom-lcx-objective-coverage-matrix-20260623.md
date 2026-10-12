@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-20260623
 title: Headroom LCX Objective Coverage Matrix Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -30,7 +30,7 @@ superseded_by: []
 
 | objective_item | state | evidence | blocking_reason |
 |---|---|---|---|
-| real_business_equivalence_authorized_measurement | blocked | docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json ; docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json | real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only |
+| real_business_equivalence_authorized_measurement | blocked | docs/harness/evidence/headroom-lcx-real-measurement-gap-matrix-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-transition-graph-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-field-map-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-window-request-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-next-stage-authorization-package-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-approval-signed-bundle-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json ; docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json | real_measurement_authorization_window_and_wame_harness_decision_remain_precheck_only |
 | production_runtime_graph | proven_controlled_only | docs/harness/evidence/headroom-lcx-production-runtime-graph-20260623.json ; docs/harness/evidence/headroom-lcx-real-measurement-runner-contract-20260623.json ; docs/harness/evidence/headroom-lcx-p5-production-admission-package-20260621.json | production_runtime_graph_is_controlled_only_and_production_branch_remains_blocked |
 | production_cost_graph | proven_controlled_only | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json ; docs/harness/evidence/headroom-cost-sensitivity-model-20260621.json ; docs/harness/evidence/headroom-loop-cost-observation-20260621.json ; docs/harness/evidence/headroom-loop-cost-observation-series-20260621.json ; docs/harness/evidence/headroom-lcx-cost-bridge-20260623.json | cost_graph_is_replayable_but_not_production_measured |
 | production_rollback_graph | proven_controlled_only | docs/harness/evidence/headroom-lcx-graph-manifest-20260623.json ; docs/harness/evidence/headroom-lcx-rollback-plan-20260622-001.md | rollback_plan_exists_but_does_not_open_production_branch |
@@ -69,7 +69,7 @@ superseded_by: []
 | accepted | `false` |
 | integrated | `false` |
 | production_ready | `false` |
-| waes_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
+| wame_harness_admission_decision | `admitted_for_sanitized_measurement_precheck` |
 | authorization_window_id | `LCX-MEASURE-20260622-001` |
 | next_stage_authorization_package_status | `next_stage_authorization_package_granted_precheck_only` |
 | rollback_plan_id | `HEADROOM-LCX-ROLLBACK-PLAN-20260622-001` |

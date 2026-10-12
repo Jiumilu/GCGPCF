@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-COGNEE-REAL-EXTERNAL-EXECUTION-RECEIPT-UPDATE-PATCH-PLAN-001
 title: Loop Round - GPCF Cognee 真实外部执行回执更新补丁计划 001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

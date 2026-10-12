@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001
 title: "Loop Round: GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001"
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 
 - 将 Headroom LCX 的用户目标拆成目标级覆盖矩阵，区分已证明、受控证明、阻断和 false guard。
 - 把真实业务等价授权测量与生产级运行/成本/回滚图谱的当前状态映射到可验证条目。
-- 将下一阶段授权包纳入同一审计层，保证窗口请求、桥接包和 WAES/Harness precheck 可被同屏追踪。
+- 将下一阶段授权包纳入同一审计层，保证窗口请求、桥接包和 WAME/Harness precheck 可被同屏追踪。
 - 保持 accepted / integrated / production_ready 为 false。
 
 ## 输出
@@ -55,7 +55,7 @@ python3 tools/kds-sync/validate_headroom_lcx_objective_coverage_matrix.py
 
 ## 下一轮
 
-继续等待 WAES/Harness 的真实测量授权裁决，或补齐能够打开 production branch 的新证据。
+继续等待 WAME/Harness 的真实测量授权裁决，或补齐能够打开 production branch 的新证据。
 
 ## 审计快照
 

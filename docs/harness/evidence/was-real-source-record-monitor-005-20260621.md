@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-46FDE10F43
 title: WAS Real Source Record Monitor 005 Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-005` 已完成第五次独立 P4 输入监控。
 
-当前 `accepted_for_next_gate=0`，因此不得创建 WAES review、runtime intake 或 review queue。P4 候选即使未来通过预检，也必须继续等待 WAES/KDS/owner 复核边界，不能自动进入 GFIS/KWE runtime。
+当前 `accepted_for_next_gate=0`，因此不得创建 WAME review、runtime intake 或 review queue。P4 候选即使未来通过预检，也必须继续等待 WAME/KDS/owner 复核边界，不能自动进入 GFIS/KWE runtime。
 
 ## 监控指标
 
@@ -41,7 +41,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -49,11 +49,11 @@ superseded_by: []
 
 ## 项目群范围
 
-本轮继续覆盖整个 GlobalCloud 项目群：GFIS、GPC、PVAOS、WAES、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS。
+本轮继续覆盖整个 GlobalCloud 项目群：GFIS、GPC、PVAOS、WAME、KDS、Brain、PKC、XiaoC、XGD、XiaoG、MMC、GPCF、Studio、WAS。
 
 ## 负例覆盖
 
-- `accepted_for_next_gate=0` 时提前创建 WAES review。
+- `accepted_for_next_gate=0` 时提前创建 WAME review。
 - `accepted_for_next_gate=0` 时提前创建 runtime intake。
 - `accepted_for_next_gate=0` 时提前创建 review queue。
 - 签发方未确认。
@@ -62,8 +62,8 @@ superseded_by: []
 
 ## 禁止升级
 
-本轮不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact；不得声明 accepted、integrated 或 production_ready。
+本轮不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact；不得声明 accepted、integrated 或 production_ready。
 
 ## 下一轮
 
-下一轮为 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-006`。只有真实 P4 输入、候选文件质量、KDS source backlink、owner confirmation 与 WAES gate input 均满足，才允许进入后续运行态候选。
+下一轮为 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-006`。只有真实 P4 输入、候选文件质量、KDS source backlink、owner confirmation 与 WAME gate input 均满足，才允许进入后续运行态候选。

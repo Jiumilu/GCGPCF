@@ -93,7 +93,7 @@ planned_empty_ledger
 | `deliveryRefs` | 待填发货或承运索引 | evidence_missing | 发货责任方 |
 | `podRefs` | 待填 `POD-GH-*` | evidence_missing | POD 责任方 |
 | `financeIndexRefs` | 待填 `FEI-GH-*` | DSR-L3 index_required | 财务责任方 |
-| `waesGateRefs` | 待填 `WGR-GH-*` | manual_confirmation_required | WAME 规则记录人 |
+| `wameGateRefs` | 待填 `WGR-GH-*` | manual_confirmation_required | WAME 规则记录人 |
 | `gfisWriteMode` | `no_write` | fixed | 本轮边界 |
 | `businessFactCreated` | `false` | fixed | 本轮边界 |
 | `nextAction` | `collect_source_and_authorization` | open | DKS-060 |
@@ -112,7 +112,7 @@ planned_empty_ledger
 
 ## 7. AssistantOutputRecord 空白实例
 
-| outputId | sampleRef | assistantType | outputStatus | sourceRefsReturned | factLayerReturned | waesActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered | businessFactCreated |
+| outputId | sampleRef | assistantType | outputStatus | sourceRefsReturned | factLayerReturned | wameActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered | businessFactCreated |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `AOR-GH-D060-KQA-001` | `QS-GH-D060-KQA-001` | KQA | pending_run | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | false |
 | `AOR-GH-D060-GUA-001` | `QS-GH-D060-GUA-001` | GUA | pending_run | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | false |
@@ -178,7 +178,7 @@ planned_empty_ledger
 | `messagePayloadRef` | 是 | 待填 | 仅引用草案或脱敏摘要 |
 | `sensitivePayloadCheckResult` | 是 | pending | 敏感载荷检查结果 |
 | `kdsBacklinkRef` | 是 | 待填 | 受控文档或对象回链 |
-| `waesGateRecordRef` | 是 | 待填 | WAME 规则、阻断、人工确认或委员会路径 |
+| `wameGateRecordRef` | 是 | 待填 | WAME 规则、阻断、人工确认或委员会路径 |
 | `sourceHashOrOfflineSeal` | 条件必填 | 待填 | hash、封存编号或线下保管索引 |
 | `custodianRole` | 条件必填 | 待填 | DSR-L2/L3 资料保管角色 |
 | `committeeCandidateRef` | 条件必填 | 待判断 | 收益、争议、重大违规、潜在产值转正式产值时必填 |
@@ -198,7 +198,7 @@ planned_empty_ledger
 | `MSP-GH-D060-QPOD-001` | `AGP-GH-D058-QPOD-001` | 质量报告、发货单、承运、签收人、签收时间、POD 索引 | blank_authorization_pack |
 | `MSP-GH-D060-OEM-001` | `AGP-GH-D058-OEM-001` | OEM 当前生产事实责任、目标工厂未来承接责任 | blank_authorization_pack |
 | `MSP-GH-D060-FIN-001` | `AGP-GH-D058-FIN-001` | DSR-L3、metadata_only、custodian、hash/seal、财务授权 | blank_authorization_pack |
-| `MSP-GH-D060-WAES-001` | `AGP-GH-D058-WAES-001` | 规则命中、阻断原因、人工确认路径、委员会路径 | blank_authorization_pack |
+| `MSP-GH-D060-WAME-001` | `AGP-GH-D058-WAME-001` | 规则命中、阻断原因、人工确认路径、委员会路径 | blank_authorization_pack |
 | `MSP-GH-D060-AI-001` | `AGP-GH-D058-AI-001` | 评测范围、测试人、缺陷记录、no-write 边界 | blank_authorization_pack |
 | `MSP-GH-D060-KGB-001` | `AGP-GH-D058-KGB-001` | 缺口来源、资源冻结、验收规则、争议规则、委员会路径 | blank_authorization_pack |
 
@@ -232,7 +232,7 @@ planned_empty_ledger
 | 发货/POD | 若 OEM 实际发货，则提供发货与承运记录 | 未实际发货不得承担 POD 事实 | 发货单、承运人、签收人、签收时间、POD 索引 |
 | 客户/订单 | 不自动承担客户确认或订单主责 | 与 GPC/订单主线共同承接正式订单候选 | 客户确认、PO/合同、报价关联 |
 | 金融凭证 | 不暴露财务敏感原件 | 不直接确认回款或收入 | FEI DSR-L3、custodian、hash/seal、人工财务确认 |
-| KDS/WAES/AI | 提供候选资料来源 | 接收规则与门禁约束 | KDS 记录候选/缺口；WAME 记录规则；AI 不做事实确认 |
+| KDS/WAME/AI | 提供候选资料来源 | 接收规则与门禁约束 | KDS 记录候选/缺口；WAME 记录规则；AI 不做事实确认 |
 
 责任矩阵只用于候选责任拆分，不证明实际 OEM 生产、目标工厂投产、质量放行、发货、POD 或到账。
 
@@ -291,7 +291,7 @@ sendAllowed=false
 sendExecuted=false
 externalNotificationSent=false
 gfisWrite=false
-waesWrite=false
+wameWrite=false
 realKdsApiWrite=false
 gpcWrite=false
 pvaosWrite=false

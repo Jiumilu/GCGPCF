@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-DISPATCH-SENSITIVE-REVIEW-20260626
 title: CodeGraph 开发执行层派发敏感数据审查 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -71,7 +71,7 @@ evidence_destination=docs/harness/sop-e2e/intake-submissions/runtime-primary-key
 
 ## 仍然禁止
 
-禁止 actual dispatch、external API write、real KDS write、real WAES write、production write、deployment、git commit、git push 和 business status upgrade。
+禁止 actual dispatch、external API write、real KDS write、real WAME write、production write、deployment、git commit、git push 和 business status upgrade。
 
 ## 验证命令
 

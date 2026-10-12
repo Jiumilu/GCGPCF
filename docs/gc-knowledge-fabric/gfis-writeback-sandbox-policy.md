@@ -46,7 +46,7 @@ superseded_by: []
 - `proposedValue`
 - `diffReason`
 - `evidenceRefs`
-- `waesResult`
+- `wameResult`
 - `businessOwner`
 - `confirmationStatus`
 - `writebackMode`

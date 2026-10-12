@@ -54,7 +54,7 @@ superseded_by: []
 
 ## 3. RunSession 空白台账
 
-| runSessionId | evalBatchId | runScope | runOwner | participantRefs | inputStatus | outputStatus | waesGateStatus | kdsWritebackStatus | finalStatus |
+| runSessionId | evalBatchId | runScope | runOwner | participantRefs | inputStatus | outputStatus | wameGateStatus | kdsWritebackStatus | finalStatus |
 |---|---|---|---|---|---|---|---|---|---|
 | `RUN-HBLC-EVAL-202606-0001` | `PILOT-HBLC-KDS-202606-0001` | FEA / RAW / IND / ORD / TPL / MIX | KDS / GPCF 治理负责人 | 湖北磷材项目组、WAME、Brain、必要委员会 | waiting_source | planned | pending | candidate / no_write | planned |
 
@@ -92,7 +92,7 @@ superseded_by: []
 
 ## 7. WritebackRunCandidate 空白台账
 
-| writebackRunId | runRecordId | writebackCandidateRef | targetSystem | targetObjectType | writebackMode | humanConfirmationRequired | waesGateRequired | writebackStatus |
+| writebackRunId | runRecordId | writebackCandidateRef | targetSystem | targetObjectType | writebackMode | humanConfirmationRequired | wameGateRequired | writebackStatus |
 |---|---|---|---|---|---|---|---|---|
 | `WBR-HBLC-FEA-202606-0001` | `ERR-HBLC-FEA-202606-0001` | `WBC-HBLC-FEA-202606-0001` | KDS / WAME | ExpansionAssessmentCandidate | candidate_only | true | true | planned |
 | `WBR-HBLC-RAW-202606-0001` | `ERR-HBLC-RAW-202606-0001` | `WBC-HBLC-RAW-202606-0001` | KDS | RawMaterialKnowledgeCandidate | candidate_only | true | true | planned |

@@ -45,7 +45,7 @@ CCR retrieve 必须满足：
 reason_required
 evidence_record_required
 sensitive_check_required
-waes_decision_required
+wame_decision_required
 ```
 
 ## Memory

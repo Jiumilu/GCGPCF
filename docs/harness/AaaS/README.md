@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-92A4C970C1
 title: AaaS
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,4 +40,4 @@ KDS 空间：`开发`
 | GPCF-DOC-76A4B3F001 | evidence | docs/harness/AaaS/evidence/README.md | KDS | controlled |
 | GPCF-DOC-AAAS-REAL-RUNTIME-BASELINE-20260624 | AaaS 真实运行基线证据 2026-06-24 | docs/harness/AaaS/evidence/aaas-real-runtime-baseline-20260624.md | GPCF | controlled |
 | GPCF-DOC-AAAS-SERVICE-RUNTIME-20260625 | AaaS 最小 ServicePackage/Metering/SLA/EvidenceRequirement 运行证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-service-runtime-20260625.md | GPCF | controlled |
-| GPCF-DOC-AAAS-WAES-BINDING-PRECHECK-20260625 | AaaS-WAES 绑定前置预检证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-waes-binding-precheck-20260625.md | GPCF | controlled |
+| GPCF-DOC-AAAS-WAME-BINDING-PRECHECK-20260625 | AaaS-WAME 绑定前置预检证据 2026-06-25 | docs/harness/AaaS/evidence/aaas-wame-binding-precheck-20260625.md | GPCF | controlled |

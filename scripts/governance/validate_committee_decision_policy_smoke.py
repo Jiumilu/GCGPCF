@@ -55,7 +55,7 @@ def main() -> int:
         "reasonCodeCount": len(policy["reason_codes"]),
         "votingMethodCount": len(policy["voting_methods"]),
         "decisionDomain": hard["decision_domain"],
-        "committeeDoesNotReplaceWaesGate": hard["committee_does_not_replace_waes_gate"],
+        "committeeDoesNotReplaceWameGate": hard["committee_does_not_replace_wame_gate"],
         "committeeCannotWriteBusinessSystem": hard["committee_cannot_write_business_system"],
         "committeeCannotDirectlyDistributeRevenue": hard["committee_cannot_directly_distribute_revenue"],
         "committeeCannotDirectlyConfirmScore": hard["committee_cannot_directly_confirm_score"],
@@ -86,7 +86,7 @@ def main() -> int:
         f"output_fields={checks['minimumOutputFieldCount']} "
         f"freeze_scopes={checks['freezeScopeCount']} "
         "decision_domain=governance "
-        "waes_not_replaced=covered "
+        "wame_not_replaced=covered "
         "harness_evidence_required=true "
         "writes_business_system=0 writes_revenue_distribution=0 "
         "writes_score_confirmation=0 writes_quota_transfer=0 "

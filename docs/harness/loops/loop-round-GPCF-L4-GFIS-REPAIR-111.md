@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-693536D888
 title: GPCF-L4-GFIS-REPAIR-111
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

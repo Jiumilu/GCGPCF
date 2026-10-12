@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BRAIN-TEAM-AUTH-CONTRACT-DRIFT-20260624
 title: Brain team 空间授权契约 C 口径确认证据 2026-06-24
 project: Brain
-related_projects: [GFIS, WAES, KDS, Brain, MMC]
+related_projects: [GFIS, WAME, KDS, Brain, MMC]
 domain: docs
 status: controlled
 version: v1.0

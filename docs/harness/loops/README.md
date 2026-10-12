@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-59D8079155
 title: loops
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -85,7 +85,7 @@ KDS 空间：`开发`
 | GPCF-DOC-LOOP-AGENT-REACH-P8-REWORK-QUEUE-001 | Agent-Reach P8 返工队列 Loop 001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-P8-REWORK-QUEUE-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001 | LOOP Round GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-PROJECT-GROUP-SEARCH-READINESS-AUDIT-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-AGENT-REACH-RECENTER-001 | GPCF-AGENT-REACH-RECENTER-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-RECENTER-001.md | GPCF | controlled |
-| GPCF-DOC-5C7F800184 | GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAES-KDS-CANDIDATE-REVIEW-QUEUE-001.md | GPCF | controlled |
+| GPCF-DOC-5C7F800184 | GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001 | docs/harness/loops/loop-round-GPCF-AGENT-REACH-WAME-KDS-CANDIDATE-REVIEW-QUEUE-001.md | GPCF | controlled |
 | GPCF-DOC-7CD4D9DE05 | loop-round-GPCF-CF-LR-001 | docs/harness/loops/loop-round-GPCF-CF-LR-001.md | GPCF | controlled |
 | GPCF-DOC-263315555E | loop-round-GPCF-CF-LR-002 | docs/harness/loops/loop-round-GPCF-CF-LR-002.md | GPCF | controlled |
 | GPCF-DOC-CA61033026 | loop-round-GPCF-CF-LR-003 | docs/harness/loops/loop-round-GPCF-CF-LR-003.md | GPCF | controlled |
@@ -336,7 +336,7 @@ KDS 空间：`开发`
 | GPCF-DOC-C19AF85633 | GC-Knowledge Fabric P0-D37 正式 evidence 执行证据预览 dry-run LOOP 证据 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D37-001.md | GPCF | controlled |
 | GPCF-DOC-0B4BA748A9 | GC-Knowledge Fabric P0-D38 正式 evidence 执行验真计划预览 dry-run LOOP 证据 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D38-001.md | GPCF | controlled |
 | GPCF-DOC-6D991964D1 | GC-Knowledge Fabric P0-D39 正式 evidence 执行回滚演练预览 dry-run LOOP 证据 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D39-001.md | GPCF | controlled |
-| GPCF-DOC-048292E4DB | GC-Knowledge Fabric P0-D4 WAES 最小门禁 Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D4-001.md | GPCF | controlled |
+| GPCF-DOC-048292E4DB | GC-Knowledge Fabric P0-D4 WAME 最小门禁 Dry-run LOOP evidence | docs/harness/loops/loop-round-GPCF-GCKF-P0-D4-001.md | GPCF | controlled |
 | GPCF-DOC-0FA44D3CF3 | GC-Knowledge Fabric P0-D40 正式 evidence 执行事件升级预览 dry-run LOOP 证据 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D40-001.md | GPCF | controlled |
 | GPCF-DOC-856E7D33A3 | GC-Knowledge Fabric P0-D41 正式 evidence 执行重入预检预览 dry-run LOOP 证据 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D41-001.md | GPCF | controlled |
 | GPCF-DOC-92FC058222 | GC-Knowledge Fabric P0-D42 正式 evidence 执行重入批准包预览 dry-run LOOP 证据 | docs/harness/loops/loop-round-GPCF-GCKF-P0-D42-001.md | GPCF | controlled |
@@ -508,13 +508,13 @@ KDS 空间：`开发`
 | GPCF-DOC-D83FE8C1B1 | Loop Round GPCF Headroom LCX Sanitized Measurement Dry Run 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-MEASUREMENT-DRY-RUN-001.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-20260622 | Loop Round GPCF Headroom LCX Sanitized Token Fixture Extension 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SANITIZED-TOKEN-FIXTURE-EXTENSION-001.md | GPCF | controlled |
 | GPCF-DOC-82B704BBFF | Loop Round GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-SESSION-SUMMARY-DECLARATION-BOUNDARY-001.md | GPCF | controlled |
-| GPCF-DOC-B36D4C856B | Loop Round GPCF Headroom LCX WAES Harness Admission Decision Checklist 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001 | Loop Round GPCF Headroom LCX WAES Harness Final Receipt Decision Draft Candidate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001 | Loop Round GPCF Headroom LCX WAES Harness Final Receipt Decision Fill Recommendation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001 | Loop Round GPCF Headroom LCX WAES Harness Final Receipt Decision Human Fill Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001 | Loop Round GPCF Headroom LCX WAES Harness Final Receipt Decision Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001 | Loop Round GPCF Headroom LCX WAES Harness Final Receipt Decision Response Intake 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001.md | GPCF | controlled |
-| GPCF-DOC-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001 | Loop Round GPCF Headroom LCX WAES Harness Final Receipt Decision Response Template 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAES-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001.md | GPCF | controlled |
+| GPCF-DOC-B36D4C856B | Loop Round GPCF Headroom LCX WAME Harness Admission Decision Checklist 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-ADMISSION-DECISION-CHECKLIST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Draft Candidate 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-DRAFT-CANDIDATE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Fill Recommendation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-FILL-RECOMMENDATION-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Human Fill Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-HUMAN-FILL-REQUEST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Request 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-REQUEST-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Response Intake 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-INTAKE-001.md | GPCF | controlled |
+| GPCF-DOC-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001 | Loop Round GPCF Headroom LCX WAME Harness Final Receipt Decision Response Template 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-WAME-HARNESS-FINAL-RECEIPT-DECISION-RESPONSE-TEMPLATE-001.md | GPCF | controlled |
 | GPCF-DOC-F9C0CBE512 | LOOP Round GPCF Headroom Loop Cost Observation 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LOOP-COST-OBSERVATION-001.md | GPCF | controlled |
 | GPCF-DOC-1AA365A16D | LOOP Round GPCF Headroom Loop Cost Observation Series 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-LOOP-COST-OBSERVATION-SERIES-001.md | GPCF | controlled |
 | GPCF-DOC-2F2B13445C | LOOP Round GPCF Headroom Marker Preservation Policy 001 | docs/harness/loops/loop-round-GPCF-HEADROOM-MARKER-PRESERVATION-POLICY-001.md | GPCF | controlled |
@@ -595,7 +595,7 @@ KDS 空间：`开发`
 | GPCF-DOC-B472C3B047 | LOOP Round GPCF-KDS-DKS-061 - GC-Knowledge Fabric OKF契约骨架落地 | docs/harness/loops/loop-round-GPCF-KDS-DKS-061.md | GPCF | controlled |
 | GPCF-DOC-36AB0DCB58 | LOOP Round GPCF-KDS-DKS-062 - GC-Knowledge Fabric Shared Types骨架落地 | docs/harness/loops/loop-round-GPCF-KDS-DKS-062.md | GPCF | controlled |
 | GPCF-DOC-A8F474D237 | LOOP Round GPCF-KDS-DKS-063 - GC-Knowledge Fabric KDS v2 API与表结构契约骨架 | docs/harness/loops/loop-round-GPCF-KDS-DKS-063.md | GPCF | controlled |
-| GPCF-DOC-AEF36A44D1 | LOOP Round GPCF-KDS-DKS-064 - GC-Knowledge Fabric WAES最小门禁Dry-run | docs/harness/loops/loop-round-GPCF-KDS-DKS-064.md | GPCF | controlled |
+| GPCF-DOC-AEF36A44D1 | LOOP Round GPCF-KDS-DKS-064 - GC-Knowledge Fabric WAME最小门禁Dry-run | docs/harness/loops/loop-round-GPCF-KDS-DKS-064.md | GPCF | controlled |
 | GPCF-DOC-85B9E25E62 | LOOP Round GPCF-KDS-DKS-065 - GC-Knowledge Fabric KWE最小流程Dry-run | docs/harness/loops/loop-round-GPCF-KDS-DKS-065.md | GPCF | controlled |
 | GPCF-DOC-A04F9FEBDC | LOOP Round GPCF-KDS-DKS-066 - GC-Knowledge Fabric GFIS Assistant No-write Smoke | docs/harness/loops/loop-round-GPCF-KDS-DKS-066.md | GPCF | controlled |
 | GPCF-DOC-29DFAA93C4 | LOOP Round GPCF-KDS-DKS-067 - GC-Knowledge Fabric KDS v2 Search Dry-run | docs/harness/loops/loop-round-GPCF-KDS-DKS-067.md | GPCF | controlled |
@@ -605,14 +605,14 @@ KDS 空间：`开发`
 | GPCF-DOC-00CFDF130D | LOOP Round GPCF-KDS-DKS-071 - GC-Knowledge Fabric LOOP Dashboard指标Dry-run | docs/harness/loops/loop-round-GPCF-KDS-DKS-071.md | GPCF | controlled |
 | GPCF-DOC-0E289454CD | LOOP Round GPCF-KDS-DKS-072 - GC-Knowledge Fabric OKF/Types/API/Validator覆盖矩阵 | docs/harness/loops/loop-round-GPCF-KDS-DKS-072.md | GPCF | controlled |
 | GPCF-DOC-A8C1C0B206 | LOOP Round GPCF-KDS-DKS-074 - GC-Knowledge Fabric KDS v2 Endpoint No-write Smoke | docs/harness/loops/loop-round-GPCF-KDS-DKS-074.md | GPCF | controlled |
-| GPCF-DOC-9DFC78A707 | LOOP Round GPCF-KDS-DKS-076 - GC-Knowledge Fabric WAES Endpoint No-write Smoke | docs/harness/loops/loop-round-GPCF-KDS-DKS-076.md | GPCF | controlled |
+| GPCF-DOC-9DFC78A707 | LOOP Round GPCF-KDS-DKS-076 - GC-Knowledge Fabric WAME Endpoint No-write Smoke | docs/harness/loops/loop-round-GPCF-KDS-DKS-076.md | GPCF | controlled |
 | GPCF-DOC-4390819926 | LOOP Round GPCF-KDS-DKS-077 - GC-Knowledge Fabric KWE 端点无写入冒烟 | docs/harness/loops/loop-round-GPCF-KDS-DKS-077.md | GPCF | controlled |
 | GPCF-DOC-0F745C6A38 | LOOP Round GPCF-KDS-DKS-078 - GC-Knowledge Fabric GFIS Assistant 端点无写入冒烟 | docs/harness/loops/loop-round-GPCF-KDS-DKS-078.md | GPCF | controlled |
 | GPCF-DOC-5B135F1774 | LOOP Round GPCF-KDS-DKS-079 - GC-Knowledge Fabric Governance 端点无写入冒烟 | docs/harness/loops/loop-round-GPCF-KDS-DKS-079.md | GPCF | controlled |
 | GPCF-DOC-8A97D4933D | LOOP Round GPCF-KDS-DKS-080 - GC-Knowledge Fabric Brain/PKC Endpoint No-write Smoke | docs/harness/loops/loop-round-GPCF-KDS-DKS-080.md | GPCF | controlled |
 | GPCF-DOC-36DBE4BB63 | LOOP Round GPCF-KDS-DKS-081 - GC-Knowledge Fabric 统一状态机策略 | docs/harness/loops/loop-round-GPCF-KDS-DKS-081.md | GPCF | controlled |
 | GPCF-DOC-5135C5EDA5 | LOOP Round GPCF-KDS-DKS-082 - GC-Knowledge Fabric 核心对象关系策略 | docs/harness/loops/loop-round-GPCF-KDS-DKS-082.md | GPCF | controlled |
-| GPCF-DOC-52D36649EB | LOOP Round GPCF-KDS-DKS-083 - GC-Knowledge Fabric WAES 门禁 IO 与硬停止契约 | docs/harness/loops/loop-round-GPCF-KDS-DKS-083.md | GPCF | controlled |
+| GPCF-DOC-52D36649EB | LOOP Round GPCF-KDS-DKS-083 - GC-Knowledge Fabric WAME 门禁 IO 与硬停止契约 | docs/harness/loops/loop-round-GPCF-KDS-DKS-083.md | GPCF | controlled |
 | GPCF-DOC-D0B29C3DE0 | LOOP Round GPCF-KDS-DKS-084 - GC-Knowledge Fabric RAG Citation Strength L0-L5 | docs/harness/loops/loop-round-GPCF-KDS-DKS-084.md | GPCF | controlled |
 | GPCF-DOC-5F4FF5447B | LOOP Round GPCF-KDS-DKS-085 - GC-Knowledge Fabric GFIS Writeback Sandbox | docs/harness/loops/loop-round-GPCF-KDS-DKS-085.md | GPCF | controlled |
 | GPCF-DOC-C74468101A | LOOP Round GPCF-KDS-DKS-086 - GC-Knowledge Fabric Four-pool P0 Ledger Boundary | docs/harness/loops/loop-round-GPCF-KDS-DKS-086.md | GPCF | controlled |
@@ -635,9 +635,9 @@ KDS 空间：`开发`
 | GPCF-DOC-14A0478BF3 | LOOP Round GPCF-KDS-DKS-103 - Brain PKC KWE Queue Read Model No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-103.md | GPCF | controlled |
 | GPCF-DOC-F8EC78E9C2 | LOOP Round GPCF-KDS-DKS-104 - KWE 队列动作接入请求无写入 | docs/harness/loops/loop-round-GPCF-KDS-DKS-104.md | GPCF | controlled |
 | GPCF-DOC-9973B3048C | LOOP Round GPCF-KDS-DKS-105 - KWE Action Validation Workpack No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-105.md | GPCF | controlled |
-| GPCF-DOC-9CE9D51B3C | LOOP Round GPCF-KDS-DKS-106 - WAES Action Gate Precheck No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-106.md | GPCF | controlled |
-| GPCF-DOC-A400C556CB | LOOP Round GPCF-KDS-DKS-107 - WAES Precheck Bundle Read Model No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-107.md | GPCF | controlled |
-| GPCF-DOC-CCBFD8AF03 | LOOP Round GPCF-KDS-DKS-108 - GFIS Assistant WAES Guidance Packet No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-108.md | GPCF | controlled |
+| GPCF-DOC-9CE9D51B3C | LOOP Round GPCF-KDS-DKS-106 - WAME Action Gate Precheck No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-106.md | GPCF | controlled |
+| GPCF-DOC-A400C556CB | LOOP Round GPCF-KDS-DKS-107 - WAME Precheck Bundle Read Model No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-107.md | GPCF | controlled |
+| GPCF-DOC-CCBFD8AF03 | LOOP Round GPCF-KDS-DKS-108 - GFIS Assistant WAME Guidance Packet No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-108.md | GPCF | controlled |
 | GPCF-DOC-8B1529EEB1 | LOOP Round GPCF-KDS-DKS-109 - GFIS Assistant Repair Prompt Checklist No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-109.md | GPCF | controlled |
 | GPCF-DOC-CEC01AB1FF | LOOP Round GPCF-KDS-DKS-110 - GFIS Assistant Repair Submission Intake No-write | docs/harness/loops/loop-round-GPCF-KDS-DKS-110.md | GPCF | controlled |
 | GPCF-DOC-0E61C69C79 | LOOP Round GPCF-KDS-DKS-111 - GFIS Assistant 修复接入审查包无写入 | docs/harness/loops/loop-round-GPCF-KDS-DKS-111.md | GPCF | controlled |
@@ -1248,7 +1248,7 @@ KDS 空间：`开发`
 | GPCF-DOC-CF42DB87F1 | Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-WAITING-ROOM-001.md | GPCF | controlled |
 | GPCF-DOC-DEB7C6D159 | Loop Round GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-7682DAC0E5 | Loop Round: GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001.md | GPCF | controlled |
-| GPCF-DOC-01A5916499 | Loop Round: GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-WAES-KDS-RAG-WRITEBACK-GATE-PACK-001.md | GPCF | controlled |
+| GPCF-DOC-01A5916499 | Loop Round: GPCF-ONTOLOGY-WAS-WAME-KDS-RAG-WRITEBACK-GATE-PACK-001 | docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-WAME-KDS-RAG-WRITEBACK-GATE-PACK-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001 | GPCF PROJECT GROUP AUTHORIZATION LAYER MATRIX 001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-LAYER-MATRIX-001.md | GPCF | controlled |
 | GPCF-DOC-LOOP-ROUND-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001 | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-AUTHORIZATION-TO-PRE-EXECUTION-TOTAL-BRIDGE-001.md | GPCF | controlled |
 | GPCF-LOOP-PROJECT-GROUP-DEV-FIRST-KDS-BLOCKER-001 | LOOP Round: Project Group Dev First KDS Blocker | docs/harness/loops/loop-round-GPCF-PROJECT-GROUP-DEV-FIRST-KDS-BLOCKER-001.md | GPCF | controlled |

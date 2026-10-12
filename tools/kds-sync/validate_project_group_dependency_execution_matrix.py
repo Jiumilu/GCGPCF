@@ -13,9 +13,9 @@ BOARD = ROOT / "09-status/globalcloud-project-group-real-execution-governance-bo
 REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 
 EDGES = [
-    "WAES -> XWAIL",
+    "WAME -> XWAIL",
     "XWAIL -> AaaS",
-    "WAES -> AaaS",
+    "WAME -> AaaS",
     "KDS -> Brain",
     "GFIS -> GPC",
     "GPC -> PVAOS",
@@ -23,8 +23,8 @@ EDGES = [
     "GFIS/GPC/PVAOS -> SCaaS",
     "WAS -> Ontology -> XWAIL",
     "GPCF -> all projects",
-    "Studio -> GPCF/WAES",
-    "PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAES",
+    "Studio -> GPCF/WAME",
+    "PKC/XGD/XiaoG/XiaoC/MMC/SOP -> KDS/Brain/WAME",
 ]
 
 REQUIRED_DOC_TOKENS = [

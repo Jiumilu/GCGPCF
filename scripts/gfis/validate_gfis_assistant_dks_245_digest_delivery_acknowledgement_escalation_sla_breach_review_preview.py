@@ -13,7 +13,7 @@ TYPE_FILE = ROOT / "packages" / "shared" / "src" / "knowledge" / f"{SLUG}.ts"
 FIXTURE = ROOT / "fixtures" / "gfis" / f"{SLUG}-dry-run.json"
 UPSTREAM = ROOT / "fixtures" / "gfis" / "gfis-assistant-dks-244-digest-delivery-acknowledgement-escalation-sla-preview-dry-run.json"
 TYPE_PREFIX = "GfisAssistantDks245DigestDeliveryAcknowledgementEscalationSlaBreachReviewPreview"
-NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesBreachRecord', 'writesDispute', 'writesCommitteeCase', 'writesFreezeRequest', 'writesReminder', 'writesApprovalRequest', 'writesApprovalDecision', 'writesWaesGateResult', 'writesKweWorkItem', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
+NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesBreachRecord', 'writesDispute', 'writesCommitteeCase', 'writesFreezeRequest', 'writesReminder', 'writesApprovalRequest', 'writesApprovalDecision', 'writesWameGateResult', 'writesKweWorkItem', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
 
 def camel_to_snake(value: str) -> str:
     return re.sub(r"(?<!^)(?=[A-Z])", "_", value).lower()
@@ -50,10 +50,10 @@ def main() -> int:
     breach_reasons = set(policy["breach_reasons"])
     severities = set(policy["breach_severities"])
     totals = {key: 0 for key in NO_WRITE_KEYS}
-    counts = {"brainSurface":0,"pkcSurface":0,"gfisAssistantSurface":0,"totalReviewerCount":0,"totalEvidenceGapCount":0,"totalBreachReasonCount":0,"totalBlockedReviewCount":0,"totalOverdueMinutes":0,"createsBreachRecords":0,"createsDisputes":0,"createsCommitteeCases":0,"createsFreezeRequests":0,"createsReminders":0,"createsApprovalRequests":0,"createsApprovalDecisions":0,"createsHarnessEvidence":0,"createsWaesGateResults":0,"createsKweWorkItems":0,"persistsEvidence":0,"approvesBusinessWrite":0,"promotesLifecycle":0,"completesCommitteeDecision":0}
+    counts = {"brainSurface":0,"pkcSurface":0,"gfisAssistantSurface":0,"totalReviewerCount":0,"totalEvidenceGapCount":0,"totalBreachReasonCount":0,"totalBlockedReviewCount":0,"totalOverdueMinutes":0,"createsBreachRecords":0,"createsDisputes":0,"createsCommitteeCases":0,"createsFreezeRequests":0,"createsReminders":0,"createsApprovalRequests":0,"createsApprovalDecisions":0,"createsHarnessEvidence":0,"createsWameGateResults":0,"createsKweWorkItems":0,"persistsEvidence":0,"approvesBusinessWrite":0,"promotesLifecycle":0,"completesCommitteeDecision":0}
     surface_keys = {"brain":"brainSurface","pkc":"pkcSurface","gfis_assistant":"gfisAssistantSurface"}
-    false_flags = ("createsBreachRecord","createsDispute","createsCommitteeCase","createsFreezeRequest","createsReminder","createsApprovalRequest","createsApprovalDecision","createsHarnessEvidence","createsWaesGateResult","createsKweWorkItem","persistsEvidence","approvesBusinessWrite","promotesLifecycle","completesCommitteeDecision")
-    flag_count_keys = {"createsBreachRecord":"createsBreachRecords","createsDispute":"createsDisputes","createsCommitteeCase":"createsCommitteeCases","createsFreezeRequest":"createsFreezeRequests","createsReminder":"createsReminders","createsApprovalRequest":"createsApprovalRequests","createsApprovalDecision":"createsApprovalDecisions","createsHarnessEvidence":"createsHarnessEvidence","createsWaesGateResult":"createsWaesGateResults","createsKweWorkItem":"createsKweWorkItems","persistsEvidence":"persistsEvidence","approvesBusinessWrite":"approvesBusinessWrite","promotesLifecycle":"promotesLifecycle","completesCommitteeDecision":"completesCommitteeDecision"}
+    false_flags = ("createsBreachRecord","createsDispute","createsCommitteeCase","createsFreezeRequest","createsReminder","createsApprovalRequest","createsApprovalDecision","createsHarnessEvidence","createsWameGateResult","createsKweWorkItem","persistsEvidence","approvesBusinessWrite","promotesLifecycle","completesCommitteeDecision")
+    flag_count_keys = {"createsBreachRecord":"createsBreachRecords","createsDispute":"createsDisputes","createsCommitteeCase":"createsCommitteeCases","createsFreezeRequest":"createsFreezeRequests","createsReminder":"createsReminders","createsApprovalRequest":"createsApprovalRequests","createsApprovalDecision":"createsApprovalDecisions","createsHarnessEvidence":"createsHarnessEvidence","createsWameGateResult":"createsWameGateResults","createsKweWorkItem":"createsKweWorkItems","persistsEvidence":"persistsEvidence","approvesBusinessWrite":"approvesBusinessWrite","promotesLifecycle":"promotesLifecycle","completesCommitteeDecision":"completesCommitteeDecision"}
     for preview in previews:
         preview_id = preview["breachReviewPreviewId"]
         missing = sorted(required_fields - {camel_to_snake(key) for key in preview})
@@ -118,9 +118,9 @@ def main() -> int:
         f"total_blocked_reviews={actual['totalBlockedReviewCount']} total_overdue_minutes={actual['totalOverdueMinutes']} "
         "creates_breach_records=0 creates_disputes=0 creates_committee_cases=0 creates_freeze_requests=0 "
         "creates_reminders=0 creates_approval_requests=0 creates_approval_decisions=0 creates_harness_evidence=0 "
-        "creates_waes_gate_results=0 creates_kwe_work_items=0 writes_gfis=0 writes_gpc=0 writes_erp=0 "
+        "creates_wame_gate_results=0 creates_kwe_work_items=0 writes_gfis=0 writes_gpc=0 writes_erp=0 "
         "writes_mes=0 writes_breach_record=0 writes_dispute=0 writes_committee_case=0 writes_freeze_request=0 "
-        "writes_reminder=0 writes_approval_request=0 writes_approval_decision=0 writes_waes_gate_result=0 "
+        "writes_reminder=0 writes_approval_request=0 writes_approval_decision=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 writes_kds_fact=0 "
         "writes_kds_accepted_fact=0 writes_external_api=0"
     )

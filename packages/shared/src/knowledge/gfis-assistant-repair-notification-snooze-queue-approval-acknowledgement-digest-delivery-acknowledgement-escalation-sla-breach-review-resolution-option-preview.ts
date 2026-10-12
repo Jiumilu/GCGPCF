@@ -59,7 +59,7 @@ export type GfisAssistantRepairNotificationSnoozeQueueApprovalAcknowledgementDig
   | "create_approval_request"
   | "create_approval_decision"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "create_kwe_work_item"
   | "persist_evidence"
   | "approve_business_write"
@@ -77,7 +77,7 @@ export interface GfisAssistantRepairNotificationSnoozeQueueApprovalAcknowledgeme
   writesFreezeAction: 0;
   writesApprovalRequest: 0;
   writesApprovalDecision: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesHarnessEvidence: 0;
   writesKdsLifecycle: 0;
@@ -117,7 +117,7 @@ export interface GfisAssistantRepairNotificationSnoozeQueueApprovalAcknowledgeme
   createsApprovalRequest: false;
   createsApprovalDecision: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   createsKweWorkItem: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-LIVE-STATUS-SNAPSHOT-20260626
 title: GlobalCloud 项目群 Live 状态快照 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -66,7 +66,7 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 | `GlobalCloud Brain` | `codex/brain-l4-retrieval` | `origin/codex/brain-l4-retrieval` | 21 | 3 | 0 | 0 | `pass` | `Brain review handoff evidence refresh / dirty review required` |
 | `WAS世界资产体系` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud XiaoC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
-| `GlobalCloud WAES` | `waes/integration-release` | `origin/waes/integration-release` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud WAME` | `wame/integration-release` | `origin/wame/integration-release` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud GPC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud Studio` | `main` | `origin/main` | 2 | 0 | 13 | 0 | `pass` | `workflow permissions / session object panel / ahead review required` |
 | `GlobalCoud GPCF` | `codex/kds-token-sync-gpcf` | `origin/codex/kds-token-sync-gpcf` | volatile | volatile | 0 | 0 | `pass` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001 / REVIEW-AUTH-GPCF-WORKTREE-20260627 / governance_worktree_volatile` |
@@ -102,7 +102,7 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 
 说明：第 2 节 `dirty_count` / `untracked_count` 采用 raw expanded 口径，即 `git status --short --untracked-files=all`，会展开未跟踪目录内文件；compact 对照仅在第 3 节漂移结论中保留。因此判断状态时以 dirty 仓集合、ahead/behind/sensitive/diff_check 和当前门禁结果为准，不以单次行数作为状态升级依据。
 
-当前 raw expanded live counts 中 `GlobalCoud GPCF` 只作为 volatile observation 记录，由 validator 实时输出并允许在提交前自更新过程中短暂出现；`GlobalCloud Brain`、`GlobalCloud Studio`、`GlobalCloud KDS` 与 `GlobalCloud SOP` 是当前 stable dirty 仓，`GlobalCloud MMC` 为 ahead-only 漂移，`GlobalCloud GFIS=0`，其余 12 仓为 0。GPCF、Brain、Studio、KDS、SOP 等包含本地证据、代码或未跟踪目录的仓库，raw expanded 数字仍会随受控证据写入继续波动。GPCF 本仓瞬时行数不得替代 GFIS 真实 source-of-record、等效正式确认文件、人工核验、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+当前 raw expanded live counts 中 `GlobalCoud GPCF` 只作为 volatile observation 记录，由 validator 实时输出并允许在提交前自更新过程中短暂出现；`GlobalCloud Brain`、`GlobalCloud Studio`、`GlobalCloud KDS` 与 `GlobalCloud SOP` 是当前 stable dirty 仓，`GlobalCloud MMC` 为 ahead-only 漂移，`GlobalCloud GFIS=0`，其余 12 仓为 0。GPCF、Brain、Studio、KDS、SOP 等包含本地证据、代码或未跟踪目录的仓库，raw expanded 数字仍会随受控证据写入继续波动。GPCF 本仓瞬时行数不得替代 GFIS 真实 source-of-record、等效正式确认文件、人工核验、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 
 | 优先级 | 执行入口 | 当前动作 | 前置确认 |
 |---|---|---|---|

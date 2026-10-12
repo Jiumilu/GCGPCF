@@ -16,7 +16,7 @@ EVIDENCE_MD = ROOT / "docs/harness/evidence/was-loop-context-coverage-refresh-20
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-ONTOLOGY-WAS-LOOP-CONTEXT-COVERAGE-REFRESH-001.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 CONTEXT_SHAPES = ["flat_v1", "nested_v2"]
 ZERO_BOUNDARY_KEYS = [
     "real_source_records",
@@ -24,7 +24,7 @@ ZERO_BOUNDARY_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 FALSE_BOUNDARY_KEYS = ["accepted", "integrated", "production_ready"]
@@ -85,7 +85,7 @@ def validate_flat_context(source: str, context: dict[str, Any]) -> None:
         "related_objects",
         "source_refs",
         "evidence_refs",
-        "waes_gate_refs",
+        "wame_gate_refs",
         "kds_backlinks",
         "promotion_blockers",
         "next_action",
@@ -93,7 +93,7 @@ def validate_flat_context(source: str, context: dict[str, Any]) -> None:
     ]:
         require(key in context, f"{source} missing flat context key: {key}")
     require(context["project_scope"] == PROJECT_GROUP, f"{source} project_scope mismatch")
-    require(context["no_write_declaration"] == "no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready", f"{source} no-write declaration mismatch")
+    require(context["no_write_declaration"] == "no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready", f"{source} no-write declaration mismatch")
 
 
 def validate_nested_context(source: str, context: dict[str, Any]) -> None:
@@ -101,7 +101,7 @@ def validate_nested_context(source: str, context: dict[str, Any]) -> None:
         "project_group_scope",
         "source_of_record",
         "ontology_role",
-        "waes_gate",
+        "wame_gate",
         "loop_role",
         "llm_role",
         "rag_role",
@@ -115,7 +115,7 @@ def validate_nested_context(source: str, context: dict[str, Any]) -> None:
     require(str(context["runtime_writeback"]).startswith("blocked_without"), f"{source} runtime writeback boundary mismatch")
     boundary = context["promotion_boundary"]
     require(isinstance(boundary, dict), f"{source} promotion_boundary must be mapping")
-    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "waes_review"]:
+    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "wame_review"]:
         require(boundary.get(key) == 0, f"{source} promotion_boundary.{key} must be 0")
     for key in ["accepted", "integrated", "production_ready"]:
         require(boundary.get(key) is False, f"{source} promotion_boundary.{key} must be false")
@@ -204,7 +204,7 @@ def main() -> int:
         "was_loop_context_coverage_refresh=pass "
         "loop_round_count=136 project_scope_count=14 context_shapes=flat_v1,nested_v2 "
         "positive_fixtures=1 negative_fixtures=3 "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-STATUS-MATRIX-AND-CONTROL-BOARD-REFRESH-001"
     )

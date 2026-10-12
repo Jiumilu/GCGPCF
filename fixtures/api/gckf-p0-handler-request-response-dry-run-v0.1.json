@@ -315,26 +315,26 @@
       }
     },
     {
-      "id": "waes:runWaesGates",
-      "group": "waes",
+      "id": "wame:runWameGates",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/gates/run",
-      "handler": "runWaesGates",
-      "serviceName": "waesService",
-      "serviceMethod": "runWaesGates",
+      "path": "/api/v2/wame/gates/run",
+      "handler": "runWameGates",
+      "serviceName": "wameService",
+      "serviceMethod": "runWameGates",
       "writeBoundary": "gate_check",
       "request": {
         "tenantId": "tenant-gckf-p0",
-        "requestId": "REQ-runWaesGates",
+        "requestId": "REQ-runWameGates",
         "dryRun": true,
-        "objectId": "OBJ-runWaesGates",
+        "objectId": "OBJ-runWameGates",
         "gateTypes": [
           "RAG"
         ]
       },
       "response": {
         "ok": true,
-        "handler": "runWaesGates",
+        "handler": "runWameGates",
         "writeBoundary": "gate_check",
         "candidateOnly": false,
         "requiresGateOrReview": true,
@@ -345,12 +345,12 @@
       }
     },
     {
-      "id": "waes:checkRagAdmission",
-      "group": "waes",
+      "id": "wame:checkRagAdmission",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/rag-admission/check",
+      "path": "/api/v2/wame/rag-admission/check",
       "handler": "checkRagAdmission",
-      "serviceName": "waesService",
+      "serviceName": "wameService",
       "serviceMethod": "checkRagAdmission",
       "writeBoundary": "gate_check",
       "request": {
@@ -375,12 +375,12 @@
       }
     },
     {
-      "id": "waes:checkWriteback",
-      "group": "waes",
+      "id": "wame:checkWriteback",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/writeback/check",
+      "path": "/api/v2/wame/writeback/check",
       "handler": "checkWriteback",
-      "serviceName": "waesService",
+      "serviceName": "wameService",
       "serviceMethod": "checkWriteback",
       "writeBoundary": "gate_check",
       "request": {
@@ -405,12 +405,12 @@
       }
     },
     {
-      "id": "waes:checkRevenue",
-      "group": "waes",
+      "id": "wame:checkRevenue",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/revenue/check",
+      "path": "/api/v2/wame/revenue/check",
       "handler": "checkRevenue",
-      "serviceName": "waesService",
+      "serviceName": "wameService",
       "serviceMethod": "checkRevenue",
       "writeBoundary": "gate_check",
       "request": {
@@ -435,12 +435,12 @@
       }
     },
     {
-      "id": "waes:checkContribution",
-      "group": "waes",
+      "id": "wame:checkContribution",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/contribution/check",
+      "path": "/api/v2/wame/contribution/check",
       "handler": "checkContribution",
-      "serviceName": "waesService",
+      "serviceName": "wameService",
       "serviceMethod": "checkContribution",
       "writeBoundary": "gate_check",
       "request": {
@@ -465,12 +465,12 @@
       }
     },
     {
-      "id": "waes:checkExternalShare",
-      "group": "waes",
+      "id": "wame:checkExternalShare",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/external-share/check",
+      "path": "/api/v2/wame/external-share/check",
       "handler": "checkExternalShare",
-      "serviceName": "waesService",
+      "serviceName": "wameService",
       "serviceMethod": "checkExternalShare",
       "writeBoundary": "gate_check",
       "request": {
@@ -495,12 +495,12 @@
       }
     },
     {
-      "id": "waes:requestFreeze",
-      "group": "waes",
+      "id": "wame:requestFreeze",
+      "group": "wame",
       "method": "POST",
-      "path": "/api/v2/waes/freeze",
+      "path": "/api/v2/wame/freeze",
       "handler": "requestFreeze",
-      "serviceName": "waesService",
+      "serviceName": "wameService",
       "serviceMethod": "requestFreeze",
       "writeBoundary": "gate_check",
       "request": {

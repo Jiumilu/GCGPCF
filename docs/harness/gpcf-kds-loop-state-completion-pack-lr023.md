@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A1BC2692A8
 title: KDS loop-state 补齐包
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 | MMC | MM | P1 | Manifest；loop-state；项目主线/架构边界；evidence；验收审计 | not_started_or_partial |
 | KDS | KD | P1 | loop-state；验收审计；KDS TOKEN 上线同步证据 | partial |
 | Brain | BR | P1 | loop-state；项目主线/架构边界；evidence；验收审计 | partial |
-| WAES | WA | P2 | Manifest；loop-state | partial |
+| WAME | WA | P2 | Manifest；loop-state | partial |
 | GPC | GP | P2 | Manifest；loop-state；一期蓝图验收证据 | partial |
 | XiaoC | XC | P2 | loop-state；UI 测试证据；Wrangler/模型路由证据 | partial |
 

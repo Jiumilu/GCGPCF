@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C5E1A92D4
 title: Studio 默认凭据治理运行链路验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

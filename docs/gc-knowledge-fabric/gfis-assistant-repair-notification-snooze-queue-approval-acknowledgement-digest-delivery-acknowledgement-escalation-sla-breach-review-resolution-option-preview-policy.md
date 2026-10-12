@@ -47,7 +47,7 @@ superseded_by: []
 - `createsFreezeAction = false`
 - `createsApprovalRequest = false`
 - `createsApprovalDecision = false`
-- `createsWaesGateResult = false`
+- `createsWameGateResult = false`
 - `createsKweWorkItem = false`
 - `createsHarnessEvidence = false`
 - `promotesLifecycle = false`

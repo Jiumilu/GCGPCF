@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4BCB989BD4
 title: GPCF-L4-GFIS-REPAIR-011 GFIS Runtime Handoff Candidate Control
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoG, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,11 +20,11 @@ superseded_by: []
 
 ## 本轮目标
 
-把 GFIS 运行层 SOP E2E 后半段从文档链推进到运行态 runner 覆盖：DeliveryNote/POD 之后的 WAES evidence review、KDS backlink write、Brain read-only query、PKC notification candidate、XiaoG audit candidate 必须有 GFIS 运行层 handoff candidate API 和 gap register。
+把 GFIS 运行层 SOP E2E 后半段从文档链推进到运行态 runner 覆盖：DeliveryNote/POD 之后的 WAME evidence review、KDS backlink write、Brain read-only query、PKC notification candidate、XiaoG audit candidate 必须有 GFIS 运行层 handoff candidate API 和 gap register。
 
 ## 真实缺口判断
 
-上一轮已经覆盖 ProductionExecution、QualityInspection、InventoryBatch、DeliveryNote 四类 runtime evidence candidate，但 EvidenceRecord、KnowledgeBacklink 和 AI 协作面仍可能被文档或 fixture 冒充闭环。本轮必须补 handoff candidate，且不允许写成 WAES/KDS/POD/AI 完成。
+上一轮已经覆盖 ProductionExecution、QualityInspection、InventoryBatch、DeliveryNote 四类 runtime evidence candidate，但 EvidenceRecord、KnowledgeBacklink 和 AI 协作面仍可能被文档或 fixture 冒充闭环。本轮必须补 handoff candidate，且不允许写成 WAME/KDS/POD/AI 完成。
 
 ## 实施内容
 
@@ -51,12 +51,12 @@ superseded_by: []
 
 ## 当前结论
 
-GFIS 源码层已具备后半段 handoff candidate contract，但当前本机 GFIS 运行服务仍未加载新 API，所以完整 SOP E2E 保持 `repair_required`。这轮修复的是 Loop Engineering 的真实闭环检测能力：让运行态未加载、POD/WAES/KDS/AI 未真实交接的事实不会再被文档链掩盖。
+GFIS 源码层已具备后半段 handoff candidate contract，但当前本机 GFIS 运行服务仍未加载新 API，所以完整 SOP E2E 保持 `repair_required`。这轮修复的是 Loop Engineering 的真实闭环检测能力：让运行态未加载、POD/WAME/KDS/AI 未真实交接的事实不会再被文档链掩盖。
 
 ## 禁止与边界
 
 - 未使用 GFIS Demo 作为业务主体。
-- 未写 WAES 最终裁决、KDS 真实提交、POD、资金事实、外部 API 或真实通知。
+- 未写 WAME 最终裁决、KDS 真实提交、POD、资金事实、外部 API 或真实通知。
 - 未执行 `bench migrate`、schema sync、数据库迁移、权限变更、生产配置修改、Docker/bench 重启、部署、Git push 或 accepted/integrated 状态升级。
 
 ## 计数

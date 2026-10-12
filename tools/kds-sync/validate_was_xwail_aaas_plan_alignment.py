@@ -37,7 +37,7 @@ REQUIRED = {
     "was_plan": [
         "WAS 定义体系",
         "XWAIL 定义契约",
-        "WAES 负责治理",
+        "WAME 负责治理",
         "AaaS",
         "不声明生产上线",
         "项目群映射",
@@ -48,7 +48,7 @@ REQUIRED = {
         "WAS 定义体系，Ontology 定义语义，XWAIL 定义契约",
         "本项目权威职责",
         "本项目不承担的职责",
-        "WAES",
+        "WAME",
         "AaaS",
         "LOOP 接入",
     ],
@@ -58,7 +58,7 @@ REQUIRED = {
         "AaaS 是服务封装",
         "不得重定义核心标签",
         "GPCF V1.2",
-        "WAES",
+        "WAME",
     ],
     "aaas_master_plan": [
         "GlobalCloud AaaS 总体方案",
@@ -67,13 +67,13 @@ REQUIRED = {
         "ServicePackage",
         "Metering",
         "SLA",
-        "WAES",
+        "WAME",
         "LOOP 接入",
     ],
     "aaas_plan": [
         "AaaS 不以“再造系统”为目标",
         "通过 XWAIL 契约",
-        "WAES",
+        "WAME",
         "AaaS 不能突破上述边界",
         "GPCF V1.2",
         "GlobalCloud AaaS",
@@ -110,7 +110,7 @@ FORBIDDEN_WITHOUT_CONTEXT = {
     ],
     "aaas_plan": [
         ("WAS 总体规划 V1.0", "GPCF V1.2"),
-        ("AION-C", "Brain/WAES"),
+        ("AION-C", "Brain/WAME"),
     ],
 }
 

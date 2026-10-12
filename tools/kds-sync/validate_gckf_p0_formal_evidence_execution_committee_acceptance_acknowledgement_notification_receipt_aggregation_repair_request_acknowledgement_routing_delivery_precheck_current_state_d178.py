@@ -163,7 +163,7 @@ def main() -> None:
           "recipient_acl_owner",
           "repair_owner",
           "sla_owner",
-          "waes_gate_owner",
+          "wame_gate_owner",
           "harness_reviewer",
           "governance_owner",
           "audit_owner"
@@ -181,7 +181,7 @@ def main() -> None:
           "candidate_delivery_blocker_codes",
           "candidate_hold_reason_snapshot",
           "candidate_hold_context_refs_snapshot",
-          "waes_negative_gate_snapshot",
+          "wame_negative_gate_snapshot",
           "harness_no_write_guard",
           "no_delivery_attestation",
           "no_write_attestation"

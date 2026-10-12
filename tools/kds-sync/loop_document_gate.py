@@ -158,7 +158,7 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         "doc_id: GPCF-DOC-C436DDB0F6",
         "title: GlobalCloud 文档健康报告",
         "project: GPCF",
-        "related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]",
+        "related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]",
         "domain: status",
         "status: controlled",
         "version: v1.0",
@@ -179,7 +179,7 @@ def write_report(summary: dict[str, object], command_results: dict[str, str]) ->
         "不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。"
         "当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、"
         "customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、"
-        "人工业务核验、运行层主键、review queue、runtime intake、WAES review 和 verified artifact "
+        "人工业务核验、运行层主键、review queue、runtime intake、WAME review 和 verified artifact "
         "全部满足后才能重新评估。",
         "",
         f"生成时间：{datetime.now(timezone.utc).isoformat()}",

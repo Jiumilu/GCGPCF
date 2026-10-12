@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -37,7 +37,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 REQUIRED_SIGNATURE_FIELDS = [
@@ -108,10 +108,10 @@ def main() -> int:
         "customer contract text",
         "production token",
     ], "ledger exclusion list mismatch")
-    require(auth_fields["waes_harness_admission_decision"].get("allowed_values") == [
+    require(auth_fields["wame_harness_admission_decision"].get("allowed_values") == [
         "admitted_for_sanitized_measurement_precheck",
         "blocked",
-    ], "waes decision allowed values mismatch")
+    ], "wame decision allowed values mismatch")
 
     signature_block = template.get("signature_block", {})
     require(set(signature_block) == set(REQUIRED_SIGNATURE_FIELDS), "signature block mismatch")

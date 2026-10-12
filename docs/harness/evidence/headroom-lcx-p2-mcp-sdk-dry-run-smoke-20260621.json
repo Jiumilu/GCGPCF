@@ -12,7 +12,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -37,7 +37,7 @@
     "missing_markers": [
       "GPCF",
       "KDS",
-      "WAES",
+      "WAME",
       "production_admission_gate",
       "accepted"
     ],
@@ -60,7 +60,7 @@
   "retrieve_gate": {
     "configured": true,
     "visibility": "restricted",
-    "requires_waes_gate": true,
+    "requires_wame_gate": true,
     "requires_reason": true,
     "requires_harness_evidence": true,
     "requires_sensitive_check": true

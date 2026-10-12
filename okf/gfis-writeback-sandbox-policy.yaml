@@ -30,14 +30,14 @@ minimum_fields:
   - proposed_value
   - diff_reason
   - evidence_refs
-  - waes_result
+  - wame_result
   - business_owner
   - confirmation_status
   - writeback_mode
   - final_action
   - no_write
 approved_write_requires:
-  - waes_writeback_gate_passed
+  - wame_writeback_gate_passed
   - business_owner_confirmation
   - confirmation_record
   - harness_evidence
@@ -54,7 +54,7 @@ hard_boundaries:
   sandbox_cannot_emit_target_receipt: true
   final_action_accepted_is_not_writeback_receipt: true
   missing_evidence_blocks: true
-  missing_waes_result_blocks: true
+  missing_wame_result_blocks: true
   missing_business_owner_blocks: true
 no_write_assertions:
   writes_gfis: 0

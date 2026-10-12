@@ -48,7 +48,7 @@ dimensions:
       - was
       - xwail
       - aaas
-      - waes
+      - wame
       - gfis
       - gpc
       - pvaos
@@ -94,7 +94,7 @@ dimensions:
     values: [unclassified, machine_suggested, human_required, human_confirmed, rejected]
 
   authorization_boundary:
-    values: [read_only, human_required, waes_gated, authorized]
+    values: [read_only, human_required, wame_gated, authorized]
 
   write_mode:
     values: [no_write, sandbox, authorized_write]

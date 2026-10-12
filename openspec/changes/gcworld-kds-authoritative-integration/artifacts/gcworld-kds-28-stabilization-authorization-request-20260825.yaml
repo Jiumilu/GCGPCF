@@ -39,11 +39,11 @@ decisions:
     allowed_action: 仅按GBrain责任方确认的安全方式静默，禁止强杀进程
     restore_included: false
   - id: D8
-    title: 人工GCWORLD与WAES资料导入冻结授权
+    title: 人工GCWORLD与WAME资料导入冻结授权
     decision: pending
     targets:
       - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
-      - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+      - 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
     allowed_action: 仅冻结对应人工导入活动，不变更文件
     restore_included: false
   - id: D9

@@ -82,7 +82,7 @@ def build_package() -> dict[str, Any]:
         "bridge_state": {
             "authorization_complete": precheck.get("precheck", {}).get("authorization_complete"),
             "missing_required_field_count": precheck.get("precheck", {}).get("missing_required_field_count"),
-            "waes_harness_admitted": precheck.get("precheck", {}).get("waes_harness_admitted"),
+            "wame_harness_admitted": precheck.get("precheck", {}).get("wame_harness_admitted"),
             "real_measurement_window_requested": True,
             "real_measurement_window_granted": True,
             "real_measurement_open": False,
@@ -127,7 +127,7 @@ def build_package() -> dict[str, Any]:
         "notes": [
             "This package bridges the completed sanitized precheck to the missing real measurement window decision.",
             "It is evidence of the next-stage bridge boundary, not evidence of execution.",
-            "It keeps the production branch blocked until WAES/Harness issues a new real-measurement decision.",
+            "It keeps the production branch blocked until WAME/Harness issues a new real-measurement decision.",
         ],
     }
 
@@ -148,7 +148,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260623",
             "title: Headroom LCX Real Measurement Next-Stage Authorization Package Evidence",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -179,7 +179,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
             "|---|---|",
             f"| authorization_complete | `{str(pkg['bridge_state']['authorization_complete']).lower()}` |",
             f"| missing_required_field_count | `{pkg['bridge_state']['missing_required_field_count']}` |",
-            f"| waes_harness_admitted | `{str(pkg['bridge_state']['waes_harness_admitted']).lower()}` |",
+            f"| wame_harness_admitted | `{str(pkg['bridge_state']['wame_harness_admitted']).lower()}` |",
             f"| real_measurement_window_requested | `{str(pkg['bridge_state']['real_measurement_window_requested']).lower()}` |",
             f"| real_measurement_window_granted | `{str(pkg['bridge_state']['real_measurement_window_granted']).lower()}` |",
             f"| real_measurement_open | `{str(pkg['bridge_state']['real_measurement_open']).lower()}` |",
@@ -229,7 +229,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
         doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001
         title: "循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-NEXT-STAGE-AUTHORIZATION-PACKAGE-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0
@@ -282,7 +282,7 @@ def write_outputs(pkg: dict[str, Any]) -> None:
 
         ## 下一轮
 
-        继续等待 WAES/Harness 的真实授权窗口裁决，或在获批后再切到真实测量 runner。
+        继续等待 WAME/Harness 的真实授权窗口裁决，或在获批后再切到真实测量 runner。
         """
     ).strip() + "\n"
     OUT_LOOP.write_text(loop_text, encoding="utf-8")

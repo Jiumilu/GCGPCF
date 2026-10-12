@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3AB198703F
 title: LOOP Round GPCF-KDS-DKS-039 - 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,13 +49,13 @@ superseded_by: []
 
 | 动作 | 结果 |
 |---|---|
-| 建立执行字段定义 | 已定义 executionState、sourceReceiptStatus、waesRecordStatus、humanReviewStatus、committeeStatus、bountyStatus、settlementStatus |
+| 建立执行字段定义 | 已定义 executionState、sourceReceiptStatus、wameRecordStatus、humanReviewStatus、committeeStatus、bountyStatus、settlementStatus |
 | 建立人工确认执行台账 | 已将 5 个 `MCT-HBLC-*` 对象转成 `MER-HBLC-*` 空白执行行 |
 | 建立悬赏激活执行台账 | 已将 4 个 `BAC-HBLC-*` 对象转成 `BER-HBLC-*` 空白执行行 |
 | 建立委员会触发执行台账 | 已将 4 个 `CTC-HBLC-*` 对象转成 `CER-HBLC-*` 空白执行行 |
 | 建立关闭执行台账 | 已将 5 个 `CLC-HBLC-*` 对象转成 `CLR-HBLC-*` 空白执行行 |
 | 建立 PKC 参与执行台账 | 已将 3 个 `PPC-HBLC-*` 对象转成 `PER-HBLC-*` 空白执行行 |
-| 建立硬停止条件 | 已明确候选事实、订单、收入、开票、自购 AI 额度、悬赏、委员会、WAES 和主账边界 |
+| 建立硬停止条件 | 已明确候选事实、订单、收入、开票、自购 AI 额度、悬赏、委员会、WAME 和主账边界 |
 | 建立底座可用知识闭环率 | 已将状态覆盖率、事实成熟度 DQ、来源证据、registry/台账/报告一致性、自动化处理有效率、写回缺口闭环率纳入关键指标 |
 
 ## 5. 明确不做范围
@@ -70,7 +70,7 @@ superseded_by: []
 - AI 额度发放；
 - 委员会真实备案或裁决；
 - Brain 页面正式发布；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - 生产配置、权限、部署、数据库迁移或外部系统写入；

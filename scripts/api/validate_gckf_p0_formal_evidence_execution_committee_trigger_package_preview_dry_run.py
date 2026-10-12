@@ -94,7 +94,7 @@ def main() -> int:
         roles,
         {
             "request_owner",
-            "waes_gate_owner",
+            "wame_gate_owner",
             "kwe_workflow_owner",
             "harness_reviewer",
             "committee_representative",

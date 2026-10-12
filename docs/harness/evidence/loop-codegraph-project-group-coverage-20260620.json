@@ -118,8 +118,8 @@
       "workflow_release_boundary_status": "review_required_before_commit"
     },
     {
-      "project": "GlobalCloud WAES",
-      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+      "project": "GlobalCloud WAME",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME",
       "files": 281,
       "nodes": 3511,
       "edges": 11298,
@@ -188,7 +188,7 @@
   "non_claims": [
     "does not run codegraph install or modify MCP configuration",
     "does not prove GFIS runtime SOP E2E passed",
-    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAES review, verified artifact, accepted, integrated, or production_ready status",
+    "does not create source-of-record, runtime primary key, review queue, runtime intake, WAME review, verified artifact, accepted, integrated, or production_ready status",
     "does not authorize production write, external API write, database migration, permission change, deployment, commit, push, or merge"
   ]
 }

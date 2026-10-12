@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9D362F48F8
 title: Headroom LCX Authorized Measurement Authorization Template Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ superseded_by: []
 | `authorized_at` | required | `REQUIRED_USER_INPUT` |
 | `sanitized_production_token_ledger` | required | `REQUIRED_USER_INPUT` |
 | `rollback_plan_id` | required | `REQUIRED_USER_INPUT` |
-| `waes_harness_admission_decision` | required | `REQUIRED_USER_INPUT` |
+| `wame_harness_admission_decision` | required | `REQUIRED_USER_INPUT` |
 
 ## 门禁
 
@@ -57,8 +57,8 @@ superseded_by: []
 
 ## 15 项目范围
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 下一步
 
-由授权人补齐模板字段，并附 WAES/Harness 准入裁决后，重新运行授权测量前置检查。
+由授权人补齐模板字段，并附 WAME/Harness 准入裁决后，重新运行授权测量前置检查。

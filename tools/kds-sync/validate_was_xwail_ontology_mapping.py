@@ -67,7 +67,7 @@ REQUIRED_DOC_TOKENS = [
     "integrated = false",
     "production_ready = false",
     "customer_accepted = false",
-    "不声明 WAES 已发布",
+    "不声明 WAME 已发布",
     "不声明 AaaS 已绑定或可订阅",
 ]
 
@@ -83,7 +83,7 @@ FORBIDDEN_CLAIMS = [
     "integrated = true",
     "production_ready = true",
     "customer_accepted = true",
-    "WAES 已发布完成",
+    "WAME 已发布完成",
     "AaaS 已绑定完成",
     "客户验收通过 = true",
 ]
@@ -137,7 +137,7 @@ def main() -> int:
         if flow not in doc_text:
             failures.append(f"missing flow mapping in evidence: {flow}")
 
-    for token in ["version: 0.1.0", "knowledgeObject", "relationship", "event", "waesGateInput"]:
+    for token in ["version: 0.1.0", "knowledgeObject", "relationship", "event", "wameGateInput"]:
         if token not in ontology_text:
             failures.append(f"missing ontology source token: {token}")
 
@@ -162,7 +162,7 @@ def main() -> int:
         "flows_checked": len(FLOWS),
         "failures": failures,
         "warnings": [
-            "This validates semantic mapping evidence only; it does not modify WAS terms, publish WAES, bind AaaS, write KDS API, or grant accepted/integrated/customer acceptance.",
+            "This validates semantic mapping evidence only; it does not modify WAS terms, publish WAME, bind AaaS, write KDS API, or grant accepted/integrated/customer acceptance.",
         ],
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

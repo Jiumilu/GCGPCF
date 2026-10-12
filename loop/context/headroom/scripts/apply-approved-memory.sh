@@ -14,11 +14,11 @@ from pathlib import Path
 
 path = Path(sys.argv[1])
 data = json.loads(path.read_text(encoding="utf-8"))
-required = ["approval_id", "owner", "target", "proposed_rule", "harness_evidence", "waes_decision"]
+required = ["approval_id", "owner", "target", "proposed_rule", "harness_evidence", "wame_decision"]
 missing = [key for key in required if not data.get(key)]
 if missing:
     raise SystemExit(f"missing required approval fields: {missing}")
-if data.get("waes_decision") != "pass":
-    raise SystemExit("WAES decision is not pass; refusing to apply memory")
+if data.get("wame_decision") != "pass":
+    raise SystemExit("WAME decision is not pass; refusing to apply memory")
 print("approved_memory_candidate=validated apply_manually=true")
 PY

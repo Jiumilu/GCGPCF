@@ -150,7 +150,7 @@ def main() -> int:
 doc_id: GPCF-DOC-82F7D65D59
 title: OKF v0.1 Summary Approval Expiry Gate
 project: KDS
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

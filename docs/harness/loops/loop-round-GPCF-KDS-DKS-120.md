@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3B163E0B8C
 title: LOOP Round GPCF-KDS-DKS-120 - GFIS Assistant 修复已读回执通知预览无写入
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 把 DKS-119 的 GFIS Assistant Repair Audit Trace Read Receipt Preview 推进为本地 notification preview，说明用户查看 read receipt preview 后界面可展示的通知候选、lineage hint、原因、下一步候选提示和 no-write notice。
 
-本轮不创建真实 Notification、ReadReceipt、audit trace record、EventRecord、ActionReceipt、Harness Evidence、WAES Gate Result、KWE WorkItem、ConfirmationRecord、DecisionRecord，不持久化 evidence，不提升 KDS lifecycle，不写 GFIS / GPC / ERP / MES，不确认收益、积分、额度或悬赏。
+本轮不创建真实 Notification、ReadReceipt、audit trace record、EventRecord、ActionReceipt、Harness Evidence、WAME Gate Result、KWE WorkItem、ConfirmationRecord、DecisionRecord，不持久化 evidence，不提升 KDS lifecycle，不写 GFIS / GPC / ERP / MES，不确认收益、积分、额度或悬赏。
 
 ## 输入
 
@@ -64,7 +64,7 @@ superseded_by: []
 ### DKS-120 专用校验
 
 ```text
-gfis_assistant_repair_read_receipt_notification_preview=pass previews=6 brain=2 pkc=1 gfis_assistant=3 display_notification_preview=1 repair_notification_preview=1 metadata_boundary_notification_preview=1 committee_notification_preview=1 freeze_notification_preview=1 blocked_write_notification_preview=1 creates_notifications=0 creates_read_receipts=0 creates_audit_trace_records=0 creates_event_records=0 creates_action_receipts=0 creates_harness_evidence=0 creates_waes_gate_results=0 creates_kwe_work_items=0 persists_evidence=0 approves_business_write=0 promotes_lifecycle=0 completes_committee_decision=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_notification=0 writes_read_receipt=0 writes_audit_trace_record=0 writes_event_record=0 writes_action_receipt=0 writes_harness_evidence=0 writes_admission_record=0 writes_review_queue_item=0 writes_confirmation_record=0 writes_decision_record=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+gfis_assistant_repair_read_receipt_notification_preview=pass previews=6 brain=2 pkc=1 gfis_assistant=3 display_notification_preview=1 repair_notification_preview=1 metadata_boundary_notification_preview=1 committee_notification_preview=1 freeze_notification_preview=1 blocked_write_notification_preview=1 creates_notifications=0 creates_read_receipts=0 creates_audit_trace_records=0 creates_event_records=0 creates_action_receipts=0 creates_harness_evidence=0 creates_wame_gate_results=0 creates_kwe_work_items=0 persists_evidence=0 approves_business_write=0 promotes_lifecycle=0 completes_committee_decision=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_notification=0 writes_read_receipt=0 writes_audit_trace_record=0 writes_event_record=0 writes_action_receipt=0 writes_harness_evidence=0 writes_admission_record=0 writes_review_queue_item=0 writes_confirmation_record=0 writes_decision_record=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### 覆盖率校验
@@ -88,7 +88,7 @@ tsc -p packages/api/tsconfig.json --noEmit = pass
 
 ### 全量 no-write 回归
 
-完整回归链覆盖 GFIS Assistant、WAES、KWE、KDS、RAG、Brain/PKC、MMC、Governance、LOOP Dashboard、覆盖率、OKF 解析和 TypeScript 编译，结果为 pass。
+完整回归链覆盖 GFIS Assistant、WAME、KWE、KDS、RAG、Brain/PKC、MMC、Governance、LOOP Dashboard、覆盖率、OKF 解析和 TypeScript 编译，结果为 pass。
 
 关键边界均为 0：
 
@@ -96,7 +96,7 @@ tsc -p packages/api/tsconfig.json --noEmit = pass
 - `writes_gpc=0`
 - `writes_erp=0`
 - `writes_mes=0`
-- `writes_waes_gate_result=0`
+- `writes_wame_gate_result=0`
 - `writes_kwe_work_item=0`
 - `writes_notification=0`
 - `writes_read_receipt=0`
@@ -131,7 +131,7 @@ target_scope_scan=pass
 | notification preview 被误认为真实 ReadReceipt | 明确 `createsReadReceipt=false`、`writes_read_receipt=0` |
 | preview 被误认为 Harness evidence | 明确 `createsHarnessEvidence=false`、`writes_harness_evidence=0` |
 | preview 触发真实事件或动作回执 | 明确 `createsEventRecord=false`、`createsActionReceipt=false` |
-| preview 触发 WAES/KWE 后续流程 | 明确 `createsWaesGateResult=false`、`createsKweWorkItem=false` |
+| preview 触发 WAME/KWE 后续流程 | 明确 `createsWameGateResult=false`、`createsKweWorkItem=false` |
 | committee / freeze notification preview 被误认为裁决或冻结完成 | 只允许 notification preview，不允许 `complete_committee_decision` 或 lifecycle mutation |
 
 ## 反馈
@@ -154,7 +154,7 @@ tsc -p packages/api/tsconfig.json --noEmit
 
 客户满意度未在本轮收集；原因是本轮为受控 no-write 契约推进，尚未进入真实 UI 交互验收。
 
-跨项目依赖无新增未登记阻塞；GFIS、WAES、KWE、KDS、Brain、PKC 均保持候选和只读边界。
+跨项目依赖无新增未登记阻塞；GFIS、WAME、KWE、KDS、Brain、PKC 均保持候选和只读边界。
 
 回滚方式：移除本轮新增 DKS-120 文件，并撤销 README、shared index、coverage fixture、coverage validator 中 DKS-120 条目。
 
@@ -164,4 +164,4 @@ DKS-121 建议进入 `GFIS Assistant Repair Notification Dismissal Preview No-wr
 
 - 输入 DKS-120 notification preview。
 - 定义本地 dismissal preview，用于说明用户关闭通知候选时界面可展示的本地关闭预览。
-- 仍不创建真实 Notification、DismissalRecord、ReadReceipt、EventRecord、Harness Evidence、WAES Gate Result、KWE WorkItem 或业务写回。
+- 仍不创建真实 Notification、DismissalRecord、ReadReceipt、EventRecord、Harness Evidence、WAME Gate Result、KWE WorkItem 或业务写回。

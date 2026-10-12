@@ -46,7 +46,7 @@
     "git_push_performed": false,
     "gfis_clean_reindex_performed": false,
     "gfis_file_cleanup_performed": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "allowed_claims": [
     "CodeGraph 项目群治理链的中文化文档债务已闭合。",
@@ -65,7 +65,7 @@
     "git push performed",
     "deployment performed",
     "GFIS clean reindex performed",
-    "WAES final approval",
+    "WAME final approval",
     "Harness final acceptance"
   ],
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-STEADY-STATE-MONITOR-012"

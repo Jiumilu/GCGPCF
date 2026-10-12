@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-04DF2241E6
 title: LOOP Round GPCF KDS DKS-131
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant repair notification snooze queue approval escalation acknowledgement preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-130 approval SLA escalation preview，但只展示候选确认人、确认边界、确认风险和下一步建议，不创建真实 acknowledgement、read receipt、提醒、审批请求、审批决定、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 GFIS Assistant repair notification snooze queue approval escalation acknowledgement preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-130 approval SLA escalation preview，但只展示候选确认人、确认边界、确认风险和下一步建议，不创建真实 acknowledgement、read receipt、提醒、审批请求、审批决定、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
@@ -58,4 +58,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-131 仍是本地预览与候选展示能力，不代表 acknowledgement、read receipt、提醒、审批请求、审批决定、KWE 工单、WAES 结果或委员会决议已经创建。下一轮可继续推进 DKS-132：approval acknowledgement digest preview no-write，用于展示确认摘要和责任边界聚合，但仍不得写入真实确认、提醒、审批或 evidence。
+DKS-131 仍是本地预览与候选展示能力，不代表 acknowledgement、read receipt、提醒、审批请求、审批决定、KWE 工单、WAME 结果或委员会决议已经创建。下一轮可继续推进 DKS-132：approval acknowledgement digest preview no-write，用于展示确认摘要和责任边界聚合，但仍不得写入真实确认、提醒、审批或 evidence。

@@ -42,7 +42,7 @@ superseded_by: []
 - `blocked_remediation_actions=8`
 - `owner_action_required=3`
 - `gfis_action_required=2`
-- `waes_action_required=1`
+- `wame_action_required=1`
 - `kds_action_required=1`
 - `gpcf_control_action_required=1`
 - `remediation_complete=0`
@@ -64,7 +64,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -84,5 +84,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只把 submission package hard-stop 转成 8 项 owner/GFIS/WAES/KDS/GPCF 补证动作，且所有动作仍 blocked；不完成 remediation、不释放 open hold、不重开 package、不创建 dispatch confirmation、责任方响应、提交包、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
+- 本轮只把 submission package hard-stop 转成 8 项 owner/GFIS/WAME/KDS/GPCF 补证动作，且所有动作仍 blocked；不完成 remediation、不释放 open hold、不重开 package、不创建 dispatch confirmation、责任方响应、提交包、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-246` 建立 submission package owner-response and release guard，补证动作未完成时继续保持 submission package 关闭。

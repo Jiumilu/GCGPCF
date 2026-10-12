@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C739C4D9D1
 title: LOOP Round GPCF-KDS-DKS-038 - 湖北磷材 SOP 候选写回规则到缺口悬赏与人工确认任务包
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -74,7 +74,7 @@ superseded_by: []
 - AI 额度冻结或发放；
 - 委员会真实裁决；
 - Brain 页面正式发布；
-- WAES 放行；
+- WAME 放行；
 - 真实 KDS API 写入；
 - GFIS、GPC、PVAOS 或其他业务系统主账写入；
 - 真实资料接收、保存或展示；

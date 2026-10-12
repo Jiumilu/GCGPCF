@@ -23,7 +23,7 @@
     "dryRunOnly": true,
     "precheckRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -40,7 +40,7 @@
       "case_scope_boundary",
       "freeze_retention_statement",
       "decision_constraint_snapshot",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_review_readiness",
       "exception_return_path",
       "no_write_attestation"
@@ -52,7 +52,7 @@
       "reviewer_question_matrix_present",
       "responsibility_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "no_write_attestation_present"
     ],
     "precheckDecisionConstraints": [
@@ -88,7 +88,7 @@
       "case_scope_boundary_present",
       "freeze_retention_statement_present",
       "decision_constraint_snapshot_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_review_readiness_present",
       "exception_return_path_present",
       "no_write_attestation_present",
@@ -108,11 +108,11 @@
       "caseScopeBoundaryRef",
       "freezeRetentionStatementRef",
       "decisionConstraintSnapshotRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessReviewReadinessRef",
       "exceptionReturnPathRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -137,7 +137,7 @@
       "missing_case_scope_boundary_ref",
       "missing_freeze_retention_statement_ref",
       "missing_decision_constraint_snapshot_ref",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_harness_review_readiness_ref",
       "missing_exception_return_path_ref",
       "missing_required_precheck_role",
@@ -171,7 +171,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_precheck_preview_to_acceptance",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [
@@ -202,7 +202,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "precheck_preview_converted_to_acceptance"
   ],
   "expectedSummary": {

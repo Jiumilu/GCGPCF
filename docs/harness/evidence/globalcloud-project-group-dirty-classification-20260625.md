@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-DIRTY-CLASSIFICATION-20260625
 title: GlobalCloud 项目群 Dirty 变更分类证据 2026-06-25
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

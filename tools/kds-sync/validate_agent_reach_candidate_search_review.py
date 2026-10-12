@@ -101,7 +101,7 @@ def main() -> int:
     require(metrics.get("rollback_verified") is True, "rollback must be verified")
 
     decision = evidence.get("admission_decision", {})
-    require(decision.get("waes_review_status") == "ready_for_review", "WAES review status mismatch")
+    require(decision.get("wame_review_status") == "ready_for_review", "WAME review status mismatch")
     require(decision.get("kds_admission") == "limited_candidate_only", "KDS admission must remain limited")
     require(decision.get("rag_admission") == "limited", "RAG admission must remain limited")
     require(decision.get("status_upgrade_allowed") is False, "status upgrade must be false")
@@ -137,7 +137,7 @@ def main() -> int:
 
     print(
         "agent_reach_candidate_search_review=pass "
-        "waes_review_status=ready_for_review kds_admission=limited_candidate_only "
+        "wame_review_status=ready_for_review kds_admission=limited_candidate_only "
         "rag_admission=limited source_provenance_rate=1.0 "
         "rollback_verified=true status_upgrade_allowed=false"
     )

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DEV-FIRST-LOOP-GOAL-PROMPT-20260628
 title: GlobalCloud 项目群开发优先 Loop 目标提示词 2026-06-28
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

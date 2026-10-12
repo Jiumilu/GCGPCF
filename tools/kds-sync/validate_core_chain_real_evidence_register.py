@@ -14,7 +14,7 @@ TEMPLATE = ROOT / "templates/real-evidence-record-template.md"
 
 REQUIRED_PROJECTS = [
     "GPCF",
-    "WAES",
+    "WAME",
     "XWAIL",
     "AaaS",
     "GFIS",
@@ -39,7 +39,7 @@ REQUIRED_STATUS_TOKENS = [
 
 REQUIRED_REGISTER_TOKENS = [
     "GlobalCloud 核心链路真实证据台账",
-    "WAES -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain",
+    "WAME -> XWAIL -> AaaS -> GFIS/GPC/PVAOS -> KDS/Brain",
     "Trigger Layer 对齐",
     "GlobalCloud 项目群 Ready for Review 触发映射表 2026-06-27",
     "globalcloud-project-group-current-state-baseline-refresh-20260626.md",

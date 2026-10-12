@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EB9209D502
 title: Headroom Runtime Adapter Dry-run Evidence
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

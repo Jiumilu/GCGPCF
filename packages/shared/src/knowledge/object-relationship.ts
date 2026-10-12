@@ -16,7 +16,7 @@ export type KnowledgeRelationEndpointType =
   | "knowledge_object"
   | "candidate"
   | "candidate_or_gap"
-  | "waes_gate_result"
+  | "wame_gate_result"
   | "kwe_work_item"
   | "confirmation_record"
   | "confirmation_or_decision_record"
@@ -55,7 +55,7 @@ export interface KnowledgeObjectRelationshipPolicy {
   hardBoundaries: {
     sourceRequiredForFormalFact: boolean;
     evidenceRequiredForEvidenceReady: boolean;
-    waesGateRequiredForCandidates: boolean;
+    wameGateRequiredForCandidates: boolean;
     confirmationRequiredForWritebackCandidate: boolean;
     aiCannotCreateFormalWritebackRelation: boolean;
     loopCannotPromoteBusinessStatus: boolean;

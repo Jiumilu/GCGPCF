@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTRESIDUALCLEANOUTD12020260622
 title: D120 残余中文化债清理证据
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

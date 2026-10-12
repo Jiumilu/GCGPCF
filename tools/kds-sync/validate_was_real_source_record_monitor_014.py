@@ -17,8 +17,8 @@ PREVIOUS_MONITOR_JSON = ROOT / "docs/harness/evidence/was-real-source-record-mon
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 ESG_KEYS = [
     "esg_rating_substitution_attempts",
@@ -162,7 +162,7 @@ def main() -> int:
         "real_source_records=0",
         "valid_source_records=0",
         "runtime_primary_key_ready=0",
-        "waes_review=0",
+        "wame_review=0",
         "accepted=false",
         "integrated=false",
         "production_ready=false",
@@ -201,7 +201,7 @@ def main() -> int:
         "verifier_qualification_gaps=0 audit_period_mismatch=0 "
         "audit_statement_without_kds_backlink=0 accepted_for_esg_carbon_audit_profile=0 "
         "accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 "
         "verified=0 accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-015"
     )

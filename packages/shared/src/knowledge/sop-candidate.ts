@@ -24,6 +24,6 @@ export interface SopCandidate {
   poolRefs: string[];
   generatedBy: Extract<CandidateGenerator, "ai" | "system"> | "human";
   confirmationStatus: string;
-  waesGateStatus: string;
+  wameGateStatus: string;
   applicableScope: string[];
 }

@@ -326,7 +326,7 @@ def render_markdown(report: dict[str, Any]) -> str:
             f"doc_id: GPCF-DOC-AGENT-REACH-P8-FULL-LIVE-SEARCH-BATCH-{batch_number.upper()}-20260622",
             f"title: Agent-Reach P8 全量真实搜索批次 {batch_number} 证据 2026-06-22",
             "project: KDS",
-            "related_projects: [GPCF, KDS, WAES, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, WAME, Brain, GFIS, GPC, PVAOS, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",

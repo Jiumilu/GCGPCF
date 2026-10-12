@@ -41,7 +41,7 @@
       {"interfaceId": "gcw:interface:agent", "interfaceType": "agent", "contractVersion": "v1", "ownerSystem": "XWAIL", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
       {"interfaceId": "gcw:interface:action", "interfaceType": "action", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
       {"interfaceId": "gcw:interface:simulation", "interfaceType": "simulation", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
-      {"interfaceId": "gcw:interface:governance", "interfaceType": "governance", "contractVersion": "v1", "ownerSystem": "WAES", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
+      {"interfaceId": "gcw:interface:governance", "interfaceType": "governance", "contractVersion": "v1", "ownerSystem": "WAME", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]},
       {"interfaceId": "gcw:interface:event-stream", "interfaceType": "event_stream", "contractVersion": "v1", "ownerSystem": "GCWORLD", "readOnly": true, "evidenceRefs": ["gcw:evidence:interface"]}
     ],
     "reliableEvents": [

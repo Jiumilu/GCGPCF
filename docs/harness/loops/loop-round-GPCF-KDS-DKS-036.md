@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3B3929E14A
 title: LOOP Round GPCF-KDS-DKS-036 - 湖北磷材 Brain 知识页候选评审实例包与人工填报示例
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 | 建立 ExampleDecisionTrace | done |
 | 建立 ExampleIssueCloseRecord | done |
 | 建立 ExampleKdsPoolAndLedgerMapping | done |
-| 建立 ExampleWaesGateRecord | done |
+| 建立 ExampleWameGateRecord | done |
 | 建立 ExampleAiWritebackSuggestion | done |
 | 建立人工填报步骤示例 | done |
 | 执行文档控制与门禁检查 | done |
@@ -53,7 +53,7 @@ superseded_by: []
 
 - 本轮只使用虚拟脱敏样例，不接收真实资料。
 - 不接收或处理未授权 DSR-L3 原文。
-- 不生成真实人工评分、真实 WAES 通过、真实 KDS API 回执或真实业务系统写入。
+- 不生成真实人工评分、真实 WAME 通过、真实 KDS API 回执或真实业务系统写入。
 - 不确认真实拓厂、行业、订单、采购、合同、开票、到账、收益或产值事实。
 - 不启动 GFIS 深度运行，不写 GFIS 主账。
 - 不创建真实账号、不配置生产权限、不写生产数据、不调用真实外部 API。
@@ -127,11 +127,11 @@ superseded_by: []
 
 1. 湖北磷材 Brain 知识页候选评审实例包建立并受控。
 2. 虚拟脱敏样例覆盖拓厂、行业资料和订单线索。
-3. 每条样例均具备来源摘要、评审记录、决策轨迹、问题闭合或保留、KDS 池挂接和 WAES 规则记录。
+3. 每条样例均具备来源摘要、评审记录、决策轨迹、问题闭合或保留、KDS 池挂接和 WAME 规则记录。
 4. 所有 AI 写回建议均保持候选态。
 5. 纳入本地 KDS 镜像与 LOOP 轮次记录。
 6. 通过防污染、TOKEN、文档门禁和 scoped diff 检查。
 
 ## 8. 下一轮建议
 
-DKS-037 建议进入“湖北磷材 Brain 知识页评审样例到 SOP 候选写回规则”，把虚拟样例中的评审结果转成候选 SOP 控制点、候选 KDS 字段、候选 WAES 规则和禁止写回清单。
+DKS-037 建议进入“湖北磷材 Brain 知识页评审样例到 SOP 候选写回规则”，把虚拟样例中的评审结果转成候选 SOP 控制点、候选 KDS 字段、候选 WAME 规则和禁止写回清单。

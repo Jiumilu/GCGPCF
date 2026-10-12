@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-70CE112465
 title: loops
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

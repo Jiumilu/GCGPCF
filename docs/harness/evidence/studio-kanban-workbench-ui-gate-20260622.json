@@ -75,7 +75,7 @@
     }
   },
   "non_claims": [
-    "does not prove WAES to Studio inheritance is complete",
+    "does not prove WAME to Studio inheritance is complete",
     "does not prove browser-level or mobile-level acceptance",
     "does not grant accepted, integrated, or production_ready status"
   ]

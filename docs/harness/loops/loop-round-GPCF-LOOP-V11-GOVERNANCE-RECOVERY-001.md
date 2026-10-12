@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-V11-GOVERNANCE-RECOVERY-001
 title: LOOP v1.1 Governance Recovery
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -83,7 +83,7 @@ sensitive_repos=0
 last_safe_state = LOOP v1.1 baseline pass + document gate pass + Git gate partial
 current_dirty_boundary = GPCF/GFIS/SOP
 KDS = clean / resolved_not_in_git_status
-GFIS = repair_required / real_source_records=0 / runtime_intake=0 / review_queue=0 / waes_review=0 / verified=0
+GFIS = repair_required / real_source_records=0 / runtime_intake=0 / review_queue=0 / wame_review=0 / verified=0
 ```
 
 若后续出现 KDS sensitive path、真实密钥、真实 API 写入、schema migrate、deploy 或状态提升候选，恢复为 owner review / authorization boundary。

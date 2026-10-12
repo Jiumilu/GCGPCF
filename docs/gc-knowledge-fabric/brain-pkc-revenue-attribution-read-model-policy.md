@@ -18,7 +18,7 @@ superseded_by: []
 
 # Brain PKC Revenue Attribution Read Model No-write 规则
 
-本文件定义 DKS-099 Brain/PKC 收益归因只读模型。该模型用于展示收益/贡献归因包、收益口径、贡献候选、WAES/KWE 状态、委员会/冻结提示和可见性，不确认积分，不分配收益，不暴露未授权单位明细。
+本文件定义 DKS-099 Brain/PKC 收益归因只读模型。该模型用于展示收益/贡献归因包、收益口径、贡献候选、WAME/KWE 状态、委员会/冻结提示和可见性，不确认积分，不分配收益，不暴露未授权单位明细。
 
 ## 一、定位
 
@@ -51,7 +51,7 @@ Read model 不做：
 - `visibleRevenueRefs`
 - `visibleContributionRefs`
 - `maskedContributionRefs`
-- `waesGateRefs`
+- `wameGateRefs`
 - `kweWorkpackRefs`
 - `committeeRefs`
 - `freezeRefs`
@@ -104,7 +104,7 @@ Brain/PKC read model 必须显式阻断：
 - `confirm_score`
 - `distribute_revenue`
 - `promote_potential_revenue`
-- `override_waes_gate`
+- `override_wame_gate`
 - `complete_committee_decision`
 - `write_business_system`
 - `mutate_kds_lifecycle`

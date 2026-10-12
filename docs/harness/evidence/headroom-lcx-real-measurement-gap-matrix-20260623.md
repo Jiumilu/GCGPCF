@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-GAP-MATRIX-20260623
 title: Headroom LCX Real Measurement Gap Matrix Evidence
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ status: real_measurement_gap_matrix_defined_no_measurement
 | requirement_id | needed_for | current_status | blocking_evidence |
 |---|---|---|---|
 | real_measurement_authorization_window | true_real_business_equivalence_measurement | granted_precheck_only | real_measurement_window_granted_but_open_remains_false |
-| real_measurement_waes_harness_decision | open_production_branch_for_measurement | blocked | waes_harness_admission_decision_is_precheck_only |
+| real_measurement_wame_harness_decision | open_production_branch_for_measurement | blocked | wame_harness_admission_decision_is_precheck_only |
 | real_measurement_token_ledger | real_token_cost_and_saving_replay | missing | only_sanitized_precheck_ledger_exists |
 | production_proxy_or_sdk_enablement | actual_runtime_measurement_path | blocked | production_proxy_and_sdk_flags_remain_false |
 | real_business_equivalence_measurement | production_level_answer_equivalence_graph | not_proven | equivalence_layer_is_synthetic_only |

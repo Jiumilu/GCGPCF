@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-PROJECT-GROUP-REVIEW-AUTH-GPCF-RP7-CONCLUSION-001
 title: GPCF PROJECT GROUP REVIEW AUTH GPCF RP7 CONCLUSION 001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

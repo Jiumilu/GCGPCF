@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-LOOP-GATE-READINESS-PASS-20260626
 title: GlobalCloud 项目群 Loop Gate Readiness Pass 证据 2026-06-26
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

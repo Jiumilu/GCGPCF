@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-89FF779A86
 title: LOOP Round GPCF KDS DKS-129
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 GFIS Assistant repair notification snooze queue approval SLA preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-128 approval route preview，但只展示审批时限、剩余时间、超时风险和升级建议候选，不创建真实 SLA 计时器、提醒、升级排程、审批请求、审批决定、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 GFIS Assistant repair notification snooze queue approval SLA preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-128 approval route preview，但只展示审批时限、剩余时间、超时风险和升级建议候选，不创建真实 SLA 计时器、提醒、升级排程、审批请求、审批决定、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 

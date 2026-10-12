@@ -38,7 +38,7 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 release override approval intake empty scan。该门禁只证明未来人工 release override approval 接收目录已经存在、README 已明确约束、当前没有合规批准文件，因此不得解除 hard-stop、释放 open hold 或进入 review/runtime/WAES/verified 链路。
+建立 release override approval intake empty scan。该门禁只证明未来人工 release override approval 接收目录已经存在、README 已明确约束、当前没有合规批准文件，因此不得解除 hard-stop、释放 open hold 或进入 review/runtime/WAME/verified 链路。
 
 ## 执行动作
 
@@ -111,7 +111,7 @@ runtime_primary_key_ready=0
 runtime_primary_key_missing=1
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_sop_e2e=repair_required
 ```

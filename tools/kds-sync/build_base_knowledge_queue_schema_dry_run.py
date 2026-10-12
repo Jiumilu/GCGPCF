@@ -59,7 +59,7 @@ def human_fields() -> list[dict[str, Any]]:
         field("sourceCandidateId", "string", True, "来自 DKS-044 的写回候选 ID。"),
         field("baseKnowledgeId", "string", True, "底座知识对象 ID。"),
         field("confirmingUnit", "string", True, "执行确认的人员或单位。"),
-        field("confirmerRole", "string", True, "确认人角色。", ["source_owner", "project_owner", "kds_operator", "waes_reviewer", "other_authorized"]),
+        field("confirmerRole", "string", True, "确认人角色。", ["source_owner", "project_owner", "kds_operator", "wame_reviewer", "other_authorized"]),
         field("sourceRefsReviewed", "array", True, "已核验的来源、证据或台账引用。"),
         field("factStatus", "string", True, "候选事实状态。", ["confirmed", "partially_confirmed", "rejected", "more_evidence_required"]),
         field("gapClosureOpinion", "string", True, "缺口处理意见。", ["keep_open", "ready_for_committee", "ready_for_writeback_candidate", "reject_candidate"]),
@@ -111,7 +111,7 @@ def build_schema(queue: dict[str, Any], schema_type: str, fields: list[dict[str,
             "createsConfirmationFact": False,
             "createsCommitteeDecision": False,
             "realKdsApiWrite": False,
-            "waesWrite": False,
+            "wameWrite": False,
             "businessLedgerWrite": False,
             "settlementWrite": False,
             "ragAdmission": False,
@@ -156,7 +156,7 @@ def write_schema_md(schema: dict[str, Any], path: Path, title: str, purpose: str
     md += "## 边界\n\n"
     md += "- This file defines schema only and does not create human confirmation facts.\n"
     md += "- This file defines schema only and does not create committee decisions.\n"
-    md += "- No real KDS API, WAES, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.\n"
+    md += "- No real KDS API, WAME, GFIS, GPC, PVAOS, finance, settlement, RAG admission, or production write is performed.\n"
     md += "- Any future use of this schema still requires explicit human or committee action and a separate controlled evidence record.\n"
     path.write_text(preserve_frontmatter(path, md), encoding="utf-8")
 

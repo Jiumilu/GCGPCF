@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-82A9FD6319
 title: CodeGraph Impact Metrics Baseline Evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # CodeGraph Impact Metrics Baseline Evidence
 
-本轮执行 `GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006`，建立 CodeGraph 对项目群持续发挥作用的指标基线。范围只包括 CodeGraph 项目群治理、Loop/Harness/WAES/KDS 证据与 validator，不进入项目业务开发。
+本轮执行 `GPCF-CODEGRAPH-IMPACT-METRICS-BASELINE-006`，建立 CodeGraph 对项目群持续发挥作用的指标基线。范围只包括 CodeGraph 项目群治理、Loop/Harness/WAME/KDS 证据与 validator，不进入项目业务开发。
 
 当前状态：`impact_metrics_baseline_ready`。
 

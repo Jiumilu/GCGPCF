@@ -7,7 +7,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -28,7 +28,7 @@
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision"
+    "wame_harness_admission_decision"
   ],
   "field_rules": {
     "authorized_window_id": {
@@ -62,7 +62,7 @@
       "must_not_equal": "REQUIRED_USER_INPUT",
       "must_reference_controlled_plan": true
     },
-    "waes_harness_admission_decision": {
+    "wame_harness_admission_decision": {
       "required": true,
       "type": "string",
       "must_not_equal": "REQUIRED_USER_INPUT",
@@ -73,7 +73,7 @@
       "must_reference_evidence": true
     }
   },
-  "hard_false_until_waes_harness_admits": [
+  "hard_false_until_wame_harness_admits": [
     "production_token_measurement_allowed",
     "production_proxy_started",
     "production_sdk_enabled",

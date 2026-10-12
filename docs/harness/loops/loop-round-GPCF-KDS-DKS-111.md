@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0E61C69C79
 title: LOOP Round GPCF-KDS-DKS-111 - GFIS Assistant 修复接入审查包无写入
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 在 DKS-110 `GFIS Assistant Repair Submission Intake No-write` 之后，建立 GFIS Assistant 修复 intake 的审阅包视图。
 
-本轮只允许把 intake request 转成不同审阅视图，用于展示人工审阅、metadata 边界审阅、委员会审阅和冻结审阅的上下文；不得创建真实审阅队列，不得提交或持久化 evidence，不得创建 KWE WorkItem、GapRecord、BountyRecord 或 WAES Gate Result，不得推进 KDS lifecycle，不得写回 GFIS/GPC/ERP/MES，不得完成委员会裁决或收益/积分确认。
+本轮只允许把 intake request 转成不同审阅视图，用于展示人工审阅、metadata 边界审阅、委员会审阅和冻结审阅的上下文；不得创建真实审阅队列，不得提交或持久化 evidence，不得创建 KWE WorkItem、GapRecord、BountyRecord 或 WAME Gate Result，不得推进 KDS lifecycle，不得写回 GFIS/GPC/ERP/MES，不得完成委员会裁决或收益/积分确认。
 
 ## 本轮输入
 
@@ -90,7 +90,7 @@ superseded_by: []
 - `create_kwe_work_item`
 - `create_gap_record`
 - `create_bounty_record`
-- `create_waes_gate_result`
+- `create_wame_gate_result`
 - `approve_business_write`
 - `promote_lifecycle`
 - `complete_committee_decision`
@@ -100,7 +100,7 @@ superseded_by: []
 ### DKS-111 validator
 
 ```text
-gfis_assistant_repair_intake_review_packet=pass packets=4 needs_repair=1 metadata_only=1 blocked=2 human_review_packet=1 metadata_boundary_packet=1 committee_review_packet=1 freeze_review_packet=1 metadata_only_bundles=3 controlled_original_bundles=2 packets_with_blocked_reasons=3 submits_evidence=0 persists_evidence=0 creates_review_queue_items=0 creates_gap_records=0 creates_bounty_records=0 creates_kwe_work_items=0 creates_waes_gate_results=0 routes_to_human_queue=0 approves_business_write=0 promotes_lifecycle=0 completes_committee_decision=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_review_queue_item=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
+gfis_assistant_repair_intake_review_packet=pass packets=4 needs_repair=1 metadata_only=1 blocked=2 human_review_packet=1 metadata_boundary_packet=1 committee_review_packet=1 freeze_review_packet=1 metadata_only_bundles=3 controlled_original_bundles=2 packets_with_blocked_reasons=3 submits_evidence=0 persists_evidence=0 creates_review_queue_items=0 creates_gap_records=0 creates_bounty_records=0 creates_kwe_work_items=0 creates_wame_gate_results=0 routes_to_human_queue=0 approves_business_write=0 promotes_lifecycle=0 completes_committee_decision=0 writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_review_queue_item=0 writes_gap_record=0 writes_bounty_record=0 writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_evidence_record=0 writes_target_receipt=0 writes_committee_decision_completion=0 writes_revenue_or_score_confirmation=0 writes_quota_transfer=0 writes_bounty_settlement=0 writes_external_api=0
 ```
 
 ### coverage gate
@@ -126,13 +126,13 @@ tsc -p packages/api/tsconfig.json --noEmit
 
 ### 全量 no-write 回归
 
-已通过 GFIS、WAES、KWE、KDS、Brain/PKC、RAG、MMC、治理账本、coverage、OKF parse 与 TypeScript 编译链路。关键 no-write 计数保持为 0：
+已通过 GFIS、WAME、KWE、KDS、Brain/PKC、RAG、MMC、治理账本、coverage、OKF parse 与 TypeScript 编译链路。关键 no-write 计数保持为 0：
 
 - Review Queue Item 创建：0
 - Evidence 提交或持久化：0
 - GapRecord / BountyRecord 创建：0
 - KWE WorkItem 创建：0
-- WAES Gate Result 写入：0
+- WAME Gate Result 写入：0
 - KDS lifecycle / fact / accepted fact 写入：0
 - GFIS/GPC/ERP/MES 写入：0
 - Target Receipt 写入：0
@@ -148,7 +148,7 @@ tsc -p packages/api/tsconfig.json --noEmit
 | 审阅包被误认为 evidence 提交 | `submitsEvidence=0` 与 `persistsEvidence=0` 强校验 |
 | metadata-only 视图泄露受控原件 | fixture 只记录 metadata refs、hash refs 与 controlled original refs |
 | 委员会视图被误认为裁决完成 | `completesCommitteeDecision=0` 强校验 |
-| 人工审阅视图绕过 WAES/KWE | WAES/KWE/KDS/业务写入计数全部为 0 |
+| 人工审阅视图绕过 WAME/KWE | WAME/KWE/KDS/业务写入计数全部为 0 |
 
 ## 下一轮建议
 
@@ -157,7 +157,7 @@ DKS-112 建议进入 `GFIS Assistant Repair Review Decision Draft No-write`：
 - 将 review packet 转成审阅意见草稿。
 - 区分 human suggested action、metadata boundary note、committee agenda note、freeze note。
 - 仍不完成人工确认或委员会裁决。
-- 仍不写入 WAES Gate Result、KDS lifecycle、业务系统或 evidence store。
+- 仍不写入 WAME Gate Result、KDS lifecycle、业务系统或 evidence store。
 
 ## 本轮结论
 

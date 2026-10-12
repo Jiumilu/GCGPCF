@@ -43,7 +43,7 @@ required_fields:
   - creates_external_share_permission
   - creates_publication_approval
   - creates_harness_evidence
-  - creates_waes_gate_result
+  - creates_wame_gate_result
   - creates_kwe_work_item
   - persists_evidence
   - approves_business_write
@@ -94,7 +94,7 @@ blocked_actions:
   - create_external_share_permission
   - create_publication_approval
   - create_harness_evidence
-  - create_waes_gate_result
+  - create_wame_gate_result
   - create_kwe_work_item
   - persist_evidence
   - approve_business_write
@@ -113,7 +113,7 @@ hard_boundaries:
   route_preview_is_not_external_share_permission: true
   route_preview_is_not_publication_approval: true
   route_preview_is_not_harness_evidence: true
-  route_preview_is_not_waes_result: true
+  route_preview_is_not_wame_result: true
   route_preview_is_not_kwe_work_item: true
   route_preview_is_not_lifecycle_change: true
   route_preview_is_not_business_writeback: true
@@ -127,7 +127,7 @@ hard_boundaries:
   creates_external_share_permission_must_be_false: true
   creates_publication_approval_must_be_false: true
   creates_harness_evidence_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   creates_kwe_work_item_must_be_false: true
   persists_evidence_must_be_false: true
   approves_business_write_must_be_false: true
@@ -148,7 +148,7 @@ no_write_guards:
   writes_acl_grant: 0
   writes_external_share_permission: 0
   writes_publication_approval: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_harness_evidence: 0
   writes_kds_lifecycle: 0

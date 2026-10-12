@@ -24,7 +24,7 @@ codegraph_evidence_bundle:
   risk:
     level:
     reasons: []
-    waes_required:
+    wame_required:
     committee_required:
   validation:
     tests_selected: []

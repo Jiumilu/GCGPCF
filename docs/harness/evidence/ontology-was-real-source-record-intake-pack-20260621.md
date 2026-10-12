@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C21E66324C
 title: Ontology/WAS 真实 Source Record Intake Package
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-INTAKE-PACK-001` 已建立真实 `CustomerRequirementOrPlatformOrder` source-record 的业务责任方 intake package。
 
-本 package 用于指导 `GPC_or_Liaoning_Yuanhang_order_owner` 提交真实客户订单原件或平台订单回执。它不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
+本 package 用于指导 `GPC_or_Liaoning_Yuanhang_order_owner` 提交真实客户订单原件或平台订单回执。它不写入 GFIS 接收目录，不创建真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact，不升级 accepted、integrated 或 production_ready。
 
 ## 当前边界
 
@@ -37,7 +37,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -82,7 +82,7 @@ WAS 字段 12 个：
 - `trustLevel`
 - `sourceRefs`
 - `evidenceRefs`
-- `waesGateRefs`
+- `wameGateRefs`
 - `promotionBlockers`
 - `nextAction`
 - `kdsBacklink`
@@ -97,7 +97,7 @@ WAS 字段 12 个：
 - `lifecycle` 必须等于 `pending_business_verification`。
 - `trustLevel` 必须等于 `T4`。
 - `kdsBacklink` 必须匹配 `source_of_record_backlink`。
-- `waesGateRefs` 必须包含 `waes://gate/customer-order-source-record-review`。
+- `wameGateRefs` 必须包含 `wame://gate/customer-order-source-record-review`。
 - `promotionBlockers` 必须包含 `valid_source_record_missing` 和 `customer_confirmation_missing`。
 
 ## 禁止自动提升
@@ -107,7 +107,7 @@ WAS 字段 12 个：
 - runtime primary key
 - review queue
 - runtime intake
-- WAES review
+- WAME review
 - verified artifact
 - accepted
 - integrated

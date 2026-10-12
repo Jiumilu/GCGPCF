@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-16FCBF24B0
 title: Loop Round GPCF-KDS-DKS-026
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 日期：2026-06-17  
 状态：controlled  
 主题：首批资料回收包字段验收与候选 SOP 写回建议  
-项目群范围：GFIS、GPC、WAES、KDS、MMC、GPCF。
+项目群范围：GFIS、GPC、WAME、KDS、MMC、GPCF。
 
 ## 1. 输入
 

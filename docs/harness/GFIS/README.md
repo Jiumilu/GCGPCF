@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D375EBD5DA
 title: GFIS
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

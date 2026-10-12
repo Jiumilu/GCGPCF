@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90052
 title: WAS Real Source Record Monitor 052 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-052` 将绿色供应链覆盖扩展到采购申请、采购订单、供应商订单确认、交付排期承诺、采购订单变更记录、采购批准记录和供应商沟通记录证据层。只有补齐这些证据，Ontology 才能安全地把采购承诺、订单执行、交付计划和供应商协同状态绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-052` 将绿色供应链覆盖扩展到采购申请、采购订单、供应商订单确认、交付排期承诺、采购订单变更记录、采购批准记录和供应商沟通记录证据层。只有补齐这些证据，Ontology 才能安全地把采购承诺、订单执行、交付计划和供应商协同状态绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_052.py
 
 - 本证据不创建也不推断采购申请、采购订单、供应商订单确认、交付排期承诺、采购订单变更记录、采购批准记录或供应商沟通记录证据。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

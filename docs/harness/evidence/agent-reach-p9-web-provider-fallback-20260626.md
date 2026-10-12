@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-WEB-PROVIDER-FALLBACK-20260626
 title: Agent-Reach P9 Web Provider Fallback 离线验证 2026-06-26
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

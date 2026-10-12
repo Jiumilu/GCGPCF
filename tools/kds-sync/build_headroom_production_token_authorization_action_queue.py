@@ -46,7 +46,7 @@ ACTIONS = [
     {
         "action_id": "HEADROOM-PROD-TOKEN-AUTH-ACTION-004",
         "title": "attach rollback plan id",
-        "owner": "WAES",
+        "owner": "WAME",
         "due_loop": "GPCF-HEADROOM-PRODUCTION-TOKEN-AUTHORIZED-MEASUREMENT-001",
         "required_evidence": "rollback_plan_id",
         "status": "pending_rollback_plan",
@@ -101,7 +101,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-73DAD5F3AB
 title: Headroom Production Token Authorization Action Queue
 project: GPCF
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

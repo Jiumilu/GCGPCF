@@ -13,7 +13,7 @@
     "documentAcceptanceCheckCount": 1,
     "writebackCandidateCount": 1,
     "routesRequiringKdsSearch": 4,
-    "routesRequiringWaesGate": 4,
+    "routesRequiringWameGate": 4,
     "routesRequiringKweFinality": 4,
     "writesFact": 0,
     "writesBusinessSystem": 0,

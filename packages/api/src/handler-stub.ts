@@ -7,7 +7,7 @@ import {
 import { kdsV2Service } from "./kds/v2/service";
 import { kweService } from "./kwe/service";
 import type { NoWriteRepositoryResult } from "./no-write-repository";
-import { waesService } from "./waes/service";
+import { wameService } from "./wame/service";
 
 type PreviewService = Record<string, (request: Record<string, unknown>) => NoWriteRepositoryResult<unknown>>;
 
@@ -16,7 +16,7 @@ const SERVICE_REGISTRY: Record<string, PreviewService> = {
   governanceService: governanceService as unknown as PreviewService,
   kdsV2Service: kdsV2Service as unknown as PreviewService,
   kweService: kweService as unknown as PreviewService,
-  waesService: waesService as unknown as PreviewService,
+  wameService: wameService as unknown as PreviewService,
 };
 
 export interface HandlerStubRequest {
@@ -144,7 +144,7 @@ export function invokeHandlerStubEnvelope(
       method: mapping.method,
       path: mapping.path,
       writeBoundary: mapping.writeBoundary,
-      gateRequired: mapping.requiresWaesGate,
+      gateRequired: mapping.requiresWameGate,
       kweRequired: mapping.requiresKweFlow,
       humanOrCommitteeRequired: mapping.requiresHumanOrCommitteeForFinality,
       candidateOnly: mapping.writeBoundary === "candidate_request",

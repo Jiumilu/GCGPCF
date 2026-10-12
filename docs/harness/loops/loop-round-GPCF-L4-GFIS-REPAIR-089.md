@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-70E72EA863
 title: GPCF-L4-GFIS-REPAIR-089 GFIS Targeted KDS Search Candidate Gate
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -59,7 +59,7 @@ superseded_by: []
 - KDS targeted search 只证明候选可定位和可追溯，不证明正式原始凭证已收集或验真。
 - 报价 PDF 可以作为报价附件候选，但缺客户确认函时不得证明客户已确认采购。
 - 行动台账、沟通纪要、现代精工/葛化材料只作为上下文和候选路径，不得替代样箱测试记录、江西委托生产记录或转量产放行。
-- 本轮未执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAES 写入、数据库迁移、权限变更、部署或 accepted/integrated 状态升级。
+- 本轮未执行 Git push、生产写入、真实外部 API 写入、真实 KDS/WAME 写入、数据库迁移、权限变更、部署或 accepted/integrated 状态升级。
 
 ## 验证
 

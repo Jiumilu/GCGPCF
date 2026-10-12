@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-431C7A5400
 title: KDS OKF v0.1 Derived Bundle Report
 project: KDS
-related_projects: [WAES, KDS, Brain, GPCF]
+related_projects: [WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

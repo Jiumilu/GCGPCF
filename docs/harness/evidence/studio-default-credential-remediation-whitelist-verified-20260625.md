@@ -2,7 +2,7 @@
 doc_id: GPCF-EVIDENCE-8E2F18C4D1
 title: Studio 默认凭据整改态白名单复验
 project: GPCF
-related_projects: [GPCF, WAES, Studio]
+related_projects: [GPCF, WAME, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -98,7 +98,7 @@ Status ceiling: ui_evidence_candidate
 |---|---|---|---|
 | G1 Surface Structure | pass | 整改态只保留 `account` tab，非白名单 tab 自动归一 | 无 |
 | G2 Design Tokens | pass | 本轮不改视觉令牌 | 无 |
-| G3 Component Consistency | pass | 继续沿用 WAES/Studio 既有设置页与账户整改组件 | 无 |
+| G3 Component Consistency | pass | 继续沿用 WAME/Studio 既有设置页与账户整改组件 | 无 |
 | G4 Evidence And Governance | pass | 测试、运行态、截图和 round 均已留证 | 无 |
 | G5 AI Fact Separation | not_applicable | 本轮不涉及 AI 展示 | 无 |
 | G6 Accessibility | pass | 上轮焦点/读屏语义保持有效，本轮实测焦点仍在整改提示区 | 无 |

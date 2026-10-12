@@ -38,7 +38,7 @@ execution:
     restore_performed: false
   - id: D8
     result: not_completed_due_to_baseline_drift
-    read_only_observation: 当时未观察到匹配的GCWORLD或WAES人工导入进程
+    read_only_observation: 当时未观察到匹配的GCWORLD或WAME人工导入进程
     freeze_coordination_established: false
   - id: D9
     result: metadata_probe_only_then_stopped_due_to_baseline_drift

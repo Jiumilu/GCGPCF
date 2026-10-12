@@ -45,7 +45,7 @@ export interface RevenueContributionAttributionPacket {
   revenueBasis: RevenueBasis;
   attributionBasis: RevenueContributionAttributionBasis;
   evidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   confidence: number;
   attributionStatus: RevenueContributionAttributionStatus;
   committeeRequired: boolean;

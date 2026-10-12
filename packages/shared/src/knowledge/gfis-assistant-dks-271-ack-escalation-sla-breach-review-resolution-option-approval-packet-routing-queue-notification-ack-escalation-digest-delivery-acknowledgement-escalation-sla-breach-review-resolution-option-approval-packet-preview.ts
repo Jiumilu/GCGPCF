@@ -57,7 +57,7 @@ export type GfisAssistantDks271AckEscalationSlaBreachReviewResolutionOptionAppro
   | "create_committee_decision"
   | "create_freeze_action"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "create_kwe_work_item"
   | "persist_evidence"
   | "approve_business_write"
@@ -74,7 +74,7 @@ export interface GfisAssistantDks271AckEscalationSlaBreachReviewResolutionOption
   writesApprovalDecision: 0;
   writesCommitteeDecision: 0;
   writesFreezeAction: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesHarnessEvidence: 0;
   writesKdsLifecycle: 0;
@@ -114,7 +114,7 @@ export interface GfisAssistantDks271AckEscalationSlaBreachReviewResolutionOption
   createsCommitteeDecision: false;
   createsFreezeAction: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   createsKweWorkItem: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;

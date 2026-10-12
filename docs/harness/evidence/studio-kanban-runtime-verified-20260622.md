@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2F6C9B14A8
 title: Studio Kanban 运行态验证证据
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,9 +64,9 @@ Status ceiling: ui_evidence_candidate
 |---|---|---|---|
 | G1 Surface Structure | pass | 真实运行态出现 `看板` 标题、板选择、过滤、状态列与 `新建任务`；页面快照与代码结构一致 | 后续补充含真实任务数据的结构截图 |
 | G2 Design Tokens | partial | 运行态与本地令牌体系一致，但页面仍沿用 Studio 自身状态色和黑白水墨体系 | 与项目群统一状态/治理/AI 令牌做正式映射 |
-| G3 Component Consistency | pass | 运行态页头、筛选器、按钮、列、弹窗使用一致词汇和交互框架 | 后续与 WAES 母框架词汇表逐项对表 |
+| G3 Component Consistency | pass | 运行态页头、筛选器、按钮、列、弹窗使用一致词汇和交互框架 | 后续与 WAME 母框架词汇表逐项对表 |
 | G4 Evidence And Governance | partial | 运行态工作台存在对象工作区和任务详情入口，但当前空板场景还未展示 source record / receipt / audit 链 | 需在有任务数据场景下补验证 |
-| G5 AI Fact Separation | partial | 当前 `KanbanView` 本身不混写 AI 内容，但登录后主应用默认落到 chat，说明工作台与 AI 主界面边界仍需治理约束 | 需形成 WAES 母框架映射清单并补工作台内 AI 分区验证 |
+| G5 AI Fact Separation | partial | 当前 `KanbanView` 本身不混写 AI 内容，但登录后主应用默认落到 chat，说明工作台与 AI 主界面边界仍需治理约束 | 需形成 WAME 母框架映射清单并补工作台内 AI 分区验证 |
 | G6 Accessibility | partial | 最小键盘焦点验证通过：打开 `新建任务` 后焦点落到 `任务标题` 输入框；但 `Tab` 连续推进未得到稳定证明 | 需补完整表单 `Tab` 顺序、关闭与回退路径 |
 | G7 Responsive And Text Robustness | pass | 已补 `1280x720` 和 `390x844` 截图；两态均 `overflowX=false` | 后续补含真实任务卡片的移动态长文本验证 |
 | G8 Runtime Verification | partial | 登录后 `reload()` 可进入 `KanbanView`，说明目标页真实可达；但 `chat -> kanban` 存在路由切换需刷新才能稳定生效的问题 | 应把该路由/渲染偏差列入后续修复项 |

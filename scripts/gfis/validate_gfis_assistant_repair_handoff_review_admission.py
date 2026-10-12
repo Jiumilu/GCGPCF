@@ -21,7 +21,7 @@ NO_WRITE_KEYS = (
     "writesGpc",
     "writesErp",
     "writesMes",
-    "writesWaesGateResult",
+    "writesWameGateResult",
     "writesKweWorkItem",
     "writesAdmissionRecord",
     "writesReviewQueueItem",
@@ -99,7 +99,7 @@ def main() -> int:
         "createsKweWorkItems": 0,
         "createsConfirmationRecords": 0,
         "createsDecisionRecords": 0,
-        "createsWaesGateResults": 0,
+        "createsWameGateResults": 0,
         "persistsEvidence": 0,
         "approvesBusinessWrite": 0,
         "promotesLifecycle": 0,
@@ -157,7 +157,7 @@ def main() -> int:
             "createsKweWorkItem",
             "createsConfirmationRecord",
             "createsDecisionRecord",
-            "createsWaesGateResult",
+            "createsWameGateResult",
             "persistsEvidence",
             "approvesBusinessWrite",
             "promotesLifecycle",
@@ -175,7 +175,7 @@ def main() -> int:
         counts["createsKweWorkItems"] += int(packet["createsKweWorkItem"] is True)
         counts["createsConfirmationRecords"] += int(packet["createsConfirmationRecord"] is True)
         counts["createsDecisionRecords"] += int(packet["createsDecisionRecord"] is True)
-        counts["createsWaesGateResults"] += int(packet["createsWaesGateResult"] is True)
+        counts["createsWameGateResults"] += int(packet["createsWameGateResult"] is True)
         counts["persistsEvidence"] += int(packet["persistsEvidence"] is True)
         counts["approvesBusinessWrite"] += int(packet["approvesBusinessWrite"] is True)
         counts["promotesLifecycle"] += int(packet["promotesLifecycle"] is True)
@@ -229,10 +229,10 @@ def main() -> int:
         f"packets_with_blocked_reasons={actual['packetsWithBlockedReasons']} creates_admission_records={actual['createsAdmissionRecords']} "
         f"creates_review_queue_items={actual['createsReviewQueueItems']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         f"creates_confirmation_records={actual['createsConfirmationRecords']} creates_decision_records={actual['createsDecisionRecords']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} persists_evidence={actual['persistsEvidence']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} persists_evidence={actual['persistsEvidence']} "
         f"approves_business_write={actual['approvesBusinessWrite']} promotes_lifecycle={actual['promotesLifecycle']} "
         f"completes_committee_decision={actual['completesCommitteeDecision']} "
-        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_waes_gate_result=0 "
+        "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_admission_record=0 writes_review_queue_item=0 "
         "writes_confirmation_record=0 writes_decision_record=0 writes_gap_record=0 writes_bounty_record=0 "
         "writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 "

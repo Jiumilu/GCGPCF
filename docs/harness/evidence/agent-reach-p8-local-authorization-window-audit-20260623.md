@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-LOCAL-AUTHORIZATION-WINDOW-AUDIT-20260623
 title: Agent-Reach P8 Local Authorization Window Audit 2026-06-23
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

@@ -24,7 +24,7 @@ KDS_OUT_MD = KDS_EVIDENCE_DIR / "headroom-lcx-objective-coverage-matrix-20260623
 KDS_OUT_LOOP = KDS_LOOPS_DIR / "loop-round-GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001.md"
 
 OBJECTIVE = "完成完整真实功能图谱：真实业务等价授权测量，以及生产级运行/成本/回滚图谱。"
-PROJECT_IDS = ["GPCF", "KDS", "Brain", "WAES", "GFIS", "GPC", "PVAOS", "Edge", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "Studio", "WAS"]
+PROJECT_IDS = ["GPCF", "KDS", "Brain", "WAME", "GFIS", "GPC", "PVAOS", "Edge", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "Studio", "WAS"]
 
 
 def require(condition: bool, message: str) -> None:
@@ -61,7 +61,7 @@ def build_rows() -> list[dict[str, Any]]:
                 "docs/harness/evidence/headroom-lcx-real-measurement-authorization-chain-replay-20260623.json",
                 "docs/harness/evidence/headroom-lcx-authorization-boundary-review-20260623.json",
             ],
-            "blocking_reason": "real_measurement_authorization_window_and_waes_harness_decision_remain_precheck_only",
+            "blocking_reason": "real_measurement_authorization_window_and_wame_harness_decision_remain_precheck_only",
         },
         {
             "objective_item": "production_runtime_graph",
@@ -165,7 +165,7 @@ def build_matrix() -> dict[str, Any]:
             "accepted": False,
             "integrated": False,
             "production_ready": False,
-            "waes_harness_admission_decision": completion.get("current_state", {}).get("waes_harness_admission_decision"),
+            "wame_harness_admission_decision": completion.get("current_state", {}).get("wame_harness_admission_decision"),
             "authorization_window_id": completion.get("current_state", {}).get("authorization_window_id"),
             "next_stage_authorization_package_status": next_stage_package.get("status"),
             "rollback_plan_id": completion.get("current_state", {}).get("rollback_plan_id"),
@@ -202,7 +202,7 @@ def render_markdown(matrix: dict[str, Any]) -> str:
         "doc_id: GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-20260623",
         "title: Headroom LCX Objective Coverage Matrix Evidence",
         "project: GPCF",
-        "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+        "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",
@@ -260,7 +260,7 @@ def render_loop_round(matrix: dict[str, Any]) -> str:
         doc_id: GPCF-DOC-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001
         title: "Loop Round: GPCF-HEADROOM-LCX-OBJECTIVE-COVERAGE-MATRIX-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0
@@ -291,7 +291,7 @@ def render_loop_round(matrix: dict[str, Any]) -> str:
 
         - 将 Headroom LCX 的用户目标拆成目标级覆盖矩阵，区分已证明、受控证明、阻断和 false guard。
         - 把真实业务等价授权测量与生产级运行/成本/回滚图谱的当前状态映射到可验证条目。
-        - 将下一阶段授权包纳入同一审计层，保证窗口请求、桥接包和 WAES/Harness precheck 可被同屏追踪。
+        - 将下一阶段授权包纳入同一审计层，保证窗口请求、桥接包和 WAME/Harness precheck 可被同屏追踪。
         - 保持 accepted / integrated / production_ready 为 false。
 
         ## 输出
@@ -313,7 +313,7 @@ def render_loop_round(matrix: dict[str, Any]) -> str:
 
         ## 下一轮
 
-        继续等待 WAES/Harness 的真实测量授权裁决，或补齐能够打开 production branch 的新证据。
+        继续等待 WAME/Harness 的真实测量授权裁决，或补齐能够打开 production branch 的新证据。
 
         ## 审计快照
 

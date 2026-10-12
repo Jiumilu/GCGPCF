@@ -4,7 +4,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -44,7 +44,7 @@
   ],
   "promotion_policy": {
     "kds_source_of_record": "optional",
-    "waes_decision": "optional",
+    "wame_decision": "optional",
     "loop_evidence": "optional",
     "llm_candidate": "can_be_official_fact",
     "runtime_writeback": "authorized"
@@ -53,7 +53,7 @@
     "admission_required": false,
     "must_bind_project_group_scope": false,
     "must_map_to_registry_categories": [],
-    "must_not_bypass_kds_waes_loop": false
+    "must_not_bypass_kds_wame_loop": false
   },
   "boundary": {
     "real_source_records": 0,
@@ -61,7 +61,7 @@
     "runtime_primary_key_ready": 1,
     "review_queue": 1,
     "runtime_intake": 1,
-    "waes_review": 1,
+    "wame_review": 1,
     "verified": 1,
     "accepted": true,
     "integrated": true,

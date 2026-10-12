@@ -18,7 +18,7 @@ PROJECTS = {
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -52,7 +52,7 @@ def frontmatter(title: str, source_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-L35-MULTI-WINDOW-STABILITY-20260622
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
 domain: governance
 status: controlled
 version: v1.0
@@ -87,7 +87,7 @@ def build_window_records(base_records: list[dict[str, object]], window_id: int) 
                 "ccr_enabled": record["ccr_enabled"],
                 "ccr_retrieve_count": record["ccr_retrieve_count"],
                 "policy_profile": record["policy_profile"],
-                "waes_decision": "admitted_for_l3_5_multi_window_sanitized_stability_only",
+                "wame_decision": "admitted_for_l3_5_multi_window_sanitized_stability_only",
                 "answer_equivalence": "not_measured",
                 "marker_gate": record["marker_gate"],
                 "sensitive_redaction_gate": record["sensitive_redaction_gate"],

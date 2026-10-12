@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8EDCE099ED
 title: ODF Phase 9 动态源稳定化报告
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

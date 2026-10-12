@@ -2,7 +2,7 @@
 """Validate KWE Promotion Request no-write dry-run boundaries.
 
 This validator reads local OKF, shared type, and fixture files only. It does
-not mutate KDS lifecycle, accepted facts, published objects, WAES gate results,
+not mutate KDS lifecycle, accepted facts, published objects, WAME gate results,
 KWE work items, business systems, revenue, scores, or external APIs.
 """
 
@@ -85,7 +85,7 @@ def main() -> int:
         "requestCount": len(requests),
         "readyForKweReview": sum(1 for request in requests if request["promotionStatus"] == "ready_for_kwe_review"),
         "repairRequired": sum(1 for request in requests if request["promotionStatus"] == "repair_required"),
-        "waesRequired": sum(1 for request in requests if request["promotionStatus"] == "waes_required"),
+        "wameRequired": sum(1 for request in requests if request["promotionStatus"] == "wame_required"),
         "humanRequired": sum(1 for request in requests if request["promotionStatus"] == "human_required"),
         "committeeRequired": sum(1 for request in requests if request["promotionStatus"] == "committee_required"),
         "blocked": sum(1 for request in requests if request["promotionStatus"] == "blocked"),
@@ -100,7 +100,7 @@ def main() -> int:
         "lifecycleMutations": sum(request["noWrite"]["writesKdsLifecycle"] for request in requests),
         "acceptedFactWrites": sum(request["noWrite"]["writesAcceptedFact"] for request in requests),
         "publishedObjectWrites": sum(request["noWrite"]["writesPublishedObject"] for request in requests),
-        "waesGateResultWrites": sum(request["noWrite"]["writesWaesGateResult"] for request in requests),
+        "wameGateResultWrites": sum(request["noWrite"]["writesWameGateResult"] for request in requests),
         "kweWorkItemWrites": sum(request["noWrite"]["writesKweWorkItem"] for request in requests),
         "businessWrites": sum(request["noWrite"]["writesBusinessSystem"] for request in requests),
         "revenueOrScoreConfirmations": sum(
@@ -134,14 +134,14 @@ def main() -> int:
         f"requests={checks['requestCount']} "
         f"ready_for_kwe_review={checks['readyForKweReview']} "
         f"repair_required={checks['repairRequired']} "
-        f"waes_required={checks['waesRequired']} "
+        f"wame_required={checks['wameRequired']} "
         f"human_required={checks['humanRequired']} "
         f"committee_required={checks['committeeRequired']} "
         f"blocked={checks['blocked']} "
         f"freeze_required={checks['freezeRequired']} "
         f"ai_blocked_promotions={checks['aiBlockedPromotions']} "
         "lifecycle_mutations=0 accepted_fact_writes=0 published_object_writes=0 "
-        "waes_gate_result_writes=0 kwe_work_item_writes=0 business_writes=0 "
+        "wame_gate_result_writes=0 kwe_work_item_writes=0 business_writes=0 "
         "revenue_or_score_confirmations=0 external_api_writes=0"
     )
     return 0

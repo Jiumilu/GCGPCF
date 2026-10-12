@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-GCKF-P0-D75-001
 title: Loop Round GPCF-GCKF-P0-D75-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ superseded_by: []
 | D75 repair request intake completeness precheck validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_repair_request_intake_completeness_precheck_preview_dry_run.py` |
 | D75 repair request intake completeness precheck doc | `docs/gc-knowledge-fabric/formal-evidence-execution-repair-request-intake-completeness-precheck-preview-dry-run-v0.1.md` |
 
-## 4. WAES / Harness 边界
+## 4. WAME / Harness 边界
 
 | 项目 | 结果 |
 |---|---|
-| WAES gate override | not_allowed |
+| WAME gate override | not_allowed |
 | Harness evidence write | not_executed |
 | Formal evidence write | not_executed |
 | Repair request completeness precheck preview execution | not_executed |
@@ -80,6 +80,6 @@ no_write=covered
 
 ## 6. 结论
 
-D75 只完成 repair request completeness precheck dry-run。它证明补正接收候选包可以被描述为带有所需回执材料、已提交材料、缺失材料缺口、提交方边界、ACL、保持条件、阻断码、WAES 与 no-write 边界的 completeness precheck preview，但不产生任何正式补正完整性预检、正式补正接收、正式补正请求、委员会立案、委员会裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
+D75 只完成 repair request completeness precheck dry-run。它证明补正接收候选包可以被描述为带有所需回执材料、已提交材料、缺失材料缺口、提交方边界、ACL、保持条件、阻断码、WAME 与 no-write 边界的 completeness precheck preview，但不产生任何正式补正完整性预检、正式补正接收、正式补正请求、委员会立案、委员会裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
 
 下一轮 D76 可继续建立 intake acknowledgement 或 repair request return path 的 no-write 预演。

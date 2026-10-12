@@ -88,7 +88,7 @@
       ],
       "decision": "accept_limited",
       "accepted_scope": "open_source_tool_candidate_only",
-      "reason": "The repository is relevant as a tool candidate for governance gates, but it is not WAES policy and still requires legal/security review before use.",
+      "reason": "The repository is relevant as a tool candidate for governance gates, but it is not WAME policy and still requires legal/security review before use.",
       "rag_admission": "limited",
       "kds_admission": "limited_candidate_only"
     },
@@ -120,7 +120,7 @@
     }
   ],
   "admission_decision": {
-    "waes_review_status": "limited_verification_complete",
+    "wame_review_status": "limited_verification_complete",
     "kds_admission": "limited_candidate_only",
     "rag_admission": "limited",
     "status_upgrade_allowed": false,

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-KDS-MAPPING-V1
 title: KDS OKF CodeGraph Candidate Mapping
 project: GPCF
-related_projects: [KDS, WAS, GPCF, WAES]
+related_projects: [KDS, WAS, GPCF, WAME]
 domain: codegraph-governance
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ mapping:
   production_evidence_allowed: false
   promotion_requires:
     - harness_evidence
-    - waes_gate
+    - wame_gate
     - human_review
     - lineage_backlink
 
@@ -50,7 +50,7 @@ state_machine:
   initial: candidate
   codegraph_may_create: [candidate]
   codegraph_may_promote_to_accepted: false
-  accepted_requires: [kds_curator, waes_gate, harness_evidence]
+  accepted_requires: [kds_curator, wame_gate, harness_evidence]
 
 rejection_rules:
   - demo_not_runtime_evidence

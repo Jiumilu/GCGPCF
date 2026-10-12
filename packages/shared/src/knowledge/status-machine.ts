@@ -5,7 +5,7 @@ export type KnowledgeStateActor =
   | "owner"
   | "system"
   | "kds"
-  | "waes"
+  | "wame"
   | "kwe"
   | "human_reviewer"
   | "committee"

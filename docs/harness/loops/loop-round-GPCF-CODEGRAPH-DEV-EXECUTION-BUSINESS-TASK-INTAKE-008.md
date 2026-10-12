@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2B9E7E6A18
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-TASK-INTAKE-008
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：项目群业务执行窗口已授予，用户要求“按建议执行”。
 - 范围：GFIS 辽宁远航真实回执 hold register 的真实业务候选 intake。
 - 动作：用真实 `codegraph query` / `codegraph node` / `codegraph affected` 结果固化任务开工前门禁，形成可复用的真实业务任务入口。
-- 约束：不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS 写入、不真实 WAES 写入。
+- 约束：不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS 写入、不真实 WAME 写入。
 
 ## stop
 
@@ -45,7 +45,7 @@ python3 /Users/lujunxiang/Projects/GlobalCloud\ V0.0.1/GlobalCloud\ GFIS/scripts
 
 - 最后安全状态：`GPCF-CODEGRAPH-DEV-EXECUTION-BUSINESS-EXECUTION-WINDOW-GRANT-007`
 - 可重试动作：收到真实回执文件、客户确认函、签章完成件或等效正式确认原件后，重新进入 implementation。
-- 不可重试动作：未授权 commit、push、deploy、production write、external API write、real KDS write、real WAES write。
+- 不可重试动作：未授权 commit、push、deploy、production write、external API write、real KDS write、real WAME write。
 
 ## debug
 

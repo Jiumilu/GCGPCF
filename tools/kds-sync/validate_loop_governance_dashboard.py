@@ -108,7 +108,7 @@ def main() -> int:
     require(evidence.get("signals", {}).get("status_ceiling") == "partial_repair", "status ceiling must remain partial_repair")
 
     metrics = evidence.get("metrics", {})
-    for key in ["runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]:
         require(metrics.get(key) == 0, f"dashboard metric must keep {key}=0")
     require(metrics.get("runtime_sop_e2e") == "repair_required", "runtime_sop_e2e must remain repair_required")
     require(metrics.get("accepted_integrated_allowed") is False, "accepted/integrated must remain forbidden")
@@ -128,7 +128,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
     ]:
         require(phrase in combined_status, f"current status missing marker: {phrase}")
@@ -149,7 +149,7 @@ def main() -> int:
         "quality_gate=repair_ceiling_enforced efficiency_risk=review_required "
         "self_correction_gate=blocked_expected boundary_safety=pass "
         "status_ceiling=partial_repair runtime_primary_key_ready=0 review_queue=0 "
-        "runtime_intake=0 waes_review=0 verified=0 accepted_integrated_allowed=false"
+        "runtime_intake=0 wame_review=0 verified=0 accepted_integrated_allowed=false"
     )
     return 0
 

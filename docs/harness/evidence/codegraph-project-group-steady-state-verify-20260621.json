@@ -73,9 +73,9 @@
       "codegraph_git_status_entries": 0
     },
     {
-      "id": "waes",
-      "project": "GlobalCloud WAES",
-      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES",
+      "id": "wame",
+      "project": "GlobalCloud WAME",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME",
       "initialized": true,
       "version": "1.0.1",
       "last_indexed": "2026-06-20T04:58:09.360Z",
@@ -245,7 +245,7 @@
     "loop_schema": "loop/templates/loop-task-with-codegraph.yaml",
     "harness_impact_template": "harness/templates/codegraph-impact-report.yaml",
     "harness_evidence_template": "harness/templates/codegraph-evidence-bundle.yaml",
-    "waes_gate_policy": "governance/codegraph/waes-codegraph-gates.yaml",
+    "wame_gate_policy": "governance/codegraph/wame-codegraph-gates.yaml",
     "kds_okf_mapping": "governance/codegraph/kds-codegraph-mapping.yaml"
   },
   "operational_value_assessment": {
@@ -253,8 +253,8 @@
     "drift_value": "Brain active drift and GFIS policy exception are visible as watchlist items instead of hidden context debt",
     "loop_value": "Loop schema requires snapshot_id, context_queries, explored_symbols, impact_paths, impacted_tests, risk_flags, and evidence_ref",
     "harness_value": "Harness templates can carry impact report and evidence bundle without promoting business completion",
-    "waes_value": "High-risk auth, tenant, finance, KDS, ontology, API, Harness, and Loop changes require CodeGraph impact input",
-    "kds_okf_value": "CodeGraph outputs remain candidate-only and require Harness evidence, WAES gate, and human review",
+    "wame_value": "High-risk auth, tenant, finance, KDS, ontology, API, Harness, and Loop changes require CodeGraph impact input",
+    "kds_okf_value": "CodeGraph outputs remain candidate-only and require Harness evidence, WAME gate, and human review",
     "cost_quality_value": "Current evidence proves readiness for impact-analysis assisted Loop tasks; cost delta still needs a measured low-risk dry-run"
   },
   "status_boundaries": {

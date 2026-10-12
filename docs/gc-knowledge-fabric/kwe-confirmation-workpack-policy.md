@@ -38,7 +38,7 @@ KWE confirmation workpack 是候选事实、候选 SOP、候选写回、贡献�
 | `poolRefs` | 至少一个 KDS 十一池挂接 |
 | `sourceRefs` | 至少一个来源引用 |
 | `evidenceRefs` | 至少一个 evidence 引用，敏感对象可使用 metadata-only evidence |
-| `waesGateRefs` | 至少一个 WAME gate 结果引用 |
+| `wameGateRefs` | 至少一个 WAME gate 结果引用 |
 | `reviewerType` | human / committee |
 | `reviewerRefs` | reviewerType 对应的人员、角色或委员会引用 |
 | `decisionOptions` | allow_accept / request_repair / reject / escalate_committee / freeze |
@@ -52,7 +52,7 @@ KWE confirmation workpack 是候选事实、候选 SOP、候选写回、贡献�
 Confirmation workpack 必须满足：
 
 1. `targetObjectId` 与 `workItemId` 必须存在双向引用。
-2. `sourceRefs`、`evidenceRefs`、`waesGateRefs` 不得为空。
+2. `sourceRefs`、`evidenceRefs`、`wameGateRefs` 不得为空。
 3. 如果 `sensitiveHandling` 为 `metadata_only` 或 `controlled_original`，确认包不得包含 raw content。
 4. 如果 `reviewerType=human`，不得直接输出委员会裁决结果。
 5. 如果 `reviewerType=committee`，必须包含委员会触发原因。

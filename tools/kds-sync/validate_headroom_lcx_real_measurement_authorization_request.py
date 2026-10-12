@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -37,7 +37,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 
@@ -88,7 +88,7 @@ def main() -> int:
     require(evidence.get("project_count") == 15, "project count mismatch")
     require(evidence.get("projects") == PROJECTS, "project list mismatch")
     require(evidence.get("requested_future_decision") == "open_real_measurement_window", "requested future decision mismatch")
-    require(evidence.get("current_waes_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck", "current decision mismatch")
+    require(evidence.get("current_wame_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck", "current decision mismatch")
 
     bindings = evidence.get("field_bindings", [])
     require(isinstance(bindings, list) and len(bindings) == 6, "field binding count mismatch")
@@ -128,7 +128,7 @@ def main() -> int:
     require(guard.get("executable_now") is False, "execution must not be allowed now")
     for key in [
         "requires_real_measurement_authorization_window",
-        "requires_waes_harness_decision",
+        "requires_wame_harness_decision",
         "requires_sanitized_token_ledger_metadata_only",
         "requires_rollback_plan_id",
         "requires_no_production_proxy",
@@ -153,7 +153,7 @@ def main() -> int:
     for phrase in [
         "HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-REQUEST-20260623",
         "requested_future_decision | open_real_measurement_window",
-        "current_waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck",
+        "current_wame_harness_admission_decision | admitted_for_sanitized_measurement_precheck",
         "real_measurement_gap_present | true",
         "production_branch_blocked | true",
         "production_token_measurement_allowed | false",

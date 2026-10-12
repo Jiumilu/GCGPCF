@@ -30,7 +30,7 @@
       "redactedFields": ["rawContent", "financeVoucher", "customerSensitiveTerms"],
       "metadataOnly": true,
       "ragAdmission": "sensitive_metadata_only",
-      "waesGateStatus": "metadata_only",
+      "wameGateStatus": "metadata_only",
       "publicationApprovalRef": "pub-approval-metadata-001",
       "evidenceRefs": ["hev-share-metadata-001"],
       "expiresAt": "2026-07-20T00:00:00Z"
@@ -62,7 +62,7 @@
     "sensitiveMetadataOnlyRawContentDenied": true,
     "blockedRagExternalShareDenied": true,
     "t5AiOnlyExternalFactDenied": true,
-    "externalShareRequiresWaesGate": true,
+    "externalShareRequiresWameGate": true,
     "publicVisibilityRequiresPublicationApproval": true,
     "aclPassIsNotRagStrongReference": true,
     "aclPassIsNotBusinessWriteback": true,

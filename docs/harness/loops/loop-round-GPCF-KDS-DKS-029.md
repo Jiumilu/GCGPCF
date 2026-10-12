@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5EDE1944EC
 title: LOOP Round GPCF-KDS-DKS-029 - 葛化 GFIS AI 助手内测运行记录首批空白台账
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ superseded_by: []
 - 不生成真实助手输出，不补写评分，不确认通过或失败。
 - 不创建真实账号、不配置生产权限、不写生产数据、不调用真实外部 API。
 - 不写真实 GFIS 主账，不创建运行层主键。
-- 不写真实 KDS API，不写真实 WAES API。
+- 不写真实 KDS API，不写真实 WAME API。
 - 不确认正式积分、收益、产值、到账、POD、订单或 SOP 生效。
 - 不升级 accepted 或 integrated。
 

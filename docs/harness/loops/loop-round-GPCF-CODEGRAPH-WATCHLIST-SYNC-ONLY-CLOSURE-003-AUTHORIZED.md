@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BB1D26426D
 title: GPCF CodeGraph Watchlist Sync-only Closure 003 Authorized
 project: GPCF
-related_projects: [GFIS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [GFIS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

@@ -160,7 +160,7 @@
     "judgement": "葛化 P1 GFIS 母版试点仍未满足 admission 前置条件。",
     "blocking_reasons": [
       "共同待办 C-01 至 C-07 仍未收口。",
-      "P1 验收闭环要求的真实资料目录 -> 候选事实样例 -> WAES 判断 -> 人工确认路径 -> GFIS 写回候选 dry-run -> Harness evidence 尚未形成实链。",
+      "P1 验收闭环要求的真实资料目录 -> 候选事实样例 -> WAME 判断 -> 人工确认路径 -> GFIS 写回候选 dry-run -> Harness evidence 尚未形成实链。",
       "GFIS real_business_lane 仍为 repair_required。"
     ]
   },
@@ -168,8 +168,8 @@
     "status": "parallel_preparation_only",
     "judgement": "湖北磷材 P2 目前最多处于并行准备态，不能误报为 ready_for_admission。",
     "constraints": [
-      "P2 不依赖 GFIS 深度闭环，但也不能跳过来源、证据、WAES 和人工确认。",
-      "共同待办中的 owner、目录、敏感资料标注、WAES gate 样例、潜在收益台账和 LOOP evidence 仍未收口。"
+      "P2 不依赖 GFIS 深度闭环，但也不能跳过来源、证据、WAME 和人工确认。",
+      "共同待办中的 owner、目录、敏感资料标注、WAME gate 样例、潜在收益台账和 LOOP evidence 仍未收口。"
     ]
   },
   "v1_upgrade_recommendation": {

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D665FD06FB
 title: GPCF-L4-GFIS-REPAIR-064 GFIS 辽宁远航 verified artifact intake packet 模板
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

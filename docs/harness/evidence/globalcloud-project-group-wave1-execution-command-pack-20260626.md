@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-WAVE1-EXECUTION-COMMAND-PACK-20260626
 title: GlobalCloud 项目群 Wave 1 真实执行命令包 2026-06-26
 project: GFIS
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: docs
 status: controlled
 version: v1.0
@@ -57,8 +57,8 @@ push_allowed = false
 
 | pack_id | 项目 | 目标 | 可执行命令 | 预期证据 | 门禁 | 回滚边界 | 人工确认 | 禁止声明 |
 |---|---|---|---|---|---|---|---|---|
-| `WAVE1-WAES-LINT-RUNTIME-001` | WAES | 修复 lint/runtime 并恢复综合检查 | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`python3 tools/kds-sync/validate_waes_lint_runtime_repair_authorization.py` | `docs/harness/WAES/evidence/waes-lint-runtime-repair-*.md`、命令输出摘要、修复 diff 摘要 | WAES quality gate、WAES authorization gate、GPCF register gate、Loop document gate、Git diff check | 仅回滚本次 WAES lint/runtime 修复；任一命令失败则保持 `repair_required` | 是，源码修复、提交、推送、发布前均需确认 | 不声明 WAES 治理运行闭环、发布、权限变更、accepted 或客户验收 |
-| `WAVE1-GFIS-REAL-SOR-001` | GFIS | 获取或登记真实 source-of-record 输入 | `python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py`、GFIS source-record intake 扫描、人工核验记录检查 | `docs/harness/GFIS/evidence/gfis-real-source-record-intake-*.md`、真实订单或平台订单回执索引、人工核验结论 | GFIS source-record gate、business owner gate、WAES review gate、GPCF register gate | 不写入 GFIS runtime；输入不合格时登记 rejected reason 并保持 `repair_required` | 是，需要业务 owner、订单 owner 或等效正式回执 | 不声明真实 SOP E2E、生产写入、SCaaS 闭环、accepted 或客户验收 |
+| `WAVE1-WAME-LINT-RUNTIME-001` | WAME | 修复 lint/runtime 并恢复综合检查 | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm`、`python3 tools/kds-sync/validate_wame_lint_runtime_repair_authorization.py` | `docs/harness/WAME/evidence/wame-lint-runtime-repair-*.md`、命令输出摘要、修复 diff 摘要 | WAME quality gate、WAME authorization gate、GPCF register gate、Loop document gate、Git diff check | 仅回滚本次 WAME lint/runtime 修复；任一命令失败则保持 `repair_required` | 是，源码修复、提交、推送、发布前均需确认 | 不声明 WAME 治理运行闭环、发布、权限变更、accepted 或客户验收 |
+| `WAVE1-GFIS-REAL-SOR-001` | GFIS | 获取或登记真实 source-of-record 输入 | `python3 tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py`、GFIS source-record intake 扫描、人工核验记录检查 | `docs/harness/GFIS/evidence/gfis-real-source-record-intake-*.md`、真实订单或平台订单回执索引、人工核验结论 | GFIS source-record gate、business owner gate、WAME review gate、GPCF register gate | 不写入 GFIS runtime；输入不合格时登记 rejected reason 并保持 `repair_required` | 是，需要业务 owner、订单 owner 或等效正式回执 | 不声明真实 SOP E2E、生产写入、SCaaS 闭环、accepted 或客户验收 |
 | `WAVE1-GPC-EXTERNAL-RUNTIME-001` | GPC | 补生产确认、外部联调和 runtime surface 证据 | `npm run quality:100`、`npm run quality:ops`、`npm run test:e2e`、`python3 tools/kds-sync/validate_gpc_evidence_browser_repair.py` | `docs/harness/GPC/evidence/gpc-external-runtime-evidence-*.md`、生产确认记录、外部联调记录、runtime surface 可达性摘要 | GPC external runtime gate、browser/e2e gate、GFIS source-record dependency gate、Loop document gate | 不伪造生产确认；外部证据缺失时保持 `external_runtime_evidence_required` | 是，生产/外部联调需要 owner 或环境确认 | 不声明外部联调完成、真实交付、SCaaS 完整交付或客户验收 |
 | `WAVE1-BRAIN-HUMAN-REVIEW-001` | Brain | 准备 Brain 人工审查决策，不自动 accepted | `python3 tools/kds-sync/validate_brain_review_handoff.py`、Brain 本地 harness validators、KDS RAG 输入复核 | `docs/harness/Brain/evidence/brain-human-review-decision-*.md`、审查意见、accepted/rework 决策记录 | Brain review handoff gate、KDS RAG input gate、human review gate | 未确认时保持 `ready_for_review / authorization_boundary`；审查不通过则进入 rework | 是，accepted、integrated、production_ready 前必须确认 | 不声明 Brain accepted、integrated、production_ready 或客户验收 |
 | `WAVE1-GPCF-POST-SCHEME-REVIEW-001` | GPCF/all projects | 将当前 6 仓 dirty review 转成逐仓授权执行入口，并优先锁定 KDS sensitive_path、GFIS repair 边界和 AAAS/XWAIL/SOP delegated wrapper 边界 | `python3 tools/kds-sync/validate_project_group_pre_wave1_review_authorization_request_20260627.py`、`python3 tools/kds-sync/validate_project_group_post_scheme_recognition_review_authorization_request_20260626.py`、`python3 tools/kds-sync/validate_project_group_dirty_disposition_queue_post_scheme_recognition_20260626.py`、`python3 tools/kds-sync/validate_project_group_current_state_baseline_refresh_20260626.py`、`python3 tools/kds-sync/validate_project_group_dev_task_queue_20260626.py`、`python3 tools/kds-sync/loop_document_gate.py` | `docs/harness/evidence/globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md`、`docs/harness/evidence/globalcloud-project-group-post-scheme-recognition-review-authorization-request-20260626.md`、逐仓 review 授权回执 | pre-wave1 review authorization gate、post-scheme review authorization gate、dirty queue gate、current baseline refresh gate、dev task queue gate、Git clean gate、Loop document gate | 不自动 review、stage、commit、push、delete、cleanup；任一仓缺确认则保持 `review_allowed=false` 且 Wave 1 不得进入执行回执 | 是，任何 review/stage/commit/push/delete 前必须逐仓确认 | 不声明项目群 Git 全量 clean、可提交、可推送、Wave 1 已授权、accepted、integrated 或客户验收 |
@@ -80,7 +80,7 @@ push_allowed = false
 
 | 依赖链 | Wave 1 影响 |
 |---|---|
-| `WAES -> XWAIL -> AaaS` | WAES 未修复前，XWAIL/AaaS 只能保持 `integration_precheck_candidate` |
+| `WAME -> XWAIL -> AaaS` | WAME 未修复前，XWAIL/AaaS 只能保持 `integration_precheck_candidate` |
 | `GFIS/GPC/PVAOS -> SCaaS` | GFIS SOR 和 GPC 外部运行证据未完成前，SCaaS 不得声明真实运营闭环 |
 | `KDS -> Brain` | Brain 只能进入人工审查，不得自动 accepted/integrated |
 | `GPCF -> all projects` | 当前 6 仓 dirty 与 KDS sensitive_path 未逐仓确认、`pre-wave1` 未解除前，不得声明项目群 Git clean、可提交或 Wave 1 已授权 |

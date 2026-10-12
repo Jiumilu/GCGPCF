@@ -114,7 +114,7 @@ superseded_by: []
 
 ## 2026-10-11 · O-2 契约出口执行
 - 产出：`scripts/xwail_export.py` v0.1（快照→XWAIL JSON；确定性；排除报告）＋`ontology/xwail_mapping_spec.md` v0.1＋`ontology/exports/`（focus-b01／focus-e01／focus-huangmei-01-6／all=49 assets·8 relations·43 显式排除）。
-- 验收 N04—N06：XWAIL 校验库**只读导入 pass**（4 模型 0 问题；回指字段完整）；双跑**逐字节一致**（total `ad548e4881de…`）；候选边界保持（provisionalCategory＋boundary；inference 不导出；waesStatus=Draft）。
+- 验收 N04—N06：XWAIL 校验库**只读导入 pass**（4 模型 0 问题；回指字段完整）；双跑**逐字节一致**（total `ad548e4881de…`）；候选边界保持（provisionalCategory＋boundary；inference 不导出；wameStatus=Draft）。
 - 说明：其 CLI 对仓外路径不兼容（relative_to）→ 只读导入校验库执行同一逻辑；**未修改 XWAIL 仓**（改进建议留其流程）。提案 3 处修正（XML→JSON／维度 notApplicable／EvidenceRecord→sourceRefs）记录于规范 §9。图谱 20 项校验回归通过。
 
 ## 2026-10-11 · O-3 治理衔接（文档级）＋P0-0 口径核对

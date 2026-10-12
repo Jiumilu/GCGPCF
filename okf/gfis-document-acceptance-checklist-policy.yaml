@@ -18,7 +18,7 @@ required_check_items:
   - trust_level_assigned
   - rag_admission_assessed
   - sensitive_handling_assessed
-  - waes_gate_suggested
+  - wame_gate_suggested
   - kwe_workpack_suggested
   - writeback_candidate_only
 batch_results:
@@ -46,7 +46,7 @@ no_write_guards:
   writes_erp: 0
   writes_mes: 0
   writes_kds_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_revenue_or_score_confirmation: 0
   writes_external_api: 0

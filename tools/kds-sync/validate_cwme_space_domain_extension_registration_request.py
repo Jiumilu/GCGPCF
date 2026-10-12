@@ -89,7 +89,7 @@ def main() -> int:
     gates = evidence.get("gates", {})
     require(gates.get("request_package_generated") is True, "request package gate must be true")
     require(gates.get("submitted") is True, "submitted gate must be true")
-    for key in ["registry_entry_added", "governance_reviewed", "waes_authorized", "accepted", "integrated", "production_ready"]:
+    for key in ["registry_entry_added", "governance_reviewed", "wame_authorized", "accepted", "integrated", "production_ready"]:
         require(gates.get(key) is False, f"gate must be false: {key}")
 
     for phrase in [
@@ -98,7 +98,7 @@ def main() -> int:
         "submitted | true",
         "registry_entry_added | false",
         "governance_reviewed | false",
-        "waes_authorized | false",
+        "wame_authorized | false",
         "accepted | false",
         "production_ready | false",
         "pending_governance_review",

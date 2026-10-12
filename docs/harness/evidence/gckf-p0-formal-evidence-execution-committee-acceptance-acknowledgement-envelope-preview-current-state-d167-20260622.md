@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0FORMALEVIDENCEEXECUTIONCOMMITTEEACCEPTANCEACKNOWLEDGEMENTENVELOPEPREVIEWCURRENTSTATED16720260622
 title: GCKF P0 正式 evidence 委员会受理确认 envelope 预览当前态证据 D167
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

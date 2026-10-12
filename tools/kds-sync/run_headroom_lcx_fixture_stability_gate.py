@@ -15,7 +15,7 @@ EVIDENCE_JSON = ROOT / "docs/harness/evidence/headroom-lcx-fixture-stability-gat
 EVIDENCE_MD = ROOT / "docs/harness/evidence/headroom-lcx-fixture-stability-gate-20260622.md"
 LOOP_ROUND = ROOT / "docs/harness/loops/loop-round-GPCF-HEADROOM-LCX-FIXTURE-STABILITY-GATE-001.md"
 
-PROJECTS = ["GPCF", "KDS", "Brain", "WAES", "GFIS"]
+PROJECTS = ["GPCF", "KDS", "Brain", "WAME", "GFIS"]
 SCENARIOS = ["loop_gate_metadata", "retrieval_context_metadata", "tool_output_metadata"]
 ROUNDS = 3
 
@@ -76,7 +76,7 @@ def frontmatter(title: str, source_path: str) -> str:
 doc_id: GPCF-DOC-HEADROOM-LCX-FIXTURE-STABILITY-GATE-20260622
 title: {title}
 project: GPCF
-related_projects: [GPCF, KDS, Brain, WAES, GFIS]
+related_projects: [GPCF, KDS, Brain, WAME, GFIS]
 domain: governance
 status: controlled
 version: v1.0

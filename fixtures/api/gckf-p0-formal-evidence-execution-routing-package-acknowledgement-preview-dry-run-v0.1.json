@@ -34,7 +34,7 @@
       "reviewer_acceptance_acknowledgement_owner",
       "reviewer_acceptance_owner",
       "routing_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -53,7 +53,7 @@
       "candidate_access_boundary_snapshot",
       "authority_and_recusal_boundary",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -120,7 +120,7 @@
       "candidate_access_boundary_snapshot_present",
       "authority_and_recusal_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_acknowledgement_not_formal_acknowledgement",
@@ -144,7 +144,7 @@
       "candidateAccessBoundarySnapshotRef",
       "authorityAndRecusalBoundaryRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
       "routingPackageOwnerRef",
@@ -152,7 +152,7 @@
       "reviewerAcceptanceAcknowledgementOwnerRef",
       "reviewerAcceptanceOwnerRef",
       "routingOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -183,7 +183,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_acknowledgement_preview_to_formal_acknowledgement",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

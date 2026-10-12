@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011
 title: CWME 城市空间域扩展包登记请求 2026-10-11
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文登记 `CWME-SPACE-DOMAIN-EXTENSION-REGISTRATION-REQUEST-20261011`：**申请将 CWME 城市空间域扩展包登记入 WAS-Ontology registry**（域包＝本地化扩展本体；与《WAS×CWME 协同方案》R1「域扩展包登记制」一致）。
 
-本文只提交登记请求：不改 WAS/Ontology 主术语、不改任何 registry 条目本体、不声明受理/通过；不声明 WAES 授权或发布；不声明生产就绪。
+本文只提交登记请求：不改 WAS/Ontology 主术语、不改任何 registry 条目本体、不声明受理/通过；不声明 WAME 授权或发布；不声明生产就绪。
 
 ## 2. 请求内容
 
@@ -58,7 +58,7 @@ superseded_by: []
 
 ## 5. 请求边界
 
-禁止：修改 WAS 主术语、registry 既有条目本体、越过治理流程修改 XWAIL/WAS 仓、WAES 发布声明、生产就绪声明。
+禁止：修改 WAS 主术语、registry 既有条目本体、越过治理流程修改 XWAIL/WAS 仓、WAME 发布声明、生产就绪声明。
 
 ## 6. 门禁
 
@@ -68,7 +68,7 @@ superseded_by: []
 | submitted | true |
 | registry_entry_added | false |
 | governance_reviewed | false |
-| waes_authorized | false |
+| wame_authorized | false |
 | accepted | false |
 | integrated | false |
 | production_ready | false |

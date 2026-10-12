@@ -29,7 +29,7 @@ def main() -> int:
     )
     require_text(
         ROOT / "GlobalCloud 项目群实施方案.md",
-        ("GlobalCloud宪法", "G00", "SOP", "WAES", "KDS"),
+        ("GlobalCloud宪法", "G00", "SOP", "WAME", "KDS"),
     )
     require_text(
         ROOT / "02-governance/constitution-governance-responsibility.md",

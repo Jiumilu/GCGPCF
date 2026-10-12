@@ -33,7 +33,7 @@
     "candidate_search_review": "ready_for_review",
     "l3_candidate_pipeline": "pass",
     "candidate_search_replay_ledger": "pass",
-    "waes_kds_review_queue": "ready_for_human_review",
+    "wame_kds_review_queue": "ready_for_human_review",
     "human_review_decisions": "deferred_then_resolved_by_authoritative_verification",
     "authoritative_source_verification": "limited_verification_complete",
     "kds_admission": "limited_candidate_only",
@@ -46,7 +46,7 @@
     "tools/kds-sync/validate_agent_reach_candidate_search_review.py",
     "tools/kds-sync/validate_agent_reach_l3_candidate_pipeline.py",
     "tools/kds-sync/validate_agent_reach_candidate_search_replay_ledger.py",
-    "tools/kds-sync/validate_agent_reach_waes_kds_candidate_review_queue.py",
+    "tools/kds-sync/validate_agent_reach_wame_kds_candidate_review_queue.py",
     "tools/kds-sync/validate_agent_reach_human_review_decisions.py",
     "tools/kds-sync/validate_agent_reach_authoritative_source_verification.py"
   ],

@@ -95,7 +95,7 @@ def build_inventory() -> dict[str, Any]:
             "production_ready": False,
             "authorization_window_request_status": window_request.get("status"),
             "authorization_window_grant_status": "granted_precheck_only",
-            "waes_harness_admission_decision": completion.get("current_state", {}).get("waes_harness_admission_decision"),
+            "wame_harness_admission_decision": completion.get("current_state", {}).get("wame_harness_admission_decision"),
         },
         "blockers": blocker_requirements,
         "blocker_summary": {
@@ -139,7 +139,7 @@ def write_outputs(inventory: dict[str, Any]) -> None:
         "doc_id: GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-20260623",
         "title: Headroom LCX Remaining Blocker Inventory Evidence",
         "project: GPCF",
-        "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+        "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
         "domain: docs",
         "status: controlled",
         "version: v1.0",
@@ -208,7 +208,7 @@ def write_outputs(inventory: dict[str, Any]) -> None:
         doc_id: GPCF-DOC-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001
         title: "Loop Round: GPCF-HEADROOM-LCX-REMAINING-BLOCKER-INVENTORY-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0
@@ -256,7 +256,7 @@ def write_outputs(inventory: dict[str, Any]) -> None:
 
         ## 下一轮
 
-        如果未来真的出现授权窗口或 WAES/Harness 新裁决，可以直接把 blocker inventory 的 requirement_id 回填到实际授权字段和执行 runner。
+        如果未来真的出现授权窗口或 WAME/Harness 新裁决，可以直接把 blocker inventory 的 requirement_id 回填到实际授权字段和执行 runner。
         """
     ) + "\n"
     OUT_LOOP.write_text(loop_text, encoding="utf-8")

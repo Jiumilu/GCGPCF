@@ -78,7 +78,7 @@ def main() -> int:
     require(real["runtime_primary_key_ready"] == 0, "runtime primary key ready must be zero")
     require(real["runtime_primary_key_missing"] == 12, "runtime primary key missing must be 12")
     require(real["runtime_intake"] == 0, "runtime intake must be zero")
-    require(real["waes_review"] == 0, "WAES review must be zero")
+    require(real["wame_review"] == 0, "WAME review must be zero")
     require(real["verified"] == 0, "verified must be zero")
     require(real["kds_coverage_missing_sources"] == 4, "KDS missing sources must be 4")
     require(real["runtime_sop_e2e"] == "repair_required", "runtime SOP must remain repair_required")
@@ -87,7 +87,7 @@ def main() -> int:
         "real_source_records=0",
         "runtime_primary_key_ready=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
         "missing_sources=4",
         "真实客户订单原件或平台订单回执",
@@ -145,7 +145,7 @@ def main() -> int:
         "runtime_primary_key_ready=0 "
         "runtime_primary_key_missing=12 "
         "runtime_intake=0 "
-        "waes_review=0 "
+        "wame_review=0 "
         "verified=0 "
         "missing_sources=4 "
         "next=GPCF-CODEGRAPH-DEV-EXECUTION-REAL-INPUT-COLLECTION-PACK-018"

@@ -14,7 +14,7 @@
     },
     "headroom_retrieve": {
       "visibility": "restricted",
-      "requires_waes_gate": true,
+      "requires_wame_gate": true,
       "requires_reason": true,
       "requires_harness_evidence": true,
       "requires_sensitive_check": true
@@ -23,6 +23,6 @@
   "forbidden": [
     "retrieve_without_reason",
     "retrieve_without_evidence",
-    "retrieve_high_sensitive_original_without_waes"
+    "retrieve_high_sensitive_original_without_wame"
   ]
 }

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B067D96D82
 title: WAS Real Source Record Monitor 007 Evidence
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-007` 已建立候选重放与 KDS 反链范围监控。
 
-当前仍没有真实 P4 candidate 文件。重复 source record、陈旧 `received_at`、错误 KDS 反链范围的候选不得进入 WAES gate，也不得触发 runtime intake、review queue 或 runtime primary key。
+当前仍没有真实 P4 candidate 文件。重复 source record、陈旧 `received_at`、错误 KDS 反链范围的候选不得进入 WAME gate，也不得触发 runtime intake、review queue 或 runtime primary key。
 
 ## 监控指标
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -70,4 +70,4 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_007.py
 
 ## 边界
 
-本 evidence 不创建或标记 WAES review、runtime intake、review queue、runtime primary key、verified artifact、accepted、integrated 或 production_ready。
+本 evidence 不创建或标记 WAME review、runtime intake、review queue、runtime primary key、verified artifact、accepted、integrated 或 production_ready。

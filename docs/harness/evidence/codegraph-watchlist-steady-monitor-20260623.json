@@ -78,8 +78,8 @@
       "decision": "steady"
     },
     {
-      "repo_id": "waes",
-      "repo": "GlobalCloud WAES",
+      "repo_id": "wame",
+      "repo": "GlobalCloud WAME",
       "pending": {
         "added": 0,
         "modified": 0,
@@ -376,7 +376,7 @@
     "accepted": false,
     "integrated": false,
     "production_ready": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-WATCHLIST-MONITOR-006"
 }

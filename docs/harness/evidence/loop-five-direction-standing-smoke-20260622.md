@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FIVE-DIRECTION-STANDING-SMOKE-EVIDENCE-001
 title: Loop Five Direction Standing Adoption Smoke Evidence 20260622
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 
 ## 边界
 
-本轮未写入生产、未调用真实外部 API、未写入真实 KDS fact、未写入 WAES gate result、未升级 accepted/integrated/production_ready。
+本轮未写入生产、未调用真实外部 API、未写入真实 KDS fact、未写入 WAME gate result、未升级 accepted/integrated/production_ready。
 
 ## 下一步
 

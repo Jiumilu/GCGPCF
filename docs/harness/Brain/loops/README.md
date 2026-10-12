@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0209DFB721
 title: loops
 project: Brain
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -37,7 +37,7 @@ GFIS Document Acceptance Checklist 是 GFIS 文档验收助手的资料包级检
 | `trust_level_assigned` | 有 T0-T5 来源等级 |
 | `rag_admission_assessed` | 有 RAG 准入建议 |
 | `sensitive_handling_assessed` | 敏感资料有 metadata-only 或受控原件处理 |
-| `waes_gate_suggested` | 有 WAME gate 建议 |
+| `wame_gate_suggested` | 有 WAME gate 建议 |
 | `kwe_workpack_suggested` | 需要人工/委员会时有 KWE confirmation workpack 建议 |
 | `writeback_candidate_only` | 只允许生成写回候选，不允许正式写回 |
 

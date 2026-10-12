@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GFIS-DIRTY-STAGE-COMMIT-AUTH-20260628
 title: GFIS dirty evidence stage commit authorization request 2026-06-28
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

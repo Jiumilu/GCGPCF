@@ -16,8 +16,8 @@ SOURCE_JSON = ROOT / "docs/harness/evidence/was-real-source-record-monitor-033-2
 INTAKE_DIR = ROOT / "docs/harness/intake"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ['GFIS', 'GPC', 'PVAOS', 'WAES', 'KDS', 'Brain', 'PKC', 'XiaoC', 'XGD', 'XiaoG', 'MMC', 'GPCF', 'Studio', 'WAS']
-ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]
+PROJECT_GROUP = ['GFIS', 'GPC', 'PVAOS', 'WAME', 'KDS', 'Brain', 'PKC', 'XiaoC', 'XGD', 'XiaoG', 'MMC', 'GPCF', 'Studio', 'WAS']
+ZERO_KEYS = ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]
 FALSE_KEYS = ["accepted", "integrated", "production_ready"]
 SOCIAL_SAFETY_KEYS = ['worker_health_safety_training_record_gaps', 'ppe_issue_record_gaps', 'incident_near_miss_report_gaps', 'emergency_drill_record_gaps', 'community_grievance_record_gaps', 'social_license_or_local_permit_record_gaps', 'accepted_for_social_safety_profile']
 REQUIRED_COMMANDS = [['python3', 'tools/kds-sync/validate_gfis_was_source_record_submission_precheck.py'], ['python3', 'tools/kds-sync/validate_gfis_was_source_record_admission_gate.py'], ['python3', 'tools/kds-sync/validate_gfis_was_source_record_field_crosswalk.py'], ['python3', 'tools/kds-sync/validate_ontology_was_real_source_record_intake_pack.py'], ['python3', 'tools/kds-sync/validate_was_real_source_record_candidate_precheck.py']]
@@ -133,7 +133,7 @@ def main() -> int:
         require(boundary.get(key) is False, f"boundary.{key} must remain false")
 
     joined_output = "\n".join(run(command) for command in REQUIRED_COMMANDS)
-    for phrase in ["accepted_for_next_gate=0", "hold_required=1", "real_source_records=0", "valid_source_records=0", "runtime_primary_key_ready=0", "waes_review=0", "accepted=false", "integrated=false", "production_ready=false"]:
+    for phrase in ["accepted_for_next_gate=0", "hold_required=1", "real_source_records=0", "valid_source_records=0", "runtime_primary_key_ready=0", "wame_review=0", "accepted=false", "integrated=false", "production_ready=false"]:
         require(phrase in joined_output, f"required command output missing phrase: {phrase}")
 
     for phrase in [
@@ -161,7 +161,7 @@ def main() -> int:
         "emergency_drill_record_gaps=0 community_grievance_record_gaps=0 "
         "social_license_or_local_permit_record_gaps=0 accepted_for_social_safety_profile=0 "
         "accepted_for_next_gate=0 hold_required=1 real_source_records=0 valid_source_records=0 "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-035"
     )

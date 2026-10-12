@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FF3D79B4EA
 title: Loop Round — GPCF-L4-GFIS-REPAIR-217
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -67,7 +67,7 @@ superseded_by: []
 | runtime_primary_key_missing | 1 |
 | review_queue | 0 |
 | runtime_intake | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | verified | 0 |
 | runtime_sop_e2e | repair_required |
 
@@ -83,7 +83,7 @@ superseded_by: []
 
 - 本轮不证明 hold 已释放。
 - 本轮不证明真实客户订单原件、平台订单回执或有效 source-of-record 已收到。
-- 本轮不证明 dispatch confirmation、WAES confirmation、KDS write receipt、runtime primary key、review queue、runtime intake 或 verified artifact 已完成。
+- 本轮不证明 dispatch confirmation、WAME confirmation、KDS write receipt、runtime primary key、review queue、runtime intake 或 verified artifact 已完成。
 - 本轮不把报价单、合同审阅稿、KDS 候选、用户口述、Loop 文档、GFIS Demo 或 rejected examples 升级为业务事实。
 - 本轮不执行 Git push、生产写入、真实外部 API 写入、数据库迁移、权限变更、部署或 accepted/integrated 状态升级。
 

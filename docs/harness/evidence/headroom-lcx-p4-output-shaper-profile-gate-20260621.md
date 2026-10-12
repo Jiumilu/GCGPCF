@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3278429C0F
 title: Headroom LCX P4 Output Shaper Profile Gate Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -49,7 +49,7 @@ P4 LCX-Output-Shaper profile gate 已完成本地 dry-run。正式验收、合�
 | forbidden_context_pass_count | 4/4 |
 | allowed_context_pass_count | 5/5 |
 | schema_forbidden_context_gate | true |
-| waes_disable_output_shaper_gate | true |
+| wame_disable_output_shaper_gate | true |
 | official_acceptance_output_shaper_disabled | true |
 | compliance_review_output_shaper_disabled | true |
 | legal_contract_output_shaper_disabled | true |
@@ -65,7 +65,7 @@ P4 LCX-Output-Shaper profile gate 已完成本地 dry-run。正式验收、合�
 
 ## 15 项目范围
 
-GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
+GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS
 
 ## 下一轮
 

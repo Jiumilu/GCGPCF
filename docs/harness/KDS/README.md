@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FB255EAED0
 title: KDS
 project: KDS
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

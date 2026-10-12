@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-87727AC882
 title: GPCF-L4-GFIS-REPAIR-125 辽宁远航正式报价单来源 intake
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -57,7 +57,7 @@ runtime_liaoning_yuanhang_formal_quotation_source_intake=formal_quotation_source
 
 - 报价 PDF 的 sha256 和 15 项关键字段已验证。
 - 报价 PDF 不等于客户确认函、采购订单、合同、授权 envelope、责任方回执或量产验收。
-- 本轮不创建 review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮不创建 review queue、WAME review、runtime intake 或 verified artifact。
 - 本轮不执行生产写入、真实外部 API 写入、bench migrate、schema sync、权限变更、部署或 accepted/integrated 升级。
 
 ## 计数与停止

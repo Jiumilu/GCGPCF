@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-ROUND-AGENT-REACH-P7-AUTHORIZATION-PRECHECK-001
 title: Loop Round GPCF-AGENT-REACH-P7-AUTHORIZATION-PRECHECK-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -35,9 +35,9 @@
         },
         {
           "status": " M",
-          "path": ".kds/development-space/开发/04-WAES/08-evidence-samples/README.md",
+          "path": ".kds/development-space/开发/04-WAME/08-evidence-samples/README.md",
           "category": "kds_local_mirror_and_ledger",
-          "raw": " M .kds/development-space/开发/04-WAES/08-evidence-samples/README.md"
+          "raw": " M .kds/development-space/开发/04-WAME/08-evidence-samples/README.md"
         },
         {
           "status": " M",
@@ -5823,6 +5823,6 @@
     "extract_five_real_proof_owner_receipt_tasks_from_kds_candidates",
     "prioritize_customer_requirement_or_platform_order_source_of_record",
     "prioritize_customer_requirement_or_platform_order_dispatch_confirmation",
-    "then_waes_confirmation_kds_write_receipt_runtime_primary_key"
+    "then_wame_confirmation_kds_write_receipt_runtime_primary_key"
   ]
 }

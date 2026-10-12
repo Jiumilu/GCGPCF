@@ -1,19 +1,19 @@
 {
   "id": "gckf-p0-kwe-minimum-workflow-dry-run-v0.1",
-  "description": "GC-Knowledge Fabric P0-D5 KWE minimum workflow dry-run. It maps WAES dry-run outputs into KWE candidate work items, gaps, bounty candidates, and confirmation workpacks without writing real workflow state.",
+  "description": "GC-Knowledge Fabric P0-D5 KWE minimum workflow dry-run. It maps WAME dry-run outputs into KWE candidate work items, gaps, bounty candidates, and confirmation workpacks without writing real workflow state.",
   "version": "v0.1",
   "policyRefs": [
     "okf/flow-policy.yaml",
     "okf/kwe-confirmation-workpack-policy.yaml",
     "okf/kwe-queue-action-intake-request-policy.yaml",
-    "fixtures/waes/gckf-p0-waes-minimum-dry-run-cases-v0.1.json",
+    "fixtures/wame/gckf-p0-wame-minimum-dry-run-cases-v0.1.json",
     "docs/gc-knowledge-fabric/kwe-minimum-workflow-dry-run-v0.1.md"
   ],
   "cases": [
     {
       "caseId": "kwe-p0-gap-pod-evidence",
-      "sourceWaesCaseId": "waes-p0-evidence-missing-pod",
-      "waesStatus": "repair_required",
+      "sourceWameCaseId": "wame-p0-evidence-missing-pod",
+      "wameStatus": "repair_required",
       "expectedResult": "repair_required",
       "candidateOutputs": {
         "workItem": {
@@ -44,7 +44,7 @@
         "writesKweWorkItem": 0,
         "writesKdsLifecycle": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesBountySettlement": 0,
@@ -54,8 +54,8 @@
     },
     {
       "caseId": "kwe-p0-ai-candidate-blocked",
-      "sourceWaesCaseId": "waes-p0-rag-ai-candidate",
-      "waesStatus": "blocked",
+      "sourceWameCaseId": "wame-p0-rag-ai-candidate",
+      "wameStatus": "blocked",
       "expectedResult": "blocked",
       "candidateOutputs": {
         "workItem": {
@@ -81,7 +81,7 @@
         "writesKweWorkItem": 0,
         "writesKdsLifecycle": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesBountySettlement": 0,
@@ -91,8 +91,8 @@
     },
     {
       "caseId": "kwe-p0-sensitive-finance-metadata-review",
-      "sourceWaesCaseId": "waes-p0-sensitive-finance",
-      "waesStatus": "metadata_only",
+      "sourceWameCaseId": "wame-p0-sensitive-finance",
+      "wameStatus": "metadata_only",
       "expectedResult": "ready_for_human_review",
       "candidateOutputs": {
         "workItem": {
@@ -118,7 +118,7 @@
         "writesKweWorkItem": 0,
         "writesKdsLifecycle": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesBountySettlement": 0,
@@ -128,8 +128,8 @@
     },
     {
       "caseId": "kwe-p0-writeback-owner-confirmation",
-      "sourceWaesCaseId": "waes-p0-writeback-human",
-      "waesStatus": "human_required",
+      "sourceWameCaseId": "wame-p0-writeback-human",
+      "wameStatus": "human_required",
       "expectedResult": "ready_for_human_review",
       "candidateOutputs": {
         "workItem": {
@@ -155,7 +155,7 @@
         "writesKweWorkItem": 0,
         "writesKdsLifecycle": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesBountySettlement": 0,
@@ -165,8 +165,8 @@
     },
     {
       "caseId": "kwe-p0-duplicate-contribution-committee",
-      "sourceWaesCaseId": "waes-p0-contribution-duplicate",
-      "waesStatus": "committee_required",
+      "sourceWameCaseId": "wame-p0-contribution-duplicate",
+      "wameStatus": "committee_required",
       "expectedResult": "ready_for_committee_review",
       "candidateOutputs": {
         "workItem": {
@@ -192,7 +192,7 @@
         "writesKweWorkItem": 0,
         "writesKdsLifecycle": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesBountySettlement": 0,
@@ -202,8 +202,8 @@
     },
     {
       "caseId": "kwe-p0-potential-revenue-committee",
-      "sourceWaesCaseId": "waes-p0-revenue-potential",
-      "waesStatus": "committee_required",
+      "sourceWameCaseId": "wame-p0-revenue-potential",
+      "wameStatus": "committee_required",
       "expectedResult": "ready_for_committee_review",
       "candidateOutputs": {
         "workItem": {
@@ -230,7 +230,7 @@
         "writesKweWorkItem": 0,
         "writesKdsLifecycle": 0,
         "writesKdsFact": 0,
-        "writesWaesGateResult": 0,
+        "writesWameGateResult": 0,
         "writesBusinessSystem": 0,
         "writesRevenueOrScoreConfirmation": 0,
         "writesBountySettlement": 0,
@@ -241,7 +241,7 @@
   ],
   "expectedSummary": {
     "caseCount": 6,
-    "sourceWaesCaseCount": 6,
+    "sourceWameCaseCount": 6,
     "workItemCandidateCount": 6,
     "gapCandidateCount": 1,
     "bountyCandidateCount": 1,
@@ -256,7 +256,7 @@
     "writesKweWorkItem": 0,
     "writesKdsLifecycle": 0,
     "writesKdsFact": 0,
-    "writesWaesGateResult": 0,
+    "writesWameGateResult": 0,
     "writesBusinessSystem": 0,
     "writesRevenueOrScoreConfirmation": 0,
     "writesBountySettlement": 0,

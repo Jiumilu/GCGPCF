@@ -38,7 +38,7 @@ Round ID：`GPCF-GF-LR-001`
 |---|---|---|
 | draft | 候选门禁，未现场确认 | 仅用于设计 |
 | active | 已确认可执行 | 可进入 GFIS 开发任务 |
-| waes_required | 需要 WAME 审批或放行规则 | 不得由 GFIS 单独判定 |
+| wame_required | 需要 WAME 审批或放行规则 | 不得由 GFIS 单独判定 |
 
 ## 首轮结论
 

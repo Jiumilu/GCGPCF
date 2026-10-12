@@ -93,7 +93,7 @@ def main() -> int:
     pipeline = evidence.get("pipeline", {})
     require(pipeline.get("id") == "GPCF-AGENT-REACH-L3-CANDIDATE-PIPELINE-001", "pipeline id mismatch")
     require(pipeline.get("scope") == "project_group_candidate_search", "pipeline scope mismatch")
-    require(pipeline.get("output") == "waes_kds_review_queue_item", "pipeline output mismatch")
+    require(pipeline.get("output") == "wame_kds_review_queue_item", "pipeline output mismatch")
     require(pipeline.get("admission") == "limited_candidate_only", "pipeline admission mismatch")
     require(len(pipeline.get("stages", [])) == 5, "pipeline must contain five stages")
 
@@ -113,7 +113,7 @@ def main() -> int:
     require(metrics.get("rollback_verified") is True, "rollback must be verified")
 
     decision = evidence.get("admission_decision", {})
-    require(decision.get("waes_review_status") == "ready_for_review", "WAES review status mismatch")
+    require(decision.get("wame_review_status") == "ready_for_review", "WAME review status mismatch")
     require(decision.get("kds_admission") == "limited_candidate_only", "KDS admission must remain limited")
     require(decision.get("rag_admission") == "limited", "RAG admission must remain limited")
     require(decision.get("status_upgrade_allowed") is False, "status upgrade must be false")

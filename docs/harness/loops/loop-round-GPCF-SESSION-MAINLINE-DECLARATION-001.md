@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-52A3C9B7E1
 title: GPCF Session Mainline Declaration 001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

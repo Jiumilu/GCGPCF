@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-29DFAA93C4
 title: LOOP Round GPCF-KDS-DKS-067 - GC-Knowledge Fabric KDS v2 Search Dry-run
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 建立 KDS v2 search/filter dry-run，验证认证、租户隔离、ACL、scope、domain、pool、project、RAG admission、关键词匹配、可信等级排序和结果字段完整性可以被本地 fixture 机检。
 
-本轮只运行本地 fixture 和 dry-run validator，不触达真实 KDS API、向量库、图数据库、GFIS、WAES 或外部 API。
+本轮只运行本地 fixture 和 dry-run validator，不触达真实 KDS API、向量库、图数据库、GFIS、WAME 或外部 API。
 
 ## 2. 本轮输入资料
 
@@ -42,13 +42,13 @@ superseded_by: []
 - 先认证和租户隔离，再 ACL 和 scope 过滤。
 - Domain、Pool、Project、RAG admission 过滤必须早于关键词结果返回。
 - `blocked` 内容不得进入 RAG 结果。
-- 结果必须展示 Domain、PoolRefs、ObjectType、TrustLevel、RAG Admission、Lifecycle、Visibility、SourceRefs、EvidenceRefs、WAES Gate Status、CanShare、CanPromote、CanUseForRAG、CanWriteback。
+- 结果必须展示 Domain、PoolRefs、ObjectType、TrustLevel、RAG Admission、Lifecycle、Visibility、SourceRefs、EvidenceRefs、WAME Gate Status、CanShare、CanPromote、CanUseForRAG、CanWriteback。
 
 ## 5. 本轮验证计划
 
 - `python3 scripts/kds/validate_kds_search_dry_run.py`
 - `python3 scripts/gfis/validate_gfis_assistant_no_write_smoke.py`
-- `python3 scripts/waes/validate_waes_minimum_gates.py`
+- `python3 scripts/wame/validate_wame_minimum_gates.py`
 - `python3 scripts/kwe/validate_kwe_minimum_workflow.py`
 - `tsc -p packages/shared/tsconfig.json --noEmit`
 - `tsc -p packages/api/tsconfig.json --noEmit`
@@ -64,7 +64,7 @@ superseded_by: []
 | KDS Search dry-run | `kds_search_dry_run=pass objects=5 results=1 tenant_filter=covered acl_filter=covered domain_filter=covered pool_filter=covered project_filter=covered rag_filter=covered keyword_filter=covered result_fields=covered real_kds_reads=0 vector_reads=0 graph_reads=0` |
 | Fixture JSON 解析 | `kds_search_fixture_json=pass` |
 | GFIS Assistant no-write smoke | `gfis_assistant_no_write_smoke=pass runs=4 knowledge=covered usage=covered document_acceptance=covered writeback_candidate=covered business_writes=0 external_api_writes=0 kds_writes=0` |
-| WAES dry-run validator | `waes_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
+| WAME dry-run validator | `wame_minimum_gates=pass cases=6 passed_cases=6 evaluated_gates=16 source_gate=covered evidence_gate=covered rag_gate=covered writeback_gate=covered revenue_gate=covered contribution_gate=covered sensitive_data_gate=covered real_writes=0 external_api_writes=0` |
 | KWE dry-run validator | `kwe_minimum_workflow=pass workflows=4 promotable_candidates=1 blocked_or_pending_candidates=3 ai_direct_fact_writes=0 kds_fact_writes=0 gfis_writes=0` |
 | Shared Types 编译检查 | `tsc -p packages/shared/tsconfig.json --noEmit` 通过 |
 | API Contract 编译检查 | `tsc -p packages/api/tsconfig.json --noEmit` 通过 |

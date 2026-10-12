@@ -2,7 +2,7 @@
 """Validate KDS v2 endpoint skeleton against the no-write route fixture.
 
 This script inspects local TypeScript route declarations. It does not start a
-server and does not write KDS, WAES, KWE, GFIS, GPC, or any external API.
+server and does not write KDS, WAME, KWE, GFIS, GPC, or any external API.
 """
 
 from __future__ import annotations
@@ -27,7 +27,7 @@ def parse_routes() -> list[dict[str, Any]]:
             "method": method,
             "path": path,
             "mutationMode": re.search(r"mutationMode: \"([^\"]+)\"", body).group(1),
-            "requiresWaesGate": re.search(r"requiresWaesGate: (true|false)", body).group(1) == "true",
+            "requiresWameGate": re.search(r"requiresWameGate: (true|false)", body).group(1) == "true",
             "requiresKweFlow": re.search(r"requiresKweFlow: (true|false)", body).group(1) == "true",
             "directBusinessWrite": re.search(r"directBusinessWrite: (true|false)", body).group(1) == "true",
             "acceptedLifecycleWrite": re.search(r"acceptedLifecycleWrite: (true|false)", body).group(1) == "true",
@@ -62,7 +62,7 @@ def main() -> int:
         "endpointCount": len(routes),
         "candidateOnlyCount": len(candidate_routes),
         "readOnlyCount": len(read_only_routes),
-        "waesGatedCandidateRoutes": sum(1 for route in candidate_routes if route["requiresWaesGate"]),
+        "wameGatedCandidateRoutes": sum(1 for route in candidate_routes if route["requiresWameGate"]),
         "kweFlowCandidateRoutes": sum(1 for route in candidate_routes if route["requiresKweFlow"]),
         "directBusinessWrites": sum(1 for route in routes if route["directBusinessWrite"]),
         "acceptedLifecycleWrites": sum(1 for route in routes if route["acceptedLifecycleWrite"]),
@@ -86,7 +86,7 @@ def main() -> int:
         f"endpoints={actual['endpointCount']} "
         f"read_only={actual['readOnlyCount']} "
         f"candidate_only={actual['candidateOnlyCount']} "
-        f"waes_gated_candidates={actual['waesGatedCandidateRoutes']} "
+        f"wame_gated_candidates={actual['wameGatedCandidateRoutes']} "
         f"kwe_flow_candidates={actual['kweFlowCandidateRoutes']} "
         "direct_business_writes=0 accepted_lifecycle_writes=0 "
         "external_api_writes=0 real_kds_writes=0 no_write=covered"

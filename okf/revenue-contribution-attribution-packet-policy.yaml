@@ -19,7 +19,7 @@ required_fields:
   - revenue_basis
   - attribution_basis
   - evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - confidence
   - attribution_status
   - committee_required
@@ -48,7 +48,7 @@ formal_distribution_candidate_requirements:
   revenue_type: formal_revenue
   revenue_basis: cash_received
   minimum_evidence_refs: 1
-  minimum_waes_gate_refs: 1
+  minimum_wame_gate_refs: 1
   required_confirmed_contribution_status:
     - human_confirmed
     - committee_confirmed
@@ -61,8 +61,8 @@ committee_triggers:
   - unclear_contribution_boundary
   - major_violation
   - evidence_revenue_basis_mismatch
-  - waes_committee_required
-  - waes_freeze_required
+  - wame_committee_required
+  - wame_freeze_required
 
 hard_boundaries:
   formal_distribution_requires_cash_received: true

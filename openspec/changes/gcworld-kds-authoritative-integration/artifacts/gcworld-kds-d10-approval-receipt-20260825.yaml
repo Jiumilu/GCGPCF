@@ -36,7 +36,7 @@ precondition_recheck:
       - 155b3671abdd
       - dbce6d580114
     gbrain_autopilot_launch_agent: absent
-    gcworld_or_waes_manual_import_process: none_observed
+    gcworld_or_wame_manual_import_process: none_observed
 allowed_scope:
   responsible_parties: [KDS源码责任方, KDS测试责任方]
   paths: [api_server.py, tests/test_api_smoke.py]

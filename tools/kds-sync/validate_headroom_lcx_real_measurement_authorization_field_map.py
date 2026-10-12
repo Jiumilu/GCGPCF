@@ -62,7 +62,7 @@ def main() -> int:
     require(field_map.get("current_state", {}).get("measured_production_tokens") is False, "measured production tokens must remain false")
     require(field_map.get("execution_guard", {}).get("executable_now") is False, "execution must remain blocked")
     require(field_map.get("execution_guard", {}).get("requires_real_measurement_authorization_window") is True, "authorization window gate must be required")
-    require(field_map.get("execution_guard", {}).get("requires_waes_harness_decision") is True, "WAES/Harness decision gate must be required")
+    require(field_map.get("execution_guard", {}).get("requires_wame_harness_decision") is True, "WAME/Harness decision gate must be required")
     require(field_map.get("execution_guard", {}).get("requires_sanitized_token_ledger_metadata_only") is True, "sanitized ledger gate must be required")
     require(field_map.get("rollback_anchor", {}).get("rollback_plan_present") is True, "rollback plan must be present")
     require(field_map.get("rollback_anchor", {}).get("rollback_runbook_written") is True, "rollback runbook must be written")
@@ -75,7 +75,7 @@ def main() -> int:
         "authorized_at",
         "sanitized_production_token_ledger",
         "rollback_plan_id",
-        "waes_harness_admission_decision",
+        "wame_harness_admission_decision",
     }
     require({row.get("field") for row in rows} == expected_fields, "field set mismatch")
     require(
@@ -86,7 +86,7 @@ def main() -> int:
             "authorized_at",
             "sanitized_production_token_ledger",
             "rollback_plan_id",
-            "waes_harness_admission_decision",
+            "wame_harness_admission_decision",
         ],
         "future runner input mismatch",
     )
@@ -101,7 +101,7 @@ def main() -> int:
         "authorization_field_map_defined_precheck_only",
         "executable_now: `false`",
         "requires_real_measurement_authorization_window: `true`",
-        "requires_waes_harness_decision: `true`",
+        "requires_wame_harness_decision: `true`",
         "requires_no_production_proxy: `true`",
         "production_ready: `false`",
     ]:

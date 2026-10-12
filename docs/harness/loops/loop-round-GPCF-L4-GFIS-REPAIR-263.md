@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1B161E0373
 title: GPCF-L4-GFIS-REPAIR-263
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 来源轮次：`GFIS-RUNTIME-SOP-E2E-253`
 - 输入事实：`GFIS-RUNTIME-SOP-E2E-252` 已记录 1 次受控 release attempt，并因真实 release/remediation 链路缺失 hard-stop。
-- 本轮真实缺口：仍无真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 与 WAES evidence candidate。
+- 本轮真实缺口：仍无真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 与 WAME evidence candidate。
 
 ## 动作
 
@@ -51,7 +51,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `blocked=1`
 - `runtime_sop_e2e=repair_required`
@@ -76,7 +76,7 @@ superseded_by: []
 
 ## 反馈
 
-- 本轮只同步 owner response release reopen scan，不创建真实 release 文件，不关闭 hold，不完成 remediation，不释放 submission package，不生成客户订单、平台订单、source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只同步 owner response release reopen scan，不创建真实 release 文件，不关闭 hold，不完成 remediation，不释放 submission package，不生成客户订单、平台订单、source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 下一轮候选：`GFIS-RUNTIME-SOP-E2E-254`，建立 submission package owner response release remediation reopen scan。
 
 ## 真实性计数

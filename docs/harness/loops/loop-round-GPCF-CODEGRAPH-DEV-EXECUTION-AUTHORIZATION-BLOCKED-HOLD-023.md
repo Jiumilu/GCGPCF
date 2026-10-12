@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-BLOCKED-HOLD-023
 title: Loop Round - GPCF-CODEGRAPH-DEV-EXECUTION-AUTHORIZATION-BLOCKED-HOLD-023
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 - 输入：022 记录未收到明确授权，默认 `not_authorized`。
 - 目标：停止重复生成派发准备文档，登记 blocked hold。
 - 动作：固化阻塞条件、恢复条件和状态边界。
-- 边界：不派发、不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAES 写入。
+- 边界：不派发、不提交、不推送、不部署、不生产写入、不外部 API 写入、不真实 KDS/WAME 写入。
 
 ## stop
 

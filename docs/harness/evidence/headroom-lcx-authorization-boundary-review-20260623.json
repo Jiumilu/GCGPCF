@@ -10,7 +10,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -37,7 +37,7 @@
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision"
+    "wame_harness_admission_decision"
   ],
   "missing_fields": [],
   "authorization_review": {
@@ -56,7 +56,7 @@
     "authorized_at_present": true,
     "sanitized_production_token_ledger_present": true,
     "rollback_plan_present": true,
-    "waes_harness_admission_decision_present": true,
+    "wame_harness_admission_decision_present": true,
     "production_proxy_started": false,
     "production_sdk_enabled": false,
     "production_external_api_write": false,
@@ -73,7 +73,7 @@
     "not_full_production_authorization": true,
     "not_production_entry": true,
     "not_sanitized_production_token_measurement": true,
-    "not_waes_harness_admitted_for_production": true,
+    "not_wame_harness_admitted_for_production": true,
     "not_real_kds_write": true,
     "not_external_api_write": true,
     "not_sensitive_material_processing": true,

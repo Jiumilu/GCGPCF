@@ -48,7 +48,7 @@ superseded_by: []
 
 ## 3. PilotSession 台账
 
-| pilotSessionId | assistantScope | pilotPhase | startDate | pilotOwner | participantRefs | allowedDataScope | restrictedDataScope | passThreshold | waesGateStatus | kdsWritebackStatus | finalStatus |
+| pilotSessionId | assistantScope | pilotPhase | startDate | pilotOwner | participantRefs | allowedDataScope | restrictedDataScope | passThreshold | wameGateStatus | kdsWritebackStatus | finalStatus |
 |---|---|---|---|---|---|---|---|---:|---|---|---|
 | `PILOT-GH-GFIS-202606-0001` | KQA / GUA / DVA / SOP | internal_project | 待确认 | GPC / KDS 治理负责人 | 楚商云、葛化项目组指定角色 | 脱敏摘要、模板样本、候选资料包、受控评测集 | 敏感原文、未授权合作单位资料、生产密钥、正式财务凭证原文 | 85 | pending | candidate / no_write | planned_empty_ledger |
 
@@ -76,7 +76,7 @@ superseded_by: []
 
 ## 6. AssistantOutputRecord 空白台账
 
-| outputId | sampleRef | assistantType | outputStatus | outputSnapshot | sourceRefsReturned | factLayerReturned | waesActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered | humanReviewer |
+| outputId | sampleRef | assistantType | outputStatus | outputSnapshot | sourceRefsReturned | factLayerReturned | wameActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered | humanReviewer |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `AOR-GH-KQA-001` | `QS-GH-KQA-001` | KQA | pending_run | 待运行 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待确认 |
 | `AOR-GH-KQA-002` | `QS-GH-KQA-002` | KQA | pending_run | 待运行 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待记录 | 待确认 |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-AGENT-REACH-P3-QUALITY-REPLAY-HARNESS-001
 title: Agent-Reach P3 离线质量 Replay Harness Loop 记录
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

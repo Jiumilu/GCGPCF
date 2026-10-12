@@ -35,7 +35,7 @@
       "notification_owner",
       "receipt_owner",
       "receipt_aggregation_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "governance_owner"
@@ -51,7 +51,7 @@
       "candidate_acl_boundary_snapshot",
       "candidate_delivery_hold_conditions",
       "candidate_delivery_blocker_codes",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -115,7 +115,7 @@
       "candidate_acl_boundary_snapshot_present",
       "candidate_delivery_hold_conditions_present",
       "candidate_delivery_blocker_codes_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_aggregation_not_formal_receipt",
@@ -135,7 +135,7 @@
       "candidateAclBoundarySnapshotRef",
       "candidateDeliveryHoldConditionsRef",
       "candidateDeliveryBlockerCodesRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
       "committeeSecretariatRef",
@@ -144,7 +144,7 @@
       "notificationOwnerRef",
       "receiptOwnerRef",
       "receiptAggregationOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "governanceOwnerRef",
@@ -176,7 +176,7 @@
       "write_contribution_score",
       "promote_lifecycle",
       "mark_p0_accepted",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-64A29B82B9
 title: MMC
 project: MMC
-related_projects: [GPC, WAES, KDS, MMC, GPCF]
+related_projects: [GPC, WAME, KDS, MMC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

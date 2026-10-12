@@ -87,8 +87,8 @@
       "raw_text_stored": false
     },
     {
-      "project": "WAES",
-      "scenario": "waes_status_matrix_summary",
+      "project": "WAME",
+      "scenario": "wame_status_matrix_summary",
       "source_path": "09-status/gpcf-project-status-matrix.md",
       "l2_input_tokens_before": 52930,
       "l2_input_tokens_after": 279,

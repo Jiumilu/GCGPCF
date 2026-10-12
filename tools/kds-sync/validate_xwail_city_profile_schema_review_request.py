@@ -88,7 +88,7 @@ def main() -> int:
     require(len(boundary.get("allowed_after_settlement", [])) >= 2, "allowed list missing")
     for item in [
         "xwail_repo_direct_modification_outside_governance",
-        "waes_publication_claim",
+        "wame_publication_claim",
         "production_ready_claim",
         "customer_acceptance_claim",
     ]:
@@ -100,10 +100,10 @@ def main() -> int:
     if decision == "accepted":
         require(gates.get("governance_reviewed") is True, "accepted 状态 governance_reviewed 必须为 true")
         require(gates.get("accepted") is True, "accepted 状态 accepted 门必须为 true")
-        for key in ["waes_authorized", "published", "integrated", "production_ready"]:
+        for key in ["wame_authorized", "published", "integrated", "production_ready"]:
             require(gates.get(key) is False, f"gate must be false: {key}")
     else:
-        for key in ["governance_reviewed", "waes_authorized", "published", "accepted",
+        for key in ["governance_reviewed", "wame_authorized", "published", "accepted",
                     "integrated", "production_ready"]:
             require(gates.get(key) is False, f"gate must be false: {key}")
 
@@ -112,7 +112,7 @@ def main() -> int:
         "review_and_settle_xwail_city_profile_schema_candidate",
         "request_package_generated | true",
         "submitted | true",
-        "waes_authorized | false",
+        "wame_authorized | false",
         "production_ready | false",
         "定版送审",
     ]

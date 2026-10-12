@@ -52,7 +52,7 @@ superseded_by: []
 KOBJ-GH-ORD-202606-0001
 FC-GH-ORD-202606-0001
 WBC-GFIS-ORD-202606-0001
-GATE-WAES-RAG-202606-0001
+GATE-WAME-RAG-202606-0001
 LOOP-GPCF-KDS-202606-0001
 ```
 
@@ -74,7 +74,7 @@ LOOP-GPCF-KDS-202606-0001
 | `DSP` | DisputeRecord | `open` |
 | `DEC` | DecisionRecord | `draft` |
 | `EVT` | EventRecord | `recorded` |
-| `GATE` | WAESGateResult | `pending` |
+| `GATE` | WAMEGateResult | `pending` |
 | `KWE` | KnowledgeWorkItem | `open` |
 | `CONF` | ConfirmationRecord | `pending` |
 | `HEV` | HarnessEvidenceRecord | `recorded` |

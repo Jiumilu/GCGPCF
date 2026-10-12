@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A042EDA2EA
 title: GPCF-AGENT-REACH-AUTHORITATIVE-SOURCE-VERIFICATION-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

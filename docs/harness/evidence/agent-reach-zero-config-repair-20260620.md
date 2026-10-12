@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B2FEDB1128
 title: Agent-Reach零配置渠道修复验证 evidence
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, XiaoC, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -68,7 +68,7 @@ Twitter、Reddit、小红书等登录态平台仍未配置 Cookie，也不得使
 - Agent-Reach 已配置 mcporter 或 Exa MCP。
 - Agent-Reach 已写入 KDS canonical Markdown。
 - Agent-Reach 已创建 GFIS source-of-record。
-- GPCF、GFIS、KDS、Brain、WAES、GPC、PKC、XiaoC 或 XGD 状态可升级。
+- GPCF、GFIS、KDS、Brain、WAME、GPC、PKC、XiaoC 或 XGD 状态可升级。
 
 ## 下一步
 

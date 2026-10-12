@@ -68,8 +68,8 @@ def main() -> int:
     )
     require(grant.get("rollback_plan_id") == "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001", "rollback plan mismatch")
     require(
-        grant.get("waes_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
-        "waes decision mismatch",
+        grant.get("wame_harness_admission_decision") == "admitted_for_sanitized_measurement_precheck",
+        "wame decision mismatch",
     )
     require(grant.get("real_measurement_window_granted") is True, "window must be granted")
     require(grant.get("real_measurement_open") is False, "real measurement must remain closed")

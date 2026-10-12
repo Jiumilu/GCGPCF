@@ -25,7 +25,7 @@ superseded_by: []
 ## 本轮输入资料
 
 - `packages/api/src/kds/v2/routes.ts`
-- `packages/api/src/waes/routes.ts`
+- `packages/api/src/wame/routes.ts`
 - `packages/api/src/kwe/routes.ts`
 - `packages/api/src/gfis/routes.ts`
 - `packages/api/src/governance/routes.ts`
@@ -44,7 +44,7 @@ superseded_by: []
 
 - `packages/api/src/index.ts`
 - `packages/api/src/kds/v2/service.ts`
-- `packages/api/src/waes/service.ts`
+- `packages/api/src/wame/service.ts`
 - `packages/api/src/kwe/service.ts`
 - `packages/api/src/gfis/service.ts`
 - `packages/api/src/governance/service.ts`

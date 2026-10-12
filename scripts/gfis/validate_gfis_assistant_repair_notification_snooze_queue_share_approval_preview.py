@@ -20,7 +20,7 @@ NO_WRITE_KEYS = (
     "writesGfis", "writesGpc", "writesErp", "writesMes",
     "writesApprovalRequest", "writesApprovalDecision", "writesShareLink",
     "writesAclGrant", "writesExternalSharePermission",
-    "writesPublicationApproval", "writesWaesGateResult", "writesKweWorkItem",
+    "writesPublicationApproval", "writesWameGateResult", "writesKweWorkItem",
     "writesHarnessEvidence", "writesKdsLifecycle", "writesKdsFact",
     "writesKdsAcceptedFact", "writesExternalApi",
 )
@@ -73,7 +73,7 @@ def main() -> int:
         "createsApprovalRequests": 0, "createsApprovalDecisions": 0,
         "createsShareLinks": 0, "createsAclGrants": 0,
         "createsExternalSharePermissions": 0, "createsPublicationApprovals": 0,
-        "createsHarnessEvidence": 0, "createsWaesGateResults": 0,
+        "createsHarnessEvidence": 0, "createsWameGateResults": 0,
         "createsKweWorkItems": 0, "persistsEvidence": 0,
         "approvesBusinessWrite": 0, "promotesLifecycle": 0,
         "completesCommitteeDecision": 0,
@@ -107,7 +107,7 @@ def main() -> int:
         "createsApprovalRequest", "createsApprovalDecision", "createsShareLink",
         "createsAclGrant", "createsExternalSharePermission",
         "createsPublicationApproval", "createsHarnessEvidence",
-        "createsWaesGateResult", "createsKweWorkItem", "persistsEvidence",
+        "createsWameGateResult", "createsKweWorkItem", "persistsEvidence",
         "approvesBusinessWrite", "promotesLifecycle", "completesCommitteeDecision",
     )
     flag_count_keys = {
@@ -118,7 +118,7 @@ def main() -> int:
         "createsExternalSharePermission": "createsExternalSharePermissions",
         "createsPublicationApproval": "createsPublicationApprovals",
         "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults",
+        "createsWameGateResult": "createsWameGateResults",
         "createsKweWorkItem": "createsKweWorkItems",
         "persistsEvidence": "persistsEvidence",
         "approvesBusinessWrite": "approvesBusinessWrite",
@@ -180,10 +180,10 @@ def main() -> int:
         f"creates_external_share_permissions={actual['createsExternalSharePermissions']} "
         f"creates_publication_approvals={actual['createsPublicationApprovals']} "
         f"creates_harness_evidence={actual['createsHarnessEvidence']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_approval_request=0 writes_approval_decision=0 "
         "writes_share_link=0 writes_acl_grant=0 writes_external_share_permission=0 writes_publication_approval=0 "
-        "writes_waes_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 "
+        "writes_wame_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 "
         "writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0"
     )
     return 0

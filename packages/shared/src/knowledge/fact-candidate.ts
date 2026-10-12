@@ -1,4 +1,4 @@
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type FactType =
   | "order_fact"
@@ -15,7 +15,7 @@ export type FactType =
 
 export type CandidateGenerator = "ai" | "user" | "system" | "partner";
 
-export type TargetSystem = "GFIS" | "GPC" | "KDS" | "WAES" | "ERP" | "MES";
+export type TargetSystem = "GFIS" | "GPC" | "KDS" | "WAME" | "ERP" | "MES";
 
 export type WritebackStatus =
   | "not_applicable"
@@ -33,7 +33,7 @@ export interface FactCandidate {
   poolRefs: string[];
   generatedBy: CandidateGenerator;
   confidence: number;
-  waesGateStatus: Extract<WaesGateStatus, "pending" | "passed" | "blocked" | "human_required" | "committee_required">;
+  wameGateStatus: Extract<WameGateStatus, "pending" | "passed" | "blocked" | "human_required" | "committee_required">;
   targetSystem?: TargetSystem;
   writebackStatus: Exclude<WritebackStatus, "rolled_back">;
 }

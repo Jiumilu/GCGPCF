@@ -69,7 +69,7 @@ superseded_by: []
 | `recordingPolicy` | redacted_summary_only |
 | `passThreshold` | dry-run 85；official pass 待人工评测 |
 | `redlinePolicy` | hard_fail |
-| `waesGateStatus` | pending / no_real_write |
+| `wameGateStatus` | pending / no_real_write |
 | `kdsWritebackStatus` | local_candidate_only |
 | `finalStatus` | dry_run_evidence_only / pending_human_review |
 
@@ -87,9 +87,9 @@ superseded_by: []
 
 ## 6. AssistantOutputRecord dry-run
 
-| outputId | sampleRef | assistantType | outputStatus | outputSnapshot | sourceRefsReturned | factLayerReturned | waesActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered |
+| outputId | sampleRef | assistantType | outputStatus | outputSnapshot | sourceRefsReturned | factLayerReturned | wameActionReturned | nextActionReturned | forbiddenOutputDetected | redlineRefsTriggered |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `AOR-GH-D050-KQA-001` | `EVAL-GH-KQA-001` | KQA | ready_for_dry_run_eval | GFIS 当前可支撑预运营期候选事实、资料验收和使用引导；正式生产仍需真实订单、质量、POD、WAES/KDS 回执和人工确认。 | true | true | true | true | false | none |
+| `AOR-GH-D050-KQA-001` | `EVAL-GH-KQA-001` | KQA | ready_for_dry_run_eval | GFIS 当前可支撑预运营期候选事实、资料验收和使用引导；正式生产仍需真实订单、质量、POD、WAME/KDS 回执和人工确认。 | true | true | true | true | false | none |
 | `AOR-GH-D050-KQA-002` | `EVAL-GH-KQA-002` | KQA | ready_for_dry_run_eval | 开票只作为统计和财务过程口径；正式收入以到账为准，收益分配需人工或委员会确认。 | true | true | true | true | false | none |
 | `AOR-GH-D050-GUA-001` | `EVAL-GH-GUA-001` | GUA | ready_for_dry_run_eval | 电话需求先形成 `DSR-GH-*` 和 `POO-GH-*` 候选；补客户、产品、数量、交期、来源、OEM、WAME 记录，不生成正式订单。 | true | true | true | true | false | none |
 | `AOR-GH-D050-GUA-002` | `EVAL-GH-GUA-002` | GUA | ready_for_dry_run_eval | 现代精工资料作为 OEM 承接事实候选；目标工厂记录未来承接和建设运营准备，两者责任不得混同。 | true | true | true | true | false | none |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DF19BA9F40
 title: minimum-closed-loop
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

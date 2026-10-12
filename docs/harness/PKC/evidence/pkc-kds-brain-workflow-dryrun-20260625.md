@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PKC-KDS-BRAIN-WORKFLOW-DRYRUN-20260625
 title: PKC-KDS-Brain Workflow Dry-run 证据 2026-06-25
 project: PKC
-related_projects: [WAES, KDS, Brain, PKC, XiaoC]
+related_projects: [WAME, KDS, Brain, PKC, XiaoC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文补齐 `PKC-KDS-BRAIN-WORKFLOW-DRYRUN-001`，用于把 PKC 从 `baseline_controlled` 推进到 `task_pack_ready / local_dev_dryrun_boundary` 候选。
 
-本文只验证 PKC 本地 lint、typecheck、unit test 可复现，不验证真实 KDS/Brain/XiaoC/WAES 集成，不写入真实个人数据，不授予 stage、commit、push、deploy、release、accepted、integrated 或客户验收权限。
+本文只验证 PKC 本地 lint、typecheck、unit test 可复现，不验证真实 KDS/Brain/XiaoC/WAME 集成，不写入真实个人数据，不授予 stage、commit、push、deploy、release、accepted、integrated 或客户验收权限。
 
 ## 2. 控制结论
 
@@ -64,7 +64,7 @@ customer_accepted = false
 | 真实进度 | `task_pack_ready / local_dev_dryrun_boundary` |
 | 真实研发 | `local_dev_verified`，仅限 lint/typecheck/unit test |
 | 真实运行 | `not_verified_this_round`，未启动 dev server 或浏览器 smoke |
-| 真实集成 | `not_verified_this_round`，未调用真实 KDS/Brain/XiaoC/WAES |
+| 真实集成 | `not_verified_this_round`，未调用真实 KDS/Brain/XiaoC/WAME |
 | 真实交付 | `not_collected` |
 | 客户验收 | `not_collected` |
 

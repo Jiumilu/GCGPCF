@@ -8,7 +8,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -69,11 +69,11 @@
       "future_action": "attach rollback runbook identifier before any measurement execution"
     },
     {
-      "field": "waes_harness_admission_decision",
+      "field": "wame_harness_admission_decision",
       "current_value": "admitted_for_sanitized_measurement_precheck",
       "source_evidence": "HEADROOM-LCX-AUTHORIZED-MEASUREMENT-PRECHECK-20260621",
-      "future_runner_input": "waes_harness_admission_decision",
-      "future_action": "keep precheck-only until a new WAES/Harness decision is issued"
+      "future_runner_input": "wame_harness_admission_decision",
+      "future_action": "keep precheck-only until a new WAME/Harness decision is issued"
     }
   ],
   "future_runner_inputs": [
@@ -82,12 +82,12 @@
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision"
+    "wame_harness_admission_decision"
   ],
   "execution_guard": {
     "executable_now": false,
     "requires_real_measurement_authorization_window": true,
-    "requires_waes_harness_decision": true,
+    "requires_wame_harness_decision": true,
     "requires_sanitized_token_ledger_metadata_only": true,
     "requires_rollback_plan_id": true,
     "requires_no_production_proxy": true,
@@ -119,7 +119,7 @@
   "notes": [
     "This field map only aligns current precheck artifacts to future runner inputs.",
     "It does not authorize production measurement or real business equivalence measurement.",
-    "It remains precheck-only until WAES/Harness issues a new decision.",
+    "It remains precheck-only until WAME/Harness issues a new decision.",
     "All production gates remain false."
   ]
 }

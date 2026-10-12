@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9F97322FB4
 title: CodeGraph 开发执行层项目群收口证据
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ CodeGraph 已经从工具层推进到开发执行层治理链：
 - 不声明 integrated。
 - 不声明 production_ready。
 - 不声明 GFIS CodeGraph sync-only closure 完成。
-- 不声明 WAES final approval。
+- 不声明 WAME final approval。
 - 不声明 Harness final acceptance。
 - 不声明已 commit、push 或 deploy。
 

@@ -70,7 +70,7 @@
           },
           {
             "channel": "rss",
-            "project": "WAES",
+            "project": "WAME",
             "query": "quality control process",
             "query_id": "p8-q03"
           },
@@ -228,7 +228,7 @@
     "project_scope": [
       "GPCF",
       "KDS",
-      "WAES",
+      "WAME",
       "Brain",
       "GFIS",
       "GPC",

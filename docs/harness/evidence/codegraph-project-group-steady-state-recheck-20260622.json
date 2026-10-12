@@ -21,7 +21,7 @@
     {"repo_id": "gfis", "repo": "GlobalCloud GFIS", "pending": {"added": 1, "modified": 0, "removed": 0}, "pending_total": 1, "fileCount": 1022, "nodeCount": 13152, "edgeCount": 38142, "classification": "policy_exception_watch"},
     {"repo_id": "gpc", "repo": "GlobalCloud GPC", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 70, "nodeCount": 705, "edgeCount": 1995, "classification": "steady"},
     {"repo_id": "pvaos", "repo": "GlobalCloud PVAOS", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 604, "nodeCount": 8899, "edgeCount": 28838, "classification": "steady"},
-    {"repo_id": "waes", "repo": "GlobalCloud WAES", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 281, "nodeCount": 3511, "edgeCount": 11298, "classification": "steady"},
+    {"repo_id": "wame", "repo": "GlobalCloud WAME", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 281, "nodeCount": 3511, "edgeCount": 11298, "classification": "steady"},
     {"repo_id": "kds", "repo": "GlobalCloud KDS", "pending": {"added": 0, "modified": 1, "removed": 0}, "pending_total": 1, "fileCount": 518, "nodeCount": 3499, "edgeCount": 7115, "classification": "active_drift_watch"},
     {"repo_id": "brain", "repo": "GlobalCloud Brain", "pending": {"added": 0, "modified": 4, "removed": 0}, "pending_total": 4, "fileCount": 156, "nodeCount": 2861, "edgeCount": 6381, "classification": "active_drift_watch"},
     {"repo_id": "pkc", "repo": "GlobalCloud PKC", "pending": {"added": 0, "modified": 0, "removed": 0}, "pending_total": 0, "fileCount": 110, "nodeCount": 1034, "edgeCount": 2685, "classification": "steady"},

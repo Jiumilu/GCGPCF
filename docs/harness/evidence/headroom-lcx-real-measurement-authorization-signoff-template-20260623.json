@@ -9,7 +9,7 @@
       "GPCF",
       "KDS",
       "Brain",
-      "WAES",
+      "WAME",
       "GFIS",
       "GPC",
       "PVAOS",
@@ -31,7 +31,7 @@
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision"
+    "wame_harness_admission_decision"
   ],
   "required_signature_field_count": 6,
   "signature_fields": [

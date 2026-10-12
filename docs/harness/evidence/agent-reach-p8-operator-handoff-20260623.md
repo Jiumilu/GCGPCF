@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P8-OPERATOR-HANDOFF-20260623
 title: Agent-Reach P8 Operator Handoff 2026-06-23
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

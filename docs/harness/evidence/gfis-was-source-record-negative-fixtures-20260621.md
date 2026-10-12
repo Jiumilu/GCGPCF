@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6417D8DF39
 title: GFIS WAS Source Record Negative Fixtures Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,14 +50,14 @@ GPCF 已为 GFIS-WAS source-record 提交前扫描器补齐负例回放门禁。
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 
 ## 非声明
 
 - 本 evidence 不向 GFIS 接收目录写入 fixture。
 - 本 evidence 不创建真实 source-of-record。
-- 本 evidence 不创建 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 本 evidence 不创建 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 本 evidence 不证明 GFIS 真实业务 SOP E2E 完成。
 - 本 evidence 不升级 accepted、integrated 或 production_ready。
 

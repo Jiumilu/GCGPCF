@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E9D4362ECF
 title: OKF v0.1 摘要批准负向 fixtures 证据
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

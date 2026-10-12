@@ -11,7 +11,7 @@
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -34,7 +34,7 @@
     "authorized_at": "2026-06-23T14:30:00+08:00",
     "sanitized_production_token_ledger": "docs/harness/evidence/headroom-lcx-sanitized-production-usage-ledger-20260623.json",
     "rollback_plan_id": "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001",
-    "waes_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
+    "wame_harness_admission_decision": "admitted_for_sanitized_measurement_precheck"
   },
   "human_attestations": {
     "telemetry_off_confirmed": "confirmed_for_precheck_only",
@@ -43,7 +43,7 @@
     "no_real_kds_write": "confirmed_for_precheck_only",
     "no_external_api_write": "confirmed_for_precheck_only",
     "rollback_plan_reviewed": "confirmed_for_precheck_only",
-    "waes_harness_evidence_attached": "confirmed_for_precheck_only"
+    "wame_harness_evidence_attached": "confirmed_for_precheck_only"
   },
   "signature_block": {
     "signer_name": "lujunxiang",

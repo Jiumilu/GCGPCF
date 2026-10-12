@@ -72,7 +72,7 @@ def main() -> int:
         "GPCF",
         "KDS",
         "Brain",
-        "WAES",
+        "WAME",
         "GFIS",
         "GPC",
         "PVAOS",

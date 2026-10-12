@@ -24,7 +24,7 @@ export interface KweApprovalRouteNoWrite {
   writesKdsLifecycle: 0;
   writesKdsFact: 0;
   writesKdsAcceptedFact: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesBusinessSystem: 0;
   writesTargetReceipt: 0;
   writesCommitteeDecisionCompletion: 0;
@@ -45,7 +45,7 @@ export interface KweApprovalRouteItem {
   reviewerRequirement: KwePromotionReviewerRequirement;
   sensitiveHandling: KweConfirmationSensitiveHandling;
   evidenceRefs: string[];
-  waesGateRefs: string[];
+  wameGateRefs: string[];
   lifecycleAuditRefs: string[];
   routeQueue: KweApprovalRouteQueue;
   routeStatus: KweApprovalRouteStatus;

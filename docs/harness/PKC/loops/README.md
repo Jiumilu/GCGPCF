@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-50A2759E00
 title: loops
 project: PKC
-related_projects: [GPC, WAES, KDS, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

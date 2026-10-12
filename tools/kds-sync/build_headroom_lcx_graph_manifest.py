@@ -46,7 +46,7 @@ PROJECT_IDS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -139,7 +139,7 @@ def build_manifest() -> dict[str, Any]:
             {
                 "layer_id": "authorization_layer",
                 "status": "admitted_for_sanitized_measurement_precheck",
-                "purpose": "authorized_measurement_window_and_waes_harness_decision",
+                "purpose": "authorized_measurement_window_and_wame_harness_decision",
                 "source_paths": [
                     "docs/harness/evidence/headroom-lcx-authorized-measurement-precheck-20260621.json",
                     "docs/harness/evidence/headroom-lcx-measurement-admission-request-20260622.json",
@@ -228,7 +228,7 @@ def build_manifest() -> dict[str, Any]:
             "independent_replay_status": independent_replay.get("status"),
             "precheck_evidence_id": precheck.get("evidence_id"),
             "precheck_status": precheck.get("status"),
-            "waes_harness_admission_decision": precheck.get("waes_harness_admission_decision"),
+            "wame_harness_admission_decision": precheck.get("wame_harness_admission_decision"),
             "authorized_window_id": precheck.get("authorized_window_id", "LCX-MEASURE-20260622-001"),
             "authorized_by": precheck.get("authorized_by", "lujunxiang / GPCF owner"),
             "authorized_at": precheck.get("authorized_at", "2026-06-22T08:42:06+08:00"),
@@ -396,7 +396,7 @@ def write_outputs(manifest: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-20260623",
             "title: Headroom LCX Graph Manifest Evidence",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, WAES, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, WAME, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -451,7 +451,7 @@ def write_outputs(manifest: dict[str, Any]) -> None:
             "",
             "## 15 项目域",
             "",
-            "GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS",
+            "GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS",
             "",
             "## 门禁",
             "",
@@ -477,7 +477,7 @@ def write_outputs(manifest: dict[str, Any]) -> None:
             "",
             "## 下一步",
             "",
-            "只有在 WAES/Harness 另行裁决并补齐真实测量授权后，才可以把 production branch 从 blocked 推进到受控测量执行。",
+            "只有在 WAME/Harness 另行裁决并补齐真实测量授权后，才可以把 production branch 从 blocked 推进到受控测量执行。",
         ]
     ) + "\n"
     OUTPUT_MD.write_text(md_text, encoding="utf-8")
@@ -489,7 +489,7 @@ def write_outputs(manifest: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-GRAPH-MANIFEST-LOOP-001",
             "title: Loop Round GPCF Headroom LCX Graph Manifest 001",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, WAES, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, WAME, GFIS, GPC, PVAOS, Edge, PKC, Brain, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",

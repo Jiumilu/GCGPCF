@@ -54,17 +54,17 @@
     {
       "batch_id": "p8-batch-1",
       "channel": "web",
-      "current_query": "WAES evidence admission quality gate search",
+      "current_query": "WAME evidence admission quality gate search",
       "details": [
         "overall_score=0.2"
       ],
-      "project": "WAES",
+      "project": "WAME",
       "query_id": "p8-q03",
       "reasons": [
         "low_score"
       ],
       "required_next_authorization": "p8-batch-1",
-      "suggested_query": "WAES GlobalCloud controlled evidence runtime governance source",
+      "suggested_query": "WAME GlobalCloud controlled evidence runtime governance source",
       "write_scope": "evidence_only"
     },
     {

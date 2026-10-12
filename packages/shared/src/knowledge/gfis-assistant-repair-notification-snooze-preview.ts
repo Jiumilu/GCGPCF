@@ -37,7 +37,7 @@ export type GfisAssistantRepairNotificationSnoozePreviewBlockedAction =
   | "create_event_record"
   | "create_action_receipt"
   | "create_harness_evidence"
-  | "create_waes_gate_result"
+  | "create_wame_gate_result"
   | "create_kwe_work_item"
   | "persist_evidence"
   | "approve_business_write"
@@ -49,7 +49,7 @@ export interface GfisAssistantRepairNotificationSnoozePreviewNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesSnoozeRecord: 0;
   writesScheduledReminder: 0;
@@ -110,7 +110,7 @@ export interface GfisAssistantRepairNotificationSnoozePreview {
   createsEventRecord: false;
   createsActionReceipt: false;
   createsHarnessEvidence: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   createsKweWorkItem: false;
   persistsEvidence: false;
   approvesBusinessWrite: false;
@@ -138,7 +138,7 @@ export interface GfisAssistantRepairNotificationSnoozePreviewPolicy {
     snoozePreviewIsNotEventRecord: boolean;
     snoozePreviewIsNotActionReceipt: boolean;
     snoozePreviewIsNotHarnessEvidence: boolean;
-    snoozePreviewIsNotWaesResult: boolean;
+    snoozePreviewIsNotWameResult: boolean;
     snoozePreviewIsNotKweWorkItem: boolean;
     snoozePreviewIsNotLifecycleChange: boolean;
     snoozePreviewIsNotBusinessWriteback: boolean;
@@ -152,7 +152,7 @@ export interface GfisAssistantRepairNotificationSnoozePreviewPolicy {
     createsEventRecordMustBeFalse: boolean;
     createsActionReceiptMustBeFalse: boolean;
     createsHarnessEvidenceMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
     persistsEvidenceMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;

@@ -25,7 +25,7 @@ activation_precondition:
   codex_automations_paused: 3
   hermes_jobs_disabled_and_paused: 11
   gbrain_autopilot_and_worker: quiet
-  matching_gcworld_or_waes_import_process: none_observed
+  matching_gcworld_or_wame_import_process: none_observed
 authorized_scope:
   target_paths: 29
   classification_before_content: required

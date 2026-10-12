@@ -69,8 +69,8 @@ superseded_by: []
 | affectedParties | 受影响主体 |
 | classificationLevel | DSR-L0 / DSR-L1 / DSR-L2 / DSR-L3 |
 | trustLevel | T0 / T1 / T2 / T3 |
-| confirmationStatus | candidate / submitted / waes_checked / human_review_pending / committee_review_pending / confirmed / allocated / frozen / disputed / withdrawn / rejected / retroactive_deduction |
-| waesGateRefs | 规则、证据、权限、边界或例外记录 |
+| confirmationStatus | candidate / submitted / wame_checked / human_review_pending / committee_review_pending / confirmed / allocated / frozen / disputed / withdrawn / rejected / retroactive_deduction |
+| wameGateRefs | 规则、证据、权限、边界或例外记录 |
 | decisionRecordRefs | 委员会或人工确认记录 |
 | loopEvidenceRefs | GPCF LOOP 证据 |
 | reversible | 是否允许撤回、冲销、追溯扣减或重新确认 |
@@ -80,7 +80,7 @@ superseded_by: []
 ```text
 candidate
   -> submitted
-  -> waes_checked
+  -> wame_checked
   -> human_review_pending
   -> committee_review_pending
   -> confirmed

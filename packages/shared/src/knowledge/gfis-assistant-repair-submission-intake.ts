@@ -2,8 +2,8 @@ import type {
   GfisAssistantRepairPromptBlockedAction,
 } from "./gfis-assistant-repair-prompt-checklist";
 import type {
-  GfisAssistantWaesGuidanceSurface,
-} from "./gfis-assistant-waes-guidance-packet";
+  GfisAssistantWameGuidanceSurface,
+} from "./gfis-assistant-wame-guidance-packet";
 
 export type GfisAssistantRepairSubmissionIntakeStatus =
   | "draft"
@@ -35,7 +35,7 @@ export interface GfisAssistantRepairSubmissionIntakeNoWrite {
   writesGpc: 0;
   writesErp: 0;
   writesMes: 0;
-  writesWaesGateResult: 0;
+  writesWameGateResult: 0;
   writesKweWorkItem: 0;
   writesGapRecord: 0;
   writesBountyRecord: 0;
@@ -64,7 +64,7 @@ export interface GfisAssistantRepairSubmissionIntake {
   guidancePacketRef: string;
   tenantId: string;
   projectId: string;
-  assistantSurface: GfisAssistantWaesGuidanceSurface;
+  assistantSurface: GfisAssistantWameGuidanceSurface;
   intakeStatus: GfisAssistantRepairSubmissionIntakeStatus;
   recommendedRoute: GfisAssistantRepairSubmissionRecommendedRoute;
   submittedItemRefs: string[];
@@ -78,7 +78,7 @@ export interface GfisAssistantRepairSubmissionIntake {
   createsGapRecord: false;
   createsBountyRecord: false;
   createsKweWorkItem: false;
-  createsWaesGateResult: false;
+  createsWameGateResult: false;
   routesToHumanQueue: false;
   approvesBusinessWrite: false;
   promotesLifecycle: false;
@@ -99,7 +99,7 @@ export interface GfisAssistantRepairSubmissionIntakePolicy {
     intakeIsNotEvidenceRecord: boolean;
     intakeIsNotKweWorkItem: boolean;
     intakeIsNotGapOrBounty: boolean;
-    intakeIsNotWaesResult: boolean;
+    intakeIsNotWameResult: boolean;
     intakeIsNotBusinessWriteback: boolean;
     intakeIsNotCommitteeDecision: boolean;
     routesAreRecommendationsOnly: boolean;
@@ -108,7 +108,7 @@ export interface GfisAssistantRepairSubmissionIntakePolicy {
     createsGapRecordMustBeFalse: boolean;
     createsBountyRecordMustBeFalse: boolean;
     createsKweWorkItemMustBeFalse: boolean;
-    createsWaesGateResultMustBeFalse: boolean;
+    createsWameGateResultMustBeFalse: boolean;
     routesToHumanQueueMustBeFalse: boolean;
     approvesBusinessWriteMustBeFalse: boolean;
     promotesLifecycleMustBeFalse: boolean;

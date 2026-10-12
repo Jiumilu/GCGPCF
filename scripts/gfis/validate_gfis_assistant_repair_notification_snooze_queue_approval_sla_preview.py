@@ -20,7 +20,7 @@ NO_WRITE_KEYS = (
     "writesGfis", "writesGpc", "writesErp", "writesMes",
     "writesSlaTimer", "writesReminder", "writesEscalationSchedule",
     "writesEscalationOwner", "writesApprovalRoute", "writesApprovalRequest",
-    "writesApprovalDecision", "writesWaesGateResult", "writesKweWorkItem",
+    "writesApprovalDecision", "writesWameGateResult", "writesKweWorkItem",
     "writesHarnessEvidence", "writesKdsLifecycle", "writesKdsFact",
     "writesKdsAcceptedFact", "writesExternalApi",
 )
@@ -73,7 +73,7 @@ def main() -> int:
         "schedulesEscalations": 0, "assignsEscalationOwners": 0,
         "createsApprovalRoutes": 0, "createsApprovalRequests": 0,
         "createsApprovalDecisions": 0, "createsHarnessEvidence": 0,
-        "createsWaesGateResults": 0, "createsKweWorkItems": 0,
+        "createsWameGateResults": 0, "createsKweWorkItems": 0,
         "persistsEvidence": 0, "approvesBusinessWrite": 0,
         "promotesLifecycle": 0, "completesCommitteeDecision": 0,
     }
@@ -106,7 +106,7 @@ def main() -> int:
         "createsSlaTimer", "createsReminder", "schedulesEscalation",
         "assignsEscalationOwner", "createsApprovalRoute",
         "createsApprovalRequest", "createsApprovalDecision",
-        "createsHarnessEvidence", "createsWaesGateResult", "createsKweWorkItem",
+        "createsHarnessEvidence", "createsWameGateResult", "createsKweWorkItem",
         "persistsEvidence", "approvesBusinessWrite", "promotesLifecycle",
         "completesCommitteeDecision",
     )
@@ -119,7 +119,7 @@ def main() -> int:
         "createsApprovalRequest": "createsApprovalRequests",
         "createsApprovalDecision": "createsApprovalDecisions",
         "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults",
+        "createsWameGateResult": "createsWameGateResults",
         "createsKweWorkItem": "createsKweWorkItems",
         "persistsEvidence": "persistsEvidence",
         "approvesBusinessWrite": "approvesBusinessWrite",
@@ -187,10 +187,10 @@ def main() -> int:
         f"assigns_escalation_owners={actual['assignsEscalationOwners']} "
         f"creates_approval_routes={actual['createsApprovalRoutes']} "
         f"creates_approval_requests={actual['createsApprovalRequests']} creates_approval_decisions={actual['createsApprovalDecisions']} "
-        f"creates_harness_evidence={actual['createsHarnessEvidence']} creates_waes_gate_results={actual['createsWaesGateResults']} "
+        f"creates_harness_evidence={actual['createsHarnessEvidence']} creates_wame_gate_results={actual['createsWameGateResults']} "
         f"creates_kwe_work_items={actual['createsKweWorkItems']} writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 "
         "writes_sla_timer=0 writes_reminder=0 writes_escalation_schedule=0 writes_escalation_owner=0 "
-        "writes_approval_route=0 writes_approval_request=0 writes_approval_decision=0 writes_waes_gate_result=0 "
+        "writes_approval_route=0 writes_approval_request=0 writes_approval_decision=0 writes_wame_gate_result=0 "
         "writes_kwe_work_item=0 writes_harness_evidence=0 writes_kds_lifecycle=0 writes_kds_fact=0 "
         "writes_kds_accepted_fact=0 writes_external_api=0"
     )

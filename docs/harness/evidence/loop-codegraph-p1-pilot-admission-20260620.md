@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-23CD9F95E8
 title: Loop CodeGraph P1 Pilot Admission Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -63,5 +63,5 @@ P1 真正执行前必须明确：
 
 - 本 evidence 不证明 CodeGraph 已安装。
 - 本 evidence 不证明 GFIS runtime SOP E2E 已通过。
-- 本 evidence 不创建 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
+- 本 evidence 不创建 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
 - 本 evidence 不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、提交、推送或合并。

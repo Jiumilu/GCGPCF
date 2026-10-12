@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C1F7C8AF57
 title: GPCF-L4-GFIS-REAL-SYNC-002
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -64,7 +64,7 @@ GFIS REAL-002 只证明 pending_business_verification 机制可用：
 - `real_runtime_primary_keys=0`
 - `real_review_queue_items=0`
 - `real_runtime_intake_items=0`
-- `real_waes_reviews=0`
+- `real_wame_reviews=0`
 - `real_verified_artifacts=0`
 
 下一步只有在真实客户订单、平台订单回执、采购订单、客户确认、客户签样或等效正式确认到达并通过人工核验后，才能进入 `GFIS-RUNTIME-SOP-E2E-REAL-003` runtime primary key gate。

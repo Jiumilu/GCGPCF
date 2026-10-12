@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2F7E9A6C31
 title: GPCF Session Mainline Preflight Enforcement 002
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

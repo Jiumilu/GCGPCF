@@ -29,7 +29,7 @@ REQUIRED_CASE_FIELDS = [
     "payload_tier",
     "harness_evidence_ref",
     "owner_authorization_present",
-    "waes_decision",
+    "wame_decision",
     "answer_equivalence",
     "write_requested",
     "write_allowed",
@@ -88,7 +88,7 @@ def is_live_ready(case: dict) -> bool:
         and bool(case.get("owner_authorization_present", False))
         and bool(case.get("runtime_dependency_ok", False))
         and bool(case.get("rollback_plan_verified", False))
-        and str(case.get("waes_decision", "")).lower() == "pass"
+        and str(case.get("wame_decision", "")).lower() == "pass"
         and str(case.get("expected_blocked_reason", "")).strip().lower() == "none"
     )
 
@@ -130,7 +130,7 @@ def case_to_record(case: dict, allow_live_write: bool, dry_run_output_only: bool
         "runtime_dependency_ok": bool(case.get("runtime_dependency_ok", False)),
         "rollback_plan_verified": bool(case.get("rollback_plan_verified", False)),
         "owner_authorization_present": bool(case.get("owner_authorization_present", False)),
-        "waes_decision": case["waes_decision"],
+        "wame_decision": case["wame_decision"],
         "answer_equivalence": case["answer_equivalence"],
         "write_requested": bool(case.get("write_requested", False)),
         "write_allowed": bool(case.get("write_allowed", False)),

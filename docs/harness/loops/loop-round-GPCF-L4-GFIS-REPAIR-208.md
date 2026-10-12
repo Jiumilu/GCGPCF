@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9EB84B90F5
 title: GPCF-L4-GFIS-REPAIR-208
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -94,7 +94,7 @@ owner_response_allowed=0
 submission_package_allowed=0
 review_queue=0
 runtime_intake=0
-waes_review=0
+wame_review=0
 verified=0
 runtime_primary_key_ready=0
 runtime_primary_key_missing=1
@@ -105,7 +105,7 @@ hold_release_allowed=0
 runtime_sop_e2e=repair_required
 ```
 
-本轮只证明缺真实派发确认文件已转为 open hold。它不证明请求已授权、已派发、已确认、授权 envelope 已提交、客户订单/平台订单已取得、运行层主键已创建、review queue 已建立、runtime intake 已进入、WAES review 已完成或 accepted/integrated 已成立。
+本轮只证明缺真实派发确认文件已转为 open hold。它不证明请求已授权、已派发、已确认、授权 envelope 已提交、客户订单/平台订单已取得、运行层主键已创建、review queue 已建立、runtime intake 已进入、WAME review 已完成或 accepted/integrated 已成立。
 
 ## 验证记录
 
@@ -130,10 +130,10 @@ runtime_sop_e2e=repair_required
 - 未执行 Git push。
 - 未执行生产写入。
 - 未执行真实外部 API 写入。
-- 未执行真实 KDS/WAES 写入。
+- 未执行真实 KDS/WAME 写入。
 - 未执行 `bench migrate`、schema sync、权限变更、部署或数据库迁移。
 - 未升级 accepted/integrated。
 
 ## 下一轮建议
 
-`GFIS-RUNTIME-SOP-E2E-202`：围绕 `CustomerRequirementOrPlatformOrder` 建立 dispatch confirmation post-scan hold release precheck；在真实派发确认文件、人工授权、接收人身份、分发通道、KDS backlink 与 WAES candidate 到达前继续保持 `hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`verified=0`。
+`GFIS-RUNTIME-SOP-E2E-202`：围绕 `CustomerRequirementOrPlatformOrder` 建立 dispatch confirmation post-scan hold release precheck；在真实派发确认文件、人工授权、接收人身份、分发通道、KDS backlink 与 WAME candidate 到达前继续保持 `hold_release_allowed=0`、`review_queue=0`、`runtime_intake=0`、`verified=0`。

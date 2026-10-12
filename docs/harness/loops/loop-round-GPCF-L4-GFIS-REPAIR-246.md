@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F1871CDA11
 title: GPCF-L4-GFIS-REPAIR-246
 project: GPCF
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ superseded_by: []
 - `runtime_primary_key_ready=0`
 - `review_queue=0`
 - `runtime_intake=0`
-- `waes_review=0`
+- `wame_review=0`
 - `verified=0`
 - `runtime_sop_e2e=repair_required`
 
@@ -67,7 +67,7 @@ superseded_by: []
 ## 下一步
 
 - `GFIS-RUNTIME-SOP-E2E-237`：建立 release override approval request dispatch confirmation receiving schema precheck。
-- 未取得真实 source-of-record、派发授权确认和有效派发确认前，不得创建 owner response、submission package、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 未取得真实 source-of-record、派发授权确认和有效派发确认前，不得创建 owner response、submission package、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## 真实性计数
 

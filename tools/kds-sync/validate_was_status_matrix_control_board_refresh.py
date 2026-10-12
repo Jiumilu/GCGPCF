@@ -16,7 +16,7 @@ CONTROL_BOARD = ROOT / "02-governance/loop/LOOP_CONTROL_BOARD.md"
 STATUS_MATRIX = ROOT / "09-status/gpcf-project-status-matrix.md"
 FIXTURE_DIR = ROOT / "fixtures/was"
 
-PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAES", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
+PROJECT_GROUP = ["GFIS", "GPC", "PVAOS", "WAME", "KDS", "Brain", "PKC", "XiaoC", "XGD", "XiaoG", "MMC", "GPCF", "Studio", "WAS"]
 HISTORICAL_STATUS_MATRIX_VERSION = "v5.72"
 CURRENT_STATUS_MATRIX_VERSION = "v5.75"
 REQUIRED_MARKERS = [
@@ -34,7 +34,7 @@ ZERO_BOUNDARY_KEYS = [
     "runtime_primary_key_ready",
     "review_queue",
     "runtime_intake",
-    "waes_review",
+    "wame_review",
     "verified",
 ]
 FALSE_BOUNDARY_KEYS = ["accepted", "integrated", "production_ready"]
@@ -155,7 +155,7 @@ def main() -> int:
         "was_status_matrix_control_board_refresh=pass "
         f"project_group_scope=14/14 current_status_matrix={CURRENT_STATUS_MATRIX_VERSION} "
         "refreshed_documents=2 positive_fixtures=1 negative_fixtures=3 "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101"
     )

@@ -87,7 +87,7 @@ REQUIRED_PROJECTS = [
     "WAS世界资产体系",
     "GlobalCloud XWAIL",
     "GlobalCloud AaaS / AAAS",
-    "GlobalCloud WAES",
+    "GlobalCloud WAME",
     "GlobalCloud GFIS",
     "GlobalCloud GPC",
     "GlobalCloud PVAOS",
@@ -109,7 +109,7 @@ REGISTER_PROJECT_ALIASES = {
 }
 
 FIRST_BATCH_PATHS = [
-    PROJECT_ROOT / "GlobalCloud WAES/GlobalCloud WAES 总体方案.md",
+    PROJECT_ROOT / "GlobalCloud WAME/GlobalCloud WAME 总体方案.md",
     PROJECT_ROOT / "GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md",
     PROJECT_ROOT / "GlobalCloud KDS/GlobalCloud KDS 总体方案.md",

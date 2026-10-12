@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA8CD920C2
 title: GPCF-L4-GFIS-REPAIR-077 GFIS 辽宁远航报价客户确认原件运行层 API
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -78,4 +78,4 @@ runtime_sop_e2e_master=failed_or_repair_required
 
 ## 下一步
 
-继续构建真实 customer confirmation submission 的接收与隔离路径；若取得辽宁远航客户确认函或等效正式确认原件脱敏索引，再创建第一条 real submission 候选并进入人工/WAES/KDS 复核。
+继续构建真实 customer confirmation submission 的接收与隔离路径；若取得辽宁远航客户确认函或等效正式确认原件脱敏索引，再创建第一条 real submission 候选并进入人工/WAME/KDS 复核。

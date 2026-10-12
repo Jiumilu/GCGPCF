@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AA3842DB1C
 title: LOOP Round GPCF KDS DKS-139
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,14 +20,14 @@ superseded_by: []
 
 ## 本轮目标
 
-建立 resolution option approval packet preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-138 resolution option preview，但只展示候选审批包、候选审批人、必需证据、审批路径和下一步建议，不创建真实 approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、KWE 工单、WAES 结果、KDS 状态提升或业务写回。
+建立 resolution option approval packet preview 的 no-write 规则、类型、夹具和校验器，承接 DKS-138 resolution option preview，但只展示候选审批包、候选审批人、必需证据、审批路径和下一步建议，不创建真实 approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、KWE 工单、WAME 结果、KDS 状态提升或业务写回。
 
 ## 输入
 
 - DKS-138 resolution option preview 边界。
 - DKS-137 SLA breach review preview 边界。
 - `okf/committee-policy.yaml`。
-- `okf/waes-gate-policy.yaml`。
+- `okf/wame-gate-policy.yaml`。
 - GFIS / Brain / PKC no-write contract 覆盖清单。
 
 ## 动作
@@ -54,4 +54,4 @@ superseded_by: []
 
 ## 反馈
 
-DKS-139 仍是本地预览与候选展示能力，不代表 approval packet、approval request、approval decision、committee decision、freeze action、KWE 工单、WAES 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-140：approval packet routing queue preview no-write，用于展示候选审批包路由队列，但仍不得写入真实审批、裁决、冻结或 evidence。
+DKS-139 仍是本地预览与候选展示能力，不代表 approval packet、approval request、approval decision、committee decision、freeze action、KWE 工单、WAME 结果、Harness evidence 或委员会决议已经创建。下一轮可继续推进 DKS-140：approval packet routing queue preview no-write，用于展示候选审批包路由队列，但仍不得写入真实审批、裁决、冻结或 evidence。

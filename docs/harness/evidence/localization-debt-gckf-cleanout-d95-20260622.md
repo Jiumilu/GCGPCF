@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOCALIZATIONDEBTGCKFCLEANOUTD9520260622
 title: GC-Knowledge Fabric D95 GCKF 中文化债清零证据
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ D95 对 `docs/gc-knowledge-fabric` 剩余非标题中文化债进行受控修复
 - 人工修复审查、委员会修复审查、停机权释放包。
 - 冻结解除候选、执行锁续期候选、审批刷新候选。
 - 验证计划刷新、回滚演练刷新、事件审计轨迹链接。
-- Harness 证据候选链接、WAES 重入门禁、KWE 重入工单。
+- Harness 证据候选链接、WAME 重入门禁、KWE 重入工单。
 - 解冻不执行、重试不执行、保持无写入边界。
 
 ## 边界

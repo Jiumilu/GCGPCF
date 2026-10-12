@@ -1,7 +1,7 @@
 policy_id: okf.redaction_policy
 version: v0.1
 status: draft
-owner: WAES
+owner: WAME
 updated_at: "2026-06-20"
 sensitive_classes:
   - contract_sensitive_terms

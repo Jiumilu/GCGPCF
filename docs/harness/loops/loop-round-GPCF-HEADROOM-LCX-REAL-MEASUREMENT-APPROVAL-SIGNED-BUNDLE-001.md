@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-001
 title: Loop Round GPCF Headroom LCX Real Measurement Approval Signed Bundle 001
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -51,4 +51,4 @@ python3 tools/kds-sync/validate_headroom_lcx_real_measurement_approval_signed_bu
 
 ## 下一轮
 
-如果还要继续，就去补 WAES/Harness 后续裁决或下一阶段受控记录，不进入生产测量。
+如果还要继续，就去补 WAME/Harness 后续裁决或下一阶段受控记录，不进入生产测量。

@@ -8,7 +8,7 @@ purpose: >
   checklists. Preflight items combine writeback batch diff and KDS lifecycle
   transition audit packets to determine the next approval path only. They do
   not approve writeback, write business systems, mutate KDS lifecycle, create
-  WAES gate results, create KWE work items, confirm revenue or scores, or call
+  WAME gate results, create KWE work items, confirm revenue or scores, or call
   external APIs.
 
 required_batch_fields:
@@ -32,10 +32,10 @@ required_item_fields:
   - lifecycle_audit_refs
   - field_paths
   - evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - harness_evidence_refs
   - sensitive_handling
-  - waes_gate_status
+  - wame_gate_status
   - lifecycle_audit_status
   - reviewer_requirement
   - preflight_status
@@ -73,7 +73,7 @@ no_write_guards:
   writes_mes: 0
   writes_kds_accepted_fact: 0
   writes_kds_lifecycle: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_target_receipt: 0
   writes_revenue_or_score_confirmation: 0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-DIRTY-DISPOSITION-QUEUE-20260625
 title: GlobalCloud 项目群 Dirty 仓逐仓处置队列 2026-06-25
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0

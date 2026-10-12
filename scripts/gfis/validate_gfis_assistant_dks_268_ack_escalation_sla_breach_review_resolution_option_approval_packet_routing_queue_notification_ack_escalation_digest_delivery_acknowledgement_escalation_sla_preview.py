@@ -13,7 +13,7 @@ TYPE_FILE = ROOT / "packages" / "shared" / "src" / "knowledge" / f"{SLUG}.ts"
 FIXTURE = ROOT / "fixtures" / "gfis" / f"{SLUG}-dry-run.json"
 UPSTREAM = ROOT / "fixtures" / "gfis" / "gfis-assistant-dks-267-ack-escalation-sla-breach-review-resolution-option-approval-packet-routing-queue-notification-ack-escalation-digest-delivery-acknowledgement-escalation-preview-dry-run.json"
 TYPE_PREFIX = "GfisAssistantDks268AckEscalationSlaBreachReviewResolutionOptionApprovalPacketRoutingQueueNotificationAckEscalationDigestDeliveryAcknowledgementEscalationSlaPreview"
-NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesSlaTimer', 'writesEscalation', 'writesReminder', 'writesEscalationTask', 'writesDeliveryAcknowledgement', 'writesApprovalRequest', 'writesApprovalDecision', 'writesWaesGateResult', 'writesKweWorkItem', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
+NO_WRITE_KEYS = ('writesGfis', 'writesGpc', 'writesErp', 'writesMes', 'writesSlaTimer', 'writesEscalation', 'writesReminder', 'writesEscalationTask', 'writesDeliveryAcknowledgement', 'writesApprovalRequest', 'writesApprovalDecision', 'writesWameGateResult', 'writesKweWorkItem', 'writesHarnessEvidence', 'writesKdsLifecycle', 'writesKdsFact', 'writesKdsAcceptedFact', 'writesExternalApi')
 
 def camel_to_snake(value: str) -> str:
     return re.sub(r"(?<!^)(?=[A-Z])", "_", value).lower()
@@ -60,13 +60,13 @@ def main() -> int:
         "createsReminders": 0, "createsEscalationTasks": 0,
         "createsDeliveryAcknowledgements": 0, "createsApprovalRequests": 0,
         "createsApprovalDecisions": 0, "createsHarnessEvidence": 0,
-        "createsWaesGateResults": 0, "createsKweWorkItems": 0,
+        "createsWameGateResults": 0, "createsKweWorkItems": 0,
         "persistsEvidence": 0, "approvesBusinessWrite": 0,
         "promotesLifecycle": 0, "completesCommitteeDecision": 0,
     }
     surface_keys = {"brain": "brainSurface", "pkc": "pkcSurface", "gfis_assistant": "gfisAssistantSurface"}
-    false_flags = ("createsSlaTimer", "createsEscalation", "createsReminder", "createsEscalationTask", "createsDeliveryAcknowledgement", "createsApprovalRequest", "createsApprovalDecision", "createsHarnessEvidence", "createsWaesGateResult", "createsKweWorkItem", "persistsEvidence", "approvesBusinessWrite", "promotesLifecycle", "completesCommitteeDecision")
-    flag_count_keys = {"createsSlaTimer": "createsSlaTimers", "createsEscalation": "createsEscalations", "createsReminder": "createsReminders", "createsEscalationTask": "createsEscalationTasks", "createsDeliveryAcknowledgement": "createsDeliveryAcknowledgements", "createsApprovalRequest": "createsApprovalRequests", "createsApprovalDecision": "createsApprovalDecisions", "createsHarnessEvidence": "createsHarnessEvidence", "createsWaesGateResult": "createsWaesGateResults", "createsKweWorkItem": "createsKweWorkItems", "persistsEvidence": "persistsEvidence", "approvesBusinessWrite": "approvesBusinessWrite", "promotesLifecycle": "promotesLifecycle", "completesCommitteeDecision": "completesCommitteeDecision"}
+    false_flags = ("createsSlaTimer", "createsEscalation", "createsReminder", "createsEscalationTask", "createsDeliveryAcknowledgement", "createsApprovalRequest", "createsApprovalDecision", "createsHarnessEvidence", "createsWameGateResult", "createsKweWorkItem", "persistsEvidence", "approvesBusinessWrite", "promotesLifecycle", "completesCommitteeDecision")
+    flag_count_keys = {"createsSlaTimer": "createsSlaTimers", "createsEscalation": "createsEscalations", "createsReminder": "createsReminders", "createsEscalationTask": "createsEscalationTasks", "createsDeliveryAcknowledgement": "createsDeliveryAcknowledgements", "createsApprovalRequest": "createsApprovalRequests", "createsApprovalDecision": "createsApprovalDecisions", "createsHarnessEvidence": "createsHarnessEvidence", "createsWameGateResult": "createsWameGateResults", "createsKweWorkItem": "createsKweWorkItems", "persistsEvidence": "persistsEvidence", "approvesBusinessWrite": "approvesBusinessWrite", "promotesLifecycle": "promotesLifecycle", "completesCommitteeDecision": "completesCommitteeDecision"}
     for preview in previews:
         preview_id = preview["slaPreviewId"]
         missing = sorted(required_fields - {camel_to_snake(key) for key in preview})
@@ -136,10 +136,10 @@ def main() -> int:
         f"total_remaining={actual['totalRemainingMinutes']} total_overdue={actual['totalOverdueMinutes']} "
         "creates_sla_timers=0 creates_escalations=0 creates_reminders=0 creates_escalation_tasks=0 "
         "creates_delivery_acknowledgements=0 creates_approval_requests=0 creates_approval_decisions=0 "
-        "creates_harness_evidence=0 creates_waes_gate_results=0 creates_kwe_work_items=0 "
+        "creates_harness_evidence=0 creates_wame_gate_results=0 creates_kwe_work_items=0 "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_sla_timer=0 writes_escalation=0 "
         "writes_reminder=0 writes_escalation_task=0 writes_delivery_acknowledgement=0 writes_approval_request=0 "
-        "writes_approval_decision=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 "
+        "writes_approval_decision=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 "
         "writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0"
     )
     return 0

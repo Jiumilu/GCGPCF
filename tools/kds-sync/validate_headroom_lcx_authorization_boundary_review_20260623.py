@@ -17,7 +17,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -89,7 +89,7 @@ def main() -> int:
         "authorized_at_present",
         "sanitized_production_token_ledger_present",
         "rollback_plan_present",
-        "waes_harness_admission_decision_present",
+        "wame_harness_admission_decision_present",
     ]:
         require(gates.get(key) is True, f"gate must be true: {key}")
     for key in [

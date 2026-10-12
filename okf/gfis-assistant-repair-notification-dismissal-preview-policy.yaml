@@ -8,7 +8,7 @@ purpose: >
   repair notification previews. Dismissal previews describe what the UI may show
   when a user closes, defers, retains, or is blocked from closing a notification
   preview. They do not create dismissal records, notifications, read receipts,
-  audit trace records, event records, action receipts, Harness evidence, WAES
+  audit trace records, event records, action receipts, Harness evidence, WAME
   gate results, KWE work items, lifecycle changes, business writes, revenue or
   score confirmations, quota transfers, bounty settlements, or external API
   calls.
@@ -41,7 +41,7 @@ required_fields:
   - creates_event_record
   - creates_action_receipt
   - creates_harness_evidence
-  - creates_waes_gate_result
+  - creates_wame_gate_result
   - creates_kwe_work_item
   - persists_evidence
   - approves_business_write
@@ -82,7 +82,7 @@ blocked_actions:
   - create_event_record
   - create_action_receipt
   - create_harness_evidence
-  - create_waes_gate_result
+  - create_wame_gate_result
   - create_kwe_work_item
   - persist_evidence
   - approve_business_write
@@ -99,7 +99,7 @@ hard_boundaries:
   dismissal_preview_is_not_event_record: true
   dismissal_preview_is_not_action_receipt: true
   dismissal_preview_is_not_harness_evidence: true
-  dismissal_preview_is_not_waes_result: true
+  dismissal_preview_is_not_wame_result: true
   dismissal_preview_is_not_kwe_work_item: true
   dismissal_preview_is_not_lifecycle_change: true
   dismissal_preview_is_not_business_writeback: true
@@ -111,7 +111,7 @@ hard_boundaries:
   creates_event_record_must_be_false: true
   creates_action_receipt_must_be_false: true
   creates_harness_evidence_must_be_false: true
-  creates_waes_gate_result_must_be_false: true
+  creates_wame_gate_result_must_be_false: true
   creates_kwe_work_item_must_be_false: true
   persists_evidence_must_be_false: true
   approves_business_write_must_be_false: true
@@ -123,7 +123,7 @@ no_write_guards:
   writes_gpc: 0
   writes_erp: 0
   writes_mes: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_kwe_work_item: 0
   writes_dismissal_record: 0
   writes_notification: 0

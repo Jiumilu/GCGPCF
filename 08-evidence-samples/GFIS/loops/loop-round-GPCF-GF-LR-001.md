@@ -45,7 +45,7 @@ superseded_by: []
 | 新增 | `08-evidence-samples/GFIS/gfis-business-object-candidates.md` | 首批业务对象候选 |
 | 新增 | `08-evidence-samples/GFIS/gfis-document-record-candidates.md` | 单据与记录候选 |
 | 新增 | `08-evidence-samples/GFIS/gfis-quality-gate-candidates.md` | 质量、安全和业务门禁候选 |
-| 新增 | `08-evidence-samples/GFIS/gfis-gpc-boundary-notes.md` | GFIS/GPC/WAES/KDS/Brain 边界说明 |
+| 新增 | `08-evidence-samples/GFIS/gfis-gpc-boundary-notes.md` | GFIS/GPC/WAME/KDS/Brain 边界说明 |
 | 新增 | `08-evidence-samples/GFIS/gfis-field-study-data-capture.md` | 现场采集表 |
 | 新增 | `08-evidence-samples/GFIS/evidence-index.md` | GFIS 首轮 evidence 索引 |
 | 新增 | `GFIS:docs/harness/loop-state.md` | GFIS 独立项目仓 Loop 状态 |

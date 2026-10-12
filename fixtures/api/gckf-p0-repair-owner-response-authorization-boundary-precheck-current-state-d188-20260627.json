@@ -26,10 +26,10 @@
       "intakeUnlockAllowed": false
     },
     {
-      "signalId": "waes_review_note",
+      "signalId": "wame_review_note",
       "sourceActionItemId": "D187-AQ-003",
       "sourceActionItemStatus": "blocked_waiting_external_input",
-      "requiredEvidence": "WAES review note",
+      "requiredEvidence": "WAME review note",
       "satisfied": false,
       "intakeUnlockAllowed": false
     },

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011
 title: 业务域切片登记（GreenChainGraphBusinessDomain）· 2026-10-11
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 登记定位
 
-本文登记 `GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011`：按 WAS 项目群 registry `future_project_policy`（admission_required／scope binding／六类目映射／不绕 KDS-WAES loop），将**工业绿链业务域（图谱只读投影）**登记为域切片条目（候选），与 F-015（GCWORLD 组织域只读切片）并列。
+本文登记 `GPCF-DOMAIN-SLICE-REGISTRY-GREENCHAIN-GRAPH-20261011`：按 WAS 项目群 registry `future_project_policy`（admission_required／scope binding／六类目映射／不绕 KDS-WAME loop），将**工业绿链业务域（图谱只读投影）**登记为域切片条目（候选），与 F-015（GCWORLD 组织域只读切片）并列。
 
 - 上游：`industrial-green-chain-graph-domain-registration-request-20261011`（**已受理 accepted，2026-10-11**）。
 - 基础 registry：`was-project-group-ontology-registry-20260621.json`（**既有 43 条一字未动**）。
@@ -47,7 +47,7 @@ superseded_by: []
 |---|---|
 | real_source_records | 0 |
 | runtime_primary_key_ready | 0 |
-| waes_review | 0 |
+| wame_review | 0 |
 | accepted | false |
 | integrated | false |
 | production_ready | false |

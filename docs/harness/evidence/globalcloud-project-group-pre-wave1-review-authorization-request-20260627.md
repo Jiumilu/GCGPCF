@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-GROUP-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627
 title: GlobalCloud 项目群 Pre-Wave1 Review 授权桥接请求 2026-06-27
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文承接当前 `3` 仓 post-scheme review 边界，把 `GlobalCoud GPCF`、`GlobalCloud GFIS`、`GlobalCloud SOP` 的 review 授权入口收口成一个 Wave 1 之前的桥接包。
 
-本文不新增任何新的 review 动作类型，也不替代现有 `AUTH-*` 授权项。它只把现有 `3` 仓 review 边界集中成一个“Pre-Wave1 必经入口”，用于明确先后顺序：先完成当前 `GPCF/GFIS/SOP` review 授权，再进入 `WAES/GFIS/GPC/Brain` 的 Wave 1 授权请求。
+本文不新增任何新的 review 动作类型，也不替代现有 `AUTH-*` 授权项。它只把现有 `3` 仓 review 边界集中成一个“Pre-Wave1 必经入口”，用于明确先后顺序：先完成当前 `GPCF/GFIS/SOP` review 授权，再进入 `WAME/GFIS/GPC/Brain` 的 Wave 1 授权请求。
 
 `AAAS/XWAIL` delegated wrapper 单仓锚点已回退到各自主任务入口；`SOP` 因当前仓库仍 dirty，作为 active Pre-Wave1 review 边界继续保留。历史 delegated wrapper 单仓核对卡仍保留在本文附录中，相关确认后状态传导摘要也继续保留，供历史 replay 或单仓复核复用。KDS blocker resolved，`GlobalCloud KDS` 已 clean 且不再属于当前 active Pre-Wave1 review 边界。
 
@@ -249,7 +249,7 @@ AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627
 repo_path = /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud AAAS
 baseline_source = globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md
 expected_evidence = docs/harness/evidence/project-group-aaas-loop-gate-delegate-review-receipt-*.md
-downstream_unlock_candidate = AAAS-WAES-BINDING-PRECHECK-001
+downstream_unlock_candidate = AAAS-WAME-BINDING-PRECHECK-001
 review_boundary_state = loop_gate_delegate_review_candidate
 ```
 
@@ -266,7 +266,7 @@ review_boundary_state = loop_gate_delegate_review_candidate
 ```text
 1. 真实 KDS API 同步
 2. stage / commit / push / delete / cleanup
-3. AaaS 真实计费、客户订阅、WAES 发布
+3. AaaS 真实计费、客户订阅、WAME 发布
 4. accepted / integrated / customer_accepted
 ```
 
@@ -310,7 +310,7 @@ AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627
 repo_path = /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XWAIL
 baseline_source = globalcloud-project-group-external-loop-gate-delegate-baseline-20260627.md
 expected_evidence = docs/harness/evidence/project-group-xwail-loop-gate-delegate-review-receipt-*.md
-downstream_unlock_candidate = XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001
+downstream_unlock_candidate = XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001
 review_boundary_state = loop_gate_delegate_review_candidate
 ```
 
@@ -327,7 +327,7 @@ review_boundary_state = loop_gate_delegate_review_candidate
 ```text
 1. 真实 KDS API 同步
 2. stage / commit / push / delete / cleanup
-3. XWAIL 完整工具链、WAES 发布、AaaS 绑定完成
+3. XWAIL 完整工具链、WAME 发布、AaaS 绑定完成
 4. accepted / integrated / customer_accepted
 ```
 
@@ -428,7 +428,7 @@ wave1_entry_blocked_by_pre_review = true
 receipt_recorded_for_auth = AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627
 target_ledger = globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md
 allowed_state_propagation = aaas_delegate_review_boundary_recorded_only
-downstream_unlock_candidate = AAAS-WAES-BINDING-PRECHECK-001
+downstream_unlock_candidate = AAAS-WAME-BINDING-PRECHECK-001
 authorization_granted = false
 action_executed = false
 ```
@@ -441,7 +441,7 @@ action_executed = false
 receipt_recorded_for_auth = AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627
 target_ledger = globalcloud-project-group-post-scheme-recognition-authorization-receipt-ledger-20260626.md
 allowed_state_propagation = xwail_delegate_review_boundary_recorded_only
-downstream_unlock_candidate = XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001
+downstream_unlock_candidate = XWAIL-WAME-AAAS-CONTRACT-PRECHECK-001
 authorization_granted = false
 action_executed = false
 ```

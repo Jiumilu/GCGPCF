@@ -2,7 +2,7 @@
 doc_id: GPCF-LOOP-UI-STUDIO-WORKBENCH-001
 title: Loop Round GPCF-UI-STUDIO-WORKBENCH-001
 project: GPCF
-related_projects: [GPC, WAES, GPCF, Studio]
+related_projects: [GPC, WAME, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## 输入
 
 - `04-ui-delivery/GlobalCloud项目群界面工程整体实施方案.md`
-- `04-ui-delivery/WAES专业工作台母框架升级方案.md`
+- `04-ui-delivery/WAME专业工作台母框架升级方案.md`
 - `04-ui-delivery/Studio操作工作台验证方案.md`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/hermes/kanban/KanbanTaskCard.vue`
@@ -105,7 +105,7 @@ Status ceiling: ui_evidence_candidate
 |---|---|---|---|
 | G1 Surface Structure | pass | `KanbanView.vue:236-370`、`KanbanTaskDrawer.vue:368-557` | 补浏览器截图 |
 | G2 Design Tokens | partial | `theme.ts:3-79`、`variables.scss:7-56`、`KanbanTaskCard.vue:78-86`、`KanbanView.vue:410-428`、`KanbanTaskDrawer.vue:741-779` | 统一状态/治理/AI 语义令牌 |
-| G3 Component Consistency | pass | `KanbanView.vue:239-280`、`KanbanTaskCard.vue:68-158`、`KanbanTaskDrawer.vue:694-964` | 对齐 WAES 母框架词汇表 |
+| G3 Component Consistency | pass | `KanbanView.vue:239-280`、`KanbanTaskCard.vue:68-158`、`KanbanTaskDrawer.vue:694-964` | 对齐 WAME 母框架词汇表 |
 | G4 Evidence And Governance | partial | `KanbanTaskDrawer.vue:374-419`、`470-546`、`529-536` | 补 source record、audit receipt、confirmer/time |
 | G5 AI Fact Separation | partial | `KanbanTaskDrawer.vue:121-142`、`470-487`、`552-557` | 明确 AI 建议与业务事实分区 |
 | G6 Accessibility | partial | `KanbanView.vue:286-304`、`457-460`、`KanbanTaskCard.vue:40-62` | 为点击容器补键盘语义和焦点路径 |
@@ -157,5 +157,5 @@ UI caveats：
 ## 12. 下一轮建议
 
 - 下一轮 Round ID：`GPCF-UI-STUDIO-WORKBENCH-002`
-- 下一轮目标：启动 `Studio/KanbanView` 浏览器级验证，并形成 WAES 母框架映射清单
-- 下一轮仍禁止：不得宣称 `WAES -> Studio` 已完成，不得宣称 `Studio` 已通过 accepted/integrated/production_ready
+- 下一轮目标：启动 `Studio/KanbanView` 浏览器级验证，并形成 WAME 母框架映射清单
+- 下一轮仍禁止：不得宣称 `WAME -> Studio` 已完成，不得宣称 `Studio` 已通过 accepted/integrated/production_ready

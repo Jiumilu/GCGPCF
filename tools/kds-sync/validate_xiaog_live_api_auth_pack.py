@@ -32,12 +32,12 @@ REQUIRED_DOC_TOKENS = [
     "round = XiaoG-L4-011",
     "readonly_queries = 3",
     "pkc_notification_candidates = 1",
-    "waes_audit_mocks = 2",
+    "wame_audit_mocks = 2",
     "execution_traces = 1",
     "network_call_executed = false",
     "live_gfis_gpc_api_executed = false",
     "real_pkc_notification_sent = false",
-    "real_waes_audit_write_executed = false",
+    "real_wame_audit_write_executed = false",
     "device_ota_executed = false",
     "docker_deployment_executed = false",
     "token_access_executed = false",
@@ -48,7 +48,7 @@ REQUIRED_DOC_TOKENS = [
     "customer_accepted = false",
     "xiaog_l4_readonly_audit_mock=pass",
     "不声明 live GFIS/GPC API 已验证",
-    "不声明真实 WAES 审计写入已完成",
+    "不声明真实 WAME 审计写入已完成",
 ]
 
 REQUIRED_PLAN_TOKENS = [
@@ -69,7 +69,7 @@ REQUIRED_XIAOG_TOKENS = [
     "XiaoG-L4-011",
     "ReadOnlyQueryResult",
     "PkcNotificationCandidate",
-    "WaesAuditWriteMock",
+    "WameAuditWriteMock",
     "ExecutionTrace",
     "authorization_boundary",
     "network",
@@ -88,7 +88,7 @@ FORBIDDEN_CLAIMS = [
     "network_call_executed = true",
     "live_gfis_gpc_api_executed = true",
     "real_pkc_notification_sent = true",
-    "real_waes_audit_write_executed = true",
+    "real_wame_audit_write_executed = true",
     "device_ota_executed = true",
     "docker_deployment_executed = true",
     "token_access_executed = true",
@@ -159,8 +159,8 @@ def main() -> int:
                 failures.append("XiaoG readonly query count mismatch")
             if expected.get("pkc_notification_candidates") != 1:
                 failures.append("XiaoG PKC notification candidate count mismatch")
-            if expected.get("waes_audit_write_mocks") != 2:
-                failures.append("XiaoG WAES audit mock count mismatch")
+            if expected.get("wame_audit_write_mocks") != 2:
+                failures.append("XiaoG WAME audit mock count mismatch")
             for key in [
                 "production_write_allowed",
                 "real_external_api_write_allowed",
@@ -191,7 +191,7 @@ def main() -> int:
         "harness_check": "pass",
         "readonly_queries": 3,
         "pkc_notification_candidates": 1,
-        "waes_audit_mocks": 2,
+        "wame_audit_mocks": 2,
         "network_call_executed": False,
         "device_ota_executed": False,
         "production_write_executed": False,

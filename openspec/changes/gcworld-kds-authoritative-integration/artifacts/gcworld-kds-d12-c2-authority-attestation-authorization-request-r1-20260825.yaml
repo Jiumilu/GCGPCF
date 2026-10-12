@@ -40,7 +40,7 @@ activation_preconditions:
     codex_automations_paused: [macmini-workwiki, workwiki-kds, automation-5]
     hermes_jobs_disabled_and_paused: 11
     gbrain_autopilot_and_worker: quiet
-    gcworld_or_waes_manual_import_process: none_observed
+    gcworld_or_wame_manual_import_process: none_observed
   stop_if:
     - 任一基线字段、路径类型、数量、状态摘要或严格元数据摘要不匹配
     - 任一生产者恢复或冻结范围内出现写入活动

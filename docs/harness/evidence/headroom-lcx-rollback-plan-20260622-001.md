@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-666816F27E
 title: Headroom LCX Rollback Plan 20260622-001
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,9 +40,9 @@ superseded_by: []
 |---|---|---|---|
 | 1 | 立即停止受控 runner，冻结当前 round | GPCF | `loop_round_id` |
 | 2 | 保持 `production_token_measurement_allowed=false`，`measured_production_tokens=false` | GPCF | graph manifest |
-| 3 | 确认无 production proxy / SDK / external write / real KDS write | WAES | sensitive gate evidence |
+| 3 | 确认无 production proxy / SDK / external write / real KDS write | WAME | sensitive gate evidence |
 | 4 | 回收并归档受控日志、token 计数、route manifest | KDS | harness evidence |
-| 5 | 重新读取授权前置、measurement request 和 WAES/Harness decision | WAES/Harness | admission evidence |
+| 5 | 重新读取授权前置、measurement request 和 WAME/Harness decision | WAME/Harness | admission evidence |
 | 6 | 仅在授权窗口重新成立后，恢复到 sanitized precheck，而不是 production | GPCF | precheck evidence |
 
 ## 验证

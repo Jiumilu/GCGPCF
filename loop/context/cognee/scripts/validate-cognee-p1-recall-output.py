@@ -31,7 +31,7 @@ REQUIRED_RECORD_FIELDS = {
     "retrieved_relevant_count",
     "retrieved_precision",
     "marker_gate",
-    "waes_decision",
+    "wame_decision",
     "answer_equivalence",
     "token_before",
     "token_after",

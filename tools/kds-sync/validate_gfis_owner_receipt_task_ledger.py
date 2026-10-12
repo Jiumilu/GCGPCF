@@ -12,7 +12,7 @@ LEDGER = ROOT / "docs/harness/evidence/gfis-owner-receipt-task-ledger-20260617.j
 REQUIRED_TASK_KEYS = [
     "customer_requirement_platform_order_source_of_record",
     "customer_requirement_platform_order_dispatch_confirmation",
-    "waes_confirmation",
+    "wame_confirmation",
     "kds_write_receipt",
     "runtime_primary_key",
 ]
@@ -34,7 +34,7 @@ def main() -> None:
         fail("task_keys_or_order_invalid")
     if ledger.get("completed_task_count") != 0:
         fail("completed_task_count_must_be_0")
-    for gate_name in ["review_queue", "runtime_intake", "waes_review", "verified"]:
+    for gate_name in ["review_queue", "runtime_intake", "wame_review", "verified"]:
         if ledger.get(gate_name) != 0:
             fail(f"{gate_name}_must_remain_0")
     non_claims = ledger.get("non_claims", {})

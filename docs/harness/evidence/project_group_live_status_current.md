@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECTGROUPLIVESTATUSCURRENT20260701
 title: GlobalCloud 项目群当前 Live 状态快照
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD]
 domain: harness
 type: project_group_live_status_current
 status: controlled
@@ -33,13 +33,13 @@ generated_at: 2026-10-12 10:00:07 +0800
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud WAES, GlobalCloud KDS`
+- observed_dirty: `GlobalCloud WAME, GlobalCloud KDS`
 - observed_ahead: `GlobalCloud Studio`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud WAES`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud WAME`
 - stable_ahead: `none`
 - volatile_dirty: `none`
 - sensitive_repos: `none`
-- review_boundary: `GlobalCloud KDS, GlobalCloud WAES`
+- review_boundary: `GlobalCloud KDS, GlobalCloud WAME`
 
 ## Repo details
 
@@ -49,7 +49,7 @@ generated_at: 2026-10-12 10:00:07 +0800
 | `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud WAES` | 30 | 0 | 0 | `none` |
+| `GlobalCloud WAME` | 30 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 0 | 4 | 0 | `none` |
 | `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |

@@ -107,7 +107,7 @@ def main() -> int:
 doc_id: GPCF-DOC-41C37C2200
 title: OKF v0.1 Summary Approval Request Gate
 project: KDS
-related_projects: [GPCF, KDS, WAES]
+related_projects: [GPCF, KDS, WAME]
 domain: docs
 status: controlled
 version: v1.0

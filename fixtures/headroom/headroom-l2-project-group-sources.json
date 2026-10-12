@@ -33,10 +33,10 @@
       "required_markers": ["GlobalCloud Brain", "L3 Ready", "ready_for_review"]
     },
     {
-      "project": "WAES",
-      "scenario": "waes_status_matrix_summary",
+      "project": "WAME",
+      "scenario": "wame_status_matrix_summary",
       "source_path": "09-status/gpcf-project-status-matrix.md",
-      "required_markers": ["GlobalCloud WAES", "governance", "ready_for_review"]
+      "required_markers": ["GlobalCloud WAME", "governance", "ready_for_review"]
     },
     {
       "project": "GFIS",

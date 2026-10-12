@@ -60,8 +60,8 @@
           "profile_admission_gate": true
         },
         {
-          "project": "WAES",
-          "scenario": "waes_status_matrix_summary",
+          "project": "WAME",
+          "scenario": "wame_status_matrix_summary",
           "source_path": "09-status/gpcf-project-status-matrix.md",
           "admission_gate": true,
           "baseline_cost": 29640.8,
@@ -245,8 +245,8 @@
           "profile_admission_gate": true
         },
         {
-          "project": "WAES",
-          "scenario": "waes_status_matrix_summary",
+          "project": "WAME",
+          "scenario": "wame_status_matrix_summary",
           "source_path": "09-status/gpcf-project-status-matrix.md",
           "admission_gate": true,
           "baseline_cost": 68809.0,
@@ -430,8 +430,8 @@
           "profile_admission_gate": true
         },
         {
-          "project": "WAES",
-          "scenario": "waes_status_matrix_summary",
+          "project": "WAME",
+          "scenario": "wame_status_matrix_summary",
           "source_path": "09-status/gpcf-project-status-matrix.md",
           "admission_gate": true,
           "baseline_cost": 137618.0,

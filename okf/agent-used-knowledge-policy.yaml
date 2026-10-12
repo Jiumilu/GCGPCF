@@ -23,7 +23,7 @@ minimum_invocation_fields:
   - retrieved_object_refs
   - source_refs
   - evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - output_candidate_refs
   - overread_signals
   - outcome
@@ -69,7 +69,7 @@ required_gates:
   - rag_admission_filter
   - sensitive_data_gate
   - external_share_gate
-  - waes_overread_gate
+  - wame_overread_gate
 no_write_assertions:
   writes_accepted: 0
   writes_public: 0

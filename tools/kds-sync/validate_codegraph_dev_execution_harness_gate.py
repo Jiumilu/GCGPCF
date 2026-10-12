@@ -129,7 +129,7 @@ def main() -> int:
         "changed_files_outside_allowed_scope",
         "accepted_integrated_or_production_ready_true",
         "production_write_or_external_api_write_true",
-        "codegraph_claimed_as_final_waes_or_harness_decision",
+        "codegraph_claimed_as_final_wame_or_harness_decision",
     ]:
         require(rule in evidence["blocking_rules"], f"evidence missing blocking rule: {rule}")
 
@@ -138,7 +138,7 @@ def main() -> int:
         "affected.affectedTests=[]",
         "fallback_reason",
         "review_rework_count",
-        "CodeGraph 替代 WAES/Harness/人工验收裁决",
+        "CodeGraph 替代 WAME/Harness/人工验收裁决",
         "GPCF-CODEGRAPH-DEV-EXECUTION-FIRST-REAL-CANDIDATE-004",
     ]:
         require(phrase in policy, f"policy missing phrase: {phrase}")

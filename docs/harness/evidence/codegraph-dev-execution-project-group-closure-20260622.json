@@ -80,7 +80,7 @@
     "integrated",
     "production_ready",
     "GFIS CodeGraph sync-only closure completed",
-    "WAES final approval",
+    "WAME final approval",
     "Harness final acceptance",
     "git commit performed",
     "git push performed",
@@ -121,7 +121,7 @@
     "gfis_clean_reindex_performed": false,
     "gfis_file_cleanup_performed": false,
     "codegraph_sync_only_closure": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "next_round": "GPCF-CODEGRAPH-DEV-EXECUTION-DOCUMENT-LOCALIZATION-DEBT-011"
 }

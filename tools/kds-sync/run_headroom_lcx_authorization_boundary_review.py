@@ -16,7 +16,7 @@ PROJECTS = [
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -43,7 +43,7 @@ REQUIRED_FIELDS = [
     "authorized_at",
     "sanitized_production_token_ledger",
     "rollback_plan_id",
-    "waes_harness_admission_decision",
+    "wame_harness_admission_decision",
 ]
 
 
@@ -95,7 +95,7 @@ def main() -> int:
             "authorized_at_present": False,
             "sanitized_production_token_ledger_present": False,
             "rollback_plan_present": False,
-            "waes_harness_admission_decision_present": False,
+            "wame_harness_admission_decision_present": False,
             "production_proxy_started": False,
             "production_sdk_enabled": False,
             "production_external_api_write": False,
@@ -111,7 +111,7 @@ def main() -> int:
             "not_full_production_authorization": True,
             "not_production_entry": True,
             "not_sanitized_production_token_measurement": True,
-            "not_waes_harness_admitted": True,
+            "not_wame_harness_admitted": True,
             "not_real_kds_write": True,
             "not_external_api_write": True,
             "not_sensitive_material_processing": True,
@@ -125,7 +125,7 @@ def main() -> int:
             "authorized_at": "required",
             "sanitized_production_token_ledger": "required",
             "rollback_plan_id": "required",
-            "waes_harness_admission_decision": "required",
+            "wame_harness_admission_decision": "required",
         },
     }
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
@@ -136,7 +136,7 @@ def main() -> int:
 doc_id: GPCF-DOC-7974880641
 title: Headroom LCX Authorization Boundary Review Evidence
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: docs
 status: controlled
 version: v1.0
@@ -180,7 +180,7 @@ superseded_by: []
 | authorized_at_present | false |
 | sanitized_production_token_ledger_present | false |
 | rollback_plan_present | false |
-| waes_harness_admission_decision_present | false |
+| wame_harness_admission_decision_present | false |
 | production_proxy_started | false |
 | production_sdk_enabled | false |
 | production_external_api_write | false |

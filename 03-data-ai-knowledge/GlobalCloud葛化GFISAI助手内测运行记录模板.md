@@ -81,7 +81,7 @@ PilotSession
 | recordingPolicy | 是 | 默认 redacted_summary_only |
 | passThreshold | 是 | 默认 85 |
 | redlinePolicy | 是 | hard_fail |
-| waesGateStatus | 是 | pending / governance_recorded / governance_blocked |
+| wameGateStatus | 是 | pending / governance_recorded / governance_blocked |
 | kdsWritebackStatus | 是 | none / candidate / pending_api / recorded |
 | finalStatus | 是 | planned / running / completed / suspended / rejected |
 
@@ -129,7 +129,7 @@ PilotSession
 | outputSnapshot | 是 | 脱敏输出摘要 |
 | sourceRefsReturned | 是 | 助手是否给出来源 |
 | factLayerReturned | 是 | 是否区分事实状态 |
-| waesActionReturned | 是 | 是否输出 WAME 动作 |
+| wameActionReturned | 是 | 是否输出 WAME 动作 |
 | nextActionReturned | 是 | 是否输出下一步 |
 | forbiddenOutputDetected | 是 | true / false |
 | redlineRefsTriggered | 否 | 触发的红线编号 |

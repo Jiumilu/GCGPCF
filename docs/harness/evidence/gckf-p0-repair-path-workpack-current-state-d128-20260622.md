@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0REPAIRPATHWORKPACKCURRENTSTATED12820260622
 title: GCKF P0 Repair Path Workpack 当前态证据 D128
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0

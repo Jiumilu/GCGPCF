@@ -7,7 +7,7 @@ purpose: >
   Define local dry-run contract for KWE approval route packets. Route packets
   map GFIS writeback approval preflight items to KWE queue suggestions only.
   They do not create KWE work items, mutate KDS lifecycle, write facts, create
-  WAES gate results, write business systems, complete committee decisions,
+  WAME gate results, write business systems, complete committee decisions,
   confirm revenue or scores, or call external APIs.
 
 required_packet_fields:
@@ -32,7 +32,7 @@ required_item_fields:
   - reviewer_requirement
   - sensitive_handling
   - evidence_refs
-  - waes_gate_refs
+  - wame_gate_refs
   - lifecycle_audit_refs
   - route_queue
   - route_status
@@ -89,7 +89,7 @@ no_write_guards:
   writes_kds_lifecycle: 0
   writes_kds_fact: 0
   writes_kds_accepted_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_business_system: 0
   writes_target_receipt: 0
   writes_committee_decision_completion: 0

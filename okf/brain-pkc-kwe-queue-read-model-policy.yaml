@@ -7,7 +7,7 @@ purpose: >
   Define local dry-run contract for Brain, PKC, and GFIS Assistant KWE queue
   read models. Read models aggregate KWE approval route packets for display
   only. They do not create KWE work items, complete approvals, mutate KDS
-  lifecycle, create WAES gate results, write business systems, confirm revenue
+  lifecycle, create WAME gate results, write business systems, confirm revenue
   or scores, or call external APIs.
 
 required_fields:
@@ -57,7 +57,7 @@ blocked_actions:
   - complete_committee_decision
   - approve_gfis_writeback
   - mutate_kds_lifecycle
-  - write_waes_gate_result
+  - write_wame_gate_result
   - write_business_system
   - call_external_api
 
@@ -76,7 +76,7 @@ no_write_assertions:
   writes_kds_lifecycle: 0
   writes_kds_fact: 0
   writes_kds_accepted_fact: 0
-  writes_waes_gate_result: 0
+  writes_wame_gate_result: 0
   writes_business_system: 0
   writes_target_receipt: 0
   writes_committee_decision_completion: 0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7FF18F64CD
 title: GPCF-L4-GFIS-REPAIR-149 GFIS 合同链责任方响应与真实文件落地扫描
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -34,8 +34,8 @@ superseded_by: []
 ## 输出
 
 ```text
-liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=pass handoff_items=5 collection_paths_existing=0 owner_responses=0 submitted_files=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_file_landing_scan_no_owner_response_or_real_files runtime_sop_e2e=repair_required
-runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=owner_response_file_landing_scan_no_owner_response_or_real_files:handoff_items=5:collection_paths_existing=0:owner_responses=0:submitted_files=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0
+liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=pass handoff_items=5 collection_paths_existing=0 owner_responses=0 submitted_files=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=owner_response_file_landing_scan_no_owner_response_or_real_files runtime_sop_e2e=repair_required
+runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=owner_response_file_landing_scan_no_owner_response_or_real_files:handoff_items=5:collection_paths_existing=0:owner_responses=0:submitted_files=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:wame_review=0:verified=0
 ```
 
 ## 检查
@@ -53,7 +53,7 @@ runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=owner_
 
 本轮只完成责任方响应与真实文件落地扫描。5 个 handoff 均未完成，且目标接收路径尚未形成真实落地目录；不得把 handoff 包、空目录、用户口述、KDS 候选或 Demo 回归当成业务凭证。
 
-完整 SOP E2E 仍为 `repair_required`。未写真实 KDS、WAES、生产系统或外部 API，未创建真实接收目录、签章完成件、客户确认函、采购订单/合同、review queue、runtime intake、verified artifact、accepted 或 integrated。
+完整 SOP E2E 仍为 `repair_required`。未写真实 KDS、WAME、生产系统或外部 API，未创建真实接收目录、签章完成件、客户确认函、采购订单/合同、review queue、runtime intake、verified artifact、accepted 或 integrated。
 
 ## 真实性计数
 
@@ -66,4 +66,4 @@ runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=owner_
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-143`：建立真实回执接收目录占位 README 和结构校验入口；不得伪造真实回执、责任方响应、签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAES confirmation。
+`GFIS-RUNTIME-SOP-E2E-143`：建立真实回执接收目录占位 README 和结构校验入口；不得伪造真实回执、责任方响应、签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAME confirmation。

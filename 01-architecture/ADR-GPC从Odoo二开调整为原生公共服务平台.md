@@ -97,7 +97,7 @@ GPC 不做：
 | 权限 | 租户 / 组织 / 角色 / 外部伙伴 / 业务确认权限 |
 | 工作流 | 轻量状态机，先不引入重 BPM |
 | 证据 | Evidence Ledger |
-| AI | 通过 WAES/Hermes/XiaoC 进入治理授权链；具体业务执行仍进入 GPC/GFIS 内部确认流程，不直接写业务事实 |
+| AI | 通过 WAME/Hermes/XiaoC 进入治理授权链；具体业务执行仍进入 GPC/GFIS 内部确认流程，不直接写业务事实 |
 
 四流优化补充：
 

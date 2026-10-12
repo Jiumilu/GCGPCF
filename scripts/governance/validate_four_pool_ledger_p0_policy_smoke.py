@@ -60,8 +60,8 @@ def main() -> int:
         "selfPurchasedQuotaExcludedFromUnifiedRevenuePool": hard[
             "self_purchased_quota_excluded_from_unified_revenue_pool"
         ],
-        "bountySettlementRequiresWaesHumanAcceptanceAndDisputeWindowClosed": hard[
-            "bounty_settlement_requires_waes_human_acceptance_and_dispute_window_closed"
+        "bountySettlementRequiresWameHumanAcceptanceAndDisputeWindowClosed": hard[
+            "bounty_settlement_requires_wame_human_acceptance_and_dispute_window_closed"
         ],
         "majorDisputeCanFreezeAllFourPools": hard["major_dispute_can_freeze_all_four_pools"],
         "writesScoreConfirmation": no_write["writes_score_confirmation"],

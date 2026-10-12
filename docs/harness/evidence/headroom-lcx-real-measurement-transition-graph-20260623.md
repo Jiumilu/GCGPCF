@@ -49,7 +49,7 @@ status: transition_graph_defined_blocked_real_measurement
 | real_measurement_authorization_window | granted_precheck_only | `HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623` |
 | real_measurement_signed_approval_bundle | recorded_precheck_only | `HEADROOM-LCX-REAL-MEASUREMENT-APPROVAL-SIGNED-BUNDLE-20260623` |
 | authorization_boundary_review | recorded_precheck_only | `HEADROOM-LCX-AUTHORIZATION-BOUNDARY-REVIEW-20260623` |
-| waes_harness_decision | precheck_only | `admitted_for_sanitized_measurement_precheck` |
+| wame_harness_decision | precheck_only | `admitted_for_sanitized_measurement_precheck` |
 | sanitized_token_ledger | present | `fixtures/headroom/headroom-lcx-sanitized-production-token-ledger-precheck-20260622.json` |
 | production_proxy_enablement | blocked | `production_proxy_and_sdk_flags_remain_false` |
 | real_business_equivalence_measurement | synthetic_only | `HEADROOM-LCX-L35-ANSWER-EQUIVALENCE-SYNTHETIC-GATE-20260622` |
@@ -64,8 +64,8 @@ status: transition_graph_defined_blocked_real_measurement
 | real_measurement_authorization_request_package | real_measurement_authorization_window_request_package | request_package_records_window_request_only | `true` |
 | real_measurement_authorization_window_request_package | sanitized_precheck | window_request_remains_sanitized_only | `true` |
 | sanitized_precheck | real_measurement_authorization_window | requires_authorized_window | `true` |
-| real_measurement_authorization_window | waes_harness_decision | requires_waes_harness_admission | `false` |
-| waes_harness_decision | sanitized_token_ledger | may_reference_sanitized_ledger_only | `true` |
+| real_measurement_authorization_window | wame_harness_decision | requires_wame_harness_admission | `false` |
+| wame_harness_decision | sanitized_token_ledger | may_reference_sanitized_ledger_only | `true` |
 | sanitized_token_ledger | production_proxy_enablement | production_proxy_remains_blocked_until_future_authorization | `false` |
 | production_proxy_enablement | real_business_equivalence_measurement | real_measurement_requires_non_synthetic_equivalence | `false` |
 | real_business_equivalence_measurement | production_branch | production_branch_requires_real_business_equivalence_and_authorized_measurement | `false` |
@@ -83,7 +83,7 @@ status: transition_graph_defined_blocked_real_measurement
 | authorized_at | None | granted_precheck_only | real_measurement_authorization_window |
 | sanitized_production_token_ledger | present_sanitized_only | authorized_for_read_only_measurement_metadata | sanitized_token_ledger |
 | rollback_plan_id | present | required | rollback_runbook |
-| waes_harness_admission_decision | admitted_for_sanitized_measurement_precheck | future_admitted_for_real_measurement_only_if_authorized | waes_harness_decision |
+| wame_harness_admission_decision | admitted_for_sanitized_measurement_precheck | future_admitted_for_real_measurement_only_if_authorized | wame_harness_decision |
 | real_business_equivalence_measurement | synthetic_only | real_business_equivalence_proven | real_business_equivalence_measurement |
 
 ## 当前状态

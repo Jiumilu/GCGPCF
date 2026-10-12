@@ -133,7 +133,7 @@ for (const testCase of negativeCases) {{
       serviceName: testCase.serviceName,
       serviceMethod: testCase.serviceMethod,
       writeBoundary: testCase.writeBoundary,
-      requiresWaesGate: false,
+      requiresWameGate: false,
       requiresKweFlow: false,
       requiresHumanOrCommitteeForFinality: false,
       directBusinessWrite: false,
@@ -177,8 +177,8 @@ for (const testCase of negativeCases) {{
     if (response.preview.operation !== testCase.requiredWriteBoundary) {{
       throw new Error(`${{testCase.id}} preview did not preserve candidate_request operation`);
     }}
-    if (response.mapping.requiresWaesGate !== true || response.mapping.requiresKweFlow !== true) {{
-      throw new Error(`${{testCase.id}} candidate route did not preserve WAES/KWE finality guard`);
+    if (response.mapping.requiresWameGate !== true || response.mapping.requiresKweFlow !== true) {{
+      throw new Error(`${{testCase.id}} candidate route did not preserve WAME/KWE finality guard`);
     }}
   }} else if (testCase.type === "accepted_lifecycle_guard") {{
     if (response.acceptedLifecycleWrite !== false || response.preview.writesAcceptedLifecycle !== false) {{

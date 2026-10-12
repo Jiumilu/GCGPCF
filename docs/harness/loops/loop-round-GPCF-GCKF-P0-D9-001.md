@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D7663D64F9
 title: GC-Knowledge Fabric P0-D9 物理数据模型与 Migration Draft LOOP evidence
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -50,7 +50,7 @@ superseded_by: []
 | 是否包含 tenant_id | 是 |
 | 是否执行 migrate | 否 |
 | 是否连接数据库 | 否 |
-| 是否写 KDS / WAES / KWE / 业务系统 | 否 |
+| 是否写 KDS / WAME / KWE / 业务系统 | 否 |
 | 是否包含 DROP / ALTER / INSERT / UPDATE / DELETE | 否 |
 
 ## 风险与阻塞

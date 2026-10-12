@@ -50,7 +50,7 @@ stable_window_scope:
   inherited_producers:
     codex_automations: [macmini-workwiki, workwiki-kds, automation-5]
     hermes_jobs: 11
-    other: [GBrain autopilot及worker, GCWORLD与WAES人工导入活动]
+    other: [GBrain autopilot及worker, GCWORLD与WAME人工导入活动]
   added_producers_or_risks:
     - api_server.py与tests/test_api_smoke.py的开发编辑源
     - KDS运行进程在窗口内重启、替换源码或执行未授权测试的风险

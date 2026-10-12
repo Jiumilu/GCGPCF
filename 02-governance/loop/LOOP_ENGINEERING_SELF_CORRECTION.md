@@ -31,7 +31,7 @@ superseded_by: []
 SOP Master 结论公式：
 
 ```text
-SOP E2E Master 门禁 = GFIS 运行层事实 + 真实 source-of-record + runtime primary key + review/runtime/WAES/KDS evidence
+SOP E2E Master 门禁 = GFIS 运行层事实 + 真实 source-of-record + runtime primary key + review/runtime/WAME/KDS evidence
 GFIS Demo E2E = pass_demo_only
 gfis_runtime_sop_e2e=repair_required
 ```

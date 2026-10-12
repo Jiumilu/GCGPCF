@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7914B4FB3D
 title: Cognee 真实外部执行回执责任分配 2026-06-26
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ superseded_by: []
 |---|---|---|---|
 | `receipt_provider` | `external_execution_operator` | `provide_real_external_execution_receipt` | `real_receipt_ref_and_receipt_id` |
 | `technical_recorder` | `GPCF` | `fill_receipt_intake_and_run_validator` | `cognee_real_external_execution_receipt_intake=pass_real` |
-| `waes_reviewer` | `WAES` | `review_receipt_boundary_and_reject_sample_receipts` | `waes_receipt_review_evidence` |
+| `wame_reviewer` | `WAME` | `review_receipt_boundary_and_reject_sample_receipts` | `wame_receipt_review_evidence` |
 | `readiness_owner` | `GPCF` | `update_gap_001_and_rerun_readiness_rollup` | `readiness_rollup_recomputed_without_full_run_claim` |
 | `rollback_owner` | `GPCF` | `record_rollback_evidence_if_triggered` | `rollback_evidence_ref_or_not_triggered_note` |
 

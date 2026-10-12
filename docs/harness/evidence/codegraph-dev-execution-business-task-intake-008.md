@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4F4A3C1C9E
 title: CodeGraph 业务任务 Intake 008
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ superseded_by: []
 - 不声明业务完成。
 - 不声明 accepted、integrated 或 production_ready。
 - 不声明 commit、push、deploy、production_write、external_api_write。
-- 不写入真实 KDS / WAES。
+- 不写入真实 KDS / WAME。
 
 ## 下一步
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-73CBDABF8E
 title: GPCF-L4-GFIS-REPAIR-073 GFIS KDS canonical discovery truth guard
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ runtime_verified_artifact_submission_counts=real_submissions:0,structure_valid:0
 ## 真实性边界
 
 - KDS discovery 证明候选材料覆盖更广，不证明业务事实完成。
-- 自动发现材料不能绕过 formal intake、source record hash、KDS backlink、验证人/方法、客户确认函、签收附件、转量产批准或 WAES evidence ref。
+- 自动发现材料不能绕过 formal intake、source record hash、KDS backlink、验证人/方法、客户确认函、签收附件、转量产批准或 WAME evidence ref。
 - `missing_live_business_inputs=5`、`real_submissions=0`、`verified_artifacts=0`、`runtime_sop_e2e=repair_required` 保持不变。
 - 不恢复 100/100，不升级 accepted/integrated。
 
@@ -66,7 +66,7 @@ runtime_verified_artifact_submission_counts=real_submissions:0,structure_valid:0
 - 未执行真实外部 API 写入。
 - 未执行数据库迁移、bench migrate 或 schema sync。
 - 未执行权限、Token 或生产配置变更。
-- 未写 WAES/KDS/POD 真实业务事实。
+- 未写 WAME/KDS/POD 真实业务事实。
 
 ## 计数
 

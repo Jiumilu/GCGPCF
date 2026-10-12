@@ -25,7 +25,7 @@ NO_WRITE_KEYS = (
     "writesInboxItem", "writesRoutingQueue", "writesQueueItem",
     "writesApprovalAssignment", "writesApprovalLock", "writesApprovalPacket",
     "writesApprovalRequest", "writesApprovalDecision", "writesCommitteeDecision",
-    "writesFreezeAction", "writesWaesGateResult", "writesKweWorkItem",
+    "writesFreezeAction", "writesWameGateResult", "writesKweWorkItem",
     "writesHarnessEvidence", "writesKdsLifecycle", "writesKdsFact",
     "writesKdsAcceptedFact", "writesExternalApi",
 )
@@ -81,7 +81,7 @@ def main() -> int:
         "createsQueueItems": 0, "createsApprovalAssignments": 0, "locksApprovers": 0,
         "createsApprovalPackets": 0, "createsApprovalRequests": 0, "createsApprovalDecisions": 0,
         "createsCommitteeDecisions": 0, "createsFreezeActions": 0, "createsHarnessEvidence": 0,
-        "createsWaesGateResults": 0, "createsKweWorkItems": 0, "persistsEvidence": 0,
+        "createsWameGateResults": 0, "createsKweWorkItems": 0, "persistsEvidence": 0,
         "approvesBusinessWrite": 0, "promotesLifecycle": 0, "completesCommitteeDecision": 0,
     }
     surface_keys = {"brain": "brainSurface", "pkc": "pkcSurface", "gfis_assistant": "gfisAssistantSurface"}
@@ -90,7 +90,7 @@ def main() -> int:
         "createsNotification", "createsMessage", "createsInboxItem", "sendsExternalNotification",
         "createsRoutingQueue", "createsQueueItem", "createsApprovalAssignment", "locksApprover",
         "createsApprovalPacket", "createsApprovalRequest", "createsApprovalDecision", "createsCommitteeDecision",
-        "createsFreezeAction", "createsHarnessEvidence", "createsWaesGateResult", "createsKweWorkItem",
+        "createsFreezeAction", "createsHarnessEvidence", "createsWameGateResult", "createsKweWorkItem",
         "persistsEvidence", "approvesBusinessWrite", "promotesLifecycle", "completesCommitteeDecision",
     )
     flag_count_keys = {
@@ -103,7 +103,7 @@ def main() -> int:
         "createsApprovalPacket": "createsApprovalPackets", "createsApprovalRequest": "createsApprovalRequests",
         "createsApprovalDecision": "createsApprovalDecisions", "createsCommitteeDecision": "createsCommitteeDecisions",
         "createsFreezeAction": "createsFreezeActions", "createsHarnessEvidence": "createsHarnessEvidence",
-        "createsWaesGateResult": "createsWaesGateResults", "createsKweWorkItem": "createsKweWorkItems",
+        "createsWameGateResult": "createsWameGateResults", "createsKweWorkItem": "createsKweWorkItems",
         "persistsEvidence": "persistsEvidence", "approvesBusinessWrite": "approvesBusinessWrite",
         "promotesLifecycle": "promotesLifecycle", "completesCommitteeDecision": "completesCommitteeDecision",
     }
@@ -182,12 +182,12 @@ def main() -> int:
         f"creates_approval_packets={actual['createsApprovalPackets']} creates_approval_requests={actual['createsApprovalRequests']} "
         f"creates_approval_decisions={actual['createsApprovalDecisions']} creates_committee_decisions={actual['createsCommitteeDecisions']} "
         f"creates_freeze_actions={actual['createsFreezeActions']} creates_harness_evidence={actual['createsHarnessEvidence']} "
-        f"creates_waes_gate_results={actual['createsWaesGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
+        f"creates_wame_gate_results={actual['createsWameGateResults']} creates_kwe_work_items={actual['createsKweWorkItems']} "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 writes_acknowledgement=0 writes_receipt=0 "
         "writes_read_receipt=0 writes_delivery_status=0 writes_notification=0 writes_message=0 writes_inbox_item=0 "
         "writes_routing_queue=0 writes_queue_item=0 writes_approval_assignment=0 writes_approval_lock=0 "
         "writes_approval_packet=0 writes_approval_request=0 writes_approval_decision=0 writes_committee_decision=0 "
-        "writes_freeze_action=0 writes_waes_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 "
+        "writes_freeze_action=0 writes_wame_gate_result=0 writes_kwe_work_item=0 writes_harness_evidence=0 "
         "writes_kds_lifecycle=0 writes_kds_fact=0 writes_kds_accepted_fact=0 writes_external_api=0"
     )
     return 0

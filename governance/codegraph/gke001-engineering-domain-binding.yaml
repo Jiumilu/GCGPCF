@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GKE001-CODEGRAPH-DOMAIN-BINDING-V1
 title: GKE-001 CodeGraph Engineering Domain Binding
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: codegraph-governance
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ gke001_codegraph_binding:
   repository_registry: governance/codegraph/repo-codegraph-registry.yaml
   indexed_repository_count: 14
   governed_project_count: 18
-  indexed_repositories: [gfis, gpc, pvaos, waes, kds, brain, pkc, xiaoc, xgd, xiaog, mmc, gpcf, studio, was]
+  indexed_repositories: [gfis, gpc, pvaos, wame, kds, brain, pkc, xiaoc, xgd, xiaog, mmc, gpcf, studio, was]
   governed_projects_without_repository_index: [AAAS, XWAIL, SOP, ICP]
   program_binding: governance/openspec/gke001-program-binding.yaml
   nodes:

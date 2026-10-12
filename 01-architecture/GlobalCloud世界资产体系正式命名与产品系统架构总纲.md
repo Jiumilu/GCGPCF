@@ -40,8 +40,8 @@ superseded_by: []
 - 原「WAE = World Asset Engine·世界资产引擎」→ 更名为 **WAME**（World Asset Model Engine·世界资产模型引擎）。
 - 原「WAES」（曾称世界资产浏览器）与上述引擎**合并为同一系统 WAME**；`WAES` 缩写**停用**。
 - 「世界资产浏览器 / WAE」名移交新立项项目（GlobalCloud 项目群统一界面框架）。
-- **传导范围**：WAS / KDS / GPCF / WAES 四仓的 **Markdown 命名与展示口径已同步**（2026-10-12）。
-- **保持原样（另立专项）**：代码/契约标识符 `waesGateRefs`、`waesGateInputs`、包名 `@waes/app`、仓目录名 `GlobalCloud WAES`、文档文件名 `*WAES*.md`。
+- **传导范围**：WAS / KDS / GPCF / WAME 四仓的 **Markdown 命名与展示口径已同步**（2026-10-12）。
+- **标识符专项已执行**（2026-10-12 同日）：契约字段 `wameGateRefs`/`wameGateInputs`、策略文件 `was-wame-gate-policy.yaml`、校验器 `validate_was_wame_gate_input.py`、包名 `@wame/app`、仓目录名 `GlobalCloud WAME`、文档文件名 `*WAME*.md` 均已改名并完成回归。
 
 ## 2. 产品链
 
@@ -96,13 +96,13 @@ flowchart TD
 | WAS 命名与语义基线 | ✅ established | `WAS:docs/GlobalCloud-WAS总体方案V1.2-GPCF统一重构版.md` v1.2.1-draft |
 | XWAIL 契约 | 🟡 draft / partial | `WAS:okf/validators/validate_all.py` 13 项 PASS |
 | WAME（引擎侧） | ❌ not_implemented | 《世界资产体系与引擎·方案完成度审计 v1》 |
-| WAME（平台侧） | 🟡 partial | `GlobalCloud WAES` 仓 main；受理器参考实现可用（`server/xap-intake`） |
+| WAME（平台侧） | 🟡 partial | `GlobalCloud WAME` 仓 main；受理器参考实现可用（`server/xap-intake`） |
 | WAE 世界资产浏览器 | 🟡 设计阶段 | `GPCF:projects/wae/MASTER-DESIGN.md` v0.1 |
 | AaaS / SCaaS | ❌ not_implemented | — |
 
 ## 7. 待评审 / 未决
 
-1. **标识符专项**：契约字段 `waesGateRefs` 等、包名 `@waes/app`、仓目录名 `GlobalCloud WAES`、文档文件名 `*WAES*.md` 是否随命名改为 `wame*`——待专项 + 全链路回归后定。
+1. **标识符专项**：契约字段 `wameGateRefs` 等、包名 `@wame/app`、仓目录名 `GlobalCloud WAME`、文档文件名 `*WAME*.md` 是否随命名改为 `wame*`——待专项 + 全链路回归后定。
 2. **WAE（浏览器）与 WAS 产品链的接口形态**：界面层如何回指 WAME 数据，待专项。
 3. **WAME 实现路线**：引擎侧当前 `not_implemented`，未排期。
 

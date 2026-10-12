@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-78E2051FFD
 title: CodeGraph Sync-only Closure Authorized Evidence
 project: KDS
-related_projects: [KDS, GPC, WAES, Brain, GPCF, Studio]
+related_projects: [KDS, GPC, WAME, Brain, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0

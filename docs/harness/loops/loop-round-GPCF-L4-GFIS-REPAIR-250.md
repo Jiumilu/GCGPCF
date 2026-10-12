@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CF153908BD
 title: GPCF-L4-GFIS-REPAIR-250
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 
 ## 输出摘要
 
-- GFIS validator 输出 `source_post_scan_hold_gate_items=1 source_open_holds=1 source_hold_release_allowed=0 precheck_items=1 blocked=1 blocked_reasons=6 release_candidates=1 release_allowed_items=0 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 owner_response_allowed=0 submission_package_allowed=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_items=1 open_holds=1 hold_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required`。
+- GFIS validator 输出 `source_post_scan_hold_gate_items=1 source_open_holds=1 source_hold_release_allowed=0 precheck_items=1 blocked=1 blocked_reasons=6 release_candidates=1 release_allowed_items=0 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=1 owner_response_allowed=0 submission_package_allowed=0 dispatch_allowed=0 request_items_dispatched=0 release_override_allowed=0 hold_items=1 open_holds=1 hold_release_allowed=0 runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 runtime_sop_e2e=repair_required`。
 - GPCF 总控保持 `partial_repair`。
 - `GFIS-RUNTIME-SOP-E2E-241` 被登记为下一步。
 
@@ -55,5 +55,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮不释放 hold，不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、runtime primary key、dispatch confirmation、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮不释放 hold，不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、runtime primary key、dispatch confirmation、review queue、runtime intake、WAME review 或 verified artifact。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-241` 建立 dispatch confirmation hold release negative fixture guard。

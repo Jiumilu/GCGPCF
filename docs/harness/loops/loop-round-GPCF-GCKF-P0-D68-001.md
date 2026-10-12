@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D1DEDB424F
 title: Loop Round GPCF-GCKF-P0-D68-001
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ superseded_by: []
 | D68 committee acceptance acknowledgement envelope preview validator | `scripts/api/validate_gckf_p0_formal_evidence_execution_committee_acceptance_acknowledgement_envelope_preview_dry_run.py` |
 | D68 committee acceptance acknowledgement envelope preview doc | `docs/gc-knowledge-fabric/formal-evidence-execution-committee-acceptance-acknowledgement-envelope-preview-dry-run-v0.1.md` |
 
-## 4. WAES / Harness 边界
+## 4. WAME / Harness 边界
 
 | 项目 | 结果 |
 |---|---|
-| WAES gate override | not_allowed |
+| WAME gate override | not_allowed |
 | Harness evidence write | not_executed |
 | Formal evidence write | not_executed |
 | Envelope assembly execution | not_executed |
@@ -83,6 +83,6 @@ no_write=covered
 
 ## 6. 结论
 
-D68 只完成 committee acceptance acknowledgement envelope preview dry-run。它证明委员会受理确认候选可以被封装为带有名单、ACL、法定人数、利益冲突、阻断/保持、WAES 与 no-write 边界的 envelope，但不产生任何正式 envelope assembly、委员会受理、正式受理确认、立案、裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
+D68 只完成 committee acceptance acknowledgement envelope preview dry-run。它证明委员会受理确认候选可以被封装为带有名单、ACL、法定人数、利益冲突、阻断/保持、WAME 与 no-write 边界的 envelope，但不产生任何正式 envelope assembly、委员会受理、正式受理确认、立案、裁决、人工确认、冻结释放、业务写回、收益/贡献写入或 evidence 写入。
 
 下一轮 D69 可继续建立 committee acceptance acknowledgement routing preview 或 envelope return path 的 no-write 预演。

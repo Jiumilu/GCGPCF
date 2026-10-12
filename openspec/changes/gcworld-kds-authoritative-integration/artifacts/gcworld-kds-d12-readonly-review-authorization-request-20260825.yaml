@@ -33,7 +33,7 @@ activation_preconditions:
     codex_automations_paused: [macmini-workwiki, workwiki-kds, automation-5]
     hermes_jobs_disabled_and_paused: 11
     gbrain_autopilot_and_worker: quiet
-    gcworld_or_waes_manual_import_process: none_observed
+    gcworld_or_wame_manual_import_process: none_observed
   stop_if:
     - 任一基线字段、路径类型或严格元数据摘要不匹配
     - 任一生产者恢复、出现写入活动或责任边界变化
@@ -80,10 +80,10 @@ decision:
         - _governance/sync-runs/macmini-workwiki-20260824-152738/remote-identity.txt
         - _governance/sync-runs/macmini-workwiki-20260825-083442/remote-identity.txt
     source_ingestion_candidates:
-      owner: GCWORLD与WAES内容权威方
+      owner: GCWORLD与WAME内容权威方
       paths:
         - raw/世界资产/GCWORLD总体架构与实施方案_v1.0.docx_引用记录.md
-        - 世界资产/WAES/GCWORLD总体架构与实施方案_v1.0.md
+        - 世界资产/WAME/GCWORLD总体架构与实施方案_v1.0.md
       special_rule: 必须先确认来源、版本、授权和数据等级；任何S3或未知项禁止读取正文
     hermes_evolution_reports:
       owner: Hermes任务111e8983641a与相应内容责任方

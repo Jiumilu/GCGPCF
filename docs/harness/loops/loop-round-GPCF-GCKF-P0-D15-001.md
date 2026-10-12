@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3053E9290A
 title: GC-Knowledge Fabric P0-D15 Handler Stub Negative Smoke LOOP evidence
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -52,7 +52,7 @@ superseded_by: []
 - unknown handler 已阻断。
 - missing service method 已阻断。
 - read-only handler 未进入 candidate_request。
-- candidate_request handler 仍为 no-write，且仍需 WAES/KWE 后续流程。
+- candidate_request handler 仍为 no-write，且仍需 WAME/KWE 后续流程。
 - accepted lifecycle 写入保持 blocked。
 
 ## 下一轮建议

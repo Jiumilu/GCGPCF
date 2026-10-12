@@ -17,7 +17,7 @@ PROJECTS = {
     "GPCF",
     "KDS",
     "Brain",
-    "WAES",
+    "WAME",
     "GFIS",
     "GPC",
     "PVAOS",
@@ -89,7 +89,7 @@ def main() -> int:
     require(authorization.get("authorization_complete_for_l4_l5_or_production") is False, "production authorization must be false")
     require(authorization.get("sanitized_production_token_ledger") == "fixtures/headroom/headroom-lcx-project-group-sanitized-fixture-20260622.json", "wrong ledger")
     require(authorization.get("rollback_plan_id") == "HEADROOM-LCX-ROLLBACK-PLAN-20260622-001", "wrong rollback plan")
-    require(authorization.get("waes_harness_admission_decision") == "admitted_for_l3_5_sanitized_pilot_only", "wrong WAES/Harness decision")
+    require(authorization.get("wame_harness_admission_decision") == "admitted_for_l3_5_sanitized_pilot_only", "wrong WAME/Harness decision")
 
     records = evidence.get("pilot_smoke_records", [])
     require(isinstance(records, list) and len(records) == 45, "pilot records mismatch")
@@ -110,7 +110,7 @@ def main() -> int:
             "ccr_enabled",
             "ccr_retrieve_count",
             "policy_profile",
-            "waes_decision",
+            "wame_decision",
             "answer_equivalence",
             "marker_gate",
             "sensitive_redaction_gate",

@@ -73,7 +73,7 @@ CREATE TABLE fact_candidates (
   pool_refs_json JSONB DEFAULT '[]',
   generated_by TEXT NOT NULL,
   confidence NUMERIC NOT NULL,
-  waes_gate_status TEXT NOT NULL,
+  wame_gate_status TEXT NOT NULL,
   target_system TEXT,
   writeback_status TEXT NOT NULL,
   created_at TIMESTAMP NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE sop_candidates (
   pool_refs_json JSONB DEFAULT '[]',
   generated_by TEXT NOT NULL,
   confirmation_status TEXT NOT NULL,
-  waes_gate_status TEXT NOT NULL,
+  wame_gate_status TEXT NOT NULL,
   applicable_scope_json JSONB DEFAULT '[]',
   created_at TIMESTAMP NOT NULL,
   updated_at TIMESTAMP NOT NULL
@@ -105,13 +105,13 @@ CREATE TABLE writeback_candidates (
   based_on_object_refs_json JSONB DEFAULT '[]',
   evidence_refs_json JSONB DEFAULT '[]',
   pool_refs_json JSONB DEFAULT '[]',
-  waes_gate_status TEXT NOT NULL,
+  wame_gate_status TEXT NOT NULL,
   writeback_status TEXT NOT NULL,
   created_at TIMESTAMP NOT NULL,
   updated_at TIMESTAMP NOT NULL
 );
 
-CREATE TABLE waes_gate_results (
+CREATE TABLE wame_gate_results (
   id TEXT PRIMARY KEY,
   tenant_id TEXT NOT NULL,
   object_id TEXT NOT NULL,
@@ -200,7 +200,7 @@ CREATE TABLE kds_pools (
   updated_at TIMESTAMP NOT NULL
 );
 
-CREATE TABLE waes_gate_policies (
+CREATE TABLE wame_gate_policies (
   id TEXT PRIMARY KEY,
   tenant_id TEXT NOT NULL,
   policy_code TEXT NOT NULL,
@@ -366,7 +366,7 @@ CREATE TABLE loop_records (
   new_gap_refs_json JSONB DEFAULT '[]',
   candidate_fact_refs_json JSONB DEFAULT '[]',
   candidate_sop_refs_json JSONB DEFAULT '[]',
-  waes_result_refs_json JSONB DEFAULT '[]',
+  wame_result_refs_json JSONB DEFAULT '[]',
   confirmation_refs_json JSONB DEFAULT '[]',
   committee_refs_json JSONB DEFAULT '[]',
   risk_json JSONB DEFAULT '[]',
@@ -396,7 +396,7 @@ CREATE TABLE capability_invocations (
   actor_id TEXT NOT NULL,
   input_refs_json JSONB DEFAULT '[]',
   output_refs_json JSONB DEFAULT '[]',
-  waes_result_refs_json JSONB DEFAULT '[]',
+  wame_result_refs_json JSONB DEFAULT '[]',
   no_write BOOLEAN DEFAULT TRUE,
   created_at TIMESTAMP NOT NULL
 );

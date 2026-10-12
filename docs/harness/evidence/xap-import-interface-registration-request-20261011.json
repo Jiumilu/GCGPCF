@@ -5,15 +5,15 @@
   "date": "2026-10-11",
   "status": "submitted_pending_governance_review",
   "scope": "xap_import_interface_registration_request_only",
-  "requester": "WAS/XWAIL 契约线（KDS 图谱 ontology/xap-poc ＋ WAS《接入点_WAES包登记_v0.1》）",
+  "requester": "WAS/XWAIL 契约线（KDS 图谱 ontology/xap-poc ＋ WAS《接入点_WAME包登记_v0.1》）",
   "requested_decision": "admit_xap_import_interface_candidate",
   "current_decision": "pending_governance_review",
   "decision_record": null,
   "registry_entry_ref": null,
   "interface": {
     "name": "XAPImportInterface",
-    "alias": "XAP 包导入接口（WAES 登记 / PVAOS 运行两段）",
-    "carrier": "KDS 工业绿链/图谱/ontology/xap-poc/（生成器＋演练器）＋ xwail-v12-poc/modecheck.py（预检）＋ WAS docs/接入点_WAES包登记_v0.1.md",
+    "alias": "XAP 包导入接口（WAME 登记 / PVAOS 运行两段）",
+    "carrier": "KDS 工业绿链/图谱/ontology/xap-poc/（生成器＋演练器）＋ xwail-v12-poc/modecheck.py（预检）＋ WAS docs/接入点_WAME包登记_v0.1.md",
     "mechanics": [
       "XAP 包族 5 包生成（全部 0 issues）",
       "导入三模式 M1 独立 / M2 合并（冲突挂起不自动合并）/ M3 只读",
@@ -27,7 +27,7 @@
     "admission_required": true,
     "must_bind_project_group_scope": true,
     "must_map_to_registry_categories": true,
-    "must_not_bypass_kds_waes_loop": true
+    "must_not_bypass_kds_wame_loop": true
   },
   "six_category_mapping": {
     "object": "XAP 模型内对象（本次 5 包：葛化 E01/全链、光谷、黄梅、宝马——均为既有图谱对象）",
@@ -41,7 +41,7 @@
   "admission_preconditions": {
     "mapped_to_six_categories": true,
     "binds_project_group_scope": true,
-    "no_kds_waes_loop_bypass": true,
+    "no_kds_wame_loop_bypass": true,
     "registry_body_unmodified": true,
     "candidate_boundary_retained": true
   },
@@ -50,7 +50,7 @@
     "submitted": true,
     "registry_entry_added": false,
     "governance_reviewed": false,
-    "waes_authorized": false,
+    "wame_authorized": false,
     "accepted": false,
     "integrated": false,
     "production_ready": false

@@ -9,7 +9,7 @@
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -69,7 +69,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted": false,
     "integrated": false,
@@ -84,6 +84,6 @@
     "does not infer water reuse records",
     "does not infer stormwater control evidence",
     "does not infer discharge violation records",
-    "does not create runtime intake, WAES review, accepted, integrated, or production ready"
+    "does not create runtime intake, WAME review, accepted, integrated, or production ready"
   ]
 }

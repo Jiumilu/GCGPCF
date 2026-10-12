@@ -22,8 +22,8 @@
       "candidateOnly": true
     },
     {
-      "id": "envelope-waes-rag-gate",
-      "sourceCaseId": "waes:checkRagAdmission",
+      "id": "envelope-wame-rag-gate",
+      "sourceCaseId": "wame:checkRagAdmission",
       "expectedBoundary": "gate_check",
       "candidateOnly": false
     }

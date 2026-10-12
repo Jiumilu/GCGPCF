@@ -129,11 +129,11 @@
     "business_implementation_blocked_until_authorized": true
   },
   "candidate_runtime_observation": {
-    "validator_output": "liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=pass hold_items=5 open_holds=5 closed_holds=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 structure_valid=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=empty_directory_holds_open_waiting_real_receipts runtime_sop_e2e=repair_required",
+    "validator_output": "liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=pass hold_items=5 open_holds=5 closed_holds=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 structure_valid=0 release_allowed=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 state=empty_directory_holds_open_waiting_real_receipts runtime_sop_e2e=repair_required",
     "runtime_sop_e2e": "repair_required",
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0
   },
   "efficiency_metrics": {

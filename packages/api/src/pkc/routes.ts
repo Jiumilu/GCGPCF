@@ -11,7 +11,7 @@ export interface PkcEndpointDefinition {
   aggregatesKwe: boolean;
   aggregatesGovernance: boolean;
   writesKds: false;
-  writesWaes: false;
+  writesWame: false;
   writesKwe: false;
   writesBusinessSystem: false;
   writesRevenueDistribution: false;
@@ -28,7 +28,7 @@ export const PKC_ENDPOINTS: PkcEndpointDefinition[] = [
     aggregatesKwe: true,
     aggregatesGovernance: true,
     writesKds: false,
-    writesWaes: false,
+    writesWame: false,
     writesKwe: false,
     writesBusinessSystem: false,
     writesRevenueDistribution: false,
@@ -43,7 +43,7 @@ export const PKC_ENDPOINTS: PkcEndpointDefinition[] = [
     aggregatesKwe: true,
     aggregatesGovernance: false,
     writesKds: false,
-    writesWaes: false,
+    writesWame: false,
     writesKwe: false,
     writesBusinessSystem: false,
     writesRevenueDistribution: false,
@@ -58,7 +58,7 @@ export const PKC_ENDPOINTS: PkcEndpointDefinition[] = [
     aggregatesKwe: false,
     aggregatesGovernance: true,
     writesKds: false,
-    writesWaes: false,
+    writesWame: false,
     writesKwe: false,
     writesBusinessSystem: false,
     writesRevenueDistribution: false,

@@ -78,11 +78,11 @@ def main() -> int:
         require(directions.get(key, {}).get("implemented") is True, f"direction not implemented: {key}")
 
     real_lane_counts = evidence.get("real_lane_counts", {})
-    for key in ["valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "waes_review", "verified"]:
+    for key in ["valid_source_records", "runtime_primary_key_ready", "review_queue", "runtime_intake", "wame_review", "verified"]:
         require(real_lane_counts.get(key) == 0, f"real lane count must remain zero: {key}")
 
     write_counts = evidence.get("write_counts", {})
-    for key in ["production_writes", "real_external_api_writes", "kds_fact_writes", "waes_gate_result_writes"]:
+    for key in ["production_writes", "real_external_api_writes", "kds_fact_writes", "wame_gate_result_writes"]:
         require(write_counts.get(key) == 0, f"write count must remain zero: {key}")
 
     guards = evidence.get("completion_guards", {})

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA90063
 title: WAS Real Source Record Monitor 063 证据
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-063` 将绿色供应链覆盖扩展到客户侧退役与终端处置链：退役通知、拆除记录、数据清除证明、危险部件移除记录、回收授权、翻新或再利用处置判定和最终回收或销毁证明。只有补齐这些证据，Ontology 才能安全地把客户侧退役、拆除、数据安全、危险部件、回收授权、再利用和最终处置绑定到下游 WAES/KDS/runtime 门禁中。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-063` 将绿色供应链覆盖扩展到客户侧退役与终端处置链：退役通知、拆除记录、数据清除证明、危险部件移除记录、回收授权、翻新或再利用处置判定和最终回收或销毁证明。只有补齐这些证据，Ontology 才能安全地把客户侧退役、拆除、数据安全、危险部件、回收授权、再利用和最终处置绑定到下游 WAME/KDS/runtime 门禁中。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `false` |
 | integrated | `false` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_063.py
 
 - 本证据不创建也不推断退役通知、拆除记录、数据清除证明、危险部件移除记录、回收授权、翻新或再利用处置判定或最终回收/销毁证明。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

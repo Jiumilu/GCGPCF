@@ -62,19 +62,19 @@ def main() -> int:
     for phrase in [
         "## 7.1 UI 质量门禁（涉及 UI 时必填）",
         "| UI scope | true / false |",
-        "| Tool route | `@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` / project-specific route / not_applicable |",
+        "| Tool route | `@product-design -> WAME -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` / project-specific route / not_applicable |",
         "| Context package | completed / partial / missing / not_applicable |",
         "| Prompt profile | functional-accuracy / visual-quality / usability-experience / governance-evidence / scope-control / mixed / not_applicable |",
         "| Design options | 3 / 1_with_existing_selected_direction / not_applicable |",
         "| Selected option | 1 / 2 / 3 / existing / not_applicable |",
-        "| WAES baseline reuse | shell / page-skeleton / core-components / full-stack / exception-approved / not_applicable |",
+        "| WAME baseline reuse | shell / page-skeleton / core-components / full-stack / exception-approved / not_applicable |",
         "UI gate status: ui_ready | ui_partial | ui_blocked | ui_rework_required | not_applicable",
         "Tool route:",
         "Context package:",
         "Prompt profile:",
         "Design options:",
         "Selected option:",
-        "WAES baseline reuse:",
+        "WAME baseline reuse:",
         "runtime_not_verified / mobile_not_verified / a11y_manual_only / figma_not_verified / not_applicable",
     ]:
         require(phrase in template, f"LOOP_ROUND_TEMPLATE.md missing phrase: {phrase}")
@@ -129,7 +129,7 @@ def main() -> int:
     for phrase in [
         "@product-design",
         "Must run `get-context -> ideate -> select option`",
-        "Professional workbench UI defaults to `WAES` parent-frame reuse",
+        "Professional workbench UI defaults to `WAME` parent-frame reuse",
     ]:
         require(phrase in tool_routing, f"tool-routing.md missing phrase: {phrase}")
 

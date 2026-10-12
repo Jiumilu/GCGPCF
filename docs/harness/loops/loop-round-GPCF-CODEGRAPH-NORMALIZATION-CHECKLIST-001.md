@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CGNC001
 title: Loop Round - CodeGraph 常态化归一清单
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

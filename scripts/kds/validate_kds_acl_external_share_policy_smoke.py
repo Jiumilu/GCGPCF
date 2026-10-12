@@ -82,7 +82,7 @@ def main() -> int:
         "sensitiveMetadataOnlyRawContentDenied": hard["sensitive_metadata_only_raw_content_denied"],
         "blockedRagExternalShareDenied": hard["blocked_rag_external_share_denied"],
         "t5AiOnlyExternalFactDenied": hard["t5_ai_only_external_fact_denied"],
-        "externalShareRequiresWaesGate": hard["external_share_requires_waes_gate"],
+        "externalShareRequiresWameGate": hard["external_share_requires_wame_gate"],
         "publicVisibilityRequiresPublicationApproval": hard["public_visibility_requires_publication_approval"],
         "aclPassIsNotRagStrongReference": hard["acl_pass_is_not_rag_strong_reference"],
         "aclPassIsNotBusinessWriteback": hard["acl_pass_is_not_business_writeback"],

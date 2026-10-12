@@ -119,7 +119,7 @@ def main() -> int:
         "test_data_lane",
         "candidate_lane",
         "real_business_lane",
-        "owner + WAES + Harness",
+        "owner + WAME + Harness",
         "三层评分",
         "受控工程修改",
         "按任务 Git 授权",
@@ -166,14 +166,14 @@ def main() -> int:
         "只读、分析、检索、规划类子能力",
         "写入、自动执行、跨仓变更、外部 API 写入",
         "@product-design",
-        "WAES` 母框架复用",
+        "WAME` 母框架复用",
         "globalcloud-ui-quality-gate",
         "Tool route",
         "Context package",
         "Prompt profile",
         "Design options",
         "Selected option",
-        "WAES baseline reuse",
+        "WAME baseline reuse",
         "UI gate status",
     ]:
         require(phrase in master, f"master plan missing capability baseline: {phrase}")
@@ -183,7 +183,7 @@ def main() -> int:
         "runtime primary key",
         "review queue",
         "runtime intake",
-        "WAES review",
+        "WAME review",
         "verified artifact",
         "project_group_current_state_baseline_refresh_20260626 = controlled",
         "development_queue_ready = true",
@@ -216,7 +216,7 @@ def main() -> int:
         "runtime_primary_key_ready=0",
         "review_queue=0",
         "runtime_intake=0",
-        "waes_review=0",
+        "wame_review=0",
         "verified=0",
     ]:
         require(phrase in combined_current, f"current control plane missing status ceiling: {phrase}")
@@ -238,7 +238,7 @@ def main() -> int:
         "baseline=v1.0 authority=master_implementation_plan "
         "roadmap=P0,P1,P2,P3,P4,P5 "
         "status_ceiling=repair_required accepted_allowed=false integrated_allowed=false "
-        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 "
+        "runtime_primary_key_ready=0 review_queue=0 runtime_intake=0 wame_review=0 verified=0 "
         f"gfis_status_ceiling={gfis_real_fact_entry.get('status_ceiling')}"
     )
     return 0

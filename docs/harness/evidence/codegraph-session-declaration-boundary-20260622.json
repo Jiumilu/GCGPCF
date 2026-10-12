@@ -9,7 +9,7 @@
     ".codegraph Git 隔离检查",
     "Brain/Studio/GFIS watchlist 与授权边界登记",
     "GFIS policy exception 与残留 drift 记录",
-    "Loop/Harness/WAES/KDS 接入证据",
+    "Loop/Harness/WAME/KDS 接入证据",
     "CodeGraph 业务开发执行层准入规则",
     "CodeGraph 开发执行 evidence 模板",
     "CodeGraph 低风险 pilot pack",
@@ -30,7 +30,7 @@
     "git_commit_performed": false,
     "git_push_performed": false,
     "brain_studio_sync_authorized": false,
-    "codegraph_as_final_waes_decision": false
+    "codegraph_as_final_wame_decision": false
   },
   "allowed_claims": [
     "CodeGraph 已纳入项目群治理与 Loop evidence 链",
@@ -44,7 +44,7 @@
     "项目已 accepted 或 integrated",
     "生产环境已就绪",
     "已执行生产写入或外部 API 写入",
-    "CodeGraph 可替代 WAES/Harness/人工验收裁决",
+    "CodeGraph 可替代 WAME/Harness/人工验收裁决",
     "Brain/Studio watchlist 已在未授权情况下完成 sync-only closure"
   ],
   "required_future_gate": {

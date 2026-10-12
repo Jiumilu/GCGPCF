@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C2E2BCB61
 title: evidence
 project: XiaoC
-related_projects: [GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoC, GPCF]
 domain: docs
 status: controlled
 version: v1.0

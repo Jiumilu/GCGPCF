@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F91705E737
 title: GPCF-L4-GFIS-REPAIR-069 GFIS 辽宁远航原始凭证优先级队列
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -77,4 +77,4 @@ gfis_checks_exit=0 runtime_exit=2 diff_check_exit=0
 
 ## 下一步
 
-优先接收辽宁远航客户确认函或等效确认原件的脱敏索引，形成第一条 quotation real submission 候选；在业务/WAES/KDS 复核前继续保持 GFIS/GPCF `repair_required`。
+优先接收辽宁远航客户确认函或等效确认原件的脱敏索引，形成第一条 quotation real submission 候选；在业务/WAME/KDS 复核前继续保持 GFIS/GPCF `repair_required`。

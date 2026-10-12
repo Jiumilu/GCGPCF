@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6C0AA9100
 title: WAS Real Source Record Monitor 100 证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: ontology-governance
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 范围
 
-`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100` 将绿色供应链覆盖扩展到数字产品护照、公开披露、产品数据载体/二维码、追溯数据集、访问治理、护照更新日志和监管/客户检索回执证据边界。该边界用于约束任何数字产品护照或产品级追溯声明进入 WAES/KDS/GFIS/RAG/Pool 依赖前，必须具备可追溯、可复核、不可由 LLM 或治理文档替代的真实证据链。
+`GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100` 将绿色供应链覆盖扩展到数字产品护照、公开披露、产品数据载体/二维码、追溯数据集、访问治理、护照更新日志和监管/客户检索回执证据边界。该边界用于约束任何数字产品护照或产品级追溯声明进入 WAME/KDS/GFIS/RAG/Pool 依赖前，必须具备可追溯、可复核、不可由 LLM 或治理文档替代的真实证据链。
 
 ## 监控检查
 
@@ -42,7 +42,7 @@ superseded_by: []
 | runtime_primary_key_ready | `0` |
 | review_queue | `0` |
 | runtime_intake | `0` |
-| waes_review | `0` |
+| wame_review | `0` |
 | verified | `0` |
 | accepted | `False` |
 | integrated | `False` |
@@ -73,7 +73,7 @@ python3 tools/kds-sync/validate_was_real_source_record_monitor_100.py
 
 - 本证据不创建也不推断数字产品护照数据集、产品数据载体/二维码、公开披露页面、追溯数据集版本、访问治理记录、护照更新日志或监管/客户检索回执。
 - 本证据不写入 GFIS/KWE 运行层。
-- 本证据不创建 KDS 正式事实、WAES review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
+- 本证据不创建 KDS 正式事实、WAME review、runtime primary key、review queue、runtime intake、verified artifact，也不形成 accepted、integrated 或 production ready 状态。
 
 ## 下一轮
 

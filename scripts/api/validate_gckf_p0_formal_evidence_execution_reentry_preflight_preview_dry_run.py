@@ -113,7 +113,7 @@ def main() -> int:
             "rollback_drill_refresh_candidate_present",
             "incident_audit_trail_link_present",
             "harness_evidence_candidate_link_present",
-            "waes_reentry_gate_candidate_present",
+            "wame_reentry_gate_candidate_present",
             "kwe_reentry_work_item_candidate_present",
             "notify_original_approvers_candidate_present",
             "assert_unfreeze_not_executed",
@@ -146,7 +146,7 @@ def main() -> int:
             "rollbackDrillRefreshCandidateRef",
             "incidentAuditTrailRef",
             "harnessEvidenceCandidateRef",
-            "waesReentryGateCandidateRef",
+            "wameReentryGateCandidateRef",
             "kweReentryWorkItemCandidateRef",
         },
         "required reentry ref",
@@ -176,7 +176,7 @@ def main() -> int:
             "missing_rollback_drill_refresh_candidate_ref",
             "missing_incident_audit_trail_ref",
             "missing_harness_evidence_candidate_ref",
-            "missing_waes_reentry_gate_candidate_ref",
+            "missing_wame_reentry_gate_candidate_ref",
             "missing_kwe_reentry_work_item_candidate_ref",
             "reentry_preview_attempts_unfreeze",
             "reentry_preview_attempts_retry",
@@ -298,7 +298,7 @@ def main() -> int:
         "freeze_release_candidate=covered "
         "approval_refresh_candidate=covered "
         "execution_lock_renewal=covered "
-        "waes_kwe_reentry_gate=covered "
+        "wame_kwe_reentry_gate=covered "
         "negative_no_write_boundary=covered "
         "starts_server=0 connects_database=0 calls_external_api=0 "
         "writes_kds=0 writes_business_system=0 writes_accepted_lifecycle=0 "

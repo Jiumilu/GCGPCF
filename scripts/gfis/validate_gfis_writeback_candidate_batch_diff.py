@@ -2,7 +2,7 @@
 """Validate GFIS writeback candidate batch diff no-write dry-run.
 
 This validator reads local OKF, shared type, and fixture files only. It does
-not write GFIS, GPC, ERP, MES, KDS accepted facts, WAES gate results, KWE work
+not write GFIS, GPC, ERP, MES, KDS accepted facts, WAME gate results, KWE work
 items, revenue, scores, or external APIs.
 """
 
@@ -81,7 +81,7 @@ def main() -> int:
             failures.append(f"{item['candidateId']} is written_back in dry-run")
         if no_write_sum(item["noWrite"]) != 0:
             failures.append(f"{item['candidateId']} noWrite contains non-zero counters")
-        if item["waesGateStatus"] == "blocked" and item["diffAction"] != "block_writeback":
+        if item["wameGateStatus"] == "blocked" and item["diffAction"] != "block_writeback":
             failures.append(f"{item['candidateId']} blocked gate not mapped to block_writeback")
         if not item["evidenceRefs"] and item["diffAction"] not in {"block_writeback", "return_for_repair"}:
             failures.append(f"{item['candidateId']} lacks evidence but is not blocked or repair")
@@ -110,8 +110,8 @@ def main() -> int:
         "writesMes": sum(item["noWrite"]["writesMes"] for item in items) + batch["batchNoWrite"]["writesMes"],
         "writesKdsAcceptedFact": sum(item["noWrite"]["writesKdsAcceptedFact"] for item in items)
         + batch["batchNoWrite"]["writesKdsAcceptedFact"],
-        "writesWaesGateResult": sum(item["noWrite"]["writesWaesGateResult"] for item in items)
-        + batch["batchNoWrite"]["writesWaesGateResult"],
+        "writesWameGateResult": sum(item["noWrite"]["writesWameGateResult"] for item in items)
+        + batch["batchNoWrite"]["writesWameGateResult"],
         "writesKweWorkItem": sum(item["noWrite"]["writesKweWorkItem"] for item in items)
         + batch["batchNoWrite"]["writesKweWorkItem"],
         "writesRevenueOrScoreConfirmation": sum(
@@ -149,7 +149,7 @@ def main() -> int:
         f"blocked_items={checks['blockedItems']} "
         "approved_for_business_write=0 target_receipts=0 written_back_statuses=0 "
         "writes_gfis=0 writes_gpc=0 writes_erp=0 writes_mes=0 "
-        "writes_kds_accepted_fact=0 writes_waes_gate_result=0 writes_kwe_work_item=0 "
+        "writes_kds_accepted_fact=0 writes_wame_gate_result=0 writes_kwe_work_item=0 "
         "writes_revenue_or_score_confirmation=0 writes_external_api=0"
     )
     return 0

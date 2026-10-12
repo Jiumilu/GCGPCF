@@ -20,7 +20,7 @@ TRIGGER_CLAIM_KEYS = {
     "actualRepairOwnerResponseReceived",
     "responseArrivalConfirmed",
     "signedPackagePresent",
-    "waesReviewNotePresent",
+    "wameReviewNotePresent",
     "humanConfirmationPresent",
     "responseIntakeAllowed",
 }
@@ -162,7 +162,7 @@ def main() -> None:
     expected = {
         "real_repair_owner_response",
         "signed_response_package",
-        "waes_review_note",
+        "wame_review_note",
         "human_confirmation_record",
     }
     require({signal.get("signalId") for signal in signals} == expected, "arrival_signal_ids_mismatch")
@@ -174,7 +174,7 @@ def main() -> None:
     for key in (
         "responseArrivalConfirmed",
         "signedPackagePresent",
-        "waesReviewNotePresent",
+        "wameReviewNotePresent",
         "humanConfirmationPresent",
         "responseIntakeAllowed",
         "formalHarnessWriteAllowed",

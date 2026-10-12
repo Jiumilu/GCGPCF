@@ -68,7 +68,7 @@ P0 默认写入模式：
 | `quota_records` | `quota_id` | AI 额度计量 | candidate_only |
 | `decision_records` | `decision_id` | 委员会或人工决议 | draft / candidate_only |
 | `dispute_records` | `dispute_id` | 争议 | candidate_only |
-| `waes_gate_records` | `waes_gate_id` | 门禁结果 | candidate_only |
+| `wame_gate_records` | `wame_gate_id` | 门禁结果 | candidate_only |
 | `rag_admission_records` | `rag_id` | RAG 准入 | candidate_only |
 | `loop_records` | `loop_id` | LOOP evidence | controlled_document |
 
@@ -88,7 +88,7 @@ P0 默认写入模式：
 | `classificationLevel` | DSR-L0 至 DSR-L3 |
 | `trustLevel` | T0 至 T5 |
 | `basePoolRefs` | 至少一个 KDS 底座池 |
-| `waesGateIntent` | 是否需要 WAME |
+| `wameGateIntent` | 是否需要 WAME |
 | `humanConfirmationRequired` | 默认 true |
 | `committeeRequired` | 触及收益、重大违规、争议、潜在产值转正式产值时 true |
 | `forbiddenOperations` | 禁止动作 |
@@ -100,7 +100,7 @@ P0 默认写入模式：
 |---|---|
 | `resultStatus` | `accepted_as_candidate` / `returned_for_evidence` / `blocked` / `no_write_completed` |
 | `createdObjectRefs` | 本地候选对象编号，P0 不代表业务主账 |
-| `waesRequiredActions` | WAME 或人工下一步 |
+| `wameRequiredActions` | WAME 或人工下一步 |
 | `promotionBlockers` | 不能升级原因 |
 | `ragAdmission` | 默认 `repair_required` 或 `blocked`，除非证据充分 |
 | `auditRefs` | LOOP / Harness / 文档引用 |
@@ -150,7 +150,7 @@ P0 副作用：只生成 `AssistantOutputRecord` 候选，不写 GFIS。
 | `guidedSteps` | 操作步骤 |
 | `requiredFields` | 必填字段 |
 | `requiredEvidence` | 必要证据 |
-| `waesGate` | 门禁建议 |
+| `wameGate` | 门禁建议 |
 | `writebackCandidateRef` | 如有，生成 `WBC-*` |
 
 P0 副作用：只生成指导和候选写回，不写 GFIS 主账。
@@ -186,7 +186,7 @@ P0 副作用：只生成验收候选、缺口和 SOP 建议。
 | `POST /api/dks/v0/fact-candidates` | 创建候选事实 | `FAC-*` |
 | `POST /api/dks/v0/sop-candidates` | 创建候选 SOP | `SOP-*` |
 | `POST /api/dks/v0/writeback-candidates` | 创建候选写回 | `WBC-*` |
-| `POST /api/dks/v0/waes/gates/check` | 本地门禁检查 | `WGR-*` |
+| `POST /api/dks/v0/wame/gates/check` | 本地门禁检查 | `WGR-*` |
 | `POST /api/dks/v0/rag/admission/check` | RAG 准入检查 | `RAG-*` |
 
 写回候选必须包含：

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-LOOP-SESSION-HANDOFF-REQUEST-GATE-004
 title: LOOP Round GPCF Session Mainline Handoff Request Gate 004
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0

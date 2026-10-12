@@ -27,8 +27,8 @@
     "evidence_refs": [
       "gfis://runtime-sop-e2e/REAL-001-source-record-intake-gate"
     ],
-    "waes_gate_refs": [
-      "waes://gate/customer-order-source-record-review"
+    "wame_gate_refs": [
+      "wame://gate/customer-order-source-record-review"
     ],
     "promotion_blockers": [
       "valid_source_record_missing",
@@ -45,7 +45,7 @@
     "trustLevel",
     "sourceRefs",
     "evidenceRefs",
-    "waesGateRefs",
+    "wameGateRefs",
     "promotionBlockers",
     "nextAction",
     "kdsBacklink"
@@ -55,12 +55,12 @@
     "must_keep_candidate_state_before_manual_verification": "pending_business_verification",
     "must_reject_without_customer_or_platform_source": true,
     "must_reject_without_kds_backlink": true,
-    "must_reject_without_waes_gate_ref": true,
+    "must_reject_without_wame_gate_ref": true,
     "auto_promote_to_valid_source_record": false,
     "may_create_runtime_primary_key_before_valid_source_record": false,
     "may_open_review_queue_before_runtime_primary_key": false,
     "may_open_runtime_intake_before_review_queue": false,
-    "may_create_verified_artifact_before_waes_review": false
+    "may_create_verified_artifact_before_wame_review": false
   },
   "gfis_current_blocking_counts": {
     "real_source_records": 0,
@@ -68,7 +68,7 @@
     "runtime_primary_key_ready": 0,
     "review_queue": 0,
     "runtime_intake": 0,
-    "waes_review": 0,
+    "wame_review": 0,
     "verified": 0,
     "accepted_integrated": 0,
     "production_ready": 0,
@@ -81,7 +81,7 @@
     "does not create runtime primary key",
     "does not create review queue",
     "does not create runtime intake",
-    "does not create WAES review",
+    "does not create WAME review",
     "does not create verified artifact",
     "does not mark accepted or integrated",
     "does not mark production ready"

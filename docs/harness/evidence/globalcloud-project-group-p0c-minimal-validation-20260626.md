@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-P0C-MINIMAL-VALIDATION-20260626
 title: GlobalCloud 项目群 P0-C 剩余项目最小验证证据
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## 授权边界
 
 - 输入：用户要求“下一步”，承接 P0-B 项目级验证复跑。
-- 范围：GFIS、WAS、WAES、GPC、PVAOS、XiaoC、XiaoG、XGD、XWAIL、AAAS、SOP 的最小验证命令登记与复跑。
+- 范围：GFIS、WAS、WAME、GPC、PVAOS、XiaoC、XiaoG、XGD、XWAIL、AAAS、SOP 的最小验证命令登记与复跑。
 - 允许动作：只读 `git status --short --branch`、`git diff --check -- .`、生成 evidence、KDS 本地镜像同步。
 - 禁止动作：提交、推送、部署、生产写入、schema migrate、真实外部 API 写入、清理工作区、删除本地产物、标记 accepted、integrated、production_ready、customer_accepted。
 - 判定边界：P0-C 只证明剩余 11 仓的最小开发门禁可读且 diff-check 通过；2026-06-28 live recheck 下项目群 Git gate 已收紧为 `blocked`，但这不推翻最小验证本身，只说明提交/推送前边界更严格。
@@ -32,14 +32,14 @@ superseded_by: []
 |---|---|---:|---|---|---|
 | GlobalCloud AAAS | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 方案传导 review candidate |
 | WAS世界资产体系 | main | 4/1 | `git status --short --branch`; `git diff --check -- .` | pass | `.DS_Store` 本地产物不得提交；真实 P4 source-record 仍缺 |
-| GlobalCloud WAES | waes/integration-release | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | WAES 仍为治理/验收边界，不自动 accepted |
+| GlobalCloud WAME | wame/integration-release | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | WAME 仍为治理/验收边界，不自动 accepted |
 | GlobalCloud GPC | main | 6/0 | `git status --short --branch`; `git diff --check -- .` | pass | evidence register / e2e 变更仍需 review |
 | GlobalCloud PVAOS | pvaos/D4-release-readiness-governance | 6/0 | `git status --short --branch`; `git diff --check -- .` | pass | package/vitest 变更仍需 release gate review |
 | GlobalCloud XiaoC | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 不触发 live model / Wrangler / deployment |
 | GlobalCloud XiaoG | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 不触发 live API、设备 OTA 或 Docker |
 | GlobalCloud XGD | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 不触发桌面/live 调用 |
 | GlobalCloud XWAIL | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | contract precheck 仍为开发候选 |
-| GlobalCloud GFIS | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact 仍为 0 |
+| GlobalCloud GFIS | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact 仍为 0 |
 | GlobalCloud SOP | main | 16/8 | `git status --short --branch`; `git diff --check -- .` | pass | operations/output 草案与索引变更仍需 owner review |
 
 ## P0-C 汇总

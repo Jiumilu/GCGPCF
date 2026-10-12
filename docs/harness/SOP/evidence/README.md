@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CA7902060F
 title: evidence
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

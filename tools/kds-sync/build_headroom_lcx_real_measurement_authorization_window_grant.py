@@ -70,7 +70,7 @@ def build_headroom_lcx_real_measurement_authorization_window_grant() -> dict[str
         "authorized_at": fields.get("authorized_at"),
         "sanitized_production_token_ledger": fields.get("sanitized_production_token_ledger"),
         "rollback_plan_id": fields.get("rollback_plan_id"),
-        "waes_harness_admission_decision": fields.get("waes_harness_admission_decision"),
+        "wame_harness_admission_decision": fields.get("wame_harness_admission_decision"),
         "real_measurement_window_granted": True,
         "real_measurement_open": False,
         "production_branch_blocked": True,
@@ -122,7 +122,7 @@ def write_outputs(grant: dict[str, Any]) -> None:
             "doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-20260623",
             "title: Headroom LCX 真实测量授权窗口授予证据",
             "project: GPCF",
-            "related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
+            "related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]",
             "domain: docs",
             "status: controlled",
             "version: v1.0",
@@ -156,7 +156,7 @@ def write_outputs(grant: dict[str, Any]) -> None:
             f"| authorized_at | `{grant['authorized_at']}` |",
             f"| sanitized_production_token_ledger | `{grant['sanitized_production_token_ledger']}` |",
             f"| rollback_plan_id | `{grant['rollback_plan_id']}` |",
-            f"| waes_harness_admission_decision | `{grant['waes_harness_admission_decision']}` |",
+            f"| wame_harness_admission_decision | `{grant['wame_harness_admission_decision']}` |",
             "",
             "## 当前状态",
             "",
@@ -189,7 +189,7 @@ def write_outputs(grant: dict[str, Any]) -> None:
         doc_id: GPCF-DOC-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001
         title: "循环回合：GPCF-HEADROOM-LCX-REAL-MEASUREMENT-AUTHORIZATION-WINDOW-GRANT-001"
         project: GPCF
-        related_projects: [GPCF, KDS, Brain, WAES, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
+        related_projects: [GPCF, KDS, Brain, WAME, GFIS, GPC, PVAOS, Edge, PKC, XiaoC, XGD, XiaoG, MMC, Studio, WAS]
         domain: docs
         status: controlled
         version: v1.0
@@ -236,7 +236,7 @@ def write_outputs(grant: dict[str, Any]) -> None:
 
         ## 下一轮
 
-        若后续要继续推进真实测量执行，再补 token ledger replay 与 WAES/Harness 进一步裁决。
+        若后续要继续推进真实测量执行，再补 token ledger replay 与 WAME/Harness 进一步裁决。
         """
     ).strip() + "\n"
     OUT_LOOP.write_text(loop_text, encoding="utf-8")

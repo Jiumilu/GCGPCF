@@ -19,7 +19,7 @@ PROJECT_GROUP = [
     "GFIS",
     "GPC",
     "PVAOS",
-    "WAES",
+    "WAME",
     "KDS",
     "Brain",
     "PKC",
@@ -39,14 +39,14 @@ REQUIRED_CONTEXT_KEYS = [
     "related_events",
     "source_refs",
     "evidence_refs",
-    "waes_gate_refs",
+    "wame_gate_refs",
     "kds_backlinks",
     "promotion_blockers",
     "next_action",
     "no_write_declaration",
 ]
-REQUIRED_WAES_GATE = "waes://gate/customer-order-source-record-review"
-REQUIRED_NO_WRITE_PHRASE = "no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready"
+REQUIRED_WAME_GATE = "wame://gate/customer-order-source-record-review"
+REQUIRED_NO_WRITE_PHRASE = "no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready"
 
 
 def require(condition: bool, message: str) -> None:
@@ -118,14 +118,14 @@ def main() -> int:
         require("data_asset" in context["related_asset_dimensions"], f"{source} missing data_asset")
         require("commerce_flow" in context["related_flows"], f"{source} missing commerce_flow")
         require("CustomerRequirementOrPlatformOrder" in context["related_objects"], f"{source} missing object family")
-        require(REQUIRED_WAES_GATE in context["waes_gate_refs"], f"{source} missing WAES gate ref")
+        require(REQUIRED_WAME_GATE in context["wame_gate_refs"], f"{source} missing WAME gate ref")
         require("pending_real_source_record" in context["kds_backlinks"], f"{source} missing pending KDS backlink")
         require("valid_source_record_missing" in context["promotion_blockers"], f"{source} missing valid source blocker")
         require("customer_confirmation_missing" in context["promotion_blockers"], f"{source} missing customer confirmation blocker")
         require(context["no_write_declaration"] == REQUIRED_NO_WRITE_PHRASE, f"{source} no-write declaration mismatch")
 
     boundary = evidence.get("boundary", {})
-    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "waes_review"]:
+    for key in ["real_source_records", "valid_source_records", "runtime_primary_key_ready", "wame_review"]:
         require(boundary.get(key) == 0, f"boundary.{key} must remain 0")
     for key in ["accepted", "integrated", "production_ready"]:
         require(boundary.get(key) is False, f"boundary.{key} must remain false")
@@ -144,7 +144,7 @@ def main() -> int:
         "was_loop_context_coverage=pass "
         "loop_round_count=13 project_scope_count=14 required_context_keys=12 "
         "asset_dimension=data_asset flow_type=commerce_flow object_family=CustomerRequirementOrPlatformOrder "
-        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 waes_review=0 "
+        "real_source_records=0 valid_source_records=0 runtime_primary_key_ready=0 wame_review=0 "
         "accepted=false integrated=false production_ready=false "
         "next_round=GPCF-ONTOLOGY-WAS-SCENARIO-PROFILE-MATRIX-001"
     )

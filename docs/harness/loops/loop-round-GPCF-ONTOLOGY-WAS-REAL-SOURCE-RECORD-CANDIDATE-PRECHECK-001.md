@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0806C18276
 title: Loop Round GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-001
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 domain: ontology-governance
 status: controlled
 version: v1.0
@@ -55,26 +55,26 @@ superseded_by: []
 - `accepted_for_next_gate=0`。
 - `hold_required=1`。
 - `runtime_primary_key_ready=0`。
-- `waes_review=0`。
+- `wame_review=0`。
 - `accepted=false`、`integrated=false`、`production_ready=false`。
 
 ## loop_was_context
 
 ```yaml
-project_scope: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
+project_scope: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, WAS]
 related_asset_dimensions: [data_asset]
 related_flows: [commerce_flow]
 related_objects: [CustomerRequirementOrPlatformOrder]
 related_events: [was_real_source_record_candidate_precheck]
 source_refs: [was://scenario/gfis-runtime-sop-e2e/S01-customer-requirement-or-platform-order]
 evidence_refs: [docs/harness/evidence/was-real-source-record-candidate-precheck-20260621.md]
-waes_gate_refs: [waes://gate/customer-order-source-record-review]
+wame_gate_refs: [wame://gate/customer-order-source-record-review]
 kds_backlinks: [pending_real_source_record]
 promotion_blockers: [valid_source_record_missing, customer_confirmation_missing, accepted_for_next_gate_missing]
 next_action: wait_for_business_owner_real_candidate
-no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_waes_review_no_accepted_integrated_or_production_ready
+no_write_declaration: no_gfis_runtime_write_no_kds_official_fact_no_wame_review_no_accepted_integrated_or_production_ready
 ```
 
 ## 反馈
 
-P4 candidate precheck 闭环已建立，但真实 source-record 尚未出现。下一步仍需业务 owner 提交真实客户订单原件或平台订单回执；在此之前不得进入 runtime、WAES review、accepted、integrated 或 production_ready。
+P4 candidate precheck 闭环已建立，但真实 source-record 尚未出现。下一步仍需业务 owner 提交真实客户订单原件或平台订单回执；在此之前不得进入 runtime、WAME review、accepted、integrated 或 production_ready。

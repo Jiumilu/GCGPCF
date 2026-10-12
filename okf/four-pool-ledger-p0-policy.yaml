@@ -22,7 +22,7 @@ hard_boundaries:
   potential_revenue_must_not_auto_promote: true
   contribution_confirmed_score_requires_human_or_committee: true
   self_purchased_quota_excluded_from_unified_revenue_pool: true
-  bounty_settlement_requires_waes_human_acceptance_and_dispute_window_closed: true
+  bounty_settlement_requires_wame_human_acceptance_and_dispute_window_closed: true
   major_dispute_can_freeze_all_four_pools: true
 no_write_assertions:
   writes_score_confirmation: 0

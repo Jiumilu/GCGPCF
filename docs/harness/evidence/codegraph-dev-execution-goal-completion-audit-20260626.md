@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEV-EXECUTION-GOAL-COMPLETION-AUDIT-20260626
 title: CodeGraph 开发执行层目标完成度审计 2026-06-26
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -46,7 +46,7 @@ CodeGraph 已经从治理层进入开发执行层，并已在当前样本中证�
 
 - 真实业务 source input 未 ready：`valid_source_records=0`。
 - 运行层主键未 ready：`runtime_primary_key_ready=0`，`runtime_primary_key_missing=12`。
-- 运行态链路未 ready：`runtime_intake=0`，`waes_review=0`，`verified=0`。
+- 运行态链路未 ready：`runtime_intake=0`，`wame_review=0`，`verified=0`。
 - KDS coverage 仍有 `missing_sources=4`。
 - 派发授权未收到：`authorization_received=false`。
 - 当前有效授权为 `effective_authorization=not_authorized`。

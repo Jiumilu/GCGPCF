@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-817579A2B2
 title: loops
 project: XGD
-related_projects: [GPC, WAES, KDS, XGD, GPCF]
+related_projects: [GPC, WAME, KDS, XGD, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-72AB13D2C2
 title: GPCF-L4-GFIS-REPAIR-068 GFIS pending business verification submission
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -79,4 +79,4 @@ git diff --check -- .: pass
 
 ## 下一步
 
-接收客户确认函或 2026-01 样箱测试签收/反馈原件的脱敏索引，形成第一条 real submission；在业务/WAES/KDS 复核前继续保持 GFIS/GPCF `repair_required`。
+接收客户确认函或 2026-01 样箱测试签收/反馈原件的脱敏索引，形成第一条 real submission；在业务/WAME/KDS 复核前继续保持 GFIS/GPCF `repair_required`。

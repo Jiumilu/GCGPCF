@@ -1,5 +1,5 @@
 import type { TargetSystem, WritebackStatus } from "./fact-candidate";
-import type { WaesGateStatus } from "./waes-gate";
+import type { WameGateStatus } from "./wame-gate";
 
 export type WritebackTargetEntityType =
   | "order"
@@ -23,6 +23,6 @@ export interface WritebackCandidate {
   basedOnObjectRefs: string[];
   evidenceRefs: string[];
   poolRefs: string[];
-  waesGateStatus: Extract<WaesGateStatus, "pending" | "passed" | "blocked" | "human_required" | "committee_required">;
+  wameGateStatus: Extract<WameGateStatus, "pending" | "passed" | "blocked" | "human_required" | "committee_required">;
   writebackStatus: Exclude<WritebackStatus, "not_applicable">;
 }

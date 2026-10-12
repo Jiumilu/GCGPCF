@@ -33,8 +33,8 @@ REQUIRED_ENTRY_COVERAGE = {
     "runtime_intake": {
         "validate_gfis_runtime_intake_gate.py": {"runtime_intake": "0"},
     },
-    "waes_review": {
-        "validate_gfis_waes_review_gate.py": {"waes_review": "0"},
+    "wame_review": {
+        "validate_gfis_wame_review_gate.py": {"wame_review": "0"},
     },
     "verified_artifact": {
         "validate_gfis_verified_artifact_gate.py": {"verified": "0"},
@@ -82,7 +82,7 @@ def main() -> int:
         "runtime_primary_key_ready",
         "review_queue",
         "runtime_intake",
-        "waes_review",
+        "wame_review",
         "verified",
     ]:
         require(values.get(key) == "0", f"aggregate output must keep {key}=0")
@@ -96,7 +96,7 @@ def main() -> int:
         f"covered_entries={len(REQUIRED_ENTRY_COVERAGE)} "
         "real_source_record=0 equivalent_formal_confirmation_file=0 "
         "manual_business_verification=pending runtime_primary_key=0 "
-        "review_queue=0 runtime_intake=0 waes_review=0 verified_artifact=0 "
+        "review_queue=0 runtime_intake=0 wame_review=0 verified_artifact=0 "
         "status_ceiling=repair_required "
         "accepted=false integrated=false production_ready=false customer_accepted=false"
     )

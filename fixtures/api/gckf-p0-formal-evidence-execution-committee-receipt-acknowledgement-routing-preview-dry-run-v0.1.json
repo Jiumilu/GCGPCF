@@ -26,7 +26,7 @@
     "dryRunOnly": true,
     "routingRoles": [
       "request_owner",
-      "waes_gate_owner",
+      "wame_gate_owner",
       "kwe_workflow_owner",
       "harness_reviewer",
       "committee_representative",
@@ -44,7 +44,7 @@
       "exception_return_candidates",
       "authority_and_recusal_boundary",
       "freeze_retention_statement",
-      "waes_negative_gate_snapshot",
+      "wame_negative_gate_snapshot",
       "harness_no_write_guard",
       "no_write_attestation"
     ],
@@ -103,7 +103,7 @@
       "exception_return_candidates_present",
       "authority_and_recusal_boundary_present",
       "freeze_retention_statement_present",
-      "waes_negative_gate_snapshot_present",
+      "wame_negative_gate_snapshot_present",
       "harness_no_write_guard_present",
       "no_write_attestation_present",
       "assert_routing_preview_not_formal_routing",
@@ -121,10 +121,10 @@
       "exceptionReturnCandidatesRef",
       "authorityAndRecusalBoundaryRef",
       "freezeRetentionStatementRef",
-      "waesNegativeGateSnapshotRef",
+      "wameNegativeGateSnapshotRef",
       "harnessNoWriteGuardRef",
       "requestOwnerRef",
-      "waesGateOwnerRef",
+      "wameGateOwnerRef",
       "kweWorkflowOwnerRef",
       "harnessReviewerRef",
       "committeeRepresentativeRef",
@@ -152,7 +152,7 @@
       "missing_exception_return_candidates_ref",
       "missing_authority_and_recusal_boundary_ref",
       "missing_freeze_retention_statement_ref",
-      "missing_waes_negative_gate_snapshot_ref",
+      "missing_wame_negative_gate_snapshot_ref",
       "missing_harness_no_write_guard_ref",
       "missing_required_routing_role",
       "missing_no_write_attestation_ref",
@@ -186,7 +186,7 @@
       "promote_lifecycle",
       "mark_p0_accepted",
       "convert_routing_preview_to_formal_routing",
-      "override_waes_gate"
+      "override_wame_gate"
     ]
   },
   "requiredSourceRefs": [
@@ -221,7 +221,7 @@
     "accepted",
     "integrated",
     "production_ready",
-    "waes_gate_overridden",
+    "wame_gate_overridden",
     "routing_preview_converted_to_formal_routing"
   ],
   "expectedSummary": {

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFP0SESSIONTAKEOVERD18520260627
 title: GCKF P0 会话主线接管当前态 D185
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -55,7 +55,7 @@ D185 不重跑这些历史轮次，不把这些 no-write 文档写成业务完�
 
 - 尚未收到真实 repair owner response。
 - 尚未收到签署响应包。
-- 尚未形成 WAES review note。
+- 尚未形成 WAME review note。
 - 尚未形成人工确认。
 - 当前工作树仍有大量既有 dirty / untracked 项，不能据此声明全仓 clean。
 - 项目群 readiness 聚合检查已恢复稳定输出；根因是外部仓 `loop_document_gate.py` 包装脚本重复委托同一个 GPCF canonical gate，已在 readiness 脚本内按委托 gate 去重。
@@ -83,4 +83,4 @@ D185 不重跑这些历史轮次，不把这些 no-write 文档写成业务完�
 
 ## 下一轮
 
-若收到真实 repair owner response、签署响应包、WAES review note 与人工确认，进入 response intake precheck；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。
+若收到真实 repair owner response、签署响应包、WAME review note 与人工确认，进入 response intake precheck；未收到前继续保持 hold，并只允许追加 no-write current-state 证据。

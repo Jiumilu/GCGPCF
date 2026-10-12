@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C16FB51046
 title: PVAOS
 project: PVAOS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

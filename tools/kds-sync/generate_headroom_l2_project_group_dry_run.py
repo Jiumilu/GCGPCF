@@ -92,7 +92,7 @@ def build_markdown(result: dict) -> str:
 doc_id: GPCF-DOC-07ADF1B23E
 title: Headroom L2 Project Group Dry Run Evidence
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: docs
 status: controlled
 version: v1.0
