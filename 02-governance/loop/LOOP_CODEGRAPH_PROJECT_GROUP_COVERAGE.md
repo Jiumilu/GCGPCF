@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 覆盖结论
 
-2026-06-21 已将项目群当前 14 个本机 Git 仓库纳入 CodeGraph 本地代码图谱生成范围，其中 `WAS世界资产体系` 已作为第 14 项进入项目群、代码图谱和 Loop 工程登记。这里的“14 个本机 Git 仓库纳入 CodeGraph”是项目群覆盖的固定口径。
+2026-06-21 已将项目群当前 15 个本机 Git 仓库纳入 CodeGraph 本地代码图谱生成范围，其中 `WAS世界资产体系` 已作为第 14 项进入项目群、代码图谱和 Loop 工程登记。这里的“15 个本机 Git 仓库纳入 CodeGraph”是项目群覆盖的固定口径。
 
 本轮只完成本地代码图谱生成与治理登记，不执行 `codegraph install`，不修改 Agent MCP 配置，不提交、不推送、不部署、不生产写入、不真实外部 API 写入，也不把任何项目升级为 `accepted`、`integrated` 或 `production_ready`。
 
@@ -40,7 +40,7 @@ superseded_by: []
 
 ## 项目群代码图谱覆盖表
 
-本表即 `CodeGraph 项目群覆盖表`，用于固化 14 个本机 Git 仓库纳入 CodeGraph 的项目群覆盖口径。
+本表即 `CodeGraph 项目群覆盖表`，用于固化 15 个本机 Git 仓库纳入 CodeGraph 的项目群覆盖口径。
 
 | # | 项目 | 仓库路径 | Files | Nodes | Edges | DB Size | CodeGraph 状态 | Git 跟踪状态 |
 |---|---|---|---:|---:|---:|---:|---|---|

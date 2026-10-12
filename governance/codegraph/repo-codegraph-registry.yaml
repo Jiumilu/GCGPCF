@@ -19,7 +19,7 @@ superseded_by: []
 registry:
   name: GlobalCloud Code Intelligence Fabric Registry
   scope: project_group_full
-  repo_count: 14
+  repo_count: 15
   codegraph_role: code_intelligence_fabric
   storage: .codegraph/
   git_tracking_allowed: false
@@ -201,3 +201,12 @@ repositories:
     wame_gate_required: true
     policy_exception_allowed: false
     restricted_domains: [ontology_schema, okf_collection, semantic_contract, source_record_gate]
+  - id: wae
+    name: GlobalCloud WAE
+    code: WB
+    path: /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE
+    role: unified_ui_framework
+    risk_level: high
+    wame_gate_required: true
+    policy_exception_allowed: false
+    restricted_domains: [ui_tokens, ui_kit_contract, shell_contract, app_registry]

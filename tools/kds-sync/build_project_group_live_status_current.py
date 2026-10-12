@@ -9,6 +9,7 @@ import argparse
 import json
 import re
 import subprocess
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,6 +24,7 @@ EXPECTED_REPOS = [
     "GlobalCloud WAES",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
+    "GlobalCloud WAE",
     "GlobalCoud GPCF",
     "GlobalCloud XWAIL",
     "GlobalCloud GFIS",
@@ -81,14 +83,19 @@ def git_status(repo: Path) -> list[str]:
 
 
 def git_ahead_behind(repo: Path) -> tuple[int, int]:
+    """返回 (ahead, behind)。仓库无 upstream（如新建本地仓）时按 (0, 0) 处理，
+    并在 stderr 记一行说明——不因缺少远端而中断整个快照构建。"""
     result = subprocess.run(
         ["git", "rev-list", "--left-right", "--count", "@{upstream}...HEAD"],
         cwd=repo,
-        check=True,
+        check=False,
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
+    if result.returncode != 0:
+        print(f"[warn] {repo.name}: no upstream, ahead/behind treated as 0", file=sys.stderr)
+        return 0, 0
     left, right = result.stdout.strip().split()
     return int(right), int(left)
 

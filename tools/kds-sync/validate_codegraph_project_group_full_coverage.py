@@ -30,6 +30,7 @@ REPOS = [
     ("gpcf", "GlobalCoud GPCF", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCoud GPCF")),
     ("studio", "GlobalCloud Studio", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio")),
     ("was", "WAS世界资产体系", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/WAS世界资产体系")),
+    ("wae", "GlobalCloud WAE", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE")),
 ]
 
 
@@ -54,7 +55,7 @@ def main() -> int:
     evidence_md = read(EVIDENCE_MD)
     loop_round = read(LOOP_ROUND)
 
-    require("repo_count: 14" in registry, "registry must declare repo_count 14")
+    require("repo_count: 15" in registry, "registry must declare repo_count 15")
     require("codegraph_role: code_intelligence_fabric" in registry, "registry must declare Code Intelligence Fabric role")
     require("GlobalCloud Studio" in registry, "registry must include Studio")
     require("WAS世界资产体系" in registry, "registry must include WAS")
@@ -62,9 +63,9 @@ def main() -> int:
     require(evidence.get("evidence_id") == "CODEGRAPH-PROJECT-GROUP-FULL-COVERAGE-20260621", "invalid evidence id")
     require(evidence.get("status") in {"evidence_ready", "review_required"}, "status must be evidence_ready or review_required")
     project_group = evidence["project_group"]
-    require(project_group["repo_count"] == 14, "repo_count must be 14")
-    require(project_group["indexed_repo_count"] == 14, "indexed_repo_count must be 14")
-    require(project_group["git_protected_repo_count"] == 14, "git_protected_repo_count must be 14")
+    require(project_group["repo_count"] == 15, "repo_count must be 15")
+    require(project_group["indexed_repo_count"] == 15, "indexed_repo_count must be 15")
+    require(project_group["git_protected_repo_count"] == 15, "git_protected_repo_count must be 15")
     require(project_group["codegraph_git_status_entries_total"] == 0, ".codegraph git entries must be zero")
     require(project_group["studio_included"] is True, "Studio must be included")
     require(project_group["was_included"] is True, "WAS must be included")
@@ -114,7 +115,7 @@ def main() -> int:
 
     print(
         "codegraph_project_group_full_coverage=pass "
-        "repo_count=14 indexed_repo_count=14 git_protected_repo_count=14 "
+        "repo_count=15 indexed_repo_count=15 git_protected_repo_count=15 "
         "studio_included=true was_included=true status="
         f"{evidence.get('status')}"
     )

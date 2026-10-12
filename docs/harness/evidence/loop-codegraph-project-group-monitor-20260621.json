@@ -10,11 +10,11 @@
     "storage": ".codegraph/"
   },
   "project_group": {
-    "repo_count": 14,
-    "indexed_repo_count": 14,
-    "git_protected_repo_count": 14,
+    "repo_count": 15,
+    "indexed_repo_count": 15,
+    "git_protected_repo_count": 15,
     "codegraph_git_status_entries_total": 0,
-    "up_to_date_repo_count": 13,
+    "up_to_date_repo_count": 14,
     "pending_sync_repo_count": 1,
     "policy_exception_repo_count": 0,
     "pending_sync_projects": [
@@ -98,6 +98,15 @@
         "tests/client/session-context-bar.test.ts"
       ],
       "index_status_note": "2026-10-12 复核：Studio 索引已同步（codegraph status 显示 Index is up to date），不再是 watchlist 待同步项"
+    },
+    {
+      "project": "GlobalCloud WAE",
+      "files": 33,
+      "nodes": 176,
+      "edges": 406,
+      "index_status": "up_to_date",
+      "pending_notice": "none",
+      "codegraph_git_status_entries": 0
     },
     {
       "project": "GlobalCloud WAME",

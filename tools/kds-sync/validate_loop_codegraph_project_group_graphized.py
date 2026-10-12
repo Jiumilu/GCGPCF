@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate 14-repo CodeGraph project-group graphization evidence."""
+"""Validate 15-repo CodeGraph project-group graphization evidence."""
 
 from __future__ import annotations
 
@@ -25,6 +25,7 @@ REPOS = [
     ("GlobalCloud PKC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC")),
     ("GlobalCloud PVAOS", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS")),
     ("GlobalCloud Studio", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio")),
+    ("GlobalCloud WAE", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE")),
     ("GlobalCloud WAME", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES")),
     ("GlobalCloud XGD", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD")),
     ("GlobalCloud XiaoC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC")),
@@ -70,11 +71,11 @@ def main() -> int:
         "invalid graphized status",
     )
     project_group = evidence["project_group"]
-    require(project_group["repo_count"] == 14, "repo_count must be 14")
-    require(project_group["indexed_repo_count"] == 14, "indexed_repo_count must be 14")
-    require(project_group["effective_repo_count_this_round"] == 14, "effective repo count must be 14")
-    require(project_group["git_protected_repo_count"] == 14, "git_protected_repo_count must be 14")
-    require(project_group["up_to_date_repo_count"] == 13, "up_to_date_repo_count must be 13")
+    require(project_group["repo_count"] == 15, "repo_count must be 15")
+    require(project_group["indexed_repo_count"] == 15, "indexed_repo_count must be 15")
+    require(project_group["effective_repo_count_this_round"] == 15, "effective repo count must be 15")
+    require(project_group["git_protected_repo_count"] == 15, "git_protected_repo_count must be 15")
+    require(project_group["up_to_date_repo_count"] == 14, "up_to_date_repo_count must be 14")
     require(project_group["active_drift_repo_count"] == 1, "active drift count must be 1")
     require(
         project_group["active_drift_projects"] == ["GlobalCloud Studio"],
@@ -111,7 +112,7 @@ def main() -> int:
 
     for phrase in [
         "project_group_codegraph_graphized_with_studio_watch_and_no_controlled_residual",
-        "14 个本机 Git 仓",
+        "15 个本机 Git 仓",
         "Studio 活动漂移",
         "GlobalCloud Studio",
         "WAS世界资产体系",
@@ -127,7 +128,7 @@ def main() -> int:
 
     print(
         "loop_codegraph_project_group_graphized=pass "
-        "repo_count=14 indexed_repo_count=14 effective_repo_count=14 "
+        "repo_count=15 indexed_repo_count=15 effective_repo_count=15 "
         "up_to_date_repo_count=13 active_drift=Studio "
         "controlled_residual=none codegraph_git_status_entries_total=0 "
         "next=GPCF-CODEGRAPH-ACTIVE-DRIFT-MONITOR-001"

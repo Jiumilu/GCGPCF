@@ -25,6 +25,7 @@ REPOS = [
     ("GlobalCloud PKC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC")),
     ("GlobalCloud PVAOS", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS")),
     ("GlobalCloud Studio", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio")),
+    ("GlobalCloud WAE", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE")),
     ("GlobalCloud WAME", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES")),
     ("GlobalCloud XGD", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD")),
     ("GlobalCloud XiaoC", Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC")),
@@ -71,11 +72,11 @@ def main() -> int:
     require(evidence.get("codegraph", {}).get("sync_executed_this_round") is True, "monitor must record controlled sync follow-up")
 
     project_group = evidence["project_group"]
-    require(project_group["repo_count"] == 14, "repo_count must be 14")
-    require(project_group["indexed_repo_count"] == 14, "indexed_repo_count must be 14")
-    require(project_group["git_protected_repo_count"] == 14, "git_protected_repo_count must be 14")
+    require(project_group["repo_count"] == 15, "repo_count must be 15")
+    require(project_group["indexed_repo_count"] == 15, "indexed_repo_count must be 15")
+    require(project_group["git_protected_repo_count"] == 15, "git_protected_repo_count must be 15")
     require(project_group["codegraph_git_status_entries_total"] == 0, ".codegraph git entries must be 0")
-    require(project_group["up_to_date_repo_count"] == 13, "up_to_date_repo_count must be 13")
+    require(project_group["up_to_date_repo_count"] == 14, "up_to_date_repo_count must be 14")
     require(project_group["pending_sync_repo_count"] == 1, "pending_sync_repo_count must be 1")
     require(
         project_group["pending_sync_projects"] == ["GlobalCloud Studio"],
@@ -107,7 +108,7 @@ def main() -> int:
     require("large_generated_validator_exception_candidate" in policy, "large file policy missing GFIS exception")
     for phrase in [
         "project_group_codegraph_monitor_pass_with_watchlist",
-        "14 个仓库",
+        "15 个仓库",
         "Brain green",
         "Studio watch",
         "GFIS green",
@@ -121,7 +122,7 @@ def main() -> int:
     print(
         "loop_codegraph_project_group_monitor=pass "
         "evidence=LOOP-CODEGRAPH-PROJECT-GROUP-MONITOR-20260621 "
-        "repo_count=14 git_protected_repo_count=14 "
+        "repo_count=15 git_protected_repo_count=15 "
         "watchlist=Studio policy_exception=none "
         "codegraph_git_status_entries_total=0 sync_executed=controlled_followup"
     )

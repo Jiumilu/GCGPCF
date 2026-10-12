@@ -29,6 +29,7 @@ EXPECTED_REPOS = [
     "GlobalCloud WAES",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
+    "GlobalCloud WAE",
     "GlobalCoud GPCF",
     "GlobalCloud XWAIL",
     "GlobalCloud GFIS",

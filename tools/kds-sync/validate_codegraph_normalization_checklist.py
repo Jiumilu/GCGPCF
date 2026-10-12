@@ -64,7 +64,7 @@ def main() -> int:
         "缺少 `codegraph_evidence` 的任务，直接阻断进入实现。",
         "每个业务变更的 evidence 固定包含 `codegraph_evidence`。",
         "Harness / WAME 不把 CodeGraph 当参考材料，而是当验收输入之一。",
-        "每轮 Loop 都要看 14 仓 `codegraph status`。",
+        "每轮 Loop 都要看 15 仓 `codegraph status`。",
         "`.codegraph/` 始终保持 Git 隔离。",
         "有 drift 先 watch，不直接 sync。",
         "`sync / reindex` 继续走授权边界。",
@@ -103,7 +103,7 @@ def main() -> int:
         require(phrase in json.dumps(evidence_template, ensure_ascii=False), f"evidence template missing field: {phrase}")
 
     for phrase in [
-        "14 个本机 Git 仓库纳入 CodeGraph",
+        "15 个本机 Git 仓库纳入 CodeGraph",
         "WAS世界资产体系",
         "CodeGraph 项目群覆盖表",
     ]:
@@ -119,7 +119,7 @@ def main() -> int:
     for key in ["project_group_steady_state_verify", "dev_execution_admission", "dev_execution_pilot_pack", "dev_execution_harness_gate", "impact_metrics_baseline", "impact_report_dry_run", "dev_execution_steady_state_monitor"]:
         require(evidence["operational_gates"][key] in {"pass", "pass_with_watch"}, f"gate must be pass-like: {key}")
 
-    require(evidence["current_state"]["repo_count"] == 14, "repo count mismatch")
+    require(evidence["current_state"]["repo_count"] == 15, "repo count mismatch")
     require(evidence["current_state"]["all_repo_codegraph_initialized"] is True, "all repos must be initialized")
     require(evidence["current_state"]["all_codegraph_git_isolated"] is True, "all repos must keep codegraph git isolation")
     require(evidence["current_state"]["codegraph_reindex_recommended"] is False, "reindex must not be recommended")
@@ -149,7 +149,7 @@ def main() -> int:
 
     print(
         "codegraph_normalization_checklist=pass "
-        "repo_count=14 all_repo_codegraph_initialized=true all_codegraph_git_isolated=true "
+        "repo_count=15 all_repo_codegraph_initialized=true all_codegraph_git_isolated=true "
         "watchlist_mode=monitor_only "
         "next=GPCF-CODEGRAPH-NORMALIZATION-WATCH-002"
     )

@@ -35,12 +35,14 @@
     "dev_execution_steady_state_monitor": "pass_with_watch"
   },
   "current_state": {
-    "repo_count": 14,
+    "repo_count": 15,
     "all_repo_codegraph_initialized": true,
     "all_codegraph_git_isolated": true,
     "codegraph_reindex_recommended": false,
     "watchlist_mode": "monitor_only",
-    "watchlist_repos": ["Studio"],
+    "watchlist_repos": [
+      "Studio"
+    ],
     "gpcf_pending": 0,
     "studio_pending": 18
   },

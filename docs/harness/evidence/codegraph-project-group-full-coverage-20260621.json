@@ -12,10 +12,10 @@
     "git_tracking_allowed": false
   },
   "project_group": {
-    "repo_count": 14,
-    "indexed_repo_count": 14,
-    "git_protected_repo_count": 14,
-    "up_to_date_repo_count": 8,
+    "repo_count": 15,
+    "indexed_repo_count": 15,
+    "git_protected_repo_count": 15,
+    "up_to_date_repo_count": 9,
     "pending_sync_repo_count": 5,
     "policy_exception_repo_count": 1,
     "codegraph_git_status_entries_total": 0,
@@ -376,6 +376,32 @@
       "node_count": 70,
       "edge_count": 209,
       "db_size_bytes": 278528,
+      "pending_changes": {
+        "added": 0,
+        "modified": 0,
+        "removed": 0
+      },
+      "pending_total": 0,
+      "index_status": "up_to_date",
+      "policy_exception": null,
+      "codegraph_git_status_entries": 0,
+      "codegraph_git_status": [],
+      "worktree_mismatch": null,
+      "reindex_recommended": false
+    },
+    {
+      "id": "wae",
+      "project": "GlobalCloud WAE",
+      "code": "WB",
+      "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAE",
+      "risk_level": "high",
+      "codegraph_initialized": true,
+      "version": "0.1.0",
+      "last_indexed": "2026-10-12",
+      "file_count": 33,
+      "node_count": 176,
+      "edge_count": 406,
+      "db_size_bytes": 487424,
       "pending_changes": {
         "added": 0,
         "modified": 0,

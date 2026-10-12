@@ -39,7 +39,7 @@ superseded_by: []
 - 证据里必须有 `query`、`target_nodes`、`affected`、`changed_files`、`test_selection_reason`、`post_change_status`。
 - 任务开工前先过 `CodeGraph 任务 Intake 门禁`，再进入实现。
 - Harness / WAME 不把 CodeGraph 当参考材料，而是当验收输入之一。
-- 每轮 Loop 都要看 14 仓 `codegraph status`。
+- 每轮 Loop 都要看 15 仓 `codegraph status`。
 - `.codegraph/` 始终保持 Git 隔离。
 - 有 drift 先 watch，不直接 sync。
 - `sync / reindex` 继续走授权边界。
