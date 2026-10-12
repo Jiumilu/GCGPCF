@@ -137,7 +137,7 @@ def main() -> int:
         if flow not in doc_text:
             failures.append(f"missing flow mapping in evidence: {flow}")
 
-    for token in ["version: 0.1.0", "knowledgeObject", "relationship", "event", "wameGateInput"]:
+    for token in ["version: 0.2.0", "knowledgeObject", "relationship", "event", "wameGateInput"]:
         if token not in ontology_text:
             failures.append(f"missing ontology source token: {token}")
 

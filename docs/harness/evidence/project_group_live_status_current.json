@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T13:33:35.013273+08:00",
+  "generated_at": "2026-10-12T13:45:21.438161+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
@@ -40,7 +40,7 @@
   "sensitive_repos": [],
   "pass_repo_count": 10,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T13:32:06.893599+08:00",
+  "previous_generated_at": "2026-10-12T13:44:37.970758+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -109,22 +109,13 @@
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 12,
+      "dirty_count": 3,
       "ahead": 0,
       "behind": 0,
       "paths": [
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
-        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
-        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md",
-        "loop/context/headroom/README.md",
-        "loop/context/headroom/docs/README.md"
+        "tools/kds-sync/validate_project_group_loop_session_registry_rework_20260626.py",
+        "tools/kds-sync/validate_was_xwail_aaas_plan_alignment.py",
+        "tools/kds-sync/validate_was_xwail_ontology_mapping.py"
       ],
       "sensitive_paths": []
     },
