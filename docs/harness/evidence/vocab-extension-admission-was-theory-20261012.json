@@ -1,0 +1,58 @@
+{
+  "evidence_id": "GPCF-VOCAB-EXTENSION-ADMISSION-WAS-THEORY-20261012",
+  "status": "vocab_extension_admitted_as_candidates",
+  "date": "2026-10-12",
+  "round_id": "GPCF-VOCAB-EXTENSION-ADMISSION-002",
+  "purpose": "按 WAS 项目群 registry future_project_policy，将 WAS 理论篇词表扩展请求（32 条：object×13／relationship×6／state×3／interface×10）裁定为候选（admit as candidates）——承接首批 9 条先例（GPCF-VOCAB-EXTENSION-ADMISSION-20261012）。",
+  "registry_base": {
+    "source_registry": "docs/harness/evidence/was-project-group-ontology-registry-20260621.json",
+    "existing_entries_untouched": 43,
+    "policy": "future_project_policy"
+  },
+  "source_request": "docs/harness/evidence/vocab-extension-request-was-theory-20261012.json",
+  "source_material": "WAS:docs/WAS理论篇_v0.1.md（会话报告 V1.0 结合产物）",
+  "request_decision": "accepted（口径：admitted as candidates，候选登记）",
+  "decision_record": {
+    "date": "2026-10-12",
+    "authority": "老卢（治理方；授权来源：2026-10-12「继续」=按建议执行）",
+    "decision": "accepted",
+    "note": "裁定口径：admit as candidates（候选登记；非运行授权）；32 条全数候选"
+  },
+  "admitted": {
+    "count": 32,
+    "object": [
+      "Human", "Entity", "Environment", "Data", "Capability", "Service",
+      "AI", "Value", "Energy", "Organization",
+      "WorldSlice", "WorldSliceNetwork", "WorldArche"
+    ],
+    "relationship": [
+      "SpacetimeAxis", "CausalityAxis",
+      "GenerationRule", "ConnectionRule", "EvolutionRule", "InteractionRule"
+    ],
+    "state": [
+      "RealWorld", "TrustedWorld", "EvolutionWorld"
+    ],
+    "interface": [
+      "RecordAgent", "TrustAgent", "EvolveAgent",
+      "SituationPanorama", "SpacetimeView", "CausalityView", "ValueView",
+      "ScenarioView", "UncertaintyView", "InteractionView"
+    ]
+  },
+  "rulings": {
+    "批次定位": "理论层术语（世界观／建模／运行／应用四篇），与首批 9 条（图谱业务术语）分属不同语义域；建议词表内以来源域（was-theory）标记，不改变既有条目结构",
+    "命名映射": "WorldArche 等英文名为候选规范标签；中文名（世界切片／世界切片网络／世界构元／态势全景等）以理论篇术语表为准",
+    "六类目映射": "按请求件映射建议执行（object/relationship/state/interface）；event/evidence 类目本批无新增"
+  },
+  "boundary": {
+    "registry_body_modified": false,
+    "candidate_status_only": true,
+    "accepted": false,
+    "integrated": false,
+    "production_ready": false
+  },
+  "non_claims": [
+    "本裁定为候选登记（candidates），不是运行授权、不修改 20260621 registry 既有 43 条",
+    "零写回、零运行状态提升",
+    "理论概念进入契约/工程仍须走各自流程（XWAIL 修订议程、WAME 概念评审）"
+  ]
+}
