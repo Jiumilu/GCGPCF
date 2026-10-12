@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-664403C419
 title: GlobalCloud 绿色供应链体系 SOP 模板库
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ SOP 在本体系中不是静态文档，而是可配置、可版本化、可执�
 
 基本边界：
 
-1. SOP 可以定义业务确认点，但 WAES 只承办治理确认，不承办具体事务审批。
+1. SOP 可以定义业务确认点，但 WAME 只承办治理确认，不承办具体事务审批。
 2. SOP 可以允许 AI 生成建议、摘要、预警和复盘草案，但不能允许 AI 直接写业务事实。
 3. SOP 完成必须有执行记录、事件、证据、回执和必要的业务确认引用。
 4. 配置完成不等于 SOP 完成；发布通过也不等于 SOP 完成。
@@ -42,9 +42,9 @@ SOP 在本体系中不是静态文档，而是可配置、可版本化、可执�
 | sopName | SOP 名称 |
 | domain | governance / collaboration / factory_execution / data / ai_service |
 | applicableTemplate | 一链一厂 / 一链多厂 / 多链多厂 / 区域平台 |
-| ownerSystem | GFIS / GPC / PVAOS / WAES / Edge / Brain / XiaoC / Hermes / XGD |
+| ownerSystem | GFIS / GPC / PVAOS / WAME / Edge / Brain / XiaoC / Hermes / XGD |
 | ownerRole | 主责角色 |
-| governanceOwner | WAES 或 Harness 治理负责人 |
+| governanceOwner | WAME 或 Harness 治理负责人 |
 | inputObjects | 输入对象 |
 | outputObjects | 输出对象 |
 | triggerEvents | 触发事件 |
@@ -108,7 +108,7 @@ completed -> reviewed -> closed
 | 输入对象 | PlatformOrder、Customer、Material、Factory、ConnectorBinding |
 | 输出对象 | FactoryOrder、WorkOrder、QualityInspection、FactoryShipmentRelease、Shipment、ProofOfDelivery、EvidenceRecord |
 | 业务确认点 | 工厂订单确认、质量放行、发货出库、客户签收 |
-| WAES 治理点 | 证据链完整性、AI 授权、阶段验收 |
+| WAME 治理点 | 证据链完整性、AI 授权、阶段验收 |
 | AI 可做 | 交付风险摘要、缺料预警、日报草案 |
 | AI 禁止 | 自动承诺交期、自动发货、自动签收 |
 | 验收场景 | A1 |
@@ -122,7 +122,7 @@ completed -> reviewed -> closed
 | 输入对象 | ASN、MaterialLot、QualityInspection、WorkOrder、FactoryShipmentRelease、ProofOfDelivery |
 | 输出对象 | QualityTraceScope、TraceSegment、EvidenceRecord |
 | 业务确认点 | 来料检验、成品质检、批次隔离或放行 |
-| WAES 治理点 | 追溯证据确证、断点补证 |
+| WAME 治理点 | 追溯证据确证、断点补证 |
 | AI 可做 | 追溯路径摘要、异常归因草案 |
 | AI 禁止 | 自动改变批次质量状态 |
 | 验收场景 | A2 |
@@ -136,7 +136,7 @@ completed -> reviewed -> closed
 | 输入对象 | WorkOrder、BOM、InventoryTransaction、LineSideStock |
 | 输出对象 | AISuggestion、BusinessApprovalReference、LogisticsTask、EvidenceRecord |
 | 业务确认点 | 补料任务创建、配送确认 |
-| WAES 治理点 | AI 建议未越权、证据完整 |
+| WAME 治理点 | AI 建议未越权、证据完整 |
 | AI 可做 | 补料建议、替代方案、影响分析 |
 | AI 禁止 | 自动创建或关闭补料任务 |
 | 验收场景 | A3 |
@@ -150,7 +150,7 @@ completed -> reviewed -> closed
 | 输入对象 | QualityInspection、MaterialLot、WorkOrder、Equipment |
 | 输出对象 | ExceptionCase、CAPA 草案、KnowledgeEntry、EvidenceRecord |
 | 业务确认点 | 隔离、返工、报废、放行、CAPA 关闭 |
-| WAES 治理点 | 复盘证据、AI 越权检查 |
+| WAME 治理点 | 复盘证据、AI 越权检查 |
 | AI 可做 | CAPA 草案、原因分析、相似案例 |
 | AI 禁止 | 自动质量放行、自动报废 |
 | 验收场景 | A5 |
@@ -164,7 +164,7 @@ completed -> reviewed -> closed
 | 输入对象 | Shipment、TransitCheckpoint、ProofOfDelivery、ExternalException |
 | 输出对象 | BusinessApprovalReference、EvidenceRecord、AISuggestionOutcome |
 | 业务确认点 | 签收争议处理、数量差异确认、交期承诺变更 |
-| WAES 治理点 | 证据完整性、客户承诺风险监控 |
+| WAME 治理点 | 证据完整性、客户承诺风险监控 |
 | AI 可做 | 异常原因摘要、处理建议、客户沟通草案 |
 | AI 禁止 | 自动签收、自动承诺交期 |
 | 验收场景 | A6 |
@@ -173,12 +173,12 @@ completed -> reviewed -> closed
 
 | 项 | 内容 |
 |---|---|
-| 主责系统 | WAES |
+| 主责系统 | WAME |
 | 触发事件 | Agent 工具调用请求 |
 | 输入对象 | AgentToolGrant、AgentRun、AgentToolPolicy |
 | 输出对象 | AIOverreachBlocked、EvidenceRecord |
 | 业务确认点 | 无，业务主账不得变化 |
-| WAES 治理点 | 越权判定、工具权限冻结或调整 |
+| WAME 治理点 | 越权判定、工具权限冻结或调整 |
 | AI 可做 | 报告失败原因、请求补证 |
 | AI 禁止 | 继续重试禁止动作 |
 | 验收场景 | A13 |
@@ -189,19 +189,19 @@ completed -> reviewed -> closed
 |---|---|---|
 | 线边配送 SOP | GFIS | LineSideDelivery、LogisticsTask、线边确认 |
 | 设备异常 SOP | GFIS | Equipment、MaintenanceOrder、停机影响复盘 |
-| 连接器降级恢复 SOP | WAES / Connector Registry | ConnectorLifecycleRecord、DLQ、Replay |
-| SOP 版本回滚 SOP | WAES / Brain | SOPVersion、ReleaseGate、影响范围 |
+| 连接器降级恢复 SOP | WAME / Connector Registry | ConnectorLifecycleRecord、DLQ、Replay |
+| SOP 版本回滚 SOP | WAME / Brain | SOPVersion、ReleaseGate、影响范围 |
 | 一链多厂分单 SOP | GPC / GFIS | FactoryAllocation、CapacityCommitment |
-| 指标口径变更 SOP | WAES | MetricDefinition、LineageRecord、重算 |
+| 指标口径变更 SOP | WAME | MetricDefinition、LineageRecord、重算 |
 
 ## 7. P2 SOP 模板
 
 | SOP | 主责系统 | 重点 |
 |---|---|---|
-| 能源异常 SOP | GFIS / WAES | 能耗采集、指标、异常复盘 |
-| 安环隐患 SOP | GFIS / WAES | HSE 事件、作业票、AI 禁止接管 |
-| 多链多厂协同 SOP | GPC / WAES | 跨链隔离、经营分析 |
-| 区域平台监管披露 SOP | PVAOS / WAES | 对外披露证据和指标口径 |
+| 能源异常 SOP | GFIS / WAME | 能耗采集、指标、异常复盘 |
+| 安环隐患 SOP | GFIS / WAME | HSE 事件、作业票、AI 禁止接管 |
+| 多链多厂协同 SOP | GPC / WAME | 跨链隔离、经营分析 |
+| 区域平台监管披露 SOP | PVAOS / WAME | 对外披露证据和指标口径 |
 
 ## 8. SOP 验收口径
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2F3CC2EAA1
 title: GC-Knowledge Fabric 核心对象关系与最小字段契约
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -23,7 +23,7 @@ superseded_by: []
 
 ## 1. 目标
 
-本文档定义 GC-Knowledge Fabric P0 阶段核心对象关系和最小字段契约，用于约束后续 OKF YAML、JSON Schema、KDS v2 表结构、WAES Gate、KWE 工单、GFIS 写回沙箱、Harness evidence 和 LOOP 记录。
+本文档定义 GC-Knowledge Fabric P0 阶段核心对象关系和最小字段契约，用于约束后续 OKF YAML、JSON Schema、KDS v2 表结构、WAME Gate、KWE 工单、GFIS 写回沙箱、Harness evidence 和 LOOP 记录。
 
 本文档不代表数据库已创建，也不代表 API 已实现。
 
@@ -105,7 +105,7 @@ SourceRecord
 | `confidence` | 否 | 置信度 |
 | `sourceRefs` | 是 | 来源 |
 | `evidenceRefs` | 是 | 证据 |
-| `waesGateRefs` | 是 | WAES 门禁 |
+| `waesGateRefs` | 是 | WAME 门禁 |
 | `confirmationStatus` | 是 | 确认状态 |
 | `promotionBlockers` | 否 | 升级阻塞 |
 
@@ -137,7 +137,7 @@ SourceRecord
 |---|---|---|
 | `candidateId` | 是 | 写回候选 ID |
 | `sourceFactId` | 是 | 来源事实或候选事实 |
-| `targetSystem` | 是 | GFIS/GPC/ERP/MES/KDS/WAES |
+| `targetSystem` | 是 | GFIS/GPC/ERP/MES/KDS/WAME |
 | `targetModule` | 是 | 目标模块 |
 | `targetField` | 是 | 目标字段 |
 | `currentValue` | 否 | 当前值 |
@@ -183,7 +183,7 @@ P1 前只允许 `no-write` 和 `sandbox`。
 | `newGapRefs` | 是 | 新增缺口 |
 | `candidateFactRefs` | 是 | 候选事实 |
 | `candidateSopRefs` | 是 | 候选 SOP |
-| `waesResultRefs` | 是 | WAES 结果 |
+| `waesResultRefs` | 是 | WAME 结果 |
 | `confirmationRefs` | 是 | 人工确认 |
 | `committeeRefs` | 是 | 委员会事项 |
 | `risk` | 是 | 风险 |

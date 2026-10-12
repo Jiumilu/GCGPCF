@@ -2,7 +2,7 @@
 doc_id: GPCF-EVIDENCE-GKE001-MMC-A10I3H1R3-20260812
 title: GKE-001 MMC A10I3H1R3 实现复核与治理闭合证据
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

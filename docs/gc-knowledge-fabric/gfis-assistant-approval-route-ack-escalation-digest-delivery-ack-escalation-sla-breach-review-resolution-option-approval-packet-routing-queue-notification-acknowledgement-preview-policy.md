@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-285455E789
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Preview No-write 规则
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-154 的 approval packet routing queue notification acknowledgement preview。该预览承接 DKS-153 notification preview，只展示候选确认状态、确认渠道、候选确认人、确认期限、阻断确认计数和下一步候选动作。
 
-该能力不创建真实 acknowledgement、receipt、read receipt、delivery status update、notification、message、inbox item、routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAES gate result、KWE work item、KDS lifecycle 或任何业务写回。
+该能力不创建真实 acknowledgement、receipt、read receipt、delivery status update、notification、message、inbox item、routing queue、queue item、approval assignment、approval lock、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAME gate result、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 输入边界
 

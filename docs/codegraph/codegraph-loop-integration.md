@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F7ADE9DF11
 title: CodeGraph Loop 集成规范
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ Task Intake
   -> Implementation
   -> Test Mapping
   -> Evidence Capture
-  -> WAES Gate
+  -> WAME Gate
   -> KDS / OKF Candidate Record
   -> Loop Feedback
 ```
@@ -88,7 +88,7 @@ task_intake:
 
 Task Intake 的默认硬门禁是：先做 `codegraph query / node / affected`，再固化 `target_nodes`、`affected_scope`、`files_allowed_to_change`、`files_not_to_touch`、`expected_tests`，测试选择必须带 `affected_tests` 或 `fallback_reason`，验收证据必须包含 `codegraph_evidence`。
 
-Harness / WAES 不把 CodeGraph 当参考材料，而是把它当作验收输入之一。
+Harness / WAME 不把 CodeGraph 当参考材料，而是把它当作验收输入之一。
 
 ## Karpathy 行为门禁（Loop 真实运行）
 

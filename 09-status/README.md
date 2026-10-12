@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D77EFFB8F7
 title: 状态与控制台账
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0

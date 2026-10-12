@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CODEGRAPH-DEVELOPMENT-STATE-CONTROL-MEMORY-20260626
 title: CodeGraph 开发态控制记忆 2026-06-26
 project: GPCF
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0
@@ -37,9 +37,9 @@ CodeGraph 当前目标仍是从治理层推进到业务开发执行层并证明�
 - 不声明运行态正常。
 - 不声明业务功能完成。
 - 不声明 accepted、integrated、production_ready 或 customer_accepted。
-- 不声明生产写入、外部 API 写入、真实 KDS 写入、真实 WAES 写入。
+- 不声明生产写入、外部 API 写入、真实 KDS 写入、真实 WAME 写入。
 - 不声明 commit、push、deploy 已执行。
-- 不把 CodeGraph 作为 WAES、Harness 或人工验收的最终裁决。
+- 不把 CodeGraph 作为 WAME、Harness 或人工验收的最终裁决。
 
 ## 当前开发态事实
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-MASTER-PLAN-20260626
 title: GlobalCloud 项目群总体方案
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ superseded_by: []
 | WAS | 世界资产体系总体语义、架构和治理基线 |
 | XWAIL | WAS 的机器建模语言、契约、Profile 和验证机制 |
 | AaaS | 基于 XWAIL 契约的资产服务化、计量、SLA 和证据要求 |
-| WAES | 世界资产治理平台（2026-10-12 正名，原对外名 WAE 世界资产浏览器）；承担资产主账、治理执行、注册、授权和发布入口 |
+| WAME | 世界资产模型引擎（2026-10-12：原 WAE 引擎与原 WAES 合并为一，WAES 缩写停用）；承担资产主账、运行引擎、治理执行、注册、授权和发布入口 |
 | GFIS | 供应链真实业务事实源和运行记录输入 |
 | GPC | 绿色供应链公共服务平台和场景协同入口 |
 | PVAOS | 供应链价值联盟运营平台 |
@@ -54,9 +54,9 @@ superseded_by: []
 | GPCF | 项目群治理、文档、证据、门禁、状态传导和 LOOP 编排 |
 | ICP | 24字产业模型、十一池只读资源投影、场景编排、产业匹配和控制决策候选 |
 
-| WAE | 世界资产浏览器；GlobalCloud 项目群统一界面框架与统一入口（2026-10-12 立项；先独立运行，再逐项目纳入；以 WAES 主框架为基础） |
+| WAE | 世界资产浏览器；GlobalCloud 项目群统一界面框架与统一入口（2026-10-12 立项；先独立运行，再逐项目纳入；以 WAME 主框架为基础） |
 
-| PQC | PVA 价值联盟运营侧包装成本、报价审批、采购及订单回款业务系统；不替代 KDS 主存、GFIS 工厂执行或 WAES 治理 |
+| PQC | PVA 价值联盟运营侧包装成本、报价审批、采购及订单回款业务系统；不替代 KDS 主存、GFIS 工厂执行或 WAME 治理 |
 
 | SpaceAIStudio | 独立 Windows 安防监控桌面客户端；保留与 Studio、SpaceAI 的项目边界；敏感文件仅留本地，overall_status=partial |
 | SpaceAI | 既有 Windows/.NET 桌面工程，含地图与视频设备组件；独立纳管，业务定位及跨系统边界待验证，不授予生产或业务事实写入权 |
@@ -68,7 +68,7 @@ GC-ICP 是项目群产业控制中枢候选项目，拥有产业建模、资源�
 | 相邻项目 | 主责保持 | ICP 禁止越权 |
 |---|---|---|
 | KDS | 知识主存和十一池事实索引 | 不建立第二套资源事实主账 |
-| WAES | 治理、证据、状态和人工确认 | 不自动批准或晋升状态 |
+| WAME | 治理、证据、状态和人工确认 | 不自动批准或晋升状态 |
 | GPC | 平台订单和跨组织协同 | 不创建订单、运输或 POD 事实 |
 | GFIS | 工厂生产、质量、库存和设备 | 不排产、放行或控制设备 |
 | PVAOS | 租户、组织、伙伴和门户 | 不管理身份或生态主数据 |
@@ -87,8 +87,8 @@ ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、AP
 | KDS | 作为客户、订单、主体、合同、交付、回款和会议材料的唯一知识事实引用源 | 未授权前只读，不执行真实 KDS API 写入 |
 | GFIS | 承接 G5-G7 以后生产、质检、仓储、发货、POD、财务凭证和运行层主键 | 无真实 source-of-record 时不得声明真实 SOP E2E |
 | GPC | 承接订单池、红黄灯、签收、异常和周评分看板等后续页面需求 | 不以页面可见替代业务闭环 |
-| GPCF | 纳入项目群门禁、证据、状态矩阵、依赖矩阵和 LOOP 闭环 | 不替代业务 owner、WAES 或客户验收 |
-| WAES | 承接授权、审查、越权控制和状态裁决入口 | 未经人工确认不得 accepted、integrated 或 production_ready |
+| GPCF | 纳入项目群门禁、证据、状态矩阵、依赖矩阵和 LOOP 闭环 | 不替代业务 owner、WAME 或客户验收 |
+| WAME | 承接授权、审查、越权控制和状态裁决入口 | 未经人工确认不得 accepted、integrated 或 production_ready |
 
 该链路的总体定位是 `controlled_internal_pilot`。它可以作为项目群真实运营补证和系统开发任务的输入，不得直接声明正式 SOP 发布、客户验收、生产运行完成、项目群集成完成或 1+8 全覆盖已达成。
 
@@ -104,7 +104,7 @@ ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、AP
 
 ## 3.1 GlobalCloud Knowledge Engineering（GKE-001）
 
-项目群将资料、会议、证据、关系、决策和长期记忆统一纳入一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`）。GPCF 是控制面，KDS 是知识事实主存，MMC 负责可信身份与跨服务授权，Brain 负责受控分析和候选生成，Studio 负责用户任务与人工复核，WAES、GFIS、GPC、PVAOS 等继续持有项目、订单、生产和资产等权威业务主数据。
+项目群将资料、会议、证据、关系、决策和长期记忆统一纳入一级工程 `GlobalCloud Knowledge Engineering`（`GKE-001`）。GPCF 是控制面，KDS 是知识事实主存，MMC 负责可信身份与跨服务授权，Brain 负责受控分析和候选生成，Studio 负责用户任务与人工复核，WAME、GFIS、GPC、PVAOS 等继续持有项目、订单、生产和资产等权威业务主数据。
 
 `03-data-ai-knowledge/GlobalCloud项目群知识工程规范.md` 是 GKE-001 的项目群上位规范。任何系统不得建立平行资料、证据、审计或长期记忆主账；任何 AI 结果在确认前只能是 `candidate`；任何业务状态改变必须由业务对象 owner 独立授权。当前工程状态固定为 `active / partial / not_complete`，不得由文档、fixture、mock、组件测试或本地镜像提升。
 
@@ -112,7 +112,7 @@ ICP 当前状态固定为 `candidate/partial/human_required`，本地契约、AP
 
 ### 3.1.1 知识资产模型体系
 
-项目群知识资产模型采用“GPCF 定义、KDS 主存、Brain 消费、MMC 调用、WAES/人工授权”的单一责任链。GPCF 在 `03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md` 中维护项目群级模型、词表和兼容规则；KDS 的 OKF `KnowledgeObject` 保持知识正本，`KnowledgeAssetEnvelope` 只增加空间、业务/研发上下文、受控分类、治理责任和跨空间投影，不建立第二主账。
+项目群知识资产模型采用“GPCF 定义、KDS 主存、Brain 消费、MMC 调用、WAME/人工授权”的单一责任链。GPCF 在 `03-data-ai-knowledge/GlobalCloud知识资产模型体系综合方案.md` 中维护项目群级模型、词表和兼容规则；KDS 的 OKF `KnowledgeObject` 保持知识正本，`KnowledgeAssetEnvelope` 只增加空间、业务/研发上下文、受控分类、治理责任和跨空间投影，不建立第二主账。
 
 以下概念必须使用独立字段：
 
@@ -153,21 +153,21 @@ customer_accepted = false
 
 本方案继承 `GlobalCloud宪法`。宪法是产业模型的具体实践总纲和项目群最高规范性权威文件；本方案是其授权下的最高总体执行控制文件，不得反向覆盖宪法的产业模型、根本原则、体系边界和权威关系。
 
-宪法治理的产业领域主责归 ICP，canonical 正本与版本保管归 KDS。SOP 负责修订程序与审计，GPCF 负责方案传导、冲突检测和 G00 继承门禁，WAES 与人工负责授权和状态裁决。任何单一项目不得完成自提、自审、自批、自发布闭环。
+宪法治理的产业领域主责归 ICP，canonical 正本与版本保管归 KDS。SOP 负责修订程序与审计，GPCF 负责方案传导、冲突检测和 G00 继承门禁，WAME 与人工负责授权和状态裁决。任何单一项目不得完成自提、自审、自批、自发布闭环。
 
 ## 工业绿链底座SOP池设计回传（2026-10-10）
 
 用户要求新增SOP池并根据全部工作规划纳入工业绿链底座。本轮回传[工业绿链底座SOP池](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/底座/SOP池.md>)及[工作覆盖与建设清单](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/底座/SOP池工作覆盖与建设清单.md>)，状态为设计登记/partial，未发布新业务SOP或提升运行状态。底座使用可扩展池目录，不以池数命名；历史十一池架构和证据保留原阶段口径。
 
-SOP-POOL聚合工作程序、适用版本、步骤、证据要求和执行引用；场景池选择编排SOP版本，生态池提供主体与角色，人才池提供能力和授权引用。原SOP正文、既有SOP账本、GlobalCloud SOP项目及业务系统的职责保留；业务确认与WAES/Harness治理确认分开，不新增业务主账或审批权。
+SOP-POOL聚合工作程序、适用版本、步骤、证据要求和执行引用；场景池选择编排SOP版本，生态池提供主体与角色，人才池提供能力和授权引用。原SOP正文、既有SOP账本、GlobalCloud SOP项目及业务系统的职责保留；业务确认与WAME/Harness治理确认分开，不新增业务主账或审批权。
 
-传导对象为KDS、SOP、WAES、ICP、Studio及按业务适用的GPC/GFIS/PVAOS/PQC：后续在各自变更包核对SOP身份/版本、任务步骤、证据与权限契约。此登记不表示这些系统已接入SOP池，不自动将候选标准提升为生效标准。
+传导对象为KDS、SOP、WAME、ICP、Studio及按业务适用的GPC/GFIS/PVAOS/PQC：后续在各自变更包核对SOP身份/版本、任务步骤、证据与权限契约。此登记不表示这些系统已接入SOP池，不自动将候选标准提升为生效标准。
 
 ## 工业绿链业务图谱修订设计回传（2026-10-11）
 
 用户要求在Hermes方案基础上深入分析形成新方案，登记[业务图谱与执行核验一体化方案 v2.0](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱与执行核验一体化方案_v2.0.md>)。设计采用可扩展池目录、稳定主体身份、带证据的关系声明、SOP版本与任务执行关联，继承现有生态池、SOP池及业务系统职责。KDS保存知识来源，图谱为只读派生视图；不新增主账或审批权。
 
-authorization=design_revision_and_document_registration；confirmation=business_rules_and_runtime_acceptance_pending；status=partial。本轮仅文档登记，不代表图谱实现、业务确认、跨系统集成或生产验收。关联KDS、SOP、WAES及适用的GFIS、GPC、PVAOS、PQC后续按影响范围传导。
+authorization=design_revision_and_document_registration；confirmation=business_rules_and_runtime_acceptance_pending；status=partial。本轮仅文档登记，不代表图谱实现、业务确认、跨系统集成或生产验收。关联KDS、SOP、WAME及适用的GFIS、GPC、PVAOS、PQC后续按影响范围传导。
 
 补充实施计划登记（2026-10-11）：同版方案第十三章已合并GKE-001下的三链应用定位、F-012/F-013/F-014依赖衔接、各项目交付分工、B1—B5分批计划、责任落实及技术/业务语义/业务结果三层验收。下一步拟形成来源与责任、接口与依赖两份实施清单；本轮未创建新Feature、未启动业务系统接入或扩大既有授权。
 

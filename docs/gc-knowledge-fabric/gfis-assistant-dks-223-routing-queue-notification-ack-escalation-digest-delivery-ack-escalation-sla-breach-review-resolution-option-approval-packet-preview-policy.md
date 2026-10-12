@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9EBEF58E20
 title: GFIS Assistant DKS-223 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ DKS-223 将 DKS-222 resolution option preview 推进为 approval packet preview�
 ## 严格边界
 
 - 不创建 approval packet、approval request 或 approval decision。
-- 不创建 committee decision、freeze action、Harness evidence、WAES gate result 或 KWE work item。
+- 不创建 committee decision、freeze action、Harness evidence、WAME gate result 或 KWE work item。
 - 不提升 KDS lifecycle，不写 KDS fact / accepted fact。
 - 不写 GFIS、GPC、ERP、MES，不调用外部 API。
 

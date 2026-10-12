@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-85ADC1863C
 title: GFIS Assistant DKS-241 Digest Delivery Preview Policy
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ DKS-241 在 DKS-240 escalation digest preview 的基础上生成 digest delivery
 
 ## 边界
 
-本轮不创建真实 digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、approval assignment、approval packet、committee decision、freeze action、Harness evidence、WAES gate result，也不更新 KDS lifecycle、业务事实或任何外部 API。
+本轮不创建真实 digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、approval assignment、approval packet、committee decision、freeze action、Harness evidence、WAME gate result，也不更新 KDS lifecycle、业务事实或任何外部 API。
 
 ## 验证
 

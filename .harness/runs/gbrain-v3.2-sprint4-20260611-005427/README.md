@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-631FAA49D7
 title: gbrain-v3.2-sprint4-20260611-005427
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md
 source_path: .harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,9 +36,9 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-631FAA49D7 | gbrain-v3.2-sprint4-20260611-005427 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md | WAES | archive |
-| GPCF-DOC-D928C393A1 | acceptance-matrix | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-05F302F1E3 | evidence | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/evidence/README.md | WAES | archive |
-| GPCF-DOC-46C72A325B | Proposal: Sprint 4 — 知识协作 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/proposal.md | WAES | archive |
-| GPCF-DOC-FC4108C8F1 | Harness Status Audit — Sprint 4 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/status-audit.md | WAES | archive |
-| GPCF-DOC-3C4E0A2FB6 | Tasks: Sprint 4 — 知识协作 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/tasks.md | WAES | archive |
+| GPCF-DOC-631FAA49D7 | gbrain-v3.2-sprint4-20260611-005427 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/README.md | WAME | archive |
+| GPCF-DOC-D928C393A1 | acceptance-matrix | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/acceptance-matrix.md | WAME | archive |
+| GPCF-DOC-05F302F1E3 | evidence | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/evidence/README.md | WAME | archive |
+| GPCF-DOC-46C72A325B | Proposal: Sprint 4 — 知识协作 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/proposal.md | WAME | archive |
+| GPCF-DOC-FC4108C8F1 | Harness Status Audit — Sprint 4 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/status-audit.md | WAME | archive |
+| GPCF-DOC-3C4E0A2FB6 | Tasks: Sprint 4 — 知识协作 | .harness/runs/gbrain-v3.2-sprint4-20260611-005427/tasks.md | WAME | archive |

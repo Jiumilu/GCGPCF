@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CC2C02D1FB
 title: governance
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

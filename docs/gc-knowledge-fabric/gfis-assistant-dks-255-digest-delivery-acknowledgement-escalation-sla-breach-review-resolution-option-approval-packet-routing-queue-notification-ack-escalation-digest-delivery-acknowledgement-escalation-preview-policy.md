@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5597BF3132
 title: GFIS Assistant DKS-255 摘要投递确认升级预览策略
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## 硬边界
 
-DKS-255 不创建 escalation、escalation task、delivery acknowledgement、digest delivery、delivery、digest、KWE work item、notification、acknowledgement、receipt、read receipt、approval、committee、freeze、WAES gate result、Harness evidence、KDS lifecycle 或任何业务写回。
+DKS-255 不创建 escalation、escalation task、delivery acknowledgement、digest delivery、delivery、digest、KWE work item、notification、acknowledgement、receipt、read receipt、approval、committee、freeze、WAME gate result、Harness evidence、KDS lifecycle 或任何业务写回。
 
 ## 验证
 

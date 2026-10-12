@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-744D083B96
 title: LOOP_ENGINEERING_SELF_CORRECTION
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md
 source_path: 02-governance/loop/LOOP_ENGINEERING_SELF_CORRECTION.md
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 关键问题重述
 
-本文件记录 GFIS 主体错位后的 Loop 重新总结。此前曾把 `GFIS Demo` 的展示层、培训层、前端回归层结果误用于判断运行层 SOP，造成对错误主体进行开发和验收判断。正确主体必须是 `GFIS 运行层`，`GFIS Demo` 不能用于 SOP 主体证明、业务证据证明、source-of-record 证明、runtime primary key 证明、WAES review 证明或 accepted/integrated 状态证明。
+本文件记录 GFIS 主体错位后的 Loop 重新总结。此前曾把 `GFIS Demo` 的展示层、培训层、前端回归层结果误用于判断运行层 SOP，造成对错误主体进行开发和验收判断。正确主体必须是 `GFIS 运行层`，`GFIS Demo` 不能用于 SOP 主体证明、业务证据证明、source-of-record 证明、runtime primary key 证明、WAME review 证明或 accepted/integrated 状态证明。
 
 本次属于 `P0 级 Loop 事故`。事故复盘结论是：`subject_drift_detected`，且 `sop_e2e_master=failed_or_repair_required`。所有后续 Loop Engineering 必须把 `pass_demo_only`、`controlled_reference_not_live_proof`、`verified live artifact` 分层处理。
 
@@ -63,7 +63,7 @@ Loop Engineering 重定义 v2：
 
 1. 自我发现：检测 subject drift、E2E failure、weak proof、status inflation。
 2. 自我降级：将错误完成态降级为 `repair_required`。
-3. 自我拆解：把缺口拆成 source-of-record、runtime primary key、review queue、runtime intake、WAES review、KDS write receipt。
+3. 自我拆解：把缺口拆成 source-of-record、runtime primary key、review queue、runtime intake、WAME review、KDS write receipt。
 4. 自我修复：只做一个最小实质修复，并运行 validator。
 5. 自我防复发：把规则纳入防复发工程门禁和 Loop Engineering 操作模型。
 
@@ -89,7 +89,7 @@ Loop Engineering 重定义 v2：
 | weak verified artifact | SOP E2E Master 门禁 |
 | 缺 source-of-record | runtime source record gate |
 | 缺 runtime primary key | runtime intake gate |
-| 缺 WAES confirmation | WAES review gate |
+| 缺 WAME confirmation | WAME review gate |
 
 下一轮工程方向继续聚焦 GFIS runtime verified artifact collection、GFIS runtime verified artifact collection dossier、采集案卷、proof anchors、open/collected 计数和全类别 ready 判定。
 
@@ -105,7 +105,7 @@ Loop Engineering 重定义 v2：
 
 Loop Engineering 操作模型按事实层、工程层、治理层运行：
 
-- 事实层：客户订单、平台订单、样箱测试、合同、生产、质检、库存、发货、POD、WAES confirmation、KDS write receipt。
+- 事实层：客户订单、平台订单、样箱测试、合同、生产、质检、库存、发货、POD、WAME confirmation、KDS write receipt。
 - 工程层：GFIS runtime API、validator、builder、只读 dry-run、evidence JSON/Markdown。
 - 治理层：GPCF 控制板、状态矩阵、loop-state、evidence-index、KDS 本地镜像和防污染检查。
 
@@ -128,4 +128,4 @@ pass_demo_only
 controlled_reference_not_live_proof
 ```
 
-本文件不创建 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated 状态。
+本文件不创建 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated 状态。

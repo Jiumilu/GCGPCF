@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-9DAA6C3FEC
 title: 证据样本
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/04-WAES/08-evidence-samples/README.md
 source_path: 08-evidence-samples/README.md
@@ -26,7 +26,7 @@ KDS 空间：`开发`
 
 KDS 路径前缀：`开发/12-GPCF/08-evidence-samples/`
 
-关联项目：GFIS, WAES
+关联项目：GFIS, WAME
 
 受控规则：
 
@@ -39,7 +39,7 @@ KDS 路径前缀：`开发/12-GPCF/08-evidence-samples/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-E37161A1FB | A23 模型使用计量与统计回指样本 | 08-evidence-samples/A23 模型使用计量与统计回指样本.md | WAES | controlled |
+| GPCF-DOC-E37161A1FB | A23 模型使用计量与统计回指样本 | 08-evidence-samples/A23 模型使用计量与统计回指样本.md | WAME | controlled |
 | GPCF-DOC-82A2F06757 | GPCF-GF-LR-001 输入定义 | 08-evidence-samples/GFIS/GPCF-GF-LR-001-input.md | GFIS | controlled |
 | GPCF-DOC-C8373F0E81 | GFIS | 08-evidence-samples/GFIS/README.md | GFIS | controlled |
 | GPCF-DOC-618A02EF68 | P0 SOP 到 GCFIS 单据映射表 | 08-evidence-samples/GFIS/docs/07-p0-sop-to-erpnext-doctype-mapping.md | GFIS | controlled |
@@ -114,12 +114,12 @@ KDS 路径前缀：`开发/12-GPCF/08-evidence-samples/`
 | GPCF-DOC-36C5892CB8 | loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003 | 08-evidence-samples/GFIS/loops/loop-round-GFIS-RUNTIME-SOP-E2E-DEV-003.md | GFIS | controlled |
 | GPCF-DOC-E574C9CB52 | Loop Round GPCF-GF-LR-001 | 08-evidence-samples/GFIS/loops/loop-round-GPCF-GF-LR-001.md | GFIS | controlled |
 | GPCF-DOC-94C5F5E540 | modern-jinggong-training-analysis | 08-evidence-samples/GFIS/modern-jinggong-training-analysis.md | GFIS | controlled |
-| GPCF-DOC-9DAA6C3FEC | 证据样本 | 08-evidence-samples/README.md | WAES | controlled |
-| GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | WAES | archive |
-| GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAES | archive |
-| GPCF-DOC-32B2E77806 | 宪衡专项审批阻断与证据写入链样本 | 08-evidence-samples/宪衡专项审批阻断与证据写入链样本.md | WAES | controlled |
-| GPCF-DOC-DDC8DCF7FC | 宪衡专项证据与审批持久化样本结构 | 08-evidence-samples/宪衡专项证据与审批持久化样本结构.md | WAES | controlled |
-| GPCF-DOC-C434D4038A | 宪衡专项运行前样本收集记录 | 08-evidence-samples/宪衡专项运行前样本收集记录.md | WAES | controlled |
-| GPCF-DOC-DB81495EC4 | 宪衡专项连接器阻断与状态链样本 | 08-evidence-samples/宪衡专项连接器阻断与状态链样本.md | WAES | controlled |
-| GPCF-DOC-7ACBAC23C6 | 数枢专项运行前样本收集记录 | 08-evidence-samples/数枢专项运行前样本收集记录.md | WAES | controlled |
-| GPCF-DOC-B2E453D9F1 | 知源专项运行前样本收集记录 | 08-evidence-samples/知源专项运行前样本收集记录.md | WAES | controlled |
+| GPCF-DOC-9DAA6C3FEC | 证据样本 | 08-evidence-samples/README.md | WAME | controlled |
+| GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | WAME | archive |
+| GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAME | archive |
+| GPCF-DOC-32B2E77806 | 宪衡专项审批阻断与证据写入链样本 | 08-evidence-samples/宪衡专项审批阻断与证据写入链样本.md | WAME | controlled |
+| GPCF-DOC-DDC8DCF7FC | 宪衡专项证据与审批持久化样本结构 | 08-evidence-samples/宪衡专项证据与审批持久化样本结构.md | WAME | controlled |
+| GPCF-DOC-C434D4038A | 宪衡专项运行前样本收集记录 | 08-evidence-samples/宪衡专项运行前样本收集记录.md | WAME | controlled |
+| GPCF-DOC-DB81495EC4 | 宪衡专项连接器阻断与状态链样本 | 08-evidence-samples/宪衡专项连接器阻断与状态链样本.md | WAME | controlled |
+| GPCF-DOC-7ACBAC23C6 | 数枢专项运行前样本收集记录 | 08-evidence-samples/数枢专项运行前样本收集记录.md | WAME | controlled |
+| GPCF-DOC-B2E453D9F1 | 知源专项运行前样本收集记录 | 08-evidence-samples/知源专项运行前样本收集记录.md | WAME | controlled |

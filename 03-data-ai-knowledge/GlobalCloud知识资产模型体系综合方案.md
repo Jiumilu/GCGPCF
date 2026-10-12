@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KNOWLEDGE-ASSET-MODEL-20260802
 title: GlobalCloud 知识资产模型体系综合方案
 project: GPCF
-related_projects: [WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP]
+related_projects: [WAS, XWAIL, AAAS, WAME, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -32,7 +32,7 @@ GlobalCloud 知识资产模型采用“一个知识正本、多个正交维度�
 2. KDS 保存 canonical `KnowledgeObject`、`KnowledgeAssetEnvelope`、ACL、来源、证据、关系和 lineage。
 3. Brain 按用户当前 Space 和权限消费 KDS 读模型，提供搜索、图谱、WikiPreview 和 Chat 授权交互。
 4. MMC 只承担模型调用、路由和授权审计，不拥有知识资产主模型。
-5. WAES 与人工确认控制跨组织、公开、敏感和写回状态，不由标签、Schema 校验或 AI 自动授权。
+5. WAME 与人工确认控制跨组织、公开、敏感和写回状态，不由标签、Schema 校验或 AI 自动授权。
 
 本方案建立项目群级模型和机器契约；配套白皮书为 `03-data-ai-knowledge/GlobalCloud知识资产概念模型白皮书.md`。模型设计完成不表示 KDS 数据迁移、Brain 页面、真实 API、真实权限或生产部署已经完成。
 
@@ -67,7 +67,7 @@ flowchart LR
 | L1 知识正本层 | OKF `KnowledgeObject` | KDS | 对象类型、知识域、生命周期、可信度、RAG 准入和证据 |
 | L2 项目群资产层 | `KnowledgeAssetEnvelope` | GPCF 定义，KDS 保存 | 空间、业务/研发上下文、受控分类、治理责任和跨空间投影 |
 | L3 消费投影层 | SearchResult、GraphNode、WikiPage、ChatContext | KDS/Brain | 面向角色和任务的授权读模型，不成为第二主账 |
-| L4 推理与行动层 | Prompt、Readback、WritebackCandidate | Brain/MMC/WAES | 每次授权、模型调用、结果回读和候选写回 |
+| L4 推理与行动层 | Prompt、Readback、WritebackCandidate | Brain/MMC/WAME | 每次授权、模型调用、结果回读和候选写回 |
 
 机器产物：
 
@@ -239,9 +239,9 @@ Envelope `assetType` 描述项目群消费语义；OKF `objectType` 描述 canon
 | KDS | canonical 对象、Envelope、ACL、索引、关系、lineage 和授权读模型 | 不把 AI 推断自动晋升为事实或授权 |
 | Brain | Space 选择、检索、图谱、WikiPreview、Chat 上下文和恢复体验 | 不建立第二套资产主模型，不直接生产写回 |
 | MMC | 模型目录、路由、调用授权、用量和审计 | 不拥有知识资产、空间或业务项目定义 |
-| WAES | 外部分享、敏感信息、状态提升和写回门禁 | 不替代业务 owner 和客户验收 |
+| WAME | 外部分享、敏感信息、状态提升和写回门禁 | 不替代业务 owner 和客户验收 |
 | GFIS/GPC/PVAOS 等 | 提供业务事实、主键和运行证据 | 不以文档或 AI 摘要替代 source-of-record |
-| PKC/XiaoC/XGD/XiaoG | 个人协同、智能体、验证和通知 | 只消费授权上下文，不绕过 KDS/WAES |
+| PKC/XiaoC/XGD/XiaoG | 个人协同、智能体、验证和通知 | 只消费授权上下文，不绕过 KDS/WAME |
 
 ## 12. 接口与读模型建议
 
@@ -265,7 +265,7 @@ Envelope `assetType` 描述项目群消费语义；OKF `objectType` 描述 canon
 | P0 模型基线 | 本方案、白皮书、Envelope Schema、词表、示例 | `controlled/partial` | JSON/YAML 解析、Schema 与语义负例、文档门禁 |
 | P1 KDS 主存适配 | Envelope 存储、旧对象映射、词表版本、ACL 和查询投影 | `ready_for_review` | 迁移 dry-run、负例权限、lineage、回滚 |
 | P2 Brain 消费 | Space 过滤、维度筛选、WikiPreview、Chat 上下文确认 | `ready_for_review` | Vitest、Browser user-flow、真实权限样本 |
-| P3 项目群接入 | 业务系统主键、跨项目读模型、WAES 写回候选 | `authorization_boundary` | 契约测试、真实 source record、人工确认 |
+| P3 项目群接入 | 业务系统主键、跨项目读模型、WAME 写回候选 | `authorization_boundary` | 契约测试、真实 source record、人工确认 |
 | P4 运营治理 | 词表 Steward、质量指标、漂移和审计 | 人工裁决 | 抽样复核、SLA、审计记录、回退演练 |
 
 ## 14. 验收标准

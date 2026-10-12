@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4914F485B4
 title: GlobalCloud葛化首批资料包入库验收与GFISAI助手试运行任务书
 project: GPCF
-related_projects: [GPCF, GFIS, WAES]
+related_projects: [GPCF, GFIS, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

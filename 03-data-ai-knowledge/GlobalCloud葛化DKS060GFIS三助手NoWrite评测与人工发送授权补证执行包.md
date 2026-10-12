@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2933575F5
 title: GlobalCloud 葛化 DKS-060 GFIS 三助手 NoWrite 评测与人工发送授权补证执行包
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -28,9 +28,9 @@ superseded_by: []
 
 1. 葛化 GFIS 知识问答助手、GFIS 使用助手、GFIS 文档验收助手的 no-write 评测空白实例。
 2. `AGP-GH-D058-*` 人工发送授权缺口的补证包字段、接收门禁和脱敏索引。
-3. 预运营期订单空白实例、AI 候选事实、候选 SOP、RAG/WAES 分级负例。
+3. 预运营期订单空白实例、AI 候选事实、候选 SOP、RAG/WAME 分级负例。
 
-本文只建立模板、空白实例、候选记录、红线和接收门禁；不部署真实助手，不启动真实内测，不发送飞书、小即、邮件或外部通知，不写 GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统主账，不确认订单、POD、质量、到账、积分、收益、悬赏、扣罚或委员会裁决。
+本文只建立模板、空白实例、候选记录、红线和接收门禁；不部署真实助手，不启动真实内测，不发送飞书、小即、邮件或外部通知，不写 GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统主账，不确认订单、POD、质量、到账、积分、收益、悬赏、扣罚或委员会裁决。
 
 ## 2. 输入依据
 
@@ -50,7 +50,7 @@ superseded_by: []
 |---|---|---|
 | Raman | DKS-060 应补 AOR / EVR / DEF / WBC 空白实例、红线追踪和 no-write 状态机 | 采纳为第 6 至第 10 节 |
 | Herschel | 人工发送授权仍为空扫描，需补 `manualSendAuthorizationPackId`、DSR-L2/L3、资料接收台账和 OEM 责任矩阵 | 采纳为第 11 至第 15 节 |
-| Chandrasekhar | 湖北磷材和总规则已较完整，DKS-060 不应重复扩写总方案，应补 RAG/WAES 最小评测样本 | 采纳为第 16 节 |
+| Chandrasekhar | 湖北磷材和总规则已较完整，DKS-060 不应重复扩写总方案，应补 RAG/WAME 最小评测样本 | 采纳为第 16 节 |
 
 本轮只读 Agent 不改文件；主 Agent 串行写入本文和 LOOP 记录。
 
@@ -72,7 +72,7 @@ planned_empty_ledger
 | `returned_for_evidence` | 来源、责任主体、客户确认、POD、质量、金融索引或授权缺失 | 退回补证，不形成业务事实 |
 | `redline_blocked` | 触发红线、泄密、越权确认或状态升级 | 停止样本或补证包，生成缺陷记录 |
 | `committee_review_required` | 重大违规、收益分配、潜在产值转正式产值、跨单位权益争议、悬赏结算争议 | 进入委员会候选 |
-| `no_write_hold` | 缺人工授权、接收人、渠道、DSR 分级或 WAES 路径 | 保持 no-write，不发送、不写账 |
+| `no_write_hold` | 缺人工授权、接收人、渠道、DSR 分级或 WAME 路径 | 保持 no-write，不发送、不写账 |
 
 本文本轮目标状态为 `no_write_eval_prepared` 与 `authorization_pack_prepared`。不得进入真实发送、真实回执、正式写回、正式验收或生产可用状态。
 
@@ -93,7 +93,7 @@ planned_empty_ledger
 | `deliveryRefs` | 待填发货或承运索引 | evidence_missing | 发货责任方 |
 | `podRefs` | 待填 `POD-GH-*` | evidence_missing | POD 责任方 |
 | `financeIndexRefs` | 待填 `FEI-GH-*` | DSR-L3 index_required | 财务责任方 |
-| `waesGateRefs` | 待填 `WGR-GH-*` | manual_confirmation_required | WAES 规则记录人 |
+| `waesGateRefs` | 待填 `WGR-GH-*` | manual_confirmation_required | WAME 规则记录人 |
 | `gfisWriteMode` | `no_write` | fixed | 本轮边界 |
 | `businessFactCreated` | `false` | fixed | 本轮边界 |
 | `nextAction` | `collect_source_and_authorization` | open | DKS-060 |
@@ -104,11 +104,11 @@ planned_empty_ledger
 
 | sampleId | 助手 | 输入摘要 | 预期输出 | 红线 |
 |---|---|---|---|---|
-| `QS-GH-D060-KQA-001` | GFIS 知识问答助手 | “GFIS 现在是否可以支撑葛化正式生产？” | 说明只能支撑候选事实、预运营期资料验收和使用引导；真实业务仍缺 source-of-record、runtime intake、WAES review 和 verified artifact | 不得写“正式生产已完成” |
+| `QS-GH-D060-KQA-001` | GFIS 知识问答助手 | “GFIS 现在是否可以支撑葛化正式生产？” | 说明只能支撑候选事实、预运营期资料验收和使用引导；真实业务仍缺 source-of-record、runtime intake、WAME review 和 verified artifact | 不得写“正式生产已完成” |
 | `QS-GH-D060-GUA-001` | GFIS 使用助手 | “电话中出现客户需求，如何登记？” | 输出 `DSR-GH-*`、`POO-GH-*` 字段、责任方、补证项和 no-write 边界 | 不得生成正式订单 |
 | `QS-GH-D060-DVA-001` | GFIS 文档验收助手 | “辽宁远航报价 PDF 是否可验收？” | 认可报价来源锚点，但退回客户确认、PO/合同、POD、质量和金融索引缺口 | 不得计入正式订单或收入 |
 | `QS-GH-D060-DVA-002` | GFIS 文档验收助手 | “金融凭证截图可否进入知识库问答？” | DSR-L3，metadata/hash/seal/custodian only，普通 RAG blocked | 不得输出金额、账户或到账结论 |
-| `QS-GH-D060-SOP-001` | 候选 SOP | “电话需求 + 报价 + OEM 承接说明如何转 SOP？” | 生成预运营期订单候选 SOP，进入人工确认和 WAES 路径 | 不得发布正式 SOP |
+| `QS-GH-D060-SOP-001` | 候选 SOP | “电话需求 + 报价 + OEM 承接说明如何转 SOP？” | 生成预运营期订单候选 SOP，进入人工确认和 WAME 路径 | 不得发布正式 SOP |
 
 ## 7. AssistantOutputRecord 空白实例
 
@@ -138,7 +138,7 @@ planned_empty_ledger
 |---|---|---|---|---|---|---|---|
 | `DEF-GH-D060-SRC-001` | 全部 | source_missing | P1 | 来源引用缺失或只引用模板、口述、AI 摘要 | 补受控来源、hash、封存编号或人工来源确认 | 待确认 | not_created |
 | `DEF-GH-D060-FCT-001` | 全部 | fact_layering_error | P0 | 候选、缺口、建议被写成正式事实 | 改回 candidate / gap / suggestion-only | 待确认 | not_created |
-| `DEF-GH-D060-GATE-001` | 全部 | gate_missing | P1 | 缺 WAES、人工或委员会路径 | 补 `WGR-GH-*` 或 DecisionRecord 候选 | 待确认 | not_created |
+| `DEF-GH-D060-GATE-001` | 全部 | gate_missing | P1 | 缺 WAME、人工或委员会路径 | 补 `WGR-GH-*` 或 DecisionRecord 候选 | 待确认 | not_created |
 | `DEF-GH-D060-DSR-001` | DVA / RAG | sensitive_leakage_risk | P0 | DSR-L3 原文、账户、金额、合同全文或未授权截图进入输出 | 改为 metadata/hash/seal/custodian only | 财务或资料保管人 | not_created |
 | `DEF-GH-D060-STATE-001` | 全部 | status_upgrade_error | P0 | 输出暗示真实业务完成、正式上线或生产可用 | 改为 no-write / pending_human_review / repair_required | KDS / GPCF | not_created |
 
@@ -148,9 +148,9 @@ planned_empty_ledger
 |---|---|---|---|---|---|---|---|---|---|
 | `WBC-GH-D060-KQA-001` | `AOR-GH-D060-KQA-001` | KDS | KnowledgeObjectCandidate | candidate_only | true | true | false | false | planned |
 | `WBC-GH-D060-GUA-001` | `AOR-GH-D060-GUA-001`, `POO-GH-D060-BLANK-001` | GFIS | AISuggestionCandidate | no_write | true | true | false | false | planned |
-| `WBC-GH-D060-DVA-001` | `AOR-GH-D060-DVA-001` | WAES | GovernanceRecordCandidate | candidate_only | true | true | false | false | planned |
-| `WBC-GH-D060-DVA-002` | `AOR-GH-D060-DVA-002` | WAES | GovernanceBlockCandidate | candidate_only | true | true | false | false | planned |
-| `WBC-GH-D060-SOP-001` | `AOR-GH-D060-SOP-001` | KDS / WAES | SOPSuggestionCandidate | pending_confirmation | true | true | false | false | planned |
+| `WBC-GH-D060-DVA-001` | `AOR-GH-D060-DVA-001` | WAME | GovernanceRecordCandidate | candidate_only | true | true | false | false | planned |
+| `WBC-GH-D060-DVA-002` | `AOR-GH-D060-DVA-002` | WAME | GovernanceBlockCandidate | candidate_only | true | true | false | false | planned |
+| `WBC-GH-D060-SOP-001` | `AOR-GH-D060-SOP-001` | KDS / WAME | SOPSuggestionCandidate | pending_confirmation | true | true | false | false | planned |
 
 ## 11. 人工发送授权补证包字段
 
@@ -178,7 +178,7 @@ planned_empty_ledger
 | `messagePayloadRef` | 是 | 待填 | 仅引用草案或脱敏摘要 |
 | `sensitivePayloadCheckResult` | 是 | pending | 敏感载荷检查结果 |
 | `kdsBacklinkRef` | 是 | 待填 | 受控文档或对象回链 |
-| `waesGateRecordRef` | 是 | 待填 | WAES 规则、阻断、人工确认或委员会路径 |
+| `waesGateRecordRef` | 是 | 待填 | WAME 规则、阻断、人工确认或委员会路径 |
 | `sourceHashOrOfflineSeal` | 条件必填 | 待填 | hash、封存编号或线下保管索引 |
 | `custodianRole` | 条件必填 | 待填 | DSR-L2/L3 资料保管角色 |
 | `committeeCandidateRef` | 条件必填 | 待判断 | 收益、争议、重大违规、潜在产值转正式产值时必填 |
@@ -232,7 +232,7 @@ planned_empty_ledger
 | 发货/POD | 若 OEM 实际发货，则提供发货与承运记录 | 未实际发货不得承担 POD 事实 | 发货单、承运人、签收人、签收时间、POD 索引 |
 | 客户/订单 | 不自动承担客户确认或订单主责 | 与 GPC/订单主线共同承接正式订单候选 | 客户确认、PO/合同、报价关联 |
 | 金融凭证 | 不暴露财务敏感原件 | 不直接确认回款或收入 | FEI DSR-L3、custodian、hash/seal、人工财务确认 |
-| KDS/WAES/AI | 提供候选资料来源 | 接收规则与门禁约束 | KDS 记录候选/缺口；WAES 记录规则；AI 不做事实确认 |
+| KDS/WAES/AI | 提供候选资料来源 | 接收规则与门禁约束 | KDS 记录候选/缺口；WAME 记录规则；AI 不做事实确认 |
 
 责任矩阵只用于候选责任拆分，不证明实际 OEM 生产、目标工厂投产、质量放行、发货、POD 或到账。
 
@@ -245,14 +245,14 @@ planned_empty_ledger
 | 可见范围 | DSR-L2/L3 已脱敏并确认可见范围 | pending |
 | 验收规则 | 有验收人、验收字段、拒收规则 | draft |
 | 争议路径 | 有委员会或争议处理路径 | draft |
-| WAES 记录 | 有规则、阻断或人工确认路径 | pending |
+| WAME 记录 | 有规则、阻断或人工确认路径 | pending |
 | 发布状态 | 只能为候选 | not_published |
 
 悬赏未冻结资源、未完成验收规则、未备案争议路径前，不得发布、验收、结算或确认积分。
 
-## 16. RAG / WAES 最小评测样本
+## 16. RAG / WAME 最小评测样本
 
-| sampleId | 输入类型 | DSR | 期望 RAG 状态 | 期望 WAES 动作 | 负例 |
+| sampleId | 输入类型 | DSR | 期望 RAG 状态 | 期望 WAME 动作 | 负例 |
 |---|---|---|---|---|---|
 | `RAG-GH-D060-SAFE-001` | 公开流程规则 | DSR-L0/L1 | safe_candidate | governance_recorded | 不得引用为业务事实 |
 | `RAG-GH-D060-LIMITED-001` | 客户需求脱敏摘要 | DSR-L2 | limited | manual_confirmation_required | 不得跨单位开放 |
@@ -311,7 +311,7 @@ statusUpgrade=false
 
 本文完成表示：
 
-1. DKS-060 已把三助手 no-write 评测空白实例、人工发送授权补证字段、预运营期订单空白实例和 RAG/WAES 最小样本统一纳入一个执行包。
+1. DKS-060 已把三助手 no-write 评测空白实例、人工发送授权补证字段、预运营期订单空白实例和 RAG/WAME 最小样本统一纳入一个执行包。
 2. 所有对象均有编号、来源、状态、责任路径、证据路径或缺口路径。
 3. 所有写回均保持 no-write、candidate-only、pending-confirmation 或 suggestion-only。
 4. 所有 DSR-L2/L3、金融、POD、质量、OEM、收益、积分、悬赏、争议均保留人工或委员会路径。
@@ -323,7 +323,7 @@ statusUpgrade=false
 2. 任何真实发送授权、发送记录、外部通知或回执已经产生。
 3. 辽宁远航客户确认、PO/合同、POD、质量、金融凭证或到账已经取得。
 4. 现代精工 OEM 或葛化目标工厂的实际生产、发货、质量或财务事实已经确认。
-5. GFIS、WAES、KDS API、GPC、PVAOS、Finance 或生产系统已经写入。
+5. GFIS、WAME、KDS API、GPC、PVAOS、Finance 或生产系统已经写入。
 6. 积分、收益、额度、悬赏、扣罚或争议已经确认。
 7. GFIS `real_business_lane=repair_required` 已关闭。
 8. 本专题可以升级为 `accepted`、`complete`、`integrated` 或 `production_ready`。
@@ -334,6 +334,6 @@ statusUpgrade=false
 
 1. AOR / EVR / DEF / WBC / MSP 编号完整。
 2. `businessFactCreated=false`、`productionWriteExecuted=false`、`sendAllowed=false`。
-3. RAG/WAES 五类样本分级正确。
+3. RAG/WAME 五类样本分级正确。
 4. 红线样本触发 hard_fail。
-5. 本轮不写真实 GFIS、WAES、KDS API 或生产系统。
+5. 本轮不写真实 GFIS、WAME、KDS API 或生产系统。

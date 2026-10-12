@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-00E030CE3C
 title: GFIS-RUNTIME-SOP-E2E-236
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -71,7 +71,7 @@ superseded_by: []
 ## 下一步
 
 - `GFIS-RUNTIME-SOP-E2E-237`：建立 release override approval request dispatch confirmation receiving schema precheck。
-- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAES 或升级 accepted/integrated。
+- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAME 或升级 accepted/integrated。
 
 ## 真实性计数
 

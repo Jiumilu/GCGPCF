@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-71BD3638A9
 title: session-archives
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/08-evidence-samples/session-archives/README.md
 source_path: 08-evidence-samples/session-archives/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,5 +36,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | WAES | archive |
-| GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAES | archive |
+| GPCF-DOC-71BD3638A9 | session-archives | 08-evidence-samples/session-archives/README.md | WAME | archive |
+| GPCF-DOC-6ACBFCD6E4 | session-019eafc0-ee61-7900-b137-5cf2252bd82f | 08-evidence-samples/session-archives/session-019eafc0-ee61-7900-b137-5cf2252bd82f.md | WAME | archive |

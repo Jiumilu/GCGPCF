@@ -2,7 +2,7 @@
 doc_id: GPCF-EVIDENCE-GKE-001-A10P3R1-REVIEW-A10P3R2-DISPATCH-20260811
 title: GKE-001 A10P3R1 Independent Review and A10P3R2 Dispatch
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

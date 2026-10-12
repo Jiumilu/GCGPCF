@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-030
 title: tasks
 project: KDS
-related_projects: [PVAOS, WAES, KDS, GPCF]
+related_projects: [PVAOS, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -33,7 +33,7 @@ superseded_by: []
 ## 3. 受控事实提升
 
 - [ ] 3.1 在取得单独写入授权前保持提升通道硬禁用，并增加无授权、无确认和版本冲突负向测试。
-- [ ] 3.2 定义并实现幂等提升请求、WAES裁决、人工确认、KDS执行回执和重新读取对账。
+- [ ] 3.2 定义并实现幂等提升请求、WAME裁决、人工确认、KDS执行回执和重新读取对账。
 - [ ] 3.3 实现重复请求、部分失败、回执丢失、对账失败、撤销和补偿测试。
 - [ ] 3.4 验证S3正文、未决候选、目标状态和模拟结果不能进入正式提升请求。
 

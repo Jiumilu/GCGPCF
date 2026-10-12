@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A8F6B69EE5
 title: GlobalCloud 智能体团队阶段行动计划
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -85,7 +85,7 @@ superseded_by: []
 2. 接稳补齐连接器、DLQ、Replay、降级方案
 3. 数枢补齐读模型、指标和证据流
 4. 知源与灵策对齐知识与 AI 引用边界
-5. 宪衡验证 WAES 仍只做治理
+5. 宪衡验证 WAME 仍只做治理
 
 ### 完成判定
 

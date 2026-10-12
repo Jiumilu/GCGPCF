@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA68A130D5
 title: GlobalCloud 绿色供应链体系企业级知识库主存层与LLM Wiki-Brain升级图
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
+related_projects: [GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-07
 状态：专项架构图 v1
-口径：只展开 KDS（企业级知识主存层）、`LLM Wiki`、`Brain`（知识引擎+服务层）、`WAES` 之间的分层与升级路径。
+口径：只展开 KDS（企业级知识主存层）、`LLM Wiki`、`Brain`（知识引擎+服务层）、`WAME` 之间的分层与升级路径。
 
 ## 1. 知识底座升级图
 
@@ -49,7 +49,7 @@ flowchart TB
 知识服务 / SOP / 案例 / 复盘"]
   end
 
-  subgraph WAES["WAES 知识治理"]
+  subgraph WAME["WAME 知识治理"]
     KIN["知识准入
 canonical-only / source_refs / 分类校验"]
     KPUB["知识发布验证
@@ -71,7 +71,7 @@ canonical-only / source_refs / 分类校验"]
 
   KDOC --> KVER --> KREL
   KPOL --> KDOC
-  KAUDIT --> WAES
+  KAUDIT --> WAME
 
   KREL --> WIKI
   KREL --> GBRAIN

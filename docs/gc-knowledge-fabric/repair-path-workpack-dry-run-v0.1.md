@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E7DFFC15E5
 title: GC-Knowledge Fabric P0 Repair Path Workpack Dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

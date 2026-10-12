@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0962BEDB78
 title: GlobalCloud绿色供应链体系数据治理模型
 project: GPCF
-related_projects: [GPCF, GPC, WAES]
+related_projects: [GPCF, GPC, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

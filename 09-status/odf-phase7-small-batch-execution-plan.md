@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-89108DD154
 title: ODF Phase 7 小批量样本执行方案
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: status
 status: controlled
 version: v1.0

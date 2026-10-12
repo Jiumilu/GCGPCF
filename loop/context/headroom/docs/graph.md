@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-HEADROOM-LCX-GRAPH-20260623
 title: Headroom LCX Graph
 project: GFIS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: general
 status: controlled
 version: v1.0
@@ -67,7 +67,7 @@ flowchart TD
 | GPCF | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats, agent_wrap_dry_run | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
 | KDS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
 | Brain | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
-| WAES | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
+| WAME | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
 | GFIS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
 | GPC | proxy_dry_run, sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |
 | PVAOS | sdk_dry_run, mcp_compress, mcp_stats | production_proxy, mcp_retrieve_without_waes_gate, cross_project_memory_as_fact, learn_apply_auto, output_shaper_acceptance, production_external_write | true | dry_run_only |

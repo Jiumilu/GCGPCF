@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DFFAFE5D69
 title: GlobalCloud绿色供应链体系首批统一组件验收标准
 project: GPC
-related_projects: [GPC, WAES]
+related_projects: [GPC, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C98D797C17
 title: GFIS Assistant Repair Intake Review Packet No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 GFIS Assistant Repair Intake Review Packet 是 DKS-110 `Repair Submission Intake` 之后的审阅包视图。
 
-它把 intake request 拆成面向人工审阅、metadata 边界审阅、委员会审阅、冻结审阅的只读 review packet。它只用于展示审阅上下文、缺口引用、metadata 边界和推荐审阅焦点，不创建真实审阅队列，不提交 evidence，不写入 WAES、KWE、KDS 或 GFIS。
+它把 intake request 拆成面向人工审阅、metadata 边界审阅、委员会审阅、冻结审阅的只读 review packet。它只用于展示审阅上下文、缺口引用、metadata 边界和推荐审阅焦点，不创建真实审阅队列，不提交 evidence，不写入 WAME、KWE、KDS 或 GFIS。
 
 ## 2. No-write 边界
 
@@ -32,7 +32,7 @@ Review Packet 不得直接执行以下动作：
 - 创建 Review Queue Item；
 - 创建 KWE WorkItem；
 - 创建 GapRecord 或 BountyRecord；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 推进 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；
 - 写入 GFIS / GPC / ERP / MES；
@@ -86,4 +86,4 @@ Review Packet 不得直接执行以下动作：
 
 ## 6. 与后续流程的关系
 
-Review Packet 只是 GFIS Assistant 可展示的审阅准备视图。后续如果确需进入人工队列、委员会队列、KWE 工单、WAES Gate Result 或业务写回，必须由独立受控流程创建，并由 Harness evidence 固化，不能由本 review packet 直接完成。
+Review Packet 只是 GFIS Assistant 可展示的审阅准备视图。后续如果确需进入人工队列、委员会队列、KWE 工单、WAME Gate Result 或业务写回，必须由独立受控流程创建，并由 Harness evidence 固化，不能由本 review packet 直接完成。

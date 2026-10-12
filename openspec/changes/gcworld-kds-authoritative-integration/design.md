@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-029
 title: design
 project: KDS
-related_projects: [PVAOS, WAES, KDS]
+related_projects: [PVAOS, WAME, KDS]
 domain: openspec
 status: draft
 version: v1.0
@@ -26,7 +26,7 @@ KDS是GlobalCloud知识事实主存，GCWORLD只能形成带来源和版本的�
 
 - 建立从KDS正式事实到GCWORLD投影的可重放、可对账读取链。
 - 保留候选、例外、证据、双时间和人工复核状态，不静默合并身份。
-- 为未来事实提升建立幂等请求、WAES门禁、人工确认、KDS回执和失败补偿契约。
+- 为未来事实提升建立幂等请求、WAME门禁、人工确认、KDS回执和失败补偿契约。
 - 将Feature日志、文档门禁、证据索引和Harness交接纳入每次集成批次。
 
 **非目标：**
@@ -51,7 +51,7 @@ KDS是GlobalCloud知识事实主存，GCWORLD只能形成带来源和版本的�
 
 ### 4. KDS责任系统执行最终写入
 
-未来写入必须由KDS受控接口在WAES裁决和人工确认后执行，GCWORLD仅保存请求与回执引用。命令携带幂等键、因果标识、预期版本和证据摘要；版本冲突默认拒绝。
+未来写入必须由KDS受控接口在WAME裁决和人工确认后执行，GCWORLD仅保存请求与回执引用。命令携带幂等键、因果标识、预期版本和证据摘要；版本冲突默认拒绝。
 
 ### 5. 证据与状态提升分离
 

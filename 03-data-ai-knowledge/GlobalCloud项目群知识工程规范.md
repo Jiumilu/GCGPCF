@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GKE-001-20260803
 title: GlobalCloud 项目群知识工程规范
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: data-ai-knowledge
 status: controlled
 version: v0.1
@@ -28,7 +28,7 @@ superseded_by: []
 接入与治理：MMC
 分析能力：Brain
 用户工作台：Studio
-业务主数据：WAES / GFIS / GPC / PVAOS 等
+业务主数据：WAME / GFIS / GPC / PVAOS 等
 工程状态：active
 跨仓状态：partial
 完成状态：not_complete
@@ -60,7 +60,7 @@ superseded_by: []
 flowchart TB
   GPCF["GPCF: Canonical 契约、词表、哈希、验收"]
   MMC["MMC: 可信身份、签名委托、跨服务授权"]
-  WAES["WAES / 业务系统: 项目、订单、资产、设备、人员等主数据"]
+  WAME["WAME / 业务系统: 项目、订单、资产、设备、人员等主数据"]
   KDS["KDS: 知识资产、版本、证据、关系、审计、长期记忆"]
   Brain["Brain: 受控分析、推理、候选生成"]
   Studio["Studio: 会话、工作台、人工复核、任务操作"]
@@ -70,7 +70,7 @@ flowchart TB
   GPCF --> Studio
   MMC --> KDS
   MMC --> Studio
-  WAES --> KDS
+  WAME --> KDS
   KDS --> Brain
   Brain --> KDS
   KDS --> Studio
@@ -282,7 +282,7 @@ not_authorized
 | Studio 知识工作台 | 资料接入、证据浏览、候选复核、失败恢复与会话使用工作包 | 不得形成 `hermes_local_draft` 平行主链 |
 | Brain 分析能力 | 受限分析和候选生成工作包 | 不得持久化业务事实或自动确认 |
 | MMC | 身份、委托和跨服务授权工作包 | 不得保存知识资产正本 |
-| WAES / GFIS / GPC / PVAOS 等 | 业务对象权威引用与独立写入授权 | 业务状态不得由知识工程自动改变 |
+| WAME / GFIS / GPC / PVAOS 等 | 业务对象权威引用与独立写入授权 | 业务状态不得由知识工程自动改变 |
 | GCKF / Knowledge Fabric no-write 主线 | GKE-001 下的受控知识治理主线；D185 接管目标会话，DKS-054 至 DKS-060 作为已合流前置基础 | D190 四项恢复触发器为 `0/4`，`nextExecutableRounds=0`，不得创建 D191 |
 | DKS-054 至 DKS-060 | 分布式知识系统执行包、授权信封、接收目录、人工确认扫描、P0 治理契约和三助手 no-write 基线 | `merged_precondition_controlled`，不计为业务完成、真实 KDS 写入或恢复授权 |
 | 绿色供应链角色视图 KDS 实体产物 | KDS 权限视图与角色知识投影候选 | `controlled_candidate`，不构成真实 KDS API 写入或 GCKF D190 恢复触发器 |
@@ -298,10 +298,10 @@ gke_project_binding:
   merged_precondition_session: 019ed328-556e-7f83-a9b2-ace87c16acdb
   merged_precondition_rounds: GPCF-KDS-DKS-054..GPCF-KDS-DKS-060
   merged_precondition_status: merged_precondition_controlled
-  authoritative_business_source: GFIS / GPC / WAES object owners
+  authoritative_business_source: GFIS / GPC / WAME object owners
   knowledge_source_of_truth: KDS
   canonical_contract_source: GPCF
-  authorization_source: MMC / WAES / human confirmation
+  authorization_source: MMC / WAME / human confirmation
   owner: GPCF / KDS
   write_boundary: local_evidence_no_write
   takeover_evidence_ref: GPCF-GCKF-P0-D185-001
@@ -347,7 +347,7 @@ gke_project_binding:
 | Brain | 受控分析、推理与候选生成 | 不直接确认候选，不写业务主数据 |
 | WAS | 工作流与知识任务编排 | 编排状态不替代 KDS 资产生命周期 |
 | XiaoC | 客户侧知识交互与上下文消费 | 不建立本地长期记忆主账 |
-| WAES | 项目、订单、资产等业务对象引用和最终业务授权 | 业务主数据与业务状态保持权威 |
+| WAME | 项目、订单、资产等业务对象引用和最终业务授权 | 业务主数据与业务状态保持权威 |
 | GPC | 项目控制对象与知识关联 | 项目事实保持在 GPC 权威边界内 |
 | Studio | 上传、检索、会话、复核、恢复和用户任务闭环 | 不形成平行资料、证据或长期记忆主账 |
 | GPCF | canonical 契约、词表、manifest、哈希、状态和独立验收 | 不保存知识事实，不实现 KDS 运行时 |
@@ -430,4 +430,4 @@ business_state_change_authorized = false
 status_promotion_authorized = false
 ```
 
-本规范从 2026-08-03 起作为 AAAS、Brain、WAS、XiaoC、WAES、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD、ICP 全部知识工程关联工作的共同上位规范。跨仓传导和真实实现仍须逐仓形成可回放证据。
+本规范从 2026-08-03 起作为 AAAS、Brain、WAS、XiaoC、WAME、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD、ICP 全部知识工程关联工作的共同上位规范。跨仓传导和真实实现仍须逐仓形成可回放证据。

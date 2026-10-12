@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-221282A70B
 title: GlobalCloud Loop Usability Gates
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

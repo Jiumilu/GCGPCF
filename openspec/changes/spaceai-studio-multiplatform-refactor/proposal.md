@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-PROPOSAL-20261010
 title: proposal
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF, Studio, SpaceAIStudio, SpaceAI]
+related_projects: [GPC, WAME, KDS, GPCF, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0

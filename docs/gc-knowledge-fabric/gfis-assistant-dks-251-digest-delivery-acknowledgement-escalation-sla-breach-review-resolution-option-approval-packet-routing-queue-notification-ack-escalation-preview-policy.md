@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C235EBC7BB
 title: GFIS Assistant DKS-251 通知确认升级预览候选规则
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 DKS-251 从 DKS-250 notification acknowledgement preview 派生 acknowledgement escalation preview。它只展示候选升级级别、候选接收人、升级触发原因、阻断动作和下一步建议。
 
-硬边界：不创建 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval、committee、freeze、WAES、Harness、KDS lifecycle 或任何业务写回。
+硬边界：不创建 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval、committee、freeze、WAME、Harness、KDS lifecycle 或任何业务写回。
 
 验证命令：
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D4ECD4EB84
 title: GFIS Assistant DKS-196 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ superseded_by: []
 ## 边界
 
 - 只读预览，不创建真实 SLA timer、escalation、reminder 或 escalation task。
-- 不创建 delivery acknowledgement、approval request、approval decision、KWE work item、WAES 结果或 Harness evidence。
+- 不创建 delivery acknowledgement、approval request、approval decision、KWE work item、WAME 结果或 Harness evidence。
 - 不提升 KDS lifecycle，不写 GFIS/GPC/ERP/MES，不调用外部 API。
 
 ## 来源

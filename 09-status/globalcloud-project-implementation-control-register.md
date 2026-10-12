@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-PROJECT-IMPLEMENTATION-CONTROL-REGISTER-20260624
 title: GlobalCloud 项目群实施方案控制台账
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: status
 status: controlled
 version: v1.0
@@ -59,13 +59,13 @@ superseded_by: []
 | project | 当前有效总体方案 | 当前有效实施方案 | implementation_status | trigger_layer | 当前里程碑 | 证据 | 下一步 |
 |---|---|---|---|---|---|---|---|
 | WAS世界资产体系 | `docs/GlobalCloud WAS 总体方案.md` | `docs/GlobalCloud WAS 实施方案.md` | `ready_for_review` | `semantic_mapping_boundary` | WAS/Ontology 语义契约源 | Monitor 100 保持 hold；`real_source_records=0`、`accepted=false`、`integrated=false` | 进入 `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`，继续等待真实 P4 candidate |
-| GlobalCloud XWAIL | `GlobalCloud XWAIL 总体方案.md` | `GlobalCloud XWAIL 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 契约和 Validator 实施 | `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已形成本地预检候选；当前仍受 delegated wrapper replay 边界约束，单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要` | 先进入 `AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627` / `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再补齐 Validator/Profile/兼容矩阵和 WAES 发布边界 |
-| GlobalCloud AAAS / AaaS | `docs/GlobalCloud AaaS 总体方案.md` | `docs/GlobalCloud AaaS 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 服务包和计量实施 | `AAAS-WAES-BINDING-PRECHECK-001` 已形成本地预检候选；当前仍受 delegated wrapper replay 边界约束，单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要` | 先进入 `AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627` / `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再补齐服务包、计量、SLA、订阅状态和 WAES 授权发布边界 |
-| GlobalCloud WAES | `GlobalCloud WAES 总体方案.md` | `GlobalCloud WAES 实施方案.md` | `repair_required` | `repair_authorization_boundary` | 治理入口实施 | `WAES-LINT-RUNTIME-001` 仍需授权修复 lint/runtime | 用户授权后修复 WAES lint/runtime，并接入 XWAIL/AaaS 候选发布门禁 |
-| GlobalCloud GFIS | `GlobalCloud GFIS 总体方案.md` | `GlobalCloud GFIS 实施方案.md` | `repair_required` | `source_record_boundary` | 业务事实源实施 | 测试数据链通过，真实业务链仍为 `real_business_lane=repair_required` | 补齐真实 source-of-record、pending_business_verification、运行层主键、review queue、runtime intake 和 WAES review |
+| GlobalCloud XWAIL | `GlobalCloud XWAIL 总体方案.md` | `GlobalCloud XWAIL 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 契约和 Validator 实施 | `XWAIL-WAES-AAAS-CONTRACT-PRECHECK-001` 已形成本地预检候选；当前仍受 delegated wrapper replay 边界约束，单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.2 XWAIL delegated wrapper 单仓核对卡 / 5.6.2 XWAIL delegated wrapper 确认后状态传导摘要` | 先进入 `AUTH-XWAIL-LOOP-GATE-DELEGATE-REVIEW-20260627` / `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再补齐 Validator/Profile/兼容矩阵和 WAME 发布边界 |
+| GlobalCloud AAAS / AaaS | `docs/GlobalCloud AaaS 总体方案.md` | `docs/GlobalCloud AaaS 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 服务包和计量实施 | `AAAS-WAES-BINDING-PRECHECK-001` 已形成本地预检候选；当前仍受 delegated wrapper replay 边界约束，单仓锚点复用 `globalcloud-project-group-pre-wave1-review-authorization-request-20260627.md` 第 `5.5.1 AAAS delegated wrapper 单仓核对卡 / 5.6.1 AAAS delegated wrapper 确认后状态传导摘要` | 先进入 `AUTH-AAAS-LOOP-GATE-DELEGATE-REVIEW-20260627` / `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再补齐服务包、计量、SLA、订阅状态和 WAME 授权发布边界 |
+| GlobalCloud WAME | `GlobalCloud WAES 总体方案.md` | `GlobalCloud WAES 实施方案.md` | `repair_required` | `repair_authorization_boundary` | 治理入口实施 | `WAES-LINT-RUNTIME-001` 仍需授权修复 lint/runtime | 用户授权后修复 WAME lint/runtime，并接入 XWAIL/AaaS 候选发布门禁 |
+| GlobalCloud GFIS | `GlobalCloud GFIS 总体方案.md` | `GlobalCloud GFIS 实施方案.md` | `repair_required` | `source_record_boundary` | 业务事实源实施 | 测试数据链通过，真实业务链仍为 `real_business_lane=repair_required` | 补齐真实 source-of-record、pending_business_verification、运行层主键、review queue、runtime intake 和 WAME review |
 | GlobalCloud GPC | `GlobalCloud GPC 总体方案.md` | `GlobalCloud GPC 实施方案.md` | `partial_verified` | `external_runtime_boundary` | 绿色供应链场景实施 | README 索引与浏览器 E2E 已修复，外部运行证据仍缺失 | 补 GPC production/external/runtime evidence，并与 GFIS/PVAOS 的 SCaaS 链路复核 |
 | GlobalCloud PVAOS | `GlobalCloud PVAOS 总体方案.md` | `GlobalCloud PVAOS 实施方案.md` | `ready_for_review` | `local_release_review_boundary` | 供应链价值联盟运营实施 | PVAOS D4 分支最小 L3 harness、Manifest、validator 和 module validation evidence 已具备 | 补 PVAOS usability/customer evidence 或 WAES/GPC dependency dry-run |
-| GlobalCloud KDS | `GlobalCloud KDS 总体方案.md` | `GlobalCloud KDS 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 知识和证据源实施 | RAG 导出、API smoke、GBrain search/query 和 wiki trust audit 已在 local dev 通过；2026-06-28 live recheck 确认 KDS 已 clean、ahead/behind 为 `0/0`，`DEV-001` 本地 dry-run 资产已改为 Git-safe 命名并推送，KDS 已从当前 dirty/sensitive 阻塞源移除；资金报告、sync-run 接收/归档、Brain/WAES 消费和真实 KDS API 同步仍需 owner 确认 | 在保持真实 KDS API 未授权边界下推进 KDS runtime index read-only check 或 API contract dry-run；提交、推送、真实 sync 或状态提升仍需按任务授权 |
+| GlobalCloud KDS | `GlobalCloud KDS 总体方案.md` | `GlobalCloud KDS 实施方案.md` | `ready_for_review` | `pre_wave1_review_bridge` | 知识和证据源实施 | RAG 导出、API smoke、GBrain search/query 和 wiki trust audit 已在 local dev 通过；2026-06-28 live recheck 确认 KDS 已 clean、ahead/behind 为 `0/0`，`DEV-001` 本地 dry-run 资产已改为 Git-safe 命名并推送，KDS 已从当前 dirty/sensitive 阻塞源移除；资金报告、sync-run 接收/归档、Brain/WAME 消费和真实 KDS API 同步仍需 owner 确认 | 在保持真实 KDS API 未授权边界下推进 KDS runtime index read-only check 或 API contract dry-run；提交、推送、真实 sync 或状态提升仍需按任务授权 |
 | GlobalCloud Brain | `GlobalCloud Brain 总体方案.md` | `GlobalCloud Brain 实施方案.md` | `ready_for_review` | `human_review_boundary` | 知识治理和候选推理实施 | A1/A2/A3 授权型闭包与 Brain review handoff 已进入人工审查边界 | 推进 Brain format/test script/lint warning 专项或 KDS 依赖映射 |
 | GlobalCloud Studio | `GlobalCloud Studio 总体方案.md` | `GlobalCloud Studio 实施方案.md` | `ready_for_review` | `local_release_review_boundary` | Studio / Hermes / Agent 工作台 | workflow release boundary、permissions hardening、test/build/harness 已通过，提交前仍需人工复核 | 明确授权后执行人工复核记录，再决定是否进入 stage/commit/push 候选 |
 | GlobalCloud MMC | `GlobalCloud MMC 总体方案.md` | `GlobalCloud MMC 实施方案.md` | `ready_for_review` | `local_document_smoke_boundary` | 治理模板基线 | L3 admission validator、dependency dry-run、self-evolution checklist 和 runtime tests 已具备 | 推进治理模板复用 smoke 或下游项目 contract dry-run |
@@ -74,7 +74,7 @@ superseded_by: []
 | GlobalCloud XGD | `GlobalCloud XGD 总体方案.md` | `GlobalCloud XGD 实施方案.md` | `ready_for_review` | `local_dev_smoke_boundary` | 长程 Agent、重分析和复杂任务承载 | 最小 Loop、结构化任务队列、自我进化 checklist 和 harness validator 已具备 | 推进 XGD bounded TICK loop dry-run 或 Brain UI/ACUI smoke |
 | GlobalCloud XiaoC | `GlobalCloud XiaoC 总体方案.md` | `GlobalCloud XiaoC 实施方案.md` | `ready_for_review` | `environment_block_boundary` | AI 能力生产与编排路由 | 最小 Loop 文档体系已具备；UI/Wrangler/模型路由和真实部署仍需专项授权 | 推进 XiaoC 模型路由、AI 能力生产或 UI/Wrangler dry-run |
 | GlobalCloud XiaoG | `GlobalCloud XiaoG 总体方案.md` | `GlobalCloud XiaoG 实施方案.md` | `ready_for_review` | `authorization_pack_boundary` | 轻量执行入口 | L4 只读审计 mock 已通过；live API/设备验证需专项授权 | 等待 GFIS 真实 source-of-record；XiaoG live API/设备验证另行授权 |
-| GlobalCloud ICP | `GlobalCloud ICP 总体方案.md` | `GlobalCloud ICP 实施方案.md` | `candidate` | `candidate_registration_boundary` | 产业控制平面首期骨架 | 24节点、11池、3场景、10项测试、契约门禁和本地 HTTP smoke 已通过；仅证明 fixture/development 闭环 | 等待人工确认和 GPCF/WAES 治理审查；真实 KDS/GPC/GFIS 连接器另行立项 |
+| GlobalCloud ICP | `GlobalCloud ICP 总体方案.md` | `GlobalCloud ICP 实施方案.md` | `candidate` | `candidate_registration_boundary` | 产业控制平面首期骨架 | 24节点、11池、3场景、10项测试、契约门禁和本地 HTTP smoke 已通过；仅证明 fixture/development 闭环 | 等待人工确认和 GPCF/WAME 治理审查；真实 KDS/GPC/GFIS 连接器另行立项 |
 | GlobalCloud GPCF | `GlobalCloud GPCF 总体方案.md` | `GlobalCloud GPCF 实施方案.md` | `repair_required` | `authorization_to_pre_execution_total_bridge` | 实施治理控制 | 真实执行治理已受控，但 2026-06-27 live Git gate 已因 `GlobalCloud KDS/.env.production.example` sensitive_path 和当前 7 仓 total dirty 事实收紧为 blocked；其中 `GlobalCloud AAAS` / `GlobalCoud GPCF` / `GlobalCloud XWAIL` / `GlobalCloud GFIS` / `GlobalCloud KDS` / `GlobalCloud SOP` 构成当前 6 仓 review 边界，`WAS世界资产体系/.DS_Store` 继续沿 noise cleanup 单独治理，dependency 仍 blocked、customer_satisfaction 仍为 rework；`docs/harness/evidence/globalcloud-project-group-current-state-baseline-refresh-20260626.md` 当前保持 `project_group_current_state_baseline_refresh_20260626 = controlled`、`dirty_repo_count = 7`，`docs/harness/evidence/globalcloud-project-group-dev-task-queue-20260626.md` 当前保持 `development_queue_ready = true`、`trigger_layer_binding_count = 17`、`dependency_edge_binding_count = 17`；当前人工确认链已补齐到 `authorization-layer -> human-confirmation -> authorization-routing -> pre-wave1 -> human fill -> chain consistency -> authorization package -> chain loop-round -> target ledger`，但仍保持 `authorization_granted=0`、`action_executed=0` | 先完成 `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001`，再按 `GPCF-NEXT-STAGE-AUTHORIZATION-HUMAN-FILL-REQUEST-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-CONSISTENCY-AUDIT-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-PACKAGE-20260627-001`、`GPCF-NEXT-STAGE-AUTHORIZATION-CHAIN-LOOP-ROUND-20260627-001` 继续收敛 KDS sensitive_path review、授权回执、依赖阻塞和客户验收证据 |
 | shared/python_utils | 不适用 | 不适用 | `not_project` | `not_project_boundary` | 共享工具目录治理 | 导入可用性待验证 | 纳入依赖检查 |
 
@@ -119,7 +119,7 @@ reason = all 17 projects have one authoritative implementation plan and current 
 | 状态边界 | `status_ceiling=repair_required`、`accepted=false`、`integrated=false`、`production_ready=false`、`customer_accepted=false` |
 | 验证命令 | `python3 tools/kds-sync/validate_was_real_source_record_monitor_100.py`、`python3 tools/kds-sync/validate_was_status_matrix_control_board_refresh.py` |
 
-WAS/LOOP 实施链路已纳入项目群实施方案体系，但当前只证明受控方案入口、monitor evidence、Loop round 和 validator 已存在；不证明真实 source-of-record、业务运行、WAES review、客户验收或生产可用。
+WAS/LOOP 实施链路已纳入项目群实施方案体系，但当前只证明受控方案入口、monitor evidence、Loop round 和 validator 已存在；不证明真实 source-of-record、业务运行、WAME review、客户验收或生产可用。
 
 ## 7.1 UI/LOOP 实施链路登记
 
@@ -129,7 +129,7 @@ WAS/LOOP 实施链路已纳入项目群实施方案体系，但当前只证明�
 | UI 主规范 | `04-ui-delivery/GlobalCloud项目群UI设计开发治理与评估统一规范.md` |
 | Loop round | `docs/harness/loops/loop-round-GPCF-UI-TOOLCHAIN-PROMPT-GOVERNANCE-001.md` |
 | 当前门禁 | `ui_toolchain_governance=controlled` |
-| 工具链 | `@product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` |
+| 工具链 | `@product-design -> WAME -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate` |
 | 状态边界 | `ui_evidence_candidate`，不等于 `accepted`、`integrated`、`production_ready` |
 | 验证命令 | `python3 tools/kds-sync/validate_loop_ui_quality_baseline.py` |
 

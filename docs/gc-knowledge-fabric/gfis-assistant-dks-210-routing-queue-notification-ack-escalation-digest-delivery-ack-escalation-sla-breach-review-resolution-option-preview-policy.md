@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E33E0D756B
 title: GFIS Assistant DKS-210 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 - 不创建 resolution、dispute update、committee decision 或 freeze action。
 - 不创建 approval request / approval decision。
-- 不创建 Harness evidence、WAES gate result 或 KWE work item。
+- 不创建 Harness evidence、WAME gate result 或 KWE work item。
 - 不提升 KDS lifecycle，不写入 KDS fact / accepted fact。
 - 不写 GFIS / GPC / ERP / MES，不调用外部 API。
 

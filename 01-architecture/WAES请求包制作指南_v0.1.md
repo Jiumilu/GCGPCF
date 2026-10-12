@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-WAES-REQUEST-PACK-GUIDE-20261011
-title: WAES 请求包制作指南
+title: WAME 请求包制作指南
 project: GPCF
-related_projects: [GPCF, WAS, XWAIL, WAES, KDS]
+related_projects: [GPCF, WAS, XWAIL, WAME, KDS]
 domain: architecture
 status: controlled
 version: v0.1
@@ -16,10 +16,10 @@ supersedes: []
 superseded_by: []
 ---
 
-# WAES 请求包制作指南 v0.1（S3 接入工具包）
+# WAME 请求包制作指南 v0.1（S3 接入工具包）
 
-- 日期：2026-10-11 ｜ 依据：《WAES统一审核请求机制_v0.1》（GPCF 01-architecture）
-- 给谁用：**各系统提交方**（凡有内容需发往 WAES 审核/注册/发布者）
+- 日期：2026-10-11 ｜ 依据：《WAME统一审核请求机制_v0.1》（GPCF 01-architecture）
+- 给谁用：**各系统提交方**（凡有内容需发往 WAME 审核/注册/发布者）
 - 一句话：**三步做出合规请求包**——定类型 → 填信封 → 自检
 
 ## 一、三步流程
@@ -83,8 +83,8 @@ python3 "KDS/工业绿链/图谱/ontology/xwail-v12-poc/requestcheck.py" "你的
 
 ## 三、交接与边界
 
-1. 请求包=**提交侧**准备件；送入 WAES 统一受理流程的时点由治理方决定（当前受理器待 WAES 立项——S4）；
+1. 请求包=**提交侧**准备件；送入 WAME 统一受理流程的时点由治理方决定（当前受理器待 WAME 立项——S4）；
 2. 已有真实件参照：`KDS/工业绿链/图谱/ontology/requests/`（4 件，覆盖 3 类型）；
 3. 本指南与机制文件冲突时以机制文件为准；**不声明**任何请求已受理。
 
-> 工具链一览：`mkrequest.py`（制作）→ `requestcheck.py`（自检）→ [WAES 受理器]（识别/分流/回执——待 S4）。
+> 工具链一览：`mkrequest.py`（制作）→ `requestcheck.py`（自检）→ [WAME 受理器]（识别/分流/回执——待 S4）。

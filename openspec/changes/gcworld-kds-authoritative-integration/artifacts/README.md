@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CE9BCDDD6A
 title: artifacts
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

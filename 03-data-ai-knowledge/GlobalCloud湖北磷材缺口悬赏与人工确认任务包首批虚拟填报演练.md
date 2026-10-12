@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8454CB5BDD
 title: GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批虚拟填报演练
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 本文承接 DKS-039《GlobalCloud 湖北磷材缺口悬赏与人工确认任务包首批空白执行台账》，用虚拟脱敏样例演练“底座可用知识闭环率”如何驱动人工确认、退回补源、悬赏候选、委员会触发和硬停止。
 
-本文不是实际填报记录，不接收真实资料，不证明真实来源、真实订单、真实收入、真实项目进展或真实业务完成。所有样例均为 `virtual_sample`，不得写入真实 KDS API、WAES 放行、Brain 正式页面、GFIS、GPC、PVAOS 或任何业务系统主账。
+本文不是实际填报记录，不接收真实资料，不证明真实来源、真实订单、真实收入、真实项目进展或真实业务完成。所有样例均为 `virtual_sample`，不得写入真实 KDS API、WAME 放行、Brain 正式页面、GFIS、GPC、PVAOS 或任何业务系统主账。
 
 ## 2. 演练目标
 
@@ -166,7 +166,7 @@ superseded_by: []
 | writebackCandidateId | linkedSampleId | gapType | proposedTarget | requiredHumanAction | status |
 |---|---|---|---|---|---|
 | `WBC-HBLC-FEA-202606-0001` | `VRS-HBLC-FEA-202606-0001` | missing_third_party_source | `MER-HBLC-FEA-202606-0001.evidenceSlot` | 项目组补第三方来源或说明不适用 | candidate_only |
-| `WBC-HBLC-IND-202606-0001` | `VRS-HBLC-IND-202606-0001` | missing_trust_level_confirmation | `MER-HBLC-IND-202606-0001.humanReviewStatus` | 行业资料责任方和 WAES 规则复核人确认可信层级 | candidate_only |
+| `WBC-HBLC-IND-202606-0001` | `VRS-HBLC-IND-202606-0001` | missing_trust_level_confirmation | `MER-HBLC-IND-202606-0001.humanReviewStatus` | 行业资料责任方和 WAME 规则复核人确认可信层级 | candidate_only |
 | `WBC-HBLC-ORD-202606-0001` | `VRS-HBLC-ORD-202606-0001` | missing_order_lead_boundary | `MER-HBLC-ORD-202606-0001.evidenceSlot` | 销售或渠道责任方补匿名编号、责任人和收益边界 | candidate_only |
 | `WBC-HBLC-ORD-202606-0002` | `VRS-HBLC-ORD-202606-0002` | invalid_revenue_claim | `CER-HBLC-ORD-202606-0002.evidenceSlot` | 委员会机制备案或裁决，用户可急停越权写回 | candidate_only |
 

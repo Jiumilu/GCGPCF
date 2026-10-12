@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A3B30485E9
 title: GlobalCloud 全局模型目录与能力标签标准
 project: KDS
-related_projects: [KDS, WAES, Studio]
+related_projects: [KDS, WAME, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -134,4 +134,4 @@ superseded_by: []
 
 1. 目录是全局真源，不允许项目复制后私改。
 2. 档位比模型名更稳定，项目应优先绑定档位。
-3. 标签必须支持 WAES 授权与审计。
+3. 标签必须支持 WAME 授权与审计。

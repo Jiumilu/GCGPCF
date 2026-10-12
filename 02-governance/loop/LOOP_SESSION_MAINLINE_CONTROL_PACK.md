@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-6C7A1E9D2B
 title: LOOP 会话主线控制包
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md
 source_path: 02-governance/loop/LOOP_SESSION_MAINLINE_CONTROL_PACK.md

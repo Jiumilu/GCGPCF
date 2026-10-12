@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C32CAFEF5
 title: GFIS-RUNTIME-SOP-E2E-255
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 来源轮次：`GFIS-RUNTIME-SOP-E2E-254`
 - 输入事实：254 轮已记录 owner response release remediation reopen attempt，但因真实 release/remediation 链路缺失继续 blocked。
-- 本轮真实缺口：仍无真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 与 WAES evidence candidate。
+- 本轮真实缺口：仍无真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 与 WAME evidence candidate。
 
 ## 动作
 
@@ -65,7 +65,7 @@ superseded_by: []
 ## 反馈
 
 - 本轮只把 remediation reopen blocked 转为 remediation action open hold。
-- 不释放 hold、不完成 remediation、不释放 owner response 或 submission package、不生成客户订单、平台订单、source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact。
+- 不释放 hold、不完成 remediation、不释放 owner response 或 submission package、不生成客户订单、平台订单、source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact。
 - 下一轮候选：`GFIS-RUNTIME-SOP-E2E-256`，建立 submission package release remediation action recheck。
 
 ## 真实性计数

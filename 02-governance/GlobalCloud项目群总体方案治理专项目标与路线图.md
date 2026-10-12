@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-PROJECT-GROUP-MASTER-PLAN-GOVERNANCE-20260624
 title: GlobalCloud 项目群总体方案治理专项目标与路线图
-project: WAES
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+project: WAME
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md
 source_path: 02-governance/GlobalCloud项目群总体方案治理专项目标与路线图.md
@@ -71,7 +71,7 @@ dependency_edge_binding_count = 17
 1. WAS世界资产体系
 2. GlobalCloud XWAIL
 3. GlobalCloud AaaS / AAAS
-4. GlobalCloud WAES
+4. GlobalCloud WAME
 5. GlobalCloud GFIS
 6. GlobalCloud GPC
 7. GlobalCloud PVAOS
@@ -170,7 +170,7 @@ dependency_edge_binding_count = 17
 
 范围：
 
-- GlobalCloud WAES
+- GlobalCloud WAME
 - GlobalCloud GFIS
 - GlobalCloud PVAOS
 - GlobalCloud KDS

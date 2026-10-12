@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C1E59A4D2
 title: GlobalCloud项目群UI设计开发治理与评估统一规范
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF, Studio]
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 1. 让 UI 质量在 Loop 中被实际执行、记录、校验，而不是只停留在技能定义。
 2. 把项目群 UI 的设计、开发、治理、评估收口为一套统一主规范，避免各项目各做各的。
 
-本规范不替代业务事实、Harness 验收、WAES 裁决或项目级交付状态。UI 证据最高只到 `ui_evidence_candidate`。
+本规范不替代业务事实、Harness 验收、WAME 裁决或项目级交付状态。UI 证据最高只到 `ui_evidence_candidate`。
 
 ## 2. 单一主线
 
@@ -149,7 +149,7 @@ Loop 轮次出现以下任一情况，必须执行 UI Quality Gate：
 5. `Prompt profile`
 6. `Design options`
 7. `Selected option`
-8. `WAES baseline reuse`
+8. `WAME baseline reuse`
 9. `Surface`
 10. `Tools used`
 11. `Verification`
@@ -226,7 +226,7 @@ UI Quality Gate 需要额外判断：
 2. 设计负责人：确认界面类型、体验骨架、页面结构、令牌与组件策略。
 3. 前端/实现负责人：在既有技术栈内做最小实现并保留可验证证据。
 4. Loop 编排负责人：判断本轮是否触发 UI gate，并确保 round 写入完整字段。
-5. Harness / WAES：决定 broader project status，UI gate 不能越权替代。
+5. Harness / WAME：决定 broader project status，UI gate 不能越权替代。
 
 ## 9. 交付物最小集合
 
@@ -246,7 +246,7 @@ UI Quality Gate 需要额外判断：
 项目群 UI 统一采用以下工具链：
 
 1. `@product-design`
-2. `WAES` 现有界面框架
+2. `WAME` 现有界面框架
 3. `ui-ux-pro-max`
 4. `Figma`
 5. `Storybook`
@@ -258,7 +258,7 @@ UI Quality Gate 需要额外判断：
 执行规则：
 
 1. 整体界面、页面类、关键组件类和结构性重设计，必须先走 `@product-design` 的 `get-context -> ideate -> 选择方案`。
-2. 专业工作台类默认先对齐 `WAES` 现有界面框架，再做项目级优化。
+2. 专业工作台类默认先对齐 `WAME` 现有界面框架，再做项目级优化。
 3. 没有运行验证的工具输出，最高只算候选，不算完成。
 
 ## 11. 工具上下文包与提示词能力
@@ -271,7 +271,7 @@ UI Quality Gate 需要额外判断：
 2. 页面类或组件类
 3. 用户目标与关键路径
 4. 视觉/代码/设计系统来源
-5. `WAES` 复用层级
+5. `WAME` 复用层级
 6. 约束、非目标和禁改项
 7. 门禁、证据与交付要求
 
@@ -315,7 +315,7 @@ UI Quality Gate 需要额外判断：
 1. 业务完成
 2. 真实用户验收完成
 3. Harness 通过
-4. WAES 放行
+4. WAME 放行
 5. accepted
 6. integrated
 7. production_ready

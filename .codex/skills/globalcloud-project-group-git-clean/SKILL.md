@@ -28,7 +28,7 @@ metadata:
 - `GlobalCloud Brain`
 - `WAS世界资产体系`
 - `GlobalCloud XiaoC`
-- `GlobalCloud WAES`
+- `GlobalCloud WAME`
 - `GlobalCloud GPC`
 - `GlobalCloud Studio`
 - `GlobalCoud GPCF`

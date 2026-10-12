@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-1946E4144B
-title: WAES Precheck Bundle Read Model No-write 规则
+title: WAME Precheck Bundle Read Model No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, WAME, KDS, Brain]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,11 +16,11 @@ supersedes: []
 superseded_by: []
 ---
 
-# WAES Precheck Bundle Read Model No-write 规则
+# WAME Precheck Bundle Read Model No-write 规则
 
 ## 1. 定位
 
-WAES Precheck Bundle Read Model 是 DKS-106 `WAES Action Gate Precheck` 之后的只读聚合视图。
+WAME Precheck Bundle Read Model 是 DKS-106 `WAME Action Gate Precheck` 之后的只读聚合视图。
 
 它把多个 precheck 候选聚合给 Brain、KWE、GFIS Assistant 使用，帮助不同入口展示：
 
@@ -95,8 +95,8 @@ Read Model 不得直接执行以下动作：
 - complete_committee_decision；
 - confirm_revenue_or_score。
 
-## 6. 与 WAES / KWE 的关系
+## 6. 与 WAME / KWE 的关系
 
-WAES Precheck Bundle Read Model 不是 WAES Gate Result，也不是 KWE WorkItem。
+WAME Precheck Bundle Read Model 不是 WAME Gate Result，也不是 KWE WorkItem。
 
 它只让 Brain、KWE 和 GFIS Assistant 安全读取 precheck 聚合状态。任何真实 gate result、task、lifecycle 或业务写回都必须进入后续受控流程。

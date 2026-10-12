@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F8556A98E5
 title: GlobalCloud 湖北磷材 SOP 候选写回规则到缺口悬赏与人工确认任务包
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -30,7 +30,7 @@ superseded_by: []
 2. 行业资料可信来源补证控制点。
 3. 订单线索收益边界控制点。
 
-本文不是悬赏发布记录，不是积分结算记录，不是收益分配记录，不是 Brain 页面发布记录，不是 WAES 放行记录，也不是 GFIS、GPC、PVAOS 或任何业务系统的主账写入记录。
+本文不是悬赏发布记录，不是积分结算记录，不是收益分配记录，不是 Brain 页面发布记录，不是 WAME 放行记录，也不是 GFIS、GPC、PVAOS 或任何业务系统的主账写入记录。
 
 ## 2. 承接关系
 
@@ -48,7 +48,7 @@ superseded_by: []
 | ManualConfirmationTask | `MCT` | 把候选 SOP 控制点拆成人工确认动作 | 未确认前不得写回正式字段 |
 | BountyActivationCandidate | `BAC` | 把知识缺口转成可讨论的悬赏候选 | 未冻结资源、未委员会确认前不得发布 |
 | CommitteeTriggerCandidate | `CTC` | 标识何时进入委员会备案或裁决 | 只登记触发条件，不替代裁决 |
-| ClosureCriterion | `CLC` | 定义任务关闭、部分关闭、退回和撤回标准 | 关闭必须有 evidence 和 WAES / 人工记录 |
+| ClosureCriterion | `CLC` | 定义任务关闭、部分关闭、退回和撤回标准 | 关闭必须有 evidence 和 WAME / 人工记录 |
 | PkcParticipationCandidate | `PPC` | 定义个人或合作单位成员可参与的提交入口 | 只作为参与入口候选，不确认个人积分 |
 
 ## 4. ManualConfirmationTask
@@ -57,7 +57,7 @@ superseded_by: []
 |---|---|---|---|---|---|---|---|---|---|
 | `MCT-HBLC-FEA-202606-0001` | `SCP-HBLC-FEA-202606-0001` | 拓厂项目来源人工确认 | 拓厂来源索引、区域资料、项目负责人确认、政策或第三方来源摘要 | 湖北磷材项目负责人 / 项目组评审人 | 证据规则、权限规则、发布边界规则 | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 | `project_review_candidate_confirmed_by_human` | planned |
 | `MCT-HBLC-FEA-202606-0002` | `SCP-HBLC-FEA-202606-0001` | 拓厂项目 KDS 池与增强账本挂接确认 | DKS 11 池挂接、贡献账本、SOP 账本、悬赏池挂接关系 | KDS 记录人 / GPCF 治理方 | KDS 挂接规则、账本不得游离规则 | 装备池 / 产能池 / 政策池 / 数据池 / 场景池 | 贡献账本 / SOP 账本 / 悬赏池 / 争议池 | `kds_pool_ledger_mapping_candidate_pass` | planned |
-| `MCT-HBLC-IND-202606-0001` | `SCP-HBLC-IND-202606-0001` | 行业资料权威来源人工确认 | 权威来源链接、检索时间、适用范围、来源类型 | 行业资料责任方 / WAES 规则复核人 | 可信来源规则、检索时间规则、适用范围规则 | 政策池 / 数据池 / 场景池 | 贡献账本 / 悬赏池 | `trusted_source_candidate_ready_for_review` | planned |
+| `MCT-HBLC-IND-202606-0001` | `SCP-HBLC-IND-202606-0001` | 行业资料权威来源人工确认 | 权威来源链接、检索时间、适用范围、来源类型 | 行业资料责任方 / WAME 规则复核人 | 可信来源规则、检索时间规则、适用范围规则 | 政策池 / 数据池 / 场景池 | 贡献账本 / 悬赏池 | `trusted_source_candidate_ready_for_review` | planned |
 | `MCT-HBLC-ORD-202606-0001` | `SCP-HBLC-ORD-202606-0001` | 订单线索来源与收益边界确认 | 电话、会议或邮件来源摘要、客户匿名编号、需求时间、线索责任人 | 销售或渠道责任方 / 财务口径复核人 | 收益边界规则、订单线索规则、权限规则 | 订单池 / 产能池 / 资金池 / 数据池 | 潜在产值池 / 贡献账本 / 悬赏池 | `order_lead_candidate_boundary_checked` | planned |
 | `MCT-HBLC-ORD-202606-0002` | `SCP-HBLC-ORD-202606-0001` | 潜在产值候选口径确认 | 线索来源、预估范围、不可确认为正式收入的说明、后续开票和到账跟踪字段 | 销售责任方 / 财务联系人 / 委员会条件触发 | 潜在产值规则、到账收入规则、开票统计规则 | 订单池 / 资金池 / 场景池 | 潜在产值池 / 争议池 / 贡献账本 | `potential_value_candidate_tracked_only` | planned |
 
@@ -83,9 +83,9 @@ superseded_by: []
 
 | closureId | linkedTaskId | closeAsPass | closeAsPartial | returnCondition | withdrawCondition | evidenceRequired |
 |---|---|---|---|---|---|---|
-| `CLC-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | 来源索引、区域资料、项目负责人确认和 WAES 规则记录齐备 | 仅部分来源齐备，可进入项目组内部候选但不得发布 | 来源缺失、责任主体不清、权限不清 | 来源被证伪或授权撤回 | 来源索引、脱敏摘要、人工确认记录、WAES 记录 |
+| `CLC-HBLC-FEA-202606-0001` | `MCT-HBLC-FEA-202606-0001` | 来源索引、区域资料、项目负责人确认和 WAME 规则记录齐备 | 仅部分来源齐备，可进入项目组内部候选但不得发布 | 来源缺失、责任主体不清、权限不清 | 来源被证伪或授权撤回 | 来源索引、脱敏摘要、人工确认记录、WAME 记录 |
 | `CLC-HBLC-FEA-202606-0002` | `MCT-HBLC-FEA-202606-0002` | KDS 11 池和增强账本挂接完整 | 仅底座池完整但增强账本待补 | 账本游离或池挂接错误 | 发现误挂接造成权限或收益风险 | 挂接表、GPCF 复核记录、KDS 本地镜像记录 |
-| `CLC-HBLC-IND-202606-0001` | `MCT-HBLC-IND-202606-0001` | 权威来源链接、检索时间、适用范围和可信层级建议齐备 | 来源齐备但适用范围需继续评估 | 缺权威来源或检索时间 | 来源失效或授权不可用 | 来源索引、检索时间、适用范围、WAES 可信来源记录 |
+| `CLC-HBLC-IND-202606-0001` | `MCT-HBLC-IND-202606-0001` | 权威来源链接、检索时间、适用范围和可信层级建议齐备 | 来源齐备但适用范围需继续评估 | 缺权威来源或检索时间 | 来源失效或授权不可用 | 来源索引、检索时间、适用范围、WAME 可信来源记录 |
 | `CLC-HBLC-ORD-202606-0001` | `MCT-HBLC-ORD-202606-0001` | 线索来源、客户匿名编号、需求时间、责任人和收益边界齐备 | 有线索但客户匿名编号或责任人待补 | 将线索误写为正式订单、开票或到账收入 | 线索来源撤回或被证伪 | 来源摘要、匿名编号、人工确认、收益边界记录 |
 | `CLC-HBLC-ORD-202606-0002` | `MCT-HBLC-ORD-202606-0002` | 潜在产值候选、开票统计和到账跟踪字段均区分清楚 | 有潜在产值候选但暂无开票或到账跟踪 | 以开票替代到账或误入正式收益池 | 线索无效或客户撤回 | 潜在产值说明、开票统计字段、到账跟踪字段、财务口径复核 |
 
@@ -94,7 +94,7 @@ superseded_by: []
 | participationId | linkedBountyActivationId | participantScope | allowedContribution | restrictedContribution | settlementBoundary |
 |---|---|---|---|---|---|
 | `PPC-HBLC-FEA-202606-0001` | `BAC-HBLC-FEA-202606-0001` | 湖北磷材项目组、受邀合作单位成员、授权专家 | 提交拓厂来源摘要、区域资料索引、政策来源索引、差异项说明 | 不提交未授权原文、敏感价格、合同原文或个人信息 | 验收前只形成个人贡献候选 |
-| `PPC-HBLC-IND-202606-0001` | `BAC-HBLC-IND-202606-0001` | 所有授权人员或单位、受邀专家 | 提交权威来源链接、检索时间、适用范围说明 | 不把非权威资料写成高可信结论 | T3 升级必须 WAES 和人工确认 |
+| `PPC-HBLC-IND-202606-0001` | `BAC-HBLC-IND-202606-0001` | 所有授权人员或单位、受邀专家 | 提交权威来源链接、检索时间、适用范围说明 | 不把非权威资料写成高可信结论 | T3 升级必须 WAME 和人工确认 |
 | `PPC-HBLC-ORD-202606-0001` | `BAC-HBLC-ORD-202606-0001` | 销售责任方、渠道方、受邀合作单位成员 | 提交线索来源摘要、客户匿名编号、需求时间、责任主体候选 | 不提交客户实名、未授权合同原文、正式收入声明 | 到账前不得确认正式产值积分或收益分配 |
 
 ## 9. AI 服务动作边界
@@ -138,7 +138,7 @@ bounty_candidate_only
 本文完成条件：
 
 1. DKS-037 三个 SOP 候选控制点均拆成人工确认任务。
-2. 每个人工确认任务均具备 KDS 11 池挂接、增强账本挂接、WAES 要求和输出候选。
+2. 每个人工确认任务均具备 KDS 11 池挂接、增强账本挂接、WAME 要求和输出候选。
 3. 形成知识缺口悬赏候选、委员会触发候选、关闭标准和 PKC 参与候选。
 4. 明确自购 AI 额度不进入统一收益池或悬赏资源池。
 5. 明确正式收入按到账确认，开票只作为统计、财务和流程口径。

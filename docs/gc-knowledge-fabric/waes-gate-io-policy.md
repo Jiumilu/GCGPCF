@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-9B51263381
-title: GC-Knowledge Fabric WAES Gate 输入输出契约与 Hard-stop 规则
+title: GC-Knowledge Fabric WAME Gate 输入输出契约与 Hard-stop 规则
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,26 +16,26 @@ supersedes: []
 superseded_by: []
 ---
 
-# GC-Knowledge Fabric WAES Gate 输入输出契约与 Hard-stop 规则
+# GC-Knowledge Fabric WAME Gate 输入输出契约与 Hard-stop 规则
 
 ## 1. 定位
 
-本文件定义 WAES Gate 的最小输入输出契约、reason code、allowed operations 和 hard-stop 规则，用于防止 RAG、写回、收益、贡献、外部共享、冻结等门禁只停留在“名称清单”层面。
+本文件定义 WAME Gate 的最小输入输出契约、reason code、allowed operations 和 hard-stop 规则，用于防止 RAG、写回、收益、贡献、外部共享、冻结等门禁只停留在“名称清单”层面。
 
-本文件只定义 no-write gate check 契约，不落库 WAES gate result，不写 GFIS/GPC/ERP/MES，不确认收益、积分、额度、悬赏或委员会裁决。
+本文件只定义 no-write gate check 契约，不落库 WAME gate result，不写 GFIS/GPC/ERP/MES，不确认收益、积分、额度、悬赏或委员会裁决。
 
 ## 2. Gate 输入契约
 
-每次 WAES gate check 至少必须提供：
+每次 WAME gate check 至少必须提供：
 
 | 字段 | 说明 |
 |---|---|
 | `gateId` | 本次 gate check 编号 |
 | `tenantId` | 租户隔离 |
-| `gateType` | WAES gate 类型 |
+| `gateType` | WAME gate 类型 |
 | `targetObjectType` | 目标对象类型 |
 | `targetObjectId` | 目标对象编号 |
-| `policyRefs` | 适用 OKF/WAES policy |
+| `policyRefs` | 适用 OKF/WAME policy |
 | `sourceRefs` | 来源引用 |
 | `evidenceRefs` | 证据引用 |
 | `aclRefs` | 权限与可见性引用 |
@@ -45,7 +45,7 @@ superseded_by: []
 
 ## 3. Gate 输出契约
 
-每次 WAES gate check 至少必须输出：
+每次 WAME gate check 至少必须输出：
 
 | 字段 | 说明 |
 |---|---|
@@ -90,7 +90,7 @@ superseded_by: []
 
 ## 6. P0/P1 验收条件
 
-- OKF 中有独立 WAES Gate IO policy。
+- OKF 中有独立 WAME Gate IO policy。
 - Shared Types 中有 Gate input、Gate output、reason code、allowed operation 和 hard-stop rule 类型。
 - Validator 能检查输入输出字段、6 类 hard-stop gate、10 个 reason code 和 no-write 断言。
 - 所有验证只使用本地文件和 fixture，不触达真实 WAES/KDS/GFIS/GPC 或外部 API。

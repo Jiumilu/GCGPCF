@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E1D4339FD6
 title: CodeGraph 业务开发执行 Harness 门禁
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # CodeGraph 业务开发执行 Harness 门禁
 
-本门禁把 `GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001` 和 `GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002` 固化为 Harness/Loop 阻断规则。它只检查业务开发任务是否具备 CodeGraph 影响分析证据，不代表业务完成、WAES 通过、Harness 最终验收或人工批准。
+本门禁把 `GPCF-CODEGRAPH-DEV-EXECUTION-ADMISSION-001` 和 `GPCF-CODEGRAPH-DEV-EXECUTION-PILOT-PACK-002` 固化为 Harness/Loop 阻断规则。它只检查业务开发任务是否具备 CodeGraph 影响分析证据，不代表业务完成、WAME 通过、Harness 最终验收或人工批准。
 
 ## 门禁目标
 

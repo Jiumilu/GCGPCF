@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CB6CA5B004
 title: GC-Knowledge Fabric P0 正式证据执行通知确认回执路由确认预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D72 的 notification acknowledgement receipt routing acknowledgement 预览 dry-run。
 
-D72 承接 D71 notification acknowledgement receipt preview，只预览回执候选进入后续 routing acknowledgement 的候选确认包，包括路由确认头、回执确认矩阵、路由渠道矩阵、路由确认载荷摘要、ACL 边界、保持条件、阻断码、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D72 承接 D71 notification acknowledgement receipt preview，只预览回执候选进入后续 routing acknowledgement 的候选确认包，包括路由确认头、回执确认矩阵、路由渠道矩阵、路由确认载荷摘要、ACL 边界、保持条件、阻断码、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -47,7 +47,7 @@ D72 承接 D71 notification acknowledgement receipt preview，只预览回执候
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

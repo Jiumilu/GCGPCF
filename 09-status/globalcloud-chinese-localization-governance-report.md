@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0B97A8283D
 title: GlobalCloud 项目群中文化治理报告
 project: GPCF
-related_projects: [WAES, GPCF]
+related_projects: [WAME, GPCF]
 domain: status
 status: controlled
 version: v1.0

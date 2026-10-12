@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6B386000D3
 title: GlobalCloud 绿色供应链体系整体评估模型与100分优化方案
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain]
+related_projects: [GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain]
 domain: architecture
 status: controlled
 version: v1.0
@@ -49,7 +49,7 @@ superseded_by: []
 - 资源仓库域
 - 结构化数据库域
 - 知识主存域与知识引擎域
-- WAES 治理模型
+- WAME 治理模型
 - 对象目录、事件合同、连接器合同、SOP 模板、验收矩阵
 
 ### 2.2 不纳入本次满分判断的内容
@@ -68,7 +68,7 @@ superseded_by: []
 | 维度 | 权重 | 评估重点 |
 |---|---:|---|
 | 总体架构 | 8 | 三层主架构和 AI 与数据层是否闭环 |
-| 治理与监控 | 10 | WAES 边界、治理门禁、状态与证据 |
+| 治理与监控 | 10 | WAME 边界、治理门禁、状态与证据 |
 | 运营与协同 | 8 | PVAOS/GPC 分工和业务闭环 |
 | 生产与执行 | 8 | GFIS/Edge/OT 边界和执行主账 |
 | AI 与数据层 | 10 | 横向底座收口和内部域协同 |
@@ -134,7 +134,7 @@ superseded_by: []
 1. 知识主存域关键对象未进入主对象目录。
 2. 知识发布、ingest、失效拦截相关事件未进入主事件合同。
 3. 数据库边界相关对象未进入主对象目录。
-4. WAES 标准治理输出未沉淀为对象。
+4. WAME 标准治理输出未沉淀为对象。
 5. 验收矩阵缺少知识发布链和数据库边界验证场景。
 
 这些缺口会直接拉低：
@@ -213,7 +213,7 @@ superseded_by: []
 
 1. 三层主业务架构稳定。
 2. AI 与数据层收口合理。
-3. WAES 不参与具体事务审批的边界稳定。
+3. WAME 不参与具体事务审批的边界稳定。
 4. GPC / GFIS / Edge / PVAOS 主责分工稳定。
 5. 资源仓库、数据库边界、知识主存、知识引擎和 AI 治理已建立基本硬约束。
 

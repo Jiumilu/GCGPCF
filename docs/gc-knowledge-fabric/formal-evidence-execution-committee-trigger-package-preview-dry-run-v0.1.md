@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-129C1AFDE3
 title: GC-Knowledge Fabric P0 正式证据执行委员会触发包预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ D46 只预览 D45 human confirmation package preview 之后，进入委员会路
 
 | 范围 | 预览要求 |
 |---|---|
-| 委员会路由角色 | 覆盖 request_owner、WAES、KWE、Harness、committee、stop authority、business system、governance owner |
+| 委员会路由角色 | 覆盖 request_owner、WAME、KWE、Harness、committee、stop authority、business system、governance owner |
 | 委员会事项类型 | 跨单位责任争议、冻结释放争议、正式写回风险、收益/贡献影响、重大违规嫌疑 |
 | 包章节 | 覆盖来源、人工确认摘要、委员会触发摘要、争议边界、冻结保留、责任边界、收益/贡献影响、正式写回风险、Harness review input、证据引用、负向门禁和 no-write 声明 |
 | 触发检查 | 覆盖 D45 状态、no-write 状态、委员会事项类型、包章节、必需引用和禁止写入 |
@@ -54,7 +54,7 @@ D46 只预览 D45 human confirmation package preview 之后，进入委员会路
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

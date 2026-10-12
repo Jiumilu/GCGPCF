@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3B548BE016
 title: f423b226-0141-4aac-8df6-728f615aa3a1
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0

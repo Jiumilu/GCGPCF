@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-046
 title: spec
 project: KDS
-related_projects: [KDS, PVAOS, WAES, Brain, Studio]
+related_projects: [KDS, PVAOS, WAME, Brain, Studio]
 domain: openspec
 status: draft
 version: v1.0
@@ -40,7 +40,7 @@ superseded_by: []
 - **THEN** 页面持续显示模拟分支、基线快照和假设标识，不将关系标注为当前事实
 
 ### Requirement: 全链路使用同一权限裁剪
-字段、段落、图节点与边、搜索、时间线、统计、导出和智能体回答 SHALL 使用同一WAES裁决和世界快照。客户端隐藏 MUST NOT 代替服务端裁剪，受限内容不得通过数量、占位或跳转泄漏。
+字段、段落、图节点与边、搜索、时间线、统计、导出和智能体回答 SHALL 使用同一WAME裁决和世界快照。客户端隐藏 MUST NOT 代替服务端裁剪，受限内容不得通过数量、占位或跳转泄漏。
 
 #### Scenario: 用户无权查看敏感合作关系
 - **WHEN** 用户搜索涉及敏感合作关系的组织

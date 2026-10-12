@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-58853ED4B5
 title: GC-Knowledge Fabric P0 正式证据执行委员会立案门禁预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D50 的委员会 case opening guard 预览 dry-run。
 
-D50 只预览 D49 committee intake acceptance precheck preview 之后，委员会事项开案前必须维持的守卫条件、开案前置项、提交准备、权限边界、冻结保持、WAES 负向门禁、Harness / 业务系统 / 收益贡献 no-write 边界和退回路径。
+D50 只预览 D49 committee intake acceptance precheck preview 之后，委员会事项开案前必须维持的守卫条件、开案前置项、提交准备、权限边界、冻结保持、WAME 负向门禁、Harness / 业务系统 / 收益贡献 no-write 边界和退回路径。
 
 ## 2. 输入
 
@@ -38,7 +38,7 @@ D50 只预览 D49 committee intake acceptance precheck preview 之后，委员�
 | 范围 | 预览要求 |
 |---|---|
 | Guard roles | 继承 D49 precheck roles |
-| Guard sections | 覆盖来源 intake precheck lineage、case opening scope、case opening prerequisites、committee submission readiness、committee authority boundary、freeze retention guard、WAES negative gate guard、Harness no-write、business system no-write、revenue / contribution no-write、return path 和 no-write attestation |
+| Guard sections | 覆盖来源 intake precheck lineage、case opening scope、case opening prerequisites、committee submission readiness、committee authority boundary、freeze retention guard、WAME negative gate guard、Harness no-write、business system no-write、revenue / contribution no-write、return path 和 no-write attestation |
 | Case opening prerequisites | 只作为候选检查项，不执行开案 |
 | Decision constraints | 明确 guard 不是开案，不产生 intake acceptance、提交、立案、裁决、确认、冻结释放、收益/贡献确认或 evidence 写入 |
 
@@ -56,7 +56,7 @@ D50 只预览 D49 committee intake acceptance precheck preview 之后，委员�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

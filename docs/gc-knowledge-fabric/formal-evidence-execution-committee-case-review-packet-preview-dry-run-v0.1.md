@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7629DE42EB
 title: GC-Knowledge Fabric P0 正式证据执行委员会案件审阅包预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -38,7 +38,7 @@ D48 只预览 D47 committee review input preview 之后，形成委员会 case p
 | 范围 | 预览要求 |
 |---|---|
 | Case packet roles | 继承 D47 intake roles |
-| Case packet sections | 覆盖来源、review input 摘要、case scope、case type matrix、证据包索引、问题矩阵、责任边界、冻结保持、收益/贡献影响、正式写回风险、WAES 负向门禁和 no-write 声明 |
+| Case packet sections | 覆盖来源、review input 摘要、case scope、case type matrix、证据包索引、问题矩阵、责任边界、冻结保持、收益/贡献影响、正式写回风险、WAME 负向门禁和 no-write 声明 |
 | Question groups | 继承 D47 review question groups |
 | Decision constraints | 明确 case packet 不是 case，不产生提交、立案、裁决、确认、冻结释放、收益/贡献确认或 evidence 写入 |
 
@@ -55,7 +55,7 @@ D48 只预览 D47 committee review input preview 之后，形成委员会 case p
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

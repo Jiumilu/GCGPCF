@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-43EEEC8238
 title: 专项工作流
 project: XiaoC
-related_projects: [GFIS, GPC, WAES, KDS, XiaoC, XGD, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, XiaoC, XGD, GPCF]
 domain: workstreams
 status: controlled
 version: v1.0

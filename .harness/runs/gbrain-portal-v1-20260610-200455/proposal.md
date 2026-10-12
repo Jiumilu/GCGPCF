@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-EA8925961C
 title: "Proposal: gbrain-portal-v1"
-project: WAES
-related_projects: [WAES, PVAOS, Brain, XGD, Studio]
+project: WAME
+related_projects: [WAME, PVAOS, Brain, XGD, Studio]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-portal-v1-20260610-200455/proposal.md
 source_path: .harness/runs/gbrain-portal-v1-20260610-200455/proposal.md

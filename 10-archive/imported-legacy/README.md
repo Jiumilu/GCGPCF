@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-73C77D0200
 title: 旧来源导入归档
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: archive
 status: archive
 version: v1.0

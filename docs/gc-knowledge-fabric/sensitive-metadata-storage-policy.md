@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-71DA0641E8
 title: GC-Knowledge Fabric 敏感资料 Metadata-only 存储契约
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文件定义合同敏感条款、金融凭证、POD 原件、质量争议、客户/供应商身份、凭证或 Token、未发布政策解释、商业报价或佣金等敏感资料在 KDS 中的 metadata-only 存储契约。
 
-敏感资料原文必须留在受控空间。KDS 只记录编号、摘要、哈希或受控原件指针、ACL、引用范围、证据链和 WAES Sensitive Data Gate 结果。
+敏感资料原文必须留在受控空间。KDS 只记录编号、摘要、哈希或受控原件指针、ACL、引用范围、证据链和 WAME Sensitive Data Gate 结果。
 
 ## 2. Metadata-only 最小字段
 

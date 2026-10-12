@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-6CED60E9F1
 title: Harness Status Audit — 中文环境最终验收
-project: WAES
-related_projects: [WAES, Brain]
+project: WAME
+related_projects: [WAME, Brain]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md
 source_path: .harness/runs/gbrain-v3.2-zh-final-20260611-012235/status-audit.md

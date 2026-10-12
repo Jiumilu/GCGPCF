@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-854B898AA1
 title: GFIS Assistant DKS-271 处置选项审批包预览策略
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## 硬边界
 
-DKS-271 不创建 approval packet、approval request、approval decision、committee decision、freeze action、WAES gate result、Harness evidence、KWE work item、KDS lifecycle 或任何业务写回。
+DKS-271 不创建 approval packet、approval request、approval decision、committee decision、freeze action、WAME gate result、Harness evidence、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 验证
 

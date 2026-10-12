@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-11D2ABC390
 title: gbrain-v3.2-sprint1-20260611-003247
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md
 source_path: .harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,7 +36,7 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-11D2ABC390 | gbrain-v3.2-sprint1-20260611-003247 | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md | WAES | archive |
-| GPCF-DOC-AF04B46319 | evidence | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/evidence/README.md | WAES | archive |
-| GPCF-DOC-4086BF725A | patches | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/patches/README.md | WAES | archive |
-| GPCF-DOC-1912183C8E | workspaces | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/workspaces/README.md | WAES | archive |
+| GPCF-DOC-11D2ABC390 | gbrain-v3.2-sprint1-20260611-003247 | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/README.md | WAME | archive |
+| GPCF-DOC-AF04B46319 | evidence | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/evidence/README.md | WAME | archive |
+| GPCF-DOC-4086BF725A | patches | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/patches/README.md | WAME | archive |
+| GPCF-DOC-1912183C8E | workspaces | .harness/runs/gbrain-v3.2-sprint1-20260611-003247/workspaces/README.md | WAME | archive |

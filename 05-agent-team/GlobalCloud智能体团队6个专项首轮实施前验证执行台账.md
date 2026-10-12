@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E164F62976
 title: GlobalCloud智能体团队6个专项首轮实施前验证执行台账
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -48,7 +48,7 @@ superseded_by: []
 
 | 专项 | 当前目标 | 当前样本 | 待执行动作 | 待验证入口 | 预计产出证据 | 当前阻塞 | 责任人 | 状态上限 |
 |---|---|---|---|---|---|---|---|---|
-| 宪衡 / WAES | 收敛治理对象、证据对象、授权对象和连接器治理运行前样本 | 已有 WAES 仓库只读预检结论；已确认治理工作台相关实现面存在 | 1. 复核治理对象实现落点 2. 抽取 `EvidenceRecord`、`StatusAudit`、`AgentToolGrant` 相关样本入口 3. 形成连接器治理样本要求 | `WAES` 仓库：治理工作台、证据与状态相关模块 | 治理对象落点清单、运行前样本要求、待确认缺口清单 | 缺真实运行样本；缺连接器治理触发样本 | 宪衡 | `partial` |
+| 宪衡 / WAME | 收敛治理对象、证据对象、授权对象和连接器治理运行前样本 | 已有 WAME 仓库只读预检结论；已确认治理工作台相关实现面存在 | 1. 复核治理对象实现落点 2. 抽取 `EvidenceRecord`、`StatusAudit`、`AgentToolGrant` 相关样本入口 3. 形成连接器治理样本要求 | `WAME` 仓库：治理工作台、证据与状态相关模块 | 治理对象落点清单、运行前样本要求、待确认缺口清单 | 缺真实运行样本；缺连接器治理触发样本 | 宪衡 | `partial` |
 | 链同 / PVAOS + GPC | 收敛协同主链运行前样本，明确 PVAOS 入口事实与 GPC 原型边界 | 已有 PVAOS/GPC 正式只读预检结论；已确认 PVAOS 入口实现面与 GPC Odoo 原型存在 | 1. 复核组织/项目/伙伴入口落点 2. 抽取订单/ASN/预约/运输/POD 样本入口 3. 输出 GPC 与 Odoo 原型差距项 | `PVAOS` 仓库入口模块；`GPC` 原型仓库相关业务模块 | 协同主链样本要求、入口对象落点清单、GPC 缺口清单 | GPC 当前仅有 Odoo 原型证据；缺 GPC 目标平台骨架证据 | 链同 | `partial` |
 | 厂行 / GFIS + Edge | 收敛工厂主链回执、LES/EAM 样本和 Edge 事实转换样本 | 已有 GFIS 正式只读预检结论；已识别 Edge 为联合证据域而非独立主账 | 1. 复核工单/质量/库存/发货回执落点 2. 抽取 LES/EAM 样本入口 3. 形成 Edge 转换与回执样本要求 | `GFIS` 仓库主链模块；Edge 相关对接与转换位置 | 工厂主链样本要求、LES/EAM 样本要求、Edge 转换样本要求 | Edge 缺独立仓库级实证；联合证据需后续补样本 | 厂行 | `partial` |
 | 数枢 / AI 与数据底座 | 收敛数据库权限、读模型只读、DLQ/Replay、Trace/Evidence 样本 | 已有数枢正式只读预检结论；已明确无共享主账、无跨系统直写 | 1. 抽取数据库权限策略落点 2. 抽取读模型发布与只读入口 3. 形成 DLQ/Replay、Trace/Evidence 样本要求 | 跨仓库数据治理实现面、事件与读模型相关模块 | 权限样本要求、读模型样本要求、DLQ/Replay 样本要求、Trace/Evidence 样本要求 | 缺真实 Event Bus / DLQ / Replay 运行样本 | 数枢 | `partial` |
@@ -59,7 +59,7 @@ superseded_by: []
 
 建议顺序固定为：
 
-1. 宪衡 / WAES
+1. 宪衡 / WAME
 2. 链同 / PVAOS + GPC
 3. 厂行 / GFIS + Edge
 4. 数枢 / AI 与数据底座

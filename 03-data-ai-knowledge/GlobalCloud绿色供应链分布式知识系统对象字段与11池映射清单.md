@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-52D30A36F6
 title: GlobalCloud 绿色供应链分布式知识系统对象字段与 11 池映射清单
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -75,7 +75,7 @@ superseded_by: []
 | `trustLevel` | `T0` / `T1` / `T2` / `T3` / `T4` / `T5` |
 | `status` | 当前状态 |
 | `confirmationStatus` | `candidate` / `human_review_pending` / `committee_review_pending` / `confirmed` / `rejected` |
-| `waesGateRefs` | WAES 规则记录、阻断、人工确认或委员会路径 |
+| `waesGateRefs` | WAME 规则记录、阻断、人工确认或委员会路径 |
 | `ragAdmission` | `safe` / `limited` / `repair_required` / `blocked` / `sensitive_metadata_only` |
 | `responsibleSubject` | 责任主体 |
 | `allowedOperations` | 当前允许动作 |
@@ -111,7 +111,7 @@ superseded_by: []
 | DecisionRecord | `decisionType`、`committeeRef`、`voteRule`、`decisionResult`、`filingRef` | 委员会决议 |
 | DisputeRecord | `disputeType`、`claimants`、`frozenRefs`、`resolutionRef` | 争议 |
 | RAGAdmissionRecord | `citationStrength`、`safeForDashboard`、`safeForAssistant`、`reasonCodes` | RAG 准入 |
-| WAESGateRecord | `gateType`、`gateInputRef`、`gateResult`、`requiredActions`、`hardStop` | WAES 门禁 |
+| WAESGateRecord | `gateType`、`gateInputRef`、`gateResult`、`requiredActions`、`hardStop` | WAME 门禁 |
 
 ## 5. KDS 11 池定义
 

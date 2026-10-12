@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5916BC5419
 title: Brain PKC KWE Queue Read Model No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -90,7 +90,7 @@ Read model 不得：
 - 创建真实 KWE WorkItem。
 - 完成人工确认或委员会决议。
 - 写 KDS lifecycle / fact / accepted fact。
-- 写 WAES Gate Result。
+- 写 WAME Gate Result。
 - 写 GFIS/GPC/ERP/MES。
 - 写 target receipt。
 - 确认收益、积分、额度或悬赏。

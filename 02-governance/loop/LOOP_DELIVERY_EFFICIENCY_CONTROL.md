@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-666112D107
 title: LOOP Delivery Efficiency Control
-project: WAES
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+project: WAME
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md
 source_path: 02-governance/loop/LOOP_DELIVERY_EFFICIENCY_CONTROL.md
@@ -18,7 +18,7 @@ superseded_by: []
 
 # LOOP Delivery Efficiency Control
 
-本文把 Studio 与 Brain 评估中暴露的经验升级为项目群级 LOOP 交付效率控制。它覆盖 `project_group_scope_17_projects`：AAAS、Brain、WAS、XiaoC、WAES、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD。
+本文把 Studio 与 Brain 评估中暴露的经验升级为项目群级 LOOP 交付效率控制。它覆盖 `project_group_scope_17_projects`：AAAS、Brain、WAS、XiaoC、WAME、GPC、Studio、GPCF、XWAIL、GFIS、MMC、KDS、XiaoG、PVAOS、SOP、PKC、XGD。
 
 ## 1. 最高裁决
 
@@ -89,7 +89,7 @@ delivery_efficiency_gate
 本控制默认覆盖全部 17 项目。各项目本地 LOOP 可保留自己的开发目标，但必须接收以下项目群级约束：
 
 - Studio、Brain、GPC、PVAOS、XiaoC、XGD、XiaoG 等产品界面或工作台项目，必须同时遵守 `LOOP_UI_PRODUCT_FIRST_CONTROL.md`。
-- GFIS、KDS、WAES、MMC、SOP、PKC、WAS、AAAS、XWAIL 等非 UI 主线，必须用 `product_delta` 表达真实开发、运行、数据、接口、治理或审查能力增量。
+- GFIS、KDS、WAME、MMC、SOP、PKC、WAS、AAAS、XWAIL 等非 UI 主线，必须用 `product_delta` 表达真实开发、运行、数据、接口、治理或审查能力增量。
 - GPCF 只负责项目群 LOOP 防偏、门禁和经验传导，不隐式接管项目本地目标。
 - 需要提交、推送、真实外部 API、真实 KDS API、deploy、生产写入或状态提升时，必须重新获得人工授权。
 

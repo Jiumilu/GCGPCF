@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-024
 title: GCWORLD KDS只读普查准入核验记录
 project: KDS
-related_projects: [PVAOS, WAES, KDS, MMC]
+related_projects: [PVAOS, WAME, KDS, MMC]
 domain: openspec
 status: draft
 version: v1.0

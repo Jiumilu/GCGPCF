@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-876AB37106
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Preview No-write 规则
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-148 的 acknowledgement escalation SLA preview。该预览承接 DKS-147 acknowledgement escalation preview，只展示候选 SLA 窗口、已用分钟、剩余分钟、逾期分钟、SLA 风险、候选升级责任人和下一步候选动作。
 
-该能力不创建真实 SLA timer、escalation、reminder、escalation task、delivery acknowledgement、approval request、approval decision、Harness evidence、WAES gate result、KWE work item、KDS lifecycle 或任何业务写回。
+该能力不创建真实 SLA timer、escalation、reminder、escalation task、delivery acknowledgement、approval request、approval decision、Harness evidence、WAME gate result、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 输入边界
 

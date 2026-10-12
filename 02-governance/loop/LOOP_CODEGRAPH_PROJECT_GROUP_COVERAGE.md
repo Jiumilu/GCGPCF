@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-6CC5F6A45C
 title: Loop CodeGraph Project Group Coverage
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md
 source_path: 02-governance/loop/LOOP_CODEGRAPH_PROJECT_GROUP_COVERAGE.md
@@ -52,7 +52,7 @@ superseded_by: []
 | 6 | GlobalCloud PKC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC` | 110 | 1,034 | 2,685 | 2.41 MB | up_to_date | `.codegraph` 未进入 Git |
 | 7 | GlobalCloud PVAOS | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS` | 604 | 8,899 | 28,838 | 25.67 MB | up_to_date | `.codegraph` 未进入 Git |
 | 8 | GlobalCloud Studio | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio` | 778 | 14,202 | 46,489 | 43.00 MB | up_to_date | `.codegraph` 未进入 Git |
-| 9 | GlobalCloud WAES | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES` | 281 | 3,511 | 11,298 | 10.38 MB | up_to_date | `.codegraph` 未进入 Git |
+| 9 | GlobalCloud WAME | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME` | 281 | 3,511 | 11,298 | 10.38 MB | up_to_date | `.codegraph` 未进入 Git |
 | 10 | GlobalCloud XGD | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XGD` | 181 | 3,645 | 9,914 | 8.57 MB | up_to_date | `.codegraph` 未进入 Git |
 | 11 | GlobalCloud XiaoC | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoC` | 1,176 | 15,520 | 64,515 | 57.11 MB | up_to_date | `.codegraph` 未进入 Git |
 | 12 | GlobalCloud XiaoG | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud XiaoG` | 752 | 13,943 | 45,987 | 42.53 MB | up_to_date | `.codegraph` 未进入 Git |
@@ -66,7 +66,7 @@ superseded_by: []
 - WAS 远端为 private `Jiumilu/GCWAS`，默认分支 `main`，HEAD 为 `7ec9c332db981f4d19d0edb3194fc7173f9b1d67`。
 - WAS 原生 validator `python3 okf/validators/validate_all.py` 全部 PASS。
 - WAS CodeGraph 已本地生成，统计为 `files=30 nodes=70 edges=209 db_size=0.27 MB`。
-- WAS 是语义契约源，不是 KDS source of record、GFIS runtime 或 WAES gate authority；本轮不声明 accepted、integrated 或 production_ready。
+- WAS 是语义契约源，不是 KDS source of record、GFIS runtime 或 WAME gate authority；本轮不声明 accepted、integrated 或 production_ready。
 
 ## Studio 纳入规则
 
@@ -82,6 +82,6 @@ superseded_by: []
 ## 异常与非声明
 
 - GFIS 当前 CodeGraph 状态在 `sync` 后仍提示 `Pending Changes: Added 1 files`，但同步输出为 `Synced 1 changed files` 且 `Added: 1 - 0 nodes`；本轮将其登记为 CodeGraph 内部/无节点变化待同步提示，不作为业务代码图谱失败。
-- 本轮不证明 GFIS 真实业务 source-of-record、runtime primary key、review queue、runtime intake、WAES review 或 verified artifact 已完成。
+- 本轮不证明 GFIS 真实业务 source-of-record、runtime primary key、review queue、runtime intake、WAME review 或 verified artifact 已完成。
 - 本轮不证明任一项目已获得人工验收、UAT 签收、客户满意度闭环、`accepted`、`integrated` 或 `production_ready`。
 - 本轮不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、提交、推送或合并。

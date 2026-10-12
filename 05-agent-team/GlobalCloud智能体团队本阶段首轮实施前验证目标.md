@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C892CAB85A
 title: GlobalCloud 智能体团队本阶段首轮实施前验证目标
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ superseded_by: []
 
 必须完成：
 
-1. WAES evidence / approval / audit 持久化样本结构
+1. WAME evidence / approval / audit 持久化样本结构
 2. 审批阻断 -> 证据写入链样本
 3. connector blocked / requested / receipt / runtime feedback 状态链样本
 

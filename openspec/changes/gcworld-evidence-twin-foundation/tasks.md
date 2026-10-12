@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-003
 title: tasks
 project: KDS
-related_projects: [PVAOS, WAES, KDS, MMC, GPCF]
+related_projects: [PVAOS, WAME, KDS, MMC, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 - [x] 2.1 在获准的目标仓库中定义机器可读的 GCWORLD 资产、别名、关系、证据和世界状态模型。
 - [x] 2.2 为稳定标识、证据引用、四类状态隔离和关系有效时间范围增加确定性校验。
 - [x] 2.3 为未决身份、角色变化以及模拟与事实隔离增加正向和负向样例。
-- [x] 2.4 形成《GCWORLD 总体架构与能力规划》，明确 KDS、WAS-Ontology、XWAIL、WAES、MMC、业务系统、LOOP 和 Harness 的边界。
+- [x] 2.4 形成《GCWORLD 总体架构与能力规划》，明确 KDS、WAS-Ontology、XWAIL、WAME、MMC、业务系统、LOOP 和 Harness 的边界。
 
 ## 3. 只读覆盖评估
 

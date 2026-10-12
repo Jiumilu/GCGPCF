@@ -14,7 +14,7 @@ description: GlobalCloud 项目群 UI 质量门禁技能。用于评估、设计
 
 - 不把 UI 改进、截图通过、设计系统生成写成业务完成。
 - 不把 AI 建议伪装成业务事实；AI 建议必须有来源或证据引用，且可驳回。
-- 不绕过仓库 preflight、证据门、状态门、KDS/文档门禁或 Harness/WAES 验收。
+- 不绕过仓库 preflight、证据门、状态门、KDS/文档门禁或 Harness/WAME 验收。
 - 不自动安装外部 skill、全局 hook、浏览器扩展或项目依赖；只有用户明确授权时才安装。
 - 不自动标记 `complete`、`accepted` 或 `integrated`。本技能输出最高是 `ui_evidence_candidate`。
 - 产品界面优先考虑任务效率、密度、可读性、状态反馈和证据入口；品牌/营销页才使用更强视觉实验。
@@ -41,7 +41,7 @@ If working inside a project repo rather than GPCF, also read its local `AGENTS.m
 
 1. **Classify the surface.** Use one type: list, detail, edit/config, operation workbench, exception handling, evidence/audit, AI chat, AI sidebar, brand/marketing, or mobile/desktop shell.
 2. **Select tools.** Read `references/tool-routing.md` and use only the minimum set needed. `@product-design` is the mandatory design-brief and three-option layer for overall interface, page-class, key-component, and structural redesign work; Impeccable is the product UI main engine when available; ui-ux-pro-max is the design-system source; accessibility and Playwright/browser provide verification.
-3. **Create or inspect the design system.** For new or inconsistent UI systems, use `ui-ux-pro-max` to derive a GlobalCloud design system. Professional workbench surfaces must first map to the existing `WAES` UI framework before project-level optimization. For existing code, preserve committed tokens unless they violate project-group rules.
+3. **Create or inspect the design system.** For new or inconsistent UI systems, use `ui-ux-pro-max` to derive a GlobalCloud design system. Professional workbench surfaces must first map to the existing `WAME` UI framework before project-level optimization. For existing code, preserve committed tokens unless they violate project-group rules.
 4. **Audit against gates.** Read `references/quality-checklist.md`. Score every gate with evidence: `pass`, `partial`, `fail`, or `not_applicable`.
    For Studio or product-workbench surfaces, also score `product_first_ui_gate`, `evidence_overexposure_gate`, `debug_details_visibility`, `task_flow_e2e_status`, `audit_traceability_gate`, `multi_user_usability_gate`, and `human_operable_gate`. Functional completeness and quality baseline must pass before usability can be considered ready; machine/test operability alone is insufficient.
 5. **Implement only when asked.** If the user asked for changes, make surgical UI edits in the target repo. Do not refactor unrelated components.
@@ -55,7 +55,7 @@ When a task is design-led rather than fix-led, require the UI round to record:
 - `Prompt profile`
 - `Design options`
 - `Selected option`
-- `WAES baseline reuse`
+- `WAME baseline reuse`
 
 ## Gate Model
 

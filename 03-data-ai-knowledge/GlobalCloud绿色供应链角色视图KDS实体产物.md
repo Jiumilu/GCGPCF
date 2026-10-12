@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GSCROLEVIEWKDSENTITY20260701
 title: GlobalCloud 绿色供应链角色视图 KDS 实体产物
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -68,10 +68,10 @@ superseded_by: []
 | `GSC-ROLE-FINANCE-CONTACT` | 财务联系人 | `finance_private + own_unit` | 资金池、数据池 | `candidate` |
 | `GSC-ROLE-QUALITY-POD-CONTACT` | 质量 / POD 联系人 | `own_unit + invited` | 订单池、运力池、数据池 | `candidate` |
 | `GSC-ROLE-GFIS-OPERATOR` | GFIS 操作人 | `gfis_operator` | 订单池、产能池、数据池、场景池 | `candidate` |
-| `GSC-ROLE-WAES-LIAISON` | WAES 对接人 | `waes_boundary` | 数据池、人才池、政策池 | `candidate` |
+| `GSC-ROLE-WAES-LIAISON` | WAME 对接人 | `waes_boundary` | 数据池、人才池、政策池 | `candidate` |
 | `GSC-ROLE-KDS-RECORDER` | KDS 记录人 | `kds_operator` | 数据池、人才池、场景池 | `candidate` |
 
-所有角色必须保留授权来源、授权范围、生效日期、复核日期和撤销条件。缺少人工授权或 WAES 规则记录时，只能保持 `candidate`、`repair_required` 或 `blocked`。
+所有角色必须保留授权来源、授权范围、生效日期、复核日期和撤销条件。缺少人工授权或 WAME 规则记录时，只能保持 `candidate`、`repair_required` 或 `blocked`。
 
 ## 5. 受控来源链
 
@@ -107,5 +107,5 @@ superseded_by: []
 ## 8. 当前下一步
 
 1. 由 KDS 记录人复核实体字段和注册表入口。
-2. 由 WAES 对接人复核 ACL、DSR-L2 / DSR-L3 和禁止升级口径。
+2. 由 WAME 对接人复核 ACL、DSR-L2 / DSR-L3 和禁止升级口径。
 3. 若后续需要真实 KDS API 同步，必须另行形成授权窗口、请求包、回执和回滚证据。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C6D2E06ACB
 title: gcworld-evidence-twin
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

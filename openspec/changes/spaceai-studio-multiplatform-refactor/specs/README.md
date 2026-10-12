@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8B83B1A79A
 title: specs
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-565A8097A4
 title: GC-Knowledge Fabric 物理数据模型与 Migration Draft 矩阵 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, MMC]
+related_projects: [GFIS, GPC, WAME, KDS, MMC]
 domain: docs
 status: controlled
 version: v1.0
@@ -31,7 +31,7 @@ superseded_by: []
 | KDS core | `knowledge_objects`, `knowledge_sources`, `knowledge_evidence`, `knowledge_events` | 知识对象、来源、证据、事件 |
 | KDS index / ACL | `knowledge_acl`, `knowledge_embeddings`, `knowledge_index_jobs`, `kds_pools`, `object_pool_bindings` | 权限、索引、池子挂接 |
 | Candidate | `fact_candidates`, `sop_candidates`, `writeback_candidates` | AI / 人工 / 系统候选 |
-| WAES | `waes_gate_results`, `waes_gate_policies` | 门禁结果候选与门禁策略版本 |
+| WAME | `waes_gate_results`, `waes_gate_policies` | 门禁结果候选与门禁策略版本 |
 | KWE | `kwe_work_items`, `kwe_workpacks`, `gap_records`, `bounty_records`, `confirmation_records` | 流程、确认、缺口、悬赏 |
 | Governance | `committee_records`, `dispute_records`, `decision_records`, `loop_records`, `harness_evidence_records`, `okf_policy_versions` | 委员会、争议、决策、LOOP、证据、策略版本 |
 | Ledger | `contribution_records`, `revenue_records`, `quota_records` | 积分、收益、额度台账 |
@@ -79,7 +79,7 @@ P0-D9 不做：
 - 不执行数据库迁移。
 - 不连接 Postgres / SQLite / 生产库。
 - 不创建真实 KDS 记录。
-- 不写 WAES gate result。
+- 不写 WAME gate result。
 - 不创建 KWE work item。
 - 不写 GFIS / GPC / ERP / MES。
 - 不确认收益、积分、额度、悬赏。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA9F35E2AA
 title: GlobalCloud 湖北磷材首批知识对象运行空白台账
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -34,7 +34,7 @@ superseded_by: []
 - GFIS 深度运行已经启动；
 - 新工厂复制模板已经生效；
 - 悬赏、积分、收益或 AI 额度已经确认或分配；
-- 已完成真实 KDS API、WAES API 或业务系统写入。
+- 已完成真实 KDS API、WAME API 或业务系统写入。
 
 ## 2. 总边界
 
@@ -47,13 +47,13 @@ superseded_by: []
 | 增强账本 | 只能作为挂接账本，不得游离存在 |
 | 收入口径 | 到账前不得进入正式收入；开票只作统计和财务过程口径 |
 | 自购额度 | 自购 AI 额度先自用，可计量但不进入统一收益池 |
-| 确认机制 | WAES 记录规则，人工确认事实，委员会处理积分、收益、悬赏、争议和重大违规 |
+| 确认机制 | WAME 记录规则，人工确认事实，委员会处理积分、收益、悬赏、争议和重大违规 |
 
 ## 3. PilotSession 台账
 
 | pilotSessionId | pilotScope | pilotPhase | owner | participantRefs | allowedDataScope | restrictedDataScope | defaultStatus | waesGateStatus | kdsWritebackStatus | finalStatus |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `PILOT-HBLC-KDS-202606-0001` | FEA / RAW / IND / ORD / TPL | knowledge_object_preparation | KDS / GPCF 治理负责人 | 湖北磷材项目组、平台治理、WAES、必要委员会 | 脱敏摘要、来源索引、公开政策标准、候选资料包、葛化母版结构 | DSR-L3 原文、供应商报价原文、客户订单原文、合同原文、未授权跨单位资料 | planned_empty_ledger | pending | candidate / no_write | planned |
+| `PILOT-HBLC-KDS-202606-0001` | FEA / RAW / IND / ORD / TPL | knowledge_object_preparation | KDS / GPCF 治理负责人 | 湖北磷材项目组、平台治理、WAME、必要委员会 | 脱敏摘要、来源索引、公开政策标准、候选资料包、葛化母版结构 | DSR-L3 原文、供应商报价原文、客户订单原文、合同原文、未授权跨单位资料 | planned_empty_ledger | pending | candidate / no_write | planned |
 
 ## 4. 首批 KnowledgeObject 空白台账
 
@@ -81,7 +81,7 @@ superseded_by: []
 | `KSO-HBLC-IND-202606-0001` | `HBLC-IND-202606-0001` | industry | TBD | TBD | web_or_policy_source_index | T0 / T3 candidate | redacted_or_public | pending | 待确认 | waiting_source |
 | `KSO-HBLC-ORD-202606-0001` | `HBLC-ORD-202606-0001` | order_lead | TBD | TBD | call_meeting_email_or_document_index | T0 | redacted_only | pending | 待确认 | waiting_source |
 
-权威政策或标准网站可进入更高可信级别，但必须记录来源、检索时间、适用范围、引用片段边界和 WAES 规则记录。
+权威政策或标准网站可进入更高可信级别，但必须记录来源、检索时间、适用范围、引用片段边界和 WAME 规则记录。
 
 ## 7. ReplicationTemplateCandidate 台账
 
@@ -97,7 +97,7 @@ superseded_by: []
 | `KGR-HBLC-RAW-202606-0002` | `HBLC-RAW-202606-0001` | raw_material | 原料类别、供应商、行情、质量指标和采购线索缺口 | 原料来源索引、供应商脱敏摘要、质量或价格来源 | 知识积分候选 | false | true | 原料池、数据池、资金池、场景池 | candidate |
 | `KGR-HBLC-IND-202606-0003` | `HBLC-IND-202606-0001` | industry_policy | 行业政策、标准、客户场景和高可信来源缺口 | 政策/标准来源、行业资料、适用范围 | 知识积分候选 | false | false | 政策池、数据池、场景池 | candidate |
 | `KGR-HBLC-ORD-202606-0004` | `HBLC-ORD-202606-0001` | order_lead | 销售订单线索、报价、采购意向和潜在产值缺口 | 客户需求来源、报价或意向索引、责任主体 | 潜在产值贡献候选 | false | true | 订单池、资金池、原料池、数据池、场景池 | candidate |
-| `KGR-HBLC-TPL-202606-0005` | `HBLC-TPL-202606-0001` | sop_template | 新工厂复制模板差异项、SOP 候选和复用边界缺口 | 葛化母版结构、HBLC 差异项、WAES 规则记录 | 知识积分或 SOP 贡献候选 | false | true | 装备池、产能池、人才池、数据池、场景池 | candidate |
+| `KGR-HBLC-TPL-202606-0005` | `HBLC-TPL-202606-0001` | sop_template | 新工厂复制模板差异项、SOP 候选和复用边界缺口 | 葛化母版结构、HBLC 差异项、WAME 规则记录 | 知识积分或 SOP 贡献候选 | false | true | 装备池、产能池、人才池、数据池、场景池 | candidate |
 
 候选悬赏不等于已发布悬赏。发布前必须明确发起主体、资源冻结、验收标准、可见范围、争议处理和委员会是否参与。
 
@@ -105,10 +105,10 @@ superseded_by: []
 
 | writebackCandidateId | sourceObjectRefs | targetSystem | targetObjectType | writebackMode | allowedByPolicy | humanConfirmationRequired | sensitiveFieldsRedacted | writebackStatus |
 |---|---|---|---|---|---|---|---|---|
-| `WBC-HBLC-FEA-202606-0001` | `HBLC-FEA-202606-0001`, `FEA-HBLC-202606-0001` | KDS / WAES | ExpansionAssessmentCandidate | candidate_only | true | true | true | planned |
+| `WBC-HBLC-FEA-202606-0001` | `HBLC-FEA-202606-0001`, `FEA-HBLC-202606-0001` | KDS / WAME | ExpansionAssessmentCandidate | candidate_only | true | true | true | planned |
 | `WBC-HBLC-RAW-202606-0001` | `HBLC-RAW-202606-0001`, `KSO-HBLC-RAW-202606-0001` | KDS | RawMaterialKnowledgeCandidate | candidate_only | true | true | true | planned |
 | `WBC-HBLC-IND-202606-0001` | `HBLC-IND-202606-0001`, `KSO-HBLC-IND-202606-0001` | KDS / Brain | IndustryKnowledgePageCandidate | candidate_only | true | true | true | planned |
-| `WBC-HBLC-ORD-202606-0001` | `HBLC-ORD-202606-0001`, `KSO-HBLC-ORD-202606-0001` | KDS / WAES | OrderLeadCandidate | candidate_only | true | true | true | planned |
+| `WBC-HBLC-ORD-202606-0001` | `HBLC-ORD-202606-0001`, `KSO-HBLC-ORD-202606-0001` | KDS / WAME | OrderLeadCandidate | candidate_only | true | true | true | planned |
 | `WBC-HBLC-TPL-202606-0001` | `HBLC-TPL-202606-0001`, `RTC-HBLC-TPL-202606-0001` | KDS / Brain | FactoryReplicationTemplateCandidate | pending_confirmation | true | true | true | planned |
 
 ## 10. ContributionEventCandidate 台账

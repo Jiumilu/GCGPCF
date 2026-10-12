@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-44D11B1ED6
 title: GKE-001 A10I3H1R1 Coordinator Replay And A10I3H1R2 Dispatch
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

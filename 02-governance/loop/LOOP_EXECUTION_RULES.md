@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-04BF76145B
 title: LOOP Execution Rules
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF, Studio]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_EXECUTION_RULES.md
 source_path: 02-governance/loop/LOOP_EXECUTION_RULES.md

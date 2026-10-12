@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6B651399E9
 title: GFIS Assistant DKS-188 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ DKS-188 不允许执行以下动作：
 
 - 不创建 routing queue、queue item、approval assignment 或 approval lock。
 - 不创建 approval packet、approval request、approval decision、committee decision 或 freeze action。
-- 不创建 KWE work item、Harness evidence 或 WAES gate result。
+- 不创建 KWE work item、Harness evidence 或 WAME gate result。
 - 不持久化 evidence，不批准 business write，不提升 lifecycle，不完成 committee decision。
 - 不写 GFIS、GPC、ERP、MES、KDS lifecycle、KDS fact、KDS accepted fact 或 external API。
 

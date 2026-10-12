@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B27F8FD59C
 title: gc-knowledge-fabric
 project: KDS
-related_projects: [GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -274,7 +274,7 @@ KDS 空间：`开发`
 | GPCF-DOC-044F1AC606 | GFIS Assistant Repair Read Receipt Notification Preview No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-read-receipt-notification-preview-policy.md | KDS | controlled |
 | GPCF-DOC-A705FE83D1 | GFIS Assistant Repair Review Decision Draft No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-review-decision-draft-policy.md | KDS | controlled |
 | GPCF-DOC-0214F1962A | GFIS Assistant Repair Submission Intake No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-repair-submission-intake-policy.md | KDS | controlled |
-| GPCF-DOC-79B503879D | GFIS Assistant WAES Guidance Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md | KDS | controlled |
+| GPCF-DOC-79B503879D | GFIS Assistant WAME Guidance Packet No-write 规则 | docs/gc-knowledge-fabric/gfis-assistant-waes-guidance-packet-policy.md | KDS | controlled |
 | GPCF-DOC-AFAB25CFB3 | GC-Knowledge Fabric GFIS Document Acceptance Checklist 批量验收规则 | docs/gc-knowledge-fabric/gfis-document-acceptance-checklist-policy.md | KDS | controlled |
 | GPCF-DOC-6CE82BFD9A | GFIS Writeback Approval Preflight No-write Checklist 规则 | docs/gc-knowledge-fabric/gfis-writeback-approval-preflight-policy.md | KDS | controlled |
 | GPCF-DOC-23F8320542 | GFIS Writeback Candidate Batch Diff No-write 规则 | docs/gc-knowledge-fabric/gfis-writeback-candidate-batch-diff-policy.md | KDS | controlled |
@@ -322,7 +322,7 @@ KDS 空间：`开发`
 | GPCF-DOC-71DA0641E8 | GC-Knowledge Fabric 敏感资料 Metadata-only 存储契约 | docs/gc-knowledge-fabric/sensitive-metadata-storage-policy.md | KDS | controlled |
 | GPCF-DOC-C994E78BC6 | shared-types-api-contract-alignment-v0.1 | docs/gc-knowledge-fabric/shared-types-api-contract-alignment-v0.1.md | GPCF | controlled |
 | GPCF-DOC-E716105009 | status-machine-policy | docs/gc-knowledge-fabric/status-machine-policy.md | GPCF | controlled |
-| GPCF-DOC-56866C0959 | WAES Action Gate Precheck No-write 规则 | docs/gc-knowledge-fabric/waes-action-gate-precheck-policy.md | KDS | controlled |
-| GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAES Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | KDS | controlled |
-| GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAES 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | KDS | controlled |
-| GPCF-DOC-1946E4144B | WAES Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | KDS | controlled |
+| GPCF-DOC-56866C0959 | WAME Action Gate Precheck No-write 规则 | docs/gc-knowledge-fabric/waes-action-gate-precheck-policy.md | KDS | controlled |
+| GPCF-DOC-9B51263381 | GC-Knowledge Fabric WAME Gate 输入输出契约与 Hard-stop 规则 | docs/gc-knowledge-fabric/waes-gate-io-policy.md | KDS | controlled |
+| GPCF-DOC-19D7F0C3F0 | GC-Knowledge Fabric WAME 最小门禁 Dry-run 样例 v0.1 | docs/gc-knowledge-fabric/waes-minimum-dry-run-cases-v0.1.md | KDS | controlled |
+| GPCF-DOC-1946E4144B | WAME Precheck Bundle Read Model No-write 规则 | docs/gc-knowledge-fabric/waes-precheck-bundle-read-model-policy.md | KDS | controlled |

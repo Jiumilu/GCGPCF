@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F013-GKE001-KDS-DIRTY-ISOLATION-20260812
 title: GKE-001 KDS Dirty Ownership Isolation And Review Dispatch
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

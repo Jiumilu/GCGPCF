@@ -2,7 +2,7 @@
 doc_id: GPCF-F013-GCWORLD-BINDING-20260822
 title: GCWORLD 证据数字孪生底座与 F-013 绑定证据
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
@@ -60,7 +60,7 @@ OpenSpec 变更 `gcworld-evidence-twin-foundation` 作为 GKE-001 `release_0` �
 
 ## 关系声明
 
-本轮新增的唯一受控关系为：`GKE-001 → F-013 → gcworld-evidence-twin-foundation` 的规划与证据绑定。未修改 CodeGraph 源码节点或依赖边，未改变 KDS、WAS、WAES、XWAIL、MMC、Brain、Studio 或业务系统的权威职责。
+本轮新增的唯一受控关系为：`GKE-001 → F-013 → gcworld-evidence-twin-foundation` 的规划与证据绑定。未修改 CodeGraph 源码节点或依赖边，未改变 KDS、WAS、WAME、XWAIL、MMC、Brain、Studio 或业务系统的权威职责。
 
 ## 未解决事项
 

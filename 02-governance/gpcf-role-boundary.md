@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-D67341FE2B
 title: GPCF Loop Engineering 角色边界定义
-project: WAES
-related_projects: [GPC, WAES, XiaoC, GPCF]
+project: WAME
+related_projects: [GPC, WAME, XiaoC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/gpcf-role-boundary.md
 source_path: 02-governance/gpcf-role-boundary.md
@@ -30,7 +30,7 @@ superseded_by: []
 |---|---|
 | 修改本域业务文件 | 自行宣布项目 complete/accepted |
 | 产出 evidence 并自检 | 修改跨域主责边界 |
-| 推动本域微循环 | 将 AI 建议写成业务事实（需经 SUGG→WAES） |
+| 推动本域微循环 | 将 AI 建议写成业务事实（需经 SUGG→WAME） |
 | 登记阻塞项 | 绕过审计直接升级状态 |
 | 更新 loop-state.md 中本域字段 | 一个循环同时修改多个不相关模块 |
 

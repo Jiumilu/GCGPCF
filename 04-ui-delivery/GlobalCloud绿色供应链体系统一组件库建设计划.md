@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0384F73471
 title: GlobalCloud 绿色供应链体系统一组件库建设计划
 project: GPC
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, Studio]
 domain: ui-delivery
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ superseded_by: []
 6. AI 专用组件
 7. 页面模板组件
 
-目标不是做一套“好看的 UI 库”，而是做一套能够让 WAES、PVAOS、GPC、GFIS、Brain、XiaoC（蚁后）、Hermes/XGD（大象） 最终长成同一产品体系的实施底座。
+目标不是做一套“好看的 UI 库”，而是做一套能够让 WAME、PVAOS、GPC、GFIS、Brain、XiaoC（蚁后）、Hermes/XGD（大象） 最终长成同一产品体系的实施底座。
 
 ---
 

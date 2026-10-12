@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-260DDD94E9
 title: Headroom LCX Rollout 计划
-project: WAES
-related_projects: [WAES, KDS, Brain]
+project: WAME
+related_projects: [WAME, KDS, Brain]
 domain: general
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/04-WAES/loop/context/headroom/docs/rollout.md
 source_path: loop/context/headroom/docs/rollout.md
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## P2：LCX-SDK 与 LCX-MCP
 
-为 KDS、Brain、Harness、Agent runtime 建立 SDK/MCP 受控配置。`headroom_retrieve` 必须通过 WAES gate。
+为 KDS、Brain、Harness、Agent runtime 建立 SDK/MCP 受控配置。`headroom_retrieve` 必须通过 WAME gate。
 
 ## P3：LCX-Learn 与工作记忆
 

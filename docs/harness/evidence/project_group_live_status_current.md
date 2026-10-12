@@ -18,14 +18,14 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-11 22:15:54 +0800
+generated_at: 2026-10-12 10:00:07 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-11T22:15:54.269570+08:00`
+- generated_at: `2026-10-12T10:00:07.745908+08:00`
 - freshness_ok: `true`
 - project_count: `17`
 - pass_repo_count: `14`
@@ -33,13 +33,13 @@ generated_at: 2026-10-11 22:15:54 +0800
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud Studio, GlobalCoud GPCF, GlobalCloud KDS`
-- observed_ahead: `GlobalCloud KDS`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
-- stable_ahead: `GlobalCloud KDS`
-- volatile_dirty: `GlobalCoud GPCF`
-- sensitive_repos: `GlobalCloud Studio`
-- review_boundary: `GlobalCloud KDS, GlobalCloud Studio, GlobalCoud GPCF`
+- observed_dirty: `GlobalCloud WAES, GlobalCloud KDS`
+- observed_ahead: `GlobalCloud Studio`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud WAES`
+- stable_ahead: `none`
+- volatile_dirty: `none`
+- sensitive_repos: `none`
+- review_boundary: `GlobalCloud KDS, GlobalCloud WAES`
 
 ## Repo details
 
@@ -49,14 +49,14 @@ generated_at: 2026-10-11 22:15:54 +0800
 | `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud WAES` | 0 | 0 | 0 | `none` |
+| `GlobalCloud WAES` | 30 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 152 | 0 | 0 | `tests/client/account-settings-default-credential.test.ts, tests/client/router-default-credential-guard.test.ts` |
-| `GlobalCoud GPCF` | 17 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 0 | 4 | 0 | `none` |
+| `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 10 | 29 | 0 | `none` |
+| `GlobalCloud KDS` | 26 | 0 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-9A8B7C6D5E
 title: evidence-output
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

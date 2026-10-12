@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BA63F9BF32
 title: KDS 开发空间同步台账
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
 domain: status
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 | GFIS | 01-GFIS | 117 | 114 | 已建空间 |
 | GPC | 02-GPC | 61 | 53 | 已建空间 |
 | PVAOS | 03-PVAOS | 13 | 10 | 已建空间 |
-| WAES | 04-WAES | 181 | 24 | 已建空间 |
+| WAME | 04-WAES | 181 | 24 | 已建空间 |
 | KDS | 05-KDS | 818 | 815 | 已建空间 |
 | Brain | 06-Brain | 14 | 11 | 已建空间 |
 | PKC | 07-PKC | 10 | 7 | 已建空间 |

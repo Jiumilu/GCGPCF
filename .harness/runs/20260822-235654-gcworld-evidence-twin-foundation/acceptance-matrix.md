@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-GCWORLD-025
 title: GCWORLD证据数字孪生底座验收矩阵
-project: WAES
-related_projects: [PVAOS, WAES, KDS, GPCF]
+project: WAME
+related_projects: [PVAOS, WAME, KDS, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md
 source_path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md

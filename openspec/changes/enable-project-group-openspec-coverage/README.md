@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-15FFD3BE22
 title: enable-project-group-openspec-coverage
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

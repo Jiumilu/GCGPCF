@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4A278D9296
 title: GFIS-RUNTIME-SOP-E2E-264
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -72,7 +72,7 @@ gfis_customer_requirement_platform_order_valid_source_record_index_change_listen
 - verified=0
 - runtime_sop_e2e=repair_required
 
-不得重新打开 GFIS 运行层主键门禁，不得进入 review queue、runtime intake、WAES review、verified artifact，不得升级 accepted/integrated。
+不得重新打开 GFIS 运行层主键门禁，不得进入 review queue、runtime intake、WAME review、verified artifact，不得升级 accepted/integrated。
 
 ## 下一轮建议
 

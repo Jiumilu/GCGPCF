@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A68BB0BF02
 title: GlobalCloud GFIS 核心流程闭环与集成边界矩阵
 project: GFIS
-related_projects: [GFIS, GPC, PVAOS, WAES]
+related_projects: [GFIS, GPC, PVAOS, WAME]
 domain: evidence
 status: controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-PROJECT-MASTER-PLAN-BATCH-2-AUTH-REQUEST-20260624
 title: 项目总体方案第二批批量更新授权请求
-project: WAES
-related_projects: [GPC, WAES, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+project: WAME
+related_projects: [GPC, WAME, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/project-master-plan-batch-2-authorization-request.md
 source_path: 02-governance/project-master-plan-batch-2-authorization-request.md

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-GPCF-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud GPCF 实施方案
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0

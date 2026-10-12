@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-78DAA04814
 title: KDS OKF v0.1 全量派生层实施方案
 project: GPCF
-related_projects: [GPCF, WAES, KDS]
+related_projects: [GPCF, WAME, KDS]
 domain: status
 status: controlled
 version: v1.0

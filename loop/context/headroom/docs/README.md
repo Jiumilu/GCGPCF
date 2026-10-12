@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A1FFDD1AE2
 title: docs
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：GFIS, WAES, KDS, GPCF
+关联项目：GFIS, WAME, KDS, GPCF
 
 受控规则：
 
@@ -42,6 +42,6 @@ KDS 空间：`开发`
 | GPCF-DOC-HEADROOM-LCX-COMPLETION-AUDIT-20260623 | completion-audit | loop/context/headroom/docs/completion-audit.md | GPCF | controlled |
 | GPCF-DOC-HEADROOM-LCX-GRAPH-20260623 | Headroom LCX Graph | loop/context/headroom/docs/graph.md | GFIS | controlled |
 | GPCF-DOC-00463F9971 | Headroom LCX 许可证与 OSS 合规 | loop/context/headroom/docs/license.md | GPCF | controlled |
-| GPCF-DOC-BF9AA5F60D | Headroom LCX 运行模型 | loop/context/headroom/docs/operating-model.md | WAES | controlled |
-| GPCF-DOC-260DDD94E9 | Headroom LCX Rollout 计划 | loop/context/headroom/docs/rollout.md | WAES | controlled |
+| GPCF-DOC-BF9AA5F60D | Headroom LCX 运行模型 | loop/context/headroom/docs/operating-model.md | WAME | controlled |
+| GPCF-DOC-260DDD94E9 | Headroom LCX Rollout 计划 | loop/context/headroom/docs/rollout.md | WAME | controlled |
 | GPCF-DOC-187BF785F5 | Headroom LCX 安全规则 | loop/context/headroom/docs/security.md | KDS | controlled |

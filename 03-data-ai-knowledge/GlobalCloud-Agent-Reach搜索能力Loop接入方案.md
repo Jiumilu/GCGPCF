@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A4F06F496D
 title: GlobalCloud Agent-Reach搜索能力Loop接入方案
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 Agent-Reach 可以作为 GlobalCloud Loop 的外部搜索、网页读取、平台资料发现和工具健康诊断候选能力包，但不得直接登记为已集成生产能力。
 
-本方案只允许把 Agent-Reach 纳入 `candidate_search_capability` 和 `research_input` 层。Agent-Reach 输出不得直接升级为 KDS canonical Markdown、GFIS source-of-record、WAES accepted evidence、GPCF integrated 状态或生产可用声明。
+本方案只允许把 Agent-Reach 纳入 `candidate_search_capability` 和 `research_input` 层。Agent-Reach 输出不得直接升级为 KDS canonical Markdown、GFIS source-of-record、WAME accepted evidence、GPCF integrated 状态或生产可用声明。
 
 ## 2. 当前只读核查事实
 
@@ -70,7 +70,7 @@ Agent-Reach 不替代以下系统：
 |---|---|
 | KDS | KDS 是知识主存，Agent-Reach 只能发现候选来源 |
 | Brain | Brain 是知识编制与知识 UI 平台，Agent-Reach 不是发布面 |
-| WAES | WAES 是证据、门禁、风险和状态裁决层 |
+| WAME | WAME 是证据、门禁、风险和状态裁决层 |
 | GFIS | GFIS 是工厂执行系统和工厂事实主账 |
 | GPC | GPC 是绿色供应链公共服务平台本体 |
 
@@ -96,11 +96,11 @@ Agent-Reach 不替代以下系统：
 | Agent-Reach 来源 | 默认 TrustLevel | 默认 RAG Admission | 升级条件 |
 |---|---|---|---|
 | 权威政策、标准、官方网站 | T1 | limited | 保留版本、日期、适用范围后可申请 safe |
-| 合作单位公开资料 | T2 | limited | 人工确认和 WAES 证据后可申请 safe |
+| 合作单位公开资料 | T2 | limited | 人工确认和 WAME 证据后可申请 safe |
 | GitHub 官方仓库 | T2/T3 | limited | 绑定 commit/release、许可证和维护状态后提升 |
 | 第三方文章、搜索结果 | T4 | limited 或 repair_required | 交叉验证后提升 |
 | 社交平台内容 | T4 | repair_required | 只能作为线索，需独立来源确认 |
-| AI 总结结果 | T5 | blocked | 绑定真实来源并经 WAES 后才可进入召回 |
+| AI 总结结果 | T5 | blocked | 绑定真实来源并经 WAME 后才可进入召回 |
 
 ## 7. 安全与凭据规则
 
@@ -121,7 +121,7 @@ L1 接入方案完成的最低标准：
 - 明确 L0 到 L3.5 纳入边界。
 - 明确搜索质量、效率、引用、fallback、安全指标。
 - 明确凭据和 Cookie 禁写规则。
-- 明确不得替代 KDS、Brain、WAES、GFIS、GPC。
+- 明确不得替代 KDS、Brain、WAME、GFIS、GPC。
 - `python3 tools/kds-sync/validate_agent_reach_loop_admission.py` 输出 pass。
 
 L2 隔离 PoC 的最低标准：
@@ -146,7 +146,7 @@ L2 隔离 PoC 的最低标准：
 本文档不声明：
 
 - Agent-Reach 已安装到 GlobalCloud 运行环境。
-- Agent-Reach 已接入真实 KDS、Brain、WAES、GFIS 或 GPC。
+- Agent-Reach 已接入真实 KDS、Brain、WAME、GFIS 或 GPC。
 - 任何登录平台 Cookie 已配置。
 - 任何真实外部 API 已调用或写入。
 - GFIS runtime SOP E2E 已通过。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D1608C81FA
 title: 索引与入口
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: index
 status: controlled
 version: v1.0

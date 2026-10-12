@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-WAES-UNIFIED-REQUEST-MECHANISM-20261011
-title: GlobalCloud 项目群 · WAES 统一审核请求机制
+title: GlobalCloud 项目群 · WAME 统一审核请求机制
 project: GPCF
-related_projects: [GPCF, WAS, XWAIL, WAES, PVAOS, KDS]
+related_projects: [GPCF, WAS, XWAIL, WAME, PVAOS, KDS]
 domain: architecture
 status: controlled
 version: v0.1
@@ -16,7 +16,7 @@ supersedes: []
 superseded_by: []
 ---
 
-# GlobalCloud 项目群 · WAES 统一审核请求机制 v0.1
+# GlobalCloud 项目群 · WAME 统一审核请求机制 v0.1
 
 - 日期：2026-10-11 ｜ 性质：**机制设计件**（项目群级）——提交侧（WAS/XWAIL）产出；WAES/PVAOS 实现随其流程
 - 提出：老卢（2026-10-11 表述核验与机制化）｜实施：WAS/XWAIL 契约线
@@ -25,8 +25,8 @@ superseded_by: []
 ## 一、问题陈述（核验结果：阻点风险成立）
 
 **老卢表述核验**：
-1. 「WAES 承担注册、审核、发布」→ ✅ 既有职责（《WAES 总体方案》§4：承接 XWAIL 模型注册、授权、发布和证据展示）；
-2. 「其它系统的审核请示不能被识别 → WAES 成为阻点」→ ✅ **现实证据充分**：GPCF `docs/harness/evidence/` 现有 **≥15 份风格各异的请求件**，无一具备统一封套：
+1. 「WAME 承担注册、审核、发布」→ ✅ 既有职责（《WAME 总体方案》§4：承接 XWAIL 模型注册、授权、发布和证据展示）；
+2. 「其它系统的审核请示不能被识别 → WAME 成为阻点」→ ✅ **现实证据充分**：GPCF `docs/harness/evidence/` 现有 **≥15 份风格各异的请求件**，无一具备统一封套：
 
 | 类 | 既有样本（节选） | 格式 |
 |---|---|---|
@@ -37,11 +37,11 @@ superseded_by: []
 | 词表请求 | registry_vocab_review（state×1＋term×8） | MD 清单 |
 | 发布物登记 | XAP 包族 5 份（本次） | XAP manifest |
 
-**结论**：**没有统一识别机制**——WAES 侧面对 N 种格式无法通用受理、无法自动分流、无法回执闭环——**阻点风险成立，须建立统一机制**。
+**结论**：**没有统一识别机制**——WAME 侧面对 N 种格式无法通用受理、无法自动分流、无法回执闭环——**阻点风险成立，须建立统一机制**。
 
 ## 二、机制设计（统一请求原则）
 
-> **凡发往 WAES 的审核/注册/发布请示，一体封装为符合 XWAIL XAP 规范的「请求包」（Request XAP）**。
+> **凡发往 WAME 的审核/注册/发布请示，一体封装为符合 XWAIL XAP 规范的「请求包」（Request XAP）**。
 
 ### 2.1 两类包（XAP 包族统一）
 
@@ -83,12 +83,12 @@ XAPRequestEnvelope v0.1（最小必填）：
 ## 三、受理流程（识别 → 分流 → 裁定 → 回执）
 
 ```text
-提交方（各系统）→ 封装请求包（工具/模板）→【WAES 受理器】识别（packageKind=request → requestType 分流）
+提交方（各系统）→ 封装请求包（工具/模板）→【WAME 受理器】识别（packageKind=request → requestType 分流）
 → 四级检验：①信封（本机制）②包（XAP 校验）③模式（V1.2-06 modecheck）④证据（引用可核验）
 → 分流（登记/词表/授权/修复各归其道）→ 治理裁定 → 回执回写（requestId 关联）→ 归档
 ```
 
-**四级检验实现分工**：①③④ 提交侧工具已就绪（本次：`requestcheck.py`＋`modecheck.py`＋校验链）；②**按 `packageKind` 分流**——**纯请求包**（无 models）：资产包字段（version／三维基线／models 等）**不适用**（分流 N/A）；**混合包**（含 models）追加 `validate_xap_manifest` 校验——已实证（requestcheck v2 R08；**修复 2026-10-11 Codex 审计 P0**：「旧 XAP 校验器对请求包报 9 项」的串联断裂）；**WAES 受理器**＝其实现侧（本机制给规范与工具，实现随其立项）。
+**四级检验实现分工**：①③④ 提交侧工具已就绪（本次：`requestcheck.py`＋`modecheck.py`＋校验链）；②**按 `packageKind` 分流**——**纯请求包**（无 models）：资产包字段（version／三维基线／models 等）**不适用**（分流 N/A）；**混合包**（含 models）追加 `validate_xap_manifest` 校验——已实证（requestcheck v2 R08；**修复 2026-10-11 Codex 审计 P0**：「旧 XAP 校验器对请求包报 9 项」的串联断裂）；**WAME 受理器**＝其实现侧（本机制给规范与工具，实现随其立项）。
 
 ## 四、实施规划（四阶段）
 
@@ -99,7 +99,7 @@ XAPRequestEnvelope v0.1（最小必填）：
 | **S1 规范与工具**（本轮） | 规范 §2.3＋V1.2-07 规则；`requestcheck.py`；两样本改造（既有请求→请求包） | WAS/XWAIL（我们） | ✅ 本轮完成 |
 | **S2 试点** | 既有请求分批改造为标准请求包：①IGL 域登记（追溯）②CWME 空间域（在审）③registry 词表 ④GCKF repair 链（d174-d181 段）——**4 件齐**（KDS `工业绿链/图谱/ontology/requests/`，requestcheck 4/4 过）；覆盖 3 种 requestType（domain_registration×2／term_request／repair_request） | 提交方＋我们 | **✅ S2 完成（2026-10-11）** |
 | **S3 各系统接入** | 分批：KDS/CWME → PVAOS/Studio → GFIS/Brain/GPC → 其余（26 成员目录） | 各系统（用我们工具） | **🔧 工具包就绪（2026-10-11）**：《请求包制作指南》＋`mkrequest.py`（制作→自检闭环实证）；待各系统陆续使用 |
-| **S4 受理器实现** | WAES 侧统一受理器（识别/分流/裁定/回执/发布） | **WAES 项目**（其流程） | **✅ 参考实现可用（2026-10-11）**：`server/xap-intake`（受理器＋33 项验收＋WAE 内「受理台账」UI）；生产化随 WAES 上线流程 |
+| **S4 受理器实现** | WAME 侧统一受理器（识别/分流/裁定/回执/发布） | **WAME 项目**（其流程） | **✅ 参考实现可用（2026-10-11）**：`server/xap-intake`（受理器＋33 项验收＋WAE 内「受理台账」UI）；生产化随 WAME 上线流程 |
 
 ## 五、边界与不声明
 
@@ -115,5 +115,5 @@ XAPRequestEnvelope v0.1（最小必填）：
 | 规范增量 §2.3（打包 XAP：asset／request 两类） | GPCF `01-architecture/XWAIL…规范V1.2草案.md` |
 | V1.2-07 规则行（请求包检查） | GPCF `01-architecture/XWAIL-V1.2-Validator规则清单.md` |
 | `requestcheck.py`（信封检查器）＋两样本 | KDS `工业绿链/图谱/ontology/xwail-v12-poc/` |
-| XAP 受理器（参考实现）＋WAE 受理台账 UI | WAES `server/xap-intake/`（分支 `waes/world-asset-studio`） |
+| XAP 受理器（参考实现）＋WAE 受理台账 UI | WAME `server/xap-intake/`（分支 `waes/world-asset-studio`） |
 | 本机制文件 | GPCF `01-architecture/WAES统一审核请求机制_v0.1.md` |

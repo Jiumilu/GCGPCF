@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5BF9469733
 title: GlobalCloud 绿色供应链体系真实层次架构图
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
+related_projects: [GPCF, GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: architecture
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 ```mermaid
 flowchart TB
   subgraph L1["治理与监控层"]
-    WAES["WAES
+    WAME["WAME
 项目发起 / 配置编排 / 发布验证
 规则治理 / 指标口径 / 证据 / 状态
 连接器治理 / AI授权 / 阶段验收"]
@@ -72,12 +72,12 @@ XiaoC / Hermes / XGD（大象）"]
   PVAOS --> POOLS
   GPC --> POOLS
   GFIS --> POOLS
-  WAES --> POOLS
+  WAME --> POOLS
 
   PVAOS --> DB
   GPC --> DB
   GFIS --> DB
-  WAES --> DB
+  WAME --> DB
 
   KMS --> KE
   KE --> AI
@@ -88,23 +88,23 @@ XiaoC / Hermes / XGD（大象）"]
   EDGE --> DATA
   KE --> DATA
 
-  DATA --> WAES
+  DATA --> WAME
   DATA --> KE
-  DB --> WAES
+  DB --> WAME
   DB --> KE
 
-  WAES -. 治理约束 .-> GPC
-  WAES -. 治理约束 .-> GFIS
-  WAES -. 知识准入 / AI授权 .-> KE
-  WAES -. 发布验证 / 状态门 / 证据门 .-> DATA
-  WAES -. 数据权限 / AI可见范围 / 治理审计 .-> DB
+  WAME -. 治理约束 .-> GPC
+  WAME -. 治理约束 .-> GFIS
+  WAME -. 知识准入 / AI授权 .-> KE
+  WAME -. 发布验证 / 状态门 / 证据门 .-> DATA
+  WAME -. 数据权限 / AI可见范围 / 治理审计 .-> DB
 ```
 
 ## 2. 一句话解释
 
 这张图表达的是：
 
-1. `WAES` 在最上层，负责治理与监控，不负责具体事务审批。
+1. `WAME` 在最上层，负责治理与监控，不负责具体事务审批。
 2. `PVAOS + GPC` 组成运营与协同层，其中 `GPC` 是平台主线。
 3. `GFIS + Edge + OT` 组成生产与执行层，其中 `GFIS` 是工厂事实主线。
 4. `AI 与数据层` 统一承载资源仓库、结构化数据库、企业级知识主存、知识引擎、AI 服务和事件证据底座。
@@ -118,7 +118,7 @@ XiaoC / Hermes / XGD（大象）"]
 1. 具体对象目录。
 2. 具体事件合同。
 3. 连接器明细。
-4. WAES 内部子模块。
+4. WAME 内部子模块。
 5. 知识对象明细。
 6. AI 授权等级细则。
 

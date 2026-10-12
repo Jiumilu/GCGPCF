@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C436DDB0F6
 title: GlobalCloud 文档健康报告
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: status
 status: controlled
 version: v1.0
@@ -18,7 +18,7 @@ superseded_by: []
 
 # GlobalCloud 文档健康报告
 
-本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、人工业务核验、运行层主键、review queue、runtime intake、WAES review 和 verified artifact 全部满足后才能重新评估。
+本报告用于记录项目群文档门禁、镜像覆盖、状态分布和命令证据的当前健康状态。文中的英文项目名、脚本名、字段名和命令输出均为机器可回放证据，不代表业务事实完成、状态升级、客户验收、生产发布或真实外部写入。当前报告只作为受控治理快照，所有 accepted、integrated、production_ready、customer_accepted 等状态仍必须等待人工确认、真实 source-of-record 或等效正式确认文件、人工业务核验、运行层主键、review queue、runtime intake、WAME review 和 verified artifact 全部满足后才能重新评估。
 
 生成时间：2026-06-28T22:23:34.391958+00:00
 
@@ -55,7 +55,7 @@ Loop 文档门禁：`rework_required`
 - PKC: 7
 - PVAOS: 10
 - Studio: 2
-- WAES: 163
+- WAME: 163
 - XGD: 7
 - XiaoC: 43
 - XiaoG: 8
@@ -434,7 +434,7 @@ project_group_external_loop_gate_delegates=pass checked_repos=3 delegation_only=
     "GlobalCloud Brain": 1,
     "WAS世界资产体系": 0,
     "GlobalCloud XiaoC": 0,
-    "GlobalCloud WAES": 0,
+    "GlobalCloud WAME": 0,
     "GlobalCloud GPC": 0,
     "GlobalCloud Studio": 0,
     "GlobalCoud GPCF": 295,

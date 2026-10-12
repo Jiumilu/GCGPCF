@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-535BF5C0CA
 title: GlobalCloud V0.0.1 项目群交叉分析报告
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF]
 domain: architecture
 status: controlled
 version: v1.0
@@ -30,7 +30,7 @@ superseded_by: []
 | 2 | GlobalCloud GFIS | 工厂执行系统 | [GCGFIS](https://github.com/Jiumilu/GCGFIS) | ready_for_human_acceptance | 96/100 |
 | 3 | GlobalCloud GPC | 供应链公共服务平台 | [GCGPC](https://github.com/Jiumilu/GCGPC) | not_started | - |
 | 4 | GlobalCloud PVAOS | 运营与门户底座 | [GCPVAOS](https://github.com/Jiumilu/GCPVAOS) | not_started | - |
-| 5 | GlobalCloud WAES | 治理/证据/AI越权控制 | [GCWAES](https://github.com/Jiumilu/GCWAES) | not_started | - |
+| 5 | GlobalCloud WAME | 治理/证据/AI越权控制 | [GCWAES](https://github.com/Jiumilu/GCWAES) | not_started | - |
 | 6 | GlobalCloud KDS | 知识中心（LLM Wiki） | [GCKDS](https://github.com/Jiumilu/GCKDS) | 基础 Manifest | - |
 | 7 | GlobalCloud PKC | 个人知识工作台 | [GCPKC](https://github.com/Jiumilu/GCPKC) | 无 Manifest | - |
 | 8 | GlobalCloud XGD | 大象：长程 Agent、重分析、多端交互与运行承载 | [GCXGD](https://github.com/Jiumilu/GCXGD) | 无 Manifest | - |
@@ -69,7 +69,7 @@ superseded_by: []
 |------|------|------|
 | ready_for_human_acceptance (96分) | 1 | GFIS |
 | partial (78分) | 1 | XiaoC |
-| not_started | 4 | PVAOS、WAES、GPC、GPCF |
+| not_started | 4 | PVAOS、WAME、GPC、GPCF |
 | 基础 Manifest | 2 | Brain、KDS |
 | 无完整 Manifest | 4 | XGD、XiaoG、PKC、MMC |
 
@@ -77,7 +77,7 @@ superseded_by: []
 
 | 技术栈 | 项目 |
 |--------|------|
-| Node.js/TypeScript (Vite+React) | PVAOS、WAES、Brain、PKC |
+| Node.js/TypeScript (Vite+React) | PVAOS、WAME、Brain、PKC |
 | Python (Frappe/ERPNext + FastAPI) | GFIS、GPC(gpc_sop_engine) |
 | Node.js (Electron) | XGD |
 | ESP32 + Python (WebSocket) | XiaoG |
@@ -85,7 +85,7 @@ superseded_by: []
 | 纯文档 Markdown | KDS、GPCF、MMC |
 | Python (Brain Platform) | KDS(gbrain-platform/server) |
 
-Brain、PKC、PVAOS、WAES 同为 Vite+React+TS，可共享组件库。
+Brain、PKC、PVAOS、WAME 同为 Vite+React+TS，可共享组件库。
 
 ### 2.6 跨项目依赖关系
 
@@ -94,7 +94,7 @@ GPCF(文档体系) ─── 0.0节统一定义约束 ────┐
                                           ├── GPC(协同平台) ──CON── GFIS(工厂执行)
 Brain(智能知识平台) ─── UI/WiIKI ────────┤
 KDS(知识中心) ─── LLM Wiki服务 ─────────┤                         │
-                                          ├── WAES(治理) ────CON──┤
+                                          ├── WAME(治理) ────CON──┤
 XiaoC(蚁后) ─── Prompt/MCP/模型路由/任务拆解 ─┤                         │
                                           ├── PVAOS(运营门户) ────┘
 XGD(大象) ─── 长程Agent/重分析/多端交互 ─────┤
@@ -114,7 +114,7 @@ PKC(个人工作台) ─── 个人仪表盘 ──────────┤
 | 4 | XiaoG 补充 PROJECT_HARNESS_MANIFEST.md | P1 | XiaoG |
 | 5 | PKC 补充 PROJECT_HARNESS_MANIFEST.md | P1 | PKC |
 | 6 | GPCF Manifest 从占位升级为详细配置 | P1 | GPCF |
-| 7 | PVAOS/WAES Manifest 补齐详细配置 | P2 | PVAOS、WAES |
+| 7 | PVAOS/WAME Manifest 补齐详细配置 | P2 | PVAOS、WAME |
 | 8 | XiaoC UI测试阻塞消解 + Wrangler安装 | P2 | XiaoC |
 | 9 | 全项目 AGENTS.md 补齐 | P2 | 各项目 |
 | 10 | GPC CHANGELOG 标题从 GFIS 修正为 GPC | P2 | GPC |
@@ -128,7 +128,7 @@ PKC(个人工作台) ─── 个人仪表盘 ──────────┤
 | 2 | GPC 是平台本体 | 警告：GPC 仓库含 GFIS 文档混淆 |
 | 3 | PVAOS 是运营门户底座 | OK：定位正确，治理待启动 |
 | 4 | GFIS 是工厂事实主账 | OK：治理最成熟(96分) |
-| 5 | WAES 是治理/证据/门控 | 警告：治理 not_started，remote 为本地 |
+| 5 | WAME 是治理/证据/门控 | 警告：治理 not_started，remote 为本地 |
 | 6 | Edge 优先服务 GFIS | 无独立 Edge 项目，需确认归属 |
 | 7 | 企业知识主存唯一 | 已解决：KDS 承接 canonical source，Brain 为 UI 层，WIKI 移除 |
 | 8 | 不得越权写入 | 警告：XiaoC/XGD/XiaoG AI写入边界未入连接器合同 |

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-AB6DC46557
 title: Loop CodeGraph Goal Optimization Plan
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md
 source_path: 02-governance/loop/LOOP_CODEGRAPH_GOAL_OPTIMIZATION_PLAN.md
@@ -31,7 +31,7 @@ superseded_by: []
 | 感知层 | 本地代码结构索引、符号关系、调用链、路由和影响面查询 | 源码复核、测试、业务事实 |
 | 计划层 | 帮助确定最小改动范围、相关测试和风险路径 | 人工授权、Loop 目标定义 |
 | 执行层 | 为 Codex/Hermes/Cursor 等 agent 提供 MCP 查询能力 | 代码审查、质量门禁 |
-| 复盘层 | 记录工具调用节省、误改减少、查询模板复用 | Harness/WAES 状态裁决 |
+| 复盘层 | 记录工具调用节省、误改减少、查询模板复用 | Harness/WAME 状态裁决 |
 
 ## 3. 实施原则
 
@@ -147,7 +147,7 @@ P1 完成条件：
 1. 用户明确授权安装和 MCP 配置。
 2. GPCF/GFIS 本地索引建立，且 `.codegraph/` 未进入 Git。
 3. 至少 3 个真实任务记录 CodeGraph 查询、影响面、测试选择和结果。
-4. 每轮仍以源码复核、测试和 Harness/WAES 门禁为准。
+4. 每轮仍以源码复核、测试和 Harness/WAME 门禁为准。
 
 P2 完成条件：
 
@@ -168,6 +168,6 @@ P2 完成条件：
 ## 12. 非声明
 
 - 本方案不证明 GFIS runtime SOP E2E 已通过。
-- 本方案不创建 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
+- 本方案不创建 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact、UAT 签收、客户满意、`accepted` 或 `integrated`。
 - 本方案不授权生产写入、真实外部 API 写入、数据库迁移、权限变更、部署、推送或合并。
-- 本方案不把 CodeGraph 查询结果替代源码、测试、文档门禁、KDS TOKEN 门禁、Harness/WAES 判定或人工确认。
+- 本方案不把 CodeGraph 查询结果替代源码、测试、文档门禁、KDS TOKEN 门禁、Harness/WAME 判定或人工确认。

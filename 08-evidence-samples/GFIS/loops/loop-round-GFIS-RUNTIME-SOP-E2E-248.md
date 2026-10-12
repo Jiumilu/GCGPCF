@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8643B06A78
 title: GFIS-RUNTIME-SOP-E2E-248
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0

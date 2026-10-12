@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-IMPLEMENTATION-PLAN-20260624
 title: GlobalCloud 项目群实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: architecture
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文位于 GPCF 仓库根目录，是 GlobalCloud 项目群唯一主体实施方案，也是项目群当前唯一总实施主方案，承接 `WAS世界资产体系总体方案.md` 和 `GlobalCloud 项目群主方案控制台账`，用于控制项目群从方案一致性走向真实进度、真实研发、真实运行、真实集成、真实交付和真实客户验收。
 
-本文不替代任何项目总体方案，不重新定义 WAS、Ontology、XWAIL、WAE、WAES、AaaS 或 SCaaS 的定位。本文只定义如何实施、如何验证、如何交付、如何验收和如何保留证据。
+本文不替代任何项目总体方案，不重新定义 WAS、Ontology、XWAIL、WAE、WAME、AaaS 或 SCaaS 的定位。本文只定义如何实施、如何验证、如何交付、如何验收和如何保留证据。
 
 历史路径 `01-architecture/GlobalCloud项目群实施方案.md` 只保留兼容镜像职责，不再是主体文件。
 
@@ -58,7 +58,7 @@ GPCF:01-architecture/GlobalCloud 项目群总体方案.md
 1. WAS世界资产体系
 2. GlobalCloud XWAIL
 3. GlobalCloud AaaS / AAAS
-4. GlobalCloud WAES
+4. GlobalCloud WAME
 5. GlobalCloud GFIS
 6. GlobalCloud GPC
 7. GlobalCloud PVAOS
@@ -127,7 +127,7 @@ DO NOT send optional commentary
 
 ## 4.1 开发完成与真实业务验证分离原则
 
-本原则是项目群最高实施规范的一部分，适用于 GFIS、GPCF、KDS、WAES、SOP、GPC、PVAOS、Brain、Studio、XiaoG、XiaoC、XGD、WAS、XWAIL、AAAS、MMC 和其它纳入项目群的项目。
+本原则是项目群最高实施规范的一部分，适用于 GFIS、GPCF、KDS、WAME、SOP、GPC、PVAOS、Brain、Studio、XiaoG、XiaoC、XGD、WAS、XWAIL、AAAS、MMC 和其它纳入项目群的项目。
 
 最高裁决语句：
 
@@ -153,8 +153,8 @@ DO NOT send optional commentary
 | 状态线 | 用途 | 允许证据 | 不得声明 |
 |---|---|---|---|
 | `development_lane` | 完成系统能力、开发闭环、契约、dry-run、fixture E2E、本地 validator | fixture、mock、controlled sample、synthetic-but-contract-valid data、dry-run、local validator | 真实业务验证完成、客户验收、生产就绪 |
-| `real_business_validation_lane` | 使用真实 source-of-record 验证系统能力 | 真实 source-of-record、source owner 确认、真实 runtime intake、真实 review queue、真实 WAES review、真实 verified artifact candidate | accepted、integrated、production_ready、customer_accepted |
-| `acceptance_lane` | owner、WAES、客户或授权主体进行验收裁决 | 人工确认、验收记录、裁决回执 | 自动验收、脚本验收 |
+| `real_business_validation_lane` | 使用真实 source-of-record 验证系统能力 | 真实 source-of-record、source owner 确认、真实 runtime intake、真实 review queue、真实 WAME review、真实 verified artifact candidate | accepted、integrated、production_ready、customer_accepted |
+| `acceptance_lane` | owner、WAME、客户或授权主体进行验收裁决 | 人工确认、验收记录、裁决回执 | 自动验收、脚本验收 |
 | `production_lane` | 生产、安全、回滚、运行、客户交付和生产就绪判断 | 生产运行证据、回滚方案、权限和安全确认 | 未授权生产写入或生产就绪 |
 
 新增开发完成候选状态：
@@ -174,7 +174,7 @@ development_ready_for_real_business_validation
 | 3 | primary key 生成或校验规则完成 |
 | 4 | source validation 规则完成 |
 | 5 | review queue item 生成完成 |
-| 6 | WAES review candidate 生成完成 |
+| 6 | WAME review candidate 生成完成 |
 | 7 | verified artifact candidate 生成完成 |
 | 8 | fixture / controlled sample / dry-run E2E 通过 |
 | 9 | 本地 validator 通过 |
@@ -215,7 +215,7 @@ GFIS:
   current_development_mainline: GFIS-RUNTIME-SOP-E2E-DEV-COMPLETION-001
 ```
 
-`real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 只阻断真实业务验证、accepted、integrated、production_ready、customer_accepted、生产发布和客户交付声明；不阻断本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAES review candidate development、verified artifact candidate development 或 `development_ready_for_real_business_validation`。
+`real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 只阻断真实业务验证、accepted、integrated、production_ready、customer_accepted、生产发布和客户交付声明；不阻断本地开发、fixture E2E、controlled sample E2E、dry-run、contract validator、runtime intake development、review queue development、WAME review candidate development、verified artifact candidate development 或 `development_ready_for_real_business_validation`。
 
 ## 5. 真实进度管理
 
@@ -304,14 +304,14 @@ declared -> contracted -> mocked -> tested -> verified -> accepted
 
 | 链路 | 主要项目 | 实施控制 |
 |---|---|---|
-| 模型契约链路 | WAS、Ontology、XWAIL、WAES | 模型、Profile、Validator、发布状态 |
-| 服务运营链路 | XWAIL、WAES、AaaS、PVAOS | ServicePackage、计量、SLA、订阅状态 |
+| 模型契约链路 | WAS、Ontology、XWAIL、WAME | 模型、Profile、Validator、发布状态 |
+| 服务运营链路 | XWAIL、WAME、AaaS、PVAOS | ServicePackage、计量、SLA、订阅状态 |
 | 业务事实链路 | GFIS、GPC、PVAOS、KDS | 事实源、证据源、审计和回滚 |
-| 场景运营 SOP 链路 | SOP、KDS、GFIS、GPC、GPCF、WAES | 订单池、G0-G8 闸门、红黄灯、周评分、补证队列和授权审查 |
-| GKE-001 知识工程链路 | GPCF、KDS、MMC、Brain、Studio、WAES、GFIS、GPC、PVAOS | canonical 契约、单一知识主存、业务主数据引用、受控候选、人工复核、审计、回滚和长期记忆 |
+| 场景运营 SOP 链路 | SOP、KDS、GFIS、GPC、GPCF、WAME | 订单池、G0-G8 闸门、红黄灯、周评分、补证队列和授权审查 |
+| GKE-001 知识工程链路 | GPCF、KDS、MMC、Brain、Studio、WAME、GFIS、GPC、PVAOS | canonical 契约、单一知识主存、业务主数据引用、受控候选、人工复核、审计、回滚和长期记忆 |
 | 知识智能链路 | KDS、Brain、XiaoC、PKC、XGD、XiaoG | 知识、提示、智能体输出和候选边界 |
 | 工程治理链路 | GPCF、MMC、SOP、Studio | Harness、LOOP、SOP、模板、配置和证据 |
-| 界面工程链路 | WAES、Studio、PKC、XGD、GPC、GFIS、GPCF | 统一体验骨架、设计令牌、工作台母框架、UI 工具链、UI gate 和页面/组件三方案机制 |
+| 界面工程链路 | WAME、Studio、PKC、XGD、GPC、GFIS、GPCF | 统一体验骨架、设计令牌、工作台母框架、UI 工具链、UI gate 和页面/组件三方案机制 |
 
 ## 12. 版本、里程碑与发布节奏
 
@@ -392,7 +392,7 @@ required_gates:
 |---|---|---|
 | 方案控制 | 确认项目群主体实施方案与界面工程专项方案一致 | `validate_project_group_implementation_plan.py` pass |
 | 设计前置 | 对整体界面、页面类、关键组件类和结构性重设计形成 `@product-design` 三方案 | 未形成 `Selected option` 前不得直接实现 |
-| 母框架复用 | 专业工作台类先映射 `WAES` 现有界面框架 | 未登记 `WAES baseline reuse` 时状态最高 `partial` |
+| 母框架复用 | 专业工作台类先映射 `WAME` 现有界面框架 | 未登记 `WAME baseline reuse` 时状态最高 `partial` |
 | 运行验证 | 形成桌面/移动、键盘路径、截图或等价真实验证 | `validate_loop_ui_quality_baseline.py` pass |
 | Loop 留证 | round 必须登记 `Tool route`、`Context package`、`Prompt profile`、`Design options`、`Selected option` 和 UI gate | 缺任一字段时状态最高 `partial` |
 
@@ -400,8 +400,8 @@ required_gates:
 
 | 项目类型 | 适用项目 | 主控 UI 规范 |
 |---|---|---|
-| 控制塔类 | GPCF、WAES 副类 | 状态总览、门禁、证据、阻断、下一步必须稳定可见 |
-| 专业工作台类 | WAES、GPC、GFIS、PKC、XGD、Studio | 默认以 `WAES` 现有界面框架为母框架，先做外壳层、页面骨架层、核心高风险组件层复用映射，再做项目级优化 |
+| 控制塔类 | GPCF、WAME 副类 | 状态总览、门禁、证据、阻断、下一步必须稳定可见 |
+| 专业工作台类 | WAME、GPC、GFIS、PKC、XGD、Studio | 默认以 `WAME` 现有界面框架为母框架，先做外壳层、页面骨架层、核心高风险组件层复用映射，再做项目级优化 |
 | 运营后台类 | MMC、PVAOS 副类 | 配置、发布、审计、模板和组织运营入口必须强调批量操作安全与回滚 |
 | 分析决策类 | Brain、KDS、PKC 副类、XGD 副类、Studio 副类、WAS 副类 | 知识来源、推理链、证据引用和 AI 建议必须与业务事实分离 |
 | 门户与展示类 | PVAOS、公开入口 | 可保留项目级表达，但不得突破统一令牌、状态语义、证据边界和 AI 边界 |
@@ -420,7 +420,7 @@ required_gates:
 | 工具层 | 真实作用 | LOOP 留证字段 |
 |---|---|---|
 | `@product-design` | 总体界面、页面类、关键组件类和结构性重设计的设计前置层，必须产出 `get-context -> ideate -> select option` 和三方案 | `Design options`、`Selected option` |
-| `WAES` 现有界面框架 | 专业工作台母框架复用层，当前是可复用基础框架而非最终标准件 | `WAES baseline reuse` |
+| `WAME` 现有界面框架 | 专业工作台母框架复用层，当前是可复用基础框架而非最终标准件 | `WAME baseline reuse` |
 | `ui-ux-pro-max` | 设计系统、组件词汇、令牌语义和页面类型约束来源 | `Tool route`、`Context package` |
 | `Figma` / `Storybook` | 视觉真值源、组件映射源、组件/页面可见性回归源；不存在或未使用时必须说明 | `figma_not_verified` 或 Storybook 证据 |
 | `impeccable` | 产品界面审计、硬化、润色和结构优化层 | `Tools used`、整改建议 |
@@ -428,7 +428,7 @@ required_gates:
 | `axe-core` / `Lighthouse` | 无障碍、可读性和性能辅助验证层 | `a11y_manual_only` 或自动化证据 |
 | `GPCF Loop UI Quality Gate` | 最终 UI 门禁层，只产出 `ui_evidence_candidate` | `UI gate status`、`Status ceiling` |
 
-工具上下文包与提示词能力必须作为 UI 工程输入，而不是事后说明。上下文包至少包含项目与角色、页面类或组件类、用户目标与关键路径、视觉/代码/设计系统来源、`WAES` 复用层级、约束/非目标/禁改项、门禁/证据/交付要求。提示词能力至少覆盖 `functional-accuracy`、`visual-quality`、`usability-experience`、`governance-evidence`、`scope-control`，并明确功能准确、真实执行、美观界面、方便使用和优秀体验的验收口径。
+工具上下文包与提示词能力必须作为 UI 工程输入，而不是事后说明。上下文包至少包含项目与角色、页面类或组件类、用户目标与关键路径、视觉/代码/设计系统来源、`WAME` 复用层级、约束/非目标/禁改项、门禁/证据/交付要求。提示词能力至少覆盖 `functional-accuracy`、`visual-quality`、`usability-experience`、`governance-evidence`、`scope-control`，并明确功能准确、真实执行、美观界面、方便使用和优秀体验的验收口径。
 
 三方案机制固定适用于项目总界面、高风险页面类、关键组件类和结构性重设计对象。三种方案必须共享统一框架、统一令牌和统一风格样式；未记录 `Selected option` 时不得进入实现；小型缺陷修复可写 `Selected option = existing`，但仍需说明复用的既有方向。
 
@@ -436,7 +436,7 @@ required_gates:
 
 ```text
 ui_toolchain_governance = controlled
-ui_toolchain_route = @product-design -> WAES -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate
+ui_toolchain_route = @product-design -> WAME -> ui-ux-pro-max -> Figma -> Storybook -> impeccable -> Playwright/browser -> axe-core/Lighthouse -> GPCF UI Gate
 ui_scope_round_baseline = established
 ui_evidence_status_ceiling = ui_evidence_candidate
 ```
@@ -567,7 +567,7 @@ customer_accepted = false
 |---|---|---|
 | SOP owner review | 场景 owner 明确确认保留、返工、归档、删除噪声、入 KDS 或对外交付 | `owner_review_required` |
 | KDS evidence gate | 订单、客户、主体、合同、交付、回款等事实必须来自 KDS 或 KDS 引用 | `candidate` |
-| GFIS source-record gate | 真实 source-of-record 或等效正式确认、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact | `repair_required` |
+| GFIS source-record gate | 真实 source-of-record 或等效正式确认、runtime primary key、review queue、runtime intake、WAME review 和 verified artifact | `repair_required` |
 | GPCF Git gate | GPCF/GFIS/SOP 三仓 dirty review 边界闭合 | `partial` |
 | Authorization gate | review、stage、commit、push、KDS API sync、真实外部 API、生产写入均需单独授权 | `blocked` |
 | Customer acceptance gate | 需要业务 owner、客户/授权人、验收场景、验收数据和签收证据 | `customer_review` 以下 |
@@ -599,7 +599,7 @@ project_group_git_clean=false
 
 ## 14.4 WAS/LOOP 实施链路
 
-WAS/LOOP 实施链路是本实施方案体系的默认主链之一，用于把 WAS 顶层语义、Ontology 语义知识层、XWAIL 机器契约、WAES 审查门禁、KDS 证据引用、Brain 候选解释和 GPCF LOOP 运行控制闭环合并到同一实施路径。
+WAS/LOOP 实施链路是本实施方案体系的默认主链之一，用于把 WAS 顶层语义、Ontology 语义知识层、XWAIL 机器契约、WAME 审查门禁、KDS 证据引用、Brain 候选解释和 GPCF LOOP 运行控制闭环合并到同一实施路径。
 
 受控入口：
 
@@ -616,7 +616,7 @@ WAS/LOOP 实施链路的最低推进规则：
 | 方案控制 | 确认 WAS 总体方案、项目群实施方案和专项全量实施方案一致 | `validate_project_group_implementation_plan.py` pass |
 | Source Record 准备 | 定义并监控真实 P4 candidate 输入 | 无真实输入时 `hold_required=1` |
 | 语义与契约 replay | 复跑 profile mapping、crosswalk、negative fixtures 和 WAS validator | 不提升真实业务计数 |
-| WAES 审查前置 | 只有真实 source-record 和授权齐备后才允许进入 review/runtime | 缺输入时 `review_queue=0`、`runtime_intake=0`、`waes_review=0` |
+| WAME 审查前置 | 只有真实 source-record 和授权齐备后才允许进入 review/runtime | 缺输入时 `review_queue=0`、`runtime_intake=0`、`waes_review=0` |
 | 证据与下一轮 | 形成 Loop round、Harness evidence、validator output 和下一轮输入 | 必须包含 `run -> stop -> verify -> recover -> debug` |
 
 当前 WAS/LOOP 状态固定为：`latest_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-100`，`next_monitor_round=GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101`，`real_source_records=0`，`valid_source_records=0`，`runtime_primary_key_ready=0`，`review_queue=0`，`runtime_intake=0`，`waes_review=0`，`verified=0`，`accepted=false`，`integrated=false`，`production_ready=false`。
@@ -680,7 +680,7 @@ Implementation Change Proposal
 - WAS世界资产体系；
 - GlobalCloud XWAIL；
 - GlobalCloud AaaS / AAAS；
-- GlobalCloud WAES；
+- GlobalCloud WAME；
 - GlobalCloud GFIS；
 - GlobalCloud GPC；
 - GlobalCloud PVAOS；
@@ -714,7 +714,7 @@ Implementation Change Proposal
 
 ## 18. 宪法治理实施链与 G00 门禁
 
-本实施方案继承 `GlobalCloud宪法`，并将其原则转化为任务、命令、证据、门禁、回滚和验收约束。宪法修订按以下责任链执行：ICP 生成产业模型驱动的修订候选，SOP 形成程序审计回执，GPCF 执行 G00 继承与方案传导门禁，WAES 与人工形成授权和状态裁决回执，KDS 在回执齐备后保管并发布 canonical 正本。
+本实施方案继承 `GlobalCloud宪法`，并将其原则转化为任务、命令、证据、门禁、回滚和验收约束。宪法修订按以下责任链执行：ICP 生成产业模型驱动的修订候选，SOP 形成程序审计回执，GPCF 执行 G00 继承与方案传导门禁，WAME 与人工形成授权和状态裁决回执，KDS 在回执齐备后保管并发布 canonical 正本。
 
 G00 验证命令为 `python3 tools/kds-sync/validate_constitution_inheritance_gate.py`。门禁通过只说明责任结构和双主方案继承关系可回读；缺少人工授权或 KDS 发布回执时，状态仍保持 `candidate/partial/human_required`。
 
@@ -730,7 +730,7 @@ G00 验证命令为 `python3 tools/kds-sync/validate_constitution_inheritance_ga
 
 用户要求在Hermes方案基础上深入分析形成新方案，登记[业务图谱与执行核验一体化方案 v2.0](</Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/工业绿链/管理文件/方案与规划/2026-10-11_工业绿链业务图谱与执行核验一体化方案_v2.0.md>)。拟按D01—D08建设任务组织三链只读试点，将来源对账、权限、增量维护、SOP适用性和执行核验纳入首期；T01—T20是待执行验收项。后续实施进入现有Feature流程，业务规则、人员责任和运行证据需另行落实。
 
-authorization=design_revision_and_document_registration；confirmation=business_rules_and_runtime_acceptance_pending；status=partial。本轮仅文档登记，不代表图谱实现、业务确认、跨系统集成或生产验收。关联KDS、SOP、WAES及适用的GFIS、GPC、PVAOS、PQC后续按影响范围传导。
+authorization=design_revision_and_document_registration；confirmation=business_rules_and_runtime_acceptance_pending；status=partial。本轮仅文档登记，不代表图谱实现、业务确认、跨系统集成或生产验收。关联KDS、SOP、WAME及适用的GFIS、GPC、PVAOS、PQC后续按影响范围传导。
 
 补充实施计划登记（2026-10-11）：同版方案第十三章已合并GKE-001下的三链应用定位、F-012/F-013/F-014依赖衔接、各项目交付分工、B1—B5分批计划、责任落实及技术/业务语义/业务结果三层验收。下一步拟形成来源与责任、接口与依赖两份实施清单；本轮未创建新Feature、未启动业务系统接入或扩大既有授权。
 

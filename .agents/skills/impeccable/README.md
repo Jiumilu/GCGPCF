@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C1D2E3F4A5
 title: impeccable
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

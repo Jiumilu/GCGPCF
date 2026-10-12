@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-03A3C0DFE5
 title: GC-Knowledge Fabric Handler 到 Service Dry-run Preflight v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,7 +29,7 @@ D11 只建立 route handler 到 service 方法的静态映射，目标是保证 
 | 分组 | Endpoint 数 | Route | Service | Handler map |
 |---|---:|---|---|---|
 | KDS v2 | 11 | `packages/api/src/kds/v2/routes.ts` | `packages/api/src/kds/v2/service.ts` | `packages/api/src/handler-map.ts` |
-| WAES | 7 | `packages/api/src/waes/routes.ts` | `packages/api/src/waes/service.ts` | `packages/api/src/handler-map.ts` |
+| WAME | 7 | `packages/api/src/waes/routes.ts` | `packages/api/src/waes/service.ts` | `packages/api/src/handler-map.ts` |
 | KWE | 10 | `packages/api/src/kwe/routes.ts` | `packages/api/src/kwe/service.ts` | `packages/api/src/handler-map.ts` |
 | GFIS Assistant | 4 | `packages/api/src/gfis/routes.ts` | `packages/api/src/gfis/service.ts` | `packages/api/src/handler-map.ts` |
 | Governance LOOP | 8 | `packages/api/src/governance/routes.ts` | `packages/api/src/governance/service.ts` | `packages/api/src/handler-map.ts` |

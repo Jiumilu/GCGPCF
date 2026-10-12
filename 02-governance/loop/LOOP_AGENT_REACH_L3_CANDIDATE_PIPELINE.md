@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-95CB463CBF
 title: Loop Agent-Reach L3候选搜索流水线目标
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md
 source_path: 02-governance/loop/LOOP_AGENT_REACH_L3_CANDIDATE_PIPELINE.md
@@ -50,7 +50,7 @@ superseded_by: []
 
 - 只允许只读 replay 和离线评分。
 - 不允许配置 Cookie 或主账号登录态。
-- 不允许写生产、KDS canonical、GFIS、GPC、WAES 状态。
+- 不允许写生产、KDS canonical、GFIS、GPC、WAME 状态。
 - 不允许把搜索结果直接转为强引用。
 - 不允许把本流水线作为 Agent-Reach 已生产集成证据。
 

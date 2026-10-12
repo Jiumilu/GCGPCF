@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1A584CFD8F
 title: GlobalCloud 湖北磷材真实资料接收任务包与人工评测演练
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -24,15 +24,15 @@ superseded_by: []
 
 ## 1. 定位
 
-本文承接 DKS-032 的湖北磷材评测运行记录首批空白台账，定义湖北磷材第一阶段真实资料进入前的接收任务包、脱敏规则、人工评测演练流程、WAES 门禁记录和 Brain 知识页候选生成边界。
+本文承接 DKS-032 的湖北磷材评测运行记录首批空白台账，定义湖北磷材第一阶段真实资料进入前的接收任务包、脱敏规则、人工评测演练流程、WAME 门禁记录和 Brain 知识页候选生成边界。
 
 本文只定义接收与演练规则，不表示：
 
 - 湖北磷材已经提交真实资料；
 - 本轮已经接收 DSR-L2 / DSR-L3 原文；
-- 已经完成真实评测、人工评分或 WAES 通过；
+- 已经完成真实评测、人工评分或 WAME 通过；
 - Brain 知识页已经发布；
-- KDS、WAES、GFIS、GPC 或其他业务系统已经发生真实写入；
+- KDS、WAME、GFIS、GPC 或其他业务系统已经发生真实写入；
 - 积分、收益、额度、悬赏、争议或 SOP 已经确认。
 
 ## 2. 接收总规则
@@ -46,7 +46,7 @@ superseded_by: []
 | 禁止接收 | 未授权 DSR-L3 原文、合同原文、客户订单原文、供应商报价原文、个人敏感信息 |
 | AI 使用 | 仅可读取脱敏摘要和授权索引，输出候选摘要、候选缺口、候选写回建议 |
 | 人工评测 | 必须由人工评测人填写评分、红线检查和放行建议 |
-| WAES 门禁 | 只确认规则、证据、权限、边界和例外，不替代业务事实确认 |
+| WAME 门禁 | 只确认规则、证据、权限、边界和例外，不替代业务事实确认 |
 | Brain 边界 | 只生成知识页候选结构，不发布正式知识页 |
 | KDS 边界 | 本地镜像与候选记录不得写成真实 KDS API 回执 |
 
@@ -56,28 +56,28 @@ superseded_by: []
 |---|---|---|---|---|---|---|---|---|
 | `RTP-HBLC-FEA-202606-0001` | `ERR-HBLC-FEA-202606-0001` | FEA | 拓厂需求来源、目标区域、工厂条件、政策来源、项目负责人确认 | 脱敏摘要、来源索引、责任主体、时间戳 | 投资决策原文、未经授权的合同或审批原文 | KDS / GPCF | 湖北磷材项目负责人 | planned |
 | `RTP-HBLC-RAW-202606-0001` | `ERR-HBLC-RAW-202606-0001` | RAW | 原料类别、供应商脱敏摘要、质量指标、行情或报价来源 | 脱敏摘要、来源索引、区间化价格、质量指标摘要 | 供应商报价原文、商业敏感价格明细 | KDS / GPCF | 原料责任方 | planned |
-| `RTP-HBLC-IND-202606-0001` | `ERR-HBLC-IND-202606-0001` | IND | 行业政策、标准、公开资料和适用范围 | 权威链接、检索时间、适用范围、引用边界 | 未核验 AI 摘要直接作为权威结论 | KDS / WAES | 行业资料责任方 | planned |
+| `RTP-HBLC-IND-202606-0001` | `ERR-HBLC-IND-202606-0001` | IND | 行业政策、标准、公开资料和适用范围 | 权威链接、检索时间、适用范围、引用边界 | 未核验 AI 摘要直接作为权威结论 | KDS / WAME | 行业资料责任方 | planned |
 | `RTP-HBLC-ORD-202606-0001` | `ERR-HBLC-ORD-202606-0001` | ORD | 客户需求来源、报价或意向索引、规格、数量、交期 | 脱敏摘要、来源索引、客户匿名编号、潜在产值区间 | 客户订单原文、合同原文、到账证明原文 | KDS / GPCF | 销售或渠道责任方 | planned |
-| `RTP-HBLC-TPL-202606-0001` | `ERR-HBLC-TPL-202606-0001` | TPL | 葛化母版结构复用点、湖北磷材差异项、候选 SOP 控制点 | 结构清单、差异项、WAES 规则记录 | 葛化未确认事实、跨单位不可见资料 | KDS / Brain | 模板编制责任方 | planned |
-| `RTP-HBLC-MIX-202606-0001` | `ERR-HBLC-MIX-202606-0001` | MIX | KDS 11 池挂接、增强账本、WAES 和 LOOP evidence | 关联编号、受控文档链接、候选关系 | 游离增强账本、无来源候选记录 | GPCF / WAES | GPCF 治理负责人 | planned |
+| `RTP-HBLC-TPL-202606-0001` | `ERR-HBLC-TPL-202606-0001` | TPL | 葛化母版结构复用点、湖北磷材差异项、候选 SOP 控制点 | 结构清单、差异项、WAME 规则记录 | 葛化未确认事实、跨单位不可见资料 | KDS / Brain | 模板编制责任方 | planned |
+| `RTP-HBLC-MIX-202606-0001` | `ERR-HBLC-MIX-202606-0001` | MIX | KDS 11 池挂接、增强账本、WAME 和 LOOP evidence | 关联编号、受控文档链接、候选关系 | 游离增强账本、无来源候选记录 | GPCF / WAME | GPCF 治理负责人 | planned |
 
 ## 4. RedactionRule 台账
 
 | redactionRuleId | materialClass | mustKeep | mustRemoveOrMask | allowedForAI | escalation |
 |---|---|---|---|---|---|
-| `RDR-HBLC-FEA-001` | 拓厂资料 | 来源类型、责任主体、时间、区域级别、摘要 | 具体未公开投资金额、审批原文、个人信息 | true | 涉及审批或投资承诺时进 WAES |
-| `RDR-HBLC-RAW-001` | 原料资料 | 原料类别、质量指标摘要、来源类型、责任主体 | 供应商实名、报价原文、商业敏感价格明细 | true | 涉及采购事实或价格确认时进 WAES / 人工 |
+| `RDR-HBLC-FEA-001` | 拓厂资料 | 来源类型、责任主体、时间、区域级别、摘要 | 具体未公开投资金额、审批原文、个人信息 | true | 涉及审批或投资承诺时进 WAME |
+| `RDR-HBLC-RAW-001` | 原料资料 | 原料类别、质量指标摘要、来源类型、责任主体 | 供应商实名、报价原文、商业敏感价格明细 | true | 涉及采购事实或价格确认时进 WAME / 人工 |
 | `RDR-HBLC-IND-001` | 行业政策/标准 | 来源链接、检索时间、适用范围、引用边界 | 无授权全文复制、未核验结论 | true | T3 升级必须保留来源证据 |
 | `RDR-HBLC-ORD-001` | 订单线索 | 需求来源、客户匿名编号、规格摘要、潜在区间 | 客户订单原文、合同原文、到账证明原文 | redacted_only | 涉及正式订单、合同或收益时进人工/委员会 |
-| `RDR-HBLC-TPL-001` | 复制模板 | 结构、流程、控制点、差异项 | 葛化未确认事实、跨单位不可见资料 | true | 复用争议进 WAES / 委员会 |
+| `RDR-HBLC-TPL-001` | 复制模板 | 结构、流程、控制点、差异项 | 葛化未确认事实、跨单位不可见资料 | true | 复用争议进 WAME / 委员会 |
 
 ## 5. ManualEvaluationDrill 台账
 
 | drillId | linkedReceiptTaskId | evaluatorRole | checkItems | scoringTarget | redlineCheck | outputRecord | drillStatus |
 |---|---|---|---|---|---|---|---|
-| `MED-HBLC-FEA-202606-0001` | `RTP-HBLC-FEA-202606-0001` | 人工评测人 / WAES 规则复核 | 来源完整性、政策适用、区域条件、项目负责人确认 | `ERR-HBLC-FEA-202606-0001` | `RED-HBLC-001` | 评分、缺口、下一步 | planned |
+| `MED-HBLC-FEA-202606-0001` | `RTP-HBLC-FEA-202606-0001` | 人工评测人 / WAME 规则复核 | 来源完整性、政策适用、区域条件、项目负责人确认 | `ERR-HBLC-FEA-202606-0001` | `RED-HBLC-001` | 评分、缺口、下一步 | planned |
 | `MED-HBLC-RAW-202606-0001` | `RTP-HBLC-RAW-202606-0001` | 人工评测人 / 原料责任方 | 来源、质量指标、报价边界、采购事实隔离 | `ERR-HBLC-RAW-202606-0001` | `RED-HBLC-002` | 评分、脱敏缺口、悬赏候选 | planned |
-| `MED-HBLC-IND-202606-0001` | `RTP-HBLC-IND-202606-0001` | 人工评测人 / WAES 规则复核 | 来源可信级别、检索时间、适用范围 | `ERR-HBLC-IND-202606-0001` | `RED-HBLC-003` | 评分、T3 候选、Brain 候选 | planned |
+| `MED-HBLC-IND-202606-0001` | `RTP-HBLC-IND-202606-0001` | 人工评测人 / WAME 规则复核 | 来源可信级别、检索时间、适用范围 | `ERR-HBLC-IND-202606-0001` | `RED-HBLC-003` | 评分、T3 候选、Brain 候选 | planned |
 | `MED-HBLC-ORD-202606-0001` | `RTP-HBLC-ORD-202606-0001` | 人工评测人 / 销售责任方 | 需求来源、客户匿名编号、潜在产值边界 | `ERR-HBLC-ORD-202606-0001` | `RED-HBLC-004` | 评分、潜在产值候选、补证动作 | planned |
 | `MED-HBLC-TPL-202606-0001` | `RTP-HBLC-TPL-202606-0001` | 人工评测人 / Brain 编制责任方 | 结构复用、差异项、候选 SOP 控制点 | `ERR-HBLC-TPL-202606-0001` | `RED-HBLC-005` | 评分、模板候选、知识页候选 | planned |
 
@@ -109,7 +109,7 @@ superseded_by: []
 | 2 | 合作单位提交脱敏摘要或来源索引 | 湖北磷材对应责任方 | `sourceRefs` 候选 |
 | 3 | 执行脱敏规则检查 | KDS / 人工评测人 | `RDR-HBLC-*` 结果 |
 | 4 | 人工评分和红线检查 | 人工评测人 | `ERR-HBLC-*` 更新候选 |
-| 5 | WAES 记录规则与例外 | WAES | `WGR-HBLC-*` 候选 |
+| 5 | WAME 记录规则与例外 | WAME | `WGR-HBLC-*` 候选 |
 | 6 | 形成 Brain 知识页候选 | Brain | `BKC-HBLC-*` 候选 |
 | 7 | 进入缺口、悬赏、写回或贡献候选 | KDS / GPCF | 仅候选，不确认 |
 
@@ -134,10 +134,10 @@ superseded_by: []
 2. 每类资料均明确允许形式、禁止形式、责任主体和默认状态。
 3. 脱敏规则覆盖拓厂、原料、行业、订单和模板资料。
 4. 人工评测演练能回写到 DKS-032 的运行记录编号。
-5. WAES 门禁候选和 Brain 知识页候选均保持 planned 状态。
+5. WAME 门禁候选和 Brain 知识页候选均保持 planned 状态。
 6. 所有输出只形成候选，不确认真实事实、正式积分、正式收益或正式 SOP。
 7. 本文纳入 LOOP 文档治理、KDS 本地镜像、防污染、TOKEN 与文档门禁检查。
 
 ## 11. DKS-034 建议
 
-下一轮建议建立“湖北磷材 Brain 知识页候选结构与发布门禁”，把接收演练中的脱敏资料结构转成知识页面候选、发布前检查表、权限过滤规则和 WAES 放行边界。
+下一轮建议建立“湖北磷材 Brain 知识页候选结构与发布门禁”，把接收演练中的脱敏资料结构转成知识页面候选、发布前检查表、权限过滤规则和 WAME 放行边界。

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-CONSTITUTION-GOVERNANCE-RESPONSIBILITY-20260712
 title: GlobalCloud 宪法治理责任与 G00 门禁
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF, ICP]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/constitution-governance-responsibility.md
 source_path: 02-governance/constitution-governance-responsibility.md
@@ -25,7 +25,7 @@ superseded_by: []
 | 产业领域解释与修订候选 | ICP | 不批准、不写 KDS canonical |
 | 修订程序与审计 | SOP | 不改写产业模型、不替代人工确认 |
 | 项目群传导与 G00 继承门禁 | GPCF | 不反向改写宪法、不替代业务 owner |
-| 授权与状态裁决 | WAES + 人工 | 不制造证据、不绕过人工确认 |
+| 授权与状态裁决 | WAME + 人工 | 不制造证据、不绕过人工确认 |
 | 正本与版本保管 | KDS | 不解释产业模型、不发布未批准候选 |
 
 ## G00 宪法继承门禁

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4ED6BDDC91
 title: GFIS Assistant DKS-269 SLA Breach Review Preview Policy
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ superseded_by: []
 
 ## 硬边界
 
-DKS-269 不创建 breach record、dispute、committee case、freeze request、reminder、approval request、approval decision、WAES gate result、Harness evidence、KWE work item、KDS lifecycle 或任何业务写回。
+DKS-269 不创建 breach record、dispute、committee case、freeze request、reminder、approval request、approval decision、WAME gate result、Harness evidence、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 验证
 

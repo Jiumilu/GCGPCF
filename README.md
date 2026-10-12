@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8EC9A00BFD
 title: GlobalCloud GPCF 项目群治理控制仓
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-3889EF2277
 title: 20260822-235654-gcworld-evidence-twin-foundation
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md
 source_path: .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,8 +36,8 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-3889EF2277 | 20260822-235654-gcworld-evidence-twin-foundation | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | WAES | archive |
-| GPCF-DOC-GCWORLD-025 | GCWORLD证据数字孪生底座验收矩阵 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-BE1716674D | evidence | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | WAES | archive |
-| GPCF-DOC-A593265369 | logs | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | WAES | archive |
-| GPCF-DOC-F0685BF39E | patches | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | WAES | archive |
+| GPCF-DOC-3889EF2277 | 20260822-235654-gcworld-evidence-twin-foundation | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/README.md | WAME | archive |
+| GPCF-DOC-GCWORLD-025 | GCWORLD证据数字孪生底座验收矩阵 | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/acceptance-matrix.md | WAME | archive |
+| GPCF-DOC-BE1716674D | evidence | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/evidence/README.md | WAME | archive |
+| GPCF-DOC-A593265369 | logs | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/logs/README.md | WAME | archive |
+| GPCF-DOC-F0685BF39E | patches | .harness/runs/20260822-235654-gcworld-evidence-twin-foundation/patches/README.md | WAME | archive |

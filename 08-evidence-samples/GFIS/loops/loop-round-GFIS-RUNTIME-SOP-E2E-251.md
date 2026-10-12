@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-478068492A
 title: GFIS-RUNTIME-SOP-E2E-251
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,12 +22,12 @@ superseded_by: []
 
 - 来源轮次：`GFIS-RUNTIME-SOP-E2E-250`
 - 输入事实：submission package release hold release precheck 仍为 blocked。
-- 真实缺口：无真实 release 文件、无 remediation completion、无 owner response release、无运行层主键、无 WAES evidence candidate。
+- 真实缺口：无真实 release 文件、无 remediation completion、无 owner response release、无运行层主键、无 WAME evidence candidate。
 
 ## 动作
 
 - 建立 submission package release hold release negative fixture guard。
-- 拒收 GFIS Demo、KDS candidate-only、Loop 文档、open hold 自我释放、缺 source hash/KDS backlink、缺 WAES candidate 等 6 类弱 release 声明。
+- 拒收 GFIS Demo、KDS candidate-only、Loop 文档、open hold 自我释放、缺 source hash/KDS backlink、缺 WAME candidate 等 6 类弱 release 声明。
 - 新增 builder、validator、JSON/Markdown evidence，并接入只读 API 与主 runtime SOP validator。
 
 ## 输出
@@ -57,7 +57,7 @@ superseded_by: []
 
 ## 反馈
 
-- 本轮只完成负例拒收门禁，不释放 hold，不创建 release 文件，不完成 remediation，不创建运行层主键，不创建 review/runtime/WAES intake，不升级 accepted/integrated。
+- 本轮只完成负例拒收门禁，不释放 hold，不创建 release 文件，不完成 remediation，不创建运行层主键，不创建 review/runtime/WAME intake，不升级 accepted/integrated。
 - 下一轮候选：`GFIS-RUNTIME-SOP-E2E-252`，建立 submission package release attempt hard-stop audit。
 
 ## 真实性计数

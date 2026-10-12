@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-38A8C9DC86
 title: GC-Knowledge Fabric P0 正式证据执行委员会审阅输入预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,8 +37,8 @@ D47 只预览 D46 committee trigger package preview 之后，提交委员会审�
 
 | 范围 | 预览要求 |
 |---|---|
-| Intake roles | 覆盖 request_owner、WAES、KWE、Harness、committee、stop authority、business system、governance owner |
-| Review input sections | 覆盖来源、委员会触发摘要、事项类型、证据包引用、争议问题、责任问题、冻结保持、收益/贡献影响、正式写回风险、WAES 负向门禁、Harness 约束和 no-write 声明 |
+| Intake roles | 覆盖 request_owner、WAME、KWE、Harness、committee、stop authority、business system、governance owner |
+| Review input sections | 覆盖来源、委员会触发摘要、事项类型、证据包引用、争议问题、责任问题、冻结保持、收益/贡献影响、正式写回风险、WAME 负向门禁、Harness 约束和 no-write 声明 |
 | Review question groups | 覆盖来源、证据充分性、跨单位责任、冻结释放、正式写回风险、收益/贡献影响、重大违规和决策约束 |
 | Decision constraints | 明确 review input 不是 case，不产生裁决、确认、冻结释放、收益/贡献确认或 evidence 写入 |
 
@@ -54,7 +54,7 @@ D47 只预览 D46 committee trigger package preview 之后，提交委员会审�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

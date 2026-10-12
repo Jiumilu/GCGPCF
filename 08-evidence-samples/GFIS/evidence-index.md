@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3C99FD28DA
 title: Evidence Index — GFIS
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - `scripts/validate_gfis_runtime_sop_e2e_dev.py`：开发态 validator，校验 synthetic master 覆盖 12 个 SOP 阶段、12 条 synthetic 链路全部跑通，并保持 `synthetic_dev_lane=dev_closed`、`business_verification_pending=true`、`runtime_sop_e2e_real=repair_required`。
 - `scripts/validate_gfis_runtime_sop_e2e_real.py`：真实态防污染 validator，确认 synthetic 数据未进入真实 source-of-record 接收目录，真实链路仍拒收 synthetic，输出 `synthetic_rejected_by_real_lane=1`、`synthetic_pollution_files=0`、`real_source_records=0`、`real_runtime_primary_keys=0`、`real_review_queue_items=0`、`real_runtime_intake_items=0`、`real_waes_reviews=0`、`real_verified_artifacts=0`。
-- 本轮不创建真实 source record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review、真实 verified artifact，不写真实 KDS/WAES，不升级 accepted/integrated。
+- 本轮不创建真实 source record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAME review、真实 verified artifact，不写真实 KDS/WAME，不升级 accepted/integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-DEV-002
 
@@ -42,7 +42,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dev-only-minimum-closed-loop.json`：开发态最小闭环证据。输出 `synthetic_source_records=1`、`synthetic_runtime_primary_keys=1`、`synthetic_review_queue_items=1`、`synthetic_runtime_intake_items=1`、`synthetic_waes_reviews=1`、`synthetic_verified_artifacts=1`、`synthetic_closed_loop_passed=1`、`real_source_records=0`、`real_runtime_primary_keys=0`、`real_review_queue_items=0`、`real_runtime_intake_items=0`、`real_waes_reviews=0`、`real_verified_artifacts=0`、`real_kds_writes=0`、`real_waes_writes=0`、`accepted_integrated=0`、`pollution_guard_passed=1`。
 - `docs/harness/sop-e2e/gfis-runtime-sop-e2e-dev-only-minimum-closed-loop.md`：人类可读 dev-only 闭环说明，明确 synthetic 链路已跑通，但真实业务门禁仍为 `repair_required`。
 - `scripts/build_gfis_sop_e2e_269.py` / `scripts/validate_gfis_sop_e2e_269.py`：本轮生成与校验脚本。validator 会同时调用真实 runtime validator，并要求真实 validator 继续因 KDS controlled source 缺口失败，从而证明 synthetic 数据未污染真实门禁。
-- 本轮只证明开发态 synthetic/dev-only 最小闭环跑通；不创建真实 source record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAES review、真实 verified artifact 或 accepted/integrated 状态。
+- 本轮只证明开发态 synthetic/dev-only 最小闭环跑通；不创建真实 source record、真实运行层主键、真实 review queue、真实 runtime intake、真实 WAME review、真实 verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-268
 
@@ -50,7 +50,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-negative-fixture-guard.md`：人类可读负例拒收结果，明确口头授权、Loop 文档、缺收件方确认、缺通道确认、缺 KDS backlink、Demo/mock/fixture 均不能触发责任方提醒派发。
 - `scripts/build_gfis_sop_e2e_268.py` / `scripts/validate_gfis_sop_e2e_268.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_owner_reminder_dispatch_authorization_negative_fixture_guard=customer_requirement_platform_order_owner_reminder_dispatch_authorization_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明 6 类弱派发授权声明会被拒收；不派发提醒、不发送外部通知、不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明 6 类弱派发授权声明会被拒收；不派发提醒、不发送外部通知、不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-267
 
@@ -58,7 +58,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-receiving-scan.md`：人类可读接收扫描结果，明确当前未发现有效派发授权文件、收件方确认或通道确认。
 - `scripts/build_gfis_sop_e2e_267.py` / `scripts/validate_gfis_sop_e2e_267.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_owner_reminder_dispatch_authorization_receiving_scan=customer_requirement_platform_order_owner_reminder_dispatch_authorization_receiving_scan_empty:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只扫描本地受控派发授权接收目录；不派发提醒、不发送外部通知、不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只扫描本地受控派发授权接收目录；不派发提醒、不发送外部通知、不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-266
 
@@ -67,7 +67,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-owner-reminder-dispatch-authorization-preflight.md`：人类可读授权预检结果，明确当前未发现人工授权、收件方确认或通道确认。
 - `scripts/build_gfis_sop_e2e_266.py` / `scripts/validate_gfis_sop_e2e_266.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_owner_reminder_dispatch_authorization_preflight=customer_requirement_platform_order_owner_reminder_dispatch_authorization_preflight_blocked:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立本地受控派发授权预检；不派发提醒、不发送外部通知、不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立本地受控派发授权预检；不派发提醒、不发送外部通知、不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-265
 
@@ -75,7 +75,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-valid-source-record-index-owner-reminder-escalation-action-package.md`：人类可读责任方补证动作包，明确辽宁远航、葛化物流、GPC 平台订单负责人需要提交真实 source-of-record 脱敏索引，但本轮未派发、未外部写入。
 - `scripts/build_gfis_sop_e2e_265.py` / `scripts/validate_gfis_sop_e2e_265.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_valid_source_record_index_owner_reminder_escalation_action_package=customer_requirement_platform_order_valid_source_record_index_owner_reminder_escalation_prepared_not_dispatched:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只准备本地受控责任方动作包；不派发提醒、不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只准备本地受控责任方动作包；不派发提醒、不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-264
 
@@ -83,7 +83,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-valid-source-record-index-change-listener.md`：人类可读 change listener 说明，明确当前未发现新增或变更的真实索引文件，因此不得重新打开 `CustomerRequirementOrPlatformOrder` runtime primary key gate。
 - `scripts/build_gfis_sop_e2e_264.py` / `scripts/validate_gfis_sop_e2e_264.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_valid_source_record_index_change_listener=customer_requirement_platform_order_valid_source_record_index_change_listener_no_new_records:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只做真实 source-record index 接收目录的变更监听；不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只做真实 source-record index 接收目录的变更监听；不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-263
 
@@ -91,7 +91,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-runtime-primary-key-negative-pollution-guard.md`：人类可读 negative/pollution guard，明确 GFIS Demo、KDS candidate-only、报价单、Loop 文档、口述事实、mock/fixture/培训资料均不能打开 `CustomerRequirementOrPlatformOrder` runtime primary key gate。
 - `scripts/build_gfis_sop_e2e_263.py` / `scripts/validate_gfis_sop_e2e_263.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_runtime_primary_key_negative_pollution_guard=customer_requirement_platform_order_runtime_primary_key_negative_pollution_guard_rejected_all_weak_attempts:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明弱证据不得打开运行层主键；不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明弱证据不得打开运行层主键；不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-262
 
@@ -99,7 +99,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-runtime-primary-key-gate.md`：人类可读 runtime primary key gate，明确无 valid source record 时不得创建运行层主键。
 - `scripts/build_gfis_sop_e2e_262.py` / `scripts/validate_gfis_sop_e2e_262.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_runtime_primary_key_gate=customer_requirement_platform_order_runtime_primary_key_gate_blocked_missing_valid_source_record:...`；主门禁当前仍因 KDS coverage `missing_sources=4` 失败，状态保持 `repair_required`。
-- 本轮只建立 runtime primary key gate 的阻断判定；不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 runtime primary key gate 的阻断判定；不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-261
 
@@ -108,7 +108,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-valid-source-record-index-receiving-scan.md`：人类可读接收扫描结果，明确当前未收到辽宁远航客户正式确认、平台订单回执、采购订单或等效正式确认脱敏索引。
 - `scripts/build_gfis_sop_e2e_261.py` / `scripts/validate_gfis_sop_e2e_261.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_valid_source_record_index_receiving_scan=customer_requirement_platform_order_valid_source_record_index_empty_scan:...`；主门禁当前仍因 KDS coverage `missing_sources=4` 失败，状态保持 `repair_required`。
-- 本轮只做一个阶段的真实 source-of-record 脱敏索引接收扫描；不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只做一个阶段的真实 source-of-record 脱敏索引接收扫描；不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-260
 
@@ -116,7 +116,7 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-valid-source-record-eligibility-gate.md`：人类可读有效 source record 判定门禁，明确报价单和 KDS 受控数据只能进入 pending_business_verification，不能替代客户正式确认、平台订单回执、采购订单或等效正式确认。
 - `scripts/build_gfis_sop_e2e_260.py` / `scripts/validate_gfis_sop_e2e_260.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_valid_source_record_eligibility_gate=customer_requirement_platform_order_valid_source_record_missing_pending_candidate_only:...`；主门禁当前因 KDS coverage `missing_sources=4` 仍失败，状态保持 `repair_required`。
-- 本轮只做一个阶段的有效 source record 判定；不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只做一个阶段的有效 source record 判定；不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-259
 
@@ -124,25 +124,25 @@ superseded_by: []
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-kds-candidate-source-record-mapping-gate.md`：人类可读 KDS 候选映射门禁，明确报价单只能作为 pending_business_verification 种子，不能替代客户采购确认、平台订单回执或等效正式确认。
 - `scripts/build_gfis_sop_e2e_259.py` / `scripts/validate_gfis_sop_e2e_259.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_kds_candidate_source_record_mapping_gate=customer_requirement_platform_order_kds_candidate_mapped_customer_source_record_missing:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只推进一个阶段的 KDS 候选映射；不创建 valid source record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只推进一个阶段的 KDS 候选映射；不创建 valid source record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-258
 
 - `docs/harness/sop-e2e/evidence/gfis-runtime-12-stage-input-gap-convergence-queue.json`：基于 257 轮真实补证材料接收扫描器仍 blocked 的事实，建立 12 阶段运行层输入缺口收敛队列，输出 `runtime_sop_stages=12`、`kds_controlled_stages=12`、`live_business_input_ready_stages=0`、`runtime_primary_key_ready_stages=0`、`review_queue_ready_stages=0`、`runtime_intake_ready_stages=0`、`waes_review_ready_stages=0`、`verified_stages=0`、`blocked_stages=12`、`convergence_queue_items=12`、`release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-runtime-12-stage-input-gap-convergence-queue.md`：人类可读 12 阶段缺口队列，明确所有阶段仍缺真实业务输入、运行层主键、review queue、runtime intake、WAES review 与 verified artifact。
+- `docs/harness/sop-e2e/gfis-runtime-12-stage-input-gap-convergence-queue.md`：人类可读 12 阶段缺口队列，明确所有阶段仍缺真实业务输入、运行层主键、review queue、runtime intake、WAME review 与 verified artifact。
 - `scripts/build_gfis_sop_e2e_258.py` / `scripts/validate_gfis_sop_e2e_258.py`：本轮生成与校验脚本。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_12_stage_input_gap_convergence_queue=runtime_12_stage_input_gap_convergence_queue_open_missing_real_inputs:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 12 阶段缺口收敛队列；不创建客户订单、平台订单、样品、工单、质检、库存、发货、POD、WAES review、KDS write receipt、运行层主键、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 12 阶段缺口收敛队列；不创建客户订单、平台订单、样品、工单、质检、库存、发货、POD、WAME review、KDS write receipt、运行层主键、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-257
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-owner-response-release-remediation-evidence-intake-scanner.json`：基于 256 轮 remediation action recheck 仍 blocked 的事实建立真实补证材料接收扫描器，输出 `source_remediation_action_recheck_items=1`、`source_remediation_actions_unsatisfied=8`、`remediation_evidence_intake_scanner_items=1`、`intake_directory_exists=1`、`intake_readme_exists=1`、`expected_remediation_evidence_files=1`、`remediation_evidence_files_found=0`、`valid_remediation_evidence_files=0`、`invalid_remediation_evidence_files=0`、`missing_remediation_evidence_files=1`、`remediation_actions_satisfied=0`、`remediation_actions_unsatisfied=8`、`remediation_evidence_intake_blocked=1`、`remediation_complete=0`、`release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
 - `docs/harness/sop-e2e/intake/customer-requirement-platform-order/source-owner-response-release-remediation-evidence/README.md`：未来真实责任方补证材料接收目录说明，限定文件名和必填字段。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-owner-response-release-remediation-evidence-intake-scanner.md`：人类可读 intake scanner 说明，明确当前没有真实补证文件，不能进入 runtime intake、WAES review、verified 或 accepted/integrated。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-owner-response-release-remediation-evidence-intake-scanner.md`：人类可读 intake scanner 说明，明确当前没有真实补证文件，不能进入 runtime intake、WAME review、verified 或 accepted/integrated。
 - `scripts/build_gfis_sop_e2e_257.py` / `scripts/validate_gfis_sop_e2e_257.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_owner_response_release_remediation_evidence_intake_scanner`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_owner_response_release_remediation_evidence_intake_scanner=source_owner_response_release_remediation_evidence_intake_blocked_no_valid_real_evidence:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立真实补证材料接收扫描器；不创建补证文件、不释放 hold、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立真实补证材料接收扫描器；不创建补证文件、不释放 hold、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-256
 
@@ -151,7 +151,7 @@ superseded_by: []
 - `scripts/build_gfis_sop_e2e_256.py` / `scripts/validate_gfis_sop_e2e_256.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_remediation_action_recheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_remediation_action_recheck=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_remediation_action_recheck_blocked_missing_real_release_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只复核 remediation action；不释放 hold、不完成 remediation、不创建 release 文件、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只复核 remediation action；不释放 hold、不完成 remediation、不创建 release 文件、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-255
 
@@ -160,80 +160,80 @@ superseded_by: []
 - `scripts/build_gfis_sop_e2e_255.py` / `scripts/validate_gfis_sop_e2e_255.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_remediation_action_hold_gate`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_remediation_action_hold_gate=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_remediation_action_hold_blocked_missing_real_release_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 remediation action hold gate；不释放 hold、不完成 remediation、不创建 release 文件、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 remediation action hold gate；不释放 hold、不完成 remediation、不创建 release 文件、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-254
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-remediation-reopen-scan.json`：基于 253 轮 owner response release reopen scan 被阻断事实建立 remediation reopen scan，输出 `source_submission_package_owner_response_release_reopen_scan_items=1`、`source_owner_response_release_reopen_attempts=1`、`source_owner_response_release_reopen_allowed=0`、`source_owner_response_release_reopened=0`、`owner_response_release_remediation_reopen_scan_items=1`、`owner_response_release_remediation_reopen_attempts=1`、`owner_response_release_remediation_reopen_allowed=0`、`owner_response_release_remediation_reopened=0`、`remediation_reopen_allowed=0`、`remediation_reopened=0`、`owner_response_release_allowed=0`、`release_files_found=0`、`valid_release_files=0`、`remediation_complete=0`、`submission_package_release_allowed=0`、`hold_release_allowed=0`、`release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-remediation-reopen-scan.md`：人类可读 remediation reopen scan 说明，明确真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 和 WAES evidence candidate 缺失时，remediation reopen 必须继续阻断。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-remediation-reopen-scan.md`：人类可读 remediation reopen scan 说明，明确真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 和 WAME evidence candidate 缺失时，remediation reopen 必须继续阻断。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_remediation_reopen_scan.py` / `scripts/validate_gfis_sop_e2e_254.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_remediation_reopen_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_remediation_reopen_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_remediation_reopen_blocked_missing_real_release_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 remediation reopen scan；不重开 remediation、不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 remediation reopen scan；不重开 remediation、不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-253
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-reopen-scan.json`：基于 252 轮 submission package release attempt hard-stop audit 建立 owner response release reopen scan，输出 `source_submission_package_release_attempt_hard_stop_audit_items=1`、`source_attempted_release=1`、`source_hard_stops=1`、`source_hard_stop_reasons=8`、`owner_response_release_reopen_scan_items=1`、`owner_response_release_reopen_attempts=1`、`owner_response_release_reopen_allowed=0`、`owner_response_release_reopened=0`、`owner_response_release_allowed=0`、`owner_response_release_files_found=0`、`release_files_found=0`、`valid_release_files=0`、`remediation_complete=0`、`submission_package_release_allowed=0`、`hold_release_allowed=0`、`release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-reopen-scan.md`：人类可读 reopen scan 说明，明确真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 和 WAES evidence candidate 缺失时，owner response release reopen 必须继续阻断。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-owner-response-release-reopen-scan.md`：人类可读 reopen scan 说明，明确真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 和 WAME evidence candidate 缺失时，owner response release reopen 必须继续阻断。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_reopen_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_reopen_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_reopen_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_reopen_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_reopen_blocked_missing_real_release_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 owner response release reopen scan；不重开、不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 owner response release reopen scan；不重开、不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-252
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-attempt-hard-stop-audit.json`：基于 251 轮 hold release negative fixture guard 的 6 类弱 release 声明拒收事实建立 release attempt hard-stop audit，输出 `source_hold_release_negative_fixture_guard_items=1`、`source_weak_release_attempt_count=6`、`source_rejected_release_attempt_count=6`、`source_accepted_release_attempt_count=0`、`release_attempt_audit_items=1`、`attempted_release=1`、`hard_stops=1`、`hard_stop_reasons=8`、`release_allowed_items=0`、`hold_release_allowed=0`、`release_allowed=0`、`submission_package_release_allowed=0`、`owner_response_release_allowed=0`、`remediation_complete=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-attempt-hard-stop-audit.md`：人类可读 hard-stop audit 说明，明确真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 和 WAES evidence candidate 缺失时，任何 release attempt 必须强制停止。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-attempt-hard-stop-audit.md`：人类可读 hard-stop audit 说明，明确真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 和 WAME evidence candidate 缺失时，任何 release attempt 必须强制停止。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_attempt_hard_stop_audit.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_attempt_hard_stop_audit.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_attempt_hard_stop_audit`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_attempt_hard_stop_audit=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_attempt_hard_stopped_missing_real_release_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release attempt hard-stop audit；不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release attempt hard-stop audit；不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-251
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-negative-fixture-guard.json`：基于 250 轮 hold release precheck blocked 事实建立 release hold release negative fixture guard，输出 `source_hold_release_precheck_items=1`、`source_blocked=1`、`source_blocked_reasons=6`、`source_release_allowed_items=0`、`weak_release_attempt_count=6`、`rejected_release_attempt_count=6`、`accepted_release_attempt_count=0`、`release_allowed_items=0`、`hold_release_allowed=0`、`release_allowed=0`、`submission_package_release_allowed=0`、`owner_response_release_allowed=0`、`remediation_complete=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-negative-fixture-guard.md`：人类可读负例门禁说明，明确 GFIS Demo、KDS candidate-only、Loop 文档、open hold 自我释放、缺 hash/KDS backlink、缺 WAES candidate 均不得释放 open hold。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-negative-fixture-guard.md`：人类可读负例门禁说明，明确 GFIS Demo、KDS candidate-only、Loop 文档、open hold 自我释放、缺 hash/KDS backlink、缺 WAME candidate 均不得释放 open hold。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 negative fixture guard；不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 negative fixture guard；不释放 hold、不创建 release 文件、不完成 remediation、不创建运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-250
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-precheck.json`：基于 249 轮 release post-scan hold gate 的 open hold 事实建立 hold release precheck，输出 `source_release_post_scan_hold_gate_items=1`、`source_open_holds=1`、`source_hold_release_allowed=0`、`precheck_items=1`、`blocked_reasons=6`、`release_candidates=1`、`release_allowed_items=0`、`hold_release_allowed=0`、`release_allowed=0`、`submission_package_release_allowed=0`、`owner_response_release_allowed=0`、`remediation_complete=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-precheck.md`：人类可读释放预检说明，明确当前没有真实 release 文件、remediation completion、owner response release、运行层主键和 WAES evidence candidate，不能释放 hold、不能进入 runtime intake、WAES review、verified 或 accepted/integrated。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-hold-release-precheck.md`：人类可读释放预检说明，明确当前没有真实 release 文件、remediation completion、owner response release、运行层主键和 WAME evidence candidate，不能释放 hold、不能进入 runtime intake、WAME review、verified 或 accepted/integrated。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_precheck=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_hold_release_precheck_blocked:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release hold release precheck；不创建真实 release 文件、不释放 hold、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release hold release precheck；不创建真实 release 文件、不释放 hold、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-249
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-post-scan-hold-gate.json`：基于 248 轮 release intake scanner 的真实空扫描结果建立 post-scan hold gate，输出 `source_release_intake_scanner_items=1`、`source_release_files_found=0`、`source_valid_release_files=0`、`source_missing_release_files=1`、`post_scan_hold_gate_items=1`、`hold_items=1`、`post_scan_hold_items=1`、`open_holds=1`、`hold_action_required=1`、`hold_release_allowed=0`、`release_allowed=0`、`submission_package_release_allowed=0`、`owner_response_release_allowed=0`、`remediation_complete=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-post-scan-hold-gate.md`：人类可读 open hold 说明，明确当前没有真实 release 文件，不能释放 hold、不能进入 runtime intake、WAES review、verified 或 accepted/integrated。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-post-scan-hold-gate.md`：人类可读 open hold 说明，明确当前没有真实 release 文件，不能释放 hold、不能进入 runtime intake、WAME review、verified 或 accepted/integrated。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_post_scan_hold_gate.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_post_scan_hold_gate.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_post_scan_hold_gate`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_post_scan_hold_gate=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_post_scan_hold_open_missing_real_release_file:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release post-scan hold gate；不创建真实 release 文件、不释放 hold、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release post-scan hold gate；不创建真实 release 文件、不释放 hold、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-248
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-intake-scanner.json`：基于 247 轮 release negative fixture guard 建立 submission package release intake scanner，输出 `source_release_negative_fixture_guard_items=1`、`source_release_negative_fixture_count=9`、`source_rejected_release_fixture_count=9`、`source_accepted_release_fixture_count=0`、`release_intake_scanner_items=1`、`release_intake_directory_exists=1`、`release_intake_readme_exists=1`、`expected_release_files=1`、`release_files_found=0`、`valid_release_files=0`、`invalid_release_files=0`、`missing_release_files=1`、`unexpected_files=0`、`release_allowed=0`、`submission_package_release_allowed=0`、`owner_response_release_allowed=0`、`remediation_complete=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
 - `docs/harness/sop-e2e/intake/customer-requirement-platform-order/submission-package-release/README.md`：未来真实 release 文件接收目录说明，限定文件名和必填字段。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-intake-scanner.md`：人类可读扫描结果说明，明确当前没有真实 release 文件，不能进入 runtime intake、WAES review、verified 或 accepted/integrated。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-intake-scanner.md`：人类可读扫描结果说明，明确当前没有真实 release 文件，不能进入 runtime intake、WAME review、verified 或 accepted/integrated。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_intake_scanner.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_intake_scanner.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_intake_scanner`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_intake_scanner=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_intake_scanned_no_real_release_file:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release intake scanner；不创建真实 release 文件、不释放 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release intake scanner；不创建真实 release 文件、不释放 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-247
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-negative-fixture-guard.json`：基于 246 轮 owner response release guard 建立 submission package release negative fixture guard，输出 `source_owner_response_release_guard_items=1`、`source_owner_response_release_allowed=0`、`source_owner_response_release_blocked=1`、`source_owner_response_release_block_reasons=9`、`release_negative_fixture_guard_items=1`、`release_negative_fixture_count=9`、`rejected_release_fixture_count=9`、`accepted_release_fixture_count=0`、`submission_package_release_allowed=0`、`submission_package_reopen_allowed=0`、`submission_package_reopened=0`、`submission_package_allowed=0`、`remediation_complete=0`、`owner_response_release_allowed=0`、`owner_response_allowed=0`、`owner_response_reopened=0`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`dispatch_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-negative-fixture-guard.md`：人类可读负例拒收说明，明确 guard、remediation scan、GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink、缺 WAES candidate、未核验 accepted/integrated 均不得作为 release 条件。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-submission-package-release-negative-fixture-guard.md`：人类可读负例拒收说明，明确 guard、remediation scan、GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink、缺 WAME candidate、未核验 accepted/integrated 均不得作为 release 条件。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_release_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release negative fixture guard；不完成 remediation、不释放或重开 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release negative fixture guard；不完成 remediation、不释放或重开 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-246
 
@@ -242,7 +242,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_guard=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_owner_response_release_guard_blocked_incomplete_remediation:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 owner response / submission package release guard；不完成 remediation、不释放或重开 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 owner response / submission package release guard；不完成 remediation、不释放或重开 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-245
 
@@ -251,7 +251,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_hard_stop_remediation_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_hard_stop_remediation_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_hard_stop_remediation_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_hard_stop_remediation_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_hard_stop_remediation_blocked_missing_real_confirmation_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只把 submission package hard-stop 转成可审计补证动作；不完成 remediation、不释放 package、不重开 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只把 submission package hard-stop 转成可审计补证动作；不完成 remediation、不释放 package、不重开 package、不创建 dispatch confirmation、责任方响应、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-244
 
@@ -260,7 +260,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_reopen_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_reopen_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_reopen_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_reopen_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_submission_package_reopen_blocked_missing_real_confirmation_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明 submission package reopen 在缺真实 dispatch confirmation 链路时必须阻断；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明 submission package reopen 在缺真实 dispatch confirmation 链路时必须阻断；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-243
 
@@ -269,7 +269,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_owner_response_reopen_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_owner_response_reopen_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_owner_response_reopen_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_owner_response_reopen_scan=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_owner_response_reopen_blocked_missing_real_confirmation_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明 owner response reopen 在缺真实 dispatch confirmation 链路时必须阻断；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明 owner response reopen 在缺真实 dispatch confirmation 链路时必须阻断；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-242
 
@@ -278,25 +278,25 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_release_attempt_hard_stop_audit.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_release_attempt_hard_stop_audit.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_release_attempt_hard_stop_audit`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_release_attempt_hard_stop_audit=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_release_attempt_hard_stopped_missing_real_confirmation_chain:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明缺真实 dispatch confirmation 链路时受控 release attempt 必须 hard-stop；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明缺真实 dispatch confirmation 链路时受控 release attempt 必须 hard-stop；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-241
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.json`：基于 240 轮 hold release precheck blocked 事实建立 dispatch confirmation hold release negative fixture guard，输出 `source_hold_release_precheck_items=1`、`source_blocked=1`、`source_blocked_reasons=6`、`source_release_allowed_items=0`、`weak_release_attempt_count=6`、`rejected_release_attempt_count=6`、`accepted_release_attempt_count=0`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`owner_response_allowed=0`、`submission_package_allowed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`release_allowed_items=0`、`hold_items=1`、`open_holds=1`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.md`：人类可读负例拒收说明，明确 GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink 或缺 WAES candidate 的弱放行声明不得释放 open hold。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-negative-fixture-guard.md`：人类可读负例拒收说明，明确 GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink 或缺 WAME candidate 的弱放行声明不得释放 open hold。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明弱放行声明均被拒收；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明弱放行声明均被拒收；不释放 open hold、不创建 dispatch confirmation、责任方响应、提交包、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-240
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.json`：基于 239 轮 post-scan open hold 建立 release override approval request dispatch confirmation hold release precheck，输出 `source_post_scan_hold_gate_items=1`、`source_open_holds=1`、`source_hold_release_allowed=0`、`precheck_items=1`、`blocked=1`、`blocked_reasons=6`、`release_candidates=1`、`release_allowed_items=0`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`owner_response_allowed=0`、`submission_package_allowed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_items=1`、`open_holds=1`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.md`：人类可读 hold release precheck 说明，明确缺真实派发确认文件、人工派发授权、收件方身份确认、人工通道确认、KDS backlink 和 WAES evidence candidate 时不得释放 open hold。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-hold-release-precheck.md`：人类可读 hold release precheck 说明，明确缺真实派发确认文件、人工派发授权、收件方身份确认、人工通道确认、KDS backlink 和 WAME evidence candidate 时不得释放 open hold。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_hold_release_precheck_blocked:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release override approval request dispatch confirmation hold release precheck；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release override approval request dispatch confirmation hold release precheck；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-239
 
@@ -305,18 +305,18 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_gate=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_post_scan_hold_open:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只把真实接收目录扫描后无有效 dispatch confirmation 的事实转换为 open hold；不派发、不确认、不允许 owner response/submission package、不释放 open hold、不创建客户订单、平台订单、source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只把真实接收目录扫描后无有效 dispatch confirmation 的事实转换为 open hold；不派发、不确认、不允许 owner response/submission package、不释放 open hold、不创建客户订单、平台订单、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-237
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-receiving-schema-precheck.json`：基于 236 轮 dispatch confirmation negative fixture guard 建立 release override approval request dispatch confirmation receiving schema precheck，输出 `source_negative_fixture_guard_items=1`、`source_negative_fixture_count=6`、`source_rejected_fixture_count=6`、`source_accepted_fixture_count=0`、`confirmation_slots=1`、`receiving_directory_exists=1`、`receiving_readme_exists=1`、`confirmation_schema_files=1`、`expected_confirmation_files=1`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`owner_response_allowed=0`、`submission_package_allowed=0`、`dispatch_allowed=0`、`request_items_dispatched=0`、`release_override_allowed=0`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-release-ready-package-release-override-approval-request-dispatch-confirmation-receiving-schema-precheck.md`：人类可读 schema 预检说明，明确接收目录、README 和 schema 存在，但当前没有真实 `.dispatch-confirmation.json` 文件。
 - `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/pending-business-verification/release-override-approvals/dispatch-confirmations/README.md`：未来真实 dispatch confirmation 接收目录说明；README 不等于确认文件。
-- `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/pending-business-verification/release-override-approvals/dispatch-confirmations/manual-completion-release-override-dispatch-confirmation.schema.json`：未来真实 dispatch confirmation schema；要求派发授权、收件方、通道、hash、KDS backlink、WAES candidate 和 open hold 不释放声明。
+- `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/pending-business-verification/release-override-approvals/dispatch-confirmations/manual-completion-release-override-dispatch-confirmation.schema.json`：未来真实 dispatch confirmation schema；要求派发授权、收件方、通道、hash、KDS backlink、WAME candidate 和 open hold 不释放声明。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck=manual_business_verification_release_ready_package_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck_ready_no_real_confirmations:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立未来真实派发确认接收 schema/readiness precheck；不派发、不确认、不允许 owner response/submission package、不释放 open hold、不创建客户订单、平台订单、source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立未来真实派发确认接收 schema/readiness precheck；不派发、不确认、不允许 owner response/submission package、不释放 open hold、不创建客户订单、平台订单、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-232
 
@@ -326,7 +326,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_approval_intake_empty_scan=manual_business_verification_release_ready_package_release_override_approval_intake_empty_no_valid_approvals:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立人工 override approval 接收目录空扫描；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立人工 override approval 接收目录空扫描；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-231
 
@@ -335,7 +335,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_release_ready_package_release_override_negative_fixture_guard=manual_business_verification_release_ready_package_release_override_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 release override 负例拒收门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 release override 负例拒收门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-224
 
@@ -344,7 +344,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_negative_fixture_guard=manual_business_verification_completion_hold_release_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 open hold 释放负例拒收门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 open hold 释放负例拒收门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-223
 
@@ -353,26 +353,26 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_hold_release_precheck=manual_business_verification_completion_hold_release_precheck_blocked:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立 open hold 释放预检并确认仍被阻断；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 open hold 释放预检并确认仍被阻断；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-222
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.json`：真实扫描 `CustomerRequirementOrPlatformOrder` pending business verification 接收目录中的 `*.manual-business-verification-completion.json`，输出 `receiving_directories_scanned=1`、`receiving_directory_exists=1`、`completion_file_glob_patterns=1`、`manual_business_verification_completion_files_found=0`、`schema_valid_manual_completion_files=0`、`manual_business_verification_completed=0`、`valid_source_records=0`、`hold_items=1`、`open_holds=1`、`release_blockers=7`、`hold_release_allowed=0`、`manual_completion_release_allowed=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.md`：人类可读 open hold 说明，明确真实目录暂无合规人工业务核验完成文件，必须保持 review queue、runtime intake、WAES review 和 verified artifact 阻断。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-receiving-hold-gate.md`：人类可读 open hold 说明，明确真实目录暂无合规人工业务核验完成文件，必须保持 review queue、runtime intake、WAME review 和 verified artifact 阻断。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_receiving_hold_gate=manual_business_verification_completion_receiving_hold_open:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立真实人工业务核验完成文件接收扫描与 open hold 门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立真实人工业务核验完成文件接收扫描与 open hold 门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-221
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-negative-fixture-guard.json`：建立 `CustomerRequirementOrPlatformOrder` pending business verification manual completion 负例拒收门禁，输出 `negative_completion_fixture_count=6`、`rejected_completion_fixture_count=6`、`accepted_completion_fixture_count=0`、`manual_business_verification_completion_files_found=0`、`schema_valid_manual_completion_files=0`、`manual_business_verification_completed=0`、`valid_source_records=0`、`runtime_primary_key_ready=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-negative-fixture-guard.md`：人类可读负例拒收说明，明确缺 hash、KDS backlink、责任人、release authorization、有效结论，或使用 GFIS Demo / Loop 文档替代人工业务核验完成文件时，均不得进入 review/runtime/WAES。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-completion-negative-fixture-guard.md`：人类可读负例拒收说明，明确缺 hash、KDS backlink、责任人、release authorization、有效结论，或使用 GFIS Demo / Loop 文档替代人工业务核验完成文件时，均不得进入 review/runtime/WAME。
 - `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/pending-business-verification/rejected-examples/`：新增 6 个 `.manual-business-verification-completion.json` 负例样本，均被判定为 rejected。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_negative_fixture_guard=manual_business_verification_completion_negative_fixtures_rejected:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立人工业务核验完成文件负例拒收门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立人工业务核验完成文件负例拒收门禁；不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-220
 
@@ -381,7 +381,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_file_empty_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_file_empty_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_file_empty_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_file_empty_scan=manual_business_verification_completion_files_empty:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立未来人工业务核验完成文件空扫描；不创建客户订单、平台订单、pending submission、人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立未来人工业务核验完成文件空扫描；不创建客户订单、平台订单、pending submission、人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-219
 
@@ -391,7 +391,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_schema.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_schema.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_schema`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_completion_schema=manual_business_verification_completion_schema_ready_no_completion_fact:...`，主门禁仍为 `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立未来人工业务核验完成条件 schema；不创建客户订单、平台订单、pending submission、人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立未来人工业务核验完成条件 schema；不创建客户订单、平台订单、pending submission、人工核验完成文件、有效 source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-217
 
@@ -400,7 +400,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_file_quarantine_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_file_quarantine_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_file_quarantine_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_file_quarantine_precheck=...`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立隔离预检扫描监听；不创建客户订单、平台订单、pending submission、quarantine item、source-of-record、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只建立隔离预检扫描监听；不创建客户订单、平台订单、pending submission、quarantine item、source-of-record、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-216
 
@@ -410,17 +410,17 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_quarantine_schema_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_quarantine_schema_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_quarantine_schema_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_quarantine_schema_precheck=pending_business_verification_quarantine_schema_precheck_ready:schema_files=1:required_fields=12:allowed_pending_source_kinds=5:accepted_final_source_kinds=2:rejection_rules=6:receiving_directory_exists=1:receiving_readme_exists=1:pending_submission_files_found=0:pending_business_verification_submissions=0:pending_business_verification_quarantine_items=0:quarantine_schema_ready=1:quarantine_precheck_ready=1:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:manual_business_verification_passed=0:auto_promote_to_valid_source_record=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只定义未来真实待核验文件的隔离 schema 和预检规则；不创建客户订单、平台订单、pending submission、quarantine item、source-of-record、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只定义未来真实待核验文件的隔离 schema 和预检规则；不创建客户订单、平台订单、pending submission、quarantine item、source-of-record、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-215
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-submission-negative-fixture-guard.json`：建立 pending business verification 提交负例拒收门禁，输出 `negative_fixture_count=6`、`rejected_fixture_count=6`、`accepted_fixture_count=0`、`pending_submission_files_found=0`、`pending_business_verification_submissions=0`、`pending_business_verification_quarantine_items=0`、`source_record_files_found=0`、`valid_source_records=0`、`structure_valid_records=0`、`manual_business_verification_passed=0`、`auto_promote_to_valid_source_record=0`、`dispatch_confirmation_pre_block=1`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-submission-negative-fixture-guard.md`：人类可读负例拒收说明，明确模板、KDS 候选、用户口述、无客户确认报价、未签章合同审阅稿、缺 hash/KDS backlink 文件均不得进入 review/runtime/WAES。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-submission-negative-fixture-guard.md`：人类可读负例拒收说明，明确模板、KDS 候选、用户口述、无客户确认报价、未签章合同审阅稿、缺 hash/KDS backlink 文件均不得进入 review/runtime/WAME。
 - `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/pending-business-verification/rejected-examples/`：新增 6 个 `.pending-business-verification.json` 负例样本，均标记 `expected_decision=rejected`。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_submission_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_submission_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_submission_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_submission_negative_fixture_guard=pending_business_verification_negative_fixtures_rejected:negative_fixture_count=6:rejected_fixture_count=6:accepted_fixture_count=0:receiving_directory_exists=1:receiving_readme_exists=1:pending_submission_files_found=0:pending_business_verification_submissions=0:pending_business_verification_quarantine_items=0:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:manual_business_verification_passed=0:auto_promote_to_valid_source_record=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明 6 类弱材料会被拒收；不创建客户订单、平台订单、pending submission、source-of-record、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只证明 6 类弱材料会被拒收；不创建客户订单、平台订单、pending submission、source-of-record、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-214
 
@@ -430,7 +430,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_submission_receiving_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_submission_receiving_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_submission_receiving_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_submission_receiving_scan=pending_business_verification_receiving_scan_empty:receiving_directories_scanned=1:receiving_directory_exists=1:receiving_readme_exists=1:template_files_excluded=1:rejected_example_files_excluded=6:pending_submission_files_found=0:pending_business_verification_submissions=0:pending_business_verification_quarantine_items=0:source_record_files_found=0:unexpected_files_found=0:valid_source_records=0:structure_valid_records=0:manual_business_verification_passed=0:auto_promote_to_valid_source_record=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只扫描待业务核验接收目录且确认为空；不创建客户订单、平台订单、pending submission、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只扫描待业务核验接收目录且确认为空；不创建客户订单、平台订单、pending submission、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-213
 
@@ -440,7 +440,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_submission_template.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_submission_template.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_pending_business_verification_submission_template`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_submission_template=pending_business_verification_submission_template_ready:template_files=1:template_only_files=1:required_fields=12:accepted_final_source_kind_count=2:pending_equivalent_source_kind_count=5:pending_business_verification_templates=1:auto_promote_to_valid_source_record=0:owner_submissions_found=0:source_record_files_found=0:pending_business_verification_submissions=0:valid_source_records=0:structure_valid_records=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只建立提交模板，不创建客户订单、平台订单、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只建立提交模板，不创建客户订单、平台订单、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-212
 
@@ -449,7 +449,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_controlled_original_gap_action_package.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_controlled_original_gap_action_package.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_controlled_original_gap_action_package`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_controlled_original_gap_action_package=controlled_original_gap_action_package_open:responsible_owner_groups=3:required_fields=12:equivalent_source_record_rule_count=5:pending_business_verification_allowed=1:auto_promote_to_valid_source_record=0:owner_submissions_found=0:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只把真实原件缺口转为责任方补证动作和等效 source-of-record 判定规则；不创建客户订单、平台订单、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只把真实原件缺口转为责任方补证动作和等效 source-of-record 判定规则；不创建客户订单、平台订单、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-211
 
@@ -458,7 +458,7 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_owner_resubmission_receiving_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_owner_resubmission_receiving_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_owner_resubmission_receiving_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_owner_resubmission_receiving_scan=customer_requirement_platform_order_source_record_owner_resubmission_receiving_scan_empty:source_resubmission_queue_items=1:queue_items=5:owner_resubmission_actions=2:receiving_directories_scanned=1:receiving_directory_exists=1:target_file_exists=0:source_record_candidates=0:owner_response_candidates=0:owner_submissions_found=0:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明重提交后接收目录仍为空；不创建客户订单、平台订单、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只证明重提交后接收目录仍为空；不创建客户订单、平台订单、source-of-record、外部通知发送事实、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-209
 
@@ -467,16 +467,16 @@ superseded_by: []
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_owner_remediation_target_path_scan.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_owner_remediation_target_path_scan.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_owner_remediation_target_path_scan`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_owner_remediation_target_path_scan=customer_requirement_platform_order_source_record_owner_target_path_scan_no_submission:source_remediation_action_package_items=1:remediation_actions=7:owner_submit_actions=2:target_paths_expected=1:target_paths_scanned=1:receiving_directory_exists=1:target_file_exists=0:matching_target_files=0:sibling_candidate_files=0:owner_responses=0:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只证明 208 轮补证动作的目标路径仍无真实 source-record；不创建客户订单、平台订单、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只证明 208 轮补证动作的目标路径仍无真实 source-record；不创建客户订单、平台订单、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-208
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-owner-remediation-action-package.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 source-record owner remediation action package，输出 `source_owner_request_package_items=1`、`source_hold_release_precheck_items=1`、`remediation_package_items=1`、`remediation_actions=7`、`open_actions=7`、`blocked_actions=5`、`owner_submit_actions=2`、`gfis_operator_actions=3`、`waes_actions=1`、`kds_actions=1`、`owner_responses=0`、`source_record_files_found=0`、`valid_source_records=0`、`structure_valid_records=0`、`dispatch_confirmation_pre_block=1`、`hold_release_allowed=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-owner-remediation-action-package.md`：人类可读责任方补证动作包，明确 `GPC_or_Liaoning_Yuanhang_order_owner`、GFIS runtime operator、WAES owner 与 KDS owner 的 7 个后续动作和释放条件。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-owner-remediation-action-package.md`：人类可读责任方补证动作包，明确 `GPC_or_Liaoning_Yuanhang_order_owner`、GFIS runtime operator、WAME owner 与 KDS owner 的 7 个后续动作和释放条件。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_owner_remediation_action_package.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_owner_remediation_action_package.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_owner_remediation_action_package`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_owner_remediation_action_package=customer_requirement_platform_order_source_record_owner_remediation_actions_open:source_owner_request_package_items=1:source_hold_release_precheck_items=1:remediation_package_items=1:remediation_actions=7:open_actions=7:blocked_actions=5:owner_submit_actions=2:gfis_operator_actions=3:waes_actions=1:kds_actions=1:owner_responses=0:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:dispatch_confirmation_pre_block=1:hold_release_allowed=0:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
-- 本轮只把 207 轮无法释放的 open hold 转成补证动作包；补证动作包不是 source-of-record，不创建客户订单、平台订单、运行层主键、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只把 207 轮无法释放的 open hold 转成补证动作包；补证动作包不是 source-of-record，不创建客户订单、平台订单、运行层主键、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-207
 
@@ -490,7 +490,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-206
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-receiving-scan-hold-gate.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的真实 source-record 接收目录扫描与 open hold 门禁，输出 `request_package_items=1`、`open_requests=1`、`owner_responses=0`、`receiving_directory_exists=1`、`receiving_readme_exists=1`、`expected_source_record_files=1`、`source_record_files_found=0`、`valid_source_records=0`、`structure_valid_records=0`、`rejected_example_files=6`、`open_holds=1`、`dispatch_confirmation_pre_block=1`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-receiving-scan-hold-gate.md`：人类可读接收目录扫描与 hold 说明，明确真实接收目录当前没有有效 `*.customer-requirement-platform-order.source-record.json`，仅存在 README 和 `rejected-examples/` 下 6 个拒收样例；拒收样例不得进入 review queue、runtime intake、WAES review 或 verified artifact。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-receiving-scan-hold-gate.md`：人类可读接收目录扫描与 hold 说明，明确真实接收目录当前没有有效 `*.customer-requirement-platform-order.source-record.json`，仅存在 README 和 `rejected-examples/` 下 6 个拒收样例；拒收样例不得进入 review queue、runtime intake、WAME review 或 verified artifact。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_receiving_scan_hold_gate.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_receiving_scan_hold_gate.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_receiving_scan_hold_gate`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_receiving_scan_hold_gate=customer_requirement_platform_order_source_record_receiving_scan_open_hold_no_real_source_record:request_package_items=1:open_requests=1:owner_responses=0:receiving_directory_exists=1:receiving_readme_exists=1:expected_source_record_files=1:source_record_files_found=0:valid_source_records=0:structure_valid_records=0:rejected_example_files=6:open_holds=1:dispatch_confirmation_pre_block=1:runtime_primary_key_ready=0:runtime_primary_key_missing=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0`，主门禁仍为 expected exit 2 / `gfis_runtime_sop_e2e=repair_required`。
@@ -526,7 +526,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-202
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-owner-manual-request-dispatch-confirmation-hold-release-precheck.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 owner/manual request dispatch confirmation hold release precheck，输出 `request_package_items=1`、`prepared_requests=1`、`dispatch_preflight_items=1`、`dispatch_preflight_blocked=1`、`dispatch_authorizations=0`、`recipients_confirmed=0`、`manual_channels_confirmed=0`、`external_api_writes_required=0`、`dispatch_allowed=0`、`dispatched_requests=0`、`confirmation_files_found=0`、`valid_confirmations=0`、`missing_confirmations=1`、`hold_items=1`、`open_holds=1`、`hold_release_allowed=0`、`precheck_items=1`、`blocked=1`、`blocked_reasons=6`、`release_candidates=1`、`release_allowed_items=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_primary_key_missing=1`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-owner-manual-request-dispatch-confirmation-hold-release-precheck.md`：人类可读 hold release precheck 说明，明确只检查 201 轮 open hold 是否具备释放条件；缺真实派发确认文件、人工派发授权、接收人身份确认、人工通道确认、KDS backlink 与 WAES evidence candidate 时不得释放。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-owner-manual-request-dispatch-confirmation-hold-release-precheck.md`：人类可读 hold release precheck 说明，明确只检查 201 轮 open hold 是否具备释放条件；缺真实派发确认文件、人工派发授权、接收人身份确认、人工通道确认、KDS backlink 与 WAME evidence candidate 时不得释放。
 - `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_owner_manual_request_dispatch_confirmation_hold_release_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_owner_manual_request_dispatch_confirmation_hold_release_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_review_authorization_envelope_owner_manual_request_dispatch_confirmation_hold_release_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_review_authorization_envelope_owner_manual_request_dispatch_confirmation_hold_release_precheck=...runtime_sop_e2e=repair_required`。
@@ -599,7 +599,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-194
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-submission-completion-scanner.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 review authorization envelope submission completion scanner，输出 `completion_scanner_items=1`、`required_fields=20`、`readiness_requirements=11`、`expected_envelopes=1`、`submitted_envelopes=0`、`json_valid_envelopes=0`、`valid_envelopes=0`、`complete_submission_ready=0`、`missing_required_fields=20`、`missing_readiness_requirements=11`、`hold_items=1`、`open_holds=1`、`blocked=1`、`release_allowed=0`、`collection_open=0`、`quarantine_allowed=0`、`review_queue_ready=0`、`review_queue=0`、`manual_review=0`、`waes_review=0`、`runtime_intake=0`、`verified=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-submission-completion-scanner.md`：人类可读 submission completion scanner 说明，明确预期授权 envelope 文件当前不存在，不能释放 hold、进入 review/runtime/WAES 或生成运行层主键。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-submission-completion-scanner.md`：人类可读 submission completion scanner 说明，明确预期授权 envelope 文件当前不存在，不能释放 hold、进入 review/runtime/WAME 或生成运行层主键。
 - `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_submission_completion_scanner.py` / `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_submission_completion_scanner.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_review_authorization_envelope_submission_completion_scanner`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_review_authorization_envelope_submission_completion_scanner=...runtime_sop_e2e=repair_required`。
@@ -626,7 +626,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-191
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-hold-release-precheck.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 review authorization envelope hold release precheck，输出 `hold_items=1`、`precheck_items=1`、`blocked=1`、`open_holds=1`、`submitted_envelopes=0`、`valid_envelopes=0`、`manual_authorized=0`、`recipient_identity_confirmed=0`、`dispatch_channel_confirmed=0`、`kds_source_backlink_valid=0`、`waes_evidence_candidate_ready=0`、`release_allowed=0`、`collection_open=0`、`quarantine_allowed=0`、`review_queue_ready=0`、`review_queue=0`、`manual_review=0`、`waes_review=0`、`runtime_intake=0`、`verified=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-hold-release-precheck.md`：人类可读 hold release precheck 说明，明确 190 轮 open hold 在缺有效授权 envelope、人工授权、接收人身份、dispatch channel、KDS backlink 和 WAES evidence candidate 时不能释放。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-hold-release-precheck.md`：人类可读 hold release precheck 说明，明确 190 轮 open hold 在缺有效授权 envelope、人工授权、接收人身份、dispatch channel、KDS backlink 和 WAME evidence candidate 时不能释放。
 - `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_hold_release_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_hold_release_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_review_authorization_envelope_hold_release_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_review_authorization_envelope_hold_release_precheck=...runtime_sop_e2e=repair_required`。
@@ -635,7 +635,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-190
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-post-scan-hold-gate.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 review authorization envelope post-scan hold gate，输出 `hold_items=1`、`open_holds=1`、`submitted_envelopes=0`、`valid_envelopes=0`、`manual_authorized=0`、`recipient_identity_confirmed=0`、`dispatch_channel_confirmed=0`、`kds_source_backlink_valid=0`、`waes_evidence_candidate_ready=0`、`release_allowed=0`、`collection_open=0`、`quarantine_allowed=0`、`review_queue=0`、`manual_review=0`、`waes_review=0`、`runtime_intake=0`、`verified=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-post-scan-hold-gate.md`：人类可读 post-scan hold gate 说明，明确 189 轮真实扫描后仍无有效授权 envelope，因此保持 open hold，不释放 review queue、manual review、WAES review、runtime intake 或 verified artifact。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-post-scan-hold-gate.md`：人类可读 post-scan hold gate 说明，明确 189 轮真实扫描后仍无有效授权 envelope，因此保持 open hold，不释放 review queue、manual review、WAME review、runtime intake 或 verified artifact。
 - `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_post_scan_hold_gate.py` / `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_post_scan_hold_gate.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_review_authorization_envelope_post_scan_hold_gate`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_review_authorization_envelope_post_scan_hold_gate=...runtime_sop_e2e=repair_required`。
@@ -660,7 +660,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-187
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-review-authorization-envelope-precheck.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 review authorization envelope precheck，输出 `authorization_envelope_items=1`、`authorization_envelope_blocked=1`、`authorization_envelope_allowed=0`、`blocked_reasons=9`、`submitted_envelopes=0`、`valid_envelopes=0`、`manual_authorized=0`、`recipient_identity_confirmed=0`、`dispatch_channel_confirmed=0`、`submitted_files_found=0`、`structure_valid_records=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`manual_review=0`、`waes_review=0`、`runtime_intake=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-precheck.md`：人类可读 review authorization envelope precheck 说明，明确现代精工 OEM 当前运行态和葛化自建工厂投产后运行态均使用 GFIS 运行层；缺真实 source-of-record、人工授权 envelope、接收人身份、分发通道、KDS backlink 和 WAES evidence candidate 时，不允许创建 review queue、manual review、WAES review、runtime intake 或 verified artifact。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-review-authorization-envelope-precheck.md`：人类可读 review authorization envelope precheck 说明，明确现代精工 OEM 当前运行态和葛化自建工厂投产后运行态均使用 GFIS 运行层；缺真实 source-of-record、人工授权 envelope、接收人身份、分发通道、KDS backlink 和 WAME evidence candidate 时，不允许创建 review queue、manual review、WAME review、runtime intake 或 verified artifact。
 - `scripts/build_gfis_customer_requirement_platform_order_review_authorization_envelope_precheck.py` / `scripts/validate_gfis_customer_requirement_platform_order_review_authorization_envelope_precheck.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_review_authorization_envelope_precheck`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_review_authorization_envelope_precheck=...runtime_sop_e2e=repair_required`。
@@ -668,7 +668,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-186
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-review-precheck-skeleton.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 source-of-record review precheck skeleton，输出 `review_precheck_items=1`、`review_precheck_blocked=1`、`review_precheck_allowed=0`、`blocked_reasons=8`、`submitted_files_found=0`、`structure_valid_records=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`manual_review=0`、`waes_review=0`、`runtime_intake=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-review-precheck-skeleton.md`：人类可读 review precheck skeleton 说明，明确无真实客户订单原件或平台订单回执时，不允许创建 review queue、manual review、WAES review、runtime intake 或 verified artifact。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-review-precheck-skeleton.md`：人类可读 review precheck skeleton 说明，明确无真实客户订单原件或平台订单回执时，不允许创建 review queue、manual review、WAME review、runtime intake 或 verified artifact。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_review_precheck_skeleton.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_review_precheck_skeleton.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_review_precheck_skeleton`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_review_precheck_skeleton=...runtime_sop_e2e=repair_required`。
@@ -676,7 +676,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-185
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-post-receipt-quarantine-release-hard-stop.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的 source-of-record 接收后隔离/放行尝试 hard-stop 门禁，输出 `attempted_release=1`、`hard_stops=1`、`hard_stop_reasons=8`、`submitted_files_found=0`、`structure_valid_records=0`、`quarantine_records=0`、`release_allowed=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-post-receipt-quarantine-release-hard-stop.md`：人类可读 hard-stop 说明，明确无真实客户订单原件或平台订单回执时，不允许创建 review queue、runtime intake、WAES review 或 verified artifact。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-post-receipt-quarantine-release-hard-stop.md`：人类可读 hard-stop 说明，明确无真实客户订单原件或平台订单回执时，不允许创建 review queue、runtime intake、WAME review 或 verified artifact。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_post_receipt_quarantine_release_hard_stop=...runtime_sop_e2e=repair_required`。
@@ -685,7 +685,7 @@ superseded_by: []
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-negative-fixture-guard.json`：第一个运行对象族 `CustomerRequirementOrPlatformOrder` 的真实 source-of-record 负例拒收门禁，输出 `negative_fixture_count=6`、`rejected_fixture_count=6`、`accepted_fixture_count=0`、`runtime_primary_key_ready=0`、`runtime_primary_key_missing=1`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`、`runtime_sop_e2e=repair_required`。
 - `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-negative-fixture-guard.md`：人类可读负例拒收说明，明确报价单、合同审阅稿、KDS 候选、用户口述、Loop 文档和 GFIS Demo 均不得作为客户订单/平台订单 source-of-record。
-- `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/rejected-examples/*.customer-requirement-platform-order.source-record.json`：6 个拒收样例；仅用于污染防护验证，不进入真实接收、review queue、runtime intake、WAES review 或 verified artifact。
+- `docs/harness/sop-e2e/intake-submissions/runtime-primary-key-source-records/customer-requirement-or-platform-order/rejected-examples/*.customer-requirement-platform-order.source-record.json`：6 个拒收样例；仅用于污染防护验证，不进入真实接收、review queue、runtime intake、WAME review 或 verified artifact。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_negative_fixture_guard.py` / `scripts/validate_gfis_customer_requirement_platform_order_source_record_negative_fixture_guard.py`：本轮生成与校验脚本。
 - `gcfis_custom/gcfis_custom/api.py`：新增只读 API `get_customer_requirement_platform_order_source_record_negative_fixture_guard`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：新增主门禁输出 `runtime_customer_requirement_platform_order_source_record_negative_fixture_guard=...runtime_sop_e2e=repair_required`。
@@ -723,13 +723,13 @@ superseded_by: []
 | dispatch confirmation receiving file scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-confirmation-receiving-file-scan.md` | yes | 真实扫描派发确认接收目录；当前只发现 README，未发现任何 `.dispatch-confirmation.json` 文件 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_file_scan.py` | yes | 读取 178 轮 schema/readiness precheck，扫描 62 个 expected confirmation slot |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_file_scan.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_file_scan=pass ... state=dispatch_confirmation_receiving_file_scan_no_real_confirmations runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增只读 API；锁定现代精工 OEM 当前运行态和葛化自建工厂投产后运行态，不写数据库、不写 KDS、不写 WAES、不释放 downstream intake |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增只读 API；锁定现代精工 OEM 当前运行态和葛化自建工厂投产后运行态，不写数据库、不写 KDS、不写 WAME、不释放 downstream intake |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_file_scan=dispatch_confirmation_receiving_file_scan_no_real_confirmations:...` 且 `gfis_runtime_sop_e2e=repair_required` |
 | Demo E2E | `npm run test:e2e` | partial | 26 passed；仅代表 GFIS Demo/front-end regression `pass_demo_only`，不代表运行层 SOP E2E 通过 |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-179.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只真实扫描派发确认接收目录；不发送、不写外部系统、不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只真实扫描派发确认接收目录；不发送、不写外部系统、不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 - GFIS 是现代精工 OEM 代加工生产期间和葛化自建工厂投产后共同使用的运行时系统；GFIS Demo 仅作为展示、培训和前端回归，不作为 SOP 主体。
 
 ## GFIS-RUNTIME-SOP-E2E-178
@@ -741,13 +741,13 @@ superseded_by: []
 | receiving README | `docs/harness/sop-e2e/intake-submissions/runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-confirmations/README.md` | yes | README 仅定义接收规则，不代表真实派发授权、接收人确认、通道确认、请求确认或 owner response 已取得 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck.py` | yes | 读取 176 轮负例拒收门禁，生成 62 个 expected confirmation slot 的接收 schema/readiness precheck |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck=pass ... state=dispatch_confirmation_receiving_schema_precheck_ready_no_real_confirmations runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增只读 API；不写数据库、不写 KDS、不写 WAES、不释放 downstream intake |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增只读 API；不写数据库、不写 KDS、不写 WAME、不释放 downstream intake |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_receiving_schema_precheck=dispatch_confirmation_receiving_schema_precheck_ready_no_real_confirmations:...` 且 `gfis_runtime_sop_e2e=repair_required` |
 | Demo E2E | `npm run test:e2e` | partial | 26 passed；仅代表 GFIS Demo/front-end regression `pass_demo_only`，不代表运行层 SOP E2E 通过 |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-178.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立派发确认接收 schema/readiness precheck；不发送、不写外部系统、不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立派发确认接收 schema/readiness precheck；不发送、不写外部系统、不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-177
 
@@ -760,22 +760,22 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-177.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=5`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只固化运行层定位主文档防污染门禁；不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只固化运行层定位主文档防污染门禁；不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-176
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | dispatch confirmation negative fixture guard JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.json` | yes | `objects=12 proof_slots=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 dispatch_preflight_items=62 dispatch_preflight_blocked=62 dispatch_authorizations_found=0 dispatch_recipients_confirmed=0 dispatch_channels_confirmed=0 dispatch_allowed=0 confirmation_slots=62 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=62 negative_fixtures=6 rejected=6 accepted=0 owner_responses=0 owner_response_allowed=0 submission_packages_found=0 valid_submission_packages=0 submission_package_allowed=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` |
-| dispatch confirmation negative fixture guard Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.md` | yes | 6 类派发确认负例全部拒收；不打开 owner response、submission package、runtime intake、WAES review 或 verified artifact |
+| dispatch confirmation negative fixture guard Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-confirmation-negative-fixture-guard.md` | yes | 6 类派发确认负例全部拒收；不打开 owner response、submission package、runtime intake、WAME review 或 verified artifact |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_negative_fixture_guard.py` | yes | 读取 175 轮 dispatch confirmation gap scan，生成 6 类负例拒收门禁 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_negative_fixture_guard.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_negative_fixture_guard=pass objects=12 proof_slots=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 dispatch_preflight_items=62 dispatch_preflight_blocked=62 dispatch_authorizations_found=0 dispatch_recipients_confirmed=0 dispatch_channels_confirmed=0 dispatch_allowed=0 confirmation_slots=62 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=62 negative_fixtures=6 rejected=6 accepted=0 owner_responses=0 owner_response_allowed=0 submission_packages_found=0 valid_submission_packages=0 submission_package_allowed=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_confirmation_negative_fixtures_rejected runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_negative_fixture_guard=dispatch_confirmation_negative_fixtures_rejected:...` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-176.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立派发确认负例拒收门禁；不发送、不写外部系统、不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立派发确认负例拒收门禁；不发送、不写外部系统、不创建派发确认、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-175
 
@@ -785,12 +785,12 @@ superseded_by: []
 | dispatch confirmation gap scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-confirmation-gap-scan.md` | yes | 62 个批准请求派发确认槽位已建立并扫描；当前无真实派发授权确认、接收人确认、通道确认、请求确认或 owner response |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_gap_scan.py` | yes | 读取 174 轮 dispatch authorization preflight，扫描确认接收目录，生成 62 个 open confirmation gap |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_gap_scan.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_gap_scan=pass objects=12 proof_slots=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 dispatch_preflight_items=62 dispatch_preflight_blocked=62 dispatch_authorizations_found=0 dispatch_recipients_confirmed=0 dispatch_channels_confirmed=0 dispatch_allowed=0 confirmation_slots=62 confirmation_files_found=0 valid_confirmations=0 missing_confirmations=62 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_confirmation_gap_scan_open_no_confirmations runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_gap_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_gap_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_confirmation_gap_scan=dispatch_confirmation_gap_scan_open_no_confirmations:objects=12:proof_slots=62:request_items=62:request_items_prepared=62:request_items_authorized=0:request_items_dispatched=0:confirmation_slots=62:confirmation_files_found=0:valid_confirmations=0:missing_confirmations=62:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-175.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只扫描 release override approval request 派发确认缺口；不发送、不写外部系统、不创建派发授权、接收人确认、通道确认、请求确认、owner response、人工批准文件、授权信封、handoff acknowledgement、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只扫描 release override approval request 派发确认缺口；不发送、不写外部系统、不创建派发授权、接收人确认、通道确认、请求确认、owner response、人工批准文件、授权信封、handoff acknowledgement、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-174
 
@@ -800,12 +800,12 @@ superseded_by: []
 | release override approval request dispatch authorization preflight Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-dispatch-authorization-preflight.md` | yes | 62 个补证请求项已进入派发授权预检；全部缺派发授权、接收人确认、派发通道确认、请求确认和 owner response，继续不发送、不写外部系统 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight.py` | yes | 读取 173 轮 request package，生成 62 个 dispatch preflight blocked 项 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 approval_slots=62 approval_files_found=0 valid_approval_files=0 invalid_approval_files=0 missing_approval_files=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 request_acknowledgements_found=0 request_owner_responses=0 dispatch_preflight_items=62 dispatch_preflight_blocked=62 dispatch_authorizations_found=0 dispatch_recipients_confirmed=0 dispatch_channels_confirmed=0 dispatch_allowed=0 manual_override_approval_valid=0 release_override_allowed=0 release_override_review_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight_blocked runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight=dispatch_authorization_envelope_release_override_approval_request_dispatch_authorization_preflight_blocked:objects=12:proof_slots=62:request_items=62:request_items_prepared=62:request_items_authorized=0:request_items_dispatched=0:dispatch_preflight_items=62:dispatch_preflight_blocked=62:dispatch_authorizations_found=0:dispatch_recipients_confirmed=0:dispatch_channels_confirmed=0:dispatch_allowed=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-174.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 release override approval request 派发授权预检；不发送、不写外部系统、不创建派发授权、接收人确认、通道确认、请求确认、owner response、人工批准文件、授权信封、handoff acknowledgement、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 release override approval request 派发授权预检；不发送、不写外部系统、不创建派发授权、接收人确认、通道确认、请求确认、owner response、人工批准文件、授权信封、handoff acknowledgement、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-173
 
@@ -815,12 +815,12 @@ superseded_by: []
 | release override approval request package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approval-request-package.md` | yes | 62 个缺失真实人工批准文件槽位已形成内部补证请求项；请求包未授权、未派发、无确认、无 owner response，不得替代真实批准文件 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package.py` | yes | 读取 172 轮 approval intake scan，生成 62 个 prepared_not_dispatched 补证请求项 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 approval_slots=62 approval_files_found=0 valid_approval_files=0 invalid_approval_files=0 missing_approval_files=62 request_items=62 request_items_prepared=62 request_items_authorized=0 request_items_dispatched=0 request_acknowledgements_found=0 request_owner_responses=0 manual_override_approval_valid=0 release_override_allowed=0 release_override_review_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_override_approval_requests_prepared_not_dispatched runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_request_package=dispatch_authorization_envelope_release_override_approval_requests_prepared_not_dispatched:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:attempted_release=62:hard_stops=62:blockers=434:precheck_items=62:blocked=62:open_holds=62:negative_fixtures=6:rejected=6:accepted=0:approval_slots=62:approval_files_found=0:valid_approval_files=0:invalid_approval_files=0:missing_approval_files=62:request_items=62:request_items_prepared=62:request_items_authorized=0:request_items_dispatched=0:request_acknowledgements_found=0:request_owner_responses=0:manual_override_approval_valid=0:release_override_allowed=0:release_override_review_allowed=0:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-173.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只形成 release override approval 内部补证请求包；不发送、不写外部系统、不创建人工批准文件、授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只形成 release override approval 内部补证请求包；不发送、不写外部系统、不创建人工批准文件、授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-172
 
@@ -831,12 +831,12 @@ superseded_by: []
 | receiving directory README | `docs/harness/sop-e2e/intake-submissions/runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-approvals/README.md` | yes | 明确 GFIS Demo、KDS 候选、用户口述、弱邮件、未核验 accepted/integrated 和 README 本身不得作为批准文件 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_intake_scan.py` | yes | 读取 171 轮负例拒收门禁，扫描真实批准接收目录并生成 62 个缺失批准槽位 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_intake_scan.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_intake_scan=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 approval_slots=62 approval_files_found=0 valid_approval_files=0 invalid_approval_files=0 missing_approval_files=62 manual_override_approval_valid=0 release_override_allowed=0 release_override_review_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_override_approval_intake_blocked_no_valid_approvals runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_intake_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_intake_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_approval_intake_scan=dispatch_authorization_envelope_release_override_approval_intake_blocked_no_valid_approvals:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:attempted_release=62:hard_stops=62:blockers=434:precheck_items=62:blocked=62:open_holds=62:negative_fixtures=6:rejected=6:accepted=0:approval_slots=62:approval_files_found=0:valid_approval_files=0:invalid_approval_files=0:missing_approval_files=62:manual_override_approval_valid=0:release_override_allowed=0:release_override_review_allowed=0:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-172.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=8`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只扫描 release override approval 接收目录并建立只读阻断门禁；不创建人工批准文件、授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只扫描 release override approval 接收目录并建立只读阻断门禁；不创建人工批准文件、授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-171
 
@@ -846,27 +846,27 @@ superseded_by: []
 | dispatch authorization envelope release override negative fixture guard Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-override-negative-fixture-guard.md` | yes | 读取 170 轮 62 个 release attempt hard-stop audit 并拒收 6 类越权放行负例；GFIS Demo、KDS 候选、用户口述、弱授权邮件、未核验 accepted/integrated 声明和缺交接确认的局部提交包均不得绕过派发授权信封 release precheck |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard.py` | yes | 读取 170 轮 hard-stop audit 生成 6 类 release override 负例拒收门禁 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 negative_fixtures=6 rejected=6 accepted=0 release_override_allowed=0 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_override_negative_fixtures_rejected runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_override_negative_fixture_guard=dispatch_authorization_envelope_release_override_negative_fixtures_rejected:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:attempted_release=62:hard_stops=62:blockers=434:precheck_items=62:blocked=62:open_holds=62:negative_fixtures=6:rejected=6:accepted=0:release_override_allowed=0:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-171.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 6 类 release override 负例拒收门禁；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 6 类 release override 负例拒收门禁；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-170
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | dispatch authorization envelope release attempt hard-stop audit JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-attempt-hard-stop-audit.json` | yes | `objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` |
-| dispatch authorization envelope release attempt hard-stop audit Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-attempt-hard-stop-audit.md` | yes | 读取 169 轮 62 个 blocked hold release precheck 并审计 62 项 release/review/runtime/WAES 尝试；现代精工 OEM 当前运行、葛化自有工厂投产后运行均使用同一 GFIS 运行时系统；补齐有效派发授权信封、人工授权、接收人、派发通道、source-of-record 锚点、handoff acknowledgement 和 submission package 前，全部尝试必须 hard-stop |
+| dispatch authorization envelope release attempt hard-stop audit Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-release-attempt-hard-stop-audit.md` | yes | 读取 169 轮 62 个 blocked hold release precheck 并审计 62 项 release/review/runtime/WAME 尝试；现代精工 OEM 当前运行、葛化自有工厂投产后运行均使用同一 GFIS 运行时系统；补齐有效派发授权信封、人工授权、接收人、派发通道、source-of-record 锚点、handoff acknowledgement 和 submission package 前，全部尝试必须 hard-stop |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_attempt_hard_stop_audit.py` | yes | 读取 169 轮 hold release precheck 生成 62 项 release attempt hard-stop audit |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_attempt_hard_stop_audit.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_attempt_hard_stop_audit=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 attempted_release=62 hard_stops=62 blockers=434 precheck_items=62 blocked=62 open_holds=62 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_release_attempt_hard_stopped_by_blocked_prechecks runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_attempt_hard_stop_audit` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_attempt_hard_stop_audit` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_release_attempt_hard_stop_audit=dispatch_authorization_envelope_release_attempt_hard_stopped_by_blocked_prechecks:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:attempted_release=62:hard_stops=62:blockers=434:precheck_items=62:blocked=62:open_holds=62:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-170.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只审计 62 项 release/review/runtime/WAES 尝试并全部 hard-stop；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只审计 62 项 release/review/runtime/WAME 尝试并全部 hard-stop；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-169
 
@@ -876,27 +876,27 @@ superseded_by: []
 | dispatch authorization envelope hold release precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-hold-release-precheck.md` | yes | 读取 168 轮 62 个 open hold 并生成 62 项 release precheck；现代精工 OEM 当前运行、葛化自有工厂投产后运行均使用同一 GFIS 运行时系统；补齐有效派发授权信封、人工授权、接收人、派发通道、source-of-record 锚点、handoff acknowledgement 和 submission package 前，全部 release precheck 继续 blocked |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_hold_release_precheck.py` | yes | 读取 168 轮 post-scan hold gate 生成 62 项 release precheck |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_hold_release_precheck.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_hold_release_precheck=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 items=62 blocked=62 open_holds=62 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_hold_release_blocked_by_open_holds runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_hold_release_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_hold_release_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_hold_release_precheck=dispatch_authorization_envelope_hold_release_blocked_by_open_holds:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:items=62:blocked=62:open_holds=62:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-169.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 62 个 open hold 转成 62 项 release precheck；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只把 62 个 open hold 转成 62 项 release precheck；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-168
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | dispatch authorization envelope post-scan hold gate JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-post-scan-hold-gate.json` | yes | `objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 holds=62 open=62 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` |
-| dispatch authorization envelope post-scan hold gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-post-scan-hold-gate.md` | yes | 将 167 轮真实扫描出的 62 个缺失派发授权信封转换为 62 个 open hold；补齐有效授权信封、人工授权、接收人、派发通道、source-of-record 锚点、handoff acknowledgement 和 submission package 前，不允许 collection、quarantine、review queue、runtime intake、WAES review 或 verified artifact |
+| dispatch authorization envelope post-scan hold gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-post-scan-hold-gate.md` | yes | 将 167 轮真实扫描出的 62 个缺失派发授权信封转换为 62 个 open hold；补齐有效授权信封、人工授权、接收人、派发通道、source-of-record 锚点、handoff acknowledgement 和 submission package 前，不允许 collection、quarantine、review queue、runtime intake、WAME review 或 verified artifact |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_post_scan_hold_gate.py` | yes | 读取 167 轮真实扫描结果生成 post-scan hold gate |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_post_scan_hold_gate.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_post_scan_hold_gate=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 holds=62 open=62 valid_envelopes=0 collection_open=0 handoff_acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 quarantine_allowed=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_post_scan_hold_open runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_post_scan_hold_gate` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_post_scan_hold_gate` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_post_scan_hold_gate=dispatch_authorization_envelope_post_scan_hold_open:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:holds=62:open=62:valid_envelopes=0:collection_open=0:handoff_acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:quarantine_allowed=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-168.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 62 个缺失 dispatch authorization envelope 转成 62 个 open hold；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只把 62 个缺失 dispatch authorization envelope 转成 62 个 open hold；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-167
 
@@ -906,12 +906,12 @@ superseded_by: []
 | dispatch authorization envelope submission scanner Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-submission-scanner.md` | yes | 真实扫描 62 个预期派发授权信封路径；目录中 6 个 rejected examples 不计入真实提交，当前无真实派发授权信封、人工授权、接收人确认、派发通道确认、source-of-record 锚点或交接确认 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_submission_scanner.py` | yes | 读取 165 轮接收预检和 166 轮负例拒收门禁，真实扫描 dispatch authorization envelope 接收目录 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_submission_scanner.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_submission_scanner=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 accepted_envelopes=0 rejected_envelopes=0 unexpected_envelopes=0 missing_envelopes=62 rejected_examples_scanned=6 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_submission_scan_no_valid_envelopes runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_submission_scanner` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_submission_scanner` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_submission_scanner=dispatch_authorization_envelope_submission_scan_no_valid_envelopes:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:submitted_envelopes=0:structure_valid_envelopes=0:manual_authorized_envelopes=0:recipient_confirmed_envelopes=0:dispatch_channel_confirmed_envelopes=0:accepted_envelopes=0:rejected_envelopes=0:unexpected_envelopes=0:missing_envelopes=62:rejected_examples_scanned=6:dispatch_allowed=0:acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-167.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只真实扫描 owner response submission package dispatch authorization envelope 接收目录；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只真实扫描 owner response submission package dispatch authorization envelope 接收目录；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-166
 
@@ -922,12 +922,12 @@ superseded_by: []
 | rejected negative examples | `docs/harness/sop-e2e/intake-submissions/runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelopes/rejected-examples/*.dispatch-authorization-envelope.json` | yes | 6 个负例均不计入真实派发授权信封提交 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard.py` | yes | 读取 165 轮派发授权信封接收预检，生成 6 个 rejected examples 和负例拒收门禁 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard=pass negative_fixtures=6 rejected=6 accepted=0 objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=dispatch_authorization_envelope_negative_fixtures_rejected runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_negative_fixture_guard=dispatch_authorization_envelope_negative_fixtures_rejected:negative_fixtures=6:rejected=6:accepted=0:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:submitted_envelopes=0:structure_valid_envelopes=0:manual_authorized_envelopes=0:recipient_confirmed_envelopes=0:dispatch_channel_confirmed_envelopes=0:dispatch_allowed=0:acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-166.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=12`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response submission package dispatch authorization envelope 负例拒收门禁；不创建真实授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response submission package dispatch authorization envelope 负例拒收门禁；不创建真实授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-165
 
@@ -937,12 +937,12 @@ superseded_by: []
 | dispatch authorization envelope intake precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-dispatch-authorization-envelope-intake-precheck.md` | yes | 真实建立 62 个预期派发授权信封接收预检；当前没有真实授权信封、人工授权、接收人确认、派发通道确认、交接确认或有效 submission package |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck.py` | yes | 读取 164 轮 handoff acknowledgement 缺口扫描，生成派发授权信封接收预检 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 expected_dispatch_authorization_envelopes=62 submitted_envelopes=0 structure_valid_envelopes=0 manual_authorized_envelopes=0 recipient_confirmed_envelopes=0 dispatch_channel_confirmed_envelopes=0 dispatch_allowed=0 acknowledgements_found=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_dispatch_authorization_envelope_intake_precheck_blocked runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_dispatch_authorization_envelope_intake_precheck=owner_response_submission_package_dispatch_authorization_envelope_intake_precheck_blocked:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:expected_dispatch_authorization_envelopes=62:submitted_envelopes=0:structure_valid_envelopes=0:manual_authorized_envelopes=0:recipient_confirmed_envelopes=0:dispatch_channel_confirmed_envelopes=0:dispatch_allowed=0:acknowledgements_found=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-165.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response submission package dispatch authorization envelope 接收预检；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response submission package dispatch authorization envelope 接收预检；不创建授权信封、handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-164
 
@@ -952,12 +952,12 @@ superseded_by: []
 | owner response submission package handoff acknowledgement gap scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-handoff-acknowledgement-gap-scan.md` | yes | 真实扫描 62 个预期 handoff acknowledgement 文件；当前没有真实交接确认、人工分发授权、接收人身份确认、owner response、live proof 或有效 submission package |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_handoff_acknowledgement_gap_scan.py` | yes | 读取 162 轮放行尝试硬停止审计和 163 轮负例拒收门禁，生成交接确认缺口扫描 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_handoff_acknowledgement_gap_scan.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_handoff_acknowledgement_gap_scan=pass objects=12 proof_slots=62 expected_submission_packages=62 expected_acknowledgements=62 acknowledgements_found=0 valid_acknowledgements=0 open_gaps=62 acknowledged_handoffs=0 dispatch_confirmed=0 owner_responses=0 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_handoff_acknowledgement_gap_open runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_handoff_acknowledgement_gap_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_handoff_acknowledgement_gap_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_handoff_acknowledgement_gap_scan=owner_response_submission_package_handoff_acknowledgement_gap_open:objects=12:proof_slots=62:expected_submission_packages=62:expected_acknowledgements=62:acknowledgements_found=0:valid_acknowledgements=0:open_gaps=62:acknowledged_handoffs=0:dispatch_confirmed=0:owner_responses=0:submission_packages_found=0:valid_submission_packages=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-164.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response submission package handoff acknowledgement 缺口扫描；不创建 handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response submission package handoff acknowledgement 缺口扫描；不创建 handoff acknowledgement、owner response、submission package、live proof、运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-163
 
@@ -968,12 +968,12 @@ superseded_by: []
 | rejected negative examples | `docs/harness/sop-e2e/intake-submissions/runtime-document-evidence-slot-owner-response-submission-packages/rejected-examples/*.submission-package.json` | yes | 6 个负例均为 `negative_rejected_example`，`accepted=false`、`integrated=false`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0` |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_negative_fixture_guard.py` | yes | 读取 162 轮放行尝试硬停止审计，生成负例拒收门禁和 6 个 rejected examples |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_negative_fixture_guard.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_negative_fixture_guard=pass negative_fixtures=6 rejected=6 accepted=0 objects=12 proof_slots=62 expected_submission_packages=62 attempted_release=62 hard_stops=62 submission_packages_found=0 valid_submission_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_negative_fixtures_rejected runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_negative_fixture_guard=owner_response_submission_package_negative_fixtures_rejected:negative_fixtures=6:rejected=6:accepted=0:objects=12:proof_slots=62:expected_submission_packages=62:attempted_release=62:hard_stops=62:submission_packages_found=0:valid_submission_packages=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-163.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=12`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response submission package 负例拒收门禁；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response submission package 负例拒收门禁；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-162
 
@@ -983,29 +983,29 @@ superseded_by: []
 | owner response submission package release attempt hard-stop audit Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-release-attempt-hard-stop-audit.md` | yes | 审计 62 个预期提交包放行尝试；因真实提交包、source-of-record live proof、人工授权 envelope、防污染声明和隔离复核均缺失，全部 hard-stop |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_release_attempt_hard_stop_audit.py` | yes | 读取 161 轮隔离扫描，把 62 个提交包路径转为放行尝试硬停止审计 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_release_attempt_hard_stop_audit.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_release_attempt_hard_stop_audit=pass objects=12 proof_slots=62 expected_submission_packages=62 attempted_release=62 hard_stops=62 blockers=372 submission_packages_found=0 structure_valid_submission_packages=0 quarantine_candidates=0 quarantined_packages=0 accepted_packages=0 rejected_packages=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_release_attempt_hard_stopped_no_submission_packages runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_release_attempt_hard_stop_audit` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_release_attempt_hard_stop_audit` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_release_attempt_hard_stop_audit=owner_response_submission_package_release_attempt_hard_stopped_no_submission_packages:objects=12:proof_slots=62:expected_submission_packages=62:attempted_release=62:hard_stops=62:blockers=372:submission_packages_found=0:structure_valid_submission_packages=0:quarantine_candidates=0:quarantined_packages=0:accepted_packages=0:rejected_packages=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | Demo E2E regression | `npm run test:e2e` | yes | 26 passed；仅作为 GFIS Demo 展示/前端回归证据，不替代运行层 SOP E2E |
 | diff check | `git diff --check -- .` | yes | pass |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-162.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response submission package 放行尝试硬停止审计；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response submission package 放行尝试硬停止审计；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-161
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | owner response submission package quarantine scanner JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-quarantine-scanner.json` | yes | `objects=12 proof_slots=62 expected_submission_packages=62 submission_packages_found=0 structure_valid_submission_packages=0 quarantine_candidates=0 quarantined_packages=0 accepted_packages=0 rejected_packages=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` |
-| owner response submission package quarantine scanner Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-quarantine-scanner.md` | yes | 扫描 62 个预期提交包路径；当前无 submission package，不能进入隔离复核、review queue、runtime intake 或 WAES review |
+| owner response submission package quarantine scanner Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-quarantine-scanner.md` | yes | 扫描 62 个预期提交包路径；当前无 submission package，不能进入隔离复核、review queue、runtime intake 或 WAME review |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner.py` | yes | 读取 160 轮提交包预检，扫描提交包结构、source-of-record 文件、SHA256、人工授权 envelope 和防污染声明 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner=pass objects=12 proof_slots=62 expected_submission_packages=62 submission_packages_found=0 structure_valid_submission_packages=0 quarantine_candidates=0 quarantined_packages=0 accepted_packages=0 rejected_packages=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_quarantine_blocked_no_submission_packages runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_quarantine_scanner=owner_response_submission_package_quarantine_blocked_no_submission_packages:objects=12:proof_slots=62:expected_submission_packages=62:submission_packages_found=0:structure_valid_submission_packages=0:quarantine_candidates=0:quarantined_packages=0:accepted_packages=0:rejected_packages=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-161.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response submission package 隔离扫描；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response submission package 隔离扫描；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-160
 
@@ -1015,12 +1015,12 @@ superseded_by: []
 | owner response submission package precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-response-submission-package-precheck.md` | yes | 定义 62 个 owner response 提交包接收路径和必填字段；用户口述、合同审阅稿、GFIS Demo、KDS 候选和 Loop 生成文件均不能替代 source-of-record live proof |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_precheck.py` | yes | 读取 159 轮转换门禁，生成 62 个提交包预检项 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_precheck.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_precheck=pass objects=12 proof_slots=62 transition_items=62 expected_submission_packages=62 submission_packages_found=0 valid_submission_packages=0 invalid_submission_packages=0 accepted_packages=0 rejected_packages=0 allowed_transitions=0 blocked_transitions=62 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_submission_package_precheck_blocked_no_submission_packages runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_response_submission_package_precheck=owner_response_submission_package_precheck_blocked_no_submission_packages:objects=12:proof_slots=62:transition_items=62:expected_submission_packages=62:submission_packages_found=0:valid_submission_packages=0:invalid_submission_packages=0:accepted_packages=0:rejected_packages=0:allowed_transitions=0:blocked_transitions=62:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-160.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=11`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response 提交包接收预检；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 owner response 提交包接收预检；不创建 owner response、不创建 submission package、不创建 live proof、不创建运行层业务单据、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-159
 
@@ -1030,12 +1030,12 @@ superseded_by: []
 | runtime document evidence slot transition gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-transition-gate.md` | yes | 将 62 个 owner response 到 live proof 槽位的转换全部保持阻断；现代精工 OEM 当前代加工生产与葛化未来自建工厂投产后均使用同一 GFIS 运行层口径 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_transition_gate.py` | yes | 读取 158 轮 owner response 文件扫描，生成槽位转换门禁 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_transition_gate.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_transition_gate=pass objects=12 proof_slots=62 handoff_items=62 expected_owner_response_files=62 transitions=62 allowed_transitions=0 blocked_transitions=62 owner_response_files_found=0 valid_owner_responses=0 invalid_owner_responses=0 eligible_for_live_proof_slot_transition=0 submitted_slot_files=0 live_proof_files_found=0 complete_slots=0 missing_slots=62 ready_objects=0 blocked_objects=12 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=runtime_document_evidence_slot_transition_gate_blocked_no_owner_responses runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_transition_gate` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_transition_gate` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_transition_gate=runtime_document_evidence_slot_transition_gate_blocked_no_owner_responses:objects=12:proof_slots=62:handoff_items=62:expected_owner_response_files=62:transitions=62:allowed_transitions=0:blocked_transitions=62:owner_response_files_found=0:valid_owner_responses=0:invalid_owner_responses=0:eligible_for_live_proof_slot_transition=0:submitted_slot_files=0:live_proof_files_found=0:complete_slots=0:missing_slots=62:ready_objects=0:blocked_objects=12:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-159.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 owner response 到 live proof 槽位的转换门禁；不创建 owner response、不创建 live proof、不创建 FactoryOrder、WorkOrder、DeliveryNote、POD、金融事实或 KDS/WAES 回指事实，也不升级 accepted/integrated。
+- 本轮只建立 owner response 到 live proof 槽位的转换门禁；不创建 owner response、不创建 live proof、不创建 FactoryOrder、WorkOrder、DeliveryNote、POD、金融事实或 KDS/WAME 回指事实，也不升级 accepted/integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-156
 
@@ -1045,12 +1045,12 @@ superseded_by: []
 | runtime document evidence slot owner handoff package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-evidence-slot-owner-handoff-package.md` | yes | 将 62 个缺失 live proof 槽位登记为责任项目/角色 handoff；现代精工 OEM 当前代加工生产与葛化未来自建工厂投产后均使用同一 GFIS 运行层口径 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_handoff_package.py` | yes | 读取 155 轮接收结构，将 62 个缺失槽位转为 open owner handoff |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_owner_handoff_package.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_owner_handoff_package=pass objects=12 proof_slots=62 handoff_items=62 open_handoffs=62 completed_handoffs=0 owner_responses=0 submitted_slot_files=0 complete_slots=0 missing_slots=62 ready_objects=0 blocked_objects=12 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=runtime_document_evidence_slot_owner_handoff_open_no_live_proofs runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_handoff_package` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_handoff_package` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | partial | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_owner_handoff_package=runtime_document_evidence_slot_owner_handoff_open_no_live_proofs:objects=12:proof_slots=62:handoff_items=62:open_handoffs=62:completed_handoffs=0:owner_responses=0:submitted_slot_files=0:complete_slots=0:missing_slots=62:ready_objects=0:blocked_objects=12:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-156.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 62 个缺失 live proof 槽位转为责任方 handoff；不发送外部通知、不创建真实凭证、不进入 review queue/runtime intake/WAES review/verified，也不升级 accepted/integrated。
+- 本轮只把 62 个缺失 live proof 槽位转为责任方 handoff；不发送外部通知、不创建真实凭证、不进入 review queue/runtime intake/WAME review/verified，也不升级 accepted/integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-155
 
@@ -1061,12 +1061,12 @@ superseded_by: []
 | runtime document evidence slot receiving READMEs | `docs/harness/sop-e2e/intake-submissions/runtime-document-evidence-slots/*/README.md` | yes | 12 个对象目录均已建立接收说明；README 和空目录不代表真实运行层凭证已取得 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_evidence_slot_receiving_structure.py` | yes | 读取 154 轮槽位 schema，建立/扫描 12 个对象接收目录和 62 个 expected live proof 文件 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_evidence_slot_receiving_structure.py` | yes | `liaoning_yuanhang_runtime_document_evidence_slot_receiving_structure=pass objects=12 proof_slots=62 object_directories_existing=12 object_readmes=12 submitted_slot_files=0 complete_slots=0 missing_slots=62 ready_objects=0 blocked_objects=12 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=runtime_document_evidence_slot_receiving_structure_ready_no_live_proofs runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_receiving_structure` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_evidence_slot_receiving_structure` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_evidence_slot_receiving_structure=runtime_document_evidence_slot_receiving_structure_ready_no_live_proofs:objects=12:proof_slots=62:object_directories_existing=12:object_readmes=12:submitted_slot_files=0:complete_slots=0:missing_slots=62:ready_objects=0:blocked_objects=12:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-155.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=22`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立 62 个 live proof 槽位的接收结构和只读扫描门禁，不创建 FactoryOrder、WorkOrder、DeliveryNote、POD、金融事实、KDS/WAES 回指事实或 accepted/integrated 状态。
+- 本轮只建立 62 个 live proof 槽位的接收结构和只读扫描门禁，不创建 FactoryOrder、WorkOrder、DeliveryNote、POD、金融事实、KDS/WAME 回指事实或 accepted/integrated 状态。
 
 ## GFIS-RUNTIME-SOP-E2E-153
 
@@ -1076,12 +1076,12 @@ superseded_by: []
 | runtime document creation preflight Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-document-creation-preflight.md` | yes | 将合同链 12 阶段输入映射转成 12 个 GFIS 运行对象创建前置阻断；现代精工 OEM 当前承载和葛化未来自建工厂承载均适用同一门禁 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_document_creation_preflight.py` | yes | 读取合同链 SOP 阶段输入映射，生成运行层单据创建预检 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_document_creation_preflight.py` | yes | `liaoning_yuanhang_runtime_document_creation_preflight=pass objects=12 blocked=12 allowed=0 factory_order_allowed=0 work_order_allowed=0 delivery_note_allowed=0 pod_allowed=0 finance_allowed=0 evidence_backlink_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=runtime_document_creation_preflight_blocked_waiting_live_proofs runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_creation_preflight` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_document_creation_preflight` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_document_creation_preflight=runtime_document_creation_preflight_blocked_waiting_live_proofs:objects=12:blocked=12:allowed=0:factory_order_allowed=0:work_order_allowed=0:delivery_note_allowed=0:pod_allowed=0:finance_allowed=0:evidence_backlink_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-153.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立运行层单据创建前置阻断，不创建运行事实，不释放 review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated。
+- 本轮只建立运行层单据创建前置阻断，不创建运行事实，不释放 review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-152
 
@@ -1091,12 +1091,12 @@ superseded_by: []
 | contract chain SOP stage input map Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-sop-stage-input-map.md` | yes | 将 8 个合同/方案 Word 源文件映射到 GFIS SOP 12 阶段；合同审阅稿/修订稿只作为输入边界，不作为签章完成件或运行层单据事实 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_sop_stage_input_map.py` | yes | 读取合同链 intake 与 KDS SOP stage coverage matrix，生成阶段输入映射 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_sop_stage_input_map.py` | yes | `liaoning_yuanhang_contract_chain_sop_stage_input_map=pass source_files=8 hash_valid=8 sop_stages=12 mapped_sop_stages=12 signed_completion_files=0 kds_backlink_write_receipts=0 waes_confirmations=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=contract_chain_sop_stage_input_mapped_waiting_signed_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_sop_stage_input_map` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_sop_stage_input_map` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_sop_stage_input_map=contract_chain_sop_stage_input_mapped_waiting_signed_receipts:source_files=8:hash_valid=8:sop_stages=12:mapped_sop_stages=12:signed_completion_files=0:kds_backlink_write_receipts=0:waes_confirmations=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-152.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把合同链源文件转成 GFIS SOP 12 阶段输入边界，不释放 review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated。
+- 本轮只把合同链源文件转成 GFIS SOP 12 阶段输入边界，不释放 review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-150
 
@@ -1106,12 +1106,12 @@ superseded_by: []
 | runtime positioning consistency guard Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-runtime-positioning-consistency-guard.md` | yes | 固定辽宁远航合同链当前由现代精工 OEM 代加工承载，葛化自建工厂投产后继续由 GFIS 作为运行时系统承载；GFIS Demo 不得作为 SOP E2E 主体 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_runtime_positioning_consistency_guard.py` | yes | 读取合同链 intake，生成运行主体一致性 evidence |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_runtime_positioning_consistency_guard.py` | yes | `liaoning_yuanhang_runtime_positioning_consistency_guard=pass positioning_rules=7 rules_passed=7 wrong_subjects_blocked=4 demo_subject_allowed=0 current_runtime_sites=1 future_runtime_sites=1 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=runtime_positioning_consistency_guard_passed_no_release runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_positioning_consistency_guard` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_runtime_positioning_consistency_guard` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_runtime_positioning_consistency_guard=runtime_positioning_consistency_guard_passed_no_release:positioning_rules=7:rules_passed=7:wrong_subjects_blocked=4:demo_subject_allowed=0:current_runtime_sites=1:future_runtime_sites=1:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-150.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=7`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立运行主体口径防回归门禁，不创建真实回执、不发送授权、不释放 review queue、runtime intake、WAES review、verified artifact、accepted 或 integrated。
+- 本轮只建立运行主体口径防回归门禁，不创建真实回执、不发送授权、不释放 review queue、runtime intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-149
 
@@ -1122,7 +1122,7 @@ superseded_by: []
 | authorization approval receiving README | `docs/harness/sop-e2e/intake-submissions/contract-chain/authorization-approval/README.md` | yes | 仅为人工批准文件接收目录说明；README 不是批准文件 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan.py` | yes | 读取 request package，生成 5 项授权批准扫描结果 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan=pass items=5 approval_slots=5 approval_files_found=0 valid_approvals=0 approved=0 recipients=0 channels=0 sent=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=authorization_approval_intake_scan_no_valid_approvals runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_approval_intake_scan=authorization_approval_intake_scan_no_valid_approvals:items=5:approval_slots=5:approval_files_found=0:valid_approvals=0:approved=0:recipients=0:channels=0:sent=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-149.md` | yes | partial |
 
@@ -1138,7 +1138,7 @@ superseded_by: []
 | contract chain real receipt hold dispatch authorization request package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-hold-dispatch-authorization-request-package.md` | yes | 将 5 个补证 action item 转成待人工审阅授权请求；不代表授权、分发、责任方回执或 verified artifact |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_request_package.py` | yes | 读取 dispatch authorization preflight，生成 5 项授权请求包 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_request_package.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_request_package=pass items=5 prepared=5 approved=0 recipients=0 channels=0 sent=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=authorization_request_package_prepared_waiting_human_approval runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_request_package` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_request_package` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_request_package=authorization_request_package_prepared_waiting_human_approval:items=5:prepared=5:approved=0:recipients=0:channels=0:sent=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-148.md` | yes | partial |
 
@@ -1154,7 +1154,7 @@ superseded_by: []
 | contract chain real receipt hold dispatch authorization preflight Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-hold-dispatch-authorization-preflight.md` | yes | 证明 5 个补证 action item 在缺人工授权、接收人身份和分发渠道时全部阻断；不代表已发送或已取得真实回执 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_preflight.py` | yes | 读取 hold action package，生成 5 项分发授权 preflight |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_preflight.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_preflight=pass items=5 blocked=5 authorizations=0 recipients=0 channels=0 sent=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=hold_dispatch_authorization_preflight_blocked runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_preflight` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_preflight` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_dispatch_authorization_preflight=hold_dispatch_authorization_preflight_blocked:items=5:blocked=5:authorizations=0:recipients=0:channels=0:sent=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-147.md` | yes | partial |
 
@@ -1170,7 +1170,7 @@ superseded_by: []
 | contract chain real receipt hold action package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-hold-action-package.md` | yes | 把 5 个 open hold 转成责任方补证 action item；不代表已授权、已发送或已取得真实回执 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_action_package.py` | yes | 读取空目录 hold register，生成 5 项补证行动包 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_hold_action_package.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_hold_action_package=pass action_items=5 prepared=5 authorized=0 dispatched=0 acknowledged=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=hold_action_package_prepared_not_dispatched_waiting_authorization runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_action_package` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_action_package` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_hold_action_package=hold_action_package_prepared_not_dispatched_waiting_authorization:action_items=5:prepared=5:authorized=0:dispatched=0:acknowledged=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-146.md` | yes | partial |
 
@@ -1186,7 +1186,7 @@ superseded_by: []
 | contract chain real receipt empty directory hold register Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-empty-directory-hold-register.md` | yes | 把 5 个空正式接收目录登记为 open hold；不代表真实回执已取得 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py` | yes | 读取提交文件扫描结果，生成空目录 hold register |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=pass hold_items=5 open_holds=5 closed_holds=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 structure_valid=0 release_allowed=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=empty_directory_holds_open_waiting_real_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_empty_directory_hold_register=empty_directory_holds_open_waiting_real_receipts:hold_items=5:open_holds=5:closed_holds=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:structure_valid=0:release_allowed=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-145.md` | yes | partial |
 
@@ -1202,7 +1202,7 @@ superseded_by: []
 | contract chain real receipt submission file scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-submission-file-scan.md` | yes | 扫描 5 个正式真实回执接收目录；`rejected-examples` 不计入正式提交 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan.py` | yes | 读取 receiving directory structure，扫描正式接收目录候选文件 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan=pass handoff_items=5 formal_receiving_directories_scanned=5 rejected_examples_scanned=0 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=formal_receipt_submission_file_scan_empty runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_file_scan=formal_receipt_submission_file_scan_empty:handoff_items=5:formal_receiving_directories_scanned=5:rejected_examples_scanned=0:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-144.md` | yes | partial |
 
@@ -1219,7 +1219,7 @@ superseded_by: []
 | receiving directory READMEs | `docs/harness/sop-e2e/intake-submissions/contract-chain/*/README.md` | yes | `signed-completion`、`customer-confirmation`、`purchase-order-or-contract`、`kds-write-receipt`、`waes-confirmation` 均已建立接收说明与防误用边界 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure.py` | yes | 读取 collection handoff 包与 owner response landing scan，建立/验证接收目录结构 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure=pass handoff_items=5 receiving_directories_expected=5 receiving_directories_existing=5 directory_readmes=5 owner_responses=0 submitted_files=0 valid_receipts=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=receiving_directory_structure_ready_no_real_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_receiving_directory_structure=receiving_directory_structure_ready_no_real_receipts:handoff_items=5:receiving_directories_expected=5:receiving_directories_existing=5:directory_readmes=5:owner_responses=0:submitted_files=0:valid_receipts=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-143.md` | yes | partial |
 
@@ -1235,7 +1235,7 @@ superseded_by: []
 | contract chain owner response file landing scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-owner-response-file-landing-scan.md` | yes | 真实扫描 5 类 handoff 接收路径；无责任方响应和真实文件时继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan.py` | yes | 读取 collection handoff 包，扫描责任方响应和真实文件落地状态 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan.py` | yes | `liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=pass handoff_items=5 collection_paths_existing=0 owner_responses=0 submitted_files=0 completed_handoffs=0 open_handoffs=5 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=owner_response_file_landing_scan_no_owner_response_or_real_files runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_owner_response_file_landing_scan=owner_response_file_landing_scan_no_owner_response_or_real_files:handoff_items=5:collection_paths_existing=0:owner_responses=0:submitted_files=0:completed_handoffs=0:open_handoffs=5:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-142.md` | yes | partial |
 
@@ -1251,7 +1251,7 @@ superseded_by: []
 | contract chain real receipt collection handoff package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-collection-handoff-package.md` | yes | 把 5 类真实回执缺口转成责任方、接收路径和提交字段；不代表业务完成 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_collection_handoff_package.py` | yes | 读取 post-intake review precheck，生成 collection handoff 包 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_collection_handoff_package.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_collection_handoff_package=pass handoff_items=5 open_handoffs=5 completed_handoffs=0 owner_responses=0 submitted_files=0 structure_valid=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=collection_handoff_open_no_owner_response runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_collection_handoff_package` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_collection_handoff_package` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_collection_handoff_package=collection_handoff_open_no_owner_response:handoff_items=5:open_handoffs=5:completed_handoffs=0:owner_responses=0:submitted_files=0:structure_valid=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-141.md` | yes | partial |
 
@@ -1264,10 +1264,10 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | contract chain real receipt post-intake review precheck JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-post-intake-review-precheck.json` | yes | `review_slots=5 review_eligible_receipts=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 runtime_sop_e2e=repair_required` |
-| contract chain real receipt post-intake review precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-post-intake-review-precheck.md` | yes | 无真实有效回执时，人工/WAES review queue 不得启动 |
+| contract chain real receipt post-intake review precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-post-intake-review-precheck.md` | yes | 无真实有效回执时，人工/WAME review queue 不得启动 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_post_intake_review_precheck.py` | yes | 读取 live-intake 与 negative fixture guard，生成 post-intake review queue 前置门禁 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_post_intake_review_precheck.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_post_intake_review_precheck=pass review_slots=5 review_eligible_receipts=0 review_queue=0 runtime_intake=0 waes_review=0 verified=0 state=post_intake_review_precheck_blocked_no_valid_real_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_post_intake_review_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_post_intake_review_precheck` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_post_intake_review_precheck=post_intake_review_precheck_blocked_no_valid_real_receipts:review_slots=5:review_eligible_receipts=0:review_queue=0:runtime_intake=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-140.md` | yes | partial |
 
@@ -1280,11 +1280,11 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | contract chain real receipt live-intake negative fixture guard JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-live-intake-negative-fixture-guard.json` | yes | `negative_fixture_count=5 rejected_fixture_count=5 accepted_fixture_count=0 runtime_ready=0 verified=0 runtime_sop_e2e=repair_required` |
-| contract chain real receipt live-intake negative fixture guard Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-live-intake-negative-fixture-guard.md` | yes | 证明 Demo 证据、用户弱口述、KDS 候选、WAES 文字线索和未签章审阅稿均被拒收 |
+| contract chain real receipt live-intake negative fixture guard Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-live-intake-negative-fixture-guard.md` | yes | 证明 Demo 证据、用户弱口述、KDS 候选、WAME 文字线索和未签章审阅稿均被拒收 |
 | rejected examples | `docs/harness/sop-e2e/intake-submissions/contract-chain/rejected-examples/*.real-receipt.json` | yes | 5 个负例均 `accepted=false`、`rejected=true`、`verified=false` |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixture_guard.py` | yes | 读取 schema gate 与 live-intake 结果，生成负例拒收门禁 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixture_guard.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixture_guard=pass negative_fixture_count=5 rejected_fixture_count=5 accepted_fixture_count=0 runtime_ready=0 verified=0 state=real_receipt_live_intake_negative_fixtures_rejected runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixture_guard` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_negative_fixture_guard=real_receipt_live_intake_negative_fixtures_rejected:negative_fixture_count=5:rejected_fixture_count=5:accepted_fixture_count=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-139.md` | yes | partial |
 
@@ -1298,10 +1298,10 @@ superseded_by: []
 |---|---|---|---|
 | contract chain real receipt live-intake validator JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-live-intake-validator.json` | yes | `scanned_receipt_slots=26 submitted_files=0 valid_receipts=0 missing_files=26 runtime_ready=0 verified=0 runtime_sop_e2e=repair_required` |
 | contract chain real receipt live-intake validator Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-live-intake-validator.md` | yes | 扫描 GFIS 运行层合同链 26 个真实回执槽位；无真实文件时保持 repair_required |
-| contract-chain intake README | `docs/harness/sop-e2e/intake-submissions/contract-chain/README.md` | yes | 说明签章完成件、KDS write receipt、WAES confirmation、客户确认函、采购订单/合同真实回执接收目录 |
+| contract-chain intake README | `docs/harness/sop-e2e/intake-submissions/contract-chain/README.md` | yes | 说明签章完成件、KDS write receipt、WAME confirmation、客户确认函、采购订单/合同真实回执接收目录 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_live_intake_validator.py` | yes | 读取提交结构门禁与真实回执目录扫描，生成 live-intake 扫描证据 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_live_intake_validator.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_live_intake_validator=pass scanned_receipt_slots=26 submitted_files=0 valid_receipts=0 missing_files=26 runtime_ready=0 verified=0 state=real_receipt_live_intake_blocked_no_valid_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_validator` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_validator` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_live_intake_validator=real_receipt_live_intake_blocked_no_valid_receipts:scanned_receipt_slots=26:submitted_files=0:valid_receipts=0:missing_files=26:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-138.md` | yes | partial |
 
@@ -1314,11 +1314,11 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | contract chain real receipt submission schema gate JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-submission-schema-gate.json` | yes | `categories=5 expected_receipt_files=26 rejected_examples=1 valid_receipts=0 runtime_ready=0 verified=0 runtime_sop_e2e=repair_required` |
-| contract chain real receipt submission schema gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-submission-schema-gate.md` | yes | 定义签章完成件、KDS write receipt、WAES confirmation、客户确认函、采购订单/合同 5 类真实回执提交结构 |
+| contract chain real receipt submission schema gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-submission-schema-gate.md` | yes | 定义签章完成件、KDS write receipt、WAME confirmation、客户确认函、采购订单/合同 5 类真实回执提交结构 |
 | rejected weak statement example | `docs/harness/sop-e2e/intake-submissions/contract-chain/rejected-examples/weak-user-statement.real-receipt.json` | yes | 用户口述、计划文字或 KDS 候选不得替代真实回执 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_submission_schema_gate.py` | yes | 读取真实回执目录扫描，生成提交结构门禁和拒收反例 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_submission_schema_gate.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_submission_schema_gate=pass categories=5 expected_receipt_files=26 rejected_examples=1 valid_receipts=0 runtime_ready=0 verified=0 state=real_receipt_submission_schema_ready_no_valid_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_schema_gate` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_schema_gate` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_submission_schema_gate=real_receipt_submission_schema_ready_no_valid_receipts:categories=5:expected_receipt_files=26:rejected_examples=1:valid_receipts=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-137.md` | yes | partial |
 
@@ -1331,10 +1331,10 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | contract chain real receipt directory scan JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-real-receipt-directory-scan.json` | yes | `scanned_roles=8 signed_completion_files_found=0 kds_write_receipt_files_found=0 waes_confirmation_files_found=0 customer_confirmation=false purchase_order_or_contract=false runtime_ready=0 verified=0 runtime_sop_e2e=repair_required` |
-| contract chain real receipt directory scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-directory-scan.md` | yes | 真实扫描 GFIS 运行层合同链接收目录；未发现签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAES confirmation |
-| builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_directory_scan.py` | yes | 读取 completion gate，生成签章完成件、KDS write receipt、WAES confirmation 和客户商业凭证接收目录扫描 |
+| contract chain real receipt directory scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-real-receipt-directory-scan.md` | yes | 真实扫描 GFIS 运行层合同链接收目录；未发现签章完成件、客户确认函、采购订单/合同、KDS write receipt 或 WAME confirmation |
+| builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_real_receipt_directory_scan.py` | yes | 读取 completion gate，生成签章完成件、KDS write receipt、WAME confirmation 和客户商业凭证接收目录扫描 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_real_receipt_directory_scan.py` | yes | `liaoning_yuanhang_contract_chain_real_receipt_directory_scan=pass scanned_roles=8 signed_completion_files_found=0 kds_write_receipt_files_found=0 waes_confirmation_files_found=0 customer_confirmation=false purchase_order_or_contract=false runtime_ready=0 verified=0 state=contract_chain_real_receipt_directory_scan_no_real_receipts runtime_sop_e2e=repair_required` |
-| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_directory_scan` 只读门禁；不写数据库、不写 KDS、不写 WAES |
+| runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_contract_chain_real_receipt_directory_scan` 只读门禁；不写数据库、不写 KDS、不写 WAME |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_real_receipt_directory_scan=contract_chain_real_receipt_directory_scan_no_real_receipts:scanned_roles=8:signed_completion_files_found=0:kds_write_receipt_files_found=0:waes_confirmation_files_found=0:customer_confirmation=false:purchase_order_or_contract=false:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-136.md` | yes | partial |
 
@@ -1348,13 +1348,13 @@ superseded_by: []
 |---|---|---|---|
 | contract chain completion gate JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-contract-chain-completion-gate.json` | yes | `source_files=8 signed_completion_files=0 present_kds_backlinks=0 missing_kds_backlinks=8 waes_confirmations=0 runtime_ready=0 verified=0 runtime_sop_e2e=repair_required` |
 | contract chain completion gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-contract-chain-completion-gate.md` | yes | 8 个合同链源文件仍为审阅/修订稿，不是签章完成件；现代精工 OEM 是当前 GFIS 运行层，葛化自建工厂是未来 GFIS 运行层 |
-| builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_completion_gate.py` | yes | 读取合同链 intake 与 KDS backlink preflight，生成签章完成件/KDS 回执/WAES 确认阻断证据 |
+| builder | `scripts/build_gfis_liaoning_yuanhang_contract_chain_completion_gate.py` | yes | 读取合同链 intake 与 KDS backlink preflight，生成签章完成件/KDS 回执/WAME 确认阻断证据 |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_contract_chain_completion_gate.py` | yes | `liaoning_yuanhang_contract_chain_completion_gate=pass source_files=8 signed_completion_files=0 present_kds_backlinks=0 missing_kds_backlinks=8 waes_confirmations=0 runtime_ready=0 verified=0 state=contract_chain_completion_gate_blocked_unsigned_no_kds_receipt runtime_sop_e2e=repair_required` |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_contract_chain_completion_gate=contract_chain_completion_gate_blocked_unsigned_no_kds_receipt:source_files=8:signed_completion_files=0:present_kds_backlinks=0:missing_kds_backlinks=8:waes_confirmations=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-135.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立签章完成件、KDS 回执和 WAES 确认的运行层接收门禁，不写入真实 KDS，不创建 review queue，不释放 runtime intake。
+- 本轮只建立签章完成件、KDS 回执和 WAME 确认的运行层接收门禁，不写入真实 KDS，不创建 review queue，不释放 runtime intake。
 - 本轮确认 GFIS 是现代精工 OEM 代加工生产当前运行时系统，并在葛化工厂建成投产后承接葛化自有工厂运行层；GFIS Demo 仍不得作为 SOP 主体。
 
 ## GFIS-RUNTIME-SOP-E2E-134
@@ -1370,7 +1370,7 @@ superseded_by: []
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
 - 本轮只读扫描 KDS ledger 与开发空间镜像，没有写入真实 KDS，也没有伪造 KDS write receipt。
-- 本轮确认合同链 8 个源文件仍缺 KDS backlink receipt，不允许 release、runtime intake、WAES review、verified artifact、accepted 或 integrated。
+- 本轮确认合同链 8 个源文件仍缺 KDS backlink receipt，不允许 release、runtime intake、WAME review、verified artifact、accepted 或 integrated。
 
 ## GFIS-RUNTIME-SOP-E2E-133
 
@@ -1385,7 +1385,7 @@ superseded_by: []
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
 - 本轮只把 8 个真实合同/方案 Word 文件转成 GFIS 合同链 intake 与运行层定位；不把审阅/修订稿合同写成已签约、已验收、已投产或 verified artifact。
-- 本轮仍缺签章完成件、客户规格/封样、PP/改性料规格、现代精工上机窗口、首批 1 吨闭环验收、出厂全检、客户验收/POD、WAES 和 KDS 回执。
+- 本轮仍缺签章完成件、客户规格/封样、PP/改性料规格、现代精工上机窗口、首批 1 吨闭环验收、出厂全检、客户验收/POD、WAME 和 KDS 回执。
 - 本轮未执行 Git push、生产写入、真实外部 API 写入、bench migrate、schema sync、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 配置变更。
 
 ## GFIS-RUNTIME-SOP-E2E-132
@@ -1398,7 +1398,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-132.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=4`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把正式报价 PDF 来源锚点接入 GFIS intake submission；该 submission 仍缺客户确认函，不允许 verified、release、runtime intake、WAES review、POD、KDS write receipt、accepted 或 integrated。
+- 本轮只把正式报价 PDF 来源锚点接入 GFIS intake submission；该 submission 仍缺客户确认函，不允许 verified、release、runtime intake、WAME review、POD、KDS write receipt、accepted 或 integrated。
 - 本轮未执行 Git push、生产写入、真实外部 API 写入、bench migrate、schema sync、权限变更、部署或 ECS/阿里云/Caddy/隧道/Docker 配置变更。
 
 ## GFIS-RUNTIME-SOP-E2E-131
@@ -1406,14 +1406,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof release attempt hard-stop audit JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-release-attempt-hard-stop-audit.json` | yes | `packages=3 attempted_release=3 hard_stops=3 blockers=18 scanned_target_files=12 existing_target_files=0 missing_target_files=12 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_release_attempt_hard_stopped_no_target_files runtime_sop_e2e=repair_required` |
-| customer commercial proof release attempt hard-stop audit Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-release-attempt-hard-stop-audit.md` | yes | 记录无真实目标文件状态下 3 次 release/review/runtime/WAES 尝试全部 hard-stop；release、review/runtime/WAES 继续阻断 |
+| customer commercial proof release attempt hard-stop audit Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-release-attempt-hard-stop-audit.md` | yes | 记录无真实目标文件状态下 3 次 release/review/runtime/WAME 尝试全部 hard-stop；release、review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_release_attempt_hard_stop_audit.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_release_attempt_hard_stop_audit.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_release_attempt_hard_stop_audit=customer_commercial_proof_release_attempt_hard_stopped_no_target_files:packages=3:attempted_release=3:hard_stops=3:blockers=18:scanned_target_files=12:existing_target_files=0:missing_target_files=12:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-131.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 130 轮发现的 12 个缺失目标文件转成 release attempt hard-stop 审计；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只把 130 轮发现的 12 个缺失目标文件转成 release attempt hard-stop 审计；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-130
@@ -1421,14 +1421,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof release submission intake gate JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-release-submission-intake-gate.json` | yes | `packages=3 open=3 ready_packages=0 scanned_target_files=12 existing_target_files=0 missing_target_files=12 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_release_submission_intake_blocked_no_target_files runtime_sop_e2e=repair_required` |
-| customer commercial proof release submission intake gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-release-submission-intake-gate.md` | yes | 真实扫描 12 个目标文件路径，现存 0 个、缺失 12 个；release、review/runtime/WAES 继续阻断 |
+| customer commercial proof release submission intake gate Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-release-submission-intake-gate.md` | yes | 真实扫描 12 个目标文件路径，现存 0 个、缺失 12 个；release、review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_release_submission_intake_gate=customer_commercial_proof_release_submission_intake_blocked_no_target_files:packages=3:open=3:ready_packages=0:scanned_target_files=12:existing_target_files=0:missing_target_files=12:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-130.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只扫描 129 行动包列出的 12 个目标文件路径；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只扫描 129 行动包列出的 12 个目标文件路径；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-129
@@ -1436,14 +1436,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof hold release action package JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-hold-release-action-package.json` | yes | `packages=3 open=3 action_items=18 target_files=12 manual_authorizations_required=3 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_hold_release_actions_open runtime_sop_e2e=repair_required` |
-| customer commercial proof hold release action package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-hold-release-action-package.md` | yes | 3 项客户商业凭证 hold release action package 全部 open，合计 18 个 action item 和 12 个目标文件；release、review/runtime/WAES 继续阻断 |
+| customer commercial proof hold release action package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-hold-release-action-package.md` | yes | 3 项客户商业凭证 hold release action package 全部 open，合计 18 个 action item 和 12 个目标文件；release、review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_hold_release_action_package.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_hold_release_action_package.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_hold_release_action_package=customer_commercial_proof_hold_release_actions_open:packages=3:open=3:action_items=18:target_files=12:manual_authorizations_required=3:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-129.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 128 轮 open hold 转成责任方补证行动包；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只把 128 轮 open hold 转成责任方补证行动包；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-128
@@ -1451,14 +1451,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof real file readiness hold register JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-real-file-readiness-hold-register.json` | yes | `holds=3 open=3 blockers=18 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 manual_authorized=0 release_allowed=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_real_file_readiness_holds_open runtime_sop_e2e=repair_required` |
-| customer commercial proof real file readiness hold register Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-real-file-readiness-hold-register.md` | yes | 3 项客户商业凭证 hold 全部 open，合计 18 个 blocker；release、review/runtime/WAES 继续阻断 |
+| customer commercial proof real file readiness hold register Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-real-file-readiness-hold-register.md` | yes | 3 项客户商业凭证 hold 全部 open，合计 18 个 blocker；release、review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_real_file_readiness_hold_register.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_real_file_readiness_hold_register.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_real_file_readiness_hold_register=customer_commercial_proof_real_file_readiness_holds_open:holds=3:open=3:blockers=18:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:manual_authorized=0:release_allowed=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-128.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 127 轮真实扫描结果转成 release hold register；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只把 127 轮真实扫描结果转成 release hold register；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、结构有效、人工授权、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-127
@@ -1466,14 +1466,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof structure authorization alignment scan JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-structure-authorization-alignment-scan.json` | yes | `handoff_items=3 open_handoffs=3 expected_submissions=3 expected_authorization_envelopes=3 expected_receiving_checklists=3 expected_acknowledgments=3 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_acknowledgment_files_found=0 structure_valid=0 envelope_linked=0 manual_authorized=0 recipient_confirmed=0 dispatch_sent=0 handoff_delivered=0 owner_responses=0 accepted=0 rejected=0 quarantined=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_structure_authorization_alignment_no_files runtime_sop_e2e=repair_required` |
-| customer commercial proof structure authorization alignment scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-structure-authorization-alignment-scan.md` | yes | 3 项客户商业凭证提交件、授权 envelope、接收清单和 handoff acknowledgment 均为 0；结构有效、授权关联、人工授权和 review/runtime/WAES 继续阻断 |
+| customer commercial proof structure authorization alignment scan Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-structure-authorization-alignment-scan.md` | yes | 3 项客户商业凭证提交件、授权 envelope、接收清单和 handoff acknowledgment 均为 0；结构有效、授权关联、人工授权和 review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_structure_authorization_alignment_scan.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_structure_authorization_alignment_scan.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_structure_authorization_alignment_scan=customer_commercial_proof_structure_authorization_alignment_no_files:handoff_items=3:open_handoffs=3:expected_submissions=3:expected_authorization_envelopes=3:expected_receiving_checklists=3:expected_acknowledgments=3:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_acknowledgment_files_found=0:structure_valid=0:envelope_linked=0:manual_authorized=0:recipient_confirmed=0:dispatch_sent=0:handoff_delivered=0:owner_responses=0:accepted=0:rejected=0:quarantined=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-127.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只扫描 3 项客户商业凭证结构与授权对齐状态；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只扫描 3 项客户商业凭证结构与授权对齐状态；仍无真实提交文件、授权 envelope、接收清单文件、handoff acknowledgment、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-126
@@ -1481,14 +1481,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof handoff delivery status JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-handoff-delivery-status.json` | yes | `handoff_items=3 open_handoffs=3 expected_acknowledgments=3 handoff_acknowledgment_files_found=0 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_delivered=0 owner_responses=0 accepted=0 rejected=0 quarantined=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_handoff_delivery_scan_no_acknowledgments runtime_sop_e2e=repair_required` |
-| customer commercial proof handoff delivery status Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-handoff-delivery-status.md` | yes | 3 项客户商业凭证 handoff 交付确认、真实提交件、授权 envelope 和接收清单均为 0；review/runtime/WAES 继续阻断 |
+| customer commercial proof handoff delivery status Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-handoff-delivery-status.md` | yes | 3 项客户商业凭证 handoff 交付确认、真实提交件、授权 envelope 和接收清单均为 0；review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_handoff_delivery_status.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_handoff_delivery_status.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_handoff_delivery_status=customer_commercial_proof_handoff_delivery_scan_no_acknowledgments:handoff_items=3:open_handoffs=3:expected_acknowledgments=3:handoff_acknowledgment_files_found=0:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_delivered=0:owner_responses=0:accepted=0:rejected=0:quarantined=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-126.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只扫描 handoff acknowledgment、真实提交文件、授权 envelope 和接收清单是否落地；仍无交付确认、真实提交文件、授权 envelope、接收清单文件、handoff delivered、责任方响应、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只扫描 handoff acknowledgment、真实提交文件、授权 envelope 和接收清单是否落地；仍无交付确认、真实提交文件、授权 envelope、接收清单文件、handoff delivered、责任方响应、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-125
@@ -1496,14 +1496,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof receiving handoff package JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-receiving-handoff-package.json` | yes | `handoff_items=3 open_handoffs=3 expected_submissions=3 expected_authorization_envelopes=3 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 handoff_delivered=0 owner_responses=0 accepted=0 rejected=0 quarantined=0 review_queue=0 runtime_ready=0 waes_review=0 verified=0 state=customer_commercial_proof_receiving_handoff_open_waiting_real_files runtime_sop_e2e=repair_required` |
-| customer commercial proof receiving handoff package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-receiving-handoff-package.md` | yes | 3 项客户商业凭证真实提交路径、授权 envelope 路径和接收清单路径已明确；真实文件仍为 0，review/runtime/WAES 继续阻断 |
+| customer commercial proof receiving handoff package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-receiving-handoff-package.md` | yes | 3 项客户商业凭证真实提交路径、授权 envelope 路径和接收清单路径已明确；真实文件仍为 0，review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_receiving_handoff_package.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_receiving_handoff_package.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_receiving_handoff_package=customer_commercial_proof_receiving_handoff_open_waiting_real_files:handoff_items=3:open_handoffs=3:expected_submissions=3:expected_authorization_envelopes=3:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:handoff_delivered=0:owner_responses=0:accepted=0:rejected=0:quarantined=0:review_queue=0:runtime_ready=0:waes_review=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-125.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只生成可交付 handoff 包、路径和字段要求；仍无真实提交文件、授权 envelope、接收清单文件、handoff delivered、责任方响应、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只生成可交付 handoff 包、路径和字段要求；仍无真实提交文件、授权 envelope、接收清单文件、handoff delivered、责任方响应、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-124
@@ -1511,14 +1511,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof receiving directory scanner JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-receiving-directory-scanner.json` | yes | `expected=3 scanned_slots=3 ready_to_receive=3 submission_files_found=0 authorization_envelope_files_found=0 receiving_checklist_files_found=0 received=0 structure_valid=0 envelope_linked=0 manual_authorized=0 recipient_confirmed=0 dispatch_sent=0 owner_responses=0 accepted=0 rejected=0 quarantined=0 review_queue=0 runtime_ready=0 verified=0 missing_submission_files=3 missing_authorization_envelope_files=3 missing_receiving_checklist_files=3 state=customer_commercial_proof_receiving_directory_scan_no_files runtime_sop_e2e=repair_required` |
-| customer commercial proof receiving directory scanner Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-receiving-directory-scanner.md` | yes | 3 项接收路径已真实扫描；提交件、授权 envelope、接收清单文件均不存在，review/runtime/WAES 继续阻断 |
+| customer commercial proof receiving directory scanner Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-receiving-directory-scanner.md` | yes | 3 项接收路径已真实扫描；提交件、授权 envelope、接收清单文件均不存在，review/runtime/WAME 继续阻断 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_receiving_directory_scanner.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_receiving_directory_scanner.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_receiving_directory_scanner=customer_commercial_proof_receiving_directory_scan_no_files:expected=3:scanned_slots=3:ready_to_receive=3:submission_files_found=0:authorization_envelope_files_found=0:receiving_checklist_files_found=0:received=0:structure_valid=0:envelope_linked=0:manual_authorized=0:recipient_confirmed=0:dispatch_sent=0:owner_responses=0:accepted=0:rejected=0:quarantined=0:review_queue=0:runtime_ready=0:verified=0:missing_submission_files=3:missing_authorization_envelope_files=3:missing_receiving_checklist_files=3` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-124.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只扫描 GFIS 123 清单中的真实接收路径；仍无真实提交文件、授权 envelope、接收清单文件、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只扫描 GFIS 123 清单中的真实接收路径；仍无真实提交文件、授权 envelope、接收清单文件、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-123
@@ -1526,14 +1526,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof real submission receiving checklist JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-real-submission-receiving-checklist.json` | yes | `expected=3 intake_slots=3 submitted=0 envelope_required=3 envelope_present=0 envelope_linked=0 ready_to_receive=3 received=0 structure_valid=0 manual_authorized=0 recipient_confirmed=0 dispatch_sent=0 owner_responses=0 accepted=0 rejected=0 quarantined=0 review_queue=0 runtime_ready=0 verified=0 state=customer_commercial_proof_real_submission_receiving_checklist_open_no_submissions runtime_sop_e2e=repair_required` |
-| customer commercial proof real submission receiving checklist Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-real-submission-receiving-checklist.md` | yes | 3 项真实提交接收 slot 已打开，但仍无真实提交文件或匹配授权 envelope；不得创建 review/runtime/WAES 队列 |
+| customer commercial proof real submission receiving checklist Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-real-submission-receiving-checklist.md` | yes | 3 项真实提交接收 slot 已打开，但仍无真实提交文件或匹配授权 envelope；不得创建 review/runtime/WAME 队列 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_real_submission_receiving_checklist.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_real_submission_receiving_checklist.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_real_submission_receiving_checklist=customer_commercial_proof_real_submission_receiving_checklist_open_no_submissions:expected=3:intake_slots=3:submitted=0:envelope_required=3:envelope_present=0:envelope_linked=0:ready_to_receive=3:received=0:structure_valid=0:manual_authorized=0:recipient_confirmed=0:dispatch_sent=0:owner_responses=0:accepted=0:rejected=0:quarantined=0:review_queue=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-123.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只打开真实客户商业凭证接收清单；仍无真实提交、授权 envelope、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只打开真实客户商业凭证接收清单；仍无真实提交、授权 envelope、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-122
@@ -1541,14 +1541,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof authorization envelope linkage check JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-authorization-envelope-linkage-check.json` | yes | `expected=3 submitted=0 envelope_required=3 envelope_present=0 envelope_linked=0 manual_authorized=0 recipient_confirmed=0 dispatch_sent=0 owner_responses=0 accepted=0 rejected=0 quarantined=0 review_queue=0 runtime_ready=0 verified=0 state=customer_commercial_proof_authorization_envelope_linkage_blocked_no_submissions_or_envelopes runtime_sop_e2e=repair_required` |
-| customer commercial proof authorization envelope linkage check Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-authorization-envelope-linkage-check.md` | yes | 3 项预期提交均无真实文件且无匹配授权 envelope；不得创建 review/runtime/WAES 队列 |
+| customer commercial proof authorization envelope linkage check Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-authorization-envelope-linkage-check.md` | yes | 3 项预期提交均无真实文件且无匹配授权 envelope；不得创建 review/runtime/WAME 队列 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_authorization_envelope_linkage_check.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_authorization_envelope_linkage_check.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_authorization_envelope_linkage_check=customer_commercial_proof_authorization_envelope_linkage_blocked_no_submissions_or_envelopes:expected=3:submitted=0:envelope_required=3:envelope_present=0:envelope_linked=0:manual_authorized=0:recipient_confirmed=0:dispatch_sent=0:owner_responses=0:accepted=0:rejected=0:quarantined=0:review_queue=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-122.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立客户商业凭证提交与授权 envelope 的对接门禁；仍无真实提交、授权 envelope、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只建立客户商业凭证提交与授权 envelope 的对接门禁；仍无真实提交、授权 envelope、人工授权、接收人确认、dispatch sent、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-121
@@ -1556,14 +1556,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof submission quarantine boundary JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-submission-quarantine-boundary.json` | yes | `expected=3 submitted=0 accepted=0 rejected=0 quarantined=0 customer_confirmations=0 purchase_orders=0 contracts=0 owner_responses=0 authorization_envelopes=0 review_queue=0 runtime_ready=0 verified=0 state=customer_commercial_proof_submission_quarantine_boundary_blocked_no_submissions runtime_sop_e2e=repair_required` |
-| customer commercial proof submission quarantine boundary Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-submission-quarantine-boundary.md` | yes | 3 项预期提交均无真实文件；无可拒收/隔离对象时不得创建 review/runtime/WAES 队列 |
+| customer commercial proof submission quarantine boundary Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-submission-quarantine-boundary.md` | yes | 3 项预期提交均无真实文件；无可拒收/隔离对象时不得创建 review/runtime/WAME 队列 |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_submission_quarantine_boundary.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_submission_quarantine_boundary.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_submission_quarantine_boundary=customer_commercial_proof_submission_quarantine_boundary_blocked_no_submissions:expected=3:submitted=0:accepted=0:rejected=0:quarantined=0:customer_confirmations=0:purchase_orders=0:contracts=0:owner_responses=0:authorization_envelopes=0:review_queue=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-121.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立客户商业凭证提交后的拒收/隔离边界；仍无真实客户确认、采购订单、合同、owner response、authorization envelope、quarantine record、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只建立客户商业凭证提交后的拒收/隔离边界；仍无真实客户确认、采购订单、合同、owner response、authorization envelope、quarantine record、review queue、runtime intake、WAME review 或 verified artifact。
 - 本轮记录 ECS/阿里云/Caddy/隧道/Docker 等外部运行配置零变更；Hermes 只允许只读诊断，任何运行配置变更必须另行由 Codex 当前会话或人工授权处理。
 
 ## GFIS-RUNTIME-SOP-E2E-120
@@ -1571,14 +1571,14 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | customer commercial proof submission precheck JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-customer-commercial-proof-submission-precheck.json` | yes | `expected=3 submitted=0 structure_valid=0 customer_confirmations=0 purchase_orders=0 contracts=0 owner_responses=0 authorization_envelopes=0 review_queue=0 runtime_ready=0 verified=0 state=customer_commercial_proof_submission_precheck_blocked_no_valid_submissions runtime_sop_e2e=repair_required` |
-| customer commercial proof submission precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-submission-precheck.md` | yes | 3 项预期提交 slot 均无有效提交；不得释放 review/runtime/WAES |
+| customer commercial proof submission precheck Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-customer-commercial-proof-submission-precheck.md` | yes | 3 项预期提交 slot 均无有效提交；不得释放 review/runtime/WAME |
 | builder | `scripts/build_gfis_liaoning_yuanhang_customer_commercial_proof_submission_precheck.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_customer_commercial_proof_submission_precheck.py` | yes | pass |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2；新增 `runtime_liaoning_yuanhang_customer_commercial_proof_submission_precheck=customer_commercial_proof_submission_precheck_blocked_no_valid_submissions:expected=3:submitted=0:structure_valid=0:customer_confirmations=0:purchase_orders=0:contracts=0:owner_responses=0:authorization_envelopes=0:review_queue=0:runtime_ready=0:verified=0` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-120.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立客户确认函、采购订单/合同、责任方回执 3 项提交 slot 的预检和机器门禁；仍无真实客户确认、采购订单、合同、owner response、authorization envelope、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只建立客户确认函、采购订单/合同、责任方回执 3 项提交 slot 的预检和机器门禁；仍无真实客户确认、采购订单、合同、owner response、authorization envelope、review queue、runtime intake、WAME review 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`；报价 PDF 只作为正式报价来源锚点，不能替代客户确认或采购合同。
 
 ## GFIS-RUNTIME-SOP-E2E-119
@@ -1593,7 +1593,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-119.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只建立补证请求包；不创建真实客户确认、采购订单、合同、authorization envelope、review queue、runtime intake、WAES review 或 verified artifact。
+- 本轮只建立补证请求包；不创建真实客户确认、采购订单、合同、authorization envelope、review queue、runtime intake、WAME review 或 verified artifact。
 
 ## GFIS-RUNTIME-SOP-E2E-118
 
@@ -1621,7 +1621,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-117.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只验证审计记录、release precheck 与 hold gate 的回指链；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只验证审计记录、release precheck 与 hold gate 的回指链；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-116
@@ -1636,7 +1636,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-116.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只记录 release attempt 被阻断的审计事实；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只记录 release attempt 被阻断的审计事实；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-115
@@ -1651,7 +1651,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-115.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 open complete-submission hold 转成 release precheck 阻断；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只把 open complete-submission hold 转成 release precheck 阻断；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-114
@@ -1666,7 +1666,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-114.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只把 0 完整授权 envelope 的真实扫描结果转成 post-scan hold；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只把 0 完整授权 envelope 的真实扫描结果转成 post-scan hold；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-113
@@ -1681,7 +1681,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-113.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只真实扫描 4 个预期完整 authorization envelope 文件路径；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只真实扫描 4 个预期完整 authorization envelope 文件路径；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-112
@@ -1696,7 +1696,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-112.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只定义完整 authorization envelope 的必填字段和 readiness 条件；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只定义完整 authorization envelope 的必填字段和 readiness 条件；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-111
@@ -1711,7 +1711,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-111.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只证明弱/不完整 authorization envelope 负例会被机器阻断；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只证明弱/不完整 authorization envelope 负例会被机器阻断；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-110
@@ -1726,7 +1726,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-110.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只证明 hold release precheck 可生成、机器校验并接入主 runtime SOP validator；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只证明 hold release precheck 可生成、机器校验并接入主 runtime SOP validator；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-109
@@ -1741,7 +1741,7 @@ superseded_by: []
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-109.md` | yes | partial |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只证明 post-scan hold gate 可生成、机器校验并接入主 runtime SOP validator；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAES review、runtime intake 或 verified artifact。
+- 本轮只证明 post-scan hold gate 可生成、机器校验并接入主 runtime SOP validator；仍无真实授权 envelope、人工分发授权、接收人身份确认、dispatch sent、真实 owner response file、quarantine record、review queue、WAME review、runtime intake 或 verified artifact。
 - 用户补充的 2026-01 样箱、江西委托生产、2026-05 报价单、2026-06 现代精工量产计划继续作为 `unverified_trace_hint`，只能用于缩小 KDS 检索和补证任务。
 
 ## GFIS-RUNTIME-SOP-E2E-108
@@ -1960,20 +1960,20 @@ superseded_by: []
 | master validator integration | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2; `runtime_liaoning_yuanhang_formal_original_owner_response_receipt_to_review_gate=pass:decisions=4:blocked=4:responses=0:structure_valid=0:owner_confirmed=0:formal_business_complete=0:review_eligible=0:review_queue=0:runtime_ready=0:verified=0:state=blocked_receipts_not_review_eligible` |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只证明 receipt-to-review gate 可生成和机器校验；真实 owner response、owner confirmation、formal business completion、manual/WAES review、runtime intake 和 verified artifact 仍为 0。
+- 本轮只证明 receipt-to-review gate 可生成和机器校验；真实 owner response、owner confirmation、formal business completion、manual/WAME review、runtime intake 和 verified artifact 仍为 0。
 
 ## GFIS-RUNTIME-SOP-E2E-093
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | owner response receipt gap matrix JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-formal-original-owner-response-receipt-gap-matrix.json` | yes | `items=4 open_gaps=4 responses=0 missing_response_files=4 missing_required_fields=61 review_ready=0 runtime_ready=0 verified=0 state=blocked_no_owner_response_receipts runtime_sop_e2e=repair_required` |
-| owner response receipt gap matrix Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-formal-original-owner-response-receipt-gap-matrix.md` | yes | 四项责任方回执文件均缺失；不得进入 manual/WAES review 或 runtime intake |
+| owner response receipt gap matrix Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-formal-original-owner-response-receipt-gap-matrix.md` | yes | 四项责任方回执文件均缺失；不得进入 manual/WAME review 或 runtime intake |
 | builder | `scripts/build_gfis_liaoning_yuanhang_formal_original_owner_response_receipt_gap_matrix.py` | yes | pass |
 | validator | `scripts/validate_gfis_liaoning_yuanhang_formal_original_owner_response_receipt_gap_matrix.py` | yes | pass |
 | master validator integration | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2; `runtime_liaoning_yuanhang_formal_original_owner_response_receipt_gap_matrix=pass:items=4:open_gaps=4:responses=0:missing_response_files=4:missing_required_fields=61:review_ready=0:runtime_ready=0:verified=0:state=blocked_no_owner_response_receipts` |
 
 - 本轮真实计数：`declared_rounds=1/15`、`substantive_rounds=1/15`、`generated_items=6`、`batch_generated=false`、`substance_gate=pass`、`stop_type=authorization_boundary`。
-- 本轮只证明责任方回执缺口矩阵可生成和机器校验；真实 owner response、owner confirmation、formal business completion、manual/WAES review、runtime intake 和 verified artifact 仍为 0。
+- 本轮只证明责任方回执缺口矩阵可生成和机器校验；真实 owner response、owner confirmation、formal business completion、manual/WAME review、runtime intake 和 verified artifact 仍为 0。
 
 ## GFIS-RUNTIME-SOP-E2E-092
 
@@ -2040,7 +2040,7 @@ superseded_by: []
 |---|---|---|---|
 | formal original submission review-readiness JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-formal-original-submission-review-readiness.json` | yes | `slots=4 blocked=4 real_submissions=0 review_ready=0 runtime_ready=0 verified=0 review_gate=blocked_no_review_ready_submission runtime_sop_e2e=repair_required` |
 | formal original submission review-readiness Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-formal-original-submission-review-readiness.md` | yes | 四项 proof state 均保持 `blocked_before_review` |
-| review-readiness builder | `scripts/build_gfis_liaoning_yuanhang_formal_original_submission_review_readiness.py` | yes | 基于 manifest 生成 manual/WAES review 前置门禁 |
+| review-readiness builder | `scripts/build_gfis_liaoning_yuanhang_formal_original_submission_review_readiness.py` | yes | 基于 manifest 生成 manual/WAME review 前置门禁 |
 | review-readiness validator | `scripts/validate_gfis_liaoning_yuanhang_formal_original_submission_review_readiness.py` | yes | `liaoning_yuanhang_formal_original_submission_review_readiness=pass` |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2; 新增 `runtime_liaoning_yuanhang_formal_original_submission_review_readiness=pass:slots=4:blocked=4:real_submissions=0:review_ready=0:runtime_ready=0:verified=0:review_gate=blocked_no_review_ready_submission`，仍为 `repair_required` |
 | loop record | `docs/harness/loops/loop-round-GFIS-RUNTIME-SOP-E2E-087.md` | yes | partial |
@@ -2087,7 +2087,7 @@ superseded_by: []
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
 | targeted KDS decision package JSON | `docs/harness/sop-e2e/evidence/liaoning-yuanhang-targeted-kds-decision-package.json` | yes | `decisions=4 runtime_ready=0 review_ready=0 verified=0 runtime_sop_e2e=repair_required` |
-| targeted KDS decision package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-targeted-kds-decision-package.md` | yes | 四类 proof item 均只允许补证分派，不允许 runtime intake 或 manual/WAES review |
+| targeted KDS decision package Markdown | `docs/harness/sop-e2e/liaoning-yuanhang-targeted-kds-decision-package.md` | yes | 四类 proof item 均只允许补证分派，不允许 runtime intake 或 manual/WAME review |
 | targeted KDS decision package builder | `scripts/build_gfis_liaoning_yuanhang_targeted_kds_decision_package.py` | yes | 读取 082 targeted search 和用户事实线索，输出 candidate-only decision package |
 | targeted KDS decision package validator | `scripts/validate_gfis_liaoning_yuanhang_targeted_kds_decision_package.py` | yes | `liaoning_yuanhang_targeted_kds_decision_package=pass` |
 | GFIS runtime API source contract | `gcfis_custom/gcfis_custom/api.py` | yes | 新增 `get_runtime_liaoning_yuanhang_targeted_kds_decision_package` 只读 API 契约 |
@@ -2119,7 +2119,7 @@ superseded_by: []
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
-| GFIS runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | `get_runtime_liaoning_yuanhang_customer_confirmation_intake_precheck` read-only API；当前 candidate_count=0，禁止人工/WAES 复核和 runtime intake |
+| GFIS runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | `get_runtime_liaoning_yuanhang_customer_confirmation_intake_precheck` read-only API；当前 candidate_count=0，禁止人工/WAME 复核和 runtime intake |
 | GFIS runtime dry-run | `docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dry-run-result.json` | yes | partial; `runtime_calls=57 created=22 cleanup_deleted=22 runtime_gaps=44` |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2; `runtime_liaoning_yuanhang_customer_confirmation_intake_precheck=blocked_missing_customer_confirmation:candidates=0:ready=false:verified=0` |
 | GFIS demo E2E regression | `npm run test:e2e` | yes | 26 passed; pass_demo_only |
@@ -2129,7 +2129,7 @@ superseded_by: []
 
 | evidence 类型 | 文件 | 是否完整 | Harness 结论 |
 |---|---|---|---|
-| GFIS runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | `get_runtime_liaoning_yuanhang_customer_confirmation_collection_packet` read-only API；只输出补证包，不写 KDS/WAES，不进入 runtime intake |
+| GFIS runtime API | `gcfis_custom/gcfis_custom/api.py` | yes | `get_runtime_liaoning_yuanhang_customer_confirmation_collection_packet` read-only API；只输出补证包，不写 KDS/WAME，不进入 runtime intake |
 | GFIS runtime dry-run | `docs/harness/sop-e2e/evidence/gfis-runtime-sop-e2e-dry-run-result.json` | yes | partial; `runtime_calls=56 created=22 cleanup_deleted=22 runtime_gaps=43` |
 | runtime SOP validator | `scripts/validate_gfis_runtime_sop_e2e.py` | yes | expected exit 2; `runtime_liaoning_yuanhang_customer_confirmation_collection_packet=open_missing_customer_confirmation:requests=1:ready=false:verified=0` |
 | GFIS demo E2E regression | `npm run test:e2e` | yes | 26 passed; pass_demo_only |
@@ -2257,8 +2257,8 @@ superseded_by: []
 | 6 | GPCF-GF-LR-006 | transition ledger Doctype draft | `gcfis_custom/gcfis_custom/install/doctypes.py` | yes | draft |
 | 6 | GPCF-GF-LR-006 | fake-Frappe API contract test | `scripts/validate_gfis_work_order_api_contract.py` | yes | pass |
 | 6 | GPCF-GF-LR-006 | loop record | `docs/harness/loops/loop-round-GPCF-GF-LR-006.md` | yes | partial |
-| 7 | GPCF-GF-LR-007 | WAES gate event fixture | `gcfis_demo/fixtures/gfis_waes_gate_event_fixture.json` | yes | draft |
-| 7 | GPCF-GF-LR-007 | WAES gate validator | `scripts/validate_gfis_waes_gate_events.py` | yes | pass |
+| 7 | GPCF-GF-LR-007 | WAME gate event fixture | `gcfis_demo/fixtures/gfis_waes_gate_event_fixture.json` | yes | draft |
+| 7 | GPCF-GF-LR-007 | WAME gate validator | `scripts/validate_gfis_waes_gate_events.py` | yes | pass |
 | 7 | GPCF-GF-LR-007 | gap list update | `gcfis_demo/fixtures/gfis_api_doctype_gap_list.json` | yes | waes_gate_event_aligned |
 | 7 | GPCF-GF-LR-007 | loop record | `docs/harness/loops/loop-round-GPCF-GF-LR-007.md` | yes | partial |
 | 8 | GPCF-GF-LR-008 | runtime validation preparation pack | `docs/harness/gfis-runtime-validation-preparation-pack.md` | yes | controlled |
@@ -2527,7 +2527,7 @@ superseded_by: []
 - LR-016 已建立 7 类样本到 GFIS Doctype/API 的字段差距映射，识别 12 个 gap，其中 P0 gap 8 个；但真实样本与签收尚未取得。
 - LR-017 已把 8 个 P0 gap 转成受控实现任务，覆盖 Custom Field、Doctype、API contract 和边界控制；但字段尚未实现，真实样本与签收尚未取得。
 - LR-018 已把 3 个 P0 custom field task 推进为代码草案，新增 11 个 Work Order / Quality Inspection 字段；但尚未执行 bench/migrate 或运行态验证。
-- LR-019 已把异常/返工结构化字段补入 `GCFIS Work Order Transition Ledger` 草案，新增 5 个字段并保持 WAES 复工门禁边界；但尚未执行 bench/migrate 或运行态验证。
+- LR-019 已把异常/返工结构化字段补入 `GCFIS Work Order Transition Ledger` 草案，新增 5 个字段并保持 WAME 复工门禁边界；但尚未执行 bench/migrate 或运行态验证。
 - LR-020 已把入库/库存事实字段补入 `Stock Entry` 草案，新增 5 个字段并保持不写真实库存；但尚未执行 bench/migrate 或运行态验证。
 - LR-021 已把出库/POD 金融边界字段补入 `Delivery Note` 草案并扩展只读 API 字段面，金融事实仍保持 `L4_blocked`；但尚未执行 bench/migrate 或运行态验证。
 - LR-022 已把 LR-016/LR-017 的 8 个 P0 gap 回查成 closure matrix，确认 6 项代码/边界草案覆盖、1 项合同证据边界、1 项跨项目确认需求；但真实样本、UAT、bench/migrate、生产环境和外部联调仍缺。
@@ -2542,7 +2542,7 @@ superseded_by: []
 - LR-031 已建立签收证据接收后的 8 项审计准备前置条件、审计准备状态机、审计记录字段模板和 Harness 输出状态上限，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
 - LR-032 已建立现场样本进入 evidence 前的 12 状态审计队列、8 项入队校验规则、队列记录字段模板和 evidence index 前置输出状态上限，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
 - LR-033 已建立 Harness 审计输入包 8 项组成规则、输入包状态机、输入包字段模板和反馈回流状态上限，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
-- LR-034 已建立 UAT/Harness 审计反馈回流状态机、8 项回流规则、反馈记录字段模板和 P0/P1、WAES、金融边界状态上限，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
+- LR-034 已建立 UAT/Harness 审计反馈回流状态机、8 项回流规则、反馈记录字段模板和 P0/P1、WAME、金融边界状态上限，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
 - LR-035 已建立审计阻塞项 P0/P1/P2/P3 优先级、责任人分派、due_round、验证计划和状态升级阻断规则，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
 - LR-036 已建立审计回流后的重验证批次状态机、8 项批次校验规则、重验证字段模板和失败转阻塞规则，所有 received/signed/confirmed 均为 false；但未执行 `bench migrate`、schema sync、运行态写 API、备份/恢复或外部联调。
 - LR-037 至 LR-045 已完成 L3 剩余 9 轮治理规则，并由 `validate_gfis_l3_continuation_rounds.py` 批量校验；L3 本次达到 15/15，可用 `budget_exhausted` 收口，但 GFIS 仍保持 `partial`。
@@ -2632,7 +2632,7 @@ superseded_by: []
 ## GFIS-RUNTIME-SOP-E2E-218
 
 - `docs/harness/sop-e2e/evidence/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-review-queue-preblock.json`：`CustomerRequirementOrPlatformOrder` pending business verification 人工业务核验队列预阻断门禁；`source_pending_submission_files_found=0`、`manual_business_verification_queue_candidates=0`、`manual_business_verification_queue_items=0`、`review_queue=0`、`runtime_intake=0`、`waes_review=0`、`verified=0`。
-- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-review-queue-preblock.md`：同一门禁的可读说明，明确 schema-valid pending 文件也不能自动进入运行层或 WAES。
+- `docs/harness/sop-e2e/gfis-customer-requirement-platform-order-source-record-pending-business-verification-manual-review-queue-preblock.md`：同一门禁的可读说明，明确 schema-valid pending 文件也不能自动进入运行层或 WAME。
 - `scripts/build_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_review_queue_preblock.py`：从 217 轮 file quarantine precheck 生成本轮预阻断 evidence。
 - `scripts/validate_gfis_customer_requirement_platform_order_source_record_pending_business_verification_manual_review_queue_preblock.py`：项目级 validator；输出 `manual_business_verification_queue_preblock_empty` 并保持 `runtime_sop_e2e=repair_required`。
 - `scripts/validate_gfis_runtime_sop_e2e.py`：主门禁已接入 `runtime_customer_requirement_platform_order_source_record_pending_business_verification_manual_review_queue_preblock`；仍 expected exit 2，`runtime_sop_e2e=repair_required`。

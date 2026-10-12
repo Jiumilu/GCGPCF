@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BFBFB0AB42
 title: GFIS Assistant DKS-192 Routing Queue Notification Acknowledgement Escalation Digest Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ superseded_by: []
 ## 边界
 
 - 只读预览，不创建真实 digest 或 digest delivery。
-- 不创建 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status update、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、WAES 结果或 Harness evidence。
+- 不创建 escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery status update、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、WAME 结果或 Harness evidence。
 - 不提升 KDS lifecycle，不写 GFIS/GPC/ERP/MES，不调用外部 API。
 
 ## 来源

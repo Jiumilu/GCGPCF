@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-89872D1387
 title: GlobalCloud 绿色供应链分布式知识系统数据对象最小落库与 API 契约草案
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 
 ## 1. 状态边界
 
-本文定义 P0 阶段最小数据对象、存储边界和 API 契约。本文是 no-write / candidate-only 契约草案，不代表数据库已迁移、接口已上线、GFIS 已写入、WAES 已裁决、KDS API 已真实同步或业务事实已确认。
+本文定义 P0 阶段最小数据对象、存储边界和 API 契约。本文是 no-write / candidate-only 契约草案，不代表数据库已迁移、接口已上线、GFIS 已写入、WAME 已裁决、KDS API 已真实同步或业务事实已确认。
 
 P0 默认写入模式：
 
@@ -88,7 +88,7 @@ P0 默认写入模式：
 | `classificationLevel` | DSR-L0 至 DSR-L3 |
 | `trustLevel` | T0 至 T5 |
 | `basePoolRefs` | 至少一个 KDS 底座池 |
-| `waesGateIntent` | 是否需要 WAES |
+| `waesGateIntent` | 是否需要 WAME |
 | `humanConfirmationRequired` | 默认 true |
 | `committeeRequired` | 触及收益、重大违规、争议、潜在产值转正式产值时 true |
 | `forbiddenOperations` | 禁止动作 |
@@ -100,7 +100,7 @@ P0 默认写入模式：
 |---|---|
 | `resultStatus` | `accepted_as_candidate` / `returned_for_evidence` / `blocked` / `no_write_completed` |
 | `createdObjectRefs` | 本地候选对象编号，P0 不代表业务主账 |
-| `waesRequiredActions` | WAES 或人工下一步 |
+| `waesRequiredActions` | WAME 或人工下一步 |
 | `promotionBlockers` | 不能升级原因 |
 | `ragAdmission` | 默认 `repair_required` 或 `blocked`，除非证据充分 |
 | `auditRefs` | LOOP / Harness / 文档引用 |
@@ -193,10 +193,10 @@ P0 副作用：只生成验收候选、缺口和 SOP 建议。
 
 | 字段 | 要求 |
 |---|---|
-| `targetSystem` | GFIS / GPC / KDS / WAES / PVAOS / Finance |
+| `targetSystem` | GFIS / GPC / KDS / WAME / PVAOS / Finance |
 | `targetObject` | 目标对象类型 |
 | `writeMode` | P0 固定 `no_write` 或 `candidate_only` |
-| `requiredApprovals` | 人工、WAES、委员会 |
+| `requiredApprovals` | 人工、WAME、委员会 |
 | `businessFactCreated` | P0 必须 false |
 | `productionWriteExecuted` | P0 必须 false |
 
@@ -254,9 +254,9 @@ AI 额度 API 必须区分：
 | `usageMeter` | 使用计量 |
 | `beneficiaryUnit` | 受益单位 |
 
-## 9. WAES 与 RAG Gate 响应
+## 9. WAME 与 RAG Gate 响应
 
-WAES Gate 统一结果：
+WAME Gate 统一结果：
 
 | 结果 | 含义 |
 |---|---|

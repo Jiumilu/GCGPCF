@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AEEFA55699
 title: GlobalCloud 智能体团队12个交付包责任分解表
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, Studio]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 
 | 交付包 | 牵头成员 | 协同成员 | 审计成员 | 默认主模型 | 默认副模型 | 禁止模型 | 核心目标 |
 |---|---|---|---|---|
-| WAES 治理与控制塔包 | 宪衡 | 数枢、灵策 | 评衡、证验 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 建立治理规则、证据、状态、授权和验收控制主线 |
+| WAME 治理与控制塔包 | 宪衡 | 数枢、灵策 | 评衡、证验 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 建立治理规则、证据、状态、授权和验收控制主线 |
 | PVAOS 生态入口包 | 链同 | 宪衡 | 证验 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 建立组织、伙伴、项目和入口上下文主线 |
 | GPC 运营协同包 | 链同 | 数枢、接稳 | 评衡 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 建立供应链平台协同主线 |
 | GFIS 工厂执行包 | 厂行 | 数枢、接稳 | 证验 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 建立工厂执行与事实主账主线 |
@@ -42,7 +42,7 @@ superseded_by: []
 
 ## 2. 包级责任分解
 
-### 2.1 WAES 治理与控制塔包
+### 2.1 WAME 治理与控制塔包
 
 - 主责成员：宪衡
 - 主要交付物：
@@ -53,8 +53,8 @@ superseded_by: []
   5. 证据规则
   6. AI 授权规则
 - 不得越权：
-  1. 不得把 WAES 写成事务审批中心
-  2. 不得把业务事实写入 WAES
+  1. 不得把 WAME 写成事务审批中心
+  2. 不得把业务事实写入 WAME
 
 ### 2.2 PVAOS 生态入口包
 
@@ -81,7 +81,7 @@ superseded_by: []
   7. 多厂协同
 - 不得越权：
   1. 不得承接工厂主账
-  2. 不得替代 WAES 做治理审批
+  2. 不得替代 WAME 做治理审批
 
 ### 2.4 GFIS 工厂执行包
 
@@ -149,7 +149,7 @@ superseded_by: []
   5. 多端交互机制
 - 不得越权：
   1. 不得允许 AI 直接写业务主账
-  2. 不得允许 AI 绕过 WAES 授权
+  2. 不得允许 AI 绕过 WAME 授权
 
 
 ### 2.9 MMC 管理配置中心包

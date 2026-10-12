@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0283CAD3ED
 title: GFIS Assistant DKS-232 Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Ack Escalation Digest Delivery Ack Escalation SLA Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ DKS-232 将 DKS-231 routing queue notification ack escalation digest delivery ac
 
 - 不创建 SLA timer。
 - 不创建 escalation、reminder、escalation task 或 KWE work item。
-- 不创建 delivery acknowledgement、approval request、approval decision、Harness evidence 或 WAES gate result。
+- 不创建 delivery acknowledgement、approval request、approval decision、Harness evidence 或 WAME gate result。
 - 不提升 KDS lifecycle，不写 KDS fact / accepted fact。
 - 不写 GFIS、GPC、ERP、MES，不调用外部 API。
 

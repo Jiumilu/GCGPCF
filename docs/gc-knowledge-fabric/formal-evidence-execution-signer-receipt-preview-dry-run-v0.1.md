@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-25CDA28633
 title: GC-Knowledge Fabric P0 正式证据执行签署人回执预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

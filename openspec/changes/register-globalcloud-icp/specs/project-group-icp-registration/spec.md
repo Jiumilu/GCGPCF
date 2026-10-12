@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-ICP-REGISTRATION-SPEC-20260712
 title: spec
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF, ICP]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0
@@ -29,7 +29,7 @@ superseded_by: []
 项目群必须把 GC-ICP 定义为产业模型、资源投影、场景编排和决策候选的责任项目，并明确禁止其承担业务事实写入、治理批准和生产执行。
 
 #### 场景：审查职责边界
-- **当** 审查人员比较 ICP 与 WAES、KDS、GPC、GFIS、PVAOS 的职责。
+- **当** 审查人员比较 ICP 与 WAME、KDS、GPC、GFIS、PVAOS 的职责。
 - **则** 各系统保持唯一责任边界，ICP 不具备源系统写入权限。
 
 ### 需求：登记必须保持候选状态

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFCOMMITTEEACCEPTACKNOTIFICATIONRECEIPTAGGREGATIONREPAIRACKROUTINGDELIVERYPRECHECKV01
 title: GC-Knowledge Fabric P0 正式证据执行委员会受理回执通知回执汇总修复请求回执路由投递预检查 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D78 的 repair request acknowledgement routing delivery precheck dry-run。
 
-D78 承接 D77 repair request acknowledgement routing preview，只预检候选 routing 包是否具备未来送达所需的结构化字段、候选送达渠道、候选接收人矩阵、ACL / 脱敏边界、补正负责人提示、SLA 窗口提示、送达阻断码、WAES 负向门禁和 Harness no-write 边界。
+D78 承接 D77 repair request acknowledgement routing preview，只预检候选 routing 包是否具备未来送达所需的结构化字段、候选送达渠道、候选接收人矩阵、ACL / 脱敏边界、补正负责人提示、SLA 窗口提示、送达阻断码、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -49,7 +49,7 @@ D78 承接 D77 repair request acknowledgement routing preview，只预检候选 
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

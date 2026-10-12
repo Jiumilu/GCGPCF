@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EA7D7BBCD3
 title: GFIS-RUNTIME-SOP-E2E-232
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -126,7 +126,7 @@ runtime_sop_e2e=repair_required
 
 ## 非声明
 
-本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+本轮不创建、不确认、不替代客户订单、平台订单回执、pending submission、合规人工核验完成文件、有效 release-ready package、有效 source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 ## 真实性计数
 

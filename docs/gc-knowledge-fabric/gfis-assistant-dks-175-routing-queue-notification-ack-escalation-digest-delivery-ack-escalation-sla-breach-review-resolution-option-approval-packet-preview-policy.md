@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-26E31A1848
 title: GFIS Assistant DKS-175 Resolution Option Approval Packet Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -25,7 +25,7 @@ DKS-175 定义从 DKS-174 resolution option preview 派生的 approval packet pr
 ## 强边界
 
 - 不创建 approval packet、approval request、approval decision、committee decision 或 freeze action。
-- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAES gate result、KWE work item 或 Harness evidence。
+- 不写 GFIS、GPC、ERP、MES、KDS fact、KDS lifecycle、WAME gate result、KWE work item 或 Harness evidence。
 - 不把候选 approval packet 解释为正式审批请求、正式审批决定、委员会裁决或业务写回依据。
 
 ## DKS-175 验收口径

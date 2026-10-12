@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-3FDBF59030
 title: GFIS Assistant DKS-252 升级摘要预览候选规则
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 DKS-252 从 DKS-251 acknowledgement escalation preview 派生 escalation digest preview。它只展示候选摘要渠道、候选接收人、摘要原因、阻断动作和下一步建议。
 
-硬边界：不创建 digest、digest delivery、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval、committee、freeze、WAES、Harness、KDS lifecycle 或任何业务写回。
+硬边界：不创建 digest、digest delivery、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval、committee、freeze、WAME、Harness、KDS lifecycle 或任何业务写回。
 
 验证命令：
 

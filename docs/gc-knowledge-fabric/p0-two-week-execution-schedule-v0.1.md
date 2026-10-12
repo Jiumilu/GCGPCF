@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D23F122F5C
 title: GC-Knowledge Fabric P0 两周执行任务排期表 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -39,11 +39,11 @@ P0 不以业务上线作为验收口径。
 | D1 | 规则冻结 | 锁定 Q1-Q40 需求口径、AI 边界、no-write 边界、P0/P1/P2 范围 | 需求锁定稿、管理层摘要、工程计划、试点清单 | 文档门禁 |
 | D2 | 目录与编号 | 固化对象编号、KDS 十一池挂接、Domain + Pool 双维模型 | 编号规则、挂池规则、对象目录清单 | pool binding validator |
 | D3 | OKF 契约 | 建立 ontology、knowledge object schema、domain/pool/trust/flow policy | OKF v0.1 契约包 | YAML/JSON parse |
-| D4 | WAES/RAG 规则 | 建立 Source/Evidence/RAG/Writeback/Contribution/Revenue gate 规则 | WAES gate policy、RAG admission policy | gate validator |
+| D4 | WAES/RAG 规则 | 建立 Source/Evidence/RAG/Writeback/Contribution/Revenue gate 规则 | WAME gate policy、RAG admission policy | gate validator |
 | D5 | 敏感资料与四池 | 建立 metadata-only、blocked、Contribution/Revenue/Quota/Bounty ledger 边界 | 敏感资料规则、四池台账规则 | no-write + ledger validator |
 | D6 | Shared Types | 建立 KnowledgeObject、Source、Evidence、Candidate、GateResult、WorkItem、Ledger 类型 | shared types v0.1 | TypeScript 编译 |
-| D7 | Fixtures | 建立候选事实、候选 SOP、候选写回、metadata-only、WAES gate、ledger dry-run 样例 | fixtures v0.1 | fixture validator |
-| D8 | Validators | 建立对象覆盖、挂池、WAES、RAG、敏感资料、四池、LOOP evidence 校验 | validators v0.1 | validator pass |
+| D7 | Fixtures | 建立候选事实、候选 SOP、候选写回、metadata-only、WAME gate、ledger dry-run 样例 | fixtures v0.1 | fixture validator |
+| D8 | Validators | 建立对象覆盖、挂池、WAME、RAG、敏感资料、四池、LOOP evidence 校验 | validators v0.1 | validator pass |
 | D9 | 葛化 P1 准备 | 建立葛化资料目录、四类敏感分级、GFIS 三助手边界、候选闭环样例 | 葛化 P1 admission pack | no-write dry-run |
 | D10 | P0 收口 | 汇总 P0 evidence、风险、阻塞、P1 进入条件和 v1.0 升级建议 | P0 closure packet | 三项文档门禁 |
 
@@ -54,7 +54,7 @@ P0 不以业务上线作为验收口径。
 | T0 规则固化 | D1-D2 | 文档和台账可追踪 |
 | T1 OKF 契约 | D3-D4 | 契约文件可解析 |
 | T2 KDS v2 骨架 | D3-D8 | contract/stub/fixture/validator 完整 |
-| T3 WAES 最小门禁 | D4-D8 | gate result 可解释 |
+| T3 WAME 最小门禁 | D4-D8 | gate result 可解释 |
 | T4 KWE 最小流程 | D6-D8 | WorkItem/Gap/Bounty/Confirmation dry-run 不越权 |
 | T5 葛化准备 | D9 | 进入 P1 条件可审查 |
 | T6 LOOP 指挥舱 | D1-D10 | 每日有 LOOP evidence |
@@ -77,7 +77,7 @@ P0 不以业务上线作为验收口径。
 |---|---|---|
 | GPCF 总控 | 规则、文档、台账、LOOP 门禁 | P0 evidence 与收口包 |
 | KDS | 对象模型、池子、source/evidence、RAG 准入 | KDS v2 契约与 no-write 骨架 |
-| WAES | gate 类型、policy、required_actions | gate result validator |
+| WAME | gate 类型、policy、required_actions | gate result validator |
 | KWE | work item、gap、bounty、confirmation、writeback dry-run | 流程对象和状态边界 |
 | GFIS | 葛化资料目录、字段、助手边界 | P1 admission pack |
 | Brain/PKC | 信息架构、入口和只读视图边界 | 后续 UI/console 合同 |

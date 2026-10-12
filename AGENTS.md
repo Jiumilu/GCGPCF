@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-37DD68363F
 title: AGENTS
-project: WAES
-related_projects: [WAES, GPCF]
+project: WAME
+related_projects: [WAME, GPCF]
 domain: general
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/04-WAES/AGENTS.md
 source_path: AGENTS.md

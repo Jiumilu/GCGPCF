@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C831F07BC3
 title: GC-Knowledge Fabric RAG准入与引用强度规则
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -48,8 +48,8 @@ superseded_by: []
 
 ## 4. 响应要求
 
-RAG 响应必须能返回 Domain、PoolRefs、ObjectType、TrustLevel、RAG Admission、Lifecycle、SourceRefs、EvidenceRefs、WAES Gate Status 和可共享边界。
+RAG 响应必须能返回 Domain、PoolRefs、ObjectType、TrustLevel、RAG Admission、Lifecycle、SourceRefs、EvidenceRefs、WAME Gate Status 和可共享边界。
 
 ## 5. AI 输出边界
 
-AI 生成内容默认视为 T5。只有绑定来源、通过 WAES、进入 KWE 确认并形成 evidence 后，才能提升引用强度。
+AI 生成内容默认视为 T5。只有绑定来源、通过 WAME、进入 KWE 确认并形成 evidence 后，才能提升引用强度。

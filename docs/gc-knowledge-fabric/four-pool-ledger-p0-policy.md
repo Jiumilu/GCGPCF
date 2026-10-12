@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-19C576EDF8
 title: GC-Knowledge Fabric 四池台账 P0 压缩规则
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -40,7 +40,7 @@ P0 只允许登记、候选、审查、冻结和证据引用，不允许自动�
 3. 潜在收益、渠道机会、知识潜在价值不能自动转为正式收益。
 4. 知识贡献可以登记候选分，但确认分必须经过人工或委员会确认。
 5. 自购 AI 额度不得进入统一收益池。
-6. 悬赏结算必须经过 WAES gate、人工验收、争议期结束；AI 初审只作为建议。
+6. 悬赏结算必须经过 WAME gate、人工验收、争议期结束；AI 初审只作为建议。
 7. 重大争议或违规风险必须可冻结贡献、收益、额度或悬赏。
 
 ## 4. P0 验收条件

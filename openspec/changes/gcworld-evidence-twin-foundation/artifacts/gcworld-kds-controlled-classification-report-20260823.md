@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-026
 title: GCWORLD KDS全量受控分级与组织资产候选覆盖评估报告
 project: KDS
-related_projects: [PVAOS, WAES, KDS, MMC]
+related_projects: [PVAOS, WAME, KDS, MMC]
 domain: openspec
 status: draft
 version: v1.0
@@ -108,6 +108,6 @@ superseded_by: []
 2. 对17,338个S3/例外项逐类复核；未经独立授权不得扩展内容读取范围。
 3. 建立人物、法人组织、非法人团队、政府机构和项目组织的权威锚点规则。
 4. 对候选提取结果进行分层抽样，形成准确率、召回风险和规则修订证据。
-5. 只有人工确认、证据充分且通过WAES门禁的候选，才可提出事实世界提升申请；本轮授权不包含写入或提升。
+5. 只有人工确认、证据充分且通过WAME门禁的候选，才可提出事实世界提升申请；本轮授权不包含写入或提升。
 
 当前结论保持：来源层全量处置已完成，组织资产身份层和事实世界初始化尚未完成。

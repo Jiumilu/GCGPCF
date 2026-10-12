@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C80149DB36
 title: GC-Knowledge Fabric 管理层摘要 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,11 +24,11 @@ GC-Knowledge Fabric 是 GlobalCloud 绿色供应链体系的分布式可信知�
 
 ## 2. 管理层需要确认的核心原则
 
-- 楚商云掌控规则、底座、WAES 门禁、停机权和收益/积分制度设计权。
+- 楚商云掌控规则、底座、WAME 门禁、停机权和收益/积分制度设计权。
 - 委员会负责具体裁决、争议处理、收益分配建议和重大违规事项。
 - AI 只生成候选，不直接确认事实、写回业务系统、分配收益或形成重大结论。
 - KDS 是事实底座，不是普通文档库。
-- WAES 是规则与门禁治理层，不替代 KDS、GFIS、委员会或业务系统。
+- WAME 是规则与门禁治理层，不替代 KDS、GFIS、委员会或业务系统。
 - GFIS/GPC/ERP/MES 只接收通过门禁、确认和 evidence 固化后的业务事实。
 - 模板不是事实，葛化母版和湖北磷材模板不能自动成为具体项目事实。
 - 有收入才进正式产值；未到账机会只能进入潜在收益或渠道贡献。

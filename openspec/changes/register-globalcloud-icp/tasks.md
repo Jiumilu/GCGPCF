@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-ICP-REGISTRATION-TASKS-20260712
 title: tasks
 project: GPCF
-related_projects: [WAES, GPCF, ICP]
+related_projects: [WAME, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0

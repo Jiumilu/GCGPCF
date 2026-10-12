@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-39842AE89B
 title: GFIS-RUNTIME-SOP-E2E-246
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## 输入
 
 - 上一轮 `GFIS-RUNTIME-SOP-E2E-245` 已把 submission package hard-stop 转成 8 项 owner/GFIS/WAES/KDS/GPCF 补证动作，且全部仍为 blocked。
-- 当前真实缺口仍为：真实派发确认文件 0、有效责任方响应 0、有效 submission package 0、人工派发授权 0、KDS backlink 0、WAES evidence candidate 0、运行层主键 0。
+- 当前真实缺口仍为：真实派发确认文件 0、有效责任方响应 0、有效 submission package 0、人工派发授权 0、KDS backlink 0、WAME evidence candidate 0、运行层主键 0。
 - 本轮只允许建立 owner response / submission package release guard；不得把 guard 当成补证完成或业务完成。
 
 ## 执行动作
@@ -80,6 +80,6 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只建立 owner response / submission package release guard。8 项补证动作未完成时，责任方响应释放、提交包释放、提交包重开、派发、运行层主键、review queue、runtime intake、WAES review、verified artifact 均继续 blocked。
-- 本轮不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只建立 owner response / submission package release guard。8 项补证动作未完成时，责任方响应释放、提交包释放、提交包重开、派发、运行层主键、review queue、runtime intake、WAME review、verified artifact 均继续 blocked。
+- 本轮不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-247` 建立 submission package release negative fixture guard，拒收把 guard、remediation scan、GFIS Demo、KDS candidate-only、用户口述或 Loop 文档冒充 release 条件的弱声明。

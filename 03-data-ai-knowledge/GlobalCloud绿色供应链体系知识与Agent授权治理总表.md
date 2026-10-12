@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-04D6680E14
 title: GlobalCloud绿色供应链体系知识与Agent授权治理总表
 project: KDS
-related_projects: [KDS, GPC, WAES]
+related_projects: [KDS, GPC, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AB74993636
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Preview No-write 规则
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-149 的 acknowledgement escalation SLA breach review preview。该预览承接 DKS-148 SLA preview，只展示候选 breach review 类型、候选严重度、候选审查路径、候选 reviewer、证据缺口、阻断计数和下一步候选动作。
 
-该能力不创建真实 breach record、dispute、committee case、freeze request、reminder、approval request、approval decision、Harness evidence、WAES gate result、KWE work item、KDS lifecycle 或任何业务写回。
+该能力不创建真实 breach record、dispute、committee case、freeze request、reminder、approval request、approval decision、Harness evidence、WAME gate result、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 输入边界
 

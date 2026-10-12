@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CA8423BACC
 title: GFIS-RUNTIME-SOP-E2E-239
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -70,7 +70,7 @@ superseded_by: []
 
 本轮满足实质轮次 1/15：有独立输入、独立判断、独立输出、独立验证和独立反馈。
 
-本轮没有创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+本轮没有创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 
 declared_rounds=1/15  
 substantive_rounds=1/15  
@@ -81,4 +81,4 @@ stop_type=authorization_boundary
 
 ## 下一轮
 
-`GFIS-RUNTIME-SOP-E2E-240`：建立 release override approval request dispatch confirmation hold release precheck；在真实确认文件、派发授权、收件方/通道确认、hash、KDS backlink 和 WAES candidate 均未满足时继续阻断 hold release。
+`GFIS-RUNTIME-SOP-E2E-240`：建立 release override approval request dispatch confirmation hold release precheck；在真实确认文件、派发授权、收件方/通道确认、hash、KDS backlink 和 WAME candidate 均未满足时继续阻断 hold release。

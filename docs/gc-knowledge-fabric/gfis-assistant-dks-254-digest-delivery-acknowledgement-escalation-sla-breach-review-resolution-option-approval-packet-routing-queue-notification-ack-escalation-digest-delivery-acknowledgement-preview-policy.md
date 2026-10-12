@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1D966F98E7
 title: GFIS Assistant DKS-254 摘要交付确认预览候选规则
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 DKS-254 从 DKS-253 digest delivery preview 派生 digest delivery acknowledgement preview。它只展示候选确认人、确认方法、确认原因、证据缺口、阻断动作和下一步建议。
 
-硬边界：不创建 delivery acknowledgement、digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval、committee、freeze、WAES、Harness、KDS lifecycle 或任何业务写回。
+硬边界：不创建 delivery acknowledgement、digest delivery、delivery、digest、escalation、timeout event、KWE work item、notification、acknowledgement、receipt、read receipt、delivery update、approval、committee、freeze、WAME、Harness、KDS lifecycle 或任何业务写回。
 
 验证命令：
 

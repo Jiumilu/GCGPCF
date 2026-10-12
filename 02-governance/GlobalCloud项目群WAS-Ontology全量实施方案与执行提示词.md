@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-785AEA3125
 title: GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md
 source_path: 02-governance/GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词.md
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 1. 方案定位
 
-本文是 `GlobalCloud 项目群实施方案` 下的 WAS/Ontology 专项全量实施入口，用于把 WAS 顶层语义、Ontology 语义契约、XWAIL 机器契约、WAES 门禁、KDS 证据和 LOOP 运行控制闭环纳入同一实施链路。
+本文是 `GlobalCloud 项目群实施方案` 下的 WAS/Ontology 专项全量实施入口，用于把 WAS 顶层语义、Ontology 语义契约、XWAIL 机器契约、WAME 门禁、KDS 证据和 LOOP 运行控制闭环纳入同一实施链路。
 
 本文不替代 `WAS世界资产体系总体方案`，不替代各项目当前有效实施方案，也不声明 WAS/Ontology 已经业务上线、客户交付完成、accepted、integrated 或 production_ready。
 
@@ -30,7 +30,7 @@ superseded_by: []
 WAS世界资产体系总体方案
   -> GlobalCloud 项目群实施方案
   -> GlobalCloud项目群WAS-Ontology全量实施方案与执行提示词
-  -> WAS / XWAIL / WAES / GFIS / GPC / PVAOS / KDS / Brain 项目实施方案
+  -> WAS / XWAIL / WAME / GFIS / GPC / PVAOS / KDS / Brain 项目实施方案
   -> LOOP round / Harness evidence / validator
 ```
 
@@ -39,7 +39,7 @@ WAS世界资产体系总体方案
 - WAS 定义资产世界、八维、八流、生命周期和治理原则。
 - Ontology 只提供语义知识层和候选推理解释，不替代 XWAIL、GFIS、GPC、PVAOS 或 KDS source-of-record。
 - XWAIL 负责机器契约、Profile、Schema、Validator 和迁移规则。
-- WAES 负责注册、授权、发布、治理、证据审查和状态门禁。
+- WAME 负责注册、授权、发布、治理、证据审查和状态门禁。
 - KDS 是受控知识与证据引用主存；Brain 输出默认是候选。
 - GPCF 只负责 LOOP、Harness、文档治理、证据台账和门禁，不替代项目实现。
 
@@ -71,7 +71,7 @@ WAS世界资产体系总体方案
 | L0 体系控制 | WAS 总体语义和项目群实施主方案 | 总体方案、项目群实施方案、实施控制台账 | `controlled` |
 | L1 语义契约 | Ontology / XWAIL profile | 术语、字段、crosswalk、validator | `candidate` |
 | L2 Source Record 门禁 | GFIS/GPC/PVAOS 到 WAS/Ontology 的真实源记录 | intake checklist、negative fixtures、precheck | `hold_required` |
-| L3 WAES 审查 | WAES review / runtime intake / review queue | 审查包、权限、回滚、审计 | `blocked_without_real_source_record` |
+| L3 WAME 审查 | WAME review / runtime intake / review queue | 审查包、权限、回滚、审计 | `blocked_without_real_source_record` |
 | L4 KDS/Brain 候选解释 | 受控 RAG、候选推理、知识回指 | KDS backlink candidate、Brain candidate explanation | `candidate_only` |
 | L5 交付验收 | 客户/UAT/签收/发布 | UAT 记录、签收、发布批准 | `not_collected` |
 
@@ -86,7 +86,7 @@ run:
   output: evidence、loop round、validator output、状态台账更新
 stop:
   stop_type: authorization_boundary 或 blocker
-  stop_evidence: 缺真实 P4 candidate、缺用户确认、缺 WAES 审查或门禁失败
+  stop_evidence: 缺真实 P4 candidate、缺用户确认、缺 WAME 审查或门禁失败
 verify:
   commands:
     - python3 tools/kds-sync/validate_project_group_implementation_plan.py
@@ -120,7 +120,7 @@ debug:
 |---|---|---|---|
 | P0 | `GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-MONITOR-101` | 继续监控真实 P4 candidate 文件提交，并复核数字产品护照、公开披露、二维码/数据载体、追溯数据集、访问治理和检索回执边界 | 无真实输入时继续 hold |
 | P0 | `WAS-IMPLEMENTATION-CHAIN-GATE-001` | 将 WAS/Ontology 全量实施方案纳入项目群实施方案门禁和台账 | 只做治理门禁，不升级验收状态 |
-| P1 | `WAS-XWAIL-WAES-RUNTIME-CONTRACT-001` | 定义 XWAIL profile 到 WAES runtime contract 的最小验证清单 | 不写生产、不发布 |
+| P1 | `WAS-XWAIL-WAES-RUNTIME-CONTRACT-001` | 定义 XWAIL profile 到 WAME runtime contract 的最小验证清单 | 不写生产、不发布 |
 | P1 | `WAS-KDS-BRAIN-CANDIDATE-EXPLANATION-001` | 建立 KDS/Brain 候选解释不越权规则 | Brain 输出仍为 candidate |
 
 ## 8. 非声明边界
@@ -129,6 +129,6 @@ debug:
 
 - 不声明真实 P4 source-record 已提交；
 - 不声明 GFIS/GPC/PVAOS 真实业务事实已形成；
-- 不声明 runtime primary key、review queue、runtime intake、WAES review 或 verified artifact 已创建；
+- 不声明 runtime primary key、review queue、runtime intake、WAME review 或 verified artifact 已创建；
 - 不声明 KDS 正式事实写入或 Brain 推理结果已进入主账；
 - 不声明客户交付、UAT、签收、accepted、integrated 或 production_ready。

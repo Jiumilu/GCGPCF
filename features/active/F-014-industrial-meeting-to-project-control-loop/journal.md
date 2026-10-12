@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F014-INDUSTRIAL-MEETING-PROJECT-CONTROL-JOURNAL-20260822
 title: F-014 industrial-meeting-to-project-control-loop
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-GLOBALCLOUD-PROJECT-GROUP-SCHEME-RECOGNITION-RULES-20260626
 title: GlobalCloud 项目群方案体系识别规则
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud 项目群方案体系识别规则.md
 source_path: 02-governance/GlobalCloud 项目群方案体系识别规则.md
@@ -37,7 +37,7 @@ GlobalCloud 项目群存在两个必须识别的总控体系：
 
 ## 2. 当前纳入边界
 
-武汉城市圈绿色供应链运营 SOP 已作为场景运营 SOP 链路纳入项目群总体方案和项目群实施方案。该纳入只建立 `controlled_internal_pilot` 边界，用于 SOP、KDS、GFIS、GPC、GPCF 和 WAES 的受控协同，不等于正式 SOP 发布、真实 KDS API 写入、GFIS 真实 SOP E2E、生产运行完成、客户验收或 1+8 全覆盖达成。
+武汉城市圈绿色供应链运营 SOP 已作为场景运营 SOP 链路纳入项目群总体方案和项目群实施方案。该纳入只建立 `controlled_internal_pilot` 边界，用于 SOP、KDS、GFIS、GPC、GPCF 和 WAME 的受控协同，不等于正式 SOP 发布、真实 KDS API 写入、GFIS 真实 SOP E2E、生产运行完成、客户验收或 1+8 全覆盖达成。
 
 ## 3. 禁止声明
 

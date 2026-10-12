@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-477C45A148
 title: spaceai-studio-multiplatform-refactor
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

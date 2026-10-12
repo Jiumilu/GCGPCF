@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2B7F6FCEBF
 title: GFIS Assistant Repair Notification Snooze Queue Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -35,7 +35,7 @@ superseded_by: []
 | DismissalRecord | 不创建真实 DismissalRecord |
 | Notification | 不创建、不关闭、不修改真实 Notification |
 | Harness Evidence | 不创建、不持久化 Harness evidence |
-| WAES / KWE / KDS | 不创建门禁结果、工单或状态变化 |
+| WAME / KWE / KDS | 不创建门禁结果、工单或状态变化 |
 | GFIS/GPC/ERP/MES | 不写业务系统 |
 | 外部 API | 不调用真实外部 API |
 

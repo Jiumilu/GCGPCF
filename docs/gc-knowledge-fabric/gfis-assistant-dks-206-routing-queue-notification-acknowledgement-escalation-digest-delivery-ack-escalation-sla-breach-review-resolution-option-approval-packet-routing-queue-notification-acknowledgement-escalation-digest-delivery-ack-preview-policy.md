@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B696D30510
 title: GFIS Assistant DKS-206 Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation SLA Breach Review Resolution Option Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -28,7 +28,7 @@ DKS-206 将 DKS-205 digest delivery preview 推进为 delivery acknowledgement p
 - 不创建 digest delivery、delivery record、digest、escalation、timeout event 或 KWE work item。
 - 不创建 notification、acknowledgement、receipt 或 read receipt。
 - 不更新 delivery status，不发送外部通知。
-- 不创建 approval / committee / freeze / Harness / WAES 正式记录。
+- 不创建 approval / committee / freeze / Harness / WAME 正式记录。
 - 不提升 KDS lifecycle，不写 KDS fact / accepted fact。
 - 不写 GFIS、GPC、ERP、MES，不调用外部 API。
 

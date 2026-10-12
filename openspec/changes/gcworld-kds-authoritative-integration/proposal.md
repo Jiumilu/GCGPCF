@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCWORLD-028
 title: proposal
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0
@@ -43,7 +43,7 @@ GCWORLD已经形成证据孪生、只读普查和候选台账，但KDS当前仍�
 - **Program / Release：** GKE‑001；`release_0`后续规划候选，任何实现前必须重新分配并批准Release阶段。
 - **Feature：** 绑定F‑013 `knowledge-asset-model-system`；F‑013当前状态与上限保持不变。
 - **当前目标仓库与责任方：** GPCF / GPCF，仅限本OpenSpec目录。
-- **未来依赖：** KDS、WAS、WAES、XWAIL；对应仓库、接口和责任人均待独立授权。
+- **未来依赖：** KDS、WAS、WAME、XWAIL；对应仓库、接口和责任人均待独立授权。
 - **基线：** `gcworld-evidence-twin-foundation` Harness结论为 `pass_with_runtime_blockers`；KDS准入为 `blocked_dirty_worktree`。
 - **CodeGraph：** 仅声明未来 `KDS事实→GCWORLD投影` 与 `GCWORLD候选→KDS受控提升请求` 关系，不修改当前权威绑定。
 - **非目标：** 不处理全部身份争议，不读取S3正文，不建立第二事实账本，不直接写KDS，不授权运行时集成。

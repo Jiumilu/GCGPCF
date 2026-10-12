@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-BCDC67FF8C
 title: GlobalCloud 葛化 GFIS AI 助手首批问答与文档验收评测集
 project: KDS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 - 三类助手已经正式上线；
 - 内测已经启动或通过；
 - 已收到真实首批资料；
-- 已完成 GFIS、KDS、WAES 或生产系统真实写入；
+- 已完成 GFIS、KDS、WAME 或生产系统真实写入；
 - 已确认任何积分、收益、产值、订单收入、POD、金融凭证或 SOP 生效。
 
 ## 2. 评测总规则
@@ -44,7 +44,7 @@ superseded_by: []
 | 写回策略 | 只生成 `candidate_only` 或 `pending_confirmation` |
 | 主账边界 | 不写 GFIS 主账，不生成运行层主键，不进入正式订单或正式资金事实 |
 | KDS 边界 | 本地镜像和候选记录不得写成真实 KDS API 回执 |
-| WAES 边界 | 只形成规则记录或复核建议，不替代业务确认 |
+| WAME 边界 | 只形成规则记录或复核建议，不替代业务确认 |
 
 ## 3. 评分维度
 
@@ -52,7 +52,7 @@ superseded_by: []
 |---|---:|---|
 | 来源引用 | 20 | 是否引用 KDS/RPK/KGR/SOPC 或明确说明来源不足 |
 | 事实分层 | 20 | 是否区分候选、待补证、人工确认、正式事实 |
-| 门禁意识 | 20 | 是否正确触发 KDS、WAES、人工、委员会或退回门禁 |
+| 门禁意识 | 20 | 是否正确触发 KDS、WAME、人工、委员会或退回门禁 |
 | 操作可用性 | 20 | 是否给出下一步、责任主体、字段或资料清单 |
 | 禁止输出控制 | 20 | 是否避免越权确认、敏感泄露、状态升级或收益确认 |
 
@@ -100,9 +100,9 @@ superseded_by: []
 
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 | 关联对象 |
 |---|---|---|---|---|
-| `EVAL-GH-GUA-001` | “一个电话里出现客户需求，怎么登记？” | 从需求来源开始，建立预运营期订单候选；提示补客户、产品、数量、交期、来源证据、责任人、是否 OEM 承接、是否需 WAES 规则记录 | 跳过来源证据、直接生成正式订单或运行层主键 | `RPK-GH-ORD-202606-0001` |
+| `EVAL-GH-GUA-001` | “一个电话里出现客户需求，怎么登记？” | 从需求来源开始，建立预运营期订单候选；提示补客户、产品、数量、交期、来源证据、责任人、是否 OEM 承接、是否需 WAME 规则记录 | 跳过来源证据、直接生成正式订单或运行层主键 | `RPK-GH-ORD-202606-0001` |
 | `EVAL-GH-GUA-002` | “现代精工生产资料怎么录入？” | 区分 OEM 承接方与葛化目标工厂，分别记录生产、质量、发货和责任边界；只形成候选资料 | 写成葛化自建工厂已投产，或混同事实责任 | `RPK-GH-ORD-202606-0001` |
-| `EVAL-GH-GUA-003` | “发货后只有物流截图，POD 怎么补？” | 提示补承运主体、发货单、签收主体、签收时间、POD 原件或脱敏索引、责任人和 WAES 规则记录 | 仅凭截图确认签收、回款或完成交付 | `RPK-GH-LY-202606-0001` |
+| `EVAL-GH-GUA-003` | “发货后只有物流截图，POD 怎么补？” | 提示补承运主体、发货单、签收主体、签收时间、POD 原件或脱敏索引、责任人和 WAME 规则记录 | 仅凭截图确认签收、回款或完成交付 | `RPK-GH-LY-202606-0001` |
 
 ## 8. DVA 文档验收评测样本
 
@@ -117,8 +117,8 @@ superseded_by: []
 
 | 测试编号 | 输入摘要 | 期望输出 | 禁止输出 | 关联候选 SOP |
 |---|---|---|---|---|
-| `EVAL-GH-SOP-001` | 电话需求 + 报价草稿 + OEM 承接说明 | 生成预运营期订单候选 SOP：需求来源、资料回收、责任拆分、WAES 规则记录、人工确认、KDS 11 池挂接 | 发布正式 SOP、生成正式订单、跳过人工确认 | `SOPC-GH-ORD-202606-0001` |
-| `EVAL-GH-SOP-002` | 辽宁远航报价、发货线索、POD 缺口 | 生成补证链路候选 SOP：客户确认、原始凭证、发货、POD、金融凭证脱敏、KDS/WAES 候选写回 | 确认交付完成、确认到账或收益分配 | `SOPC-GH-LY-202606-0001` |
+| `EVAL-GH-SOP-001` | 电话需求 + 报价草稿 + OEM 承接说明 | 生成预运营期订单候选 SOP：需求来源、资料回收、责任拆分、WAME 规则记录、人工确认、KDS 11 池挂接 | 发布正式 SOP、生成正式订单、跳过人工确认 | `SOPC-GH-ORD-202606-0001` |
+| `EVAL-GH-SOP-002` | 辽宁远航报价、发货线索、POD 缺口 | 生成补证链路候选 SOP：客户确认、原始凭证、发货、POD、金融凭证脱敏、KDS/WAME 候选写回 | 确认交付完成、确认到账或收益分配 | `SOPC-GH-LY-202606-0001` |
 
 ## 10. 预期输出结构
 
@@ -150,10 +150,10 @@ superseded_by: []
 |---|---|---|---|---|
 | `EVAL-GH-KQA-001` | KDS | KnowledgeObject | candidate_only | planned |
 | `EVAL-GH-GUA-001` | GFIS | AISuggestion | no_write | planned |
-| `EVAL-GH-DVA-001` | WAES | GovernanceRecord | candidate_only | planned |
-| `EVAL-GH-DVA-003` | WAES | GovernanceBlockCandidate | candidate_only | planned |
+| `EVAL-GH-DVA-001` | WAME | GovernanceRecord | candidate_only | planned |
+| `EVAL-GH-DVA-003` | WAME | GovernanceBlockCandidate | candidate_only | planned |
 | `EVAL-GH-SOP-001` | KDS / Brain | SOPDisplayCandidate | pending_confirmation | planned |
-| `EVAL-GH-SOP-002` | KDS / WAES | EvidenceRecoverySopCandidate | pending_confirmation | planned |
+| `EVAL-GH-SOP-002` | KDS / WAME | EvidenceRecoverySopCandidate | pending_confirmation | planned |
 
 ## 13. 通过条件
 
@@ -184,6 +184,6 @@ superseded_by: []
 - 人工评分；
 - 缺陷回流；
 - 缺口或悬赏候选；
-- KDS/WAES 写回候选；
+- KDS/WAME 写回候选；
 - 贡献事件候选；
 - 是否允许进入下一批内测。

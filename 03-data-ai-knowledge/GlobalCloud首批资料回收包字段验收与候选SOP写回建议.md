@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B49150CE25
 title: GlobalCloud 首批资料回收包字段验收与候选 SOP 写回建议
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 状态：`GPCF-KDS-DKS-026` 受控任务包  
 日期：2026-06-17  
-适用范围：葛化物流预运营期订单、辽宁远航链路、湖北磷材拓厂项目、真实脱敏资料回收包、字段验收、候选 SOP 写回建议、KDS 11 个底座资源池、增强治理账本、WAES 规则门禁、人工确认和委员会备案。
+适用范围：葛化物流预运营期订单、辽宁远航链路、湖北磷材拓厂项目、真实脱敏资料回收包、字段验收、候选 SOP 写回建议、KDS 11 个底座资源池、增强治理账本、WAME 规则门禁、人工确认和委员会备案。
 
 ## 1. 定位
 
@@ -40,7 +40,7 @@ superseded_by: []
 
 1. 回收包只能承载真实脱敏来源索引、元数据索引、责任主体说明、人工确认和规则记录，不承载未授权原文。
 2. DSR-L2 资料默认脱敏后填报；DSR-L3 资料默认只填报元数据，不进入普通 AI 问答。
-3. 字段验收只判断完整性、来源、密级、脱敏、责任主体、WAES 规则和人工确认状态。
+3. 字段验收只判断完整性、来源、密级、脱敏、责任主体、WAME 规则和人工确认状态。
 4. 候选 SOP 写回只生成建议，不自动写 GFIS、GPC、PVAOS 或其它业务主账。
 5. 任何涉及积分、收益、悬赏、潜在产值、争议和重大违规的事项，必须有委员会备案或裁决路径。
 6. 自购 AI 额度只做本单位自用计量，不进入本轮回收包资源或统一收益池。
@@ -63,7 +63,7 @@ superseded_by: []
 | blockedFields | 禁止入库或禁止 AI 处理字段 | 条件必填 | 涉隐私、合同、金融或未授权资料时必填 |
 | kdsBasePools | KDS 11 底座资源池挂接 | 必填 | 至少一个 |
 | enhancedLedgerLinks | 增强治理账本挂接 | 必填 | 至少一个 |
-| waesRuleRecordId | WAES 规则记录编号 | 条件必填 | 提交验收前必填或说明 pending |
+| waesRuleRecordId | WAME 规则记录编号 | 条件必填 | 提交验收前必填或说明 pending |
 | humanReviewDecisionId | 人工审核决策编号 | 条件必填 | 提交验收前必填 |
 | committeeFilingId | 委员会备案或裁决编号 | 条件必填 | 涉及积分、收益、悬赏、争议或重大违规时必填 |
 | candidateSopRefs | 候选 SOP 建议编号 | 可选 | 必须保持 candidate |
@@ -114,13 +114,13 @@ superseded_by: []
 | recoveryTaskId | `RRT-GH-LY-202606-0001` |
 | requestId | `KGR-GH-LY-202606-0001` |
 | sourceKind | platform_receipt / file_index / email / source_system_index / other |
-| requiredSourceRefs | 客户确认、样箱签收或反馈、POD、真实回执、KDS 回执、WAES confirmation、现代精工过渡责任材料 |
+| requiredSourceRefs | 客户确认、样箱签收或反馈、POD、真实回执、KDS 回执、WAME confirmation、现代精工过渡责任材料 |
 | kdsBasePools | 订单池、运力池、资金池、数据池、场景池 |
 | enhancedLedgerLinks | 潜在产值池、贡献账本、悬赏池、争议池、SOP 账本 |
 | waesRuleScope | evidence / real_receipt / classification / boundary |
 | humanReviewScope | 客户链路、样箱链路、承接方链路和回执链路 |
 | candidateSopRefs | `SOPC-GH-LY-202606-0001` |
-| forbiddenClaims | 客户确认已取得、POD 已取得、KDS 回执已取得、WAES confirmation 已取得、GFIS verified artifact 已形成 |
+| forbiddenClaims | 客户确认已取得、POD 已取得、KDS 回执已取得、WAME confirmation 已取得、GFIS verified artifact 已形成 |
 | packageState | recovery_open |
 
 ## 6. 字段级验收 checklist
@@ -148,7 +148,7 @@ superseded_by: []
 | blockedFields 明确 | conditional | conditional | conditional | 涉隐私、合同、金融或未授权资料时必填 |
 | kdsBasePools 挂接 | required | required | required | 至少挂接一个 KDS 11 池 |
 | enhancedLedgerLinks 挂接 | required | required | required | 至少挂接一个增强账本 |
-| WAES 记录 | conditional | conditional | conditional | 提交验收前必填或说明 pending |
+| WAME 记录 | conditional | conditional | conditional | 提交验收前必填或说明 pending |
 | 人工审核记录 | conditional | conditional | conditional | 提交验收前必填 |
 | 委员会备案 | conditional | conditional | conditional | 涉积分、收益、悬赏、争议或重大违规时必填 |
 | forbiddenClaims 完整 | required | required | required | 不得缺失，不得自相矛盾 |
@@ -184,7 +184,7 @@ loopEvidenceRefs:
 |---|---|---|---|---|---|---|
 | `SOPC-GH-ORD-202606-0001` | `RPK-GH-ORD-202606-0001` | GFIS / KDS / Brain | 预运营期订单 | order_sop_candidate | 从需求来源开始建立预运营期订单识别、责任拆分、资料补证和人工确认步骤 | candidate |
 | `SOPC-HBLC-FEA-202606-0001` | `RPK-HBLC-FEA-202606-0001` | KDS / Brain / GPCF | 拓厂项目来源评估 | expansion_project_sop_candidate | 从项目来源、区域资料、政策来源和第三方来源形成拓厂来源评估步骤 | candidate |
-| `SOPC-GH-LY-202606-0001` | `RPK-GH-LY-202606-0001` | GFIS / KDS / WAES | 辽宁远航补证链路 | evidence_recovery_sop_candidate | 围绕客户确认、样箱反馈、POD、真实回执和规则记录形成补证闭环步骤 | candidate |
+| `SOPC-GH-LY-202606-0001` | `RPK-GH-LY-202606-0001` | GFIS / KDS / WAME | 辽宁远航补证链路 | evidence_recovery_sop_candidate | 围绕客户确认、样箱反馈、POD、真实回执和规则记录形成补证闭环步骤 | candidate |
 
 ## 8. 写回门禁
 
@@ -192,7 +192,7 @@ loopEvidenceRefs:
 |---|---|---|
 | 来源门禁 | sourceRefs 非空且 sourceOwner 明确 | 无来源、来源责任主体不清 |
 | 密级门禁 | DSR 分级和脱敏完成 | DSR-L2 未脱敏、DSR-L3 提交正文 |
-| 规则门禁 | WAES 记录完成或 pending 原因明确 | 无规则记录且试图写回 |
+| 规则门禁 | WAME 记录完成或 pending 原因明确 | 无规则记录且试图写回 |
 | 人工门禁 | 人工审核 pass 或 partial 且边界明确 | 未审核、审核退回或越权声明 |
 | 委员会门禁 | 涉积分、收益、悬赏、争议时已备案 | 涉分配事项但无备案 |
 | 主账门禁 | 业务系统确认允许候选进入后续处理 | 试图自动创建正式订单、收益、POD 或 verified artifact |
@@ -234,7 +234,7 @@ gapClosureRecord:
 |---|---|---|---|
 | GFIS 知识问答助手 | 已授权的 KDS 摘要、字段说明、缺口状态 | 问答、补证路径、资料位置 | 输出未授权原文或确认业务完成 |
 | GFIS 使用助手 | 字段级 checklist、候选 SOP、人工确认规则 | 填写建议、流程提示 | 自动创建正式单据 |
-| GFIS 文档验收助手 | 回收包字段、DSR、WAES、人工审核状态 | pass / partial / returned / blocked 建议 | 替代人工审核 |
+| GFIS 文档验收助手 | 回收包字段、DSR、WAME、人工审核状态 | pass / partial / returned / blocked 建议 | 替代人工审核 |
 | 湖北磷材拓厂知识助手 | 拓厂来源、政策来源、第三方来源、复制模板 | 项目来源评估建议 | 确认投资通过或收益 |
 | KDS / Brain 知识编制 | 候选事实、候选 SOP、缺口摘要 | 知识页面和 SOP 展示候选 | 替代 KDS 主存或业务主账 |
 

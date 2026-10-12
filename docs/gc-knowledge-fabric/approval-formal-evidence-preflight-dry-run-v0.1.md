@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8150726FA5
 title: GC-Knowledge Fabric P0 Approval Formal Evidence Preflight Dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

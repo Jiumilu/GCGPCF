@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-751B5CF916
 title: GFIS-RUNTIME-SOP-E2E-262
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -69,7 +69,7 @@ gfis_customer_requirement_platform_order_runtime_primary_key_gate=pass source_re
 - verified=0
 - runtime_sop_e2e=repair_required
 
-不得创建 GFIS 运行层主键，不得进入 review queue、runtime intake、WAES review、verified artifact，不得升级 accepted/integrated。
+不得创建 GFIS 运行层主键，不得进入 review queue、runtime intake、WAME review、verified artifact，不得升级 accepted/integrated。
 
 ## 下一轮建议
 

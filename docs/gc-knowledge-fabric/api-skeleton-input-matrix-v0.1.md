@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D2F7AF0B4D
 title: GC-Knowledge Fabric API 骨架输入矩阵 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文是 P0-D7 的 API 骨架输入矩阵，不是接口实现完成声明。
 
-它把 P0-D2 至 P0-D6 的编号、挂池、WAES、KWE、KDS 状态候选 dry-run 统一映射到首批 API 端点，形成后续工程拆解的最小 contract 输入。
+它把 P0-D2 至 P0-D6 的编号、挂池、WAME、KWE、KDS 状态候选 dry-run 统一映射到首批 API 端点，形成后续工程拆解的最小 contract 输入。
 
 ## 2. 总边界
 
@@ -39,14 +39,14 @@ P0 API 骨架禁止：
 - 直接写入 `accepted`、`published`、`written_back`。
 - 直接确认积分、收益、额度或悬赏结算。
 - 直接生成委员会裁决。
-- 绕过 WAES、KWE、Harness evidence。
+- 绕过 WAME、KWE、Harness evidence。
 
 ## 3. 端点分组
 
 | 分组 | 端点数 | 允许输出 | 关键边界 |
 |---|---:|---|---|
 | KDS v2 | 11 | read_only / candidate_only | source、fact、SOP、writeback 只能入 candidate |
-| WAES | 7 | gate_check / freeze_request | 只返回门禁结果候选，不写业务系统 |
+| WAME | 7 | gate_check / freeze_request | 只返回门禁结果候选，不写业务系统 |
 | KWE | 10 | read_only / request_only | 只创建流程请求，不完成最终确认 |
 | GFIS Assistant | 4 | assistant_query / document_check / writeback_candidate | 可建议，不可正式写回 |
 | Governance LOOP | 8 | read_only / evidence_request / knowledge_ci_dry_run | 可登记请求，不可升级状态 |
@@ -58,7 +58,7 @@ P0 API 骨架禁止：
 | API 分组 | 输入 fixture | 依赖 P0 evidence |
 |---|---|---|
 | KDS v2 | `fixtures/kds/v2-endpoint-no-write-smoke.json` | P0-D2、P0-D3、P0-D6 |
-| WAES | `fixtures/waes/endpoint-no-write-smoke.json` | P0-D4 |
+| WAME | `fixtures/waes/endpoint-no-write-smoke.json` | P0-D4 |
 | KWE | `fixtures/kwe/endpoint-no-write-smoke.json` | P0-D5 |
 | GFIS Assistant | `fixtures/gfis/endpoint-no-write-smoke.json` | P0-D4、P0-D5、P0-D6 |
 | Governance LOOP | `fixtures/governance/endpoint-no-write-smoke.json` | P0-D1 至 P0-D6 |

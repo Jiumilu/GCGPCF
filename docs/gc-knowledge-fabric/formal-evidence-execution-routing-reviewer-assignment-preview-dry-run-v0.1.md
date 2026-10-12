@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D64288A3FB
 title: GC-Knowledge Fabric P0 正式证据执行路由审阅人分派预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D60 的 routing reviewer assignment 预览 dry-run。
 
-D60 承接 D59 acknowledgement routing precheck preview，只预览候选审阅通道、审阅角色、回避筛查、指派阻断原因、候选分配路径、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D60 承接 D59 acknowledgement routing precheck preview，只预览候选审阅通道、审阅角色、回避筛查、指派阻断原因、候选分配路径、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -51,7 +51,7 @@ D60 承接 D59 acknowledgement routing precheck preview，只预览候选审阅�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A0782193CA
 title: gcworld-world-runtime
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

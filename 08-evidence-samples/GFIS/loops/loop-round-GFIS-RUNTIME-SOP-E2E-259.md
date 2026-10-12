@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-32B9B2717C
 title: GFIS-RUNTIME-SOP-E2E-259
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -63,7 +63,7 @@ superseded_by: []
 
 - 本轮只推进 `CustomerRequirementOrPlatformOrder` 的 KDS 候选映射，不创建运行层主键。
 - 当前报价单只能进入 pending_business_verification 候选，不能升级为 valid_source_record。
-- 真实最小闭环仍未达成；必须至少一个阶段打通 `source record -> runtime primary key -> review queue -> runtime intake -> WAES review -> verified artifact` 才可计为闭环。
+- 真实最小闭环仍未达成；必须至少一个阶段打通 `source record -> runtime primary key -> review queue -> runtime intake -> WAME review -> verified artifact` 才可计为闭环。
 
 ## 真实性计数
 

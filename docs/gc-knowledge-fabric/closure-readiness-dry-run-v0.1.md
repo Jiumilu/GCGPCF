@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-D7B5A500AD
 title: GC-Knowledge Fabric P0 Closure Readiness Dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

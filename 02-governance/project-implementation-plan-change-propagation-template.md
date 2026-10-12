@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-PROJECT-IMPLEMENTATION-CHANGE-PROPAGATION-TEMPLATE-20260624
 title: 项目实施方案变更传导模板
-project: WAES
-related_projects: [WAES, KDS]
+project: WAME
+related_projects: [WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/project-implementation-plan-change-propagation-template.md
 source_path: 02-governance/project-implementation-plan-change-propagation-template.md

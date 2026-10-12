@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-A437BDA6F5
 title: GlobalCloud 智能体团队模型使用治理与成本控制机制
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud智能体团队模型使用治理与成本控制机制.md
 source_path: 02-governance/GlobalCloud智能体团队模型使用治理与成本控制机制.md
@@ -137,7 +137,7 @@ superseded_by: []
 
 | 交付包 | 默认主模型 | 默认副模型 | 禁止模型 | 升级条件 |
 |---|---|---|---|---|
-| WAES 治理与控制塔包 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 状态裁决、证据门、授权门、验收判断 |
+| WAME 治理与控制塔包 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 状态裁决、证据门、授权门、验收判断 |
 | PVAOS 生态入口包 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 入口边界冲突、项目模型冲突 |
 | GPC 运营协同包 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 协同主线冲突、订单到 POD 链路判断 |
 | GFIS 工厂执行包 | `GPT-5.2-Codex` | `GPT-5 mini` | `GPT-5 nano` | 主账边界、执行主链、主线代码修改 |

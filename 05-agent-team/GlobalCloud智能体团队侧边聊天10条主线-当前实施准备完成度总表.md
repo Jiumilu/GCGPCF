@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5D6CD718DA
 title: GlobalCloud 智能体团队侧边聊天10条主线-当前实施准备完成度总表
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, GPCF]
 domain: agent-team
 status: controlled
 version: v1.0

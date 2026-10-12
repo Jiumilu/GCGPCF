@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-080EEABDFC
 title: GC-Knowledge Fabric P0 正式证据执行重入预检预览 dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,7 +44,7 @@ superseded_by: []
 - 人工修复审查、委员会修复审查、停机权释放包。
 - 冻结解除候选、执行锁续期候选、审批刷新候选。
 - 验证计划刷新、回滚演练刷新、事件审计轨迹链接。
-- Harness 证据候选链接、WAES 重入门禁、KWE 重入工单。
+- Harness 证据候选链接、WAME 重入门禁、KWE 重入工单。
 - original approvers notification candidate。
 - 解冻不执行、重试不执行、保持无写入边界。
 - 后续仍需 future Harness execution。
@@ -70,7 +70,7 @@ superseded_by: []
 - missing rollback drill refresh candidate ref
 - missing incident audit trail ref
 - missing harness evidence candidate ref
-- missing WAES reentry gate candidate ref
+- missing WAME reentry gate candidate ref
 - missing KWE reentry work item candidate ref
 - reentry preview attempts unfreeze
 - reentry preview attempts retry

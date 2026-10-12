@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2C100F2DD6
 title: GFIS Assistant Repair Notification Snooze Queue Approval SLA Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0

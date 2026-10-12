@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-07DC110521
 title: gcworld-controlled-runtime-integration
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

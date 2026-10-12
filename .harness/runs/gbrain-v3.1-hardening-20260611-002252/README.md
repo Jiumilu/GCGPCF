@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-EA97040BE1
 title: gbrain-v3.1-hardening-20260611-002252
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md
 source_path: .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,12 +36,12 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | WAES | archive |
-| GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | WAES | archive |
-| GPCF-DOC-5C8B07F574 | design | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAES | archive |
-| GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | WAES | archive |
-| GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAES | archive |
-| GPCF-DOC-F7F2EF5A5D | proposal | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAES | archive |
-| GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | WAES | archive |
-| GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | WAES | archive |
-| GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | WAES | archive |
+| GPCF-DOC-EA97040BE1 | gbrain-v3.1-hardening-20260611-002252 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/README.md | WAME | archive |
+| GPCF-DOC-9C70414B66 | Acceptance Matrix: GCBrain v3.1 | .harness/runs/gbrain-v3.1-hardening-20260611-002252/acceptance-matrix.md | WAME | archive |
+| GPCF-DOC-5C8B07F574 | design | .harness/runs/gbrain-v3.1-hardening-20260611-002252/design.md | WAME | archive |
+| GPCF-DOC-8A206BCB11 | evidence | .harness/runs/gbrain-v3.1-hardening-20260611-002252/evidence/README.md | WAME | archive |
+| GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAME | archive |
+| GPCF-DOC-F7F2EF5A5D | proposal | .harness/runs/gbrain-v3.1-hardening-20260611-002252/proposal.md | WAME | archive |
+| GPCF-DOC-72B2E0EF61 | Harness Governance Status Audit — GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/status-audit.md | WAME | archive |
+| GPCF-DOC-65DA9DDC44 | Task Breakdown: GCBrain v3.1 Production Hardening | .harness/runs/gbrain-v3.1-hardening-20260611-002252/tasks.md | WAME | archive |
+| GPCF-DOC-5A3C833C90 | workspaces | .harness/runs/gbrain-v3.1-hardening-20260611-002252/workspaces/README.md | WAME | archive |

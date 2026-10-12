@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-39CC074588
 title: GlobalCloud智能体团队运行与实施环境总体规范
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, Brain, XiaoC, XGD, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, Brain, XiaoC, XGD, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud智能体团队运行与实施环境总体规范.md
 source_path: 02-governance/GlobalCloud智能体团队运行与实施环境总体规范.md
@@ -88,7 +88,7 @@ superseded_by: []
 
 典型位置：
 
-- `WAES`
+- `WAME`
 - `PVAOS`
 - `GFIS`
 - `GPC`

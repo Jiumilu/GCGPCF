@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-42FE6A63EF
 title: proposal
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: openspec
 status: draft
 version: v1.0
@@ -42,7 +42,7 @@ GKE-001 已具有受控知识工程规范、应用实施方案、F-013 canonical
 ## Impact
 
 - Program：GKE-001 / GlobalCloud Knowledge Engineering。
-- Project：GPCF、KDS、MMC、Studio、Brain 以及 AAAS、WAS、XiaoC、WAES、GPC、XWAIL、GFIS、XiaoG、PVAOS、SOP、PKC、XGD、ICP。
+- Project：GPCF、KDS、MMC、Studio、Brain 以及 AAAS、WAS、XiaoC、WAME、GPC、XWAIL、GFIS、XiaoG、PVAOS、SOP、PKC、XGD、ICP。
 - Feature：`F-013-knowledge-asset-model-system`。
 - 仓库：仅修改 GPCF 的 OpenSpec、CodeGraph 治理映射、validator、文档和 evidence；不修改外部产品仓源码。
 - 依赖：canonical manifest SHA-256 `76ac8d37d61e8904edd8383c246bcadbe5bec0197a50d4bb90085f6d2308e9bf`、应用路线图 SHA-256 `688dd8e28ebdae660e34f97d60a65af5db6a051d09a224fcaf1a614ce0d171ab`、现有 CodeGraph CLI 和 14 仓 registry。

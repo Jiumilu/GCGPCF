@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-323D4F2AA4
 title: OKF 兼容层只读导航总索引
 project: GPCF
-related_projects: [GPCF, GPC, WAES, KDS]
+related_projects: [GPCF, GPC, WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0

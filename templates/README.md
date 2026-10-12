@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-48D043BA78
 title: 模板库
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: templates
 status: controlled
 version: v1.0

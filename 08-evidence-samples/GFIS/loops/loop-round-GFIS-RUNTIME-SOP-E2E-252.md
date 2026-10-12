@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0EFD00AC44
 title: GFIS-RUNTIME-SOP-E2E-252
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 - 来源轮次：`GFIS-RUNTIME-SOP-E2E-251`
 - 输入事实：submission package release hold release negative fixture guard 已拒收 6 类弱 release 声明。
-- 真实缺口：仍无真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 与 WAES evidence candidate。
+- 真实缺口：仍无真实 release 文件、remediation completion、owner response release、运行层主键、KDS source backlink 与 WAME evidence candidate。
 
 ## 动作
 
@@ -63,7 +63,7 @@ superseded_by: []
 
 ## 反馈
 
-- 本轮只记录 release attempt 并 hard-stop，不释放 hold，不创建 release 文件，不完成 remediation，不创建运行层主键，不创建 review/runtime/WAES intake，不升级 accepted/integrated。
+- 本轮只记录 release attempt 并 hard-stop，不释放 hold，不创建 release 文件，不完成 remediation，不创建运行层主键，不创建 review/runtime/WAME intake，不升级 accepted/integrated。
 - 下一轮候选：`GFIS-RUNTIME-SOP-E2E-253`，建立 submission package owner response release reopen scan。
 
 ## 真实性计数

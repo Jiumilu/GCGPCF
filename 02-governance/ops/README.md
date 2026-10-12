@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-81FE104C6D
 title: ops
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/ops/README.md
 source_path: 02-governance/ops/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES, GPCF
+关联项目：WAME, GPCF
 
 受控规则：
 
@@ -36,5 +36,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-81FE104C6D | ops | 02-governance/ops/README.md | WAES | controlled |
+| GPCF-DOC-81FE104C6D | ops | 02-governance/ops/README.md | WAME | controlled |
 | GPCF-DOC-8DCFDAD068 | ecs-access-control-and-network-boundary | 02-governance/ops/ecs-access-control-and-network-boundary.md | GPCF | controlled |

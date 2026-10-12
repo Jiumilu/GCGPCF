@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-XAP-RECEIPT-EXECUTION-REPORT-DRAFT-20261011
 title: XAP 回执与执行报告规格草案（含错误码与幂等规则）
 project: GPCF
-related_projects: [GPCF, WAS, XWAIL, WAES, PVAOS, KDS, MMC]
+related_projects: [GPCF, WAS, XWAIL, WAME, PVAOS, KDS, MMC]
 domain: architecture
 status: controlled
 version: v0.1
@@ -19,12 +19,12 @@ superseded_by: []
 # XAP 回执与执行报告规格草案 v0.1（含错误码与幂等规则）
 
 - 日期：2026-10-11 ｜ 性质：**提交侧规格草案**（P0 契约收口主项）；正式 Schema 维护归 XWAIL（GCXWAIL 流程）
-- 依据：《XAP统一治理交换协议_Codex提案采纳意见_v0.1》§一/§二；《WAES统一审核请求机制_v0.1》§三
+- 依据：《XAP统一治理交换协议_Codex提案采纳意见_v0.1》§一/§二；《WAME统一审核请求机制_v0.1》§三
 - 定位：把提案中「Receipt／Execution Report／错误／幂等」四项从**概念**落为**字段级规格**——离线导入与在线提交**同规**（服务端同一校验与授权）
 
 ## 一、Receipt（治理回执）规格
 
-**签发方**：WAES 服务端及相应授权主体（**唯一权威裁定载体**）。
+**签发方**：WAME 服务端及相应授权主体（**唯一权威裁定载体**）。
 
 ### 1.1 字段（最小集）
 
@@ -99,8 +99,8 @@ revoked               撤销/失效（对既有授权）
 
 | 状态线 | 状态序列 | 保管方 |
 |---|---|---|
-| **请求处理** | 已接收 → 校验中 → 待补证／待审核 → 已裁定 → 已归档 | WAES |
-| **资产治理** | Draft → Registered → Authorized → Published → Deprecated／Archived | WAES（模型 lifecycle 枚举既有） |
+| **请求处理** | 已接收 → 校验中 → 待补证／待审核 → 已裁定 → 已归档 | WAME |
+| **资产治理** | Draft → Registered → Authorized → Published → Deprecated／Archived | WAME（模型 lifecycle 枚举既有） |
 | **运行执行** | 未导入 → 已导入 → 待激活 → 运行中／失败／已回滚 | PVAOS／AaaS |
 
 ## 六、四句铁律
@@ -109,7 +109,7 @@ revoked               撤销/失效（对既有授权）
 
 ## 七、与既有件的关系
 
-- 流程位置＝《WAES统一审核请求机制》§三 受理流程的「治理裁定 → 回执回写」环节细化的**载体规格**；
+- 流程位置＝《WAME统一审核请求机制》§三 受理流程的「治理裁定 → 回执回写」环节细化的**载体规格**；
 - 检查链：请求包自检 `requestcheck.py` v2（R01-R08）↔ 本规格（回执/报告为**受理侧产出**，提交侧只消费）；
 - `waesEvidenceRef`（XAP-5001）＝发布态证据引用；本规格回执为其**签发源头**。
 

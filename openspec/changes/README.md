@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-855B715B04
 title: OpenSpec 变更集
 project: KDS
-related_projects: [GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GPC, PVAOS, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

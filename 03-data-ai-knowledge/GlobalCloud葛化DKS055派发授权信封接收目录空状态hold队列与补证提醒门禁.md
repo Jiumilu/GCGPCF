@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AACA2824CD
 title: GlobalCloud葛化DKS055派发授权信封接收目录空状态hold队列与补证提醒门禁
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

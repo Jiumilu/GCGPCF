@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AB269A490C
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Acknowledgement Escalation Preview No-write 规则
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-159 的 approval packet routing queue notification acknowledgement escalation digest delivery acknowledgement escalation preview。该预览承接 DKS-158 delivery acknowledgement preview，只展示候选升级负责人、升级原因、阻断升级计数、边界引用和下一步候选动作。
 
-该能力不创建真实 escalation、delivery acknowledgement、delivery record、notification、digest record、acknowledgement、read receipt、reminder、escalation task、approval request、approval decision、Harness evidence、WAES gate result、KWE work item、KDS lifecycle 或任何业务写回。
+该能力不创建真实 escalation、delivery acknowledgement、delivery record、notification、digest record、acknowledgement、read receipt、reminder、escalation task、approval request、approval decision、Harness evidence、WAME gate result、KWE work item、KDS lifecycle 或任何业务写回。
 
 ## 输入边界
 

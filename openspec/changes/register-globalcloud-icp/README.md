@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4A5CCF7D61
 title: register-globalcloud-icp
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF, ICP]
+related_projects: [GPC, WAME, KDS, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0

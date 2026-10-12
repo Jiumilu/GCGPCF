@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A45C28115C
 title: GlobalCloud智能体团队文档理解与纳入审计
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: agent-team
 status: controlled
 version: v1.0

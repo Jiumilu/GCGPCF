@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-33F4C1195D
 title: 证据索引模板 — {项目名}
 project: GPCF
-related_projects: [GPC, WAES, GPCF]
+related_projects: [GPC, WAME, GPCF]
 domain: templates
 status: controlled
 version: v1.0

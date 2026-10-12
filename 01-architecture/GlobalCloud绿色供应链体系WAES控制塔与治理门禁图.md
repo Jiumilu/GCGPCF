@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-0CCC5F2950
-title: GlobalCloud绿色供应链体系WAES控制塔与治理门禁图
+title: GlobalCloud绿色供应链体系WAME控制塔与治理门禁图
 project: GPCF
-related_projects: [GPCF, GPC, WAES]
+related_projects: [GPCF, GPC, WAME]
 domain: architecture
 status: controlled
 version: v1.0
@@ -16,4 +16,4 @@ supersedes: []
 superseded_by: []
 ---
 
-# GlobalCloud绿色供应链体系WAES控制塔与治理门禁图
+# GlobalCloud绿色供应链体系WAME控制塔与治理门禁图

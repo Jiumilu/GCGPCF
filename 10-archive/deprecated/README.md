@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5112E5A758
 title: 过期文档归档
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: archive
 status: archive
 version: v1.0

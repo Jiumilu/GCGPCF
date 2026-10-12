@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6CE82BFD9A
 title: GFIS Writeback Approval Preflight No-write Checklist 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain]
+related_projects: [GFIS, GPC, WAME, KDS, Brain]
 domain: docs
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ GFIS Writeback Approval Preflight Checklist 是 GFIS 候选写回进入人工或
 
 - GFIS Writeback Candidate Batch Diff。
 - KDS Lifecycle Transition Audit Packet。
-- WAES gate refs。
+- WAME gate refs。
 - Evidence / Harness evidence refs。
 - KWE workpack 或 committee review refs。
 
@@ -59,7 +59,7 @@ GFIS Writeback Approval Preflight Checklist 是 GFIS 候选写回进入人工或
 | human_required | 需要业务负责人或授权人工确认 |
 | committee_required | 需要委员会确认 |
 | metadata_only_required | 只能写入元数据引用或受控原件位置，不能暴露原文 |
-| repair_required | 缺少来源、证据、字段、Harness evidence 或 WAES 条件 |
+| repair_required | 缺少来源、证据、字段、Harness evidence 或 WAME 条件 |
 | blocked | 明确禁止进入写回审批 |
 
 ## 4. 禁止行为
@@ -71,7 +71,7 @@ Preflight Checklist 不得：
 - 写 GFIS/GPC/ERP/MES。
 - 写 KDS accepted fact。
 - 写 KDS lifecycle。
-- 写 WAES Gate Result。
+- 写 WAME Gate Result。
 - 创建真实 KWE WorkItem。
 - 生成目标系统 receipt。
 - 确认收益或积分。

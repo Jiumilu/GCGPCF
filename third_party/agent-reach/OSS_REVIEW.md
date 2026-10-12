@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-AGENT-REACH-OSS-REVIEW-20260622
 title: Agent-Reach OSS 审查
-project: WAES
-related_projects: [WAES, KDS]
+project: WAME
+related_projects: [WAME, KDS]
 domain: general
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/04-WAES/third_party/agent-reach/OSS_REVIEW.md
 source_path: third_party/agent-reach/OSS_REVIEW.md

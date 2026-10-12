@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GKE-001-APPLICATION-IMPLEMENTATION-20260811
 title: GlobalCloud 知识工程应用体系实施方案
 project: GPCF
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -36,7 +36,7 @@ authorization_plane: MMC
 knowledge_source_of_truth: KDS
 analysis_plane: Brain
 customer_workbench: Studio
-business_authority: WAES / GFIS / GPC / PVAOS / SOP and object owners
+business_authority: WAME / GFIS / GPC / PVAOS / SOP and object owners
 status_ceiling_without_human_acceptance: partial
 completion: not_complete
 ```
@@ -72,7 +72,7 @@ completion: not_complete
 flowchart TB
   GPCF["GPCF / F-013: 契约、状态、验收"]
   MMC["MMC: 身份、委托、权限、网关"]
-  Business["WAES / GFIS / GPC / PVAOS / SOP: 权威业务对象"]
+  Business["WAME / GFIS / GPC / PVAOS / SOP: 权威业务对象"]
   KDS["KDS: 资产、版本、证据、候选、审计、记忆"]
   Brain["Brain: 搜索、图谱、阅读、问答、候选分析"]
   Studio["Studio: 客户知识工作台、复核、恢复"]
@@ -95,7 +95,7 @@ flowchart TB
 |---|---|---|
 | 控制与信任 | GPCF、MMC | canonical、委托、状态、准入和验收 |
 | 知识运行 | KDS、Brain、Studio | 事实主存、分析、客户工作台 |
-| 权威业务 | WAES、GFIS、GPC、PVAOS、SOP | 项目、订单、生产、资产和流程事实 |
+| 权威业务 | WAME、GFIS、GPC、PVAOS、SOP | 项目、订单、生产、资产和流程事实 |
 | 能力消费 | AAAS、WAS、XiaoC、XWAIL、XiaoG、PKC、XGD、ICP | 使用受控投影，不形成第二主账 |
 
 ## 3. 客户应用能力

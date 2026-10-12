@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-94532311B5
 title: GPCF 2.0 治理文件收敛清单
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

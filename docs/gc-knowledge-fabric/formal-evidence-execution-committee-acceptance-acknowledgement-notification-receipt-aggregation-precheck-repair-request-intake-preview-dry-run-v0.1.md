@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-50962267BB
 title: GC-Knowledge Fabric P0 正式证据执行委员会受理回执通知回执汇总预检查修复请求受理预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D74 的 aggregation precheck repair request intake 预览 dry-run。
 
-D74 承接 D73 committee acceptance acknowledgement notification receipt aggregation completeness precheck，只预览聚合完整性预检可能需要补正时的候选接收包，包括预检缺口原因矩阵、所需回执材料矩阵、提交方边界、接收渠道、ACL 边界、保持条件、阻断码、WAES 负向门禁和 Harness no-write 边界。
+D74 承接 D73 committee acceptance acknowledgement notification receipt aggregation completeness precheck，只预览聚合完整性预检可能需要补正时的候选接收包，包括预检缺口原因矩阵、所需回执材料矩阵、提交方边界、接收渠道、ACL 边界、保持条件、阻断码、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -48,7 +48,7 @@ D74 承接 D73 committee acceptance acknowledgement notification receipt aggrega
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-17799BC191
 title: patches
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md
 source_path: .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,4 +36,4 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAES | archive |
+| GPCF-DOC-17799BC191 | patches | .harness/runs/gbrain-v3.1-hardening-20260611-002252/patches/README.md | WAME | archive |

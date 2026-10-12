@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-56866C0959
-title: WAES Action Gate Precheck No-write 规则
+title: WAME Action Gate Precheck No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,13 +16,13 @@ supersedes: []
 superseded_by: []
 ---
 
-# WAES Action Gate Precheck No-write 规则
+# WAME Action Gate Precheck No-write 规则
 
 ## 1. 定位
 
-WAES Action Gate Precheck 是 DKS-105 `KWE Action Validation Workpack` 之后的本地 dry-run 前置门禁候选。
+WAME Action Gate Precheck 是 DKS-105 `KWE Action Validation Workpack` 之后的本地 dry-run 前置门禁候选。
 
-它负责把 validation workpack 转为 WAES gate precheck 候选，用于提前判断后续可能需要哪些 WAES Gate，但不生成正式 WAES Gate Result。
+它负责把 validation workpack 转为 WAME gate precheck 候选，用于提前判断后续可能需要哪些 WAME Gate，但不生成正式 WAME Gate Result。
 
 ## 2. 适用范围
 
@@ -96,8 +96,8 @@ Precheck 输出只包含：
 - harness evidence requirement；
 - no-write 计数。
 
-## 7. 与 WAES 的关系
+## 7. 与 WAME 的关系
 
-WAES Action Gate Precheck 不是正式 WAES Gate Result。
+WAME Action Gate Precheck 不是正式 WAME Gate Result。
 
-只有后续经过 WAES API / KWE 流程 / 人工或委员会授权后，才可能形成真实 `waes_gate_results`。本规则不授权任何真实写入。
+只有后续经过 WAME API / KWE 流程 / 人工或委员会授权后，才可能形成真实 `waes_gate_results`。本规则不授权任何真实写入。

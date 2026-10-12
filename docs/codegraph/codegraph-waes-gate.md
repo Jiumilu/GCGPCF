@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-8C267BC542
-title: CodeGraph WAES 门禁说明
+title: CodeGraph WAME 门禁说明
 project: KDS
-related_projects: [PVAOS, WAES, KDS]
+related_projects: [PVAOS, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,23 +16,23 @@ supersedes: []
 superseded_by: []
 ---
 
-# CodeGraph WAES 门禁说明
+# CodeGraph WAME 门禁说明
 
-WAES 使用 CodeGraph 作为高风险变更的影响分析输入，而不是把 CodeGraph 作为裁决者。
+WAME 使用 CodeGraph 作为高风险变更的影响分析输入，而不是把 CodeGraph 作为裁决者。
 
 强制门禁范围：
 
 - 权限、RBAC、认证。
 - 租户隔离。
 - 资金、结算、积分、收益池。
-- WAES 规则。
+- WAME 规则。
 - KDS schema。
 - Ontology/WAS schema。
 - API contract。
 - Harness/Loop policy。
 - 多 Agent 协议。
 
-WAES gate 至少需要：
+WAME gate 至少需要：
 
 - `codegraph_impact_report`
 - `changed_files`

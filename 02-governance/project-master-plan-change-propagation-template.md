@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-PROJECT-MASTER-PLAN-CHANGE-PROPAGATION-TEMPLATE-20260624
 title: 项目总体方案变更传导与用户确认模板
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/project-master-plan-change-propagation-template.md
 source_path: 02-governance/project-master-plan-change-propagation-template.md
@@ -36,7 +36,7 @@ superseded_by: []
 | WAS世界资产体系 | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | WAS | pending |
 | GlobalCloud XWAIL | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | XWAIL | pending |
 | GlobalCloud AaaS / AAAS | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | AAAS | pending |
-| GlobalCloud WAES | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | WAES | pending |
+| GlobalCloud WAME | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | WAME | pending |
 | GlobalCloud GFIS | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | GFIS | pending |
 | GlobalCloud GPC | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | GPC | pending |
 | GlobalCloud PVAOS | yes/no | 定位/职责/接口/术语/版本/架构/测试/交付/LOOP | patch/no_action | PVAOS | pending |

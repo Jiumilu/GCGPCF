@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A7C38B4EA7
 title: 数据、AI 与知识
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ KDS 路径前缀：`开发/12-GPCF/03-data-ai-knowledge/`
 | GPCF-DOC-2BE90FCE73 | GC-Knowledge Fabric LOOP跟踪模板 | 03-data-ai-knowledge/GC-Knowledge-Fabric-LOOP跟踪模板.md | KDS | controlled |
 | GPCF-DOC-139A718B66 | GC-Knowledge Fabric P0 11受控文档包实施清单 | 03-data-ai-knowledge/GC-Knowledge-Fabric-P0-11受控文档包实施清单.md | KDS | controlled |
 | GPCF-DOC-C831F07BC3 | GC-Knowledge Fabric RAG准入与引用强度规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-RAG准入与引用强度规则.md | KDS | controlled |
-| GPCF-DOC-63E07DE019 | GC-Knowledge Fabric WAES门禁规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md | KDS | controlled |
+| GPCF-DOC-63E07DE019 | GC-Knowledge Fabric WAME门禁规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-WAES门禁规则.md | KDS | controlled |
 | GPCF-DOC-A0469C3170 | GC-Knowledge Fabric 敏感资料入库规则 | 03-data-ai-knowledge/GC-Knowledge-Fabric-敏感资料入库规则.md | KDS | controlled |
 | GPCF-DOC-2F3CC2EAA1 | GC-Knowledge Fabric 核心对象关系与最小字段契约 | 03-data-ai-knowledge/GC-Knowledge-Fabric-核心对象关系与最小字段契约.md | KDS | controlled |
 | GPCF-DOC-651E9768F7 | GC-Knowledge Fabric 湖北磷材知识库目录 | 03-data-ai-knowledge/GC-Knowledge-Fabric-湖北磷材知识库目录.md | KDS | controlled |

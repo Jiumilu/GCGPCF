@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-D2373AEE37
 title: GlobalCloud 项目群在 Codex 中的模型分工与成本控制方案
-project: WAES
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md
 source_path: 02-governance/GlobalCloud项目群在Codex中的模型分工与成本控制方案.md
@@ -136,7 +136,7 @@ superseded_by: []
 
 | 项目/域 | 推荐主模型 | 推荐副模型 | 说明 |
 |---|---|---|---|
-| WAES | `GPT-5.2-Codex` | `GPT-5 mini` | 治理、证据、状态、授权边界要求高 |
+| WAME | `GPT-5.2-Codex` | `GPT-5 mini` | 治理、证据、状态、授权边界要求高 |
 | PVAOS | `GPT-5.2-Codex` | `GPT-5 mini` | 涉及入口、组织、伙伴、项目边界 |
 | GPC / GPC | `GPT-5.2-Codex` | `GPT-5 mini` | 供应链协同主线，不适合低质量裁决 |
 | GFIS | `GPT-5.2-Codex` | `GPT-5 mini` | 工厂事实主账、执行主链要求高 |
@@ -249,7 +249,7 @@ superseded_by: []
 对你当前左侧项目群，最实用的使用模型是：
 
 1. `GPT-5.2-Codex` 负责：
-   - WAES / GPC / GFIS / Brain / XiaoC / Hermes / 控制塔 / PMBOK 主线
+   - WAME / GPC / GFIS / Brain / XiaoC / Hermes / 控制塔 / PMBOK 主线
 2. `GPT-5 mini` 负责：
    - Linear 同步
    - 周报

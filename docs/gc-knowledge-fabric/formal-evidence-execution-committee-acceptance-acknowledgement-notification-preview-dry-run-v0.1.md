@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6A03DC1F53
 title: GC-Knowledge Fabric P0 正式证据执行委员会受理回执通知预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D70 的 committee acceptance acknowledgement notification 预览 dry-run。
 
-D70 承接 D69 committee acceptance acknowledgement routing preview，只预览委员会受理确认候选路由的通知候选封装，包括通知头、收件人矩阵、渠道矩阵、消息载荷摘要、ACL 边界、投递保持条件、投递阻断码、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D70 承接 D69 committee acceptance acknowledgement routing preview，只预览委员会受理确认候选路由的通知候选封装，包括通知头、收件人矩阵、渠道矩阵、消息载荷摘要、ACL 边界、投递保持条件、投递阻断码、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -48,7 +48,7 @@ D70 承接 D69 committee acceptance acknowledgement routing preview，只预览�
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

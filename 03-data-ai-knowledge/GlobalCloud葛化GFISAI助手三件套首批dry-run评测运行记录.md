@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-19ED27EAD7
 title: GlobalCloud 葛化 GFIS AI 助手三件套首批 dry-run 评测运行记录
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -27,7 +27,7 @@ superseded_by: []
 
 本文承接 DKS-028 评测集、DKS-029 空白台账和 DKS-049 订单运行母版，对葛化 GFIS 知识问答助手、GFIS 使用助手、GFIS 文档验收助手和候选 SOP 场景执行首批受控 dry-run 评测记录。
 
-本文中的输出为基于受控文档、提示词、评测集和母版规则生成的 dry-run 评测摘要，不代表真实助手已经部署、真实内测已经启动、人工评分已经签认、GFIS 主账已经写入、WAES 已放行或 KDS API 已同步。
+本文中的输出为基于受控文档、提示词、评测集和母版规则生成的 dry-run 评测摘要，不代表真实助手已经部署、真实内测已经启动、人工评分已经签认、GFIS 主账已经写入、WAME 已放行或 KDS API 已同步。
 
 ## 2. 本轮边界
 
@@ -42,7 +42,7 @@ superseded_by: []
 | 缺陷性质 | DefectRecord 只登记 dry-run 限制和待人工复核项 |
 | 写回性质 | WritebackCandidate，仅 `candidate_only`、`pending_confirmation` 或 `no_write` |
 | 贡献性质 | ContributionEventCandidate，正式积分为 0 |
-| 禁止动作 | 不写 GFIS 主账、不写真实 KDS API、不写 WAES、不确认订单/收入/POD/质量/积分/收益 |
+| 禁止动作 | 不写 GFIS 主账、不写真实 KDS API、不写 WAME、不确认订单/收入/POD/质量/积分/收益 |
 
 ## 3. 输入与来源
 
@@ -91,11 +91,11 @@ superseded_by: []
 |---|---|---|---|---|---|---|---|---|---|---|
 | `AOR-GH-D050-KQA-001` | `EVAL-GH-KQA-001` | KQA | ready_for_dry_run_eval | GFIS 当前可支撑预运营期候选事实、资料验收和使用引导；正式生产仍需真实订单、质量、POD、WAES/KDS 回执和人工确认。 | true | true | true | true | false | none |
 | `AOR-GH-D050-KQA-002` | `EVAL-GH-KQA-002` | KQA | ready_for_dry_run_eval | 开票只作为统计和财务过程口径；正式收入以到账为准，收益分配需人工或委员会确认。 | true | true | true | true | false | none |
-| `AOR-GH-D050-GUA-001` | `EVAL-GH-GUA-001` | GUA | ready_for_dry_run_eval | 电话需求先形成 `DSR-GH-*` 和 `POO-GH-*` 候选；补客户、产品、数量、交期、来源、OEM、WAES 记录，不生成正式订单。 | true | true | true | true | false | none |
+| `AOR-GH-D050-GUA-001` | `EVAL-GH-GUA-001` | GUA | ready_for_dry_run_eval | 电话需求先形成 `DSR-GH-*` 和 `POO-GH-*` 候选；补客户、产品、数量、交期、来源、OEM、WAME 记录，不生成正式订单。 | true | true | true | true | false | none |
 | `AOR-GH-D050-GUA-002` | `EVAL-GH-GUA-002` | GUA | ready_for_dry_run_eval | 现代精工资料作为 OEM 承接事实候选；目标工厂记录未来承接和建设运营准备，两者责任不得混同。 | true | true | true | true | false | none |
 | `AOR-GH-D050-DVA-001` | `EVAL-GH-DVA-001` | DVA | ready_for_dry_run_eval | 辽宁远航报价草稿缺客户确认和原始来源，建议 `returned_for_evidence`，生成补证缺口候选，不计正式订单。 | true | true | true | true | false | none |
 | `AOR-GH-D050-DVA-003` | `EVAL-GH-DVA-003` | DVA | ready_for_dry_run_eval | 金融凭证截图如含敏感金额和账户信息，必须治理阻断；只允许脱敏索引、保管责任人和可见范围。 | true | true | true | true | false | none |
-| `AOR-GH-D050-SOP-001` | `EVAL-GH-SOP-001` | SOP | ready_for_dry_run_eval | 生成预运营期订单候选 SOP：需求来源、报价、OEM 责任、质量/POD/金融补证、WAES 规则记录、人工确认和 KDS 11 池挂接。 | true | true | true | true | false | none |
+| `AOR-GH-D050-SOP-001` | `EVAL-GH-SOP-001` | SOP | ready_for_dry_run_eval | 生成预运营期订单候选 SOP：需求来源、报价、OEM 责任、质量/POD/金融补证、WAME 规则记录、人工确认和 KDS 11 池挂接。 | true | true | true | true | false | none |
 
 ## 7. EvalRecord dry-run
 
@@ -128,9 +128,9 @@ dry-run 评分只证明样本输出摘要在文档规则层没有触发红线。
 | `WBC-GH-D050-KQA-002` | `AOR-GH-D050-KQA-002`, `EVR-GH-D050-KQA-002` | KDS | RevenuePolicyKnowledgeCandidate | local_mirror | true | true | true | recorded_local_candidate |
 | `WBC-GH-D050-GUA-001` | `AOR-GH-D050-GUA-001`, `EVR-GH-D050-GUA-001` | GFIS | AISuggestionCandidate | no_write | true | true | true | candidate_only |
 | `WBC-GH-D050-GUA-002` | `AOR-GH-D050-GUA-002`, `EVR-GH-D050-GUA-002` | GFIS | OEMResponsibilitySuggestion | no_write | true | true | true | candidate_only |
-| `WBC-GH-D050-DVA-001` | `AOR-GH-D050-DVA-001`, `DEF-GH-D050-003` | WAES | GovernanceRecordCandidate | pending_confirmation | true | true | true | candidate_only |
-| `WBC-GH-D050-DVA-003` | `AOR-GH-D050-DVA-003`, `DEF-GH-D050-004` | WAES | GovernanceBlockCandidate | pending_confirmation | true | true | true | candidate_only |
-| `WBC-GH-D050-SOP-001` | `AOR-GH-D050-SOP-001`, `EVR-GH-D050-SOP-001` | KDS / WAES | SOPSuggestionCandidate | pending_confirmation | true | true | true | candidate_only |
+| `WBC-GH-D050-DVA-001` | `AOR-GH-D050-DVA-001`, `DEF-GH-D050-003` | WAME | GovernanceRecordCandidate | pending_confirmation | true | true | true | candidate_only |
+| `WBC-GH-D050-DVA-003` | `AOR-GH-D050-DVA-003`, `DEF-GH-D050-004` | WAME | GovernanceBlockCandidate | pending_confirmation | true | true | true | candidate_only |
+| `WBC-GH-D050-SOP-001` | `AOR-GH-D050-SOP-001`, `EVR-GH-D050-SOP-001` | KDS / WAME | SOPSuggestionCandidate | pending_confirmation | true | true | true | candidate_only |
 
 ## 10. KnowledgeGapRequestCandidate
 
@@ -161,7 +161,7 @@ dry-run 评分只证明样本输出摘要在文档规则层没有触发红线。
 | 红线控制 | dry-run 未触发 `RED-GH-*` | 正式红线结论待人工评测 |
 | 输出结构 | AOR/EVR/DEF/WBC/CEV 均形成 | 仅本地受控记录 |
 | GFIS 写入 | `no_write` | 未写主账 |
-| WAES 动作 | `candidate_only` / `pending_confirmation` | 未写真实 WAES |
+| WAME 动作 | `candidate_only` / `pending_confirmation` | 未写真实 WAME |
 | KDS 动作 | 本地镜像和候选记录 | 未声明真实 KDS API 同步 |
 | 业务状态 | 候选、缺口、建议、待确认 | 未形成正式事实 |
 
@@ -179,7 +179,7 @@ dry-run 评分只证明样本输出摘要在文档规则层没有触发红线。
 本轮不证明：
 
 1. 三件套已经部署或真实内测通过。
-2. GFIS 主账、真实 KDS API、WAES、GPC、PVAOS、Finance 或生产系统已经写入。
+2. GFIS 主账、真实 KDS API、WAME、GPC、PVAOS、Finance 或生产系统已经写入。
 3. 辽宁远航报价链路已经补证完成。
 4. 金融凭证可以进入开放问答或收益确认。
 5. 任何真实订单、客户确认、质量放行、POD、到账、积分、收益、悬赏或争议已经确认。

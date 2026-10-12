@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F856849B9E
 title: GFIS Assistant Repair Notification Snooze Queue Approval Acknowledgement Digest Delivery Acknowledgement Escalation SLA Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-136 的 GFIS Assistant repair notification snooze queue approval acknowledgement digest delivery acknowledgement escalation SLA preview。
 
-它承接 DKS-135 的 delivery acknowledgement escalation preview，只展示候选升级的 SLA 窗口、剩余分钟、超时分钟、SLA 风险等级、升级负责人候选和下一步候选，不创建真实 SLA 计时器、升级任务、提醒、投递确认、通知、摘要、审批、KWE 工单、WAES 结果、Harness evidence、KDS 状态提升或业务系统写回。
+它承接 DKS-135 的 delivery acknowledgement escalation preview，只展示候选升级的 SLA 窗口、剩余分钟、超时分钟、SLA 风险等级、升级负责人候选和下一步候选，不创建真实 SLA 计时器、升级任务、提醒、投递确认、通知、摘要、审批、KWE 工单、WAME 结果、Harness evidence、KDS 状态提升或业务系统写回。
 
 ## 输入边界
 
@@ -66,7 +66,7 @@ superseded_by: []
 - SLA preview 不是 delivery acknowledgement。
 - SLA preview 不是 approval request。
 - SLA preview 不是 approval decision。
-- SLA preview 不是 WAES gate result。
+- SLA preview 不是 WAME gate result。
 - SLA preview 不是 KWE work item。
 - SLA preview 不是 Harness evidence。
 - SLA preview 不是 KDS lifecycle change。
@@ -114,4 +114,4 @@ superseded_by: []
 - fixture 覆盖 6 类 SLA 预览。
 - validator 证明所有写入计数为 0。
 - 覆盖率清单纳入 OKF / Types / Validator / Fixture。
-- 本轮不产生真实业务写回、真实 KDS 写入、真实 WAES 结果或 Harness evidence。
+- 本轮不产生真实业务写回、真实 KDS 写入、真实 WAME 结果或 Harness evidence。

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AE29585A23
 title: standards
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

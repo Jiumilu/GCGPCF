@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-652F1E79A2
 title: 验收矩阵
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: acceptance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/07-acceptance/README.md
 source_path: 07-acceptance/README.md
@@ -26,7 +26,7 @@ KDS 空间：`开发`
 
 KDS 路径前缀：`开发/12-GPCF/07-acceptance/`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -39,5 +39,5 @@ KDS 路径前缀：`开发/12-GPCF/07-acceptance/`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-EB678B0E98 | GlobalCloud绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAES | controlled |
-| GPCF-DOC-652F1E79A2 | 验收矩阵 | 07-acceptance/README.md | WAES | controlled |
+| GPCF-DOC-EB678B0E98 | GlobalCloud绿色供应链体系一期验收矩阵 | 07-acceptance/GlobalCloud绿色供应链体系一期验收矩阵.md | WAME | controlled |
+| GPCF-DOC-652F1E79A2 | 验收矩阵 | 07-acceptance/README.md | WAME | controlled |

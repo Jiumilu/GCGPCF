@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-DD9EB5CB04
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 DKS-144 的 acknowledgement escalation digest preview。该预览只汇总 DKS-143 产生的候选升级预览，用于在 Brain、PKC、GFIS Assistant 中展示候选升级摘要、候选摘要接收人、必需证据、摘要原因、阻断摘要数量和下一步候选动作。
 
-该能力不创建真实 digest、digest delivery、escalation、timeout event、KWE 工单、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAES gate result、KDS lifecycle 或任何业务写回。
+该能力不创建真实 digest、digest delivery、escalation、timeout event、KWE 工单、notification、acknowledgement、receipt、read receipt、delivery status、approval assignment、approval packet、approval request、approval decision、committee decision、freeze action、Harness evidence、WAME gate result、KDS lifecycle 或任何业务写回。
 
 ## 输入边界
 
@@ -47,7 +47,7 @@ superseded_by: []
 - 禁止更新 delivery status。
 - 禁止创建 approval assignment、approval lock、approval packet、approval request、approval decision。
 - 禁止创建 committee decision 或 freeze action。
-- 禁止写入 WAES gate result、Harness evidence、KDS fact、KDS lifecycle。
+- 禁止写入 WAME gate result、Harness evidence、KDS fact、KDS lifecycle。
 - 禁止 GFIS、GPC、ERP、MES 或外部 API 写入。
 
 ## 验收口径

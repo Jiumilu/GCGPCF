@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CA83191660
 title: GlobalCloud 绿色供应链体系 Edge 接入与安全模型
 project: GPCF
-related_projects: [GPCF, GFIS, GPC, WAES]
+related_projects: [GPCF, GFIS, GPC, WAME]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -42,18 +42,18 @@ Edge 是现场与 GFIS 之间的边缘接入层，负责采集、协议转换、
 |---|---|---|
 | EdgeNode | Edge / GFIS | 边缘节点、网关、工位终端 |
 | DeviceSignal | Edge | 现场遥测事实 |
-| EdgeBufferPolicy | Edge / WAES | 缓存、补传、去重、丢弃策略 |
+| EdgeBufferPolicy | Edge / WAME | 缓存、补传、去重、丢弃策略 |
 | EdgeReplayRun | Edge / GFIS | 断网后补传运行记录 |
 | Equipment | GFIS | 设备主数据 |
 | MaintenanceOrder | GFIS | 维修工单 |
-| EvidenceRecord | WAES | 现场证据引用 |
+| EvidenceRecord | WAME | 现场证据引用 |
 
 ## 4. 采集分级
 
 | 级别 | 数据 | 处理方式 |
 |---|---|---|
 | E1 | 普通状态、温度、速度、计数 | 可自动采集和上报 |
-| E2 | 报警、停机、超限、AGV 异常 | 自动上报 GFIS 和 WAES |
+| E2 | 报警、停机、超限、AGV 异常 | 自动上报 GFIS 和 WAME |
 | E3 | 影响质量、产量、库存的关键事件 | 进入 GFIS 规则确认 |
 | E4 | 可能触发停线、质量隔离或维修 | 需 GFIS 内部流程和人工确认 |
 | E5 | 安全联锁、急停、设备保护、环保排放控制 | AI 禁止接管，只允许确定性控制和授权人员 |
@@ -121,8 +121,8 @@ waes.governance_approval.approved
 
 | 场景 | 判定 |
 |---|---|
-| Edge 节点上线 | EdgeNode online，GFIS/WAES 均可见 |
+| Edge 节点上线 | EdgeNode online，GFIS/WAME 均可见 |
 | 设备信号接收 | DeviceSignal 可回指设备、时间、trace |
-| 报警触发 | edge.device_alarm.raised 进入 GFIS/WAES |
+| 报警触发 | edge.device_alarm.raised 进入 GFIS/WAME |
 | 断网缓存补传 | EdgeReplayRun、去重、顺序和证据完整 |
 | AI 禁止反控 | 越权动作生成 `ai.overreach.blocked` |

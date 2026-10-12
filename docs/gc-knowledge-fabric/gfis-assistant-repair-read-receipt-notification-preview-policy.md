@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-044F1AC606
 title: GFIS Assistant Repair Read Receipt Notification Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ Notification preview 可以说明：
 | EventRecord | 不创建真实 EventRecord |
 | ActionReceipt | 不创建真实 ActionReceipt |
 | Harness Evidence | 不创建、不持久化 Harness evidence |
-| WAES Gate Result | 不创建 WAES gate result |
+| WAME Gate Result | 不创建 WAME gate result |
 | KWE WorkItem | 不创建 KWE work item |
 | KDS lifecycle | 不提升、不冻结、不发布、不 accepted |
 | GFIS/GPC/ERP/MES | 不写业务系统 |
@@ -67,7 +67,7 @@ notification preview
 → ReadReceipt
 → Harness evidence
 → EventRecord
-→ WAES Gate Result
+→ WAME Gate Result
 → KWE WorkItem
 → KDS lifecycle accepted
 → GFIS 正式写回
@@ -147,7 +147,7 @@ tsc -p packages/api/tsconfig.json --noEmit
 - 真实 Notification 已创建。
 - 真实 ReadReceipt 已创建。
 - Harness evidence 已固化。
-- WAES 已通过。
+- WAME 已通过。
 - KWE 工单已生成。
 - KDS lifecycle 已提升。
 - GFIS/GPC/ERP/MES 已写回。

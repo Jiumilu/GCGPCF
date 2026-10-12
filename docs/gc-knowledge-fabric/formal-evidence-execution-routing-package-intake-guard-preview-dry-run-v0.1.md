@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4BA0188069
 title: GC-Knowledge Fabric P0 正式证据执行路由包受理门禁预览 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D66 的 routing package intake guard 预览 dry-run。
 
-D66 承接 D65 reviewer acceptance acknowledgement routing package preview，只预览候选路由包进入 intake guard 前需要具备的包完整性、ACL 边界、委员会可见性、阻断码、保持条件、冻结保持、WAES 负向门禁和 Harness no-write 边界。
+D66 承接 D65 reviewer acceptance acknowledgement routing package preview，只预览候选路由包进入 intake guard 前需要具备的包完整性、ACL 边界、委员会可见性、阻断码、保持条件、冻结保持、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -46,7 +46,7 @@ D66 承接 D65 reviewer acceptance acknowledgement routing package preview，只
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

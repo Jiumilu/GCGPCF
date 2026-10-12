@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-49F4A296F5
 title: GlobalCloud 葛化 DKS-056 补证提醒发送授权包与回执字段模板
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, XiaoC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, XiaoC, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 本文承接 `GPCF-KDS-DKS-056`，把 7 个 `RMD-GH-D056-*` 补证提醒草案推进为未来可人工授权、可生成发送记录、可接收回执、可撤回纠错的字段模板。
 
-本文只定义字段、状态和门禁；不生成真实发送授权，不发送飞书、小即、邮件或其它外部通知，不接收真实回执，不保存敏感原文，不写入 GFIS、WAES、KDS API、GPC、PVAOS、Finance、收益池、积分池或生产系统主账，不确认人工签认、委员会裁决、积分、收益、悬赏、到账、POD、质量或业务完成。
+本文只定义字段、状态和门禁；不生成真实发送授权，不发送飞书、小即、邮件或其它外部通知，不接收真实回执，不保存敏感原文，不写入 GFIS、WAME、KDS API、GPC、PVAOS、Finance、收益池、积分池或生产系统主账，不确认人工签认、委员会裁决、积分、收益、悬赏、到账、POD、质量或业务完成。
 
 ## 2. 输入依据
 
@@ -63,7 +63,7 @@ superseded_by: []
 | `redactionMode` | 是 | `metadata_only_if_sensitive` | 敏感对象只留脱敏索引 |
 | `messagePayloadRef` | 是 | 待生成 | 只允许引用草案或脱敏摘要，不写敏感原文 |
 | `kdsBacklinkRef` | 是 | 待确认 | KDS 受控文档或对象回链 |
-| `waesGateRecordRef` | 是 | 待确认 | WAES 规则记录、阻断或人工确认路径 |
+| `waesGateRecordRef` | 是 | 待确认 | WAME 规则记录、阻断或人工确认路径 |
 | `expectedSendRecordRef` | 是 | 待生成 | `SRD-GH-D057-*` |
 | `expectedReceiptTemplateRef` | 是 | 待生成 | `RCT-GH-D057-*` |
 | `expiryOrReviewDate` | 是 | 待确认 | 过期或复核日期 |
@@ -80,7 +80,7 @@ superseded_by: []
 | `SAP-GH-D057-QPOD-001` | `RMD-GH-D056-QPOD-001` | 质量 / 发货 / POD 责任人 | 缺质量、发货、POD 接收字段和回执路径 | waiting_manual_send_authorization |
 | `SAP-GH-D057-OEM-001` | `RMD-GH-D056-OEM-001` | 目标工厂 / OEM 责任方 | 缺 OEM 与目标工厂责任拆分确认 | waiting_manual_send_authorization |
 | `SAP-GH-D057-FIN-001` | `RMD-GH-D056-FIN-001` | 财务责任人 / 资料保管人 | 缺 DSR-L3 metadata_only、保管人、封存索引和财务授权 | waiting_manual_send_authorization |
-| `SAP-GH-D057-WAES-001` | `RMD-GH-D056-WAES-001` | WAES 规则记录人 | 缺 WAES 规则记录、阻断或人工确认路径 | waiting_manual_send_authorization |
+| `SAP-GH-D057-WAES-001` | `RMD-GH-D056-WAES-001` | WAME 规则记录人 | 缺 WAME 规则记录、阻断或人工确认路径 | waiting_manual_send_authorization |
 | `SAP-GH-D057-AI-001` | `RMD-GH-D056-AI-001` | GFIS AI 助手内测负责人 | 缺评测记录、缺陷状态和候选写回边界 | waiting_manual_send_authorization |
 | `SAP-GH-D057-KGB-001` | `RMD-GH-D056-KGB-001` | KDS 记录人 / 缺口发起方 | 缺悬赏候选资源、验收规则、争议规则和委员会候选 | waiting_manual_send_authorization |
 
@@ -128,11 +128,11 @@ superseded_by: []
 
 | 对象 | 触发条件 | 处理规则 | 状态 |
 |---|---|---|---|
-| `RVK-GH-D057-SEND-001` | 未授权发送、错发、发送到错误接收人 | 立即记录撤回候选，生成 WAES 阻断记录，必要时进入委员会 | revocation_template |
+| `RVK-GH-D057-SEND-001` | 未授权发送、错发、发送到错误接收人 | 立即记录撤回候选，生成 WAME 阻断记录，必要时进入委员会 | revocation_template |
 | `COR-GH-D057-PAYLOAD-001` | 载荷包含敏感原文、账户、金额、合同全文或未授权截图 | hard stop，删除外发候选载荷，保留脱敏索引和审计记录 | correction_required |
 | `COR-GH-D057-STATUS-001` | 发送记录或回执写成业务完成 | 纠正为 `not_sent`、`manual_confirmation_required` 或 `committee_review_required` | correction_required |
 | `COR-GH-D057-REVENUE-001` | 无到账事实却写入正式收入、积分或收益 | 撤销收益候选，转委员会或人工复核 | committee_review_required |
-| `COR-GH-D057-RAG-001` | 未经治理的回执进入 RAG 强引用 | 移出 RAG，记录 WAES 阻断和治理缺口 | blocked |
+| `COR-GH-D057-RAG-001` | 未经治理的回执进入 RAG 强引用 | 移出 RAG，记录 WAME 阻断和治理缺口 | blocked |
 
 撤回与纠错模板只定义未来处置规则，不表示已发生发送错误、撤回或纠错事实。
 
@@ -146,15 +146,15 @@ superseded_by: []
 | `NEG-D057-MISSING-CHANNEL-001` | 缺渠道确认 | 缺渠道和渠道确认时不得发送 |
 | `NEG-D057-SENSITIVE-PAYLOAD-001` | 载荷包含敏感原文 | DSR-L3 原文、账户、金额、流水、合同全文或未授权截图必须 hard stop |
 | `NEG-D057-FAKE-RECEIPT-001` | 伪造回执 | 模板、截图、口述、Loop 文档、本地镜像不得替代真实回执 |
-| `NEG-D057-RAG-ADMISSION-001` | 未治理回执入 RAG | 回执未经人工或 WAES 治理不得进入强引用 |
+| `NEG-D057-RAG-ADMISSION-001` | 未治理回执入 RAG | 回执未经人工或 WAME 治理不得进入强引用 |
 | `NEG-D057-STATUS-UPGRADE-001` | 状态越权升级 | 不得出现 accepted、complete、integrated、verified 业务完成叙事 |
 | `NEG-D057-POINTS-REVENUE-001` | 自动确认积分收益 | 无人工或委员会确认不得确认积分、产值、收益、额度、悬赏或扣罚 |
 
-## 10. WAES、RAG、积分收益边界
+## 10. WAME、RAG、积分收益边界
 
 | 对象 | 当前口径 |
 |---|---|
-| WAES | 只记录规则、阻断、人工确认路径或委员会路径，不审批具体业务事务 |
+| WAME | 只记录规则、阻断、人工确认路径或委员会路径，不审批具体业务事务 |
 | RAG | 授权包、发送记录模板和回执模板不得进入强引用；只可作为治理说明或缺口索引候选 |
 | 知识积分 | 只记录候选贡献，不确认积分 |
 | 产值积分 | 无到账事实时只可记录潜在产值贡献候选 |
@@ -205,7 +205,7 @@ statusUpgrade=false
 3. 任何外部通知已经发送。
 4. 任何真实回执已经收到。
 5. 任何人工确认或委员会裁决已经完成。
-6. 任何真实 GFIS、WAES、KDS API、财务或生产系统已经写入。
+6. 任何真实 GFIS、WAME、KDS API、财务或生产系统已经写入。
 7. GFIS `real_business_lane=repair_required` 已关闭。
 8. 本专题可升级 `accepted`、`complete` 或 `integrated`。
 

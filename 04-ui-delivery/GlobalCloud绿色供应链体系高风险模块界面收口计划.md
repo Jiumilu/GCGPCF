@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-505DFF5C49
 title: GlobalCloud 绿色供应链体系高风险模块界面收口计划
 project: GPC
-related_projects: [GPC, WAES]
+related_projects: [GPC, WAME]
 domain: ui-delivery
 status: controlled
 version: v1.0

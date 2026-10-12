@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1E7B56C480
 title: globalcloud-openspec-governance
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：GPC、WAES、KDS、GPCF
+关联项目：GPC、WAME、KDS、GPCF
 
 ## 文档清单
 

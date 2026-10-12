@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-41D9234F52
 title: GC-Knowledge Fabric Repository / Service Dry-run 骨架 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,7 +37,7 @@ D10 只建立 API 层到后续数据访问层的最小 no-write 边界：
 | 分组 | Repository | Service | 边界 |
 |---|---|---|---|
 | KDS v2 | `packages/api/src/kds/v2/repository.ts` | `packages/api/src/kds/v2/service.ts` | search 为 read_only，source/fact/sop/writeback 只进入 candidate request |
-| WAES | `packages/api/src/waes/repository.ts` | `packages/api/src/waes/service.ts` | gate/freeze 只生成 gate_check 预览，不写 gate result |
+| WAME | `packages/api/src/waes/repository.ts` | `packages/api/src/waes/service.ts` | gate/freeze 只生成 gate_check 预览，不写 gate result |
 | KWE | `packages/api/src/kwe/repository.ts` | `packages/api/src/kwe/service.ts` | work/gap/confirmation/writeback 只生成 work_request 预览 |
 | GFIS Assistant | `packages/api/src/gfis/repository.ts` | `packages/api/src/gfis/service.ts` | query 为 read_only，document/writeback 只生成 candidate request |
 | Governance LOOP | `packages/api/src/governance/repository.ts` | `packages/api/src/governance/service.ts` | LOOP/evidence 为 governance_evidence_request，ledger 为 read |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6CF5DB2D6B
 title: GC-Knowledge Fabric 葛化GFIS知识库目录
 project: KDS
-related_projects: [GFIS, PVAOS, WAES, KDS]
+related_projects: [GFIS, PVAOS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

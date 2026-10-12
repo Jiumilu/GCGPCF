@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EBAA7DB2E8
 title: gcworld-workbench-ui-foundation
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-GCKFCOMMITTEEACCEPTACKNOTIFICATIONRECEIPTAGGREGATIONREPAIRCOMPLETENESSPRECHECKV01
 title: GC-Knowledge Fabric P0 正式证据执行委员会受理回执通知回执汇总修复请求完整性预检查 dry-run v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文档定义 P0-D75 的 repair request completeness precheck 预览 dry-run。
 
-D75 承接 D74 aggregation precheck repair request intake preview，只预览补正接收候选包进入后续处理前的完整性预检候选视图，包括所需回执材料矩阵、已提交材料快照、缺失材料缺口清单、提交方边界、ACL 边界、保持条件、阻断码、WAES 负向门禁和 Harness no-write 边界。
+D75 承接 D74 aggregation precheck repair request intake preview，只预览补正接收候选包进入后续处理前的完整性预检候选视图，包括所需回执材料矩阵、已提交材料快照、缺失材料缺口清单、提交方边界、ACL 边界、保持条件、阻断码、WAME 负向门禁和 Harness no-write 边界。
 
 ## 2. 输入
 
@@ -46,7 +46,7 @@ D75 承接 D74 aggregation precheck repair request intake preview，只预览补
 - 不写 KDS、GFIS、GPC 或业务系统。
 - 不写 Harness evidence 或 formal evidence。
 - 不写收益分配或贡献积分。
-- 不覆盖 WAES 门禁。
+- 不覆盖 WAME 门禁。
 - 不提升 lifecycle。
 - 不标记 accepted / integrated / production_ready。
 

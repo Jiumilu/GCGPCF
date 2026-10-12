@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-36F8C5657B
 title: 被替代文档归档
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: archive
 status: archive
 version: v1.0

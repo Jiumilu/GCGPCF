@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-29E5B0AC17
 title: LOOP_AUTONOMY_POLICY
-project: WAES
-related_projects: [WAES, KDS]
+project: WAME
+related_projects: [WAME, KDS]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_AUTONOMY_POLICY.md
 source_path: 02-governance/loop/LOOP_AUTONOMY_POLICY.md
@@ -37,8 +37,8 @@ DO NOT send optional commentary
 ## 模式边界
 
 - L3：只允许受控开发态证据闭环。
-- L4：真实业务 lane 仍需保持 repair_required，直到 source-of-record、runtime primary key、review queue、runtime intake、WAES review 和 verified artifact 全部具备。
-- L5：必须在 owner、WAES、Harness 全部确认后另行授权。
+- L4：真实业务 lane 仍需保持 repair_required，直到 source-of-record、runtime primary key、review queue、runtime intake、WAME review 和 verified artifact 全部具备。
+- L5：必须在 owner、WAME、Harness 全部确认后另行授权。
 
 ## 开发完成与真实业务验证分离
 
@@ -52,7 +52,7 @@ LOOP 自治策略必须遵守以下最高裁决：
 - Governance Loop 服务真实业务验证、状态提升、生产动作、客户交付声明和阶段收口。
 - `real_source_records = 0`、`valid_source_records = 0`、`runtime_intake = 0`、`review_queue = 0`、`waes_review = 0`、`verified = 0` 不得单独作为 Delivery Loop 开发阻断。
 - fixture/dry-run/controlled sample 可以证明开发能力，不得证明真实业务验证、accepted、integrated、production_ready 或 customer_accepted。
-- 真实业务验证通过也不得自动释放 accepted、integrated、production_ready 或 customer_accepted；所有状态提升必须有人工、owner、WAES 或最高授权主体裁决。
+- 真实业务验证通过也不得自动释放 accepted、integrated、production_ready 或 customer_accepted；所有状态提升必须有人工、owner、WAME 或最高授权主体裁决。
 
 ## L3 final answer guard
 

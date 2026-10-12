@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-2425FD0964
 title: GlobalCloud绿色供应链体系全链路事件与证据闭环图
 project: GPCF
-related_projects: [GPCF, GPC, WAES]
+related_projects: [GPCF, GPC, WAME]
 domain: architecture
 status: controlled
 version: v1.0

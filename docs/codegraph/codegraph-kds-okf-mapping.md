@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-13B5A26E7C
 title: CodeGraph KDS OKF 映射说明
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -37,6 +37,6 @@ CodeGraph 输出进入 KDS/OKF 时只能是候选事实。
 升格条件：
 
 - Harness evidence。
-- WAES gate。
+- WAME gate。
 - Human review。
 - KDS curator 处理 lineage 与状态变更。

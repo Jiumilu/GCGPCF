@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0C9C673398
 title: GC-Knowledge Fabric 积分收益额度悬赏台账模型
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

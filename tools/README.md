@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-016DDA517E
 title: 工具目录
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: tools
 status: controlled
 version: v1.0

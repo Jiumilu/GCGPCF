@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-OPEN-SPEC-18-PROJECT-MATRIX-20260712
 title: GlobalCloud 项目群 OpenSpec 适用性矩阵
 project: GPCF
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio, ICP, SpaceAIStudio]
 domain: status
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 | Brain | brain | conditional | `openspec/changes/brain-<change>/` | `gpcf_new_feature --project brain` | Delivery | required | required |
 | WAS | was | conditional | `openspec/changes/was-<change>/` | `gpcf_new_feature --project was` | Governance | required | required |
 | XiaoC | xiaoc | conditional | `openspec/changes/xiaoc-<change>/` | `gpcf_new_feature --project xiaoc` | Delivery | required | required |
-| WAES | waes | required | `openspec/changes/waes-<change>/` | `gpcf_new_feature --project waes` | Governance | required | required |
+| WAME | waes | required | `openspec/changes/waes-<change>/` | `gpcf_new_feature --project waes` | Governance | required | required |
 | GPC | gpc | required | `openspec/changes/gpc-<change>/` | `gpcf_new_feature --project gpc` | Governance | required | required |
 | Studio | studio | conditional | `openspec/changes/studio-<change>/` | `gpcf_new_feature --project studio` | Delivery | required | required |
 | GPCF | gpcf | required | `openspec/changes/gpcf-<change>/` | `gpcf_new_feature --project gpcf` | Governance | required | required |

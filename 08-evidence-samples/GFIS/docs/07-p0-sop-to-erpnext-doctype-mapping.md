@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-618A02EF68
 title: P0 SOP 到 GCFIS 单据映射表
 project: GFIS
-related_projects: [GFIS, GPC, WAES]
+related_projects: [GFIS, GPC, WAME]
 domain: evidence
 status: controlled
 version: v1.0

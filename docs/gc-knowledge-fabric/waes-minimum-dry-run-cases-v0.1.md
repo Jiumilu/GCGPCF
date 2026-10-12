@@ -1,8 +1,8 @@
 ---
 doc_id: GPCF-DOC-19D7F0C3F0
-title: GC-Knowledge Fabric WAES 最小门禁 Dry-run 样例 v0.1
+title: GC-Knowledge Fabric WAME 最小门禁 Dry-run 样例 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -16,13 +16,13 @@ supersedes: []
 superseded_by: []
 ---
 
-# GC-Knowledge Fabric WAES 最小门禁 Dry-run 样例 v0.1
+# GC-Knowledge Fabric WAME 最小门禁 Dry-run 样例 v0.1
 
 ## 1. 定位
 
-本文件定义 P0-D4 的 WAES 最小门禁 dry-run 样例，用于后续实现 `POST /api/v2/waes/gates/run`、RAG 准入检查、写回检查、收益检查和贡献检查时的输入输出基线。
+本文件定义 P0-D4 的 WAME 最小门禁 dry-run 样例，用于后续实现 `POST /api/v2/waes/gates/run`、RAG 准入检查、写回检查、收益检查和贡献检查时的输入输出基线。
 
-本文件只定义候选检查，不写入正式 WAES Gate Result，不升级 KDS lifecycle，不写 GFIS/GPC/ERP/MES，不确认收益、积分、悬赏或委员会决议。
+本文件只定义候选检查，不写入正式 WAME Gate Result，不升级 KDS lifecycle，不写 GFIS/GPC/ERP/MES，不确认收益、积分、悬赏或委员会决议。
 
 ## 2. 覆盖范围
 

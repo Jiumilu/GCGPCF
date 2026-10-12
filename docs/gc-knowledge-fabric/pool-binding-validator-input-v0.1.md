@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-B7709DC69E
 title: GC-Knowledge Fabric Pool Binding Validator 输入清单 v0.1
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

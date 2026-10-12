@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-16DD6DC90F
 title: GPCF 项目 Harness Manifest
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, XiaoC, XGD, XiaoG, GPCF]
 domain: general
 status: controlled
 version: v1.0

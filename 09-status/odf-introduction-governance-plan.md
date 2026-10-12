@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-76D6EBBEAB
 title: ODF 受控引入与治理试点方案
 project: GPCF
-related_projects: [WAES, KDS, GPCF]
+related_projects: [WAME, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0

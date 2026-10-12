@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-05774FB8AD
 title: GlobalCloud 绿色供应链体系 AI 服务模型
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, XiaoC, XGD, Studio]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, XiaoC, XGD, Studio]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,13 +20,13 @@ superseded_by: []
 
 日期：2026-06-07
 状态：四流优化专项模型 v1
-适用范围：KDS（知识主存）、Brain、XiaoC、Hermes/XGD、WAES、企业级知识主存层及各业务系统连接器。
+适用范围：KDS（知识主存）、Brain、XiaoC、Hermes/XGD、WAME、企业级知识主存层及各业务系统连接器。
 
 ## 1. 模型定位
 
 AI 服务流消费数据流，受治理流约束，辅助业务流，但不替代业务流。AI 输出的建议、摘要、预警和复盘草案不是业务事实，不能直接写入 GFIS、GPC、PVAOS 或 Edge 的业务主账。
 
-当前架构更新口径：AI 服务首先服务 `GPC + GFIS + WAES` 三条主线；宪法内容在 AI 模型中的具体体现，是证据分级、越权拦截、状态门禁和工具授权。知识架构上，AI 只能通过知识引擎层读取已发布知识，不应直接把 `LLM Wiki` 或 `Brain` 当成企业级知识真源。
+当前架构更新口径：AI 服务首先服务 `GPC + GFIS + WAME` 三条主线；宪法内容在 AI 模型中的具体体现，是证据分级、越权拦截、状态门禁和工具授权。知识架构上，AI 只能通过知识引擎层读取已发布知识，不应直接把 `LLM Wiki` 或 `Brain` 当成企业级知识真源。
 
 ## 2. 角色边界
 
@@ -34,8 +34,8 @@ AI 服务流消费数据流，受治理流约束，辅助业务流，但不替�
 |---|---|---|
 | Brain | SOP、知识、案例、复盘、RAG 可信源 | 不替代当前业务记录 |
 | XiaoC | PromptTemplate、ModelConfig、MCP、Agent 模板和评估 | 不直接决定业务事实 |
-| Hermes/XGD | AgentRun、工具编排、多端交互、后台任务 | 不绕过 WAES 授权和业务确认 |
-| WAES | AI 授权、Agent 工具权限、越权拦截、建议结果评价 | 不审批具体业务事务 |
+| Hermes/XGD | AgentRun、工具编排、多端交互、后台任务 | 不绕过 WAME 授权和业务确认 |
+| WAME | AI 授权、Agent 工具权限、越权拦截、建议结果评价 | 不审批具体业务事务 |
 | 企业级知识主存层 | 知识版本、发布、归档和权限真源 | 不直接做 Agent 推理 |
 | GFIS/GPC | 业务确认和业务事实 | 不接受未授权 AI 直接写主账 |
 
@@ -120,13 +120,13 @@ calculated -> invalid
 
 | 对象 | 主责 | 用途 |
 |---|---|---|
-| `ModelCapabilityProfile` | XiaoC / WAES | 定义模型能力、上下文窗口、结构化输出、工具调用、推理等级和风险等级 |
-| `ModelAuthorizationPolicy` | WAES | 定义模型允许使用范围、角色、场景、租户、密级和证据要求 |
-| `ModelAuthorizationGrant` | WAES | 定义具体项目、Agent、场景或用户范围内的模型治理授权 |
-| `ModelRouteDecision` | XiaoC / WAES | 记录模型选择、降级、切换、回退和人工覆盖决策 |
-| `ModelUsageRecord` | XiaoC / Hermes / WAES | 记录单次模型调用的 token、延迟、费用、证据引用和治理结果 |
-| `ModelMeterSnapshot` | WAES / Data Platform | 汇总项目、租户、Agent、模型、时间窗的调用量、费用、阻断率和成功率 |
-| `ModelOverreachBlocked` | WAES | 记录模型因授权、密级、预算、场景或输出约束被阻断的审计事实 |
+| `ModelCapabilityProfile` | XiaoC / WAME | 定义模型能力、上下文窗口、结构化输出、工具调用、推理等级和风险等级 |
+| `ModelAuthorizationPolicy` | WAME | 定义模型允许使用范围、角色、场景、租户、密级和证据要求 |
+| `ModelAuthorizationGrant` | WAME | 定义具体项目、Agent、场景或用户范围内的模型治理授权 |
+| `ModelRouteDecision` | XiaoC / WAME | 记录模型选择、降级、切换、回退和人工覆盖决策 |
+| `ModelUsageRecord` | XiaoC / Hermes / WAME | 记录单次模型调用的 token、延迟、费用、证据引用和治理结果 |
+| `ModelMeterSnapshot` | WAME / Data Platform | 汇总项目、租户、Agent、模型、时间窗的调用量、费用、阻断率和成功率 |
+| `ModelOverreachBlocked` | WAME | 记录模型因授权、密级、预算、场景或输出约束被阻断的审计事实 |
 
 ## 6. AI 建议进入业务系统的路径
 
@@ -134,18 +134,18 @@ calculated -> invalid
 AI 读取证据和指标
 -> 读取已发布知识版本对应的知识引擎索引
 -> 生成 AISuggestion
--> WAES 检查 AgentToolGrant、riskLevel、evidenceRefs
+-> WAME 检查 AgentToolGrant、riskLevel、evidenceRefs
 -> 需要治理授权时生成 GovernanceApproval
 -> 需要业务动作时进入 GFIS/GPC 内部流程
 -> 主责系统确认后生成 BusinessApprovalReference
--> WAES 记录 AISuggestionOutcome
+-> WAME 记录 AISuggestionOutcome
 ```
 
 禁止路径：
 
 ```text
 AISuggestion -> 直接写 GFIS/GPC 主账
-AISuggestion -> 绕过 WAES 授权并发布 GFIS 或 GPC 业务事实事件
+AISuggestion -> 绕过 WAME 授权并发布 GFIS 或 GPC 业务事实事件
 Agent -> 直接调用安全联锁或设备保护控制
 Agent -> 直接改写知识主存层正式知识版本
 ```
@@ -155,11 +155,11 @@ Agent -> 直接改写知识主存层正式知识版本
 ```text
 全局模型目录 / 能力标签
 -> 项目模型引用与用户模型偏好
--> WAES 检查 ModelAuthorizationPolicy / ModelAuthorizationGrant
+-> WAME 检查 ModelAuthorizationPolicy / ModelAuthorizationGrant
 -> XiaoC 形成 ModelRouteDecision
 -> Hermes 发起模型调用
 -> 记录 ModelUsageRecord
--> WAES / Data Platform 汇总 ModelMeterSnapshot
+-> WAME / Data Platform 汇总 ModelMeterSnapshot
 -> 若越权、超预算、超密级或超场景，生成 ModelOverreachBlocked
 ```
 

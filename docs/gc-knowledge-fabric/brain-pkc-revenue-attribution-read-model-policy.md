@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E5F419F29C
 title: Brain PKC Revenue Attribution Read Model No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ Read model 不做：
 - 不把 potential revenue 转 formal revenue。
 - 不修改 KDS lifecycle。
 - 不写 KWE work item。
-- 不落 WAES gate result。
+- 不落 WAME gate result。
 - 不写 GFIS/GPC/ERP/MES。
 - 不调用外部 API。
 

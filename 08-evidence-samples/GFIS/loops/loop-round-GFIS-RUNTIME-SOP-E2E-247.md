@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7A13C50C93
 title: GFIS-RUNTIME-SOP-E2E-247
 project: GFIS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## 输入
 
 - 上一轮 `GFIS-RUNTIME-SOP-E2E-246` 已建立 owner response / submission package release guard，并确认补证未完成时 release 必须 blocked。
-- 当前真实缺口仍为：真实派发确认文件 0、有效责任方响应 0、有效 submission package 0、人工派发授权 0、KDS backlink 0、WAES evidence candidate 0、运行层主键 0。
+- 当前真实缺口仍为：真实派发确认文件 0、有效责任方响应 0、有效 submission package 0、人工派发授权 0、KDS backlink 0、WAME evidence candidate 0、运行层主键 0。
 - 本轮只允许建立 submission package release negative fixture guard；不得把负例门禁当成业务完成。
 
 ## 执行动作
@@ -79,6 +79,6 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只拒收 9 类弱 release 声明：guard、remediation scan、GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink、缺 WAES candidate、未核验 accepted/integrated。
-- 本轮不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只拒收 9 类弱 release 声明：guard、remediation scan、GFIS Demo、KDS candidate-only、用户口述、Loop 文档、缺 hash/KDS backlink、缺 WAME candidate、未核验 accepted/integrated。
+- 本轮不创建客户订单、平台订单、pending submission、合规人工核验完成文件、有效 release-ready package、source-of-record、运行层主键、dispatch confirmation、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-248` 建立 real submission package release intake scanner，仅在补证完成且真实确认链齐备后才允许扫描真实 release 文件。

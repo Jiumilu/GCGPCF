@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-C8FDA82F75
 title: GlobalCloud KDS 11 池与增强治理账本项目群级映射
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -110,7 +110,7 @@ superseded_by: []
 | 来源门禁 | 有 sourceRefs 和责任主体 | repair_required |
 | 证据门禁 | 有 evidenceRefs 或缺口说明 | repair_required |
 | 密级门禁 | DSR-L2/L3 资料有脱敏或 sealed 规则 | blocked |
-| WAES 门禁 | 有 gate result 或待 gate 说明 | manual_confirmation_required |
+| WAME 门禁 | 有 gate result 或待 gate 说明 | manual_confirmation_required |
 | 收益门禁 | 有到账证据才允许正式收益候选 | blocked |
 | 委员会门禁 | 重大事项有 DecisionRecord 路径 | committee_review_required |
 | RAG 门禁 | trustLevel、evidence、classification 均符合 | limited / repair_required / blocked |
@@ -121,7 +121,7 @@ superseded_by: []
 
 1. 触发来源。
 2. KDS 底座池。
-3. WAES 门禁。
+3. WAME 门禁。
 4. 人工或委员会路径。
 5. 状态和不能升级原因。
 6. 对应 LOOP round。

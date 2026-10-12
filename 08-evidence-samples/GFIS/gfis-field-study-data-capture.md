@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-FA793A6D9D
 title: GFIS 现场调研数据采集表
 project: GFIS
-related_projects: [GFIS, GPC, WAES, GPCF]
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: evidence
 status: controlled
 version: v1.0
@@ -39,7 +39,7 @@ Round ID：`GPCF-GF-LR-001`
 | 生产 | 单线产能 | 件/小时或箱/班 | 计划与绩效 | P1 |
 | 质量 | 首件确认项 | 尺寸、外观、承重 | 量产门禁 | P0 |
 | 质量 | 巡检频率 | 每小时/每批次 | 过程控制 | P0 |
-| 质量 | 不合格处理 | 隔离/返工/报废 | WAES 门禁 | P0 |
+| 质量 | 不合格处理 | 隔离/返工/报废 | WAME 门禁 | P0 |
 | 库存 | 库位编码 | 区-排-层-位 | 库存准确性 | P0 |
 | 库存 | 入库规则 | 检验合格后入库 | 质量入库门禁 | P0 |
 | 出库 | 出库复核项 | 批次、数量、目的地 | 发货事实 | P0 |

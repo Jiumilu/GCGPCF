@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-BFEB10D711
 title: gbrain-v2.1-sprint2-20260610-214842
-project: WAES
-related_projects: [GPC, WAES, KDS, Brain, GPCF]
+project: WAME
+related_projects: [GPC, WAME, KDS, Brain, GPCF]
 domain: harness-evidence
 status: archive
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/92-证据与会话归档/.harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md
 source_path: .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,5 +36,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-BFEB10D711 | gbrain-v2.1-sprint2-20260610-214842 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md | WAES | archive |
-| GPCF-DOC-D03E6BE997 | status-audit | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | WAES | archive |
+| GPCF-DOC-BFEB10D711 | gbrain-v2.1-sprint2-20260610-214842 | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/README.md | WAME | archive |
+| GPCF-DOC-D03E6BE997 | status-audit | .harness/runs/gbrain-v2.1-sprint2-20260610-214842/status-audit.md | WAME | archive |

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F72C6A953D
 title: GlobalCloud 底座可用知识闭环率评分脚本 dry-run 规格
 project: KDS
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -26,7 +26,7 @@ superseded_by: []
 
 本文承接 DKS-041《GlobalCloud 底座可用知识闭环率计算样表与字段字典》，定义“底座可用知识闭环率评分脚本”的 dry-run 规格，包括 JSON schema、示例输入、示例输出、计算断言、hard-stop 断言和边界。
 
-本文不是脚本实现，不执行真实评分入账，不写真实 KDS API，不关闭缺口，不发布悬赏，不结算积分，不分配收益，不发放 AI 额度，不进入 RAG 准入，不进入指挥舱强引用，也不写 GFIS、GPC、PVAOS、WAES 或任何业务系统主账。
+本文不是脚本实现，不执行真实评分入账，不写真实 KDS API，不关闭缺口，不发布悬赏，不结算积分，不分配收益，不发放 AI 额度，不进入 RAG 准入，不进入指挥舱强引用，也不写 GFIS、GPC、PVAOS、WAME 或任何业务系统主账。
 
 ## 2. dry-run 输入对象
 
@@ -225,7 +225,7 @@ dry-run 脚本不得输出：
 1. 真实 KDS API 同步完成声明。
 2. RAG 准入完成声明。
 3. 指挥舱强引用许可。
-4. GFIS、GPC、PVAOS、WAES 或其他业务系统主账写入声明。
+4. GFIS、GPC、PVAOS、WAME 或其他业务系统主账写入声明。
 5. 积分、收益、AI 额度结算完成声明。
 6. 悬赏发布完成声明。
 7. 委员会裁决完成声明。
@@ -248,7 +248,7 @@ dry-run 脚本不得输出：
 
 1. 只读取本地 fixture 和受控文档，不访问真实外部 API。
 2. 只输出 JSON、Markdown evidence 和候选写回建议。
-3. 不修改真实 KDS、WAES、GFIS、GPC、PVAOS 或其他系统。
+3. 不修改真实 KDS、WAME、GFIS、GPC、PVAOS 或其他系统。
 4. 不创建真实悬赏、真实结算、真实收益分配或真实 AI 额度发放。
 5. 所有 hard-stop 必须优先于分数。
 6. 所有输出必须保留 `candidate_only`、`dry_run` 或 `blocked` 状态。

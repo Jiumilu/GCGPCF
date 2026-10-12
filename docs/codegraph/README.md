@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-137295729F
 title: codegraph
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -44,4 +44,4 @@ KDS 空间：`开发`
 | GPCF-DOC-F7ADE9DF11 | CodeGraph Loop 集成规范 | docs/codegraph/codegraph-loop-integration.md | KDS | controlled |
 | GPCF-DOC-016C584865 | CodeGraph 定位说明 | docs/codegraph/codegraph-positioning.md | KDS | controlled |
 | GPCF-DOC-7C6A2D0D31 | CodeGraph 任务 Intake 门禁 | docs/codegraph/codegraph-task-intake-gate.md | GPCF | controlled |
-| GPCF-DOC-8C267BC542 | CodeGraph WAES 门禁说明 | docs/codegraph/codegraph-waes-gate.md | KDS | controlled |
+| GPCF-DOC-8C267BC542 | CodeGraph WAME 门禁说明 | docs/codegraph/codegraph-waes-gate.md | KDS | controlled |

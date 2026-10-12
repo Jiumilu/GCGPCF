@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-4C7D46A1B3
 title: LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST
-project: WAES
-related_projects: [GFIS, GPC, WAES, GPCF, Studio]
+project: WAME
+related_projects: [GFIS, GPC, WAME, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md
 source_path: 02-governance/loop/LOOP_CODEGRAPH_NORMALIZATION_CHECKLIST.md
@@ -38,7 +38,7 @@ superseded_by: []
 - 每个业务变更的 evidence 固定包含 `codegraph_evidence`。
 - 证据里必须有 `query`、`target_nodes`、`affected`、`changed_files`、`test_selection_reason`、`post_change_status`。
 - 任务开工前先过 `CodeGraph 任务 Intake 门禁`，再进入实现。
-- Harness / WAES 不把 CodeGraph 当参考材料，而是当验收输入之一。
+- Harness / WAME 不把 CodeGraph 当参考材料，而是当验收输入之一。
 - 每轮 Loop 都要看 14 仓 `codegraph status`。
 - `.codegraph/` 始终保持 Git 隔离。
 - 有 drift 先 watch，不直接 sync。
@@ -49,7 +49,7 @@ superseded_by: []
 - 把这些字段变成每个真实业务任务的默认必填项，而不是只存在于模板和样例证据里。
 - 把 `docs/codegraph/codegraph-task-intake-gate.md` 变成每个任务的开工入口。
 - 把 `codegraph query / node / affected` 变成真正的任务开工前门禁。
-- 把 `codegraph_evidence` 变成 Harness / WAES evidence 的固定输入，而不是可选附录。
+- 把 `codegraph_evidence` 变成 Harness / WAME evidence 的固定输入，而不是可选附录。
 - 把 `manual_scan_files`、`time_to_first_target`、`missed_impact_count`、`rework_count` 变成每轮常规采集项。
 - 把 Studio / GPCF 之类的 watchlist 漂移，继续维持在 monitor_only，不误判为已闭合。
 - 把 CodeGraph 准入、pilot pack、Harness gate、impact metrics baseline 变成长期受控文档，并固定挂在目录入口。
@@ -64,7 +64,7 @@ superseded_by: []
 ## 边界
 
 - CodeGraph 不替代源码审查。
-- CodeGraph 不替代测试、WAES、Harness 或人工验收。
+- CodeGraph 不替代测试、WAME、Harness 或人工验收。
 - CodeGraph 不授权生产写入、外部 API 写入、commit、push 或 deploy。
 
 ## 验证

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7C6A2D0D31
 title: CodeGraph 任务 Intake 门禁
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: docs
 status: controlled
 version: v1.0
@@ -33,7 +33,7 @@ Task Intake
   -> expected_tests
   -> affected_tests / fallback_tests / fallback_reason
   -> codegraph_evidence
-  -> Harness / WAES
+  -> Harness / WAME
 ```
 
 ## 必填字段
@@ -92,7 +92,7 @@ Task Intake
 
 只有在 CodeGraph CLI 不可用、仓库未初始化，或者图谱被独立 validator 判定不可用时，才允许记录 `codegraph_unavailable_exception`。
 
-例外不能跳过测试，不能跳过 Harness / WAES，不能把任务升级为已完成。
+例外不能跳过测试，不能跳过 Harness / WAME，不能把任务升级为已完成。
 
 ## 与现有门禁的关系
 
@@ -105,4 +105,4 @@ Task Intake
 - 本门禁不证明业务功能完成。
 - 本门禁不证明 accepted、integrated 或 production_ready。
 - 本门禁不授权生产写入、外部 API 写入、commit、push 或 deploy。
-- 本门禁不替代源码复核、测试、WAES、Harness 或人工判断。
+- 本门禁不替代源码复核、测试、WAME、Harness 或人工判断。

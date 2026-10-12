@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-LOOP-GATE-CLASSIFICATION-V11
 title: LOOP Gate Classification
-project: WAES
-related_projects: [GFIS, WAES]
+project: WAME
+related_projects: [GFIS, WAME]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_GATE_CLASSIFICATION.md
 source_path: 02-governance/loop/LOOP_GATE_CLASSIFICATION.md
@@ -47,7 +47,7 @@ P3 观察项：
 
 ## Delivery Boundary
 
-开发态默认 Delivery Loop。不得阻断 GFIS 本地开发，除非触发 P0/P1。GFIS 真实业务 lane 仍为 `repair_required`，真实 source-of-record、runtime intake、review queue、WAES review、verified artifact 均为 0。
+开发态默认 Delivery Loop。不得阻断 GFIS 本地开发，除非触发 P0/P1。GFIS 真实业务 lane 仍为 `repair_required`，真实 source-of-record、runtime intake、review queue、WAME review、verified artifact 均为 0。
 
 ## Real Source Record Zero Classification
 

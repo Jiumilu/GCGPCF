@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-0DF6AA8647
 title: LOOP Control Board
-project: WAES
-related_projects: [AAAS, Brain, WAS, XiaoC, WAES, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
+project: WAME
+related_projects: [AAAS, Brain, WAS, XiaoC, WAME, GPC, Studio, GPCF, XWAIL, GFIS, MMC, KDS, XiaoG, PVAOS, SOP, PKC, XGD, ICP]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CONTROL_BOARD.md
 source_path: 02-governance/loop/LOOP_CONTROL_BOARD.md
@@ -585,7 +585,7 @@ run_gfis_runtime_sop_dev_completion_dry_run.py
 P0=GFIS Delivery Completion Sprint
 P1=GPCF v1.1 slimming baseline maintenance
 P2=KDS sensitive/token/real API boundary only
-P3=WAES candidate intake after GFIS candidate ready
+P3=WAME candidate intake after GFIS candidate ready
 P4=SOP/PKC maintenance
 P5=other ready_for_review projects deferred
 ```
@@ -613,7 +613,7 @@ decision:
     - GFIS
     - GPCF
     - KDS
-    - WAES
+    - WAME
     - all_project_group
   development_lane:
     status: continue_allowed
@@ -705,7 +705,7 @@ GFIS:
       - Runtime Intake Agent
       - Primary Key / Source Validation Agent
       - Review Queue Agent
-      - WAES Candidate / Artifact Agent
+      - WAME Candidate / Artifact Agent
       - Boundary Validator Agent
     file_lock_required: true
     same_file_parallel_write_allowed: false
@@ -756,7 +756,7 @@ GFIS:
 - `02-governance/loop/LOOP_GOVERNANCE_SLIMMING_AND_DELIVERY_RECOVERY.md`
 - `registry/project-state-matrix.yaml`
 
-项目词表锚点：XWAIL / AaaS / AAAS / SOP / WAES / GPC / GFIS / KDS / GPCF。
+项目词表锚点：XWAIL / AaaS / AAAS / SOP / WAME / GPC / GFIS / KDS / GPCF。
 
 历史口径说明：`dirty_repo_count = 7` 只作为 2026-06-26/2026-06-27 replay 口径保留；当前 live 判断以三仓 dirty 和 KDS blocker 已解除为准，不得恢复 KDS sensitive_path blocked。
 

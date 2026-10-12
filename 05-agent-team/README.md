@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-E50AD58A99
 title: 智能体团队
 project: XiaoC
-related_projects: [GPC, WAES, KDS, XiaoC, GPCF]
+related_projects: [GPC, WAME, KDS, XiaoC, GPCF]
 domain: agent-team
 status: controlled
 version: v1.0

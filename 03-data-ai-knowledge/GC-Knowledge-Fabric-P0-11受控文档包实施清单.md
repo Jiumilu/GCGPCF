@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-139A718B66
 title: GC-Knowledge Fabric P0 11受控文档包实施清单
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -43,7 +43,7 @@ superseded_by: []
 - 所有新资料必须能分配编号。
 - 所有关键对象必须能挂接 Domain 与 KDS 十一池。
 - AI 输出只能进入候选态。
-- GFIS 写回必须经过 WAES 与人工确认。
+- GFIS 写回必须经过 WAME 与人工确认。
 - 收益、积分、额度、悬赏必须保留候选和确认状态。
 - 敏感资料必须进入 metadata-only 或受控原件引用模式。
 - LOOP 只记录证据和状态变化，不自动声明业务完成。

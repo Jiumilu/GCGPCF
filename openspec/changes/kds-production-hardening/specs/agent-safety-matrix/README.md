@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-23E999A394
 title: agent-safety-matrix
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: openspec
 status: draft
 version: v1.0

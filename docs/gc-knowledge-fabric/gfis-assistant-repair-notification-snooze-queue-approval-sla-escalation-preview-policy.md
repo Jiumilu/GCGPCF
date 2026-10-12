@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-4C95606CD2
 title: GFIS Assistant Repair Notification Snooze Queue Approval SLA Escalation Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本规则定义 GFIS Assistant repair notification snooze queue 的审批 SLA 升级预览边界。
 
-审批 SLA 升级预览承接 DKS-129 approval SLA preview，只展示候选升级队列、升级等级、责任边界、阻断原因和下一步建议。它不是正式升级排程，不创建提醒，不分配升级负责人，不创建 KWE 工单，不创建 WAES 结果，不写 Harness evidence，不修改 KDS lifecycle，不触发 GFIS/GPC/ERP/MES 写回。
+审批 SLA 升级预览承接 DKS-129 approval SLA preview，只展示候选升级队列、升级等级、责任边界、阻断原因和下一步建议。它不是正式升级排程，不创建提醒，不分配升级负责人，不创建 KWE 工单，不创建 WAME 结果，不写 Harness evidence，不修改 KDS lifecycle，不触发 GFIS/GPC/ERP/MES 写回。
 
 ## 2. 输入
 

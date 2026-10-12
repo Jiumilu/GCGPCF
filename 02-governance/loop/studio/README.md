@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-FA5685423F
 title: studio
-project: WAES
-related_projects: [GPC, WAES, KDS, GPCF, Studio]
+project: WAME
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/studio/README.md
 source_path: 02-governance/loop/studio/README.md
@@ -24,7 +24,7 @@ superseded_by: []
 
 KDS 空间：`开发`
 
-关联项目：WAES
+关联项目：WAME
 
 受控规则：
 
@@ -36,5 +36,5 @@ KDS 空间：`开发`
 
 | doc_id | title | source_path | project | status |
 | --- | --- | --- | --- | --- |
-| GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAES | controlled |
-| GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAES | controlled |
+| GPCF-DOC-31D8E9632A | GlobalCloud Studio LOOP Initialization | 02-governance/loop/studio/LOOP-STUDIO-INITIALIZATION.md | WAME | controlled |
+| GPCF-DOC-FA5685423F | studio | 02-governance/loop/studio/README.md | WAME | controlled |

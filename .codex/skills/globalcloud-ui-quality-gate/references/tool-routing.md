@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-6A7B8C9D0E
 title: tool-routing
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: operational-skill
 status: operational_controlled
 version: v1.0
@@ -50,7 +50,7 @@ GlobalCloud project-group UI defaults to product register:
 - motion for state feedback only
 - no decorative motion in operational flows
 
-Professional workbench UI defaults to `WAES` parent-frame reuse:
+Professional workbench UI defaults to `WAME` parent-frame reuse:
 
 - shell first
 - page skeleton second

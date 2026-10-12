@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-SPEC-20261010
 title: spec
 project: GPCF
-related_projects: [WAES, GPCF, Studio, SpaceAIStudio, SpaceAI]
+related_projects: [WAME, GPCF, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0

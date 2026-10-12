@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-524B1F74CE
 title: GC-Knowledge Fabric P0 正式证据最终执行门禁 dry-run v0.1
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

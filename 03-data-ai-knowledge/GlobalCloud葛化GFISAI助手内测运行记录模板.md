@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-EFF75D9725
 title: GlobalCloud 葛化 GFIS AI 助手内测运行记录模板
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 日期：2026-06-17
 状态：v0.1 受控模板
-适用范围：葛化 GFIS 知识问答助手、GFIS 使用助手、GFIS 文档验收助手、内测用户、问题采样、评测记录、缺陷回流、知识缺口悬赏、WAES / KDS 回写。
+适用范围：葛化 GFIS 知识问答助手、GFIS 使用助手、GFIS 文档验收助手、内测用户、问题采样、评测记录、缺陷回流、知识缺口悬赏、WAME / KDS 回写。
 
 ## 1. 定位
 
@@ -38,7 +38,7 @@ superseded_by: []
 | 红线机制 | 触发红线即 `hard_fail`，不得进入开放试用 |
 | 评分阈值 | 沿用 85 分通过阈值 |
 | 业务事实 | 内测记录不得成为订单、质量、POD、到账、收益或积分确认事实 |
-| 真实写入 | 不触发 GFIS 主账、真实 KDS API、真实 WAES API 或生产系统写入 |
+| 真实写入 | 不触发 GFIS 主账、真实 KDS API、真实 WAME API 或生产系统写入 |
 
 ## 3. 对象流
 
@@ -50,7 +50,7 @@ PilotSession
   -> DefectRecord
   -> KnowledgeGapRequestCandidate
   -> AISuggestionCandidate
-  -> WAES / KDS WritebackCandidate
+  -> WAME / KDS WritebackCandidate
   -> ContributionEventCandidate
 ```
 
@@ -63,7 +63,7 @@ PilotSession
 5. 是否脱敏。
 6. 是否人工确认。
 7. 是否触发红线。
-8. 是否需要 WAES / KDS 回写。
+8. 是否需要 WAME / KDS 回写。
 
 ## 4. PilotSession 字段
 
@@ -129,7 +129,7 @@ PilotSession
 | outputSnapshot | 是 | 脱敏输出摘要 |
 | sourceRefsReturned | 是 | 助手是否给出来源 |
 | factLayerReturned | 是 | 是否区分事实状态 |
-| waesActionReturned | 是 | 是否输出 WAES 动作 |
+| waesActionReturned | 是 | 是否输出 WAME 动作 |
 | nextActionReturned | 是 | 是否输出下一步 |
 | forbiddenOutputDetected | 是 | true / false |
 | redlineRefsTriggered | 否 | 触发的红线编号 |
@@ -198,13 +198,13 @@ PilotSession
 
 内测发现的缺口默认只进入候选，不自动发布悬赏。发布悬赏必须先冻结资源并通过规则或委员会确认。
 
-## 11. WAES / KDS 回写候选
+## 11. WAME / KDS 回写候选
 
 | 字段 | 必填 | 说明 |
 |---|---:|---|
 | writebackCandidateId | 是 | `WBC-GH-202606-0001` |
 | sourceObjectRefs | 是 | 关联样本、输出、评测、缺陷或缺口 |
-| targetSystem | 是 | KDS / WAES / GFIS / committee |
+| targetSystem | 是 | KDS / WAME / GFIS / committee |
 | targetObjectType | 是 | KnowledgeObject / GovernanceRecord / AISuggestion / Defect / DecisionRecord |
 | writebackMode | 是 | local_mirror / pending_api / manual_record / no_write |
 | allowedByPolicy | 是 | true / false |
@@ -242,7 +242,7 @@ PilotSession
 | 4 | 人工评测 | `EvalRecord` | 85 分阈值 + 红线 |
 | 5 | 缺陷回流 | `DefectRecord` | P0 立即暂停 |
 | 6 | 知识缺口回流 | `KGR` / `KGB` 候选 | 不自动发布悬赏 |
-| 7 | KDS / WAES 回写候选 | `WritebackCandidate` | 本地镜像不等于真实 API |
+| 7 | KDS / WAME 回写候选 | `WritebackCandidate` | 本地镜像不等于真实 API |
 | 8 | 贡献候选 | `ContributionEvent` | 不确认正式积分 |
 | 9 | 内测复盘 | `PilotReview` | 决定是否扩大范围 |
 
@@ -256,7 +256,7 @@ PilotSession
 4. P0 缺陷为 0。
 5. P1 缺陷全部修复并返测通过。
 6. 所有 DSR-L2 / DSR-L3 样本均只记录脱敏摘要。
-7. 所有缺口、缺陷、贡献候选均有 KDS / WAES 回写候选或明确阻断原因。
+7. 所有缺口、缺陷、贡献候选均有 KDS / WAME 回写候选或明确阻断原因。
 8. 用户或授权项目负责人确认是否进入邀请合作单位试用。
 
 ## 15. 首批内测样本建议

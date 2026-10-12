@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-24E496EEA0
 title: GC-Knowledge Fabric Handler Stub Envelope Contract v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0
@@ -77,7 +77,7 @@ D16 在 D13-D15 的 handler stub 之上增加统一 envelope 包装层，用于�
 |---|---|
 | KDS domains read-only | 返回成功 envelope，`candidateOnly=false` |
 | KDS fact candidate | 返回成功 envelope，`candidateOnly=true`，仍为 no-write |
-| WAES RAG gate | 返回成功 envelope，保持 gate check 边界 |
+| WAME RAG gate | 返回成功 envelope，保持 gate check 边界 |
 | unknown handler | 返回失败 envelope，不抛出到上层 |
 | missing service method | 返回失败 envelope，错误码为 `MISSING_SERVICE_METHOD` |
 

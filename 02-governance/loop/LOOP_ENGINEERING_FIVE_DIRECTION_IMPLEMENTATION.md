@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-4BA3D31617
 title: Loop Engineering 五方向实施规范
-project: WAES
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md
 source_path: 02-governance/loop/LOOP_ENGINEERING_FIVE_DIRECTION_IMPLEMENTATION.md
@@ -18,7 +18,7 @@ superseded_by: []
 
 # Loop Engineering 五方向实施规范
 
-本文把 Loop Engineering 的五个方向落成 GPCF 项目群可执行控制面：运行、停止、验证、恢复、调试。它补充现有 `LOOP_CONTROL_BOARD.md` 和 `LOOP_AUTONOMY_POLICY.md`，不替代 KDS、WAES、Harness 或 GFIS 的既有职责。
+本文把 Loop Engineering 的五个方向落成 GPCF 项目群可执行控制面：运行、停止、验证、恢复、调试。它补充现有 `LOOP_CONTROL_BOARD.md` 和 `LOOP_AUTONOMY_POLICY.md`，不替代 KDS、WAME、Harness 或 GFIS 的既有职责。
 
 ## 0. 边界
 
@@ -29,7 +29,7 @@ superseded_by: []
 | 层 | 职责 | 禁止替代 |
 |---|---|---|
 | KDS | 受控知识事实主存与镜像 | 不替代 GFIS 运行层事实 |
-| WAES | 授权、风险、门禁和裁决 | 不替代业务主账或人工裁决 |
+| WAME | 授权、风险、门禁和裁决 | 不替代业务主账或人工裁决 |
 | Harness | 执行、证据、回放、指标和验收准备 | 不替代原始凭证 |
 | Loop | 微循环、中循环和大循环编排 | 不直接证明业务完成 |
 | GFIS | 工厂运行层事实与 SOP E2E 主体 | 不被 Demo、fixture 或文档通过替代 |
@@ -60,7 +60,7 @@ superseded_by: []
 | task_queue_empty | 队列为空且候选下一步需确认 | `partial` |
 | production_safety | 触及生产写入、部署、密钥、外部 API 或 accepted/integrated | `blocked` |
 
-`accepted`、`integrated`、`production_ready` 只能由独立的完成检测器放行，且必须同时满足真实 source-of-record、runtime primary key、review queue、runtime intake、WAES review、verified artifact、人工确认和回放证据。
+`accepted`、`integrated`、`production_ready` 只能由独立的完成检测器放行，且必须同时满足真实 source-of-record、runtime primary key、review queue、runtime intake、WAME review、verified artifact、人工确认和回放证据。
 
 ## 3. Loop 如何验证
 
@@ -72,7 +72,7 @@ superseded_by: []
 | intermediate_check | 中间产物、写入边界、弱证据拒收 | fixture / dry-run / no-write validator |
 | final_gate | 轮次结论、下一步、停止类型、状态上限 | evidence JSON + 受控 Markdown |
 
-验证必须显式区分 `test_data_lane`、`synthetic_dev_lane` 和 `real_business_lane`。测试数据通过不得释放真实运行层主键、review queue、runtime intake、WAES review、verified artifact 或生产写入。
+验证必须显式区分 `test_data_lane`、`synthetic_dev_lane` 和 `real_business_lane`。测试数据通过不得释放真实运行层主键、review queue、runtime intake、WAME review、verified artifact 或生产写入。
 
 ## 4. Loop 如何恢复
 
@@ -100,7 +100,7 @@ superseded_by: []
 | status_ceiling | 当前最高允许状态 |
 | real_lane_counts | 真实业务计数 |
 | synthetic_lane_counts | 测试/开发计数 |
-| write_counts | 生产、外部 API、KDS/WAES 写入计数 |
+| write_counts | 生产、外部 API、KDS/WAME 写入计数 |
 | next_authorization | 下一步授权需求 |
 
 对应证据：`docs/harness/evidence/loop-engineering-five-direction-implementation-20260622.{json,md}`。

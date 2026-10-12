@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-5FD0A7402A
 title: GlobalCloud Loop Evolution Gates
 project: GPCF
-related_projects: [GPCF, WAES]
+related_projects: [GPCF, WAME]
 domain: operational-skill
 status: operational_controlled
 version: v1.0

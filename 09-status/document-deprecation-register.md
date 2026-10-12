@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-0295C05F40
 title: 文档过期与归档台账
 project: GPCF
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: status
 status: controlled
 version: v1.0

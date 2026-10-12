@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-26EE0B96B8
 title: architecture
 project: KDS
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

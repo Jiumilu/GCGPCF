@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-8CDB82A404
 title: GlobalCloud 智能体团队下一步执行清单
 project: XiaoC
-related_projects: [GFIS, GPC, PVAOS, WAES, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF]
+related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XiaoG, MMC, GPCF]
 domain: agent-team
 status: controlled
 version: v1.0
@@ -105,7 +105,7 @@ superseded_by: []
 
 1. EvidenceRecord / StatusAudit / AgentToolGrant 样本要求
 2. 连接器治理与规则门运行前样本要求
-3. WAES 首轮验证包建立
+3. WAME 首轮验证包建立
 4. MMC 治理模板基线导出与 Manifest 模板标准化
 
 ### 2.6 数枢专项

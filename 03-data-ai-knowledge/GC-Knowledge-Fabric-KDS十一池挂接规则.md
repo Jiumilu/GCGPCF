@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-60E4A89F37
 title: GC-Knowledge Fabric KDS十一池挂接规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0

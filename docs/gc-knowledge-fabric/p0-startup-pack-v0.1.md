@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-7DBBCBB955
 title: GC-Knowledge Fabric P0 启动包 v0.1
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0

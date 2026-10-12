@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1B6A1276BB
 title: GFIS Assistant Repair Read Model Action Guard No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 GFIS Assistant Repair Read Model Action Guard 是 DKS-115 `Repair Admission Read Model` 之后的按钮级 / 动作级门禁模型。
 
-它定义 Brain、PKC、GFIS Assistant 在只读视图中可以展示哪些动作提示，以及哪些动作必须被阻断。它不是按钮点击回执，不创建 Review Queue Item，不创建 KWE WorkItem，不创建 ConfirmationRecord / DecisionRecord，不写 WAES Gate Result，不推进 KDS lifecycle，不写 GFIS / GPC / ERP / MES。
+它定义 Brain、PKC、GFIS Assistant 在只读视图中可以展示哪些动作提示，以及哪些动作必须被阻断。它不是按钮点击回执，不创建 Review Queue Item，不创建 KWE WorkItem，不创建 ConfirmationRecord / DecisionRecord，不写 WAME Gate Result，不推进 KDS lifecycle，不写 GFIS / GPC / ERP / MES。
 
 ## 2. 动作类型
 
@@ -88,7 +88,7 @@ Action Guard 不得直接执行以下动作：
 - 创建 KWE WorkItem；
 - 创建 ConfirmationRecord；
 - 创建 DecisionRecord；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 持久化 evidence；
 - 推进 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；

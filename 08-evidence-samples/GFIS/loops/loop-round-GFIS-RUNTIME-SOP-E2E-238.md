@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1351F85A23
 title: GFIS-RUNTIME-SOP-E2E-238
 project: GFIS
-related_projects: [GFIS, WAES]
+related_projects: [GFIS, WAME]
 domain: evidence
 status: controlled
 version: v1.0
@@ -72,7 +72,7 @@ superseded_by: []
 ## 下一步
 
 - `GFIS-RUNTIME-SOP-E2E-239`：建立 dispatch confirmation post-scan hold gate。
-- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAES 或升级 accepted/integrated。
+- 下一轮仍不得派发请求、释放 open hold、创建运行层主键、进入 review/runtime/WAME 或升级 accepted/integrated。
 
 ## 真实性计数
 

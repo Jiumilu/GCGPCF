@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-A705FE83D1
 title: GFIS Assistant Repair Review Decision Draft No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 GFIS Assistant Repair Review Decision Draft 是 DKS-111 `Repair Intake Review Packet` 之后的审阅意见草稿。
 
-它把 review packet 转成可展示的建议处置草稿，用于表达人工建议、metadata 边界备注、委员会议题备注或冻结风险备注。它不是人工确认，不是委员会决议，不是 DecisionRecord，不是 ConfirmationRecord，也不是 WAES Gate Result。
+它把 review packet 转成可展示的建议处置草稿，用于表达人工建议、metadata 边界备注、委员会议题备注或冻结风险备注。它不是人工确认，不是委员会决议，不是 DecisionRecord，不是 ConfirmationRecord，也不是 WAME Gate Result。
 
 ## 2. No-write 边界
 
@@ -34,7 +34,7 @@ Decision Draft 不得直接执行以下动作：
 - 创建 DecisionRecord；
 - 创建 KWE WorkItem；
 - 创建 GapRecord 或 BountyRecord；
-- 写入 WAES Gate Result；
+- 写入 WAME Gate Result；
 - 推进 KDS lifecycle；
 - 写入 KDS fact 或 accepted fact；
 - 写入 GFIS / GPC / ERP / MES；
@@ -101,4 +101,4 @@ Decision Draft 不得直接执行以下动作：
 
 ## 7. 与后续流程的关系
 
-Decision Draft 只是 GFIS Assistant 可展示的意见草稿。后续如果确需形成人工确认、委员会决议、DecisionRecord、ConfirmationRecord、KWE 工单、WAES Gate Result 或业务写回，必须由独立受控流程完成，并由 Harness evidence 固化，不能由本草稿直接完成。
+Decision Draft 只是 GFIS Assistant 可展示的意见草稿。后续如果确需形成人工确认、委员会决议、DecisionRecord、ConfirmationRecord、KWE 工单、WAME Gate Result 或业务写回，必须由独立受控流程完成，并由 Harness evidence 固化，不能由本草稿直接完成。

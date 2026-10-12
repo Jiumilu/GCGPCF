@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-633179942F
 title: GFIS Assistant DKS-250 通知确认预览候选规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,7 +29,7 @@ DKS-250 从 DKS-249 notification preview 派生 notification acknowledgement pre
 - 不更新 delivery status。
 - 不创建 notification、message、inbox item。
 - 不创建 routing queue、queue item、approval assignment、approval packet。
-- 不创建 WAES / KWE / Harness 记录。
+- 不创建 WAME / KWE / Harness 记录。
 - 不推动 KDS lifecycle。
 - 不写 GFIS / GPC / ERP / MES。
 - 不调用外部 API。

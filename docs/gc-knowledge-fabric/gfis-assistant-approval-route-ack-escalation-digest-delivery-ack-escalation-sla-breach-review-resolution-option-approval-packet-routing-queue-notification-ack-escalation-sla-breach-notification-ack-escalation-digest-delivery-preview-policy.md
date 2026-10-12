@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CF54E99167
 title: GFIS Assistant Approval Packet Routing Queue Notification Acknowledgement Escalation Digest Delivery Preview No-write 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: docs
 status: controlled
 version: v1.0
@@ -29,7 +29,7 @@ DKS-169 严格禁止：
 - 创建真实 digest delivery、delivery、digest、escalation 或 timeout event。
 - 创建 KWE 工单、notification、acknowledgement、receipt、read receipt 或 delivery status。
 - 创建 approval assignment、approval lock、approval packet、approval request、approval decision、committee decision 或 freeze action。
-- 写入 GFIS、GPC、ERP、MES、KDS lifecycle、KDS fact、Harness evidence、WAES gate result 或 external API。
+- 写入 GFIS、GPC、ERP、MES、KDS lifecycle、KDS fact、Harness evidence、WAME gate result 或 external API。
 
 ## 受控证据
 

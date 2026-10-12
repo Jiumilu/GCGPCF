@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-OPEN-SPEC-COVERAGE-DESIGN-20260712
 title: design
 project: GPCF
-related_projects: [GPC, WAES, GPCF, ICP]
+related_projects: [GPC, WAME, GPCF, ICP]
 domain: openspec
 status: draft
 version: v1.0

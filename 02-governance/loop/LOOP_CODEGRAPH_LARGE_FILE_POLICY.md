@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-622398264F
 title: Loop CodeGraph Large File Policy
-project: WAES
-related_projects: [GFIS, GPC, WAES, GPCF]
+project: WAME
+related_projects: [GFIS, GPC, WAME, GPCF]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md
 source_path: 02-governance/loop/LOOP_CODEGRAPH_LARGE_FILE_POLICY.md
@@ -22,7 +22,7 @@ superseded_by: []
 
 本政策用于处理 CodeGraph 在项目群中遇到的超大文件、生成型 validator、历史 harness 复制件或低信号文件导致的 residual notice。
 
-它只定义代码图谱索引策略，不改变项目业务代码，不删除项目文件，不替代测试、源码复核、Harness/WAES 判定或人工验收。
+它只定义代码图谱索引策略，不改变项目业务代码，不删除项目文件，不替代测试、源码复核、Harness/WAME 判定或人工验收。
 
 ## 适用条件
 
@@ -97,6 +97,6 @@ keep_residual_pending_notice_explained
 ## 非声明
 
 - 本政策不证明 GFIS runtime SOP E2E 已通过。
-- 本政策不证明真实 source-of-record、运行层主键、review queue、runtime intake、WAES review 或 verified artifact 已完成。
+- 本政策不证明真实 source-of-record、运行层主键、review queue、runtime intake、WAME review 或 verified artifact 已完成。
 - 本政策不授权 GFIS validator 重构、删除、拆分或项目排除规则修改。
 - 本政策不授权提交、推送、部署、生产写入、真实外部 API 写入或状态升级。

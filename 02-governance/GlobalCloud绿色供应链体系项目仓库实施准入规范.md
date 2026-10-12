@@ -1,12 +1,12 @@
 ---
 doc_id: GPCF-DOC-94AA31880F
 title: GlobalCloud 绿色供应链体系项目仓库实施准入规范
-project: WAES
-related_projects: [GFIS, GPC, WAES, XiaoC]
+project: WAME
+related_projects: [GFIS, GPC, WAME, XiaoC]
 domain: governance
 status: controlled
 version: v1.0
-owner: WAES
+owner: WAME
 kds_space: 开发
 kds_path: 开发/91-治理与验收/02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md
 source_path: 02-governance/GlobalCloud绿色供应链体系项目仓库实施准入规范.md

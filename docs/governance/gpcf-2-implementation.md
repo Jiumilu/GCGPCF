@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-12C308D619
 title: GPCF 2.0 实施基线
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, GPCF]
+related_projects: [GFIS, GPC, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

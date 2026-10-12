@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-SPACEAI-STUDIO-MULTIPLATFORM-REFACTOR-DESIGN-20261010
 title: design
 project: KDS
-related_projects: [WAES, KDS, MMC, Studio, SpaceAIStudio, SpaceAI]
+related_projects: [WAME, KDS, MMC, Studio, SpaceAIStudio, SpaceAI]
 domain: openspec
 status: draft
 version: v1.0

@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-CF69304708
 title: GFIS-RUNTIME-SOP-E2E-242
 project: GFIS
-related_projects: [GFIS, WAES, KDS]
+related_projects: [GFIS, WAME, KDS]
 domain: evidence
 status: controlled
 version: v1.0
@@ -21,7 +21,7 @@ superseded_by: []
 ## 输入
 
 - 上一轮 `GFIS-RUNTIME-SOP-E2E-241` 已证明 6 类弱 hold release 声明均被拒收。
-- 当前真实缺口仍为：真实派发确认文件 0、人工派发授权 0、收件方身份确认 0、人工通道确认 0、KDS backlink 0、WAES evidence candidate 0、运行层主键 0。
+- 当前真实缺口仍为：真实派发确认文件 0、人工派发授权 0、收件方身份确认 0、人工通道确认 0、KDS backlink 0、WAME evidence candidate 0、运行层主键 0。
 - 本轮只允许记录一次受控 release attempt，并在真实 dispatch confirmation 链路缺失时 hard-stop。
 
 ## 执行动作
@@ -77,5 +77,5 @@ superseded_by: []
 - batch_generated: false
 - substance_gate: pass
 - stop_type: authorization_boundary
-- 本轮只证明缺真实 dispatch confirmation 链路时，受控 release attempt 必须 hard-stop；不释放 open hold，不创建 dispatch confirmation、责任方响应、提交包、source-of-record、运行层主键、review queue、runtime intake、WAES review、verified artifact 或 accepted/integrated 状态。
+- 本轮只证明缺真实 dispatch confirmation 链路时，受控 release attempt 必须 hard-stop；不释放 open hold，不创建 dispatch confirmation、责任方响应、提交包、source-of-record、运行层主键、review queue、runtime intake、WAME review、verified artifact 或 accepted/integrated 状态。
 - 下一轮建议：`GFIS-RUNTIME-SOP-E2E-243` 继续建立 dispatch confirmation owner response reopen scan，真实派发确认链路缺失时保持 owner response 关闭。

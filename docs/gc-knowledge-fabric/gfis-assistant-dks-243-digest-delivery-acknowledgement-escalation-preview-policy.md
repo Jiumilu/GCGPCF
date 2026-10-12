@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-F0380F4ED7
 title: GFIS Assistant DKS-243 摘要投递确认升级预览策略
 project: KDS
-related_projects: [GFIS, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -24,7 +24,7 @@ DKS-243 在 DKS-242 digest delivery acknowledgement preview 的基础上生成 a
 
 ## 边界
 
-本轮不创建真实 escalation、escalation task、delivery acknowledgement、digest delivery、delivery、digest、KWE work item、notification、acknowledgement、receipt、read receipt、approval assignment、approval packet、committee decision、freeze action、Harness evidence、WAES gate result，也不更新 KDS lifecycle、业务事实或任何外部 API。
+本轮不创建真实 escalation、escalation task、delivery acknowledgement、digest delivery、delivery、digest、KWE work item、notification、acknowledgement、receipt、read receipt、approval assignment、approval packet、committee decision、freeze action、Harness evidence、WAME gate result，也不更新 KDS lifecycle、业务事实或任何外部 API。
 
 ## 验证
 

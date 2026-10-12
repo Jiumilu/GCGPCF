@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-25ADFEBCF8
 title: cognee
 project: GPC
-related_projects: [GPC, WAES, KDS, GPCF]
+related_projects: [GPC, WAME, KDS, GPCF]
 domain: general
 status: controlled
 version: v1.0

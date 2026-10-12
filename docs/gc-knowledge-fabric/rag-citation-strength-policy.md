@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-85586D68F8
 title: GC-Knowledge Fabric RAG 引用强度 L0-L5 规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS, Brain, PKC]
+related_projects: [GFIS, GPC, WAME, KDS, Brain, PKC]
 domain: docs
 status: controlled
 version: v1.0
@@ -22,7 +22,7 @@ superseded_by: []
 
 本文件在 RAG 准入状态之上增加引用强度，避免 `safe` 被误解为“可直接形成业务决策、写回、收益确认或责任归因”。
 
-本文件只定义 Brain、PKC、GFIS Assistant、指挥舱和审计检索的引用边界，不执行真实 RAG 检索，不写 KDS、WAES、GFIS/GPC 或外部 API。
+本文件只定义 Brain、PKC、GFIS Assistant、指挥舱和审计检索的引用边界，不执行真实 RAG 检索，不写 KDS、WAME、GFIS/GPC 或外部 API。
 
 ## 2. 引用强度
 
@@ -53,7 +53,7 @@ superseded_by: []
 3. `L2` 只能展示摘要、元数据和受控原件指针。
 4. `L3` 必须显示来源边界和不确定性，不能作为业务结论。
 5. `L4` 可强引用，但不能自动写回业务系统。
-6. `L5` 可作为业务辅助决策引用，但仍需 WAES、KWE、人工或委员会确认才能进入正式写回、收益确认或责任归因。
+6. `L5` 可作为业务辅助决策引用，但仍需 WAME、KWE、人工或委员会确认才能进入正式写回、收益确认或责任归因。
 7. 敏感资料即使满足 `safe`，也必须先通过 redaction、external share 和 ACL gate。
 
 ## 5. P0/P1 验收条件

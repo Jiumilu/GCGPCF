@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-KNOWLEDGE-ASSET-WHITEPAPER-20260821
 title: GlobalCloud 知识资产概念模型白皮书
 project: GPCF
-related_projects: [WAS, XWAIL, AAAS, WAES, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP]
+related_projects: [WAS, XWAIL, AAAS, WAME, GFIS, GPC, PVAOS, KDS, Brain, Studio, MMC, PKC, XGD, XiaoC, XiaoG, SOP, GPCF, ICP]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,7 +20,7 @@ superseded_by: []
 
 ## 摘要
 
-GlobalCloud 知识资产概念模型以“**一个知识正本、一个资产身份、多个受控投影**”为核心。KDS 保存 canonical `KnowledgeObject` 与其 `KnowledgeAssetEnvelope`；GPCF 定义模型和兼容规则；Brain 消费授权读模型；MMC 负责模型调用与授权审计；WAES 与人工确认控制敏感、跨组织、公开和写回边界。
+GlobalCloud 知识资产概念模型以“**一个知识正本、一个资产身份、多个受控投影**”为核心。KDS 保存 canonical `KnowledgeObject` 与其 `KnowledgeAssetEnvelope`；GPCF 定义模型和兼容规则；Brain 消费授权读模型；MMC 负责模型调用与授权审计；WAME 与人工确认控制敏感、跨组织、公开和写回边界。
 
 本白皮书完成概念层、语义层、治理层和机器契约层的设计收口。它不声明数据库迁移、真实资料写入、跨仓运行集成、真实授权 E2E、生产部署或客户验收已经完成。项目群状态继续保持 `active / partial / not_complete`。
 
@@ -42,7 +42,7 @@ GlobalCloud 知识资产概念模型以“**一个知识正本、一个资产身
 - 身份、空间、上下文、分类、治理、来源、关系、标签和时间语义。
 - 七类访问空间、十五类知识资产和三种投影模式。
 - 词表版本、授权证据、lineage、生命周期和质量规则。
-- GPCF、KDS、Brain、Studio、MMC、WAES 的职责边界。
+- GPCF、KDS、Brain、Studio、MMC、WAME 的职责边界。
 
 ### 1.3 范围外
 
@@ -75,7 +75,7 @@ flowchart LR
   KA --> RP[Authorized Read Projection]
   RP --> B[Brain Search / Graph / WikiPreview / Chat]
   B --> WC[WritebackCandidate]
-  WC --> G[WAES / Human Gate]
+  WC --> G[WAME / Human Gate]
   G --> KO
   MM[MMC Invocation + Audit] -.授权调用.-> B
 ```
@@ -88,7 +88,7 @@ flowchart LR
 | 投影层 | `AuthorizedReadProjection` | KDS | 权限裁剪、版本和原因可解释 |
 | 消费层 | Search、Graph、WikiPreview、Chat | Brain | 不持有第二知识主账 |
 | 推理层 | Prompt、Readback、Candidate | Brain、MMC | 每次调用独立授权并审计 |
-| 写回层 | `WritebackCandidate` | WAES、业务 owner | 人工确认后才能写回 |
+| 写回层 | `WritebackCandidate` | WAME、业务 owner | 人工确认后才能写回 |
 
 ## 4. 核心对象模型
 
@@ -243,7 +243,7 @@ draft -> active -> reviewing -> superseded -> archived
 | 状态轴 | 值 | 含义 |
 |---|---|---|
 | metadata status | unclassified / machine suggested / human required / human confirmed / rejected | 分类确认状态 |
-| authorization boundary | read only / human required / WAES gated / authorized | 当前授权边界 |
+| authorization boundary | read only / human required / WAME gated / authorized | 当前授权边界 |
 | write mode | no write / sandbox / authorized write | 数据写入能力 |
 
 三个状态轴不得合并。`authorized_write` 必须同时满足：
@@ -262,7 +262,7 @@ draft -> active -> reviewing -> superseded -> archived
 | Studio | 开发/测试资料入口和受控 fixture 生命周期 | 不绕过 KDS 授权 |
 | Brain | 授权搜索、图谱、WikiPreview、Chat 上下文 | 不建立第二知识主账 |
 | MMC | 模型调用、路由、委托与审计 | 不拥有知识资产模型 |
-| WAES | 敏感、公开、写回和状态提升门禁 | 不替代业务 owner |
+| WAME | 敏感、公开、写回和状态提升门禁 | 不替代业务 owner |
 
 ## 12. 授权读模型
 

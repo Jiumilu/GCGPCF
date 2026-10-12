@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-1CF8B46A53
 title: GlobalCloud 葛化 GFIS AI 助手内测问答与资料回收包联动规则
 project: KDS
-related_projects: [GFIS, GPC, WAES, KDS]
+related_projects: [GFIS, GPC, WAME, KDS]
 domain: data-ai-knowledge
 status: controlled
 version: v1.0
@@ -20,13 +20,13 @@ superseded_by: []
 
 ## 1. 定位
 
-本文定义葛化第一阶段三类 GFIS AI 助手在内测问答、使用引导、文档验收过程中，如何联动 DKS-025/DKS-026 已建立的知识缺口、资料回收包、候选 SOP 与 KDS/WAES 门禁。
+本文定义葛化第一阶段三类 GFIS AI 助手在内测问答、使用引导、文档验收过程中，如何联动 DKS-025/DKS-026 已建立的知识缺口、资料回收包、候选 SOP 与 KDS/WAME 门禁。
 
 本文只建立受控规则与候选记录结构，不表示：
 
 - 葛化 GFIS AI 助手已经正式上线；
 - 已经收到真实首批资料；
-- 已经完成 GFIS、KDS 或 WAES 的真实写回；
+- 已经完成 GFIS、KDS 或 WAME 的真实写回；
 - 已经确认任何积分、收益、产值、订单收入或 SOP 生效状态。
 
 ## 2. 适用助手
@@ -34,7 +34,7 @@ superseded_by: []
 | 助手 | 内测代号 | 核心作用 | 输出边界 |
 |---|---:|---|---|
 | GFIS 知识问答助手 | KQA | 根据 KDS 可见知识、资料回收包与候选 SOP 回答业务问题 | 输出答案、来源引用、缺口候选、资料回收包引用；不得确认事实 |
-| GFIS 使用助手 | GUA | 引导人员按 GFIS、KDS、WAES 标准流程填报字段与提交资料 | 输出字段建议、下一步动作、责任口径提示；不得替代人工提交 |
+| GFIS 使用助手 | GUA | 引导人员按 GFIS、KDS、WAME 标准流程填报字段与提交资料 | 输出字段建议、下一步动作、责任口径提示；不得替代人工提交 |
 | GFIS 文档验收助手 | DVA | 对建设、运营、订单、质量、发货、POD、金融凭证、门禁资料进行候选验收 | 输出通过/部分通过/退回/阻断建议；不得完成最终验收 |
 
 ## 3. 联动对象
@@ -118,11 +118,11 @@ superseded_by: []
 |---|---|---|
 | writebackCandidateId | WCR-GH-ORD-202606-0001 | 写回候选编号 |
 | sourceQuestionId | QS-GH-SOP-001 | 来源问题或文档 |
-| targetSystem | KDS / GFIS / WAES | 目标系统 |
+| targetSystem | KDS / GFIS / WAME | 目标系统 |
 | targetLedger | SOP 账本 / 贡献账本 / 订单池 | 目标账本或底座池 |
 | basePoolRefs | 订单池, 产能池, 数据池 | 必须挂接 KDS 11 底座池 |
 | writebackLevel | candidate_only | candidate_only / human_record / pending_api |
-| confirmationGate | KDS + WAES + 人工 | 门禁 |
+| confirmationGate | KDS + WAME + 人工 | 门禁 |
 | currentState | pending_confirmation | 当前状态 |
 
 ### 6.5 InnerTestGapReturnRecord
@@ -152,9 +152,9 @@ superseded_by: []
 
 积分池、收益池、额度池、悬赏池、争议池、潜在产值池、SOP 账本、贡献账本均为增强账本，不替代 KDS 11 底座池。
 
-## 8. WAES 与人工确认边界
+## 8. WAME 与人工确认边界
 
-| 动作 | AI 可做 | WAES 可做 | 人工/委员会必须做 |
+| 动作 | AI 可做 | WAME 可做 | 人工/委员会必须做 |
 |---|---|---|---|
 | 问答解释 | 生成候选答案与来源引用 | 校验规则口径 | 确认业务采用 |
 | GFIS 填报建议 | 提示字段、缺证、责任区分 | 确认是否在规则内 | 提交、修改、签认 |
@@ -163,7 +163,7 @@ superseded_by: []
 | 积分/收益候选 | 识别知识、产值、渠道、资料贡献 | 校验规则与口径 | 委员会裁决与备案 |
 | 重大违规 | 标记疑点与证据链 | 触发复核规则 | 委员会决定扣除比例或全部扣除 |
 
-WAES 在规则以内只记录，不替代人工确认。规则外、重大影响、跨单位争议、积分/收益分配、违规扣除、正式 SOP 生效，必须进入人工或委员会流程。
+WAME 在规则以内只记录，不替代人工确认。规则外、重大影响、跨单位争议、积分/收益分配、违规扣除、正式 SOP 生效，必须进入人工或委员会流程。
 
 ## 9. 贡献与收益候选口径
 
@@ -193,7 +193,7 @@ WAES 在规则以内只记录，不替代人工确认。规则外、重大影响
 - 建立 GFIS 三类助手与 RPK/KGR/SOPC 的联动规则；
 - 建立内测问答、资料验收、写回候选、缺口回流记录结构；
 - 明确 KDS 11 底座池与增强账本挂接规则；
-- 明确 WAES、人工、委员会确认边界；
+- 明确 WAME、人工、委员会确认边界；
 - 纳入 LOOP 轮次记录；
 - 通过本轮受控文档、KDS 镜像、防污染、TOKEN、LOOP 文档门禁检查。
 

@@ -2,7 +2,7 @@
 doc_id: GPCF-OS-OPEN-SPEC-COVERAGE-TASKS-20260712
 title: tasks
 project: KDS
-related_projects: [WAES, KDS]
+related_projects: [WAME, KDS]
 domain: openspec
 status: draft
 version: v1.0
