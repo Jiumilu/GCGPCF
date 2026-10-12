@@ -18,28 +18,28 @@ superseded_by: []
 data_layer: derived
 authority_level: A2
 verification_status: source_verified
-generated_at: 2026-10-12 14:36:23 +0800
+generated_at: 2026-10-12 14:56:32 +0800
 ---
 
 # GlobalCloud 项目群当前 Live 状态快照
 
 ## Summary
 
-- generated_at: `2026-10-12T14:36:23.903522+08:00`
+- generated_at: `2026-10-12T14:56:32.012247+08:00`
 - freshness_ok: `true`
 - project_count: `17`
-- pass_repo_count: `10`
+- pass_repo_count: `11`
 - bootstrap_window: `false`
 
 ## Current sets
 
-- observed_dirty: `WAS世界资产体系, GlobalCloud WAES, GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud XGD`
-- observed_ahead: `GlobalCloud Studio`
-- stable_dirty: `GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF, WAS世界资产体系`
-- stable_ahead: `GlobalCloud Studio`
+- observed_dirty: `GlobalCloud WAES, GlobalCoud GPCF, GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud XGD`
+- observed_ahead: `GlobalCloud Studio, GlobalCloud KDS`
+- stable_dirty: `GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF`
+- stable_ahead: `GlobalCloud KDS, GlobalCloud Studio`
 - volatile_dirty: `GlobalCoud GPCF`
 - sensitive_repos: `none`
-- review_boundary: `GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF, WAS世界资产体系`
+- review_boundary: `GlobalCloud GFIS, GlobalCloud KDS, GlobalCloud WAES, GlobalCloud XGD, GlobalCoud GPCF`
 
 ## Repo details
 
@@ -47,16 +47,16 @@ generated_at: 2026-10-12 14:36:23 +0800
 |---|---:|---:|---:|---|
 | `GlobalCloud AAAS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
-| `WAS世界资产体系` | 1 | 0 | 0 | `none` |
+| `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud WAES` | 14 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud Studio` | 0 | 13 | 0 | `none` |
-| `GlobalCoud GPCF` | 10 | 0 | 0 | `none` |
+| `GlobalCloud Studio` | 0 | 14 | 0 | `none` |
+| `GlobalCoud GPCF` | 3 | 0 | 0 | `none` |
 | `GlobalCloud XWAIL` | 0 | 0 | 0 | `none` |
 | `GlobalCloud GFIS` | 51 | 0 | 0 | `none` |
 | `GlobalCloud MMC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud KDS` | 17 | 0 | 0 | `none` |
+| `GlobalCloud KDS` | 20 | 1 | 0 | `none` |
 | `GlobalCloud XiaoG` | 0 | 0 | 0 | `none` |
 | `GlobalCloud PVAOS` | 0 | 0 | 0 | `none` |
 | `GlobalCloud SOP` | 0 | 0 | 0 | `none` |
