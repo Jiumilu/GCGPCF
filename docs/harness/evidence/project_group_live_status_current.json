@@ -1,42 +1,49 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-12T11:33:24.949011+08:00",
+  "generated_at": "2026-10-12T11:54:12.808369+08:00",
   "freshness_hours": 12,
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
     "WAS世界资产体系",
     "GlobalCloud WAES",
+    "GlobalCloud Studio",
     "GlobalCoud GPCF",
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
     "GlobalCloud XGD"
   ],
-  "observed_ahead": [],
+  "observed_ahead": [
+    "GlobalCloud Studio"
+  ],
   "stable_dirty": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
-  "stable_ahead": [],
+  "stable_ahead": [
+    "GlobalCloud Studio"
+  ],
   "volatile_dirty": [
     "GlobalCoud GPCF"
   ],
   "review_boundary": [
     "GlobalCloud GFIS",
     "GlobalCloud KDS",
+    "GlobalCloud Studio",
     "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCoud GPCF",
     "WAS世界资产体系"
   ],
   "sensitive_repos": [],
-  "pass_repo_count": 11,
+  "pass_repo_count": 10,
   "bootstrap_window": false,
-  "previous_generated_at": "2026-10-12T11:32:40.325760+08:00",
+  "previous_generated_at": "2026-10-12T11:53:40.106256+08:00",
   "dirty_details": {
     "GlobalCloud AAAS": {
       "dirty_count": 0,
@@ -99,19 +106,29 @@
       "sensitive_paths": []
     },
     "GlobalCloud Studio": {
-      "dirty_count": 0,
-      "ahead": 0,
+      "dirty_count": 1,
+      "ahead": 1,
       "behind": 0,
-      "paths": [],
+      "paths": [
+        "tests/e2e/project-session-mvp.spec.ts"
+      ],
       "sensitive_paths": []
     },
     "GlobalCoud GPCF": {
-      "dirty_count": 2,
+      "dirty_count": 10,
       "ahead": 0,
       "behind": 0,
       "paths": [
         "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.json",
-        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md"
+        "docs/harness/evidence/okf-v01-approved-summary-writer-positive-fixture-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-admission-gate-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.json",
+        "docs/harness/evidence/okf-v01-summary-approval-expiry-gate-20260621.md",
+        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-approval-negative-fixtures-20260620.md",
+        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.json",
+        "docs/harness/evidence/okf-v01-summary-approval-request-gate-20260620.md"
       ],
       "sensitive_paths": []
     },
@@ -189,7 +206,7 @@
       "sensitive_paths": []
     },
     "GlobalCloud KDS": {
-      "dirty_count": 9,
+      "dirty_count": 10,
       "ahead": 0,
       "behind": 0,
       "paths": [
@@ -201,7 +218,8 @@
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\345\\233\\236\\345\\206\\231/06_\\345\\217\\243\\345\\276\\204\\350\\241\\250\\347\\211\\210\\346\\234\\254.md\"",
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\345\\233\\236\\345\\206\\231/07_\\344\\270\\273\\346\\225\\260\\346\\215\\256.md\"",
         "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\345\\233\\236\\345\\206\\231/08_\\345\\256\\242\\346\\210\\267\\345\\233\\236\\346\\211\\247.md\"",
-        "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\347\\273\\277\\350\\211\\262\\347\\216\\257\\344\\277\\235\\345\\214\\205\\350\\243\\205\\347\\273\\274\\345\\220\\210\\344\\270\\232\\345\\212\\241\\345\\271\\263\\345\\217\\260_PRD_v1.0_2026-10-12.md\""
+        "\"PVA\\344\\273\\267\\345\\200\\274\\350\\201\\224\\347\\233\\237/\\344\\270\\232\\345\\212\\241\\347\\263\\273\\347\\273\\237/\\347\\273\\277\\350\\211\\262\\347\\216\\257\\344\\277\\235\\345\\214\\205\\350\\243\\205\\347\\273\\274\\345\\220\\210\\344\\270\\232\\345\\212\\241\\345\\271\\263\\345\\217\\260_PRD_v1.0_2026-10-12.md\"",
+        "\"concepts/\\345\\274\\200\\345\\217\\221/13-Studio/2026-10-12_Studio_A\\347\\272\\277\\345\\220\\210\\345\\271\\266\\345\\233\\236\\345\\275\\222\\345\\210\\244\\345\\256\\232\\344\\270\\216stage7-core\\346\\227\\242\\346\\234\\211\\347\\272\\242\\347\\201\\257\\346\\270\\205\\345\\215\\225_v1.0.md\""
       ],
       "sensitive_paths": []
     },
