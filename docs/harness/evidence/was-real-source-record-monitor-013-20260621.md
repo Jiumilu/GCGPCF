@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-102515B96D
 title: WAS Real Source Record Monitor 013 Evidence
 project: GPCF
-related_projects: [GFIS, GPC, WAME, GPCF]
-domain: docs
+related_projects: [GFIS, GPC, WAME, GPCF, Studio]
+domain: ontology-governance
 status: controlled
 version: v1.0
 owner: GPCF

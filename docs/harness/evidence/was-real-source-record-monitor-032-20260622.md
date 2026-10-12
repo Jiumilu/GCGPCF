@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-42F84B1E32
 title: WAS Real Source Record Monitor 032 Evidence
 project: KDS
-related_projects: [GPC, WAME, KDS, GPCF]
-domain: docs
+related_projects: [GPC, WAME, KDS, GPCF, Studio]
+domain: ontology-governance
 status: controlled
 version: v1.0
 owner: KDS

@@ -3,7 +3,7 @@ doc_id: GPCF-DOC-61A6C90012
 title: "Loop Round: GPCF-ONTOLOGY-WAS-REAL-SOURCE-RECORD-CANDIDATE-PRECHECK-EXECUTION-012"
 project: GPCF
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
-domain: docs
+domain: ontology-governance
 status: controlled
 version: v1.0
 owner: GPCF

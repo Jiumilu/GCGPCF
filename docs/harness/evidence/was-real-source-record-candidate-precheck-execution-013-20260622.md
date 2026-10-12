@@ -2,8 +2,8 @@
 doc_id: GPCF-DOC-51A6C90013
 title: was-real-source-record-candidate-precheck-execution-013-20260622
 project: GPCF
-related_projects: [GPCF]
-domain: docs
+related_projects: [GPCF, Studio, WAS]
+domain: ontology-governance
 status: controlled
 version: v1.0
 owner: GPCF

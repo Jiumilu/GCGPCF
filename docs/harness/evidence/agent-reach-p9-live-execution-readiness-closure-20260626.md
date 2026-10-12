@@ -2,7 +2,7 @@
 doc_id: GPCF-DOC-AGENT-REACH-P9-LIVE-EXECUTION-READINESS-CLOSURE-20260626
 title: Agent-Reach P9 Live Execution Readiness Closure 2026-06-26
 project: KDS
-related_projects: [GFIS, KDS]
+related_projects: [GFIS, WAS, WAME, KDS, GPCF]
 domain: docs
 status: controlled
 version: v1.0

@@ -3,7 +3,7 @@ doc_id: GPCF-DOC-46FDE10F43
 title: WAS Real Source Record Monitor 005 Evidence
 project: KDS
 related_projects: [GFIS, GPC, PVAOS, WAME, KDS, Brain, PKC, XiaoC, XGD, XiaoG, MMC, GPCF, Studio]
-domain: docs
+domain: ontology-governance
 status: controlled
 version: v1.0
 owner: KDS
