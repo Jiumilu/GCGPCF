@@ -13,7 +13,7 @@ EVIDENCE = ROOT / "docs/harness/WAME/evidence/wame-real-runtime-baseline-2026062
 
 REQUIRED_EVIDENCE_TOKENS = [
     "WAME 真实运行基线证据 2026-06-24",
-    "wame/integration-release",
+    "waes/integration-release",
     "node_modules_present",
     "npm run check",
     "npm run typecheck",

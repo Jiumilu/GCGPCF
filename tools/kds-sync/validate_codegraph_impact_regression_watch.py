@@ -21,7 +21,7 @@ REPOS = {
     "GlobalCloud GFIS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS"),
     "GlobalCloud GPC": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC"),
     "GlobalCloud PVAOS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS"),
-    "GlobalCloud WAME": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME"),
+    "GlobalCloud WAES": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES"),
     "GlobalCloud KDS": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS"),
     "GlobalCloud Brain": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain"),
     "GlobalCloud PKC": Path("/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PKC"),

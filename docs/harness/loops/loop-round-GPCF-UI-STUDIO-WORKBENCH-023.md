@@ -28,7 +28,7 @@ superseded_by: []
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/components/layout/AppSidebar.vue`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/ChatView.vue`
 - `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Studio/packages/client/src/views/hermes/KanbanView.vue`
-- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/docs/current/PM_WORKBENCH.md`
+- `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/docs/current/PM_WORKBENCH.md`
 
 ## run
 

@@ -13,7 +13,7 @@ AUTH_DOC = ROOT / "02-governance/project-master-plan-batch-1-authorization-reque
 REQUIRED_TOKENS = [
     "项目总体方案第一批批量更新授权请求",
     "authorization_status: confirmed_by_user",
-    "GlobalCloud WAME",
+    "GlobalCloud WAES",
     "GlobalCloud GFIS",
     "GlobalCloud PVAOS",
     "GlobalCloud KDS",
@@ -26,7 +26,7 @@ REQUIRED_TOKENS = [
 ]
 
 EXPECTED_PATHS = [
-    "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/GlobalCloud WAME 总体方案.md",
+    "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/GlobalCloud WAES 总体方案.md",
     "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md",
     "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md",
     "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/GlobalCloud KDS 总体方案.md",

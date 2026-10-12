@@ -30,7 +30,7 @@ superseded_by: []
 |---|---|
 | 执行日期 | 2026-06-24 |
 | 执行仓库 | `/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME` |
-| 当前分支 | `wame/integration-release` |
+| 当前分支 | `waes/integration-release` |
 | 工作区状态 | dirty，存在未跟踪治理文档和 `tools/` 目录 |
 | 依赖状态 | `node_modules_present` |
 | 证据采集方式 | 本地命令执行 |
@@ -39,7 +39,7 @@ superseded_by: []
 
 | 命令 | 结果 | 说明 |
 |---|---|---|
-| `git branch --show-current` | pass | 输出 `wame/integration-release` |
+| `git branch --show-current` | pass | 输出 `waes/integration-release` |
 | `git diff --check` | pass | 无输出 |
 | `git ls-files -u` | pass | 无冲突文件 |
 | `test -d node_modules && echo node_modules_present || echo node_modules_missing` | pass | 输出 `node_modules_present` |

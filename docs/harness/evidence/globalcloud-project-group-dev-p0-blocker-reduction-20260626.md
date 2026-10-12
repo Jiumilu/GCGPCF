@@ -55,7 +55,7 @@ superseded_by: []
 | GlobalCloud Brain | codex/brain-l4-retrieval | 3 | 0 | pass | dev_allowed_with_dirty_classification |
 | WAS世界资产体系 | main | 4 | 1 | pass | dev_allowed_with_dirty_classification |
 | GlobalCloud XiaoC | main | 3 | 0 | pass | dev_allowed_with_dirty_classification |
-| GlobalCloud WAME | wame/integration-release | 3 | 0 | pass | dev_allowed_with_dirty_classification |
+| GlobalCloud WAME | waes/integration-release | 3 | 0 | pass | dev_allowed_with_dirty_classification |
 | GlobalCloud GPC | main | 6 | 0 | pass | dev_allowed_with_dirty_classification |
 | GlobalCloud Studio | main | 12 | 4 | pass | dev_allowed_with_dirty_classification |
 | GlobalCoud GPCF | codex/kds-token-sync-gpcf | 659 | 226 | pass | dev_allowed_with_dirty_classification |

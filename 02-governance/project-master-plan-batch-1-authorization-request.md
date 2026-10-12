@@ -62,7 +62,7 @@ batch_projects:
 新增项目方案：
 
 ```text
-/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/GlobalCloud WAME 总体方案.md
+/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/GlobalCloud WAME 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md
 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud KDS/GlobalCloud KDS 总体方案.md

@@ -762,7 +762,7 @@ reason = core-chain real evidence register and evidence standards are establishe
 |---|---|
 | 证据文件 | `docs/harness/WAME/evidence/wame-lint-runtime-repair-authorization-20260625.md` |
 | 采集日期 | 2026-06-25 |
-| 当前分支 | `wame/integration-release` |
+| 当前分支 | `waes/integration-release` |
 | 工作区状态 | dirty，存在未跟踪 WAME 方案文档和 `tools/` |
 | 预检结论 | `git diff --check` pass、`git ls-files -u` pass、lock 检查无输出 |
 | 失败命令 | `npm run lint` |

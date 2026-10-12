@@ -33,13 +33,13 @@ generated_at: 2026-10-12 10:00:07 +0800
 
 ## Current sets
 
-- observed_dirty: `GlobalCloud WAME, GlobalCloud KDS`
+- observed_dirty: `GlobalCloud WAES, GlobalCloud KDS`
 - observed_ahead: `GlobalCloud Studio`
-- stable_dirty: `GlobalCloud KDS, GlobalCloud WAME`
+- stable_dirty: `GlobalCloud KDS, GlobalCloud WAES`
 - stable_ahead: `none`
 - volatile_dirty: `none`
 - sensitive_repos: `none`
-- review_boundary: `GlobalCloud KDS, GlobalCloud WAME`
+- review_boundary: `GlobalCloud KDS, GlobalCloud WAES`
 
 ## Repo details
 
@@ -49,7 +49,7 @@ generated_at: 2026-10-12 10:00:07 +0800
 | `GlobalCloud Brain` | 0 | 0 | 0 | `none` |
 | `WAS世界资产体系` | 0 | 0 | 0 | `none` |
 | `GlobalCloud XiaoC` | 0 | 0 | 0 | `none` |
-| `GlobalCloud WAME` | 30 | 0 | 0 | `none` |
+| `GlobalCloud WAES` | 30 | 0 | 0 | `none` |
 | `GlobalCloud GPC` | 0 | 0 | 0 | `none` |
 | `GlobalCloud Studio` | 0 | 4 | 0 | `none` |
 | `GlobalCoud GPCF` | 0 | 0 | 0 | `none` |

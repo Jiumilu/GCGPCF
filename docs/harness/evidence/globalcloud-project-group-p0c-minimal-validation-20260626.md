@@ -32,7 +32,7 @@ superseded_by: []
 |---|---|---:|---|---|---|
 | GlobalCloud AAAS | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 方案传导 review candidate |
 | WAS世界资产体系 | main | 4/1 | `git status --short --branch`; `git diff --check -- .` | pass | `.DS_Store` 本地产物不得提交；真实 P4 source-record 仍缺 |
-| GlobalCloud WAME | wame/integration-release | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | WAME 仍为治理/验收边界，不自动 accepted |
+| GlobalCloud WAME | waes/integration-release | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | WAME 仍为治理/验收边界，不自动 accepted |
 | GlobalCloud GPC | main | 6/0 | `git status --short --branch`; `git diff --check -- .` | pass | evidence register / e2e 变更仍需 review |
 | GlobalCloud PVAOS | pvaos/D4-release-readiness-governance | 6/0 | `git status --short --branch`; `git diff --check -- .` | pass | package/vitest 变更仍需 release gate review |
 | GlobalCloud XiaoC | main | 3/0 | `git status --short --branch`; `git diff --check -- .` | pass | 不触发 live model / Wrangler / deployment |

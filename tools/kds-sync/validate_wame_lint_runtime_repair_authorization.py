@@ -15,7 +15,7 @@ REGISTER = ROOT / "09-status/globalcloud-core-chain-real-evidence-register.md"
 REQUIRED_AUTH_TOKENS = [
     "WAME lint runtime 修复授权包 2026-06-25",
     "WAME-LINT-RUNTIME-001",
-    "wame/integration-release",
+    "waes/integration-release",
     "dirty = true",
     "npm run lint",
     "src/app/components/AppLazyImports.ts",

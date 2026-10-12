@@ -13,7 +13,7 @@ PROJECT_PLAN_CANDIDATES = {
     "WAS世界资产体系": [PROJECT_ROOT / "WAS世界资产体系/docs/GlobalCloud WAS 总体方案.md"],
     "GlobalCloud XWAIL": [PROJECT_ROOT / "GlobalCloud XWAIL/GlobalCloud XWAIL 总体方案.md"],
     "GlobalCloud AaaS": [PROJECT_ROOT / "GlobalCloud AAAS/docs/GlobalCloud AaaS 总体方案.md"],
-    "GlobalCloud WAME": [PROJECT_ROOT / "GlobalCloud WAME/GlobalCloud WAME 总体方案.md"],
+    "GlobalCloud WAES": [PROJECT_ROOT / "GlobalCloud WAES/GlobalCloud WAES 总体方案.md"],
     "GlobalCloud GFIS": [PROJECT_ROOT / "GlobalCloud GFIS/GlobalCloud GFIS 总体方案.md"],
     "GlobalCloud GPC": [PROJECT_ROOT / "GlobalCloud GPC/GlobalCloud GPC 总体方案.md"],
     "GlobalCloud PVAOS": [PROJECT_ROOT / "GlobalCloud PVAOS/GlobalCloud PVAOS 总体方案.md"],

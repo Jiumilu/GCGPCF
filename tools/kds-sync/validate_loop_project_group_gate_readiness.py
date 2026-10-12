@@ -33,7 +33,7 @@ REPOS = [
     ("GlobalCloud SOP", PROJECT_GROUP_ROOT / "GlobalCloud SOP"),
     ("GlobalCloud SpaceAI", PROJECT_GROUP_ROOT / "GlobalCloud SpaceAI"),
     ("GlobalCloud Studio", PROJECT_GROUP_ROOT / "GlobalCloud Studio"),
-    ("GlobalCloud WAME", PROJECT_GROUP_ROOT / "GlobalCloud WAME"),
+    ("GlobalCloud WAES", PROJECT_GROUP_ROOT / "GlobalCloud WAES"),
     ("GlobalCloud XGD", PROJECT_GROUP_ROOT / "GlobalCloud XGD"),
     ("GlobalCloud XWAIL", PROJECT_GROUP_ROOT / "GlobalCloud XWAIL"),
     ("GlobalCloud XiaoC", PROJECT_GROUP_ROOT / "GlobalCloud XiaoC"),

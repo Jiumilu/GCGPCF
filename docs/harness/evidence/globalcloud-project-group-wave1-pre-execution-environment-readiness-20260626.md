@@ -74,7 +74,7 @@ noise_cleanup_repo_current = WAS世界资产体系(.DS_Store)
 
 | 检查 | 命令 |
 |---|---|
-| WAME scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME/package.json'); ..."` |
+| WAME scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAES/package.json'); ..."` |
 | GPC scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud GPC/package.json'); ..."` |
 | GPCF validators | `test -f tools/kds-sync/<validator>.py` |
 | Brain scripts | `node -e "const p=require('/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud Brain/package.json'); ..."` |

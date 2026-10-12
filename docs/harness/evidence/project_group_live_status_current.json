@@ -5,7 +5,7 @@
   "freshness_ok": true,
   "project_count": 17,
   "observed_dirty": [
-    "GlobalCloud WAME",
+    "GlobalCloud WAES",
     "GlobalCloud KDS"
   ],
   "observed_ahead": [
@@ -13,13 +13,13 @@
   ],
   "stable_dirty": [
     "GlobalCloud KDS",
-    "GlobalCloud WAME"
+    "GlobalCloud WAES"
   ],
   "stable_ahead": [],
   "volatile_dirty": [],
   "review_boundary": [
     "GlobalCloud KDS",
-    "GlobalCloud WAME"
+    "GlobalCloud WAES"
   ],
   "sensitive_repos": [],
   "pass_repo_count": 14,
@@ -54,7 +54,7 @@
       "paths": [],
       "sensitive_paths": []
     },
-    "GlobalCloud WAME": {
+    "GlobalCloud WAES": {
       "dirty_count": 30,
       "ahead": 0,
       "behind": 0,

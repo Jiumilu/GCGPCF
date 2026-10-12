@@ -62,7 +62,7 @@ REQUIRED_TOKENS = [
     "GlobalCloud Brain",
     "WAS世界资产体系",
     "GlobalCloud XiaoC",
-    "GlobalCloud WAME",
+    "GlobalCloud WAES",
     "GlobalCloud GPC",
     "GlobalCloud Studio",
     "GlobalCoud GPCF",

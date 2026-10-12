@@ -24,7 +24,7 @@ PROJECTS = [
     Project("GFIS", "GF", ROOT / "GlobalCloud GFIS"),
     Project("GPC", "GP", ROOT / "GlobalCloud GPC"),
     Project("PVAOS", "PV", ROOT / "GlobalCloud PVAOS"),
-    Project("WAME", "WA", ROOT / "GlobalCloud WAME"),
+    Project("WAME", "WA", ROOT / "GlobalCloud WAES"),
     Project("KDS", "KD", ROOT / "GlobalCloud KDS"),
     Project("Brain", "BR", ROOT / "GlobalCloud Brain"),
     Project("PKC", "PK", ROOT / "GlobalCloud PKC"),

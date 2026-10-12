@@ -66,7 +66,7 @@ gpcf_dirty_count_policy = volatile_observation_not_fact_entry
 | `GlobalCloud Brain` | `codex/brain-l4-retrieval` | `origin/codex/brain-l4-retrieval` | 21 | 3 | 0 | 0 | `pass` | `Brain review handoff evidence refresh / dirty review required` |
 | `WAS世界资产体系` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud XiaoC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
-| `GlobalCloud WAME` | `wame/integration-release` | `origin/wame/integration-release` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
+| `GlobalCloud WAES` | `waes/integration-release` | `origin/waes/integration-release` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud GPC` | `main` | `origin/main` | 0 | 0 | 0 | 0 | `pass` | `clean / no pending git action` |
 | `GlobalCloud Studio` | `main` | `origin/main` | 2 | 0 | 13 | 0 | `pass` | `workflow permissions / session object panel / ahead review required` |
 | `GlobalCoud GPCF` | `codex/kds-token-sync-gpcf` | `origin/codex/kds-token-sync-gpcf` | volatile | volatile | 0 | 0 | `pass` | `GPCF-PRE-WAVE1-REVIEW-AUTHORIZATION-REQUEST-20260627-001 / REVIEW-AUTH-GPCF-WORKTREE-20260627 / governance_worktree_volatile` |

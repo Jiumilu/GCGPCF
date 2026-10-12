@@ -9,7 +9,7 @@
     "GFIS": {"branch": "main", "dirty": 233, "has_build": true, "status": "development_ready pass"},
     "GPC": {"branch": "main", "dirty": 0, "has_build": true, "status": "ready_for_review"},
     "PVAOS": {"branch": "pvaos/D4-release-readiness-governance", "dirty": 0, "has_build": true, "status": "ready_for_review"},
-    "WAME": {"branch": "wame/integration-release", "dirty": 0, "has_build": true, "status": "ready_for_review"},
+    "WAME": {"branch": "waes/integration-release", "dirty": 0, "has_build": true, "status": "ready_for_review"},
     "XiaoC": {"branch": "main", "dirty": 0, "has_build": true, "status": "ready_for_review"},
     "XGD": {"branch": "main", "dirty": 0, "has_build": true, "status": "ready_for_review"},
     "XiaoG": {"branch": "main", "dirty": 1, "has_build": true, "status": "ready_for_review"},

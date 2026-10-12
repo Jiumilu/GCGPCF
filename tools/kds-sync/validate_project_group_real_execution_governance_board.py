@@ -164,7 +164,7 @@ REQUIRED_FULL_BASELINE_TOKENS = {
         "AAAS-WAME-BINDING-PRECHECK-001",
         "不声明真实计费",
     ],
-    "GlobalCloud WAME": [
+    "GlobalCloud WAES": [
         "repair_required / authorization_required",
         "WAME-LINT-RUNTIME-001",
         "不声明治理运行闭环",

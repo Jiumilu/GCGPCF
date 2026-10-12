@@ -35,7 +35,7 @@ superseded_by: []
 当前分支：
 
 ```text
-wame/integration-release
+waes/integration-release
 ```
 
 工作区状态：
@@ -92,7 +92,7 @@ Codex 只能实现包含任务元数据的任务
 如需执行修复，请用户明确确认：
 
 ```text
-我确认执行 WAME-LINT-RUNTIME-001，允许在 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME 的 wame/integration-release 分支上进行 local dev 范围内最小修复；允许修改 src/app/components/AppLazyImports.ts 或重命名为 AppLazyImports.tsx、更新其引用，以及修复 src/app/plugin/PluginManager.tsx 的 import type 解析错误；允许运行 npm run lint、npm run check、npm run typecheck、npm run test、npm run build、npm run check:wasm；不允许提交、推送、部署、权限变更、生产写入或删除无关文件。
+我确认执行 WAME-LINT-RUNTIME-001，允许在 /Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME 的 waes/integration-release 分支上进行 local dev 范围内最小修复；允许修改 src/app/components/AppLazyImports.ts 或重命名为 AppLazyImports.tsx、更新其引用，以及修复 src/app/plugin/PluginManager.tsx 的 import type 解析错误；允许运行 npm run lint、npm run check、npm run typecheck、npm run test、npm run build、npm run check:wasm；不允许提交、推送、部署、权限变更、生产写入或删除无关文件。
 ```
 
 ## 6. 授权后允许范围
@@ -100,7 +100,7 @@ Codex 只能实现包含任务元数据的任务
 | allow | value |
 |---|---|
 | allowed_project | WAME |
-| allowed_branch | `wame/integration-release` |
+| allowed_branch | `waes/integration-release` |
 | allowed_environment | local dev only |
 | allowed_touches | `src/app/components/AppLazyImports.ts`、`src/app/components/AppLazyImports.tsx`、引用该文件的 import、`src/app/plugin/PluginManager.tsx` |
 | allowed_commands | `npm run lint`、`npm run check`、`npm run typecheck`、`npm run test`、`npm run build`、`npm run check:wasm` |

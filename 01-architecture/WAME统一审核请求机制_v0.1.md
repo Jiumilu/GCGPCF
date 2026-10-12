@@ -104,7 +104,7 @@ XAPRequestEnvelope v0.1（最小必填）：
 ## 五、边界与不声明
 
 - 本机制**不改 WAME/PVAOS/GCXWAIL 仓**；为提交侧机制设计＋规范建议；
-- 受理器**参考实现**已可用（`GlobalCloud WAME/server/xap-intake`：P1 受理闭环＋P2 资产交付闭环＋WAE 受理台账 UI；33 项验收全过）——**不声明**已生产化、已由任何真实系统上线治理；**不声明**任何请求已裁定（decision 留白纪律在受理器中代码级强制）；
+- 受理器**参考实现**已可用（`GlobalCloud WAES/server/xap-intake`：P1 受理闭环＋P2 资产交付闭环＋WAE 受理台账 UI；33 项验收全过）——**不声明**已生产化、已由任何真实系统上线治理；**不声明**任何请求已裁定（decision 留白纪律在受理器中代码级强制）；
 - 「所有系统」范围以项目群成员目录为准（26 项——**分批接入**，不搞一刀切）；
 - 轻量请求（term/state）允许**最小请求包**（无 models，仅信封＋请求体）——**均符合 XAP 规范**（「均应」的落地口径）。
 
@@ -115,5 +115,5 @@ XAPRequestEnvelope v0.1（最小必填）：
 | 规范增量 §2.3（打包 XAP：asset／request 两类） | GPCF `01-architecture/XWAIL…规范V1.2草案.md` |
 | V1.2-07 规则行（请求包检查） | GPCF `01-architecture/XWAIL-V1.2-Validator规则清单.md` |
 | `requestcheck.py`（信封检查器）＋两样本 | KDS `工业绿链/图谱/ontology/xwail-v12-poc/` |
-| XAP 受理器（参考实现）＋WAE 受理台账 UI | WAME `server/xap-intake/`（分支 `wame/world-asset-studio`） |
+| XAP 受理器（参考实现）＋WAE 受理台账 UI | WAME `server/xap-intake/`（分支 `waes/world-asset-studio`） |
 | 本机制文件 | GPCF `01-architecture/WAME统一审核请求机制_v0.1.md` |

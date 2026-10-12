@@ -68,7 +68,7 @@
     {
       "ahead": 0,
       "behind": 0,
-      "branch": "wame/integration-release",
+      "branch": "waes/integration-release",
       "diff_check": "pass",
       "dirty_count": 0,
       "exists": true,
@@ -78,7 +78,7 @@
       "path": "/Users/lujunxiang/Projects/GlobalCloud V0.0.1/GlobalCloud WAME",
       "sensitive_paths": [],
       "untracked_count": 0,
-      "upstream": "origin/wame/integration-release"
+      "upstream": "origin/waes/integration-release"
     },
     {
       "ahead": 0,

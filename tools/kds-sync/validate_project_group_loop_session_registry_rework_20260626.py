@@ -24,7 +24,7 @@ FAILED_PROJECTS = [
     "GlobalCloud PKC",
     "GlobalCloud PVAOS",
     "GlobalCloud Studio",
-    "GlobalCloud WAME",
+    "GlobalCloud WAES",
     "GlobalCloud XGD",
     "GlobalCloud XiaoC",
     "GlobalCloud XiaoG",
